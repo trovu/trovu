@@ -47,22 +47,19 @@ if (getUrlParameter("ffi") == "1:1") {
   var inputNr = getUrlParameter("inpnr"); // default: 0
 
   // fill Input, if id-identifier
-  if (inputBy == "id")
-   {
+  if (inputBy == "id") {
      var queryFeld = document.getElementById(inputId);
      queryFeld.value = query;
    }
 
   // fill Input, if name-identifier
-  if (inputBy == "name")
-   {
+  if (inputBy == "name") {
      var queryFeld = document.getElementsByName(inputId)[inputNr];
      queryFeld.value = query;
    }
 
   // fill Input, if tagname-identifier
-  if (inputBy == "tag")
-  {
+  if (inputBy == "tag") {
     var queryFeld = document.getElementsByTagName(inputId)[inputNr];
     queryFeld.value = query;
   }
