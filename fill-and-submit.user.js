@@ -63,17 +63,17 @@ if (getUrlParameter("ffi") == "1:1") {
     var queryFeld = document.getElementsByTagName(inputId)[inputNr];
     queryFeld.value = query;
   }
-      
+
   // submit-click, if id-identifier
   if (submitBy == "id") document.getElementById(submitId).click();
 
   // submit-click, if name-identifier
   if (submitBy == "name") document.getElementsByName(submitId)[submitNr].click();
 
-  // submit-click, if tagname-identifier    
+  // submit-click, if tagname-identifier
   if (submitBy == "tag") document.getElementsByTagName(submitId)[submitNr].click();
 
-} 
+}
 
 // https://patentscope.wipo.int/search/en/search.jsf?inpby=id&inpid=simpleSearchSearchForm:fpSearch&subby=id&subid=simpleSearchSearchForm:commandSimpleFPSearch&ffi=1:1&q=Liebherr
 // https://www.bundesanzeiger.de/ebanzwww/wexsservlet?inpby=id&inpid=genericsearch_param.fulltext&subby=tag&subid=input&subnr=3&ffi=1:1&q=Schott
