@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         FFI_InputFillnSubmit
+// @name         FindFind.it / Serchilo: Fill and Submit 
 // @namespace    http://tampermonkey.net/
 // @version      0.3
-// @description  generic automatic input fill and submit
+// @description  Fills input fields  with URL parameters and submits form.
 // @downloadURL  
 // @author       Ralf Anders
 // @match        *://*/*
