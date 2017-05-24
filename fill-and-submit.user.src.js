@@ -49,7 +49,7 @@
 
   var qs = require('qs');
 
-  // Get queryString from URL, cut off '?'.
+  // Get queryString from URL, cut off '#'.
   var queryString = window.location.hash.substr(1);
 
   if (!queryString) return;
