@@ -39,6 +39,7 @@
  * Notation: selector string must escape some chars:
  *
  *   : = \:
+ *   . = \.
  *   # = %23
  *
 */
