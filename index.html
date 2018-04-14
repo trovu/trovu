@@ -32,6 +32,20 @@ var splitOnce = function(str, delim) {
     return result;
 };
 
+function buildFetchUrl(keyword, argumentCount) {
+
+	var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/{%keyword}/{%argumentCount}.call.json"
+	var replacements = {
+    '{%keyword}': keyword,
+		'{%argumentCount}': argumentCount
+	}
+	for (key in replacements) {
+		fetchUrl = fetchUrl.replace(key, replacements[key]);
+	}
+
+	return fetchUrl;
+}
+
 async function processCall() {
 
   var params = getSearchParameters();
@@ -41,16 +55,11 @@ async function processCall() {
   [keyword, argumentString] = splitOnce(query, " ");
   var arguments = argumentString.split(",");
   
-	var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/{%keyword}/{%argumentCount}.call.json"
-	var replacements = {
-    '{%keyword}': keyword,
-		'{%argumentCount}': arguments.length
-	}
-	for (key in replacements) {
-		fetchUrl = fetchUrl.replace(key, replacements[key]);
-	}
+	var fetchUrl = buildFetchUrl(keyword, arguments.length);
 
   var json = await fetchAsync(fetchUrl);
+
+
   console.log(json);
 }
 
