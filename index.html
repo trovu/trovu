@@ -57,10 +57,10 @@ async function processCall() {
   
 	var fetchUrl = buildFetchUrl(keyword, arguments.length);
 
-  var json = await fetchAsync(fetchUrl);
+  var shortcut = await fetchAsync(fetchUrl);
 
-
-  console.log(json);
+  console.log(shortcut);
+	// TODO: Further processing..
 }
 
 processCall();
