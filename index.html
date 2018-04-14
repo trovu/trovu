@@ -1,49 +1,49 @@
 <html>
-	<body>
-		<script>
+  <body>
+    <script>
 
 async function fetchAsync(url) {
   const response = await fetch(url);
   const json = await response.json();
-	return json;
+  return json;
 }
 
 function getSearchParameters() {
-      var prmstr = window.location.search.substr(1);
-      return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+  var prmstr = window.location.search.substr(1);
+  return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
 }
 
 function transformToAssocArray( prmstr ) {
-    var params = {};
-    var prmarr = prmstr.split("&");
-    for ( var i = 0; i < prmarr.length; i++) {
-        var tmparr = prmarr[i].split("=");
-        params[tmparr[0]] = tmparr[1];
-    }
-    return params;
+  var params = {};
+  var prmarr = prmstr.split("&");
+  for ( var i = 0; i < prmarr.length; i++) {
+    var tmparr = prmarr[i].split("=");
+    params[tmparr[0]] = tmparr[1];
+  }
+  return params;
 }
 
 var splitOnce = function(str, delim) {
-    var components = str.split(delim);
-    var result = [components.shift()];
-    if(components.length) {
-        result.push(components.join(delim));
-    }
-    return result;
+  var components = str.split(delim);
+  var result = [components.shift()];
+  if(components.length) {
+      result.push(components.join(delim));
+  }
+  return result;
 };
 
 function buildFetchUrl(keyword, argumentCount) {
 
-	var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/{%keyword}/{%argumentCount}.call.json"
-	var replacements = {
+  var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/{%keyword}/{%argumentCount}.call.json"
+  var replacements = {
     '{%keyword}': keyword,
-		'{%argumentCount}': argumentCount
-	}
-	for (key in replacements) {
-		fetchUrl = fetchUrl.replace(key, replacements[key]);
-	}
+    '{%argumentCount}': argumentCount
+  }
+  for (key in replacements) {
+    fetchUrl = fetchUrl.replace(key, replacements[key]);
+  }
 
-	return fetchUrl;
+  return fetchUrl;
 }
 
 async function processCall() {
@@ -55,16 +55,16 @@ async function processCall() {
   [keyword, argumentString] = splitOnce(query, " ");
   var arguments = argumentString.split(",");
   
-	var fetchUrl = buildFetchUrl(keyword, arguments.length);
+  var fetchUrl = buildFetchUrl(keyword, arguments.length);
 
   var shortcut = await fetchAsync(fetchUrl);
 
   console.log(shortcut);
-	// TODO: Further processing..
+  // TODO: Further processing..
 }
 
 processCall();
 
-		</script>
-	</body>
+    </script>
+  </body>
 </html>
