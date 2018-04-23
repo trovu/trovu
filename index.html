@@ -51,6 +51,7 @@ async function processCall() {
   var params = getSearchParameters();
   var query = params.query;
   var query = decodeURIComponent(params.query);
+  query = 'g foo';	
   
   [keyword, argumentString] = splitOnce(query, " ");
   var arguments = argumentString.split(",");
