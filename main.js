@@ -31,10 +31,15 @@ var splitOnce = function(str, delim) {
   return result;
 };
 
-function buildFetchUrl(keyword, argumentCount) {
+function buildFetchUrl(namespace, keyword, argumentCount) {
 
-  var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/{%keyword}/{%argumentCount}.call.json"
+  var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.call.json"
+
+	namespace = encodeURIComponent(namespace);
+	keyword   = encodeURIComponent(keyword);
+
   var replacements = {
+    '{%namespace}': namespace,
     '{%keyword}': keyword,
     '{%argumentCount}': argumentCount
   }
@@ -51,15 +56,19 @@ async function processCall() {
   var query = params.query;
   var query = decodeURIComponent(params.query);
   query = 'g foo';	
+	var namespaces = ['o','de','deu'];
   
   [keyword, argumentString] = splitOnce(query, " ");
   var arguments = argumentString.split(",");
   
-  var fetchUrl = buildFetchUrl(keyword, arguments.length);
+	var shortcuts = [];
+	for (namespace of namespaces) {
+    console.log(namespace);	
+    var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length);
+		shortcuts[namespace]  = await fetchAsync(fetchUrl);
+	}
 
-  var shortcut = await fetchAsync(fetchUrl);
-
-  console.log(shortcut);
+  console.log(shortcuts);
   // TODO: Further processing..
   //window.location.href = 'https://google.com';
 }
