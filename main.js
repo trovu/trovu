@@ -67,7 +67,6 @@ async function processCall() {
 		shortcuts[namespace]  = await fetchAsync(fetchUrl);
 	}
 
-  console.log(shortcuts);
   // TODO: Further processing..
   //window.location.href = 'https://google.com';
 }
