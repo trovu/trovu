@@ -61,12 +61,14 @@ async function processCall() {
   [keyword, argumentString] = splitOnce(query, " ");
   var arguments = argumentString.split(",");
   
+	// Fetch all available shortcuts for our query and namespace settings.
 	var shortcuts = [];
 	for (namespace of namespaces) {
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length);
 		shortcuts[namespace]  = await fetchAsync(fetchUrl);
 	}
 
+	// Find first shorcut in our namespace hierarchy.
 	for (namespace of namespaces.reverse()) {
 		if (shortcuts[namespace]) {
 			var shortcut = shortcuts[namespace];
