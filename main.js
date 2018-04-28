@@ -1,5 +1,8 @@
 async function fetchAsync(url) {
   const response = await fetch(url, {cache: "force cache"});
+	if (response.status != 200) {
+		return null;
+	}
   const json = await response.json();
   return json;
 }
