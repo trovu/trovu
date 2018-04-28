@@ -63,7 +63,6 @@ async function processCall() {
   
 	var shortcuts = [];
 	for (namespace of namespaces) {
-    console.log(namespace);	
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length);
 		shortcuts[namespace]  = await fetchAsync(fetchUrl);
 	}
