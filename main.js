@@ -130,7 +130,7 @@ async function processCall() {
   var query = params.query;
   var query = decodeURIComponent(params.query);
   query = 'g foo';	
-  query = 'db b,hh';	
+  query = 'db b, hh';	
 	var namespaces = ['o','de','deu'];
   
   [keyword, argumentString] = splitKeepRemainder(query, " ", 2);
