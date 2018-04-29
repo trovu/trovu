@@ -22,15 +22,6 @@ function transformToAssocArray( prmstr ) {
   return params;
 }
 
-var splitOnce = function(str, delim) {
-  var components = str.split(delim);
-  var result = [components.shift()];
-  if(components.length) {
-      result.push(components.join(delim));
-  }
-  return result;
-};
-
 function splitKeepRemainder(string, delimiter, n) {
   var parts = string.split(delimiter);
   return parts.slice(0, n - 1).concat([parts.slice(n - 1).join(delimiter)]);
