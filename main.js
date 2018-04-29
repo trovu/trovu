@@ -205,6 +205,11 @@ async function processCall() {
     }
   }
   var url = shortcut['url'];
+
+  var variables = {
+    language: 'de' 
+  };
+  url = replaceVariables(url, variables);
   url = replaceArguments(url, arguments);
   console.log(url);
 
