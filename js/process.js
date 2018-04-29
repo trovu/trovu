@@ -7,11 +7,6 @@ async function fetchAsync(url) {
   return json;
 }
 
-function getSearchParameters() {
-  var prmstr = window.location.search.substr(1);
-  return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
-}
-
 function transformToAssocArray( prmstr ) {
   var params = {};
   var prmarr = prmstr.split("&");
