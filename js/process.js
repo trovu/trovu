@@ -7,11 +7,6 @@ async function fetchAsync(url) {
   return json;
 }
 
-function splitKeepRemainder(string, delimiter, n) {
-  var parts = string.split(delimiter);
-  return parts.slice(0, n - 1).concat([parts.slice(n - 1).join(delimiter)]);
-}
-
 function buildFetchUrl(namespace, keyword, argumentCount) {
 
   var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.call.json"
