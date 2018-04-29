@@ -220,7 +220,8 @@ async function processCall() {
   };
   url = replaceVariables(url, variables);
   url = replaceArguments(url, arguments);
-  console.log(url);
+  //console.log(url);
+  //return;
 
   window.location.href = url;
 }
