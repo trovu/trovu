@@ -1,8 +1,8 @@
 async function fetchAsync(url) {
   const response = await fetch(url, {cache: "force cache"});
-	if (response.status != 200) {
-		return null;
-	}
+  if (response.status != 200) {
+    return null;
+  }
   const json = await response.json();
   return json;
 }
@@ -31,8 +31,8 @@ function buildFetchUrl(namespace, keyword, argumentCount) {
 
   var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.call.json"
 
-	namespace = encodeURIComponent(namespace);
-	keyword   = encodeURIComponent(keyword);
+  namespace = encodeURIComponent(namespace);
+  keyword   = encodeURIComponent(keyword);
 
   var replacements = {
     '{%namespace}':     namespace,
@@ -77,15 +77,15 @@ function buildFetchUrl(namespace, keyword, argumentCount) {
  */
 function getPlaceholdersFromString(str, prefix) {
 
-	var re = RegExp('{' + prefix + '(.+?)}', 'g');
-	var match;
-	var placeholders = {};
+  var re = RegExp('{' + prefix + '(.+?)}', 'g');
+  var match;
+  var placeholders = {};
 
-	do {
-		match = re.exec(str);
-		if (!match) {
-		  break;
-		}
+  do {
+    match = re.exec(str);
+    if (!match) {
+      break;
+    }
 
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
@@ -102,16 +102,16 @@ function getPlaceholdersFromString(str, prefix) {
       [attrName, attrValue] = attrStr.split('=', 2);
       placeholder[attrName] = attrValue;
     }
-		placeholders[name] = placeholders[name] || {};
+    placeholders[name] = placeholders[name] || {};
     placeholders[name][match[0]] = placeholder;
 
-	} while (match);
+  } while (match);
 
   return placeholders;
 }
 
 function getArgumentsFromString(str) {
-	return getPlaceholdersFromString(str, '%')
+  return getPlaceholdersFromString(str, '%')
 }
 
 function replaceArguments(str, arguments) {
@@ -137,7 +137,7 @@ function replaceArguments(str, arguments) {
     }
     str = str.replace(match, processedArgument);
   }
-	return str;
+  return str;
 }
 
 async function processCall() {
@@ -145,29 +145,29 @@ async function processCall() {
   var params = getSearchParameters();
   var query = params.query;
   var query = decodeURIComponent(params.query);
-  query = 'g foo';	
-  query = 'db b, hh';	
-	var namespaces = ['o','de','deu'];
+  query = 'g foo';  
+  query = 'db b, hh';  
+  var namespaces = ['o','de','deu'];
   
   [keyword, argumentString] = splitKeepRemainder(query, " ", 2);
   var arguments = argumentString.split(",");
   
-	// Fetch all available shortcuts for our query and namespace settings.
-	var shortcuts = [];
-	for (namespace of namespaces) {
+  // Fetch all available shortcuts for our query and namespace settings.
+  var shortcuts = [];
+  for (namespace of namespaces) {
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length);
-		shortcuts[namespace]  = await fetchAsync(fetchUrl);
-	}
+    shortcuts[namespace]  = await fetchAsync(fetchUrl);
+  }
 
-	// Find first shorcut in our namespace hierarchy.
-	for (namespace of namespaces.reverse()) {
-		if (shortcuts[namespace]) {
-			var shortcut = shortcuts[namespace];
-			break;
-		}
-	}
-	var url = replaceArguments(shortcut['url'], arguments);
-	console.log(url);
+  // Find first shorcut in our namespace hierarchy.
+  for (namespace of namespaces.reverse()) {
+    if (shortcuts[namespace]) {
+      var shortcut = shortcuts[namespace];
+      break;
+    }
+  }
+  var url = replaceArguments(shortcut['url'], arguments);
+  console.log(url);
 
 
   // TODO: Further processing..
