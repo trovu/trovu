@@ -77,7 +77,8 @@ function buildFetchUrl(namespace, keyword, argumentCount) {
  */
 function getPlaceholdersFromString(str, prefix) {
 
-  var re = RegExp('{' + prefix + '(.+?)}', 'g');
+  var pattern = '{' + prefix + '(.+?)}';
+  var re = RegExp(pattern, 'g');
   var match;
   var placeholders = {};
 
