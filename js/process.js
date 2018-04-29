@@ -200,22 +200,15 @@ async function processCall() {
 
   if (!shortcut) {
     var redirectUrl = '../index.html?status=not_found&query=' + encodeURIComponent(query);
-    window.location.href = redirectUrl;
-    return; 
+  }
+  else {
+    var url = shortcut['url'];
+    url = replaceVariables(url, variables);
+    url = replaceArguments(url, arguments);
+    //console.log(url);
+    //return;
   }
 
-  var url = shortcut['url'];
-
-  var variables = {
-    language: 'de' 
-  };
-
-  url = replaceVariables(url, variables);
-  url = replaceArguments(url, arguments);
-  
-  //console.log(url);
-  //return;
-
-  window.location.href = url;
+  window.location.href = redirectUrl;
 }
 
