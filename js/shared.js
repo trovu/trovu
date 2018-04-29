@@ -1,8 +1,8 @@
 function transformToAssocArray( paramStr ) {
   var params = {};
-  var prmarr = paramStr.split("&");
-  for ( var i = 0; i < prmarr.length; i++) {
-    var tmparr = prmarr[i].split("=");
+  var paramArray = paramStr.split("&");
+  for ( var i = 0; i < paramArray.length; i++) {
+    var tmparr = paramArray[i].split("=");
     params[tmparr[0]] = tmparr[1];
   }
   return params;
