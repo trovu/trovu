@@ -171,6 +171,10 @@ function replaceVariables(str, variables) {
   return str;
 }
 
+function escapeRegExp(str) {
+    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+
 async function processCall() {
 
   var params = getSearchParameters();
