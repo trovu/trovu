@@ -35,8 +35,8 @@ function buildFetchUrl(namespace, keyword, argumentCount) {
 	keyword   = encodeURIComponent(keyword);
 
   var replacements = {
-    '{%namespace}': namespace,
-    '{%keyword}': keyword,
+    '{%namespace}':     namespace,
+    '{%keyword}':       keyword,
     '{%argumentCount}': argumentCount
   }
   for (key in replacements) {
