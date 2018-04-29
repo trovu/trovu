@@ -126,7 +126,7 @@ function replaceArguments(str, arguments) {
     // different processing.
     var processedArgument = argument;
 
-    processedArgument = trim(processedArgument);
+    processedArgument = processedArgument.trim();
     
     // An argument can have multiple matches,
     // so go over all of them.
