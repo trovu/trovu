@@ -177,7 +177,8 @@ async function processCall() {
       break;
     }
   }
-  var url = replaceArguments(shortcut['url'], arguments);
+  var url = shortcut['url'];
+  url = replaceArguments(url, arguments);
   console.log(url);
 
 
