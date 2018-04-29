@@ -218,6 +218,7 @@ async function processCall() {
   var variables = {
     language: 'de' 
   };
+
   url = replaceVariables(url, variables);
   url = replaceArguments(url, arguments);
   
