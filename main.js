@@ -97,7 +97,7 @@ function getPlaceholdersFromString(str, prefix) {
 
     var placeholder = {};
     // Example value:
-    // name_and_attributes = ['encoding=utf-8'.'another=attribute']
+    // name_and_attributes = ['encoding=utf-8', 'another=attribute']
     for (attrStr of nameAndAttributes) {
       [attrName, attrValue] = attrStr.split('=', 2);
       placeholder[attrName] = attrValue;
