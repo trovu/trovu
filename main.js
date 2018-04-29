@@ -133,7 +133,7 @@ async function processCall() {
   query = 'db b,hh';	
 	var namespaces = ['o','de','deu'];
   
-  [keyword, argumentString] = splitOnce(query, " ");
+  [keyword, argumentString] = splitKeepRemainder(query, " ", 2);
   var arguments = argumentString.split(",");
   
 	// Fetch all available shortcuts for our query and namespace settings.
