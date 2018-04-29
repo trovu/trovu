@@ -198,15 +198,15 @@ async function processCall() {
     }
   }
 
-  if (!shortcut) {
-    var redirectUrl = '../index.html?status=not_found&query=' + encodeURIComponent(query);
-  }
-  else {
+  if (shortcut) {
     var url = shortcut['url'];
     url = replaceVariables(url, variables);
     url = replaceArguments(url, arguments);
     //console.log(url);
     //return;
+  }
+  else {
+    var redirectUrl = '../index.html?status=not_found&query=' + encodeURIComponent(query);
   }
 
   window.location.href = redirectUrl;
