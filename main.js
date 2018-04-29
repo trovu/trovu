@@ -125,7 +125,9 @@ function replaceArguments(str, arguments) {
     // Copy argument, because different placeholders can cause
     // different processing.
     var processedArgument = argument;
-
+    
+    // An argument can have multiple matches,
+    // so go over all of them.
     var matches = placeholders[argumentName];
     for (match in matches) {
       var attributes = matches[match];
