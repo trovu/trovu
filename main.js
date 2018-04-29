@@ -114,6 +114,31 @@ function getArgumentsFromString(str) {
 	return getPlaceholdersFromString(str, '%')
 }
 
+function replaceArguments(str, arguments) {
+
+  var placeholders = getArgumentsFromString(str);
+
+  for (argumentName in placeholders) {
+
+    var argument = arguments.shift();
+
+    // Copy argument, because different placeholders can cause
+    // different processing.
+    var processedArgument = argument;
+
+    var matches = placeholders[argumentName];
+    for (match in matches) {
+      var attributes = matches[match];
+      switch (attributes.type) {
+        default:
+          processedArgument = encodeURIComponent(argument);
+          break;
+      }
+    }
+    str = str.replace(match, processedArgument);
+  }
+	return str;
+}
 
 async function processCall() {
 
@@ -141,8 +166,9 @@ async function processCall() {
 			break;
 		}
 	}
-	// console.log(shortcut);
-	getArgumentsFromString(shortcut['url']);
+	var url = replaceArguments(shortcut['url'], arguments);
+	console.log(url);
+
 
   // TODO: Further processing..
   //window.location.href = 'https://google.com';
