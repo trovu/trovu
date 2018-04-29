@@ -148,9 +148,16 @@ async function processCall() {
 
   var params = getSearchParameters();
   var query = params.query;
-  var query = decodeURIComponent(params.query);
-  query = 'g foo';  
-  query = 'db b, hh';  
+  if (!query) {
+    return;
+  }
+
+  // Remove plus signs and decode.
+  query = query.replace(/\+/g, ' ');
+  query = decodeURIComponent(query);
+  
+  //query = 'g foo';  
+  //query = 'db b, hh';  
   var namespaces = ['o','de','deu'];
   
   [keyword, argumentString] = splitKeepRemainder(query, " ", 2);
