@@ -1,6 +1,6 @@
-function transformToAssocArray( prmstr ) {
+function transformToAssocArray( paramStr ) {
   var params = {};
-  var prmarr = prmstr.split("&");
+  var prmarr = paramStr.split("&");
   for ( var i = 0; i < prmarr.length; i++) {
     var tmparr = prmarr[i].split("=");
     params[tmparr[0]] = tmparr[1];
@@ -9,6 +9,6 @@ function transformToAssocArray( prmstr ) {
 }
 
 function getSearchParameters() {
-  var prmstr = window.location.search.substr(1);
-  return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+  var paramStr = window.location.search.substr(1);
+  return paramStr != null && paramStr != "" ? transformToAssocArray(paramStr) : {};
 }
