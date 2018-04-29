@@ -7,16 +7,6 @@ async function fetchAsync(url) {
   return json;
 }
 
-function transformToAssocArray( prmstr ) {
-  var params = {};
-  var prmarr = prmstr.split("&");
-  for ( var i = 0; i < prmarr.length; i++) {
-    var tmparr = prmarr[i].split("=");
-    params[tmparr[0]] = tmparr[1];
-  }
-  return params;
-}
-
 function splitKeepRemainder(string, delimiter, n) {
   var parts = string.split(delimiter);
   return parts.slice(0, n - 1).concat([parts.slice(n - 1).join(delimiter)]);
