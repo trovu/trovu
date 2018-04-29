@@ -150,7 +150,9 @@ async function processCall() {
 			break;
 		}
 	}
-	console.log(shortcut);
+	// console.log(shortcut);
+	getArgumentsFromString(shortcut['url']);
+
   // TODO: Further processing..
   //window.location.href = 'https://google.com';
 }
