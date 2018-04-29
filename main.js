@@ -115,6 +115,10 @@ function getArgumentsFromString(str) {
   return getPlaceholdersFromString(str, '%')
 }
 
+function getVariablesFromString(str) {
+  return getPlaceholdersFromString(str, '\\$')
+}
+
 function replaceArguments(str, arguments) {
 
   var placeholders = getArgumentsFromString(str);
@@ -141,6 +145,28 @@ function replaceArguments(str, arguments) {
       }
     }
     str = str.replace(match, processedArgument);
+  }
+  return str;
+}
+
+
+function replaceVariables(str, variables) {
+
+  var placeholders = getVariablesFromString(str);
+
+  for (varName in placeholders) {
+    var matches = placeholders[varName];
+    for (match in matches) {
+      var attributes = matches[match];
+    }
+    switch(varName) {
+      case 'now':
+        // TODO.
+      default:
+        var value = variables[varName];
+        break; 
+    }
+    str = str.replace(match, value);
   }
   return str;
 }
