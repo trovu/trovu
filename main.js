@@ -158,15 +158,15 @@ function replaceVariables(str, variables) {
     var matches = placeholders[varName];
     for (match in matches) {
       var attributes = matches[match];
+      switch(varName) {
+        case 'now':
+          // TODO.
+        default:
+          var value = variables[varName];
+          break; 
+      }
+      str = str.replace(new RegExp(escapeRegExp(match), 'g'), value);
     }
-    switch(varName) {
-      case 'now':
-        // TODO.
-      default:
-        var value = variables[varName];
-        break; 
-    }
-    str = str.replace(match, value);
   }
   return str;
 }
