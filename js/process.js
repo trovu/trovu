@@ -163,10 +163,6 @@ async function processCall() {
     return;
   }
 
-  // Remove plus signs and decode.
-  query = query.replace(/\+/g, ' ');
-  query = decodeURIComponent(query);
-  
   //query = 'g foo';  
   //query = 'db b, hh';  
   var namespaces = ['o','de','deu'];

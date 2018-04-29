@@ -1,3 +1,9 @@
+function decodeURIComponentWithPlus(str) {
+  str = str.replace(/\+/g, ' ');
+  str = decodeURIComponent(str);
+  return str;
+}
+
 function splitKeepRemainder(string, delimiter, n) {
   var parts = string.split(delimiter);
   return parts.slice(0, n - 1).concat([parts.slice(n - 1).join(delimiter)]);
@@ -7,8 +13,10 @@ function transformToAssocArray( paramStr ) {
   var params = {};
   var paramArray = paramStr.split("&");
   for ( var i = 0; i < paramArray.length; i++) {
-    var tmparr = splitKeepRemainder(paramArray[i], "=", 2);
-    params[tmparr[0]] = tmparr[1];
+    [key, value] = splitKeepRemainder(paramArray[i], "=", 2);
+    key   = decodeURIComponentWithPlus(key);
+    value = decodeURIComponentWithPlus(value);
+    params[key] = value;
   }
   return params;
 }
