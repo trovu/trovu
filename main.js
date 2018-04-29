@@ -204,6 +204,11 @@ async function processCall() {
       break;
     }
   }
+
+  if (!shortcut) {
+    return; 
+  }
+
   var url = shortcut['url'];
 
   var variables = {
