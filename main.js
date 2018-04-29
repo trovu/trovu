@@ -213,8 +213,6 @@ async function processCall() {
   url = replaceArguments(url, arguments);
   console.log(url);
 
-
-  // TODO: Further processing..
-  //window.location.href = 'https://google.com';
+  window.location.href = url;
 }
 
