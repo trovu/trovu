@@ -199,10 +199,10 @@ async function processCall() {
   }
 
   if (shortcut) {
-    var url = shortcut['url'];
-    url = replaceVariables(url, variables);
-    url = replaceArguments(url, arguments);
-    //console.log(url);
+    var redirectUrl = shortcut['url'];
+    redirectUrl = replaceVariables(redirectUrl, variables);
+    redirectUrl = replaceArguments(redirectUrl, arguments);
+    //console.log(redirectUrl);
     //return;
   }
   else {
