@@ -175,6 +175,10 @@ async function processCall() {
   //query = 'g foo';  
   //query = 'db b, hh';  
   var namespaces = ['o','de','deu'];
+
+  var variables = {
+    language: 'de' 
+  };
   
   [keyword, argumentString] = splitKeepRemainder(query, " ", 2);
   var arguments = argumentString.split(",");
