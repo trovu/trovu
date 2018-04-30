@@ -1,5 +1,5 @@
 async function fetchAsync(url) {
-  const response = await fetch(url, {cache: "force cache"});
+  const response = await fetch(url);
   if (response.status != 200) {
     return null;
   }
