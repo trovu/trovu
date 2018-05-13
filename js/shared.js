@@ -22,6 +22,6 @@ function transformToAssocArray( paramStr ) {
 }
 
 function getSearchParameters() {
-  var paramStr = window.location.search.substr(1);
+  var paramStr = window.location.hash.substr(1);
   return paramStr != null && paramStr != "" ? transformToAssocArray(paramStr) : {};
 }
