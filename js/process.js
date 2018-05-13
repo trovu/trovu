@@ -184,7 +184,9 @@ async function processCall() {
   // Find first shorcut in our namespace hierarchy.
   for (namespace of namespaces.reverse()) {
     if (texts[namespace]) {
-      var redirectUrl = texts[namespace];
+      var textLines = texts[namespace].split("\n");
+      var redirectUrl = textLines.shift();
+      // TODO: Process POST arguments.
       break;
     }
   }
