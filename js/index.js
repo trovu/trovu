@@ -8,3 +8,16 @@ function init() {
       break;
   }
 }
+
+document.getElementById('query-form').onsubmit = function(event) {
+
+	// Prevent default sending as GET parameters.
+	event.preventDefault();
+
+	// Put query into hash.
+	var query = document.getElementById('query').value; 
+	var processUrl = 'process/index.html#query='  + encodeURIComponent(query);
+
+	// Redirect to process script.
+  window.location.href = processUrl;
+}
