@@ -198,7 +198,7 @@ async function processCall() {
     //return;
   }
   else {
-    var redirectUrl = '../index.html?status=not_found&query=' + encodeURIComponent(query);
+    var redirectUrl = '../index.html#status=not_found&query=' + encodeURIComponent(query);
   }
 
   window.location.href = redirectUrl;
