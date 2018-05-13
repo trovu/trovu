@@ -3,13 +3,13 @@ async function fetchAsync(url) {
   if (response.status != 200) {
     return null;
   }
-  const json = await response.json();
-  return json;
+  const text = await response.text();
+  return text;
 }
 
 function buildFetchUrl(namespace, keyword, argumentCount) {
 
-  var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.call.json"
+  var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.txt"
 
   namespace = encodeURIComponent(namespace);
   keyword   = encodeURIComponent(keyword);
@@ -175,22 +175,21 @@ async function processCall() {
   var arguments = argumentString.split(",");
   
   // Fetch all available shortcuts for our query and namespace settings.
-  var shortcuts = [];
+  var texts = [];
   for (namespace of namespaces) {
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length);
-    shortcuts[namespace]  = await fetchAsync(fetchUrl);
+    texts[namespace]  = await fetchAsync(fetchUrl);
   }
 
   // Find first shorcut in our namespace hierarchy.
   for (namespace of namespaces.reverse()) {
-    if (shortcuts[namespace]) {
-      var shortcut = shortcuts[namespace];
+    if (texts[namespace]) {
+      var redirectUrl = texts[namespace];
       break;
     }
   }
 
-  if (shortcut) {
-    var redirectUrl = shortcut['url'];
+  if (redirectUrl) {
     redirectUrl = replaceVariables(redirectUrl, variables);
     redirectUrl = replaceArguments(redirectUrl, arguments);
     //console.log(redirectUrl);
