@@ -165,7 +165,7 @@ async function processCall() {
 
   //query = 'g foo';  
   //query = 'db b, hh';  
-  var namespaces = ['o','de','deu'];
+  var namespaces = ['o','de','.de'];
 
   var variables = {
     language: 'de' 
