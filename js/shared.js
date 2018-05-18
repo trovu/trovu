@@ -32,9 +32,9 @@ function parseJQueryParams(paramStr) {
     var keyValueStrings = paramStr.split('&');
 
     // Iterate over all pairs.
-    for (var i=0; i<keyValueStrings.length; i++) {
+    for (keyValueString of keyValueStrings) {
 
-        [name, value] = keyValueStrings[i].split('=');
+        [name, value] = keyValueString.split('=');
 
         if (typeof value == 'undefined') {
           value = '';
