@@ -159,8 +159,8 @@ function escapeRegExp(str) {
 async function processCall() {
 
   var params = getSearchParameters();
-  var query = params.query;
-  var namespacesStr = params.namespaces;
+  var query = params.query || "";
+  var namespacesStr = params.namespaces || "";
 
   if (namespacesStr) {
     var namespaces = namespacesStr.split(',')
