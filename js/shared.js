@@ -82,5 +82,6 @@ function parseJQueryParams(paramStr) {
 
 function getSearchParameters() {
   var paramStr = window.location.hash.substr(1);
-  return paramStr != null && paramStr != "" ? transformToAssocArray(paramStr) : {};
+  let params = parseJQueryParams(paramStr);
+  return params;
 }
