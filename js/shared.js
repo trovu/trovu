@@ -46,6 +46,11 @@ function parseJQueryParams(paramStr) {
 
         name = name.trim();
 
+        // Skip empty.
+        if ('' == name) {
+          continue;
+        }
+
         // Prepare indices.
         var indices = [];
 
