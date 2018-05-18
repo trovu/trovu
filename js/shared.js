@@ -33,11 +33,15 @@ function parseJQueryParams(paramStr) {
 
     // Iterate over all pairs.
     for (var i=0; i<keyValueStrings.length; i++) {
-        var pair = keyValueStrings[i].split('=');
+        [name, value] = keyValueStrings[i].split('=');
         var indices = [];
 
-        var name = decodeURIComponent(pair[0]);
-        var value = decodeURIComponent(pair[1]);
+        if (typeof value == 'undefined') {
+          value = '';
+        }
+
+        var name = decodeURIComponent(name);
+        var value = decodeURIComponent(value);
 
         var name = name.replace(/\[([^\]]*)\]/g, 
             function(k, idx) { indices.push(idx); return ""; });
