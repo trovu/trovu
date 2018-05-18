@@ -1,0 +1,8 @@
+title: Debian Package Tracker
+description: Looks up the given package in the debian package tracker.
+tags:
+- debian
+examples:
+  grub2: Look at the grub2 package in the Debian Package Tracker
+tests:
+  grub2: 'maintainer:'

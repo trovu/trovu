@@ -1,0 +1,15 @@
+title: Google Web, only of certain time range
+description: ""
+tags:
+- web search
+- google
+examples:
+  y, eruption: Search web pages for "eruption" that have been altered within the last
+    year
+  m, eruption: Search web pages for "eruption" that have been altered within the last
+    month
+  w, eruption: Search web pages for "eruption" that have been altered within the last
+    week
+  d, eruption: Search web pages for "eruption" that have been altered within the last
+    day
+tests: []
