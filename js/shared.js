@@ -36,15 +36,15 @@ function parseJQueryParams(paramStr) {
 
         [name, value] = keyValueStrings[i].split('=');
 
-        // Prepare indices.
-        var indices = [];
-
         if (typeof value == 'undefined') {
           value = '';
         }
 
         var name = decodeURIComponent(name);
         var value = decodeURIComponent(value);
+
+        // Prepare indices.
+        var indices = [];
 
         var name = name.replace(/\[([^\]]*)\]/g, 
             function(k, idx) { indices.push(idx); return ""; });
