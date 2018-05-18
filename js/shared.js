@@ -86,3 +86,11 @@ function getSearchParameters() {
   let params = parseJQueryParams(paramStr);
   return params;
 }
+function buildParamStr(params) {
+  let paramStr = '';
+  for (key in params) {
+    paramStr = paramStr + key + '=' + params[key] + '&';
+  }
+  return paramStr;
+}
+
