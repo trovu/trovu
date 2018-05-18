@@ -193,7 +193,7 @@ async function processCall() {
   else {
     var redirectUrl = '../index.html#status=not_found&query=' + encodeURIComponent(query);
   }
-	
+  
   //console.log(redirectUrl);
   //return;
 
