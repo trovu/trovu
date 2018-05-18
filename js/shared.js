@@ -29,11 +29,11 @@ function parseJQueryParams(paramStr) {
     var params = {};
 
     // Get pairs.
-    var pairs = paramStr.split('&');
+    var keyValueStrings = paramStr.split('&');
 
     // Iterate over all pairs.
-    for (var i=0; i<pairs.length; i++) {
-        var pair = pairs[i].split('=');
+    for (var i=0; i<keyValueStrings.length; i++) {
+        var pair = keyValueStrings[i].split('=');
         var indices = [];
         var name = decodeURIComponent(pair[0]),
             value = decodeURIComponent(pair[1]);
