@@ -47,6 +47,7 @@ function parseJQueryParams(paramStr) {
         // Prepare indices.
         var indices = [];
 
+        // Move indices from string into array.
         var name = name.replace(/\[([^\]]*)\]/g, 
             function(k, idx) { indices.push(idx); return ""; });
 
