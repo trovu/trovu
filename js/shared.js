@@ -24,8 +24,13 @@ function transformToAssocArray( paramStr ) {
 // Source:
 // https://stackoverflow.com/a/3355892/52023
 function parseJQueryParams(paramStr) {
+
+    // Prepare params.
     var params = {};
+
+    // Get Pairs.
     var pairs = paramStr.split('&');
+
     for (var i=0; i<pairs.length; i++) {
         var pair = pairs[i].split('=');
         var indices = [];
