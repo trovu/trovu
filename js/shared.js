@@ -63,12 +63,8 @@ function parseJQueryParams(paramStr) {
 
         for (var j=0; j<indices.length-1; j++) {
             var idx = indices[j];
-            var nextIdx = indices[j+1];
             if (!o[idx]) {
-                if ((nextIdx == "") || (/^[0-9]+$/.test(nextIdx)))
-                    o[idx] = [];
-                else
-                    o[idx] = {};
+                o[idx] = {};
             }
             o = o[idx];
         }
