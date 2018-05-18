@@ -44,6 +44,8 @@ function parseJQueryParams(paramStr) {
         name = decodeURIComponent(name);
         value = decodeURIComponent(value);
 
+        name = name.trim();
+
         // Prepare indices.
         var indices = [];
 
