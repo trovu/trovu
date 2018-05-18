@@ -42,6 +42,7 @@ function parseJQueryParams(paramStr) {
 
     // Decode.
     name = decodeURIComponent(name);
+    value = value.replace(/\+/g, '%20');
     value = decodeURIComponent(value);
 
     name = name.trim();
