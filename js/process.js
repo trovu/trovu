@@ -194,12 +194,13 @@ async function processCall() {
   if (redirectUrl) {
     redirectUrl = replaceVariables(redirectUrl, variables);
     redirectUrl = replaceArguments(redirectUrl, arguments);
-    //console.log(redirectUrl);
-    //return;
   }
   else {
     var redirectUrl = '../index.html#status=not_found&query=' + encodeURIComponent(query);
   }
+	
+  //console.log(redirectUrl);
+  //return;
 
   window.location.href = redirectUrl;
 }
