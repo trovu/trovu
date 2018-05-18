@@ -160,8 +160,6 @@ async function processCall() {
   var params = getSearchParameters();
   var query = params.query;
 
-  //query = 'g foo';  
-  //query = 'db b, hh';  
   var namespaces = ['o','de','.de'];
 
   var variables = {
