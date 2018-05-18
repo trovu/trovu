@@ -197,7 +197,9 @@ async function processCall() {
     redirectUrl = replaceArguments(redirectUrl, arguments);
   }
   else {
-    var redirectUrl = '../index.html#status=not_found&query=' + encodeURIComponent(query);
+    params['status'] = 'not_found';
+    let paramStr = buildParamStr(params);
+    var redirectUrl = '../index.html#' + paramStr;
   }
   
   //console.log(redirectUrl);
