@@ -159,9 +159,6 @@ async function processCall() {
 
   var params = getSearchParameters();
   var query = params.query;
-  if (!query) {
-    return;
-  }
 
   //query = 'g foo';  
   //query = 'db b, hh';  
