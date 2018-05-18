@@ -40,6 +40,7 @@ function parseJQueryParams(paramStr) {
           value = '';
         }
 
+        // Decode.
         var name = decodeURIComponent(name);
         var value = decodeURIComponent(value);
 
