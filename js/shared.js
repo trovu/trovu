@@ -21,7 +21,7 @@ function transformToAssocArray( paramStr ) {
   return params;
 }
 
-// Source:
+// Based on:
 // https://stackoverflow.com/a/3355892/52023
 function parseJQueryParams(paramStr) {
 
