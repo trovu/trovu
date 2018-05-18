@@ -14,9 +14,12 @@ document.getElementById('query-form').onsubmit = function(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
-	// Put query into hash.
-	var query = document.getElementById('query').value; 
-	var processUrl = 'process/index.html#query='  + encodeURIComponent(query);
+  // Put query into hash.
+  let params = {};
+  params['query'] = document.getElementById('query').value; 
+  params['namespaces'] = 'o,de,.de';
+  let paramStr = buildParamStr(params);
+  var processUrl = 'process/index.html#' + paramStr;
 
   // Redirect to process script.
   window.location.href = processUrl;
