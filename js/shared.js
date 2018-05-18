@@ -28,9 +28,10 @@ function parseJQueryParams(paramStr) {
     // Prepare params.
     var params = {};
 
-    // Get Pairs.
+    // Get pairs.
     var pairs = paramStr.split('&');
 
+    // Iterate over all pairs.
     for (var i=0; i<pairs.length; i++) {
         var pair = pairs[i].split('=');
         var indices = [];
