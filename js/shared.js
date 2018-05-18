@@ -21,6 +21,46 @@ function transformToAssocArray( paramStr ) {
   return params;
 }
 
+// Source:
+// https://stackoverflow.com/a/3355892/52023
+function parseJQueryParams(p) {
+    var params = {};
+    var pairs = p.split('&');
+    for (var i=0; i<pairs.length; i++) {
+        var pair = pairs[i].split('=');
+        var indices = [];
+        var name = decodeURIComponent(pair[0]),
+            value = decodeURIComponent(pair[1]);
+
+        var name = name.replace(/\[([^\]]*)\]/g, 
+            function(k, idx) { indices.push(idx); return ""; });
+
+        indices.unshift(name);
+        var o = params;
+
+        for (var j=0; j<indices.length-1; j++) {
+            var idx = indices[j];
+            var nextIdx = indices[j+1];
+            if (!o[idx]) {
+                if ((nextIdx == "") || (/^[0-9]+$/.test(nextIdx)))
+                    o[idx] = [];
+                else
+                    o[idx] = {};
+            }
+            o = o[idx];
+        }
+
+        idx = indices[indices.length-1];
+        if (idx == "") {
+            o.push(value);
+        }
+        else {
+            o[idx] = value;
+        }
+    }
+    return params;
+}
+
 function getSearchParameters() {
   var paramStr = window.location.hash.substr(1);
   return paramStr != null && paramStr != "" ? transformToAssocArray(paramStr) : {};
