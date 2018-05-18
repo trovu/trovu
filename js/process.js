@@ -9,7 +9,7 @@ async function fetchAsync(url) {
 
 function buildFetchUrl(namespace, keyword, argumentCount) {
 
-  var fetchUrl = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.txt"
+  var fetchUrlTemplate = "https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.txt"
 
   namespace = encodeURIComponent(namespace);
   keyword   = encodeURIComponent(keyword);
@@ -19,6 +19,7 @@ function buildFetchUrl(namespace, keyword, argumentCount) {
     '{%keyword}':       keyword,
     '{%argumentCount}': argumentCount
   }
+  var fetchUrl = fetchUrlTemplate;
   for (key in replacements) {
     fetchUrl = fetchUrl.replace(key, replacements[key]);
   }
