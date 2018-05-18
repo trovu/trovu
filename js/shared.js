@@ -25,59 +25,59 @@ function transformToAssocArray( paramStr ) {
 // https://stackoverflow.com/a/3355892/52023
 function parseJQueryParams(paramStr) {
 
-    // Prepare params.
-    var params = {};
+  // Prepare params.
+  var params = {};
 
-    // Get pairs.
-    var keyValueStrings = paramStr.split('&');
+  // Get pairs.
+  var keyValueStrings = paramStr.split('&');
 
-    // Iterate over all pairs.
-    for (keyValueString of keyValueStrings) {
+  // Iterate over all pairs.
+  for (keyValueString of keyValueStrings) {
 
-        [name, value] = keyValueString.split('=');
+    [name, value] = keyValueString.split('=');
 
-        if (typeof value == 'undefined') {
-          value = '';
-        }
-
-        // Decode.
-        name = decodeURIComponent(name);
-        value = decodeURIComponent(value);
-
-        name = name.trim();
-
-        // Skip empty.
-        if ('' == name) {
-          continue;
-        }
-
-        // Prepare indices.
-        var indices = [];
-
-        // Move indices from string into array.
-        var name = name.replace(/\[([^\]]*)\]/g, 
-            function(k, idx) { indices.push(idx); return ""; });
-
-        indices.unshift(name);
-        var o = params;
-
-        for (var j=0; j<indices.length-1; j++) {
-            var idx = indices[j];
-            if (!o[idx]) {
-                o[idx] = {};
-            }
-            o = o[idx];
-        }
-
-        idx = indices[indices.length-1];
-        if (idx == "") {
-            o.push(value);
-        }
-        else {
-            o[idx] = value;
-        }
+    if (typeof value == 'undefined') {
+      value = '';
     }
-    return params;
+
+    // Decode.
+    name = decodeURIComponent(name);
+    value = decodeURIComponent(value);
+
+    name = name.trim();
+
+    // Skip empty.
+    if ('' == name) {
+      continue;
+    }
+
+    // Prepare indices.
+    var indices = [];
+
+    // Move indices from string into array.
+    var name = name.replace(/\[([^\]]*)\]/g, 
+      function(k, idx) { indices.push(idx); return ""; });
+
+    indices.unshift(name);
+    var o = params;
+
+    for (var j=0; j<indices.length-1; j++) {
+      var idx = indices[j];
+      if (!o[idx]) {
+        o[idx] = {};
+      }
+      o = o[idx];
+    }
+
+    idx = indices[indices.length-1];
+    if (idx == "") {
+      o.push(value);
+    }
+    else {
+      o[idx] = value;
+    }
+  }
+  return params;
 }
 
 function getSearchParameters() {
