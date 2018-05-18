@@ -33,7 +33,10 @@ function parseJQueryParams(paramStr) {
 
     // Iterate over all pairs.
     for (var i=0; i<keyValueStrings.length; i++) {
+
         [name, value] = keyValueStrings[i].split('=');
+
+        // Prepare indices.
         var indices = [];
 
         if (typeof value == 'undefined') {
