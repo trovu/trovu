@@ -35,8 +35,9 @@ function parseJQueryParams(paramStr) {
     for (var i=0; i<keyValueStrings.length; i++) {
         var pair = keyValueStrings[i].split('=');
         var indices = [];
-        var name = decodeURIComponent(pair[0]),
-            value = decodeURIComponent(pair[1]);
+
+        var name = decodeURIComponent(pair[0]);
+        var value = decodeURIComponent(pair[1]);
 
         var name = name.replace(/\[([^\]]*)\]/g, 
             function(k, idx) { indices.push(idx); return ""; });
