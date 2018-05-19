@@ -19,7 +19,7 @@ document.getElementById('query-form').onsubmit = function(event) {
   params['query'] = document.getElementById('query').value; 
   params['namespaces'] = 'o,de,.de';
   let paramStr = buildParamStr(params);
-  var processUrl = 'process/index.html#' + paramStr;
+  var processUrl = 'process/index.html?#' + paramStr;
 
   // Redirect to process script.
   window.location.href = processUrl;
