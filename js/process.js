@@ -177,7 +177,11 @@ async function processCall() {
   };
   
   [keyword, argumentString] = splitKeepRemainder(query, " ", 2);
-  var arguments = argumentString.split(",");
+  if (argumentString) {
+    var arguments = argumentString.split(",");
+  } else {
+    var arguments = []; 
+  }
   
   // Fetch all available shortcuts for our query and namespace settings.
   var texts = [];
