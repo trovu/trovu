@@ -186,7 +186,8 @@ async function processCall() {
   // Fetch all available shortcuts for our query and namespace settings.
   var texts = [];
   for (namespace of namespaces) {
-    var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length);
+    let fetchUrlTemplate = namespaceUrlTemplates[namespace];
+    var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
     texts[namespace]  = await fetchAsync(fetchUrl);
   }
 
