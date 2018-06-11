@@ -134,6 +134,7 @@ function getSearchParameters() {
   return params;
 }
 function buildParamStr(params) {
+
   let paramStr = '';
   for (key in params) {
     paramStr = paramStr + key + '=' + params[key] + '&';
