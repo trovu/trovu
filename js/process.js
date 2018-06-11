@@ -162,15 +162,8 @@ async function processCall() {
 
   var params = getSearchParameters();
   var query = params.query || "";
-  var namespacesStr = params.namespaces || "";
+  let namespaces = getNamespaces(params);
   var namespaceUrlTemplates = params.namespace || {};
-
-  if (namespacesStr) {
-    var namespaces = namespacesStr.split(',')
-  }
-  else {
-    var namespaces = ['o','de','.de'];
-  }
 
   var variables = {
     language: 'de' 

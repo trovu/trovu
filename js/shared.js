@@ -97,3 +97,14 @@ function buildParamStr(params) {
   return paramStr;
 }
 
+function getNamespaces(params) {
+
+  var namespacesStr = params.namespaces || "";
+  if (namespacesStr) {
+    var namespaces = namespacesStr.split(',')
+  }
+  else {
+    var namespaces = ['o','de','.de'];
+  }
+	return namespaces;
+}
