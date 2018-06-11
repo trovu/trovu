@@ -19,7 +19,7 @@ document.getElementById('query-form').onsubmit = function(event) {
 
   // Put query into hash.
   params['query'] = document.getElementById('query').value; 
-  params['namespaces'] = namespaces;
+  params['namespaces'] = namespaces.join(',');
 
   let paramStr = param(params);
   var processUrl = 'process/index.html?#' + paramStr;
