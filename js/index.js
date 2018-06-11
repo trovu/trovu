@@ -1,5 +1,5 @@
 function init() {
-  var params = getSearchParameters()
+  let params = getSearchParameters()
   document.querySelector('#query').value = params.query || "";
   switch (params.status) {
     case 'not_found':
