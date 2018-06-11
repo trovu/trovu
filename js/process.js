@@ -163,7 +163,7 @@ async function processCall() {
   var params = getSearchParameters();
   var query = params.query || "";
   let namespaces = getNamespaces(params);
-  var namespaceUrlTemplates = params.namespace || {};
+  let namespaceUrlTemplates = getNamespaceUrlTemplates(params);
 
   var variables = {
     language: 'de' 

@@ -108,3 +108,9 @@ function getNamespaces(params) {
   }
 	return namespaces;
 }
+
+function getNamespaceUrlTemplates(params) {
+  
+  let namespaceUrlTemplates = params.namespace || {};
+  return namespaceUrlTemplates;
+}
