@@ -22,7 +22,7 @@ document.getElementById('query-form').onsubmit = function(event) {
   params['namespaces'] = namespaces.join(',');
 
   let paramStr = param(params);
-  var processUrl = 'process/index.html?#' + paramStr;
+  let processUrl = 'process/index.html?#' + paramStr;
 
   // Redirect to process script.
   window.location.href = processUrl;
