@@ -1,5 +1,8 @@
+var params = getSearchParameters()
+var namespaces = getNamespaces(params);
+var namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+
 function init() {
-  let params = getSearchParameters()
   document.querySelector('#query').value = params.query || "";
   switch (params.status) {
     case 'not_found':
@@ -15,9 +18,8 @@ document.getElementById('query-form').onsubmit = function(event) {
   event.preventDefault();
 
   // Put query into hash.
-  let params = {};
   params['query'] = document.getElementById('query').value; 
-  params['namespaces'] = 'o,de,.de';
+  params['namespaces'] = namespaces;
   let paramStr = buildParamStr(params);
   var processUrl = 'process/index.html?#' + paramStr;
 
