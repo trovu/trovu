@@ -145,6 +145,7 @@ function getNamespaces(params) {
     var namespaces = namespacesStr.split(',')
   }
   else {
+    // Default shortcuts.
     var namespaces = ['o','de','.de'];
   }
 	return namespaces;
