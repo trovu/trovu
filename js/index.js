@@ -9,6 +9,15 @@ function init() {
   namespaceUrlTemplates = getNamespaceUrlTemplates(params);
 
   document.querySelector('#query').value = params.query || "";
+  for (i in namespaces) {
+    let liElement = document.createElement('li');
+    liElement.setAttribute('class', 'badge badge-light');
+    if (namespaces[i] in namespaceUrlTemplates) {
+      liElement.setAttribute('title', namespaceUrlTemplates[namespaces[i]]);
+    }
+    liElement.textContent = namespaces[i];
+    document.querySelector('ol.namespaces').append(liElement);
+  }
   switch (params.status) {
     case 'not_found':
       document.querySelector('#alert').removeAttribute('hidden');
