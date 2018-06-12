@@ -1,8 +1,13 @@
-var params = getSearchParameters()
-var namespaces = getNamespaces(params);
-var namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+var params;
+var namespaces;
+var namespaceUrlTemplates;
 
 function init() {
+
+  params = getSearchParameters()
+  namespaces = getNamespaces(params);
+  namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+
   document.querySelector('#query').value = params.query || "";
   switch (params.status) {
     case 'not_found':
