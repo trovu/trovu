@@ -132,7 +132,7 @@ function jqueryDeparam(paramStr) {
 
 // Param getters ====================================================
 
-function getSearchParameters() {
+function getParams() {
   var paramStr = window.location.hash.substr(1);
   let params = jqueryDeparam(paramStr);
   return params;
@@ -194,7 +194,7 @@ function getLanguageAndCountry(params) {
 function getEnv() {
 
   let env = {};
-  params = getSearchParameters()
+  params = getParams()
 
   env.query                 = params.query || "";
   env.namespaces            = getNamespaces(params);

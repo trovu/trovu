@@ -196,7 +196,7 @@ async function processCall() {
     redirectUrl = replaceArguments(redirectUrl, arguments);
   }
   else {
-    let params = getSearchParameters();
+    let params = getParams();
     params.status = 'not_found';
     let paramStr = jqueryParam(params);
     var redirectUrl = '../index.html#' + paramStr;
