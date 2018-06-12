@@ -6,7 +6,7 @@ function init() {
   env = getEnv();
 
   // Set query into input.
-  document.querySelector('#query').value = params.query || "";
+  document.querySelector('#query').value = env.query;
 
   // Show namespaces and their template URLs.
   for (i in env.namespaces) {
