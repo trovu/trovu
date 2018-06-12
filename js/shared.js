@@ -185,5 +185,8 @@ function getLanguageAndCountry(params) {
     country = 'us';
   }
 
-  return [language, country];
+  return {
+    language: language,
+    country:  country
+  };
 }
