@@ -195,9 +195,11 @@ function getEnv() {
 
   let env = {};
   params = getSearchParameters()
-  env.query = params.query || "";
-  env.namespaces = getNamespaces(params);
+
+  env.query                 = params.query || "";
+  env.namespaces            = getNamespaces(params);
   env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+
   env = Object.assign(env, getLanguageAndCountry(params));
 
   return env;
