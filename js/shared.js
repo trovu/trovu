@@ -27,7 +27,7 @@ function transformToAssocArray( paramStr ) {
 
 // Source:
 // https://github.com/knowledgecode/jquery-param/blob/master/jquery-param.js
-var param = function (a) {
+function jqueryParam(a) {
   var s = [];
   var add = function (k, v) {
     v = typeof v === 'function' ? v() : v;
@@ -70,7 +70,7 @@ var param = function (a) {
 
 // Based on:
 // https://stackoverflow.com/a/3355892/52023
-function parseJQueryParams(paramStr) {
+function jqueryDeparam(paramStr) {
 
   // Prepare params.
   var params = {};
@@ -130,7 +130,7 @@ function parseJQueryParams(paramStr) {
 
 function getSearchParameters() {
   var paramStr = window.location.hash.substr(1);
-  let params = parseJQueryParams(paramStr);
+  let params = jqueryDeparam(paramStr);
   return params;
 }
 function buildParamStr(params) {

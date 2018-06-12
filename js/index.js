@@ -41,7 +41,7 @@ document.getElementById('query-form').onsubmit = function(event) {
   params['query'] = document.getElementById('query').value; 
   params['namespaces'] = namespaces.join(',');
 
-  let paramStr = param(params);
+  let paramStr = jqueryParam(params);
   let processUrl = 'process/index.html?#' + paramStr;
 
   // Redirect to process script.
