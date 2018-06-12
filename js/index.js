@@ -4,13 +4,18 @@ var namespaceUrlTemplates;
 var language;
 var country;
 
+var env = {};
+
 function init() {
 
   // Init environment.
   params = getSearchParameters()
   namespaces = getNamespaces(params);
   namespaceUrlTemplates = getNamespaceUrlTemplates(params);
-  [language, country] = getLanguageAndCountry(params); 
+
+  env.namespaces = getNamespaces(params);
+  env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+  env = Object.assign(env, getLanguageAndCountry(params));
 
   // Set query into input.
   document.querySelector('#query').value = params.query || "";
