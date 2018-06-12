@@ -200,7 +200,7 @@ async function processCall() {
   }
   else {
     params['status'] = 'not_found';
-    let paramStr = buildParamStr(params);
+    let paramStr = jqueryParam(params);
     var redirectUrl = '../index.html#' + paramStr;
   }
   
