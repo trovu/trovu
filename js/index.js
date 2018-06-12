@@ -1,18 +1,9 @@
-var params;
-var namespaces;
-var namespaceUrlTemplates;
-var language;
-var country;
-
 var env = {};
 
 function init() {
 
   // Init environment.
   params = getSearchParameters()
-  namespaces = getNamespaces(params);
-  namespaceUrlTemplates = getNamespaceUrlTemplates(params);
-
   env.namespaces = getNamespaces(params);
   env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
   env = Object.assign(env, getLanguageAndCountry(params));
@@ -21,13 +12,13 @@ function init() {
   document.querySelector('#query').value = params.query || "";
 
   // Show namespaces and their template URLs.
-  for (i in namespaces) {
+  for (i in env.namespaces) {
     let liElement = document.createElement('li');
     liElement.setAttribute('class', 'badge badge-light');
-    if (namespaces[i] in namespaceUrlTemplates) {
-      liElement.setAttribute('title', namespaceUrlTemplates[namespaces[i]]);
+    if (env.namespaces[i] in env.namespaceUrlTemplates) {
+      liElement.setAttribute('title', env.namespaceUrlTemplates[env.namespaces[i]]);
     }
-    liElement.textContent = namespaces[i];
+    liElement.textContent = env.namespaces[i];
     document.querySelector('ol.namespaces').append(liElement);
   }
 
@@ -45,11 +36,14 @@ document.getElementById('query-form').onsubmit = function(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
+  params = {};
+
   // Put environment into hash.
   params['query'] = document.getElementById('query').value; 
-  params['namespaces'] = namespaces.join(',');
-  params['language'] = language;
-  params['country'] = country;
+  params['namespaces'] = env.namespaces.join(',');
+  params['namespace'] = env.namespaceUrlTemplates;
+  params['language'] = env.language;
+  params['country'] = env.country;
 
   let paramStr = jqueryParam(params);
   let processUrl = 'process/index.html?#' + paramStr;
