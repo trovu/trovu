@@ -164,7 +164,6 @@ function getLanguageAndCountry(params) {
 
   // Get from browser.
   let languageStr = navigator.language;
-  languageStr = 'fr';
   if (languageStr) {
     [language, country] = languageStr.split('-')
   }
