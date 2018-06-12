@@ -156,3 +156,34 @@ function getNamespaceUrlTemplates(params) {
   let namespaceUrlTemplates = params.namespace || {};
   return namespaceUrlTemplates;
 }
+
+function getLanguageAndCountry(params) {
+
+  let language = null;
+  let country = null;
+
+  // Get from browser.
+  let languageStr = navigator.language;
+  languageStr = 'fr';
+  if (languageStr) {
+    [language, country] = languageStr.split('-')
+  }
+
+  // Override via params.
+  if (params.language) {
+    language = params.language;
+  }
+  if (params.country) {
+    country = params.country;
+  }
+
+  // Default fallbacks.
+  if (!language) {
+    language = 'en';
+  }
+  if (!country) {
+    country = 'us';
+  }
+
+  return [language, country];
+}

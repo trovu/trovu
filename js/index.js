@@ -1,6 +1,8 @@
 var params;
 var namespaces;
 var namespaceUrlTemplates;
+var language;
+var country;
 
 function init() {
 
@@ -8,6 +10,7 @@ function init() {
   params = getSearchParameters()
   namespaces = getNamespaces(params);
   namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+  [language, country] = getLanguageAndCountry(params); 
 
   // Set query into input.
   document.querySelector('#query').value = params.query || "";
@@ -37,9 +40,11 @@ document.getElementById('query-form').onsubmit = function(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
-  // Put query into hash.
+  // Put environment into hash.
   params['query'] = document.getElementById('query').value; 
   params['namespaces'] = namespaces.join(',');
+  params['language'] = language;
+  params['country'] = country;
 
   let paramStr = jqueryParam(params);
   let processUrl = 'process/index.html?#' + paramStr;
