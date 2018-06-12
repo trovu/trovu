@@ -3,10 +3,7 @@ var env = {};
 function init() {
 
   // Init environment.
-  params = getSearchParameters()
-  env.namespaces = getNamespaces(params);
-  env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
-  env = Object.assign(env, getLanguageAndCountry(params));
+  env = getEnv();
 
   // Set query into input.
   document.querySelector('#query').value = params.query || "";

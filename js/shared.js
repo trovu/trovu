@@ -190,3 +190,14 @@ function getLanguageAndCountry(params) {
     country:  country
   };
 }
+
+function getEnv() {
+
+  let env = {};
+  params = getSearchParameters()
+  env.namespaces = getNamespaces(params);
+  env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+  env = Object.assign(env, getLanguageAndCountry(params));
+
+  return env;
+}
