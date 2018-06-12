@@ -160,16 +160,13 @@ function escapeRegExp(str) {
 
 async function processCall() {
 
-  var params = getSearchParameters();
-  var query = params.query || "";
-  let namespaces = getNamespaces(params);
-  let namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+  let env = getEnv();
 
   var variables = {
-    language: 'de' 
+    language: env.language
   };
   
-  [keyword, argumentString] = splitKeepRemainder(query, " ", 2);
+  [keyword, argumentString] = splitKeepRemainder(env.query, " ", 2);
   if (argumentString) {
     var arguments = argumentString.split(",");
   } else {
@@ -178,14 +175,14 @@ async function processCall() {
   
   // Fetch all available shortcuts for our query and namespace settings.
   var texts = [];
-  for (namespace of namespaces) {
-    let fetchUrlTemplate = namespaceUrlTemplates[namespace];
+  for (namespace of env.namespaces) {
+    let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
     texts[namespace]  = await fetchAsync(fetchUrl);
   }
 
   // Find first shorcut in our namespace hierarchy.
-  for (namespace of namespaces.reverse()) {
+  for (namespace of env.namespaces.reverse()) {
     if (texts[namespace]) {
       var textLines = texts[namespace].split("\n");
       var redirectUrl = textLines.shift();
@@ -199,7 +196,8 @@ async function processCall() {
     redirectUrl = replaceArguments(redirectUrl, arguments);
   }
   else {
-    params['status'] = 'not_found';
+    let params = getSearchParameters();
+    params.status = 'not_found';
     let paramStr = jqueryParam(params);
     var redirectUrl = '../index.html#' + paramStr;
   }
