@@ -4,11 +4,15 @@ var namespaceUrlTemplates;
 
 function init() {
 
+  // Init environment.
   params = getSearchParameters()
   namespaces = getNamespaces(params);
   namespaceUrlTemplates = getNamespaceUrlTemplates(params);
 
+  // Set query into input.
   document.querySelector('#query').value = params.query || "";
+
+  // Show namespaces and their template URLs.
   for (i in namespaces) {
     let liElement = document.createElement('li');
     liElement.setAttribute('class', 'badge badge-light');
@@ -18,6 +22,8 @@ function init() {
     liElement.textContent = namespaces[i];
     document.querySelector('ol.namespaces').append(liElement);
   }
+
+  // Show info alerts.
   switch (params.status) {
     case 'not_found':
       document.querySelector('#alert').removeAttribute('hidden');
