@@ -163,7 +163,8 @@ async function processCall() {
   let env = getEnv();
 
   var variables = {
-    language: env.language
+    language: env.language,
+    country:  env.country
   };
   
   [keyword, argumentString] = splitKeepRemainder(env.query, " ", 2);
