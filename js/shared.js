@@ -25,6 +25,8 @@ function transformToAssocArray( paramStr ) {
 }
 
 
+// jQuery Param handling ============================================
+
 // Source:
 // https://github.com/knowledgecode/jquery-param/blob/master/jquery-param.js
 function jqueryParam(a) {
@@ -127,6 +129,8 @@ function jqueryDeparam(paramStr) {
   }
   return params;
 }
+
+// Param getters ====================================================
 
 function getSearchParameters() {
   var paramStr = window.location.hash.substr(1);
