@@ -19,6 +19,9 @@ document.querySelector('body').onload = function(event) {
     document.querySelector('ol.namespaces').append(liElement);
   }
 
+  document.querySelector('.language.value').textContent = env.language;
+  document.querySelector('.country.value').textContent = env.country;
+
   // Show info alerts.
   switch (params.status) {
     case 'not_found':
