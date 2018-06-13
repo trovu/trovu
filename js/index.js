@@ -11,9 +11,12 @@ document.querySelector('body').onload = function(event) {
   // Show namespaces and their template URLs.
   for (i in env.namespaces) {
     let liElement = document.createElement('li');
-    liElement.setAttribute('class', 'badge badge-light');
     if (env.namespaces[i] in env.namespaceUrlTemplates) {
       liElement.setAttribute('title', env.namespaceUrlTemplates[env.namespaces[i]]);
+      liElement.setAttribute('class', 'badge badge-primary');
+    }
+    else {
+      liElement.setAttribute('class', 'badge badge-secondary');
     }
     liElement.textContent = env.namespaces[i];
     document.querySelector('ol.namespaces').append(liElement);
