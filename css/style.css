@@ -3,8 +3,12 @@ div.alert.namespaces {
 }
 ol.namespaces {
   list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 ol.namespaces li {
-  float: left;
+  display: inline-block;
+  margin: 0;
   margin-right: 0.5em;
 }
