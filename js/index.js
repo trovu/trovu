@@ -26,6 +26,15 @@ document.querySelector('body').onload = function(event) {
       document.querySelector('#alert').textContent = 'Could not find a matching shortcut for this query.';
       break;
   }
+
+  // TODO:
+  // Why does let params not work here?
+  params = buildParams();
+  let urlOpensearch = window.location.href + 'opensearch/?' + jqueryParam(params);
+
+  let linkSearch = document.querySelector('#linkSearch');
+  linkSearch.setAttribute('title', 'Trovu: ' + env.namespaces.join(','));
+  linkSearch.setAttribute('href', urlOpensearch);
 }
 
 document.getElementById('query-form').onsubmit = function(event) {
