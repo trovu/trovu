@@ -40,11 +40,16 @@ document.getElementById('query-form').onsubmit = function(event) {
   let paramStr = jqueryParam(params);
   let processUrl = 'process/index.html?#' + paramStr;
 
+  //console.log(processUrl);
+  //return;
+
   // Redirect to process script.
   window.location.href = processUrl;
 }
 
 
 document.querySelector('button.add-search').onclick = function(event) {
+
+  let params = buildParams();
   window.external.AddSearchProvider('/opensearch/?' + jqueryParam(params));
 }
