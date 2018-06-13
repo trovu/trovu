@@ -166,6 +166,10 @@ function getLanguageAndCountry(params) {
     country = 'us';
   }
 
+  // Ensure lowercase.
+  language = language.toLowerCase();
+  country  = country.toLowerCase();
+
   return {
     language: language,
     country:  country
