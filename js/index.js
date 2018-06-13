@@ -33,14 +33,9 @@ document.getElementById('query-form').onsubmit = function(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
-  params = {};
 
-  // Put environment into hash.
+  let params = buildParams();
   params['query'] = document.getElementById('query').value; 
-  params['namespaces'] = env.namespaces.join(',');
-  params['namespace'] = env.namespaceUrlTemplates;
-  params['language'] = env.language;
-  params['country'] = env.country;
 
   let paramStr = jqueryParam(params);
   let processUrl = 'process/index.html?#' + paramStr;
