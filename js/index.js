@@ -48,3 +48,8 @@ document.getElementById('query-form').onsubmit = function(event) {
   // Redirect to process script.
   window.location.href = processUrl;
 }
+
+
+document.querySelector('button.add-search').onclick = function(event) {
+  window.external.AddSearchProvider('/opensearch/?' + jqueryParam(params));
+}
