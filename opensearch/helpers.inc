@@ -33,11 +33,6 @@ function getBaseUrl() {
  $baseUrl .= "://";
  $baseUrl .= $_SERVER["SERVER_NAME"];
 
- // Add port.
- if ($_SERVER["SERVER_PORT"] != "80") {
-  $baseUrl .= ":" . $_SERVER["SERVER_PORT"];
- }
-
  // Add path.
  $baseUrl .= $_SERVER["SCRIPT_NAME"];
 
