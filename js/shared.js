@@ -120,15 +120,19 @@ function getParams() {
   return params;
 }
 
-function getNamespaces(params) {
+function getNamespaces(params, env) {
 
   var namespacesStr = params.namespaces || "";
   if (namespacesStr) {
     var namespaces = namespacesStr.split(',')
   }
   else {
-    // Default shortcuts.
-    var namespaces = ['o','de','.de'];
+    // Default namespaces.
+    var namespaces = [
+      'o',
+      env.language,
+      '.' +  env.country
+    ];
   }
 	return namespaces;
 }
@@ -181,11 +185,11 @@ function getEnv() {
   let env = {};
   params = getParams()
 
-  env.query                 = params.query || "";
-  env.namespaces            = getNamespaces(params);
-  env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
-
   env = Object.assign(env, getLanguageAndCountry(params));
+
+  env.query                 = params.query || "";
+  env.namespaces            = getNamespaces(params, env);
+  env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
 
   return env;
 }
