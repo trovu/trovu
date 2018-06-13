@@ -48,7 +48,6 @@ document.getElementById('query-form').onsubmit = function(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
-
   let params = buildParams();
   params['query'] = document.getElementById('query').value; 
 
