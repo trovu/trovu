@@ -59,6 +59,6 @@ document.getElementById('query-form').onsubmit = function(event) {
 
 document.querySelector('button.add-search').onclick = function(event) {
 
-  let params = buildParams();
-  window.external.AddSearchProvider('/opensearch/?' + jqueryParam(params));
+  let urlOpensearch = document.querySelector('#linkSearch').getAttribute('href');
+  window.external.AddSearchProvider(urlOpensearch);
 }
