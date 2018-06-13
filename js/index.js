@@ -41,6 +41,10 @@ document.querySelector('body').onload = function(event) {
   let linkSearch = document.querySelector('#linkSearch');
   linkSearch.setAttribute('title', 'Trovu: ' + env.namespaces.join(','));
   linkSearch.setAttribute('href', urlOpensearch);
+
+  let urlProcess = window.location.href + 'process/?query=%s&' + jqueryParam(params);
+  let preProcessUrl = document.querySelector('pre.process-url');
+  preProcessUrl.textContent = urlProcess;
 }
 
 document.getElementById('query-form').onsubmit = function(event) {
