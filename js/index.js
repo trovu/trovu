@@ -37,14 +37,15 @@ document.querySelector('body').onload = function(event) {
   // TODO:
   // Why does let params not work here?
   params = buildParams();
-  let urlOpensearch = window.location.href + 'opensearch/?' + jqueryParam(params);
+  baseUrl = buildBaseUrl();
+  let urlOpensearch = baseUrl + 'opensearch/?' + jqueryParam(params);
 
   let linkSearch = document.querySelector('#linkSearch');
   linkSearch.setAttribute('title', 'Trovu: ' + env.namespaces.join(','));
   linkSearch.setAttribute('href', urlOpensearch);
 
   // Set Process URL.
-  let urlProcess = window.location.href + 'process/?query=%s&' + jqueryParam(params);
+  let urlProcess = baseUrl + 'process/?query=%s&' + jqueryParam(params);
   let preProcessUrl = document.querySelector('pre.process-url');
   preProcessUrl.textContent = urlProcess;
 }
