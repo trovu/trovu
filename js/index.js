@@ -1,6 +1,6 @@
 var env = {};
 
-function init() {
+document.querySelector('body').onload = function(event) {
 
   // Init environment.
   env = getEnv();
