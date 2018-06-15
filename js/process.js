@@ -1,8 +1,10 @@
 async function fetchAsync(url) {
   const response = await fetch(url);
   if (response.status != 200) {
+    log("Fail:    " + url);
     return null;
   }
+  log("Success: " + url);
   const text = await response.text();
   return text;
 }
@@ -183,6 +185,7 @@ async function processCall() {
   for (namespace of env.namespaces) {
     let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
+    log("Request: " + fetchUrl);
     texts[namespace]  = await fetchAsync(fetchUrl);
   }
 
@@ -196,6 +199,9 @@ async function processCall() {
     }
   }
 
+  log('');
+  log("Used template: " + redirectUrl);
+
   if (redirectUrl) {
     redirectUrl = replaceVariables(redirectUrl, variables);
     redirectUrl = replaceArguments(redirectUrl, arguments);
@@ -206,6 +212,8 @@ async function processCall() {
     let paramStr = jqueryParam(params);
     var redirectUrl = '../index.html#' + paramStr;
   }
+
+  log("Redirect to:   " + redirectUrl)
   
   //console.log(redirectUrl);
   //return;
