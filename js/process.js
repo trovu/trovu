@@ -158,6 +158,10 @@ function escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
+function log(str) {
+  document.querySelector('#log').textContent += "\n" + str;
+}
+
 async function processCall() {
 
   let env = getEnv();
