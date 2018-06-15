@@ -61,9 +61,26 @@
           <dt class="col-sm-2">db b, m</dt>
           <dd class="col-sm-10">find the next <em>Deutsche Bahn</em> train connection from Berlin to Munich.</dd>
         </dl>
-        <h2 class="h4">URL template</h2>
-        <p>for your custom browser search engine:</p>
-        <pre class="process-url">https://trovu.github.io/trovu-web/process/?#query=%s</pre>
+        <h2 class="h4">Settings via URL parameters</h2>
+        <p>Example:</p>
+        <pre>#language=en
+&amp;country=.de
+&amp;namespaces=o,en,.de,jorges
+&amp;namespace[jorges]=https://raw.githubusercontent.com/georgjaehnig/trovu-user/master/shortcuts/{%keyword}/{%argumentCount}.txt</pre>
+        <dl>
+          <dt>namespaces</dt>
+          <dd>List of namespaces to use, separated by comma.</dd>
+          <dt>namespace[someNamespace]</dt>
+          <dd>URL template for fetching shortcuts for someNamespace. someNamespace must be listed in namespaces.</dd>
+          <dt>language</dt>
+          <dd>2-letter language code. Will be used to replace {$language} within the shortcut URLs.</dd>
+          <dt>country</dt>
+          <dd>2-letter country code. Will be used to replace {$country} within the shortcut URLs.</dd>
+        </dl>
+        </p>
+        <h2 class="h4">Add to browser</h2>
+        <p>Use this URL template custom browser search engine:</p>
+        <pre class="process-url">/process/?#query=%s</pre>
        </div>
     </main>
 
