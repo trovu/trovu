@@ -182,7 +182,7 @@ async function processCall() {
     texts[namespace]  = await fetchAsync(fetchUrl);
   }
 
-  // Find first shorcut in our namespace hierarchy.
+  // Find first shortcut in our namespace hierarchy.
   for (namespace of env.namespaces.reverse()) {
     if (texts[namespace]) {
       var textLines = texts[namespace].split("\n");
