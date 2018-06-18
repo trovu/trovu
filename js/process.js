@@ -197,6 +197,25 @@ async function processCall() {
     var arguments = []; 
   }
 
+	// Check for extraNamespace in keyword.
+	if (keyword.match(/\./)) {
+
+  	[extraNamespace, keyword] = splitKeepRemainder(keyword, ".", 2);
+
+		// Add to namespaces.
+		env.namespaces.push(extraNamespace);
+
+		// Set variables.
+		switch (extraNamespace.length) {
+			case 2:
+			  variables.language = extraNamespace;
+				break;
+			case 3:
+			  variables.country = extraNamespace;
+				break;
+		}
+	}
+
   [texts, found] = await fetchShortcuts(env, keyword, arguments);
 
   // If nothing found:
