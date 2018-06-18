@@ -199,6 +199,13 @@ async function processCall() {
 
   [texts, found] = await fetchShortcuts(env, keyword, arguments);
 
+  // If nothing found:
+  // Try without commas, i.e. with the whole argumentString as the only argument.
+  if ((!found) && (arguments.length > 0)) {
+    arguments = [argumentString];
+    [texts, found] = await fetchShortcuts(env, keyword, arguments);
+  }
+
   // Find first shortcut in our namespace hierarchy.
   for (namespace of env.namespaces.reverse()) {
     if (texts[namespace]) {
