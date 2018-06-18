@@ -164,6 +164,23 @@ function log(str) {
   document.querySelector('#log').textContent += "\n" + str;
 }
 
+async function fetchShortcuts(env, keyword, arguments) {
+  
+  // Fetch all available shortcuts for our query and namespace settings.
+  var texts = [];
+  let found = false;
+  for (namespace of env.namespaces) {
+    let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
+    var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
+    log("Request: " + fetchUrl);
+    texts[namespace]  = await fetchAsync(fetchUrl);
+    if (!found) {
+      found = Boolean(texts[namespace]);
+    }
+  }
+  return [texts, found];
+}
+
 async function processCall() {
 
   let env = getEnv();
@@ -179,15 +196,8 @@ async function processCall() {
   } else {
     var arguments = []; 
   }
-  
-  // Fetch all available shortcuts for our query and namespace settings.
-  var texts = [];
-  for (namespace of env.namespaces) {
-    let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
-    var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
-    log("Request: " + fetchUrl);
-    texts[namespace]  = await fetchAsync(fetchUrl);
-  }
+
+  [texts, found] = await fetchShortcuts(env, keyword, arguments);
 
   // Find first shortcut in our namespace hierarchy.
   for (namespace of env.namespaces.reverse()) {
