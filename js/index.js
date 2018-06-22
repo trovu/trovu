@@ -5,11 +5,7 @@ document.querySelector('body').onload = function(event) {
   // Init environment.
   env = getEnv();
 
-	// Set settings fields from environment.
-  document.querySelector('#languageSetting').value = env.language;
-  document.querySelector('#countrySetting').value = env.country;
-  document.querySelector('#namespacesSetting').value = env.namespaces.join(',');
-;
+	displaySettings();
 
   // Set query into input.
   document.querySelector('#query').value = env.query;
@@ -79,4 +75,11 @@ document.querySelector('button.add-search').onclick = function(event) {
 
   let urlOpensearch = document.querySelector('#linkSearch').getAttribute('href');
   window.external.AddSearchProvider(urlOpensearch);
+}
+
+function displaySettings() {
+  // Set settings fields from environment.
+  document.querySelector('#languageSetting').value = env.language;
+  document.querySelector('#countrySetting').value = env.country;
+  document.querySelector('#namespacesSetting').value = env.namespaces.join(',');
 }
