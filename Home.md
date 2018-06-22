@@ -6,7 +6,7 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 - `g berlin` – search Google for "berlin".
 - `gd london, liverpool` – find a route on Google Maps from London to Liverpool. 
-- `db b, m` – find the next * Bahn* train connection from Berlin to Munich.
+- `db b, m` – find the next *Deutsche Bahn* train connection from Berlin to Munich.
 
 ## Differences to Serchilo
 
