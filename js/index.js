@@ -111,3 +111,8 @@ document.querySelector('#countrySetting').onchange = function(event) {
 	env.country = event.target.value;
 	updateNamespaces();
 }
+
+document.querySelector('#namespacesSetting').onchange = function(event) {
+	env.namespaces = event.target.value.split(',');
+	updateNamespaces();
+}
