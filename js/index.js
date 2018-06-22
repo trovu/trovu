@@ -85,6 +85,9 @@ function displaySettings() {
   let urlProcess = baseUrl + 'process/#query=%s&' + jqueryParam(params);
   let preProcessUrl = document.querySelector('pre.process-url');
   preProcessUrl.textContent = urlProcess;
+
+  let paramStr = jqueryParam(params);
+  window.location.hash = '#' + paramStr;
 }
 
 function updateNamespaces() {
