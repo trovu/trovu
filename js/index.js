@@ -5,10 +5,7 @@ document.querySelector('body').onload = function(event) {
   // Init environment.
   env = getEnv();
 
-	displaySettings();
-
-  // Set query into input.
-  document.querySelector('#query').value = env.query;
+  let params = getParams();
 
   // Show info alerts.
   switch (params.status) {
