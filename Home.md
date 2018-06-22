@@ -35,7 +35,7 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ## Repositories
 
-### [trovu](https://github.com/trovu/trovu)
+### [trovu-data](https://github.com/trovu/trovu-data)
 
 This repository contains all the data, e.g.
 
@@ -54,4 +54,4 @@ Future plans :) (Can be picked up by you, too.)
 
 ## Demo
 
-https://trovu.github.io/trovu-web/
+https://trovu.net/
