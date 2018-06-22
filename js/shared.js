@@ -1,3 +1,5 @@
+const fetchUrlTemplateDefault = "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.txt"
+
 function splitKeepRemainder(string, delimiter, n) {
   if (!string) {
     return [];
