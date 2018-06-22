@@ -20,6 +20,16 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ![](https://github.com/trovu/trovu.github.io/blob/master/img/process.png)
 
+First, lets look at the (example) settings:
+
+- Namespace URL templates: For every namespace, the template defines where to look for its shortcuts. For site namespaces they point to the repository [trovu-data](https://github.com/trovu/trovu-data). Optionally, for user namespaces they can point anywhere.
+  - o: `https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/o/{%keyword}/{%argumentCount}.txt`
+  - de: `https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/de/{%keyword}/{%argumentCount}.txt`
+  - .de: `https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/.de/{%keyword}/{%argumentCount}.txt`
+  - johndoe: `https://example.com/trovu/{%keyword}.{%argumentCount}.txt`
+
+Now, lets look at a processing of a query"
+
 1. A query comes in, e.g. `g foobar`.
 1. The current namespace setting is `o,de,.de`.
 1. The query is parsed – in the client by Javascript – into
