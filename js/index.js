@@ -86,3 +86,28 @@ function displaySettings() {
   let preProcessUrl = document.querySelector('pre.process-url');
   preProcessUrl.textContent = urlProcess;
 }
+
+function updateNamespaces() {
+
+  if (
+		(env.namespaces.length == 3) &&
+		(env.namespaces[0] == 'o') &&
+		(env.namespaces[1].length == 2) &&
+		(env.namespaces[2].length == 3)
+	) {
+		console.log('true');
+    env.namespaces[1] = env.language;
+    env.namespaces[2] = '.' + env.country;
+	}
+	displaySettings();
+}
+
+document.querySelector('#languageSetting').onchange = function(event) {
+	env.language = event.target.value;
+	updateNamespaces();
+}
+
+document.querySelector('#countrySetting').onchange = function(event) {
+	env.country = event.target.value;
+	updateNamespaces();
+}
