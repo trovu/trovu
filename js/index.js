@@ -16,7 +16,7 @@ document.querySelector('body').onload = function(event) {
   }
 
 
-	displaySettings();
+  displaySettings();
 
   // Set query into input.
   document.querySelector('#query').value = env.query;
@@ -96,29 +96,29 @@ function displaySettings() {
 function updateNamespaces() {
 
   if (
-		(env.namespaces.length == 3) &&
-		(env.namespaces[0] == 'o') &&
-		(env.namespaces[1].length == 2) &&
-		(env.namespaces[2].length == 3)
-	) {
-		console.log('true');
+    (env.namespaces.length == 3) &&
+    (env.namespaces[0] == 'o') &&
+    (env.namespaces[1].length == 2) &&
+    (env.namespaces[2].length == 3)
+  ) {
+    console.log('true');
     env.namespaces[1] = env.language;
     env.namespaces[2] = '.' + env.country;
-	}
-	displaySettings();
+  }
+  displaySettings();
 }
 
 document.querySelector('#languageSetting').onchange = function(event) {
-	env.language = event.target.value;
-	updateNamespaces();
+  env.language = event.target.value;
+  updateNamespaces();
 }
 
 document.querySelector('#countrySetting').onchange = function(event) {
-	env.country = event.target.value;
-	updateNamespaces();
+  env.country = event.target.value;
+  updateNamespaces();
 }
 
 document.querySelector('#namespacesSetting').onchange = function(event) {
-	env.namespaces = event.target.value.split(',');
-	updateNamespaces();
+  env.namespaces = event.target.value.split(',');
+  updateNamespaces();
 }

@@ -136,7 +136,7 @@ function getNamespaces(params, env) {
       '.' +  env.country
     ];
   }
-	return namespaces;
+  return namespaces;
 }
 
 function getNamespaceUrlTemplates(params) {

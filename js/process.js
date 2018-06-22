@@ -214,9 +214,9 @@ async function fetchShortcuts(env, keyword, arguments) {
 
 async function getRedirectUrl(env) {
 
-	if (!env.query) {
-		return;	
-	}
+  if (!env.query) {
+    return;  
+  }
 
   var variables = {
     language: env.language,
@@ -230,24 +230,24 @@ async function getRedirectUrl(env) {
     var arguments = []; 
   }
 
-	// Check for extraNamespace in keyword.
-	if (keyword.match(/\./)) {
+  // Check for extraNamespace in keyword.
+  if (keyword.match(/\./)) {
 
-  	[extraNamespace, keyword] = splitKeepRemainder(keyword, ".", 2);
+    [extraNamespace, keyword] = splitKeepRemainder(keyword, ".", 2);
 
-		// Add to namespaces.
-		env.namespaces.push(extraNamespace);
+    // Add to namespaces.
+    env.namespaces.push(extraNamespace);
 
-		// Set variables.
-		switch (extraNamespace.length) {
-			case 2:
-			  variables.language = extraNamespace;
-				break;
-			case 3:
-			  variables.country = extraNamespace;
-				break;
-		}
-	}
+    // Set variables.
+    switch (extraNamespace.length) {
+      case 2:
+        variables.language = extraNamespace;
+        break;
+      case 3:
+        variables.country = extraNamespace;
+        break;
+    }
+  }
 
   [texts, found] = await fetchShortcuts(env, keyword, arguments);
 
@@ -258,7 +258,7 @@ async function getRedirectUrl(env) {
     [texts, found] = await fetchShortcuts(env, keyword, arguments);
   }
 
-	let redirectUrl = null;
+  let redirectUrl = null;
 
   // Find first shortcut in our namespace hierarchy.
   for (namespace of env.namespaces.reverse()) {
@@ -270,24 +270,24 @@ async function getRedirectUrl(env) {
     }
   }
 
-	if (!redirectUrl) {
-	  return;
-	}
+  if (!redirectUrl) {
+    return;
+  }
 
-	log('');
-	log("Used template: " + redirectUrl);
+  log('');
+  log("Used template: " + redirectUrl);
 
-	redirectUrl = replaceVariables(redirectUrl, variables);
-	redirectUrl = replaceArguments(redirectUrl, arguments);
+  redirectUrl = replaceVariables(redirectUrl, variables);
+  redirectUrl = replaceArguments(redirectUrl, arguments);
 
-	return redirectUrl;
+  return redirectUrl;
 }
 
 document.querySelector('body').onload = async function(event) {
 
   let env = getEnv();
 
-	let redirectUrl = await getRedirectUrl(env);
+  let redirectUrl = await getRedirectUrl(env);
 
   if (!redirectUrl) {
     let params = getParams();
