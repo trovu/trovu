@@ -18,6 +18,11 @@ document.querySelector('body').onload = function(event) {
       break;
   }
 
+
+	displaySettings();
+
+  // Set query into input.
+  document.querySelector('#query').value = env.query;
 }
 
 document.getElementById('query-form').onsubmit = function(event) {
