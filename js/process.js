@@ -1,3 +1,10 @@
+/**
+ * Fetch the content of a file behind an URL.
+ *
+ * @param {string} url    - The URL of the file to fetch.
+ *
+ * @return {string} text  - The content.
+ */
 async function fetchAsync(url) {
   const response = await fetch(url);
   if (response.status != 200) {
@@ -9,6 +16,16 @@ async function fetchAsync(url) {
   return text;
 }
 
+/**
+ * Build fetch URL given the necessary parameters.
+ *
+ * @param {string} namespace        - The namespace to use.
+ * @param {string} keyword          - The keyword to use.
+ * @param {string} argumentCount    - The argumentCount to use.
+ * @param {string} fetchUrlTemplate - A template containing placeholders for all the above.
+ *
+ * @return {string} fetchUrl        - The URL with the replaced placeholders.
+ */
 function buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
 
   if (!fetchUrlTemplate) {
@@ -32,7 +49,7 @@ function buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
 }
 
 /**
- * Get argument names from a string.
+ * Get placeholder names from a string.
  *
  * @param {string} str    - The string containing placeholders.
  * @param {string} prefix - The prefix of the placeholders. Must be Regex-escaped.
@@ -96,10 +113,24 @@ function getPlaceholdersFromString(str, prefix) {
   return placeholders;
 }
 
+/**
+ * Get argument names from a string.
+ *
+ * @param {string} str    - The string containing placeholders.
+ *
+ * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
+ */
 function getArgumentsFromString(str) {
   return getPlaceholdersFromString(str, '%')
 }
 
+/**
+ * Get variable names from a string.
+ *
+ * @param {string} str    - The string containing placeholders.
+ *
+ * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
+ */
 function getVariablesFromString(str) {
   return getPlaceholdersFromString(str, '\\$')
 }
