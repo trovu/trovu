@@ -283,7 +283,7 @@ async function getRedirectUrl(env) {
 	return redirectUrl;
 }
 
-async function processCall() {
+document.querySelector('body').onload = async function(event) {
 
   let env = getEnv();
 
