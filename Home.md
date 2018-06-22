@@ -44,7 +44,8 @@ Now, lets look at a processing of a query"
 1. From the fetches that succeeded, the results are evaluated in namespace order.
 1. Since already the first text file exists, its URL is used for further processing
     -  `https://www.google.de/search?hl={$language}&q={%query}&ie=utf-8` 
-1. The `{%query}` placeholder is being replace with the query argument `foo`.
+1. The `{$language}` placeholder is being replaced with the variable `de`.
+1. The `{%query}` placeholder is being replaced with the query argument `foo`.
 1. A redirect to the URL is made.
 
 ## Repositories
