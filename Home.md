@@ -18,6 +18,8 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ## Step-by-step: How a query is processed
 
+![](https://github.com/trovu/trovu.github.io/blob/master/img/process.png)
+
 1. A query comes in, e.g. `g foobar`.
 1. The current namespace setting is `o,de,.de`.
 1. The query is parsed – in the client by Javascript – into
