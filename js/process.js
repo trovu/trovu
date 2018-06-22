@@ -181,9 +181,11 @@ async function fetchShortcuts(env, keyword, arguments) {
   return [texts, found];
 }
 
-async function processCall() {
+async function getRedirectUrl(env) {
 
-  let env = getEnv();
+	if (!env.query) {
+		return;	
+	}
 
   var variables = {
     language: env.language,
@@ -225,28 +227,42 @@ async function processCall() {
     [texts, found] = await fetchShortcuts(env, keyword, arguments);
   }
 
+	let redirectUrl = null;
+
   // Find first shortcut in our namespace hierarchy.
   for (namespace of env.namespaces.reverse()) {
     if (texts[namespace]) {
       var textLines = texts[namespace].split("\n");
-      var redirectUrl = textLines.shift();
+      redirectUrl = textLines.shift();
       // TODO: Process POST arguments.
       break;
     }
   }
 
-  log('');
-  log("Used template: " + redirectUrl);
+	if (!redirectUrl) {
+	  return;
+	}
 
-  if (redirectUrl) {
-    redirectUrl = replaceVariables(redirectUrl, variables);
-    redirectUrl = replaceArguments(redirectUrl, arguments);
-  }
-  else {
+	log('');
+	log("Used template: " + redirectUrl);
+
+	redirectUrl = replaceVariables(redirectUrl, variables);
+	redirectUrl = replaceArguments(redirectUrl, arguments);
+
+	return redirectUrl;
+}
+
+async function processCall() {
+
+  let env = getEnv();
+
+	let redirectUrl = await getRedirectUrl(env);
+
+  if (!redirectUrl) {
     let params = getParams();
     params.status = 'not_found';
     let paramStr = jqueryParam(params);
-    var redirectUrl = '../index.html#' + paramStr;
+    redirectUrl = '../index.html#' + paramStr;
   }
 
   log("Redirect to:   " + redirectUrl)
