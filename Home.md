@@ -10,7 +10,7 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ## Differences to Serchilo
 
-- The shortcuts are kept in text and JSON files in a public Git(hub) repository (this one). Users can also use their own repository, thus:
+- The shortcuts are kept in text and YAML files in a public Git(hub) repository. Users can also use their own repository, thus:
   - **more freedom**.
 - trovu's parsing works completely client-side, so no search queries are sent out, only to the actual target site. Thus:
   - **faster processing**,
