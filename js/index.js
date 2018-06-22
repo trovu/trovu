@@ -74,6 +74,7 @@ function displaySettings() {
   // TODO:
   // Why does let params not work here?
   params = buildParams();
+
   baseUrl = buildBaseUrl();
   let urlOpensearch = baseUrl + 'opensearch/?' + jqueryParam(params);
 
