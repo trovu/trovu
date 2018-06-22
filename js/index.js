@@ -101,7 +101,6 @@ function updateNamespaces() {
     (env.namespaces[1].length == 2) &&
     (env.namespaces[2].length == 3)
   ) {
-    console.log('true');
     env.namespaces[1] = env.language;
     env.namespaces[2] = '.' + env.country;
   }
