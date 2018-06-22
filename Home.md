@@ -31,11 +31,11 @@ First, lets look at the (example) settings:
 Now, lets look at a processing of a query"
 
 1. A query comes in, e.g. `g foobar`.
-1. The current namespace setting is `o,de,.de`.
+1. The current namespace setting is `o,de,.de,johndoe`.
 1. The query is parsed – in the client by Javascript – into
    - keyword: `g`
    - argument: `foobar`
-1. Based on the query, the client Javascript tries to fetch 3 URLs:
+1. Based on the query and the namespace settings, the client Javascript tries to fetch 4 URLs:
    - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/.de/g/1.txt
    - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/de/g/1.txt
    - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/g/1.txt
@@ -43,7 +43,7 @@ Now, lets look at a processing of a query"
 
 1. From the fetches that succeeded, the results are evaluated in namespace order.
 1. Since already the first text file exists, its URL is used for further processing
-    -  `https://www.google.de/search?hl={$language}&q={{"{%"}}query}&ie=utf-8` 
+    -  `https://www.google.de/search?hl={$language}&q={%query}&ie=utf-8` 
 1. The `{%query}` placeholder is being replace with the query argument `foo`.
 1. A redirect to the URL is made.
 
