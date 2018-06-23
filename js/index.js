@@ -40,7 +40,6 @@ document.getElementById('query-form').onsubmit = function(event) {
   window.location.href = processUrl;
 }
 
-
 document.querySelector('button.add-search').onclick = function(event) {
 
   let urlOpensearch = document.querySelector('#linkSearch').getAttribute('href');
@@ -118,7 +117,7 @@ function displaySettings() {
 
   // Set Process URL.
   let urlProcess = baseUrl + 'process/index.html#query=%s&' + jqueryParam(params);
-  let preProcessUrl = document.querySelector('pre.process-url');
+  let preProcessUrl = document.querySelector('.process-url');
   preProcessUrl.textContent = urlProcess;
 
   let paramStr = jqueryParam(params);
