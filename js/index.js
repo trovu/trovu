@@ -51,6 +51,10 @@ function addCustomNamespacesSettingRow(namespace) {
 
   let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
 
+  row.querySelector('.delete').onclick = function(event) {
+    event.target.parentNode.parentNode.parentNode.parentNode.remove();
+  }
+
   if (namespace) {
     row.querySelector('input.name').value = namespace;
     row.querySelector('input.url-template').value = env.namespaceUrlTemplates[namespace];
