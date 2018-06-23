@@ -49,14 +49,14 @@ document.querySelector('button.add-search').onclick = function(event) {
 
 function addCustomNamespacesSettingRow(namespace) {
 
-	let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
+  let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
 
-	if (namespace) {
+  if (namespace) {
     row.querySelector('input.name').value = namespace;
     row.querySelector('input.url-template').value = env.namespaceUrlTemplates[namespace];
-	}
+  }
 
-	// Add empty row at end.
+  // Add empty row at end.
   document.querySelector('#customNamespacesSettingRows').appendChild(row);
 }
 
