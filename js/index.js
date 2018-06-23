@@ -53,6 +53,19 @@ function displaySettings() {
   document.querySelector('#countrySetting').value = env.country;
   document.querySelector('#namespacesSetting').value = env.namespaces.join(',');
 
+  document.querySelector('#customNamespacesSettingRows').innerHTML = '';
+
+  for (namespace in env.namespaceUrlTemplates) {
+	  let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
+    row.querySelector('input.name').value = namespace;
+    row.querySelector('input.url-template').value = env.namespaceUrlTemplates[namespace];
+    document.querySelector('#customNamespacesSettingRows').appendChild(row);
+  }
+
+	// Add empty row at end.
+	let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
+  document.querySelector('#customNamespacesSettingRows').appendChild(row);
+
   document.querySelector('ol.namespaces').innerHTML = '';
 
   // Show namespaces and their template URLs.
