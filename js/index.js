@@ -64,7 +64,6 @@ document.querySelector('#customNamespacesSettingRowAdd').onclick = function(even
   addCustomNamespacesSettingRow();
 }
 
-
 document.querySelector('#settingsClose').onclick = function(event) {
   updateNamespaces();
 }
