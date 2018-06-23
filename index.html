@@ -14,6 +14,34 @@
     <title>trovu.net – Web shortcuts, social, private.</title>
   </head>
   <body>
+    <!-- Browser modal -->
+    <div class="modal fade" id="browserModal" tabindex="-1" role="dialog" aria-labelledby="browserModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="browserModalLabel">Add to browser</h5>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-2">
+              <label for="browserAddFirefox" class="col-sm-2">Firefox</label>
+              <div class="col-sm-10">
+                <button class="add-search form-control btn btn-sm btn-light">Click to add</button>
+              </div>
+            </div>
+            <div class="row">
+              <label for="browserAddFirefox" class="col-sm-2">Other</label>
+              <div class="col-sm-10">
+                <p>Use this URL template and add it where your browser allows to set custom browser search engines:</p>
+                <pre class="process-url">/process/?#query=%s</pre>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="browserClose" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Settings modal -->
     <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -574,9 +602,6 @@
           <dt class="col-sm-2">gd london, liverpool</dt>
           <dd class="col-sm-10">find a route on Google Maps from London to Liverpool</dd>
         </dl>
-        <h2 class="h4">Add to browser</h2>
-        <p>Use this URL template custom browser search engine:</p>
-        <pre class="process-url">/process/?#query=%s</pre>
        </div>
     </main>
 
@@ -586,7 +611,7 @@
           <span class="text-muted"><a href="https://github.com/trovu/trovu.github.io/wiki">Github</a></span>
         </div>
         <div class="float-right">
-          <button class="add-search form-control btn btn-sm btn-success">Add to browser</button>
+          <button class="form-control btn btn-sm btn-success" data-toggle="modal" data-target="#browserModal">Add to browser</button>
         </div>
       </div>
     </footer>
