@@ -64,6 +64,11 @@ document.querySelector('#customNamespacesSettingRowAdd').onclick = function(even
   addCustomNamespacesSettingRow();
 }
 
+
+document.querySelector('#settingsClose').onclick = function(event) {
+  updateNamespaces();
+}
+
 function displaySettings() {
   // Set settings fields from environment.
   document.querySelector('#languageSetting').value = env.language;
