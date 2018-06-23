@@ -85,7 +85,7 @@ function displaySettings() {
   linkSearch.setAttribute('href', urlOpensearch);
 
   // Set Process URL.
-  let urlProcess = baseUrl + 'process/#query=%s&' + jqueryParam(params);
+  let urlProcess = baseUrl + 'process/index.html#query=%s&' + jqueryParam(params);
   let preProcessUrl = document.querySelector('pre.process-url');
   preProcessUrl.textContent = urlProcess;
 
