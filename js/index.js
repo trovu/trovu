@@ -137,6 +137,17 @@ function updateNamespaces() {
     env.namespaces[2] = '.' + env.country;
   }
 
+  // Remove custom namespaces 
+  // that have no template.
+  for (i in env.namespaces) {
+    let namespace = env.namespaces[i];
+    if (namespace.length > 3) {
+      if (!env.namespaceUrlTemplates.hasOwnProperty(namespace)) {
+        env.namespaces.splice(i, 1);
+      }
+    }
+  }
+
   // Iterate over setting rows.
   let rows = document.querySelector('#customNamespacesSettingRows').childNodes;
   env.namespaceUrlTemplates = {};
