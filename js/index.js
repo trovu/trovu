@@ -60,6 +60,10 @@ function addCustomNamespacesSettingRow(namespace) {
   document.querySelector('#customNamespacesSettingRows').appendChild(row);
 }
 
+document.querySelector('#customNamespacesSettingRowAdd').onclick = function(event) {
+  addCustomNamespacesSettingRow();
+}
+
 function displaySettings() {
   // Set settings fields from environment.
   document.querySelector('#languageSetting').value = env.language;
