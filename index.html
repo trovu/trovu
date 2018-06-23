@@ -476,7 +476,36 @@
                     </div>
                     <div id="customNamespacesSetting" class="collapse hide" aria-labelledby="customNamespacesSettingHeading">
                       <div class="card-body">
-
+                        <div class="form-group row">
+                          <div class="col-sm-12">
+                            <small class="form-text text-muted">
+                              URL template must contain {%keyword} and {%argumentCount}. Example:
+                            </small>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-3">
+                            <small class="form-text text-muted">
+                              johndoe
+                            </small>
+                          </div>
+                          <div class="col-sm-9">
+                            <small class="form-text text-muted">
+                              http://example.com/my-trovu-shortcuts/{%keyword}.{%argumentCount}.txt
+                            </small>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-3">
+                            <input type="text" class="form-control" placeholder="Name">
+                          </div>
+                          <div class="col-sm-7">
+                            <input type="text" class="form-control" placeholder="URL template">
+                          </div>
+                          <div class="col-sm-2">
+                            <button class="form-control">🗑️</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
