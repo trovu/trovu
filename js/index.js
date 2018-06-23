@@ -47,6 +47,19 @@ document.querySelector('button.add-search').onclick = function(event) {
   window.external.AddSearchProvider(urlOpensearch);
 }
 
+function addCustomNamespacesSettingRow(namespace) {
+
+	let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
+
+	if (namespace) {
+    row.querySelector('input.name').value = namespace;
+    row.querySelector('input.url-template').value = env.namespaceUrlTemplates[namespace];
+	}
+
+	// Add empty row at end.
+  document.querySelector('#customNamespacesSettingRows').appendChild(row);
+}
+
 function displaySettings() {
   // Set settings fields from environment.
   document.querySelector('#languageSetting').value = env.language;
@@ -56,15 +69,9 @@ function displaySettings() {
   document.querySelector('#customNamespacesSettingRows').innerHTML = '';
 
   for (namespace in env.namespaceUrlTemplates) {
-	  let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
-    row.querySelector('input.name').value = namespace;
-    row.querySelector('input.url-template').value = env.namespaceUrlTemplates[namespace];
-    document.querySelector('#customNamespacesSettingRows').appendChild(row);
+    addCustomNamespacesSettingRow(namespace);
   }
-
-	// Add empty row at end.
-	let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
-  document.querySelector('#customNamespacesSettingRows').appendChild(row);
+  addCustomNamespacesSettingRow();
 
   document.querySelector('ol.namespaces').innerHTML = '';
 
