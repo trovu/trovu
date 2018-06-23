@@ -144,7 +144,8 @@ function updateNamespaces() {
     if ((namespace) && (namespaceUrlTemplate)) {
       env.namespaceUrlTemplates[namespace] = namespaceUrlTemplate;
     }
-    if (!env.namespaces.includes(namespace)) {
+    // Append to namespaces if missing there.
+    if ((namespace) && (!env.namespaces.includes(namespace))) {
       env.namespaces.push(namespace);
     }
   }
