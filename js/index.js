@@ -133,6 +133,21 @@ function updateNamespaces() {
     env.namespaces[1] = env.language;
     env.namespaces[2] = '.' + env.country;
   }
+
+  // Iterate over setting rows.
+  let rows = document.querySelector('#customNamespacesSettingRows').childNodes;
+  env.namespaceUrlTemplates = {};
+  for (row of rows) {
+    // Add to namespace settings if both fields filled.
+    let namespace = row.querySelector('input.name').value;
+    let namespaceUrlTemplate = row.querySelector('input.url-template').value;
+    if ((namespace) && (namespaceUrlTemplate)) {
+      env.namespaceUrlTemplates[namespace] = namespaceUrlTemplate;
+    }
+    if (!env.namespaces.includes(namespace)) {
+      env.namespaces.push(namespace);
+    }
+  }
   displaySettings();
 }
 
