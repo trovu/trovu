@@ -47,7 +47,7 @@ document.querySelector('button.add-search').onclick = function(event) {
   window.external.AddSearchProvider(urlOpensearch);
 }
 
-function addCustomNamespacesSettingRow(namespace) {
+let addCustomNamespacesSettingRow = function (namespace) {
 
   let row = document.querySelector('#customNamespacesSettingRowTemplate div.row').cloneNode(true);
 
