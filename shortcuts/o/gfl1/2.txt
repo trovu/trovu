@@ -1,1 +1,1 @@
-https://www.google.com/flights/#search;f={%from IATA code};t={%to IATA code};tt=o
+https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to IATA code|transform=uppercase};e:1;sd:1;t:f;tt:o
