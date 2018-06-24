@@ -1,4 +1,4 @@
-# [trovu](https://trovu.net/) – Web shortcuts, social, private.
+# [trovu.net](https://trovu.net/) – Web shortcuts, social, private.
 
 trovu is a spin-off from [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [[differences|Differences to Serchilo and FindFind.it]].
 
