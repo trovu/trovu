@@ -11,8 +11,8 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 ## Key features
 
 - **privacy**: all queries are processed in the client, not server
-- **social**: The shortcuts are kept in text and YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send pull request to add or edit them
-- **freedom**: You can create personal shortcuts [your own repository](https://github.com/trovu/trovu-data-user) (or anywhere on the web) and easily tell trovu where to look for them.
+- **social**: Shortcuts are kept in text and YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send pull request to add or edit them.
+- **freedom**: Optionally, create personal shortcuts in [your own repository](https://github.com/trovu/trovu-data-user) (or anywhere on the web). Simpy tell trovu in the settings where to look for them.
 
 ## Step-by-step: How a query is processed
 
@@ -26,7 +26,7 @@ First, lets look at the (example) settings:
   - .de: `https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/.de/{%keyword}/{%argumentCount}.txt`
   - johndoe: `https://example.com/trovu/{%keyword}.{%argumentCount}.txt`
 
-Now, lets look at a processing of a query"
+Now, lets look at a processing of a query:
 
 1. A query comes in, e.g. `g foobar`.
 1. The current namespace setting is `o,de,.de,johndoe`.
