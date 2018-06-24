@@ -64,7 +64,7 @@ This repository contains the web frontend.
 
 ### trovu-android / trovu-ios / trovu-gtk
 
-Future plans. (Can be picked up by anyone.)
+Future plans.
 
 ## Demo
 
