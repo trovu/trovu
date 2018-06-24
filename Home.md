@@ -10,9 +10,9 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ## Key features
 
-- **privacy**: all queries are processed in the client, not server
-- **social**: Shortcuts are kept in text and YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send pull request to add or edit them.
-- **freedom**: Optionally, create personal shortcuts in [your own repository](https://github.com/trovu/trovu-data-user) (or anywhere on the web). Simpy tell trovu in the settings where to look for them.
+- **Privacy**: Queries are processed in the client, not server.
+- **Social**: Shortcuts are kept in text and YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send pull request to add or edit them.
+- **Freedom**: Optionally, create personal shortcuts in [your own repository](https://github.com/trovu/trovu-data-user) (or anywhere on the web). Simpy tell trovu in the settings where to look for them.
 
 ## Step-by-step: How a query is processed
 
