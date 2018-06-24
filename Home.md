@@ -5,16 +5,15 @@ trovu is a spin-off from [Serchilo](https://github.com/georgjaehnig/serchilo-dru
 trovu allows you to define shortcuts for URLs / websites and then quickly access them in a command-line way, e.g.
 
 - `g berlin` – search Google for "berlin".
+- `w berlin` – Wikipedia article for "berlin" in your language.
 - `gd london, liverpool` – find a route on Google Maps from London to Liverpool. 
-- `db b, m` – find the next *Deutsche Bahn* train connection from Berlin to Munich.
 
-## Differences to Serchilo
+## Key features
 
-- The shortcuts are kept in text and YAML files in a public Git(hub) repository. Users can also use their own repository, thus:
-  - **more freedom**.
-- trovu's parsing works completely client-side, so no search queries are sent out, only to the actual target site. Thus:
-  - **faster processing**,
-  - **enhanced privacy**.
+- **privacy**: all queries are processed in the client, not server
+- **social**: The shortcuts are kept in text and YAML files in a public Github repository. Send pull request to add or edit them
+- **freedom**: You can create personal shortcuts in the own repository (or anywhere on the web)
+more freedom**.
 
 ## Step-by-step: How a query is processed
 
