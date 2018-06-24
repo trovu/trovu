@@ -1,6 +1,8 @@
 - country namespaces are not 3-letter but 2-letter-codes, prefixed with a dot, e.g.
   - `.de`, not `deu`
 - search queries are not sent out to the server / all processing is done in the client, not on the server (more privacy)
-- for user shortcuts, users need to host them themselves. This can be done easily with a Github repository for instance. To get started
-  - fork [trovu-data-user](https://github.com/trovu/trovu-data-user)
-  - from [trovu-data-user-legacy](https://github.com/trovu/trovu-data-user-legacy), copy the shortcuts from your directory into your newly forked `trovu-data-user`.
+- for user shortcuts, users need to host them themselves. This can be done easily with a Github repository for instance. 
+
+# Migrate your user shortcuts from [FindFind.it](https://www.findfind.it/u/jorges)
+- fork [trovu-data-user](https://github.com/trovu/trovu-data-user)
+- from [trovu-data-user-legacy](https://github.com/trovu/trovu-data-user-legacy), copy the shortcuts from your directory into your newly forked `trovu-data-user`.
