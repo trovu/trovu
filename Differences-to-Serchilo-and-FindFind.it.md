@@ -1,7 +1,10 @@
+- *Main difference*: search queries are not sent out to the server, all processing is done in the client.
+  - Thus, your search queries remain private.
+  - Instead in a database, shortcuts are kept in [text files, named after their syntax](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.txt).
+- Since all is done on the client and there is no database, you need to host your user shortcuts yourself. 
+  - However, that's easy: For instance, simply [fork this Github repository](https://github.com/trovu/trovu-data-user).
 - country namespaces are not 3-letter but 2-letter-codes, prefixed with a dot, e.g.
   - `.de`, not `deu`
-- search queries are not sent out to the server / all processing is done in the client, not on the server (more privacy)
-- for user shortcuts, users need to host them themselves. This can be done easily with a Github repository for instance. 
 
 ## Migrate your user shortcuts from [FindFind.it](https://www.findfind.it/u/jorges)
 - fork [trovu-data-user](https://github.com/trovu/trovu-data-user)
