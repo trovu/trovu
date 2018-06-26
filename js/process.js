@@ -159,6 +159,14 @@ function replaceArguments(str, arguments) {
           processedArgument = encodeURIComponent(processedArgument);
           break;
       }
+      switch (attributes.transform) {
+        case 'uppercase':
+          processedArgument = processedArgument.toUpperCase();
+          break;
+        case 'lowercase':
+          processedArgument = processedArgument.toLowerCase();
+          break;
+      }
     }
     str = str.replace(match, processedArgument);
   }
