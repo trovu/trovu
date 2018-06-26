@@ -156,7 +156,7 @@ function replaceArguments(str, arguments) {
       var attributes = matches[match];
       switch (attributes.type) {
         default:
-          processedArgument = encodeURIComponent(argument);
+          processedArgument = encodeURIComponent(processedArgument);
           break;
       }
     }
