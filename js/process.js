@@ -154,17 +154,17 @@ function replaceArguments(str, arguments) {
     var matches = placeholders[argumentName];
     for (match in matches) {
       var attributes = matches[match];
-      switch (attributes.encoding) {
-        default:
-          processedArgument = encodeURIComponent(processedArgument);
-          break;
-      }
       switch (attributes.transform) {
         case 'uppercase':
           processedArgument = processedArgument.toUpperCase();
           break;
         case 'lowercase':
           processedArgument = processedArgument.toLowerCase();
+          break;
+      }
+      switch (attributes.encoding) {
+        default:
+          processedArgument = encodeURIComponent(processedArgument);
           break;
       }
     }
