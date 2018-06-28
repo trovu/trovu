@@ -163,6 +163,9 @@ function replaceArguments(str, arguments) {
           break;
       }
       switch (attributes.encoding) {
+        case 'iso-8859-1':
+          processedArgument = escape(processedArgument);
+          break;
         case 'none':
           break;
         default:
