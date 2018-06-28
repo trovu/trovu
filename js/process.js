@@ -163,6 +163,8 @@ function replaceArguments(str, arguments) {
           break;
       }
       switch (attributes.encoding) {
+        case 'none':
+          break;
         default:
           processedArgument = encodeURIComponent(processedArgument);
           break;
