@@ -157,67 +157,12 @@ async function replaceArguments(str, arguments) {
       switch (attributes.type) {
         case 'date':
 
-          // Load momentjs.
-          if (typeof moment !== "function") {
-            await loadScripts([momentjsUrl]);
+          // Load date.js
+          if (typeof parse_date !== "function") {
+            await loadScripts(['../js/type/date.js']);
           }
 
-          let date;
-
-          // Match '2', '2.', '22', '22.'.
-          let now = moment();
-          if (processedArgument.match(/^(\d{1,2})(\.)?$/)) {
-            date = moment(processedArgument, 'DD');
-            // If date in past: set it to next month.
-            if (date < now) {
-              date.add(1, 'month');
-            }
-          }
-          // Match '22.11' and '22.11.'
-          if (processedArgument.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/)) {
-            date = moment(processedArgument, 'DD.MM');
-            // If date in past: set it to next year.
-            if (date < now) {
-              date.add(1, 'year');
-            }
-          }
-          // Match '22.11.13'
-          if (processedArgument.match(/^(\d{1,2})\.(\d{1,2})\.(\d{2})?$/)) {
-            date = moment(processedArgument, 'DD.MM.YY');
-          }
-          // Match '22.11.2013'
-          if (processedArgument.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})?$/)) {
-            date = moment(processedArgument, 'DD.MM.YYYY');
-          }
-
-          // Match '11/22'.
-          if (processedArgument.match(/^(\d{1,2})\/(\d{1,2})$/)) {
-            date = moment(processedArgument, 'MM/DD');
-            // If date in past: set it to next year.
-            if (date < now) {
-              date.add(1, 'year');
-            }
-          }
-          // Match '11/22/13'
-          if (processedArgument.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2})?$/)) {
-            date = moment(processedArgument, 'MM/DD/YY');
-          }
-          // Match '11/22/2013'
-          if (processedArgument.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})?$/)) {
-            date = moment(processedArgument, 'MM/DD/YYYY');
-          }
-          // Match '+1' or '-2'
-          if (matches = processedArgument.match(/^(-|\+)(\d+)$/)) {
-            date = now;
-            switch (matches[1]) {
-              case '+':
-                date.add(matches[2], 'days');
-                break;
-              case '-':
-                date.subtract(matches[2], 'days');
-                break;
-            }
-          }
+          let date = await parse_date(processedArgument);
 
           // If date could be parsed:
           // Set argument.
@@ -411,9 +356,10 @@ document.querySelector('body').onload = async function(event) {
 
   log("Redirect to:   " + redirectUrl)
   
-  //console.log(redirectUrl);
-  //return;
+  console.log(redirectUrl);
+  return;
 
   window.location.href = redirectUrl;
 }
+
 
