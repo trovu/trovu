@@ -380,8 +380,8 @@ document.querySelector('body').onload = async function(event) {
 
   log("Redirect to:   " + redirectUrl)
   
-  console.log(redirectUrl);
-  return;
+  //console.log(redirectUrl);
+  //return;
 
   window.location.href = redirectUrl;
 }
