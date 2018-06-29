@@ -135,7 +135,7 @@ function getVariablesFromString(str) {
   return getPlaceholdersFromString(str, '\\$')
 }
 
-function replaceArguments(str, arguments) {
+async function replaceArguments(str, arguments) {
 
   var placeholders = getArgumentsFromString(str);
 
@@ -154,6 +154,44 @@ function replaceArguments(str, arguments) {
     var matches = placeholders[argumentName];
     for (match in matches) {
       var attributes = matches[match];
+      switch (attributes.type) {
+        case 'date':
+
+          // Load momentjs.
+          if (typeof moment !== "function") {
+            await loadScripts([momentjsUrl]);
+          }
+
+          // Match '2', '2.', '22', '22.'.
+          let date;
+          let now = moment();
+          if (processedArgument.match(/^(\d\d?)(\.)?$/)) {
+            date = moment(processedArgument, 'DD');
+            // If date in past: set it to next month.
+            if (date < now) {
+              date.add(1, 'month');
+            }
+          }
+          // Match '22.11' and '22.11.'
+          if (processedArgument.match(/^(\d\d?)\.(\d\d?)(\.)?$/)) {
+            date = moment(processedArgument, 'DD.MM');
+            // If date in past: set it to next year.
+            if (date < now) {
+              date.add(1, 'year');
+            }
+          }
+
+          // If date could be parsed:
+          // Set argument.
+          if (date) {
+            let format = 'YYYY-MM-DD';
+            if (attributes.output) {
+              format = attributes.output;
+            }
+            processedArgument = date.format(format);
+          }
+          break;
+      }
       switch (attributes.transform) {
         case 'uppercase':
           processedArgument = processedArgument.toUpperCase();
@@ -291,7 +329,7 @@ async function getRedirectUrl(env) {
   log("Used template: " + redirectUrl);
 
   redirectUrl = replaceVariables(redirectUrl, variables);
-  redirectUrl = replaceArguments(redirectUrl, arguments);
+  redirectUrl = await replaceArguments(redirectUrl, arguments);
 
   return redirectUrl;
 }
