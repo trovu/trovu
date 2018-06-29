@@ -174,7 +174,30 @@ async function replaceArguments(str, arguments) {
             }
             processedArgument = date.format(format);
           }
+
           break;
+
+        case 'time':
+
+          // Load time.js
+          if (typeof parse_time !== "function") {
+            await loadScripts(['../js/type/time.js']);
+          }
+
+          let time = await parse_time(processedArgument);
+
+          // If time could be parsed:
+          // Set argument.
+          if ((time) && (time.format() != 'Invalid time')) {
+            let format = 'HH:mm';
+            if (attributes.output) {
+              format = attributes.output;
+            }
+            processedArgument = time.format(format);
+          }
+
+          break;
+
       }
       switch (attributes.transform) {
         case 'uppercase':
