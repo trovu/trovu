@@ -1,1 +1,1 @@
-http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=Y-m}/#{%datum|type=date|output=Y-m-d}
+http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=YYYY-MM}/#{%datum|type=date|output=YYYY-MM-DD}
