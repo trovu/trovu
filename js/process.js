@@ -296,6 +296,30 @@ async function getRedirectUrl(env) {
   return redirectUrl;
 }
 
+async function loadScripts(scripts) {
+    
+    function get (src) {
+        return new Promise(function (resolve, reject) {
+            var el = document.createElement("script");
+            el.async = true;
+            el.addEventListener("load", function () {
+                resolve(src);
+            }, false);
+            el.addEventListener("error", function () {
+                reject(src);
+            }, false);
+            el.src = src;
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(el);
+        });
+    }
+
+    const myPromises = scripts.map(async function (script, index) {
+        return await get(script);
+    });
+
+    return await Promise.all(myPromises);
+}
+
 document.querySelector('body').onload = async function(event) {
 
   let env = getEnv();
