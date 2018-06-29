@@ -221,7 +221,7 @@ async function replaceArguments(str, arguments) {
 
           // If date could be parsed:
           // Set argument.
-          if (date) {
+          if ((date) && (date.format() != 'Invalid date')) {
             let format = 'YYYY-MM-DD';
             if (attributes.output) {
               format = attributes.output;
