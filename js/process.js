@@ -155,6 +155,7 @@ async function replaceArguments(str, arguments) {
     for (match in matches) {
       var attributes = matches[match];
       switch (attributes.type) {
+          
         case 'date':
 
           // Load date.js
