@@ -62,6 +62,13 @@ async function parse_date(str) {
         break;
     }
   }
+  // Match 'Su', 'Mo', ...
+  if (str.match(/^([A-Za-z\u00E0-\u00FC]+)$/)) {
+    date = moment().day(str)
+    if (date < now) {
+      date.add(1, 'week');
+    }
+  }
 
   return date;
 }
