@@ -162,8 +162,9 @@ async function replaceArguments(str, arguments) {
             await loadScripts([momentjsUrl]);
           }
 
-          // Match '2', '2.', '22', '22.'.
           let date;
+
+          // Match '2', '2.', '22', '22.'.
           let now = moment();
           if (processedArgument.match(/^(\d\d?)(\.)?$/)) {
             date = moment(processedArgument, 'DD');
