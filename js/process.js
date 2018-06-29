@@ -135,7 +135,9 @@ function getVariablesFromString(str) {
   return getPlaceholdersFromString(str, '\\$')
 }
 
-async function replaceArguments(str, arguments) {
+async function replaceArguments(str, arguments, env) {
+
+  let locale = env.language + '-' + env.country.toUpperCase();
 
   var placeholders = getArgumentsFromString(str);
 
@@ -163,7 +165,7 @@ async function replaceArguments(str, arguments) {
             await loadScripts(['../js/type/date.js']);
           }
 
-          let date = await parse_date(processedArgument);
+          let date = await parse_date(processedArgument, locale);
 
           // If date could be parsed:
           // Set argument.
@@ -184,7 +186,7 @@ async function replaceArguments(str, arguments) {
             await loadScripts(['../js/type/time.js']);
           }
 
-          let time = await parse_time(processedArgument);
+          let time = await parse_time(processedArgument, locale);
 
           // If time could be parsed:
           // Set argument.
@@ -336,7 +338,7 @@ async function getRedirectUrl(env) {
   log("Used template: " + redirectUrl);
 
   redirectUrl = replaceVariables(redirectUrl, variables);
-  redirectUrl = await replaceArguments(redirectUrl, arguments);
+  redirectUrl = await replaceArguments(redirectUrl, arguments, env);
 
   return redirectUrl;
 }

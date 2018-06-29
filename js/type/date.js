@@ -1,4 +1,4 @@
-async function parse_date(str) {
+async function parse_date(str, locale) {
 
   // Load momentjs.
   if (typeof moment !== "function") {
@@ -6,6 +6,8 @@ async function parse_date(str) {
   }
 
   let date;
+
+  moment.locale(locale);
 
   let now = moment();
 

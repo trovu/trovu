@@ -1,4 +1,4 @@
-async function parse_time(str) {
+async function parse_time(str, locale) {
 
   // Load momentjs.
   if (typeof moment !== "function") {
