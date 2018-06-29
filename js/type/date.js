@@ -7,8 +7,9 @@ async function parse_date(str) {
 
   let date;
 
-  // Match '2', '2.', '22', '22.'.
   let now = moment();
+
+  // Match '2', '2.', '22', '22.'.
   if (str.match(/^(\d{1,2})(\.)?$/)) {
     date = moment(str, 'DD');
     // If date in past: set it to next month.
