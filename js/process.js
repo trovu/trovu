@@ -166,7 +166,7 @@ async function replaceArguments(str, arguments) {
 
           // Match '2', '2.', '22', '22.'.
           let now = moment();
-          if (processedArgument.match(/^(\d\d?)(\.)?$/)) {
+          if (processedArgument.match(/^(\d{1,2})(\.)?$/)) {
             date = moment(processedArgument, 'DD');
             // If date in past: set it to next month.
             if (date < now) {
@@ -174,7 +174,7 @@ async function replaceArguments(str, arguments) {
             }
           }
           // Match '22.11' and '22.11.'
-          if (processedArgument.match(/^(\d\d?)\.(\d\d?)(\.)?$/)) {
+          if (processedArgument.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/)) {
             date = moment(processedArgument, 'DD.MM');
             // If date in past: set it to next year.
             if (date < now) {
