@@ -1,1 +1,1 @@
-http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=arrive&from={%Start|encoding=iso-8859-1}&to={%Ziel|encoding=iso-8859-1}&time={%Ankunftszeit|encoding=iso-8859-1}
+http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=arrive&from={%Start}&to={%Ziel}&time={%Ankunftszeit||type=time}
