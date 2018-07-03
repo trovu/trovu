@@ -1,1 +1,1 @@
-http://maps.google.com/maps?hl={$language}&saddr={%start|type=city}&daddr={%destination|type=city}&dirflg=w
+https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode=walking
