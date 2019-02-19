@@ -9,11 +9,11 @@ async function fetchAsync(url) {
   const response = await fetch(url);
   if (response.status != 200) {
     //log("Fail:    " + url);
-		log('.');
+    log('.');
     return null;
   }
   //log("Success: " + url);
-	log('.');
+  log('.');
   const text = await response.text();
   return text;
 }
@@ -339,7 +339,7 @@ async function getRedirectUrl(env) {
 
   //log('');
   //log("Used template: " + redirectUrl);
-	log('success.');
+  log('success.');
 
   redirectUrl = replaceVariables(redirectUrl, variables);
   redirectUrl = await replaceArguments(redirectUrl, arguments, env);
