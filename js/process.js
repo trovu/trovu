@@ -8,10 +8,12 @@
 async function fetchAsync(url) {
   const response = await fetch(url);
   if (response.status != 200) {
-    log("Fail:    " + url);
+    //log("Fail:    " + url);
+		log('.');
     return null;
   }
-  log("Success: " + url);
+  //log("Success: " + url);
+	log('.');
   const text = await response.text();
   return text;
 }
@@ -252,7 +254,8 @@ function escapeRegExp(str) {
 }
 
 function log(str) {
-  document.querySelector('#log').textContent += "\n" + str;
+  //document.querySelector('#log').textContent += "\n" + str;
+  document.querySelector('#log').textContent += str;
 }
 
 async function fetchShortcuts(env, keyword, arguments) {
@@ -263,7 +266,7 @@ async function fetchShortcuts(env, keyword, arguments) {
   for (namespace of env.namespaces) {
     let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
-    log("Request: " + fetchUrl);
+    //log("Request: " + fetchUrl);
     texts[namespace]  = await fetchAsync(fetchUrl);
     if (!found) {
       found = Boolean(texts[namespace]);
@@ -334,8 +337,9 @@ async function getRedirectUrl(env) {
     return;
   }
 
-  log('');
-  log("Used template: " + redirectUrl);
+  //log('');
+  //log("Used template: " + redirectUrl);
+	log('success.');
 
   redirectUrl = replaceVariables(redirectUrl, variables);
   redirectUrl = await replaceArguments(redirectUrl, arguments, env);
@@ -380,7 +384,7 @@ document.querySelector('body').onload = async function(event) {
     redirectUrl = '../index.html#' + paramStr;
   }
 
-  log("Redirect to:   " + redirectUrl)
+  //log("Redirect to:   " + redirectUrl)
   
   //console.log(redirectUrl);
   //return;
