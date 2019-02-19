@@ -581,12 +581,14 @@
         <span class="language value badge badge-light"></span>
         <span class="country label">Country:</span>
         <span class="country value badge badge-light"></span>
-        <span><a data-toggle="modal" data-target="#settingsModal">⚙️</a></span>
       </div>
       <section class="jumbotron text-center bg-white">
         <div hidden id="alert" class="alert alert-warning" role="alert"></div>
         <form id="query-form" action="process/index.html">
           <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><a data-toggle="modal" data-target="#settingsModal">⚙️</a></span>
+            </div>
             <input type="text" class="form-control form-control-lg" id="query" name="query">
             <div class="input-group-append">
               <button type="submit" class="btn btn-primary">trovu!</button>
