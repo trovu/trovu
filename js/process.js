@@ -5,8 +5,13 @@
  *
  * @return {string} text  - The content.
  */
-async function fetchAsync(url) {
-  const response = await fetch(url);
+async function fetchAsync(url, reload) {
+  const response = await fetch(
+    url,
+    {
+      cache: (reload ? "reload" : "force-cache")
+    }
+  );
   if (response.status != 200) {
     //log("Fail:    " + url);
     log('.');
@@ -267,7 +272,7 @@ async function fetchShortcuts(env, keyword, arguments) {
     let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
     //log("Request: " + fetchUrl);
-    texts[namespace]  = await fetchAsync(fetchUrl);
+    texts[namespace]  = await fetchAsync(fetchUrl, env.reload);
     if (!found) {
       found = Boolean(texts[namespace]);
     }
@@ -293,6 +298,12 @@ async function getRedirectUrl(env) {
     var arguments = []; 
   }
 
+  // Check for (cache) reload call.
+  env.reload = false;
+  if (keyword.match(/^reload:/)) {
+    [reload, keyword] = splitKeepRemainder(keyword, ":", 2);
+    env.reload = true;
+  }
   // Check for extraNamespace in keyword.
   if (keyword.match(/\./)) {
 
