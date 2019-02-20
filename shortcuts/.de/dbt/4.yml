@@ -1,3 +1,4 @@
+url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
 title: Deutsche Bahn Fahrplanauskunft Textversion
 description: ""
 tags:

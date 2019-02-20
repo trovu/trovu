@@ -1,3 +1,5 @@
+url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
+  IATA code|transform=uppercase};e:1;sd:1;t:f;tt:o
 title: Google Flights, one-way
 description: ""
 tags:

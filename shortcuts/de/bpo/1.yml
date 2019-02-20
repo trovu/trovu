@@ -1,3 +1,4 @@
+url: http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=YYYY-MM}/#{%datum|type=date|output=YYYY-MM-DD}
 title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
 description: ""
 tags:

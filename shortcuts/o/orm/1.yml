@@ -1,9 +1,11 @@
-title: OpenRailwayMap Search
+url: http://www.openrailwaymap.org/?q={%query}
+title: OpenRailwayMap
 description: ""
 tags:
 - osm
 - maps
 - copyleft
 - railway
-examples: []
+examples:
+  berlin: Search OpenRailwayMap for "berlin"
 tests: []
