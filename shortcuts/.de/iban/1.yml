@@ -1,0 +1,10 @@
+url: http://www.iban-rechner.de/validieren/{%iban}
+title: IBAN-Rechner
+description: ""
+tags:
+- bank
+- iban
+examples:
+  DE12500?0?170648489890: Validate IBAN number, incl. unknown digits that will be
+    calculated
+tests: []
