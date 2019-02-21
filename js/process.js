@@ -266,18 +266,18 @@ function log(str) {
 async function fetchShortcuts(env, keyword, arguments) {
   
   // Fetch all available shortcuts for our query and namespace settings.
-  var texts = [];
+  var shortcuts = [];
   let found = false;
   for (namespace of env.namespaces) {
     let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
     //log("Request: " + fetchUrl);
-    texts[namespace]  = await fetchAsync(fetchUrl, env.reload);
+    shortcuts[namespace]  = await fetchAsync(fetchUrl, env.reload);
     if (!found) {
-      found = Boolean(texts[namespace]);
+      found = Boolean(shortcuts[namespace]);
     }
   }
-  return [texts, found];
+  return [shortcuts, found];
 }
 
 async function getRedirectUrl(env) {
@@ -323,21 +323,21 @@ async function getRedirectUrl(env) {
     }
   }
 
-  [texts, found] = await fetchShortcuts(env, keyword, arguments);
+  [shortcuts, found] = await fetchShortcuts(env, keyword, arguments);
 
   // If nothing found:
   // Try without commas, i.e. with the whole argumentString as the only argument.
   if ((!found) && (arguments.length > 0)) {
     arguments = [argumentString];
-    [texts, found] = await fetchShortcuts(env, keyword, arguments);
+    [shortcuts, found] = await fetchShortcuts(env, keyword, arguments);
   }
 
   let redirectUrl = null;
 
   // Find first shortcut in our namespace hierarchy.
   for (namespace of env.namespaces.reverse()) {
-    if (texts[namespace]) {
-      var textLines = texts[namespace].split("\n");
+    if (shortcuts[namespace]) {
+      var textLines = shortcuts[namespace].split("\n");
       redirectUrl = textLines.shift();
       // TODO: Process POST arguments.
       break;
