@@ -1,4 +1,4 @@
-const fetchUrlTemplateDefault = "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.txt"
+const fetchUrlTemplateDefault = "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml"
 const momentjsUrl = 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js';
 
 function splitKeepRemainder(string, delimiter, n) {

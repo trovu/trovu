@@ -272,7 +272,8 @@ async function fetchShortcuts(env, keyword, arguments) {
     let fetchUrlTemplate = env.namespaceUrlTemplates[namespace];
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, fetchUrlTemplate);
     //log("Request: " + fetchUrl);
-    shortcuts[namespace]  = await fetchAsync(fetchUrl, env.reload);
+    let text  = await fetchAsync(fetchUrl, env.reload);
+    shortcuts[namespace] = jsyaml.load(text);
     if (!found) {
       found = Boolean(shortcuts[namespace]);
     }
@@ -337,8 +338,7 @@ async function getRedirectUrl(env) {
   // Find first shortcut in our namespace hierarchy.
   for (namespace of env.namespaces.reverse()) {
     if (shortcuts[namespace]) {
-      var textLines = shortcuts[namespace].split("\n");
-      redirectUrl = textLines.shift();
+      redirectUrl = shortcuts[namespace]['url'];
       // TODO: Process POST arguments.
       break;
     }
