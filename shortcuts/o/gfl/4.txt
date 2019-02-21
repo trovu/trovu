@@ -1,1 +1,0 @@
-https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to IATA code|transform=uppercase}.{%departure date|type=date}*{%to IATA code|transform=uppercase}.{%from IATA code|transform=uppercase}.{%arrival date|type=date}
