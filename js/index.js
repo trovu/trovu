@@ -99,7 +99,7 @@ function updateNamespaces() {
 
   env.namespaces[0] = 'o';
   env.namespaces[1] = env.language;
-  env.namespaces[2] = env.country;
+  env.namespaces[2] = '.' + env.country;
 
   displaySettings();
 }
