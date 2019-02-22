@@ -101,8 +101,16 @@ function updateNamespaces() {
   env.namespaces[1] = env.language;
   env.namespaces[2] = '.' + env.country;
 
+  // Display "Saved.".
+  document.querySelector('#settingsModal .saved').classList.remove('d-none');
+
   displaySettings();
 }
+
+$('#settingsModal').on('show.bs.modal', function (e) {
+	// Hide "Saved."
+  document.querySelector('#settingsModal .saved').classList.add('d-none');
+});
 
 document.querySelector('#languageSetting').onchange = function(event) {
   env.language = event.target.value;
