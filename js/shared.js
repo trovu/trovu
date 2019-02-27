@@ -269,13 +269,39 @@ function getLanguageAndCountry(params) {
 async function getEnv() {
 
   let env = {};
-  params = getParams()
 
-  env = Object.assign(env, getLanguageAndCountry(params));
+  let params = getParams()
 
-  env.query                 = params.query || "";
-  env.namespaces            = getNamespaces(params, env);
-  env.namespaceUrlTemplates = getNamespaceUrlTemplates(params);
+  // Try Github config.
+  if (params.github) {
+    let configUrl = 'https://raw.githubusercontent.com/' + params.github + '/trovu-data-user/master/config.yml';
+    let configYml  = await fetchAsync(configUrl);
+    if (configYml) {
+      env = jsyaml.load(configYml);
+    }
+  }
+
+  // Default language.
+  if (typeof env.language != 'string') {
+    env.language = getDefaultLanguage();
+  }
+  // Default country.
+  if (typeof env.country != 'string') {
+    env.country = getDefaultCountry();
+  }
+  // Default namespaces.
+  if (typeof env.namespaces != 'object') {
+    env.namespaces = [
+      'o',
+      env.language,
+      '.' + env.country
+    ];
+  }
+
+  // Override all per params.
+  env = Object.assign(env, params);
+
+  env.namespaces = addFetchUrlTemplates(env.namespaces, params);
 
   return env;
 }
