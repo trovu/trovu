@@ -19,7 +19,8 @@ document.querySelector('body').onload = async function(event) {
   displaySettings();
 
   // Set query into input.
-  document.querySelector('#query').value = env.query;
+  document.querySelector('#query').value = env.query || '';
+
 }
 
 document.getElementById('query-form').onsubmit = function(event) {
