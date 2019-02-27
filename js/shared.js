@@ -342,7 +342,6 @@ function buildParams() {
   // Put environment into hash.
   if (env.github) {
     params['github'] = env.github;
-
   }
   else {
     params['language'] = env.language;
