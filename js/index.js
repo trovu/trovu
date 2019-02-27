@@ -108,7 +108,6 @@ function updateConfig() {
   window.location.hash = '#' + paramStr;
 }
 
-
 $('#settingsModal').on('show.bs.modal', function (e) {
   // Hide "Saved."
   document.querySelector('#settingsModal .saved').classList.add('d-none');
@@ -123,4 +122,3 @@ document.querySelector('#countrySetting').onchange = function(event) {
   env.country = event.target.value;
   updateConfig();
 }
-
