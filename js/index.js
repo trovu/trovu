@@ -61,6 +61,14 @@ function displaySettings() {
 
   document.querySelector('#settingsEnv').value = jsyaml.dump(env);
 
+  if (env.github) {
+    document.querySelector('.using-advanced').classList.remove('d-none');
+    document.querySelector('.using-basic').classList.add('d-none');
+  }
+  else {
+    document.querySelector('.using-basic').classList.remove('d-none');
+    document.querySelector('.using-advanced').classList.add('d-none');
+  }
 
   document.querySelector('.language.value').textContent = env.language;
   document.querySelector('.country.value').textContent = env.country;
