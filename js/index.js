@@ -69,9 +69,21 @@ function displaySettings() {
     document.querySelector('.using-basic').classList.remove('d-none');
     document.querySelector('.using-advanced').classList.add('d-none');
   }
+}
 
-  document.querySelector('.language.value').textContent = env.language;
-  document.querySelector('.country.value').textContent = env.country;
+function updateConfig() {
+
+  env.namespaces = [
+    'o',
+    env.language,
+    '.' + env.country
+  ];
+  env.namespaces = addFetchUrlTemplates(env.namespaces);
+
+  displaySettings();
+
+  // Display "Saved.".
+  document.querySelector('#settingsModal .saved').classList.remove('d-none');
 
   // Set Opensearch link.
   // TODO:
