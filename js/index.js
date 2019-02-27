@@ -16,7 +16,7 @@ document.querySelector('body').onload = async function(event) {
   }
 
 
-  displaySettings();
+  updateConfig();
 
   // Set query into input.
   document.querySelector('#query').value = env.query || '';
@@ -48,7 +48,7 @@ document.querySelector('button.add-search').onclick = function(event) {
 }
 
 document.querySelector('#settingsClose').onclick = function(event) {
-  updateNamespaces();
+  updateConfig();
 }
 
 function displaySettings() {
@@ -113,11 +113,11 @@ $('#settingsModal').on('show.bs.modal', function (e) {
 
 document.querySelector('#languageSetting').onchange = function(event) {
   env.language = event.target.value;
-  updateNamespaces();
+  updateConfig();
 }
 
 document.querySelector('#countrySetting').onchange = function(event) {
   env.country = event.target.value;
-  updateNamespaces();
+  updateConfig();
 }
 
