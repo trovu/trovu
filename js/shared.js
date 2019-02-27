@@ -18,6 +18,7 @@ function log(str) {
  * @return {string} text  - The content.
  */
 async function fetchAsync(url, reload) {
+  log('.');
   const response = await fetch(
     url,
     {
