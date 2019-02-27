@@ -1,9 +1,9 @@
 var env = {};
 
-document.querySelector('body').onload = function(event) {
+document.querySelector('body').onload = async function(event) {
 
   // Init environment.
-  env = getEnv();
+  env = await getEnv();
 
   let params = getParams();
 

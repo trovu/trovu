@@ -359,7 +359,7 @@ async function loadScripts(scripts) {
 
 document.querySelector('body').onload = async function(event) {
 
-  let env = getEnv();
+  let env = await getEnv();
 
   let redirectUrl = await getRedirectUrl(env);
 

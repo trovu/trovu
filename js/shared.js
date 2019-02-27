@@ -208,7 +208,7 @@ function getLanguageAndCountry(params) {
   };
 }
 
-function getEnv() {
+async function getEnv() {
 
   let env = {};
   params = getParams()
