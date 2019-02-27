@@ -1,29 +1,4 @@
 /**
- * Fetch the content of a file behind an URL.
- *
- * @param {string} url    - The URL of the file to fetch.
- *
- * @return {string} text  - The content.
- */
-async function fetchAsync(url, reload) {
-  const response = await fetch(
-    url,
-    {
-      cache: (reload ? "reload" : "force-cache")
-    }
-  );
-  if (response.status != 200) {
-    //log("Fail:    " + url);
-    log('.');
-    return null;
-  }
-  //log("Success: " + url);
-  log('.');
-  const text = await response.text();
-  return text;
-}
-
-/**
  * Build fetch URL given the necessary parameters.
  *
  * @param {string} namespace        - The namespace to use.

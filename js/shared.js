@@ -1,6 +1,31 @@
 const fetchUrlTemplateDefault = "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml"
 const momentjsUrl = 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js';
 
+/**
+ * Fetch the content of a file behind an URL.
+ *
+ * @param {string} url    - The URL of the file to fetch.
+ *
+ * @return {string} text  - The content.
+ */
+async function fetchAsync(url, reload) {
+  const response = await fetch(
+    url,
+    {
+      cache: (reload ? "reload" : "force-cache")
+    }
+  );
+  if (response.status != 200) {
+    //log("Fail:    " + url);
+    log('.');
+    return null;
+  }
+  //log("Success: " + url);
+  log('.');
+  const text = await response.text();
+  return text;
+}
+
 function splitKeepRemainder(string, delimiter, n) {
   if (!string) {
     return [];
