@@ -52,6 +52,9 @@ document.querySelector('#settingsClose').onclick = function(event) {
 }
 
 function displaySettings() {
+
+  let params = getParams()
+
   // Set settings fields from environment.
   document.querySelector('#languageSetting').value = env.language;
   document.querySelector('#countrySetting').value = env.country;
