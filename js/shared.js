@@ -230,6 +230,7 @@ function addFetchUrlTemplates(namespaces, params) {
   return namespaces;
 }
 
+// TODO: remove.
 function getLanguageAndCountry(params) {
 
   let language = null;
@@ -298,6 +299,7 @@ function buildBaseUrl() {
   return baseUrl;
 }
 
+// TODO: remove
 function buildParams() {
 
   let params = {};
