@@ -59,7 +59,6 @@ function displaySettings() {
   document.querySelector('#languageSetting').value = env.language;
   document.querySelector('#countrySetting').value = env.country;
 
-  document.querySelector('ol.namespaces').innerHTML = '';
 
 
   document.querySelector('.language.value').textContent = env.language;
