@@ -61,19 +61,6 @@ function displaySettings() {
 
   document.querySelector('ol.namespaces').innerHTML = '';
 
-  // Show namespaces and their template URLs.
-  for (i in env.namespaces) {
-    let liElement = document.createElement('li');
-    if (env.namespaces[i] in env.namespaceUrlTemplates) {
-      liElement.setAttribute('title', env.namespaceUrlTemplates[env.namespaces[i]]);
-      liElement.setAttribute('class', 'badge badge-primary');
-    }
-    else {
-      liElement.setAttribute('class', 'badge badge-secondary');
-    }
-    liElement.textContent = env.namespaces[i];
-    document.querySelector('ol.namespaces').append(liElement);
-  }
 
   document.querySelector('.language.value').textContent = env.language;
   document.querySelector('.country.value').textContent = env.country;
