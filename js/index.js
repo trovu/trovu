@@ -110,7 +110,7 @@ function updateConfig() {
 
 
 $('#settingsModal').on('show.bs.modal', function (e) {
-	// Hide "Saved."
+  // Hide "Saved."
   document.querySelector('#settingsModal .saved').classList.add('d-none');
 });
 
