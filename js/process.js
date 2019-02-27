@@ -289,6 +289,7 @@ async function getRedirectUrl(env) {
         variables.language = extraNamespace;
         break;
       case 3:
+        // TODO: cut dot?
         variables.country = extraNamespace;
         break;
     }
