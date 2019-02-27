@@ -171,6 +171,56 @@ function getNamespaceUrlTemplates(params) {
   return namespaceUrlTemplates;
 }
 
+function getDefaultLanguageAndCountry() {
+  // Get from browser.
+  let languageStr = navigator.language;
+  if (languageStr) {
+    [language, country] = languageStr.split('-')
+  }
+  // Ensure lowercase.
+  language = language.toLowerCase();
+  country  = country.toLowerCase();
+  return {
+    language: language,
+    country:  country
+  };
+}
+
+function getDefaultLanguage() {
+  let languageCountry = getDefaultLanguageAndCountry();
+  return languageCountry.language;
+}
+
+function getDefaultCountry() {
+  let languageCountry = getDefaultLanguageAndCountry();
+  return languageCountry.country;
+}
+
+function addFetchUrlTemplates(namespaces, params) {
+
+  for (i in namespaces) {
+    // Site namespaces, from trovu-data.
+    if (typeof namespaces[i] == 'string')  {
+      if (namespaces[i].length < 4) {
+        let name = namespaces[i];
+        namespaces[i] = {
+          name: name,
+          url:  'https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/' + name + '/{%keyword}/{%argumentCount}.yml'
+        };
+      }
+    }
+    // User namespaces, from custom trovu-data-user.
+    if (namespaces[i].github)  {
+      if (namespaces[i].github == '.')  {
+        // Set to current user.
+        namespaces[i].github = params.github;
+      }
+      namespaces[i].url = 'https://raw.githubusercontent.com/' + namespaces[i].github + '/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml';
+    }
+  }
+  return namespaces;
+}
+
 function getLanguageAndCountry(params) {
 
   let language = null;
