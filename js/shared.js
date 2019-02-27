@@ -1,11 +1,13 @@
 const fetchUrlTemplateDefault = "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml"
 const momentjsUrl = 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js';
 
-function log(str) {
+function log(str, newLine = true) {
   if (!document.querySelector('#log')) {
     return;
   }
-  //document.querySelector('#log').textContent += "\n" + str;
+  if (newLine) {
+    document.querySelector('#log').textContent += "\n";
+  }
   document.querySelector('#log').textContent += str;
 }
 
@@ -17,8 +19,8 @@ function log(str) {
  *
  * @return {string} text  - The content.
  */
-async function fetchAsync(url, reload) {
-  log('.');
+async function fetchAsync(url, reload, verbose = false) {
+  if (!verbose) log('.', false);
   const response = await fetch(
     url,
     {
@@ -26,10 +28,10 @@ async function fetchAsync(url, reload) {
     }
   );
   if (response.status != 200) {
-    //log("Fail:    " + url);
+    if (verbose) log("Fail:    " + url);
     return null;
   }
-  //log("Success: " + url);
+  if (verbose) log("Success: " + url);
   const text = await response.text();
   return text;
 }
@@ -277,7 +279,7 @@ async function getEnv() {
   // Try Github config.
   if (params.github) {
     let configUrl = 'https://raw.githubusercontent.com/' + params.github + '/trovu-data-user/master/config.yml';
-    let configYml  = await fetchAsync(configUrl);
+    let configYml  = await fetchAsync(configUrl, env.verbose);
     if (configYml) {
       env = jsyaml.load(configYml);
     }

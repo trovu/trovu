@@ -240,8 +240,8 @@ async function fetchShortcuts(env, keyword, arguments) {
   let found = false;
   for (namespace of env.namespaces) {
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, namespace.url);
-    //log("Request: " + fetchUrl);
-    let text  = await fetchAsync(fetchUrl, env.reload);
+    if (env.verbose) log("Request: " + fetchUrl);
+    let text  = await fetchAsync(fetchUrl, env.reload, env.verbose);
     shortcuts[namespace.name] = jsyaml.load(text);
 
     if (!found) {
@@ -319,8 +319,8 @@ async function getRedirectUrl(env) {
     return;
   }
 
-  //log('');
-  //log("Used template: " + redirectUrl);
+  if (env.verbose) log('');
+  if (env.verbose) log("Used template: " + redirectUrl);
   log('success.');
 
   redirectUrl = replaceVariables(redirectUrl, variables);
@@ -366,7 +366,7 @@ document.querySelector('body').onload = async function(event) {
     redirectUrl = '../index.html#' + paramStr;
   }
 
-  //log("Redirect to:   " + redirectUrl)
+  if (env.verbose) log("Redirect to:   " + redirectUrl)
   
   //console.log(redirectUrl);
   //return;
