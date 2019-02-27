@@ -73,12 +73,14 @@ function displaySettings() {
 
 function updateConfig() {
 
-  env.namespaces = [
-    'o',
-    env.language,
-    '.' + env.country
-  ];
-  env.namespaces = addFetchUrlTemplates(env.namespaces);
+  if (!env.github) {
+    env.namespaces = [
+      'o',
+      env.language,
+      '.' + env.country
+    ];
+    env.namespaces = addFetchUrlTemplates(env.namespaces);
+  }
 
   displaySettings();
 
