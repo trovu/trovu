@@ -1,6 +1,6 @@
 Every shortcut belongs to exactly one namespace. Namespaces allow the same keyword to be used for different shortcuts – according to the user's language, location or personal setup. For instance, while all other users use the keyword `g` for Google, you might use it for something else – with your user namespace.
 
-# Namespace types
+## Namespace types
 
 Namespace type | Example namespaces | Naming convention | Contains | Example shortcuts
 --- | --- | --- | --- | ---
@@ -11,6 +11,6 @@ planet | [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o)| the s
 
 [These directories](https://github.com/trovu/trovu-data/tree/master/shortcuts) are all the (curated) site namespaces.
 
-# Uniqueness in a namespace
+## Uniqueness in a namespace
 
 In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml
