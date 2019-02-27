@@ -245,7 +245,7 @@ async function fetchShortcuts(env, keyword, arguments) {
     shortcuts[namespace.name] = jsyaml.load(text);
 
     if (!found) {
-      found = Boolean(shortcuts[namespace]);
+      found = Boolean(shortcuts[namespace.name]);
     }
   }
   return [shortcuts, found];
