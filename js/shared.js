@@ -347,6 +347,9 @@ function buildParams() {
     params['language'] = env.language;
     params['country'] = env.country;
   }
+  if (env.verbose) {
+    params['verbose'] = 1;
+  }
 
   return params;
 }
