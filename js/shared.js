@@ -330,7 +330,6 @@ function buildBaseUrl() {
   return baseUrl;
 }
 
-// TODO: remove
 function buildParams() {
 
   let params = {};
