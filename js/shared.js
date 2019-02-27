@@ -282,6 +282,7 @@ async function getEnv() {
     }
     else {
       env.githubFailed = true;
+      alert('Failed to read Github config from ' + configUrl)
     }
   }
 
