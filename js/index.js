@@ -59,6 +59,7 @@ function displaySettings() {
   document.querySelector('#languageSetting').value = env.language;
   document.querySelector('#countrySetting').value = env.country;
 
+  document.querySelector('#settingsEnv').value = jsyaml.dump(env);
 
 
   document.querySelector('.language.value').textContent = env.language;
