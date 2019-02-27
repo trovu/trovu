@@ -90,6 +90,7 @@ function updateConfig() {
   // Why does let params not work here?
   params = buildParams();
 
+  /*
   baseUrl = buildBaseUrl();
   let urlOpensearch = baseUrl + 'opensearch/?' + jqueryParam(params);
 
@@ -101,6 +102,7 @@ function updateConfig() {
   let urlProcess = baseUrl + 'process/index.html#query=%s&' + jqueryParam(params);
   let preProcessUrl = document.querySelector('.process-url');
   preProcessUrl.textContent = urlProcess;
+*/
 
   let paramStr = jqueryParam(params);
   window.location.hash = '#' + paramStr;
