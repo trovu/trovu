@@ -335,10 +335,14 @@ function buildParams() {
   let params = {};
 
   // Put environment into hash.
-  params['namespaces'] = env.namespaces.join(',');
-  params['namespace'] = env.namespaceUrlTemplates;
-  params['language'] = env.language;
-  params['country'] = env.country;
+  if (env.github) {
+    params['github'] = env.github;
+
+  }
+  else {
+    params['language'] = env.language;
+    params['country'] = env.country;
+  }
 
   return params;
 }
