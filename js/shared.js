@@ -272,6 +272,7 @@ async function getEnv() {
   let env = {};
 
   let params = getParams()
+  let githubFailed;
 
   // Try Github config.
   if (params.github) {
@@ -281,7 +282,7 @@ async function getEnv() {
       env = jsyaml.load(configYml);
     }
     else {
-      env.githubFailed = true;
+      githubFailed = true;
       alert('Failed to read Github config from ' + configUrl)
     }
   }
@@ -289,7 +290,7 @@ async function getEnv() {
   // Override all with params.
   env = Object.assign(env, params);
 
-  if (env.githubFailed) {
+  if (githubFailed) {
     delete env.github; 
   }
 
