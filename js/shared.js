@@ -26,11 +26,9 @@ async function fetchAsync(url, reload) {
   );
   if (response.status != 200) {
     //log("Fail:    " + url);
-    log('.');
     return null;
   }
   //log("Success: " + url);
-  log('.');
   const text = await response.text();
   return text;
 }
