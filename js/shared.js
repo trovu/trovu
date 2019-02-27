@@ -1,6 +1,15 @@
 const fetchUrlTemplateDefault = "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml"
 const momentjsUrl = 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js';
 
+function log(str) {
+  if (!document.querySelector('#log')) {
+    return;
+  }
+  //document.querySelector('#log').textContent += "\n" + str;
+  document.querySelector('#log').textContent += str;
+}
+
+
 /**
  * Fetch the content of a file behind an URL.
  *

@@ -233,11 +233,6 @@ function escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
-function log(str) {
-  //document.querySelector('#log').textContent += "\n" + str;
-  document.querySelector('#log').textContent += str;
-}
-
 async function fetchShortcuts(env, keyword, arguments) {
   
   // Fetch all available shortcuts for our query and namespace settings.
