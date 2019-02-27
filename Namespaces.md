@@ -13,4 +13,4 @@ planet | [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o)| the s
 
 ## Uniqueness in a namespace
 
-In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml
+In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml).
