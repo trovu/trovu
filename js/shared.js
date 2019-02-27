@@ -279,6 +279,16 @@ async function getEnv() {
     if (configYml) {
       env = jsyaml.load(configYml);
     }
+    else {
+      env.githubFailed = true;
+    }
+  }
+
+  // Override all with params.
+  env = Object.assign(env, params);
+
+  if (env.githubFailed) {
+    delete env.github; 
   }
 
   // Default language.
@@ -297,9 +307,6 @@ async function getEnv() {
       '.' + env.country
     ];
   }
-
-  // Override all per params.
-  env = Object.assign(env, params);
 
   env.namespaces = addFetchUrlTemplates(env.namespaces, params);
 
