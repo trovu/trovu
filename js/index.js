@@ -100,7 +100,6 @@ document.querySelector('body').onload = async function(event) {
           '</span>' +
           namespace_html +
         '</span>'+
-        ' <span class="gear" >⚙</span> ' +
       '</a>' +
       '';
       
