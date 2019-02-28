@@ -53,6 +53,16 @@ document.querySelector('body').onload = async function(event) {
   // Set query into input.
   document.querySelector('#query').value = env.query || '';
 
+
+  $('#query').autocomplete({
+    minLength: 1,
+    source: ['one','two']
+    /*
+    source: function (request, response) {
+      response(['one','two']);
+    }
+    */
+  })
 }
 
 document.getElementById('query-form').onsubmit = function(event) {
