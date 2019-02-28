@@ -1,4 +1,6 @@
 var env = {};
+var suggestions = [];
+
 async function getSuggestions() {
 
   let shortcutsKeyed = {}
