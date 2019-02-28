@@ -3,7 +3,9 @@ var suggestions = [];
 
 async function getSuggestions() {
 
-  let shortcutsKeyed = {}
+  let suggestions = [];
+  let foundShortcuts = {}
+
   // Prefetch suggestions.
   // Iterate over namespaces in reverse order.
   for (namespace of env.namespaces.reverse()) {
@@ -18,20 +20,20 @@ async function getSuggestions() {
       let key = shortcut.keyword + '.' + shortcut.arguments.length;
       // If not yet present: reachable.
       // (Because we started with most precendent namespace.)
-      if (!(key in shortcutsKeyed)) {
+      if (!(key in foundShortcuts)) {
         shortcut.reachable = true;
-        shortcutsKeyed[key] = shortcut;
+        suggestions.push(shortcut);
       }
       // Others are unreachable
       // but can be reached with namespace forcing.
       else {
         shortcut.reachable = false;
-        shortcutsKeyed[key] = shortcut;
+        suggestions.push(shortcut);
       }
+      foundShortcuts[key] = true;
     }
   }
-  // Return array of values.
-  return Object.values(shortcutsKeyed);
+  return suggestions;
 }
 
 document.querySelector('body').onload = async function(event) {
