@@ -61,7 +61,7 @@ document.querySelector('body').onload = async function(event) {
     minLength: 1,
     //source: ['one','two']
     source: function (request, response) {
-      let matches = suggestions.slice(60,65);
+      let matches = suggestions.slice(60,80);
       response(matches);
     }
   })
