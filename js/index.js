@@ -1,4 +1,36 @@
 var env = {};
+async function getSuggestions() {
+
+  let shortcutsKeyed = {}
+  // Prefetch suggestions.
+  // Iterate over namespaces in reverse order.
+  for (namespace of env.namespaces.reverse()) {
+    // Load precompiled JSON.
+    let json = await fetchAsync('http://data.trovu.net/suggestions/' + namespace.name + '.json');
+    if (!json) {
+      continue;
+    }
+    let shortcuts = JSON.parse(json);
+    // Iterate over all shortcuts.
+    for (shortcut of shortcuts) {
+      let key = shortcut.keyword + '.' + shortcut.arguments.length;
+      // If not yet present: reachable.
+      // (Because we started with most precendent namespace.)
+      if (!(key in shortcutsKeyed)) {
+        shortcut.reachable = true;
+        shortcutsKeyed[key] = shortcut;
+      }
+      // Others are unreachable
+      // but can be reached with namespace forcing.
+      else {
+        shortcut.reachable = false;
+        shortcutsKeyed[key] = shortcut;
+      }
+    }
+  }
+  // Return array of values.
+  return Object.values(shortcutsKeyed);
+}
 
 document.querySelector('body').onload = async function(event) {
 
