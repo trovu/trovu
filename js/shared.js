@@ -225,6 +225,10 @@ function addFetchUrlTemplates(namespaces, params) {
         // Set to current user.
         namespaces[i].github = params.github;
       }
+      // Default to Github name.
+      if (!namespaces[i].name) {
+        namespaces[i].name = namespaces[i].github;
+      }
       namespaces[i].url = 'https://raw.githubusercontent.com/' + namespaces[i].github + '/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml';
     }
   }
