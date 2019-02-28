@@ -55,6 +55,7 @@ document.querySelector('body').onload = async function(event) {
   // Set query into input.
   document.querySelector('#query').value = env.query || '';
 
+  suggestions = await getSuggestions();
 
   $('#query').autocomplete({
     minLength: 1,
