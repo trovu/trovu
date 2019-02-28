@@ -59,12 +59,11 @@ document.querySelector('body').onload = async function(event) {
 
   $('#query').autocomplete({
     minLength: 1,
-    source: ['one','two']
-    /*
+    //source: ['one','two']
     source: function (request, response) {
-      response(['one','two']);
+      let matches = suggestions.slice(60,65);
+      response(matches);
     }
-    */
   })
 }
 
