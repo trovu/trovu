@@ -63,8 +63,41 @@ document.querySelector('body').onload = async function(event) {
     minLength: 1,
     //source: ['one','two']
     source: function (request, response) {
-      let matches = suggestions.slice(60,80);
-      response(matches);
+      let matches = {
+        keywordFullReachable:  [],
+        keywordFullUnreachable:  [],
+        keywordBeginReachable:  [],
+        keywordBeginUnreachable:  [],
+      };
+      for (suggestion of suggestions) {
+        if (request.term == suggestion.keyword) {
+          if (suggestion.reachable) {
+            matches.keywordFullReachable.push(suggestion);
+          }
+          else {
+            matches.keywordFullReachable.push(suggestion);
+          }
+          continue;
+        }
+        let pos = suggestion.keyword.search(new RegExp(request.term))
+        if (pos == 0) {
+          if (suggestion.reachable) {
+            matches.keywordBeginReachable.push(suggestion);
+          }
+          else {
+            matches.keywordBeginUnreachable.push(suggestion);
+          }
+          continue;
+        }
+      }
+      let result = [];
+      result = result.concat(
+        matches.keywordFullReachable,
+        matches.keywordFullUnreachable,
+        matches.keywordBeginReachable,
+        matches.keywordBeginUnreachable
+      ).slice(0,20);
+      response(result);
     }
   })
   .data('uiAutocomplete')._renderItem = function( ul, item ) {
