@@ -68,6 +68,10 @@ document.querySelector('body').onload = async function(event) {
         keywordFullUnreachable:  [],
         keywordBeginReachable:  [],
         keywordBeginUnreachable:  [],
+        titleBeginReachable:  [],
+        titleBeginUnreachable:  [],
+        titleMiddleReachable:  [],
+        titleMiddleUnreachable:  [],
       };
       for (suggestion of suggestions) {
         if (request.term == suggestion.keyword) {
@@ -79,7 +83,7 @@ document.querySelector('body').onload = async function(event) {
           }
           continue;
         }
-        let pos = suggestion.keyword.search(new RegExp(request.term))
+        let pos = suggestion.keyword.search(new RegExp(request.term, 'i'))
         if (pos == 0) {
           if (suggestion.reachable) {
             matches.keywordBeginReachable.push(suggestion);
@@ -89,13 +93,36 @@ document.querySelector('body').onload = async function(event) {
           }
           continue;
         }
+        pos = suggestion.title.search(new RegExp(request.term, 'i'))
+        if (pos == 0) {
+          if (suggestion.reachable) {
+            matches.titleBeginReachable.push(suggestion);
+          }
+          else {
+            matches.titleBeginUnreachable.push(suggestion);
+          }
+          continue;
+        }
+        if (pos > 0) {
+          if (suggestion.reachable) {
+            matches.titleMiddleReachable.push(suggestion);
+          }
+          else {
+            matches.titleMiddleUnreachable.push(suggestion);
+          }
+          continue;
+        }
       }
       let result = [];
       result = result.concat(
         matches.keywordFullReachable,
         matches.keywordFullUnreachable,
         matches.keywordBeginReachable,
-        matches.keywordBeginUnreachable
+        matches.keywordBeginUnreachable,
+        matches.titleBeginReachable,
+        matches.titleBeginUnreachable,
+        matches.titleMiddleReachable,
+        matches.titleMiddleUnreachable
       ).slice(0,20);
       response(result);
     }
