@@ -244,9 +244,6 @@ async function updateConfig() {
 
   displaySettings();
 
-  // Display "Saved.".
-  document.querySelector('#settingsModal .saved').classList.remove('d-none');
-
   // Set Opensearch link.
   // TODO:
   // Why does let params not work here?
