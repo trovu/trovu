@@ -260,18 +260,3 @@ async function updateConfig() {
   let paramStr = jqueryParam(params);
   window.location.hash = '#' + paramStr;
 }
-
-$('#settingsModal').on('show.bs.modal', function (e) {
-  // Hide "Saved."
-  document.querySelector('#settingsModal .saved').classList.add('d-none');
-});
-
-document.querySelector('#languageSetting').onchange = function(event) {
-  env.language = event.target.value;
-  updateConfig();
-}
-
-document.querySelector('#countrySetting').onchange = function(event) {
-  env.country = event.target.value;
-  updateConfig();
-}
