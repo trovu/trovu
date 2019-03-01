@@ -201,7 +201,11 @@ document.querySelector('button.add-search').onclick = function(event) {
   window.external.AddSearchProvider(urlOpensearch);
 }
 
-document.querySelector('#settingsClose').onclick = function(event) {
+document.querySelector('#settingsSave').onclick = function(event) {
+
+  env.language = document.querySelector('#languageSetting').value;
+  env.country  = document.querySelector('#countrySetting').value;
+
   updateConfig();
 }
 
