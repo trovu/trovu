@@ -10,7 +10,7 @@ async function getSuggestions() {
   // Iterate over namespaces in reverse order.
   for (namespace of env.namespaces.reverse()) {
     // Load precompiled JSON.
-    let json = await fetchAsync('http://data.trovu.net/suggestions/' + namespace.name + '.json');
+    let json = await fetchAsync('https://data.trovu.net/suggestions/' + namespace.name + '.json');
     if (!json) {
       continue;
     }
