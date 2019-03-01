@@ -266,3 +266,8 @@ async function updateConfig() {
   let paramStr = jqueryParam(params);
   window.location.hash = '#' + paramStr;
 }
+
+// On Settings modal open.
+$('#settingsModal').on('show.bs.modal', function (e) {
+  displaySettings();
+});
