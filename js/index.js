@@ -3,7 +3,9 @@ var suggestions = [];
 
 async function getSuggestions() {
 
-  let suggestions = [];
+  // Use global var
+  // reset it.
+  suggestions = [];
   let foundShortcuts = {}
 
   // Prefetch suggestions.
@@ -56,8 +58,6 @@ document.querySelector('body').onload = async function(event) {
 
   // Set query into input.
   document.querySelector('#query').value = env.query || '';
-
-  suggestions = await getSuggestions();
 
   $('#query').autocomplete({
     minLength: 1,
@@ -220,7 +220,7 @@ function displaySettings() {
   }
 }
 
-function updateConfig() {
+async function updateConfig() {
 
   if (!env.github) {
     env.namespaces = [
@@ -230,6 +230,8 @@ function updateConfig() {
     ];
     env.namespaces = addFetchUrlTemplates(env.namespaces);
   }
+
+  await getSuggestions();
 
   displaySettings();
 
