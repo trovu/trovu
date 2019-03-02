@@ -241,44 +241,6 @@ function addFetchUrlTemplates(namespaces, params) {
   return namespaces;
 }
 
-// TODO: remove.
-function getLanguageAndCountry(params) {
-
-  let language = null;
-  let country = null;
-
-  // Get from browser.
-  let languageStr = navigator.language;
-  if (languageStr) {
-    [language, country] = languageStr.split('-')
-  }
-
-  // Override via params.
-  if (params.language) {
-    language = params.language;
-  }
-  if (params.country) {
-    country = params.country;
-  }
-
-  // Default fallbacks.
-  if (!language) {
-    language = 'en';
-  }
-  if (!country) {
-    country = 'us';
-  }
-
-  // Ensure lowercase.
-  language = language.toLowerCase();
-  country  = country.toLowerCase();
-
-  return {
-    language: language,
-    country:  country
-  };
-}
-
 async function getEnv() {
 
   let env = {};
