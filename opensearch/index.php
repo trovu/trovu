@@ -10,8 +10,14 @@ $urlTrovu      = str_replace('opensearch/', '', $urlOpensearch);
 // Get environment from GET params.
 $env = $_GET;
 
-// Set defaults for namespaces.
-$env['namespaces'] = array_value($env, 'namespaces', 'o,de,.de');
+$title = 'Trovu: ';
+
+if (!empty($env['github'])) {
+  $title .=  $env['github'];
+}
+else {
+  $title .=  $env['language'] . '-' . strtoupper($env['country']);
+}
 
 // Build param string.
 $paramStr = htmlspecialchars(http_build_query($env));

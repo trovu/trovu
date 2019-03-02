@@ -3,7 +3,7 @@
 	xmlns="http://a9.com/-/spec/opensearch/1.1/" 
   xmlns:moz="http://www.mozilla.org/2006/browser/search/"
 >
-  <ShortName>Trovu: <?PHP echo $env['namespaces'] ?></ShortName>
+  <ShortName><?PHP echo $title ?></ShortName>
   <Url 
   	type="text/html" 
   	method="get" 

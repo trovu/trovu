@@ -253,7 +253,16 @@ async function updateConfig() {
   let urlOpensearch = baseUrl + 'opensearch/?' + jqueryParam(params);
 
   let linkSearch = document.querySelector('#linkSearch');
-  linkSearch.setAttribute('title', 'Trovu: ' + env.namespaces.join(','));
+
+  let title = 'Trovu: ';
+  if (env.github) {
+    title += env.github;
+  }
+  else {
+    title += env.namespaces.join(',');
+  }
+
+  linkSearch.setAttribute('title', title);
   linkSearch.setAttribute('href', urlOpensearch);
 
   // Set Process URL.
