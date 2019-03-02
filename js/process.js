@@ -277,9 +277,9 @@ async function getRedirectUrl(env) {
   // Check for extraNamespace in keyword:
   //   split at dot
   //   but don't split up country namespace names.
-  if (keyword.match(/(?<=.)\./)) {
+  if (keyword.match(/.\./)) {
 
-    [extraNamespace, keyword] = splitKeepRemainder(keyword, /(?<=.)\./, 2);
+    [extraNamespace, keyword] = splitKeepRemainder(keyword, /\./, 2);
 
     // Add to namespaces.
     env.namespaces.push(extraNamespace);
