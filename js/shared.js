@@ -19,8 +19,14 @@ function log(str, newLine = true) {
  *
  * @return {string} text  - The content.
  */
-async function fetchAsync(url, reload, verbose = false) {
-  if (!verbose) log('.', false);
+async function fetchAsync(url, reload, debug = false) {
+
+  if (debug) {
+    log("Request: " + url);
+  }
+  else {
+    log('.', false);
+  }
   const response = await fetch(
     url,
     {
@@ -28,10 +34,10 @@ async function fetchAsync(url, reload, verbose = false) {
     }
   );
   if (response.status != 200) {
-    if (verbose) log("Fail:    " + url);
+    if (debug) log("Fail:    " + url);
     return null;
   }
-  if (verbose) log("Success: " + url);
+  if (debug) log("Success: " + url);
   const text = await response.text();
   return text;
 }
@@ -283,7 +289,8 @@ async function getEnv() {
   // Try Github config.
   if (params.github) {
     let configUrl = 'https://raw.githubusercontent.com/' + params.github + '/trovu-data-user/master/config.yml';
-    let configYml  = await fetchAsync(configUrl, env.verbose);
+    console.log(env);
+    let configYml  = await fetchAsync(configUrl, false, params.debug);
     if (configYml) {
       env = jsyaml.load(configYml);
     }
@@ -351,8 +358,8 @@ function buildParams() {
     params['language'] = env.language;
     params['country'] = env.country;
   }
-  if (env.verbose) {
-    params['verbose'] = 1;
+  if (env.debug) {
+    params['debug'] = 1;
   }
 
   return params;

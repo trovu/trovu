@@ -240,8 +240,7 @@ async function fetchShortcuts(env, keyword, arguments) {
   let found = false;
   for (namespace of env.namespaces) {
     var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, namespace.url);
-    if (env.verbose) log("Request: " + fetchUrl);
-    let text  = await fetchAsync(fetchUrl, env.reload, env.verbose);
+    let text  = await fetchAsync(fetchUrl, env.reload, env.debug);
     shortcuts[namespace.name] = jsyaml.load(text);
 
     if (!found) {
@@ -275,10 +274,12 @@ async function getRedirectUrl(env) {
     [reload, keyword] = splitKeepRemainder(keyword, ":", 2);
     env.reload = true;
   }
-  // Check for extraNamespace in keyword.
-  if (keyword.match(/\./)) {
+  // Check for extraNamespace in keyword:
+  //   split at dot
+  //   but don't split up country namespace names.
+  if (keyword.match(/(?<=.)\./)) {
 
-    [extraNamespace, keyword] = splitKeepRemainder(keyword, ".", 2);
+    [extraNamespace, keyword] = splitKeepRemainder(keyword, /(?<=.)\./, 2);
 
     // Add to namespaces.
     env.namespaces.push(extraNamespace);
@@ -326,8 +327,8 @@ async function getRedirectUrl(env) {
     return;
   }
 
-  if (env.verbose) log('');
-  if (env.verbose) log("Used template: " + redirectUrl);
+  if (env.debug) log('');
+  if (env.debug) log("Used template: " + redirectUrl);
   log('success.');
 
   redirectUrl = replaceVariables(redirectUrl, variables);
@@ -373,10 +374,10 @@ document.querySelector('body').onload = async function(event) {
     redirectUrl = '../index.html#' + paramStr;
   }
 
-  if (env.verbose) log("Redirect to:   " + redirectUrl)
-  
-  //console.log(redirectUrl);
-  //return;
+  if (env.debug) {
+    log("Redirect to:   " + redirectUrl)
+    return;
+  }
 
   window.location.href = redirectUrl;
 }
