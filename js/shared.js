@@ -251,7 +251,6 @@ async function getEnv() {
   // Try Github config.
   if (params.github) {
     let configUrl = 'https://raw.githubusercontent.com/' + params.github + '/trovu-data-user/master/config.yml';
-    console.log(env);
     let configYml  = await fetchAsync(configUrl, false, params.debug);
     if (configYml) {
       env = jsyaml.load(configYml);
