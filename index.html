@@ -24,21 +24,22 @@
     <div class="modal fade" id="browserModal" tabindex="-1" role="dialog" aria-labelledby="browserModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="browserModalLabel">Add to browser</h5>
-          </div>
           <div class="modal-body">
-            <div class="row mb-2">
-              <label for="browserAddFirefox" class="col-sm-2">Firefox</label>
-              <div id="browserAddFirefox" class="col-sm-10">
-                <button class="add-search form-control btn btn-sm btn-light">Click to add</button>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="firefox-tab" data-toggle="tab" href="#firefox" role="tab" aria-controls="basic" aria-selected="true">Firefox</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="other-browser-tab" data-toggle="tab" href="#other-browser" role="tab" aria-controls="advanced" aria-selected="false">Other browser</a>
+              </li>
+            </ul>
+            <div class="tab-content mt-4">
+              <div class="tab-pane fade show active" id="firefox" role="tabpanel" aria-labelledby="basic-tab">
+                  <button class="add-search form-control btn btn-sm btn-light">Click to add to Firefox</button>
               </div>
-            </div>
-            <div class="row">
-              <label for="browserAddOther" class="col-sm-2">Other</label>
-              <div id="browserAddOther" class="col-sm-10">
-                <p>Use this URL template and add it where your browser allows to set custom browser search engines:</p>
-                <textarea class="process-url form-control" rows="4">/process/?#query=%s</textarea>
+              <div class="tab-pane fade" id="other-browser" role="tabpanel" aria-labelledby="advanced-tab">
+                  <p>Use this URL template and add it where your browser allows to set custom browser search engines:</p>
+                  <textarea class="process-url form-control" rows="4">/process/?#query=%s</textarea>
               </div>
             </div>
           </div>
