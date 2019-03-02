@@ -304,6 +304,13 @@ async function getRedirectUrl(env) {
     [shortcuts, found] = await fetchShortcuts(env, keyword, arguments);
   }
 
+  // If nothing found:
+  // Try default keyword.
+  if ((!found) && (env.defaultKeyword)) {
+    arguments = [env.query];
+    [shortcuts, found] = await fetchShortcuts(env, env.defaultKeyword, argumentString);
+  }
+
   let redirectUrl = null;
 
   // Find first shortcut in our namespace hierarchy.
