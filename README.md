@@ -8,7 +8,7 @@ This is the repository for curated shortcuts. Pull requests are welcome!
       de/             Namespaces for languages
       .de/              ... and countries
         db/           Keywords have their directories
-          2.yml       Shortcut data files in YAML format
+          2.yml       Shortcut data files in YAML format, named after argument count
 
 Read more about:
 
