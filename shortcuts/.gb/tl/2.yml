@@ -1,4 +1,4 @@
-url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{$now|output=d/m/y/H/i}/Leave%20After//////Leave%20After/1/0//
+url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{$now|output=DD/MM/YY/HH/mm}/Leave%20After//////Leave%20After/1/0//
 title: thetrainline.com
 description: ""
 tags:
