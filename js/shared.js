@@ -11,6 +11,13 @@ function log(str, newLine = true) {
   document.querySelector('#log').textContent += str;
 }
 
+function str_replace_all(str, replacements) {
+
+  for (key in replacements) {
+    str = str.replace(key, replacements[key]);
+  }
+  return str;
+}
 
 /**
  * Fetch the content of a file behind an URL.

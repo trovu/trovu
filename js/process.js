@@ -22,10 +22,7 @@ function buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
     '{%keyword}':       keyword,
     '{%argumentCount}': argumentCount
   }
-  var fetchUrl = fetchUrlTemplate;
-  for (key in replacements) {
-    fetchUrl = fetchUrl.replace(key, replacements[key]);
-  }
+  let fetchUrl = str_replace_all(fetchUrlTemplate, replacements);
 
   return fetchUrl;
 }
