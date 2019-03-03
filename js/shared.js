@@ -40,6 +40,8 @@ async function fetchAsync(url, reload, debug = false) {
       cache: (reload ? "reload" : "force-cache")
     }
   );
+  //console.log(url);
+  //console.log(response.headers.get('Expires'));
   if (response.status != 200) {
     if (debug) log("Fail:    " + url);
     return null;
