@@ -10,11 +10,10 @@ async function parse_city(str, country, debug) {
   let citiesYml  = await fetchAsync(fetchUrl, false, debug);
   if (citiesYml) {
     cities = jsyaml.load(citiesYml);
-  }
-
-  if (str in cities) {
-    city = cities[str];
-    return city;
+    if (str in cities) {
+      city = cities[str];
+      return city;
+    }
   }
 
   return false;
