@@ -10,6 +10,6 @@
 
 - Download your export from https://migrate.trovu.net/YOUR_FINDFINDIT_USERNAME.zip
 - fork [trovu-data-user](https://github.com/trovu/trovu-data-user) and clone it locally
-- copy the unzipped export to your cloned `trovu-data-user`
+- unzip the exported zip file into your cloned `trovu-data-user` (make sure structure is preserved).
 - commit and push
 - Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME.zip
