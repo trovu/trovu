@@ -360,6 +360,7 @@ async function getRedirectUrl(env) {
 
   if (env.debug) log('');
   if (env.debug) log("Used template: " + redirectUrl);
+
   log('success.');
 
   redirectUrl = await replaceVariables(redirectUrl, variables);
