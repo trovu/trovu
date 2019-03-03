@@ -12,5 +12,5 @@ This is the repository for curated shortcuts. Pull requests are welcome!
 
 Read more about:
 
-- [namespace concept](https://github.com/trovu/trovu.github.io/wiki/Namespaces)
+- [Trovu namespaces](https://github.com/trovu/trovu.github.io/wiki/Namespaces)
 - [YAML](https://en.wikipedia.org/wiki/YAML) format
