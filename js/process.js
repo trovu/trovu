@@ -186,7 +186,7 @@ async function replaceArguments(str, arguments, env) {
             await loadScripts(['../js/type/city.js']);
           }
 
-          let city = await parse_city(processedArgument, env.country, env.debug);
+          let city = await parse_city(processedArgument, env.country, env.reload, env.debug);
 
           // If city could be parsed:
           // Set argument.

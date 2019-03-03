@@ -1,4 +1,4 @@
-async function parse_city(str, country, debug) {
+async function parse_city(str, country, reload, debug) {
 
   let fetchUrlTemplate = 'https://raw.githubusercontent.com/trovu/trovu-data/master/types/city/{%country}.yml';
  
@@ -7,7 +7,7 @@ async function parse_city(str, country, debug) {
   }
   let fetchUrl = str_replace_all(fetchUrlTemplate, replacements);
 
-  let citiesYml  = await fetchAsync(fetchUrl, false, debug);
+  let citiesYml  = await fetchAsync(fetchUrl, reload, debug);
   if (citiesYml) {
     cities = jsyaml.load(citiesYml);
     if (str in cities) {
