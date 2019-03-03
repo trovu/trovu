@@ -50,6 +50,6 @@ For shortcuts that use `{$country}` in their URL.
 To add a new shortcut, follow the example in [examplekeyword.1.yml](https://github.com/trovu/trovu-data-user/blob/master/shortcuts/examplekeyword.1.yml):
 
 - create a file with the keyword and the argument number, 
-  - for instance create `g.1.yml` for a shortcut with the keyword g and 1 argument.
+  - for instance create `g.1.yml` for a shortcut with the keyword `g` and 1 argument.
 - inside the created file, place the template url,
   - like in the [given example](https://github.com/trovu/trovu-data-user/blob/master/shortcuts/examplekeyword.1.yml).
