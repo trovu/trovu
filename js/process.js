@@ -179,6 +179,22 @@ async function replaceArguments(str, arguments, env) {
 
           break;
 
+        case 'city':
+
+          // Load city.js
+          if (typeof parse_city !== "function") {
+            await loadScripts(['../js/type/city.js']);
+          }
+
+          let city = await parse_city(processedArgument, env.country, env.debug);
+
+          // If city could be parsed:
+          // Set argument.
+          if (city) {
+            processedArgument = city;
+          }
+
+          break;
       }
       switch (attributes.transform) {
         case 'uppercase':
