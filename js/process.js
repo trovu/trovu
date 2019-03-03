@@ -221,7 +221,7 @@ async function replaceArguments(str, arguments, env) {
 }
 
 
-function replaceVariables(str, variables) {
+async function replaceVariables(str, variables) {
 
   var placeholders = getVariablesFromString(str);
 
@@ -231,7 +231,22 @@ function replaceVariables(str, variables) {
       var attributes = matches[match];
       switch(varName) {
         case 'now':
-          // TODO.
+
+          // Load momentjs.
+          if (typeof moment !== "function") {
+            await loadScripts([momentjsUrl]);
+          }
+
+          let time = moment();
+
+          let format = 'HH:mm';
+          if (attributes.output) {
+            format = attributes.output;
+          }
+          var value = time.format(format);
+
+          break; 
+            
         default:
           var value = variables[varName];
           break; 
@@ -347,7 +362,7 @@ async function getRedirectUrl(env) {
   if (env.debug) log("Used template: " + redirectUrl);
   log('success.');
 
-  redirectUrl = replaceVariables(redirectUrl, variables);
+  redirectUrl = await replaceVariables(redirectUrl, variables);
   redirectUrl = await replaceArguments(redirectUrl, arguments, env);
 
   return redirectUrl;
