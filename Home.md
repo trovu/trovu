@@ -65,6 +65,6 @@ This repository contains the web frontend.
 
 Future plans.
 
-## Demo
+## Live web version
 
 https://trovu.net/
