@@ -312,7 +312,7 @@ async function getRedirectUrl(env) {
   // Try default keyword.
   if ((!found) && (env.defaultKeyword)) {
     arguments = [env.query];
-    [shortcuts, found] = await fetchShortcuts(env, env.defaultKeyword, argumentString);
+    [shortcuts, found] = await fetchShortcuts(env, env.defaultKeyword, arguments);
   }
 
   let redirectUrl = null;
