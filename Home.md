@@ -16,7 +16,7 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ## Step-by-step: How a query is processed
 
-![](https://github.com/trovu/trovu.github.io/blob/master/img/process.png)
+![](https://github.com/trovu/trovu.github.io/blob/master/img/process.basic.png)
 
 First, lets look at the (example) settings:
 
