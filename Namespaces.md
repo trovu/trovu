@@ -34,4 +34,4 @@ Priority: The latter, the higher. So shortcuts from `.us` override those from `e
 
 ### Advanced (with your Github account)
 
-Your namespaces are [[derived from your config.yml|Advanced-settings-&-personal-shortcuts]].
+Your namespaces are [derived from your config.yml](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts).
