@@ -27,7 +27,9 @@ This is an array of the [namespaces](https://github.com/trovu/trovu.github.io/wi
   - `github:` A Github user name, or a dot
   - (optional) `name:` Some custom name (default: value from `github:`)
 
-The dot will refer to the current github user (where this `config.yml` is located).
+The dot will refer to the __current githu user__ (where this `config.yml` is located).
+
+The __order__ is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `my` have highest precedence. 
 
 ### Default keyword
 
