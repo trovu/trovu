@@ -35,3 +35,22 @@ Priority: The latter, the higher. So shortcuts from `.us` override those from `e
 ### Advanced (with your Github account)
 
 Your namespaces are [derived from your config.yml](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts).
+
+## Forcing a namespace
+
+You can force to use a certain namespace by prefixing the query with "[namespace]."
+
+- example namespace setting:
+  - `o`
+  - `de`
+  - `fr`
+  - `.us`
+- example query: `de.en tree`
+- result: Instead of the French-English dictionary (from `fr`), the shortcut for the German-English dictionary (from `de`) is called.
+- explanation: Although `fr` has a higher priority than `de`, prefixing the query with `de.` forced to use the shortcut from `de`.
+
+The forced namespace can be any namespace, even one you did not set up in your configuration.
+
+## Default language and country
+
+Calling the homepage URL without any namespaces will set the default language and country based on [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language).
