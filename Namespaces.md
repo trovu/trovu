@@ -24,9 +24,14 @@ The namespaces you use are derived from your settings (settings wheel left of th
 - language: English
 - country: Unites States
 
-your namepspaces will be:
+your namespaces will be:
 
 - `o` (planet namespaces)
 - `en` (English language)
 - `.us` (USA)
 
+Priority: The latter, the higher. So shortcuts from `.us` override those from `en`, and both those from `o`.
+
+### Advanced (with your Github account)
+
+Your namespaces are [[derived from your config.yml|Advanced settings & personal shortcuts]].
