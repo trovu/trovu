@@ -45,3 +45,12 @@ Example input | Example output | Explanation
 `+10`  | `2015-06-17` | today plus 10 days
 `-5`   | `2015-06-02` | today minus 5 days
 `mo`   | `2015-06-08` | next Monday
+
+### *time*
+
+The input will be parsed as a time.
+
+- Hours and minutes can be separated by `.` or `:`.
+- Only hours can be provided.
+- Relative hours work, too.
+- With the attribute output, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to `HH:mm`.
