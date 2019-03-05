@@ -49,7 +49,7 @@ You can force to use a certain namespace by prefixing the query with "[namespace
 - result: Instead of the French-English dictionary (from `fr`), the shortcut for the German-English dictionary (from `de`) is called.
 - explanation: Although `fr` has a higher priority than `de`, prefixing the query with `de.` forced to use the shortcut from `de`.
 
-The forced namespace can be any namespace, even one you did not set up in your configuration.
+The forced namespace can be any namespace, even a site namespace you did not set up in your configuration.
 
 ## Default language and country
 
