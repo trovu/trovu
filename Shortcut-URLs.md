@@ -54,3 +54,9 @@ The input will be parsed as a time.
 - Only hours can be provided.
 - Relative hours work, too.
 - With the attribute output, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to `HH:mm`.
+
+Example input | Example output | Explanation
+---|---|---
+`11.00` | `11:00` | Hours and minutes
+`11` | `11:00` | only hour given
+`+2` | `13:00` | 2 hours from now
