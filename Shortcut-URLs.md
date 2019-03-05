@@ -35,3 +35,13 @@ The input will be parsed as a date.
 - Also relative inputs are possible.
 - Weekday abbreviations are understood, too. The language is assumed from the configured language.
 - With the attribute `output`, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to YYYY-MM-DD.
+
+Example input | Example output | Explanation
+---|---|---
+`7.6.` | `2015-06-07` | assumes German format
+`7/6`  | `2015-07-06` | assumes American format
+`7`    | `2015-06-07` | assumes current month & year
+`1`    | `2015-07-01` | enforced future date: increases month and even year if computed date would be in past otherwise
+`+10`  | `2015-06-17` | today plus 10 days
+`-5`   | `2015-06-02` | today minus 5 days
+`mo`   | `2015-06-08` | next Monday
