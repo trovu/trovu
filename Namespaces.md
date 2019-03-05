@@ -10,7 +10,7 @@ user | [georgjaehnig](https://github.com/georgjaehnig/trovu-data/tree/master/sho
 planet | [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o)| the shape of the planet |         shortcuts unrelated to a language or country | [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml)
 
 `language` and `country` are `site` namespaces. They are curated and 
-[here to find](https://github.com/trovu/trovu-data/tree/master/shortcuts).
+[here to find](https://github.com/trovu/trovu-data/tree/master/shortcuts). (Pull requests are welcome.)
 
 ## Uniqueness in a namespace
 
