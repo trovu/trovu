@@ -238,7 +238,7 @@ function addFetchUrlTemplates(namespaces, params) {
     }
     // User namespaces may also have completely custom URL (template).
     // Must contain {%keyword} and {%argumentCount}.
-    if ((namespaces[i].url) && (namespaces[i].name))
+    if ((namespaces[i].url) && (namespaces[i].name)) {
       namespaces[i].type = 'user';
     }
     // User namespaces, from custom trovu-data-user.
