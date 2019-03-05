@@ -11,6 +11,9 @@ async function getSuggestions() {
   // Prefetch suggestions.
   // Iterate over namespaces in reverse order.
   for (namespace of env.namespaces.reverse()) {
+    if (namespace.type != 'site') {
+      continue;
+    }
     // Load precompiled JSON.
     let json;
     try {
