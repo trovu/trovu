@@ -31,11 +31,13 @@ your namespaces will be:
 - `en` (English language)
 - `.us` (USA)
 
-Priority: The latter, the higher. So shortcuts from `.us` override those from `en`, and both those from `o`.
-
 ### Advanced (with your Github account)
 
 Your namespaces are [derived from your config.yml](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts).
+
+## Priority of namespaces
+
+The latter, the higher: So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`.
 
 ## Forcing a namespace
 
