@@ -7,7 +7,7 @@ You can create and manage your own user shortcuts and set advanced settings:
 
 ## Custom configuration
 
-You may adjust [config.yml](https://github.com/trovu/trovu-data-user/blob/master/config.yml) to your needs.
+You may adjust [config.yml](https://github.com/trovu/trovu-data-user/blob/master/config.yml) to your needs. It uses the [YAML format](https://en.wikipedia.org/wiki/YAML).
 
 ### Namespaces
 
