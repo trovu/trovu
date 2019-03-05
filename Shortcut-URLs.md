@@ -15,7 +15,7 @@ Example	| Will be replaced with
 `{%foobar}` | argument from query. <br>If there is more than one argument placeholder, their order in URL also defines the expected order in the shortcut query.
 `{%foobar\|encoding=iso-8859-1}` | ... with encoding specified. See Input encoding below.
 `{%Datum\|type=date\|output=Y-m-d}`<br>`{%Ziel\|type=city}` | ... with a specified type. See Argument types below.
-`{%IATA-Code\|transform=uppercase}` | ... with a transformation definition. See Transforming below.
+`{%IATA-Code\|transform=uppercase}` | ... with a transformation definition. See [Transforming](https://github.com/trovu/trovu.github.io/wiki/Shortcut-URLs#transforming) below.
 `{$language}` | configured language
 `{$now\|output=HH-mm}` | current date and time, attribute output defines the output format which must be based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/). Default is `HH-mm`.
 
