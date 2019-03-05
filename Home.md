@@ -54,7 +54,7 @@ This repository contains all the data, e.g.
 
 - shortcuts
 - types/city
-  - mappings for [[argument type *city*|Shortcut-URLs#city]]
+  - mappings for [argument type *city*](https://github.com/trovu/trovu.github.io/wiki/Shortcut-URLs#city)
 
 Fork this repository to add or edit shortcuts (and send then a pull request).
 
