@@ -11,8 +11,8 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 ## Key features
 
 - **Privacy**: Queries are processed in the client, not server.
-- **Social**: Shortcuts are kept in text and YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send a pull request to add or edit them.
-- **Freedom**: Optionally, create personal shortcuts in [your own repository](https://github.com/trovu/trovu-data-user) (or anywhere on the web).
+- **Social**: Curated shortcuts are kept in YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send a pull request to add or edit them.
+- **Freedom**: Optionally, create personal shortcuts in [your own repository](https://github.com/trovu/trovu-data-user).
 
 ## Step-by-step: How a query is processed
 
@@ -34,10 +34,10 @@ Now, lets look at a processing of a query:
 1. The query is parsed – in the client by Javascript – into
    - keyword: `g`
    - argument: `foobar`
-1. Based on the query and the namespace settings, the client Javascript tries to fetch 4 URLs:
-   - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/.de/g/1.yml
-   - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/de/g/1.yml
-   - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/g/1.yml
+1. Based on the query and the namespace settings, the client Javascript tries to fetch 3 URLs:
+   - `https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/.de/g/1.yml`
+   - `https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/de/g/1.yml`
+   - `https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/g/1.yml`
 
 1. From the fetches that succeeded, the results are evaluated in namespace order.
 1. Since already the first text file exists, its URL is used for further processing
@@ -53,7 +53,8 @@ Now, lets look at a processing of a query:
 This repository contains all the data, e.g.
 
 - shortcuts
-- mappings (later)
+- types/city
+  - mappings for [[argument type *city*|Shortcut-URLs#city]]
 
 Fork this repository to add or edit shortcuts (and send then a pull request).
 
@@ -63,7 +64,7 @@ This repository contains the web frontend.
 
 ### trovu-android / trovu-ios / trovu-gtk
 
-Future plans.
+Future plans. Maybe you start one of them?
 
 ## Live web version
 
