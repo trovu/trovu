@@ -1,4 +1,15 @@
-Every shortcut belongs to exactly one namespace. Namespaces allow the same keyword to be used for different shortcuts – according to the user's language, location or personal setup. For instance, while all other users use the keyword `g` for Google, you might use it for something else – with your user namespace.
+Every shortcut belongs to exactly one namespace. Namespaces allow the same keyword to be used for different shortcuts – according to the user's language, location or personal setup. This comes in handy for dictionaries:
+
+- `en tree` shall look up the English translation for "tree" – but into which language?
+
+Thanks to namespaces, we can have the keyword `en` both
+
+- in the French language namespace `fr`,
+- as also in the German language namespace `de`
+
+Depending on the language in your settings and thus the namespaces you use, the right dictionary will be picked.
+
+But even more: You can also override shortcuts: For instance, while all other users use the keyword `g` for Google, you might use it for something else – with your user namespace.
 
 ## Namespace types
 
