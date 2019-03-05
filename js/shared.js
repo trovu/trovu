@@ -233,6 +233,7 @@ function addFetchUrlTemplates(namespaces, params) {
           name: name,
           url:  'https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/' + name + '/{%keyword}/{%argumentCount}.yml'
         };
+        namespaces[i].type = 'site';
       }
     }
     // User namespaces, from custom trovu-data-user.
@@ -246,6 +247,7 @@ function addFetchUrlTemplates(namespaces, params) {
         namespaces[i].name = namespaces[i].github;
       }
       namespaces[i].url = 'https://raw.githubusercontent.com/' + namespaces[i].github + '/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml';
+      namespaces[i].type = 'user';
     }
   }
   return namespaces;
