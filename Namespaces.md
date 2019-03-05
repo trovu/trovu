@@ -27,7 +27,7 @@ The namespaces you use are derived from your settings (settings wheel left of th
 
 your namespaces will be:
 
-- `o` (planet namespaces)
+- `o` (`planet` namespace)
 - `en` (English language)
 - `.us` (USA)
 
