@@ -60,3 +60,16 @@ Example input | Example output | Explanation
 `11.00` | `11:00` | Hours and minutes
 `11` | `11:00` | only hour given
 `+2` | `13:00` | 2 hours from now
+
+### *city*
+
+...
+
+## Transforming
+
+Finally, with {%foo|transform=uppercase} the output string can be transformed.
+
+Property | Conversion | Example input | Example output | Explanation
+---|---|---|---|---
+`uppercase` | The output will be uppercased. | `sxf` | `SXF` | Makes sure all letters are uppercase.
+`lowercase` | The output will be lowercased. | `Sxf` | `sxf` | Makes sure all letters are lowercase.
