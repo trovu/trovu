@@ -3,9 +3,9 @@ A shortcut URL may contain placeholders. This page is about them.
 ## Example
 
 Consider for instance the URL of the Google shortcut:
-
-    https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
-
+```yaml
+url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
+```
 It contains 2 placeholders: `{%query}` and `{$language}`.
 
 ## Placeholders
