@@ -67,7 +67,7 @@ Example input | Example output | Explanation
 
 ## Transforming
 
-Finally, with {%foo|transform=uppercase} the output string can be transformed.
+Finally, with `{%foo|transform=uppercase}` the output string can be transformed.
 
 Property | Conversion | Example input | Example output | Explanation
 ---|---|---|---|---
