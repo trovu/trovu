@@ -18,3 +18,20 @@ Example	| Will be replaced with
 `{%IATA-Code\|transform=uppercase}` | ... with a transformation definition. See Transforming below.
 `{$language}` | configured language
 `{$now\|output=HH-mm}` | current date and time, attribute output defines the output format which must be based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/). Default is `HH-mm`.
+
+## Input encoding
+
+...
+
+## Argument types
+
+### *date*
+
+The input will be parsed as a date.
+
+- American and European inputs will be distinguished.
+- An input containing only a number will be assumed as a day of month.
+- A date in the future will be enforced.
+- Also relative inputs are possible.
+- Weekday abbreviations are understood, too. The language is assumed from the configured language.
+- With the attribute `output`, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to YYYY-MM-DD.
