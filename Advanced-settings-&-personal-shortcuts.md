@@ -11,15 +11,16 @@ You may adjust [config.yml](https://github.com/trovu/trovu-data-user/blob/master
 
 ### Namespaces
 
-    namespaces:
-    - o
-    - en
-    - .us
-    - github: john-doe
-      name: john
-    - github: .
-      name: my
-
+```yaml
+namespaces:
+- o
+- en
+- .us
+- github: john-doe
+  name: john
+- github: .
+  name: my
+```
 This is an array of the [namespaces](https://github.com/trovu/trovu.github.io/wiki/Namespaces) you want to use. Every entry may be
 
 - a string: Then it refers to an (official) site namespace, i.e. one in the [trovu-data](https://github.com/trovu/trovu-data) repository. Shortcuts in there are curated by the Trovu community.
@@ -33,17 +34,21 @@ The __order__ is also relevant: The later the namespace appears in the list, the
 
 ### Default keyword
 
-    defaultKeyword: g 
-
+```yaml
+defaultKeyword: g 
+```
 If no keyword is recognized in a query, this one will be used. Useful for setting up a much used shortcut.
 
 ### Language and Country
 
-    language: en
-
+```yaml
+language: en
+```
 For Wikipedia or dictionaries in your language. Now, using the `w` shortcut will get you to the Wikipedia in your language.
 
-    country: de
+```yaml
+country: de
+```
 
 For shortcuts that use `{$country}` in their URL.
 
