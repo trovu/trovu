@@ -9,7 +9,8 @@ country | [.de](https://github.com/trovu/trovu-data/tree/master/shortcuts/.de), 
 user | [georgjaehnig](https://github.com/georgjaehnig/trovu-data/tree/master/shortcuts/)| a github user name (can be overridden with a custom name) | custom shortcuts created by a user in their repo | [Trains from my home station](https://github.com/georgjaehnig/trovu-data-user/blob/master/shortcuts/br.1.yml)
 planet | [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o)| the shape of the planet |         shortcuts unrelated to a language or country | [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml)
 
-[These directories](https://github.com/trovu/trovu-data/tree/master/shortcuts) are all the (curated) site namespaces.
+`language` and `country` are `site` namespaces. They are curated and 
+[here to find](https://github.com/trovu/trovu-data/tree/master/shortcuts).
 
 ## Uniqueness in a namespace
 
