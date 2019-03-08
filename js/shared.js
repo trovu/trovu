@@ -203,6 +203,11 @@ function getDefaultLanguageAndCountry() {
   if (languageStr) {
     [language, country] = languageStr.split('-')
   }
+
+  // Set defaults.
+  language = language || 'en';
+  country  = country || 'us';
+
   // Ensure lowercase.
   language = language.toLowerCase();
   country  = country.toLowerCase();
