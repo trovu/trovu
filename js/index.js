@@ -81,8 +81,12 @@ document.querySelector('body').onload = async function(event) {
         titleMiddleReachable:  [],
         titleMiddleUnreachable:  [],
       };
+
+      // Only use first word of request.term.
+      [keyword, argumentString] = splitKeepRemainder(request.term, " ", 2);
+
       for (suggestion of suggestions) {
-        if (request.term == suggestion.keyword) {
+        if (keyword == suggestion.keyword) {
           if (suggestion.reachable) {
             matches.keywordFullReachable.push(suggestion);
           }
@@ -91,7 +95,7 @@ document.querySelector('body').onload = async function(event) {
           }
           continue;
         }
-        let pos = suggestion.keyword.search(new RegExp(request.term, 'i'))
+        let pos = suggestion.keyword.search(new RegExp(keyword, 'i'))
         if (pos == 0) {
           if (suggestion.reachable) {
             matches.keywordBeginReachable.push(suggestion);
@@ -101,7 +105,7 @@ document.querySelector('body').onload = async function(event) {
           }
           continue;
         }
-        pos = suggestion.title.search(new RegExp(request.term, 'i'))
+        pos = suggestion.title.search(new RegExp(keyword, 'i'))
         if (pos == 0) {
           if (suggestion.reachable) {
             matches.titleBeginReachable.push(suggestion);
