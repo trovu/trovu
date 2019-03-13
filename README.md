@@ -9,6 +9,10 @@ This is the repository for curated shortcuts. Pull requests are welcome!
       .de/              ... and countries
         db/           Keywords have their directories
           2.yml       Shortcut data files in YAML format, named after argument count
+    types/            Data for types
+      city/           Data for city type
+        de.yml        Mappings for cities in Germany
+
 
 Read more about:
 
