@@ -135,7 +135,7 @@ async function replaceArguments(str, args, env) {
     // so go over all of them.
     var matches = placeholders[argumentName];
     let match;
-    for (match in matches) {
+    for (let match in matches) {
       var attributes = matches[match];
       switch (attributes.type) {
           
@@ -227,9 +227,9 @@ async function replaceVariables(str, variables) {
 
   var placeholders = getVariablesFromString(str);
 
-  for (varName in placeholders) {
+  for (let varName in placeholders) {
     var matches = placeholders[varName];
-    for (match in matches) {
+    for (let match in matches) {
       var attributes = matches[match];
       switch(varName) {
         case 'now':
