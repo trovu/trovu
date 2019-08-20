@@ -216,8 +216,8 @@ async function replaceArguments(str, args, env) {
           processedArgument = encodeURIComponent(processedArgument);
           break;
       }
+      str = str.replace(match, processedArgument);
     }
-    str = str.replace(match, processedArgument);
   }
   return str;
 }
