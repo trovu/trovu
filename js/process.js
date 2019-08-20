@@ -114,15 +114,15 @@ function getVariablesFromString(str) {
   return getPlaceholdersFromString(str, '\\$')
 }
 
-async function replaceArguments(str, arguments, env) {
+async function replaceArguments(str, args, env) {
 
   let locale = env.language + '-' + env.country.toUpperCase();
 
   var placeholders = getArgumentsFromString(str);
 
-  for (argumentName in placeholders) {
+  for (let argumentName in placeholders) {
 
-    var argument = arguments.shift();
+    var argument = args.shift();
 
     // Copy argument, because different placeholders can cause
     // different processing.
@@ -261,13 +261,13 @@ function escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
-async function fetchShortcuts(env, keyword, arguments) {
+async function fetchShortcuts(env, keyword, args) {
   
   // Fetch all available shortcuts for our query and namespace settings.
   var shortcuts = [];
   let found = false;
-  for (namespace of env.namespaces) {
-    var fetchUrl = buildFetchUrl(namespace, keyword, arguments.length, namespace.url);
+  for (let namespace of env.namespaces) {
+    var fetchUrl = buildFetchUrl(namespace, keyword, args.length, namespace.url);
     let text  = await fetchAsync(fetchUrl, env.reload, env.debug);
     shortcuts[namespace.name] = jsyaml.load(text);
 
@@ -291,9 +291,9 @@ async function getRedirectUrl(env) {
   
   [keyword, argumentString] = splitKeepRemainder(env.query, " ", 2);
   if (argumentString) {
-    var arguments = argumentString.split(",");
+    var args = argumentString.split(",");
   } else {
-    var arguments = []; 
+    var args = []; 
   }
 
   // Check for (cache) reload call.
@@ -327,26 +327,27 @@ async function getRedirectUrl(env) {
     }
   }
 
-  [shortcuts, found] = await fetchShortcuts(env, keyword, arguments);
+  let shortcuts, found;
+  [shortcuts, found] = await fetchShortcuts(env, keyword, args);
 
   // If nothing found:
   // Try without commas, i.e. with the whole argumentString as the only argument.
-  if ((!found) && (arguments.length > 0)) {
-    arguments = [argumentString];
-    [shortcuts, found] = await fetchShortcuts(env, keyword, arguments);
+  if ((!found) && (args.length > 0)) {
+    args = [argumentString];
+    [shortcuts, found] = await fetchShortcuts(env, keyword, args);
   }
 
   // If nothing found:
   // Try default keyword.
   if ((!found) && (env.defaultKeyword)) {
-    arguments = [env.query];
-    [shortcuts, found] = await fetchShortcuts(env, env.defaultKeyword, arguments);
+    args = [env.query];
+    [shortcuts, found] = await fetchShortcuts(env, env.defaultKeyword, args);
   }
 
   let redirectUrl = null;
 
   // Find first shortcut in our namespace hierarchy.
-  for (namespace of env.namespaces.reverse()) {
+  for (let namespace of env.namespaces.reverse()) {
     if (shortcuts[namespace.name]) {
       redirectUrl = shortcuts[namespace.name]['url'];
       // TODO: Process POST arguments.
@@ -362,7 +363,7 @@ async function getRedirectUrl(env) {
   if (env.debug) log("Used template: " + redirectUrl);
 
   redirectUrl = await replaceVariables(redirectUrl, variables);
-  redirectUrl = await replaceArguments(redirectUrl, arguments, env);
+  redirectUrl = await replaceArguments(redirectUrl, args, env);
 
   return redirectUrl;
 }
