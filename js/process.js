@@ -179,8 +179,8 @@ async function replaceArguments(str, args, env) {
 
         case 'city':
 
-          const module = await import('./type/city.js');
-          let city = await module.default.parse(processedArgument, env.country, env.reload, env.debug);
+          const cityModule = await import('./type/city.js');
+          let city = await cityModule.default.parse(processedArgument, env.country, env.reload, env.debug);
           
           // If city could be parsed:
           // Set argument.
