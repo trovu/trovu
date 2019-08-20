@@ -371,6 +371,10 @@ async function getRedirectUrl(env) {
   return redirectUrl;
 }
 
+// TODO: Refactor this. Appears for now in:
+//   process.js
+//   time.js
+//   date.js
 async function loadScripts(scripts) {
     
     function get (src) {
