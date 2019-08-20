@@ -141,12 +141,8 @@ async function replaceArguments(str, args, env) {
           
         case 'date':
 
-          // Load date.js
-          if (typeof parse_date !== "function") {
-            await loadScripts(['../js/type/date.js']);
-          }
-
-          let date = await parse_date(processedArgument, locale);
+          const dateModule = await import('./type/date.js');
+          let date = await dateModule.default.parse(processedArgument, locale);
 
           // If date could be parsed:
           // Set argument.
