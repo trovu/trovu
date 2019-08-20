@@ -80,7 +80,8 @@ function getPlaceholdersFromString(str, prefix) {
     var placeholder = {};
     // Example value:
     // name_and_attributes = ['encoding=utf-8', 'another=attribute']
-    for (attrStr of nameAndAttributes) {
+    for (let attrStr of nameAndAttributes) {
+      let attrName, attrValue;
       [attrName, attrValue] = attrStr.split('=', 2);
       placeholder[attrName] = attrValue;
     }
@@ -133,6 +134,7 @@ async function replaceArguments(str, args, env) {
     // An argument can have multiple matches,
     // so go over all of them.
     var matches = placeholders[argumentName];
+    let match;
     for (match in matches) {
       var attributes = matches[match];
       switch (attributes.type) {
@@ -289,6 +291,7 @@ async function getRedirectUrl(env) {
     country:  env.country
   };
   
+  let keyword, argumentString;
   [keyword, argumentString] = splitKeepRemainder(env.query, " ", 2);
   if (argumentString) {
     var args = argumentString.split(",");
