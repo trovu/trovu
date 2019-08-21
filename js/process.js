@@ -158,12 +158,8 @@ async function replaceArguments(str, args, env) {
 
         case 'time':
 
-          // Load time.js
-          if (typeof parse_time !== "function") {
-            await loadScripts(['../js/type/time.js']);
-          }
-
-          let time = await parse_time(processedArgument, locale);
+          const timeModule = await import('./type/time.js');
+          let time = await timeModule.default.parse(processedArgument, locale);
 
           // If time could be parsed:
           // Set argument.
