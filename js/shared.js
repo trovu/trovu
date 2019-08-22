@@ -326,22 +326,3 @@ function buildBaseUrl() {
 
   return baseUrl;
 }
-
-function buildParams() {
-
-  let params = {};
-
-  // Put environment into hash.
-  if (env.github) {
-    params['github'] = env.github;
-  }
-  else {
-    params['language'] = env.language;
-    params['country'] = env.country;
-  }
-  if (env.debug) {
-    params['debug'] = 1;
-  }
-
-  return params;
-}
