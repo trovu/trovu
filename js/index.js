@@ -1,6 +1,23 @@
 var env = {};
 var suggestions = [];
 
+// Builders =========================================================
+
+function buildBaseUrl() {
+
+  let baseUrl = '';
+
+  baseUrl += window.location.protocol;
+  baseUrl += '//';
+  baseUrl += window.location.hostname;
+  baseUrl += window.location.pathname;
+
+  // Remove index.html.
+  baseUrl = baseUrl.replace('index.html','');
+
+  return baseUrl;
+}
+
 function buildParams() {
 
   let params = {};
