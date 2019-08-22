@@ -381,5 +381,3 @@ document.querySelector('body').onload = async function(event) {
 
   window.location.href = redirectUrl;
 }
-
-
