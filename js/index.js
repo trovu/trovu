@@ -46,7 +46,7 @@ async function getSuggestions() {
 
   // Prefetch suggestions.
   // Iterate over namespaces in reverse order.
-  for (namespace of env.namespaces.reverse()) {
+  for (let namespace of env.namespaces.reverse()) {
     if (namespace.type != 'site') {
       continue;
     }
@@ -62,7 +62,7 @@ async function getSuggestions() {
     }
     let shortcuts = JSON.parse(json);
     // Iterate over all shortcuts.
-    for (shortcut of shortcuts) {
+    for (let shortcut of shortcuts) {
       let key = shortcut.keyword + '.' + shortcut.arguments.length;
       // If not yet present: reachable.
       // (Because we started with most precendent namespace.)
@@ -292,12 +292,8 @@ async function updateConfig() {
 
   displaySettings();
 
-  // Set Opensearch link.
-  // TODO:
-  // Why does let params not work here?
-  params = buildParams();
-
-  baseUrl = buildBaseUrl();
+  let params = buildParams();
+  let baseUrl = buildBaseUrl();
   let urlOpensearch = baseUrl + 'opensearch/?' + jqueryParam(params);
 
   let linkSearch = document.querySelector('#linkSearch');
