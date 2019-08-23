@@ -1,4 +1,5 @@
 import Load from './load.js'
+import Helper from './helper.js'
 
 /**
  * Build fetch URL given the necessary parameters.
@@ -284,7 +285,7 @@ async function getRedirectUrl(env) {
   };
   
   let keyword, argumentString;
-  [keyword, argumentString] = splitKeepRemainder(env.query, " ", 2);
+  [keyword, argumentString] = Helper.splitKeepRemainder(env.query, " ", 2);
   if (argumentString) {
     var args = argumentString.split(",");
   } else {
@@ -294,7 +295,7 @@ async function getRedirectUrl(env) {
   // Check for (cache) reload call.
   env.reload = false;
   if (keyword.match(/^reload:/)) {
-    [reload, keyword] = splitKeepRemainder(keyword, ":", 2);
+    [reload, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
     env.reload = true;
   }
   // Check for extraNamespace in keyword:
@@ -305,7 +306,7 @@ async function getRedirectUrl(env) {
     // Lookbehind not needed anymore
     // since we made sure in if-condition
     // that the dot is preceeded by something.
-    [extraNamespace, keyword] = splitKeepRemainder(keyword, /\./, 2);
+    [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, /\./, 2);
 
     // Add to namespaces.
     env.namespaces.push(extraNamespace);

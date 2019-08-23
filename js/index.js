@@ -1,3 +1,5 @@
+import Helper from './helper.js'
+
 var env = {};
 var suggestions = [];
 
@@ -119,7 +121,7 @@ document.querySelector('body').onload = async function(event) {
       };
 
       // Only use first word of request.term.
-      [keyword, argumentString] = splitKeepRemainder(request.term, " ", 2);
+      [keyword, argumentString] = Helper.splitKeepRemainder(request.term, " ", 2);
 
       for (suggestion of suggestions) {
         if (keyword == suggestion.keyword) {
