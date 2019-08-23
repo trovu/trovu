@@ -24,7 +24,9 @@ function buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
     '{%keyword}':       keyword,
     '{%argumentCount}': argumentCount
   }
-  let fetchUrl = str_replace_all(fetchUrlTemplate, replacements);
+  let fetchUrl = fetchUrlTemplate;
+  // Replace all occurences in replacements.
+  Object.keys(replacements).map((key) => { fetchUrl = fetchUrl.replace(key, replacements[key]) });
 
   return fetchUrl;
 }
