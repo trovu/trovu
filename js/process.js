@@ -295,6 +295,7 @@ async function getRedirectUrl(env) {
   // Check for (cache) reload call.
   env.reload = false;
   if (keyword.match(/^reload:/)) {
+    let reload;
     [reload, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
     env.reload = true;
   }
@@ -306,6 +307,7 @@ async function getRedirectUrl(env) {
     // Lookbehind not needed anymore
     // since we made sure in if-condition
     // that the dot is preceeded by something.
+    let extraNamespace;
     [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, /\./, 2);
 
     // Add to namespaces.
