@@ -121,9 +121,10 @@ document.querySelector('body').onload = async function(event) {
       };
 
       // Only use first word of request.term.
+      let keyword, argumentString;
       [keyword, argumentString] = Helper.splitKeepRemainder(request.term, " ", 2);
 
-      for (suggestion of suggestions) {
+      for (let suggestion of suggestions) {
         if (keyword == suggestion.keyword) {
           if (suggestion.reachable) {
             matches.keywordFullReachable.push(suggestion);
