@@ -1,3 +1,5 @@
+import Helper from '../helper.js'
+
 export default class CityParser {
 
   static async parse(str, country, reload, debug) {
@@ -5,7 +7,7 @@ export default class CityParser {
     let fetchUrlTemplate = 'https://raw.githubusercontent.com/trovu/trovu-data/master/types/city/{%country}.yml';
     let fetchUrl = fetchUrlTemplate.replace('{%country}', country );
   
-    let citiesYml  = await fetchAsync(fetchUrl, reload, debug);
+    let citiesYml  = await Helper.fetchAsync(fetchUrl, reload, debug);
     if (citiesYml) {
       let cities = jsyaml.load(citiesYml);
       if (str in cities) {

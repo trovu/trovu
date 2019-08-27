@@ -1,6 +1,6 @@
 import Helper from './helper.js'
+import env from './env.js'
 
-var env = {};
 var suggestions = [];
 
 // Builders =========================================================
@@ -55,7 +55,7 @@ async function getSuggestions() {
     // Load precompiled JSON.
     let json;
     try {
-      json = await fetchAsync('https://data.trovu.net/suggestions/' + namespace.name + '.json');
+      json = await Helper.fetchAsync('https://data.trovu.net/suggestions/' + namespace.name + '.json');
     } catch(e) {
       console.log(e);
     }
@@ -87,9 +87,9 @@ async function getSuggestions() {
 document.querySelector('body').onload = async function(event) {
 
   // Init environment.
-  env = await getEnv();
+  await env.getEnv();
 
-  let params = getParams();
+  let params = env.getParams();
 
   // Show info alerts.
   switch (params.status) {
@@ -231,7 +231,7 @@ document.getElementById('query-form').onsubmit = function(event) {
   let params = buildParams();
   params['query'] = document.getElementById('query').value; 
 
-  let paramStr = jqueryParam(params);
+  let paramStr = env.jqueryParam(params);
   let processUrl = 'process/index.html?#' + paramStr;
 
   //console.log(processUrl);
@@ -257,20 +257,20 @@ document.querySelector('#settingsSave').onclick = function(event) {
 
 function displaySettings() {
 
-  let params = getParams()
+  let params = env.getParams()
 
   // Set settings fields from environment.
   document.querySelector('#languageSetting').value = env.language;
   document.querySelector('#countrySetting').value = env.country;
 
-  document.querySelector('#settingsEnv').value = jsyaml.dump(env);
+  document.querySelector('#settingsEnv').value = jsyaml.dump(env.withoutFunctions());
 
   if (env.github) {
     document.querySelector('.using-advanced').classList.remove('d-none');
     document.querySelector('.using-basic').classList.add('d-none');
 
     document.querySelector('#github-note').classList.remove('d-none');
-    document.querySelector('#github-note a').href = configUrlTemplate.replace('{%github}', env.github);
+    document.querySelector('#github-note a').href = env.configUrlTemplate.replace('{%github}', env.github);
   }
   else {
     document.querySelector('.using-basic').classList.remove('d-none');
@@ -288,7 +288,7 @@ async function updateConfig() {
       env.language,
       '.' + env.country
     ];
-    env.namespaces = addFetchUrlTemplates(env.namespaces);
+    env.namespaces = env.addFetchUrlTemplates(env.namespaces);
   }
 
   await getSuggestions();
@@ -297,7 +297,7 @@ async function updateConfig() {
 
   let params = buildParams();
   let baseUrl = buildBaseUrl();
-  let urlOpensearch = baseUrl + 'opensearch/?' + jqueryParam(params);
+  let urlOpensearch = baseUrl + 'opensearch/?' + env.jqueryParam(params);
 
   let linkSearch = document.querySelector('#linkSearch');
 
@@ -313,12 +313,12 @@ async function updateConfig() {
   linkSearch.setAttribute('href', urlOpensearch);
 
   // Set Process URL.
-  let urlProcess = baseUrl + 'process#' + jqueryParam(params) + '&query=%s';
+  let urlProcess = baseUrl + 'process#' + env.jqueryParam(params) + '&query=%s';
   let preProcessUrl = document.querySelector('.process-url');
 
   preProcessUrl.textContent = urlProcess;
 
-  let paramStr = jqueryParam(params);
+  let paramStr = env.jqueryParam(params);
   window.location.hash = '#' + paramStr;
 }
 

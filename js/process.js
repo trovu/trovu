@@ -1,5 +1,6 @@
 import Load from './load.js'
 import Helper from './helper.js'
+import env from './env.js'
 
 /**
  * Build fetch URL given the necessary parameters.
@@ -14,7 +15,7 @@ import Helper from './helper.js'
 function buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
 
   if (!fetchUrlTemplate) {
-    fetchUrlTemplate = fetchUrlTemplateDefault;
+    fetchUrlTemplate = env.fetchUrlTemplateDefault;
   }
 
   namespace = encodeURIComponent(namespace);
@@ -263,7 +264,7 @@ async function fetchShortcuts(env, keyword, args) {
   let found = false;
   for (let namespace of env.namespaces) {
     var fetchUrl = buildFetchUrl(namespace, keyword, args.length, namespace.url);
-    let text  = await fetchAsync(fetchUrl, env.reload, env.debug);
+    let text  = await Helper.fetchAsync(fetchUrl, env.reload, env.debug);
     shortcuts[namespace.name] = jsyaml.load(text);
 
     if (!found) {
@@ -357,8 +358,8 @@ async function getRedirectUrl(env) {
     return;
   }
 
-  if (env.debug) log('');
-  if (env.debug) log("Used template: " + redirectUrl);
+  if (env.debug) Helper.log('');
+  if (env.debug) Helper.log("Used template: " + redirectUrl);
 
   redirectUrl = await replaceVariables(redirectUrl, variables);
   redirectUrl = await replaceArguments(redirectUrl, args, env);
@@ -368,19 +369,19 @@ async function getRedirectUrl(env) {
 
 document.querySelector('body').onload = async function(event) {
 
-  let env = await getEnv();
+  await env.getEnv();
 
   let redirectUrl = await getRedirectUrl(env);
 
   if (!redirectUrl) {
-    let params = getParams();
+    let params = env.getParams();
     params.status = 'not_found';
-    let paramStr = jqueryParam(params);
+    let paramStr = env.jqueryParam(params);
     redirectUrl = '../index.html#' + paramStr;
   }
 
   if (env.debug) {
-    log("Redirect to:   " + redirectUrl)
+    Helper.log("Redirect to:   " + redirectUrl)
     return;
   }
 
