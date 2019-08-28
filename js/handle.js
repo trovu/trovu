@@ -1,7 +1,7 @@
 import Load from './load.js'
 import Helper from './helper.js'
 
-export default class Processor {
+export default class Handle {
 
 	constructor(env) {
 		this.env = env;
