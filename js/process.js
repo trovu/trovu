@@ -21,7 +21,6 @@ class Process {
   buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
   
     if (!fetchUrlTemplate) {
-			console.log('default');
       fetchUrlTemplate = env.fetchUrlTemplateDefault;
     }
   
