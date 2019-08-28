@@ -311,10 +311,6 @@ class Process {
     //   split at dot
     //   but don't split up country namespace names.
     if (keyword.match(/.\./)) {
-  
-      // Lookbehind not needed anymore
-      // since we made sure in if-condition
-      // that the dot is preceeded by something.
       let extraNamespace;
       [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, /\./, 2);
   
