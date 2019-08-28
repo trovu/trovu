@@ -21,7 +21,7 @@ class Process {
   buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
   
     if (!fetchUrlTemplate) {
-      fetchUrlTemplate = env.fetchUrlTemplateDefault;
+      fetchUrlTemplate = this.env.fetchUrlTemplateDefault;
     }
   
     namespace = encodeURIComponent(namespace);
@@ -128,9 +128,9 @@ class Process {
     return this.getPlaceholdersFromString(str, '\\$')
   }
   
-  async replaceArguments(str, args, env) {
+  async replaceArguments(str, args) {
   
-    let locale = env.language + '-' + env.country.toUpperCase();
+    let locale = this.env.language + '-' + this.env.country.toUpperCase();
   
     var placeholders = this.getArgumentsFromString(str);
   
@@ -189,7 +189,7 @@ class Process {
           case 'city':
   
             const cityModule = await import('./type/city.js');
-            let city = await cityModule.default.parse(processedArgument, env.country, env.reload, env.debug);
+            let city = await cityModule.default.parse(processedArgument, this.env.country, this.env.reload, this.env.debug);
             
             // If city could be parsed:
             // Set argument.
@@ -264,14 +264,14 @@ class Process {
       return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   }
   
-  async fetchShortcuts(env, keyword, args) {
+  async fetchShortcuts(keyword, args) {
     
     // Fetch all available shortcuts for our query and namespace settings.
     var shortcuts = [];
     let found = false;
-    for (let namespace of env.namespaces) {
+    for (let namespace of this.env.namespaces) {
       var fetchUrl = this.buildFetchUrl(namespace, keyword, args.length, namespace.url);
-      let text  = await Helper.fetchAsync(fetchUrl, env.reload, env.debug);
+      let text  = await Helper.fetchAsync(fetchUrl, this.env.reload, this.env.debug);
       shortcuts[namespace.name] = jsyaml.load(text);
   
       if (!found) {
@@ -281,19 +281,19 @@ class Process {
     return [shortcuts, found];
   }
   
-  async getRedirectUrl(env) {
+  async getRedirectUrl() {
   
-    if (!env.query) {
+    if (!this.env.query) {
       return;  
     }
   
     var variables = {
-      language: env.language,
-      country:  env.country
+      language: this.env.language,
+      country:  this.env.country
     };
     
     let keyword, argumentString;
-    [keyword, argumentString] = Helper.splitKeepRemainder(env.query, " ", 2);
+    [keyword, argumentString] = Helper.splitKeepRemainder(this.env.query, " ", 2);
     if (argumentString) {
       var args = argumentString.split(",");
     } else {
@@ -301,11 +301,11 @@ class Process {
     }
   
     // Check for (cache) reload call.
-    env.reload = false;
+    this.env.reload = false;
     if (keyword.match(/^reload:/)) {
       let reload;
       [reload, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
-      env.reload = true;
+      this.env.reload = true;
     }
     // Check for extraNamespace in keyword:
     //   split at dot
@@ -315,7 +315,7 @@ class Process {
       [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, /\./, 2);
   
       // Add to namespaces.
-      env.namespaces.push(extraNamespace);
+      this.env.namespaces.push(extraNamespace);
   
       // Set variables.
       switch (extraNamespace.length) {
@@ -330,26 +330,26 @@ class Process {
     }
   
     let shortcuts, found;
-    [shortcuts, found] = await this.fetchShortcuts(env, keyword, args);
+    [shortcuts, found] = await this.fetchShortcuts(keyword, args);
   
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
     if ((!found) && (args.length > 0)) {
       args = [argumentString];
-      [shortcuts, found] = await this.fetchShortcuts(env, keyword, args);
+      [shortcuts, found] = await this.fetchShortcuts(keyword, args);
     }
   
     // If nothing found:
     // Try default keyword.
-    if ((!found) && (env.defaultKeyword)) {
-      args = [env.query];
-      [shortcuts, found] = await this.fetchShortcuts(env, env.defaultKeyword, args);
+    if ((!found) && (this.env.defaultKeyword)) {
+      args = [this.env.query];
+      [shortcuts, found] = await this.fetchShortcuts(this.env.defaultKeyword, args);
     }
   
     let redirectUrl = null;
   
     // Find first shortcut in our namespace hierarchy.
-    for (let namespace of env.namespaces.reverse()) {
+    for (let namespace of this.env.namespaces.reverse()) {
       if (shortcuts[namespace.name]) {
         redirectUrl = shortcuts[namespace.name]['url'];
         // TODO: Process POST arguments.
@@ -361,11 +361,11 @@ class Process {
       return;
     }
   
-    if (env.debug) Helper.log('');
-    if (env.debug) Helper.log("Used template: " + redirectUrl);
+    if (this.env.debug) Helper.log('');
+    if (this.env.debug) Helper.log("Used template: " + redirectUrl);
   
     redirectUrl = await this.replaceVariables(redirectUrl, variables);
-    redirectUrl = await this.replaceArguments(redirectUrl, args, env);
+    redirectUrl = await this.replaceArguments(redirectUrl, args);
   
     return redirectUrl;
   }
@@ -377,8 +377,7 @@ document.querySelector('body').onload = async function(event) {
   await env.populate();
 
   let process = new Process(env);
-
-  let redirectUrl = await process.getRedirectUrl(env);
+  let redirectUrl = await process.getRedirectUrl();
 
   if (!redirectUrl) {
     let params = env.getParams();
