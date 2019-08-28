@@ -114,7 +114,7 @@ let env = {
     return params;
   },
   
-	getNamespaces: function(params, env) {
+	getNamespaces: function(params) {
   
     var namespacesStr = params.namespaces || "";
     if (namespacesStr) {
@@ -124,8 +124,8 @@ let env = {
       // Default namespaces.
       var namespaces = [
         'o',
-        env.language,
-        '.' +  env.country
+        this.language,
+        '.' +  this.country
       ];
     }
     return namespaces;
@@ -205,7 +205,7 @@ let env = {
 		let envWithoutFunctions = {};
 		for (let key of Object.keys(this)) {
 			if (typeof this[key] != 'function') {
-			  envWithoutFunctions[key]  = env[key];
+			  envWithoutFunctions[key]  = this[key];
 			}
 		}
 		return envWithoutFunctions;
