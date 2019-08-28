@@ -114,29 +114,6 @@ let env = {
     return params;
   },
   
-	getNamespaces: function(params) {
-  
-    var namespacesStr = params.namespaces || "";
-    if (namespacesStr) {
-      var namespaces = namespacesStr.split(',')
-    }
-    else {
-      // Default namespaces.
-      var namespaces = [
-        'o',
-        this.language,
-        '.' +  this.country
-      ];
-    }
-    return namespaces;
-  },
-  
-	getNamespaceUrlTemplates: function(params) {
-    
-    let namespaceUrlTemplates = params.namespace || {};
-    return namespaceUrlTemplates;
-  },
-  
 	getDefaultLanguageAndCountry: function() {
     // Get from browser.
     let languageStr = navigator.language;
