@@ -140,6 +140,7 @@ let env = {
 	getDefaultLanguageAndCountry: function() {
     // Get from browser.
     let languageStr = navigator.language;
+    let language, country;
     if (languageStr) {
       [language, country] = languageStr.split('-')
     }
