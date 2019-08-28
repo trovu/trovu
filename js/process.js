@@ -369,7 +369,7 @@ async function getRedirectUrl(env) {
 
 document.querySelector('body').onload = async function(event) {
 
-  await env.getEnv();
+  await env.populate();
 
   let redirectUrl = await getRedirectUrl(env);
 

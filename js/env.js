@@ -211,7 +211,7 @@ let env = {
 		return envWithoutFunctions;
 	},
 	
-	getEnv: async function() {
+	populate: async function() {
 
     let params = this.getParams()
     let githubFailed;

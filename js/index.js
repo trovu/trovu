@@ -87,7 +87,7 @@ async function getSuggestions() {
 document.querySelector('body').onload = async function(event) {
 
   // Init environment.
-  await env.getEnv();
+  await env.populate();
 
   let params = env.getParams();
 
