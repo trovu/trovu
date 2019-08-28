@@ -312,7 +312,13 @@ class Process {
     //   but don't split up country namespace names.
     if (keyword.match(/.\./)) {
       let extraNamespace;
-      [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, /\./, 2);
+      [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, '.', 2);
+      // If extraNamespace started with a dot, it will be empty
+      // so let's split it again, and add the dot.
+      if (extraNamespace == '') {
+        [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, '.', 2);
+        extraNamespace = '.' + extraNamespace;
+      }
   
       // Add to namespaces.
       this.env.namespaces.push(extraNamespace);
