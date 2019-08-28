@@ -2,376 +2,388 @@ import Load from './load.js'
 import Helper from './helper.js'
 import env from './env.js'
 
-/**
- * Build fetch URL given the necessary parameters.
- *
- * @param {string} namespace        - The namespace to use.
- * @param {string} keyword          - The keyword to use.
- * @param {string} argumentCount    - The argumentCount to use.
- * @param {string} fetchUrlTemplate - A template containing placeholders for all the above.
- *
- * @return {string} fetchUrl        - The URL with the replaced placeholders.
- */
-function buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
+class Process {
 
-  if (!fetchUrlTemplate) {
-    fetchUrlTemplate = env.fetchUrlTemplateDefault;
+	constructor(env) {
+		this.env = env;
+	}
+
+  /**
+   * Build fetch URL given the necessary parameters.
+   *
+   * @param {string} namespace        - The namespace to use.
+   * @param {string} keyword          - The keyword to use.
+   * @param {string} argumentCount    - The argumentCount to use.
+   * @param {string} fetchUrlTemplate - A template containing placeholders for all the above.
+   *
+   * @return {string} fetchUrl        - The URL with the replaced placeholders.
+   */
+  buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
+  
+    if (!fetchUrlTemplate) {
+			console.log('default');
+      fetchUrlTemplate = env.fetchUrlTemplateDefault;
+    }
+  
+    namespace = encodeURIComponent(namespace);
+    keyword   = encodeURIComponent(keyword);
+  
+    var replacements = {
+      '{%namespace}':     namespace,
+      '{%keyword}':       keyword,
+      '{%argumentCount}': argumentCount
+    }
+    let fetchUrl = fetchUrlTemplate;
+    // Replace all occurences in replacements.
+    Object.keys(replacements).map((key) => { fetchUrl = fetchUrl.replace(key, replacements[key]) });
+  
+    return fetchUrl;
   }
 
-  namespace = encodeURIComponent(namespace);
-  keyword   = encodeURIComponent(keyword);
 
-  var replacements = {
-    '{%namespace}':     namespace,
-    '{%keyword}':       keyword,
-    '{%argumentCount}': argumentCount
+  /**
+   * Get placeholder names from a string.
+   *
+   * @param {string} str    - The string containing placeholders.
+   * @param {string} prefix - The prefix of the placeholders. Must be Regex-escaped.
+   *
+   * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
+   *
+   *   If the placeholder with the same name occurs multiple times, there are also
+   *   multiple arrays in the nested array. 
+   *
+   *   Example: 
+   *     http://{%first|type=foo}{%first|type=bar}
+   *   becomes:
+   *   Array 
+   *       (
+   *            [first] => Array
+   *            (
+   *                [{%first|type=foo}] => Array
+   *                    (
+   *                        [type] => foo
+   *                    )
+   *                [{%first|type=bar}] => Array
+   *                    (
+   *                        [type] => bar
+   *                    )
+   *            )
+   *        )
+   */
+  getPlaceholdersFromString(str, prefix) {
+  
+    var pattern = '{' + prefix + '(.+?)}';
+    var re = RegExp(pattern, 'g');
+    var match;
+    var placeholders = {};
+  
+    do {
+      match = re.exec(str);
+      if (!match) {
+        break;
+      }
+  
+      // Example value:
+      // match[1] = 'query|encoding=utf-8|another=attribute'
+      var nameAndAttributes = match[1].split('|');
+  
+      // Example value:
+      // name = 'query'
+      var name = nameAndAttributes.shift();
+  
+      var placeholder = {};
+      // Example value:
+      // name_and_attributes = ['encoding=utf-8', 'another=attribute']
+      for (let attrStr of nameAndAttributes) {
+        let attrName, attrValue;
+        [attrName, attrValue] = attrStr.split('=', 2);
+        placeholder[attrName] = attrValue;
+      }
+      placeholders[name] = placeholders[name] || {};
+      placeholders[name][match[0]] = placeholder;
+  
+    } while (match);
+  
+    return placeholders;
   }
-  let fetchUrl = fetchUrlTemplate;
-  // Replace all occurences in replacements.
-  Object.keys(replacements).map((key) => { fetchUrl = fetchUrl.replace(key, replacements[key]) });
-
-  return fetchUrl;
-}
-
-/**
- * Get placeholder names from a string.
- *
- * @param {string} str    - The string containing placeholders.
- * @param {string} prefix - The prefix of the placeholders. Must be Regex-escaped.
- *
- * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
- *
- *   If the placeholder with the same name occurs multiple times, there are also
- *   multiple arrays in the nested array. 
- *
- *   Example: 
- *     http://{%first|type=foo}{%first|type=bar}
- *   becomes:
- *   Array 
- *       (
- *            [first] => Array
- *            (
- *                [{%first|type=foo}] => Array
- *                    (
- *                        [type] => foo
- *                    )
- *                [{%first|type=bar}] => Array
- *                    (
- *                        [type] => bar
- *                    )
- *            )
- *        )
- */
-function getPlaceholdersFromString(str, prefix) {
-
-  var pattern = '{' + prefix + '(.+?)}';
-  var re = RegExp(pattern, 'g');
-  var match;
-  var placeholders = {};
-
-  do {
-    match = re.exec(str);
-    if (!match) {
-      break;
-    }
-
-    // Example value:
-    // match[1] = 'query|encoding=utf-8|another=attribute'
-    var nameAndAttributes = match[1].split('|');
-
-    // Example value:
-    // name = 'query'
-    var name = nameAndAttributes.shift();
-
-    var placeholder = {};
-    // Example value:
-    // name_and_attributes = ['encoding=utf-8', 'another=attribute']
-    for (let attrStr of nameAndAttributes) {
-      let attrName, attrValue;
-      [attrName, attrValue] = attrStr.split('=', 2);
-      placeholder[attrName] = attrValue;
-    }
-    placeholders[name] = placeholders[name] || {};
-    placeholders[name][match[0]] = placeholder;
-
-  } while (match);
-
-  return placeholders;
-}
-
-/**
- * Get argument names from a string.
- *
- * @param {string} str    - The string containing placeholders.
- *
- * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
- */
-function getArgumentsFromString(str) {
-  return getPlaceholdersFromString(str, '%')
-}
-
-/**
- * Get variable names from a string.
- *
- * @param {string} str    - The string containing placeholders.
- *
- * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
- */
-function getVariablesFromString(str) {
-  return getPlaceholdersFromString(str, '\\$')
-}
-
-async function replaceArguments(str, args, env) {
-
-  let locale = env.language + '-' + env.country.toUpperCase();
-
-  var placeholders = getArgumentsFromString(str);
-
-  for (let argumentName in placeholders) {
-
-    var argument = args.shift();
-
-    // Copy argument, because different placeholders can cause
-    // different processing.
-    var processedArgument = argument;
-
-    processedArgument = processedArgument.trim();
-    
-    // An argument can have multiple matches,
-    // so go over all of them.
-    var matches = placeholders[argumentName];
-    let match;
-    for (let match in matches) {
-      var attributes = matches[match];
-      switch (attributes.type) {
-          
-        case 'date':
-
-          const dateModule = await import('./type/date.js');
-          let date = await dateModule.default.parse(processedArgument, locale);
-
-          // If date could be parsed:
-          // Set argument.
-          if ((date) && (date.format() != 'Invalid date')) {
-            let format = 'YYYY-MM-DD';
-            if (attributes.output) {
-              format = attributes.output;
+  
+  /**
+   * Get argument names from a string.
+   *
+   * @param {string} str    - The string containing placeholders.
+   *
+   * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
+   */
+  getArgumentsFromString(str) {
+    return this.getPlaceholdersFromString(str, '%')
+  }
+  
+  /**
+   * Get variable names from a string.
+   *
+   * @param {string} str    - The string containing placeholders.
+   *
+   * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
+   */
+  getVariablesFromString(str) {
+    return this.getPlaceholdersFromString(str, '\\$')
+  }
+  
+  async replaceArguments(str, args, env) {
+  
+    let locale = env.language + '-' + env.country.toUpperCase();
+  
+    var placeholders = this.getArgumentsFromString(str);
+  
+    for (let argumentName in placeholders) {
+  
+      var argument = args.shift();
+  
+      // Copy argument, because different placeholders can cause
+      // different processing.
+      var processedArgument = argument;
+  
+      processedArgument = processedArgument.trim();
+      
+      // An argument can have multiple matches,
+      // so go over all of them.
+      var matches = placeholders[argumentName];
+      let match;
+      for (let match in matches) {
+        var attributes = matches[match];
+        switch (attributes.type) {
+            
+          case 'date':
+  
+            const dateModule = await import('./type/date.js');
+            let date = await dateModule.default.parse(processedArgument, locale);
+  
+            // If date could be parsed:
+            // Set argument.
+            if ((date) && (date.format() != 'Invalid date')) {
+              let format = 'YYYY-MM-DD';
+              if (attributes.output) {
+                format = attributes.output;
+              }
+              processedArgument = date.format(format);
             }
-            processedArgument = date.format(format);
-          }
-
-          break;
-
-        case 'time':
-
-          const timeModule = await import('./type/time.js');
-          let time = await timeModule.default.parse(processedArgument, locale);
-
-          // If time could be parsed:
-          // Set argument.
-          if ((time) && (time.format() != 'Invalid time')) {
+  
+            break;
+  
+          case 'time':
+  
+            const timeModule = await import('./type/time.js');
+            let time = await timeModule.default.parse(processedArgument, locale);
+  
+            // If time could be parsed:
+            // Set argument.
+            if ((time) && (time.format() != 'Invalid time')) {
+              let format = 'HH:mm';
+              if (attributes.output) {
+                format = attributes.output;
+              }
+              processedArgument = time.format(format);
+            }
+  
+            break;
+  
+          case 'city':
+  
+            const cityModule = await import('./type/city.js');
+            let city = await cityModule.default.parse(processedArgument, env.country, env.reload, env.debug);
+            
+            // If city could be parsed:
+            // Set argument.
+            if (city) {
+              processedArgument = city;
+            }
+  
+            break;
+        }
+        switch (attributes.transform) {
+          case 'uppercase':
+            processedArgument = processedArgument.toUpperCase();
+            break;
+          case 'lowercase':
+            processedArgument = processedArgument.toLowerCase();
+            break;
+        }
+        switch (attributes.encoding) {
+          case 'iso-8859-1':
+            processedArgument = escape(processedArgument);
+            break;
+          case 'none':
+            break;
+          default:
+            processedArgument = encodeURIComponent(processedArgument);
+            break;
+        }
+        str = str.replace(match, processedArgument);
+      }
+    }
+    return str;
+  }
+  
+  
+  async replaceVariables(str, variables) {
+  
+    var placeholders = this.getVariablesFromString(str);
+  
+    for (let varName in placeholders) {
+      var matches = placeholders[varName];
+      for (let match in matches) {
+        var attributes = matches[match];
+        switch(varName) {
+          case 'now':
+  
+            // Load momentjs.
+            if (typeof moment !== "function") {
+              await Load.loadScripts([momentjsUrl]);
+            }
+  
+            let time = moment();
+  
             let format = 'HH:mm';
             if (attributes.output) {
               format = attributes.output;
             }
-            processedArgument = time.format(format);
-          }
-
-          break;
-
-        case 'city':
-
-          const cityModule = await import('./type/city.js');
-          let city = await cityModule.default.parse(processedArgument, env.country, env.reload, env.debug);
-          
-          // If city could be parsed:
-          // Set argument.
-          if (city) {
-            processedArgument = city;
-          }
-
-          break;
-      }
-      switch (attributes.transform) {
-        case 'uppercase':
-          processedArgument = processedArgument.toUpperCase();
-          break;
-        case 'lowercase':
-          processedArgument = processedArgument.toLowerCase();
-          break;
-      }
-      switch (attributes.encoding) {
-        case 'iso-8859-1':
-          processedArgument = escape(processedArgument);
-          break;
-        case 'none':
-          break;
-        default:
-          processedArgument = encodeURIComponent(processedArgument);
-          break;
-      }
-      str = str.replace(match, processedArgument);
-    }
-  }
-  return str;
-}
-
-
-async function replaceVariables(str, variables) {
-
-  var placeholders = getVariablesFromString(str);
-
-  for (let varName in placeholders) {
-    var matches = placeholders[varName];
-    for (let match in matches) {
-      var attributes = matches[match];
-      switch(varName) {
-        case 'now':
-
-          // Load momentjs.
-          if (typeof moment !== "function") {
-            await Load.loadScripts([momentjsUrl]);
-          }
-
-          let time = moment();
-
-          let format = 'HH:mm';
-          if (attributes.output) {
-            format = attributes.output;
-          }
-          var value = time.format(format);
-
-          break; 
-            
-        default:
-          var value = variables[varName];
-          break; 
-      }
-      str = str.replace(new RegExp(escapeRegExp(match), 'g'), value);
-    }
-  }
-  return str;
-}
-
-function escapeRegExp(str) {
-    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
-}
-
-async function fetchShortcuts(env, keyword, args) {
+            var value = time.format(format);
   
-  // Fetch all available shortcuts for our query and namespace settings.
-  var shortcuts = [];
-  let found = false;
-  for (let namespace of env.namespaces) {
-    var fetchUrl = buildFetchUrl(namespace, keyword, args.length, namespace.url);
-    let text  = await Helper.fetchAsync(fetchUrl, env.reload, env.debug);
-    shortcuts[namespace.name] = jsyaml.load(text);
-
-    if (!found) {
-      found = Boolean(shortcuts[namespace.name]);
+            break; 
+              
+          default:
+            var value = variables[varName];
+            break; 
+        }
+        str = str.replace(new RegExp(this.escapeRegExp(match), 'g'), value);
+      }
     }
+    return str;
   }
-  return [shortcuts, found];
-}
-
-async function getRedirectUrl(env) {
-
-  if (!env.query) {
-    return;  
-  }
-
-  var variables = {
-    language: env.language,
-    country:  env.country
-  };
   
-  let keyword, argumentString;
-  [keyword, argumentString] = Helper.splitKeepRemainder(env.query, " ", 2);
-  if (argumentString) {
-    var args = argumentString.split(",");
-  } else {
-    var args = []; 
+  escapeRegExp(str) {
+      return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   }
-
-  // Check for (cache) reload call.
-  env.reload = false;
-  if (keyword.match(/^reload:/)) {
-    let reload;
-    [reload, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
-    env.reload = true;
-  }
-  // Check for extraNamespace in keyword:
-  //   split at dot
-  //   but don't split up country namespace names.
-  if (keyword.match(/.\./)) {
-
-    // Lookbehind not needed anymore
-    // since we made sure in if-condition
-    // that the dot is preceeded by something.
-    let extraNamespace;
-    [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, /\./, 2);
-
-    // Add to namespaces.
-    env.namespaces.push(extraNamespace);
-
-    // Set variables.
-    switch (extraNamespace.length) {
-      case 2:
-        variables.language = extraNamespace;
-        break;
-      case 3:
-        // TODO: cut dot?
-        variables.country = extraNamespace;
-        break;
+  
+  async fetchShortcuts(env, keyword, args) {
+    
+    // Fetch all available shortcuts for our query and namespace settings.
+    var shortcuts = [];
+    let found = false;
+    for (let namespace of env.namespaces) {
+      var fetchUrl = this.buildFetchUrl(namespace, keyword, args.length, namespace.url);
+      let text  = await Helper.fetchAsync(fetchUrl, env.reload, env.debug);
+      shortcuts[namespace.name] = jsyaml.load(text);
+  
+      if (!found) {
+        found = Boolean(shortcuts[namespace.name]);
+      }
     }
+    return [shortcuts, found];
   }
-
-  let shortcuts, found;
-  [shortcuts, found] = await fetchShortcuts(env, keyword, args);
-
-  // If nothing found:
-  // Try without commas, i.e. with the whole argumentString as the only argument.
-  if ((!found) && (args.length > 0)) {
-    args = [argumentString];
-    [shortcuts, found] = await fetchShortcuts(env, keyword, args);
-  }
-
-  // If nothing found:
-  // Try default keyword.
-  if ((!found) && (env.defaultKeyword)) {
-    args = [env.query];
-    [shortcuts, found] = await fetchShortcuts(env, env.defaultKeyword, args);
-  }
-
-  let redirectUrl = null;
-
-  // Find first shortcut in our namespace hierarchy.
-  for (let namespace of env.namespaces.reverse()) {
-    if (shortcuts[namespace.name]) {
-      redirectUrl = shortcuts[namespace.name]['url'];
-      // TODO: Process POST arguments.
-      break;
+  
+  async getRedirectUrl(env) {
+  
+    if (!env.query) {
+      return;  
     }
+  
+    var variables = {
+      language: env.language,
+      country:  env.country
+    };
+    
+    let keyword, argumentString;
+    [keyword, argumentString] = Helper.splitKeepRemainder(env.query, " ", 2);
+    if (argumentString) {
+      var args = argumentString.split(",");
+    } else {
+      var args = []; 
+    }
+  
+    // Check for (cache) reload call.
+    env.reload = false;
+    if (keyword.match(/^reload:/)) {
+      let reload;
+      [reload, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
+      env.reload = true;
+    }
+    // Check for extraNamespace in keyword:
+    //   split at dot
+    //   but don't split up country namespace names.
+    if (keyword.match(/.\./)) {
+  
+      // Lookbehind not needed anymore
+      // since we made sure in if-condition
+      // that the dot is preceeded by something.
+      let extraNamespace;
+      [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, /\./, 2);
+  
+      // Add to namespaces.
+      env.namespaces.push(extraNamespace);
+  
+      // Set variables.
+      switch (extraNamespace.length) {
+        case 2:
+          variables.language = extraNamespace;
+          break;
+        case 3:
+          // TODO: cut dot?
+          variables.country = extraNamespace;
+          break;
+      }
+    }
+  
+    let shortcuts, found;
+    [shortcuts, found] = await this.fetchShortcuts(env, keyword, args);
+  
+    // If nothing found:
+    // Try without commas, i.e. with the whole argumentString as the only argument.
+    if ((!found) && (args.length > 0)) {
+      args = [argumentString];
+      [shortcuts, found] = await this.fetchShortcuts(env, keyword, args);
+    }
+  
+    // If nothing found:
+    // Try default keyword.
+    if ((!found) && (env.defaultKeyword)) {
+      args = [env.query];
+      [shortcuts, found] = await this.fetchShortcuts(env, env.defaultKeyword, args);
+    }
+  
+    let redirectUrl = null;
+  
+    // Find first shortcut in our namespace hierarchy.
+    for (let namespace of env.namespaces.reverse()) {
+      if (shortcuts[namespace.name]) {
+        redirectUrl = shortcuts[namespace.name]['url'];
+        // TODO: Process POST arguments.
+        break;
+      }
+    }
+  
+    if (!redirectUrl) {
+      return;
+    }
+  
+    if (env.debug) Helper.log('');
+    if (env.debug) Helper.log("Used template: " + redirectUrl);
+  
+    redirectUrl = await this.replaceVariables(redirectUrl, variables);
+    redirectUrl = await this.replaceArguments(redirectUrl, args, env);
+  
+    return redirectUrl;
   }
 
-  if (!redirectUrl) {
-    return;
-  }
-
-  if (env.debug) Helper.log('');
-  if (env.debug) Helper.log("Used template: " + redirectUrl);
-
-  redirectUrl = await replaceVariables(redirectUrl, variables);
-  redirectUrl = await replaceArguments(redirectUrl, args, env);
-
-  return redirectUrl;
 }
 
 document.querySelector('body').onload = async function(event) {
 
   await env.populate();
 
-  let redirectUrl = await getRedirectUrl(env);
+  let process = new Process(env);
+
+  let redirectUrl = await process.getRedirectUrl(env);
 
   if (!redirectUrl) {
     let params = env.getParams();
