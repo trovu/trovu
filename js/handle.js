@@ -268,9 +268,31 @@ export default class Handle {
     // Fetch all available shortcuts for our query and namespace settings.
     var shortcuts = [];
     let found = false;
+    let promises = [];
     for (let namespace of this.env.namespaces) {
       var fetchUrl = this.buildFetchUrl(namespace, keyword, args.length, namespace.url);
-      let text  = await Helper.fetchAsync(fetchUrl, this.env.reload, this.env.debug);
+      if (this.env.debug) {
+        Helper.log("Request: " + fetchUrl);
+      }
+      else {
+        Helper.log('.', false);
+      }
+      // Start synchronous fetch calls.
+      promises.push(fetch(fetchUrl, { cache: (this.env.reload ? "reload" : "force-cache") }));
+    }
+
+    // Wait until all fetch calls are done.
+    const responses = await Promise.all(promises);
+
+    // Collect responses.
+    for (let i in this.env.namespaces) {
+      let namespace = this.env.namespaces[i];
+      if (responses[i].status != 200) {
+        if (this.env.debug) Helper.log("Fail:    " + responses[i].url);
+        continue;
+      }
+      if (this.env.debug) Helper.log("Success: " + responses[i].url);
+      const text = await responses[i].text();
       shortcuts[namespace.name] = jsyaml.load(text);
   
       if (!found) {
