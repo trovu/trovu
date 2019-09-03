@@ -14,6 +14,7 @@ for (let call of calls) {
       }
     }
     await page.goto(url)
+    await page.reload()
     await page.waitForFunction(
       'document.querySelector("body").innerText.includes("Redirect to:")'
     );
