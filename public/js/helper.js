@@ -1,5 +1,4 @@
 export default class Helper {
-
   static splitKeepRemainder(string, delimiter, n) {
     if (!string) {
       return [];
@@ -9,15 +8,15 @@ export default class Helper {
   }
 
   static log(str, newLine = true) {
-    if (!document.querySelector('#log')) {
+    if (!document.querySelector("#log")) {
       return;
     }
     if (newLine) {
-      document.querySelector('#log').textContent += "\n";
+      document.querySelector("#log").textContent += "\n";
     }
-    document.querySelector('#log').textContent += str;
+    document.querySelector("#log").textContent += str;
   }
-  
+
   /**
    * Fetch the content of a file behind an URL.
    *
@@ -26,19 +25,14 @@ export default class Helper {
    * @return {string} text  - The content.
    */
   static async fetchAsync(url, reload, debug = false) {
-  
     if (debug) {
       this.log("Request: " + url);
+    } else {
+      this.log(".", false);
     }
-    else {
-      this.log('.', false);
-    }
-    const response = await fetch(
-      url,
-      {
-        cache: (reload ? "reload" : "force-cache")
-      }
-    );
+    const response = await fetch(url, {
+      cache: reload ? "reload" : "force-cache"
+    });
     //console.log(url);
     //console.log(response.headers.get('Expires'));
     if (response.status != 200) {
@@ -49,6 +43,4 @@ export default class Helper {
     const text = await response.text();
     return text;
   }
-
 }
-

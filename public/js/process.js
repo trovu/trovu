@@ -1,9 +1,8 @@
-import env from './env.js';
-import Handle from './handle.js';
-import Helper from './helper.js';
+import env from "./env.js";
+import Handle from "./handle.js";
+import Helper from "./helper.js";
 
-document.querySelector('body').onload = async function(event) {
-
+document.querySelector("body").onload = async function(event) {
   await env.populate();
 
   let handle = new Handle(env);
@@ -11,15 +10,15 @@ document.querySelector('body').onload = async function(event) {
 
   if (!redirectUrl) {
     let params = env.getParams();
-    params.status = 'not_found';
+    params.status = "not_found";
     let paramStr = env.jqueryParam(params);
-    redirectUrl = '../index.html#' + paramStr;
+    redirectUrl = "../index.html#" + paramStr;
   }
 
   if (env.debug) {
-    Helper.log("Redirect to:   " + redirectUrl)
+    Helper.log("Redirect to:   " + redirectUrl);
     return;
   }
 
   window.location.href = redirectUrl;
-}
+};
