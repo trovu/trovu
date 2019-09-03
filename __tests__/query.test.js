@@ -10,6 +10,9 @@ const tests = [
 for (let i in tests) {
   test(JSON.stringify(tests[i]), async() => {
     await page.goto(docroot + tests[i].queryStr)
+    await page.waitForFunction(
+      'document.querySelector("body").innerText.includes("Redirect to:")'
+    );
     await expect(page).toMatch(tests[i].expectedRedirectUrl)
   });
 }
