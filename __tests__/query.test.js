@@ -5,6 +5,10 @@ const tests = [
     queryStr: 'language=de&country=de&query=db b%2Cm%2C8%2Cmo',
     expectedRedirectUrl: 'http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1',
   },
+  {
+    queryStr: 'language=de&country=pl&query=.de.db b%2Cm%2C8%2Cmo',
+    expectedRedirectUrl: 'http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1',
+  },
 ];
 
 for (let i in tests) {
