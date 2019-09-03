@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/trovu/trovu-web#readme",
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
+    "babel-preset-env": "^1.7.0",
     "jest": "^24.9.0"
   }
 }
