@@ -1,19 +1,9 @@
 const docroot = 'http://l.tro/process/index.html?#debug=1';
 
-const calls = [
-  {
-    language: 'de',
-    country: 'de',
-    query: 'db b,m,8,mo',
-    expectedRedirectUrl: 'http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1',
-  },
-  {
-    language: 'de',
-    country: 'pl',
-    query: '.de.db b,m,8,mo',
-    expectedRedirectUrl: 'http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1',
-  },
-];
+const yaml = require('js-yaml');
+const fs   = require('fs');
+
+const calls = yaml.safeLoad(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
 
 for (let call of calls) {
   test(JSON.stringify(call), async() => {
