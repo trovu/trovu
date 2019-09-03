@@ -4,7 +4,7 @@
   "description": "Trovu web interface.",
   "main": "",
   "scripts": {
-    "test": "node tests/index.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
