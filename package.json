@@ -1,0 +1,25 @@
+{
+  "name": "trovu-web",
+  "version": "1.0.0",
+  "description": "Trovu web interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trovu/trovu-web.git"
+  },
+  "keywords": [
+    "javascript",
+    "shortcuts",
+    "social",
+    "bootstrap"
+  ],
+  "author": "Georg Jaehnig",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/trovu/trovu-web/issues"
+  },
+  "homepage": "https://github.com/trovu/trovu-web#readme"
+}
