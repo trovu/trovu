@@ -189,9 +189,11 @@ let env = {
 		return envWithoutFunctions;
 	},
 	
-	populate: async function() {
+	populate: async function(params) {
 
-    let params = this.getParams()
+    if (!params) {
+      params = this.getParams()
+    }
     let githubFailed;
   
     // Try Github config.
