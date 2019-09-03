@@ -22,9 +22,12 @@
     "url": "https://github.com/trovu/trovu-web/issues"
   },
   "homepage": "https://github.com/trovu/trovu-web#readme",
+  "jest": {
+    "preset": "jest-puppeteer"
+  },
   "devDependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.5.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
+    "puppeteer": "^1.19.0"
   }
 }

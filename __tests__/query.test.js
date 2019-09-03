@@ -1,17 +1,15 @@
-import Handle from '../public/js/handle.js';
-import env from '../public/js//env.js';
+const docroot = 'http://l.tro/process/index.html?#debug=1&';
 
 const tests = [
   {
-    language: 'de',
-    country: 'de',
-    query: 'db b,m,8,mo',
+    queryStr: 'language=de&country=de&query=db b%2Cm%2C8%2Cmo&',
     expectedRedirectUrl: 'http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1',
   },
 ];
 
 for (let i in tests) {
   test(JSON.stringify(tests[i]), async() => {
-    await env.populate(test[i]);
+    await page.goto(docroot + tests[i].queryStr)
+    await expect(page).toMatch(tests[i].expectedRedirectUrl)
   });
 }
