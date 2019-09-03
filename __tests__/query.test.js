@@ -1,19 +1,29 @@
-const docroot = 'http://l.tro/process/index.html?#debug=1&';
+const docroot = 'http://l.tro/process/index.html?#debug=1';
 
 const tests = [
   {
-    queryStr: 'language=de&country=de&query=db b%2Cm%2C8%2Cmo',
+    language: 'de',
+    country: 'de',
+    query: 'db b,m,8,mo',
     expectedRedirectUrl: 'http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1',
   },
   {
-    queryStr: 'language=de&country=pl&query=.de.db b%2Cm%2C8%2Cmo',
+    language: 'de',
+    country: 'pl',
+    query: '.de.db b,m,8,mo',
     expectedRedirectUrl: 'http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1',
   },
 ];
 
 for (let i in tests) {
   test(JSON.stringify(tests[i]), async() => {
-    await page.goto(docroot + tests[i].queryStr)
+    let url = docroot;
+    for (let paramName of ['language', 'country', 'github', 'query']) {
+      if (paramName in tests[i]) {
+        url += '&' + paramName + '=' + encodeURIComponent(tests[i][paramName])
+      }
+    }
+    await page.goto(url)
     await page.waitForFunction(
       'document.querySelector("body").innerText.includes("Redirect to:")'
     );
