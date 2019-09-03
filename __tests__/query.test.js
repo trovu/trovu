@@ -1,6 +1,6 @@
 const docroot = 'http://l.tro/process/index.html?#debug=1';
 
-const tests = [
+const calls = [
   {
     language: 'de',
     country: 'de',
@@ -15,18 +15,18 @@ const tests = [
   },
 ];
 
-for (let i in tests) {
-  test(JSON.stringify(tests[i]), async() => {
+for (let call of calls) {
+  test(JSON.stringify(call), async() => {
     let url = docroot;
     for (let paramName of ['language', 'country', 'github', 'query']) {
-      if (paramName in tests[i]) {
-        url += '&' + paramName + '=' + encodeURIComponent(tests[i][paramName])
+      if (paramName in call) {
+        url += '&' + paramName + '=' + encodeURIComponent(call[paramName])
       }
     }
     await page.goto(url)
     await page.waitForFunction(
       'document.querySelector("body").innerText.includes("Redirect to:")'
     );
-    await expect(page).toMatch(tests[i].expectedRedirectUrl)
+    await expect(page).toMatch(call.expectedRedirectUrl)
   });
 }
