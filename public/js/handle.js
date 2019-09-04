@@ -323,6 +323,11 @@ export default class Handle {
     return [shortcuts, found];
   }
 
+  /**
+   * Given this.env, get the redirect URL.
+   *
+   * @return {string} redirectUrl - The URL to redirect to. 
+   */
   async getRedirectUrl() {
     if (!this.env.query) {
       return;
