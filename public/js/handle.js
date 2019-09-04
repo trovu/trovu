@@ -119,6 +119,14 @@ export default class Handle {
     return this.getPlaceholdersFromString(str, "\\$");
   }
 
+  /**
+   * Replace arguments in a string.
+   *
+   * @param {string} str    - The string containing placeholders.
+   * @param {array}  args   - The arguments to replace.
+   *
+   * @return {string} str   - The string with the replaced placeholders.
+   */
   async replaceArguments(str, args) {
     let locale = this.env.language + "-" + this.env.country.toUpperCase();
 
@@ -219,6 +227,14 @@ export default class Handle {
     return str;
   }
 
+  /**
+   * Replace variables in a string.
+   *
+   * @param {string} str        - The string containing placeholders.
+   * @param {array}  variables  - The variables to replace.
+   *
+   * @return {string} str       - The string with the replaced variables.
+   */
   async replaceVariables(str, variables) {
     var placeholders = this.getVariablesFromString(str);
 
@@ -253,10 +269,27 @@ export default class Handle {
     return str;
   }
 
+  /**
+   * Escape all regular expression commands in a string.
+   *
+   * @param {string} str    - The string to escape.
+   *
+   * @return {string} str   - The escaped string.
+   */
   escapeRegExp(str) {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   }
 
+  /**
+   * Fetch shortcuts matching keyword and args.
+   *
+   * @param {string} keyword    - The keyword of the query.
+   * @param {array} args        - The arguments of the query.
+   *
+   * @return {array} 
+   *   - {array}   shortcuts    - The array of found shortcuts.
+   *   - {boolean} found        - True if shortcuts were found, otherwise false.
+   */
   async fetchShortcuts(keyword, args) {
     // Fetch all available shortcuts for our query and namespace settings.
     var shortcuts = [];
