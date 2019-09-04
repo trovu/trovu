@@ -51,21 +51,16 @@ export default class Handle {
    *
    *   Example:
    *     http://{%first|type=foo}{%first|type=bar}
-   *   becomes:
-   *   Array
-   *       (
-   *            [first] => Array
-   *            (
-   *                [{%first|type=foo}] => Array
-   *                    (
-   *                        [type] => foo
-   *                    )
-   *                [{%first|type=bar}] => Array
-   *                    (
-   *                        [type] => bar
-   *                    )
-   *            )
-   *        )
+   *   becomes: {
+   *     first: {
+   *       '{%first|type=foo}': {
+   *         type: foo
+   *       }
+   *       '{%first|type=bar}': {
+   *         type: bar
+   *       }
+   *     }
+   *   }
    */
   getPlaceholdersFromString(str, prefix) {
     var pattern = "{" + prefix + "(.+?)}";
