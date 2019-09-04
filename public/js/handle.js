@@ -263,21 +263,10 @@ export default class Handle {
             var value = variables[varName];
             break;
         }
-        str = str.replace(new RegExp(this.escapeRegExp(match), "g"), value);
+        str = str.replace(new RegExp(Helper.escapeRegExp(match), "g"), value);
       }
     }
     return str;
-  }
-
-  /**
-   * Escape all regular expression commands in a string.
-   *
-   * @param {string} str    - The string to escape.
-   *
-   * @return {string} str   - The escaped string.
-   */
-  escapeRegExp(str) {
-    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   }
 
   /**

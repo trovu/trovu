@@ -7,6 +7,17 @@ export default class Helper {
     return parts.slice(0, n - 1).concat([parts.slice(n - 1).join(delimiter)]);
   }
 
+  /**
+   * Escape all regular expression commands in a string.
+   *
+   * @param {string} str    - The string to escape.
+   *
+   * @return {string} str   - The escaped string.
+   */
+  static escapeRegExp(str) {
+    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+  }
+
   static log(str, newLine = true) {
     if (!document.querySelector("#log")) {
       return;
