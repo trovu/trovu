@@ -1,4 +1,5 @@
-export default class Helper {
+/** Static class containing helper. */
+class Helper {
 
   /**
    * Split a string n times, keep all additional matches in the last part as one string.
@@ -65,3 +66,5 @@ export default class Helper {
     return text;
   }
 }
+
+export default Helper;

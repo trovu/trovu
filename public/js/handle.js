@@ -1,7 +1,14 @@
 import Load from "./load.js";
 import Helper from "./helper.js";
 
-export default class Handle {
+/** Class for handling a call. */
+class Handle {
+
+  /**
+   * Set the environment.
+   *
+   * @param {object} env        - The environment.
+   */
   constructor(env) {
     this.env = env;
   }
@@ -432,3 +439,4 @@ export default class Handle {
     return redirectUrl;
   }
 }
+export default Handle;
