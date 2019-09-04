@@ -1,4 +1,5 @@
-export default class Load {
+/** Class for loading scripts per tag. */
+class Load {
 
   /**
    * Load scripts into current page per <script> tag.
@@ -40,3 +41,5 @@ export default class Load {
     return await Promise.all(myPromises);
   }
 }
+
+export default Load;
