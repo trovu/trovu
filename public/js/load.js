@@ -1,4 +1,10 @@
 export default class Load {
+
+  /**
+   * Load scripts into current page per <script> tag.
+   *
+   * @param {array} scripts     - List of scripts to be loaded.
+   */
   static async loadScripts(scripts) {
     function get(src) {
       return new Promise(function(resolve, reject) {
