@@ -1,5 +1,5 @@
 import Helper from './helper.js'
-import env from './env.js'
+import Env from './env.js'
 
 var suggestions = [];
 
@@ -83,6 +83,8 @@ async function getSuggestions() {
   }
   return suggestions;
 }
+
+let env = new Env();
 
 document.querySelector('body').onload = async function(event) {
 

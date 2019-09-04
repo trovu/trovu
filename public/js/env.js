@@ -1,12 +1,15 @@
 import Helper from "./helper.js";
 
-let env = {
-  configUrlTemplate:
-    "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml",
-  fetchUrlTemplateDefault:
-    "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml",
+class Env {
 
-  jqueryParam: function(a) {
+  constructor() {
+    this.configUrlTemplate =
+    "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml";
+    this.fetchUrlTemplateDefault =
+    "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml";
+  }
+
+  jqueryParam(a) {
     var s = [];
     var add = function(k, v) {
       v = typeof v === "function" ? v() : v;
@@ -47,11 +50,11 @@ let env = {
     };
 
     return buildParams("", a).join("&");
-  },
+  }
 
   // Based on:
   // https://stackoverflow.com/a/3355892/52023
-  jqueryDeparam: function(paramStr) {
+  jqueryDeparam(paramStr) {
     // Prepare params.
     var params = {};
 
@@ -106,17 +109,17 @@ let env = {
       }
     }
     return params;
-  },
+  }
 
   // Param getters ====================================================
 
-  getParams: function() {
+  getParams() {
     var paramStr = window.location.hash.substr(1);
     let params = this.jqueryDeparam(paramStr);
     return params;
-  },
+  }
 
-  getDefaultLanguageAndCountry: function() {
+  getDefaultLanguageAndCountry() {
     // Get from browser.
     let languageStr = navigator.language;
     let language, country;
@@ -135,19 +138,19 @@ let env = {
       language: language,
       country: country
     };
-  },
+  }
 
-  getDefaultLanguage: function() {
+  getDefaultLanguage() {
     let languageCountry = this.getDefaultLanguageAndCountry();
     return languageCountry.language;
-  },
+  }
 
-  getDefaultCountry: function() {
+  getDefaultCountry() {
     let languageCountry = this.getDefaultLanguageAndCountry();
     return languageCountry.country;
-  },
+  }
 
-  addFetchUrlTemplates: function(namespaces, params) {
+  addFetchUrlTemplates(namespaces, params) {
     for (let i in namespaces) {
       // Site namespaces, from trovu-data.
       if (typeof namespaces[i] == "string") {
@@ -184,9 +187,9 @@ let env = {
       }
     }
     return namespaces;
-  },
+  }
 
-  withoutFunctions: function() {
+  withoutFunctions() {
     let envWithoutFunctions = {};
     for (let key of Object.keys(this)) {
       if (typeof this[key] != "function") {
@@ -194,9 +197,9 @@ let env = {
       }
     }
     return envWithoutFunctions;
-  },
+  }
 
-  populate: async function(params) {
+  async populate(params) {
     if (!params) {
       params = this.getParams();
     }
@@ -241,4 +244,4 @@ let env = {
   }
 };
 
-export default env;
+export default Env;
