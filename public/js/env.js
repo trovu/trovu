@@ -2,6 +2,10 @@ import Helper from "./helper.js";
 
 /** Set and remember the environment. */
 class Env {
+
+  /**
+   * Set helper variables.
+   */
   constructor() {
     this.configUrlTemplate =
       "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml";
@@ -9,6 +13,13 @@ class Env {
       "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml";
   }
 
+  /**
+   * Create URL query string from an array.
+   * 
+   * @param {array} params - The parameters.
+   * 
+   * @return {string} paramStr - The created URL query string.
+   */
   jqueryParam(a) {
     var s = [];
     var add = function(k, v) {
@@ -52,8 +63,14 @@ class Env {
     return buildParams("", a).join("&");
   }
 
-  // Based on:
-  // https://stackoverflow.com/a/3355892/52023
+  /**
+   * Parse parameters from a URL query str.
+   * Based on: https://stackoverflow.com/a/3355892/52023
+   * 
+   * @param {string} paramStr - The URL query string to parse.
+   * 
+   * @return {array} params - The parsed parameters.
+   */
   jqueryDeparam(paramStr) {
     // Prepare params.
     var params = {};
@@ -124,8 +141,12 @@ class Env {
     return params;
   }
 
+  /**
+   * Get the default language and country from browser.
+   * 
+   * @return {array} [language, country] - The default language and country.
+   */
   getDefaultLanguageAndCountry() {
-    // Get from browser.
     let languageStr = navigator.language;
     let language, country;
     if (languageStr) {
@@ -145,11 +166,21 @@ class Env {
     };
   }
 
+  /**
+   * Get the default language.
+   * 
+   * @return {string} language - The default language.
+   */
   getDefaultLanguage() {
     let languageCountry = this.getDefaultLanguageAndCountry();
     return languageCountry.language;
   }
 
+  /**
+   * Get the default country.
+   * 
+   * @return {string} language - The default country.
+   */
   getDefaultCountry() {
     let languageCountry = this.getDefaultLanguageAndCountry();
     return languageCountry.country;
