@@ -155,6 +155,11 @@ class Env {
     return languageCountry.country;
   }
 
+  /**
+   * To every namespace, add a fetch URL template.
+   *
+   * @param {array} params - Object of env without methods.
+   */
   addFetchUrlTemplates(params) {
     for (let namespace of this.namespaces) {
       // Site namespaces, from trovu-data.
@@ -193,6 +198,11 @@ class Env {
     }
   }
 
+  /**
+   * Export current class without methods.
+   *
+   * @return {object} - Object of env without methods.
+   */
   withoutFunctions() {
     let envWithoutFunctions = {};
     for (let key of Object.keys(this)) {
@@ -203,6 +213,11 @@ class Env {
     return envWithoutFunctions;
   }
 
+  /**
+   * Set the class variables according to params.
+   *
+   * @param {array} [params] - List of params to be parsed.
+   */
   async populate(params) {
     if (!params) {
       params = this.getParams();
