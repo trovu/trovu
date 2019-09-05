@@ -1,5 +1,5 @@
 import Helper from "./helper.js";
-
+  
 /** Set and remember the environment. */
 class Env {
 
@@ -156,43 +156,42 @@ class Env {
     return languageCountry.country;
   }
 
-  addFetchUrlTemplates(namespaces, params) {
-    for (let i in namespaces) {
+  addFetchUrlTemplates(params) {
+    for (let i in this.namespaces) {
       // Site namespaces, from trovu-data.
-      if (typeof namespaces[i] == "string") {
-        if (namespaces[i].length < 4) {
-          let name = namespaces[i];
-          namespaces[i] = {
+      if (typeof this.namespaces[i] == "string") {
+        if (this.namespaces[i].length < 4) {
+          let name = this.namespaces[i];
+          this.namespaces[i] = {
             name: name,
             url:
               "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
               name +
               "/{%keyword}/{%argumentCount}.yml"
           };
-          namespaces[i].type = "site";
+          this.namespaces[i].type = "site";
         }
         // User namespaces may also have completely custom URL (template).
         // Must contain {%keyword} and {%argumentCount}.
-      } else if (namespaces[i].url && namespaces[i].name) {
-        namespaces[i].type = "user";
+      } else if (this.namespaces[i].url && this.namespaces[i].name) {
+        this.namespaces[i].type = "user";
         // User namespaces, from custom trovu-data-user.
-      } else if (namespaces[i].github) {
-        if (namespaces[i].github == ".") {
+      } else if (this.namespaces[i].github) {
+        if (this.namespaces[i].github == ".") {
           // Set to current user.
-          namespaces[i].github = params.github;
+          this.namespaces[i].github = params.github;
         }
         // Default to Github name.
-        if (!namespaces[i].name) {
-          namespaces[i].name = namespaces[i].github;
+        if (!this.namespaces[i].name) {
+          this.namespaces[i].name = this.namespaces[i].github;
         }
-        namespaces[i].url =
+        this.namespaces[i].url =
           "https://raw.githubusercontent.com/" +
-          namespaces[i].github +
+          this.namespaces[i].github +
           "/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml";
-        namespaces[i].type = "user";
+        this.namespaces[i].type = "user";
       }
     }
-    return namespaces;
   }
 
   withoutFunctions() {
@@ -246,7 +245,7 @@ class Env {
       this.namespaces = ["o", this.language, "." + this.country];
     }
 
-    this.namespaces = this.addFetchUrlTemplates(this.namespaces, params);
+    this.addFetchUrlTemplates(params);
   }
 };
 
