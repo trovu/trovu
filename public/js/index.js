@@ -289,7 +289,7 @@ async function updateConfig() {
       env.language,
       '.' + env.country
     ];
-    env.namespaces = env.addFetchUrlTemplates(env.namespaces);
+    env.addFetchUrlTemplates();
   }
 
   await getSuggestions();
