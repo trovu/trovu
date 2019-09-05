@@ -5,9 +5,9 @@ class Env {
 
   constructor() {
     this.configUrlTemplate =
-    "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml";
+      "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml";
     this.fetchUrlTemplateDefault =
-    "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml";
+      "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml";
   }
 
   jqueryParam(a) {
