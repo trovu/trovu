@@ -1,8 +1,7 @@
 import Helper from "./helper.js";
-  
+
 /** Set and remember the environment. */
 class Env {
-
   constructor() {
     this.configUrlTemplate =
       "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml";
