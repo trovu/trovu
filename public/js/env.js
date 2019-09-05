@@ -160,7 +160,7 @@ class Env {
    *
    * @param {array} params - Object of env without methods.
    */
-  addFetchUrlTemplates(params) {
+  addFetchUrlTemplates() {
     for (let namespace of this.namespaces) {
       // Site namespaces, from trovu-data.
       if (typeof namespace == "string") {
@@ -183,7 +183,7 @@ class Env {
       } else if (namespace.github) {
         if (namespace.github == ".") {
           // Set to current user.
-          namespace.github = params.github;
+          namespace.github = this.github;
         }
         // Default to Github name.
         if (!namespace.name) {
