@@ -1,5 +1,6 @@
 import Helper from "./helper.js";
 
+/** Set and remember the environment. */
 class Env {
 
   constructor() {
@@ -113,6 +114,11 @@ class Env {
 
   // Param getters ====================================================
 
+  /**
+   * Get parameters from the URL query string.
+   *
+   * @return {array} params - List of found parameters.
+   */
   getParams() {
     var paramStr = window.location.hash.substr(1);
     let params = this.jqueryDeparam(paramStr);
