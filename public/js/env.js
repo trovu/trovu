@@ -157,8 +157,6 @@ class Env {
 
   /**
    * To every namespace, add a fetch URL template.
-   *
-   * @param {array} params - Object of env without methods.
    */
   addFetchUrlTemplates() {
     this.namespaces.forEach((namespace, i, namespaces) => {
