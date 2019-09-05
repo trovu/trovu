@@ -157,39 +157,39 @@ class Env {
   }
 
   addFetchUrlTemplates(params) {
-    for (let i in this.namespaces) {
+    for (let namespace of this.namespaces) {
       // Site namespaces, from trovu-data.
-      if (typeof this.namespaces[i] == "string") {
-        if (this.namespaces[i].length < 4) {
-          let name = this.namespaces[i];
-          this.namespaces[i] = {
+      if (typeof namespace == "string") {
+        if (namespace.length < 4) {
+          let name = namespace;
+          namespace = {
             name: name,
             url:
               "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
               name +
               "/{%keyword}/{%argumentCount}.yml"
           };
-          this.namespaces[i].type = "site";
+          namespace.type = "site";
         }
         // User namespaces may also have completely custom URL (template).
         // Must contain {%keyword} and {%argumentCount}.
-      } else if (this.namespaces[i].url && this.namespaces[i].name) {
-        this.namespaces[i].type = "user";
+      } else if (namespace.url && namespace.name) {
+        namespace.type = "user";
         // User namespaces, from custom trovu-data-user.
-      } else if (this.namespaces[i].github) {
-        if (this.namespaces[i].github == ".") {
+      } else if (namespace.github) {
+        if (namespace.github == ".") {
           // Set to current user.
-          this.namespaces[i].github = params.github;
+          namespace.github = params.github;
         }
         // Default to Github name.
-        if (!this.namespaces[i].name) {
-          this.namespaces[i].name = this.namespaces[i].github;
+        if (!namespace.name) {
+          namespace.name = namespace.github;
         }
-        this.namespaces[i].url =
+        namespace.url =
           "https://raw.githubusercontent.com/" +
-          this.namespaces[i].github +
+          namespace.github +
           "/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml";
-        this.namespaces[i].type = "user";
+        namespace.type = "user";
       }
     }
   }
