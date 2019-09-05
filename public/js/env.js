@@ -161,7 +161,7 @@ class Env {
    * @param {array} params - Object of env without methods.
    */
   addFetchUrlTemplates() {
-    for (let namespace of this.namespaces) {
+    this.namespaces.forEach((namespace, i, namespaces) => {
       // Site namespaces, from trovu-data.
       if (typeof namespace == "string") {
         if (namespace.length < 4) {
@@ -195,7 +195,8 @@ class Env {
           "/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml";
         namespace.type = "user";
       }
-    }
+      namespaces[i] = namespace;
+    });
   }
 
   /**
