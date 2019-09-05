@@ -246,6 +246,6 @@ class Env {
 
     this.addFetchUrlTemplates(params);
   }
-};
+}
 
 export default Env;
