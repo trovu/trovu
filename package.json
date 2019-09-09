@@ -4,7 +4,8 @@
   "description": "Trovu web interface.",
   "main": "",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "doc": "rm -r out/ && jsdoc public/js/* -c jsdoc.json"
   },
   "repository": {
     "type": "git",
