@@ -141,7 +141,6 @@ class Env {
         // Must contain {%keyword} and {%argumentCount}.
         namespace.type = "user";
       } else if (namespace.github) {
-        // User namespaces, from custom trovu-data-user.
         this.addFetchUrlTemplateToGithubNamespace(namespace);
       }
       namespaces[i] = namespace;
