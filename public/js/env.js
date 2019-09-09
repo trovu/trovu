@@ -115,8 +115,8 @@ class Env {
    * @return {string} language - The default language.
    */
   getDefaultLanguage() {
-    let languageCountry = this.getDefaultLanguageAndCountry();
-    return languageCountry.language;
+    let {language} = this.getDefaultLanguageAndCountry();
+    return language;
   }
 
   /**
@@ -125,8 +125,8 @@ class Env {
    * @return {string} language - The default country.
    */
   getDefaultCountry() {
-    let languageCountry = this.getDefaultLanguageAndCountry();
-    return languageCountry.country;
+    let {country} = this.getDefaultLanguageAndCountry();
+    return country;
   }
 
   /**
