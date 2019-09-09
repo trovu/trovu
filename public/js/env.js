@@ -90,11 +90,7 @@ class Env {
    * @return {array} [language, country] - The default language and country.
    */
   getDefaultLanguageAndCountry() {
-    let languageStr = navigator.language;
-    let language, country;
-    if (languageStr) {
-      [language, country] = languageStr.split("-");
-    }
+    let { language, country } = this.getLanguageAndCountryFromBrowser();
 
     // Set defaults.
     language = language || "en";
@@ -107,6 +103,15 @@ class Env {
       language: language,
       country: country
     };
+  }
+
+  getLanguageAndCountryFromBrowser() {
+    let languageStr = navigator.language;
+    let language, country;
+    if (languageStr) {
+      [language, country] = languageStr.split("-");
+    }
+    return { language, country };
   }
 
   /**
