@@ -2,7 +2,6 @@ import Helper from "./helper.js";
 
 /** Set and remember the environment. */
 class Env {
-
   /**
    * Set helper variables.
    */
@@ -58,7 +57,7 @@ class Env {
    * Get the user configuration from their fork in their Github profile.
    *
    * @param {array} params - Here, 'github' and 'debug' will be used
-   * 
+   *
    * @return {boolean} [getUserConfigFailed] - True if fetch failed.
    */
   async getUserConfig(params) {
@@ -79,9 +78,9 @@ class Env {
 
   /**
    * Create URL query string from an array.
-   * 
+   *
    * @param {array} params - The parameters.
-   * 
+   *
    * @return {string} paramStr - The created URL query string.
    */
   jqueryParam(a) {
@@ -130,9 +129,9 @@ class Env {
   /**
    * Parse parameters from a URL query str.
    * Based on: https://stackoverflow.com/a/3355892/52023
-   * 
+   *
    * @param {string} paramStr - The URL query string to parse.
-   * 
+   *
    * @return {array} params - The parsed parameters.
    */
   jqueryDeparam(paramStr) {
@@ -207,7 +206,7 @@ class Env {
 
   /**
    * Get the default language and country from browser.
-   * 
+   *
    * @return {array} [language, country] - The default language and country.
    */
   getDefaultLanguageAndCountry() {
@@ -232,7 +231,7 @@ class Env {
 
   /**
    * Get the default language.
-   * 
+   *
    * @return {string} language - The default language.
    */
   getDefaultLanguage() {
@@ -242,7 +241,7 @@ class Env {
 
   /**
    * Get the default country.
-   * 
+   *
    * @return {string} language - The default country.
    */
   getDefaultCountry() {
