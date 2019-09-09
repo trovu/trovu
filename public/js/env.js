@@ -14,6 +14,64 @@ class Env {
   }
 
   /**
+   * Set the initial class environment vars either from params or from GET hash string.
+   *
+   * @param {array} [params] - List of parameters to be used in environment.
+   */
+  async populate(params) {
+    if (!params) {
+      params = this.getParams();
+    }
+    // Try Github config.
+    let getUserConfigFailed = await this.getUserConfig(params);
+
+    // Override all with params.
+    Object.assign(this, params);
+
+    if (getUserConfigFailed) {
+      delete this.github;
+    }
+
+    // Default language.
+    if (typeof this.language != "string") {
+      this.language = this.getDefaultLanguage();
+    }
+    // Default country.
+    if (typeof this.country != "string") {
+      this.country = this.getDefaultCountry();
+    }
+    // Default namespaces.
+    if (typeof this.namespaces != "object") {
+      this.namespaces = ["o", this.language, "." + this.country];
+    }
+
+    this.addFetchUrlTemplates(params);
+  }
+
+  /**
+   * Get the user configuration from their fork in their Github profile.
+   *
+   * @param {array} params - Here, 'github' and 'debug' will be used
+   * 
+   * @return {boolean} [getUserConfigFailed] - True if fetch failed.
+   */
+  async getUserConfig(params) {
+    let getUserConfigFailed = false;
+    if (params.github) {
+      let configUrl = this.configUrlTemplate.replace("{%github}", params.github);
+      let configYml = await Helper.fetchAsync(configUrl, false, params.debug);
+      if (configYml) {
+        Object.assign(this, jsyaml.load(configYml));
+      }
+      else {
+        getUserConfigFailed = true;
+        alert("Failed to read Github config from " + configUrl);
+      }
+    }
+    return getUserConfigFailed;
+  }
+
+  /**
    * Create URL query string from an array.
    * 
    * @param {array} params - The parameters.
@@ -241,64 +299,6 @@ class Env {
       }
     }
     return envWithoutFunctions;
-  }
-
-  /**
-   * Set the initial class environment vars either from params or from GET hash string.
-   *
-   * @param {array} [params] - List of parameters to be used in environment.
-   */
-  async populate(params) {
-    if (!params) {
-      params = this.getParams();
-    }
-    // Try Github config.
-    let getUserConfigFailed = await this.getUserConfig(params);
-
-    // Override all with params.
-    Object.assign(this, params);
-
-    if (getUserConfigFailed) {
-      delete this.github;
-    }
-
-    // Default language.
-    if (typeof this.language != "string") {
-      this.language = this.getDefaultLanguage();
-    }
-    // Default country.
-    if (typeof this.country != "string") {
-      this.country = this.getDefaultCountry();
-    }
-    // Default namespaces.
-    if (typeof this.namespaces != "object") {
-      this.namespaces = ["o", this.language, "." + this.country];
-    }
-
-    this.addFetchUrlTemplates(params);
-  }
-
-  /**
-   * Get the user configuration from their fork in their Github profile.
-   *
-   * @param {array} params - Here, 'github' and 'debug' will be used
-   * 
-   * @return {boolean} [getUserConfigFailed] - True if fetch failed.
-   */
-  async getUserConfig(params) {
-    let getUserConfigFailed = false;
-    if (params.github) {
-      let configUrl = this.configUrlTemplate.replace("{%github}", params.github);
-      let configYml = await Helper.fetchAsync(configUrl, false, params.debug);
-      if (configYml) {
-        Object.assign(this, jsyaml.load(configYml));
-      }
-      else {
-        getUserConfigFailed = true;
-        alert("Failed to read Github config from " + configUrl);
-      }
-    }
-    return getUserConfigFailed;
   }
 }
 
