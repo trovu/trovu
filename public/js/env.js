@@ -28,7 +28,7 @@ class Env {
     Object.assign(this, params);
 
     this.setDefaults();
-    this.addFetchUrlTemplatesToNamespaces(params);
+    this.addFetchUrlTemplateToNamespaces(params);
   }
 
   /**
@@ -132,7 +132,7 @@ class Env {
   /**
    * To every namespace, add a fetch URL template.
    */
-  addFetchUrlTemplatesToNamespaces() {
+  addFetchUrlTemplateToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
       this.addFetchUrlTemplateToNamespace(namespace);
       namespaces[i] = namespace;
