@@ -167,7 +167,7 @@ class Env {
       // Set to current user.
       namespace.github = this.github;
     }
-    // Default to Github name.
+    // Default name to Github name.
     if (!namespace.name) {
       namespace.name = namespace.github;
     }
