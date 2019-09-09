@@ -33,7 +33,7 @@ class Env {
     }
 
     this.setDefaults();
-    this.addFetchUrlTemplates(params);
+    this.addFetchUrlTemplatesToNamespaces(params);
   }
 
   setDefaults() {
@@ -250,7 +250,7 @@ class Env {
   /**
    * To every namespace, add a fetch URL template.
    */
-  addFetchUrlTemplates() {
+  addFetchUrlTemplatesToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
       // Site namespaces, from trovu-data.
       if (typeof namespace == "string") {
