@@ -264,7 +264,7 @@ function displaySettings() {
   document.querySelector('#languageSetting').value = env.language;
   document.querySelector('#countrySetting').value = env.country;
 
-  document.querySelector('#settingsEnv').value = jsyaml.dump(env.withoutFunctions());
+  document.querySelector('#settingsEnv').value = jsyaml.dump(env.withoutMethods());
 
   if (env.github) {
     document.querySelector('.using-advanced').classList.remove('d-none');

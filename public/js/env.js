@@ -291,7 +291,7 @@ class Env {
    *
    * @return {object} - Object of env without methods.
    */
-  withoutFunctions() {
+  withoutMethods() {
     let envWithoutFunctions = {};
     for (let key of Object.keys(this)) {
       if (typeof this[key] != "function") {
