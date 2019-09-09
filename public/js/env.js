@@ -32,6 +32,11 @@ class Env {
       delete this.github;
     }
 
+    this.setDefaults();
+    this.addFetchUrlTemplates(params);
+  }
+
+  setDefaults() {
     // Default language.
     if (typeof this.language != "string") {
       this.language = this.getDefaultLanguage();
@@ -44,8 +49,6 @@ class Env {
     if (typeof this.namespaces != "object") {
       this.namespaces = ["o", this.language, "." + this.country];
     }
-
-    this.addFetchUrlTemplates(params);
   }
 
   /**
