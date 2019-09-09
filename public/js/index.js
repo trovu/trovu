@@ -232,7 +232,7 @@ document.getElementById('query-form').onsubmit = function(event) {
   let params = buildParams();
   params['query'] = document.getElementById('query').value; 
 
-  let paramStr = env.jqueryParam(params);
+  let paramStr = Helper.jqueryParam(params);
   let processUrl = 'process/index.html?#' + paramStr;
 
   //console.log(processUrl);
@@ -298,7 +298,7 @@ async function updateConfig() {
 
   let params = buildParams();
   let baseUrl = buildBaseUrl();
-  let urlOpensearch = baseUrl + 'opensearch/?' + env.jqueryParam(params);
+  let urlOpensearch = baseUrl + 'opensearch/?' + Helper.jqueryParam(params);
 
   let linkSearch = document.querySelector('#linkSearch');
 
@@ -314,12 +314,12 @@ async function updateConfig() {
   linkSearch.setAttribute('href', urlOpensearch);
 
   // Set Process URL.
-  let urlProcess = baseUrl + 'process#' + env.jqueryParam(params) + '&query=%s';
+  let urlProcess = baseUrl + 'process#' + Helper.jqueryParam(params) + '&query=%s';
   let preProcessUrl = document.querySelector('.process-url');
 
   preProcessUrl.textContent = urlProcess;
 
-  let paramStr = env.jqueryParam(params);
+  let paramStr = Helper.jqueryParam(params);
   window.location.hash = '#' + paramStr;
 }
 
