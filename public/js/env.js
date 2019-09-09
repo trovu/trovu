@@ -134,17 +134,23 @@ class Env {
    */
   addFetchUrlTemplatesToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
-      if (typeof namespace == "string" && namespace.length < 4) {
-        this.addFetchUrlTemplateToSiteNamespace(namespace);
-      } else if (namespace.url && namespace.name) {
-        // User namespaces may also have completely custom URL (template).
-        // Must contain {%keyword} and {%argumentCount}.
-        namespace.type = "user";
-      } else if (namespace.github) {
-        this.addFetchUrlTemplateToGithubNamespace(namespace);
-      }
+      this.addFetchUrlTemplateToNamespace(namespace);
       namespaces[i] = namespace;
     });
+  }
+
+  addFetchUrlTemplateToNamespace(namespace) {
+    if (typeof namespace == "string" && namespace.length < 4) {
+      this.addFetchUrlTemplateToSiteNamespace(namespace);
+    }
+    else if (namespace.url && namespace.name) {
+      // User namespaces may also have completely custom URL (template).
+      // Must contain {%keyword} and {%argumentCount}.
+      namespace.type = "user";
+    }
+    else if (namespace.github) {
+      this.addFetchUrlTemplateToGithubNamespace(namespace);
+    }
   }
 
   /**
