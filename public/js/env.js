@@ -151,6 +151,7 @@ class Env {
     else if (namespace.github) {
       this.addFetchUrlTemplateToGithubNamespace(namespace);
     }
+    // Yes, a string namespace with length < 4 will be ignored.
   }
 
   /**
