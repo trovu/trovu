@@ -87,7 +87,7 @@ class Env {
   /**
    * Get the default language and country from browser.
    *
-   * @return {array} [language, country] - The default language and country.
+   * @return {object} [language, country] - The default language and country.
    */
   getDefaultLanguageAndCountry() {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
