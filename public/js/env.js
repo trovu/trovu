@@ -115,7 +115,7 @@ class Env {
    * @return {string} language - The default language.
    */
   getDefaultLanguage() {
-    let {language} = this.getDefaultLanguageAndCountry();
+    let { language } = this.getDefaultLanguageAndCountry();
     return language;
   }
 
@@ -125,7 +125,7 @@ class Env {
    * @return {string} language - The default country.
    */
   getDefaultCountry() {
-    let {country} = this.getDefaultLanguageAndCountry();
+    let { country } = this.getDefaultLanguageAndCountry();
     return country;
   }
 
@@ -134,7 +134,7 @@ class Env {
    */
   addFetchUrlTemplatesToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
-      if ((typeof namespace == "string") && (namespace.length < 4)) {
+      if (typeof namespace == "string" && namespace.length < 4) {
         namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
       } else if (namespace.url && namespace.name) {
         // User namespaces may also have completely custom URL (template).
@@ -154,7 +154,8 @@ class Env {
     let name = namespace;
     namespace = {
       name: name,
-      url: "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
+      url:
+        "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
         name +
         "/{%keyword}/{%argumentCount}.yml"
     };
