@@ -164,7 +164,7 @@ class Env {
   }
 
   /**
-   * Add a URL template to a namespace that refers to a Github profile.
+   * Add a URL template to a namespace that refers to a Github user repo.
    */
   addFetchUrlTemplateToGithubNamespace(namespace) {
     if (namespace.github == ".") {
