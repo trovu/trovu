@@ -145,14 +145,14 @@ class Env {
    */
   addFetchUrlTemplateToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
-      this.addFetchUrlTemplateToNamespace(namespace);
+      namespace = this.addFetchUrlTemplateToNamespace(namespace);
       namespaces[i] = namespace;
     });
   }
 
   addFetchUrlTemplateToNamespace(namespace) {
     if (typeof namespace == "string" && namespace.length < 4) {
-      this.addFetchUrlTemplateToSiteNamespace(namespace);
+      namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
     } else if (namespace.url && namespace.name) {
       // User namespaces may also have completely custom URL (template).
       // Must contain {%keyword} and {%argumentCount}.
@@ -161,6 +161,7 @@ class Env {
       this.addFetchUrlTemplateToGithubNamespace(namespace);
     }
     // Yes, a string namespace with length < 4 will be ignored.
+    return namespace;
   }
 
   /**
@@ -177,6 +178,7 @@ class Env {
         "/{%keyword}/{%argumentCount}.yml"
     };
     namespace.type = "site";
+    return namespace;
   }
 
   /**
