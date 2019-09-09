@@ -135,10 +135,8 @@ class Env {
   addFetchUrlTemplatesToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
       // Site namespaces, from trovu-data.
-      if (typeof namespace == "string") {
-        if (namespace.length < 4) {
-          namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
-        }
+      if ((typeof namespace == "string") && (namespace.length < 4)) {
+        namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
         // User namespaces may also have completely custom URL (template).
         // Must contain {%keyword} and {%argumentCount}.
       } else if (namespace.url && namespace.name) {
