@@ -137,15 +137,7 @@ class Env {
       // Site namespaces, from trovu-data.
       if (typeof namespace == "string") {
         if (namespace.length < 4) {
-          let name = namespace;
-          namespace = {
-            name: name,
-            url:
-              "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
-              name +
-              "/{%keyword}/{%argumentCount}.yml"
-          };
-          namespace.type = "site";
+          namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
         }
         // User namespaces may also have completely custom URL (template).
         // Must contain {%keyword} and {%argumentCount}.
@@ -157,6 +149,21 @@ class Env {
       }
       namespaces[i] = namespace;
     });
+  }
+
+  /**
+   * Add a URL template to a namespace that refers to a namespace in trovu-data.
+   */
+  addFetchUrlTemplateToSiteNamespace(namespace) {
+    let name = namespace;
+    namespace = {
+      name: name,
+      url: "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
+        name +
+        "/{%keyword}/{%argumentCount}.yml"
+    };
+    namespace.type = "site";
+    return namespace;
   }
 
   /**
