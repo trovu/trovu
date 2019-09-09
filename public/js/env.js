@@ -57,6 +57,7 @@ class Env {
    * @return {boolean} [getUserConfigFailed] - True if fetch failed.
    */
   async setWithUserConfigFromGithub(params) {
+    // TODO: Check for string and non-emptiness.
     if (!params.github) {
       return;
     }
