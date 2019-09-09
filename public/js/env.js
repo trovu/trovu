@@ -106,6 +106,11 @@ class Env {
     };
   }
 
+  /**
+   * Get the default language and country from browser.
+   *
+   * @return {object} [language, country] - The default language and country.
+   */
   getLanguageAndCountryFromBrowser() {
     let languageStr = navigator.language;
     let language, country;
