@@ -134,15 +134,14 @@ class Env {
    */
   addFetchUrlTemplatesToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
-      // Site namespaces, from trovu-data.
       if ((typeof namespace == "string") && (namespace.length < 4)) {
         namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
+      } else if (namespace.url && namespace.name) {
         // User namespaces may also have completely custom URL (template).
         // Must contain {%keyword} and {%argumentCount}.
-      } else if (namespace.url && namespace.name) {
         namespace.type = "user";
-        // User namespaces, from custom trovu-data-user.
       } else if (namespace.github) {
+        // User namespaces, from custom trovu-data-user.
         this.addFetchUrlTemplateToGithubNamespace(namespace);
       }
       namespaces[i] = namespace;
