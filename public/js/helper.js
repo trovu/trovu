@@ -1,6 +1,5 @@
 /** Static class containing helper. */
 class Helper {
-
   /**
    * Split a string n times, keep all additional matches in the last part as one string.
    *

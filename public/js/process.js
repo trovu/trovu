@@ -3,7 +3,6 @@ import Handle from "./handle.js";
 import Helper from "./helper.js";
 
 document.querySelector("body").onload = async function(event) {
-
   let env = new Env();
   await env.populate();
 
@@ -13,7 +12,7 @@ document.querySelector("body").onload = async function(event) {
   if (!redirectUrl) {
     let params = env.getParams();
     params.status = "not_found";
-    let paramStr = env.jqueryParam(params);
+    let paramStr = Helper.jqueryParam(params);
     redirectUrl = "../index.html#" + paramStr;
   }
 
