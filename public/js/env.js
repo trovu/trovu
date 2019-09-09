@@ -147,13 +147,11 @@ class Env {
   addFetchUrlTemplateToNamespace(namespace) {
     if (typeof namespace == "string" && namespace.length < 4) {
       this.addFetchUrlTemplateToSiteNamespace(namespace);
-    }
-    else if (namespace.url && namespace.name) {
+    } else if (namespace.url && namespace.name) {
       // User namespaces may also have completely custom URL (template).
       // Must contain {%keyword} and {%argumentCount}.
       namespace.type = "user";
-    }
-    else if (namespace.github) {
+    } else if (namespace.github) {
       this.addFetchUrlTemplateToGithubNamespace(namespace);
     }
     // Yes, a string namespace with length < 4 will be ignored.
