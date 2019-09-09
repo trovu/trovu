@@ -252,27 +252,13 @@ class Env {
     if (!params) {
       params = this.getParams();
     }
-    let githubFailed;
-
     // Try Github config.
-    if (params.github) {
-      let configUrl = this.configUrlTemplate.replace(
-        "{%github}",
-        params.github
-      );
-      let configYml = await Helper.fetchAsync(configUrl, false, params.debug);
-      if (configYml) {
-        Object.assign(this, jsyaml.load(configYml));
-      } else {
-        githubFailed = true;
-        alert("Failed to read Github config from " + configUrl);
-      }
-    }
+    let getUserConfigFailed = await this.getUserConfig(params);
 
     // Override all with params.
     Object.assign(this, params);
 
-    if (githubFailed) {
+    if (getUserConfigFailed) {
       delete this.github;
     }
 
@@ -290,6 +276,22 @@ class Env {
     }
 
     this.addFetchUrlTemplates(params);
+  }
+
+  async getUserConfig(params) {
+    let getUserConfigFailed = false;
+    if (params.github) {
+      let configUrl = this.configUrlTemplate.replace("{%github}", params.github);
+      let configYml = await Helper.fetchAsync(configUrl, false, params.debug);
+      if (configYml) {
+        Object.assign(this, jsyaml.load(configYml));
+      }
+      else {
+        getUserConfigFailed = true;
+        alert("Failed to read Github config from " + configUrl);
+      }
+    }
+    return getUserConfigFailed;
   }
 }
 
