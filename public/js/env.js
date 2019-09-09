@@ -149,10 +149,11 @@ class Env {
 
   /**
    * Add a URL template to a namespace that refers to a namespace in trovu-data.
+   *
+   * @param {string} name - The namespace name.
    */
-  addFetchUrlTemplateToSiteNamespace(namespace) {
-    let name = namespace;
-    namespace = {
+  addFetchUrlTemplateToSiteNamespace(name) {
+    let namespace = {
       name: name,
       url:
         "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
