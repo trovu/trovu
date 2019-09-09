@@ -278,6 +278,13 @@ class Env {
     this.addFetchUrlTemplates(params);
   }
 
+  /**
+   * Get the user configuration from their fork in their Github profile.
+   *
+   * @param {array} params - Here, 'github' and 'debug' will be used
+   * 
+   * @return {boolean} [getUserConfigFailed] - True if fetch failed.
+   */
   async getUserConfig(params) {
     let getUserConfigFailed = false;
     if (params.github) {
