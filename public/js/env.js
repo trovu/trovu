@@ -153,22 +153,29 @@ class Env {
         namespace.type = "user";
         // User namespaces, from custom trovu-data-user.
       } else if (namespace.github) {
-        if (namespace.github == ".") {
-          // Set to current user.
-          namespace.github = this.github;
-        }
-        // Default to Github name.
-        if (!namespace.name) {
-          namespace.name = namespace.github;
-        }
-        namespace.url =
-          "https://raw.githubusercontent.com/" +
-          namespace.github +
-          "/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml";
-        namespace.type = "user";
+        this.addFetchUrlTemplateToGithubNamespace(namespace);
       }
       namespaces[i] = namespace;
     });
+  }
+
+  /**
+   * Add a URL template to a namespace that refers to a Github profile.
+   */
+  addFetchUrlTemplateToGithubNamespace(namespace) {
+    if (namespace.github == ".") {
+      // Set to current user.
+      namespace.github = this.github;
+    }
+    // Default to Github name.
+    if (!namespace.name) {
+      namespace.name = namespace.github;
+    }
+    namespace.url =
+      "https://raw.githubusercontent.com/" +
+      namespace.github +
+      "/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml";
+    namespace.type = "user";
   }
 
   /**
