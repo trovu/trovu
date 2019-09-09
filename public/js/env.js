@@ -244,9 +244,9 @@ class Env {
   }
 
   /**
-   * Set the class variables according to params.
+   * Set the initial class environment vars either from params or from GET hash string.
    *
-   * @param {array} [params] - List of params to be parsed.
+   * @param {array} [params] - List of parameters to be used in environment.
    */
   async populate(params) {
     if (!params) {
