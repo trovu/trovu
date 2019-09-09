@@ -36,6 +36,9 @@ class Env {
     this.addFetchUrlTemplatesToNamespaces(params);
   }
 
+  /**
+   * Set default environment variables if they are still empty.
+   */
   setDefaults() {
     // Default language.
     if (typeof this.language != "string") {
