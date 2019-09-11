@@ -14,12 +14,12 @@ async function testCall(call) {
   let url = setCallUrl(call);
   await page.goto(url);
   await page.reload();
-  await checkIfRedirectUrlPresent(call);
+  await checkIfRedirectUrlPresent(call.expectedRedirectUrl);
 }
 
-async function checkIfRedirectUrlPresent(call) {
+async function checkIfRedirectUrlPresent(expectedRedirectUrl) {
   await page.waitForFunction('document.querySelector("body").innerText.includes("Redirect to:")');
-  await expect(page.content()).resolves.toMatch(call.expectedRedirectUrl.replace(/&/g, "&amp;"));
+  await expect(page.content()).resolves.toMatch(expectedRedirectUrl.replace(/&/g, "&amp;"));
 }
 
 function setCallUrl(call) {
