@@ -7,15 +7,21 @@ const calls = yaml.safeLoad(fs.readFileSync("./__tests__/calls.yml", "utf8"));
 
 for (let call of calls) {
   test(JSON.stringify(call), async () => {
-    let url = setCallUrl(call);
-    await page.goto(url);
-    await page.reload();
-    await page.waitForFunction(
-      'document.querySelector("body").innerText.includes("Redirect to:")'
-    );
-    await expect(page.content()).resolves.toMatch(call.expectedRedirectUrl.replace(/&/g, "&amp;"));
+    await testCall(call);
   });
 }
+async function testCall(call) {
+  let url = setCallUrl(call);
+  await page.goto(url);
+  await page.reload();
+  await checkIfRedirectUrlPresent(call);
+}
+
+async function checkIfRedirectUrlPresent(call) {
+  await page.waitForFunction('document.querySelector("body").innerText.includes("Redirect to:")');
+  await expect(page.content()).resolves.toMatch(call.expectedRedirectUrl.replace(/&/g, "&amp;"));
+}
+
 function setCallUrl(call) {
   let url = docroot;
   for (let paramName of ["language", "country", "github", "query"]) {
