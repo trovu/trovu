@@ -31,4 +31,3 @@ function setCallUrl(call) {
   }
   return url;
 }
-
