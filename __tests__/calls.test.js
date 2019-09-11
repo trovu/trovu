@@ -11,7 +11,7 @@ for (let call of calls) {
   });
 }
 async function testCall(call) {
-  let url = setCallUrl(call);
+  const url = setCallUrl(call);
   await page.goto(url);
   await page.reload();
   await checkIfRedirectUrlPresent(call.expectedRedirectUrl);
