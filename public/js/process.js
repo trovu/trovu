@@ -10,10 +10,7 @@ document.querySelector("body").onload = async function(event) {
   let redirectUrl = await handle.getRedirectUrl();
 
   if (!redirectUrl) {
-    let params = env.getParams();
-    params.status = "not_found";
-    let paramStr = Helper.jqueryParam(params);
-    redirectUrl = "../index.html#" + paramStr;
+    redirectUrl = handleNotFound(env);
   }
 
   if (env.debug) {
@@ -23,3 +20,11 @@ document.querySelector("body").onload = async function(event) {
 
   window.location.href = redirectUrl;
 };
+function handleNotFound(env) {
+  let params = env.getParams();
+  params.status = "not_found";
+  let paramStr = Helper.jqueryParam(params);
+  const redirectUrl = "../index.html#" + paramStr;
+  return redirectUrl;
+}
+
