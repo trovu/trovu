@@ -18,6 +18,6 @@ for (let call of calls) {
     await page.waitForFunction(
       'document.querySelector("body").innerText.includes("Redirect to:")'
     );
-    await expect(page).toMatch(call.expectedRedirectUrl);
+    await expect(page.content()).resolves.toMatch(call.expectedRedirectUrl.replace(/&/g, "&amp;"));
   });
 }
