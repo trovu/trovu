@@ -9,3 +9,7 @@
 - github: georgjaehnig
   query: foobar
   expectedRedirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
+- language: en
+  country: us
+  query: someQueryThatWillNotSuccess
+  expectedRedirectUrl: ../index.html#debug=1&language=en&country=us&query=someQueryThatWillNotSuccess&status=not_found
