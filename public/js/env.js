@@ -150,6 +150,13 @@ class Env {
     });
   }
 
+  /**
+   * Add a fetch URL template to a namespace.
+   * 
+   * @param {(string|Object)} namespace - The namespace to add the URL template to.
+   * 
+   * @return {Object} namespace - The namespace with the added URL template.
+   */
   addFetchUrlTemplateToNamespace(namespace) {
     if (typeof namespace == "string" && namespace.length < 4) {
       namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
