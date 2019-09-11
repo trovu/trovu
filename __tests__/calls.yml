@@ -1,11 +1,11 @@
 - language: de
   country: de
-  query: db b,m,8,mo
-  expectedRedirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1
+  query: db b,m,8,1.1.20
+  expectedRedirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - language: de
   country: pl
-  query: .de.db b,m,8,mo
-  expectedRedirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=09.09.2019&timesel=depart&start=1
+  query: .de.db b,m,8,1.1.2020
+  expectedRedirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - github: georgjaehnig
   query: foobar
   expectedRedirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
