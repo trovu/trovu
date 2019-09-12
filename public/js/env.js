@@ -22,7 +22,10 @@ class Env {
       params = this.getParams();
     }
 
-    await this.setWithUserConfigFromGithub(params);
+    // TODO: Check for string and non-emptiness.
+    if (params.github) {
+      await this.setWithUserConfigFromGithub(params);
+    }
 
     // Override all with params.
     Object.assign(this, params);
@@ -57,10 +60,6 @@ class Env {
    * @return {boolean} [getUserConfigFailed] - True if fetch failed.
    */
   async setWithUserConfigFromGithub(params) {
-    // TODO: Check for string and non-emptiness.
-    if (!params.github) {
-      return;
-    }
     let configUrl = this.configUrlTemplate.replace("{%github}", params.github);
     let configYml = await Helper.fetchAsync(configUrl, false, params.debug);
     if (configYml) {
