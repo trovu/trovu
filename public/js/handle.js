@@ -129,7 +129,9 @@ class Handle {
       var matches = placeholders[argumentName];
       for (let match in matches) {
         argument = await this.processAttributes(argument, matches[match]);
-        str = str.replace(match, argument);
+        while (str.includes(match)) {
+          str = str.replace(match, argument);
+        }
       }
     }
     return str;
