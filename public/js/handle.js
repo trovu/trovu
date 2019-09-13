@@ -58,10 +58,10 @@ class Handle {
    *   }
    */
   getPlaceholdersFromString(str, prefix) {
-    var pattern = "{" + prefix + "(.+?)}";
-    var re = RegExp(pattern, "g");
-    var match;
-    var placeholders = {};
+    const pattern = "{" + prefix + "(.+?)}";
+    const re = RegExp(pattern, "g");
+    let match;
+    const placeholders = {};
 
     do {
       match = re.exec(str);
@@ -71,18 +71,17 @@ class Handle {
 
       // Example value:
       // match[1] = 'query|encoding=utf-8|another=attribute'
-      var nameAndAttributes = match[1].split("|");
+      const nameAndAttributes = match[1].split("|");
 
       // Example value:
       // name = 'query'
-      var name = nameAndAttributes.shift();
+      const name = nameAndAttributes.shift();
 
-      var placeholder = {};
+      const placeholder = {};
       // Example value:
       // name_and_attributes = ['encoding=utf-8', 'another=attribute']
-      for (let attrStr of nameAndAttributes) {
-        let attrName, attrValue;
-        [attrName, attrValue] = attrStr.split("=", 2);
+      for (const attrStr of nameAndAttributes) {
+        const [attrName, attrValue] = attrStr.split("=", 2);
         placeholder[attrName] = attrValue;
       }
       placeholders[name] = placeholders[name] || {};
