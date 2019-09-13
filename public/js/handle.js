@@ -120,9 +120,9 @@ class Handle {
   async replaceArguments(str, args) {
     const locale = this.env.language + "-" + this.env.country.toUpperCase();
 
-    var placeholders = this.getArgumentsFromString(str);
+    const placeholders = this.getArgumentsFromString(str);
 
-    for (let argumentName in placeholders) {
+    for (const argumentName in placeholders) {
       const argument = args.shift();
 
       // Copy argument, because different placeholders can cause
