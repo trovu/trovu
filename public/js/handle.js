@@ -3,7 +3,6 @@ import Helper from "./helper.js";
 
 /** Class for handling a call. */
 class Handle {
-
   /**
    * Set the environment.
    *
@@ -23,10 +22,12 @@ class Handle {
    * @return {string} fetchUrl        - The URL with the replaced placeholders.
    */
   buildFetchUrl(namespace, keyword, argumentCount) {
-
     let fetchUrl = namespace.url;
 
-    fetchUrl = fetchUrl.replace("{%namespace}", encodeURIComponent(namespace.name));
+    fetchUrl = fetchUrl.replace(
+      "{%namespace}",
+      encodeURIComponent(namespace.name)
+    );
     fetchUrl = fetchUrl.replace("{%keyword}", encodeURIComponent(keyword));
     fetchUrl = fetchUrl.replace("{%argumentCount}", argumentCount);
 
@@ -62,11 +63,11 @@ class Handle {
     const re = RegExp(pattern, "g");
     let match;
     const placeholders = {};
-    while (match = re.exec(str) ) {
+    while ((match = re.exec(str))) {
       const { name, placeholder } = this.getPlaceholderFromMatch(match);
       placeholders[name] = placeholders[name] || {};
       placeholders[name][match[0]] = placeholder;
-    } 
+    }
     return placeholders;
   }
 
@@ -136,9 +137,19 @@ class Handle {
       var matches = placeholders[argumentName];
       for (let match in matches) {
         var attributes = matches[match];
-        processedArgument = await this.processAttributeType(attributes, processedArgument, locale);
-        processedArgument = this.processAttributeTransform(attributes, processedArgument);
-        processedArgument = this.processAttributeEncoding(attributes, processedArgument);
+        processedArgument = await this.processAttributeType(
+          attributes,
+          processedArgument,
+          locale
+        );
+        processedArgument = this.processAttributeTransform(
+          attributes,
+          processedArgument
+        );
+        processedArgument = this.processAttributeEncoding(
+          attributes,
+          processedArgument
+        );
         str = str.replace(match, processedArgument);
       }
     }
@@ -148,10 +159,18 @@ class Handle {
   async processAttributeType(attributes, processedArgument, locale) {
     switch (attributes.type) {
       case "date":
-        processedArgument = await this.processTypeDate(processedArgument, locale, attributes);
+        processedArgument = await this.processTypeDate(
+          processedArgument,
+          locale,
+          attributes
+        );
         break;
       case "time":
-        processedArgument = await this.processTypeTime(processedArgument, locale, attributes);
+        processedArgument = await this.processTypeTime(
+          processedArgument,
+          locale,
+          attributes
+        );
         break;
       case "city":
         processedArgument = await this.processTypeCity(processedArgument);
@@ -192,7 +211,12 @@ class Handle {
 
   async processTypeCity(processedArgument) {
     const cityModule = await import("./type/city.js");
-    let city = await cityModule.default.parse(processedArgument, this.env.country, this.env.reload, this.env.debug);
+    let city = await cityModule.default.parse(
+      processedArgument,
+      this.env.country,
+      this.env.reload,
+      this.env.debug
+    );
     // If city could be parsed:
     // Set argument.
     if (city) {
@@ -274,7 +298,7 @@ class Handle {
    * @param {string} keyword    - The keyword of the query.
    * @param {array} args        - The arguments of the query.
    *
-   * @return {array} 
+   * @return {array}
    *   - {array}   shortcuts    - The array of found shortcuts.
    *   - {boolean} found        - True if shortcuts were found, otherwise false.
    */
@@ -284,11 +308,7 @@ class Handle {
     let found = false;
     let promises = [];
     for (let namespace of this.env.namespaces) {
-      var fetchUrl = this.buildFetchUrl(
-        namespace,
-        keyword,
-        args.length
-      );
+      var fetchUrl = this.buildFetchUrl(namespace, keyword, args.length);
       if (this.env.debug) {
         Helper.log("Request: " + fetchUrl);
       } else {
@@ -324,7 +344,7 @@ class Handle {
   /**
    * Given this.env, get the redirect URL.
    *
-   * @return {string} redirectUrl - The URL to redirect to. 
+   * @return {string} redirectUrl - The URL to redirect to.
    */
   async getRedirectUrl() {
     if (!this.env.query) {
