@@ -118,7 +118,7 @@ class Handle {
    * @return {string} str   - The string with the replaced placeholders.
    */
   async replaceArguments(str, args) {
-    let locale = this.env.language + "-" + this.env.country.toUpperCase();
+    const locale = this.env.language + "-" + this.env.country.toUpperCase();
 
     var placeholders = this.getArgumentsFromString(str);
 
