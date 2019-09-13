@@ -136,25 +136,8 @@ class Handle {
       var matches = placeholders[argumentName];
       for (let match in matches) {
         var attributes = matches[match];
-        switch (attributes.type) {
-          case "date":
-            processedArgument = await this.processDate(processedArgument, locale, attributes);
-            break;
-          case "time":
-            processedArgument = await this.processTime(processedArgument, locale, attributes);
-            break;
-          case "city":
-            processedArgument = await this.processCity(processedArgument);
-            break;
-        }
-        switch (attributes.transform) {
-          case "uppercase":
-            processedArgument = processedArgument.toUpperCase();
-            break;
-          case "lowercase":
-            processedArgument = processedArgument.toLowerCase();
-            break;
-        }
+        processedArgument = await this.processTypes(attributes, processedArgument, locale);
+        processedArgument = this.processAttributeTransform(attributes, processedArgument);
         switch (attributes.encoding) {
           case "iso-8859-1":
             processedArgument = escape(processedArgument);
@@ -169,6 +152,21 @@ class Handle {
       }
     }
     return str;
+  }
+
+  async processTypes(attributes, processedArgument, locale) {
+    switch (attributes.type) {
+      case "date":
+        processedArgument = await this.processDate(processedArgument, locale, attributes);
+        break;
+      case "time":
+        processedArgument = await this.processTime(processedArgument, locale, attributes);
+        break;
+      case "city":
+        processedArgument = await this.processCity(processedArgument);
+        break;
+    }
+    return processedArgument;
   }
 
   async processDate(processedArgument, locale, attributes) {
@@ -208,6 +206,18 @@ class Handle {
     // Set argument.
     if (city) {
       processedArgument = city;
+    }
+    return processedArgument;
+  }
+
+  processAttributeTransform(attributes, processedArgument) {
+    switch (attributes.transform) {
+      case "uppercase":
+        processedArgument = processedArgument.toUpperCase();
+        break;
+      case "lowercase":
+        processedArgument = processedArgument.toLowerCase();
+        break;
     }
     return processedArgument;
   }
