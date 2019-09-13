@@ -107,10 +107,7 @@ class Env {
     language = language.toLowerCase();
     country = country.toLowerCase();
 
-    return {
-      language: language,
-      country: country
-    };
+    return { language, country };
   }
 
   /**
