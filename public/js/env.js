@@ -181,7 +181,7 @@ class Env {
    * @param {string} name - The namespace name.
    */
   addFetchUrlTemplateToSiteNamespace(name) {
-    let namespace = {
+    const namespace = {
       name: name,
       type: "site",
       url:
@@ -217,8 +217,8 @@ class Env {
    * @return {object} - Object of env without methods.
    */
   get withoutMethods() {
-    let envWithoutFunctions = {};
-    for (let key of Object.keys(this)) {
+    const envWithoutFunctions = {};
+    for (const key of Object.keys(this)) {
       if (typeof this[key] != "function") {
         envWithoutFunctions[key] = this[key];
       }
