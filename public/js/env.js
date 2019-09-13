@@ -183,12 +183,12 @@ class Env {
   addFetchUrlTemplateToSiteNamespace(name) {
     let namespace = {
       name: name,
+      type: "site",
       url:
         "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
         name +
         "/{%keyword}/{%argumentCount}.yml"
     };
-    namespace.type = "site";
     return namespace;
   }
 
