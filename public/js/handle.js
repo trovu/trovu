@@ -25,17 +25,11 @@ class Handle {
    */
   buildFetchUrl(namespace, keyword, argumentCount) {
 
-    const replacements = {
-      "{%namespace}": encodeURIComponent(namespace.name),
-      "{%keyword}": encodeURIComponent(keyword),
-      "{%argumentCount}": argumentCount
-    };
-
     let fetchUrl = namespace.url;
-    // Replace all occurences in replacements.
-    Object.keys(replacements).map(key => {
-      fetchUrl = fetchUrl.replace(key, replacements[key]);
-    });
+
+    fetchUrl = fetchUrl.replace("{%namespace}", encodeURIComponent(namespace.name));
+    fetchUrl = fetchUrl.replace("{%keyword}", encodeURIComponent(keyword));
+    fetchUrl = fetchUrl.replace("{%argumentCount}", argumentCount);
 
     return fetchUrl;
   }
