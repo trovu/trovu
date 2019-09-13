@@ -134,7 +134,6 @@ class Handle {
       // An argument can have multiple matches,
       // so go over all of them.
       var matches = placeholders[argumentName];
-      let match;
       for (let match in matches) {
         var attributes = matches[match];
         switch (attributes.type) {
