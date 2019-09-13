@@ -157,19 +157,19 @@ class Handle {
   async processTypes(attributes, processedArgument, locale) {
     switch (attributes.type) {
       case "date":
-        processedArgument = await this.processDate(processedArgument, locale, attributes);
+        processedArgument = await this.processTypeDate(processedArgument, locale, attributes);
         break;
       case "time":
-        processedArgument = await this.processTime(processedArgument, locale, attributes);
+        processedArgument = await this.processTypeTime(processedArgument, locale, attributes);
         break;
       case "city":
-        processedArgument = await this.processCity(processedArgument);
+        processedArgument = await this.processTypeCity(processedArgument);
         break;
     }
     return processedArgument;
   }
 
-  async processDate(processedArgument, locale, attributes) {
+  async processTypeDate(processedArgument, locale, attributes) {
     const dateModule = await import("./type/date.js");
     let date = await dateModule.default.parse(processedArgument, locale);
     // If date could be parsed:
@@ -184,7 +184,7 @@ class Handle {
     return processedArgument;
   }
 
-  async processTime(processedArgument, locale, attributes) {
+  async processTypeTime(processedArgument, locale, attributes) {
     const timeModule = await import("./type/time.js");
     let time = await timeModule.default.parse(processedArgument, locale);
     // If time could be parsed:
@@ -199,7 +199,7 @@ class Handle {
     return processedArgument;
   }
 
-  async processCity(processedArgument) {
+  async processTypeCity(processedArgument) {
     const cityModule = await import("./type/city.js");
     let city = await cityModule.default.parse(processedArgument, this.env.country, this.env.reload, this.env.debug);
     // If city could be parsed:
