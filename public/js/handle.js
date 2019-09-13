@@ -136,24 +136,18 @@ class Handle {
       // so go over all of them.
       var matches = placeholders[argumentName];
       for (let match in matches) {
-        var attributes = matches[match];
-        processedArgument = await this.processAttributeType(
-          attributes,
-          processedArgument,
-          locale
-        );
-        processedArgument = this.processAttributeTransform(
-          attributes,
-          processedArgument
-        );
-        processedArgument = this.processAttributeEncoding(
-          attributes,
-          processedArgument
-        );
+        processedArgument = await this.processAttributes(processedArgument, matches[match], locale);
         str = str.replace(match, processedArgument);
       }
     }
     return str;
+  }
+
+  async processAttributes(processedArgument, attributes, locale) {
+    processedArgument = await this.processAttributeType(attributes, processedArgument, locale);
+    processedArgument = this.processAttributeTransform(attributes, processedArgument);
+    processedArgument = this.processAttributeEncoding(attributes, processedArgument);
+    return processedArgument;
   }
 
   async processAttributeType(attributes, processedArgument, locale) {
