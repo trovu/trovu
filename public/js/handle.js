@@ -119,8 +119,6 @@ class Handle {
    * @return {string} str   - The string with the replaced placeholders.
    */
   async replaceArguments(str, args) {
-    const locale = this.env.language + "-" + this.env.country.toUpperCase();
-
     const placeholders = this.getArgumentsFromString(str);
 
     for (const argumentName in placeholders) {
@@ -136,21 +134,22 @@ class Handle {
       // so go over all of them.
       var matches = placeholders[argumentName];
       for (let match in matches) {
-        processedArgument = await this.processAttributes(processedArgument, matches[match], locale);
+        processedArgument = await this.processAttributes(processedArgument, matches[match]);
         str = str.replace(match, processedArgument);
       }
     }
     return str;
   }
 
-  async processAttributes(processedArgument, attributes, locale) {
-    processedArgument = await this.processAttributeType(attributes, processedArgument, locale);
+  async processAttributes(processedArgument, attributes) {
+    processedArgument = await this.processAttributeType(attributes, processedArgument);
     processedArgument = this.processAttributeTransform(attributes, processedArgument);
     processedArgument = this.processAttributeEncoding(attributes, processedArgument);
     return processedArgument;
   }
 
-  async processAttributeType(attributes, processedArgument, locale) {
+  async processAttributeType(attributes, processedArgument) {
+    const locale = this.env.language + "-" + this.env.country.toUpperCase();
     switch (attributes.type) {
       case "date":
         processedArgument = await this.processTypeDate(
