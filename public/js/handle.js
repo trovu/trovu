@@ -63,12 +63,7 @@ class Handle {
     let match;
     const placeholders = {};
 
-    do {
-      match = re.exec(str);
-      if (!match) {
-        break;
-      }
-
+    while (match = re.exec(str) ) {
       // Example value:
       // match[1] = 'query|encoding=utf-8|another=attribute'
       const nameAndAttributes = match[1].split("|");
@@ -86,7 +81,7 @@ class Handle {
       }
       placeholders[name] = placeholders[name] || {};
       placeholders[name][match[0]] = placeholder;
-    } while (match);
+    } 
 
     return placeholders;
   }
