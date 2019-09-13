@@ -380,6 +380,8 @@ class Handle {
         extraNamespace = "." + extraNamespace;
       }
 
+      extraNamespace = this.env.addFetchUrlTemplateToNamespace(extraNamespace);
+
       // Add to namespaces.
       this.env.namespaces.push(extraNamespace);
 
