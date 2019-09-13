@@ -60,7 +60,7 @@ class Env {
    * @return {boolean} [getUserConfigFailed] - True if fetch failed.
    */
   async setWithUserConfigFromGithub(params) {
-    let { config, configUrl } = await this.getUserConfigFromGithub(params);
+    const { config, configUrl } = await this.getUserConfigFromGithub(params);
     if (config) {
       Object.assign(this, config);
     } else {
@@ -69,9 +69,9 @@ class Env {
   }
 
   async getUserConfigFromGithub(params) {
-    let configUrl = this.configUrlTemplate.replace("{%github}", params.github);
-    let configYml = await Helper.fetchAsync(configUrl, false, params.debug);
-    const config = false;
+    const configUrl = this.configUrlTemplate.replace("{%github}", params.github);
+    const configYml = await Helper.fetchAsync(configUrl, false, params.debug);
+    let config = false;
     if (configYml) {
       config = jsyaml.load(configYml);
     }
