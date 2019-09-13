@@ -23,20 +23,15 @@ class Handle {
    *
    * @return {string} fetchUrl        - The URL with the replaced placeholders.
    */
-  buildFetchUrl(namespace, keyword, argumentCount, fetchUrlTemplate) {
-    if (!fetchUrlTemplate) {
-      fetchUrlTemplate = this.env.fetchUrlTemplateDefault;
-    }
+  buildFetchUrl(namespace, keyword, argumentCount) {
 
-    namespace = encodeURIComponent(namespace);
-    keyword = encodeURIComponent(keyword);
-
-    var replacements = {
-      "{%namespace}": namespace,
-      "{%keyword}": keyword,
+    const replacements = {
+      "{%namespace}": encodeURIComponent(namespace.name),
+      "{%keyword}": encodeURIComponent(keyword),
       "{%argumentCount}": argumentCount
     };
-    let fetchUrl = fetchUrlTemplate;
+
+    let fetchUrl = namespace.url;
     // Replace all occurences in replacements.
     Object.keys(replacements).map(key => {
       fetchUrl = fetchUrl.replace(key, replacements[key]);
@@ -295,8 +290,7 @@ class Handle {
       var fetchUrl = this.buildFetchUrl(
         namespace,
         keyword,
-        args.length,
-        namespace.url
+        args.length
       );
       if (this.env.debug) {
         Helper.log("Request: " + fetchUrl);
