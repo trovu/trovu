@@ -138,58 +138,13 @@ class Handle {
         var attributes = matches[match];
         switch (attributes.type) {
           case "date":
-            const dateModule = await import("./type/date.js");
-            let date = await dateModule.default.parse(
-              processedArgument,
-              locale
-            );
-
-            // If date could be parsed:
-            // Set argument.
-            if (date && date.format() != "Invalid date") {
-              let format = "YYYY-MM-DD";
-              if (attributes.output) {
-                format = attributes.output;
-              }
-              processedArgument = date.format(format);
-            }
-
+            processedArgument = await this.processDate(processedArgument, locale, attributes);
             break;
-
           case "time":
-            const timeModule = await import("./type/time.js");
-            let time = await timeModule.default.parse(
-              processedArgument,
-              locale
-            );
-
-            // If time could be parsed:
-            // Set argument.
-            if (time && time.format() != "Invalid time") {
-              let format = "HH:mm";
-              if (attributes.output) {
-                format = attributes.output;
-              }
-              processedArgument = time.format(format);
-            }
-
+            processedArgument = await this.processTime(processedArgument, locale, attributes);
             break;
-
           case "city":
-            const cityModule = await import("./type/city.js");
-            let city = await cityModule.default.parse(
-              processedArgument,
-              this.env.country,
-              this.env.reload,
-              this.env.debug
-            );
-
-            // If city could be parsed:
-            // Set argument.
-            if (city) {
-              processedArgument = city;
-            }
-
+            processedArgument = await this.processCity(processedArgument);
             break;
         }
         switch (attributes.transform) {
@@ -214,6 +169,47 @@ class Handle {
       }
     }
     return str;
+  }
+
+  async processDate(processedArgument, locale, attributes) {
+    const dateModule = await import("./type/date.js");
+    let date = await dateModule.default.parse(processedArgument, locale);
+    // If date could be parsed:
+    // Set argument.
+    if (date && date.format() != "Invalid date") {
+      let format = "YYYY-MM-DD";
+      if (attributes.output) {
+        format = attributes.output;
+      }
+      processedArgument = date.format(format);
+    }
+    return processedArgument;
+  }
+
+  async processTime(processedArgument, locale, attributes) {
+    const timeModule = await import("./type/time.js");
+    let time = await timeModule.default.parse(processedArgument, locale);
+    // If time could be parsed:
+    // Set argument.
+    if (time && time.format() != "Invalid time") {
+      let format = "HH:mm";
+      if (attributes.output) {
+        format = attributes.output;
+      }
+      processedArgument = time.format(format);
+    }
+    return processedArgument;
+  }
+
+  async processCity(processedArgument) {
+    const cityModule = await import("./type/city.js");
+    let city = await cityModule.default.parse(processedArgument, this.env.country, this.env.reload, this.env.debug);
+    // If city could be parsed:
+    // Set argument.
+    if (city) {
+      processedArgument = city;
+    }
+    return processedArgument;
   }
 
   /**
