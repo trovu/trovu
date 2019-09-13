@@ -136,7 +136,7 @@ class Handle {
       var matches = placeholders[argumentName];
       for (let match in matches) {
         var attributes = matches[match];
-        processedArgument = await this.processTypes(attributes, processedArgument, locale);
+        processedArgument = await this.processAttributeType(attributes, processedArgument, locale);
         processedArgument = this.processAttributeTransform(attributes, processedArgument);
         processedArgument = this.processAttributeEncoding(attributes, processedArgument);
         str = str.replace(match, processedArgument);
@@ -145,7 +145,7 @@ class Handle {
     return str;
   }
 
-  async processTypes(attributes, processedArgument, locale) {
+  async processAttributeType(attributes, processedArgument, locale) {
     switch (attributes.type) {
       case "date":
         processedArgument = await this.processTypeDate(processedArgument, locale, attributes);
