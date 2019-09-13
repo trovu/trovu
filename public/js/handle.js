@@ -123,11 +123,11 @@ class Handle {
     var placeholders = this.getArgumentsFromString(str);
 
     for (let argumentName in placeholders) {
-      var argument = args.shift();
+      const argument = args.shift();
 
       // Copy argument, because different placeholders can cause
       // different processing.
-      var processedArgument = argument;
+      let processedArgument = argument;
 
       processedArgument = processedArgument.trim();
 
