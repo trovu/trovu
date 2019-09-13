@@ -65,7 +65,6 @@ class Env {
     if (configYml) {
       Object.assign(this, jsyaml.load(configYml));
     } else {
-      delete this.github;
       alert("Failed to read Github config from " + configUrl);
     }
   }
