@@ -62,28 +62,29 @@ class Handle {
     const re = RegExp(pattern, "g");
     let match;
     const placeholders = {};
-
     while (match = re.exec(str) ) {
-      // Example value:
-      // match[1] = 'query|encoding=utf-8|another=attribute'
-      const nameAndAttributes = match[1].split("|");
-
-      // Example value:
-      // name = 'query'
-      const name = nameAndAttributes.shift();
-
-      const placeholder = {};
-      // Example value:
-      // name_and_attributes = ['encoding=utf-8', 'another=attribute']
-      for (const attrStr of nameAndAttributes) {
-        const [attrName, attrValue] = attrStr.split("=", 2);
-        placeholder[attrName] = attrValue;
-      }
+      const { name, placeholder } = this.getPlaceholderFromMatch(match);
       placeholders[name] = placeholders[name] || {};
       placeholders[name][match[0]] = placeholder;
     } 
-
     return placeholders;
+  }
+
+  getPlaceholderFromMatch(match) {
+    // Example value:
+    // match[1] = 'query|encoding=utf-8|another=attribute'
+    const nameAndAttributes = match[1].split("|");
+    // Example value:
+    // name = 'query'
+    const name = nameAndAttributes.shift();
+    const placeholder = {};
+    // Example value:
+    // name_and_attributes = ['encoding=utf-8', 'another=attribute']
+    for (const attrStr of nameAndAttributes) {
+      const [attrName, attrValue] = attrStr.split("=", 2);
+      placeholder[attrName] = attrValue;
+    }
+    return { name, placeholder };
   }
 
   /**
