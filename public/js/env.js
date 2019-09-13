@@ -86,8 +86,8 @@ class Env {
    * @return {array} params - List of found parameters.
    */
   getParams() {
-    var paramStr = window.location.hash.substr(1);
-    let params = Helper.jqueryDeparam(paramStr);
+    const paramStr = window.location.hash.substr(1);
+    const params = Helper.jqueryDeparam(paramStr);
     return params;
   }
 
@@ -116,7 +116,7 @@ class Env {
    * @return {object} [language, country] - The default language and country.
    */
   getLanguageAndCountryFromBrowser() {
-    let languageStr = navigator.language;
+    const languageStr = navigator.language;
     let language, country;
     if (languageStr) {
       [language, country] = languageStr.split("-");
@@ -130,7 +130,7 @@ class Env {
    * @return {string} language - The default language.
    */
   getDefaultLanguage() {
-    let { language } = this.getDefaultLanguageAndCountry();
+    const { language } = this.getDefaultLanguageAndCountry();
     return language;
   }
 
@@ -140,7 +140,7 @@ class Env {
    * @return {string} language - The default country.
    */
   getDefaultCountry() {
-    let { country } = this.getDefaultLanguageAndCountry();
+    const { country } = this.getDefaultLanguageAndCountry();
     return country;
   }
 
