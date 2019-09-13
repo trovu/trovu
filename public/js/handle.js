@@ -16,10 +16,9 @@ class Handle {
   /**
    * Build fetch URL given the necessary parameters.
    *
-   * @param {string} namespace        - The namespace to use.
+   * @param {object} namespace        - The namespace to use.
    * @param {string} keyword          - The keyword to use.
    * @param {string} argumentCount    - The argumentCount to use.
-   * @param {string} fetchUrlTemplate - A template containing placeholders for all the above.
    *
    * @return {string} fetchUrl        - The URL with the replaced placeholders.
    */
