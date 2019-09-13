@@ -122,20 +122,14 @@ class Handle {
     const placeholders = this.getArgumentsFromString(str);
 
     for (const argumentName in placeholders) {
-      const argument = args.shift();
-
-      // Copy argument, because different placeholders can cause
-      // different processing.
-      let processedArgument = argument;
-
-      processedArgument = processedArgument.trim();
+      let argument = args.shift().trim();
 
       // An argument can have multiple matches,
       // so go over all of them.
       var matches = placeholders[argumentName];
       for (let match in matches) {
-        processedArgument = await this.processAttributes(processedArgument, matches[match]);
-        str = str.replace(match, processedArgument);
+        argument = await this.processAttributes(argument, matches[match]);
+        str = str.replace(match, argument);
       }
     }
     return str;
