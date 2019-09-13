@@ -138,16 +138,7 @@ class Handle {
         var attributes = matches[match];
         processedArgument = await this.processTypes(attributes, processedArgument, locale);
         processedArgument = this.processAttributeTransform(attributes, processedArgument);
-        switch (attributes.encoding) {
-          case "iso-8859-1":
-            processedArgument = escape(processedArgument);
-            break;
-          case "none":
-            break;
-          default:
-            processedArgument = encodeURIComponent(processedArgument);
-            break;
-        }
+        processedArgument = this.processAttributeEncoding(attributes, processedArgument);
         str = str.replace(match, processedArgument);
       }
     }
@@ -217,6 +208,19 @@ class Handle {
         break;
       case "lowercase":
         processedArgument = processedArgument.toLowerCase();
+        break;
+    }
+    return processedArgument;
+  }
+  processAttributeEncoding(attributes, processedArgument) {
+    switch (attributes.encoding) {
+      case "iso-8859-1":
+        processedArgument = escape(processedArgument);
+        break;
+      case "none":
+        break;
+      default:
+        processedArgument = encodeURIComponent(processedArgument);
         break;
     }
     return processedArgument;
