@@ -13,3 +13,5 @@
   country: us
   query: someQueryThatWillNotSuccess
   expectedRedirectUrl: ../index.html#debug=1&language=en&country=us&query=someQueryThatWillNotSuccess&status=not_found
+- query: g barbaz
+  expectedRedirectUrl: https://www.google.co.uk/search?hl=en&q=barbaz&ie=utf-8
