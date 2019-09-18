@@ -20,6 +20,7 @@ document.querySelector("body").onload = async function(event) {
 
   window.location.href = redirectUrl;
 };
+
 function handleNotFound(env) {
   let params = env.getParams();
   params.status = "not_found";
@@ -27,4 +28,3 @@ function handleNotFound(env) {
   const redirectUrl = "../index.html#" + paramStr;
   return redirectUrl;
 }
-
