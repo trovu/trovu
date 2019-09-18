@@ -116,12 +116,22 @@ class Env {
    * @return {object} [language, country] - The default language and country.
    */
   getLanguageAndCountryFromBrowser() {
-    const languageStr = navigator.language;
+    const languageStr = this.getNavigatorLanguage();
     let language, country;
     if (languageStr) {
       [language, country] = languageStr.split("-");
     }
     return { language, country };
+  }
+
+  /**
+   * Wrapper for navigator language, capsuled to enable unit testing.
+   *
+   * @return {string} navigatorLanguage - The browser's value of navigator.language.
+   */
+  getNavigatorLanguage() {
+    const languageStr = navigator.language;
+    return languageStr;
   }
 
   /**
