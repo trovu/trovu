@@ -3,10 +3,10 @@ import Handle from "./handle.js";
 import Helper from "./helper.js";
 
 document.querySelector("body").onload = async function(event) {
-  let env = new Env();
+  const env = new Env();
   await env.populate();
 
-  let handle = new Handle(env);
+  const handle = new Handle(env);
   let redirectUrl = await handle.getRedirectUrl();
 
   if (!redirectUrl) {
@@ -22,9 +22,9 @@ document.querySelector("body").onload = async function(event) {
 };
 
 function handleNotFound(env) {
-  let params = env.getParams();
+  const params = env.getParams();
   params.status = "not_found";
-  let paramStr = Helper.jqueryParam(params);
+  const paramStr = Helper.jqueryParam(params);
   const redirectUrl = "../index.html#" + paramStr;
   return redirectUrl;
 }
