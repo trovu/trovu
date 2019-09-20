@@ -18,11 +18,12 @@ test("getLanguageAndCountryFromBrowser", () => {
   });
 });
 
-test("getDefaultLanguageAndCountry", () => {
-  expect(env.getDefaultLanguageAndCountry()).toEqual({
-    language: "en",
-    country: "uk"
-  });
+test("getDefaultLanguage", () => {
+  expect(env.getDefaultLanguage()).toMatch('en');
+});
+
+test("getDefaultCountry", () => {
+  expect(env.getDefaultCountry()).toMatch('uk');
 });
 
 test("getDefaultLanguageAndCountry when navigator.language empty", () => {
