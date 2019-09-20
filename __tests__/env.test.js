@@ -7,6 +7,6 @@ env.getNavigatorLanguage = () => {
   return languageStr;
 }
 
-test('env', () => {
+test('getNavigatorLanguage', () => {
   expect(env.getNavigatorLanguage()).toMatch('en-uk');
 } );
