@@ -84,6 +84,7 @@ class Env {
     const hash = window.location.hash.substr(1);
     return hash;
   }
+
   /**
    * Get parameters from the URL query string.
    *
