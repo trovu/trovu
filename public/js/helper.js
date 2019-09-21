@@ -28,6 +28,12 @@ class Helper {
     return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   }
 
+  /**
+   * Output text into the #log element.
+   *
+   * @param {string} str      - The string to output.
+   * @param {boolean} newLine - Whether to prefix it with a line break.
+   */
   static log(str, newLine = true) {
     if (!document.querySelector("#log")) {
       return;
