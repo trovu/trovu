@@ -30,3 +30,7 @@ test("splitKeepRemainder", () => {
     "foo, bar"
   ]);
 });
+
+test("escapeRegExp", () => {
+  expect(Helper.escapeRegExp('foo.*bar[baz]')).toMatch('foo\\.\\*bar\\[baz\\]');
+});
