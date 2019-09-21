@@ -52,5 +52,5 @@ test("setDefaults", () => {
   env.setDefaults();
   expect(env.language).toMatch("en");
   expect(env.country).toMatch("uk");
-  expect(env.namespaces).toEqual(['o', 'en', '.uk']);
+  expect(env.namespaces).toEqual(["o", "en", ".uk"]);
 });
