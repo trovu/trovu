@@ -45,3 +45,12 @@ test("getDefaultLanguageAndCountry when navigator.language empty", () => {
     country: "us"
   });
 });
+
+test("setDefaults", () => {
+  const env = new Env();
+  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
+  env.setDefaults();
+  expect(env.language).toMatch("en");
+  expect(env.country).toMatch("uk");
+  expect(env.namespaces).toEqual(['o', 'en', '.uk']);
+});
