@@ -12,6 +12,13 @@ test("jqueryDeparam", () => {
   });
 });
 
+test("jqueryParam", () => {
+  expect(Helper.jqueryParam({
+    foo: "bar",
+    baz: "boo"
+  })).toEqual("foo=bar&baz=boo");
+});
+
 test("getParams", () => {
   Helper.getUrlHash = getUrlHashFooBar;
   expect(Helper.getParams()).toEqual({ foo: "bar", baz: "boo" });
