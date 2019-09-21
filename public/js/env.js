@@ -80,6 +80,11 @@ class Env {
 
   // Param getters ====================================================
 
+  /**
+   * From 'http://example.com/foo#bar=baz' get 'bar=baz'.
+   *
+   * @return {string} hash - The hash string.
+   */
   getUrlHash() {
     const hash = window.location.hash.substr(1);
     return hash;
