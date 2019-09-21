@@ -80,13 +80,17 @@ class Env {
 
   // Param getters ====================================================
 
+  getUrlHash() {
+    const hash = window.location.hash.substr(1);
+    return hash;
+  }
   /**
    * Get parameters from the URL query string.
    *
    * @return {array} params - List of found parameters.
    */
   getParams() {
-    const paramStr = window.location.hash.substr(1);
+    const paramStr = this.getUrlHash();
     const params = Helper.jqueryDeparam(paramStr);
     return params;
   }
