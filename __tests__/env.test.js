@@ -1,17 +1,24 @@
 import Env from "../public/js/env.js";
 
-const env = new Env();
-
-env.getNavigatorLanguage = () => {
+const getNavigatorLanguageEnUk = () => {
   const languageStr = "en-uk";
   return languageStr;
 };
 
+const getNavigatorLanguageEmpty = () => {
+  const languageStr = "";
+  return languageStr;
+};
+
 test("getNavigatorLanguage", () => {
+  const env = new Env();
+  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
   expect(env.getNavigatorLanguage()).toMatch("en-uk");
 });
 
 test("getLanguageAndCountryFromBrowser", () => {
+  const env = new Env();
+  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
   expect(env.getLanguageAndCountryFromBrowser()).toEqual({
     language: "en",
     country: "uk"
@@ -19,18 +26,20 @@ test("getLanguageAndCountryFromBrowser", () => {
 });
 
 test("getDefaultLanguage", () => {
-  expect(env.getDefaultLanguage()).toMatch('en');
+  const env = new Env();
+  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
+  expect(env.getDefaultLanguage()).toMatch("en");
 });
 
 test("getDefaultCountry", () => {
-  expect(env.getDefaultCountry()).toMatch('uk');
+  const env = new Env();
+  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
+  expect(env.getDefaultCountry()).toMatch("uk");
 });
 
 test("getDefaultLanguageAndCountry when navigator.language empty", () => {
-  env.getNavigatorLanguage = () => {
-    const languageStr = "";
-    return languageStr;
-  };
+  const env = new Env();
+  env.getNavigatorLanguage = getNavigatorLanguageEmpty;
   expect(env.getDefaultLanguageAndCountry()).toEqual({
     language: "en",
     country: "us"
