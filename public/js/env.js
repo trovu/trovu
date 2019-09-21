@@ -19,7 +19,7 @@ class Env {
    */
   async populate(params) {
     if (!params) {
-      params = this.getParams();
+      params = Helper.getParams();
     }
 
     // TODO: Check for string and non-emptiness.
@@ -79,27 +79,6 @@ class Env {
   }
 
   // Param getters ====================================================
-
-  /**
-   * From 'http://example.com/foo#bar=baz' get 'bar=baz'.
-   *
-   * @return {string} hash - The hash string.
-   */
-  getUrlHash() {
-    const hash = window.location.hash.substr(1);
-    return hash;
-  }
-
-  /**
-   * Get parameters from the URL query string.
-   *
-   * @return {array} params - List of found parameters.
-   */
-  getParams() {
-    const paramStr = this.getUrlHash();
-    const params = Helper.jqueryDeparam(paramStr);
-    return params;
-  }
 
   /**
    * Get the default language and country from browser.

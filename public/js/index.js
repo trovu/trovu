@@ -87,7 +87,7 @@ document.querySelector("body").onload = async function(event) {
   // Init environment.
   await env.populate();
 
-  let params = env.getParams();
+  let params = Helper.getParams();
 
   // Show info alerts.
   switch (params.status) {
@@ -253,7 +253,7 @@ document.querySelector("#settingsSave").onclick = function(event) {
 };
 
 function displaySettings() {
-  let params = env.getParams();
+  let params = Helper.getParams();
 
   // Set settings fields from environment.
   document.querySelector("#languageSetting").value = env.language;

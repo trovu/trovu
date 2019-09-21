@@ -66,6 +66,28 @@ class Helper {
   }
 
   /**
+   * From 'http://example.com/foo#bar=baz' get 'bar=baz'.
+   *
+   * @return {string} hash - The hash string.
+   */
+  static getUrlHash() {
+    const hash = window.location.hash.substr(1);
+    return hash;
+  }
+
+  /**
+   * Get parameters from the URL query string.
+   *
+   * @return {array} params - List of found parameters.
+   */
+  static getParams() {
+    const paramStr = this.getUrlHash();
+    const params = this.jqueryDeparam(paramStr);
+    return params;
+  }
+
+
+  /**
    * Create URL query string from an array.
    *
    * @param {array} params - The parameters.

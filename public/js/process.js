@@ -22,7 +22,7 @@ document.querySelector("body").onload = async function(event) {
 };
 
 function handleNotFound(env) {
-  const params = env.getParams();
+  const params = Helper.getParams();
   params.status = "not_found";
   const paramStr = Helper.jqueryParam(params);
   const redirectUrl = "../index.html#" + paramStr;
