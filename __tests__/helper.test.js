@@ -13,3 +13,7 @@ test("getParams", () => {
   Helper.getUrlHash = getUrlHashFooBar;
   expect(Helper.getParams()).toEqual({foo: 'bar', baz: 'boo' });
 });
+
+test("splitKeepRemainder", () => {
+  expect(Helper.splitKeepRemainder('g foo, bar', ' ', 2)).toEqual(['g', 'foo, bar']);
+});
