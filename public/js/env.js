@@ -69,13 +69,13 @@ class Env {
   async getUserConfigFromGithub(params) {
     const configUrl = this.configUrlTemplate.replace("{%github}", params.github);
     const configYml = await Helper.fetchAsync(configUrl, false, params.debug);
-    let config = false;
     if (configYml) {
       config = jsyaml.load(configYml);
+      return config;
     } else {
       alert("Failed to read Github config from " + configUrl);
+      return false;
     }
-    return config;
   }
 
   // Param getters ====================================================
