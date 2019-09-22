@@ -60,11 +60,9 @@ class Env {
    * @return {boolean} [getUserConfigFailed] - True if fetch failed.
    */
   async setWithUserConfigFromGithub(params) {
-    const { config, configUrl } = await this.getUserConfigFromGithub(params);
+    const config = await this.getUserConfigFromGithub(params);
     if (config) {
       Object.assign(this, config);
-    } else {
-      alert("Failed to read Github config from " + configUrl);
     }
   }
 
@@ -74,8 +72,10 @@ class Env {
     let config = false;
     if (configYml) {
       config = jsyaml.load(configYml);
+    } else {
+      alert("Failed to read Github config from " + configUrl);
     }
-    return { config, configUrl };
+    return config;
   }
 
   // Param getters ====================================================
