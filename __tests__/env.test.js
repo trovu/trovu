@@ -54,3 +54,18 @@ test("setDefaults", () => {
   expect(env.country).toMatch("uk");
   expect(env.namespaces).toEqual(["o", "en", ".uk"]);
 });
+
+test("setWithUserConfigFromGithub", () => {
+  const env = new Env();
+  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
+  env.getUserConfigFromGithub = () => {
+    return {
+      namespaces: ["o", "en", ".us", { github: ".", name: "my" }],
+      defaultKeyword: "g",
+      language: "en",
+      country: "us"
+    };
+  };
+  env.setWithUserConfigFromGithub();
+  expect(env.namespaces).toEqual(["o", "en", ".us", { github: ".", name: "my" }]);
+});
