@@ -55,10 +55,10 @@ test("setDefaults", () => {
   expect(env.namespaces).toEqual(["o", "en", ".uk"]);
 });
 
-test("setWithUserConfigFromGithub", () => {
+test("setWithUserConfigFromGithub", async () => {
   const env = new Env();
   env.getNavigatorLanguage = getNavigatorLanguageEnUk;
-  env.getUserConfigFromGithub = () => {
+  env.getUserConfigFromGithub = async () => {
     return {
       namespaces: ["o", "en", ".us", { github: ".", name: "my" }],
       defaultKeyword: "g",
@@ -66,6 +66,6 @@ test("setWithUserConfigFromGithub", () => {
       country: "us"
     };
   };
-  env.setWithUserConfigFromGithub();
+  await env.setWithUserConfigFromGithub();
   expect(env.namespaces).toEqual(["o", "en", ".us", { github: ".", name: "my" }]);
 });
