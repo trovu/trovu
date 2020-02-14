@@ -168,6 +168,7 @@ class Helper {
 
       // Decode.
       name = decodeURIComponent(name);
+      value = value.replace(/\+/g, " ");
       value = decodeURIComponent(value);
 
       name = name.trim();
