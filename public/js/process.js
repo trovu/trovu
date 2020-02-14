@@ -18,6 +18,10 @@ document.querySelector("body").onload = async function(event) {
     return;
   }
 
+  // Rewrite browser history to make Back button work properly.
+  const currentUrlWithoutProcess = window.location.href.replace('process\/', '');
+  history.replaceState({}, "trovu.net", currentUrlWithoutProcess);
+
   window.location.href = redirectUrl;
 };
 
