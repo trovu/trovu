@@ -388,13 +388,13 @@ class Handle {
       this.env.namespaces.push(extraNamespace);
 
       // Set variables.
-      switch (extraNamespace.length) {
+      switch (extraNamespace.name.length) {
         case 2:
-          variables.language = extraNamespace;
+          variables.language = extraNamespace.name;
           break;
         case 3:
-          // TODO: cut dot?
-          variables.country = extraNamespace;
+          // Cut the dot at the beginning.
+          variables.country = extraNamespace.name.substring(1);
           break;
       }
     }
