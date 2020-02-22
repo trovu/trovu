@@ -9,7 +9,7 @@
 - language: de
   country: fr
   query: pl.wg berlin
-  expectedRedirectUrl: https://www.google.com/search?hl=en&sitesearch=pl.wikipedia.org&q=berlin
+  expectedRedirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
 - github: georgjaehnig
   query: foobar
   expectedRedirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
