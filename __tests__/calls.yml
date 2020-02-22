@@ -6,6 +6,10 @@
   country: pl
   query: .de.db b,m,8,1.1.2020
   expectedRedirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin&Z=M%C3%BCnchen&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+- language: de
+  country: fr
+  query: pl.wg berlin
+  expectedRedirectUrl: https://www.google.com/search?hl=en&sitesearch=pl.wikipedia.org&q=berlin
 - github: georgjaehnig
   query: foobar
   expectedRedirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
