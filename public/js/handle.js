@@ -344,6 +344,18 @@ class Handle {
     return [keyword, argumentString];
   }
 
+  async getArgs(argumentString) {
+
+    let args;
+    if (argumentString) {
+      args = argumentString.split(",");
+    } else {
+      args = [];
+    }
+
+    return args;
+  }
+
   /**
    * Given this.env, get the redirect URL.
    *
@@ -360,12 +372,7 @@ class Handle {
     };
 
     [this.env.keyword, this.env.argumentString] = await this.getKeywordAndArgumentString(this.query);
-
-    if (this.env.argumentString) {
-      this.env.args = this.env.argumentString.split(",");
-    } else {
-      this.env.args = [];
-    }
+    this.env.args = await this.getArgs(this.env.argumentString);
 
     // Check for (cache) reload call.
     this.env.reload = false;
