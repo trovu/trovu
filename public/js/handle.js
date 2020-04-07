@@ -347,35 +347,34 @@ class Handle {
       country: this.env.country
     };
 
-    let keyword, argumentString;
-    [keyword, argumentString] = Helper.splitKeepRemainder(
+    [this.env.keyword, this.env.argumentString] = Helper.splitKeepRemainder(
       this.env.query,
       " ",
       2
     );
-    if (argumentString) {
-      var args = argumentString.split(",");
+    if (this.env.argumentString) {
+      var args = this.env.argumentString.split(",");
     } else {
       var args = [];
     }
 
     // Check for (cache) reload call.
     this.env.reload = false;
-    if (keyword.match(/^reload:/)) {
+    if (this.env.keyword.match(/^reload:/)) {
       let reload;
-      [reload, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
+      [reload, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ":", 2);
       this.env.reload = true;
     }
     // Check for extraNamespace in keyword:
     //   split at dot
     //   but don't split up country namespace names.
-    if (keyword.match(/.\./)) {
+    if (this.env.keyword.match(/.\./)) {
       let extraNamespace;
-      [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
+      [extraNamespace, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ".", 2);
       // If extraNamespace started with a dot, it will be empty
       // so let's split it again, and add the dot.
       if (extraNamespace == "") {
-        [extraNamespace, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
+        [extraNamespace, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ".", 2);
         // And we know that namespaces starting with a dot are countries,
         // so let's update our coutry.
         this.env.country = extraNamespace;
@@ -400,13 +399,13 @@ class Handle {
     }
 
     let shortcuts, found;
-    [shortcuts, found] = await this.fetchShortcuts(keyword, args);
+    [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, args);
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
     if (!found && args.length > 0) {
-      args = [argumentString];
-      [shortcuts, found] = await this.fetchShortcuts(keyword, args);
+      args = [this.env.argumentString];
+      [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, args);
     }
 
     // If nothing found:
