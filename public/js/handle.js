@@ -342,7 +342,7 @@ class Handle {
       return;
     }
 
-    var variables = {
+    this.env.variables = {
       language: this.env.language,
       country: this.env.country
     };
@@ -390,11 +390,11 @@ class Handle {
       // Set variables.
       switch (extraNamespace.name.length) {
         case 2:
-          variables.language = extraNamespace.name;
+          this.env.variables.language = extraNamespace.name;
           break;
         case 3:
           // Cut the dot at the beginning.
-          variables.country = extraNamespace.name.substring(1);
+          this.env.variables.country = extraNamespace.name.substring(1);
           break;
       }
     }
@@ -437,7 +437,7 @@ class Handle {
     if (this.env.debug) Helper.log("");
     if (this.env.debug) Helper.log("Used template: " + redirectUrl);
 
-    redirectUrl = await this.replaceVariables(redirectUrl, variables);
+    redirectUrl = await this.replaceVariables(redirectUrl, this.env.variables);
     redirectUrl = await this.replaceArguments(redirectUrl, args);
 
     return redirectUrl;
