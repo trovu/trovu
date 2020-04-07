@@ -384,8 +384,8 @@ class Handle {
     // Check for extraNamespace in keyword:
     //   split at dot
     //   but don't split up country namespace names.
+    let extraNamespace;
     if (this.env.keyword.match(/.\./)) {
-      let extraNamespace;
       [extraNamespace, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ".", 2);
       // If extraNamespace started with a dot, it will be empty
       // so let's split it again, and add the dot.
@@ -396,7 +396,10 @@ class Handle {
         this.env.country = extraNamespace;
         extraNamespace = "." + extraNamespace;
       }
+    }
 
+    if (extraNamespace) {
+      
       extraNamespace = this.env.addFetchUrlTemplateToNamespace(extraNamespace);
 
       // Add to namespaces.
