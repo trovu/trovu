@@ -332,6 +332,18 @@ class Handle {
     return [shortcuts, found];
   }
 
+  async getKeywordAndArgumentString(query) {
+
+    let keyword, argumentString;
+    [keyword, argumentString] = Helper.splitKeepRemainder(
+      this.env.query,
+      " ",
+      2
+    );
+
+    return [keyword, argumentString];
+  }
+
   /**
    * Given this.env, get the redirect URL.
    *
@@ -347,11 +359,8 @@ class Handle {
       country: this.env.country
     };
 
-    [this.env.keyword, this.env.argumentString] = Helper.splitKeepRemainder(
-      this.env.query,
-      " ",
-      2
-    );
+    [this.env.keyword, this.env.argumentString] = await this.getKeywordAndArgumentString(this.query);
+
     if (this.env.argumentString) {
       this.env.args = this.env.argumentString.split(",");
     } else {
