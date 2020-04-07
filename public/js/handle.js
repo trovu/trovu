@@ -356,6 +356,17 @@ class Handle {
     return args;
   }
 
+  async checkForChacheReload(keyword) {
+
+    let reload = false;
+    if (this.env.keyword.match(/^reload:/)) {
+      [, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
+      reload = true;
+    }
+
+    return [reload, keyword];
+  }
+
   /**
    * Given this.env, get the redirect URL.
    *
@@ -373,14 +384,8 @@ class Handle {
 
     [this.env.keyword, this.env.argumentString] = await this.getKeywordAndArgumentString(this.query);
     this.env.args = await this.getArguments(this.env.argumentString);
+    [this.env.reload, this.env.keyword] = await this.checkForChacheReload(this.env.keyword);
 
-    // Check for (cache) reload call.
-    this.env.reload = false;
-    if (this.env.keyword.match(/^reload:/)) {
-      let reload;
-      [reload, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ":", 2);
-      this.env.reload = true;
-    }
     // Check for extraNamespace in keyword:
     //   split at dot
     //   but don't split up country namespace names.
