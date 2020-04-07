@@ -344,7 +344,7 @@ class Handle {
     return [keyword, argumentString];
   }
 
-  async getArgs(argumentString) {
+  async getArguments(argumentString) {
 
     let args;
     if (argumentString) {
@@ -372,7 +372,7 @@ class Handle {
     };
 
     [this.env.keyword, this.env.argumentString] = await this.getKeywordAndArgumentString(this.query);
-    this.env.args = await this.getArgs(this.env.argumentString);
+    this.env.args = await this.getArguments(this.env.argumentString);
 
     // Check for (cache) reload call.
     this.env.reload = false;
