@@ -391,9 +391,6 @@ class Handle {
       // so let's split it again, and add the dot.
       if (extraNamespace == "") {
         [extraNamespace, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ".", 2);
-        // And we know that namespaces starting with a dot are countries,
-        // so let's update our coutry.
-        this.env.country = extraNamespace;
         extraNamespace = "." + extraNamespace;
       }
     }
