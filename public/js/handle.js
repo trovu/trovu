@@ -353,9 +353,9 @@ class Handle {
       2
     );
     if (this.env.argumentString) {
-      var args = this.env.argumentString.split(",");
+      this.env.args = this.env.argumentString.split(",");
     } else {
-      var args = [];
+      this.env.args = [];
     }
 
     // Check for (cache) reload call.
@@ -399,22 +399,22 @@ class Handle {
     }
 
     let shortcuts, found;
-    [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, args);
+    [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, this.env.args);
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
-    if (!found && args.length > 0) {
-      args = [this.env.argumentString];
-      [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, args);
+    if (!found && this.env.args.length > 0) {
+      this.env.args = [this.env.argumentString];
+      [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, this.env.args);
     }
 
     // If nothing found:
     // Try default keyword.
     if (!found && this.env.defaultKeyword) {
-      args = [this.env.query];
+      this.env.args = [this.env.query];
       [shortcuts, found] = await this.fetchShortcuts(
         this.env.defaultKeyword,
-        args
+        this.env.args
       );
     }
 
@@ -437,7 +437,7 @@ class Handle {
     if (this.env.debug) Helper.log("Used template: " + redirectUrl);
 
     redirectUrl = await this.replaceVariables(redirectUrl, this.env.variables);
-    redirectUrl = await this.replaceArguments(redirectUrl, args);
+    redirectUrl = await this.replaceArguments(redirectUrl, this.env.args);
 
     return redirectUrl;
   }
