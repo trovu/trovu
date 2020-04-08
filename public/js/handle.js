@@ -380,7 +380,7 @@ class Handle {
       );
     }
 
-    let redirectUrl = null;
+    let redirectUrl;
 
     // Find first shortcut in our namespace hierarchy.
     for (let namespace of this.env.namespaces.reverse()) {
