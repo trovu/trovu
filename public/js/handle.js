@@ -338,6 +338,7 @@ class Handle {
 
     Object.assign(this.env, Parse.parse(this.env.query));
 
+    // Add extraNamespace if parsed in query.
     if (this.env.extraNamespaceName) {
       this.env.extraNamespace = this.env.addFetchUrlTemplateToNamespace(this.env.extraNamespaceName);
       this.env.namespaces.push(this.env.extraNamespace);
