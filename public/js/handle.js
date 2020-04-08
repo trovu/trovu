@@ -290,14 +290,11 @@ class Handle {
    * @param {string} keyword    - The keyword of the query.
    * @param {array} args        - The arguments of the query.
    *
-   * @return {array}
-   *   - {array}   shortcuts    - The array of found shortcuts.
-   *   - {boolean} found        - True if shortcuts were found, otherwise false.
+   * @return {array} shortcuts  - The array of found shortcuts.
    */
   async fetchShortcuts(keyword, args) {
     // Fetch all available shortcuts for our query and namespace settings.
     var shortcuts = [];
-    let found = false;
     let promises = [];
     for (let namespace of this.env.namespaces) {
       var fetchUrl = this.buildFetchUrl(namespace, keyword, args.length);
@@ -325,12 +322,8 @@ class Handle {
       if (this.env.debug) Helper.log("Success: " + responses[i].url);
       const text = await responses[i].text();
       shortcuts[namespace.name] = jsyaml.load(text);
-
-      if (!found) {
-        found = Boolean(shortcuts[namespace.name]);
-      }
     }
-    return [shortcuts, found];
+    return shortcuts;
   }
 
   /**
@@ -350,24 +343,20 @@ class Handle {
       this.env.namespaces.push(this.env.extraNamespace);
     }
 
-    // Simplify [shortcuts, found]
-    // should work with shortcuts.length > 1
-    let shortcuts, found;
-    [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, this.env.args);
-    // Later: this.matchShortcuts
+    let shortcuts = await this.fetchShortcuts(this.env.keyword, this.env.args);
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
-    if (!found && this.env.args.length > 0) {
+    if (Object.keys(shortcuts).length === 0 && this.env.args.length > 0) {
       this.env.args = [this.env.argumentString];
-      [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, this.env.args);
+      shortcuts = await this.fetchShortcuts(this.env.keyword, this.env.args);
     }
 
     // If nothing found:
     // Try default keyword.
-    if (!found && this.env.defaultKeyword) {
+    if (Object.keys(shortcuts).length === 0 && this.env.defaultKeyword) {
       this.env.args = [this.env.query];
-      [shortcuts, found] = await this.fetchShortcuts(
+      shortcuts = await this.fetchShortcuts(
         this.env.defaultKeyword,
         this.env.args
       );
