@@ -73,6 +73,23 @@ class Parse {
     }
     return env;
   }
+
+  static parse(query) {
+
+    const env = {};
+
+    [env.keyword, env.argumentString] = Parse.getKeywordAndArgumentString(query);
+    env.args = Parse.getArguments(env.argumentString);
+    [env.reload, env.keyword] = Parse.checkForChacheReload(env.keyword);
+
+    [env.extraNamespaceName, env.keyword] = Parse.getExtraNamespace(env.keyword);
+    if (env.extraNamespaceName) {
+      let languageOrCountry = Parse.getLanguageAndCountryFromExtraNamespaceName(env.extraNamespaceName);
+      Object.assign(env, languageOrCountry);
+    }
+
+    return env;
+  }
 }
 
 export default Parse;

@@ -343,25 +343,18 @@ class Handle {
       return;
     }
 
-    [this.env.keyword, this.env.argumentString] = Parse.getKeywordAndArgumentString(this.env.query);
-    this.env.args = Parse.getArguments(this.env.argumentString);
-    [this.env.reload, this.env.keyword] = Parse.checkForChacheReload(this.env.keyword);
+    Object.assign(this.env, Parse.parse(this.env.query));
 
-    [this.env.extraNamespace, this.env.keyword] = Parse.getExtraNamespace(this.env.keyword);
-
-    if (this.env.extraNamespace) {
-      
-      this.env.extraNamespace = this.env.addFetchUrlTemplateToNamespace(this.env.extraNamespace);
-
-      // Add to namespaces.
+    if (this.env.extraNamespaceName) {
+      this.env.extraNamespace = this.env.addFetchUrlTemplateToNamespace(this.env.extraNamespaceName);
       this.env.namespaces.push(this.env.extraNamespace);
-
-      let env = Parse.getLanguageAndCountryFromExtraNamespaceName(this.env.extraNamespace.name);
-      Object.assign(this.env, env);
     }
 
+    // Simplify [shortcuts, found]
+    // should work with shortcuts.length > 1
     let shortcuts, found;
     [shortcuts, found] = await this.fetchShortcuts(this.env.keyword, this.env.args);
+    // Later: this.matchShortcuts
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
