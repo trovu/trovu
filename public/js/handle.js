@@ -292,20 +292,22 @@ class Handle {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  async fetchShortcuts(keyword, args) {
+  async fetchShortcuts(keyword, args, namespaces, reload, debug) {
+
     // Fetch all available shortcuts for our query and namespace settings.
     var shortcuts = [];
     let promises = [];
-    for (let namespace of this.env.namespaces) {
+    for (let namespace of namespaces) {
       var fetchUrl = this.buildFetchUrl(namespace, keyword, args.length);
-      if (this.env.debug) {
+      if (debug) {
         Helper.log("Request: " + fetchUrl);
       } else {
         Helper.log(".", false);
       }
+
       // Start synchronous fetch calls.
       promises.push(
-        fetch(fetchUrl, { cache: this.env.reload ? "reload" : "force-cache" })
+        fetch(fetchUrl, { cache: reload ? "reload" : "force-cache" })
       );
     }
 
@@ -313,18 +315,46 @@ class Handle {
     const responses = await Promise.all(promises);
 
     // Collect responses.
-    for (let i in this.env.namespaces) {
-      let namespace = this.env.namespaces[i];
+    for (let i in namespaces) {
+      let namespace = namespaces[i];
       if (responses[i].status != 200) {
-        if (this.env.debug) Helper.log("Fail:    " + responses[i].url);
+        if (debug) Helper.log("Fail:    " + responses[i].url);
         continue;
       }
-      if (this.env.debug) Helper.log("Success: " + responses[i].url);
+      if (debug) Helper.log("Success: " + responses[i].url);
       const text = await responses[i].text();
       shortcuts[namespace.name] = jsyaml.load(text);
     }
     return shortcuts;
   }
+
+  async collectShortcuts(env) {
+
+    let shortcuts = await this.fetchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
+
+    // If nothing found:
+    // Try without commas, i.e. with the whole argumentString as the only argument.
+    if (Object.keys(shortcuts).length === 0 && env.args.length > 0) {
+      env.args = [env.argumentString];
+      shortcuts = await this.fetchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
+    }
+
+    // If nothing found:
+    // Try default keyword.
+    if (Object.keys(shortcuts).length === 0 && env.defaultKeyword) {
+      env.args = [env.query];
+      shortcuts = await this.fetchShortcuts(
+        env.defaultKeyword,
+        env.args, 
+        env.namespaces,
+        env.reload,
+        env.debug
+      );
+    }
+
+    return shortcuts;
+  }
+
 
   /**
    * Given this.env, get the redirect URL.
@@ -344,24 +374,7 @@ class Handle {
       this.env.namespaces.push(this.env.extraNamespace);
     }
 
-    let shortcuts = await this.fetchShortcuts(this.env.keyword, this.env.args);
-
-    // If nothing found:
-    // Try without commas, i.e. with the whole argumentString as the only argument.
-    if (Object.keys(shortcuts).length === 0 && this.env.args.length > 0) {
-      this.env.args = [this.env.argumentString];
-      shortcuts = await this.fetchShortcuts(this.env.keyword, this.env.args);
-    }
-
-    // If nothing found:
-    // Try default keyword.
-    if (Object.keys(shortcuts).length === 0 && this.env.defaultKeyword) {
-      this.env.args = [this.env.query];
-      shortcuts = await this.fetchShortcuts(
-        this.env.defaultKeyword,
-        this.env.args
-      );
-    }
+    const shortcuts = await this.collectShortcuts(this.env);
 
     let redirectUrl;
 
