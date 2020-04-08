@@ -367,6 +367,25 @@ class Handle {
     return [reload, keyword];
   }
 
+  async getExtraNamespace(keyword) {
+
+    // Check for extraNamespace in keyword:
+    //   split at dot
+    //   but don't split up country namespace names.
+    let extraNamespaceName;
+    if (keyword.match(/.\./)) {
+      [extraNamespaceName, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
+      // If extraNamespace started with a dot, it will be empty
+      // so let's split it again, and add the dot.
+      if (extraNamespaceName == "") {
+        [extraNamespaceName, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
+        extraNamespaceName = "." + extraNamespaceName;
+      }
+    }
+
+    return [extraNamespaceName, keyword];
+  }
+
   /**
    * Given this.env, get the redirect URL.
    *
@@ -381,23 +400,12 @@ class Handle {
     this.env.args = await this.getArguments(this.env.argumentString);
     [this.env.reload, this.env.keyword] = await this.checkForChacheReload(this.env.keyword);
 
-    // Check for extraNamespace in keyword:
-    //   split at dot
-    //   but don't split up country namespace names.
-    let extraNamespace;
-    if (this.env.keyword.match(/.\./)) {
-      [extraNamespace, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ".", 2);
-      // If extraNamespace started with a dot, it will be empty
-      // so let's split it again, and add the dot.
-      if (extraNamespace == "") {
-        [extraNamespace, this.env.keyword] = Helper.splitKeepRemainder(this.env.keyword, ".", 2);
-        extraNamespace = "." + extraNamespace;
-      }
-    }
+    let extraNamespaceName;
+    [extraNamespaceName, this.env.keyword]= await this.getExtraNamespace(this.env.keyword);
 
-    if (extraNamespace) {
+    if (extraNamespaceName) {
       
-      extraNamespace = this.env.addFetchUrlTemplateToNamespace(extraNamespace);
+      let extraNamespace = this.env.addFetchUrlTemplateToNamespace(extraNamespaceName);
 
       // Add to namespaces.
       this.env.namespaces.push(extraNamespace);
