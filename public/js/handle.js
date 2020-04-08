@@ -413,7 +413,7 @@ class Handle {
       return;
     }
 
-    [this.env.keyword, this.env.argumentString] = await this.getKeywordAndArgumentString(this.query);
+    [this.env.keyword, this.env.argumentString] = await this.getKeywordAndArgumentString(this.env.query);
     this.env.args = await this.getArguments(this.env.argumentString);
     [this.env.reload, this.env.keyword] = await this.checkForChacheReload(this.env.keyword);
 
