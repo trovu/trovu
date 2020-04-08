@@ -386,6 +386,23 @@ class Handle {
     return [extraNamespaceName, keyword];
   }
 
+  async getLanguageAndCountryFromExtraNamespaceName(extraNamespaceName) {
+
+    const env = {};
+
+    // Set language and country again.
+    switch (extraNamespaceName.length) {
+      case 2:
+        env.language = extraNamespaceName;
+        break;
+      case 3:
+        // Cut the dot at the beginning.
+        env.country = extraNamespaceName.substring(1);
+        break;
+    }
+    return env;
+  }
+
   /**
    * Given this.env, get the redirect URL.
    *
@@ -409,16 +426,8 @@ class Handle {
       // Add to namespaces.
       this.env.namespaces.push(this.env.extraNamespace);
 
-      // Set language and country again.
-      switch (this.env.extraNamespace.name.length) {
-        case 2:
-          this.env.language = this.env.extraNamespace.name;
-          break;
-        case 3:
-          // Cut the dot at the beginning.
-          this.env.country = this.env.extraNamespace.name.substring(1);
-          break;
-      }
+      let env = await this.getLanguageAndCountryFromExtraNamespaceName(this.env.extraNamespace.name);
+      Object.assign(this.env, env);
     }
 
     let shortcuts, found;
