@@ -400,24 +400,23 @@ class Handle {
     this.env.args = await this.getArguments(this.env.argumentString);
     [this.env.reload, this.env.keyword] = await this.checkForChacheReload(this.env.keyword);
 
-    let extraNamespaceName;
-    [extraNamespaceName, this.env.keyword]= await this.getExtraNamespace(this.env.keyword);
+    [this.env.extraNamespace, this.env.keyword] = await this.getExtraNamespace(this.env.keyword);
 
-    if (extraNamespaceName) {
+    if (this.env.extraNamespace) {
       
-      let extraNamespace = this.env.addFetchUrlTemplateToNamespace(extraNamespaceName);
+      this.env.extraNamespace = this.env.addFetchUrlTemplateToNamespace(this.env.extraNamespace);
 
       // Add to namespaces.
-      this.env.namespaces.push(extraNamespace);
+      this.env.namespaces.push(this.env.extraNamespace);
 
       // Set language and country again.
-      switch (extraNamespace.name.length) {
+      switch (this.env.extraNamespace.name.length) {
         case 2:
-          this.env.language = extraNamespace.name;
+          this.env.language = this.env.extraNamespace.name;
           break;
         case 3:
           // Cut the dot at the beginning.
-          this.env.country = extraNamespace.name.substring(1);
+          this.env.country = this.env.extraNamespace.name.substring(1);
           break;
       }
     }
