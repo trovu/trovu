@@ -380,12 +380,7 @@ class Handle {
     if (this.env.debug) Helper.log("");
     if (this.env.debug) Helper.log("Used template: " + redirectUrl);
 
-    this.env.variables = {
-      language: this.env.language,
-      country: this.env.country
-    };
-
-    redirectUrl = await this.replaceVariables(redirectUrl, this.env.variables);
+    redirectUrl = await this.replaceVariables(redirectUrl, { language: this.env.language, country: this.env.country });
     redirectUrl = await this.replaceArguments(redirectUrl, this.env.args);
 
     return redirectUrl;
