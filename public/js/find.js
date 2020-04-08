@@ -96,6 +96,17 @@ class Find {
 
     return shortcuts;
   }
+
+  static pickShortcut(shortcuts, namespaces) {
+
+    // Find first shortcut in our namespace hierarchy.
+    for (let namespace of namespaces.reverse()) {
+      if (shortcuts[namespace.name]) {
+        return shortcuts[namespace.name]["url"];
+        // TODO: Process POST arguments.
+      }
+    }
+  }
 }
 
 export default Find;

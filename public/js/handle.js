@@ -286,16 +286,7 @@ class Handle {
 
     const shortcuts = await Find.collectShortcuts(this.env);
 
-    let redirectUrl;
-
-    // Find first shortcut in our namespace hierarchy.
-    for (let namespace of this.env.namespaces.reverse()) {
-      if (shortcuts[namespace.name]) {
-        redirectUrl = shortcuts[namespace.name]["url"];
-        // TODO: Process POST arguments.
-        break;
-      }
-    }
+    let redirectUrl = Find.pickShortcut(shortcuts, this.env.namespaces);
 
     if (!redirectUrl) {
       return;
