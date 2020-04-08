@@ -333,65 +333,6 @@ class Handle {
     return [shortcuts, found];
   }
 
-  async getArguments(argumentString) {
-
-    let args;
-    if (argumentString) {
-      args = argumentString.split(",");
-    } else {
-      args = [];
-    }
-
-    return args;
-  }
-
-  async checkForChacheReload(keyword) {
-
-    let reload = false;
-    if (keyword.match(/^reload:/)) {
-      [, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
-      reload = true;
-    }
-
-    return [reload, keyword];
-  }
-
-  async getExtraNamespace(keyword) {
-
-    // Check for extraNamespace in keyword:
-    //   split at dot
-    //   but don't split up country namespace names.
-    let extraNamespaceName;
-    if (keyword.match(/.\./)) {
-      [extraNamespaceName, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
-      // If extraNamespace started with a dot, it will be empty
-      // so let's split it again, and add the dot.
-      if (extraNamespaceName == "") {
-        [extraNamespaceName, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
-        extraNamespaceName = "." + extraNamespaceName;
-      }
-    }
-
-    return [extraNamespaceName, keyword];
-  }
-
-  async getLanguageAndCountryFromExtraNamespaceName(extraNamespaceName) {
-
-    const env = {};
-
-    // Set language and country again.
-    switch (extraNamespaceName.length) {
-      case 2:
-        env.language = extraNamespaceName;
-        break;
-      case 3:
-        // Cut the dot at the beginning.
-        env.country = extraNamespaceName.substring(1);
-        break;
-    }
-    return env;
-  }
-
   /**
    * Given this.env, get the redirect URL.
    *
@@ -403,10 +344,10 @@ class Handle {
     }
 
     [this.env.keyword, this.env.argumentString] = Parse.getKeywordAndArgumentString(this.env.query);
-    this.env.args = await this.getArguments(this.env.argumentString);
-    [this.env.reload, this.env.keyword] = await this.checkForChacheReload(this.env.keyword);
+    this.env.args = Parse.getArguments(this.env.argumentString);
+    [this.env.reload, this.env.keyword] = Parse.checkForChacheReload(this.env.keyword);
 
-    [this.env.extraNamespace, this.env.keyword] = await this.getExtraNamespace(this.env.keyword);
+    [this.env.extraNamespace, this.env.keyword] = Parse.getExtraNamespace(this.env.keyword);
 
     if (this.env.extraNamespace) {
       
@@ -415,7 +356,7 @@ class Handle {
       // Add to namespaces.
       this.env.namespaces.push(this.env.extraNamespace);
 
-      let env = await this.getLanguageAndCountryFromExtraNamespaceName(this.env.extraNamespace.name);
+      let env = Parse.getLanguageAndCountryFromExtraNamespaceName(this.env.extraNamespace.name);
       Object.assign(this.env, env);
     }
 
