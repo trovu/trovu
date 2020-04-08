@@ -1,5 +1,6 @@
 import Load from "./load.js";
 import Helper from "./helper.js";
+import Parse from "./parse.js";
 
 /** Class for handling a call. */
 class Handle {
@@ -332,18 +333,6 @@ class Handle {
     return [shortcuts, found];
   }
 
-  async getKeywordAndArgumentString(query) {
-
-    let keyword, argumentString;
-    [keyword, argumentString] = Helper.splitKeepRemainder(
-      this.env.query,
-      " ",
-      2
-    );
-
-    return [keyword, argumentString];
-  }
-
   async getArguments(argumentString) {
 
     let args;
@@ -413,7 +402,7 @@ class Handle {
       return;
     }
 
-    [this.env.keyword, this.env.argumentString] = await this.getKeywordAndArgumentString(this.env.query);
+    [this.env.keyword, this.env.argumentString] = Parse.getKeywordAndArgumentString(this.env.query);
     this.env.args = await this.getArguments(this.env.argumentString);
     [this.env.reload, this.env.keyword] = await this.checkForChacheReload(this.env.keyword);
 
