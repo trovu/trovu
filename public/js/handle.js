@@ -285,12 +285,9 @@ class Handle {
     }
 
     const shortcuts = await Find.collectShortcuts(this.env);
-
     let redirectUrl = Find.pickShortcut(shortcuts, this.env.namespaces);
 
-    if (!redirectUrl) {
-      return;
-    }
+    if (!redirectUrl) return;
 
     if (this.env.debug) Helper.log("");
     if (this.env.debug) Helper.log("Used template: " + redirectUrl);
