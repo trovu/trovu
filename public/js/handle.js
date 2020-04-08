@@ -359,7 +359,7 @@ class Handle {
   async checkForChacheReload(keyword) {
 
     let reload = false;
-    if (this.env.keyword.match(/^reload:/)) {
+    if (keyword.match(/^reload:/)) {
       [, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
       reload = true;
     }
