@@ -3,6 +3,15 @@ import Helper from "./helper.js";
 /** Parse a query. */
 class Parse {
 
+  /**
+   * Get keyword and argument string from query.
+   *
+   * @param {string} query          - The whole query.
+   *
+   * @return {object}
+   * - {string} keyword           - The keyword from the query.
+   * - {string} argumentString    - The whole argument string.
+   */
   static getKeywordAndArgumentString(query) {
 
     let keyword, argumentString;
@@ -15,6 +24,13 @@ class Parse {
     return [keyword, argumentString];
   }
 
+  /**
+   * Get arguments from argument string.
+   *
+   * @param {string} argumentString    - The whole argument string.
+   *
+   * @return {array} args              - The arguments from the argument string.
+   */
   static getArguments(argumentString) {
 
     let args;
@@ -27,6 +43,15 @@ class Parse {
     return args;
   }
 
+  /**
+   * Check if keyword contains reload command.
+   *
+   * @param {string} keyword - The keyword.
+   *
+   * @return {object}
+   * - {boolean} reload      - True if keyword contained reload command.
+   * - {string} keyword      - The new keyword.
+   */
   static checkForChacheReload(keyword) {
 
     let reload = false;
@@ -38,6 +63,15 @@ class Parse {
     return [reload, keyword];
   }
 
+  /**
+   * Check if keyword contains extra namespace.
+   *
+   * @param {string} keyword - The keyword.
+   *
+   * @return {object}
+   * - {string} extraNamespaceName - If found, the name of the extra namespace.
+   * - {string} keyword            - The new keyword.
+   */
   static getExtraNamespace(keyword) {
 
     // Check for extraNamespace in keyword:
@@ -57,6 +91,13 @@ class Parse {
     return [extraNamespaceName, keyword];
   }
 
+  /**
+   * Return language or country from extra namespace.
+   *
+   * @param {string} extraNamespaceName - The name of the extraNamespace.
+   *
+   * @return {object}               - Contains either {language: } or {country: }.
+   */
   static getLanguageAndCountryFromExtraNamespaceName(extraNamespaceName) {
 
     const env = {};
@@ -74,6 +115,13 @@ class Parse {
     return env;
   }
 
+  /**
+   * Parse the query into its all details.
+   *
+   * @param {string} query          - The whole query.
+   *
+   * @return {object}               - Contains various values parsed from the query.
+   */
   static parse(query) {
 
     const env = {};
