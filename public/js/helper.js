@@ -1,5 +1,6 @@
 /** Static class containing helper. */
-class Helper {
+
+export default class Helper {
   /**
    * Split a string n times, keep all additional matches in the last part as one string.
    *
@@ -208,5 +209,3 @@ class Helper {
     return params;
   }
 }
-
-export default Helper;

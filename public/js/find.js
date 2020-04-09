@@ -2,7 +2,7 @@ import Helper from "./helper.js";
 
 /** Find matching shortcut. */
 
-class Find {
+export default class Find {
 
   /**
    * Build fetch URL given the necessary parameters.
@@ -123,5 +123,3 @@ class Find {
     }
   }
 }
-
-export default Find;

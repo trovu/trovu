@@ -4,7 +4,7 @@ import Parse from "./parse.js";
 import Find from "./find.js";
 
 /** Class for handling a call. */
-class Handle {
+export default class Handle {
   /**
    * Set the environment.
    *
@@ -298,4 +298,3 @@ class Handle {
     return redirectUrl;
   }
 }
-export default Handle;

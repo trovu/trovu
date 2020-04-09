@@ -1,7 +1,7 @@
 import Helper from "./helper.js";
 
 /** Parse a query. */
-class Parse {
+export default class Parse {
 
   /**
    * Get keyword and argument string from query.
@@ -139,5 +139,3 @@ class Parse {
     return env;
   }
 }
-
-export default Parse;

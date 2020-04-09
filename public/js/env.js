@@ -1,7 +1,7 @@
 import Helper from "./helper.js";
 
 /** Set and remember the environment. */
-class Env {
+export default class Env {
   /**
    * Set helper variables.
    */
@@ -225,5 +225,3 @@ class Env {
     return envWithoutFunctions;
   }
 }
-
-export default Env;
