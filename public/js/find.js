@@ -70,6 +70,13 @@ class Find {
     return shortcuts;
   }
 
+  /**
+   * Collect shortcuts from all available namespace.
+   *
+   * @param {object} env        - The set environment.
+   *
+   * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
+   */
   static async collectShortcuts(env) {
 
     let shortcuts = await this.fetchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
@@ -97,6 +104,14 @@ class Find {
     return shortcuts;
   }
 
+  /**
+   * Collect shortcuts from all available namespace.
+   *
+   * @param {object} shortcuts        - The collected shortcuts.
+   * @param {array} namespaces        - The set namespaces.
+   *
+   * @return {string} redirectUrl     - The redirect URL of the picked namespace.
+   */
   static pickShortcut(shortcuts, namespaces) {
 
     // Find first shortcut in our namespace hierarchy.
