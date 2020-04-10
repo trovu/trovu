@@ -60,6 +60,7 @@ export default class HandleCall {
   }
 
   static async handleCall() {
+
     const env = new Env();
     await env.populate();
   
