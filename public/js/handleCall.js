@@ -1,7 +1,6 @@
 /** @module HandleCall */
 
 import Env from "./env.js";
-import LoadScripts from "./loadScripts.js";
 import Helper from "./helper.js";
 import ParseQuery from "./parseQuery.js";
 import ProcessUrl from "./processUrl.js";
