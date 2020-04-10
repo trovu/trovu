@@ -1,8 +1,9 @@
 import Load from "./load.js";
 import Helper from "./helper.js";
 import Parse from "./parse.js";
-import Find from "./find.js";
+import Find from "./findShortcut.js";
 import ProcessUrl from "./processUrl.js";
+import FindShortcut from "./findShortcut.js";
 
 /** Handle a call. */
 
@@ -34,8 +35,8 @@ export default class Handle {
       this.env.namespaces.push(this.env.extraNamespace);
     }
 
-    const shortcuts = await Find.collectShortcuts(this.env);
-    let redirectUrl = Find.pickShortcut(shortcuts, this.env.namespaces);
+    const shortcuts = await FindShortcut.collectShortcuts(this.env);
+    let redirectUrl = FindShortcut.pickShortcut(shortcuts, this.env.namespaces);
 
     if (!redirectUrl) return;
 
