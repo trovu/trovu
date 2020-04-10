@@ -14,8 +14,8 @@ document.querySelector("body").onload = async function(event) {
   const env = new Env();
   await env.populate();
 
-  const handle = new HandleCall(env);
-  let redirectUrl = await handle.getRedirectUrl();
+  const handleCall = new HandleCall(env);
+  let redirectUrl = await handleCall.getRedirectUrl();
 
   if (!redirectUrl) {
     redirectUrl = handleNotFound(env);
