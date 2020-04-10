@@ -1,0 +1,31 @@
+a/1:
+  url: 'http://www.amazon.in/s/?field-keywords={%query}'
+  title: Amazon.in
+  description: ''
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+  examples:
+    shakespeare: Search for "shakespeare"
+  tests: []
+e/0:
+  url: 'http://www.ebay.in/'
+  title: Ebay.in
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  examples: []
+  tests: []
+e/1:
+  url: 'http://www.ebay.in/sch/i.html?_nkw={%query}'
+  title: Ebay.in
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  examples:
+    smartphone: Search for "smartphone"
+  tests: []

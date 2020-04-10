@@ -1,0 +1,499 @@
+blocket/1:
+  url: 'http://www.blocket.se/li?q={%query}'
+  title: Blocket.se
+  description: ''
+  tags:
+  - shopping
+  - blocket
+  examples:
+    iphone: Search for "iphone"
+  tests: []
+e/0:
+  url: 'http://www.ebay.se/'
+  title: Ebay.se
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  examples: []
+  tests: []
+e/1:
+  url: 'http://www.ebay.se/sch/i.html?_nkw={%query}'
+  title: Ebay.se
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  examples:
+    smartphone: Search for "smartphone"
+  tests: []
+gma/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Alings%C3%A5s%2C%20Sverige'
+  title: Google Maps Alingsås
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Alingsås
+  tests: []
+gmb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Bor%C3%A5s%2C%20Sverige'
+  title: Google Maps Borås
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Borås
+  tests: []
+gmbl/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Borl%C3%A4nge%2C%20Sverige'
+  title: Google Maps Borlänge
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Borlänge
+  tests: []
+gme/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Eskilstuna%2C%20Sverige'
+  title: Google Maps Eskilstuna
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Eskilstuna
+  tests: []
+gmf/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Falun%2C%20Sverige'
+  title: Google Maps Falun
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Falun
+  tests: []
+gmg/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Gothenburg%2C%20Sverige'
+  title: Google Maps Gothenburg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Gothenburg
+  tests: []
+gmgä/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20G%C3%A4vle%2C%20Sverige'
+  title: Google Maps Gävle
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Gävle
+  tests: []
+gmh/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Helsingborg%2C%20Sverige'
+  title: Google Maps Helsingborg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Helsingborg
+  tests: []
+gmha/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Halmstad%2C%20Sverige'
+  title: Google Maps Halmstad
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Halmstad
+  tests: []
+gmj/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20J%C3%B6nk%C3%B6ping%2C%20Sverige'
+  title: Google Maps Jönköping
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Jönköping
+  tests: []
+gmk/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Karlstad%2C%20Sverige'
+  title: Google Maps Karlstad
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Karlstad
+  tests: []
+gmkk/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Karlskrona%2C%20Sverige'
+  title: Google Maps Karlskrona
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Karlskrona
+  tests: []
+gmkm/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Kalmar%2C%20Sverige'
+  title: Google Maps Kalmar
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Kalmar
+  tests: []
+gmks/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Kristianstad%2C%20Sverige'
+  title: Google Maps Kristianstad
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Kristianstad
+  tests: []
+gml/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Link%C3%B6ping%2C%20Sverige'
+  title: Google Maps Linköping
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Linköping
+  tests: []
+gmld/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Liding%C3%B6%2C%20Sverige'
+  title: Google Maps Lidingö
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Lidingö
+  tests: []
+gmll/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Lule%C3%A5%2C%20Sverige'
+  title: Google Maps Luleå
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Luleå
+  tests: []
+gmlu/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Lund%2C%20Sverige'
+  title: Google Maps Lund
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Lund
+  tests: []
+gmm/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Malm%C3%B6%2C%20Sverige'
+  title: Google Maps Malmö
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Malmö
+  tests: []
+gmn/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Norrk%C3%B6ping%2C%20Sverige'
+  title: Google Maps Norrköping
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Norrköping
+  tests: []
+gmna/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Nacka%2C%20Sverige'
+  title: Google Maps Nacka
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Nacka
+  tests: []
+gmny/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Nyk%C3%B6ping%2C%20Sverige'
+  title: Google Maps Nyköping
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Nyköping
+  tests: []
+gms/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Stockholm%2C%20Sverige'
+  title: Google Maps Stockholm
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Stockholm
+  tests: []
+gmsb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Sundbyberg%2C%20Sverige'
+  title: Google Maps Sundbyberg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Sundbyberg
+  tests: []
+gmsk/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Skellefte%C3%A5%2C%20Sverige'
+  title: Google Maps Skellefteå
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Skellefteå
+  tests: []
+gmso/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Solna%2C%20Sverige'
+  title: Google Maps Solna
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Solna
+  tests: []
+gmsv/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Sundsvall%2C%20Sverige'
+  title: Google Maps Sundsvall
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Sundsvall
+  tests: []
+gmsö/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20S%C3%B6dert%C3%A4lje%2C%20Sverige'
+  title: Google Maps Södertälje
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Södertälje
+  tests: []
+gmt/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Trollh%C3%A4ttan%2C%20Sverige'
+  title: Google Maps Trollhättan
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Trollhättan
+  tests: []
+gmu/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Uppsala%2C%20Sverige'
+  title: Google Maps Uppsala
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Uppsala
+  tests: []
+gmum/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Ume%C3%A5%2C%20Sverige'
+  title: Google Maps Umeå
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Umeå
+  tests: []
+gmv/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20V%C3%A4ster%C3%A5s%2C%20Sverige'
+  title: Google Maps Västerås
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Västerås
+  tests: []
+gmvx/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20V%C3%A4xj%C3%B6%2C%20Sverige'
+  title: Google Maps Växjö
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Växjö
+  tests: []
+gmä/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20%C3%84ngelholm%2C%20Sverige'
+  title: Google Maps Ängelholm
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Ängelholm
+  tests: []
+gmö/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20%C3%96rebro%2C%20Sverige'
+  title: Google Maps Örebro
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Örebro
+  tests: []
+gmös/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20%C3%96stersund%2C%20Sverige'
+  title: Google Maps Östersund
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    centrum: sök centrum i Östersund
+  tests: []
+llt/2:
+  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&cmdAction=search'
+  title: Luleå Lokaltrafik
+  description: ''
+  tags:
+  - travel
+  - luleå
+  examples:
+    'sotargatan, järnvägen': Nästa buss från Sotargatan till Järnvägen
+  tests: []
+llt/3:
+  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&inpTime={%Avgång}00&cmdAction=search'
+  title: Luleå Lokaltrafik
+  description: ''
+  tags:
+  - travel
+  - luleå
+  examples:
+    'sotargatan, järnvägen,10': 'Buss från Sotargatan till Järnvägen, avgång kl. 10'
+  tests: []
+ltnbd/2:
+  url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&start=1'
+  title: Länstraffiken Norbotten
+  description: ''
+  tags:
+  - travel
+  - luleå
+  - norbotten
+  examples:
+    'boden, luleå': Nästa buss från Boden till Luleå
+  tests: []
+ltnbd/3:
+  url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&T={%Avgång}&start=1'
+  title: Länstraffiken Norbotten
+  description: ''
+  tags:
+  - travel
+  - luleå
+  - norbotten
+  examples:
+    'boden, luleå, 10': 'Buss från Boden till Luleå, avgång kl. 10'
+  tests: []
+rr/2:
+  url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&start=1'
+  title: Resrobot
+  description: ''
+  tags:
+  - travel
+  examples:
+    'stockholm, malmö': Nästa tåg från Stockholm till Malmö
+  tests: []
+rr/3:
+  url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&start=1'
+  title: Resrobot
+  description: ''
+  tags:
+  - travel
+  examples:
+    'stockholm, malmö, 10': 'Tåg från Stockholm till Malmö, avgång kl. 10'
+  tests: []
+sl/2:
+  url: 'http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&start=1'
+  title: Storstockholms Lokaltrafik
+  description: ''
+  tags:
+  - travel
+  - stockholm
+  examples:
+    'husby, alby': Nästa tåg från Husby till Alby
+  tests: []
+sl/3:
+  url: 'http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&start=1'
+  title: Storstockholms Lokaltrafik
+  description: ''
+  tags:
+  - travel
+  - stockholm
+  examples:
+    'husby, alby, 10': 'Tåg från Husby till Alby, avgång kl. 10'
+  tests: []
+sl/4:
+  url: 'http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&D={%Dag}&start=1'
+  title: Storstockholms Lokaltrafik
+  description: ''
+  tags:
+  - travel
+  - stockholm
+  examples:
+    'husby, alby, 10, 30.12.': 'Tåg från Husby till Alby, avgång kl. 10, dag 30.12.'
+  tests: []
+srse/1:
+  url: 'http://sverigesradio.se/sida/sok.aspx?q={%programmets namn}&sort=relevance'
+  title: Sveriges radio search
+  description: ''
+  tags:
+  - radio
+  - sweden
+  examples:
+    stockholm: Search for "stockholm".
+  tests: []
+zal/1:
+  url: 'http://www.zalando.se/katalog/?q={%produkt}'
+  title: Zalando.se
+  description: ''
+  tags:
+  - shopping
+  - zalando
+  examples:
+    kläder: söka kläder
+  tests: []

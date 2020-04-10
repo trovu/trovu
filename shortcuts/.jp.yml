@@ -1,0 +1,12 @@
+a/1:
+  url: 'http://www.amazon.jp/s/?field-keywords={%query}'
+  title: Amazon.jp
+  description: ''
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+  examples:
+    shakespeare: Search for "shakespeare"
+  tests: []

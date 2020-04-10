@@ -1,0 +1,22 @@
+kt/1:
+  url: 'http://komputeko.net/index_eo.php?vorto={%vorto}'
+  title: Komputeko
+  description: ''
+  tags:
+  - esperanto
+  - dictionary
+  - vortaro
+  - computer
+  examples:
+    shortcut: Find the Esperanto word for "shortcut"
+  tests: []
+piv/1:
+  url: 'http://vortaro.net/#{%vorto}'
+  title: Plena Ilustrita Vortaro
+  description: ''
+  tags:
+  - language
+  - esperanto
+  examples:
+    arbo: Serĉu "arbo"
+  tests: []

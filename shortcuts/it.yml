@@ -1,0 +1,30 @@
+de/1:
+  url: 'http://dict.leo.org/itde?search={%parola}'
+  title: Tedesco-italiano (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    albero: Search for "albero"
+  tests: []
+gn/1:
+  url: 'https://www.google.it/search?q={%query}&tbm=nws&hl=it&gl=IT&ceid=IT%3Ait'
+  title: Google News (Italia)
+  description: ''
+  tags:
+  - news
+  - google
+  examples:
+    obama: Google News nach obama durchsuchen
+  tests: []
+last/1:
+  url: 'http://www.last.fm/search?setlang=it&q={%artist}'
+  title: Last.fm
+  description: ''
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"
+  tests: []

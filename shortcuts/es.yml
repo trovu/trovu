@@ -1,0 +1,74 @@
+de/1:
+  url: 'http://dict.leo.org/esde?search={%palabra}'
+  title: Español-Alemán (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - spanish
+  - español
+  - alemán
+  - diccionario
+  - leo
+  examples:
+    árbol: traducción de "baum"
+    baum: traducción de "árbol"
+  tests: []
+dep/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dees'
+  title: Español–Alemán (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - spanish
+  examples:
+    árbol: traducción de "árbol"
+  tests: []
+dle/1:
+  url: 'http://dle.rae.es/?w={%palabra}'
+  title: Diccionario de la Lengua Española
+  description: ''
+  tags:
+  - spanish
+  - dictionary
+  - language
+  examples:
+    árbol: Search diccionario de la lengua española for "arbol"
+  tests: []
+en/1:
+  url: 'http://www.spanishdict.com/translate/{%palabra}'
+  title: Inglés-Español (spanishdict.com)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - english
+  - spanish
+  - linguee
+  examples:
+    tree: Traducción de "tree"
+    arbol: Traducción de "arbol"
+  tests: []
+gn/1:
+  url: 'https://www.google.es/search?q={%query}&tbm=nws&hl=es&gl=ES&ceid=ES%3Aes'
+  title: Google News (Español US)
+  description: ''
+  tags:
+  - news
+  - google
+  examples:
+    obama: Google News nach obama durchsuchen
+  tests: []
+last/1:
+  url: 'http://www.last.fm/search?setlang=es&q={%artist}'
+  title: Last.fm
+  description: ''
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"
+  tests: []

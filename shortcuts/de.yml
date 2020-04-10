@@ -1,0 +1,1953 @@
+1und1/0:
+  url: 'https://www.1und1.de/login'
+  title: 1und1 Kundenlogin
+  description: ''
+  tags:
+  - internetprovider
+  - communications
+  examples: []
+  tests: []
+abk/1:
+  url: 'http://www.abkuerzungen.de/result.php?language=&abbreviation={%Abkürzung}'
+  title: Abkürzungen
+  description: ''
+  tags: []
+  examples:
+    cia: Suche nach der Abkürzung "cia"
+  tests: []
+angliz/0:
+  url: 'https://anglizismenindex.vds-ev.de/suche2.php'
+  title: Anglizismen-Index
+  description: ''
+  tags:
+  - deutsch
+  - sprache
+  - language
+  - anglizismen
+  examples: []
+  tests: []
+angliz/1:
+  url: 'https://anglizismenindex.vds-ev.de/suche2.php?la=on&str={%Wort}'
+  title: Anglizismen-Index
+  description: ''
+  tags:
+  - deutsch
+  - sprache
+  - language
+  - anglizismen
+  examples:
+    Airbag: Suche nach Alternativen zu "Airbag"
+  tests: []
+ar/1:
+  url: 'http://www.arabdict.com/deutsch-arabisch/{%Wort}'
+  title: Arabisch-Deutsch
+  description: ''
+  tags:
+  - german
+  - arabic
+  - language
+  - dictionary
+  examples:
+    baum: Übersetzung von "baum" auf Arabisch
+    شجرة: Übersetzung von "شجرة" auf Deutsch
+  tests: []
+ardtext/1:
+  url: 'http://www.ard-text.de/index.php?page={%Seitennummer}'
+  title: ARD-Text
+  description: ''
+  tags:
+  - videotext
+  - teletext
+  - ard
+  examples:
+    '100': Gehe zu Seite 100
+  tests: []
+arv/1:
+  url: 'http://www.lessan.de/de/{%Wort}'
+  title: 'Arabisch-Deutsch, mit Vokalen'
+  description: ''
+  tags:
+  - german
+  - arabic
+  - language
+  - dictionary
+  examples:
+    baum: Übersetzung von "baum" auf Arabisch
+    شَجَرَة: Übersetzung von "شَجَرَة" auf Arabisch
+  tests: []
+awort/1:
+  url: 'https://anderes-wort-fuer.de/{%wort}/'
+  title: anderes Wort für
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+base/1:
+  url: 'http://www.base-search.net/Search/Results?lookfor={%Suche}'
+  title: Bielefeld Academic Search Engine
+  description: ''
+  tags:
+  - science
+  - bielefeld
+  - academia
+  examples:
+    sprache: Suche nach "sprache"
+  tests: []
+bbs/1:
+  url: 'http://www.babyblaue-seiten.de/index.php?searchQuery={%Suche}&content=search&searchWhere=0&content=search'
+  title: Babyblaue Seiten
+  description: ''
+  tags:
+  - musik
+  - progressive rock
+  - rock
+  examples:
+    Mekong Delta: Suche nach Mekong Delta
+  tests: []
+bc/1:
+  url: 'https://www.bestcheck.de/search?q={%query}'
+  title: BestCheck
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+berlinify/1:
+  url: 'http://berlinifier.appspot.com/berlinify?url={%url}'
+  title: Berlinifier
+  description: ''
+  tags:
+  - language
+  - sprache
+  - deutsch
+  - berlin
+  examples:
+    'http://spiegel.de': Spiegel.de auf Berlinerisch
+  tests: []
+bg/1:
+  url: 'http://debg.dict.cc/?s={%Wort}'
+  title: Bulgarisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+bk/1:
+  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch={%query}'
+  title: Buchkatalog
+  description: ''
+  tags:
+  - shopping
+  - books
+  examples:
+    goethe: Suche nach Goethe
+  tests: []
+bl/1:
+  url: 'https://www.google.de/search?q={%query}+site:www.chip.de%2Fbestenlisten'
+  title: CHIP Bestenliste
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+blb/0:
+  url: 'http://www.booklooker.de/app/sec/login.php'
+  title: Booklooker
+  description: ''
+  tags:
+  - shopping
+  - books
+  - booklooker
+  examples: []
+  tests: []
+blb/1:
+  url: 'http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor}'
+  title: Booklooker
+  description: ''
+  tags:
+  - shopping
+  - books
+  - booklooker
+  examples:
+    goethe: Suche nach Büchern von Goethe
+  tests: []
+blb/2:
+  url: 'http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor|encoding=iso-8859-1}&titel={%Titel|encoding=iso-8859-1}'
+  title: Booklooker
+  description: ''
+  tags:
+  - shopping
+  - books
+  - booklooker
+  examples:
+    'goethe, faust': Suche nach "Faust" von Goethe
+  tests: []
+blbka/1:
+  url: 'https://blb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKFreitext+{%query}'
+  title: Badische Landesbibliothek Karlsruhe
+  description: ''
+  tags:
+  - library
+  - karlsruhe
+  examples:
+    goethe: Suche nach Goethe
+  tests: []
+bpo/1:
+  url: 'http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=YYYY-MM}/#{%datum|type=date|output=YYYY-MM-DD}'
+  title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
+  description: ''
+  tags:
+  - berlin
+  - cultural events
+  - classical music
+  - music
+  examples: []
+  tests: []
+buerklin/1:
+  url: 'https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}'
+  title: 'Bürklin Elektronics, deutsch'
+  description: ''
+  tags:
+  - shopping
+  - electronics
+  - bürklin
+  examples:
+    USB: Suche nach "USB"
+  tests: []
+bürklin/1:
+  url: 'https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}'
+  title: 'Bürklin Elektronics, deutsch'
+  description: ''
+  tags:
+  - shopping
+  - electronics
+  - bürklin
+  examples:
+    USB: Suche nach "USB"
+  tests: []
+ca/1:
+  url: 'https://www.dict.com/Katalanisch-Deutsch/{%Wort}'
+  title: Katalanisch - Deutsch (Dict.com)
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - catalan
+  - german
+  examples:
+    baum: Search Katalanisch - Deutsch (Dict.com) for "baum"
+    arbre: Search Katalanisch - Deutsch (Dict.com) for "arbre"
+  tests: []
+canoo/1:
+  url: 'http://www.canoo.net/services/Controller?input={%Wort}'
+  title: Canoo
+  description: ''
+  tags:
+  - language
+  - german
+  - sprache
+  - deutsch
+  examples:
+    tanzen: Suche nach "tanzen"
+  tests: []
+cb/0:
+  url: 'http://www.computerbase.de/'
+  title: Computerbase
+  description: ''
+  tags:
+  - computer science
+  - linux
+  examples: []
+  tests: []
+cb/1:
+  url: 'http://www.computerbase.de/suche/?q={%query}&bereich='
+  title: Computerbase
+  description: ''
+  tags:
+  - computer science
+  - linux
+  examples:
+    linux: Suche nach Artikel über "linux"
+  tests: []
+ch/1:
+  url: 'https://www.google.de/search?q={%query}+site:www.chip.de'
+  title: CHIP
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chip/1:
+  url: 'http://search.chip.de/?q={%query}&sort_by_date=desc'
+  title: CHIP Online
+  description: ''
+  tags:
+  - chip
+  - download
+  examples:
+    linux: Search CHIP Online for "linux"
+  tests: []
+chipd/1:
+  url: 'http://search.chip.de/?q={%query}&f=softwarereview'
+  title: CHIP Online Downloads
+  description: ''
+  tags:
+  - chip
+  - download
+  examples:
+    skype: Search CHIP Online Downloads for "skype"
+  tests: []
+ck/0:
+  url: 'http://www.chefkoch.de'
+  title: Chefkoch
+  description: ''
+  tags:
+  - cooking
+  - recipes
+  examples: []
+  tests: []
+ck/1:
+  url: 'http://www.chefkoch.de/rs/s0/{%Suche}/Rezepte.html'
+  title: Chefkoch
+  description: ''
+  tags:
+  - cooking
+  - recipes
+  examples:
+    pizza: Rezepte für Pizza
+  tests: []
+cs/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=csde'
+  title: Tschechisch-Deutsch (pons.de)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - czech
+  examples:
+    baum: Übersetzung von "baum"
+    strom: Übersetzung von "strom"
+  tests: []
+cs-de/1:
+  url: 'http://slovnik.cz/bin/mld.fpl?vcb={%Wort}&trn=translate&dictdir=gecz.cz_d&lines=20&hptxt=0&js=1&lang=0'
+  title: Tschechisch-Deutsch via Slovnik.cz
+  description: ''
+  tags:
+  - czech
+  - german
+  - dictionary
+  examples: []
+  tests: []
+csd/1:
+  url: 'http://decs.dict.cc/?s={%Wort}'
+  title: Tschechisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+css/1:
+  url: 'http://www.google.de/search?q=site%3Acss4you.de+{%query}'
+  title: Css4you
+  description: ''
+  tags:
+  - programming
+  - css
+  examples:
+    white-space: Suche nach "white-space"
+  tests: []
+da/1:
+  url: 'http://deda.dict.cc/?s={%Wort}'
+  title: Dänisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - danish
+  examples:
+    baum: '"baum" auf Dänisch'
+    træ: '"træ" auf Deutsch'
+  tests: []
+dclj/0:
+  url: 'https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/'
+  title: De.comp.lang.javascript
+  description: ''
+  tags:
+  - programming
+  - javascript
+  examples: []
+  tests: []
+dclj/1:
+  url: 'https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/{%query}'
+  title: De.comp.lang.javascript
+  description: ''
+  tags:
+  - programming
+  - javascript
+  examples:
+    'var ': Suche nach "var"
+  tests: []
+dclp/0:
+  url: 'http://groups.google.de/group/de.comp.lang.php'
+  title: De.comp.lang.php
+  description: ''
+  tags:
+  - programming
+  - php
+  examples: []
+  tests: []
+dclp/1:
+  url: 'https://groups.google.com/forum/#!searchin/de.comp.lang.php/{%query}'
+  title: De.comp.lang.php
+  description: ''
+  tags:
+  - programming
+  - php
+  examples:
+    strlen: Search for "strlen"
+  tests: []
+dd/1:
+  url: 'http://www.duden.de/suchen/dudenonline/{%wort}'
+  title: Duden
+  description: ''
+  tags:
+  - language
+  - german
+  - deutsch
+  - rechtschreibung
+  examples:
+    stuhl: Nachschlagen des Wortes "Stuhl"
+  tests: []
+de-cs/1:
+  url: 'http://slovnik.cz/bin/mld.fpl?vcb={%Wort}&dictdir=gecz.ge&lines=20&hptxt=0&js=1&lang=0'
+  title: Deutsch-Tschechisch via Slovnik.cz
+  description: ''
+  tags:
+  - czech
+  - german
+  - dictionary
+  examples: []
+  tests: []
+definero/1:
+  url: 'http://www.definero.de/index.php?term={%query}&act=lexicon&set=lexicon%2Canalyse%2Cabbr%2Cdict-en-de%2Csearch-engine'
+  title: Definero
+  description: ''
+  tags:
+  - language
+  - german
+  examples:
+    baum: Definiere "baum"
+  tests: []
+dict/0:
+  url: dict.leo.org
+  title: Leo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+domain/1:
+  url: 'http://www.domainabfrage.net/abfrage/isfree.cgi?domain={%query}&ag=ja&decx=ja&de=ja&ch=ja&at=ja&info=ja&cc=ja&be=ja&com=ja&net=ja&org=ja&biz=ja'
+  title: Domainabfrage.net
+  description: ''
+  tags:
+  - domains
+  examples:
+    hanswurst: Suche nach verfügbaren Domains mit "hanswurst"
+  tests: []
+dw/1:
+  url: 'https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item={%suche}'
+  title: 'Deutsche Welle, Nachrichten auf Deutsch'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dwds/1:
+  url: 'http://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu={%Wort}'
+  title: Digitales Wörterbuch der Deutschen Sprache
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+el/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deel'
+  title: Griechisch-Deutsch (pons.de)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - greek
+  examples:
+    baum: Übersetzung von "baum"
+  tests: []
+eld/1:
+  url: 'http://deel.dict.cc/?s={%Wort}'
+  title: Griechisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+en/1:
+  url: 'http://dict.leo.org/ende/?search={%Wort}'
+  title: Englisch-Deutsch (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - english
+  - leo
+  examples:
+    baum: Englisch-Übersetzung von baum
+  tests: []
+enb/1:
+  url: 'http://dict.tu-chemnitz.de/dings.cgi?lang=de&service=deen&opterrors=0&optpro=0&query={%query}'
+  title: Englisch-Deutsch (Beolingus)
+  description: ''
+  tags:
+  - english
+  - german
+  - englisch
+  - deutsch
+  - dictionary
+  - wörterbuch
+  - sprache
+  - beolingus
+  examples:
+    baum: Übersetzung von "baum" auf Englisch
+    tree: Übersetzung von "tree" auf Deutsch
+  tests: []
+end/1:
+  url: 'http://deen.dict.cc/?s={%Wort}'
+  title: Englisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - english
+  examples:
+    baum: Search for "baum"
+  tests: []
+eni/1:
+  url: 'http://www.linguee.com/english-german/search?source=auto&query={%Wort}'
+  title: Englisch-Deutsch (Linguee)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - english
+  - german
+  - linguee
+  examples:
+    tree: Translation of "tree"
+  tests: []
+enp/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deen'
+  title: Englisch-Deutsch (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - english
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+eo/1:
+  url: 'http://www.pauker.at/pauker/DE_DE/EO/wb/?modus=&suche={%Wort}'
+  title: Esperanto-Deutsch
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - esperanto
+  - deutsch
+  - german
+  examples:
+    baum: Suche nach "baum" auf Esperanto
+    arbo: Suche nach "arbo" auf Deutsch
+  tests: []
+es/1:
+  url: 'http://dict.leo.org/esde?search={%Wort}'
+  title: Spanisch-Deutsch (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    baum: Search for "baum"
+  tests: []
+esd/1:
+  url: 'http://dees.dict.cc/?s={%Wort}'
+  title: Spanisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+esi/1:
+  url: 'http://www.linguee.es/espanol-aleman/search?source=auto&query={%Wort}'
+  title: Spanisch-Deutsch (Linguee)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - spanish
+  - german
+  - linguee
+  examples: []
+  tests: []
+esp/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dees'
+  title: Spanisch-Deutsch (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - spanish
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+esx/1:
+  url: 'http://dix.osola.com/index.de.php?search={%Wort|encoding=iso-8859-15}&language=german'
+  title: Spanisch-Deutsch (DIX)
+  description: ''
+  tags:
+  - dictionary
+  - german
+  - spanish
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+fball/1:
+  url: 'https://fireball.com/search?q={%suchbegriff}'
+  title: Fireball Websuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fefe/0:
+  url: 'http://blog.fefe.de'
+  title: Fefes Blog
+  description: ''
+  tags:
+  - blog
+  - news
+  examples: []
+  tests: []
+fefe/1:
+  url: 'https://www.google.com/search?hl={$language}&sitesearch=blog.fefe.de&q={%Suche}'
+  title: Fefes Blog
+  description: ''
+  tags:
+  - blog
+  - news
+  examples:
+    atomenergie: Search for "atomenergie"
+  tests: []
+fefecss/1:
+  url: 'http://blog.fefe.de?css={%Style}.css'
+  title: 'Fefes Blog, anderer CSS-Style'
+  description: ''
+  tags:
+  - blog
+  - news
+  examples:
+    manpage: Fefes Blog mit dem CSS-Style manpage.css
+  tests: []
+fefes/0:
+  url: 'https://blog.fefe.de'
+  title: 'Fefes Blog, SSL'
+  description: ''
+  tags:
+  - blog
+  - news
+  examples: []
+  tests: []
+fefes/1:
+  url: 'https://blog.fefe.de?q={%Suche}'
+  title: 'Fefes Blog, SSL, case-sensitive Suche'
+  description: ''
+  tags:
+  - blog
+  - news
+  examples:
+    berlin: Search for "berlin"
+  tests: []
+fefescss/1:
+  url: 'https://blog.fefe.de?css={%Style}.css'
+  title: 'Fefes Blog, anderer CSS-Style, SSL'
+  description: ''
+  tags:
+  - blog
+  - news
+  examples:
+    manpage: Fefes Blog mit dem CSS-Style manpage.css
+  tests: []
+fi/1:
+  url: 'http://defi.dict.cc/?s={%Wort}'
+  title: Finnisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - finnish
+  examples:
+    baum: Übersetzung von "baum"
+  tests: []
+fis/1:
+  url: 'http://www.filmstarts.de/suche/?q={%Filmtitel}'
+  title: Filmstarts.de
+  description: ''
+  tags:
+  - movies
+  - cinema
+  examples:
+    thriller: Suche nach neuen Filmen zu "thriller"
+  tests: []
+fmb/2:
+  url: 'http://findmybook.de/input.php?form%5Btitle%5D={%Titel}&form%5Bauthor%5D={%Autor}'
+  title: Findmybook.de
+  description: ''
+  tags:
+  - books
+  examples:
+    'houellebecq, elementarteilchen': Search for "houellebecq"
+  tests: []
+fool/1:
+  url: 'https://www.fool.de/?s={%keyword}&submit=&lang=de'
+  title: Fool.de article search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr/1:
+  url: 'http://dict.leo.org/frde?search={%Wort}'
+  title: Französisch-Deutsch (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    baum: Search for "baum"
+  tests: []
+frd/1:
+  url: 'http://defr.dict.cc/?s={%Wort}'
+  title: Französisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+fri/1:
+  url: 'http://www.linguee.fr/francais-allemand/search?source=auto&query={%Wort}'
+  title: Französisch-Deutsch (Linguee)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - french
+  - german
+  - linguee
+  examples: []
+  tests: []
+frp/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=defr'
+  title: Französisch-Deutsch (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - french
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+fs/0:
+  url: 'http://fernsehsuche.de/'
+  title: Fernsehsuche.de
+  description: ''
+  tags:
+  - tv
+  - mediathek
+  examples: []
+  tests: []
+fs/1:
+  url: 'http://fernsehsuche.de/uebersicht/?q={%Suche}'
+  title: Fernsehsuche.de
+  description: ''
+  tags:
+  - tv
+  - mediathek
+  examples:
+    tagesschau: Suche nach "tagesschau" in allen Mediatheken
+  tests: []
+ftr/1:
+  url: 'http://www.finanztreff.de/kurse/suche/'
+  post parameters:
+    seite: suche
+    suchbegriff: '{%query}'
+  title: Finanztreff
+  description: ''
+  tags:
+  - finance
+  examples:
+    twitter: Search Finanztreff for "twitter"
+  tests: []
+ga/1:
+  url: 'https://gamesageddon.com/fotolia?query={%argument_name}&fOr=nb_downloads'
+  title: GamesAgeddon
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gfp/0:
+  url: 'http://german-foreign-policy.com/de/news/'
+  title: German Foreign Policy
+  description: ''
+  tags:
+  - politics
+  - news
+  - germany
+  examples: []
+  tests: []
+gfp/1:
+  url: 'http://german-foreign-policy.com/index.php?lang=de&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}'
+  title: German Foreign Policy (German)
+  description: ''
+  tags:
+  - politics
+  - news
+  - germany
+  examples:
+    berlin: Suche nach "berlin"
+  tests: []
+gmp/0:
+  url: 'https://music.microsoft.com/search/argument%20name?target=web'
+  title: Groove musik
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+grc/1:
+  url: 'http://www.albertmartin.de/altgriechisch/?q={%suchwort}'
+  title: Altgriechisch Wörterbuch
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - altgriechisch
+  - deutsch
+  - german
+  examples:
+    baum: Übersetzung von "Baum" auf Altgriechisch
+    ξύλον: 'Übersetzung von "ξύλον" auf Deutsch '
+  tests: []
+gs/1:
+  url: 'https://scholar.google.com/search?hl={$language}&q={%query}'
+  title: Google scholar
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gz/0:
+  url: 'https://www.griechenland.net/'
+  title: Griechenland Zeitung
+  description: ''
+  tags:
+  - news
+  - greece
+  - griechenland
+  examples: []
+  tests: []
+h/0:
+  url: 'http://www.heise.de'
+  title: Heise Startseite
+  description: ''
+  tags:
+  - heise
+  examples: []
+  tests: []
+h/1:
+  url: 'http://www.heise.de/newsticker/suche/?rm=search&q={%Suchbegriff}'
+  title: Heise Newssuche
+  description: ''
+  tags:
+  - heise
+  examples:
+    linux: Search for "linux"
+  tests: []
+heise/0:
+  url: 'http://www.heise.de/'
+  title: Heise.de
+  description: ''
+  tags:
+  - heise
+  - news
+  examples: []
+  tests: []
+heisenews/0:
+  url: 'http://www.heise.de/newsticker'
+  title: Heise Newsticker
+  description: ''
+  tags:
+  - heise
+  - news
+  examples: []
+  tests: []
+hn/0:
+  url: 'http://www.heise.de/newsticker'
+  title: Heise Newsticker
+  description: ''
+  tags:
+  - heise
+  examples: []
+  tests: []
+hn/1:
+  url: 'http://www.heise.de/suche/?rm=search;q={%query};channel=newsticker'
+  title: Heise Newsticker
+  description: ''
+  tags:
+  - heise
+  examples:
+    apple: Search for "apple"
+  tests: []
+hoax/1:
+  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms={%query}'
+  title: Hoax-Info (TU-Berlin)
+  description: ''
+  tags:
+  - hoax
+  examples:
+    Nigeria-Connection: Hoax-Info über die "Nigeria-Connection"
+  tests: []
+hotf/0:
+  url: 'http://www.heise.de/extras/foren/S-Special-Off-Topic-Archiv-15/forum-206680/list/'
+  title: Heise Off-Topic-Forum
+  description: ''
+  tags:
+  - heise
+  - forum
+  examples: []
+  tests: []
+hpreis/0:
+  url: 'http://www.heise.de/preisvergleich'
+  title: Heise Preisvergleich Startseite
+  description: ''
+  tags:
+  - heise
+  - shopping
+  examples: []
+  tests: []
+hpreis/1:
+  url: 'http://www.heise.de/preisvergleich/?fs={%Suchbegriff}'
+  title: 'Heise Preisvergleich '
+  description: ''
+  tags:
+  - heise
+  - shopping
+  examples:
+    computer: Search for "computer"
+  tests: []
+hr/1:
+  url: 'http://www.crodict.com/search.html?submit=&l=1&t=1&q={%Wort}'
+  title: Kroatisch-Deutsch (crodict.com)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - croatian
+  - english
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+hsoft/0:
+  url: 'http://www.heise.de/software/'
+  title: Heise Softwareverzeichnis Startseite
+  description: ''
+  tags:
+  - heise
+  examples: []
+  tests: []
+hsoft/1:
+  url: 'http://www.heise.de/software/download/default.shtml?T={%Suchbegriff}&Suchen=suchen&global=1'
+  title: 'Heise Softwareverzeichnis '
+  description: ''
+  tags:
+  - heise
+  examples:
+    bildbearbeitung: Search for "bildbearbeitung"
+  tests: []
+htp/0:
+  url: 'http://www.heise.de/tp/'
+  title: Telepolis Startseite
+  description: ''
+  tags:
+  - heise
+  examples: []
+  tests: []
+hu/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dehu'
+  title: Ungarisch-Deutsch (pons.de)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - hungarian
+  examples:
+    baum: Übersetzung von "baum"
+  tests: []
+hud/1:
+  url: 'http://dehu.dict.cc/?s={%Wort}'
+  title: Ungarisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+hwho/1:
+  url: 'http://www.heise.de/netze/tools?rm=whois&plugin={%URL}'
+  title: 'Heise Whois Netzwerk-Tool '
+  description: ''
+  tags:
+  - heise
+  examples:
+    '1': Search for "1"
+  tests: []
+is/1:
+  url: 'http://deis.dict.cc/?s={%Wort}'
+  title: Isländisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+isbn/1:
+  url: 'http://de.wikipedia.org/wiki/Spezial:Booksources/{%isbn}'
+  title: ISBN-Suche bei Wikipedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+it/1:
+  url: 'http://dict.leo.org/itde?search={%Wort}'
+  title: Italienisch-Deutsch (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    baum: Search for "baum"
+  tests: []
+it-ital/1:
+  url: 'http://www.italdict.de/exec/?S={%query}'
+  title: Italienisch-Deutsch (italdict.de)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - italian
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+itd/1:
+  url: 'http://deit.dict.cc/?s={%Wort}'
+  title: Italienisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+itp/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deit'
+  title: Italienisch-Deutsch (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - italian
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+ja/1:
+  url: 'http://www.wadoku.de/wadoku/search/{%Wort}'
+  title: Japanisch-Deutsch (Wadoku)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    baum: Übersetzung für "baum"
+    木根: Übersetzung für "木根"
+  tests: []
+kam/1:
+  url: 'http://kamelopedia.mormo.org/index.php?title=Special:Search&go=Article&search={%article}'
+  title: Kamelopedia
+  description: ''
+  tags:
+  - wiki
+  - encyclopedia
+  - humor
+  examples:
+    Berlin: Artikel zu "Berlin"
+  tests: []
+kicker/0:
+  url: 'http://www.kicker.de/'
+  title: Kicker.de
+  description: ''
+  tags:
+  - news
+  - sport
+  examples: []
+  tests: []
+kicker/1:
+  url: 'http://www.kicker.de/home/suchergebnisse.html?suchbegriff={%Suche}&suchbegriffsent=true'
+  title: Kicker.de
+  description: ''
+  tags:
+  - news
+  - sport
+  examples:
+    berlin: Search for "berlin"
+  tests: []
+la/1:
+  url: 'http://www.albertmartin.de/latein/?q={%query}'
+  title: Latein-Deutsch
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - latin
+  - german
+  examples:
+    baum: Übersetzung von "baum"
+    arbor: Übersetzung von "arbor"
+  tests: []
+lad/1:
+  url: 'http://dela.dict.cc/?s={%Wort}'
+  title: Latein-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+last/1:
+  url: 'http://www.last.fm/search?setlang=de&q={%artist}'
+  title: Last.fm
+  description: ''
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"
+  tests: []
+m/1:
+  url: 'https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe={%query}'
+  title: Metager
+  description: ''
+  tags:
+  - search engine
+  - search
+  - web search
+  examples: []
+  tests: []
+morgenpost/1:
+  url: 'http://www.morgenpost.de/suche/?q={%Suche}'
+  title: Berliner Morgenpost Archiv
+  description: ''
+  tags:
+  - news
+  examples:
+    berlin: Search Berliner Morgenpost Archiv for "berlin"
+  tests: []
+mp/1:
+  url: 'http://www.moviepilot.de/suche?utf8=%E2%9C%93&q={%Suche}'
+  title: Moviepilot
+  description: ''
+  tags:
+  - moviepilot
+  - movies
+  - film
+  examples:
+    forrest gump: Search for "Forrest Gump"
+  tests: []
+mz/0:
+  url: 'http://www.mittelbayerische.de/'
+  title: Mittelbayerische Zeitung
+  description: ''
+  tags:
+  - news
+  - bayern
+  examples: []
+  tests: []
+nds/0:
+  url: 'http://www.nachdenkseiten.de'
+  title: Nachdenkseiten
+  description: ''
+  tags:
+  - blog
+  - politik
+  examples: []
+  tests: []
+nds/1:
+  url: 'http://www.nachdenkseiten.de/?s={%Begriff}&Submit.x=0&Submit.y=0'
+  title: Nachdenkseiten
+  description: ''
+  tags:
+  - blog
+  - politik
+  examples:
+    grundeinkommen: Suche nach "grundeinkommen"
+  tests: []
+nl/1:
+  url: 'http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!'
+  title: Niederländisch-Deutsch (uitmuntend.de)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    lekker: Search for "lekker"
+  tests: []
+nld/1:
+  url: 'http://denl.dict.cc/?s={%Wort}'
+  title: Niederländisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+no/1:
+  url: 'http://deno.dict.cc/?s={%Wort}'
+  title: Norwegisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - norwegian
+  examples:
+    baum: Übersetzung von "baum"
+  tests: []
+nzz/1:
+  url: 'http://www.nzz.ch/suche?form%5Bq%5D={%Suchbegriff}'
+  title: 'NZZ Neue Züricher Zeitung, Archiv'
+  description: ''
+  tags:
+  - news
+  - nzz
+  examples:
+    schweiz: 'Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"'
+  tests: []
+o/0:
+  url: www.softonic.com
+  title: softonic
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ofdb/1:
+  url: 'http://www.ofdb.de/view.php?page=suchergebnis&SText={%Suche}'
+  title: Online Filmdatenbank
+  description: ''
+  tags:
+  - movies
+  examples:
+    forrest gump: Search for information about Forrest Gump
+  tests: []
+offlo/1:
+  url: 'http://www.office-loesung.de/googlesuche.php?cx=partner-pub-3835174959915126%3Adlozs3erhqu&cof=FORID%3A10&ie=ISO-8859-1&q={%Suche}&sa=Suche&siteurl=www.office-loesung.de%2F&ref=&ss=11381j11919943j44'
+  title: OfficeLoesung.de
+  description: ''
+  tags:
+  - microsoft office
+  examples:
+    test: Search OfficeLoesung for "test"
+  tests: []
+osm?/0:
+  url: 'https://wiki.openstreetmap.org/index.php/Hauptseite'
+  title: OpenStreetMap Wiki
+  description: ''
+  tags:
+  - osm
+  - maps
+  - copyleft
+  examples: []
+  tests: []
+osmf/0:
+  url: 'https://forum.openstreetmap.org/viewforum.php?id=14'
+  title: OpenStreetMap Forum Deutsch
+  description: ''
+  tags:
+  - osm
+  - maps
+  - copyleft
+  examples: []
+  tests: []
+ot/0:
+  url: 'http://www.openthesaurus.de/'
+  title: OpenThesaurus
+  description: ''
+  tags:
+  - language
+  - thesaurus
+  examples: []
+  tests: []
+ot/1:
+  url: 'https://www.openthesaurus.de/synonyme/{%Wort}'
+  title: OpenThesaurus
+  description: ''
+  tags:
+  - language
+  - thesaurus
+  examples:
+    wichtig: Synonyme für "wichtig"
+  tests: []
+ot?/0:
+  url: 'http://www.openthesaurus.de/faq.php'
+  title: OpenThesaurus Hilfe
+  description: ''
+  tags:
+  - language
+  - thesaurus
+  examples: []
+  tests: []
+pl/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=depl'
+  title: Polnisch-Deutsch (pons.de)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - polish
+  examples:
+    baum: Übersetzung von "baum"
+    drzewo: Übersetzung von "drzewo"
+  tests: []
+pld/1:
+  url: 'http://depl.dict.cc/?s={%Wort}'
+  title: Polnisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+pt/1:
+  url: 'http://en.pons.com/translate?q={%query}&in=&l=dept'
+  title: Portugiesisch-Deutsch (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - portugese
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+ptd/1:
+  url: 'http://dept.dict.cc/?s={%Wort}'
+  title: Portugiesisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+pti/1:
+  url: 'https://www.linguee.pt/portugues-alemao/search?source=auto&query={%Wort}'
+  title: Portugiesisch-Deutsch (Linguee)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - spanish
+  - german
+  - linguee
+  examples: []
+  tests: []
+ptp/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dept'
+  title: Portugiesisch-Deutsch (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - portuguese
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+qa/1:
+  url: 'https://lite.qwant.com/?q={%query}'
+  title: QWANT
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rblcheck/1:
+  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress={%ipaddress}'
+  title: RBL-Check (Realtime Blackhole List)
+  description: ''
+  tags:
+  - rbl
+  - email
+  examples:
+    127.0.0.1: Check if 127.0.0.1 is on the RBL
+  tests: []
+reim/1:
+  url: 'http://www.2rhyme.ch/Reimt-auf/{%Wortendung}'
+  title: 2 Rhyme Reimlexikon
+  description: ''
+  tags:
+  - language
+  - german
+  - reime
+  examples:
+    auen: Suche Reime auf "auen"
+  tests: []
+rm/1:
+  url: 'http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase={%pled}'
+  title: Pledari Grond
+  description: Dictionary German <-> Rumantsch Grischun
+  tags:
+  - dictionary
+  - rumantsch grischun
+  - language
+  - german
+  examples: []
+  tests: []
+ro/1:
+  url: 'http://dero.dict.cc/?s={%Wort}'
+  title: Rumänisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+ru/1:
+  url: 'http://dict.leo.org/rude?search={%Wort}'
+  title: Russisch-Deutsch (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    baum: Search for "baum"
+  tests: []
+rud/1:
+  url: 'http://deru.dict.cc/?s={%Wort}'
+  title: Russisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+rup/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deru'
+  title: Russisch-Deutsch (Pons)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - russian
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+ruy/1:
+  url: 'http://lingvo.yandex.ru/de?lang=de&text={%Wort}'
+  title: Russisch-Deutsch (yandex.ru)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - russian
+  examples:
+    baum: Übersetzung für "baum"
+    дерево: Übersetzung für "дерево"
+  tests: []
+sat1text/1:
+  url: 'http://www.sat1.de/service/teletext/index.php?pagnr={%Seite}_01'
+  title: Sat.1-Text
+  description: ''
+  tags:
+  - videotext
+  - teletext
+  examples:
+    '100 ': Gehe zu Seite 100
+  tests: []
+sh/0:
+  url: 'http://de.selfhtml.org/'
+  title: Selfhtml
+  description: ''
+  tags:
+  - selfhtml
+  - programming
+  - html
+  - javascript
+  - perl
+  - xml
+  - documentation
+  - doc
+  - tutorial
+  examples: []
+  tests: []
+sh/1:
+  url: 'http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage={%Suche}'
+  title: Selfhtml
+  description: ''
+  tags:
+  - documentation
+  - doc
+  - tutorial
+  - html
+  - javascript
+  examples:
+    div: Suche nach "div"
+  tests: []
+shg/1:
+  url: 'http://www.google.com/search?q={%Suche}&sitesearch=wiki.selfhtml.org'
+  title: Selfhtml via Google
+  description: ''
+  tags:
+  - selfhtml
+  - programming
+  - html
+  - javascript
+  - perl
+  - xml
+  - documentation
+  - doc
+  - tutorial
+  examples:
+    doctype: description about doctype declaration
+  tests: []
+sk/1:
+  url: 'http://desk.dict.cc/?s={%Wort}'
+  title: Slowakisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+soft/0:
+  url: 'http://softorama.com'
+  title: softorama
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+spon/0:
+  url: 'http://www.spiegel.de/'
+  title: Spiegel Online
+  description: ''
+  tags:
+  - news
+  - spiegel
+  examples: []
+  tests: []
+spon/1:
+  url: 'http://www.spiegel.de/suche/index.html?suchbegriff={%Suche}'
+  title: Spiegel Online
+  description: ''
+  tags:
+  - news
+  - spiegel
+  examples:
+    berlin: Suche nach "berlin"
+  tests: []
+sv/1:
+  url: 'http://rio.pauker.at/pauker/DE/SE/wb/?s={%Wort}'
+  title: Schwedisch-Deutsch (pauker.at)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - swedish
+  - german
+  examples:
+    baum: Übersetzung für "baum"
+  tests: []
+svd/1:
+  url: 'http://desv.dict.cc/?s={%Wort}'
+  title: Schwedisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+syn/1:
+  url: 'http://synonyme.woxikon.de/synonyme/{%wort}.php'
+  title: Synonyme
+  description: ''
+  tags:
+  - language
+  - thesaurus
+  examples:
+    wichtig: Synonyme für "wichtig"
+  tests: []
+sz/0:
+  url: 'http://www.sueddeutsche.de/'
+  title: Süddeutsche Zeitung
+  description: ''
+  tags:
+  - news
+  - zeitung
+  examples: []
+  tests: []
+sz/1:
+  url: 'http://www.sueddeutsche.de/news?search={%query}'
+  title: Süddeutsche Zeitung
+  description: ''
+  tags:
+  - newspaper
+  - news
+  - print
+  examples: []
+  tests: []
+taz/0:
+  url: 'http://www.taz.de/'
+  title: taz. die tageszeitung
+  description: ''
+  tags:
+  - news
+  - zeitung
+  examples: []
+  tests: []
+tomdestages/0:
+  url: 'https://www.taz.de/#!tom=tomdestages'
+  title: Tom Touché (Tom des Tages)
+  description: ''
+  tags:
+  - taz
+  - comic
+  examples: []
+  tests: []
+tomshuffle/0:
+  url: 'https://www.taz.de/#!tom=tomshuffle'
+  title: Tom Touché (Random)
+  description: ''
+  tags:
+  - taz
+  - comic
+  examples: []
+  tests: []
+tomtouche/0:
+  url: 'https://www.taz.de/#!tom=tomdestages'
+  title: Tom Touché (Tom des Tages)
+  description: ''
+  tags:
+  - taz
+  - comic
+  examples: []
+  tests: []
+tr/1:
+  url: 'http://detr.dict.cc/?s={%Wort}'
+  title: Türkisch-Deutsch (dict.cc)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  examples:
+    baum: Search for "baum"
+  tests: []
+trd/1:
+  url: 'http://www.deutsch-tuerkisch.net/suche/{%Wort}'
+  title: Türkisch-Deutsch (Deutsch-Tuerkisch.net)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - turkish
+  examples:
+    baum: Übersetzung von "baum" auf Türkisch
+    ağaç: Übersetzung von "ağaç" auf Deutsch
+  tests: []
+ts/0:
+  url: 'http://www.tagesschau.de/'
+  title: Tagesschau
+  description: ''
+  tags:
+  - news
+  - tagesschau
+  examples: []
+  tests: []
+ts/1:
+  url: 'http://www.tagesschau.de/suche2.html?searchText={%query}'
+  title: Tagesschau
+  description: ''
+  tags:
+  - news
+  - tagesschau
+  examples:
+    berlin: Suche nach Nachrichten zu Berlin
+  tests: []
+uu/0:
+  url: 'http://www.ubuntuusers.de/'
+  title: UbuntuUsers.de
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples: []
+  tests: []
+uu/1:
+  url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=all'
+  title: 'UbuntuUsers.de: Suche in allen Bereichen'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples:
+    spiele: Search for "spiele"
+  tests: []
+uua/1:
+  url: 'http://wiki.ubuntuusers.de/{%title}'
+  title: 'UbuntuUsers.de: Artikel im Wiki'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples:
+    spiele: Search for "spiele"
+  tests: []
+uuf/0:
+  url: 'http://forum.ubuntuusers.de/'
+  title: 'UbuntuUsers.de: Startseite des Forum'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples: []
+  tests: []
+uuf/1:
+  url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=forum'
+  title: 'UbuntuUsers.de: Suche im Forum'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples:
+    spiele: Search for "spiele"
+  tests: []
+uui/0:
+  url: 'http://ikhaya.ubuntuusers.de/'
+  title: 'UbuntuUsers.de: Ikhaya-Startseite'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples: []
+  tests: []
+uui/1:
+  url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=ikhaya'
+  title: 'UbuntuUsers.de: Ikhaya-Artikelsuche'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples:
+    spiele: Search for "spiele"
+  tests: []
+uup/0:
+  url: 'http://planet.ubuntuusers.de/'
+  title: 'UbuntuUsers.de: Startseite des Planeten'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples: []
+  tests: []
+uup/1:
+  url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=planet'
+  title: 'UbuntuUsers.de: Suche im Planeten'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples:
+    spiele: Search for "spiele"
+  tests: []
+uuw/0:
+  url: 'http://wiki.ubuntuusers.de/Startseite'
+  title: 'UbuntuUsers.de: Startseite des Wiki'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples: []
+  tests: []
+uuw/1:
+  url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=wiki'
+  title: 'UbuntuUsers.de: Suche im Wiki'
+  description: ''
+  tags:
+  - ubuntu
+  - linux
+  - documentation
+  examples:
+    spiele: Search for "spiele"
+  tests: []
+wn/1:
+  url: 'http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort={%query}'
+  title: Wörterbuchnetz
+  description: ''
+  tags:
+  - dictionary
+  - german
+  - wörterbuch
+  - deutsch
+  examples:
+    haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
+  tests: []
+wq/1:
+  url: 'https://de.wikiquote.org/w/index.php?search={%query}'
+  title: Wikiquote
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ws/0:
+  url: 'http://wortschatz.uni-leipzig.de'
+  title: Wortschatz-Lexikon
+  description: ''
+  tags:
+  - language
+  - german
+  examples: []
+  tests: []
+ws/1:
+  url: 'http://corpora.uni-leipzig.de/de/res?word={%Wort}&corpusId=deu_newscrawl_2011'
+  title: Wortschatz-Lexikon (Deutsch)
+  description: ''
+  tags:
+  - language
+  - german
+  examples:
+    Stuhl: Search for "Stuhl"
+  tests: []
+zdnet/1:
+  url: 'http://downloads.netmediaeurope.de/?s={%Suche}'
+  title: ZDNet Download
+  description: ''
+  tags:
+  - downloads
+  - software
+  examples:
+    editor: Search for "editor"
+  tests: []
+zeit/0:
+  url: 'http://www.zeit.de/'
+  title: Zeit Online
+  description: ''
+  tags:
+  - news
+  - zeit
+  examples: []
+  tests: []
+zeit/1:
+  url: 'http://www.zeit.de/suche/index?searchtype=on&q={%query}'
+  title: Zeit Online
+  description: ''
+  tags:
+  - news
+  - zeit
+  examples:
+    berlin: Suche im Archiv von Zeit Online nach Berlin
+  tests: []
+zel/1:
+  url: 'http://www.zelluloid.de/suche/index.php3?qstring={%Suche}'
+  title: Zelluloid Filmsuche
+  description: ''
+  tags:
+  - movies
+  - cinema
+  examples:
+    forrest gump: Suche nach "forrest gump"
+  tests: []
+zh/1:
+  url: 'http://dict.leo.org/chde?search={%Wort}'
+  title: Chinesisch-Deutsch (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    baum: Search for "baum"
+  tests: []
+zv/1:
+  url: 'http://www.zwangsversteigerung.de/suche?q={%KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID}&ergebnisZeigen=ja'
+  title: Zwangsversteigerung
+  description: ''
+  tags:
+  - zwangsversteigerung
+  examples:
+    gi: Suche nach Zwangsversteigerungen in Gießen
+  tests: []

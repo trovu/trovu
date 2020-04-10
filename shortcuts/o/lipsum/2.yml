@@ -1,9 +1,0 @@
-url: http://www.lipsum.com/feed/html?amount={%amount}&what={%paragraphs/words/bytes/lists}&name=start
-title: Lorem Ipsum
-description: ""
-tags:
-- lorem ipsum
-- lipsum
-examples:
-  200, bytes: Generate 200 bytes of "Lorem Ipsum"
-tests: []

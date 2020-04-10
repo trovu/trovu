@@ -1,0 +1,6349 @@
+'*/1':
+  url: 'http://voip-info.org/wiki-Asterisk+cmd+{%query}'
+  title: Search Voip-Info.org for Asterisk
+  description: ''
+  tags: []
+  examples: []
+  tests: []
++/0:
+  url: 'http://plus.google.com'
+  title: Google Plus
+  description: ''
+  tags: []
+  examples: []
+  tests: []
++/1:
+  url: 'http://plus.google.com/s/{%query}'
+  title: Google Plus
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+2video/1:
+  url: 'http://www.2video.de/?action=download&dl={%url}&req=downloads'
+  title: 2Video
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+'>/1':
+  url: 'http://wiki.serchilo.net/Special:Search?search={%query}&go=Seite'
+  title: Serchilo Wiki search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ac/1:
+  url: 'http://www.archchinese.com/chinese_english_dictionary.html?find={%query}'
+  title: Arch Chinese Stroke Order Animation and Dictionary
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+acf/0:
+  url: 'http://www.christian-kirsch.de/foren/viewforum.php?f=53'
+  title: Agatha Christie Forum
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+acom/0:
+  url: 'http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20'
+  title: Amazon.com homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+acom/1:
+  url: 'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20'
+  title: Amazon.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ade/0:
+  url: 'http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21'
+  title: Amazon.de Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ade/1:
+  url: 'http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&linkCode=ur2&tag=serchilo-21'
+  title: Amazon.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+afp/1:
+  url: 'http://www.alltageinesfotoproduzenten.de/?s={%query}'
+  title: Alltag eines Fotoproduzenten
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+afr/0:
+  url: 'http://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21'
+  title: Amazon.fr homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+afr/1:
+  url: 'http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo0e-21'
+  title: Amazon.fr
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+agg/1:
+  url: 'http://www.google.de/search?hl=de&source=hp&btnI=Auf+gut+Glück!&aq=f&aqi=g7&aql=&oq=&q={%query}'
+  title: Google Auf Gut Glück
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+amazon/0:
+  url: 'http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20'
+  title: Amazon.com homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+amazon/1:
+  url: 'http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20'
+  title: Amazon.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+atw/1:
+  url: 'http://www.alltheweb.com/search?cat=web&cs=iso88591&q={%query}'
+  title: AlltheWeb
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+auk/0:
+  url: 'http://www.amazon.co.uk/?_encoding=UTF8&camp=1634&creative=6738&linkCode=ur2&tag=serchilo02-21'
+  title: Amazon.co.uk homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+auk/1:
+  url: 'http://www.amazon.co.uk/gp/search?ie=UTF8&camp=1634&creative=6738&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo02-21'
+  title: Amazon.co.uk
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+av/1:
+  url: 'http://altavista.com/web/results?q={%query}'
+  title: Altavista
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bgo/1:
+  url: 'http://bugs.gentoo.org/buglist.cgi?quicksearch={%query}'
+  title: Gentoo Bugzilla
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+blekko/1:
+  url: 'command/2110/changed?arguments[]={%query}'
+  title: Blekko
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bookbutler/1:
+  url: 'http://us.bookbutler.com/do/bookSearch?pageNr=1&showMore=true&sortBy=salesrank&searchFor={%query}&searchBy=keyword&searchIn=de&shipTo=de&amountIn=eur'
+  title: Bookbutler
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+boxrec/2:
+  url: 'http://boxrec.com/search.php?status=all&cat=boxer&first_name={%FirstName}%&last_name={%LastName}&submit=Go'
+  title: BoxRec
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+btj/0:
+  url: 'http://btjunkie.org'
+  title: BTJunkie
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+btj/1:
+  url: 'http://btjunkie.org/search?q={%query}&c=0'
+  title: BTJunkie Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+btja/1:
+  url: 'http://btjunkie.org/search?q={%query}&c=1'
+  title: BTJunkie Audio Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+btjv/1:
+  url: 'http://btjunkie.org/search?q={%query}&c=6'
+  title: BTJunkie Video Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+btw/2:
+  url: 'http://bettween.com/{%user1}/{%user2}'
+  title: Bettween
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+c/1:
+  url: 'http://clusty.com/search?query={%query}'
+  title: Clusty
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+c++/1:
+  url: 'http://en.cppreference.com/mwiki/index.php?search={%query}'
+  title: C++ Reference (cppreference.com)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cad/0:
+  url: 'http://cad-comic.com/cad'
+  title: Current Ctrl-Alt-Del-Comic
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cadsilly/0:
+  url: 'http://cad-comic.com/sillies'
+  title: Current Ctrl-Alt-Del-Silly
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cake/1:
+  url: 'http://api.cakephp.org/search/render{%query}'
+  title: CakePHP API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cat/0:
+  url: 'http://wiki.serchilo.net/Category:Command_category'
+  title: Command category
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cat/1:
+  url: 'http://wiki.serchilo.net/Category:{%category}'
+  title: Command category
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cc/1:
+  url: 'http://search.creativecommons.org/?q={%query}'
+  title: Creative Commons
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ccc/1:
+  url: 'http://{%query}.ccc.de'
+  title: Chaos Computer Club
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cddb/1:
+  url: 'http://www.gracenote.com/music/search.html?q={%artist}&f=artist&f=disc'
+  title: CD Database
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ce/1:
+  url: 'http://www.chineseetymology.org/CharacterEtymology.aspx?characterInput={%character}'
+  title: Chinese Etymology
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cf/0:
+  url: 'http://www.clipfish.de/'
+  title: Clipfish Homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cf/1:
+  url: 'http://www.clipfish.de/searchfish.php?word={%query}'
+  title: Clipfish Clipsearch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cfp/1:
+  url: 'http://www.wikicfp.com/cfp/servlet/tool.search?q={%query}&year=t'
+  title: Wikicfp - Call for papers
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cg/1:
+  url: 'http://cablesearch.org/?q={%term}'
+  title: Cablegate Cablesearch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chegged/1:
+  url: 'http://slotboxed.com/cheggit.php?getresults=Search&searchtype=all&keywords={%title}'
+  title: Cheggit
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cheggit/0:
+  url: 'http://cheggit.net/browsetorrents.php'
+  title: Cheggit
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cheggit/1:
+  url: 'http://cheggit.net/tags.php?action=tagsearch&tag_search_string={%tag}'
+  title: Cheggit
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chewbone/1:
+  url: 'http://chewbone.blogspot.com/2008/03/mp3-blog-search-results.html?cx=011120813593335739513%3A8exs4fljtn4&cof=FORID%3A11&q={%query}'
+  title: Chewbone Mp3 Blog Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chip/1:
+  url: 'http://suche.chip.de/?q={%query}'
+  title: Chip.de Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chipfind/1:
+  url: 'http://www.chipfind.ru/datasheet/search.htm?s={%partnumber}&t=part'
+  title: ChipFind
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chords/1:
+  url: 'http://www.ultimate-guitar.com/search.php?value={%band or song}&search_type=title'
+  title: Ultimate-guitar search for chords/tabs etc.
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cite/1:
+  url: 'http://citeseer.ist.psu.edu/cis?q={%query}&cs=1'
+  title: Citeseer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+citeseer/1:
+  url: 'http://citeseer.ist.psu.edu/cis?q={%query}&cs=1'
+  title: Citeseer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+citex/1:
+  url: 'http://citeseerx.ist.psu.edu/search?q={%query}&submit=Search&sort=rel'
+  title: Citeseer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ciu/1:
+  url: 'http://caniuse.com/#search={%query}'
+  title: Caniuse
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cl/1:
+  url: 'http://www.colourlovers.com/colors/search?query={%color}'
+  title: COLOURlovers color search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+clpal/1:
+  url: 'http://www.colourlovers.com/palettes/search?query={%query}'
+  title: COLOURlovers palette search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+clpalr/0:
+  url: 'http://www.colourlovers.com/palettes/random'
+  title: COLOURlovers random palette
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+clpat/1:
+  url: 'http://www.colourlovers.com/patterns/search?query={%query}'
+  title: COLOURlovers pattern search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+clpatr/0:
+  url: 'http://www.colourlovers.com/patterns/random'
+  title: COLOURlovers random pattern
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+clr/0:
+  url: 'http://www.colourlovers.com/colors/random'
+  title: COLOURlovers random color
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+clusty/1:
+  url: 'http://clusty.com/search?query={%query}'
+  title: Clusty
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cnet/1:
+  url: 'http://www.cnet.com/1770-5_1-0.html?query={%query}&tag=srch'
+  title: CNET content search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+co/1:
+  url: 'http://collectr.net/={%query}'
+  title: Collectr
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+coda/1:
+  url: 'http://coda.fm/albums/search?query={%artist or album}'
+  title: Coda.fm
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+codex/1:
+  url: 'http://wordpress.org/search/{%query}'
+  title: Wordpress Codex Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+comic/1:
+  url: 'http://www.comicvine.com/search/?q={%query}'
+  title: Comic Vince
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+conf/1:
+  url: 'https://conf.env.disy.net/dosearchsite.action?queryString={%query}'
+  title: Disy Confluence
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+copu/1:
+  url: 'http://www.google.com/cse?cx=000302137693213122178%3Aycoqke386yy&ie=UTF-8&q={%query}&sa=Suche'
+  title: Google Custom Search "computational linguistics publications"
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+couch/0:
+  url: 'http://www.couchsurfing.com'
+  title: Couchsurfing Start Page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+couch/1:
+  url: 'http://www.couchsurfing.com/people/{%query}'
+  title: Couchsurfing User Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+couchl/0:
+  url: 'https://www.couchsurfing.org/login'
+  title: Couchsurfing Login
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cp/1:
+  url: 'http://cover-paradies.to/?Module=ExtendedSearch&SearchString={%query}'
+  title: Cover Paradies
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cpase/1:
+  url: 'http://www.cpase.de/top.php?a=236&&keyword={%query}'
+  title: CPASE Web search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cplusplus/1:
+  url: 'http://cplusplus.com/query/search.cgi?q={%query}'
+  title: Cplusplus.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cppc/1:
+  url: 'http://www.cplusplus.com/search.do?q={%query}'
+  title: C++ Reference (cplusplus.com)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cr/0:
+  url: 'http://chaosradio.ccc.de/chaosradio.html'
+  title: Chaosradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cr/1:
+  url: 'http://chaosradio.ccc.de/cr{%episode}.html'
+  title: Chaosradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+crc32/1:
+  url: 'http://stefanschramm.net/dev/hash/?algo=crc32&q={%data}'
+  title: Hash functions
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cre/0:
+  url: 'http://chaosradio.ccc.de/chaosradio_express.html'
+  title: Chaosradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cre/1:
+  url: 'http://chaosradio.ccc.de/cre{%episode}.html'
+  title: Chaosradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+creativecommons.org/1:
+  url: 'http://creativecommons.org/?s={%argument name}'
+  title: Find within creativecommons.org (not for licensed works)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+csdblp/0:
+  url: 'http://www.dblp.org/search/'
+  title: 'CompleteSearch DBLP: Load plain website'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+csdblp/1:
+  url: 'http://www.dblp.org/search/#query={%query}'
+  title: CompleteSearch DBLP
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ctan/1:
+  url: 'http://tug.ctan.org/cgi-bin/filenameSearch.py?filename={%filename}&Search=Search'
+  title: Search for files by name
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ctand/1:
+  url: 'http://tug.ctan.org/cgi-bin/search.py?metadataSearch={%package}&metadataSearchSubmit=Search'
+  title: Search for package descriptions by name
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ctanp/1:
+  url: 'http://ctan.org/cgi-bin/search.py?tdsFilename={%filename}&tdsFilenameSearch=Search'
+  title: Search for packages by names of contained files
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ctt/1:
+  url: 'http://groups.google.com/group/comp.text.tex/search?group=comp.text.tex&q={%Suche}'
+  title: Comp.text.tex
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cul/1:
+  url: 'http://www.citeulike.org/search/all?q={%query}'
+  title: search for academic paper using this query (ampersands do not work)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+culs/1:
+  url: 'http://www.citeulike.org/search/all?q=surname%3A{%surname}'
+  title: search for academic paper written by an author with this surname
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cult/1:
+  url: 'http://www.citeulike.org/search/all?q=title%3A{%titleword}'
+  title: search for academic paper whose title includes this titleword
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+currency/3:
+  url: 'http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from code}&to={%to code}'
+  title: Yahoo Currency converter
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cve/1:
+  url: 'http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword={%query}'
+  title: CVE Common vulnerabilities and exposures
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dao/0:
+  url: 'http://dragonage.wikia.com/wiki/Dragon_Age_Wiki'
+  title: Dragon Age Origins Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dao/1:
+  url: 'http://dragonage.wikia.com/wiki/Special:Search?search={%query}&go=1'
+  title: Dragon Age Origins Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dart/1:
+  url: 'http://www.dart-europe.eu/basic-results.php?kw={%keywords}'
+  title: DART-Europe E-theses Portal
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dblp/1:
+  url: 'http://dblp.uni-trier.de/search/author?author={%query}'
+  title: The DBLP Computer Science Bibliography
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dbug/0:
+  url: 'http://www.debian.org/Bugs/'
+  title: debian bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dbug/2:
+  url: 'http://bugs.debian.org/cgi-bin/pkgreport.cgi?package={%package};include=subject%3A{%query}'
+  title: query debian bugs from a package
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dctt/1:
+  url: 'http://groups.google.de/group/de.comp.text.tex/search?group=de.comp.text.tex&q={%Suche}'
+  title: De.comp.text.tex
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ddgs/0:
+  url: 'https://duckduckgo.com/'
+  title: Duck Duck Go
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+deac/1:
+  url: 'http://{%query}.deviantart.com'
+  title: DeviantART
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debb/1:
+  url: 'http://bugs.debian.org/{%query}'
+  title: debian Bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debian-bugs/1:
+  url: 'http://bugs.debian.org/{%query}'
+  title: debian Bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debian-planet/0:
+  url: 'http://planet.debian.org/'
+  title: Debian Planet
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debian-wiki/0:
+  url: 'http://wiki.debian.org/'
+  title: Debian Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debian-wiki/1:
+  url: 'http://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text'
+  title: Debian Wiki Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debp/0:
+  url: 'http://planet.debian.org/'
+  title: Debian Planet
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debpts/1:
+  url: 'http://packages.qa.debian.org/{%package}'
+  title: show the qa page of a given package
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debw/0:
+  url: 'http://wiki.debian.org/'
+  title: Debian Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+debw/1:
+  url: 'http://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text'
+  title: Debian Wiki Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+decuc/1:
+  url: 'http://www.decodeunicode.org/arEditFrame.php?nodeId=421&aspect=editFrUCSeaRes&seaRes={%query}'
+  title: Decodeunicode
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+deen/1:
+  url: 'http://www.dict.cc/?s={%word}'
+  title: Translation German to English
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+deep/1:
+  url: 'http://www.deepdyve.com/search?query={%query}'
+  title: DeepDyve search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+deeper/1:
+  url: 'http://www.deeperweb.com/results.php?cx=!004415538554621685521%3Avgwa9iznfuo&cof=FORID%3A11%3BNB%3A1&ie=UTF-8&q={%query}'
+  title: DeeperWeb for Google enhanced Web search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dees/1:
+  url: 'http://dix.osola.com/index.de.php?search={%word}&language=german'
+  title: Translation German to Spanish
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+deezer/0:
+  url: 'http://www.deezer.com/'
+  title: Deezer Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+deezer/1:
+  url: 'http://www.deezer.com/#music/result/all/{%query}'
+  title: Deezer Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+def/1:
+  url: 'http://www.google.com/search?hl={$language}&q=define%3a{%query}'
+  title: Google define
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+defi/1:
+  url: 'http://forum.pauker.at/pauker/DE_DE/FI/wb/?s={%query}'
+  title: Finnisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+defr/1:
+  url: 'http://dict.leo.org/?lp=frde&lang=fr&search={%word}'
+  title: Translation German to French
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+denic/1:
+  url: 'http://www.denic.de/webwhois/?domain={%query}'
+  title: DENIC Whois
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+deo/1:
+  url: 'http://www.vortaro.dk/#/{%soegeord}'
+  title: Dansk-esperanto ordbog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+der/1:
+  url: 'http://www.pons.eu/dict/search/results/?q={%word}&l=dede'
+  title: Deutsche Rechtschreibung PONS
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+derstandard/1:
+  url: 'http://derstandard.at/suche?query={%query}'
+  title: DerStandard.at search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+df/0:
+  url: 'http://df.magmawiki.com/index.php/Main_Page'
+  title: Dwarf Fortress Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+df/1:
+  url: 'http://df.magmawiki.com/index.php?title=Special%3ASearch&search={%article}&go=Go'
+  title: Dwarf Fortress Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dg/1:
+  url: 'http://digg.com/search?submit=Search&section=all&type=all&area=all&sort=score&s={%query}'
+  title: Digg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dhlid/1:
+  url: 'http://www.dhlmultishipping.se/customers/dhl/packageevents_status.jsp?packageId={%packageid}&lang=en'
+  title: DHL tracking ID
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dic/1:
+  url: 'http://www.dict.cc/?s={%query}'
+  title: Dict.cc Dictionary
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+diff/1:
+  url: 'http://www.differencebetween.net/search/?cx=partner-pub-1911891147296207%3Aw80z4hjpu14&cof=FORID%3A9&ie=ISO-8859-1&q={%query}&sa=Search'
+  title: Difference Between search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dig/1:
+  url: 'http://www.robtex.com/dns/x?q={%query}'
+  title: Robtex DNS lookup
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+digg/1:
+  url: 'http://digg.com/search?submit=Search&section=all&type=all&area=all&sort=score&s={%query}'
+  title: Digg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+distro/0:
+  url: 'http://distrowatch.com'
+  title: Distrowatch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+distro/1:
+  url: 'http://distrowatch.com/table.php?distribution={%query}'
+  title: Distrowatch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+distros/0:
+  url: 'http://distrowatch.com/stats.php?section=popularity'
+  title: Distrowatch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+distrow/0:
+  url: 'http://distrowatch.com/weekly.php?issue=current'
+  title: Distrowatch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+divxsub/1:
+  url: 'http://divxsubtitles.net/page_searchedsubtitles.php?_language=-1&_format=-1&_date=-1&firstSearch=true&_free={%query}'
+  title: Divxsubtitles.net
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dix/1:
+  url: 'http://dix.osola.com/search?q={%Auto}'
+  title: Dix Osola
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dj/1:
+  url: 'http://docjax.com/Search/index.shtml?q={%document}&type=all'
+  title: DocJax Document Search Engine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dje/1:
+  url: 'http://jisho.org/words?eng={%query}'
+  title: Denshi Jisho
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+djj/1:
+  url: 'http://jisho.org/words?jap={%query}'
+  title: Denshi Jisho
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+djk/1:
+  url: 'http://jisho.org/kanji?rt=jap&reading={%query}'
+  title: Denshi Jisho
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+djp/1:
+  url: 'https://docs.djangoproject.com/search/?q={%query}'
+  title: Django Doc Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dl/0:
+  url: 'http://www.darklyrics.com'
+  title: DarkLyrics.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dl/1:
+  url: 'http://search.darklyrics.com/cgi-bin/dseek.cgi?q={%query}'
+  title: DarkLyrics.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dlz/0:
+  url: 'http://www.dealzeit.de'
+  title: Dealzeit
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dmoz/1:
+  url: 'http://search.dmoz.org/cgi-bin/search?search={%query}'
+  title: Dmoz - Open Directory Project
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dnd/0:
+  url: 'http://www.dandwiki.com/wiki/Main_Page'
+  title: D&D wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dnd/1:
+  url: 'http://www.dandwiki.com/wiki/Special:Search?search={%query}'
+  title: D&D wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dns/1:
+  url: 'http://cgibin.erols.com/ziring/cgi-bin/nsgate/gate.pl?submit=Search+by+Name&mode=1&q={%domain}&qtype=A&.cgifields=persist&.cgifields=log'
+  title: DNS Lookup
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+docjax/1:
+  url: 'http://docjax.com/Search/index.shtml?q={%document}&type=all'
+  title: DocJax Document Search Engine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+docs/1:
+  url: 'https://docs.google.com/document/u/0/?q={%query}'
+  title: Google Docs search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+download/1:
+  url: 'http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch'
+  title: Download.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+drag/0:
+  url: 'http://www.dragosien.de/?t=village'
+  title: Dragosien
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+drag_ball/0:
+  url: 'http://www.dragosien.de/?t=chat_dragball&id=45560'
+  title: Dragosien
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+drop-box/0:
+  url: 'https://www.getdropbox.com/home'
+  title: Dropbox - login
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+drupal/1:
+  url: 'https://www.google.com/search?hl={$language}&q=site%3Aapi.drupal.org%20{%query}&ie=utf-8'
+  title: Drupal API via Google
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+drupal7/1:
+  url: 'http://drupalcontrib.org/api/search/7/{%query}'
+  title: Drupal 7 API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+drupal7h/1:
+  url: 'http://drupalcontrib.org/api/search/7/hook_{%hook}'
+  title: Drupal 7 Hook API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+duck/1:
+  url: 'http://duckduckgo.com/?q={%query}'
+  title: Duck Duck Go
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dw/0:
+  url: 'http://wiki.splitbrain.org/wiki:dokuwiki'
+  title: Dokuwiki Documentation Home
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dw/1:
+  url: 'http://wiki.splitbrain.org/?do=search&id={%search}'
+  title: Dokuwiki Documentation Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dwd/0:
+  url: 'http://www.dwd.de'
+  title: Deutscher Wetter Dienst
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dwl/1:
+  url: 'http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch'
+  title: Download.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dz/0:
+  url: 'http://www.deezer.com/'
+  title: Deezer Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dz/1:
+  url: 'http://www.deezer.com/#music/result/all/{%query}'
+  title: Deezer Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+e33/1:
+  url: 'http://e33.biz/suche/{%query}'
+  title: E33.biz Preissuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+eb/1:
+  url: 'http://www.britannica.com/#search=tab~TOPICS%2Cterm~{%term}'
+  title: Encyclopedia Britannica
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ebank/0:
+  url: 'https://ebanking.easybank.at/InternetBanking/InternetBanking?d=login&svc=EASYBANK&ui=html&lang=de'
+  title: EasyBank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ebook/1:
+  url: 'http://www.ebdb.net/Search.aspx?p=1&s={%query}&x=0&y=0'
+  title: Ebooks Search Engine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ecl/0:
+  url: 'http://ecosia.org/ecolink.php'
+  title: Ecosia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ecl/1:
+  url: 'http://ecosia.org/ecolink.php?q={%query}'
+  title: Ecosia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ed/0:
+  url: 'http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.de homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ed/1:
+  url: 'http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+edv/1:
+  url: 'http://www.edv-abkuerzungen.de/index.php?query={%query}'
+  title: Edv Abkürzungen search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+efa/0:
+  url: 'http://www.efa-bw.de'
+  title: Efa bw
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+eg/1:
+  url: 'http://www.ecocho.com/google/index.php?q={%query}&cx=011377004323241253315%3Ayjo7ngerhv8&cof=FORID%3A10&search_type=web'
+  title: Ecocho (google)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ei/0:
+  url: 'http://www.ebay.in/'
+  title: Ebay.in homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ei/1:
+  url: 'http://search.ebay.in/search/search.dll?satitle={%query}'
+  title: Ebay.in
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+eis/1:
+  url: 'http://www.eis-machen.de/?s={%query}'
+  title: Eis-machen.de Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+el/0:
+  url: 'http://www.eclipse.org/eclipselink/api/2.0.2/index.html'
+  title: EclipseLink API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+el/1:
+  url: 'https://www.google.com/search?hl=en&q=site%3Ahttp://www.eclipse.org/eclipselink/api/2.4+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: EclipseLink API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+elbows/1:
+  url: 'http://elbo.ws/search/{%query}/page/1/'
+  title: Elbo.ws
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+emein/0:
+  url: 'http://my.ebay.de/ws/eBayISAPI.dll?MyEbay'
+  title: Ebay.de Mein eBay
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+emy/0:
+  url: 'http://signin.ebay.com'
+  title: Ebay.de My eBay
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ende/1:
+  url: 'http://www.dict.cc/?s={%word}'
+  title: Translation English to German
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+enfi/1:
+  url: 'http://www.fincd.com/index.php?txtSearch={%query}&lang=fi'
+  title: Finnish-English
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+enfr/1:
+  url: 'http://www.wordreference.com/enfr/{%word}'
+  title: Translation English to French
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+engrish/0:
+  url: 'http://www.engrish.com/'
+  title: main page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+engrish/1:
+  url: 'http://www.engrish.com/?s={%query}'
+  title: search for some topic
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+enpl/1:
+  url: 'http://portalwiedzy.onet.pl/tlumacz.html?tr=ang-auto&qs={%word}'
+  title: Translation English to Polish
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+enr/1:
+  url: 'http://personer.eniro.se/resultat/{%nummer_eller_namn}'
+  title: Eniro personsökning
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+enzh/1:
+  url: 'http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}'
+  title: Chinese
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ep/1:
+  url: 'http://eyeplorer.com/eyePlorer/?conceptTerms={%query}'
+  title: Eyeplorer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+era-sms/0:
+  url: 'http://www.era.pl/msg/user/sponsored/welcome.do'
+  title: Era-sms
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+esde/1:
+  url: 'http://dix.osola.com/index.de.php?search={%word}&language=german'
+  title: Translation Spanish to German
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+etools/1:
+  url: 'http://www.etools.ch/searchSubmit.do?query={%query}'
+  title: ETools.ch Metasearch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ety/1:
+  url: 'http://www.etymonline.com/index.php?search={%query}&searchmode=none'
+  title: Etymology lookup
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+eugh/1:
+  url: 'http://curia.europa.eu/jurisp/cgi-bin/form.pl?lang=de&newform=newform&Submit=Suchen&alljur=alljur&jurcdj=jurcdj&jurtpi=jurtpi&jurtfp=jurtfp&alldocrec=alldocrec&docj=docj&docor=docor&docop=docop&docav=docav&docsom=docsom&docinf=docinf&alldocnorec=alldocnorec&docnoj=docnoj&docnoor=docnoor&typeord=ALLTYP&docnodecision=docnodecision&allcommjo=allcommjo&affint=affint&affclose=affclose&numaff=&ddatefs=&mdatefs=&ydatefs=&ddatefe=&mdatefe=&ydatefe=&nomusuel=&domaine=&mots={%query}&resmax=100'
+  title: EuGH Rechtsprechung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+euk/1:
+  url: 'http://search.ebay.co.uk/{%query}'
+  title: EBay United Kingdom
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+everyzing/1:
+  url: 'http://www.everyzing.com/results.jsp?q={%query}'
+  title: Everyzing
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ex/1:
+  url: 'http://msxml.excite.com/info.xcite/search/web/{%query}/'
+  title: Excite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ey/1:
+  url: 'http://www.ecocho.com/yahoo/web/{%query}_page_1.html'
+  title: Ecocho (yahoo)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+f/1:
+  url: 'http://www.fastbot.de/index.php?query={%query}'
+  title: Fastbot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+f4c/1:
+  url: 'http://www.fileformat.info/info/unicode/char/{%codepoint}/fontsupport.htm'
+  title: Search for a font supporting a specific character
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+facebook/0:
+  url: 'http://www.facebook.com'
+  title: Facebook Start Page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+facebook/1:
+  url: 'http://www.facebook.com/s.php?q={%query}&init=q'
+  title: Facebook Global Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbase/1:
+  url: 'http://www.freebase.com/search?limit=30&start=0&query={%query%}'
+  title: Freebase
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbf/1:
+  url: 'http://www.facebook.com/friends.php?fq={%name}'
+  title: Facebook Friend Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbi/0:
+  url: 'http://www.facebook.com/inbox/#!/messages/'
+  title: Facebook Messages
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbook/0:
+  url: 'http://www.facebook.com'
+  title: Facebook Start Page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbook/1:
+  url: 'http://www.facebook.com/s.php?q={%query}&init=q'
+  title: Facebook Global Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbu/1:
+  url: 'http://www.facebook.com/{%username}'
+  title: Facebook User
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbug/0:
+  url: 'http://bugs.freedesktop.org/query.cgi'
+  title: freedesktop.org bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fbugq/1:
+  url: 'http://bugs.freedesktop.org/buglist.cgi?quicksearch={%query}'
+  title: search for a term in freedesktop.org bugs (query)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fd/1:
+  url: 'http://www.thefreedictionary.com/{%word}'
+  title: The Free Dictionary
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fddb/1:
+  url: 'http://fddb.info/db/de/suche/?udd=0&cat=site-de&search={%query}'
+  title: Kalorien in der Lebensmittel-Datenbank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fed/1:
+  url: 'http://admin.fedoraproject.org/pkgdb/apps/search/{%query}'
+  title: Fedora Packages
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fedbug/0:
+  url: 'http://bugzilla.redhat.com/query.cgi'
+  title: Fedora bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fedbugq/1:
+  url: 'http://bugzilla.redhat.com/buglist.cgi?quicksearch={%query}'
+  title: search for a term in Fedora bugs (query)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fedora/1:
+  url: 'http://admin.fedoraproject.org/pkgdb/apps/search/{%query}'
+  title: Fedora Packages
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fedora-wiki/1:
+  url: 'http://fedoraproject.org/wiki/Special:Search?search={%query}'
+  title: Fedora Wiki Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fedw/1:
+  url: 'http://fedoraproject.org/wiki/Special:Search?search={%query}'
+  title: Fedora Wiki Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ff/0:
+  url: 'http://www.fileformat.info'
+  title: Go to FileFormat.info home page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ff/1:
+  url: 'http://www.google.com/search?hl=de&q={%query}%20site%3Afileformat.info&ie=utf-8'
+  title: Search FileFormat.Info with Google
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fh/0:
+  url: 'ttp://fileshunt.com/'
+  title: fileshunt homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fh/1:
+  url: 'http://fileshunt.com/?q={%query}'
+  title: fileshunt rapidshare search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fide/1:
+  url: 'http://forum.pauker.at/pauker/DE_DE/FI/wb/?s={%query}'
+  title: Finnisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fien/1:
+  url: 'http://www.fincd.com/index.php?txtSearch={%query}&lang=en'
+  title: Finnish-English
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+filext/1:
+  url: 'http://filext.com/detaillist.php?extdetail={%query}'
+  title: FILExt - The File Extension Source
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+filmweb_ludzie/1:
+  url: 'http://www.filmweb.pl/szukaj?q={%query}&c=person'
+  title: FilmWeb
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+filmweb_tytul/1:
+  url: 'http://www.filmweb.pl/szukaj?q={%query}&c=film'
+  title: FilmWeb
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+findfiles/1:
+  url: 'http://findfiles.com/list.php?string={%filename}&db=Both'
+  title: FindFiles
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+firefox/0:
+  url: 'http://wiki.serchilo.net/Serchilo:Firefox'
+  title: Firefox
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+firefox-addon/1:
+  url: 'https://addons.mozilla.org/de/firefox/search?q={%addon}'
+  title: Firefox Add-on Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+flv-avi/0:
+  url: 'http://vixy.net/'
+  title: FLV Online Converter
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fm/1:
+  url: 'http://freshmeat.net/search/?q={%query}&section=projects'
+  title: Freshmeat
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+foo/1:
+  url: 'http://en.fooooo.com/search.php?q={%query}&submit=+search+&ranking=0'
+  title: Fooooo Video Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fotofinder/1:
+  url: 'http://www.fotofinder.com/?text={%Suche}&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search'
+  title: Fotofinder
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+foxy/1:
+  url: 'http://www.foxytunes.com/search?q={%query}'
+  title: Foxytunes planet
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fpl/1:
+  url: 'http://filmpolski.pl/fp/index.php/8/{%query}'
+  title: Filmpolski
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fplot/1:
+  url: 'http://fooplot.com/index.php?q0={%query}'
+  title: Footplot function ploting
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr-an/1:
+  url: 'http://dictionnaire.reverso.net/francais-anglais/{%query}'
+  title: 'Traduction Reverso : du français à l''anglais'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+frde/1:
+  url: 'http://dict.leo.org/?lp=frde&lang=de&search={%word}'
+  title: Translation French to German
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+freedb/1:
+  url: 'http://www.freedb.org/freedb_search.php?words={%query}&allfields=NO&fields=artist&fields=title&allcats=YES&grouping=none&x=0&y=0'
+  title: FreeDB
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+freesound/1:
+  url: 'http://www.freesound.org/searchText.php?search={%query}'
+  title: Freesound
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fremdwort/1:
+  url: 'http://www.fremdwort.de/suche.php?term={%query}'
+  title: Fremdwort.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fren/1:
+  url: 'http://www.wordreference.com/fren/{%word}'
+  title: Translation French to English
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+frf/1:
+  url: 'http://friendfeed.com/search?q={%query}'
+  title: Friendfeed
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+frsv/1:
+  url: 'http://www.sensagent.com/dictionnaires/fr-sv/{%word}/ALEXMN/'
+  title: Translation French to Swedish
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fs/1:
+  url: 'http://www.filesearching.com/cgi-bin/s?q={%filename}'
+  title: FileSearching.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fs-cca/1:
+  url: 'http://www.zoo-m.com/flickr-storm/flickrize.php?license=4&q={%query}'
+  title: FlickrStorm CC Attribution
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fsc/1:
+  url: 'http://www.google.com/search?q={%query}&sitesearch=fscklog.com'
+  title: Fscklog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fst/1:
+  url: 'http://de.forestle.org/search.php?q={%Suche}'
+  title: Forestle
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ftrs/1:
+  url: 'http://www.filestube.com/search.html?q={%file}&select=All&hosting=1'
+  title: Rapidshare
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fv/1:
+  url: 'http://validator.w3.org/feed/check.cgi?url={%url}'
+  title: W3C Feed Validation Service
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fx/1:
+  url: 'http://www.frederix.de/index.php?searchword={%query}&option=com_search&Itemid=5'
+  title: Frederix Computer GmbH
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fy/1:
+  url: 'chrome://feedly/content/app/feedly.htm#today@search.{%query}'
+  title: Feedly
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fz/1:
+  url: 'http://fizy.com/?q={%name of song xor artist}'
+  title: Fizy videomusic
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+g+/1:
+  url: 'http://www.google.com/search?q={%query}&tbs=prfl:e'
+  title: Google+ Person Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+g-en-de/1:
+  url: 'http://translate.google.de/?hl=de&tab=wT#en|de|{%query}'
+  title: Google Translate Englisch - Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+g-pdf/1:
+  url: 'http://www.google.de/search?q={%query}&as_filetype=pdf'
+  title: Google search for pdf-files
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+g100/1:
+  url: 'http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&num=100'
+  title: 'Google Web: Show 100 results at once'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+g?/0:
+  url: 'http://www.google.com/intl/{$language}/about.html'
+  title: About Google
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ga/1:
+  url: 'http://www.google.com/archivesearch?q={%query}&ie=UTF-8&oe=UTF-8&btnG=Search+Archives'
+  title: Google News Archive Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gads/1:
+  url: 'http://www.google.com/sponsoredlinks?q={%adword}'
+  title: Goode Ads
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+game/1:
+  url: 'http://www.gamespot.com/search.html?type=11&stype=all&qs={%query}&x=24&y=17'
+  title: Gamespot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gamercard/1:
+  url: 'http://profile.mygamercard.net/{%query}'
+  title: Windows Live GamerCard von Spieler anzeigen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gameserver/1:
+  url: 'http://www.game-monitor.com/search.php?search={%query}&type=server&location=all&game=all&x=0&y=0&num=30'
+  title: Spiel Server Suchen game-monitor.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gat/1:
+  url: 'http://www.google.com/archivesearch?q={%query}&sa=N&lnav=m&scoring=t&ie=UTF-8&oe=UTF-8'
+  title: Google News Archive Search - Timeline
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gc/0:
+  url: 'http://http://www.geocaching.com/seek/nearest.aspx?key='
+  title: Geocaching
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gcbug/1:
+  url: 'http://code.google.com/p/{%project}/issues/list'
+  title: google code bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gch/1:
+  url: 'http://www.google.ch/search?hl={$language}&q={%query}&ie=utf-8'
+  title: Google Switzerland
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gcode/1:
+  url: 'http://code.google.com/p/{%name}'
+  title: Google Code
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gde/1:
+  url: 'https://www.google.com/search?hl={$language}&lr=lang_de&q={%query}&ie=utf-8'
+  title: 'Google Web, only in German'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gede/0:
+  url: 'https://encrypted.google.com/search?hl=de'
+  title: Google SSL
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gede/1:
+  url: 'https://encrypted.google.com/search?hl=de&q={%query}'
+  title: Google SSL
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gedu/1:
+  url: 'http://www.google.com/search?hl=en&q={%query} site:edu-net.net'
+  title: Edu-net.net
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gen/1:
+  url: 'https://www.google.com/search?hl={$language}&lr=lang_en&q={%query}&ie=utf-8'
+  title: 'Google Web, only in English'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+genmeta/2:
+  url: 'http://meta.genealogy.net/Search.do?lastName={%Nachname}&placeName={%Ort}'
+  title: Genealogy.net Metasuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gentoo/1:
+  url: 'http://packages.gentoo.org/package/{%package}'
+  title: Gentoo Package Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gentoo-forums/0:
+  url: 'http://forums.gentoo.org'
+  title: Gentoo Forums
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gentoo-planet/0:
+  url: 'http://planet.gentoo.org'
+  title: Gentoo Planet
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gentoo-wiki/0:
+  url: 'http://{$language}.gentoo-wiki.com'
+  title: Gentoo Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gentoo-wiki/1:
+  url: 'http://{$language}.gentoo-wiki.com/Special:Search?search={%query}&fulltext=Search'
+  title: Gentoo Wiki Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+getdeb/1:
+  url: 'http://getdeb.net/search.php?keywords={%software}'
+  title: GetDeb.net
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gex/1:
+  url: 'http://www.google.de/#hl=de&safe=off&q={%query}+-preisvergleich+-ebay+-shopping'
+  title: Google Excluded
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ggmsg/1:
+  url: 'http://groups.google.de/groups?hl={$language}&selm={%query}'
+  title: Google Groups
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gif/1:
+  url: 'http://www.google.com/images?hl={$language}&q={%query}&imgtype=face'
+  title: Google Images
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gl/1:
+  url: 'http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22'
+  title: Google Listing
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+glin/1:
+  url: 'http://www.google.com/linux?hl={$language}&q={%query}'
+  title: Google Linux
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+glopd/0:
+  url: 'http://www.glottopedia.org'
+  title: Glottopedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+glopd/1:
+  url: 'http://www.glottopedia.org/index.php/Special:Search?search={%query}&go=Go'
+  title: Glottopedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+glw/1:
+  url: 'http://www.google.com/search?hl={$language}&as_q={%query}&num=50&as_qdr=w&safe=off'
+  title: Google Web Search (last week)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmbb/2:
+  url: 'http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=bows'
+  title: 'GMB Explorer, BOWs view'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmbd/2:
+  url: 'http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=drs.xml'
+  title: 'GMB Explorer, discourse view'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmbm/2:
+  url: 'http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=met'
+  title: 'GMB Explorer, metadata view'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmbr/2:
+  url: 'http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=raw'
+  title: 'GMB Explorer, raw text view'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmbs/2:
+  url: 'http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=der.xml'
+  title: 'GMB Explorer, sentences view'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmbt/2:
+  url: 'http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=tok.iob'
+  title: 'GMB Explorer, tokenization view'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmbw/2:
+  url: 'http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=warnings'
+  title: 'GMB Explorer, warnings view'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmch/1:
+  url: 'http://maps.google.de/maps?hl={$language}&q={%Ort}%2C%20Switzerland'
+  title: Google Maps Schweiz
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmde/1:
+  url: 'http://maps.google.de/maps?hl={$language}&q={%Ort}%2C%20Germany'
+  title: Google Maps Deutschland
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmob/1:
+  url: 'http://www.google.com/m/search?hl={$language}&q={%query}'
+  title: Google Mobile Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmp3/1:
+  url: 'http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(mp3|wma|ogg)+%2B%22{%query}%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search'
+  title: Google MP3 search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmr/2:
+  url: 'http://maps.google.com/maps?hl={$language}&saddr={%from}&daddr={%to}'
+  title: Google Maps Route
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gmts/1:
+  url: 'http://gmb.let.rug.nl/explorer/search.php?term={%term}'
+  title: 'GMB Explorer, term search'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gnbug/0:
+  url: 'http://bugzilla.gnome.org/query.cgi?format=advanced'
+  title: gnome bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gnbug/2:
+  url: 'http://bugzilla.gnome.org/buglist.cgi?query=product%3A{%product}+{%query}'
+  title: query bugs in a gnome product
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gnbugq/1:
+  url: 'http://bugzilla.gnome.org/buglist.cgi?query={%query}'
+  title: search for a term in gnome bugs (query)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+go/1:
+  url: 'http://www.google.com/cse?cx=003538345765652431974%3A5nbobem3igq&ie=UTF-8&q={%query}&siteurl=www.google.com%2Fcse%2Fhome%3Fcx%3D003538345765652431974%253A5nbobem3igq&ref=go-lang.cat-v.org%2Fgo-search&ss=6085j16411711j19&oq=string+comparison&gs_l=partner.3...8806.10874.0.11103.17.15.0.0.0.0.210.1598.6j8j1.15.0.gsnos%2Cn%3D13..0.0.6084j16418432j19..1ac.HmuDMInChKQ#gsc.tab=0&gsc.q={%query}&gsc.page=1'
+  title: Go Language Resources Search Engine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gobug/0:
+  url: 'http://bugs.gentoo.org/query.cgi?format=specific'
+  title: gentoo bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+god/1:
+  url: 'http://www.godchecker.com/pantheon/index.php?_search-results=Y&name={%name}'
+  title: Godchecker Mythology Encyclopedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gold/1:
+  url: 'http://www.google.com/search?as_q={%query}&hl=de&num=10&btnG=Google-Suche&as_epq=&as_oq=&as_eq=&lr=&cr=&as_ft=i&as_filetype=&as_qdr=all&as_occt=title&as_dt=i&as_sitesearch=http%3A%2F%2Flinguistics-ontology.org%2Fgold%2F&as_rights=&safe=images'
+  title: GOLD ontology
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+goof/0:
+  url: 'http://finance.google.com/'
+  title: Google Finance
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+goof/1:
+  url: 'http://finance.google.com/finance?q={%value}'
+  title: Google Finance
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gp/1:
+  url: 'http://gentoo-portage.com/Search?search={%package}'
+  title: Gentoo Portage Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gpbrowse/0:
+  url: 'http://gentoo-portage.com/Browse'
+  title: Gentoo Portage Browse
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gpo/1:
+  url: 'http://gpo.zugaina.org/Search?search={%package}'
+  title: Gentoo Overlay Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gpuse/0:
+  url: 'http://gentoo-portage.com/USE'
+  title: Show Gentoo USE Flags
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gr/0:
+  url: 'http://www.google.com/reader/view/'
+  title: Google Reader
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gr/1:
+  url: 'http://www.google.com/reader/view/#search/{%query}/'
+  title: Google Reader
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+grab/1:
+  url: 'http://www.grabvids.net/index.php?url={%url}'
+  title: Grabvids.net
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+grde/1:
+  url: 'http://www.google.de/search?q={%query}'
+  title: Grde
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+grep/1:
+  url: 'https://www.greplin.com/#q={%query}'
+  title: Greplin
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+greplin/1:
+  url: 'https://www.greplin.com/#q={%query}'
+  title: Greplin
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+groo/1:
+  url: 'http://www.google.com/custom?cx=010507483283387009910%3Aey52vjxjimi&sa=Search&q={%query}&oldsa=search%20groovy&cof=GFNT%3A%23666666%3BLH%3A100%3BCX%3ASearchGroovy%252Eorg%3BDIV%3A%23cccccc%3BFORID%3A0%3BS%3Ahttp%3A%2F%2Fsearchgroovy%2Eorg%3BL%3Ahttp%3A%2F%2Fmedia%2Exircles%2Ecodehaus%2Eorg%2F_projects%2Fgroovy%2F_logos%2Fmedium%2Epng%3BLP%3A1%3BAH%3Aleft&hl={$language}&client=pub-5106641147175425#24104980237417428656'
+  title: Groovy documentation search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gssl/0:
+  url: 'https://www.google.com/search?hl={$language}'
+  title: 'Google Web: Load plain regional website (SSL)'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gssl/1:
+  url: 'https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8'
+  title: 'Google Web: Plain query of regional website (SSL)'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gt/1:
+  url: 'http://gametrailers.com/search.php?s={%query}'
+  title: Gametrailers.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gt/2:
+  url: 'http://www.google.com/search?hl={$language}&tbs=qdr:{%time}&q={%query}&ie=utf-8'
+  title: 'Google Web: Current query of regional website, with results only from a certain time range'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+guk/1:
+  url: 'http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8'
+  title: Google United Kingdom
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gute/0:
+  url: 'http://gutenberg.spiegel.de/suche?q='
+  title: Gutenberg-Projekt
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gux/1:
+  url: 'http://www.google.com/linux?hl={$language}&q={%query}'
+  title: Google Linux
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gvid/1:
+  url: 'http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(avi|mp4|flv)+%2B%22{%query}%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search'
+  title: Google video search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gw/0:
+  url: 'http://www.guildwiki.org/Main_Page'
+  title: Guildwars wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gw/1:
+  url: 'http://www.guildwiki.org/index.php?title=Special%3ASearch&search={%query}&go=Go'
+  title: Guildwars wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gw2/0:
+  url: 'http://wiki.guildwars2.com/'
+  title: Guildwars 2 Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gw2/1:
+  url: 'http://wiki.guildwars2.com/index.php?title=Special%3ASearch&search={%query}&go=Go'
+  title: Guildwars 2 Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwas/1:
+  url: 'http://vs.aka-online.de/cgi-bin/globalwpsearch.pl?search={%query}&timeout=15&minor=1'
+  title: Global Wikipedia Article Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwave/0:
+  url: 'http://wave.google.com'
+  title: Google Wave
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwb/1:
+  url: 'http://www.googlewatchblog.de/index.php?s={%query}'
+  title: Google Watch Blog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwo/0:
+  url: 'http://wiki.guildwars.com/wiki/Main_Page'
+  title: Official Guild Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwo/1:
+  url: 'http://wiki.guildwars.com/wiki/{%query}'
+  title: Official Guild Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwt/1:
+  url: 'http://www.google.com/search?hl=en&q=inurl%3Ajavadoc%2Flatest%2Fcom%2Fgoogle%2Fgwt%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: GWT API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwtb/1:
+  url: 'http://www.google.com/search?hl=en&q=inurl%3Aapidocs%2Fcom%2Fgithub%2Fgwtbootstrap%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: GWT Bootstrap API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gww/1:
+  url: 'http://www.google.com/search?hl={$language}&q={%query} -site:wikipedia.org&ie=utf-8'
+  title: Google Web search without wikipedia.org
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hbr/1:
+  url: 'http://hbr.org/search/{%query}'
+  title: Harvard Business Research
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hdb/1:
+  url: 'http://hackage.haskell.org/cgi-bin/hackage-scripts/package/{%package name}'
+  title: Haskell package page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+here/0:
+  url: 'https://wego.here.com/'
+  title: HERE Maps
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+here/1:
+  url: 'https://wego.here.com/search/{%location}'
+  title: HERE Maps
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hexdec/1:
+  url: 'http://stefanschramm.net/dev/hex/?hex={%hex value}'
+  title: Hex decode
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hexenc/1:
+  url: 'http://stefanschramm.net/dev/hex/?dec={%decimal value}'
+  title: Hex encode
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hitflip-dvd/1:
+  url: 'http://www.hitflip.de/dvds/search/{%wort}/'
+  title: HitFlip DVD
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hk/1:
+  url: 'http://hakia.com/search.aspx?q={%query}'
+  title: Hakia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hm/1:
+  url: 'http://hypem.com/search/{%query}'
+  title: Hype Machine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hodyt/1:
+  url: 'http://www.howoftendoyoutweet.com/?username={%username}'
+  title: How often do you tweet?
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hoh/1:
+  url: 'http://www.hoh.de/default.aspx?VL={%query}&SC=rel&TY=2&ST=5'
+  title: Home of Hardware search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hotu/1:
+  url: 'http://www.homeoftheunderdogs.net/search.php?search_game={%query}'
+  title: Home of the Underdogs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+html-pdf/1:
+  url: 'http://www.html-pdf-converter.com/convert.php?u={%url}&x=0&y=0'
+  title: HTML to PDF Converter
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+html2pdf/1:
+  url: 'http://www.htm2pdf.co.uk/?url={%url}'
+  title: HTML to PDF Converter
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+htz/1:
+  url: 'http://www.testzentrale.de/programm/catalogsearch/result/?q={%query}'
+  title: Hogrefe Testzentrale Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hub/1:
+  url: 'http://www.hubmed.org/search.cgi?q={%query}&sort=date'
+  title: Hubmed
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hype/1:
+  url: 'http://hype.non-standard.net/search/{%query}'
+  title: Hype Machine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+i/1:
+  url: 'http://info.com/searchw?qkw={%search term}'
+  title: Info.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+iafd/1:
+  url: 'http://www.iafd.com/results.asp?searchtype=comprehensive&searchstring={%query}'
+  title: Internet adult film database
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ibash/0:
+  url: 'http://ibash.de/neueste_1.html'
+  title: Ibash
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+icd/1:
+  url: 'http://www.icd-code.de/suche/icd/recherche.html?sp=0&sp=S{%query}'
+  title: Suche nach Krankheiten in der ICD-10
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ice/1:
+  url: 'http://www.icerocket.com/search?tab=buzz&q={%query}'
+  title: Icerocket
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+icet/1:
+  url: 'http://www.icerocket.com/search?tab=twitter&q={%query}'
+  title: Icerocket
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+icon/1:
+  url: 'http://www.iconspedia.com/search/{%query}/'
+  title: IconsPedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+id/1:
+  url: 'http://www.ixquick.de/deu/advanced-search.html?&cat=web&query={%query}'
+  title: Ixquick deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ida/1:
+  url: 'http://www.imdb.com/find?s=tt&site=aka&q={%query}'
+  title: IMDb AKA Title Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+identica/1:
+  url: 'http://identi.ca/search/notice?q={%query}'
+  title: Identi.ca Notice
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ieee/1:
+  url: 'http://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText={%query}'
+  title: IEEE Xplore Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ierender/0:
+  url: 'http://meineipadresse.de/netrenderer/index.php'
+  title: Render a Homepage with Internet Explorer 7.0
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ierender/1:
+  url: 'http://meineipadresse.de/netrenderer/index.php?url={%url}&browser=ie7'
+  title: Render a Homepage with Internet Explorer 7.0
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ierender/2:
+  url: 'http://meineipadresse.de/netrenderer/index.php?url={%url}&browser={%engine}'
+  title: Render a Homepage with an Internet Explorer Engine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+if/1:
+  url: 'http://www.iconfinder.com/search/?q={%query}'
+  title: IconFinder query
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ig/1:
+  url: 'http://www.google.com/m/i/search?hl={$language}&q={%query}'
+  title: Google iPhone Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ikeanl/1:
+  url: 'http://www.ikea.com/nl/nl/search/?query={%query}'
+  title: Ikea
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+il/1:
+  url: 'http://iload.to/de/category/-1-Alle-Downloads/search/{%query}/'
+  title: ILoad.to search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+iload/1:
+  url: 'http://www.google.de/search?hl=de&source=hp&btnI=Auf+gut+Glück!&aq=f&aqi=g7&aql=&oq=&q={%query}+iload'
+  title: ILoad.to Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+im/1:
+  url: 'http://www.imeem.com/tag/?q={%query}'
+  title: Imeem
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+imeem/1:
+  url: 'http://www.imeem.com/tag/?q={%query}'
+  title: Imeem
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+imfdb/1:
+  url: 'http://www.imfdb.org/wiki/{%query}'
+  title: Imfdb
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+img/1:
+  url: 'http://elzr.com/imagery?query={%query}&size=20&safe=off&imgsz=&imgc=&filetype='
+  title: Imagery
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+imhalal/1:
+  url: 'http://www.imhalal.com/beta/index.php/web/{%query}'
+  title: ImHalal Web Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+imslp/0:
+  url: 'http://imslp.org/index.php?title=Special:Search&search='
+  title: Petrucci Library
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+infrarot/1:
+  url: 'http://www.infrarot.de/search?words={%query}&suggested=&x=0&y=0'
+  title: InfraRot mail order
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ing/1:
+  url: 'http://www.ingenieur.de/default.aspx?q={%query}&knoq=1'
+  title: Die Suchmaschine für Ingenieure
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ink/1:
+  url: 'http://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search={%feature}&go=Go'
+  title: Inkscape Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+invis/1:
+  url: 'http://kanicq.ru/invisible/en/get?uin={%number}'
+  title: ICQ People Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+io/1:
+  url: 'http://iomash.com/?q={%keyword}'
+  title: Uimash website forwarding
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+iomash/0:
+  url: 'http://iomash.com/'
+  title: Uimash website forwarding
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+iper/1:
+  url: 'http://ipernity.com/search/doc?q={%query}&s=0'
+  title: Ipernity Photo Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+iplocator/1:
+  url: 'http://www.geobytes.com/IpLocator.htm?GetLocation&ipaddress={%ipaddress}'
+  title: IP Address Locator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+irna/0:
+  url: 'http://www2.irna.ir/en/frontpage/menu-232/'
+  title: Islamic Republic News Agency
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+irna/1:
+  url: 'http://www2.irna.ir/index.php?lang=en&option=com_newssearch&task=search&searchtext={%query}&sLines=0&x=0&y=0&i_titles=checked&i_texts=checked'
+  title: Islamic Republic News Agency
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+irnat/0:
+  url: 'http://www2.irna.ir/en/news/menu-234/'
+  title: Islamic Republic News Agency
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+iso/1:
+  url: 'http://isohunt.com/torrents/?ihq={%query}'
+  title: IsoHunt Torrent Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+istockphoto/1:
+  url: 'http://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo'
+  title: Istockphoto
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+iut/1:
+  url: 'http://osx.iusethis.com/search?q={%query}'
+  title: Iusethis for Mac OS X software
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ixs/0:
+  url: 'https://ixquick.com/'
+  title: Ixquick Meta Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+j/1:
+  url: 'http://www.jamaipa.de/?cx=018135833645009994261%3Aigx63jlfgfy&cof=FORID%3A9&q={%query}&sa=Suche&ie=ISO-8859-1&cx=018135833645009994261%3Aigx63jlfgfy'
+  title: Jamaipa.de Shopspam-freie Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jamt/1:
+  url: 'http://www.jamendo.com/tag/{%style of music}'
+  title: Jamendo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+japi/1:
+  url: 'http://www.google.com/search?hl=en&q={%query}+inurl%3Ajavase+6+docs+api+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+japiall/1:
+  url: 'http://www.google.com/search?hl=en&q={%query}+inurl%3Ajavase+6+docs+api+Class+{%query}&ie=utf-8'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+java5/0:
+  url: 'http://download.oracle.com/javase/1.5.0/docs/api/'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+java6/0:
+  url: 'http://download.oracle.com/javase/6/docs/api/index.html'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+java6/1:
+  url: 'http://www.google.com/search?hl=en&q=inurl%3Ajavase%2F6%2Fdocs%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+java7/1:
+  url: 'http://www.google.com/search?hl=en&q=inurl%3Ajavase%2F7%2Fdocs%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: Java Platform SE 7 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jb/2:
+  url: 'http://www.justbooks.de/search/?author={%author}&title={%title}&lang={$language}&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr'
+  title: JustBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jbde/2:
+  url: 'http://www.justbooks.de/search/?author={%author}&title={%title}&lang=de&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr'
+  title: JustBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jben/2:
+  url: 'http://www.justbooks.de/search/?author={%author}&title={%title}&lang=en&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr'
+  title: JustBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jcp/1:
+  url: 'http://jcp.org/en/jsr/summary?id={%query}'
+  title: The Java Community Process(SM) Program
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jee/0:
+  url: 'http://download.oracle.com/javaee/6/api/index.html'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jee/1:
+  url: 'http://www.google.com/search?hl=en&q=inurl%3Ajavaee%2F6%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jee6/0:
+  url: 'http://download.oracle.com/javaee/6/api/index.html'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jee6/1:
+  url: 'http://www.google.com/search?hl=en&q=inurl%3Ajavaee%2F6%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: Java Platform SE6 API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jgrapht/0:
+  url: 'http://www.jgrapht.org/javadoc/'
+  title: JGraphT API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jgrapht/1:
+  url: 'http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.jgrapht.org%2Fjavadoc%2F%20{%query}&ie=utf-8'
+  title: JGraphT API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jm/1:
+  url: 'http://www.jobmixer.com/de/jobs/{%query}/1'
+  title: Jobmixer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jmp/1:
+  url: 'http://j.mp/?u={%url}'
+  title: Bit.ly
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jonet/0:
+  url: 'http://jonet.org/showlog.html'
+  title: Jonet Medienlog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jonet/1:
+  url: 'http://www.jonet.org/showlog.php?query={%wort}'
+  title: Jonet Medienlog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jonet/2:
+  url: 'http://www.jonet.org/showlog.php?query={%wort}&last={%zeitraum}&sort=timeup'
+  title: Jonet Medienlog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+journalup/1:
+  url: 'http://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1={%joural title}'
+  title: Uni Potsdam Zeitschriftenbibliothek
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jp/1:
+  url: 'http://www.jappy.de/suche?name={%query}'
+  title: Jappy
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jpc/1:
+  url: 'http://www.jpc.de/jpcng/home/search?fastsearch={%query}&pd_orderby=score'
+  title: JPC fast search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jq/1:
+  url: 'http://docs.jquery.com/Special:Search?search={%query}'
+  title: JQuery API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jqg/1:
+  url: 'https://www.google.com/search?hl={$language}&sitesearch=docs.jquery.com&q={%query}'
+  title: JQuery API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jr/2:
+  url: 'http://www.jorudan.co.jp/norikae/cgi/nori.cgi?rf=top&eok1=0&eok2=0&pg=0&eki1={%start}&rec1=-&eki2={%ziel}&Cway=0&S.x=60&S.y=11&S=%E6%A4%9C%E7%B4%A2&Csg=1'
+  title: Jorudan japanese journey database
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jsr/1:
+  url: 'http://jcp.org/en/jsr/summary?id={%query}'
+  title: Java Specification Requests
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jtChatzielach/1:
+  url: 'http://www.jewtext.appspot.com/Jewtext?cmd={%query}&source=www.serchilo.net'
+  title: JT
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+junit/0:
+  url: 'http://junit.sourceforge.net/javadoc/'
+  title: Junit API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+junit/1:
+  url: 'https://www.google.com/search?hl=en&q=site%3Ahttp%3A%2F%2Fjunit.sourceforge.net%2Fjavadoc%2F+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1'
+  title: Junit API Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jx/1:
+  url: 'http://jux2.com/best.php?q={%query}&submit=Search'
+  title: Jux2.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+k/1:
+  url: 'http://www.korrekturen.de/cgi-bin/wortliste_suche.pl?ordner=vollsuche&suchbegr={%query}'
+  title: Korrekturen.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kcd/1:
+  url: 'http://katz.cd/search?q={%query}'
+  title: Katz
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+keepvid/1:
+  url: 'http://keepvid.com/?url={%url}&site=aa'
+  title: Keepvid
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+keno/0:
+  url: 'http://www.kenozahlen.de/'
+  title: Kenozahlen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+keno/1:
+  url: 'http://www.kenozahlen.de/?s={%Datum}'
+  title: Kenozahlen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kitbib/1:
+  url: 'http://www.ubka.uni-karlsruhe.de/hylib-bin/suche.cgi?serchilo=kitbib&opacdb=UBKA_OPAC&simple_search={%query}'
+  title: KIT-Bibliothek
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+koders/1:
+  url: 'http://www.koders.com/?s={%query}&la=*&li=*'
+  title: Koders
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kuler/1:
+  url: 'http://kuler.adobe.com/#themes/search?term={%term}'
+  title: Kuler
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kultura/1:
+  url: 'http://www.culture.pl/en/culture/wyszukiwanie/szukaj?query={%query}'
+  title: Culture.pl
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvb/4:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AB&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&senden=Senden%21'
+  title: Kölner Verkehrs-Betriebe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvb/5:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AB&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&senden=Senden%21'
+  title: Kölner Verkehrs-Betriebe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvb/6:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AB&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&senden=Senden%21'
+  title: Kölner Verkehrs-Betriebe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvba/4:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AN&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&senden=Senden%21'
+  title: KVB Ankunft Kölner Verkehrsbetriebe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvba/5:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AN&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&senden=Senden%21'
+  title: KVB Ankunft Kölner Verkehrsbetriebe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvba/6:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AN&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&senden=Senden%21'
+  title: KVB Ankunft Kölner Verkehrsbetriebe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvbg/0:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&ABAN=AB&senden=Senden%21'
+  title: Von Köln Mühlheim nach Bergisch Gladbach
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvbg/1:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&ABAN=AB&senden=Senden%21'
+  title: Von Köln Mühlheim nach Bergisch Gladbach
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvbg/2:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&ABAN=AB&senden=Senden%21'
+  title: Von Köln Mühlheim nach Bergisch Gladbach
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvbga/0:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&ABAN=AN&senden=Senden%21'
+  title: Von Köln Mühlheim nach Bergisch Gladbach
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvbga/1:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&ABAN=AN&senden=Senden%21'
+  title: Von Köln Mühlheim nach Bergisch Gladbach
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvbga/2:
+  url: 'http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&ABAN=AN&senden=Senden%21'
+  title: Von Köln Mühlheim nach Bergisch Gladbach
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ky/2:
+  url: 'http://www.kayak.de/flights/{%departure-destination}/20{%date YY-MM-DD}'
+  title: Kayak flight search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+l/1:
+  url: 'http://search.live.com/results.aspx?q={%query}'
+  title: Windows Live Web search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+l007/1:
+  url: 'http://www.lyrics007.com/cgi-bin/s.cgi?q={%lyricsyouwant}&submit=go'
+  title: Lyrics007 lyrics search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lambda/0:
+  url: 'http://lambda-the-ultimate.org'
+  title: Lambda the ultimate
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lambda/1:
+  url: 'http://lambda-the-ultimate.org/search/node/{%query}'
+  title: Lambda the ultimate
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+larousse/1:
+  url: 'http://www.larousse.com/fr/dictionnaires/francais/{%query}'
+  title: Dictionnaire Larousse
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+latex/1:
+  url: 'http://www.google.com/search?hl={$language}&lr=&q={%query}+site%3Awww.giss.nasa.gov+inurl%3Atools%2Flatex'
+  title: Latex Reference
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lc/0:
+  url: 'http://www.logosconjugator.org'
+  title: Logos Universal Conjugator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lc/1:
+  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo={%verb}'
+  title: Logos Universal Conjugator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+leo/1:
+  url: 'http://dict.leo.org/ende?lp=ende&lang=de&searchLoc=0&cmpType=relaxed&sectHdr=on&spellToler=on&search={%query}&relink=on'
+  title: Leo Deutsch<>English translation
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+leo_es/1:
+  url: 'http://dict.leo.org/esde?lp=esde&search?q={%query}'
+  title: Leo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+libra/1:
+  url: 'http://libra.msra.cn/Search.aspx?query={%query}'
+  title: Microsoft Libra
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lin/1:
+  url: 'http://www.linguee.com/search?direction=auto&query={%word or expression to translate}'
+  title: Linguee
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+linfr/1:
+  url: 'http://www.linguee.fr/francais-anglais/search?query={%mot ou expression à traduire}'
+  title: Linguee
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lingro/1:
+  url: 'http://lingro.com/translate/{%website/word to translate}'
+  title: Lingro
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+linguee/1:
+  url: 'http://www.linguee.com/search?direction=auto&query={%word or expression to translate}'
+  title: Linguee
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lintian/1:
+  url: 'http://lintian.debian.org/tags/{%query}.html'
+  title: show the given debian lintian report
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+linz/2:
+  url: 'http://www.linzag.at/efa/index.php?sstreet={%Start}&street={%Ziel}%E4t&x=0&y=0&_language=de'
+  title: Linz Linien
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lisp/1:
+  url: 'http://lispdoc.com/?q={%query}'
+  title: Lispdoc
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+liveleak/1:
+  url: 'http://www.liveleak.com/browse?q={%query}'
+  title: LiveLeak.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lo/1:
+  url: 'http://label-online.de/index.php/action/textsearch?suchen={%query}&submit=ok'
+  title: Label Online
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+loc/1:
+  url: 'http://www.loc.gov/fedsearch/metasearch/?cclquery={%query}'
+  title: Library Of Congress
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+loe/1:
+  url: 'https://en.wikipedia.org/wiki/List_of_{%title}_episodes'
+  title: List of episodes on Wikipedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+logos/1:
+  url: 'http://www.logosdictionary.org/pls/dictionary/new_dictionary.gdic.main?word={%word}'
+  title: Logos Multilingual Dictionary
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lotto/0:
+  url: 'http://www.lottozahlen.info/'
+  title: Lottozahlen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lotto/1:
+  url: 'http://www.google.com/search?hl=de&q=site:lottozahlen.info%20{%Datum}&ie=utf-8'
+  title: Lottozahlen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lt/1:
+  url: 'http://lingro.com/translate/{%website/word to translate}'
+  title: Lingro
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ly/1:
+  url: 'http://lyrics.wikia.com/Special:Search?go=Article&search={%article}'
+  title: LyricWiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lyrc/1:
+  url: 'http://lyrc.com.ar/en/tema1en.php?songname={%songname}'
+  title: Lyrc
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lyrc/2:
+  url: 'http://lyrc.com.ar/en/tema1en.php?artist={%artist}&songname={%songname}'
+  title: Lyrc
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+m2/1:
+  url: 'http://metager2.de/search/index.php?ses=web&q={%query}'
+  title: MetaGer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ma/1:
+  url: 'http://mahalo.com/Special:Search?search={%query}'
+  title: Mahalo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+macs/1:
+  url: 'http://www.coffer.com/mac_find?string={%query}'
+  title: MAC address search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mailinator/1:
+  url: 'http://mailinator.com/maildir.jsp?email={%mailbox}'
+  title: Mailinator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mailup/0:
+  url: 'https://webmail.uni-potsdam.de/'
+  title: 'Uni Potsdam, Webmail'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+maj/1:
+  url: 'http://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q={%query}&btnG=Search&sitesearch=MajorGeeks.com'
+  title: Majorgeeks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+map24/1:
+  url: 'http://www.de.map24.com/search?q={%query}'
+  title: Map24
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+maps/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%query}'
+  title: Google Maps
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mash/1:
+  url: 'http://iomash.com/?q={%keyword}'
+  title: Uimash website forwarding
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mathworld/1:
+  url: 'http://mathworld.wolfram.com/search/?query={%query}'
+  title: Mathworld
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+maxent/0:
+  url: 'http://maxent.sourceforge.net/api/index.html'
+  title: Maxent API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+maxent/1:
+  url: 'http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fmaxent.sourceforge.net%2Fapi%2Findex.html+{%query}&btnG=Suche&lr='
+  title: Maxent API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mb/1:
+  url: 'http://musicbrainz.org/search/textsearch.html?query={%artist}&type=artist&limit=25&handlearguments=1'
+  title: Musicbrainz - Music Metabase
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mbug/0:
+  url: 'https://bugzilla.mozilla.org/query.cgi'
+  title: mozilla bugs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mbugq/1:
+  url: 'https://bugzilla.mozilla.org/buglist.cgi?query_format=specific&order=relevance+desc&bug_status=__open__&content={%query}'
+  title: search for a term in mozilla bugs (query)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mc/1:
+  url: 'http://www.metacritic.com/search/all/{%query}/results'
+  title: Metacritic Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mcw/0:
+  url: 'http://www.minecraftwiki.net/wiki/Minecraft_Wiki'
+  title: Minecraft Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mcw/1:
+  url: 'http://www.minecraftwiki.net/index.php?title=Special%3ASearch&search={%article}&button='
+  title: Minecraft Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+me/1:
+  url: 'http://masseffect.wikia.com/wiki/Special:Search?search={%query}&go=1'
+  title: Mass Effect Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+med/1:
+  url: 'http://www.medizinfuchs.de/produkt/search/{%query}'
+  title: Versandapotheke
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+medipreis/1:
+  url: 'http://www.medipreis.de/suchen?q={%query}'
+  title: Medipreis Apothekenpreisvergleich
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+melz/1:
+  url: 'http://www.melzoo.com/en/search?query={%query}&type=web'
+  title: Melzoo search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+melzoo/1:
+  url: 'http://www.melzoo.com/en/search?query={%query}&type=web'
+  title: Melzoo search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mensahu/0:
+  url: 'http://www.studentenwerk-berlin.de/mensen/speiseplan/'
+  title: 'Humboldt-Universität Berlin, Speiseplan'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mensaup/0:
+  url: 'http://www.studentenwerk-potsdam.de/speiseplan/'
+  title: 'Uni Potsdam, Speiseplan'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mesh/1:
+  url: 'http://www.ncbi.nlm.nih.gov/mesh?term={%termName}'
+  title: MeSH term
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+meta/1:
+  url: 'http://www.metacritic.org/search/process?sort=relevance&termType=all&ts={%Produktname}&ty=3&x=14&y=7urlencode}'
+  title: Metacritic
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+metal/1:
+  url: 'http://www.metal-archives.com/search?searchString={%query}&type=band_name'
+  title: Metal Archives
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mf/1:
+  url: 'http://www.medizinfuchs.de/produkt/search/{%query}'
+  title: Medizinfuch Apothekenpreisvergleich
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mg/1:
+  url: 'http://www.mobygames.com/search/quick?q={%query}'
+  title: MobyGames Quick Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mi/1:
+  url: 'http://www.mininova.org/search/?search={%query}'
+  title: Mininova
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mind/1:
+  url: 'http://www.mindfactory.de/search_result.php?Query={%query}'
+  title: Mindfactory.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mls/1:
+  url: 'http://www.franklymls.com/{%query}'
+  title: FranklyMLS.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mn/1:
+  url: 'http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt={$language}-{$language}'
+  title: MSN News
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mnen/1:
+  url: 'http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt=en-US'
+  title: MSN News
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+month/0:
+  url: 'http://timeanddate.com/calendar/monthly.html'
+  title: This month
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+moodleup/0:
+  url: 'http://moodle.uni-potsdam.de'
+  title: 'Uni Potsdam, Moodle'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mozbot/1:
+  url: 'http://www.mozbot.com/search?q={%query}'
+  title: Mozbot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mp3/1:
+  url: 'http://mp3skull.com/mp3/{%query}.html'
+  title: Mp3skull
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mr-check/1:
+  url: 'http://app.mr-check.de/Mrcheck.php?SP={%query}&CL=zeit'
+  title: Search Mr. Check
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+msas/1:
+  url: 'http://academic.research.microsoft.com/Search.aspx?query={%query}'
+  title: Microsoft Academic Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+msdn2/1:
+  url: 'http://msdn2.microsoft.com/en-us/library/{%query}.aspx'
+  title: Microsoft Developers Network
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+msn/1:
+  url: 'http://search.msn.com/results.aspx?q={%query}'
+  title: MSN Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mt/1:
+  url: 'http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff={%query}'
+  title: Mac-TV Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mtf/1:
+  url: 'http://www.mac-tv.de/Forum/search.php?do=process&query={%query}'
+  title: Mac-TV Forum
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mtg/1:
+  url: 'http://www.magiccards.info/query?q={%query}'
+  title: Magic the Gathering card search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mu/1:
+  url: 'http://www.macupdate.com/search.php?arch=all&keywords={%query}&os=macosx'
+  title: MacUpdate.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mv/0:
+  url: 'http://www.myvideo.de/'
+  title: MyVideo Homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mv/1:
+  url: 'http://www.myvideo.de/news.php?rubrik=uoijv&searchWord={%query}&searchChannel=&searchOrder='
+  title: MyVideo clip search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+myck/1:
+  url: 'http://chefkoch.de/ms/s0/{%query}/Rezepte.html'
+  title: MChefKoch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+myg/1:
+  url: 'http://www.google.com/search?q={%query}'
+  title: Google search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+myip/0:
+  url: 'http://ipinfo.info/html/privacy-check.php'
+  title: Myip
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+myleo/1:
+  url: 'http://pda.leo.org/ende?lp=&search={%query}'
+  title: Mobile Leo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mymap/1:
+  url: 'googlemaps://maps.google.com?q={%query}'
+  title: IOS Google Maps
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mymk/1:
+  url: 'http://jonaquino.textdriven.com/sean_ohagan/get2post.php?yndesturl=http://www.movie2k.to/movies.php?list=search&search={%query}'
+  title: Movie2k
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mys/1:
+  url: 'http://www.myspace.com/{%band name}'
+  title: Myspace
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+myspace/1:
+  url: 'http://sads.myspace.com//Modules/Search/Pages/Search.aspx?fuseaction=advancedFind.results&searchtarget=tms&searchtype=myspace&t=tms&get=1&websearch=1&searchBoxID=HeaderWebResults&q={%query}'
+  title: Myspace
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mysql/1:
+  url: 'http://dev.mysql.com/doc/mysql/search.php?q={%query}'
+  title: MySQL Documentation
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mytv/0:
+  url: 'http://m.tvtoday.de'
+  title: Mobile TVInfo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+myxx/1:
+  url: 'http://m.fuq.com/search/?q={%query}'
+  title: Tiava search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+n4m/0:
+  url: 'http://www.news4mobile.de/'
+  title: news4mobile Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+n4m/1:
+  url: 'http://www.news4mobile.de/?sw={%Suche}'
+  title: news4mobile Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nag/1:
+  url: 'http://google.com/search?hl={$language}&q={%query}+inurl%3Anagios.sourceforge.net%2Fdocs'
+  title: Nagios
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nb/1:
+  url: 'http://www.nextbio.com/b/home/home.nb?q={%query}'
+  title: NetxBio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+'nicebooks:fr/1':
+  url: 'http://fr.nicebooks.com/search?q={%query}'
+  title: NiceBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+'nicebooks:uk/1':
+  url: 'http://uk.nicebooks.com/search?q={%query}'
+  title: NiceBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+'nicebooks:us/1':
+  url: 'http://us.nicebooks.com/search?q={%query}'
+  title: NiceBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+no/1:
+  url: 'http://www.heinzelnisse.info/no/dict?searchItem={%Wort}'
+  title: Norwegisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nobi/1:
+  url: 'http://www.notebookinfo.de/suche/{%query}'
+  title: Notebookinfo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+npr/1:
+  url: 'http://www.npr.org/search.php?text={%query}'
+  title: National Public Radio (United States)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ns/1:
+  url: 'http://www.netspeak.org/#query={%query}'
+  title: Netspeak
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nt/1:
+  url: 'http://www.nowtors.com/torrents/{%query}'
+  title: NowTors
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nyud/1:
+  url: 'http://redirect.nyud.net/?url={%url}'
+  title: Nyud realtime anypage mirror
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+oe1/0:
+  url: 'http://oe1.orf.at/konsole?show=live'
+  title: Oe1
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+of/1:
+  url: 'http://www.dicfro.org/?dict=gdf&word={%query}'
+  title: Old french dictionnary
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+oh/1:
+  url: 'http://www.ohnorobot.com/index.pl?s={%query}'
+  title: Oh No Robot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+olbo/1:
+  url: 'http://aleph20-prod-lbo.obvsg.at/F/?func=find-b&request={%query}&OPACSuche=Y&find_code=WRD&adjacent=N&x=0&y=0&filter_code_1=WSP&filter_request_1=&filter_code_4=WEF&filter_request_4=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3='
+  title: Online-Katalog der Oberösterreichischen Landesbibliothek
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+omega/1:
+  url: 'http://www.omegawiki.org/Expression:{%query}'
+  title: OmegaWiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+oms/1:
+  url: 'http://www.operamini.com/demo/?url={%url}'
+  title: Opera Mini Simulator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+openbsd/1:
+  url: 'http://www.openbsd.org/cgi-bin/man.cgi?query={%query}'
+  title: OpenBSD Manual Pages
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+opennlp/0:
+  url: 'http://www.opennlp.org/api/index.html'
+  title: OpenNLP API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+opennlp/1:
+  url: 'http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.opennlp.org%2Fapi%2Findex.html%20{%query}&ie=utf-8'
+  title: OpenNLP API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ora/1:
+  url: 'http://www.ora-code.com/result.html?cx=partner-pub-8150570856315117%3Afghww0-78vd&cof=FORID%3A10&ie=ISO-8859-1&q={%query}&sa=Search#755'
+  title: Oracle Error Code
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+os/1:
+  url: 'http://www.opensubtitles.org/de/search2/moviename-{%query}'
+  title: OpenSubtitles
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+osmrank/1:
+  url: 'http://hdyc.neis-one.org/?{%user}'
+  title: OpenStreetMap User Rank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ossearch/1:
+  url: 'http://en.opensuse.org/Spezial:Search?search={%query}'
+  title: OpenSUSE search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+otf/0:
+  url: 'http://www.heise.de/extras/foren/S-Special-Off-Topic/forum-206680/list/'
+  title: Heise OTF
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+otn/1:
+  url: 'http://forums.oracle.com/forums/search.jspa?threadID=&q={%query}&objID=c84&dateRange=all&userID=&numResults=30&rankBy=10001'
+  title: Oracle OTN Forum Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+otto/1:
+  url: 'http://www.otto.de/is-bin/INTERSHOP.enfinity/WFS/Otto-OttoDe-Site/de_DE/-/EUR/OV_ViewSearch-SearchStart?ls=0&Orengelet.sortPipelet.sortResultSetSize=12&SearchDetail=one&stype=N&Modul_ALL_FILTER=&Query_Text={%query}'
+  title: OTTO
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ov/0:
+  url: 'http://www.onvista.de'
+  title: OnVista
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ov/1:
+  url: 'http://www.onvista.de/suche.html?SEARCH_VALUE={%query}'
+  title: OnVista
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ovg/1:
+  url: 'http://watch.ovguide.com/movies_tv.php?q={%query}'
+  title: OVGuide
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+p/1:
+  url: 'http://www.powerset.com/explore/pset?q={%query}'
+  title: Powerset
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+p2r/0:
+  url: 'http://page2rss.com'
+  title: Page2RSS homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+p2r/1:
+  url: 'http://page2rss.com/page?url={%url}'
+  title: Request update feed
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pak/1:
+  url: 'http://www.pakanto.org/wiki/{%query}'
+  title: Pakanto Package Descriptions
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pamfix/1:
+  url: 'http://pamfix.org/cgi-bin/deutsch/video.cgi?url={%Seite}'
+  title: Pamfix Free Youtube Video Download
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+paste/0:
+  url: 'http://paste.servut.us/'
+  title: Paste Your Code
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pastebin/0:
+  url: 'http://pastebin.com/'
+  title: Paste Your Code
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pb/1:
+  url: 'http://verbs.colorado.edu/framesets/{%predicate}-v.html'
+  title: PropBank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pd/1:
+  url: 'http://playstation-disorder.com/search.php?s_text= {%query}'
+  title: playstation-disorder.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pdaw/0:
+  url: 'http://pda.{$language}.wapedia.org/'
+  title: Wapedia - Wikipedia for Pocket PC
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pdaw/1:
+  url: 'http://pda.{$language}.wapedia.org/{%article}'
+  title: Wapedia - Wikipedia for Pocket PC
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pdawg/1:
+  url: 'http://www.google.com/search?hl={$language}&sitesearch={$language}.wapedia.org&domains={$language}.wapedia.org;wapedia.org&q={%query}'
+  title: Wapedia - Wikipedia for Pocket PC
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pdawp/1:
+  url: 'http://pda.{$language}.wapedia.org/wapedia:Search?search={%query}&typ=pics'
+  title: Wapedia - Wikipedia for Pocket PC
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pdb/1:
+  url: 'http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId={%key}'
+  title: Protein Data Bank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pdf/1:
+  url: 'http://docs.google.com/viewer?url={%url}'
+  title: Google PDF Viewer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pear/1:
+  url: 'http://pear.php.net/search.php?q={%query}&in=packages'
+  title: PEAR - PHP Extension and Application Repository
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pep/1:
+  url: 'http://python.org/dev/peps/pep-{%id}/'
+  title: Show Python Enhancement Proposal
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pg/1:
+  url: 'http://www.pricegrabber.com/search.php?form_keyword={%query}&st=query'
+  title: Price Grabber
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pgpkey/1:
+  url: 'http://pgp.mit.edu:11371/pks/lookup?search=0x{%query}'
+  title: PGP Keysearch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ph/1:
+  url: 'http://www.phazeddl.com/search/{%query}.p1.htm'
+  title: Phazeddl
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+phpg/1:
+  url: 'http://www.google.com/search?hl={$language}&q=site%3Awww.php.net+{%query}'
+  title: PHP Documentation via Google
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+phpg!/1:
+  url: 'http://www.google.com/search?btnI=1&q=site%3Awww.php.net+{%query}'
+  title: PHP Documentation via Google Feeling Lucky
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pi/0:
+  url: 'http://pipes.yahoo.com'
+  title: Yahoo Pipes
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pi/1:
+  url: 'http://pipes.yahoo.com/pipes/search?q={%query}'
+  title: Yahoo Pipes
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+picniche/1:
+  url: 'http://www.picniche.com/index.aspx?q={%query}'
+  title: PicNiche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ping/1:
+  url: 'http://just-ping.com/index.php?vh={%query}'
+  title: Web-based ping
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+player/1:
+  url: 'http://www.game-monitor.com/search.php?search={%query}&type=player&location=all&game=all&x=0&y=0&num=30'
+  title: Spieler Suchen bei game-monitor.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+plazes/1:
+  url: 'http://beta.plazes.com/search;plazes?q={%query}'
+  title: Plazes
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+plen/1:
+  url: 'http://portalwiedzy.onet.pl/tlumacz.html?tr=ang-auto&qs={%word}'
+  title: Translation Polish to English
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+plg/1:
+  url: 'http://www.primal-legion.net/content/search.php?keywords={%query}&terms=all&author=&fid[]=3&sc=1&sf=all&sk=t&sd=d&sr=posts&st=0&ch=300&t=0&submit=Suche'
+  title: Prima Legion search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+plot/1:
+  url: 'http://plot20.kesto.de/#{"functions":["{%function}"]}'
+  title: Plot 2.0
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+plugins/0:
+  url: 'http://wiki.serchilo.net/Serchilo:Browser_Intergration'
+  title: Serchilo-Plugins
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pn/1:
+  url: 'http://www.picniche.com/index.aspx?q={%query}'
+  title: PicNiche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+podnova/1:
+  url: 'http://www.podnova.com/search/{%query}/'
+  title: Podnova
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+podster/1:
+  url: 'http://www.podster.de/search?q={%query}'
+  title: Podster Podcastsuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+port/1:
+  url: 'http://de.babla.mobi/woerterbuch/englisch-portugiesisch/{%Wort}.html'
+  title: Portugiesisch Englisch Übersetzung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+postbank/1:
+  url: 'http://www.postbank.de/-snm-0184330278-1314787205-0734700014-000000958-1314813579-enm-privatkunden/pk_suche.html?q={%query}'
+  title: Postbank Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+power/1:
+  url: 'http://www.powerset.com/explore/pset?q={%query}'
+  title: Powerset
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pr/1:
+  url: 'http://www.preisroboter.de/search.php?search={%query}'
+  title: Preisroboter.de Preisvergleich
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+praktiker/1:
+  url: 'http://praktiker.de/Search.action?searchTerm={%query}'
+  title: Praktiker Baumarkt Online Shop
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+presale/1:
+  url: 'http://presaletoday.com/search?q={%query}'
+  title: Presale Ticket Password Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+prot/1:
+  url: 'http://www.expasy.org/cgi-bin/sprot-search-de?{%query}'
+  title: SwissProt
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ps/1:
+  url: 'http://thepiratebay.org/search/{%query}'
+  title: The Pirate Bay
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+psql/0:
+  url: 'http://www.postgresql.org/'
+  title: PostgreSQL
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+psql/1:
+  url: 'http://search.postgresql.org/search?u=%2Fdocs%2F8.3%2Finteractive%2F&q={%query}'
+  title: PostgreSQL 8.3
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+psql1/1:
+  url: 'http://search.postgresql.org/search?u=%2Fdocs%2F8.1%2Finteractive%2F&q={%query}'
+  title: PostgreSQL 8.1
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pt-pons/1:
+  url: 'http://en.pons.com/translate?q={%query}&in=&l=dept'
+  title: PONS Portuguese dictionary
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+puls/0:
+  url: 'http://puls.uni-potsdam.de'
+  title: 'Uni Potsdam, Puls'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+puppet/1:
+  url: 'http://reductivelabs.com/trac/puppet/search?q={%query}'
+  title: Search all content
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+puppetc/1:
+  url: 'http://reductivelabs.com/trac/puppet/search?q={%query}&changeset=on'
+  title: Search only changesets
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+puppett/1:
+  url: 'http://reductivelabs.com/trac/puppet/search?q={%query}&ticket=on'
+  title: Search only tickets
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+puppetw/1:
+  url: 'http://reductivelabs.com/trac/puppet/search?q={%query}&wiki=on'
+  title: Search only the wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pure/1:
+  url: 'https://pureimage.flll.jku.at/search?q={%query}'
+  title: PureImage Redmine search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pvx/1:
+  url: 'http://pvx.wikia.com/wiki/Special:Search?search={%query}&go=1'
+  title: PvX Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pw/1:
+  url: 'http://www.google.com/search?q={%query} site:wiki.piratenpartei.de'
+  title: Pw
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pym/0:
+  url: 'http://readthedocs.org/'
+  title: readthedocs.org
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pym/2:
+  url: 'http://readthedocs.org/search/project/?selected_facets=project%3A{%module}&q={%keyword}'
+  title: Search Python module documentation at readthedocs.org
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pypi/0:
+  url: 'http://pypi.python.org/pypi'
+  title: Python Package Index (Cheese Shop)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pypi/1:
+  url: 'http://pypi.python.org/pypi?%3Aaction=search&term={%package}&submit=search'
+  title: Python Package Index (Cheese Shop)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pys/0:
+  url: 'http://docs.python.org/library/'
+  title: Python standard library
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pys/1:
+  url: 'http://docs.python.org/library/{%library}.html'
+  title: Python standard library
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pz/1:
+  url: 'https://www.google.com/search?q=site:proz.com {%query}'
+  title: ProZ terminology search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+qtdoc/0:
+  url: 'http://qt-project.org/doc/qt-4.8/'
+  title: Qt documentation's home
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+qtdoc/1:
+  url: 'http://www.google.com/search?q={%query}&sitesearch=http://qt-project.org/doc/qt-4.8/'
+  title: Search Qt documentation
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+qw/1:
+  url: 'http://www.qwika.com/find/{%query}'
+  title: Qwika search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+qwd/1:
+  url: 'http://www.qwika.com/find-de/{%Begriff}'
+  title: Qwika search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+qwika/1:
+  url: 'http://www.qwika.com/find/{%query}'
+  title: Qwika search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+radarberlin/0:
+  url: 'http://wind.met.fu-berlin.de/loops/radar_200/R.NEW.gif'
+  title: Regenradar FU-Berlin
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rails/1:
+  url: 'http://apidock.com/rails/search?query={%query}'
+  title: Rails Documentation
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rapids/0:
+  url: 'http://rapidshare-search-engine.com/'
+  title: Rapidshare Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rapidshare/1:
+  url: 'http://www.rapidshare1.com/search.php?search={%file}'
+  title: Rapidshare
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+raven/0:
+  url: 'https://blog.kairaven.de/'
+  title: Raven
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rc/0:
+  url: 'http://wiki.serchilo.net/Special:Recentchanges'
+  title: Recent Changes
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rea/0:
+  url: 'http://www.rea-getraenke.de/index.php'
+  title: Rea Getränkemarkt
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rea/1:
+  url: 'http://www.rea-getraenke.de/index.php?cl=search&searchparam={%query}'
+  title: Rea Getränkemarkt
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+reddit/1:
+  url: 'http://www.reddit.com/search?q={%query}'
+  title: Reddit
+  description: ''
+  tags:
+  - forum
+  - reddit
+  examples:
+    berlin: Search for "berlin"
+  tests: []
+register/0:
+  url: 'http://wiki.serchilo.net/index.php?title=Special:Userlogin&type=signup&returnto=Serchilo:User_commands'
+  title: Register at Serchilo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+remnant/1:
+  url: 'http://lastremnant.wikia.com/wiki/Special:Search?search={%query}&go=1'
+  title: The Last Remnant
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ripe/1:
+  url: 'http://www.db.ripe.net/whois?searchtext={%query}'
+  title: RIPE Database
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rl/1:
+  url: 'http://rapidlibrary.com/index.php?q={%query}&filetype=0'
+  title: Rapidlibrary Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rmsk/0:
+  url: 'http://www.rms-austria.at/service-center/kontakt/katrin-lacina/'
+  title: Rmsk
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+route/2:
+  url: 'http://maps.google.com/maps?hl={$language}&saddr={%from}&daddr={%to}'
+  title: Google Maps Route
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rs/1:
+  url: 'http://www.rapidshare1.com/search.php?search={%file}'
+  title: Rapidshare
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rtm/0:
+  url: 'http://www.rememberthemilk.com/home/domiii/#section.tasks'
+  title: Remember the milk
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ruby/1:
+  url: 'http://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q={%query}&sa=Search'
+  title: Ruby Documentation
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rwth/1:
+  url: 'http://www.campus.rwth-aachen.de/rwth/all/lecturerlist.asp?find={%name}'
+  title: RWTH Aachen Campus Phonebook
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sa/1:
+  url: 'http://www.semanticsarchive.net/sem-bin/browse.pl?search={%query}'
+  title: Semantics Archive
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sandboxcommand/1:
+  url: 'http://www.google.com/search?hl=de&q={%query}&ie=utf-8'
+  title: Sandbox
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sandboxcommand/2:
+  url: 'http://www.google.com/search?hl={%lang}&q={%query}&ie=utf-8'
+  title: Sandbox
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sanego/2:
+  url: 'http://www.sanego.de/Arzt/?q={%Name oder Fachgebiet}&l={%Ort, Ortsteil oder Postleitzahl}&btn=Suchen'
+  title: Sanego - Die Gesundheits-Community
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sc/0:
+  url: 'http://www.scirus.com/srsapp/search?q=(%query)'
+  title: Scirus search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+scholar/1:
+  url: 'http://www.scholarpedia.org/article/Special:Search?from=sidebar&search={%article}&go=Title'
+  title: Scholarpedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+scirus/1:
+  url: 'http://www.scirus.com/srsapp/search?q={%query}'
+  title: Scirus - scientific information
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+se/2:
+  url: 'http://{%subpage}.stackexchange.com/search?q={%query}'
+  title: Stack Exchange
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+search/1:
+  url: 'http://wiki.serchilo.net/Special:Search?search={%page}&fulltext=Suche'
+  title: 'Serchilo Wiki: Page search'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+searchmash/0:
+  url: 'http://www.searchmash.com'
+  title: Search Mash
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sem/1:
+  url: 'http://www.semager.de/search/?q={%query}&lang=all'
+  title: Semantic WWW search by SemaGer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sema/1:
+  url: 'http://www.semager.com/search/?q={%query}&lang=en'
+  title: Semager Semantic Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+semlex/1:
+  url: 'http://gmb.let.rug.nl/explorer/semlex.php?entrysortkey=frequency_lemma&entrysortorder=desc&lemma={%lemma}'
+  title: 'GMB Explorer, semantic lexicon'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sep/0:
+  url: 'http://plato.stanford.edu'
+  title: Stanford Encyclopedia of Philosophy
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sep/1:
+  url: 'http://plato.stanford.edu/search/searcher.py?query={%query}'
+  title: Stanford Encyclopedia of Philosophy
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ser/1:
+  url: 'http://{$language}.serchilo.net/{%query}'
+  title: Serchilo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sf/0:
+  url: 'https://sourceforge.net/account/login.php'
+  title: Sourceforge
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sf/1:
+  url: 'http://sourceforge.net/search/?type_of_search=soft&words={%query}'
+  title: Sourceforge
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sgo/0:
+  url: 'http://sources.gentoo.org/{$1}/{$2}'
+  title: Show Gentoo ebuild sources
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sgw/1:
+  url: 'http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&sband=1&salbum=1&stitle=1&stext=&sgo=search'
+  title: Sturmgeweiht (Searches for everything)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sgwa/1:
+  url: 'http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&salbum=1&sgo=search'
+  title: Sturmgeweiht (Searches for an album)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sgwb/1:
+  url: 'http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&sband=1&sgo=search'
+  title: Sturmgeweiht (Searches for a band)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sgwte/1:
+  url: 'http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&sgo=search&stext=1'
+  title: Sturmgeweiht (Searches for a text)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sgwti/1:
+  url: 'http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&stitle=1&sgo=search'
+  title: Sturmgeweiht (Searches for a title)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sha1/1:
+  url: 'http://stefanschramm.net/dev/hash/?algo=sha1&q={%data}'
+  title: Hash functions
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+shot/1:
+  url: 'http://www.superscreenshot.com/getscreen.php?url={%url}'
+  title: Screenshot from Url
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+shoutcast/0:
+  url: 'http://shoutcast.net/'
+  title: SHOUTcast
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+shoutcast/1:
+  url: 'http://shoutcast.net/directory/index.phtml?s={%query}'
+  title: SHOUTcast
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+shs/1:
+  url: 'http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song'
+  title: Secondhandsongs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+skapiec/0:
+  url: 'http://www.skapiec.pl/szukaj/w_calym_serwisie/${query}'
+  title: Skapiec - Polish price comparison site
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+skreemr/1:
+  url: 'http://www.skreemr.com/results.jsp?q={%query}'
+  title: SkreemR
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+slse/2:
+  url: 'http://reseplanerare.sl.se/bin/query.exe/sn?REQ0JourneyStopsS0A=255&S={%destination1}&REQ0JourneyStopsZ0A=255&Z={%destination2}&start=yes&REQ0JourneyTime%3D%2B0%3A05'
+  title: Stockholms Buss och Tunnelbana tider
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+smfmod/1:
+  url: 'http://custom.simplemachines.org/mods/index.php?action=search&basic_search={%query}'
+  title: Search for Modifications
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+snipmp3/1:
+  url: 'http://snipmp3.com/?url={%url}'
+  title: Snipmp3
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+soa/1:
+  url: 'http://stackoverflow.com/search?q=%5Bandroid%5D+{%query}'
+  title: Stackoverflow android tag
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+soundcloud/1:
+  url: 'http://soundcloud.com/search?q[fulltext]={%query}'
+  title: Soundcloud
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+soup/1:
+  url: 'http://www.soup.io/friends?search={%query}'
+  title: Soup.io friends full text search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sowi/1:
+  url: 'http://www.sowiport.de/suche/einfache-suche.html?tx={%Begriff}&L=0&tx_and=true'
+  title: Sowiport
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+spark/1:
+  url: 'http://gsearch.sparknotes.com/search?q={%query}&output=xml_no_dtd&oe=UTF-8&ie=UTF-8&client=default_frontend&proxystylesheet=default_frontend&site=default_collection'
+  title: SparkNotes
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+spezify/1:
+  url: 'http://www.spezify.com/#/{%query}'
+  title: Spezify
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+spfun/1:
+  url: 'http://www.sparkfun.com/search/results?term={%query}&what=products'
+  title: Sparkfun product search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+spl/1:
+  url: 'http://link.springer.com/search?query={%query}'
+  title: SpringerLink
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+spo/1:
+  url: 'http://www.scholarpedia.org/article/Special:Search?from=sidebar&search={%article}&go=Title'
+  title: Scholarpedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sqp/1:
+  url: 'http://www.seeqpod.com/music/?q={%query}'
+  title: Seeqpod
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sr/1:
+  url: 'http://www.reddit.com/r/{%forum}'
+  title: Reddit
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sreddit/1:
+  url: 'http://www.reddit.com/r/{%forum}'
+  title: Reddit
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ss/2:
+  url: 'http://www.skyscanner.net/{$language}/eur/fluge/{%from}/{%to}?charttype=1'
+  title: Skyscanner cheap flights
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ss/4:
+  url: 'http://www.skyscanner.net/{$language}/eur/fluge/{%from}/{%to}/{%depart}/{%return}?charttype=1'
+  title: Skyscanner cheap flights
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ssl/1:
+  url: 'https://www.ssllabs.com/ssldb/analyze.html?d={%domain}'
+  title: SSL Labs Analyzer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ssw/1:
+  url: 'http://szenesprachenwiki.de/words/advanced_search/?q={%query}'
+  title: Szenesprachenwiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+st/0:
+  url: 'http://www.stylepark.com/'
+  title: Stylepark Designs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+st/1:
+  url: 'http://www.stylepark.com/srv.do?op=search&site=stylepark&search={%query}'
+  title: Stylepark Designs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+state/1:
+  url: 'http://www.state.{%query}.us'
+  title: USA State Websites
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stc/1:
+  url: 'http://surfthechannel.com/search/all/3/1/{%query}.html'
+  title: Surfthehannel
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+steam/1:
+  url: 'http://store.steampowered.com/search/?term={%query}'
+  title: Steam search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+su/1:
+  url: 'http://superuser.com/search?q={%query}'
+  title: Super User
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+subtitles/1:
+  url: 'http://www.google.com/search?hl={$language}&sitesearch=subtitles.images.o2.cz&domains=subtitles.images.o2.cz&q={%movie}'
+  title: Subtitles.images.o2.cz
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+such/2:
+  url: 'http://suchen.de/lokal?what={%was}&where={%wo}&x=0&y=0'
+  title: Suchen.de Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+super/1:
+  url: 'http://www.supertopic.de/search/results/?q={%query}&o=1_1_1_1_0_0_0_0'
+  title: Supertopic Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+svfr/1:
+  url: 'http://www.sensagent.com/dictionnaires/sv-fr/{%word}/ALEXMN/'
+  title: Translation Swedish to French
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+svz/0:
+  url: 'http://schuelervz.de'
+  title: Schuelervz Shortcut
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sw/1:
+  url: 'http://www.spankwire.com/search/straight/keyword/{%query}'
+  title: Spankwire
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+swt/1:
+  url: 'http://www.test.de/suche/?q={%query}'
+  title: Stiftung Warentest
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+t3ext/1:
+  url: 'http://typo3.org/extensions/repository/?tx_terfe_pi1[view]=search&no_cache=1&tx_terfe_pi1[sword]={%Name}'
+  title: Typo3 extension repository
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+taz/1:
+  url: 'http://www.google.com/search?hl=de&q=site%3Ataz.de+{%query}'
+  title: Taz Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tc/0:
+  url: 'http://www.techcrunch.com/'
+  title: TechCrunch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tc/1:
+  url: 'http://www.techcrunch.com/?s={%query}'
+  title: TechCrunch Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tcode/1:
+  url: 'http://www.tcodesearch.com/tcodes/search?q={%query}'
+  title: SAP TCODE Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tct/1:
+  url: 'http://www.techcrunch.com/tag/{%tag}'
+  title: Tag-Suche bei TechCrunch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+te/1:
+  url: 'http://www.tineye.com/search?url={%url}'
+  title: TinEye
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+teltarif/1:
+  url: 'http://www.teltarif.de/db/res.html?019x=0&kurz=ja&ve=1&takt=61&von=Analoganschluss&ziel={%Zielort}'
+  title: Teltarif.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tfm/1:
+  url: 'http://www.transfermarkt.de/de/undefined/suche/ergebnis.html?quicksearch={%query}&x=0&y=0'
+  title: Transfermarkt.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tg/1:
+  url: 'http://tagoo.ru/?search={%query}'
+  title: Tagoo Music Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+thomann/1:
+  url: 'http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw={%query}&x=&y='
+  title: Thomann Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+thsr/1:
+  url: 'http://thesaurus.com/browse/{%query}'
+  title: Roget's Thesaurus
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+time/1:
+  url: 'http://www.timeanddate.com/worldclock/results.html?query={%location}'
+  title: Time and date
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+titles/1:
+  url: 'http://titles.box.sk/index.php?p=se&z3={%movie}'
+  title: Titles.box.sk
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tldp/1:
+  url: 'http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q={%query}'
+  title: The Linux Documentation Project
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+togg/1:
+  url: 'http://tinyogg.com/add/?url={%url}'
+  title: TinyOgg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+topo/1:
+  url: 'http://torrentportal.com/torrents-search.php?search={%query}'
+  title: Torrent Portal
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+torcheck/0:
+  url: 'http://torcheck.xenobite.eu/index.php?'
+  title: Tor Check
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tp/0:
+  url: 'http://www.toppreise.ch/'
+  title: Toppreise.ch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tp/1:
+  url: 'http://www.toppreise.ch/index.php?search={%query}'
+  title: Toppreise.ch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tpba/1:
+  url: 'http://thepiratebay.org/search/{%query}/0/99/100'
+  title: Audio search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tpbv/1:
+  url: 'http://thepiratebay.org/search/{%query}/0/99/200'
+  title: Video search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tra/2:
+  url: 'http://reiseplanlegger.trafikanten.no/no/Mellom/Fra/{%query}/til/{%second query}'
+  title: Trafikanten
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+trends/1:
+  url: 'http://www.google.com/trends?q={%query}'
+  title: Google Trends
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+trim/1:
+  url: 'http://tr.im/marklet?url={%url}'
+  title: Tr.im
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tsref/1:
+  url: 'http://clusty.com/search?input-form=clusty-simple&v%3Asources=webplus&query=site%3Ahttp%3A%2F%2Ftypo3.org%2Fdocumentation%2Fdocument-library%2Freferences%2Fdoc_core_tsref%2F4.1.0%2Fview%2F+{%typoscript command}'
+  title: English TypoScript Reference
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tucows/1:
+  url: 'http://tucows.com/search?search_terms={%query}&search_scope=%2A'
+  title: Tucows
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tv.com/1:
+  url: 'http://www.tv.com/search?type=11&stype=all&tag=search&q={%query}'
+  title: TV.com Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tviv/0:
+  url: 'http://tviv.org/'
+  title: TV IV
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tviv/1:
+  url: 'http://tviv.org/Special:Search?search={%Titel}'
+  title: TV IV Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tvrage/1:
+  url: 'http://tvrage.com/search.php?search={%query}'
+  title: TVRage search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tvrss/1:
+  url: 'http://tvrss.net/search/?show_name={%query}'
+  title: Tvrss.net search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+twick/1:
+  url: 'http://twick.it/find_topic.php?search={%query}'
+  title: Twick.it - the Explain Engine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+twingly/0:
+  url: 'http://twingly.com/'
+  title: Twingly Main page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+twingly/1:
+  url: 'http://twingly.com/search?q={%query}'
+  title: Twingly Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+twk/0:
+  url: 'http://tweaks.com'
+  title: Tweaks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+twm/1:
+  url: 'http://twitter.com/#!/search/%40{%user}'
+  title: Search for Tweets that mention a specific user
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+twum/1:
+  url: 'http://m.twitter.com/{%user}'
+  title: Access a specific user's twitter feed (mobile)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tx/1:
+  url: 'http://www.tixuma.de/index.php?mp=search&sc={%query}&tg=0'
+  title: Tixuma Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ty/0:
+  url: 'http://twingly.com/'
+  title: Twingly Main page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ty/1:
+  url: 'http://twingly.com/search?q={%query}'
+  title: Twingly Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tz/1:
+  url: 'http://www.torrentz.com/search?q={%query}'
+  title: Torrentz.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tzt/1:
+  url: 'http://www.tagzania.com/tag/{%tag}'
+  title: Tagzania
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tzu/1:
+  url: 'http://www.tagzania.com/user/{%user}'
+  title: Tagzania
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tüz/0:
+  url: 'http://opac.ub.uni-tuebingen.de/olix.html?db=tzv'
+  title: Suchmaske für die Tübinger Zeitschriften
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tüz/1:
+  url: 'http://opac.ub.uni-tuebingen.de/cgi-bin/wwwolix.cgi?db=tzv&field0={%query}'
+  title: Schnellsuche in den Tübinger Zeitschriften
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubdo/1:
+  url: 'http://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="{%query}"'
+  title: Universitätsbibliothek Dortmund
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubma/1:
+  url: 'http://vs30.kobv.de/primo_library/libweb/action/search.do?dscnt=0&vl%2814779587UI0%29=any&vl%28240299207UI1%29=all_items&scp.scps=scope%3A%28MAN_MAB_LFER%29%2Cscope%3A%28MAN%29%2Cscope%3A%28MAN_ALEPH%29%2Cscope%3A%28MAN_NL_ALL%29%2Cscope%3A%28MAN_OAI_ZBW%29%2Cscope%3A%28MAN_OAI_BIEL%29%2Cscope%3A%28MAN_ECO%29%2Cscope%3A%28MAN_OLC%29%2Cscope%3A%28MAN_SAFARI%29%2Cscope%3A%28MAN_DAWSON%29%2Cprimo_central_multiple_fe&frbg=&tab=man_all&dstmp=1319572296561&srt=rank&ct=search&mode=Basic&dum=true&tb=t&indx=1&vl%281UIStartWith0%29=contains&vl%28freeText0%29={%query}&fn=search&vid=MAN_UB'
+  title: Katalog der Universitätsbibliothek Mannheim (Primo)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubu/1:
+  url: 'http://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query={%query}'
+  title: Ubu.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubug/0:
+  url: 'https://bugs.launchpad.net/'
+  title: Issue Tracker
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubug/2:
+  url: 'https://launchpad.net/ubuntu/+source/{%package}/+bugs?field.searchtext={%query}'
+  title: search for a term in ubuntu bugs (query)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubugq/1:
+  url: 'https://launchpad.net/ubuntu/+bugs?field.searchtext={%query}'
+  title: search for a term in ubuntu bugs (query)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubuntu-packages/1:
+  url: 'http://packages.ubuntu.com/{%package}'
+  title: Ubuntu Packages
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubuntu-planet/0:
+  url: 'http://planet.ubuntu.com/'
+  title: Ubuntu Planet
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubuntu-wiki/0:
+  url: 'https://wiki.ubuntu.com/'
+  title: Ubuntu Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ubuntu-wiki/1:
+  url: 'https://wiki.ubuntu.com/?action=fullsearch&context=180&value={%query}&titlesearch=Titles'
+  title: Ubuntu.com Wiki Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ucs/1:
+  url: 'http://www.fileformat.info/info/unicode/char/search.htm?q={%query}&preview=entity'
+  title: 'Unicode Character Search, not including Han codepoints'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ucsh/1:
+  url: 'http://www.fileformat.info/info/unicode/char/search.htm?q={%query}&han=Y&preview=entity'
+  title: 'Unicode Character Search, including Han codepoints'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+uesp/1:
+  url: 'http://www.uesp.net/wiki/Special:Search?search={%query}&go=Go&nsnum=0&redirs=1&searchtitles=1'
+  title: Unofficial Elder Scrolls Pages
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+uima/0:
+  url: 'http://incubator.apache.org/uima/downloads/releaseDocs/2.3.0-incubating/docs/api/'
+  title: UIMA API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+uima/1:
+  url: 'http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fincubator.apache.org%2Fuima%2Fdownloads%2FreleaseDocs%2F2.3.0-incubating%2Fdocs%2Fapi%2F%20{%query}&ie=utf-8'
+  title: UIMA API
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ulbbonn/1:
+  url: 'http://131.220.74.17:8080/webOPACClient/start.do?Language=De&Login=sisis&Query=-1="{%query}"'
+  title: Universitäts- und Landesbibliothek Bonn
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+un/1:
+  url: 'http://unbisnet.un.org:8080/ipac20/ipac.jsp?menu=search&index=.SW&term={%query}'
+  title: United Nations
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+unc/1:
+  url: 'http://uncyclopedia.wikia.org/wiki/{%query}'
+  title: Uncyclopedia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+uniprot/1:
+  url: 'http://www.uniprot.org/uniprot/?query={%query}&sort=score'
+  title: Uniprot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+untiny/1:
+  url: 'http://untiny.me/api/1.0/extract/?url={%short URL}&format=text'
+  title: Untiny
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+up/1:
+  url: 'http://www.uniprot.org/uniprot/?query={%query}&sort=score'
+  title: Uniprot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ups/1:
+  url: 'http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum={%trackingnumber}'
+  title: UPS Sendungsverfolgung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+us/1:
+  url: 'http://userscripts.org/scripts/search?q={%query}'
+  title: Userscripts
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+uscripts/1:
+  url: 'http://userscripts.org/scripts/search?q={%query}'
+  title: Userscripts
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+user/1:
+  url: 'http://wiki.serchilo.net/Special:Search?search=User:{%user}'
+  title: 'Serchilo Wiki: User page'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+usk/1:
+  url: 'http://www.usk.de//cont3.php?s=search&title={%query}&s.x=38&s.y=12&s=search'
+  title: Spieltitel bei USK Suchen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+v/1:
+  url: 'http://vimeo.com/search?q={%query}'
+  title: Vimeo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+validator/1:
+  url: 'http://validator.w3.org/check?uri={%uri}'
+  title: W3 Validator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vbn/2:
+  url: 'http://www.fahrplaner.de/hafas/query.exe/dn?L=vbn&{%Start},{%Ziel}'
+  title: VBN Verkehrsverbund NDS/Bremen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+view/1:
+  url: 'http://viewtext.org/article?url={%url}'
+  title: Viewtext
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+viewtext/1:
+  url: 'http://viewtext.org/article?url={%url}'
+  title: Viewtext
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vim/1:
+  url: 'http://vim.wikia.com/wiki/index.php?search={%query}'
+  title: Vim
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+visuwords/1:
+  url: 'http://www.visuwords.com/?word={%query}'
+  title: Visuwords
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vrs/4:
+  url: 'http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&ABAN=AB'
+  title: Vrs Verkehrsverbund Rhein-Sieg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vrs/5:
+  url: 'http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&ABAN=AB'
+  title: Vrs Verkehrsverbund Rhein-Sieg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vrs/6:
+  url: 'http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&ABAN=AB'
+  title: Vrs Verkehrsverbund Rhein-Sieg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vrsa/4:
+  url: 'http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&ABAN=AN'
+  title: VRS Ankunft Verkehrsverbund Rhein-Sieg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vrsa/5:
+  url: 'http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&ABAN=AN'
+  title: VRS Ankunft Verkehrsverbund Rhein-Sieg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vrsa/6:
+  url: 'http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&ABAN=AN'
+  title: VRS Ankunft Verkehrsverbund Rhein-Sieg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vt/1:
+  url: 'http://www.versiontracker.com/php/qs.php?mode=basic&action=search&str={%query}&srchArea=macosx%7Cmacosx-all&submit=Go'
+  title: Versiontracker (Mac OS X)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wac/0:
+  url: 'http://www.warcrafter.net/'
+  title: Warcrafter main page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+waceu/2:
+  url: 'http://{%server}-eu.warcrafter.net/{%name}'
+  title: Warcrafter search EU-server
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wacus/2:
+  url: 'http://{%server}-us.warcrafter.net/{%name}'
+  title: Warcrafter search US-server
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wadoku/1:
+  url: 'http://www.wadoku.de/wadoku/search/{%suchwort}'
+  title: Wadoku suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+watchz/1:
+  url: 'http://zattoo.com/view/{%channel}'
+  title: Zattoo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+way/1:
+  url: 'http://www.worryaboutyou.com/?q={%query}'
+  title: Worry About You
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wbg/1:
+  url: 'http://www.wbg-wissenverbindet.de/WBGShop/php/Proxy.php?purl=%2Fwbg%2Fproducts%2Fsearch%2Fresult.html&quick={%Suche}&go.x=5&go.y=5'
+  title: Wissenschaftliche Buchgesellschaft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wbit/1:
+  url: 'http://www.woerterbuch.info/?query={%query}&s=dict&l=en'
+  title: Woerterbuch.info
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wbk/1:
+  url: 'http://extsearch.worldbank.org/servlet/SiteSearchServlet?q={%query}'
+  title: World Bank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wbn/1:
+  url: 'http://germazope.uni-trier.de:8080/Projekte/WBB2009/StartSeite/startGlobalSearch?stichwort={%wort}'
+  title: Wörterbuchnetz
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wd/1:
+  url: 'http://www.wadoku.de/wadoku/search/{%suchwort}'
+  title: Wadoku suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wde/1:
+  url: 'https://de.wikipedia.org/wiki/Special:Search?go=Article&search={%article}'
+  title: 'Wikipedia Article Search (German) '
+  description: ''
+  tags: []
+  examples:
+    berlin: Wikipedia article about Berlin
+  tests: []
+wdyjt/1:
+  url: 'http://www.whendidyoujointwitter.com/?username={%username}'
+  title: When did you join Twitter?
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+weather/1:
+  url: 'http://weather.yahoo.com/search/weather2?p={%location}'
+  title: Yahoo Weather
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+webs/1:
+  url: 'http://www.webshots.com/search?query={%query}&new=1&source=serchilo'
+  title: Webshots
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wen/1:
+  url: 'https://en.wikipedia.org/wiki/Special:Search?go=Article&search={%article}'
+  title: 'Wikipedia Article Search (English) '
+  description: ''
+  tags: []
+  examples:
+    berlin: Wikipedia article about Berlin
+  tests: []
+wenssl/1:
+  url: 'https://secure.wikimedia.org/wikipedia/en/wiki/{%query}'
+  title: Wenssl
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wh/1:
+  url: 'http://www.wowhead.com/?search={%query}'
+  title: search Wowhead
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+whosangsong/1:
+  url: 'http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song'
+  title: Secondhandsongs
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wi/1:
+  url: 'http://re.search.wikia.com/search.html#{%query}'
+  title: Wikia Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wikia/1:
+  url: 'http://www.wikia.com/wiki/Special:Search?tab=1&search={%query}'
+  title: Wikia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wikileaks/0:
+  url: 'http://www.taz.de/support-WikiLeaks'
+  title: Wikileaks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wikimapia/1:
+  url: 'http://wikimapia.org/?#search={%place}'
+  title: Wikimapia
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wimba/0:
+  url: 'http://be.imba.hu'
+  title: be.imba! main page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wimbaeu/2:
+  url: 'http://be.imba.hu/?zone=EU&realm={%server}&character={%name}'
+  title: be.imba query for EU-server
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wimbaus/2:
+  url: 'http://be.imba.hu/?zone=US&realm={%server}&character={%name}'
+  title: be.imba query for US-server
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wis/1:
+  url: 'http://www.woerterbuch.info/?query={%query}&s=thesaurus&dl=0&l=de&showlang=de'
+  title: Woerterbuch.info
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wissen/1:
+  url: 'http://wissen.de/wde/generator/wissen/services/suche/index.html?query={%query}'
+  title: Wissen.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wkl-ż/1:
+  url: 'http://www.gotowanie.wkl.pl/szukaj.php?key={%query}&szukaj'
+  title: Wielkie Żarcie
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wl/0:
+  url: 'http://www.taz.de/support-WikiLeaks'
+  title: Wikileaks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wlwf/1:
+  url: 'http://www.wlw.de/sse/MainServlet?sprache=de&land=DE&suchbegriff={%firm}&anzeige=firma'
+  title: Wer liefert was? - Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wlwp/1:
+  url: 'http://www.wlw.de/sse/MainServlet?sprache=de&land=DE&anzeige=produkt&suchbegriff={%product}'
+  title: Wer liefert was? - Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wmob/0:
+  url: 'http://{$language}.m.wikipedia.org/'
+  title: Wikipedia Mobile Main Page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wmob/1:
+  url: 'http://{$language}.m.wikipedia.org/wiki?search={%query%}'
+  title: Wikipedia Mobile Fulltext Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wn/1:
+  url: 'http://wordnetweb.princeton.edu/perl/webwn?s={%query}'
+  title: WordNet Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+word/1:
+  url: 'http://wordnetweb.princeton.edu/perl/webwn?s={%query}'
+  title: WordNet Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wow/1:
+  url: 'http://www.google.com/search?hl={$language}&sitesearch=www.sfs.uni-tuebingen.de&q={%query}+inurl%3A%2F%7Elothar%2Fnw%2F&ie=utf-8'
+  title: Google-Suche in der Wortwarte
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wr/1:
+  url: 'http://www.warcraftrealms.com/search.php?search={%query}'
+  title: search WarcraftRealms
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wrc/0:
+  url: 'http://wowreputationcalculator.com'
+  title: WoWReputationCalculator main page
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wrceu/2:
+  url: 'http://wowreputationcalculator.com/EU/{%server}/{%name}/'
+  title: WoWReputationCalculator EU-server
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wrcus/2:
+  url: 'http://wowreputationcalculator.com/US/{%server}/{%name}/'
+  title: WoWReputationCalculator US-server
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wrz/1:
+  url: 'http://www.wrzuta.pl/szukaj/{%query}'
+  title: Wrzuta
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wseu/1:
+  url: 'http://watchseries.eu/search/{%query}'
+  title: Watch Series
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wssl/0:
+  url: 'https://secure.wikimedia.org/wikipedia/{$language}/wiki/'
+  title: Wikipedia Main Page via SSL
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wus/1:
+  url: 'http://wissenschaftundschreie.wordpress.com/?s={%query}'
+  title: Wissenschaft und Schreie
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wweb/1:
+  url: 'https://wiki.suche.web.de/wiki/?su={%article}'
+  title: Wikipedia via web.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wwk/1:
+  url: 'http://www.wowwiki.com/Special:Search?search={%query}&go=1'
+  title: search WoWWiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wwu/1:
+  url: 'http://suchen.uni-muenster.de/de.cgi?q={%query}'
+  title: WWU
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+www/1:
+  url: 'http://{%query}'
+  title: Www
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wx/1:
+  url: 'http://synonyme.woxikon.de/synonyme/{%query}.php'
+  title: Woxikon
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+x/1:
+  url: 'http://www.exalead.com/search?q={%query}'
+  title: Exalead
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+x86/1:
+  url: 'http://www.google.com/search?hl=en&q=site%3Avitaly_filatov.tripod.com+intitle:{%command}'
+  title: X86 Assembler
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+xle/1:
+  url: 'http://www.google.com/search?hl={$language}&lr=lang_&q={%query}%20site%3Awww2.parc.com%20inurl%3A%22%2Fisl%2Fgroups%2Fnltt%2Fxle%2Fdoc%2F%22&ie=utf-8'
+  title: XLE Documentation
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+xtvi/0:
+  url: 'http://www.xtvi.com'
+  title: XTVi
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+xtvi/1:
+  url: 'http://www.xtvi.com/?mode=search&q={%query}'
+  title: XTVi
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+xw/1:
+  url: 'http://www.exalead.com/search/wikipedia/results/?q={%wiki-query}'
+  title: Exalead
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+yandex/1:
+  url: 'http://yandex.com/yandsearch?text={%query}'
+  title: Yandex Web
+  description: ''
+  tags:
+  - web search
+  examples:
+    berlin: Search for "berlin"
+  tests: []
+yatego/1:
+  url: 'http://www.yatego.com/index.php?cl=mallsearch&query={%query}'
+  title: Yatego
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ye/1:
+  url: 'http://www.yelp.com/search?find_desc={%query}'
+  title: Yelp
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+yf/1:
+  url: 'http://finance.yahoo.com/q?s={%abbreviation}'
+  title: 'Yahoo Finance: Get stock quotes'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+yfa/1:
+  url: 'http://finance.yahoo.com/lookup?s={%company}'
+  title: 'Yahoo Finance: Get company abbreviation'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+yfc/1:
+  url: 'http://finance.yahoo.com/echarts?s={%abbreviation}'
+  title: 'Yahoo Finance: Get quotes chart'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ymail/0:
+  url: 'https://login.yahoo.com/config/login_verify2?&.src=ym'
+  title: 'Y'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+youtube/0:
+  url: 'http://www.youtube.com/'
+  title: YouTube Homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+youtube/1:
+  url: 'http://www.youtube.com/results?search_query={%query}'
+  title: YouTube
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ys/1:
+  url: 'http://www.yasni.de/index.php?action=search&search=1&sh=&name={%query}&filter=Stichwort'
+  title: Yasni Personensuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ytf/1:
+  url: 'http://www.youtify.com/search?q={%query}'
+  title: Youtify search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ytorr/1:
+  url: 'http://www.youtorrent.com/tag/?q={%query}'
+  title: YouTorrent
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ytp/1:
+  url: 'http://www.youtube.com/results?search_type=search_playlists&uni=3&search_query={%query}'
+  title: Youtube Playlists
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ytt/1:
+  url: 'http://www.youtube.com/results?search_query={%query}&uploaded=d&search_sort=video_view_count'
+  title: Today's new videos
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ytw/1:
+  url: 'http://www.youtube.com/results?search_query={%query}&uploaded=w&search_sort=video_view_count'
+  title: Last week's new videos
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+z/1:
+  url: 'http://www.zalando.de/katalog/?q={%Produkt}'
+  title: Zalando
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zam/1:
+  url: 'http://camelot.allakhazam.com/search.html?q={%query}'
+  title: 'Search Allakhazam''s Database for DAoC items, npc, etc.'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zar/1:
+  url: 'http://www.zargan.com/sozluk.asp?Sozcuk={%query}&OpenSearch=1&DisplayLang=2'
+  title: Turkish-English
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zattoo/0:
+  url: 'http://watch.zattoo.com'
+  title: Zattoo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zattoo/1:
+  url: 'http://zattoo.com/view/{%channel}'
+  title: Zattoo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zf/1:
+  url: 'http://framework.zend.com/search?query={%query}&language={$language}&type%5B%5D=all'
+  title: Zend Framework
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zhen/1:
+  url: 'http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}'
+  title: Chinese
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zhr/1:
+  url: 'http://en.wiktionary.org/wiki/Index:Chinese_radical/{%radical}'
+  title: Chinese radical index on English Wiktionary
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zp/1:
+  url: 'http://www.zpeech.com/{%url}'
+  title: Zpeech
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zt/0:
+  url: 'http://{$language}.znout.org'
+  title: Znout Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zt/1:
+  url: 'http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8'
+  title: Znout Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zt!/1:
+  url: 'http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&btnI=1'
+  title: Znout I'm Feeling Lucky
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zt100/1:
+  url: 'http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&num=100'
+  title: 'Znout: Show 100 results at once'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zvab/1:
+  url: 'http://www.zvab.com/basicSearch.do?anyWords={%Suche}&author=&title=&lastXDays=-1&itemsPerPage=10'
+  title: Zentrales Verzeichnis Antiquarischer Bücher
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zvdd/1:
+  url: 'http://www.digitalisiertedrucke.de/search?p={%query}'
+  title: Zentrales Verzeichnis Digitalisierter Drucke
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zvv/2:
+  url: 'http://www.zvv.ch/de/fahrplan/online-fahrplan.html?start=1&date_start={%Start}&target={%Ziel}'
+  title: ZVV-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zwatch/1:
+  url: 'http://zattoo.com/view/{%channel}'
+  title: Zattoo
+  description: ''
+  tags: []
+  examples: []
+  tests: []

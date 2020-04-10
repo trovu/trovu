@@ -1,0 +1,10 @@
+last/1:
+  url: 'http://www.last.fm/search?setlang=ko&q={%artist}'
+  title: Last.fm
+  description: ''
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"
+  tests: []

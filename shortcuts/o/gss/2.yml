@@ -1,9 +1,0 @@
-url: http://www.google.com/search?hl={$language}&q=site%3A{%site}%20{%query}
-title: Google Web, search only on site
-description: ""
-tags:
-- web search
-- google
-examples:
-  cnn.com, berlin: Search for "berlin" on cnn.com
-tests: []

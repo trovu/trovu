@@ -1,0 +1,103 @@
+de/1:
+  url: 'http://rio.pauker.at/pauker/DE/SE/wb/?s={%ord}'
+  title: Tysk-Svensk
+  description: ''
+  tags:
+  - dictionary
+  - languange
+  - german
+  - swedish
+  examples:
+    baum: Swedish translation for "baum"
+    träd: German translation for "träd"
+  tests: []
+en/1:
+  url: 'http://folkets-lexikon.csc.kth.se/folkets/#lookup&{%ord}&l=SVEENG'
+  title: Engelsk-Svensk
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - swedish
+  - english
+  examples:
+    tree: Translation of "tree"
+    träd: Translation of "träd"
+  tests: []
+eo/1:
+  url: 'http://cgi.algonet.se/htbin/cgiwrap/eldona/ordbok.pl?ord={%ord|encoding=iso-8859-1}'
+  title: Esperanto-Svenska
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - esperanto
+  - swedish
+  examples:
+    arbo: Swedish translation for "arbo"
+    träd: Esperanto translation for "träd"
+  tests: []
+fr/1:
+  url: 'http://www.azoria.com/php/search.php?word={%ord}'
+  title: Fransk-Svensk (Azoria)
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - french
+  - swedish
+  examples:
+    arbre: Swedish translation for "arbre"
+    träd: French translation for "träd"
+  tests: []
+fr-sv/1:
+  url: 'http://www.sensagent.com/dictionnaires/fr-sv/{%ord}/ALEXMN/'
+  title: Fransk-Svensk (Sensagent)
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - swedish
+  - french
+  examples: []
+  tests: []
+last/1:
+  url: 'http://www.last.fm/search?setlang=sv&q={%artist}'
+  title: Last.fm
+  description: ''
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"
+  tests: []
+rim/1:
+  url: 'http://rimlexikon.com/index.php?rim={%ord|encoding=iso-8859-1}'
+  title: Rimlexikon
+  description: ''
+  tags:
+  - language
+  - swedish
+  examples:
+    träd: Search rhymes for "träd"
+  tests: []
+sv/1:
+  url: 'http://www.ord.se/oversattning/Svenska/?s={%ord}&l=SVESVE'
+  title: Svenska ordbok Norstedts
+  description: ''
+  tags:
+  - dictionary
+  - swedish
+  examples: []
+  tests: []
+sv-fr/1:
+  url: 'http://www.sensagent.com/dictionnaires/sv-fr/{%ord}/ALEXMN/'
+  title: Svensk-Fransk (Sensagent)
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - swedish
+  - french
+  examples: []
+  tests: []

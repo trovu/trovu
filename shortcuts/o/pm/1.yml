@@ -1,9 +1,0 @@
-url: http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?CMD=search&DB=pubmed&term={%query}
-title: PubMed
-description: ""
-tags:
-- science
-- health
-examples:
-  bacteria: Search for "bacteria"
-tests: []

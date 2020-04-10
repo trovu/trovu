@@ -1,9 +1,0 @@
-url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress={%ipaddress}
-title: RBL-Check (Realtime Blackhole List)
-description: ""
-tags:
-- rbl
-- email
-examples:
-  127.0.0.1: Check if 127.0.0.1 is on the RBL
-tests: []

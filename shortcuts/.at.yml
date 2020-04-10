@@ -1,0 +1,1094 @@
+a/0:
+  url: 'http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=at&tag=serchilo-21'
+  title: Amazon.at Startseite
+  description: ''
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+  examples: []
+  tests: []
+a/1:
+  url: 'http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&site-redirect=at&linkCode=ur2&tag=serchilo-21'
+  title: Amazon.at
+  description: ''
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+  examples:
+    goethe: Suche auf Amazon.at nach "goethe"
+  tests: []
+conrad/0:
+  url: 'http://www.conrad.at/'
+  title: Conrad Elektronik Österreich
+  description: ''
+  tags:
+  - shopping
+  - electronics
+  - conrad
+  examples: []
+  tests: []
+conrad/1:
+  url: 'http://www.conrad.at/ce/de/FastSearch.html?search={%Artikel}'
+  title: Conrad Elektronik Österreich
+  description: ''
+  tags:
+  - shopping
+  - electronics
+  - conrad
+  examples:
+    glühlampe: Suche nach Glühlampen
+  tests: []
+e/0:
+  url: 'http://rover.ebay.com/rover/1/5221-53469-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229473&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.at
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples: []
+  tests: []
+e/1:
+  url: 'http://rover.ebay.com/rover/1/5221-53469-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229473&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.at
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples:
+    smartphone: Search for "smartphone"
+  tests: []
+g/1:
+  url: 'https://www.google.at/search?hl={$language}&q={%query}&ie=utf-8'
+  title: Google.at
+  description: ''
+  tags:
+  - web search
+  - google
+  examples:
+    wien: Google-Suche nach "wien"
+  tests: []
+gh/0:
+  url: 'http://geizhals.at/'
+  title: Geizhals Österreich Hauptseite
+  description: ''
+  tags:
+  - geizhals
+  - shopping
+  - preisvergleich
+  examples: []
+  tests: []
+gh/1:
+  url: 'http://geizhals.at/?fs={%Produkt|encoding=iso-8859-1}'
+  title: Geizhals Österreich
+  description: ''
+  tags:
+  - geizhals
+  - shopping
+  - preisvergleich
+  examples:
+    fernseher: Search for "fernseher"
+  tests: []
+gmam/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Amstetten%2C%20%C3%96sterreich'
+  title: Google Maps Amstetten
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Amstetten
+  tests: []
+gmb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bregenz%2C%20%C3%96sterreich'
+  title: Google Maps Bregenz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Bregenz
+  tests: []
+gmba/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bad+Aussee%2C%20%C3%96sterreich'
+  title: Google Maps Bad Aussee
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Bad Aussee
+  tests: []
+gmbl/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Leitha%2C%20%C3%96sterreich'
+  title: Google Maps Bruck an der Leitha
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Bruck an der Leitha
+  tests: []
+gmbm/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Mur%2C%20%C3%96sterreich'
+  title: Google Maps Bruck an der Mur
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Bruck an der Mur
+  tests: []
+gmbn/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Baden%2C%20%C3%96sterreich'
+  title: Google Maps Baden
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Baden
+  tests: []
+gmbr/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Braunau+am+Inn%2C%20%C3%96sterreich'
+  title: Google Maps Braunau am Inn
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Braunau am Inn
+  tests: []
+gmbz/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bludenz%2C%20%C3%96sterreich'
+  title: Google Maps Bludenz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Bludenz
+  tests: []
+gmdl/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Deutschlandsberg%2C%20%C3%96sterreich'
+  title: Google Maps Deutschlandsberg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Deutschlandsberg
+  tests: []
+gmdo/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Dornbirn%2C%20%C3%96sterreich'
+  title: Google Maps Dornbirn
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Dornbirn
+  tests: []
+gme/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eisenstadt%2C%20%C3%96sterreich'
+  title: Google Maps Eisenstadt
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Eisenstadt
+  tests: []
+gmef/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eferding%2C%20%C3%96sterreich'
+  title: Google Maps Eferding
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Eferding
+  tests: []
+gmfb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldbach%2C%20%C3%96sterreich'
+  title: Google Maps Feldbach
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Feldbach
+  tests: []
+gmfe/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirchen%2C%20%C3%96sterreich'
+  title: Google Maps Feldkirchen
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Feldkirchen
+  tests: []
+gmff/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20F%C3%BCrstenfeld%2C%20%C3%96sterreich'
+  title: Google Maps Fürstenfeld
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Fürstenfeld
+  tests: []
+gmfk/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirch%2C%20%C3%96sterreich'
+  title: Google Maps Feldkirch
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Feldkirch
+  tests: []
+gmfr/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Freistadt%2C%20%C3%96sterreich'
+  title: Google Maps Freistadt
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Freistadt
+  tests: []
+gmg/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Graz%2C%20%C3%96sterreich'
+  title: Google Maps Graz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Graz
+  tests: []
+gmgb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gr%C3%B6bming%2C%20%C3%96sterreich'
+  title: Google Maps Gröbming
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Gröbming
+  tests: []
+gmgd/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gm%C3%BCnd%2C%20%C3%96sterreich'
+  title: Google Maps Gmünd
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Gmünd
+  tests: []
+gmgf/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%A4nserndorf%2C%20%C3%96sterreich'
+  title: Google Maps Gänserndorf
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Gänserndorf
+  tests: []
+gmgm/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gmunden%2C%20%C3%96sterreich'
+  title: Google Maps Gmunden
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Gmunden
+  tests: []
+gmgr/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Grieskirchen%2C%20%C3%96sterreich'
+  title: Google Maps Grieskirchen
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Grieskirchen
+  tests: []
+gmgs/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%BCssing%2C%20%C3%96sterreich'
+  title: Google Maps Güssing
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Güssing
+  tests: []
+gmha/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hallein%2C%20%C3%96sterreich'
+  title: Google Maps Hallein
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Hallein
+  tests: []
+gmhb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hartberg%2C%20%C3%96sterreich'
+  title: Google Maps Hartberg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Hartberg
+  tests: []
+gmhe/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hermagor%2C%20%C3%96sterreich'
+  title: Google Maps Hermagor
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Hermagor
+  tests: []
+gmhl/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hollabrunn%2C%20%C3%96sterreich'
+  title: Google Maps Hollabrunn
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Hollabrunn
+  tests: []
+gmho/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Horn%2C%20%C3%96sterreich'
+  title: Google Maps Horn
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Horn
+  tests: []
+gmi/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Innsbruck%2C%20%C3%96sterreich'
+  title: Google Maps Innsbruck
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Innsbruck
+  tests: []
+gmim/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Imst%2C%20%C3%96sterreich'
+  title: Google Maps Imst
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Imst
+  tests: []
+gmje/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Jennersdorf%2C%20%C3%96sterreich'
+  title: Google Maps Jennersdorf
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Jennersdorf
+  tests: []
+gmjo/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+Johann%2C%20%C3%96sterreich'
+  title: Google Maps St. Johann
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in St. Johann
+  tests: []
+gmju/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Judenburg%2C%20%C3%96sterreich'
+  title: Google Maps Judenburg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Judenburg
+  tests: []
+gmk/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Klagenfurt%2C%20%C3%96sterreich'
+  title: Google Maps Klagenfurt
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Klagenfurt
+  tests: []
+gmkb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kitzb%C3%BChel%2C%20%C3%96sterreich'
+  title: Google Maps Kitzbühel
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Kitzbühel
+  tests: []
+gmkf/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Knittelfeld%2C%20%C3%96sterreich'
+  title: Google Maps Knittelfeld
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Knittelfeld
+  tests: []
+gmki/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kirchdorf+Krems%2C%20%C3%96sterreich'
+  title: Google Maps Kirchdorf Krems
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Kirchdorf Krems
+  tests: []
+gmko/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Korneuburg%2C%20%C3%96sterreich'
+  title: Google Maps Korneuburg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Korneuburg
+  tests: []
+gmks/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Krems%2C%20%C3%96sterreich'
+  title: Google Maps Krems
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Krems
+  tests: []
+gmku/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kufstein%2C%20%C3%96sterreich'
+  title: Google Maps Kufstein
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Kufstein
+  tests: []
+gml/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Linz%2C%20%C3%96sterreich'
+  title: Google Maps Linz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Linz
+  tests: []
+gmla/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Landeck%2C%20%C3%96sterreich'
+  title: Google Maps Landeck
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Landeck
+  tests: []
+gmlb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leibnitz%2C%20%C3%96sterreich'
+  title: Google Maps Leibnitz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Leibnitz
+  tests: []
+gmle/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leoben%2C%20%C3%96sterreich'
+  title: Google Maps Leoben
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Leoben
+  tests: []
+gmlf/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lilienfeld%2C%20%C3%96sterreich'
+  title: Google Maps Lilienfeld
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Lilienfeld
+  tests: []
+gmli/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Liezen%2C%20%C3%96sterreich'
+  title: Google Maps Liezen
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Liezen
+  tests: []
+gmlz/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lienz%2C%20%C3%96sterreich'
+  title: Google Maps Lienz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Lienz
+  tests: []
+gmma/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mattersburg%2C%20%C3%96sterreich'
+  title: Google Maps Mattersburg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Mattersburg
+  tests: []
+gmmd/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%B6dling%2C%20%C3%96sterreich'
+  title: Google Maps Mödling
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Mödling
+  tests: []
+gmme/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Melk%2C%20%C3%96sterreich'
+  title: Google Maps Melk
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Melk
+  tests: []
+gmmi/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mistelbach%2C%20%C3%96sterreich'
+  title: Google Maps Mistelbach
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Mistelbach
+  tests: []
+gmmu/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Murau%2C%20%C3%96sterreich'
+  title: Google Maps Murau
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Murau
+  tests: []
+gmmz/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%BCrzzuschlag%2C%20%C3%96sterreich'
+  title: Google Maps Mürzzuschlag
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Mürzzuschlag
+  tests: []
+gmnd/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neusiedl+am+See%2C%20%C3%96sterreich'
+  title: Google Maps Neusiedl am See
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Neusiedl am See
+  tests: []
+gmnk/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neunkirchen%2C%20%C3%96sterreich'
+  title: Google Maps Neunkirchen
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Neunkirchen
+  tests: []
+gmop/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberpullendorf%2C%20%C3%96sterreich'
+  title: Google Maps Oberpullendorf
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Oberpullendorf
+  tests: []
+gmow/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberwart%2C%20%C3%96sterreich'
+  title: Google Maps Oberwart
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Oberwart
+  tests: []
+gmp/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+P%C3%B6lten%2C%20%C3%96sterreich'
+  title: Google Maps St. Pölten
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in St. Pölten
+  tests: []
+gmpe/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Perg%2C%20%C3%96sterreich'
+  title: Google Maps Perg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Perg
+  tests: []
+gmra/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Radkersburg%2C%20%C3%96sterreich'
+  title: Google Maps Radkersburg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Radkersburg
+  tests: []
+gmre/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Reutte%2C%20%C3%96sterreich'
+  title: Google Maps Reutte
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Reutte
+  tests: []
+gmri/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Ried+im+Innkreis%2C%20%C3%96sterreich'
+  title: Google Maps Ried im Innkreis
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Ried im Innkreis
+  tests: []
+gmro/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Rohrbach%2C%20%C3%96sterreich'
+  title: Google Maps Rohrbach
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Rohrbach
+  tests: []
+gms/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Salzburg%2C%20%C3%96sterreich'
+  title: Google Maps Salzburg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Salzburg
+  tests: []
+gmsb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Scheibbs%2C%20%C3%96sterreich'
+  title: Google Maps Scheibbs
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Scheibbs
+  tests: []
+gmsd/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sch%C3%A4rding%2C%20%C3%96sterreich'
+  title: Google Maps Schärding
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Schärding
+  tests: []
+gmsp/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Spittal+an+der+Drau%2C%20%C3%96sterreich'
+  title: Google Maps Spittal an der Drau
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Spittal an der Drau
+  tests: []
+gmsr/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Steyr%2C%20%C3%96sterreich'
+  title: Google Maps Steyr
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Steyr
+  tests: []
+gmsv/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sankt+Veit+an+der+Glan%2C%20%C3%96sterreich'
+  title: Google Maps Sankt Veit an der Glan
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Sankt Veit an der Glan
+  tests: []
+gmsw/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwechat%2C%20%C3%96sterreich'
+  title: Google Maps Schwechat
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Schwechat
+  tests: []
+gmsz/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwaz%2C%20%C3%96sterreich'
+  title: Google Maps Schwaz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Schwaz
+  tests: []
+gmta/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tamsweg%2C%20%C3%96sterreich'
+  title: Google Maps Tamsweg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Tamsweg
+  tests: []
+gmtu/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tulln%2C%20%C3%96sterreich'
+  title: Google Maps Tulln
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Tulln
+  tests: []
+gmvb/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6cklabruck%2C%20%C3%96sterreich'
+  title: Google Maps Vöcklabruck
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Vöcklabruck
+  tests: []
+gmvi/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Villach%2C%20%C3%96sterreich'
+  title: Google Maps Villach
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Villach
+  tests: []
+gmvk/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6lkermarkt%2C%20%C3%96sterreich'
+  title: Google Maps Völkermarkt
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Völkermarkt
+  tests: []
+gmvo/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Voitsberg%2C%20%C3%96sterreich'
+  title: Google Maps Voitsberg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Voitsberg
+  tests: []
+gmw/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wien%2C%20%C3%96sterreich'
+  title: Google Maps Wien
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Wien
+  tests: []
+gmwe/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wels%2C%20%C3%96sterreich'
+  title: Google Maps Wels
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Wels
+  tests: []
+gmwn/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wiener+Neustadt%2C%20%C3%96sterreich'
+  title: Google Maps Wiener Neustadt
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Wiener Neustadt
+  tests: []
+gmwo/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wolfsberg%2C%20%C3%96sterreich'
+  title: Google Maps Wolfsberg
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Wolfsberg
+  tests: []
+gmwt/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Thaya%2C%20%C3%96sterreich'
+  title: Google Maps Waidhofen an der Thaya
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Waidhofen an der Thaya
+  tests: []
+gmwy/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Ybbs%2C%20%C3%96sterreich'
+  title: Google Maps Waidhofen an der Ybbs
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Waidhofen an der Ybbs
+  tests: []
+gmwz/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Weiz%2C%20%C3%96sterreich'
+  title: Google Maps Weiz
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Weiz
+  tests: []
+gmze/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zell+am+See%2C%20%C3%96sterreich'
+  title: Google Maps Zell am See
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Zell am See
+  tests: []
+gmzt/1:
+  url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zwettl%2C%20%C3%96sterreich'
+  title: Google Maps Zwettl
+  description: ''
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Zwettl
+  tests: []
+ikea/0:
+  url: 'http://www.ikea.com/at/de/'
+  title: IKEA Österreich
+  description: ''
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples: []
+  tests: []
+ikea/1:
+  url: 'http://www.ikea.com/at/de/search/?query={%query}'
+  title: IKEA Österreich
+  description: ''
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples:
+    matratze: Suche nach Matratzen
+  tests: []
+obv/1:
+  url: 'http://search.obvsg.at/primo_library/libweb/action/search.do?dscnt=0&scp.scps=scope%3A%28ACC_aleph%29&frbg=&tab=default_tab&dstmp=1341338980198&srt=rank&ct=search&mode=Basic&dum=true&indx=1&tb=t&vl%28freeText0%29={%query}&fn=search&vid=ACC'
+  title: OBV Suche - Österreichischer Bibliothekenverbund
+  description: ''
+  tags:
+  - library
+  - obv
+  examples:
+    elfriede jelinek: Suche nach Literatur von und über Elfriede Jelinek
+  tests: []
+oebb/2:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&start=1'
+  title: ÖBB-Auskunft
+  description: ''
+  tags:
+  - bahn
+  - travel
+  examples:
+    'wien, salzburg': Verbindung von Wien nach Salzburg
+  tests: []
+oebb/3:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1'
+  title: ÖBB-Auskunft
+  description: ''
+  tags:
+  - bahn
+  - travel
+  examples:
+    'wien, salzburg, 10': 'Verbindung von Wien nach Salzburg um 10:00 Uhr'
+  tests: []
+oebb/4:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1'
+  title: ÖBB-Auskunft
+  description: ''
+  tags:
+  - bahn
+  - travel
+  examples:
+    'wien, salzburg, 10, 1.1.': 'Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.'
+  tests: []
+rsc/1:
+  url: 'http://at.rs-online.com/web/c/?searchTerm={%Produkt}'
+  title: RS Components Österreich
+  description: ''
+  tags:
+  - shopping
+  - electronics
+  examples:
+    Battery: Suche bei RS Components nach "Battery"
+  tests: []
+we/0:
+  url: 'http://at.wetter.com/?forcesite=1'
+  title: Wetter.com
+  description: ''
+  tags:
+  - weather
+  examples: []
+  tests: []
+we/1:
+  url: 'http://at.wetter.com/suche/?search={%Ort}'
+  title: Wetter.com
+  description: ''
+  tags:
+  - weather
+  examples:
+    berlin: Search for "berlin"
+  tests: []
+zal/1:
+  url: 'http://www.zalando.at/katalog/?q={%Produkt}'
+  title: Zalando.at
+  description: ''
+  tags:
+  - shopping
+  - zalando
+  examples:
+    schuhe: Suche nach Schuhen
+  tests: []
+öbb/2:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&start=1'
+  title: ÖBB-Auskunft
+  description: ''
+  tags:
+  - bahn
+  - travel
+  examples:
+    'wien, salzburg': Verbindung von Wien nach Salzburg
+  tests: []
+öbb/3:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1'
+  title: ÖBB-Auskunft
+  description: ''
+  tags:
+  - bahn
+  - travel
+  examples:
+    'wien, salzburg, 10': 'Verbindung von Wien nach Salzburg um 10:00 Uhr'
+  tests: []
+öbb/4:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1'
+  title: ÖBB-Auskunft
+  description: ''
+  tags:
+  - bahn
+  - travel
+  examples:
+    'wien, salzburg, 10, 1.1.': 'Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.'
+  tests: []

@@ -1,0 +1,127 @@
+cd/2:
+  url: 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f={%Odkud|type=city}&t={%Kam|type=city}&v=&option=10&byarr=false&cmd=cmdSearch'
+  title: 'České dráhy, Vyhledaní spojení'
+  description: ''
+  tags:
+  - travel
+  - railway
+  - cd
+  examples:
+    'praha, brno': Příští spojení z Prahy do Brna
+  tests: []
+cd/3:
+  url: 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f={%Odkud|type=city}&t={%Kam|type=city|type=city}&time={%Čas|type=time|output=HH:mm}&v=&option=10&byarr=false&cmd=cmdSearch'
+  title: 'České dráhy, Vyhledaní spojení'
+  description: ''
+  tags:
+  - travel
+  - railway
+  - cd
+  examples:
+    'praha, brno, 10': Spojení z Prahy do Brna dnes v 10 hod.
+  tests: []
+cd/4:
+  url: 'http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f={%Odkud|type=city}&t={%Kam}&time={%Čas|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YY}&v=&option=10&byarr=false&cmd=cmdSearch'
+  title: 'České dráhy, Vyhledaní spojení'
+  description: ''
+  tags:
+  - travel
+  - railway
+  - cd
+  examples:
+    'praha, brno, 10, 31.1.': Spojení z Prahy do Brna v 10 hod. 31. ledna
+  tests: []
+g/1:
+  url: 'https://www.google.cz/search?hl={$language}&q={%query}&ie=utf-8'
+  title: Google.cz
+  description: ''
+  tags:
+  - web search
+  - google
+  examples:
+    praha: Hledat "praha" Googlem
+  tests: []
+idos/2:
+  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&submit=1&pt=true'
+  title: IDOS Jízdní řády
+  description: ''
+  tags:
+  - train
+  - travel
+  - idos
+  examples:
+    'praha, brno': Vlak nebo bus z Prahy do Brna
+  tests: []
+idos/3:
+  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&submit=1&pt=true'
+  title: IDOS Jízdní řády
+  description: ''
+  tags:
+  - train
+  - travel
+  - idos
+  examples:
+    'praha, brno, 20': 'Vlak nebo bus z Prahy do Brna ve 20:00h'
+  tests: []
+idos/4:
+  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&date={%datum|type=date|output=DD.MM.YYYY}&submit=1&pt=true'
+  title: IDOS Jízdní řády
+  description: ''
+  tags:
+  - train
+  - travel
+  - idos
+  examples:
+    'praha, brno, 20, 10.12.': 'Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.'
+  tests: []
+ikea/0:
+  url: 'http://www.ikea.com/cz/cs/'
+  title: IKEA Česká republika
+  description: ''
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples:
+    matrace: Hledej matrace
+  tests: []
+ikea/1:
+  url: 'http://www.ikea.com/cz/cs/search/?query={%query}'
+  title: IKEA Česká republika
+  description: ''
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples:
+    matrace: Hledej matrace
+  tests: []
+mapy/1:
+  url: 'http://mapy.cz/?st=search&fr={%místo}'
+  title: Mapy.cz
+  description: ''
+  tags:
+  - maps
+  - mapy
+  examples:
+    praha: Praha na mapy.cz
+  tests: []
+seznam/1:
+  url: 'http://search.seznam.cz/search.cgi?w={%query}'
+  title: Seznam
+  description: ''
+  tags:
+  - seznam
+  - web search
+  examples:
+    praha: Hledej "praha"
+  tests: []
+tv/0:
+  url: 'http://tvprogram.centrum.cz/'
+  title: TV programy Česko
+  description: ''
+  tags:
+  - tv
+  - centrum
+  examples: []
+  tests: []

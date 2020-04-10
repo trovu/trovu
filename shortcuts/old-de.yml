@@ -1,0 +1,2313 @@
+Kachelmannwetter/1:
+  url: 'http://wetter.t-online.de/-/id_40910718/pattern_{%plz oder ort}/index'
+  title: Kachelmannwetter
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+aa/1:
+  url: 'http://www.auswaertiges-amt.de/DE/Aussenpolitik/Laender/Laenderinfos/01-Nodes_Uebersichtsseiten/{%Land}_node.html'
+  title: 'Auswärtiges Amt - Länder, Reisen und Sicherheit'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+abe/1:
+  url: 'http://www.abebooks.de/servlet/SearchResults?kn={%query}'
+  title: AbeBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+abe/2:
+  url: 'http://www.abebooks.de/servlet/SearchResults?an={%autor}&tn={%titel}'
+  title: AbeBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+abea/1:
+  url: 'http://www.abebooks.de/servlet/SearchResults?an={%autor}'
+  title: AbeBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+abet/1:
+  url: 'http://www.abebooks.de/servlet/SearchResults?tn={%titel}'
+  title: AbeBooks
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+amazon/0:
+  url: 'http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21'
+  title: Amazon.de Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+amazon/1:
+  url: 'http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&linkCode=ur2&tag=serchilo-21'
+  title: Amazon.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+amob/0:
+  url: 'http://www.amazon.de/gp/aw/?ie=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21'
+  title: Amazon.de Mobile Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+amob/1:
+  url: 'http://www.amazon.de/gp/aw/s/?ie=UTF8&camp=1638&creative=6742&k={%Suche}&linkCode=ur2&site-redirect=de&tag=serchilo-21'
+  title: Amazon.de Mobile Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+anagramm/1:
+  url: 'http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text={%query}&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++'
+  title: Anagramm
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ap/1:
+  url: 'http://www.apfelwiki.de/?n=Main.ApfelWiki&action=search&q={%Suche}'
+  title: Apfelwiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+art/1:
+  url: 'http://bundesrecht.juris.de/gg/art_{%Nr.}.html'
+  title: Grundgesetz-Artikel
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+at/1:
+  url: 'http://www.google.com/search?hl=de&q={%query}+site%3Aapfeltalk.de'
+  title: Apfeltalk Forum
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+aw/0:
+  url: 'http://abgeordnetenwatch.de/'
+  title: Abgeordnetenwatch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+aw/1:
+  url: 'http://abgeordnetenwatch.de/index.php?cmd=223&q={%Politiker oder Suchbegriff}'
+  title: Abgeordnetenwatch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bar/1:
+  url: 'http://bar.leo.org/bar/cgi-bin/barcgi.pl?mode=bar_drinkInfo&drink=data/drinks/{%Drink}.xml'
+  title: Leo's Online-Cocktailbar
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bestseller/1:
+  url: 'http://www.top10-charts.com/list.php?suche={%query}'
+  title: Bestseller
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bib/1:
+  url: 'http://www.bibleserver.com/search/LUT/{%query}/1'
+  title: Bibelserver
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bibc/1:
+  url: 'http://www.bibleserver.com/text/LUT/{%chapter}'
+  title: Bibelserver
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bibde/1:
+  url: 'http://kvk.ubka.uni-karlsruhe.de/hylib-bin/kvk/nph-kvk2.cgi?input-charset=utf-8&ALL={%query}&kataloge=SWB&kataloge=BVB&kataloge=NRW&kataloge=HEBIS&kataloge=HEBIS_RETRO&kataloge=KOBV&kataloge=GBV&kataloge=DDB&kataloge=STABI_BERLIN&kataloge=TIB&kataloge=OEVK_GBV&kataloge=VD17'
+  title: Karlsruher Virtueller Katalog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bibinetbib/1:
+  url: 'http://www.ub.uni-dortmund.de/cgi-bin/htsearch?config=htdiginetbib&method=and&format=builtin-long&words={%query}'
+  title: Inetbib (Mailingliste)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bibkobv/1:
+  url: 'http://vs13.kobv.de/V/PVNF8HR8UYMQX54AQ854V7J7MG4BPQHXL4C492RMKIK6BESAMP-05191?func=meta-1-check&mode=advanced&find_code_2=WAU&find_request_2={%query}&find_op_1=AND&find_code_3=WTI&find_request_3=&ckbox=KOB00019&ckbox=SIG00002&ckbox=KOB00264&submit=go'
+  title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bibtu/0:
+  url: 'http://ublibsprod.ub.tu-berlin.de/'
+  title: TU-Berlin Bibliothek
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bibtu/1:
+  url: 'http://ublibsprod.ub.tu-berlin.de/F/?func=find-b&find_code=WRD&request={%Suche}'
+  title: TU-Berlin Bibliothek
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bibzdb/1:
+  url: 'http://dispatch.opac.ddb.de/DB=1.1/SET=3/TTL=1/CMD?ACT=SRCHA&IKT=8509&TRM={%Suche}'
+  title: Zeitschriftendatenbank (ZDB)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bildmaschine/1:
+  url: 'http://www.bildmaschine.de/suche/{%Suche}?affiliate=9355'
+  title: Bildmaschine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+billiger/1:
+  url: 'http://www.billiger.de/suche.html?searchstring={%Produkt}&search=1&stat=1&implicit=1'
+  title: Billiger.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bioup/0:
+  url: 'http://www.bio.uni-potsdam.de/'
+  title: 'Universität Potsdam, Institut für Biologie'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bla/1:
+  url: 'http://www.buffed.de/?f={%suchwort}'
+  title: blasc suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bloom/0:
+  url: 'http://www.bloom.de/'
+  title: Bloom.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bs/1:
+  url: 'http://www.bertelsmann-stiftung.de/cps/rde/xchg/bst/hs.xsl/suche.htm?innerRequest=true&suchbegriff={%Suche}'
+  title: Bertelsmann Stiftung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bu/1:
+  url: 'http://kvk.ubka.uni-karlsruhe.de/hylib-bin/kvk/nph-kvk2.cgi?maske=kvk-last&title=UB+Karlsruhe%3A+Karlsruher+Virtueller+Katalog+KVK+%3A+Ergebnisanzeige&header=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-header_de_2008_06.html&spacer=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-spacer_de_2007_07.html&footer=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-footer_de_2008_01.html&css=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-neu2.css&input-charset=utf-8&hinweise=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-hinweise_de_2009_10_1.html&kvk-session=Z0EPQ1KG&ALL={%query}&TI=&PY=&AU=&SB=&CI=&SS=&ST=&PU=&BUCHHANDEL=&kataloge=ABEBOOKS&kataloge=AMAZON_DE&kataloge=AMAZON_US&kataloge=ANTIQUARIO&kataloge=BOOKLOOKER&kataloge=KNO&kataloge=LIBRI&kataloge=ZVAB&target=_blank&Timeout=120'
+  title: Karlsruher Virtueller Katalog (KVK)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgm/0:
+  url: 'http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox'
+  title: BVG-Auskunft für Handys
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgm/2:
+  url: 'http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&start=1'
+  title: BVG-Auskunft für Handys
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgm/3:
+  url: 'http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit}&start=1'
+  title: BVG-Auskunft für Handys
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgm/4:
+  url: 'http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit}&D={%Datum}&start=1'
+  title: BVG-Auskunft für Handys
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgt/4:
+  url: 'http://www.fahrinfo-berlin.de/fahrinfo/bin/query.exe/d?S={%Start}&REQ0JourneyStopsSA1={%Start-Typ}&Z={%Ziel}&REQ0JourneyStopsZA1={%Ziel-Typ}&start=1'
+  title: BVG-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgt/5:
+  url: 'http://www.fahrinfo-berlin.de/fahrinfo/bin/query.exe/d?S={%Start}&REQ0JourneyStopsSA1={%Start-Typ}&Z={%Ziel}&REQ0JourneyStopsZA1={%Ziel-Typ}&T={%Abfahrtszeit}&start=1'
+  title: BVG-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgt/6:
+  url: 'http://www.fahrinfo-berlin.de/fahrinfo/bin/query.exe/d?S={%Start}&REQ0JourneyStopsSA1={%Start-Typ}&Z={%Ziel}&REQ0JourneyStopsZA1={%Ziel-Typ}&T={%Abfahrtszeit}&D={%Datum}&start=1'
+  title: BVG-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgtan/5:
+  url: 'http://www.fahrinfo-berlin.de/fahrinfo/bin/query.exe/d?S={%Start}&REQ0JourneyStopsSA1={%Start-Typ}&Z={%Ziel}&REQ0JourneyStopsZA1={%Ziel-Typ}&T={%Ankunftszeit}&REQ0HafasSearchForw=0&start=1'
+  title: BVG-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bvgtan/6:
+  url: 'http://www.fahrinfo-berlin.de/fahrinfo/bin/query.exe/d?S={%Start}&REQ0JourneyStopsSA1={%Start-Typ}&Z={%Ziel}&REQ0JourneyStopsZA1={%Ziel-Typ}&T={%Ankunftszeit}&D={%Datum}&REQ0HafasSearchForw=0&start=1'
+  title: BVG-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bz/1:
+  url: 'http://www.berlinonline.de/berliner-zeitung/archiv/.bin/index.fcgi?keywords={%Suche}'
+  title: Berliner Zeitung Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+bzl/1:
+  url: 'https://bookzilla.de/shop/action/quickSearch?aUrl=90006951&searchString={%query}&ie=utf-8'
+  title: Bookzilla
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+charts/1:
+  url: 'http://www.top10-charts.com/list.php?suche={%query}'
+  title: Charts
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chill/0:
+  url: 'http://www.chilloutzone.de/'
+  title: chilloutzone
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+chill/1:
+  url: 'http://www.google.de/custom?domains=chilloutzone.de&q={%query}&sitesearch=chilloutzone.de&sa=Google-Suche&client=pub-9587746511239945&forid=1&channel=0789999516&ie=ISO-8859-1&oe=ISO-8859-1&flav=0000&sig=2LvIwQoR9ke2veDK&cof=GALT%3A%23FF4500%3BGL%3A1%3BDIV%3A%23CCCCCC%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3Affffff%3BLBGC%3A666666%3BALC%3AFF4500%3BLC%3AFF4500%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A50%3BLW%3A245%3BL%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2Fblog%2Fimages%2Fbloghead.gif%3BS%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2F%3BFORID%3A1&hl=de'
+  title: search on chilloutzone
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ciao/1:
+  url: 'http://www.ciao.de/sr/q-{%query}'
+  title: Ciao!
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ckb/0:
+  url: 'http://www.chefkoch.de/mychefkoch/kochbuch/'
+  title: Mein Kochbuch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ckz/0:
+  url: 'http://www.chefkoch.de/rezept-random.php'
+  title: Chefkoch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cn/1:
+  url: 'http://www.canoo.net/services/Controller?input={%Wort}'
+  title: Canoo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cng/1:
+  url: 'http://www.gas-tankstellen.de/menu.php?jump=tkennz&mode=cng&kennz={%KFZ-Kennzeichen}'
+  title: LPG- und CNG-Tankstellen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cts/1:
+  url: 'http://www.zanox-affiliate.de/ppc/?9597901C785220280T&ULP=[[&suchbegriff={%Suche}]]'
+  title: Eventim
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ctst/1:
+  url: 'http://mobile.eventim.de/cgi-bin/tinfo.html?key={%Band}&id=PDA_NO_SESSION&fun=tsearch&doc=funktion%2Ffun_suc&fuzzy=yes&sort_by=score&I15=Los'
+  title: Eventim
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dad/1:
+  url: 'http://www.ordbogen.com/opslag.php?dict=a001&word={%Wort}'
+  title: Dänisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dbm/2:
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&start=1'
+  title: DB-Auskunft für Mobiltelefone
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dbm/3:
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit}&start=1'
+  title: DB-Auskunft für Mobiltelefone
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dbm/4:
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1'
+  title: DB-Auskunft für Mobiltelefone
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ddb/1:
+  url: 'http://dispatch.opac.ddb.de/DB=4.1/CMD?ACT=SRCHA&IKT=8500&SRT=YOP&TRM={%Suche}'
+  title: Katalog der Deutschen Bibliothek (DDB)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+definero/1:
+  url: 'http://www.definero.de/index.php?term={%query}&act=lexicon&set=lexicon%2Canalyse%2Cabbr%2Cdict-en-de%2Csearch-engine'
+  title: Definero
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dejure/1:
+  url: 'http://dejure.org/cgi-bin/suche?Suchenach={%Suche}'
+  title: Dejure.org Gesetze
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+denl/1:
+  url: 'http://www.mijnwoordenboek.nl/vertalen.php?src=DE&des=NL&woord={%query}'
+  title: Übersetzung Deutsch->Niederländisch / Vertaling Duits->Nederlands
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dhl-e/1:
+  url: 'https://www.dhl.de/oservices/t_u_t/HistoryList.jsp?res=1&sid={%Sendungsnummer}'
+  title: DHL Sendungsverfolgung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dhlex/1:
+  url: 'https://www.dhl.de/oservices/t_u_t/HistoryList.jsp?res=1&sid={%Sendungsnummer}'
+  title: DHL Sendungsverfolgung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dnb/1:
+  url: 'https://portal.d-nb.de/opac.htm?method=simpleSearch&query={%query}'
+  title: Deutsche Nationalbibliothek
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+doc/1:
+  url: 'http://flexikon.doccheck.com/Spezial:Suche?search={%query}&x=16&y=12'
+  title: DocCheck
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dradiokulturmp3/0:
+  url: 'http://www.dradio.de/streaming/dkultur.m3u'
+  title: Deutschlandradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dradiokulturogg/0:
+  url: 'http://www.dradio.de/streaming/dkultur_hq_ogg.m3u'
+  title: Deutschlandradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dradiokulturwmp/0:
+  url: 'http://www.dradio.de/streaming/dkultur.asx'
+  title: Deutschlandradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dradiomp3/0:
+  url: 'http://www.dradio.de/streaming/dlf.m3u'
+  title: Deutschlandradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dradioogg/0:
+  url: 'http://www.dradio.de/streaming/dlf_hq_ogg.m3u'
+  title: Deutschlandradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dradiowmp/0:
+  url: 'http://www.dradio.de/streaming/dlf.asx'
+  title: Deutschlandradio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+duden/1:
+  url: 'http://www.duden.de/suchen/dudenonline/{%wort}'
+  title: Duden
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dvb/0:
+  url: 'http://www.dvb.de/de/Fahrplan/Verbindungsauskunft/index.aspx'
+  title: DVB-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dvb/2:
+  url: 'http://www.dvb.de/de/Fahrplan/Verbindungsauskunft/verbindungen.do?vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}'
+  title: DVB-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dvb/3:
+  url: 'http://www.dvb.de/de/Fahrplan/Verbindungsauskunft/verbindungen.do?vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeit%5D={%Abfahrtszeit}'
+  title: DVB-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+dvb/4:
+  url: 'http://www.dvb.de/de/Fahrplan/Verbindungsauskunft/verbindungen.do?vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeit%5D={%Abfahrtszeit}&vaform%5Bdatum%5D={%Datum}'
+  title: DVB-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+e?/0:
+  url: 'http://pages.ebay.de/help/index.html'
+  title: Ebay.de Hilfe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+e?/1:
+  url: 'http://cgi6.ebay.de/ws/eBayISAPI.dll?MfcISAPICommand=SearchHelp&searchString={%Thema}'
+  title: Ebay.de Hilfe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ebay/0:
+  url: 'http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.de homepage
+  description: ''
+  tags:
+  - affiliate
+  examples: []
+  tests: []
+ebay/1:
+  url: 'http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.de
+  description: ''
+  tags:
+  - affiliate
+  examples: []
+  tests: []
+ebay?/0:
+  url: 'http://pages.ebay.de/help/index.html'
+  title: Ebay.de Hilfe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ebayuser/1:
+  url: 'http://myworld.ebay.de/{%Username}/'
+  title: Ebay.de Benutzerseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+emob/0:
+  url: 'http://wap.ebay.de/'
+  title: Ebay.de Mobile Homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+emob/1:
+  url: 'http://wap.ebay.de/Pages/SearchResults.aspx?sv={%query}'
+  title: Ebay.de Mobile Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+emobmein/0:
+  url: 'http://wap.ebay.de/Member/MyEbay.aspx'
+  title: Ebay.de Mobile Mein eBay
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+en/1:
+  url: 'http://deen.dict.cc/?s={%Wort}'
+  title: Englisch-Deutsch (dict.cc)
+  description: ''
+  tags: []
+  examples:
+    baum: Search for "baum"
+  tests: []
+en-leo/1:
+  url: 'http://dict.leo.org/?search={%Wort}'
+  title: 'Englisch-Deutsch: leo.org'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+en-pons/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deen'
+  title: Englisch-Deutsch PONS
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+end/1:
+  url: 'http://www.endungen.de/ResultList/ResultList.aspx?searchExtension={%Dateieindung}&searchPlatform=win;mac;unix;os2&searchMode=contains'
+  title: Endungen.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+endungen/1:
+  url: 'http://www.endungen.de/ResultList/ResultList.aspx?searchExtension={%Dateieindung}&searchPlatform=win;mac;unix;os2&searchMode=contains'
+  title: Endungen.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+es/1:
+  url: 'http://www.vocdix.com/de/es/?q={%palabra}'
+  title: 'Spanisch-Deutsch: DIX'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+es-leo/1:
+  url: 'http://dict.leo.org/esde?search={%Wort}'
+  title: 'Spanisch-Deutsch: Leo'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+es-pons/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dees'
+  title: Spanisch-Deutsch PONS
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fa/1:
+  url: 'https://addons.mozilla.org/de/firefox/search?q={%Suche}&cat=all'
+  title: Firefox- Addons (Deutsch)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fad/1:
+  url: 'https://addons.mozilla.org/de/firefox/search?q={%Suche}&cat=all'
+  title: Firefox- Addons (Deutsch)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fi/1:
+  url: 'http://forum.pauker.at/pauker/DE_DE/FI/wb/?s={%query}'
+  title: Finnisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+filme/1:
+  url: 'fis {%Filmtitel}'
+  title: Filmstarts.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fnt/1:
+  url: 'http://www.finanztreff.de/kurse_einzelkurs_suche.htn?u=100&suchbegriff={%query}'
+  title: Finanztreff
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+forschung/1:
+  url: 'http://forschungsportal.net/fpj/q/?q={%Abfrage}&pp=5&ie=ISO-8859-1&oe=ISO-8859-1&art=dok&html=1&pdf=1'
+  title: Forschungsportal-Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr-leo/1:
+  url: 'http://dict.leo.org/frde?lang=de&lp=frde&search={%Wort}'
+  title: Französisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr-pons/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=defr'
+  title: Französisch-Deutsch PONS
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fragm/1:
+  url: 'http://www.frag-mutti.de/searchg.php?q={%Suche}&sitesearch=www.frag-mutti.de&client=pub-0387357320992853&cof=GALT%3A%23000066%3BGL%3A1%3BDIV%3A%23FAF1C3%3BVLC%3A660000%3BAH%3Acenter%3BBGC%3AFAF1C3%3BLBGC%3AFAF1C3%3BALC%3A990000%3BLC%3A990000%3BT%3A000000%3BGFNT%3A990000%3BGIMP%3A990000%3BFORID%3A11&hl=de'
+  title: Frag-Mutti.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+frbuch/0:
+  url: 'http://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm'
+  title: Französisch-Lehrbuch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+frbuch/1:
+  url: 'http://www.franzoesisch-lehrbuch.de/cgi-bin/suchmaschine.pl?modul=1&wort={%thema}&alle=ja'
+  title: Französisch-Lehrbuch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+freitag/1:
+  url: 'http://clusty.com/search?query=site%3Afreitag.de%20{%thema}'
+  title: Freitag Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ftr/0:
+  url: 'http://www.finanztreff.de'
+  title: Finanztreff
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+geiz/1:
+  url: 'http://geizhals.at/eu/?fs={%Produkt}'
+  title: Geizhals
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+geiza/1:
+  url: 'http://geizhals.at/?fs={%Produkt}'
+  title: Geizhals
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+geizd/1:
+  url: 'http://geizhals.at/deutschland/?fs={%Produkt}'
+  title: Geizhals
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gema/1:
+  url: 'https://mgonline.gema.de/werke/searchArea.do?searchOption=title&searchKind=contain&searchText={%Suche}&andSearchOption=select&pageNr=1&loggedin=false'
+  title: GEMA
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ghat/0:
+  url: 'http://geizhals.at/'
+  title: Geizhals
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ghat/1:
+  url: 'http://geizhals.at/?fs={%Produkt}'
+  title: Geizhals
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ghde/0:
+  url: 'http://geizhals.at/deutschland/'
+  title: Geizhals
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ghde/1:
+  url: 'http://geizhals.at/deutschland/?fs={%Produkt}'
+  title: Geizhals
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gls/2:
+  url: 'http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1. Paket-Nr.},{%2. Paket-Nr.}'
+  title: GLS Sendungsverfolgung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gls/3:
+  url: 'http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1. Paket-Nr.},{%2. Paket-Nr.},{%3. Paket-Nr.}'
+  title: GLS Sendungsverfolgung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gulli/1:
+  url: 'http://board.gulli.com/search.php?query={%query}&do=process'
+  title: 'GulliBoard (g:b)'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gulli_audio/1:
+  url: 'http://board.gulli.com/search.php?query={%query}&forumchoice[]=148&do=process'
+  title: 'GulliBoard (g:b) - Audiobörse'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gulli_filme/1:
+  url: 'http://board.gulli.com/search.php?query={%query}&forumchoice[]=153&do=process'
+  title: 'GulliBoard (g:b)'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gutenberg/1:
+  url: 'http://gutenberg.spiegel.de/index.php?id=11&query={%Suche}'
+  title: Gutenberg-DE
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwd/0:
+  url: 'http://www.guildwiki.de/'
+  title: Guildwiki.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+gwd/1:
+  url: 'http://www.guildwiki.de/wiki/Spezial:Suche?search={%query}&go=Seite'
+  title: Guildwiki.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+habowiki/1:
+  url: 'http://wiki.hackerboard.de/index.php/Spezial:Search?search={%query}&go=Los'
+  title: HaBo-Wiki
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+heise/0:
+  url: 'http://www.heise.de'
+  title: Heise Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+heise/1:
+  url: 'http://www.heise.de/newsticker/suche/?rm=search&q={%Suchbegriff}'
+  title: Heise Newssuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+helix/0:
+  url: 'http://www.shadowhelix.de'
+  title: Shadowhelix search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+helix/1:
+  url: 'http://www.shadowhelix.de/Spezial:Suche?search={%query}&go=Seite'
+  title: Shadowhelix search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hib/0:
+  url: 'http://www.bundestag.de/presse/hib/index.html'
+  title: Heute im Bundestag
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hib/1:
+  url: 'http://suche.bundestag.de/hibsuche/hibsearch.do?forward=%2Fhibresult&language=de&category=&queryString={%Thema}&selectedDate=100000&sortCriterium=date'
+  title: Heute im Bundestag
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hibr/0:
+  url: 'http://www.bundestag.de/aktuell/RSS/Bundestag_HiB.rss'
+  title: Heute im Bundestag
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hls/1:
+  url: 'http://www.hls-dhs-dss.ch/index.php?searchtype=articles&searchstring={%query}&ie=utf-8'
+  title: Historisches Lexikon der Schweiz
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hsoft/0:
+  url: 'http://www.heise.de/software/'
+  title: Heise Softwareverzeichnis (Startseite)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hsoft/1:
+  url: 'http://www.heise.de/software/download/default.shtml?T={%Suchbegriff}&Suchen=suchen&global=1'
+  title: Heise Softwareverzeichnis (Suche)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+htp/0:
+  url: 'http://www.heise.de/tp/'
+  title: Telepolis (Startseite)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+hwho/1:
+  url: 'http://www.heise.de/netze/tools?rm=whois&plugin={%URL}'
+  title: Heise Whois Netzwerk-Tool (Suche)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+idad/1:
+  url: 'http://german.imdb.com/find?s=tt&site=aka&q={%query}'
+  title: IMDb AKA Title Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+idw/1:
+  url: 'http://www.idw-online.de/pages/de/simplesearch?workaround=workaround&_form_=InputForm&scope=%5BALWAYS_THERE%5D&scope=press_release&scope=event&words={%query}&no_pics=%5BALWAYS_THERE%5D&no_pics=true&submit=Suchen'
+  title: Informationsdienst Wissenschaft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ifr/0:
+  url: 'http://www.inforiot.de/view/termine'
+  title: Inforiot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ifun/1:
+  url: 'http://www.ifun.de/suche/{%query}'
+  title: IFUN.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+imagepoint/1:
+  url: 'http://www.imagepoint.biz/result.php?reset=1&search={%query}'
+  title: ImagePoint
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+imdbd/0:
+  url: 'http://german.imdb.com'
+  title: IMDb Homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+imdbd/1:
+  url: 'http://german.imdb.com/find?s=all&q={%query}'
+  title: IMDb Search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ind/1:
+  url: 'http://indiepedia.de/index.php?title={%query}'
+  title: Indiepedia.de Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+inforiot/0:
+  url: 'http://www.inforiot.de/view/termine'
+  title: Inforiot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+it/1:
+  url: 'http://www.italdict.de/exec/?S={%query}'
+  title: Italienisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+it-pons/1:
+  url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deit'
+  title: Italienisch-Deutsch PONS
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jo/0:
+  url: 'http://www.jokers.de/'
+  title: Jokers Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jo/1:
+  url: 'http://www.jokers.de/index.html?com={%Suche}&search.x=0&search.y=0&f=search.getsearch'
+  title: Jokers
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+jokers/0:
+  url: 'http://www.jokers.de/'
+  title: Jokers Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+joomla/0:
+  url: 'http://www.joomlaos.de/'
+  title: Joomla Templates und Erweiterungen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+joomla/1:
+  url: 'http://www.joomlaos.de/index.php?searchword={%Suche}&option=com_search&Itemid=41'
+  title: Joomla Templates und Erweiterungen Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+k21/1:
+  url: 'http://www.kommune21.de/web/de/suchen,280_1_0_82.5,{%query}'
+  title: Kommune21
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kabel1text/1:
+  url: 'http://www.kabeleins.de/teletext/index.php?pagnr={%Seite}'
+  title: Kabel1-Text
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kamf/1:
+  url: 'http://kamelopedia.mormo.org/index.php?title=Special:Search&fulltext=Search&search={%query}'
+  title: Kamelopedia fulltext search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kb/0:
+  url: 'http://kino.zitty.de/'
+  title: Kino Berlin
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kfz/1:
+  url: 'http://www.google.com/search?hl={$language}&q=inurl:oawhome.de/kfz/+{%Ort oder Kennzeichen}'
+  title: KFZ-Kennzeichen Deutschland
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kfzs/1:
+  url: 'http://www.autokennzeichen.info/index.htm?lpc={%Kennzeichen}&subm=1'
+  title: KFZ-Kennzeichen Deutschland
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kib/0:
+  url: 'http://konzerte.in-berlin.net/'
+  title: Konzerte in Berlin
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kinomob/1:
+  url: 'http://www.ikdb.mobi/kinos/{%Ort}/'
+  title: Mobiles Kinoprogramm von ikdb.mobi
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ks/1:
+  url: 'http://www.klicksafe.de/cgi-bin/search/search.pl?Terms={%query}&Realm=klicksafe'
+  title: Klicksafe.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kvv/4:
+  url: 'http://213.144.24.66/kvv/XSLT_TRIP_REQUEST2?language=de&place_origin={%Von Ort}&type_origin=stop&name_origin={%von Haltestele}&place_destination={%nach Ort}&type_destination=stop&name_destination={%nach Haltestelle}'
+  title: 'Karlsruher Verkehrsverbund, Elektronische Fahrplanauskunft'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kw/1:
+  url: 'http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo'
+  title: Kreuzworträtsel-Datenbank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+kw/2:
+  url: 'http://www.kwdb.ch/searchanswer.asp?search={%Suche}&BScount={%Buchstabenanzahl}&sourceid=serchilo'
+  title: Kreuzworträtsel-Datenbank
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lasteb/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/Berlin'
+  title: 'Last.fm: Events in Berlin, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lastedd/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/Dresden'
+  title: 'Last.fm: Events in Dresden, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lastehh/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/Hamburg'
+  title: 'Last.fm: Events in Hamburg, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lastehro/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/Rostock'
+  title: 'Last.fm: Events in Rostock, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lastek/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/Cologne'
+  title: 'Last.fm: Events in Cologne, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lastel/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/Leipzig'
+  title: 'Last.fm: Events in Leipzig, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lastem/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/Munich'
+  title: 'Last.fm: Events in Munich, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lastep/0:
+  url: 'http://www.lastfm.de/events/+place/Germany/7360038+Potsdam'
+  title: 'Last.fm: Events in Potsdam, Germany'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+leo/1:
+  url: 'http://dict.leo.org/?search={%Wort}'
+  title: 'Englisch-Deutsch: leo.org'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+leocn/1:
+  url: 'http://dict.leo.org/chde?lang=de&lp=chde&search={%Wort}'
+  title: 'Chinesisch-Deutsch: leo.org'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lexer/0:
+  url: 'http://germazope.uni-trier.de/Projects/WBB/woerterbuecher/lexer/woerterbuecher/vorwort/wbgui'
+  title: Mittelhochdeutsches Handwörterbuch von Matthias Lexer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lexer/1:
+  url: 'http://germazope.uni-trier.de/Projects/WBB/woerterbuecher/lexer/wbgui?word={%query}&wb=L&mode=linking&lemmode=lemmasearch'
+  title: Mittelhochdeutsches Handwörterbuch von Matthias Lexer
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lf/0:
+  url: 'https://www.lovefilm.de/'
+  title: Lovefilm.de Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lf/1:
+  url: 'http://www.lovefilm.de/search/results/?query={%query}'
+  title: Lovefilm.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lingup/0:
+  url: 'http://www.ling.uni-potsdam.de'
+  title: 'Uni Potsdam, Institut für Linguistik'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lingup/1:
+  url: 'http://www.ling.uni-potsdam.de/~{%name}'
+  title: 'Uni Potsdam, Institut für Linguistik'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+linsenquelle/1:
+  url: 'http://www.linsenquelle.de/index.php?mod=search&search_expr={%query}'
+  title: Linsenquelle Kontaktlinsen-Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+liq/1:
+  url: 'http://iq.lycos.de/srch/?q={%query}&mode=&search_target=all&rqry=true'
+  title: Lycos IQ
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+listen/1:
+  url: 'http://www.lastfm.de/listen/artist/{%artist}'
+  title: 'Last.fm: Listen to artist'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lobby/0:
+  url: 'http://lobbycontrol.de/blog/'
+  title: Lobbycontrol
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lobby/1:
+  url: 'http://www.lobbycontrol.de/blog/index.php?s={%Begriff}'
+  title: Lobbycontrol
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+low/0:
+  url: 'http://www.lowbird.com'
+  title: Lowbird
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+low/1:
+  url: 'http://www.lowbird.com/search/{%query}'
+  title: Lowbird
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lpg/1:
+  url: 'http://www.gas-tankstellen.de/menu.php?jump=tkennz&mode=lpg&kennz={%KFZ-Kennzeichen}'
+  title: LPG- und CNG-Tankstellen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+lq/1:
+  url: 'http://www.linsenquelle.de/index.php?mod=search&search_expr={%query}'
+  title: Linsenquelle Kontaktlinsen-Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ls/1:
+  url: 'http://partners.webmasterplan.com/click.asp?site=3007&ref=421571&type=html&ent=73&hnb=12&subid=&prd=yes&earef=073a1ad78e41c763535eb9319b6922af&mod=search&search_expr={%query}'
+  title: Lensspirit Kontaktlinsen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mac/1:
+  url: 'http://www.google.com/search?hl=de&q={%query}+site%3Amacuser.de'
+  title: Macuser.de Forum
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+maginter/1:
+  url: 'http://www.magistrix.de/lyrics/search?title=spn-x&lang=0&artist={%Interpret}&pagelen=50&text=&order=title'
+  title: Magistrix Songtext Suche (Interpret)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+magistrix/0:
+  url: 'http://www.magistrix.de/'
+  title: Magistrix Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+magtitel/1:
+  url: 'http://www.magistrix.de/lyrics/search?q={%Titel}'
+  title: Magistrix Songtext Suche (Titel)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mau/2:
+  url: 'http://www.mitfahrgelegenheit.de/mitfahrzentrale/{%Start}/{%Ziel}/b.html?radius_from=50&radius_to=50&date=any_date&type=b&return=0'
+  title: 'Mitfahrgelegenheit.de: Umkreissuche nach Angeboten'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mdv/2:
+  url: 'http://www.nasa.de/delfi52/query.exe/dn?L=mdv&S={%Start}&Z={%Ziel}&start=1'
+  title: MDV-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mdv/3:
+  url: 'http://www.nasa.de/delfi52/query.exe/dn?L=mdv&S={%Start}&Z={%Ziel}&T={%Zeit}&start=1'
+  title: MDV-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mdv/4:
+  url: 'http://www.nasa.de/delfi52/query.exe/dn?L=mdv&S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1'
+  title: MDV-Auskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mg/1:
+  url: 'http://www.mageleo.de/?Query={%query}'
+  title: Mageleo
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mkm/0:
+  url: 'http://www.magickartenmarkt.de/'
+  title: Magic Kartenmarkt
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mkm/1:
+  url: 'http://www.magickartenmarkt.de/?mainPage=showSearchResult&searchFor={%query}&searchSingles=Y'
+  title: Magic Kartenmarkt
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ml/0:
+  url: 'http://www.musicload.de'
+  title: Musicload
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ml/1:
+  url: 'http://www.musicload.de/search.ml?stext={%query}'
+  title: Musicload
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mokita/1:
+  url: 'http://www.mokita.de/blog/?s={%query}&search=Suchen'
+  title: Mokita Blog
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mvs/1:
+  url: 'http://www.motorvision-shop.de/xyshop/mv/catalog/search.service?extended=true&searchString={%query}&kid=25314sumkey'
+  title: Motorvision-Shop.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mz/0:
+  url: 'http://www.meinvz.net/Start'
+  title: 'MeinVZ: Startseite'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mz/1:
+  url: 'http://www.meinvz.net/Search/SearchGeneral/name/{%Name}/doSearch/1'
+  title: 'MeinVZ: Personensuche global'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mzg/1:
+  url: 'http://www.meinvz.net/Search/ResultGroups/name/{%Gruppenname}'
+  title: 'MeinVZ: Gruppensuche'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nlde/1:
+  url: 'http://www.mijnwoordenboek.nl/vertalen.php?src=NL&des=DE&woord={%query}'
+  title: Übersetzung Niederländisch->Deutsch / Vertaling Nederlands->Duits
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ntv/0:
+  url: 'http://www.n-tv.de'
+  title: n-tv Nachrichtenportal
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ntv/1:
+  url: 'http://www.n-tv.de/suche/?q={%query}&searchabout=ntv&a=search&at=all&qwg=&qw=&qa=&sdd=&sdm=&sdy=&edd=&edm=&edy='
+  title: n-tv Nachrichtensuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nz/0:
+  url: 'http://www.netzeitung.de/'
+  title: Netzeitung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+nz/1:
+  url: 'http://www.netzeitung.de/servlets/search?execute=query&p_search_id=SEARCH_ALL&p_qry={%Suche}'
+  title: Netzeitung
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+oebbt/2:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dl?S={%Start}&Z={%Ziel}&start=1'
+  title: ÖBB-Auskunft Textversion
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+oebbt/3:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit}&start=1'
+  title: ÖBB-Auskunft Textversion
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+oebbt/4:
+  url: 'http://fahrplan.oebb.at/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1'
+  title: ÖBB-Auskunft Textversion
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+oest/0:
+  url: 'http://14hoch2.net/oest/termine.htm'
+  title: Oestberlin.de Konzertübersicht
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ok/1:
+  url: 'http://www.otrkey.com/?q={%Suche}'
+  title: otrkey.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ost/1:
+  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://www.ostarrichi.org/woerterbuch.html&search={%query}'
+  title: Österreichisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+otr/1:
+  url: 'http://epg.onlinetvrecorder.com/broadcasts/search?searchterm={%Suche}&future=1'
+  title: OnlineTVRecorder EPG search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pap/1:
+  url: 'http://www.paperball.de/suche/s/?lang=de&q={%thema}'
+  title: Paperball News-Suchmaschine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+petitionen/1:
+  url: 'https://epetitionen.bundestag.de/index.php?action=search2&search={%Suche}'
+  title: Petitionen an den Deutschen Bundestag
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+phpng/1:
+  url: 'http://groups.google.de/group/de.comp.lang.php/search?&hl={$language}&q={%query}'
+  title: De.comp.lang.php
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+preis/1:
+  url: 'http://www.preissuchmaschine.de/psm_frontend/main.asp?suche={%Produkt}'
+  title: Preissuchmaschine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pt/1:
+  url: 'http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%wort}'
+  title: Portugiesisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+qd/1:
+  url: 'http://www.quizduell.com/qd/herausforderung&gegner={%query}'
+  title: Quizduell.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+qype/2:
+  url: 'http://www.qype.com/search/find?qype_query={%Suche}&locator={%Ort}'
+  title: Qype
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rezept/1:
+  url: 'http://www.kochmeister.com/search.php?w={%Zutat}'
+  title: Kochmeister
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rezeptefuchs/0:
+  url: 'http://www.rezeptefuchs.de/'
+  title: Rezeptefuchs Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rezeptefuchs/1:
+  url: 'http://www.rezeptefuchs.de/Search?q={%query}'
+  title: Rezeptefuchs Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rf/0:
+  url: 'http://www.rezeptefuchs.de/'
+  title: Rezeptefuchs Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rf/1:
+  url: 'http://www.rezeptefuchs.de/Search?q={%query}'
+  title: Rezeptefuchs Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rgs/1:
+  url: 'http://www.crawl-it.de/cgi-bin/crawlit/registration/search.it?p_search={%query}&p_userid=297294'
+  title: Ruhrgebietssprache
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rivva/0:
+  url: 'http://rivva.de'
+  title: Rivva blog aggregator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rivva/1:
+  url: 'http://search.rivva.de/?q={%query}'
+  title: Rivva blog aggregator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rivvar/0:
+  url: 'http://feed43.com/rivva-links.xml'
+  title: Rivva blog aggregator
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rmva/3:
+  url: 'http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&queryPageDisplayed=yes&REQ0JourneyStopsN=-1&REQ0HafasNumCons1=1&REQ0HafasNumCons0=4&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G={%Start}&REQ0JourneyStopsS0ID=&REQ0JourneyStopsZ0A=1&REQ0JourneyStopsZ0G={%Ziel}&REQ0JourneyStopsZ0ID=&existUnsharpSearch=yes&iER=no&REQ0HafasOptimize1=1&REQ0JourneyTime={%Ankunftszeit}&REQ0HafasSearchForw=0&REQ0JourneyProductMask=1%3A11111111111111111&start=Verbindungen+suchen'
+  title: RMV Fahrplanauskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rmva/4:
+  url: 'http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&queryPageDisplayed=yes&REQ0JourneyStopsN=-1&REQ0HafasNumCons1=1&REQ0HafasNumCons0=4&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G={%Start}&REQ0JourneyStopsS0ID=&REQ0JourneyStopsZ0A=1&REQ0JourneyStopsZ0G={%Ziel}&REQ0JourneyStopsZ0ID=&existUnsharpSearch=yes&iER=no&REQ0HafasOptimize1=1&REQ0JourneyDate={%Datum}&REQ0JourneyTime={%Abfahrtszeit}&REQ0HafasSearchForw=0&REQ0JourneyProductMask=1%3A11111111111111111&start=Verbindungen+suchen'
+  title: RMV Fahrplanauskunft
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rs/1:
+  url: 'http://www.regional-saisonal.de/rezept-suche?rezept-titel={%query}'
+  title: regional-saisonal.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ru/1:
+  url: 'http://lingvo.yandex.ru/de?lang=de&text={%Wort}'
+  title: Russisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+rundschau/1:
+  url: 'http://www.fr-online.de/suche/?such={%query}'
+  title: Frankfurter Rundschau Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+satmp3/1:
+  url: 'http://mp3.saturn.de/servlets/2452685121527Dispatch/34/jspforward?file=./index.jsp&page=search/results&searchcrit={%Query}'
+  title: Saturn
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sc/1:
+  url: 'http://www.scienceticker.info/index.php?s={%Suche}&sc'
+  title: Scienceticker
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sch/1:
+  url: 'http://www.schwuugle.de/results.html?cx=009729828355623405941%3Aoz2xu-2vkai&cof=FORID%3A10&q={%query}&sa=schwuuglen&security=666#1193'
+  title: Schwuugle - die schwule Websuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+schb/0:
+  url: 'http://blogs.schwuugle.de/results.html?cx=009729828355623405941%3Arptpk8zmkvq&cof=FORID%3A11&q=schwuugle&sa=schwuuglen&security=666#1165'
+  title: Schwule Blogsuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+schnitt/1:
+  url: 'http://www.schnitt.de/109,glob?q={%query}'
+  title: Schnitt - Das Filmmagazin
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+scout/0:
+  url: 'http://www.scout-o-wiki.de/index.php/Hauptseite'
+  title: Scout-o-Wiki Hauptseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+scout/1:
+  url: 'http://www.scout-o-wiki.de/index.php/Spezial:Suche?search={%Suche}&go=Seite'
+  title: Scout-o-Wiki Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sdd/1:
+  url: 'http://speedmap.sz-online.de/SZ/Dresden/cgi-bin/perl/search-str.pl?vonWo=Liste&text={%Straße}'
+  title: Stadtplan Dresden
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sdd/2:
+  url: 'http://speedmap.sz-online.de/SZ/Dresden/cgi-bin/perl/search-str.pl?vonWo=Liste&text={%Straße}&hausnr={%Hausnr.}'
+  title: Stadtplan Dresden
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sdw/1:
+  url: 'http://www.speedydragon.de/search?query={%suchwort}'
+  title: SpeedyDragon Warcraft search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+selfhtml/0:
+  url: 'http://de.selfhtml.org/'
+  title: Selfhtml
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+selfhtml/1:
+  url: 'http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage={%Suche}'
+  title: Selfhtml
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sfr/1:
+  url: 'http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}'
+  title: Stayfriends
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sfr/2:
+  url: 'http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}&PersonSearch.school={%Ort}'
+  title: Stayfriends
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+shh/1:
+  url: 'http://www2.stadtplan.hamburg.de/cmswms/index.jsp?layers=hauptstrassen,nebenstrassen&strasse={%Straße}'
+  title: Stadtplan Hamburg
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sj/0:
+  url: 'http://www.serienjunkies.de/'
+  title: serienjunkies
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sk/1:
+  url: 'http://stadtplan.koeln.de/map.asp?start.x=5&str={%Straße}&city=K%F6ln'
+  title: Stadtplan Köln
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sk-de/1:
+  url: 'http://slovnik.cyberspace.sk/hladaj.php3?jazyk=de&slovo={%Wort}'
+  title: Slowakisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+skp/1:
+  url: 'http://seekport.de/q?query={%Suche}'
+  title: Seekport Websuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sl/1:
+  url: 'http://speedmap.lvz-online.de/LVZ/Leipzig/cgi-bin/perl/volltext.pl?text={%Straße}'
+  title: Stadtplan Leipzig
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sm/1:
+  url: 'http://www.muenchen.de/popup/78287/map.html?serviceName=map&actionName=queryAddress&str={%Straße}'
+  title: Stadtplan München
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+soft/0:
+  url: 'http://www.softonic.de'
+  title: Softonic Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+softmac/0:
+  url: 'http://www.softonic.de/mac'
+  title: Softonic Startseite (Mac)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+softmac/1:
+  url: 'http://www.softonic.de/suche/{%Suche}/mac'
+  title: Softonic (Mac)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+softwin/1:
+  url: 'http://www.softonic.de/suche/{%Suche}/'
+  title: Softonic (Windows)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sp/1:
+  url: 'http://www.potsdamer-stadtplan.com/?strasse={%Straße}'
+  title: Stadtplan Potsdam
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+spiegel/1:
+  url: 'http://suche.spiegel.de/suche/index.html?suchbereich=vorspann&suchbegriff={%Suche}'
+  title: Spiegel Wissen
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sport/1:
+  url: 'http://www.zbsport.de/cgi-bin/esport.pl?q={%query}'
+  title: SportPilot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stabib/1:
+  url: 'http://stabikat.sbb.spk-berlin.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}'
+  title: Staatsbibliothek zu Berlin
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stbk/1:
+  url: 'https://katalog.stbib-koeln.de/alswww4.dll/APS_BROWSE_SEARCH?Style=Portal2&SubStyle=&Theme=&Lang=GER&ResponseEncoding=utf-8&SID=S22361227268361&Method=BrowseSearch&Parent=Obj_171951227268367&BrowseAsHloc=-2&DB=Catalogue&Stem={%query}&Index=1'
+  title: Stadtbibliothek Köln
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stf/0:
+  url: 'http://stressfaktor.squat.net/'
+  title: Stressfaktor Termine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stf/1:
+  url: 'http://stressfaktor.squat.net/termine.php?tag={%Datum}'
+  title: Stressfaktor Termine
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stgz/1:
+  url: 'http://www.stuttgarter-zeitung.de/stz/page/detail.php/1995189?_suchtag=%3E2010-02-04&_suchtext={%Suchtext}&x=0&y=0'
+  title: Stuttgarter Zeitung Allgemeine Suche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+strichcode/1:
+  url: 'http://www.codecheck.info/Home/search/sdirect.pag?formids=If_2_0%2CsearchText2%2CIf_3_0%2CIf_4_0%2CIf_7_0&If_2_0=F&If_3_0=F&If_4_0=F&If_7_0=F&searchText2={%Strichcode}'
+  title: Codecheck.info
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stupi/0:
+  url: 'http://www.stupidedia.org/'
+  title: Stupipedia Hauptseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+stupi/1:
+  url: 'http://www.stupidedia.org/stupi/Special:Search?go=Article&search={%article}'
+  title: Stupipedia Artikelsuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+svz/0:
+  url: 'http://www.schuelervz.net'
+  title: 'SchülerVZ: Startseite'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+svz/1:
+  url: 'http://www.schuelervz.net/Search/SearchGlobal/name/{%Name}/doSearch/1'
+  title: 'SchülerVZ: Personensuche global'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+svzg/1:
+  url: 'http://www.schuelervz.net/Search/ResultGroups/name/{%Gruppenname}'
+  title: 'SchülerVZ: Gruppensuche global'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+svzmg/1:
+  url: 'http://www.schuelervz.net/Groups/s/{%Gruppenname}'
+  title: 'SchülerVZ: Gruppensuche (Meine Gruppen)'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+swp/1:
+  url: 'http://www.swp-berlin.org/suche/suche.php?query={%Suche}'
+  title: Stiftung Wissenschaft und Politik
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+synen/1:
+  url: 'http://synonyme.woxikon.de/synonyme-englisch/{%word}.php'
+  title: Synonyme
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+t-systems/0:
+  url: 'http://www.it-shop.t-systems.de/'
+  title: T-Systems IT Shop für Geschäftskunden
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+t-systems/1:
+  url: 'http://www.it-shop.t-systems.de/tsystems/tsi_b2b/catalog/searchexternal.service?searchString={%Produkt}&kid=21314sumkey'
+  title: T-Systems IT Shop für Geschäftskunden
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+t3ts/1:
+  url: 'http://www.typo3.net/tsref/?tx_fesearchintable_pi1[sword]={%typoscript command}'
+  title: German TypoScript Reference
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+telmob/1:
+  url: 'http://mobil.dastelefonbuch.de/tb/search_result_list_standard?ph={%Nummer}'
+  title: Das Telefonbuch Mobile Invers-Suche (WAP)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+telmob/2:
+  url: 'http://mobil.dastelefonbuch.de/tb/search_result_list_standard?kw={%Name}&ci={%Ort}'
+  title: Das Telefonbuch Mobile Suche (WAP)
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+ticketonline/1:
+  url: 'http://www.ticketonline.de/trans/prlist?SB={%Suche}'
+  title: Ticketonline
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tmf/2:
+  url: 'http://ticket-mitfahrer.de/?s=Suchen+&daten%5Bdatum%5D=0&daten%5Bvon%5D={%Start}&daten%5Bnach%5D={%Ziel}'
+  title: Ticket-Mitfahrer.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tr/1:
+  url: 'http://www.deutsch-tuerkisch.net/suche/{%Wort}'
+  title: Türkisch-Deutsch
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+trinity/1:
+  url: 'http://www.trinityconcerts.de/advanced_search_result.php?keywords={%Band}'
+  title: Trinity concerts
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tsp/0:
+  url: 'http://www.tagesspiegel.de/'
+  title: Tagesspiegel
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tsp/1:
+  url: 'http://www.tagesspiegel.de/suche/?fs%5Barchivsuche%5D=archivsuche&fs%5Bqall%5D={%Suche}'
+  title: Tagesspiegel
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tsys/0:
+  url: 'http://www.it-shop.t-systems.de/'
+  title: T-Systems IT Shop Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tsys/1:
+  url: 'http://www.it-shop.t-systems.de/tsystems/tsi_b2b/catalog/searchexternal.service?searchString={%Produkt}&kid=21314sumkey'
+  title: T-Systems IT Shop Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tuning/1:
+  url: 'http://www.motorvision-shop.de/xyshop/mv/catalog/search.service?extended=true&searchString={%query}&kid=25314sumkey'
+  title: Motorvision-Shop.de
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tvi/0:
+  url: 'http://www.tvinfo.de/exe.php3?target=main.inc'
+  title: TV-Programm Deutschland
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tvr/1:
+  url: 'http://tv.intern.de/index.php?site=Suche&m=6&button1=suchen&t=10&q={%Sendung}'
+  title: TV-Programm Deutschland
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tvs/1:
+  url: 'http://tv.intern.de/index.php?site=Suche&t=10&q={%Sendung}'
+  title: TV-Programm Deutschland
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+tvtv/1:
+  url: 'http://epg.kabeldeutschland.de/tvtv/index.vm?mainTemplate=web%2Fsearch_result.vm&lang=de&search_input={%Suche}'
+  title: TVTV (kabeldeutschland.de) EPG search
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+usbk/1:
+  url: 'http://www.ub.uni-koeln.de/usbportal?query={%query}&referrer=serchilo'
+  title: Universitäts- und Stadtbibliothek Köln
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vgm/4:
+  url: 'http://efa.vrr.de/vgm-vrl/XSLT_TRIP_REQUEST2?language=de&placeInfo_origin=invalid&typeInfo_origin=invalid&nameInfo_origin=invalid&deleteAssignedStops_origin=0&place_origin={%StartOrt}&placeState_origin=empty&type_origin=stop&name_origin={%StartHaltestelle}&nameState_origin=empty&placeInfo_destination=invalid&typeInfo_destination=invalid&nameInfo_destination=invalid&deleteAssignedStops_destination=0&place_destination={%ZielOrt}&placeState_destination=empty&type_destination=stop&name_destination={%ZielHaltestelle}&nameState_destination=empty&itdTripDateTimeDepArr=dep'
+  title: Fahrplanauskunft Münsterland/Ruhr-Lippe
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vgna/1:
+  url: 'http://vgn.de/komfortauskunft/haltestelle/?sessionID=0&type_dm=stop&name_dm={%Haltestelle}'
+  title: VGN-Abfahrtzeiten
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vlul/3:
+  url: 'https://portal.unilu.ch/site/besucher/studienangebot/suchen.aspx?search=1&sem={%semester}&doz={%dozent}&title={%title}'
+  title: Uni Luzern Veranstaltungssuche
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vm/2:
+  url: 'http://www.viamichelin.de/viamichelin/deu/dyn/controller/mapPerformPage?strAddress={%Straße}&strCP=&strLocation={%Ort}&strCountry=240'
+  title: 'Via Michelin: Stadtpläne & Landkarten'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vmr/2:
+  url: 'http://www.viamichelin.com/viamichelin/deu/dyn/controller/ItiWGPerformPage?intItineraryType=1&strStartAddress=&strStartCP=&strStartCity={%Start}&strStartCityCountry=000000240&strDestAddress=&strDestCP=&strDestCity={%Ziel}&strDestCityCountry=000000240&intItineraryType=1'
+  title: 'Via Michelin: Routenplaner'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vpe/1:
+  url: 'http://www.vpe.de/pdf/fp_akt/{%Suche}.pdf'
+  title: Verkehrsbund Pforzheim- Enzkreis
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vz/0:
+  url: 'http://www.studivz.net/Start'
+  title: 'StudiVZ: Startseite'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vz/1:
+  url: 'http://www.studivz.net/Search/SearchGlobal/name/{%Name}/doSearch/1'
+  title: 'StudiVZ: Personensuche global'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+vzg/1:
+  url: 'http://www.studivz.net/Search/ResultGroups/name/{%Gruppenname}'
+  title: 'StudiVZ: Gruppensuche'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wein/1:
+  url: 'http://www.wein.cc/wein/weinsuche.php?q={%query}'
+  title: Weinsuche bei wein.cc mit Preisvergleich
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+welt/1:
+  url: 'http://www.welt.de/archiv/?se&lucyExpr={%query}'
+  title: Die Welt Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wetter/1:
+  url: 'http://de.wetter.com/suche/?search={%Ort}'
+  title: Wetter.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wetteronline/1:
+  url: 'http://www.wetteronline.de/cgi-bin/suchen?ORT={%Ort oder PLZ}'
+  title: WetterOnline
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wong/1:
+  url: 'http://www.mister-wong.de/search/?search_type=w&keywords={%query}&btn=suchen'
+  title: Mister Wong
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wort/1:
+  url: 'http://www.dwds.de/?qu={%Wort}&view=1'
+  title: Digitales Wörterbuch der Deutschen Sprache
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wortarten/1:
+  url: 'http://wortarten.info/#{"text": "{%Satz}"}'
+  title: Wortarten.Info
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+wt-o/1:
+  url: 'http://wetter.t-online.de/-/id_40910718/pattern_{%plz oder ort}/index'
+  title: Wettervorhersage bei T-Online
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+xipo/1:
+  url: 'http://www.xipolis.net/suche/trefferliste.php?suche=homepage&treffer_pro_seite=10&modus=title&level=125&suchbegriff%5BAND%5D={%Suche}&senden=suchen'
+  title: Xipolis Lexikon
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+youtube/0:
+  url: 'http://de.youtube.com/'
+  title: YouTube Startseite
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+youtube/1:
+  url: 'http://www.youtube.com/results?gl=DE&hl=de&search_query={%Suche}'
+  title: YouTube
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+za/0:
+  url: 'http://audio.zeit.de/cgi-bin/hoeren.pl?db_choose=zeit_audio&user='
+  title: ZEIT audio
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zeik/0:
+  url: 'http://www.zeik.uni-potsdam.de'
+  title: 'Uni Potsdam, ZEIK'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zeit/1:
+  url: 'http://www.zeit.de/suche/index?searchtype=on&q={%query}'
+  title: ZEIT Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zo/0:
+  url: 'http://www.zeit.de'
+  title: ZEIT online
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zo/1:
+  url: 'http://www.zeit.de/suche/index?searchtype=on&q={%query}'
+  title: ZEIT Archiv
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zoonar/0:
+  url: 'http://www.zoonar.de/?wid=1078'
+  title: Zoonar
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zoonar/1:
+  url: 'http://www.zoonar.de/appgen/?cl=zoonar&cp=search&cmd=search_library&wid=1078&search[searchstring]={%Suche}'
+  title: Zoonar
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+zs/1:
+  url: 'http://dispatch.opac.ddb.de/DB=1.1/SET=3/TTL=1/CMD?ACT=SRCHA&IKT=8509&TRM={%e-Ressource}+elektronische+Ressource'
+  title: Zeitschriftendatenbank (ZDB)
+  description: ''
+  tags: []
+  examples: []
+  tests: []

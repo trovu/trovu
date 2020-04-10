@@ -1,0 +1,71 @@
+bdk/1:
+  url: 'https://bibliotek.dk/da/search/work?search_block_form={%fritekst}'
+  title: bibliotek.dk
+  description: ''
+  tags:
+  - library
+  examples:
+    nesbø: Search for Nesbø
+  tests: []
+dsb/2:
+  url: 'http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&start=1'
+  title: Danske Statsbaner
+  description: ''
+  tags:
+  - travel
+  - railway
+  examples:
+    'aarhus, københavn': næste tog fra Aarhus til København
+  tests: []
+dsb/3:
+  url: 'http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&start=1'
+  title: Danske Statsbaner
+  description: ''
+  tags:
+  - travel
+  - railway
+  examples:
+    'aarhus, københavn, 10': tog fra Aarhus til København kl. 10
+  tests: []
+dsb/4:
+  url: 'http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&D={%Dato}&start=1'
+  title: Danske Statsbaner
+  description: ''
+  tags:
+  - travel
+  - railway
+  examples:
+    'aarhus, københavn, 10, 28.1.': tog fra Aarhus til København kl. 10 den 28.1.
+  tests: []
+ikea/0:
+  url: 'http://www.ikea.com/dk/da/'
+  title: IKEA Danmark
+  description: ''
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples:
+    madras: Søger "madras"
+  tests: []
+ikea/1:
+  url: 'http://www.ikea.com/dk/da/search/?query={%query}'
+  title: IKEA Danmark
+  description: ''
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples:
+    madras: Søger "madras"
+  tests: []
+zal/1:
+  url: 'http://www.zalando.dk/katalog/?q={%produkt}'
+  title: Zalando.dk
+  description: ''
+  tags:
+  - shopping
+  - zalando
+  examples:
+    sko: søge sko
+  tests: []

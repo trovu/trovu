@@ -1,0 +1,19 @@
+e/0:
+  url: 'http://www.ebay.ph/'
+  title: Ebay.ph
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  examples: []
+  tests: []
+e/1:
+  url: 'http://www.ebay.ph/sch/i.html?_nkw={%query}'
+  title: Ebay.ph
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  examples:
+    smartphone: Search for "smartphone"
+  tests: []

@@ -1,0 +1,31 @@
+e/0:
+  url: 'http://rover.ebay.com/rover/1/705-53470-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229515&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.com.au
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples: []
+  tests: []
+e/1:
+  url: 'http://rover.ebay.com/rover/1/705-53470-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229515&kwid=902099&mtid=824&kw=lg'
+  title: Ebay.com.au
+  description: ''
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples:
+    smartphone: Search for "smartphone"
+  tests: []
+g/1:
+  url: 'https://www.google.com.au/search?hl={$language}&q={%query}&ie=utf-8'
+  title: Google.com.au
+  description: ''
+  tags:
+  - web search
+  - google
+  examples:
+    sydney: Search Google for "sydney"
+  tests: []

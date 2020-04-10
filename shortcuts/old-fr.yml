@@ -1,0 +1,147 @@
+amazon/0:
+  url: 'http://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21'
+  title: Amazon.fr homepage
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+amazon/1:
+  url: 'http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo0e-21'
+  title: Amazon.fr
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cine/1:
+  url: 'http://www.allocine.fr/recherche/?q={%query}'
+  title: Allociné
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cs-fr/1:
+  url: 'http://slovniky.atlas.cz/default.aspx?utf=y&lang=7&word={%query}'
+  title: Tchèque-Français via Atlas
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+cz-fr/1:
+  url: 'http://slovniky.atlas.cz/default.aspx?utf=y&lang=7&word={%query}'
+  title: Tchèque-Français via Atlas
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+en/1:
+  url: 'http://www.wordreference.com/fren/{%mot}'
+  title: Anglais-Français
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr/1:
+  url: 'http://www.sensagent.com/dictionnaires/fr-sv/{%mot}/ALEXMN/'
+  title: Suédois-Français via Sensagent
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr-cs/1:
+  url: 'http://slovniky.atlas.cz/default.aspx?utf=y&lang=6&word={%query}'
+  title: Français-Tchèque via Atlas
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr-cz/1:
+  url: 'http://slovniky.atlas.cz/default.aspx?utf=y&lang=6&word={%query}'
+  title: Français-Tchèque via Atlas
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+fr-pl/1:
+  url: 'http://www.sensagent.com/dictionnaires/fr-pl/{%mot français}/ALEXMN/'
+  title: 'Français-Polonais: Sensagent.com'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+frama/1:
+  url: 'http://www.google.com/search?hl={$language}&sitesearch=framasoft.net&domains=framasoft.net&q={%query}'
+  title: Framasoft Logiciels Libres
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+listen/1:
+  url: 'http://www.lastfm.fr/listen/artist/{%artist}'
+  title: 'Last.fm: Listen to artist'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+mozbot/1:
+  url: 'http://www.mozbot.fr/search?q={%query}'
+  title: Mozbot
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pj/0:
+  url: 'http://www.pagesjaunes.fr'
+  title: Pages Jaunes
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pj/2:
+  url: 'http://www.pagesjaunes.fr/trouverlesprofessionnels/rechercheClassique.do?quoiqui={%quoiqui}&ou={%ou}'
+  title: Pages Jaunes
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pl/1:
+  url: 'http://portalwiedzy.onet.pl/tlumacz.html?tr=fra-auto&qs={%mot}'
+  title: 'Polonais-Français: Onet.pl'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pl-fr/1:
+  url: 'http://www.sensagent.com/dictionnaires/pl-fr/{%mot polonais}/ALEXMN/'
+  title: 'Polonais-Français: Sensagent.com'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+pricem/1:
+  url: 'http://www.priceminister.com/navigation/se/category/sa/kw/{%query}'
+  title: Price Minister
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sncf/2:
+  url: 'http://www.voyages-sncf.com/dynamic/home?_CMD=cmdConsultTimetable&ID_AGENCE=VSC&CODE_LANGUE={$language}&ORIGINE={%origine}&DESTINATION={%destination}&EXPRESS_BOOKING=Y&VOYAGE_TYPE=ALLER_SIMPLE&INTERSTITIEL=N&IMMEDIATE_DEPARTURE=Y'
+  title: SNCF
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+sv/1:
+  url: 'http://www.sensagent.com/dictionnaires/sv-fr/{%mot}/ALEXMN/'
+  title: Suédois-Français via Sensagent
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+telecharger/1:
+  url: 'http://www.01net.com/recherche/index.php?searchstring={%query}&x=0&y=0&type=01net&system=windows'
+  title: Télécharger.com
+  description: ''
+  tags: []
+  examples: []
+  tests: []

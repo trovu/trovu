@@ -1,0 +1,21 @@
+leo/1:
+  url: 'http://dict.leo.org/?search={%Wort}'
+  title: 'German-English: leo.org'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+listen/1:
+  url: 'http://www.last.fm/listen/artist/{%artist}'
+  title: 'Last.fm: Listen to artist'
+  description: ''
+  tags: []
+  examples: []
+  tests: []
+playg/1:
+  url: 'http://www.play.com/Search.aspx?searchtype=allproducts&searchstring={%query}&page=search&pa=search&go.x=31&go.y=13'
+  title: Play.com Suche nach Games
+  description: ''
+  tags: []
+  examples: []
+  tests: []

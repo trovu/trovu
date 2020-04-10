@@ -1,0 +1,182 @@
+cjg/1:
+  url: 'http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}'
+  title: Le conjugueur
+  description: ''
+  tags:
+  - language
+  - french
+  examples:
+    venir: Conjugate "venir"
+  tests: []
+cs/1:
+  url: 'http://slovniky.lingea.cz'
+  post parameters:
+    set: _frcz
+    type: ''
+    word: '{%mot|encoding=none}'
+    data: '{%mot|encoding=none}'
+  title: Tchèque-Français (Lingea)
+  description: ''
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - french
+  examples:
+    arbre: '"arbre" český'
+    strom: '"strom" francouzký'
+  tests: []
+de/1:
+  url: 'http://dict.leo.org/frde/?search={%mot}'
+  title: Allemand-Français (leo.org)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - german
+  - french
+  - leo
+  examples:
+    arbre: '"arbre" en allemand'
+    baum: '"baum" en français.'
+  tests: []
+en/1:
+  url: 'http://dictionary.reverso.net/french-english/{%mot}'
+  title: Anglais-Français (reverso.net)
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    arbre: Translate arbre to English
+    tree: Translate tree to French
+  tests: []
+gfp/0:
+  url: 'http://german-foreign-policy.com/fr/news/'
+  title: German Foreign Policy
+  description: ''
+  tags:
+  - politics
+  - news
+  - germany
+  examples: []
+  tests: []
+gfp/1:
+  url: 'http://german-foreign-policy.com/index.php?lang=fr&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}'
+  title: German Foreign Policy (French)
+  description: ''
+  tags:
+  - politics
+  - news
+  - germany
+  examples:
+    berlin: Chercher "berlin"
+  tests: []
+gn/1:
+  url: 'https://www.google.fr/search?q={%query}&tbm=nws&hl=fr&gl=FR&ceid=FR%3Afr'
+  title: Google News (France)
+  description: ''
+  tags:
+  - news
+  - google
+  examples:
+    obama: Google News nach obama durchsuchen
+  tests: []
+lar/1:
+  url: 'http://www.larousse.fr/dictionnaires/francais/{%mot}'
+  title: 'Larousse, Dictionnaires de français '
+  description: ''
+  tags:
+  - language
+  - dictionary
+  - french
+  - dictionnaire
+  - français
+  examples:
+    arbre: Cherche "arbre"
+  tests: []
+last/1:
+  url: 'http://www.last.fm/search?setlang=fr&q={%artist}'
+  title: Last.fm
+  description: ''
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"
+  tests: []
+lit/1:
+  url: 'http://www.littre.org/recherche?_hasdata=&f2={%mot}'
+  title: Littré
+  description: ''
+  tags:
+  - language
+  - french
+  - dictionary
+  examples:
+    arbre: Cherche "arbre" dans le dictionnaire Littré
+  tests: []
+marmiton/0:
+  url: 'http://www.marmiton.org/'
+  title: Marmiton
+  description: ''
+  tags:
+  - recettes
+  - marmiton
+  examples: []
+  tests: []
+marmiton/1:
+  url: 'http://www.marmiton.org/recettes/recherche.aspx?aqt={%mot}'
+  title: Marmiton
+  description: ''
+  tags:
+  - recettes
+  - marmiton
+  examples:
+    pizza: Recherche des recettes de pizza
+  tests: []
+pt/1:
+  url: 'http://dictionnaire.reverso.net/francais-portugais/{%mot}'
+  title: Français-portugais
+  description: ''
+  tags:
+  - language
+  - dictionary
+  examples:
+    voiture: Search for "voiture"
+  tests: []
+sv/1:
+  url: 'http://www.azoria.com/cgi-bin/dico/search?word={%mot}'
+  title: Suédois-Français via Azoria
+  description: ''
+  tags:
+  - dictionary
+  - french
+  - swedish
+  examples:
+    clé: Translation of "clé"
+    klav: Translation of "klav"
+  tests: []
+syn/1:
+  url: 'http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer'
+  title: Synonyme
+  description: ''
+  tags:
+  - language
+  - thesaurus
+  examples:
+    important: Search for "important"
+  tests: []
+tlf/1:
+  url: 'http://www.cnrtl.fr/definition/{%query}'
+  title: Trésor de la langue française
+  description: ''
+  tags:
+  - dictionary
+  - french
+  - language
+  examples:
+    arbre: Cherche "arbre" dans le Trésor de la langue française
+  tests: []
