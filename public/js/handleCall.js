@@ -19,6 +19,15 @@ export default class HandleCall {
     this.env = env;
   }
 
+  redirectNotFound(env) {
+    const params = Helper.getParams();
+    params.status = "not_found";
+    const paramStr = Helper.jqueryParam(params);
+    const redirectUrl = "../index.html#" + paramStr;
+    return redirectUrl;
+  }
+
+
   /**
    * Given this.env, get the redirect URL.
    *

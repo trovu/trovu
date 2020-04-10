@@ -2,14 +2,6 @@ import Env from "./env.js";
 import HandleCall from "./handleCall.js";
 import Helper from "./helper.js";
 
-function handleNotFound(env) {
-  const params = Helper.getParams();
-  params.status = "not_found";
-  const paramStr = Helper.jqueryParam(params);
-  const redirectUrl = "../index.html#" + paramStr;
-  return redirectUrl;
-}
-
 /**
  * Rewrite browser history to make Back button work properly.
  */
@@ -26,7 +18,7 @@ async function handle() {
   let redirectUrl = await handleCall.getRedirectUrl();
 
   if (!redirectUrl) {
-    redirectUrl = handleNotFound(env);
+    redirectUrl = handleCall.redirectNotFound(env);
   }
 
   if (env.debug) {
