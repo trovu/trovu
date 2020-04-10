@@ -75,7 +75,7 @@ export default class FindShortcut {
   /**
    * Collect shortcuts from all available namespace.
    *
-   * @param {object} env        - The set environment.
+   * @param {object} env        - The environment.
    *
    * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
    */
