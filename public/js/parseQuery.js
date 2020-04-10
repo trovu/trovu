@@ -1,8 +1,10 @@
+/** @module ParseQuery */
+
 import Helper from "./helper.js";
 
 /** Parse a query. */
 
-export default class Parse {
+export default class ParseQuery {
 
   /**
    * Get keyword and argument string from query.
@@ -127,13 +129,13 @@ export default class Parse {
 
     const env = {};
 
-    [env.keyword, env.argumentString] = Parse.getKeywordAndArgumentString(query);
-    env.args = Parse.getArguments(env.argumentString);
-    [env.reload, env.keyword] = Parse.checkForChacheReload(env.keyword);
+    [env.keyword, env.argumentString] = ParseQuery.getKeywordAndArgumentString(query);
+    env.args = ParseQuery.getArguments(env.argumentString);
+    [env.reload, env.keyword] = ParseQuery.checkForChacheReload(env.keyword);
 
-    [env.extraNamespaceName, env.keyword] = Parse.getExtraNamespace(env.keyword);
+    [env.extraNamespaceName, env.keyword] = ParseQuery.getExtraNamespace(env.keyword);
     if (env.extraNamespaceName) {
-      let languageOrCountry = Parse.getLanguageAndCountryFromExtraNamespaceName(env.extraNamespaceName);
+      let languageOrCountry = ParseQuery.getLanguageAndCountryFromExtraNamespaceName(env.extraNamespaceName);
       Object.assign(env, languageOrCountry);
     }
 

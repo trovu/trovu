@@ -1,6 +1,6 @@
 import Load from "./loadScripts.js";
 import Helper from "./helper.js";
-import Parse from "./parse.js";
+import ParseQuery from "./parseQuery.js";
 import Find from "./findShortcut.js";
 import ProcessUrl from "./processUrl.js";
 import FindShortcut from "./findShortcut.js";
@@ -27,7 +27,7 @@ export default class HandleCall {
       return;
     }
 
-    Object.assign(this.env, Parse.parse(this.env.query));
+    Object.assign(this.env, ParseQuery.parse(this.env.query));
 
     // Add extraNamespace if parsed in query.
     if (this.env.extraNamespaceName) {
