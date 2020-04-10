@@ -98,7 +98,7 @@ export default class Handle {
    *
    * @return {string} str   - The string with the replaced placeholders.
    */
-  async replaceArguments(str, args) {
+  async replaceArguments(str, args, env) {
     const placeholders = this.getArgumentsFromString(str);
 
     for (const argumentName in placeholders) {
@@ -108,7 +108,7 @@ export default class Handle {
       // so go over all of them.
       var matches = placeholders[argumentName];
       for (let match in matches) {
-        argument = await this.processAttributes(argument, matches[match]);
+        argument = await this.processAttributes(argument, matches[match], env);
         while (str.includes(match)) {
           str = str.replace(match, argument);
         }
@@ -117,15 +117,15 @@ export default class Handle {
     return str;
   }
 
-  async processAttributes(processedArgument, attributes) {
-    processedArgument = await this.processAttributeType(attributes, processedArgument);
+  async processAttributes(processedArgument, attributes, env) {
+    processedArgument = await this.processAttributeType(attributes, processedArgument, env);
     processedArgument = this.processAttributeTransform(attributes, processedArgument);
     processedArgument = this.processAttributeEncoding(attributes, processedArgument);
     return processedArgument;
   }
 
-  async processAttributeType(attributes, processedArgument) {
-    const locale = this.env.language + "-" + this.env.country.toUpperCase();
+  async processAttributeType(attributes, processedArgument, env) {
+    const locale = env.language + "-" + env.country.toUpperCase();
     switch (attributes.type) {
       case "date":
         processedArgument = await this.processTypeDate(
@@ -142,7 +142,7 @@ export default class Handle {
         );
         break;
       case "city":
-        processedArgument = await this.processTypeCity(processedArgument);
+        processedArgument = await this.processTypeCity(processedArgument, env);
         break;
     }
     return processedArgument;
@@ -178,13 +178,13 @@ export default class Handle {
     return processedArgument;
   }
 
-  async processTypeCity(processedArgument) {
+  async processTypeCity(processedArgument, env) {
     const cityModule = await import("./type/city.js");
     let city = await cityModule.default.parse(
       processedArgument,
-      this.env.country,
-      this.env.reload,
-      this.env.debug
+      env.country,
+      env.reload,
+      env.debug
     );
     // If city could be parsed:
     // Set argument.
@@ -293,7 +293,7 @@ export default class Handle {
     if (this.env.debug) Helper.log("Used template: " + redirectUrl);
 
     redirectUrl = await this.replaceVariables(redirectUrl, { language: this.env.language, country: this.env.country });
-    redirectUrl = await this.replaceArguments(redirectUrl, this.env.args);
+    redirectUrl = await this.replaceArguments(redirectUrl, this.env.args, this.env);
 
     return redirectUrl;
   }
