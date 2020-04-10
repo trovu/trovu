@@ -10,6 +10,14 @@ function handleNotFound(env) {
   return redirectUrl;
 }
 
+/**
+ * Rewrite browser history to make Back button work properly.
+ */
+function rewriteBrowserHistory() {
+  const currentUrlWithoutProcess = window.location.href.replace('process\/', '');
+  history.replaceState({}, "trovu.net", currentUrlWithoutProcess);
+}
+
 async function handle() {
   const env = new Env();
   await env.populate();
@@ -26,9 +34,7 @@ async function handle() {
     return;
   }
 
-  // Rewrite browser history to make Back button work properly.
-  const currentUrlWithoutProcess = window.location.href.replace('process\/', '');
-  history.replaceState({}, "trovu.net", currentUrlWithoutProcess);
+  rewriteBrowserHistory();
 
   window.location.href = redirectUrl;
 };
