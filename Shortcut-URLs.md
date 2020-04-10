@@ -28,7 +28,7 @@ Example	| Will be replaced with
 Example	| Will be replaced with
 ---|---
 `{$language}` | configured language
-`{$now\|output=HH-mm}` | current date and time, attribute output defines the output format which must be based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/). Default is `HH-mm`.
+`{$now\|output=HH-mm}` | current date and time, attribute `output` defines the output format which must be based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/). Default is `HH-mm`.
 
 ## Input encoding
 
@@ -64,7 +64,7 @@ The input will be parsed as a time.
 - Hours and minutes can be separated by `.` or `:`.
 - Only hours can be provided.
 - Relative hours work, too.
-- With the attribute output, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to `HH:mm`.
+- With the attribute `output`, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to `HH:mm`.
 
 Example input | Example output | Explanation
 ---|---|---
