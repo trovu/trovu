@@ -10,7 +10,7 @@ function handleNotFound(env) {
   return redirectUrl;
 }
 
-document.querySelector("body").onload = async function(event) {
+async function handle() {
   const env = new Env();
   await env.populate();
 
@@ -32,3 +32,5 @@ document.querySelector("body").onload = async function(event) {
 
   window.location.href = redirectUrl;
 };
+
+document.querySelector("body").onload = handle;
