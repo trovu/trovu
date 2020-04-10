@@ -11,6 +11,13 @@ import FindShortcut from "./findShortcut.js";
 
 export default class HandleCall {
 
+  /**
+   * Redirect in case a shortcut was not found.
+   *
+   * @param {object} env        - The environment.
+   *
+   * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
+   */
   static redirectNotFound(env) {
     const params = Helper.getParams();
     params.status = "not_found";
@@ -28,7 +35,9 @@ export default class HandleCall {
   }
 
   /**
-   * Given env, get the redirect URL.
+   * Given the environment, get the redirect URL.
+   *
+   * @param {object} env        - The environment.
    *
    * @return {string} redirectUrl - The URL to redirect to.
    */
@@ -59,6 +68,9 @@ export default class HandleCall {
     return redirectUrl;
   }
 
+  /**
+   * The 'main' function of this class.
+   */
   static async handleCall() {
 
     const env = new Env();
