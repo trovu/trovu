@@ -1,5 +1,6 @@
 /** @module HandleCall */
 
+import Env from "./env.js";
 import LoadScripts from "./loadScripts.js";
 import Helper from "./helper.js";
 import ParseQuery from "./parseQuery.js";
@@ -9,16 +10,8 @@ import FindShortcut from "./findShortcut.js";
 /** Handle a call. */
 
 export default class HandleCall {
-  /**
-   * Set the environment.
-   *
-   * @param {object} env        - The environment.
-   */
-  constructor(env) {
-    this.env = env;
-  }
 
-  redirectNotFound(env) {
+  static redirectNotFound(env) {
     const params = Helper.getParams();
     params.status = "not_found";
     const paramStr = Helper.jqueryParam(params);
@@ -29,40 +22,61 @@ export default class HandleCall {
   /**
    * Rewrite browser history to make Back button work properly.
    */
-  rewriteBrowserHistory() {
+  static rewriteBrowserHistory() {
     const currentUrlWithoutProcess = window.location.href.replace('process\/', '');
     history.replaceState({}, "trovu.net", currentUrlWithoutProcess);
   }
 
   /**
-   * Given this.env, get the redirect URL.
+   * Given env, get the redirect URL.
    *
    * @return {string} redirectUrl - The URL to redirect to.
    */
-  async getRedirectUrl() {
-    if (!this.env.query) {
+  static async getRedirectUrl(env) {
+    if (!env.query) {
       return;
     }
 
-    Object.assign(this.env, ParseQuery.parse(this.env.query));
+    Object.assign(env, ParseQuery.parse(env.query));
 
     // Add extraNamespace if parsed in query.
-    if (this.env.extraNamespaceName) {
-      this.env.extraNamespace = this.env.addFetchUrlTemplateToNamespace(this.env.extraNamespaceName);
-      this.env.namespaces.push(this.env.extraNamespace);
+    if (env.extraNamespaceName) {
+      env.extraNamespace = env.addFetchUrlTemplateToNamespace(env.extraNamespaceName);
+      env.namespaces.push(env.extraNamespace);
     }
 
-    const shortcuts = await FindShortcut.collectShortcuts(this.env);
-    let redirectUrl = FindShortcut.pickShortcut(shortcuts, this.env.namespaces);
+    const shortcuts = await FindShortcut.collectShortcuts(env);
+    let redirectUrl = FindShortcut.pickShortcut(shortcuts, env.namespaces);
 
     if (!redirectUrl) return;
 
-    if (this.env.debug) Helper.log("");
-    if (this.env.debug) Helper.log("Used template: " + redirectUrl);
+    if (env.debug) Helper.log("");
+    if (env.debug) Helper.log("Used template: " + redirectUrl);
 
-    redirectUrl = await ProcessUrl.replaceVariables(redirectUrl, { language: this.env.language, country: this.env.country });
-    redirectUrl = await ProcessUrl.replaceArguments(redirectUrl, this.env.args, this.env);
+    redirectUrl = await ProcessUrl.replaceVariables(redirectUrl, { language: env.language, country: env.country });
+    redirectUrl = await ProcessUrl.replaceArguments(redirectUrl, env.args, env);
 
     return redirectUrl;
   }
+
+  static async handleCall() {
+    const env = new Env();
+    await env.populate();
+  
+    let redirectUrl = await this.getRedirectUrl(env);
+  
+    if (!redirectUrl) {
+      redirectUrl = this.redirectNotFound(env);
+    }
+  
+    if (env.debug) {
+      Helper.log("Redirect to:   " + redirectUrl);
+      return;
+    }
+  
+    this.rewriteBrowserHistory();
+  
+    window.location.href = redirectUrl;
+  };
+
 }
