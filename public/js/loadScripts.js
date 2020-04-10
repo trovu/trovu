@@ -1,6 +1,6 @@
 /** Load scripts per HTML tag. */
 
-export default class Load {
+export default class LoadScripts {
 
   /**
    * Load scripts into current page per <script> tag.

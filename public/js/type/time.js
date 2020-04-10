@@ -1,4 +1,4 @@
-import Load from "../load.js";
+import LoadScripts from "../loadScripts.js";
 
 export default class TimeParser {
   static async parse(str, locale) {
@@ -7,7 +7,7 @@ export default class TimeParser {
 
     // Load momentjs.
     if (typeof moment !== "function") {
-      await Load.loadScripts([momentjsUrl]);
+      await LoadScripts.loadScripts([momentjsUrl]);
     }
 
     let time;

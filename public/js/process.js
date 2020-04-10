@@ -1,12 +1,12 @@
 import Env from "./env.js";
-import Handle from "./handle.js";
+import HandleCall from "./handleCall.js";
 import Helper from "./helper.js";
 
 document.querySelector("body").onload = async function(event) {
   const env = new Env();
   await env.populate();
 
-  const handle = new Handle(env);
+  const handle = new HandleCall(env);
   let redirectUrl = await handle.getRedirectUrl();
 
   if (!redirectUrl) {

@@ -1,4 +1,4 @@
-import Load from "./load.js";
+import Load from "./loadScripts.js";
 import Helper from "./helper.js";
 import Parse from "./parse.js";
 import Find from "./findShortcut.js";
@@ -7,7 +7,7 @@ import FindShortcut from "./findShortcut.js";
 
 /** Handle a call. */
 
-export default class Handle {
+export default class HandleCall {
   /**
    * Set the environment.
    *

@@ -1,4 +1,4 @@
-import Load from "./load.js";
+import LoadScripts from "./loadScripts.js";
 import Helper from "./helper.js";
 
 /** Process a shortcut URL for redirect. */
@@ -232,7 +232,7 @@ export default class ProcessUrl {
             const momentjsUrl =
               "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js";
             if (typeof moment !== "function") {
-              await Load.loadScripts([momentjsUrl]);
+              await LoadScripts.loadScripts([momentjsUrl]);
             }
 
             let time = moment();
