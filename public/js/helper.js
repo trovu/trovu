@@ -1,3 +1,5 @@
+/** @module Helper */
+
 /** Helper methods. */
 
 export default class Helper {

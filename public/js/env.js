@@ -1,3 +1,5 @@
+/** @module Env */
+
 import Helper from "./helper.js";
 
 /** Set and remember the environment. */

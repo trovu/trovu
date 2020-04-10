@@ -1,3 +1,5 @@
+/** @module FindShortcut */
+
 import Helper from "./helper.js";
 
 /** Find matching shortcut. */

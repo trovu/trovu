@@ -1,3 +1,5 @@
+/** @module HandleCall */
+
 import LoadScripts from "./loadScripts.js";
 import Helper from "./helper.js";
 import ParseQuery from "./parseQuery.js";

@@ -1,3 +1,5 @@
+/** @module LoadScripts */
+
 /** Load scripts per HTML tag. */
 
 export default class LoadScripts {
