@@ -1,10 +1,10 @@
 /** @module HandleCall */
 
 import Env from "./env.js";
+import FindShortcut from "./findShortcut.js";
 import Helper from "./helper.js";
 import ParseQuery from "./parseQuery.js";
 import ProcessUrl from "./processUrl.js";
-import FindShortcut from "./findShortcut.js";
 
 /** Handle a call. */
 
