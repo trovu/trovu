@@ -2,6 +2,14 @@ import Env from "./env.js";
 import HandleCall from "./handleCall.js";
 import Helper from "./helper.js";
 
+function handleNotFound(env) {
+  const params = Helper.getParams();
+  params.status = "not_found";
+  const paramStr = Helper.jqueryParam(params);
+  const redirectUrl = "../index.html#" + paramStr;
+  return redirectUrl;
+}
+
 document.querySelector("body").onload = async function(event) {
   const env = new Env();
   await env.populate();
@@ -24,11 +32,3 @@ document.querySelector("body").onload = async function(event) {
 
   window.location.href = redirectUrl;
 };
-
-function handleNotFound(env) {
-  const params = Helper.getParams();
-  params.status = "not_found";
-  const paramStr = Helper.jqueryParam(params);
-  const redirectUrl = "../index.html#" + paramStr;
-  return redirectUrl;
-}
