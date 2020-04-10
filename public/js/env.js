@@ -1,6 +1,7 @@
 import Helper from "./helper.js";
 
 /** Set and remember the environment. */
+
 export default class Env {
   /**
    * Set helper variables.

@@ -1,4 +1,5 @@
-/** Class for loading scripts per tag. */
+/** Load scripts per HTML tag. */
+
 export default class Load {
 
   /**

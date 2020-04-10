@@ -1,4 +1,4 @@
-/** Static class containing helper. */
+/** Helper methods. */
 
 export default class Helper {
   /**

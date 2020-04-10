@@ -1,6 +1,7 @@
 import Helper from "./helper.js";
 
 /** Parse a query. */
+
 export default class Parse {
 
   /**

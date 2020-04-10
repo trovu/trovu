@@ -4,7 +4,8 @@ import Parse from "./parse.js";
 import Find from "./find.js";
 import ProcessUrl from "./processUrl.js";
 
-/** Class for handling a call. */
+/** Handle a call. */
+
 export default class Handle {
   /**
    * Set the environment.
