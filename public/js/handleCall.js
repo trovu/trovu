@@ -1,4 +1,4 @@
-import Load from "./loadScripts.js";
+import LoadScripts from "./loadScripts.js";
 import Helper from "./helper.js";
 import ParseQuery from "./parseQuery.js";
 import Find from "./findShortcut.js";
