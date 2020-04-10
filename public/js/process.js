@@ -2,13 +2,6 @@ import Env from "./env.js";
 import HandleCall from "./handleCall.js";
 import Helper from "./helper.js";
 
-/**
- * Rewrite browser history to make Back button work properly.
- */
-function rewriteBrowserHistory() {
-  const currentUrlWithoutProcess = window.location.href.replace('process\/', '');
-  history.replaceState({}, "trovu.net", currentUrlWithoutProcess);
-}
 
 async function handle() {
   const env = new Env();
@@ -26,7 +19,7 @@ async function handle() {
     return;
   }
 
-  rewriteBrowserHistory();
+  handleCall.rewriteBrowserHistory();
 
   window.location.href = redirectUrl;
 };

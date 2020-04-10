@@ -27,6 +27,13 @@ export default class HandleCall {
     return redirectUrl;
   }
 
+  /**
+   * Rewrite browser history to make Back button work properly.
+   */
+  rewriteBrowserHistory() {
+    const currentUrlWithoutProcess = window.location.href.replace('process\/', '');
+    history.replaceState({}, "trovu.net", currentUrlWithoutProcess);
+  }
 
   /**
    * Given this.env, get the redirect URL.
