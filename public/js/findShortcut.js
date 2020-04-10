@@ -107,7 +107,7 @@ export default class FindShortcut {
   }
 
   /**
-   * Collect shortcuts from all available namespace.
+   * Collect shortcuts from all available namespaces.
    *
    * @param {object} shortcuts        - The collected shortcuts.
    * @param {array} namespaces        - The set namespaces.
