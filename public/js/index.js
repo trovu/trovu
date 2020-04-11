@@ -282,7 +282,7 @@ function displaySettings() {
 async function updateConfig() {
   if (!env.github) {
     env.namespaces = ["o", env.language, "." + env.country];
-    env.addFetchUrlTemplateToNamespaces();
+    env.addFetchUrlToNamespaces();
   }
 
   await getSuggestions();

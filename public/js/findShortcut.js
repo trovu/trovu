@@ -73,6 +73,26 @@ export default class FindShortcut {
   }
 
   /**
+   * Match shortcuts for keyword and args.
+   *
+   * @param {string} keyword    - The keyword of the query.
+   * @param {array} args        - The arguments of the query.
+   *
+   * @return {array} shortcuts  - The array of found shortcuts.
+   */
+  static async matchShortcuts(keyword, args, namespaces, reload, debug) {
+
+    const shortcuts = {};
+    for (let namespace of namespaces) {
+      const shortcut = namespace.shortcuts[keyword + '/' + args.length]
+      if (shortcut) {
+        shortcuts[namespace.name] = shortcut;
+      }
+    }
+    return shortcuts;
+  }
+
+  /**
    * Collect shortcuts from all available namespace.
    *
    * @param {object} env        - The environment.
@@ -81,20 +101,20 @@ export default class FindShortcut {
    */
   static async collectShortcuts(env) {
 
-    let shortcuts = await this.fetchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
+    let shortcuts = await this.matchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
     if (Object.keys(shortcuts).length === 0 && env.args.length > 0) {
       env.args = [env.argumentString];
-      shortcuts = await this.fetchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
+      shortcuts = await this.matchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
     }
 
     // If nothing found:
     // Try default keyword.
     if (Object.keys(shortcuts).length === 0 && env.defaultKeyword) {
       env.args = [env.query];
-      shortcuts = await this.fetchShortcuts(
+      shortcuts = await this.matchShortcuts(
         env.defaultKeyword,
         env.args, 
         env.namespaces,

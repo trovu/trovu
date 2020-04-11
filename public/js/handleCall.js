@@ -49,9 +49,11 @@ export default class HandleCall {
 
     // Add extraNamespace if parsed in query.
     if (env.extraNamespaceName) {
-      env.extraNamespace = env.addFetchUrlTemplateToNamespace(env.extraNamespaceName);
+      env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
+      [env.extraNamespace] = await env.fetchShortcuts([env.extraNamespace], env.debug);
       env.namespaces.push(env.extraNamespace);
     }
+
 
     const shortcuts = await FindShortcut.collectShortcuts(env);
     let redirectUrl = FindShortcut.pickShortcut(shortcuts, env.namespaces);

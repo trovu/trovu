@@ -36,7 +36,8 @@ export default class Env {
     Object.assign(this, params);
 
     this.setDefaults();
-    this.addFetchUrlTemplateToNamespaces(params);
+    this.addFetchUrlToNamespaces();
+    this.namespaces = await this.fetchShortcuts(this.namespaces, this.debug);
   }
 
   /**
@@ -148,12 +149,39 @@ export default class Env {
     return country;
   }
 
+  async fetchShortcuts(namespaces, debug) {
+    // TODO: Force debug to be boolean.
+    const promises = [];
+    namespaces.forEach((namespace, i, namespaces) => {
+      if (!namespace.url) {
+        return namespaces;
+      }
+      promises.push(
+        fetch(namespace.url, { cache: "force-cache" })
+      );
+    });
+
+    // Wait until all fetch calls are done.
+    const responses = await Promise.all(promises);
+
+    for (let i in namespaces) {
+      if (responses[i].status != 200) {
+        if (debug) Helper.log("Fail:    " + responses[i].url);
+        return namespaces;
+      }
+      if (debug) Helper.log("Success: " + responses[i].url);
+      const text = await responses[i].text();
+      namespaces[i].shortcuts = jsyaml.load(text);
+    };
+    return namespaces;
+  }
+
   /**
    * To every namespace, add a fetch URL template.
    */
-  addFetchUrlTemplateToNamespaces() {
+  addFetchUrlToNamespaces() {
     this.namespaces.forEach((namespace, i, namespaces) => {
-      namespace = this.addFetchUrlTemplateToNamespace(namespace);
+      namespace = this.addFetchUrlToNamespace(namespace);
       namespaces[i] = namespace;
     });
   }
@@ -165,15 +193,15 @@ export default class Env {
    * 
    * @return {Object} namespace - The namespace with the added URL template.
    */
-  addFetchUrlTemplateToNamespace(namespace) {
+  addFetchUrlToNamespace(namespace) {
     if (typeof namespace == "string" && namespace.length < 4) {
-      namespace = this.addFetchUrlTemplateToSiteNamespace(namespace);
+      namespace = this.addFetchUrlToSiteNamespace(namespace);
     } else if (namespace.url && namespace.name) {
       // User namespaces may also have completely custom URL (template).
       // Must contain {%keyword} and {%argumentCount}.
       namespace.type = "user";
     } else if (namespace.github) {
-      this.addFetchUrlTemplateToGithubNamespace(namespace);
+      //this.addFetchUrlTemplateToGithubNamespace(namespace);
     }
     // Yes, a string namespace with length < 4 will be ignored.
     return namespace;
@@ -184,14 +212,14 @@ export default class Env {
    *
    * @param {string} name - The namespace name.
    */
-  addFetchUrlTemplateToSiteNamespace(name) {
+  addFetchUrlToSiteNamespace(name) {
     const namespace = {
       name: name,
       type: "site",
       url:
-        "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
+        "https://raw.githubusercontent.com/trovu/trovu-data/one-yml-per-ns/shortcuts/" +
         name +
-        "/{%keyword}/{%argumentCount}.yml"
+        ".yml"
     };
     return namespace;
   }
