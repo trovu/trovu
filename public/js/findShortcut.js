@@ -39,7 +39,7 @@ export default class FindShortcut {
   static async fetchShortcuts(keyword, args, namespaces, reload, debug) {
 
     // Fetch all available shortcuts for our query and namespace settings.
-    var shortcuts = [];
+    let shortcuts = [];
     let promises = [];
     for (let namespace of namespaces) {
       var fetchUrl = this.buildFetchUrl(namespace, keyword, args.length);
