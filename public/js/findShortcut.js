@@ -84,6 +84,11 @@ export default class FindShortcut {
 
     const shortcuts = {};
     for (let namespace of namespaces) {
+      // If shortcuts are empty.
+      // (e.g. because of previous fetch error)
+      if (!namespace.shortcuts) {
+        continue;
+      }
       const shortcut = namespace.shortcuts[keyword + '/' + args.length]
       if (shortcut) {
         shortcuts[namespace.name] = shortcut;
