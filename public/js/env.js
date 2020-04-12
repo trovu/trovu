@@ -171,6 +171,17 @@ export default class Env {
       }
       if (debug) Helper.log("Success: " + responses[i].url);
       const text = await responses[i].text();
+      const shortcuts = jsyaml.load(text);
+      // Check for 'only URL' shortcuts.
+      // TODO: Refactor.
+      for (let key in shortcuts) {
+        if (typeof shortcuts[key] === 'string') {
+          const url = shortcuts[key];
+          shortcuts[key] = {
+            url: url
+          }
+        }
+      }
       namespaces[i].shortcuts = jsyaml.load(text);
     };
     return namespaces;
