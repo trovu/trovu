@@ -7,14 +7,11 @@ yr/1:
   - forecast
   examples:
     Oslo: Look up the weather in Oslo
-  tests: []
 zal/1:
   url: 'http://www.zalando.no/katalog/?q={%produkt}'
   title: Zalando.no
-  description: ''
   tags:
   - shopping
   - zalando
   examples:
     sko: søke sko
-  tests: []

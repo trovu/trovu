@@ -1,108 +1,82 @@
 beslist/0:
   url: 'http://www.beslist.nl/'
   title: BESLIST.nl
-  description: ''
-  tags: []
   examples:
     kartonnen poef: Zoek waar je online een kartonnen poef kunt kopen
-  tests: []
 beslist/1:
   url: 'http://www.beslist.nl/products/r/{%zoekwoorden}/'
   title: BESLIST.nl
-  description: ''
-  tags: []
   examples:
     kartonnen poef: Zoek waar je online een kartonnen poef kunt kopen
-  tests: []
 bol/1:
   url: 'http://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/{%query}/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html'
   title: Bol.com Nederlands
-  description: ''
   tags:
   - bol
   - shoppings
   - books
   examples:
     shakespeare: Search for Shakespeare
-  tests: []
 e/0:
   url: 'http://rover.ebay.com/rover/1/1346-53482-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229557&kwid=902099&mtid=824&kw=lg'
   title: Ebay.nl
-  description: ''
   tags:
   - shopping
   - ebay
   - affiliate
-  examples: []
-  tests: []
 e/1:
   url: 'http://rover.ebay.com/rover/1/1346-53482-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229557&kwid=902099&mtid=824&kw=lg'
   title: Ebay.nl
-  description: ''
   tags:
   - shopping
   - ebay
   - affiliate
   examples:
     smartphone: Search for "smartphone"
-  tests: []
 g/1:
   url: 'https://www.google.nl/search?hl={$language}&q={%query}&ie=utf-8'
   title: Google.nl
-  description: ''
   tags:
   - web search
   - google
   examples:
     amsterdam: Google zoeken naar "amsterdam"
-  tests: []
 gn/1:
   url: 'https://www.google.de/search?ned=nl_nl&q={%query}&tbm=nws&source=lnms'
   title: Google Nieuws (Nederland)
-  description: ''
   tags:
   - news
   - google
   examples:
     obama: Op Google News naar obama zoeken
-  tests: []
 ikea/0:
   url: 'http://www.ikea.com/nl/nl/'
   title: IKEA Nederland
-  description: ''
   tags:
   - ikea
   - furniture
   - shopping
-  examples: []
-  tests: []
 ikea/1:
   url: 'http://www.ikea.com/nl/nl/search/?query={%query}'
   title: IKEA Nederland
-  description: ''
   tags:
   - ikea
   - furniture
   - shopping
   examples:
     matras: zoek na matrassen
-  tests: []
 kenteken/1:
   url: 'http://publiek.vwe.nl/?txtkentekenveld={%query}'
   title: RDW kenteken zoeken
-  description: ''
   tags:
   - kenteken
   examples:
     8kxz29: zoek kenteken 8kxz29
-  tests: []
 zal/1:
   url: 'http://www.zalando.nl/catalogus/?q={%product}'
   title: Zalando.nl
-  description: ''
   tags:
   - shopping
   - zalando
   examples:
     schoenen: zoek schoenen
-  tests: []

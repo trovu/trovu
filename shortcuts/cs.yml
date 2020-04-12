@@ -1,14 +1,12 @@
 csfd/1:
   url: 'http://www.csfd.cz/hledat/?q={%výraz}'
   title: Česko-Slovenská filmová databáze
-  description: ''
   tags:
   - movies
   - czech
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
-  tests: []
 de/1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
@@ -17,7 +15,6 @@ de/1:
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Německo-český (Lingea)
-  description: ''
   tags:
   - dictionary
   - language
@@ -28,7 +25,6 @@ de/1:
   examples:
     baum: '"baum" český'
     strom: '"strom" německý'
-  tests: []
 en/1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
@@ -37,7 +33,6 @@ en/1:
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Anglicko-český (Lingea)
-  description: ''
   tags:
   - dictionary
   - language
@@ -48,7 +43,6 @@ en/1:
   examples:
     tree: '"tree" český'
     strom: '"strom" anglický'
-  tests: []
 es/1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
@@ -57,7 +51,6 @@ es/1:
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Španělsko-český (Lingea)
-  description: ''
   tags:
   - dictionary
   - language
@@ -68,7 +61,6 @@ es/1:
   examples:
     árbol: '"árbol" český'
     strom: '"strom" španělský'
-  tests: []
 fr/1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
@@ -77,7 +69,6 @@ fr/1:
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Francouzko-český (Lingea)
-  description: ''
   tags:
   - dictionary
   - language
@@ -88,16 +79,13 @@ fr/1:
   examples:
     arbre: '"arbre" český'
     strom: '"strom" francouzký'
-  tests: []
 kinobox/1:
   url: 'http://www.kinobox.cz/najdi?t={%query}'
   title: Kinobox.cz
-  description: ''
   tags:
   - movies
   examples:
     forrest gump: Search for "forrest gump"
-  tests: []
 pl/1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
@@ -106,7 +94,6 @@ pl/1:
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Polsko-český (Lingea)
-  description: ''
   tags:
   - dictionary
   - language
@@ -117,7 +104,6 @@ pl/1:
   examples:
     drzewo: '"drzewo" český'
     strom: '"strom" polský'
-  tests: []
 vi/1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
@@ -126,7 +112,6 @@ vi/1:
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Vietnamsko-český (Lingea)
-  description: ''
   tags:
   - dictionary
   - language
@@ -137,4 +122,3 @@ vi/1:
   examples:
     cây: '"cây" český'
     strom: '"strom" vietnamský'
-  tests: []

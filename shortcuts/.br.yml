@@ -1,7 +1,6 @@
 a/1:
   url: 'http://www.amazon.br/s/?field-keywords={%query}'
   title: Amazon.br
-  description: ''
   tags:
   - amazon
   - shopping
@@ -9,4 +8,3 @@ a/1:
   - affiliate
   examples:
     shakespeare: Search for "shakespeare"
-  tests: []

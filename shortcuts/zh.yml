@@ -1,17 +1,14 @@
 de/1:
   url: 'http://dict.leo.org/chde?search={%Wort}'
   title: Deutsch-Chinesisch (leo.org)
-  description: ''
   tags:
   - language
   - dictionary
   examples:
     baum: Search for "baum"
-  tests: []
 en/1:
   url: 'http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}'
   title: English-Chinese
-  description: ''
   tags:
   - chinese
   - language
@@ -20,14 +17,11 @@ en/1:
   examples:
     tree: Translation of "tree"
     木: Translation of 木
-  tests: []
 last/1:
   url: 'http://www.last.fm/search?setlang=zh&q={%artist}'
   title: Last.fm
-  description: ''
   tags:
   - music
   - lastfm
   examples:
     beatles: Search for "beatles"
-  tests: []

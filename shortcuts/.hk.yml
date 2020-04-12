@@ -1,19 +1,14 @@
 e/0:
   url: 'http://www.ebay.com.hk/'
   title: Ebay.com.hk
-  description: ''
   tags:
   - shopping
   - ebay
-  examples: []
-  tests: []
 e/1:
   url: 'http://www.ebay.com.hk/sch/i.html?_nkw={%query}'
   title: Ebay.com.hk
-  description: ''
   tags:
   - shopping
   - ebay
   examples:
     smartphone: Search for "smartphone"
-  tests: []

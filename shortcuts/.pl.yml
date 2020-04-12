@@ -1,62 +1,46 @@
 al/0:
   url: 'http://allegro.pl/'
   title: Allegro
-  description: ''
   tags:
   - shopping
   - allegro
-  examples: []
-  tests: []
 al/1:
   url: 'http://allegro.pl/search.php?sg=0&string={%przedmiot}'
   title: Allegro
-  description: ''
   tags:
   - shopping
   - allegro
   examples:
     smartfon: szukaj "smartfon"
-  tests: []
 ceneo/0:
   url: 'http://www.ceneo.pl/'
   title: Ceneo
-  description: ''
   tags:
   - shopping
-  examples: []
-  tests: []
 ceneo/1:
   url: 'http://www.ceneo.pl/categories.aspx?search=yes&categoryID=0&searchText={%produkt}&inDesc=False&minPrice=0&maxPrice=99999999'
   title: Ceneo
-  description: ''
   tags:
   - shopping
   examples:
     iphone: ceny iPhone'a
-  tests: []
 e/0:
   url: 'http://www.ebay.pl/'
   title: Ebay.pl
-  description: ''
   tags:
   - shopping
   - ebay
-  examples: []
-  tests: []
 e/1:
   url: 'http://www.ebay.pl/sch/i.html?_nkw={%query}'
   title: Ebay.pl
-  description: ''
   tags:
   - shopping
   - ebay
   examples:
     smartphone: Search for "smartphone"
-  tests: []
 ep/2:
   url: 'http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}'
   title: e-podróżnik.pl
-  description: ''
   tags:
   - travel
   - railway
@@ -64,11 +48,9 @@ ep/2:
   - e-podróżnik
   examples:
     'kutno, gniezno': połączenie z Kutna do Gniezna
-  tests: []
 ep/3:
   url: 'http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}'
   title: e-podróżnik.pl
-  description: ''
   tags:
   - travel
   - railway
@@ -76,11 +58,9 @@ ep/3:
   - e-podróżnik
   examples:
     'kutno, gniezno, 10': połączenie z Kutna do Gniezna o godz. 10
-  tests: []
 ep/4:
   url: 'http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}&formCompositeSearcherFinal.date={%data}'
   title: e-podróżnik.pl
-  description: ''
   tags:
   - travel
   - railway
@@ -88,3510 +68,2808 @@ ep/4:
   - e-podróżnik
   examples:
     'kutno, gniezno, 10, 31.1.13': połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
-  tests: []
 g/1:
   url: 'https://www.google.pl/search?hl={$language}&q={%query}&ie=utf-8'
   title: Google.pl
-  description: ''
   tags:
   - web search
   - google
   examples:
     warszawa: Szukaj "warszawa" w Google.pl
-  tests: []
 gastro/2:
   url: 'http://www.gastronauci.pl/pl/restauracje/{%miasto}?kind={%lokal/kuchnia}'
   title: gastronauci.pl
-  description: ''
   tags:
   - food
   - restaurant
   examples:
     'warszawa, bar mleczny': bary mleczne w Warszawie
-  tests: []
 gmbau/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20August%C3%B3w%2C%20Polska'
   title: Google Maps Augustów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Augustów
-  tests: []
 gmbbi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bielsk+Podlaski%2C%20Polska'
   title: Google Maps Bielsk Podlaski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bielsk Podlaski
-  tests: []
 gmbgr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grajewo%2C%20Polska'
   title: Google Maps Grajewo
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Grajewo
-  tests: []
 gmbha/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Hajn%C3%B3wka%2C%20Polska'
   title: Google Maps Hajnówka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Hajnówka
-  tests: []
 gmbi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82ystok%2C%20Polska'
   title: Google Maps Białystok
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Białystok
-  tests: []
 gmbkl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kolno%2C%20Polska'
   title: Google Maps Kolno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kolno
-  tests: []
 gmbl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81om%C5%BCa%2C%20Polska'
   title: Google Maps Łomża
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łomża
-  tests: []
 gmbmn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mo%C5%84ki%2C%20Polska'
   title: Google Maps Mońki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mońki
-  tests: []
 gmbs/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Suwa%C5%82ki%2C%20Polska'
   title: Google Maps Suwałki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Suwałki
-  tests: []
 gmbse/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sejny%2C%20Polska'
   title: Google Maps Sejny
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sejny
-  tests: []
 gmbsi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Siemiatycze%2C%20Polska'
   title: Google Maps Siemiatycze
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Siemiatycze
-  tests: []
 gmbsk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sok%C3%B3%C5%82ka%2C%20Polska'
   title: Google Maps Sokółka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sokółka
-  tests: []
 gmbwm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wysokie+Mazowieckie%2C%20Polska'
   title: Google Maps Wysokie Mazowieckie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wysokie Mazowieckie
-  tests: []
 gmbza/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zambr%C3%B3w%2C%20Polska'
   title: Google Maps Zambrów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zambrów
-  tests: []
 gmcal/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Aleksandr%C3%B3w+Kujawski%2C%20Polska'
   title: Google Maps Aleksandrów Kujawski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Aleksandrów Kujawski
-  tests: []
 gmcb/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bydgoszcz%2C%20Polska'
   title: Google Maps Bydgoszcz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bydgoszcz
-  tests: []
 gmcbr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brodnica%2C%20Polska'
   title: Google Maps Brodnica
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Brodnica
-  tests: []
 gmcch/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Che%C5%82mno%2C%20Polska'
   title: Google Maps Chełmno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Chełmno
-  tests: []
 gmcg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grudzi%C4%85dz%2C%20Polska'
   title: Google Maps Grudziądz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Grudziądz
-  tests: []
 gmcgd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Golub-Dobrzy%C5%84%2C%20Polska'
   title: Google Maps Golub-Dobrzyń
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Golub-Dobrzyń
-  tests: []
 gmcin/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Inowroc%C5%82aw%2C%20Polska'
   title: Google Maps Inowrocław
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Inowrocław
-  tests: []
 gmcli/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lipno%2C%20Polska'
   title: Google Maps Lipno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lipno
-  tests: []
 gmcmg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mogilno%2C%20Polska'
   title: Google Maps Mogilno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mogilno
-  tests: []
 gmcna/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nak%C5%82o+nad+Noteci%C4%85%2C%20Polska'
   title: Google Maps Nakło nad Notecią
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nakło nad Notecią
-  tests: []
 gmcra/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radziej%C3%B3w%2C%20Polska'
   title: Google Maps Radziejów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Radziejów
-  tests: []
 gmcry/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rypin%2C%20Polska'
   title: Google Maps Rypin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Rypin
-  tests: []
 gmcse/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C4%99p%C3%B3lno+Kraje%C5%84skie%2C%20Polska'
   title: Google Maps Sępólno Krajeńskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sępólno Krajeńskie
-  tests: []
 gmcsw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awiecie%2C%20Polska'
   title: Google Maps Świecie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Świecie
-  tests: []
 gmct/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Toru%C5%84%2C%20Polska'
   title: Google Maps Toruń
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Toruń
-  tests: []
 gmctu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tuchola%2C%20Polska'
   title: Google Maps Tuchola
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tuchola
-  tests: []
 gmcw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C5%82oc%C5%82awek%2C%20Polska'
   title: Google Maps Włocławek
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Włocławek
-  tests: []
 gmcwa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%85brze%C5%BAno%2C%20Polska'
   title: Google Maps Wąbrzeźno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wąbrzeźno
-  tests: []
 gmczn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBnin%2C%20Polska'
   title: Google Maps Żnin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Żnin
-  tests: []
 gmdb/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wa%C5%82brzych%2C%20Polska'
   title: Google Maps Wałbrzych
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wałbrzych
-  tests: []
 gmdbl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Boles%C5%82awiec%2C%20Polska'
   title: Google Maps Bolesławiec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bolesławiec
-  tests: []
 gmddz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Dzier%C5%BConi%C3%B3w%2C%20Polska'
   title: Google Maps Dzierżoniów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Dzierżoniów
-  tests: []
 gmdgl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20G%C5%82og%C3%B3w%2C%20Polska'
   title: Google Maps Głogów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Głogów
-  tests: []
 gmdgr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20G%C3%B3ra%2C%20Polska'
   title: Google Maps Góra
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Góra
-  tests: []
 gmdj/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jelenia+G%C3%B3ra%2C%20Polska'
   title: Google Maps Jelenia Góra
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jelenia Góra
-  tests: []
 gmdja/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jawor%2C%20Polska'
   title: Google Maps Jawor
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jawor
-  tests: []
 gmdka/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kamienna+G%C3%B3ra%2C%20Polska'
   title: Google Maps Kamienna Góra
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kamienna Góra
-  tests: []
 gmdkl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C5%82odzko%2C%20Polska'
   title: Google Maps Kłodzko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kłodzko
-  tests: []
 gmdl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Legnica%2C%20Polska'
   title: Google Maps Legnica
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Legnica
-  tests: []
 gmdlb/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Luba%C5%84%2C%20Polska'
   title: Google Maps Lubań
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubań
-  tests: []
 gmdlu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubin%2C%20Polska'
   title: Google Maps Lubin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubin
-  tests: []
 gmdlw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lw%C3%B3wek+%C5%9Al%C4%85ski%2C%20Polska'
   title: Google Maps Lwówek Śląski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lwówek Śląski
-  tests: []
 gmdmi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Milicz%2C%20Polska'
   title: Google Maps Milicz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Milicz
-  tests: []
 gmdoa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20O%C5%82awa%2C%20Polska'
   title: Google Maps Oława
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Oława
-  tests: []
 gmdol/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ole%C5%9Bnica%2C%20Polska'
   title: Google Maps Oleśnica
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Oleśnica
-  tests: []
 gmdpl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Polkowice%2C%20Polska'
   title: Google Maps Polkowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Polkowice
-  tests: []
 gmdsr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Aroda+%C5%9Al%C4%85ska%2C%20Polska'
   title: Google Maps Środa Śląska
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Środa Śląska
-  tests: []
 gmdst/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzelin%2C%20Polska'
   title: Google Maps Strzelin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzelin
-  tests: []
 gmdsw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awidnica%2C%20Polska'
   title: Google Maps Świdnica
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Świdnica
-  tests: []
 gmdtr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Trzebnica%2C%20Polska'
   title: Google Maps Trzebnica
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Trzebnica
-  tests: []
 gmdw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wroc%C5%82aw%2C%20Polska'
   title: Google Maps Wrocław
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wrocław
-  tests: []
 gmdwl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wo%C5%82%C3%B3w%2C%20Polska'
   title: Google Maps Wołów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wołów
-  tests: []
 gmdza/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Z%C4%85bkowice+%C5%9Al%C4%85skie%2C%20Polska'
   title: Google Maps Ząbkowice Śląskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ząbkowice Śląskie
-  tests: []
 gmdzg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zgorzelec%2C%20Polska'
   title: Google Maps Zgorzelec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zgorzelec
-  tests: []
 gmdzl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Z%C5%82otoryja%2C%20Polska'
   title: Google Maps Złotoryja
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Złotoryja
-  tests: []
 gmebe/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Be%C5%82chat%C3%B3w%2C%20Polska'
   title: Google Maps Bełchatów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bełchatów
-  tests: []
 gmebr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzeziny%2C%20Polska'
   title: Google Maps Brzeziny
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzeziny
-  tests: []
 gmeku/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kutno%2C%20Polska'
   title: Google Maps Kutno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kutno
-  tests: []
 gmel/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81%C3%B3d%C5%BA%2C%20Polska'
   title: Google Maps Łódź
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łódź
-  tests: []
 gmela/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81ask%2C%20Polska'
   title: Google Maps Łask
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łask
-  tests: []
 gmelc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81owicz%2C%20Polska'
   title: Google Maps Łowicz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łowicz
-  tests: []
 gmele/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81%C4%99czyca%2C%20Polska'
   title: Google Maps Łęczyca
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łęczyca
-  tests: []
 gmeop/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opoczno%2C%20Polska'
   title: Google Maps Opoczno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Opoczno
-  tests: []
 gmep/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Piotrk%C3%B3w+Trybunalski%2C%20Polska'
   title: Google Maps Piotrków Trybunalski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Piotrków Trybunalski
-  tests: []
 gmepa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pabianice%2C%20Polska'
   title: Google Maps Pabianice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pabianice
-  tests: []
 gmepd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Podd%C4%99bice%2C%20Polska'
   title: Google Maps Poddębice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Poddębice
-  tests: []
 gmepj/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Paj%C4%99czno%2C%20Polska'
   title: Google Maps Pajęczno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pajęczno
-  tests: []
 gmera/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radomsko%2C%20Polska'
   title: Google Maps Radomsko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Radomsko
-  tests: []
 gmerw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rawa+Mazowiecka%2C%20Polska'
   title: Google Maps Rawa Mazowiecka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Rawa Mazowiecka
-  tests: []
 gmes/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Skierniewice%2C%20Polska'
   title: Google Maps Skierniewice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Skierniewice
-  tests: []
 gmesi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sieradz%2C%20Polska'
   title: Google Maps Sieradz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sieradz
-  tests: []
 gmetm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tomasz%C3%B3w+Mazowiecki%2C%20Polska'
   title: Google Maps Tomaszów Mazowiecki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tomaszów Mazowiecki
-  tests: []
 gmewe/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wierusz%C3%B3w%2C%20Polska'
   title: Google Maps Wieruszów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wieruszów
-  tests: []
 gmewi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wielu%C5%84%2C%20Polska'
   title: Google Maps Wieluń
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wieluń
-  tests: []
 gmezd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zdu%C5%84ska+Wola%2C%20Polska'
   title: Google Maps Zduńska Wola
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zduńska Wola
-  tests: []
 gmezg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zgierz%2C%20Polska'
   title: Google Maps Zgierz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zgierz
-  tests: []
 gmfg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gorz%C3%B3w+Wielkopolski%2C%20Polska'
   title: Google Maps Gorzów Wielkopolski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gorzów Wielkopolski
-  tests: []
 gmfkr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krosno+Odrza%C5%84skie%2C%20Polska'
   title: Google Maps Krosno Odrzańskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Krosno Odrzańskie
-  tests: []
 gmfmi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mi%C4%99dzyrzecz%2C%20Polska'
   title: Google Maps Międzyrzecz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Międzyrzecz
-  tests: []
 gmfnw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowa+S%C3%B3l%2C%20Polska'
   title: Google Maps Nowa Sól
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowa Sól
-  tests: []
 gmfsd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzelce+Kraje%C5%84skie%2C%20Polska'
   title: Google Maps Strzelce Krajeńskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzelce Krajeńskie
-  tests: []
 gmfsl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82ubice%2C%20Polska'
   title: Google Maps Słubice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Słubice
-  tests: []
 gmfsu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sul%C4%99cin%2C%20Polska'
   title: Google Maps Sulęcin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sulęcin
-  tests: []
 gmfsw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awiebodzin%2C%20Polska'
   title: Google Maps Świebodzin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Świebodzin
-  tests: []
 gmfws/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wschowa%2C%20Polska'
   title: Google Maps Wschowa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wschowa
-  tests: []
 gmfz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zielona+G%C3%B3ra%2C%20Polska'
   title: Google Maps Zielona Góra
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zielona Góra
-  tests: []
 gmfza/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBary%2C%20Polska'
   title: Google Maps Żary
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Żary
-  tests: []
 gmfzg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBaga%C5%84%2C%20Polska'
   title: Google Maps Żagań
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Żagań
-  tests: []
 gmga/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gdynia%2C%20Polska'
   title: Google Maps Gdynia
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gdynia
-  tests: []
 gmgby/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Byt%C3%B3w%2C%20Polska'
   title: Google Maps Bytów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bytów
-  tests: []
 gmgch/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chojnice%2C%20Polska'
   title: Google Maps Chojnice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Chojnice
-  tests: []
 gmgcz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Cz%C5%82uch%C3%B3w%2C%20Polska'
   title: Google Maps Człuchów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Człuchów
-  tests: []
 gmgd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gda%C5%84sk%2C%20Polska'
   title: Google Maps Gdańsk
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gdańsk
-  tests: []
 gmgda/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pruszcz+Gda%C5%84ski%2C%20Polska'
   title: Google Maps Pruszcz Gdański
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pruszcz Gdański
-  tests: []
 gmgka/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kartuzy%2C%20Polska'
   title: Google Maps Kartuzy
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kartuzy
-  tests: []
 gmgks/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%9Bcierzyna%2C%20Polska'
   title: Google Maps Kościerzyna
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kościerzyna
-  tests: []
 gmgkw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kwidzyn%2C%20Polska'
   title: Google Maps Kwidzyn
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kwidzyn
-  tests: []
 gmgle/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20L%C4%99bork%2C%20Polska'
   title: Google Maps Lębork
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lębork
-  tests: []
 gmgmb/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Malbork%2C%20Polska'
   title: Google Maps Malbork
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Malbork
-  tests: []
 gmgnd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Dw%C3%B3r+Gda%C5%84ski%2C%20Polska'
   title: Google Maps Nowy Dwór Gdański
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Dwór Gdański
-  tests: []
 gmgpu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Puck%2C%20Polska'
   title: Google Maps Puck
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Puck
-  tests: []
 gmgs/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82upsk%2C%20Polska'
   title: Google Maps Słupsk
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Słupsk
-  tests: []
 gmgsp/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sopot%2C%20Polska'
   title: Google Maps Sopot
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sopot
-  tests: []
 gmgst/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Starogard+Gda%C5%84ski%2C%20Polska'
   title: Google Maps Starogard Gdański
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Starogard Gdański
-  tests: []
 gmgsz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sztum%2C%20Polska'
   title: Google Maps Sztum
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sztum
-  tests: []
 gmgtc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tczew%2C%20Polska'
   title: Google Maps Tczew
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tczew
-  tests: []
 gmgwe/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wejherowo%2C%20Polska'
   title: Google Maps Wejherowo
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wejherowo
-  tests: []
 gmkbc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bochnia%2C%20Polska'
   title: Google Maps Bochnia
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bochnia
-  tests: []
 gmkbr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzesko%2C%20Polska'
   title: Google Maps Brzesko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzesko
-  tests: []
 gmkch/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chrzan%C3%B3w%2C%20Polska'
   title: Google Maps Chrzanów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Chrzanów
-  tests: []
 gmkda/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20D%C4%85browa+Tarnowska%2C%20Polska'
   title: Google Maps Dąbrowa Tarnowska
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Dąbrowa Tarnowska
-  tests: []
 gmkgr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gorlice%2C%20Polska'
   title: Google Maps Gorlice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gorlice
-  tests: []
 gmkli/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Limanowa%2C%20Polska'
   title: Google Maps Limanowa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Limanowa
-  tests: []
 gmkmi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Miech%C3%B3w%2C%20Polska'
   title: Google Maps Miechów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Miechów
-  tests: []
 gmkmy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20My%C5%9Blenice%2C%20Polska'
   title: Google Maps Myślenice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Myślenice
-  tests: []
 gmkn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+S%C4%85cz%2C%20Polska'
   title: Google Maps Nowy Sącz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Sącz
-  tests: []
 gmknt/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Targ%2C%20Polska'
   title: Google Maps Nowy Targ
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Targ
-  tests: []
 gmkol/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olkusz%2C%20Polska'
   title: Google Maps Olkusz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Olkusz
-  tests: []
 gmkos/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20O%C5%9Bwi%C4%99cim%2C%20Polska'
   title: Google Maps Oświęcim
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Oświęcim
-  tests: []
 gmkpr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Proszowice%2C%20Polska'
   title: Google Maps Proszowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Proszowice
-  tests: []
 gmkr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krak%C3%B3w%2C%20Polska'
   title: Google Maps Kraków
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kraków
-  tests: []
 gmksu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sucha+Beskidzka%2C%20Polska'
   title: Google Maps Sucha Beskidzka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sucha Beskidzka
-  tests: []
 gmkt/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tarn%C3%B3w%2C%20Polska'
   title: Google Maps Tarnów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tarnów
-  tests: []
 gmktt/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zakopane%2C%20Polska'
   title: Google Maps Zakopane
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zakopane
-  tests: []
 gmkwa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wadowice%2C%20Polska'
   title: Google Maps Wadowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wadowice
-  tests: []
 gmkwi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wieliczka%2C%20Polska'
   title: Google Maps Wieliczka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wieliczka
-  tests: []
 gmlb/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82a+Podlaska%2C%20Polska'
   title: Google Maps Biała Podlaska
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Biała Podlaska
-  tests: []
 gmlbl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bi%C5%82goraj%2C%20Polska'
   title: Google Maps Biłgoraj
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Biłgoraj
-  tests: []
 gmlc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Che%C5%82m%2C%20Polska'
   title: Google Maps Chełm
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Chełm
-  tests: []
 gmlhr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Hrubiesz%C3%B3w%2C%20Polska'
   title: Google Maps Hrubieszów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Hrubieszów
-  tests: []
 gmlja/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jan%C3%B3w+Lubelski%2C%20Polska'
   title: Google Maps Janów Lubelski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Janów Lubelski
-  tests: []
 gmlkr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kra%C5%9Bnik%2C%20Polska'
   title: Google Maps Kraśnik
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kraśnik
-  tests: []
 gmlks/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krasnystaw%2C%20Polska'
   title: Google Maps Krasnystaw
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Krasnystaw
-  tests: []
 gmllb/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubart%C3%B3w%2C%20Polska'
   title: Google Maps Lubartów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubartów
-  tests: []
 gmlle/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81%C4%99czna%2C%20Polska'
   title: Google Maps Łęczna
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łęczna
-  tests: []
 gmllu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81uk%C3%B3w%2C%20Polska'
   title: Google Maps Łuków
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łuków
-  tests: []
 gmlop/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opole+Lubelskie%2C%20Polska'
   title: Google Maps Opole Lubelskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Opole Lubelskie
-  tests: []
 gmlpa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Parczew%2C%20Polska'
   title: Google Maps Parczew
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Parczew
-  tests: []
 gmlpu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pu%C5%82awy%2C%20Polska'
   title: Google Maps Puławy
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Puławy
-  tests: []
 gmlra/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radzy%C5%84+Podlaski%2C%20Polska'
   title: Google Maps Radzyń Podlaski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Radzyń Podlaski
-  tests: []
 gmlry/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ryki%2C%20Polska'
   title: Google Maps Ryki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ryki
-  tests: []
 gmlsw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awidnik%2C%20Polska'
   title: Google Maps Świdnik
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Świdnik
-  tests: []
 gmltm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tomasz%C3%B3w+Lubelski%2C%20Polska'
   title: Google Maps Tomaszów Lubelski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tomaszów Lubelski
-  tests: []
 gmlu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lublin%2C%20Polska'
   title: Google Maps Lublin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lublin
-  tests: []
 gmlwl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C5%82odawa%2C%20Polska'
   title: Google Maps Włodawa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Włodawa
-  tests: []
 gmlz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zamo%C5%9B%C4%87%2C%20Polska'
   title: Google Maps Zamość
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zamość
-  tests: []
 gmnba/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bartoszyce%2C%20Polska'
   title: Google Maps Bartoszyce
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bartoszyce
-  tests: []
 gmnbr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Braniewo%2C%20Polska'
   title: Google Maps Braniewo
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Braniewo
-  tests: []
 gmndz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Dzia%C5%82dowo%2C%20Polska'
   title: Google Maps Działdowo
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Działdowo
-  tests: []
 gmne/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Elbl%C4%85g%2C%20Polska'
   title: Google Maps Elbląg
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Elbląg
-  tests: []
 gmnel/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20E%C5%82k%2C%20Polska'
   title: Google Maps Ełk
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ełk
-  tests: []
 gmngi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gi%C5%BCycko%2C%20Polska'
   title: Google Maps Giżycko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Giżycko
-  tests: []
 gmngo/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Go%C5%82dap%2C%20Polska'
   title: Google Maps Gołdap
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gołdap
-  tests: []
 gmnil/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20I%C5%82awa%2C%20Polska'
   title: Google Maps Iława
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Iława
-  tests: []
 gmnke/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C4%99trzyn%2C%20Polska'
   title: Google Maps Kętrzyn
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kętrzyn
-  tests: []
 gmnli/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lidzbark+Warmi%C5%84ski%2C%20Polska'
   title: Google Maps Lidzbark Warmiński
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lidzbark Warmiński
-  tests: []
 gmnmr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mr%C4%85gowo%2C%20Polska'
   title: Google Maps Mrągowo
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mrągowo
-  tests: []
 gmnni/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nidzica%2C%20Polska'
   title: Google Maps Nidzica
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nidzica
-  tests: []
 gmnnm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowe+Miasto+Lubawskie%2C%20Polska'
   title: Google Maps Nowe Miasto Lubawskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowe Miasto Lubawskie
-  tests: []
 gmno/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olsztyn%2C%20Polska'
   title: Google Maps Olsztyn
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Olsztyn
-  tests: []
 gmnoe/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olecko%2C%20Polska'
   title: Google Maps Olecko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Olecko
-  tests: []
 gmnos/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostr%C3%B3da%2C%20Polska'
   title: Google Maps Ostróda
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostróda
-  tests: []
 gmnpi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pisz%2C%20Polska'
   title: Google Maps Pisz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pisz
-  tests: []
 gmnsz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szczytno%2C%20Polska'
   title: Google Maps Szczytno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Szczytno
-  tests: []
 gmnwe/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%99gorzewo%2C%20Polska'
   title: Google Maps Węgorzewo
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Węgorzewo
-  tests: []
 gmob/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzeg%2C%20Polska'
   title: Google Maps Brzeg
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzeg
-  tests: []
 gmogl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20G%C5%82ubczyce%2C%20Polska'
   title: Google Maps Głubczyce
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Głubczyce
-  tests: []
 gmok/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C4%99dzierzyn-Ko%C5%BAle%2C%20Polska'
   title: Google Maps Kędzierzyn-Koźle
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kędzierzyn-Koźle
-  tests: []
 gmokl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kluczbork%2C%20Polska'
   title: Google Maps Kluczbork
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kluczbork
-  tests: []
 gmokr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krapkowice%2C%20Polska'
   title: Google Maps Krapkowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Krapkowice
-  tests: []
 gmona/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Namys%C5%82%C3%B3w%2C%20Polska'
   title: Google Maps Namysłów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Namysłów
-  tests: []
 gmony/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nysa%2C%20Polska'
   title: Google Maps Nysa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nysa
-  tests: []
 gmool/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olesno%2C%20Polska'
   title: Google Maps Olesno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Olesno
-  tests: []
 gmop/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opole%2C%20Polska'
   title: Google Maps Opole
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Opole
-  tests: []
 gmopr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Prudnik%2C%20Polska'
   title: Google Maps Prudnik
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Prudnik
-  tests: []
 gmost/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzelce+Opolskie%2C%20Polska'
   title: Google Maps Strzelce Opolskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzelce Opolskie
-  tests: []
 gmpch/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chodzie%C5%BC%2C%20Polska'
   title: Google Maps Chodzież
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Chodzież
-  tests: []
 gmpct/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Czarnk%C3%B3w%2C%20Polska'
   title: Google Maps Czarnków
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Czarnków
-  tests: []
 gmpgn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gniezno%2C%20Polska'
   title: Google Maps Gniezno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gniezno
-  tests: []
 gmpgo/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grodzisk+Wielkopolski%2C%20Polska'
   title: Google Maps Grodzisk Wielkopolski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Grodzisk Wielkopolski
-  tests: []
 gmpgs/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gosty%C5%84%2C%20Polska'
   title: Google Maps Gostyń
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gostyń
-  tests: []
 gmpja/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jarocin%2C%20Polska'
   title: Google Maps Jarocin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jarocin
-  tests: []
 gmpk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kalisz%2C%20Polska'
   title: Google Maps Kalisz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kalisz
-  tests: []
 gmpke/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C4%99pno%2C%20Polska'
   title: Google Maps Kępno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kępno
-  tests: []
 gmpkl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%82o%2C%20Polska'
   title: Google Maps Koło
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Koło
-  tests: []
 gmpkr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krotoszyn%2C%20Polska'
   title: Google Maps Krotoszyn
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Krotoszyn
-  tests: []
 gmpks/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%9Bcian%2C%20Polska'
   title: Google Maps Kościan
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kościan
-  tests: []
 gmpl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Leszno%2C%20Polska'
   title: Google Maps Leszno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Leszno
-  tests: []
 gmpmi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mi%C4%99dzych%C3%B3d%2C%20Polska'
   title: Google Maps Międzychód
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Międzychód
-  tests: []
 gmpn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Konin%2C%20Polska'
   title: Google Maps Konin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Konin
-  tests: []
 gmpnt/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Tomy%C5%9Bl%2C%20Polska'
   title: Google Maps Nowy Tomyśl
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Tomyśl
-  tests: []
 gmpo/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pozna%C5%84%2C%20Polska'
   title: Google Maps Poznań
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Poznań
-  tests: []
 gmpob/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Oborniki%2C%20Polska'
   title: Google Maps Oborniki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Oborniki
-  tests: []
 gmpos/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostr%C3%B3w+Wielkopolski%2C%20Polska'
   title: Google Maps Ostrów Wielkopolski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrów Wielkopolski
-  tests: []
 gmpot/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostrzesz%C3%B3w%2C%20Polska'
   title: Google Maps Ostrzeszów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrzeszów
-  tests: []
 gmpp/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pi%C5%82a%2C%20Polska'
   title: Google Maps Piła
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Piła
-  tests: []
 gmppl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pleszew%2C%20Polska'
   title: Google Maps Pleszew
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pleszew
-  tests: []
 gmpra/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rawicz%2C%20Polska'
   title: Google Maps Rawicz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Rawicz
-  tests: []
 gmpse/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Arem%2C%20Polska'
   title: Google Maps Śrem
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Śrem
-  tests: []
 gmpsl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82upca%2C%20Polska'
   title: Google Maps Słupca
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Słupca
-  tests: []
 gmpsr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Aroda+Wielkopolska%2C%20Polska'
   title: Google Maps Środa Wielkopolska
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Środa Wielkopolska
-  tests: []
 gmpsz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szamotu%C5%82y%2C%20Polska'
   title: Google Maps Szamotuły
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Szamotuły
-  tests: []
 gmptu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Turek%2C%20Polska'
   title: Google Maps Turek
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Turek
-  tests: []
 gmpwa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%85growiec%2C%20Polska'
   title: Google Maps Wągrowiec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wągrowiec
-  tests: []
 gmpwl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wolsztyn%2C%20Polska'
   title: Google Maps Wolsztyn
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wolsztyn
-  tests: []
 gmpwr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wrze%C5%9Bnia%2C%20Polska'
   title: Google Maps Września
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Września
-  tests: []
 gmpzl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Z%C5%82ot%C3%B3w%2C%20Polska'
   title: Google Maps Złotów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Złotów
-  tests: []
 gmrbi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ustrzyki+Dolne%2C%20Polska'
   title: Google Maps Ustrzyki Dolne
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ustrzyki Dolne
-  tests: []
 gmrbr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzoz%C3%B3w%2C%20Polska'
   title: Google Maps Brzozów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzozów
-  tests: []
 gmrde/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20D%C4%99bica%2C%20Polska'
   title: Google Maps Dębica
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Dębica
-  tests: []
 gmrja/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jaros%C5%82aw%2C%20Polska'
   title: Google Maps Jarosław
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jarosław
-  tests: []
 gmrjs/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jas%C5%82o%2C%20Polska'
   title: Google Maps Jasło
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jasło
-  tests: []
 gmrk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krosno%2C%20Polska'
   title: Google Maps Krosno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Krosno
-  tests: []
 gmrkl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kolbuszowa%2C%20Polska'
   title: Google Maps Kolbuszowa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kolbuszowa
-  tests: []
 gmrla/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81a%C5%84cut%2C%20Polska'
   title: Google Maps Łańcut
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łańcut
-  tests: []
 gmrle/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Le%C5%BCajsk%2C%20Polska'
   title: Google Maps Leżajsk
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Leżajsk
-  tests: []
 gmrls/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lesko%2C%20Polska'
   title: Google Maps Lesko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lesko
-  tests: []
 gmrlu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubacz%C3%B3w%2C%20Polska'
   title: Google Maps Lubaczów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubaczów
-  tests: []
 gmrmi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mielec%2C%20Polska'
   title: Google Maps Mielec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mielec
-  tests: []
 gmrni/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nisko%2C%20Polska'
   title: Google Maps Nisko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nisko
-  tests: []
 gmrp/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przemy%C5%9Bl%2C%20Polska'
   title: Google Maps Przemyśl
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Przemyśl
-  tests: []
 gmrpz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przeworsk%2C%20Polska'
   title: Google Maps Przeworsk
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Przeworsk
-  tests: []
 gmrrs/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ropczyce%2C%20Polska'
   title: Google Maps Ropczyce
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ropczyce
-  tests: []
 gmrsa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sanok%2C%20Polska'
   title: Google Maps Sanok
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sanok
-  tests: []
 gmrsr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzy%C5%BC%C3%B3w%2C%20Polska'
   title: Google Maps Strzyżów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzyżów
-  tests: []
 gmrst/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Stalowa+Wola%2C%20Polska'
   title: Google Maps Stalowa Wola
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Stalowa Wola
-  tests: []
 gmrt/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tarnobrzeg%2C%20Polska'
   title: Google Maps Tarnobrzeg
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tarnobrzeg
-  tests: []
 gmrz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rzesz%C3%B3w%2C%20Polska'
   title: Google Maps Rzeszów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Rzeszów
-  tests: []
 gmsb/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bielsko-Bia%C5%82a%2C%20Polska'
   title: Google Maps Bielsko-Biała
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bielsko-Biała
-  tests: []
 gmsbe/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20B%C4%99dzin%2C%20Polska'
   title: Google Maps Będzin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Będzin
-  tests: []
 gmsbl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bieru%C5%84%2C%20Polska'
   title: Google Maps Bieruń
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bieruń
-  tests: []
 gmsc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Cz%C4%99stochowa%2C%20Polska'
   title: Google Maps Częstochowa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Częstochowa
-  tests: []
 gmsci/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Cieszyn%2C%20Polska'
   title: Google Maps Cieszyn
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Cieszyn
-  tests: []
 gmsd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20D%C4%85browa+G%C3%B3rnicza%2C%20Polska'
   title: Google Maps Dąbrowa Górnicza
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Dąbrowa Górnicza
-  tests: []
 gmsg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gliwice%2C%20Polska'
   title: Google Maps Gliwice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gliwice
-  tests: []
 gmsh/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chorz%C3%B3w%2C%20Polska'
   title: Google Maps Chorzów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Chorzów
-  tests: []
 gmsi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Siemianowice+%C5%9Al%C4%85skie%2C%20Polska'
   title: Google Maps Siemianowice Śląskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Siemianowice Śląskie
-  tests: []
 gmsj/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jaworzno%2C%20Polska'
   title: Google Maps Jaworzno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jaworzno
-  tests: []
 gmsjz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jastrz%C4%99bie-Zdr%C3%B3j%2C%20Polska'
   title: Google Maps Jastrzębie-Zdrój
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jastrzębie-Zdrój
-  tests: []
 gmsk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Katowice%2C%20Polska'
   title: Google Maps Katowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Katowice
-  tests: []
 gmskl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C5%82obuck%2C%20Polska'
   title: Google Maps Kłobuck
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kłobuck
-  tests: []
 gmsl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ruda+%C5%9Al%C4%85ska%2C%20Polska'
   title: Google Maps Ruda Śląska
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ruda Śląska
-  tests: []
 gmslu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubliniec%2C%20Polska'
   title: Google Maps Lubliniec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubliniec
-  tests: []
 gmsm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mys%C5%82owice%2C%20Polska'
   title: Google Maps Mysłowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mysłowice
-  tests: []
 gmsmi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Miko%C5%82%C3%B3w%2C%20Polska'
   title: Google Maps Mikołów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mikołów
-  tests: []
 gmsmy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Myszk%C3%B3w%2C%20Polska'
   title: Google Maps Myszków
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Myszków
-  tests: []
 gmso/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sosnowiec%2C%20Polska'
   title: Google Maps Sosnowiec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sosnowiec
-  tests: []
 gmspi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Piekary+%C5%9Al%C4%85skie%2C%20Polska'
   title: Google Maps Piekary Śląskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Piekary Śląskie
-  tests: []
 gmsps/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pszczyna%2C%20Polska'
   title: Google Maps Pszczyna
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pszczyna
-  tests: []
 gmsr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rybnik%2C%20Polska'
   title: Google Maps Rybnik
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Rybnik
-  tests: []
 gmsrc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Racib%C3%B3rz%2C%20Polska'
   title: Google Maps Racibórz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Racibórz
-  tests: []
 gmst/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tychy%2C%20Polska'
   title: Google Maps Tychy
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tychy
-  tests: []
 gmsta/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tarnowskie+G%C3%B3ry%2C%20Polska'
   title: Google Maps Tarnowskie Góry
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Tarnowskie Góry
-  tests: []
 gmsw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awi%C4%99toch%C5%82owice%2C%20Polska'
   title: Google Maps Świętochłowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Świętochłowice
-  tests: []
 gmswd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wodzis%C5%82aw+%C5%9Al%C4%85ski%2C%20Polska'
   title: Google Maps Wodzisław Śląski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wodzisław Śląski
-  tests: []
 gmsy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bytom%2C%20Polska'
   title: Google Maps Bytom
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Bytom
-  tests: []
 gmsz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zabrze%2C%20Polska'
   title: Google Maps Zabrze
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zabrze
-  tests: []
 gmsza/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zawiercie%2C%20Polska'
   title: Google Maps Zawiercie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zawiercie
-  tests: []
 gmszo/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBory%2C%20Polska'
   title: Google Maps Żory
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Żory
-  tests: []
 gmszy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBywiec%2C%20Polska'
   title: Google Maps Żywiec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Żywiec
-  tests: []
 gmtbu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Busko+Zdr%C3%B3j%2C%20Polska'
   title: Google Maps Busko Zdrój
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Busko Zdrój
-  tests: []
 gmtje/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20J%C4%99drzej%C3%B3w%2C%20Polska'
   title: Google Maps Jędrzejów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Jędrzejów
-  tests: []
 gmtk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kielce%2C%20Polska'
   title: Google Maps Kielce
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kielce
-  tests: []
 gmtka/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kazimierza+Wielka%2C%20Polska'
   title: Google Maps Kazimierza Wielka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kazimierza Wielka
-  tests: []
 gmtkn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%84skie%2C%20Polska'
   title: Google Maps Końskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Końskie
-  tests: []
 gmtlw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C5%82oszczowa%2C%20Polska'
   title: Google Maps Włoszczowa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Włoszczowa
-  tests: []
 gmtop/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opat%C3%B3w%2C%20Polska'
   title: Google Maps Opatów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Opatów
-  tests: []
 gmtos/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostrowiec+%C5%9Awi%C4%99tokrzyski%2C%20Polska'
   title: Google Maps Ostrowiec Świętokrzyski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrowiec Świętokrzyski
-  tests: []
 gmtpi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pi%C5%84cz%C3%B3w%2C%20Polska'
   title: Google Maps Pińczów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pińczów
-  tests: []
 gmtsa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sandomierz%2C%20Polska'
   title: Google Maps Sandomierz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sandomierz
-  tests: []
 gmtsk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Skar%C5%BCysko-Kamienna%2C%20Polska'
   title: Google Maps Skarżysko-Kamienna
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Skarżysko-Kamienna
-  tests: []
 gmtst/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Starachowice%2C%20Polska'
   title: Google Maps Starachowice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Starachowice
-  tests: []
 gmtsz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Stasz%C3%B3w%2C%20Polska'
   title: Google Maps Staszów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Staszów
-  tests: []
 gmw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Warszawa%2C%20Polska'
   title: Google Maps Warszawa
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Warszawa
-  tests: []
 gmwbr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82obrzegi%2C%20Polska'
   title: Google Maps Białobrzegi
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Białobrzegi
-  tests: []
 gmwci/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ciechan%C3%B3w%2C%20Polska'
   title: Google Maps Ciechanów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ciechanów
-  tests: []
 gmwg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Garwolin%2C%20Polska'
   title: Google Maps Garwolin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Garwolin
-  tests: []
 gmwgm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grodzisk+Mazowiecki%2C%20Polska'
   title: Google Maps Grodzisk Mazowiecki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Grodzisk Mazowiecki
-  tests: []
 gmwgr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gr%C3%B3jec%2C%20Polska'
   title: Google Maps Grójec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Grójec
-  tests: []
 gmwgs/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gostynin%2C%20Polska'
   title: Google Maps Gostynin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gostynin
-  tests: []
 gmwkz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kozienice%2C%20Polska'
   title: Google Maps Kozienice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kozienice
-  tests: []
 gmwl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Legionowo%2C%20Polska'
   title: Google Maps Legionowo
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Legionowo
-  tests: []
 gmwli/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lipsko%2C%20Polska'
   title: Google Maps Lipsko
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Lipsko
-  tests: []
 gmwls/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81osice%2C%20Polska'
   title: Google Maps Łosice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łosice
-  tests: []
 gmwm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mi%C5%84sk+Mazowiecki%2C%20Polska'
   title: Google Maps Mińsk Mazowiecki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mińsk Mazowiecki
-  tests: []
 gmwma/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mak%C3%B3w+Mazowiecki%2C%20Polska'
   title: Google Maps Maków Mazowiecki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Maków Mazowiecki
-  tests: []
 gmwml/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20M%C5%82awa%2C%20Polska'
   title: Google Maps Mława
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Mława
-  tests: []
 gmwnd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Dw%C3%B3r+Mazowiecki%2C%20Polska'
   title: Google Maps Nowy Dwór Mazowiecki
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Dwór Mazowiecki
-  tests: []
 gmwo/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostro%C5%82%C4%99ka%2C%20Polska'
   title: Google Maps Ostrołęka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrołęka
-  tests: []
 gmwor/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostr%C3%B3w+Mazowiecka%2C%20Polska'
   title: Google Maps Ostrów Mazowiecka
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrów Mazowiecka
-  tests: []
 gmwot/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Otwock%2C%20Polska'
   title: Google Maps Otwock
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Otwock
-  tests: []
 gmwp/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20P%C5%82ock%2C%20Polska'
   title: Google Maps Płock
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Płock
-  tests: []
 gmwpi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Piaseczno%2C%20Polska'
   title: Google Maps Piaseczno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Piaseczno
-  tests: []
 gmwpn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20P%C5%82o%C5%84sk%2C%20Polska'
   title: Google Maps Płońsk
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Płońsk
-  tests: []
 gmwpr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pruszk%C3%B3w%2C%20Polska'
   title: Google Maps Pruszków
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pruszków
-  tests: []
 gmwpu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pu%C5%82tusk%2C%20Polska'
   title: Google Maps Pułtusk
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pułtusk
-  tests: []
 gmwpy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przysucha%2C%20Polska'
   title: Google Maps Przysucha
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Przysucha
-  tests: []
 gmwpz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przasnysz%2C%20Polska'
   title: Google Maps Przasnysz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Przasnysz
-  tests: []
 gmwr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radom%2C%20Polska'
   title: Google Maps Radom
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Radom
-  tests: []
 gmws/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Siedlce%2C%20Polska'
   title: Google Maps Siedlce
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Siedlce
-  tests: []
 gmwsc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sochaczew%2C%20Polska'
   title: Google Maps Sochaczew
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sochaczew
-  tests: []
 gmwse/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sierpc%2C%20Polska'
   title: Google Maps Sierpc
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sierpc
-  tests: []
 gmwsk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Soko%C5%82%C3%B3w+Podlaski%2C%20Polska'
   title: Google Maps Sokołów Podlaski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sokołów Podlaski
-  tests: []
 gmwsz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szyd%C5%82owiec%2C%20Polska'
   title: Google Maps Szydłowiec
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Szydłowiec
-  tests: []
 gmwwe/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%99gr%C3%B3w%2C%20Polska'
   title: Google Maps Węgrów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Węgrów
-  tests: []
 gmwwl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wo%C5%82omin%2C%20Polska'
   title: Google Maps Wołomin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wołomin
-  tests: []
 gmwwy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wyszk%C3%B3w%2C%20Polska'
   title: Google Maps Wyszków
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wyszków
-  tests: []
 gmwzu/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBuromin%2C%20Polska'
   title: Google Maps Żuromin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Żuromin
-  tests: []
 gmwzw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zwole%C5%84%2C%20Polska'
   title: Google Maps Zwoleń
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Zwoleń
-  tests: []
 gmwzy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BByrard%C3%B3w%2C%20Polska'
   title: Google Maps Żyrardów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Żyrardów
-  tests: []
 gmzbi/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82ogard%2C%20Polska'
   title: Google Maps Białogard
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Białogard
-  tests: []
 gmzch/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Choszczno%2C%20Polska'
   title: Google Maps Choszczno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Choszczno
-  tests: []
 gmzdr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Drawsko+Pomorskie%2C%20Polska'
   title: Google Maps Drawsko Pomorskie
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Drawsko Pomorskie
-  tests: []
 gmzgl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Goleni%C3%B3w%2C%20Polska'
   title: Google Maps Goleniów
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Goleniów
-  tests: []
 gmzgr/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gryfino%2C%20Polska'
   title: Google Maps Gryfino
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gryfino
-  tests: []
 gmzgy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gryfice%2C%20Polska'
   title: Google Maps Gryfice
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Gryfice
-  tests: []
 gmzk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Koszalin%2C%20Polska'
   title: Google Maps Koszalin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Koszalin
-  tests: []
 gmzka/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kamie%C5%84+Pomorski%2C%20Polska'
   title: Google Maps Kamień Pomorski
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kamień Pomorski
-  tests: []
 gmzkl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%82obrzeg%2C%20Polska'
   title: Google Maps Kołobrzeg
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Kołobrzeg
-  tests: []
 gmzlo/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81obez%2C%20Polska'
   title: Google Maps Łobez
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Łobez
-  tests: []
 gmzmy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20My%C5%9Blib%C3%B3rz%2C%20Polska'
   title: Google Maps Myślibórz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Myślibórz
-  tests: []
 gmzpl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Police%2C%20Polska'
   title: Google Maps Police
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Police
-  tests: []
 gmzpy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pyrzyce%2C%20Polska'
   title: Google Maps Pyrzyce
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Pyrzyce
-  tests: []
 gmzs/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szczecin%2C%20Polska'
   title: Google Maps Szczecin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Szczecin
-  tests: []
 gmzsd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awidwin%2C%20Polska'
   title: Google Maps Świdwin
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Świdwin
-  tests: []
 gmzsl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82awno%2C%20Polska'
   title: Google Maps Sławno
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Sławno
-  tests: []
 gmzst/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Stargard+Szczeci%C5%84ski%2C%20Polska'
   title: Google Maps Stargard Szczeciński
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Stargard Szczeciński
-  tests: []
 gmzsw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awinouj%C5%9Bcie%2C%20Polska'
   title: Google Maps Świnoujście
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Świnoujście
-  tests: []
 gmzsz/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szczecinek%2C%20Polska'
   title: Google Maps Szczecinek
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Szczecinek
-  tests: []
 gmzwa/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wa%C5%82cz%2C%20Polska'
   title: Google Maps Wałcz
-  description: ''
   tags:
   - maps
   - google
   examples:
     rynek: Pokaż rynek w mieście Wałcz
-  tests: []
 ikea/0:
   url: 'http://www.ikea.com/pl/pl/'
   title: IKEA Polska
-  description: ''
   tags:
   - ikea
   - furniture
   - shopping
-  examples: []
-  tests: []
 ikea/1:
   url: 'http://www.ikea.com/pl/pl/search/?query={%query}'
   title: IKEA Polska
-  description: ''
   tags:
   - ikea
   - furniture
   - shopping
   examples:
     materac: Szukaj materace
-  tests: []
 jddw/2:
   url: 'http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&as=true'
   title: 'jakdojade.pl, Wrocław'
-  description: ''
   tags:
   - travel
   - jakdojade
   - wrocław
   examples:
     'rynek, dworzec gł': połączenie z Rynka do Dworca Głównego
-  tests: []
 jddw/3:
   url: 'http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&as=true'
   title: 'jakdojade.pl, Wrocław'
-  description: ''
   tags:
   - travel
   - jakdojade
   - wrocław
   examples:
     'rynek, dworzec gł, 10': połączenie z Rynka do Dworca Głównego o godz. 10
-  tests: []
 jddw/4:
   url: 'http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true'
   title: 'jakdojade.pl, Wrocław'
-  description: ''
   tags:
   - travel
   - jakdojade
   - wrocław
   examples:
     'rynek, dworzec gł, 10, 31.12.13': połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
-  tests: []
 jdpo/2:
   url: 'http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&as=true'
   title: 'jakdojade.pl, Poznań'
-  description: ''
   tags:
   - travel
   - jakdojade
   - poznań
   examples:
     'rynek, dworzec gł': połączenie z Rynka do Dworca Głównego
-  tests: []
 jdpo/3:
   url: 'http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&as=true'
   title: 'jakdojade.pl, Poznań'
-  description: ''
   tags:
   - travel
   - jakdojade
   - poznań
   examples:
     'rynek, dworzec gł, 10': połączenie z Rynka do Dworca Głównego o godz. 10
-  tests: []
 jdpo/4:
   url: 'http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true'
   title: 'jakdojade.pl, Poznań'
-  description: ''
   tags:
   - travel
   - jakdojade
   - poznań
   examples:
     'rynek, dworzec gł, 10, 31.12.13': połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
-  tests: []
 jdw/2:
   url: 'http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&as=true'
   title: 'jakdojade.pl, Warszawa'
-  description: ''
   tags:
   - travel
   - jakdojade
   - warszawa
   examples:
     'stare miasto, centrum': połączenie ze Starego miasta do Centrum
-  tests: []
 jdw/3:
   url: 'http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&as=true'
   title: 'jakdojade.pl, Warszawa'
-  description: ''
   tags:
   - travel
   - jakdojade
   - warszawa
   examples:
     'stare miasto, centrum, 10': połączenie ze Starego miasta do Centrum o godz. 10
-  tests: []
 jdw/4:
   url: 'http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true'
   title: 'jakdojade.pl, Warszawa'
-  description: ''
   tags:
   - travel
   - jakdojade
   - warszawa
   examples:
     'stare miasto, centrum, 10, 31.12.13': połączenie ze Starego miasta do Centrum 31 grudnia 2013 o godz. 10
-  tests: []
 nk/0:
   url: 'http://nk.pl/'
   title: Nasza Klasa
-  description: ''
   tags:
   - social network
   - nasza klasa
-  examples: []
-  tests: []
 nk/1:
   url: 'http://nk.pl/#szukaj#{%nazwisko / grupa}'
   title: Nasza Klasa
-  description: ''
   tags:
   - social network
   - nasza klasa
   examples:
     kowalski: Szukaj "kowalski"
-  tests: []
 pkp/2:
   url: 'http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
-  description: ''
   tags:
   - travel
   - railway
@@ -3600,47 +2878,38 @@ pkp/2:
     'kutno, gniezno': następne połączenie PKP z Kutna do Gniezna
     'w, p': następne połączenie z Warszawy do Poznania
     'gdansk!, wroclaw!': 'następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny'
-  tests: []
 pkp/3:
   url: 'http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&T={%czas|type=time|output=HH:mm}&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
-  description: ''
   tags:
   - travel
   - railway
   - pkp
   examples:
     'kutno, gniezno, 10': połączenie z Kutna do Gniezna dzisiaj o godz. 10
-  tests: []
 pkp/4:
   url: 'http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&T={%czas|type=time|output=HH:mm}&D={%data|type=date|output=DD.MM.YYYY}&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
-  description: ''
   tags:
   - travel
   - railway
   - pkp
   examples:
     'kutno, gniezno, 10, 31.1.': połączenie z Kutna do Gniezna 31 stycznia o godz. 10
-  tests: []
 tm/1:
   url: 'http://www.google.com/search?hl={$language}&sitesearch=teleman.pl&domains=teleman.pl&q={%szukaj}'
   title: teleman.pl program telewizyjny
-  description: ''
   tags:
   - tv
   - polska
   - poland
   examples:
     tvn: Szukaj programy TVN
-  tests: []
 zal/1:
   url: 'http://www.zalando.pl/katalog/?q={%produkt}'
   title: Zalando.pl
-  description: ''
   tags:
   - shopping
   - zalando
   examples:
     buty: Szukaj buty
-  tests: []

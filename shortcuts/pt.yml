@@ -1,7 +1,6 @@
 de/1:
   url: 'http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%word}'
   title: Alemão-Português
-  description: ''
   tags:
   - dictionary
   - language
@@ -14,14 +13,11 @@ de/1:
   examples:
     baum: '"baum" auf Portugiesisch'
     árvore: '"árvore" auf Deutsch'
-  tests: []
 last/1:
   url: 'http://www.last.fm/search?setlang=pt&q={%artist}'
   title: Last.fm
-  description: ''
   tags:
   - music
   - lastfm
   examples:
     beatles: Search for "beatles"
-  tests: []

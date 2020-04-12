@@ -1,7 +1,6 @@
 eo/1:
   url: 'http://www.vortaro.dk/#/{%soegeord}'
   title: Esperanto-Dansk
-  description: ''
   tags:
   - dictionary
   - language
@@ -9,31 +8,24 @@ eo/1:
   - esperanto
   examples:
     ord: Traduko de "ord"
-  tests: []
 gyl/1:
   url: 'http://ordbog.gyldendal.dk/sitecore/content/Ordbog/Home/Opslag/Resultat.aspx?lcode=DAEN&q={%ord}'
   title: Gyldendals Røde Ordbøger
-  description: ''
   tags:
   - language
   examples:
     kaffe: Search for "kaffe"
-  tests: []
 ods/1:
   url: 'http://ordnet.dk/ods/opslag?opslag={%ord}&submit=S%F8g'
   title: Ordbog over det danske sprog
-  description: ''
   tags:
   - language
   examples:
     skrive: artikel om "skrive"
-  tests: []
 spr/1:
   url: 'http://sproget.dk/lookup?SearchableText={%ord}'
   title: Sproget.dk
-  description: ''
   tags:
   - language
   examples:
     bog: Search for "bog"
-  tests: []

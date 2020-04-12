@@ -1,7 +1,6 @@
 de/1:
   url: 'http://portalwiedzy.onet.pl/tlumacz.html?tr=nie-auto&qs={%słowo}'
   title: Niemiecko-polski
-  description: ''
   tags:
   - dictionary
   - language
@@ -10,11 +9,9 @@ de/1:
   examples:
     Baum: Tłumaczenie słowa "Baum" na polski
     drzewo: Tłumaczenie słowa "Baum" na niemiecki
-  tests: []
 en/1:
   url: 'https://pl.bab.la/slownik/angielski-polski/{%słowo}'
   title: Angielsko-polski (bab.la)
-  description: ''
   tags:
   - dictionary
   - language
@@ -23,60 +20,47 @@ en/1:
   examples:
     tree: Tłumaczenie słowa "tree" na polski
     drzewo: Tłumaczenie słowa "drzewo" na angielski
-  tests: []
 fw/1:
   url: 'http://www.filmweb.pl/search?q={%tytuł/osoba}'
   title: FilmWeb
-  description: ''
   tags:
   - film
   examples:
     forrest gump: Search for "forrest gump"
-  tests: []
 gfp/0:
   url: 'http://german-foreign-policy.com/pl/news/'
   title: German Foreign Policy
-  description: ''
   tags:
   - politics
   - news
   - germany
-  examples: []
-  tests: []
 gfp/1:
   url: 'http://german-foreign-policy.com/index.php?lang=pl&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}'
   title: German Foreign Policy (Polish)
-  description: ''
   tags:
   - politics
   - news
   - germany
   examples:
     berlin: Szukaj "berlin"
-  tests: []
 last/1:
   url: 'http://www.last.fm/search?setlang=pl&q={%artist}'
   title: Last.fm
-  description: ''
   tags:
   - music
   - lastfm
   examples:
     beatles: Search for "beatles"
-  tests: []
 napisy/1:
   url: 'http://napisy.info/SzukajTytulow.php?t={%film}'
   title: NAPiSY.info
-  description: ''
   tags:
   - subtitles
   examples:
     loose change: Search for "loose change"
-  tests: []
 pwn/1:
   url: 'http://sjp.pwn.pl/lista.php?co={%słowo}'
   title: 'Słownik języka polskiego: PWN'
-  description: ''
   tags:
   - dictionary
   - language
@@ -85,11 +69,9 @@ pwn/1:
   - słownik
   examples:
     drzewo: Szukaj "drzewo"
-  tests: []
 sjp/1:
   url: 'http://portalwiedzy.onet.pl/polszczyzna.html?qs={%słowo}&tr=pol-all&ch=1&x=0&y=0'
   title: 'Słownik języka polskiego: Onet.pl'
-  description: ''
   tags:
   - dictionary
   - language
@@ -98,4 +80,3 @@ sjp/1:
   - słownik
   examples:
     ptialina: Szukaj "ptialina"
-  tests: []

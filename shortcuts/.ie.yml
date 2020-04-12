@@ -1,301 +1,240 @@
 e/0:
   url: 'http://rover.ebay.com/rover/1/5282-53468-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229543&kwid=902099&mtid=824&kw=lg'
   title: Ebay.ie
-  description: ''
   tags:
   - shopping
   - ebay
   - affiliate
-  examples: []
-  tests: []
 e/1:
   url: 'http://rover.ebay.com/rover/1/5282-53468-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229543&kwid=902099&mtid=824&kw=lg'
   title: Ebay.ie
-  description: ''
   tags:
   - shopping
   - ebay
   - affiliate
   examples:
     smartphone: Search for "smartphone"
-  tests: []
 g/1:
   url: 'https://www.google.ie/search?hl={$language}&q={%query}&ie=utf-8'
   title: Google.ie
-  description: ''
   tags:
   - web search
   - google
   examples:
     dublin: Search Google for "dublin"
-  tests: []
 gmc/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Cork%2C%20Ireland'
   title: Google Maps Cork
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Cork
-  tests: []
 gmce/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Clare%2C%20Ireland'
   title: Google Maps Clare
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Clare
-  tests: []
 gmcn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Cavan%2C%20Ireland'
   title: Google Maps Cavan
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Cavan
-  tests: []
 gmcw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Carlow%2C%20Ireland'
   title: Google Maps Carlow
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Carlow
-  tests: []
 gmd/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Dublin%2C%20Ireland'
   title: Google Maps Dublin
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Dublin
-  tests: []
 gmdl/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Donegal%2C%20Ireland'
   title: Google Maps Donegal
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Donegal
-  tests: []
 gmg/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Galway%2C%20Ireland'
   title: Google Maps Galway
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Galway
-  tests: []
 gmke/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Kildare%2C%20Ireland'
   title: Google Maps Kildare
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Kildare
-  tests: []
 gmkk/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Kilkenny%2C%20Ireland'
   title: Google Maps Kilkenny
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Kilkenny
-  tests: []
 gmky/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Kerry%2C%20Ireland'
   title: Google Maps Kerry
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Kerry
-  tests: []
 gml/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Limerick%2C%20Ireland'
   title: Google Maps Limerick
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Limerick
-  tests: []
 gmld/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Longford%2C%20Ireland'
   title: Google Maps Longford
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Longford
-  tests: []
 gmlh/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Louth%2C%20Ireland'
   title: Google Maps Louth
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Louth
-  tests: []
 gmlm/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Leitrim%2C%20Ireland'
   title: Google Maps Leitrim
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Leitrim
-  tests: []
 gmls/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Laois%2C%20Ireland'
   title: Google Maps Laois
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Laois
-  tests: []
 gmmh/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Meath%2C%20Ireland'
   title: Google Maps Meath
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Meath
-  tests: []
 gmmn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Monaghan%2C%20Ireland'
   title: Google Maps Monaghan
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Monaghan
-  tests: []
 gmmo/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Mayo%2C%20Ireland'
   title: Google Maps Mayo
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Mayo
-  tests: []
 gmoy/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Offaly%2C%20Ireland'
   title: Google Maps Offaly
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Offaly
-  tests: []
 gmrn/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Roscommon%2C%20Ireland'
   title: Google Maps Roscommon
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Roscommon
-  tests: []
 gmso/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Sligo%2C%20Ireland'
   title: Google Maps Sligo
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Sligo
-  tests: []
 gmt/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Tipperary%2C%20Ireland'
   title: Google Maps Tipperary
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Tipperary
-  tests: []
 gmw/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Waterford%2C%20Ireland'
   title: Google Maps Waterford
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Waterford
-  tests: []
 gmwh/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Westmeath%2C%20Ireland'
   title: Google Maps Westmeath
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Westmeath
-  tests: []
 gmww/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Wicklow%2C%20Ireland'
   title: Google Maps Wicklow
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Wicklow
-  tests: []
 gmwx/1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Wexford%2C%20Ireland'
   title: Google Maps Wexford
-  description: ''
   tags:
   - maps
   - google
   examples:
     main st: Show Main Street in Wexford
-  tests: []
 luas/1:
   url: 'https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.luas.ie%20{%station}'
   title: Luas Dublin Light Rail
-  description: ''
   tags:
   - travel
   - dublin
   examples:
     harcourt: show next trams from Harcourt station
-  tests: []

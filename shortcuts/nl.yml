@@ -1,7 +1,6 @@
 dbp/1:
   url: 'http://nl.dbpedia.org/page/{%title}'
   title: DBpedia (Dutch)
-  description: ''
   tags:
   - semanticweb
   - knowledge
@@ -9,21 +8,17 @@ dbp/1:
   - database
   examples:
     Tunisia: Open DBpedia page about Tunisia
-  tests: []
 de/1:
   url: 'http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!'
   title: Duits-Nederlands (uitmuntend.de)
-  description: ''
   tags:
   - language
   - dictionary
   examples:
     käse: Search for "käse"
-  tests: []
 en/1:
   url: 'http://ennl.dict.cc/?s={%word}'
   title: Engels-Nederlands (dict.cc)
-  description: ''
   tags:
   - english
   - dutch
@@ -34,22 +29,17 @@ en/1:
   examples:
     opdracht: Translate "opdracht" to English.
     assignment: Translate "assignment" to Dutch.
-  tests: []
 enc/0:
   url: 'http://www.encyclo.nl/'
   title: Encyclo Online Encyclopedie
-  description: ''
   tags:
   - encyclopedia
   - dictionary
   - language
   - dutch
-  examples: []
-  tests: []
 enc/1:
   url: 'http://www.encyclo.nl/zoek.php?woord={%woord}'
   title: Encyclo Online Encyclopedie
-  description: ''
   tags:
   - encyclopedia
   - dictionary
@@ -58,38 +48,25 @@ enc/1:
   - language
   examples:
     op naam: zoek na de betekenis van de uitdrukking "op naam"
-  tests: []
 ety/0:
   url: 'http://www.etymologiebank.nl/'
   title: etymologiebank.nl
-  description: ''
-  tags: []
-  examples: []
-  tests: []
 ety/1:
   url: 'http://www.etymologiebank.nl/zoeken/{%woord}'
   title: etymologiebank.nl
-  description: ''
-  tags: []
   examples:
     peuter: zoek woordherkomst van "peuter"
-  tests: []
 rijm/0:
   url: 'http://www.rijm.nu/'
   title: Rijm.nu!
-  description: ''
   tags:
   - rijm
   - gedicht
-  examples: []
-  tests: []
 rijm/1:
   url: 'http://www.rijm.nu/rijmen/rijmen.php?woord={%woord}&v=1'
   title: Rijm.nu!
-  description: ''
   tags:
   - rijm
   - gedicht
   examples:
     koud: vind woorden die rijmen op "koud"
-  tests: []
