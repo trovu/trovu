@@ -201,7 +201,7 @@ export default class Env {
       // Must contain {%keyword} and {%argumentCount}.
       namespace.type = "user";
     } else if (namespace.github) {
-      //this.addFetchUrlTemplateToGithubNamespace(namespace);
+      this.addFetchUrlToGithubNamespace(namespace);
     }
     // Yes, a string namespace with length < 4 will be ignored.
     return namespace;
@@ -227,7 +227,7 @@ export default class Env {
   /**
    * Add a URL template to a namespace that refers to a Github user repo.
    */
-  addFetchUrlTemplateToGithubNamespace(namespace) {
+  addFetchUrlToGithubNamespace(namespace) {
     if (namespace.github == ".") {
       // Set to current user.
       namespace.github = this.github;
@@ -239,7 +239,7 @@ export default class Env {
     namespace.url =
       "https://raw.githubusercontent.com/" +
       namespace.github +
-      "/trovu-data-user/master/shortcuts/{%keyword}.{%argumentCount}.yml";
+      "/trovu-data-user/master/shortcuts.yml";
     namespace.type = "user";
   }
 
