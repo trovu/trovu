@@ -89,7 +89,7 @@ export default class FindShortcut {
       if (!namespace.shortcuts) {
         continue;
       }
-      const shortcut = namespace.shortcuts[keyword + '/' + args.length]
+      const shortcut = namespace.shortcuts[keyword + ' ' + args.length]
       if (shortcut) {
         shortcuts[namespace.name] = shortcut;
       }
