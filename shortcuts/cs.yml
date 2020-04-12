@@ -1,4 +1,4 @@
-csfd/1:
+csfd 1:
   url: 'http://www.csfd.cz/hledat/?q={%výraz}'
   title: Česko-Slovenská filmová databáze
   tags:
@@ -7,7 +7,7 @@ csfd/1:
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
-de/1:
+de 1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
     set: _gecz
@@ -25,7 +25,7 @@ de/1:
   examples:
     baum: '"baum" český'
     strom: '"strom" německý'
-en/1:
+en 1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
     set: _encz
@@ -43,7 +43,7 @@ en/1:
   examples:
     tree: '"tree" český'
     strom: '"strom" anglický'
-es/1:
+es 1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
     set: _spcz
@@ -61,7 +61,7 @@ es/1:
   examples:
     árbol: '"árbol" český'
     strom: '"strom" španělský'
-fr/1:
+fr 1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
     set: _frcz
@@ -79,14 +79,14 @@ fr/1:
   examples:
     arbre: '"arbre" český'
     strom: '"strom" francouzký'
-kinobox/1:
+kinobox 1:
   url: 'http://www.kinobox.cz/najdi?t={%query}'
   title: Kinobox.cz
   tags:
   - movies
   examples:
     forrest gump: Search for "forrest gump"
-pl/1:
+pl 1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
     set: _plcz
@@ -104,7 +104,7 @@ pl/1:
   examples:
     drzewo: '"drzewo" český'
     strom: '"strom" polský'
-vi/1:
+vi 1:
   url: 'http://slovniky.lingea.cz'
   post parameters:
     set: _vncz

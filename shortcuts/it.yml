@@ -1,4 +1,4 @@
-de/1:
+de 1:
   url: 'http://dict.leo.org/itde?search={%parola}'
   title: Tedesco-italiano (leo.org)
   tags:
@@ -6,7 +6,7 @@ de/1:
   - dictionary
   examples:
     albero: Search for "albero"
-gn/1:
+gn 1:
   url: 'https://www.google.it/search?q={%query}&tbm=nws&hl=it&gl=IT&ceid=IT%3Ait'
   title: Google News (Italia)
   tags:
@@ -14,7 +14,7 @@ gn/1:
   - google
   examples:
     obama: Google News nach obama durchsuchen
-last/1:
+last 1:
   url: 'http://www.last.fm/search?setlang=it&q={%artist}'
   title: Last.fm
   tags:

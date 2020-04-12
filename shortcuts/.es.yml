@@ -1,4 +1,4 @@
-a/0:
+a 0:
   url: 'http://www.amazon.es/?_encoding=UTF8&camp=3626&creative=24790&linkCode=ur2&tag=serchilo04-21'
   title: Amazon.es
   tags:
@@ -6,7 +6,7 @@ a/0:
   - shopping
   - books
   - affiliate
-a/1:
+a 1:
   url: 'http://www.amazon.es/gp/search?ie=UTF8&camp=3626&creative=24790&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo04-21'
   title: Amazon.es
   tags:
@@ -16,20 +16,20 @@ a/1:
   - affiliate
   examples:
     shakespeare: Search for "shakespeare"
-correos/1:
+correos 1:
   url: 'https://www.correos.es/ss/Satellite/site/aplicacion-4000003383089-herramientas_y_apps/detalle_app-sidioma=es_ES?numero={%codigo}'
   title: Correos Localizador de Envíos
   tags:
   - correos
   - shipping
-e/0:
+e 0:
   url: 'http://rover.ebay.com/rover/1/1185-53479-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229501&kwid=902099&mtid=824&kw=lg'
   title: Ebay.es
   tags:
   - shopping
   - ebay
   - affiliate
-e/1:
+e 1:
   url: 'http://rover.ebay.com/rover/1/1185-53479-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229501&kwid=902099&mtid=824&kw=lg'
   title: Ebay.es
   tags:
@@ -38,7 +38,7 @@ e/1:
   - affiliate
   examples:
     smartphone: Buscar "smartphone" en Ebay
-g/1:
+g 1:
   url: 'https://www.google.es/search?hl={$language}&q={%query}&ie=utf-8'
   title: Google.es
   tags:
@@ -46,7 +46,7 @@ g/1:
   - google
   examples:
     madrid: Buscar "madrid" con Google
-gdfv/2:
+gdfv 2:
   url: 'http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura, España&daddr={%destination}, Fuerteventura, España'
   title: 'Google Maps Directions (Routing), Fuerteventura'
   tags:
@@ -57,7 +57,7 @@ gdfv/2:
   - fuerteventura
   examples:
     'corralejo, morro jable': Get a route from Corralejo to Morro Jable
-gdgc/2:
+gdgc 2:
   url: 'http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria, España&daddr={%destination}, Gran Canaria, España'
   title: 'Google Maps Directions (Routing), Gran Canaria'
   tags:
@@ -68,7 +68,7 @@ gdgc/2:
   - gran canaria
   examples:
     'las palmas, maspalomas': Get a route from Las Palmas to Maspalomas
-gdlz/2:
+gdlz 2:
   url: 'http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote, España&daddr={%destination}, Lanzarote, España'
   title: 'Google Maps Directions (Routing), Lanzarote'
   tags:
@@ -79,7 +79,7 @@ gdlz/2:
   - lanzarote
   examples:
     'arrecife, playa blanca': Get a route from Arrecife to Playa Blanca
-gdtf/2:
+gdtf 2:
   url: 'http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife, España&daddr={%destination}, Tenerife, España'
   title: 'Google Maps Directions (Routing), Tenerife'
   tags:
@@ -90,7 +90,7 @@ gdtf/2:
   - tenerife
   examples:
     'santa cruz, la laguna': Get a route from Santa Cruz to La Laguna
-gma/1:
+gma 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Alicante%2C%20Espa%C3%B1a'
   title: Google Maps Alicante
   tags:
@@ -98,7 +98,7 @@ gma/1:
   - google
   examples:
     centro: buscar "centro" en Alicante
-gmab/1:
+gmab 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Albacete%2C%20Espa%C3%B1a'
   title: Google Maps Albacete
   tags:
@@ -106,7 +106,7 @@ gmab/1:
   - google
   examples:
     centro: buscar "centro" en Albacete
-gmal/1:
+gmal 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Almer%C3%ADa%2C%20Espa%C3%B1a'
   title: Google Maps Almería
   tags:
@@ -114,7 +114,7 @@ gmal/1:
   - google
   examples:
     centro: buscar "centro" en Almería
-gmav/1:
+gmav 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20%C3%81vila%2C%20Espa%C3%B1a'
   title: Google Maps Ávila
   tags:
@@ -122,7 +122,7 @@ gmav/1:
   - google
   examples:
     centro: buscar "centro" en Ávila
-gmb/1:
+gmb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Barcelona%2C%20Espa%C3%B1a'
   title: Google Maps Barcelona
   tags:
@@ -130,7 +130,7 @@ gmb/1:
   - google
   examples:
     centro: buscar "centro" en Barcelona
-gmba/1:
+gmba 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Badajoz%2C%20Espa%C3%B1a'
   title: Google Maps Badajoz
   tags:
@@ -138,7 +138,7 @@ gmba/1:
   - google
   examples:
     centro: buscar "centro" en Badajoz
-gmbi/1:
+gmbi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Bilbao%2C%20Espa%C3%B1a'
   title: Google Maps Bilbao
   tags:
@@ -146,7 +146,7 @@ gmbi/1:
   - google
   examples:
     centro: buscar "centro" en Bilbao
-gmbu/1:
+gmbu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Burgos%2C%20Espa%C3%B1a'
   title: Google Maps Burgos
   tags:
@@ -154,7 +154,7 @@ gmbu/1:
   - google
   examples:
     centro: buscar "centro" en Burgos
-gmc/1:
+gmc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20A+Coru%C3%B1a%2C%20Espa%C3%B1a'
   title: Google Maps A Coruña
   tags:
@@ -162,7 +162,7 @@ gmc/1:
   - google
   examples:
     centro: buscar "centro" en A Coruña
-gmca/1:
+gmca 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20C%C3%A1diz%2C%20Espa%C3%B1a'
   title: Google Maps Cádiz
   tags:
@@ -170,7 +170,7 @@ gmca/1:
   - google
   examples:
     centro: buscar "centro" en Cádiz
-gmcc/1:
+gmcc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20C%C3%A1ceres%2C%20Espa%C3%B1a'
   title: Google Maps Cáceres
   tags:
@@ -178,7 +178,7 @@ gmcc/1:
   - google
   examples:
     centro: buscar "centro" en Cáceres
-gmce/1:
+gmce 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Ceuta%2C%20Espa%C3%B1a'
   title: Google Maps Ceuta
   tags:
@@ -186,7 +186,7 @@ gmce/1:
   - google
   examples:
     centro: buscar "centro" en Ceuta
-gmco/1:
+gmco 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20C%C3%B3rdoba%2C%20Espa%C3%B1a'
   title: Google Maps Córdoba
   tags:
@@ -194,7 +194,7 @@ gmco/1:
   - google
   examples:
     centro: buscar "centro" en Córdoba
-gmcr/1:
+gmcr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Ciudad+Real%2C%20Espa%C3%B1a'
   title: Google Maps Ciudad Real
   tags:
@@ -202,7 +202,7 @@ gmcr/1:
   - google
   examples:
     centro: buscar "centro" en Ciudad Real
-gmcs/1:
+gmcs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Castell%C3%B3n+de+la+Plana%2C%20Espa%C3%B1a'
   title: Google Maps Castellón de la Plana
   tags:
@@ -210,7 +210,7 @@ gmcs/1:
   - google
   examples:
     centro: buscar "centro" en Castellón de la Plana
-gmcu/1:
+gmcu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Cuenca%2C%20Espa%C3%B1a'
   title: Google Maps Cuenca
   tags:
@@ -218,7 +218,7 @@ gmcu/1:
   - google
   examples:
     centro: buscar "centro" en Cuenca
-gmfv/1:
+gmfv 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Fuerteventura%2C%20Espa%C3%B1a'
   title: Google Maps Fuerteventura
   tags:
@@ -226,7 +226,7 @@ gmfv/1:
   - google
   examples:
     centro: buscar "centro" en Fuerteventura
-gmgc/1:
+gmgc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Gran+Canaria%2C%20Espa%C3%B1a'
   title: Google Maps Gran Canaria
   tags:
@@ -234,7 +234,7 @@ gmgc/1:
   - google
   examples:
     centro: buscar "centro" en Gran Canaria
-gmgi/1:
+gmgi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Girona%2C%20Espa%C3%B1a'
   title: Google Maps Girona
   tags:
@@ -242,7 +242,7 @@ gmgi/1:
   - google
   examples:
     centro: buscar "centro" en Girona
-gmgo/1:
+gmgo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20La+Gomera%2C%20Espa%C3%B1a'
   title: Google Maps La Gomera
   tags:
@@ -250,7 +250,7 @@ gmgo/1:
   - google
   examples:
     centro: buscar "centro" en La Gomera
-gmgr/1:
+gmgr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Granada%2C%20Espa%C3%B1a'
   title: Google Maps Granada
   tags:
@@ -258,7 +258,7 @@ gmgr/1:
   - google
   examples:
     centro: buscar "centro" en Granada
-gmgu/1:
+gmgu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Guadalajara%2C%20Espa%C3%B1a'
   title: Google Maps Guadalajara
   tags:
@@ -266,7 +266,7 @@ gmgu/1:
   - google
   examples:
     centro: buscar "centro" en Guadalajara
-gmh/1:
+gmh 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Huelva%2C%20Espa%C3%B1a'
   title: Google Maps Huelva
   tags:
@@ -274,7 +274,7 @@ gmh/1:
   - google
   examples:
     centro: buscar "centro" en Huelva
-gmhi/1:
+gmhi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20El+Hierro%2C%20Espa%C3%B1a'
   title: Google Maps El Hierro
   tags:
@@ -282,7 +282,7 @@ gmhi/1:
   - google
   examples:
     centro: buscar "centro" en El Hierro
-gmhu/1:
+gmhu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Huesca%2C%20Espa%C3%B1a'
   title: Google Maps Huesca
   tags:
@@ -290,7 +290,7 @@ gmhu/1:
   - google
   examples:
     centro: buscar "centro" en Huesca
-gmj/1:
+gmj 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Ja%C3%A9n%2C%20Espa%C3%B1a'
   title: Google Maps Jaén
   tags:
@@ -298,7 +298,7 @@ gmj/1:
   - google
   examples:
     centro: buscar "centro" en Jaén
-gml/1:
+gml 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20L%C3%A9rida%2C%20Espa%C3%B1a'
   title: Google Maps Lérida
   tags:
@@ -306,7 +306,7 @@ gml/1:
   - google
   examples:
     centro: buscar "centro" en Lérida
-gmle/1:
+gmle 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Le%C3%B3n%2C%20Espa%C3%B1a'
   title: Google Maps León
   tags:
@@ -314,7 +314,7 @@ gmle/1:
   - google
   examples:
     centro: buscar "centro" en León
-gmll/1:
+gmll 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20La%20Laguna%2C%20Tenerife%2C%20Espa%C3%B1a'
   title: 'Google Maps La Laguna, Tenerife'
   tags:
@@ -322,7 +322,7 @@ gmll/1:
   - google
   examples:
     centro: buscar "centro" en La Laguna
-gmlo/1:
+gmlo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Logro%C3%B1o%2C%20Espa%C3%B1a'
   title: Google Maps Logroño
   tags:
@@ -330,7 +330,7 @@ gmlo/1:
   - google
   examples:
     centro: buscar "centro" en Logroño
-gmlp/1:
+gmlp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20La+Palma%2C%20Espa%C3%B1a'
   title: Google Maps La Palma
   tags:
@@ -338,7 +338,7 @@ gmlp/1:
   - google
   examples:
     centro: buscar "centro" en La Palma
-gmlpgc/1:
+gmlpgc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2CLas%20Palmas%20de%20Gran%20Canaria%2C%20Espa%C3%B1a'
   title: Google Maps Las Palmas de Gran Canaria
   tags:
@@ -346,7 +346,7 @@ gmlpgc/1:
   - google
   examples:
     centro: buscar "centro" en Las Palmas de Gran Canaria
-gmlu/1:
+gmlu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Lugo%2C%20Espa%C3%B1a'
   title: Google Maps Lugo
   tags:
@@ -354,7 +354,7 @@ gmlu/1:
   - google
   examples:
     centro: buscar "centro" en Lugo
-gmlz/1:
+gmlz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Lanzarote%2C%20Espa%C3%B1a'
   title: Google Maps Lanzarote
   tags:
@@ -362,7 +362,7 @@ gmlz/1:
   - google
   examples:
     centro: buscar "centro" en Lanzarote
-gmm/1:
+gmm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Madrid%2C%20Espa%C3%B1a'
   title: Google Maps Madrid
   tags:
@@ -370,7 +370,7 @@ gmm/1:
   - google
   examples:
     centro: buscar "centro" en Madrid
-gmma/1:
+gmma 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20M%C3%A1laga%2C%20Espa%C3%B1a'
   title: Google Maps Málaga
   tags:
@@ -378,7 +378,7 @@ gmma/1:
   - google
   examples:
     centro: buscar "centro" en Málaga
-gmml/1:
+gmml 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Melilla%2C%20Espa%C3%B1a'
   title: Google Maps Melilla
   tags:
@@ -386,7 +386,7 @@ gmml/1:
   - google
   examples:
     centro: buscar "centro" en Melilla
-gmmu/1:
+gmmu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Murcia%2C%20Espa%C3%B1a'
   title: Google Maps Murcia
   tags:
@@ -394,7 +394,7 @@ gmmu/1:
   - google
   examples:
     centro: buscar "centro" en Murcia
-gmna/1:
+gmna 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Navarra%2C%20Espa%C3%B1a'
   title: Google Maps Navarra
   tags:
@@ -402,7 +402,7 @@ gmna/1:
   - google
   examples:
     centro: buscar "centro" en Navarra
-gmo/1:
+gmo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Oviedo%2C%20Espa%C3%B1a'
   title: Google Maps Oviedo
   tags:
@@ -410,7 +410,7 @@ gmo/1:
   - google
   examples:
     centro: buscar "centro" en Oviedo
-gmou/1:
+gmou 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Orense%2C%20Espa%C3%B1a'
   title: Google Maps Orense
   tags:
@@ -418,7 +418,7 @@ gmou/1:
   - google
   examples:
     centro: buscar "centro" en Orense
-gmp/1:
+gmp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Palencia%2C%20Espa%C3%B1a'
   title: Google Maps Palencia
   tags:
@@ -426,7 +426,7 @@ gmp/1:
   - google
   examples:
     centro: buscar "centro" en Palencia
-gmpa/1:
+gmpa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Pamplona%2C%20Espa%C3%B1a'
   title: Google Maps Pamplona
   tags:
@@ -434,7 +434,7 @@ gmpa/1:
   - google
   examples:
     centro: buscar "centro" en Pamplona
-gmpm/1:
+gmpm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Palma+de+Mallorca%2C%20Espa%C3%B1a'
   title: Google Maps Palma de Mallorca
   tags:
@@ -442,7 +442,7 @@ gmpm/1:
   - google
   examples:
     centro: buscar "centro" en Palma de Mallorca
-gmpo/1:
+gmpo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Pontevedra%2C%20Espa%C3%B1a'
   title: Google Maps Pontevedra
   tags:
@@ -450,7 +450,7 @@ gmpo/1:
   - google
   examples:
     centro: buscar "centro" en Pontevedra
-gms/1:
+gms 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Santander%2C%20Espa%C3%B1a'
   title: Google Maps Santander
   tags:
@@ -458,7 +458,7 @@ gms/1:
   - google
   examples:
     centro: buscar "centro" en Santander
-gmsa/1:
+gmsa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Salamanca%2C%20Espa%C3%B1a'
   title: Google Maps Salamanca
   tags:
@@ -466,7 +466,7 @@ gmsa/1:
   - google
   examples:
     centro: buscar "centro" en Salamanca
-gmsctf/1:
+gmsctf 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Santa%20Cruz%20de%20Tenerife%2C%20Espa%C3%B1a'
   title: Google Maps Santa Cruz de Tenerife
   tags:
@@ -474,7 +474,7 @@ gmsctf/1:
   - google
   examples:
     centro: buscar "centro" en Santa Cruz de Tenerife
-gmse/1:
+gmse 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Sevilla%2C%20Espa%C3%B1a'
   title: Google Maps Sevilla
   tags:
@@ -482,7 +482,7 @@ gmse/1:
   - google
   examples:
     centro: buscar "centro" en Sevilla
-gmsg/1:
+gmsg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Segovia%2C%20Espa%C3%B1a'
   title: Google Maps Segovia
   tags:
@@ -490,7 +490,7 @@ gmsg/1:
   - google
   examples:
     centro: buscar "centro" en Segovia
-gmso/1:
+gmso 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Soria%2C%20Espa%C3%B1a'
   title: Google Maps Soria
   tags:
@@ -498,7 +498,7 @@ gmso/1:
   - google
   examples:
     centro: buscar "centro" en Soria
-gmss/1:
+gmss 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20San+Sebasti%C3%A1n%2C%20Espa%C3%B1a'
   title: Google Maps San Sebastián
   tags:
@@ -506,7 +506,7 @@ gmss/1:
   - google
   examples:
     centro: buscar "centro" en San Sebastián
-gmt/1:
+gmt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Tarragona%2C%20Espa%C3%B1a'
   title: Google Maps Tarragona
   tags:
@@ -514,7 +514,7 @@ gmt/1:
   - google
   examples:
     centro: buscar "centro" en Tarragona
-gmte/1:
+gmte 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Teruel%2C%20Espa%C3%B1a'
   title: Google Maps Teruel
   tags:
@@ -522,7 +522,7 @@ gmte/1:
   - google
   examples:
     centro: buscar "centro" en Teruel
-gmtf/1:
+gmtf 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Tenerife%2C%20Espa%C3%B1a'
   title: Google Maps Tenerife
   tags:
@@ -530,7 +530,7 @@ gmtf/1:
   - google
   examples:
     centro: buscar "centro" en Tenerife
-gmto/1:
+gmto 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Toledo%2C%20Espa%C3%B1a'
   title: Google Maps Toledo
   tags:
@@ -538,7 +538,7 @@ gmto/1:
   - google
   examples:
     centro: buscar "centro" en Toledo
-gmv/1:
+gmv 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Valencia%2C%20Espa%C3%B1a'
   title: Google Maps Valencia
   tags:
@@ -546,7 +546,7 @@ gmv/1:
   - google
   examples:
     centro: buscar "centro" en Valencia
-gmva/1:
+gmva 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Valladolid%2C%20Espa%C3%B1a'
   title: Google Maps Valladolid
   tags:
@@ -554,7 +554,7 @@ gmva/1:
   - google
   examples:
     centro: buscar "centro" en Valladolid
-gmvi/1:
+gmvi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Vitoria%2C%20Espa%C3%B1a'
   title: Google Maps Vitoria
   tags:
@@ -562,7 +562,7 @@ gmvi/1:
   - google
   examples:
     centro: buscar "centro" en Vitoria
-gmz/1:
+gmz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Zaragoza%2C%20Espa%C3%B1a'
   title: Google Maps Zaragoza
   tags:
@@ -570,7 +570,7 @@ gmz/1:
   - google
   examples:
     centro: buscar "centro" en Zaragoza
-gmza/1:
+gmza 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Zamora%2C%20Espa%C3%B1a'
   title: Google Maps Zamora
   tags:
@@ -578,14 +578,14 @@ gmza/1:
   - google
   examples:
     centro: buscar "centro" en Zamora
-ikea/0:
+ikea 0:
   url: 'http://www.ikea.com/es/es/'
   title: IKEA España
   tags:
   - ikea
   - furniture
   - shopping
-ikea/1:
+ikea 1:
   url: 'http://www.ikea.com/es/es/search/?query={%query}'
   title: IKEA España
   tags:
@@ -594,14 +594,14 @@ ikea/1:
   - shopping
   examples:
     colchón: Buscar colchón
-mil/0:
+mil 0:
   url: 'http://www.milanuncios.com/'
   title: Mil Anuncios
   tags:
   - shopping
   - ads
   - anuncios
-mil/1:
+mil 1:
   url: 'http://www.milanuncios.com/anuncios/{%query}.htm'
   title: Mil Anuncios
   tags:
@@ -610,7 +610,7 @@ mil/1:
   - anuncios
   examples:
     bicicleteas en madrid: Buscar bicicleteas en madrid
-titsa/2:
+titsa 2:
   url: 'https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r'
   title: Transportes Interurbanos de Tenerife
   tags:
@@ -621,7 +621,7 @@ titsa/2:
   - maps
   examples:
     'weyler, trinidad': Próxima connection de Weyler a Trinidad
-titsa/3:
+titsa 3:
   url: 'https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&time={%salida}&f=d&dirflg=r'
   title: Transportes Interurbanos de Tenerife
   tags:
@@ -632,7 +632,7 @@ titsa/3:
   - maps
   examples:
     'weyler, trinidad, 10': Connection de Weyler a Trinidad a las 10
-zal/1:
+zal 1:
   url: 'http://www.zalando.es/catalogo/?q={%product}'
   title: Zalando.es
   tags:

@@ -1,11 +1,11 @@
-bdk/1:
+bdk 1:
   url: 'https://bibliotek.dk/da/search/work?search_block_form={%fritekst}'
   title: bibliotek.dk
   tags:
   - library
   examples:
     nesbø: Search for Nesbø
-dsb/2:
+dsb 2:
   url: 'http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&start=1'
   title: Danske Statsbaner
   tags:
@@ -13,7 +13,7 @@ dsb/2:
   - railway
   examples:
     'aarhus, københavn': næste tog fra Aarhus til København
-dsb/3:
+dsb 3:
   url: 'http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&start=1'
   title: Danske Statsbaner
   tags:
@@ -21,7 +21,7 @@ dsb/3:
   - railway
   examples:
     'aarhus, københavn, 10': tog fra Aarhus til København kl. 10
-dsb/4:
+dsb 4:
   url: 'http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&D={%Dato}&start=1'
   title: Danske Statsbaner
   tags:
@@ -29,7 +29,7 @@ dsb/4:
   - railway
   examples:
     'aarhus, københavn, 10, 28.1.': tog fra Aarhus til København kl. 10 den 28.1.
-ikea/0:
+ikea 0:
   url: 'http://www.ikea.com/dk/da/'
   title: IKEA Danmark
   tags:
@@ -38,7 +38,7 @@ ikea/0:
   - shopping
   examples:
     madras: Søger "madras"
-ikea/1:
+ikea 1:
   url: 'http://www.ikea.com/dk/da/search/?query={%query}'
   title: IKEA Danmark
   tags:
@@ -47,7 +47,7 @@ ikea/1:
   - shopping
   examples:
     madras: Søger "madras"
-zal/1:
+zal 1:
   url: 'http://www.zalando.dk/katalog/?q={%produkt}'
   title: Zalando.dk
   tags:

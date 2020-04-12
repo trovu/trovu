@@ -1,15 +1,15 @@
-1und1/0:
+1und1 0:
   url: 'https://www.1und1.de/login'
   title: 1und1 Kundenlogin
   tags:
   - internetprovider
   - communications
-abk/1:
+abk 1:
   url: 'http://www.abkuerzungen.de/result.php?language=&abbreviation={%Abkürzung}'
   title: Abkürzungen
   examples:
     cia: Suche nach der Abkürzung "cia"
-angliz/0:
+angliz 0:
   url: 'https://anglizismenindex.vds-ev.de/suche2.php'
   title: Anglizismen-Index
   tags:
@@ -17,7 +17,7 @@ angliz/0:
   - sprache
   - language
   - anglizismen
-angliz/1:
+angliz 1:
   url: 'https://anglizismenindex.vds-ev.de/suche2.php?la=on&str={%Wort}'
   title: Anglizismen-Index
   tags:
@@ -27,7 +27,7 @@ angliz/1:
   - anglizismen
   examples:
     Airbag: Suche nach Alternativen zu "Airbag"
-ar/1:
+ar 1:
   url: 'http://www.arabdict.com/deutsch-arabisch/{%Wort}'
   title: Arabisch-Deutsch
   tags:
@@ -38,7 +38,7 @@ ar/1:
   examples:
     baum: Übersetzung von "baum" auf Arabisch
     شجرة: Übersetzung von "شجرة" auf Deutsch
-ardtext/1:
+ardtext 1:
   url: 'http://www.ard-text.de/index.php?page={%Seitennummer}'
   title: ARD-Text
   tags:
@@ -47,7 +47,7 @@ ardtext/1:
   - ard
   examples:
     '100': Gehe zu Seite 100
-arv/1:
+arv 1:
   url: 'http://www.lessan.de/de/{%Wort}'
   title: 'Arabisch-Deutsch, mit Vokalen'
   tags:
@@ -58,10 +58,10 @@ arv/1:
   examples:
     baum: Übersetzung von "baum" auf Arabisch
     شَجَرَة: Übersetzung von "شَجَرَة" auf Arabisch
-awort/1:
+awort 1:
   url: 'https://anderes-wort-fuer.de/{%wort}/'
   title: anderes Wort für
-base/1:
+base 1:
   url: 'http://www.base-search.net/Search/Results?lookfor={%Suche}'
   title: Bielefeld Academic Search Engine
   tags:
@@ -70,7 +70,7 @@ base/1:
   - academia
   examples:
     sprache: Suche nach "sprache"
-bbs/1:
+bbs 1:
   url: 'http://www.babyblaue-seiten.de/index.php?searchQuery={%Suche}&content=search&searchWhere=0&content=search'
   title: Babyblaue Seiten
   tags:
@@ -79,10 +79,10 @@ bbs/1:
   - rock
   examples:
     Mekong Delta: Suche nach Mekong Delta
-bc/1:
+bc 1:
   url: 'https://www.bestcheck.de/search?q={%query}'
   title: BestCheck
-berlinify/1:
+berlinify 1:
   url: 'http://berlinifier.appspot.com/berlinify?url={%url}'
   title: Berlinifier
   tags:
@@ -92,7 +92,7 @@ berlinify/1:
   - berlin
   examples:
     'http://spiegel.de': Spiegel.de auf Berlinerisch
-bg/1:
+bg 1:
   url: 'http://debg.dict.cc/?s={%Wort}'
   title: Bulgarisch-Deutsch (dict.cc)
   tags:
@@ -101,7 +101,7 @@ bg/1:
   - german
   examples:
     baum: Search for "baum"
-bk/1:
+bk 1:
   url: 'http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch={%query}'
   title: Buchkatalog
   tags:
@@ -109,17 +109,17 @@ bk/1:
   - books
   examples:
     goethe: Suche nach Goethe
-bl/1:
+bl 1:
   url: 'https://www.google.de/search?q={%query}+site:www.chip.de%2Fbestenlisten'
   title: CHIP Bestenliste
-blb/0:
+blb 0:
   url: 'http://www.booklooker.de/app/sec/login.php'
   title: Booklooker
   tags:
   - shopping
   - books
   - booklooker
-blb/1:
+blb 1:
   url: 'http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor}'
   title: Booklooker
   tags:
@@ -128,7 +128,7 @@ blb/1:
   - booklooker
   examples:
     goethe: Suche nach Büchern von Goethe
-blb/2:
+blb 2:
   url: 'http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor|encoding=iso-8859-1}&titel={%Titel|encoding=iso-8859-1}'
   title: Booklooker
   tags:
@@ -137,7 +137,7 @@ blb/2:
   - booklooker
   examples:
     'goethe, faust': Suche nach "Faust" von Goethe
-blbka/1:
+blbka 1:
   url: 'https://blb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKFreitext+{%query}'
   title: Badische Landesbibliothek Karlsruhe
   tags:
@@ -145,7 +145,7 @@ blbka/1:
   - karlsruhe
   examples:
     goethe: Suche nach Goethe
-bpo/1:
+bpo 1:
   url: 'http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=YYYY-MM}/#{%datum|type=date|output=YYYY-MM-DD}'
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
   tags:
@@ -153,7 +153,7 @@ bpo/1:
   - cultural events
   - classical music
   - music
-buerklin/1:
+buerklin 1:
   url: 'https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}'
   title: 'Bürklin Elektronics, deutsch'
   tags:
@@ -162,7 +162,7 @@ buerklin/1:
   - bürklin
   examples:
     USB: Suche nach "USB"
-bürklin/1:
+bürklin 1:
   url: 'https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}'
   title: 'Bürklin Elektronics, deutsch'
   tags:
@@ -171,7 +171,7 @@ bürklin/1:
   - bürklin
   examples:
     USB: Suche nach "USB"
-ca/1:
+ca 1:
   url: 'https://www.dict.com/Katalanisch-Deutsch/{%Wort}'
   title: Katalanisch - Deutsch (Dict.com)
   tags:
@@ -182,7 +182,7 @@ ca/1:
   examples:
     baum: Search Katalanisch - Deutsch (Dict.com) for "baum"
     arbre: Search Katalanisch - Deutsch (Dict.com) for "arbre"
-canoo/1:
+canoo 1:
   url: 'http://www.canoo.net/services/Controller?input={%Wort}'
   title: Canoo
   tags:
@@ -192,13 +192,13 @@ canoo/1:
   - deutsch
   examples:
     tanzen: Suche nach "tanzen"
-cb/0:
+cb 0:
   url: 'http://www.computerbase.de/'
   title: Computerbase
   tags:
   - computer science
   - linux
-cb/1:
+cb 1:
   url: 'http://www.computerbase.de/suche/?q={%query}&bereich='
   title: Computerbase
   tags:
@@ -206,10 +206,10 @@ cb/1:
   - linux
   examples:
     linux: Suche nach Artikel über "linux"
-ch/1:
+ch 1:
   url: 'https://www.google.de/search?q={%query}+site:www.chip.de'
   title: CHIP
-chip/1:
+chip 1:
   url: 'http://search.chip.de/?q={%query}&sort_by_date=desc'
   title: CHIP Online
   tags:
@@ -217,7 +217,7 @@ chip/1:
   - download
   examples:
     linux: Search CHIP Online for "linux"
-chipd/1:
+chipd 1:
   url: 'http://search.chip.de/?q={%query}&f=softwarereview'
   title: CHIP Online Downloads
   tags:
@@ -225,13 +225,13 @@ chipd/1:
   - download
   examples:
     skype: Search CHIP Online Downloads for "skype"
-ck/0:
+ck 0:
   url: 'http://www.chefkoch.de'
   title: Chefkoch
   tags:
   - cooking
   - recipes
-ck/1:
+ck 1:
   url: 'http://www.chefkoch.de/rs/s0/{%Suche}/Rezepte.html'
   title: Chefkoch
   tags:
@@ -239,7 +239,7 @@ ck/1:
   - recipes
   examples:
     pizza: Rezepte für Pizza
-cs/1:
+cs 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=csde'
   title: Tschechisch-Deutsch (pons.de)
   tags:
@@ -250,14 +250,14 @@ cs/1:
   examples:
     baum: Übersetzung von "baum"
     strom: Übersetzung von "strom"
-cs-de/1:
+cs-de 1:
   url: 'http://slovnik.cz/bin/mld.fpl?vcb={%Wort}&trn=translate&dictdir=gecz.cz_d&lines=20&hptxt=0&js=1&lang=0'
   title: Tschechisch-Deutsch via Slovnik.cz
   tags:
   - czech
   - german
   - dictionary
-csd/1:
+csd 1:
   url: 'http://decs.dict.cc/?s={%Wort}'
   title: Tschechisch-Deutsch (dict.cc)
   tags:
@@ -266,7 +266,7 @@ csd/1:
   - german
   examples:
     baum: Search for "baum"
-css/1:
+css 1:
   url: 'http://www.google.de/search?q=site%3Acss4you.de+{%query}'
   title: Css4you
   tags:
@@ -274,7 +274,7 @@ css/1:
   - css
   examples:
     white-space: Suche nach "white-space"
-da/1:
+da 1:
   url: 'http://deda.dict.cc/?s={%Wort}'
   title: Dänisch-Deutsch (dict.cc)
   tags:
@@ -285,13 +285,13 @@ da/1:
   examples:
     baum: '"baum" auf Dänisch'
     træ: '"træ" auf Deutsch'
-dclj/0:
+dclj 0:
   url: 'https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/'
   title: De.comp.lang.javascript
   tags:
   - programming
   - javascript
-dclj/1:
+dclj 1:
   url: 'https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/{%query}'
   title: De.comp.lang.javascript
   tags:
@@ -299,13 +299,13 @@ dclj/1:
   - javascript
   examples:
     'var ': Suche nach "var"
-dclp/0:
+dclp 0:
   url: 'http://groups.google.de/group/de.comp.lang.php'
   title: De.comp.lang.php
   tags:
   - programming
   - php
-dclp/1:
+dclp 1:
   url: 'https://groups.google.com/forum/#!searchin/de.comp.lang.php/{%query}'
   title: De.comp.lang.php
   tags:
@@ -313,7 +313,7 @@ dclp/1:
   - php
   examples:
     strlen: Search for "strlen"
-dd/1:
+dd 1:
   url: 'http://www.duden.de/suchen/dudenonline/{%wort}'
   title: Duden
   tags:
@@ -323,14 +323,14 @@ dd/1:
   - rechtschreibung
   examples:
     stuhl: Nachschlagen des Wortes "Stuhl"
-de-cs/1:
+de-cs 1:
   url: 'http://slovnik.cz/bin/mld.fpl?vcb={%Wort}&dictdir=gecz.ge&lines=20&hptxt=0&js=1&lang=0'
   title: Deutsch-Tschechisch via Slovnik.cz
   tags:
   - czech
   - german
   - dictionary
-definero/1:
+definero 1:
   url: 'http://www.definero.de/index.php?term={%query}&act=lexicon&set=lexicon%2Canalyse%2Cabbr%2Cdict-en-de%2Csearch-engine'
   title: Definero
   tags:
@@ -338,23 +338,23 @@ definero/1:
   - german
   examples:
     baum: Definiere "baum"
-dict/0:
+dict 0:
   url: dict.leo.org
   title: Leo
-domain/1:
+domain 1:
   url: 'http://www.domainabfrage.net/abfrage/isfree.cgi?domain={%query}&ag=ja&decx=ja&de=ja&ch=ja&at=ja&info=ja&cc=ja&be=ja&com=ja&net=ja&org=ja&biz=ja'
   title: Domainabfrage.net
   tags:
   - domains
   examples:
     hanswurst: Suche nach verfügbaren Domains mit "hanswurst"
-dw/1:
+dw 1:
   url: 'https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item={%suche}'
   title: 'Deutsche Welle, Nachrichten auf Deutsch'
-dwds/1:
+dwds 1:
   url: 'http://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu={%Wort}'
   title: Digitales Wörterbuch der Deutschen Sprache
-el/1:
+el 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deel'
   title: Griechisch-Deutsch (pons.de)
   tags:
@@ -364,7 +364,7 @@ el/1:
   - greek
   examples:
     baum: Übersetzung von "baum"
-eld/1:
+eld 1:
   url: 'http://deel.dict.cc/?s={%Wort}'
   title: Griechisch-Deutsch (dict.cc)
   tags:
@@ -373,7 +373,7 @@ eld/1:
   - german
   examples:
     baum: Search for "baum"
-en/1:
+en 1:
   url: 'http://dict.leo.org/ende/?search={%Wort}'
   title: Englisch-Deutsch (leo.org)
   tags:
@@ -384,7 +384,7 @@ en/1:
   - leo
   examples:
     baum: Englisch-Übersetzung von baum
-enb/1:
+enb 1:
   url: 'http://dict.tu-chemnitz.de/dings.cgi?lang=de&service=deen&opterrors=0&optpro=0&query={%query}'
   title: Englisch-Deutsch (Beolingus)
   tags:
@@ -399,7 +399,7 @@ enb/1:
   examples:
     baum: Übersetzung von "baum" auf Englisch
     tree: Übersetzung von "tree" auf Deutsch
-end/1:
+end 1:
   url: 'http://deen.dict.cc/?s={%Wort}'
   title: Englisch-Deutsch (dict.cc)
   tags:
@@ -409,7 +409,7 @@ end/1:
   - english
   examples:
     baum: Search for "baum"
-eni/1:
+eni 1:
   url: 'http://www.linguee.com/english-german/search?source=auto&query={%Wort}'
   title: Englisch-Deutsch (Linguee)
   tags:
@@ -420,7 +420,7 @@ eni/1:
   - linguee
   examples:
     tree: Translation of "tree"
-enp/1:
+enp 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deen'
   title: Englisch-Deutsch (Pons)
   tags:
@@ -430,7 +430,7 @@ enp/1:
   - english
   examples:
     baum: Übersetzung für "baum"
-eo/1:
+eo 1:
   url: 'http://www.pauker.at/pauker/DE_DE/EO/wb/?modus=&suche={%Wort}'
   title: Esperanto-Deutsch
   tags:
@@ -442,7 +442,7 @@ eo/1:
   examples:
     baum: Suche nach "baum" auf Esperanto
     arbo: Suche nach "arbo" auf Deutsch
-es/1:
+es 1:
   url: 'http://dict.leo.org/esde?search={%Wort}'
   title: Spanisch-Deutsch (leo.org)
   tags:
@@ -450,7 +450,7 @@ es/1:
   - dictionary
   examples:
     baum: Search for "baum"
-esd/1:
+esd 1:
   url: 'http://dees.dict.cc/?s={%Wort}'
   title: Spanisch-Deutsch (dict.cc)
   tags:
@@ -459,7 +459,7 @@ esd/1:
   - german
   examples:
     baum: Search for "baum"
-esi/1:
+esi 1:
   url: 'http://www.linguee.es/espanol-aleman/search?source=auto&query={%Wort}'
   title: Spanisch-Deutsch (Linguee)
   tags:
@@ -468,7 +468,7 @@ esi/1:
   - spanish
   - german
   - linguee
-esp/1:
+esp 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dees'
   title: Spanisch-Deutsch (Pons)
   tags:
@@ -478,7 +478,7 @@ esp/1:
   - spanish
   examples:
     baum: Übersetzung für "baum"
-esx/1:
+esx 1:
   url: 'http://dix.osola.com/index.de.php?search={%Wort|encoding=iso-8859-15}&language=german'
   title: Spanisch-Deutsch (DIX)
   tags:
@@ -487,16 +487,16 @@ esx/1:
   - spanish
   examples:
     baum: Übersetzung für "baum"
-fball/1:
+fball 1:
   url: 'https://fireball.com/search?q={%suchbegriff}'
   title: Fireball Websuche
-fefe/0:
+fefe 0:
   url: 'http://blog.fefe.de'
   title: Fefes Blog
   tags:
   - blog
   - news
-fefe/1:
+fefe 1:
   url: 'https://www.google.com/search?hl={$language}&sitesearch=blog.fefe.de&q={%Suche}'
   title: Fefes Blog
   tags:
@@ -504,7 +504,7 @@ fefe/1:
   - news
   examples:
     atomenergie: Search for "atomenergie"
-fefecss/1:
+fefecss 1:
   url: 'http://blog.fefe.de?css={%Style}.css'
   title: 'Fefes Blog, anderer CSS-Style'
   tags:
@@ -512,13 +512,13 @@ fefecss/1:
   - news
   examples:
     manpage: Fefes Blog mit dem CSS-Style manpage.css
-fefes/0:
+fefes 0:
   url: 'https://blog.fefe.de'
   title: 'Fefes Blog, SSL'
   tags:
   - blog
   - news
-fefes/1:
+fefes 1:
   url: 'https://blog.fefe.de?q={%Suche}'
   title: 'Fefes Blog, SSL, case-sensitive Suche'
   tags:
@@ -526,7 +526,7 @@ fefes/1:
   - news
   examples:
     berlin: Search for "berlin"
-fefescss/1:
+fefescss 1:
   url: 'https://blog.fefe.de?css={%Style}.css'
   title: 'Fefes Blog, anderer CSS-Style, SSL'
   tags:
@@ -534,7 +534,7 @@ fefescss/1:
   - news
   examples:
     manpage: Fefes Blog mit dem CSS-Style manpage.css
-fi/1:
+fi 1:
   url: 'http://defi.dict.cc/?s={%Wort}'
   title: Finnisch-Deutsch (dict.cc)
   tags:
@@ -544,7 +544,7 @@ fi/1:
   - finnish
   examples:
     baum: Übersetzung von "baum"
-fis/1:
+fis 1:
   url: 'http://www.filmstarts.de/suche/?q={%Filmtitel}'
   title: Filmstarts.de
   tags:
@@ -552,17 +552,17 @@ fis/1:
   - cinema
   examples:
     thriller: Suche nach neuen Filmen zu "thriller"
-fmb/2:
+fmb 2:
   url: 'http://findmybook.de/input.php?form%5Btitle%5D={%Titel}&form%5Bauthor%5D={%Autor}'
   title: Findmybook.de
   tags:
   - books
   examples:
     'houellebecq, elementarteilchen': Search for "houellebecq"
-fool/1:
+fool 1:
   url: 'https://www.fool.de/?s={%keyword}&submit=&lang=de'
   title: Fool.de article search
-fr/1:
+fr 1:
   url: 'http://dict.leo.org/frde?search={%Wort}'
   title: Französisch-Deutsch (leo.org)
   tags:
@@ -570,7 +570,7 @@ fr/1:
   - dictionary
   examples:
     baum: Search for "baum"
-frd/1:
+frd 1:
   url: 'http://defr.dict.cc/?s={%Wort}'
   title: Französisch-Deutsch (dict.cc)
   tags:
@@ -579,7 +579,7 @@ frd/1:
   - german
   examples:
     baum: Search for "baum"
-fri/1:
+fri 1:
   url: 'http://www.linguee.fr/francais-allemand/search?source=auto&query={%Wort}'
   title: Französisch-Deutsch (Linguee)
   tags:
@@ -588,7 +588,7 @@ fri/1:
   - french
   - german
   - linguee
-frp/1:
+frp 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=defr'
   title: Französisch-Deutsch (Pons)
   tags:
@@ -598,13 +598,13 @@ frp/1:
   - french
   examples:
     baum: Übersetzung für "baum"
-fs/0:
+fs 0:
   url: 'http://fernsehsuche.de/'
   title: Fernsehsuche.de
   tags:
   - tv
   - mediathek
-fs/1:
+fs 1:
   url: 'http://fernsehsuche.de/uebersicht/?q={%Suche}'
   title: Fernsehsuche.de
   tags:
@@ -612,7 +612,7 @@ fs/1:
   - mediathek
   examples:
     tagesschau: Suche nach "tagesschau" in allen Mediatheken
-ftr/1:
+ftr 1:
   url: 'http://www.finanztreff.de/kurse/suche/'
   post parameters:
     seite: suche
@@ -622,17 +622,17 @@ ftr/1:
   - finance
   examples:
     twitter: Search Finanztreff for "twitter"
-ga/1:
+ga 1:
   url: 'https://gamesageddon.com/fotolia?query={%argument_name}&fOr=nb_downloads'
   title: GamesAgeddon
-gfp/0:
+gfp 0:
   url: 'http://german-foreign-policy.com/de/news/'
   title: German Foreign Policy
   tags:
   - politics
   - news
   - germany
-gfp/1:
+gfp 1:
   url: 'http://german-foreign-policy.com/index.php?lang=de&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}'
   title: German Foreign Policy (German)
   tags:
@@ -641,10 +641,10 @@ gfp/1:
   - germany
   examples:
     berlin: Suche nach "berlin"
-gmp/0:
+gmp 0:
   url: 'https://music.microsoft.com/search/argument%20name?target=web'
   title: Groove musik
-grc/1:
+grc 1:
   url: 'http://www.albertmartin.de/altgriechisch/?q={%suchwort}'
   title: Altgriechisch Wörterbuch
   tags:
@@ -656,72 +656,72 @@ grc/1:
   examples:
     baum: Übersetzung von "Baum" auf Altgriechisch
     ξύλον: 'Übersetzung von "ξύλον" auf Deutsch '
-gs/1:
+gs 1:
   url: 'https://scholar.google.com/search?hl={$language}&q={%query}'
   title: Google scholar
-gz/0:
+gz 0:
   url: 'https://www.griechenland.net/'
   title: Griechenland Zeitung
   tags:
   - news
   - greece
   - griechenland
-h/0:
+h 0:
   url: 'http://www.heise.de'
   title: Heise Startseite
   tags:
   - heise
-h/1:
+h 1:
   url: 'http://www.heise.de/newsticker/suche/?rm=search&q={%Suchbegriff}'
   title: Heise Newssuche
   tags:
   - heise
   examples:
     linux: Search for "linux"
-heise/0:
+heise 0:
   url: 'http://www.heise.de/'
   title: Heise.de
   tags:
   - heise
   - news
-heisenews/0:
+heisenews 0:
   url: 'http://www.heise.de/newsticker'
   title: Heise Newsticker
   tags:
   - heise
   - news
-hn/0:
+hn 0:
   url: 'http://www.heise.de/newsticker'
   title: Heise Newsticker
   tags:
   - heise
-hn/1:
+hn 1:
   url: 'http://www.heise.de/suche/?rm=search;q={%query};channel=newsticker'
   title: Heise Newsticker
   tags:
   - heise
   examples:
     apple: Search for "apple"
-hoax/1:
+hoax 1:
   url: 'http://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms={%query}'
   title: Hoax-Info (TU-Berlin)
   tags:
   - hoax
   examples:
     Nigeria-Connection: Hoax-Info über die "Nigeria-Connection"
-hotf/0:
+hotf 0:
   url: 'http://www.heise.de/extras/foren/S-Special-Off-Topic-Archiv-15/forum-206680/list/'
   title: Heise Off-Topic-Forum
   tags:
   - heise
   - forum
-hpreis/0:
+hpreis 0:
   url: 'http://www.heise.de/preisvergleich'
   title: Heise Preisvergleich Startseite
   tags:
   - heise
   - shopping
-hpreis/1:
+hpreis 1:
   url: 'http://www.heise.de/preisvergleich/?fs={%Suchbegriff}'
   title: 'Heise Preisvergleich '
   tags:
@@ -729,7 +729,7 @@ hpreis/1:
   - shopping
   examples:
     computer: Search for "computer"
-hr/1:
+hr 1:
   url: 'http://www.crodict.com/search.html?submit=&l=1&t=1&q={%Wort}'
   title: Kroatisch-Deutsch (crodict.com)
   tags:
@@ -739,24 +739,24 @@ hr/1:
   - english
   examples:
     baum: Übersetzung für "baum"
-hsoft/0:
+hsoft 0:
   url: 'http://www.heise.de/software/'
   title: Heise Softwareverzeichnis Startseite
   tags:
   - heise
-hsoft/1:
+hsoft 1:
   url: 'http://www.heise.de/software/download/default.shtml?T={%Suchbegriff}&Suchen=suchen&global=1'
   title: 'Heise Softwareverzeichnis '
   tags:
   - heise
   examples:
     bildbearbeitung: Search for "bildbearbeitung"
-htp/0:
+htp 0:
   url: 'http://www.heise.de/tp/'
   title: Telepolis Startseite
   tags:
   - heise
-hu/1:
+hu 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dehu'
   title: Ungarisch-Deutsch (pons.de)
   tags:
@@ -766,7 +766,7 @@ hu/1:
   - hungarian
   examples:
     baum: Übersetzung von "baum"
-hud/1:
+hud 1:
   url: 'http://dehu.dict.cc/?s={%Wort}'
   title: Ungarisch-Deutsch (dict.cc)
   tags:
@@ -775,14 +775,14 @@ hud/1:
   - german
   examples:
     baum: Search for "baum"
-hwho/1:
+hwho 1:
   url: 'http://www.heise.de/netze/tools?rm=whois&plugin={%URL}'
   title: 'Heise Whois Netzwerk-Tool '
   tags:
   - heise
   examples:
     '1': Search for "1"
-is/1:
+is 1:
   url: 'http://deis.dict.cc/?s={%Wort}'
   title: Isländisch-Deutsch (dict.cc)
   tags:
@@ -791,10 +791,10 @@ is/1:
   - german
   examples:
     baum: Search for "baum"
-isbn/1:
+isbn 1:
   url: 'http://de.wikipedia.org/wiki/Spezial:Booksources/{%isbn}'
   title: ISBN-Suche bei Wikipedia
-it/1:
+it 1:
   url: 'http://dict.leo.org/itde?search={%Wort}'
   title: Italienisch-Deutsch (leo.org)
   tags:
@@ -802,7 +802,7 @@ it/1:
   - dictionary
   examples:
     baum: Search for "baum"
-it-ital/1:
+it-ital 1:
   url: 'http://www.italdict.de/exec/?S={%query}'
   title: Italienisch-Deutsch (italdict.de)
   tags:
@@ -812,7 +812,7 @@ it-ital/1:
   - italian
   examples:
     baum: Übersetzung für "baum"
-itd/1:
+itd 1:
   url: 'http://deit.dict.cc/?s={%Wort}'
   title: Italienisch-Deutsch (dict.cc)
   tags:
@@ -821,7 +821,7 @@ itd/1:
   - german
   examples:
     baum: Search for "baum"
-itp/1:
+itp 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deit'
   title: Italienisch-Deutsch (Pons)
   tags:
@@ -831,7 +831,7 @@ itp/1:
   - italian
   examples:
     baum: Übersetzung für "baum"
-ja/1:
+ja 1:
   url: 'http://www.wadoku.de/wadoku/search/{%Wort}'
   title: Japanisch-Deutsch (Wadoku)
   tags:
@@ -840,7 +840,7 @@ ja/1:
   examples:
     baum: Übersetzung für "baum"
     木根: Übersetzung für "木根"
-kam/1:
+kam 1:
   url: 'http://kamelopedia.mormo.org/index.php?title=Special:Search&go=Article&search={%article}'
   title: Kamelopedia
   tags:
@@ -849,13 +849,13 @@ kam/1:
   - humor
   examples:
     Berlin: Artikel zu "Berlin"
-kicker/0:
+kicker 0:
   url: 'http://www.kicker.de/'
   title: Kicker.de
   tags:
   - news
   - sport
-kicker/1:
+kicker 1:
   url: 'http://www.kicker.de/home/suchergebnisse.html?suchbegriff={%Suche}&suchbegriffsent=true'
   title: Kicker.de
   tags:
@@ -863,7 +863,7 @@ kicker/1:
   - sport
   examples:
     berlin: Search for "berlin"
-la/1:
+la 1:
   url: 'http://www.albertmartin.de/latein/?q={%query}'
   title: Latein-Deutsch
   tags:
@@ -874,7 +874,7 @@ la/1:
   examples:
     baum: Übersetzung von "baum"
     arbor: Übersetzung von "arbor"
-lad/1:
+lad 1:
   url: 'http://dela.dict.cc/?s={%Wort}'
   title: Latein-Deutsch (dict.cc)
   tags:
@@ -883,7 +883,7 @@ lad/1:
   - german
   examples:
     baum: Search for "baum"
-last/1:
+last 1:
   url: 'http://www.last.fm/search?setlang=de&q={%artist}'
   title: Last.fm
   tags:
@@ -891,21 +891,21 @@ last/1:
   - lastfm
   examples:
     beatles: Search for "beatles"
-m/1:
+m 1:
   url: 'https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe={%query}'
   title: Metager
   tags:
   - search engine
   - search
   - web search
-morgenpost/1:
+morgenpost 1:
   url: 'http://www.morgenpost.de/suche/?q={%Suche}'
   title: Berliner Morgenpost Archiv
   tags:
   - news
   examples:
     berlin: Search Berliner Morgenpost Archiv for "berlin"
-mp/1:
+mp 1:
   url: 'http://www.moviepilot.de/suche?utf8=%E2%9C%93&q={%Suche}'
   title: Moviepilot
   tags:
@@ -914,19 +914,19 @@ mp/1:
   - film
   examples:
     forrest gump: Search for "Forrest Gump"
-mz/0:
+mz 0:
   url: 'http://www.mittelbayerische.de/'
   title: Mittelbayerische Zeitung
   tags:
   - news
   - bayern
-nds/0:
+nds 0:
   url: 'http://www.nachdenkseiten.de'
   title: Nachdenkseiten
   tags:
   - blog
   - politik
-nds/1:
+nds 1:
   url: 'http://www.nachdenkseiten.de/?s={%Begriff}&Submit.x=0&Submit.y=0'
   title: Nachdenkseiten
   tags:
@@ -934,7 +934,7 @@ nds/1:
   - politik
   examples:
     grundeinkommen: Suche nach "grundeinkommen"
-nl/1:
+nl 1:
   url: 'http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!'
   title: Niederländisch-Deutsch (uitmuntend.de)
   tags:
@@ -942,7 +942,7 @@ nl/1:
   - dictionary
   examples:
     lekker: Search for "lekker"
-nld/1:
+nld 1:
   url: 'http://denl.dict.cc/?s={%Wort}'
   title: Niederländisch-Deutsch (dict.cc)
   tags:
@@ -951,7 +951,7 @@ nld/1:
   - german
   examples:
     baum: Search for "baum"
-no/1:
+no 1:
   url: 'http://deno.dict.cc/?s={%Wort}'
   title: Norwegisch-Deutsch (dict.cc)
   tags:
@@ -961,7 +961,7 @@ no/1:
   - norwegian
   examples:
     baum: Übersetzung von "baum"
-nzz/1:
+nzz 1:
   url: 'http://www.nzz.ch/suche?form%5Bq%5D={%Suchbegriff}'
   title: 'NZZ Neue Züricher Zeitung, Archiv'
   tags:
@@ -969,44 +969,44 @@ nzz/1:
   - nzz
   examples:
     schweiz: 'Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"'
-o/0:
+o 0:
   url: www.softonic.com
   title: softonic
-ofdb/1:
+ofdb 1:
   url: 'http://www.ofdb.de/view.php?page=suchergebnis&SText={%Suche}'
   title: Online Filmdatenbank
   tags:
   - movies
   examples:
     forrest gump: Search for information about Forrest Gump
-offlo/1:
+offlo 1:
   url: 'http://www.office-loesung.de/googlesuche.php?cx=partner-pub-3835174959915126%3Adlozs3erhqu&cof=FORID%3A10&ie=ISO-8859-1&q={%Suche}&sa=Suche&siteurl=www.office-loesung.de%2F&ref=&ss=11381j11919943j44'
   title: OfficeLoesung.de
   tags:
   - microsoft office
   examples:
     test: Search OfficeLoesung for "test"
-osm?/0:
+osm? 0:
   url: 'https://wiki.openstreetmap.org/index.php/Hauptseite'
   title: OpenStreetMap Wiki
   tags:
   - osm
   - maps
   - copyleft
-osmf/0:
+osmf 0:
   url: 'https://forum.openstreetmap.org/viewforum.php?id=14'
   title: OpenStreetMap Forum Deutsch
   tags:
   - osm
   - maps
   - copyleft
-ot/0:
+ot 0:
   url: 'http://www.openthesaurus.de/'
   title: OpenThesaurus
   tags:
   - language
   - thesaurus
-ot/1:
+ot 1:
   url: 'https://www.openthesaurus.de/synonyme/{%Wort}'
   title: OpenThesaurus
   tags:
@@ -1014,13 +1014,13 @@ ot/1:
   - thesaurus
   examples:
     wichtig: Synonyme für "wichtig"
-ot?/0:
+ot? 0:
   url: 'http://www.openthesaurus.de/faq.php'
   title: OpenThesaurus Hilfe
   tags:
   - language
   - thesaurus
-pl/1:
+pl 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=depl'
   title: Polnisch-Deutsch (pons.de)
   tags:
@@ -1031,7 +1031,7 @@ pl/1:
   examples:
     baum: Übersetzung von "baum"
     drzewo: Übersetzung von "drzewo"
-pld/1:
+pld 1:
   url: 'http://depl.dict.cc/?s={%Wort}'
   title: Polnisch-Deutsch (dict.cc)
   tags:
@@ -1040,7 +1040,7 @@ pld/1:
   - german
   examples:
     baum: Search for "baum"
-pt/1:
+pt 1:
   url: 'http://en.pons.com/translate?q={%query}&in=&l=dept'
   title: Portugiesisch-Deutsch (Pons)
   tags:
@@ -1050,7 +1050,7 @@ pt/1:
   - portugese
   examples:
     baum: Übersetzung für "baum"
-ptd/1:
+ptd 1:
   url: 'http://dept.dict.cc/?s={%Wort}'
   title: Portugiesisch-Deutsch (dict.cc)
   tags:
@@ -1059,7 +1059,7 @@ ptd/1:
   - german
   examples:
     baum: Search for "baum"
-pti/1:
+pti 1:
   url: 'https://www.linguee.pt/portugues-alemao/search?source=auto&query={%Wort}'
   title: Portugiesisch-Deutsch (Linguee)
   tags:
@@ -1068,7 +1068,7 @@ pti/1:
   - spanish
   - german
   - linguee
-ptp/1:
+ptp 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dept'
   title: Portugiesisch-Deutsch (Pons)
   tags:
@@ -1078,10 +1078,10 @@ ptp/1:
   - portuguese
   examples:
     baum: Übersetzung für "baum"
-qa/1:
+qa 1:
   url: 'https://lite.qwant.com/?q={%query}'
   title: QWANT
-rblcheck/1:
+rblcheck 1:
   url: 'http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress={%ipaddress}'
   title: RBL-Check (Realtime Blackhole List)
   tags:
@@ -1089,7 +1089,7 @@ rblcheck/1:
   - email
   examples:
     127.0.0.1: Check if 127.0.0.1 is on the RBL
-reim/1:
+reim 1:
   url: 'http://www.2rhyme.ch/Reimt-auf/{%Wortendung}'
   title: 2 Rhyme Reimlexikon
   tags:
@@ -1098,7 +1098,7 @@ reim/1:
   - reime
   examples:
     auen: Suche Reime auf "auen"
-rm/1:
+rm 1:
   url: 'http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase={%pled}'
   title: Pledari Grond
   description: Dictionary German <-> Rumantsch Grischun
@@ -1107,7 +1107,7 @@ rm/1:
   - rumantsch grischun
   - language
   - german
-ro/1:
+ro 1:
   url: 'http://dero.dict.cc/?s={%Wort}'
   title: Rumänisch-Deutsch (dict.cc)
   tags:
@@ -1116,7 +1116,7 @@ ro/1:
   - german
   examples:
     baum: Search for "baum"
-ru/1:
+ru 1:
   url: 'http://dict.leo.org/rude?search={%Wort}'
   title: Russisch-Deutsch (leo.org)
   tags:
@@ -1124,7 +1124,7 @@ ru/1:
   - dictionary
   examples:
     baum: Search for "baum"
-rud/1:
+rud 1:
   url: 'http://deru.dict.cc/?s={%Wort}'
   title: Russisch-Deutsch (dict.cc)
   tags:
@@ -1133,7 +1133,7 @@ rud/1:
   - german
   examples:
     baum: Search for "baum"
-rup/1:
+rup 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=deru'
   title: Russisch-Deutsch (Pons)
   tags:
@@ -1143,7 +1143,7 @@ rup/1:
   - russian
   examples:
     baum: Übersetzung für "baum"
-ruy/1:
+ruy 1:
   url: 'http://lingvo.yandex.ru/de?lang=de&text={%Wort}'
   title: Russisch-Deutsch (yandex.ru)
   tags:
@@ -1154,7 +1154,7 @@ ruy/1:
   examples:
     baum: Übersetzung für "baum"
     дерево: Übersetzung für "дерево"
-sat1text/1:
+sat1text 1:
   url: 'http://www.sat1.de/service/teletext/index.php?pagnr={%Seite}_01'
   title: Sat.1-Text
   tags:
@@ -1162,7 +1162,7 @@ sat1text/1:
   - teletext
   examples:
     '100 ': Gehe zu Seite 100
-sh/0:
+sh 0:
   url: 'http://de.selfhtml.org/'
   title: Selfhtml
   tags:
@@ -1175,7 +1175,7 @@ sh/0:
   - documentation
   - doc
   - tutorial
-sh/1:
+sh 1:
   url: 'http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage={%Suche}'
   title: Selfhtml
   tags:
@@ -1186,7 +1186,7 @@ sh/1:
   - javascript
   examples:
     div: Suche nach "div"
-shg/1:
+shg 1:
   url: 'http://www.google.com/search?q={%Suche}&sitesearch=wiki.selfhtml.org'
   title: Selfhtml via Google
   tags:
@@ -1201,7 +1201,7 @@ shg/1:
   - tutorial
   examples:
     doctype: description about doctype declaration
-sk/1:
+sk 1:
   url: 'http://desk.dict.cc/?s={%Wort}'
   title: Slowakisch-Deutsch (dict.cc)
   tags:
@@ -1210,16 +1210,16 @@ sk/1:
   - german
   examples:
     baum: Search for "baum"
-soft/0:
+soft 0:
   url: 'http://softorama.com'
   title: softorama
-spon/0:
+spon 0:
   url: 'http://www.spiegel.de/'
   title: Spiegel Online
   tags:
   - news
   - spiegel
-spon/1:
+spon 1:
   url: 'http://www.spiegel.de/suche/index.html?suchbegriff={%Suche}'
   title: Spiegel Online
   tags:
@@ -1227,7 +1227,7 @@ spon/1:
   - spiegel
   examples:
     berlin: Suche nach "berlin"
-sv/1:
+sv 1:
   url: 'http://rio.pauker.at/pauker/DE/SE/wb/?s={%Wort}'
   title: Schwedisch-Deutsch (pauker.at)
   tags:
@@ -1237,7 +1237,7 @@ sv/1:
   - german
   examples:
     baum: Übersetzung für "baum"
-svd/1:
+svd 1:
   url: 'http://desv.dict.cc/?s={%Wort}'
   title: Schwedisch-Deutsch (dict.cc)
   tags:
@@ -1246,7 +1246,7 @@ svd/1:
   - german
   examples:
     baum: Search for "baum"
-syn/1:
+syn 1:
   url: 'http://synonyme.woxikon.de/synonyme/{%wort}.php'
   title: Synonyme
   tags:
@@ -1254,44 +1254,44 @@ syn/1:
   - thesaurus
   examples:
     wichtig: Synonyme für "wichtig"
-sz/0:
+sz 0:
   url: 'http://www.sueddeutsche.de/'
   title: Süddeutsche Zeitung
   tags:
   - news
   - zeitung
-sz/1:
+sz 1:
   url: 'http://www.sueddeutsche.de/news?search={%query}'
   title: Süddeutsche Zeitung
   tags:
   - newspaper
   - news
   - print
-taz/0:
+taz 0:
   url: 'http://www.taz.de/'
   title: taz. die tageszeitung
   tags:
   - news
   - zeitung
-tomdestages/0:
+tomdestages 0:
   url: 'https://www.taz.de/#!tom=tomdestages'
   title: Tom Touché (Tom des Tages)
   tags:
   - taz
   - comic
-tomshuffle/0:
+tomshuffle 0:
   url: 'https://www.taz.de/#!tom=tomshuffle'
   title: Tom Touché (Random)
   tags:
   - taz
   - comic
-tomtouche/0:
+tomtouche 0:
   url: 'https://www.taz.de/#!tom=tomdestages'
   title: Tom Touché (Tom des Tages)
   tags:
   - taz
   - comic
-tr/1:
+tr 1:
   url: 'http://detr.dict.cc/?s={%Wort}'
   title: Türkisch-Deutsch (dict.cc)
   tags:
@@ -1300,7 +1300,7 @@ tr/1:
   - german
   examples:
     baum: Search for "baum"
-trd/1:
+trd 1:
   url: 'http://www.deutsch-tuerkisch.net/suche/{%Wort}'
   title: Türkisch-Deutsch (Deutsch-Tuerkisch.net)
   tags:
@@ -1311,13 +1311,13 @@ trd/1:
   examples:
     baum: Übersetzung von "baum" auf Türkisch
     ağaç: Übersetzung von "ağaç" auf Deutsch
-ts/0:
+ts 0:
   url: 'http://www.tagesschau.de/'
   title: Tagesschau
   tags:
   - news
   - tagesschau
-ts/1:
+ts 1:
   url: 'http://www.tagesschau.de/suche2.html?searchText={%query}'
   title: Tagesschau
   tags:
@@ -1325,14 +1325,14 @@ ts/1:
   - tagesschau
   examples:
     berlin: Suche nach Nachrichten zu Berlin
-uu/0:
+uu 0:
   url: 'http://www.ubuntuusers.de/'
   title: UbuntuUsers.de
   tags:
   - ubuntu
   - linux
   - documentation
-uu/1:
+uu 1:
   url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=all'
   title: 'UbuntuUsers.de: Suche in allen Bereichen'
   tags:
@@ -1341,7 +1341,7 @@ uu/1:
   - documentation
   examples:
     spiele: Search for "spiele"
-uua/1:
+uua 1:
   url: 'http://wiki.ubuntuusers.de/{%title}'
   title: 'UbuntuUsers.de: Artikel im Wiki'
   tags:
@@ -1350,14 +1350,14 @@ uua/1:
   - documentation
   examples:
     spiele: Search for "spiele"
-uuf/0:
+uuf 0:
   url: 'http://forum.ubuntuusers.de/'
   title: 'UbuntuUsers.de: Startseite des Forum'
   tags:
   - ubuntu
   - linux
   - documentation
-uuf/1:
+uuf 1:
   url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=forum'
   title: 'UbuntuUsers.de: Suche im Forum'
   tags:
@@ -1366,14 +1366,14 @@ uuf/1:
   - documentation
   examples:
     spiele: Search for "spiele"
-uui/0:
+uui 0:
   url: 'http://ikhaya.ubuntuusers.de/'
   title: 'UbuntuUsers.de: Ikhaya-Startseite'
   tags:
   - ubuntu
   - linux
   - documentation
-uui/1:
+uui 1:
   url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=ikhaya'
   title: 'UbuntuUsers.de: Ikhaya-Artikelsuche'
   tags:
@@ -1382,14 +1382,14 @@ uui/1:
   - documentation
   examples:
     spiele: Search for "spiele"
-uup/0:
+uup 0:
   url: 'http://planet.ubuntuusers.de/'
   title: 'UbuntuUsers.de: Startseite des Planeten'
   tags:
   - ubuntu
   - linux
   - documentation
-uup/1:
+uup 1:
   url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=planet'
   title: 'UbuntuUsers.de: Suche im Planeten'
   tags:
@@ -1398,14 +1398,14 @@ uup/1:
   - documentation
   examples:
     spiele: Search for "spiele"
-uuw/0:
+uuw 0:
   url: 'http://wiki.ubuntuusers.de/Startseite'
   title: 'UbuntuUsers.de: Startseite des Wiki'
   tags:
   - ubuntu
   - linux
   - documentation
-uuw/1:
+uuw 1:
   url: 'http://ubuntuusers.de/search/?query={%Suchwort}&area=wiki'
   title: 'UbuntuUsers.de: Suche im Wiki'
   tags:
@@ -1414,7 +1414,7 @@ uuw/1:
   - documentation
   examples:
     spiele: Search for "spiele"
-wn/1:
+wn 1:
   url: 'http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort={%query}'
   title: Wörterbuchnetz
   tags:
@@ -1424,16 +1424,16 @@ wn/1:
   - deutsch
   examples:
     haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
-wq/1:
+wq 1:
   url: 'https://de.wikiquote.org/w/index.php?search={%query}'
   title: Wikiquote
-ws/0:
+ws 0:
   url: 'http://wortschatz.uni-leipzig.de'
   title: Wortschatz-Lexikon
   tags:
   - language
   - german
-ws/1:
+ws 1:
   url: 'http://corpora.uni-leipzig.de/de/res?word={%Wort}&corpusId=deu_newscrawl_2011'
   title: Wortschatz-Lexikon (Deutsch)
   tags:
@@ -1441,7 +1441,7 @@ ws/1:
   - german
   examples:
     Stuhl: Search for "Stuhl"
-zdnet/1:
+zdnet 1:
   url: 'http://downloads.netmediaeurope.de/?s={%Suche}'
   title: ZDNet Download
   tags:
@@ -1449,13 +1449,13 @@ zdnet/1:
   - software
   examples:
     editor: Search for "editor"
-zeit/0:
+zeit 0:
   url: 'http://www.zeit.de/'
   title: Zeit Online
   tags:
   - news
   - zeit
-zeit/1:
+zeit 1:
   url: 'http://www.zeit.de/suche/index?searchtype=on&q={%query}'
   title: Zeit Online
   tags:
@@ -1463,7 +1463,7 @@ zeit/1:
   - zeit
   examples:
     berlin: Suche im Archiv von Zeit Online nach Berlin
-zel/1:
+zel 1:
   url: 'http://www.zelluloid.de/suche/index.php3?qstring={%Suche}'
   title: Zelluloid Filmsuche
   tags:
@@ -1471,7 +1471,7 @@ zel/1:
   - cinema
   examples:
     forrest gump: Suche nach "forrest gump"
-zh/1:
+zh 1:
   url: 'http://dict.leo.org/chde?search={%Wort}'
   title: Chinesisch-Deutsch (leo.org)
   tags:
@@ -1479,7 +1479,7 @@ zh/1:
   - dictionary
   examples:
     baum: Search for "baum"
-zv/1:
+zv 1:
   url: 'http://www.zwangsversteigerung.de/suche?q={%KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID}&ergebnisZeigen=ja'
   title: Zwangsversteigerung
   tags:

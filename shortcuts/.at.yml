@@ -1,4 +1,4 @@
-a/0:
+a 0:
   url: 'http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=at&tag=serchilo-21'
   title: Amazon.at Startseite
   tags:
@@ -6,7 +6,7 @@ a/0:
   - shopping
   - books
   - affiliate
-a/1:
+a 1:
   url: 'http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&site-redirect=at&linkCode=ur2&tag=serchilo-21'
   title: Amazon.at
   tags:
@@ -16,14 +16,14 @@ a/1:
   - affiliate
   examples:
     goethe: Suche auf Amazon.at nach "goethe"
-conrad/0:
+conrad 0:
   url: 'http://www.conrad.at/'
   title: Conrad Elektronik Österreich
   tags:
   - shopping
   - electronics
   - conrad
-conrad/1:
+conrad 1:
   url: 'http://www.conrad.at/ce/de/FastSearch.html?search={%Artikel}'
   title: Conrad Elektronik Österreich
   tags:
@@ -32,14 +32,14 @@ conrad/1:
   - conrad
   examples:
     glühlampe: Suche nach Glühlampen
-e/0:
+e 0:
   url: 'http://rover.ebay.com/rover/1/5221-53469-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229473&kwid=902099&mtid=824&kw=lg'
   title: Ebay.at
   tags:
   - shopping
   - ebay
   - affiliate
-e/1:
+e 1:
   url: 'http://rover.ebay.com/rover/1/5221-53469-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229473&kwid=902099&mtid=824&kw=lg'
   title: Ebay.at
   tags:
@@ -48,7 +48,7 @@ e/1:
   - affiliate
   examples:
     smartphone: Search for "smartphone"
-g/1:
+g 1:
   url: 'https://www.google.at/search?hl={$language}&q={%query}&ie=utf-8'
   title: Google.at
   tags:
@@ -56,14 +56,14 @@ g/1:
   - google
   examples:
     wien: Google-Suche nach "wien"
-gh/0:
+gh 0:
   url: 'http://geizhals.at/'
   title: Geizhals Österreich Hauptseite
   tags:
   - geizhals
   - shopping
   - preisvergleich
-gh/1:
+gh 1:
   url: 'http://geizhals.at/?fs={%Produkt|encoding=iso-8859-1}'
   title: Geizhals Österreich
   tags:
@@ -72,7 +72,7 @@ gh/1:
   - preisvergleich
   examples:
     fernseher: Search for "fernseher"
-gmam/1:
+gmam 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Amstetten%2C%20%C3%96sterreich'
   title: Google Maps Amstetten
   tags:
@@ -80,7 +80,7 @@ gmam/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Amstetten
-gmb/1:
+gmb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bregenz%2C%20%C3%96sterreich'
   title: Google Maps Bregenz
   tags:
@@ -88,7 +88,7 @@ gmb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Bregenz
-gmba/1:
+gmba 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bad+Aussee%2C%20%C3%96sterreich'
   title: Google Maps Bad Aussee
   tags:
@@ -96,7 +96,7 @@ gmba/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Bad Aussee
-gmbl/1:
+gmbl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Leitha%2C%20%C3%96sterreich'
   title: Google Maps Bruck an der Leitha
   tags:
@@ -104,7 +104,7 @@ gmbl/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Bruck an der Leitha
-gmbm/1:
+gmbm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Mur%2C%20%C3%96sterreich'
   title: Google Maps Bruck an der Mur
   tags:
@@ -112,7 +112,7 @@ gmbm/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Bruck an der Mur
-gmbn/1:
+gmbn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Baden%2C%20%C3%96sterreich'
   title: Google Maps Baden
   tags:
@@ -120,7 +120,7 @@ gmbn/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Baden
-gmbr/1:
+gmbr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Braunau+am+Inn%2C%20%C3%96sterreich'
   title: Google Maps Braunau am Inn
   tags:
@@ -128,7 +128,7 @@ gmbr/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Braunau am Inn
-gmbz/1:
+gmbz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bludenz%2C%20%C3%96sterreich'
   title: Google Maps Bludenz
   tags:
@@ -136,7 +136,7 @@ gmbz/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Bludenz
-gmdl/1:
+gmdl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Deutschlandsberg%2C%20%C3%96sterreich'
   title: Google Maps Deutschlandsberg
   tags:
@@ -144,7 +144,7 @@ gmdl/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Deutschlandsberg
-gmdo/1:
+gmdo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Dornbirn%2C%20%C3%96sterreich'
   title: Google Maps Dornbirn
   tags:
@@ -152,7 +152,7 @@ gmdo/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Dornbirn
-gme/1:
+gme 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eisenstadt%2C%20%C3%96sterreich'
   title: Google Maps Eisenstadt
   tags:
@@ -160,7 +160,7 @@ gme/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Eisenstadt
-gmef/1:
+gmef 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eferding%2C%20%C3%96sterreich'
   title: Google Maps Eferding
   tags:
@@ -168,7 +168,7 @@ gmef/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Eferding
-gmfb/1:
+gmfb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldbach%2C%20%C3%96sterreich'
   title: Google Maps Feldbach
   tags:
@@ -176,7 +176,7 @@ gmfb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Feldbach
-gmfe/1:
+gmfe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirchen%2C%20%C3%96sterreich'
   title: Google Maps Feldkirchen
   tags:
@@ -184,7 +184,7 @@ gmfe/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Feldkirchen
-gmff/1:
+gmff 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20F%C3%BCrstenfeld%2C%20%C3%96sterreich'
   title: Google Maps Fürstenfeld
   tags:
@@ -192,7 +192,7 @@ gmff/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Fürstenfeld
-gmfk/1:
+gmfk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirch%2C%20%C3%96sterreich'
   title: Google Maps Feldkirch
   tags:
@@ -200,7 +200,7 @@ gmfk/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Feldkirch
-gmfr/1:
+gmfr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Freistadt%2C%20%C3%96sterreich'
   title: Google Maps Freistadt
   tags:
@@ -208,7 +208,7 @@ gmfr/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Freistadt
-gmg/1:
+gmg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Graz%2C%20%C3%96sterreich'
   title: Google Maps Graz
   tags:
@@ -216,7 +216,7 @@ gmg/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Graz
-gmgb/1:
+gmgb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gr%C3%B6bming%2C%20%C3%96sterreich'
   title: Google Maps Gröbming
   tags:
@@ -224,7 +224,7 @@ gmgb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Gröbming
-gmgd/1:
+gmgd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gm%C3%BCnd%2C%20%C3%96sterreich'
   title: Google Maps Gmünd
   tags:
@@ -232,7 +232,7 @@ gmgd/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Gmünd
-gmgf/1:
+gmgf 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%A4nserndorf%2C%20%C3%96sterreich'
   title: Google Maps Gänserndorf
   tags:
@@ -240,7 +240,7 @@ gmgf/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Gänserndorf
-gmgm/1:
+gmgm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gmunden%2C%20%C3%96sterreich'
   title: Google Maps Gmunden
   tags:
@@ -248,7 +248,7 @@ gmgm/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Gmunden
-gmgr/1:
+gmgr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Grieskirchen%2C%20%C3%96sterreich'
   title: Google Maps Grieskirchen
   tags:
@@ -256,7 +256,7 @@ gmgr/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Grieskirchen
-gmgs/1:
+gmgs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%BCssing%2C%20%C3%96sterreich'
   title: Google Maps Güssing
   tags:
@@ -264,7 +264,7 @@ gmgs/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Güssing
-gmha/1:
+gmha 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hallein%2C%20%C3%96sterreich'
   title: Google Maps Hallein
   tags:
@@ -272,7 +272,7 @@ gmha/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Hallein
-gmhb/1:
+gmhb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hartberg%2C%20%C3%96sterreich'
   title: Google Maps Hartberg
   tags:
@@ -280,7 +280,7 @@ gmhb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Hartberg
-gmhe/1:
+gmhe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hermagor%2C%20%C3%96sterreich'
   title: Google Maps Hermagor
   tags:
@@ -288,7 +288,7 @@ gmhe/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Hermagor
-gmhl/1:
+gmhl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hollabrunn%2C%20%C3%96sterreich'
   title: Google Maps Hollabrunn
   tags:
@@ -296,7 +296,7 @@ gmhl/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Hollabrunn
-gmho/1:
+gmho 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Horn%2C%20%C3%96sterreich'
   title: Google Maps Horn
   tags:
@@ -304,7 +304,7 @@ gmho/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Horn
-gmi/1:
+gmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Innsbruck%2C%20%C3%96sterreich'
   title: Google Maps Innsbruck
   tags:
@@ -312,7 +312,7 @@ gmi/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Innsbruck
-gmim/1:
+gmim 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Imst%2C%20%C3%96sterreich'
   title: Google Maps Imst
   tags:
@@ -320,7 +320,7 @@ gmim/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Imst
-gmje/1:
+gmje 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Jennersdorf%2C%20%C3%96sterreich'
   title: Google Maps Jennersdorf
   tags:
@@ -328,7 +328,7 @@ gmje/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Jennersdorf
-gmjo/1:
+gmjo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+Johann%2C%20%C3%96sterreich'
   title: Google Maps St. Johann
   tags:
@@ -336,7 +336,7 @@ gmjo/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in St. Johann
-gmju/1:
+gmju 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Judenburg%2C%20%C3%96sterreich'
   title: Google Maps Judenburg
   tags:
@@ -344,7 +344,7 @@ gmju/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Judenburg
-gmk/1:
+gmk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Klagenfurt%2C%20%C3%96sterreich'
   title: Google Maps Klagenfurt
   tags:
@@ -352,7 +352,7 @@ gmk/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Klagenfurt
-gmkb/1:
+gmkb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kitzb%C3%BChel%2C%20%C3%96sterreich'
   title: Google Maps Kitzbühel
   tags:
@@ -360,7 +360,7 @@ gmkb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Kitzbühel
-gmkf/1:
+gmkf 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Knittelfeld%2C%20%C3%96sterreich'
   title: Google Maps Knittelfeld
   tags:
@@ -368,7 +368,7 @@ gmkf/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Knittelfeld
-gmki/1:
+gmki 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kirchdorf+Krems%2C%20%C3%96sterreich'
   title: Google Maps Kirchdorf Krems
   tags:
@@ -376,7 +376,7 @@ gmki/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Kirchdorf Krems
-gmko/1:
+gmko 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Korneuburg%2C%20%C3%96sterreich'
   title: Google Maps Korneuburg
   tags:
@@ -384,7 +384,7 @@ gmko/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Korneuburg
-gmks/1:
+gmks 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Krems%2C%20%C3%96sterreich'
   title: Google Maps Krems
   tags:
@@ -392,7 +392,7 @@ gmks/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Krems
-gmku/1:
+gmku 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kufstein%2C%20%C3%96sterreich'
   title: Google Maps Kufstein
   tags:
@@ -400,7 +400,7 @@ gmku/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Kufstein
-gml/1:
+gml 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Linz%2C%20%C3%96sterreich'
   title: Google Maps Linz
   tags:
@@ -408,7 +408,7 @@ gml/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Linz
-gmla/1:
+gmla 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Landeck%2C%20%C3%96sterreich'
   title: Google Maps Landeck
   tags:
@@ -416,7 +416,7 @@ gmla/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Landeck
-gmlb/1:
+gmlb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leibnitz%2C%20%C3%96sterreich'
   title: Google Maps Leibnitz
   tags:
@@ -424,7 +424,7 @@ gmlb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Leibnitz
-gmle/1:
+gmle 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leoben%2C%20%C3%96sterreich'
   title: Google Maps Leoben
   tags:
@@ -432,7 +432,7 @@ gmle/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Leoben
-gmlf/1:
+gmlf 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lilienfeld%2C%20%C3%96sterreich'
   title: Google Maps Lilienfeld
   tags:
@@ -440,7 +440,7 @@ gmlf/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Lilienfeld
-gmli/1:
+gmli 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Liezen%2C%20%C3%96sterreich'
   title: Google Maps Liezen
   tags:
@@ -448,7 +448,7 @@ gmli/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Liezen
-gmlz/1:
+gmlz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lienz%2C%20%C3%96sterreich'
   title: Google Maps Lienz
   tags:
@@ -456,7 +456,7 @@ gmlz/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Lienz
-gmma/1:
+gmma 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mattersburg%2C%20%C3%96sterreich'
   title: Google Maps Mattersburg
   tags:
@@ -464,7 +464,7 @@ gmma/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Mattersburg
-gmmd/1:
+gmmd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%B6dling%2C%20%C3%96sterreich'
   title: Google Maps Mödling
   tags:
@@ -472,7 +472,7 @@ gmmd/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Mödling
-gmme/1:
+gmme 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Melk%2C%20%C3%96sterreich'
   title: Google Maps Melk
   tags:
@@ -480,7 +480,7 @@ gmme/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Melk
-gmmi/1:
+gmmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mistelbach%2C%20%C3%96sterreich'
   title: Google Maps Mistelbach
   tags:
@@ -488,7 +488,7 @@ gmmi/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Mistelbach
-gmmu/1:
+gmmu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Murau%2C%20%C3%96sterreich'
   title: Google Maps Murau
   tags:
@@ -496,7 +496,7 @@ gmmu/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Murau
-gmmz/1:
+gmmz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%BCrzzuschlag%2C%20%C3%96sterreich'
   title: Google Maps Mürzzuschlag
   tags:
@@ -504,7 +504,7 @@ gmmz/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Mürzzuschlag
-gmnd/1:
+gmnd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neusiedl+am+See%2C%20%C3%96sterreich'
   title: Google Maps Neusiedl am See
   tags:
@@ -512,7 +512,7 @@ gmnd/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Neusiedl am See
-gmnk/1:
+gmnk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neunkirchen%2C%20%C3%96sterreich'
   title: Google Maps Neunkirchen
   tags:
@@ -520,7 +520,7 @@ gmnk/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Neunkirchen
-gmop/1:
+gmop 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberpullendorf%2C%20%C3%96sterreich'
   title: Google Maps Oberpullendorf
   tags:
@@ -528,7 +528,7 @@ gmop/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Oberpullendorf
-gmow/1:
+gmow 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberwart%2C%20%C3%96sterreich'
   title: Google Maps Oberwart
   tags:
@@ -536,7 +536,7 @@ gmow/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Oberwart
-gmp/1:
+gmp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+P%C3%B6lten%2C%20%C3%96sterreich'
   title: Google Maps St. Pölten
   tags:
@@ -544,7 +544,7 @@ gmp/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in St. Pölten
-gmpe/1:
+gmpe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Perg%2C%20%C3%96sterreich'
   title: Google Maps Perg
   tags:
@@ -552,7 +552,7 @@ gmpe/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Perg
-gmra/1:
+gmra 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Radkersburg%2C%20%C3%96sterreich'
   title: Google Maps Radkersburg
   tags:
@@ -560,7 +560,7 @@ gmra/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Radkersburg
-gmre/1:
+gmre 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Reutte%2C%20%C3%96sterreich'
   title: Google Maps Reutte
   tags:
@@ -568,7 +568,7 @@ gmre/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Reutte
-gmri/1:
+gmri 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Ried+im+Innkreis%2C%20%C3%96sterreich'
   title: Google Maps Ried im Innkreis
   tags:
@@ -576,7 +576,7 @@ gmri/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Ried im Innkreis
-gmro/1:
+gmro 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Rohrbach%2C%20%C3%96sterreich'
   title: Google Maps Rohrbach
   tags:
@@ -584,7 +584,7 @@ gmro/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Rohrbach
-gms/1:
+gms 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Salzburg%2C%20%C3%96sterreich'
   title: Google Maps Salzburg
   tags:
@@ -592,7 +592,7 @@ gms/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Salzburg
-gmsb/1:
+gmsb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Scheibbs%2C%20%C3%96sterreich'
   title: Google Maps Scheibbs
   tags:
@@ -600,7 +600,7 @@ gmsb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Scheibbs
-gmsd/1:
+gmsd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sch%C3%A4rding%2C%20%C3%96sterreich'
   title: Google Maps Schärding
   tags:
@@ -608,7 +608,7 @@ gmsd/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Schärding
-gmsp/1:
+gmsp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Spittal+an+der+Drau%2C%20%C3%96sterreich'
   title: Google Maps Spittal an der Drau
   tags:
@@ -616,7 +616,7 @@ gmsp/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Spittal an der Drau
-gmsr/1:
+gmsr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Steyr%2C%20%C3%96sterreich'
   title: Google Maps Steyr
   tags:
@@ -624,7 +624,7 @@ gmsr/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Steyr
-gmsv/1:
+gmsv 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sankt+Veit+an+der+Glan%2C%20%C3%96sterreich'
   title: Google Maps Sankt Veit an der Glan
   tags:
@@ -632,7 +632,7 @@ gmsv/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Sankt Veit an der Glan
-gmsw/1:
+gmsw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwechat%2C%20%C3%96sterreich'
   title: Google Maps Schwechat
   tags:
@@ -640,7 +640,7 @@ gmsw/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Schwechat
-gmsz/1:
+gmsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwaz%2C%20%C3%96sterreich'
   title: Google Maps Schwaz
   tags:
@@ -648,7 +648,7 @@ gmsz/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Schwaz
-gmta/1:
+gmta 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tamsweg%2C%20%C3%96sterreich'
   title: Google Maps Tamsweg
   tags:
@@ -656,7 +656,7 @@ gmta/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Tamsweg
-gmtu/1:
+gmtu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tulln%2C%20%C3%96sterreich'
   title: Google Maps Tulln
   tags:
@@ -664,7 +664,7 @@ gmtu/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Tulln
-gmvb/1:
+gmvb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6cklabruck%2C%20%C3%96sterreich'
   title: Google Maps Vöcklabruck
   tags:
@@ -672,7 +672,7 @@ gmvb/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Vöcklabruck
-gmvi/1:
+gmvi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Villach%2C%20%C3%96sterreich'
   title: Google Maps Villach
   tags:
@@ -680,7 +680,7 @@ gmvi/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Villach
-gmvk/1:
+gmvk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6lkermarkt%2C%20%C3%96sterreich'
   title: Google Maps Völkermarkt
   tags:
@@ -688,7 +688,7 @@ gmvk/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Völkermarkt
-gmvo/1:
+gmvo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Voitsberg%2C%20%C3%96sterreich'
   title: Google Maps Voitsberg
   tags:
@@ -696,7 +696,7 @@ gmvo/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Voitsberg
-gmw/1:
+gmw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wien%2C%20%C3%96sterreich'
   title: Google Maps Wien
   tags:
@@ -704,7 +704,7 @@ gmw/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Wien
-gmwe/1:
+gmwe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wels%2C%20%C3%96sterreich'
   title: Google Maps Wels
   tags:
@@ -712,7 +712,7 @@ gmwe/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Wels
-gmwn/1:
+gmwn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wiener+Neustadt%2C%20%C3%96sterreich'
   title: Google Maps Wiener Neustadt
   tags:
@@ -720,7 +720,7 @@ gmwn/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Wiener Neustadt
-gmwo/1:
+gmwo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wolfsberg%2C%20%C3%96sterreich'
   title: Google Maps Wolfsberg
   tags:
@@ -728,7 +728,7 @@ gmwo/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Wolfsberg
-gmwt/1:
+gmwt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Thaya%2C%20%C3%96sterreich'
   title: Google Maps Waidhofen an der Thaya
   tags:
@@ -736,7 +736,7 @@ gmwt/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Waidhofen an der Thaya
-gmwy/1:
+gmwy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Ybbs%2C%20%C3%96sterreich'
   title: Google Maps Waidhofen an der Ybbs
   tags:
@@ -744,7 +744,7 @@ gmwy/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Waidhofen an der Ybbs
-gmwz/1:
+gmwz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Weiz%2C%20%C3%96sterreich'
   title: Google Maps Weiz
   tags:
@@ -752,7 +752,7 @@ gmwz/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Weiz
-gmze/1:
+gmze 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zell+am+See%2C%20%C3%96sterreich'
   title: Google Maps Zell am See
   tags:
@@ -760,7 +760,7 @@ gmze/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Zell am See
-gmzt/1:
+gmzt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zwettl%2C%20%C3%96sterreich'
   title: Google Maps Zwettl
   tags:
@@ -768,14 +768,14 @@ gmzt/1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Zwettl
-ikea/0:
+ikea 0:
   url: 'http://www.ikea.com/at/de/'
   title: IKEA Österreich
   tags:
   - ikea
   - furniture
   - shopping
-ikea/1:
+ikea 1:
   url: 'http://www.ikea.com/at/de/search/?query={%query}'
   title: IKEA Österreich
   tags:
@@ -784,7 +784,7 @@ ikea/1:
   - shopping
   examples:
     matratze: Suche nach Matratzen
-obv/1:
+obv 1:
   url: 'http://search.obvsg.at/primo_library/libweb/action/search.do?dscnt=0&scp.scps=scope%3A%28ACC_aleph%29&frbg=&tab=default_tab&dstmp=1341338980198&srt=rank&ct=search&mode=Basic&dum=true&indx=1&tb=t&vl%28freeText0%29={%query}&fn=search&vid=ACC'
   title: OBV Suche - Österreichischer Bibliothekenverbund
   tags:
@@ -792,7 +792,7 @@ obv/1:
   - obv
   examples:
     elfriede jelinek: Suche nach Literatur von und über Elfriede Jelinek
-oebb/2:
+oebb 2:
   url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&start=1'
   title: ÖBB-Auskunft
   tags:
@@ -800,7 +800,7 @@ oebb/2:
   - travel
   examples:
     'wien, salzburg': Verbindung von Wien nach Salzburg
-oebb/3:
+oebb 3:
   url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1'
   title: ÖBB-Auskunft
   tags:
@@ -808,7 +808,7 @@ oebb/3:
   - travel
   examples:
     'wien, salzburg, 10': 'Verbindung von Wien nach Salzburg um 10:00 Uhr'
-oebb/4:
+oebb 4:
   url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1'
   title: ÖBB-Auskunft
   tags:
@@ -816,7 +816,7 @@ oebb/4:
   - travel
   examples:
     'wien, salzburg, 10, 1.1.': 'Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.'
-rsc/1:
+rsc 1:
   url: 'http://at.rs-online.com/web/c/?searchTerm={%Produkt}'
   title: RS Components Österreich
   tags:
@@ -824,19 +824,19 @@ rsc/1:
   - electronics
   examples:
     Battery: Suche bei RS Components nach "Battery"
-we/0:
+we 0:
   url: 'http://at.wetter.com/?forcesite=1'
   title: Wetter.com
   tags:
   - weather
-we/1:
+we 1:
   url: 'http://at.wetter.com/suche/?search={%Ort}'
   title: Wetter.com
   tags:
   - weather
   examples:
     berlin: Search for "berlin"
-zal/1:
+zal 1:
   url: 'http://www.zalando.at/katalog/?q={%Produkt}'
   title: Zalando.at
   tags:
@@ -844,7 +844,7 @@ zal/1:
   - zalando
   examples:
     schuhe: Suche nach Schuhen
-öbb/2:
+öbb 2:
   url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&start=1'
   title: ÖBB-Auskunft
   tags:
@@ -852,7 +852,7 @@ zal/1:
   - travel
   examples:
     'wien, salzburg': Verbindung von Wien nach Salzburg
-öbb/3:
+öbb 3:
   url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1'
   title: ÖBB-Auskunft
   tags:
@@ -860,7 +860,7 @@ zal/1:
   - travel
   examples:
     'wien, salzburg, 10': 'Verbindung von Wien nach Salzburg um 10:00 Uhr'
-öbb/4:
+öbb 4:
   url: 'http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1'
   title: ÖBB-Auskunft
   tags:

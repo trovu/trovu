@@ -1,4 +1,4 @@
-de/1:
+de 1:
   url: 'http://dict.leo.org/rude?search={%слово}'
   title: Русско-немецкий словарь (leo.org)
   tags:
@@ -6,7 +6,7 @@ de/1:
   - dictionary
   examples:
     дерево: Search for "дерево"
-last/1:
+last 1:
   url: 'http://www.last.fm/search?setlang=ru&q={%artist}'
   title: Last.fm
   tags:
@@ -14,7 +14,7 @@ last/1:
   - lastfm
   examples:
     beatles: Search for "beatles"
-ws/1:
+ws 1:
   url: 'http://corpora.uni-leipzig.de/de/res?corpusId=rus_mixed_2013&word={%слово}'
   title: Wortschatz-Lexikon (Русский)
   tags:
@@ -22,7 +22,7 @@ ws/1:
   - russian
   examples:
     стул: Search for "стул"
-ya/1:
+ya 1:
   url: 'http://yandex.ru/yandsearch?text={%query}'
   title: 'Yandex Web, Russian'
   tags:

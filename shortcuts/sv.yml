@@ -1,4 +1,4 @@
-de/1:
+de 1:
   url: 'http://rio.pauker.at/pauker/DE/SE/wb/?s={%ord}'
   title: Tysk-Svensk
   tags:
@@ -9,7 +9,7 @@ de/1:
   examples:
     baum: Swedish translation for "baum"
     träd: German translation for "träd"
-en/1:
+en 1:
   url: 'http://folkets-lexikon.csc.kth.se/folkets/#lookup&{%ord}&l=SVEENG'
   title: Engelsk-Svensk
   tags:
@@ -20,7 +20,7 @@ en/1:
   examples:
     tree: Translation of "tree"
     träd: Translation of "träd"
-eo/1:
+eo 1:
   url: 'http://cgi.algonet.se/htbin/cgiwrap/eldona/ordbok.pl?ord={%ord|encoding=iso-8859-1}'
   title: Esperanto-Svenska
   tags:
@@ -31,7 +31,7 @@ eo/1:
   examples:
     arbo: Swedish translation for "arbo"
     träd: Esperanto translation for "träd"
-fr/1:
+fr 1:
   url: 'http://www.azoria.com/php/search.php?word={%ord}'
   title: Fransk-Svensk (Azoria)
   tags:
@@ -42,7 +42,7 @@ fr/1:
   examples:
     arbre: Swedish translation for "arbre"
     träd: French translation for "träd"
-fr-sv/1:
+fr-sv 1:
   url: 'http://www.sensagent.com/dictionnaires/fr-sv/{%ord}/ALEXMN/'
   title: Fransk-Svensk (Sensagent)
   tags:
@@ -50,7 +50,7 @@ fr-sv/1:
   - language
   - swedish
   - french
-last/1:
+last 1:
   url: 'http://www.last.fm/search?setlang=sv&q={%artist}'
   title: Last.fm
   tags:
@@ -58,7 +58,7 @@ last/1:
   - lastfm
   examples:
     beatles: Search for "beatles"
-rim/1:
+rim 1:
   url: 'http://rimlexikon.com/index.php?rim={%ord|encoding=iso-8859-1}'
   title: Rimlexikon
   tags:
@@ -66,13 +66,13 @@ rim/1:
   - swedish
   examples:
     träd: Search rhymes for "träd"
-sv/1:
+sv 1:
   url: 'http://www.ord.se/oversattning/Svenska/?s={%ord}&l=SVESVE'
   title: Svenska ordbok Norstedts
   tags:
   - dictionary
   - swedish
-sv-fr/1:
+sv-fr 1:
   url: 'http://www.sensagent.com/dictionnaires/sv-fr/{%ord}/ALEXMN/'
   title: Svensk-Fransk (Sensagent)
   tags:

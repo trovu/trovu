@@ -1,10 +1,10 @@
-al/0:
+al 0:
   url: 'http://allegro.pl/'
   title: Allegro
   tags:
   - shopping
   - allegro
-al/1:
+al 1:
   url: 'http://allegro.pl/search.php?sg=0&string={%przedmiot}'
   title: Allegro
   tags:
@@ -12,25 +12,25 @@ al/1:
   - allegro
   examples:
     smartfon: szukaj "smartfon"
-ceneo/0:
+ceneo 0:
   url: 'http://www.ceneo.pl/'
   title: Ceneo
   tags:
   - shopping
-ceneo/1:
+ceneo 1:
   url: 'http://www.ceneo.pl/categories.aspx?search=yes&categoryID=0&searchText={%produkt}&inDesc=False&minPrice=0&maxPrice=99999999'
   title: Ceneo
   tags:
   - shopping
   examples:
     iphone: ceny iPhone'a
-e/0:
+e 0:
   url: 'http://www.ebay.pl/'
   title: Ebay.pl
   tags:
   - shopping
   - ebay
-e/1:
+e 1:
   url: 'http://www.ebay.pl/sch/i.html?_nkw={%query}'
   title: Ebay.pl
   tags:
@@ -38,7 +38,7 @@ e/1:
   - ebay
   examples:
     smartphone: Search for "smartphone"
-ep/2:
+ep 2:
   url: 'http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}'
   title: e-podróżnik.pl
   tags:
@@ -48,7 +48,7 @@ ep/2:
   - e-podróżnik
   examples:
     'kutno, gniezno': połączenie z Kutna do Gniezna
-ep/3:
+ep 3:
   url: 'http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}'
   title: e-podróżnik.pl
   tags:
@@ -58,7 +58,7 @@ ep/3:
   - e-podróżnik
   examples:
     'kutno, gniezno, 10': połączenie z Kutna do Gniezna o godz. 10
-ep/4:
+ep 4:
   url: 'http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}&formCompositeSearcherFinal.date={%data}'
   title: e-podróżnik.pl
   tags:
@@ -68,7 +68,7 @@ ep/4:
   - e-podróżnik
   examples:
     'kutno, gniezno, 10, 31.1.13': połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
-g/1:
+g 1:
   url: 'https://www.google.pl/search?hl={$language}&q={%query}&ie=utf-8'
   title: Google.pl
   tags:
@@ -76,7 +76,7 @@ g/1:
   - google
   examples:
     warszawa: Szukaj "warszawa" w Google.pl
-gastro/2:
+gastro 2:
   url: 'http://www.gastronauci.pl/pl/restauracje/{%miasto}?kind={%lokal/kuchnia}'
   title: gastronauci.pl
   tags:
@@ -84,7 +84,7 @@ gastro/2:
   - restaurant
   examples:
     'warszawa, bar mleczny': bary mleczne w Warszawie
-gmbau/1:
+gmbau 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20August%C3%B3w%2C%20Polska'
   title: Google Maps Augustów
   tags:
@@ -92,7 +92,7 @@ gmbau/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Augustów
-gmbbi/1:
+gmbbi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bielsk+Podlaski%2C%20Polska'
   title: Google Maps Bielsk Podlaski
   tags:
@@ -100,7 +100,7 @@ gmbbi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bielsk Podlaski
-gmbgr/1:
+gmbgr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grajewo%2C%20Polska'
   title: Google Maps Grajewo
   tags:
@@ -108,7 +108,7 @@ gmbgr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Grajewo
-gmbha/1:
+gmbha 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Hajn%C3%B3wka%2C%20Polska'
   title: Google Maps Hajnówka
   tags:
@@ -116,7 +116,7 @@ gmbha/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Hajnówka
-gmbi/1:
+gmbi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82ystok%2C%20Polska'
   title: Google Maps Białystok
   tags:
@@ -124,7 +124,7 @@ gmbi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Białystok
-gmbkl/1:
+gmbkl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kolno%2C%20Polska'
   title: Google Maps Kolno
   tags:
@@ -132,7 +132,7 @@ gmbkl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kolno
-gmbl/1:
+gmbl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81om%C5%BCa%2C%20Polska'
   title: Google Maps Łomża
   tags:
@@ -140,7 +140,7 @@ gmbl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łomża
-gmbmn/1:
+gmbmn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mo%C5%84ki%2C%20Polska'
   title: Google Maps Mońki
   tags:
@@ -148,7 +148,7 @@ gmbmn/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mońki
-gmbs/1:
+gmbs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Suwa%C5%82ki%2C%20Polska'
   title: Google Maps Suwałki
   tags:
@@ -156,7 +156,7 @@ gmbs/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Suwałki
-gmbse/1:
+gmbse 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sejny%2C%20Polska'
   title: Google Maps Sejny
   tags:
@@ -164,7 +164,7 @@ gmbse/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sejny
-gmbsi/1:
+gmbsi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Siemiatycze%2C%20Polska'
   title: Google Maps Siemiatycze
   tags:
@@ -172,7 +172,7 @@ gmbsi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Siemiatycze
-gmbsk/1:
+gmbsk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sok%C3%B3%C5%82ka%2C%20Polska'
   title: Google Maps Sokółka
   tags:
@@ -180,7 +180,7 @@ gmbsk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sokółka
-gmbwm/1:
+gmbwm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wysokie+Mazowieckie%2C%20Polska'
   title: Google Maps Wysokie Mazowieckie
   tags:
@@ -188,7 +188,7 @@ gmbwm/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wysokie Mazowieckie
-gmbza/1:
+gmbza 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zambr%C3%B3w%2C%20Polska'
   title: Google Maps Zambrów
   tags:
@@ -196,7 +196,7 @@ gmbza/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zambrów
-gmcal/1:
+gmcal 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Aleksandr%C3%B3w+Kujawski%2C%20Polska'
   title: Google Maps Aleksandrów Kujawski
   tags:
@@ -204,7 +204,7 @@ gmcal/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Aleksandrów Kujawski
-gmcb/1:
+gmcb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bydgoszcz%2C%20Polska'
   title: Google Maps Bydgoszcz
   tags:
@@ -212,7 +212,7 @@ gmcb/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bydgoszcz
-gmcbr/1:
+gmcbr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brodnica%2C%20Polska'
   title: Google Maps Brodnica
   tags:
@@ -220,7 +220,7 @@ gmcbr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Brodnica
-gmcch/1:
+gmcch 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Che%C5%82mno%2C%20Polska'
   title: Google Maps Chełmno
   tags:
@@ -228,7 +228,7 @@ gmcch/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Chełmno
-gmcg/1:
+gmcg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grudzi%C4%85dz%2C%20Polska'
   title: Google Maps Grudziądz
   tags:
@@ -236,7 +236,7 @@ gmcg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Grudziądz
-gmcgd/1:
+gmcgd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Golub-Dobrzy%C5%84%2C%20Polska'
   title: Google Maps Golub-Dobrzyń
   tags:
@@ -244,7 +244,7 @@ gmcgd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Golub-Dobrzyń
-gmcin/1:
+gmcin 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Inowroc%C5%82aw%2C%20Polska'
   title: Google Maps Inowrocław
   tags:
@@ -252,7 +252,7 @@ gmcin/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Inowrocław
-gmcli/1:
+gmcli 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lipno%2C%20Polska'
   title: Google Maps Lipno
   tags:
@@ -260,7 +260,7 @@ gmcli/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lipno
-gmcmg/1:
+gmcmg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mogilno%2C%20Polska'
   title: Google Maps Mogilno
   tags:
@@ -268,7 +268,7 @@ gmcmg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mogilno
-gmcna/1:
+gmcna 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nak%C5%82o+nad+Noteci%C4%85%2C%20Polska'
   title: Google Maps Nakło nad Notecią
   tags:
@@ -276,7 +276,7 @@ gmcna/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nakło nad Notecią
-gmcra/1:
+gmcra 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radziej%C3%B3w%2C%20Polska'
   title: Google Maps Radziejów
   tags:
@@ -284,7 +284,7 @@ gmcra/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Radziejów
-gmcry/1:
+gmcry 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rypin%2C%20Polska'
   title: Google Maps Rypin
   tags:
@@ -292,7 +292,7 @@ gmcry/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Rypin
-gmcse/1:
+gmcse 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C4%99p%C3%B3lno+Kraje%C5%84skie%2C%20Polska'
   title: Google Maps Sępólno Krajeńskie
   tags:
@@ -300,7 +300,7 @@ gmcse/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sępólno Krajeńskie
-gmcsw/1:
+gmcsw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awiecie%2C%20Polska'
   title: Google Maps Świecie
   tags:
@@ -308,7 +308,7 @@ gmcsw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Świecie
-gmct/1:
+gmct 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Toru%C5%84%2C%20Polska'
   title: Google Maps Toruń
   tags:
@@ -316,7 +316,7 @@ gmct/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Toruń
-gmctu/1:
+gmctu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tuchola%2C%20Polska'
   title: Google Maps Tuchola
   tags:
@@ -324,7 +324,7 @@ gmctu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tuchola
-gmcw/1:
+gmcw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C5%82oc%C5%82awek%2C%20Polska'
   title: Google Maps Włocławek
   tags:
@@ -332,7 +332,7 @@ gmcw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Włocławek
-gmcwa/1:
+gmcwa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%85brze%C5%BAno%2C%20Polska'
   title: Google Maps Wąbrzeźno
   tags:
@@ -340,7 +340,7 @@ gmcwa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wąbrzeźno
-gmczn/1:
+gmczn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBnin%2C%20Polska'
   title: Google Maps Żnin
   tags:
@@ -348,7 +348,7 @@ gmczn/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Żnin
-gmdb/1:
+gmdb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wa%C5%82brzych%2C%20Polska'
   title: Google Maps Wałbrzych
   tags:
@@ -356,7 +356,7 @@ gmdb/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wałbrzych
-gmdbl/1:
+gmdbl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Boles%C5%82awiec%2C%20Polska'
   title: Google Maps Bolesławiec
   tags:
@@ -364,7 +364,7 @@ gmdbl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bolesławiec
-gmddz/1:
+gmddz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Dzier%C5%BConi%C3%B3w%2C%20Polska'
   title: Google Maps Dzierżoniów
   tags:
@@ -372,7 +372,7 @@ gmddz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Dzierżoniów
-gmdgl/1:
+gmdgl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20G%C5%82og%C3%B3w%2C%20Polska'
   title: Google Maps Głogów
   tags:
@@ -380,7 +380,7 @@ gmdgl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Głogów
-gmdgr/1:
+gmdgr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20G%C3%B3ra%2C%20Polska'
   title: Google Maps Góra
   tags:
@@ -388,7 +388,7 @@ gmdgr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Góra
-gmdj/1:
+gmdj 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jelenia+G%C3%B3ra%2C%20Polska'
   title: Google Maps Jelenia Góra
   tags:
@@ -396,7 +396,7 @@ gmdj/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jelenia Góra
-gmdja/1:
+gmdja 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jawor%2C%20Polska'
   title: Google Maps Jawor
   tags:
@@ -404,7 +404,7 @@ gmdja/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jawor
-gmdka/1:
+gmdka 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kamienna+G%C3%B3ra%2C%20Polska'
   title: Google Maps Kamienna Góra
   tags:
@@ -412,7 +412,7 @@ gmdka/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kamienna Góra
-gmdkl/1:
+gmdkl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C5%82odzko%2C%20Polska'
   title: Google Maps Kłodzko
   tags:
@@ -420,7 +420,7 @@ gmdkl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kłodzko
-gmdl/1:
+gmdl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Legnica%2C%20Polska'
   title: Google Maps Legnica
   tags:
@@ -428,7 +428,7 @@ gmdl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Legnica
-gmdlb/1:
+gmdlb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Luba%C5%84%2C%20Polska'
   title: Google Maps Lubań
   tags:
@@ -436,7 +436,7 @@ gmdlb/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubań
-gmdlu/1:
+gmdlu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubin%2C%20Polska'
   title: Google Maps Lubin
   tags:
@@ -444,7 +444,7 @@ gmdlu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubin
-gmdlw/1:
+gmdlw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lw%C3%B3wek+%C5%9Al%C4%85ski%2C%20Polska'
   title: Google Maps Lwówek Śląski
   tags:
@@ -452,7 +452,7 @@ gmdlw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lwówek Śląski
-gmdmi/1:
+gmdmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Milicz%2C%20Polska'
   title: Google Maps Milicz
   tags:
@@ -460,7 +460,7 @@ gmdmi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Milicz
-gmdoa/1:
+gmdoa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20O%C5%82awa%2C%20Polska'
   title: Google Maps Oława
   tags:
@@ -468,7 +468,7 @@ gmdoa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Oława
-gmdol/1:
+gmdol 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ole%C5%9Bnica%2C%20Polska'
   title: Google Maps Oleśnica
   tags:
@@ -476,7 +476,7 @@ gmdol/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Oleśnica
-gmdpl/1:
+gmdpl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Polkowice%2C%20Polska'
   title: Google Maps Polkowice
   tags:
@@ -484,7 +484,7 @@ gmdpl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Polkowice
-gmdsr/1:
+gmdsr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Aroda+%C5%9Al%C4%85ska%2C%20Polska'
   title: Google Maps Środa Śląska
   tags:
@@ -492,7 +492,7 @@ gmdsr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Środa Śląska
-gmdst/1:
+gmdst 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzelin%2C%20Polska'
   title: Google Maps Strzelin
   tags:
@@ -500,7 +500,7 @@ gmdst/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzelin
-gmdsw/1:
+gmdsw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awidnica%2C%20Polska'
   title: Google Maps Świdnica
   tags:
@@ -508,7 +508,7 @@ gmdsw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Świdnica
-gmdtr/1:
+gmdtr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Trzebnica%2C%20Polska'
   title: Google Maps Trzebnica
   tags:
@@ -516,7 +516,7 @@ gmdtr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Trzebnica
-gmdw/1:
+gmdw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wroc%C5%82aw%2C%20Polska'
   title: Google Maps Wrocław
   tags:
@@ -524,7 +524,7 @@ gmdw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wrocław
-gmdwl/1:
+gmdwl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wo%C5%82%C3%B3w%2C%20Polska'
   title: Google Maps Wołów
   tags:
@@ -532,7 +532,7 @@ gmdwl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wołów
-gmdza/1:
+gmdza 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Z%C4%85bkowice+%C5%9Al%C4%85skie%2C%20Polska'
   title: Google Maps Ząbkowice Śląskie
   tags:
@@ -540,7 +540,7 @@ gmdza/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ząbkowice Śląskie
-gmdzg/1:
+gmdzg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zgorzelec%2C%20Polska'
   title: Google Maps Zgorzelec
   tags:
@@ -548,7 +548,7 @@ gmdzg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zgorzelec
-gmdzl/1:
+gmdzl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Z%C5%82otoryja%2C%20Polska'
   title: Google Maps Złotoryja
   tags:
@@ -556,7 +556,7 @@ gmdzl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Złotoryja
-gmebe/1:
+gmebe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Be%C5%82chat%C3%B3w%2C%20Polska'
   title: Google Maps Bełchatów
   tags:
@@ -564,7 +564,7 @@ gmebe/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bełchatów
-gmebr/1:
+gmebr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzeziny%2C%20Polska'
   title: Google Maps Brzeziny
   tags:
@@ -572,7 +572,7 @@ gmebr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzeziny
-gmeku/1:
+gmeku 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kutno%2C%20Polska'
   title: Google Maps Kutno
   tags:
@@ -580,7 +580,7 @@ gmeku/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kutno
-gmel/1:
+gmel 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81%C3%B3d%C5%BA%2C%20Polska'
   title: Google Maps Łódź
   tags:
@@ -588,7 +588,7 @@ gmel/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łódź
-gmela/1:
+gmela 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81ask%2C%20Polska'
   title: Google Maps Łask
   tags:
@@ -596,7 +596,7 @@ gmela/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łask
-gmelc/1:
+gmelc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81owicz%2C%20Polska'
   title: Google Maps Łowicz
   tags:
@@ -604,7 +604,7 @@ gmelc/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łowicz
-gmele/1:
+gmele 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81%C4%99czyca%2C%20Polska'
   title: Google Maps Łęczyca
   tags:
@@ -612,7 +612,7 @@ gmele/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łęczyca
-gmeop/1:
+gmeop 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opoczno%2C%20Polska'
   title: Google Maps Opoczno
   tags:
@@ -620,7 +620,7 @@ gmeop/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Opoczno
-gmep/1:
+gmep 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Piotrk%C3%B3w+Trybunalski%2C%20Polska'
   title: Google Maps Piotrków Trybunalski
   tags:
@@ -628,7 +628,7 @@ gmep/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Piotrków Trybunalski
-gmepa/1:
+gmepa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pabianice%2C%20Polska'
   title: Google Maps Pabianice
   tags:
@@ -636,7 +636,7 @@ gmepa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pabianice
-gmepd/1:
+gmepd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Podd%C4%99bice%2C%20Polska'
   title: Google Maps Poddębice
   tags:
@@ -644,7 +644,7 @@ gmepd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Poddębice
-gmepj/1:
+gmepj 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Paj%C4%99czno%2C%20Polska'
   title: Google Maps Pajęczno
   tags:
@@ -652,7 +652,7 @@ gmepj/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pajęczno
-gmera/1:
+gmera 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radomsko%2C%20Polska'
   title: Google Maps Radomsko
   tags:
@@ -660,7 +660,7 @@ gmera/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Radomsko
-gmerw/1:
+gmerw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rawa+Mazowiecka%2C%20Polska'
   title: Google Maps Rawa Mazowiecka
   tags:
@@ -668,7 +668,7 @@ gmerw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Rawa Mazowiecka
-gmes/1:
+gmes 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Skierniewice%2C%20Polska'
   title: Google Maps Skierniewice
   tags:
@@ -676,7 +676,7 @@ gmes/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Skierniewice
-gmesi/1:
+gmesi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sieradz%2C%20Polska'
   title: Google Maps Sieradz
   tags:
@@ -684,7 +684,7 @@ gmesi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sieradz
-gmetm/1:
+gmetm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tomasz%C3%B3w+Mazowiecki%2C%20Polska'
   title: Google Maps Tomaszów Mazowiecki
   tags:
@@ -692,7 +692,7 @@ gmetm/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tomaszów Mazowiecki
-gmewe/1:
+gmewe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wierusz%C3%B3w%2C%20Polska'
   title: Google Maps Wieruszów
   tags:
@@ -700,7 +700,7 @@ gmewe/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wieruszów
-gmewi/1:
+gmewi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wielu%C5%84%2C%20Polska'
   title: Google Maps Wieluń
   tags:
@@ -708,7 +708,7 @@ gmewi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wieluń
-gmezd/1:
+gmezd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zdu%C5%84ska+Wola%2C%20Polska'
   title: Google Maps Zduńska Wola
   tags:
@@ -716,7 +716,7 @@ gmezd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zduńska Wola
-gmezg/1:
+gmezg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zgierz%2C%20Polska'
   title: Google Maps Zgierz
   tags:
@@ -724,7 +724,7 @@ gmezg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zgierz
-gmfg/1:
+gmfg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gorz%C3%B3w+Wielkopolski%2C%20Polska'
   title: Google Maps Gorzów Wielkopolski
   tags:
@@ -732,7 +732,7 @@ gmfg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gorzów Wielkopolski
-gmfkr/1:
+gmfkr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krosno+Odrza%C5%84skie%2C%20Polska'
   title: Google Maps Krosno Odrzańskie
   tags:
@@ -740,7 +740,7 @@ gmfkr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Krosno Odrzańskie
-gmfmi/1:
+gmfmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mi%C4%99dzyrzecz%2C%20Polska'
   title: Google Maps Międzyrzecz
   tags:
@@ -748,7 +748,7 @@ gmfmi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Międzyrzecz
-gmfnw/1:
+gmfnw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowa+S%C3%B3l%2C%20Polska'
   title: Google Maps Nowa Sól
   tags:
@@ -756,7 +756,7 @@ gmfnw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowa Sól
-gmfsd/1:
+gmfsd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzelce+Kraje%C5%84skie%2C%20Polska'
   title: Google Maps Strzelce Krajeńskie
   tags:
@@ -764,7 +764,7 @@ gmfsd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzelce Krajeńskie
-gmfsl/1:
+gmfsl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82ubice%2C%20Polska'
   title: Google Maps Słubice
   tags:
@@ -772,7 +772,7 @@ gmfsl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Słubice
-gmfsu/1:
+gmfsu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sul%C4%99cin%2C%20Polska'
   title: Google Maps Sulęcin
   tags:
@@ -780,7 +780,7 @@ gmfsu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sulęcin
-gmfsw/1:
+gmfsw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awiebodzin%2C%20Polska'
   title: Google Maps Świebodzin
   tags:
@@ -788,7 +788,7 @@ gmfsw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Świebodzin
-gmfws/1:
+gmfws 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wschowa%2C%20Polska'
   title: Google Maps Wschowa
   tags:
@@ -796,7 +796,7 @@ gmfws/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wschowa
-gmfz/1:
+gmfz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zielona+G%C3%B3ra%2C%20Polska'
   title: Google Maps Zielona Góra
   tags:
@@ -804,7 +804,7 @@ gmfz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zielona Góra
-gmfza/1:
+gmfza 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBary%2C%20Polska'
   title: Google Maps Żary
   tags:
@@ -812,7 +812,7 @@ gmfza/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Żary
-gmfzg/1:
+gmfzg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBaga%C5%84%2C%20Polska'
   title: Google Maps Żagań
   tags:
@@ -820,7 +820,7 @@ gmfzg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Żagań
-gmga/1:
+gmga 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gdynia%2C%20Polska'
   title: Google Maps Gdynia
   tags:
@@ -828,7 +828,7 @@ gmga/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gdynia
-gmgby/1:
+gmgby 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Byt%C3%B3w%2C%20Polska'
   title: Google Maps Bytów
   tags:
@@ -836,7 +836,7 @@ gmgby/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bytów
-gmgch/1:
+gmgch 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chojnice%2C%20Polska'
   title: Google Maps Chojnice
   tags:
@@ -844,7 +844,7 @@ gmgch/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Chojnice
-gmgcz/1:
+gmgcz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Cz%C5%82uch%C3%B3w%2C%20Polska'
   title: Google Maps Człuchów
   tags:
@@ -852,7 +852,7 @@ gmgcz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Człuchów
-gmgd/1:
+gmgd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gda%C5%84sk%2C%20Polska'
   title: Google Maps Gdańsk
   tags:
@@ -860,7 +860,7 @@ gmgd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gdańsk
-gmgda/1:
+gmgda 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pruszcz+Gda%C5%84ski%2C%20Polska'
   title: Google Maps Pruszcz Gdański
   tags:
@@ -868,7 +868,7 @@ gmgda/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pruszcz Gdański
-gmgka/1:
+gmgka 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kartuzy%2C%20Polska'
   title: Google Maps Kartuzy
   tags:
@@ -876,7 +876,7 @@ gmgka/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kartuzy
-gmgks/1:
+gmgks 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%9Bcierzyna%2C%20Polska'
   title: Google Maps Kościerzyna
   tags:
@@ -884,7 +884,7 @@ gmgks/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kościerzyna
-gmgkw/1:
+gmgkw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kwidzyn%2C%20Polska'
   title: Google Maps Kwidzyn
   tags:
@@ -892,7 +892,7 @@ gmgkw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kwidzyn
-gmgle/1:
+gmgle 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20L%C4%99bork%2C%20Polska'
   title: Google Maps Lębork
   tags:
@@ -900,7 +900,7 @@ gmgle/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lębork
-gmgmb/1:
+gmgmb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Malbork%2C%20Polska'
   title: Google Maps Malbork
   tags:
@@ -908,7 +908,7 @@ gmgmb/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Malbork
-gmgnd/1:
+gmgnd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Dw%C3%B3r+Gda%C5%84ski%2C%20Polska'
   title: Google Maps Nowy Dwór Gdański
   tags:
@@ -916,7 +916,7 @@ gmgnd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Dwór Gdański
-gmgpu/1:
+gmgpu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Puck%2C%20Polska'
   title: Google Maps Puck
   tags:
@@ -924,7 +924,7 @@ gmgpu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Puck
-gmgs/1:
+gmgs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82upsk%2C%20Polska'
   title: Google Maps Słupsk
   tags:
@@ -932,7 +932,7 @@ gmgs/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Słupsk
-gmgsp/1:
+gmgsp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sopot%2C%20Polska'
   title: Google Maps Sopot
   tags:
@@ -940,7 +940,7 @@ gmgsp/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sopot
-gmgst/1:
+gmgst 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Starogard+Gda%C5%84ski%2C%20Polska'
   title: Google Maps Starogard Gdański
   tags:
@@ -948,7 +948,7 @@ gmgst/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Starogard Gdański
-gmgsz/1:
+gmgsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sztum%2C%20Polska'
   title: Google Maps Sztum
   tags:
@@ -956,7 +956,7 @@ gmgsz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sztum
-gmgtc/1:
+gmgtc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tczew%2C%20Polska'
   title: Google Maps Tczew
   tags:
@@ -964,7 +964,7 @@ gmgtc/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tczew
-gmgwe/1:
+gmgwe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wejherowo%2C%20Polska'
   title: Google Maps Wejherowo
   tags:
@@ -972,7 +972,7 @@ gmgwe/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wejherowo
-gmkbc/1:
+gmkbc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bochnia%2C%20Polska'
   title: Google Maps Bochnia
   tags:
@@ -980,7 +980,7 @@ gmkbc/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bochnia
-gmkbr/1:
+gmkbr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzesko%2C%20Polska'
   title: Google Maps Brzesko
   tags:
@@ -988,7 +988,7 @@ gmkbr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzesko
-gmkch/1:
+gmkch 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chrzan%C3%B3w%2C%20Polska'
   title: Google Maps Chrzanów
   tags:
@@ -996,7 +996,7 @@ gmkch/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Chrzanów
-gmkda/1:
+gmkda 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20D%C4%85browa+Tarnowska%2C%20Polska'
   title: Google Maps Dąbrowa Tarnowska
   tags:
@@ -1004,7 +1004,7 @@ gmkda/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Dąbrowa Tarnowska
-gmkgr/1:
+gmkgr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gorlice%2C%20Polska'
   title: Google Maps Gorlice
   tags:
@@ -1012,7 +1012,7 @@ gmkgr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gorlice
-gmkli/1:
+gmkli 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Limanowa%2C%20Polska'
   title: Google Maps Limanowa
   tags:
@@ -1020,7 +1020,7 @@ gmkli/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Limanowa
-gmkmi/1:
+gmkmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Miech%C3%B3w%2C%20Polska'
   title: Google Maps Miechów
   tags:
@@ -1028,7 +1028,7 @@ gmkmi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Miechów
-gmkmy/1:
+gmkmy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20My%C5%9Blenice%2C%20Polska'
   title: Google Maps Myślenice
   tags:
@@ -1036,7 +1036,7 @@ gmkmy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Myślenice
-gmkn/1:
+gmkn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+S%C4%85cz%2C%20Polska'
   title: Google Maps Nowy Sącz
   tags:
@@ -1044,7 +1044,7 @@ gmkn/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Sącz
-gmknt/1:
+gmknt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Targ%2C%20Polska'
   title: Google Maps Nowy Targ
   tags:
@@ -1052,7 +1052,7 @@ gmknt/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Targ
-gmkol/1:
+gmkol 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olkusz%2C%20Polska'
   title: Google Maps Olkusz
   tags:
@@ -1060,7 +1060,7 @@ gmkol/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Olkusz
-gmkos/1:
+gmkos 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20O%C5%9Bwi%C4%99cim%2C%20Polska'
   title: Google Maps Oświęcim
   tags:
@@ -1068,7 +1068,7 @@ gmkos/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Oświęcim
-gmkpr/1:
+gmkpr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Proszowice%2C%20Polska'
   title: Google Maps Proszowice
   tags:
@@ -1076,7 +1076,7 @@ gmkpr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Proszowice
-gmkr/1:
+gmkr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krak%C3%B3w%2C%20Polska'
   title: Google Maps Kraków
   tags:
@@ -1084,7 +1084,7 @@ gmkr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kraków
-gmksu/1:
+gmksu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sucha+Beskidzka%2C%20Polska'
   title: Google Maps Sucha Beskidzka
   tags:
@@ -1092,7 +1092,7 @@ gmksu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sucha Beskidzka
-gmkt/1:
+gmkt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tarn%C3%B3w%2C%20Polska'
   title: Google Maps Tarnów
   tags:
@@ -1100,7 +1100,7 @@ gmkt/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tarnów
-gmktt/1:
+gmktt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zakopane%2C%20Polska'
   title: Google Maps Zakopane
   tags:
@@ -1108,7 +1108,7 @@ gmktt/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zakopane
-gmkwa/1:
+gmkwa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wadowice%2C%20Polska'
   title: Google Maps Wadowice
   tags:
@@ -1116,7 +1116,7 @@ gmkwa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wadowice
-gmkwi/1:
+gmkwi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wieliczka%2C%20Polska'
   title: Google Maps Wieliczka
   tags:
@@ -1124,7 +1124,7 @@ gmkwi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wieliczka
-gmlb/1:
+gmlb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82a+Podlaska%2C%20Polska'
   title: Google Maps Biała Podlaska
   tags:
@@ -1132,7 +1132,7 @@ gmlb/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Biała Podlaska
-gmlbl/1:
+gmlbl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bi%C5%82goraj%2C%20Polska'
   title: Google Maps Biłgoraj
   tags:
@@ -1140,7 +1140,7 @@ gmlbl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Biłgoraj
-gmlc/1:
+gmlc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Che%C5%82m%2C%20Polska'
   title: Google Maps Chełm
   tags:
@@ -1148,7 +1148,7 @@ gmlc/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Chełm
-gmlhr/1:
+gmlhr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Hrubiesz%C3%B3w%2C%20Polska'
   title: Google Maps Hrubieszów
   tags:
@@ -1156,7 +1156,7 @@ gmlhr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Hrubieszów
-gmlja/1:
+gmlja 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jan%C3%B3w+Lubelski%2C%20Polska'
   title: Google Maps Janów Lubelski
   tags:
@@ -1164,7 +1164,7 @@ gmlja/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Janów Lubelski
-gmlkr/1:
+gmlkr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kra%C5%9Bnik%2C%20Polska'
   title: Google Maps Kraśnik
   tags:
@@ -1172,7 +1172,7 @@ gmlkr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kraśnik
-gmlks/1:
+gmlks 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krasnystaw%2C%20Polska'
   title: Google Maps Krasnystaw
   tags:
@@ -1180,7 +1180,7 @@ gmlks/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Krasnystaw
-gmllb/1:
+gmllb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubart%C3%B3w%2C%20Polska'
   title: Google Maps Lubartów
   tags:
@@ -1188,7 +1188,7 @@ gmllb/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubartów
-gmlle/1:
+gmlle 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81%C4%99czna%2C%20Polska'
   title: Google Maps Łęczna
   tags:
@@ -1196,7 +1196,7 @@ gmlle/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łęczna
-gmllu/1:
+gmllu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81uk%C3%B3w%2C%20Polska'
   title: Google Maps Łuków
   tags:
@@ -1204,7 +1204,7 @@ gmllu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łuków
-gmlop/1:
+gmlop 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opole+Lubelskie%2C%20Polska'
   title: Google Maps Opole Lubelskie
   tags:
@@ -1212,7 +1212,7 @@ gmlop/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Opole Lubelskie
-gmlpa/1:
+gmlpa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Parczew%2C%20Polska'
   title: Google Maps Parczew
   tags:
@@ -1220,7 +1220,7 @@ gmlpa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Parczew
-gmlpu/1:
+gmlpu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pu%C5%82awy%2C%20Polska'
   title: Google Maps Puławy
   tags:
@@ -1228,7 +1228,7 @@ gmlpu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Puławy
-gmlra/1:
+gmlra 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radzy%C5%84+Podlaski%2C%20Polska'
   title: Google Maps Radzyń Podlaski
   tags:
@@ -1236,7 +1236,7 @@ gmlra/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Radzyń Podlaski
-gmlry/1:
+gmlry 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ryki%2C%20Polska'
   title: Google Maps Ryki
   tags:
@@ -1244,7 +1244,7 @@ gmlry/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ryki
-gmlsw/1:
+gmlsw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awidnik%2C%20Polska'
   title: Google Maps Świdnik
   tags:
@@ -1252,7 +1252,7 @@ gmlsw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Świdnik
-gmltm/1:
+gmltm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tomasz%C3%B3w+Lubelski%2C%20Polska'
   title: Google Maps Tomaszów Lubelski
   tags:
@@ -1260,7 +1260,7 @@ gmltm/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tomaszów Lubelski
-gmlu/1:
+gmlu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lublin%2C%20Polska'
   title: Google Maps Lublin
   tags:
@@ -1268,7 +1268,7 @@ gmlu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lublin
-gmlwl/1:
+gmlwl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C5%82odawa%2C%20Polska'
   title: Google Maps Włodawa
   tags:
@@ -1276,7 +1276,7 @@ gmlwl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Włodawa
-gmlz/1:
+gmlz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zamo%C5%9B%C4%87%2C%20Polska'
   title: Google Maps Zamość
   tags:
@@ -1284,7 +1284,7 @@ gmlz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zamość
-gmnba/1:
+gmnba 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bartoszyce%2C%20Polska'
   title: Google Maps Bartoszyce
   tags:
@@ -1292,7 +1292,7 @@ gmnba/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bartoszyce
-gmnbr/1:
+gmnbr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Braniewo%2C%20Polska'
   title: Google Maps Braniewo
   tags:
@@ -1300,7 +1300,7 @@ gmnbr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Braniewo
-gmndz/1:
+gmndz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Dzia%C5%82dowo%2C%20Polska'
   title: Google Maps Działdowo
   tags:
@@ -1308,7 +1308,7 @@ gmndz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Działdowo
-gmne/1:
+gmne 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Elbl%C4%85g%2C%20Polska'
   title: Google Maps Elbląg
   tags:
@@ -1316,7 +1316,7 @@ gmne/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Elbląg
-gmnel/1:
+gmnel 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20E%C5%82k%2C%20Polska'
   title: Google Maps Ełk
   tags:
@@ -1324,7 +1324,7 @@ gmnel/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ełk
-gmngi/1:
+gmngi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gi%C5%BCycko%2C%20Polska'
   title: Google Maps Giżycko
   tags:
@@ -1332,7 +1332,7 @@ gmngi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Giżycko
-gmngo/1:
+gmngo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Go%C5%82dap%2C%20Polska'
   title: Google Maps Gołdap
   tags:
@@ -1340,7 +1340,7 @@ gmngo/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gołdap
-gmnil/1:
+gmnil 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20I%C5%82awa%2C%20Polska'
   title: Google Maps Iława
   tags:
@@ -1348,7 +1348,7 @@ gmnil/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Iława
-gmnke/1:
+gmnke 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C4%99trzyn%2C%20Polska'
   title: Google Maps Kętrzyn
   tags:
@@ -1356,7 +1356,7 @@ gmnke/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kętrzyn
-gmnli/1:
+gmnli 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lidzbark+Warmi%C5%84ski%2C%20Polska'
   title: Google Maps Lidzbark Warmiński
   tags:
@@ -1364,7 +1364,7 @@ gmnli/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lidzbark Warmiński
-gmnmr/1:
+gmnmr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mr%C4%85gowo%2C%20Polska'
   title: Google Maps Mrągowo
   tags:
@@ -1372,7 +1372,7 @@ gmnmr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mrągowo
-gmnni/1:
+gmnni 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nidzica%2C%20Polska'
   title: Google Maps Nidzica
   tags:
@@ -1380,7 +1380,7 @@ gmnni/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nidzica
-gmnnm/1:
+gmnnm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowe+Miasto+Lubawskie%2C%20Polska'
   title: Google Maps Nowe Miasto Lubawskie
   tags:
@@ -1388,7 +1388,7 @@ gmnnm/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowe Miasto Lubawskie
-gmno/1:
+gmno 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olsztyn%2C%20Polska'
   title: Google Maps Olsztyn
   tags:
@@ -1396,7 +1396,7 @@ gmno/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Olsztyn
-gmnoe/1:
+gmnoe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olecko%2C%20Polska'
   title: Google Maps Olecko
   tags:
@@ -1404,7 +1404,7 @@ gmnoe/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Olecko
-gmnos/1:
+gmnos 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostr%C3%B3da%2C%20Polska'
   title: Google Maps Ostróda
   tags:
@@ -1412,7 +1412,7 @@ gmnos/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostróda
-gmnpi/1:
+gmnpi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pisz%2C%20Polska'
   title: Google Maps Pisz
   tags:
@@ -1420,7 +1420,7 @@ gmnpi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pisz
-gmnsz/1:
+gmnsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szczytno%2C%20Polska'
   title: Google Maps Szczytno
   tags:
@@ -1428,7 +1428,7 @@ gmnsz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Szczytno
-gmnwe/1:
+gmnwe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%99gorzewo%2C%20Polska'
   title: Google Maps Węgorzewo
   tags:
@@ -1436,7 +1436,7 @@ gmnwe/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Węgorzewo
-gmob/1:
+gmob 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzeg%2C%20Polska'
   title: Google Maps Brzeg
   tags:
@@ -1444,7 +1444,7 @@ gmob/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzeg
-gmogl/1:
+gmogl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20G%C5%82ubczyce%2C%20Polska'
   title: Google Maps Głubczyce
   tags:
@@ -1452,7 +1452,7 @@ gmogl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Głubczyce
-gmok/1:
+gmok 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C4%99dzierzyn-Ko%C5%BAle%2C%20Polska'
   title: Google Maps Kędzierzyn-Koźle
   tags:
@@ -1460,7 +1460,7 @@ gmok/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kędzierzyn-Koźle
-gmokl/1:
+gmokl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kluczbork%2C%20Polska'
   title: Google Maps Kluczbork
   tags:
@@ -1468,7 +1468,7 @@ gmokl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kluczbork
-gmokr/1:
+gmokr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krapkowice%2C%20Polska'
   title: Google Maps Krapkowice
   tags:
@@ -1476,7 +1476,7 @@ gmokr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Krapkowice
-gmona/1:
+gmona 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Namys%C5%82%C3%B3w%2C%20Polska'
   title: Google Maps Namysłów
   tags:
@@ -1484,7 +1484,7 @@ gmona/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Namysłów
-gmony/1:
+gmony 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nysa%2C%20Polska'
   title: Google Maps Nysa
   tags:
@@ -1492,7 +1492,7 @@ gmony/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nysa
-gmool/1:
+gmool 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Olesno%2C%20Polska'
   title: Google Maps Olesno
   tags:
@@ -1500,7 +1500,7 @@ gmool/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Olesno
-gmop/1:
+gmop 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opole%2C%20Polska'
   title: Google Maps Opole
   tags:
@@ -1508,7 +1508,7 @@ gmop/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Opole
-gmopr/1:
+gmopr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Prudnik%2C%20Polska'
   title: Google Maps Prudnik
   tags:
@@ -1516,7 +1516,7 @@ gmopr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Prudnik
-gmost/1:
+gmost 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzelce+Opolskie%2C%20Polska'
   title: Google Maps Strzelce Opolskie
   tags:
@@ -1524,7 +1524,7 @@ gmost/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzelce Opolskie
-gmpch/1:
+gmpch 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chodzie%C5%BC%2C%20Polska'
   title: Google Maps Chodzież
   tags:
@@ -1532,7 +1532,7 @@ gmpch/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Chodzież
-gmpct/1:
+gmpct 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Czarnk%C3%B3w%2C%20Polska'
   title: Google Maps Czarnków
   tags:
@@ -1540,7 +1540,7 @@ gmpct/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Czarnków
-gmpgn/1:
+gmpgn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gniezno%2C%20Polska'
   title: Google Maps Gniezno
   tags:
@@ -1548,7 +1548,7 @@ gmpgn/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gniezno
-gmpgo/1:
+gmpgo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grodzisk+Wielkopolski%2C%20Polska'
   title: Google Maps Grodzisk Wielkopolski
   tags:
@@ -1556,7 +1556,7 @@ gmpgo/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Grodzisk Wielkopolski
-gmpgs/1:
+gmpgs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gosty%C5%84%2C%20Polska'
   title: Google Maps Gostyń
   tags:
@@ -1564,7 +1564,7 @@ gmpgs/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gostyń
-gmpja/1:
+gmpja 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jarocin%2C%20Polska'
   title: Google Maps Jarocin
   tags:
@@ -1572,7 +1572,7 @@ gmpja/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jarocin
-gmpk/1:
+gmpk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kalisz%2C%20Polska'
   title: Google Maps Kalisz
   tags:
@@ -1580,7 +1580,7 @@ gmpk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kalisz
-gmpke/1:
+gmpke 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C4%99pno%2C%20Polska'
   title: Google Maps Kępno
   tags:
@@ -1588,7 +1588,7 @@ gmpke/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kępno
-gmpkl/1:
+gmpkl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%82o%2C%20Polska'
   title: Google Maps Koło
   tags:
@@ -1596,7 +1596,7 @@ gmpkl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Koło
-gmpkr/1:
+gmpkr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krotoszyn%2C%20Polska'
   title: Google Maps Krotoszyn
   tags:
@@ -1604,7 +1604,7 @@ gmpkr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Krotoszyn
-gmpks/1:
+gmpks 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%9Bcian%2C%20Polska'
   title: Google Maps Kościan
   tags:
@@ -1612,7 +1612,7 @@ gmpks/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kościan
-gmpl/1:
+gmpl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Leszno%2C%20Polska'
   title: Google Maps Leszno
   tags:
@@ -1620,7 +1620,7 @@ gmpl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Leszno
-gmpmi/1:
+gmpmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mi%C4%99dzych%C3%B3d%2C%20Polska'
   title: Google Maps Międzychód
   tags:
@@ -1628,7 +1628,7 @@ gmpmi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Międzychód
-gmpn/1:
+gmpn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Konin%2C%20Polska'
   title: Google Maps Konin
   tags:
@@ -1636,7 +1636,7 @@ gmpn/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Konin
-gmpnt/1:
+gmpnt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Tomy%C5%9Bl%2C%20Polska'
   title: Google Maps Nowy Tomyśl
   tags:
@@ -1644,7 +1644,7 @@ gmpnt/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Tomyśl
-gmpo/1:
+gmpo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pozna%C5%84%2C%20Polska'
   title: Google Maps Poznań
   tags:
@@ -1652,7 +1652,7 @@ gmpo/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Poznań
-gmpob/1:
+gmpob 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Oborniki%2C%20Polska'
   title: Google Maps Oborniki
   tags:
@@ -1660,7 +1660,7 @@ gmpob/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Oborniki
-gmpos/1:
+gmpos 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostr%C3%B3w+Wielkopolski%2C%20Polska'
   title: Google Maps Ostrów Wielkopolski
   tags:
@@ -1668,7 +1668,7 @@ gmpos/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrów Wielkopolski
-gmpot/1:
+gmpot 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostrzesz%C3%B3w%2C%20Polska'
   title: Google Maps Ostrzeszów
   tags:
@@ -1676,7 +1676,7 @@ gmpot/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrzeszów
-gmpp/1:
+gmpp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pi%C5%82a%2C%20Polska'
   title: Google Maps Piła
   tags:
@@ -1684,7 +1684,7 @@ gmpp/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Piła
-gmppl/1:
+gmppl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pleszew%2C%20Polska'
   title: Google Maps Pleszew
   tags:
@@ -1692,7 +1692,7 @@ gmppl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pleszew
-gmpra/1:
+gmpra 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rawicz%2C%20Polska'
   title: Google Maps Rawicz
   tags:
@@ -1700,7 +1700,7 @@ gmpra/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Rawicz
-gmpse/1:
+gmpse 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Arem%2C%20Polska'
   title: Google Maps Śrem
   tags:
@@ -1708,7 +1708,7 @@ gmpse/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Śrem
-gmpsl/1:
+gmpsl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82upca%2C%20Polska'
   title: Google Maps Słupca
   tags:
@@ -1716,7 +1716,7 @@ gmpsl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Słupca
-gmpsr/1:
+gmpsr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Aroda+Wielkopolska%2C%20Polska'
   title: Google Maps Środa Wielkopolska
   tags:
@@ -1724,7 +1724,7 @@ gmpsr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Środa Wielkopolska
-gmpsz/1:
+gmpsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szamotu%C5%82y%2C%20Polska'
   title: Google Maps Szamotuły
   tags:
@@ -1732,7 +1732,7 @@ gmpsz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Szamotuły
-gmptu/1:
+gmptu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Turek%2C%20Polska'
   title: Google Maps Turek
   tags:
@@ -1740,7 +1740,7 @@ gmptu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Turek
-gmpwa/1:
+gmpwa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%85growiec%2C%20Polska'
   title: Google Maps Wągrowiec
   tags:
@@ -1748,7 +1748,7 @@ gmpwa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wągrowiec
-gmpwl/1:
+gmpwl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wolsztyn%2C%20Polska'
   title: Google Maps Wolsztyn
   tags:
@@ -1756,7 +1756,7 @@ gmpwl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wolsztyn
-gmpwr/1:
+gmpwr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wrze%C5%9Bnia%2C%20Polska'
   title: Google Maps Września
   tags:
@@ -1764,7 +1764,7 @@ gmpwr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Września
-gmpzl/1:
+gmpzl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Z%C5%82ot%C3%B3w%2C%20Polska'
   title: Google Maps Złotów
   tags:
@@ -1772,7 +1772,7 @@ gmpzl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Złotów
-gmrbi/1:
+gmrbi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ustrzyki+Dolne%2C%20Polska'
   title: Google Maps Ustrzyki Dolne
   tags:
@@ -1780,7 +1780,7 @@ gmrbi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ustrzyki Dolne
-gmrbr/1:
+gmrbr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Brzoz%C3%B3w%2C%20Polska'
   title: Google Maps Brzozów
   tags:
@@ -1788,7 +1788,7 @@ gmrbr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Brzozów
-gmrde/1:
+gmrde 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20D%C4%99bica%2C%20Polska'
   title: Google Maps Dębica
   tags:
@@ -1796,7 +1796,7 @@ gmrde/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Dębica
-gmrja/1:
+gmrja 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jaros%C5%82aw%2C%20Polska'
   title: Google Maps Jarosław
   tags:
@@ -1804,7 +1804,7 @@ gmrja/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jarosław
-gmrjs/1:
+gmrjs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jas%C5%82o%2C%20Polska'
   title: Google Maps Jasło
   tags:
@@ -1812,7 +1812,7 @@ gmrjs/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jasło
-gmrk/1:
+gmrk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Krosno%2C%20Polska'
   title: Google Maps Krosno
   tags:
@@ -1820,7 +1820,7 @@ gmrk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Krosno
-gmrkl/1:
+gmrkl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kolbuszowa%2C%20Polska'
   title: Google Maps Kolbuszowa
   tags:
@@ -1828,7 +1828,7 @@ gmrkl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kolbuszowa
-gmrla/1:
+gmrla 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81a%C5%84cut%2C%20Polska'
   title: Google Maps Łańcut
   tags:
@@ -1836,7 +1836,7 @@ gmrla/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łańcut
-gmrle/1:
+gmrle 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Le%C5%BCajsk%2C%20Polska'
   title: Google Maps Leżajsk
   tags:
@@ -1844,7 +1844,7 @@ gmrle/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Leżajsk
-gmrls/1:
+gmrls 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lesko%2C%20Polska'
   title: Google Maps Lesko
   tags:
@@ -1852,7 +1852,7 @@ gmrls/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lesko
-gmrlu/1:
+gmrlu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubacz%C3%B3w%2C%20Polska'
   title: Google Maps Lubaczów
   tags:
@@ -1860,7 +1860,7 @@ gmrlu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubaczów
-gmrmi/1:
+gmrmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mielec%2C%20Polska'
   title: Google Maps Mielec
   tags:
@@ -1868,7 +1868,7 @@ gmrmi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mielec
-gmrni/1:
+gmrni 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nisko%2C%20Polska'
   title: Google Maps Nisko
   tags:
@@ -1876,7 +1876,7 @@ gmrni/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nisko
-gmrp/1:
+gmrp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przemy%C5%9Bl%2C%20Polska'
   title: Google Maps Przemyśl
   tags:
@@ -1884,7 +1884,7 @@ gmrp/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Przemyśl
-gmrpz/1:
+gmrpz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przeworsk%2C%20Polska'
   title: Google Maps Przeworsk
   tags:
@@ -1892,7 +1892,7 @@ gmrpz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Przeworsk
-gmrrs/1:
+gmrrs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ropczyce%2C%20Polska'
   title: Google Maps Ropczyce
   tags:
@@ -1900,7 +1900,7 @@ gmrrs/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ropczyce
-gmrsa/1:
+gmrsa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sanok%2C%20Polska'
   title: Google Maps Sanok
   tags:
@@ -1908,7 +1908,7 @@ gmrsa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sanok
-gmrsr/1:
+gmrsr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Strzy%C5%BC%C3%B3w%2C%20Polska'
   title: Google Maps Strzyżów
   tags:
@@ -1916,7 +1916,7 @@ gmrsr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Strzyżów
-gmrst/1:
+gmrst 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Stalowa+Wola%2C%20Polska'
   title: Google Maps Stalowa Wola
   tags:
@@ -1924,7 +1924,7 @@ gmrst/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Stalowa Wola
-gmrt/1:
+gmrt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tarnobrzeg%2C%20Polska'
   title: Google Maps Tarnobrzeg
   tags:
@@ -1932,7 +1932,7 @@ gmrt/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tarnobrzeg
-gmrz/1:
+gmrz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rzesz%C3%B3w%2C%20Polska'
   title: Google Maps Rzeszów
   tags:
@@ -1940,7 +1940,7 @@ gmrz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Rzeszów
-gmsb/1:
+gmsb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bielsko-Bia%C5%82a%2C%20Polska'
   title: Google Maps Bielsko-Biała
   tags:
@@ -1948,7 +1948,7 @@ gmsb/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bielsko-Biała
-gmsbe/1:
+gmsbe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20B%C4%99dzin%2C%20Polska'
   title: Google Maps Będzin
   tags:
@@ -1956,7 +1956,7 @@ gmsbe/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Będzin
-gmsbl/1:
+gmsbl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bieru%C5%84%2C%20Polska'
   title: Google Maps Bieruń
   tags:
@@ -1964,7 +1964,7 @@ gmsbl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bieruń
-gmsc/1:
+gmsc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Cz%C4%99stochowa%2C%20Polska'
   title: Google Maps Częstochowa
   tags:
@@ -1972,7 +1972,7 @@ gmsc/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Częstochowa
-gmsci/1:
+gmsci 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Cieszyn%2C%20Polska'
   title: Google Maps Cieszyn
   tags:
@@ -1980,7 +1980,7 @@ gmsci/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Cieszyn
-gmsd/1:
+gmsd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20D%C4%85browa+G%C3%B3rnicza%2C%20Polska'
   title: Google Maps Dąbrowa Górnicza
   tags:
@@ -1988,7 +1988,7 @@ gmsd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Dąbrowa Górnicza
-gmsg/1:
+gmsg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gliwice%2C%20Polska'
   title: Google Maps Gliwice
   tags:
@@ -1996,7 +1996,7 @@ gmsg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gliwice
-gmsh/1:
+gmsh 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Chorz%C3%B3w%2C%20Polska'
   title: Google Maps Chorzów
   tags:
@@ -2004,7 +2004,7 @@ gmsh/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Chorzów
-gmsi/1:
+gmsi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Siemianowice+%C5%9Al%C4%85skie%2C%20Polska'
   title: Google Maps Siemianowice Śląskie
   tags:
@@ -2012,7 +2012,7 @@ gmsi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Siemianowice Śląskie
-gmsj/1:
+gmsj 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jaworzno%2C%20Polska'
   title: Google Maps Jaworzno
   tags:
@@ -2020,7 +2020,7 @@ gmsj/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jaworzno
-gmsjz/1:
+gmsjz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Jastrz%C4%99bie-Zdr%C3%B3j%2C%20Polska'
   title: Google Maps Jastrzębie-Zdrój
   tags:
@@ -2028,7 +2028,7 @@ gmsjz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jastrzębie-Zdrój
-gmsk/1:
+gmsk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Katowice%2C%20Polska'
   title: Google Maps Katowice
   tags:
@@ -2036,7 +2036,7 @@ gmsk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Katowice
-gmskl/1:
+gmskl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20K%C5%82obuck%2C%20Polska'
   title: Google Maps Kłobuck
   tags:
@@ -2044,7 +2044,7 @@ gmskl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kłobuck
-gmsl/1:
+gmsl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ruda+%C5%9Al%C4%85ska%2C%20Polska'
   title: Google Maps Ruda Śląska
   tags:
@@ -2052,7 +2052,7 @@ gmsl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ruda Śląska
-gmslu/1:
+gmslu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lubliniec%2C%20Polska'
   title: Google Maps Lubliniec
   tags:
@@ -2060,7 +2060,7 @@ gmslu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lubliniec
-gmsm/1:
+gmsm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mys%C5%82owice%2C%20Polska'
   title: Google Maps Mysłowice
   tags:
@@ -2068,7 +2068,7 @@ gmsm/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mysłowice
-gmsmi/1:
+gmsmi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Miko%C5%82%C3%B3w%2C%20Polska'
   title: Google Maps Mikołów
   tags:
@@ -2076,7 +2076,7 @@ gmsmi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mikołów
-gmsmy/1:
+gmsmy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Myszk%C3%B3w%2C%20Polska'
   title: Google Maps Myszków
   tags:
@@ -2084,7 +2084,7 @@ gmsmy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Myszków
-gmso/1:
+gmso 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sosnowiec%2C%20Polska'
   title: Google Maps Sosnowiec
   tags:
@@ -2092,7 +2092,7 @@ gmso/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sosnowiec
-gmspi/1:
+gmspi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Piekary+%C5%9Al%C4%85skie%2C%20Polska'
   title: Google Maps Piekary Śląskie
   tags:
@@ -2100,7 +2100,7 @@ gmspi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Piekary Śląskie
-gmsps/1:
+gmsps 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pszczyna%2C%20Polska'
   title: Google Maps Pszczyna
   tags:
@@ -2108,7 +2108,7 @@ gmsps/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pszczyna
-gmsr/1:
+gmsr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Rybnik%2C%20Polska'
   title: Google Maps Rybnik
   tags:
@@ -2116,7 +2116,7 @@ gmsr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Rybnik
-gmsrc/1:
+gmsrc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Racib%C3%B3rz%2C%20Polska'
   title: Google Maps Racibórz
   tags:
@@ -2124,7 +2124,7 @@ gmsrc/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Racibórz
-gmst/1:
+gmst 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tychy%2C%20Polska'
   title: Google Maps Tychy
   tags:
@@ -2132,7 +2132,7 @@ gmst/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tychy
-gmsta/1:
+gmsta 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Tarnowskie+G%C3%B3ry%2C%20Polska'
   title: Google Maps Tarnowskie Góry
   tags:
@@ -2140,7 +2140,7 @@ gmsta/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Tarnowskie Góry
-gmsw/1:
+gmsw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awi%C4%99toch%C5%82owice%2C%20Polska'
   title: Google Maps Świętochłowice
   tags:
@@ -2148,7 +2148,7 @@ gmsw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Świętochłowice
-gmswd/1:
+gmswd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wodzis%C5%82aw+%C5%9Al%C4%85ski%2C%20Polska'
   title: Google Maps Wodzisław Śląski
   tags:
@@ -2156,7 +2156,7 @@ gmswd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wodzisław Śląski
-gmsy/1:
+gmsy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bytom%2C%20Polska'
   title: Google Maps Bytom
   tags:
@@ -2164,7 +2164,7 @@ gmsy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Bytom
-gmsz/1:
+gmsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zabrze%2C%20Polska'
   title: Google Maps Zabrze
   tags:
@@ -2172,7 +2172,7 @@ gmsz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zabrze
-gmsza/1:
+gmsza 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zawiercie%2C%20Polska'
   title: Google Maps Zawiercie
   tags:
@@ -2180,7 +2180,7 @@ gmsza/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zawiercie
-gmszo/1:
+gmszo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBory%2C%20Polska'
   title: Google Maps Żory
   tags:
@@ -2188,7 +2188,7 @@ gmszo/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Żory
-gmszy/1:
+gmszy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBywiec%2C%20Polska'
   title: Google Maps Żywiec
   tags:
@@ -2196,7 +2196,7 @@ gmszy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Żywiec
-gmtbu/1:
+gmtbu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Busko+Zdr%C3%B3j%2C%20Polska'
   title: Google Maps Busko Zdrój
   tags:
@@ -2204,7 +2204,7 @@ gmtbu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Busko Zdrój
-gmtje/1:
+gmtje 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20J%C4%99drzej%C3%B3w%2C%20Polska'
   title: Google Maps Jędrzejów
   tags:
@@ -2212,7 +2212,7 @@ gmtje/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Jędrzejów
-gmtk/1:
+gmtk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kielce%2C%20Polska'
   title: Google Maps Kielce
   tags:
@@ -2220,7 +2220,7 @@ gmtk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kielce
-gmtka/1:
+gmtka 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kazimierza+Wielka%2C%20Polska'
   title: Google Maps Kazimierza Wielka
   tags:
@@ -2228,7 +2228,7 @@ gmtka/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kazimierza Wielka
-gmtkn/1:
+gmtkn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%84skie%2C%20Polska'
   title: Google Maps Końskie
   tags:
@@ -2236,7 +2236,7 @@ gmtkn/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Końskie
-gmtlw/1:
+gmtlw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C5%82oszczowa%2C%20Polska'
   title: Google Maps Włoszczowa
   tags:
@@ -2244,7 +2244,7 @@ gmtlw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Włoszczowa
-gmtop/1:
+gmtop 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Opat%C3%B3w%2C%20Polska'
   title: Google Maps Opatów
   tags:
@@ -2252,7 +2252,7 @@ gmtop/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Opatów
-gmtos/1:
+gmtos 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostrowiec+%C5%9Awi%C4%99tokrzyski%2C%20Polska'
   title: Google Maps Ostrowiec Świętokrzyski
   tags:
@@ -2260,7 +2260,7 @@ gmtos/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrowiec Świętokrzyski
-gmtpi/1:
+gmtpi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pi%C5%84cz%C3%B3w%2C%20Polska'
   title: Google Maps Pińczów
   tags:
@@ -2268,7 +2268,7 @@ gmtpi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pińczów
-gmtsa/1:
+gmtsa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sandomierz%2C%20Polska'
   title: Google Maps Sandomierz
   tags:
@@ -2276,7 +2276,7 @@ gmtsa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sandomierz
-gmtsk/1:
+gmtsk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Skar%C5%BCysko-Kamienna%2C%20Polska'
   title: Google Maps Skarżysko-Kamienna
   tags:
@@ -2284,7 +2284,7 @@ gmtsk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Skarżysko-Kamienna
-gmtst/1:
+gmtst 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Starachowice%2C%20Polska'
   title: Google Maps Starachowice
   tags:
@@ -2292,7 +2292,7 @@ gmtst/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Starachowice
-gmtsz/1:
+gmtsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Stasz%C3%B3w%2C%20Polska'
   title: Google Maps Staszów
   tags:
@@ -2300,7 +2300,7 @@ gmtsz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Staszów
-gmw/1:
+gmw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Warszawa%2C%20Polska'
   title: Google Maps Warszawa
   tags:
@@ -2308,7 +2308,7 @@ gmw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Warszawa
-gmwbr/1:
+gmwbr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82obrzegi%2C%20Polska'
   title: Google Maps Białobrzegi
   tags:
@@ -2316,7 +2316,7 @@ gmwbr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Białobrzegi
-gmwci/1:
+gmwci 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ciechan%C3%B3w%2C%20Polska'
   title: Google Maps Ciechanów
   tags:
@@ -2324,7 +2324,7 @@ gmwci/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ciechanów
-gmwg/1:
+gmwg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Garwolin%2C%20Polska'
   title: Google Maps Garwolin
   tags:
@@ -2332,7 +2332,7 @@ gmwg/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Garwolin
-gmwgm/1:
+gmwgm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Grodzisk+Mazowiecki%2C%20Polska'
   title: Google Maps Grodzisk Mazowiecki
   tags:
@@ -2340,7 +2340,7 @@ gmwgm/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Grodzisk Mazowiecki
-gmwgr/1:
+gmwgr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gr%C3%B3jec%2C%20Polska'
   title: Google Maps Grójec
   tags:
@@ -2348,7 +2348,7 @@ gmwgr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Grójec
-gmwgs/1:
+gmwgs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gostynin%2C%20Polska'
   title: Google Maps Gostynin
   tags:
@@ -2356,7 +2356,7 @@ gmwgs/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gostynin
-gmwkz/1:
+gmwkz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kozienice%2C%20Polska'
   title: Google Maps Kozienice
   tags:
@@ -2364,7 +2364,7 @@ gmwkz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kozienice
-gmwl/1:
+gmwl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Legionowo%2C%20Polska'
   title: Google Maps Legionowo
   tags:
@@ -2372,7 +2372,7 @@ gmwl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Legionowo
-gmwli/1:
+gmwli 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Lipsko%2C%20Polska'
   title: Google Maps Lipsko
   tags:
@@ -2380,7 +2380,7 @@ gmwli/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Lipsko
-gmwls/1:
+gmwls 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81osice%2C%20Polska'
   title: Google Maps Łosice
   tags:
@@ -2388,7 +2388,7 @@ gmwls/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łosice
-gmwm/1:
+gmwm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mi%C5%84sk+Mazowiecki%2C%20Polska'
   title: Google Maps Mińsk Mazowiecki
   tags:
@@ -2396,7 +2396,7 @@ gmwm/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mińsk Mazowiecki
-gmwma/1:
+gmwma 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Mak%C3%B3w+Mazowiecki%2C%20Polska'
   title: Google Maps Maków Mazowiecki
   tags:
@@ -2404,7 +2404,7 @@ gmwma/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Maków Mazowiecki
-gmwml/1:
+gmwml 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20M%C5%82awa%2C%20Polska'
   title: Google Maps Mława
   tags:
@@ -2412,7 +2412,7 @@ gmwml/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Mława
-gmwnd/1:
+gmwnd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Nowy+Dw%C3%B3r+Mazowiecki%2C%20Polska'
   title: Google Maps Nowy Dwór Mazowiecki
   tags:
@@ -2420,7 +2420,7 @@ gmwnd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Nowy Dwór Mazowiecki
-gmwo/1:
+gmwo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostro%C5%82%C4%99ka%2C%20Polska'
   title: Google Maps Ostrołęka
   tags:
@@ -2428,7 +2428,7 @@ gmwo/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrołęka
-gmwor/1:
+gmwor 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ostr%C3%B3w+Mazowiecka%2C%20Polska'
   title: Google Maps Ostrów Mazowiecka
   tags:
@@ -2436,7 +2436,7 @@ gmwor/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Ostrów Mazowiecka
-gmwot/1:
+gmwot 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Otwock%2C%20Polska'
   title: Google Maps Otwock
   tags:
@@ -2444,7 +2444,7 @@ gmwot/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Otwock
-gmwp/1:
+gmwp 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20P%C5%82ock%2C%20Polska'
   title: Google Maps Płock
   tags:
@@ -2452,7 +2452,7 @@ gmwp/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Płock
-gmwpi/1:
+gmwpi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Piaseczno%2C%20Polska'
   title: Google Maps Piaseczno
   tags:
@@ -2460,7 +2460,7 @@ gmwpi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Piaseczno
-gmwpn/1:
+gmwpn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20P%C5%82o%C5%84sk%2C%20Polska'
   title: Google Maps Płońsk
   tags:
@@ -2468,7 +2468,7 @@ gmwpn/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Płońsk
-gmwpr/1:
+gmwpr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pruszk%C3%B3w%2C%20Polska'
   title: Google Maps Pruszków
   tags:
@@ -2476,7 +2476,7 @@ gmwpr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pruszków
-gmwpu/1:
+gmwpu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pu%C5%82tusk%2C%20Polska'
   title: Google Maps Pułtusk
   tags:
@@ -2484,7 +2484,7 @@ gmwpu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pułtusk
-gmwpy/1:
+gmwpy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przysucha%2C%20Polska'
   title: Google Maps Przysucha
   tags:
@@ -2492,7 +2492,7 @@ gmwpy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Przysucha
-gmwpz/1:
+gmwpz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Przasnysz%2C%20Polska'
   title: Google Maps Przasnysz
   tags:
@@ -2500,7 +2500,7 @@ gmwpz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Przasnysz
-gmwr/1:
+gmwr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Radom%2C%20Polska'
   title: Google Maps Radom
   tags:
@@ -2508,7 +2508,7 @@ gmwr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Radom
-gmws/1:
+gmws 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Siedlce%2C%20Polska'
   title: Google Maps Siedlce
   tags:
@@ -2516,7 +2516,7 @@ gmws/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Siedlce
-gmwsc/1:
+gmwsc 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sochaczew%2C%20Polska'
   title: Google Maps Sochaczew
   tags:
@@ -2524,7 +2524,7 @@ gmwsc/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sochaczew
-gmwse/1:
+gmwse 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Sierpc%2C%20Polska'
   title: Google Maps Sierpc
   tags:
@@ -2532,7 +2532,7 @@ gmwse/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sierpc
-gmwsk/1:
+gmwsk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Soko%C5%82%C3%B3w+Podlaski%2C%20Polska'
   title: Google Maps Sokołów Podlaski
   tags:
@@ -2540,7 +2540,7 @@ gmwsk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sokołów Podlaski
-gmwsz/1:
+gmwsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szyd%C5%82owiec%2C%20Polska'
   title: Google Maps Szydłowiec
   tags:
@@ -2548,7 +2548,7 @@ gmwsz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Szydłowiec
-gmwwe/1:
+gmwwe 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20W%C4%99gr%C3%B3w%2C%20Polska'
   title: Google Maps Węgrów
   tags:
@@ -2556,7 +2556,7 @@ gmwwe/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Węgrów
-gmwwl/1:
+gmwwl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wo%C5%82omin%2C%20Polska'
   title: Google Maps Wołomin
   tags:
@@ -2564,7 +2564,7 @@ gmwwl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wołomin
-gmwwy/1:
+gmwwy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wyszk%C3%B3w%2C%20Polska'
   title: Google Maps Wyszków
   tags:
@@ -2572,7 +2572,7 @@ gmwwy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wyszków
-gmwzu/1:
+gmwzu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BBuromin%2C%20Polska'
   title: Google Maps Żuromin
   tags:
@@ -2580,7 +2580,7 @@ gmwzu/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Żuromin
-gmwzw/1:
+gmwzw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Zwole%C5%84%2C%20Polska'
   title: Google Maps Zwoleń
   tags:
@@ -2588,7 +2588,7 @@ gmwzw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Zwoleń
-gmwzy/1:
+gmwzy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%BByrard%C3%B3w%2C%20Polska'
   title: Google Maps Żyrardów
   tags:
@@ -2596,7 +2596,7 @@ gmwzy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Żyrardów
-gmzbi/1:
+gmzbi 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Bia%C5%82ogard%2C%20Polska'
   title: Google Maps Białogard
   tags:
@@ -2604,7 +2604,7 @@ gmzbi/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Białogard
-gmzch/1:
+gmzch 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Choszczno%2C%20Polska'
   title: Google Maps Choszczno
   tags:
@@ -2612,7 +2612,7 @@ gmzch/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Choszczno
-gmzdr/1:
+gmzdr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Drawsko+Pomorskie%2C%20Polska'
   title: Google Maps Drawsko Pomorskie
   tags:
@@ -2620,7 +2620,7 @@ gmzdr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Drawsko Pomorskie
-gmzgl/1:
+gmzgl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Goleni%C3%B3w%2C%20Polska'
   title: Google Maps Goleniów
   tags:
@@ -2628,7 +2628,7 @@ gmzgl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Goleniów
-gmzgr/1:
+gmzgr 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gryfino%2C%20Polska'
   title: Google Maps Gryfino
   tags:
@@ -2636,7 +2636,7 @@ gmzgr/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gryfino
-gmzgy/1:
+gmzgy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Gryfice%2C%20Polska'
   title: Google Maps Gryfice
   tags:
@@ -2644,7 +2644,7 @@ gmzgy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Gryfice
-gmzk/1:
+gmzk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Koszalin%2C%20Polska'
   title: Google Maps Koszalin
   tags:
@@ -2652,7 +2652,7 @@ gmzk/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Koszalin
-gmzka/1:
+gmzka 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Kamie%C5%84+Pomorski%2C%20Polska'
   title: Google Maps Kamień Pomorski
   tags:
@@ -2660,7 +2660,7 @@ gmzka/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kamień Pomorski
-gmzkl/1:
+gmzkl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Ko%C5%82obrzeg%2C%20Polska'
   title: Google Maps Kołobrzeg
   tags:
@@ -2668,7 +2668,7 @@ gmzkl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Kołobrzeg
-gmzlo/1:
+gmzlo 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%81obez%2C%20Polska'
   title: Google Maps Łobez
   tags:
@@ -2676,7 +2676,7 @@ gmzlo/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Łobez
-gmzmy/1:
+gmzmy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20My%C5%9Blib%C3%B3rz%2C%20Polska'
   title: Google Maps Myślibórz
   tags:
@@ -2684,7 +2684,7 @@ gmzmy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Myślibórz
-gmzpl/1:
+gmzpl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Police%2C%20Polska'
   title: Google Maps Police
   tags:
@@ -2692,7 +2692,7 @@ gmzpl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Police
-gmzpy/1:
+gmzpy 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Pyrzyce%2C%20Polska'
   title: Google Maps Pyrzyce
   tags:
@@ -2700,7 +2700,7 @@ gmzpy/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Pyrzyce
-gmzs/1:
+gmzs 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szczecin%2C%20Polska'
   title: Google Maps Szczecin
   tags:
@@ -2708,7 +2708,7 @@ gmzs/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Szczecin
-gmzsd/1:
+gmzsd 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awidwin%2C%20Polska'
   title: Google Maps Świdwin
   tags:
@@ -2716,7 +2716,7 @@ gmzsd/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Świdwin
-gmzsl/1:
+gmzsl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20S%C5%82awno%2C%20Polska'
   title: Google Maps Sławno
   tags:
@@ -2724,7 +2724,7 @@ gmzsl/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Sławno
-gmzst/1:
+gmzst 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Stargard+Szczeci%C5%84ski%2C%20Polska'
   title: Google Maps Stargard Szczeciński
   tags:
@@ -2732,7 +2732,7 @@ gmzst/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Stargard Szczeciński
-gmzsw/1:
+gmzsw 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20%C5%9Awinouj%C5%9Bcie%2C%20Polska'
   title: Google Maps Świnoujście
   tags:
@@ -2740,7 +2740,7 @@ gmzsw/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Świnoujście
-gmzsz/1:
+gmzsz 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Szczecinek%2C%20Polska'
   title: Google Maps Szczecinek
   tags:
@@ -2748,7 +2748,7 @@ gmzsz/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Szczecinek
-gmzwa/1:
+gmzwa 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20Wa%C5%82cz%2C%20Polska'
   title: Google Maps Wałcz
   tags:
@@ -2756,14 +2756,14 @@ gmzwa/1:
   - google
   examples:
     rynek: Pokaż rynek w mieście Wałcz
-ikea/0:
+ikea 0:
   url: 'http://www.ikea.com/pl/pl/'
   title: IKEA Polska
   tags:
   - ikea
   - furniture
   - shopping
-ikea/1:
+ikea 1:
   url: 'http://www.ikea.com/pl/pl/search/?query={%query}'
   title: IKEA Polska
   tags:
@@ -2772,7 +2772,7 @@ ikea/1:
   - shopping
   examples:
     materac: Szukaj materace
-jddw/2:
+jddw 2:
   url: 'http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&as=true'
   title: 'jakdojade.pl, Wrocław'
   tags:
@@ -2781,7 +2781,7 @@ jddw/2:
   - wrocław
   examples:
     'rynek, dworzec gł': połączenie z Rynka do Dworca Głównego
-jddw/3:
+jddw 3:
   url: 'http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&as=true'
   title: 'jakdojade.pl, Wrocław'
   tags:
@@ -2790,7 +2790,7 @@ jddw/3:
   - wrocław
   examples:
     'rynek, dworzec gł, 10': połączenie z Rynka do Dworca Głównego o godz. 10
-jddw/4:
+jddw 4:
   url: 'http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true'
   title: 'jakdojade.pl, Wrocław'
   tags:
@@ -2799,7 +2799,7 @@ jddw/4:
   - wrocław
   examples:
     'rynek, dworzec gł, 10, 31.12.13': połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
-jdpo/2:
+jdpo 2:
   url: 'http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&as=true'
   title: 'jakdojade.pl, Poznań'
   tags:
@@ -2808,7 +2808,7 @@ jdpo/2:
   - poznań
   examples:
     'rynek, dworzec gł': połączenie z Rynka do Dworca Głównego
-jdpo/3:
+jdpo 3:
   url: 'http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&as=true'
   title: 'jakdojade.pl, Poznań'
   tags:
@@ -2817,7 +2817,7 @@ jdpo/3:
   - poznań
   examples:
     'rynek, dworzec gł, 10': połączenie z Rynka do Dworca Głównego o godz. 10
-jdpo/4:
+jdpo 4:
   url: 'http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true'
   title: 'jakdojade.pl, Poznań'
   tags:
@@ -2826,7 +2826,7 @@ jdpo/4:
   - poznań
   examples:
     'rynek, dworzec gł, 10, 31.12.13': połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
-jdw/2:
+jdw 2:
   url: 'http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&as=true'
   title: 'jakdojade.pl, Warszawa'
   tags:
@@ -2835,7 +2835,7 @@ jdw/2:
   - warszawa
   examples:
     'stare miasto, centrum': połączenie ze Starego miasta do Centrum
-jdw/3:
+jdw 3:
   url: 'http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&as=true'
   title: 'jakdojade.pl, Warszawa'
   tags:
@@ -2844,7 +2844,7 @@ jdw/3:
   - warszawa
   examples:
     'stare miasto, centrum, 10': połączenie ze Starego miasta do Centrum o godz. 10
-jdw/4:
+jdw 4:
   url: 'http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true'
   title: 'jakdojade.pl, Warszawa'
   tags:
@@ -2853,13 +2853,13 @@ jdw/4:
   - warszawa
   examples:
     'stare miasto, centrum, 10, 31.12.13': połączenie ze Starego miasta do Centrum 31 grudnia 2013 o godz. 10
-nk/0:
+nk 0:
   url: 'http://nk.pl/'
   title: Nasza Klasa
   tags:
   - social network
   - nasza klasa
-nk/1:
+nk 1:
   url: 'http://nk.pl/#szukaj#{%nazwisko / grupa}'
   title: Nasza Klasa
   tags:
@@ -2867,7 +2867,7 @@ nk/1:
   - nasza klasa
   examples:
     kowalski: Szukaj "kowalski"
-pkp/2:
+pkp 2:
   url: 'http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
   tags:
@@ -2878,7 +2878,7 @@ pkp/2:
     'kutno, gniezno': następne połączenie PKP z Kutna do Gniezna
     'w, p': następne połączenie z Warszawy do Poznania
     'gdansk!, wroclaw!': 'następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny'
-pkp/3:
+pkp 3:
   url: 'http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&T={%czas|type=time|output=HH:mm}&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
   tags:
@@ -2887,7 +2887,7 @@ pkp/3:
   - pkp
   examples:
     'kutno, gniezno, 10': połączenie z Kutna do Gniezna dzisiaj o godz. 10
-pkp/4:
+pkp 4:
   url: 'http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&T={%czas|type=time|output=HH:mm}&D={%data|type=date|output=DD.MM.YYYY}&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
   tags:
@@ -2896,7 +2896,7 @@ pkp/4:
   - pkp
   examples:
     'kutno, gniezno, 10, 31.1.': połączenie z Kutna do Gniezna 31 stycznia o godz. 10
-tm/1:
+tm 1:
   url: 'http://www.google.com/search?hl={$language}&sitesearch=teleman.pl&domains=teleman.pl&q={%szukaj}'
   title: teleman.pl program telewizyjny
   tags:
@@ -2905,7 +2905,7 @@ tm/1:
   - poland
   examples:
     tvn: Szukaj programy TVN
-zal/1:
+zal 1:
   url: 'http://www.zalando.pl/katalog/?q={%produkt}'
   title: Zalando.pl
   tags:

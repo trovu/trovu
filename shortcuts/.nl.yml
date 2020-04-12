@@ -1,14 +1,14 @@
-beslist/0:
+beslist 0:
   url: 'http://www.beslist.nl/'
   title: BESLIST.nl
   examples:
     kartonnen poef: Zoek waar je online een kartonnen poef kunt kopen
-beslist/1:
+beslist 1:
   url: 'http://www.beslist.nl/products/r/{%zoekwoorden}/'
   title: BESLIST.nl
   examples:
     kartonnen poef: Zoek waar je online een kartonnen poef kunt kopen
-bol/1:
+bol 1:
   url: 'http://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/{%query}/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html'
   title: Bol.com Nederlands
   tags:
@@ -17,14 +17,14 @@ bol/1:
   - books
   examples:
     shakespeare: Search for Shakespeare
-e/0:
+e 0:
   url: 'http://rover.ebay.com/rover/1/1346-53482-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229557&kwid=902099&mtid=824&kw=lg'
   title: Ebay.nl
   tags:
   - shopping
   - ebay
   - affiliate
-e/1:
+e 1:
   url: 'http://rover.ebay.com/rover/1/1346-53482-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229557&kwid=902099&mtid=824&kw=lg'
   title: Ebay.nl
   tags:
@@ -33,7 +33,7 @@ e/1:
   - affiliate
   examples:
     smartphone: Search for "smartphone"
-g/1:
+g 1:
   url: 'https://www.google.nl/search?hl={$language}&q={%query}&ie=utf-8'
   title: Google.nl
   tags:
@@ -41,7 +41,7 @@ g/1:
   - google
   examples:
     amsterdam: Google zoeken naar "amsterdam"
-gn/1:
+gn 1:
   url: 'https://www.google.de/search?ned=nl_nl&q={%query}&tbm=nws&source=lnms'
   title: Google Nieuws (Nederland)
   tags:
@@ -49,14 +49,14 @@ gn/1:
   - google
   examples:
     obama: Op Google News naar obama zoeken
-ikea/0:
+ikea 0:
   url: 'http://www.ikea.com/nl/nl/'
   title: IKEA Nederland
   tags:
   - ikea
   - furniture
   - shopping
-ikea/1:
+ikea 1:
   url: 'http://www.ikea.com/nl/nl/search/?query={%query}'
   title: IKEA Nederland
   tags:
@@ -65,14 +65,14 @@ ikea/1:
   - shopping
   examples:
     matras: zoek na matrassen
-kenteken/1:
+kenteken 1:
   url: 'http://publiek.vwe.nl/?txtkentekenveld={%query}'
   title: RDW kenteken zoeken
   tags:
   - kenteken
   examples:
     8kxz29: zoek kenteken 8kxz29
-zal/1:
+zal 1:
   url: 'http://www.zalando.nl/catalogus/?q={%product}'
   title: Zalando.nl
   tags:

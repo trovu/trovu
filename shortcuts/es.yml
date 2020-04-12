@@ -1,4 +1,4 @@
-de/1:
+de 1:
   url: 'http://dict.leo.org/esde?search={%palabra}'
   title: Español-Alemán (leo.org)
   tags:
@@ -13,7 +13,7 @@ de/1:
   examples:
     árbol: traducción de "baum"
     baum: traducción de "árbol"
-dep/1:
+dep 1:
   url: 'http://en.pons.com/translate?q={%Wort}&in=&l=dees'
   title: Español–Alemán (Pons)
   tags:
@@ -23,7 +23,7 @@ dep/1:
   - spanish
   examples:
     árbol: traducción de "árbol"
-dle/1:
+dle 1:
   url: 'http://dle.rae.es/?w={%palabra}'
   title: Diccionario de la Lengua Española
   tags:
@@ -32,7 +32,7 @@ dle/1:
   - language
   examples:
     árbol: Search diccionario de la lengua española for "arbol"
-en/1:
+en 1:
   url: 'http://www.spanishdict.com/translate/{%palabra}'
   title: Inglés-Español (spanishdict.com)
   tags:
@@ -44,7 +44,7 @@ en/1:
   examples:
     tree: Traducción de "tree"
     arbol: Traducción de "arbol"
-gn/1:
+gn 1:
   url: 'https://www.google.es/search?q={%query}&tbm=nws&hl=es&gl=ES&ceid=ES%3Aes'
   title: Google News (Español US)
   tags:
@@ -52,7 +52,7 @@ gn/1:
   - google
   examples:
     obama: Google News nach obama durchsuchen
-last/1:
+last 1:
   url: 'http://www.last.fm/search?setlang=es&q={%artist}'
   title: Last.fm
   tags:

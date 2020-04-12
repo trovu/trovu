@@ -1,4 +1,4 @@
-blocket/1:
+blocket 1:
   url: 'http://www.blocket.se/li?q={%query}'
   title: Blocket.se
   tags:
@@ -6,13 +6,13 @@ blocket/1:
   - blocket
   examples:
     iphone: Search for "iphone"
-e/0:
+e 0:
   url: 'http://www.ebay.se/'
   title: Ebay.se
   tags:
   - shopping
   - ebay
-e/1:
+e 1:
   url: 'http://www.ebay.se/sch/i.html?_nkw={%query}'
   title: Ebay.se
   tags:
@@ -20,7 +20,7 @@ e/1:
   - ebay
   examples:
     smartphone: Search for "smartphone"
-gma/1:
+gma 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Alings%C3%A5s%2C%20Sverige'
   title: Google Maps Alingsås
   tags:
@@ -28,7 +28,7 @@ gma/1:
   - google
   examples:
     centrum: sök centrum i Alingsås
-gmb/1:
+gmb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Bor%C3%A5s%2C%20Sverige'
   title: Google Maps Borås
   tags:
@@ -36,7 +36,7 @@ gmb/1:
   - google
   examples:
     centrum: sök centrum i Borås
-gmbl/1:
+gmbl 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Borl%C3%A4nge%2C%20Sverige'
   title: Google Maps Borlänge
   tags:
@@ -44,7 +44,7 @@ gmbl/1:
   - google
   examples:
     centrum: sök centrum i Borlänge
-gme/1:
+gme 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Eskilstuna%2C%20Sverige'
   title: Google Maps Eskilstuna
   tags:
@@ -52,7 +52,7 @@ gme/1:
   - google
   examples:
     centrum: sök centrum i Eskilstuna
-gmf/1:
+gmf 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Falun%2C%20Sverige'
   title: Google Maps Falun
   tags:
@@ -60,7 +60,7 @@ gmf/1:
   - google
   examples:
     centrum: sök centrum i Falun
-gmg/1:
+gmg 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Gothenburg%2C%20Sverige'
   title: Google Maps Gothenburg
   tags:
@@ -68,7 +68,7 @@ gmg/1:
   - google
   examples:
     centrum: sök centrum i Gothenburg
-gmgä/1:
+gmgä 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20G%C3%A4vle%2C%20Sverige'
   title: Google Maps Gävle
   tags:
@@ -76,7 +76,7 @@ gmgä/1:
   - google
   examples:
     centrum: sök centrum i Gävle
-gmh/1:
+gmh 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Helsingborg%2C%20Sverige'
   title: Google Maps Helsingborg
   tags:
@@ -84,7 +84,7 @@ gmh/1:
   - google
   examples:
     centrum: sök centrum i Helsingborg
-gmha/1:
+gmha 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Halmstad%2C%20Sverige'
   title: Google Maps Halmstad
   tags:
@@ -92,7 +92,7 @@ gmha/1:
   - google
   examples:
     centrum: sök centrum i Halmstad
-gmj/1:
+gmj 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20J%C3%B6nk%C3%B6ping%2C%20Sverige'
   title: Google Maps Jönköping
   tags:
@@ -100,7 +100,7 @@ gmj/1:
   - google
   examples:
     centrum: sök centrum i Jönköping
-gmk/1:
+gmk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Karlstad%2C%20Sverige'
   title: Google Maps Karlstad
   tags:
@@ -108,7 +108,7 @@ gmk/1:
   - google
   examples:
     centrum: sök centrum i Karlstad
-gmkk/1:
+gmkk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Karlskrona%2C%20Sverige'
   title: Google Maps Karlskrona
   tags:
@@ -116,7 +116,7 @@ gmkk/1:
   - google
   examples:
     centrum: sök centrum i Karlskrona
-gmkm/1:
+gmkm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Kalmar%2C%20Sverige'
   title: Google Maps Kalmar
   tags:
@@ -124,7 +124,7 @@ gmkm/1:
   - google
   examples:
     centrum: sök centrum i Kalmar
-gmks/1:
+gmks 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Kristianstad%2C%20Sverige'
   title: Google Maps Kristianstad
   tags:
@@ -132,7 +132,7 @@ gmks/1:
   - google
   examples:
     centrum: sök centrum i Kristianstad
-gml/1:
+gml 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Link%C3%B6ping%2C%20Sverige'
   title: Google Maps Linköping
   tags:
@@ -140,7 +140,7 @@ gml/1:
   - google
   examples:
     centrum: sök centrum i Linköping
-gmld/1:
+gmld 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Liding%C3%B6%2C%20Sverige'
   title: Google Maps Lidingö
   tags:
@@ -148,7 +148,7 @@ gmld/1:
   - google
   examples:
     centrum: sök centrum i Lidingö
-gmll/1:
+gmll 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Lule%C3%A5%2C%20Sverige'
   title: Google Maps Luleå
   tags:
@@ -156,7 +156,7 @@ gmll/1:
   - google
   examples:
     centrum: sök centrum i Luleå
-gmlu/1:
+gmlu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Lund%2C%20Sverige'
   title: Google Maps Lund
   tags:
@@ -164,7 +164,7 @@ gmlu/1:
   - google
   examples:
     centrum: sök centrum i Lund
-gmm/1:
+gmm 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Malm%C3%B6%2C%20Sverige'
   title: Google Maps Malmö
   tags:
@@ -172,7 +172,7 @@ gmm/1:
   - google
   examples:
     centrum: sök centrum i Malmö
-gmn/1:
+gmn 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Norrk%C3%B6ping%2C%20Sverige'
   title: Google Maps Norrköping
   tags:
@@ -180,7 +180,7 @@ gmn/1:
   - google
   examples:
     centrum: sök centrum i Norrköping
-gmna/1:
+gmna 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Nacka%2C%20Sverige'
   title: Google Maps Nacka
   tags:
@@ -188,7 +188,7 @@ gmna/1:
   - google
   examples:
     centrum: sök centrum i Nacka
-gmny/1:
+gmny 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Nyk%C3%B6ping%2C%20Sverige'
   title: Google Maps Nyköping
   tags:
@@ -196,7 +196,7 @@ gmny/1:
   - google
   examples:
     centrum: sök centrum i Nyköping
-gms/1:
+gms 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Stockholm%2C%20Sverige'
   title: Google Maps Stockholm
   tags:
@@ -204,7 +204,7 @@ gms/1:
   - google
   examples:
     centrum: sök centrum i Stockholm
-gmsb/1:
+gmsb 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Sundbyberg%2C%20Sverige'
   title: Google Maps Sundbyberg
   tags:
@@ -212,7 +212,7 @@ gmsb/1:
   - google
   examples:
     centrum: sök centrum i Sundbyberg
-gmsk/1:
+gmsk 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Skellefte%C3%A5%2C%20Sverige'
   title: Google Maps Skellefteå
   tags:
@@ -220,7 +220,7 @@ gmsk/1:
   - google
   examples:
     centrum: sök centrum i Skellefteå
-gmso/1:
+gmso 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Solna%2C%20Sverige'
   title: Google Maps Solna
   tags:
@@ -228,7 +228,7 @@ gmso/1:
   - google
   examples:
     centrum: sök centrum i Solna
-gmsv/1:
+gmsv 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Sundsvall%2C%20Sverige'
   title: Google Maps Sundsvall
   tags:
@@ -236,7 +236,7 @@ gmsv/1:
   - google
   examples:
     centrum: sök centrum i Sundsvall
-gmsö/1:
+gmsö 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20S%C3%B6dert%C3%A4lje%2C%20Sverige'
   title: Google Maps Södertälje
   tags:
@@ -244,7 +244,7 @@ gmsö/1:
   - google
   examples:
     centrum: sök centrum i Södertälje
-gmt/1:
+gmt 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Trollh%C3%A4ttan%2C%20Sverige'
   title: Google Maps Trollhättan
   tags:
@@ -252,7 +252,7 @@ gmt/1:
   - google
   examples:
     centrum: sök centrum i Trollhättan
-gmu/1:
+gmu 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Uppsala%2C%20Sverige'
   title: Google Maps Uppsala
   tags:
@@ -260,7 +260,7 @@ gmu/1:
   - google
   examples:
     centrum: sök centrum i Uppsala
-gmum/1:
+gmum 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Ume%C3%A5%2C%20Sverige'
   title: Google Maps Umeå
   tags:
@@ -268,7 +268,7 @@ gmum/1:
   - google
   examples:
     centrum: sök centrum i Umeå
-gmv/1:
+gmv 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20V%C3%A4ster%C3%A5s%2C%20Sverige'
   title: Google Maps Västerås
   tags:
@@ -276,7 +276,7 @@ gmv/1:
   - google
   examples:
     centrum: sök centrum i Västerås
-gmvx/1:
+gmvx 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20V%C3%A4xj%C3%B6%2C%20Sverige'
   title: Google Maps Växjö
   tags:
@@ -284,7 +284,7 @@ gmvx/1:
   - google
   examples:
     centrum: sök centrum i Växjö
-gmä/1:
+gmä 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20%C3%84ngelholm%2C%20Sverige'
   title: Google Maps Ängelholm
   tags:
@@ -292,7 +292,7 @@ gmä/1:
   - google
   examples:
     centrum: sök centrum i Ängelholm
-gmö/1:
+gmö 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20%C3%96rebro%2C%20Sverige'
   title: Google Maps Örebro
   tags:
@@ -300,7 +300,7 @@ gmö/1:
   - google
   examples:
     centrum: sök centrum i Örebro
-gmös/1:
+gmös 1:
   url: 'http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20%C3%96stersund%2C%20Sverige'
   title: Google Maps Östersund
   tags:
@@ -308,7 +308,7 @@ gmös/1:
   - google
   examples:
     centrum: sök centrum i Östersund
-llt/2:
+llt 2:
   url: 'http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&cmdAction=search'
   title: Luleå Lokaltrafik
   tags:
@@ -316,7 +316,7 @@ llt/2:
   - luleå
   examples:
     'sotargatan, järnvägen': Nästa buss från Sotargatan till Järnvägen
-llt/3:
+llt 3:
   url: 'http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&inpTime={%Avgång}00&cmdAction=search'
   title: Luleå Lokaltrafik
   tags:
@@ -324,7 +324,7 @@ llt/3:
   - luleå
   examples:
     'sotargatan, järnvägen,10': 'Buss från Sotargatan till Järnvägen, avgång kl. 10'
-ltnbd/2:
+ltnbd 2:
   url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&start=1'
   title: Länstraffiken Norbotten
   tags:
@@ -333,7 +333,7 @@ ltnbd/2:
   - norbotten
   examples:
     'boden, luleå': Nästa buss från Boden till Luleå
-ltnbd/3:
+ltnbd 3:
   url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&T={%Avgång}&start=1'
   title: Länstraffiken Norbotten
   tags:
@@ -342,21 +342,21 @@ ltnbd/3:
   - norbotten
   examples:
     'boden, luleå, 10': 'Buss från Boden till Luleå, avgång kl. 10'
-rr/2:
+rr 2:
   url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&start=1'
   title: Resrobot
   tags:
   - travel
   examples:
     'stockholm, malmö': Nästa tåg från Stockholm till Malmö
-rr/3:
+rr 3:
   url: 'http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&start=1'
   title: Resrobot
   tags:
   - travel
   examples:
     'stockholm, malmö, 10': 'Tåg från Stockholm till Malmö, avgång kl. 10'
-sl/2:
+sl 2:
   url: 'http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&start=1'
   title: Storstockholms Lokaltrafik
   tags:
@@ -364,7 +364,7 @@ sl/2:
   - stockholm
   examples:
     'husby, alby': Nästa tåg från Husby till Alby
-sl/3:
+sl 3:
   url: 'http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&start=1'
   title: Storstockholms Lokaltrafik
   tags:
@@ -372,7 +372,7 @@ sl/3:
   - stockholm
   examples:
     'husby, alby, 10': 'Tåg från Husby till Alby, avgång kl. 10'
-sl/4:
+sl 4:
   url: 'http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&D={%Dag}&start=1'
   title: Storstockholms Lokaltrafik
   tags:
@@ -380,7 +380,7 @@ sl/4:
   - stockholm
   examples:
     'husby, alby, 10, 30.12.': 'Tåg från Husby till Alby, avgång kl. 10, dag 30.12.'
-srse/1:
+srse 1:
   url: 'http://sverigesradio.se/sida/sok.aspx?q={%programmets namn}&sort=relevance'
   title: Sveriges radio search
   tags:
@@ -388,7 +388,7 @@ srse/1:
   - sweden
   examples:
     stockholm: Search for "stockholm".
-zal/1:
+zal 1:
   url: 'http://www.zalando.se/katalog/?q={%produkt}'
   title: Zalando.se
   tags:
