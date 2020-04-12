@@ -37,7 +37,7 @@ export default class Env {
 
     this.setDefaults();
     this.addFetchUrlToNamespaces();
-    this.namespaces = await this.fetchShortcuts(this.namespaces, this.debug);
+    this.namespaces = await this.fetchShortcuts(this.namespaces, this.reload, this.debug);
   }
 
   /**
@@ -149,7 +149,7 @@ export default class Env {
     return country;
   }
 
-  async fetchShortcuts(namespaces, debug) {
+  async fetchShortcuts(namespaces, reload, debug) {
     // TODO: Force debug to be boolean.
     const promises = [];
     namespaces.forEach((namespace, i, namespaces) => {
@@ -157,7 +157,7 @@ export default class Env {
         return namespaces;
       }
       promises.push(
-        fetch(namespace.url, { cache: "force-cache" })
+        fetch(namespace.url, { cache: reload ? "reload" : "force-cache" })
       );
     });
 
