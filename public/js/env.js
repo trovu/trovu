@@ -11,10 +11,6 @@ export default class Env {
   constructor() {
     this.configUrlTemplate =
       "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml";
-    // TODO: Remove, maybe unused?
-    // Or maybe used by extraNamespace.
-    this.fetchUrlTemplateDefault =
-      "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/{%namespace}/{%keyword}/{%argumentCount}.yml";
   }
 
   /**
