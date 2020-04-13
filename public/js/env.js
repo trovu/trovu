@@ -222,7 +222,7 @@ export default class Env {
       // Must contain {%keyword} and {%argumentCount}.
       namespace.type = "user";
     } else if (namespace.github) {
-      this.addFetchUrlToGithubNamespace(namespace);
+      namespace = this.addFetchUrlToGithubNamespace(namespace);
     }
     // Yes, a string namespace with length < 4 will be ignored.
     return namespace;
@@ -262,6 +262,7 @@ export default class Env {
       namespace.github +
       "/trovu-data-user/master/shortcuts.yml";
     namespace.type = "user";
+    return namespace;
   }
 
   /**
