@@ -175,6 +175,26 @@ export default class Env {
   }
 
   /**
+   * Ensure shortcuts have the correct structure.
+   * 
+   * @param {array} shortcuts - The shortcuts to normalize.
+   * 
+   * @return {array} shortcuts - The normalized shortcuts.
+   */
+  normalizeShortcuts(shortcuts) {
+    // Check for 'only URL' shortcuts.
+    for (let key in shortcuts) {
+      if (typeof shortcuts[key] === 'string') {
+        const url = shortcuts[key];
+        shortcuts[key] = {
+          url: url
+        }
+      }
+    }
+    return shortcuts;
+  }
+
+  /**
    * Add a fetch URL template to a namespace.
    * 
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
@@ -198,17 +218,7 @@ export default class Env {
       if (debug) Helper.log("Success: " + responses[i].url);
       const text = await responses[i].text();
       const shortcuts = jsyaml.load(text);
-      // Check for 'only URL' shortcuts.
-      // TODO: Refactor.
-      for (let key in shortcuts) {
-        if (typeof shortcuts[key] === 'string') {
-          const url = shortcuts[key];
-          shortcuts[key] = {
-            url: url
-          }
-        }
-      }
-      namespaces[i].shortcuts = jsyaml.load(text);
+      namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts);
     };
     return namespaces;
   }
