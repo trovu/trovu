@@ -232,6 +232,8 @@ export default class Env {
    * Add a URL template to a namespace that refers to a namespace in trovu-data.
    *
    * @param {string} name - The namespace name.
+   * 
+   * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToSiteNamespace(name) {
     const namespace = {
@@ -247,6 +249,10 @@ export default class Env {
 
   /**
    * Add a URL template to a namespace that refers to a Github user repo.
+   *
+   * @param {string} name - The namespace name.
+   * 
+   * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToGithubNamespace(namespace) {
     if (namespace.github == ".") {
