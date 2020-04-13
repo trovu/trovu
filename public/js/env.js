@@ -159,7 +159,6 @@ export default class Env {
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
   async fetchShortcuts(namespaces, reload, debug) {
-    // TODO: Force debug to be boolean.
     const promises = [];
     namespaces.forEach((namespace, i, namespaces) => {
       if (!namespace.url) {
