@@ -51,6 +51,10 @@ export default class Env {
     if (typeof this.namespaces != "object") {
       this.namespaces = ["o", this.language, "." + this.country];
     }
+    // Default debug.
+    if (typeof this.debug != "boolean") {
+      this.debug = Boolean(this.debug);
+    }
   }
 
   /**
