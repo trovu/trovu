@@ -66,6 +66,13 @@ export default class Env {
     }
   }
 
+  /**
+   * Get the user configuration from their fork in their Github profile.
+   *
+   * @param {array} params - Here, 'github' and 'debug' will be used
+   * 
+   * @return {(object|boolean)} config - The user's config object, or false if fetch failed.
+   */
   async getUserConfigFromGithub(params) {
     const configUrl = this.configUrlTemplate.replace("{%github}", params.github);
     const configYml = await Helper.fetchAsync(configUrl, false, params.debug);
