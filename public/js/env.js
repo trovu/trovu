@@ -149,6 +149,15 @@ export default class Env {
     return country;
   }
 
+  /**
+   * Add a fetch URL template to a namespace.
+   * 
+   * @param {array} namespaces - The namespaces to fetch shortcuts for.
+   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
+   * @param {boolean} debug    - Flag whether to print debug messages.
+   * 
+   * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
+   */
   async fetchShortcuts(namespaces, reload, debug) {
     // TODO: Force debug to be boolean.
     const promises = [];
