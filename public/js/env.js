@@ -154,15 +154,14 @@ export default class Env {
   }
 
   /**
-   * Add a fetch URL template to a namespace.
+   * Start fetching shortcuts per namespace.
    * 
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
    * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
-   * @param {boolean} debug    - Flag whether to print debug messages.
    * 
-   * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
+   * @return {array} promises - The promises from the fetch() calls.
    */
-  async fetchShortcuts(namespaces, reload, debug) {
+  async startFetches(namespaces, reload) {
     const promises = [];
     namespaces.forEach((namespace, i, namespaces) => {
       if (!namespace.url) {
@@ -172,6 +171,21 @@ export default class Env {
         fetch(namespace.url, { cache: reload ? "reload" : "force-cache" })
       );
     });
+    return promises;
+  }
+
+  /**
+   * Add a fetch URL template to a namespace.
+   * 
+   * @param {array} namespaces - The namespaces to fetch shortcuts for.
+   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
+   * @param {boolean} debug    - Flag whether to print debug messages.
+   * 
+   * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
+   */
+  async fetchShortcuts(namespaces, reload, debug) {
+
+    const promises = await this.startFetches(namespaces, reload);
 
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
