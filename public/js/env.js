@@ -58,8 +58,6 @@ export default class Env {
    * Set the user configuration from their fork in their Github profile.
    *
    * @param {array} params - Here, 'github' and 'debug' will be used
-   *
-   * @return {boolean} [getUserConfigFailed] - True if fetch failed.
    */
   async setWithUserConfigFromGithub(params) {
     const config = await this.getUserConfigFromGithub(params);
