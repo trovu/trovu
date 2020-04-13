@@ -23,8 +23,7 @@ export default class Env {
       params = Helper.getParams();
     }
 
-    // TODO: Check for string and non-emptiness.
-    if (params.github) {
+    if (typeof params.github === 'string' && params.github !== '') {
       await this.setWithUserConfigFromGithub(params);
     }
 
