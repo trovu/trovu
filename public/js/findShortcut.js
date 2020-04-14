@@ -45,6 +45,7 @@ export default class FindShortcut {
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
     if (Object.keys(shortcuts).length === 0 && env.args.length > 0) {
+      if (env.debug) Helper.log('Not found yet, trying via whole argument string.');
       env.args = [env.argumentString];
       shortcuts = await this.matchShortcuts(env.keyword, env.args, env.namespaces, env.reload, env.debug);
     }
@@ -52,6 +53,7 @@ export default class FindShortcut {
     // If nothing found:
     // Try default keyword.
     if (Object.keys(shortcuts).length === 0 && env.defaultKeyword) {
+      if (env.debug) Helper.log('Not found yet, trying via default keyword.');
       env.args = [env.query];
       shortcuts = await this.matchShortcuts(
         env.defaultKeyword,
