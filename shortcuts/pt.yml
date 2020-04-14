@@ -1,5 +1,5 @@
 de 1:
-  url: 'http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%word}'
+  url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%word}
   title: Alemão-Português
   tags:
   - dictionary
@@ -14,7 +14,7 @@ de 1:
     baum: '"baum" auf Portugiesisch'
     árvore: '"árvore" auf Deutsch'
 last 1:
-  url: 'http://www.last.fm/search?setlang=pt&q={%artist}'
+  url: http://www.last.fm/search?setlang=pt&q={%artist}
   title: Last.fm
   tags:
   - music

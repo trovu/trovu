@@ -1,5 +1,5 @@
 last 1:
-  url: 'http://www.last.fm/search?setlang=ko&q={%artist}'
+  url: http://www.last.fm/search?setlang=ko&q={%artist}
   title: Last.fm
   tags:
   - music

@@ -1,5 +1,5 @@
 de 1:
-  url: 'http://portalwiedzy.onet.pl/tlumacz.html?tr=nie-auto&qs={%słowo}'
+  url: http://portalwiedzy.onet.pl/tlumacz.html?tr=nie-auto&qs={%słowo}
   title: Niemiecko-polski
   tags:
   - dictionary
@@ -10,7 +10,7 @@ de 1:
     Baum: Tłumaczenie słowa "Baum" na polski
     drzewo: Tłumaczenie słowa "Baum" na niemiecki
 en 1:
-  url: 'https://pl.bab.la/slownik/angielski-polski/{%słowo}'
+  url: https://pl.bab.la/slownik/angielski-polski/{%słowo}
   title: Angielsko-polski (bab.la)
   tags:
   - dictionary
@@ -21,21 +21,21 @@ en 1:
     tree: Tłumaczenie słowa "tree" na polski
     drzewo: Tłumaczenie słowa "drzewo" na angielski
 fw 1:
-  url: 'http://www.filmweb.pl/search?q={%tytuł/osoba}'
+  url: http://www.filmweb.pl/search?q={%tytuł/osoba}
   title: FilmWeb
   tags:
   - film
   examples:
     forrest gump: Search for "forrest gump"
 gfp 0:
-  url: 'http://german-foreign-policy.com/pl/news/'
+  url: http://german-foreign-policy.com/pl/news/
   title: German Foreign Policy
   tags:
   - politics
   - news
   - germany
 gfp 1:
-  url: 'http://german-foreign-policy.com/index.php?lang=pl&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}'
+  url: http://german-foreign-policy.com/index.php?lang=pl&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}
   title: German Foreign Policy (Polish)
   tags:
   - politics
@@ -44,7 +44,7 @@ gfp 1:
   examples:
     berlin: Szukaj "berlin"
 last 1:
-  url: 'http://www.last.fm/search?setlang=pl&q={%artist}'
+  url: http://www.last.fm/search?setlang=pl&q={%artist}
   title: Last.fm
   tags:
   - music
@@ -52,15 +52,15 @@ last 1:
   examples:
     beatles: Search for "beatles"
 napisy 1:
-  url: 'http://napisy.info/SzukajTytulow.php?t={%film}'
+  url: http://napisy.info/SzukajTytulow.php?t={%film}
   title: NAPiSY.info
   tags:
   - subtitles
   examples:
     loose change: Search for "loose change"
 pwn 1:
-  url: 'http://sjp.pwn.pl/lista.php?co={%słowo}'
-  title: 'Słownik języka polskiego: PWN'
+  url: http://sjp.pwn.pl/lista.php?co={%słowo}
+  title: "Słownik języka polskiego: PWN"
   tags:
   - dictionary
   - language
@@ -70,8 +70,8 @@ pwn 1:
   examples:
     drzewo: Szukaj "drzewo"
 sjp 1:
-  url: 'http://portalwiedzy.onet.pl/polszczyzna.html?qs={%słowo}&tr=pol-all&ch=1&x=0&y=0'
-  title: 'Słownik języka polskiego: Onet.pl'
+  url: http://portalwiedzy.onet.pl/polszczyzna.html?qs={%słowo}&tr=pol-all&ch=1&x=0&y=0
+  title: "Słownik języka polskiego: Onet.pl"
   tags:
   - dictionary
   - language

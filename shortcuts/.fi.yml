@@ -1,21 +1,21 @@
 reitti 2:
-  url: 'http://www.reittiopas.fi/?showsearchformsaved=hide&from_in={%from}&to_in={%to}'
+  url: http://www.reittiopas.fi/?showsearchformsaved=hide&from_in={%from}&to_in={%to}
   title: Reittiopas Helsingin seudun liikenne
   tags:
   - travel
   - helsinki
   examples:
-    'Kumpulan Kampus, Rautatientori': Next connection from Kumpulan Kampus to Rautatientori
+    "Kumpulan Kampus, Rautatientori": Next connection from Kumpulan Kampus to Rautatientori
 reitti 4:
-  url: 'http://www.reittiopas.fi/?from_in={%from}&to_in={%to}&hour={%hour}&minute={%minute}'
+  url: http://www.reittiopas.fi/?from_in={%from}&to_in={%to}&hour={%hour}&minute={%minute}
   title: Reittiopas Helsingin seudun liikenne
   tags:
   - travel
   - helsinki
   examples:
-    'Ruoholahti, Itäkeskus, 13, 37': 'Find public transit connections from Ruoholahti to Itäkeskus at 13:37'
+    "Ruoholahti, Itäkeskus, 13, 37": Find public transit connections from Ruoholahti to Itäkeskus at 13:37
 zal 1:
-  url: 'http://www.zalando.fi/katalogi/?q={%tavara}'
+  url: http://www.zalando.fi/katalogi/?q={%tavara}
   title: Zalando.fi
   tags:
   - shopping

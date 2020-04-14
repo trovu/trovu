@@ -1,5 +1,5 @@
 kt 1:
-  url: 'http://komputeko.net/index_eo.php?vorto={%vorto}'
+  url: http://komputeko.net/index_eo.php?vorto={%vorto}
   title: Komputeko
   tags:
   - esperanto
@@ -9,7 +9,7 @@ kt 1:
   examples:
     shortcut: Find the Esperanto word for "shortcut"
 piv 1:
-  url: 'http://vortaro.net/#{%vorto}'
+  url: http://vortaro.net/#{%vorto}
   title: Plena Ilustrita Vortaro
   tags:
   - language

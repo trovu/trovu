@@ -1,5 +1,5 @@
 a 1:
-  url: 'http://www.amazon.in/s/?field-keywords={%query}'
+  url: http://www.amazon.in/s/?field-keywords={%query}
   title: Amazon.in
   tags:
   - amazon
@@ -9,13 +9,13 @@ a 1:
   examples:
     shakespeare: Search for "shakespeare"
 e 0:
-  url: 'http://www.ebay.in/'
+  url: http://www.ebay.in/
   title: Ebay.in
   tags:
   - shopping
   - ebay
 e 1:
-  url: 'http://www.ebay.in/sch/i.html?_nkw={%query}'
+  url: http://www.ebay.in/sch/i.html?_nkw={%query}
   title: Ebay.in
   tags:
   - shopping

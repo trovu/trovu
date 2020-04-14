@@ -1,5 +1,5 @@
 de 1:
-  url: 'http://dict.leo.org/chde?search={%Wort}'
+  url: http://dict.leo.org/chde?search={%Wort}
   title: Deutsch-Chinesisch (leo.org)
   tags:
   - language
@@ -7,7 +7,7 @@ de 1:
   examples:
     baum: Search for "baum"
 en 1:
-  url: 'http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}'
+  url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
   title: English-Chinese
   tags:
   - chinese
@@ -18,7 +18,7 @@ en 1:
     tree: Translation of "tree"
     木: Translation of 木
 last 1:
-  url: 'http://www.last.fm/search?setlang=zh&q={%artist}'
+  url: http://www.last.fm/search?setlang=zh&q={%artist}
   title: Last.fm
   tags:
   - music

@@ -1,5 +1,5 @@
 gmba 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bratislava%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bratislava%2C%20Slovensko
   title: Google Maps Bratislava
   tags:
   - maps
@@ -7,7 +7,7 @@ gmba 1:
   examples:
     hlavná: Ukáž Hlavná v meste Bratislava
 gmbb 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bansk%C3%A1+Bystrica%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bansk%C3%A1+Bystrica%2C%20Slovensko
   title: Google Maps Banská Bystrica
   tags:
   - maps
@@ -15,7 +15,7 @@ gmbb 1:
   examples:
     hlavná: Ukáž Hlavná v meste Banská Bystrica
 gmbj 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bardejov%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bardejov%2C%20Slovensko
   title: Google Maps Bardejov
   tags:
   - maps
@@ -23,7 +23,7 @@ gmbj 1:
   examples:
     hlavná: Ukáž Hlavná v meste Bardejov
 gmbn 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20B%C3%A1novce+nad+Bebravou%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20B%C3%A1novce+nad+Bebravou%2C%20Slovensko
   title: Google Maps Bánovce nad Bebravou
   tags:
   - maps
@@ -31,7 +31,7 @@ gmbn 1:
   examples:
     hlavná: Ukáž Hlavná v meste Bánovce nad Bebravou
 gmbr 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Brezno%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Brezno%2C%20Slovensko
   title: Google Maps Brezno
   tags:
   - maps
@@ -39,7 +39,7 @@ gmbr 1:
   examples:
     hlavná: Ukáž Hlavná v meste Brezno
 gmbs 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bansk%C3%A1+%C5%A0tiavnica%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bansk%C3%A1+%C5%A0tiavnica%2C%20Slovensko
   title: Google Maps Banská Štiavnica
   tags:
   - maps
@@ -47,7 +47,7 @@ gmbs 1:
   examples:
     hlavná: Ukáž Hlavná v meste Banská Štiavnica
 gmby 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Byt%C4%8Da%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Byt%C4%8Da%2C%20Slovensko
   title: Google Maps Bytča
   tags:
   - maps
@@ -55,7 +55,7 @@ gmby 1:
   examples:
     hlavná: Ukáž Hlavná v meste Bytča
 gmca 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C4%8Cadca%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C4%8Cadca%2C%20Slovensko
   title: Google Maps Čadca
   tags:
   - maps
@@ -63,7 +63,7 @@ gmca 1:
   examples:
     hlavná: Ukáž Hlavná v meste Čadca
 gmdk 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Doln%C3%BD+Kub%C3%ADn%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Doln%C3%BD+Kub%C3%ADn%2C%20Slovensko
   title: Google Maps Dolný Kubín
   tags:
   - maps
@@ -71,7 +71,7 @@ gmdk 1:
   examples:
     hlavná: Ukáž Hlavná v meste Dolný Kubín
 gmds 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Dunajsk%C3%A1+Streda%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Dunajsk%C3%A1+Streda%2C%20Slovensko
   title: Google Maps Dunajská Streda
   tags:
   - maps
@@ -79,7 +79,7 @@ gmds 1:
   examples:
     hlavná: Ukáž Hlavná v meste Dunajská Streda
 gmdt 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Detva%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Detva%2C%20Slovensko
   title: Google Maps Detva
   tags:
   - maps
@@ -87,7 +87,7 @@ gmdt 1:
   examples:
     hlavná: Ukáž Hlavná v meste Detva
 gmga 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Galanta%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Galanta%2C%20Slovensko
   title: Google Maps Galanta
   tags:
   - maps
@@ -95,7 +95,7 @@ gmga 1:
   examples:
     hlavná: Ukáž Hlavná v meste Galanta
 gmgl 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Gelnica%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Gelnica%2C%20Slovensko
   title: Google Maps Gelnica
   tags:
   - maps
@@ -103,7 +103,7 @@ gmgl 1:
   examples:
     hlavná: Ukáž Hlavná v meste Gelnica
 gmhc 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Hlohovec%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Hlohovec%2C%20Slovensko
   title: Google Maps Hlohovec
   tags:
   - maps
@@ -111,7 +111,7 @@ gmhc 1:
   examples:
     hlavná: Ukáž Hlavná v meste Hlohovec
 gmhe 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Humenn%C3%A9%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Humenn%C3%A9%2C%20Slovensko
   title: Google Maps Humenné
   tags:
   - maps
@@ -119,7 +119,7 @@ gmhe 1:
   examples:
     hlavná: Ukáž Hlavná v meste Humenné
 gmil 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ilava%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ilava%2C%20Slovensko
   title: Google Maps Ilava
   tags:
   - maps
@@ -127,7 +127,7 @@ gmil 1:
   examples:
     hlavná: Ukáž Hlavná v meste Ilava
 gmka 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Krupina%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Krupina%2C%20Slovensko
   title: Google Maps Krupina
   tags:
   - maps
@@ -135,7 +135,7 @@ gmka 1:
   examples:
     hlavná: Ukáž Hlavná v meste Krupina
 gmke 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ko%C5%A1ice%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ko%C5%A1ice%2C%20Slovensko
   title: Google Maps Košice
   tags:
   - maps
@@ -143,7 +143,7 @@ gmke 1:
   examples:
     hlavná: Ukáž Hlavná v meste Košice
 gmkk 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ke%C5%BEmarok%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ke%C5%BEmarok%2C%20Slovensko
   title: Google Maps Kežmarok
   tags:
   - maps
@@ -151,7 +151,7 @@ gmkk 1:
   examples:
     hlavná: Ukáž Hlavná v meste Kežmarok
 gmkm 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Kysuck%C3%A9+Nov%C3%A9+Mesto%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Kysuck%C3%A9+Nov%C3%A9+Mesto%2C%20Slovensko
   title: Google Maps Kysucké Nové Mesto
   tags:
   - maps
@@ -159,7 +159,7 @@ gmkm 1:
   examples:
     hlavná: Ukáž Hlavná v meste Kysucké Nové Mesto
 gmkn 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Kom%C3%A1rno%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Kom%C3%A1rno%2C%20Slovensko
   title: Google Maps Komárno
   tags:
   - maps
@@ -167,7 +167,7 @@ gmkn 1:
   examples:
     hlavná: Ukáž Hlavná v meste Komárno
 gmlc 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Lu%C4%8Denec%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Lu%C4%8Denec%2C%20Slovensko
   title: Google Maps Lučenec
   tags:
   - maps
@@ -175,7 +175,7 @@ gmlc 1:
   examples:
     hlavná: Ukáž Hlavná v meste Lučenec
 gmle 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Levo%C4%8Da%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Levo%C4%8Da%2C%20Slovensko
   title: Google Maps Levoča
   tags:
   - maps
@@ -183,7 +183,7 @@ gmle 1:
   examples:
     hlavná: Ukáž Hlavná v meste Levoča
 gmlm 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Liptovsk%C3%BD+Mikul%C3%A1%C5%A1%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Liptovsk%C3%BD+Mikul%C3%A1%C5%A1%2C%20Slovensko
   title: Google Maps Liptovský Mikuláš
   tags:
   - maps
@@ -191,7 +191,7 @@ gmlm 1:
   examples:
     hlavná: Ukáž Hlavná v meste Liptovský Mikuláš
 gmlv 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Levice%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Levice%2C%20Slovensko
   title: Google Maps Levice
   tags:
   - maps
@@ -199,7 +199,7 @@ gmlv 1:
   examples:
     hlavná: Ukáž Hlavná v meste Levice
 gmma 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Malacky%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Malacky%2C%20Slovensko
   title: Google Maps Malacky
   tags:
   - maps
@@ -207,7 +207,7 @@ gmma 1:
   examples:
     hlavná: Ukáž Hlavná v meste Malacky
 gmmi 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Michalovce%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Michalovce%2C%20Slovensko
   title: Google Maps Michalovce
   tags:
   - maps
@@ -215,7 +215,7 @@ gmmi 1:
   examples:
     hlavná: Ukáž Hlavná v meste Michalovce
 gmml 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Medzilaborce%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Medzilaborce%2C%20Slovensko
   title: Google Maps Medzilaborce
   tags:
   - maps
@@ -223,7 +223,7 @@ gmml 1:
   examples:
     hlavná: Ukáž Hlavná v meste Medzilaborce
 gmmt 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Martin%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Martin%2C%20Slovensko
   title: Google Maps Martin
   tags:
   - maps
@@ -231,7 +231,7 @@ gmmt 1:
   examples:
     hlavná: Ukáž Hlavná v meste Martin
 gmmy 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Myjava%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Myjava%2C%20Slovensko
   title: Google Maps Myjava
   tags:
   - maps
@@ -239,7 +239,7 @@ gmmy 1:
   examples:
     hlavná: Ukáž Hlavná v meste Myjava
 gmnm 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Nov%C3%A9+Mesto+nad+V%C3%A1hom%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Nov%C3%A9+Mesto+nad+V%C3%A1hom%2C%20Slovensko
   title: Google Maps Nové Mesto nad Váhom
   tags:
   - maps
@@ -247,7 +247,7 @@ gmnm 1:
   examples:
     hlavná: Ukáž Hlavná v meste Nové Mesto nad Váhom
 gmno 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20N%C3%A1mestovo%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20N%C3%A1mestovo%2C%20Slovensko
   title: Google Maps Námestovo
   tags:
   - maps
@@ -255,7 +255,7 @@ gmno 1:
   examples:
     hlavná: Ukáž Hlavná v meste Námestovo
 gmnr 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Nitra%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Nitra%2C%20Slovensko
   title: Google Maps Nitra
   tags:
   - maps
@@ -263,7 +263,7 @@ gmnr 1:
   examples:
     hlavná: Ukáž Hlavná v meste Nitra
 gmnz 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Nov%C3%A9+Z%C3%A1mky%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Nov%C3%A9+Z%C3%A1mky%2C%20Slovensko
   title: Google Maps Nové Zámky
   tags:
   - maps
@@ -271,7 +271,7 @@ gmnz 1:
   examples:
     hlavná: Ukáž Hlavná v meste Nové Zámky
 gmpb 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pova%C5%BEsk%C3%A1+Bystrica%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pova%C5%BEsk%C3%A1+Bystrica%2C%20Slovensko
   title: Google Maps Považská Bystrica
   tags:
   - maps
@@ -279,7 +279,7 @@ gmpb 1:
   examples:
     hlavná: Ukáž Hlavná v meste Považská Bystrica
 gmpd 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Prievidza%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Prievidza%2C%20Slovensko
   title: Google Maps Prievidza
   tags:
   - maps
@@ -287,7 +287,7 @@ gmpd 1:
   examples:
     hlavná: Ukáž Hlavná v meste Prievidza
 gmpe 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Partiz%C3%A1nske%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Partiz%C3%A1nske%2C%20Slovensko
   title: Google Maps Partizánske
   tags:
   - maps
@@ -295,7 +295,7 @@ gmpe 1:
   examples:
     hlavná: Ukáž Hlavná v meste Partizánske
 gmpk 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pezinok%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pezinok%2C%20Slovensko
   title: Google Maps Pezinok
   tags:
   - maps
@@ -303,7 +303,7 @@ gmpk 1:
   examples:
     hlavná: Ukáž Hlavná v meste Pezinok
 gmpn 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pie%C5%A1%C5%A5any%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pie%C5%A1%C5%A5any%2C%20Slovensko
   title: Google Maps Piešťany
   tags:
   - maps
@@ -311,7 +311,7 @@ gmpn 1:
   examples:
     hlavná: Ukáž Hlavná v meste Piešťany
 gmpo 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pre%C5%A1ov%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Pre%C5%A1ov%2C%20Slovensko
   title: Google Maps Prešov
   tags:
   - maps
@@ -319,7 +319,7 @@ gmpo 1:
   examples:
     hlavná: Ukáž Hlavná v meste Prešov
 gmpp 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Poprad%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Poprad%2C%20Slovensko
   title: Google Maps Poprad
   tags:
   - maps
@@ -327,7 +327,7 @@ gmpp 1:
   examples:
     hlavná: Ukáž Hlavná v meste Poprad
 gmpt 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Polt%C3%A1r%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Polt%C3%A1r%2C%20Slovensko
   title: Google Maps Poltár
   tags:
   - maps
@@ -335,7 +335,7 @@ gmpt 1:
   examples:
     hlavná: Ukáž Hlavná v meste Poltár
 gmpu 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20P%C3%BAchov%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20P%C3%BAchov%2C%20Slovensko
   title: Google Maps Púchov
   tags:
   - maps
@@ -343,7 +343,7 @@ gmpu 1:
   examples:
     hlavná: Ukáž Hlavná v meste Púchov
 gmra 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Rev%C3%BAca%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Rev%C3%BAca%2C%20Slovensko
   title: Google Maps Revúca
   tags:
   - maps
@@ -351,7 +351,7 @@ gmra 1:
   examples:
     hlavná: Ukáž Hlavná v meste Revúca
 gmrk 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ru%C5%BEomberok%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ru%C5%BEomberok%2C%20Slovensko
   title: Google Maps Ružomberok
   tags:
   - maps
@@ -359,7 +359,7 @@ gmrk 1:
   examples:
     hlavná: Ukáž Hlavná v meste Ružomberok
 gmrs 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Rimavsk%C3%A1+Sobota%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Rimavsk%C3%A1+Sobota%2C%20Slovensko
   title: Google Maps Rimavská Sobota
   tags:
   - maps
@@ -367,7 +367,7 @@ gmrs 1:
   examples:
     hlavná: Ukáž Hlavná v meste Rimavská Sobota
 gmrv 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ro%C5%BE%C5%88ava%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ro%C5%BE%C5%88ava%2C%20Slovensko
   title: Google Maps Rožňava
   tags:
   - maps
@@ -375,7 +375,7 @@ gmrv 1:
   examples:
     hlavná: Ukáž Hlavná v meste Rožňava
 gmsa 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%A0a%C4%BEa%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%A0a%C4%BEa%2C%20Slovensko
   title: Google Maps Šaľa
   tags:
   - maps
@@ -383,7 +383,7 @@ gmsa 1:
   examples:
     hlavná: Ukáž Hlavná v meste Šaľa
 gmsb 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Sabinov%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Sabinov%2C%20Slovensko
   title: Google Maps Sabinov
   tags:
   - maps
@@ -391,7 +391,7 @@ gmsb 1:
   examples:
     hlavná: Ukáž Hlavná v meste Sabinov
 gmsc 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Senec%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Senec%2C%20Slovensko
   title: Google Maps Senec
   tags:
   - maps
@@ -399,7 +399,7 @@ gmsc 1:
   examples:
     hlavná: Ukáž Hlavná v meste Senec
 gmse 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Senica%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Senica%2C%20Slovensko
   title: Google Maps Senica
   tags:
   - maps
@@ -407,7 +407,7 @@ gmse 1:
   examples:
     hlavná: Ukáž Hlavná v meste Senica
 gmsi 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Skalica%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Skalica%2C%20Slovensko
   title: Google Maps Skalica
   tags:
   - maps
@@ -415,7 +415,7 @@ gmsi 1:
   examples:
     hlavná: Ukáž Hlavná v meste Skalica
 gmsk 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Svidn%C3%ADk%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Svidn%C3%ADk%2C%20Slovensko
   title: Google Maps Svidník
   tags:
   - maps
@@ -423,7 +423,7 @@ gmsk 1:
   examples:
     hlavná: Ukáž Hlavná v meste Svidník
 gmsl 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Star%C3%A1+%C4%BDubov%C5%88a%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Star%C3%A1+%C4%BDubov%C5%88a%2C%20Slovensko
   title: Google Maps Stará Ľubovňa
   tags:
   - maps
@@ -431,7 +431,7 @@ gmsl 1:
   examples:
     hlavná: Ukáž Hlavná v meste Stará Ľubovňa
 gmsn 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Spi%C5%A1sk%C3%A1+Nov%C3%A1+Ves%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Spi%C5%A1sk%C3%A1+Nov%C3%A1+Ves%2C%20Slovensko
   title: Google Maps Spišská Nová Ves
   tags:
   - maps
@@ -439,7 +439,7 @@ gmsn 1:
   examples:
     hlavná: Ukáž Hlavná v meste Spišská Nová Ves
 gmso 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Sobrance%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Sobrance%2C%20Slovensko
   title: Google Maps Sobrance
   tags:
   - maps
@@ -447,7 +447,7 @@ gmso 1:
   examples:
     hlavná: Ukáž Hlavná v meste Sobrance
 gmsp 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Stropkov%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Stropkov%2C%20Slovensko
   title: Google Maps Stropkov
   tags:
   - maps
@@ -455,7 +455,7 @@ gmsp 1:
   examples:
     hlavná: Ukáž Hlavná v meste Stropkov
 gmsv 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Snina%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Snina%2C%20Slovensko
   title: Google Maps Snina
   tags:
   - maps
@@ -463,7 +463,7 @@ gmsv 1:
   examples:
     hlavná: Ukáž Hlavná v meste Snina
 gmtn 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Tren%C4%8D%C3%ADn%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Tren%C4%8D%C3%ADn%2C%20Slovensko
   title: Google Maps Trenčín
   tags:
   - maps
@@ -471,7 +471,7 @@ gmtn 1:
   examples:
     hlavná: Ukáž Hlavná v meste Trenčín
 gmto 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Topo%C4%BE%C4%8Dany%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Topo%C4%BE%C4%8Dany%2C%20Slovensko
   title: Google Maps Topoľčany
   tags:
   - maps
@@ -479,7 +479,7 @@ gmto 1:
   examples:
     hlavná: Ukáž Hlavná v meste Topoľčany
 gmtr 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Tur%C4%8Dianske+Teplice%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Tur%C4%8Dianske+Teplice%2C%20Slovensko
   title: Google Maps Turčianske Teplice
   tags:
   - maps
@@ -487,7 +487,7 @@ gmtr 1:
   examples:
     hlavná: Ukáž Hlavná v meste Turčianske Teplice
 gmts 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Tvrdo%C5%A1%C3%ADn%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Tvrdo%C5%A1%C3%ADn%2C%20Slovensko
   title: Google Maps Tvrdošín
   tags:
   - maps
@@ -495,7 +495,7 @@ gmts 1:
   examples:
     hlavná: Ukáž Hlavná v meste Tvrdošín
 gmtt 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Trnava%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Trnava%2C%20Slovensko
   title: Google Maps Trnava
   tags:
   - maps
@@ -503,7 +503,7 @@ gmtt 1:
   examples:
     hlavná: Ukáž Hlavná v meste Trnava
 gmtv 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Trebi%C5%A1ov%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Trebi%C5%A1ov%2C%20Slovensko
   title: Google Maps Trebišov
   tags:
   - maps
@@ -511,7 +511,7 @@ gmtv 1:
   examples:
     hlavná: Ukáž Hlavná v meste Trebišov
 gmvk 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ve%C4%BEk%C3%BD+Krt%C3%AD%C5%A1%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Ve%C4%BEk%C3%BD+Krt%C3%AD%C5%A1%2C%20Slovensko
   title: Google Maps Veľký Krtíš
   tags:
   - maps
@@ -519,7 +519,7 @@ gmvk 1:
   examples:
     hlavná: Ukáž Hlavná v meste Veľký Krtíš
 gmvt 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Vranov+nad+Top%C4%BEou%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Vranov+nad+Top%C4%BEou%2C%20Slovensko
   title: Google Maps Vranov nad Topľou
   tags:
   - maps
@@ -527,7 +527,7 @@ gmvt 1:
   examples:
     hlavná: Ukáž Hlavná v meste Vranov nad Topľou
 gmza 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%BDilina%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%BDilina%2C%20Slovensko
   title: Google Maps Žilina
   tags:
   - maps
@@ -535,7 +535,7 @@ gmza 1:
   examples:
     hlavná: Ukáž Hlavná v meste Žilina
 gmzc 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%BDarnovica%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%BDarnovica%2C%20Slovensko
   title: Google Maps Žarnovica
   tags:
   - maps
@@ -543,7 +543,7 @@ gmzc 1:
   examples:
     hlavná: Ukáž Hlavná v meste Žarnovica
 gmzh 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%BDiar+nad+Hronom%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20%C5%BDiar+nad+Hronom%2C%20Slovensko
   title: Google Maps Žiar nad Hronom
   tags:
   - maps
@@ -551,7 +551,7 @@ gmzh 1:
   examples:
     hlavná: Ukáž Hlavná v meste Žiar nad Hronom
 gmzm 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Zlat%C3%A9+Moravce%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Zlat%C3%A9+Moravce%2C%20Slovensko
   title: Google Maps Zlaté Moravce
   tags:
   - maps
@@ -559,7 +559,7 @@ gmzm 1:
   examples:
     hlavná: Ukáž Hlavná v meste Zlaté Moravce
 gmzv 1:
-  url: 'http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Zvolen%2C%20Slovensko'
+  url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Zvolen%2C%20Slovensko
   title: Google Maps Zvolen
   tags:
   - maps

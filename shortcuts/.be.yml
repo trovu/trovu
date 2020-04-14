@@ -1,11 +1,11 @@
 efr 0:
-  url: 'http://www.befr.ebay.be/'
+  url: http://www.befr.ebay.be/
   title: Ebay.be
   tags:
   - shopping
   - ebay
 efr 1:
-  url: 'http://rover.ebay.com/rover/1/1553-53471-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229522&kwid=902099&mtid=824&kw=lg'
+  url: http://rover.ebay.com/rover/1/1553-53471-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229522&kwid=902099&mtid=824&kw=lg
   title: Ebay.be
   tags:
   - shopping
@@ -14,13 +14,13 @@ efr 1:
   examples:
     smartphone: Search for "smartphone"
 enl 0:
-  url: 'http://www.benl.ebay.be/'
+  url: http://www.benl.ebay.be/
   title: Ebay.be
   tags:
   - shopping
   - ebay
 enl 1:
-  url: 'http://www.benl.ebay.be//sch/i.html?_nkw={%query}'
+  url: http://www.benl.ebay.be//sch/i.html?_nkw={%query}
   title: Ebay.be
   tags:
   - shopping
@@ -28,7 +28,7 @@ enl 1:
   examples:
     smartphone: Search for "smartphone"
 g 1:
-  url: 'https://www.google.be/search?hl={$language}&q={%query}&ie=utf-8'
+  url: https://www.google.be/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.be
   tags:
   - web search
@@ -36,7 +36,7 @@ g 1:
   examples:
     amsterdam: Google zoeken naar "amsterdam"
 zal 1:
-  url: 'http://www.zalando.be/catalogus/?q={%product}'
+  url: http://www.zalando.be/catalogus/?q={%product}
   title: Zalando.be
   tags:
   - shopping
