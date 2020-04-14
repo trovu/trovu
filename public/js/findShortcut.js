@@ -78,7 +78,8 @@ export default class FindShortcut {
   static pickShortcut(shortcuts, namespaces) {
 
     // Find first shortcut in our namespace hierarchy.
-    for (let namespace of namespaces.reverse()) {
+    // Use .slice() to keep original array.
+    for (let namespace of namespaces.slice().reverse()) {
       if (shortcuts[namespace.name]) {
         return shortcuts[namespace.name]["url"];
         // TODO: Process POST arguments.
