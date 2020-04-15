@@ -74,7 +74,7 @@ async function getSuggestions() {
     let shortcuts = JSON.parse(json);
     // Iterate over all shortcuts.
     for (let shortcut of shortcuts) {
-      let key = shortcut.keyword + "." + shortcut.arguments.length;
+      let key = shortcut.keyword + " " + shortcut.arguments.length;
       // If not yet present: reachable.
       // (Because we started with most precendent namespace.)
       if (!(key in foundShortcuts)) {
