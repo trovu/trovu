@@ -6,6 +6,11 @@ var suggestions = [];
 
 // Builders =========================================================
 
+/**
+ * Build the base URL of the current location.
+ *
+ * @return {string} - The built base URL.
+ */
 function buildBaseUrl() {
   let baseUrl = "";
 
@@ -20,6 +25,11 @@ function buildBaseUrl() {
   return baseUrl;
 }
 
+/**
+ * Build the params from env.
+ *
+ * @return {object} - The built params.
+ */
 function buildParams() {
   let params = {};
 
