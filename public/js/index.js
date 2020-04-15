@@ -60,8 +60,6 @@ async function getSuggestions() {
     if (namespace.type != "site") {
       continue;
     }
-    // Load precompiled JSON.
-    let json;
     let yaml;
     try {
       // TODO: Do synchronous fetch().
