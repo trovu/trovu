@@ -1,5 +1,6 @@
 import Helper from "./helper.js";
 import Env from "./env.js";
+import ProcessUrl from "./processUrl.js";
 var env = new Env();
 
 var suggestions = [];
@@ -61,20 +62,26 @@ async function getSuggestions() {
     }
     // Load precompiled JSON.
     let json;
+    let yaml;
     try {
-      json = await Helper.fetchAsync(
-        "https://data.trovu.net/suggestions/" + namespace.name + ".json"
+      // TODO: Do synchronous fetch().
+      yaml = await Helper.fetchAsync(
+        "https://raw.githubusercontent.com/trovu/trovu-data/one-yml-per-ns/shortcuts/" + namespace.name + ".yml"
       );
     } catch (e) {
       console.log(e);
     }
-    if (!json) {
+    if (!yaml) {
       continue;
     }
-    let shortcuts = JSON.parse(json);
+    let shortcuts = jsyaml.load(yaml);
     // Iterate over all shortcuts.
-    for (let shortcut of shortcuts) {
-      let key = shortcut.keyword + " " + shortcut.arguments.length;
+    for (let key in shortcuts) {
+      let shortcut = {};
+      [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
+      shortcut.namespace = namespace.name;
+      shortcut.arguments = ProcessUrl.getArgumentsFromString(shortcuts[key].url);
+      shortcut.title = shortcuts[key].title;
       // If not yet present: reachable.
       // (Because we started with most precendent namespace.)
       if (!(key in foundShortcuts)) {
@@ -199,7 +206,7 @@ document.querySelector("body").onload = async function(event) {
     if (!item.reachable) {
       keyword = item.namespace + "." + keyword;
     }
-    var argument_names = item.arguments.join(", ");
+    var argument_names = Object.keys(item.arguments).join(", ");
     var title = item.title;
 
     var html =
