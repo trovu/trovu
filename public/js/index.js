@@ -79,7 +79,7 @@ async function getSuggestions() {
       [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
       shortcut.namespace = namespace.name;
       shortcut.arguments = ProcessUrl.getArgumentsFromString(shortcuts[key].url);
-      shortcut.title = shortcuts[key].title;
+      shortcut.title = shortcuts[key].title || '';
       // If not yet present: reachable.
       // (Because we started with most precendent namespace.)
       if (!(key in foundShortcuts)) {
