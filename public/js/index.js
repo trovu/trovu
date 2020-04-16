@@ -53,27 +53,9 @@ async function getSuggestions() {
   // reset it.
   suggestions = [];
   let foundShortcuts = {};
-
-  // Prefetch suggestions.
   // Iterate over namespaces in reverse order.
   for (let namespace of env.namespaces.reverse()) {
-    if (namespace.type != "site") {
-      continue;
-    }
-    let yaml;
-    try {
-      // TODO: Do synchronous fetch().
-      yaml = await Helper.fetchAsync(
-        "https://raw.githubusercontent.com/trovu/trovu-data/one-yml-per-ns/shortcuts/" + namespace.name + ".yml"
-      );
-    } catch (e) {
-      console.log(e);
-    }
-    if (!yaml) {
-      continue;
-    }
-    let shortcuts = jsyaml.load(yaml);
-    // Iterate over all shortcuts.
+    let shortcuts = namespace.shortcuts;
     for (let key in shortcuts) {
       let shortcut = {};
       [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
