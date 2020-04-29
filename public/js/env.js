@@ -216,6 +216,9 @@ export default class Env {
         return namespaces;
       }
       if (debug) Helper.log((reload ? "reload " : "cache  ") + "Success: " + responses[i].url);
+      if (!debug) {
+        Helper.log(".", false);
+      }
       const text = await responses[i].text();
       const shortcuts = jsyaml.load(text);
       namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts);
