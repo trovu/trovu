@@ -54,4 +54,4 @@ For shortcuts that use `{$country}` in their URL.
 
 ## Adding shortcuts
 
-To add personal shortcuts, follow the examples in [shortcuts.yml](https://github.com/trovu/trovu-data-user/blob/master/shortcuts.yml):
+To add personal shortcuts, follow the examples in [shortcuts.yml](https://github.com/trovu/trovu-data-user/blob/master/shortcuts.yml).
