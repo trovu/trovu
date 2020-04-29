@@ -23,3 +23,5 @@
   expectedRedirectUrl: https://www.google.co.uk/search?hl=en&q=bar%2Cbaz&ie=utf-8
 - query: reload:g barbaz
   expectedRedirectUrl: https://www.google.co.uk/search?hl=en&q=barbaz&ie=utf-8
+- query: reload
+  expectedRedirectUrl: ../index.html#debug=1&query=reload&status=reloaded
