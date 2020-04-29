@@ -58,8 +58,6 @@ export default class Helper {
     const response = await fetch(url, {
       cache: reload ? "reload" : "force-cache"
     });
-    //console.log(url);
-    //console.log(response.headers.get('Expires'));
     if (response.status != 200) {
       if (debug) this.log("Fail:    " + url);
       return null;
