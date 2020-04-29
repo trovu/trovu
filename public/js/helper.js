@@ -59,10 +59,10 @@ export default class Helper {
       cache: reload ? "reload" : "force-cache"
     });
     if (response.status != 200) {
-      if (debug) this.log("Fail:    " + url);
+      if (debug) this.log((reload ? "reload " : "cache  ") + "Fail:    " + url);
       return null;
     }
-    if (debug) this.log("Success: " + url);
+    if (debug) this.log((reload ? "reload " : "cache  ") + "Success: " + url);
     if (!debug) {
       this.log(".", false);
     }
