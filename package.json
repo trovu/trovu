@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "test": "jest",
-    "doc": "rm -r out/ && jsdoc public/js/* -c jsdoc.json"
+    "doc": "rm -r doc ; jsdoc public/js/* --configure jsdoc.json --destination doc"
   },
   "repository": {
     "type": "git",

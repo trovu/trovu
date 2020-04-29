@@ -55,21 +55,17 @@ export default class Helper {
    * @return {string} text  - The content.
    */
   static async fetchAsync(url, reload, debug = false) {
-    if (debug) {
-      this.log("Request: " + url);
-    } else {
-      this.log(".", false);
-    }
     const response = await fetch(url, {
       cache: reload ? "reload" : "force-cache"
     });
-    //console.log(url);
-    //console.log(response.headers.get('Expires'));
     if (response.status != 200) {
-      if (debug) this.log("Fail:    " + url);
+      if (debug) this.log((reload ? "reload " : "cache  ") + "Fail:    " + url);
       return null;
     }
-    if (debug) this.log("Success: " + url);
+    if (debug) this.log((reload ? "reload " : "cache  ") + "Success: " + url);
+    if (!debug) {
+      this.log(".", false);
+    }
     const text = await response.text();
     return text;
   }

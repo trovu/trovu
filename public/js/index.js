@@ -1,11 +1,17 @@
 import Helper from "./helper.js";
 import Env from "./env.js";
+import ProcessUrl from "./processUrl.js";
 var env = new Env();
 
 var suggestions = [];
 
 // Builders =========================================================
 
+/**
+ * Build the base URL of the current location.
+ *
+ * @return {string} - The built base URL.
+ */
 function buildBaseUrl() {
   let baseUrl = "";
 
@@ -20,6 +26,11 @@ function buildBaseUrl() {
   return baseUrl;
 }
 
+/**
+ * Build the params from env.
+ *
+ * @return {object} - The built params.
+ */
 function buildParams() {
   let params = {};
 
@@ -42,40 +53,26 @@ async function getSuggestions() {
   // reset it.
   suggestions = [];
   let foundShortcuts = {};
-
-  // Prefetch suggestions.
   // Iterate over namespaces in reverse order.
   for (let namespace of env.namespaces.reverse()) {
-    if (namespace.type != "site") {
-      continue;
-    }
-    // Load precompiled JSON.
-    let json;
-    try {
-      json = await Helper.fetchAsync(
-        "https://data.trovu.net/suggestions/" + namespace.name + ".json"
-      );
-    } catch (e) {
-      console.log(e);
-    }
-    if (!json) {
-      continue;
-    }
-    let shortcuts = JSON.parse(json);
-    // Iterate over all shortcuts.
-    for (let shortcut of shortcuts) {
-      let key = shortcut.keyword + "." + shortcut.arguments.length;
+    let shortcuts = namespace.shortcuts;
+    for (let key in shortcuts) {
+      let suggestion = {};
+      [suggestion.keyword, suggestion.argumentCount] = key.split(' ');
+      suggestion.namespace = namespace.name;
+      suggestion.arguments = ProcessUrl.getArgumentsFromString(shortcuts[key].url);
+      suggestion.title = shortcuts[key].title || '';
       // If not yet present: reachable.
       // (Because we started with most precendent namespace.)
       if (!(key in foundShortcuts)) {
-        shortcut.reachable = true;
-        suggestions.push(shortcut);
+        suggestion.reachable = true;
+        suggestions.push(suggestion);
       }
       // Others are unreachable
       // but can be reached with namespace forcing.
       else {
-        shortcut.reachable = false;
-        suggestions.push(shortcut);
+        suggestion.reachable = false;
+        suggestions.push(suggestion);
       }
       foundShortcuts[key] = true;
     }
@@ -95,6 +92,11 @@ document.querySelector("body").onload = async function(event) {
       document.querySelector("#alert").removeAttribute("hidden");
       document.querySelector("#alert").textContent =
         "Could not find a matching shortcut for this query.";
+      break;
+    case "reloaded":
+      document.querySelector("#alert").removeAttribute("hidden");
+      document.querySelector("#alert").textContent =
+        "Shortcuts were reloaded in all namespaces.";
       break;
   }
 
@@ -189,7 +191,7 @@ document.querySelector("body").onload = async function(event) {
     if (!item.reachable) {
       keyword = item.namespace + "." + keyword;
     }
-    var argument_names = item.arguments.join(", ");
+    var argument_names = Object.keys(item.arguments).join(", ");
     var title = item.title;
 
     var html =
@@ -282,7 +284,8 @@ function displaySettings() {
 async function updateConfig() {
   if (!env.github) {
     env.namespaces = ["o", env.language, "." + env.country];
-    env.addFetchUrlTemplateToNamespaces();
+    env.addFetchUrlToNamespaces();
+    env.namespaces = await env.fetchShortcuts(env.namespaces);
   }
 
   await getSuggestions();

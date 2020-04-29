@@ -58,6 +58,11 @@ export default class ParseQuery {
   static checkForChacheReload(keyword) {
 
     let reload = false;
+
+    if (keyword.match(/^reload$/)) {
+      reload = true;
+      keyword = '';
+    }
     if (keyword.match(/^reload:/)) {
       [, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
       reload = true;
