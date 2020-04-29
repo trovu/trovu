@@ -269,7 +269,7 @@ export default class Env {
       name: name,
       type: "site",
       url:
-        "https://raw.githubusercontent.com/trovu/trovu-data/one-yml-per-ns/shortcuts/" +
+        "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
         name +
         ".yml"
     };
