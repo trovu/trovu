@@ -93,6 +93,11 @@ document.querySelector("body").onload = async function(event) {
       document.querySelector("#alert").textContent =
         "Could not find a matching shortcut for this query.";
       break;
+    case "reloaded":
+      document.querySelector("#alert").removeAttribute("hidden");
+      document.querySelector("#alert").textContent =
+        "Shortcuts were reloaded in all namespaces.";
+      break;
   }
 
   updateConfig();
