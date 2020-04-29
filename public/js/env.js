@@ -212,10 +212,10 @@ export default class Env {
 
     for (let i in namespaces) {
       if (responses[i].status != 200) {
-        if (debug) Helper.log("Fail:    " + responses[i].url);
+        if (debug) Helper.log((reload ? "reload " : "cache  ") + "Fail:    " + responses[i].url);
         return namespaces;
       }
-      if (debug) Helper.log("Success: " + responses[i].url);
+      if (debug) Helper.log((reload ? "reload " : "cache  ") + "Success: " + responses[i].url);
       const text = await responses[i].text();
       const shortcuts = jsyaml.load(text);
       namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts);
