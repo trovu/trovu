@@ -1,0 +1,348 @@
+bibbs 1:
+  url: http://www.stadtbibliothekbasel.ch:8080/InfoGuideClient.sisis/search.do?methodToCall=submit&methodToCallParameter=submitSearch&searchCategories[0]=-1&searchString[0]={%Suche}
+  title: Stadtbibliothek Basel
+  tags:
+  - bibliothek
+  - basel
+  examples:
+    houellebecq: Suche nach Werken von und über "houellebecq"
+buch 0:
+  url: http://www.buch.ch
+  title: buch.ch
+  tags:
+  - shopping
+  - buch
+  examples:
+    Kochen: Search buch.ch for "Kochen"
+buch 1:
+  url: http://www.buch.ch/shop/home/suche/?sq={%query}&sswg=ANY&
+  title: buch.ch
+  tags:
+  - shopping
+  - buch
+  examples:
+    Kochen: Search buch.ch for "Kochen"
+campz 0:
+  url: http://www.campz.ch
+  title: CAMPZ Schweiz
+  tags:
+  - shop
+  - outdoor
+  - adventure
+campz 1:
+  url: http://www.campz.ch/index.php?id=3692&strSearchQuery={%query}
+  title: CAMPZ Schweiz
+  tags:
+  - shop
+  - outdoor
+  - adventure
+  examples:
+    Kocher: Search CAMPZ Schweiz for "Kocher"
+conrad 0:
+  url: http://www.conrad.ch/
+  title: Conrad Elektronik Schweiz
+  tags:
+  - shopping
+  - electronics
+  - conrad
+conrad 1:
+  url: http://www.conrad.ch/ce/de/Search.html;?search={%Artikel}&searchType=mainSearchBar
+  title: Conrad Elektronik Schweiz
+  tags:
+  - shopping
+  - electronics
+  - conrad
+  examples:
+    glühlampe: Search Conrad Elektronik Schweiz for "glühlampe"
+digi 1:
+  url: https://www.digitec.ch/de/Search?q={%query}
+  title: Digitec Onlineshop
+  tags:
+  - shopping
+  - electronics
+doit 1:
+  url: http://www.doitgarden.ch/de/search/?fh_search={%query}
+  title: Migros Do-it&Garden
+  tags:
+  - migros
+  - shopping
+e 0:
+  url: http://rover.ebay.com/rover/1/5222-53480-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229536&kwid=902099&mtid=824&kw=lg
+  title: Ebay.ch
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+e 1:
+  url: http://rover.ebay.com/rover/1/5222-53480-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229536&kwid=902099&mtid=824&kw=lg
+  title: Ebay.ch
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples:
+    smartphone: Search for "smartphone"
+g 1:
+  url: https://www.google.ch/search?hl={$language}&q={%query}&ie=utf-8
+  title: Google.ch
+  tags:
+  - web search
+  - google
+  examples:
+    bern: Google-Suche nach "bern"
+gmag 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Aargau%2C%20Schweiz
+  title: Google Maps Aargau
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Aargau
+gmbe 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bern%2C%20Schweiz
+  title: Google Maps Bern
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Bern
+gmbs 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Basel%2C%20Schweiz
+  title: Google Maps Basel
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Basel
+gmfr 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Freiburg%2C%20Schweiz
+  title: Google Maps Freiburg
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Freiburg
+gmge 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Genf%2C%20Schweiz
+  title: Google Maps Genf
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Genf
+gmgl 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Glarus%2C%20Schweiz
+  title: Google Maps Glarus
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Glarus
+gmlu 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Luzern%2C%20Schweiz
+  title: Google Maps Luzern
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Luzern
+gmne 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neuenburg%2C%20Schweiz
+  title: Google Maps Neuenburg
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Neuenburg
+gmsg 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+Gallen%2C%20Schweiz
+  title: Google Maps St. Gallen
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in St. Gallen
+gmsh 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schaffhausen%2C%20Schweiz
+  title: Google Maps Schaffhausen
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Schaffhausen
+gmso 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Solothurn%2C%20Schweiz
+  title: Google Maps Solothurn
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Solothurn
+gmsz 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwyz%2C%20Schweiz
+  title: Google Maps Schwyz
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Schwyz
+gmzg 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zug%2C%20Schweiz
+  title: Google Maps Zug
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Zug
+gmzh 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Z%C3%BCrich%2C%20Schweiz
+  title: Google Maps Zürich
+  tags:
+  - maps
+  - google
+  examples:
+    hauptstr.: Zeige Hauptstr. in Zürich
+gps 1:
+  url: http://www.google.ch/products?hl={$language}&q={%query}
+  title: Google Products (Schweiz)
+  tags:
+  - shopping
+  - google
+  examples:
+    iphone: Suche nach "iphone"
+ikea 0:
+  url: http://www.ikea.com/ch/
+  title: IKEA Schweiz
+  tags:
+  - ikea
+  - furniture
+  - shopping
+ikea 1:
+  url: http://www.ikea.com/ch/de/search/?query={%query}
+  title: IKEA Schweiz
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples:
+    matratze: Suche nach Matratzen
+local 2:
+  url: https://tel.local.ch/de/q?what={%Name}&where={%Ort}
+  title: local.ch Telefonbuch
+  description: Telefonbuch-Suche über local.ch
+  examples:
+    "Hans Muster, Bern": Suche auf local.ch nach "Hans Muster" in "Bern"
+mc 0:
+  url: http//www.meteocentrale.ch/de/europa/schweiz/wetter-zuerich/details/N-3518042/
+  title: Meteocentrale.ch
+  tags:
+  - weather
+  examples:
+    "8000": Zeige Wetterwarnungen für Postleitzahl 8000
+plz 0:
+  url: http://www.plz-suche.org/postleitzahlen-schweiz
+  title: Postleitzahlen Schweiz
+  tags:
+  - postleitzahl
+  - geolocation
+plz 1:
+  url: http://www.plz-suche.org/ch/plz/{%query}
+  title: Postleitzahlen Schweiz
+  tags:
+  - postleitzahl
+  - geolocation
+  examples:
+    "3000": Search Postleitzahlen Schweiz for "3000" (Bern)
+poststelle 1:
+  url: https://places.post.ch/?topic=1&PreselectText={%query}&from_directentry=True
+  title: Die Post - Poststellensuche
+  description: Schweizer Post - Poststellensuche
+  tags:
+  - post
+rsc 1:
+  url: http://dech.rs-online.com/web/c/?searchTerm={%Produkt}
+  title: RS Components Schweiz
+  tags:
+  - shopping
+  - electronics
+  examples:
+    Battery: Suche bei RS Components nach "Battery"
+sbb 0:
+  url: http://sbb.ch/
+  title: SBB (Schweizerische Bundesbahnen)
+  tags:
+  - bahn
+  - travel
+sbb 2:
+  url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&start=1
+  title: SBB-Auskunft
+  tags:
+  - bahn
+  - travel
+  examples:
+    "bern, basel": Nächste Verbindung von Bern nach Basel
+sbb 3:
+  url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&start=1
+  title: SBB-Auskunft
+  tags:
+  - bahn
+  - travel
+  examples:
+    "bern, basel, 10": Verbindung von Bern nach Basel um 10:00 Uhr
+sbb 4:
+  url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
+  title: SBB-Auskunft
+  tags:
+  - bahn
+  - travel
+  examples:
+    "bern, basel, 10, 1.1.": Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
+sbbt 4:
+  url: http://fahrplan.sbb.ch/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
+  title: SBB-Auskunft Textversion
+  tags:
+  - bahn
+  - travel
+  examples:
+    "bern, basel, 10, 1.1.": Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
+transa 0:
+  url: http://www.transa.ch
+  title: Transa
+transa 1:
+  url: https://www.transa.ch/search?q={%query}:relevance
+  title: Transa Online-Shop
+  description: Suche im Transa-Onlineshop, Sortierung nach Relevanz
+  tags:
+  - shopping
+  - outdoor
+  examples:
+    Zelt: Search Transa Online-Shop for "Zelt"
+transa-preis 1:
+  url: https://www.transa.ch/search?q={%query}:price-asc
+  title: Transa Online-Shop
+  description: Suche im Transa-Onlineshop, Sortierung nach Preis aufsteigend
+  tags:
+  - shopping
+  - outdoor
+  examples:
+    Zelt: Search Transa Online-Shop for "Zelt"
+we 0:
+  url: http://ch.wetter.com/?forcesite=1
+  title: Wetter.com
+  tags:
+  - weather
+we 1:
+  url: http://ch.wetter.com/suche/?search={%Ort}
+  title: Wetter.com
+  tags:
+  - weather
+  examples:
+    berlin: Search for "berlin"
+zal 1:
+  url: http://www.zalando.ch/katalog/?q={%Produkt}
+  title: Zalando.ch
+  tags:
+  - shopping
+  - zalando
+  examples:
+    schuhe: Suche nach Schuhen

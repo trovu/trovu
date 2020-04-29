@@ -1,9 +1,0 @@
-url: http://www.kayak.de/flights/{%from}-{%to}/20{%date}
-title: Kayak Flight Search
-description: ""
-tags:
-- travel
-- flights
-examples:
-  txl, tfs, 13-12-24: search for flights from TXL to TFS on Dec 24, 2013
-tests: []

@@ -1,9 +1,0 @@
-url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1
-title: ÖBB-Auskunft
-description: ""
-tags:
-- bahn
-- travel
-examples:
-  wien, salzburg, 10, 1.1.: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
-tests: []

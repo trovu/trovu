@@ -1,0 +1,124 @@
+csfd 1:
+  url: http://www.csfd.cz/hledat/?q={%výraz}
+  title: Česko-Slovenská filmová databáze
+  tags:
+  - movies
+  - czech
+  - slovak
+  examples:
+    Pelíšky: Hledat "Pelíšky"
+de 1:
+  url: http://slovniky.lingea.cz
+  post parameters:
+    set: _gecz
+    type: ""
+    word: "{%slovo|encoding=none}"
+    data: "{%slovo|encoding=none}"
+  title: Německo-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - german
+  examples:
+    baum: '"baum" český'
+    strom: '"strom" německý'
+en 1:
+  url: http://slovniky.lingea.cz
+  post parameters:
+    set: _encz
+    type: ""
+    word: "{%slovo|encoding=none}"
+    data: "{%slovo|encoding=none}"
+  title: Anglicko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - english
+  examples:
+    tree: '"tree" český'
+    strom: '"strom" anglický'
+es 1:
+  url: http://slovniky.lingea.cz
+  post parameters:
+    set: _spcz
+    type: ""
+    word: "{%slovo|encoding=none}"
+    data: "{%slovo|encoding=none}"
+  title: Španělsko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - spanish
+  examples:
+    árbol: '"árbol" český'
+    strom: '"strom" španělský'
+fr 1:
+  url: http://slovniky.lingea.cz
+  post parameters:
+    set: _frcz
+    type: ""
+    word: "{%slovo|encoding=none}"
+    data: "{%slovo|encoding=none}"
+  title: Francouzko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - french
+  examples:
+    arbre: '"arbre" český'
+    strom: '"strom" francouzký'
+kinobox 1:
+  url: http://www.kinobox.cz/najdi?t={%query}
+  title: Kinobox.cz
+  tags:
+  - movies
+  examples:
+    forrest gump: Search for "forrest gump"
+pl 1:
+  url: http://slovniky.lingea.cz
+  post parameters:
+    set: _plcz
+    type: ""
+    word: "{%slovo|encoding=none}"
+    data: "{%slovo|encoding=none}"
+  title: Polsko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - polish
+  examples:
+    drzewo: '"drzewo" český'
+    strom: '"strom" polský'
+vi 1:
+  url: http://slovniky.lingea.cz
+  post parameters:
+    set: _vncz
+    type: ""
+    word: "{%slovo|encoding=none}"
+    data: "{%slovo|encoding=none}"
+  title: Vietnamsko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - vietnamese
+  examples:
+    cây: '"cây" český'
+    strom: '"strom" vietnamský'

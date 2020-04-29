@@ -1,0 +1,117 @@
+a 0:
+  url: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20
+  title: Amazon.com Homepage
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+a 1:
+  url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20
+  title: Amazon.com
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+  examples:
+    shakespeare: Search for "shakespeare"
+culpa 1:
+  url: http://www.culpa.info/search/results?search={%professor name}&commit=Search
+  title: CULPA Columbia Professor Search
+  tags:
+  - uni
+  - columbia
+  examples:
+    smith: Search for a professor named Smith
+e 0:
+  url: http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg
+  title: Ebay.com
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+e 1:
+  url: http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg
+  title: Ebay.com
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples:
+    smartphone: Search for smartphones
+gmla 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Los%20Angeles%2C%20California
+  title: Google Maps Los Angeles
+  tags:
+  - maps
+  - google
+  examples:
+    hollywood: Show Hollywood on Google Maps
+gmnyc 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20New%20York%20City%2C%20New%20York
+  title: Google Maps New York City
+  tags:
+  - maps
+  - google
+  examples:
+    central park: Show Central Park
+gmsf 1:
+  url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20San%20Francisco%2C%20California
+  title: Google Maps San Francisco
+  tags:
+  - maps
+  - google
+  - san francisco
+  examples:
+    golden gate bridge: Show Golden Gate Bridge on Google Maps
+gps 1:
+  url: http://www.google.com/products?hl={$language}&q={%query}
+  title: Google Products (USA)
+  tags:
+  - shopping
+  - google
+  examples:
+    iphone: Search for "iphone"
+sec 1:
+  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company
+    name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=
+  title: EDGAR System of SEC for regulatory company information
+  tags:
+  - economy
+  examples:
+    Honeywell: General company search
+sec 2:
+  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company
+    name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type={%filing
+    type}
+  title: EDGAR System of SEC for regulatory company information
+  tags:
+  - economy
+  examples:
+    "Rio Tinto, 8-K": search for a company with 8-K annual reports
+sec20f 1:
+  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company
+    name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=20-F
+  title: EDGAR System of SEC for regulatory company information
+  tags:
+  - economy
+  examples:
+    Rio Tinto: search for a company with 20-F annual reports
+sic 1:
+  url: http://www.osha.gov/pls/imis/sicsearch.html?p_sic={%SIC digit}&p_search=
+  title: Standard Industrial Classification (SIC)
+  tags:
+  - industry
+  - standard
+  examples:
+    "1231": Search descriptive information for SIC "1231"
+yp 2:
+  url: http://www.yellowpages.com/search?search_terms={%business
+    name}&geo_location_terms={%city or zip}
+  title: Yellow Pages
+  tags:
+  - shopping
+  - phone
+  examples:
+    "pizza, new york": Search for Pizza in New York

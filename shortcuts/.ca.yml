@@ -1,0 +1,26 @@
+a 1:
+  url: http://www.amazon.ca/s/?field-keywords={%query}
+  title: Amazon.ca
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+  examples:
+    shakespeare: Search for "shakespeare"
+e 0:
+  url: http://rover.ebay.com/rover/1/706-53473-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229529&kwid=902099&mtid=824&kw=lg
+  title: Ebay.ca
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+e 1:
+  url: http://rover.ebay.com/rover/1/706-53473-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229529&kwid=902099&mtid=824&kw=lg
+  title: Ebay.ca
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples:
+    smartphone: Search for "smartphone"

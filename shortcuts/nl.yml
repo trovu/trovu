@@ -1,0 +1,72 @@
+dbp 1:
+  url: http://nl.dbpedia.org/page/{%title}
+  title: DBpedia (Dutch)
+  tags:
+  - semanticweb
+  - knowledge
+  - knowledgebase
+  - database
+  examples:
+    Tunisia: Open DBpedia page about Tunisia
+de 1:
+  url: http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!
+  title: Duits-Nederlands (uitmuntend.de)
+  tags:
+  - language
+  - dictionary
+  examples:
+    käse: Search for "käse"
+en 1:
+  url: http://ennl.dict.cc/?s={%word}
+  title: Engels-Nederlands (dict.cc)
+  tags:
+  - english
+  - dutch
+  - dictionary
+  - language
+  - engels
+  - nederlands
+  examples:
+    opdracht: Translate "opdracht" to English.
+    assignment: Translate "assignment" to Dutch.
+enc 0:
+  url: http://www.encyclo.nl/
+  title: Encyclo Online Encyclopedie
+  tags:
+  - encyclopedia
+  - dictionary
+  - language
+  - dutch
+enc 1:
+  url: http://www.encyclo.nl/zoek.php?woord={%woord}
+  title: Encyclo Online Encyclopedie
+  tags:
+  - encyclopedia
+  - dictionary
+  - dutch
+  - words
+  - language
+  examples:
+    op naam: zoek na de betekenis van de uitdrukking "op naam"
+ety 0:
+  url: http://www.etymologiebank.nl/
+  title: etymologiebank.nl
+ety 1:
+  url: http://www.etymologiebank.nl/zoeken/{%woord}
+  title: etymologiebank.nl
+  examples:
+    peuter: zoek woordherkomst van "peuter"
+rijm 0:
+  url: http://www.rijm.nu/
+  title: Rijm.nu!
+  tags:
+  - rijm
+  - gedicht
+rijm 1:
+  url: http://www.rijm.nu/rijmen/rijmen.php?woord={%woord}&v=1
+  title: Rijm.nu!
+  tags:
+  - rijm
+  - gedicht
+  examples:
+    koud: vind woorden die rijmen op "koud"

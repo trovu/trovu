@@ -1,9 +1,0 @@
-url: http://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={$now|output=YYYY-MM-DD}&Passengers=1
-title: Busliniensuche.de
-description: ""
-tags:
-- travel
-- bus
-examples:
-  berlin, bremen: Suche nach Fernbusverbindungen von Berlin nach Bremen
-tests: []

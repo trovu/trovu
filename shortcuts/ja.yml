@@ -1,0 +1,17 @@
+de 1:
+  url: http://www.wadoku.de/wadoku/search/{%Wort}
+  title: Deutsch-Japanisch (Wadoku)
+  tags:
+  - language
+  - dictionary
+  examples:
+    木根: Übersetzung für "木根"
+    baum: Übersetzung für "baum"
+last 1:
+  url: http://www.last.fm/search?setlang=ja&q={%artist}
+  title: Last.fm
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"

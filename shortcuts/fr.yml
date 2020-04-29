@@ -1,0 +1,152 @@
+cjg 1:
+  url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}
+  title: Le conjugueur
+  tags:
+  - language
+  - french
+  examples:
+    venir: Conjugate "venir"
+cs 1:
+  url: https://slovniky.lingea.cz/francouzsko-cesky/{%mot}
+  title: Tchèque-Français (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - french
+  examples:
+    arbre: '"arbre" český'
+    strom: '"strom" francouzký'
+de 1:
+  url: http://dict.leo.org/frde/?search={%mot}
+  title: Allemand-Français (leo.org)
+  tags:
+  - language
+  - dictionary
+  - german
+  - french
+  - leo
+  examples:
+    arbre: '"arbre" en allemand'
+    baum: '"baum" en français.'
+en 1:
+  url: http://dictionary.reverso.net/french-english/{%mot}
+  title: Anglais-Français (reverso.net)
+  tags:
+  - language
+  - dictionary
+  examples:
+    arbre: Translate arbre to English
+    tree: Translate tree to French
+gfp 0:
+  url: http://german-foreign-policy.com/fr/news/
+  title: German Foreign Policy
+  tags:
+  - politics
+  - news
+  - germany
+gfp 1:
+  url: http://german-foreign-policy.com/index.php?lang=fr&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}
+  title: German Foreign Policy (French)
+  tags:
+  - politics
+  - news
+  - germany
+  examples:
+    berlin: Chercher "berlin"
+gn 1:
+  url: https://www.google.fr/search?q={%query}&tbm=nws&hl=fr&gl=FR&ceid=FR%3Afr
+  title: Google News (France)
+  tags:
+  - news
+  - google
+  examples:
+    obama: Google News nach obama durchsuchen
+lar 1:
+  url: http://www.larousse.fr/dictionnaires/francais/{%mot}
+  title: "Larousse, Dictionnaires de français "
+  tags:
+  - language
+  - dictionary
+  - french
+  - dictionnaire
+  - français
+  examples:
+    arbre: Cherche "arbre"
+last 1:
+  url: http://www.last.fm/search?setlang=fr&q={%artist}
+  title: Last.fm
+  tags:
+  - music
+  - lastfm
+  examples:
+    beatles: Search for "beatles"
+lit 1:
+  url: http://www.littre.org/recherche?_hasdata=&f2={%mot}
+  title: Littré
+  tags:
+  - language
+  - french
+  - dictionary
+  examples:
+    arbre: Cherche "arbre" dans le dictionnaire Littré
+marmiton 0:
+  url: http://www.marmiton.org/
+  title: Marmiton
+  tags:
+  - recettes
+  - marmiton
+marmiton 1:
+  url: http://www.marmiton.org/recettes/recherche.aspx?aqt={%mot}
+  title: Marmiton
+  tags:
+  - recettes
+  - marmiton
+  examples:
+    pizza: Recherche des recettes de pizza
+pl 1:
+  url: https://pl.pons.com/t%C5%82umaczenie/francuski-polski/{%mot}
+  title: Polonais-Français via PONS
+  tags:
+  - dictionary
+  - french
+  - polish
+  examples:
+    mot: '"mot" en polonais'
+pt 1:
+  url: http://dictionnaire.reverso.net/francais-portugais/{%mot}
+  title: Français-portugais
+  tags:
+  - language
+  - dictionary
+  examples:
+    voiture: Search for "voiture"
+sv 1:
+  url: https://www.dict.com/suedois-francais/{%mot}
+  title: Suédois-Français via Dict.com
+  tags:
+  - dictionary
+  - french
+  - swedish
+  examples:
+    clé: Translation of "clé"
+    klav: Translation of "klav"
+syn 1:
+  url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
+  title: Synonyme
+  tags:
+  - language
+  - thesaurus
+  examples:
+    important: Search for "important"
+tlf 1:
+  url: http://www.cnrtl.fr/definition/{%query}
+  title: Trésor de la langue française
+  tags:
+  - dictionary
+  - french
+  - language
+  examples:
+    arbre: Cherche "arbre" dans le Trésor de la langue française

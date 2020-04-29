@@ -1,0 +1,121 @@
+3s 0:
+  url: http://www.3suisses.fr/
+  title: 3Suisses.fr
+  tags:
+  - shopping
+  - 3suisses
+3s 1:
+  url: http://www.3suisses.fr/home?searchTerms={%recherche}
+  title: 3Suisses.fr
+  tags:
+  - shopping
+  - 3suisses
+  examples:
+    chaussures: Cherche chaussures
+a 0:
+  url: http://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21
+  title: Amazon.fr Homepage
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+a 1:
+  url: http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords={%query|encoding=iso-8859-1}&linkCode=ur2&tag=serchilo0e-21
+  title: Amazon.fr
+  tags:
+  - amazon
+  - shopping
+  - books
+  - affiliate
+  examples:
+    balzac: Search for "balzac"
+cdiscount 1:
+  url: http://www.cdiscount.com/search/10/{%query}.html
+  title: CDiscount.com
+  tags:
+  - shopping
+  - cdiscount
+  examples:
+    iphone: Search CDiscount.com for "iphone"
+e 0:
+  url: http://rover.ebay.com/rover/1/709-53476-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229480&kwid=902099&mtid=824&kw=lg
+  title: Ebay.fr
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+e 1:
+  url: http://rover.ebay.com/rover/1/709-53476-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229480&kwid=902099&mtid=824&kw=lg
+  title: Ebay.fr
+  tags:
+  - shopping
+  - ebay
+  - affiliate
+  examples:
+    veste: Search for "veste"
+g 1:
+  url: https://www.google.fr/search?hl={$language}&q={%query}&ie=utf-8
+  title: Google.fr
+  tags:
+  - web search
+  - google
+  examples:
+    paris: Recherche Google par "paris"
+ikea 0:
+  url: http://www.ikea.com/fr/fr/
+  title: IKEA France
+  tags:
+  - ikea
+  - furniture
+  - shopping
+ikea 1:
+  url: http://www.ikea.com/fr/fr/search/?query={%query}
+  title: IKEA France
+  tags:
+  - ikea
+  - furniture
+  - shopping
+  examples:
+    matelas: Cherche "matelas"
+kiabi 0:
+  url: http://www.kiabi.com/
+  title: Kiabi.com
+  tags:
+  - shopping
+  - kiabi
+kiabi 1:
+  url: http://www.kiabi.com/search.ep?keyWords={%recherche}
+  title: Kiabi.com
+  tags:
+  - shopping
+  - kiabi
+  examples:
+    chaussures: Recherche chaussures
+pj 0:
+  url: http://www.pagesjaunes.fr
+  title: Pages Jaunes
+pj 2:
+  url: http://www.pagesjaunes.fr/trouverlesprofessionnels/rechercheClassique.do?quoiqui={%quoiqui}&ou={%ou}
+  title: Pages Jaunes
+  examples:
+    "tv, paris": Search Pages Jaunes for TV in Paris
+sncf 2:
+  url: https://www.oui.sncf/train/trajet/{%origine}/{%destination}
+  title: SNCF
+  tags:
+  - travel
+  - train
+  examples:
+    "paris, lyon": Train Paris - Lyon
+soc 1:
+  url: http://www.societe.com/cgi-bin/search?champs={%name}
+  title: Societé Company Register
+zal 1:
+  url: http://www.zalando.fr/catalogue/?q={%produit}
+  title: Zalando.fr
+  tags:
+  - shopping
+  - zalando
+  examples:
+    chaussures: Cherche chaussures

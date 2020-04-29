@@ -1,8 +1,0 @@
-url: http://pci-ids.ucw.cz/read/PC/{%vendorid}/{%deviceid}
-title: PCI ID Repository
-description: ""
-tags:
-- electronics
-examples:
-  8086,10de: Search for PCI Device with Vendor ID 8086 and Device ID 10de
-tests: []
