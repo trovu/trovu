@@ -48,7 +48,7 @@ export default class HandleCall {
     Object.assign(env, ParseQuery.parse(env.query));
 
     if (env.reload) {
-      env.fetchShortcuts(env.namespaces, env.reload, env.debug);
+      await env.fetchShortcuts(env.namespaces, true, true);
     }
     // Add extraNamespace if parsed in query.
     if (env.extraNamespaceName) {
