@@ -1,6 +1,6 @@
 The purpose of a query is to match with a shortcuts. And shortcuts are organized by [[namespaces]]: Every shortcut belongs exactly to one namespace.
 
-# Namespace setting
+## Namespace setting
 
 When calling Trovu without any arguments, 3 default namespaces will be set based on the browser's language settings. For instance, if the browser's language is `de-DE`, we will use these namespaces:
 
@@ -8,14 +8,14 @@ When calling Trovu without any arguments, 3 default namespaces will be set based
 - [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml) – German language namespace
 - [.de](https://github.com/trovu/trovu-data/blob/master/shortcuts/.de.yml) – Germany namespace
 
-# Processing a query
+## Processing a query
 
 Now, lets look at a processing of a query:
 
 1. A query comes in, e.g. `g foobar`.
 1. The current namespace setting is `o,de,.de`.
 1. Given the namespaces, all the shortcuts are fetched from their YAML-files into a Javascript variable in the client. 
-   - The fetch() call checks also if the files are already in the browser cache, and only requests them from remote if they are not cached
+   - The fetch() call checks also if the files are already in the browser cache, and only requests them from remote if they are not cached yet.
    - To reload the shortcuts, use the `reload` command (see below).  
 1. The query is parsed – in the client by Javascript – into
    - keyword: `g`
@@ -30,3 +30,10 @@ Now, lets look at a processing of a query:
 1. The `{$language}` placeholder is being replaced with the variable `de`.
 1. The `{%query}` placeholder is being replaced with the query argument `foobar`.
 1. A redirect to the URL is made.
+
+## Reloading shortcuts
+
+Since shortcuts are cached in the browser cache, you may want to reload them once they got updated. Do so by
+
+- either prefixing a query: `reload:g foobar`
+- or only calling `reload`.
