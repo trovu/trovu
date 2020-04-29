@@ -55,11 +55,6 @@ export default class Helper {
    * @return {string} text  - The content.
    */
   static async fetchAsync(url, reload, debug = false) {
-    if (debug) {
-      this.log("Request: " + url);
-    } else {
-      this.log(".", false);
-    }
     const response = await fetch(url, {
       cache: reload ? "reload" : "force-cache"
     });
@@ -70,6 +65,9 @@ export default class Helper {
       return null;
     }
     if (debug) this.log("Success: " + url);
+    if (!debug) {
+      this.log(".", false);
+    }
     const text = await response.text();
     return text;
   }
