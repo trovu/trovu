@@ -41,6 +41,10 @@ export default class HandleCall {
    * @return {string} redirectUrl - The URL to redirect to.
    */
   static async getRedirectUrl(env) {
+
+    let redirectUrl;
+    let status;
+
     if (!env.query) {
       return;
     }
@@ -50,6 +54,11 @@ export default class HandleCall {
     if (env.reload) {
       await env.fetchShortcuts(env.namespaces, true, env.debug);
     }
+    if (env.keyword === '') {
+      status = 'reloaded';
+      return [status, redirectUrl];
+    }
+
     // Add extraNamespace if parsed in query.
     if (env.extraNamespaceName) {
       env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
@@ -59,9 +68,14 @@ export default class HandleCall {
 
 
     const shortcuts = await FindShortcut.collectShortcuts(env);
-    let redirectUrl = FindShortcut.pickShortcut(shortcuts, env.namespaces);
+    redirectUrl = FindShortcut.pickShortcut(shortcuts, env.namespaces);
 
-    if (!redirectUrl) return;
+    if (!redirectUrl) {
+      status = 'not_found';
+      return [status, redirectUrl];
+    }
+
+    status = 'found';
 
     if (env.debug) Helper.log("");
     if (env.debug) Helper.log("Used template: " + redirectUrl);
@@ -69,7 +83,7 @@ export default class HandleCall {
     redirectUrl = await ProcessUrl.replaceVariables(redirectUrl, { language: env.language, country: env.country });
     redirectUrl = await ProcessUrl.replaceArguments(redirectUrl, env.args, env);
 
-    return redirectUrl;
+    return [status, redirectUrl];
   }
 
   /**
@@ -80,10 +94,10 @@ export default class HandleCall {
     const env = new Env();
     await env.populate();
   
-    let redirectUrl = await this.getRedirectUrl(env);
-  
-    if (!redirectUrl) {
-      redirectUrl = this.redirectNotFound(env);
+    let [status, redirectUrl] = await this.getRedirectUrl(env);
+
+    if (status !== 'found') {
+      redirectUrl = this.redirectHome(status);
     }
   
     if (env.debug) {
