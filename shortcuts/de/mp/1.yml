@@ -1,10 +1,9 @@
-url: http://www.moviepilot.de/suche?utf8=%E2%9C%93&q={%Suche}
+url: http://www.moviepilot.de/suche?q={%query}
 title: Moviepilot
 description: ""
 tags:
 - moviepilot
 - movies
 - film
-examples:
-  forrest gump: Search for "Forrest Gump"
+examples: []
 tests: []
