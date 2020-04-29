@@ -13,13 +13,13 @@ export default class HandleCall {
   /**
    * Redirect in case a shortcut was not found.
    *
-   * @param {object} env        - The environment.
-   *
+   * @param {string} status       - The status of the call.
+   * 
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static redirectNotFound(env) {
+  static redirectHome(status) {
     const params = Helper.getParams();
-    params.status = "not_found";
+    params.status = status;
     const paramStr = Helper.jqueryParam(params);
     const redirectUrl = "../index.html#" + paramStr;
     return redirectUrl;
