@@ -7,41 +7,48 @@ You can create and manage your own user shortcuts and set advanced settings:
 
 ## Custom configuration
 
-You may adjust [config.yml](https://github.com/trovu/trovu-data-user/blob/master/config.yml) to your needs.
+You may adjust [config.yml](https://github.com/trovu/trovu-data-user/blob/master/config.yml) to your needs. It uses the [YAML format](https://en.wikipedia.org/wiki/YAML).
 
 ### Namespaces
 
-    namespaces:
-    - o
-    - en
-    - .us
-    - github: john-doe
-      name: john
-    - github: .
-      name: my
-
-This is an array of the [namespaces](https://github.com/trovu/trovu.github.io/wiki/Namespaces) you want to use. Every entry may be
+```yaml
+namespaces:
+- o
+- en
+- .us
+- github: john-doe
+  name: john
+- github: .
+  name: my
+```
+This is an array of the [namespaces](https://github.com/trovu/trovu.github.io/wiki/Namespaces) you want to use. Every entry may be either
 
 - a string: Then it refers to an (official) site namespace, i.e. one in the [trovu-data](https://github.com/trovu/trovu-data) repository. Shortcuts in there are curated by the Trovu community.
 - key/value pairs, then they refer to a custom namespace, e.g. your (or someone else's) user namespace in Github. Every entry must contain:
   - `github:` A Github user name, or a dot
   - (optional) `name:` Some custom name (default: value from `github:`)
 
-The dot will refer to the current github user (where this `config.yml` is located).
+The dot will refer to the __current GitHub user__ (where this `config.yml` is located).
+
+The __order__ is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `my` have highest precedence. 
 
 ### Default keyword
 
-    defaultKeyword: g 
-
+```yaml
+defaultKeyword: g 
+```
 If no keyword is recognized in a query, this one will be used. Useful for setting up a much used shortcut.
 
 ### Language and Country
 
-    language: en
-
+```yaml
+language: en
+```
 For Wikipedia or dictionaries in your language. Now, using the `w` shortcut will get you to the Wikipedia in your language.
 
-    country: de
+```yaml
+country: de
+```
 
 For shortcuts that use `{$country}` in their URL.
 
@@ -50,6 +57,6 @@ For shortcuts that use `{$country}` in their URL.
 To add a new shortcut, follow the example in [examplekeyword.1.yml](https://github.com/trovu/trovu-data-user/blob/master/shortcuts/examplekeyword.1.yml):
 
 - create a file with the keyword and the argument number, 
-  - for instance create `g.1.yml` for a shortcut with the keyword g and 1 argument.
+  - for instance create `g.1.yml` for a shortcut with the keyword `g` and 1 argument.
 - inside the created file, place the template url,
   - like in the [given example](https://github.com/trovu/trovu-data-user/blob/master/shortcuts/examplekeyword.1.yml).

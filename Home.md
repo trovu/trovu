@@ -11,40 +11,18 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 ## Key features
 
 - **Privacy**: Queries are processed in the client, not server.
-- **Social**: Shortcuts are kept in text and YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send pull request to add or edit them.
-- **Freedom**: Optionally, create personal shortcuts in [your own repository](https://github.com/trovu/trovu-data-user) (or anywhere on the web). Simpy tell trovu in the settings where to look for them.
+- **Social**: Curated shortcuts are kept in YAML files in a [public Github repository](https://github.com/trovu/trovu-data). Send a pull request to add or edit them.
+- **Freedom**: Optionally, create personal shortcuts in [your own repository](https://github.com/trovu/trovu-data-user).
 
-## Step-by-step: How a query is processed
+## Read more
 
-![](https://github.com/trovu/trovu.github.io/blob/master/img/process.png)
-
-First, lets look at the (example) settings:
-
-- Namespace URL templates: For every namespace, the template defines where to look for its shortcuts. For site namespaces they point to the repository [trovu-data](https://github.com/trovu/trovu-data). Optionally, for user namespaces they can point anywhere.
-  - o: `https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/o/{%keyword}/{%argumentCount}.txt`
-  - de: `https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/de/{%keyword}/{%argumentCount}.txt`
-  - .de: `https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/.de/{%keyword}/{%argumentCount}.txt`
-  - johndoe: `https://example.com/trovu/{%keyword}.{%argumentCount}.txt`
-
-Now, lets look at a processing of a query:
-
-1. A query comes in, e.g. `g foobar`.
-1. The current namespace setting is `o,de,.de,johndoe`.
-1. The query is parsed – in the client by Javascript – into
-   - keyword: `g`
-   - argument: `foobar`
-1. Based on the query and the namespace settings, the client Javascript tries to fetch 4 URLs:
-   - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/.de/g/1.txt
-   - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/de/g/1.txt
-   - https://raw.githubusercontent.com/trovu/trovu/master/shortcuts/o/g/1.txt
-   - https://example.com/trovu/g.1.txt
-
-1. From the fetches that succeeded, the results are evaluated in namespace order.
-1. Since already the first text file exists, its URL is used for further processing
-    -  `https://www.google.de/search?hl={$language}&q={%query}&ie=utf-8` 
-1. The `{$language}` placeholder is being replaced with the variable `de`.
-1. The `{%query}` placeholder is being replaced with the query argument `foobar`.
-1. A redirect to the URL is made.
+- [[How a query is processed]]
+- [[Namespaces]]
+- [[Shortcut URLs]]
+- [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
+- [[Trovu compared to Serchilo / FindFind.it|Differences to Serchilo and FindFind.it]]
+- [[Migrate from FindFind.it]]
+- **[[Troubleshooting / FAQ|Troubleshooting]]**
 
 ## Repositories
 
@@ -53,7 +31,8 @@ Now, lets look at a processing of a query:
 This repository contains all the data, e.g.
 
 - shortcuts
-- mappings (later)
+- types/city
+  - mappings for [argument type *city*](https://github.com/trovu/trovu.github.io/wiki/Shortcut-URLs#city)
 
 Fork this repository to add or edit shortcuts (and send then a pull request).
 
@@ -63,8 +42,8 @@ This repository contains the web frontend.
 
 ### trovu-android / trovu-ios / trovu-gtk
 
-Future plans.
+Future plans. Maybe you start one of them?
 
-## Demo
+## Live web version
 
 https://trovu.net/

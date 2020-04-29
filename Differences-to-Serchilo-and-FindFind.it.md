@@ -6,6 +6,4 @@
 - country namespaces are not 3-letter but 2-letter-codes, prefixed with a dot, e.g.
   - `.de`, not `deu`
 
-## Migrate your user shortcuts from [FindFind.it](https://www.findfind.it/)
-- fork [trovu-data-user](https://github.com/trovu/trovu-data-user)
-- from [trovu-data-user-legacy](https://github.com/trovu/trovu-data-user-legacy), copy the shortcuts from your directory into your newly forked `trovu-data-user`.
+You can [[migrate your settings and user shortcuts from FindFind.it|Migrate from FindFind.it]].
