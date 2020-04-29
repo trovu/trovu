@@ -187,14 +187,6 @@
   - music
   examples:
     blur: find tabs for songs of Blur
-a 0:
-  url: http://smile.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo0e-21
-  title: Amazon.de Startseite
-  tags:
-  - amazon
-  - shopping
-  - books
-  - affiliate
 a 1:
   url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20
   title: Amazon.com
@@ -839,13 +831,6 @@ bins 1:
   - usenet
   examples:
     Freeware: Search for "Freeware" in newsgroups
-bitly 1:
-  url: http://bit.ly/?u={%url}
-  title: Bit.ly
-  tags:
-  - url
-  examples:
-    http://www.serchilo.net/: Create short url for http://www.serchilo.net/
 bl 0:
   url: http://blekko.com/
   title: Blekko
@@ -945,14 +930,6 @@ bp 1:
   - music
   examples:
     trance: Search for "trance"
-bpo 0:
-  url: http://www.berliner-philharmoniker.de
-  title: Berlin Philharmonic Orchestra / Berliner Philharmoniker
-  tags:
-  - berlin
-  - cultural events
-  - classical music
-  - music
 bpoc 1:
   url: http://bioportal.bioontology.org/ontologies/{%acronym}/?p=classes
   title: BioPortal Ontology Classes Page
@@ -1272,6 +1249,11 @@ cpan 1:
 cpp 1:
   url: http://en.cppreference.com/mwiki/index.php?search={%query}
   title: C++ Reference (cppreference.com)
+  tags:
+  - programming
+  - c++
+  examples:
+    sprintf: Search C++ Reference (cppreference.com) for "sprintf"
 cran 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&q=site%3Acran.r-project.org%20{%package}
   title: Comprehensive R Archive Network (CRAN) via Google
@@ -1474,9 +1456,6 @@ deb 1:
   - debian
   examples:
     tetris: Search debian packages for "tetris"
-debian 1:
-  url: http://packages.debian.org/search?keywords={%query}&searchon=names&suite=all&section=all
-  title: debian Packages
 debt 1:
   url: https://tracker.debian.org/pkg/{%query}
   title: Debian Package Tracker
@@ -1504,9 +1483,6 @@ di 1:
   title: Duck Duck Go Images
   examples:
     di flowers: Shows Images of Flowers
-dic 0:
-  url: https://dictionary.cambridge.org/gadgets/british/opensearch.xml
-  title: cambridge online dictionaries
 dii 1:
   url: http://www.diigo.com/search?what={%tag}
   title: Diigo Social Bookmarking
@@ -1555,11 +1531,6 @@ diiur 2:
   - bookmarks
   examples:
     "chuck, marketing": show bookmarks tagged with marketing from user chuck as an RSS/XML-Feed
-disc 0:
-  url: http://www.discogs.com/
-  title: Discogs Homepage
-  tags:
-  - music
 disc 1:
   url: http://www.discogs.com/search?type=all&q={%artist}
   title: Discogs
@@ -1595,6 +1566,14 @@ dm 1:
   - dailymotion
   examples:
     berlin: Search for videos about "berlin"
+docjax 1:
+  url: https://docjax.com/d/?q={%query}
+  title: DocJax Document Search Engine
+  tags:
+  - web search
+  - documents
+  examples:
+    berlin: Search DocJax Document Search Engine for "berlin"
 doi 1:
   url: https://doi.org/{%query}
   title: Digital Object Identifier
@@ -2084,11 +2063,6 @@ fbpl 1:
 fbw 0:
   url: https://www.fahrerbewertung.de
   title: Fahrerbewertung
-fbw 1:
-  url: https://www.fahrerbewertung.de/{%Kennzeichen}
-  title: Fahrerbewertung
-  examples:
-    ABC-DE-1234: Fahrerbewertung for "ABC-DE-1234"
 fed 1:
   url: https://admin.fedoraproject.org/pkgdb/search/?type=package&term={%query}
   title: Fedora Packages
@@ -2133,8 +2107,8 @@ ffi 1:
   - stock agency
   examples:
     weihnachten: Suche Fotos zum Thema "weihnachten"
-filsh 0:
-  url: https://m.youtube.com/watch?v=Cc-GIHArbXI
+filsh 1:
+  url: http://en.filsh.net/download?url={%url}
   title: Filsh.net Online Clip Converter
   tags:
   - files
@@ -2379,9 +2353,11 @@ g100 1:
   - google
   examples:
     berlin: Search for "berlin"
-ga 1:
-  url: https://gamesageddon.com/fotolia?query={%argument_name}&fOr=nb_downloads
-  title: GamesAgeddon
+gamespot 1:
+  url: https://www.gamespot.com/search/?i=&q={%query}
+  title: Gamespot
+  tags:
+  - games
 gan 1:
   url: http://www.google.com/search?hl=en&q=android%20{%query}&ie=utf-8
   title: Google search for android related pages only
@@ -2979,14 +2955,6 @@ gpm 1:
   - music
   examples:
     prodigy: Search for music by The Prodigy in My Music
-gr 0:
-  url: https://www.goodreads.com/
-  title: Goodreads
-  tags:
-  - books
-  - reading
-  - literature
-  - social network
 gr 1:
   url: https://www.goodreads.com/search?utf8=%E2%9C%93&query={%query}
   title: Goodreads
@@ -3170,11 +3138,18 @@ gyd 2:
   - yahoo
   examples:
     "eur, 1": Convert 1 Guyanese dollar into Euros
-hackzone 0:
-  url: http://hackzone.in
-  title: Cyber Security Training
+here 0:
+  url: https://wego.here.com/
+  title: Here.com
   tags:
-  - science
+  - maps
+here 1:
+  url: https://wego.here.com/search/{%location}
+  title: Here.com
+  tags:
+  - maps
+  examples:
+    berlin: Search Here.com for "berlin"
 hex 0:
   url: http://calc.50x.eu
   title: Online Hex-Dec-Bin conversion
@@ -3969,15 +3944,6 @@ mga 1:
   - mageia
   examples:
     http://mageia.madb.org/package/list/t_search/kde: Search for kde packages
-mink 0:
-  url: http://mink.behat.org/
-  title: Mink
-  description: Mink is an open source browser controller/emulator for web
-    applications, written in PHP.
-  tags:
-  - mink
-  - behat
-  - programming
 mink 1:
   url: http://mink.behat.org/en/latest/search.html?q={%query}
   title: Mink
@@ -5387,14 +5353,6 @@ t 0:
   tags:
   - technorati
   - blogs
-t 1:
-  url: http://www.technorati.com/search/{%query}&1=3
-  title: Technorati
-  tags:
-  - technorati
-  - blogs
-  examples:
-    berlin: search for articles containing "berlin"
 tails 0:
   url: https://tails.boum.org/
   title: "The amnesic incoginto live system, that aims to preserve your privacy
@@ -5481,9 +5439,6 @@ ted 1:
   - talks
   examples:
     pinker: Search for talks of Steven Pinker
-tfren 1:
-  url: https://translate.google.fr/?hl=fr#fr/en/{%query}
-  title: Translate FR-EN
 thb 2:
   url: http://finance.yahoo.com/currency-converter/#from=thb;to={%to
     code};amt={%amount}
@@ -5666,14 +5621,6 @@ tsq 1:
   - photo
   examples:
     berlin: Search for "berlin"
-tt 1:
-  url: http://www.technorati.com/tag/{%query}
-  title: Technorati, search by tags
-  tags:
-  - technorati
-  - blogs
-  examples:
-    berlin: search for articles tagged with "berlin"
 ttd 2:
   url: http://finance.yahoo.com/currency-converter/#from=ttd;to={%to
     code};amt={%amount}
@@ -5684,6 +5631,11 @@ ttd 2:
   - yahoo
   examples:
     "eur, 1": Convert 1 Trinidad and Tobago dollar into Euros
+tv 1:
+  url: https://www.thingiverse.com/search?q={%argument_name}&type=things&sort=relevant
+  title: Thingiverse
+  examples:
+    rubber ducky: Search Thingiverse for "rubber ducky"
 tvdb 1:
   url: http://thetvdb.com/?searchseriesid=&tab=listseries&function=Search&string={%tv-series}
   title: TVDB TV Series Search
@@ -5869,9 +5821,6 @@ ubplanet 0:
   tags:
   - ubuntu
   - linux
-ubuntu 1:
-  url: http://packages.ubuntu.com/{%package}
-  title: Ubuntu Packages
 ubw 0:
   url: https://wiki.ubuntu.com/
   title: Ubuntu.com Wiki
@@ -6332,16 +6281,6 @@ whois 1:
   - domains
   examples:
     google.com: show the owner of the domain google.com
-wiki 0:
-  url: http://wiki.serchilo.net/
-  title: Serchilo Wiki
-  tags:
-  - findfind.it
-wiki 1:
-  url: http://wiki.serchilo.net/Special:Search?search={%page}
-  title: Serchilo Wiki
-  tags:
-  - findfind.it
 wipr 0:
   url: http://www.worldipreview.com
   title: World Intellectual Property Review (WIPR)
@@ -6470,14 +6409,6 @@ ws 1:
   - wikisource
   - wikimedia
   - copyleft
-wsd 1:
-  url: http://corpora.uni-leipzig.de/de/res?word={%Wort|encoding=iso-8859-1}&corpusId=deu_newscrawl_2011
-  title: Wortschatz-Lexikon deutsch (neu)
-  tags:
-  - language
-  - german
-  examples:
-    Stuhl: Search for "Stuhl"
 wso 1:
   url: http://www.wallstreet-online.de/suche/?suche=&q={%query}
   title: Wallstreet:Online Search
@@ -6763,6 +6694,9 @@ yg 1:
   - yahoo
   examples:
     berlin: Search for "berlin"
+ygi 1:
+  url: https://www.yeggi.com/q/{%argument_name}/
+  title: Yeggi
 yi 1:
   url: http://images.search.yahoo.com/search/images?p={%query}
   title: Yahoo Images
@@ -6804,17 +6738,6 @@ ypr 0:
   - youtube
   - language
   - pronunciation
-ypr 1:
-  url: http://youpronounce.it/search.jsp?q={%word}
-  title: YouPronounce.it
-  description: Search for a word or a name and you'll get videos of top YouTube
-    speakers naturally pronouncing the word in context.
-  tags:
-  - youtube
-  - language
-  - pronunciation
-  examples:
-    dough: Find videos where someone says "dough"
 yr 1:
   url: http://www.yr.no/soek/soek.aspx?sted={%query}&land=&region1=&sok=Search
   title: Yr weather report

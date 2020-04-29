@@ -344,6 +344,22 @@ bol 1:
   - bol
   examples:
     goethe: Suche nach "goethe" auf Bol.de
+bpo 0:
+  url: http://www.berliner-philharmoniker.de
+  title: Berlin Philharmonic Orchestra / Berliner Philharmoniker
+  tags:
+  - berlin
+  - cultural events
+  - classical music
+  - music
+bpo 1:
+  url: http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=YYYY-MM}/#{%datum|type=date|output=YYYY-MM-DD}
+  title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
+  tags:
+  - berlin
+  - cultural events
+  - classical music
+  - music
 bsvg 2:
   url: http://www.verkehr-bs.de/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin={%Start}&name_destination={%Ziel}
   title: Braunschweiger Verkehrs-GmbH
@@ -688,6 +704,15 @@ farnell 1:
 faz 1:
   url: http://www.faz.net/suche/?query={%query}&suchbegriffImage.x=0&suchbegriffImage.y=0&resultsPerPage=20
   title: Frankfurter Allgemeine Zeitung Nachrichten-Suche
+fbw 1:
+  url: https://www.fahrerbewertung.de/{%Kennzeichen}
+  title: Fahrerbewertung
+  tags:
+  - traffic
+  - travel
+  - driving
+  examples:
+    A-BC-1234: Fahrerbewertung for "ABC-DE-1234"
 g 1:
   url: https://www.google.de/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.de
@@ -6459,13 +6484,6 @@ koka 1:
   - konzerte
   examples:
     berlin: Suche nach Konzerten und Events in Berlin
-koka36 0:
-  url: https://www.koka36.de/
-  title: Koka36.de Konzertkasse
-  tags:
-  - events
-  - concerts
-  - konzerte
 kununu 1:
   url: https://www.kununu.com/de/search#/?q={%query}
   title: Kununu Deutschland
@@ -6518,9 +6536,6 @@ mfga 0:
   tags:
   - travel
   - mitfahrgelegenheit
-mgm 1:
-  url: https://music.microsoft.com/search/{%foobar}?target=web
-  title: Groove musik
 mvv 2:
   url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any
   title: Elektronische Fahrplanauskunft München
@@ -6572,14 +6587,6 @@ mvv 6:
   - mvv
   examples:
     "freising,petershausen,10,30,28,1": Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr am 28.1.
-nachname 1:
-  url: http://www.verwandt.de/karten/relativ/{%Name}.html
-  title: Verteilung von Nachnamen (verwandt.de)
-  tags:
-  - name
-  - genealogy
-  examples:
-    meier: Verteilung des Nachnamens "Meier" in Deutschland
 nsr 0:
   url: http://www.niederschlagsradar.de/
   title: Niederschlagsradar.de
@@ -6771,6 +6778,9 @@ sub 1:
   - göttingen
   examples:
     houellebecq: Suche nach "houellebecq"
+super 1:
+  url: http://www.supertopic.de/forum/search/results/?q={%Suche}
+  title: Supertopic.de
 tel 0:
   url: http://www.telefonbuch.de/
   title: Telefonbuch

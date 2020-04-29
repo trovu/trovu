@@ -40,14 +40,6 @@ e 1:
   - affiliate
   examples:
     smartphone: Search for smartphones
-g 1:
-  url: https://www.google.us/search?hl={$language}&q={%query}&ie=utf-8
-  title: Google.us
-  tags:
-  - web search
-  - google
-  examples:
-    berlin: Google search for "berlin"
 gmla 1:
   url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Los%20Angeles%2C%20California
   title: Google Maps Los Angeles
@@ -98,14 +90,6 @@ sec 2:
   - economy
   examples:
     "Rio Tinto, 8-K": search for a company with 8-K annual reports
-sec10k 1:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company
-    name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=10-K
-  title: EDGAR System of SEC for regulatory company information
-  tags:
-  - economy
-  examples:
-    Honeywell: search for a company with 10-K annual reports
 sec20f 1:
   url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company
     name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=20-F

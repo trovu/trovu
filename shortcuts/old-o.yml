@@ -1,72 +1,6 @@
-"* 1":
-  url: http://voip-info.org/wiki-Asterisk+cmd+{%query}
-  title: Search Voip-Info.org for Asterisk
-+ 0:
-  url: http://plus.google.com
-  title: Google Plus
-+ 1:
-  url: http://plus.google.com/s/{%query}
-  title: Google Plus
-2video 1:
-  url: http://www.2video.de/?action=download&dl={%url}&req=downloads
-  title: 2Video
-"> 1":
-  url: http://wiki.serchilo.net/Special:Search?search={%query}&go=Seite
-  title: Serchilo Wiki search
-ac 1:
-  url: http://www.archchinese.com/chinese_english_dictionary.html?find={%query}
-  title: Arch Chinese Stroke Order Animation and Dictionary
-acf 0:
-  url: http://www.christian-kirsch.de/foren/viewforum.php?f=53
-  title: Agatha Christie Forum
-acom 0:
-  url: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20
-  title: Amazon.com homepage
-acom 1:
-  url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20
-  title: Amazon.com
-ade 0:
-  url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21
-  title: Amazon.de Startseite
-ade 1:
-  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&linkCode=ur2&tag=serchilo-21
-  title: Amazon.de
-afp 1:
-  url: http://www.alltageinesfotoproduzenten.de/?s={%query}
-  title: Alltag eines Fotoproduzenten
-afr 0:
-  url: http://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21
-  title: Amazon.fr homepage
-afr 1:
-  url: http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo0e-21
-  title: Amazon.fr
-agg 1:
-  url: http://www.google.de/search?hl=de&source=hp&btnI=Auf+gut+Glück!&aq=f&aqi=g7&aql=&oq=&q={%query}
-  title: Google Auf Gut Glück
-amazon 0:
-  url: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20
-  title: Amazon.com homepage
-amazon 1:
-  url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20
-  title: Amazon.com
-atw 1:
-  url: http://www.alltheweb.com/search?cat=web&cs=iso88591&q={%query}
-  title: AlltheWeb
-auk 0:
-  url: http://www.amazon.co.uk/?_encoding=UTF8&camp=1634&creative=6738&linkCode=ur2&tag=serchilo02-21
-  title: Amazon.co.uk homepage
-auk 1:
-  url: http://www.amazon.co.uk/gp/search?ie=UTF8&camp=1634&creative=6738&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo02-21
-  title: Amazon.co.uk
-av 1:
-  url: http://altavista.com/web/results?q={%query}
-  title: Altavista
 bgo 1:
   url: http://bugs.gentoo.org/buglist.cgi?quicksearch={%query}
   title: Gentoo Bugzilla
-blekko 1:
-  url: command/2110/changed?arguments[]={%query}
-  title: Blekko
 bookbutler 1:
   url: http://us.bookbutler.com/do/bookSearch?pageNr=1&showMore=true&sortBy=salesrank&searchFor={%query}&searchBy=keyword&searchIn=de&shipTo=de&amountIn=eur
   title: Bookbutler
@@ -266,15 +200,6 @@ ctanp 1:
 ctt 1:
   url: http://groups.google.com/group/comp.text.tex/search?group=comp.text.tex&q={%Suche}
   title: Comp.text.tex
-cul 1:
-  url: http://www.citeulike.org/search/all?q={%query}
-  title: search for academic paper using this query (ampersands do not work)
-culs 1:
-  url: http://www.citeulike.org/search/all?q=surname%3A{%surname}
-  title: search for academic paper written by an author with this surname
-cult 1:
-  url: http://www.citeulike.org/search/all?q=title%3A{%titleword}
-  title: search for academic paper whose title includes this titleword
 currency 3:
   url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from
     code}&to={%to code}
@@ -420,9 +345,6 @@ divxsub 1:
 dix 1:
   url: http://dix.osola.com/search?q={%Auto}
   title: Dix Osola
-dj 1:
-  url: http://docjax.com/Search/index.shtml?q={%document}&type=all
-  title: DocJax Document Search Engine
 dje 1:
   url: http://jisho.org/words?eng={%query}
   title: Denshi Jisho
@@ -456,9 +378,6 @@ dnd 1:
 dns 1:
   url: http://cgibin.erols.com/ziring/cgi-bin/nsgate/gate.pl?submit=Search+by+Name&mode=1&q={%domain}&qtype=A&.cgifields=persist&.cgifields=log
   title: DNS Lookup
-docjax 1:
-  url: http://docjax.com/Search/index.shtml?q={%document}&type=all
-  title: DocJax Document Search Engine
 docs 1:
   url: https://docs.google.com/document/u/0/?q={%query}
   title: Google Docs search
@@ -681,12 +600,6 @@ ff 0:
 ff 1:
   url: http://www.google.com/search?hl=de&q={%query}%20site%3Afileformat.info&ie=utf-8
   title: Search FileFormat.Info with Google
-fh 0:
-  url: ttp://fileshunt.com/
-  title: fileshunt homepage
-fh 1:
-  url: http://fileshunt.com/?q={%query}
-  title: fileshunt rapidshare search
 fide 1:
   url: http://forum.pauker.at/pauker/DE_DE/FI/wb/?s={%query}
   title: Finnisch-Deutsch
@@ -804,9 +717,6 @@ ga 1:
 gads 1:
   url: http://www.google.com/sponsoredlinks?q={%adword}
   title: Goode Ads
-game 1:
-  url: http://www.gamespot.com/search.html?type=11&stype=all&qs={%query}&x=24&y=17
-  title: Gamespot
 gamercard 1:
   url: http://profile.mygamercard.net/{%query}
   title: Windows Live GamerCard von Spieler anzeigen
@@ -1027,9 +937,6 @@ gw2 1:
 gwas 1:
   url: http://vs.aka-online.de/cgi-bin/globalwpsearch.pl?search={%query}&timeout=15&minor=1
   title: Global Wikipedia Article Search
-gwave 0:
-  url: http://wave.google.com
-  title: Google Wave
 gwb 1:
   url: http://www.googlewatchblog.de/index.php?s={%query}
   title: Google Watch Blog
@@ -1055,12 +962,6 @@ hbr 1:
 hdb 1:
   url: http://hackage.haskell.org/cgi-bin/hackage-scripts/package/{%package name}
   title: Haskell package page
-here 0:
-  url: https://wego.here.com/
-  title: HERE Maps
-here 1:
-  url: https://wego.here.com/search/{%location}
-  title: HERE Maps
 hexdec 1:
   url: http://stefanschramm.net/dev/hex/?hex={%hex value}
   title: Hex decode
@@ -1419,9 +1320,6 @@ leo 1:
 leo_es 1:
   url: http://dict.leo.org/esde?lp=esde&search?q={%query}
   title: Leo
-libra 1:
-  url: http://libra.msra.cn/Search.aspx?query={%query}
-  title: Microsoft Libra
 lin 1:
   url: http://www.linguee.com/search?direction=auto&query={%word or expression to
     translate}
@@ -1743,9 +1641,6 @@ otf 0:
 otn 1:
   url: http://forums.oracle.com/forums/search.jspa?threadID=&q={%query}&objID=c84&dateRange=all&userID=&numResults=30&rankBy=10001
   title: Oracle OTN Forum Search
-otto 1:
-  url: http://www.otto.de/is-bin/INTERSHOP.enfinity/WFS/Otto-OttoDe-Site/de_DE/-/EUR/OV_ViewSearch-SearchStart?ls=0&Orengelet.sortPipelet.sortResultSetSize=12&SearchDetail=one&stype=N&Modul_ALL_FILTER=&Query_Text={%query}
-  title: OTTO
 ov 0:
   url: http://www.onvista.de
   title: OnVista
@@ -1821,12 +1716,6 @@ phpg 1:
 phpg! 1:
   url: http://www.google.com/search?btnI=1&q=site%3Awww.php.net+{%query}
   title: PHP Documentation via Google Feeling Lucky
-pi 0:
-  url: http://pipes.yahoo.com
-  title: Yahoo Pipes
-pi 1:
-  url: http://pipes.yahoo.com/pipes/search?q={%query}
-  title: Yahoo Pipes
 picniche 1:
   url: http://www.picniche.com/index.aspx?q={%query}
   title: PicNiche
@@ -1952,9 +1841,6 @@ qw 1:
   title: Qwika search
 qwd 1:
   url: http://www.qwika.com/find-de/{%Begriff}
-  title: Qwika search
-qwika 1:
-  url: http://www.qwika.com/find/{%query}
   title: Qwika search
 radarberlin 0:
   url: http://wind.met.fu-berlin.de/loops/radar_200/R.NEW.gif
@@ -2160,9 +2046,6 @@ sreddit 1:
 ss 2:
   url: http://www.skyscanner.net/{$language}/eur/fluge/{%from}/{%to}?charttype=1
   title: Skyscanner cheap flights
-ss 4:
-  url: http://www.skyscanner.net/{$language}/eur/fluge/{%from}/{%to}/{%depart}/{%return}?charttype=1
-  title: Skyscanner cheap flights
 ssl 1:
   url: https://www.ssllabs.com/ssldb/analyze.html?d={%domain}
   title: SSL Labs Analyzer
@@ -2193,18 +2076,12 @@ subtitles 1:
 such 2:
   url: http://suchen.de/lokal?what={%was}&where={%wo}&x=0&y=0
   title: Suchen.de Suche
-super 1:
-  url: http://www.supertopic.de/search/results/?q={%query}&o=1_1_1_1_0_0_0_0
-  title: Supertopic Suche
 svfr 1:
   url: http://www.sensagent.com/dictionnaires/sv-fr/{%word}/ALEXMN/
   title: Translation Swedish to French
 svz 0:
   url: http://schuelervz.de
   title: Schuelervz Shortcut
-sw 1:
-  url: http://www.spankwire.com/search/straight/keyword/{%query}
-  title: Spankwire
 swt 1:
   url: http://www.test.de/suche/?q={%query}
   title: Stiftung Warentest
@@ -2674,9 +2551,6 @@ youtube 1:
 ys 1:
   url: http://www.yasni.de/index.php?action=search&search=1&sh=&name={%query}&filter=Stichwort
   title: Yasni Personensuche
-ytf 1:
-  url: http://www.youtify.com/search?q={%query}
-  title: Youtify search
 ytorr 1:
   url: http://www.youtorrent.com/tag/?q={%query}
   title: YouTorrent

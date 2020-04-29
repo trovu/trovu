@@ -145,14 +145,6 @@ blbka 1:
   - karlsruhe
   examples:
     goethe: Suche nach Goethe
-bpo 1:
-  url: http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=YYYY-MM}/#{%datum|type=date|output=YYYY-MM-DD}
-  title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
-  tags:
-  - berlin
-  - cultural events
-  - classical music
-  - music
 buerklin 1:
   url: https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}
   title: Bürklin Elektronics, deutsch
@@ -619,9 +611,6 @@ ftr 1:
   - finance
   examples:
     twitter: Search Finanztreff for "twitter"
-ga 1:
-  url: https://gamesageddon.com/fotolia?query={%argument_name}&fOr=nb_downloads
-  title: GamesAgeddon
 gfp 0:
   url: http://german-foreign-policy.com/de/news/
   title: German Foreign Policy
@@ -638,9 +627,6 @@ gfp 1:
   - germany
   examples:
     berlin: Suche nach "berlin"
-gmp 0:
-  url: https://music.microsoft.com/search/argument%20name?target=web
-  title: Groove musik
 grc 1:
   url: http://www.albertmartin.de/altgriechisch/?q={%suchwort}
   title: Altgriechisch Wörterbuch
@@ -653,9 +639,6 @@ grc 1:
   examples:
     baum: Übersetzung von "Baum" auf Altgriechisch
     ξύλον: 'Übersetzung von "ξύλον" auf Deutsch '
-gs 1:
-  url: https://scholar.google.com/search?hl={$language}&q={%query}
-  title: Google scholar
 gz 0:
   url: https://www.griechenland.net/
   title: Griechenland Zeitung
@@ -903,14 +886,12 @@ morgenpost 1:
   examples:
     berlin: Search Berliner Morgenpost Archiv for "berlin"
 mp 1:
-  url: http://www.moviepilot.de/suche?utf8=%E2%9C%93&q={%Suche}
+  url: http://www.moviepilot.de/suche?q={%query}
   title: Moviepilot
   tags:
   - moviepilot
   - movies
   - film
-  examples:
-    forrest gump: Search for "Forrest Gump"
 mz 0:
   url: http://www.mittelbayerische.de/
   title: Mittelbayerische Zeitung
@@ -1094,7 +1075,7 @@ reim 1:
     auen: Suche Reime auf "auen"
 rm 1:
   url: http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase={%pled}
-  title: Pledari Grond
+  title: Romanisch-Deutsch via Pledari Grond
   description: Dictionary German <-> Rumantsch Grischun
   tags:
   - dictionary
@@ -1204,9 +1185,6 @@ sk 1:
   - german
   examples:
     baum: Search for "baum"
-soft 0:
-  url: http://softorama.com
-  title: softorama
 spon 0:
   url: http://www.spiegel.de/
   title: Spiegel Online
@@ -1360,6 +1338,13 @@ uuf 1:
   - documentation
   examples:
     spiele: Search for "spiele"
+uuf~ 0:
+  url: http://forum.ubuntuusers.de/egosearch/
+  title: "UbuntuUsers.de: Eigene Beiträge im Forum"
+  tags:
+  - ubuntu
+  - linux
+  - documentation
 uui 0:
   url: http://ikhaya.ubuntuusers.de/
   title: "UbuntuUsers.de: Ikhaya-Startseite"
@@ -1419,9 +1404,6 @@ wn 1:
   examples:
     haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm
       style with small capital)
-wq 1:
-  url: https://de.wikiquote.org/w/index.php?search={%query}
-  title: Wikiquote
 ws 0:
   url: http://wortschatz.uni-leipzig.de
   title: Wortschatz-Lexikon

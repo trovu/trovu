@@ -7,12 +7,7 @@ cjg 1:
   examples:
     venir: Conjugate "venir"
 cs 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _frcz
-    type: ""
-    word: "{%mot|encoding=none}"
-    data: "{%mot|encoding=none}"
+  url: https://slovniky.lingea.cz/francouzsko-cesky/{%mot}
   title: Tchèque-Français (Lingea)
   tags:
   - dictionary
@@ -111,6 +106,15 @@ marmiton 1:
   - marmiton
   examples:
     pizza: Recherche des recettes de pizza
+pl 1:
+  url: https://pl.pons.com/t%C5%82umaczenie/francuski-polski/{%mot}
+  title: Polonais-Français via PONS
+  tags:
+  - dictionary
+  - french
+  - polish
+  examples:
+    mot: '"mot" en polonais'
 pt 1:
   url: http://dictionnaire.reverso.net/francais-portugais/{%mot}
   title: Français-portugais
@@ -120,8 +124,8 @@ pt 1:
   examples:
     voiture: Search for "voiture"
 sv 1:
-  url: http://www.azoria.com/cgi-bin/dico/search?word={%mot}
-  title: Suédois-Français via Azoria
+  url: https://www.dict.com/suedois-francais/{%mot}
+  title: Suédois-Français via Dict.com
   tags:
   - dictionary
   - french

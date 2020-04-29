@@ -16,12 +16,6 @@ abea 1:
 abet 1:
   url: http://www.abebooks.de/servlet/SearchResults?tn={%titel}
   title: AbeBooks
-amazon 0:
-  url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21
-  title: Amazon.de Startseite
-amazon 1:
-  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&linkCode=ur2&tag=serchilo-21
-  title: Amazon.de
 amob 0:
   url: http://www.amazon.de/gp/aw/?ie=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21
   title: Amazon.de Mobile Startseite
@@ -441,9 +435,6 @@ ind 1:
 inforiot 0:
   url: http://www.inforiot.de/view/termine
   title: Inforiot
-it 1:
-  url: http://www.italdict.de/exec/?S={%query}
-  title: Italienisch-Deutsch
 it-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deit
   title: Italienisch-Deutsch PONS
@@ -579,9 +570,6 @@ lq 1:
 ls 1:
   url: http://partners.webmasterplan.com/click.asp?site=3007&ref=421571&type=html&ent=73&hnb=12&subid=&prd=yes&earef=073a1ad78e41c763535eb9319b6922af&mod=search&search_expr={%query}
   title: Lensspirit Kontaktlinsen
-mac 1:
-  url: http://www.google.com/search?hl=de&q={%query}+site%3Amacuser.de
-  title: Macuser.de Forum
 maginter 1:
   url: http://www.magistrix.de/lyrics/search?title=spn-x&lang=0&artist={%Interpret}&pagelen=50&text=&order=title
   title: Magistrix Songtext Suche (Interpret)
@@ -858,12 +846,6 @@ swp 1:
 synen 1:
   url: http://synonyme.woxikon.de/synonyme-englisch/{%word}.php
   title: Synonyme
-t-systems 0:
-  url: http://www.it-shop.t-systems.de/
-  title: T-Systems IT Shop für Geschäftskunden
-t-systems 1:
-  url: http://www.it-shop.t-systems.de/tsystems/tsi_b2b/catalog/searchexternal.service?searchString={%Produkt}&kid=21314sumkey
-  title: T-Systems IT Shop für Geschäftskunden
 t3ts 1:
   url: http://www.typo3.net/tsref/?tx_fesearchintable_pi1[sword]={%typoscript
     command}
@@ -892,12 +874,6 @@ tsp 0:
 tsp 1:
   url: http://www.tagesspiegel.de/suche/?fs%5Barchivsuche%5D=archivsuche&fs%5Bqall%5D={%Suche}
   title: Tagesspiegel
-tsys 0:
-  url: http://www.it-shop.t-systems.de/
-  title: T-Systems IT Shop Startseite
-tsys 1:
-  url: http://www.it-shop.t-systems.de/tsystems/tsi_b2b/catalog/searchexternal.service?searchString={%Produkt}&kid=21314sumkey
-  title: T-Systems IT Shop Startseite
 tuning 1:
   url: http://www.motorvision-shop.de/xyshop/mv/catalog/search.service?extended=true&searchString={%query}&kid=25314sumkey
   title: Motorvision-Shop.de
