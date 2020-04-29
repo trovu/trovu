@@ -1,9 +1,4 @@
-url: http://slovniky.lingea.cz
-post parameters:
-  set: _frcz
-  type: ""
-  word: '{%mot|encoding=none}'
-  data: '{%mot|encoding=none}'
+url: https://slovniky.lingea.cz/francouzsko-cesky/{%mot}
 title: Tchèque-Français (Lingea)
 description: ""
 tags:

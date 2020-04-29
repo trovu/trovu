@@ -1,0 +1,9 @@
+url: https://www.oui.sncf/train/trajet/{%origine}/{%destination}
+title: SNCF
+description: ""
+tags:
+- travel
+- train
+examples:
+  paris, lyon: Train Paris - Lyon
+tests: []
