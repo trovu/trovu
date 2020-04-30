@@ -183,12 +183,17 @@ export default class Env {
   /**
    * Ensure shortcuts have the correct structure.
    * 
-   * @param {array} shortcuts - The shortcuts to normalize.
+   * @param {array} shortcuts      - The shortcuts to normalize.
+   * @param {string} namespaceName - The namespace name to show in error message.
    * 
    * @return {array} shortcuts - The normalized shortcuts.
    */
-  normalizeShortcuts(shortcuts) {
+  normalizeShortcuts(shortcuts, namespaceName) {
+    const incorrectKeys = [];
     for (let key in shortcuts) {
+      if (!key.match(/\S+ \d/)) {
+        incorrectKeys.push(key);
+      }
       // Check for 'only URL' shortcuts.
       if (typeof shortcuts[key] === 'string') {
         const url = shortcuts[key];
@@ -196,6 +201,13 @@ export default class Env {
           url: url
         }
       }
+    }
+    if (incorrectKeys.length > 0) {
+      alert(
+        "Incorrect keys found in namespace '" + namespaceName +  "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" + 
+        "\n\n" +
+        incorrectKeys.join("\n")
+      );
     }
     return shortcuts;
   }
@@ -237,7 +249,7 @@ export default class Env {
         namespaces[i] = undefined;
         continue;
       }
-      namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts);
+      namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts, namespaces[i].name);
     };
     // Delete marked namespaces.
     namespaces = namespaces.filter(namespace => typeof namespace !== 'undefined');
