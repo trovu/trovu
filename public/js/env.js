@@ -248,16 +248,23 @@ export default class Env {
    * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToNamespace(namespace) {
+    // Site namespaces:
     if (typeof namespace == "string" && namespace.length < 4) {
       namespace = this.addFetchUrlToSiteNamespace(namespace);
-    } else if (namespace.url && namespace.name) {
-      // User namespaces may also have completely custom URL (template).
-      // Must contain {%keyword} and {%argumentCount}.
+      return namespace;
+    } 
+    // User namespace 1 – custom URL:
+    if (namespace.url && namespace.name) {
+      // Just add the type.
       namespace.type = "user";
-    } else if (namespace.github) {
-      namespace = this.addFetchUrlToGithubNamespace(namespace);
+      return namespace;
     }
-    // Yes, a string namespace with length < 4 will be ignored.
+    // Now remains: User namespace 2 – Github:
+    if (typeof namespace == "string") {
+      // Create an object.
+      namespace = { github: namespace };
+    }
+    namespace = this.addFetchUrlToGithubNamespace(namespace);
     return namespace;
   }
 
