@@ -228,7 +228,15 @@ export default class Env {
         Helper.log(".", false);
       }
       const text = await responses[i].text();
-      const shortcuts = jsyaml.load(text);
+      let shortcuts;
+      try {
+        shortcuts = jsyaml.load(text);
+      }
+      catch (error) {
+        alert('Error parsing ' + namespaces[i].url + ":\n\n" + error.message);
+        namespaces[i] = undefined;
+        continue;
+      }
       namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts);
     };
     // Delete marked namespaces.
