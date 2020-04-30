@@ -188,8 +188,8 @@ export default class Env {
    * @return {array} shortcuts - The normalized shortcuts.
    */
   normalizeShortcuts(shortcuts) {
-    // Check for 'only URL' shortcuts.
     for (let key in shortcuts) {
+      // Check for 'only URL' shortcuts.
       if (typeof shortcuts[key] === 'string') {
         const url = shortcuts[key];
         shortcuts[key] = {
