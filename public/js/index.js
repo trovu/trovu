@@ -221,6 +221,8 @@ document.querySelector("body").onload = async function(event) {
       .append(html)
       .appendTo(ul);
   };
+
+  $("#query").focus();
 };
 
 document.getElementById("query-form").onsubmit = function(event) {
