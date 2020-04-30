@@ -4716,15 +4716,29 @@ py 0:
   - programming
   - python
 py 1:
+  url: https://docs.python.org/3/search.html?q={%query}
+  title: Python 3 documentation
+  tags:
+  - programming
+  - python
+  examples:
+    optparse: Get documentation for opt parse
+py2 0:
+  url: http://docs.python.org/2/
+  title: Python 2 documentation
+  tags:
+  - programming
+  - python
+py2 1:
   url: https://docs.python.org/2/search.html?q={%query}
-  title: Python documentation
+  title: Python 2 documentation
   tags:
   - programming
   - python
   examples:
     optparse: Get documentation for opt parse
 py3 0:
-  url: http://docs.python.org/py3k/
+  url: http://docs.python.org/3/
   title: Python 3 documentation
   tags:
   - programming
