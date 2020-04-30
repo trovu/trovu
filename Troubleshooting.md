@@ -1,8 +1,8 @@
 ## Debugging mode
 
-Call Trovu with [`&debug=1`](https://trovu.net/#debug=1) to not get redirected but to 
+Call Trovu with [`&debug=1`](https://trovu.net/#debug=1) to not get redirected but to see
 
-- see which config and shortcut URLs are being fetched
+- which config and shortcut URLs are being fetched
 - whether they are found in the browser cache or not
 - how a query got matched.
 
