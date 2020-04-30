@@ -2,7 +2,7 @@ The purpose of a query is to match with a shortcuts. And shortcuts are organized
 
 ## Namespace setting
 
-When calling Trovu without any arguments, 3 default namespaces will be set based on the browser's language settings. For instance, if the browser's language is `de-DE`, we will use these namespaces:
+When calling Trovu without query parameters, 3 default namespaces will be set based on the browser's language settings. For instance, if the browser's language is `de-DE`, we will use these namespaces:
 
 - [o](https://github.com/trovu/trovu-data/blob/master/shortcuts/o.yml) – planet namespace
 - [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml) – German language namespace
