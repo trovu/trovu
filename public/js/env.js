@@ -80,7 +80,13 @@ export default class Env {
     const configUrl = this.configUrlTemplate.replace("{%github}", params.github);
     const configYml = await Helper.fetchAsync(configUrl, false, params.debug);
     if (configYml) {
-      const config = jsyaml.load(configYml);
+      try {
+        const config = jsyaml.load(configYml);
+      }
+      catch (error) {
+        alert('Error parsing ' + configUrl + ":\n\n" + error.message);
+        return false;
+      }
       return config;
     } else {
       alert("Failed to read Github config from " + configUrl);
