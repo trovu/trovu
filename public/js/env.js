@@ -211,9 +211,11 @@ export default class Env {
     const responses = await Promise.all(promises);
 
     for (let i in namespaces) {
-      if (responses[i].status != 200) {
-        if (debug) Helper.log((reload ? "reload " : "cache  ") + "Fail:    " + responses[i].url);
-        return namespaces;
+      if ((!responses[i]) || (responses[i].status != 200)) {
+        if (debug) Helper.log((reload ? "reload " : "cache  ") + "Fail:    " + namespaces[i].url);
+        // Mark namespace for deletion.
+        namespaces[i] = undefined;
+        continue;
       }
       if (debug) Helper.log((reload ? "reload " : "cache  ") + "Success: " + responses[i].url);
       if (!debug) {
@@ -223,6 +225,8 @@ export default class Env {
       const shortcuts = jsyaml.load(text);
       namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts);
     };
+    // Delete marked namespaces.
+    namespaces = namespaces.filter(namespace => typeof namespace !== 'undefined');
     return namespaces;
   }
 
