@@ -25,3 +25,5 @@
   expectedRedirectUrl: https://www.google.co.uk/search?hl=en&q=barbaz&ie=utf-8
 - query: reload
   expectedRedirectUrl: ../index.html#debug=1&query=reload&status=reloaded
+- query: georgjaehnig.example
+  expectedRedirectUrl: https://www.example.com
