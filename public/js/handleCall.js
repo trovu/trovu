@@ -63,7 +63,9 @@ export default class HandleCall {
     if (env.extraNamespaceName) {
       env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
       [env.extraNamespace] = await env.fetchShortcuts([env.extraNamespace], env.reload, env.debug);
-      env.namespaces.push(env.extraNamespace);
+      if (env.extraNamespace) {
+        env.namespaces.push(env.extraNamespace);
+      }
     }
 
 
