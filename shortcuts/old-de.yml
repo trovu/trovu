@@ -261,7 +261,7 @@ en 1:
     baum: Search for "baum"
 en-leo 1:
   url: http://dict.leo.org/?search={%Wort}
-  title: "Englisch-Deutsch: leo.org"
+  title: 'Englisch-Deutsch: leo.org'
 en-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deen
   title: Englisch-Deutsch PONS
@@ -273,10 +273,10 @@ endungen 1:
   title: Endungen.de
 es 1:
   url: http://www.vocdix.com/de/es/?q={%palabra}
-  title: "Spanisch-Deutsch: DIX"
+  title: 'Spanisch-Deutsch: DIX'
 es-leo 1:
   url: http://dict.leo.org/esde?search={%Wort}
-  title: "Spanisch-Deutsch: Leo"
+  title: 'Spanisch-Deutsch: Leo'
 es-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Spanisch-Deutsch PONS
@@ -466,8 +466,8 @@ kb 0:
   url: http://kino.zitty.de/
   title: Kino Berlin
 kfz 1:
-  url: http://www.google.com/search?hl={$language}&q=inurl:oawhome.de/kfz/+{%Ort
-    oder Kennzeichen}
+  url: http://www.google.com/search?hl={$language}&q=inurl:oawhome.de/kfz/+{%Ort oder
+    Kennzeichen}
   title: KFZ-Kennzeichen Deutschland
 kfzs 1:
   url: http://www.autokennzeichen.info/index.htm?lpc={%Kennzeichen}&subm=1
@@ -483,8 +483,8 @@ ks 1:
   title: Klicksafe.de
 kvv 4:
   url: http://213.144.24.66/kvv/XSLT_TRIP_REQUEST2?language=de&place_origin={%Von
-    Ort}&type_origin=stop&name_origin={%von Haltestele}&place_destination={%nach
-    Ort}&type_destination=stop&name_destination={%nach Haltestelle}
+    Ort}&type_origin=stop&name_origin={%von Haltestele}&place_destination={%nach Ort}&type_destination=stop&name_destination={%nach
+    Haltestelle}
   title: Karlsruher Verkehrsverbund, Elektronische Fahrplanauskunft
 kw 1:
   url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo
@@ -494,34 +494,34 @@ kw 2:
   title: Kreuzworträtsel-Datenbank
 lasteb 0:
   url: http://www.lastfm.de/events/+place/Germany/Berlin
-  title: "Last.fm: Events in Berlin, Germany"
+  title: 'Last.fm: Events in Berlin, Germany'
 lastedd 0:
   url: http://www.lastfm.de/events/+place/Germany/Dresden
-  title: "Last.fm: Events in Dresden, Germany"
+  title: 'Last.fm: Events in Dresden, Germany'
 lastehh 0:
   url: http://www.lastfm.de/events/+place/Germany/Hamburg
-  title: "Last.fm: Events in Hamburg, Germany"
+  title: 'Last.fm: Events in Hamburg, Germany'
 lastehro 0:
   url: http://www.lastfm.de/events/+place/Germany/Rostock
-  title: "Last.fm: Events in Rostock, Germany"
+  title: 'Last.fm: Events in Rostock, Germany'
 lastek 0:
   url: http://www.lastfm.de/events/+place/Germany/Cologne
-  title: "Last.fm: Events in Cologne, Germany"
+  title: 'Last.fm: Events in Cologne, Germany'
 lastel 0:
   url: http://www.lastfm.de/events/+place/Germany/Leipzig
-  title: "Last.fm: Events in Leipzig, Germany"
+  title: 'Last.fm: Events in Leipzig, Germany'
 lastem 0:
   url: http://www.lastfm.de/events/+place/Germany/Munich
-  title: "Last.fm: Events in Munich, Germany"
+  title: 'Last.fm: Events in Munich, Germany'
 lastep 0:
   url: http://www.lastfm.de/events/+place/Germany/7360038+Potsdam
-  title: "Last.fm: Events in Potsdam, Germany"
+  title: 'Last.fm: Events in Potsdam, Germany'
 leo 1:
   url: http://dict.leo.org/?search={%Wort}
-  title: "Englisch-Deutsch: leo.org"
+  title: 'Englisch-Deutsch: leo.org'
 leocn 1:
   url: http://dict.leo.org/chde?lang=de&lp=chde&search={%Wort}
-  title: "Chinesisch-Deutsch: leo.org"
+  title: 'Chinesisch-Deutsch: leo.org'
 lexer 0:
   url: http://germazope.uni-trier.de/Projects/WBB/woerterbuecher/lexer/woerterbuecher/vorwort/wbgui
   title: Mittelhochdeutsches Handwörterbuch von Matthias Lexer
@@ -548,7 +548,7 @@ liq 1:
   title: Lycos IQ
 listen 1:
   url: http://www.lastfm.de/listen/artist/{%artist}
-  title: "Last.fm: Listen to artist"
+  title: 'Last.fm: Listen to artist'
 lobby 0:
   url: http://lobbycontrol.de/blog/
   title: Lobbycontrol
@@ -581,7 +581,7 @@ magtitel 1:
   title: Magistrix Songtext Suche (Titel)
 mau 2:
   url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/{%Start}/{%Ziel}/b.html?radius_from=50&radius_to=50&date=any_date&type=b&return=0
-  title: "Mitfahrgelegenheit.de: Umkreissuche nach Angeboten"
+  title: 'Mitfahrgelegenheit.de: Umkreissuche nach Angeboten'
 mdv 2:
   url: http://www.nasa.de/delfi52/query.exe/dn?L=mdv&S={%Start}&Z={%Ziel}&start=1
   title: MDV-Auskunft
@@ -614,13 +614,13 @@ mvs 1:
   title: Motorvision-Shop.de
 mz 0:
   url: http://www.meinvz.net/Start
-  title: "MeinVZ: Startseite"
+  title: 'MeinVZ: Startseite'
 mz 1:
   url: http://www.meinvz.net/Search/SearchGeneral/name/{%Name}/doSearch/1
-  title: "MeinVZ: Personensuche global"
+  title: 'MeinVZ: Personensuche global'
 mzg 1:
   url: http://www.meinvz.net/Search/ResultGroups/name/{%Gruppenname}
-  title: "MeinVZ: Gruppensuche"
+  title: 'MeinVZ: Gruppensuche'
 nlde 1:
   url: http://www.mijnwoordenboek.nl/vertalen.php?src=NL&des=DE&woord={%query}
   title: Übersetzung Niederländisch->Deutsch / Vertaling Nederlands->Duits
@@ -830,16 +830,16 @@ stupi 1:
   title: Stupipedia Artikelsuche
 svz 0:
   url: http://www.schuelervz.net
-  title: "SchülerVZ: Startseite"
+  title: 'SchülerVZ: Startseite'
 svz 1:
   url: http://www.schuelervz.net/Search/SearchGlobal/name/{%Name}/doSearch/1
-  title: "SchülerVZ: Personensuche global"
+  title: 'SchülerVZ: Personensuche global'
 svzg 1:
   url: http://www.schuelervz.net/Search/ResultGroups/name/{%Gruppenname}
-  title: "SchülerVZ: Gruppensuche global"
+  title: 'SchülerVZ: Gruppensuche global'
 svzmg 1:
   url: http://www.schuelervz.net/Groups/s/{%Gruppenname}
-  title: "SchülerVZ: Gruppensuche (Meine Gruppen)"
+  title: 'SchülerVZ: Gruppensuche (Meine Gruppen)'
 swp 1:
   url: http://www.swp-berlin.org/suche/suche.php?query={%Suche}
   title: Stiftung Wissenschaft und Politik
@@ -847,8 +847,7 @@ synen 1:
   url: http://synonyme.woxikon.de/synonyme-englisch/{%word}.php
   title: Synonyme
 t3ts 1:
-  url: http://www.typo3.net/tsref/?tx_fesearchintable_pi1[sword]={%typoscript
-    command}
+  url: http://www.typo3.net/tsref/?tx_fesearchintable_pi1[sword]={%typoscript command}
   title: German TypoScript Reference
 telmob 1:
   url: http://mobil.dastelefonbuch.de/tb/search_result_list_standard?ph={%Nummer}
@@ -903,22 +902,22 @@ vlul 3:
   title: Uni Luzern Veranstaltungssuche
 vm 2:
   url: http://www.viamichelin.de/viamichelin/deu/dyn/controller/mapPerformPage?strAddress={%Straße}&strCP=&strLocation={%Ort}&strCountry=240
-  title: "Via Michelin: Stadtpläne & Landkarten"
+  title: 'Via Michelin: Stadtpläne & Landkarten'
 vmr 2:
   url: http://www.viamichelin.com/viamichelin/deu/dyn/controller/ItiWGPerformPage?intItineraryType=1&strStartAddress=&strStartCP=&strStartCity={%Start}&strStartCityCountry=000000240&strDestAddress=&strDestCP=&strDestCity={%Ziel}&strDestCityCountry=000000240&intItineraryType=1
-  title: "Via Michelin: Routenplaner"
+  title: 'Via Michelin: Routenplaner'
 vpe 1:
   url: http://www.vpe.de/pdf/fp_akt/{%Suche}.pdf
   title: Verkehrsbund Pforzheim- Enzkreis
 vz 0:
   url: http://www.studivz.net/Start
-  title: "StudiVZ: Startseite"
+  title: 'StudiVZ: Startseite'
 vz 1:
   url: http://www.studivz.net/Search/SearchGlobal/name/{%Name}/doSearch/1
-  title: "StudiVZ: Personensuche global"
+  title: 'StudiVZ: Personensuche global'
 vzg 1:
   url: http://www.studivz.net/Search/ResultGroups/name/{%Gruppenname}
-  title: "StudiVZ: Gruppensuche"
+  title: 'StudiVZ: Gruppensuche'
 wein 1:
   url: http://www.wein.cc/wein/weinsuche.php?q={%query}
   title: Weinsuche bei wein.cc mit Preisvergleich

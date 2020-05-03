@@ -12,7 +12,7 @@ dsb 2:
   - travel
   - railway
   examples:
-    "aarhus, københavn": næste tog fra Aarhus til København
+    aarhus, københavn: næste tog fra Aarhus til København
 dsb 3:
   url: http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&start=1
   title: Danske Statsbaner
@@ -20,7 +20,7 @@ dsb 3:
   - travel
   - railway
   examples:
-    "aarhus, københavn, 10": tog fra Aarhus til København kl. 10
+    aarhus, københavn, 10: tog fra Aarhus til København kl. 10
 dsb 4:
   url: http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&D={%Dato}&start=1
   title: Danske Statsbaner
@@ -28,7 +28,7 @@ dsb 4:
   - travel
   - railway
   examples:
-    "aarhus, københavn, 10, 28.1.": tog fra Aarhus til København kl. 10 den 28.1.
+    aarhus, københavn, 10, 28.1.: tog fra Aarhus til København kl. 10 den 28.1.
 ikea 0:
   url: http://www.ikea.com/dk/da/
   title: IKEA Danmark

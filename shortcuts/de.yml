@@ -46,7 +46,7 @@ ardtext 1:
   - teletext
   - ard
   examples:
-    "100": Gehe zu Seite 100
+    100: Gehe zu Seite 100
 arv 1:
   url: http://www.lessan.de/de/{%Wort}
   title: Arabisch-Deutsch, mit Vokalen
@@ -136,7 +136,7 @@ blb 2:
   - books
   - booklooker
   examples:
-    "goethe, faust": Suche nach "Faust" von Goethe
+    goethe, faust: Suche nach "Faust" von Goethe
 blbka 1:
   url: https://blb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKFreitext+{%query}
   title: Badische Landesbibliothek Karlsruhe
@@ -232,7 +232,7 @@ ck 1:
   examples:
     pizza: Rezepte für Pizza
 cs 1:
-  url: https://de.langenscheidt.com/deutsch-tschechisch/search?term={%Wort} 
+  url: https://de.langenscheidt.com/deutsch-tschechisch/search?term={%Wort}
   title: Tschechisch-Deutsch (Langenscheidt)
   tags:
   - language
@@ -290,7 +290,7 @@ dclj 1:
   - programming
   - javascript
   examples:
-    "var ": Suche nach "var"
+    'var ': Suche nach "var"
 dclp 0:
   url: http://groups.google.de/group/de.comp.lang.php
   title: De.comp.lang.php
@@ -547,7 +547,7 @@ fmb 2:
   tags:
   - books
   examples:
-    "houellebecq, elementarteilchen": Search for "houellebecq"
+    houellebecq, elementarteilchen: Search for "houellebecq"
 fool 1:
   url: https://www.fool.de/?s={%keyword}&submit=&lang=de
   title: Fool.de article search
@@ -605,7 +605,7 @@ ftr 1:
   url: http://www.finanztreff.de/kurse/suche/
   post parameters:
     seite: suche
-    suchbegriff: "{%query}"
+    suchbegriff: '{%query}'
   title: Finanztreff
   tags:
   - finance
@@ -703,7 +703,7 @@ hpreis 0:
   - shopping
 hpreis 1:
   url: http://www.heise.de/preisvergleich/?fs={%Suchbegriff}
-  title: "Heise Preisvergleich "
+  title: 'Heise Preisvergleich '
   tags:
   - heise
   - shopping
@@ -726,7 +726,7 @@ hsoft 0:
   - heise
 hsoft 1:
   url: http://www.heise.de/software/download/default.shtml?T={%Suchbegriff}&Suchen=suchen&global=1
-  title: "Heise Softwareverzeichnis "
+  title: 'Heise Softwareverzeichnis '
   tags:
   - heise
   examples:
@@ -757,11 +757,11 @@ hud 1:
     baum: Search for "baum"
 hwho 1:
   url: http://www.heise.de/netze/tools?rm=whois&plugin={%URL}
-  title: "Heise Whois Netzwerk-Tool "
+  title: 'Heise Whois Netzwerk-Tool '
   tags:
   - heise
   examples:
-    "1": Search for "1"
+    1: Search for "1"
 is 1:
   url: http://deis.dict.cc/?s={%Wort}
   title: Isländisch-Deutsch (dict.cc)
@@ -1306,7 +1306,7 @@ uu 0:
   - documentation
 uu 1:
   url: http://ubuntuusers.de/search/?query={%Suchwort}&area=all
-  title: "UbuntuUsers.de: Suche in allen Bereichen"
+  title: 'UbuntuUsers.de: Suche in allen Bereichen'
   tags:
   - ubuntu
   - linux
@@ -1315,7 +1315,7 @@ uu 1:
     spiele: Search for "spiele"
 uua 1:
   url: http://wiki.ubuntuusers.de/{%title}
-  title: "UbuntuUsers.de: Artikel im Wiki"
+  title: 'UbuntuUsers.de: Artikel im Wiki'
   tags:
   - ubuntu
   - linux
@@ -1324,14 +1324,14 @@ uua 1:
     spiele: Search for "spiele"
 uuf 0:
   url: http://forum.ubuntuusers.de/
-  title: "UbuntuUsers.de: Startseite des Forum"
+  title: 'UbuntuUsers.de: Startseite des Forum'
   tags:
   - ubuntu
   - linux
   - documentation
 uuf 1:
   url: http://ubuntuusers.de/search/?query={%Suchwort}&area=forum
-  title: "UbuntuUsers.de: Suche im Forum"
+  title: 'UbuntuUsers.de: Suche im Forum'
   tags:
   - ubuntu
   - linux
@@ -1340,21 +1340,21 @@ uuf 1:
     spiele: Search for "spiele"
 uuf~ 0:
   url: http://forum.ubuntuusers.de/egosearch/
-  title: "UbuntuUsers.de: Eigene Beiträge im Forum"
+  title: 'UbuntuUsers.de: Eigene Beiträge im Forum'
   tags:
   - ubuntu
   - linux
   - documentation
 uui 0:
   url: http://ikhaya.ubuntuusers.de/
-  title: "UbuntuUsers.de: Ikhaya-Startseite"
+  title: 'UbuntuUsers.de: Ikhaya-Startseite'
   tags:
   - ubuntu
   - linux
   - documentation
 uui 1:
   url: http://ubuntuusers.de/search/?query={%Suchwort}&area=ikhaya
-  title: "UbuntuUsers.de: Ikhaya-Artikelsuche"
+  title: 'UbuntuUsers.de: Ikhaya-Artikelsuche'
   tags:
   - ubuntu
   - linux
@@ -1363,14 +1363,14 @@ uui 1:
     spiele: Search for "spiele"
 uup 0:
   url: http://planet.ubuntuusers.de/
-  title: "UbuntuUsers.de: Startseite des Planeten"
+  title: 'UbuntuUsers.de: Startseite des Planeten'
   tags:
   - ubuntu
   - linux
   - documentation
 uup 1:
   url: http://ubuntuusers.de/search/?query={%Suchwort}&area=planet
-  title: "UbuntuUsers.de: Suche im Planeten"
+  title: 'UbuntuUsers.de: Suche im Planeten'
   tags:
   - ubuntu
   - linux
@@ -1379,14 +1379,14 @@ uup 1:
     spiele: Search for "spiele"
 uuw 0:
   url: http://wiki.ubuntuusers.de/Startseite
-  title: "UbuntuUsers.de: Startseite des Wiki"
+  title: 'UbuntuUsers.de: Startseite des Wiki'
   tags:
   - ubuntu
   - linux
   - documentation
 uuw 1:
   url: http://ubuntuusers.de/search/?query={%Suchwort}&area=wiki
-  title: "UbuntuUsers.de: Suche im Wiki"
+  title: 'UbuntuUsers.de: Suche im Wiki'
   tags:
   - ubuntu
   - linux

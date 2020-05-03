@@ -315,7 +315,7 @@ llt 2:
   - travel
   - luleå
   examples:
-    "sotargatan, järnvägen": Nästa buss från Sotargatan till Järnvägen
+    sotargatan, järnvägen: Nästa buss från Sotargatan till Järnvägen
 llt 3:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&inpTime={%Avgång}00&cmdAction=search
   title: Luleå Lokaltrafik
@@ -323,7 +323,7 @@ llt 3:
   - travel
   - luleå
   examples:
-    "sotargatan, järnvägen,10": Buss från Sotargatan till Järnvägen, avgång kl. 10
+    sotargatan, järnvägen,10: Buss från Sotargatan till Järnvägen, avgång kl. 10
 ltnbd 2:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&start=1
   title: Länstraffiken Norbotten
@@ -332,7 +332,7 @@ ltnbd 2:
   - luleå
   - norbotten
   examples:
-    "boden, luleå": Nästa buss från Boden till Luleå
+    boden, luleå: Nästa buss från Boden till Luleå
 ltnbd 3:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&T={%Avgång}&start=1
   title: Länstraffiken Norbotten
@@ -341,21 +341,21 @@ ltnbd 3:
   - luleå
   - norbotten
   examples:
-    "boden, luleå, 10": Buss från Boden till Luleå, avgång kl. 10
+    boden, luleå, 10: Buss från Boden till Luleå, avgång kl. 10
 rr 2:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&start=1
   title: Resrobot
   tags:
   - travel
   examples:
-    "stockholm, malmö": Nästa tåg från Stockholm till Malmö
+    stockholm, malmö: Nästa tåg från Stockholm till Malmö
 rr 3:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&start=1
   title: Resrobot
   tags:
   - travel
   examples:
-    "stockholm, malmö, 10": Tåg från Stockholm till Malmö, avgång kl. 10
+    stockholm, malmö, 10: Tåg från Stockholm till Malmö, avgång kl. 10
 sl 2:
   url: http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&start=1
   title: Storstockholms Lokaltrafik
@@ -363,7 +363,7 @@ sl 2:
   - travel
   - stockholm
   examples:
-    "husby, alby": Nästa tåg från Husby till Alby
+    husby, alby: Nästa tåg från Husby till Alby
 sl 3:
   url: http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&start=1
   title: Storstockholms Lokaltrafik
@@ -371,7 +371,7 @@ sl 3:
   - travel
   - stockholm
   examples:
-    "husby, alby, 10": Tåg från Husby till Alby, avgång kl. 10
+    husby, alby, 10: Tåg från Husby till Alby, avgång kl. 10
 sl 4:
   url: http://reseplanerare.sl.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&D={%Dag}&start=1
   title: Storstockholms Lokaltrafik
@@ -379,7 +379,7 @@ sl 4:
   - travel
   - stockholm
   examples:
-    "husby, alby, 10, 30.12.": Tåg från Husby till Alby, avgång kl. 10, dag 30.12.
+    husby, alby, 10, 30.12.: Tåg från Husby till Alby, avgång kl. 10, dag 30.12.
 srse 1:
   url: http://sverigesradio.se/sida/sok.aspx?q={%programmets namn}&sort=relevance
   title: Sveriges radio search

@@ -86,8 +86,7 @@ chipfind 1:
   url: http://www.chipfind.ru/datasheet/search.htm?s={%partnumber}&t=part
   title: ChipFind
 chords 1:
-  url: http://www.ultimate-guitar.com/search.php?value={%band or
-    song}&search_type=title
+  url: http://www.ultimate-guitar.com/search.php?value={%band or song}&search_type=title
   title: Ultimate-guitar search for chords/tabs etc.
 cite 1:
   url: http://citeseer.ist.psu.edu/cis?q={%query}&cs=1
@@ -184,7 +183,7 @@ creativecommons.org 1:
   title: Find within creativecommons.org (not for licensed works)
 csdblp 0:
   url: http://www.dblp.org/search/
-  title: "CompleteSearch DBLP: Load plain website"
+  title: 'CompleteSearch DBLP: Load plain website'
 csdblp 1:
   url: http://www.dblp.org/search/#query={%query}
   title: CompleteSearch DBLP
@@ -201,8 +200,8 @@ ctt 1:
   url: http://groups.google.com/group/comp.text.tex/search?group=comp.text.tex&q={%Suche}
   title: Comp.text.tex
 currency 3:
-  url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from
-    code}&to={%to code}
+  url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from code}&to={%to
+    code}
   title: Yahoo Currency converter
 cve 1:
   url: http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword={%query}
@@ -647,7 +646,7 @@ fplot 1:
   title: Footplot function ploting
 fr-an 1:
   url: http://dictionnaire.reverso.net/francais-anglais/{%query}
-  title: "Traduction Reverso : du français à l'anglais"
+  title: 'Traduction Reverso : du français à l''anglais'
 frde 1:
   url: http://dict.leo.org/?lp=frde&lang=de&search={%word}
   title: Translation French to German
@@ -707,7 +706,7 @@ g-pdf 1:
   title: Google search for pdf-files
 g100 1:
   url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&num=100
-  title: "Google Web: Show 100 results at once"
+  title: 'Google Web: Show 100 results at once'
 g? 0:
   url: http://www.google.com/intl/{$language}/about.html
   title: About Google
@@ -899,17 +898,17 @@ groo 1:
   title: Groovy documentation search
 gssl 0:
   url: https://www.google.com/search?hl={$language}
-  title: "Google Web: Load plain regional website (SSL)"
+  title: 'Google Web: Load plain regional website (SSL)'
 gssl 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
-  title: "Google Web: Plain query of regional website (SSL)"
+  title: 'Google Web: Plain query of regional website (SSL)'
 gt 1:
   url: http://gametrailers.com/search.php?s={%query}
   title: Gametrailers.com
 gt 2:
   url: http://www.google.com/search?hl={$language}&tbs=qdr:{%time}&q={%query}&ie=utf-8
-  title: "Google Web: Current query of regional website, with results only from a
-    certain time range"
+  title: 'Google Web: Current query of regional website, with results only from a
+    certain time range'
 guk 1:
   url: http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google United Kingdom
@@ -1324,8 +1323,7 @@ lin 1:
     translate}
   title: Linguee
 linfr 1:
-  url: http://www.linguee.fr/francais-anglais/search?query={%mot ou expression à
-    traduire}
+  url: http://www.linguee.fr/francais-anglais/search?query={%mot ou expression à traduire}
   title: Linguee
 lingro 1:
   url: http://lingro.com/translate/{%website/word to translate}
@@ -1930,7 +1928,7 @@ se 2:
   title: Stack Exchange
 search 1:
   url: http://wiki.serchilo.net/Special:Search?search={%page}&fulltext=Suche
-  title: "Serchilo Wiki: Page search"
+  title: 'Serchilo Wiki: Page search'
 searchmash 0:
   url: http://www.searchmash.com
   title: Search Mash
@@ -2151,8 +2149,7 @@ tpbv 1:
   url: http://thepiratebay.org/search/{%query}/0/99/200
   title: Video search
 tra 2:
-  url: http://reiseplanlegger.trafikanten.no/no/Mellom/Fra/{%query}/til/{%second
-    query}
+  url: http://reiseplanlegger.trafikanten.no/no/Mellom/Fra/{%query}/til/{%second query}
   title: Trafikanten
 trends 1:
   url: http://www.google.com/trends?q={%query}
@@ -2298,7 +2295,7 @@ uscripts 1:
   title: Userscripts
 user 1:
   url: http://wiki.serchilo.net/Special:Search?search=User:{%user}
-  title: "Serchilo Wiki: User page"
+  title: 'Serchilo Wiki: User page'
 usk 1:
   url: http://www.usk.de//cont3.php?s=search&title={%query}&s.x=38&s.y=12&s=search
   title: Spieltitel bei USK Suchen
@@ -2379,7 +2376,7 @@ wd 1:
   title: Wadoku suche
 wde 1:
   url: https://de.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
-  title: "Wikipedia Article Search (German) "
+  title: 'Wikipedia Article Search (German) '
   examples:
     berlin: Wikipedia article about Berlin
 wdyjt 1:
@@ -2393,7 +2390,7 @@ webs 1:
   title: Webshots
 wen 1:
   url: https://en.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
-  title: "Wikipedia Article Search (English) "
+  title: 'Wikipedia Article Search (English) '
   examples:
     berlin: Wikipedia article about Berlin
 wenssl 1:
@@ -2531,16 +2528,16 @@ ye 1:
   title: Yelp
 yf 1:
   url: http://finance.yahoo.com/q?s={%abbreviation}
-  title: "Yahoo Finance: Get stock quotes"
+  title: 'Yahoo Finance: Get stock quotes'
 yfa 1:
   url: http://finance.yahoo.com/lookup?s={%company}
-  title: "Yahoo Finance: Get company abbreviation"
+  title: 'Yahoo Finance: Get company abbreviation'
 yfc 1:
   url: http://finance.yahoo.com/echarts?s={%abbreviation}
-  title: "Yahoo Finance: Get quotes chart"
+  title: 'Yahoo Finance: Get quotes chart'
 ymail 0:
   url: https://login.yahoo.com/config/login_verify2?&.src=ym
-  title: Y
+  title: true
 youtube 0:
   url: http://www.youtube.com/
   title: YouTube Homepage
@@ -2600,7 +2597,7 @@ zt! 1:
   title: Znout I'm Feeling Lucky
 zt100 1:
   url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&num=100
-  title: "Znout: Show 100 results at once"
+  title: 'Znout: Show 100 results at once'
 zvab 1:
   url: http://www.zvab.com/basicSearch.do?anyWords={%Suche}&author=&title=&lastXDays=-1&itemsPerPage=10
   title: Zentrales Verzeichnis Antiquarischer Bücher

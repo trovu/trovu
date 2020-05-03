@@ -231,14 +231,14 @@ local 2:
   title: local.ch Telefonbuch
   description: Telefonbuch-Suche über local.ch
   examples:
-    "Hans Muster, Bern": Suche auf local.ch nach "Hans Muster" in "Bern"
+    Hans Muster, Bern: Suche auf local.ch nach "Hans Muster" in "Bern"
 mc 0:
   url: http//www.meteocentrale.ch/de/europa/schweiz/wetter-zuerich/details/N-3518042/
   title: Meteocentrale.ch
   tags:
   - weather
   examples:
-    "8000": Zeige Wetterwarnungen für Postleitzahl 8000
+    8000: Zeige Wetterwarnungen für Postleitzahl 8000
 plz 0:
   url: http://www.plz-suche.org/postleitzahlen-schweiz
   title: Postleitzahlen Schweiz
@@ -252,7 +252,7 @@ plz 1:
   - postleitzahl
   - geolocation
   examples:
-    "3000": Search Postleitzahlen Schweiz for "3000" (Bern)
+    3000: Search Postleitzahlen Schweiz for "3000" (Bern)
 poststelle 1:
   url: https://places.post.ch/?topic=1&PreselectText={%query}&from_directentry=True
   title: Die Post - Poststellensuche
@@ -280,7 +280,7 @@ sbb 2:
   - bahn
   - travel
   examples:
-    "bern, basel": Nächste Verbindung von Bern nach Basel
+    bern, basel: Nächste Verbindung von Bern nach Basel
 sbb 3:
   url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&start=1
   title: SBB-Auskunft
@@ -288,7 +288,7 @@ sbb 3:
   - bahn
   - travel
   examples:
-    "bern, basel, 10": Verbindung von Bern nach Basel um 10:00 Uhr
+    bern, basel, 10: Verbindung von Bern nach Basel um 10:00 Uhr
 sbb 4:
   url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
   title: SBB-Auskunft
@@ -296,7 +296,7 @@ sbb 4:
   - bahn
   - travel
   examples:
-    "bern, basel, 10, 1.1.": Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
+    bern, basel, 10, 1.1.: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
 sbbt 4:
   url: http://fahrplan.sbb.ch/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
   title: SBB-Auskunft Textversion
@@ -304,7 +304,7 @@ sbbt 4:
   - bahn
   - travel
   examples:
-    "bern, basel, 10, 1.1.": Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
+    bern, basel, 10, 1.1.: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
 transa 0:
   url: http://www.transa.ch
   title: Transa

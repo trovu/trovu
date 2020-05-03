@@ -38,8 +38,8 @@ cs 1:
   post parameters:
     set: _encz
     type: ""
-    word: "{%word|encoding=none}"
-    data: "{%word|encoding=none}"
+    word: '{%word|encoding=none}'
+    data: '{%word|encoding=none}'
   title: Czech-English (Lingea)
   tags:
   - dictionary
@@ -189,7 +189,7 @@ mwt 1:
   - dictionary
   - english
   examples:
-    "important ": Search for synonyms of "important"
+    'important ': Search for synonyms of "important"
 nl 1:
   url: http://ennl.dict.cc/?s={%word}
   title: Dutch-English (dict.cc)
@@ -261,7 +261,7 @@ syn 1:
   - thesaurus
   - english
   examples:
-    "important ": Search for synonyms of "important"
+    'important ': Search for synonyms of "important"
 tr 1:
   url: http://www.zargan.com/sozluk.asp?Sozcuk={%query}&OpenSearch=1&DisplayLang=2
   title: Turkish-English
@@ -322,8 +322,8 @@ ws 1:
 youglish 1:
   url: https://youglish.com/pronounce/{%word}/english
   title: YouGlish English Pronounciation Help
-  description: Search for a word or a name and you'll get videos of top YouTube
-    speakers naturally pronouncing the word in context.
+  description: Search for a word or a name and you'll get videos of top YouTube speakers
+    naturally pronouncing the word in context.
   tags:
   - youtube
   - language

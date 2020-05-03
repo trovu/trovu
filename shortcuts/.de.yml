@@ -112,7 +112,7 @@ bbb 2:
   - map
   - routing
   examples:
-    "alexanderplatz, zoo": Zeige Fahrradroute von Alexanderplatz zum Zoo
+    alexanderplatz, zoo: Zeige Fahrradroute von Alexanderplatz zum Zoo
 bfp 2:
   url: http://www.bayern-fahrplan.de/auskunft/fahrplanauskunft?zope_command=qi_verify&set_language=de&name_origin={%start}&name_destination={%ziel}
   title: Bayern-Fahrplan
@@ -121,7 +121,7 @@ bfp 2:
   - travel
   - bayern
   examples:
-    "münchen,nürnberg": Nächste Verbindung von München nach Nürnberg
+    münchen,nürnberg: Nächste Verbindung von München nach Nürnberg
 bh 1:
   url: http://buecherhallen.de/suche?search={%titel}&so=katalog&saveSelection=1&unchecked=
   title: Hamburger Öffentliche Bücherhallen
@@ -137,7 +137,7 @@ bhf 1:
     berlin zoo: Search Bahnhofsauskunft for "berlin zoo"
 bhnt 0:
   url: http://berlinhackandtell.rocks
-  title: "Berlin Hack & Tell: meetup and lightning talks"
+  title: 'Berlin Hack & Tell: meetup and lightning talks'
   tags:
   - hacktivism
   - open source
@@ -226,7 +226,7 @@ bibkit 1:
   - karlsruhe
   - kit
   examples:
-    xml: "search for all XML books "
+    xml: 'search for all XML books '
 bibma 0:
   url: http://www.bib.uni-mannheim.de/
   title: Uni Mannheim Bibliothek
@@ -306,7 +306,7 @@ bls 2:
   - travel
   - bus
   examples:
-    "berlin, bremen": Suche nach Fernbusverbindungen von Berlin nach Bremen
+    berlin, bremen: Suche nach Fernbusverbindungen von Berlin nach Bremen
 bls 3:
   url: http://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={%Datum|type=date|output=YYYY-MM-DD}&Passengers=1
   title: Busliniensuche.de
@@ -314,7 +314,8 @@ bls 3:
   - travel
   - bus
   examples:
-    "berlin, bremen, 28": Suche nach Fernbusverbindungen von Berlin nach Bremen am 28. dieses Monats
+    berlin, bremen, 28: Suche nach Fernbusverbindungen von Berlin nach Bremen am 28.
+      dieses Monats
 blz 1:
   url: http://www.abfragen.de/finanzen3.asp?ort={%Ort/PLZ}
   title: Bankleitzahlen (abfragen.de)
@@ -368,7 +369,7 @@ bsvg 2:
   - travel
   - braunschweig
   examples:
-    "Ludwigstraße,Siekgraben": Verbindung von Ludwigstraße nach Siekgraben
+    Ludwigstraße,Siekgraben: Verbindung von Ludwigstraße nach Siekgraben
 bt 1:
   url: http://www.billiger-telefonieren.de/vorwahlrechner/?num={%Vorwahl}
   title: Billiger Telefonieren
@@ -393,7 +394,7 @@ bvg 2:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau": Nächste Verbindung vom Zoo nach Frohnau
+    zoo!, frohnau: Nächste Verbindung vom Zoo nach Frohnau
 bvg 3:
   url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=depart&from={%Start}&to={%Ziel}&time={%Abfahrtszeit|type=time}
   title: BVG-Fahrplanauskunft
@@ -402,7 +403,7 @@ bvg 3:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau, 20:00": Verbindung vom Zoo nach Frohnau heute um 20 Uhr
+    zoo!, frohnau, 20:00: Verbindung vom Zoo nach Frohnau heute um 20 Uhr
 bvg 4:
   url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=depart&from={%Start}&to={%Ziel}&time={%Abfahrtszeit|type=time}&date={%Datum|type=date}
   title: BVG-Fahrplanauskunft
@@ -411,10 +412,11 @@ bvg 4:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau, 20:00, 27.10.": Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
+    zoo!, frohnau, 20:00, 27.10.: Verbindung vom Zoo nach Frohnau am 27.10. um 20
+      Uhr
 bvga 1:
   url: http://www.fahrinfo-berlin.de/Stadtplan/index?query={%Adresse}&search=Suchen&formquery=&address=true
-  title: "BVG-Stadtplan: Suche nach Adresse"
+  title: 'BVG-Stadtplan: Suche nach Adresse'
   tags:
   - map
   - berlin
@@ -428,7 +430,7 @@ bvgan 3:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau, 21": Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr
+    zoo!, frohnau, 21: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr
 bvgan 4:
   url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=arrive&from={%Start}&to={%Ziel}&time={%Ankunftszeit|type=time}&date={%Datum|type=date}
   title: BVG-Auskunft
@@ -437,7 +439,8 @@ bvgan 4:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau, 21, 27.10.": Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr am 27.10.
+    zoo!, frohnau, 21, 27.10.: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft
+      um 21 Uhr am 27.10.
 bvgm 0:
   url: http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox
   title: BVG-Fahrplanauskunft Startseite, mobil
@@ -453,7 +456,7 @@ bvgm 2:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau": Nächste Verbindung vom Zoo nach Frohnau
+    zoo!, frohnau: Nächste Verbindung vom Zoo nach Frohnau
 bvgm 3:
   url: http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit|type=time}&start=1
   title: BVG-Fahrplanauskunft, mobil
@@ -462,7 +465,7 @@ bvgm 3:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau, 20:00": Verbindung vom Zoo nach Frohnau heute um 20 Uhr
+    zoo!, frohnau, 20:00: Verbindung vom Zoo nach Frohnau heute um 20 Uhr
 bvgm 4:
   url: http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit|type=time}&D={%Datum|type=date}&start=1
   title: BVG-Fahrplanauskunft, mobil
@@ -471,10 +474,11 @@ bvgm 4:
   - travel
   - berlin
   examples:
-    "zoo!, frohnau, 20:00, 27.10.": Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
+    zoo!, frohnau, 20:00, 27.10.: Verbindung vom Zoo nach Frohnau am 27.10. um 20
+      Uhr
 bvgs 1:
   url: http://www.fahrinfo-berlin.de/Stadtplan/index?query={%Adresse}&search=Suchen&formquery=&station=true
-  title: "BVG Stadtplan: Suche nach Station"
+  title: 'BVG Stadtplan: Suche nach Station'
   tags:
   - bahn
   - travel
@@ -530,11 +534,10 @@ db 2:
   - travel
   - affiliate
   examples:
-    "berlin, hamburg": Nächste Bahn-Verbindung von Berlin nach Hamburg
-    "b, hh": Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über
-      Autokennzeichen
-    "sxf, txl": Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen
-      Berlin-Schönefeld, Eingabe über IATA-Flughafencodes
+    berlin, hamburg: Nächste Bahn-Verbindung von Berlin nach Hamburg
+    b, hh: Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über Autokennzeichen
+    sxf, txl: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld,
+      Eingabe über IATA-Flughafencodes
 db 3:
   url: http://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
@@ -543,7 +546,7 @@ db 3:
   - travel
   - affiliate
   examples:
-    "berlin, hamburg, 20:00": Verbindung von Berlin nach Hamburg heute um 20 Uhr
+    berlin, hamburg, 20:00: Verbindung von Berlin nach Hamburg heute um 20 Uhr
 db 4:
   url: http://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
@@ -552,7 +555,8 @@ db 4:
   - travel
   - affiliate
   examples:
-    "berlin, hamburg, 20:00, 31.12.": Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
+    berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am
+      31.12.
 dbm 2:
   url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -561,7 +565,7 @@ dbm 2:
   - bahn
   - railway
   examples:
-    "berlin, hamburg": Nächste Verbindung von Berlin nach Hamburg
+    berlin, hamburg: Nächste Verbindung von Berlin nach Hamburg
 dbm 3:
   url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -570,7 +574,7 @@ dbm 3:
   - bahn
   - railway
   examples:
-    "berlin, hamburg, 10": Verbindung von Berlin nach Hamburg heute um 10 Uhr
+    berlin, hamburg, 10: Verbindung von Berlin nach Hamburg heute um 10 Uhr
 dbm 4:
   url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -579,7 +583,7 @@ dbm 4:
   - bahn
   - railway
   examples:
-    "berlin, hamburg, 10, 28.1.": Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
+    berlin, hamburg, 10, 28.1.: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
 dbt 2:
   url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion
@@ -587,7 +591,7 @@ dbt 2:
   - bahn
   - travel
   examples:
-    "berlin, hamburg": Nächste Verbindung von Berlin nach Hamburg
+    berlin, hamburg: Nächste Verbindung von Berlin nach Hamburg
 dbt 3:
   url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion
@@ -595,7 +599,7 @@ dbt 3:
   - bahn
   - travel
   examples:
-    "berlin, hamburg, 20:00": Verbindung von Berlin nach Hamburg heute um 20 Uhr
+    berlin, hamburg, 20:00: Verbindung von Berlin nach Hamburg heute um 20 Uhr
 dbt 4:
   url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion
@@ -603,7 +607,8 @@ dbt 4:
   - bahn
   - travel
   examples:
-    "berlin, hamburg, 20:00, 31.12.": Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
+    berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am
+      31.12.
 denic 1:
   url: http://www.denic.de/webwhois/?domain={%domain}
   title: Whois (Denic)
@@ -636,7 +641,7 @@ doe 1:
   - phone
   - telefonbuch
   examples:
-    "01805996633": Suche nach Inhaber der Nummer 01805996633
+    01805996633: Suche nach Inhaber der Nummer 01805996633
 doe 2:
   url: http://www2.dasoertliche.de/Controller?form_name=search_nat&kw={%Name}&ci={%Ort}
   title: DasOertliche.de
@@ -644,7 +649,7 @@ doe 2:
   - phone
   - telefonbuch
   examples:
-    "meier, dresden": Suche Telefonnummern für "Meier" in Dresden
+    meier, dresden: Suche Telefonnummern für "Meier" in Dresden
 dpd 1:
   url: http://extranet.dpd.de/cgi-bin/delistrack?typ=1&lang=de&pknr={%Paketnummer}
   title: DPD Sendungsverfolgung
@@ -652,7 +657,7 @@ dpd 1:
   - dpd
   - shipping
   examples:
-    "01895023888534": Verfolgt die Sendung mit der Paketscheinnummer 01895023888534
+    01895023888534: Verfolgt die Sendung mit der Paketscheinnummer 01895023888534
 duden 1:
   url: http://www.duden.de/suchen/dudenonline/{%query}
   title: Duden
@@ -693,7 +698,7 @@ ek 2:
   - shopping
   - ebay
   examples:
-    "kühlschrank, berlin": Suche nach "kühlschrank" in Berlin
+    kühlschrank, berlin: Suche nach "kühlschrank" in Berlin
 farnell 1:
   url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt={%query}
   title: Farnell Deutschland
@@ -745,7 +750,7 @@ gls 1:
   - gls
   - shipping
   examples:
-    "12345678901": sucht nach Paket-Nr. 12345678901
+    12345678901: sucht nach Paket-Nr. 12345678901
 gma 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Augsburg%2C%20Deutschland
   title: Google Maps Augsburg
@@ -6297,7 +6302,7 @@ gs 2:
   - shopping
   - phone
   examples:
-    "schlüsseldienst, berlin": Suche nach Schlüsseldienst in Berlin
+    schlüsseldienst, berlin: Suche nach Schlüsseldienst in Berlin
 gsh 0:
   url: https://www.google.de/shopping
   title: Google Shopping
@@ -6340,7 +6345,7 @@ gy 2:
   - phone
   - telefonbuch
   examples:
-    "meier, dresden": Telefonnummer von "Meier" in Dresden
+    meier, dresden: Telefonnummer von "Meier" in Dresden
 hekticket 1:
   url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword={%Band}
   title: Hekticket
@@ -6378,7 +6383,7 @@ hvv 2:
   - hvv
   - hamburg
   examples:
-    "pinneberg, neugraben": Nächste Verbindung von Pinneberg nach Neugraben
+    pinneberg, neugraben: Nächste Verbindung von Pinneberg nach Neugraben
 hvv 3:
   url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn={%Start}&zn={%Ziel}&a=1&z={%Zeit}&d=&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
@@ -6388,7 +6393,8 @@ hvv 3:
   - hvv
   - hamburg
   examples:
-    "pinneberg, neugraben, 10": "Verbindung von Pinneberg nach Neugraben heute um 10:00 Uhr "
+    pinneberg, neugraben, 10: 'Verbindung von Pinneberg nach Neugraben heute um 10:00
+      Uhr '
 hvv 4:
   url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn={%Start}&zn={%Ziel}&a=1&z={%Zeit}&d={%Datum}&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
@@ -6398,7 +6404,8 @@ hvv 4:
   - hvv
   - hamburg
   examples:
-    "pinneberg, neugraben, 10, 28.11.": Verbindung von Pinneberg nach Neugraben um 10:00 Uhr am 28.11.
+    pinneberg, neugraben, 10, 28.11.: Verbindung von Pinneberg nach Neugraben um 10:00
+      Uhr am 28.11.
 iban 1:
   url: http://www.iban-rechner.de/validieren/{%iban}
   title: IBAN-Rechner
@@ -6406,7 +6413,8 @@ iban 1:
   - bank
   - iban
   examples:
-    DE12500?0?170648489890: Validate IBAN number, incl. unknown digits that will be calculated
+    DE12500?0?170648489890: Validate IBAN number, incl. unknown digits that will be
+      calculated
 idealo 1:
   url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={%Produkt}
   title: Idealo Preisvergleich
@@ -6439,8 +6447,8 @@ iwb 0:
 jf 1:
   url: https://hds.hebis.de/ubgi/Search/Results?lookfor={%argument_name}&trackSearchEvent=Einfache+Suche&type=allfields&service=catalog
   title: JLU Gießen JustFind
-  description: Diese Suchmaschine sucht nach Literatur mittels JustFind, der
-    Literatursuche der Uni Gießen (Justus-Liebig-Universität Gießen)
+  description: Diese Suchmaschine sucht nach Literatur mittels JustFind, der Literatursuche
+    der Uni Gießen (Justus-Liebig-Universität Gießen)
   tags:
   - jlu
   - giessen
@@ -6513,7 +6521,7 @@ mfg 2:
   - travel
   - mitfahrgelegenheit
   examples:
-    "berlin, hamburg": Suche Mitfahrgelegenheit von Berlin nach Hamburg
+    berlin, hamburg: Suche Mitfahrgelegenheit von Berlin nach Hamburg
 mfg 3:
   url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/{%Start}/{%Ziel}/b.html/&date=date&day={%Tag}
   title: Mitfahrgelegenheit.de
@@ -6521,7 +6529,8 @@ mfg 3:
   - travel
   - mitfahrgelegenheit
   examples:
-    "berlin, hamburg, 30": Suche Mitfahrgelegenheit von Berlin nach Hamburg am 30 des aktuellen Monats
+    berlin, hamburg, 30: Suche Mitfahrgelegenheit von Berlin nach Hamburg am 30 des
+      aktuellen Monats
 mfg 4:
   url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/{%Start}/{%Ziel}/b.html/&date=date&day={%Tag}&month={%Monat}
   title: Mitfahrgelegenheit.de
@@ -6529,7 +6538,7 @@ mfg 4:
   - travel
   - mitfahrgelegenheit
   examples:
-    "berlin, hamburg, 31,12": Suche Mitfahrgelegenheit von Berlin nach Hamburg am 31.12.
+    berlin, hamburg, 31,12: Suche Mitfahrgelegenheit von Berlin nach Hamburg am 31.12.
 mfga 0:
   url: http://www.mitfahrgelegenheit.de/searches/search_abroad
   title: Mitfahrgelegenheit.de, Ausland
@@ -6545,7 +6554,7 @@ mvv 2:
   - münchen
   - mvv
   examples:
-    "freising,petershausen": Nächste Verbindung von Freising nach Petershausen
+    freising,petershausen: Nächste Verbindung von Freising nach Petershausen
 mvv 3:
   url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute=0
   title: Elektronische Fahrplanauskunft München
@@ -6555,7 +6564,8 @@ mvv 3:
   - münchen
   - mvv
   examples:
-    "freising,petershausen,10": Nächste Verbindung von Freising nach Petershausen um 10.00 Uhr
+    freising,petershausen,10: Nächste Verbindung von Freising nach Petershausen um
+      10.00 Uhr
 mvv 4:
   url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}
   title: Elektronische Fahrplanauskunft München
@@ -6565,7 +6575,8 @@ mvv 4:
   - münchen
   - mvv
   examples:
-    "freising,petershausen,10,30": Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr
+    freising,petershausen,10,30: Nächste Verbindung von Freising nach Petershausen
+      um 10.30 Uhr
 mvv 5:
   url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}
   title: Elektronische Fahrplanauskunft München
@@ -6575,8 +6586,8 @@ mvv 5:
   - münchen
   - mvv
   examples:
-    "freising,petershausen,10,30,28": Nächste Verbindung von Freising nach
-      Petershausen um 10.30 Uhr am 28. des aktuellen Monats
+    freising,petershausen,10,30,28: Nächste Verbindung von Freising nach Petershausen
+      um 10.30 Uhr am 28. des aktuellen Monats
 mvv 6:
   url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}&itdDateMonth={%Monat}
   title: Elektronische Fahrplanauskunft München
@@ -6586,7 +6597,8 @@ mvv 6:
   - münchen
   - mvv
   examples:
-    "freising,petershausen,10,30,28,1": Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr am 28.1.
+    freising,petershausen,10,30,28,1: Nächste Verbindung von Freising nach Petershausen
+      um 10.30 Uhr am 28.1.
 nsr 0:
   url: http://www.niederschlagsradar.de/
   title: Niederschlagsradar.de
@@ -6610,9 +6622,9 @@ p 2:
   - gesetze
   - law
   examples:
-    "5, gg": Zeige Artikel 5 des Grundgesetzes
-    "12, bgb": Zeige Paragraph 12 des Bürgerlichen Gesetzbuchs
-    "129a, stgb": Zeige Paragraph 129a des Strafgesetzbuchs
+    5, gg: Zeige Artikel 5 des Grundgesetzes
+    12, bgb: Zeige Paragraph 12 des Bürgerlichen Gesetzbuchs
+    129a, stgb: Zeige Paragraph 129a des Strafgesetzbuchs
 plz 2:
   url: http://www.klicktel.de/postleitzahlen/index/search?method=searchSimple&city_id=&_dvform_posted=1&zipCity={%Ort}&street={%Strasse}
   title: Klicktel Postleitzahlsuche
@@ -6620,7 +6632,7 @@ plz 2:
   - postleitzahl
   - post
   examples:
-    "berlin, friedrichstr": Suche nach Postleitzahl für die Friedrichstr. in Berlin
+    berlin, friedrichstr: Suche nach Postleitzahl für die Friedrichstr. in Berlin
 plz 3:
   url: http://www.klicktel.de/postleitzahlen/index/search?method=searchSimple&city_id=&_dvform_posted=1&zipCity={%Ort}&street={%Strasse}+&streetNumber={%Nummer}
   title: Klicktel Postleitzahlsuche
@@ -6628,7 +6640,8 @@ plz 3:
   - postleitzahl
   - post
   examples:
-    "berlin, friedrichstr, 100": Suche nach Postleitzahl für die Friedrichstr. 100 in Berlin
+    berlin, friedrichstr, 100: Suche nach Postleitzahl für die Friedrichstr. 100 in
+      Berlin
 pollin 0:
   url: http://www.pollin.de/
   title: Pollin Electronic
@@ -6742,7 +6755,7 @@ rmv 2:
   - travel
   - frankfurt
   examples:
-    "frankfurt, wiesbaden": Verbindung von Frankfurt nach Wiesbaden
+    frankfurt, wiesbaden: Verbindung von Frankfurt nach Wiesbaden
 rmv 3:
   url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G={%Start}&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G={%Ziel}&date=%2B0&times=%2B0&start&time={%Zeit}
   title: RMV Fahrplanauskunft
@@ -6751,7 +6764,7 @@ rmv 3:
   - travel
   - frankfurt
   examples:
-    "frankfurt, wiesbaden, 10": Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr
+    frankfurt, wiesbaden, 10: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr
 rmv 4:
   url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G={%Start}&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G={%Ziel}&time={%Zeit}&date={%Datum}&times=%2B0&start
   title: RMV Fahrplanauskunft
@@ -6760,7 +6773,8 @@ rmv 4:
   - travel
   - frankfurt
   examples:
-    "frankfurt, wiesbaden, 10, 1.1.": Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 1.1.
+    frankfurt, wiesbaden, 10, 1.1.: Verbindung von Frankfurt nach Wiesbaden um 10:00
+      Uhr am 1.1.
 rsc 1:
   url: http://de.rs-online.com/web/c/?searchTerm={%Produkt}
   title: RS Components Deutschland
@@ -6794,7 +6808,7 @@ tel 1:
   - phone
   - telefonbuch
   examples:
-    "8003301000": Teilnehmer mit der Telefonnummer 08003301000
+    8003301000: Teilnehmer mit der Telefonnummer 08003301000
 tel 2:
   url: http://www.dastelefonbuch.de/Suche/{%Name}/{%Ort|type=city}
   title: Telefonbuch
@@ -6802,8 +6816,8 @@ tel 2:
   - phone
   - telefonbuch
   examples:
-    "meier, dresden": Telefonnummer von "Meier" in Dresden
-    "meier, dd": Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
+    meier, dresden: Telefonnummer von "Meier" in Dresden
+    meier, dd: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
 telm 1:
   url: http://mobil.dastelefonbuch.de/r/{%Nummer}
   title: Telefonbuch (mobil), Rückwärts-Suche
@@ -6811,15 +6825,15 @@ telm 1:
   - phone
   - telefonbuch
   examples:
-    "8003301000": Teilnehmer mit der Telefonnummer 08003301000
+    8003301000: Teilnehmer mit der Telefonnummer 08003301000
 telm 2:
-  url: " http://www.dastelefonbuch.de/Suche/{%Name}/{%Ort}"
+  url: ' http://www.dastelefonbuch.de/Suche/{%Name}/{%Ort}'
   title: Telefonbuch (mobil)
   tags:
   - phone
   - telefonbuch
   examples:
-    "meier, dresden": Telefonnummer von "Meier" in Dresden
+    meier, dresden: Telefonnummer von "Meier" in Dresden
 tho 1:
   url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw={%Produkt}
   title: Thomann.de
@@ -6853,14 +6867,14 @@ tvu 1:
   tags:
   - tv
   examples:
-    "20": Search for "20"
+    20: Search for "20"
 uwz 1:
   url: http://www.unwetterzentrale.de/uwz/getwarning_de.php?plz={%PLZ/Ort}&uwz=UWZ-DE&lang=de
   title: Unwetterzentrale.de
   tags:
   - weather
   examples:
-    "10119": Zeige Wetterwarnungen für Postleitzahl 10119
+    10119: Zeige Wetterwarnungen für Postleitzahl 10119
 vbb 1:
   url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input={%Ort}&dn?OK#focus
   title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
@@ -6878,7 +6892,7 @@ vbb 2:
   - travel
   - berlin
   examples:
-    "westhafen, frohnau": Nächste Verbindungen von Westhafen nach Frohnau
+    westhafen, frohnau: Nächste Verbindungen von Westhafen nach Frohnau
 vbb 3:
   url: http://fahrinfo.vbb.de/bin/query.exe/dn?From={%Start}&To={%Ziel}&time={%Zeit}&start=1
   title: Verkehrsverbund Berlin-Brandenburg
@@ -6887,7 +6901,8 @@ vbb 3:
   - travel
   - berlin
   examples:
-    "vbb westhafen, frohnau, 20:00": Verbindungen von Westhafen nach Frohnau heute um 20 Uhr
+    vbb westhafen, frohnau, 20:00: Verbindungen von Westhafen nach Frohnau heute um
+      20 Uhr
 vbb 4:
   url: http://fahrinfo.vbb.de/bin/query.exe/dn?From={%Start}&To={%Ziel}&time={%Zeit}&date={%Datum}&start=1
   title: Verkehrsverbund Berlin-Brandenburg
@@ -6896,7 +6911,8 @@ vbb 4:
   - travel
   - berlin
   examples:
-    "vbb westhafen, frohnau, 20:00, 31.12.12.": Verbindungen von Westhafen nach Frohnau am 31. Dezember um 20 Uhr
+    vbb westhafen, frohnau, 20:00, 31.12.12.: Verbindungen von Westhafen nach Frohnau
+      am 31. Dezember um 20 Uhr
 vgn 1:
   url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName={%Linie}
   title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
@@ -6914,7 +6930,7 @@ vgn 2:
   - travel
   - nürnberg
   examples:
-    "nürnberg, neumarkt": Verbindung von Nürnberg nach Neumarkt
+    nürnberg, neumarkt: Verbindung von Nürnberg nach Neumarkt
 vgn 3:
   url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin={%Start}&type_destination=stop&name_destination={%Ziel}&xtime={%Abfahrtszeit}&xdate=today
   title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
@@ -6923,7 +6939,7 @@ vgn 3:
   - travel
   - nürnberg
   examples:
-    "nürnberg, neumarkt, 10": Verbindung von Nürnberg nach Neumarkt um 10 Uhr
+    nürnberg, neumarkt, 10: Verbindung von Nürnberg nach Neumarkt um 10 Uhr
 vgn 4:
   url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin={%Start}&type_destination=any&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&xtime={%Abfahrtszeit}&xdate={%Datum}
   title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
@@ -6932,7 +6948,8 @@ vgn 4:
   - travel
   - nürnberg
   examples:
-    "nürnberg, neumarkt, 10, 1.1.": Verbindung von Nürnberg nach Neumarkt um 10 Uhr am 1.1.
+    nürnberg, neumarkt, 10, 1.1.: Verbindung von Nürnberg nach Neumarkt um 10 Uhr
+      am 1.1.
 vgs 2:
   url: http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S={%Start}&Z={%Ziel}&start=1
   title: Saarfahrplan
@@ -6945,9 +6962,10 @@ vgs 2:
   - saarland
   - vgs
   examples:
-    "saarbrücken hbf, zweibrücken hbf": Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf
-    "sb, zw": Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf, Eingabe
-      über Autokennzeichen
+    saarbrücken hbf, zweibrücken hbf: Nächste Verbindung von Saarbrücken hbf nach
+      Zweibrücken hbf
+    sb, zw: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf, Eingabe über
+      Autokennzeichen
 vgs 3:
   url: http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit}&start=1
   title: Saarfahrplan
@@ -6960,7 +6978,8 @@ vgs 3:
   - saarland
   - vgs
   examples:
-    "saarbrücken hbf, zweibrücken hbf, 10": Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr
+    saarbrücken hbf, zweibrücken hbf, 10: Nächste Verbindung von Saarbrücken hbf nach
+      Zweibrücken hbf um 10 Uhr
 vgs 4:
   url: http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit}&D={%Datum}&start=1
   title: Saarfahrplan
@@ -6973,8 +6992,8 @@ vgs 4:
   - saarland
   - vgs
   examples:
-    "saarbrücken hbf, zweibrücken hbf, 10, 20.10.": Nächste Verbindung von
-      Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr am 20.10.
+    saarbrücken hbf, zweibrücken hbf, 10, 20.10.: Nächste Verbindung von Saarbrücken
+      hbf nach Zweibrücken hbf um 10 Uhr am 20.10.
 voebb 0:
   url: https://voebb.de/
   title: Verbund der Öffentlichen Bibliotheken Berlins
@@ -6992,7 +7011,7 @@ vrn 2:
   - mannheim
   - ludwigshafen
   examples:
-    "heidelberg, mannheim": Nächste Verbindung von Heidelberg nach Mannheim
+    heidelberg, mannheim: Nächste Verbindung von Heidelberg nach Mannheim
 vrn 3:
   url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute=0
   title: Verkehrsverbund Rhein-Neckar
@@ -7003,7 +7022,8 @@ vrn 3:
   - mannheim
   - ludwigshafen
   examples:
-    "heidelberg, mannheim, 10": Nächste Verbindung von Heidelberg nach Mannheim um 10 Uhr
+    heidelberg, mannheim, 10: Nächste Verbindung von Heidelberg nach Mannheim um 10
+      Uhr
 vrn 4:
   url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}
   title: Verkehrsverbund Rhein-Neckar
@@ -7014,7 +7034,8 @@ vrn 4:
   - mannheim
   - ludwigshafen
   examples:
-    "heidelberg, mannheim, 10, 30": Nächste Verbindung von Heidelberg nach Mannheim um 10.30 Uhr
+    heidelberg, mannheim, 10, 30: Nächste Verbindung von Heidelberg nach Mannheim
+      um 10.30 Uhr
 vrn 5:
   url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}
   title: Verkehrsverbund Rhein-Neckar
@@ -7025,8 +7046,8 @@ vrn 5:
   - mannheim
   - ludwigshafen
   examples:
-    "heidelberg, mannheim, 10, 30, 28": Nächste Verbindung von Heidelberg nach
-      Mannheim um 10.30 Uhr am 28. des aktuellen Monats
+    heidelberg, mannheim, 10, 30, 28: Nächste Verbindung von Heidelberg nach Mannheim
+      um 10.30 Uhr am 28. des aktuellen Monats
 vrn 6:
   url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}&itdDateMonth={%Monat}
   title: Verkehrsverbund Rhein-Neckar
@@ -7037,7 +7058,8 @@ vrn 6:
   - mannheim
   - ludwigshafen
   examples:
-    "heidelberg, mannheim, 10, 30, 28, 11": Nächste Verbindung von Heidelberg nach Mannheim um 10.30 Uhr am 28.11.
+    heidelberg, mannheim, 10, 30, 28, 11: Nächste Verbindung von Heidelberg nach Mannheim
+      um 10.30 Uhr am 28.11.
 vrr 0:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?language=de&itdLPxx_transpCompany=vrr
   title: VRR-Auskunft
@@ -7053,7 +7075,7 @@ vrr 2:
   - bahn
   - vrr
   examples:
-    "dortmund, bochum": Nächste Verbindung von Dortmund nach Bochum
+    dortmund, bochum: Nächste Verbindung von Dortmund nach Bochum
 vrr 3:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute=0
   title: VRR-Auskunft
@@ -7062,7 +7084,7 @@ vrr 3:
   - bahn
   - vrr
   examples:
-    "dortmund, bochum, 10": Verbindung von Dortmund nach Bochum heute um 10 Uhr
+    dortmund, bochum, 10: Verbindung von Dortmund nach Bochum heute um 10 Uhr
 vrr 4:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}
   title: VRR-Auskunft
@@ -7071,7 +7093,7 @@ vrr 4:
   - bahn
   - vrr
   examples:
-    "dortmund, bochum, 10, 30": Verbindung von Dortmund nach Bochum heute um 10.30 Uhr
+    dortmund, bochum, 10, 30: Verbindung von Dortmund nach Bochum heute um 10.30 Uhr
 vrr 5:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}
   title: VRR-Auskunft
@@ -7080,7 +7102,7 @@ vrr 5:
   - bahn
   - vrr
   examples:
-    "dortmund, bochum, 10, 30, 28": Verbindung von Dortmund nach Bochum um 10.30 Uhr
+    dortmund, bochum, 10, 30, 28: Verbindung von Dortmund nach Bochum um 10.30 Uhr
       am 28. des aktuellen Monats
 vrr 6:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}&itdDateMonth={%Monat}
@@ -7090,7 +7112,8 @@ vrr 6:
   - bahn
   - vrr
   examples:
-    "dortmund, bochum, 10, 30, 28, 1": Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28.1.
+    dortmund, bochum, 10, 30, 28, 1: Verbindung von Dortmund nach Bochum um 10.30
+      Uhr am 28.1.
 vvo 2:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeittyp%5D=dep
   title: Verkehrsverbund Oberelbe
@@ -7100,7 +7123,7 @@ vvo 2:
   - vvo
   - dresden
   examples:
-    "priestewitz, krippen": Nächste Verbindung von Priestewitz nach Krippen
+    priestewitz, krippen: Nächste Verbindung von Priestewitz nach Krippen
 vvo 3:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeit%5D={%Zeit}&vaform%5Bzeittyp%5D=dep
   title: Verkehrsverbund Oberelbe
@@ -7110,7 +7133,8 @@ vvo 3:
   - vvo
   - dresden
   examples:
-    "priestewitz, krippen, 10": Verbindung von Priestewitz nach Krippen heute um 10:00 Uhr
+    priestewitz, krippen, 10: Verbindung von Priestewitz nach Krippen heute um 10:00
+      Uhr
 vvo 4:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeit%5D={%Zeit}&vaform%5Bzeittyp%5D=dep&vaform%5Bdatum%5D={%Datum}
   title: Verkehrsverbund Oberelbe
@@ -7120,7 +7144,8 @@ vvo 4:
   - vvo
   - dresden
   examples:
-    "priestewitz, krippen, 10, 28.11.": Verbindung von Priestewitz nach Krippen um 10:00 Uhr am 28.11.
+    priestewitz, krippen, 10, 28.11.: Verbindung von Priestewitz nach Krippen um 10:00
+      Uhr am 28.11.
 vvs 2:
   url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin={%Start}&name_destination={%Ziel}
   title: VVS Verkehrsverbund Stuttgart
@@ -7129,7 +7154,7 @@ vvs 2:
   - bahn
   - stuttgart
   examples:
-    "schwabstr, hbf": Nächste Verbindung von Schwabstr. zum Hauptbahnhof
+    schwabstr, hbf: Nächste Verbindung von Schwabstr. zum Hauptbahnhof
 we 0:
   url: http://www.wetter.com/?forcesite=1
   title: Wetter.com

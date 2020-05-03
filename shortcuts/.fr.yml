@@ -99,7 +99,7 @@ pj 2:
   url: http://www.pagesjaunes.fr/trouverlesprofessionnels/rechercheClassique.do?quoiqui={%quoiqui}&ou={%ou}
   title: Pages Jaunes
   examples:
-    "tv, paris": Search Pages Jaunes for TV in Paris
+    tv, paris: Search Pages Jaunes for TV in Paris
 sncf 2:
   url: https://www.oui.sncf/train/trajet/{%origine}/{%destination}
   title: SNCF
@@ -107,7 +107,7 @@ sncf 2:
   - travel
   - train
   examples:
-    "paris, lyon": Train Paris - Lyon
+    paris, lyon: Train Paris - Lyon
 soc 1:
   url: http://www.societe.com/cgi-bin/search?champs={%name}
   title: Societé Company Register

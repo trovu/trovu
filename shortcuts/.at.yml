@@ -799,7 +799,7 @@ oebb 2:
   - bahn
   - travel
   examples:
-    "wien, salzburg": Verbindung von Wien nach Salzburg
+    wien, salzburg: Verbindung von Wien nach Salzburg
 oebb 3:
   url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1
   title: ÖBB-Auskunft
@@ -807,7 +807,7 @@ oebb 3:
   - bahn
   - travel
   examples:
-    "wien, salzburg, 10": Verbindung von Wien nach Salzburg um 10:00 Uhr
+    wien, salzburg, 10: Verbindung von Wien nach Salzburg um 10:00 Uhr
 oebb 4:
   url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1
   title: ÖBB-Auskunft
@@ -815,7 +815,7 @@ oebb 4:
   - bahn
   - travel
   examples:
-    "wien, salzburg, 10, 1.1.": Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
+    wien, salzburg, 10, 1.1.: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
 rsc 1:
   url: http://at.rs-online.com/web/c/?searchTerm={%Produkt}
   title: RS Components Österreich
@@ -851,7 +851,7 @@ zal 1:
   - bahn
   - travel
   examples:
-    "wien, salzburg": Verbindung von Wien nach Salzburg
+    wien, salzburg: Verbindung von Wien nach Salzburg
 öbb 3:
   url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1
   title: ÖBB-Auskunft
@@ -859,7 +859,7 @@ zal 1:
   - bahn
   - travel
   examples:
-    "wien, salzburg, 10": Verbindung von Wien nach Salzburg um 10:00 Uhr
+    wien, salzburg, 10: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
   url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1
   title: ÖBB-Auskunft
@@ -867,4 +867,4 @@ zal 1:
   - bahn
   - travel
   examples:
-    "wien, salzburg, 10, 1.1.": Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
+    wien, salzburg, 10, 1.1.: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.

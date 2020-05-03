@@ -47,8 +47,8 @@ g 1:
   examples:
     madrid: Buscar "madrid" con Google
 gdfv 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura,
-    España&daddr={%destination}, Fuerteventura, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura, España&daddr={%destination},
+    Fuerteventura, España
   title: Google Maps Directions (Routing), Fuerteventura
   tags:
   - maps
@@ -57,10 +57,10 @@ gdfv 2:
   - route
   - fuerteventura
   examples:
-    "corralejo, morro jable": Get a route from Corralejo to Morro Jable
+    corralejo, morro jable: Get a route from Corralejo to Morro Jable
 gdgc 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria,
-    España&daddr={%destination}, Gran Canaria, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria, España&daddr={%destination},
+    Gran Canaria, España
   title: Google Maps Directions (Routing), Gran Canaria
   tags:
   - maps
@@ -69,10 +69,10 @@ gdgc 2:
   - route
   - gran canaria
   examples:
-    "las palmas, maspalomas": Get a route from Las Palmas to Maspalomas
+    las palmas, maspalomas: Get a route from Las Palmas to Maspalomas
 gdlz 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote,
-    España&daddr={%destination}, Lanzarote, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote, España&daddr={%destination},
+    Lanzarote, España
   title: Google Maps Directions (Routing), Lanzarote
   tags:
   - maps
@@ -81,10 +81,10 @@ gdlz 2:
   - route
   - lanzarote
   examples:
-    "arrecife, playa blanca": Get a route from Arrecife to Playa Blanca
+    arrecife, playa blanca: Get a route from Arrecife to Playa Blanca
 gdtf 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife,
-    España&daddr={%destination}, Tenerife, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife, España&daddr={%destination},
+    Tenerife, España
   title: Google Maps Directions (Routing), Tenerife
   tags:
   - maps
@@ -93,7 +93,7 @@ gdtf 2:
   - route
   - tenerife
   examples:
-    "santa cruz, la laguna": Get a route from Santa Cruz to La Laguna
+    santa cruz, la laguna: Get a route from Santa Cruz to La Laguna
 gma 1:
   url: http://maps.google.com/maps?hl={$language}&q={%dirección}%2C%20Alicante%2C%20Espa%C3%B1a
   title: Google Maps Alicante
@@ -624,7 +624,7 @@ titsa 2:
   - google
   - maps
   examples:
-    "weyler, trinidad": Próxima connection de Weyler a Trinidad
+    weyler, trinidad: Próxima connection de Weyler a Trinidad
 titsa 3:
   url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&time={%salida}&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
@@ -635,7 +635,7 @@ titsa 3:
   - google
   - maps
   examples:
-    "weyler, trinidad, 10": Connection de Weyler a Trinidad a las 10
+    weyler, trinidad, 10: Connection de Weyler a Trinidad a las 10
 zal 1:
   url: http://www.zalando.es/catalogo/?q={%product}
   title: Zalando.es

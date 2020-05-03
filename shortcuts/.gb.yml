@@ -48,7 +48,7 @@ tfl 2:
   - transport
   - london
   examples:
-    "brixton, paddington": Search the next connection from Brixton to Paddington
+    brixton, paddington: Search the next connection from Brixton to Paddington
 tfl 3:
   url: http://journeyplanner.tfl.gov.uk/user/XSLT_TRIP_REQUEST2?language=en&sessionID=0&requestID=0&ptOptionsActive=1&itOptionsActive=1&imparedOptionsActive=1&ptAdvancedOptions=1&advOptActive_2=1&advOpt_2=1&execInst=normal&command=&itdLPxx_request=&itdLPxx_view=&itdLPxx_tubeMap=&calculateDistance=1&imageFormat=png|pdf&imageOnly=1&imageWidth=705&imageHeight=500&tt_valid_until=20131223&name_origin={%from}&nameState_origin=notidentified&nameDefaultText_origin=Enter+start+location...&type_origin=stop&place_origin=London&name_destination={%to}&nameState_destination=notidentified&nameDefaultText_destination=Enter+end+location...&type_destination=stop&place_destination=London&placeDefaultText_via=London&name_via=Enter+location...&nameState_via=notidentified&nameDefaultText_via=Enter+location...&type_via=stop&place_via=London&itdTripDateTimeDepArr=dep&stepfree-access=no-requirements&routeType=LEASTTIME&includedMeans=checkbox&inclMOT_11=on&inclMOT_2=on&inclMOT_1=on&inclMOT_5=on&inclMOT_0=on&inclMOT_4=on&inclMOT_9=on&inclMOT_7=on&inclMOT_8=on&inclMOT_3=on&trITMOTvalue=20&trITMOT=100&changeSpeed=normal&itdTime={%hour}:00
   title: Transport for London
@@ -57,7 +57,8 @@ tfl 3:
   - transport
   - london
   examples:
-    "brixton, paddington, 10": Search the next connection from Brixton to Paddington at 10:00
+    brixton, paddington, 10: Search the next connection from Brixton to Paddington
+      at 10:00
 tl 2:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{$now|output=DD/MM/YY/HH/mm}/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com
@@ -65,7 +66,7 @@ tl 2:
   - travel
   - transport
   examples:
-    "manchester, london": Search for trains from Manchester to London
+    manchester, london: Search for trains from Manchester to London
 tl 4:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{%date}/{%time}/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com
@@ -73,7 +74,7 @@ tl 4:
   - travel
   - transport
   examples:
-    "manchester, london, 22/06/16, 14/30": Search for trains from Manchester to London
+    manchester, london, 22/06/16, 14/30: Search for trains from Manchester to London
 tv 0:
   url: http://www.tvguide.co.uk/
   title: tvguide.co.uk
