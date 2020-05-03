@@ -228,25 +228,9 @@ academic 1:
   - science
   examples:
     chomsky: Search for "chomsky"
-acl 0:
+acl 1:
   url: http://aclanthology.info/catalog?utf8=%E2%9C%93&search_field=all_fields&q={%query}
   title: ACL Anthology
-  description: The ACL Anthology hosts papers on the study of computational linguistics
-    and natural language processing.
-  tags:
-  - language
-  - linguistics
-  - science
-  - acl
-  - computational linguistics
-  - literature
-  - academia
-  - bibliography
-acl 1:
-  url: https://www.aclweb.org/anthology/search/?q={%query}
-  title: ACL Anthology
-  description: The ACL Anthology hosts papers on the study of computational linguistics
-    and natural language processing.
   tags:
   - language
   - linguistics
@@ -1435,8 +1419,6 @@ debt 1:
   - debian
   examples:
     grub2: Look at the grub2 package in the Debian Package Tracker
-  tests:
-    grub2: 'maintainer:'
 derivative 1:
   url: http://www.wolframalpha.com/input/?i=derivative%20{%query}
   title: 'WolframAlpha: Derivative'
@@ -4573,8 +4555,6 @@ poef 1:
   examples:
     Rhoa: Search  for "Rhoa"
     How to Smash Heads: Search  for "How to Smash Heads" - Korgoth's Facebreaker guide
-  tests:
-    Rhoa: Forum Post
 poew 1:
   url: http://pathofexile.gamepedia.com/index.php?search={%query}&go=Go
   title: Inofficial Path of Exile Wiki
@@ -4589,8 +4569,6 @@ poew 1:
     Vendor recipe system: Search inofficial Path of Exile Wiki for "Vendor recipe
       system"
     Vaal Orb: Search inofficial Path of Exile Wiki for "Vaal Orb"
-  tests:
-    health: Search results
 printertestfiles 0:
   url: http://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
   title: Printer test files
@@ -4618,29 +4596,15 @@ py 0:
   - programming
   - python
 py 1:
-  url: https://docs.python.org/3/search.html?q={%query}
-  title: Python 3 documentation
-  tags:
-  - programming
-  - python
-  examples:
-    optparse: Get documentation for opt parse
-py2 0:
-  url: http://docs.python.org/2/
-  title: Python 2 documentation
-  tags:
-  - programming
-  - python
-py2 1:
   url: https://docs.python.org/2/search.html?q={%query}
-  title: Python 2 documentation
+  title: Python documentation
   tags:
   - programming
   - python
   examples:
     optparse: Get documentation for opt parse
 py3 0:
-  url: http://docs.python.org/3/
+  url: http://docs.python.org/py3k/
   title: Python 3 documentation
   tags:
   - programming
@@ -5178,7 +5142,7 @@ subscene 0:
   tags:
   - subtitles
 subscene 1:
-  url: https://subscene.com/subtitles/searchbytitle?query={%movie}
+  url: https://subscene.com/subtitles/title?q={%movie}
   title: Subscene
   tags:
   - subtitles
@@ -5247,6 +5211,12 @@ szl 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Swazi lilangeni into Euros
+t 0:
+  url: http://www.technorati.com
+  title: Technorati
+  tags:
+  - technorati
+  - blogs
 tails 0:
   url: https://tails.boum.org/
   title: 'The amnesic incoginto live system, that aims to preserve your privacy and
@@ -5555,13 +5525,6 @@ twaz 1:
   - twitter
   examples:
     serchilo: Search for "serchilo"
-twb 0:
-  url: https://twitter.com/i/bookmarks
-  title: Twitter Bookmarks
-  tags:
-  - twitter
-  - social network
-  - bookmarks
 twd 2:
   url: http://finance.yahoo.com/currency-converter/#from=twd;to={%to code};amt={%amount}
   title: 'Convert New Taiwan dollar (Yahoo) '
@@ -5610,17 +5573,20 @@ twl 2:
   examples:
     en, berlin: Search Twitter for "berlin" only in English tweets
 twm 0:
-  url: https://twitter.com/messages
-  title: Twitter Messages
+  url: https://mobile.twitter.com/?lang={$language}
+  title: Twitter Homepage, mobile
   tags:
   - twitter
   - social network
-  - message
-  - messaging
-  - chat
-  - private message
-  - instant message
-  - messenger
+  - mobile
+twm 1:
+  url: https://mobile.twitter.com/search?lang={$language}&q={%query}
+  title: Twitter Search, mobile
+  tags:
+  - twitter
+  - social network
+  examples:
+    berlin: Search for "berlin"
 twme 1:
   url: https://twitter.com/search?lang={$language}&q={%query}
   title: Twitter mentions

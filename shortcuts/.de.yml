@@ -6430,7 +6430,7 @@ ikea 0:
   - furniture
   - shopping
 ikea 1:
-  url: https://www.ikea.com/de/de/search/products/?q={%query}
+  url: http://www.ikea.com/de/de/search/?query={%query}
   title: IKEA Deutschland
   tags:
   - ikea
@@ -6492,14 +6492,6 @@ koka 1:
   - konzerte
   examples:
     berlin: Suche nach Konzerten und Events in Berlin
-kununu 1:
-  url: https://www.kununu.com/de/search#/?q={%query}
-  title: Kununu Deutschland
-  description: Suche nach Arbeitgeber-Bewertungen
-  tags:
-  - employer
-  examples:
-    acme: Suche nach Bewertungen der Firma ACME als Arbeitgeber
 kvk 1:
   url: http://kvk.ubka.uni-karlsruhe.de/hylib-bin/kvk/nph-kvk2.cgi?maske=kvk-last&lang=de&title=KIT-Bibliothek%3A+Karlsruher+Virtueller+Katalog+KVK+%3A+Ergebnisanzeige&head=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-kit-head-de-2010-11-08.html&header=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-kit-header-de-2010-11-08.html&spacer=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-kit-spacer-de-2010-11-08.html&footer=http%3A%2F%2Fwww.ubka.uni-karlsruhe.de%2Fkvk%2Fkvk%2Fkvk-kit-footer-de-2010-11-08.html&css=none&input-charset=utf-8&ALL={%Suche}&kataloge=SWB&kataloge=BVB&kataloge=NRW&kataloge=HEBIS&kataloge=HEBIS_RETRO&kataloge=KOBV_SOLR&kataloge=GBV&kataloge=DDB&kataloge=STABI_BERLIN&kataloge=TIB&kataloge=OEVK_GBV&kataloge=VD17&serchilo=1
   title: Karlsruher Virtueller Katalog
@@ -6723,18 +6715,6 @@ radarb 0:
   - weather
   - rain
   - berlin
-real 0:
-  url: https://www.real.de/
-  title: Real.de Startseite
-  tags:
-  - shopping
-real 1:
-  url: https://www.real.de/item/search/?search_value={%Suche}&valueKey_search_value=
-  title: Real.de
-  tags:
-  - shopping
-  examples:
-    spiele: Suche auf Real.de nach "spiele"
 reichelt 0:
   url: http://www.reichelt.de/
   title: Reichelt Elektronik
