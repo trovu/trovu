@@ -953,8 +953,7 @@ gwtb 1:
   url: http://www.google.com/search?hl=en&q=inurl%3Aapidocs%2Fcom%2Fgithub%2Fgwtbootstrap%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: GWT Bootstrap API
 gww 1:
-  url: http://www.google.com/search?hl={$language}&q={%query}
-  -site:wikipedia.org&ie=utf-8
+  url: http://www.google.com/search?hl={$language}&q={%query}%20-site:wikipedia.org&ie=utf-8
   title: Google Web search without wikipedia.org
 hbr 1:
   url: http://hbr.org/search/{%query}
