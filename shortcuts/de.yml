@@ -710,7 +710,7 @@ hpreis 1:
   examples:
     computer: Search for "computer"
 hr 1:
-  url: http://www.crodict.com/search.html?submit=&l=1&t=1&q={%Wort}
+  url: https://www.crodict.com/german-croatian/{%Wort}
   title: Kroatisch-Deutsch (crodict.com)
   tags:
   - language
