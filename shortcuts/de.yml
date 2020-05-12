@@ -1015,6 +1015,17 @@ pld 1:
   - german
   examples:
     baum: Search for "baum"
+pli 1:
+  url: https://www.linguee.de/deutsch-polnisch/search?query={%Wort}&source=auto
+  title: Polnisch-Deutsch (Linguee)
+  tags:
+  - language
+  - dictionary
+  - german
+  - polish
+  examples:
+    baum: Übersetzung von "baum"
+    drzewo: Übersetzung von "drzewo"    
 plp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Pons)
