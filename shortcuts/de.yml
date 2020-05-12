@@ -996,8 +996,8 @@ ot? 0:
   - language
   - thesaurus
 pl 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=depl
-  title: Polnisch-Deutsch (pons.de)
+  url: https://de.langenscheidt.com/deutsch-polnisch/search?term={%Wort}&in=&l=depl
+  title: Polnisch-Deutsch (Langenscheidt)
   tags:
   - language
   - dictionary
@@ -1015,6 +1015,17 @@ pld 1:
   - german
   examples:
     baum: Search for "baum"
+plp 1:
+  url: http://en.pons.com/translate?q={%Wort}&in=&l=depl
+  title: Polnisch-Deutsch (Pons)
+  tags:
+  - language
+  - dictionary
+  - german
+  - polish
+  examples:
+    baum: Übersetzung von "baum"
+    drzewo: Übersetzung von "drzewo"
 pt 1:
   url: http://en.pons.com/translate?q={%query}&in=&l=dept
   title: Portugiesisch-Deutsch (Pons)
