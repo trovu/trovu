@@ -5823,6 +5823,24 @@ uyu 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Uruguayan peso into Euros
+uxse 0:
+  url: https://unix.stackexchange.com/
+  title: Unix Stack Exchange
+  tags:
+  - programming
+  - unix
+  - linux
+  - stackexchange
+uxse 1:
+  url: https://unix.stackexchange.com/search?q={%query}
+  title: Unix Stack Exchange
+  tags:
+  - programming
+  - unix
+  - linux
+  - stackexchange
+  examples:
+    debian: Questions about debian    
 vbblive 0:
   url: http://fahrinfo.vbb.de/bin/help.exe/dn?L=vs_mobilitymap&tpl=fullmap&tabApp=show
   title: VBB Verkehrsverbund Berlin-Brandenburg Livemap
