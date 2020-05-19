@@ -56,14 +56,6 @@ gfp 1:
   - germany
   examples:
     berlin: Chercher "berlin"
-gn 1:
-  url: https://www.google.fr/search?q={%query}&tbm=nws&hl=fr&gl=FR&ceid=FR%3Afr
-  title: Google News (France)
-  tags:
-  - news
-  - google
-  examples:
-    obama: Google News nach obama durchsuchen
 lar 1:
   url: http://www.larousse.fr/dictionnaires/francais/{%mot}
   title: 'Larousse, Dictionnaires de français '

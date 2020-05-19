@@ -44,14 +44,6 @@ en 1:
   examples:
     tree: Traducción de "tree"
     arbol: Traducción de "arbol"
-gn 1:
-  url: https://www.google.es/search?q={%query}&tbm=nws&hl=es&gl=ES&ceid=ES%3Aes
-  title: Google News (Español US)
-  tags:
-  - news
-  - google
-  examples:
-    obama: Google News nach obama durchsuchen
 last 1:
   url: http://www.last.fm/search?setlang=es&q={%artist}
   title: Last.fm
