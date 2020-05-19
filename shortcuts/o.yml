@@ -2821,19 +2821,19 @@ gmov 2:
   examples:
     new york, love: Show movies about "love" running in New York cinemas
 gn 0:
-  url: https://www.google.com/news?hl={$language}
-  title: Google News Homepage
+  url: https://news.google.com/topstories?&gl={$country|uppercase}
+  title: Google News of your country
   tags:
   - news
   - google
 gn 1:
-  url: https://www.google.com/search?q={%query}&tbm=nws
-  title: Google News (USA)
+  url: https://news.google.com/search?q={%query}&gl={$country|uppercase}
+  title: Google News of your country
   tags:
   - news
   - google
   examples:
-    obama: Search Google News for obama
+    berlin: Search Google News for berlin
 gnf 2:
   url: http://finance.yahoo.com/currency-converter/#from=gnf;to={%to code};amt={%amount}
   title: 'Convert Guinean franc (Yahoo) '
@@ -2846,6 +2846,17 @@ gnf 2:
 gnu 2:
   url: https://www.google.com/search?ned={%language-code}&q={%query}&source=lnms&tbm=nws
   title: Google News (universal language select)
+  # deprecated
+  # show how to override country with:
+  # .fr.gn foobar
+gns 1:
+  url: https://www.google.de/search?q={%query}&tbm=nws&hl={$language}
+  title: Google News search in your language
+  tags:
+  - news
+  - google
+  examples:
+    berlin: Search Google News for berlin
 gp 0:
   url: https://play.google.com/store
   title: Google Play
