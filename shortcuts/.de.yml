@@ -6279,14 +6279,6 @@ gmüb 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Überlingen
-gn 1:
-  url: https://www.google.de/search?q={%query}&tbm=nws&source=lnms&hl=de&ned=de
-  title: Google News (Deutschland)
-  tags:
-  - news
-  - google
-  examples:
-    obama: Google News nach obama durchsuchen
 gps 1:
   url: http://www.google.de/products?hl={$language}&q={%query}
   title: Google Products (Deutschland)
