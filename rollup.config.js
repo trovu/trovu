@@ -3,9 +3,9 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 
 export default {
-  input: 'public/js/index.js',
+  input: 'public/js/process.js',
   output: {
-    file: 'public/bundle/index.js',
+    file: 'public/bundle/process.js',
     format: 'iife',
     name: 'websearch'
   },
