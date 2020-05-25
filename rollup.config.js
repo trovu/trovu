@@ -5,8 +5,8 @@ import json from '@rollup/plugin-json';
 export default {
   input: 'public/js/process.js',
   output: {
-    file: 'public/bundle/process.js',
-    format: 'iife',
+    dir: 'public/bundle/',
+    format: 'esm',
     name: 'websearch'
   },
   plugins: [resolve(), commonjs(), json()]
