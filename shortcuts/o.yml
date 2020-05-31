@@ -2086,6 +2086,16 @@ findutf 0:
   - unicode character
   - image
   - online tool
+fiverr 0:
+  url: https://www.fiverr.com/
+  title: Fiverr
+  tags:
+  - services
+fiverr 1:
+  url: https://www.fiverr.com/search/gigs?query={%query}
+  title: Fiverr Gigs
+  tags:
+  - services
 fjd 2:
   url: http://finance.yahoo.com/currency-converter/#from=fjd;to={%to code};amt={%amount}
   title: 'Convert Fiji dollar (Yahoo) '
