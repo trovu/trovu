@@ -737,8 +737,8 @@ htp 0:
   tags:
   - heise
 hu 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=dehu
-  title: Ungarisch-Deutsch (pons.de)
+  url: https://de.langenscheidt.com/deutsch-ungarisch/search?term={%Wort}
+  title: Ungarisch-Deutsch (Langenscheidt)
   tags:
   - language
   - dictionary
@@ -746,6 +746,7 @@ hu 1:
   - hungarian
   examples:
     baum: Übersetzung von "baum"
+    fa: Übersetzung von "fa"
 hud 1:
   url: http://dehu.dict.cc/?s={%Wort}
   title: Ungarisch-Deutsch (dict.cc)
@@ -755,6 +756,16 @@ hud 1:
   - german
   examples:
     baum: Search for "baum"
+hup 1:
+  url: http://en.pons.com/translate?q={%Wort}&in=&l=dehu
+  title: Ungarisch-Deutsch (pons.de)
+  tags:
+  - language
+  - dictionary
+  - german
+  - hungarian
+  examples:
+    baum: Übersetzung von "baum"
 hwho 1:
   url: http://www.heise.de/netze/tools?rm=whois&plugin={%URL}
   title: 'Heise Whois Netzwerk-Tool '
