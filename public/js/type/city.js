@@ -1,3 +1,4 @@
+import jsyaml from 'js-yaml';
 import Helper from "../helper.js";
 
 export default class CityParser {
