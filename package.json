@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "doc": "rm -r doc ; jsdoc public/js/* --configure jsdoc.json --destination doc",
-    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production"
+    "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production"
   },
   "repository": {
     "type": "git",
