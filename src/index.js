@@ -361,6 +361,9 @@ function getParamStr() {
   return paramStr;
 }
 
+/**
+ * Update the whole config.
+ */
 async function updateConfig() {
 
   await setDefaultNamespaces();
