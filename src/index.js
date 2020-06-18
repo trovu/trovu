@@ -1,4 +1,4 @@
-import jsyaml from 'js-yaml';
+import jsyaml from "js-yaml";
 
 import Helper from "./helper.js";
 import Env from "./env.js";
@@ -61,10 +61,12 @@ async function getSuggestions() {
     let shortcuts = namespace.shortcuts;
     for (let key in shortcuts) {
       let suggestion = {};
-      [suggestion.keyword, suggestion.argumentCount] = key.split(' ');
+      [suggestion.keyword, suggestion.argumentCount] = key.split(" ");
       suggestion.namespace = namespace.name;
-      suggestion.arguments = ProcessUrl.getArgumentsFromString(shortcuts[key].url);
-      suggestion.title = shortcuts[key].title || '';
+      suggestion.arguments = ProcessUrl.getArgumentsFromString(
+        shortcuts[key].url
+      );
+      suggestion.title = shortcuts[key].title || "";
       // If not yet present: reachable.
       // (Because we started with most precendent namespace.)
       if (!(key in foundShortcuts)) {
@@ -111,7 +113,7 @@ async function initialize(event) {
   $("#query")
     .autocomplete({
       minLength: 1,
-      source: function(request, response) {
+      source: function (request, response) {
         let matches = {
           keywordFullReachable: [],
           keywordFullUnreachable: [],
@@ -120,7 +122,7 @@ async function initialize(event) {
           titleBeginReachable: [],
           titleBeginUnreachable: [],
           titleMiddleReachable: [],
-          titleMiddleUnreachable: []
+          titleMiddleUnreachable: [],
         };
 
         // Only use first word of request.term.
@@ -181,9 +183,9 @@ async function initialize(event) {
           )
           .slice(0, 20);
         response(result);
-      }
+      },
     })
-    .data("uiAutocomplete")._renderItem = function(ul, item) {
+    .data("uiAutocomplete")._renderItem = function (ul, item) {
     var namespace_html = '<span class="namespace">' + item.namespace;
     ("</span>");
 
@@ -225,7 +227,7 @@ async function initialize(event) {
   };
 
   $("#query").focus();
-};
+}
 
 function submitQuery(event) {
   // Prevent default sending as GET parameters.
@@ -242,21 +244,21 @@ function submitQuery(event) {
 
   // Redirect to process script.
   window.location.href = processUrl;
-};
+}
 
 function addSearch(event) {
   let urlOpensearch = document
     .querySelector("#linkSearch")
     .getAttribute("href");
   window.external.AddSearchProvider(urlOpensearch);
-};
+}
 
 function saveSettings(event) {
   env.language = document.querySelector("#languageSetting").value;
   env.country = document.querySelector("#countrySetting").value;
 
   updateConfig();
-};
+}
 
 /**
  * Fill in the fields of the settings modal.
@@ -332,6 +334,6 @@ document.querySelector("button.add-search").onclick = addSearch;
 document.querySelector("#settingsSave").onclick = saveSettings;
 
 // On Settings modal open.
-$("#settingsModal").on("show.bs.modal", function(e) {
+$("#settingsModal").on("show.bs.modal", function (e) {
   displaySettings();
 });
