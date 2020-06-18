@@ -65,7 +65,6 @@ function getParamStr() {
  * Get the URL to the Process script.
  */
 function getProcessUrl() {
-
   let params = getParams();
   params["query"] = document.getElementById("query").value;
 
@@ -110,7 +109,6 @@ async function getSuggestions() {
 }
 
 async function initialize() {
-
   // Init environment.
   await env.populate();
 
@@ -130,11 +128,17 @@ async function initialize() {
 
 function setLanguagesAndCountriesList() {
   const { countries, languages } = countriesList;
-  let languageSetting = document.querySelector('#languageSetting');
-  Object.keys(languages).forEach((key) => languageSetting.appendChild(new Option(languages[key].name, key.toLocaleLowerCase()))
+  let languageSetting = document.querySelector("#languageSetting");
+  Object.keys(languages).forEach((key) =>
+    languageSetting.appendChild(
+      new Option(languages[key].name, key.toLocaleLowerCase())
+    )
   );
-  let countrySetting = document.querySelector('#countrySetting');
-  Object.keys(countries).forEach((key) => countrySetting.appendChild(new Option(countries[key].name, key.toLocaleLowerCase()))
+  let countrySetting = document.querySelector("#countrySetting");
+  Object.keys(countries).forEach((key) =>
+    countrySetting.appendChild(
+      new Option(countries[key].name, key.toLocaleLowerCase())
+    )
   );
 }
 
@@ -184,8 +188,7 @@ function setAutocomplete() {
           if (keyword == suggestion.keyword) {
             if (suggestion.reachable) {
               matches.keywordFullReachable.push(suggestion);
-            }
-            else {
+            } else {
               matches.keywordFullReachable.push(suggestion);
             }
             continue;
@@ -194,8 +197,7 @@ function setAutocomplete() {
           if (pos == 0) {
             if (suggestion.reachable) {
               matches.keywordBeginReachable.push(suggestion);
-            }
-            else {
+            } else {
               matches.keywordBeginUnreachable.push(suggestion);
             }
             continue;
@@ -204,8 +206,7 @@ function setAutocomplete() {
           if (pos == 0) {
             if (suggestion.reachable) {
               matches.titleBeginReachable.push(suggestion);
-            }
-            else {
+            } else {
               matches.titleBeginUnreachable.push(suggestion);
             }
             continue;
@@ -213,8 +214,7 @@ function setAutocomplete() {
           if (pos > 0) {
             if (suggestion.reachable) {
               matches.titleMiddleReachable.push(suggestion);
-            }
-            else {
+            } else {
               matches.titleMiddleUnreachable.push(suggestion);
             }
             continue;
@@ -237,53 +237,53 @@ function setAutocomplete() {
       },
     })
     .data("uiAutocomplete")._renderItem = function (ul, item) {
-      var namespace_html = '<span class="namespace">' + item.namespace;
-      ("</span>");
+    var namespace_html = '<span class="namespace">' + item.namespace;
+    ("</span>");
 
-      var keyword = item.keyword;
+    var keyword = item.keyword;
 
-      // add "namespace." if unreachable
-      if (!item.reachable) {
-        keyword = item.namespace + "." + keyword;
-      }
-      var argument_names = Object.keys(item.arguments).join(", ");
-      var title = item.title;
+    // add "namespace." if unreachable
+    if (!item.reachable) {
+      keyword = item.namespace + "." + keyword;
+    }
+    var argument_names = Object.keys(item.arguments).join(", ");
+    var title = item.title;
 
-      var html = "<a" +
-        (item.reachable ? "" : " class='unreachable'") +
-        ">" +
-        "&nbsp;" + // to make bar visible /float:-related problem
-        '<span class="float-left">' +
-        '<span class="keyword">' +
-        keyword +
-        "</span>" +
-        '<span class="argument-names">' +
-        argument_names +
-        "</span>" +
-        "</span>" +
-        '<span class="float-right">' +
-        '<span class="title">' +
-        title +
-        "</span>" +
-        namespace_html +
-        "</span>" +
-        "</a>" +
-        "";
+    var html =
+      "<a" +
+      (item.reachable ? "" : " class='unreachable'") +
+      ">" +
+      "&nbsp;" + // to make bar visible /float:-related problem
+      '<span class="float-left">' +
+      '<span class="keyword">' +
+      keyword +
+      "</span>" +
+      '<span class="argument-names">' +
+      argument_names +
+      "</span>" +
+      "</span>" +
+      '<span class="float-right">' +
+      '<span class="title">' +
+      title +
+      "</span>" +
+      namespace_html +
+      "</span>" +
+      "</a>" +
+      "";
 
-      return $("<li></li>")
-        .data("item.autocomplete", item)
-        .append(html)
-        .appendTo(ul);
-    };
+    return $("<li></li>")
+      .data("item.autocomplete", item)
+      .append(html)
+      .appendTo(ul);
+  };
 }
 
 /**
  * On submitting the query.
- * 
+ *
  * @param {object} event – The submitting event.
  */
 function submitQuery(event) {
-
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
@@ -330,9 +330,12 @@ function displaySettings() {
     document.querySelector(".using-advanced").classList.remove("d-none");
     document.querySelector(".using-basic").classList.add("d-none");
     document.querySelector("#github-note").classList.remove("d-none");
-    document.querySelectorAll(".github-config-link").forEach(
-      (el) => el.href = env.configUrlTemplate.replace("{%github}", env.github)
-    );
+    document
+      .querySelectorAll(".github-config-link")
+      .forEach(
+        (el) =>
+          (el.href = env.configUrlTemplate.replace("{%github}", env.github))
+      );
   } else {
     document.querySelector(".using-basic").classList.remove("d-none");
     document.querySelector(".using-advanced").classList.add("d-none");
@@ -344,7 +347,6 @@ function displaySettings() {
  * Set attributes of <link rel="search" ...>.
  */
 function setLinkSearchAttributes() {
-
   let baseUrl = getBaseUrl();
   let params = getParams();
 
@@ -365,8 +367,7 @@ function setLinkSearchAttributes() {
 /**
  * Set the textarea in the "Add to browser" modal.
  */
-function setProcessUrlTemplateTextarea(){
-
+function setProcessUrlTemplateTextarea() {
   let baseUrl = getBaseUrl();
   let params = getParams();
 
@@ -393,7 +394,6 @@ async function setDefaultNamespaces() {
  * Update the whole config.
  */
 async function updateConfig() {
-
   await setDefaultNamespaces();
   await getSuggestions();
 
