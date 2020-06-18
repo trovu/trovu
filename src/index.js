@@ -336,8 +336,8 @@ async function updateConfig() {
 
   displaySettings();
 
-  let params = buildParams();
   let baseUrl = buildBaseUrl();
+  let params = buildParams();
 
   setLinkSearchAttributes(baseUrl, params);
 
