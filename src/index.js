@@ -293,9 +293,9 @@ function displaySettings() {
     document.querySelector(".using-advanced").classList.remove("d-none");
     document.querySelector(".using-basic").classList.add("d-none");
     document.querySelector("#github-note").classList.remove("d-none");
-    document.querySelector(
-      ".github-config-link"
-    ).href = env.configUrlTemplate.replace("{%github}", env.github);
+    document.querySelectorAll(".github-config-link").forEach(
+      (el) => el.href = env.configUrlTemplate.replace("{%github}", env.github)
+    );
   } else {
     document.querySelector(".using-basic").classList.remove("d-none");
     document.querySelector(".using-advanced").classList.add("d-none");
