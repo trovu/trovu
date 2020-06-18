@@ -325,6 +325,9 @@ function setLinkSearchAttributes() {
   linkSearch.setAttribute("href", urlOpensearch);
 }
 
+/**
+ * Set the textarea in the "Add to browser" modal.
+ */
 function setProcessUrlTemplateTextarea(){
 
   let baseUrl = buildBaseUrl();
