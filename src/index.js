@@ -360,6 +360,7 @@ async function updateConfig() {
   setLinkSearchAttributes();
   setProcessUrlTemplateTextarea();
 
+  let params = buildParams();
   let paramStr = Helper.jqueryParam(params);
   window.location.hash = "#" + paramStr;
 }
