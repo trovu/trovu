@@ -112,7 +112,7 @@ async function initialize() {
   // Init environment.
   await env.populate();
 
-  let params = Helper.getParams();
+  let params = Helper.getUrlParams();
 
   // Show info alerts.
   switch (params.status) {
@@ -296,7 +296,7 @@ function saveSettings() {
  * Fill in the fields of the settings modal.
  */
 function displaySettings() {
-  let params = Helper.getParams();
+  let params = Helper.getUrlParams();
 
   // Set settings fields from environment.
   document.querySelector("#languageSetting").value = env.language;

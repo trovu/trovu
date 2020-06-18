@@ -21,7 +21,7 @@ export default class Env {
    */
   async populate(params) {
     if (!params) {
-      params = Helper.getParams();
+      params = Helper.getUrlParams();
     }
 
     if (typeof params.github === 'string' && params.github !== '') {
