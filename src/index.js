@@ -241,6 +241,7 @@ function getProcessUrl() {
 }
 
 function submitQuery(event) {
+
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
