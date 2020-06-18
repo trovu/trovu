@@ -275,6 +275,7 @@ function displaySettings() {
     env.withoutMethods
   );
 
+  // Show and hide settings tabs depending on Github setting.
   if (env.github) {
     document.querySelector(".using-advanced").classList.remove("d-none");
     document.querySelector(".using-basic").classList.add("d-none");
