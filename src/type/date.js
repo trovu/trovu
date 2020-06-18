@@ -1,15 +1,7 @@
-import LoadScripts from "../loadScripts.js";
+import moment from 'moment';
 
 export default class DateParser {
   static async parse(str, locale) {
-    const momentjsUrl =
-      "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js";
-
-    // LoadScripts momentjs.
-    if (typeof moment !== "function") {
-      await LoadScripts.loadScripts([momentjsUrl]);
-    }
-
     let date;
 
     moment.locale(locale);
