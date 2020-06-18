@@ -341,7 +341,7 @@ function setProcessUrlTemplateTextarea(){
   preProcessUrl.textContent = urlProcess;
 }
 
-function setDefaultNamespaces() {
+async function setDefaultNamespaces() {
   if (!env.github) {
     env.namespaces = ["o", env.language, "." + env.country];
     env.addFetchUrlToNamespaces();
@@ -351,7 +351,7 @@ function setDefaultNamespaces() {
 
 async function updateConfig() {
 
-  setDefaultNamespaces();
+  await setDefaultNamespaces();
 
   await getSuggestions();
 
