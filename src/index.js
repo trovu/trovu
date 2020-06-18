@@ -243,6 +243,11 @@ function getProcessUrl() {
   return processUrl;
 }
 
+/**
+ * On submitting the query.
+ * 
+ * @param {object} event – The submitting event.
+ */
 function submitQuery(event) {
 
   // Prevent default sending as GET parameters.
