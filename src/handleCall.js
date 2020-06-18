@@ -18,7 +18,7 @@ export default class HandleCall {
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
   static redirectHome(status) {
-    const params = Helper.getParams();
+    const params = Helper.getUrlParams();
     params.status = status;
     const paramStr = Helper.jqueryParam(params);
     const redirectUrl = "../index.html#" + paramStr;
