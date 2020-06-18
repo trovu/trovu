@@ -83,6 +83,7 @@ async function getSuggestions() {
   return suggestions;
 }
 
+// Entry point: onload.
 document.querySelector("body").onload = async function(event) {
   // Init environment.
   await env.populate();
@@ -259,6 +260,9 @@ document.querySelector("#settingsSave").onclick = function(event) {
   updateConfig();
 };
 
+/**
+ * Fill in the fields of the settings modal.
+ */
 function displaySettings() {
   let params = Helper.getParams();
 
