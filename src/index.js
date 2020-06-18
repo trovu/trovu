@@ -303,6 +303,28 @@ function displaySettings() {
   }
 }
 
+/**
+ * Set attributes of <link rel="search" ...>.
+ *
+ * @param {string} baseUrl    - Contains protocol and domain at least.
+ * @param {object} params     - The URL parameters.
+ */
+function setLinkSearchAttributes(baseUrl, params) {
+
+  let urlOpensearch = baseUrl + "opensearch/?" + Helper.jqueryParam(params);
+  let linkSearch = document.querySelector("#linkSearch");
+
+  let title = "Trovu: ";
+  if (env.github) {
+    title += env.github;
+  } else {
+    title += env.namespaces.join(",");
+  }
+
+  linkSearch.setAttribute("title", title);
+  linkSearch.setAttribute("href", urlOpensearch);
+}
+
 async function updateConfig() {
   if (!env.github) {
     env.namespaces = ["o", env.language, "." + env.country];
@@ -316,19 +338,8 @@ async function updateConfig() {
 
   let params = buildParams();
   let baseUrl = buildBaseUrl();
-  let urlOpensearch = baseUrl + "opensearch/?" + Helper.jqueryParam(params);
 
-  let linkSearch = document.querySelector("#linkSearch");
-
-  let title = "Trovu: ";
-  if (env.github) {
-    title += env.github;
-  } else {
-    title += env.namespaces.join(",");
-  }
-
-  linkSearch.setAttribute("title", title);
-  linkSearch.setAttribute("href", urlOpensearch);
+  setLinkSearchAttributes(baseUrl, params);
 
   // Set Process URL.
   let urlProcess =
