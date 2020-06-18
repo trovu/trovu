@@ -352,6 +352,15 @@ async function setDefaultNamespaces() {
   }
 }
 
+/**
+ * Get the parameters as string.
+ */
+function getParamStr() {
+  let params = buildParams();
+  let paramStr = Helper.jqueryParam(params);
+  return paramStr;
+}
+
 async function updateConfig() {
 
   await setDefaultNamespaces();
@@ -363,8 +372,7 @@ async function updateConfig() {
   setLinkSearchAttributes();
   setProcessUrlTemplateTextarea();
 
-  let params = buildParams();
-  let paramStr = Helper.jqueryParam(params);
+  let paramStr = getParamStr();
   window.location.hash = "#" + paramStr;
 }
 
