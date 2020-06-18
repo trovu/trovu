@@ -133,6 +133,12 @@ async function initialize() {
   // Set query into input.
   document.querySelector("#query").value = env.query || "";
 
+  setAutocomplete();
+
+  $("#query").focus();
+}
+
+function setAutocomplete() {
   $("#query")
     .autocomplete({
       minLength: 1,
@@ -160,7 +166,8 @@ async function initialize() {
           if (keyword == suggestion.keyword) {
             if (suggestion.reachable) {
               matches.keywordFullReachable.push(suggestion);
-            } else {
+            }
+            else {
               matches.keywordFullReachable.push(suggestion);
             }
             continue;
@@ -169,7 +176,8 @@ async function initialize() {
           if (pos == 0) {
             if (suggestion.reachable) {
               matches.keywordBeginReachable.push(suggestion);
-            } else {
+            }
+            else {
               matches.keywordBeginUnreachable.push(suggestion);
             }
             continue;
@@ -178,7 +186,8 @@ async function initialize() {
           if (pos == 0) {
             if (suggestion.reachable) {
               matches.titleBeginReachable.push(suggestion);
-            } else {
+            }
+            else {
               matches.titleBeginUnreachable.push(suggestion);
             }
             continue;
@@ -186,7 +195,8 @@ async function initialize() {
           if (pos > 0) {
             if (suggestion.reachable) {
               matches.titleMiddleReachable.push(suggestion);
-            } else {
+            }
+            else {
               matches.titleMiddleUnreachable.push(suggestion);
             }
             continue;
@@ -209,47 +219,44 @@ async function initialize() {
       },
     })
     .data("uiAutocomplete")._renderItem = function (ul, item) {
-    var namespace_html = '<span class="namespace">' + item.namespace;
-    ("</span>");
+      var namespace_html = '<span class="namespace">' + item.namespace;
+      ("</span>");
 
-    var keyword = item.keyword;
+      var keyword = item.keyword;
 
-    // add "namespace." if unreachable
-    if (!item.reachable) {
-      keyword = item.namespace + "." + keyword;
-    }
-    var argument_names = Object.keys(item.arguments).join(", ");
-    var title = item.title;
+      // add "namespace." if unreachable
+      if (!item.reachable) {
+        keyword = item.namespace + "." + keyword;
+      }
+      var argument_names = Object.keys(item.arguments).join(", ");
+      var title = item.title;
 
-    var html =
-      "<a" +
-      (item.reachable ? "" : " class='unreachable'") +
-      ">" +
-      "&nbsp;" + // to make bar visible /float:-related problem
-      '<span class="float-left">' +
-      '<span class="keyword">' +
-      keyword +
-      "</span>" +
-      '<span class="argument-names">' +
-      argument_names +
-      "</span>" +
-      "</span>" +
-      '<span class="float-right">' +
-      '<span class="title">' +
-      title +
-      "</span>" +
-      namespace_html +
-      "</span>" +
-      "</a>" +
-      "";
+      var html = "<a" +
+        (item.reachable ? "" : " class='unreachable'") +
+        ">" +
+        "&nbsp;" + // to make bar visible /float:-related problem
+        '<span class="float-left">' +
+        '<span class="keyword">' +
+        keyword +
+        "</span>" +
+        '<span class="argument-names">' +
+        argument_names +
+        "</span>" +
+        "</span>" +
+        '<span class="float-right">' +
+        '<span class="title">' +
+        title +
+        "</span>" +
+        namespace_html +
+        "</span>" +
+        "</a>" +
+        "";
 
-    return $("<li></li>")
-      .data("item.autocomplete", item)
-      .append(html)
-      .appendTo(ul);
-  };
-
-  $("#query").focus();
+      return $("<li></li>")
+        .data("item.autocomplete", item)
+        .append(html)
+        .appendTo(ul);
+    };
 }
 
 /**
