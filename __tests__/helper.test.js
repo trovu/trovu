@@ -19,9 +19,9 @@ test("jqueryParam", () => {
   })).toEqual("foo=bar&baz=boo");
 });
 
-test("getParams", () => {
+test("getUrlParams", () => {
   Helper.getUrlHash = getUrlHashFooBar;
-  expect(Helper.getParams()).toEqual({ foo: "bar", baz: "boo" });
+  expect(Helper.getUrlParams()).toEqual({ foo: "bar", baz: "boo" });
 });
 
 test("splitKeepRemainder", () => {
