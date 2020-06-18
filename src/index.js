@@ -227,8 +227,6 @@ async function initialize(event) {
   $("#query").focus();
 };
 
-document.querySelector("body").onload = initialize;
-
 function submitQuery(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
@@ -246,8 +244,6 @@ function submitQuery(event) {
   window.location.href = processUrl;
 };
 
-document.getElementById("query-form").onsubmit = submitQuery;
-
 function addSearch(event) {
   let urlOpensearch = document
     .querySelector("#linkSearch")
@@ -255,16 +251,12 @@ function addSearch(event) {
   window.external.AddSearchProvider(urlOpensearch);
 };
 
-document.querySelector("button.add-search").onclick = addSearch;
-
 function saveSettings(event) {
   env.language = document.querySelector("#languageSetting").value;
   env.country = document.querySelector("#countrySetting").value;
 
   updateConfig();
 };
-
-document.querySelector("#settingsSave").onclick = saveSettings;
 
 /**
  * Fill in the fields of the settings modal.
@@ -333,6 +325,11 @@ async function updateConfig() {
   let paramStr = Helper.jqueryParam(params);
   window.location.hash = "#" + paramStr;
 }
+
+document.querySelector("body").onload = initialize;
+document.getElementById("query-form").onsubmit = submitQuery;
+document.querySelector("button.add-search").onclick = addSearch;
+document.querySelector("#settingsSave").onclick = saveSettings;
 
 // On Settings modal open.
 $("#settingsModal").on("show.bs.modal", function(e) {
