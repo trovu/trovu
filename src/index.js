@@ -229,6 +229,9 @@ async function initialize() {
   $("#query").focus();
 }
 
+/**
+ * Build the URL to the Process script.
+ */
 function getProcessUrl() {
 
   let params = buildParams();
