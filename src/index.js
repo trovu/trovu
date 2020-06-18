@@ -51,6 +51,29 @@ function getParams() {
   return params;
 }
 
+/**
+ * Get the parameters as string.
+ */
+function getParamStr() {
+  let params = getParams();
+  let paramStr = Helper.jqueryParam(params);
+  return paramStr;
+}
+
+/**
+ * Get the URL to the Process script.
+ */
+function getProcessUrl() {
+
+  let params = getParams();
+  params["query"] = document.getElementById("query").value;
+
+  let paramStr = Helper.jqueryParam(params);
+  let processUrl = "process/index.html?#" + paramStr;
+
+  return processUrl;
+}
+
 async function getSuggestions() {
   // Use global var
   // reset it.
@@ -230,20 +253,6 @@ async function initialize() {
 }
 
 /**
- * Get the URL to the Process script.
- */
-function getProcessUrl() {
-
-  let params = getParams();
-  params["query"] = document.getElementById("query").value;
-
-  let paramStr = Helper.jqueryParam(params);
-  let processUrl = "process/index.html?#" + paramStr;
-
-  return processUrl;
-}
-
-/**
  * On submitting the query.
  * 
  * @param {object} event – The submitting event.
@@ -353,15 +362,6 @@ async function setDefaultNamespaces() {
     env.addFetchUrlToNamespaces();
     env.namespaces = await env.fetchShortcuts(env.namespaces);
   }
-}
-
-/**
- * Get the parameters as string.
- */
-function getParamStr() {
-  let params = getParams();
-  let paramStr = Helper.jqueryParam(params);
-  return paramStr;
 }
 
 /**
