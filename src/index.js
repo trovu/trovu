@@ -229,9 +229,7 @@ async function initialize() {
   $("#query").focus();
 }
 
-function submitQuery(event) {
-  // Prevent default sending as GET parameters.
-  event.preventDefault();
+function getProcessUrl() {
 
   let params = buildParams();
   params["query"] = document.getElementById("query").value;
@@ -239,8 +237,16 @@ function submitQuery(event) {
   let paramStr = Helper.jqueryParam(params);
   let processUrl = "process/index.html?#" + paramStr;
 
+  return processUrl;
+}
+
+function submitQuery(event) {
+  // Prevent default sending as GET parameters.
+  event.preventDefault();
+
   //console.log(processUrl);
   //return;
+  let processUrl = getProcessUrl();
 
   // Redirect to process script.
   window.location.href = processUrl;
