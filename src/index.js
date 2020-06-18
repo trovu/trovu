@@ -128,17 +128,15 @@ async function initialize() {
 
 function setLanguagesAndCountriesList() {
   const { countries, languages } = countriesList;
-  let languageSetting = document.querySelector("#languageSetting");
-  Object.keys(languages).forEach((key) =>
-    languageSetting.appendChild(
-      new Option(languages[key].name, key.toLocaleLowerCase())
-    )
-  );
-  let countrySetting = document.querySelector("#countrySetting");
-  Object.keys(countries).forEach((key) =>
-    countrySetting.appendChild(
-      new Option(countries[key].name, key.toLocaleLowerCase())
-    )
+  setSelectOptions('#languageSetting', languages);
+  setSelectOptions('#countrySetting', countries);
+}
+
+function setSelectOptions(selector, list) {
+  let selectEl = document.querySelector(selector);
+  Object.keys(list).forEach((key) => selectEl.appendChild(
+    new Option(list[key].name, key.toLocaleLowerCase())
+  )
   );
 }
 
