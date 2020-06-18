@@ -112,6 +112,19 @@ async function initialize() {
   // Init environment.
   await env.populate();
 
+  showInfoAlerts();
+
+  updateConfig();
+
+  // Set query into input.
+  document.querySelector("#query").value = env.query || "";
+
+  setAutocomplete();
+
+  $("#query").focus();
+}
+
+function showInfoAlerts() {
   let params = Helper.getUrlParams();
 
   // Show info alerts.
@@ -127,15 +140,6 @@ async function initialize() {
         "Shortcuts were reloaded in all namespaces.";
       break;
   }
-
-  updateConfig();
-
-  // Set query into input.
-  document.querySelector("#query").value = env.query || "";
-
-  setAutocomplete();
-
-  $("#query").focus();
 }
 
 function setAutocomplete() {
