@@ -364,7 +364,6 @@ function getParamStr() {
 async function updateConfig() {
 
   await setDefaultNamespaces();
-
   await getSuggestions();
 
   displaySettings();
