@@ -11,11 +11,11 @@ var suggestions = [];
 // Builders =========================================================
 
 /**
- * Build the base URL of the current location.
+ * Get the base URL of the current location.
  *
  * @return {string} - The built base URL.
  */
-function buildBaseUrl() {
+function getBaseUrl() {
   let baseUrl = "";
 
   baseUrl += window.location.protocol;
@@ -30,11 +30,11 @@ function buildBaseUrl() {
 }
 
 /**
- * Build the params from env.
+ * Get the params from env.
  *
  * @return {object} - The built params.
  */
-function buildParams() {
+function getParams() {
   let params = {};
 
   // Put environment into hash.
@@ -230,11 +230,11 @@ async function initialize() {
 }
 
 /**
- * Build the URL to the Process script.
+ * Get the URL to the Process script.
  */
 function getProcessUrl() {
 
-  let params = buildParams();
+  let params = getParams();
   params["query"] = document.getElementById("query").value;
 
   let paramStr = Helper.jqueryParam(params);
@@ -311,8 +311,8 @@ function displaySettings() {
  */
 function setLinkSearchAttributes() {
 
-  let baseUrl = buildBaseUrl();
-  let params = buildParams();
+  let baseUrl = getBaseUrl();
+  let params = getParams();
 
   let urlOpensearch = baseUrl + "opensearch/?" + Helper.jqueryParam(params);
   let linkSearch = document.querySelector("#linkSearch");
@@ -333,8 +333,8 @@ function setLinkSearchAttributes() {
  */
 function setProcessUrlTemplateTextarea(){
 
-  let baseUrl = buildBaseUrl();
-  let params = buildParams();
+  let baseUrl = getBaseUrl();
+  let params = getParams();
 
   // Set Process URL.
   let urlProcess =
@@ -359,7 +359,7 @@ async function setDefaultNamespaces() {
  * Get the parameters as string.
  */
 function getParamStr() {
-  let params = buildParams();
+  let params = getParams();
   let paramStr = Helper.jqueryParam(params);
   return paramStr;
 }
