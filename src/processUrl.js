@@ -1,6 +1,5 @@
 /** @module ProcessUrl */
 
-import LoadScripts from "./loadScripts.js";
 import Helper from "./helper.js";
 
 /** Process a shortcut URL for redirect. */
@@ -230,12 +229,7 @@ export default class ProcessUrl {
         var attributes = matches[match];
         switch (varName) {
           case "now":
-            // Load momentjs.
-            const momentjsUrl =
-              "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js";
-            if (typeof moment !== "function") {
-              await LoadScripts.loadScripts([momentjsUrl]);
-            }
+            const moment = await import("moment");
 
             let time = moment();
 
