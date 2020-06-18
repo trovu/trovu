@@ -341,6 +341,9 @@ function setProcessUrlTemplateTextarea(){
   preProcessUrl.textContent = urlProcess;
 }
 
+/**
+ * Set namespaces to o, enviroment's language & country.
+ */
 async function setDefaultNamespaces() {
   if (!env.github) {
     env.namespaces = ["o", env.language, "." + env.country];
