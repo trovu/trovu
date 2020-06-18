@@ -305,11 +305,11 @@ function displaySettings() {
 
 /**
  * Set attributes of <link rel="search" ...>.
- *
- * @param {string} baseUrl    - Contains protocol and domain at least.
- * @param {object} params     - The URL parameters.
  */
-function setLinkSearchAttributes(baseUrl, params) {
+function setLinkSearchAttributes() {
+
+  let baseUrl = buildBaseUrl();
+  let params = buildParams();
 
   let urlOpensearch = baseUrl + "opensearch/?" + Helper.jqueryParam(params);
   let linkSearch = document.querySelector("#linkSearch");
@@ -336,10 +336,11 @@ async function updateConfig() {
 
   displaySettings();
 
+  setLinkSearchAttributes();
+
   let baseUrl = buildBaseUrl();
   let params = buildParams();
 
-  setLinkSearchAttributes(baseUrl, params);
 
   // Set Process URL.
   let urlProcess =
