@@ -325,6 +325,19 @@ function setLinkSearchAttributes() {
   linkSearch.setAttribute("href", urlOpensearch);
 }
 
+function setProcessUrlTemplateTextarea(){
+
+  let baseUrl = buildBaseUrl();
+  let params = buildParams();
+
+  // Set Process URL.
+  let urlProcess =
+    baseUrl + "process#" + Helper.jqueryParam(params) + "&query=%s";
+  let preProcessUrl = document.querySelector(".process-url");
+
+  preProcessUrl.textContent = urlProcess;
+}
+
 async function updateConfig() {
   if (!env.github) {
     env.namespaces = ["o", env.language, "." + env.country];
@@ -337,17 +350,7 @@ async function updateConfig() {
   displaySettings();
 
   setLinkSearchAttributes();
-
-  let baseUrl = buildBaseUrl();
-  let params = buildParams();
-
-
-  // Set Process URL.
-  let urlProcess =
-    baseUrl + "process#" + Helper.jqueryParam(params) + "&query=%s";
-  let preProcessUrl = document.querySelector(".process-url");
-
-  preProcessUrl.textContent = urlProcess;
+  setProcessUrlTemplateTextarea();
 
   let paramStr = Helper.jqueryParam(params);
   window.location.hash = "#" + paramStr;
