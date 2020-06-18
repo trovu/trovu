@@ -85,7 +85,7 @@ async function getSuggestions() {
   return suggestions;
 }
 
-async function initialize(event) {
+async function initialize() {
   // Init environment.
   await env.populate();
 
@@ -246,14 +246,14 @@ function submitQuery(event) {
   window.location.href = processUrl;
 }
 
-function addSearch(event) {
+function addSearch() {
   let urlOpensearch = document
     .querySelector("#linkSearch")
     .getAttribute("href");
   window.external.AddSearchProvider(urlOpensearch);
 }
 
-function saveSettings(event) {
+function saveSettings() {
   env.language = document.querySelector("#languageSetting").value;
   env.country = document.querySelector("#countrySetting").value;
 
