@@ -83,8 +83,7 @@ async function getSuggestions() {
   return suggestions;
 }
 
-// Entry point: onload.
-document.querySelector("body").onload = async function(event) {
+async function initialize(event) {
   // Init environment.
   await env.populate();
 
@@ -228,7 +227,9 @@ document.querySelector("body").onload = async function(event) {
   $("#query").focus();
 };
 
-document.getElementById("query-form").onsubmit = function(event) {
+document.querySelector("body").onload = initialize;
+
+function submitQuery(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
@@ -245,19 +246,25 @@ document.getElementById("query-form").onsubmit = function(event) {
   window.location.href = processUrl;
 };
 
-document.querySelector("button.add-search").onclick = function(event) {
+document.getElementById("query-form").onsubmit = submitQuery;
+
+function addSearch(event) {
   let urlOpensearch = document
     .querySelector("#linkSearch")
     .getAttribute("href");
   window.external.AddSearchProvider(urlOpensearch);
 };
 
-document.querySelector("#settingsSave").onclick = function(event) {
+document.querySelector("button.add-search").onclick = addSearch;
+
+function saveSettings(event) {
   env.language = document.querySelector("#languageSetting").value;
   env.country = document.querySelector("#countrySetting").value;
 
   updateConfig();
 };
+
+document.querySelector("#settingsSave").onclick = saveSettings;
 
 /**
  * Fill in the fields of the settings modal.
