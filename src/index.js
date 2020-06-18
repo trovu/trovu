@@ -259,6 +259,9 @@ function submitQuery(event) {
   window.location.href = processUrl;
 }
 
+/**
+ * Add search provider to browser.
+ */
 function addSearch() {
   let urlOpensearch = document
     .querySelector("#linkSearch")
