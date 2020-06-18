@@ -270,6 +270,7 @@ function displaySettings() {
   document.querySelector("#languageSetting").value = env.language;
   document.querySelector("#countrySetting").value = env.country;
 
+  // Output whole environment into textarea.
   document.querySelector("#settingsEnv").value = jsyaml.dump(
     env.withoutMethods
   );
