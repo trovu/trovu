@@ -244,8 +244,6 @@ function submitQuery(event) {
   // Prevent default sending as GET parameters.
   event.preventDefault();
 
-  //console.log(processUrl);
-  //return;
   let processUrl = getProcessUrl();
 
   // Redirect to process script.
