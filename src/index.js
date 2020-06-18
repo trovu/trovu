@@ -112,7 +112,6 @@ document.querySelector("body").onload = async function(event) {
   $("#query")
     .autocomplete({
       minLength: 1,
-      //source: ['one','two']
       source: function(request, response) {
         let matches = {
           keywordFullReachable: [],
