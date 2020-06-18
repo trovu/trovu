@@ -116,15 +116,7 @@ async function initialize() {
 
   showInfoAlerts();
 
-  const {countries, languages } = countriesList;
-  let languageSetting = document.querySelector('#languageSetting');
-  Object.keys(languages).forEach((key) => 
-    languageSetting.appendChild(new Option(languages[key].name, key.toLocaleLowerCase()))
-  );
-  let countrySetting = document.querySelector('#countrySetting');
-  Object.keys(countries).forEach((key) => 
-    countrySetting.appendChild(new Option(countries[key].name, key.toLocaleLowerCase()))
-  );
+  setLanguagesAndCountriesList();
 
   updateConfig();
 
@@ -134,6 +126,16 @@ async function initialize() {
   setAutocomplete();
 
   $("#query").focus();
+}
+
+function setLanguagesAndCountriesList() {
+  const { countries, languages } = countriesList;
+  let languageSetting = document.querySelector('#languageSetting');
+  Object.keys(languages).forEach((key) => languageSetting.appendChild(new Option(languages[key].name, key.toLocaleLowerCase()))
+  );
+  let countrySetting = document.querySelector('#countrySetting');
+  Object.keys(countries).forEach((key) => countrySetting.appendChild(new Option(countries[key].name, key.toLocaleLowerCase()))
+  );
 }
 
 function showInfoAlerts() {
