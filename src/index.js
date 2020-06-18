@@ -280,7 +280,7 @@ function displaySettings() {
     document.querySelector(".using-basic").classList.add("d-none");
     document.querySelector("#github-note").classList.remove("d-none");
     document.querySelector(
-      "#github-note a"
+      ".github-config-link"
     ).href = env.configUrlTemplate.replace("{%github}", env.github);
   } else {
     document.querySelector(".using-basic").classList.remove("d-none");
