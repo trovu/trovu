@@ -56,7 +56,7 @@ export default class Helper {
    */
   static async fetchAsync(url, reload, debug = false) {
     const response = await fetch(url, {
-      cache: reload ? "reload" : "force-cache"
+      cache: reload ? "reload" : "force-cache",
     });
     if (response.status != 200) {
       if (debug) this.log((reload ? "reload " : "cache  ") + "Fail:    " + url);
@@ -99,7 +99,7 @@ export default class Helper {
    * Build URL param string from param object.
    *
    * @param {object} params       - List of parameters.
-   * 
+   *
    * @return {string} urlParamStr - Parameter as URL string.
    */
   static getUrlParamStr(params) {
@@ -109,5 +109,4 @@ export default class Helper {
     }
     return urlParams;
   }
-
 }
