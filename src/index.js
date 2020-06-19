@@ -109,6 +109,7 @@ async function getSuggestions() {
 }
 
 async function initialize() {
+
   // Init environment.
   await env.populate();
 
