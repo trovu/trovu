@@ -5,20 +5,6 @@ const getUrlHashFooBar = () => {
   return hash;
 };
 
-test("jqueryDeparam", () => {
-  expect(Helper.jqueryDeparam("foo=bar&baz=boo")).toEqual({
-    foo: "bar",
-    baz: "boo"
-  });
-});
-
-test("jqueryParam", () => {
-  expect(Helper.jqueryParam({
-    foo: "bar",
-    baz: "boo"
-  })).toEqual("foo=bar&baz=boo");
-});
-
 test("getUrlParams", () => {
   Helper.getUrlHash = getUrlHashFooBar;
   expect(Helper.getUrlParams()).toEqual({ foo: "bar", baz: "boo" });
