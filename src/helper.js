@@ -86,9 +86,9 @@ export default class Helper {
    * @return {array} params - List of found parameters.
    */
   static getUrlParams() {
-    const paramStr = this.getUrlHash();
-    const params = this.jqueryDeparam(paramStr);
-    return params;
+    const urlParamStr = this.getUrlHash();
+    const urlParams = this.jqueryDeparam(urlParamStr);
+    return urlParams;
   }
 
 
