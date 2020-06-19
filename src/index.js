@@ -57,7 +57,7 @@ function getParams() {
  */
 function getParamStr() {
   let params = getParams();
-  let paramStr = Helper.jqueryParam(params);
+  let paramStr = Helper.getUrlParamStr(params);
   return paramStr;
 }
 
@@ -68,7 +68,7 @@ function getProcessUrl() {
   let params = getParams();
   params["query"] = document.getElementById("query").value;
 
-  let paramStr = Helper.jqueryParam(params);
+  let paramStr = Helper.getUrlParamStr(params);
   let processUrl = "process/index.html?#" + paramStr;
 
   return processUrl;
@@ -349,7 +349,7 @@ function setLinkSearchAttributes() {
   let baseUrl = getBaseUrl();
   let params = getParams();
 
-  let urlOpensearch = baseUrl + "opensearch/?" + Helper.jqueryParam(params);
+  let urlOpensearch = baseUrl + "opensearch/?" + Helper.getUrlParamStr(params);
   let linkSearch = document.querySelector("#linkSearch");
 
   let title = "Trovu: ";
@@ -372,7 +372,7 @@ function setProcessUrlTemplateTextarea() {
 
   // Set Process URL.
   let urlProcess =
-    baseUrl + "process#" + Helper.jqueryParam(params) + "&query=%s";
+    baseUrl + "process#" + Helper.getUrlParamStr(params) + "&query=%s";
   let preProcessUrl = document.querySelector(".process-url");
 
   preProcessUrl.textContent = urlProcess;

@@ -95,55 +95,19 @@ export default class Helper {
     return params;
   }
 
-
   /**
-   * Create URL query string from an array.
+   * Build URL param string from param object.
    *
-   * @param {array} params - The parameters.
-   *
-   * @return {string} paramStr - The created URL query string.
+   * @param {object} params       - List of parameters.
+   * 
+   * @return {string} urlParamStr - Parameter as URL string.
    */
-  static jqueryParam(a) {
-    var s = [];
-    var add = function(k, v) {
-      v = typeof v === "function" ? v() : v;
-      v = v === null ? "" : v === undefined ? "" : v;
-      s[s.length] = encodeURIComponent(k) + "=" + encodeURIComponent(v);
-    };
-    var buildParams = function(prefix, obj) {
-      var i, len, key;
-
-      if (prefix) {
-        if (Array.isArray(obj)) {
-          for (i = 0, len = obj.length; i < len; i++) {
-            buildParams(
-              prefix +
-                "[" +
-                (typeof obj[i] === "object" && obj[i] ? i : "") +
-                "]",
-              obj[i]
-            );
-          }
-        } else if (String(obj) === "[object Object]") {
-          for (key in obj) {
-            buildParams(prefix + "[" + key + "]", obj[key]);
-          }
-        } else {
-          add(prefix, obj);
-        }
-      } else if (Array.isArray(obj)) {
-        for (i = 0, len = obj.length; i < len; i++) {
-          add(obj[i].name, obj[i].value);
-        }
-      } else {
-        for (key in obj) {
-          buildParams(key, obj[key]);
-        }
-      }
-      return s;
-    };
-
-    return buildParams("", a).join("&");
+  static getUrlParamStr(params) {
+    const urlParams = new URLSearchParams();
+    for (const key in params) {
+      urlParams.set(key, params[key]);
+    }
+    return urlParams;
   }
 
 }

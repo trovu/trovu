@@ -20,7 +20,7 @@ export default class HandleCall {
   static redirectHome(status) {
     const params = Helper.getUrlParams();
     params.status = status;
-    const paramStr = Helper.jqueryParam(params);
+    const paramStr = Helper.getUrlParamStr(params);
     const redirectUrl = "../index.html#" + paramStr;
     return redirectUrl;
   }
