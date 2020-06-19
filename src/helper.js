@@ -83,7 +83,7 @@ export default class Helper {
   /**
    * Get parameters from the URL query string.
    *
-   * @return {array} params - List of found parameters.
+   * @return {object} params - List of found parameters.
    */
   static getUrlParams() {
     const urlParamStr = this.getUrlHash();
