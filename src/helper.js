@@ -87,8 +87,12 @@ export default class Helper {
    */
   static getUrlParams() {
     const urlParamStr = this.getUrlHash();
-    const urlParams = this.jqueryDeparam(urlParamStr);
-    return urlParams;
+    const urlParams = new URLSearchParams(urlParamStr);
+    const params = {};
+    urlParams.forEach((value, key) => {
+      params[key] = value;
+    });
+    return params;
   }
 
 
@@ -142,68 +146,4 @@ export default class Helper {
     return buildParams("", a).join("&");
   }
 
-  /**
-   * Parse parameters from a URL query str.
-   * Based on: https://stackoverflow.com/a/3355892/52023
-   *
-   * @param {string} paramStr - The URL query string to parse.
-   *
-   * @return {array} params - The parsed parameters.
-   */
-  static jqueryDeparam(paramStr) {
-    // Prepare params.
-    var params = {};
-
-    // Get pairs.
-    var keyValueStrings = paramStr.split("&");
-
-    // Iterate over all pairs.
-    for (let keyValueString of keyValueStrings) {
-      let [name, value] = keyValueString.split("=");
-
-      if (typeof value == "undefined") {
-        value = "";
-      }
-
-      // Decode.
-      name = decodeURIComponent(name);
-      value = value.replace(/\+/g, " ");
-      value = decodeURIComponent(value);
-
-      name = name.trim();
-
-      // Skip empty.
-      if ("" == name) {
-        continue;
-      }
-
-      // Prepare indices.
-      let indices = [];
-
-      // Move indices from string into array.
-      name = name.replace(/\[([^\]]*)\]/g, function(k, idx) {
-        indices.push(idx);
-        return "";
-      });
-
-      indices.unshift(name);
-      var o = params;
-
-      for (var j = 0; j < indices.length - 1; j++) {
-        var idx = indices[j];
-        if (!o[idx]) {
-          o[idx] = {};
-        }
-        o = o[idx];
-      }
-
-      idx = indices[indices.length - 1];
-      if (idx == "") {
-        o.push(value);
-      } else {
-        o[idx] = value;
-      }
-    }
-    return params;
-  }
 }
