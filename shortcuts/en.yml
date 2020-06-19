@@ -311,6 +311,17 @@ ws 1:
   - english
   examples:
     chair: Search for "chair"
+ygl 1:
+  url: https://youglish.com/pronounce/{%word}/english
+  title: YouGlish English Pronounciation Help
+  description: Search for a word or a name and you'll get videos of top YouTube speakers
+    naturally pronouncing the word in context.
+  tags:
+  - youtube
+  - language
+  - pronunciation
+  examples:
+    dough: Find videos where someone says "dough"
 youglish 1:
   url: https://youglish.com/pronounce/{%word}/english
   title: YouGlish English Pronounciation Help
