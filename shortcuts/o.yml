@@ -4031,12 +4031,22 @@ myr 2:
   examples:
     eur, 1: Convert 1 Malaysian ringgit into Euros
 n 0:
-  url: https://www.netflix.com/search/{$query}
+  url: https://www.netflix.com/
+  title: Netflix
+  description: go to Netflix homepage
+  tags:
+  - netflix
+  - movies
+  - series
+  - stream
+n 1:
+  url: https://www.netflix.com/search/{%query}
   title: Netflix
   description: searches Netflix for a movie or series
   tags:
   - netflix
   - movies
+  - series
   - stream
   examples:
     Broadchurch: Search Netflix for "Broadchurch"
