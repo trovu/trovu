@@ -2867,6 +2867,27 @@ gns 1:
   - google
   examples:
     berlin: Search Google News for berlin
+gopkg 0:
+  url: https://pkg.go.dev
+  title: pkg.go.dev
+  description: Package browser for the Go programming language
+  tags:
+  - programming
+  - go
+  - golang
+  - software
+gopkg 1:
+  url: https://pkg.go.dev/search?q={%query}
+  title: pkg.go.dev
+  description: Package browser for the Go programming language
+  tags:
+  - programming
+  - go
+  - golang
+  - software
+  examples:
+    levenshtein: Search pkg.go.dev for Levenshtein-related packages
+https://pkg.go.dev/search?q=levenshtein
 gp 0:
   url: https://play.google.com/store
   title: Google Play
