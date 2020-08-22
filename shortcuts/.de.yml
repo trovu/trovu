@@ -707,6 +707,20 @@ ek+ 0:
   - shopping
   - selling
   - ebay
+eka 0:
+  url: https://www.ebay-kleinanzeigen.de/m-meine-anzeigen.html
+  title: eBay Kleinanzeigen - Meine Anzeigen
+  tags:
+  - shopping
+  - selling
+  - ebay
+ekn 0:
+  url: https://www.ebay-kleinanzeigen.de/m-nachrichten.html
+  title: eBay Kleinanzeigen - Meine Nachrichten
+  tags:
+  - shopping
+  - selling
+  - ebay
 farnell 1:
   url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt={%query}
   title: Farnell Deutschland
