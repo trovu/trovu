@@ -356,7 +356,7 @@ function setLinkSearchAttributes() {
   if (env.github) {
     title += env.github;
   } else {
-    title += env.namespaces.join(",");
+    title += env.namespaces.reverse().map(e => e.name).join(", ");
   }
 
   linkSearch.setAttribute("title", title);
