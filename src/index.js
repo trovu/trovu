@@ -306,7 +306,12 @@ function saveSettings() {
   env.language = document.querySelector("#languageSetting").value;
   env.country = document.querySelector("#countrySetting").value;
 
-  updateConfig();
+  let paramStr = getParamStr();
+  window.location.hash = "#" + paramStr;
+
+  // We need to reload to also let Chrome and Opera
+  // catch the changes in <link rel="search">.
+  location.reload();
 }
 
 /**
