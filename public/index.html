@@ -27,12 +27,52 @@
                 <a class="nav-link active" id="firefox-tab" data-toggle="tab" href="#firefox" role="tab" aria-controls="basic" aria-selected="true">Firefox</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link " id="chrome-tab" data-toggle="tab" href="#addToChrome" role="tab" aria-controls="basic" aria-selected="true">Chrome</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" id="other-browser-tab" data-toggle="tab" href="#other-browser" role="tab" aria-controls="advanced" aria-selected="false">Other browser</a>
               </li>
             </ul>
             <div class="tab-content mt-4">
               <div class="tab-pane fade show active" id="firefox" role="tabpanel" aria-labelledby="basic-tab">
-                <button class="add-search form-control btn btn-sm btn-success">Click to add to Firefox</button>
+                <p>
+                <ol>
+                  <li>In the address bar above, click the three dots at the right.</li>
+                  <li>Select <em>Add Search Engine</em>. It is the last item.</li>
+                  <li>Open a <a target="_blank" href="about:blank">new tab</a> with the URL: 
+                    <form class="form-inline">
+                      <div class="input-group flex-fill">
+                        <input type="text" id="add" value="about:preferences#search" class="form-control"  >
+                        <!--
+                        <div class="input-group-append">
+                          <input type="submit" value="copy" class="btn btn-primary" >
+                        </div> 
+                        -->
+                      </div>
+                    </form> 
+                  <li>Under <em>Default Search Engine</em>, select <em>Trovu</em>.</li>
+                </ol>
+                </p>
+              </div>
+              <div class="tab-pane fade " id="addToChrome" role="tabpanel" aria-labelledby="advanced-tab">
+                <p>
+                <ol>
+                  <li>Open a <a target="_blank" href="about:blank">new tab</a> with the URL: 
+                    <form class="form-inline">
+                      <div class="input-group flex-fill">
+                        <input type="text" id="add" value="chrome://settings/searchEngines" class="form-control"  >
+                        <!--
+                        <div class="input-group-append">
+                          <input type="submit" value="copy" class="btn btn-primary" >
+                        </div> 
+                        -->
+                      </div>
+                    </form> 
+                  <li>There, right to <em>Manage search engines</em> is a search field. Search for <em>Trovu</em>.</li>
+                  <li>When found, click the 3 dots right to it.</li>
+                  <li>Select <em>Make default</em>.</li>
+                </ol>
+                </p>
               </div>
               <div class="tab-pane fade" id="other-browser" role="tabpanel" aria-labelledby="advanced-tab">
                 <p>Use this URL template and add it where your browser allows to set custom browser search engines:</p>
