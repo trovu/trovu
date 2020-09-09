@@ -8,7 +8,8 @@
     "doc": "rm -r doc ; jsdoc public/js/* --configure jsdoc.json --destination doc",
     "build": "./node_modules/rollup/dist/bin/rollup --config --environment INCLUDE_DEPS,BUILD:production",
     "watch": "./node_modules/rollup/dist/bin/rollup --config --watch",
-    "deploy": "ssh ntro 'cd trovu-web && git pull && rm public/bundle/*.js' && rsync -vr public/bundle/* ntro:~/trovu-web/public/bundle/"
+    "clean": "rm public/bundle/*.js",
+    "deploy": "rsync -vr public/* ntro:~/trovu-web/public/"
   },
   "repository": {
     "type": "git",
