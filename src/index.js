@@ -108,7 +108,18 @@ async function getSuggestions() {
   return suggestions;
 }
 
+function addLinkSearch() {
+  let paramStr = location.hash.substr(1);
+  let xml = '<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/?' + paramStr + '" title="Trovu" />';
+  let head = document.querySelector('head');
+  head.innerHTML += xml;
+}
+
 async function initialize() {
+
+  // Must be done before env.populate()
+  // otherwise Chrome does not autodiscover.
+  addLinkSearch();
 
   // Init environment.
   await env.populate();
@@ -348,27 +359,6 @@ function displaySettings() {
 }
 
 /**
- * Set attributes of <link rel="search" ...>.
- */
-function setLinkSearchAttributes() {
-  let baseUrl = getBaseUrl();
-  let params = getParams();
-
-  let urlOpensearch = baseUrl + "opensearch/?" + Helper.getUrlParamStr(params);
-  let linkSearch = document.querySelector("#linkSearch");
-
-  let title = "Trovu: ";
-  if (env.github) {
-    title += env.github;
-  } else {
-    title += env.namespaces.reverse().map(e => e.name).join(", ");
-  }
-
-  linkSearch.setAttribute("title", title);
-  linkSearch.setAttribute("href", urlOpensearch);
-}
-
-/**
  * Set the textarea in the "Add to browser" modal.
  */
 function setProcessUrlTemplateTextarea() {
@@ -403,7 +393,6 @@ async function updateConfig() {
 
   displaySettings();
 
-  setLinkSearchAttributes();
   setProcessUrlTemplateTextarea();
 
   let paramStr = getParamStr();
