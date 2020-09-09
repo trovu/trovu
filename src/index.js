@@ -303,16 +303,6 @@ function submitQuery(event) {
   window.location.href = processUrl;
 }
 
-/**
- * Add search provider to browser.
- */
-function addSearch() {
-  let urlOpensearch = document
-    .querySelector("#linkSearch")
-    .getAttribute("href");
-  window.external.AddSearchProvider(urlOpensearch);
-}
-
 function saveSettings() {
   env.language = document.querySelector("#languageSetting").value;
   env.country = document.querySelector("#countrySetting").value;
@@ -401,7 +391,6 @@ async function updateConfig() {
 
 document.querySelector("body").onload = initialize;
 document.getElementById("query-form").onsubmit = submitQuery;
-document.querySelector("button.add-search").onclick = addSearch;
 document.querySelector("#settingsSave").onclick = saveSettings;
 
 // On Settings modal open.
