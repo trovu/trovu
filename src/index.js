@@ -110,13 +110,15 @@ async function getSuggestions() {
 
 function addLinkSearch() {
   let paramStr = location.hash.substr(1);
-  let xml = '<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/?' + paramStr + '" title="Trovu" />';
-  let head = document.querySelector('head');
+  let xml =
+    '<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/?' +
+    paramStr +
+    '" title="Trovu" />';
+  let head = document.querySelector("head");
   head.innerHTML += xml;
 }
 
 async function initialize() {
-
   // Must be done before env.populate()
   // otherwise Chrome does not autodiscover.
   addLinkSearch();
@@ -140,15 +142,14 @@ async function initialize() {
 
 function setLanguagesAndCountriesList() {
   const { countries, languages } = countriesList;
-  setSelectOptions('#languageSetting', languages);
-  setSelectOptions('#countrySetting', countries);
+  setSelectOptions("#languageSetting", languages);
+  setSelectOptions("#countrySetting", countries);
 }
 
 function setSelectOptions(selector, list) {
   let selectEl = document.querySelector(selector);
-  Object.keys(list).forEach((key) => selectEl.appendChild(
-    new Option(list[key].name, key.toLocaleLowerCase())
-  )
+  Object.keys(list).forEach((key) =>
+    selectEl.appendChild(new Option(list[key].name, key.toLocaleLowerCase()))
   );
 }
 

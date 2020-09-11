@@ -5,7 +5,6 @@ import Helper from "./helper.js";
 /** Process a shortcut URL for redirect. */
 
 export default class ProcessUrl {
-
   /**
    * Get placeholder names from a string.
    *
@@ -110,9 +109,19 @@ export default class ProcessUrl {
   }
 
   static async processAttributes(processedArgument, attributes, env) {
-    processedArgument = await this.processAttributeType(attributes, processedArgument, env);
-    processedArgument = this.processAttributeTransform(attributes, processedArgument);
-    processedArgument = this.processAttributeEncoding(attributes, processedArgument);
+    processedArgument = await this.processAttributeType(
+      attributes,
+      processedArgument,
+      env
+    );
+    processedArgument = this.processAttributeTransform(
+      attributes,
+      processedArgument
+    );
+    processedArgument = this.processAttributeEncoding(
+      attributes,
+      processedArgument
+    );
     return processedArgument;
   }
 

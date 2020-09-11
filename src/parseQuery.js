@@ -5,7 +5,6 @@ import Helper from "./helper.js";
 /** Parse a query. */
 
 export default class ParseQuery {
-
   /**
    * Get keyword and argument string from query.
    *
@@ -16,13 +15,8 @@ export default class ParseQuery {
    * - {string} argumentString    - The whole argument string.
    */
   static getKeywordAndArgumentString(query) {
-
     let keyword, argumentString;
-    [keyword, argumentString] = Helper.splitKeepRemainder(
-      query,
-      " ",
-      2
-    );
+    [keyword, argumentString] = Helper.splitKeepRemainder(query, " ", 2);
 
     return [keyword, argumentString];
   }
@@ -35,7 +29,6 @@ export default class ParseQuery {
    * @return {array} args              - The arguments from the argument string.
    */
   static getArguments(argumentString) {
-
     let args;
     if (argumentString) {
       args = argumentString.split(",");
@@ -56,12 +49,11 @@ export default class ParseQuery {
    * - {string} keyword      - The new keyword.
    */
   static checkForChacheReload(keyword) {
-
     let reload = false;
 
     if (keyword.match(/^reload$/)) {
       reload = true;
-      keyword = '';
+      keyword = "";
     }
     if (keyword.match(/^reload:/)) {
       [, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
@@ -81,17 +73,24 @@ export default class ParseQuery {
    * - {string} keyword            - The new keyword.
    */
   static getExtraNamespace(keyword) {
-
     // Check for extraNamespace in keyword:
     //   split at dot
     //   but don't split up country namespace names.
     let extraNamespaceName;
     if (keyword.match(/.\./)) {
-      [extraNamespaceName, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
+      [extraNamespaceName, keyword] = Helper.splitKeepRemainder(
+        keyword,
+        ".",
+        2
+      );
       // If extraNamespace started with a dot, it will be empty
       // so let's split it again, and add the dot.
       if (extraNamespaceName == "") {
-        [extraNamespaceName, keyword] = Helper.splitKeepRemainder(keyword, ".", 2);
+        [extraNamespaceName, keyword] = Helper.splitKeepRemainder(
+          keyword,
+          ".",
+          2
+        );
         extraNamespaceName = "." + extraNamespaceName;
       }
     }
@@ -107,7 +106,6 @@ export default class ParseQuery {
    * @return {object}               - Contains either {language: } or {country: }.
    */
   static getLanguageAndCountryFromExtraNamespaceName(extraNamespaceName) {
-
     const env = {};
 
     // Set language and country again.
@@ -131,16 +129,21 @@ export default class ParseQuery {
    * @return {object}               - Contains various values parsed from the query.
    */
   static parse(query) {
-
     const env = {};
 
-    [env.keyword, env.argumentString] = ParseQuery.getKeywordAndArgumentString(query);
+    [env.keyword, env.argumentString] = ParseQuery.getKeywordAndArgumentString(
+      query
+    );
     env.args = ParseQuery.getArguments(env.argumentString);
     [env.reload, env.keyword] = ParseQuery.checkForChacheReload(env.keyword);
 
-    [env.extraNamespaceName, env.keyword] = ParseQuery.getExtraNamespace(env.keyword);
+    [env.extraNamespaceName, env.keyword] = ParseQuery.getExtraNamespace(
+      env.keyword
+    );
     if (env.extraNamespaceName) {
-      let languageOrCountry = ParseQuery.getLanguageAndCountryFromExtraNamespaceName(env.extraNamespaceName);
+      let languageOrCountry = ParseQuery.getLanguageAndCountryFromExtraNamespaceName(
+        env.extraNamespaceName
+      );
       Object.assign(env, languageOrCountry);
     }
 

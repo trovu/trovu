@@ -1,6 +1,6 @@
 /** @module Env */
 
-import jsyaml from 'js-yaml';
+import jsyaml from "js-yaml";
 import Helper from "./helper.js";
 
 /** Set and remember the environment. */
@@ -24,7 +24,7 @@ export default class Env {
       params = Helper.getUrlParams();
     }
 
-    if (typeof params.github === 'string' && params.github !== '') {
+    if (typeof params.github === "string" && params.github !== "") {
       await this.setWithUserConfigFromGithub(params);
     }
 
@@ -33,7 +33,11 @@ export default class Env {
 
     this.setDefaults();
     this.addFetchUrlToNamespaces();
-    this.namespaces = await this.fetchShortcuts(this.namespaces, this.reload, this.debug);
+    this.namespaces = await this.fetchShortcuts(
+      this.namespaces,
+      this.reload,
+      this.debug
+    );
   }
 
   /**
@@ -74,19 +78,21 @@ export default class Env {
    * Get the user configuration from their fork in their Github profile.
    *
    * @param {array} params - Here, 'github' and 'debug' will be used
-   * 
+   *
    * @return {(object|boolean)} config - The user's config object, or false if fetch failed.
    */
   async getUserConfigFromGithub(params) {
-    const configUrl = this.configUrlTemplate.replace("{%github}", params.github);
+    const configUrl = this.configUrlTemplate.replace(
+      "{%github}",
+      params.github
+    );
     const configYml = await Helper.fetchAsync(configUrl, false, params.debug);
     if (configYml) {
       try {
         const config = jsyaml.load(configYml);
         return config;
-      }
-      catch (error) {
-        alert('Error parsing ' + configUrl + ":\n\n" + error.message);
+      } catch (error) {
+        alert("Error parsing " + configUrl + ":\n\n" + error.message);
         return false;
       }
     } else {
@@ -162,10 +168,10 @@ export default class Env {
 
   /**
    * Start fetching shortcuts per namespace.
-   * 
+   *
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
    * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
-   * 
+   *
    * @return {array} promises - The promises from the fetch() calls.
    */
   async startFetches(namespaces, reload) {
@@ -183,10 +189,10 @@ export default class Env {
 
   /**
    * Ensure shortcuts have the correct structure.
-   * 
+   *
    * @param {array} shortcuts      - The shortcuts to normalize.
    * @param {string} namespaceName - The namespace name to show in error message.
-   * 
+   *
    * @return {array} shortcuts - The normalized shortcuts.
    */
   normalizeShortcuts(shortcuts, namespaceName) {
@@ -196,18 +202,20 @@ export default class Env {
         incorrectKeys.push(key);
       }
       // Check for 'only URL' shortcuts.
-      if (typeof shortcuts[key] === 'string') {
+      if (typeof shortcuts[key] === "string") {
         const url = shortcuts[key];
         shortcuts[key] = {
-          url: url
-        }
+          url: url,
+        };
       }
     }
     if (incorrectKeys.length > 0) {
       alert(
-        "Incorrect keys found in namespace '" + namespaceName +  "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" + 
-        "\n\n" +
-        incorrectKeys.join("\n")
+        "Incorrect keys found in namespace '" +
+          namespaceName +
+          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
+          "\n\n" +
+          incorrectKeys.join("\n")
       );
     }
     return shortcuts;
@@ -215,28 +223,33 @@ export default class Env {
 
   /**
    * Add a fetch URL template to a namespace.
-   * 
+   *
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
    * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
    * @param {boolean} debug    - Flag whether to print debug messages.
-   * 
+   *
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
   async fetchShortcuts(namespaces, reload, debug) {
-
     const promises = await this.startFetches(namespaces, reload);
 
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
 
     for (let i in namespaces) {
-      if ((!responses[i]) || (responses[i].status != 200)) {
-        if (debug) Helper.log((reload ? "reload " : "cache  ") + "Fail:    " + namespaces[i].url);
+      if (!responses[i] || responses[i].status != 200) {
+        if (debug)
+          Helper.log(
+            (reload ? "reload " : "cache  ") + "Fail:    " + namespaces[i].url
+          );
         // Mark namespace for deletion.
         namespaces[i] = undefined;
         continue;
       }
-      if (debug) Helper.log((reload ? "reload " : "cache  ") + "Success: " + responses[i].url);
+      if (debug)
+        Helper.log(
+          (reload ? "reload " : "cache  ") + "Success: " + responses[i].url
+        );
       if (!debug) {
         Helper.log(".", false);
       }
@@ -244,16 +257,20 @@ export default class Env {
       let shortcuts;
       try {
         shortcuts = jsyaml.load(text);
-      }
-      catch (error) {
-        alert('Error parsing ' + namespaces[i].url + ":\n\n" + error.message);
+      } catch (error) {
+        alert("Error parsing " + namespaces[i].url + ":\n\n" + error.message);
         namespaces[i] = undefined;
         continue;
       }
-      namespaces[i].shortcuts = this.normalizeShortcuts(shortcuts, namespaces[i].name);
-    };
+      namespaces[i].shortcuts = this.normalizeShortcuts(
+        shortcuts,
+        namespaces[i].name
+      );
+    }
     // Delete marked namespaces.
-    namespaces = namespaces.filter(namespace => typeof namespace !== 'undefined');
+    namespaces = namespaces.filter(
+      (namespace) => typeof namespace !== "undefined"
+    );
     return namespaces;
   }
 
@@ -269,9 +286,9 @@ export default class Env {
 
   /**
    * Add a fetch URL template to a namespace.
-   * 
+   *
    * @param {(string|Object)} namespace - The namespace to add the URL template to.
-   * 
+   *
    * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToNamespace(namespace) {
@@ -279,7 +296,7 @@ export default class Env {
     if (typeof namespace == "string" && namespace.length < 4) {
       namespace = this.addFetchUrlToSiteNamespace(namespace);
       return namespace;
-    } 
+    }
     // User namespace 1 – custom URL:
     if (namespace.url && namespace.name) {
       // Just add the type.
@@ -299,7 +316,7 @@ export default class Env {
    * Add a URL template to a namespace that refers to a namespace in trovu-data.
    *
    * @param {string} name - The namespace name.
-   * 
+   *
    * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToSiteNamespace(name) {
@@ -309,7 +326,7 @@ export default class Env {
       url:
         "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
         name +
-        ".yml"
+        ".yml",
     };
     return namespace;
   }
@@ -318,7 +335,7 @@ export default class Env {
    * Add a URL template to a namespace that refers to a Github user repo.
    *
    * @param {string} name - The namespace name.
-   * 
+   *
    * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToGithubNamespace(namespace) {
