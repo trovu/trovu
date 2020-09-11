@@ -31,20 +31,20 @@
         <div class="modal-body">
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="firefox-tab" data-toggle="tab" href="#add-to-browser-firefox" role="tab"
+              <a class="nav-link firefox" data-toggle="tab" href="#add-to-browser-firefox" role="tab"
                 aria-controls="basic" aria-selected="true">Firefox</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " id="chrome-tab" data-toggle="tab" href="#add-to-browser-chrome" role="tab"
+              <a class="nav-link chrome" data-toggle="tab" href="#add-to-browser-chrome" role="tab"
                 aria-controls="basic" aria-selected="true">Chrome</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="other-browser-tab" data-toggle="tab" href="#add-to-browser-other" role="tab"
+              <a class="nav-link other active" data-toggle="tab" href="#add-to-browser-other" role="tab"
                 aria-controls="advanced" aria-selected="false">Other browser</a>
             </li>
           </ul>
           <div class="tab-content mt-4">
-            <div class="tab-pane fade show active" id="add-to-browser-firefox" role="tabpanel"
+            <div class="tab-pane fade" id="add-to-browser-firefox" role="tabpanel"
               aria-labelledby="basic-tab">
               <p>
               <ol>
@@ -65,7 +65,7 @@
               </ol>
               </p>
             </div>
-            <div class="tab-pane fade " id="add-to-browser-chrome" role="tabpanel" aria-labelledby="advanced-tab">
+            <div class="tab-pane fade" id="add-to-browser-chrome" role="tabpanel" aria-labelledby="advanced-tab">
               <p>
               <ol>
                 <li>Open a <a target="_blank" href="about:blank">new tab</a> with the URL:
@@ -85,7 +85,7 @@
               </ol>
               </p>
             </div>
-            <div class="tab-pane fade" id="add-to-browser-other" role="tabpanel" aria-labelledby="advanced-tab">
+            <div class="tab-pane fade show active" id="add-to-browser-other" role="tabpanel" aria-labelledby="advanced-tab">
               <p>Use this URL template and add it where your browser allows to set custom browser search engines:</p>
               <textarea class="process-url form-control" rows="4">/process/?#query=%s</textarea>
             </div>
