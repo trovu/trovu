@@ -1,5 +1,6 @@
 import jsyaml from "js-yaml";
 import countriesList from "countries-list";
+import { detect, browserName } from "detect-browser";
 
 import Helper from "./helper.js";
 import Env from "./env.js";
@@ -118,6 +119,34 @@ function addLinkSearch() {
   head.innerHTML += xml;
 }
 
+function setAddToBrowserTab() {
+  const browser = detect();
+
+  // Deactivate all.
+  document
+    .querySelectorAll("#add-to-browser .nav-tabs a")
+    .forEach((el) => el.classList.remove("active"));
+  document
+    .querySelectorAll("#add-to-browser .tab-pane")
+    .forEach((el) => el.classList.remove("show","active"));
+
+  // Show tab and panel according to setting.
+  switch (browser && browser.name) {
+    case "firefox":
+    case "chrome":
+      document
+        .querySelector("#add-to-browser .nav-tabs a." + browser.name)
+        .classList.add("active");
+      document
+        .querySelector("#add-to-browser .tab-pane." + browser.name)
+        .classList.add("show","active");
+      break;
+    default:
+      // Will show the default "Other" tab.
+      break;
+  }
+}
+
 async function initialize() {
   // Must be done before env.populate()
   // otherwise Chrome does not autodiscover.
@@ -136,6 +165,8 @@ async function initialize() {
   document.querySelector("#query").value = env.query || "";
 
   setAutocomplete();
+
+  setAddToBrowserTab();
 
   $("#query").focus();
 }
