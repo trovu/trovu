@@ -170,7 +170,7 @@ async function initialize() {
 
   setAddToBrowserTab();
 
-  //$("#query").focus();
+  document.querySelector("#query").focus();
 }
 
 function setLanguagesAndCountriesList() {
