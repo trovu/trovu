@@ -10,16 +10,15 @@ $urlTrovu      = str_replace('opensearch/', '', $urlOpensearch);
 // Get environment from GET params.
 $env = $_GET;
 
-// Set fallback values.
-$env['language'] = $env['language'] ?? 'en';
-$env['country']  = $env['country']  ?? 'us';
-
 $title = 'Trovu: ';
 
 if (!empty($env['github'])) {
   $title .=  $env['github'];
 }
 else {
+  // Set fallback values.
+  $env['language'] = $env['language'] ?? 'en';
+  $env['country']  = $env['country']  ?? 'us';
   $title .=  $env['language'] . '-' . strtoupper($env['country']);
 }
 
