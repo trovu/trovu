@@ -26,7 +26,7 @@ else {
 $paramStr = htmlspecialchars(http_build_query($env));
 
 // Send HTTP header.
-header('Content-type: application/opensearchdescription+xml'); 
+header('Content-type: application/opensearchdescription+xml');
 // Or this?
 // header('Content-type: text/xml'); 
 
