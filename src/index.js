@@ -426,10 +426,3 @@ async function updateConfig() {
 document.querySelector("body").onload = initialize;
 document.getElementById("query-form").onsubmit = submitQuery;
 document.querySelector("#settingsSave").onclick = saveSettings;
-
-/*
-// On Settings modal open.
-document.querySelector("#settingsModal").addEventListener("show.bs.modal", function (e) {
-  displaySettings();
-});
-*/
