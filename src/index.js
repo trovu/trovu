@@ -427,7 +427,9 @@ document.querySelector("body").onload = initialize;
 document.getElementById("query-form").onsubmit = submitQuery;
 document.querySelector("#settingsSave").onclick = saveSettings;
 
+/*
 // On Settings modal open.
-$("#settingsModal").on("show.bs.modal", function (e) {
+document.querySelector("#settingsModal").addEventListener("show.bs.modal", function (e) {
   displaySettings();
 });
+*/
