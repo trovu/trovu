@@ -201,7 +201,8 @@ export default class Env {
       if (!key.match(/\S+ \d/)) {
         incorrectKeys.push(key);
       }
-      // Check for 'only URL' shortcuts.
+      // Check for 'only URL' (string) shortcuts
+      // and make an object of them.
       if (typeof shortcuts[key] === "string") {
         const url = shortcuts[key];
         shortcuts[key] = {
