@@ -16,7 +16,10 @@ export default [
       resolve(),
       commonjs(),
       json(),
-      scss({ output: "public/bundle/style.css" }),
+      scss({
+        watch: "src/css",
+        output: "public/bundle/style.css",
+      }),
     ],
   },
   {
