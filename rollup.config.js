@@ -12,7 +12,7 @@ export default [
       format: "esm",
       name: "websearch",
     },
-    plugins: [resolve(), commonjs(), json()],
+    plugins: [resolve(), commonjs(), json(), scss({output: 'public/bundle/style.css'})],
   },
   {
     input: "src/process.js",
