@@ -2,6 +2,11 @@
   margin: 0 !important;
 }
 
+.input-group .awesomplete {
+  padding: 0;
+  border: 0;
+}
+
 /* Suggestions */
 
 .ui-autocomplete {
