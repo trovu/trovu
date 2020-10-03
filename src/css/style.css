@@ -7,6 +7,10 @@ main .jumbotron {
   border: 0;
 }
 
+.awesomplete.query > ul > li {
+  padding: 0 .9em;
+}
+
 /* Suggestions */
 
 .ui-autocomplete {
