@@ -48,7 +48,8 @@ export default class Env {
     const foundShortcuts = {};
 
     // Iterate over namespaces in reverse order.
-    for (let namespace of namespaces.reverse()) {
+    // Slice to keep original.
+    for (let namespace of namespaces.slice().reverse()) {
       const shortcuts = namespace.shortcuts;
 
       for (let key in shortcuts) {
