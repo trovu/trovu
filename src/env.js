@@ -263,6 +263,8 @@ export default class Env {
         namespaces[i] = undefined;
         continue;
       }
+      // TODO: Put this outside of fetchShortcuts
+      // as this is a separate logic.
       namespaces[i].shortcuts = this.normalizeShortcuts(
         shortcuts,
         namespaces[i].name
