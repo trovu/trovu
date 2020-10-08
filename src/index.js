@@ -271,7 +271,7 @@ function getMatches(keyword) {
         if (shortcut.reachable) {
           matches.keywordFullReachable.push(shortcut);
         } else {
-          matches.keywordFullReachable.push(shortcut);
+          matches.keywordFullUnreachable.push(shortcut);
         }
         continue;
       }
