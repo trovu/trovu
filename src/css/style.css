@@ -7,6 +7,10 @@ main .jumbotron {
   border: 0;
 }
 
+.awesomplete.query > ul {
+  background: hsla(0,0%,100%,1);
+}
+
 .awesomplete.query > ul > li {
   padding: .1em .9em;
 }
