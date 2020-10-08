@@ -6,7 +6,7 @@ import awesomplete from "awesomplete";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "awesomplete/awesomplete.css";
-import "./css/style.css";
+import "./scss/style.scss";
 
 import Helper from "./helper.js";
 import Env from "./env.js";
