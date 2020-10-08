@@ -135,7 +135,7 @@ async function initialize() {
   // Set query into input.
   document.querySelector("#query").value = env.query || "";
 
-  //setAutocomplete();
+  setAutocomplete();
 
   setAddToBrowserTab();
 
