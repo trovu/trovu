@@ -38,6 +38,16 @@ main .jumbotron {
   background: #aaa;
 }
 
+.awesomplete.query > ul > li[aria-selected="true"] .unreachable .keyword {
+  color: #fff;
+}
+.awesomplete.query > ul > li[aria-selected="true"] .unreachable .argument-names {
+  color: #ddd;
+}
+.awesomplete.query > ul > li[aria-selected="true"] .unreachable .title {
+  color: #fff;
+}
+
 /* Suggestions */
 
 .ui-autocomplete {
@@ -58,14 +68,5 @@ main .jumbotron {
 
 .ui-menu-item span {
   margin: 0em 0.2em;
-}
-.ui-menu-item .unreachable.ui-state-focus .keyword {
-  color: #fff;
-}
-.ui-menu-item .argument-names {
-  color: #444;
-}
-.ui-menu-item .ui-state-focus .argument-names {
-  color: #ddd;
 }
 /* /Suggestions */
