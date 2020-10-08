@@ -50,26 +50,3 @@ main .jumbotron {
     }
   }
 }
-
-/* Suggestions */
-
-.ui-autocomplete {
-  max-height: 400px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  font-family: inherit;
-  padding: 5px 0;
-}
-
-.ui-menu-item .ui-state-focus {
-  background: #0081c2;
-  color: #fff;
-  border-radius: 0;
-}
-
-.ui-menu-item span {
-  margin: 0em 0.2em;
-}
-/* /Suggestions */
