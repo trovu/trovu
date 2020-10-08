@@ -294,21 +294,25 @@ function setAutocomplete() {
     suggestions = suggestions.slice(0, 10);
 
     // Convert suggestions to Awesomplete list
-    const list = [];
-    for (let suggestion of suggestions) {
-      const item = {
-        value:
-          (suggestion.reachable ? "" : suggestion.namespace + ".") +
-          suggestion.keyword +
-          " ",
-        label: suggestion,
-      };
-      list.push(item);
-    }
+    const list = convertSuggestionsToAwesompleteList(suggestions);
 
     env.awesomplete.list = list.slice(0, 10);
     env.awesomplete.evaluate();
   });
+}
+
+function convertSuggestionsToAwesompleteList(suggestions) {
+  const list = [];
+  for (let suggestion of suggestions) {
+    const item = {
+      value: (suggestion.reachable ? "" : suggestion.namespace + ".") +
+        suggestion.keyword +
+        " ",
+      label: suggestion,
+    };
+    list.push(item);
+  }
+  return list;
 }
 
 /**
