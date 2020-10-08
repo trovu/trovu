@@ -14,6 +14,10 @@ main .jumbotron {
 .awesomplete.query > ul > li .keyword {
   font-weight: bold;
 }
+
+.awesomplete.query > ul > li .argument-names {
+  color: #444;
+}
 .awesomplete.query > ul > li .namespace {
   background: #aa2c30;
   color: white;
