@@ -130,7 +130,12 @@ async function initialize() {
 
   setLanguagesAndCountriesList();
 
-  updateConfig();
+  displaySettings();
+
+  setProcessUrlTemplateTextarea();
+
+  let paramStr = getParamStr();
+  window.location.hash = "#" + paramStr;
 
   // Set query into input.
   document.querySelector("#query").value = env.query || "";
@@ -394,21 +399,6 @@ async function setDefaultNamespaces() {
     env.addFetchUrlToNamespaces();
     env.namespaces = await env.fetchShortcuts(env.namespaces);
   }
-}
-
-/**
- * Update the whole config.
- */
-async function updateConfig() {
-  //await setDefaultNamespaces();
-  //await getSuggestions();
-
-  displaySettings();
-
-  setProcessUrlTemplateTextarea();
-
-  let paramStr = getParamStr();
-  window.location.hash = "#" + paramStr;
 }
 
 document.querySelector("body").onload = initialize;
