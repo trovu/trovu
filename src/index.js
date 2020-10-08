@@ -186,28 +186,7 @@ function setAutocomplete() {
       return true;
     },
     list: [],
-    item: function (listItem, input, id) {
-      const li = document.createElement("li", {
-        role: "option",
-      });
-
-      const argument_names = Object.keys(listItem.label.arguments).join(", ");
-
-      li.innerHTML =
-        `<span${(listItem.label.reachable ? `` : ` class="unreachable"`)}>
-          <span class="float-left">  
-          <span class="keyword">${listItem.label.keyword}</span>  
-          <span class="argument-names">${argument_names}</span> 
-          </span>
-          &nbsp;
-          <span class="float-right">
-            <span class="title">${listItem.label.title}</span>
-            <span class="namespace">${listItem.label.namespace}</span>
-          </span>
-        </span>
-        `;
-      return li;
-    },
+    item: renderAwesompleteItem,
   });
 
   queryInput.addEventListener("input", function (event) {
@@ -222,6 +201,29 @@ function setAutocomplete() {
 
     env.awesomplete.evaluate();
   });
+}
+
+function renderAwesompleteItem(listItem, input, id) {
+  const li = document.createElement("li", {
+    role: "option",
+  });
+
+  const argument_names = Object.keys(listItem.label.arguments).join(", ");
+
+  li.innerHTML =
+    `<span${(listItem.label.reachable ? `` : ` class="unreachable"`)}>
+          <span class="float-left">  
+          <span class="keyword">${listItem.label.keyword}</span>  
+          <span class="argument-names">${argument_names}</span> 
+          </span>
+          &nbsp;
+          <span class="float-right">
+            <span class="title">${listItem.label.title}</span>
+            <span class="namespace">${listItem.label.namespace}</span>
+          </span>
+        </span>
+        `;
+  return li;
 }
 
 function getSuggestions(keyword) {
