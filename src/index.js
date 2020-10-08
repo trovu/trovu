@@ -127,11 +127,8 @@ async function initialize() {
   await env.populate();
 
   showInfoAlerts();
-
   setLanguagesAndCountriesList();
-
   displaySettings();
-
   setProcessUrlTemplateTextarea();
 
   let paramStr = getParamStr();
@@ -141,7 +138,6 @@ async function initialize() {
   document.querySelector("#query").value = env.query || "";
 
   setAutocomplete();
-
   setAddToBrowserTab();
 
   document.querySelector("#query").focus();
