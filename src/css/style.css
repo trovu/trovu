@@ -43,13 +43,13 @@ main .jumbotron {
   background: #aaa;
 }
 
-.awesomplete.query > ul > li[aria-selected="true"] .unreachable .keyword {
+.awesomplete.query > ul > li[aria-selected="true"] .keyword {
   color: #fff;
 }
-.awesomplete.query > ul > li[aria-selected="true"] .unreachable .argument-names {
+.awesomplete.query > ul > li[aria-selected="true"] .argument-names {
   color: #ddd;
 }
-.awesomplete.query > ul > li[aria-selected="true"] .unreachable .title {
+.awesomplete.query > ul > li[aria-selected="true"] .title {
   color: #fff;
 }
 
