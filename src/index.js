@@ -227,6 +227,10 @@ function setAutocomplete() {
   queryInput.addEventListener("input", function (event) {
     const inputText = event.target.value;
 
+    // Only use first word of user input
+    let keyword, argumentString;
+    [keyword, argumentString] = Helper.splitKeepRemainder(inputText, " ", 2);
+
     const matches = {
       keywordFullReachable: [],
       keywordFullUnreachable: [],
@@ -237,10 +241,6 @@ function setAutocomplete() {
       titleMiddleReachable: [],
       titleMiddleUnreachable: [],
     };
-
-    // Only use first word of user input
-    let keyword, argumentString;
-    [keyword, argumentString] = Helper.splitKeepRemainder(inputText, " ", 2);
 
     for (let namespace of env.namespaces) {
       for (let shortcut of Object.values(namespace.shortcuts)) {
