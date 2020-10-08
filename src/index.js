@@ -293,7 +293,6 @@ function setAutocomplete() {
     );
     suggestions = suggestions.slice(0, 10);
 
-    // Convert suggestions to Awesomplete list
     const list = convertSuggestionsToAwesompleteList(suggestions);
 
     env.awesomplete.list = list.slice(0, 10);
