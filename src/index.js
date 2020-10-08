@@ -199,7 +199,7 @@ function setAutocomplete() {
         (listItem.label.reachable ? `` : ` class="unreachable"`) +
         `>
           <span class="float-left">  
-          <span class="keyword"> ${listItem.label.keyword}</span>  
+          <span class="keyword">${listItem.label.keyword}</span>  
           <span class="argument-names">${argument_names}</span> 
           </span>
           &nbsp;
