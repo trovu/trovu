@@ -231,73 +231,79 @@ function setAutocomplete() {
     let keyword, argumentString;
     [keyword, argumentString] = Helper.splitKeepRemainder(inputText, " ", 2);
 
-    const matches = {
-      keywordFullReachable: [],
-      keywordFullUnreachable: [],
-      keywordBeginReachable: [],
-      keywordBeginUnreachable: [],
-      titleBeginReachable: [],
-      titleBeginUnreachable: [],
-      titleMiddleReachable: [],
-      titleMiddleUnreachable: [],
-    };
-
-    for (let namespace of env.namespaces) {
-      for (let shortcut of Object.values(namespace.shortcuts)) {
-        if (keyword == shortcut.keyword) {
-          if (shortcut.reachable) {
-            matches.keywordFullReachable.push(shortcut);
-          } else {
-            matches.keywordFullReachable.push(shortcut);
-          }
-          continue;
-        }
-        let pos = shortcut.keyword.search(new RegExp(keyword, "i"));
-        if (pos == 0) {
-          if (shortcut.reachable) {
-            matches.keywordBeginReachable.push(shortcut);
-          } else {
-            matches.keywordBeginUnreachable.push(shortcut);
-          }
-          continue;
-        }
-        pos = shortcut.title.search(new RegExp(keyword, "i"));
-        if (pos == 0) {
-          if (shortcut.reachable) {
-            matches.titleBeginReachable.push(shortcut);
-          } else {
-            matches.titleBeginUnreachable.push(shortcut);
-          }
-          continue;
-        }
-        if (pos > 0) {
-          if (shortcut.reachable) {
-            matches.titleMiddleReachable.push(shortcut);
-          } else {
-            matches.titleMiddleUnreachable.push(shortcut);
-          }
-          continue;
-        }
-      }
-    }
-    let suggestions = [];
-    suggestions = suggestions.concat(
-      matches.keywordFullReachable,
-      matches.keywordFullUnreachable,
-      matches.keywordBeginReachable,
-      matches.keywordBeginUnreachable,
-      matches.titleBeginReachable,
-      matches.titleBeginUnreachable,
-      matches.titleMiddleReachable,
-      matches.titleMiddleUnreachable
-    );
-    suggestions = suggestions.slice(0, 10);
-
+    const suggestions = getSuggestions(keyword);
     const list = convertSuggestionsToAwesompleteList(suggestions);
 
     env.awesomplete.list = list.slice(0, 10);
     env.awesomplete.evaluate();
   });
+}
+
+function getSuggestions(keyword) {
+
+  const matches = {
+    keywordFullReachable: [],
+    keywordFullUnreachable: [],
+    keywordBeginReachable: [],
+    keywordBeginUnreachable: [],
+    titleBeginReachable: [],
+    titleBeginUnreachable: [],
+    titleMiddleReachable: [],
+    titleMiddleUnreachable: [],
+  };
+
+  for (let namespace of env.namespaces) {
+    for (let shortcut of Object.values(namespace.shortcuts)) {
+      if (keyword == shortcut.keyword) {
+        if (shortcut.reachable) {
+          matches.keywordFullReachable.push(shortcut);
+        } else {
+          matches.keywordFullReachable.push(shortcut);
+        }
+        continue;
+      }
+      let pos = shortcut.keyword.search(new RegExp(keyword, "i"));
+      if (pos == 0) {
+        if (shortcut.reachable) {
+          matches.keywordBeginReachable.push(shortcut);
+        } else {
+          matches.keywordBeginUnreachable.push(shortcut);
+        }
+        continue;
+      }
+      pos = shortcut.title.search(new RegExp(keyword, "i"));
+      if (pos == 0) {
+        if (shortcut.reachable) {
+          matches.titleBeginReachable.push(shortcut);
+        } else {
+          matches.titleBeginUnreachable.push(shortcut);
+        }
+        continue;
+      }
+      if (pos > 0) {
+        if (shortcut.reachable) {
+          matches.titleMiddleReachable.push(shortcut);
+        } else {
+          matches.titleMiddleUnreachable.push(shortcut);
+        }
+        continue;
+      }
+    }
+  }
+  let suggestions = [];
+  suggestions = suggestions.concat(
+    matches.keywordFullReachable,
+    matches.keywordFullUnreachable,
+    matches.keywordBeginReachable,
+    matches.keywordBeginUnreachable,
+    matches.titleBeginReachable,
+    matches.titleBeginUnreachable,
+    matches.titleMiddleReachable,
+    matches.titleMiddleUnreachable
+  );
+  suggestions = suggestions.slice(0, 10);
+
+  return suggestions;
 }
 
 function convertSuggestionsToAwesompleteList(suggestions) {
