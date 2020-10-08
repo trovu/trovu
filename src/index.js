@@ -191,7 +191,11 @@ function setAutocomplete() {
 
   queryInput.addEventListener("input", function (event) {
     const inputText = event.target.value;
-    const [keyword, argumentString] = Helper.splitKeepRemainder(inputText, " ", 2);
+    const [keyword, argumentString] = Helper.splitKeepRemainder(
+      inputText,
+      " ",
+      2
+    );
 
     // Only search by keyword / first word of user input.
     const suggestions = getSuggestions(keyword);
@@ -210,8 +214,9 @@ function renderAwesompleteItem(listItem, input, id) {
 
   const argument_names = Object.keys(listItem.label.arguments).join(", ");
 
-  li.innerHTML =
-    `<span${(listItem.label.reachable ? `` : ` class="unreachable"`)}>
+  li.innerHTML = `<span${
+    listItem.label.reachable ? `` : ` class="unreachable"`
+  }>
           <span class="float-left">  
           <span class="keyword">${listItem.label.keyword}</span>  
           <span class="argument-names">${argument_names}</span> 
