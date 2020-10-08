@@ -194,10 +194,7 @@ function setAutocomplete() {
       const argument_names = Object.keys(listItem.label.arguments).join(", ");
 
       li.innerHTML =
-        `
-        <span` +
-        (listItem.label.reachable ? `` : ` class="unreachable"`) +
-        `>
+        `<span${(listItem.label.reachable ? `` : ` class="unreachable"`)}>
           <span class="float-left">  
           <span class="keyword">${listItem.label.keyword}</span>  
           <span class="argument-names">${argument_names}</span> 
