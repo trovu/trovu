@@ -13,6 +13,7 @@ main .jumbotron {
 
 .awesomplete.query > ul > li {
   padding: .1em .9em;
+  border-bottom: 1px solid #eee;
 }
 
 .awesomplete.query > ul > li .keyword {
