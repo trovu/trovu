@@ -10,7 +10,6 @@ import "./css/style.css";
 
 import Helper from "./helper.js";
 import Env from "./env.js";
-import ProcessUrl from "./processUrl.js";
 
 var env = new Env();
 
