@@ -11,6 +11,29 @@ main .jumbotron {
   padding: .1em .9em;
 }
 
+.awesomplete.query > ul > li .keyword {
+  font-weight: bold;
+}
+.awesomplete.query > ul > li .namespace {
+  background: #aa2c30;
+  color: white;
+  padding: 0.2em;
+}
+
+.awesomplete.query > ul > li .unreachable .keyword {
+  color: #aaa;
+}
+
+.awesomplete.query > ul > li .unreachable .argument-names {
+  color: #aaa;
+}
+.awesomplete.query > ul > li .unreachable .title {
+  color: #aaa;
+}
+.awesomplete.query > ul > li .unreachable .namespace {
+  background: #aaa;
+}
+
 /* Suggestions */
 
 .ui-autocomplete {
@@ -32,17 +55,6 @@ main .jumbotron {
 .ui-menu-item span {
   margin: 0em 0.2em;
 }
-.ui-menu-item .keyword {
-  font-weight: bold;
-}
-.ui-menu-item .namespace {
-  background: #aa2c30;
-  color: white;
-  padding: 0.2em;
-}
-.ui-menu-item .unreachable .keyword {
-  color: #aaa;
-}
 .ui-menu-item .unreachable.ui-state-focus .keyword {
   color: #fff;
 }
@@ -51,11 +63,5 @@ main .jumbotron {
 }
 .ui-menu-item .ui-state-focus .argument-names {
   color: #ddd;
-}
-.ui-menu-item .unreachable .argument-names {
-  color: #aaa;
-}
-.ui-menu-item .unreachable .title {
-  color: #aaa;
 }
 /* /Suggestions */
