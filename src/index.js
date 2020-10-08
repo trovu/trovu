@@ -241,6 +241,25 @@ function setAutocomplete() {
 
 function getSuggestions(keyword) {
 
+  const matches = getMatches(keyword);
+
+  let suggestions = [];
+  suggestions = suggestions.concat(
+    matches.keywordFullReachable,
+    matches.keywordFullUnreachable,
+    matches.keywordBeginReachable,
+    matches.keywordBeginUnreachable,
+    matches.titleBeginReachable,
+    matches.titleBeginUnreachable,
+    matches.titleMiddleReachable,
+    matches.titleMiddleUnreachable
+  );
+  suggestions = suggestions.slice(0, 10);
+
+  return suggestions;
+}
+
+function getMatches(keyword) {
   const matches = {
     keywordFullReachable: [],
     keywordFullUnreachable: [],
@@ -290,20 +309,7 @@ function getSuggestions(keyword) {
       }
     }
   }
-  let suggestions = [];
-  suggestions = suggestions.concat(
-    matches.keywordFullReachable,
-    matches.keywordFullUnreachable,
-    matches.keywordBeginReachable,
-    matches.keywordBeginUnreachable,
-    matches.titleBeginReachable,
-    matches.titleBeginUnreachable,
-    matches.titleMiddleReachable,
-    matches.titleMiddleUnreachable
-  );
-  suggestions = suggestions.slice(0, 10);
-
-  return suggestions;
+  return matches;
 }
 
 function convertSuggestionsToAwesompleteList(suggestions) {
