@@ -240,7 +240,6 @@ function setAutocomplete() {
 }
 
 function getSuggestions(keyword) {
-
   const matches = getMatches(keyword);
 
   let suggestions = [];
