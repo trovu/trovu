@@ -100,7 +100,7 @@ function setAddToBrowserTab() {
     .forEach((el) => el.classList.remove("active"));
   document
     .querySelectorAll("#add-to-browser .tab-pane")
-    .forEach((el) => el.classList.remove("show","active"));
+    .forEach((el) => el.classList.remove("show", "active"));
 
   // Show tab and panel according to setting.
   switch (browser && browser.name) {
@@ -111,7 +111,7 @@ function setAddToBrowserTab() {
         .classList.add("active");
       document
         .querySelector("#add-to-browser .tab-pane." + browser.name)
-        .classList.add("show","active");
+        .classList.add("show", "active");
       break;
     default:
       // Will show the default "Other" tab.
