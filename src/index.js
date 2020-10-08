@@ -393,17 +393,6 @@ function setProcessUrlTemplateTextarea() {
   preProcessUrl.textContent = urlProcess;
 }
 
-/**
- * Set namespaces to o, enviroment's language & country.
- */
-async function setDefaultNamespaces() {
-  if (!env.github) {
-    env.namespaces = ["o", env.language, "." + env.country];
-    env.addFetchUrlToNamespaces();
-    env.namespaces = await env.fetchShortcuts(env.namespaces);
-  }
-}
-
 document.querySelector("body").onload = initialize;
 document.getElementById("query-form").onsubmit = submitQuery;
 document.querySelector("#settingsSave").onclick = saveSettings;
