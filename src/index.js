@@ -235,6 +235,7 @@ function renderAwesompleteItem(listItem, input, id) {
 
 function getSuggestions(keyword) {
   const matches = getMatches(keyword);
+  sortMatches(matches);
 
   let suggestions = [];
   suggestions = suggestions.concat(
@@ -303,6 +304,12 @@ function getMatches(keyword) {
     }
   }
   return matches;
+}
+
+function sortMatches(matches) {
+  for (let key in matches) {
+    matches[key].sort(((a, b) => { return (a.keyword < b.keyword ? -1 : 1); }));
+  }
 }
 
 function convertSuggestionsToAwesompleteList(suggestions) {
