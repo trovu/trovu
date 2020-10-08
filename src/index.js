@@ -175,121 +175,140 @@ function showInfoAlerts() {
 }
 
 function setAutocomplete() {
-  $("#query")
-    .autocomplete({
-      minLength: 1,
-      source: function (request, response) {
-        let matches = {
-          keywordFullReachable: [],
-          keywordFullUnreachable: [],
-          keywordBeginReachable: [],
-          keywordBeginUnreachable: [],
-          titleBeginReachable: [],
-          titleBeginUnreachable: [],
-          titleMiddleReachable: [],
-          titleMiddleUnreachable: [],
-        };
+  const queryInput = document.querySelector("#query");
 
-        // Only use first word of request.term.
-        let keyword, argumentString;
-        [keyword, argumentString] = Helper.splitKeepRemainder(
-          request.term,
-          " ",
-          2
-        );
+  env.awesomplete = new Awesomplete(queryInput, {
+    container: function (input) {
+      return input.parentNode;
+    },
+    minChars: 1,
+    filter: function (text, input) {
+      return true;
+    },
+    list: [],
+    item: function (listItem, input, id) {
+      const li = document.createElement("li", {
+        role: "option",
+      });
 
-        for (let suggestion of suggestions) {
-          if (keyword == suggestion.keyword) {
-            if (suggestion.reachable) {
-              matches.keywordFullReachable.push(suggestion);
-            } else {
-              matches.keywordFullReachable.push(suggestion);
-            }
-            continue;
+      const argument_names = Object.keys(listItem.label.arguments).join(", ");
+
+      li.innerHTML =
+        `
+        <span` +
+        (listItem.label.reachable ? `` : ` class="unreachable"`) +
+        `>
+        <span class="float-left">  
+        <span class="keyword">  
+        ` +
+        listItem.label.keyword +
+        `
+        </span>  
+        <span class="argument-names">
+        ` +
+        argument_names +
+        `
+        </span> 
+        </span>&nbsp;<span class="float-right">
+          <span class="title">
+          ` +
+        listItem.label.title +
+        `
+          </span>
+        <span class="namespace">` +
+        listItem.label.namespace +
+        `</span>
+        </span></span>
+        `;
+      return li;
+    },
+  });
+
+  queryInput.addEventListener("input", function (event) {
+    const inputText = event.target.value;
+
+    const matches = {
+      keywordFullReachable: [],
+      keywordFullUnreachable: [],
+      keywordBeginReachable: [],
+      keywordBeginUnreachable: [],
+      titleBeginReachable: [],
+      titleBeginUnreachable: [],
+      titleMiddleReachable: [],
+      titleMiddleUnreachable: [],
+    };
+
+    // Only use first word of user input
+    let keyword, argumentString;
+    [keyword, argumentString] = Helper.splitKeepRemainder(inputText, " ", 2);
+
+    for (let namespace of env.namespaces) {
+      for (let shortcut of Object.values(namespace.shortcuts)) {
+        if (keyword == shortcut.keyword) {
+          if (shortcut.reachable) {
+            matches.keywordFullReachable.push(shortcut);
+          } else {
+            matches.keywordFullReachable.push(shortcut);
           }
-          let pos = suggestion.keyword.search(new RegExp(keyword, "i"));
-          if (pos == 0) {
-            if (suggestion.reachable) {
-              matches.keywordBeginReachable.push(suggestion);
-            } else {
-              matches.keywordBeginUnreachable.push(suggestion);
-            }
-            continue;
-          }
-          pos = suggestion.title.search(new RegExp(keyword, "i"));
-          if (pos == 0) {
-            if (suggestion.reachable) {
-              matches.titleBeginReachable.push(suggestion);
-            } else {
-              matches.titleBeginUnreachable.push(suggestion);
-            }
-            continue;
-          }
-          if (pos > 0) {
-            if (suggestion.reachable) {
-              matches.titleMiddleReachable.push(suggestion);
-            } else {
-              matches.titleMiddleUnreachable.push(suggestion);
-            }
-            continue;
-          }
+          continue;
         }
-        let result = [];
-        result = result
-          .concat(
-            matches.keywordFullReachable,
-            matches.keywordFullUnreachable,
-            matches.keywordBeginReachable,
-            matches.keywordBeginUnreachable,
-            matches.titleBeginReachable,
-            matches.titleBeginUnreachable,
-            matches.titleMiddleReachable,
-            matches.titleMiddleUnreachable
-          )
-          .slice(0, 20);
-        response(result);
-      },
-    })
-    .data("uiAutocomplete")._renderItem = function (ul, item) {
-    var namespace_html = '<span class="namespace">' + item.namespace;
-    ("</span>");
-
-    var keyword = item.keyword;
-
-    // add "namespace." if unreachable
-    if (!item.reachable) {
-      keyword = item.namespace + "." + keyword;
+        let pos = shortcut.keyword.search(new RegExp(keyword, "i"));
+        if (pos == 0) {
+          if (shortcut.reachable) {
+            matches.keywordBeginReachable.push(shortcut);
+          } else {
+            matches.keywordBeginUnreachable.push(shortcut);
+          }
+          continue;
+        }
+        pos = shortcut.title.search(new RegExp(keyword, "i"));
+        if (pos == 0) {
+          if (shortcut.reachable) {
+            matches.titleBeginReachable.push(shortcut);
+          } else {
+            matches.titleBeginUnreachable.push(shortcut);
+          }
+          continue;
+        }
+        if (pos > 0) {
+          if (shortcut.reachable) {
+            matches.titleMiddleReachable.push(shortcut);
+          } else {
+            matches.titleMiddleUnreachable.push(shortcut);
+          }
+          continue;
+        }
+      }
     }
-    var argument_names = Object.keys(item.arguments).join(", ");
-    var title = item.title;
+    let suggestions = [];
+    suggestions = suggestions.concat(
+      matches.keywordFullReachable,
+      matches.keywordFullUnreachable,
+      matches.keywordBeginReachable,
+      matches.keywordBeginUnreachable,
+      matches.titleBeginReachable,
+      matches.titleBeginUnreachable,
+      matches.titleMiddleReachable,
+      matches.titleMiddleUnreachable
+    );
+    suggestions = suggestions.slice(0, 10);
 
-    var html =
-      "<a" +
-      (item.reachable ? "" : " class='unreachable'") +
-      ">" +
-      "&nbsp;" + // to make bar visible /float:-related problem
-      '<span class="float-left">' +
-      '<span class="keyword">' +
-      keyword +
-      "</span>" +
-      '<span class="argument-names">' +
-      argument_names +
-      "</span>" +
-      "</span>" +
-      '<span class="float-right">' +
-      '<span class="title">' +
-      title +
-      "</span>" +
-      namespace_html +
-      "</span>" +
-      "</a>" +
-      "";
+    // Convert suggestions to Awesomplete list
+    const list = [];
+    for (let suggestion of suggestions) {
+      const item = {
+        value:
+          (suggestion.reachable ? "" : suggestion.namespace + ".") +
+          suggestion.keyword +
+          " ",
+        label: suggestion,
+      };
+      list.push(item);
+    }
 
-    return $("<li></li>")
-      .data("item.autocomplete", item)
-      .append(html)
-      .appendTo(ul);
-  };
+    env.awesomplete.list = list.slice(0, 10);
+    env.awesomplete.evaluate();
+  });
 }
 
 /**
