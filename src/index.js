@@ -13,8 +13,6 @@ import Env from "./env.js";
 
 var env = new Env();
 
-var suggestions = [];
-
 // Builders =========================================================
 
 /**
