@@ -2,6 +2,7 @@
 
 import jsyaml from "js-yaml";
 import Helper from "./helper.js";
+import ProcessUrl from "./processUrl.js";
 
 /** Set and remember the environment. */
 
@@ -38,6 +39,44 @@ export default class Env {
       this.reload,
       this.debug
     );
+    this.addInfoToShortcuts(this.namespaces);
+  }
+
+  addInfoToShortcuts(namespaces) {
+    // Remember found shortcuts
+    // to know which ones are reachable.
+    const foundShortcuts = {};
+
+    // Iterate over namespaces in reverse order.
+    for (let namespace of namespaces.reverse()) {
+      const shortcuts = namespace.shortcuts;
+
+      for (let key in shortcuts) {
+        const shortcut = shortcuts[key];
+
+        [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
+        shortcut.namespace = namespace.name;
+        shortcut.arguments = ProcessUrl.getArgumentsFromString(
+          shortcuts[key].url
+        );
+
+        shortcut.title = shortcut.title || "";
+
+        // If not yet present: reachable.
+        // (Because we started with most precendent namespace.)
+        if (!(key in foundShortcuts)) {
+          shortcut.reachable = true;
+        }
+        // Others are unreachable
+        // but can be reached with namespace forcing.
+        else {
+          shortcut.reachable = false;
+        }
+
+        shortcuts[key] = shortcut;
+        foundShortcuts[key] = true;
+      }
+    }
   }
 
   /**
