@@ -198,27 +198,16 @@ function setAutocomplete() {
         <span` +
         (listItem.label.reachable ? `` : ` class="unreachable"`) +
         `>
-        <span class="float-left">  
-        <span class="keyword">  
-        ` +
-        listItem.label.keyword +
-        `
-        </span>  
-        <span class="argument-names">
-        ` +
-        argument_names +
-        `
-        </span> 
-        </span>&nbsp;<span class="float-right">
-          <span class="title">
-          ` +
-        listItem.label.title +
-        `
+          <span class="float-left">  
+          <span class="keyword"> ${listItem.label.keyword}</span>  
+          <span class="argument-names">${argument_names}</span> 
           </span>
-        <span class="namespace">` +
-        listItem.label.namespace +
-        `</span>
-        </span></span>
+          &nbsp;
+          <span class="float-right">
+            <span class="title">${listItem.label.title}</span>
+            <span class="namespace">${listItem.label.namespace}</span>
+          </span>
+        </span>
         `;
       return li;
     },
