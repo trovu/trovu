@@ -189,22 +189,25 @@ function setAutocomplete() {
     item: renderAwesompleteItem,
   });
 
-  queryInput.addEventListener("input", function (event) {
-    const inputText = event.target.value;
-    const [keyword, argumentString] = Helper.splitKeepRemainder(
-      inputText,
-      " ",
-      2
-    );
+  queryInput.addEventListener("input", queryInputChange);
 
-    // Only search by keyword / first word of user input.
-    const suggestions = getSuggestions(keyword);
+}
 
-    const list = convertSuggestionsToAwesompleteList(suggestions);
-    env.awesomplete.list = list.slice(0, 10);
+function queryInputChange(event) {
+  const inputText = event.target.value;
+  const [keyword, argumentString] = Helper.splitKeepRemainder(
+    inputText,
+    " ",
+    2
+  );
 
-    env.awesomplete.evaluate();
-  });
+  // Only search by keyword / first word of user input.
+  const suggestions = getSuggestions(keyword);
+
+  const list = convertSuggestionsToAwesompleteList(suggestions);
+  env.awesomplete.list = list.slice(0, 10);
+
+  env.awesomplete.evaluate();
 }
 
 function renderAwesompleteItem(listItem, input, id) {
