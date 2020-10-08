@@ -81,9 +81,9 @@ function getProcessUrl() {
 function addLinkSearch() {
   let paramStr = location.hash.substr(1);
   let xml =
-    '<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/?' +
+    `<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/?` +
     paramStr +
-    '" title="Trovu" />';
+    `" title="Trovu" />`;
   let head = document.querySelector("head");
   head.innerHTML += xml;
 }
