@@ -416,8 +416,8 @@ async function setDefaultNamespaces() {
  * Update the whole config.
  */
 async function updateConfig() {
-  await setDefaultNamespaces();
-  await getSuggestions();
+  //await setDefaultNamespaces();
+  //await getSuggestions();
 
   displaySettings();
 
