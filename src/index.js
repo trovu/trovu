@@ -81,40 +81,6 @@ function getProcessUrl() {
   return processUrl;
 }
 
-async function getSuggestions() {
-  // Use global var
-  // reset it.
-  suggestions = [];
-  let foundShortcuts = {};
-  // Iterate over namespaces in reverse order.
-  for (let namespace of env.namespaces.reverse()) {
-    let shortcuts = namespace.shortcuts;
-    for (let key in shortcuts) {
-      let suggestion = {};
-      [suggestion.keyword, suggestion.argumentCount] = key.split(" ");
-      suggestion.namespace = namespace.name;
-      suggestion.arguments = ProcessUrl.getArgumentsFromString(
-        shortcuts[key].url
-      );
-      suggestion.title = shortcuts[key].title || "";
-      // If not yet present: reachable.
-      // (Because we started with most precendent namespace.)
-      if (!(key in foundShortcuts)) {
-        suggestion.reachable = true;
-        suggestions.push(suggestion);
-      }
-      // Others are unreachable
-      // but can be reached with namespace forcing.
-      else {
-        suggestion.reachable = false;
-        suggestions.push(suggestion);
-      }
-      foundShortcuts[key] = true;
-    }
-  }
-  return suggestions;
-}
-
 function addLinkSearch() {
   let paramStr = location.hash.substr(1);
   let xml =
