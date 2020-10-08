@@ -190,7 +190,6 @@ function setAutocomplete() {
   });
 
   queryInput.addEventListener("input", queryInputChange);
-
 }
 
 function queryInputChange(event) {
