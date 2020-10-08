@@ -1,9 +1,7 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
-
-import css from 'rollup-plugin-css-only'
-
+import scss from 'rollup-plugin-scss';
 
 export default [
   {
@@ -17,7 +15,7 @@ export default [
       resolve(),
       commonjs(),
       json(),
-      css({
+      scss({
         output: "public/bundle/style.css",
       }),
     ],
