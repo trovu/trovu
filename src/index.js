@@ -226,15 +226,14 @@ function setAutocomplete() {
 
   queryInput.addEventListener("input", function (event) {
     const inputText = event.target.value;
+    const [keyword, argumentString] = Helper.splitKeepRemainder(inputText, " ", 2);
 
-    // Only use first word of user input
-    let keyword, argumentString;
-    [keyword, argumentString] = Helper.splitKeepRemainder(inputText, " ", 2);
-
+    // Only search by keyword / first word of user input.
     const suggestions = getSuggestions(keyword);
-    const list = convertSuggestionsToAwesompleteList(suggestions);
 
+    const list = convertSuggestionsToAwesompleteList(suggestions);
     env.awesomplete.list = list.slice(0, 10);
+
     env.awesomplete.evaluate();
   });
 }
