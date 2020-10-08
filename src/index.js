@@ -304,7 +304,8 @@ function convertSuggestionsToAwesompleteList(suggestions) {
   const list = [];
   for (let suggestion of suggestions) {
     const item = {
-      value: (suggestion.reachable ? "" : suggestion.namespace + ".") +
+      value:
+        (suggestion.reachable ? "" : suggestion.namespace + ".") +
         suggestion.keyword +
         " ",
       label: suggestion,
