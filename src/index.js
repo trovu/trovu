@@ -250,9 +250,9 @@ function renderAwesompleteItem(listItem, input, id) {
 
 /**
  * Find shortcuts to suggest.
- * 
+ *
  * @param {string} keyword – The keyword from the query.
- * 
+ *
  * @return {array} suggestions – The found suggestions.
  */
 function getSuggestions(keyword) {
@@ -277,9 +277,9 @@ function getSuggestions(keyword) {
 
 /**
  * Find shortcuts to suggest.
- * 
+ *
  * @param {string} keyword – The keyword from the query.
- * 
+ *
  * @return {object} matches – The found matches, grouped by type of match.
  */
 function getMatches(keyword) {
@@ -337,7 +337,7 @@ function getMatches(keyword) {
 
 /**
  * Sort matches based on keyword.
- * 
+ *
  * @param {string} keyword – The keyword from the query.
  */
 function sortMatches(matches) {
@@ -350,9 +350,9 @@ function sortMatches(matches) {
 
 /**
  * Convert Suggestions to Awesomplete list format.
- * 
+ *
  * @param {array} suggestions – The found suggestions.
- * 
+ *
  * @return {array} list – The found suggestions, converted for Awesomplete.
  */
 function convertSuggestionsToAwesompleteList(suggestions) {
