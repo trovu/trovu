@@ -360,6 +360,7 @@ function convertSuggestionsToAwesompleteList(suggestions) {
   for (let suggestion of suggestions) {
     const item = {
       value:
+        // If not reachable: Prefix with namespace.
         (suggestion.reachable ? "" : suggestion.namespace + ".") +
         suggestion.keyword +
         " ",
