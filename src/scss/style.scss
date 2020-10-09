@@ -23,6 +23,16 @@ main .jumbotron {
       color: white;
       padding: 0.2em;
     }
+    > span {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .left {
+        text-align: left;
+      }
+      .right {
+        text-align: right;
+      }
+    }
     .unreachable {
       .keyword {
         color: #aaa;

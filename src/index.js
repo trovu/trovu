@@ -244,12 +244,11 @@ function renderAwesompleteItem(listItem, input, id) {
   li.innerHTML = `<span${
     listItem.label.reachable ? `` : ` class="unreachable"`
   }>
-      <span class="float-left">  
+      <span class="left">  
       <span class="keyword">${listItem.label.keyword}</span>  
       <span class="argument-names">${argument_names}</span> 
       </span>
-      &nbsp;
-      <span class="float-right">
+      <span class="right">
         <span class="title">${listItem.label.title}</span>
         <span class="namespace">${listItem.label.namespace}</span>
       </span>
