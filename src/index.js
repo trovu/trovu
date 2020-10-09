@@ -78,6 +78,9 @@ function getProcessUrl() {
   return processUrl;
 }
 
+/**
+ * Add Opensearch tag.
+ */
 function addLinkSearch() {
   let paramStr = location.hash.substr(1);
   let xml = `<link 
@@ -90,6 +93,9 @@ function addLinkSearch() {
   head.innerHTML += xml;
 }
 
+/**
+ * Autoselect the right tab, based on current browser.
+ */
 function setAddToBrowserTab() {
   const browser = detect();
 
@@ -118,6 +124,9 @@ function setAddToBrowserTab() {
   }
 }
 
+/**
+ * Initialize the index page.
+ */
 async function initialize() {
   // Must be done before env.populate()
   // otherwise Chrome does not autodiscover.
@@ -156,6 +165,9 @@ function setSelectOptions(selector, list) {
   );
 }
 
+/**
+ * Show custom alerts above query input.
+ */
 function showInfoAlerts() {
   let params = Helper.getUrlParams();
 
@@ -209,6 +221,9 @@ function queryInputChange(event) {
   env.awesomplete.evaluate();
 }
 
+/**
+ * Render a suggestion item.
+ */
 function renderAwesompleteItem(listItem, input, id) {
   const li = document.createElement("li", {
     role: "option",
@@ -233,6 +248,13 @@ function renderAwesompleteItem(listItem, input, id) {
   return li;
 }
 
+/**
+ * Find shortcuts to suggest.
+ * 
+ * @param {string} keyword – The keyword from the query.
+ * 
+ * @return {array} suggestions – The found suggestions.
+ */
 function getSuggestions(keyword) {
   const matches = getMatches(keyword);
   sortMatches(matches);
@@ -253,6 +275,13 @@ function getSuggestions(keyword) {
   return suggestions;
 }
 
+/**
+ * Find shortcuts to suggest.
+ * 
+ * @param {string} keyword – The keyword from the query.
+ * 
+ * @return {object} matches – The found matches, grouped by type of match.
+ */
 function getMatches(keyword) {
   const matches = {
     keywordFullReachable: [],
@@ -306,6 +335,11 @@ function getMatches(keyword) {
   return matches;
 }
 
+/**
+ * Sort matches based on keyword.
+ * 
+ * @param {string} keyword – The keyword from the query.
+ */
 function sortMatches(matches) {
   for (let key in matches) {
     matches[key].sort((a, b) => {
@@ -314,6 +348,13 @@ function sortMatches(matches) {
   }
 }
 
+/**
+ * Convert Suggestions to Awesomplete list format.
+ * 
+ * @param {array} suggestions – The found suggestions.
+ * 
+ * @return {array} list – The found suggestions, converted for Awesomplete.
+ */
 function convertSuggestionsToAwesompleteList(suggestions) {
   const list = [];
   for (let suggestion of suggestions) {
