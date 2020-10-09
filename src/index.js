@@ -308,7 +308,9 @@ function getMatches(keyword) {
 
 function sortMatches(matches) {
   for (let key in matches) {
-    matches[key].sort(((a, b) => { return (a.keyword < b.keyword ? -1 : 1); }));
+    matches[key].sort((a, b) => {
+      return a.keyword < b.keyword ? -1 : 1;
+    });
   }
 }
 
