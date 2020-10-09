@@ -241,9 +241,8 @@ function renderAwesompleteItem(listItem, input, id) {
 
   const argument_names = Object.keys(listItem.label.arguments).join(", ");
 
-  li.innerHTML = `<span${
-    listItem.label.reachable ? `` : ` class="unreachable"`
-  }>
+  li.innerHTML = `
+    <span${listItem.label.reachable ? `` : ` class="unreachable"`}>
       <span class="left">  
       <span class="keyword">${listItem.label.keyword}</span>  
       <span class="argument-names">${argument_names}</span> 
