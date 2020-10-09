@@ -379,7 +379,9 @@ function convertSuggestionsToAwesompleteList(suggestions) {
  */
 function submitQuery(event) {
   // Prevent default sending as GET parameters.
-  event.preventDefault();
+  if (event) {
+    event.preventDefault();
+  }
 
   let processUrl = getProcessUrl();
 
