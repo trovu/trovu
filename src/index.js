@@ -363,7 +363,8 @@ function convertSuggestionsToAwesompleteList(suggestions) {
         // If not reachable: Prefix with namespace.
         (suggestion.reachable ? "" : suggestion.namespace + ".") +
         suggestion.keyword +
-        " ",
+        // If shortcut has arguments: Add space.
+        (suggestion.argumentCount > 0 ? " " : ""),
       label: suggestion,
     };
     list.push(item);
