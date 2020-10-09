@@ -154,14 +154,32 @@ async function initialize() {
 
 function setLanguagesAndCountriesList() {
   const { countries, languages } = countriesList;
-  setSelectOptions("#languageSetting", languages);
-  setSelectOptions("#countrySetting", countries);
+
+  // Convert to array.
+  const languagesArray = objectToArrayWithKey(languages);
+  const countriesArray = objectToArrayWithKey(countries);
+
+  // Sort by name.
+  languagesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
+  countriesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
+
+  setSelectOptions("#languageSetting", languagesArray);
+  setSelectOptions("#countrySetting", countriesArray);
+}
+
+function objectToArrayWithKey(obj) {
+  const ar = [];
+  for (const [key, value] of Object.entries(obj)) {
+    value.key = key;
+    ar.push(value);
+  }
+  return ar;
 }
 
 function setSelectOptions(selector, list) {
   let selectEl = document.querySelector(selector);
-  Object.keys(list).forEach((key) =>
-    selectEl.appendChild(new Option(list[key].name, key.toLocaleLowerCase()))
+  list.forEach((item) =>
+    selectEl.appendChild(new Option(item.name, item.key.toLocaleLowerCase()))
   );
 }
 
