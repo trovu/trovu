@@ -202,6 +202,16 @@ function setAutocomplete() {
   });
 
   queryInput.addEventListener("input", queryInputChange);
+  queryInput.addEventListener("awesomplete-selectcomplete", selectcomplete);
+}
+
+function selectcomplete(event) {
+  const inputText = event.target.value;
+  // If selected shortcut has no arguments:
+  // submit query.
+  if (inputText.slice(-1) !== " ") {
+    submitQuery();
+  }
 }
 
 function queryInputChange(event) {
