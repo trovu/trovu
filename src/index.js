@@ -179,7 +179,12 @@ function objectToArrayWithKey(obj) {
 function setSelectOptions(selector, list) {
   let selectEl = document.querySelector(selector);
   list.forEach((item) =>
-    selectEl.appendChild(new Option(item.name, item.key.toLocaleLowerCase()))
+    selectEl.appendChild(
+      new Option(
+        `${item.name} ${item.emoji ?? ``}`,
+        item.key.toLocaleLowerCase()
+      )
+    )
   );
 }
 
