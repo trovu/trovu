@@ -239,13 +239,13 @@ function selectcomplete(event) {
 
 function queryInputChange(event) {
   const inputText = event.target.value;
+
+  // Only search by keyword / first word of user input.
   const [keyword, argumentString] = Helper.splitKeepRemainder(
     inputText,
     " ",
     2
   );
-
-  // Only search by keyword / first word of user input.
   const suggestions = getSuggestions(keyword);
 
   const list = convertSuggestionsToAwesompleteList(suggestions);
