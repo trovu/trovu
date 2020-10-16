@@ -221,6 +221,7 @@ function setAutocomplete() {
       return true;
     },
     list: [],
+    sort: false,
     item: renderAwesompleteItem,
   });
 
