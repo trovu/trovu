@@ -5,7 +5,7 @@ const fs = require("fs");
 
 const calls = yaml.safeLoad(fs.readFileSync("./__tests__/calls.yml", "utf8"));
 
-for (let call of calls) {
+for (const call of calls) {
   test(JSON.stringify(call), async () => {
     await testCall(call);
   });
