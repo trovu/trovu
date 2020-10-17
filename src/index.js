@@ -484,3 +484,7 @@ function setProcessUrlTemplateTextarea() {
 document.querySelector("body").onload = initialize;
 document.getElementById("query-form").onsubmit = submitQuery;
 document.querySelector("#settingsSave").onclick = saveSettings;
+
+window.addEventListener('hashchange', function() {
+  location.reload();
+}, false);
