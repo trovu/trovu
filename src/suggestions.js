@@ -28,19 +28,22 @@ export default class Suggestions {
     });
 
     queryInput.addEventListener("input", this.queryInputChange);
-    queryInput.addEventListener("awesomplete-selectcomplete", this.selectcomplete);
+    queryInput.addEventListener(
+      "awesomplete-selectcomplete",
+      this.selectcomplete
+    );
   }
 
-  selectcomplete = event => {
+  selectcomplete = (event) => {
     const inputText = event.target.value;
     // If selected shortcut has no arguments:
     // submit query.
     if (inputText.slice(-1) !== " ") {
       this.submitQuery();
     }
-  }
+  };
 
-  queryInputChange = event => {
+  queryInputChange = (event) => {
     const inputText = event.target.value;
 
     // Only search by keyword / first word of user input.
@@ -55,7 +58,7 @@ export default class Suggestions {
     this.awesomplete.list = list.slice(0, 10);
 
     this.awesomplete.evaluate();
-  }
+  };
 
   /**
    * Render a suggestion item.
