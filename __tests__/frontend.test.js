@@ -1,6 +1,6 @@
 const docroot = "http://l.tro:8080/#language=en&country=us";
 
-describe("Google", () => {
+describe("Trovu homepage", () => {
   beforeAll(async () => {
     await page.goto(docroot, { waitUntil: "networkidle0" });
   });
