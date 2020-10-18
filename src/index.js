@@ -45,11 +45,13 @@ async function initialize() {
 
   setLocationHash();
 
+  setQueryElement();
+}
+
+function setQueryElement() {
   // Set query into input.
   document.querySelector("#query").value = env.query || "";
-
   new Suggestions(env.namespaces, submitQuery);
-
   document.querySelector("#query").focus();
 }
 
