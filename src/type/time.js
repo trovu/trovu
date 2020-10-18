@@ -23,7 +23,7 @@ export default class TimeParser {
       time = moment(str, "HH:mm");
     }
     // Match '+1' and '-2'
-    let matches = str.match(/^(-|\+)(\d+)$/);
+    const matches = str.match(/^(-|\+)(\d+)$/);
     if (matches) {
       time = now;
       switch (matches[1]) {

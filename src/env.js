@@ -49,10 +49,10 @@ export default class Env {
 
     // Iterate over namespaces in reverse order.
     // Slice to keep original.
-    for (let namespace of namespaces.slice().reverse()) {
+    for (const namespace of namespaces.slice().reverse()) {
       const shortcuts = namespace.shortcuts;
 
-      for (let key in shortcuts) {
+      for (const key in shortcuts) {
         const shortcut = shortcuts[key];
 
         [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
@@ -237,7 +237,7 @@ export default class Env {
    */
   normalizeShortcuts(shortcuts, namespaceName) {
     const incorrectKeys = [];
-    for (let key in shortcuts) {
+    for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
         incorrectKeys.push(key);
       }
@@ -277,7 +277,7 @@ export default class Env {
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
 
-    for (let i in namespaces) {
+    for (const i in namespaces) {
       if (!responses[i] || responses[i].status != 200) {
         if (debug)
           Helper.log(
@@ -419,7 +419,7 @@ export default class Env {
    * @return {object} - The built params.
    */
   getParams() {
-    let params = {};
+    const params = {};
 
     // Put environment into hash.
     if (this.github) {
@@ -439,8 +439,8 @@ export default class Env {
    * Get the parameters as string.
    */
   getParamStr() {
-    let params = this.getParams();
-    let paramStr = Helper.getUrlParamStr(params);
+    const params = this.getParams();
+    const paramStr = Helper.getUrlParamStr(params);
     return paramStr;
   }
 }

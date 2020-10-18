@@ -15,8 +15,7 @@ export default class ParseQuery {
    * - {string} argumentString    - The whole argument string.
    */
   static getKeywordAndArgumentString(query) {
-    let keyword, argumentString;
-    [keyword, argumentString] = Helper.splitKeepRemainder(query, " ", 2);
+    const [keyword, argumentString] = Helper.splitKeepRemainder(query, " ", 2);
 
     return [keyword, argumentString];
   }
@@ -141,7 +140,7 @@ export default class ParseQuery {
       env.keyword
     );
     if (env.extraNamespaceName) {
-      let languageOrCountry = ParseQuery.getLanguageAndCountryFromExtraNamespaceName(
+      const languageOrCountry = ParseQuery.getLanguageAndCountryFromExtraNamespaceName(
         env.extraNamespaceName
       );
       Object.assign(env, languageOrCountry);

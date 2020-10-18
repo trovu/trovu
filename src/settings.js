@@ -52,7 +52,7 @@ export default class Settings {
     this.env.language = document.querySelector("#languageSetting").value;
     this.env.country = document.querySelector("#countrySetting").value;
 
-    let paramStr = this.env.getParamStr();
+    const paramStr = this.env.getParamStr();
     window.location.hash = "#" + paramStr;
 
     // We need to reload to also let Chrome and Opera
@@ -85,7 +85,7 @@ export default class Settings {
   }
 
   setSelectOptions(selector, list) {
-    let selectEl = document.querySelector(selector);
+    const selectEl = document.querySelector(selector);
     list.forEach((item) =>
       selectEl.appendChild(
         new Option(

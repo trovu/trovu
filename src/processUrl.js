@@ -98,7 +98,7 @@ export default class ProcessUrl {
       // An argument can have multiple matches,
       // so go over all of them.
       var matches = placeholders[argumentName];
-      for (let match in matches) {
+      for (const match in matches) {
         argument = await this.processAttributes(argument, matches[match], env);
         while (str.includes(match)) {
           str = str.replace(match, argument);
@@ -151,7 +151,7 @@ export default class ProcessUrl {
 
   static async processTypeDate(processedArgument, locale, attributes) {
     const dateModule = await import("./type/date.js");
-    let date = await dateModule.default.parse(processedArgument, locale);
+    const date = await dateModule.default.parse(processedArgument, locale);
     // If date could be parsed:
     // Set argument.
     if (date && date.format() != "Invalid date") {
@@ -166,7 +166,7 @@ export default class ProcessUrl {
 
   static async processTypeTime(processedArgument, locale, attributes) {
     const timeModule = await import("./type/time.js");
-    let time = await timeModule.default.parse(processedArgument, locale);
+    const time = await timeModule.default.parse(processedArgument, locale);
     // If time could be parsed:
     // Set argument.
     if (time && time.format() != "Invalid time") {
@@ -181,7 +181,7 @@ export default class ProcessUrl {
 
   static async processTypeCity(processedArgument, env) {
     const cityModule = await import("./type/city.js");
-    let city = await cityModule.default.parse(
+    const city = await cityModule.default.parse(
       processedArgument,
       env.country,
       env.reload,
@@ -232,15 +232,15 @@ export default class ProcessUrl {
   static async replaceVariables(str, variables) {
     var placeholders = this.getVariablesFromString(str);
 
-    for (let varName in placeholders) {
+    for (const varName in placeholders) {
       var matches = placeholders[varName];
-      for (let match in matches) {
+      for (const match in matches) {
         var attributes = matches[match];
         switch (varName) {
           case "now":
             const moment = await import("moment");
 
-            let time = moment();
+            const time = moment();
 
             let format = "HH:mm";
             if (attributes.output) {

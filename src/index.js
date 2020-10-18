@@ -36,11 +36,11 @@ function getBaseUrl() {
  * Get the URL to the Process script.
  */
 function getProcessUrl() {
-  let params = env.getParams();
+  const params = env.getParams();
   params["query"] = document.getElementById("query").value;
 
-  let paramStr = Helper.getUrlParamStr(params);
-  let processUrl = "process/index.html?#" + paramStr;
+  const paramStr = Helper.getUrlParamStr(params);
+  const processUrl = "process/index.html?#" + paramStr;
 
   return processUrl;
 }
@@ -49,14 +49,14 @@ function getProcessUrl() {
  * Add Opensearch tag.
  */
 function addLinkSearch() {
-  let paramStr = location.hash.substr(1);
-  let xml = `<link 
+  const paramStr = location.hash.substr(1);
+  const xml = `<link 
     rel="search" 
     type="application/opensearchdescription+xml" 
     href="/opensearch/?${paramStr}" 
     title="Trovu" 
     />`;
-  let head = document.querySelector("head");
+  const head = document.querySelector("head");
   head.innerHTML += xml;
 }
 
@@ -108,7 +108,7 @@ async function initialize() {
 
   setProcessUrlTemplateTextarea();
 
-  let paramStr = env.getParamStr();
+  const paramStr = env.getParamStr();
   window.location.hash = "#" + paramStr;
 
   // Set query into input.
@@ -124,7 +124,7 @@ async function initialize() {
  * Show custom alerts above query input.
  */
 function showInfoAlerts() {
-  let params = Helper.getUrlParams();
+  const params = Helper.getUrlParams();
 
   // Show info alerts.
   switch (params.status) {
@@ -152,7 +152,7 @@ function submitQuery(event) {
     event.preventDefault();
   }
 
-  let processUrl = getProcessUrl();
+  const processUrl = getProcessUrl();
 
   // Redirect to process script.
   window.location.href = processUrl;
@@ -162,13 +162,13 @@ function submitQuery(event) {
  * Set the textarea in the "Add to browser" modal.
  */
 function setProcessUrlTemplateTextarea() {
-  let baseUrl = getBaseUrl();
-  let params = env.getParams();
+  const baseUrl = getBaseUrl();
+  const params = env.getParams();
 
   // Set Process URL.
-  let urlProcess =
+  const urlProcess =
     baseUrl + "process#" + Helper.getUrlParamStr(params) + "&query=%s";
-  let preProcessUrl = document.querySelector(".process-url");
+  const preProcessUrl = document.querySelector(".process-url");
 
   preProcessUrl.textContent = urlProcess;
 }

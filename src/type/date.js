@@ -50,7 +50,7 @@ export default class DateParser {
       date = moment(str, "MM/DD/YYYY");
     }
     // Match '+1' or '-2'
-    let matches = str.match(/^(-|\+)(\d+)$/);
+    const matches = str.match(/^(-|\+)(\d+)$/);
     if (matches) {
       date = now;
       switch (matches[1]) {

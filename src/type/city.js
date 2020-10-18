@@ -3,15 +3,15 @@ import Helper from "../helper.js";
 
 export default class CityParser {
   static async parse(str, country, reload, debug) {
-    let fetchUrlTemplate =
+    const fetchUrlTemplate =
       "https://raw.githubusercontent.com/trovu/trovu-data/master/types/city/{%country}.yml";
-    let fetchUrl = fetchUrlTemplate.replace("{%country}", country);
+    const fetchUrl = fetchUrlTemplate.replace("{%country}", country);
 
-    let citiesYml = await Helper.fetchAsync(fetchUrl, reload, debug);
+    const citiesYml = await Helper.fetchAsync(fetchUrl, reload, debug);
     if (citiesYml) {
-      let cities = jsyaml.load(citiesYml);
+      const cities = jsyaml.load(citiesYml);
       if (str in cities) {
-        let city = cities[str];
+        const city = cities[str];
         return city;
       }
     }

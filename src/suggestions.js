@@ -127,8 +127,8 @@ export default class Suggestions {
       titleMiddleUnreachable: [],
     };
 
-    for (let namespace of this.namespaces) {
-      for (let shortcut of Object.values(namespace.shortcuts)) {
+    for (const namespace of this.namespaces) {
+      for (const shortcut of Object.values(namespace.shortcuts)) {
         if (keyword == shortcut.keyword) {
           if (shortcut.reachable) {
             matches.keywordFullReachable.push(shortcut);
@@ -174,7 +174,7 @@ export default class Suggestions {
    * @param {string} keyword – The keyword from the query.
    */
   sortMatches(matches) {
-    for (let key in matches) {
+    for (const key in matches) {
       matches[key].sort((a, b) => {
         return a.keyword < b.keyword ? -1 : 1;
       });
@@ -190,7 +190,7 @@ export default class Suggestions {
    */
   convertSuggestionsToAwesompleteList(suggestions) {
     const list = [];
-    for (let suggestion of suggestions) {
+    for (const suggestion of suggestions) {
       const item = {
         value:
           // If not reachable: Prefix with namespace.

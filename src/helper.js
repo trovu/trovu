@@ -16,7 +16,7 @@ export default class Helper {
     if (!string) {
       return [];
     }
-    let parts = string.split(delimiter);
+    const parts = string.split(delimiter);
     return parts.slice(0, n - 1).concat([parts.slice(n - 1).join(delimiter)]);
   }
 
