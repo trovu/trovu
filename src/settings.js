@@ -15,6 +15,14 @@ export default class Settings {
     this.displaySettings();
 
     document.querySelector("#settingsSave").onclick = this.saveSettings;
+
+    window.addEventListener(
+      "hashchange",
+      function () {
+        location.reload();
+      },
+      false
+    );
   }
 
   /**
@@ -39,7 +47,10 @@ export default class Settings {
         .querySelectorAll(".github-config-link")
         .forEach(
           (el) =>
-            (el.href = this.env.configUrlTemplate.replace("{%github}", this.env.github))
+            (el.href = this.env.configUrlTemplate.replace(
+              "{%github}",
+              this.env.github
+            ))
         );
     } else {
       document.querySelector(".using-basic").classList.remove("d-none");

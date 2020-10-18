@@ -175,11 +175,3 @@ function setProcessUrlTemplateTextarea() {
 
 document.querySelector("body").onload = initialize;
 document.getElementById("query-form").onsubmit = submitQuery;
-
-window.addEventListener(
-  "hashchange",
-  function () {
-    location.reload();
-  },
-  false
-);
