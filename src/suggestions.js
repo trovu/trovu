@@ -9,10 +9,10 @@ export default class Suggestions {
    * Set helper variables.
    */
   constructor(namespaces, submitQuery) {
-    const queryInput = document.querySelector("#query");
-
-    this.namespaces  = namespaces;
+    this.namespaces = namespaces;
     this.submitQuery = submitQuery;
+
+    const queryInput = document.querySelector("#query");
 
     this.awesomplete = new Awesomplete(queryInput, {
       container: function (input) {
