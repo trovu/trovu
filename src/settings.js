@@ -65,10 +65,6 @@ export default class Settings {
 
     const paramStr = this.env.getParamStr();
     window.location.hash = "#" + paramStr;
-
-    // We need to reload to also let Chrome and Opera
-    // catch the changes in <link rel="search">.
-    location.reload();
   };
 
   setLanguagesAndCountriesList() {
