@@ -8,6 +8,7 @@ import Helper from "./helper.js";
 import Env from "./env.js";
 import Suggestions from "./suggestions";
 import Settings from "./settings.js";
+import AddToBrowser from "./addToBrowser.js";
 
 var env = new Env();
 
@@ -45,20 +46,6 @@ function getProcessUrl() {
   return processUrl;
 }
 
-/**
- * Add Opensearch tag.
- */
-function addLinkSearch() {
-  const paramStr = location.hash.substr(1);
-  const xml = `<link 
-    rel="search" 
-    type="application/opensearchdescription+xml" 
-    href="/opensearch/?${paramStr}" 
-    title="Trovu" 
-    />`;
-  const head = document.querySelector("head");
-  head.innerHTML += xml;
-}
 
 /**
  * Autoselect the right tab, based on current browser.
@@ -97,7 +84,7 @@ function setAddToBrowserTab() {
 async function initialize() {
   // Must be done before env.populate()
   // otherwise Chrome does not autodiscover.
-  addLinkSearch();
+  AddToBrowser.addLinkSearch();
 
   // Init environment.
   await env.populate();
