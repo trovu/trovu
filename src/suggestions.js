@@ -8,10 +8,10 @@ export default class Suggestions {
   /**
    * Set helper variables.
    */
-  constructor(env, submitQuery) {
+  constructor(namespaces, submitQuery) {
     const queryInput = document.querySelector("#query");
 
-    this.env  = env;
+    this.namespaces  = namespaces;
     this.submitQuery = submitQuery;
 
     this.awesomplete = new Awesomplete(queryInput, {
@@ -128,7 +128,7 @@ export default class Suggestions {
       titleMiddleUnreachable: [],
     };
 
-    for (let namespace of this.env.namespaces) {
+    for (let namespace of this.namespaces) {
       for (let shortcut of Object.values(namespace.shortcuts)) {
         if (keyword == shortcut.keyword) {
           if (shortcut.reachable) {

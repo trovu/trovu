@@ -147,7 +147,7 @@ async function initialize() {
   // Set query into input.
   document.querySelector("#query").value = env.query || "";
 
-  new Suggestions(env, submitQuery);
+  new Suggestions(env.namespaces, submitQuery);
   setAddToBrowserTab();
 
   document.querySelector("#query").focus();
