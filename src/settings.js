@@ -12,7 +12,7 @@ export default class Settings {
     this.env = env;
 
     this.setLanguagesAndCountriesList();
-    this.displaySettings(this.env);
+    this.displaySettings();
 
     document.querySelector("#settingsSave").onclick = this.saveSettings;
   }
@@ -20,18 +20,18 @@ export default class Settings {
   /**
    * Fill in the fields of the settings modal.
    */
-  displaySettings(env) {
+  displaySettings() {
     // Set settings fields from environment.
-    document.querySelector("#languageSetting").value = env.language;
-    document.querySelector("#countrySetting").value = env.country;
+    document.querySelector("#languageSetting").value = this.env.language;
+    document.querySelector("#countrySetting").value = this.env.country;
 
     // Output whole environment into textarea.
     document.querySelector("#settingsEnv").value = jsyaml.dump(
-      env.withoutMethods
+      this.env.withoutMethods
     );
 
     // Show and hide settings tabs depending on Github setting.
-    if (env.github) {
+    if (this.env.github) {
       document.querySelector(".using-advanced").classList.remove("d-none");
       document.querySelector(".using-basic").classList.add("d-none");
       document.querySelector("#github-note").classList.remove("d-none");
@@ -39,7 +39,7 @@ export default class Settings {
         .querySelectorAll(".github-config-link")
         .forEach(
           (el) =>
-            (el.href = env.configUrlTemplate.replace("{%github}", env.github))
+            (el.href = this.env.configUrlTemplate.replace("{%github}", this.env.github))
         );
     } else {
       document.querySelector(".using-basic").classList.remove("d-none");
