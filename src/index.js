@@ -43,8 +43,7 @@ async function initialize() {
 
   new AddToBrowser(env);
 
-  const paramStr = env.getParamStr();
-  window.location.hash = "#" + paramStr;
+  setLocationHash();
 
   // Set query into input.
   document.querySelector("#query").value = env.query || "";
@@ -52,6 +51,11 @@ async function initialize() {
   new Suggestions(env.namespaces, submitQuery);
 
   document.querySelector("#query").focus();
+}
+
+function setLocationHash() {
+  const paramStr = env.getParamStr();
+  window.location.hash = "#" + paramStr;
 }
 
 /**
