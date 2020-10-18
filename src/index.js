@@ -210,10 +210,6 @@ function showInfoAlerts() {
   }
 }
 
-function setAutocomplete() {
-}
-
-
 /**
  * On submitting the query.
  *
