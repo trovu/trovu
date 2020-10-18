@@ -1,4 +1,3 @@
-import { detect, browserName } from "detect-browser";
 import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
 
 import "bootstrap/dist/css/bootstrap.css";
@@ -15,25 +14,6 @@ var env = new Env();
 // Builders =========================================================
 
 /**
- * Get the base URL of the current location.
- *
- * @return {string} - The built base URL.
- */
-function getBaseUrl() {
-  let baseUrl = "";
-
-  baseUrl += window.location.protocol;
-  baseUrl += "//";
-  baseUrl += window.location.hostname;
-  baseUrl += window.location.pathname;
-
-  // Remove index.html.
-  baseUrl = baseUrl.replace("index.html", "");
-
-  return baseUrl;
-}
-
-/**
  * Get the URL to the Process script.
  */
 function getProcessUrl() {
@@ -44,38 +24,6 @@ function getProcessUrl() {
   const processUrl = "process/index.html?#" + paramStr;
 
   return processUrl;
-}
-
-
-/**
- * Autoselect the right tab, based on current browser.
- */
-function setAddToBrowserTab() {
-  const browser = detect();
-
-  // Deactivate all.
-  document
-    .querySelectorAll("#add-to-browser .nav-tabs a")
-    .forEach((el) => el.classList.remove("active"));
-  document
-    .querySelectorAll("#add-to-browser .tab-pane")
-    .forEach((el) => el.classList.remove("show", "active"));
-
-  // Show tab and panel according to setting.
-  switch (browser && browser.name) {
-    case "firefox":
-    case "chrome":
-      document
-        .querySelector("#add-to-browser .nav-tabs a." + browser.name)
-        .classList.add("active");
-      document
-        .querySelector("#add-to-browser .tab-pane." + browser.name)
-        .classList.add("show", "active");
-      break;
-    default:
-      // Will show the default "Other" tab.
-      break;
-  }
 }
 
 /**
@@ -93,7 +41,7 @@ async function initialize() {
 
   new Settings(env);
 
-  setProcessUrlTemplateTextarea();
+  new AddToBrowser(env);
 
   const paramStr = env.getParamStr();
   window.location.hash = "#" + paramStr;
@@ -102,7 +50,6 @@ async function initialize() {
   document.querySelector("#query").value = env.query || "";
 
   new Suggestions(env.namespaces, submitQuery);
-  setAddToBrowserTab();
 
   document.querySelector("#query").focus();
 }
@@ -143,21 +90,6 @@ function submitQuery(event) {
 
   // Redirect to process script.
   window.location.href = processUrl;
-}
-
-/**
- * Set the textarea in the "Add to browser" modal.
- */
-function setProcessUrlTemplateTextarea() {
-  const baseUrl = getBaseUrl();
-  const params = env.getParams();
-
-  // Set Process URL.
-  const urlProcess =
-    baseUrl + "process#" + Helper.getUrlParamStr(params) + "&query=%s";
-  const preProcessUrl = document.querySelector(".process-url");
-
-  preProcessUrl.textContent = urlProcess;
 }
 
 document.querySelector("body").onload = initialize;
