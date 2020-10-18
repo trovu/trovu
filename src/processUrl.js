@@ -97,7 +97,7 @@ export default class ProcessUrl {
 
       // An argument can have multiple matches,
       // so go over all of them.
-      var matches = placeholders[argumentName];
+      const matches = placeholders[argumentName];
       for (const match in matches) {
         argument = await this.processAttributes(argument, matches[match], env);
         while (str.includes(match)) {
@@ -230,12 +230,13 @@ export default class ProcessUrl {
    * @return {string} str       - The string with the replaced variables.
    */
   static async replaceVariables(str, variables) {
-    var placeholders = this.getVariablesFromString(str);
+    const placeholders = this.getVariablesFromString(str);
 
     for (const varName in placeholders) {
-      var matches = placeholders[varName];
+      const matches = placeholders[varName];
+      let value;
       for (const match in matches) {
-        var attributes = matches[match];
+        const attributes = matches[match];
         switch (varName) {
           case "now":
             const moment = await import("moment");
@@ -246,12 +247,12 @@ export default class ProcessUrl {
             if (attributes.output) {
               format = attributes.output;
             }
-            var value = time.format(format);
+            value = time.format(format);
 
             break;
 
           default:
-            var value = variables[varName];
+            value = variables[varName];
             break;
         }
         str = str.replace(new RegExp(Helper.escapeRegExp(match), "g"), value);
