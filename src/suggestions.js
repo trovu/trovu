@@ -35,20 +35,6 @@ export default class Suggestions {
   }
 
   /**
-   * Handle selection of a suggestion.
-   *
-   * @param {object} event – The fired event.
-   */
-  selectcomplete = (event) => {
-    const inputText = event.target.value;
-    // If selected shortcut has no arguments:
-    // submit query.
-    if (inputText.slice(-1) !== " ") {
-      this.submitQuery();
-    }
-  };
-
-  /**
    * Handle change query input field.
    *
    * @param {object} event – The fired event.
@@ -218,4 +204,18 @@ export default class Suggestions {
     }
     return list;
   }
+
+  /**
+   * Handle selection of a suggestion.
+   *
+   * @param {object} event – The fired event.
+   */
+  selectcomplete = (event) => {
+    const inputText = event.target.value;
+    // If selected shortcut has no arguments:
+    // submit query.
+    if (inputText.slice(-1) !== " ") {
+      this.submitQuery();
+    }
+  };
 }
