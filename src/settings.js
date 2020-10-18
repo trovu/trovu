@@ -1,0 +1,100 @@
+/** @module Settings */
+
+import jsyaml from "js-yaml";
+import countriesList from "countries-list";
+
+import Helper from "./helper.js";
+
+/** Settings methods. */
+
+export default class Settings {
+  constructor(env) {
+    this.env = env;
+
+    this.setLanguagesAndCountriesList();
+    this.displaySettings(this.env);
+
+    document.querySelector("#settingsSave").onclick = this.saveSettings;
+  }
+
+  /**
+   * Fill in the fields of the settings modal.
+   */
+  displaySettings(env) {
+    let params = Helper.getUrlParams();
+
+    // Set settings fields from environment.
+    document.querySelector("#languageSetting").value = env.language;
+    document.querySelector("#countrySetting").value = env.country;
+
+    // Output whole environment into textarea.
+    document.querySelector("#settingsEnv").value = jsyaml.dump(
+      env.withoutMethods
+    );
+
+    // Show and hide settings tabs depending on Github setting.
+    if (env.github) {
+      document.querySelector(".using-advanced").classList.remove("d-none");
+      document.querySelector(".using-basic").classList.add("d-none");
+      document.querySelector("#github-note").classList.remove("d-none");
+      document
+        .querySelectorAll(".github-config-link")
+        .forEach(
+          (el) =>
+            (el.href = env.configUrlTemplate.replace("{%github}", env.github))
+        );
+    } else {
+      document.querySelector(".using-basic").classList.remove("d-none");
+      document.querySelector(".using-advanced").classList.add("d-none");
+      document.querySelector("#github-note").classList.add("d-none");
+    }
+  }
+
+  saveSettings = () => {
+    this.env.language = document.querySelector("#languageSetting").value;
+    this.env.country = document.querySelector("#countrySetting").value;
+
+    let paramStr = this.env.getParamStr();
+    window.location.hash = "#" + paramStr;
+
+    // We need to reload to also let Chrome and Opera
+    // catch the changes in <link rel="search">.
+    location.reload();
+  };
+
+  setLanguagesAndCountriesList() {
+    const { countries, languages } = countriesList;
+
+    // Convert to array.
+    const languagesArray = this.objectToArrayWithKey(languages);
+    const countriesArray = this.objectToArrayWithKey(countries);
+
+    // Sort by name.
+    languagesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
+    countriesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
+
+    this.setSelectOptions("#languageSetting", languagesArray);
+    this.setSelectOptions("#countrySetting", countriesArray);
+  }
+
+  objectToArrayWithKey(obj) {
+    const ar = [];
+    for (const [key, value] of Object.entries(obj)) {
+      value.key = key;
+      ar.push(value);
+    }
+    return ar;
+  }
+
+  setSelectOptions(selector, list) {
+    let selectEl = document.querySelector(selector);
+    list.forEach((item) =>
+      selectEl.appendChild(
+        new Option(
+          `${item.name} ${item.emoji ? item.emoji : ``}`,
+          item.key.toLocaleLowerCase()
+        )
+      )
+    );
+  }
+}

@@ -1,5 +1,4 @@
 import jsyaml from "js-yaml";
-import countriesList from "countries-list";
 import { detect, browserName } from "detect-browser";
 import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
 import awesomplete from "awesomplete";
@@ -11,6 +10,7 @@ import "./scss/style.scss";
 import Helper from "./helper.js";
 import Env from "./env.js";
 import Suggestions from "./suggestions";
+import Settings from "./settings.js";
 
 var env = new Env();
 
@@ -36,41 +36,10 @@ function getBaseUrl() {
 }
 
 /**
- * Get the params from env.
- *
- * @return {object} - The built params.
- */
-function getParams() {
-  let params = {};
-
-  // Put environment into hash.
-  if (env.github) {
-    params["github"] = env.github;
-  } else {
-    params["language"] = env.language;
-    params["country"] = env.country;
-  }
-  if (env.debug) {
-    params["debug"] = 1;
-  }
-
-  return params;
-}
-
-/**
- * Get the parameters as string.
- */
-function getParamStr() {
-  let params = getParams();
-  let paramStr = Helper.getUrlParamStr(params);
-  return paramStr;
-}
-
-/**
  * Get the URL to the Process script.
  */
 function getProcessUrl() {
-  let params = getParams();
+  let params = env.getParams();
   params["query"] = document.getElementById("query").value;
 
   let paramStr = Helper.getUrlParamStr(params);
@@ -137,11 +106,12 @@ async function initialize() {
   await env.populate();
 
   showInfoAlerts();
-  setLanguagesAndCountriesList();
-  displaySettings();
+
+  new Settings(env);
+
   setProcessUrlTemplateTextarea();
 
-  let paramStr = getParamStr();
+  let paramStr = env.getParamStr();
   window.location.hash = "#" + paramStr;
 
   // Set query into input.
@@ -151,42 +121,6 @@ async function initialize() {
   setAddToBrowserTab();
 
   document.querySelector("#query").focus();
-}
-
-function setLanguagesAndCountriesList() {
-  const { countries, languages } = countriesList;
-
-  // Convert to array.
-  const languagesArray = objectToArrayWithKey(languages);
-  const countriesArray = objectToArrayWithKey(countries);
-
-  // Sort by name.
-  languagesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
-  countriesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
-
-  setSelectOptions("#languageSetting", languagesArray);
-  setSelectOptions("#countrySetting", countriesArray);
-}
-
-function objectToArrayWithKey(obj) {
-  const ar = [];
-  for (const [key, value] of Object.entries(obj)) {
-    value.key = key;
-    ar.push(value);
-  }
-  return ar;
-}
-
-function setSelectOptions(selector, list) {
-  let selectEl = document.querySelector(selector);
-  list.forEach((item) =>
-    selectEl.appendChild(
-      new Option(
-        `${item.name} ${item.emoji ? item.emoji : ``}`,
-        item.key.toLocaleLowerCase()
-      )
-    )
-  );
 }
 
 /**
@@ -227,57 +161,12 @@ function submitQuery(event) {
   window.location.href = processUrl;
 }
 
-function saveSettings() {
-  env.language = document.querySelector("#languageSetting").value;
-  env.country = document.querySelector("#countrySetting").value;
-
-  let paramStr = getParamStr();
-  window.location.hash = "#" + paramStr;
-
-  // We need to reload to also let Chrome and Opera
-  // catch the changes in <link rel="search">.
-  location.reload();
-}
-
-/**
- * Fill in the fields of the settings modal.
- */
-function displaySettings() {
-  let params = Helper.getUrlParams();
-
-  // Set settings fields from environment.
-  document.querySelector("#languageSetting").value = env.language;
-  document.querySelector("#countrySetting").value = env.country;
-
-  // Output whole environment into textarea.
-  document.querySelector("#settingsEnv").value = jsyaml.dump(
-    env.withoutMethods
-  );
-
-  // Show and hide settings tabs depending on Github setting.
-  if (env.github) {
-    document.querySelector(".using-advanced").classList.remove("d-none");
-    document.querySelector(".using-basic").classList.add("d-none");
-    document.querySelector("#github-note").classList.remove("d-none");
-    document
-      .querySelectorAll(".github-config-link")
-      .forEach(
-        (el) =>
-          (el.href = env.configUrlTemplate.replace("{%github}", env.github))
-      );
-  } else {
-    document.querySelector(".using-basic").classList.remove("d-none");
-    document.querySelector(".using-advanced").classList.add("d-none");
-    document.querySelector("#github-note").classList.add("d-none");
-  }
-}
-
 /**
  * Set the textarea in the "Add to browser" modal.
  */
 function setProcessUrlTemplateTextarea() {
   let baseUrl = getBaseUrl();
-  let params = getParams();
+  let params = env.getParams();
 
   // Set Process URL.
   let urlProcess =
@@ -289,8 +178,11 @@ function setProcessUrlTemplateTextarea() {
 
 document.querySelector("body").onload = initialize;
 document.getElementById("query-form").onsubmit = submitQuery;
-document.querySelector("#settingsSave").onclick = saveSettings;
 
-window.addEventListener('hashchange', function() {
-  location.reload();
-}, false);
+window.addEventListener(
+  "hashchange",
+  function () {
+    location.reload();
+  },
+  false
+);

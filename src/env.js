@@ -412,4 +412,35 @@ export default class Env {
     }
     return envWithoutFunctions;
   }
+
+  /**
+   * Get the params from env.
+   *
+   * @return {object} - The built params.
+   */
+  getParams() {
+    let params = {};
+
+    // Put environment into hash.
+    if (this.github) {
+      params["github"] = this.github;
+    } else {
+      params["language"] = this.language;
+      params["country"] = this.country;
+    }
+    if (this.debug) {
+      params["debug"] = 1;
+    }
+
+    return params;
+  }
+
+  /**
+   * Get the parameters as string.
+   */
+  getParamStr() {
+    let params = this.getParams();
+    let paramStr = Helper.getUrlParamStr(params);
+    return paramStr;
+  }
 }
