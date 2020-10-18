@@ -1,4 +1,3 @@
-import jsyaml from "js-yaml";
 import { detect, browserName } from "detect-browser";
 import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
 import awesomplete from "awesomplete";
