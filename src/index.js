@@ -38,13 +38,9 @@ async function initialize() {
   await env.populate();
 
   showInfoAlerts();
-
   new Settings(env);
-
   new AddToBrowser(env);
-
   setLocationHash();
-
   setQueryElement();
 }
 
