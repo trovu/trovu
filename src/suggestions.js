@@ -5,9 +5,6 @@ import Helper from "./helper.js";
 /** Set and manage the Suggestions. */
 
 export default class Suggestions {
-  /**
-   * Set helper variables.
-   */
   constructor(namespaces, submitQuery) {
     this.namespaces = namespaces;
     this.submitQuery = submitQuery;
