@@ -34,6 +34,11 @@ export default class Suggestions {
     );
   }
 
+  /**
+   * Handle selection of a suggestion.
+   *
+   * @param {object} event – The fired event.
+   */
   selectcomplete = (event) => {
     const inputText = event.target.value;
     // If selected shortcut has no arguments:
@@ -43,6 +48,11 @@ export default class Suggestions {
     }
   };
 
+  /**
+   * Handle change query input field.
+   *
+   * @param {object} event – The fired event.
+   */
   queryInputChange = (event) => {
     const inputText = event.target.value;
 
@@ -113,7 +123,7 @@ export default class Suggestions {
   }
 
   /**
-   * Find shortcuts to suggest.
+   * Find matches given keyword.
    *
    * @param {string} keyword – The keyword from the query.
    *
