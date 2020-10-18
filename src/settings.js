@@ -21,8 +21,6 @@ export default class Settings {
    * Fill in the fields of the settings modal.
    */
   displaySettings(env) {
-    let params = Helper.getUrlParams();
-
     // Set settings fields from environment.
     document.querySelector("#languageSetting").value = env.language;
     document.querySelector("#countrySetting").value = env.country;
