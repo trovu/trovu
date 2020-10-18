@@ -14,7 +14,7 @@ export default class Suggestions {
     this.env  = env;
     this.submitQuery = submitQuery;
 
-    this.env.awesomplete = new Awesomplete(queryInput, {
+    this.awesomplete = new Awesomplete(queryInput, {
       container: function (input) {
         return input.parentNode;
       },
@@ -52,9 +52,9 @@ export default class Suggestions {
     const suggestions = this.getSuggestions(keyword);
 
     const list = this.convertSuggestionsToAwesompleteList(suggestions);
-    this.env.awesomplete.list = list.slice(0, 10);
+    this.awesomplete.list = list.slice(0, 10);
 
-    this.env.awesomplete.evaluate();
+    this.awesomplete.evaluate();
   }
 
   /**
