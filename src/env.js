@@ -431,6 +431,12 @@ export default class Env {
     if (this.debug) {
       params["debug"] = 1;
     }
+    if (this.status) {
+      params["status"] = this.status;
+    }
+    if (this.query) {
+      params["query"] = this.query;
+    }
 
     return params;
   }
