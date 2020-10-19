@@ -3,8 +3,6 @@
 import jsyaml from "js-yaml";
 import countriesList from "countries-list";
 
-import Helper from "./helper.js";
-
 /** Settings methods. */
 
 export default class Settings {
