@@ -18,7 +18,7 @@ export default class Env {
   /**
    * Set the initial class environment vars either from params or from GET hash string.
    *
-   * @param {array} [params] - List of parameters to be used in environment.
+   * @param {array} params - List of parameters to be used in environment.
    */
   async populate(params) {
     if (!params) {
@@ -42,6 +42,11 @@ export default class Env {
     this.addInfoToShortcuts(this.namespaces);
   }
 
+  /**
+   * Enrich shortcuts with their own information: argument & namespace names, reachable.
+   *
+   * @param {object} namespaces - Current namespaces keyed by their name.
+   */
   addInfoToShortcuts(namespaces) {
     // Remember found shortcuts
     // to know which ones are reachable.
