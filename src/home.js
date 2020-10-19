@@ -27,11 +27,13 @@ export default class Home {
     // Init environment.
     await this.env.populate();
 
-    this.showInfoAlerts();
     new Settings(this.env);
     new AddToBrowser(this.env);
+
+    this.showInfoAlerts();
     this.setLocationHash();
     this.setQueryElement();
+
     document.getElementById("query-form").onsubmit = this.submitQuery;
   }
 
