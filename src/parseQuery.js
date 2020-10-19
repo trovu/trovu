@@ -47,7 +47,7 @@ export default class ParseQuery {
    * - {boolean} reload      - True if keyword contained reload command.
    * - {string} keyword      - The new keyword.
    */
-  static checkForChacheReload(keyword) {
+  static checkForCacheReload(keyword) {
     let reload = false;
 
     if (keyword.match(/^reload$/)) {
@@ -134,7 +134,7 @@ export default class ParseQuery {
       query
     );
     env.args = ParseQuery.getArguments(env.argumentString);
-    [env.reload, env.keyword] = ParseQuery.checkForChacheReload(env.keyword);
+    [env.reload, env.keyword] = ParseQuery.checkForCacheReload(env.keyword);
 
     [env.extraNamespaceName, env.keyword] = ParseQuery.getExtraNamespace(
       env.keyword
