@@ -3,7 +3,7 @@
 import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
 
 import "bootstrap/dist/css/bootstrap.css";
-import "../scss/style.scss";
+import "../../scss/style.scss";
 
 import Helper from "./Helper.js";
 import Env from "./Env.js";
