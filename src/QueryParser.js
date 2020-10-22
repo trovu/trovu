@@ -1,10 +1,10 @@
-/** @module ParseQuery */
+/** @module QueryParser */
 
 import Helper from "./helper.js";
 
 /** Parse a query. */
 
-export default class ParseQuery {
+export default class QueryParser {
   /**
    * Get keyword and argument string from query.
    *

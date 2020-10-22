@@ -3,7 +3,7 @@
 import Env from "./env.js";
 import FindShortcut from "./findShortcut.js";
 import Helper from "./helper.js";
-import ParseQuery from "./parseQuery.js";
+import QueryParser from "./QueryParser.js";
 import ProcessUrl from "./processUrl.js";
 
 /** Handle a call. */
@@ -50,7 +50,7 @@ export default class HandleCall {
       return;
     }
 
-    Object.assign(env, ParseQuery.parse(env.query));
+    Object.assign(env, QueryParser.parse(env.query));
 
     if (env.reload) {
       await env.fetchShortcuts(env.namespaces, true, env.debug);
