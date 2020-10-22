@@ -5,7 +5,7 @@ import scss from 'rollup-plugin-scss';
 
 export default [
   {
-    input: "src/index.js",
+    input: "src/js/index.js",
     output: {
       dir: "public/bundle/",
       format: "esm",
@@ -21,7 +21,7 @@ export default [
     ],
   },
   {
-    input: "src/process.js",
+    input: "src/js/process.js",
     output: {
       dir: "public/bundle/",
       format: "esm",
