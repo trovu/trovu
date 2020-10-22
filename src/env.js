@@ -1,8 +1,8 @@
 /** @module Env */
 
 import jsyaml from "js-yaml";
-import Helper from "./helper.js";
-import ProcessUrl from "./processUrl.js";
+import Helper from "./Helper.js";
+import UrlProcessor from "./UrlProcessor.js";
 
 /** Set and remember the environment. */
 
@@ -62,7 +62,7 @@ export default class Env {
 
         [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
         shortcut.namespace = namespace.name;
-        shortcut.arguments = ProcessUrl.getArgumentsFromString(
+        shortcut.arguments = UrlProcessor.getArgumentsFromString(
           shortcuts[key].url
         );
 

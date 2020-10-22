@@ -1,5 +1,5 @@
 import jsyaml from 'js-yaml';
-import Helper from "../helper.js";
+import Helper from "../Helper.js";
 
 export default class CityParser {
   static async parse(str, country, reload, debug) {

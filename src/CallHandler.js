@@ -1,14 +1,14 @@
-/** @module HandleCall */
+/** @module CallHandler */
 
-import Env from "./env.js";
-import FindShortcut from "./findShortcut.js";
-import Helper from "./helper.js";
+import Env from "./Env.js";
+import ShortcutFinder from "./ShortcutFinder.js";
+import Helper from "./Helper.js";
 import QueryParser from "./QueryParser.js";
-import ProcessUrl from "./processUrl.js";
+import UrlProcessor from "./UrlProcessor.js";
 
 /** Handle a call. */
 
-export default class HandleCall {
+export default class CallHandler {
   /**
    * Redirect in case a shortcut was not found.
    *
@@ -73,8 +73,8 @@ export default class HandleCall {
       }
     }
 
-    const shortcuts = await FindShortcut.collectShortcuts(env);
-    redirectUrl = FindShortcut.pickShortcut(shortcuts, env.namespaces);
+    const shortcuts = await ShortcutFinder.collectShortcuts(env);
+    redirectUrl = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
 
     if (!redirectUrl) {
       status = "not_found";
@@ -86,11 +86,11 @@ export default class HandleCall {
     if (env.debug) Helper.log("");
     if (env.debug) Helper.log("Used template: " + redirectUrl);
 
-    redirectUrl = await ProcessUrl.replaceVariables(redirectUrl, {
+    redirectUrl = await UrlProcessor.replaceVariables(redirectUrl, {
       language: env.language,
       country: env.country,
     });
-    redirectUrl = await ProcessUrl.replaceArguments(redirectUrl, env.args, env);
+    redirectUrl = await UrlProcessor.replaceArguments(redirectUrl, env.args, env);
 
     return [status, redirectUrl];
   }

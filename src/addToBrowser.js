@@ -2,7 +2,7 @@
 
 import { detect, browserName } from "detect-browser";
 
-import Helper from "./helper.js";
+import Helper from "./Helper.js";
 
 /** Set and manage the "Add to Browser" functionality. */
 

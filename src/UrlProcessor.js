@@ -1,6 +1,6 @@
-/** @module ProcessUrl */
+/** @module UrlProcessor */
 
-import Helper from "./helper.js";
+import Helper from "./Helper.js";
 
 /** Process a shortcut URL for redirect. */
 

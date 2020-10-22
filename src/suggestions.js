@@ -3,7 +3,7 @@
 import awesomplete from "awesomplete";
 import "awesomplete/awesomplete.css";
 
-import Helper from "./helper.js";
+import Helper from "./Helper.js";
 
 /** Set and manage the Suggestions. */
 

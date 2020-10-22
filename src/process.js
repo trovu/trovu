@@ -1,3 +1,3 @@
-import HandleCall from "./handleCall.js";
+import CallHandler from "./CallHandler.js";
 
-document.querySelector("body").onload = HandleCall.handleCall();
+document.querySelector("body").onload = CallHandler.handleCall();

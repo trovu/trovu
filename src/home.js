@@ -5,10 +5,10 @@ import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
 import "bootstrap/dist/css/bootstrap.css";
 import "./scss/style.scss";
 
-import Helper from "./helper.js";
-import Env from "./env.js";
-import Suggestions from "./suggestions";
-import Settings from "./settings.js";
+import Helper from "./Helper.js";
+import Env from "./Env.js";
+import Suggestions from "./Suggestions";
+import Settings from "./Settings.js";
 import AddToBrowser from "./addToBrowser.js";
 
 /** Set and manage the homepage. */

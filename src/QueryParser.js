@@ -1,6 +1,6 @@
 /** @module QueryParser */
 
-import Helper from "./helper.js";
+import Helper from "./Helper.js";
 
 /** Parse a query. */
 
@@ -130,17 +130,17 @@ export default class QueryParser {
   static parse(query) {
     const env = {};
 
-    [env.keyword, env.argumentString] = ParseQuery.getKeywordAndArgumentString(
+    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(
       query
     );
-    env.args = ParseQuery.getArguments(env.argumentString);
-    [env.reload, env.keyword] = ParseQuery.checkForCacheReload(env.keyword);
+    env.args = this.getArguments(env.argumentString);
+    [env.reload, env.keyword] = this.checkForCacheReload(env.keyword);
 
-    [env.extraNamespaceName, env.keyword] = ParseQuery.getExtraNamespace(
+    [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(
       env.keyword
     );
     if (env.extraNamespaceName) {
-      const languageOrCountry = ParseQuery.getLanguageAndCountryFromExtraNamespaceName(
+      const languageOrCountry = this.getLanguageAndCountryFromExtraNamespaceName(
         env.extraNamespaceName
       );
       Object.assign(env, languageOrCountry);

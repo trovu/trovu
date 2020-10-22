@@ -1,10 +1,10 @@
-/** @module FindShortcut */
+/** @module ShortcutFinder */
 
-import Helper from "./helper.js";
+import Helper from "./Helper.js";
 
 /** Find matching shortcut. */
 
-export default class FindShortcut {
+export default class ShortcutFinder {
   /**
    * Match shortcuts for keyword and args.
    *
