@@ -9,7 +9,7 @@ import Helper from "./Helper.js";
 import Env from "./Env.js";
 import Suggestions from "./Suggestions";
 import Settings from "./Settings.js";
-import AddToBrowser from "./addToBrowser.js";
+import BrowserAdd from "./BrowserAdd.js";
 
 /** Set and manage the homepage. */
 
@@ -22,13 +22,13 @@ export default class Home {
 
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
-    AddToBrowser.addLinkSearch();
+    BrowserAdd.addLinkSearch();
 
     // Init environment.
     await this.env.populate();
 
     new Settings(this.env);
-    new AddToBrowser(this.env);
+    new BrowserAdd(this.env);
 
     this.showInfoAlerts();
     this.setLocationHash();

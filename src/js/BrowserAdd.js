@@ -6,7 +6,7 @@ import Helper from "./Helper.js";
 
 /** Set and manage the "Add to Browser" functionality. */
 
-export default class AddToBrowser {
+export default class BrowserAdd {
   constructor(env) {
     this.env = env;
 
