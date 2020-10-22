@@ -8,8 +8,8 @@ import "../../scss/style.scss";
 import Helper from "./Helper.js";
 import Env from "./Env.js";
 import Suggestions from "./Suggestions";
-import Settings from "./Settings.js";
-import BrowserAdd from "./BrowserAdd.js";
+import Settings from "./home/Settings.js";
+import BrowserAdd from "./home/BrowserAdd.js";
 
 /** Set and manage the homepage. */
 
