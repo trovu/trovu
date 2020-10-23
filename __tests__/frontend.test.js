@@ -1,8 +1,12 @@
-const docroot = "http://l.tro:8080/#language=en&country=us";
+const docroot = "http://l.tro:8080/";
 
 describe("Trovu homepage", () => {
   beforeAll(async () => {
     await page.goto(docroot, { waitUntil: "networkidle0" });
+  });
+
+  it("should redirect to hash with language and country", async () => {
+    expect(await page.evaluate('location.hash')).toMatch(new RegExp('language=en&country=gb'));
   });
 
   it('should be titled "trovu"', async () => {
