@@ -27,4 +27,9 @@ describe("Trovu homepage", () => {
     await page.waitFor(500); // TODO: Find cleaner solution.
     expect(await page.evaluate('location.hash')).toMatch(new RegExp('language=pl'));
   });
+
+  it("should show not_found", async () => {
+    await page.goto(docroot + "#query=foobar&status=not_found", { waitUntil: "networkidle0" });
+    await expect(page.content()).resolves.toMatch("Could not find a matching shortcut for this query.");
+  });
 });
