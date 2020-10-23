@@ -27,7 +27,7 @@ export default class Suggestions {
       item: this.renderAwesompleteItem,
     });
 
-    queryInput.addEventListener("input", this.queryInputChange);
+    queryInput.addEventListener("input", this.updateSuggestions);
     queryInput.addEventListener(
       "awesomplete-selectcomplete",
       this.selectcomplete
@@ -39,7 +39,7 @@ export default class Suggestions {
    *
    * @param {object} event – The fired event.
    */
-  queryInputChange = (event) => {
+  updateSuggestions = (event) => {
     const inputText = event.target.value;
 
     // Only search by keyword / first word of user input.
@@ -218,6 +218,6 @@ export default class Suggestions {
       this.submitQuery();
       return;
     }
-    this.queryInputChange(event);
+    this.updateSuggestions(event);
   };
 }
