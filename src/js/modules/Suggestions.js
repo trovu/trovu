@@ -216,6 +216,7 @@ export default class Suggestions {
     // submit query.
     if (inputText.slice(-1) !== " ") {
       this.submitQuery();
+      return;
     }
   };
 }
