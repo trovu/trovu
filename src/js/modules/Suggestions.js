@@ -190,12 +190,7 @@ export default class Suggestions {
     const list = [];
     for (const suggestion of suggestions) {
       const item = {
-        value:
-          // If not reachable: Prefix with namespace.
-          (suggestion.reachable ? "" : suggestion.namespace + ".") +
-          suggestion.keyword +
-          // If shortcut has arguments: Add space.
-          (suggestion.argumentCount > 0 ? " " : ""),
+        value: "", // We are not using this on select.
         label: suggestion,
       };
       list.push(item);
