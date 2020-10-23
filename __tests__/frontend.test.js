@@ -6,7 +6,9 @@ describe("Trovu homepage", () => {
   });
 
   it("should redirect to hash with language and country", async () => {
-    expect(await page.evaluate('location.hash')).toMatch(new RegExp('language=en&country=gb'));
+    expect(await page.evaluate("location.hash")).toMatch(
+      new RegExp("language=en&country=gb")
+    );
   });
 
   it('should be titled "trovu"', async () => {
@@ -23,13 +25,18 @@ describe("Trovu homepage", () => {
     await page.click("#settings-button");
     await page.select("#languageSetting", "pl");
     await page.waitFor(500); // TODO: Find cleaner solution.
-    await page.click("#settingsSave"),
-    await page.waitFor(500); // TODO: Find cleaner solution.
-    expect(await page.evaluate('location.hash')).toMatch(new RegExp('language=pl'));
+    await page.click("#settingsSave"), await page.waitFor(500); // TODO: Find cleaner solution.
+    expect(await page.evaluate("location.hash")).toMatch(
+      new RegExp("language=pl")
+    );
   });
 
   it("should show not_found", async () => {
-    await page.goto(docroot + "#query=foobar&status=not_found", { waitUntil: "networkidle0" });
-    await expect(page.content()).resolves.toMatch("Could not find a matching shortcut for this query.");
+    await page.goto(docroot + "#query=foobar&status=not_found", {
+      waitUntil: "networkidle0",
+    });
+    await expect(page.content()).resolves.toMatch(
+      "Could not find a matching shortcut for this query."
+    );
   });
 });
