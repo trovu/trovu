@@ -4,6 +4,7 @@ import awesomplete from "awesomplete";
 import "awesomplete/awesomplete.css";
 
 import Helper from "./Helper.js";
+import QueryParser from "./QueryParser.js";
 
 /** Set and manage the Suggestions. */
 
@@ -28,10 +29,7 @@ export default class Suggestions {
     });
 
     queryInput.addEventListener("input", this.updateSuggestions);
-    queryInput.addEventListener(
-      "awesomplete-selectcomplete",
-      this.selectcomplete
-    );
+    queryInput.addEventListener("awesomplete-select", this.select);
   }
 
   /**
@@ -204,17 +202,29 @@ export default class Suggestions {
     }
     return list;
   }
-
   /**
    * Handle selection of a suggestion.
    *
    * @param {object} event – The fired event.
    */
-  selectcomplete = (event) => {
+  select = (event) => {
+    event.preventDefault();
+
     const inputText = event.target.value;
-    // If selected shortcut has no arguments:
-    // submit query.
-    if (inputText.slice(-1) !== " ") {
+    const input = QueryParser.parse(inputText);
+    const suggestion = event.text.label;
+
+    if (suggestion.argumentCount == 0) {
+      this.awesomplete.replace({ value: suggestion.keyword });
+      this.submitQuery();
+      return;
+    }
+
+    this.awesomplete.replace({
+      value: suggestion.keyword + " " + input.argumentString,
+    });
+
+    if (input.args.length == suggestion.argumentCount) {
       this.submitQuery();
       return;
     }
