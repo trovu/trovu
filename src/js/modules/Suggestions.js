@@ -218,5 +218,6 @@ export default class Suggestions {
       this.submitQuery();
       return;
     }
+    this.queryInputChange(event);
   };
 }
