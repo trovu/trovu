@@ -2,6 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import scss from "rollup-plugin-scss";
+import { terser } from "rollup-plugin-terser";
 
 export default [
   {
@@ -18,6 +19,7 @@ export default [
       scss({
         output: "public/bundle/style.css",
       }),
+      process.env.BUILD === "production" && terser(),
     ],
   },
   {
@@ -27,6 +29,11 @@ export default [
       format: "esm",
       name: "websearch",
     },
-    plugins: [resolve(), commonjs(), json()],
+    plugins: [
+      resolve(),
+      commonjs(),
+      json(),
+      process.env.BUILD === "production" && terser(),
+    ],
   },
 ];
