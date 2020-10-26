@@ -107,6 +107,7 @@ export default class Helper {
     for (const key in params) {
       urlParams.set(key, params[key]);
     }
+    urlParams.sort();
     return urlParams;
   }
 }
