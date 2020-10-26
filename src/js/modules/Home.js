@@ -14,8 +14,7 @@ import BrowserAdd from "./home/BrowserAdd.js";
 /** Set and manage the homepage. */
 
 export default class Home {
-  constructor() {
-  }
+  constructor() {}
 
   async initialize() {
     this.env = new Env();
@@ -98,5 +97,5 @@ export default class Home {
 
     // Redirect to process script.
     window.location.href = processUrl;
-  }
+  };
 }
