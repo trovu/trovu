@@ -18,6 +18,7 @@ export default [
       json(),
       scss({
         output: "public/bundle/style.css",
+        outputStyle: process.env.BUILD === "production" ? "compressed" : "",
       }),
       process.env.BUILD === "production" && terser(),
     ],
