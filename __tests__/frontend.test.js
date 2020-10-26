@@ -7,7 +7,7 @@ describe("Trovu homepage", () => {
 
   it("should redirect to hash with language and country", async () => {
     expect(await page.evaluate("location.hash")).toMatch(
-      new RegExp("language=en&country=gb")
+      new RegExp("country=gb&language=en")
     );
   });
 
