@@ -9,8 +9,10 @@ export default [
     input: "src/js/index.js",
     output: {
       dir: "public/bundle/",
-      format: "esm",
-      name: "websearch",
+      format: "iife",
+      name: "index",
+      //entryFileNames: "[name].[hash].js",
+      entryFileNames: "[name].js",
     },
     plugins: [
       resolve(),
@@ -27,8 +29,9 @@ export default [
     input: "src/js/process.js",
     output: {
       dir: "public/bundle/",
-      format: "esm",
-      name: "websearch",
+      format: "iife",
+      name: "process",
+      entryFileNames: "[name].js",
     },
     plugins: [
       resolve(),
