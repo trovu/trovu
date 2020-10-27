@@ -11,6 +11,7 @@ const common = {
     name: "index",
     //entryFileNames: "[name].[hash].js",
     entryFileNames: "[name].js",
+    sourcemap: true,
   },
   plugins: [
     resolve(),
