@@ -4,6 +4,7 @@ import json from "@rollup/plugin-json";
 import scss from "rollup-plugin-scss";
 import { terser } from "rollup-plugin-terser";
 
+const isProduction = process.env.BUILD === "production";
 const common = {
   output: {
     dir: "public/bundle/",
@@ -19,9 +20,9 @@ const common = {
     json(),
     scss({
       output: "public/bundle/style.css",
-      outputStyle: process.env.BUILD === "production" ? "compressed" : "",
+      outputStyle: isProduction ? "compressed" : "",
     }),
-    process.env.BUILD === "production" && terser(),
+    isProduction && terser(),
   ],
 };
 
