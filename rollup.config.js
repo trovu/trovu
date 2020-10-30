@@ -26,7 +26,7 @@ const common = {
   ],
 };
 
-export default [
+const exports = [
   {
     input: "src/js/index.js",
     ...common,
@@ -36,3 +36,5 @@ export default [
     ...common,
   },
 ];
+
+export default exports;
