@@ -566,19 +566,3 @@ gmzv 1:
   - google
   examples:
     hlavná: Ukáž Hlavná v meste Zvolen
-zssk 2:
-  url: https://predaj.zssk.sk/portal?from={%odkiaľ|type=city}&to={%kam|type=city}&date={$now|output=DD.MM.}&time={$now|output=HH-mm}&departure=true&maxChangeTrainCount=4
-  title: ŽSSK, Vlakové spojenia
-  tags:
-  - travel
-  - zssk
-  examples:
-    ba, ke: Vlakové spojenia z Bratislavy do Košic
-zssk 4:
-  url: https://predaj.zssk.sk/portal?from={%odkiaľ|type=city}&to={%kam|type=city}&time={%odchod|type=time}&date={%datum|type=date}&departure=true&maxChangeTrainCount=4
-  title: ŽSSK, Vlakové spojenia
-  tags:
-  - travel
-  - zssk
-  examples:
-    ba, ke, 31.12.,10: Vlakové spojenia z Bratislavy do Košic, dne 31.12. ve 10:00
