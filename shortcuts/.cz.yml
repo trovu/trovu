@@ -79,7 +79,7 @@ ikea 1:
   examples:
     matrace: Hledej matrace
 m 1:
-  url: http://mapy.cz/?st=search&fr={%místo}
+  url: https://mapy.cz/zakladni?q={%místo}
   title: Mapy.cz
   tags:
   - maps
@@ -87,7 +87,7 @@ m 1:
   examples:
     praha: Praha na mapy.cz
 mapy 1:
-  url: http://mapy.cz/?st=search&fr={%místo}
+  url: https://mapy.cz/zakladni?q={%místo}
   title: Mapy.cz
   tags:
   - maps
