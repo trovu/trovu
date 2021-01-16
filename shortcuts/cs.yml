@@ -9,11 +9,6 @@ csfd 1:
     Pelíšky: Hledat "Pelíšky"
 de 1:
   url: https://slovniky.lingea.cz/nemecko-cesky/{%výraz}
-  post parameters:
-    set: _gecz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
   title: Německo-český (Lingea)
   tags:
   - dictionary
@@ -27,11 +22,6 @@ de 1:
     strom: '"strom" německy'
 en 1:
   url: https://slovniky.lingea.cz/anglicko-cesky/{%výraz}
-  post parameters:
-    set: _encz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
   title: Anglicko-český (Lingea)
   tags:
   - dictionary
@@ -45,11 +35,6 @@ en 1:
     strom: '"strom" anglicky'
 es 1:
   url: https://slovniky.lingea.cz/spanelsko-cesky/{%výraz}
-  post parameters:
-    set: _spcz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
   title: Španělsko-český (Lingea)
   tags:
   - dictionary
@@ -63,11 +48,6 @@ es 1:
     strom: '"strom" španělsky'
 fr 1:
   url: https://slovniky.lingea.cz/francouzsko-cesky/{%výraz}
-  post parameters:
-    set: _frcz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
   title: Francouzsko-český (Lingea)
   tags:
   - dictionary
@@ -88,11 +68,6 @@ kinobox 1:
     forrest gump: Search for "forrest gump"
 pl 1:
   url: https://slovniky.lingea.cz/polsko-cesky/{%výraz}
-  post parameters:
-    set: _plcz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
   title: Polsko-český (Lingea)
   tags:
   - dictionary
@@ -106,11 +81,6 @@ pl 1:
     strom: '"strom" polsky'
 vi 1:
   url: https://slovniky.lingea.cz/vietnamsko-cesky/{%výraz}
-  post parameters:
-    set: _vncz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
   title: Vietnamsko-český (Lingea)
   tags:
   - dictionary
@@ -124,11 +94,6 @@ vi 1:
     strom: '"strom" vietnamsky'
 ru 1:
   url: https://slovniky.lingea.cz/rusko-cesky/{%výraz}
-  post parameters:
-    set: _rucz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
   title: Rusko-český (Lingea)
   tags:
   - dictionary
@@ -138,5 +103,5 @@ ru 1:
   - czech
   - russian
   examples:
-    cây: '"магази́н" česky'
-    strom: '"prodejna" rusky'
+    магази́н: '"магази́н" česky'
+    prodejna: '"prodejna" rusky'
