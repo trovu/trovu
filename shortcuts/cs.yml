@@ -23,8 +23,8 @@ de 1:
   - czech
   - german
   examples:
-    baum: '"baum" český'
-    strom: '"strom" německý'
+    baum: '"baum" česky'
+    strom: '"strom" německy'
 en 1:
   url: https://slovniky.lingea.cz/anglicko-cesky/{%výraz}
   post parameters:
@@ -41,8 +41,8 @@ en 1:
   - czech
   - english
   examples:
-    tree: '"tree" český'
-    strom: '"strom" anglický'
+    tree: '"tree" česky'
+    strom: '"strom" anglicky'
 es 1:
   url: https://slovniky.lingea.cz/spanelsko-cesky/{%výraz}
   post parameters:
@@ -59,8 +59,8 @@ es 1:
   - czech
   - spanish
   examples:
-    árbol: '"árbol" český'
-    strom: '"strom" španělský'
+    árbol: '"árbol" česky'
+    strom: '"strom" španělsky'
 fr 1:
   url: https://slovniky.lingea.cz/francouzsko-cesky/{%výraz}
   post parameters:
@@ -68,7 +68,7 @@ fr 1:
     type: ""
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
-  title: Francouzko-český (Lingea)
+  title: Francouzsko-český (Lingea)
   tags:
   - dictionary
   - language
@@ -77,8 +77,8 @@ fr 1:
   - czech
   - french
   examples:
-    arbre: '"arbre" český'
-    strom: '"strom" francouzký'
+    arbre: '"arbre" česky'
+    strom: '"strom" francouzsky'
 kinobox 1:
   url: http://www.kinobox.cz/najdi?t={%query}
   title: Kinobox.cz
@@ -102,8 +102,8 @@ pl 1:
   - czech
   - polish
   examples:
-    drzewo: '"drzewo" český'
-    strom: '"strom" polský'
+    drzewo: '"drzewo" česky'
+    strom: '"strom" polsky'
 vi 1:
   url: https://slovniky.lingea.cz/vietnamsko-cesky/{%výraz}
   post parameters:
@@ -120,5 +120,5 @@ vi 1:
   - czech
   - vietnamese
   examples:
-    cây: '"cây" český'
-    strom: '"strom" vietnamský'
+    cây: '"cây" česky'
+    strom: '"strom" vietnamsky'
