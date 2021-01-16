@@ -8,7 +8,7 @@ csfd 1:
   examples:
     Pelíšky: Hledat "Pelíšky"
 de 1:
-  url: http://slovniky.lingea.cz
+  url: https://slovniky.lingea.cz/nemecko-cesky/{%výraz}
   post parameters:
     set: _gecz
     type: ""
@@ -26,7 +26,7 @@ de 1:
     baum: '"baum" český'
     strom: '"strom" německý'
 en 1:
-  url: http://slovniky.lingea.cz
+  url: https://slovniky.lingea.cz/anglicko-cesky/{%výraz}
   post parameters:
     set: _encz
     type: ""
