@@ -44,7 +44,7 @@ en 1:
     tree: '"tree" český'
     strom: '"strom" anglický'
 es 1:
-  url: http://slovniky.lingea.cz
+  url: https://slovniky.lingea.cz/spanelsko-cesky/{%výraz}
   post parameters:
     set: _spcz
     type: ""
@@ -62,7 +62,7 @@ es 1:
     árbol: '"árbol" český'
     strom: '"strom" španělský'
 fr 1:
-  url: http://slovniky.lingea.cz
+  url: https://slovniky.lingea.cz/francouzsko-cesky/{%výraz}
   post parameters:
     set: _frcz
     type: ""
@@ -87,7 +87,7 @@ kinobox 1:
   examples:
     forrest gump: Search for "forrest gump"
 pl 1:
-  url: http://slovniky.lingea.cz
+  url: https://slovniky.lingea.cz/polsko-cesky/{%výraz}
   post parameters:
     set: _plcz
     type: ""
@@ -105,7 +105,7 @@ pl 1:
     drzewo: '"drzewo" český'
     strom: '"strom" polský'
 vi 1:
-  url: http://slovniky.lingea.cz
+  url: https://slovniky.lingea.cz/vietnamsko-cesky/{%výraz}
   post parameters:
     set: _vncz
     type: ""
