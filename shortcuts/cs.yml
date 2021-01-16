@@ -122,3 +122,21 @@ vi 1:
   examples:
     cây: '"cây" česky'
     strom: '"strom" vietnamsky'
+ru 1:
+  url: https://slovniky.lingea.cz/rusko-cesky/{%výraz}
+  post parameters:
+    set: _rucz
+    type: ""
+    word: '{%slovo|encoding=none}'
+    data: '{%slovo|encoding=none}'
+  title: Rusko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - russian
+  examples:
+    cây: '"магази́н" česky'
+    strom: '"prodejna" rusky'
