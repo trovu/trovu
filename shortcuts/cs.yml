@@ -103,5 +103,11 @@ ru 1:
   - czech
   - russian
   examples:
-    магази́н: '"магази́н" česky'
+    магазин: '"магазин" česky'
     prodejna: '"prodejna" rusky'
+sub 1:
+  url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze/moviename-{%výraz}
+  title: Filmové titulky (Open Subtitles)
+  tags:
+  - titulky
+  - subtitles
