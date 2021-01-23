@@ -371,10 +371,7 @@ export default class Env {
     const namespace = {
       name: name,
       type: "site",
-      url:
-        "https://raw.githubusercontent.com/trovu/trovu-data/master/shortcuts/" +
-        name +
-        ".yml",
+      url: "https://data.trovu.net/data/shortcuts/" + name + ".yml",
     };
     return namespace;
   }
