@@ -5,6 +5,7 @@ import scss from "rollup-plugin-scss";
 import { terser } from "rollup-plugin-terser";
 import html from "@rollup/plugin-html";
 import { readFileSync } from "fs";
+import copy from "rollup-plugin-copy";
 
 const isProduction = process.env.BUILD === "production";
 
@@ -41,6 +42,9 @@ export default [
       html({
         fileName: "index.html",
         template: template("src/html/index.html"),
+      }),
+      copy({
+        targets: [{ src: "src/opensearch/", dest: "dist/public/" }],
       }),
     ],
   },
