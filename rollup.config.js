@@ -38,10 +38,6 @@ export default [
       resolve(),
       commonjs(),
       json(),
-      scss({
-        output: "dist/public/style.css",
-        outputStyle: isProduction ? "compressed" : "",
-      }),
       isProduction && terser(),
       html({
         fileName: "process/index.html",
