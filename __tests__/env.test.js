@@ -1,4 +1,4 @@
-import Env from "../src/Env.js";
+import Env from "../src/js/modules/Env.js";
 
 const getNavigatorLanguageEnUk = () => {
   const languageStr = "en-uk";

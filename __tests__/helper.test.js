@@ -1,4 +1,4 @@
-import Helper from "../src/Helper.js";
+import Helper from "../src/js/modules/Helper.js";
 
 const getUrlHashFooBar = () => {
   const hash = "foo=bar&baz=boo";
