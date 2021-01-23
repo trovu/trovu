@@ -11,7 +11,7 @@
     "doc": "rm -r doc ; jsdoc src/* --configure jsdoc.json --destination doc",
     "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
     "watch": "rollup --config --watch",
-    "clean": "rm public/bundle/*.js public/bundle/*.css public/bundle/*.map",
+    "clean": "rm dist/public/*.*",
     "sync": "rsync -vr --delete-after public/* ntro:~/trovu-web/public/",
     "deploy": "npm run clean || true && npm run build && npm run sync"
   },
