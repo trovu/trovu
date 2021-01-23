@@ -17,11 +17,6 @@ const output = {
 
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
-    console.log(Object.keys(attributes));
-    console.log(Object.keys(bundle));
-    console.log(Object.keys(files));
-    console.log(publicPath);
-    console.log(title);
     const [fileNameJs] = Object.keys(bundle);
     const htmlTemplate = readFileSync(templateFilePath).toString();
     const html = htmlTemplate.replace("{{fileNameJs}}", fileNameJs);
