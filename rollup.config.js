@@ -32,20 +32,6 @@ const template = (templateFilePath) => {
 
 export default [
   {
-    input: "src/js/process.js",
-    output: output,
-    plugins: [
-      resolve(),
-      commonjs(),
-      json(),
-      isProduction && terser(),
-      html({
-        fileName: "process/index.html",
-        template: template("src/html/process.html"),
-      }),
-    ],
-  },
-  {
     input: "src/js/index.js",
     output: output,
     plugins: [
@@ -60,6 +46,20 @@ export default [
       html({
         fileName: "index.html",
         template: template("src/html/index.html"),
+      }),
+    ],
+  },
+  {
+    input: "src/js/process.js",
+    output: output,
+    plugins: [
+      resolve(),
+      commonjs(),
+      json(),
+      isProduction && terser(),
+      html({
+        fileName: "process/index.html",
+        template: template("src/html/process.html"),
       }),
     ],
   },
