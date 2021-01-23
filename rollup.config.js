@@ -8,15 +8,32 @@ import { readFileSync } from "fs";
 
 const isProduction = process.env.BUILD === "production";
 
+const output = {
+  dir: "dist/public/",
+  name: "process",
+  entryFileNames: "[name].[hash].js",
+  sourcemap: true,
+};
+
+const template = (templateFilePath) => {
+  const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
+    console.log(Object.keys(attributes));
+    console.log(Object.keys(bundle));
+    console.log(Object.keys(files));
+    console.log(publicPath);
+    console.log(title);
+    const [fileNameJs] = Object.keys(bundle);
+    const htmlTemplate = readFileSync(templateFilePath).toString();
+    const html = htmlTemplate.replace("{{fileNameJs}}", fileNameJs);
+    return html;
+  };
+  return templateFunc;
+};
+
 export default [
   {
     input: "src/js/process.js",
-    output: {
-      dir: "dist/public/",
-      name: "process",
-      entryFileNames: "[name].[hash].js",
-      sourcemap: true,
-    },
+    output: output,
     plugins: [
       resolve(),
       commonjs(),
@@ -28,24 +45,13 @@ export default [
       isProduction && terser(),
       html({
         fileName: "process/index.html",
-        template: ({ attributes, bundle, files, publicPath, title }) => {
-          console.log(Object.keys(bundle));
-          const [processJs] = Object.keys(bundle);
-          const htmlTemplate = readFileSync("src/html/process.html").toString();
-          const html = htmlTemplate.replace("{{fileNameJs}}", processJs);
-          return html;
-        },
+        template: template("src/html/process.html"),
       }),
     ],
   },
   {
     input: "src/js/index.js",
-    output: {
-      dir: "dist/public/",
-      name: "process",
-      entryFileNames: "[name].[hash].js",
-      sourcemap: true,
-    },
+    output: output,
     plugins: [
       resolve(),
       commonjs(),
@@ -57,13 +63,7 @@ export default [
       isProduction && terser(),
       html({
         fileName: "index.html",
-        template: ({ attributes, bundle, files, publicPath, title }) => {
-          console.log(Object.keys(bundle));
-          const [indexJs] = Object.keys(bundle);
-          const htmlTemplate = readFileSync("src/html/index.html").toString();
-          const html = htmlTemplate.replace("{{fileNameJs}}", indexJs);
-          return html;
-        },
+        template: template("src/html/index.html"),
       }),
     ],
   },
