@@ -1502,7 +1502,7 @@ zvab 0:
   tags:
   - books
 zvab 1:
-  url: https://www.zvab.com/servlet/SearchResults?cm_sp=SearchF-_-topnav-_-Results&kn={%query}&sts=t
+  url: https://www.zvab.com/servlet/SearchResults?cm_sp=SearchF-_-topnav-_-Results&kn={%query|encoding=iso-8859-1}&sts=t
   title: Zentrales Verzeichnis Antiquarischer Bücher (ZVAB)
   tags:
   - books
