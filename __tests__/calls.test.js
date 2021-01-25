@@ -28,7 +28,13 @@ async function checkIfRedirectUrlPresent(expectedRedirectUrl) {
 
 function setCallUrl(call) {
   let url = docroot;
-  for (let paramName of ["language", "country", "github", "query"]) {
+  for (let paramName of [
+    "language",
+    "country",
+    "github",
+    "query",
+    "defaultKeyword",
+  ]) {
     if (paramName in call) {
       url += "&" + paramName + "=" + encodeURIComponent(call[paramName]);
     }
