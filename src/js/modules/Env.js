@@ -433,6 +433,9 @@ export default class Env {
     if (this.debug) {
       params["debug"] = 1;
     }
+    if (this.defaultKeyword) {
+      params["defaultKeyword"] = this.defaultKeyword;
+    }
     if (this.status) {
       params["status"] = this.status;
     }
