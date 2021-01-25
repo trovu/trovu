@@ -1496,3 +1496,13 @@ zv 1:
   - zwangsversteigerung
   examples:
     gi: Suche nach Zwangsversteigerungen in Gießen
+zvab 0:
+  url: https://www.zvab.com
+  title: Zentrales Verzeichnis Antiquarischer Bücher (ZVAB)
+  tags:
+  - books
+zvab 1:
+  url: https://www.zvab.com/servlet/SearchResults?cm_sp=SearchF-_-topnav-_-Results&kn={%query}&sts=t
+  title: Zentrales Verzeichnis Antiquarischer Bücher (ZVAB)
+  tags:
+  - books
