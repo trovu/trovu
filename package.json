@@ -12,7 +12,7 @@
     "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
     "watch": "rollup --config --watch",
     "clean": "rm -r dist/",
-    "sync": "rsync -vr --delete-after public/* ntro:~/trovu-web/public/",
+    "sync": "rsync -vr --delete-after dist/public/* ntro:~/trovu.net/",
     "deploy": "npm run clean || true && npm run build && npm run sync"
   },
   "repository": {
