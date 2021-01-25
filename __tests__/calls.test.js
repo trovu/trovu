@@ -18,8 +18,12 @@ async function testCall(call) {
 }
 
 async function checkIfRedirectUrlPresent(expectedRedirectUrl) {
-  await page.waitForFunction('document.querySelector("body").innerText.includes("Redirect to:")');
-  await expect(page.content()).resolves.toMatch(expectedRedirectUrl.replace(/&/g, "&amp;"));
+  await page.waitForFunction(
+    'document.querySelector("body").innerText.includes("Redirect to:")'
+  );
+  await expect(page.content()).resolves.toMatch(
+    expectedRedirectUrl.replace(/&/g, "&amp;")
+  );
 }
 
 function setCallUrl(call) {
