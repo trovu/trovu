@@ -10,9 +10,9 @@ Call Trovu with [`&debug=1`](https://trovu.net/#debug=1) to not get redirected b
 
 This might be a caching issue.
 
-First of all, make sure that GitHub has updated the raw version of the shortcut file you edited. Click on the “raw” button and keep refreshing the page until you see your changes.
+First of all, make sure that `data.trovu.net` has updated the raw version of the shortcut file you edited. For example, the `de`-namespace shortcuts are at https://data.trovu.net/data/shortcuts/de.yml
 
-Call the query prefixed with `reload:`, e.g. `reload:g foobar`. 
+Then, all the query prefixed with `reload:`, e.g. `reload:g foobar`. 
 
 If that did not help, try debugging mode (see above).
 
