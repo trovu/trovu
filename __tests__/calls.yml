@@ -10,6 +10,9 @@
   country: fr
   query: pl.wg berlin
   expectedRedirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
+- defaultKeyword: g
+  query: foobar
+  expectedRedirectUrl: https://www.google.co.uk/search?hl=en&q=foobar&ie=utf-8
 - github: georgjaehnig
   query: foobar
   expectedRedirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
