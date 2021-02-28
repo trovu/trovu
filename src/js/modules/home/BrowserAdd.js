@@ -67,7 +67,14 @@ export default class BrowserAdd {
    * Autoselect the right tab, based on current browser.
    */
   setBrowserTab() {
+
+    // Default: 'other'.
+    let browserName = 'other';
+
     const browser = detect();
+    if (browser && browser.name && ['firefox', 'chrome'].includes(browser.name)) {
+      browserName = browser.name;
+    }
 
     // Deactivate all.
     document
@@ -77,20 +84,12 @@ export default class BrowserAdd {
       .querySelectorAll("#add-to-browser .tab-pane")
       .forEach((el) => el.classList.remove("show", "active"));
 
-    // Show tab and panel according to setting.
-    switch (browser && browser.name) {
-      case "firefox":
-      case "chrome":
-        document
-          .querySelector("#add-to-browser .nav-tabs a." + browser.name)
-          .classList.add("active");
-        document
-          .querySelector("#add-to-browser .tab-pane." + browser.name)
-          .classList.add("show", "active");
-        break;
-      default:
-        // Will show the default "Other" tab.
-        break;
-    }
+    // Set current.
+    document
+      .querySelector("#add-to-browser .nav-tabs a." + browserName)
+      .classList.add("active");
+    document
+      .querySelector("#add-to-browser .tab-pane." + browserName)
+      .classList.add("show", "active");
   }
 }
