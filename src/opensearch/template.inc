@@ -7,7 +7,7 @@
   <Url
     type="text/html"
     method="get"
-    template="<?PHP echo $urlTrovu ?>process/#query={searchTerms}&amp;<?PHP echo $paramStr ?>"
+    template="<?PHP echo $urlTrovu ?>process/?#query={searchTerms}&amp;<?PHP echo $paramStr ?>"
   />
 
   <image width="16" height="16"><?PHP echo $urlTrovu ?>favicon.ico</image>

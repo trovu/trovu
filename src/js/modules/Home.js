@@ -44,6 +44,9 @@ export default class Home {
     params["query"] = document.getElementById("query").value;
 
     const paramStr = Helper.getUrlParamStr(params);
+
+    // "?" causes Chrome to translate plus signs properly into %2B
+    // even when called from address bar.
     const processUrl = "process/index.html?#" + paramStr;
 
     return processUrl;

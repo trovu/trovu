@@ -57,7 +57,7 @@ export default class BrowserAdd {
 
     // Set Process URL.
     const urlProcess =
-      baseUrl + "process/#" + Helper.getUrlParamStr(params) + "&query=%s";
+      baseUrl + "process/?#" + Helper.getUrlParamStr(params) + "&query=%s";
     const preProcessUrl = document.querySelector(".process-url");
 
     preProcessUrl.textContent = urlProcess;
