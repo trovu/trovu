@@ -577,7 +577,7 @@ zsr 2:
   examples:
     ba, ke: Spojenie z Brastislavy do Košíc teraz
 zsr 3:
-  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}&txtTime={čas|type=time}
+  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}&txtTime={%čas|type=time}
   title: Vlakové spojenia ŽSR
   tags:
   - travel
@@ -587,7 +587,7 @@ zsr 3:
   examples:
     ba, ke, 10: Spojenie z Brastislavy do Košíc v 10 hod.
 zsr 4:
-  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}&txtTime={čas|type=time}&txtDate={dátum|type=date}
+  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}&txtTime={%čas|type=time}&txtDate={%dátum|type=date}
   title: Vlakové spojenia ŽSR
   tags:
   - travel
