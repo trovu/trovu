@@ -678,14 +678,15 @@ e 1:
   examples:
     smartphone: Search for "smartphone"
 ek 0:
-  url: http://kleinanzeigen.ebay.de/
-  title: Ebay-Kleinanzeigen, Homepage
+  url: https://www.ebay-kleinanzeigen.de/
+  title: eBay Kleinanzeigen, Homepage
   tags:
   - shopping
+  - selling
   - ebay
 ek 1:
   url: http://kleinanzeigen.ebay.de/anzeigen/s-suchanfrage.html?keywords={%query}
-  title: Ebay-Kleinanzeigen
+  title: eBay Kleinanzeigen
   tags:
   - shopping
   - ebay
@@ -693,12 +694,33 @@ ek 1:
     kühlschrank: Suche nach "kühlschrank"
 ek 2:
   url: http://kleinanzeigen.ebay.de/anzeigen/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
-  title: Ebay-Kleinanzeigen
+  title: eBay Kleinanzeigen
   tags:
   - shopping
   - ebay
   examples:
     kühlschrank, berlin: Suche nach "kühlschrank" in Berlin
+ek+ 0:
+  url: https://www.ebay-kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
+  title: eBay Kleinanzeigen - Anzeige aufgeben
+  tags:
+  - shopping
+  - selling
+  - ebay
+eka 0:
+  url: https://www.ebay-kleinanzeigen.de/m-meine-anzeigen.html
+  title: eBay Kleinanzeigen - Meine Anzeigen
+  tags:
+  - shopping
+  - selling
+  - ebay
+ekn 0:
+  url: https://www.ebay-kleinanzeigen.de/m-nachrichten.html
+  title: eBay Kleinanzeigen - Meine Nachrichten
+  tags:
+  - shopping
+  - selling
+  - ebay
 farnell 1:
   url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt={%query}
   title: Farnell Deutschland

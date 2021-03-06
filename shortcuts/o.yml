@@ -1899,14 +1899,6 @@ exkcd 1:
   - wiki
   examples:
     polish sausage: Explain the comic about polish sausage
-f3 0:
-  url: http://oss.digirati.com.br/f3/
-  title: 'f3 - Fight Flash Fraud: an alternative disk fraud checker compatible to
-    h2testw'
-  tags:
-  - open source
-  - disk drive checker
-  - usb
 fb 0:
   url: https://www.facebook.com/
   title: Facebook Homepage
@@ -2086,6 +2078,16 @@ findutf 0:
   - unicode character
   - image
   - online tool
+fiverr 0:
+  url: https://www.fiverr.com/
+  title: Fiverr
+  tags:
+  - services
+fiverr 1:
+  url: https://www.fiverr.com/search/gigs?query={%query}
+  title: Fiverr Gigs
+  tags:
+  - services
 fjd 2:
   url: http://finance.yahoo.com/currency-converter/#from=fjd;to={%to code};amt={%amount}
   title: 'Convert Fiji dollar (Yahoo) '
@@ -2857,6 +2859,26 @@ gns 1:
   - google
   examples:
     berlin: Search Google News for berlin
+gopkg 0:
+  url: https://pkg.go.dev
+  title: pkg.go.dev
+  description: Package browser for the Go programming language
+  tags:
+  - programming
+  - go
+  - golang
+  - software
+gopkg 1:
+  url: https://pkg.go.dev/search?q={%query}
+  title: pkg.go.dev
+  description: Package browser for the Go programming language
+  tags:
+  - programming
+  - go
+  - golang
+  - software
+  examples:
+    levenshtein: Search pkg.go.dev for Levenshtein-related packages
 gp 0:
   url: https://play.google.com/store
   title: Google Play
@@ -4021,12 +4043,22 @@ myr 2:
   examples:
     eur, 1: Convert 1 Malaysian ringgit into Euros
 n 0:
-  url: https://www.netflix.com/search/{$query}
+  url: https://www.netflix.com/
+  title: Netflix
+  description: go to Netflix homepage
+  tags:
+  - netflix
+  - movies
+  - series
+  - stream
+n 1:
+  url: https://www.netflix.com/search/{%query}
   title: Netflix
   description: searches Netflix for a movie or series
   tags:
   - netflix
   - movies
+  - series
   - stream
   examples:
     Broadchurch: Search Netflix for "Broadchurch"

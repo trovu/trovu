@@ -7,13 +7,17 @@ csfd 1:
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
+    
+kinobox 1:
+  url: http://www.kinobox.cz/najdi?t={%query}
+  title: Kinobox.cz
+  tags:
+  - movies
+  examples:
+    forrest gump: Search for "forrest gump"
+    
 de 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _gecz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
+  url: https://slovniky.lingea.cz/nemecko-cesky/{%výraz}
   title: Německo-český (Lingea)
   tags:
   - dictionary
@@ -23,15 +27,10 @@ de 1:
   - czech
   - german
   examples:
-    baum: '"baum" český'
-    strom: '"strom" německý'
+    baum: '"baum" česky'
+    strom: '"strom" německy'
 en 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _encz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
+  url: https://slovniky.lingea.cz/anglicko-cesky/{%výraz}
   title: Anglicko-český (Lingea)
   tags:
   - dictionary
@@ -41,15 +40,10 @@ en 1:
   - czech
   - english
   examples:
-    tree: '"tree" český'
-    strom: '"strom" anglický'
+    tree: '"tree" česky'
+    strom: '"strom" anglicky'
 es 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _spcz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
+  url: https://slovniky.lingea.cz/spanelsko-cesky/{%výraz}
   title: Španělsko-český (Lingea)
   tags:
   - dictionary
@@ -59,16 +53,11 @@ es 1:
   - czech
   - spanish
   examples:
-    árbol: '"árbol" český'
-    strom: '"strom" španělský'
+    árbol: '"árbol" česky'
+    strom: '"strom" španělsky'
 fr 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _frcz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
-  title: Francouzko-český (Lingea)
+  url: https://slovniky.lingea.cz/francouzsko-cesky/{%výraz}
+  title: Francouzsko-český (Lingea)
   tags:
   - dictionary
   - language
@@ -77,22 +66,11 @@ fr 1:
   - czech
   - french
   examples:
-    arbre: '"arbre" český'
-    strom: '"strom" francouzký'
-kinobox 1:
-  url: http://www.kinobox.cz/najdi?t={%query}
-  title: Kinobox.cz
-  tags:
-  - movies
-  examples:
-    forrest gump: Search for "forrest gump"
+    arbre: '"arbre" česky'
+    strom: '"strom" francouzsky'
+
 pl 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _plcz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
+  url: https://slovniky.lingea.cz/polsko-cesky/{%výraz}
   title: Polsko-český (Lingea)
   tags:
   - dictionary
@@ -102,15 +80,10 @@ pl 1:
   - czech
   - polish
   examples:
-    drzewo: '"drzewo" český'
-    strom: '"strom" polský'
+    drzewo: '"drzewo" česky'
+    strom: '"strom" polsky'
 vi 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _vncz
-    type: ""
-    word: '{%slovo|encoding=none}'
-    data: '{%slovo|encoding=none}'
+  url: https://slovniky.lingea.cz/vietnamsko-cesky/{%výraz}
   title: Vietnamsko-český (Lingea)
   tags:
   - dictionary
@@ -120,5 +93,50 @@ vi 1:
   - czech
   - vietnamese
   examples:
-    cây: '"cây" český'
-    strom: '"strom" vietnamský'
+    cây: '"cây" česky'
+    strom: '"strom" vietnamsky'
+ru 1:
+  url: https://slovniky.lingea.cz/rusko-cesky/{%výraz}
+  title: Rusko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - russian
+  examples:
+    магазин: '"магазин" česky'
+    prodejna: '"prodejna" rusky'
+
+hr 1:
+  url: https://slovniky.lingea.cz/chorvatsko-cesky/{%výraz}
+  title: Rusko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - russian
+  examples:
+    магазин: '"магазин" česky'
+    prodejna: '"prodejna" rusky'
+    
+cs 1:
+  url: https://ssjc.ujc.cas.cz/search.php?heslo={%výraz}&sti=EMPTY&where=hesla&hsubstr=no
+  title: Slovník spisovného jazyka českého
+  tags:
+  - dictionary
+  - language
+  - slovník
+  - czech
+  examples:
+    strom: '"strom" – dřevina s kmenem'
+    
+sub 1:
+  url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
+  title: Filmové titulky (Open Subtitles)
+  tags:
+  - titulky
+  - subtitles
