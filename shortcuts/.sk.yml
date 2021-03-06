@@ -566,3 +566,33 @@ gmzv 1:
   - google
   examples:
     hlavná: Ukáž Hlavná v meste Zvolen
+zsr 2:
+  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={odkiaľ|type=city}&txtTo={kam|type=city}
+  title: Vlakové spojenia ŽSR
+  tags:
+  - travel
+  - railway
+  - zsr
+  - zssk
+  examples:
+    ba, ke: Spojenie z Brastislavy do Košíc teraz
+zsr 3:
+  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={odkiaľ|type=city}&txtTo={kam|type=city}&txtTime={čas|type=time}
+  title: Vlakové spojenia ŽSR
+  tags:
+  - travel
+  - railway
+  - zsr
+  - zssk
+  examples:
+    ba, ke, 10: Spojenie z Brastislavy do Košíc v 10 hod.
+zsr 4:
+  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={odkiaľ|type=city}&txtTo={kam|type=city}&txtTime={čas|type=time}&txtDate={dátum|type=date}
+  title: Vlakové spojenia ŽSR
+  tags:
+  - travel
+  - railway
+  - zsr
+  - zssk
+  examples:
+    ba, ke, 10, 31.1.: Spojenie z Brastislavy do Košíc v 10 hod. 31. januára
