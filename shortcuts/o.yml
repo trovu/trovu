@@ -931,6 +931,14 @@ bpoc 1:
   examples:
     GRO: Display the BioPortal ontology classes page of the Gene Regulation Ontology
       (GRO).
+brew 1:
+  url: https://www.google.de/search?hl={$language}&q=site%3Abrew.sh%20{%amount}&ie=utf-8
+  title: Homebrew Package Manager  
+  tags:
+  - osx
+  - packages
+  examples:
+    vim: Search for packages about vim.      
 briar 0:
   url: https://briarproject.org/
   title: Briar Software
