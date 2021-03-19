@@ -1,6 +1,6 @@
 gm 2:
   url: http://maps.google.com/maps?hl={$language}&q={%mesto|type=city}%2C%20{%adresa}%2C%20Slovensko
-  title: Google Maps Bratislava
+  title: Google Maps Slovensko
   tags:
   - maps
   - google
