@@ -1,3 +1,11 @@
+gm 2:
+  url: http://maps.google.com/maps?hl={$language}&q={%mesto|type=city}%2C%20{%adresa}%2C%20Slovensko
+  title: Google Maps Bratislava
+  tags:
+  - maps
+  - google
+  examples:
+    hlavná: Ukáž Hlavná v meste Bratislava
 gmba 1:
   url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bratislava%2C%20Slovensko
   title: Google Maps Bratislava
