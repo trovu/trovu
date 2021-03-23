@@ -1,30 +1,3 @@
-cd 2:
-  url: http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f={%Odkud|type=city}&t={%Kam|type=city}&v=&option=10&byarr=false&cmd=cmdSearch
-  title: České dráhy, Vyhledaní spojení
-  tags:
-  - travel
-  - railway
-  - cd
-  examples:
-    praha, brno: Příští spojení z Prahy do Brna
-cd 3:
-  url: http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f={%Odkud|type=city}&t={%Kam|type=city|type=city}&time={%Čas|type=time|output=HH:mm}&v=&option=10&byarr=false&cmd=cmdSearch
-  title: České dráhy, Vyhledaní spojení
-  tags:
-  - travel
-  - railway
-  - cd
-  examples:
-    praha, brno, 10: Spojení z Prahy do Brna dnes v 10 hod.
-cd 4:
-  url: http://www.cd.cz/spojeni/conn.aspx?_s_icmp=smvs&f={%Odkud|type=city}&t={%Kam}&time={%Čas|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YY}&v=&option=10&byarr=false&cmd=cmdSearch
-  title: České dráhy, Vyhledaní spojení
-  tags:
-  - travel
-  - railway
-  - cd
-  examples:
-    praha, brno, 10, 31.1.: Spojení z Prahy do Brna v 10 hod. 31. ledna
 g 1:
   url: https://www.google.cz/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.cz
