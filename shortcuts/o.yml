@@ -5680,6 +5680,18 @@ twme 1:
   - social network
   examples:
     serchilo: Search for "serchilo"
+twn 0:
+  url: https://twitter.com/notifications
+  title: Twitter Notifications
+  tags:
+  - twitter
+  - social network
+  - message
+  - messaging
+  - chat
+  - private message
+  - instant message
+  - messenger
 twr 1:
   url: https://twitter.com/search?q={%query}&vertical=default&f=tweets&lang={$language}
   title: Twitter Search, realtime
