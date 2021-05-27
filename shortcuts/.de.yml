@@ -6473,6 +6473,18 @@ jf 1:
   examples:
     He pulse tube cooler operating down to 1.3 K: Sucht nach dem Artikel "He pulse
       tube cooler operating down to 1.3 K" in JustFind
+kaufland 0:
+  url: https://www.kaufland.de/
+  title: Kaufland Online Marktplatz
+  tags:
+  - shopping
+kaufland 1:
+  url: https://www.kaufland.de/item/search/?search_value={%Suche}
+  title: Kaufland Online Marktplatz
+  tags:
+  - shopping
+  examples:
+    spiele: Suche auf Kaufland.de nach "spiele"
 kino 1:
   url: http://www.kino.de/kinoprogramm/{%Ort/Stadtteil/Kino/PLZ}/
   title: Kinoprogramm
@@ -6737,18 +6749,6 @@ radarb 0:
   - weather
   - rain
   - berlin
-real 0:
-  url: https://www.real.de/
-  title: Real.de Startseite
-  tags:
-  - shopping
-real 1:
-  url: https://www.real.de/item/search/?search_value={%Suche}&valueKey_search_value=
-  title: Real.de
-  tags:
-  - shopping
-  examples:
-    spiele: Suche auf Real.de nach "spiele"
 reichelt 0:
   url: http://www.reichelt.de/
   title: Reichelt Elektronik
