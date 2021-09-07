@@ -25,36 +25,6 @@ test("getLanguageAndCountryFromBrowser", () => {
   });
 });
 
-test("getDefaultLanguage", () => {
-  const env = new Env();
-  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
-  expect(env.getDefaultLanguage()).toMatch("en");
-});
-
-test("getDefaultCountry", () => {
-  const env = new Env();
-  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
-  expect(env.getDefaultCountry()).toMatch("uk");
-});
-
-test("getDefaultLanguageAndCountry when navigator.language empty", () => {
-  const env = new Env();
-  env.getNavigatorLanguage = getNavigatorLanguageEmpty;
-  expect(env.getDefaultLanguageAndCountry()).toEqual({
-    language: "en",
-    country: "us"
-  });
-});
-
-test("setDefaults", () => {
-  const env = new Env();
-  env.getNavigatorLanguage = getNavigatorLanguageEnUk;
-  env.setDefaults();
-  expect(env.language).toMatch("en");
-  expect(env.country).toMatch("uk");
-  expect(env.namespaces).toEqual(["o", "en", ".uk"]);
-});
-
 test("setWithUserConfigFromGithub", async () => {
   const env = new Env();
   env.getNavigatorLanguage = getNavigatorLanguageEnUk;
