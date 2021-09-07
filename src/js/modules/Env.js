@@ -203,26 +203,6 @@ export default class Env {
   }
 
   /**
-   * Get the default language.
-   *
-   * @return {string} language - The default language.
-   */
-  getDefaultLanguage() {
-    const { language } = this.getDefaultLanguageAndCountry();
-    return language;
-  }
-
-  /**
-   * Get the default country.
-   *
-   * @return {string} language - The default country.
-   */
-  getDefaultCountry() {
-    const { country } = this.getDefaultLanguageAndCountry();
-    return country;
-  }
-
-  /**
    * Start fetching shortcuts per namespace.
    *
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
