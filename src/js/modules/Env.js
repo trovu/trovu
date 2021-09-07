@@ -32,7 +32,7 @@ export default class Env {
     // Override all with params.
     Object.assign(this, params);
 
-    this.setDefaults();
+    await this.setDefaults();
     this.addFetchUrlToNamespaces();
     this.namespaces = await this.fetchShortcuts(
       this.namespaces,
@@ -88,14 +88,21 @@ export default class Env {
   /**
    * Set default environment variables if they are still empty.
    */
-  setDefaults() {
+  async setDefaults() {
+
+    let language, country;
+
+    if ((typeof this.language != "string") || (typeof this.country != "string")) {
+      ({ language, country} = await this.getDefaultLanguageAndCountry());
+    }
+
     // Default language.
     if (typeof this.language != "string") {
-      this.language = this.getDefaultLanguage();
+      this.language = language;
     }
     // Default country.
     if (typeof this.country != "string") {
-      this.country = this.getDefaultCountry();
+      this.country = country;
     }
     // Default namespaces.
     if (typeof this.namespaces != "object") {
@@ -153,8 +160,12 @@ export default class Env {
    *
    * @return {object} [language, country] - The default language and country.
    */
-  getDefaultLanguageAndCountry() {
+  async getDefaultLanguageAndCountry() {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
+
+    if (!country) {
+      country = await this.getCountryFromIP();
+    }
 
     // Set defaults.
     language = language || "en";
