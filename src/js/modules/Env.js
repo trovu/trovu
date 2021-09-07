@@ -233,6 +233,19 @@ export default class Env {
   }
 
   /**
+   * Get the country from the IP address.
+   *
+   * @return {string} country - The country as ISO 3166‑1 alpha-2 code
+   */
+  async getCountryFromIP() {
+    const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
+    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, false);
+    const ipInfo = JSON.parse(ipInfoText);
+    const country = ipInfo.countryCode;
+    return country;
+  }
+
+  /**
    * Ensure shortcuts have the correct structure.
    *
    * @param {array} shortcuts      - The shortcuts to normalize.
