@@ -1,4 +1,4 @@
-const docroot = "http://l.tro:8080/process/index.html?#debug=1";
+const docroot = "http://127.0.0.1:8081/process/index.html?#debug=1";
 
 const yaml = require("js-yaml");
 const fs = require("fs");

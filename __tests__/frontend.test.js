@@ -1,4 +1,4 @@
-const docroot = "http://l.tro:8080/";
+const docroot = "http://127.0.0.1:8081/";
 
 describe("Trovu homepage", () => {
   beforeAll(async () => {
