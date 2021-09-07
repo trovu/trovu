@@ -433,7 +433,9 @@ export default class Env {
     if (this.debug) {
       params["debug"] = 1;
     }
-    if (this.defaultKeyword) {
+    // Don't add defaultKeyword into params
+    // when Github user is set.
+    if ((this.defaultKeyword) && (!this.github)) {
       params["defaultKeyword"] = this.defaultKeyword;
     }
     if (this.status) {
