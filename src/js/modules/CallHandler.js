@@ -53,7 +53,7 @@ export default class CallHandler {
     Object.assign(env, QueryParser.parse(env.query));
 
     if (env.reload) {
-      await env.fetchShortcuts(env.namespaces, true, env.debug);
+      await env.populate(env);
     }
     if (env.keyword === "") {
       status = "reloaded";
