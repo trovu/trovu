@@ -138,7 +138,7 @@ export default class Env {
       "{%github}",
       params.github
     );
-    const configYml = await Helper.fetchAsync(configUrl, false, params.debug);
+    const configYml = await Helper.fetchAsync(configUrl, params.reload, params.debug);
     if (configYml) {
       try {
         const config = jsyaml.load(configYml);
