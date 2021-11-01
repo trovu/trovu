@@ -35,6 +35,7 @@ describe("Trovu homepage", () => {
     await page.goto(docroot + "#query=foobar&status=not_found", {
       waitUntil: "networkidle0",
     });
+    await page.waitForSelector('#alert');
     await expect(page.content()).resolves.toMatch(
       "Could not find a matching shortcut for this query."
     );
