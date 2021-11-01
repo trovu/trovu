@@ -44,7 +44,7 @@ If no keyword is recognized in a query, this one will be used. Useful for settin
 ```yaml
 language: en
 ```
-For Wikipedia or dictionaries in your language. Basically, it fills the `{$language}` variable in the shortcut URLs. Now, using the `w` shortcut will get you to the Wikipedia in your language.
+For Wikipedia or dictionaries in your language. Basically, it fills the `{$language}` variable in the shortcut URLs. Now, using the `w` shortcut will get you to the Wikipedia in your language, as its shortcut URL is set as `https://{$language}.wikipedia.org/`. 
 
 Note: Other language related shortcuts like dictionaries are usually in their language namespace. Make sure to add e.g. `- de` to your namespaces in case you want to use German-related dictionaries.
 
