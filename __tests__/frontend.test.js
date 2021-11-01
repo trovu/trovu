@@ -1,6 +1,7 @@
 const docroot = "http://127.0.0.1:8081/";
 
 describe("Trovu homepage", () => {
+
   beforeAll(async () => {
     await page.goto(docroot, { waitUntil: "networkidle0" });
   });
