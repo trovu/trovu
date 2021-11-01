@@ -37,12 +37,11 @@ describe("Trovu homepage", () => {
 describe("Trovu homepage, Shortcut not found", () => {
 
   it("should show not_found", async () => {
-    await page.goto(docroot + "#query=foobar&status=not_found", {
-      waitUntil: "networkidle0",
-    });
-    await page.waitForSelector('#alert');
+    await page.goto(docroot + "#country=gb&language=en&query=foobar&status=not_found");
+    await page.waitForTimeout(2000);
     await expect(page.content()).resolves.toMatch(
       "Could not find a matching shortcut for this query."
     );
   });
+
 });
