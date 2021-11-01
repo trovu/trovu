@@ -1,3 +1,12 @@
+
+alza 1:
+  url: https://www.alza.cz/search.htm?exps=televizor{%výraz}
+  title: Alza.cz
+  tags:
+  - seznam
+  - shopping
+  examples:
+    televizor: Hledej "televizor"
 g 1:
   url: https://www.google.cz/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.cz
@@ -81,3 +90,11 @@ tv 0:
   tags:
   - tv
   - centrum
+zbozi 1:
+  url: https://www.zbozi.cz/hledej/?q={%výraz}
+  title: Zboží.cz
+  tags:
+  - seznam
+  - shopping
+  examples:
+    televizor: Hledej "televizor"
