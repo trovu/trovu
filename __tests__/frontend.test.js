@@ -32,6 +32,10 @@ describe("Trovu homepage", () => {
     );
   });
 
+});
+
+describe("Trovu homepage, Shortcut not found", () => {
+
   it("should show not_found", async () => {
     await page.goto(docroot + "#query=foobar&status=not_found", {
       waitUntil: "networkidle0",
