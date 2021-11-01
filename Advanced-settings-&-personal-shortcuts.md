@@ -39,7 +39,7 @@ defaultKeyword: g
 ```
 If no keyword is recognized in a query, this one will be used. Useful for setting up a much used shortcut.
 
-### Language and Country
+### Language
 
 ```yaml
 language: en
@@ -48,11 +48,13 @@ For Wikipedia or dictionaries in your language. Basically, it fills the `{$langu
 
 Note: Other language related shortcuts like dictionaries are usually in their language namespace. Make sure to add e.g. `- de` to your namespaces in case you want to use German-related dictionaries.
 
+### Country
+
 ```yaml
 country: de
 ```
 
-For shortcuts that use `{$country}` in their URL.
+For shortcuts that use `{$country}` in their URL. Works similarly as `{$language}`.
 
 ## Adding shortcuts
 
