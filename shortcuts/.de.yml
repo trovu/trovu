@@ -685,7 +685,7 @@ ek 0:
   - selling
   - ebay
 ek 1:
-  url: http://kleinanzeigen.ebay.de/anzeigen/s-suchanfrage.html?keywords={%query}
+  url: http://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}
   title: eBay Kleinanzeigen
   tags:
   - shopping
@@ -693,7 +693,7 @@ ek 1:
   examples:
     kühlschrank: Suche nach "kühlschrank"
 ek 2:
-  url: http://kleinanzeigen.ebay.de/anzeigen/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
+  url: http://www.ebay-kleinaneigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
   title: eBay Kleinanzeigen
   tags:
   - shopping
