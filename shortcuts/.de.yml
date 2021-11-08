@@ -693,7 +693,7 @@ ek 1:
   examples:
     kühlschrank: Suche nach "kühlschrank"
 ek 2:
-  url: http://www.ebay-kleinaneigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
+  url: http://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
   title: eBay Kleinanzeigen
   tags:
   - shopping
