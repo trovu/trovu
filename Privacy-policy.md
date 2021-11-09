@@ -1,6 +1,7 @@
 Trovu does not log your personal information.
 
-In particular, we do **not record**:
+In particular:
 
-- IP addresses
-- search queries.
+- We do not record IP addresses.
+- We do not record search queries.
+- We do not serve cookies.
