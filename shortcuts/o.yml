@@ -4823,17 +4823,6 @@ r 1:
   - r
   examples:
     read.table: Show manual about "read.table"
-rae 1:
-  url: http://dle.rae.es/?w={%query}
-  title: Diccionario RAE
-  description: Relevant for spanish language, but as it shows the official and latest
-    rules, should be interesting for all.
-  tags:
-  - dictionary spanish
-  examples:
-    capaz: looks for "capaz" in RAE dictionary
-    decir: busca por la palabra «decir» en el diccionario de la lengua española de
-      la Real Academia Española
 rails 0:
   url: http://apidock.com/rails/
   title: Ruby on Rails Documentation
