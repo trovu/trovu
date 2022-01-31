@@ -146,6 +146,18 @@ hr 1:
   examples:
     drvo: '"drvo" česky'
     strom: '"strom" chorvatsky'
+
+sk 1:
+  url: https://slovniky.lingea.cz/slovensko-cesky/{%výraz}
+  title: Slovensko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  examples:
+    obrúčka: '"obrúčka" česky'
     
 cs 1:
   url: https://ssjc.ujc.cas.cz/search.php?heslo={%výraz}&sti=EMPTY&where=hesla&hsubstr=no
