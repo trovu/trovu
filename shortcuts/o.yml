@@ -4905,6 +4905,14 @@ reddit 0:
   tags:
   - forum
   - reddit
+rg 1:
+  url: https://www.google.com/search?hl={$language}&sitesearch=reddit.com&q={%query}
+  title: Reddit via Google
+  tags:
+  - forum
+  - reddit
+  examples:
+    berlin: Search for "berlin"
 remove 1:
   url: http://www.shouldiremoveit.com/programs.aspx?q={%product}
   title: ShouldIRemoveIt
