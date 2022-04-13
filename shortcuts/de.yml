@@ -343,6 +343,12 @@ dw 1:
 dwds 1:
   url: http://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu={%Wort}
   title: Digitales Wörterbuch der Deutschen Sprache
+e 0:
+  url: https://ebay.de
+  title: eBay
+e 1:
+  url: https://www.ebay.de/sch/i.html?_nkw={%suche}
+  title: eBay Suche
 el 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deel
   title: Griechisch-Deutsch (pons.de)
