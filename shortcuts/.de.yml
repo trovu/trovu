@@ -609,6 +609,89 @@ dbt 4:
   examples:
     berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am
       31.12.
+dbn 2:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&timesel=depart&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
+  tags:
+  - bahn
+  - travel
+  - affiliate
+  examples:
+    berlin, hamburg: Nächste Bahn-Verbindung von Berlin nach Hamburg
+    b, hh: Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über Autokennzeichen
+    sxf, txl: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld,
+      Eingabe über IATA-Flughafencodes
+dbn 3:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&timesel=depart&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
+  tags:
+  - bahn
+  - travel
+  - affiliate
+  examples:
+    berlin, hamburg, 20:00: Verbindung von Berlin nach Hamburg heute um 20 Uhr
+dbn 4:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
+  tags:
+  - bahn
+  - travel
+  - affiliate
+  examples:
+    berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am
+      31.12.
+dbmn 2:
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+  tags:
+  - travel
+  - bahn
+  - railway
+  examples:
+    berlin, hamburg: Nächste Verbindung von Berlin nach Hamburg
+dbmn 3:
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+  tags:
+  - travel
+  - bahn
+  - railway
+  examples:
+    berlin, hamburg, 10: Verbindung von Berlin nach Hamburg heute um 10 Uhr
+dbmn 4:
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+  tags:
+  - travel
+  - bahn
+  - railway
+  examples:
+    berlin, hamburg, 10, 28.1.: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
+dbtn 2:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
+  tags:
+  - bahn
+  - travel
+  examples:
+    berlin, hamburg: Nächste Verbindung von Berlin nach Hamburg
+dbtn 3:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
+  tags:
+  - bahn
+  - travel
+  examples:
+    berlin, hamburg, 20:00: Verbindung von Berlin nach Hamburg heute um 20 Uhr
+dbtn 4:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
+  tags:
+  - bahn
+  - travel
+  examples:
+    berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am
+      31.12.
 denic 1:
   url: http://www.denic.de/webwhois/?domain={%domain}
   title: Whois (Denic)
