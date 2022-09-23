@@ -97,6 +97,20 @@ auto 1:
   - shopping
   examples:
     toyota: Suche nach Toyotas
+bauhaus 0:
+  url: https://www.bauhaus.info/
+  title: BAUHAUS
+  tags:
+  - diy
+  - hardware
+  - shopping
+bauhaus 1:
+  url: https://www.bauhaus.info/suche/produkte?text={%query}
+  title: BAUHAUS
+  tags:
+  - diy
+  - hardware
+  - shopping
 bbb 0:
   url: http://www.berlinerbaederbetriebe.de/245.html
   title: Berliner Bäder-Betriebe
