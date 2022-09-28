@@ -334,7 +334,7 @@ youglish 1:
   examples:
     dough: Find videos where someone says "dough"
 zh 0:
-  url: http://www.mdbg.net/chindict/chindict.php
+  url: https://www.mdbg.net/chinese/dictionary
   title: Chinese-English
   tags:
   - chinese
@@ -342,7 +342,7 @@ zh 0:
   - dictionary
   - english
 zh 1:
-  url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
+  url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={%query}
   title: Chinese-English
   tags:
   - chinese
