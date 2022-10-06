@@ -62,7 +62,7 @@ Example input | Example output | Explanation
 The input will be parsed as a time.
 
 - Hours and minutes can be separated by `.` or `:`.
-- Only hours can be provided.
+- It is allowed to only provide an hour.
 - Relative hours work, too.
 - With the attribute `output`, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to `HH:mm`.
 
