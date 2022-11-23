@@ -1023,6 +1023,17 @@ pl 1:
   examples:
     baum: Übersetzung von "baum"
     drzewo: Übersetzung von "drzewo"
+plb 1:
+  url: https://de.bab.la/woerterbuch/polnisch-deutsch/{%Wort}
+  title: Polnisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - polish
+  examples:
+    baum: Übersetzung von "baum"
+    drzewo: Übersetzung von "drzewo"
 pld 1:
   url: http://depl.dict.cc/?s={%Wort}
   title: Polnisch-Deutsch (dict.cc)
