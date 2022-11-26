@@ -20,6 +20,10 @@
   country: us
   query: someQueryThatWillNotSuccess
   expectedRedirectUrl: ../index.html#country=us&debug=1&language=en&query=someQueryThatWillNotSuccess&status=not_found
+- language: de
+  country: de
+  query: gd b,m
+  expectedRedirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
 - query: g barbaz
   expectedRedirectUrl: https://www.google.co.uk/search?hl=en&q=barbaz&ie=utf-8
 - query: g bar,baz
