@@ -38,7 +38,7 @@ describe("Trovu homepage, Shortcut not found", () => {
 
   it("should show not_found", async () => {
     await page.goto(docroot + "#country=gb&language=en&query=foobar&status=not_found");
-    await page.waitForTimeout(2000);
+    await page.waitFor(2000);
     await expect(page.content()).resolves.toMatch(
       "Could not find a matching shortcut for this query."
     );
