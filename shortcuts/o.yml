@@ -4762,7 +4762,7 @@ qt 0:
   - programming
   - qt
 qt 1:
-  url: http://doc.qt.io/qt-5/search-results.html?q={%query}
+  url: http://www.google.com/search?hl={$language}&q=site:doc.qt.io%20{%query}&ie=utf-8
   title: Qt documentation
   tags:
   - programming
