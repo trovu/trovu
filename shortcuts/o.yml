@@ -509,15 +509,6 @@ apb 1:
   - android
   examples:
     calculator: Search for calculator apps
-app 1:
-  url: http://appsuche.touchtalk.at/index.php?search={%query}
-  title: Touchtalk Appstore Apps
-  tags:
-  - apple
-  - apps
-  - appstore
-  examples:
-    map: Search for map apps
 apple 1:
   url: http://www.apple.com/search/?q={%query}
   title: Apple.com
