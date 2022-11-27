@@ -1095,16 +1095,6 @@ chf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Swiss franc into Euros
-chrome 1:
-  url: https://chrome.google.com/webstore/search/{%query}?hl={$language}
-  title: Chrome Webstore
-  tags:
-  - google
-  - chrome
-  - browser
-  - extension
-  examples:
-    page rank: Search for Google Chrome extensions about "page rank"
 chromex 1:
   url: https://chrome.google.com/webstore/search/{%query}?_category=extensions
   title: Chrome Extensions
