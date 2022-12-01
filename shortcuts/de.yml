@@ -277,6 +277,17 @@ da 1:
   examples:
     baum: '"baum" auf Dänisch'
     træ: '"træ" auf Deutsch'
+dab 1:
+  url: https://de.bab.la/woerterbuch/daenisch-deutsch/{%Wort}
+  title: Dänisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - danish
+  examples:
+    baum: Übersetzung von "baum"
+    træ: Übersetzung von "træ"
 dclj 0:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
   title: De.comp.lang.javascript
@@ -445,6 +456,17 @@ es 1:
   - dictionary
   examples:
     baum: Search for "baum"
+esb 1:
+  url: https://de.bab.la/woerterbuch/spanisch-deutsch/{%Wort}
+  title: Spanisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - spanish
+  examples:
+    baum: Übersetzung von "baum"
+    arbol: Übersetzung von "arbol"
 esd 1:
   url: http://dees.dict.cc/?s={%Wort}
   title: Spanisch-Deutsch (dict.cc)
@@ -565,6 +587,17 @@ fr 1:
   - dictionary
   examples:
     baum: Search for "baum"
+frb 1:
+  url: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%Wort}
+  title: Französisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - french
+  examples:
+    baum: Übersetzung von "baum"
+    arbre: Übersetzung von "arbre"
 frd 1:
   url: http://defr.dict.cc/?s={%Wort}
   title: Französisch-Deutsch (dict.cc)
@@ -799,6 +832,17 @@ it 1:
   - dictionary
   examples:
     baum: Search for "baum"
+itb 1:
+  url: https://de.bab.la/woerterbuch/italienisch-deutsch/{%Wort}
+  title: Italienisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - italian
+  examples:
+    baum: Übersetzung von "baum"
+    albero: Übersetzung von "albero"
 it-ital 1:
   url: http://www.italdict.de/exec/?S={%query}
   title: Italienisch-Deutsch (italdict.de)
@@ -1075,6 +1119,17 @@ pt 1:
   - portugese
   examples:
     baum: Übersetzung für "baum"
+ptb 1:
+  url: https://de.bab.la/woerterbuch/portugiesisch-deutsch/{%Wort}
+  title: Portugiesisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - portuguese
+  examples:
+    baum: Übersetzung von "baum"
+    árvore: Übersetzung von "árvore"
 ptd 1:
   url: http://dept.dict.cc/?s={%Wort}
   title: Portugiesisch-Deutsch (dict.cc)
@@ -1149,6 +1204,17 @@ ru 1:
   - dictionary
   examples:
     baum: Search for "baum"
+rub 1:
+  url: https://de.bab.la/woerterbuch/russisch-deutsch/{%Wort}
+  title: Russisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - russian
+  examples:
+    baum: Übersetzung von "baum"
+    дерево: Übersetzung von "дерево"
 rud 1:
   url: http://deru.dict.cc/?s={%Wort}
   title: Russisch-Deutsch (dict.cc)
@@ -1259,6 +1325,17 @@ sv 1:
   - german
   examples:
     baum: Übersetzung für "baum"
+svb 1:
+  url: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%Wort}
+  title: Schwedisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - swedish
+  examples:
+    baum: Übersetzung von "baum"
+    bom: Übersetzung von "bom"
 svd 1:
   url: http://desv.dict.cc/?s={%Wort}
   title: Schwedisch-Deutsch (dict.cc)
@@ -1322,6 +1399,17 @@ tr 1:
   - german
   examples:
     baum: Search for "baum"
+trb 1:
+  url: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%Wort}
+  title: Türkisch-Deutsch (bab.la)
+  tags:
+  - language
+  - dictionary
+  - german
+  - turkish
+  examples:
+    baum: Übersetzung von "baum"
+    ağaç: Übersetzung von "ağaç"
 trd 1:
   url: http://www.deutsch-tuerkisch.net/suche/{%Wort}
   title: Türkisch-Deutsch (Deutsch-Tuerkisch.net)
