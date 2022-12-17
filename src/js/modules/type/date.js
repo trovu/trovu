@@ -55,13 +55,13 @@ export default class DateParser {
     }
     // Match '+1' or '-2'
     if (matches = str.match(/^(-|\+)(\d+)$/)) {
-      date = now;
-      switch (matches[1]) {
+      const [, operator, offset] = matches;
+      switch (operator) {
         case "+":
-          date.add(matches[2], "days");
+          date.setDate(date.getDate() + parseInt(offset));
           break;
         case "-":
-          date.subtract(matches[2], "days");
+          date.setDate(date.getDate() - parseInt(offset));
           break;
       }
     }
