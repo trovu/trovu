@@ -70,6 +70,10 @@ export default class DateParser {
       let maps = [];
       console.log(locale.substr(0, 2));
       switch (locale.substr(0, 2)) {
+        case "cs":
+          maps.push('ne po út st čt pá so');
+          maps.push('ne po ut st ct pa so');
+          break;
         case "de":
           maps.push('so mo di mi do fr sa');
           break;
@@ -78,6 +82,16 @@ export default class DateParser {
           maps.push('su mo tu we th fr sa');
           maps.push('sun mon tue wed thu fri sat');
           break;
+        case "es":
+          maps.push('do lu ma mi ju vi sá');
+          maps.push('do lu ma mi ju vi sa');
+          break;
+        case "pl":
+          maps.push('nd pn wt śr cz pt so');
+          maps.push('nd pn wt sr cz pt so');
+        case "sk":
+          maps.push('ne po ut st št pi so');
+          maps.push('ne po ut st st pi so');
       }
       for (const map of maps) {
         const mapArray = map.split(' ');
