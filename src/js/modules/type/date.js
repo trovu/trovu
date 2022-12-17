@@ -2,18 +2,17 @@ import moment from 'moment';
 
 export default class DateParser {
   static async parse(str, locale) {
-    let date;
-
     moment.locale(locale);
 
-    let now = moment();
+    const now = new Date();
+    let date = new Date();
 
     // Match '2', '2.', '22', '22.'.
     if (str.match(/^(\d{1,2})(\.)?$/)) {
-      date = moment(str, "DD");
+      date.setDate(str)
       // If date in past: set it to next month.
       if (date < now) {
-        date.add(1, "month");
+        date.setMonth(date.getMonth() + 1);
       }
     }
     // Match '22.11' and '22.11.'
@@ -70,6 +69,8 @@ export default class DateParser {
       }
     }
 
-    return date;
+    // Temporary code, until we replace moment's .format().
+    const dateMoment = moment(date);
+    return dateMoment;
   }
 }
