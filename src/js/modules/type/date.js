@@ -21,7 +21,7 @@ export default class DateParser {
       const [, day, month] = matches;
       date.setMonth(month-1, day);
       if (date < now) {
-        date.setYear(date.getFullYear() + 1);
+        date.setFullYear(date.getFullYear() + 1);
       }
     }
     // Match '22.11.13'
