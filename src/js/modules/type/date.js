@@ -67,9 +67,28 @@ export default class DateParser {
     }
     // Match 'Su', 'Mo', ...
     if (matches = str.match(/^([A-Za-z\u00E0-\u00FC]+)$/)) {
-      date = moment().day(str);
+      let maps = [];
+      console.log(locale.substr(0, 2));
+      switch (locale.substr(0, 2)) {
+        case "de":
+          maps.push('so mo di mi do fr sa');
+          break;
+        case "en":
+          maps.push('u m t w r f s');
+          maps.push('su mo tu we th fr sa');
+          maps.push('sun mon tue wed thu fri sat');
+          break;
+      }
+      for (const map of maps) {
+        const mapArray = map.split(' ');
+        const desired_day_of_week_index = mapArray.indexOf(str.toLowerCase());
+         if (desired_day_of_week_index > -1) {
+            date.setDate(date.getDate() + desired_day_of_week_index - date.getDay());
+            break;
+         }
+      }
       if (date < now) {
-        date.add(1, "week");
+        date.setDate(date.getDate() + 7);
       }
     }
 
