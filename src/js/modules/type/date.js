@@ -17,11 +17,11 @@ export default class DateParser {
       }
     }
     // Match '22.11' and '22.11.'
-    if (str.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/)) {
-      date = moment(str, "DD.MM");
-      // If date in past: set it to next year.
+    if (matches = str.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/)) {
+      const [, day, month] = matches;
+      date.setMonth(month-1, day);
       if (date < now) {
-        date.add(1, "year");
+        date.setYear(date.getFullYear() + 1);
       }
     }
     // Match '22.11.13'
