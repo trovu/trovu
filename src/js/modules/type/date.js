@@ -25,16 +25,16 @@ export default class DateParser {
       }
     }
     // Match '22.11.13'
-    if (str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{2})?$/)) {
+    if (matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{2})?$/)) {
       date = moment(str, "DD.MM.YY");
     }
     // Match '22.11.2013'
-    if (str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})?$/)) {
+    if (matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})?$/)) {
       date = moment(str, "DD.MM.YYYY");
     }
 
     // Match '11/22'.
-    if (str.match(/^(\d{1,2})\/(\d{1,2})$/)) {
+    if (matches = str.match(/^(\d{1,2})\/(\d{1,2})$/)) {
       date = moment(str, "MM/DD");
       // If date in past: set it to next year.
       if (date < now) {
@@ -42,11 +42,11 @@ export default class DateParser {
       }
     }
     // Match '11/22/13'
-    if (str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2})?$/)) {
+    if (matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2})?$/)) {
       date = moment(str, "MM/DD/YY");
     }
     // Match '11/22/2013'
-    if (str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})?$/)) {
+    if (matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})?$/)) {
       date = moment(str, "MM/DD/YYYY");
     }
     // Match '+1' or '-2'
@@ -62,7 +62,7 @@ export default class DateParser {
       }
     }
     // Match 'Su', 'Mo', ...
-    if (str.match(/^([A-Za-z\u00E0-\u00FC]+)$/)) {
+    if (matches = str.match(/^([A-Za-z\u00E0-\u00FC]+)$/)) {
       date = moment().day(str);
       if (date < now) {
         date.add(1, "week");
