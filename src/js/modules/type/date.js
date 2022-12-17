@@ -6,6 +6,7 @@ export default class DateParser {
 
     const now = new Date();
     let date = new Date();
+    let matches;
 
     // Match '2', '2.', '22', '22.'.
     if (str.match(/^(\d{1,2})(\.)?$/)) {
@@ -16,7 +17,7 @@ export default class DateParser {
       }
     }
     // Match '22.11' and '22.11.'
-    if (const matches = str.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/)) {
+    if (matches = str.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/)) {
       const [, day, month] = matches;
       date.setMonth(month-1, day);
       if (date < now) {
@@ -49,7 +50,7 @@ export default class DateParser {
       date = moment(str, "MM/DD/YYYY");
     }
     // Match '+1' or '-2'
-    if (const matches = str.match(/^(-|\+)(\d+)$/)) {
+    if (matches = str.match(/^(-|\+)(\d+)$/)) {
       date = now;
       switch (matches[1]) {
         case "+":
