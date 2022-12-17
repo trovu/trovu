@@ -26,28 +26,32 @@ export default class DateParser {
     }
     // Match '22.11.13'
     if (matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{2})?$/)) {
-      date = moment(str, "DD.MM.YY");
+      const [, day, month, year] = matches;
+      date = new Date(`${month}, ${day} ${year}`);
     }
     // Match '22.11.2013'
     if (matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})?$/)) {
-      date = moment(str, "DD.MM.YYYY");
+      const [, day, month, year] = matches;
+      date = new Date(`${month}, ${day} ${year}`);
     }
 
     // Match '11/22'.
     if (matches = str.match(/^(\d{1,2})\/(\d{1,2})$/)) {
-      date = moment(str, "MM/DD");
-      // If date in past: set it to next year.
+      const [, month, day] = matches;
+      date.setMonth(month-1, day);
       if (date < now) {
-        date.add(1, "year");
+        date.setFullYear(date.getFullYear() + 1);
       }
     }
     // Match '11/22/13'
     if (matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2})?$/)) {
-      date = moment(str, "MM/DD/YY");
+      const [, month, day, year] = matches;
+      date = new Date(`${month}, ${day} ${year}`);
     }
     // Match '11/22/2013'
     if (matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})?$/)) {
-      date = moment(str, "MM/DD/YYYY");
+      const [, month, day, year] = matches;
+      date = new Date(`${month}, ${day} ${year}`);
     }
     // Match '+1' or '-2'
     if (matches = str.match(/^(-|\+)(\d+)$/)) {
