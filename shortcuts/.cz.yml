@@ -89,6 +89,22 @@ tv 0:
   tags:
   - tv
   - centrum
+u 1:
+  url: https://uloz.to/hledej?q={%výraz}
+  title: Ulož.to
+  tags:
+  - uloz
+  - download
+  examples:
+    free music: Hledej "free music"
+z 1:
+  url: https://www.zbozi.cz/hledej/?q={%výraz}
+  title: Zboží.cz
+  tags:
+  - seznam
+  - shopping
+  examples:
+    televizor: Hledej "televizor"
 zbozi 1:
   url: https://www.zbozi.cz/hledej/?q={%výraz}
   title: Zboží.cz
