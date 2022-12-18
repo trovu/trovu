@@ -1,3 +1,33 @@
+cp 2:
+  url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&submit=1&pt=true
+	title: Cestovné poriadky
+  tags:
+  - bus
+  - train
+  - travel
+  - cp
+  examples:
+    bratislava, košice: Vlak alebo bus z Bratislavy do Košić
+cp 3:
+  url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&submit=1&pt=true
+	title: Cestovné poriadky
+  tags:
+  - bus
+  - train
+  - travel
+  - cp
+  examples:
+    bratislava, košice: Vlak alebo bus z Bratislavy do Košić o 20:00h
+cp 4:
+  url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&date={%datum|type=date|output=DD.MM.YYYY}&submit=1&pt=true
+  title: Cestovné poriadky
+  tags:
+  - bus
+  - train
+  - travel
+  - cp
+  examples:
+    bratislava, košice: Vlak alebo bus z Bratislavy do Košić o 20:00h 10.12.
 gm 2:
   url: http://maps.google.com/maps?hl={$language}&q={%mesto|type=city}%2C%20{%adresa}%2C%20Slovensko
   title: Google Maps Slovensko
