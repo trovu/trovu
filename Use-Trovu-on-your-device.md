@@ -1,4 +1,6 @@
-# Firefox (desktop)
+# Desktop web browser
+
+## Firefox
 
 1. Open [trovu.net](https://trovu.net/) and adjust your settings (language, country or Github username)
 1. In the browser address bar, right-click.
@@ -6,7 +8,7 @@
 1. Open a [new tab](about:blank) with the URL: `about:preferences#search`
 1. Under Default Search Engine, select Trovu.
 
-# Chrome (desktop)
+## Chrome
 
 1. Open [trovu.net](https://trovu.net/) and adjust your settings (language, country or Github username)
 1. Open a [new tab](about:blank) with the URL: chrome://settings/searchEngines
