@@ -47,7 +47,9 @@ export default class CallHandler {
     let status;
 
     if (!env.query) {
-      return;
+      status = "not_found"
+      redirectUrl = false;
+      return [status, redirectUrl];
     }
 
     Object.assign(env, QueryParser.parse(env.query));
