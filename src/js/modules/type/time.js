@@ -21,13 +21,14 @@ export default class TimeParser {
     }
     // Match '+1' and '-2'
     if (matches = str.match(/^(-|\+)(\d+)$/)) {
-      time = now;
-      switch (matches[1]) {
+      time = new Date();
+      const [, operator, offset] = matches;
+      switch (operator) {
         case "+":
-          time.add(matches[2], "hours");
+          time.setHours(time.getHours() + parseInt(offset));
           break;
         case "-":
-          time.subtract(matches[2], "hours");
+          time.setHours(time.getHours() - parseInt(offset));
           break;
       }
     }
