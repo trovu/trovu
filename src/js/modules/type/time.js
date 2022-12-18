@@ -32,10 +32,6 @@ export default class TimeParser {
       }
     }
 
-    // Temporary code, until we replace moment's .format().
-    const timeMoment = moment(time);
-    return timeMoment;
-
     return time;
   }
 }

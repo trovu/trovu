@@ -180,7 +180,9 @@ export default class ProcessUrl {
       if (attributes.output) {
         format = attributes.output;
       }
-      processedArgument = time.format(format);
+      format = format.replace('HH', String(time.getHours()).padStart(2, '0'));
+      format = format.replace('mm', String(time.getMinutes()).padStart(2, '0'));
+      processedArgument = format;
     }
     return processedArgument;
   }
