@@ -91,7 +91,6 @@ export default class DateType {
           maps.push('nd pn wt sr cz pt so');
         case "sk":
           maps.push('ne po ut st št pi so');
-          maps.push('ne po ut st st pi so');
       }
       for (const map of maps) {
         const mapArray = map.split(' ');
