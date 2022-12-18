@@ -2,21 +2,20 @@ import moment from 'moment';
 
 export default class TimeParser {
   static async parse(str, locale) {
-    let time;
 
-    let now = moment();
+    const now = new Date();
+    let time, matches;
 
     // Match '11'
-    if (str.match(/^(\d+)$/)) {
+    if (matches = str.match(/^(\d+)$/)) {
       time = moment(str, "HH");
     }
     // Match '11:23' and '11.23'
-    if (str.match(/^(\d+)(\.|:)(\d+)$/)) {
+    if (matches = str.match(/^(\d+)(\.|:)(\d+)$/)) {
       time = moment(str, "HH:mm");
     }
     // Match '+1' and '-2'
-    const matches = str.match(/^(-|\+)(\d+)$/);
-    if (matches) {
+    if (matches = str.match(/^(-|\+)(\d+)$/)) {
       time = now;
       switch (matches[1]) {
         case "+":
