@@ -6,14 +6,6 @@ export default class TimeParser {
 
     let now = moment();
 
-    // Match '2', '2.', '22', '22.'.
-    if (str.match(/^(\d{1,2})(\.)?$/)) {
-      time = moment(str, "DD");
-      // If time in past: set it to next month.
-      if (time < now) {
-        time.add(1, "month");
-      }
-    }
     // Match '11'
     if (str.match(/^(\d+)$/)) {
       time = moment(str, "HH");
