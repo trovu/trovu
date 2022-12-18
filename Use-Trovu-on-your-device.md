@@ -15,3 +15,12 @@
 1. There, right to Manage search engines is a search field. Search for *Trovu*.
 1. When found, click the 3 dots right to it.
 1. Select *Make default*.
+
+## Other
+
+Use this URL template and add it where your browser allows to set custom browser search engines:
+
+    https://trovu.net/process/?#country=gb&language=en&query=%s
+    https://trovu.net/process/?#github=YOUR_GITHUB_USERNAME&query=%s
+
+(You may need to adjust your `country`, `language` or `github` parameter.)
