@@ -40,7 +40,7 @@ This a free, generic app to search any search engine that supports URL with a `%
 1. With your Android device, [visit the app in the Play store](https://play.google.com/store/apps/details?id=com.devhomc.search)
 1. Install it on your device.
 1. Open the app.
-1. Left to the search input, click on the icon (black magnifying glass).
+1. Left to the search input, click on the icon.
 1. At the botton, click **+ Add**
 1. Select **Search**
 1. Select **Custom Search**
