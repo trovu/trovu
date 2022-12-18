@@ -175,7 +175,7 @@ export default class ProcessUrl {
     const time = await TimeParser.parse(processedArgument, locale);
     // If time could be parsed:
     // Set argument.
-    if (time && time.format() != "Invalid time") {
+    if (time) {
       let format = "HH:mm";
       if (attributes.output) {
         format = attributes.output;
