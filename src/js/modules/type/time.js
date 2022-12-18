@@ -8,7 +8,9 @@ export default class TimeParser {
 
     // Match '11'
     if (matches = str.match(/^(\d+)$/)) {
-      time = moment(str, "HH");
+      time = new Date();
+      time.setHours(str);
+      time.setMinutes(0);
     }
     // Match '11:23' and '11.23'
     if (matches = str.match(/^(\d+)(\.|:)(\d+)$/)) {
