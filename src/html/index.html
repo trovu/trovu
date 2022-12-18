@@ -12,80 +12,6 @@
 </head>
 
 <body>
-  <!-- Browser modal -->
-  <div class="modal fade" id="add-to-browser" tabindex="-1" role="dialog" aria-labelledby="browserModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link firefox" data-toggle="tab" href="#add-to-browser-firefox" role="tab"
-                aria-controls="basic" aria-selected="true">Firefox</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link chrome" data-toggle="tab" href="#add-to-browser-chrome" role="tab"
-                aria-controls="basic" aria-selected="true">Chrome</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link other active" data-toggle="tab" href="#add-to-browser-other" role="tab"
-                aria-controls="advanced" aria-selected="false">Other browser</a>
-            </li>
-          </ul>
-          <div class="tab-content mt-4">
-            <div class="tab-pane firefox fade" id="add-to-browser-firefox" role="tabpanel" aria-labelledby="basic-tab">
-              <p>
-              <ol>
-                <li>In the address bar above, right-click.</li>
-                <li>Select <em>Add "Trovu"</em>. It is the last item.</li>
-                <li>Open a <a target="_blank" href="about:blank">new tab</a> with the URL:
-                  <form class="form-inline">
-                    <div class="input-group flex-fill">
-                      <input type="text" value="about:preferences#search" class="form-control">
-                      <!--
-                        <div class="input-group-append">
-                          <input type="submit" value="copy" class="btn btn-primary" >
-                        </div> 
-                        -->
-                    </div>
-                  </form>
-                <li>Under <em>Default Search Engine</em>, select <em>Trovu</em>.</li>
-              </ol>
-              </p>
-            </div>
-            <div class="tab-pane chrome fade" id="add-to-browser-chrome" role="tabpanel" aria-labelledby="advanced-tab">
-              <p>
-              <ol>
-                <li>Open a <a target="_blank" href="about:blank">new tab</a> with the URL:
-                  <form class="form-inline">
-                    <div class="input-group flex-fill">
-                      <input type="text" value="chrome://settings/searchEngines" class="form-control">
-                      <!--
-                        <div class="input-group-append">
-                          <input type="submit" value="copy" class="btn btn-primary" >
-                        </div> 
-                        -->
-                    </div>
-                  </form>
-                <li>There, right to <em>Manage search engines</em> is a search field. Search for <em>Trovu</em>.</li>
-                <li>When found, click the 3 dots right to it.</li>
-                <li>Select <em>Make default</em>.</li>
-              </ol>
-              </p>
-            </div>
-            <div class="tab-pane other fade show active" id="add-to-browser-other" role="tabpanel"
-              aria-labelledby="advanced-tab">
-              <p>Use this URL template and add it where your browser allows to set custom browser search engines:</p>
-              <textarea class="process-url form-control" rows="4">/process/?#query=%s</textarea>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button id="browserClose" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- Settings modal -->
   <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel"
     aria-hidden="true">
@@ -251,8 +177,7 @@
           <span class="text-muted"><a href="https://github.com/trovu/trovu.github.io/wiki/Privacy-policy">Privacy policy</a></span>
         </div>
         <div class="col-sm-2">
-          <button class="form-control btn btn-sm btn-success" data-toggle="modal" data-target="#add-to-browser">Add to
-            browser</button>
+          <a class="form-control btn btn-sm btn-success" target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Use-Trovu-on-your-device">Add to browser</a>
         </div>
       </div>
     </div>
