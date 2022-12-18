@@ -10,9 +10,18 @@ Call Trovu with [`&debug=1`](https://trovu.net/#debug=1) to not get redirected b
 
 This might be a caching issue.
 
-First of all, make sure that `data.trovu.net` has updated the raw version of the shortcut file you edited. For example, the `de`-namespace shortcuts are at https://data.trovu.net/data/shortcuts/de.yml
+First of all, make sure that `data.trovu.net` has updated the raw version of the shortcut file you edited. For example, 
 
-Then, all the query prefixed with `reload:`, e.g. `reload:g foobar`. 
+- `o`-namespace (planet) shortcuts are at https://data.trovu.net/data/shortcuts/o.yml.
+- `de`-namespace (German language) shortcuts are at https://data.trovu.net/data/shortcuts/de.yml.
+- `.de`-namespace (Germany) shortcuts are at https://data.trovu.net/data/shortcuts/.de.yml.
+
+Then, you can either
+
+- call a query containing only `reload`.
+- call your query prefixed with `reload:`, e.g. `reload:g foobar`.
+
+Both will cause your browser to reload the shortcut files from `data.trovu.net`.
 
 If that did not help, try debugging mode (see above).
 
