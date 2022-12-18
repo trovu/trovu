@@ -103,11 +103,11 @@ export default class DateParser {
          if (desired_day_of_week_index > -1) {
             date = new Date();
             date.setDate(date.getDate() + desired_day_of_week_index - date.getDay());
+            if (date < now) {
+              date.setDate(date.getDate() + 7);
+            }
             break;
          }
-      }
-      if (date < now) {
-        date.setDate(date.getDate() + 7);
       }
     }
 
