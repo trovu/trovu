@@ -246,9 +246,7 @@ export default class ProcessUrl {
         const attributes = matches[match];
         switch (varName) {
           case "now":
-            const moment = await import("moment");
-
-            const time = moment();
+            const time = dayjs();
 
             let format = "HH:mm";
             if (attributes.output) {
