@@ -156,7 +156,8 @@ export default class ProcessUrl {
   }
 
   static async processTypeDate(processedArgument, locale, attributes) {
-    const date = await DateType.parse(processedArgument, locale);
+    const dateNative = await DateType.parse(processedArgument, locale);
+    const date = dayjs(dateNative);
     // If date could be parsed:
     // Set argument.
     if (date) {
@@ -164,17 +165,14 @@ export default class ProcessUrl {
       if (attributes.output) {
         format = attributes.output;
       }
-      format = format.replace('YYYY', date.getFullYear());
-      format = format.replace('YY', date.getYear());
-      format = format.replace('MM', String(date.getMonth()+1).padStart(2, '0'));
-      format = format.replace('DD', String(date.getDate()).padStart(2,'0'));
-      processedArgument = format;
+      processedArgument = date.format(format);
     }
     return processedArgument;
   }
 
   static async processTypeTime(processedArgument, locale, attributes) {
-    const time = await TimeType.parse(processedArgument, locale);
+    const timeNative = await TimeType.parse(processedArgument, locale);
+    const time = dayjs(timeNative);
     // If time could be parsed:
     // Set argument.
     if (time) {
@@ -182,9 +180,7 @@ export default class ProcessUrl {
       if (attributes.output) {
         format = attributes.output;
       }
-      format = format.replace('HH', String(time.getHours()).padStart(2, '0'));
-      format = format.replace('mm', String(time.getMinutes()).padStart(2, '0'));
-      processedArgument = format;
+      processedArgument = time.format(format);
     }
     return processedArgument;
   }
