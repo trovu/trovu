@@ -62,8 +62,9 @@ export default class Helper {
       if (debug) this.log((reload ? "reload " : "cache  ") + "Fail:    " + url);
       return null;
     }
-    if (debug) this.log((reload ? "reload " : "cache  ") + "Success: " + url);
-    if (!debug) {
+    if (debug) {
+      this.log((reload ? "reload " : "cache  ") + "Success: " + url);
+    } else {
       this.log(".", false);
     }
     const text = await response.text();
