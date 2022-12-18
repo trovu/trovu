@@ -1,9 +1,5 @@
-import moment from 'moment';
-
 export default class DateType {
   static async parse(str, locale) {
-    moment.locale(locale);
-
     const now = new Date();
     let date, matches;
 
