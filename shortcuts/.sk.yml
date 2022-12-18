@@ -1,6 +1,6 @@
 cp 2:
   url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&submit=1&pt=true
-	title: Cestovné poriadky
+  title: Cestovné poriadky
   tags:
   - bus
   - train
@@ -10,7 +10,7 @@ cp 2:
     bratislava, košice: Vlak alebo bus z Bratislavy do Košić
 cp 3:
   url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&submit=1&pt=true
-	title: Cestovné poriadky
+  title: Cestovné poriadky
   tags:
   - bus
   - train
