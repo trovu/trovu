@@ -3,7 +3,6 @@ import moment from 'moment';
 export default class TimeParser {
   static async parse(str, locale) {
 
-    const now = new Date();
     let time, matches;
 
     // Match '11'
