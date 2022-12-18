@@ -6,6 +6,8 @@ import DateType from "./type/date.js";
 import TimeType from "./type/time.js";
 import CityType from "./type/city.js";
 
+import dayjs from "dayjs";
+
 /** Process a shortcut URL for redirect. */
 
 export default class ProcessUrl {
