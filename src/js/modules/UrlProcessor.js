@@ -157,7 +157,7 @@ export default class ProcessUrl {
     const date = await DateParser.parse(processedArgument, locale);
     // If date could be parsed:
     // Set argument.
-    if (date && date.format() != "Invalid date") {
+    if (date) {
       let format = "YYYY-MM-DD";
       if (attributes.output) {
         format = attributes.output;
