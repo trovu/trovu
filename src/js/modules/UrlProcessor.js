@@ -162,7 +162,11 @@ export default class ProcessUrl {
       if (attributes.output) {
         format = attributes.output;
       }
-      processedArgument = date.format(format);
+      format = format.replace('YYYY', date.getFullYear());
+      format = format.replace('YY', date.getYear());
+      format = format.replace('MM', String(date.getMonth()+1).padStart(2, '0'));
+      format = format.replace('DD', String(date.getDate()).padStart(2,'0'));
+      processedArgument = format;
     }
     return processedArgument;
   }

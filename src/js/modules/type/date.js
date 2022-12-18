@@ -111,8 +111,6 @@ export default class DateParser {
       }
     }
 
-    // Temporary code, until we replace moment's .format().
-    const dateMoment = moment(date);
-    return dateMoment;
+    return date;
   }
 }
