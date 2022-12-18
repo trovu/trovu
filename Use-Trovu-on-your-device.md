@@ -18,7 +18,7 @@
 
 ## Other
 
-Use this URL template and add it where your browser allows to set custom browser search engines:
+Use one of these URL templates and add it where your browser allows to set custom browser search engines:
 
     https://trovu.net/process/?#country=gb&language=en&query=%s
     https://trovu.net/process/?#github=YOUR_GITHUB_USERNAME&query=%s
