@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-export default class DateParser {
+export default class DateType {
   static async parse(str, locale) {
     moment.locale(locale);
 

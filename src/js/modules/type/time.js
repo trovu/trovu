@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-export default class TimeParser {
+export default class TimeType {
   static async parse(str, locale) {
 
     let time, matches;

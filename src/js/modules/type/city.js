@@ -1,7 +1,7 @@
 import jsyaml from "js-yaml";
 import Helper from "../Helper.js";
 
-export default class CityParser {
+export default class CityType {
   static async parse(str, country, reload, debug) {
     const fetchUrlTemplate =
       "https://data.trovu.net/data/types/city/{%country}.yml";

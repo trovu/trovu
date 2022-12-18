@@ -2,9 +2,9 @@
 
 import Helper from "./Helper.js";
 
-import DateParser from "./type/date.js";
-import TimeParser from "./type/time.js";
-import CityParser from "./type/city.js";
+import DateType from "./type/date.js";
+import TimeType from "./type/time.js";
+import CityType from "./type/city.js";
 
 /** Process a shortcut URL for redirect. */
 
@@ -154,7 +154,7 @@ export default class ProcessUrl {
   }
 
   static async processTypeDate(processedArgument, locale, attributes) {
-    const date = await DateParser.parse(processedArgument, locale);
+    const date = await DateType.parse(processedArgument, locale);
     // If date could be parsed:
     // Set argument.
     if (date) {
@@ -172,7 +172,7 @@ export default class ProcessUrl {
   }
 
   static async processTypeTime(processedArgument, locale, attributes) {
-    const time = await TimeParser.parse(processedArgument, locale);
+    const time = await TimeType.parse(processedArgument, locale);
     // If time could be parsed:
     // Set argument.
     if (time) {
@@ -188,7 +188,7 @@ export default class ProcessUrl {
   }
 
   static async processTypeCity(processedArgument, env) {
-    const city = await CityParser.parse(
+    const city = await CityType.parse(
       processedArgument,
       env.country,
       env.reload,
