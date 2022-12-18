@@ -28,7 +28,7 @@ Example	| Will be replaced with
 Example	| Will be replaced with
 ---|---
 `{$language}` | configured language
-`{$now\|output=HH-mm}` | current date and time, attribute `output` defines the output format which must be based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/). Default is `HH-mm`.
+`{$now\|output=HH-mm}` | current date and time, attribute `output` defines the output format which must be based on [dayjs's format](https://day.js.org/docs/en/display/format). Default is `HH-mm`.
 
 ## Input encoding
 
@@ -45,7 +45,7 @@ The input will be parsed as a date.
 - A date in the future will be enforced.
 - Also relative inputs are possible.
 - Weekday abbreviations are understood, too. The language is assumed from the configured language.
-- With the attribute `output`, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to YYYY-MM-DD.
+- With the attribute `output`, an output format based on [dayjs's format](https://day.js.org/docs/en/display/format) can be specified. Defaults to YYYY-MM-DD.
 
 Example input | Example output | Explanation
 ---|---|---
@@ -64,7 +64,7 @@ The input will be parsed as a time.
 - Hours and minutes can be separated by `.` or `:`.
 - It is allowed to only provide an hour.
 - Relative hours work, too.
-- With the attribute `output`, an output format based on [momentjs's format](https://momentjs.com/docs/#/parsing/string-formats/) can be specified. Defaults to `HH:mm`.
+- With the attribute `output`, an output format based on [dayjs's format](https://day.js.org/docs/en/display/format) can be specified. Defaults to `HH:mm`.
 
 Example input | Example output | Explanation
 ---|---|---
