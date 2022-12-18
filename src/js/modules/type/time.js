@@ -14,7 +14,10 @@ export default class TimeParser {
     }
     // Match '11:23' and '11.23'
     if (matches = str.match(/^(\d+)(\.|:)(\d+)$/)) {
-      time = moment(str, "HH:mm");
+      const [, hours, minutes] = matches;
+      time = new Date();
+      time.setHours(hours);
+      time.setMinutes(minutes);
     }
     // Match '+1' and '-2'
     if (matches = str.match(/^(-|\+)(\d+)$/)) {
