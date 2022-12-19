@@ -24,6 +24,12 @@ export default class Env {
     if (!params) {
       params = Helper.getUrlParams();
     }
+    
+    // Allow to set debug in query.
+    if (params.query && params.query.match(/^debug:/)) {
+      params.debug = true;
+      params.query = params.query.replace(/^debug:/, '');
+    }
 
     if (typeof params.github === "string" && params.github !== "") {
       await this.setWithUserConfigFromGithub(params);
