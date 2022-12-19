@@ -1,6 +1,11 @@
 ## Debugging mode
 
-Call Trovu with [`&debug=1`](https://trovu.net/#debug=1) to not get redirected but to see
+Enter debugging mode with
+
+- https://trovu.net/?#debug=1 , or
+- a query starting with `debug:`, e.g.: `debug:g foobar`
+
+In debug, all the processing will be done – but without the actual redirect. You will be able to see
 
 - which config and shortcut URLs are being fetched
 - whether they are found in the browser cache or not
