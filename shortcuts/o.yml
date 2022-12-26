@@ -2769,8 +2769,7 @@ gfl 0:
   - travel
   - flights
 gfl 2:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}
+  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20 
   title: Google Flights
   tags:
   - google
