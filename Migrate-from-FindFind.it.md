@@ -1,6 +1,6 @@
 [FindFind.it](https://www.findfind.it/) will **end its service latest in October 2023**, with the [end of life of Drupal 7](https://www.drupal.org/psa-2022-02-23).
 
-But its [trovu.net](https://trovu.net/) is already running. You can migrate your settings and user shortcuts. This page tells you how. 
+But its **successor [trovu.net](https://trovu.net/)** is already running. You can migrate your settings and user shortcuts. This page tells you how. 
 
 You must have an account at <a href="https://github.com/">Github</a>. It is free.
  
