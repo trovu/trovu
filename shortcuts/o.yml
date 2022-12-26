@@ -2768,6 +2768,15 @@ gfl 0:
   - google
   - travel
   - flights
+gfl 1:
+  url: https://www.google.com/travel/flights?q={%query} 
+  title: Google Flights
+  tags:
+  - google
+  - travel
+  - flights
+  examples:
+    one-way flight next month from berlin to tenerife: Search for one-way flights from Berlin to Tenerife next month
 gfl 2:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code} 
   title: Google Flights
