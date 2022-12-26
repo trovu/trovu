@@ -9,6 +9,14 @@ abk 1:
   title: Abkürzungen
   examples:
     cia: Suche nach der Abkürzung "cia"
+anagramm 1:
+  url: http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text={%query}&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
+  title: Anagramm-Suche
+  tags:
+  - german
+  - language
+  examples:
+    rentner: Anagramm-Suchen nach "rentner"
 angliz 0:
   url: https://anglizismenindex.vds-ev.de/suche2.php
   title: Anglizismen-Index
@@ -58,6 +66,15 @@ arv 1:
   examples:
     baum: Übersetzung von "baum" auf Arabisch
     شَجَرَة: Übersetzung von "شَجَرَة" auf Arabisch
+at 1:
+  url: https://www.ostarrichi.org/suche?search={%Wort}
+  title: Österreichisch-Hochdeutsch (Ostarrichi.org)
+  tags:
+  - language
+  - german
+  - austrian
+  examples:
+    paradeisa: '"paradeisa" auf Hochdeutsch'
 awort 1:
   url: https://anderes-wort-fuer.de/{%wort}/
   title: anderes Wort für
@@ -112,6 +129,12 @@ bk 1:
 bl 1:
   url: https://www.google.de/search?q={%query}+site:www.chip.de%2Fbestenlisten
   title: CHIP Bestenliste
+bla 1:
+  url: http://www.buffed.de/?f={%suchwort}
+  title: Buffed.de
+  tags:
+  - games
+  - admin:change keyword
 blb 0:
   url: http://www.booklooker.de/app/sec/login.php
   title: Booklooker
@@ -154,6 +177,14 @@ buerklin 1:
   - bürklin
   examples:
     USB: Suche nach "USB"
+bzl 1:
+  url: https://www.bookzilla.de/shop/quickSearch?searchString={%Suche}
+  title: Bookzilla
+  tags:
+  - books
+  - shopping
+  examples:
+    goethe: Search Bookzilla for "goethe"
 bürklin 1:
   url: https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}
   title: Bürklin Elektronics, deutsch
@@ -174,16 +205,6 @@ ca 1:
   examples:
     baum: Search Katalanisch - Deutsch (Dict.com) for "baum"
     arbre: Search Katalanisch - Deutsch (Dict.com) for "arbre"
-canoo 1:
-  url: http://www.canoo.net/services/Controller?input={%Wort}
-  title: Canoo
-  tags:
-  - language
-  - german
-  - sprache
-  - deutsch
-  examples:
-    tanzen: Suche nach "tanzen"
 cb 0:
   url: http://www.computerbase.de/
   title: Computerbase
@@ -201,6 +222,18 @@ cb 1:
 ch 1:
   url: https://www.google.de/search?q={%query}+site:www.chip.de
   title: CHIP
+chill 0:
+  url: http://www.chilloutzone.de/
+  title: Chilloutzone
+  tags:
+  - video
+chill 1:
+  url: http://www.google.de/custom?domains=chilloutzone.de&q={%query}&sitesearch=chilloutzone.de&sa=Google-Suche&client=pub-9587746511239945&forid=1&channel=0789999516&ie=ISO-8859-1&oe=ISO-8859-1&flav=0000&sig=2LvIwQoR9ke2veDK&cof=GALT%3A%23FF4500%3BGL%3A1%3BDIV%3A%23CCCCCC%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3Affffff%3BLBGC%3A666666%3BALC%3AFF4500%3BLC%3AFF4500%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A50%3BLW%3A245%3BL%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2Fblog%2Fimages%2Fbloghead.gif%3BS%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2F%3BFORID%3A1&hl=de
+  title: Chilloutzone
+  tags:
+  - video
+  examples:
+    parkour: Search Chilloutzone for "parkour"
 chip 1:
   url: http://search.chip.de/?q={%query}&sort_by_date=desc
   title: CHIP Online
@@ -217,6 +250,13 @@ chipd 1:
   - download
   examples:
     skype: Search CHIP Online Downloads for "skype"
+ciao 1:
+  url: https://www.ciao.de/suche?anfrage={%Suche}
+  title: Ciao.de Preisvergleich
+  tags:
+  - shopping
+  examples:
+    smartphone: Search Ciao.de Preisvergleich for "smartphone"
 ck 0:
   url: http://www.chefkoch.de
   title: Chefkoch
@@ -231,6 +271,20 @@ ck 1:
   - recipes
   examples:
     pizza: Rezepte für Pizza
+cng 1:
+  url: https://www.gas-tankstellen.de/list.php?suchenach=t&land=D&lpganlage=0&mode=cng&suchkennz={%KFZ-Kennzeichen}
+  title: LPG- und CNG-Tankstellen
+  tags:
+  - gas
+  examples:
+    bi: Suche nach LPG- und CNG-Tankstellen um Bielefeld
+cook 1:
+  url: https://cookidoo.de/search/de-DE?query={%Suche}
+  title: Cookidoo (Thermomix-Rezept-Portal)
+  tags:
+  - cooking
+  examples:
+    risotto: Show recipes for risottos
 cs 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=csde
   title: Tschechisch-Deutsch (pons.de)
@@ -330,6 +384,24 @@ definero 1:
   - german
   examples:
     baum: Definiere "baum"
+denl 1:
+  url: http://www.mijnwoordenboek.nl/vertalen.php?src=DE&des=NL&woord={%query}
+  title: Deutsch-Niederländisch (mijnwoordenboek.nl)
+  tags:
+  - german
+  - dutch
+  - language
+  - dictionary
+  examples:
+    baum: Search Deutsch-Niederländisch (mijnwoordenboek.nl) for "baum"
+dnb 1:
+  url: https://portal.dnb.de/opac.htm?query={%Suche}&method=simpleSearch
+  title: Deutsche Nationalbibliothek
+  tags:
+  - german
+  - library
+  examples:
+    goethe: Search Deutsche Nationalbibliothek for "goethe"
 domain 1:
   url: http://www.domainabfrage.net/abfrage/isfree.cgi?domain={%query}&ag=ja&decx=ja&de=ja&ch=ja&at=ja&info=ja&cc=ja&be=ja&com=ja&net=ja&org=ja&biz=ja
   title: Domainabfrage.net
@@ -398,6 +470,14 @@ end 1:
   - english
   examples:
     baum: Search for "baum"
+endung 1:
+  url: http://www.endungen.de/ResultList/ResultList.aspx?searchExtension={%Dateieindung}&searchPlatform=win;mac;unix;os2&searchMode=contains
+  title: Endungen.de
+  tags:
+  - files
+  - extension
+  examples:
+    flv: Search Endungen.de for "flv"
 eni 1:
   url: http://www.linguee.com/english-german/search?source=auto&query={%Wort}
   title: Englisch-Deutsch (Linguee)
@@ -559,6 +639,18 @@ fr 1:
   - dictionary
   examples:
     baum: Search for "baum"
+frbuch 0:
+  url: http://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm
+  title: Französisch-Lehrbuch
+  tags:
+  - french
+frbuch 1:
+  url: https://www.google.de/search?hl=de&q={%Suche}%20site:franzoesisch-lehrbuch.de&ie=utf-8
+  title: Französisch-Lehrbuch
+  tags:
+  - french
+  examples:
+    subjonctif: Search Französisch-Lehrbuch for "subjonctif"
 frd 1:
   url: http://defr.dict.cc/?s={%Wort}
   title: Französisch-Deutsch (dict.cc)
@@ -670,6 +762,14 @@ heisenews 0:
   tags:
   - heise
   - news
+hls 1:
+  url: https://hls-dhs-dss.ch/de/search/?text={%Suce}
+  title: Historisches Lexikon der Schweiz
+  tags:
+  - history
+  - geschichte
+  examples:
+    basel: Search Historisches Lexikon der Schweiz for "basel"
 hn 0:
   url: http://www.heise.de/newsticker
   title: Heise Newsticker
@@ -762,6 +862,21 @@ hwho 1:
   - heise
   examples:
     1: Search for "1"
+ifun 1:
+  url: http://www.ifun.de/suche/{%query}
+  title: ifun.de
+  tags:
+  - apple
+  - news
+  examples:
+    macbook: Search ifun.de for "macbook"
+indiepedia 1:
+  url: http://indiepedia.de/index.php?title={%query}
+  title: Indiepedia.de
+  tags:
+  - music
+  examples:
+    Einstürzende Neubauten: Search Indiepedia.de for "Einstürzende Neubauten"
 is 1:
   url: http://deis.dict.cc/?s={%Wort}
   title: Isländisch-Deutsch (dict.cc)
@@ -820,8 +935,20 @@ ja 1:
   examples:
     baum: Übersetzung für "baum"
     木根: Übersetzung für "木根"
+jo 0:
+  url: http://www.jokers.de/
+  title: Jokers Startseite
+  tags:
+  - books
+jo 1:
+  url: https://www.jokers.de/suche/{%Suche}
+  title: Jokers
+  tags:
+  - books
+  examples:
+    goethe: Search Jokers for "goethe"
 kam 1:
-  url: http://kamelopedia.mormo.org/index.php?title=Special:Search&go=Article&search={%article}
+  url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search={%Suche}
   title: Kamelopedia
   tags:
   - wiki
@@ -871,6 +998,18 @@ last 1:
   - lastfm
   examples:
     beatles: Search for "beatles"
+lobby 0:
+  url: http://lobbycontrol.de/
+  title: LobbyControl
+  tags:
+  - politics
+lobby 1:
+  url: http://www.lobbycontrol.de/blog/index.php?s={%Begriff}
+  title: LobbyControl
+  tags:
+  - politics
+  examples:
+    berlin: Search LobbyControl for "berlin"
 m 1:
   url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe={%query}
   title: Metager
@@ -893,11 +1032,14 @@ mp 1:
   - movies
   - film
 mz 0:
-  url: http://www.mittelbayerische.de/
-  title: Mittelbayerische Zeitung
-  tags:
-  - news
-  - bayern
+  url: http://www.meinvz.net/Start
+  title: 'MeinVZ: Startseite'
+mz 1:
+  url: http://www.meinvz.net/Search/SearchGeneral/name/{%Name}/doSearch/1
+  title: 'MeinVZ: Personensuche global'
+mzg 1:
+  url: http://www.meinvz.net/Search/ResultGroups/name/{%Gruppenname}
+  title: 'MeinVZ: Gruppensuche'
 nds 0:
   url: http://www.nachdenkseiten.de
   title: Nachdenkseiten
@@ -929,6 +1071,16 @@ nld 1:
   - german
   examples:
     baum: Search for "baum"
+nlde 1:
+  url: http://www.mijnwoordenboek.nl/vertalen.php?src=NL&des=DE&woord={%query}
+  title: Niederländisch-Deutsch (mijnwoordenboek.nl)
+  tags:
+  - german
+  - dutch
+  - language
+  - dictionary
+  examples:
+    boom: Search Niederländisch-Deutsch (mijnwoordenboek.nl) for "boom"
 no 1:
   url: http://deno.dict.cc/?s={%Wort}
   title: Norwegisch-Deutsch (dict.cc)
@@ -939,6 +1091,18 @@ no 1:
   - norwegian
   examples:
     baum: Übersetzung von "baum"
+ntv 0:
+  url: http://www.n-tv.de
+  title: n-tv.de
+  tags:
+  - news
+ntv 1:
+  url: http://www.n-tv.de/suche/?q={%query}&searchabout=ntv&a=search&at=all&qwg=&qw=&qa=&sdd=&sdm=&sdy=&edd=&edm=&edy=
+  title: n-tv.de
+  tags:
+  - news
+  examples:
+    berlin: Search n-tv.de for "berlin"
 nzz 1:
   url: http://www.nzz.ch/suche?form%5Bq%5D={%Suchbegriff}
   title: NZZ Neue Züricher Zeitung, Archiv
@@ -1073,6 +1237,43 @@ reim 1:
   - reime
   examples:
     auen: Suche Reime auf "auen"
+rezeptefuchs 0:
+  url: http://www.rezeptefuchs.de/
+  title: Rezeptefuchs Startseite
+  tags:
+  - cooking
+rezeptefuchs 1:
+  url: http://www.rezeptefuchs.de/Search?q={%Suche}
+  title: Rezeptefuchs
+  tags:
+  - cooking
+  examples:
+    tomate: Suche nach Rezepten mit Tomate
+rgs 1:
+  url: https://www.google.de/search?hl={$language}&q=site%3Aruhrgebietssprache.de%20{%Suche}&ie=utf-8
+  title: Ruhrgebietssprache
+  tags:
+  - german
+  - language
+  examples:
+    abdackeln: Suche Ruhrgebietssprache nach "abdackeln"
+rivva 0:
+  url: https://rivva.de
+  title: Rivva Blog Aggregator
+  tags:
+  - blogs
+rivva 1:
+  url: https://www.google.de/search?hl=de&q=site%3Arivva.de%20{%Suche}&ie=utf-8
+  title: Rivva Blog Aggregator
+  tags:
+  - blogs
+  examples:
+    berlin: Search Rivva blog aggregator for "berlin"
+rivvar 0:
+  url: http://feed43.com/rivva-links.xml
+  title: Rivva Blog Aggregator RSS-Feed
+  tags:
+  - blogs
 rm 1:
   url: http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase={%pled}
   title: Romanisch-Deutsch via Pledari Grond
@@ -1108,6 +1309,13 @@ rud 1:
   - german
   examples:
     baum: Search for "baum"
+rundschau 1:
+  url: https://www.fr.de/suche/?qr={%Suche}
+  title: Frankfurter Rundschau Archiv
+  tags:
+  - news
+  examples:
+    berlin: Suche im Frankfurter-Rundschau-Archiv nach "berlin"
 rup 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deru
   title: Russisch-Deutsch (Pons)
@@ -1137,6 +1345,38 @@ sat1text 1:
   - teletext
   examples:
     "100 ": Gehe zu Seite 100
+sch 1:
+  url: http://www.schwuugle.de/results.html?cx=009729828355623405941%3Aoz2xu-2vkai&cof=FORID%3A10&q={%query}&sa=schwuuglen&security=666#1193
+  title: Schwuugle - die schwule Websuche
+  tags:
+  - gay
+  - blogs
+  examples:
+    berlin: Search Schwuugle - die schwule Websuche for "berlin"
+schb 1:
+  url: http://blogs.schwuugle.de/results.html?cx=009729828355623405941%3Arptpk8zmkvq&cof=FORID%3A11&q={%Suche}&security=666#1165
+  title: Schwuugle Schwule Blogsuche
+  tags:
+  - gay
+  - blogs
+  examples:
+    berlin: Search Schwuugle Schwule Blogsuche for "berlin"
+sfr 1:
+  url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}
+  title: Stayfriends
+  tags:
+  - social network
+  - school
+  examples:
+    stefan: Suchen nach Personen namens Stefan
+sfr 2:
+  url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}&PersonSearch.school={%Ort}
+  title: Stayfriends
+  tags:
+  - social network
+  - school
+  examples:
+    stefan, berlin: Suchen nach Personen namens Stefan in Berlin
 sh 0:
   url: http://de.selfhtml.org/
   title: Selfhtml
@@ -1192,13 +1432,25 @@ spon 0:
   - news
   - spiegel
 spon 1:
-  url: http://www.spiegel.de/suche/index.html?suchbegriff={%Suche}
+  url: https://www.spiegel.de/suche/?suchbegriff={%Suche}
   title: Spiegel Online
   tags:
   - news
   - spiegel
   examples:
     berlin: Suche nach "berlin"
+stupi 0:
+  url: http://www.stupidedia.org/
+  title: Stupipedia Hauptseite
+  tags:
+  - wiki
+stupi 1:
+  url: http://www.stupidedia.org/stupi/Special:Search?go=Article&search={%article}
+  title: Stupipedia Artikelsuche
+  tags:
+  - wiki
+  examples:
+    berlin: Search Stupipedia Artikelsuche for "berlin"
 sv 1:
   url: http://rio.pauker.at/pauker/DE/SE/wb/?s={%Wort}
   title: Schwedisch-Deutsch (pauker.at)
@@ -1297,6 +1549,14 @@ ts 1:
   - tagesschau
   examples:
     berlin: Suche nach Nachrichten zu Berlin
+tsp 1:
+  url: http://www.tagesspiegel.de/suchergebnis/?sw={%query}
+  title: Tagesspiegel
+  tags:
+  - berlin
+  - newspaper
+  examples:
+    Friedrichshain: Search Tagesspiegel for "Friedrichshain"
 uu 0:
   url: http://www.ubuntuusers.de/
   title: UbuntuUsers.de
@@ -1393,6 +1653,15 @@ uuw 1:
   - documentation
   examples:
     spiele: Search for "spiele"
+vz 0:
+  url: http://www.studivz.net/Start
+  title: 'StudiVZ: Startseite'
+vz 1:
+  url: http://www.studivz.net/Search/SearchGlobal/name/{%Name}/doSearch/1
+  title: 'StudiVZ: Personensuche global'
+vzg 1:
+  url: http://www.studivz.net/Search/ResultGroups/name/{%Gruppenname}
+  title: 'StudiVZ: Gruppensuche'
 wn 1:
   url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort={%query}
   title: Wörterbuchnetz
@@ -1433,7 +1702,7 @@ zeit 0:
   - news
   - zeit
 zeit 1:
-  url: http://www.zeit.de/suche/index?searchtype=on&q={%query}
+  url: http://www.zeit.de/suche/index?searchtype=on&q={%Suche}
   title: Zeit Online
   tags:
   - news
@@ -1463,3 +1732,6 @@ zv 1:
   - zwangsversteigerung
   examples:
     gi: Suche nach Zwangsversteigerungen in Gießen
+zvab 1:
+  url: http://www.zvab.com/basicSearch.do?anyWords={%Suche}&author=&title=&lastXDays=-1&itemsPerPage=10
+  title: Zentrales Verzeichnis Antiquarischer Bücher

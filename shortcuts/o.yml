@@ -388,14 +388,6 @@ allmusic 1:
   - music
   examples:
     madonna: Suche nach "madonna"
-allsubs 1:
-  url: http://www.allsubs.org//search-subtitle/{%movie title}+/20
-  title: Allsubs
-  tags:
-  - subtitles
-  - movies
-  examples:
-    loose change: Search for subtitles of "Loose change"
 alp 1:
   url: http://archlinux.org/packages/search/?repo=all&category=all&q={%package}&lastupdate=&limit=50
   title: Arch Linux Package Search
@@ -469,14 +461,6 @@ anon 1:
   - anonymous
   examples:
     http://spiegel.de: Surf to http://spiegel.de anonymous
-answers 1:
-  url: http://www.answers.com/search?q={%query}
-  title: Answers.com
-  tags:
-  - encyclopedia
-  - answers
-  examples:
-    milk: Search for "milk"
 ao 1:
   url: https://www.amazon.de/gp/your-account/order-history/ref=ppx_yo_dt_b_search?search={%query}
   title: Amazon Bestellungen
@@ -493,15 +477,6 @@ apb 1:
   - android
   examples:
     calculator: Search for calculator apps
-app 1:
-  url: http://appsuche.touchtalk.at/index.php?search={%query}
-  title: Touchtalk Appstore Apps
-  tags:
-  - apple
-  - apps
-  - appstore
-  examples:
-    map: Search for map apps
 apple 1:
   url: http://www.apple.com/search/?q={%query}
   title: Apple.com
@@ -529,14 +504,6 @@ archive 1:
   - archive
   examples:
     serchilo.net: See old versions of the Serchilo website
-arduino 1:
-  url: http://arduino.cc/en/Reference/{%query}
-  title: Arduino reference manual
-  tags:
-  - arduino
-  - electronics
-  examples:
-    loop: Search for loop
 ars 2:
   url: http://finance.yahoo.com/currency-converter/#from=ars;to={%to code};amt={%amount}
   title: 'Convert Argentine peso (Yahoo) '
@@ -783,20 +750,6 @@ bif 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Burundian franc into Euros
-bildm 0:
-  url: http://www.bildmaschine.de
-  title: Bildmaschine
-  tags:
-  - images
-  - stock agency
-bildm 1:
-  url: http://www.bildmaschine.de/suche/{%Suche}?affiliate=9355
-  title: Bildmaschine
-  tags:
-  - images
-  - stock agency
-  examples:
-    weihnachten: Suche Fotos zum Thema "weihnachten"
 bins 1:
   url: http://binsearch.info/?max=100&adv_age=1100&server=&q={%query}
   title: Binsearch.info
@@ -805,6 +758,15 @@ bins 1:
   - usenet
   examples:
     Freeware: Search for "Freeware" in newsgroups
+bkat 1:
+  url: https://bkat.wikinaut.de/{%keywords}
+  title: BKatSearch - Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
+  tags:
+  - traffic
+  - germany
+  - bußgelder
+  - bußgeldtabelle
+  - fines
 bl 0:
   url: http://blekko.com/
   title: Blekko
@@ -915,6 +877,13 @@ bpoc 1:
   examples:
     GRO: Display the BioPortal ontology classes page of the Gene Regulation Ontology
       (GRO).
+br 0:
+  url: https://bikerouter.de
+  title: Bike Router
+  description: Open source bike router, openstreetmap
+  tags:
+  - bike
+  - router
 briar 0:
   url: https://briarproject.org/
   title: Briar Software
@@ -942,8 +911,8 @@ bsr 1:
   examples:
     bett: Suche nach Betten
 btc 1:
-  url: http://blockexplorer.com/address/{%address}
-  title: Bitcoin Block Explorer
+  url: https://www.blockchain.com/search?search={%address}
+  title: Bitcoin Blockchain Explorer
   tags:
   - bitcoin
   examples:
@@ -994,11 +963,6 @@ bwp 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Botswana pula into Euros
-bx 0:
-  url: https://www.blippex.org
-  title: Blippex
-  tags:
-  - web search
 bx 1:
   url: https://www.blippex.org/?q={%query}
   title: Blippex
@@ -1060,7 +1024,7 @@ cad 2:
   examples:
     eur, 1: Convert 1 Canadian dollar into Euros
 calc 0:
-  url: http://web2.0calc.com
+  url: ' https://web2.0calc.com/'
   title: Scientific online calculator
   tags:
   - calculator
@@ -1119,6 +1083,14 @@ clubic 1:
   - download
   examples:
     inkscape: Search Clubic for "inkscape"
+cma 0:
+  url: https://www.criticalmaps.net/map
+  title: Critical Maps
+  description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther
+    reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
+  tags:
+  - critical mass
+  - critical maps
 cny 2:
   url: http://finance.yahoo.com/currency-converter/#from=cny;to={%to code};amt={%amount}
   title: 'Convert Chinese yuan (Yahoo) '
@@ -1185,6 +1157,12 @@ corbis 1:
   - stock agency
   examples:
     christmas: search photos about christmas
+correos 1:
+  url: http://www.correos.es/comun/localizador/track.asp?numero={%codigo}
+  title: Correos Localizador de Envíos
+  tags:
+  - correos
+  - shipping
 cpan 0:
   url: https://metacpan.org/
   title: Metacpan
@@ -1509,6 +1487,163 @@ dkk 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Danish krone into Euros
+dlde 1:
+  url: https://www.deepl.com/translator#en/de/{%text}
+  title: 'deepL Translator to German '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - german
+  examples:
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
+      phrase from recognized language into German. '
+dlen 1:
+  url: https://www.deepl.com/translator#de/en/{%text}
+  title: 'deepL Translator to English '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - english
+  examples:
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
+      translates phrase from recognized language into English. '
+dles 1:
+  url: https://www.deepl.com/translator#de/es/{%text}
+  title: 'deepL Translator to Spanish '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - spanish
+  examples:
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
+      translates phrase from recognized language into Spanish. '
+dlfr 1:
+  url: https://www.deepl.com/translator#de/fr/{%text}
+  title: 'deepL Translator to French '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - french
+  examples:
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
+      translates phrase from recognized language into French. '
+dlit 1:
+  url: https://www.deepl.com/translator#de/it/{%text}
+  title: 'deepL Translator to Italian '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - italian
+  examples:
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
+      translates phrase from recognized language into Italian. '
+dlja 1:
+  url: https://www.deepl.com/translator#de/ja/{%text}
+  title: 'deepL Translator to Japanese '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - japanese
+  examples:
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
+      phrase from recognized language into Japanese. '
+dlnl 1:
+  url: https://www.deepl.com/translator#de/nl/{%text}
+  title: 'deepL Translator to Dutch '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - dutch
+  examples:
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
+      translates phrase from recognized language into Dutch. '
+dlpo 1:
+  url: https://www.deepl.com/translator#de/po/{%text}
+  title: 'deepL Translator to Polish '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - polish
+  examples:
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
+      translates phrase from recognized language into Polish. '
+dlpt 1:
+  url: https://www.deepl.com/translator#de/pt/{%text}
+  title: 'deepL Translator to Portuguese '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - portuguese
+  examples:
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
+      translates phrase from recognized language into Portuguese. '
+dlru 1:
+  url: https://www.deepl.com/translator#de/ru/{%text}
+  title: 'deepL Translator to Russian '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - russian
+  examples:
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
+      phrase from recognized language into Russian. '
+dltr 1:
+  url: https://www.deepl.com/translator#en/tr/{%text}
+  title: 'deepL Translator to Turkish '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - turkish
+  - türkçe
+  examples:
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
+      phrase from recognized language into Turkish. '
+dlzh 1:
+  url: https://www.deepl.com/translator#de/zh/{%text}
+  title: 'deepL Translator to Chinese '
+  description: 'Translate whole text. '
+  tags:
+  - deepl
+  - translation
+  - google translate
+  - translate
+  - chinese
+  examples:
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
+      phrase from recognized language into Chinese. '
 dm 1:
   url: http://www.dailymotion.com/?search={%query}
   title: Dailymotion
@@ -1735,14 +1870,14 @@ dzd 2:
   examples:
     eur, 1: Convert 1 Algerian dinar into Euros
 e 0:
-  url: http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.com/?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
   - shopping
   - ebay
   - affiliate
 e 1:
-  url: http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
   - shopping
@@ -1826,6 +1961,20 @@ eprint 0:
   title: 'IACR Cryptology ePrint Archive: Complete archive'
   tags:
   - academia
+eprinta 1:
+  url: https://eprint.iacr.org/search?authors={%query}
+  title: IACR Cryptology ePrint Archive (author search)
+  tags:
+  - academia
+  examples:
+    '"Mihir Bellare"': Search IACR Cryptology ePrint Archive for author Mihir Bellare
+eprintt 1:
+  url: https://eprint.iacr.org/search?title={%query}
+  title: IACR Cryptology ePrint Archive (ttile search)
+  tags:
+  - academia
+  examples:
+    encryption: Search IACR Cryptology ePrint Archive for titles containing "encryption"
 ern 2:
   url: http://finance.yahoo.com/currency-converter/#from=ern;to={%to code};amt={%amount}
   title: 'Convert Eritrean nakfa (Yahoo) '
@@ -1844,6 +1993,9 @@ etb 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Ethiopian birr into Euros
+eti 1:
+  url: http://etimologias.dechile.net/?{%palabra}
+  title: Diccionaria Etimolólico Castellano
 eucomp 1:
   url: http://ec.europa.eu/competition/elojade/isef/index.cfm?fuseaction=dsp_result&case_title={%company}
   title: EU Competition Authority Case search
@@ -1860,7 +2012,7 @@ eutm 1:
   url: https://euipo.europa.eu/eSearch/#basic/1+1+1+1/50+50+50+50/{%query}
   title: EU IPO trade mark research
 exif 1:
-  url: http://regex.info/exif.cgi?url={%url}
+  url: http://exif.regex.info/exif.cgi?url={%url}
   title: EXIF Viewer
   tags:
   - photography
@@ -1889,6 +2041,9 @@ f3 0:
   - open source
   - disk drive checker
   - usb
+faust 1:
+  url: https://www.faust.ch/shop/qsrch.htm?Keyval={%query}&UID=55006243ffc5000000000000
+  title: Faust Laborbedarf
 fb 0:
   url: https://www.facebook.com/
   title: Facebook Homepage
@@ -1896,7 +2051,7 @@ fb 0:
   - facebook
   - social network
 fb 1:
-  url: https://www.facebook.com/search/results.php?q={%name}
+  url: https://www.facebook.com/search/top/?q={%name}
   title: Facebook Global Search
   tags:
   - facebook
@@ -2068,6 +2223,21 @@ findutf 0:
   - unicode character
   - image
   - online tool
+fisbroker 0:
+  url: https://fbinter.stadt-berlin.de/fb/index.jsp
+  title: FIS-Broker Geodatenportal Berlin (Geo- und Sachdatenabfrage)
+  description: "Ein umfangreicher Geodatenkatalog bietet Karten, Pläne und andere
+    Daten mit Raumbezug aus Berlin. Hier kann räumlich, z.B. über Adressen und inhaltlich
+    (z.B. nach Schlagworten) gesucht werden. Die datenbereitstellenden Dienste sind
+    bei den Datensätzen genannt.\r\n\r\nIn einem Viewer können Karten angesehen, überlagert
+    und mit Sachdaten verknüpft werden. Über die Dossierfunktion können schnell viele
+    Informationen für ein Grundstück abgerufen werden."
+  tags:
+  - berlin
+  - geodata
+  - gis
+  - kataster
+  - fisbroker
 fjd 2:
   url: http://finance.yahoo.com/currency-converter/#from=fjd;to={%to code};amt={%amount}
   title: 'Convert Fiji dollar (Yahoo) '
@@ -2259,14 +2429,6 @@ g 0:
   tags:
   - web search
   - google
-g 1:
-  url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
-  title: Google.com
-  tags:
-  - web search
-  - google
-  examples:
-    berlin: Google search for "berlin"
 g! 1:
   url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&btnI=1
   title: Google Web, go directly to first result
@@ -2697,6 +2859,9 @@ gif 1:
   - google
   examples:
     berlin: Search for "berlin"
+gilson 1:
+  url: https://ch.gilson.com/CHSV/catalogsearch/result/?q={%query}
+  title: Gilson
 gip 2:
   url: http://finance.yahoo.com/currency-converter/#from=gip;to={%to code};amt={%amount}
   title: 'Convert Gibraltar pound (Yahoo) '
@@ -2740,15 +2905,6 @@ gl 1:
   - google
   examples:
     berlin: Search for "berlin" on pages of my language (determined by language namespace)
-gl 2:
-  url: https://www.google.com/search?hl={$language}&lr=lang_{%language}&q={%query}&ie=utf-8
-  title: Google Web, only in given language
-  tags:
-  - web search
-  - google
-  examples:
-    fr, berlin: Search for "berlin" on sites in French
-    cs, praha: Search for "praha" on sites in Czech
 gm 0:
   url: http://maps.google.com/maps?hl={$language}
   title: Google Maps Homepage
@@ -3183,8 +3339,8 @@ iata 1:
     txl: search for the airport code "TXL"
     berlin: search for airports in Berlin
 icq 1:
-  url: https://icq.com/people/?xhr=xhr&nickname={%nickname}
-  title: ICQ People Search
+  url: https://www.google.com/search?hl={$language}&sitesearch=icq.im&q={%nickname}
+  title: Willem knuffelbeertje
   tags:
   - icq
   - chat
@@ -3896,6 +4052,11 @@ mop 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Macanese pataca into Euros
+mouser 1:
+  url: https://www.mouser.de/_/?Keyword={%keyword}
+  title: mouser.de
+  examples:
+    Z80: Search mouser.de for "Z80"
 mro 2:
   url: http://finance.yahoo.com/currency-converter/#from=mro;to={%to code};amt={%amount}
   title: 'Convert Mauritanian ouguiya (Yahoo) '
@@ -3915,6 +4076,24 @@ msdn 1:
 mstar 1:
   url: https://www.morningstar.com/stocks/xnys/{%ticker}/quote.html
   title: Morningstar Stock Quote
+mtg 1:
+  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
+  title: Gatherer Magic Card Database
+  tags:
+  - magic
+  - cards
+mtgdb 1:
+  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
+  title: Gatherer Magic Card Database
+  tags:
+  - magic
+  - cards
+mtgdbscg 1:
+  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
+  title: Gatherer Magic Card Database
+  tags:
+  - magic
+  - cards
 mur 2:
   url: http://finance.yahoo.com/currency-converter/#from=mur;to={%to code};amt={%amount}
   title: 'Convert Mauritian rupee (Yahoo) '
@@ -4077,6 +4256,9 @@ npr 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Nepalese rupee into Euros
+nv 1:
+  url: https://neeva.com/search?q={%Suche}
+  title: Neeva
 nzb 1:
   url: http://www.nzbclub.com/search.aspx?q={%query}
   title: NZBClub.com
@@ -4342,12 +4524,6 @@ pab 2:
 pat 1:
   url: http://worldwide.espacenet.com/{%publicationnumber}
   title: Patentserver
-  description: Worldwide patent service. Multi-language interface.
-  tags:
-  - patents
-patent 1:
-  url: https://worldwide.espacenet.com/searchResults?ST=singleline&locale=en_EP&submitted=true&DB=&query={%query}
-  title: Patentserver Espacenet Query
   description: Worldwide patent service. Multi-language interface.
   tags:
   - patents
@@ -4963,6 +5139,16 @@ scala 1:
   - documentation
   examples:
     AnyVal: Search for "AnyVal"
+sci-hub 1:
+  url: https://sci-hub.do/{%query}
+  title: Sci-Hub
+  description: Sci-Hub is a shadow library website that provides free access to millions
+    of research papers and books, without regard to copyright, by bypassing publishers'
+    paywalls in various ways.
+  tags:
+  - open access
+  examples:
+    10.1111/nyas.13068: Search for "10.1111/nyas.13068"
 scr 2:
   url: http://finance.yahoo.com/currency-converter/#from=scr;to={%to code};amt={%amount}
   title: 'Convert Seychelles rupee (Yahoo) '
@@ -5021,14 +5207,6 @@ si 1:
   - web search
   examples:
     berlin: Search for images of "berlin"
-skyrock 1:
-  url: http://www.skyrock.com/search/articles/?q={%query}
-  title: Skyrock.com
-  tags:
-  - music
-  - blogs
-  examples:
-    music: Search for "music"
 slashdot 0:
   url: http://slashdot.org/
   title: Slashdot
@@ -5136,6 +5314,9 @@ std 2:
   - yahoo
   examples:
     eur, 1: Convert 1 São Tomé and Príncipe dobra into Euros
+steam 1:
+  url: https://store.steampowered.com/search/?term={%game%}
+  title: Game on the steam platform
 subscene 0:
   url: http://subscene.com/
   title: Subscene
@@ -5211,12 +5392,6 @@ szl 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Swazi lilangeni into Euros
-t 0:
-  url: http://www.technorati.com
-  title: Technorati
-  tags:
-  - technorati
-  - blogs
 tails 0:
   url: https://tails.boum.org/
   title: 'The amnesic incoginto live system, that aims to preserve your privacy and
@@ -5313,6 +5488,14 @@ thb 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Thai baht into Euros
+tiktok 1:
+  url: https://www.tiktok.com/@{%user}
+  title: TikTok, User
+  description: Shows the userpage of a tiktok user.
+  tags:
+  - tiktok
+  examples:
+    juliaticaofficial: Show userpage of "juliaticaofficial"
 time 1:
   url: http://www.timeanddate.com/worldclock/results.html?query={%location}
   title: Timeanddate.com
@@ -5413,14 +5596,8 @@ torrentz 1:
   - torrent
   examples:
     free games: Search for free games
-tp 1:
-  url: https://torrentproject.se/?t={%query}
-  title: TorrentProject
-  tags:
-  - torrents
-  - torrent project
 tpb 0:
-  url: https://thepiratebay.rs/
+  url: https://thepiratebay.org/
   title: The Pirate Bay
   tags:
   - torrent
@@ -5432,14 +5609,14 @@ tpb 1:
   examples:
     mozart: Search for "mozart"
 tpba 1:
-  url: http://thepiratebay.rs/search/{%query}/0/99/100
+  url: http://thepiratebay.org/search/{%query}/0/99/100
   title: The Pirate Bay, audio only
   tags:
   - torrent
   examples:
     mozart: Search for "mozart"
 tpbv 1:
-  url: http://thepiratebay.rs/search/{%query}/0/99/200
+  url: http://thepiratebay.org/search/{%query}/0/99/200
   title: The Pirate Bay, video only
   tags:
   - torrent
@@ -5659,15 +5836,6 @@ ubman 1:
   - documentation
   examples:
     ls: Search for "ls"
-ubp 1:
-  url: http://packages.ubuntu.com/{%package}
-  title: Ubuntu Packages
-  tags:
-  - ubuntu
-  - linux
-  - packages
-  examples:
-    tetex: Search for tetex packages
 ubplanet 0:
   url: http://planet.ubuntu.com/
   title: Ubuntu Planet
@@ -5797,6 +5965,9 @@ vbblive 0:
   - brandenburg
   - public transport
   - live map
+vcpkg 1:
+  url: https://vcpkg.io/en/packages.html?query={%query}
+  title: vcpkg package search
 vef 2:
   url: http://finance.yahoo.com/currency-converter/#from=vef;to={%to code};amt={%amount}
   title: 'Convert Venezuelan bolívar fuerte (Yahoo) '
@@ -6067,6 +6238,9 @@ wf 2:
   - copyleft
   examples:
     'als, berlin ': Alemannische Wikipedia article about Berlin
+wfr 1:
+  url: https://fr.wikipedia.org/wiki/{%query}
+  title: Wikipedia France
 wg 1:
   url: https://www.google.com/search?hl={$language}&sitesearch={$language}.wikipedia.org&q={%article}
   title: Wikipedia via Google
@@ -6137,6 +6311,9 @@ wipr 0:
   - intellectual property
   - ip law
   - copyright
+wit 1:
+  url: https://it.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
+  title: Wikipedia Italia
 wle 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Aen.wikipedia.org+intitle%3A"list+of"+intitle%3A"episodes"+{%title}
   title: Wikipedia, List of episodes
@@ -6305,7 +6482,7 @@ wv 0:
   - wiki
   - wikivoyage
 wv 1:
-  url: http://{$language}.wikivoyage.org/wiki/index.php?title=Special%3ASearch&go=Article&search={%article}
+  url: http://{$language}.wikivoyage.org/w/index.php?title=Special%3ASearch&go=Article&search={%article}
   title: Wikivoyage
   tags:
   - travel
@@ -6471,7 +6648,7 @@ yai 1:
   examples:
     berlin: Search images about "berlin"
 yav 1:
-  url: http://video.yandex.com/yandsearch?text={%query}
+  url: https://yandex.ru/video/search?text={%query}
   title: Yandex Videos
   tags:
   - video
@@ -6565,6 +6742,20 @@ yn 1:
   - news
   examples:
     berlin: Search for "berlin"
+youtube 0:
+  url: http://www.youtube.com/?hl={$language}&persist_hl=1
+  title: Youtube Homepage
+  tags:
+  - video
+  - youtube
+youtube 1:
+  url: http://www.youtube.com/results?hl={$language}&persist_hl=1&search_query={%query}
+  title: Youtube
+  tags:
+  - video
+  - youtube
+  examples:
+    cartoon: Youtube search for "cartoon"
 ypr 0:
   url: http://youpronounce.it/
   title: YouPronounce.it
@@ -6575,7 +6766,7 @@ ypr 0:
   - language
   - pronunciation
 yr 1:
-  url: http://www.yr.no/soek/soek.aspx?sted={%query}&land=&region1=&sok=Search
+  url: https://yr-web-prod.we.yr.azure.nrk.cloud/nb/s%C3%B8k?q={%query}
   title: Yr weather report
   description: "yr.no is a Norwegian website for weather forecasting and other meteorological
     information (which is also in English). The site is a joint responsibility of
@@ -6590,12 +6781,6 @@ yr 1:
   - forecast
   examples:
     Berlin: Look up the weather in Berlin
-yt 0:
-  url: http://www.youtube.com/?hl={$language}&persist_hl=1
-  title: Youtube Homepage
-  tags:
-  - video
-  - youtube
 yt 1:
   url: http://www.youtube.com/results?hl={$language}&persist_hl=1&search_query={%query}
   title: Youtube
@@ -6679,6 +6864,13 @@ zar 2:
   - yahoo
   examples:
     eur, 1: Convert 1 South African rand into Euros
+zeitdiff 0:
+  url: https://www.rechner.club/datum-uhrzeit/zeitraum-berechnen
+  title: Zeit- und Datumsdifferenzberechnung
+  tags:
+  - time
+  - date
+  - difference
 zn 0:
   url: http://www.zoonar.de/?wid=1078
   title: Zoonar
