@@ -6,7 +6,7 @@ You can create and manage your own user shortcuts and set advanced settings:
 
 ## Custom configuration
 
-You may adjust [config.yml](https://github.com/trovu/trovu-data-user/blob/master/config.yml) to your needs. It uses the [YAML format](https://en.wikipedia.org/wiki/YAML).
+You may adjust `config.yml` to your needs. It uses the [YAML format](https://en.wikipedia.org/wiki/YAML).
 
 ### Namespaces
 
@@ -57,7 +57,7 @@ For shortcuts that use `{$country}` in their URL. Works similarly as `{$language
 
 ## Personal shortcuts
 
-Add personal shortcuts to [shortcuts.yml](https://github.com/trovu/trovu-data-user/blob/master/shortcuts.yml).
+Add personal shortcuts to `shortcuts.yml`.
 
 Your shortcuts are an associative array, with `KEYWORD ARGUMENT_COUNT` as its key. Keys must be uniqe.
 
