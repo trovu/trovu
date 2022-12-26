@@ -1,9 +1,8 @@
 You can create and manage your own user shortcuts and set advanced settings:
 
 1. Fork [trovu-data-user](https://github.com/trovu/trovu-data-user) into your own Github account.
-2. Adjust [config.yml](config.yml) to your needs, and add your own shortcuts (read more below).
+2. In there, adjust `config.yml` to your needs, and add your own shortcuts to `shortcuts.yml`. (Both are [YAML files](https://en.wikipedia.org/wiki/YAML).)
 3. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME 
-
 
 ## Custom configuration
 
@@ -56,6 +55,31 @@ country: de
 
 For shortcuts that use `{$country}` in their URL. Works similarly as `{$language}`.
 
-## Adding shortcuts
+## Personal shortcuts
 
-To add personal shortcuts, follow the examples in [shortcuts.yml](https://github.com/trovu/trovu-data-user/blob/master/shortcuts.yml).
+Add personal shortcuts to [shortcuts.yml](https://github.com/trovu/trovu-data-user/blob/master/shortcuts.yml).
+
+Your shortcuts are an associative array, with `KEYWORD ARGUMENT_COUNT` as its key. Keys must be uniqe.
+
+For the value, there is a short and a long notation possible.
+
+### Short notation
+
+This shortcut will match for `examplekeyword` with no arguments:
+
+    examplekeyword 0: http://www.example.com/
+
+This shortcut will match for "examplekeyword foo", so for the same keyword but with one argument.
+
+    examplekeyword 1: http://www.example.com/?q={%query}
+
+### Long notation
+
+This shortcut will match for `examplekeyword foo, bar`. Here you can define optional title, description and tags.
+
+    examplekeyword 2:
+      url: http://www.example.com/?q={%query}&p={%puery}
+      title: Custom shortcut
+      description: My custom shortcut with the keyword examplekeyword and 2 arguments.
+      tags:
+      - example
