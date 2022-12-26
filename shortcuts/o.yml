@@ -2769,36 +2769,33 @@ gfl 0:
   - travel
   - flights
 gfl 2:
-  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20 
+  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code} 
   title: Google Flights
   tags:
   - google
   - travel
   - flights
   examples:
-    txl, lpa: Search for flights from Berlin Tegel to Las Palmas
+    ber, lpa: Search for flights from Berlin to Las Palmas
 gfl 3:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}.{%departure date|type=date}
+  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20on%20{%departure date|type=date} 
   title: Google Flights
   tags:
   - google
   - travel
   - flights
   examples:
-    txl, lpa, fr: Search for round trips from Berlin Tegel to Las Palmas, departing
+    ber, lpa, fr: Search for round trips from Berlin to Las Palmas, departing
       next Friday
 gfl 4:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}.{%departure date|type=date}*{%to IATA code|transform=uppercase}.{%from
-    IATA code|transform=uppercase}.{%arrival date|type=date}
+  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20on%20{%departure date|type=date}%20through%20{%arrival date|type=date}
   title: Google Flights
   tags:
   - google
   - travel
   - flights
   examples:
-    txl, lpa, fr, 30: Search for round trips from Berlin Tegel to Las Palmas, departing
+    ber, lpa, fr, 30: Search for round trips from Berlin to Las Palmas, departing
       next Friday, returning on the 30th of this month
 gfl1 2:
   url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
@@ -2809,7 +2806,7 @@ gfl1 2:
   - travel
   - flights
   examples:
-    txl, lpa: Search for one-way flights from Berlin Tegel to Las Palmas.
+    ber, lpa: Search for one-way flights from Berlin to Las Palmas.
 gfl1 3:
   url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
     IATA code|transform=uppercase}.{%departure date|type=date};e:1;sd:1;t:f;tt:o
@@ -2819,7 +2816,7 @@ gfl1 3:
   - travel
   - flights
   examples:
-    txl, lpa, fr: Search for one-way flights from Berlin Tegel to Las Palmas, departing
+    ber, lpa, fr: Search for one-way flights from Berlin to Las Palmas, departing
       next Friday
 gfp 1:
   url: http://german-foreign-policy.com/index.php?lang=en&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}
