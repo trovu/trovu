@@ -150,11 +150,11 @@ export default class Env {
         const config = jsyaml.load(configYml);
         return config;
       } catch (error) {
-        alert("Error parsing " + configUrl + ":\n\n" + error.message);
+        console.log("Error parsing " + configUrl + ":\n\n" + error.message);
         return false;
       }
     } else {
-      alert("Failed to read Github config from " + configUrl);
+      console.log("Failed to read Github config from " + configUrl);
       return false;
     }
   }
@@ -266,7 +266,7 @@ export default class Env {
       }
     }
     if (incorrectKeys.length > 0) {
-      alert(
+      console.log(
         "Incorrect keys found in namespace '" +
           namespaceName +
           "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
@@ -314,7 +314,7 @@ export default class Env {
       try {
         shortcuts = jsyaml.load(text);
       } catch (error) {
-        alert("Error parsing " + namespaces[i].url + ":\n\n" + error.message);
+        console.log("Error parsing " + namespaces[i].url + ":\n\n" + error.message);
         namespaces[i] = undefined;
         continue;
       }
