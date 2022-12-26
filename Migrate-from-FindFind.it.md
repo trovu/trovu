@@ -11,3 +11,5 @@ For this, you must have an account at <a href="https://github.com/">Github</a>. 
 1. Click on *Commit changes*.
 1. Do the same for `shortcuts.yml`.
 1. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME
+
+Read more: [[Advanced settings & personal shortcuts]]
