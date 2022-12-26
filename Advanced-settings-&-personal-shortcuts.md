@@ -66,20 +66,22 @@ For the value, there is a short and a long notation possible.
 ### Short notation
 
 This shortcut will match for `examplekeyword` with no arguments:
-
-    examplekeyword 0: http://www.example.com/
+```yaml
+examplekeyword 0: http://www.example.com/
+```
 
 This shortcut will match for "examplekeyword foo", so for the same keyword but with one argument:
-
-    examplekeyword 1: http://www.example.com/?q={%query}
-
+```yaml
+examplekeyword 1: http://www.example.com/?q={%query}
+```
 ### Long notation
 
 This shortcut will match for `examplekeyword foo, bar`. Here you can define optional title, description and tags:
-
-    examplekeyword 2:
-      url: http://www.example.com/?q={%query}&p={%puery}
-      title: Custom shortcut
-      description: My custom shortcut with the keyword examplekeyword and 2 arguments.
-      tags:
-      - example
+```yaml
+examplekeyword 2:
+  url: http://www.example.com/?q={%query}&p={%puery}
+  title: Custom shortcut
+  description: My custom shortcut with the keyword examplekeyword and 2 arguments.
+  tags:
+  - example
+```
