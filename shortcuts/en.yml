@@ -33,24 +33,6 @@ cong 1:
   title: Google as a Concordancer
   examples:
     palpable: See how the word "palpable" is used on the Web
-cs 1:
-  url: http://slovniky.lingea.cz
-  post parameters:
-    set: _encz
-    type: ""
-    word: '{%word|encoding=none}'
-    data: '{%word|encoding=none}'
-  title: Czech-English (Lingea)
-  tags:
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - czech
-  - english
-  examples:
-    tree: '"tree" in Czech'
-    strom: '"strom" in English'
 de 1:
   url: http://dict.leo.org/ende?search={%word}
   title: German-English (leo.org)
@@ -120,6 +102,16 @@ esi 1:
   - linguee
   examples:
     tree: Translation of "tree"
+esp 1:
+  url: http://en.pons.com/translate?q={%Wort}&in=&l=enes
+  title: Spanish-English (Pons)
+  tags:
+  - language
+  - dictionary
+  - english
+  - spanish
+  examples:
+    tree: ' translation for "tree"'
 fi 1:
   url: http://www.fincd.com/index.php?txtSearch={%query}
   title: Finnish-English
@@ -141,6 +133,16 @@ fr 1:
   - french
   examples:
     tree: Translation of "tree"
+frp 1:
+  url: http://en.pons.com/translate?q={%Wort}&in=&l=enfr
+  title: French-English (Pons)
+  tags:
+  - language
+  - dictionary
+  - english
+  - french
+  examples:
+    tree: translation for "tree"
 ga 1:
   url: http://www.irishionary.com/search/{%word}/
   title: Irish-English (Irishionary)

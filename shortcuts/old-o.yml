@@ -284,9 +284,6 @@ deezer 1:
 def 1:
   url: http://www.google.com/search?hl={$language}&q=define%3a{%query}
   title: Google define
-defi 1:
-  url: http://forum.pauker.at/pauker/DE_DE/FI/wb/?s={%query}
-  title: Finnisch-Deutsch
 defr 1:
   url: http://dict.leo.org/?lp=frde&lang=fr&search={%word}
   title: Translation German to French
@@ -362,9 +359,6 @@ dl 0:
 dl 1:
   url: http://search.darklyrics.com/cgi-bin/dseek.cgi?q={%query}
   title: DarkLyrics.com
-dlz 0:
-  url: http://www.dealzeit.de
-  title: Dealzeit
 dmoz 1:
   url: http://search.dmoz.org/cgi-bin/search?search={%query}
   title: Dmoz - Open Directory Project
@@ -473,9 +467,6 @@ el 1:
 elbows 1:
   url: http://elbo.ws/search/{%query}/page/1/
   title: Elbo.ws
-emein 0:
-  url: http://my.ebay.de/ws/eBayISAPI.dll?MyEbay
-  title: Ebay.de Mein eBay
 emy 0:
   url: http://signin.ebay.com
   title: Ebay.de My eBay
@@ -518,9 +509,6 @@ etools 1:
 ety 1:
   url: http://www.etymonline.com/index.php?search={%query}&searchmode=none
   title: Etymology lookup
-eugh 1:
-  url: http://curia.europa.eu/jurisp/cgi-bin/form.pl?lang=de&newform=newform&Submit=Suchen&alljur=alljur&jurcdj=jurcdj&jurtpi=jurtpi&jurtfp=jurtfp&alldocrec=alldocrec&docj=docj&docor=docor&docop=docop&docav=docav&docsom=docsom&docinf=docinf&alldocnorec=alldocnorec&docnoj=docnoj&docnoor=docnoor&typeord=ALLTYP&docnodecision=docnodecision&allcommjo=allcommjo&affint=affint&affclose=affclose&numaff=&ddatefs=&mdatefs=&ydatefs=&ddatefe=&mdatefe=&ydatefe=&nomusuel=&domaine=&mots={%query}&resmax=100
-  title: EuGH Rechtsprechung
 euk 1:
   url: http://search.ebay.co.uk/{%query}
   title: EBay United Kingdom
@@ -530,9 +518,6 @@ everyzing 1:
 ex 1:
   url: http://msxml.excite.com/info.xcite/search/web/{%query}/
   title: Excite
-ey 1:
-  url: http://www.ecocho.com/yahoo/web/{%query}_page_1.html
-  title: Ecocho (yahoo)
 f 1:
   url: http://www.fastbot.de/index.php?query={%query}
   title: Fastbot
@@ -599,9 +584,6 @@ ff 0:
 ff 1:
   url: http://www.google.com/search?hl=de&q={%query}%20site%3Afileformat.info&ie=utf-8
   title: Search FileFormat.Info with Google
-fide 1:
-  url: http://forum.pauker.at/pauker/DE_DE/FI/wb/?s={%query}
-  title: Finnisch-Deutsch
 fien 1:
   url: http://www.fincd.com/index.php?txtSearch={%query}&lang=en
   title: Finnish-English
@@ -620,9 +602,6 @@ findfiles 1:
 firefox 0:
   url: http://wiki.serchilo.net/Serchilo:Firefox
   title: Firefox
-firefox-addon 1:
-  url: https://addons.mozilla.org/de/firefox/search?q={%addon}
-  title: Firefox Add-on Search
 flv-avi 0:
   url: http://vixy.net/
   title: FLV Online Converter
@@ -854,9 +833,6 @@ gobug 0:
 god 1:
   url: http://www.godchecker.com/pantheon/index.php?_search-results=Y&name={%name}
   title: Godchecker Mythology Encyclopedia
-gold 1:
-  url: http://www.google.com/search?as_q={%query}&hl=de&num=10&btnG=Google-Suche&as_epq=&as_oq=&as_eq=&lr=&cr=&as_ft=i&as_filetype=&as_qdr=all&as_occt=title&as_dt=i&as_sitesearch=http%3A%2F%2Flinguistics-ontology.org%2Fgold%2F&as_rights=&safe=images
-  title: GOLD ontology
 goof 0:
   url: http://finance.google.com/
   title: Google Finance
@@ -912,9 +888,6 @@ gt 2:
 guk 1:
   url: http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google United Kingdom
-gute 0:
-  url: http://gutenberg.spiegel.de/suche?q=
-  title: Gutenberg-Projekt
 gux 1:
   url: http://www.google.com/linux?hl={$language}&q={%query}
   title: Google Linux
@@ -1237,9 +1210,6 @@ keno 0:
 keno 1:
   url: http://www.kenozahlen.de/?s={%Datum}
   title: Kenozahlen
-kitbib 1:
-  url: http://www.ubka.uni-karlsruhe.de/hylib-bin/suche.cgi?serchilo=kitbib&opacdb=UBKA_OPAC&simple_search={%query}
-  title: KIT-Bibliothek
 koders 1:
   url: http://www.koders.com/?s={%query}&la=*&li=*
   title: Koders
@@ -1413,12 +1383,6 @@ maxent 1:
 mb 1:
   url: http://musicbrainz.org/search/textsearch.html?query={%artist}&type=artist&limit=25&handlearguments=1
   title: Musicbrainz - Music Metabase
-mbug 0:
-  url: https://bugzilla.mozilla.org/query.cgi
-  title: mozilla bugs
-mbugq 1:
-  url: https://bugzilla.mozilla.org/buglist.cgi?query_format=specific&order=relevance+desc&bug_status=__open__&content={%query}
-  title: search for a term in mozilla bugs (query)
 mc 1:
   url: http://www.metacritic.com/search/all/{%query}/results
   title: Metacritic Search
@@ -1521,9 +1485,6 @@ mv 0:
 mv 1:
   url: http://www.myvideo.de/news.php?rubrik=uoijv&searchWord={%query}&searchChannel=&searchOrder=
   title: MyVideo clip search
-myck 1:
-  url: http://chefkoch.de/ms/s0/{%query}/Rezepte.html
-  title: MChefKoch
 myg 1:
   url: http://www.google.com/search?q={%query}
   title: Google search
@@ -1632,9 +1593,6 @@ osmrank 1:
 ossearch 1:
   url: http://en.opensuse.org/Spezial:Search?search={%query}
   title: OpenSUSE search
-otf 0:
-  url: http://www.heise.de/extras/foren/S-Special-Off-Topic/forum-206680/list/
-  title: Heise OTF
 otn 1:
   url: http://forums.oracle.com/forums/search.jspa?threadID=&q={%query}&objID=c84&dateRange=all&userID=&numResults=30&rankBy=10001
   title: Oracle OTN Forum Search
@@ -2082,9 +2040,6 @@ svz 0:
 swt 1:
   url: http://www.test.de/suche/?q={%query}
   title: Stiftung Warentest
-t3ext 1:
-  url: http://typo3.org/extensions/repository/?tx_terfe_pi1[view]=search&no_cache=1&tx_terfe_pi1[sword]={%Name}
-  title: Typo3 extension repository
 taz 1:
   url: http://www.google.com/search?hl=de&q=site%3Ataz.de+{%query}
   title: Taz Archiv
@@ -2127,9 +2082,6 @@ titles 1:
 tldp 1:
   url: http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q={%query}
   title: The Linux Documentation Project
-togg 1:
-  url: http://tinyogg.com/add/?url={%url}
-  title: TinyOgg
 topo 1:
   url: http://torrentportal.com/torrents-search.php?search={%query}
   title: Torrent Portal
@@ -2142,12 +2094,6 @@ tp 0:
 tp 1:
   url: http://www.toppreise.ch/index.php?search={%query}
   title: Toppreise.ch
-tpba 1:
-  url: http://thepiratebay.org/search/{%query}/0/99/100
-  title: Audio search
-tpbv 1:
-  url: http://thepiratebay.org/search/{%query}/0/99/200
-  title: Video search
 tra 2:
   url: http://reiseplanlegger.trafikanten.no/no/Mellom/Fra/{%query}/til/{%second query}
   title: Trafikanten
@@ -2157,10 +2103,6 @@ trends 1:
 trim 1:
   url: http://tr.im/marklet?url={%url}
   title: Tr.im
-tsref 1:
-  url: http://clusty.com/search?input-form=clusty-simple&v%3Asources=webplus&query=site%3Ahttp%3A%2F%2Ftypo3.org%2Fdocumentation%2Fdocument-library%2Freferences%2Fdoc_core_tsref%2F4.1.0%2Fview%2F+{%typoscript
-    command}
-  title: English TypoScript Reference
 tucows 1:
   url: http://tucows.com/search?search_terms={%query}&search_scope=%2A
   title: Tucows
@@ -2382,9 +2324,6 @@ wde 1:
 wdyjt 1:
   url: http://www.whendidyoujointwitter.com/?username={%username}
   title: When did you join Twitter?
-weather 1:
-  url: http://weather.yahoo.com/search/weather2?p={%location}
-  title: Yahoo Weather
 webs 1:
   url: http://www.webshots.com/search?query={%query}&new=1&source=serchilo
   title: Webshots
@@ -2492,9 +2431,6 @@ wwu 1:
 www 1:
   url: http://{%query}
   title: Www
-wx 1:
-  url: http://synonyme.woxikon.de/synonyme/{%query}.php
-  title: Woxikon
 x 1:
   url: http://www.exalead.com/search?q={%query}
   title: Exalead
@@ -2537,7 +2473,7 @@ yfc 1:
   title: 'Yahoo Finance: Get quotes chart'
 ymail 0:
   url: https://login.yahoo.com/config/login_verify2?&.src=ym
-  title: true
+  title: "Yahoo Mail"
 youtube 0:
   url: http://www.youtube.com/
   title: YouTube Homepage
@@ -2598,9 +2534,6 @@ zt! 1:
 zt100 1:
   url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&num=100
   title: 'Znout: Show 100 results at once'
-zvab 1:
-  url: http://www.zvab.com/basicSearch.do?anyWords={%Suche}&author=&title=&lastXDays=-1&itemsPerPage=10
-  title: Zentrales Verzeichnis Antiquarischer Bücher
 zvdd 1:
   url: http://www.digitalisiertedrucke.de/search?p={%query}
   title: Zentrales Verzeichnis Digitalisierter Drucke
