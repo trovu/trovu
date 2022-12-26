@@ -1,6 +1,6 @@
 You can migrate your settings and user shortcuts from [FindFind.it](https://www.findfind.it/).
 
-For this, you must have an account at <a href="https://github.com/">Github</a>.
+For this, you must have an account at <a href="https://github.com/">Github</a>. It is free.
  
 1. Fork [trovu-data-user](https://github.com/trovu/trovu-data-user) into your account.
 1. Within your newly forked account, open `config.yml` for editing. (Its the 🖊 icon on the upper right.)
