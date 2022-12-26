@@ -66,17 +66,21 @@ For the value, there is a short and a long notation possible.
 ### Short notation
 
 This shortcut will match for `examplekeyword` with no arguments:
+
 ```yaml
 examplekeyword 0: http://www.example.com/
 ```
 
 This shortcut will match for "examplekeyword foo", so for the same keyword but with one argument:
+
 ```yaml
 examplekeyword 1: http://www.example.com/?q={%query}
 ```
+
 ### Long notation
 
 This shortcut will match for `examplekeyword foo, bar`. Here you can define optional title, description and tags:
+
 ```yaml
 examplekeyword 2:
   url: http://www.example.com/?q={%query}&p={%puery}
