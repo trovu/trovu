@@ -1,9 +1,17 @@
 [FindFind.it](https://www.findfind.it/) will **end its service latest in October 2023**, with the [end of life of Drupal 7](https://www.drupal.org/psa-2022-02-23).
 
-But its **successor [trovu.net](https://trovu.net/)** is already running. You can migrate your settings and user shortcuts. This page tells you how. 
+But its **successor [trovu.net](https://trovu.net/)** is already running. Trovu is a [[little different to FindFind.it / Serchilo|Differences to Serchilo and FindFind.it]].
+
+This page helps you how to switch to Trovu.
+
+Your migration depends on whether you used FindFind.it with or without a personal account.
+
+## I use FindFind.it with an account
+
+In this case, you can migrate your settings and user shortcuts.
 
 You must have an account at <a href="https://github.com/">Github</a>. It is free.
- 
+
 1. Fork [trovu-data-user](https://github.com/trovu/trovu-data-user) into your account. (You find the button on the upper right.)
 1. Within your newly forked account, open `config.yml` for editing. (Its the 🖊 icon on the upper right.)
 1. Log into your [FindFind.it](https://findfind.it) account.
@@ -15,9 +23,12 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 1. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME
 1. Read how to [[use Trovu on your device]].
 
+## I use FindFind.it without an account
+
+In this case, read how to [[use Trovu on your device]]. Make sure that you set the correct language and country, either via the URL or the Settings.
+
 Read more:
 
 - [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
-- [[Differences to Serchilo and FindFind.it]]
 
 If you have problems or questions, get [[support]].
