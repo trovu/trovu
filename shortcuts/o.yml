@@ -767,23 +767,6 @@ bkat 1:
   - bußgelder
   - bußgeldtabelle
   - fines
-bl 0:
-  url: http://blekko.com/
-  title: Blekko
-  tags:
-  - web search
-bl 1:
-  url: http://blekko.com/ws/{%query}
-  title: Blekko
-  tags:
-  - web search
-  - blekko
-  examples:
-    obama /tech: 'searches for obama on technology related websites '
-    paris hilton /noporn: 'searches for Paris Hilton but filters porn websites from
-      the results '
-    wikileaks /date=-2006: '    searches for wikileaks but filters pages that were
-      published after 2006 '
 bm 1:
   url: http://www.bing.com/maps/?q={%map-query}
   title: Bing Maps
