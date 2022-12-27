@@ -23,6 +23,7 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 - [[Trovu compared to Serchilo / FindFind.it|Differences to Serchilo and FindFind.it]]
 - [[Migrate from FindFind.it]]
 - **[[Troubleshooting / FAQ|Troubleshooting]]**
+- [[Support]]
 
 ## Repositories
 
@@ -39,10 +40,6 @@ Fork this repository to add or edit shortcuts (and send then a pull request).
 ### [trovu-web](https://github.com/trovu/trovu-web)
 
 This repository contains the web frontend.
-
-### trovu-android / trovu-ios / trovu-gtk
-
-Future plans. Maybe you start one of them?
 
 ## Live web version
 
