@@ -67,6 +67,14 @@ m 1:
   - mapy
   examples:
     praha: Praha na mapy.cz
+m 2:
+  url: https://mapy.cz/zakladni?q={%město|type=city}%2C%20{%místo}
+  title: Mapy.cz
+  tags:
+  - maps
+  - mapy
+  examples:
+    a, lazarska: Lazarská v Praze na mapy.cz
 mapy 1:
   url: https://mapy.cz/zakladni?q={%místo}
   title: Mapy.cz
