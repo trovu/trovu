@@ -15,6 +15,9 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 1. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME
 1. Read how to [[use Trovu on your device]].
 
-Read more: [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
+Read more:
+
+- [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
+- [[Differences to Serchilo and FindFind.it]]
 
 If you have problems or questions, get [[support]].
