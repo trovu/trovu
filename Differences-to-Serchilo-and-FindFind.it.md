@@ -8,7 +8,7 @@ If you know FindFind.it, then you almost know how Trovu works. However, a few th
   - `.de`, not `deu`
   - `.pl`, not `pol`
 - Instead in a server database, shortcuts are kept in [[YAML files|Home#trovu-data]], in a [separate Github repository](https://github.com/trovu/trovu-data/). There, we can use Git's shoulders to keep track of shortcut additions and changes. Merge requests are welcome.
-- Once you open Trovu, all shortcuts are loaded into your client and remain cached there, (until you [reload](https://github.com/trovu/trovu.github.io/wiki/Troubleshooting#i-edited-a-shortcut-but-it-has-no-effect)) So you even if the Trovu server is down, you can keep using Trovu.
+- Once you open Trovu, all shortcuts are loaded into your client and remain cached there, (until you [reload](https://github.com/trovu/trovu.github.io/wiki/Troubleshooting#i-edited-a-shortcut-but-it-has-no-effect)). So even if the Trovu server is down, you can keep using Trovu.
 - If you have personal **user shortcuts**, for Trovu you host them on [your Github account](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts).
 
 Read more how to migrate [[migrate from FindFind.it to Trovu|Migrate from FindFind.it]].
