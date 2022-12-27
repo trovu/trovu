@@ -2807,8 +2807,7 @@ gfl 4:
     ber, lpa, fr, 30: Search for round trips from Berlin to Las Palmas, departing
       next Friday, returning on the 30th of this month
 gfl1 2:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase};e:1;sd:1;t:f;tt:o
+  url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from IATA code}%20to%20{%to IATA code} 
   title: Google Flights, one-way
   tags:
   - google
@@ -2817,8 +2816,7 @@ gfl1 2:
   examples:
     ber, lpa: Search for one-way flights from Berlin to Las Palmas.
 gfl1 3:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}.{%departure date|type=date};e:1;sd:1;t:f;tt:o
+  url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20on%20{%departure date|type=date} 
   title: Google Flights, one-way
   tags:
   - google
