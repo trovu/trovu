@@ -5,4 +5,6 @@
 - country namespaces are not 3-letter but 2-letter-codes, prefixed with a dot, e.g.
   - `.de`, not `deu`
 
-You can [[migrate your settings and user shortcuts from FindFind.it|Migrate from FindFind.it]].
+If you are using FindFind.it with an account and have personal shortcuts and settings, you can [[migrate them to Trovu|Migrate from FindFind.it]].
+
+Without an account, simply set up [[trovu on your device|Use Trovu on your device]]. 
