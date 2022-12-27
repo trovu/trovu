@@ -8,7 +8,7 @@ Your migration depends on whether you used FindFind.it with or without a persona
 
 ## I use FindFind.it with an account
 
-In this case, you can migrate your settings and user shortcuts.
+In this case, you can migrate your settings and user shortcuts. It should **not take longer than 5 minutes**.
 
 You must have an account at <a href="https://github.com/">Github</a>. It is free.
 
