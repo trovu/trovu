@@ -163,22 +163,6 @@
   - social network
   examples:
     pizza, new york: Search for a pizza place in New York
-7 0:
-  url: http://www.sevenload.com/
-  title: sevenload
-  tags:
-  - sevenload
-  - photography
-  - video
-7 1:
-  url: http://www.sevenload.com/search?q={%query}
-  title: sevenload
-  tags:
-  - sevenload
-  - photography
-  - video
-  examples:
-    berlin: find photos and videos about "berlin"
 911 1:
   url: http://www.911tabs.com/search.php?search={%band or song title}
   title: 911tabs.com
