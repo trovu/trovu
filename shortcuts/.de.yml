@@ -60,22 +60,6 @@ alternate 1:
   - shopping
   examples:
     fernseher: Suche nach Fernsehern
-am 0:
-  url: http://www.amazon.de/gp/aw/?ie=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21
-  title: Amazon.de, mobil
-  tags:
-  - amazon
-  - shopping
-  - books
-am 1:
-  url: http://www.amazon.de/gp/aw/s/?ie=UTF8&camp=1638&creative=6742&k={%Suche}&linkCode=ur2&site-redirect=de&tag=serchilo-21
-  title: Amazon.de, mobil
-  tags:
-  - amazon
-  - shopping
-  - books
-  examples:
-    goethe: Suche nach "goethe" auf Amazon.de für Mobil-Geräte
 amazon 1:
   url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&linkCode=ur2&tag=serchilo-21
   title: Amazon.de
@@ -97,6 +81,19 @@ auto 1:
   - shopping
   examples:
     toyota: Suche nach Toyotas
+aw 0:
+  url: https://www.abgeordnetenwatch.de/
+  title: Abgeordnetenwatch
+  tags:
+  - politics
+aw 1:
+  url: https://www.abgeordnetenwatch.de/profile?politician_search_keys={%Politiker
+    oder Suchbegriff}
+  title: Abgeordnetenwatch
+  tags:
+  - politics
+  examples:
+    meier: Search Abgeordnetenwatch for "meier"
 bauhaus 0:
   url: https://www.bauhaus.info/
   title: BAUHAUS
@@ -241,6 +238,13 @@ bibkit 1:
   - kit
   examples:
     xml: 'search for all XML books '
+bibkobv 1:
+  url: http://vs13.kobv.de/V/PVNF8HR8UYMQX54AQ854V7J7MG4BPQHXL4C492RMKIK6BESAMP-05191?func=meta-1-check&mode=advanced&find_code_2=WAU&find_request_2={%query}&find_op_1=AND&find_code_3=WTI&find_request_3=&ckbox=KOB00019&ckbox=SIG00002&ckbox=KOB00264&submit=go
+  title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
+  tags:
+  - library
+  examples:
+    goethe: Search Kooperativer Bibliotheksverbund Berlin-Brandenburg for "goethe"
 bibma 0:
   url: http://www.bib.uni-mannheim.de/
   title: Uni Mannheim Bibliothek
@@ -313,6 +317,28 @@ bibup 2:
   - potsdam
   - bibliothek
   - library
+bkat 0:
+  url: https://bkat.wikinaut.de/
+  title: BKatSearch Bußgeldkatalog
+  description: Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
+  tags:
+  - traffic
+  - germany
+  - bußgelder
+  - bußgeldtabelle
+  - fines
+bkat 1:
+  url: https://bkat.wikinaut.de/?q={%Suche}
+  title: BKatSearch Bußgeldkatalog
+  description: Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
+  tags:
+  - traffic
+  - germany
+  - bußgelder
+  - bußgeldtabelle
+  - fines
+  examples:
+    parken: Suche nach Vergehen zum Thema "Parken".
 bls 2:
   url: https://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={$now|output=YYYY-MM-DD}&Passengers=1
   title: Busliniensuche.de
@@ -401,7 +427,7 @@ bvg 0:
   - travel
   - berlin
 bvg 2:
-  url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=depart&from={%Start}&to={%Ziel}
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?S={%Start}&Z={%Ziel}&start=1
   title: BVG-Fahrplanauskunft
   tags:
   - bahn
@@ -410,7 +436,7 @@ bvg 2:
   examples:
     zoo!, frohnau: Nächste Verbindung vom Zoo nach Frohnau
 bvg 3:
-  url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=depart&from={%Start}&to={%Ziel}&time={%Abfahrtszeit|type=time}
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&start=1
   title: BVG-Fahrplanauskunft
   tags:
   - bahn
@@ -419,7 +445,7 @@ bvg 3:
   examples:
     zoo!, frohnau, 20:00: Verbindung vom Zoo nach Frohnau heute um 20 Uhr
 bvg 4:
-  url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=depart&from={%Start}&to={%Ziel}&time={%Abfahrtszeit|type=time}&date={%Datum|type=date}
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: BVG-Fahrplanauskunft
   tags:
   - bahn
@@ -499,6 +525,11 @@ bvgs 1:
   - berlin
   examples:
     hauptbahnhof: Suche nach Station "Hauptbahnhof"
+charts 1:
+  url: http://www.top10-charts.com/list.php?suche={%query}
+  title: Top10-Charts
+  tags:
+  - music
 conrad 0:
   url: http://www.conrad.de/
   title: Conrad Elektronik Deutschland
@@ -525,12 +556,11 @@ cys 1:
   examples:
     macbook: Suche nach Macbooks
 db 0:
-  url: http://partners.webmasterplan.com/click.asp?ref=421571&site=2894&type=text&tnb=175
+  url: https://www.bahn.de/
   title: Deutsche Bahn
   tags:
   - bahn
   - travel
-  - affiliate
 db 1:
   url: http://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?input={%Bahnhof}&boardType=dep&time=actual&productsDefault=1111101&start=yes
   title: Deutsche Bahn, Verspätungen / aktuelle Abfahrt
@@ -571,6 +601,17 @@ db 4:
   examples:
     berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am
       31.12.
+dbb 3:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare
+  title: Deutsche Bahn (Bestpreis)
+  description: "Show all best prices in one day.\r\nDeutsche Bahn Best Price (Unsere
+    Bestpreise anzeigen)\r\nhttps://wiki.fhem.de/w/images/6/63/Parametrisierte_%C3%9Cbergabe_Bahnauskunft%28V_5.12-R4.30c%2C_f%C3%BCr.pdf"
+  tags:
+  - train
+  - bahn
+  examples:
+    köln, münchen, 30.11.: Finde die Bestpreise für Verbindungen von Köln nach München
+      am 30.11.
 dbm 2:
   url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -706,6 +747,13 @@ dbtn 4:
   examples:
     berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am
       31.12.
+dejure 1:
+  url: http://dejure.org/cgi-bin/suche?Suchenach={%Suche}
+  title: Dejure.org Gesetze
+  tags:
+  - law
+  examples:
+    gg: Search Dejure.org Gesetze for "gg"
 denic 1:
   url: http://www.denic.de/webwhois/?domain={%domain}
   title: Whois (Denic)
@@ -725,6 +773,13 @@ dhl 2:
   tags:
   - dhl
   - shipping
+dlf 0:
+  url: https://www.deutschlandfunk.de/
+  title: Deutschlandfunk
+  tags:
+  - radio station
+  - radio
+  - germany
 doe 0:
   url: http://www.dasoertliche.de/
   title: DasOertliche.de Homepage
@@ -759,14 +814,14 @@ duden 1:
   url: http://www.duden.de/suchen/dudenonline/{%query}
   title: Duden
 e 0:
-  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
   tags:
   - shopping
   - ebay
   - affiliate
 e 1:
-  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
   tags:
   - shopping
@@ -782,16 +837,16 @@ ek 0:
   - selling
   - ebay
 ek 1:
-  url: http://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}
-  title: eBay Kleinanzeigen
+  url: https://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}
+  title: Ebay-Kleinanzeigen
   tags:
   - shopping
   - ebay
   examples:
     kühlschrank: Suche nach "kühlschrank"
 ek 2:
-  url: http://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
-  title: eBay Kleinanzeigen
+  url: https://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
+  title: Ebay-Kleinanzeigen
   tags:
   - shopping
   - ebay
@@ -870,6 +925,20 @@ gls 1:
   - shipping
   examples:
     12345678901: sucht nach Paket-Nr. 12345678901
+gls 2:
+  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1.
+    Paket-Nr.},{%2. Paket-Nr.}
+  title: GLS Sendungsverfolgung
+  tags:
+  - gls
+  - shipping
+gls 3:
+  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1.
+    Paket-Nr.},{%2. Paket-Nr.},{%3. Paket-Nr.}
+  title: GLS Sendungsverfolgung
+  tags:
+  - gls
+  - shipping
 gma 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Augsburg%2C%20Deutschland
   title: Google Maps Augsburg
@@ -6468,7 +6537,7 @@ hekticket 1:
   examples:
     fettes brot: Search Hekticket for "fettes brot"
 hermes 1:
-  url: https://www.myhermes.de/wps/portal/paket/Home/privatkunden/sendungsverfolgung/?auftragsNummer={%Auftragsnummer}
+  url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#{%Auftragsnummer}
   title: Hermes Sendungsverfolgung
   tags:
   - hermes
@@ -6582,6 +6651,25 @@ kaufland 1:
   - shopping
   examples:
     spiele: Suche auf Kaufland.de nach "spiele"
+jw 1:
+  url: https://www.justwatch.com/de/Suche?q={%query}
+  title: JustWatch
+  description: Searching a movie or tv series at JustWatch.com by given name
+  tags:
+  - movies
+  - series
+kfz 1:
+  url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20{%Ort/Kennzeichen}&ie=utf-8
+  title: KFZ-Kennzeichen Deutschland
+  tags:
+  - auto
+  - traffic
+  examples:
+    hro: Suche Stadt/Kreis des Kennzeichens "hro"
+    rostock: Suche KFZ-Kennzeichen von Rostock
+kib 0:
+  url: http://konzerte.in-berlin.net/
+  title: Konzerte in Berlin
 kino 1:
   url: http://www.kino.de/kinoprogramm/{%Ort/Stadtteil/Kino/PLZ}/
   title: Kinoprogramm

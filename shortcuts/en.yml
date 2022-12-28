@@ -33,6 +33,24 @@ cong 1:
   title: Google as a Concordancer
   examples:
     palpable: See how the word "palpable" is used on the Web
+cs 1:
+  url: https://slovniky.lingea.cz/anglicko-cesky/{%word}
+  post parameters:
+    set: _encz
+    type: ""
+    word: '{%word|encoding=none}'
+    data: '{%word|encoding=none}'
+  title: Czech-English (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - english
+  examples:
+    tree: '"tree" in Czech'
+    strom: '"strom" in English'
 de 1:
   url: http://dict.leo.org/ende?search={%word}
   title: German-English (leo.org)

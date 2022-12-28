@@ -6,20 +6,6 @@ blocket 1:
   - blocket
   examples:
     iphone: Search for "iphone"
-e 0:
-  url: http://www.ebay.se/
-  title: Ebay.se
-  tags:
-  - shopping
-  - ebay
-e 1:
-  url: http://www.ebay.se/sch/i.html?_nkw={%query}
-  title: Ebay.se
-  tags:
-  - shopping
-  - ebay
-  examples:
-    smartphone: Search for "smartphone"
 gma 1:
   url: http://maps.google.com/maps?hl={$language}&q={%adress}%2C%20Alings%C3%A5s%2C%20Sverige
   title: Google Maps Alingsås

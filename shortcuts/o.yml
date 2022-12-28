@@ -421,6 +421,27 @@ alw 1:
   - wiki
   examples:
     cups: Suche nach "cups"
+am 1:
+  url: https://maps.apple.com/place?address={%address}
+  title: Apple Maps
+  description: Apple Maps for desktop/browser.  If place was not found, try adding
+    country or country code.
+  tags:
+  - maps
+  - apple
+  examples:
+    Berlin Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
+am 2:
+  url: https://maps.apple.com/place?address={%city|type=city},{%address}
+  title: Apple Maps
+  description: Apple Maps for desktop/browser. City can be given with common abbreviations,
+    e.g. car number plates
+  tags:
+  - maps
+  - apple
+  examples:
+    b, Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
+    hh, berliner tor: Show Berliner Tor in Hamburg
 ang 2:
   url: http://finance.yahoo.com/currency-converter/#from=ang;to={%to code};amt={%amount}
   title: 'Convert Netherlands Antillean guilder (Yahoo) '
@@ -461,6 +482,14 @@ anon 1:
   - anonymous
   examples:
     http://spiegel.de: Surf to http://spiegel.de anonymous
+answers 1:
+  url: http://www.answers.com/search?q={%query}
+  title: Answers.com
+  tags:
+  - encyclopedia
+  - answers
+  examples:
+    milk: Search for "milk"
 ao 1:
   url: https://www.amazon.de/gp/your-account/order-history/ref=ppx_yo_dt_b_search?search={%query}
   title: Amazon Bestellungen
@@ -504,6 +533,14 @@ archive 1:
   - archive
   examples:
     serchilo.net: See old versions of the Serchilo website
+ardu 1:
+  url: https://search.arduino.cc/search?tab=&q={%query}
+  title: Arduino reference manual
+  tags:
+  - arduino
+  - electronics
+  examples:
+    loop: Search for loop
 ars 2:
   url: http://finance.yahoo.com/currency-converter/#from=ars;to={%to code};amt={%amount}
   title: 'Convert Argentine peso (Yahoo) '
@@ -758,15 +795,6 @@ bins 1:
   - usenet
   examples:
     Freeware: Search for "Freeware" in newsgroups
-bkat 1:
-  url: https://bkat.wikinaut.de/{%keywords}
-  title: BKatSearch - Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
-  tags:
-  - traffic
-  - germany
-  - bußgelder
-  - bußgeldtabelle
-  - fines
 bm 1:
   url: http://www.bing.com/maps/?q={%map-query}
   title: Bing Maps
@@ -2901,6 +2929,15 @@ gl 1:
   - google
   examples:
     berlin: Search for "berlin" on pages of my language (determined by language namespace)
+gl 2:
+  url: https://www.google.com/search?hl={$language}&lr=lang_{%language}&q={%query}&ie=utf-8
+  title: Google Web, only in given language
+  tags:
+  - web search
+  - google
+  examples:
+    fr, berlin: Search for "berlin" on sites in French
+    cs, praha: Search for "praha" on sites in Czech
 gm 0:
   url: http://maps.google.com/maps?hl={$language}
   title: Google Maps Homepage
@@ -3058,6 +3095,9 @@ gpdf 1:
   - pdf
   examples:
     berlin: Search for PDF files containing "berlin"
+gph 0:
+  url: https://photos.google.com/login
+  title: Google Photos Homepage
 gph 1:
   url: https://photos.google.com/search/{%query}
   title: Google Photos
@@ -4564,6 +4604,12 @@ pat 1:
   description: Worldwide patent service. Multi-language interface.
   tags:
   - patents
+patent 1:
+  url: https://worldwide.espacenet.com/patent/search?q={%query}
+  title: Patentserver Espacenet Query
+  description: Worldwide patent service. Multi-language interface.
+  tags:
+  - patents
 pciid 1:
   url: http://pci-ids.ucw.cz/read/PC/{%vendorid}
   title: PCI ID Repository
@@ -4967,6 +5013,27 @@ r 1:
   - r
   examples:
     read.table: Show manual about "read.table"
+r2r 2:
+  url: http://www.rome2rio.com/de/map/{%from}/{%to}
+  title: Rome2Rio
+  tags:
+  - navigation
+  - vacation
+  - routing
+  - travel
+  examples:
+    london, berlin: Search Rome2Rio for a connection from London to Berlin
+rae 1:
+  url: http://dle.rae.es/?w={%query}
+  title: Diccionario RAE
+  description: Relevant for spanish language, but as it shows the official and latest
+    rules, should be interesting for all.
+  tags:
+  - dictionary spanish
+  examples:
+    capaz: looks for "capaz" in RAE dictionary
+    decir: busca por la palabra «decir» en el diccionario de la lengua española de
+      la Real Academia Española
 rails 0:
   url: http://apidock.com/rails/
   title: Ruby on Rails Documentation
@@ -5259,6 +5326,14 @@ si 1:
   - web search
   examples:
     berlin: Search for images of "berlin"
+skyrock 1:
+  url: http://www.skyrock.com/search/articles/?q={%query}
+  title: Skyrock.com
+  tags:
+  - music
+  - blogs
+  examples:
+    music: Search for "music"
 slashdot 0:
   url: http://slashdot.org/
   title: Slashdot
@@ -5904,6 +5979,15 @@ ubman 1:
   - documentation
   examples:
     ls: Search for "ls"
+ubp 1:
+  url: http://packages.ubuntu.com/{%package}
+  title: Ubuntu Packages
+  tags:
+  - ubuntu
+  - linux
+  - packages
+  examples:
+    tetex: Search for tetex packages
 ubplanet 0:
   url: http://planet.ubuntu.com/
   title: Ubuntu Planet
@@ -6867,6 +6951,12 @@ yr 1:
   - forecast
   examples:
     Berlin: Look up the weather in Berlin
+yt 0:
+  url: http://www.youtube.com/?hl={$language}&persist_hl=1
+  title: Youtube Homepage
+  tags:
+  - video
+  - youtube
 yt 1:
   url: http://www.youtube.com/results?hl={$language}&persist_hl=1&search_query={%query}
   title: Youtube
