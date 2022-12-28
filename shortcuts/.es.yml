@@ -16,21 +16,15 @@ a 1:
   - affiliate
   examples:
     shakespeare: Search for "shakespeare"
-correos 1:
-  url: https://www.correos.es/ss/Satellite/site/aplicacion-4000003383089-herramientas_y_apps/detalle_app-sidioma=es_ES?numero={%codigo}
-  title: Correos Localizador de Envíos
-  tags:
-  - correos
-  - shipping
 e 0:
-  url: http://rover.ebay.com/rover/1/1185-53479-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229501&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.es/?mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es
   tags:
   - shopping
   - ebay
   - affiliate
 e 1:
-  url: http://rover.ebay.com/rover/1/1185-53479-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229501&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.es/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es
   tags:
   - shopping
@@ -598,6 +592,15 @@ ikea 1:
   - shopping
   examples:
     colchón: Buscar colchón
+ma 1:
+  url: https://www.milanuncios.com/anuncios/{%query}.htm?fromSearch=1
+  title: Milanuncios
+  description: venta de productos de segunda mano
+  tags:
+  - shopping
+  - segunda mano
+  examples:
+    palmera: Busqueda de "palmera"
 mil 0:
   url: http://www.milanuncios.com/
   title: Mil Anuncios

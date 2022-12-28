@@ -67,14 +67,14 @@ doit 1:
   - migros
   - shopping
 e 0:
-  url: http://rover.ebay.com/rover/1/5222-53480-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229536&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.ch/?mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ch
   tags:
   - shopping
   - ebay
   - affiliate
 e 1:
-  url: http://rover.ebay.com/rover/1/5222-53480-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229536&kwid=902099&mtid=824&kw=lg
+  url: https://www.ebay.ch/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ch
   tags:
   - shopping
@@ -239,6 +239,11 @@ mc 0:
   - weather
   examples:
     8000: Zeige Wetterwarnungen für Postleitzahl 8000
+migros 1:
+  url: https://produkte.migros.ch/sortiment?q={%Produkt}
+  title: Migros Sortiment
+  examples:
+    toblerone: Search Migros Sortiment for "toblerone"
 plz 0:
   url: http://www.plz-suche.org/postleitzahlen-schweiz
   title: Postleitzahlen Schweiz

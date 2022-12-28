@@ -8,17 +8,3 @@ a 1:
   - affiliate
   examples:
     shakespeare: Search for "shakespeare"
-e 0:
-  url: http://www.ebay.in/
-  title: Ebay.in
-  tags:
-  - shopping
-  - ebay
-e 1:
-  url: http://www.ebay.in/sch/i.html?_nkw={%query}
-  title: Ebay.in
-  tags:
-  - shopping
-  - ebay
-  examples:
-    smartphone: Search for "smartphone"

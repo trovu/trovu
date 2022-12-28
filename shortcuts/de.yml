@@ -1687,6 +1687,11 @@ ws 1:
   - german
   examples:
     Stuhl: Search for "Stuhl"
+xbmc 1:
+  url: https://www.xbmcdb.de/index.php?reqNav=search&searchonlymovie=1&search={%query}
+  title: XBMC_DB Filmdatenbank
+  examples:
+    berlin: Search XBMC_DB Filmdatenbank for "berlin"
 zdnet 1:
   url: http://downloads.netmediaeurope.de/?s={%Suche}
   title: ZDNet Download
