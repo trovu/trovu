@@ -27,7 +27,7 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 
 In this case, read how to [[use Trovu on your device]]. Make sure that you set the correct language and country, either via the URL or the Settings.
 
-Read more:
+## Read more
 
 - [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
 
