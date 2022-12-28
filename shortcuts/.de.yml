@@ -314,7 +314,7 @@ bibup 2:
   - bibliothek
   - library
 bls 2:
-  url: http://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={$now|output=YYYY-MM-DD}&Passengers=1
+  url: https://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={$now|output=YYYY-MM-DD}&Passengers=1
   title: Busliniensuche.de
   tags:
   - travel
@@ -322,7 +322,7 @@ bls 2:
   examples:
     berlin, bremen: Suche nach Fernbusverbindungen von Berlin nach Bremen
 bls 3:
-  url: http://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={%Datum|type=date|output=YYYY-MM-DD}&Passengers=1
+  url: https://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={%Datum|type=date|output=YYYY-MM-DD}&Passengers=1
   title: Busliniensuche.de
   tags:
   - travel
