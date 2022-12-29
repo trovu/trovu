@@ -27,7 +27,7 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 
 ## Without a FindFind.it account
 
-In this case, read how to [[use Trovu on your device]]. Make sure that you set the correct language and country, either via the URL or the Settings.
+In this case, read how to [[use Trovu on your device]]. Make sure that you set the correct language and country, either via the URL or Settings.
 
 ## Read more
 
