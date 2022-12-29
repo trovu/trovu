@@ -10,17 +10,17 @@ When calling Trovu without query parameters, 3 default namespaces will be set ba
 
 ## Processing a query
 
-Now, lets look at a processing of a query:
+Now, let's look at the processing of a query:
 
 1. A query comes in, e.g. `g foobar`.
 1. The current namespace setting is `o,de,.de`.
-1. Given the namespaces, all the shortcuts are fetched from their YAML-files into a Javascript variable in the client. 
+1. Given the namespaces, all the shortcuts are fetched from their YAML files into a Javascript variable in the client. 
    - The fetch() call checks also if the files are already in the browser cache, and only requests them from remote if they are not cached yet.
    - To reload the shortcuts, use the `reload` command (see below).  
 1. The query is parsed – in the client by Javascript – into
    - keyword: `g`
    - argument: `foobar`
-1. Based on the query and the namespace settings, the loaded shortcuts are searched whether they match a query with keyword `g` and one argument, i.e. if they contain a shortcut keyed with `g 1`.
+1. Based on the query and the namespace settings, the loaded shortcuts are searched whether they match a query with the keyword `g` and one argument, i.e. if they contain a shortcut keyed with `g 1`.
 1. We find 2 matches:
    - one in [o](https://github.com/trovu/trovu-data/blob/master/shortcuts/o.yml), pointing to `google.com`
    - and one in [.de](https://github.com/trovu/trovu-data/blob/master/shortcuts/.de.yml), pointing to `google.de`
