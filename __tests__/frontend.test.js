@@ -16,6 +16,11 @@ describe("Trovu homepage", () => {
     await expect(page.title()).resolves.toMatch("trovu");
   });
 
+  it("should contain an Opensearch tag", async () => {
+    await page.waitFor(1000); // TODO: Find cleaner solution.
+    await expect(page.content()).resolves.toMatch('<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/?country=gb&amp;language=en" title="Trovu">');
+  });
+
   it("should have Suggestions", async () => {
     await page.focus("#query");
     await page.keyboard.type("g");
