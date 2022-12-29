@@ -12,4 +12,4 @@ If you know FindFind.it, then you almost know how Trovu works. However, a few th
 - If you have personal **user shortcuts**, for Trovu you host them on [your Github account](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts).
   -  Potentially, this allows us to have **private/secret user shortcuts** in the future: Instead on Github, you could host on your own server, behind a password protection, e.g. `https://user:password@example.com/my_trovu/shortcuts.yml`. Not sure if there's a need, if so, [please open a ticket](https://github.com/trovu/trovu-web/issues).
 
-Read more how to migrate [[migrate from FindFind.it to Trovu|Migrate from FindFind.it]].
+Read more how [[migrate from FindFind.it to Trovu|Migrate from FindFind.it]].
