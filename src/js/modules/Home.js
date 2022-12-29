@@ -16,6 +16,10 @@ export default class Home {
   constructor() {}
 
   async initialize() {
+    // Must be done before env.populate()
+    // otherwise Chrome does not autodiscover.
+    this.addLinkSearch();
+
     this.env = new Env();
 
     // Must be done before env.populate()
@@ -98,4 +102,19 @@ export default class Home {
     // Redirect to process script.
     window.location.href = processUrl;
   };
+
+  /**
+   * Add Opensearch tag.
+   */
+  addLinkSearch() {
+    const paramStr = location.hash.substring(1);
+    const xml = `<link
+    rel="search"
+    type="application/opensearchdescription+xml"
+    href="/opensearch/?${paramStr}"
+    title="Trovu"
+    />`;
+    const head = document.querySelector("head");
+    head.innerHTML += xml;
+  }
 }
