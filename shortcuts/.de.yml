@@ -892,6 +892,12 @@ fbw 1:
   - driving
   examples:
     A-BC-1234: Fahrerbewertung for "ABC-DE-1234"
+g 0:
+  url: https://www.google.de/
+  title: Google.de Homepage
+  tags:
+  - web search
+  - google
 g 1:
   url: https://www.google.de/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.de
