@@ -19,7 +19,7 @@ main .jumbotron {
       color: #444;
     }
     .namespace {
-      background: #aa2c30;
+      background: var(--red);
       color: white;
       padding: 0.2em;
     }
