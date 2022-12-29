@@ -19,7 +19,7 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 1. In a new tab, log into your [FindFind.it](https://findfind.it) account.
 1. Go to *My account* ➡️ *Edit*.
 1. At the bottom, find *Export to Trovu*
-1. Copy the contents of **config.yml** field into the opened `config.yml` on Github.
+1. Replace the contents in the opened `config.yml` on Github with the contents of the **config.yml** field in FindFind.it.
 1. Click on *Commit changes*.
 1. Do the same for `shortcuts.yml`.
 1. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME
