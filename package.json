@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/trovu/trovu-data-tools/issues"
   },
-  "homepage": "https://github.com/trovu/trovu-data-tools#readme"
+  "homepage": "https://github.com/trovu/trovu-data-tools#readme",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
 }
