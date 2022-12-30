@@ -10,8 +10,8 @@ function loadYmls() {
     const ymlFileNames = fs.readdirSync(ymlDirPath);
     for (const ymlFileName of ymlFileNames) {
         const ymlFilePath = ymlDirPath + '/' + ymlFileName;
-        const ymlIn = fs.readFileSync(ymlFilePath, 'utf8');
-        const shortcuts = jsyaml.load(ymlIn);
+        const ymlStr = fs.readFileSync(ymlFilePath, 'utf8');
+        const shortcuts = jsyaml.load(ymlStr);
         ymls[ymlFilePath] = shortcuts;
     }
     return ymls;
