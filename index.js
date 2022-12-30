@@ -1,6 +1,5 @@
 const fs = require('fs');
 const jsyaml = require('js-yaml');
-const { mainModule } = require('process');
 
 const actions = {};
 
