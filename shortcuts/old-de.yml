@@ -25,9 +25,6 @@ fr-pons 1:
 imagepoint 1:
   url: http://www.imagepoint.biz/result.php?reset=1&search={%query}
   title: ImagePoint
-kvv 4:
-  url: http://213.144.24.66/kvv/XSLT_TRIP_REQUEST2?language=de&place_origin={%Von Ort}&type_origin=stop&name_origin={%von Haltestele}&place_destination={%nach Ort}&type_destination=stop&name_destination={%nach Haltestelle}
-  title: Karlsruher Verkehrsverbund, Elektronische Fahrplanauskunft
 kw 1:
   url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo
   title: Kreuzworträtsel-Datenbank
@@ -37,12 +34,6 @@ kw 2:
 leo 1:
   url: http://dict.leo.org/?search={%Wort}
   title: 'Englisch-Deutsch: leo.org'
-low 0:
-  url: http://www.lowbird.com
-  title: Lowbird
-low 1:
-  url: http://www.lowbird.com/search/{%query}
-  title: Lowbird
 lpg 1:
   url: http://www.gas-tankstellen.de/menu.php?jump=tkennz&mode=lpg&kennz={%KFZ-Kennzeichen}
   title: LPG- und CNG-Tankstellen
