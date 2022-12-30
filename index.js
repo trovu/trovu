@@ -31,6 +31,12 @@ actions['normalize'] = async function () {
     writeYmls(ymls);
 }
 
+actions['removeDeadDomains'] = async function() {
+    const ymls = loadYmls();
+    writeYmls(ymls);
+}
+
+
 async function main() {
     if (process.argv.length < 3) {
         console.log('Usage: node index.js action [path]')
