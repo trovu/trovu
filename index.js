@@ -4,7 +4,7 @@ const { mainModule } = require('process');
 
 const actions = {};
 
-actions['normalize'] = async function() {
+actions['normalize'] = async function () {
     const ymlDirPath = '/Users/jrg/cde/web/tro/trovu-data/shortcuts/';
     const ymlFileNames = fs.readdirSync(ymlDirPath);
     for (const ymlFileName of ymlFileNames) {
@@ -18,17 +18,17 @@ actions['normalize'] = async function() {
 }
 
 async function main() {
-  if (process.argv.length < 3) {
-    console.log('Usage: node index.js action [path]')
-    return;
-  }
-  const action = process.argv[2];
-  if (action in actions) {
-    actions[action]();
-  }
-  else {
-    console.log('Action must be one of: ', Object.keys(actions));
-  }
+    if (process.argv.length < 3) {
+        console.log('Usage: node index.js action [path]')
+        return;
+    }
+    const action = process.argv[2];
+    if (action in actions) {
+        actions[action]();
+    }
+    else {
+        console.log('Action must be one of: ', Object.keys(actions));
+    }
 }
 
 main();
