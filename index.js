@@ -4,7 +4,7 @@ const { mainModule } = require('process');
 
 const actions = {};
 
-actions['normalize'] = async function normalize() {
+actions['normalize'] = async function() {
     const ymlDirPath = '/Users/jrg/cde/web/tro/trovu-data/shortcuts/';
     const ymlFileNames = fs.readdirSync(ymlDirPath);
     for (const ymlFileName of ymlFileNames) {
