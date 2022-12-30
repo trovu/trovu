@@ -4,17 +4,31 @@ const { mainModule } = require('process');
 
 const actions = {};
 
-actions['normalize'] = async function () {
+function loadYmls() {
+    const ymls = {};
     const ymlDirPath = '/Users/jrg/cde/web/tro/trovu-data/shortcuts/';
     const ymlFileNames = fs.readdirSync(ymlDirPath);
     for (const ymlFileName of ymlFileNames) {
         const ymlFilePath = ymlDirPath + '/' + ymlFileName;
-        console.log(ymlFilePath);
         const ymlIn = fs.readFileSync(ymlFilePath, 'utf8');
         const shortcuts = jsyaml.load(ymlIn);
-        const ymlOut = jsyaml.dump(shortcuts, { noArrayIndent: true, lineWidth: -1 });
-        fs.writeFileSync(ymlFilePath, ymlOut)
+        ymls[ymlFilePath] = shortcuts;
     }
+    return ymls;
+}
+
+function writeYmls(ymls) {
+    for (const ymlFilePath in ymls) {
+        const yml = ymls[ymlFilePath];
+        const ymlStr = jsyaml.dump(yml, { noArrayIndent: true, lineWidth: -1 });
+        fs.writeFileSync(ymlFilePath, ymlStr)
+    }
+    return ymls;
+}
+
+actions['normalize'] = async function () {
+    const ymls = loadYmls();
+    writeYmls(ymls);
 }
 
 async function main() {
