@@ -2759,6 +2759,7 @@ gfl 3:
     ber, lpa, fr: Search for round trips from Berlin to Las Palmas, departing next Friday
 gfl 4:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20on%20{%departure date|type=date}%20through%20{%arrival date|type=date}
+    txl, lpa, fr: Search for round trips from Berlin Tegel to Las Palmas, departing next Friday
   title: Google Flights
   tags:
   - google
@@ -3359,7 +3360,7 @@ iata 1:
   - airports
   - aviation
   examples:
-    txl: search for the airport code "TXL"
+    lpa: search for the airport code "LPA"
     berlin: search for airports in Berlin
 icq 1:
   url: https://www.google.com/search?hl={$language}&sitesearch=icq.im&q={%nickname}
