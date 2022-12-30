@@ -57,8 +57,7 @@ tfl 3:
   - transport
   - london
   examples:
-    brixton, paddington, 10: Search the next connection from Brixton to Paddington
-      at 10:00
+    brixton, paddington, 10: Search the next connection from Brixton to Paddington at 10:00
 tl 2:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{$now|output=DD/MM/YY/HH/mm}/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com

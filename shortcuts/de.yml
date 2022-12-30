@@ -54,7 +54,7 @@ ardtext 1:
   - teletext
   - ard
   examples:
-    100: Gehe zu Seite 100
+    '100': Gehe zu Seite 100
 arv 1:
   url: http://www.lessan.de/de/{%Wort}
   title: Arabisch-Deutsch, mit Vokalen
@@ -861,7 +861,7 @@ hwho 1:
   tags:
   - heise
   examples:
-    1: Search for "1"
+    '1': Search for "1"
 ifun 1:
   url: http://www.ifun.de/suche/{%query}
   title: ifun.de
@@ -1344,7 +1344,7 @@ sat1text 1:
   - videotext
   - teletext
   examples:
-    "100 ": Gehe zu Seite 100
+    '100 ': Gehe zu Seite 100
 sch 1:
   url: http://www.schwuugle.de/results.html?cx=009729828355623405941%3Aoz2xu-2vkai&cof=FORID%3A10&q={%query}&sa=schwuuglen&security=666#1193
   title: Schwuugle - die schwule Websuche
@@ -1671,8 +1671,7 @@ wn 1:
   - wörterbuch
   - deutsch
   examples:
-    haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm
-      style with small capital)
+    haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
 ws 0:
   url: http://wortschatz.uni-leipzig.de
   title: Wortschatz-Lexikon

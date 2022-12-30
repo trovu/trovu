@@ -41,8 +41,7 @@ g 1:
   examples:
     madrid: Buscar "madrid" con Google
 gdfv 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura, España&daddr={%destination},
-    Fuerteventura, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura, España&daddr={%destination}, Fuerteventura, España
   title: Google Maps Directions (Routing), Fuerteventura
   tags:
   - maps
@@ -53,8 +52,7 @@ gdfv 2:
   examples:
     corralejo, morro jable: Get a route from Corralejo to Morro Jable
 gdgc 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria, España&daddr={%destination},
-    Gran Canaria, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria, España&daddr={%destination}, Gran Canaria, España
   title: Google Maps Directions (Routing), Gran Canaria
   tags:
   - maps
@@ -65,8 +63,7 @@ gdgc 2:
   examples:
     las palmas, maspalomas: Get a route from Las Palmas to Maspalomas
 gdlz 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote, España&daddr={%destination},
-    Lanzarote, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote, España&daddr={%destination}, Lanzarote, España
   title: Google Maps Directions (Routing), Lanzarote
   tags:
   - maps
@@ -77,8 +74,7 @@ gdlz 2:
   examples:
     arrecife, playa blanca: Get a route from Arrecife to Playa Blanca
 gdtf 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife, España&daddr={%destination},
-    Tenerife, España
+  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife, España&daddr={%destination}, Tenerife, España
   title: Google Maps Directions (Routing), Tenerife
   tags:
   - maps

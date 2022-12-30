@@ -67,8 +67,7 @@ ep 4:
   - pkp
   - e-podróżnik
   examples:
-    kutno, gniezno, 10, 31.1.13: połączenie z Kutna do Gniezna 31 stycznia 2013 o
-      godz. 10
+    kutno, gniezno, 10, 31.1.13: połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
 g 1:
   url: https://www.google.pl/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.pl
@@ -2799,8 +2798,7 @@ jddw 4:
   - jakdojade
   - wrocław
   examples:
-    rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia
-      2013 o godz. 10
+    rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
 jdpo 2:
   url: http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Poznań
@@ -2827,8 +2825,7 @@ jdpo 4:
   - jakdojade
   - poznań
   examples:
-    rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia
-      2013 o godz. 10
+    rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
 jdw 2:
   url: http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Warszawa
@@ -2855,8 +2852,7 @@ jdw 4:
   - jakdojade
   - warszawa
   examples:
-    stare miasto, centrum, 10, 31.12.13: połączenie ze Starego miasta do Centrum 31
-      grudnia 2013 o godz. 10
+    stare miasto, centrum, 10, 31.12.13: połączenie ze Starego miasta do Centrum 31 grudnia 2013 o godz. 10
 nk 0:
   url: http://nk.pl/
   title: Nasza Klasa
@@ -2881,8 +2877,7 @@ pkp 2:
   examples:
     kutno, gniezno: następne połączenie PKP z Kutna do Gniezna
     w, p: następne połączenie z Warszawy do Poznania
-    gdansk!, wroclaw!: następne połączenie ze Szczecina do Wrocławia, automatycznie
-      wybierz Gdańsk Głowny i Wrocław Głowny
+    gdansk!, wroclaw!: następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny
 pkp 3:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&T={%czas|type=time|output=HH:mm}&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy

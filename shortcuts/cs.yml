@@ -11,7 +11,7 @@ de 1:
   url: http://slovniky.lingea.cz
   post parameters:
     set: _gecz
-    type: ""
+    type: ''
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Německo-český (Lingea)
@@ -29,7 +29,7 @@ en 1:
   url: http://slovniky.lingea.cz
   post parameters:
     set: _encz
-    type: ""
+    type: ''
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Anglicko-český (Lingea)
@@ -47,7 +47,7 @@ es 1:
   url: http://slovniky.lingea.cz
   post parameters:
     set: _spcz
-    type: ""
+    type: ''
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Španělsko-český (Lingea)
@@ -65,7 +65,7 @@ fr 1:
   url: http://slovniky.lingea.cz
   post parameters:
     set: _frcz
-    type: ""
+    type: ''
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Francouzko-český (Lingea)
@@ -90,7 +90,7 @@ pl 1:
   url: http://slovniky.lingea.cz
   post parameters:
     set: _plcz
-    type: ""
+    type: ''
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Polsko-český (Lingea)
@@ -108,7 +108,7 @@ vi 1:
   url: http://slovniky.lingea.cz
   post parameters:
     set: _vncz
-    type: ""
+    type: ''
     word: '{%slovo|encoding=none}'
     data: '{%slovo|encoding=none}'
   title: Vietnamsko-český (Lingea)

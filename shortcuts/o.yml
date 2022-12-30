@@ -84,8 +84,7 @@
   - download
   - youtube
   examples:
-    http://de.youtube.com/watch?v=PAYxTJX-4L4: generate download link for Youtube-Video,
-      identified by the specified URL; does also work for several other video-portals
+    http://de.youtube.com/watch?v=PAYxTJX-4L4: generate download link for Youtube-Video, identified by the specified URL; does also work for several other video-portals
 32c3 0:
   url: https://events.ccc.de/congress/2015/
   title: 32nd Chaos Communication Congress Hamburg
@@ -206,8 +205,7 @@ aan 1:
   - bibliography
   - science
   examples:
-    zettlemoyer collins: Find that paper by Zettlemoyer and Collins, and its Bibtex
-      entry
+    zettlemoyer collins: Find that paper by Zettlemoyer and Collins, and its Bibtex entry
 abbr 1:
   url: https://www.abbreviations.com/{%abbr}
   title: Abbreviation search
@@ -270,8 +268,7 @@ aclw 1:
   - bibliography
   - wiki
   examples:
-    ' SAT Analogy Questions': go to page (or search for) SAT Analogy Questions on
-      ACLWiki
+    ' SAT Analogy Questions': go to page (or search for) SAT Analogy Questions on ACLWiki
 acm 1:
   url: http://www.google.com/search?hl={$language}&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q={%query}
   title: ACM Digital Library
@@ -424,8 +421,7 @@ alw 1:
 am 1:
   url: https://maps.apple.com/place?address={%address}
   title: Apple Maps
-  description: Apple Maps for desktop/browser.  If place was not found, try adding
-    country or country code.
+  description: Apple Maps for desktop/browser.  If place was not found, try adding country or country code.
   tags:
   - maps
   - apple
@@ -434,8 +430,7 @@ am 1:
 am 2:
   url: https://maps.apple.com/place?address={%city|type=city},{%address}
   title: Apple Maps
-  description: Apple Maps for desktop/browser. City can be given with common abbreviations,
-    e.g. car number plates
+  description: Apple Maps for desktop/browser. City can be given with common abbreviations, e.g. car number plates
   tags:
   - maps
   - apple
@@ -808,10 +803,8 @@ bl 1:
   - blekko
   examples:
     obama /tech: 'searches for obama on technology related websites '
-    paris hilton /noporn: 'searches for Paris Hilton but filters porn websites from
-      the results '
-    wikileaks /date=-2006: '    searches for wikileaks but filters pages that were
-      published after 2006 '
+    paris hilton /noporn: 'searches for Paris Hilton but filters porn websites from the results '
+    wikileaks /date=-2006: '    searches for wikileaks but filters pages that were published after 2006 '
 bm 1:
   url: http://www.bing.com/maps/?q={%map-query}
   title: Bing Maps
@@ -895,16 +888,12 @@ bp 1:
 bpoc 1:
   url: http://bioportal.bioontology.org/ontologies/{%acronym}/?p=classes
   title: BioPortal Ontology Classes Page
-  description: "The keywords stands for \"BioPortal Ontology Classes\".\r\nRefers
-    to the BioPortal (http://bioportal.bioontology.org/) page displaying the classes
-    of the ontology with the specified acronym. Note that all BioPortal ontology acronyms
-    are upper case."
+  description: "The keywords stands for \"BioPortal Ontology Classes\".\r\nRefers to the BioPortal (http://bioportal.bioontology.org/) page displaying the classes of the ontology with the specified acronym. Note that all BioPortal ontology acronyms are upper case."
   tags:
   - bioportal
   - ontologies
   examples:
-    GRO: Display the BioPortal ontology classes page of the Gene Regulation Ontology
-      (GRO).
+    GRO: Display the BioPortal ontology classes page of the Gene Regulation Ontology (GRO).
 br 0:
   url: https://bikerouter.de
   title: Bike Router
@@ -944,8 +933,7 @@ btc 1:
   tags:
   - bitcoin
   examples:
-    1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa: Lookup BTC address 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa,
-      the address which received 50 BTC from Block 0 (the Genesis Block)
+    1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa: Lookup BTC address 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa, the address which received 50 BTC from Block 0 (the Genesis Block)
 btn 2:
   url: http://finance.yahoo.com/currency-converter/#from=btn;to={%to code};amt={%amount}
   title: 'Convert Bhutanese ngultrum (Yahoo) '
@@ -1114,8 +1102,7 @@ clubic 1:
 cma 0:
   url: https://www.criticalmaps.net/map
   title: Critical Maps
-  description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther
-    reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
+  description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
   tags:
   - critical mass
   - critical maps
@@ -1259,8 +1246,7 @@ crug 1:
   - catalog
   - catalogue
   examples:
-    linguistics in the netherlands: Find issues of the journal "Linguistics in the
-      Netherlands" in the catalog
+    linguistics in the netherlands: Find issues of the journal "Linguistics in the Netherlands" in the catalog
 cul 1:
   url: http://www.citeulike.org/search/all?q={%query}
   title: CiteULike Search
@@ -1526,8 +1512,7 @@ dlde 1:
   - translate
   - german
   examples:
-    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
-      phrase from recognized language into German. '
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into German. '
 dlen 1:
   url: https://www.deepl.com/translator#de/en/{%text}
   title: 'deepL Translator to English '
@@ -1539,8 +1524,7 @@ dlen 1:
   - translate
   - english
   examples:
-    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
-      translates phrase from recognized language into English. '
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into English. '
 dles 1:
   url: https://www.deepl.com/translator#de/es/{%text}
   title: 'deepL Translator to Spanish '
@@ -1552,8 +1536,7 @@ dles 1:
   - translate
   - spanish
   examples:
-    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
-      translates phrase from recognized language into Spanish. '
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Spanish. '
 dlfr 1:
   url: https://www.deepl.com/translator#de/fr/{%text}
   title: 'deepL Translator to French '
@@ -1565,8 +1548,7 @@ dlfr 1:
   - translate
   - french
   examples:
-    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
-      translates phrase from recognized language into French. '
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into French. '
 dlit 1:
   url: https://www.deepl.com/translator#de/it/{%text}
   title: 'deepL Translator to Italian '
@@ -1578,8 +1560,7 @@ dlit 1:
   - translate
   - italian
   examples:
-    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
-      translates phrase from recognized language into Italian. '
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Italian. '
 dlja 1:
   url: https://www.deepl.com/translator#de/ja/{%text}
   title: 'deepL Translator to Japanese '
@@ -1591,8 +1572,7 @@ dlja 1:
   - translate
   - japanese
   examples:
-    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
-      phrase from recognized language into Japanese. '
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Japanese. '
 dlnl 1:
   url: https://www.deepl.com/translator#de/nl/{%text}
   title: 'deepL Translator to Dutch '
@@ -1604,8 +1584,7 @@ dlnl 1:
   - translate
   - dutch
   examples:
-    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
-      translates phrase from recognized language into Dutch. '
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Dutch. '
 dlpo 1:
   url: https://www.deepl.com/translator#de/po/{%text}
   title: 'deepL Translator to Polish '
@@ -1617,8 +1596,7 @@ dlpo 1:
   - translate
   - polish
   examples:
-    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
-      translates phrase from recognized language into Polish. '
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Polish. '
 dlpt 1:
   url: https://www.deepl.com/translator#de/pt/{%text}
   title: 'deepL Translator to Portuguese '
@@ -1630,8 +1608,7 @@ dlpt 1:
   - translate
   - portuguese
   examples:
-    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which
-      translates phrase from recognized language into Portuguese. '
+    'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Portuguese. '
 dlru 1:
   url: https://www.deepl.com/translator#de/ru/{%text}
   title: 'deepL Translator to Russian '
@@ -1643,8 +1620,7 @@ dlru 1:
   - translate
   - russian
   examples:
-    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
-      phrase from recognized language into Russian. '
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Russian. '
 dltr 1:
   url: https://www.deepl.com/translator#en/tr/{%text}
   title: 'deepL Translator to Turkish '
@@ -1657,8 +1633,7 @@ dltr 1:
   - turkish
   - türkçe
   examples:
-    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
-      phrase from recognized language into Turkish. '
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Turkish. '
 dlzh 1:
   url: https://www.deepl.com/translator#de/zh/{%text}
   title: 'deepL Translator to Chinese '
@@ -1670,8 +1645,7 @@ dlzh 1:
   - translate
   - chinese
   examples:
-    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates
-      phrase from recognized language into Chinese. '
+    'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese. '
 dm 1:
   url: http://www.dailymotion.com/?search={%query}
   title: Dailymotion
@@ -1950,8 +1924,7 @@ eco 1:
 eg 1:
   url: https://encrypted.google.com/#hl={$language}&q={%query}
   title: Encrypted Google
-  description: searching with google via their 'encrypted' subdomain, whatever that
-    really means.
+  description: searching with google via their 'encrypted' subdomain, whatever that really means.
   tags:
   - search
   - google
@@ -2045,8 +2018,7 @@ exif 1:
   tags:
   - photography
   examples:
-    http://upload.wikimedia.org/wikipedia/commons/a/a6/Brandenburger_Tor_abends.jpg: Show
-      exif data of given picture
+    http://upload.wikimedia.org/wikipedia/commons/a/a6/Brandenburger_Tor_abends.jpg: Show exif data of given picture
 exkcd 0:
   url: http://www.explainxkcd.com/
   title: Explain xkcd
@@ -2063,8 +2035,7 @@ exkcd 1:
     polish sausage: Explain the comic about polish sausage
 f3 0:
   url: http://oss.digirati.com.br/f3/
-  title: 'f3 - Fight Flash Fraud: an alternative disk fraud checker compatible to
-    h2testw'
+  title: 'f3 - Fight Flash Fraud: an alternative disk fraud checker compatible to h2testw'
   tags:
   - open source
   - disk drive checker
@@ -2205,7 +2176,7 @@ fedex 1:
   - fedex
   - shipping
   examples:
-    123456789012: track shipment with the number 123456789012
+    '123456789012': track shipment with the number 123456789012
 ffaddon 0:
   url: https://addons.mozilla.org/firefox/
   title: Firefox Add-ons
@@ -2254,12 +2225,7 @@ findutf 0:
 fisbroker 0:
   url: https://fbinter.stadt-berlin.de/fb/index.jsp
   title: FIS-Broker Geodatenportal Berlin (Geo- und Sachdatenabfrage)
-  description: "Ein umfangreicher Geodatenkatalog bietet Karten, Pläne und andere
-    Daten mit Raumbezug aus Berlin. Hier kann räumlich, z.B. über Adressen und inhaltlich
-    (z.B. nach Schlagworten) gesucht werden. Die datenbereitstellenden Dienste sind
-    bei den Datensätzen genannt.\r\n\r\nIn einem Viewer können Karten angesehen, überlagert
-    und mit Sachdaten verknüpft werden. Über die Dossierfunktion können schnell viele
-    Informationen für ein Grundstück abgerufen werden."
+  description: "Ein umfangreicher Geodatenkatalog bietet Karten, Pläne und andere Daten mit Raumbezug aus Berlin. Hier kann räumlich, z.B. über Adressen und inhaltlich (z.B. nach Schlagworten) gesucht werden. Die datenbereitstellenden Dienste sind bei den Datensätzen genannt.\r\n\r\nIn einem Viewer können Karten angesehen, überlagert und mit Sachdaten verknüpft werden. Über die Dossierfunktion können schnell viele Informationen für ein Grundstück abgerufen werden."
   tags:
   - berlin
   - geodata
@@ -2321,8 +2287,7 @@ fliccc 1:
     christmas: search photos about christmas
 fliccca 1:
   url: http://flickr.com/search/?q={%query}&l=commderiv
-  title: 'Flickr: full text search for content to adapt, modify, build upon, and use
-    commercially'
+  title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
   tags:
   - images
   - flickr
@@ -2570,8 +2535,7 @@ gbp 2:
   examples:
     eur, 1: Convert 1 Pound sterling into Euros
 gby 2:
-  url: https://www.google.de/search?tbs=cdr%3A1%2Ccd_min%3A%2Ccd_max%3A {%year}&q=
-    {%query}&hl=de&source=lnt&tbm=
+  url: https://www.google.de/search?tbs=cdr%3A1%2Ccd_min%3A%2Ccd_max%3A {%year}&q= {%query}&hl=de&source=lnt&tbm=
   title: Google Search before Year
   tags:
   - google
@@ -2626,8 +2590,7 @@ gd 2:
     berlin DE, hamburg DE: Get a route from Berlin, Germany, to Hamburg, Germany
     new york, chicago: Get a route from New York to Chicago
 gdb 2:
-  url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode=
-    bicycling
+  url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode= bicycling
   title: Google Maps Directions (Routing), by Bike
   tags:
   - maps
@@ -2636,8 +2599,7 @@ gdb 2:
   - route
   - bike
   examples:
-    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer
-      Platz, Berlin, by bike
+    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz, Berlin, by bike
 gdd 2:
   url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode=driving
   title: Google Maps Directions (Routing), by Driving
@@ -2647,8 +2609,7 @@ gdd 2:
   - routing
   - route
   examples:
-    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer
-      Platz by walking
+    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by walking
 gdl 1:
   url: http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Web, Directory Listing
@@ -2691,8 +2652,7 @@ gdt 2:
   - route
   - public transport
   examples:
-    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer
-      Platz by public transport
+    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by public transport
 gdw 2:
   url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode=walking
   title: Google Maps Directions (Routing), by Walking
@@ -2702,8 +2662,7 @@ gdw 2:
   - routing
   - route
   examples:
-    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer
-      Platz by walking
+    brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by walking
 gem 1:
   url: https://rubygems.org/search?utf8=✓&query={%query}
   title: Rubygems Search
@@ -2771,8 +2730,7 @@ gfl 0:
   - travel
   - flights
 gfl 2:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}
+  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to IATA code|transform=uppercase}
   title: Google Flights
   tags:
   - google
@@ -2781,31 +2739,25 @@ gfl 2:
   examples:
     txl, lpa: Search for flights from Berlin Tegel to Las Palmas
 gfl 3:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}.{%departure date|type=date}
+  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to IATA code|transform=uppercase}.{%departure date|type=date}
   title: Google Flights
   tags:
   - google
   - travel
   - flights
   examples:
-    txl, lpa, fr: Search for round trips from Berlin Tegel to Las Palmas, departing
-      next Friday
+    txl, lpa, fr: Search for round trips from Berlin Tegel to Las Palmas, departing next Friday
 gfl 4:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}.{%departure date|type=date}*{%to IATA code|transform=uppercase}.{%from
-    IATA code|transform=uppercase}.{%arrival date|type=date}
+  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to IATA code|transform=uppercase}.{%departure date|type=date}*{%to IATA code|transform=uppercase}.{%from IATA code|transform=uppercase}.{%arrival date|type=date}
   title: Google Flights
   tags:
   - google
   - travel
   - flights
   examples:
-    txl, lpa, fr, 30: Search for round trips from Berlin Tegel to Las Palmas, departing
-      next Friday, returning on the 30th of this month
+    txl, lpa, fr, 30: Search for round trips from Berlin Tegel to Las Palmas, departing next Friday, returning on the 30th of this month
 gfl1 2:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase};e:1;sd:1;t:f;tt:o
+  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to IATA code|transform=uppercase};e:1;sd:1;t:f;tt:o
   title: Google Flights, one-way
   tags:
   - google
@@ -2814,16 +2766,14 @@ gfl1 2:
   examples:
     txl, lpa: Search for one-way flights from Berlin Tegel to Las Palmas.
 gfl1 3:
-  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to
-    IATA code|transform=uppercase}.{%departure date|type=date};e:1;sd:1;t:f;tt:o
+  url: https://www.google.com/flights/#flt={%from IATA code|transform=uppercase}.{%to IATA code|transform=uppercase}.{%departure date|type=date};e:1;sd:1;t:f;tt:o
   title: Google Flights, one-way
   tags:
   - google
   - travel
   - flights
   examples:
-    txl, lpa, fr: Search for one-way flights from Berlin Tegel to Las Palmas, departing
-      next Friday
+    txl, lpa, fr: Search for one-way flights from Berlin Tegel to Las Palmas, departing next Friday
 gfp 1:
   url: http://german-foreign-policy.com/index.php?lang=en&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}
   title: German Foreign Policy (English)
@@ -3112,8 +3062,7 @@ grhp 2:
   examples:
     berlin DE, hamburg DE: Berechnet eine Route von Berlin nach Hamburg.
     oxford UK, london UK: Calculates a route from Oxford to London.
-    Dresdener Straße 27 Berlin,Calle Tamarindos 5 Cadiz: Calcula una ruta de una casa
-      en Berlín a Cádiz.
+    Dresdener Straße 27 Berlin,Calle Tamarindos 5 Cadiz: Calcula una ruta de una casa en Berlín a Cádiz.
 groovesalad 0:
   url: https://somafm.com/player/#/now-playing/groovesalad
   title: SomaFm Groovesalad
@@ -3182,14 +3131,10 @@ gt 2:
   - web search
   - google
   examples:
-    y, eruption: Search web pages for "eruption" that have been altered within the
-      last year
-    m, eruption: Search web pages for "eruption" that have been altered within the
-      last month
-    w, eruption: Search web pages for "eruption" that have been altered within the
-      last week
-    d, eruption: Search web pages for "eruption" that have been altered within the
-      last day
+    y, eruption: Search web pages for "eruption" that have been altered within the last year
+    m, eruption: Search web pages for "eruption" that have been altered within the last month
+    w, eruption: Search web pages for "eruption" that have been altered within the last week
+    d, eruption: Search web pages for "eruption" that have been altered within the last day
 gtq 2:
   url: http://finance.yahoo.com/currency-converter/#from=gtq;to={%to code};amt={%amount}
   title: 'Convert Guatemalan quetzal (Yahoo) '
@@ -3404,9 +3349,7 @@ idr 2:
 ig 1:
   url: https://www.instagram.com/{%name}
   title: Instagram
-  description: Instagram is a photo and video-sharing social networking service owned
-    by Facebook, Inc. that allows users to upload photos and videos, which can be
-    edited with various filters, and organized with tags and location information.
+  description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
   tags:
   - instagram
   - photo sharing
@@ -3853,7 +3796,7 @@ lipsum 1:
   - lorem ipsum
   - lipsum
   examples:
-    200: Generate 200 words of "Lorem Ipsum"
+    '200': Generate 200 words of "Lorem Ipsum"
 lipsum 2:
   url: http://www.lipsum.com/feed/html?amount={%amount}&what={%paragraphs/words/bytes/lists}&name=start
   title: Lorem Ipsum
@@ -3962,8 +3905,7 @@ lyric 1:
 macs 1:
   url: http://www.coffer.com/mac_find?string={%query}
   title: MAC address search
-  description: "Match your MAC address to its vendor.\r\nMatch a vendor to the MAC
-    addresses it uses."
+  description: "Match your MAC address to its vendor.\r\nMatch a vendor to the MAC addresses it uses."
   tags:
   - mac
   - address
@@ -3980,8 +3922,7 @@ mad 2:
 marlin 1:
   url: https://marlinfw.org/meta/search/?q={%query}
   title: Marlin Gcode Search
-  description: Marlin is an open source firmware for the RepRap family of replicating
-    rapid prototypers — popularly known as “3D printers.”
+  description: Marlin is an open source firmware for the RepRap family of replicating rapid prototypers — popularly known as “3D printers.”
   tags:
   - 3d-printing
 maven 1:
@@ -4048,8 +3989,7 @@ mga 1:
 mink 1:
   url: http://mink.behat.org/en/latest/search.html?q={%query}
   title: Mink
-  description: Mink is an open source browser controller/emulator for web applications,
-    written in PHP.
+  description: Mink is an open source browser controller/emulator for web applications, written in PHP.
   tags:
   - mink
   - behat
@@ -4398,8 +4338,7 @@ osm 2:
   - copyleft
   - openstreetmap
   examples:
-    b, brandenburger tor: Search for Brandenburger Tor in Berlin (abbreviated city
-      name)
+    b, brandenburger tor: Search for Brandenburger Tor in Berlin (abbreviated city name)
 osm! 1:
   url: https://nominatim.openstreetmap.org/search.php?q={%location}
   title: OpenStreetMap Nominatim
@@ -4433,7 +4372,7 @@ osmc 1:
   - maps
   - copyleft
   examples:
-    5275118: Search for "5275118"
+    '5275118': Search for "5275118"
 osmf 0:
   url: https://forum.openstreetmap.org
   title: OpenStreetMap Forum
@@ -4467,7 +4406,7 @@ osmn 1:
   - maps
   - copyleft
   examples:
-    847124696: Search for "847124696"
+    '847124696': Search for "847124696"
 osmr 1:
   url: https://www.openstreetmap.org/browse/relation/{%relation}
   title: OpenStreetMap Relation Browser
@@ -4476,7 +4415,7 @@ osmr 1:
   - maps
   - copyleft
   examples:
-    206570: Search for "206570"
+    '206570': Search for "206570"
 osmrank 1:
   url: http://hdyc.neis-one.org/?{%user}
   title: OpenStreetMap User Rank
@@ -4521,7 +4460,7 @@ osmw 1:
   - maps
   - copyleft
   examples:
-    23425344: Search for "23425344"
+    '23425344': Search for "23425344"
 otr 0:
   url: http://www.onlinetvrecorder.com/
   title: OnlineTvRecorder (Web Online TV Recorder)
@@ -4579,7 +4518,7 @@ pciid 1:
   tags:
   - electronics
   examples:
-    8086: List all known devices from Vendor Intel (8086)
+    '8086': List all known devices from Vendor Intel (8086)
 pciid 2:
   url: http://pci-ids.ucw.cz/read/PC/{%vendorid}/{%deviceid}
   title: PCI ID Repository
@@ -4740,9 +4679,7 @@ pln 2:
 plt 1:
   url: https://www.google.com/search?hl={$language}&q=matplotlib+{%query}
   title: matplotlib via Google
-  description: Quickly Google for help with matplotlib because oh boy, you need all
-    the help you can get, and you don't want to waste time typing the unwieldy name
-    of that library.
+  description: Quickly Google for help with matplotlib because oh boy, you need all the help you can get, and you don't want to waste time typing the unwieldy name of that library.
   tags:
   - scientific computing
   - plot
@@ -4758,7 +4695,7 @@ plz 1:
   - postleitzahl
   - post
   examples:
-    10117: Suche nach Ort für die Postleitzahl 10117
+    '10117': Suche nach Ort für die Postleitzahl 10117
 pm 1:
   url: http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?CMD=search&DB=pubmed&term={%query}
   title: PubMed
@@ -4780,16 +4717,14 @@ poef 1:
 poew 1:
   url: http://pathofexile.gamepedia.com/index.php?search={%query}&go=Go
   title: Inofficial Path of Exile Wiki
-  description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that
-    acts as the main knowledgebase for PoE-players.
+  description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that acts as the main knowledgebase for PoE-players.
   tags:
   - path of exile
   - poe
   - gamepedia
   examples:
     Rhoa: Search inofficial Path of Exile Wiki for "Rhoa"
-    Vendor recipe system: Search inofficial Path of Exile Wiki for "Vendor recipe
-      system"
+    Vendor recipe system: Search inofficial Path of Exile Wiki for "Vendor recipe system"
     Vaal Orb: Search inofficial Path of Exile Wiki for "Vaal Orb"
 printertestfiles 0:
   url: http://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
@@ -4922,7 +4857,7 @@ qt 1:
   - programming
   - qt
   examples:
-    signals and slots: Searches signals and slots from Qt documentation
+    signals and slots: "Searches\_signals and slots\_from Qt documentation"
 qtcl 0:
   url: http://qt-project.org/doc/qt-5.0/qtdoc/classes.html
   title: Qt class documentation
@@ -4944,8 +4879,7 @@ quiet 1:
   - video
   - youtube
   examples:
-    http://www.youtube.com/watch?v=3TIN955FYeg: Open video on a blank page, without
-      any menus / add
+    http://www.youtube.com/watch?v=3TIN955FYeg: Open video on a blank page, without any menus / add
 qw 1:
   url: https://www.qwant.com/?q={%query}
   title: qwant search engine
@@ -4971,14 +4905,12 @@ r2r 2:
 rae 1:
   url: http://dle.rae.es/?w={%query}
   title: Diccionario RAE
-  description: Relevant for spanish language, but as it shows the official and latest
-    rules, should be interesting for all.
+  description: Relevant for spanish language, but as it shows the official and latest rules, should be interesting for all.
   tags:
   - dictionary spanish
   examples:
     capaz: looks for "capaz" in RAE dictionary
-    decir: busca por la palabra «decir» en el diccionario de la lengua española de
-      la Real Academia Española
+    decir: busca por la palabra «decir» en el diccionario de la lengua española de la Real Academia Española
 rails 0:
   url: http://apidock.com/rails/
   title: Ruby on Rails Documentation
@@ -5083,7 +5015,7 @@ rfc 1:
   - rfc
   - standard
   examples:
-    1945: Open RFC 1945
+    '1945': Open RFC 1945
     http: Open RFC about HTTP
 ron 2:
   url: http://finance.yahoo.com/currency-converter/#from=ron;to={%to code};amt={%amount}
@@ -5198,9 +5130,7 @@ scala 1:
 sci-hub 1:
   url: https://sci-hub.do/{%query}
   title: Sci-Hub
-  description: Sci-Hub is a shadow library website that provides free access to millions
-    of research papers and books, without regard to copyright, by bypassing publishers'
-    paywalls in various ways.
+  description: Sci-Hub is a shadow library website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers' paywalls in various ways.
   tags:
   - open access
   examples:
@@ -5458,8 +5388,7 @@ szl 2:
     eur, 1: Convert 1 Swazi lilangeni into Euros
 tails 0:
   url: https://tails.boum.org/
-  title: 'The amnesic incoginto live system, that aims to preserve your privacy and
-    anonymity. '
+  title: 'The amnesic incoginto live system, that aims to preserve your privacy and anonymity. '
 tat 2:
   url: http://tatoeba.org/eng/sentences/search?to={%target language}&query={%query}
   title: Tatoeba search with specified target language
@@ -5483,8 +5412,7 @@ tat 3:
   - dictionary
   - languages
   examples:
-    en, ita, not at all: search for Italian translations of the English phrase "not
-      at all"
+    en, ita, not at all: search for Italian translations of the English phrase "not at all"
 tbaddon 0:
   url: https://addons.mozilla.org/thunderbird/
   title: Thunderbird Add-ons
@@ -5527,8 +5455,7 @@ tds 1:
     germany: Search "The Daily Show" archives for "germany"
 techrightsfeed 0:
   url: http://techrights.org/feed/
-  title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS
-    feed)
+  title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS feed)
   tags:
   - patents
   - patent law
@@ -5599,7 +5526,7 @@ timestamp 1:
   tags:
   - programming
   examples:
-    1361987427: Show time of 1361987427 in human-readable form.
+    '1361987427': Show time of 1361987427 in human-readable form.
 tinyurl 0:
   url: http://tinyurl.com/
   title: TinyURL
@@ -5990,8 +5917,7 @@ ugx 2:
   examples:
     eur, 1: Convert 1 Ugandan shilling into Euros
 ups 1:
-  url: http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum={%tracking
-    number}
+  url: http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum={%tracking number}
   title: UPS tracking
   tags:
   - ups
@@ -6004,7 +5930,7 @@ usbid 1:
   tags:
   - electronics
   examples:
-    8086: List all known devices from Vendor Intel (8086)
+    '8086': List all known devices from Vendor Intel (8086)
 usbid 2:
   url: https://usb-ids.gowdy.us/read/UD/{%vendorid}/{%deviceid}
   title: USB ID Repository
@@ -6564,8 +6490,7 @@ wv 1:
   examples:
     Berlin: Wikivoyage page for Berlin
 ww 1:
-  url: https://{$language}.wikipedia.org/wiki/Special:Search?go=Article&search=Wikipedia:{%project
-    page}
+  url: https://{$language}.wikipedia.org/wiki/Special:Search?go=Article&search=Wikipedia:{%project page}
   title: Wikipedia, Wikipedia Namespace
   tags:
   - wikipedia
@@ -6651,7 +6576,7 @@ xkcd 1:
   - xkcd
   - comic
   examples:
-    552: go to comic 552
+    '552': go to comic 552
 xkcds 1:
   url: http://www.ohnorobot.com/index.pl?comic=56&s={%query}
   title: ohnorobot.com (xkcd search)
@@ -6832,8 +6757,7 @@ youtube 1:
 ypr 0:
   url: http://youpronounce.it/
   title: YouPronounce.it
-  description: Search for a word or a name and you'll get videos of top YouTube speakers
-    naturally pronouncing the word in context.
+  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
   - youtube
   - language
@@ -6841,14 +6765,7 @@ ypr 0:
 yr 1:
   url: https://yr-web-prod.we.yr.azure.nrk.cloud/nb/s%C3%B8k?q={%query}
   title: Yr weather report
-  description: "yr.no is a Norwegian website for weather forecasting and other meteorological
-    information (which is also in English). The site is a joint responsibility of
-    the Norwegian Broadcasting Corporation and the Norwegian Meteorological Institute.\r\n\r\nThe
-    website offers forecasts (as graphs, symbols and maps) for more than 9 million
-    places in the world. The Norwegian forecasts are supplemented with textual forecasts,
-    weather radars, satellite images and a wide range of more specialised forecasts.
-    The forecasts are based on data from the Norwegian Meteorological Institute and
-    several international meteorological organisations (ECMWF, EUMETSAT etc.)."
+  description: "yr.no is a Norwegian website for weather forecasting and other meteorological information (which is also in English). The site is a joint responsibility of the Norwegian Broadcasting Corporation and the Norwegian Meteorological Institute.\r\n\r\nThe website offers forecasts (as graphs, symbols and maps) for more than 9 million places in the world. The Norwegian forecasts are supplemented with textual forecasts, weather radars, satellite images and a wide range of more specialised forecasts. The forecasts are based on data from the Norwegian Meteorological Institute and several international meteorological organisations (ECMWF, EUMETSAT etc.)."
   tags:
   - weather
   - forecast
