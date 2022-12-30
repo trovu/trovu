@@ -200,8 +200,7 @@ ctt 1:
   url: http://groups.google.com/group/comp.text.tex/search?group=comp.text.tex&q={%Suche}
   title: Comp.text.tex
 currency 3:
-  url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from code}&to={%to
-    code}
+  url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from code}&to={%to code}
   title: Yahoo Currency converter
 cve 1:
   url: http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword={%query}
@@ -883,8 +882,7 @@ gt 1:
   title: Gametrailers.com
 gt 2:
   url: http://www.google.com/search?hl={$language}&tbs=qdr:{%time}&q={%query}&ie=utf-8
-  title: 'Google Web: Current query of regional website, with results only from a
-    certain time range'
+  title: 'Google Web: Current query of regional website, with results only from a certain time range'
 guk 1:
   url: http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google United Kingdom
@@ -1162,8 +1160,7 @@ jonet 2:
   url: http://www.jonet.org/showlog.php?query={%wort}&last={%zeitraum}&sort=timeup
   title: Jonet Medienlog
 journalup 1:
-  url: http://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1={%joural
-    title}
+  url: http://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1={%joural title}
   title: Uni Potsdam Zeitschriftenbibliothek
 jp 1:
   url: http://www.jappy.de/suche?name={%query}
@@ -1289,8 +1286,7 @@ leo_es 1:
   url: http://dict.leo.org/esde?lp=esde&search?q={%query}
   title: Leo
 lin 1:
-  url: http://www.linguee.com/search?direction=auto&query={%word or expression to
-    translate}
+  url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
   title: Linguee
 linfr 1:
   url: http://www.linguee.fr/francais-anglais/search?query={%mot ou expression à traduire}
@@ -1299,8 +1295,7 @@ lingro 1:
   url: http://lingro.com/translate/{%website/word to translate}
   title: Lingro
 linguee 1:
-  url: http://www.linguee.com/search?direction=auto&query={%word or expression to
-    translate}
+  url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
   title: Linguee
 lintian 1:
   url: http://lintian.debian.org/tags/{%query}.html
@@ -1869,8 +1864,7 @@ sandboxcommand 2:
   url: http://www.google.com/search?hl={%lang}&q={%query}&ie=utf-8
   title: Sandbox
 sanego 2:
-  url: http://www.sanego.de/Arzt/?q={%Name oder Fachgebiet}&l={%Ort, Ortsteil oder
-    Postleitzahl}&btn=Suchen
+  url: http://www.sanego.de/Arzt/?q={%Name oder Fachgebiet}&l={%Ort, Ortsteil oder Postleitzahl}&btn=Suchen
   title: Sanego - Die Gesundheits-Community
 sc 0:
   url: http://www.scirus.com/srsapp/search?q=(%query)
@@ -2473,7 +2467,7 @@ yfc 1:
   title: 'Yahoo Finance: Get quotes chart'
 ymail 0:
   url: https://login.yahoo.com/config/login_verify2?&.src=ym
-  title: "Yahoo Mail"
+  title: Yahoo Mail
 youtube 0:
   url: http://www.youtube.com/
   title: YouTube Homepage

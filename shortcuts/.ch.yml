@@ -238,7 +238,7 @@ mc 0:
   tags:
   - weather
   examples:
-    8000: Zeige Wetterwarnungen für Postleitzahl 8000
+    '8000': Zeige Wetterwarnungen für Postleitzahl 8000
 migros 1:
   url: https://produkte.migros.ch/sortiment?q={%Produkt}
   title: Migros Sortiment
@@ -257,7 +257,7 @@ plz 1:
   - postleitzahl
   - geolocation
   examples:
-    3000: Search Postleitzahlen Schweiz for "3000" (Bern)
+    '3000': Search Postleitzahlen Schweiz for "3000" (Bern)
 poststelle 1:
   url: https://places.post.ch/?topic=1&PreselectText={%query}&from_directentry=True
   title: Die Post - Poststellensuche

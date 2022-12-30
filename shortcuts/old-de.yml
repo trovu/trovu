@@ -26,9 +26,7 @@ imagepoint 1:
   url: http://www.imagepoint.biz/result.php?reset=1&search={%query}
   title: ImagePoint
 kvv 4:
-  url: http://213.144.24.66/kvv/XSLT_TRIP_REQUEST2?language=de&place_origin={%Von
-    Ort}&type_origin=stop&name_origin={%von Haltestele}&place_destination={%nach Ort}&type_destination=stop&name_destination={%nach
-    Haltestelle}
+  url: http://213.144.24.66/kvv/XSLT_TRIP_REQUEST2?language=de&place_origin={%Von Ort}&type_origin=stop&name_origin={%von Haltestele}&place_destination={%nach Ort}&type_destination=stop&name_destination={%nach Haltestelle}
   title: Karlsruher Verkehrsverbund, Elektronische Fahrplanauskunft
 kw 1:
   url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo

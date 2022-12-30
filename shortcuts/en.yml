@@ -37,7 +37,7 @@ cs 1:
   url: https://slovniky.lingea.cz/anglicko-cesky/{%word}
   post parameters:
     set: _encz
-    type: ""
+    type: ''
     word: '{%word|encoding=none}'
     data: '{%word|encoding=none}'
   title: Czech-English (Lingea)
@@ -342,8 +342,7 @@ ws 1:
 ygl 1:
   url: https://youglish.com/pronounce/{%word}/english
   title: YouGlish English Pronounciation Help
-  description: Search for a word or a name and you'll get videos of top YouTube speakers
-    naturally pronouncing the word in context.
+  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
   - youtube
   - language
@@ -353,8 +352,7 @@ ygl 1:
 youglish 1:
   url: https://youglish.com/pronounce/{%word}/english
   title: YouGlish English Pronounciation Help
-  description: Search for a word or a name and you'll get videos of top YouTube speakers
-    naturally pronouncing the word in context.
+  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
   - youtube
   - language

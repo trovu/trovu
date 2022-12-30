@@ -81,8 +81,7 @@ sec 1:
   examples:
     Honeywell: General company search
 sec 2:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type={%filing
-    type}
+  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type={%filing type}
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
@@ -102,10 +101,9 @@ sic 1:
   - industry
   - standard
   examples:
-    1231: Search descriptive information for SIC "1231"
+    '1231': Search descriptive information for SIC "1231"
 yp 2:
-  url: http://www.yellowpages.com/search?search_terms={%business name}&geo_location_terms={%city
-    or zip}
+  url: http://www.yellowpages.com/search?search_terms={%business name}&geo_location_terms={%city or zip}
   title: Yellow Pages
   tags:
   - shopping

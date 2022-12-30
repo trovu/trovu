@@ -7,7 +7,6 @@ csfd 1:
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
-    
 c 1:
   url: http://www.csfd.cz/hledat/?q={%výraz}
   title: Česko-Slovenská filmová databáze
@@ -17,7 +16,6 @@ c 1:
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
-    
 kinobox 1:
   url: http://www.kinobox.cz/najdi?t={%query}
   title: Kinobox.cz
@@ -25,7 +23,6 @@ kinobox 1:
   - movies
   examples:
     forrest gump: Search for "forrest gump"
-    
 de 1:
   url: https://slovniky.lingea.cz/nemecko-cesky/{%výraz}
   title: Německo-český (Lingea)
@@ -78,7 +75,6 @@ fr 1:
   examples:
     arbre: '"arbre" česky'
     strom: '"strom" francouzsky'
-
 pl 1:
   url: https://slovniky.lingea.cz/polsko-cesky/{%výraz}
   title: Polsko-český (Lingea)
@@ -118,7 +114,6 @@ ru 1:
   examples:
     магазин: '"магазин" česky'
     prodejna: '"prodejna" rusky'
-
 uk 1:
   url: https://slovniky.lingea.cz/ukrajinsko-cesky/{%výraz}
   title: Ukrajinsko-český (Lingea)
@@ -132,7 +127,6 @@ uk 1:
   examples:
     дім: '"дім" česky'
     dům: '"dům" ukrajinsky'
-
 hr 1:
   url: https://slovniky.lingea.cz/chorvatsko-cesky/{%výraz}
   title: Chorvatsko-český (Lingea)
@@ -146,7 +140,6 @@ hr 1:
   examples:
     drvo: '"drvo" česky'
     strom: '"strom" chorvatsky'
-
 sk 1:
   url: https://slovniky.lingea.cz/slovensko-cesky/{%výraz}
   title: Slovensko-český (Lingea)
@@ -158,7 +151,6 @@ sk 1:
   - czech
   examples:
     obrúčka: '"obrúčka" česky'
-    
 cs 1:
   url: https://ssjc.ujc.cas.cz/search.php?heslo={%výraz}&sti=EMPTY&where=hesla&hsubstr=no
   title: Slovník spisovného jazyka českého
@@ -169,7 +161,6 @@ cs 1:
   - czech
   examples:
     strom: '"strom" – dřevina s kmenem'
-    
 sub 1:
   url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
   title: Filmové titulky (Open Subtitles)
