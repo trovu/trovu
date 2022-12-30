@@ -22,7 +22,7 @@ function loadYmls() {
     const ymlDirPath = '/Users/jrg/cde/web/tro/trovu-data/shortcuts/';
     const ymlFileNames = fs.readdirSync(ymlDirPath);
     for (const ymlFileName of ymlFileNames) {
-        const ymlFilePath = ymlDirPath + '/' + ymlFileName;
+        const ymlFilePath = ymlDirPath + ymlFileName;
         const ymlStr = fs.readFileSync(ymlFilePath, 'utf8');
         const shortcuts = jsyaml.load(ymlStr);
         ymls[ymlFilePath] = shortcuts;
