@@ -4,6 +4,20 @@ const { mainModule } = require('process');
 
 const actions = {};
 
+async function main() {
+    if (process.argv.length < 3) {
+        console.log('Usage: node index.js action [path]')
+        return;
+    }
+    const action = process.argv[2];
+    if (action in actions) {
+        actions[action]();
+    }
+    else {
+        console.log('Action must be one of: ', Object.keys(actions));
+    }
+}
+
 function loadYmls() {
     const ymls = {};
     const ymlDirPath = '/Users/jrg/cde/web/tro/trovu-data/shortcuts/';
@@ -37,18 +51,5 @@ actions['removeDeadDomains'] = async function() {
 }
 
 
-async function main() {
-    if (process.argv.length < 3) {
-        console.log('Usage: node index.js action [path]')
-        return;
-    }
-    const action = process.argv[2];
-    if (action in actions) {
-        actions[action]();
-    }
-    else {
-        console.log('Action must be one of: ', Object.keys(actions));
-    }
-}
 
 main();
