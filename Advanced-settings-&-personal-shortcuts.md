@@ -2,7 +2,7 @@ You can create and manage your own user shortcuts and set advanced settings:
 
 1. Fork [trovu-data-user](https://github.com/trovu/trovu-data-user) into your own Github account.
 2. In there, adjust `config.yml` to your needs, and add your own shortcuts to `shortcuts.yml`. (Both are [YAML files](https://en.wikipedia.org/wiki/YAML).)
-3. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME 
+3. Call Trovu with `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`
 
 ## Custom configuration
 
