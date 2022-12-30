@@ -47,7 +47,7 @@ otr 1:
   url: http://epg.onlinetvrecorder.com/broadcasts/search?searchterm={%Suche}&future=1
   title: OnlineTVRecorder EPG search
 preis 1:
-  url: http://www.preissuchmaschine.de/psm_frontend/main.asp?suche={%Produkt}
+  url: https://www.preissuchmaschine.de/Katalog/Suche/{%Produkt}.html
   title: Preissuchmaschine
 pt 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%wort}
