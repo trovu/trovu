@@ -3804,6 +3804,11 @@ le 0:
 leo 1:
   url: ' http://dict.leo.org/ende/?search={%Wort}'
   title: LEO
+lg 1:
+  url:   https://libgen.is/search.php?req={%query}
+  title: Library Genesis
+  tags:
+  - ebooks
 lh 0:
   url: http://www.lufthansa.com
   title: Lufthansa
