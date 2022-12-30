@@ -50,6 +50,4 @@ actions['removeDeadDomains'] = async function() {
     writeYmls(ymls);
 }
 
-
-
 main();
