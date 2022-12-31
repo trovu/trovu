@@ -931,9 +931,6 @@ iper 1:
 iplocator 1:
   url: http://www.geobytes.com/IpLocator.htm?GetLocation&ipaddress={%ipaddress}
   title: IP Address Locator
-iso 1:
-  url: http://isohunt.com/torrents/?ihq={%query}
-  title: IsoHunt Torrent Search
 istockphoto 1:
   url: http://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
   title: Istockphoto
@@ -1129,9 +1126,6 @@ m2 1:
 ma 1:
   url: http://mahalo.com/Special:Search?search={%query}
   title: Mahalo
-macs 1:
-  url: http://www.coffer.com/mac_find?string={%query}
-  title: MAC address search
 mailinator 1:
   url: http://mailinator.com/maildir.jsp?email={%mailbox}
   title: Mailinator
