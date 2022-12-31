@@ -45,12 +45,12 @@ actions['normalize'] = async function () {
     writeYmls(ymls);
 }
 
-const isValidUrl = urlString=> {
-    try { 
-        return Boolean(new URL(urlString)); 
+const isValidUrl = urlString => {
+    try {
+        return Boolean(new URL(urlString));
     }
-    catch(e){ 
-        return false; 
+    catch (e) {
+        return false;
     }
 }
 
