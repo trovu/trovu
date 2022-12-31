@@ -105,6 +105,8 @@ export default class Suggestions {
       matches.titleMiddleUnreachable,
       matches.tagMiddleReachable,
       matches.tagMiddleUnreachable,
+      matches.urlMiddleReachable,
+      matches.urlMiddleUnreachable,
     );
     suggestions = suggestions.slice(0, 10);
 
@@ -130,6 +132,8 @@ export default class Suggestions {
       titleMiddleUnreachable: [],
       tagMiddleReachable: [],
       tagMiddleUnreachable: [],
+      urlMiddleReachable: [],
+      urlMiddleUnreachable: [],
     };
 
     for (const namespace of this.namespaces) {
@@ -179,6 +183,15 @@ export default class Suggestions {
               }
             }
           }
+        }
+        pos = shortcut.url.search(new RegExp(keyword, "i"));
+        if (pos > 0) {
+          if (shortcut.reachable) {
+            matches.urlMiddleReachable.push(shortcut);
+          } else {
+            matches.urlMiddleUnreachable.push(shortcut);
+          }
+          continue;
         }
       }
     }
