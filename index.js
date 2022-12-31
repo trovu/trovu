@@ -76,7 +76,6 @@ actions['removeDeadDomains'] = async function () {
         const yml = ymls[ymlFilePath];
         for (const key in yml) {
             const shortcut = yml[key];
-            console.log(shortcut);
             if (!isValidUrl(shortcut.url)) {
                 console.log(shortcut.url + ' is not a valid url, skipping.');
                 continue;
@@ -86,6 +85,7 @@ actions['removeDeadDomains'] = async function () {
                 console.log(url.host + ' is not a valid hostname, skipping.');
                 continue;
             }
+            console.log(url.host);
             const testUrl = url.protocol + '//' + url.host;
             try {
                 console.log(testUrl, "...");
