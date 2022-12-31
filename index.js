@@ -88,7 +88,8 @@ actions['removeDeadDomains'] = async function () {
             }
             const testUrl = url.protocol + '//' + url.host;
             try {
-                const response = await fetch(testUrl);
+                console.log(testUrl, "...");
+                const response = await fetchWithTimeout(testUrl);
                 console.log(response.status, testUrl);
                 if (response.status != 200) {
                     delete yml[key];
