@@ -82,6 +82,10 @@ actions['removeDeadDomains'] = async function () {
                 continue;
             }
             const url = new URL(shortcut.url);
+            if (!isValidDomain(url.hostname)) {
+                console.log(url.host + ' is not a valid hostname, skipping.');
+                continue;
+            }
             const testUrl = url.protocol + '//' + url.host;
             try {
                 const response = await fetch(testUrl);
