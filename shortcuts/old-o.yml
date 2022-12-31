@@ -1,9 +1,6 @@
 bgo 1:
   url: http://bugs.gentoo.org/buglist.cgi?quicksearch={%query}
   title: Gentoo Bugzilla
-bookbutler 1:
-  url: http://us.bookbutler.com/do/bookSearch?pageNr=1&showMore=true&sortBy=salesrank&searchFor={%query}&searchBy=keyword&searchIn=de&shipTo=de&amountIn=eur
-  title: Bookbutler
 boxrec 2:
   url: http://boxrec.com/search.php?status=all&cat=boxer&first_name={%FirstName}%&last_name={%LastName}&submit=Go
   title: BoxRec
@@ -70,12 +67,6 @@ cg 1:
 chegged 1:
   url: http://slotboxed.com/cheggit.php?getresults=Search&searchtype=all&keywords={%title}
   title: Cheggit
-cheggit 0:
-  url: http://cheggit.net/browsetorrents.php
-  title: Cheggit
-cheggit 1:
-  url: http://cheggit.net/tags.php?action=tagsearch&tag_search_string={%tag}
-  title: Cheggit
 chewbone 1:
   url: http://chewbone.blogspot.com/2008/03/mp3-blog-search-results.html?cx=011120813593335739513%3A8exs4fljtn4&cof=FORID%3A11&q={%query}
   title: Chewbone Mp3 Blog Search
@@ -136,9 +127,6 @@ codex 1:
 comic 1:
   url: http://www.comicvine.com/search/?q={%query}
   title: Comic Vince
-conf 1:
-  url: https://conf.env.disy.net/dosearchsite.action?queryString={%query}
-  title: Disy Confluence
 copu 1:
   url: http://www.google.com/cse?cx=000302137693213122178%3Aycoqke386yy&ie=UTF-8&q={%query}&sa=Suche
   title: Google Custom Search "computational linguistics publications"
@@ -271,9 +259,6 @@ deep 1:
 deeper 1:
   url: http://www.deeperweb.com/results.php?cx=!004415538554621685521%3Avgwa9iznfuo&cof=FORID%3A11%3BNB%3A1&ie=UTF-8&q={%query}
   title: DeeperWeb for Google enhanced Web search
-dees 1:
-  url: http://dix.osola.com/index.de.php?search={%word}&language=german
-  title: Translation German to Spanish
 deezer 0:
   url: http://www.deezer.com/
   title: Deezer Startseite
@@ -316,9 +301,6 @@ dic 1:
 diff 1:
   url: http://www.differencebetween.net/search/?cx=partner-pub-1911891147296207%3Aw80z4hjpu14&cof=FORID%3A9&ie=ISO-8859-1&q={%query}&sa=Search
   title: Difference Between search
-dig 1:
-  url: http://www.robtex.com/dns/x?q={%query}
-  title: Robtex DNS lookup
 digg 1:
   url: http://digg.com/search?submit=Search&section=all&type=all&area=all&sort=score&s={%query}
   title: Digg
@@ -334,12 +316,6 @@ distros 0:
 distrow 0:
   url: http://distrowatch.com/weekly.php?issue=current
   title: Distrowatch
-divxsub 1:
-  url: http://divxsubtitles.net/page_searchedsubtitles.php?_language=-1&_format=-1&_date=-1&firstSearch=true&_free={%query}
-  title: Divxsubtitles.net
-dix 1:
-  url: http://dix.osola.com/search?q={%Auto}
-  title: Dix Osola
 dje 1:
   url: http://jisho.org/words?eng={%query}
   title: Denshi Jisho
@@ -355,12 +331,6 @@ djp 1:
 dl 0:
   url: http://www.darklyrics.com
   title: DarkLyrics.com
-dl 1:
-  url: http://search.darklyrics.com/cgi-bin/dseek.cgi?q={%query}
-  title: DarkLyrics.com
-dmoz 1:
-  url: http://search.dmoz.org/cgi-bin/search?search={%query}
-  title: Dmoz - Open Directory Project
 dnd 0:
   url: http://www.dandwiki.com/wiki/Main_Page
   title: D&D wiki
@@ -397,12 +367,6 @@ drupal7h 1:
 duck 1:
   url: http://duckduckgo.com/?q={%query}
   title: Duck Duck Go
-dw 0:
-  url: http://wiki.splitbrain.org/wiki:dokuwiki
-  title: Dokuwiki Documentation Home
-dw 1:
-  url: http://wiki.splitbrain.org/?do=search&id={%search}
-  title: Dokuwiki Documentation Search
 dwd 0:
   url: http://www.dwd.de
   title: Deutscher Wetter Dienst
@@ -451,9 +415,6 @@ eg 1:
 ei 0:
   url: http://www.ebay.in/
   title: Ebay.in homepage
-ei 1:
-  url: http://search.ebay.in/search/search.dll?satitle={%query}
-  title: Ebay.in
 eis 1:
   url: http://www.eis-machen.de/?s={%query}
   title: Eis-machen.de Search
@@ -463,9 +424,6 @@ el 0:
 el 1:
   url: https://www.google.com/search?hl=en&q=site%3Ahttp://www.eclipse.org/eclipselink/api/2.4+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: EclipseLink API
-elbows 1:
-  url: http://elbo.ws/search/{%query}/page/1/
-  title: Elbo.ws
 emy 0:
   url: http://signin.ebay.com
   title: Ebay.de My eBay
@@ -493,24 +451,15 @@ enr 1:
 enzh 1:
   url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
   title: Chinese
-ep 1:
-  url: http://eyeplorer.com/eyePlorer/?conceptTerms={%query}
-  title: Eyeplorer
 era-sms 0:
   url: http://www.era.pl/msg/user/sponsored/welcome.do
   title: Era-sms
-esde 1:
-  url: http://dix.osola.com/index.de.php?search={%word}&language=german
-  title: Translation Spanish to German
 etools 1:
   url: http://www.etools.ch/searchSubmit.do?query={%query}
   title: ETools.ch Metasearch
 ety 1:
   url: http://www.etymonline.com/index.php?search={%query}&searchmode=none
   title: Etymology lookup
-euk 1:
-  url: http://search.ebay.co.uk/{%query}
-  title: EBay United Kingdom
 everyzing 1:
   url: http://www.everyzing.com/results.jsp?q={%query}
   title: Everyzing
@@ -601,9 +550,6 @@ findfiles 1:
 firefox 0:
   url: http://wiki.serchilo.net/Serchilo:Firefox
   title: Firefox
-flv-avi 0:
-  url: http://vixy.net/
-  title: FLV Online Converter
 fm 1:
   url: http://freshmeat.net/search/?q={%query}&section=projects
   title: Freshmeat
@@ -619,9 +565,6 @@ foxy 1:
 fpl 1:
   url: http://filmpolski.pl/fp/index.php/8/{%query}
   title: Filmpolski
-fplot 1:
-  url: http://fooplot.com/index.php?q0={%query}
-  title: Footplot function ploting
 fr-an 1:
   url: http://dictionnaire.reverso.net/francais-anglais/{%query}
   title: 'Traduction Reverso : du français à l''anglais'
@@ -658,9 +601,6 @@ fsc 1:
 fst 1:
   url: http://de.forestle.org/search.php?q={%Suche}
   title: Forestle
-ftrs 1:
-  url: http://www.filestube.com/search.html?q={%file}&select=All&hosting=1
-  title: Rapidshare
 fv 1:
   url: http://validator.w3.org/feed/check.cgi?url={%url}
   title: W3C Feed Validation Service
@@ -856,18 +796,9 @@ gr 0:
 gr 1:
   url: http://www.google.com/reader/view/#search/{%query}/
   title: Google Reader
-grab 1:
-  url: http://www.grabvids.net/index.php?url={%url}
-  title: Grabvids.net
 grde 1:
   url: http://www.google.de/search?q={%query}
   title: Grde
-grep 1:
-  url: https://www.greplin.com/#q={%query}
-  title: Greplin
-greplin 1:
-  url: https://www.greplin.com/#q={%query}
-  title: Greplin
 groo 1:
   url: http://www.google.com/custom?cx=010507483283387009910%3Aey52vjxjimi&sa=Search&q={%query}&oldsa=search%20groovy&cof=GFNT%3A%23666666%3BLH%3A100%3BCX%3ASearchGroovy%252Eorg%3BDIV%3A%23cccccc%3BFORID%3A0%3BS%3Ahttp%3A%2F%2Fsearchgroovy%2Eorg%3BL%3Ahttp%3A%2F%2Fmedia%2Exircles%2Ecodehaus%2Eorg%2F_projects%2Fgroovy%2F_logos%2Fmedium%2Epng%3BLP%3A1%3BAH%3Aleft&hl={$language}&client=pub-5106641147175425#24104980237417428656
   title: Groovy documentation search
@@ -877,9 +808,6 @@ gssl 0:
 gssl 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
   title: 'Google Web: Plain query of regional website (SSL)'
-gt 1:
-  url: http://gametrailers.com/search.php?s={%query}
-  title: Gametrailers.com
 gt 2:
   url: http://www.google.com/search?hl={$language}&tbs=qdr:{%time}&q={%query}&ie=utf-8
   title: 'Google Web: Current query of regional website, with results only from a certain time range'
@@ -937,12 +865,6 @@ hexdec 1:
 hexenc 1:
   url: http://stefanschramm.net/dev/hex/?dec={%decimal value}
   title: Hex encode
-hitflip-dvd 1:
-  url: http://www.hitflip.de/dvds/search/{%wort}/
-  title: HitFlip DVD
-hk 1:
-  url: http://hakia.com/search.aspx?q={%query}
-  title: Hakia
 hm 1:
   url: http://hypem.com/search/{%query}
   title: Hype Machine
@@ -982,18 +904,9 @@ ibash 0:
 icd 1:
   url: http://www.icd-code.de/suche/icd/recherche.html?sp=0&sp=S{%query}
   title: Suche nach Krankheiten in der ICD-10
-ice 1:
-  url: http://www.icerocket.com/search?tab=buzz&q={%query}
-  title: Icerocket
-icet 1:
-  url: http://www.icerocket.com/search?tab=twitter&q={%query}
-  title: Icerocket
 icon 1:
   url: http://www.iconspedia.com/search/{%query}/
   title: IconsPedia
-id 1:
-  url: http://www.ixquick.de/deu/advanced-search.html?&cat=web&query={%query}
-  title: Ixquick deutsch
 ida 1:
   url: http://www.imdb.com/find?s=tt&site=aka&q={%query}
   title: IMDb AKA Title Search
@@ -1069,30 +982,15 @@ iper 1:
 iplocator 1:
   url: http://www.geobytes.com/IpLocator.htm?GetLocation&ipaddress={%ipaddress}
   title: IP Address Locator
-irna 0:
-  url: http://www2.irna.ir/en/frontpage/menu-232/
-  title: Islamic Republic News Agency
-irna 1:
-  url: http://www2.irna.ir/index.php?lang=en&option=com_newssearch&task=search&searchtext={%query}&sLines=0&x=0&y=0&i_titles=checked&i_texts=checked
-  title: Islamic Republic News Agency
-irnat 0:
-  url: http://www2.irna.ir/en/news/menu-234/
-  title: Islamic Republic News Agency
 iso 1:
   url: http://isohunt.com/torrents/?ihq={%query}
   title: IsoHunt Torrent Search
 istockphoto 1:
   url: http://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
   title: Istockphoto
-iut 1:
-  url: http://osx.iusethis.com/search?q={%query}
-  title: Iusethis for Mac OS X software
 ixs 0:
   url: https://ixquick.com/
   title: Ixquick Meta Search
-j 1:
-  url: http://www.jamaipa.de/?cx=018135833645009994261%3Aigx63jlfgfy&cof=FORID%3A9&q={%query}&sa=Suche&ie=ISO-8859-1&cx=018135833645009994261%3Aigx63jlfgfy
-  title: Jamaipa.de Shopspam-freie Suche
 jamt 1:
   url: http://www.jamendo.com/tag/{%style of music}
   title: Jamendo
@@ -1150,15 +1048,6 @@ jm 1:
 jmp 1:
   url: http://j.mp/?u={%url}
   title: Bit.ly
-jonet 0:
-  url: http://jonet.org/showlog.html
-  title: Jonet Medienlog
-jonet 1:
-  url: http://www.jonet.org/showlog.php?query={%wort}
-  title: Jonet Medienlog
-jonet 2:
-  url: http://www.jonet.org/showlog.php?query={%wort}&last={%zeitraum}&sort=timeup
-  title: Jonet Medienlog
 journalup 1:
   url: http://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1={%joural title}
   title: Uni Potsdam Zeitschriftenbibliothek
@@ -1216,51 +1105,12 @@ kuler 1:
 kultura 1:
   url: http://www.culture.pl/en/culture/wyszukiwanie/szukaj?query={%query}
   title: Culture.pl
-kvb 4:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AB&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&senden=Senden%21
-  title: Kölner Verkehrs-Betriebe
-kvb 5:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AB&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&senden=Senden%21
-  title: Kölner Verkehrs-Betriebe
-kvb 6:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AB&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&senden=Senden%21
-  title: Kölner Verkehrs-Betriebe
-kvba 4:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AN&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&senden=Senden%21
-  title: KVB Ankunft Kölner Verkehrsbetriebe
-kvba 5:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AN&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&senden=Senden%21
-  title: KVB Ankunft Kölner Verkehrsbetriebe
-kvba 6:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&ABAN=AN&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&STARTTYP=1&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&ZIELTYP=1&VON_ZEIT={%Zeit}&BIS_ZEIT={%Zeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&senden=Senden%21
-  title: KVB Ankunft Kölner Verkehrsbetriebe
-kvbg 0:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&ABAN=AB&senden=Senden%21
-  title: Von Köln Mühlheim nach Bergisch Gladbach
-kvbg 1:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&ABAN=AB&senden=Senden%21
-  title: Von Köln Mühlheim nach Bergisch Gladbach
-kvbg 2:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&ABAN=AB&senden=Senden%21
-  title: Von Köln Mühlheim nach Bergisch Gladbach
-kvbga 0:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&ABAN=AN&senden=Senden%21
-  title: Von Köln Mühlheim nach Bergisch Gladbach
-kvbga 1:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&ABAN=AN&senden=Senden%21
-  title: Von Köln Mühlheim nach Bergisch Gladbach
-kvbga 2:
-  url: http://auskunft.kvb-koeln.de/cgi-bin/ASSRoute.cgi?formID=assFormRoute&actionID=externefahrt&framesetFile=kvb%2Fkvb-form.html&formFile=kvb%2FassRouteKVB.html&auskunftFile=kvb%2FassRouteAuskunftKVB.html&fahrtbegleiterFile=kvb%2FassRouteAuskunftKVB.html&auskunftFileText=kvb%2Fkvb-textausgabe.html&mapfileRouteTemplate=kvb%2Froute.map&ROUTEN_SUCHEN=NORMAL&UEBERTRAG=0&DAT_WAHL=KEINE&BIS_DATUM=&VIAGEMEINDE=&VIA=&VIA_AUFENTHALT=0&VERBINDUNG_SCHNELL=AN&VERBINDUNG_WENIG_UMSTIEGE=AN&AUSGESCHLOSSENE_VM=0&UMSTIEGSGESCHWINDIGKEIT=1000&ZUSCHLAGFREI=AN&GEHGESCHWINDIGKEIT=20&TARIF_ANZ_ERWACHSENE=1&TARIF_ANZ_KINDER=0&langFile=langDE.tmpl&FAHRTBEGLEITER=AN&STARTGEMEINDE=K%F6ln&START=K%F6ln-M%FClheim%20Bahnhof&STARTTYP=1&ZIELGEMEINDE=Bergisch%20Gladbach&ZIEL=Bergisch%20Gladbach%20Bahnhof&ZIELTYP=1&VON_ZEIT={%Uhrzeit}&BIS_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&TEXT_DATUM={%Datum}&ABAN=AN&senden=Senden%21
-  title: Von Köln Mühlheim nach Bergisch Gladbach
 ky 2:
   url: http://www.kayak.de/flights/{%departure-destination}/20{%date YY-MM-DD}
   title: Kayak flight search
 l 1:
   url: http://search.live.com/results.aspx?q={%query}
   title: Windows Live Web search
-l007 1:
-  url: http://www.lyrics007.com/cgi-bin/s.cgi?q={%lyricsyouwant}&submit=go
-  title: Lyrics007 lyrics search
 lambda 0:
   url: http://lambda-the-ultimate.org
   title: Lambda the ultimate
@@ -1273,9 +1123,6 @@ larousse 1:
 latex 1:
   url: http://www.google.com/search?hl={$language}&lr=&q={%query}+site%3Awww.giss.nasa.gov+inurl%3Atools%2Flatex
   title: Latex Reference
-lc 0:
-  url: http://www.logosconjugator.org
-  title: Logos Universal Conjugator
 lc 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo={%verb}
   title: Logos Universal Conjugator
@@ -1303,9 +1150,6 @@ lintian 1:
 linz 2:
   url: http://www.linzag.at/efa/index.php?sstreet={%Start}&street={%Ziel}%E4t&x=0&y=0&_language=de
   title: Linz Linien
-lisp 1:
-  url: http://lispdoc.com/?q={%query}
-  title: Lispdoc
 liveleak 1:
   url: http://www.liveleak.com/browse?q={%query}
   title: LiveLeak.com
@@ -1318,9 +1162,6 @@ loc 1:
 loe 1:
   url: https://en.wikipedia.org/wiki/List_of_{%title}_episodes
   title: List of episodes on Wikipedia
-logos 1:
-  url: http://www.logosdictionary.org/pls/dictionary/new_dictionary.gdic.main?word={%word}
-  title: Logos Multilingual Dictionary
 lotto 0:
   url: http://www.lottozahlen.info/
   title: Lottozahlen
@@ -1351,15 +1192,9 @@ macs 1:
 mailinator 1:
   url: http://mailinator.com/maildir.jsp?email={%mailbox}
   title: Mailinator
-mailup 0:
-  url: https://webmail.uni-potsdam.de/
-  title: Uni Potsdam, Webmail
 maj 1:
   url: http://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q={%query}&btnG=Search&sitesearch=MajorGeeks.com
   title: Majorgeeks
-map24 1:
-  url: http://www.de.map24.com/search?q={%query}
-  title: Map24
 maps 1:
   url: http://maps.google.com/maps?hl={$language}&q={%query}
   title: Google Maps
@@ -1411,9 +1246,6 @@ mensaup 0:
 mesh 1:
   url: http://www.ncbi.nlm.nih.gov/mesh?term={%termName}
   title: MeSH term
-meta 1:
-  url: http://www.metacritic.org/search/process?sort=relevance&termType=all&ts={%Produktname}&ty=3&x=14&y=7urlencode}
-  title: Metacritic
 metal 1:
   url: http://www.metal-archives.com/search?searchString={%query}&type=band_name
   title: Metal Archives
@@ -1429,9 +1261,6 @@ mi 1:
 mind 1:
   url: http://www.mindfactory.de/search_result.php?Query={%query}
   title: Mindfactory.de
-mls 1:
-  url: http://www.franklymls.com/{%query}
-  title: FranklyMLS.com
 mn 1:
   url: http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt={$language}-{$language}
   title: MSN News
@@ -1447,15 +1276,6 @@ moodleup 0:
 mozbot 1:
   url: http://www.mozbot.com/search?q={%query}
   title: Mozbot
-mp3 1:
-  url: http://mp3skull.com/mp3/{%query}.html
-  title: Mp3skull
-mr-check 1:
-  url: http://app.mr-check.de/Mrcheck.php?SP={%query}&CL=zeit
-  title: Search Mr. Check
-msas 1:
-  url: http://academic.research.microsoft.com/Search.aspx?query={%query}
-  title: Microsoft Academic Search
 msdn2 1:
   url: http://msdn2.microsoft.com/en-us/library/{%query}.aspx
   title: Microsoft Developers Network
@@ -1489,9 +1309,6 @@ myip 0:
 myleo 1:
   url: http://pda.leo.org/ende?lp=&search={%query}
   title: Mobile Leo
-mymap 1:
-  url: googlemaps://maps.google.com?q={%query}
-  title: IOS Google Maps
 mymk 1:
   url: http://jonaquino.textdriven.com/sean_ohagan/get2post.php?yndesturl=http://www.movie2k.to/movies.php?list=search&search={%query}
   title: Movie2k
@@ -1519,9 +1336,6 @@ n4m 1:
 nag 1:
   url: http://google.com/search?hl={$language}&q={%query}+inurl%3Anagios.sourceforge.net%2Fdocs
   title: Nagios
-nb 1:
-  url: http://www.nextbio.com/b/home/home.nb?q={%query}
-  title: NetxBio
 nicebooks:fr 1:
   url: http://fr.nicebooks.com/search?q={%query}
   title: NiceBooks
@@ -1543,12 +1357,6 @@ npr 1:
 ns 1:
   url: http://www.netspeak.org/#query={%query}
   title: Netspeak
-nt 1:
-  url: http://www.nowtors.com/torrents/{%query}
-  title: NowTors
-nyud 1:
-  url: http://redirect.nyud.net/?url={%url}
-  title: Nyud realtime anypage mirror
 oe1 0:
   url: http://oe1.orf.at/konsole?show=live
   title: Oe1
@@ -1558,21 +1366,12 @@ of 1:
 oh 1:
   url: http://www.ohnorobot.com/index.pl?s={%query}
   title: Oh No Robot
-olbo 1:
-  url: http://aleph20-prod-lbo.obvsg.at/F/?func=find-b&request={%query}&OPACSuche=Y&find_code=WRD&adjacent=N&x=0&y=0&filter_code_1=WSP&filter_request_1=&filter_code_4=WEF&filter_request_4=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3=
-  title: Online-Katalog der Oberösterreichischen Landesbibliothek
-omega 1:
-  url: http://www.omegawiki.org/Expression:{%query}
-  title: OmegaWiki
 oms 1:
   url: http://www.operamini.com/demo/?url={%url}
   title: Opera Mini Simulator
 openbsd 1:
   url: http://www.openbsd.org/cgi-bin/man.cgi?query={%query}
   title: OpenBSD Manual Pages
-opennlp 0:
-  url: http://www.opennlp.org/api/index.html
-  title: OpenNLP API
 opennlp 1:
   url: http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.opennlp.org%2Fapi%2Findex.html%20{%query}&ie=utf-8
   title: OpenNLP API
@@ -1609,24 +1408,15 @@ p2r 0:
 p2r 1:
   url: http://page2rss.com/page?url={%url}
   title: Request update feed
-pak 1:
-  url: http://www.pakanto.org/wiki/{%query}
-  title: Pakanto Package Descriptions
 pamfix 1:
   url: http://pamfix.org/cgi-bin/deutsch/video.cgi?url={%Seite}
   title: Pamfix Free Youtube Video Download
-paste 0:
-  url: http://paste.servut.us/
-  title: Paste Your Code
 pastebin 0:
   url: http://pastebin.com/
   title: Paste Your Code
 pb 1:
   url: http://verbs.colorado.edu/framesets/{%predicate}-v.html
   title: PropBank
-pd 1:
-  url: http://playstation-disorder.com/search.php?s_text= {%query}
-  title: playstation-disorder.com
 pdaw 0:
   url: http://pda.{$language}.wapedia.org/
   title: Wapedia - Wikipedia for Pocket PC
@@ -1666,18 +1456,12 @@ phpg 1:
 phpg! 1:
   url: http://www.google.com/search?btnI=1&q=site%3Awww.php.net+{%query}
   title: PHP Documentation via Google Feeling Lucky
-picniche 1:
-  url: http://www.picniche.com/index.aspx?q={%query}
-  title: PicNiche
 ping 1:
   url: http://just-ping.com/index.php?vh={%query}
   title: Web-based ping
 player 1:
   url: http://www.game-monitor.com/search.php?search={%query}&type=player&location=all&game=all&x=0&y=0&num=30
   title: Spieler Suchen bei game-monitor.com
-plazes 1:
-  url: http://beta.plazes.com/search;plazes?q={%query}
-  title: Plazes
 plen 1:
   url: http://portalwiedzy.onet.pl/tlumacz.html?tr=ang-auto&qs={%word}
   title: Translation Polish to English
@@ -1690,18 +1474,12 @@ plot 1:
 plugins 0:
   url: http://wiki.serchilo.net/Serchilo:Browser_Intergration
   title: Serchilo-Plugins
-pn 1:
-  url: http://www.picniche.com/index.aspx?q={%query}
-  title: PicNiche
 podnova 1:
   url: http://www.podnova.com/search/{%query}/
   title: Podnova
 podster 1:
   url: http://www.podster.de/search?q={%query}
   title: Podster Podcastsuche
-port 1:
-  url: http://de.babla.mobi/woerterbuch/englisch-portugiesisch/{%Wort}.html
-  title: Portugiesisch Englisch Übersetzung
 postbank 1:
   url: http://www.postbank.de/-snm-0184330278-1314787205-0734700014-000000958-1314813579-enm-privatkunden/pk_suche.html?q={%query}
   title: Postbank Search
@@ -1726,12 +1504,6 @@ ps 1:
 psql 0:
   url: http://www.postgresql.org/
   title: PostgreSQL
-psql 1:
-  url: http://search.postgresql.org/search?u=%2Fdocs%2F8.3%2Finteractive%2F&q={%query}
-  title: PostgreSQL 8.3
-psql1 1:
-  url: http://search.postgresql.org/search?u=%2Fdocs%2F8.1%2Finteractive%2F&q={%query}
-  title: PostgreSQL 8.1
 pt-pons 1:
   url: http://en.pons.com/translate?q={%query}&in=&l=dept
   title: PONS Portuguese dictionary
@@ -1750,9 +1522,6 @@ puppett 1:
 puppetw 1:
   url: http://reductivelabs.com/trac/puppet/search?q={%query}&wiki=on
   title: Search only the wiki
-pure 1:
-  url: https://pureimage.flll.jku.at/search?q={%query}
-  title: PureImage Redmine search
 pvx 1:
   url: http://pvx.wikia.com/wiki/Special:Search?search={%query}&go=1
   title: PvX Wiki
@@ -1786,12 +1555,6 @@ qtdoc 0:
 qtdoc 1:
   url: http://www.google.com/search?q={%query}&sitesearch=http://qt-project.org/doc/qt-4.8/
   title: Search Qt documentation
-qw 1:
-  url: http://www.qwika.com/find/{%query}
-  title: Qwika search
-qwd 1:
-  url: http://www.qwika.com/find-de/{%Begriff}
-  title: Qwika search
 radarberlin 0:
   url: http://wind.met.fu-berlin.de/loops/radar_200/R.NEW.gif
   title: Regenradar FU-Berlin
@@ -1804,9 +1567,6 @@ rapids 0:
 rapidshare 1:
   url: http://www.rapidshare1.com/search.php?search={%file}
   title: Rapidshare
-raven 0:
-  url: https://blog.kairaven.de/
-  title: Raven
 rc 0:
   url: http://wiki.serchilo.net/Special:Recentchanges
   title: Recent Changes
@@ -1932,12 +1692,6 @@ sha1 1:
 shot 1:
   url: http://www.superscreenshot.com/getscreen.php?url={%url}
   title: Screenshot from Url
-shoutcast 0:
-  url: http://shoutcast.net/
-  title: SHOUTcast
-shoutcast 1:
-  url: http://shoutcast.net/directory/index.phtml?s={%query}
-  title: SHOUTcast
 shs 1:
   url: http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song
   title: Secondhandsongs
@@ -1947,9 +1701,6 @@ skapiec 0:
 skreemr 1:
   url: http://www.skreemr.com/results.jsp?q={%query}
   title: SkreemR
-slse 2:
-  url: http://reseplanerare.sl.se/bin/query.exe/sn?REQ0JourneyStopsS0A=255&S={%destination1}&REQ0JourneyStopsZ0A=255&Z={%destination2}&start=yes&REQ0JourneyTime%3D%2B0%3A05
-  title: Stockholms Buss och Tunnelbana tider
 smfmod 1:
   url: http://custom.simplemachines.org/mods/index.php?action=search&basic_search={%query}
   title: Search for Modifications
@@ -1968,9 +1719,6 @@ soup 1:
 sowi 1:
   url: http://www.sowiport.de/suche/einfache-suche.html?tx={%Begriff}&L=0&tx_and=true
   title: Sowiport
-spark 1:
-  url: http://gsearch.sparknotes.com/search?q={%query}&output=xml_no_dtd&oe=UTF-8&ie=UTF-8&client=default_frontend&proxystylesheet=default_frontend&site=default_collection
-  title: SparkNotes
 spezify 1:
   url: http://www.spezify.com/#/{%query}
   title: Spezify
@@ -2022,15 +1770,9 @@ su 1:
 subtitles 1:
   url: http://www.google.com/search?hl={$language}&sitesearch=subtitles.images.o2.cz&domains=subtitles.images.o2.cz&q={%movie}
   title: Subtitles.images.o2.cz
-such 2:
-  url: http://suchen.de/lokal?what={%was}&where={%wo}&x=0&y=0
-  title: Suchen.de Suche
 svfr 1:
   url: http://www.sensagent.com/dictionnaires/sv-fr/{%word}/ALEXMN/
   title: Translation Swedish to French
-svz 0:
-  url: http://schuelervz.de
-  title: Schuelervz Shortcut
 swt 1:
   url: http://www.test.de/suche/?q={%query}
   title: Stiftung Warentest
@@ -2070,27 +1812,18 @@ thsr 1:
 time 1:
   url: http://www.timeanddate.com/worldclock/results.html?query={%location}
   title: Time and date
-titles 1:
-  url: http://titles.box.sk/index.php?p=se&z3={%movie}
-  title: Titles.box.sk
 tldp 1:
   url: http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q={%query}
   title: The Linux Documentation Project
 topo 1:
   url: http://torrentportal.com/torrents-search.php?search={%query}
   title: Torrent Portal
-torcheck 0:
-  url: http://torcheck.xenobite.eu/index.php?
-  title: Tor Check
 tp 0:
   url: http://www.toppreise.ch/
   title: Toppreise.ch
 tp 1:
   url: http://www.toppreise.ch/index.php?search={%query}
   title: Toppreise.ch
-tra 2:
-  url: http://reiseplanlegger.trafikanten.no/no/Mellom/Fra/{%query}/til/{%second query}
-  title: Trafikanten
 trends 1:
   url: http://www.google.com/trends?q={%query}
   title: Google Trends
@@ -2100,15 +1833,6 @@ trim 1:
 tucows 1:
   url: http://tucows.com/search?search_terms={%query}&search_scope=%2A
   title: Tucows
-tv.com 1:
-  url: http://www.tv.com/search?type=11&stype=all&tag=search&q={%query}
-  title: TV.com Search
-tviv 0:
-  url: http://tviv.org/
-  title: TV IV
-tviv 1:
-  url: http://tviv.org/Special:Search?search={%Titel}
-  title: TV IV Suche
 tvrage 1:
   url: http://tvrage.com/search.php?search={%query}
   title: TVRage search
@@ -2142,9 +1866,6 @@ ty 0:
 ty 1:
   url: http://twingly.com/search?q={%query}
   title: Twingly Search
-tz 1:
-  url: http://www.torrentz.com/search?q={%query}
-  title: Torrentz.com
 tzt 1:
   url: http://www.tagzania.com/tag/{%tag}
   title: Tagzania
@@ -2160,9 +1881,6 @@ tüz 1:
 ubdo 1:
   url: http://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="{%query}"
   title: Universitätsbibliothek Dortmund
-ubma 1:
-  url: http://vs30.kobv.de/primo_library/libweb/action/search.do?dscnt=0&vl%2814779587UI0%29=any&vl%28240299207UI1%29=all_items&scp.scps=scope%3A%28MAN_MAB_LFER%29%2Cscope%3A%28MAN%29%2Cscope%3A%28MAN_ALEPH%29%2Cscope%3A%28MAN_NL_ALL%29%2Cscope%3A%28MAN_OAI_ZBW%29%2Cscope%3A%28MAN_OAI_BIEL%29%2Cscope%3A%28MAN_ECO%29%2Cscope%3A%28MAN_OLC%29%2Cscope%3A%28MAN_SAFARI%29%2Cscope%3A%28MAN_DAWSON%29%2Cprimo_central_multiple_fe&frbg=&tab=man_all&dstmp=1319572296561&srt=rank&ct=search&mode=Basic&dum=true&tb=t&indx=1&vl%281UIStartWith0%29=contains&vl%28freeText0%29={%query}&fn=search&vid=MAN_UB
-  title: Katalog der Universitätsbibliothek Mannheim (Primo)
 ubu 1:
   url: http://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query={%query}
   title: Ubu.com
@@ -2205,18 +1923,12 @@ uima 1:
 ulbbonn 1:
   url: http://131.220.74.17:8080/webOPACClient/start.do?Language=De&Login=sisis&Query=-1="{%query}"
   title: Universitäts- und Landesbibliothek Bonn
-un 1:
-  url: http://unbisnet.un.org:8080/ipac20/ipac.jsp?menu=search&index=.SW&term={%query}
-  title: United Nations
 unc 1:
   url: http://uncyclopedia.wikia.org/wiki/{%query}
   title: Uncyclopedia
 uniprot 1:
   url: http://www.uniprot.org/uniprot/?query={%query}&sort=score
   title: Uniprot
-untiny 1:
-  url: http://untiny.me/api/1.0/extract/?url={%short URL}&format=text
-  title: Untiny
 up 1:
   url: http://www.uniprot.org/uniprot/?query={%query}&sort=score
   title: Uniprot
@@ -2244,39 +1956,12 @@ validator 1:
 vbn 2:
   url: http://www.fahrplaner.de/hafas/query.exe/dn?L=vbn&{%Start},{%Ziel}
   title: VBN Verkehrsverbund NDS/Bremen
-view 1:
-  url: http://viewtext.org/article?url={%url}
-  title: Viewtext
-viewtext 1:
-  url: http://viewtext.org/article?url={%url}
-  title: Viewtext
 vim 1:
   url: http://vim.wikia.com/wiki/index.php?search={%query}
   title: Vim
 visuwords 1:
   url: http://www.visuwords.com/?word={%query}
   title: Visuwords
-vrs 4:
-  url: http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&ABAN=AB
-  title: Vrs Verkehrsverbund Rhein-Sieg
-vrs 5:
-  url: http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&ABAN=AB
-  title: Vrs Verkehrsverbund Rhein-Sieg
-vrs 6:
-  url: http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&ABAN=AB
-  title: Vrs Verkehrsverbund Rhein-Sieg
-vrsa 4:
-  url: http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&ABAN=AN
-  title: VRS Ankunft Verkehrsverbund Rhein-Sieg
-vrsa 5:
-  url: http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&ABAN=AN
-  title: VRS Ankunft Verkehrsverbund Rhein-Sieg
-vrsa 6:
-  url: http://auskunft2.vrsinfo.de/cgi-bin/assRoute.cgi?STARTGEMEINDE={%Start-Ort}&START={%Start-Haltestelle}&ZIELGEMEINDE={%Ziel-Ort}&ZIEL={%Ziel-Haltestelle}&search_x=48&search_y=10&formID=assFormRoute&actionID=frameladen&framesetFile=vrs%2Fneu2%2Ffahrplanauskunft_relaunch.html&formFile=vrs%2Fneu2%2FassRouteVRS.html&auskunftFile=vrs%2Fneu2%2FassRouteAuskunftVRS.html&langFile=langDE.tmpl&ROUTEN_SUCHEN=NORMAL&ZUSCHLAGFREI=AN&mapfileRouteTemplate=vrs%2Fneu%2Froute.map&STARTTYP=7&ZIELTYP=7&FAHRTBEGLEITER=An&VON_ZEIT={%Uhrzeit}&VON_DATUM={%Datum}&ABAN=AN
-  title: VRS Ankunft Verkehrsverbund Rhein-Sieg
-vt 1:
-  url: http://www.versiontracker.com/php/qs.php?mode=basic&action=search&str={%query}&srchArea=macosx%7Cmacosx-all&submit=Go
-  title: Versiontracker (Mac OS X)
 wac 0:
   url: http://www.warcrafter.net/
   title: Warcrafter main page
@@ -2335,9 +2020,6 @@ wh 1:
 whosangsong 1:
   url: http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song
   title: Secondhandsongs
-wi 1:
-  url: http://re.search.wikia.com/search.html#{%query}
-  title: Wikia Search
 wikia 1:
   url: http://www.wikia.com/wiki/Special:Search?tab=1&search={%query}
   title: Wikia
@@ -2347,15 +2029,6 @@ wikileaks 0:
 wikimapia 1:
   url: http://wikimapia.org/?#search={%place}
   title: Wikimapia
-wimba 0:
-  url: http://be.imba.hu
-  title: be.imba! main page
-wimbaeu 2:
-  url: http://be.imba.hu/?zone=EU&realm={%server}&character={%name}
-  title: be.imba query for EU-server
-wimbaus 2:
-  url: http://be.imba.hu/?zone=US&realm={%server}&character={%name}
-  title: be.imba query for US-server
 wis 1:
   url: http://www.woerterbuch.info/?query={%query}&s=thesaurus&dl=0&l=de&showlang=de
   title: Woerterbuch.info
@@ -2392,18 +2065,6 @@ wow 1:
 wr 1:
   url: http://www.warcraftrealms.com/search.php?search={%query}
   title: search WarcraftRealms
-wrc 0:
-  url: http://wowreputationcalculator.com
-  title: WoWReputationCalculator main page
-wrceu 2:
-  url: http://wowreputationcalculator.com/EU/{%server}/{%name}/
-  title: WoWReputationCalculator EU-server
-wrcus 2:
-  url: http://wowreputationcalculator.com/US/{%server}/{%name}/
-  title: WoWReputationCalculator US-server
-wrz 1:
-  url: http://www.wrzuta.pl/szukaj/{%query}
-  title: Wrzuta
 wseu 1:
   url: http://watchseries.eu/search/{%query}
   title: Watch Series
@@ -2413,9 +2074,6 @@ wssl 0:
 wus 1:
   url: http://wissenschaftundschreie.wordpress.com/?s={%query}
   title: Wissenschaft und Schreie
-wweb 1:
-  url: https://wiki.suche.web.de/wiki/?su={%article}
-  title: Wikipedia via web.de
 wwk 1:
   url: http://www.wowwiki.com/Special:Search?search={%query}&go=1
   title: search WoWWiki
