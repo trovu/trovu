@@ -1,9 +1,6 @@
 bgo 1:
   url: http://bugs.gentoo.org/buglist.cgi?quicksearch={%query}
   title: Gentoo Bugzilla
-boxrec 2:
-  url: http://boxrec.com/search.php?status=all&cat=boxer&first_name={%FirstName}%&last_name={%LastName}&submit=Go
-  title: BoxRec
 btj 0:
   url: http://btjunkie.org
   title: BTJunkie
@@ -16,12 +13,6 @@ btja 1:
 btjv 1:
   url: http://btjunkie.org/search?q={%query}&c=6
   title: BTJunkie Video Search
-btw 2:
-  url: http://bettween.com/{%user1}/{%user2}
-  title: Bettween
-c 1:
-  url: http://clusty.com/search?query={%query}
-  title: Clusty
 c++ 1:
   url: http://en.cppreference.com/mwiki/index.php?search={%query}
   title: C++ Reference (cppreference.com)
@@ -34,12 +25,6 @@ cadsilly 0:
 cake 1:
   url: http://api.cakephp.org/search/render{%query}
   title: CakePHP API
-cat 0:
-  url: http://wiki.serchilo.net/Category:Command_category
-  title: Command category
-cat 1:
-  url: http://wiki.serchilo.net/Category:{%category}
-  title: Command category
 cc 1:
   url: http://search.creativecommons.org/?q={%query}
   title: Creative Commons
@@ -109,9 +94,6 @@ clpatr 0:
 clr 0:
   url: http://www.colourlovers.com/colors/random
   title: COLOURlovers random color
-clusty 1:
-  url: http://clusty.com/search?query={%query}
-  title: Clusty
 cnet 1:
   url: http://www.cnet.com/1770-5_1-0.html?query={%query}&tag=srch
   title: CNET content search
@@ -358,12 +340,6 @@ drop-box 0:
 drupal 1:
   url: https://www.google.com/search?hl={$language}&q=site%3Aapi.drupal.org%20{%query}&ie=utf-8
   title: Drupal API via Google
-drupal7 1:
-  url: http://drupalcontrib.org/api/search/7/{%query}
-  title: Drupal 7 API
-drupal7h 1:
-  url: http://drupalcontrib.org/api/search/7/hook_{%hook}
-  title: Drupal 7 Hook API
 duck 1:
   url: http://duckduckgo.com/?q={%query}
   title: Duck Duck Go
@@ -412,9 +388,6 @@ efa 0:
 eg 1:
   url: http://www.ecocho.com/google/index.php?q={%query}&cx=011377004323241253315%3Ayjo7ngerhv8&cof=FORID%3A10&search_type=web
   title: Ecocho (google)
-ei 0:
-  url: http://www.ebay.in/
-  title: Ebay.in homepage
 eis 1:
   url: http://www.eis-machen.de/?s={%query}
   title: Eis-machen.de Search
@@ -442,9 +415,6 @@ engrish 0:
 engrish 1:
   url: http://www.engrish.com/?s={%query}
   title: search for some topic
-enpl 1:
-  url: http://portalwiedzy.onet.pl/tlumacz.html?tr=ang-auto&qs={%word}
-  title: Translation English to Polish
 enr 1:
   url: http://personer.eniro.se/resultat/{%nummer_eller_namn}
   title: Eniro personsökning
@@ -463,9 +433,6 @@ ety 1:
 everyzing 1:
   url: http://www.everyzing.com/results.jsp?q={%query}
   title: Everyzing
-ex 1:
-  url: http://msxml.excite.com/info.xcite/search/web/{%query}/
-  title: Excite
 f 1:
   url: http://www.fastbot.de/index.php?query={%query}
   title: Fastbot
@@ -478,9 +445,6 @@ facebook 0:
 facebook 1:
   url: http://www.facebook.com/s.php?q={%query}&init=q
   title: Facebook Global Search
-fbase 1:
-  url: http://www.freebase.com/search?limit=30&start=0&query={%query%}
-  title: Freebase
 fbf 1:
   url: http://www.facebook.com/friends.php?fq={%name}
   title: Facebook Friend Search
@@ -535,9 +499,6 @@ ff 1:
 fien 1:
   url: http://www.fincd.com/index.php?txtSearch={%query}&lang=en
   title: Finnish-English
-filext 1:
-  url: http://filext.com/detaillist.php?extdetail={%query}
-  title: FILExt - The File Extension Source
 filmweb_ludzie 1:
   url: http://www.filmweb.pl/szukaj?q={%query}&c=person
   title: FilmWeb
@@ -547,9 +508,6 @@ filmweb_tytul 1:
 findfiles 1:
   url: http://findfiles.com/list.php?string={%filename}&db=Both
   title: FindFiles
-firefox 0:
-  url: http://wiki.serchilo.net/Serchilo:Firefox
-  title: Firefox
 fm 1:
   url: http://freshmeat.net/search/?q={%query}&section=projects
   title: Freshmeat
@@ -634,9 +592,6 @@ ga 1:
 gads 1:
   url: http://www.google.com/sponsoredlinks?q={%adword}
   title: Goode Ads
-gamercard 1:
-  url: http://profile.mygamercard.net/{%query}
-  title: Windows Live GamerCard von Spieler anzeigen
 gameserver 1:
   url: http://www.game-monitor.com/search.php?search={%query}&type=server&location=all&game=all&x=0&y=0&num=30
   title: Spiel Server Suchen game-monitor.com
@@ -868,9 +823,6 @@ hexenc 1:
 hm 1:
   url: http://hypem.com/search/{%query}
   title: Hype Machine
-hodyt 1:
-  url: http://www.howoftendoyoutweet.com/?username={%username}
-  title: How often do you tweet?
 hoh 1:
   url: http://www.hoh.de/default.aspx?VL={%query}&SC=rel&TY=2&ST=5
   title: Home of Hardware search
@@ -967,9 +919,6 @@ ing 1:
 ink 1:
   url: http://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search={%feature}&go=Go
   title: Inkscape Wiki
-invis 1:
-  url: http://kanicq.ru/invisible/en/get?uin={%number}
-  title: ICQ People Search
 io 1:
   url: http://iomash.com/?q={%keyword}
   title: Uimash website forwarding
@@ -1069,9 +1018,6 @@ jr 2:
 jsr 1:
   url: http://jcp.org/en/jsr/summary?id={%query}
   title: Java Specification Requests
-jtChatzielach 1:
-  url: http://www.jewtext.appspot.com/Jewtext?cmd={%query}&source=www.serchilo.net
-  title: JT
 junit 0:
   url: http://junit.sourceforge.net/javadoc/
   title: Junit API Search
@@ -1171,9 +1117,6 @@ lotto 1:
 lt 1:
   url: http://lingro.com/translate/{%website/word to translate}
   title: Lingro
-ly 1:
-  url: http://lyrics.wikia.com/Special:Search?go=Article&search={%article}
-  title: LyricWiki
 lyrc 1:
   url: http://lyrc.com.ar/en/tema1en.php?songname={%songname}
   title: Lyrc
@@ -1396,21 +1339,12 @@ ov 0:
 ov 1:
   url: http://www.onvista.de/suche.html?SEARCH_VALUE={%query}
   title: OnVista
-ovg 1:
-  url: http://watch.ovguide.com/movies_tv.php?q={%query}
-  title: OVGuide
-p 1:
-  url: http://www.powerset.com/explore/pset?q={%query}
-  title: Powerset
 p2r 0:
   url: http://page2rss.com
   title: Page2RSS homepage
 p2r 1:
   url: http://page2rss.com/page?url={%url}
   title: Request update feed
-pamfix 1:
-  url: http://pamfix.org/cgi-bin/deutsch/video.cgi?url={%Seite}
-  title: Pamfix Free Youtube Video Download
 pastebin 0:
   url: http://pastebin.com/
   title: Paste Your Code
@@ -1462,18 +1396,12 @@ ping 1:
 player 1:
   url: http://www.game-monitor.com/search.php?search={%query}&type=player&location=all&game=all&x=0&y=0&num=30
   title: Spieler Suchen bei game-monitor.com
-plen 1:
-  url: http://portalwiedzy.onet.pl/tlumacz.html?tr=ang-auto&qs={%word}
-  title: Translation Polish to English
 plg 1:
   url: http://www.primal-legion.net/content/search.php?keywords={%query}&terms=all&author=&fid[]=3&sc=1&sf=all&sk=t&sd=d&sr=posts&st=0&ch=300&t=0&submit=Suche
   title: Prima Legion search
 plot 1:
   url: http://plot20.kesto.de/#{"functions":["{%function}"]}
   title: Plot 2.0
-plugins 0:
-  url: http://wiki.serchilo.net/Serchilo:Browser_Intergration
-  title: Serchilo-Plugins
 podnova 1:
   url: http://www.podnova.com/search/{%query}/
   title: Podnova
@@ -1483,18 +1411,12 @@ podster 1:
 postbank 1:
   url: http://www.postbank.de/-snm-0184330278-1314787205-0734700014-000000958-1314813579-enm-privatkunden/pk_suche.html?q={%query}
   title: Postbank Search
-power 1:
-  url: http://www.powerset.com/explore/pset?q={%query}
-  title: Powerset
 pr 1:
   url: http://www.preisroboter.de/search.php?search={%query}
   title: Preisroboter.de Preisvergleich
 praktiker 1:
   url: http://praktiker.de/Search.action?searchTerm={%query}
   title: Praktiker Baumarkt Online Shop
-presale 1:
-  url: http://presaletoday.com/search?q={%query}
-  title: Presale Ticket Password Search
 prot 1:
   url: http://www.expasy.org/cgi-bin/sprot-search-de?{%query}
   title: SwissProt
@@ -1567,9 +1489,6 @@ rapids 0:
 rapidshare 1:
   url: http://www.rapidshare1.com/search.php?search={%file}
   title: Rapidshare
-rc 0:
-  url: http://wiki.serchilo.net/Special:Recentchanges
-  title: Recent Changes
 rea 0:
   url: http://www.rea-getraenke.de/index.php
   title: Rea Getränkemarkt
@@ -1584,9 +1503,6 @@ reddit 1:
   - reddit
   examples:
     berlin: Search for "berlin"
-register 0:
-  url: http://wiki.serchilo.net/index.php?title=Special:Userlogin&type=signup&returnto=Serchilo:User_commands
-  title: Register at Serchilo
 remnant 1:
   url: http://lastremnant.wikia.com/wiki/Special:Search?search={%query}&go=1
   title: The Last Remnant
@@ -1638,9 +1554,6 @@ scirus 1:
 se 2:
   url: http://{%subpage}.stackexchange.com/search?q={%query}
   title: Stack Exchange
-search 1:
-  url: http://wiki.serchilo.net/Special:Search?search={%page}&fulltext=Suche
-  title: 'Serchilo Wiki: Page search'
 searchmash 0:
   url: http://www.searchmash.com
   title: Search Mash
@@ -1719,15 +1632,9 @@ soup 1:
 sowi 1:
   url: http://www.sowiport.de/suche/einfache-suche.html?tx={%Begriff}&L=0&tx_and=true
   title: Sowiport
-spezify 1:
-  url: http://www.spezify.com/#/{%query}
-  title: Spezify
 spfun 1:
   url: http://www.sparkfun.com/search/results?term={%query}&what=products
   title: Sparkfun product search
-spl 1:
-  url: http://link.springer.com/search?query={%query}
-  title: SpringerLink
 spo 1:
   url: http://www.scholarpedia.org/article/Special:Search?from=sidebar&search={%article}&go=Title
   title: Scholarpedia
@@ -1818,12 +1725,6 @@ tldp 1:
 topo 1:
   url: http://torrentportal.com/torrents-search.php?search={%query}
   title: Torrent Portal
-tp 0:
-  url: http://www.toppreise.ch/
-  title: Toppreise.ch
-tp 1:
-  url: http://www.toppreise.ch/index.php?search={%query}
-  title: Toppreise.ch
 trends 1:
   url: http://www.google.com/trends?q={%query}
   title: Google Trends
@@ -1923,9 +1824,6 @@ uima 1:
 ulbbonn 1:
   url: http://131.220.74.17:8080/webOPACClient/start.do?Language=De&Login=sisis&Query=-1="{%query}"
   title: Universitäts- und Landesbibliothek Bonn
-unc 1:
-  url: http://uncyclopedia.wikia.org/wiki/{%query}
-  title: Uncyclopedia
 uniprot 1:
   url: http://www.uniprot.org/uniprot/?query={%query}&sort=score
   title: Uniprot
@@ -1941,9 +1839,6 @@ us 1:
 uscripts 1:
   url: http://userscripts.org/scripts/search?q={%query}
   title: Userscripts
-user 1:
-  url: http://wiki.serchilo.net/Special:Search?search=User:{%user}
-  title: 'Serchilo Wiki: User page'
 usk 1:
   url: http://www.usk.de//cont3.php?s=search&title={%query}&s.x=38&s.y=12&s=search
   title: Spieltitel bei USK Suchen
@@ -1962,9 +1857,6 @@ vim 1:
 visuwords 1:
   url: http://www.visuwords.com/?word={%query}
   title: Visuwords
-wac 0:
-  url: http://www.warcrafter.net/
-  title: Warcrafter main page
 waceu 2:
   url: http://{%server}-eu.warcrafter.net/{%name}
   title: Warcrafter search EU-server
@@ -2000,9 +1892,6 @@ wde 1:
   title: 'Wikipedia Article Search (German) '
   examples:
     berlin: Wikipedia article about Berlin
-wdyjt 1:
-  url: http://www.whendidyoujointwitter.com/?username={%username}
-  title: When did you join Twitter?
 webs 1:
   url: http://www.webshots.com/search?query={%query}&new=1&source=serchilo
   title: Webshots
