@@ -102,7 +102,9 @@ export default class Suggestions {
       matches.titleBeginReachable,
       matches.titleBeginUnreachable,
       matches.titleMiddleReachable,
-      matches.titleMiddleUnreachable
+      matches.titleMiddleUnreachable,
+      matches.tagMiddleReachable,
+      matches.tagMiddleUnreachable,
     );
     suggestions = suggestions.slice(0, 10);
 
@@ -126,6 +128,8 @@ export default class Suggestions {
       titleBeginUnreachable: [],
       titleMiddleReachable: [],
       titleMiddleUnreachable: [],
+      tagMiddleReachable: [],
+      tagMiddleUnreachable: [],
     };
 
     for (const namespace of this.namespaces) {
@@ -163,6 +167,18 @@ export default class Suggestions {
             matches.titleMiddleUnreachable.push(shortcut);
           }
           continue;
+        }
+        if ((shortcut.tags) && (Array.isArray(shortcut.tags))) {
+          for (const tag of shortcut.tags) {
+            const pos = tag.search(new RegExp(keyword, "i"));
+            if (pos > -1) {
+              if (shortcut.reachable) {
+                matches.tagMiddleReachable.push(shortcut);
+              } else {
+                matches.tagMiddleUnreachable.push(shortcut);
+              }
+            }
+          }
         }
       }
     }
