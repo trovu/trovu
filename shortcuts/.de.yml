@@ -943,7 +943,7 @@ gls 3:
   - shipping
 gm 2:
   url: https://www.google.com/maps/search/{%Stadt|type=city}%2C%20{%Straße}%2C%20Deutschland/?hl={$language}
-  title: Google Maps
+  title: Google Maps Deutschland
   tags:
   - maps
   - google
