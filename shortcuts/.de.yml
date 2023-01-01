@@ -948,8 +948,8 @@ gm 2:
   - maps
   - google
   examples:
-    b, brandenburger tor: Show Brandenburger Tor in Berlin, Germany 
-    hh, alster: Show Alster in Hamburg, Germany 
+    b, brandenburger tor: Show Brandenburger Tor in Berlin, Germany
+    hh, alster: Show Alster in Hamburg, Germany
 gmb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Berlin%2C%20Deutschland
   title: Google Maps Berlin
