@@ -349,12 +349,6 @@ dwd 0:
 dwl 1:
   url: http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch
   title: Download.com
-dz 0:
-  url: http://www.deezer.com/
-  title: Deezer Startseite
-dz 1:
-  url: http://www.deezer.com/#music/result/all/{%query}
-  title: Deezer Suche
 e33 1:
   url: http://e33.biz/suche/{%query}
   title: E33.biz Preissuche
@@ -472,9 +466,6 @@ fd 1:
 fddb 1:
   url: http://fddb.info/db/de/suche/?udd=0&cat=site-de&search={%query}
   title: Kalorien in der Lebensmittel-Datenbank
-fed 1:
-  url: http://admin.fedoraproject.org/pkgdb/apps/search/{%query}
-  title: Fedora Packages
 fedbug 0:
   url: http://bugzilla.redhat.com/query.cgi
   title: Fedora bugs
@@ -571,18 +562,12 @@ fy 1:
 fz 1:
   url: http://fizy.com/?q={%name of song xor artist}
   title: Fizy videomusic
-g+ 1:
-  url: http://www.google.com/search?q={%query}&tbs=prfl:e
-  title: Google+ Person Search
 g-en-de 1:
   url: http://translate.google.de/?hl=de&tab=wT#en|de|{%query}
   title: Google Translate Englisch - Deutsch
 g-pdf 1:
   url: http://www.google.de/search?q={%query}&as_filetype=pdf
   title: Google search for pdf-files
-g100 1:
-  url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&num=100
-  title: 'Google Web: Show 100 results at once'
 g? 0:
   url: http://www.google.com/intl/{$language}/about.html
   title: About Google
@@ -652,9 +637,6 @@ gex 1:
 ggmsg 1:
   url: http://groups.google.de/groups?hl={$language}&selm={%query}
   title: Google Groups
-gif 1:
-  url: http://www.google.com/images?hl={$language}&q={%query}&imgtype=face
-  title: Google Images
 glin 1:
   url: http://www.google.com/linux?hl={$language}&q={%query}
   title: Google Linux
@@ -748,9 +730,6 @@ gssl 0:
 gssl 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
   title: 'Google Web: Plain query of regional website (SSL)'
-gt 2:
-  url: http://www.google.com/search?hl={$language}&tbs=qdr:{%time}&q={%query}&ie=utf-8
-  title: 'Google Web: Current query of regional website, with results only from a certain time range'
 guk 1:
   url: http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google United Kingdom
@@ -907,9 +886,6 @@ iomash 0:
 iper 1:
   url: http://ipernity.com/search/doc?q={%query}&s=0
   title: Ipernity Photo Search
-iplocator 1:
-  url: http://www.geobytes.com/IpLocator.htm?GetLocation&ipaddress={%ipaddress}
-  title: IP Address Locator
 istockphoto 1:
   url: http://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
   title: Istockphoto
@@ -1048,9 +1024,6 @@ latex 1:
 lc 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo={%verb}
   title: Logos Universal Conjugator
-leo 1:
-  url: http://dict.leo.org/ende?lp=ende&lang=de&searchLoc=0&cmpType=relaxed&sectHdr=on&spellToler=on&search={%query}&relink=on
-  title: Leo Deutsch<>English translation
 leo_es 1:
   url: http://dict.leo.org/esde?lp=esde&search?q={%query}
   title: Leo
@@ -1288,9 +1261,6 @@ ora 1:
 os 1:
   url: http://www.opensubtitles.org/de/search2/moviename-{%query}
   title: OpenSubtitles
-osmrank 1:
-  url: http://hdyc.neis-one.org/?{%user}
-  title: OpenStreetMap User Rank
 ossearch 1:
   url: http://en.opensuse.org/Spezial:Search?search={%query}
   title: OpenSUSE search
@@ -1336,12 +1306,6 @@ pgpkey 1:
 ph 1:
   url: http://www.phazeddl.com/search/{%query}.p1.htm
   title: Phazeddl
-phpg 1:
-  url: http://www.google.com/search?hl={$language}&q=site%3Awww.php.net+{%query}
-  title: PHP Documentation via Google
-phpg! 1:
-  url: http://www.google.com/search?btnI=1&q=site%3Awww.php.net+{%query}
-  title: PHP Documentation via Google Feeling Lucky
 ping 1:
   url: http://just-ping.com/index.php?vh={%query}
   title: Web-based ping
@@ -1432,9 +1396,6 @@ qtdoc 1:
 radarberlin 0:
   url: http://wind.met.fu-berlin.de/loops/radar_200/R.NEW.gif
   title: Regenradar FU-Berlin
-rails 1:
-  url: http://apidock.com/rails/search?query={%query}
-  title: Rails Documentation
 rapids 0:
   url: http://rapidshare-search-engine.com/
   title: Rapidshare Search
@@ -1515,12 +1476,6 @@ sema 1:
 semlex 1:
   url: http://gmb.let.rug.nl/explorer/semlex.php?entrysortkey=frequency_lemma&entrysortorder=desc&lemma={%lemma}
   title: GMB Explorer, semantic lexicon
-sep 0:
-  url: http://plato.stanford.edu
-  title: Stanford Encyclopedia of Philosophy
-sep 1:
-  url: http://plato.stanford.edu/search/searcher.py?query={%query}
-  title: Stanford Encyclopedia of Philosophy
 sf 0:
   url: https://sourceforge.net/account/login.php
   title: Sourceforge
@@ -1614,9 +1569,6 @@ state 1:
 stc 1:
   url: http://surfthechannel.com/search/all/3/1/{%query}.html
   title: Surfthehannel
-steam 1:
-  url: http://store.steampowered.com/search/?term={%query}
-  title: Steam search
 su 1:
   url: http://superuser.com/search?q={%query}
   title: Super User
@@ -1662,9 +1614,6 @@ thomann 1:
 thsr 1:
   url: http://thesaurus.com/browse/{%query}
   title: Roget's Thesaurus
-time 1:
-  url: http://www.timeanddate.com/worldclock/results.html?query={%location}
-  title: Time and date
 tldp 1:
   url: http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q={%query}
   title: The Linux Documentation Project
@@ -1701,9 +1650,6 @@ twk 0:
 twm 1:
   url: http://twitter.com/#!/search/%40{%user}
   title: Search for Tweets that mention a specific user
-twum 1:
-  url: http://m.twitter.com/{%user}
-  title: Access a specific user's twitter feed (mobile)
 tx 1:
   url: http://www.tixuma.de/index.php?mp=search&sc={%query}&tg=0
   title: Tixuma Suche
@@ -1776,9 +1722,6 @@ uniprot 1:
 up 1:
   url: http://www.uniprot.org/uniprot/?query={%query}&sort=score
   title: Uniprot
-ups 1:
-  url: http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum={%trackingnumber}
-  title: UPS Sendungsverfolgung
 us 1:
   url: http://userscripts.org/scripts/search?q={%query}
   title: Userscripts
@@ -1838,11 +1781,6 @@ wde 1:
 webs 1:
   url: http://www.webshots.com/search?query={%query}&new=1&source=serchilo
   title: Webshots
-wen 1:
-  url: https://en.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
-  title: 'Wikipedia Article Search (English) '
-  examples:
-    berlin: Wikipedia article about Berlin
 wenssl 1:
   url: https://secure.wikimedia.org/wikipedia/en/wiki/{%query}
   title: Wenssl
@@ -1943,9 +1881,6 @@ yandex 1:
 yatego 1:
   url: http://www.yatego.com/index.php?cl=mallsearch&query={%query}
   title: Yatego
-ye 1:
-  url: http://www.yelp.com/search?find_desc={%query}
-  title: Yelp
 yf 1:
   url: http://finance.yahoo.com/q?s={%abbreviation}
   title: 'Yahoo Finance: Get stock quotes'
@@ -1958,12 +1893,6 @@ yfc 1:
 ymail 0:
   url: https://login.yahoo.com/config/login_verify2?&.src=ym
   title: Yahoo Mail
-youtube 0:
-  url: http://www.youtube.com/
-  title: YouTube Homepage
-youtube 1:
-  url: http://www.youtube.com/results?search_query={%query}
-  title: YouTube
 ys 1:
   url: http://www.yasni.de/index.php?action=search&search=1&sh=&name={%query}&filter=Stichwort
   title: Yasni Personensuche
@@ -1973,12 +1902,6 @@ ytorr 1:
 ytp 1:
   url: http://www.youtube.com/results?search_type=search_playlists&uni=3&search_query={%query}
   title: Youtube Playlists
-ytt 1:
-  url: http://www.youtube.com/results?search_query={%query}&uploaded=d&search_sort=video_view_count
-  title: Today's new videos
-ytw 1:
-  url: http://www.youtube.com/results?search_query={%query}&uploaded=w&search_sort=video_view_count
-  title: Last week's new videos
 z 1:
   url: http://www.zalando.de/katalog/?q={%Produkt}
   title: Zalando
