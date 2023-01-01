@@ -539,6 +539,8 @@ es 1:
 es-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Spanisch-Deutsch PONS
+  tags:
+  - old
 esb 1:
   url: https://de.bab.la/woerterbuch/spanisch-deutsch/{%Wort}
   title: Spanisch-Deutsch (bab.la)
@@ -673,6 +675,8 @@ fr 1:
 fr-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
   title: Französisch-Deutsch PONS
+  tags:
+  - old
 frb 1:
   url: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%Wort}
   title: Französisch-Deutsch (bab.la)
@@ -1040,9 +1044,13 @@ kicker 1:
 kw 1:
   url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo
   title: Kreuzworträtsel-Datenbank
+  tags:
+  - old
 kw 2:
   url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&BScount={%Buchstabenanzahl}&sourceid=serchilo
   title: Kreuzworträtsel-Datenbank
+  tags:
+  - old
 la 1:
   url: http://www.albertmartin.de/latein/?q={%query}
   title: Latein-Deutsch
@@ -1074,6 +1082,8 @@ last 1:
 leo 1:
   url: http://dict.leo.org/?search={%Wort}
   title: 'Englisch-Deutsch: leo.org'
+  tags:
+  - old
 lobby 0:
   url: http://lobbycontrol.de/
   title: LobbyControl
@@ -1204,6 +1214,8 @@ offlo 1:
 ok 1:
   url: http://www.otrkey.com/?q={%Suche}
   title: otrkey.com
+  tags:
+  - old
 osm? 0:
   url: https://wiki.openstreetmap.org/index.php/Hauptseite
   title: OpenStreetMap Wiki
@@ -1241,6 +1253,8 @@ ot? 0:
 otr 1:
   url: http://epg.onlinetvrecorder.com/broadcasts/search?searchterm={%Suche}&future=1
   title: OnlineTVRecorder EPG search
+  tags:
+  - old
 pl 1:
   url: https://de.langenscheidt.com/deutsch-polnisch/search?term={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Langenscheidt)
@@ -1312,6 +1326,7 @@ ptb 1:
   - dictionary
   - german
   - portuguese
+  - old
   examples:
     baum: Übersetzung von "baum"
     árvore: Übersetzung von "árvore"
@@ -1366,6 +1381,8 @@ reim 1:
 rezept 1:
   url: http://www.kochmeister.com/search.php?w={%Zutat}
   title: Kochmeister
+  tags:
+  - old
 rezeptefuchs 0:
   url: http://www.rezeptefuchs.de/
   title: Rezeptefuchs Startseite
@@ -1488,6 +1505,8 @@ sat1text 1:
 sc 1:
   url: http://www.scienceticker.info/index.php?s={%Suche}&sc
   title: Scienceticker
+  tags:
+  - old
 sch 1:
   url: http://www.schwuugle.de/results.html?cx=009729828355623405941%3Aoz2xu-2vkai&cof=FORID%3A10&q={%query}&sa=schwuuglen&security=666#1193
   title: Schwuugle - die schwule Websuche
@@ -1830,6 +1849,8 @@ vzg 1:
 wetter 1:
   url: http://de.wetter.com/suche/?search={%Ort}
   title: Wetter.com
+  tags:
+  - old
 wn 1:
   url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort={%query}
   title: Wörterbuchnetz
@@ -1843,6 +1864,8 @@ wn 1:
 wort 1:
   url: http://www.dwds.de/?qu={%Wort}&view=1
   title: Digitales Wörterbuch der Deutschen Sprache
+  tags:
+  - old
 ws 0:
   url: http://wortschatz.uni-leipzig.de
   title: Wortschatz-Lexikon
