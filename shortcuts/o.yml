@@ -1837,6 +1837,12 @@ dwb 0:
 dwb 1:
   url: http://www.woerterbuchnetz.de/DWB?lemma={%Wort}
   title: Deutsches Wörterbuch von Jacob und Wilhelm Grimm
+dz 0:
+  url: http://www.deezer.com/
+  title: Deezer Homepage
+  tags:
+  - deezer
+  - music
 dz 1:
   url: http://www.deezer.com/search/{%query}
   title: Deezer
