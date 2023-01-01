@@ -89,8 +89,8 @@ actions['testFetch'] = async function () {
 actions['applyFilter'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
-  const ymlFilePath = ymlDirPath + 'old-o.yml';
-  ymls[ymlFilePath] = ymlsAll[ymlFilePath];
+  const ymlFileName = 'old-o.yml';
+  ymls[ymlFileName] = ymlsAll[ymlFileName];
   for (const ymlFilePath in ymls) {
     const yml = ymls[ymlFilePath];
     for (const key in yml) {
