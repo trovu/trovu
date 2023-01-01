@@ -3,7 +3,7 @@ const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain')
 
 const actions = {};
-const filters = {};
+const modifiers = {};
 
 let ymlDirPath;
 
@@ -107,7 +107,7 @@ actions['listKeys'] = async function () {
   }
 }
 
-actions['applyFilter'] = async function () {
+actions['applyModifier'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
   const ymlFileName = 'old-o.yml';
@@ -115,9 +115,9 @@ actions['applyFilter'] = async function () {
   for (const ymlFilePath in ymls) {
     const yml = ymls[ymlFilePath];
     for (const key in yml) {
-      const shortcut = yml[key];
-      const keepShortcut = await filters[process.argv[3]](shortcut);
-      if (!keepShortcut) {
+      let shortcut = yml[key];
+      shortcut = await modifiers[process.argv[3]](shortcut);
+      if (!shortcut) {
         delete yml[key];
       }
     }
@@ -125,7 +125,7 @@ actions['applyFilter'] = async function () {
   writeYmls(ymls);
 }
 
-filters['removeDeadDomains'] = async function (shortcut) {
+modifiers['removeDeadDomains'] = async function (shortcut) {
   const skipDomains = [
     'colourlovers.com',
     'iafd.com',
@@ -136,17 +136,17 @@ filters['removeDeadDomains'] = async function (shortcut) {
   for (const skipDomain of skipDomains) {
     if (shortcut.url.search(new RegExp(skipDomain, "i")) > -1 ) {
       console.log('Skipping listed domain:', shortcut.url);
-      return true;
+      return shortcut;
     }
   }
   if (!isValidUrl(shortcut.url)) {
     console.log('Skipping invalid URL:', shortcut.url);
-    return true;
+    return shortcut;
   }
   const url = new URL(shortcut.url);
   if (!isValidDomain(url.hostname)) {
     console.log('Skipping invalid hostname:', url.host);
-    return true;
+    return shortcut;
   }
   // console.log(url.host);
   const testUrl = url.protocol + '//' + url.host;
@@ -163,7 +163,7 @@ filters['removeDeadDomains'] = async function (shortcut) {
     console.error(error);
     return false;
   }
-  return true;
+  return shortcut;
 }
 
 main();
