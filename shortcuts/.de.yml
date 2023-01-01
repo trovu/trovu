@@ -941,6 +941,15 @@ gls 3:
   tags:
   - gls
   - shipping
+gm 2:
+  url: https://www.google.com/maps/search/{%city|type=city}%2C%20{%location}%2C%20Germany/?hl={$language}
+  title: Google Maps
+  tags:
+  - maps
+  - google
+  examples:
+    b, brandenburger tor: Show Brandenburger Tor in Berlin, Germany 
+    hh, alster: Show Alster in Hamburg, Germany 
 gmb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Berlin%2C%20Deutschland
   title: Google Maps Berlin

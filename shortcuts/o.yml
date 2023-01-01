@@ -3615,14 +3615,6 @@ gm 1:
   - google
   examples:
     london: Show London on Google Maps
-gm 2:
-  url: https://www.google.com/maps/search/{%city|type=city}%2C%20{%location}/?hl={$language}
-  title: Google Maps
-  tags:
-  - maps
-  - google
-  examples:
-    de.b, brandenburger tor: Show Brandenburger Tor in Berlin, Germany 
 gmail 0:
   url: https://mail.google.com
   title: Google Mail
