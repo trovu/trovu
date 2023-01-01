@@ -4682,6 +4682,14 @@ phpg 1:
   - programming
   examples:
     strlen: Search for "strlen"
+phpg! 1:
+  url: http://www.google.com/search?btnI=1&q=site%3Awww.php.net+{%query}
+  title: PHP Documentation via Google Feeling Lucky
+  tags:
+  - php
+  - programming
+  examples:
+    strlen: Search for "strlen"
 pin 0:
   url: http://pinterest.com/
   title: Pinterest
