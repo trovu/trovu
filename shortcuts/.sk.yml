@@ -29,7 +29,7 @@ cp 4:
   examples:
     bratislava, košice: Vlak alebo bus z Bratislavy do Košić o 20:00h 10.12.
 gm 2:
-  url: http://maps.google.com/maps?hl={$language}&q={%mesto|type=city}%2C%20{%adresa}%2C%20Slovensko
+  url: https://www.google.com/maps/search/{%mesto|type=city}%2C%20{%adresa}%2C%20Slovensko/?hl={$language}
   title: Google Maps Slovensko
   tags:
   - maps
