@@ -119,12 +119,12 @@ filters['removeDeadDomains'] = async function (shortcut) {
     }
   }
   if (!isValidUrl(shortcut.url)) {
-    console.log(shortcut.url + ' is not a valid url, skipping.');
+    console.log('Skipping invalid URL:', shortcut.url);
     return true;
   }
   const url = new URL(shortcut.url);
   if (!isValidDomain(url.hostname)) {
-    console.log(url.host + ' is not a valid hostname, skipping.');
+    console.log('Skipping invalid hostname:', url.host);
     return true;
   }
   // console.log(url.host);
