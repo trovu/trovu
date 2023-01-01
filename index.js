@@ -80,6 +80,11 @@ async function fetchWithTimeout(resource, options = {}) {
   return response;
 }
 
+actions['testFetch'] = async function () {
+    const response = await fetchWithTimeout(process.argv[3]);
+    console.log(response);
+}
+
 actions['applyFilter'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
