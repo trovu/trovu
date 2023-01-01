@@ -145,9 +145,12 @@ modifiers['removeYahooCurrencyConverters'] = async function (key, shortcut) {
 }
 
 modifiers['removeGoogleMapsCities'] = async function (key, shortcut) {
-  if (key.search(new RegExp('^gm.+')) > -1 ) {
+  if (
+    (key.search(new RegExp('^gm.+')) > -1) &&
+    (!key.match(new RegExp('^gm(b|hh|m|k|f|s|d|l|do|e|hb|dd|h|n|du) 1')))
+  ) {
     console.log('Removing', shortcut.title);
-    //return false;
+    return false;
   }
   return shortcut;
 }
