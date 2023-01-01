@@ -655,9 +655,6 @@ ggmsg 1:
 gif 1:
   url: http://www.google.com/images?hl={$language}&q={%query}&imgtype=face
   title: Google Images
-gl 1:
-  url: http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
-  title: Google Listing
 glin 1:
   url: http://www.google.com/linux?hl={$language}&q={%query}
   title: Google Linux
