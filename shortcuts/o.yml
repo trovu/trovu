@@ -3354,6 +3354,9 @@ i 1:
   - film
   examples:
     batman: Search International Movie Database for "batman"
+if 1:
+  url: http://info.com/searchw?qkw={%query}
+  title: Info.com
 iata 1:
   url: http://www.world-airport-codes.com/search/?apt={%code or city}
   title: Airport Codes (world-airport-codes.com)
