@@ -99,7 +99,6 @@ actions['applyFilter'] = async function () {
       if (!keepShortcut) {
         delete yml[key];
       }
-
     }
   }
   writeYmls(ymls);
