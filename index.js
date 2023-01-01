@@ -45,7 +45,8 @@ function writeYmls(ymls) {
   for (const ymlFileName in ymls) {
     const ymlFilePath = ymlDirPath + ymlFileName;
     const yml = ymls[ymlFileName];
-    const ymlStr = jsyaml.dump(yml, { noArrayIndent: true, lineWidth: -1 });
+    const ymlSorted = sortObject(yml);
+    const ymlStr = jsyaml.dump(ymlSorted, { noArrayIndent: true, lineWidth: -1 });
     fs.writeFileSync(ymlFilePath, ymlStr)
   }
   return ymls;
@@ -54,6 +55,13 @@ function writeYmls(ymls) {
 actions['normalize'] = async function () {
   const ymls = loadYmls();
   writeYmls(ymls);
+}
+
+function sortObject(obj) {
+  return Object.keys(obj).sort().reduce(function (result, key) {
+      result[key] = obj[key];
+      return result;
+  }, {});
 }
 
 const isValidUrl = urlString => {
