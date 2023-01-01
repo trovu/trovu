@@ -630,30 +630,33 @@ dbm 4:
   - railway
   examples:
     berlin, hamburg, 10, 28.1.: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
-dbt 2:
-  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&start=1
-  title: Deutsche Bahn Fahrplanauskunft Textversion
+dbmn 2:
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   tags:
-  - bahn
   - travel
+  - bahn
+  - railway
   examples:
     berlin, hamburg: Nächste Verbindung von Berlin nach Hamburg
-dbt 3:
-  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&start=1
-  title: Deutsche Bahn Fahrplanauskunft Textversion
+dbmn 3:
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   tags:
-  - bahn
   - travel
+  - bahn
+  - railway
   examples:
-    berlin, hamburg, 20:00: Verbindung von Berlin nach Hamburg heute um 20 Uhr
-dbt 4:
-  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
-  title: Deutsche Bahn Fahrplanauskunft Textversion
+    berlin, hamburg, 10: Verbindung von Berlin nach Hamburg heute um 10 Uhr
+dbmn 4:
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
+  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   tags:
-  - bahn
   - travel
+  - bahn
+  - railway
   examples:
-    berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
+    berlin, hamburg, 10, 28.1.: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
 dbn 2:
   url: http://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
@@ -683,33 +686,30 @@ dbn 4:
   - affiliate
   examples:
     berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
-dbmn 2:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&journeyProducts=1016&start=1
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+dbt 2:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&start=1
+  title: Deutsche Bahn Fahrplanauskunft Textversion
   tags:
-  - travel
   - bahn
-  - railway
+  - travel
   examples:
     berlin, hamburg: Nächste Verbindung von Berlin nach Hamburg
-dbmn 3:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+dbt 3:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&start=1
+  title: Deutsche Bahn Fahrplanauskunft Textversion
   tags:
-  - travel
   - bahn
-  - railway
+  - travel
   examples:
-    berlin, hamburg, 10: Verbindung von Berlin nach Hamburg heute um 10 Uhr
-dbmn 4:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+    berlin, hamburg, 20:00: Verbindung von Berlin nach Hamburg heute um 20 Uhr
+dbt 4:
+  url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  title: Deutsche Bahn Fahrplanauskunft Textversion
   tags:
-  - travel
   - bahn
-  - railway
+  - travel
   examples:
-    berlin, hamburg, 10, 28.1.: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
+    berlin, hamburg, 20:00, 31.12.: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
 dbtn 2:
   url: http://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
@@ -6624,6 +6624,13 @@ jf 1:
   - literature
   examples:
     He pulse tube cooler operating down to 1.3 K: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
+jw 1:
+  url: https://www.justwatch.com/de/Suche?q={%query}
+  title: JustWatch
+  description: Searching a movie or tv series at JustWatch.com by given name
+  tags:
+  - movies
+  - series
 kaufland 0:
   url: https://www.kaufland.de/
   title: Kaufland Online Marktplatz
@@ -6636,13 +6643,6 @@ kaufland 1:
   - shopping
   examples:
     spiele: Suche auf Kaufland.de nach "spiele"
-jw 1:
-  url: https://www.justwatch.com/de/Suche?q={%query}
-  title: JustWatch
-  description: Searching a movie or tv series at JustWatch.com by given name
-  tags:
-  - movies
-  - series
 kfz 1:
   url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20{%Ort/Kennzeichen}&ie=utf-8
   title: KFZ-Kennzeichen Deutschland
@@ -6734,15 +6734,15 @@ mfg 4:
   - mitfahrgelegenheit
   examples:
     berlin, hamburg, 31,12: Suche Mitfahrgelegenheit von Berlin nach Hamburg am 31.12.
-mfs 1:
-  url: http://www.medizinfuchs.de/produkt/search/{%Suche}
-  title: Medizinfuch Apothekenpreisvergleich
 mfga 0:
   url: http://www.mitfahrgelegenheit.de/searches/search_abroad
   title: Mitfahrgelegenheit.de, Ausland
   tags:
   - travel
   - mitfahrgelegenheit
+mfs 1:
+  url: http://www.medizinfuchs.de/produkt/search/{%Suche}
+  title: Medizinfuch Apothekenpreisvergleich
 mvv 2:
   url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any
   title: Elektronische Fahrplanauskunft München

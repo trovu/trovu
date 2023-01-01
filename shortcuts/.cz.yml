@@ -6,6 +6,13 @@ alza 1:
   - shopping
   examples:
     televizor: Hledej "televizor"
+ba 1:
+  url: https://www.bazos.cz/search.php?hledat={%výraz}
+  title: Bazoš.cz
+  tags:
+  - bazoš
+  examples:
+    vrtačka: Hledej použitou vrtačku
 g 1:
   url: https://www.google.cz/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.cz
@@ -121,10 +128,3 @@ zbozi 1:
   - shopping
   examples:
     televizor: Hledej "televizor"
-ba 1:
-  url: https://www.bazos.cz/search.php?hledat={%výraz}
-  title: Bazoš.cz
-  tags:
-  - bazoš
-  examples:
-    vrtačka: Hledej použitou vrtačku

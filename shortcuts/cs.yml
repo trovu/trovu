@@ -1,12 +1,3 @@
-csfd 1:
-  url: http://www.csfd.cz/hledat/?q={%výraz}
-  title: Česko-Slovenská filmová databáze
-  tags:
-  - movies
-  - czech
-  - slovak
-  examples:
-    Pelíšky: Hledat "Pelíšky"
 c 1:
   url: http://www.csfd.cz/hledat/?q={%výraz}
   title: Česko-Slovenská filmová databáze
@@ -16,13 +7,25 @@ c 1:
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
-kinobox 1:
-  url: http://www.kinobox.cz/najdi?t={%query}
-  title: Kinobox.cz
+cs 1:
+  url: https://ssjc.ujc.cas.cz/search.php?heslo={%výraz}&sti=EMPTY&where=hesla&hsubstr=no
+  title: Slovník spisovného jazyka českého
+  tags:
+  - dictionary
+  - language
+  - slovník
+  - czech
+  examples:
+    strom: '"strom" – dřevina s kmenem'
+csfd 1:
+  url: http://www.csfd.cz/hledat/?q={%výraz}
+  title: Česko-Slovenská filmová databáze
   tags:
   - movies
+  - czech
+  - slovak
   examples:
-    forrest gump: Search for "forrest gump"
+    Pelíšky: Hledat "Pelíšky"
 de 1:
   url: https://slovniky.lingea.cz/nemecko-cesky/{%výraz}
   title: Německo-český (Lingea)
@@ -75,58 +78,6 @@ fr 1:
   examples:
     arbre: '"arbre" česky'
     strom: '"strom" francouzsky'
-pl 1:
-  url: https://slovniky.lingea.cz/polsko-cesky/{%výraz}
-  title: Polsko-český (Lingea)
-  tags:
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - czech
-  - polish
-  examples:
-    drzewo: '"drzewo" česky'
-    strom: '"strom" polsky'
-vi 1:
-  url: https://slovniky.lingea.cz/vietnamsko-cesky/{%výraz}
-  title: Vietnamsko-český (Lingea)
-  tags:
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - czech
-  - vietnamese
-  examples:
-    cây: '"cây" česky'
-    strom: '"strom" vietnamsky'
-ru 1:
-  url: https://slovniky.lingea.cz/rusko-cesky/{%výraz}
-  title: Rusko-český (Lingea)
-  tags:
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - czech
-  - russian
-  examples:
-    магазин: '"магазин" česky'
-    prodejna: '"prodejna" rusky'
-uk 1:
-  url: https://slovniky.lingea.cz/ukrajinsko-cesky/{%výraz}
-  title: Ukrajinsko-český (Lingea)
-  tags:
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - czech
-  - ukrainian
-  examples:
-    дім: '"дім" česky'
-    dům: '"dům" ukrajinsky'
 hr 1:
   url: https://slovniky.lingea.cz/chorvatsko-cesky/{%výraz}
   title: Chorvatsko-český (Lingea)
@@ -140,6 +91,39 @@ hr 1:
   examples:
     drvo: '"drvo" česky'
     strom: '"strom" chorvatsky'
+kinobox 1:
+  url: http://www.kinobox.cz/najdi?t={%query}
+  title: Kinobox.cz
+  tags:
+  - movies
+  examples:
+    forrest gump: Search for "forrest gump"
+pl 1:
+  url: https://slovniky.lingea.cz/polsko-cesky/{%výraz}
+  title: Polsko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - polish
+  examples:
+    drzewo: '"drzewo" česky'
+    strom: '"strom" polsky'
+ru 1:
+  url: https://slovniky.lingea.cz/rusko-cesky/{%výraz}
+  title: Rusko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - russian
+  examples:
+    магазин: '"магазин" česky'
+    prodejna: '"prodejna" rusky'
 sk 1:
   url: https://slovniky.lingea.cz/slovensko-cesky/{%výraz}
   title: Slovensko-český (Lingea)
@@ -151,19 +135,35 @@ sk 1:
   - czech
   examples:
     obrúčka: '"obrúčka" česky'
-cs 1:
-  url: https://ssjc.ujc.cas.cz/search.php?heslo={%výraz}&sti=EMPTY&where=hesla&hsubstr=no
-  title: Slovník spisovného jazyka českého
-  tags:
-  - dictionary
-  - language
-  - slovník
-  - czech
-  examples:
-    strom: '"strom" – dřevina s kmenem'
 sub 1:
   url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
   title: Filmové titulky (Open Subtitles)
   tags:
   - titulky
   - subtitles
+uk 1:
+  url: https://slovniky.lingea.cz/ukrajinsko-cesky/{%výraz}
+  title: Ukrajinsko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - ukrainian
+  examples:
+    дім: '"дім" česky'
+    dům: '"dům" ukrajinsky'
+vi 1:
+  url: https://slovniky.lingea.cz/vietnamsko-cesky/{%výraz}
+  title: Vietnamsko-český (Lingea)
+  tags:
+  - dictionary
+  - language
+  - lingea
+  - slovník
+  - czech
+  - vietnamese
+  examples:
+    cây: '"cây" česky'
+    strom: '"strom" vietnamsky'

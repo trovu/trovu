@@ -877,6 +877,13 @@ bpoc 1:
   - ontologies
   examples:
     GRO: Display the BioPortal ontology classes page of the Gene Regulation Ontology (GRO).
+br 0:
+  url: https://bikerouter.de
+  title: Bike Router
+  description: Open source bike router, openstreetmap
+  tags:
+  - bike
+  - router
 brew 1:
   url: https://www.google.de/search?hl={$language}&q=site%3Abrew.sh%20{%query}&ie=utf-8
   title: Homebrew Package Manager
@@ -885,13 +892,6 @@ brew 1:
   - packages
   examples:
     vim: Search for packages about vim.
-br 0:
-  url: https://bikerouter.de
-  title: Bike Router
-  description: Open source bike router, openstreetmap
-  tags:
-  - bike
-  - router
 briar 0:
   url: https://briarproject.org/
   title: Briar Software
@@ -1051,16 +1051,6 @@ chf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Swiss franc into Euros
-crx 1:
-  url: https://chrome.google.com/webstore/search/{%query}?_category=extensions
-  title: Chrome Extensions
-  tags:
-  - google
-  - chrome
-  - browser
-  - extension
-  examples:
-    page rank: Search for Google Chrome extensions about "page rank"
 clp 2:
   url: http://finance.yahoo.com/currency-converter/#from=clp;to={%to code};amt={%amount}
   title: 'Convert Chilean peso (Yahoo) '
@@ -1228,6 +1218,16 @@ crug 1:
   - catalogue
   examples:
     linguistics in the netherlands: Find issues of the journal "Linguistics in the Netherlands" in the catalog
+crx 1:
+  url: https://chrome.google.com/webstore/search/{%query}?_category=extensions
+  title: Chrome Extensions
+  tags:
+  - google
+  - chrome
+  - browser
+  - extension
+  examples:
+    page rank: Search for Google Chrome extensions about "page rank"
 cul 1:
   url: http://www.citeulike.org/search/all?q={%query}
   title: CiteULike Search
@@ -2199,16 +2199,6 @@ findutf 0:
   - unicode character
   - image
   - online tool
-fiverr 0:
-  url: https://www.fiverr.com/
-  title: Fiverr
-  tags:
-  - services
-fiverr 1:
-  url: https://www.fiverr.com/search/gigs?query={%query}
-  title: Fiverr Gigs
-  tags:
-  - services
 fisbroker 0:
   url: https://fbinter.stadt-berlin.de/fb/index.jsp
   title: FIS-Broker Geodatenportal Berlin (Geo- und Sachdatenabfrage)
@@ -2219,6 +2209,16 @@ fisbroker 0:
   - gis
   - kataster
   - fisbroker
+fiverr 0:
+  url: https://www.fiverr.com/
+  title: Fiverr
+  tags:
+  - services
+fiverr 1:
+  url: https://www.fiverr.com/search/gigs?query={%query}
+  title: Fiverr Gigs
+  tags:
+  - services
 fjd 2:
   url: http://finance.yahoo.com/currency-converter/#from=fjd;to={%to code};amt={%amount}
   title: 'Convert Fiji dollar (Yahoo) '
@@ -2961,9 +2961,6 @@ gnf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Guinean franc into Euros
-gnu 2:
-  url: https://www.google.com/search?ned={%language-code}&q={%query}&source=lnms&tbm=nws
-  title: Google News (universal language select)
 gns 1:
   url: https://www.google.de/search?q={%query}&tbm=nws&hl={$language}
   title: Google News search in your language
@@ -2972,6 +2969,9 @@ gns 1:
   - google
   examples:
     berlin: Search Google News for berlin
+gnu 2:
+  url: https://www.google.com/search?ned={%language-code}&q={%query}&source=lnms&tbm=nws
+  title: Google News (universal language select)
 gopkg 0:
   url: https://pkg.go.dev
   title: pkg.go.dev
@@ -3334,12 +3334,6 @@ i 1:
   - film
   examples:
     batman: Search International Movie Database for "batman"
-if 1:
-  url: http://www.iconfinder.com/search/?q={%query}
-  title: IconFinder query
-inf 1:
-  url: http://info.com/searchw?qkw={%query}
-  title: Info.com
 iata 1:
   url: http://www.world-airport-codes.com/search/?apt={%code or city}
   title: Airport Codes (world-airport-codes.com)
@@ -3373,6 +3367,9 @@ idr 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Indonesian rupiah into Euros
+if 1:
+  url: http://www.iconfinder.com/search/?q={%query}
+  title: IconFinder query
 ig 1:
   url: https://www.instagram.com/{%name}
   title: Instagram
@@ -3425,6 +3422,9 @@ imp 1:
   - stock agency
   examples:
     christmas: search photos about christmas
+inf 1:
+  url: http://info.com/searchw?qkw={%query}
+  title: Info.com
 inr 2:
   url: http://finance.yahoo.com/currency-converter/#from=inr;to={%to code};amt={%amount}
   title: 'Convert Indian rupee (Yahoo) '
@@ -5061,14 +5061,6 @@ reddit 0:
   tags:
   - forum
   - reddit
-rg 1:
-  url: https://www.google.com/search?hl={$language}&sitesearch=reddit.com&q={%query}
-  title: Reddit via Google
-  tags:
-  - forum
-  - reddit
-  examples:
-    berlin: Search for "berlin"
 remove 1:
   url: http://www.shouldiremoveit.com/programs.aspx?q={%product}
   title: ShouldIRemoveIt
@@ -5093,6 +5085,14 @@ rfc 1:
   examples:
     '1945': Open RFC 1945
     http: Open RFC about HTTP
+rg 1:
+  url: https://www.google.com/search?hl={$language}&sitesearch=reddit.com&q={%query}
+  title: Reddit via Google
+  tags:
+  - forum
+  - reddit
+  examples:
+    berlin: Search for "berlin"
 ron 2:
   url: http://finance.yahoo.com/currency-converter/#from=ron;to={%to code};amt={%amount}
   title: 'Convert Romanian new leu (Yahoo) '
@@ -6042,15 +6042,6 @@ usd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 United States dollar into Euros
-uyu 2:
-  url: http://finance.yahoo.com/currency-converter/#from=uyu;to={%to code};amt={%amount}
-  title: 'Convert Uruguayan peso (Yahoo) '
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Uruguayan peso into Euros
 uxse 0:
   url: https://unix.stackexchange.com/
   title: Unix Stack Exchange
@@ -6069,6 +6060,15 @@ uxse 1:
   - stackexchange
   examples:
     debian: Questions about debian
+uyu 2:
+  url: http://finance.yahoo.com/currency-converter/#from=uyu;to={%to code};amt={%amount}
+  title: 'Convert Uruguayan peso (Yahoo) '
+  tags:
+  - finance
+  - currency
+  - yahoo
+  examples:
+    eur, 1: Convert 1 Uruguayan peso into Euros
 vbblive 0:
   url: http://fahrinfo.vbb.de/bin/help.exe/dn?L=vs_mobilitymap&tpl=fullmap&tabApp=show
   title: VBB Verkehrsverbund Berlin-Brandenburg Livemap

@@ -947,6 +947,16 @@ it 1:
   - dictionary
   examples:
     baum: Search for "baum"
+it-ital 1:
+  url: http://www.italdict.de/exec/?S={%query}
+  title: Italienisch-Deutsch (italdict.de)
+  tags:
+  - language
+  - dictionary
+  - german
+  - italian
+  examples:
+    baum: Übersetzung für "baum"
 itb 1:
   url: https://de.bab.la/woerterbuch/italienisch-deutsch/{%Wort}
   title: Italienisch-Deutsch (bab.la)
@@ -958,16 +968,6 @@ itb 1:
   examples:
     baum: Übersetzung von "baum"
     albero: Übersetzung von "albero"
-it-ital 1:
-  url: http://www.italdict.de/exec/?S={%query}
-  title: Italienisch-Deutsch (italdict.de)
-  tags:
-  - language
-  - dictionary
-  - german
-  - italian
-  examples:
-    baum: Übersetzung für "baum"
 itd 1:
   url: http://deit.dict.cc/?s={%Wort}
   title: Italienisch-Deutsch (dict.cc)
