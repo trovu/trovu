@@ -35,7 +35,8 @@ gm 2:
   - maps
   - google
   examples:
-    hlavná: Ukáž Hlavná v meste Bratislava
+    ba, hlavná: Ukáž Hlavná v meste Bratislava
+    ke, hlavná: Ukáž Hlavná v meste Košice
 gmba 1:
   url: http://maps.google.com/maps?hl={$language}&q={%adresa}%2C%20Bratislava%2C%20Slovensko
   title: Google Maps Bratislava
