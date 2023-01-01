@@ -144,6 +144,14 @@ modifiers['removeYahooCurrencyConverters'] = async function (shortcut) {
   return shortcut;
 }
 
+modifiers['removeGoogleMapsCities'] = async function (shortcut) {
+  if (shortcut.keyword.search(new RegExp('^gm\+*')) > -1 ) {
+    console.log('Removing ', shortcut.title);
+    //return false;
+  }
+  return shortcut;
+}
+
 modifiers['removeDeadDomains'] = async function (shortcut) {
   const skipDomains = [
     'colourlovers.com',
