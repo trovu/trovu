@@ -3608,7 +3608,7 @@ gm 0:
   - maps
   - google
 gm 1:
-  url: https://www.google.com/maps/search/{%query}/?hl={$language}
+  url: https://www.google.com/maps/search/{%location}/?hl={$language}
   title: Google Maps
   tags:
   - maps
