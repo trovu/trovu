@@ -21,6 +21,16 @@ g 1:
   - google
   examples:
     praha: Hledat "praha" Googlem
+gm 2:
+  url: https://www.google.com/maps/search/{%město|type=city}%2C%20{%adresa}%2C%20Česko/?hl={$language}
+  title: Google Maps Česko
+  tags:
+  - maps
+  - google
+  examples:
+    a, lazarská: Ukáž Lazarská v Praze
+    b, zelný trh: Ukáž Zelný trh v Brně
+    ov, stodolní: Ukáž Stodolní v Ostravĕ
 idos 2:
   url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&submit=1&pt=true
   title: IDOS Jízdní řády
