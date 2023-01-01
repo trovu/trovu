@@ -86,6 +86,19 @@ actions['testFetch'] = async function () {
     console.log(response);
 }
 
+actions['listKeys'] = async function () {
+  const ymlsAll = loadYmls();
+  const ymls = {};
+  const ymlFileName = process.argv[3] + '.yml';
+  ymls[ymlFileName] = ymlsAll[ymlFileName];
+  for (const ymlFilePath in ymls) {
+    const yml = ymls[ymlFilePath];
+    for (const key in yml) {
+      console.log(key);
+    }
+  }
+}
+
 actions['applyFilter'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
