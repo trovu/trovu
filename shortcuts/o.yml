@@ -3602,13 +3602,13 @@ glw 1:
   tags:
   - old
 gm 0:
-  url: http://maps.google.com/maps?hl={$language}
+  url: https://www.google.com/maps?hl={$language}
   title: Google Maps Homepage
   tags:
   - maps
   - google
 gm 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%query}
+  url: https://www.google.com/maps/search/{%query}/?hl={$language}
   title: Google Maps
   tags:
   - maps
