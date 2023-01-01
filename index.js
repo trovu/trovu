@@ -4,11 +4,21 @@ const isValidDomain = require('is-valid-domain')
 
 const actions = {};
 
+let ymlDirPath;
+
 async function main() {
     if (process.argv.length < 3) {
         console.log('Usage: node index.js action [path]')
         return;
     }
+
+    if (!process.env.TROVU_DATA_PATH) {
+        console.log('Environment variable TROVU_DATA_PATH must contain full path to trovu-data directory. Pleas set with:')
+        console.log('export TROVU_DATA_PATH=/path/to/trovu-data')
+        return;
+    }
+    ymlDirPath = process.env.TROVU_DATA_PATH;
+
     const action = process.argv[2];
     if (action in actions) {
         actions[action]();
