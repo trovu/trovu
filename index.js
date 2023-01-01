@@ -46,6 +46,9 @@ function writeYmls(ymls) {
     const ymlFilePath = ymlDirPath + ymlFileName;
     const yml = ymls[ymlFileName];
     const ymlSorted = sortObject(yml);
+    // TODO:
+    // trim strings: - keys - titles - examples - description
+    // make sure, subkeys are in reverse particular order: url, post_params, description, tags, examples
     const ymlStr = jsyaml.dump(ymlSorted, { noArrayIndent: true, lineWidth: -1 });
     fs.writeFileSync(ymlFilePath, ymlStr)
   }
