@@ -838,9 +838,6 @@ ierender 1:
 ierender 2:
   url: http://meineipadresse.de/netrenderer/index.php?url={%url}&browser={%engine}
   title: Render a Homepage with an Internet Explorer Engine
-if 1:
-  url: http://www.iconfinder.com/search/?q={%query}
-  title: IconFinder query
 ikeanl 1:
   url: http://www.ikea.com/nl/nl/search/?query={%query}
   title: Ikea

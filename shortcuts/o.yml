@@ -3346,6 +3346,9 @@ i 1:
   - film
   examples:
     batman: Search International Movie Database for "batman"
+if 1:
+  url: http://www.iconfinder.com/search/?q={%query}
+  title: IconFinder query
 inf 1:
   url: http://info.com/searchw?qkw={%query}
   title: Info.com
