@@ -730,12 +730,6 @@ goof 0:
 goof 1:
   url: http://finance.google.com/finance?q={%value}
   title: Google Finance
-gp 1:
-  url: http://gentoo-portage.com/Search?search={%package}
-  title: Gentoo Portage Search
-gpbrowse 0:
-  url: http://gentoo-portage.com/Browse
-  title: Gentoo Portage Browse
 gpo 1:
   url: http://gpo.zugaina.org/Search?search={%package}
   title: Gentoo Overlay Search
