@@ -325,15 +325,6 @@ ae 1:
   - aliexpress
   examples:
     bicycle light: Search Aliexpress for "bicycle light"
-aed 2:
-  url: http://finance.yahoo.com/currency-converter/#from=aed;to={%to code};amt={%amount}
-  title: Convert United Arab Emirates dirham (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 United Arab Emirates dirham into Euros
 af 1:
   url: http://www.acronymfinder.com/af-query.asp?Acronym={%query}&Find=find&string=exact
   title: Acronym Finder
@@ -359,15 +350,6 @@ alexa 1:
 alibaba 1:
   url: https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={%name}
   title: Alibaba Product Search
-all 2:
-  url: http://finance.yahoo.com/currency-converter/#from=all;to={%to code};amt={%amount}
-  title: Convert Albanian lek (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Albanian lek into Euros
 allmovie 1:
   url: http://www.allmovie.com/search/all/{%movie}
   title: All Movie
@@ -435,15 +417,6 @@ am 2:
   examples:
     b, Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
     hh, berliner tor: Show Berliner Tor in Hamburg
-ang 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ang;to={%to code};amt={%amount}
-  title: Convert Netherlands Antillean guilder (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Netherlands Antillean guilder into Euros
 ani 0:
   url: http://www.anilinkz.com
   title: Anilinkz
@@ -534,15 +507,6 @@ ardu 1:
   - electronics
   examples:
     loop: Search for loop
-ars 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ars;to={%to code};amt={%amount}
-  title: Convert Argentine peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Argentine peso into Euros
 arxiv 1:
   url: http://arxiv.org/search?query={%query}
   title: ArXiv
@@ -579,24 +543,6 @@ atrf 1:
   - rage faces
   examples:
     scared: Search for scared
-aud 2:
-  url: http://finance.yahoo.com/currency-converter/#from=aud;to={%to code};amt={%amount}
-  title: Convert Australian dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Australian dollar into Euros
-awg 2:
-  url: http://finance.yahoo.com/currency-converter/#from=awg;to={%to code};amt={%amount}
-  title: Convert Aruban florin (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Aruban florin into Euros
 b 0:
   url: http://www.bing.com
   title: Bing
@@ -627,15 +573,6 @@ bart 1:
   - shopping
   examples:
     shakespeare: Search for berlin
-bbd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bbd;to={%to code};amt={%amount}
-  title: Convert Barbados dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Barbados dollar into Euros
 bch 1:
   url: https://blockchair.com/search?q={%bch_adress_or_transaction}
   title: Bitcoin Cash
@@ -647,43 +584,16 @@ bd 1:
   - sercurity
   examples:
     www.google.com: Check if Google.com contains malware
-bdt 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bdt;to={%to code};amt={%amount}
-  title: Convert Bangladeshi taka (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Bangladeshi taka into Euros
 bf 1:
   url: http://www.boerse-frankfurt.de/suchergebnisse?_search={%query}
   title: Börse Frankfurt Abfrage
   examples:
     Telekom: Search Börse Frankfurt Abfrage for "bf Telekom"
-bgn 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bgn;to={%to code};amt={%amount}
-  title: Convert Bulgarian lev (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Bulgarian lev into Euros
 bgo 1:
   url: http://bugs.gentoo.org/buglist.cgi?quicksearch={%query}
   title: Gentoo Bugzilla
   tags:
   - old
-bhd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bhd;to={%to code};amt={%amount}
-  title: Convert Bahraini dinar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Bahraini dinar into Euros
 bhf 1:
   url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query={%Bahnhof}
   title: Bahnhof
@@ -776,15 +686,6 @@ bibso+ 1:
   - social
   examples:
     http://www.serchilo.net/: Add http://www.serchilo.net/ to Bibsonomy
-bif 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bif;to={%to code};amt={%amount}
-  title: Convert Burundian franc (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Burundian franc into Euros
 bins 1:
   url: http://binsearch.info/?max=100&adv_age=1100&server=&q={%query}
   title: Binsearch.info
@@ -801,15 +702,6 @@ bm 1:
   - bing
   examples:
     berlin: Search for "berlin"
-bmd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bmd;to={%to code};amt={%amount}
-  title: Convert Bermudian dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Bermudian dollar into Euros
 bmf 0:
   url: http://www.bessermitfahren.de/
   title: Besser mitfahren
@@ -838,24 +730,6 @@ bn 1:
   tags:
   - news
   - bing
-bnd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bnd;to={%to code};amt={%amount}
-  title: Convert Brunei dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Brunei dollar into Euros
-bob 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bob;to={%to code};amt={%amount}
-  title: Convert Boliviano (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Boliviano into Euros
 booking 1:
   url: https://www.booking.com/searchresults.html?spnsbr=1&ss={%destination}&idf=on&error_url=%2F%3Faid%3D1303859%3B&si=ai%2Cco%2Cci%2Cre%2Cdi&label=&aid=1303859&utm_campaign=nsb&utm_medium=sp&utm_source=FP_Searchbox&utm_term=1303862
   title: Booking.com
@@ -900,24 +774,6 @@ brew 1:
 briar 0:
   url: https://briarproject.org/
   title: Briar Software
-brl 2:
-  url: http://finance.yahoo.com/currency-converter/#from=brl;to={%to code};amt={%amount}
-  title: Convert Brazilian real (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Brazilian real into Euros
-bsd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bsd;to={%to code};amt={%amount}
-  title: Convert Bahamian dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Bahamian dollar into Euros
 bsr 1:
   url: http://www.bsr.de/verschenkmarkt/list.asp?Stichwort={%Suche}
   title: BSR-Verschenkmarkt
@@ -950,15 +806,6 @@ btjv 1:
   title: BTJunkie Video Search
   tags:
   - old
-btn 2:
-  url: http://finance.yahoo.com/currency-converter/#from=btn;to={%to code};amt={%amount}
-  title: Convert Bhutanese ngultrum (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Bhutanese ngultrum into Euros
 btv 1:
   url: http://www.btvguide.com/searchresults/?q={%query}
   title: Btvguide
@@ -986,15 +833,6 @@ bv 1:
   - bing
   examples:
     berlin: Search for "berlin"
-bwp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bwp;to={%to code};amt={%amount}
-  title: Convert Botswana pula (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Botswana pula into Euros
 bx 1:
   url: https://www.blippex.org/?q={%query}
   title: Blippex
@@ -1002,24 +840,6 @@ bx 1:
   - web search
   examples:
     perl: search for Perl on Blippex
-byr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=byr;to={%to code};amt={%amount}
-  title: Convert Belarusian ruble (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Belarusian ruble into Euros
-bzd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=bzd;to={%to code};amt={%amount}
-  title: Convert Belize dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Belize dollar into Euros
 bzz 0:
   url: http://bookzz.org/
   title: Bookzz.org
@@ -1056,15 +876,6 @@ cad 0:
   title: Current Ctrl-Alt-Del-Comic
   tags:
   - old
-cad 2:
-  url: http://finance.yahoo.com/currency-converter/#from=cad;to={%to code};amt={%amount}
-  title: Convert Canadian dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Canadian dollar into Euros
 cadsilly 0:
   url: http://cad-comic.com/sillies
   title: Current Ctrl-Alt-Del-Silly
@@ -1137,15 +948,6 @@ chewbone 1:
   title: Chewbone Mp3 Blog Search
   tags:
   - old
-chf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=chf;to={%to code};amt={%amount}
-  title: Convert Swiss franc (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Swiss franc into Euros
 chip 1:
   url: http://suche.chip.de/?q={%query}
   title: Chip.de Suche
@@ -1186,15 +988,6 @@ cl 1:
   title: COLOURlovers color search
   tags:
   - old
-clp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=clp;to={%to code};amt={%amount}
-  title: Convert Chilean peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Chilean peso into Euros
 clpal 1:
   url: https://www.colourlovers.com/palettes/search?query={%query}
   title: COLOURlovers palette search
@@ -1242,15 +1035,6 @@ cnet 1:
   title: CNET content search
   tags:
   - old
-cny 2:
-  url: http://finance.yahoo.com/currency-converter/#from=cny;to={%to code};amt={%amount}
-  title: Convert Chinese yuan (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Chinese yuan into Euros
 co 1:
   url: http://collectr.net/={%query}
   title: Collectr
@@ -1305,15 +1089,6 @@ conj 1:
   - inflection
   examples:
     blasen: look up inflected forms of the German verb "blasen"
-cop 2:
-  url: http://finance.yahoo.com/currency-converter/#from=cop;to={%to code};amt={%amount}
-  title: Convert Colombian peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Colombian peso into Euros
 copu 1:
   url: http://www.google.com/cse?cx=000302137693213122178%3Aycoqke386yy&ie=UTF-8&q={%query}&sa=Suche
   title: Google Custom Search "computational linguistics publications"
@@ -1421,15 +1196,6 @@ cran 1:
   - r
   examples:
     bibtex: Show bibtex package
-crc 2:
-  url: http://finance.yahoo.com/currency-converter/#from=crc;to={%to code};amt={%amount}
-  title: Convert Costa Rican colon (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Costa Rican colon into Euros
 crc32 1:
   url: http://stefanschramm.net/dev/hash/?algo=crc32&q={%data}
   title: Hash functions
@@ -1520,15 +1286,6 @@ cul 1:
   - science
   examples:
     chomsky: Search CiteULike Search for "chomsky"
-cup 2:
-  url: http://finance.yahoo.com/currency-converter/#from=cup;to={%to code};amt={%amount}
-  title: Convert Cuban peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Cuban peso into Euros
 currency 3:
   url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from code}&to={%to code}
   title: Yahoo Currency converter
@@ -1547,24 +1304,6 @@ cve 1:
   title: CVE Common vulnerabilities and exposures
   tags:
   - old
-cve 2:
-  url: http://finance.yahoo.com/currency-converter/#from=cve;to={%to code};amt={%amount}
-  title: Convert Cape Verde escudo (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Cape Verde escudo into Euros
-czk 2:
-  url: http://finance.yahoo.com/currency-converter/#from=czk;to={%to code};amt={%amount}
-  title: Convert Czech koruna (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Czech koruna into Euros
 d 0:
   url: https://duckduckgo.com/
   title: Duck Duck Go
@@ -1971,15 +1710,6 @@ dje 1:
   title: Denshi Jisho
   tags:
   - old
-djf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=djf;to={%to code};amt={%amount}
-  title: Convert Djiboutian franc (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Djiboutian franc into Euros
 djj 1:
   url: http://jisho.org/words?jap={%query}
   title: Denshi Jisho
@@ -1995,15 +1725,6 @@ djp 1:
   title: Django Doc Search
   tags:
   - old
-dkk 2:
-  url: http://finance.yahoo.com/currency-converter/#from=dkk;to={%to code};amt={%amount}
-  title: Convert Danish krone (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Danish krone into Euros
 dl 0:
   url: http://www.darklyrics.com
   title: DarkLyrics.com
@@ -2197,15 +1918,6 @@ doi 1:
   - science
   examples:
     10.1000/182: Search for object with DOI 10.1000/182
-dop 2:
-  url: http://finance.yahoo.com/currency-converter/#from=dop;to={%to code};amt={%amount}
-  title: Convert Dominican peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Dominican peso into Euros
 download 1:
   url: http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch
   title: Download.com
@@ -2436,15 +2148,6 @@ dz 1:
   - music
   examples:
     eminem: Search Deezer for music from Eminem.
-dzd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=dzd;to={%to code};amt={%amount}
-  title: Convert Algerian dinar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Algerian dinar into Euros
 e 0:
   url: https://www.ebay.com/?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
@@ -2550,15 +2253,6 @@ eg 1:
   title: Ecocho (google)
   tags:
   - old
-egp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=egp;to={%to code};amt={%amount}
-  title: Convert Egyptian pound (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Egyptian pound into Euros
 eis 1:
   url: http://www.eis-machen.de/?s={%query}
   title: Eis-machen.de Search
@@ -2653,24 +2347,6 @@ era-sms 0:
   title: Era-sms
   tags:
   - old
-ern 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ern;to={%to code};amt={%amount}
-  title: Convert Eritrean nakfa (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Eritrean nakfa into Euros
-etb 2:
-  url: http://finance.yahoo.com/currency-converter/#from=etb;to={%to code};amt={%amount}
-  title: Convert Ethiopian birr (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Ethiopian birr into Euros
 eti 1:
   url: http://etimologias.dechile.net/?{%palabra}
   title: Diccionaria Etimolólico Castellano
@@ -2687,15 +2363,6 @@ ety 1:
 eucomp 1:
   url: http://ec.europa.eu/competition/elojade/isef/index.cfm?fuseaction=dsp_result&case_title={%company}
   title: EU Competition Authority Case search
-eur 2:
-  url: http://finance.yahoo.com/currency-converter/#from=eur;to={%to code};amt={%amount}
-  title: Convert Euro (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    usd, 1: Convert 1 Euro into US Dollars
 eutm 1:
   url: https://euipo.europa.eu/eSearch/#basic/1+1+1+1/50+50+50+50/{%query}
   title: EU IPO trade mark research
@@ -3054,24 +2721,6 @@ fiverr 1:
   title: Fiverr Gigs
   tags:
   - services
-fjd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=fjd;to={%to code};amt={%amount}
-  title: Convert Fiji dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Fiji dollar into Euros
-fkp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=fkp;to={%to code};amt={%amount}
-  title: Convert Falkland Islands pound (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Falkland Islands pound into Euros
 fli 0:
   url: http://www.flickr.com/search/advanced/
   title: 'Flickr: Advanced Search'
@@ -3481,15 +3130,6 @@ gbooks 1:
   - books
   examples:
     shakespeare: Search for "shakespeare"
-gbp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=gbp;to={%to code};amt={%amount}
-  title: Convert Pound sterling (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Pound sterling into Euros
 gby 2:
   url: https://www.google.de/search?tbs=cdr%3A1%2Ccd_min%3A%2Ccd_max%3A {%year}&q= {%query}&hl=de&source=lnt&tbm=
   title: Google Search before Year
@@ -3895,15 +3535,6 @@ gif 1:
 gilson 1:
   url: https://ch.gilson.com/CHSV/catalogsearch/result/?q={%query}
   title: Gilson
-gip 2:
-  url: http://finance.yahoo.com/currency-converter/#from=gip;to={%to code};amt={%amount}
-  title: Convert Gibraltar pound (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Gibraltar pound into Euros
 github 0:
   url: https://github.com/
   title: GitHub
@@ -4038,15 +3669,6 @@ gmch 1:
   title: Google Maps Schweiz
   tags:
   - old
-gmd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=gmd;to={%to code};amt={%amount}
-  title: Convert Gambian dalasi (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Gambian dalasi into Euros
 gmde 1:
   url: https://www.google.com/maps/search/{%Ort}%2C%20Germany
   title: Google Maps Deutschland
@@ -4117,15 +3739,6 @@ gnbugq 1:
   title: search for a term in gnome bugs (query)
   tags:
   - old
-gnf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=gnf;to={%to code};amt={%amount}
-  title: Convert Guinean franc (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Guinean franc into Euros
 gns 1:
   url: https://www.google.de/search?q={%query}&tbm=nws&hl={$language}
   title: Google News search in your language
@@ -4376,15 +3989,6 @@ gt 2:
     m, eruption: Search web pages for "eruption" that have been altered within the last month
     w, eruption: Search web pages for "eruption" that have been altered within the last week
     d, eruption: Search web pages for "eruption" that have been altered within the last day
-gtq 2:
-  url: http://finance.yahoo.com/currency-converter/#from=gtq;to={%to code};amt={%amount}
-  title: Convert Guatemalan quetzal (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Guatemalan quetzal into Euros
 gtr 0:
   url: http://translate.google.com/
   title: Google Translate
@@ -4520,15 +4124,6 @@ gww 1:
 gy 1:
   url: https://www.google.de/search?q={%query}&hl=de&tbs=qdr:y
   title: Google search last year timeframe
-gyd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=gyd;to={%to code};amt={%amount}
-  title: Convert Guyanese dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Guyanese dollar into Euros
 hbr 1:
   url: http://hbr.org/search/{%query}
   title: Harvard Business Research
@@ -4564,29 +4159,11 @@ hexenc 1:
   title: Hex encode
   tags:
   - old
-hkd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=hkd;to={%to code};amt={%amount}
-  title: Convert Hong Kong dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Hong Kong dollar into Euros
 hm 1:
   url: http://hypem.com/search/{%query}
   title: Hype Machine
   tags:
   - old
-hnl 2:
-  url: http://finance.yahoo.com/currency-converter/#from=hnl;to={%to code};amt={%amount}
-  title: Convert Honduran lempira (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Honduran lempira into Euros
 hoh 1:
   url: http://www.hoh.de/default.aspx?VL={%query}&SC=rel&TY=2&ST=5
   title: Home of Hardware search
@@ -4605,24 +4182,6 @@ hotu 1:
   title: Home of the Underdogs
   tags:
   - old
-hrk 2:
-  url: http://finance.yahoo.com/currency-converter/#from=hrk;to={%to code};amt={%amount}
-  title: Convert Croatian kuna (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Croatian kuna into Euros
-htg 2:
-  url: http://finance.yahoo.com/currency-converter/#from=htg;to={%to code};amt={%amount}
-  title: Convert Haitian gourde (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Haitian gourde into Euros
 html-pdf 1:
   url: http://www.html-pdf-converter.com/convert.php?u={%url}&x=0&y=0
   title: HTML to PDF Converter
@@ -4650,15 +4209,6 @@ hub 1:
   title: Hubmed
   tags:
   - old
-huf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=huf;to={%to code};amt={%amount}
-  title: Convert Hungarian forint (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Hungarian forint into Euros
 hype 1:
   url: http://hype.non-standard.net/search/{%query}
   title: Hype Machine
@@ -4738,15 +4288,6 @@ identica 1:
   title: Identi.ca Notice
   tags:
   - old
-idr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=idr;to={%to code};amt={%amount}
-  title: Convert Indonesian rupiah (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Indonesian rupiah into Euros
 ieee 1:
   url: http://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText={%query}
   title: IEEE Xplore Search
@@ -4796,15 +4337,6 @@ iload 1:
   title: ILoad.to Suche
   tags:
   - old
-ils 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ils;to={%to code};amt={%amount}
-  title: Convert Israeli new shekel (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Israeli new shekel into Euros
 im 1:
   url: http://www.imeem.com/tag/?q={%query}
   title: Imeem
@@ -4890,15 +4422,6 @@ ink 1:
   title: Inkscape Wiki
   tags:
   - old
-inr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=inr;to={%to code};amt={%amount}
-  title: Convert Indian rupee (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Indian rupee into Euros
 integral 1:
   url: http://www.wolframalpha.com/input/?i=integral%20{%query}
   title: 'WolframAlpha: Integral'
@@ -4949,33 +4472,6 @@ iptools 0:
   title: DNS and IP tools
   tags:
   - internet tool
-iqd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=iqd;to={%to code};amt={%amount}
-  title: Convert Iraqi dinar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Iraqi dinar into Euros
-irr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=irr;to={%to code};amt={%amount}
-  title: Convert Iranian rial (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Iranian rial into Euros
-isk 2:
-  url: http://finance.yahoo.com/currency-converter/#from=isk;to={%to code};amt={%amount}
-  title: Convert Icelandic króna (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Icelandic króna into Euros
 ist 0:
   url: http://www.istockphoto.com
   title: Istockphoto
@@ -5144,29 +4640,11 @@ jm 1:
   title: Jobmixer
   tags:
   - old
-jmd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=jmd;to={%to code};amt={%amount}
-  title: Convert Jamaican dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Jamaican dollar into Euros
 jmp 1:
   url: http://j.mp/?u={%url}
   title: Bit.ly
   tags:
   - old
-jod 2:
-  url: http://finance.yahoo.com/currency-converter/#from=jod;to={%to code};amt={%amount}
-  title: Convert Jordanian dinar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Jordanian dinar into Euros
 journalup 1:
   url: http://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1={%joural title}
   title: Uni Potsdam Zeitschriftenbibliothek
@@ -5182,15 +4660,6 @@ jpc 1:
   title: JPC fast search
   tags:
   - old
-jpy 2:
-  url: http://finance.yahoo.com/currency-converter/#from=jpy;to={%to code};amt={%amount}
-  title: Convert Japanese yen (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Japanese yen into Euros
 jq 1:
   url: http://docs.jquery.com/Special:Search?search={%query}
   title: JQuery API Search
@@ -5274,33 +4743,6 @@ keno 1:
   title: Kenozahlen
   tags:
   - old
-kes 2:
-  url: http://finance.yahoo.com/currency-converter/#from=kes;to={%to code};amt={%amount}
-  title: Convert Kenyan shilling (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Kenyan shilling into Euros
-khr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=khr;to={%to code};amt={%amount}
-  title: Convert Cambodian riel (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Cambodian riel into Euros
-kmf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=kmf;to={%to code};amt={%amount}
-  title: Convert Comoro franc (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Comoro franc into Euros
 koders 1:
   url: http://www.koders.com/?s={%query}&la=*&li=*
   title: Koders
@@ -5313,24 +4755,6 @@ kong 1:
   - games
   examples:
     tetris: Play Tetris online
-kpw 2:
-  url: http://finance.yahoo.com/currency-converter/#from=kpw;to={%to code};amt={%amount}
-  title: Convert North Korean won (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 North Korean won into Euros
-krw 2:
-  url: http://finance.yahoo.com/currency-converter/#from=krw;to={%to code};amt={%amount}
-  title: Convert South Korean won (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 South Korean won into Euros
 kt 1:
   url: http://kinox.to/Search.html?q={%query}
   title: Kinox.to
@@ -5349,15 +4773,6 @@ kultura 1:
   title: Culture.pl
   tags:
   - old
-kwd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=kwd;to={%to code};amt={%amount}
-  title: Convert Kuwaiti dinar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Kuwaiti dinar into Euros
 ky 2:
   url: http://www.kayak.de/flights/{%departure-destination}/20{%date YY-MM-DD}
   title: Kayak flight search
@@ -5371,15 +4786,6 @@ ky 3:
   - flights
   examples:
     txl, tfs, 13-12-24: search for flights from TXL to TFS on Dec 24, 2013
-kyd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=kyd;to={%to code};amt={%amount}
-  title: Convert Cayman Islands dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Cayman Islands dollar into Euros
 kym 1:
   url: http://knowyourmeme.com/search?q={%query}
   title: Know Your Meme
@@ -5389,29 +4795,11 @@ kym 1:
   - internet culture
   examples:
     x y is x: search for the "X Y is X" meme
-kzt 2:
-  url: http://finance.yahoo.com/currency-converter/#from=kzt;to={%to code};amt={%amount}
-  title: Convert Kazakhstani tenge (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Kazakhstani tenge into Euros
 l 1:
   url: http://search.live.com/results.aspx?q={%query}
   title: Windows Live Web search
   tags:
   - old
-lak 2:
-  url: http://finance.yahoo.com/currency-converter/#from=lak;to={%to code};amt={%amount}
-  title: Convert Lao kip (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Lao kip into Euros
 lambda 0:
   url: http://lambda-the-ultimate.org
   title: Lambda the ultimate
@@ -5473,15 +4861,6 @@ latex 1:
   title: Latex Reference
   tags:
   - old
-lbp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=lbp;to={%to code};amt={%amount}
-  title: Convert Lebanese pound (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Lebanese pound into Euros
 lc 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo={%verb}
   title: Logos Universal Conjugator
@@ -5584,15 +4963,6 @@ lipsum 2:
   - lipsum
   examples:
     200, bytes: Generate 200 bytes of "Lorem Ipsum"
-lkr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=lkr;to={%to code};amt={%amount}
-  title: Convert Sri Lankan rupee (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Sri Lankan rupee into Euros
 ll 1:
   url: http://www.liveleak.com/browse?q={%query}
   title: LiveLeak.com
@@ -5638,38 +5008,11 @@ lotto 1:
   title: Lottozahlen
   tags:
   - old
-lrd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=lrd;to={%to code};amt={%amount}
-  title: Convert Liberian dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Liberian dollar into Euros
-lsl 2:
-  url: http://finance.yahoo.com/currency-converter/#from=lsl;to={%to code};amt={%amount}
-  title: Convert Lesotho loti (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Lesotho loti into Euros
 lt 1:
   url: http://lingro.com/translate/{%website/word to translate}
   title: Lingro
   tags:
   - old
-ltl 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ltl;to={%to code};amt={%amount}
-  title: Convert Lithuanian litas (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Lithuanian litas into Euros
 lucene 0:
   url: http://lucene.apache.org/core/3_6_0/api/all/index.html
   title: Lucene API
@@ -5684,27 +5027,9 @@ lucene 1:
   - java
   examples:
     facet: Search for "facet"
-lvl 2:
-  url: http://finance.yahoo.com/currency-converter/#from=lvl;to={%to code};amt={%amount}
-  title: Convert Latvian lats (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Latvian lats into Euros
 lw 1:
   url: https://www.lampenwelt.de/catalogsearch/result/?q={%query}
   title: Lampenwelt.de
-lyd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=lyd;to={%to code};amt={%amount}
-  title: Convert Libyan dinar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Libyan dinar into Euros
 lyrc 1:
   url: http://lyrc.com.ar/en/tema1en.php?songname={%songname}
   title: Lyrc
@@ -5739,15 +5064,6 @@ macs 1:
   - mac
   - address
   - network
-mad 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mad;to={%to code};amt={%amount}
-  title: Convert Moroccan dirham (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Moroccan dirham into Euros
 mailinator 1:
   url: http://mailinator.com/maildir.jsp?email={%mailbox}
   title: Mailinator
@@ -5827,15 +5143,6 @@ md5 1:
   - programming
   examples:
     foo: Calculate MD5 hash of "foo"
-mdl 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mdl;to={%to code};amt={%amount}
-  title: Convert Moldovan leu (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Moldovan leu into Euros
 mdn 1:
   url: http://developer.mozilla.org/{$language}/search?q={%query}
   title: Mozilla Developer Network
@@ -5940,24 +5247,6 @@ mink 1:
   - programming
   examples:
     getTagName: Search Mink for "getTagName"
-mkd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mkd;to={%to code};amt={%amount}
-  title: Convert Macedonian denar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Macedonian denar into Euros
-mmk 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mmk;to={%to code};amt={%amount}
-  title: Convert Myanma kyat (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Myanma kyat into Euros
 mn 1:
   url: http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt={$language}-{$language}
   title: MSN News
@@ -5968,15 +5257,6 @@ mnen 1:
   title: MSN News
   tags:
   - old
-mnt 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mnt;to={%to code};amt={%amount}
-  title: Convert Mongolian tugrik (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Mongolian tugrik into Euros
 month 0:
   url: http://timeanddate.com/calendar/monthly.html
   title: This month
@@ -5987,15 +5267,6 @@ moodleup 0:
   title: Uni Potsdam, Moodle
   tags:
   - old
-mop 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mop;to={%to code};amt={%amount}
-  title: Convert Macanese pataca (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Macanese pataca into Euros
 mouser 1:
   url: https://www.mouser.de/_/?Keyword={%keyword}
   title: mouser.de
@@ -6006,15 +5277,6 @@ mozbot 1:
   title: Mozbot
   tags:
   - old
-mro 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mro;to={%to code};amt={%amount}
-  title: Convert Mauritanian ouguiya (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Mauritanian ouguiya into Euros
 msdn 1:
   url: http://social.msdn.microsoft.com/Search/en-US?query={%query}
   title: Microsoft Developers Network
@@ -6068,15 +5330,6 @@ mu 1:
   title: MacUpdate.com
   tags:
   - old
-mur 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mur;to={%to code};amt={%amount}
-  title: Convert Mauritian rupee (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Mauritian rupee into Euros
 mv 0:
   url: http://www.myvideo.de/
   title: MyVideo Homepage
@@ -6087,15 +5340,6 @@ mv 1:
   title: MyVideo clip search
   tags:
   - old
-mvr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mvr;to={%to code};amt={%amount}
-  title: Convert Maldivian rufiyaa (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Maldivian rufiyaa into Euros
 mwe 0:
   url: http://www.mediawiki.org/wiki/Category:Extensions
   title: Browse MediaWiki Extensions
@@ -6108,15 +5352,6 @@ mwe 1:
   tags:
   - wiki
   - mediawiki
-mwk 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mwk;to={%to code};amt={%amount}
-  title: Convert Malawian kwacha (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Malawian kwacha into Euros
 mww 1:
   url: http://www.mediawiki.org/wiki/Special:Search?search={%query}&go=Go
   title: Mediawiki Wiki
@@ -6129,15 +5364,6 @@ mwwg 1:
   tags:
   - wiki
   - mediawiki
-mxn 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mxn;to={%to code};amt={%amount}
-  title: Convert Mexican peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Mexican peso into Euros
 myfritz 0:
   url: https://www.myfritz.net/login.xhtml
   title: fritz.box access worldwide
@@ -6165,15 +5391,6 @@ mymk 1:
   title: Movie2k
   tags:
   - old
-myr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=myr;to={%to code};amt={%amount}
-  title: Convert Malaysian ringgit (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Malaysian ringgit into Euros
 mys 1:
   url: http://www.myspace.com/{%band name}
   title: Myspace
@@ -6229,15 +5446,6 @@ n4m 1:
   title: news4mobile Suche
   tags:
   - old
-nad 2:
-  url: http://finance.yahoo.com/currency-converter/#from=nad;to={%to code};amt={%amount}
-  title: Convert Namibian dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Namibian dollar into Euros
 nag 1:
   url: http://google.com/search?hl={$language}&q={%query}+inurl%3Anagios.sourceforge.net%2Fdocs
   title: Nagios
@@ -6265,15 +5473,6 @@ ng 1:
   examples:
     repeat: Show documentation on "ng-repeat"
     filter: Show documentation on "filter"
-ngn 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ngn;to={%to code};amt={%amount}
-  title: Convert Nigerian naira (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Nigerian naira into Euros
 nicebooks:fr 1:
   url: http://fr.nicebooks.com/search?q={%query}
   title: NiceBooks
@@ -6289,15 +5488,6 @@ nicebooks:us 1:
   title: NiceBooks
   tags:
   - old
-nio 2:
-  url: http://finance.yahoo.com/currency-converter/#from=nio;to={%to code};amt={%amount}
-  title: Convert Nicaraguan córdoba (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Nicaraguan córdoba into Euros
 no 1:
   url: http://www.heinzelnisse.info/no/dict?searchItem={%Wort}
   title: Norwegisch-Deutsch
@@ -6308,15 +5498,6 @@ nobi 1:
   title: Notebookinfo
   tags:
   - old
-nok 2:
-  url: http://finance.yahoo.com/currency-converter/#from=nok;to={%to code};amt={%amount}
-  title: Convert Norwegian krone (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Norwegian krone into Euros
 npm 1:
   url: https://npmjs.org/search?q={%query}
   title: Node.js Package Manager
@@ -6331,15 +5512,6 @@ npr 1:
   title: National Public Radio (United States)
   tags:
   - old
-npr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=npr;to={%to code};amt={%amount}
-  title: Convert Nepalese rupee (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Nepalese rupee into Euros
 ns 1:
   url: http://www.netspeak.org/#query={%query}
   title: Netspeak
@@ -6356,15 +5528,6 @@ nzb 1:
   - file sharing
   examples:
     creative commons: Search for "creative commons"
-nzd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=nzd;to={%to code};amt={%amount}
-  title: Convert New Zealand dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 New Zealand dollar into Euros
 oca 1:
   url: http://openclipart.org/search/?query={%query}
   title: Open Clip Art Library
@@ -6407,15 +5570,6 @@ okf 1:
   - onlinetvrecorder
   examples:
     nachrichten: Suche nach Nachrichten
-omr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=omr;to={%to code};amt={%amount}
-  title: Convert Omani rial (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Omani rial into Euros
 oms 1:
   url: http://www.operamini.com/demo/?url={%url}
   title: Opera Mini Simulator
@@ -6670,15 +5824,6 @@ p2r 1:
   title: Request update feed
   tags:
   - old
-pab 2:
-  url: http://finance.yahoo.com/currency-converter/#from=pab;to={%to code};amt={%amount}
-  title: Convert Panamanian balboa (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Panamanian balboa into Euros
 pastebin 0:
   url: http://pastebin.com/
   title: Paste Your Code
@@ -6730,15 +5875,6 @@ pear 1:
   title: PEAR - PHP Extension and Application Repository
   tags:
   - old
-pen 2:
-  url: http://finance.yahoo.com/currency-converter/#from=pen;to={%to code};amt={%amount}
-  title: Convert Peruvian nuevo sol (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Peruvian nuevo sol into Euros
 pep 1:
   url: http://python.org/dev/peps/pep-{%id}/
   title: Show Python Enhancement Proposal
@@ -6770,15 +5906,6 @@ pg 1:
   title: Price Grabber
   tags:
   - old
-pgk 2:
-  url: http://finance.yahoo.com/currency-converter/#from=pgk;to={%to code};amt={%amount}
-  title: Convert Papua New Guinean kina (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Papua New Guinean kina into Euros
 pgp 1:
   url: http://pgp.mit.edu:11371/pks/lookup?search={%query}&op=vindex
   title: PGP Keysearch
@@ -6830,15 +5957,6 @@ php 1:
   - programming
   examples:
     strlen: Search PHP docs for "strlen"
-php 2:
-  url: http://finance.yahoo.com/currency-converter/#from=php;to={%to code};amt={%amount}
-  title: Convert Philippine peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Philippine peso into Euros
 phpg 1:
   url: http://www.google.com/search?hl={$language}&q=site%3Awww.php.net+{%query}
   title: PHP Documentation via Google
@@ -6879,15 +5997,6 @@ ping 1:
 pix 1:
   url: https://pixabay.com/de/photos/?image_type=&cat=&min_width=&min_height=&q={%keyword}&order=popular
   title: Pixabay Pictures
-pkr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=pkr;to={%to code};amt={%amount}
-  title: Convert Pakistani rupee (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Pakistani rupee into Euros
 play 0:
   url: http://www.play.com/
   title: Play.com
@@ -6914,15 +6023,6 @@ plg 1:
   title: Prima Legion search
   tags:
   - old
-pln 2:
-  url: http://finance.yahoo.com/currency-converter/#from=pln;to={%to code};amt={%amount}
-  title: Convert Polish złoty (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Polish złoty into Euros
 plot 1:
   url: http://plot20.kesto.de/#{"functions":["{%function}"]}
   title: Plot 2.0
@@ -7142,15 +6242,6 @@ pybug 0:
   tags:
   - programming
   - python
-pyg 2:
-  url: http://finance.yahoo.com/currency-converter/#from=pyg;to={%to code};amt={%amount}
-  title: Convert Paraguayan guaraní (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Paraguayan guaraní into Euros
 pym 0:
   url: http://readthedocs.org/
   title: readthedocs.org
@@ -7206,15 +6297,6 @@ q 2:
   - shopping
   examples:
     pizza, berlin: Search for Pizza in Berlin
-qar 2:
-  url: http://finance.yahoo.com/currency-converter/#from=qar;to={%to code};amt={%amount}
-  title: Convert Qatari riyal (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Qatari riyal into Euros
 qr 1:
   url: http://chart.apis.google.com/chart?cht=qr&chs=350x350&chl={%content}
   title: QR Kaywa URL Barcode
@@ -7474,15 +6556,6 @@ rmsk 0:
   title: Rmsk
   tags:
   - old
-ron 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ron;to={%to code};amt={%amount}
-  title: Convert Romanian new leu (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Romanian new leu into Euros
 route 2:
   url: https://www.google.com/maps?hl={$language}&saddr={%from}&daddr={%to}
   title: Google Maps Route
@@ -7512,15 +6585,6 @@ rtm 0:
   title: Remember the milk
   tags:
   - old
-rub 2:
-  url: http://finance.yahoo.com/currency-converter/#from=rub;to={%to code};amt={%amount}
-  title: Convert Russian rouble (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Russian rouble into Euros
 ruby 1:
   url: http://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q={%query}&sa=Search
   title: Ruby Documentation
@@ -7529,15 +6593,6 @@ ruby 1:
 rustd 1:
   url: https://doc.rust-lang.org/std/?search={%query}
   title: Rust std API Documentation
-rwf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=rwf;to={%to code};amt={%amount}
-  title: Convert Rwandan franc (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Rwandan franc into Euros
 rwth 1:
   url: http://www.campus.rwth-aachen.de/rwth/all/lecturerlist.asp?find={%name}
   title: RWTH Aachen Campus Phonebook
@@ -7575,24 +6630,6 @@ sanego 2:
   title: Sanego - Die Gesundheits-Community
   tags:
   - old
-sar 2:
-  url: http://finance.yahoo.com/currency-converter/#from=sar;to={%to code};amt={%amount}
-  title: Convert Saudi riyal (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Saudi riyal into Euros
-sbd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=sbd;to={%to code};amt={%amount}
-  title: Convert Solomon Islands dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Solomon Islands dollar into Euros
 sc 0:
   url: https://soundcloud.com
   title: Soundcloud
@@ -7642,27 +6679,9 @@ sci-hub 1:
   - open access
   examples:
     10.1111/nyas.13068: Search for "10.1111/nyas.13068"
-scr 2:
-  url: http://finance.yahoo.com/currency-converter/#from=scr;to={%to code};amt={%amount}
-  title: Convert Seychelles rupee (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Seychelles rupee into Euros
 scry 1:
   url: https://scryfall.com/search?q={%query}
   title: 'Scryfall: Magic the Gathering cards'
-sdg 2:
-  url: http://finance.yahoo.com/currency-converter/#from=sdg;to={%to code};amt={%amount}
-  title: Convert Sudanese pound (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Sudanese pound into Euros
 se 2:
   url: http://{%subpage}.stackexchange.com/search?q={%query}
   title: Stack Exchange
@@ -7673,15 +6692,6 @@ searchmash 0:
   title: Search Mash
   tags:
   - old
-sek 2:
-  url: http://finance.yahoo.com/currency-converter/#from=sek;to={%to code};amt={%amount}
-  title: Convert Swedish krona/kronor (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Swedish krona/kronor into Euros
 sem 1:
   url: http://www.semager.de/search/?q={%query}&lang=all
   title: Semantic WWW search by SemaGer
@@ -7713,15 +6723,6 @@ sf 1:
   title: Sourceforge
   tags:
   - old
-sgd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=sgd;to={%to code};amt={%amount}
-  title: Convert Singapore dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Singapore dollar into Euros
 sgo 0:
   url: http://sources.gentoo.org/{$1}/{$2}
   title: Show Gentoo ebuild sources
@@ -7762,15 +6763,6 @@ shot 1:
   title: Screenshot from Url
   tags:
   - old
-shp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=shp;to={%to code};amt={%amount}
-  title: Convert Saint Helena pound (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Saint Helena pound into Euros
 shs 1:
   url: http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song
   title: Secondhandsongs
@@ -7813,15 +6805,6 @@ slashdot 1:
   - news
   examples:
     linux: Search for Slashdot news about Linux
-sll 2:
-  url: http://finance.yahoo.com/currency-converter/#from=sll;to={%to code};amt={%amount}
-  title: Convert Sierra Leonean leone (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Sierra Leonean leone into Euros
 smfmod 1:
   url: http://custom.simplemachines.org/mods/index.php?action=search&basic_search={%query}
   title: Search for Modifications
@@ -7880,15 +6863,6 @@ somafm 1:
   tags:
   - internetradio
   - radio station
-sos 2:
-  url: http://finance.yahoo.com/currency-converter/#from=sos;to={%to code};amt={%amount}
-  title: Convert Somali shilling (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Somali shilling into Euros
 soundcloud 1:
   url: http://soundcloud.com/search?q[fulltext]={%query}
   title: Soundcloud
@@ -7989,15 +6963,6 @@ stc 1:
   title: Surfthehannel
   tags:
   - old
-std 2:
-  url: http://finance.yahoo.com/currency-converter/#from=std;to={%to code};amt={%amount}
-  title: Convert São Tomé and Príncipe dobra (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 São Tomé and Príncipe dobra into Euros
 steam 1:
   url: https://store.steampowered.com/search/?term={%game%}
   title: Game on the steam platform
@@ -8078,24 +7043,6 @@ symh 1:
   - programming
   examples:
     bash $?: Searches for "bash $?" preserving the symbols
-syp 2:
-  url: http://finance.yahoo.com/currency-converter/#from=syp;to={%to code};amt={%amount}
-  title: Convert Syrian pound (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Syrian pound into Euros
-szl 2:
-  url: http://finance.yahoo.com/currency-converter/#from=szl;to={%to code};amt={%amount}
-  title: Convert Swazi lilangeni (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Swazi lilangeni into Euros
 tails 0:
   url: https://tails.boum.org/
   title: The amnesic incoginto live system, that aims to preserve your privacy and anonymity.
@@ -8225,15 +7172,6 @@ tg 1:
   title: Tagoo Music Search
   tags:
   - old
-thb 2:
-  url: http://finance.yahoo.com/currency-converter/#from=thb;to={%to code};amt={%amount}
-  title: Convert Thai baht (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Thai baht into Euros
 thomann 1:
   url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw={%query}&x=&y=
   title: Thomann Suche
@@ -8325,24 +7263,6 @@ tmdb 1:
   - cinema
   examples:
     forrest gump: Search for "forrest gump"
-tnd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=tnd;to={%to code};amt={%amount}
-  title: Convert Tunisian dinar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Tunisian dinar into Euros
-top 2:
-  url: http://finance.yahoo.com/currency-converter/#from=top;to={%to code};amt={%amount}
-  title: Convert Tongan paʻanga (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Tongan paʻanga into Euros
 topo 1:
   url: http://torrentportal.com/torrents-search.php?search={%query}
   title: Torrent Portal
@@ -8412,15 +7332,6 @@ trim 1:
   title: Tr.im
   tags:
   - old
-try 2:
-  url: http://finance.yahoo.com/currency-converter/#from=try;to={%to code};amt={%amount}
-  title: Convert Turkish lira (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Turkish lira into Euros
 tsq 0:
   url: http://www.turbosquid.com/
   title: TurboSquid
@@ -8435,15 +7346,6 @@ tsq 1:
   - photo
   examples:
     berlin: Search for "berlin"
-ttd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ttd;to={%to code};amt={%amount}
-  title: Convert Trinidad and Tobago dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Trinidad and Tobago dollar into Euros
 tucows 1:
   url: http://tucows.com/search?search_terms={%query}&search_scope=%2A
   title: Tucows
@@ -8500,15 +7402,6 @@ twb 0:
   - twitter
   - social network
   - bookmarks
-twd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=twd;to={%to code};amt={%amount}
-  title: Convert New Taiwan dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 New Taiwan dollar into Euros
 twick 1:
   url: http://twick.it/find_topic.php?search={%query}
   title: Twick.it - the Explain Engine
@@ -8656,15 +7549,6 @@ ty 1:
   title: Twingly Search
   tags:
   - old
-tzs 2:
-  url: http://finance.yahoo.com/currency-converter/#from=tzs;to={%to code};amt={%amount}
-  title: Convert Tanzanian shilling (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Tanzanian shilling into Euros
 tzt 1:
   url: http://www.tagzania.com/tag/{%tag}
   title: Tagzania
@@ -8685,15 +7569,6 @@ tüz 1:
   title: Schnellsuche in den Tübinger Zeitschriften
   tags:
   - old
-uah 2:
-  url: http://finance.yahoo.com/currency-converter/#from=uah;to={%to code};amt={%amount}
-  title: Convert Ukrainian hryvnia (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Ukrainian hryvnia into Euros
 ubdo 1:
   url: http://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="{%query}"
   title: Universitätsbibliothek Dortmund
@@ -8843,15 +7718,6 @@ ugs 1:
   - guitar
   examples:
     yesterday: Search for songs about "yesterday"
-ugx 2:
-  url: http://finance.yahoo.com/currency-converter/#from=ugx;to={%to code};amt={%amount}
-  title: Convert Ugandan shilling (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Ugandan shilling into Euros
 uima 0:
   url: http://incubator.apache.org/uima/downloads/releaseDocs/2.3.0-incubating/docs/api/
   title: UIMA API
@@ -8909,15 +7775,6 @@ uscripts 1:
   title: Userscripts
   tags:
   - old
-usd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=usd;to={%to code};amt={%amount}
-  title: Convert United States dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 United States dollar into Euros
 usk 1:
   url: http://www.usk.de//cont3.php?s=search&title={%query}&s.x=38&s.y=12&s=search
   title: Spieltitel bei USK Suchen
@@ -8941,15 +7798,6 @@ uxse 1:
   - stackexchange
   examples:
     debian: Questions about debian
-uyu 2:
-  url: http://finance.yahoo.com/currency-converter/#from=uyu;to={%to code};amt={%amount}
-  title: Convert Uruguayan peso (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Uruguayan peso into Euros
 v 1:
   url: http://vimeo.com/search?q={%query}
   title: Vimeo
@@ -8976,15 +7824,6 @@ vbn 2:
 vcpkg 1:
   url: https://vcpkg.io/en/packages.html?query={%query}
   title: vcpkg package search
-vef 2:
-  url: http://finance.yahoo.com/currency-converter/#from=vef;to={%to code};amt={%amount}
-  title: Convert Venezuelan bolívar fuerte (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Venezuelan bolívar fuerte into Euros
 viaf 1:
   url: http://viaf.org/viaf/search?query=local.names+all+{%name}&stylesheet=/viaf/xsl/results.xsl&sortKeys=holdingscount&maximumRecords=100
   title: Virtual International Authority File
@@ -9109,24 +7948,6 @@ vkv 1:
   - video
   examples:
     berlin: search for videos about "berlin" on Vkontakte
-vnd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=vnd;to={%to code};amt={%amount}
-  title: Convert Vietnamese dong (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Vietnamese dong into Euros
-vuv 2:
-  url: http://finance.yahoo.com/currency-converter/#from=vuv;to={%to code};amt={%amount}
-  title: Convert Vanuatu vatu (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Vanuatu vatu into Euros
 w 0:
   url: https://{$language}.wikipedia.org/
   title: Wikipedia Main Page
@@ -9614,15 +8435,6 @@ wssl 0:
 wst 1:
   url: https://translate.google.de/translate?hl={$language}&sl=en&tl={$language}&u=https://simple.wikipedia.org/wiki/{%query}
   title: Simple Wikipedia translated
-wst 2:
-  url: http://finance.yahoo.com/currency-converter/#from=wst;to={%to code};amt={%amount}
-  title: Convert Samoan tala (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Samoan tala into Euros
 wt 0:
   url: http://wikitravel.org/{$language}/
   title: Wikitravel
@@ -9721,42 +8533,6 @@ x86 1:
   title: X86 Assembler
   tags:
   - old
-xaf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xaf;to={%to code};amt={%amount}
-  title: Convert CFA franc BEAC (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 CFA franc BEAC into Euros
-xag 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xag;to={%to code};amt={%amount}
-  title: Convert Silver (one troy ounce) (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Silver (one troy ounce) into Euros
-xau 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xau;to={%to code};amt={%amount}
-  title: Convert Gold (one troy ounce) (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Gold (one troy ounce) into Euros
-xcd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xcd;to={%to code};amt={%amount}
-  title: Convert East Caribbean dollar (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 East Caribbean dollar into Euros
 xing 0:
   url: http://www.xing.com
   title: Xing
@@ -9796,42 +8572,6 @@ xle 1:
   title: XLE Documentation
   tags:
   - old
-xof 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xof;to={%to code};amt={%amount}
-  title: Convert CFA franc BCEAO (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 CFA franc BCEAO into Euros
-xpd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xpd;to={%to code};amt={%amount}
-  title: Convert Palladium (one troy ounce) (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Palladium (one troy ounce) into Euros
-xpf 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xpf;to={%to code};amt={%amount}
-  title: Convert CFP franc (Franc du Pacifique) (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 CFP franc (Franc du Pacifique) into Euros
-xpt 2:
-  url: http://finance.yahoo.com/currency-converter/#from=xpt;to={%to code};amt={%amount}
-  title: Convert Platinum (one troy ounce) (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Platinum (one troy ounce) into Euros
 xtvi 0:
   url: http://www.xtvi.com
   title: XTVi
@@ -9925,15 +8665,6 @@ ye 2:
   - restaurants
   examples:
     pizza, new york: Find pizza places in New York
-yer 2:
-  url: http://finance.yahoo.com/currency-converter/#from=yer;to={%to code};amt={%amount}
-  title: Convert Yemeni rial (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 Yemeni rial into Euros
 yf 1:
   url: http://finance.yahoo.com/q?s={%abbreviation}
   title: 'Yahoo Finance: Get stock quotes'
@@ -10140,15 +8871,6 @@ zar 1:
   title: Turkish-English
   tags:
   - old
-zar 2:
-  url: http://finance.yahoo.com/currency-converter/#from=zar;to={%to code};amt={%amount}
-  title: Convert South African rand (Yahoo)
-  tags:
-  - finance
-  - currency
-  - yahoo
-  examples:
-    eur, 1: Convert 1 South African rand into Euros
 zattoo 0:
   url: http://watch.zattoo.com
   title: Zattoo
