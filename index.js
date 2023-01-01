@@ -6,6 +6,8 @@ const actions = {};
 
 let ymlDirPath;
 
+main();
+
 async function main() {
     if (process.argv.length < 3) {
         console.log('Usage: node index.js action [path]')
@@ -115,5 +117,3 @@ actions['removeDeadDomains'] = async function () {
     }
     writeYmls(ymls);
 }
-
-main();
