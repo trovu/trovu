@@ -1345,18 +1345,6 @@ pastebin 0:
 pb 1:
   url: http://verbs.colorado.edu/framesets/{%predicate}-v.html
   title: PropBank
-pdaw 0:
-  url: http://pda.{$language}.wapedia.org/
-  title: Wapedia - Wikipedia for Pocket PC
-pdaw 1:
-  url: http://pda.{$language}.wapedia.org/{%article}
-  title: Wapedia - Wikipedia for Pocket PC
-pdawg 1:
-  url: http://www.google.com/search?hl={$language}&sitesearch={$language}.wapedia.org&domains={$language}.wapedia.org;wapedia.org&q={%query}
-  title: Wapedia - Wikipedia for Pocket PC
-pdawp 1:
-  url: http://pda.{$language}.wapedia.org/wapedia:Search?search={%query}&typ=pics
-  title: Wapedia - Wikipedia for Pocket PC
 pdb 1:
   url: http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId={%key}
   title: Protein Data Bank
@@ -1566,9 +1554,6 @@ sep 0:
 sep 1:
   url: http://plato.stanford.edu/search/searcher.py?query={%query}
   title: Stanford Encyclopedia of Philosophy
-ser 1:
-  url: http://{$language}.serchilo.net/{%query}
-  title: Serchilo
 sf 0:
   url: https://sourceforge.net/account/login.php
   title: Sourceforge
