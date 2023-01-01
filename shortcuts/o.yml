@@ -670,6 +670,11 @@ bgn 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Bulgarian lev into Euros
+bgo 1:
+  url: http://bugs.gentoo.org/buglist.cgi?quicksearch={%query}
+  title: Gentoo Bugzilla
+  tags:
+  - old
 bhd 2:
   url: http://finance.yahoo.com/currency-converter/#from=bhd;to={%to code};amt={%amount}
   title: 'Convert Bahraini dinar (Yahoo) '
@@ -925,6 +930,26 @@ btc 1:
   - bitcoin
   examples:
     1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa: Lookup BTC address 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa, the address which received 50 BTC from Block 0 (the Genesis Block)
+btj 0:
+  url: http://btjunkie.org
+  title: BTJunkie
+  tags:
+  - old
+btj 1:
+  url: http://btjunkie.org/search?q={%query}&c=0
+  title: BTJunkie Search
+  tags:
+  - old
+btja 1:
+  url: http://btjunkie.org/search?q={%query}&c=1
+  title: BTJunkie Audio Search
+  tags:
+  - old
+btjv 1:
+  url: http://btjunkie.org/search?q={%query}&c=6
+  title: BTJunkie Video Search
+  tags:
+  - old
 btn 2:
   url: http://finance.yahoo.com/currency-converter/#from=btn;to={%to code};amt={%amount}
   title: 'Convert Bhutanese ngultrum (Yahoo) '
@@ -1018,9 +1043,19 @@ bürklin 1:
   - bürklin
   examples:
     USB: search for "USB"
+c++ 1:
+  url: http://en.cppreference.com/mwiki/index.php?search={%query}
+  title: C++ Reference (cppreference.com)
+  tags:
+  - old
 c3tv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
+cad 0:
+  url: http://cad-comic.com/cad
+  title: Current Ctrl-Alt-Del-Comic
+  tags:
+  - old
 cad 2:
   url: http://finance.yahoo.com/currency-converter/#from=cad;to={%to code};amt={%amount}
   title: 'Convert Canadian dollar (Yahoo) '
@@ -1030,18 +1065,78 @@ cad 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Canadian dollar into Euros
+cadsilly 0:
+  url: http://cad-comic.com/sillies
+  title: Current Ctrl-Alt-Del-Silly
+  tags:
+  - old
+cake 1:
+  url: http://api.cakephp.org/search/render{%query}
+  title: CakePHP API
+  tags:
+  - old
 calc 0:
   url: ' https://web2.0calc.com/'
   title: Scientific online calculator
   tags:
   - calculator
   - online tool
+cc 1:
+  url: http://search.creativecommons.org/?q={%query}
+  title: Creative Commons
+  tags:
+  - old
+ccc 1:
+  url: http://{%query}.ccc.de
+  title: Chaos Computer Club
+  tags:
+  - old
 ccc-tv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
 ccctv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
+cddb 1:
+  url: http://www.gracenote.com/music/search.html?q={%artist}&f=artist&f=disc
+  title: CD Database
+  tags:
+  - old
+ce 1:
+  url: http://www.chineseetymology.org/CharacterEtymology.aspx?characterInput={%character}
+  title: Chinese Etymology
+  tags:
+  - old
+cf 0:
+  url: http://www.clipfish.de/
+  title: Clipfish Homepage
+  tags:
+  - old
+cf 1:
+  url: http://www.clipfish.de/searchfish.php?word={%query}
+  title: Clipfish Clipsearch
+  tags:
+  - old
+cfp 1:
+  url: http://www.wikicfp.com/cfp/servlet/tool.search?q={%query}&year=t
+  title: Wikicfp - Call for papers
+  tags:
+  - old
+cg 1:
+  url: http://cablesearch.org/?q={%term}
+  title: Cablegate Cablesearch
+  tags:
+  - old
+chegged 1:
+  url: http://slotboxed.com/cheggit.php?getresults=Search&searchtype=all&keywords={%title}
+  title: Cheggit
+  tags:
+  - old
+chewbone 1:
+  url: http://chewbone.blogspot.com/2008/03/mp3-blog-search-results.html?cx=011120813593335739513%3A8exs4fljtn4&cof=FORID%3A11&q={%query}
+  title: Chewbone Mp3 Blog Search
+  tags:
+  - old
 chf 2:
   url: http://finance.yahoo.com/currency-converter/#from=chf;to={%to code};amt={%amount}
   title: 'Convert Swiss franc (Yahoo) '
@@ -1051,6 +1146,46 @@ chf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Swiss franc into Euros
+chip 1:
+  url: http://suche.chip.de/?q={%query}
+  title: Chip.de Suche
+  tags:
+  - old
+chipfind 1:
+  url: http://www.chipfind.ru/datasheet/search.htm?s={%partnumber}&t=part
+  title: ChipFind
+  tags:
+  - old
+chords 1:
+  url: http://www.ultimate-guitar.com/search.php?value={%band or song}&search_type=title
+  title: Ultimate-guitar search for chords/tabs etc.
+  tags:
+  - old
+cite 1:
+  url: http://citeseer.ist.psu.edu/cis?q={%query}&cs=1
+  title: Citeseer
+  tags:
+  - old
+citeseer 1:
+  url: http://citeseer.ist.psu.edu/cis?q={%query}&cs=1
+  title: Citeseer
+  tags:
+  - old
+citex 1:
+  url: http://citeseerx.ist.psu.edu/search?q={%query}&submit=Search&sort=rel
+  title: Citeseer
+  tags:
+  - old
+ciu 1:
+  url: http://caniuse.com/#search={%query}
+  title: Caniuse
+  tags:
+  - old
+cl 1:
+  url: https://www.colourlovers.com/colors/search?query={%color}
+  title: COLOURlovers color search
+  tags:
+  - old
 clp 2:
   url: http://finance.yahoo.com/currency-converter/#from=clp;to={%to code};amt={%amount}
   title: 'Convert Chilean peso (Yahoo) '
@@ -1060,6 +1195,31 @@ clp 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Chilean peso into Euros
+clpal 1:
+  url: https://www.colourlovers.com/palettes/search?query={%query}
+  title: COLOURlovers palette search
+  tags:
+  - old
+clpalr 0:
+  url: https://www.colourlovers.com/palettes/random
+  title: COLOURlovers random palette
+  tags:
+  - old
+clpat 1:
+  url: https://www.colourlovers.com/patterns/search?query={%query}
+  title: COLOURlovers pattern search
+  tags:
+  - old
+clpatr 0:
+  url: https://www.colourlovers.com/patterns/random
+  title: COLOURlovers random pattern
+  tags:
+  - old
+clr 0:
+  url: https://www.colourlovers.com/colors/random
+  title: COLOURlovers random color
+  tags:
+  - old
 clubic 1:
   url: http://www.clubic.com/telecharger/r/{%logiciel}
   title: Clubic
@@ -1077,6 +1237,11 @@ cma 0:
   tags:
   - critical mass
   - critical maps
+cnet 1:
+  url: http://www.cnet.com/1770-5_1-0.html?query={%query}&tag=srch
+  title: CNET content search
+  tags:
+  - old
 cny 2:
   url: http://finance.yahoo.com/currency-converter/#from=cny;to={%to code};amt={%amount}
   title: 'Convert Chinese yuan (Yahoo) '
@@ -1086,6 +1251,16 @@ cny 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Chinese yuan into Euros
+co 1:
+  url: http://collectr.net/={%query}
+  title: Collectr
+  tags:
+  - old
+coda 1:
+  url: http://coda.fm/albums/search?query={%artist or album}
+  title: Coda.fm
+  tags:
+  - old
 codej 1:
   url: https://searchcode.com/?q={%code}&lan=23
   title: Code Search for Java
@@ -1093,6 +1268,16 @@ codej 1:
   tags:
   - programming
   - programming language
+codex 1:
+  url: http://wordpress.org/search/{%query}
+  title: Wordpress Codex Search
+  tags:
+  - old
+comic 1:
+  url: http://www.comicvine.com/search/?q={%query}
+  title: Comic Vince
+  tags:
+  - old
 commons 0:
   url: http://commons.wikimedia.org/
   title: Wikimedia Commons Main Page
@@ -1129,6 +1314,11 @@ cop 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Colombian peso into Euros
+copu 1:
+  url: http://www.google.com/cse?cx=000302137693213122178%3Aycoqke386yy&ie=UTF-8&q={%query}&sa=Suche
+  title: Google Custom Search "computational linguistics publications"
+  tags:
+  - old
 corbis 0:
   url: http://www.corbisimages.com
   title: Corbis
@@ -1149,6 +1339,26 @@ correos 1:
   tags:
   - correos
   - shipping
+couch 0:
+  url: http://www.couchsurfing.com
+  title: Couchsurfing Start Page
+  tags:
+  - old
+couch 1:
+  url: http://www.couchsurfing.com/people/{%query}
+  title: Couchsurfing User Search
+  tags:
+  - old
+couchl 0:
+  url: https://www.couchsurfing.org/login
+  title: Couchsurfing Login
+  tags:
+  - old
+cp 1:
+  url: http://cover-paradies.to/?Module=ExtendedSearch&SearchString={%query}
+  title: Cover Paradies
+  tags:
+  - old
 cpan 0:
   url: https://metacpan.org/
   title: Metacpan
@@ -1169,6 +1379,16 @@ cpan 1:
   - programming
   examples:
     Web::API: search on metacpan.org
+cpase 1:
+  url: http://www.cpase.de/top.php?a=236&&keyword={%query}
+  title: CPASE Web search
+  tags:
+  - old
+cplusplus 1:
+  url: http://cplusplus.com/query/search.cgi?q={%query}
+  title: Cplusplus.com
+  tags:
+  - old
 cpp 1:
   url: http://en.cppreference.com/mwiki/index.php?search={%query}
   title: C++ Reference (cppreference.com)
@@ -1177,6 +1397,21 @@ cpp 1:
   - c++
   examples:
     sprintf: Search C++ Reference (cppreference.com) for "sprintf"
+cppc 1:
+  url: http://www.cplusplus.com/search.do?q={%query}
+  title: C++ Reference (cplusplus.com)
+  tags:
+  - old
+cr 0:
+  url: http://chaosradio.ccc.de/chaosradio.html
+  title: Chaosradio
+  tags:
+  - old
+cr 1:
+  url: http://chaosradio.ccc.de/cr{%episode}.html
+  title: Chaosradio
+  tags:
+  - old
 cran 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&q=site%3Acran.r-project.org%20{%package}
   title: Comprehensive R Archive Network (CRAN) via Google
@@ -1195,6 +1430,26 @@ crc 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Costa Rican colon into Euros
+crc32 1:
+  url: http://stefanschramm.net/dev/hash/?algo=crc32&q={%data}
+  title: Hash functions
+  tags:
+  - old
+cre 0:
+  url: http://chaosradio.ccc.de/chaosradio_express.html
+  title: Chaosradio
+  tags:
+  - old
+cre 1:
+  url: http://chaosradio.ccc.de/cre{%episode}.html
+  title: Chaosradio
+  tags:
+  - old
+creativecommons.org 1:
+  url: http://creativecommons.org/?s={%argument name}
+  title: Find within creativecommons.org (not for licensed works)
+  tags:
+  - old
 crg 0:
   url: http://craigslist.com
   title: Craigslist
@@ -1228,6 +1483,36 @@ crx 1:
   - extension
   examples:
     page rank: Search for Google Chrome extensions about "page rank"
+csdblp 0:
+  url: http://www.dblp.org/search/
+  title: 'CompleteSearch DBLP: Load plain website'
+  tags:
+  - old
+csdblp 1:
+  url: http://www.dblp.org/search/#query={%query}
+  title: CompleteSearch DBLP
+  tags:
+  - old
+ctan 1:
+  url: http://tug.ctan.org/cgi-bin/filenameSearch.py?filename={%filename}&Search=Search
+  title: Search for files by name
+  tags:
+  - old
+ctand 1:
+  url: http://tug.ctan.org/cgi-bin/search.py?metadataSearch={%package}&metadataSearchSubmit=Search
+  title: Search for package descriptions by name
+  tags:
+  - old
+ctanp 1:
+  url: http://ctan.org/cgi-bin/search.py?tdsFilename={%filename}&tdsFilenameSearch=Search
+  title: Search for packages by names of contained files
+  tags:
+  - old
+ctt 1:
+  url: http://groups.google.com/group/comp.text.tex/search?group=comp.text.tex&q={%Suche}
+  title: Comp.text.tex
+  tags:
+  - old
 cul 1:
   url: http://www.citeulike.org/search/all?q={%query}
   title: CiteULike Search
@@ -1244,6 +1529,11 @@ cup 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Cuban peso into Euros
+currency 3:
+  url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from code}&to={%to code}
+  title: Yahoo Currency converter
+  tags:
+  - old
 cutlist 1:
   url: http://cutlist.at/?find={%Suche}
   title: cutlist.at
@@ -1252,6 +1542,11 @@ cutlist 1:
   - onlinetvrecorder
   examples:
     tagesschau: search cutlists for "tagesschau"
+cve 1:
+  url: http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword={%query}
+  title: CVE Common vulnerabilities and exposures
+  tags:
+  - old
 cve 2:
   url: http://finance.yahoo.com/currency-converter/#from=cve;to={%to code};amt={%amount}
   title: 'Convert Cape Verde escudo (Yahoo) '
@@ -1292,6 +1587,21 @@ dadd 1:
   - bookmarks
   examples:
     http://www.serchilo.net: Add Serchilo.net to your delicious bookmarks
+dao 0:
+  url: http://dragonage.wikia.com/wiki/Dragon_Age_Wiki
+  title: Dragon Age Origins Wiki
+  tags:
+  - old
+dao 1:
+  url: http://dragonage.wikia.com/wiki/Special:Search?search={%query}&go=1
+  title: Dragon Age Origins Wiki
+  tags:
+  - old
+dart 1:
+  url: http://www.dart-europe.eu/basic-results.php?kw={%keywords}
+  title: DART-Europe E-theses Portal
+  tags:
+  - old
 datecalc 0:
   url: https://www.timeanddate.com/date/dateadd.html
   title: Date calculations (add/sub)
@@ -1303,6 +1613,11 @@ datev 1:
   title: Datev LEXinform/Info-Datenbank
   examples:
     berlin: Suche nach "berlin"
+dblp 1:
+  url: http://dblp.uni-trier.de/search/author?author={%query}
+  title: The DBLP Computer Science Bibliography
+  tags:
+  - old
 dbp 1:
   url: http://dbpedia.org/page/{%title}
   title: DBpedia
@@ -1313,6 +1628,16 @@ dbp 1:
   - database
   examples:
     Tunisia: Open DBpedia page about Tunisia
+dbug 0:
+  url: http://www.debian.org/Bugs/
+  title: debian bugs
+  tags:
+  - old
+dbug 2:
+  url: http://bugs.debian.org/cgi-bin/pkgreport.cgi?package={%package};include=subject%3A{%query}
+  title: query debian bugs from a package
+  tags:
+  - old
 dc 1:
   url: https://previous.delicious.com/url?url={%url}
   title: 'delicious: check URL'
@@ -1346,11 +1671,21 @@ dclpm 1:
   - newsgroups
   examples:
     array: Search for "array"
+dctt 1:
+  url: http://groups.google.de/group/de.comp.text.tex/search?group=de.comp.text.tex&q={%Suche}
+  title: De.comp.text.tex
+  tags:
+  - old
 dd24 0:
   url: https://www.domaindiscount24.com/de
   title: DomainDiscount24
   tags:
   - internet registrar
+ddgs 0:
+  url: https://duckduckgo.com/
+  title: Duck Duck Go
+  tags:
+  - old
 dea 0:
   url: http://www.deviantart.com
   title: DeviantART
@@ -1367,6 +1702,11 @@ dea 1:
   - deviantart
   examples:
     abstract: search for abstract deviations on deviantART
+deac 1:
+  url: http://{%query}.deviantart.com
+  title: DeviantART
+  tags:
+  - old
 deau 1:
   url: http://{%user}.deviantart.com
   title: DeviantART
@@ -1384,6 +1724,41 @@ deb 1:
   - debian
   examples:
     tetris: Search debian packages for "tetris"
+debb 1:
+  url: http://bugs.debian.org/{%query}
+  title: debian Bugs
+  tags:
+  - old
+debian-bugs 1:
+  url: http://bugs.debian.org/{%query}
+  title: debian Bugs
+  tags:
+  - old
+debian-planet 0:
+  url: http://planet.debian.org/
+  title: Debian Planet
+  tags:
+  - old
+debian-wiki 0:
+  url: https://wiki.debian.org/
+  title: Debian Wiki
+  tags:
+  - old
+debian-wiki 1:
+  url: https://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
+  title: Debian Wiki Search
+  tags:
+  - old
+debp 0:
+  url: https://planet.debian.org/
+  title: Debian Planet
+  tags:
+  - old
+debpts 1:
+  url: https://packages.qa.debian.org/{%package}
+  title: show the qa page of a given package
+  tags:
+  - old
 debt 1:
   url: https://tracker.debian.org/pkg/{%query}
   title: Debian Package Tracker
@@ -1394,6 +1769,71 @@ debt 1:
     grub2: Look at the grub2 package in the Debian Package Tracker
   tests:
     grub2: 'maintainer:'
+debw 0:
+  url: https://wiki.debian.org/
+  title: Debian Wiki
+  tags:
+  - old
+debw 1:
+  url: https://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
+  title: Debian Wiki Search
+  tags:
+  - old
+decuc 1:
+  url: http://www.decodeunicode.org/arEditFrame.php?nodeId=421&aspect=editFrUCSeaRes&seaRes={%query}
+  title: Decodeunicode
+  tags:
+  - old
+deen 1:
+  url: http://www.dict.cc/?s={%word}
+  title: Translation German to English
+  tags:
+  - old
+deep 1:
+  url: http://www.deepdyve.com/search?query={%query}
+  title: DeepDyve search
+  tags:
+  - old
+deeper 1:
+  url: http://www.deeperweb.com/results.php?cx=!004415538554621685521%3Avgwa9iznfuo&cof=FORID%3A11%3BNB%3A1&ie=UTF-8&q={%query}
+  title: DeeperWeb for Google enhanced Web search
+  tags:
+  - old
+deezer 0:
+  url: http://www.deezer.com/
+  title: Deezer Startseite
+  tags:
+  - old
+deezer 1:
+  url: http://www.deezer.com/#music/result/all/{%query}
+  title: Deezer Suche
+  tags:
+  - old
+def 1:
+  url: http://www.google.com/search?hl={$language}&q=define%3a{%query}
+  title: Google define
+  tags:
+  - old
+defr 1:
+  url: http://dict.leo.org/?lp=frde&lang=fr&search={%word}
+  title: Translation German to French
+  tags:
+  - old
+denic 1:
+  url: http://www.denic.de/webwhois/?domain={%query}
+  title: DENIC Whois
+  tags:
+  - old
+deo 1:
+  url: http://www.vortaro.dk/#/{%soegeord}
+  title: Dansk-esperanto ordbog
+  tags:
+  - old
+der 1:
+  url: http://www.pons.eu/dict/search/results/?q={%word}&l=dede
+  title: Deutsche Rechtschreibung PONS
+  tags:
+  - old
 derivative 1:
   url: http://www.wolframalpha.com/input/?i=derivative%20{%query}
   title: 'WolframAlpha: Derivative'
@@ -1403,14 +1843,54 @@ derivative 1:
   - wolfram alpha
   examples:
     x^2: Calculate the derivative of x^2
+derstandard 1:
+  url: http://derstandard.at/suche?query={%query}
+  title: DerStandard.at search
+  tags:
+  - old
+df 0:
+  url: http://df.magmawiki.com/index.php/Main_Page
+  title: Dwarf Fortress Wiki
+  tags:
+  - old
+df 1:
+  url: http://df.magmawiki.com/index.php?title=Special%3ASearch&search={%article}&go=Go
+  title: Dwarf Fortress Wiki
+  tags:
+  - old
+dg 1:
+  url: http://digg.com/search?submit=Search&section=all&type=all&area=all&sort=score&s={%query}
+  title: Digg
+  tags:
+  - old
 dh 1:
   url: https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q={%query}&starCount=0
   title: Docker Hub
+dhlid 1:
+  url: http://www.dhlmultishipping.se/customers/dhl/packageevents_status.jsp?packageId={%packageid}&lang=en
+  title: DHL tracking ID
+  tags:
+  - old
 di 1:
   url: https://duckduckgo.com/?q={%query}&iax=images&ia=images
   title: Duck Duck Go Images
   examples:
     di flowers: Shows Images of Flowers
+dic 1:
+  url: http://www.dict.cc/?s={%query}
+  title: Dict.cc Dictionary
+  tags:
+  - old
+diff 1:
+  url: http://www.differencebetween.net/search/?cx=partner-pub-1911891147296207%3Aw80z4hjpu14&cof=FORID%3A9&ie=ISO-8859-1&q={%query}&sa=Search
+  title: Difference Between search
+  tags:
+  - old
+digg 1:
+  url: http://digg.com/search?submit=Search&section=all&type=all&area=all&sort=score&s={%query}
+  title: Digg
+  tags:
+  - old
 dii 1:
   url: http://www.diigo.com/search?what={%tag}
   title: Diigo Social Bookmarking
@@ -1466,6 +1946,31 @@ disc 1:
   - music
   examples:
     eminem: Search for "eminem"
+distro 0:
+  url: http://distrowatch.com
+  title: Distrowatch
+  tags:
+  - old
+distro 1:
+  url: http://distrowatch.com/table.php?distribution={%query}
+  title: Distrowatch
+  tags:
+  - old
+distros 0:
+  url: http://distrowatch.com/stats.php?section=popularity
+  title: Distrowatch
+  tags:
+  - old
+distrow 0:
+  url: http://distrowatch.com/weekly.php?issue=current
+  title: Distrowatch
+  tags:
+  - old
+dje 1:
+  url: http://jisho.org/words?eng={%query}
+  title: Denshi Jisho
+  tags:
+  - old
 djf 2:
   url: http://finance.yahoo.com/currency-converter/#from=djf;to={%to code};amt={%amount}
   title: 'Convert Djiboutian franc (Yahoo) '
@@ -1475,6 +1980,21 @@ djf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Djiboutian franc into Euros
+djj 1:
+  url: http://jisho.org/words?jap={%query}
+  title: Denshi Jisho
+  tags:
+  - old
+djk 1:
+  url: http://jisho.org/kanji?rt=jap&reading={%query}
+  title: Denshi Jisho
+  tags:
+  - old
+djp 1:
+  url: https://docs.djangoproject.com/search/?q={%query}
+  title: Django Doc Search
+  tags:
+  - old
 dkk 2:
   url: http://finance.yahoo.com/currency-converter/#from=dkk;to={%to code};amt={%amount}
   title: 'Convert Danish krone (Yahoo) '
@@ -1484,6 +2004,11 @@ dkk 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Danish krone into Euros
+dl 0:
+  url: http://www.darklyrics.com
+  title: DarkLyrics.com
+  tags:
+  - old
 dlde 1:
   url: https://www.deepl.com/translator#en/de/{%text}
   title: 'deepL Translator to German '
@@ -1637,6 +2162,21 @@ dm 1:
   - dailymotion
   examples:
     berlin: Search for videos about "berlin"
+dnd 0:
+  url: http://www.dandwiki.com/wiki/Main_Page
+  title: D&D wiki
+  tags:
+  - old
+dnd 1:
+  url: http://www.dandwiki.com/wiki/Special:Search?search={%query}
+  title: D&D wiki
+  tags:
+  - old
+dns 1:
+  url: http://cgibin.erols.com/ziring/cgi-bin/nsgate/gate.pl?submit=Search+by+Name&mode=1&q={%domain}&qtype=A&.cgifields=persist&.cgifields=log
+  title: DNS Lookup
+  tags:
+  - old
 docjax 1:
   url: https://docjax.com/d/?q={%query}
   title: DocJax Document Search Engine
@@ -1645,6 +2185,11 @@ docjax 1:
   - documents
   examples:
     berlin: Search DocJax Document Search Engine for "berlin"
+docs 1:
+  url: https://docs.google.com/document/u/0/?q={%query}
+  title: Google Docs search
+  tags:
+  - old
 doi 1:
   url: https://doi.org/{%query}
   title: Digital Object Identifier
@@ -1661,6 +2206,11 @@ dop 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Dominican peso into Euros
+download 1:
+  url: http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch
+  title: Download.com
+  tags:
+  - old
 dpht 1:
   url: https://translate.google.de/translate?http://dairyprocessinghandbook.com/chapter/{%query}
   title: Dairy Processing Handbook translated
@@ -1725,6 +2275,16 @@ dr8h 1:
   - php
   examples:
     menu: Drupal 8 description for hook_menu()
+drag 0:
+  url: http://www.dragosien.de/?t=village
+  title: Dragosien
+  tags:
+  - old
+drag_ball 0:
+  url: http://www.dragosien.de/?t=chat_dragball&id=45560
+  title: Dragosien
+  tags:
+  - old
 dreamstime 0:
   url: http://www.dreamstime.com/
   title: Dreamstime
@@ -1746,6 +2306,11 @@ drg 1:
   - programming
   examples:
     hook_menu: drupal.org pages containing "hook_menu"
+drop-box 0:
+  url: https://www.getdropbox.com/home
+  title: Dropbox - login
+  tags:
+  - old
 drp 1:
   url: https://www.google.de/search?hl={$language}&q=inurl%3Adrupal.org%2Fproject%2F%20{%project}
   title: Drupal Project
@@ -1774,6 +2339,11 @@ drse 1:
   - stackexchange
   examples:
     hook_menu: Questions about hook_menu()
+drupal 1:
+  url: https://www.google.com/search?hl={$language}&q=site%3Aapi.drupal.org%20{%query}&ie=utf-8
+  title: Drupal API via Google
+  tags:
+  - old
 ds 1:
   url: http://delicious.com/search/{%query}
   title: 'delicious: search'
@@ -1821,6 +2391,11 @@ du 2:
   - bookmarks
   examples:
     bob, language: Show links of delicious user "bob" tagged with "language"
+duck 1:
+  url: http://duckduckgo.com/?q={%query}
+  title: Duck Duck Go
+  tags:
+  - old
 duden 1:
   url: http://www.duden.de/suchen/dudenonline/{%wort}
   title: Duden
@@ -1837,6 +2412,16 @@ dwb 0:
 dwb 1:
   url: http://www.woerterbuchnetz.de/DWB?lemma={%Wort}
   title: Deutsches Wörterbuch von Jacob und Wilhelm Grimm
+dwd 0:
+  url: http://www.dwd.de
+  title: Deutscher Wetter Dienst
+  tags:
+  - old
+dwl 1:
+  url: http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch
+  title: Download.com
+  tags:
+  - old
 dz 0:
   url: http://www.deezer.com/
   title: Deezer Homepage
@@ -1876,6 +2461,26 @@ e 1:
   - affiliate
   examples:
     smartphone: Search for smartphones
+e33 1:
+  url: http://e33.biz/suche/{%query}
+  title: E33.biz Preissuche
+  tags:
+  - old
+eb 1:
+  url: http://www.britannica.com/#search=tab~TOPICS%2Cterm~{%term}
+  title: Encyclopedia Britannica
+  tags:
+  - old
+ebank 0:
+  url: https://ebanking.easybank.at/InternetBanking/InternetBanking?d=login&svc=EASYBANK&ui=html&lang=de
+  title: EasyBank
+  tags:
+  - old
+ebook 1:
+  url: http://www.ebdb.net/Search.aspx?p=1&s={%query}&x=0&y=0
+  title: Ebooks Search Engine
+  tags:
+  - old
 ebookee 1:
   url: http://www.ebookee.net/search.php?q={%query}
   title: Ebookee
@@ -1898,6 +2503,16 @@ ec 1:
   - ecosia
   examples:
     berlin: Search for "berlin"
+ecl 0:
+  url: http://ecosia.org/ecolink.php
+  title: Ecosia
+  tags:
+  - old
+ecl 1:
+  url: http://ecosia.org/ecolink.php?q={%query}
+  title: Ecosia
+  tags:
+  - old
 eco 0:
   url: http://ecosia.org/
   title: Ecosia
@@ -1910,6 +2525,31 @@ eco 1:
   - web search
   examples:
     berlin: Search for "berlin"
+ed 0:
+  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  title: Ebay.de homepage
+  tags:
+  - old
+ed 1:
+  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  title: Ebay.de
+  tags:
+  - old
+edv 1:
+  url: http://www.edv-abkuerzungen.de/index.php?query={%query}
+  title: Edv Abkürzungen search
+  tags:
+  - old
+efa 0:
+  url: http://www.efa-bw.de
+  title: Efa bw
+  tags:
+  - old
+eg 1:
+  url: http://www.ecocho.com/google/index.php?q={%query}&cx=011377004323241253315%3Ayjo7ngerhv8&cof=FORID%3A10&search_type=web
+  title: Ecocho (google)
+  tags:
+  - old
 egp 2:
   url: http://finance.yahoo.com/currency-converter/#from=egp;to={%to code};amt={%amount}
   title: 'Convert Egyptian pound (Yahoo) '
@@ -1919,12 +2559,67 @@ egp 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Egyptian pound into Euros
+eis 1:
+  url: http://www.eis-machen.de/?s={%query}
+  title: Eis-machen.de Search
+  tags:
+  - old
 ekn 0:
   url: https://www.ebay-kleinanzeigen.de/m-nachrichten.html
   title: Ebay-Kleinanzeigen, Nachrichten
   tags:
   - shopping
   - ebay
+el 0:
+  url: http://www.eclipse.org/eclipselink/api/2.0.2/index.html
+  title: EclipseLink API
+  tags:
+  - old
+el 1:
+  url: https://www.google.com/search?hl=en&q=site%3Ahttp://www.eclipse.org/eclipselink/api/2.4+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: EclipseLink API
+  tags:
+  - old
+emy 0:
+  url: http://signin.ebay.com
+  title: Ebay.de My eBay
+  tags:
+  - old
+ende 1:
+  url: http://www.dict.cc/?s={%word}
+  title: Translation English to German
+  tags:
+  - old
+enfi 1:
+  url: http://www.fincd.com/index.php?txtSearch={%query}&lang=fi
+  title: Finnish-English
+  tags:
+  - old
+enfr 1:
+  url: http://www.wordreference.com/enfr/{%word}
+  title: Translation English to French
+  tags:
+  - old
+engrish 0:
+  url: http://www.engrish.com/
+  title: main page
+  tags:
+  - old
+engrish 1:
+  url: http://www.engrish.com/?s={%query}
+  title: search for some topic
+  tags:
+  - old
+enr 1:
+  url: http://personer.eniro.se/resultat/{%nummer_eller_namn}
+  title: Eniro personsökning
+  tags:
+  - old
+enzh 1:
+  url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
+  title: Chinese
+  tags:
+  - old
 eo 1:
   url: http://www.google.com/search?hl={$language}&sitesearch=reta-vortaro.de&domains=reta-vortaro.de&q={%query}
   title: Reta vortaro
@@ -1953,6 +2648,11 @@ eprintt 1:
   - academia
   examples:
     encryption: Search IACR Cryptology ePrint Archive for titles containing "encryption"
+era-sms 0:
+  url: http://www.era.pl/msg/user/sponsored/welcome.do
+  title: Era-sms
+  tags:
+  - old
 ern 2:
   url: http://finance.yahoo.com/currency-converter/#from=ern;to={%to code};amt={%amount}
   title: 'Convert Eritrean nakfa (Yahoo) '
@@ -1974,6 +2674,16 @@ etb 2:
 eti 1:
   url: http://etimologias.dechile.net/?{%palabra}
   title: Diccionaria Etimolólico Castellano
+etools 1:
+  url: http://www.etools.ch/searchSubmit.do?query={%query}
+  title: ETools.ch Metasearch
+  tags:
+  - old
+ety 1:
+  url: http://www.etymonline.com/index.php?search={%query}&searchmode=none
+  title: Etymology lookup
+  tags:
+  - old
 eucomp 1:
   url: http://ec.europa.eu/competition/elojade/isef/index.cfm?fuseaction=dsp_result&case_title={%company}
   title: EU Competition Authority Case search
@@ -1989,6 +2699,11 @@ eur 2:
 eutm 1:
   url: https://euipo.europa.eu/eSearch/#basic/1+1+1+1/50+50+50+50/{%query}
   title: EU IPO trade mark research
+everyzing 1:
+  url: http://www.everyzing.com/results.jsp?q={%query}
+  title: Everyzing
+  tags:
+  - old
 exif 1:
   url: http://exif.regex.info/exif.cgi?url={%url}
   title: EXIF Viewer
@@ -2010,6 +2725,11 @@ exkcd 1:
   - wiki
   examples:
     polish sausage: Explain the comic about polish sausage
+f 1:
+  url: http://www.fastbot.de/index.php?query={%query}
+  title: Fastbot
+  tags:
+  - old
 f3 0:
   url: http://oss.digirati.com.br/f3/
   title: 'f3 - Fight Flash Fraud: an alternative disk fraud checker compatible to h2testw'
@@ -2017,6 +2737,21 @@ f3 0:
   - open source
   - disk drive checker
   - usb
+f4c 1:
+  url: http://www.fileformat.info/info/unicode/char/{%codepoint}/fontsupport.htm
+  title: Search for a font supporting a specific character
+  tags:
+  - old
+facebook 0:
+  url: http://www.facebook.com
+  title: Facebook Start Page
+  tags:
+  - old
+facebook 1:
+  url: http://www.facebook.com/s.php?q={%query}&init=q
+  title: Facebook Global Search
+  tags:
+  - old
 faust 1:
   url: https://www.faust.ch/shop/qsrch.htm?Keyval={%query}&UID=55006243ffc5000000000000
   title: Faust Laborbedarf
@@ -2056,6 +2791,11 @@ fbev 1:
   - social network
   examples:
     berlin: Search for "berlin"
+fbf 1:
+  url: http://www.facebook.com/friends.php?fq={%name}
+  title: Facebook Friend Search
+  tags:
+  - old
 fbgr 1:
   url: https://www.facebook.com/search/results.php?q={%group}&type=groups
   title: 'Facebook Search: Groups'
@@ -2072,6 +2812,11 @@ fbgraph 1:
   - social network
   examples:
     amnestyglobal: Facebook graph representation of Amnesty International's page
+fbi 0:
+  url: http://www.facebook.com/inbox/#!/messages/
+  title: Facebook Messages
+  tags:
+  - old
 fbk 0:
   url: https://www.facebook.com/marketplace/
   title: Facebook Marketplace
@@ -2100,6 +2845,16 @@ fbmu 1:
   - social network
   examples:
     madonna: Search for "madonna"
+fbook 0:
+  url: http://www.facebook.com
+  title: Facebook Start Page
+  tags:
+  - old
+fbook 1:
+  url: http://www.facebook.com/s.php?q={%query}&init=q
+  title: Facebook Global Search
+  tags:
+  - old
 fbot 1:
   url: http://www.fastbot.de/index.php?query={%query}
   title: Fastbot
@@ -2137,15 +2892,50 @@ fbpl 1:
   - social network
   examples:
     berlin: Search for "berlin"
+fbu 1:
+  url: http://www.facebook.com/{%username}
+  title: Facebook User
+  tags:
+  - old
+fbug 0:
+  url: http://bugs.freedesktop.org/query.cgi
+  title: freedesktop.org bugs
+  tags:
+  - old
+fbugq 1:
+  url: http://bugs.freedesktop.org/buglist.cgi?quicksearch={%query}
+  title: search for a term in freedesktop.org bugs (query)
+  tags:
+  - old
 fbw 0:
   url: https://www.fahrerbewertung.de
   title: Fahrerbewertung
+fd 1:
+  url: http://www.thefreedictionary.com/{%word}
+  title: The Free Dictionary
+  tags:
+  - old
+fddb 1:
+  url: http://fddb.info/db/de/suche/?udd=0&cat=site-de&search={%query}
+  title: Kalorien in der Lebensmittel-Datenbank
+  tags:
+  - old
 fed 1:
   url: https://admin.fedoraproject.org/pkgdb/search/?type=package&term={%query}
   title: Fedora Packages
   tags:
   - linux
   - fedora
+fedbug 0:
+  url: http://bugzilla.redhat.com/query.cgi
+  title: Fedora bugs
+  tags:
+  - old
+fedbugq 1:
+  url: http://bugzilla.redhat.com/buglist.cgi?quicksearch={%query}
+  title: search for a term in Fedora bugs (query)
+  tags:
+  - old
 fedex 1:
   url: http://www.fedex.com/Tracking?tracknumbers={%track number}
   title: FedEx Tracking
@@ -2154,6 +2944,31 @@ fedex 1:
   - shipping
   examples:
     '123456789012': track shipment with the number 123456789012
+fedora 1:
+  url: http://admin.fedoraproject.org/pkgdb/apps/search/{%query}
+  title: Fedora Packages
+  tags:
+  - old
+fedora-wiki 1:
+  url: http://fedoraproject.org/wiki/Special:Search?search={%query}
+  title: Fedora Wiki Search
+  tags:
+  - old
+fedw 1:
+  url: http://fedoraproject.org/wiki/Special:Search?search={%query}
+  title: Fedora Wiki Search
+  tags:
+  - old
+ff 0:
+  url: http://www.fileformat.info
+  title: Go to FileFormat.info home page
+  tags:
+  - old
+ff 1:
+  url: http://www.google.com/search?hl=de&q={%query}%20site%3Afileformat.info&ie=utf-8
+  title: Search FileFormat.Info with Google
+  tags:
+  - old
 ffaddon 0:
   url: https://addons.mozilla.org/firefox/
   title: Firefox Add-ons
@@ -2184,6 +2999,21 @@ ffi 1:
   - stock agency
   examples:
     weihnachten: Suche Fotos zum Thema "weihnachten"
+fien 1:
+  url: http://www.fincd.com/index.php?txtSearch={%query}&lang=en
+  title: Finnish-English
+  tags:
+  - old
+filmweb_ludzie 1:
+  url: http://www.filmweb.pl/szukaj?q={%query}&c=person
+  title: FilmWeb
+  tags:
+  - old
+filmweb_tytul 1:
+  url: http://www.filmweb.pl/szukaj?q={%query}&c=film
+  title: FilmWeb
+  tags:
+  - old
 filsh 1:
   url: http://en.filsh.net/download?url={%url}
   title: Filsh.net Online Clip Converter
@@ -2191,6 +3021,11 @@ filsh 1:
   - files
   - convert
   - youtube
+findfiles 1:
+  url: http://findfiles.com/list.php?string={%filename}&db=Both
+  title: FindFiles
+  tags:
+  - old
 findutf 0:
   url: http://shapecatcher.com
   title: Find UTF code by simply drawing its shape omline (Shapecatcher)
@@ -2312,6 +3147,11 @@ flu 1:
   - flickr
   examples:
     john: search for users named "john"
+fm 1:
+  url: http://freshmeat.net/search/?q={%query}&section=projects
+  title: Freshmeat
+  tags:
+  - old
 fnet 1:
   url: http://www.finanzen.net/suchergebnis.asp?_search={%query}
   title: Finanzen.net Query
@@ -2322,6 +3162,11 @@ fo 1:
   - web search
   examples:
     berlin: Search for "berlin"
+foo 1:
+  url: http://en.fooooo.com/search.php?q={%query}&submit=+search+&ranking=0
+  title: Fooooo Video Search
+  tags:
+  - old
 fos 0:
   url: http://www.fotosearch.de/
   title: Fotosearch
@@ -2358,6 +3203,11 @@ fosspatents 0:
   - ip law
   - copyright
   - open source
+fotofinder 1:
+  url: http://www.fotofinder.com/?text={%Suche}&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
+  title: Fotofinder
+  tags:
+  - old
 fotolia 0:
   url: http://www.fotolia.com
   title: Fotolia
@@ -2373,11 +3223,36 @@ fotolia 1:
   - affiliate
   examples:
     christmas: search photos about christmas
+foxy 1:
+  url: http://www.foxytunes.com/search?q={%query}
+  title: Foxytunes planet
+  tags:
+  - old
+fpl 1:
+  url: http://filmpolski.pl/fp/index.php/8/{%query}
+  title: Filmpolski
+  tags:
+  - old
 fpwg 0:
   url: http://www.kessnux.de/anwendungen/passwort-generator.php
   title: Frank's password generator (Kessnux; javascript)
   tags:
   - passwords
+fr-an 1:
+  url: http://dictionnaire.reverso.net/francais-anglais/{%query}
+  title: 'Traduction Reverso : du français à l''anglais'
+  tags:
+  - old
+frde 1:
+  url: http://dict.leo.org/?lp=frde&lang=de&search={%word}
+  title: Translation French to German
+  tags:
+  - old
+freedb 1:
+  url: http://www.freedb.org/freedb_search.php?words={%query}&allfields=NO&fields=artist&fields=title&allcats=YES&grouping=none&x=0&y=0
+  title: FreeDB
+  tags:
+  - old
 freenode 1:
   url: http://irc.netsplit.de/channels/?net=freenode&chat={%query}
   title: Freenode IRC channels
@@ -2388,6 +3263,31 @@ freenode 1:
   - channels
   examples:
     android: Search for Android-related IRC channels on Freenode
+freesound 1:
+  url: http://www.freesound.org/searchText.php?search={%query}
+  title: Freesound
+  tags:
+  - old
+fremdwort 1:
+  url: http://www.fremdwort.de/suche.php?term={%query}
+  title: Fremdwort.de
+  tags:
+  - old
+fren 1:
+  url: http://www.wordreference.com/fren/{%word}
+  title: Translation French to English
+  tags:
+  - old
+frf 1:
+  url: http://friendfeed.com/search?q={%query}
+  title: Friendfeed
+  tags:
+  - old
+frsv 1:
+  url: http://www.sensagent.com/dictionnaires/fr-sv/{%word}/ALEXMN/
+  title: Translation French to Swedish
+  tags:
+  - old
 frv 1:
   url: http://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -2396,6 +3296,26 @@ frv 1:
   - pronunciation
   examples:
     berlin: Search for the pronunciation of "berlin"
+fs 1:
+  url: http://www.filesearching.com/cgi-bin/s?q={%filename}
+  title: FileSearching.com
+  tags:
+  - old
+fs-cca 1:
+  url: http://www.zoo-m.com/flickr-storm/flickrize.php?license=4&q={%query}
+  title: FlickrStorm CC Attribution
+  tags:
+  - old
+fsc 1:
+  url: http://www.google.com/search?q={%query}&sitesearch=fscklog.com
+  title: Fscklog
+  tags:
+  - old
+fst 1:
+  url: http://de.forestle.org/search.php?q={%Suche}
+  title: Forestle
+  tags:
+  - old
 ft 1:
   url: http://www.filestube.com/query.html?q={%query}&select=All
   title: FilesTube
@@ -2403,6 +3323,26 @@ ft 1:
   - downloads
   examples:
     creative commons music: Search for creative commons music
+fv 1:
+  url: http://validator.w3.org/feed/check.cgi?url={%url}
+  title: W3C Feed Validation Service
+  tags:
+  - old
+fx 1:
+  url: http://www.frederix.de/index.php?searchword={%query}&option=com_search&Itemid=5
+  title: Frederix Computer GmbH
+  tags:
+  - old
+fy 1:
+  url: chrome://feedly/content/app/feedly.htm#today@search.{%query}
+  title: Feedly
+  tags:
+  - old
+fz 1:
+  url: http://fizy.com/?q={%name of song xor artist}
+  title: Fizy videomusic
+  tags:
+  - old
 g 0:
   url: https://www.google.com/search?hl={$language}
   title: Google Web Homepage
@@ -2425,6 +3365,16 @@ g! 1:
   - google
   examples:
     berlin: Search for "berlin"
+g-en-de 1:
+  url: http://translate.google.de/?hl=de&tab=wT#en|de|{%query}
+  title: Google Translate Englisch - Deutsch
+  tags:
+  - old
+g-pdf 1:
+  url: http://www.google.de/search?q={%query}&as_filetype=pdf
+  title: Google search for pdf-files
+  tags:
+  - old
 g100 1:
   url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&num=100
   title: Google Web, 100 results at once
@@ -2433,6 +3383,26 @@ g100 1:
   - google
   examples:
     berlin: Search for "berlin"
+g? 0:
+  url: http://www.google.com/intl/{$language}/about.html
+  title: About Google
+  tags:
+  - old
+ga 1:
+  url: http://www.google.com/archivesearch?q={%query}&ie=UTF-8&oe=UTF-8&btnG=Search+Archives
+  title: Google News Archive Search
+  tags:
+  - old
+gads 1:
+  url: http://www.google.com/sponsoredlinks?q={%adword}
+  title: Goode Ads
+  tags:
+  - old
+gameserver 1:
+  url: http://www.game-monitor.com/search.php?search={%query}&type=server&location=all&game=all&x=0&y=0&num=30
+  title: Spiel Server Suchen game-monitor.com
+  tags:
+  - old
 gamespot 1:
   url: https://www.gamespot.com/search/?i=&q={%query}
   title: Gamespot
@@ -2446,6 +3416,11 @@ gan 1:
   - android
   examples:
     apps: Search for Android apps
+gat 1:
+  url: http://www.google.com/archivesearch?q={%query}&sa=N&lnav=m&scoring=t&ie=UTF-8&oe=UTF-8
+  title: Google News Archive Search - Timeline
+  tags:
+  - old
 gatherer 1:
   url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
   title: Gatherer Magic Card Database
@@ -2522,6 +3497,11 @@ gby 2:
   - google
   - search
   - archive
+gc 0:
+  url: http://http://www.geocaching.com/seek/nearest.aspx?key=
+  title: Geocaching
+  tags:
+  - old
 gc 1:
   url: http://google.com/search?hl={$language}&q=cache:{%query}
   title: Google Cache
@@ -2541,6 +3521,16 @@ gcal 1:
   - calendar
   examples:
     berlin: Search for "berlin"
+gcbug 1:
+  url: http://code.google.com/p/{%project}/issues/list
+  title: google code bugs
+  tags:
+  - old
+gch 1:
+  url: http://www.google.ch/search?hl={$language}&q={%query}&ie=utf-8
+  title: Google Switzerland
+  tags:
+  - old
 gco 0:
   url: https://www.google.com/contacts/
   title: Google Contacts
@@ -2559,6 +3549,11 @@ gco 1:
   - google
   examples:
     Thomas: look up people called Thomas on your Google Contacts
+gcode 1:
+  url: http://code.google.com/p/{%name}
+  title: Google Code
+  tags:
+  - old
 gd 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start|type=city}&daddr={%destination|type=city}
   title: Google Maps Directions (Routing)
@@ -2591,6 +3586,11 @@ gdd 2:
   - route
   examples:
     brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by walking
+gde 1:
+  url: https://www.google.com/search?hl={$language}&lr=lang_de&q={%query}&ie=utf-8
+  title: Google Web, only in German
+  tags:
+  - old
 gdl 1:
   url: http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Web, Directory Listing
@@ -2644,6 +3644,21 @@ gdw 2:
   - route
   examples:
     brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by walking
+gede 0:
+  url: https://encrypted.google.com/search?hl=de
+  title: Google SSL
+  tags:
+  - old
+gede 1:
+  url: https://encrypted.google.com/search?hl=de&q={%query}
+  title: Google SSL
+  tags:
+  - old
+gedu 1:
+  url: http://www.google.com/search?hl=en&q={%query} site:edu-net.net
+  title: Edu-net.net
+  tags:
+  - old
 gem 1:
   url: https://rubygems.org/search?utf8=✓&query={%query}
   title: Rubygems Search
@@ -2653,6 +3668,41 @@ gem 1:
   - gem
   examples:
     query: Search for a gem called 'query' on rubygems.org
+gen 1:
+  url: https://www.google.com/search?hl={$language}&lr=lang_en&q={%query}&ie=utf-8
+  title: Google Web, only in English
+  tags:
+  - old
+genmeta 2:
+  url: http://meta.genealogy.net/Search.do?lastName={%Nachname}&placeName={%Ort}
+  title: Genealogy.net Metasuche
+  tags:
+  - old
+gentoo 1:
+  url: http://packages.gentoo.org/package/{%package}
+  title: Gentoo Package Search
+  tags:
+  - old
+gentoo-forums 0:
+  url: http://forums.gentoo.org
+  title: Gentoo Forums
+  tags:
+  - old
+gentoo-planet 0:
+  url: http://planet.gentoo.org
+  title: Gentoo Planet
+  tags:
+  - old
+gentoo-wiki 0:
+  url: http://{$language}.gentoo-wiki.com
+  title: Gentoo Wiki
+  tags:
+  - old
+gentoo-wiki 1:
+  url: http://{$language}.gentoo-wiki.com/Special:Search?search={%query}&fulltext=Search
+  title: Gentoo Wiki Search
+  tags:
+  - old
 geoip 1:
   url: http://www.geoiptool.com/?IP={%IP or Hostname}
   title: GeoIP
@@ -2660,6 +3710,11 @@ geoip 1:
   - ip
   examples:
     www.google.com: Find Location of www.google.com
+getdeb 1:
+  url: http://getdeb.net/search.php?keywords={%software}
+  title: GetDeb.net
+  tags:
+  - old
 getty 0:
   url: http://www.gettyimages.com
   title: Getty Images
@@ -2674,6 +3729,11 @@ getty 1:
   - stock agency
   examples:
     christmas: search photos about christmas
+gex 1:
+  url: http://www.google.de/#hl=de&safe=off&q={%query}+-preisvergleich+-ebay+-shopping
+  title: Google Excluded
+  tags:
+  - old
 gf 2:
   url: https://www.google.com/search?hl={$language}&q=filetype%3A{%filetype}%20{%query}&ie=utf-8
   title: Google Web, only of filetype
@@ -2789,6 +3849,11 @@ gg 1:
   - usenet
   examples:
     berlin: Search for "berlin"
+ggmsg 1:
+  url: http://groups.google.de/groups?hl={$language}&selm={%query}
+  title: Google Groups
+  tags:
+  - old
 gh 0:
   url: http://geizhals.eu/
   title: Geizhals EU Hauptseite
@@ -2882,9 +3947,29 @@ gl 2:
   examples:
     fr, berlin: Search for "berlin" on sites in French
     cs, praha: Search for "praha" on sites in Czech
+glin 1:
+  url: http://www.google.com/linux?hl={$language}&q={%query}
+  title: Google Linux
+  tags:
+  - old
 glist 1:
   url: http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Listing
+glopd 0:
+  url: http://www.glottopedia.org
+  title: Glottopedia
+  tags:
+  - old
+glopd 1:
+  url: http://www.glottopedia.org/index.php/Special:Search?search={%query}&go=Go
+  title: Glottopedia
+  tags:
+  - old
+glw 1:
+  url: http://www.google.com/search?hl={$language}&as_q={%query}&num=50&as_qdr=w&safe=off
+  title: Google Web Search (last week)
+  tags:
+  - old
 gm 0:
   url: http://maps.google.com/maps?hl={$language}
   title: Google Maps Homepage
@@ -2913,6 +3998,46 @@ gmail 1:
   - mail
   examples:
     label:spam: Search for "label:spam"
+gmbb 2:
+  url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=bows
+  title: GMB Explorer, BOWs view
+  tags:
+  - old
+gmbd 2:
+  url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=drs.xml
+  title: GMB Explorer, discourse view
+  tags:
+  - old
+gmbm 2:
+  url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=met
+  title: GMB Explorer, metadata view
+  tags:
+  - old
+gmbr 2:
+  url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=raw
+  title: GMB Explorer, raw text view
+  tags:
+  - old
+gmbs 2:
+  url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=der.xml
+  title: GMB Explorer, sentences view
+  tags:
+  - old
+gmbt 2:
+  url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=tok.iob
+  title: GMB Explorer, tokenization view
+  tags:
+  - old
+gmbw 2:
+  url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=warnings
+  title: GMB Explorer, warnings view
+  tags:
+  - old
+gmch 1:
+  url: https://www.google.com/maps/search/{%Ort}%2C%20Switzerland
+  title: Google Maps Schweiz
+  tags:
+  - old
 gmd 2:
   url: http://finance.yahoo.com/currency-converter/#from=gmd;to={%to code};amt={%amount}
   title: 'Convert Gambian dalasi (Yahoo) '
@@ -2922,6 +4047,16 @@ gmd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Gambian dalasi into Euros
+gmde 1:
+  url: https://www.google.com/maps/search/{%Ort}%2C%20Germany
+  title: Google Maps Deutschland
+  tags:
+  - old
+gmob 1:
+  url: http://www.google.com/m/search?hl={$language}&q={%query}
+  title: Google Mobile Search
+  tags:
+  - old
 gmov 1:
   url: http://www.google.com/movies?hl={$language}&near={%city}
   title: Google Movies
@@ -2938,6 +4073,21 @@ gmov 2:
   - movies
   examples:
     new york, love: Show movies about "love" running in New York cinemas
+gmp3 1:
+  url: http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(mp3|wma|ogg)+%2B%22{%query}%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
+  title: Google MP3 search
+  tags:
+  - old
+gmr 2:
+  url: https://www.google.com/maps?hl={$language}&saddr={%from}&daddr={%to}
+  title: Google Maps Route
+  tags:
+  - old
+gmts 1:
+  url: http://gmb.let.rug.nl/explorer/search.php?term={%term}
+  title: GMB Explorer, term search
+  tags:
+  - old
 gn 0:
   url: https://news.google.com/topstories?&gl={$country|uppercase}
   title: Google News of your country
@@ -2952,6 +4102,21 @@ gn 1:
   - google
   examples:
     berlin: Search Google News for berlin
+gnbug 0:
+  url: http://bugzilla.gnome.org/query.cgi?format=advanced
+  title: gnome bugs
+  tags:
+  - old
+gnbug 2:
+  url: http://bugzilla.gnome.org/buglist.cgi?query=product%3A{%product}+{%query}
+  title: query bugs in a gnome product
+  tags:
+  - old
+gnbugq 1:
+  url: http://bugzilla.gnome.org/buglist.cgi?query={%query}
+  title: search for a term in gnome bugs (query)
+  tags:
+  - old
 gnf 2:
   url: http://finance.yahoo.com/currency-converter/#from=gnf;to={%to code};amt={%amount}
   title: 'Convert Guinean franc (Yahoo) '
@@ -2972,6 +4137,31 @@ gns 1:
 gnu 2:
   url: https://www.google.com/search?ned={%language-code}&q={%query}&source=lnms&tbm=nws
   title: Google News (universal language select)
+go 1:
+  url: http://www.google.com/cse?cx=003538345765652431974%3A5nbobem3igq&ie=UTF-8&q={%query}&siteurl=www.google.com%2Fcse%2Fhome%3Fcx%3D003538345765652431974%253A5nbobem3igq&ref=go-lang.cat-v.org%2Fgo-search&ss=6085j16411711j19&oq=string+comparison&gs_l=partner.3...8806.10874.0.11103.17.15.0.0.0.0.210.1598.6j8j1.15.0.gsnos%2Cn%3D13..0.0.6084j16418432j19..1ac.HmuDMInChKQ#gsc.tab=0&gsc.q={%query}&gsc.page=1
+  title: Go Language Resources Search Engine
+  tags:
+  - old
+gobug 0:
+  url: http://bugs.gentoo.org/query.cgi?format=specific
+  title: gentoo bugs
+  tags:
+  - old
+god 1:
+  url: http://www.godchecker.com/pantheon/index.php?_search-results=Y&name={%name}
+  title: Godchecker Mythology Encyclopedia
+  tags:
+  - old
+goof 0:
+  url: http://finance.google.com/
+  title: Google Finance
+  tags:
+  - old
+goof 1:
+  url: http://finance.google.com/finance?q={%value}
+  title: Google Finance
+  tags:
+  - old
 gopkg 0:
   url: https://pkg.go.dev
   title: pkg.go.dev
@@ -3061,6 +4251,16 @@ gpm 1:
   - music
   examples:
     prodigy: Search for music by The Prodigy in My Music
+gpo 1:
+  url: http://gpo.zugaina.org/Search?search={%package}
+  title: Gentoo Overlay Search
+  tags:
+  - old
+gpuse 0:
+  url: http://gentoo-portage.com/USE
+  title: Show Gentoo USE Flags
+  tags:
+  - old
 gr 1:
   url: https://www.goodreads.com/search?utf8=%E2%9C%93&query={%query}
   title: Goodreads
@@ -3071,6 +4271,11 @@ gr 1:
   - social network
   examples:
     shakespeare: Search for books of Shakespeare
+grde 1:
+  url: http://www.google.de/search?q={%query}
+  title: Grde
+  tags:
+  - old
 grhp 2:
   url: http://graphhopper.com/maps/?point={%start}&point={%destination}&locale={$language}
   title: GraphHopper (Routing via OSM)
@@ -3084,6 +4289,11 @@ grhp 2:
     berlin DE, hamburg DE: Berechnet eine Route von Berlin nach Hamburg.
     oxford UK, london UK: Calculates a route from Oxford to London.
     Dresdener Straße 27 Berlin,Calle Tamarindos 5 Cadiz: Calcula una ruta de una casa en Berlín a Cádiz.
+groo 1:
+  url: http://www.google.com/custom?cx=010507483283387009910%3Aey52vjxjimi&sa=Search&q={%query}&oldsa=search%20groovy&cof=GFNT%3A%23666666%3BLH%3A100%3BCX%3ASearchGroovy%252Eorg%3BDIV%3A%23cccccc%3BFORID%3A0%3BS%3Ahttp%3A%2F%2Fsearchgroovy%2Eorg%3BL%3Ahttp%3A%2F%2Fmedia%2Exircles%2Ecodehaus%2Eorg%2F_projects%2Fgroovy%2F_logos%2Fmedium%2Epng%3BLP%3A1%3BAH%3Aleft&hl={$language}&client=pub-5106641147175425#24104980237417428656
+  title: Groovy documentation search
+  tags:
+  - old
 groovesalad 0:
   url: https://somafm.com/player/#/now-playing/groovesalad
   title: SomaFm Groovesalad
@@ -3145,6 +4355,16 @@ gss 2:
   - google
   examples:
     cnn.com, berlin: Search for "berlin" on cnn.com
+gssl 0:
+  url: https://www.google.com/search?hl={$language}
+  title: 'Google Web: Load plain regional website (SSL)'
+  tags:
+  - old
+gssl 1:
+  url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
+  title: 'Google Web: Plain query of regional website (SSL)'
+  tags:
+  - old
 gt 2:
   url: http://www.google.com/search?hl={$language}&tbs=qdr:{%time}&q={%query}&ie=utf-8
   title: Google Web, only of certain time range
@@ -3213,6 +4433,16 @@ gtrends 2:
   - trends
   examples:
     pl, berlin: See statistics for the term "berlin" on Google web search for Poland
+guk 1:
+  url: http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
+  title: Google United Kingdom
+  tags:
+  - old
+gux 1:
+  url: http://www.google.com/linux?hl={$language}&q={%query}
+  title: Google Linux
+  tags:
+  - old
 gv 0:
   url: https://www.google.com/videohp?hl={$language}
   title: Google Video Homepage
@@ -3227,6 +4457,66 @@ gv 1:
   - google
   examples:
     cat: Google video search for "cat"
+gvid 1:
+  url: http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(avi|mp4|flv)+%2B%22{%query}%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
+  title: Google video search
+  tags:
+  - old
+gw 0:
+  url: http://www.guildwiki.org/Main_Page
+  title: Guildwars wiki
+  tags:
+  - old
+gw 1:
+  url: http://www.guildwiki.org/index.php?title=Special%3ASearch&search={%query}&go=Go
+  title: Guildwars wiki
+  tags:
+  - old
+gw2 0:
+  url: http://wiki.guildwars2.com/
+  title: Guildwars 2 Wiki
+  tags:
+  - old
+gw2 1:
+  url: http://wiki.guildwars2.com/index.php?title=Special%3ASearch&search={%query}&go=Go
+  title: Guildwars 2 Wiki
+  tags:
+  - old
+gwas 1:
+  url: http://vs.aka-online.de/cgi-bin/globalwpsearch.pl?search={%query}&timeout=15&minor=1
+  title: Global Wikipedia Article Search
+  tags:
+  - old
+gwb 1:
+  url: http://www.googlewatchblog.de/index.php?s={%query}
+  title: Google Watch Blog
+  tags:
+  - old
+gwo 0:
+  url: http://wiki.guildwars.com/wiki/Main_Page
+  title: Official Guild Wiki
+  tags:
+  - old
+gwo 1:
+  url: http://wiki.guildwars.com/wiki/{%query}
+  title: Official Guild Wiki
+  tags:
+  - old
+gwt 1:
+  url: http://www.google.com/search?hl=en&q=inurl%3Ajavadoc%2Flatest%2Fcom%2Fgoogle%2Fgwt%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: GWT API
+  tags:
+  - old
+gwtb 1:
+  url: http://www.google.com/search?hl=en&q=inurl%3Aapidocs%2Fcom%2Fgithub%2Fgwtbootstrap%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: GWT Bootstrap API
+  tags:
+  - old
+gww 1:
+  url: http://www.google.com/search?hl={$language}&q={%query}%20-site:wikipedia.org&ie=utf-8
+  title: Google Web search without wikipedia.org
+  tags:
+  - old
 gy 1:
   url: https://www.google.de/search?q={%query}&hl=de&tbs=qdr:y
   title: Google search last year timeframe
@@ -3239,6 +4529,16 @@ gyd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Guyanese dollar into Euros
+hbr 1:
+  url: http://hbr.org/search/{%query}
+  title: Harvard Business Research
+  tags:
+  - old
+hdb 1:
+  url: http://hackage.haskell.org/cgi-bin/hackage-scripts/package/{%package name}
+  title: Haskell package page
+  tags:
+  - old
 here 0:
   url: https://wego.here.com/
   title: Here.com
@@ -3254,6 +4554,16 @@ here 1:
 hex 0:
   url: http://calc.50x.eu
   title: Online Hex-Dec-Bin conversion
+hexdec 1:
+  url: http://stefanschramm.net/dev/hex/?hex={%hex value}
+  title: Hex decode
+  tags:
+  - old
+hexenc 1:
+  url: http://stefanschramm.net/dev/hex/?dec={%decimal value}
+  title: Hex encode
+  tags:
+  - old
 hkd 2:
   url: http://finance.yahoo.com/currency-converter/#from=hkd;to={%to code};amt={%amount}
   title: 'Convert Hong Kong dollar (Yahoo) '
@@ -3263,6 +4573,11 @@ hkd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Hong Kong dollar into Euros
+hm 1:
+  url: http://hypem.com/search/{%query}
+  title: Hype Machine
+  tags:
+  - old
 hnl 2:
   url: http://finance.yahoo.com/currency-converter/#from=hnl;to={%to code};amt={%amount}
   title: 'Convert Honduran lempira (Yahoo) '
@@ -3272,6 +4587,11 @@ hnl 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Honduran lempira into Euros
+hoh 1:
+  url: http://www.hoh.de/default.aspx?VL={%query}&SC=rel&TY=2&ST=5
+  title: Home of Hardware search
+  tags:
+  - old
 hoo 1:
   url: http://haskell.org/hoogle/?q={%query}
   title: Hoogle
@@ -3280,6 +4600,11 @@ hoo 1:
   - programming
   examples:
     otherwise: Search for "otherwise"
+hotu 1:
+  url: http://www.homeoftheunderdogs.net/search.php?search_game={%query}
+  title: Home of the Underdogs
+  tags:
+  - old
 hrk 2:
   url: http://finance.yahoo.com/currency-converter/#from=hrk;to={%to code};amt={%amount}
   title: 'Convert Croatian kuna (Yahoo) '
@@ -3298,6 +4623,16 @@ htg 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Haitian gourde into Euros
+html-pdf 1:
+  url: http://www.html-pdf-converter.com/convert.php?u={%url}&x=0&y=0
+  title: HTML to PDF Converter
+  tags:
+  - old
+html2pdf 1:
+  url: http://www.htm2pdf.co.uk/?url={%url}
+  title: HTML to PDF Converter
+  tags:
+  - old
 http 1:
   url: http://{%domain}
   title: Redirect to URL
@@ -3305,6 +4640,16 @@ http 1:
   - url
   examples:
     example.com: Go to http://example.com
+htz 1:
+  url: http://www.testzentrale.de/programm/catalogsearch/result/?q={%query}
+  title: Hogrefe Testzentrale Suche
+  tags:
+  - old
+hub 1:
+  url: http://www.hubmed.org/search.cgi?q={%query}&sort=date
+  title: Hubmed
+  tags:
+  - old
 huf 2:
   url: http://finance.yahoo.com/currency-converter/#from=huf;to={%to code};amt={%amount}
   title: 'Convert Hungarian forint (Yahoo) '
@@ -3314,6 +4659,11 @@ huf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Hungarian forint into Euros
+hype 1:
+  url: http://hype.non-standard.net/search/{%query}
+  title: Hype Machine
+  tags:
+  - old
 i 0:
   url: http://www.imdb.com/
   title: Internet Movie Database
@@ -3334,6 +4684,11 @@ i 1:
   - film
   examples:
     batman: Search International Movie Database for "batman"
+iafd 1:
+  url: https://www.iafd.com/results.asp?searchtype=comprehensive&searchstring={%query}
+  title: Internet adult film database
+  tags:
+  - old
 iata 1:
   url: http://www.world-airport-codes.com/search/?apt={%code or city}
   title: Airport Codes (world-airport-codes.com)
@@ -3344,6 +4699,21 @@ iata 1:
   examples:
     lpa: search for the airport code "LPA"
     berlin: search for airports in Berlin
+ibash 0:
+  url: http://ibash.de/neueste_1.html
+  title: Ibash
+  tags:
+  - old
+icd 1:
+  url: http://www.icd-code.de/suche/icd/recherche.html?sp=0&sp=S{%query}
+  title: Suche nach Krankheiten in der ICD-10
+  tags:
+  - old
+icon 1:
+  url: http://www.iconspedia.com/search/{%query}/
+  title: IconsPedia
+  tags:
+  - old
 icq 1:
   url: https://www.google.com/search?hl={$language}&sitesearch=icq.im&q={%nickname}
   title: Willem knuffelbeertje
@@ -3352,12 +4722,22 @@ icq 1:
   - chat
   examples:
     steven: Search ICQ People Search for "steven"
+ida 1:
+  url: http://www.imdb.com/find?s=tt&site=aka&q={%query}
+  title: IMDb AKA Title Search
+  tags:
+  - old
 idealo 1:
   url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={%query}
   title: Idealo Preisvergleich
   tags:
   - preisvergleich
   - shopping
+identica 1:
+  url: http://identi.ca/search/notice?q={%query}
+  title: Identi.ca Notice
+  tags:
+  - old
 idr 2:
   url: http://finance.yahoo.com/currency-converter/#from=idr;to={%to code};amt={%amount}
   title: 'Convert Indonesian rupiah (Yahoo) '
@@ -3367,6 +4747,26 @@ idr 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Indonesian rupiah into Euros
+ieee 1:
+  url: http://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText={%query}
+  title: IEEE Xplore Search
+  tags:
+  - old
+ierender 0:
+  url: http://meineipadresse.de/netrenderer/index.php
+  title: Render a Homepage with Internet Explorer 7.0
+  tags:
+  - old
+ierender 1:
+  url: http://meineipadresse.de/netrenderer/index.php?url={%url}&browser=ie7
+  title: Render a Homepage with Internet Explorer 7.0
+  tags:
+  - old
+ierender 2:
+  url: http://meineipadresse.de/netrenderer/index.php?url={%url}&browser={%engine}
+  title: Render a Homepage with an Internet Explorer Engine
+  tags:
+  - old
 if 1:
   url: http://www.iconfinder.com/search/?q={%query}
   title: IconFinder query
@@ -3381,6 +4781,21 @@ ig 1:
   - social networking service
   examples:
     ellierosapowers: Show the user ellierosapowers content.
+ikeanl 1:
+  url: http://www.ikea.com/nl/nl/search/?query={%query}
+  title: Ikea
+  tags:
+  - old
+il 1:
+  url: http://iload.to/de/category/-1-Alle-Downloads/search/{%query}/
+  title: ILoad.to search
+  tags:
+  - old
+iload 1:
+  url: http://www.google.de/search?hl=de&source=hp&btnI=Auf+gut+Glück!&aq=f&aqi=g7&aql=&oq=&q={%query}+iload
+  title: ILoad.to Suche
+  tags:
+  - old
 ils 2:
   url: http://finance.yahoo.com/currency-converter/#from=ils;to={%to code};amt={%amount}
   title: 'Convert Israeli new shekel (Yahoo) '
@@ -3390,6 +4805,11 @@ ils 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Israeli new shekel into Euros
+im 1:
+  url: http://www.imeem.com/tag/?q={%query}
+  title: Imeem
+  tags:
+  - old
 imagepoint 1:
   url: http://www.imagepoint.biz/result.php?reset=1&search={%query}
   title: ImagePoint
@@ -3413,6 +4833,26 @@ imdb 1:
   - film
   examples:
     batman: Search International Movie Database for "batman"
+imeem 1:
+  url: http://www.imeem.com/tag/?q={%query}
+  title: Imeem
+  tags:
+  - old
+imfdb 1:
+  url: http://www.imfdb.org/wiki/{%query}
+  title: Imfdb
+  tags:
+  - old
+img 1:
+  url: http://elzr.com/imagery?query={%query}&size=20&safe=off&imgsz=&imgc=&filetype=
+  title: Imagery
+  tags:
+  - old
+imhalal 1:
+  url: http://www.imhalal.com/beta/index.php/web/{%query}
+  title: ImHalal Web Search
+  tags:
+  - old
 imp 0:
   url: http://www.imagepoint.biz/
   title: ImagePoint
@@ -3427,9 +4867,29 @@ imp 1:
   - stock agency
   examples:
     christmas: search photos about christmas
+imslp 0:
+  url: http://imslp.org/index.php?title=Special:Search&search=
+  title: Petrucci Library
+  tags:
+  - old
 inf 1:
   url: http://info.com/searchw?qkw={%query}
   title: Info.com
+infrarot 1:
+  url: http://www.infrarot.de/search?words={%query}&suggested=&x=0&y=0
+  title: InfraRot mail order
+  tags:
+  - old
+ing 1:
+  url: http://www.ingenieur.de/default.aspx?q={%query}&knoq=1
+  title: Die Suchmaschine für Ingenieure
+  tags:
+  - old
+ink 1:
+  url: http://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search={%feature}&go=Go
+  title: Inkscape Wiki
+  tags:
+  - old
 inr 2:
   url: http://finance.yahoo.com/currency-converter/#from=inr;to={%to code};amt={%amount}
   title: 'Convert Indian rupee (Yahoo) '
@@ -3448,11 +4908,26 @@ integral 1:
   - wolfram alpha
   examples:
     x^2: Calculate the integral of x^2
+io 1:
+  url: http://iomash.com/?q={%keyword}
+  title: Uimash website forwarding
+  tags:
+  - old
+iomash 0:
+  url: http://iomash.com/
+  title: Uimash website forwarding
+  tags:
+  - old
 ip 0:
   url: http://www.heise.de/ip/
   title: Show my external IP, via heise.de
   tags:
   - ip
+iper 1:
+  url: http://ipernity.com/search/doc?q={%query}&s=0
+  title: Ipernity Photo Search
+  tags:
+  - old
 ipkat 0:
   url: http://ipkitten.blogspot.de
   title: 'The IPKat (Intellectual Property) blog '
@@ -3517,6 +4992,11 @@ ist 1:
   - stock agency
   examples:
     christmas: search photos about christmas
+istockphoto 1:
+  url: http://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
+  title: Istockphoto
+  tags:
+  - old
 isup 1:
   url: http://www.isup.me/{%host}
   title: Down for everyone or just me?
@@ -3536,6 +5016,11 @@ ix 1:
   - web search
   examples:
     berlin: Search for "berlin"
+ixs 0:
+  url: https://ixquick.com/
+  title: Ixquick Meta Search
+  tags:
+  - old
 jam 1:
   url: https://www.jamendo.com/search?qs=q={%query}
   title: Jamendo
@@ -3544,6 +5029,21 @@ jam 1:
   - copyleft
   examples:
     electronic: Search Jamendo for "electronic"
+jamt 1:
+  url: http://www.jamendo.com/tag/{%style of music}
+  title: Jamendo
+  tags:
+  - old
+japi 1:
+  url: http://www.google.com/search?hl=en&q={%query}+inurl%3Ajavase+6+docs+api+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+japiall 1:
+  url: http://www.google.com/search?hl=en&q={%query}+inurl%3Ajavase+6+docs+api+Class+{%query}&ie=utf-8
+  title: Java Platform SE6 API Search
+  tags:
+  - old
 java 0:
   url: http://download.oracle.com/javase/7/docs/api/index.html
   title: Java Platform SE 7 API
@@ -3560,6 +5060,26 @@ java 1:
   - api
   examples:
     void: Search for "void"
+java5 0:
+  url: http://download.oracle.com/javase/1.5.0/docs/api/
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+java6 0:
+  url: http://download.oracle.com/javase/6/docs/api/index.html
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+java6 1:
+  url: http://www.google.com/search?hl=en&q=inurl%3Ajavase%2F6%2Fdocs%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+java7 1:
+  url: http://www.google.com/search?hl=en&q=inurl%3Ajavase%2F7%2Fdocs%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: Java Platform SE 7 API Search
+  tags:
+  - old
 java8 1:
   url: http://www.google.com/search?hl={$language}&q=inurl%3Ajavase%2F8%2Fdocs%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: Java Platform SE 8 API
@@ -3569,6 +5089,61 @@ java8 1:
   - api
   examples:
     void: Search for docs about "void"
+jb 2:
+  url: http://www.justbooks.de/search/?author={%author}&title={%title}&lang={$language}&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  title: JustBooks
+  tags:
+  - old
+jbde 2:
+  url: http://www.justbooks.de/search/?author={%author}&title={%title}&lang=de&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  title: JustBooks
+  tags:
+  - old
+jben 2:
+  url: http://www.justbooks.de/search/?author={%author}&title={%title}&lang=en&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  title: JustBooks
+  tags:
+  - old
+jcp 1:
+  url: http://jcp.org/en/jsr/summary?id={%query}
+  title: The Java Community Process(SM) Program
+  tags:
+  - old
+jee 0:
+  url: http://download.oracle.com/javaee/6/api/index.html
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+jee 1:
+  url: http://www.google.com/search?hl=en&q=inurl%3Ajavaee%2F6%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+jee6 0:
+  url: http://download.oracle.com/javaee/6/api/index.html
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+jee6 1:
+  url: http://www.google.com/search?hl=en&q=inurl%3Ajavaee%2F6%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: Java Platform SE6 API Search
+  tags:
+  - old
+jgrapht 0:
+  url: http://www.jgrapht.org/javadoc/
+  title: JGraphT API
+  tags:
+  - old
+jgrapht 1:
+  url: http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.jgrapht.org%2Fjavadoc%2F%20{%query}&ie=utf-8
+  title: JGraphT API
+  tags:
+  - old
+jm 1:
+  url: http://www.jobmixer.com/de/jobs/{%query}/1
+  title: Jobmixer
+  tags:
+  - old
 jmd 2:
   url: http://finance.yahoo.com/currency-converter/#from=jmd;to={%to code};amt={%amount}
   title: 'Convert Jamaican dollar (Yahoo) '
@@ -3578,6 +5153,11 @@ jmd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Jamaican dollar into Euros
+jmp 1:
+  url: http://j.mp/?u={%url}
+  title: Bit.ly
+  tags:
+  - old
 jod 2:
   url: http://finance.yahoo.com/currency-converter/#from=jod;to={%to code};amt={%amount}
   title: 'Convert Jordanian dinar (Yahoo) '
@@ -3587,6 +5167,21 @@ jod 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Jordanian dinar into Euros
+journalup 1:
+  url: http://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1={%joural title}
+  title: Uni Potsdam Zeitschriftenbibliothek
+  tags:
+  - old
+jp 1:
+  url: http://www.jappy.de/suche?name={%query}
+  title: Jappy
+  tags:
+  - old
+jpc 1:
+  url: http://www.jpc.de/jpcng/home/search?fastsearch={%query}&pd_orderby=score
+  title: JPC fast search
+  tags:
+  - old
 jpy 2:
   url: http://finance.yahoo.com/currency-converter/#from=jpy;to={%to code};amt={%amount}
   title: 'Convert Japanese yen (Yahoo) '
@@ -3596,6 +5191,16 @@ jpy 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Japanese yen into Euros
+jq 1:
+  url: http://docs.jquery.com/Special:Search?search={%query}
+  title: JQuery API Search
+  tags:
+  - old
+jqg 1:
+  url: https://www.google.com/search?hl={$language}&sitesearch=docs.jquery.com&q={%query}
+  title: JQuery API Search
+  tags:
+  - old
 jquery 1:
   url: http://docs.jquery.com/Special:Search?search={%query}
   title: JQuery API Search
@@ -3605,6 +5210,36 @@ jquery 1:
   - javascript
   examples:
     append: Search for .append() function
+jr 2:
+  url: http://www.jorudan.co.jp/norikae/cgi/nori.cgi?rf=top&eok1=0&eok2=0&pg=0&eki1={%start}&rec1=-&eki2={%ziel}&Cway=0&S.x=60&S.y=11&S=%E6%A4%9C%E7%B4%A2&Csg=1
+  title: Jorudan japanese journey database
+  tags:
+  - old
+jsr 1:
+  url: http://jcp.org/en/jsr/summary?id={%query}
+  title: Java Specification Requests
+  tags:
+  - old
+junit 0:
+  url: http://junit.sourceforge.net/javadoc/
+  title: Junit API Search
+  tags:
+  - old
+junit 1:
+  url: https://www.google.com/search?hl=en&q=site%3Ahttp%3A%2F%2Fjunit.sourceforge.net%2Fjavadoc%2F+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: Junit API Search
+  tags:
+  - old
+jx 1:
+  url: http://jux2.com/best.php?q={%query}&submit=Search
+  title: Jux2.com
+  tags:
+  - old
+k 1:
+  url: http://www.korrekturen.de/cgi-bin/wortliste_suche.pl?ordner=vollsuche&suchbegr={%query}
+  title: Korrekturen.de
+  tags:
+  - old
 kat 0:
   url: https://kickass.cd
   title: KickassTorrents
@@ -3619,6 +5254,26 @@ kat 1:
   - download
   examples:
     kat theme song: Search for the sites’s theme song
+kcd 1:
+  url: http://katz.cd/search?q={%query}
+  title: Katz
+  tags:
+  - old
+keepvid 1:
+  url: http://keepvid.com/?url={%url}&site=aa
+  title: Keepvid
+  tags:
+  - old
+keno 0:
+  url: http://www.kenozahlen.de/
+  title: Kenozahlen
+  tags:
+  - old
+keno 1:
+  url: http://www.kenozahlen.de/?s={%Datum}
+  title: Kenozahlen
+  tags:
+  - old
 kes 2:
   url: http://finance.yahoo.com/currency-converter/#from=kes;to={%to code};amt={%amount}
   title: 'Convert Kenyan shilling (Yahoo) '
@@ -3646,6 +5301,11 @@ kmf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Comoro franc into Euros
+koders 1:
+  url: http://www.koders.com/?s={%query}&la=*&li=*
+  title: Koders
+  tags:
+  - old
 kong 1:
   url: http://www.kongregate.com/search?q={%query}
   title: Kongregate
@@ -3679,6 +5339,16 @@ kt 1:
   - video
   examples:
     serie: Suche nach "serie"
+kuler 1:
+  url: http://kuler.adobe.com/#themes/search?term={%term}
+  title: Kuler
+  tags:
+  - old
+kultura 1:
+  url: http://www.culture.pl/en/culture/wyszukiwanie/szukaj?query={%query}
+  title: Culture.pl
+  tags:
+  - old
 kwd 2:
   url: http://finance.yahoo.com/currency-converter/#from=kwd;to={%to code};amt={%amount}
   title: 'Convert Kuwaiti dinar (Yahoo) '
@@ -3688,6 +5358,11 @@ kwd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Kuwaiti dinar into Euros
+ky 2:
+  url: http://www.kayak.de/flights/{%departure-destination}/20{%date YY-MM-DD}
+  title: Kayak flight search
+  tags:
+  - old
 ky 3:
   url: http://www.kayak.de/flights/{%from}-{%to}/20{%date}
   title: Kayak Flight Search
@@ -3723,6 +5398,11 @@ kzt 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Kazakhstani tenge into Euros
+l 1:
+  url: http://search.live.com/results.aspx?q={%query}
+  title: Windows Live Web search
+  tags:
+  - old
 lak 2:
   url: http://finance.yahoo.com/currency-converter/#from=lak;to={%to code};amt={%amount}
   title: 'Convert Lao kip (Yahoo) '
@@ -3732,6 +5412,16 @@ lak 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Lao kip into Euros
+lambda 0:
+  url: http://lambda-the-ultimate.org
+  title: Lambda the ultimate
+  tags:
+  - old
+lambda 1:
+  url: http://lambda-the-ultimate.org/search/node/{%query}
+  title: Lambda the ultimate
+  tags:
+  - old
 laredoute 0:
   url: http://www.laredoute.com
   title: La Redoute
@@ -3746,6 +5436,11 @@ laredoute 1:
   - fashion
   examples:
     chaussures: Recherche chaussures
+larousse 1:
+  url: http://www.larousse.com/fr/dictionnaires/francais/{%query}
+  title: Dictionnaire Larousse
+  tags:
+  - old
 last 0:
   url: http://www.last.fm/
   title: Last.fm
@@ -3773,6 +5468,11 @@ lastl 1:
   - lastfm
   examples:
     beatles: Listen to the Beatles
+latex 1:
+  url: http://www.google.com/search?hl={$language}&lr=&q={%query}+site%3Awww.giss.nasa.gov+inurl%3Atools%2Flatex
+  title: Latex Reference
+  tags:
+  - old
 lbp 2:
   url: http://finance.yahoo.com/currency-converter/#from=lbp;to={%to code};amt={%amount}
   title: 'Convert Lebanese pound (Yahoo) '
@@ -3782,6 +5482,11 @@ lbp 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Lebanese pound into Euros
+lc 1:
+  url: http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo={%verb}
+  title: Logos Universal Conjugator
+  tags:
+  - old
 ldc 1:
   url: https://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.ldc.upenn.edu%2FCatalog%20{%query}&ie=utf-8
   title: Linguistic Data Consortium catalog
@@ -3798,6 +5503,11 @@ le 0:
 leo 1:
   url: ' http://dict.leo.org/ende/?search={%Wort}'
   title: English-German (Leo)
+leo_es 1:
+  url: http://dict.leo.org/esde?lp=esde&search?q={%query}
+  title: Leo
+  tags:
+  - old
 lg 1:
   url: https://libgen.is/search.php?req={%query}
   title: Library Genesis
@@ -3820,6 +5530,36 @@ lily 1:
   - lily
   examples:
     record: search for interface Record in the Lily API
+lin 1:
+  url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
+  title: Linguee
+  tags:
+  - old
+linfr 1:
+  url: http://www.linguee.fr/francais-anglais/search?query={%mot ou expression à traduire}
+  title: Linguee
+  tags:
+  - old
+lingro 1:
+  url: http://lingro.com/translate/{%website/word to translate}
+  title: Lingro
+  tags:
+  - old
+linguee 1:
+  url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
+  title: Linguee
+  tags:
+  - old
+lintian 1:
+  url: http://lintian.debian.org/tags/{%query}.html
+  title: show the given debian lintian report
+  tags:
+  - old
+linz 2:
+  url: http://www.linzag.at/efa/index.php?sstreet={%Start}&street={%Ziel}%E4t&x=0&y=0&_language=de
+  title: Linz Linien
+  tags:
+  - old
 lipsum 0:
   url: http://www.lipsum.com/feed/html?name=start
   title: Lorem Ipsum
@@ -3871,6 +5611,31 @@ ln 1:
   - social network
   examples:
     john smith: Search for a John Smith
+lo 1:
+  url: http://label-online.de/index.php/action/textsearch?suchen={%query}&submit=ok
+  title: Label Online
+  tags:
+  - old
+loc 1:
+  url: http://www.loc.gov/fedsearch/metasearch/?cclquery={%query}
+  title: Library Of Congress
+  tags:
+  - old
+loe 1:
+  url: https://en.wikipedia.org/wiki/List_of_{%title}_episodes
+  title: List of episodes on Wikipedia
+  tags:
+  - old
+lotto 0:
+  url: http://www.lottozahlen.info/
+  title: Lottozahlen
+  tags:
+  - old
+lotto 1:
+  url: http://www.google.com/search?hl=de&q=site:lottozahlen.info%20{%Datum}&ie=utf-8
+  title: Lottozahlen
+  tags:
+  - old
 lrd 2:
   url: http://finance.yahoo.com/currency-converter/#from=lrd;to={%to code};amt={%amount}
   title: 'Convert Liberian dollar (Yahoo) '
@@ -3889,6 +5654,11 @@ lsl 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Lesotho loti into Euros
+lt 1:
+  url: http://lingro.com/translate/{%website/word to translate}
+  title: Lingro
+  tags:
+  - old
 ltl 2:
   url: http://finance.yahoo.com/currency-converter/#from=ltl;to={%to code};amt={%amount}
   title: 'Convert Lithuanian litas (Yahoo) '
@@ -3933,12 +5703,32 @@ lyd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Libyan dinar into Euros
+lyrc 1:
+  url: http://lyrc.com.ar/en/tema1en.php?songname={%songname}
+  title: Lyrc
+  tags:
+  - old
+lyrc 2:
+  url: http://lyrc.com.ar/en/tema1en.php?artist={%artist}&songname={%songname}
+  title: Lyrc
+  tags:
+  - old
 lyric 1:
   url: http://lyrics.wikia.com/Special:Search?go=Article&search={%article}
   title: LyricWiki
   tags:
   - music
   - lyrics
+m2 1:
+  url: http://metager2.de/search/index.php?ses=web&q={%query}
+  title: MetaGer
+  tags:
+  - old
+ma 1:
+  url: http://mahalo.com/Special:Search?search={%query}
+  title: Mahalo
+  tags:
+  - old
 macs 1:
   url: http://www.coffer.com/mac_find?string={%query}
   title: MAC address search
@@ -3956,12 +5746,37 @@ mad 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Moroccan dirham into Euros
+mailinator 1:
+  url: http://mailinator.com/maildir.jsp?email={%mailbox}
+  title: Mailinator
+  tags:
+  - old
+maj 1:
+  url: http://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q={%query}&btnG=Search&sitesearch=MajorGeeks.com
+  title: Majorgeeks
+  tags:
+  - old
+maps 1:
+  url: https://www.google.com/maps/search/{%query}
+  title: Google Maps
+  tags:
+  - old
 marlin 1:
   url: https://marlinfw.org/meta/search/?q={%query}
   title: Marlin Gcode Search
   description: Marlin is an open source firmware for the RepRap family of replicating rapid prototypers — popularly known as “3D printers.”
   tags:
   - 3d-printing
+mash 1:
+  url: http://iomash.com/?q={%keyword}
+  title: Uimash website forwarding
+  tags:
+  - old
+mathworld 1:
+  url: http://mathworld.wolfram.com/search/?query={%query}
+  title: Mathworld
+  tags:
+  - old
 maven 1:
   url: http://search.maven.org/#search|ga|1|{%query}
   title: Maven Search
@@ -3971,6 +5786,36 @@ maven 1:
   - maven
   examples:
     print: Search for "print"
+maxent 0:
+  url: http://maxent.sourceforge.net/api/index.html
+  title: Maxent API
+  tags:
+  - old
+maxent 1:
+  url: http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fmaxent.sourceforge.net%2Fapi%2Findex.html+{%query}&btnG=Suche&lr=
+  title: Maxent API
+  tags:
+  - old
+mb 1:
+  url: http://musicbrainz.org/search/textsearch.html?query={%artist}&type=artist&limit=25&handlearguments=1
+  title: Musicbrainz - Music Metabase
+  tags:
+  - old
+mc 1:
+  url: http://www.metacritic.com/search/all/{%query}/results
+  title: Metacritic Search
+  tags:
+  - old
+mcw 0:
+  url: http://www.minecraftwiki.net/wiki/Minecraft_Wiki
+  title: Minecraft Wiki
+  tags:
+  - old
+mcw 1:
+  url: http://www.minecraftwiki.net/index.php?title=Special%3ASearch&search={%article}&button=
+  title: Minecraft Wiki
+  tags:
+  - old
 md5 1:
   url: http://stefanschramm.net/dev/hash/?algo=md5&q={%data}
   title: MD5 Hash
@@ -3997,6 +5842,31 @@ mdn 1:
   - mozilla
   examples:
     javascript: Search for "javascript"
+me 1:
+  url: http://masseffect.wikia.com/wiki/Special:Search?search={%query}&go=1
+  title: Mass Effect Wiki
+  tags:
+  - old
+med 1:
+  url: http://www.medizinfuchs.de/produkt/search/{%query}
+  title: Versandapotheke
+  tags:
+  - old
+medipreis 1:
+  url: http://www.medipreis.de/suchen?q={%query}
+  title: Medipreis Apothekenpreisvergleich
+  tags:
+  - old
+melz 1:
+  url: http://www.melzoo.com/en/search?query={%query}&type=web
+  title: Melzoo search
+  tags:
+  - old
+melzoo 1:
+  url: http://www.melzoo.com/en/search?query={%query}&type=web
+  title: Melzoo search
+  tags:
+  - old
 mema 1:
   url: http://memory-alpha.org/index.php?title=Special%3ASearch&search={%query}
   title: Memory Alpha
@@ -4005,6 +5875,26 @@ mema 1:
   - science-fiction
   examples:
     kirk: Search for "kirk"
+mensahu 0:
+  url: http://www.studentenwerk-berlin.de/mensen/speiseplan/
+  title: Humboldt-Universität Berlin, Speiseplan
+  tags:
+  - old
+mensaup 0:
+  url: http://www.studentenwerk-potsdam.de/speiseplan/
+  title: Uni Potsdam, Speiseplan
+  tags:
+  - old
+mesh 1:
+  url: http://www.ncbi.nlm.nih.gov/mesh?term={%termName}
+  title: MeSH term
+  tags:
+  - old
+metal 1:
+  url: http://www.metal-archives.com/search?searchString={%query}&type=band_name
+  title: Metal Archives
+  tags:
+  - old
 mf 1:
   url: http://megafilez.co/search.html?q={%query}
   title: MegaFilez.co
@@ -4015,6 +5905,11 @@ mf 1:
   - mega
   examples:
     free music: search for free music Mega
+mg 1:
+  url: http://www.mobygames.com/search/quick?q={%query}
+  title: MobyGames Quick Search
+  tags:
+  - old
 mga 1:
   url: http://mageia.madb.org/package/list/arch/x86_64/application/0?t_search={%query}
   title: Mageia
@@ -4023,6 +5918,16 @@ mga 1:
   - mageia
   examples:
     http://mageia.madb.org/package/list/t_search/kde: Search for kde packages
+mi 1:
+  url: http://www.mininova.org/search/?search={%query}
+  title: Mininova
+  tags:
+  - old
+mind 1:
+  url: https://www.mindfactory.de/search_result.php?search_query={%query}
+  title: Mindfactory.de
+  tags:
+  - old
 mink 1:
   url: http://mink.behat.org/en/latest/search.html?q={%query}
   title: Mink
@@ -4051,6 +5956,16 @@ mmk 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Myanma kyat into Euros
+mn 1:
+  url: http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt={$language}-{$language}
+  title: MSN News
+  tags:
+  - old
+mnen 1:
+  url: http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt=en-US
+  title: MSN News
+  tags:
+  - old
 mnt 2:
   url: http://finance.yahoo.com/currency-converter/#from=mnt;to={%to code};amt={%amount}
   title: 'Convert Mongolian tugrik (Yahoo) '
@@ -4060,6 +5975,16 @@ mnt 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Mongolian tugrik into Euros
+month 0:
+  url: http://timeanddate.com/calendar/monthly.html
+  title: This month
+  tags:
+  - old
+moodleup 0:
+  url: http://moodle.uni-potsdam.de
+  title: Uni Potsdam, Moodle
+  tags:
+  - old
 mop 2:
   url: http://finance.yahoo.com/currency-converter/#from=mop;to={%to code};amt={%amount}
   title: 'Convert Macanese pataca (Yahoo) '
@@ -4074,6 +5999,11 @@ mouser 1:
   title: mouser.de
   examples:
     Z80: Search mouser.de for "Z80"
+mozbot 1:
+  url: http://www.mozbot.com/search?q={%query}
+  title: Mozbot
+  tags:
+  - old
 mro 2:
   url: http://finance.yahoo.com/currency-converter/#from=mro;to={%to code};amt={%amount}
   title: 'Convert Mauritanian ouguiya (Yahoo) '
@@ -4090,9 +6020,29 @@ msdn 1:
   - programming
   examples:
     regex: Search for "regex"
+msdn2 1:
+  url: http://msdn2.microsoft.com/en-us/library/{%query}.aspx
+  title: Microsoft Developers Network
+  tags:
+  - old
+msn 1:
+  url: http://search.msn.com/results.aspx?q={%query}
+  title: MSN Search
+  tags:
+  - old
 mstar 1:
   url: https://www.morningstar.com/stocks/xnys/{%ticker}/quote.html
   title: Morningstar Stock Quote
+mt 1:
+  url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff={%query}
+  title: Mac-TV Archiv
+  tags:
+  - old
+mtf 1:
+  url: http://www.mac-tv.de/Forum/search.php?do=process&query={%query}
+  title: Mac-TV Forum
+  tags:
+  - old
 mtg 1:
   url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
   title: Gatherer Magic Card Database
@@ -4111,6 +6061,11 @@ mtgdbscg 1:
   tags:
   - magic
   - cards
+mu 1:
+  url: http://www.macupdate.com/search.php?arch=all&keywords={%query}&os=macosx
+  title: MacUpdate.com
+  tags:
+  - old
 mur 2:
   url: http://finance.yahoo.com/currency-converter/#from=mur;to={%to code};amt={%amount}
   title: 'Convert Mauritian rupee (Yahoo) '
@@ -4120,6 +6075,16 @@ mur 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Mauritian rupee into Euros
+mv 0:
+  url: http://www.myvideo.de/
+  title: MyVideo Homepage
+  tags:
+  - old
+mv 1:
+  url: http://www.myvideo.de/news.php?rubrik=uoijv&searchWord={%query}&searchChannel=&searchOrder=
+  title: MyVideo clip search
+  tags:
+  - old
 mvr 2:
   url: http://finance.yahoo.com/currency-converter/#from=mvr;to={%to code};amt={%amount}
   title: 'Convert Maldivian rufiyaa (Yahoo) '
@@ -4178,6 +6143,26 @@ myfritz 0:
   - internetprovider
   - router
   - remoteaccess
+myg 1:
+  url: http://www.google.com/search?q={%query}
+  title: Google search
+  tags:
+  - old
+myip 0:
+  url: http://ipinfo.info/html/privacy-check.php
+  title: Myip
+  tags:
+  - old
+myleo 1:
+  url: http://pda.leo.org/ende?lp=&search={%query}
+  title: Mobile Leo
+  tags:
+  - old
+mymk 1:
+  url: http://jonaquino.textdriven.com/sean_ohagan/get2post.php?yndesturl=http://www.movie2k.to/movies.php?list=search&search={%query}
+  title: Movie2k
+  tags:
+  - old
 myr 2:
   url: http://finance.yahoo.com/currency-converter/#from=myr;to={%to code};amt={%amount}
   title: 'Convert Malaysian ringgit (Yahoo) '
@@ -4187,6 +6172,31 @@ myr 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Malaysian ringgit into Euros
+mys 1:
+  url: http://www.myspace.com/{%band name}
+  title: Myspace
+  tags:
+  - old
+myspace 1:
+  url: http://sads.myspace.com//Modules/Search/Pages/Search.aspx?fuseaction=advancedFind.results&searchtarget=tms&searchtype=myspace&t=tms&get=1&websearch=1&searchBoxID=HeaderWebResults&q={%query}
+  title: Myspace
+  tags:
+  - old
+mysql 1:
+  url: http://dev.mysql.com/doc/mysql/search.php?q={%query}
+  title: MySQL Documentation
+  tags:
+  - old
+mytv 0:
+  url: http://m.tvtoday.de
+  title: Mobile TVInfo
+  tags:
+  - old
+myxx 1:
+  url: http://m.fuq.com/search/?q={%query}
+  title: Tiava search
+  tags:
+  - old
 n 0:
   url: https://www.netflix.com/
   title: Netflix
@@ -4207,6 +6217,16 @@ n 1:
   - stream
   examples:
     Broadchurch: Search Netflix for "Broadchurch"
+n4m 0:
+  url: http://www.news4mobile.de/
+  title: news4mobile Startseite
+  tags:
+  - old
+n4m 1:
+  url: http://www.news4mobile.de/?sw={%Suche}
+  title: news4mobile Suche
+  tags:
+  - old
 nad 2:
   url: http://finance.yahoo.com/currency-converter/#from=nad;to={%to code};amt={%amount}
   title: 'Convert Namibian dollar (Yahoo) '
@@ -4216,6 +6236,11 @@ nad 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Namibian dollar into Euros
+nag 1:
+  url: http://google.com/search?hl={$language}&q={%query}+inurl%3Anagios.sourceforge.net%2Fdocs
+  title: Nagios
+  tags:
+  - old
 ng 0:
   url: http://docs.angularjs.org/
   title: AngularJS Documentation
@@ -4247,6 +6272,21 @@ ngn 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Nigerian naira into Euros
+nicebooks:fr 1:
+  url: http://fr.nicebooks.com/search?q={%query}
+  title: NiceBooks
+  tags:
+  - old
+nicebooks:uk 1:
+  url: http://uk.nicebooks.com/search?q={%query}
+  title: NiceBooks
+  tags:
+  - old
+nicebooks:us 1:
+  url: http://us.nicebooks.com/search?q={%query}
+  title: NiceBooks
+  tags:
+  - old
 nio 2:
   url: http://finance.yahoo.com/currency-converter/#from=nio;to={%to code};amt={%amount}
   title: 'Convert Nicaraguan córdoba (Yahoo) '
@@ -4256,6 +6296,16 @@ nio 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Nicaraguan córdoba into Euros
+no 1:
+  url: http://www.heinzelnisse.info/no/dict?searchItem={%Wort}
+  title: Norwegisch-Deutsch
+  tags:
+  - old
+nobi 1:
+  url: http://www.notebookinfo.de/suche/{%query}
+  title: Notebookinfo
+  tags:
+  - old
 nok 2:
   url: http://finance.yahoo.com/currency-converter/#from=nok;to={%to code};amt={%amount}
   title: 'Convert Norwegian krone (Yahoo) '
@@ -4274,6 +6324,11 @@ npm 1:
   - node.js
   examples:
     mkdir: search for a module to create folders on the filesystem
+npr 1:
+  url: http://www.npr.org/search.php?text={%query}
+  title: National Public Radio (United States)
+  tags:
+  - old
 npr 2:
   url: http://finance.yahoo.com/currency-converter/#from=npr;to={%to code};amt={%amount}
   title: 'Convert Nepalese rupee (Yahoo) '
@@ -4283,6 +6338,11 @@ npr 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Nepalese rupee into Euros
+ns 1:
+  url: http://www.netspeak.org/#query={%query}
+  title: Netspeak
+  tags:
+  - old
 nv 1:
   url: https://neeva.com/search?q={%Suche}
   title: Neeva
@@ -4313,6 +6373,11 @@ oca 1:
   - public domain
   examples:
     rss: Search for free RSS icons
+oe1 0:
+  url: http://oe1.orf.at/konsole?show=live
+  title: Oe1
+  tags:
+  - old
 oeis 1:
   url: https://oeis.org/search?q={%sequence}
   title: On-Line Encyclopedia of Integer Sequences
@@ -4321,6 +6386,16 @@ oeis 1:
   - math
   examples:
     13 17 19: Search the sequence 1 3 5 7 11
+of 1:
+  url: http://www.dicfro.org/?dict=gdf&word={%query}
+  title: Old french dictionnary
+  tags:
+  - old
+oh 1:
+  url: http://www.ohnorobot.com/index.pl?s={%query}
+  title: Oh No Robot
+  tags:
+  - old
 okf 1:
   url: http://otrkeyfinder.com/de/?search={%Suche}
   title: otrkeyfinder.com
@@ -4339,6 +6414,21 @@ omr 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Omani rial into Euros
+oms 1:
+  url: http://www.operamini.com/demo/?url={%url}
+  title: Opera Mini Simulator
+  tags:
+  - old
+openbsd 1:
+  url: http://www.openbsd.org/cgi-bin/man.cgi?query={%query}
+  title: OpenBSD Manual Pages
+  tags:
+  - old
+opennlp 1:
+  url: http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.opennlp.org%2Fapi%2Findex.html%20{%query}&ie=utf-8
+  title: OpenNLP API
+  tags:
+  - old
 opensub 1:
   url: http://www.opensubtitles.org/de/search2/moviename-{%query}
   title: OpenSubtitles
@@ -4349,6 +6439,11 @@ opensub 1:
 opensuse 0:
   url: https://www.opensuse.org/
   title: openSUSE Linux Operating System
+ora 1:
+  url: http://www.ora-code.com/result.html?cx=partner-pub-8150570856315117%3Afghww0-78vd&cof=FORID%3A10&ie=ISO-8859-1&q={%query}&sa=Search#755
+  title: Oracle Error Code
+  tags:
+  - old
 orm 1:
   url: http://www.openrailwaymap.org/?q={%query}
   title: OpenRailwayMap
@@ -4359,6 +6454,11 @@ orm 1:
   - railway
   examples:
     berlin: Search OpenRailwayMap for "berlin"
+os 1:
+  url: http://www.opensubtitles.org/de/search2/moviename-{%query}
+  title: OpenSubtitles
+  tags:
+  - old
 osm 0:
   url: https://openstreetmap.org
   title: OpenStreetMap
@@ -4508,6 +6608,16 @@ osmw 1:
   - copyleft
   examples:
     '23425344': Search for "23425344"
+ossearch 1:
+  url: http://en.opensuse.org/Spezial:Search?search={%query}
+  title: OpenSUSE search
+  tags:
+  - old
+otn 1:
+  url: http://forums.oracle.com/forums/search.jspa?threadID=&q={%query}&objID=c84&dateRange=all&userID=&numResults=30&rankBy=10001
+  title: Oracle OTN Forum Search
+  tags:
+  - old
 otr 0:
   url: http://www.onlinetvrecorder.com/
   title: OnlineTvRecorder (Web Online TV Recorder)
@@ -4530,6 +6640,16 @@ oujs 1:
   - userscripts
   examples:
     qr: Search OpenUserJS for "qr"
+ov 0:
+  url: http://www.onvista.de
+  title: OnVista
+  tags:
+  - old
+ov 1:
+  url: http://www.onvista.de/suche.html?SEARCH_VALUE={%query}
+  title: OnVista
+  tags:
+  - old
 owncloud 0:
   url: https://owncloud.org/
   title: ownCloud
@@ -4538,6 +6658,16 @@ owncloud 0:
   - cloud
   - open source
   - copyleft
+p2r 0:
+  url: http://page2rss.com
+  title: Page2RSS homepage
+  tags:
+  - old
+p2r 1:
+  url: http://page2rss.com/page?url={%url}
+  title: Request update feed
+  tags:
+  - old
 pab 2:
   url: http://finance.yahoo.com/currency-converter/#from=pab;to={%to code};amt={%amount}
   title: 'Convert Panamanian balboa (Yahoo) '
@@ -4547,6 +6677,11 @@ pab 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Panamanian balboa into Euros
+pastebin 0:
+  url: http://pastebin.com/
+  title: Paste Your Code
+  tags:
+  - old
 pat 1:
   url: http://worldwide.espacenet.com/{%publicationnumber}
   title: Patentserver
@@ -4559,6 +6694,11 @@ patent 1:
   description: Worldwide patent service. Multi-language interface.
   tags:
   - patents
+pb 1:
+  url: http://verbs.colorado.edu/framesets/{%predicate}-v.html
+  title: PropBank
+  tags:
+  - old
 pciid 1:
   url: http://pci-ids.ucw.cz/read/PC/{%vendorid}
   title: PCI ID Repository
@@ -4573,6 +6713,21 @@ pciid 2:
   - electronics
   examples:
     8086,10de: Search for PCI Device with Vendor ID 8086 and Device ID 10de
+pdb 1:
+  url: http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId={%key}
+  title: Protein Data Bank
+  tags:
+  - old
+pdf 1:
+  url: http://docs.google.com/viewer?url={%url}
+  title: Google PDF Viewer
+  tags:
+  - old
+pear 1:
+  url: http://pear.php.net/search.php?q={%query}&in=packages
+  title: PEAR - PHP Extension and Application Repository
+  tags:
+  - old
 pen 2:
   url: http://finance.yahoo.com/currency-converter/#from=pen;to={%to code};amt={%amount}
   title: 'Convert Peruvian nuevo sol (Yahoo) '
@@ -4582,6 +6737,11 @@ pen 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Peruvian nuevo sol into Euros
+pep 1:
+  url: http://python.org/dev/peps/pep-{%id}/
+  title: Show Python Enhancement Proposal
+  tags:
+  - old
 perl 1:
   url: http://perldoc.perl.org/search.html?q={%query}
   title: Perldoc
@@ -4603,6 +6763,11 @@ perseus 1:
   - old norse
   examples:
     Agamemnon: Search for "Agamemnon"
+pg 1:
+  url: http://www.pricegrabber.com/search.php?form_keyword={%query}&st=query
+  title: Price Grabber
+  tags:
+  - old
 pgk 2:
   url: http://finance.yahoo.com/currency-converter/#from=pgk;to={%to code};amt={%amount}
   title: 'Convert Papua New Guinean kina (Yahoo) '
@@ -4619,6 +6784,16 @@ pgp 1:
   - pgp
   examples:
     fefe: Search for PGPs for "fefe"
+pgpkey 1:
+  url: http://pgp.mit.edu:11371/pks/lookup?search=0x{%query}
+  title: PGP Keysearch
+  tags:
+  - old
+ph 1:
+  url: http://www.phazeddl.com/search/{%query}.p1.htm
+  title: Phazeddl
+  tags:
+  - old
 phb 0:
   url: http://photobucket.com/
   title: Photobucket
@@ -4694,6 +6869,11 @@ pin 1:
   - pinterest
   examples:
     berlin: Search Pinterest for "berlin"
+ping 1:
+  url: http://just-ping.com/index.php?vh={%query}
+  title: Web-based ping
+  tags:
+  - old
 pix 1:
   url: https://pixabay.com/de/photos/?image_type=&cat=&min_width=&min_height=&q={%keyword}&order=popular
   title: Pixabay Pictures
@@ -4722,6 +6902,16 @@ play 1:
   - film
   examples:
     forrest gump: Search for Forrest Gump media (DVD, CD)
+player 1:
+  url: http://www.game-monitor.com/search.php?search={%query}&type=player&location=all&game=all&x=0&y=0&num=30
+  title: Spieler Suchen bei game-monitor.com
+  tags:
+  - old
+plg 1:
+  url: http://www.primal-legion.net/content/search.php?keywords={%query}&terms=all&author=&fid[]=3&sc=1&sf=all&sk=t&sd=d&sr=posts&st=0&ch=300&t=0&submit=Suche
+  title: Prima Legion search
+  tags:
+  - old
 pln 2:
   url: http://finance.yahoo.com/currency-converter/#from=pln;to={%to code};amt={%amount}
   title: 'Convert Polish złoty (Yahoo) '
@@ -4731,6 +6921,11 @@ pln 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Polish złoty into Euros
+plot 1:
+  url: http://plot20.kesto.de/#{"functions":["{%function}"]}
+  title: Plot 2.0
+  tags:
+  - old
 plt 1:
   url: https://www.google.com/search?hl={$language}&q=matplotlib+{%query}
   title: matplotlib via Google
@@ -4759,6 +6954,16 @@ pm 1:
   - health
   examples:
     bacteria: Search for "bacteria"
+podnova 1:
+  url: http://www.podnova.com/search/{%query}/
+  title: Podnova
+  tags:
+  - old
+podster 1:
+  url: http://www.podster.de/search?q={%query}
+  title: Podster Podcastsuche
+  tags:
+  - old
 poef 1:
   url: http://www.pathofexile.com/search/results/{%query}/search-within/forumthreads-forumposts
   title: Official Path of Exile forum
@@ -4785,9 +6990,44 @@ poew 1:
     Vaal Orb: Search inofficial Path of Exile Wiki for "Vaal Orb"
   tests:
     health: Search results
+postbank 1:
+  url: http://www.postbank.de/-snm-0184330278-1314787205-0734700014-000000958-1314813579-enm-privatkunden/pk_suche.html?q={%query}
+  title: Postbank Search
+  tags:
+  - old
+pr 1:
+  url: http://www.preisroboter.de/search.php?search={%query}
+  title: Preisroboter.de Preisvergleich
+  tags:
+  - old
+praktiker 1:
+  url: http://praktiker.de/Search.action?searchTerm={%query}
+  title: Praktiker Baumarkt Online Shop
+  tags:
+  - old
 printertestfiles 0:
   url: http://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
   title: Printer test files
+prot 1:
+  url: http://www.expasy.org/cgi-bin/sprot-search-de?{%query}
+  title: SwissProt
+  tags:
+  - old
+ps 1:
+  url: http://thepiratebay.org/search/{%query}
+  title: The Pirate Bay
+  tags:
+  - old
+psql 0:
+  url: http://www.postgresql.org/
+  title: PostgreSQL
+  tags:
+  - old
+pt-pons 1:
+  url: http://en.pons.com/translate?q={%query}&in=&l=dept
+  title: PONS Portuguese dictionary
+  tags:
+  - old
 pubchem 1:
   url: http://www.ncbi.nlm.nih.gov/pccompound/?term={%compound}
   title: PubChem
@@ -4797,6 +7037,41 @@ pubchem 1:
   - pubchem
   examples:
     carbon dioxide: Search PubChem for "carbon dioxide"
+puls 0:
+  url: http://puls.uni-potsdam.de
+  title: Uni Potsdam, Puls
+  tags:
+  - old
+puppet 1:
+  url: http://reductivelabs.com/trac/puppet/search?q={%query}
+  title: Search all content
+  tags:
+  - old
+puppetc 1:
+  url: http://reductivelabs.com/trac/puppet/search?q={%query}&changeset=on
+  title: Search only changesets
+  tags:
+  - old
+puppett 1:
+  url: http://reductivelabs.com/trac/puppet/search?q={%query}&ticket=on
+  title: Search only tickets
+  tags:
+  - old
+puppetw 1:
+  url: http://reductivelabs.com/trac/puppet/search?q={%query}&wiki=on
+  title: Search only the wiki
+  tags:
+  - old
+pvx 1:
+  url: http://pvx.wikia.com/wiki/Special:Search?search={%query}&go=1
+  title: PvX Wiki
+  tags:
+  - old
+pw 1:
+  url: http://www.google.com/search?q={%query} site:wiki.piratenpartei.de
+  title: Pw
+  tags:
+  - old
 pwgen 0:
   url: https://passwordsgenerator.net/
   title: Password Generator
@@ -4874,12 +7149,47 @@ pyg 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Paraguayan guaraní into Euros
+pym 0:
+  url: http://readthedocs.org/
+  title: readthedocs.org
+  tags:
+  - old
 pym 1:
   url: http://readthedocs.org/projects/{%module}/
   title: Python module documentation at readthedocs.org
   tags:
   - programming
   - python
+pym 2:
+  url: http://readthedocs.org/search/project/?selected_facets=project%3A{%module}&q={%keyword}
+  title: Search Python module documentation at readthedocs.org
+  tags:
+  - old
+pypi 0:
+  url: http://pypi.python.org/pypi
+  title: Python Package Index (Cheese Shop)
+  tags:
+  - old
+pypi 1:
+  url: http://pypi.python.org/pypi?%3Aaction=search&term={%package}&submit=search
+  title: Python Package Index (Cheese Shop)
+  tags:
+  - old
+pys 0:
+  url: http://docs.python.org/library/
+  title: Python standard library
+  tags:
+  - old
+pys 1:
+  url: http://docs.python.org/library/{%library}.html
+  title: Python standard library
+  tags:
+  - old
+pz 1:
+  url: https://www.google.com/search?q=site:proz.com {%query}
+  title: ProZ terminology search
+  tags:
+  - old
 q 0:
   url: http://www.qype.com/
   title: Qype.com Homepage
@@ -4945,6 +7255,16 @@ qtcl 1:
   - qt
   examples:
     qwidget: Opens QWidget's documentation
+qtdoc 0:
+  url: http://qt-project.org/doc/qt-4.8/
+  title: Qt documentation's home
+  tags:
+  - old
+qtdoc 1:
+  url: http://www.google.com/search?q={%query}&sitesearch=http://qt-project.org/doc/qt-4.8/
+  title: Search Qt documentation
+  tags:
+  - old
 quiet 1:
   url: http://quietube.com/v.php/{%URL|encoding=none}
   title: Quietube
@@ -4975,6 +7295,11 @@ r2r 2:
   - travel
   examples:
     london, berlin: Search Rome2Rio for a connection from London to Berlin
+radarberlin 0:
+  url: http://wind.met.fu-berlin.de/loops/radar_200/R.NEW.gif
+  title: Regenradar FU-Berlin
+  tags:
+  - old
 rae 1:
   url: http://dle.rae.es/?w={%query}
   title: Diccionario RAE
@@ -5001,6 +7326,16 @@ rails 1:
   examples:
     redirect_to: Search for "redirect_to"
     link_to_remote: Search for "link_to_remote"
+rapids 0:
+  url: http://rapidshare-search-engine.com/
+  title: Rapidshare Search
+  tags:
+  - old
+rapidshare 1:
+  url: http://www.rapidshare1.com/search.php?search={%file}
+  title: Rapidshare
+  tags:
+  - old
 rarbg 0:
   url: http://rarbg.to/torrents.php
   title: RARBG
@@ -5060,12 +7395,36 @@ rblcheckapi 1:
   - api
   examples:
     127.0.0.1: Check if 127.0.0.1 is on the RBL
+rea 0:
+  url: http://www.rea-getraenke.de/index.php
+  title: Rea Getränkemarkt
+  tags:
+  - old
+rea 1:
+  url: http://www.rea-getraenke.de/index.php?cl=search&searchparam={%query}
+  title: Rea Getränkemarkt
+  tags:
+  - old
 reddit 0:
   url: http://www.reddit.com
   title: Reddit
   tags:
   - forum
   - reddit
+reddit 1:
+  url: https://www.reddit.com/search?q={%query}
+  title: Reddit
+  tags:
+  - forum
+  - reddit
+  - old
+  examples:
+    berlin: Search for "berlin"
+remnant 1:
+  url: http://lastremnant.wikia.com/wiki/Special:Search?search={%query}&go=1
+  title: The Last Remnant
+  tags:
+  - old
 remove 1:
   url: http://www.shouldiremoveit.com/programs.aspx?q={%product}
   title: ShouldIRemoveIt
@@ -5098,6 +7457,21 @@ rg 1:
   - reddit
   examples:
     berlin: Search for "berlin"
+ripe 1:
+  url: http://www.db.ripe.net/whois?searchtext={%query}
+  title: RIPE Database
+  tags:
+  - old
+rl 1:
+  url: http://rapidlibrary.com/index.php?q={%query}&filetype=0
+  title: Rapidlibrary Search
+  tags:
+  - old
+rmsk 0:
+  url: http://www.rms-austria.at/service-center/kontakt/katrin-lacina/
+  title: Rmsk
+  tags:
+  - old
 ron 2:
   url: http://finance.yahoo.com/currency-converter/#from=ron;to={%to code};amt={%amount}
   title: 'Convert Romanian new leu (Yahoo) '
@@ -5107,12 +7481,22 @@ ron 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Romanian new leu into Euros
+route 2:
+  url: https://www.google.com/maps?hl={$language}&saddr={%from}&daddr={%to}
+  title: Google Maps Route
+  tags:
+  - old
 rp18 0:
   url: https://18.re-publica.com/
   title: 'Re: Publica Congress Berlin 2018'
   tags:
   - congress
   - berlin
+rs 1:
+  url: http://www.rapidshare1.com/search.php?search={%file}
+  title: Rapidshare
+  tags:
+  - old
 rt 1:
   url: http://www.rottentomatoes.com/search/?search={%query}
   title: Rotten Tomatoes
@@ -5121,6 +7505,11 @@ rt 1:
   - film
   examples:
     forrest gump: Search Rotten Tomatoes for "forrest gump"
+rtm 0:
+  url: http://www.rememberthemilk.com/home/domiii/#section.tasks
+  title: Remember the milk
+  tags:
+  - old
 rub 2:
   url: http://finance.yahoo.com/currency-converter/#from=rub;to={%to code};amt={%amount}
   title: 'Convert Russian rouble (Yahoo) '
@@ -5130,6 +7519,11 @@ rub 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Russian rouble into Euros
+ruby 1:
+  url: http://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q={%query}&sa=Search
+  title: Ruby Documentation
+  tags:
+  - old
 rustd 1:
   url: https://doc.rust-lang.org/std/?search={%query}
   title: Rust std API Documentation
@@ -5142,6 +7536,11 @@ rwf 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Rwandan franc into Euros
+rwth 1:
+  url: http://www.campus.rwth-aachen.de/rwth/all/lecturerlist.asp?find={%name}
+  title: RWTH Aachen Campus Phonebook
+  tags:
+  - old
 s 0:
   url: https://startpage.com/
   title: Startpage.com
@@ -5154,6 +7553,26 @@ s 1:
   - web search
   examples:
     berlin: Search for "berlin"
+sa 1:
+  url: http://www.semanticsarchive.net/sem-bin/browse.pl?search={%query}
+  title: Semantics Archive
+  tags:
+  - old
+sandboxcommand 1:
+  url: http://www.google.com/search?hl=de&q={%query}&ie=utf-8
+  title: Sandbox
+  tags:
+  - old
+sandboxcommand 2:
+  url: http://www.google.com/search?hl={%lang}&q={%query}&ie=utf-8
+  title: Sandbox
+  tags:
+  - old
+sanego 2:
+  url: http://www.sanego.de/Arzt/?q={%Name oder Fachgebiet}&l={%Ort, Ortsteil oder Postleitzahl}&btn=Suchen
+  title: Sanego - Die Gesundheits-Community
+  tags:
+  - old
 sar 2:
   url: http://finance.yahoo.com/currency-converter/#from=sar;to={%to code};amt={%amount}
   title: 'Convert Saudi riyal (Yahoo) '
@@ -5208,6 +7627,11 @@ scala 1:
   - documentation
   examples:
     AnyVal: Search for "AnyVal"
+scholar 1:
+  url: http://www.scholarpedia.org/article/Special:Search?from=sidebar&search={%article}&go=Title
+  title: Scholarpedia
+  tags:
+  - old
 sci-hub 1:
   url: https://sci-hub.do/{%query}
   title: Sci-Hub
@@ -5237,6 +7661,16 @@ sdg 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Sudanese pound into Euros
+se 2:
+  url: http://{%subpage}.stackexchange.com/search?q={%query}
+  title: Stack Exchange
+  tags:
+  - old
+searchmash 0:
+  url: http://www.searchmash.com
+  title: Search Mash
+  tags:
+  - old
 sek 2:
   url: http://finance.yahoo.com/currency-converter/#from=sek;to={%to code};amt={%amount}
   title: 'Convert Swedish krona/kronor (Yahoo) '
@@ -5246,12 +7680,37 @@ sek 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Swedish krona/kronor into Euros
+sem 1:
+  url: http://www.semager.de/search/?q={%query}&lang=all
+  title: Semantic WWW search by SemaGer
+  tags:
+  - old
+sema 1:
+  url: http://www.semager.com/search/?q={%query}&lang=en
+  title: Semager Semantic Search
+  tags:
+  - old
+semlex 1:
+  url: http://gmb.let.rug.nl/explorer/semlex.php?entrysortkey=frequency_lemma&entrysortorder=desc&lemma={%lemma}
+  title: GMB Explorer, semantic lexicon
+  tags:
+  - old
 sep 0:
   url: http://plato.stanford.edu
   title: Stanford Encyclopedia of Philosophy
 sep 1:
   url: http://plato.stanford.edu/search/searcher.py?query={%query}
   title: Stanford Encyclopedia of Philosophy
+sf 0:
+  url: https://sourceforge.net/account/login.php
+  title: Sourceforge
+  tags:
+  - old
+sf 1:
+  url: http://sourceforge.net/search/?type_of_search=soft&words={%query}
+  title: Sourceforge
+  tags:
+  - old
 sgd 2:
   url: http://finance.yahoo.com/currency-converter/#from=sgd;to={%to code};amt={%amount}
   title: 'Convert Singapore dollar (Yahoo) '
@@ -5261,6 +7720,46 @@ sgd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Singapore dollar into Euros
+sgo 0:
+  url: http://sources.gentoo.org/{$1}/{$2}
+  title: Show Gentoo ebuild sources
+  tags:
+  - old
+sgw 1:
+  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&sband=1&salbum=1&stitle=1&stext=&sgo=search
+  title: Sturmgeweiht (Searches for everything)
+  tags:
+  - old
+sgwa 1:
+  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&salbum=1&sgo=search
+  title: Sturmgeweiht (Searches for an album)
+  tags:
+  - old
+sgwb 1:
+  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&sband=1&sgo=search
+  title: Sturmgeweiht (Searches for a band)
+  tags:
+  - old
+sgwte 1:
+  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&sgo=search&stext=1
+  title: Sturmgeweiht (Searches for a text)
+  tags:
+  - old
+sgwti 1:
+  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq={%entry}&stitle=1&sgo=search
+  title: Sturmgeweiht (Searches for a title)
+  tags:
+  - old
+sha1 1:
+  url: http://stefanschramm.net/dev/hash/?algo=sha1&q={%data}
+  title: Hash functions
+  tags:
+  - old
+shot 1:
+  url: http://www.superscreenshot.com/getscreen.php?url={%url}
+  title: Screenshot from Url
+  tags:
+  - old
 shp 2:
   url: http://finance.yahoo.com/currency-converter/#from=shp;to={%to code};amt={%amount}
   title: 'Convert Saint Helena pound (Yahoo) '
@@ -5270,6 +7769,11 @@ shp 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Saint Helena pound into Euros
+shs 1:
+  url: http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song
+  title: Secondhandsongs
+  tags:
+  - old
 si 1:
   url: https://startpage.com/do/search?query={%query}&cat=pics
   title: Startpage.com images
@@ -5277,6 +7781,16 @@ si 1:
   - web search
   examples:
     berlin: Search for images of "berlin"
+skapiec 0:
+  url: http://www.skapiec.pl/szukaj/w_calym_serwisie/${query}
+  title: Skapiec - Polish price comparison site
+  tags:
+  - old
+skreemr 1:
+  url: http://www.skreemr.com/results.jsp?q={%query}
+  title: SkreemR
+  tags:
+  - old
 skyrock 1:
   url: http://www.skyrock.com/search/articles/?q={%query}
   title: Skyrock.com
@@ -5306,11 +7820,21 @@ sll 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Sierra Leonean leone into Euros
+smfmod 1:
+  url: http://custom.simplemachines.org/mods/index.php?action=search&basic_search={%query}
+  title: Search for Modifications
+  tags:
+  - old
 smw 1:
   url: https://www.similarweb.com/website/{%domain}
   title: SimilarWeb
   examples:
     findfind.it: Search SimilarWeb for "findfind.it"
+snipmp3 1:
+  url: http://snipmp3.com/?url={%url}
+  title: Snipmp3
+  tags:
+  - old
 so 0:
   url: http://stackoverflow.com/
   title: Stack Overflow
@@ -5323,6 +7847,11 @@ so 1:
   - programming
   examples:
     java: search for Java-related questions
+soa 1:
+  url: http://stackoverflow.com/search?q=%5Bandroid%5D+{%query}
+  title: Stackoverflow android tag
+  tags:
+  - old
 solrj 0:
   url: http://lucene.apache.org/solr/4_0_0/solr-solrj/index.html
   title: Solr Java Client API
@@ -5358,6 +7887,21 @@ sos 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Somali shilling into Euros
+soundcloud 1:
+  url: http://soundcloud.com/search?q[fulltext]={%query}
+  title: Soundcloud
+  tags:
+  - old
+soup 1:
+  url: http://www.soup.io/friends?search={%query}
+  title: Soup.io friends full text search
+  tags:
+  - old
+sowi 1:
+  url: http://www.sowiport.de/suche/einfache-suche.html?tx={%Begriff}&L=0&tx_and=true
+  title: Sowiport
+  tags:
+  - old
 sp 1:
   url: https://open.spotify.com/search/results/{%query}
   title: Spotify
@@ -5370,6 +7914,11 @@ sp 1:
 spam 1:
   url: https://www.spamhaus.org/query/ip/{%URL}
   title: Spamhaus Status-Abfrage
+spfun 1:
+  url: http://www.sparkfun.com/search/results?term={%query}&what=products
+  title: Sparkfun product search
+  tags:
+  - old
 spl 1:
   url: http://link.springer.com/search?query={%query}
   title: SpringerLink
@@ -5377,12 +7926,67 @@ spl 1:
   - science
   examples:
     chomsky: Search for scientific papers about or of Chomsky
+spo 1:
+  url: http://www.scholarpedia.org/article/Special:Search?from=sidebar&search={%article}&go=Title
+  title: Scholarpedia
+  tags:
+  - old
+sqp 1:
+  url: http://www.seeqpod.com/music/?q={%query}
+  title: Seeqpod
+  tags:
+  - old
+sr 1:
+  url: https://www.reddit.com/r/{%forum}
+  title: Reddit
+  tags:
+  - old
+sreddit 1:
+  url: https://www.reddit.com/r/{%forum}
+  title: Reddit
+  tags:
+  - old
+ss 2:
+  url: http://www.skyscanner.net/{$language}/eur/fluge/{%from}/{%to}?charttype=1
+  title: Skyscanner cheap flights
+  tags:
+  - old
 ssch 0:
   url: https://www.semanticscholar.org/
   title: Semantic Scholar
 ssch 1:
   url: https://www.semanticscholar.org/search?q={%query}
   title: Semantic Scholar
+ssl 1:
+  url: https://www.ssllabs.com/ssldb/analyze.html?d={%domain}
+  title: SSL Labs Analyzer
+  tags:
+  - old
+ssw 1:
+  url: http://szenesprachenwiki.de/words/advanced_search/?q={%query}
+  title: Szenesprachenwiki
+  tags:
+  - old
+st 0:
+  url: http://www.stylepark.com/
+  title: Stylepark Designs
+  tags:
+  - old
+st 1:
+  url: http://www.stylepark.com/srv.do?op=search&site=stylepark&search={%query}
+  title: Stylepark Designs
+  tags:
+  - old
+state 1:
+  url: http://www.state.{%query}.us
+  title: USA State Websites
+  tags:
+  - old
+stc 1:
+  url: http://surfthechannel.com/search/all/3/1/{%query}.html
+  title: Surfthehannel
+  tags:
+  - old
 std 2:
   url: http://finance.yahoo.com/currency-converter/#from=std;to={%to code};amt={%amount}
   title: 'Convert São Tomé and Príncipe dobra (Yahoo) '
@@ -5395,6 +7999,11 @@ std 2:
 steam 1:
   url: https://store.steampowered.com/search/?term={%game%}
   title: Game on the steam platform
+su 1:
+  url: http://superuser.com/search?q={%query}
+  title: Super User
+  tags:
+  - old
 subscene 0:
   url: http://subscene.com/
   title: Subscene
@@ -5407,12 +8016,22 @@ subscene 1:
   - subtitles
   examples:
     loose change: Search for subtitles to "loose change"
+subtitles 1:
+  url: http://www.google.com/search?hl={$language}&sitesearch=subtitles.images.o2.cz&domains=subtitles.images.o2.cz&q={%movie}
+  title: Subtitles.images.o2.cz
+  tags:
+  - old
 suepo 0:
   url: https://www.suepo.org
   title: Staff Union European Patent Office
   tags:
   - patents
   - suepo
+svfr 1:
+  url: http://www.sensagent.com/dictionnaires/sv-fr/{%word}/ALEXMN/
+  title: Translation Swedish to French
+  tags:
+  - old
 swipl 0:
   url: http://www.swi-prolog.org/pldoc/index.html
   title: SWI-Prolog documentation
@@ -5433,6 +8052,11 @@ swipl 1:
   - manual
   examples:
     append: Search SWI-Prolog site for documentation on appending
+swt 1:
+  url: http://www.test.de/suche/?q={%query}
+  title: Stiftung Warentest
+  tags:
+  - old
 sxf 0:
   url: http://www.berlin-airport.de/en/travellers-sxf/index.php
   title: Berlin Airport (Schönefeld)
@@ -5497,6 +8121,11 @@ tat 3:
   - languages
   examples:
     en, ita, not at all: search for Italian translations of the English phrase "not at all"
+taz 1:
+  url: http://www.google.com/search?hl=de&q=site%3Ataz.de+{%query}
+  title: Taz Archiv
+  tags:
+  - old
 tbaddon 0:
   url: https://addons.mozilla.org/thunderbird/
   title: Thunderbird Add-ons
@@ -5513,6 +8142,26 @@ tbaddon 1:
   - addons
   examples:
     spam: Search for Thunderbird Addon about "spam"
+tc 0:
+  url: http://www.techcrunch.com/
+  title: TechCrunch
+  tags:
+  - old
+tc 1:
+  url: http://www.techcrunch.com/?s={%query}
+  title: TechCrunch Suche
+  tags:
+  - old
+tcode 1:
+  url: https://www.tcodesearch.com/tcodes/search?q={%query}
+  title: SAP TCODE Search
+  tags:
+  - old
+tct 1:
+  url: http://www.techcrunch.com/tag/{%tag}
+  title: Tag-Suche bei TechCrunch
+  tags:
+  - old
 tdrm 0:
   url: https://tdrm.fiff.de/
   title: TDRM Tihange Doel Radiation Monitoring Network
@@ -5537,6 +8186,11 @@ tds 1:
   - comedy
   examples:
     germany: Search "The Daily Show" archives for "germany"
+te 1:
+  url: http://www.tineye.com/search?url={%url}
+  title: TinEye
+  tags:
+  - old
 techrightsfeed 0:
   url: http://techrights.org/feed/
   title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS feed)
@@ -5554,6 +8208,21 @@ ted 1:
   - talks
   examples:
     pinker: Search for talks of Steven Pinker
+teltarif 1:
+  url: http://www.teltarif.de/db/res.html?019x=0&kurz=ja&ve=1&takt=61&von=Analoganschluss&ziel={%Zielort}
+  title: Teltarif.de
+  tags:
+  - old
+tfm 1:
+  url: http://www.transfermarkt.de/de/undefined/suche/ergebnis.html?quicksearch={%query}&x=0&y=0
+  title: Transfermarkt.de
+  tags:
+  - old
+tg 1:
+  url: http://tagoo.ru/?search={%query}
+  title: Tagoo Music Search
+  tags:
+  - old
 thb 2:
   url: http://finance.yahoo.com/currency-converter/#from=thb;to={%to code};amt={%amount}
   title: 'Convert Thai baht (Yahoo) '
@@ -5563,6 +8232,16 @@ thb 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Thai baht into Euros
+thomann 1:
+  url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw={%query}&x=&y=
+  title: Thomann Suche
+  tags:
+  - old
+thsr 1:
+  url: http://thesaurus.com/browse/{%query}
+  title: Roget's Thesaurus
+  tags:
+  - old
 tiktok 1:
   url: https://www.tiktok.com/@{%user}
   title: TikTok, User
@@ -5631,6 +8310,11 @@ titulky 1:
   - titulky
   examples:
     loose change: Find subtitles for "loose change"
+tldp 1:
+  url: http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q={%query}
+  title: The Linux Documentation Project
+  tags:
+  - old
 tmdb 1:
   url: http://www.themoviedb.org/search?query={%title}
   title: The Open Movie Database
@@ -5657,6 +8341,11 @@ top 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Tongan paʻanga into Euros
+topo 1:
+  url: http://torrentportal.com/torrents-search.php?search={%query}
+  title: Torrent Portal
+  tags:
+  - old
 torrent 1:
   url: https://search.torrents.io/{%query}:torrentseeker
   title: Torrents.to - bittorrent meta search
@@ -5697,6 +8386,11 @@ tpbv 1:
   - torrent
   examples:
     mozart: Search for "mozart"
+trends 1:
+  url: http://www.google.com/trends?q={%query}
+  title: Google Trends
+  tags:
+  - old
 trianglify 0:
   url: https://snorpey.github.io/triangulation/
   title: Triangulation (Low poly generation) online
@@ -5711,6 +8405,11 @@ triblex 1:
   - international law
   - law
   - international organisation
+trim 1:
+  url: http://tr.im/marklet?url={%url}
+  title: Tr.im
+  tags:
+  - old
 try 2:
   url: http://finance.yahoo.com/currency-converter/#from=try;to={%to code};amt={%amount}
   title: 'Convert Turkish lira (Yahoo) '
@@ -5743,6 +8442,11 @@ ttd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Trinidad and Tobago dollar into Euros
+tucows 1:
+  url: http://tucows.com/search?search_terms={%query}&search_scope=%2A
+  title: Tucows
+  tags:
+  - old
 tv 1:
   url: https://www.thingiverse.com/search?q={%argument_name}&type=things&sort=relevant
   title: Thingiverse
@@ -5756,6 +8460,16 @@ tvdb 1:
   - series
   examples:
     wonder years: Search for the TV show "The Wonder Years"
+tvrage 1:
+  url: http://tvrage.com/search.php?search={%query}
+  title: TVRage search
+  tags:
+  - old
+tvrss 1:
+  url: http://tvrss.net/search/?show_name={%query}
+  title: Tvrss.net search
+  tags:
+  - old
 tw 0:
   url: https://twitter.com/?lang={$language}
   title: Twitter Homepage
@@ -5793,6 +8507,21 @@ twd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 New Taiwan dollar into Euros
+twick 1:
+  url: http://twick.it/find_topic.php?search={%query}
+  title: Twick.it - the Explain Engine
+  tags:
+  - old
+twingly 0:
+  url: http://twingly.com/
+  title: Twingly Main page
+  tags:
+  - old
+twingly 1:
+  url: http://twingly.com/search?q={%query}
+  title: Twingly Search
+  tags:
+  - old
 twitter 0:
   url: https://twitter.com
   title: Twitter
@@ -5815,6 +8544,11 @@ twitter4j 1:
   - twitter
   examples:
     FilterQuery: Search Twitter4j documentation for "FilterQuery"
+twk 0:
+  url: http://tweaks.com
+  title: Tweaks
+  tags:
+  - old
 twl 1:
   url: https://twitter.com/search?lang={$language}&q=lang%3A{$language}%20{%query}
   title: Twitter Search, only in my language
@@ -5843,6 +8577,11 @@ twm 0:
   - private message
   - instant message
   - messenger
+twm 1:
+  url: http://twitter.com/#!/search/%40{%user}
+  title: Search for Tweets that mention a specific user
+  tags:
+  - old
 twme 1:
   url: https://twitter.com/search?lang={$language}&q={%query}
   title: Twitter mentions
@@ -5895,11 +8634,26 @@ twum 1:
   - social network
   examples:
     serchilo: Go to user page of @serchilo
+tx 1:
+  url: http://www.tixuma.de/index.php?mp=search&sc={%query}&tg=0
+  title: Tixuma Suche
+  tags:
+  - old
 txl 0:
   url: http://www.berlin-airport.de/en/travellers-txl/index.php
   title: Berlin Airport (Tegel)
   tags:
   - airports
+ty 0:
+  url: http://twingly.com/
+  title: Twingly Main page
+  tags:
+  - old
+ty 1:
+  url: http://twingly.com/search?q={%query}
+  title: Twingly Search
+  tags:
+  - old
 tzs 2:
   url: http://finance.yahoo.com/currency-converter/#from=tzs;to={%to code};amt={%amount}
   title: 'Convert Tanzanian shilling (Yahoo) '
@@ -5909,6 +8663,26 @@ tzs 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Tanzanian shilling into Euros
+tzt 1:
+  url: http://www.tagzania.com/tag/{%tag}
+  title: Tagzania
+  tags:
+  - old
+tzu 1:
+  url: http://www.tagzania.com/user/{%user}
+  title: Tagzania
+  tags:
+  - old
+tüz 0:
+  url: http://opac.ub.uni-tuebingen.de/olix.html?db=tzv
+  title: Suchmaske für die Tübinger Zeitschriften
+  tags:
+  - old
+tüz 1:
+  url: http://opac.ub.uni-tuebingen.de/cgi-bin/wwwolix.cgi?db=tzv&field0={%query}
+  title: Schnellsuche in den Tübinger Zeitschriften
+  tags:
+  - old
 uah 2:
   url: http://finance.yahoo.com/currency-converter/#from=uah;to={%to code};amt={%amount}
   title: 'Convert Ukrainian hryvnia (Yahoo) '
@@ -5918,6 +8692,11 @@ uah 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Ukrainian hryvnia into Euros
+ubdo 1:
+  url: http://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="{%query}"
+  title: Universitätsbibliothek Dortmund
+  tags:
+  - old
 ubman 1:
   url: http://manpages.ubuntu.com/cgi-bin/search.py?&ie=UTF-8&q={%query}
   title: Ubuntu Manpage
@@ -5942,6 +8721,46 @@ ubplanet 0:
   tags:
   - ubuntu
   - linux
+ubu 1:
+  url: http://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query={%query}
+  title: Ubu.com
+  tags:
+  - old
+ubug 0:
+  url: https://bugs.launchpad.net/
+  title: Issue Tracker
+  tags:
+  - old
+ubug 2:
+  url: https://launchpad.net/ubuntu/+source/{%package}/+bugs?field.searchtext={%query}
+  title: search for a term in ubuntu bugs (query)
+  tags:
+  - old
+ubugq 1:
+  url: https://launchpad.net/ubuntu/+bugs?field.searchtext={%query}
+  title: search for a term in ubuntu bugs (query)
+  tags:
+  - old
+ubuntu-packages 1:
+  url: http://packages.ubuntu.com/{%package}
+  title: Ubuntu Packages
+  tags:
+  - old
+ubuntu-planet 0:
+  url: http://planet.ubuntu.com/
+  title: Ubuntu Planet
+  tags:
+  - old
+ubuntu-wiki 0:
+  url: https://wiki.ubuntu.com/
+  title: Ubuntu Wiki
+  tags:
+  - old
+ubuntu-wiki 1:
+  url: https://wiki.ubuntu.com/?action=fullsearch&context=180&value={%query}&titlesearch=Titles
+  title: Ubuntu.com Wiki Search
+  tags:
+  - old
 ubw 0:
   url: https://wiki.ubuntu.com/
   title: Ubuntu.com Wiki
@@ -5975,6 +8794,16 @@ ucb 0:
   - unicode
   - characters
   - blocks
+ucs 1:
+  url: http://www.fileformat.info/info/unicode/char/search.htm?q={%query}&preview=entity
+  title: Unicode Character Search, not including Han codepoints
+  tags:
+  - old
+ucsh 1:
+  url: http://www.fileformat.info/info/unicode/char/search.htm?q={%query}&han=Y&preview=entity
+  title: Unicode Character Search, including Han codepoints
+  tags:
+  - old
 ud 0:
   url: http://www.urbandictionary.com/
   title: Urban Dictionary
@@ -5991,6 +8820,11 @@ ud 1:
   - english
   examples:
     wheelbo: Look up "wheelbo" in the Urban Dictionary
+uesp 1:
+  url: http://www.uesp.net/wiki/Special:Search?search={%query}&go=Go&nsnum=0&redirs=1&searchtitles=1
+  title: Unofficial Elder Scrolls Pages
+  tags:
+  - old
 ugb 1:
   url: http://www.ultimate-guitar.com/search.php?s={%band}&w=bands
   title: 'Ultimate Guitar: Bands'
@@ -6016,6 +8850,31 @@ ugx 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Ugandan shilling into Euros
+uima 0:
+  url: http://incubator.apache.org/uima/downloads/releaseDocs/2.3.0-incubating/docs/api/
+  title: UIMA API
+  tags:
+  - old
+uima 1:
+  url: http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fincubator.apache.org%2Fuima%2Fdownloads%2FreleaseDocs%2F2.3.0-incubating%2Fdocs%2Fapi%2F%20{%query}&ie=utf-8
+  title: UIMA API
+  tags:
+  - old
+ulbbonn 1:
+  url: http://131.220.74.17:8080/webOPACClient/start.do?Language=De&Login=sisis&Query=-1="{%query}"
+  title: Universitäts- und Landesbibliothek Bonn
+  tags:
+  - old
+uniprot 1:
+  url: http://www.uniprot.org/uniprot/?query={%query}&sort=score
+  title: Uniprot
+  tags:
+  - old
+up 1:
+  url: http://www.uniprot.org/uniprot/?query={%query}&sort=score
+  title: Uniprot
+  tags:
+  - old
 ups 1:
   url: http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum={%tracking number}
   title: UPS tracking
@@ -6024,6 +8883,11 @@ ups 1:
   - shipping
   examples:
     1Z9999999999999999: track shipment with the number 1Z9999999999999999
+us 1:
+  url: http://userscripts.org/scripts/search?q={%query}
+  title: Userscripts
+  tags:
+  - old
 usbid 1:
   url: https://usb-ids.gowdy.us/read/UD/{%vendorid}
   title: USB ID Repository
@@ -6038,6 +8902,11 @@ usbid 2:
   - electronics
   examples:
     05e3,0608: Search for USB device with Vendor ID 05e3 and Device ID 0608
+uscripts 1:
+  url: http://userscripts.org/scripts/search?q={%query}
+  title: Userscripts
+  tags:
+  - old
 usd 2:
   url: http://finance.yahoo.com/currency-converter/#from=usd;to={%to code};amt={%amount}
   title: 'Convert United States dollar (Yahoo) '
@@ -6047,6 +8916,11 @@ usd 2:
   - yahoo
   examples:
     eur, 1: Convert 1 United States dollar into Euros
+usk 1:
+  url: http://www.usk.de//cont3.php?s=search&title={%query}&s.x=38&s.y=12&s=search
+  title: Spieltitel bei USK Suchen
+  tags:
+  - old
 uxse 0:
   url: https://unix.stackexchange.com/
   title: Unix Stack Exchange
@@ -6074,6 +8948,16 @@ uyu 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Uruguayan peso into Euros
+v 1:
+  url: http://vimeo.com/search?q={%query}
+  title: Vimeo
+  tags:
+  - old
+validator 1:
+  url: http://validator.w3.org/check?uri={%uri}
+  title: W3 Validator
+  tags:
+  - old
 vbblive 0:
   url: http://fahrinfo.vbb.de/bin/help.exe/dn?L=vs_mobilitymap&tpl=fullmap&tabApp=show
   title: VBB Verkehrsverbund Berlin-Brandenburg Livemap
@@ -6082,6 +8966,11 @@ vbblive 0:
   - brandenburg
   - public transport
   - live map
+vbn 2:
+  url: http://www.fahrplaner.de/hafas/query.exe/dn?L=vbn&{%Start},{%Ziel}
+  title: VBN Verkehrsverbund NDS/Bremen
+  tags:
+  - old
 vcpkg 1:
   url: https://vcpkg.io/en/packages.html?query={%query}
   title: vcpkg package search
@@ -6102,6 +8991,11 @@ viaf 1:
   - books
   examples:
     noam chomsky: returns author records on Noam Chomsky from several national libraries
+vim 1:
+  url: http://vim.wikia.com/wiki/index.php?search={%query}
+  title: Vim
+  tags:
+  - old
 vimeo 0:
   url: http://vimeo.com
   title: Vimeo
@@ -6130,6 +9024,11 @@ vine 1:
   - video
   examples:
     cat: Search Vine for "cat"
+visuwords 1:
+  url: http://www.visuwords.com/?word={%query}
+  title: Visuwords
+  tags:
+  - old
 vk 0:
   url: http://vk.com
   title: Vkontakte
@@ -6260,6 +9159,21 @@ wa 1:
   - wolfram alpha
   examples:
     gdp of germany vs. usa: Compare the GDP of Germany and the USA
+waceu 2:
+  url: http://{%server}-eu.warcrafter.net/{%name}
+  title: Warcrafter search EU-server
+  tags:
+  - old
+wacus 2:
+  url: http://{%server}-us.warcrafter.net/{%name}
+  title: Warcrafter search US-server
+  tags:
+  - old
+wadoku 1:
+  url: http://www.wadoku.de/wadoku/search/{%suchwort}
+  title: Wadoku suche
+  tags:
+  - old
 wam 1:
   url: http://m.wolframalpha.com/input/?i={%query}
   title: WolframAlpha Mobile
@@ -6270,6 +9184,16 @@ wam 1:
   - mathematics
   examples:
     gdp of germany vs. usa: Compare the GDP of Germany and the USA
+watchz 1:
+  url: http://zattoo.com/view/{%channel}
+  title: Zattoo
+  tags:
+  - old
+way 1:
+  url: http://www.worryaboutyou.com/?q={%query}
+  title: Worry About You
+  tags:
+  - old
 wb 0:
   url: http://{$language}.wikibooks.org/
   title: Wikibooks
@@ -6282,6 +9206,21 @@ wb 1:
   tags:
   - wiki
   - copyleft
+wbg 1:
+  url: http://www.wbg-wissenverbindet.de/WBGShop/php/Proxy.php?purl=%2Fwbg%2Fproducts%2Fsearch%2Fresult.html&quick={%Suche}&go.x=5&go.y=5
+  title: Wissenschaftliche Buchgesellschaft
+  tags:
+  - old
+wbit 1:
+  url: http://www.woerterbuch.info/?query={%query}&s=dict&l=en
+  title: Woerterbuch.info
+  tags:
+  - old
+wbk 1:
+  url: http://extsearch.worldbank.org/servlet/SiteSearchServlet?q={%query}
+  title: World Bank
+  tags:
+  - old
 wbm 1:
   url: https://web.archive.org/web/*/{%url|encoding=none}
   title: Wayback Machine
@@ -6290,6 +9229,11 @@ wbm 1:
   - internet
   - web
   - archive
+wbn 1:
+  url: http://germazope.uni-trier.de:8080/Projekte/WBB2009/StartSeite/startGlobalSearch?stichwort={%wort}
+  title: Wörterbuchnetz
+  tags:
+  - old
 wc 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Contributions/{%user}
   title: Wikipedia, User Contributions
@@ -6320,6 +9264,13 @@ wd 1:
   - copyleft
   examples:
     berlin: Search Wikidata for "Berlin"
+wde 1:
+  url: https://de.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
+  title: 'Wikipedia Article Search (German) '
+  examples:
+    berlin: Wikipedia article about Berlin
+  tags:
+  - old
 we 0:
   url: http://www.wetter.com/
   title: Wetter.com
@@ -6332,9 +9283,19 @@ we 1:
   - weather
   examples:
     berlin: Search for "berlin"
+webs 1:
+  url: http://www.webshots.com/search?query={%query}&new=1&source=serchilo
+  title: Webshots
+  tags:
+  - old
 wen 1:
   url: https://en.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikipedia English
+wenssl 1:
+  url: https://secure.wikimedia.org/wikipedia/en/wiki/{%query}
+  title: Wenssl
+  tags:
+  - old
 wf 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Search?fulltext=Search&search={%query}
   title: Wikipedia Fulltext Search
@@ -6396,6 +9357,11 @@ wgo 1:
   - copyleft
   examples:
     berlin: Search for "berlin"
+wh 1:
+  url: http://www.wowhead.com/?search={%query}
+  title: search Wowhead
+  tags:
+  - old
 whatis 0:
   url: http://whatis.techtarget.com/
   title: What is? - Technical glossary
@@ -6419,6 +9385,26 @@ whois 1:
   - domains
   examples:
     google.com: show the owner of the domain google.com
+whosangsong 1:
+  url: http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song
+  title: Secondhandsongs
+  tags:
+  - old
+wikia 1:
+  url: http://www.wikia.com/wiki/Special:Search?tab=1&search={%query}
+  title: Wikia
+  tags:
+  - old
+wikileaks 0:
+  url: http://www.taz.de/support-WikiLeaks
+  title: Wikileaks
+  tags:
+  - old
+wikimapia 1:
+  url: http://wikimapia.org/?#search={%place}
+  title: Wikimapia
+  tags:
+  - old
 wipr 0:
   url: http://www.worldipreview.com
   title: World Intellectual Property Review (WIPR)
@@ -6428,9 +9414,29 @@ wipr 0:
   - intellectual property
   - ip law
   - copyright
+wis 1:
+  url: http://www.woerterbuch.info/?query={%query}&s=thesaurus&dl=0&l=de&showlang=de
+  title: Woerterbuch.info
+  tags:
+  - old
+wissen 1:
+  url: http://wissen.de/wde/generator/wissen/services/suche/index.html?query={%query}
+  title: Wissen.de
+  tags:
+  - old
 wit 1:
   url: https://it.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikipedia Italia
+wkl-ż 1:
+  url: http://www.gotowanie.wkl.pl/szukaj.php?key={%query}&szukaj
+  title: Wielkie Żarcie
+  tags:
+  - old
+wl 0:
+  url: http://www.taz.de/support-WikiLeaks
+  title: Wikileaks
+  tags:
+  - old
 wle 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Aen.wikipedia.org+intitle%3A"list+of"+intitle%3A"episodes"+{%title}
   title: Wikipedia, List of episodes
@@ -6442,6 +9448,16 @@ wle 1:
     how i: List of all "How I Met Your Mother" episodes on Wikipedia
     girls: List of all "Girls" episodes on Wikipedia
     simpsons horror: List of all "The Simpsons Treehouse of Horror" episodes on Wikipedia
+wlwf 1:
+  url: http://www.wlw.de/sse/MainServlet?sprache=de&land=DE&suchbegriff={%firm}&anzeige=firma
+  title: Wer liefert was? - Suche
+  tags:
+  - old
+wlwp 1:
+  url: http://www.wlw.de/sse/MainServlet?sprache=de&land=DE&anzeige=produkt&suchbegriff={%product}
+  title: Wer liefert was? - Suche
+  tags:
+  - old
 wm 0:
   url: https://{$language}.m.wikipedia.org/
   title: Wikipedia, mobile
@@ -6460,6 +9476,21 @@ wm 1:
   - copyleft
   examples:
     berlin: Go to Wikipedia article about Berlin
+wmob 0:
+  url: http://{$language}.m.wikipedia.org/
+  title: Wikipedia Mobile Main Page
+  tags:
+  - old
+wmob 1:
+  url: http://{$language}.m.wikipedia.org/wiki?search={%query%}
+  title: Wikipedia Mobile Fulltext Search
+  tags:
+  - old
+wn 1:
+  url: http://wordnetweb.princeton.edu/perl/webwn?s={%query}
+  title: WordNet Search
+  tags:
+  - old
 wo 1:
   url: https://{$language}.wikipedia.org/wiki/Category:{%title}
   title: Wikipedia Category
@@ -6472,6 +9503,11 @@ wo 1:
   - categories
   examples:
     berlin: Go to the Wikipedia category page for Berlin
+word 1:
+  url: http://wordnetweb.princeton.edu/perl/webwn?s={%query}
+  title: WordNet Search
+  tags:
+  - old
 wordnet 1:
   url: http://wordnetweb.princeton.edu/perl/webwn?s={%query}
   title: WordNet Search
@@ -6486,6 +9522,11 @@ wordnet 1:
   - dictionary
   examples:
     complicated: look up senses of "complicated" in WordNet
+wow 1:
+  url: http://www.google.com/search?hl={$language}&sitesearch=www.sfs.uni-tuebingen.de&q={%query}+inurl%3A%2F%7Elothar%2Fnw%2F&ie=utf-8
+  title: Google-Suche in der Wortwarte
+  tags:
+  - old
 wpp 0:
   url: http://wordpress.org/plugins/
   title: WordPress Plugin Directory
@@ -6536,6 +9577,11 @@ wq 1:
   - copyleft
   examples:
     einstein: Search for Einstein quotes
+wr 1:
+  url: http://www.warcraftrealms.com/search.php?search={%query}
+  title: search WarcraftRealms
+  tags:
+  - old
 ws 0:
   url: https://{$language}.wikisource.org/
   title: Wikisource
@@ -6550,9 +9596,19 @@ ws 1:
   - wikisource
   - wikimedia
   - copyleft
+wseu 1:
+  url: http://watchseries.eu/search/{%query}
+  title: Watch Series
+  tags:
+  - old
 wso 1:
   url: http://www.wallstreet-online.de/suche/?suche=&q={%query}
   title: Wallstreet:Online Search
+wssl 0:
+  url: https://secure.wikimedia.org/wikipedia/{$language}/wiki/
+  title: Wikipedia Main Page via SSL
+  tags:
+  - old
 wst 1:
   url: https://translate.google.de/translate?hl={$language}&sl=en&tl={$language}&u=https://simple.wikipedia.org/wiki/{%query}
   title: Simple Wikipedia translated
@@ -6591,6 +9647,11 @@ wu 1:
   - copyleft
   examples:
     FlaBot: Search for "FlaBot"
+wus 1:
+  url: http://wissenschaftundschreie.wordpress.com/?s={%query}
+  title: Wissenschaft und Schreie
+  tags:
+  - old
 wv 0:
   url: http://{$language}.wikivoyage.org/
   title: Wikivoyage Main Page
@@ -6617,6 +9678,21 @@ ww 1:
   - copyleft
   examples:
     npov: Search for "npov"
+wwk 1:
+  url: http://www.wowwiki.com/Special:Search?search={%query}&go=1
+  title: search WoWWiki
+  tags:
+  - old
+wwu 1:
+  url: http://suchen.uni-muenster.de/de.cgi?q={%query}
+  title: WWU
+  tags:
+  - old
+www 1:
+  url: http://{%query}
+  title: Www
+  tags:
+  - old
 wy 0:
   url: http://{$language}.wiktionary.org/
   title: Wiktionary Main Page
@@ -6633,6 +9709,16 @@ wy 1:
   - wiktionary
   examples:
     stuhl: Search for "stuhl"
+x 1:
+  url: http://www.exalead.com/search?q={%query}
+  title: Exalead
+  tags:
+  - old
+x86 1:
+  url: http://www.google.com/search?hl=en&q=site%3Avitaly_filatov.tripod.com+intitle:{%command}
+  title: X86 Assembler
+  tags:
+  - old
 xaf 2:
   url: http://finance.yahoo.com/currency-converter/#from=xaf;to={%to code};amt={%amount}
   title: 'Convert CFA franc BEAC (Yahoo) '
@@ -6703,6 +9789,11 @@ xkcds 1:
   - comic
   examples:
     correlation: search for xkcd comics about "correlation"
+xle 1:
+  url: http://www.google.com/search?hl={$language}&lr=lang_&q={%query}%20site%3Awww2.parc.com%20inurl%3A%22%2Fisl%2Fgroups%2Fnltt%2Fxle%2Fdoc%2F%22&ie=utf-8
+  title: XLE Documentation
+  tags:
+  - old
 xof 2:
   url: http://finance.yahoo.com/currency-converter/#from=xof;to={%to code};amt={%amount}
   title: 'Convert CFA franc BCEAO (Yahoo) '
@@ -6739,6 +9830,21 @@ xpt 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Platinum (one troy ounce) into Euros
+xtvi 0:
+  url: http://www.xtvi.com
+  title: XTVi
+  tags:
+  - old
+xtvi 1:
+  url: http://www.xtvi.com/?mode=search&q={%query}
+  title: XTVi
+  tags:
+  - old
+xw 1:
+  url: http://www.exalead.com/search/wikipedia/results/?q={%wiki-query}
+  title: Exalead
+  tags:
+  - old
 y 1:
   url: http://search.yahoo.com/search?p={%query}
   title: Yahoo Web
@@ -6763,6 +9869,19 @@ yai 1:
   - yandex
   examples:
     berlin: Search images about "berlin"
+yandex 1:
+  url: http://yandex.com/yandsearch?text={%query}
+  title: Yandex Web
+  tags:
+  - web search
+  - old
+  examples:
+    berlin: Search for "berlin"
+yatego 1:
+  url: http://www.yatego.com/index.php?cl=mallsearch&query={%query}
+  title: Yatego
+  tags:
+  - old
 yav 1:
   url: https://yandex.ru/video/search?text={%query}
   title: Yandex Videos
@@ -6813,6 +9932,21 @@ yer 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Yemeni rial into Euros
+yf 1:
+  url: http://finance.yahoo.com/q?s={%abbreviation}
+  title: 'Yahoo Finance: Get stock quotes'
+  tags:
+  - old
+yfa 1:
+  url: http://finance.yahoo.com/lookup?s={%company}
+  title: 'Yahoo Finance: Get company abbreviation'
+  tags:
+  - old
+yfc 1:
+  url: http://finance.yahoo.com/echarts?s={%abbreviation}
+  title: 'Yahoo Finance: Get quotes chart'
+  tags:
+  - old
 yfl 1:
   url: https://finance.yahoo.com/lookup?bypass=true&s={%company}
   title: Yahoo Finance Lookup
@@ -6850,6 +9984,11 @@ ym 1:
   - maps
   examples:
     berlin: Search for "berlin"
+ymail 0:
+  url: https://login.yahoo.com/config/login_verify2?&.src=ym
+  title: Yahoo Mail
+  tags:
+  - old
 yn 1:
   url: http://news.search.yahoo.com/search/news?fr=sfp&ei=UTF-8&p={%query}&vl=lang_{$language}
   title: Yahoo News
@@ -6889,6 +10028,11 @@ yr 1:
   - forecast
   examples:
     Berlin: Look up the weather in Berlin
+ys 1:
+  url: http://www.yasni.de/index.php?action=search&search=1&sh=&name={%query}&filter=Stichwort
+  title: Yasni Personensuche
+  tags:
+  - old
 yt 0:
   url: http://www.youtube.com/?hl={$language}&persist_hl=1
   title: Youtube Homepage
@@ -6945,6 +10089,16 @@ ytm 1:
   - youtube
   examples:
     cartoon: search cartoon videos
+ytorr 1:
+  url: http://www.youtorrent.com/tag/?q={%query}
+  title: YouTorrent
+  tags:
+  - old
+ytp 1:
+  url: http://www.youtube.com/results?search_type=search_playlists&uni=3&search_query={%query}
+  title: Youtube Playlists
+  tags:
+  - old
 ytt 1:
   url: http://www.youtube.com/results?hl={$language}&persist_hl=1&search_query={%query}&search_sort=video_date_uploaded&uploaded=t
   title: Youtube, today's new videos
@@ -6969,6 +10123,21 @@ yv 1:
   - video
   examples:
     berlin: Search for "berlin"
+z 1:
+  url: http://www.zalando.de/katalog/?q={%Produkt}
+  title: Zalando
+  tags:
+  - old
+zam 1:
+  url: http://camelot.allakhazam.com/search.html?q={%query}
+  title: Search Allakhazam's Database for DAoC items, npc, etc.
+  tags:
+  - old
+zar 1:
+  url: http://www.zargan.com/sozluk.asp?Sozcuk={%query}&OpenSearch=1&DisplayLang=2
+  title: Turkish-English
+  tags:
+  - old
 zar 2:
   url: http://finance.yahoo.com/currency-converter/#from=zar;to={%to code};amt={%amount}
   title: 'Convert South African rand (Yahoo) '
@@ -6978,6 +10147,16 @@ zar 2:
   - yahoo
   examples:
     eur, 1: Convert 1 South African rand into Euros
+zattoo 0:
+  url: http://watch.zattoo.com
+  title: Zattoo
+  tags:
+  - old
+zattoo 1:
+  url: http://zattoo.com/view/{%channel}
+  title: Zattoo
+  tags:
+  - old
 zeitdiff 0:
   url: https://www.rechner.club/datum-uhrzeit/zeitraum-berechnen
   title: Zeit- und Datumsdifferenzberechnung
@@ -6985,6 +10164,21 @@ zeitdiff 0:
   - time
   - date
   - difference
+zf 1:
+  url: http://framework.zend.com/search?query={%query}&language={$language}&type%5B%5D=all
+  title: Zend Framework
+  tags:
+  - old
+zhen 1:
+  url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
+  title: Chinese
+  tags:
+  - old
+zhr 1:
+  url: http://en.wiktionary.org/wiki/Index:Chinese_radical/{%radical}
+  title: Chinese radical index on English Wiktionary
+  tags:
+  - old
 zn 0:
   url: http://www.zoonar.de/?wid=1078
   title: Zoonar
@@ -6999,6 +10193,46 @@ zn 1:
   - stock agency
   examples:
     weihnachten: Suche Fotos zum Thema "weihnachten"
+zp 1:
+  url: http://www.zpeech.com/{%url}
+  title: Zpeech
+  tags:
+  - old
+zt 0:
+  url: http://{$language}.znout.org
+  title: Znout Search
+  tags:
+  - old
+zt 1:
+  url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8
+  title: Znout Search
+  tags:
+  - old
+zt! 1:
+  url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&btnI=1
+  title: Znout I'm Feeling Lucky
+  tags:
+  - old
+zt100 1:
+  url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&num=100
+  title: 'Znout: Show 100 results at once'
+  tags:
+  - old
+zvdd 1:
+  url: http://www.digitalisiertedrucke.de/search?p={%query}
+  title: Zentrales Verzeichnis Digitalisierter Drucke
+  tags:
+  - old
+zvv 2:
+  url: http://www.zvv.ch/de/fahrplan/online-fahrplan.html?start=1&date_start={%Start}&target={%Ziel}
+  title: ZVV-Auskunft
+  tags:
+  - old
+zwatch 1:
+  url: http://zattoo.com/view/{%channel}
+  title: Zattoo
+  tags:
+  - old
 § 2:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20"{%Paragraph}%20{%Gesetz}"
   title: Gesetze im Internet
