@@ -6870,7 +6870,7 @@ telm 1:
   examples:
     '8003301000': Teilnehmer mit der Telefonnummer 08003301000
 telm 2:
-  url: ' http://www.dastelefonbuch.de/Suche/{%Name}/{%Ort}'
+  url: http://www.dastelefonbuch.de/Suche/{%Name}/{%Ort}
   title: Telefonbuch (mobil)
   tags:
   - phone

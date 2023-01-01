@@ -803,7 +803,7 @@ hpreis 0:
   - shopping
 hpreis 1:
   url: http://www.heise.de/preisvergleich/?fs={%Suchbegriff}
-  title: 'Heise Preisvergleich '
+  title: Heise Preisvergleich
   tags:
   - heise
   - shopping
@@ -826,7 +826,7 @@ hsoft 0:
   - heise
 hsoft 1:
   url: http://www.heise.de/software/download/default.shtml?T={%Suchbegriff}&Suchen=suchen&global=1
-  title: 'Heise Softwareverzeichnis '
+  title: Heise Softwareverzeichnis
   tags:
   - heise
   examples:
@@ -857,7 +857,7 @@ hud 1:
     baum: Search for "baum"
 hwho 1:
   url: http://www.heise.de/netze/tools?rm=whois&plugin={%URL}
-  title: 'Heise Whois Netzwerk-Tool '
+  title: Heise Whois Netzwerk-Tool
   tags:
   - heise
   examples:
