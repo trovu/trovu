@@ -1455,9 +1455,6 @@ sandboxcommand 2:
 sanego 2:
   url: http://www.sanego.de/Arzt/?q={%Name oder Fachgebiet}&l={%Ort, Ortsteil oder Postleitzahl}&btn=Suchen
   title: Sanego - Die Gesundheits-Community
-sc 0:
-  url: http://www.scirus.com/srsapp/search?q=(%query)
-  title: Scirus search
 scholar 1:
   url: http://www.scholarpedia.org/article/Special:Search?from=sidebar&search={%article}&go=Title
   title: Scholarpedia
