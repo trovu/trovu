@@ -105,6 +105,19 @@ actions['applyFilter'] = async function () {
 }
 
 filters['removeDeadDomains'] = async function (shortcut) {
+  const skipDomains = [
+    'colourlovers.com',
+    'iafd.com',
+    'tcodesearch.com',
+    'debian.org',
+    'reddit.com',
+  ];
+  for (const skipDomain of skipDomains) {
+    if (shortcut.url.search(new RegExp(skipDomain, "i")) > -1 ) {
+      console.log('Skipping listed domain:', shortcut.url);
+      return true;
+    }
+  }
   if (!isValidUrl(shortcut.url)) {
     console.log(shortcut.url + ' is not a valid url, skipping.');
     return true;
