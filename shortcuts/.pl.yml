@@ -84,6 +84,15 @@ gastro 2:
   - restaurant
   examples:
     warszawa, bar mleczny: bary mleczne w Warszawie
+gm 2:
+  url: https://www.google.com/maps/search/{%miasto|type=city}%2C%20{%adres}%2C%20Polska/?hl={$language}
+  title: Google Maps Polska
+  tags:
+  - maps
+  - google
+  examples:
+    w, rynek: Pokaż rynek w Warszawie
+    dw, rynek: Pokaż rynek we Wrocławiu
 gmbau 1:
   url: http://maps.google.com/maps?hl={$language}&q={%adres}%2C%20August%C3%B3w%2C%20Polska
   title: Google Maps Augustów
