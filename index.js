@@ -119,7 +119,7 @@ actions['applyModifier'] = async function () {
     const yml = ymls[ymlFilePath];
     for (const key in yml) {
       let shortcut = yml[key];
-      shortcut = await modifiers[process.argv[3]](shortcut);
+      shortcut = await modifiers[process.argv[3]](key, shortcut);
       if (!shortcut) {
         delete yml[key];
       }
@@ -128,7 +128,7 @@ actions['applyModifier'] = async function () {
   writeYmls(ymls);
 }
 
-modifiers['addTagOld'] = async function (shortcut) {
+modifiers['addTagOld'] = async function (key, shortcut) {
   if (!shortcut.tags) {
     shortcut.tags = [];
   }
@@ -136,7 +136,7 @@ modifiers['addTagOld'] = async function (shortcut) {
   return shortcut;
 }
 
-modifiers['removeYahooCurrencyConverters'] = async function (shortcut) {
+modifiers['removeYahooCurrencyConverters'] = async function (key, shortcut) {
   if (shortcut.title.search(new RegExp('^Convert .*Yahoo.$')) > -1 ) {
     console.log('Removing ', shortcut.title);
     return false;
@@ -144,15 +144,15 @@ modifiers['removeYahooCurrencyConverters'] = async function (shortcut) {
   return shortcut;
 }
 
-modifiers['removeGoogleMapsCities'] = async function (shortcut) {
-  if (shortcut.keyword.search(new RegExp('^gm\+*')) > -1 ) {
-    console.log('Removing ', shortcut.title);
+modifiers['removeGoogleMapsCities'] = async function (key, shortcut) {
+  if (key.search(new RegExp('^gm.+')) > -1 ) {
+    console.log('Removing', shortcut.title);
     //return false;
   }
   return shortcut;
 }
 
-modifiers['removeDeadDomains'] = async function (shortcut) {
+modifiers['removeDeadDomains'] = async function (key, shortcut) {
   const skipDomains = [
     'colourlovers.com',
     'iafd.com',
