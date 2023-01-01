@@ -6734,6 +6734,9 @@ mfg 4:
   - mitfahrgelegenheit
   examples:
     berlin, hamburg, 31,12: Suche Mitfahrgelegenheit von Berlin nach Hamburg am 31.12.
+mfs 1:
+  url: http://www.medizinfuchs.de/produkt/search/{%Suche}
+  title: Medizinfuch Apothekenpreisvergleich
 mfga 0:
   url: http://www.mitfahrgelegenheit.de/searches/search_abroad
   title: Mitfahrgelegenheit.de, Ausland
