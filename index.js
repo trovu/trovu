@@ -84,7 +84,7 @@ async function fetchWithTimeout(resource, options = {}) {
 actions['removeDeadDomains'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
-  const ymlFilePath = '/Users/jrg/cde/web/tro/trovu-data/shortcuts/old-o.yml';
+  const ymlFilePath = ymlDirPath + 'old-o.yml';
   ymls[ymlFilePath] = ymlsAll[ymlFilePath];
   for (const ymlFilePath in ymls) {
     const yml = ymls[ymlFilePath];
