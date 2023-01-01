@@ -2437,20 +2437,6 @@ g! 1:
   - google
   examples:
     berlin: Search for "berlin"
-g+ 0:
-  url: http://plus.google.com
-  title: Google Plus
-  tags:
-  - google
-  - social network
-g+ 1:
-  url: http://plus.google.com/s/{%query}
-  title: Google Plus
-  tags:
-  - google
-  - social network
-  examples:
-    berlin: Search for "berlin"
 g100 1:
   url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&num=100
   title: Google Web, 100 results at once
