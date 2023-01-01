@@ -80,7 +80,7 @@ async function fetchWithTimeout(resource, options = {}) {
   return response;
 }
 
-actions['removeDeadDomains'] = async function () {
+actions['applyFilter'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
   const ymlFilePath = ymlDirPath + 'old-o.yml';
@@ -89,7 +89,7 @@ actions['removeDeadDomains'] = async function () {
     const yml = ymls[ymlFilePath];
     for (const key in yml) {
       const shortcut = yml[key];
-      const keepShortcut = await filters['removeDeadDomains'](shortcut);
+      const keepShortcut = await filters[process.argv[3]](shortcut);
       if (!keepShortcut) {
         delete yml[key];
       }
