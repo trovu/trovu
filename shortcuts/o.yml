@@ -3393,6 +3393,8 @@ ils 2:
 imagepoint 1:
   url: http://www.imagepoint.biz/result.php?reset=1&search={%query}
   title: ImagePoint
+  tags:
+  - old
 imdb 0:
   url: http://www.imdb.com
   title: Internet Movie Database Homepage
