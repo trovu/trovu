@@ -1500,9 +1500,6 @@ sc 0:
 scholar 1:
   url: http://www.scholarpedia.org/article/Special:Search?from=sidebar&search={%article}&go=Title
   title: Scholarpedia
-scirus 1:
-  url: http://www.scirus.com/srsapp/search?q={%query}
-  title: Scirus - scientific information
 se 2:
   url: http://{%subpage}.stackexchange.com/search?q={%query}
   title: Stack Exchange
