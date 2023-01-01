@@ -125,6 +125,14 @@ actions['applyModifier'] = async function () {
   writeYmls(ymls);
 }
 
+modifiers['addTagOld'] = async function (shortcut) {
+  if (!shortcut.tags) {
+    shortcut.tags = [];
+  }
+  shortcut.tags.push('old');
+  return shortcut;
+}
+
 modifiers['removeDeadDomains'] = async function (shortcut) {
   const skipDomains = [
     'colourlovers.com',
