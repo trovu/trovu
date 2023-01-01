@@ -77,22 +77,22 @@ ciu 1:
   url: http://caniuse.com/#search={%query}
   title: Caniuse
 cl 1:
-  url: http://www.colourlovers.com/colors/search?query={%color}
+  url: https://www.colourlovers.com/colors/search?query={%color}
   title: COLOURlovers color search
 clpal 1:
-  url: http://www.colourlovers.com/palettes/search?query={%query}
+  url: https://www.colourlovers.com/palettes/search?query={%query}
   title: COLOURlovers palette search
 clpalr 0:
-  url: http://www.colourlovers.com/palettes/random
+  url: https://www.colourlovers.com/palettes/random
   title: COLOURlovers random palette
 clpat 1:
-  url: http://www.colourlovers.com/patterns/search?query={%query}
+  url: https://www.colourlovers.com/patterns/search?query={%query}
   title: COLOURlovers pattern search
 clpatr 0:
-  url: http://www.colourlovers.com/patterns/random
+  url: https://www.colourlovers.com/patterns/random
   title: COLOURlovers random pattern
 clr 0:
-  url: http://www.colourlovers.com/colors/random
+  url: https://www.colourlovers.com/colors/random
   title: COLOURlovers random color
 cnet 1:
   url: http://www.cnet.com/1770-5_1-0.html?query={%query}&tag=srch
@@ -692,7 +692,7 @@ gmbw 2:
   url: http://gmb.let.rug.nl/explorer/explore.php?part={%part}&doc_id={%doc_id}&type=warnings
   title: GMB Explorer, warnings view
 gmch 1:
-  url: http://maps.google.de/maps?hl={$language}&q={%Ort}%2C%20Switzerland
+  url: http://maps.google.com/maps?hl={$language}&q={%Ort}%2C%20Switzerland
   title: Google Maps Schweiz
 gmde 1:
   url: http://maps.google.de/maps?hl={$language}&q={%Ort}%2C%20Germany
@@ -848,7 +848,7 @@ i 1:
   url: http://info.com/searchw?qkw={%search term}
   title: Info.com
 iafd 1:
-  url: http://www.iafd.com/results.asp?searchtype=comprehensive&searchstring={%query}
+  url: https://www.iafd.com/results.asp?searchtype=comprehensive&searchstring={%query}
   title: Internet adult film database
 ibash 0:
   url: http://ibash.de/neueste_1.html
@@ -1196,7 +1196,7 @@ mi 1:
   url: http://www.mininova.org/search/?search={%query}
   title: Mininova
 mind 1:
-  url: http://www.mindfactory.de/search_result.php?Query={%query}
+  url: https://www.mindfactory.de/search_result.php?search_query={%query}
   title: Mindfactory.de
 mn 1:
   url: http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt={$language}-{$language}
@@ -1636,10 +1636,10 @@ sqp 1:
   url: http://www.seeqpod.com/music/?q={%query}
   title: Seeqpod
 sr 1:
-  url: http://www.reddit.com/r/{%forum}
+  url: https://www.reddit.com/r/{%forum}
   title: Reddit
 sreddit 1:
-  url: http://www.reddit.com/r/{%forum}
+  url: https://www.reddit.com/r/{%forum}
   title: Reddit
 ss 2:
   url: http://www.skyscanner.net/{$language}/eur/fluge/{%from}/{%to}?charttype=1
@@ -1687,7 +1687,7 @@ tc 1:
   url: http://www.techcrunch.com/?s={%query}
   title: TechCrunch Suche
 tcode 1:
-  url: http://www.tcodesearch.com/tcodes/search?q={%query}
+  url: https://www.tcodesearch.com/tcodes/search?q={%query}
   title: SAP TCODE Search
 tct 1:
   url: http://www.techcrunch.com/tag/{%tag}
