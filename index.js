@@ -36,14 +36,15 @@ function loadYmls() {
     const ymlFilePath = ymlDirPath + ymlFileName;
     const ymlStr = fs.readFileSync(ymlFilePath, 'utf8');
     const shortcuts = jsyaml.load(ymlStr);
-    ymls[ymlFilePath] = shortcuts;
+    ymls[ymlFileName] = shortcuts;
   }
   return ymls;
 }
 
 function writeYmls(ymls) {
-  for (const ymlFilePath in ymls) {
-    const yml = ymls[ymlFilePath];
+  for (const ymlFileName in ymls) {
+    const ymlFilePath = ymlDirPath + ymlFileName;
+    const yml = ymls[ymlFileName];
     const ymlStr = jsyaml.dump(yml, { noArrayIndent: true, lineWidth: -1 });
     fs.writeFileSync(ymlFilePath, ymlStr)
   }
