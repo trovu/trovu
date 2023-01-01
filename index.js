@@ -3,6 +3,7 @@ const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain')
 
 const actions = {};
+const filters = {};
 
 let ymlDirPath;
 
@@ -88,32 +89,42 @@ actions['removeDeadDomains'] = async function () {
     const yml = ymls[ymlFilePath];
     for (const key in yml) {
       const shortcut = yml[key];
-      if (!isValidUrl(shortcut.url)) {
-        console.log(shortcut.url + ' is not a valid url, skipping.');
-        continue;
-      }
-      const url = new URL(shortcut.url);
-      if (!isValidDomain(url.hostname)) {
-        console.log(url.host + ' is not a valid hostname, skipping.');
-        continue;
-      }
-      // console.log(url.host);
-      const testUrl = url.protocol + '//' + url.host;
-      try {
-        // console.log(testUrl, "...");
-        const response = await fetchWithTimeout(testUrl);
-        if (response.status != 200) {
-          console.log(response.status, testUrl);
-          delete yml[key];
-        }
-      }
-      catch (error) {
-        console.log(url.host);
-        console.error(error);
+      const keepShortcut = await filters['removeDeadDomains'](shortcut);
+      if (!keepShortcut) {
         delete yml[key];
       }
+
     }
   }
   writeYmls(ymls);
 }
+
+filters['removeDeadDomains'] = async function (shortcut) {
+  if (!isValidUrl(shortcut.url)) {
+    console.log(shortcut.url + ' is not a valid url, skipping.');
+    return true;
+  }
+  const url = new URL(shortcut.url);
+  if (!isValidDomain(url.hostname)) {
+    console.log(url.host + ' is not a valid hostname, skipping.');
+    return true;
+  }
+  // console.log(url.host);
+  const testUrl = url.protocol + '//' + url.host;
+  try {
+    // console.log(testUrl, "...");
+    const response = await fetchWithTimeout(testUrl);
+    if (response.status != 200) {
+      console.log(response.status, testUrl);
+      return false;
+    }
+  }
+  catch (error) {
+    console.log(url.host);
+    console.error(error);
+    return false;
+  }
+  return true;
+}
+
 main();
