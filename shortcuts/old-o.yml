@@ -862,9 +862,6 @@ ierender 2:
 if 1:
   url: http://www.iconfinder.com/search/?q={%query}
   title: IconFinder query
-ig 1:
-  url: http://www.google.com/m/i/search?hl={$language}&q={%query}
-  title: Google iPhone Search
 ikeanl 1:
   url: http://www.ikea.com/nl/nl/search/?query={%query}
   title: Ikea
