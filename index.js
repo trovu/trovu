@@ -110,7 +110,7 @@ actions['listKeys'] = async function () {
 actions['applyModifier'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
-  const ymlFileName = 'old-o.yml';
+  const ymlFileName = 'o.yml';
   ymls[ymlFileName] = ymlsAll[ymlFileName];
   for (const ymlFilePath in ymls) {
     const yml = ymls[ymlFilePath];
@@ -130,6 +130,14 @@ modifiers['addTagOld'] = async function (shortcut) {
     shortcut.tags = [];
   }
   shortcut.tags.push('old');
+  return shortcut;
+}
+
+modifiers['removeYahooCurrencyConverters'] = async function (shortcut) {
+  if (shortcut.title.search(new RegExp('^Convert .*Yahoo.$')) > -1 ) {
+    console.log('Removing ', shortcut.title);
+    return false;
+  }
   return shortcut;
 }
 
