@@ -536,6 +536,9 @@ es 1:
   - dictionary
   examples:
     baum: Search for "baum"
+es-pons 1:
+  url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
+  title: Spanisch-Deutsch PONS
 esb 1:
   url: https://de.bab.la/woerterbuch/spanisch-deutsch/{%Wort}
   title: Spanisch-Deutsch (bab.la)
@@ -667,6 +670,9 @@ fr 1:
   - dictionary
   examples:
     baum: Search for "baum"
+fr-pons 1:
+  url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
+  title: Französisch-Deutsch PONS
 frb 1:
   url: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%Wort}
   title: Französisch-Deutsch (bab.la)
@@ -1031,6 +1037,12 @@ kicker 1:
   - sport
   examples:
     berlin: Search for "berlin"
+kw 1:
+  url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo
+  title: Kreuzworträtsel-Datenbank
+kw 2:
+  url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&BScount={%Buchstabenanzahl}&sourceid=serchilo
+  title: Kreuzworträtsel-Datenbank
 la 1:
   url: http://www.albertmartin.de/latein/?q={%query}
   title: Latein-Deutsch
@@ -1059,6 +1071,9 @@ last 1:
   - lastfm
   examples:
     beatles: Search for "beatles"
+leo 1:
+  url: http://dict.leo.org/?search={%Wort}
+  title: 'Englisch-Deutsch: leo.org'
 lobby 0:
   url: http://lobbycontrol.de/
   title: LobbyControl
@@ -1186,6 +1201,9 @@ offlo 1:
   - microsoft office
   examples:
     test: Search OfficeLoesung for "test"
+ok 1:
+  url: http://www.otrkey.com/?q={%Suche}
+  title: otrkey.com
 osm? 0:
   url: https://wiki.openstreetmap.org/index.php/Hauptseite
   title: OpenStreetMap Wiki
@@ -1220,6 +1238,9 @@ ot? 0:
   tags:
   - language
   - thesaurus
+otr 1:
+  url: http://epg.onlinetvrecorder.com/broadcasts/search?searchterm={%Suche}&future=1
+  title: OnlineTVRecorder EPG search
 pl 1:
   url: https://de.langenscheidt.com/deutsch-polnisch/search?term={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Langenscheidt)
@@ -1285,7 +1306,7 @@ pt 1:
     baum: Übersetzung für "baum"
 ptb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%wort}
-  title: Portugiesisch-Deutsch
+  title: Portugiesisch-Deutsch (Beolingus)
   tags:
   - language
   - dictionary
@@ -1342,6 +1363,9 @@ reim 1:
   - reime
   examples:
     auen: Suche Reime auf "auen"
+rezept 1:
+  url: http://www.kochmeister.com/search.php?w={%Zutat}
+  title: Kochmeister
 rezeptefuchs 0:
   url: http://www.rezeptefuchs.de/
   title: Rezeptefuchs Startseite
@@ -1461,6 +1485,9 @@ sat1text 1:
   - teletext
   examples:
     '100 ': Gehe zu Seite 100
+sc 1:
+  url: http://www.scienceticker.info/index.php?s={%Suche}&sc
+  title: Scienceticker
 sch 1:
   url: http://www.schwuugle.de/results.html?cx=009729828355623405941%3Aoz2xu-2vkai&cof=FORID%3A10&q={%query}&sa=schwuuglen&security=666#1193
   title: Schwuugle - die schwule Websuche
@@ -1800,6 +1827,9 @@ vz 1:
 vzg 1:
   url: http://www.studivz.net/Search/ResultGroups/name/{%Gruppenname}
   title: 'StudiVZ: Gruppensuche'
+wetter 1:
+  url: http://de.wetter.com/suche/?search={%Ort}
+  title: Wetter.com
 wn 1:
   url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort={%query}
   title: Wörterbuchnetz
@@ -1810,6 +1840,9 @@ wn 1:
   - deutsch
   examples:
     haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
+wort 1:
+  url: http://www.dwds.de/?qu={%Wort}&view=1
+  title: Digitales Wörterbuch der Deutschen Sprache
 ws 0:
   url: http://wortschatz.uni-leipzig.de
   title: Wortschatz-Lexikon

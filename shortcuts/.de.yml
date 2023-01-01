@@ -816,6 +816,16 @@ e 1:
   - affiliate
   examples:
     smartphone: Search for "smartphone"
+ebay 0:
+  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  title: Ebay.de homepage
+  tags:
+  - affiliate
+ebay 1:
+  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  title: Ebay.de
+  tags:
+  - affiliate
 ek 0:
   url: https://www.ebay-kleinanzeigen.de/
   title: eBay Kleinanzeigen, Homepage
@@ -6704,6 +6714,12 @@ kvk 1:
   - books
   examples:
     goethe: Suche nach Büchern von Goethe
+lpg 1:
+  url: http://www.gas-tankstellen.de/menu.php?jump=tkennz&mode=lpg&kennz={%KFZ-Kennzeichen}
+  title: LPG- und CNG-Tankstellen
+mdv 3:
+  url: http://www.nasa.de/delfi52/query.exe/dn?L=mdv&S={%Start}&Z={%Ziel}&T={%Zeit}&start=1
+  title: MDV-Auskunft
 mfg 0:
   url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/suche.html
   title: Mitfahrgelegenheit.de
@@ -6887,6 +6903,9 @@ ppwg 1:
   - partei
   examples:
     bpt: Suche nach Wiki-Seiten mit "bpt"
+preis 1:
+  url: https://www.preissuchmaschine.de/Katalog/Suche/{%Produkt}.html
+  title: Preissuchmaschine
 ptrend 0:
   url: http://www.preistrend.de
   title: Preistrend.de
@@ -6963,6 +6982,12 @@ rsc 1:
   - electronics
   examples:
     Battery: Suche bei RS Components nach "Battery"
+sp 1:
+  url: http://www.potsdamer-stadtplan.com/?strasse={%Straße}
+  title: Stadtplan Potsdam
+stabib 1:
+  url: http://stabikat.sbb.spk-berlin.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}
+  title: Staatsbibliothek zu Berlin
 sub 1:
   url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}
   title: Niedersächsische Staats- und Universitätsbibliothek Göttingen
@@ -6975,6 +7000,9 @@ sub 1:
 super 1:
   url: http://www.supertopic.de/forum/search/results/?q={%Suche}
   title: Supertopic.de
+swp 1:
+  url: http://www.swp-berlin.org/suche/suche.php?query={%Suche}
+  title: Stiftung Wissenschaft und Politik
 tel 0:
   url: http://www.telefonbuch.de/
   title: Telefonbuch
@@ -7022,6 +7050,9 @@ tho 1:
   - shopping
   examples:
     gitarre: Suche nach Gitarre
+ticketonline 1:
+  url: http://www.ticketonline.de/trans/prlist?SB={%Suche}
+  title: Ticketonline
 tv 0:
   url: http://www.tvinfo.de/jetzt
   title: TV-Programm jetzt
