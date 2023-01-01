@@ -212,22 +212,22 @@ debian-planet 0:
   url: http://planet.debian.org/
   title: Debian Planet
 debian-wiki 0:
-  url: http://wiki.debian.org/
+  url: https://wiki.debian.org/
   title: Debian Wiki
 debian-wiki 1:
-  url: http://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
+  url: https://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
   title: Debian Wiki Search
 debp 0:
-  url: http://planet.debian.org/
+  url: https://planet.debian.org/
   title: Debian Planet
 debpts 1:
-  url: http://packages.qa.debian.org/{%package}
+  url: https://packages.qa.debian.org/{%package}
   title: show the qa page of a given package
 debw 0:
-  url: http://wiki.debian.org/
+  url: https://wiki.debian.org/
   title: Debian Wiki
 debw 1:
-  url: http://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
+  url: https://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
   title: Debian Wiki Search
 decuc 1:
   url: http://www.decodeunicode.org/arEditFrame.php?nodeId=421&aspect=editFrUCSeaRes&seaRes={%query}
