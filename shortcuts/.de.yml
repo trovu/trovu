@@ -426,6 +426,18 @@ bt 1:
   - tarife
   examples:
     '0034': Günstige Anrufe zur Vorwahl 0034
+bvb 0:
+  url: https://www.bib-bvb.de/
+  title: BibliotheksVerbund Bayern
+  tags:
+  - library
+  - books
+bvb 1:
+  url: https://bvbat01.bib-bvb.de/TP61/search.do?methodToCall=submit&searchCategories%5B0%5D=-1&searchHistory=&CSId=81731N386S00889ad4d6e41e48a95e80a26efb63117c370407&refine=true&refineField=-1&tab=tab1&retainSticky=1&refineHitListName=1_SOLR_SERVER_1034377106&refineQuery={%Suche}&submitSearch=Suchen&refineType=new
+  title: BibliotheksVerbund Bayern
+  tags:
+  - library
+  - books
 bvg 0:
   url: http://www.fahrinfo-berlin.de/
   title: BVG-Fahrplanauskunft Startseite
