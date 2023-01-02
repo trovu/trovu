@@ -28,7 +28,7 @@ export default class Helper {
    * @return {string} str   - The escaped string.
    */
   static escapeRegExp(str) {
-    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1');
   }
 
   /**
@@ -38,13 +38,13 @@ export default class Helper {
    * @param {boolean} newLine - Whether to prefix it with a line break.
    */
   static log(str, newLine = true) {
-    if (!document.querySelector("#log")) {
+    if (!document.querySelector('#log')) {
       return;
     }
     if (newLine) {
-      document.querySelector("#log").textContent += "\n";
+      document.querySelector('#log').textContent += '\n';
     }
-    document.querySelector("#log").textContent += str;
+    document.querySelector('#log').textContent += str;
   }
 
   /**
@@ -56,16 +56,16 @@ export default class Helper {
    */
   static async fetchAsync(url, reload, debug = false) {
     const response = await fetch(url, {
-      cache: reload ? "reload" : "force-cache",
+      cache: reload ? 'reload' : 'force-cache',
     });
     if (response.status != 200) {
-      if (debug) this.log((reload ? "reload " : "cache  ") + "Fail:    " + url);
+      if (debug) this.log((reload ? 'reload ' : 'cache  ') + 'Fail:    ' + url);
       return null;
     }
     if (debug) {
-      this.log((reload ? "reload " : "cache  ") + "Success: " + url);
+      this.log((reload ? 'reload ' : 'cache  ') + 'Success: ' + url);
     } else {
-      this.log(".", false);
+      this.log('.', false);
     }
     const text = await response.text();
     return text;

@@ -1,7 +1,7 @@
 /** @module Settings */
 
-import jsyaml from "js-yaml";
-import countriesList from "countries-list";
+import jsyaml from 'js-yaml';
+import countriesList from 'countries-list';
 
 /** Settings methods. */
 
@@ -12,14 +12,14 @@ export default class Settings {
     this.setLanguagesAndCountriesList();
     this.displaySettings();
 
-    document.querySelector("#settingsSave").onclick = this.saveSettings;
+    document.querySelector('#settingsSave').onclick = this.saveSettings;
 
     window.addEventListener(
-      "hashchange",
+      'hashchange',
       function () {
         location.reload();
       },
-      false
+      false,
     );
   }
 
@@ -28,41 +28,41 @@ export default class Settings {
    */
   displaySettings() {
     // Set settings fields from environment.
-    document.querySelector("#languageSetting").value = this.env.language;
-    document.querySelector("#countrySetting").value = this.env.country;
+    document.querySelector('#languageSetting').value = this.env.language;
+    document.querySelector('#countrySetting').value = this.env.country;
 
     // Output whole environment into textarea.
-    document.querySelector("#settingsEnv").value = jsyaml.dump(
-      this.env.withoutMethods
+    document.querySelector('#settingsEnv').value = jsyaml.dump(
+      this.env.withoutMethods,
     );
 
     // Show and hide settings tabs depending on Github setting.
     if (this.env.github) {
-      document.querySelector(".using-advanced").classList.remove("d-none");
-      document.querySelector(".using-basic").classList.add("d-none");
-      document.querySelector("#github-note").classList.remove("d-none");
+      document.querySelector('.using-advanced').classList.remove('d-none');
+      document.querySelector('.using-basic').classList.add('d-none');
+      document.querySelector('#github-note').classList.remove('d-none');
       document
-        .querySelectorAll(".github-config-link")
+        .querySelectorAll('.github-config-link')
         .forEach(
           (el) =>
             (el.href = this.env.configUrlTemplate.replace(
-              "{%github}",
-              this.env.github
-            ))
+              '{%github}',
+              this.env.github,
+            )),
         );
     } else {
-      document.querySelector(".using-basic").classList.remove("d-none");
-      document.querySelector(".using-advanced").classList.add("d-none");
-      document.querySelector("#github-note").classList.add("d-none");
+      document.querySelector('.using-basic').classList.remove('d-none');
+      document.querySelector('.using-advanced').classList.add('d-none');
+      document.querySelector('#github-note').classList.add('d-none');
     }
   }
 
   saveSettings = () => {
-    this.env.language = document.querySelector("#languageSetting").value;
-    this.env.country = document.querySelector("#countrySetting").value;
+    this.env.language = document.querySelector('#languageSetting').value;
+    this.env.country = document.querySelector('#countrySetting').value;
 
     const paramStr = this.env.getParamStr();
-    window.location.hash = "#" + paramStr;
+    window.location.hash = '#' + paramStr;
   };
 
   setLanguagesAndCountriesList() {
@@ -76,8 +76,8 @@ export default class Settings {
     languagesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
     countriesArray.sort((a, b) => (a.name < b.name ? -1 : 1));
 
-    this.setSelectOptions("#languageSetting", languagesArray);
-    this.setSelectOptions("#countrySetting", countriesArray);
+    this.setSelectOptions('#languageSetting', languagesArray);
+    this.setSelectOptions('#countrySetting', countriesArray);
   }
 
   objectToArrayWithKey(obj) {
@@ -95,9 +95,9 @@ export default class Settings {
       selectEl.appendChild(
         new Option(
           `${item.name} ${item.emoji ? item.emoji : ``}`,
-          item.key.toLocaleLowerCase()
-        )
-      )
+          item.key.toLocaleLowerCase(),
+        ),
+      ),
     );
   }
 }

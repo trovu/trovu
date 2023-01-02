@@ -1,10 +1,10 @@
 /** @module CallHandler */
 
-import Env from "./Env.js";
-import ShortcutFinder from "./ShortcutFinder.js";
-import Helper from "./Helper.js";
-import QueryParser from "./QueryParser.js";
-import UrlProcessor from "./UrlProcessor.js";
+import Env from './Env.js';
+import ShortcutFinder from './ShortcutFinder.js';
+import Helper from './Helper.js';
+import QueryParser from './QueryParser.js';
+import UrlProcessor from './UrlProcessor.js';
 
 /** Handle a call. */
 
@@ -20,7 +20,7 @@ export default class CallHandler {
     const params = Helper.getUrlParams();
     params.status = status;
     const paramStr = Helper.getUrlParamStr(params);
-    const redirectUrl = "../index.html#" + paramStr;
+    const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
   }
 
@@ -29,10 +29,10 @@ export default class CallHandler {
    */
   static rewriteBrowserHistory() {
     const currentUrlWithoutProcess = window.location.href.replace(
-      "process/",
-      ""
+      'process/',
+      '',
     );
-    history.replaceState({}, "trovu.net", currentUrlWithoutProcess);
+    history.replaceState({}, 'trovu.net', currentUrlWithoutProcess);
   }
 
   /**
@@ -47,7 +47,7 @@ export default class CallHandler {
     let status;
 
     if (!env.query) {
-      status = "not_found"
+      status = 'not_found';
       redirectUrl = false;
       return [status, redirectUrl];
     }
@@ -57,8 +57,8 @@ export default class CallHandler {
     if (env.reload) {
       await env.populate(env);
     }
-    if (env.keyword === "") {
-      status = "reloaded";
+    if (env.keyword === '') {
+      status = 'reloaded';
       return [status, redirectUrl];
     }
 
@@ -68,7 +68,7 @@ export default class CallHandler {
       [env.extraNamespace] = await env.fetchShortcuts(
         [env.extraNamespace],
         env.reload,
-        env.debug
+        env.debug,
       );
       if (env.extraNamespace) {
         env.namespaces.push(env.extraNamespace);
@@ -79,20 +79,24 @@ export default class CallHandler {
     redirectUrl = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
 
     if (!redirectUrl) {
-      status = "not_found";
+      status = 'not_found';
       return [status, redirectUrl];
     }
 
-    status = "found";
+    status = 'found';
 
-    if (env.debug) Helper.log("");
-    if (env.debug) Helper.log("Used template: " + redirectUrl);
+    if (env.debug) Helper.log('');
+    if (env.debug) Helper.log('Used template: ' + redirectUrl);
 
     redirectUrl = await UrlProcessor.replaceVariables(redirectUrl, {
       language: env.language,
       country: env.country,
     });
-    redirectUrl = await UrlProcessor.replaceArguments(redirectUrl, env.args, env);
+    redirectUrl = await UrlProcessor.replaceArguments(
+      redirectUrl,
+      env.args,
+      env,
+    );
 
     return [status, redirectUrl];
   }
@@ -106,12 +110,12 @@ export default class CallHandler {
 
     let [status, redirectUrl] = await this.getRedirectUrl(env);
 
-    if (status !== "found") {
+    if (status !== 'found') {
       redirectUrl = this.redirectHome(status);
     }
 
     if (env.debug) {
-      Helper.log("Redirect to:   " + redirectUrl);
+      Helper.log('Redirect to:   ' + redirectUrl);
       return;
     }
 

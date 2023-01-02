@@ -1,10 +1,10 @@
 /** @module Suggestions */
 
-import awesomplete from "awesomplete";
-import "awesomplete/awesomplete.css";
+import awesomplete from 'awesomplete';
+import 'awesomplete/awesomplete.css';
 
-import Helper from "./Helper.js";
-import QueryParser from "./QueryParser.js";
+import Helper from './Helper.js';
+import QueryParser from './QueryParser.js';
 
 /** Set and manage the Suggestions. */
 
@@ -13,7 +13,7 @@ export default class Suggestions {
     this.namespaces = namespaces;
     this.submitQuery = submitQuery;
 
-    const queryInput = document.querySelector("#query");
+    const queryInput = document.querySelector('#query');
 
     this.awesomplete = new Awesomplete(queryInput, {
       container: function (input) {
@@ -28,11 +28,11 @@ export default class Suggestions {
       item: this.renderAwesompleteItem,
     });
 
-    queryInput.addEventListener("input", this.updateSuggestions);
+    queryInput.addEventListener('input', this.updateSuggestions);
     // Also update on focus,
     // for case when input is already filled (because no shortcut was not found).
-    queryInput.addEventListener("focus", this.updateSuggestions);
-    queryInput.addEventListener("awesomplete-select", this.select);
+    queryInput.addEventListener('focus', this.updateSuggestions);
+    queryInput.addEventListener('awesomplete-select', this.select);
   }
 
   /**
@@ -46,8 +46,8 @@ export default class Suggestions {
     // Only search by keyword / first word of user input.
     const [keyword, argumentString] = Helper.splitKeepRemainder(
       inputText,
-      " ",
-      2
+      ' ',
+      2,
     );
     const suggestions = this.getSuggestions(keyword);
 
@@ -61,11 +61,11 @@ export default class Suggestions {
    * Render a suggestion item.
    */
   renderAwesompleteItem(listItem, input, id) {
-    const li = document.createElement("li", {
-      role: "option",
+    const li = document.createElement('li', {
+      role: 'option',
     });
 
-    const argument_names = Object.keys(listItem.label.arguments).join(", ");
+    const argument_names = Object.keys(listItem.label.arguments).join(', ');
 
     li.innerHTML = `
     <span${listItem.label.reachable ? `` : ` class="unreachable"`}>
@@ -146,7 +146,7 @@ export default class Suggestions {
           }
           continue;
         }
-        let pos = shortcut.keyword.search(new RegExp(keyword, "i"));
+        let pos = shortcut.keyword.search(new RegExp(keyword, 'i'));
         if (pos == 0) {
           if (shortcut.reachable) {
             matches.keywordBeginReachable.push(shortcut);
@@ -155,7 +155,7 @@ export default class Suggestions {
           }
           continue;
         }
-        pos = shortcut.title.search(new RegExp(keyword, "i"));
+        pos = shortcut.title.search(new RegExp(keyword, 'i'));
         if (pos == 0) {
           if (shortcut.reachable) {
             matches.titleBeginReachable.push(shortcut);
@@ -172,9 +172,9 @@ export default class Suggestions {
           }
           continue;
         }
-        if ((shortcut.tags) && (Array.isArray(shortcut.tags))) {
+        if (shortcut.tags && Array.isArray(shortcut.tags)) {
           for (const tag of shortcut.tags) {
-            const pos = tag.search(new RegExp(keyword, "i"));
+            const pos = tag.search(new RegExp(keyword, 'i'));
             if (pos > -1) {
               if (shortcut.reachable) {
                 matches.tagMiddleReachable.push(shortcut);
@@ -184,7 +184,7 @@ export default class Suggestions {
             }
           }
         }
-        pos = shortcut.url.search(new RegExp(keyword, "i"));
+        pos = shortcut.url.search(new RegExp(keyword, 'i'));
         if (pos > 0) {
           if (shortcut.reachable) {
             matches.urlMiddleReachable.push(shortcut);
@@ -222,7 +222,7 @@ export default class Suggestions {
     const list = [];
     for (const suggestion of suggestions) {
       const item = {
-        value: "", // We are not using this on select.
+        value: '', // We are not using this on select.
         label: suggestion,
       };
       list.push(item);
@@ -248,7 +248,7 @@ export default class Suggestions {
     }
 
     this.awesomplete.replace({
-      value: suggestion.keyword + " " + input.argumentString,
+      value: suggestion.keyword + ' ' + input.argumentString,
     });
 
     if (input.args.length == suggestion.argumentCount) {

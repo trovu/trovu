@@ -1,12 +1,12 @@
 /** @module UrlProcessor */
 
-import Helper from "./Helper.js";
+import Helper from './Helper.js';
 
-import DateType from "./type/date.js";
-import TimeType from "./type/time.js";
-import CityType from "./type/city.js";
+import DateType from './type/date.js';
+import TimeType from './type/time.js';
+import CityType from './type/city.js';
 
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
 /** Process a shortcut URL for redirect. */
 
@@ -36,8 +36,8 @@ export default class ProcessUrl {
    *   }
    */
   static getPlaceholdersFromString(str, prefix) {
-    const pattern = "{" + prefix + "(.+?)}";
-    const re = RegExp(pattern, "g");
+    const pattern = '{' + prefix + '(.+?)}';
+    const re = RegExp(pattern, 'g');
     let match;
     const placeholders = {};
     while ((match = re.exec(str))) {
@@ -51,7 +51,7 @@ export default class ProcessUrl {
   static getPlaceholderFromMatch(match) {
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
-    const nameAndAttributes = match[1].split("|");
+    const nameAndAttributes = match[1].split('|');
     // Example value:
     // name = 'query'
     const name = nameAndAttributes.shift();
@@ -59,7 +59,7 @@ export default class ProcessUrl {
     // Example value:
     // name_and_attributes = ['encoding=utf-8', 'another=attribute']
     for (const attrStr of nameAndAttributes) {
-      const [attrName, attrValue] = attrStr.split("=", 2);
+      const [attrName, attrValue] = attrStr.split('=', 2);
       placeholder[attrName] = attrValue;
     }
     return { name, placeholder };
@@ -73,7 +73,7 @@ export default class ProcessUrl {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getArgumentsFromString(str) {
-    return this.getPlaceholdersFromString(str, "%");
+    return this.getPlaceholdersFromString(str, '%');
   }
 
   /**
@@ -84,7 +84,7 @@ export default class ProcessUrl {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getVariablesFromString(str) {
-    return this.getPlaceholdersFromString(str, "\\$");
+    return this.getPlaceholdersFromString(str, '\\$');
   }
 
   /**
@@ -118,37 +118,37 @@ export default class ProcessUrl {
     processedArgument = await this.processAttributeType(
       attributes,
       processedArgument,
-      env
+      env,
     );
     processedArgument = this.processAttributeTransform(
       attributes,
-      processedArgument
+      processedArgument,
     );
     processedArgument = this.processAttributeEncoding(
       attributes,
-      processedArgument
+      processedArgument,
     );
     return processedArgument;
   }
 
   static async processAttributeType(attributes, processedArgument, env) {
-    const locale = env.language + "-" + env.country.toUpperCase();
+    const locale = env.language + '-' + env.country.toUpperCase();
     switch (attributes.type) {
-      case "date":
+      case 'date':
         processedArgument = await this.processTypeDate(
           processedArgument,
           locale,
-          attributes
+          attributes,
         );
         break;
-      case "time":
+      case 'time':
         processedArgument = await this.processTypeTime(
           processedArgument,
           locale,
-          attributes
+          attributes,
         );
         break;
-      case "city":
+      case 'city':
         processedArgument = await this.processTypeCity(processedArgument, env);
         break;
     }
@@ -161,7 +161,7 @@ export default class ProcessUrl {
     // If date could be parsed:
     // Set argument.
     if (date) {
-      let format = "YYYY-MM-DD";
+      let format = 'YYYY-MM-DD';
       if (attributes.output) {
         format = attributes.output;
       }
@@ -176,7 +176,7 @@ export default class ProcessUrl {
     // If time could be parsed:
     // Set argument.
     if (time) {
-      let format = "HH:mm";
+      let format = 'HH:mm';
       if (attributes.output) {
         format = attributes.output;
       }
@@ -190,7 +190,7 @@ export default class ProcessUrl {
       processedArgument,
       env.country,
       env.reload,
-      env.debug
+      env.debug,
     );
     // If city could be parsed:
     // Set argument.
@@ -202,10 +202,10 @@ export default class ProcessUrl {
 
   static processAttributeTransform(attributes, processedArgument) {
     switch (attributes.transform) {
-      case "uppercase":
+      case 'uppercase':
         processedArgument = processedArgument.toUpperCase();
         break;
-      case "lowercase":
+      case 'lowercase':
         processedArgument = processedArgument.toLowerCase();
         break;
     }
@@ -214,10 +214,10 @@ export default class ProcessUrl {
 
   static processAttributeEncoding(attributes, processedArgument) {
     switch (attributes.encoding) {
-      case "iso-8859-1":
+      case 'iso-8859-1':
         processedArgument = escape(processedArgument);
         break;
-      case "none":
+      case 'none':
         break;
       default:
         processedArgument = encodeURIComponent(processedArgument);
@@ -243,10 +243,10 @@ export default class ProcessUrl {
       for (const match in matches) {
         const attributes = matches[match];
         switch (varName) {
-          case "now":
+          case 'now':
             const time = dayjs();
 
-            let format = "HH:mm";
+            let format = 'HH:mm';
             if (attributes.output) {
               format = attributes.output;
             }
@@ -258,7 +258,7 @@ export default class ProcessUrl {
             value = variables[varName];
             break;
         }
-        str = str.replace(new RegExp(Helper.escapeRegExp(match), "g"), value);
+        str = str.replace(new RegExp(Helper.escapeRegExp(match), 'g'), value);
       }
     }
     return str;

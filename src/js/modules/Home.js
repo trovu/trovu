@@ -1,14 +1,14 @@
 /** @module Home */
 
-import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
+import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 
-import "bootstrap/dist/css/bootstrap.css";
-import "../../scss/style.scss";
+import 'bootstrap/dist/css/bootstrap.css';
+import '../../scss/style.scss';
 
-import Helper from "./Helper.js";
-import Env from "./Env.js";
-import Suggestions from "./Suggestions";
-import Settings from "./home/Settings.js";
+import Helper from './Helper.js';
+import Env from './Env.js';
+import Suggestions from './Suggestions';
+import Settings from './home/Settings.js';
 
 /** Set and manage the homepage. */
 
@@ -34,7 +34,7 @@ export default class Home {
     this.setLocationHash();
     this.setQueryElement();
 
-    document.getElementById("query-form").onsubmit = this.submitQuery;
+    document.getElementById('query-form').onsubmit = this.submitQuery;
   }
 
   /**
@@ -42,27 +42,27 @@ export default class Home {
    */
   getProcessUrl() {
     const params = this.env.getParams();
-    params["query"] = document.getElementById("query").value;
+    params['query'] = document.getElementById('query').value;
 
     const paramStr = Helper.getUrlParamStr(params);
 
     // "?" causes Chrome to translate plus signs properly into %2B
     // even when called from address bar.
-    const processUrl = "process/index.html?#" + paramStr;
+    const processUrl = 'process/index.html?#' + paramStr;
 
     return processUrl;
   }
 
   setQueryElement() {
     // Set query into input.
-    document.querySelector("#query").value = this.env.query || "";
+    document.querySelector('#query').value = this.env.query || '';
     new Suggestions(this.env.namespaces, this.submitQuery);
-    document.querySelector("#query").focus();
+    document.querySelector('#query').focus();
   }
 
   setLocationHash() {
     const paramStr = this.env.getParamStr();
-    window.location.hash = "#" + paramStr;
+    window.location.hash = '#' + paramStr;
   }
 
   /**
@@ -73,15 +73,15 @@ export default class Home {
 
     // Show info alerts.
     switch (params.status) {
-      case "not_found":
-        document.querySelector("#alert").removeAttribute("hidden");
-        document.querySelector("#alert").textContent =
-          "Could not find a matching shortcut for this query.";
+      case 'not_found':
+        document.querySelector('#alert').removeAttribute('hidden');
+        document.querySelector('#alert').textContent =
+          'Could not find a matching shortcut for this query.';
         break;
-      case "reloaded":
-        document.querySelector("#alert").removeAttribute("hidden");
-        document.querySelector("#alert").textContent =
-          "Shortcuts were reloaded in all namespaces.";
+      case 'reloaded':
+        document.querySelector('#alert').removeAttribute('hidden');
+        document.querySelector('#alert').textContent =
+          'Shortcuts were reloaded in all namespaces.';
         break;
     }
   }
@@ -114,7 +114,7 @@ export default class Home {
     href="/opensearch/?${paramStr}"
     title="Trovu"
     />`;
-    const head = document.querySelector("head");
+    const head = document.querySelector('head');
     head.innerHTML += xml;
   }
 }

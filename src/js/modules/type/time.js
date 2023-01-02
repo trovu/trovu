@@ -1,30 +1,29 @@
 export default class TimeType {
   static async parse(str, locale) {
-
     let time, matches;
 
     // Match '11'
-    if (matches = str.match(/^(\d+)$/)) {
+    if ((matches = str.match(/^(\d+)$/))) {
       time = new Date();
       time.setHours(str);
       time.setMinutes(0);
     }
     // Match '11:23' and '11.23'
-    if (matches = str.match(/^(\d+)(\.|:)(\d+)$/)) {
+    if ((matches = str.match(/^(\d+)(\.|:)(\d+)$/))) {
       const [, hours, minutes] = matches;
       time = new Date();
       time.setHours(hours);
       time.setMinutes(minutes);
     }
     // Match '+1' and '-2'
-    if (matches = str.match(/^(-|\+)(\d+)$/)) {
+    if ((matches = str.match(/^(-|\+)(\d+)$/))) {
       time = new Date();
       const [, operator, offset] = matches;
       switch (operator) {
-        case "+":
+        case '+':
           time.setHours(time.getHours() + parseInt(offset));
           break;
-        case "-":
+        case '-':
           time.setHours(time.getHours() - parseInt(offset));
           break;
       }

@@ -1,6 +1,6 @@
 /** @module ShortcutFinder */
 
-import Helper from "./Helper.js";
+import Helper from './Helper.js';
 
 /** Find matching shortcut. */
 
@@ -21,7 +21,7 @@ export default class ShortcutFinder {
       if (!namespace.shortcuts) {
         continue;
       }
-      const shortcut = namespace.shortcuts[keyword + " " + args.length];
+      const shortcut = namespace.shortcuts[keyword + ' ' + args.length];
       if (shortcut) {
         shortcuts[namespace.name] = shortcut;
       }
@@ -42,35 +42,35 @@ export default class ShortcutFinder {
       env.args,
       env.namespaces,
       env.reload,
-      env.debug
+      env.debug,
     );
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
     if (Object.keys(shortcuts).length === 0 && env.args.length > 0) {
       if (env.debug)
-        Helper.log("Not found yet, trying via whole argument string.");
+        Helper.log('Not found yet, trying via whole argument string.');
       env.args = [env.argumentString];
       shortcuts = await this.matchShortcuts(
         env.keyword,
         env.args,
         env.namespaces,
         env.reload,
-        env.debug
+        env.debug,
       );
     }
 
     // If nothing found:
     // Try default keyword.
     if (Object.keys(shortcuts).length === 0 && env.defaultKeyword) {
-      if (env.debug) Helper.log("Not found yet, trying via default keyword.");
+      if (env.debug) Helper.log('Not found yet, trying via default keyword.');
       env.args = [env.query];
       shortcuts = await this.matchShortcuts(
         env.defaultKeyword,
         env.args,
         env.namespaces,
         env.reload,
-        env.debug
+        env.debug,
       );
     }
 
@@ -90,7 +90,7 @@ export default class ShortcutFinder {
     // Use .slice() to keep original array.
     for (let namespace of namespaces.slice().reverse()) {
       if (shortcuts[namespace.name]) {
-        return shortcuts[namespace.name]["url"];
+        return shortcuts[namespace.name]['url'];
         // TODO: Process POST arguments.
       }
     }

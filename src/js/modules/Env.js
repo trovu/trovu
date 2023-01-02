@@ -1,8 +1,8 @@
 /** @module Env */
 
-import jsyaml from "js-yaml";
-import Helper from "./Helper.js";
-import UrlProcessor from "./UrlProcessor.js";
+import jsyaml from 'js-yaml';
+import Helper from './Helper.js';
+import UrlProcessor from './UrlProcessor.js';
 
 /** Set and remember the environment. */
 
@@ -12,7 +12,7 @@ export default class Env {
    */
   constructor() {
     this.configUrlTemplate =
-      "https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml";
+      'https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml';
   }
 
   /**
@@ -24,14 +24,14 @@ export default class Env {
     if (!params) {
       params = Helper.getUrlParams();
     }
-    
+
     // Allow to set debug in query.
     if (params.query && params.query.match(/^debug:/)) {
       params.debug = true;
       params.query = params.query.replace(/^debug:/, '');
     }
 
-    if (typeof params.github === "string" && params.github !== "") {
+    if (typeof params.github === 'string' && params.github !== '') {
       await this.setWithUserConfigFromGithub(params);
     }
 
@@ -43,7 +43,7 @@ export default class Env {
     this.namespaces = await this.fetchShortcuts(
       this.namespaces,
       this.reload,
-      this.debug
+      this.debug,
     );
     this.addInfoToShortcuts(this.namespaces);
   }
@@ -66,13 +66,13 @@ export default class Env {
       for (const key in shortcuts) {
         const shortcut = shortcuts[key];
 
-        [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
+        [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
         shortcut.namespace = namespace.name;
         shortcut.arguments = UrlProcessor.getArgumentsFromString(
-          shortcuts[key].url
+          shortcuts[key].url,
         );
 
-        shortcut.title = shortcut.title || "";
+        shortcut.title = shortcut.title || '';
 
         // If not yet present: reachable.
         // (Because we started with most precendent namespace.)
@@ -95,27 +95,26 @@ export default class Env {
    * Set default environment variables if they are still empty.
    */
   async setDefaults() {
-
     let language, country;
 
-    if ((typeof this.language != "string") || (typeof this.country != "string")) {
-      ({ language, country} = await this.getDefaultLanguageAndCountry());
+    if (typeof this.language != 'string' || typeof this.country != 'string') {
+      ({ language, country } = await this.getDefaultLanguageAndCountry());
     }
 
     // Default language.
-    if (typeof this.language != "string") {
+    if (typeof this.language != 'string') {
       this.language = language;
     }
     // Default country.
-    if (typeof this.country != "string") {
+    if (typeof this.country != 'string') {
       this.country = country;
     }
     // Default namespaces.
-    if (typeof this.namespaces != "object") {
-      this.namespaces = ["o", this.language, "." + this.country];
+    if (typeof this.namespaces != 'object') {
+      this.namespaces = ['o', this.language, '.' + this.country];
     }
     // Default debug.
-    if (typeof this.debug != "boolean") {
+    if (typeof this.debug != 'boolean') {
       this.debug = Boolean(this.debug);
     }
   }
@@ -141,20 +140,24 @@ export default class Env {
    */
   async getUserConfigFromGithub(params) {
     const configUrl = this.configUrlTemplate.replace(
-      "{%github}",
-      params.github
+      '{%github}',
+      params.github,
     );
-    const configYml = await Helper.fetchAsync(configUrl, params.reload, params.debug);
+    const configYml = await Helper.fetchAsync(
+      configUrl,
+      params.reload,
+      params.debug,
+    );
     if (configYml) {
       try {
         const config = jsyaml.load(configYml);
         return config;
       } catch (error) {
-        console.log("Error parsing " + configUrl + ":\n\n" + error.message);
+        console.log('Error parsing ' + configUrl + ':\n\n' + error.message);
         return false;
       }
     } else {
-      console.log("Failed to read Github config from " + configUrl);
+      console.log('Failed to read Github config from ' + configUrl);
       return false;
     }
   }
@@ -174,8 +177,8 @@ export default class Env {
     }
 
     // Set defaults.
-    language = language || "en";
-    country = country || "us";
+    language = language || 'en';
+    country = country || 'us';
 
     // Ensure lowercase.
     language = language.toLowerCase();
@@ -193,7 +196,7 @@ export default class Env {
     const languageStr = this.getNavigatorLanguage();
     let language, country;
     if (languageStr) {
-      [language, country] = languageStr.split("-");
+      [language, country] = languageStr.split('-');
     }
     return { language, country };
   }
@@ -236,7 +239,7 @@ export default class Env {
         return namespaces;
       }
       promises.push(
-        fetch(namespace.url, { cache: reload ? "reload" : "force-cache" })
+        fetch(namespace.url, { cache: reload ? 'reload' : 'force-cache' }),
       );
     });
     return promises;
@@ -258,7 +261,7 @@ export default class Env {
       }
       // Check for 'only URL' (string) shortcuts
       // and make an object of them.
-      if (typeof shortcuts[key] === "string") {
+      if (typeof shortcuts[key] === 'string') {
         const url = shortcuts[key];
         shortcuts[key] = {
           url: url,
@@ -270,8 +273,8 @@ export default class Env {
         "Incorrect keys found in namespace '" +
           namespaceName +
           "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          "\n\n" +
-          incorrectKeys.join("\n")
+          '\n\n' +
+          incorrectKeys.join('\n'),
       );
     }
     return shortcuts;
@@ -296,7 +299,7 @@ export default class Env {
       if (!responses[i] || responses[i].status != 200) {
         if (debug)
           Helper.log(
-            (reload ? "reload " : "cache  ") + "Fail:    " + namespaces[i].url
+            (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaces[i].url,
           );
         // Mark namespace for deletion.
         namespaces[i] = undefined;
@@ -304,17 +307,19 @@ export default class Env {
       }
       if (debug)
         Helper.log(
-          (reload ? "reload " : "cache  ") + "Success: " + responses[i].url
+          (reload ? 'reload ' : 'cache  ') + 'Success: ' + responses[i].url,
         );
       if (!debug) {
-        Helper.log(".", false);
+        Helper.log('.', false);
       }
       const text = await responses[i].text();
       let shortcuts;
       try {
         shortcuts = jsyaml.load(text);
       } catch (error) {
-        console.log("Error parsing " + namespaces[i].url + ":\n\n" + error.message);
+        console.log(
+          'Error parsing ' + namespaces[i].url + ':\n\n' + error.message,
+        );
         namespaces[i] = undefined;
         continue;
       }
@@ -322,12 +327,12 @@ export default class Env {
       // as this is a separate logic.
       namespaces[i].shortcuts = this.normalizeShortcuts(
         shortcuts,
-        namespaces[i].name
+        namespaces[i].name,
       );
     }
     // Delete marked namespaces.
     namespaces = namespaces.filter(
-      (namespace) => typeof namespace !== "undefined"
+      (namespace) => typeof namespace !== 'undefined',
     );
     return namespaces;
   }
@@ -351,18 +356,18 @@ export default class Env {
    */
   addFetchUrlToNamespace(namespace) {
     // Site namespaces:
-    if (typeof namespace == "string" && namespace.length < 4) {
+    if (typeof namespace == 'string' && namespace.length < 4) {
       namespace = this.addFetchUrlToSiteNamespace(namespace);
       return namespace;
     }
     // User namespace 1 – custom URL:
     if (namespace.url && namespace.name) {
       // Just add the type.
-      namespace.type = "user";
+      namespace.type = 'user';
       return namespace;
     }
     // Now remains: User namespace 2 – Github:
-    if (typeof namespace == "string") {
+    if (typeof namespace == 'string') {
       // Create an object.
       namespace = { github: namespace };
     }
@@ -380,8 +385,8 @@ export default class Env {
   addFetchUrlToSiteNamespace(name) {
     const namespace = {
       name: name,
-      type: "site",
-      url: "https://data.trovu.net/data/shortcuts/" + name + ".yml",
+      type: 'site',
+      url: 'https://data.trovu.net/data/shortcuts/' + name + '.yml',
     };
     return namespace;
   }
@@ -394,7 +399,7 @@ export default class Env {
    * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToGithubNamespace(namespace) {
-    if (namespace.github == ".") {
+    if (namespace.github == '.') {
       // Set to current user.
       namespace.github = this.github;
     }
@@ -403,10 +408,10 @@ export default class Env {
       namespace.name = namespace.github;
     }
     namespace.url =
-      "https://raw.githubusercontent.com/" +
+      'https://raw.githubusercontent.com/' +
       namespace.github +
-      "/trovu-data-user/master/shortcuts.yml";
-    namespace.type = "user";
+      '/trovu-data-user/master/shortcuts.yml';
+    namespace.type = 'user';
     return namespace;
   }
 
@@ -418,7 +423,7 @@ export default class Env {
   get withoutMethods() {
     const envWithoutFunctions = {};
     for (const key of Object.keys(this)) {
-      if (typeof this[key] != "function") {
+      if (typeof this[key] != 'function') {
         envWithoutFunctions[key] = this[key];
       }
     }
@@ -435,24 +440,24 @@ export default class Env {
 
     // Put environment into hash.
     if (this.github) {
-      params["github"] = this.github;
+      params['github'] = this.github;
     } else {
-      params["language"] = this.language;
-      params["country"] = this.country;
+      params['language'] = this.language;
+      params['country'] = this.country;
     }
     if (this.debug) {
-      params["debug"] = 1;
+      params['debug'] = 1;
     }
     // Don't add defaultKeyword into params
     // when Github user is set.
-    if ((this.defaultKeyword) && (!this.github)) {
-      params["defaultKeyword"] = this.defaultKeyword;
+    if (this.defaultKeyword && !this.github) {
+      params['defaultKeyword'] = this.defaultKeyword;
     }
     if (this.status) {
-      params["status"] = this.status;
+      params['status'] = this.status;
     }
     if (this.query) {
-      params["query"] = this.query;
+      params['query'] = this.query;
     }
 
     return params;

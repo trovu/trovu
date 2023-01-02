@@ -1,6 +1,6 @@
 /** @module QueryParser */
 
-import Helper from "./Helper.js";
+import Helper from './Helper.js';
 
 /** Parse a query. */
 
@@ -15,7 +15,7 @@ export default class QueryParser {
    * - {string} argumentString    - The whole argument string.
    */
   static getKeywordAndArgumentString(query) {
-    const [keyword, argumentString] = Helper.splitKeepRemainder(query, " ", 2);
+    const [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
 
     return [keyword, argumentString];
   }
@@ -30,7 +30,7 @@ export default class QueryParser {
   static getArguments(argumentString) {
     let args;
     if (argumentString) {
-      args = argumentString.split(",");
+      args = argumentString.split(',');
     } else {
       args = [];
     }
@@ -52,10 +52,10 @@ export default class QueryParser {
 
     if (keyword.match(/^reload$/)) {
       reload = true;
-      keyword = "";
+      keyword = '';
     }
     if (keyword.match(/^reload:/)) {
-      [, keyword] = Helper.splitKeepRemainder(keyword, ":", 2);
+      [, keyword] = Helper.splitKeepRemainder(keyword, ':', 2);
       reload = true;
     }
 
@@ -79,18 +79,18 @@ export default class QueryParser {
     if (keyword.match(/.\./)) {
       [extraNamespaceName, keyword] = Helper.splitKeepRemainder(
         keyword,
-        ".",
-        2
+        '.',
+        2,
       );
       // If extraNamespace started with a dot, it will be empty
       // so let's split it again, and add the dot.
-      if (extraNamespaceName == "") {
+      if (extraNamespaceName == '') {
         [extraNamespaceName, keyword] = Helper.splitKeepRemainder(
           keyword,
-          ".",
-          2
+          '.',
+          2,
         );
-        extraNamespaceName = "." + extraNamespaceName;
+        extraNamespaceName = '.' + extraNamespaceName;
       }
     }
 
@@ -130,19 +130,16 @@ export default class QueryParser {
   static parse(query) {
     const env = {};
 
-    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(
-      query
-    );
+    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(query);
     env.args = this.getArguments(env.argumentString);
     [env.reload, env.keyword] = this.checkForCacheReload(env.keyword);
 
-    [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(
-      env.keyword
-    );
+    [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(env.keyword);
     if (env.extraNamespaceName) {
-      const languageOrCountry = this.getLanguageAndCountryFromExtraNamespaceName(
-        env.extraNamespaceName
-      );
+      const languageOrCountry =
+        this.getLanguageAndCountryFromExtraNamespaceName(
+          env.extraNamespaceName,
+        );
       Object.assign(env, languageOrCountry);
     }
 
