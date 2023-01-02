@@ -541,6 +541,15 @@ conrad 1:
   - conrad
   examples:
     glühlampe: Suche nach Glühlampen
+bex 1:
+  url: https://bahn.expert/{%Bahnhof}
+  title: bahn.expert
+  description: Zeigt Abfahrtstafel eines Bahnhofs
+  tags:
+  - travel
+  - bahn
+  examples:
+    berlin: Abfahrtstafel von Berlin Hbf
 cys 1:
   url: http://www.cyberport.de/?EVENT=itemsearch&query={%Produkt}
   title: Cyberport Store
