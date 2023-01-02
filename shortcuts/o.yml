@@ -3391,14 +3391,14 @@ gfin 1:
     'ford ': Show data for Ford Motor Company
 gfl 0:
   url: https://www.google.com/flights/
-  title: Google Flights
+  title: Google Flights Homepage
   tags:
   - google
   - travel
   - flights
 gfl 1:
   url: https://www.google.com/travel/flights?q={%query}
-  title: Google Flights
+  title: Google Flights, round trip
   tags:
   - google
   - travel
@@ -3407,7 +3407,7 @@ gfl 1:
     one-way flight next month from berlin to tenerife: Search for one-way flights from Berlin to Tenerife next month
 gfl 2:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}
-  title: Google Flights
+  title: Google Flights, round trip
   tags:
   - google
   - travel
@@ -3416,7 +3416,7 @@ gfl 2:
     ber, lpa: Search for flights from Berlin to Las Palmas
 gfl 3:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}
-  title: Google Flights
+  title: Google Flights, round trip
   tags:
   - google
   - travel
@@ -3425,7 +3425,7 @@ gfl 3:
     ber, lpa, fr: Search for round trips from Berlin to Las Palmas, departing next Friday
 gfl 4:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}%20through%20{%arrival date|type=date}
-  title: Google Flights
+  title: Google Flights, round trip
   tags:
   - google
   - travel
