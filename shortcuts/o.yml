@@ -3406,7 +3406,7 @@ gfl 1:
   examples:
     one-way flight next month from berlin to tenerife: Search for one-way flights from Berlin to Tenerife next month
 gfl 2:
-  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}
+  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}
   title: Google Flights
   tags:
   - google
@@ -3415,7 +3415,7 @@ gfl 2:
   examples:
     ber, lpa: Search for flights from Berlin to Las Palmas
 gfl 3:
-  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20on%20{%departure date|type=date}
+  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}
   title: Google Flights
   tags:
   - google
@@ -3424,7 +3424,7 @@ gfl 3:
   examples:
     ber, lpa, fr: Search for round trips from Berlin to Las Palmas, departing next Friday
 gfl 4:
-  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20on%20{%departure date|type=date}%20through%20{%arrival date|type=date}
+  url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}%20through%20{%arrival date|type=date}
   title: Google Flights
   tags:
   - google
@@ -3433,7 +3433,7 @@ gfl 4:
   examples:
     ber, lpa, fr, 30: Search for round trips from Berlin to Las Palmas, departing next Friday, returning on the 30th of this month
 gfl1 2:
-  url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from IATA code}%20to%20{%to IATA code}
+  url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from}%20to%20{%to}
   title: Google Flights, one-way
   tags:
   - google
@@ -3442,7 +3442,7 @@ gfl1 2:
   examples:
     ber, lpa: Search for one-way flights from Berlin to Las Palmas.
 gfl1 3:
-  url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from IATA code}%20to%20{%to IATA code}%20on%20{%departure date|type=date}
+  url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}
   title: Google Flights, one-way
   tags:
   - google
