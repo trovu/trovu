@@ -99,16 +99,6 @@ bbs 1:
 bc 1:
   url: https://www.bestcheck.de/search?q={%query}
   title: BestCheck
-berlinify 1:
-  url: http://berlinifier.appspot.com/berlinify?url={%url}
-  title: Berlinifier
-  tags:
-  - language
-  - sprache
-  - deutsch
-  - berlin
-  examples:
-    http://spiegel.de: Spiegel.de auf Berlinerisch
 bg 1:
   url: http://debg.dict.cc/?s={%Wort}
   title: Bulgarisch-Deutsch (dict.cc)
