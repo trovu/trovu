@@ -68,4 +68,5 @@ Firefox allows to add custom search engines: Any URL with a `%s` placeholder wor
 1. Tap on ✔ (in the upper right corner)
 
 Here is an example setting for the user `georgjaehnig`:
-![image](https://user-images.githubusercontent.com/1092628/210268732-5bd8eb06-b34e-44c2-b557-276fa3a7c8c3.png | width=600))
+
+<img src="https://user-images.githubusercontent.com/1092628/210268732-5bd8eb06-b34e-44c2-b557-276fa3a7c8c3.png" width="600">
