@@ -840,20 +840,6 @@ bx 1:
   - web search
   examples:
     perl: search for Perl on Blippex
-bzz 0:
-  url: http://bookzz.org/
-  title: Bookzz.org
-  tags:
-  - books
-  - ebooks
-bzz 1:
-  url: http://bookzz.org/search.php/?q={%query}
-  title: Bookzz.org
-  tags:
-  - books
-  - ebooks
-  examples:
-    bible: Search Bookzz.org for "bible"
 bürklin 1:
   url: https://www.buerklin.com/default.asp?l=e&event=ShowSE%28%29&search={%Artikel}
   title: Bürklin Elektronics
