@@ -53,3 +53,19 @@ This a free, generic app to search any search engine that supports URL with a `%
 1. Click the back button of the app in the upper left corner
 
 Now, you can enter Trovu queries which will be redirected to your browser.
+
+## Firefox for Android
+
+Firefox allows to add custom search engines: Any URL with a `%s` placeholder works.
+
+1. Tap on the address bar
+1. Tap on *🔍 Search engine*
+1. Tap on *⚙️ Search engine settings*
+1. Tap on *➕ Add search engine*
+1. Tap on Other
+1. Enter a name, e.g. `Trovu`
+1. Enter the template URL, like for [[Other][#other]]
+1. Tap on ✔ (in the upper right corner)
+
+Here is an example setting for the user `georgjaehnig`:
+![image](https://user-images.githubusercontent.com/1092628/210268732-5bd8eb06-b34e-44c2-b557-276fa3a7c8c3.png | width=600))
