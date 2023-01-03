@@ -33,9 +33,7 @@ export default class Env {
 
     // Check for reload.
     if (params.query) {
-      if (
-        params.query.match(/^reload:/) || params.query.match(/^reload$/)
-      ) {
+      if (params.query.match(/^reload:/) || params.query.match(/^reload$/)) {
         params.reload = true;
         params.query = params.query.replace(/^reload(:?)/, '');
       }
