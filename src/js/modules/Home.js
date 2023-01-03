@@ -54,7 +54,7 @@ export default class Home {
   }
 
   setQueryElement() {
-    // Set query into input 
+    // Set query into input
     // if it was not 'reload'.
     if (this.env.status !== 'reloaded') {
       document.querySelector('#query').value = this.env.query || '';
