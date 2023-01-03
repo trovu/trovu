@@ -36,7 +36,7 @@ export default [
       json(),
       scss({
         output: "dist/public/style.css",
-        outputStyle: isProduction ? "compressed" : "",
+        outputStyle: isProduction ? "compressed" : "expanded",
       }),
       isProduction && terser(),
       html({
