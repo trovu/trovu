@@ -33,7 +33,7 @@ Use one of these URL templates and add it where your browser allows to set custo
     https://trovu.net/process/?#country=gb&language=en&query=%s
     https://trovu.net/process/?#github=YOUR_GITHUB_USERNAME&query=%s
 
-(You may need to adjust your `country`, `language` or `github` parameter.)
+(Note the `process/` part in the URL! You may need to adjust your `country`, `language` or `github` parameter.)
 
 # Android
 
