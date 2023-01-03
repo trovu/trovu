@@ -54,8 +54,11 @@ export default class Home {
   }
 
   setQueryElement() {
-    // Set query into input.
-    document.querySelector('#query').value = this.env.query || '';
+    // Set query into input 
+    // if it was not 'reload'.
+    if (this.env.status !== 'reloaded') {
+      document.querySelector('#query').value = this.env.query || '';
+    }
     new Suggestions(this.env.namespaces, this.submitQuery);
     document.querySelector('#query').focus();
   }
