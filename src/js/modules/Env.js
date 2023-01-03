@@ -38,7 +38,6 @@ export default class Env {
         params.query = params.query.replace(/^reload(:?)/, '');
       }
     }
-    console.log(params);
 
     if (typeof params.github === 'string' && params.github !== '') {
       await this.setWithUserConfigFromGithub(params);
