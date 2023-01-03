@@ -1,4 +1,14 @@
 ## General
+### Reload
+
+Config and shortcut files are usually only fetched once, and after that are only taken from the browser cache. So if you have made changes to one of them, you need to reload them.
+
+You can reload by:
+
+* prefixing your query with `reload:`
+* sending a query only containing `reload`
+* opening the Trovu homepage with https://trovu.net/?#reload=1.
+
 ### Debugging mode
 
 Enter debugging mode with
