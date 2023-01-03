@@ -1724,7 +1724,7 @@ ts 1:
   examples:
     berlin: Suche nach Nachrichten zu Berlin
 tsp 1:
-  url: http://www.tagesspiegel.de/suchergebnis/?sw={%query}
+  url: https://background.tagesspiegel.de/suche?text={%Suche}
   title: Tagesspiegel
   tags:
   - berlin
