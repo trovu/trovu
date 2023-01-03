@@ -25,14 +25,14 @@ export default class Env {
       params = Helper.getUrlParams();
     }
 
-    // Allow to set debug in query.
-    if (params.query && params.query.match(/^debug:/)) {
-      params.debug = true;
-      params.query = params.query.replace(/^debug:/, '');
-    }
-
-    // Check for reload.
+    // Check within query for special commands.
     if (params.query) {
+      // Check for debug.
+      if (params.query.match(/^debug:/)) {
+        params.debug = true;
+        params.query = params.query.replace(/^debug:/, '');
+      }
+      // Check for reload.
       if (params.query.match(/^reload:/) || params.query.match(/^reload$/)) {
         params.reload = true;
         params.query = params.query.replace(/^reload(:?)/, '');
