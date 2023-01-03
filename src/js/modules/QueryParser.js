@@ -39,30 +39,6 @@ export default class QueryParser {
   }
 
   /**
-   * Check if keyword contains reload command.
-   *
-   * @param {string} keyword - The keyword.
-   *
-   * @return {object}
-   * - {boolean} reload      - True if keyword contained reload command.
-   * - {string} keyword      - The new keyword.
-   */
-  static checkForCacheReload(keyword) {
-    let reload = false;
-
-    if (keyword.match(/^reload$/)) {
-      reload = true;
-      keyword = '';
-    }
-    if (keyword.match(/^reload:/)) {
-      [, keyword] = Helper.splitKeepRemainder(keyword, ':', 2);
-      reload = true;
-    }
-
-    return [reload, keyword];
-  }
-
-  /**
    * Check if keyword contains extra namespace.
    *
    * @param {string} keyword - The keyword.
@@ -132,7 +108,6 @@ export default class QueryParser {
 
     [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(query);
     env.args = this.getArguments(env.argumentString);
-    [env.reload, env.keyword] = this.checkForCacheReload(env.keyword);
 
     [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(env.keyword);
     if (env.extraNamespaceName) {
