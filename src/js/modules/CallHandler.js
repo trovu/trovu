@@ -121,6 +121,8 @@ export default class CallHandler {
 
     this.rewriteBrowserHistory();
 
-    window.location.href = redirectUrl;
+    if (!env.error) {
+      window.location.href = redirectUrl;
+    }
   }
 }
