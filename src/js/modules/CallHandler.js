@@ -46,6 +46,11 @@ export default class CallHandler {
     let redirectUrl;
     let status;
 
+    if ((env.reload) && (!env.query)) {
+      status = 'reloaded';
+      return [status, redirectUrl];
+    }
+
     if (!env.query) {
       status = 'not_found';
       redirectUrl = false;
@@ -53,11 +58,6 @@ export default class CallHandler {
     }
 
     Object.assign(env, QueryParser.parse(env.query));
-
-    if (env.keyword === '') {
-      status = 'reloaded';
-      return [status, redirectUrl];
-    }
 
     // Add extraNamespace if parsed in query.
     if (env.extraNamespaceName) {
