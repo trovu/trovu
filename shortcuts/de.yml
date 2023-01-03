@@ -1723,6 +1723,12 @@ ts 1:
   - tagesschau
   examples:
     berlin: Suche nach Nachrichten zu Berlin
+tsp 0:
+  url: https://www.tagesspiegel.de/
+  title: Tagesspiegel, Homepage
+  tags:
+  - berlin
+  - newspaper
 tsp 1:
   url: https://background.tagesspiegel.de/suche?text={%Suche}
   title: Tagesspiegel
@@ -1731,6 +1737,14 @@ tsp 1:
   - newspaper
   examples:
     Friedrichshain: Search Tagesspiegel for "Friedrichshain"
+tspg 1:
+  url: https://www.google.de/search?q=site:tagesspiegel.de%20{%query}
+  title: Tagesspiegel via Google
+  tags:
+  - berlin
+  - newspaper
+  examples:
+    Friedrichshain: Search "Friedrichshain"
 uu 0:
   url: http://www.ubuntuusers.de/
   title: UbuntuUsers.de
