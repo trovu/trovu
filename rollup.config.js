@@ -44,7 +44,10 @@ export default [
         template: template('src/html/index.html'),
       }),
       copy({
-        targets: [{ src: 'src/opensearch/', dest: 'dist/public/' }],
+        targets: [
+          { src: 'src/ico/favicon.ico', dest: 'dist/public/' },
+          { src: 'src/opensearch/', dest: 'dist/public/' },
+        ],
       }),
     ],
   },
