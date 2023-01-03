@@ -1,4 +1,5 @@
-## Debugging mode
+## General
+### Debugging mode
 
 Enter debugging mode with
 
@@ -11,7 +12,8 @@ In debug, all the processing will be done – but without the actual redirect. Y
 - whether they are found in the browser cache or not
 - how a query got matched.
 
-## I Edited a Shortcut, but It Has No Effect
+## FAQ
+### I Edited a Shortcut, but It Has No Effect
 
 This might be a caching issue.
 
