@@ -68,7 +68,6 @@ export default class DateType {
     // Match 'Su', 'Mo', ...
     if ((matches = str.match(/^([A-Za-z\u00E0-\u00FC]+)$/))) {
       let maps = [];
-      console.log(locale.substr(0, 2));
       switch (locale.substr(0, 2)) {
         case 'cs':
           maps.push('ne po út st čt pá so');
