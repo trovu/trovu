@@ -1738,7 +1738,7 @@ tsp 1:
   examples:
     Friedrichshain: Search Tagesspiegel for "Friedrichshain"
 tspg 1:
-  url: https://www.google.de/search?q=site:tagesspiegel.de%20{%query}
+  url: https://www.google.de/search?q=site:tagesspiegel.de%20{%Suche}
   title: Tagesspiegel via Google
   tags:
   - berlin
