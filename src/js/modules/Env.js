@@ -37,7 +37,7 @@ export default class Env {
         params.query.match(/^reload:/) || params.query.match(/^reload$/)
       ) {
         params.reload = true;
-        params.query = params.query.replace(/^debug(:?)/, '');
+        params.query = params.query.replace(/^reload(:?)/, '');
       }
     }
     console.log(params);
