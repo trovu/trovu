@@ -46,7 +46,7 @@ export default class CallHandler {
     let redirectUrl;
     let status;
 
-    if ((env.reload) && (!env.query)) {
+    if (env.reload && !env.query) {
       status = 'reloaded';
       return [status, redirectUrl];
     }
