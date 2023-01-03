@@ -6,7 +6,8 @@ import { terser } from 'rollup-plugin-terser';
 import html from '@rollup/plugin-html';
 import { readFileSync } from 'fs';
 import copy from 'rollup-plugin-copy';
-import watchGlobs from 'rollup-plugin-watch-globs';
+import watch from "rollup-plugin-watch";
+
 
 
 const isProduction = process.env.BUILD === 'production';
@@ -33,10 +34,10 @@ export default [
     input: 'src/js/index.js',
     output: output,
     plugins: [
+      watch({ dir: "src/html/" }),
       resolve(),
       commonjs(),
       json(),
-      watchGlobs(['src/html/*.html']),
       scss({
         output: 'dist/public/style.css',
         outputStyle: isProduction ? 'compressed' : 'expanded',
