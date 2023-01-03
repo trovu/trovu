@@ -5,7 +5,7 @@ Config and shortcut files are usually only fetched once, and after that are only
 
 You can reload by:
 
-* prefixing your query with `reload:`
+* prefixing your query with `reload:`, e.g. `reload:g foobar`
 * sending a query only containing `reload`
 * opening the Trovu homepage with https://trovu.net/?#reload=1.
 
@@ -21,6 +21,8 @@ In debug, all the processing will be done – but without the actual redirect. Y
 - which config and shortcut URLs are being fetched
 - whether they are found in the browser cache or not
 - how a query got matched.
+
+You can also combine debugging and reloading, e.g. `debug:reload:g foobar`
 
 ## FAQ
 ### I Edited a Shortcut, but It Has No Effect
