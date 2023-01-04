@@ -35,6 +35,7 @@ export default [
     output: output,
     plugins: [
       watch({ dir: "src/html/" }),
+      watch({ dir: "src/img/" }),
       resolve(),
       commonjs(),
       json(),
@@ -50,6 +51,7 @@ export default [
       copy({
         targets: [
           { src: 'src/ico/favicon.ico', dest: 'dist/public/' },
+          { src: 'src/img/*', dest: 'dist/public/img/' },
           { src: 'src/opensearch/', dest: 'dist/public/' },
         ],
       }),
