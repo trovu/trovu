@@ -8,7 +8,7 @@
     "test-unit": "jest env -c jest.config.js && jest helper -c jest.config.js",
     "test-calls": "jest calls -c jest.config.with-puppeteer.js",
     "test-frontend": "jest frontend -c jest.config.with-puppeteer.js",
-    "doc": "rm -r doc ; jsdoc src/* --configure jsdoc.json --destination doc",
+    "doc": "rm -r doc ; jsdoc src/js/* --configure jsdoc.json --destination doc",
     "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
     "watch": "rollup --config --watch",
     "serve": "http-server ./dist/public/ -p 8081",
