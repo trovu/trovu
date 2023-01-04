@@ -78,8 +78,8 @@ export default class Home {
     switch (params.status) {
       case 'not_found':
         document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector('#alert').textContent =
-          'Could not find a matching shortcut for this query.';
+        document.querySelector('#alert').innerHTML =
+          'Could not find a matching shortcut for this query. Try <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Troubleshooting">Troubleshooting</a>.';
         break;
       case 'reloaded':
         document.querySelector('#alert').removeAttribute('hidden');
