@@ -83,16 +83,13 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="?">trovu.net</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div>
+          <a class="navbar-brand" href="?">trovu.net</a>
           <span class="navbar-text">
             Web shortcuts: social, private, free.
           </span>
         </div>
+        <span id="settings-button"  data-toggle="modal" data-target="#settings">⚙️</span>
       </div>
     </nav>
   </header>
@@ -101,10 +98,6 @@
       <div hidden id="alert" class="alert alert-warning" role="alert"></div>
       <form id="query-form" class="awesomplete" action="process/index.html">
         <div class="input-group">
-          <div class="input-group-prepend">
-            <span id="settings-button" class="input-group-text btn" data-toggle="modal"
-              data-target="#settings">⚙️</span>
-          </div>
             <input type="search" class="form-control form-control-lg" id="query" name="query" autocapitalize="none"
               autocorrect="off" autocapitalize="off" spellcheck="false"
               placeholder="Type a letter to get suggestions.">
