@@ -2,12 +2,13 @@ main .jumbotron {
   margin: 0;
 }
 
-.input-group .awesomplete {
+.awesomplete  {
+  display: block;
   padding: 0;
   border: 0;
 }
 
-.awesomplete.query > ul {
+.awesomplete ul {
   background: hsla(0, 0%, 100%, 1);
   li {
     padding: 0.1em 0.9em;

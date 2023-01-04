@@ -17,7 +17,7 @@ export default class Suggestions {
 
     this.awesomplete = new Awesomplete(queryInput, {
       container: function (input) {
-        return input.parentNode;
+        return input.parentNode.parentNode;
       },
       minChars: 1,
       filter: function (text, input) {

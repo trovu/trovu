@@ -99,17 +99,15 @@
   <main class="container">
     <section class="jumbotron text-center bg-white">
       <div hidden id="alert" class="alert alert-warning" role="alert"></div>
-      <form id="query-form" action="process/index.html">
-        <div class="input-group">
+      <form id="query-form" class="awesomplete" action="process/index.html">
+        <div class="input-group  ">
           <div class="input-group-prepend">
             <span id="settings-button" class="input-group-text btn" data-toggle="modal"
               data-target="#settings">⚙️</span>
           </div>
-          <div class="awesomplete query form-control form-control-lg">
             <input type="search" class="form-control form-control-lg" id="query" name="query" autocapitalize="none"
               autocorrect="off" autocapitalize="off" spellcheck="false"
               placeholder="Type a letter to get suggestions.">
-          </div>
           <div class="input-group-append">
             <button type="submit" class="btn btn-primary">▶</button>
           </div>
