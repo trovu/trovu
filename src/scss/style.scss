@@ -9,8 +9,8 @@ main .jumbotron {
 }
 
 .awesomplete ul {
-  background: hsla(0, 0%, 100%, 1);
   li {
+    background: #fff;
     padding: 0.1em 0.9em;
     border-bottom: 1px solid #eee;
     .keyword {
