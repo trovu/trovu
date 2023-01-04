@@ -8748,13 +8748,13 @@ ys 1:
   tags:
   - old
 yt 0:
-  url: http://www.youtube.com/?hl={$language}&persist_hl=1
+  url: https://www.youtube.com/
   title: Youtube Homepage
   tags:
   - video
   - youtube
 yt 1:
-  url: http://www.youtube.com/results?hl={$language}&persist_hl=1&search_query={%query}
+  url: https://www.youtube.com/results?search_query={%query}
   title: Youtube
   tags:
   - video
@@ -8770,7 +8770,7 @@ ytc 1:
   examples:
     zdf: Search for "zdf"
 ytd 1:
-  url: http://www.youtube.com/results?hl={$language}&persist_hl=1&search_query={%query}&search_sort=video_date_uploaded
+  url: https://www.youtube.com/results?sp=CAI%253D&search_query={%query}
   title: Youtube, sorted by upload date
   tags:
   - video
