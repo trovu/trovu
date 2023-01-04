@@ -2150,11 +2150,6 @@ e 1:
   - affiliate
   examples:
     smartphone: Search for smartphones
-e33 1:
-  url: http://e33.biz/suche/{%query}
-  title: E33.biz Preissuche
-  tags:
-  - old
 eb 1:
   url: http://www.britannica.com/#search=tab~TOPICS%2Cterm~{%term}
   title: Encyclopedia Britannica
