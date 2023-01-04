@@ -31,11 +31,6 @@ export default class Settings {
     document.querySelector('#languageSetting').value = this.env.language;
     document.querySelector('#countrySetting').value = this.env.country;
 
-    // Output whole environment into textarea.
-    document.querySelector('#settingsEnv').value = jsyaml.dump(
-      this.env.withoutMethods,
-    );
-
     // Show and hide settings tabs depending on Github setting.
     if (this.env.github) {
       document.querySelector('.using-advanced').classList.remove('d-none');
