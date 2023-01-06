@@ -43,18 +43,17 @@ export default class CallHandler {
    * @return {string} redirectUrl - The URL to redirect to.
    */
   static async getRedirectUrl(env) {
-    let redirectUrl;
-    let status;
+    const response = {};
 
     if (env.reload && !env.query) {
-      status = 'reloaded';
-      return [status, redirectUrl];
+      response.status = 'reloaded';
+      return response;
     }
 
     if (!env.query) {
-      status = 'not_found';
-      redirectUrl = false;
-      return [status, redirectUrl];
+      response.status = 'not_found';
+      response.redirectUrl = false;
+      return response;
     }
 
     Object.assign(env, QueryParser.parse(env.query));
@@ -73,29 +72,35 @@ export default class CallHandler {
     }
 
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
-    redirectUrl = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
+    response.redirectUrl = ShortcutFinder.pickShortcut(
+      shortcuts,
+      env.namespaces,
+    );
 
-    if (!redirectUrl) {
-      status = 'not_found';
-      return [status, redirectUrl];
+    if (!response.redirectUrl) {
+      response.status = 'not_found';
+      return response;
     }
 
-    status = 'found';
+    response.status = 'found';
 
     if (env.debug) Helper.log('');
-    if (env.debug) Helper.log('Used template: ' + redirectUrl);
+    if (env.debug) Helper.log('Used template: ' + response.redirectUrl);
 
-    redirectUrl = await UrlProcessor.replaceVariables(redirectUrl, {
-      language: env.language,
-      country: env.country,
-    });
-    redirectUrl = await UrlProcessor.replaceArguments(
-      redirectUrl,
+    response.redirectUrl = await UrlProcessor.replaceVariables(
+      response.redirectUrl,
+      {
+        language: env.language,
+        country: env.country,
+      },
+    );
+    response.redirectUrl = await UrlProcessor.replaceArguments(
+      response.redirectUrl,
       env.args,
       env,
     );
 
-    return [status, redirectUrl];
+    return response;
   }
 
   /**
@@ -105,21 +110,21 @@ export default class CallHandler {
     const env = new Env();
     await env.populate();
 
-    let [status, redirectUrl] = await this.getRedirectUrl(env);
+    const response = await this.getRedirectUrl(env);
 
-    if (status !== 'found') {
-      redirectUrl = this.redirectHome(status);
+    if (response.status !== 'found') {
+      response.redirectUrl = this.redirectHome(response.status);
     }
 
     if (env.debug) {
-      Helper.log('Redirect to:   ' + redirectUrl);
+      Helper.log('Redirect to:   ' + response.redirectUrl);
       return;
     }
 
     this.rewriteBrowserHistory();
 
     if (!env.error) {
-      window.location.href = redirectUrl;
+      window.location.href = response.redirectUrl;
     }
   }
 }
