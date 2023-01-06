@@ -2836,6 +2836,10 @@ gmhab 1:
   examples:
     hauptstr.: Zeige Hauptstr. in Hammelburg
 gmhal 1:
+  deprecated:
+    alternative:
+      query: gm hal, {%1}
+    created: '2023-01-01'
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Halle+%28Saale%29%2C%20Deutschland
   title: Google Maps Halle (Saale)
   tags:
