@@ -1,3 +1,5 @@
+// Helper scripts for managing shortcuts in https://github.com/trovu/trovu-data/.
+
 const fs = require('fs');
 const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain')
