@@ -72,10 +72,12 @@ export default class CallHandler {
     }
 
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
-    response.redirectUrl = ShortcutFinder.pickShortcut(
+    const shortcut = ShortcutFinder.pickShortcut(
       shortcuts,
       env.namespaces,
     );
+
+    response.redirectUrl = shortcut.url;
 
     if (!response.redirectUrl) {
       response.status = 'not_found';
