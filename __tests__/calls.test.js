@@ -3,7 +3,7 @@ const docroot = "http://127.0.0.1:8081/process/index.html?#debug=1";
 const yaml = require("js-yaml");
 const fs = require("fs");
 
-const calls = yaml.safeLoad(fs.readFileSync("./__tests__/calls.yml", "utf8"));
+const calls = yaml.load(fs.readFileSync("./__tests__/calls.yml", "utf8"));
 
 for (const call of calls) {
   test(JSON.stringify(call), async () => {
