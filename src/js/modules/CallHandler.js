@@ -16,9 +16,14 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static redirectHome(status) {
+  static redirectHome(response) {
     const params = Helper.getUrlParams();
-    params.status = status;
+    switch (response.status) {
+      case 'deprecated':
+        params.alternative = response.alternative;
+        break;
+    }
+    params.status = response.status;
     const paramStr = Helper.getUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
@@ -42,19 +47,18 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - The URL to redirect to.
    */
-  static async getRedirectUrl(env) {
-    let redirectUrl;
-    let status;
+  static async getRedirectResponse(env) {
+    const response = {};
 
     if (env.reload && !env.query) {
-      status = 'reloaded';
-      return [status, redirectUrl];
+      response.status = 'reloaded';
+      return response;
     }
 
     if (!env.query) {
-      status = 'not_found';
-      redirectUrl = false;
-      return [status, redirectUrl];
+      response.status = 'not_found';
+      response.redirectUrl = false;
+      return response;
     }
 
     Object.assign(env, QueryParser.parse(env.query));
@@ -73,29 +77,46 @@ export default class CallHandler {
     }
 
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
-    redirectUrl = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
+    const shortcut = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
 
-    if (!redirectUrl) {
-      status = 'not_found';
-      return [status, redirectUrl];
+    if (!shortcut) {
+      response.status = 'not_found';
+      return response;
     }
 
-    status = 'found';
+    if (!shortcut.deprecated) {
+      response.redirectUrl = shortcut.url;
+    } else {
+      response.status = 'deprecated';
+      response.alternative = shortcut.deprecated.alternative.query;
+      for (const i in env.args) {
+        response.alternative = response.alternative.replace(
+          '{%' + (parseInt(i) + 1) + '}',
+          env.args[i],
+        );
+      }
+      return response;
+    }
+
+    response.status = 'found';
 
     if (env.debug) Helper.log('');
-    if (env.debug) Helper.log('Used template: ' + redirectUrl);
+    if (env.debug) Helper.log('Used template: ' + response.redirectUrl);
 
-    redirectUrl = await UrlProcessor.replaceVariables(redirectUrl, {
-      language: env.language,
-      country: env.country,
-    });
-    redirectUrl = await UrlProcessor.replaceArguments(
-      redirectUrl,
+    response.redirectUrl = await UrlProcessor.replaceVariables(
+      response.redirectUrl,
+      {
+        language: env.language,
+        country: env.country,
+      },
+    );
+    response.redirectUrl = await UrlProcessor.replaceArguments(
+      response.redirectUrl,
       env.args,
       env,
     );
 
-    return [status, redirectUrl];
+    return response;
   }
 
   /**
@@ -105,10 +126,14 @@ export default class CallHandler {
     const env = new Env();
     await env.populate();
 
-    let [status, redirectUrl] = await this.getRedirectUrl(env);
+    let redirectUrl;
 
-    if (status !== 'found') {
-      redirectUrl = this.redirectHome(status);
+    const response = await this.getRedirectResponse(env);
+
+    if (response.status === 'found') {
+      redirectUrl = response.redirectUrl;
+    } else {
+      redirectUrl = this.redirectHome(response);
     }
 
     if (env.debug) {

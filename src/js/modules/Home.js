@@ -54,10 +54,16 @@ export default class Home {
   }
 
   setQueryElement() {
-    // Set query into input
-    // if it was not 'reload'.
-    if (this.env.status !== 'reloaded') {
-      document.querySelector('#query').value = this.env.query || '';
+    switch (this.env.status) {
+      case 'deprecated':
+        document.querySelector('#query').value = this.env.alternative;
+        break;
+      case 'reloaded':
+        document.querySelector('#query').value = '';
+        break;
+      default:
+        document.querySelector('#query').value = this.env.query || '';
+        break;
     }
     new Suggestions(this.env.namespaces, this.submitQuery);
     document.querySelector('#query').focus();
@@ -85,6 +91,11 @@ export default class Home {
         document.querySelector('#alert').removeAttribute('hidden');
         document.querySelector('#alert').textContent =
           'Shortcuts were reloaded in all namespaces.';
+        break;
+      case 'deprecated':
+        document.querySelector('#alert').removeAttribute('hidden');
+        document.querySelector('#alert').innerHTML =
+          `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
         break;
     }
   }

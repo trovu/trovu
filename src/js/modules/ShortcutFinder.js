@@ -90,7 +90,7 @@ export default class ShortcutFinder {
     // Use .slice() to keep original array.
     for (let namespace of namespaces.slice().reverse()) {
       if (shortcuts[namespace.name]) {
-        return shortcuts[namespace.name]['url'];
+        return shortcuts[namespace.name];
         // TODO: Process POST arguments.
       }
     }
