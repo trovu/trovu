@@ -278,6 +278,15 @@ export default class Env {
         };
       }
     }
+    // Handle include.
+    for (const key in shortcuts) {
+      const shortcut = shortcuts[key];
+      if (shortcut.include) {
+        const shortcutToInclude = shortcuts[shortcut.include.key];
+        Object.assign(shortcut, shortcutToInclude);
+        // TODO: Handle different namespace.
+      }
+    }
     if (incorrectKeys.length > 0) {
       Helper.log(
         "Incorrect keys found in namespace '" +
