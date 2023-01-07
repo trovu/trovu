@@ -121,7 +121,7 @@ actions['listKeys'] = async function () {
 actions['applyModifier'] = async function () {
   const ymlsAll = loadYmls();
   const ymls = {};
-  const ymlFileName = '.de.yml';
+  const ymlFileName = `${process.argv[4].trim()}.yml`;
   ymls[ymlFileName] = ymlsAll[ymlFileName];
   for (const ymlFilePath in ymls) {
     const yml = ymls[ymlFilePath];
