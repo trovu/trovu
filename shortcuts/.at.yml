@@ -1150,7 +1150,7 @@ obv 1:
   examples:
     elfriede jelinek: Suche nach Literatur von und über Elfriede Jelinek
 oebb 2:
-  url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
+  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
   title: ÖBB-Auskunft
   tags:
   - bahn
@@ -1158,7 +1158,7 @@ oebb 2:
   examples:
     wien, salzburg: Verbindung von Wien nach Salzburg
 oebb 3:
-  url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1
+  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit}&start=1
   title: ÖBB-Auskunft
   tags:
   - bahn
@@ -1166,7 +1166,7 @@ oebb 3:
   examples:
     wien, salzburg, 10: Verbindung von Wien nach Salzburg um 10:00 Uhr
 oebb 4:
-  url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1
+  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit}&date={%Datum}&start=1
   title: ÖBB-Auskunft
   tags:
   - bahn
@@ -1202,7 +1202,7 @@ zal 1:
   examples:
     schuhe: Suche nach Schuhen
 öbb 2:
-  url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
+  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
   title: ÖBB-Auskunft
   tags:
   - bahn
@@ -1210,7 +1210,7 @@ zal 1:
   examples:
     wien, salzburg: Verbindung von Wien nach Salzburg
 öbb 3:
-  url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&start=1
+  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit}&start=1
   title: ÖBB-Auskunft
   tags:
   - bahn
@@ -1218,7 +1218,7 @@ zal 1:
   examples:
     wien, salzburg, 10: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
-  url: http://fahrplan.oebb.at/bin/query.exe/dn?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit}&D={%Datum}&start=1
+  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit}&date={%Datum}&start=1
   title: ÖBB-Auskunft
   tags:
   - bahn
