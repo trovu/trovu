@@ -47,6 +47,6 @@ If the shortcut shall belong to a language or country namespace, then its websit
 
 ### 2-letter keywords: Language codes have priority
 
-A keyword with 2 letters shall be used for a dictionary of that language, using its ISO-639-1 language code (e.g. `en`, `fr`, `be`). Such shortcuts should be put into a language namespace.
+A keyword with 2 letters shall be used for a dictionary of that language, using its [ISO-639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Table_of_all_possible_two_letter_codes) (e.g. `en`, `fr`, `be`). Such shortcuts should be put into a language namespace.
 
 If the shortcut is not about a dictionary, then it should *not* use a ISO-639-1 language code. This is to keep the space for a potential future dictionary shortcut.
