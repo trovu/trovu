@@ -41,11 +41,11 @@ export default class CallHandler {
   }
 
   /**
-   * Given the environment, get the redirect URL.
+   * Given the environment, get a response object, incl. redirect URL.
    *
    * @param {object} env        - The environment.
    *
-   * @return {string} redirectUrl - The URL to redirect to.
+   * @return {object} response  - Contains redirect URL, status.
    */
   static async getRedirectResponse(env) {
     const response = {};

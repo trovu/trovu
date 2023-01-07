@@ -83,7 +83,7 @@ export default class ShortcutFinder {
    * @param {object} shortcuts        - The collected shortcuts.
    * @param {array} namespaces        - The set namespaces.
    *
-   * @return {string} redirectUrl     - The redirect URL of the picked namespace.
+   * @return {object} shortcut        - The shortcut from the picked namespace.
    */
   static pickShortcut(shortcuts, namespaces) {
     // Find first shortcut in our namespace hierarchy.
