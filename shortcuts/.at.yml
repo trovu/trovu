@@ -1150,29 +1150,14 @@ obv 1:
   examples:
     elfriede jelinek: Suche nach Literatur von und über Elfriede Jelinek
 oebb 2:
-  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
-  title: ÖBB-Auskunft
-  tags:
-  - bahn
-  - travel
-  examples:
-    wien, salzburg: Verbindung von Wien nach Salzburg
+  include:
+    key: öbb 2
 oebb 3:
-  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit}&start=1
-  title: ÖBB-Auskunft
-  tags:
-  - bahn
-  - travel
-  examples:
-    wien, salzburg, 10: Verbindung von Wien nach Salzburg um 10:00 Uhr
+  include:
+    key: öbb 3
 oebb 4:
-  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit}&date={%Datum}&start=1
-  title: ÖBB-Auskunft
-  tags:
-  - bahn
-  - travel
-  examples:
-    wien, salzburg, 10, 1.1.: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
+  include:
+    key: öbb 4
 rsc 1:
   url: http://at.rs-online.com/web/c/?searchTerm={%Produkt}
   title: RS Components Österreich
