@@ -107,6 +107,10 @@ gmag 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Aargau
+  deprecated:
+    alternative:
+      query: gm ag,{%1}
+    created: '2023-01-07'
 gmbe 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bern%2C%20Schweiz
   title: Google Maps Bern
@@ -115,6 +119,10 @@ gmbe 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Bern
+  deprecated:
+    alternative:
+      query: gm be,{%1}
+    created: '2023-01-07'
 gmbs 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Basel%2C%20Schweiz
   title: Google Maps Basel
@@ -123,6 +131,10 @@ gmbs 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Basel
+  deprecated:
+    alternative:
+      query: gm bs,{%1}
+    created: '2023-01-07'
 gmfr 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Freiburg%2C%20Schweiz
   title: Google Maps Freiburg
@@ -131,6 +143,10 @@ gmfr 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Freiburg
+  deprecated:
+    alternative:
+      query: gm fr,{%1}
+    created: '2023-01-07'
 gmge 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Genf%2C%20Schweiz
   title: Google Maps Genf
@@ -139,6 +155,10 @@ gmge 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Genf
+  deprecated:
+    alternative:
+      query: gm ge,{%1}
+    created: '2023-01-07'
 gmgl 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Glarus%2C%20Schweiz
   title: Google Maps Glarus
@@ -147,6 +167,10 @@ gmgl 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Glarus
+  deprecated:
+    alternative:
+      query: gm gl,{%1}
+    created: '2023-01-07'
 gmlu 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Luzern%2C%20Schweiz
   title: Google Maps Luzern
@@ -155,6 +179,10 @@ gmlu 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Luzern
+  deprecated:
+    alternative:
+      query: gm lu,{%1}
+    created: '2023-01-07'
 gmne 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neuenburg%2C%20Schweiz
   title: Google Maps Neuenburg
@@ -163,6 +191,10 @@ gmne 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Neuenburg
+  deprecated:
+    alternative:
+      query: gm ne,{%1}
+    created: '2023-01-07'
 gmsg 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+Gallen%2C%20Schweiz
   title: Google Maps St. Gallen
@@ -171,6 +203,10 @@ gmsg 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in St. Gallen
+  deprecated:
+    alternative:
+      query: gm sg,{%1}
+    created: '2023-01-07'
 gmsh 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schaffhausen%2C%20Schweiz
   title: Google Maps Schaffhausen
@@ -179,6 +215,10 @@ gmsh 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Schaffhausen
+  deprecated:
+    alternative:
+      query: gm sh,{%1}
+    created: '2023-01-07'
 gmso 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Solothurn%2C%20Schweiz
   title: Google Maps Solothurn
@@ -187,6 +227,10 @@ gmso 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Solothurn
+  deprecated:
+    alternative:
+      query: gm so,{%1}
+    created: '2023-01-07'
 gmsz 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwyz%2C%20Schweiz
   title: Google Maps Schwyz
@@ -195,6 +239,10 @@ gmsz 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Schwyz
+  deprecated:
+    alternative:
+      query: gm sz,{%1}
+    created: '2023-01-07'
 gmzg 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zug%2C%20Schweiz
   title: Google Maps Zug
@@ -203,6 +251,10 @@ gmzg 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Zug
+  deprecated:
+    alternative:
+      query: gm zg,{%1}
+    created: '2023-01-07'
 gmzh 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Z%C3%BCrich%2C%20Schweiz
   title: Google Maps Zürich
@@ -211,6 +263,10 @@ gmzh 1:
   - google
   examples:
     hauptstr.: Zeige Hauptstr. in Zürich
+  deprecated:
+    alternative:
+      query: gm zh,{%1}
+    created: '2023-01-07'
 gps 1:
   url: http://www.google.ch/products?hl={$language}&q={%query}
   title: Google Products (Schweiz)
