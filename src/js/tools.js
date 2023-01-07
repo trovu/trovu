@@ -121,7 +121,7 @@ actions['applyModifier'] = async function () {
     const yml = ymls[ymlFilePath];
     for (const key in yml) {
       let shortcut = yml[key];
-      shortcut = await modifiers[process.argv[3]](key, shortcut);
+      shortcut = await modifiers[process.argv[3].trim()](key, shortcut);
       if (!shortcut) {
         delete yml[key];
       }
