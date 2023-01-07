@@ -157,6 +157,22 @@ modifiers['removeGoogleMapsCities'] = async function (key, shortcut) {
   return shortcut;
 }
 
+modifiers['deprecateGoogleMapsCities'] = async function (key, shortcut) {
+  let matches;
+  if ((matches = key.match(new RegExp('^gm(.+) ')))) {
+    const city = matches[1];
+    console.log('Deprecating', shortcut.title);
+    shortcut.deprecated = {
+      alternative: {
+        query: `gm ${city},{%1}`,
+      },
+      created: '2023-01-07',
+    };
+    console.log(shortcut);
+  }
+  return shortcut;
+};
+
 modifiers['removeDeadDomains'] = async function (key, shortcut) {
   const skipDomains = [
     'colourlovers.com',
