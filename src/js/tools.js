@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const jsyaml = require('js-yaml');
-const isValidDomain = require('is-valid-domain')
+const isValidDomain = require('is-valid-domain');
 
 const actions = {};
 const modifiers = {};
@@ -11,13 +11,15 @@ let ymlDirPath;
 
 async function main() {
   if (process.argv.length < 3) {
-    console.log('Usage: node index.js action [path]')
+    console.log('Usage: node index.js action [path]');
     return;
   }
 
   if (!process.env.TROVU_DATA_PATH) {
-    console.log('Environment variable TROVU_DATA_PATH must contain full path to trovu-data directory. Pleas set with:')
-    console.log('export TROVU_DATA_PATH=/path/to/trovu-data')
+    console.log(
+      'Environment variable TROVU_DATA_PATH must contain full path to trovu-data directory. Pleas set with:',
+    );
+    console.log('export TROVU_DATA_PATH=/path/to/trovu-data');
     return;
   }
   ymlDirPath = process.env.TROVU_DATA_PATH;
@@ -25,8 +27,7 @@ async function main() {
   const action = process.argv[2];
   if (action in actions) {
     actions[action]();
-  }
-  else {
+  } else {
     console.log('Action must be one of: ', Object.keys(actions));
   }
 }
@@ -51,8 +52,11 @@ function writeYmls(ymls) {
     // TODO:
     // trim strings: - keys - titles - examples - description
     // make sure, subkeys are in reverse particular order: url, post_params, description, tags, examples
-    const ymlStr = jsyaml.dump(ymlSorted, { noArrayIndent: true, lineWidth: -1 });
-    fs.writeFileSync(ymlFilePath, ymlStr)
+    const ymlStr = jsyaml.dump(ymlSorted, {
+      noArrayIndent: true,
+      lineWidth: -1,
+    });
+    fs.writeFileSync(ymlFilePath, ymlStr);
   }
   return ymls;
 }
@@ -60,23 +64,24 @@ function writeYmls(ymls) {
 actions['normalize'] = async function () {
   const ymls = loadYmls();
   writeYmls(ymls);
-}
+};
 
 function sortObject(obj) {
-  return Object.keys(obj).sort().reduce(function (result, key) {
+  return Object.keys(obj)
+    .sort()
+    .reduce(function (result, key) {
       result[key] = obj[key];
       return result;
-  }, {});
+    }, {});
 }
 
-const isValidUrl = urlString => {
+const isValidUrl = (urlString) => {
   try {
     return Boolean(new URL(urlString));
-  }
-  catch (e) {
+  } catch (e) {
     return false;
   }
-}
+};
 
 async function fetchWithTimeout(resource, options = {}) {
   const { timeout = 5000 } = options;
@@ -87,17 +92,18 @@ async function fetchWithTimeout(resource, options = {}) {
     ...options,
     signal: controller.signal,
     headers: {
-      "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
-    }
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+    },
   });
   clearTimeout(id);
   return response;
 }
 
 actions['testFetch'] = async function () {
-    const response = await fetchWithTimeout(process.argv[3]);
-    console.log(response);
-}
+  const response = await fetchWithTimeout(process.argv[3]);
+  console.log(response);
+};
 
 actions['listKeys'] = async function () {
   const ymlsAll = loadYmls();
@@ -110,7 +116,7 @@ actions['listKeys'] = async function () {
       console.log(key);
     }
   }
-}
+};
 
 actions['applyModifier'] = async function () {
   const ymlsAll = loadYmls();
@@ -128,7 +134,7 @@ actions['applyModifier'] = async function () {
     }
   }
   writeYmls(ymls);
-}
+};
 
 modifiers['addTagOld'] = async function (key, shortcut) {
   if (!shortcut.tags) {
@@ -136,26 +142,26 @@ modifiers['addTagOld'] = async function (key, shortcut) {
   }
   shortcut.tags.push('old');
   return shortcut;
-}
+};
 
 modifiers['removeYahooCurrencyConverters'] = async function (key, shortcut) {
-  if (shortcut.title.search(new RegExp('^Convert .*Yahoo.$')) > -1 ) {
+  if (shortcut.title.search(new RegExp('^Convert .*Yahoo.$')) > -1) {
     console.log('Removing ', shortcut.title);
     return false;
   }
   return shortcut;
-}
+};
 
 modifiers['removeGoogleMapsCities'] = async function (key, shortcut) {
   if (
-    (key.search(new RegExp('^gm.+')) > -1) &&
-    (!key.match(new RegExp('^gm(b|hh|m|k|f|s|d|l|do|e|hb|dd|h|n|du) 1')))
+    key.search(new RegExp('^gm.+')) > -1 &&
+    !key.match(new RegExp('^gm(b|hh|m|k|f|s|d|l|do|e|hb|dd|h|n|du) 1'))
   ) {
     console.log('Removing', shortcut.title);
     return false;
   }
   return shortcut;
-}
+};
 
 modifiers['deprecateGoogleMapsCities'] = async function (key, shortcut) {
   let matches;
@@ -182,7 +188,7 @@ modifiers['removeDeadDomains'] = async function (key, shortcut) {
     'reddit.com',
   ];
   for (const skipDomain of skipDomains) {
-    if (shortcut.url.search(new RegExp(skipDomain, "i")) > -1 ) {
+    if (shortcut.url.search(new RegExp(skipDomain, 'i')) > -1) {
       console.log('Skipping listed domain:', shortcut.url);
       return shortcut;
     }
@@ -205,13 +211,12 @@ modifiers['removeDeadDomains'] = async function (key, shortcut) {
       console.log(response.status, testUrl);
       return false;
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.log(url.host);
     console.error(error);
     return false;
   }
   return shortcut;
-}
+};
 
 main();
