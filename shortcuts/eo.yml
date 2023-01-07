@@ -1,3 +1,11 @@
+kt 0:
+  url: https://komputeko.net/
+  title: Komputeko, ĉefpaĝo
+  tags:
+  - esperanto
+  - dictionary
+  - vortaro
+  - computer
 kt 1:
   url: https://komputeko.net/#{%vorto}
   title: Komputeko
@@ -8,6 +16,12 @@ kt 1:
   - computer
   examples:
     shortcut: Find the Esperanto word for "shortcut"
+piv 0:
+  url: http://vortaro.net/
+  title: Plena Ilustrita Vortaro, ĉefpaĝo
+  tags:
+  - language
+  - esperanto
 piv 1:
   url: http://vortaro.net/#{%vorto}
   title: Plena Ilustrita Vortaro
