@@ -65,15 +65,7 @@ export default class CallHandler {
 
     // Add extraNamespace if parsed in query.
     if (env.extraNamespaceName) {
-      env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
-      [env.extraNamespace] = await env.fetchShortcuts(
-        [env.extraNamespace],
-        env.reload,
-        env.debug,
-      );
-      if (env.extraNamespace) {
-        env.namespaces.push(env.extraNamespace);
-      }
+      await CallHandler.addExtraNamespace(env);
     }
 
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
@@ -117,6 +109,21 @@ export default class CallHandler {
     );
 
     return response;
+  }
+
+  /**
+   * Adding extra namespace if such one was called in the query.
+   */
+  static async addExtraNamespace(env) {
+    env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
+    [env.extraNamespace] = await env.fetchShortcuts(
+      [env.extraNamespace],
+      env.reload,
+      env.debug
+    );
+    if (env.extraNamespace) {
+      env.namespaces.push(env.extraNamespace);
+    }
   }
 
   /**
