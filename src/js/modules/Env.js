@@ -471,6 +471,9 @@ export default class Env {
     if (this.query) {
       params['query'] = this.query;
     }
+    if (this.alternative) {
+      params['alternative'] = this.alternative;
+    }
 
     return params;
   }
