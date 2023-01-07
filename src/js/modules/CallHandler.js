@@ -110,7 +110,7 @@ export default class CallHandler {
     for (const i in env.args) {
       alternative = alternative.replace(
         '{%' + (parseInt(i) + 1) + '}',
-        env.args[i]
+        env.args[i],
       );
     }
     return alternative;
@@ -124,7 +124,7 @@ export default class CallHandler {
     [env.extraNamespace] = await env.fetchShortcuts(
       [env.extraNamespace],
       env.reload,
-      env.debug
+      env.debug,
     );
     if (env.extraNamespace) {
       env.namespaces.push(env.extraNamespace);
