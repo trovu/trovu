@@ -1,6 +1,6 @@
 This page is about which shortcuts may be in the curated repository [trovu-data](https://github.com/trovu/trovu-data), and how they should look like.
 
-Note that you can [add any shortcut to your user repository](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#personal-shortcuts).
+Note that you can [add any shortcut to your user repository](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#personal-shortcuts), completely ignoring this policy.
 
 *Caveat: You might note that many curated shortcuts at this moment don't match the listed criteria. This is because Trovu's first version (named **Serchilo**) existed since 2005, with user-created shortcuts available since 2007, and this policy was started to be written in 2023. Thus, the goal is to finally define some standards and then slowly applying then, with as little as possible breaking of existing user habits.*
 
