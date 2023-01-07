@@ -79,6 +79,11 @@ export default class CallHandler {
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
     const shortcut = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
 
+    if (!shortcut) {
+      response.status = 'not_found';
+      return response;
+    }
+
     if (!shortcut.deprecated) {
       response.redirectUrl = shortcut.url;
     } else {
@@ -90,11 +95,6 @@ export default class CallHandler {
           env.args[i],
         );
       }
-      return response;
-    }
-
-    if (!response.redirectUrl) {
-      response.status = 'not_found';
       return response;
     }
 
