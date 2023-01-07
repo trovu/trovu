@@ -32,7 +32,7 @@ However, if there *is* a shortcut with a keyword `apple` or `app`, this breaks.
 
 This is why we want to avoid such common words as keywords:
 
--  Instead of `app`, we use `gpa` (*Google Play App search), and
+-  Instead of `app`, we use `gpa` (*Google Play App search*), and
 -  instead of `apple`, we use `apl` (omitting the vowels, shorter)
 
 ### Abbreviate properly
