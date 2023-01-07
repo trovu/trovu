@@ -39,7 +39,11 @@ This is why we want to avoid such common words as keywords:
 
 The rule of thumb: The more popular the website, the shorter may be its keyword. If we abbreviate, here are the rules.
 
-- The English alphabet has 26 latin letters. Keyword of only 1 letter should therefore be only applied if the website belongs to the top 50 in visitor's count of the world (namespace `o`), to minimize the likelihood of clashes. If the shortcut shall belong to a language or country namespace, then its website should be top 50 of that country.
+### 1-letter keywords: Only for top 50
+
+The English alphabet has 26 latin letters. Keyword of only 1 letter should therefore be only applied if the website belongs to the top 50 in visitor's count of the world (namespace `o`), to minimize the likelihood of clashes. 
+
+If the shortcut shall belong to a language or country namespace, then its website should be top 50 of that country.
 
 ### 2-letter keywords: Language codes have priority
 
