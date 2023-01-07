@@ -16,9 +16,14 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static redirectHome(status) {
+  static redirectHome(response) {
     const params = Helper.getUrlParams();
-    params.status = status;
+    switch (response.status) {
+      case 'deprecated':
+        params.alternative = response.alternative;
+        break;
+    }
+    params.status = response.status;
     const paramStr = Helper.getUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
@@ -42,7 +47,7 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - The URL to redirect to.
    */
-  static async getRedirectUrl(env) {
+  static async getRedirectResponse(env) {
     const response = {};
 
     if (env.reload && !env.query) {
@@ -72,12 +77,21 @@ export default class CallHandler {
     }
 
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
-    const shortcut = ShortcutFinder.pickShortcut(
-      shortcuts,
-      env.namespaces,
-    );
+    const shortcut = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
 
-    response.redirectUrl = shortcut.url;
+    if (!shortcut.deprecated) {
+      response.redirectUrl = shortcut.url;
+    } else {
+      response.status = 'deprecated';
+      response.alternative = shortcut.deprecated.alternative.query;
+      for (const i in env.args) {
+        response.alternative = response.alternative.replace(
+          '{%' + (parseInt(i) + 1) + '}',
+          env.args[i],
+        );
+      }
+      return response;
+    }
 
     if (!response.redirectUrl) {
       response.status = 'not_found';
@@ -112,21 +126,25 @@ export default class CallHandler {
     const env = new Env();
     await env.populate();
 
-    const response = await this.getRedirectUrl(env);
+    let redirectUrl;
 
-    if (response.status !== 'found') {
-      response.redirectUrl = this.redirectHome(response.status);
+    const response = await this.getRedirectResponse(env);
+
+    if (response.status === 'found') {
+      redirectUrl = response.redirectUrl;
+    } else {
+      redirectUrl = this.redirectHome(response);
     }
 
     if (env.debug) {
-      Helper.log('Redirect to:   ' + response.redirectUrl);
+      Helper.log('Redirect to:   ' + redirectUrl);
       return;
     }
 
     this.rewriteBrowserHistory();
 
     if (!env.error) {
-      window.location.href = response.redirectUrl;
+      window.location.href = redirectUrl;
     }
   }
 }
