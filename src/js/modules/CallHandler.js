@@ -80,13 +80,7 @@ export default class CallHandler {
       response.redirectUrl = shortcut.url;
     } else {
       response.status = 'deprecated';
-      response.alternative = shortcut.deprecated.alternative.query;
-      for (const i in env.args) {
-        response.alternative = response.alternative.replace(
-          '{%' + (parseInt(i) + 1) + '}',
-          env.args[i],
-        );
-      }
+      response.alternative = CallHandler.getAlternative(shortcut, env);
       return response;
     }
 
@@ -109,6 +103,17 @@ export default class CallHandler {
     );
 
     return response;
+  }
+
+  static getAlternative(shortcut, env) {
+    let alternative = shortcut.deprecated.alternative.query;
+    for (const i in env.args) {
+      alternative = alternative.replace(
+        '{%' + (parseInt(i) + 1) + '}',
+        env.args[i]
+      );
+    }
+    return alternative;
   }
 
   /**
