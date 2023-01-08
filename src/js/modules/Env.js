@@ -57,34 +57,6 @@ export default class Env {
   }
 
   /**
-   * Set default environment variables if they are still empty.
-   */
-  async setDefaults() {
-    let language, country;
-
-    if (typeof this.language != 'string' || typeof this.country != 'string') {
-      ({ language, country } = await this.getDefaultLanguageAndCountry());
-    }
-
-    // Default language.
-    if (typeof this.language != 'string') {
-      this.language = language;
-    }
-    // Default country.
-    if (typeof this.country != 'string') {
-      this.country = country;
-    }
-    // Default namespaces.
-    if (typeof this.namespaces != 'object') {
-      this.namespaces = ['o', this.language, '.' + this.country];
-    }
-    // Default debug.
-    if (typeof this.debug != 'boolean') {
-      this.debug = Boolean(this.debug);
-    }
-  }
-
-  /**
    * Set the user configuration from their fork in their Github profile.
    *
    * @param {array} params - Here, 'github' and 'debug' will be used
@@ -189,6 +161,34 @@ export default class Env {
     const ipInfo = JSON.parse(ipInfoText);
     const country = ipInfo.countryCode;
     return country;
+  }
+
+  /**
+   * Set default environment variables if they are still empty.
+   */
+  async setDefaults() {
+    let language, country;
+
+    if (typeof this.language != 'string' || typeof this.country != 'string') {
+      ({ language, country } = await this.getDefaultLanguageAndCountry());
+    }
+
+    // Default language.
+    if (typeof this.language != 'string') {
+      this.language = language;
+    }
+    // Default country.
+    if (typeof this.country != 'string') {
+      this.country = country;
+    }
+    // Default namespaces.
+    if (typeof this.namespaces != 'object') {
+      this.namespaces = ['o', this.language, '.' + this.country];
+    }
+    // Default debug.
+    if (typeof this.debug != 'boolean') {
+      this.debug = Boolean(this.debug);
+    }
   }
 
   /**
