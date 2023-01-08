@@ -7,7 +7,7 @@ import fs from 'fs';
 main();
 
 async function main() {
-  let calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
+  const calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
   for (const call of calls) {
     test(JSON.stringify(call), async () => {
       await testCallUnit(call);
