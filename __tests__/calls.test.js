@@ -24,6 +24,6 @@ async function testCall(call) {
   if (call.expected.redirectUrl) {
     expect(response.redirectUrl).toMatch(call.expected.redirectUrl);
   } else {
-    expect(response).toEqual(call.expected);
+    expect(response).toStrictEqual(call.expected);
   }
 }
