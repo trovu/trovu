@@ -48,12 +48,12 @@ export default class Env {
 
     await this.setDefaults();
     this.addFetchUrlToNamespaces();
-    this.namespaces = await this.fetchShortcuts(
-      this.namespaces,
-      this.reload,
-      this.debug,
-    );
-    this.addInfoToShortcuts(this.namespaces);
+    await this.getShortcuts(this.namespaces, this.reload, this.debug);
+  }
+
+  async getShortcuts(namespaces, reload, debug) {
+    await this.fetchShortcuts(namespaces, reload, debug);
+    this.addInfoToShortcuts(namespaces);
   }
 
   /**
@@ -355,7 +355,6 @@ export default class Env {
     namespaces = namespaces.filter(
       (namespace) => typeof namespace !== 'undefined',
     );
-    return namespaces;
   }
 
   /**
