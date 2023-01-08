@@ -1,16 +1,16 @@
 import CallHandler from '../src/js/modules/CallHandler.js';
 import Env from '../src/js/modules/Env.js';
 import 'isomorphic-fetch';
+import jsyaml from 'js-yaml';
 
 const docroot = 'http://127.0.0.1:8081/process/index.html?#debug=1';
 
-const yaml = require('js-yaml');
 const fs = require('fs');
 
 main();
 
 async function main() {
-  let calls = yaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
+  let calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
   for (const call of calls) {
     test(JSON.stringify(call), async () => {
       await testCallUnit(call);
