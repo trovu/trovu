@@ -127,7 +127,7 @@ export default class CallHandler {
    */
   static async addExtraNamespace(env) {
     env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
-    [env.extraNamespace] = await env.fetchShortcuts(
+    [env.extraNamespace] = await env.getShortcuts(
       [env.extraNamespace],
       env.reload,
       env.debug,

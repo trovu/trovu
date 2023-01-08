@@ -99,6 +99,7 @@ export default class Env {
   async getShortcuts(namespaces, reload, debug) {
     await this.fetchShortcuts(namespaces, reload, debug);
     this.addInfoToShortcuts(namespaces);
+    return namespaces;
   }
 
   /**
