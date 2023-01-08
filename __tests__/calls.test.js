@@ -11,7 +11,7 @@ main();
 
 async function main() {
   let calls = yaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
-  calls = calls.slice(0, 1);
+  //calls = calls.slice(0, 1);
   for (const call of calls) {
     test(JSON.stringify(call), async () => {
       await testCallUnit(call);
