@@ -10,12 +10,12 @@ async function main() {
   const calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
   for (const call of calls) {
     test(JSON.stringify(call), async () => {
-      await testCallUnit(call);
+      await testCall(call);
     });
   }
 }
 
-async function testCallUnit(call) {
+async function testCall(call) {
   const env = new Env();
   env.language = 'en';
   env.country = 'us';
