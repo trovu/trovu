@@ -98,6 +98,7 @@ export default class Env {
 
   async getShortcuts(namespaces, reload, debug) {
     await this.fetchShortcuts(namespaces, reload, debug);
+    this.normalizeShortcuts(namespaces);
     this.addInfoToShortcuts(namespaces);
     return namespaces;
   }
@@ -302,12 +303,7 @@ export default class Env {
         namespaces[i] = undefined;
         continue;
       }
-      // TODO: Put this outside of fetchShortcuts
-      // as this is a separate logic.
-      namespaces[i].shortcuts = this.normalizeShortcutsOfNamespace(
-        shortcuts,
-        namespaces[i].name,
-      );
+      namespaces[i].shortcuts = shortcuts;
     }
     // Delete marked namespaces.
     namespaces = namespaces.filter(
@@ -439,6 +435,16 @@ export default class Env {
       this.error = true;
     }
     return shortcuts;
+  }
+
+  async normalizeShortcuts(namespaces) {
+    for (const i in namespaces) {
+      namespaces[i].shortcuts = this.normalizeShortcutsOfNamespace(
+        namespaces[i].shortcuts,
+        namespaces[i].name,
+      );
+    }
+    return namespaces;
   }
 
   /**
