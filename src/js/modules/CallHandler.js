@@ -124,6 +124,17 @@ export default class CallHandler {
     }
   }
 
+  static getAlternative(shortcut, env) {
+    let alternative = shortcut.deprecated.alternative.query;
+    for (const i in env.args) {
+      alternative = alternative.replace(
+        '{%' + (parseInt(i) + 1) + '}',
+        env.args[i],
+      );
+    }
+    return alternative;
+  }
+
   /**
    * Redirect in case a shortcut was not found.
    *
@@ -153,16 +164,5 @@ export default class CallHandler {
       '',
     );
     history.replaceState({}, 'trovu.net', currentUrlWithoutProcess);
-  }
-
-  static getAlternative(shortcut, env) {
-    let alternative = shortcut.deprecated.alternative.query;
-    for (const i in env.args) {
-      alternative = alternative.replace(
-        '{%' + (parseInt(i) + 1) + '}',
-        env.args[i],
-      );
-    }
-    return alternative;
   }
 }
