@@ -1,3 +1,5 @@
+import CallHandler from '../src/js/modules/CallHandler.js';
+
 const docroot = 'http://127.0.0.1:8081/process/index.html?#debug=1';
 
 const yaml = require('js-yaml');
