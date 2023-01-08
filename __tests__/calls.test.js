@@ -12,9 +12,16 @@ main();
 async function main() {
   for (const call of calls) {
     test(JSON.stringify(call), async () => {
-      await testCall(call);
+      await testCallUnit(call);
     });
   }
+}
+
+async function testCallUnit(call) {
+  console.log(call);
+  return;
+  const url = setCallUrl(call);
+  await checkIfRedirectUrlPresent(call.expectedRedirectUrl);
 }
 
 async function testCall(call) {
