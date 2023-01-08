@@ -20,7 +20,6 @@ async function main() {
 }
 
 async function testCallUnit(call) {
-  console.log(call);
   const env = new Env();
   await env.populate(call);
   //CallHandler.getRedirectResponse();
