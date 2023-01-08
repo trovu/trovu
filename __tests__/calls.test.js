@@ -7,11 +7,16 @@ const fs = require('fs');
 
 const calls = yaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
 
-for (const call of calls) {
-  test(JSON.stringify(call), async () => {
-    await testCall(call);
-  });
+main();
+
+async function main() {
+  for (const call of calls) {
+    test(JSON.stringify(call), async () => {
+      await testCall(call);
+    });
+  }
 }
+
 async function testCall(call) {
   const url = setCallUrl(call);
   await page.goto(url);
