@@ -24,9 +24,6 @@ async function testCallUnit(call) {
   await env.populate(call);
   const response = await CallHandler.getRedirectResponse(env);
   expect(response.redirectUrl).toMatch(call.expectedRedirectUrl);
-  return;
-  const url = setCallUrl(call);
-  await checkIfRedirectUrlPresent(call.expectedRedirectUrl);
 }
 
 async function testCall(call) {
