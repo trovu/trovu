@@ -39,37 +39,6 @@ export default class CallHandler {
   }
 
   /**
-   * Redirect in case a shortcut was not found.
-   *
-   * @param {string} status       - The status of the call.
-   *
-   * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
-   */
-  static redirectHome(response) {
-    const params = Helper.getUrlParams();
-    switch (response.status) {
-      case 'deprecated':
-        params.alternative = response.alternative;
-        break;
-    }
-    params.status = response.status;
-    const paramStr = Helper.getUrlParamStr(params);
-    const redirectUrl = '../index.html#' + paramStr;
-    return redirectUrl;
-  }
-
-  /**
-   * Rewrite browser history to make Back button work properly.
-   */
-  static rewriteBrowserHistory() {
-    const currentUrlWithoutProcess = window.location.href.replace(
-      'process/',
-      '',
-    );
-    history.replaceState({}, 'trovu.net', currentUrlWithoutProcess);
-  }
-
-  /**
    * Given the environment, get a response object, incl. redirect URL.
    *
    * @param {object} env        - The environment.
@@ -138,6 +107,37 @@ export default class CallHandler {
     );
 
     return response;
+  }
+
+  /**
+   * Redirect in case a shortcut was not found.
+   *
+   * @param {string} status       - The status of the call.
+   *
+   * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
+   */
+  static redirectHome(response) {
+    const params = Helper.getUrlParams();
+    switch (response.status) {
+      case 'deprecated':
+        params.alternative = response.alternative;
+        break;
+    }
+    params.status = response.status;
+    const paramStr = Helper.getUrlParamStr(params);
+    const redirectUrl = '../index.html#' + paramStr;
+    return redirectUrl;
+  }
+
+  /**
+   * Rewrite browser history to make Back button work properly.
+   */
+  static rewriteBrowserHistory() {
+    const currentUrlWithoutProcess = window.location.href.replace(
+      'process/',
+      '',
+    );
+    history.replaceState({}, 'trovu.net', currentUrlWithoutProcess);
   }
 
   static getAlternative(shortcut, env) {
