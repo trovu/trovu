@@ -107,6 +107,7 @@ export default class QueryParser {
     const env = {};
 
     [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(query);
+    env.keyword = env.keyword.toLowerCase();
     env.args = this.getArguments(env.argumentString);
 
     [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(env.keyword);
