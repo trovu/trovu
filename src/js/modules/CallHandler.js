@@ -69,7 +69,7 @@ export default class CallHandler {
     // but that's maybe worth it,
     // also to merge this with the reload:/debug: parse.
     if (env.extraNamespaceName) {
-      await CallHandler.addExtraNamespace(env);
+      await this.addExtraNamespace(env);
     }
 
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
@@ -84,7 +84,7 @@ export default class CallHandler {
       response.redirectUrl = shortcut.url;
     } else {
       response.status = 'deprecated';
-      response.alternative = CallHandler.getAlternative(shortcut, env);
+      response.alternative = this.getAlternative(shortcut, env);
       return response;
     }
 
