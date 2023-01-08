@@ -312,6 +312,8 @@ export default class Env {
     namespaces = namespaces.filter(
       (namespace) => typeof namespace !== 'undefined',
     );
+    // We only need to return here
+    // for receiving in CallHandler.addExtraNamespace().
     return namespaces;
   }
 
