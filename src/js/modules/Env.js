@@ -16,6 +16,51 @@ export default class Env {
   }
 
   /**
+   * Get the params from env.
+   *
+   * @return {object} - The built params.
+   */
+  getParams() {
+    const params = {};
+
+    // Put environment into hash.
+    if (this.github) {
+      params['github'] = this.github;
+    } else {
+      params['language'] = this.language;
+      params['country'] = this.country;
+    }
+    if (this.debug) {
+      params['debug'] = 1;
+    }
+    // Don't add defaultKeyword into params
+    // when Github user is set.
+    if (this.defaultKeyword && !this.github) {
+      params['defaultKeyword'] = this.defaultKeyword;
+    }
+    if (this.status) {
+      params['status'] = this.status;
+    }
+    if (this.query) {
+      params['query'] = this.query;
+    }
+    if (this.alternative) {
+      params['alternative'] = this.alternative;
+    }
+
+    return params;
+  }
+
+  /**
+   * Get the parameters as string.
+   */
+  getParamStr() {
+    const params = this.getParams();
+    const paramStr = Helper.getUrlParamStr(params);
+    return paramStr;
+  }
+
+  /**
    * Set the initial class environment vars either from params or from GET hash string.
    *
    * @param {array} params - List of parameters to be used in environment.
@@ -347,51 +392,6 @@ export default class Env {
     return namespace;
   }
 
-  /**
-   * Get the params from env.
-   *
-   * @return {object} - The built params.
-   */
-  getParams() {
-    const params = {};
-
-    // Put environment into hash.
-    if (this.github) {
-      params['github'] = this.github;
-    } else {
-      params['language'] = this.language;
-      params['country'] = this.country;
-    }
-    if (this.debug) {
-      params['debug'] = 1;
-    }
-    // Don't add defaultKeyword into params
-    // when Github user is set.
-    if (this.defaultKeyword && !this.github) {
-      params['defaultKeyword'] = this.defaultKeyword;
-    }
-    if (this.status) {
-      params['status'] = this.status;
-    }
-    if (this.query) {
-      params['query'] = this.query;
-    }
-    if (this.alternative) {
-      params['alternative'] = this.alternative;
-    }
-
-    return params;
-  }
-
-  /**
-   * Get the parameters as string.
-   */
-  getParamStr() {
-    const params = this.getParams();
-    const paramStr = Helper.getUrlParamStr(params);
-    return paramStr;
-  }
-  
   /**
    * Ensure shortcuts have the correct structure.
    *
