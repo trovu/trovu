@@ -16,6 +16,51 @@ export default class Env {
   }
 
   /**
+   * Get the params from env.
+   *
+   * @return {object} - The built params.
+   */
+  getParams() {
+    const params = {};
+
+    // Put environment into hash.
+    if (this.github) {
+      params['github'] = this.github;
+    } else {
+      params['language'] = this.language;
+      params['country'] = this.country;
+    }
+    if (this.debug) {
+      params['debug'] = 1;
+    }
+    // Don't add defaultKeyword into params
+    // when Github user is set.
+    if (this.defaultKeyword && !this.github) {
+      params['defaultKeyword'] = this.defaultKeyword;
+    }
+    if (this.status) {
+      params['status'] = this.status;
+    }
+    if (this.query) {
+      params['query'] = this.query;
+    }
+    if (this.alternative) {
+      params['alternative'] = this.alternative;
+    }
+
+    return params;
+  }
+
+  /**
+   * Get the parameters as string.
+   */
+  getParamStr() {
+    const params = this.getParams();
+    const paramStr = Helper.getUrlParamStr(params);
+    return paramStr;
+  }
+
+  /**
    * Set the initial class environment vars either from params or from GET hash string.
    *
    * @param {array} params - List of parameters to be used in environment.
@@ -48,83 +93,15 @@ export default class Env {
 
     await this.setDefaults();
     this.addFetchUrlToNamespaces();
-    this.namespaces = await this.fetchShortcuts(
-      this.namespaces,
-      this.reload,
-      this.debug,
-    );
-    this.addInfoToShortcuts(this.namespaces);
+    await this.getShortcuts(this.namespaces, this.reload, this.debug);
   }
 
-  /**
-   * Enrich shortcuts with their own information: argument & namespace names, reachable.
-   *
-   * @param {object} namespaces - Current namespaces keyed by their name.
-   */
-  addInfoToShortcuts(namespaces) {
-    // Remember found shortcuts
-    // to know which ones are reachable.
-    const foundShortcuts = {};
-
-    // Iterate over namespaces in reverse order.
-    // Slice to keep original.
-    for (const namespace of namespaces.slice().reverse()) {
-      const shortcuts = namespace.shortcuts;
-
-      for (const key in shortcuts) {
-        const shortcut = shortcuts[key];
-
-        [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
-        shortcut.namespace = namespace.name;
-        shortcut.arguments = UrlProcessor.getArgumentsFromString(
-          shortcuts[key].url,
-        );
-
-        shortcut.title = shortcut.title || '';
-
-        // If not yet present: reachable.
-        // (Because we started with most precendent namespace.)
-        if (!(key in foundShortcuts)) {
-          shortcut.reachable = true;
-        }
-        // Others are unreachable
-        // but can be reached with namespace forcing.
-        else {
-          shortcut.reachable = false;
-        }
-
-        shortcuts[key] = shortcut;
-        foundShortcuts[key] = true;
-      }
-    }
-  }
-
-  /**
-   * Set default environment variables if they are still empty.
-   */
-  async setDefaults() {
-    let language, country;
-
-    if (typeof this.language != 'string' || typeof this.country != 'string') {
-      ({ language, country } = await this.getDefaultLanguageAndCountry());
-    }
-
-    // Default language.
-    if (typeof this.language != 'string') {
-      this.language = language;
-    }
-    // Default country.
-    if (typeof this.country != 'string') {
-      this.country = country;
-    }
-    // Default namespaces.
-    if (typeof this.namespaces != 'object') {
-      this.namespaces = ['o', this.language, '.' + this.country];
-    }
-    // Default debug.
-    if (typeof this.debug != 'boolean') {
-      this.debug = Boolean(this.debug);
-    }
+  async getShortcuts(namespaces, reload, debug) {
+    await this.fetchShortcuts(namespaces, reload, debug);
+    this.normalizeShortcuts(namespaces);
+    this.addIncludesToShortcuts(namespaces);
+    this.addInfoToShortcuts(namespaces);
+    return namespaces;
   }
 
   /**
@@ -235,6 +212,34 @@ export default class Env {
   }
 
   /**
+   * Set default environment variables if they are still empty.
+   */
+  async setDefaults() {
+    let language, country;
+
+    if (typeof this.language != 'string' || typeof this.country != 'string') {
+      ({ language, country } = await this.getDefaultLanguageAndCountry());
+    }
+
+    // Default language.
+    if (typeof this.language != 'string') {
+      this.language = language;
+    }
+    // Default country.
+    if (typeof this.country != 'string') {
+      this.country = country;
+    }
+    // Default namespaces.
+    if (typeof this.namespaces != 'object') {
+      this.namespaces = ['o', this.language, '.' + this.country];
+    }
+    // Default debug.
+    if (typeof this.debug != 'boolean') {
+      this.debug = Boolean(this.debug);
+    }
+  }
+
+  /**
    * Start fetching shortcuts per namespace.
    *
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
@@ -253,42 +258,6 @@ export default class Env {
       );
     });
     return promises;
-  }
-
-  /**
-   * Ensure shortcuts have the correct structure.
-   *
-   * @param {array} shortcuts      - The shortcuts to normalize.
-   * @param {string} namespaceName - The namespace name to show in error message.
-   *
-   * @return {array} shortcuts - The normalized shortcuts.
-   */
-  normalizeShortcuts(shortcuts, namespaceName) {
-    const incorrectKeys = [];
-    for (const key in shortcuts) {
-      if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
-      }
-      // Check for 'only URL' (string) shortcuts
-      // and make an object of them.
-      if (typeof shortcuts[key] === 'string') {
-        const url = shortcuts[key];
-        shortcuts[key] = {
-          url: url,
-        };
-      }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
-    }
-    return shortcuts;
   }
 
   /**
@@ -335,17 +304,14 @@ export default class Env {
         namespaces[i] = undefined;
         continue;
       }
-      // TODO: Put this outside of fetchShortcuts
-      // as this is a separate logic.
-      namespaces[i].shortcuts = this.normalizeShortcuts(
-        shortcuts,
-        namespaces[i].name,
-      );
+      namespaces[i].shortcuts = shortcuts;
     }
     // Delete marked namespaces.
     namespaces = namespaces.filter(
       (namespace) => typeof namespace !== 'undefined',
     );
+    // We only need to return here
+    // for receiving in CallHandler.addExtraNamespace().
     return namespaces;
   }
 
@@ -428,62 +394,108 @@ export default class Env {
   }
 
   /**
-   * Export current class without methods.
+   * Ensure shortcuts have the correct structure.
    *
-   * @return {object} - Object of env without methods.
+   * @param {array} shortcuts      - The shortcuts to normalize.
+   * @param {string} namespaceName - The namespace name to show in error message.
+   *
+   * @return {array} shortcuts - The normalized shortcuts.
    */
-  get withoutMethods() {
-    const envWithoutFunctions = {};
-    for (const key of Object.keys(this)) {
-      if (typeof this[key] != 'function') {
-        envWithoutFunctions[key] = this[key];
+  normalizeShortcutsOfNamespace(shortcuts, namespaceName) {
+    const incorrectKeys = [];
+    for (const key in shortcuts) {
+      if (!key.match(/\S+ \d/)) {
+        incorrectKeys.push(key);
+      }
+      // Check for 'only URL' (string) shortcuts
+      // and make an object of them.
+      if (typeof shortcuts[key] === 'string') {
+        const url = shortcuts[key];
+        shortcuts[key] = {
+          url: url,
+        };
       }
     }
-    return envWithoutFunctions;
+    if (incorrectKeys.length > 0) {
+      Helper.log(
+        "Incorrect keys found in namespace '" +
+          namespaceName +
+          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
+          '\n\n' +
+          incorrectKeys.join('\n'),
+      );
+      this.error = true;
+    }
+    return shortcuts;
+  }
+
+  normalizeShortcuts(namespaces) {
+    for (const i in namespaces) {
+      namespaces[i].shortcuts = this.normalizeShortcutsOfNamespace(
+        namespaces[i].shortcuts,
+        namespaces[i].name,
+      );
+    }
+    return namespaces;
+  }
+
+  addIncludesToShortcuts(namespaces) {
+    for (const i in namespaces) {
+      this.addIncludesToShortcutsOfNamespace(namespaces[i].shortcuts);
+    }
+  }
+
+  addIncludesToShortcutsOfNamespace(shortcuts) {
+    for (const key in shortcuts) {
+      let shortcut = shortcuts[key];
+      if (shortcut.include) {
+        const shortcutToInclude = shortcuts[shortcut.include.key];
+        shortcut = Object.assign(shortcut, shortcutToInclude);
+        // TODO: Handle different namespace.
+      }
+    }
   }
 
   /**
-   * Get the params from env.
+   * Enrich shortcuts with their own information: argument & namespace names, reachable.
    *
-   * @return {object} - The built params.
+   * @param {object} namespaces - Current namespaces keyed by their name.
    */
-  getParams() {
-    const params = {};
+  addInfoToShortcuts(namespaces) {
+    // Remember found shortcuts
+    // to know which ones are reachable.
+    const foundShortcuts = {};
 
-    // Put environment into hash.
-    if (this.github) {
-      params['github'] = this.github;
-    } else {
-      params['language'] = this.language;
-      params['country'] = this.country;
-    }
-    if (this.debug) {
-      params['debug'] = 1;
-    }
-    // Don't add defaultKeyword into params
-    // when Github user is set.
-    if (this.defaultKeyword && !this.github) {
-      params['defaultKeyword'] = this.defaultKeyword;
-    }
-    if (this.status) {
-      params['status'] = this.status;
-    }
-    if (this.query) {
-      params['query'] = this.query;
-    }
-    if (this.alternative) {
-      params['alternative'] = this.alternative;
-    }
+    // Iterate over namespaces in reverse order.
+    // Slice to keep original.
+    for (const namespace of namespaces.slice().reverse()) {
+      const shortcuts = namespace.shortcuts;
 
-    return params;
-  }
+      for (const key in shortcuts) {
+        const shortcut = shortcuts[key];
 
-  /**
-   * Get the parameters as string.
-   */
-  getParamStr() {
-    const params = this.getParams();
-    const paramStr = Helper.getUrlParamStr(params);
-    return paramStr;
+        [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
+        shortcut.namespace = namespace.name;
+        shortcut.arguments = UrlProcessor.getArgumentsFromString(
+          shortcuts[key].url,
+        );
+
+        shortcut.title = shortcut.title || '';
+
+        // If not yet present: reachable.
+        // (Because we started with most precendent namespace.)
+        if (!(key in foundShortcuts)) {
+          shortcut.reachable = true;
+        }
+        // Others are unreachable
+        // but can be reached with namespace forcing.
+        else {
+          shortcut.reachable = false;
+        }
+
+        shortcuts[key] = shortcut;
+        foundShortcuts[key] = true;
+      }
+    }
   }
 }

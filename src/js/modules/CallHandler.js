@@ -64,6 +64,12 @@ export default class CallHandler {
     Object.assign(env, QueryParser.parse(env.query));
 
     // Add extraNamespace if parsed in query.
+    // TODO: Maybe move this to Env,
+    // as it would be good to do the fetching all at once.
+    // Yes, this would mean to call QueryParser.parse() much earlier,
+    // i.e. before env.populate
+    // but that's maybe worth it,
+    // also to merge this with the reload:/debug: parse.
     if (env.extraNamespaceName) {
       await CallHandler.addExtraNamespace(env);
     }
@@ -121,7 +127,7 @@ export default class CallHandler {
    */
   static async addExtraNamespace(env) {
     env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
-    [env.extraNamespace] = await env.fetchShortcuts(
+    [env.extraNamespace] = await env.getShortcuts(
       [env.extraNamespace],
       env.reload,
       env.debug,
