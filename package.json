@@ -4,8 +4,8 @@
   "description": "Trovu web interface.",
   "main": "",
   "scripts": {
-    "test": "npm run test-unit && npm run test-calls && npm run test-frontend",
-    "test-unit": "jest env -c jest.config.js && jest helper -c jest.config.js",
+    "test": "npm run test-unit && npm run test-frontend",
+    "test-unit": "jest env -c jest.config.js && jest helper -c jest.config.js && npm run test-calls",
     "test-calls": "jest calls -c jest.config.js",
     "test-frontend": "jest frontend -c jest.config.with-puppeteer.js",
     "doc": "rm -r doc ; jsdoc src/js/* --configure jsdoc.json --destination doc",
