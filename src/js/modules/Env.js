@@ -99,6 +99,7 @@ export default class Env {
   async getShortcuts(namespaces, reload, debug) {
     await this.fetchShortcuts(namespaces, reload, debug);
     this.normalizeShortcuts(namespaces);
+    this.addIncludesToShortcuts(namespaces);
     this.addInfoToShortcuts(namespaces);
     return namespaces;
   }
@@ -415,15 +416,6 @@ export default class Env {
         };
       }
     }
-    // Handle include.
-    for (const key in shortcuts) {
-      const shortcut = shortcuts[key];
-      if (shortcut.include) {
-        const shortcutToInclude = shortcuts[shortcut.include.key];
-        Object.assign(shortcut, shortcutToInclude);
-        // TODO: Handle different namespace.
-      }
-    }
     if (incorrectKeys.length > 0) {
       Helper.log(
         "Incorrect keys found in namespace '" +
@@ -445,6 +437,23 @@ export default class Env {
       );
     }
     return namespaces;
+  }
+
+  addIncludesToShortcuts(namespaces) {
+    for (const i in namespaces) {
+      this.addIncludesToShortcutsOfNamespace(namespaces[i].shortcuts);
+    }
+  }
+
+  addIncludesToShortcutsOfNamespace(shortcuts) {
+    for (const key in shortcuts) {
+      let shortcut = shortcuts[key];
+      if (shortcut.include) {
+        const shortcutToInclude = shortcuts[shortcut.include.key];
+        shortcut = Object.assign(shortcut, shortcutToInclude);
+        // TODO: Handle different namespace.
+      }
+    }
   }
 
   /**
