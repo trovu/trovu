@@ -1,4 +1,5 @@
 import CallHandler from '../src/js/modules/CallHandler.js';
+import Env from '../src/js/modules/Env.js';
 
 const docroot = 'http://127.0.0.1:8081/process/index.html?#debug=1';
 
@@ -19,6 +20,9 @@ async function main() {
 
 async function testCallUnit(call) {
   console.log(call);
+  const env = new Env();
+  await env.populate(call);
+  //CallHandler.getRedirectResponse();
   return;
   const url = setCallUrl(call);
   await checkIfRedirectUrlPresent(call.expectedRedirectUrl);
