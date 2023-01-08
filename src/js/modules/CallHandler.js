@@ -10,6 +10,35 @@ import UrlProcessor from './UrlProcessor.js';
 
 export default class CallHandler {
   /**
+   * The 'main' function of this class.
+   */
+  static async handleCall() {
+    const env = new Env();
+    await env.populate();
+
+    let redirectUrl;
+
+    const response = await this.getRedirectResponse(env);
+
+    if (response.status === 'found') {
+      redirectUrl = response.redirectUrl;
+    } else {
+      redirectUrl = this.redirectHome(response);
+    }
+
+    if (env.debug) {
+      Helper.log('Redirect to:   ' + redirectUrl);
+      return;
+    }
+
+    this.rewriteBrowserHistory();
+
+    if (!env.error) {
+      window.location.href = redirectUrl;
+    }
+  }
+
+  /**
    * Redirect in case a shortcut was not found.
    *
    * @param {string} status       - The status of the call.
@@ -134,35 +163,6 @@ export default class CallHandler {
     );
     if (env.extraNamespace) {
       env.namespaces.push(env.extraNamespace);
-    }
-  }
-
-  /**
-   * The 'main' function of this class.
-   */
-  static async handleCall() {
-    const env = new Env();
-    await env.populate();
-
-    let redirectUrl;
-
-    const response = await this.getRedirectResponse(env);
-
-    if (response.status === 'found') {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = this.redirectHome(response);
-    }
-
-    if (env.debug) {
-      Helper.log('Redirect to:   ' + redirectUrl);
-      return;
-    }
-
-    this.rewriteBrowserHistory();
-
-    if (!env.error) {
-      window.location.href = redirectUrl;
     }
   }
 }
