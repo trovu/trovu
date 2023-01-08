@@ -25,7 +25,11 @@ async function testCallUnit(call) {
   env.country = 'us';
   await env.populate(call);
   const response = await CallHandler.getRedirectResponse(env);
-  expect(response.redirectUrl).toMatch(call.expectedRedirectUrl);
+  if (call.expected.redirectUrl) {
+    expect(response.redirectUrl).toMatch(call.expected.redirectUrl);
+  } else {
+    expect(response.status).toMatch(call.expected.status);
+  }
 }
 
 async function testCall(call) {

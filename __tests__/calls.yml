@@ -1,36 +1,48 @@
 - language: de
   country: de
   query: db b,m,8,1.1.20
-  expectedRedirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+  expected:
+    redirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - language: de
   country: pl
   query: .de.db b,m,8,1.1.2020
-  expectedRedirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+  expected:
+    redirectUrl: http://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - language: de
   country: fr
   query: pl.wg berlin
-  expectedRedirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
+  expected:
+    redirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
 - defaultKeyword: g
   query: foobar
-  expectedRedirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
+  expected:
+    redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
 - github: georgjaehnig
   query: foobar
-  expectedRedirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
+  expected:
+    redirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
 - language: en
   country: us
   query: someQueryThatWillNotSuccess
-  expectedRedirectUrl: ../index.html#country=us&debug=1&language=en&query=someQueryThatWillNotSuccess&status=not_found
+  expected:
+    status: not_found
 - language: de
   country: de
   query: gd b,m
-  expectedRedirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
+  expected:
+    redirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
 - query: g barbaz
-  expectedRedirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
+  expected:
+    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - query: g bar,baz
-  expectedRedirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
+  expected:
+    redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
 - query: reload:g barbaz
-  expectedRedirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
+  expected:
+    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - query: reload
-  expectedRedirectUrl: ../index.html#debug=1&query=reload&status=reloaded
+  expected:
+    status: reload
 - query: georgjaehnig.example
-  expectedRedirectUrl: https://www.example.com
+  expected:
+    redirectUrl: https://www.example.com
