@@ -42,7 +42,12 @@
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - query: reload
   expected:
-    status: reload
+    status: reloaded
 - query: georgjaehnig.example
   expected:
     redirectUrl: https://www.example.com
+- country: de
+  query: gmhal hbf
+  expected:
+    status: deprecated
+    alternative: gm hal,hbf
