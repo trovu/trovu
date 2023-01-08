@@ -213,51 +213,6 @@ export default class Env {
   }
 
   /**
-   * Ensure shortcuts have the correct structure.
-   *
-   * @param {array} shortcuts      - The shortcuts to normalize.
-   * @param {string} namespaceName - The namespace name to show in error message.
-   *
-   * @return {array} shortcuts - The normalized shortcuts.
-   */
-  normalizeShortcuts(shortcuts, namespaceName) {
-    const incorrectKeys = [];
-    for (const key in shortcuts) {
-      if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
-      }
-      // Check for 'only URL' (string) shortcuts
-      // and make an object of them.
-      if (typeof shortcuts[key] === 'string') {
-        const url = shortcuts[key];
-        shortcuts[key] = {
-          url: url,
-        };
-      }
-    }
-    // Handle include.
-    for (const key in shortcuts) {
-      const shortcut = shortcuts[key];
-      if (shortcut.include) {
-        const shortcutToInclude = shortcuts[shortcut.include.key];
-        Object.assign(shortcut, shortcutToInclude);
-        // TODO: Handle different namespace.
-      }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
-    }
-    return shortcuts;
-  }
-
-  /**
    * Add a fetch URL template to a namespace.
    *
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
@@ -450,6 +405,51 @@ export default class Env {
     const params = this.getParams();
     const paramStr = Helper.getUrlParamStr(params);
     return paramStr;
+  }
+  
+  /**
+   * Ensure shortcuts have the correct structure.
+   *
+   * @param {array} shortcuts      - The shortcuts to normalize.
+   * @param {string} namespaceName - The namespace name to show in error message.
+   *
+   * @return {array} shortcuts - The normalized shortcuts.
+   */
+  normalizeShortcuts(shortcuts, namespaceName) {
+    const incorrectKeys = [];
+    for (const key in shortcuts) {
+      if (!key.match(/\S+ \d/)) {
+        incorrectKeys.push(key);
+      }
+      // Check for 'only URL' (string) shortcuts
+      // and make an object of them.
+      if (typeof shortcuts[key] === 'string') {
+        const url = shortcuts[key];
+        shortcuts[key] = {
+          url: url,
+        };
+      }
+    }
+    // Handle include.
+    for (const key in shortcuts) {
+      const shortcut = shortcuts[key];
+      if (shortcut.include) {
+        const shortcutToInclude = shortcuts[shortcut.include.key];
+        Object.assign(shortcut, shortcutToInclude);
+        // TODO: Handle different namespace.
+      }
+    }
+    if (incorrectKeys.length > 0) {
+      Helper.log(
+        "Incorrect keys found in namespace '" +
+          namespaceName +
+          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
+          '\n\n' +
+          incorrectKeys.join('\n'),
+      );
+      this.error = true;
+    }
+    return shortcuts;
   }
 
   /**
