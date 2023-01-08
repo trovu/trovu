@@ -31,35 +31,3 @@ async function testCallUnit(call) {
     expect(response.status).toMatch(call.expected.status);
   }
 }
-
-async function testCall(call) {
-  const url = setCallUrl(call);
-  await page.goto(url);
-  await page.reload();
-  await checkIfRedirectUrlPresent(call.expectedRedirectUrl);
-}
-
-async function checkIfRedirectUrlPresent(expectedRedirectUrl) {
-  await page.waitForFunction(
-    'document.querySelector("body").innerText.includes("Redirect to:")',
-  );
-  await expect(page.content()).resolves.toMatch(
-    expectedRedirectUrl.replace(/&/g, '&amp;'),
-  );
-}
-
-function setCallUrl(call) {
-  let url = docroot;
-  for (let paramName of [
-    'language',
-    'country',
-    'github',
-    'query',
-    'defaultKeyword',
-  ]) {
-    if (paramName in call) {
-      url += '&' + paramName + '=' + encodeURIComponent(call[paramName]);
-    }
-  }
-  return url;
-}
