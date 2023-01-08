@@ -97,7 +97,7 @@ export default class Env {
   }
 
   async getShortcuts(namespaces, reload, debug) {
-    await this.fetchShortcuts(namespaces, reload, debug);
+    namespaces = await this.fetchShortcuts(namespaces, reload, debug);
     this.addInfoToShortcuts(namespaces);
   }
 
@@ -312,6 +312,7 @@ export default class Env {
     namespaces = namespaces.filter(
       (namespace) => typeof namespace !== 'undefined',
     );
+    return namespaces;
   }
 
   /**
