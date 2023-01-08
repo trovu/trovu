@@ -1,5 +1,6 @@
 import CallHandler from '../src/js/modules/CallHandler.js';
 import Env from '../src/js/modules/Env.js';
+import 'isomorphic-fetch';
 
 const docroot = 'http://127.0.0.1:8081/process/index.html?#debug=1';
 
