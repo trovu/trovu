@@ -348,21 +348,6 @@ export default class Env {
   }
 
   /**
-   * Export current class without methods.
-   *
-   * @return {object} - Object of env without methods.
-   */
-  get withoutMethods() {
-    const envWithoutFunctions = {};
-    for (const key of Object.keys(this)) {
-      if (typeof this[key] != 'function') {
-        envWithoutFunctions[key] = this[key];
-      }
-    }
-    return envWithoutFunctions;
-  }
-
-  /**
    * Get the params from env.
    *
    * @return {object} - The built params.
