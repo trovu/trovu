@@ -4,8 +4,6 @@ import 'isomorphic-fetch';
 import jsyaml from 'js-yaml';
 import fs from 'fs';
 
-const docroot = 'http://127.0.0.1:8081/process/index.html?#debug=1';
-
 main();
 
 async function main() {
