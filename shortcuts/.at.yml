@@ -1203,7 +1203,7 @@ zal 1:
   examples:
     wien, salzburg, 10: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
-  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time}&date={%Datum|type=date}&start=1
+  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: ÖBB-Auskunft
   tags:
   - bahn
