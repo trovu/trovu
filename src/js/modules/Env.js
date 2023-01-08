@@ -437,7 +437,7 @@ export default class Env {
     return shortcuts;
   }
 
-  async normalizeShortcuts(namespaces) {
+  normalizeShortcuts(namespaces) {
     for (const i in namespaces) {
       namespaces[i].shortcuts = this.normalizeShortcutsOfNamespace(
         namespaces[i].shortcuts,
