@@ -110,6 +110,21 @@ export default class CallHandler {
   }
 
   /**
+   * Adding extra namespace if such one was called in the query.
+   */
+  static async addExtraNamespace(env) {
+    env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
+    [env.extraNamespace] = await env.getShortcuts(
+      [env.extraNamespace],
+      env.reload,
+      env.debug,
+    );
+    if (env.extraNamespace) {
+      env.namespaces.push(env.extraNamespace);
+    }
+  }
+
+  /**
    * Redirect in case a shortcut was not found.
    *
    * @param {string} status       - The status of the call.
@@ -149,20 +164,5 @@ export default class CallHandler {
       );
     }
     return alternative;
-  }
-
-  /**
-   * Adding extra namespace if such one was called in the query.
-   */
-  static async addExtraNamespace(env) {
-    env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
-    [env.extraNamespace] = await env.getShortcuts(
-      [env.extraNamespace],
-      env.reload,
-      env.debug,
-    );
-    if (env.extraNamespace) {
-      env.namespaces.push(env.extraNamespace);
-    }
   }
 }
