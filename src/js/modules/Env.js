@@ -303,7 +303,7 @@ export default class Env {
       }
       // TODO: Put this outside of fetchShortcuts
       // as this is a separate logic.
-      namespaces[i].shortcuts = this.normalizeShortcuts(
+      namespaces[i].shortcuts = this.normalizeShortcutsOfNamespace(
         shortcuts,
         namespaces[i].name,
       );
@@ -403,7 +403,7 @@ export default class Env {
    *
    * @return {array} shortcuts - The normalized shortcuts.
    */
-  normalizeShortcuts(shortcuts, namespaceName) {
+  normalizeShortcutsOfNamespace(shortcuts, namespaceName) {
     const incorrectKeys = [];
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
