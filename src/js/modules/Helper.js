@@ -38,6 +38,9 @@ export default class Helper {
    * @param {boolean} newLine - Whether to prefix it with a line break.
    */
   static log(str, newLine = true) {
+    if (typeof document === 'undefined') {
+      return;
+    }
     if (!document.querySelector('#log')) {
       return;
     }
