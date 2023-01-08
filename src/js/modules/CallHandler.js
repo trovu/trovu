@@ -23,7 +23,7 @@ export default class CallHandler {
     if (response.status === 'found') {
       redirectUrl = response.redirectUrl;
     } else {
-      redirectUrl = this.redirectHome(response);
+      redirectUrl = this.getRedirectUrlToHome(response);
     }
 
     if (env.debug) {
@@ -116,7 +116,7 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static redirectHome(response) {
+  static getRedirectUrlToHome(response) {
     const params = Helper.getUrlParams();
     switch (response.status) {
       case 'deprecated':
