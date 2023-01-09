@@ -8,11 +8,11 @@ main();
 
 async function main() {
   const calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
-  for (const call of calls) {
+  calls.forEach((call) => {
     test(JSON.stringify(call), async () => {
       await testCall(call);
     });
-  }
+  });
 }
 
 async function testCall(call) {
