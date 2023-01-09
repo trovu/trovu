@@ -65,6 +65,7 @@ export default class Home {
         document.querySelector('#query').value = this.env.query || '';
         break;
     }
+
     new Suggestions(this.env.namespaces, this.submitQuery);
     document.querySelector('#query').focus();
   }
@@ -94,8 +95,9 @@ export default class Home {
         break;
       case 'deprecated':
         document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector('#alert').innerHTML =
-          `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
+        document.querySelector(
+          '#alert',
+        ).innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
         break;
     }
   }
