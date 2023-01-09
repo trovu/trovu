@@ -5488,9 +5488,16 @@ ns 1:
   title: Netspeak
   tags:
   - old
-nv 1:
-  url: https://neeva.com/search?q={%Suche}
+nv 0:
+  url: https://neeva.com/
   title: Neeva
+  tags:
+  - web search
+nv 1:
+  url: https://neeva.com/search?q={%query}
+  title: Neeva
+  tags:
+  - web search
 nzb 1:
   url: http://www.nzbclub.com/search.aspx?q={%query}
   title: NZBClub.com
