@@ -59,7 +59,7 @@ napisy 1:
   examples:
     loose change: Search for "loose change"
 pwn 1:
-  url: http://sjp.pwn.pl/lista.php?co={%słowo}
+  url: https://sjp.pwn.pl/szukaj/{%słowo}.html
   title: 'Słownik języka polskiego: PWN'
   tags:
   - dictionary
