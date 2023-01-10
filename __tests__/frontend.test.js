@@ -33,7 +33,7 @@ describe('Trovu homepage', () => {
     await page.click('#settings-button');
     await page.select('#languageSetting', 'pl');
     await page.waitFor(1000); // TODO: Find cleaner solution.
-    await page.click('#settingsSave'), await page.waitFor(500); // TODO: Find cleaner solution.
+    await page.click('#settings-close'), await page.waitFor(500); // TODO: Find cleaner solution.
     expect(await page.evaluate('location.hash')).toMatch(
       new RegExp('language=pl'),
     );
