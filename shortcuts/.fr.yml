@@ -100,14 +100,6 @@ pj 2:
   title: Pages Jaunes
   examples:
     tv, paris: Search Pages Jaunes for TV in Paris
-sncf 2:
-  url: https://www.oui.sncf/train/trajet/{%origine}/{%destination}
-  title: SNCF
-  tags:
-  - travel
-  - train
-  examples:
-    paris, lyon: Train Paris - Lyon
 soc 1:
   url: http://www.societe.com/cgi-bin/search?champs={%name}
   title: Societé Company Register
