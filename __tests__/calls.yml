@@ -1,9 +1,3 @@
-- title: g 1
-  env:
-    defaultKeyword: g
-    query: foobar
-  response:
-    redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
 - title: g 1 with 2 arguments to be reduced to 1
   env:
     query: g bar,baz
@@ -35,6 +29,12 @@
     query: pl.wg berlin
   response:
     redirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
+- title: default keyword
+  env:
+    defaultKeyword: g
+    query: foobar
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
 - title: defaultKeyword from user setting
   env:
     github: georgjaehnig
