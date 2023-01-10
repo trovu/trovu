@@ -335,14 +335,6 @@ de-cs 1:
   - czech
   - german
   - dictionary
-definero 1:
-  url: http://www.definero.de/index.php?term={%query}&act=lexicon&set=lexicon%2Canalyse%2Cabbr%2Cdict-en-de%2Csearch-engine
-  title: Definero
-  tags:
-  - language
-  - german
-  examples:
-    baum: Definiere "baum"
 denl 1:
   url: http://www.mijnwoordenboek.nl/vertalen.php?src=DE&des=NL&woord={%query}
   title: Deutsch-Niederländisch (mijnwoordenboek.nl)
@@ -361,13 +353,6 @@ dnb 1:
   - library
   examples:
     goethe: Search Deutsche Nationalbibliothek for "goethe"
-domain 1:
-  url: http://www.domainabfrage.net/abfrage/isfree.cgi?domain={%query}&ag=ja&decx=ja&de=ja&ch=ja&at=ja&info=ja&cc=ja&be=ja&com=ja&net=ja&org=ja&biz=ja
-  title: Domainabfrage.net
-  tags:
-  - domains
-  examples:
-    hanswurst: Suche nach verfügbaren Domains mit "hanswurst"
 dw 1:
   url: https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item={%suche}
   title: Deutsche Welle, Nachrichten auf Deutsch
@@ -528,15 +513,6 @@ esp 1:
   - spanish
   examples:
     baum: Übersetzung für "baum"
-esx 1:
-  url: http://dix.osola.com/index.de.php?search={%Wort|encoding=iso-8859-15}&language=german
-  title: Spanisch-Deutsch (DIX)
-  tags:
-  - dictionary
-  - german
-  - spanish
-  examples:
-    baum: Übersetzung für "baum"
 fball 1:
   url: https://fireball.com/search?q={%suchbegriff}
   title: Fireball Websuche
@@ -594,14 +570,6 @@ fi 1:
   - finnish
   examples:
     baum: Übersetzung von "baum"
-fis 1:
-  url: http://www.filmstarts.de/suche/?q={%Filmtitel}
-  title: Filmstarts.de
-  tags:
-  - movies
-  - cinema
-  examples:
-    thriller: Suche nach neuen Filmen zu "thriller"
 fmb 2:
   url: http://findmybook.de/input.php?form%5Btitle%5D={%Titel}&form%5Bauthor%5D={%Autor}
   title: Findmybook.de
@@ -676,20 +644,6 @@ frp 1:
   - french
   examples:
     baum: Übersetzung für "baum"
-fs 0:
-  url: http://fernsehsuche.de/
-  title: Fernsehsuche.de
-  tags:
-  - tv
-  - mediathek
-fs 1:
-  url: http://fernsehsuche.de/uebersicht/?q={%Suche}
-  title: Fernsehsuche.de
-  tags:
-  - tv
-  - mediathek
-  examples:
-    tagesschau: Suche nach "tagesschau" in allen Mediatheken
 ftr 1:
   url: http://www.finanztreff.de/kurse/suche/
   post parameters:
@@ -878,13 +832,6 @@ ifun 1:
   - news
   examples:
     macbook: Search ifun.de for "macbook"
-indiepedia 1:
-  url: http://indiepedia.de/index.php?title={%query}
-  title: Indiepedia.de
-  tags:
-  - music
-  examples:
-    Einstürzende Neubauten: Search Indiepedia.de for "Einstürzende Neubauten"
 is 1:
   url: http://deis.dict.cc/?s={%Wort}
   title: Isländisch-Deutsch (dict.cc)
