@@ -3,82 +3,82 @@
     language: de
     country: de
     query: db b,m,8,1.1.20
-  expected:
+  response:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - title: foo
   env:
     language: de
     country: pl
     query: .de.db b,m,8,1.1.2020
-  expected:
+  response:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - title: foo
   env:
     language: de
     country: fr
     query: pl.wg berlin
-  expected:
+  response:
     redirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
 - title: foo
   env:
     defaultKeyword: g
     query: foobar
-  expected:
+  response:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
 - title: foo
   env:
     github: georgjaehnig
     query: foobar
-  expected:
+  response:
     redirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
 - title: foo
   env:
     language: en
     country: us
     query: someQueryThatWillNotSuccess
-  expected:
+  response:
     status: not_found
 - title: foo
   env:
     language: de
     country: de
     query: gd b,m
-  expected:
+  response:
     redirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
 - title: foo
   env:
     query: g barbaz
-  expected:
+  response:
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: foo
   env:
     query: g bar,baz
-  expected:
+  response:
     redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
 - title: foo
   env:
     query: G barbaz
-  expected:
+  response:
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: foo
   env:
     query: reload:g barbaz
-  expected:
+  response:
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: foo
   env:
     query: reload
-  expected:
+  response:
     status: reloaded
 - title: foo
   env:
     query: georgjaehnig.example
-  expected:
+  response:
     redirectUrl: https://www.example.com
 - title: foo
   env:
     country: de
     query: gmhal hbf
-  expected:
+  response:
     status: deprecated
     alternative: gm hal,hbf
