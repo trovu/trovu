@@ -1,11 +1,11 @@
 al 0:
-  url: http://allegro.pl/
+  url: https://allegro.pl/
   title: Allegro
   tags:
   - shopping
   - allegro
 al 1:
-  url: http://allegro.pl/search.php?sg=0&string={%przedmiot}
+  url: https://allegro.pl/listing?string={%przedmiot}
   title: Allegro
   tags:
   - shopping
