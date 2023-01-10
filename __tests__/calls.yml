@@ -3,7 +3,7 @@
     query: g foo
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foo&ie=utf-8
-- title: g 1
+- title: g 1 with language without namespace
   env:
     language: dz
     query: g foo
