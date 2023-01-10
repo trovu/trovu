@@ -243,7 +243,7 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
   console.log(key);
   const response = await fetchWithTimeout(url);
   if (response.status != 200) {
-    console.log(key, response.status, url);
+    console.log(response.status, url);
   }
   return shortcut;
 };
