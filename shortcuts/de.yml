@@ -917,7 +917,7 @@ kicker 0:
   - news
   - sport
 kicker 1:
-  url: http://www.kicker.de/home/suchergebnisse.html?suchbegriff={%Suche}&suchbegriffsent=true
+  url: https://www.google.de/search?q={%query}+site:www.kicker.de
   title: Kicker.de
   tags:
   - news
@@ -973,7 +973,7 @@ lobby 0:
   tags:
   - politics
 lobby 1:
-  url: http://www.lobbycontrol.de/blog/index.php?s={%Begriff}
+  url: https://www.lobbycontrol.de/suche/{%Suche}/
   title: LobbyControl
   tags:
   - politics
@@ -1079,7 +1079,7 @@ ofdb 1:
   examples:
     forrest gump: Search for information about Forrest Gump
 ok 1:
-  url: http://www.otrkey.com/?q={%Suche}
+  url: https://otrkey.com/download/{%Suche}.html
   title: otrkey.com
   tags:
   - old
