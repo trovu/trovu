@@ -1335,35 +1335,11 @@ rup 1:
   - russian
   examples:
     baum: Übersetzung für "baum"
-sat1text 1:
-  url: http://www.sat1.de/service/teletext/index.php?pagnr={%Seite}_01
-  title: Sat.1-Text
-  tags:
-  - videotext
-  - teletext
-  examples:
-    '100 ': Gehe zu Seite 100
 sc 1:
   url: http://www.scienceticker.info/index.php?s={%Suche}&sc
   title: Scienceticker
   tags:
   - old
-sch 1:
-  url: http://www.schwuugle.de/results.html?cx=009729828355623405941%3Aoz2xu-2vkai&cof=FORID%3A10&q={%query}&sa=schwuuglen&security=666#1193
-  title: Schwuugle - die schwule Websuche
-  tags:
-  - gay
-  - blogs
-  examples:
-    berlin: Search Schwuugle - die schwule Websuche for "berlin"
-schb 1:
-  url: http://blogs.schwuugle.de/results.html?cx=009729828355623405941%3Arptpk8zmkvq&cof=FORID%3A11&q={%Suche}&security=666#1165
-  title: Schwuugle Schwule Blogsuche
-  tags:
-  - gay
-  - blogs
-  examples:
-    berlin: Search Schwuugle Schwule Blogsuche for "berlin"
 sfr 1:
   url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}
   title: Stayfriends
@@ -1603,24 +1579,6 @@ uu 0:
   - ubuntu
   - linux
   - documentation
-uu 1:
-  url: http://ubuntuusers.de/search/?query={%Suchwort}&area=all
-  title: 'UbuntuUsers.de: Suche in allen Bereichen'
-  tags:
-  - ubuntu
-  - linux
-  - documentation
-  examples:
-    spiele: Search for "spiele"
-uua 1:
-  url: http://wiki.ubuntuusers.de/{%title}
-  title: 'UbuntuUsers.de: Artikel im Wiki'
-  tags:
-  - ubuntu
-  - linux
-  - documentation
-  examples:
-    spiele: Search for "spiele"
 uuf 0:
   url: http://forum.ubuntuusers.de/
   title: 'UbuntuUsers.de: Startseite des Forum'
@@ -1628,15 +1586,6 @@ uuf 0:
   - ubuntu
   - linux
   - documentation
-uuf 1:
-  url: http://ubuntuusers.de/search/?query={%Suchwort}&area=forum
-  title: 'UbuntuUsers.de: Suche im Forum'
-  tags:
-  - ubuntu
-  - linux
-  - documentation
-  examples:
-    spiele: Search for "spiele"
 uuf~ 0:
   url: http://forum.ubuntuusers.de/egosearch/
   title: 'UbuntuUsers.de: Eigene Beiträge im Forum'
@@ -1651,15 +1600,6 @@ uui 0:
   - ubuntu
   - linux
   - documentation
-uui 1:
-  url: http://ubuntuusers.de/search/?query={%Suchwort}&area=ikhaya
-  title: 'UbuntuUsers.de: Ikhaya-Artikelsuche'
-  tags:
-  - ubuntu
-  - linux
-  - documentation
-  examples:
-    spiele: Search for "spiele"
 uup 0:
   url: http://planet.ubuntuusers.de/
   title: 'UbuntuUsers.de: Startseite des Planeten'
@@ -1667,15 +1607,6 @@ uup 0:
   - ubuntu
   - linux
   - documentation
-uup 1:
-  url: http://ubuntuusers.de/search/?query={%Suchwort}&area=planet
-  title: 'UbuntuUsers.de: Suche im Planeten'
-  tags:
-  - ubuntu
-  - linux
-  - documentation
-  examples:
-    spiele: Search for "spiele"
 uuw 0:
   url: http://wiki.ubuntuusers.de/Startseite
   title: 'UbuntuUsers.de: Startseite des Wiki'
@@ -1683,24 +1614,6 @@ uuw 0:
   - ubuntu
   - linux
   - documentation
-uuw 1:
-  url: http://ubuntuusers.de/search/?query={%Suchwort}&area=wiki
-  title: 'UbuntuUsers.de: Suche im Wiki'
-  tags:
-  - ubuntu
-  - linux
-  - documentation
-  examples:
-    spiele: Search for "spiele"
-vz 0:
-  url: http://www.studivz.net/Start
-  title: 'StudiVZ: Startseite'
-vz 1:
-  url: http://www.studivz.net/Search/SearchGlobal/name/{%Name}/doSearch/1
-  title: 'StudiVZ: Personensuche global'
-vzg 1:
-  url: http://www.studivz.net/Search/ResultGroups/name/{%Gruppenname}
-  title: 'StudiVZ: Gruppensuche'
 wetter 1:
   url: http://de.wetter.com/suche/?search={%Ort}
   title: Wetter.com
@@ -1735,19 +1648,6 @@ ws 1:
   - german
   examples:
     Stuhl: Search for "Stuhl"
-xbmc 1:
-  url: https://www.xbmcdb.de/index.php?reqNav=search&searchonlymovie=1&search={%query}
-  title: XBMC_DB Filmdatenbank
-  examples:
-    berlin: Search XBMC_DB Filmdatenbank for "berlin"
-zdnet 1:
-  url: http://downloads.netmediaeurope.de/?s={%Suche}
-  title: ZDNet Download
-  tags:
-  - downloads
-  - software
-  examples:
-    editor: Search for "editor"
 zeit 0:
   url: http://www.zeit.de/
   title: Zeit Online
@@ -1762,14 +1662,6 @@ zeit 1:
   - zeit
   examples:
     berlin: Suche im Archiv von Zeit Online nach Berlin
-zel 1:
-  url: http://www.zelluloid.de/suche/index.php3?qstring={%Suche}
-  title: Zelluloid Filmsuche
-  tags:
-  - movies
-  - cinema
-  examples:
-    forrest gump: Suche nach "forrest gump"
 zh 1:
   url: http://dict.leo.org/chde?search={%Wort}
   title: Chinesisch-Deutsch (leo.org)

@@ -73,14 +73,6 @@ amazon 1:
 ao 0:
   url: https://www.amazon.de/gp/css/order-history
   title: Amazon Bestellungen
-auto 1:
-  url: http://www.auto.de/suchen?q={%query}
-  title: Auto.de
-  tags:
-  - auto
-  - shopping
-  examples:
-    toyota: Suche nach Toyotas
 aw 0:
   url: https://www.abgeordnetenwatch.de/
   title: Abgeordnetenwatch
@@ -107,13 +99,6 @@ bauhaus 1:
   - diy
   - hardware
   - shopping
-bbb 0:
-  url: http://www.berlinerbaederbetriebe.de/245.html
-  title: Berliner Bäder-Betriebe
-  tags:
-  - berlin
-  - bäder
-  - schwimmhallen
 bbb 2:
   url: http://www.bbbike.de/cgi-bin/bbbike.cgi?start={%Start}&via=&ziel={%Ziel}
   title: Berlin by Bike (BBBike.de)
@@ -132,21 +117,6 @@ bex 1:
   - bahn
   examples:
     berlin: Abfahrtstafel von Berlin Hbf
-bfp 2:
-  url: http://www.bayern-fahrplan.de/auskunft/fahrplanauskunft?zope_command=qi_verify&set_language=de&name_origin={%start}&name_destination={%ziel}
-  title: Bayern-Fahrplan
-  tags:
-  - bahn
-  - travel
-  - bayern
-  examples:
-    münchen,nürnberg: Nächste Verbindung von München nach Nürnberg
-bh 1:
-  url: http://buecherhallen.de/suche?search={%titel}&so=katalog&saveSelection=1&unchecked=
-  title: Hamburger Öffentliche Bücherhallen
-  tags:
-  - hamburg
-  - library
 bhf 1:
   url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query={%bahnhof}
   title: Bahnhofsauskunft, Deutsche Bahn
@@ -175,40 +145,6 @@ bibfu 0:
 bibfu 1:
   url: https://fu-berlin.primo.exlibrisgroup.com/discovery/search?institution=FUB&vid=49KOBV_FUB:FUB&tab=FUB_CDI&mode=Basic&backFromPreferences=true&search_scope=FUB_CDI&displayMode=full&bulkSize=10&highlight=true&dum=true&displayField=all&pcAvailabiltyMode=false&fromLocation=188&query=any,contains,{%Suche}
   title: FU Berlin Bibliothek
-  tags:
-  - books
-  - library
-  - berlin
-  - uni
-  examples:
-    goethe: Suche nach Büchern von Goethe
-bibhff 0:
-  url: http://www.bibl.hff-potsdam.de/
-  title: Hochschule für Film und Fernsehen Bibliothek
-  tags:
-  - bibliothek
-  - hff
-  - potsdam
-bibhff 1:
-  url: http://server8.bibl.hff-potsdam.de/F/?func=find-b&find_code=WRD&request={%Titel}&adjacent=N
-  title: Hochschule für Film und Fernsehen Bibliothek
-  tags:
-  - bibliothek
-  - hff
-  - potsdam
-  examples:
-    spielberg: Suche nach "spielberg"
-bibhu 0:
-  url: http://opac.hu-berlin.de/
-  title: HU Berlin Bibliothek
-  tags:
-  - books
-  - library
-  - berlin
-  - uni
-bibhu 1:
-  url: http://opac.hu-berlin.de/F/?func=find-b&find_code=WRD&request={%Suche}
-  title: HU Berlin Bibliothek
   tags:
   - books
   - library
@@ -259,14 +195,6 @@ bibma 0:
   tags:
   - library
   - mannheim
-bibma 1:
-  url: http://vs30.kobv.de:1701/primo_library/libweb/action/search.do?fn=search&ct=search&vid=MAN_UB&indx=1&dum=true&vl(freeText0)={%query}&vl(23519429UI0)=any&srt=rank&vl(4739590UI1)=all_items&vl(1UI0)=contains&frbg=&tab=man_all&mode=Basic&scp.scps=scope%3A(MAN_ALEPH)%2Cscope%3A(MAN_NL_ALL)%2Cscope%3A(MAN_OAI_ZBW)%2Cscope%3A(MAN_OAI_BIEL)
-  title: Uni Mannheim Bibliothek
-  tags:
-  - library
-  - mannheim
-  examples:
-    goethe: Suche nach Goethe
 bibmr 0:
   url: http://www.uni-marburg.de/bis/kataloge
   title: Uni Marburg Bibliothek
@@ -289,16 +217,6 @@ bibtub 0:
   - library
   - uni
   - berlin
-bibtub 1:
-  url: http://ublibsprod.ub.tu-berlin.de/F/?func=find-b&find_code=WRD&request={%Suche}
-  title: TU Berlin Bibliothek
-  tags:
-  - books
-  - library
-  - uni
-  - berlin
-  examples:
-    goethe: Suche nach Büchern von Goethe
 bibup 0:
   url: http://info.ub.uni-potsdam.de/
   title: Uni Potsdam Bibliothek
