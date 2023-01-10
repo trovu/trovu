@@ -58,7 +58,7 @@ awf 1:
 awort 1:
   url: https://anderes-wort-fuer.de/{%Wort}/
   title: anderes Wort für
-  depracated:
+  deprecated:
     alternative:
       query: awf {%1}
       created: '2023-01-10'
