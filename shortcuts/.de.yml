@@ -391,49 +391,6 @@ bvgan 4:
   - berlin
   examples:
     zoo!, frohnau, 21, 27.10.: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr am 27.10.
-bvgm 0:
-  url: http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox
-  title: BVG-Fahrplanauskunft Startseite, mobil
-  tags:
-  - bahn
-  - travel
-  - berlin
-bvgm 2:
-  url: http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&start=1
-  title: BVG-Fahrplanauskunft, mobil
-  tags:
-  - bahn
-  - travel
-  - berlin
-  examples:
-    zoo!, frohnau: Nächste Verbindung vom Zoo nach Frohnau
-bvgm 3:
-  url: http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit|type=time}&start=1
-  title: BVG-Fahrplanauskunft, mobil
-  tags:
-  - bahn
-  - travel
-  - berlin
-  examples:
-    zoo!, frohnau, 20:00: Verbindung vom Zoo nach Frohnau heute um 20 Uhr
-bvgm 4:
-  url: http://mobil.bvg.de/Fahrinfo/bin/query.bin/dox?S={%Start}&Z={%Ziel}&T={%Abfahrtszeit|type=time}&D={%Datum|type=date}&start=1
-  title: BVG-Fahrplanauskunft, mobil
-  tags:
-  - bahn
-  - travel
-  - berlin
-  examples:
-    zoo!, frohnau, 20:00, 27.10.: Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
-bvgs 1:
-  url: http://www.fahrinfo-berlin.de/Stadtplan/index?query={%Adresse}&search=Suchen&formquery=&station=true
-  title: 'BVG Stadtplan: Suche nach Station'
-  tags:
-  - bahn
-  - travel
-  - berlin
-  examples:
-    hauptbahnhof: Suche nach Station "Hauptbahnhof"
 charts 1:
   url: http://www.top10-charts.com/list.php?suche={%query}
   title: Top10-Charts
