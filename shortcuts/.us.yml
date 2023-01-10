@@ -17,7 +17,7 @@ a 1:
   examples:
     shakespeare: Search for "shakespeare"
 culpa 1:
-  url: http://www.culpa.info/search/results?search={%professor name}&commit=Search
+  url: https://www.culpa.info/#/search?entity=all&query={%name}&alphabetize=True
   title: CULPA Columbia Professor Search
   tags:
   - uni
