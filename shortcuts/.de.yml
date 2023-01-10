@@ -9447,22 +9447,6 @@ p 2:
     5, gg: Zeige Artikel 5 des Grundgesetzes
     12, bgb: Zeige Paragraph 12 des Bürgerlichen Gesetzbuchs
     129a, stgb: Zeige Paragraph 129a des Strafgesetzbuchs
-plz 2:
-  url: http://www.klicktel.de/postleitzahlen/index/search?method=searchSimple&city_id=&_dvform_posted=1&zipCity={%Ort}&street={%Strasse}
-  title: Klicktel Postleitzahlsuche
-  tags:
-  - postleitzahl
-  - post
-  examples:
-    berlin, friedrichstr: Suche nach Postleitzahl für die Friedrichstr. in Berlin
-plz 3:
-  url: http://www.klicktel.de/postleitzahlen/index/search?method=searchSimple&city_id=&_dvform_posted=1&zipCity={%Ort}&street={%Strasse}+&streetNumber={%Nummer}
-  title: Klicktel Postleitzahlsuche
-  tags:
-  - postleitzahl
-  - post
-  examples:
-    berlin, friedrichstr, 100: Suche nach Postleitzahl für die Friedrichstr. 100 in Berlin
 pollin 0:
   url: http://www.pollin.de/
   title: Pollin Electronic
@@ -9477,26 +9461,6 @@ pollin 1:
   - electronic
   examples:
     batterie: Suche bei pollin.de nach "batterie"
-pplf 1:
-  url: https://lqfb.piratenpartei.de/pp/index/search.html?search_for=global&search={%Suche}
-  title: Piratenpartei LiquidFeedback
-  tags:
-  - piraten
-  - piratenpartei
-  - partei
-  - liquid feedback
-  examples:
-    urheberrecht: Suche nach Initiativen mit "urheberrecht"
-pplfg 1:
-  url: http://www.google.com/search?hl={$language}&sitesearch=lqfb.piratenpartei.de&domains=lqfb.piratenpartei.de&q={%Suche}
-  title: Piratenpartei LiquidFeedback via Google
-  tags:
-  - piraten
-  - piratenpartei
-  - partei
-  - liquid feedback
-  examples:
-    urheberrecht: Suche nach Initiativen mit "urheberrecht"
 ppw 1:
   url: http://wiki.piratenpartei.de/Spezial:Suche?search={%Suche}&go=Seite
   title: Piratenpartei Wiki
@@ -9520,35 +9484,12 @@ preis 1:
   title: Preissuchmaschine
   tags:
   - old
-ptrend 0:
-  url: http://www.preistrend.de
-  title: Preistrend.de
-  tags:
-  - shopping
-  - preistrend
-  - preisvergleich
-ptrend 1:
-  url: http://www.preistrend.de/suchen.php?q={%Artikelname}
-  title: Preistrend.de
-  tags:
-  - shopping
-  - preistrend
-  - preisvergleich
-  examples:
-    iphone: Vergleiche iPhone-Preise
 radar 0:
   url: http://www.t-online.de/advtoi/wetter/info/niederschlagsradar.html
   title: Wetter-Radar von T-Online
   tags:
   - weather
   - radar
-radarb 0:
-  url: http://wind.met.fu-berlin.de/loops/radar_200/R.NEW.gif
-  title: Regenradar Berlin
-  tags:
-  - weather
-  - rain
-  - berlin
 reichelt 0:
   url: http://www.reichelt.de/
   title: Reichelt Elektronik
@@ -9615,14 +9556,12 @@ sub 1:
   - göttingen
   examples:
     houellebecq: Suche nach "houellebecq"
-super 1:
-  url: http://www.supertopic.de/forum/search/results/?q={%Suche}
-  title: Supertopic.de
-swp 1:
-  url: http://www.swp-berlin.org/suche/suche.php?query={%Suche}
+swp 0:
+  url: https://www.swp-berlin.org/
   title: Stiftung Wissenschaft und Politik
-  tags:
-  - old
+swp 1:
+  url: https://www.swp-berlin.org/suche?search%5Bq%5D={%Suche}
+  title: Stiftung Wissenschaft und Politik
 tel 0:
   url: http://www.telefonbuch.de/
   title: Telefonbuch
@@ -9646,22 +9585,6 @@ tel 2:
   examples:
     meier, dresden: Telefonnummer von "Meier" in Dresden
     meier, dd: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
-telm 1:
-  url: http://mobil.dastelefonbuch.de/r/{%Nummer}
-  title: Telefonbuch (mobil), Rückwärts-Suche
-  tags:
-  - phone
-  - telefonbuch
-  examples:
-    '8003301000': Teilnehmer mit der Telefonnummer 08003301000
-telm 2:
-  url: http://www.dastelefonbuch.de/Suche/{%Name}/{%Ort}
-  title: Telefonbuch (mobil)
-  tags:
-  - phone
-  - telefonbuch
-  examples:
-    meier, dresden: Telefonnummer von "Meier" in Dresden
 tho 1:
   url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw={%Produkt}
   title: Thomann.de
@@ -9670,11 +9593,6 @@ tho 1:
   - shopping
   examples:
     gitarre: Suche nach Gitarre
-ticketonline 1:
-  url: http://www.ticketonline.de/trans/prlist?SB={%Suche}
-  title: Ticketonline
-  tags:
-  - old
 tv 0:
   url: http://www.tvinfo.de/jetzt
   title: TV-Programm jetzt
@@ -9827,61 +9745,6 @@ voebb 0:
   - library
   - bibliothek
   - berlin
-vrn 2:
-  url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep
-  title: Verkehrsverbund Rhein-Neckar
-  tags:
-  - bahn
-  - travel
-  - heidelberg
-  - mannheim
-  - ludwigshafen
-  examples:
-    heidelberg, mannheim: Nächste Verbindung von Heidelberg nach Mannheim
-vrn 3:
-  url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute=0
-  title: Verkehrsverbund Rhein-Neckar
-  tags:
-  - bahn
-  - travel
-  - heidelberg
-  - mannheim
-  - ludwigshafen
-  examples:
-    heidelberg, mannheim, 10: Nächste Verbindung von Heidelberg nach Mannheim um 10 Uhr
-vrn 4:
-  url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}
-  title: Verkehrsverbund Rhein-Neckar
-  tags:
-  - bahn
-  - travel
-  - heidelberg
-  - mannheim
-  - ludwigshafen
-  examples:
-    heidelberg, mannheim, 10, 30: Nächste Verbindung von Heidelberg nach Mannheim um 10.30 Uhr
-vrn 5:
-  url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}
-  title: Verkehrsverbund Rhein-Neckar
-  tags:
-  - bahn
-  - travel
-  - heidelberg
-  - mannheim
-  - ludwigshafen
-  examples:
-    heidelberg, mannheim, 10, 30, 28: Nächste Verbindung von Heidelberg nach Mannheim um 10.30 Uhr am 28. des aktuellen Monats
-vrn 6:
-  url: http://fahrplanauskunft.vrn.de/vrn/XSLT_TRIP_REQUEST2?language=de&sessionID=0&execInst=normal&type_origin=any&type_destination=any&delMinDistTrips=1&itOptionsActive=1&ptOptionsActive=1&lineRestriction=402&locationServerActive=1&defaultOdvType=any&coordListOutputFormat=STRING&verifyAnyLocViaLocServer=1&tryToFindLocalityStops=1&convertStopsPTKernel2LocationServer=1&anySigWhenPerfectNoOtherMatches=1&anyMaxSizeHitList=550&anyHitListReductionLimit=40&nameValue_origin=&placeValue_origin=&nameInfo_origin=invalid&placeInfo_origin=invalid&nameState_origin=empty&placeState_origin=empty&execStopList_origin=0&nameValue_destination=&placeValue_destination=&nameInfo_destination=invalid&placeInfo_destination=invalid&nameState_destination=empty&placeState_destination=empty&execStopList_destination=0&name_origin={%Start}&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}&itdDateMonth={%Monat}
-  title: Verkehrsverbund Rhein-Neckar
-  tags:
-  - bahn
-  - travel
-  - heidelberg
-  - mannheim
-  - ludwigshafen
-  examples:
-    heidelberg, mannheim, 10, 30, 28, 11: Nächste Verbindung von Heidelberg nach Mannheim um 10.30 Uhr am 28.11.
 vrr 0:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?language=de&itdLPxx_transpCompany=vrr
   title: VRR-Auskunft
