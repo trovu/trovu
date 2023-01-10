@@ -12,22 +12,6 @@ bibbs 1:
   - basel
   examples:
     houellebecq: Suche nach Werken von und über "houellebecq"
-buch 0:
-  url: http://www.buch.ch
-  title: buch.ch
-  tags:
-  - shopping
-  - buch
-  examples:
-    Kochen: Search buch.ch for "Kochen"
-buch 1:
-  url: http://www.buch.ch/shop/home/suche/?sq={%query}&sswg=ANY&
-  title: buch.ch
-  tags:
-  - shopping
-  - buch
-  examples:
-    Kochen: Search buch.ch for "Kochen"
 campz 0:
   url: http://www.campz.ch
   title: CAMPZ Schweiz
@@ -389,24 +373,6 @@ sbbt 4:
 transa 0:
   url: http://www.transa.ch
   title: Transa
-transa 1:
-  url: https://www.transa.ch/search?q={%query}:relevance
-  title: Transa Online-Shop
-  description: Suche im Transa-Onlineshop, Sortierung nach Relevanz
-  tags:
-  - shopping
-  - outdoor
-  examples:
-    Zelt: Search Transa Online-Shop for "Zelt"
-transa-preis 1:
-  url: https://www.transa.ch/search?q={%query}:price-asc
-  title: Transa Online-Shop
-  description: Suche im Transa-Onlineshop, Sortierung nach Preis aufsteigend
-  tags:
-  - shopping
-  - outdoor
-  examples:
-    Zelt: Search Transa Online-Shop for "Zelt"
 we 0:
   url: http://ch.wetter.com/?forcesite=1
   title: Wetter.com
