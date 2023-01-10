@@ -374,7 +374,7 @@ bvg 4:
   examples:
     zoo!, frohnau, 20:00, 27.10.: Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
 bvgan 3:
-  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&start=1
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Ankunftszeit|type=time}&start=1
   title: BVG-Auskunft
   tags:
   - bahn
@@ -383,7 +383,7 @@ bvgan 3:
   examples:
     zoo!, frohnau, 21: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr
 bvgan 4:
-  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Ankunftszeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: BVG-Auskunft
   tags:
   - bahn
