@@ -300,7 +300,7 @@ mc 1:
   examples:
     '8000': Zeige Wetterwarnungen für Postleitzahl 8000
 migros 1:
-  url: https://produkte.migros.ch/sortiment?q={%Produkt}
+  url: https://www.migros.ch/de/search?query={%Produkt}
   title: Migros Sortiment
   examples:
     toblerone: Search Migros Sortiment for "toblerone"
