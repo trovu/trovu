@@ -46,9 +46,20 @@ at 1:
   - austrian
   examples:
     paradeisa: '"paradeisa" auf Hochdeutsch'
+awf 1:
+  url: https://anderes-wort-fuer.de/{%Wort}/
+  title: Anderes Wort für – Synonymlexikon
+  tags:
+  - german
+  - synonyms
+  - language
+  examples:
+    wirtschaft: Suche nach Synonymen für "wirtschaft"
 awort 1:
-  url: https://anderes-wort-fuer.de/{%wort}/
+  url: https://anderes-wort-fuer.de/{%Wort}/
   title: anderes Wort für
+  depracated:
+    key: awf {%1}
 base 1:
   url: http://www.base-search.net/Search/Results?lookfor={%Suche}
   title: Bielefeld Academic Search Engine
