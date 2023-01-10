@@ -7,7 +7,7 @@ camb-en 1:
   examples:
     tree: Search Cambridge English Dictionary for "tree"
 cia 0:
-  url: https://www.cia.gov/library/publications/the-world-factbook/index.html
+  url: https://www.cia.gov/the-world-factbook/
   title: CIA Factbook
   tags:
   - cia
@@ -22,7 +22,7 @@ cliff 0:
   tags:
   - literature
 cliff 1:
-  url: http://www.cliffsnotes.com/searchresult?q={%query}
+  url: https://www.cliffsnotes.com/search?q={%query}
   title: Cliffsnotes.com
   tags:
   - literature
@@ -84,13 +84,13 @@ dict 1:
   examples:
     tree: Search for "tree"
 edram 0:
-  url: http://encyclopediadramatica.se/
+  url: https://encyclopediadramatica.online/
   title: Encyclopedia Dramatica
   tags:
   - encyclopedia
   - humor
 edram 1:
-  url: http://encyclopediadramatica.se/Special:Search?go=Article&search={%article}
+  url: https://encyclopediadramatica.online/Special:Search?go=Article&search={%article}
   title: Encyclopedia Dramatica
   tags:
   - encyclopedia
