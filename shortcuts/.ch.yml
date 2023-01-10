@@ -1,5 +1,11 @@
+bibbs 0:
+  url: https://www.stadtbibliothekbasel.ch/
+  title: Stadtbibliothek Basel
+  tags:
+  - bibliothek
+  - basel
 bibbs 1:
-  url: http://www.stadtbibliothekbasel.ch:8080/InfoGuideClient.sisis/search.do?methodToCall=submit&methodToCallParameter=submitSearch&searchCategories[0]=-1&searchString[0]={%Suche}
+  url: https://katalog.stadtbibliothekbasel.ch/GGG/WebOPAC/search/shortview?searchtype=Simple&searchField=W&searchTerm={%Suche}
   title: Stadtbibliothek Basel
   tags:
   - bibliothek
