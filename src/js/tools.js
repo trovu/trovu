@@ -236,7 +236,7 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
     return shortcut;
   }
   let url = shortcut.url;
-  const args = ['foo', 'bar'];
+  const args = ['foo', 'bar', 'baz', 'a', 'b', 'c'];
   const env = { language: 'de', country: 'de' };
   url = await UrlProcessor.replaceArguments(url, args, env);
   url = await UrlProcessor.replaceVariables(url, env);
