@@ -221,4 +221,18 @@ modifiers['removeDeadDomains'] = async function (key, shortcut) {
   return shortcut;
 };
 
+modifiers['checkShortcutResponse'] = async function (key, shortcut) {
+  // Only letter a for now.
+  if (key[0] !== 'a') {
+    return shortcut;
+  }
+  let url = shortcut.url;
+  const args = ['foo', 'bar'];
+  const env = { language: 'de', country: 'de' };
+  url = await UrlProcessor.replaceArguments(url, args, env);
+  url = await UrlProcessor.replaceVariables(url, env);
+  console.log(key, '\t', url);
+  return shortcut;
+};
+
 main();
