@@ -645,7 +645,7 @@ doe 0:
   - phone
   - telefonbuch
 doe 1:
-  url: http://www.dasoertliche.de/?form_name=search_inv&ph={%Nummer}
+  url: https://www.dasoertliche.de/?zvo_ok=&plz=&quarter=&district=&ciid=&ph={%Nummer}&kgs=&buab=&zbuab=&form_name=search_invkk
   title: DasOertliche.de, Rückwärtssuche
   tags:
   - phone
@@ -9144,7 +9144,7 @@ gsh 1:
   examples:
     computer: Search for "computer"
 gtiger 1:
-  url: http://www.guenstiger.de/gt/main.asp?suche={%query}
+  url: https://www.guenstiger.de/Katalog/Suche/{%Suche}.html
   title: Guenstiger.de
   tags:
   - shopping
@@ -9165,7 +9165,7 @@ gy 0:
   - phone
   - telefonbuch
 gy 2:
-  url: http://www.goyellow.de/IDA2?IDAERROR=&QRY=all&RNG=lequ&CTRY=ger&LANG=de&PAGE=osaNatWideSearchResult_subscriberList&LIP=simpleSearch&ACTION=search&STP=S&REQ=20&ZCD=&MDN={%Name}&LOC={%Ort}
+  url: https://www.goyellow.de/suche/{%Name}/{%Ort}
   title: GoYellow-Telefonbuch
   tags:
   - phone
@@ -9201,7 +9201,7 @@ hs 1:
   examples:
     radio: Suche nach "radio"
 hvv 2:
-  url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn={%Start}&zn={%Ziel}&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
+  url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn={%Start}&zn={%Ziel}&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
   tags:
   - bahn
