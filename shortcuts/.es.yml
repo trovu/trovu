@@ -109,31 +109,32 @@ ikea 1:
   - shopping
   examples:
     colchón: Buscar colchón
+ma 0:
+  url: https://www.milanuncios.com/
+  title: Milanuncios
+  description: venta de productos de segunda mano
 ma 1:
-  url: https://www.milanuncios.com/anuncios/{%query}.htm?fromSearch=1
+  url: https://www.milanuncios.com/anuncios/?s={%búsqueda}&orden=relevance&fromSearch=1&fromSuggester=1&suggestionUsed=0&hitOrigin=home_search
   title: Milanuncios
   description: venta de productos de segunda mano
   tags:
   - shopping
   - segunda mano
+  - anuncios
   examples:
     palmera: Busqueda de "palmera"
 mil 0:
-  url: http://www.milanuncios.com/
   title: Mil Anuncios
-  tags:
-  - shopping
-  - ads
-  - anuncios
+  deprecated:
+    alternative:
+      query: ma
+    created: '2023-01-11'
 mil 1:
-  url: http://www.milanuncios.com/anuncios/{%query}.htm
   title: Mil Anuncios
-  tags:
-  - shopping
-  - ads
-  - anuncios
-  examples:
-    bicicleteas en madrid: Buscar bicicleteas en madrid
+  deprecated:
+    alternative:
+      query: ma
+    created: '2023-01-11'
 titsa 2:
   url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
