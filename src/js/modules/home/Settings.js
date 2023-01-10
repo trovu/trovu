@@ -17,7 +17,7 @@ export default class Settings {
     window.addEventListener(
       'hashchange',
       function () {
-        location.reload();
+        window.location.reload();
       },
       false,
     );
