@@ -19,7 +19,7 @@ async function testCall(call) {
   const env = new Env();
   env.language = 'en';
   env.country = 'us';
-  await env.populate(call);
+  await env.populate(call.env);
   const response = await CallHandler.getRedirectResponse(env);
   if (call.expected.redirectUrl) {
     expect(response.redirectUrl).toMatch(call.expected.redirectUrl);

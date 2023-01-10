@@ -1,56 +1,84 @@
-- language: de
-  country: de
-  query: db b,m,8,1.1.20
+- title: foo
+  env:
+    language: de
+    country: de
+    query: db b,m,8,1.1.20
   expected:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
-- language: de
-  country: pl
-  query: .de.db b,m,8,1.1.2020
+- title: foo
+  env:
+    language: de
+    country: pl
+    query: .de.db b,m,8,1.1.2020
   expected:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
-- language: de
-  country: fr
-  query: pl.wg berlin
+- title: foo
+  env:
+    language: de
+    country: fr
+    query: pl.wg berlin
   expected:
     redirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
-- defaultKeyword: g
-  query: foobar
+- title: foo
+  env:
+    defaultKeyword: g
+    query: foobar
   expected:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
-- github: georgjaehnig
-  query: foobar
+- title: foo
+  env:
+    github: georgjaehnig
+    query: foobar
   expected:
     redirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
-- language: en
-  country: us
-  query: someQueryThatWillNotSuccess
+- title: foo
+  env:
+    language: en
+    country: us
+    query: someQueryThatWillNotSuccess
   expected:
     status: not_found
-- language: de
-  country: de
-  query: gd b,m
+- title: foo
+  env:
+    language: de
+    country: de
+    query: gd b,m
   expected:
     redirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
-- query: g barbaz
+- title: foo
+  env:
+    query: g barbaz
   expected:
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
-- query: g bar,baz
+- title: foo
+  env:
+    query: g bar,baz
   expected:
     redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
-- query: G barbaz
+- title: foo
+  env:
+    query: G barbaz
   expected:
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
-- query: reload:g barbaz
+- title: foo
+  env:
+    query: reload:g barbaz
   expected:
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
-- query: reload
+- title: foo
+  env:
+    query: reload
   expected:
     status: reloaded
-- query: georgjaehnig.example
+- title: foo
+  env:
+    query: georgjaehnig.example
   expected:
     redirectUrl: https://www.example.com
-- country: de
-  query: gmhal hbf
+- title: foo
+  env:
+    country: de
+    query: gmhal hbf
   expected:
     status: deprecated
     alternative: gm hal,hbf
