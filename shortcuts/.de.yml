@@ -190,7 +190,7 @@ bibkobv 1:
   examples:
     goethe: Search Kooperativer Bibliotheksverbund Berlin-Brandenburg for "goethe"
 bibma 0:
-  url: http://www.bib.uni-mannheim.de/
+  url: https://www.bib.uni-mannheim.de/
   title: Uni Mannheim Bibliothek
   tags:
   - library
@@ -218,7 +218,7 @@ bibtub 0:
   - uni
   - berlin
 bibup 0:
-  url: http://info.ub.uni-potsdam.de/
+  url: https://www.ub.uni-potsdam.de/de/
   title: Uni Potsdam Bibliothek
   tags:
   - uni
@@ -226,7 +226,7 @@ bibup 0:
   - bibliothek
   - library
 bibup 1:
-  url: http://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}
+  url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}
   title: Uni Potsdam Bibliothek
   tags:
   - uni
@@ -236,7 +236,7 @@ bibup 1:
   examples:
     goethe: Suche nach "goethe"
 bibup 2:
-  url: http://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHM&=Suchen&MATCFILTER=Y&MATCSET=Y&NOSCAN=Y&PARSE_MNEMONICS=N&PARSE_OPWORDS=N&PARSE_OLDSETS=N&ACT0=SRCH&IKT0=1016&TRM0=&ACT1=*&IKT1=5041&TRM1=&ACT2=*&IKT2=1004&TRM2={%Autor}&ADI_JVU={%Jahr}
+  url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHM&=Suchen&MATCFILTER=Y&MATCSET=Y&NOSCAN=Y&PARSE_MNEMONICS=N&PARSE_OPWORDS=N&PARSE_OLDSETS=N&ACT0=SRCH&IKT0=1016&TRM0=&ACT1=*&IKT1=5041&TRM1=&ACT2=*&IKT2=1004&TRM2={%Autor}&ADI_JVU={%Jahr}
   title: Uni Potsdam Bibliothek
   tags:
   - uni
