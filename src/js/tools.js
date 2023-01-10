@@ -4,6 +4,8 @@ const fs = require('fs');
 const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain');
 
+const UrlProcessor = require('./modules/UrlProcessor');
+
 const actions = {};
 const modifiers = {};
 
