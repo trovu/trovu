@@ -286,14 +286,6 @@ blz 1:
   title: Bankleitzahlen (abfragen.de)
   examples:
     berlin: Bankleitzahlen der Banken in Berlin
-bmo 1:
-  url: http://m.bike-mailorder.de/search?s={%Suche}
-  title: Bmo
-  tags:
-  - bike
-  - shopping
-  examples:
-    speichen: Suche nach Speichen
 bol 0:
   url: http://www.zanox-affiliate.de/ppc/?25553634C6244020T
   title: Bol.de Startseite
@@ -335,15 +327,6 @@ bsvg 2:
   - braunschweig
   examples:
     Ludwigstraße,Siekgraben: Verbindung von Ludwigstraße nach Siekgraben
-bt 1:
-  url: http://www.billiger-telefonieren.de/vorwahlrechner/?num={%Vorwahl}
-  title: Billiger Telefonieren
-  tags:
-  - phone
-  - telefon
-  - tarife
-  examples:
-    '0034': Günstige Anrufe zur Vorwahl 0034
 bvb 0:
   url: https://www.bib-bvb.de/
   title: BibliotheksVerbund Bayern
@@ -390,14 +373,6 @@ bvg 4:
   - berlin
   examples:
     zoo!, frohnau, 20:00, 27.10.: Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
-bvga 1:
-  url: http://www.fahrinfo-berlin.de/Stadtplan/index?query={%Adresse}&search=Suchen&formquery=&address=true
-  title: 'BVG-Stadtplan: Suche nach Adresse'
-  tags:
-  - map
-  - berlin
-  examples:
-    friedrichsstr. 70: Suche Friedrichsstr. 70 auf dem BVG-Stadtplan
 bvgan 3:
   url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=arrive&from={%Start}&to={%Ziel}&time={%Ankunftszeit||type=time}
   title: BVG-Auskunft
