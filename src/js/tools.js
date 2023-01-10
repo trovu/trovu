@@ -228,6 +228,9 @@ modifiers['removeDeadDomains'] = async function (key, shortcut) {
 };
 
 modifiers['checkShortcutResponse'] = async function (key, shortcut) {
+  if (shortcut.deprecated) {
+    return shortcut;
+  }
   // Only letter a for now.
   if (key[0] !== 'a') {
     return shortcut;
