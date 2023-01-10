@@ -9308,9 +9308,6 @@ kfz 1:
   examples:
     hro: Suche Stadt/Kreis des Kennzeichens "hro"
     rostock: Suche KFZ-Kennzeichen von Rostock
-kib 0:
-  url: http://konzerte.in-berlin.net/
-  title: Konzerte in Berlin
 kino 1:
   url: http://www.kino.de/kinoprogramm/{%Ort/Stadtteil/Kino/PLZ}/
   title: Kinoprogramm
@@ -9371,47 +9368,6 @@ lpg 1:
   title: LPG- und CNG-Tankstellen
   tags:
   - old
-mdv 3:
-  url: http://www.nasa.de/delfi52/query.exe/dn?L=mdv&S={%Start}&Z={%Ziel}&T={%Zeit}&start=1
-  title: MDV-Auskunft
-  tags:
-  - old
-mfg 0:
-  url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/suche.html
-  title: Mitfahrgelegenheit.de
-  tags:
-  - travel
-  - mitfahrgelegenheit
-mfg 2:
-  url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/{%Start}/{%Ziel}/b.html
-  title: Mitfahrgelegenheit.de
-  tags:
-  - travel
-  - mitfahrgelegenheit
-  examples:
-    berlin, hamburg: Suche Mitfahrgelegenheit von Berlin nach Hamburg
-mfg 3:
-  url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/{%Start}/{%Ziel}/b.html/&date=date&day={%Tag}
-  title: Mitfahrgelegenheit.de
-  tags:
-  - travel
-  - mitfahrgelegenheit
-  examples:
-    berlin, hamburg, 30: Suche Mitfahrgelegenheit von Berlin nach Hamburg am 30 des aktuellen Monats
-mfg 4:
-  url: http://www.mitfahrgelegenheit.de/mitfahrzentrale/{%Start}/{%Ziel}/b.html/&date=date&day={%Tag}&month={%Monat}
-  title: Mitfahrgelegenheit.de
-  tags:
-  - travel
-  - mitfahrgelegenheit
-  examples:
-    berlin, hamburg, 31,12: Suche Mitfahrgelegenheit von Berlin nach Hamburg am 31.12.
-mfga 0:
-  url: http://www.mitfahrgelegenheit.de/searches/search_abroad
-  title: Mitfahrgelegenheit.de, Ausland
-  tags:
-  - travel
-  - mitfahrgelegenheit
 mfs 1:
   url: http://www.medizinfuchs.de/produkt/search/{%Suche}
   title: Medizinfuch Apothekenpreisvergleich
