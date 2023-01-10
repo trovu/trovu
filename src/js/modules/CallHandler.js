@@ -31,10 +31,8 @@ export default class CallHandler {
       return;
     }
 
-    this.rewriteBrowserHistory();
-
     if (!env.error) {
-      window.location.href = redirectUrl;
+      window.location.replace(redirectUrl);
     }
   }
 
@@ -153,16 +151,5 @@ export default class CallHandler {
     const paramStr = Helper.getUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
-  }
-
-  /**
-   * Rewrite browser history to make Back button work properly.
-   */
-  static rewriteBrowserHistory() {
-    const currentUrlWithoutProcess = window.location.href.replace(
-      'process/',
-      '',
-    );
-    history.replaceState({}, 'trovu.net', currentUrlWithoutProcess);
   }
 }
