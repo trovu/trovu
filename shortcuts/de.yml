@@ -17,24 +17,6 @@ anagramm 1:
   - language
   examples:
     rentner: Anagramm-Suchen nach "rentner"
-angliz 0:
-  url: https://anglizismenindex.vds-ev.de/suche2.php
-  title: Anglizismen-Index
-  tags:
-  - deutsch
-  - sprache
-  - language
-  - anglizismen
-angliz 1:
-  url: https://anglizismenindex.vds-ev.de/suche2.php?la=on&str={%Wort}
-  title: Anglizismen-Index
-  tags:
-  - deutsch
-  - sprache
-  - language
-  - anglizismen
-  examples:
-    Airbag: Suche nach Alternativen zu "Airbag"
 ar 1:
   url: http://www.arabdict.com/deutsch-arabisch/{%Wort}
   title: Arabisch-Deutsch
@@ -55,17 +37,6 @@ ardtext 1:
   - ard
   examples:
     '100': Gehe zu Seite 100
-arv 1:
-  url: http://www.lessan.de/de/{%Wort}
-  title: Arabisch-Deutsch, mit Vokalen
-  tags:
-  - german
-  - arabic
-  - language
-  - dictionary
-  examples:
-    baum: Übersetzung von "baum" auf Arabisch
-    شَجَرَة: Übersetzung von "شَجَرَة" auf Arabisch
 at 1:
   url: https://www.ostarrichi.org/suche?search={%Wort}
   title: Österreichisch-Hochdeutsch (Ostarrichi.org)
