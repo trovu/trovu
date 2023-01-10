@@ -25,6 +25,21 @@
     query: foobar
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
+- title: g 1
+  env:
+    query: g barbaz
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
+- title: g 1 with 2 arguments to be reduced to 1
+  env:
+    query: g bar,baz
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
+- title: uppercase keyword
+  env:
+    query: G barbaz
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: defaultKeyword from user setting
   env:
     github: georgjaehnig
@@ -45,21 +60,6 @@
     query: gd b,m
   response:
     redirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
-- title: g 1
-  env:
-    query: g barbaz
-  response:
-    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
-- title: g 1 with 2 arguments to be reduced to 1
-  env:
-    query: g bar,baz
-  response:
-    redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
-- title: uppercase keyword
-  env:
-    query: G barbaz
-  response:
-    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: reload with query
   env:
     query: reload:g barbaz
