@@ -133,7 +133,7 @@ mil 1:
   title: Mil Anuncios
   deprecated:
     alternative:
-      query: ma
+      query: ma {%1}
     created: '2023-01-11'
 titsa 2:
   url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r
