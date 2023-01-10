@@ -16,7 +16,7 @@ gyl 1:
   examples:
     kaffe: Search for "kaffe"
 ods 1:
-  url: http://ordnet.dk/ods/opslag?opslag={%ord}&submit=S%F8g
+  url: https://ordnet.dk/ods/ordbog?query={%ord}
   title: Ordbog over det danske sprog
   tags:
   - language
