@@ -65,7 +65,7 @@
     query: reload
   response:
     status: reloaded
-- title: forced user namespace
+- title: extra user namespace
   env:
     query: georgjaehnig.example
   response:
