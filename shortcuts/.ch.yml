@@ -36,7 +36,7 @@ campz 0:
   - outdoor
   - adventure
 campz 1:
-  url: http://www.campz.ch/index.php?id=3692&strSearchQuery={%query}
+  url: https://www.campz.ch/suche/?q={%Produkt}
   title: CAMPZ Schweiz
   tags:
   - shop
@@ -52,7 +52,7 @@ conrad 0:
   - electronics
   - conrad
 conrad 1:
-  url: http://www.conrad.ch/ce/de/Search.html;?search={%Artikel}&searchType=mainSearchBar
+  url: https://www.conrad.ch/de/search.html?search={%Artikel}
   title: Conrad Elektronik Schweiz
   tags:
   - shopping
@@ -304,7 +304,12 @@ local 2:
   examples:
     Hans Muster, Bern: Suche auf local.ch nach "Hans Muster" in "Bern"
 mc 0:
-  url: http//www.meteocentrale.ch/de/europa/schweiz/wetter-zuerich/details/N-3518042/
+  url: https://www.meteocentrale.ch/
+  title: Meteocentrale.ch
+  tags:
+  - weather
+mc 1:
+  url: https://www.meteocentrale.ch/index.php?L=0&id=1199&searchString={%Stadt/PLZ/Land}
   title: Meteocentrale.ch
   tags:
   - weather
