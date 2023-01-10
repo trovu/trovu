@@ -232,7 +232,7 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
     return shortcut;
   }
   // Only letter a for now.
-  if (key[0] !== 'a') {
+  if (!key[0].match(/[abc]/)) {
     return shortcut;
   }
   let url = shortcut.url;
