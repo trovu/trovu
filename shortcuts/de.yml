@@ -901,18 +901,6 @@ ja 1:
   examples:
     baum: Übersetzung für "baum"
     木根: Übersetzung für "木根"
-jo 0:
-  url: http://www.jokers.de/
-  title: Jokers Startseite
-  tags:
-  - books
-jo 1:
-  url: https://www.jokers.de/suche/{%Suche}
-  title: Jokers
-  tags:
-  - books
-  examples:
-    goethe: Search Jokers for "goethe"
 kam 1:
   url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search={%Suche}
   title: Kamelopedia
@@ -1012,15 +1000,6 @@ mp 1:
   - moviepilot
   - movies
   - film
-mz 0:
-  url: http://www.meinvz.net/Start
-  title: 'MeinVZ: Startseite'
-mz 1:
-  url: http://www.meinvz.net/Search/SearchGeneral/name/{%Name}/doSearch/1
-  title: 'MeinVZ: Personensuche global'
-mzg 1:
-  url: http://www.meinvz.net/Search/ResultGroups/name/{%Gruppenname}
-  title: 'MeinVZ: Gruppensuche'
 nds 0:
   url: http://www.nachdenkseiten.de
   title: Nachdenkseiten
@@ -1099,13 +1078,6 @@ ofdb 1:
   - movies
   examples:
     forrest gump: Search for information about Forrest Gump
-offlo 1:
-  url: http://www.office-loesung.de/googlesuche.php?cx=partner-pub-3835174959915126%3Adlozs3erhqu&cof=FORID%3A10&ie=ISO-8859-1&q={%Suche}&sa=Suche&siteurl=www.office-loesung.de%2F&ref=&ss=11381j11919943j44
-  title: OfficeLoesung.de
-  tags:
-  - microsoft office
-  examples:
-    test: Search OfficeLoesung for "test"
 ok 1:
   url: http://www.otrkey.com/?q={%Suche}
   title: otrkey.com
@@ -1145,11 +1117,6 @@ ot? 0:
   tags:
   - language
   - thesaurus
-otr 1:
-  url: http://epg.onlinetvrecorder.com/broadcasts/search?searchterm={%Suche}&future=1
-  title: OnlineTVRecorder EPG search
-  tags:
-  - old
 pl 1:
   url: https://de.langenscheidt.com/deutsch-polnisch/search?term={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Langenscheidt)
@@ -1273,11 +1240,6 @@ reim 1:
   - reime
   examples:
     auen: Suche Reime auf "auen"
-rezept 1:
-  url: http://www.kochmeister.com/search.php?w={%Zutat}
-  title: Kochmeister
-  tags:
-  - old
 rezeptefuchs 0:
   url: http://www.rezeptefuchs.de/
   title: Rezeptefuchs Startseite
@@ -1310,11 +1272,6 @@ rivva 1:
   - blogs
   examples:
     berlin: Search Rivva blog aggregator for "berlin"
-rivvar 0:
-  url: http://feed43.com/rivva-links.xml
-  title: Rivva Blog Aggregator RSS-Feed
-  tags:
-  - blogs
 rm 1:
   url: http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase={%pled}
   title: Romanisch-Deutsch via Pledari Grond
@@ -1378,17 +1335,6 @@ rup 1:
   - russian
   examples:
     baum: Übersetzung für "baum"
-ruy 1:
-  url: http://lingvo.yandex.ru/de?lang=de&text={%Wort}
-  title: Russisch-Deutsch (yandex.ru)
-  tags:
-  - language
-  - dictionary
-  - german
-  - russian
-  examples:
-    baum: Übersetzung für "baum"
-    дерево: Übersetzung für "дерево"
 sat1text 1:
   url: http://www.sat1.de/service/teletext/index.php?pagnr={%Seite}_01
   title: Sat.1-Text
