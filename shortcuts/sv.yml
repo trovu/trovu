@@ -48,7 +48,7 @@ last 1:
   examples:
     beatles: Search for "beatles"
 rim 1:
-  url: http://rimlexikon.com/index.php?rim={%ord|encoding=iso-8859-1}
+  url: https://www.rimlexikon.se/ord/{%ord}
   title: Rimlexikon
   tags:
   - language
