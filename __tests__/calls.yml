@@ -3,6 +3,12 @@
     query: g foo
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foo&ie=utf-8
+- title: g 1
+  env:
+    language: dz
+    query: g foo
+  response:
+    redirectUrl: https://www.google.com/search?hl=dz&q=foo&ie=utf-8
 - title: g 1 with 2 arguments to be reduced to 1
   env:
     query: g bar,baz
