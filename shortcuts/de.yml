@@ -134,23 +134,6 @@ blb 2:
   - booklooker
   examples:
     goethe, faust: Suche nach "Faust" von Goethe
-blbka 1:
-  url: https://blb.ibs-bw.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=S127.0.0.1:23002&sp=SAKFreitext+{%query}
-  title: Badische Landesbibliothek Karlsruhe
-  tags:
-  - library
-  - karlsruhe
-  examples:
-    goethe: Suche nach Goethe
-buerklin 1:
-  url: https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}
-  title: Bürklin Elektronics, deutsch
-  tags:
-  - shopping
-  - electronics
-  - bürklin
-  examples:
-    USB: Suche nach "USB"
 bzl 1:
   url: https://www.bookzilla.de/shop/quickSearch?searchString={%Suche}
   title: Bookzilla
@@ -159,15 +142,6 @@ bzl 1:
   - shopping
   examples:
     goethe: Search Bookzilla for "goethe"
-bürklin 1:
-  url: https://www.buerklin.com/default.asp?l=d&event=ShowSE%28%29&search={%Artikel}
-  title: Bürklin Elektronics, deutsch
-  tags:
-  - shopping
-  - electronics
-  - bürklin
-  examples:
-    USB: Suche nach "USB"
 ca 1:
   url: https://www.dict.com/Katalanisch-Deutsch/{%Wort}
   title: Katalanisch - Deutsch (Dict.com)
