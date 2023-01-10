@@ -59,7 +59,9 @@ awort 1:
   url: https://anderes-wort-fuer.de/{%Wort}/
   title: anderes Wort für
   depracated:
-    key: awf {%1}
+    alternative:
+      query: awf {%1}
+      created: '2023-01-10'
 base 1:
   url: http://www.base-search.net/Search/Results?lookfor={%Suche}
   title: Bielefeld Academic Search Engine
