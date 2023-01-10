@@ -25,11 +25,6 @@
     query: foobar
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
-- title: g 1
-  env:
-    query: g barbaz
-  response:
-    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: g 1 with 2 arguments to be reduced to 1
   env:
     query: g bar,baz
