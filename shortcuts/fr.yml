@@ -40,22 +40,6 @@ en 1:
   examples:
     arbre: Translate arbre to English
     tree: Translate tree to French
-gfp 0:
-  url: http://german-foreign-policy.com/fr/news/
-  title: German Foreign Policy
-  tags:
-  - politics
-  - news
-  - germany
-gfp 1:
-  url: http://german-foreign-policy.com/index.php?lang=fr&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}
-  title: German Foreign Policy (French)
-  tags:
-  - politics
-  - news
-  - germany
-  examples:
-    berlin: Chercher "berlin"
 lar 1:
   url: http://www.larousse.fr/dictionnaires/francais/{%mot}
   title: Larousse, Dictionnaires de français
