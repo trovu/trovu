@@ -655,15 +655,15 @@ ftr 1:
   examples:
     twitter: Search Finanztreff for "twitter"
 gfp 0:
-  url: http://german-foreign-policy.com/de/news/
+  url: https://german-foreign-policy.com/
   title: German Foreign Policy
   tags:
   - politics
   - news
   - germany
 gfp 1:
-  url: http://german-foreign-policy.com/index.php?lang=de&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}
-  title: German Foreign Policy (German)
+  url: https://www.german-foreign-policy.com/news/archiv/detailsuche?tx_news_pi1%5B__referrer%5D%5B%40extension%5D=News&tx_news_pi1%5B__referrer%5D%5B%40controller%5D=News&tx_news_pi1%5B__referrer%5D%5B%40action%5D=searchForm&tx_news_pi1%5B__referrer%5D%5Barguments%5D=YToxOntzOjY6InNlYXJjaCI7YTozOntzOjc6InN1YmplY3QiO3M6NjoiYmVybGluIjtzOjExOiJtaW5pbXVtRGF0ZSI7czowOiIiO3M6MTE6Im1heGltdW1EYXRlIjtzOjA6IiI7fX0%3D3b9217b53b1d289bca1b4f26fd2398df277bac78&tx_news_pi1%5B__referrer%5D%5B%40request%5D=%7B%22%40extension%22%3A%22News%22%2C%22%40controller%22%3A%22News%22%2C%22%40action%22%3A%22searchForm%22%7Dd2832a7a705ce8933853e4c9a9a5a984dbceaeba&tx_news_pi1%5B__trustedProperties%5D=%7B%22search%22%3A%7B%22subject%22%3A1%2C%22minimumDate%22%3A1%2C%22maximumDate%22%3A1%7D%7D813cf46d860682b222ed4db70f7cf713def828ff&tx_news_pi1%5Bsearch%5D%5Bsubject%5D={%Suche}&tx_news_pi1%5Bsearch%5D%5BminimumDate%5D=&tx_news_pi1%5Bsearch%5D%5BmaximumDate%5D=
+  title: German Foreign Policy
   tags:
   - politics
   - news
