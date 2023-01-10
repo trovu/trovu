@@ -90,14 +90,19 @@ async function fetchWithTimeout(resource, options = {}) {
 
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), timeout);
-  const response = await fetch(resource, {
-    ...options,
-    signal: controller.signal,
-    headers: {
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    },
-  });
+  let response;
+  try {
+    response = await fetch(resource, {
+      ...options,
+      signal: controller.signal,
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+      },
+    });
+  } catch (e) {
+    return { status: 500 };
+  }
   clearTimeout(id);
   return response;
 }
