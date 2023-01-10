@@ -287,14 +287,14 @@ blz 1:
   examples:
     berlin: Bankleitzahlen der Banken in Berlin
 bol 0:
-  url: http://www.zanox-affiliate.de/ppc/?25553634C6244020T
+  url: https://www.bol.de/
   title: Bol.de Startseite
   tags:
   - books
   - shopping
   - bol
 bol 1:
-  url: http://www.bol.de/shop/bch_start_startseite/suche/?&ZANOX_PARTNER_PARAMETER_LABEL=ZANOX_PARTNER_PARAMETER_WERT&sq={%Suche}&x=-8&y=-9&zUserID=979254&zanpid=1802156177828978688
+  url: https://www.bol.de/shop/bch_start_startseite/suche/?&ZANOX_PARTNER_PARAMETER_LABEL=ZANOX_PARTNER_PARAMETER_WERT&sq={%Suche}&x=-8&y=-9&zUserID=979254&zanpid=1802156177828978688
   title: Bol.de Suche
   tags:
   - books
@@ -374,7 +374,7 @@ bvg 4:
   examples:
     zoo!, frohnau, 20:00, 27.10.: Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
 bvgan 3:
-  url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=arrive&from={%Start}&to={%Ziel}&time={%Ankunftszeit||type=time}
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&start=1
   title: BVG-Auskunft
   tags:
   - bahn
@@ -383,7 +383,7 @@ bvgan 3:
   examples:
     zoo!, frohnau, 21: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr
 bvgan 4:
-  url: http://fahrinfo.bvg.de/Fahrinfo/bin/?start=1&timesel=arrive&from={%Start}&to={%Ziel}&time={%Ankunftszeit|type=time}&date={%Datum|type=date}
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: BVG-Auskunft
   tags:
   - bahn
