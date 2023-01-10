@@ -136,6 +136,7 @@ actions['applyModifier'] = async function () {
     }
   }
   writeYmls(ymls);
+  console.log('Done');
 };
 
 modifiers['addTagOld'] = async function (key, shortcut) {
