@@ -28,7 +28,7 @@
     query: .de.db b,m,8,1.1.2020
   response:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
-- title: pl.wg
+- title: extra namespace / language
   env:
     language: de
     country: fr
@@ -41,7 +41,7 @@
     query: foobar
   response:
     redirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
-- title: Query negative
+- title: query negative
   env:
     language: en
     country: us
