@@ -7127,6 +7127,21 @@ thsr 1:
   title: Roget's Thesaurus
   tags:
   - old
+tik 0:
+  url: https://www.tiktok.com/
+  title: TikTok, Homepage
+  tags:
+  - tiktok
+  - video
+tik 1:
+  url: https://www.tiktok.com/search?q={%query}
+  title: TikTok
+  description: Searches TikTok.
+  tags:
+  - tiktok
+  - video
+  examples:
+    berlin: Search for videos about Berlin
 tiktok 1:
   url: https://www.tiktok.com/@{%user}
   title: TikTok, User
