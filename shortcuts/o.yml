@@ -361,7 +361,7 @@ alt 0:
   - software
   - alternative
 alt 1:
-  url: https://alternativeto.net/SearchResult.aspx?search={%product}&x=0&y=0
+  url: https://alternativeto.net/browse/search/?q={%product}
   title: AlternativeTo
   tags:
   - software
@@ -581,13 +581,13 @@ bibkit 1:
   examples:
     goethe: Suche nach Goethe
 bible 0:
-  url: http://www.bibleserver.com/start?lang={$language}
+  url: https://www.bibleserver.com/
   title: Bibleserver.com
   tags:
   - bible
   - christianity
 bible 1:
-  url: http://www.bibleserver.com/go.php?lang={$language}&ref={%query}
+  url: https://www.bibleserver.com/search/{%query}
   title: Bibleserver.com
   tags:
   - bible
@@ -684,7 +684,7 @@ bmf 2:
   examples:
     berlin, hamburg: Mitfahrgelegenheiten von Berlin nach Hamburg
 bmn 1:
-  url: http://www.bugmenot.com/view.php?url={%site}
+  url: https://bugmenot.com/view/{%site}
   title: BugMeNot
   tags:
   - mail
@@ -708,7 +708,7 @@ booking 1:
   examples:
     berlin: Search Booking.com for hotels and hostels in Berlin.
 bp 1:
-  url: http://www.beatport.com/search?query={%query}
+  url: https://www.beatport.com/search?q={%query}
   title: Beatport
   tags:
   - music
