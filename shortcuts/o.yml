@@ -1447,7 +1447,7 @@ digg 1:
   tags:
   - old
 dii 1:
-  url: http://www.diigo.com/search?what={%tag}
+  url: https://www.diigo.com/search?what={%tag}
   title: Diigo Social Bookmarking
   tags:
   - web search
@@ -1455,7 +1455,7 @@ dii 1:
   examples:
     obama: search for bookmarks tagged with "obama"
 diia 1:
-  url: https://secure.diigo.com/sign-in?referInfo=%2Fpost%3Furl%3D{%URL}
+  url: https://www.diigo.com/sign-in?referInfo=%2Fpost%3Furl%3D{%URL}
   title: Diigo Social Bookmarking
   tags:
   - web search
