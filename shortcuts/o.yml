@@ -254,7 +254,7 @@ acm 1:
   examples:
     'routing loops ': search for routing loops
 ad 1:
-  url: http://developer.android.com/search.html#q={%query}
+  url: https://developer.android.com/s/results?q={%query}
   title: Android Developers
   tags:
   - android
@@ -355,13 +355,13 @@ alp 1:
   examples:
     cups: Search for cups package
 alt 0:
-  url: http://alternativeto.net/
+  url: https://alternativeto.net/
   title: AlternativeTo
   tags:
   - software
   - alternative
 alt 1:
-  url: http://alternativeto.net/SearchResult.aspx?search={%product}&x=0&y=0
+  url: https://alternativeto.net/SearchResult.aspx?search={%product}&x=0&y=0
   title: AlternativeTo
   tags:
   - software
