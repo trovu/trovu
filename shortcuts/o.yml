@@ -784,11 +784,6 @@ ccc-tv 0:
 ccctv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
-cddb 1:
-  url: http://www.gracenote.com/music/search.html?q={%artist}&f=artist&f=disc
-  title: CD Database
-  tags:
-  - old
 ce 1:
   url: http://www.chineseetymology.org/CharacterEtymology.aspx?characterInput={%character}
   title: Chinese Etymology
@@ -837,21 +832,6 @@ chipfind 1:
 chords 1:
   url: http://www.ultimate-guitar.com/search.php?value={%band or song}&search_type=title
   title: Ultimate-guitar search for chords/tabs etc.
-  tags:
-  - old
-cite 1:
-  url: http://citeseer.ist.psu.edu/cis?q={%query}&cs=1
-  title: Citeseer
-  tags:
-  - old
-citeseer 1:
-  url: http://citeseer.ist.psu.edu/cis?q={%query}&cs=1
-  title: Citeseer
-  tags:
-  - old
-citex 1:
-  url: http://citeseerx.ist.psu.edu/search?q={%query}&submit=Search&sort=rel
-  title: Citeseer
   tags:
   - old
 ciu 1:
@@ -906,11 +886,6 @@ cma 0:
   tags:
   - critical mass
   - critical maps
-cnet 1:
-  url: http://www.cnet.com/1770-5_1-0.html?query={%query}&tag=srch
-  title: CNET content search
-  tags:
-  - old
 co 1:
   url: http://collectr.net/={%query}
   title: Collectr
@@ -1000,11 +975,6 @@ couch 1:
   title: Couchsurfing User Search
   tags:
   - old
-couchl 0:
-  url: https://www.couchsurfing.org/login
-  title: Couchsurfing Login
-  tags:
-  - old
 cp 1:
   url: http://cover-paradies.to/?Module=ExtendedSearch&SearchString={%query}
   title: Cover Paradies
@@ -1030,11 +1000,6 @@ cpan 1:
   - programming
   examples:
     Web::API: search on metacpan.org
-cpase 1:
-  url: http://www.cpase.de/top.php?a=236&&keyword={%query}
-  title: CPASE Web search
-  tags:
-  - old
 cplusplus 1:
   url: http://cplusplus.com/query/search.cgi?q={%query}
   title: Cplusplus.com
@@ -1105,7 +1070,7 @@ crit 1:
   examples:
     forrest gump: Search for "forrest gump"
 crug 1:
-  url: https://rug.on.worldcat.org/search?databaseList=&queryString={%search terms}
+  url: https://rug.on.worldcat.org/search?databaseList=&queryString={%query}
   title: SmartCat
   description: Library catalog of the University of Groningen
   tags:
@@ -1135,26 +1100,6 @@ csdblp 1:
   title: CompleteSearch DBLP
   tags:
   - old
-ctan 1:
-  url: http://tug.ctan.org/cgi-bin/filenameSearch.py?filename={%filename}&Search=Search
-  title: Search for files by name
-  tags:
-  - old
-ctand 1:
-  url: http://tug.ctan.org/cgi-bin/search.py?metadataSearch={%package}&metadataSearchSubmit=Search
-  title: Search for package descriptions by name
-  tags:
-  - old
-ctanp 1:
-  url: http://ctan.org/cgi-bin/search.py?tdsFilename={%filename}&tdsFilenameSearch=Search
-  title: Search for packages by names of contained files
-  tags:
-  - old
-ctt 1:
-  url: http://groups.google.com/group/comp.text.tex/search?group=comp.text.tex&q={%Suche}
-  title: Comp.text.tex
-  tags:
-  - old
 cul 1:
   url: http://www.citeulike.org/search/all?q={%query}
   title: CiteULike Search
@@ -1162,11 +1107,6 @@ cul 1:
   - science
   examples:
     chomsky: Search CiteULike Search for "chomsky"
-currency 3:
-  url: http://finance.yahoo.com/currency/convert?amt={%amount}&from={%from code}&to={%to code}
-  title: Yahoo Currency converter
-  tags:
-  - old
 cutlist 1:
   url: http://cutlist.at/?find={%Suche}
   title: cutlist.at
