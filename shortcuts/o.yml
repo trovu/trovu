@@ -1193,16 +1193,6 @@ dbug 2:
   title: query debian bugs from a package
   tags:
   - old
-dc 1:
-  url: https://previous.delicious.com/url?url={%url}
-  title: 'delicious: check URL'
-  tags:
-  - delicious
-  - links
-  - social
-  - bookmarks
-  examples:
-    http://www.google.de: Look up what delicious users say about Google.de
 dch 0:
   url: https://www.digitalconcerthall.com/
   title: Digital Concert Hall of the Berlin Philharmonic Orchestra (Berliner Philharmoniker)
@@ -1226,11 +1216,6 @@ dclpm 1:
   - newsgroups
   examples:
     array: Search for "array"
-dctt 1:
-  url: http://groups.google.de/group/de.comp.text.tex/search?group=de.comp.text.tex&q={%Suche}
-  title: De.comp.text.tex
-  tags:
-  - old
 dd24 0:
   url: https://www.domaindiscount24.com/de
   title: DomainDiscount24
@@ -1309,11 +1294,6 @@ debp 0:
   title: Debian Planet
   tags:
   - old
-debpts 1:
-  url: https://packages.qa.debian.org/{%package}
-  title: show the qa page of a given package
-  tags:
-  - old
 debt 1:
   url: https://tracker.debian.org/pkg/{%query}
   title: Debian Package Tracker
@@ -1332,11 +1312,6 @@ debw 0:
 debw 1:
   url: https://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
   title: Debian Wiki Search
-  tags:
-  - old
-decuc 1:
-  url: http://www.decodeunicode.org/arEditFrame.php?nodeId=421&aspect=editFrUCSeaRes&seaRes={%query}
-  title: Decodeunicode
   tags:
   - old
 deen 1:
@@ -1384,11 +1359,6 @@ deo 1:
   title: Dansk-esperanto ordbog
   tags:
   - old
-der 1:
-  url: http://www.pons.eu/dict/search/results/?q={%word}&l=dede
-  title: Deutsche Rechtschreibung PONS
-  tags:
-  - old
 derivative 1:
   url: http://www.wolframalpha.com/input/?i=derivative%20{%query}
   title: 'WolframAlpha: Derivative'
@@ -1406,16 +1376,6 @@ derstandard 1:
 df 0:
   url: http://df.magmawiki.com/index.php/Main_Page
   title: Dwarf Fortress Wiki
-  tags:
-  - old
-df 1:
-  url: http://df.magmawiki.com/index.php?title=Special%3ASearch&search={%article}&go=Go
-  title: Dwarf Fortress Wiki
-  tags:
-  - old
-dg 1:
-  url: http://digg.com/search?submit=Search&section=all&type=all&area=all&sort=score&s={%query}
-  title: Digg
   tags:
   - old
 dh 1:
@@ -1441,11 +1401,6 @@ diff 1:
   title: Difference Between search
   tags:
   - old
-digg 1:
-  url: http://digg.com/search?submit=Search&section=all&type=all&area=all&sort=score&s={%query}
-  title: Digg
-  tags:
-  - old
 dii 1:
   url: https://www.diigo.com/search?what={%tag}
   title: Diigo Social Bookmarking
@@ -1462,38 +1417,6 @@ diia 1:
   - bookmarks
   examples:
     http://www.example.com: add 'example.com' to your bookmarks
-diiu 1:
-  url: http://diigo.com/user/{%user}
-  title: Diigo Social Bookmarking
-  tags:
-  - web search
-  - bookmarks
-  examples:
-    chuck: show bookmarks from user chuck
-diiu 2:
-  url: http://diigo.com/user/{%user}/{%tag}
-  title: Diigo Social Bookmarking
-  tags:
-  - web search
-  - bookmarks
-  examples:
-    chuck, marketing: show bookmarks tagged with marketing from user chuck
-diiur 1:
-  url: http://diigo.com/rss/user/{%user}
-  title: Diigo Social Bookmarking
-  tags:
-  - web search
-  - bookmarks
-  examples:
-    chuck: show bookmarks from user chuck as an RSS/XML-Feed
-diiur 2:
-  url: http://diigo.com/rss/user/{%user}/{%tag}
-  title: Diigo Social Bookmarking
-  tags:
-  - web search
-  - bookmarks
-  examples:
-    chuck, marketing: show bookmarks tagged with marketing from user chuck as an RSS/XML-Feed
 disc 1:
   url: http://www.discogs.com/search?type=all&q={%artist}
   title: Discogs
@@ -1714,14 +1637,6 @@ dns 1:
   title: DNS Lookup
   tags:
   - old
-docjax 1:
-  url: https://docjax.com/d/?q={%query}
-  title: DocJax Document Search Engine
-  tags:
-  - web search
-  - documents
-  examples:
-    berlin: Search DocJax Document Search Engine for "berlin"
 docs 1:
   url: https://docs.google.com/document/u/0/?q={%query}
   title: Google Docs search
@@ -1734,75 +1649,6 @@ doi 1:
   - science
   examples:
     10.1000/182: Search for object with DOI 10.1000/182
-download 1:
-  url: http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch
-  title: Download.com
-  tags:
-  - old
-dpht 1:
-  url: https://translate.google.de/translate?http://dairyprocessinghandbook.com/chapter/{%query}
-  title: Dairy Processing Handbook translated
-dpt 1:
-  url: https://translate.google.de/translate?hl=de&sl=en&tl=de&u=http://dairyprocessinghandbook.com/chapter/{%query}
-  title: Dairy Processing Handbook translated
-dr5 1:
-  url: http://drupalcontrib.org/api/search/5/{%query}
-  title: Drupal 5 API
-  tags:
-  - programming
-  examples:
-    hook_menu: Drupal 5 description for hook_menu()
-dr5h 1:
-  url: http://drupalcontrib.org/api/search/5/hook_{%hook}
-  title: Drupal 5 Hook API
-  tags:
-  - programming
-  examples:
-    menu: Drupal 5 description for hook_menu()
-dr6 1:
-  url: http://drupalcontrib.org/api/search/6/{%query}
-  title: Drupal 6 API
-  tags:
-  - programming
-  examples:
-    hook_menu: Drupal 6 description for hook_menu()
-dr6h 1:
-  url: http://drupalcontrib.org/api/search/6/hook_{%hook}
-  title: Drupal 6 Hook API
-  tags:
-  - programming
-  examples:
-    menu: Drupal 6 description for hook_menu()
-dr7 1:
-  url: http://drupalcontrib.org/api/search/7/{%query}
-  title: Drupal 7 API
-  tags:
-  - programming
-  examples:
-    drupal_static: Drupal 7 description for drupal_static()
-dr7h 1:
-  url: http://drupalcontrib.org/api/search/7/hook_{%hook}
-  title: Drupal 7 Hook API
-  tags:
-  - programming
-  examples:
-    menu: Drupal 7 description for hook_menu()
-dr8 1:
-  url: http://drupalcontrib.org/api/search/8/{%query}
-  title: Drupal 8 API
-  tags:
-  - programming
-  - php
-  examples:
-    drupal_static: Drupal 8 description for drupal_static
-dr8h 1:
-  url: http://drupalcontrib.org/api/search/8/hook_{%hook}
-  title: Drupal 8 Hook API
-  tags:
-  - programming
-  - php
-  examples:
-    menu: Drupal 8 description for hook_menu()
 drag 0:
   url: http://www.dragosien.de/?t=village
   title: Dragosien
@@ -1872,16 +1718,6 @@ drupal 1:
   title: Drupal API via Google
   tags:
   - old
-ds 1:
-  url: http://delicious.com/search/{%query}
-  title: 'delicious: search'
-  tags:
-  - delicious
-  - links
-  - social
-  - bookmarks
-  examples:
-    berlin: Search for links about Berlin
 dsh 1:
   url: http://search.datasheetcatalog.net/key/{%part}
   title: datasheetcatalog.com
@@ -1943,11 +1779,6 @@ dwb 1:
 dwd 0:
   url: http://www.dwd.de
   title: Deutscher Wetter Dienst
-  tags:
-  - old
-dwl 1:
-  url: http://www.download.com/3120-20_4-0.html?tg=dl-20&qt={%query}&tag=srch
-  title: Download.com
   tags:
   - old
 dz 0:
