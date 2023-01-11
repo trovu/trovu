@@ -2031,18 +2031,6 @@ f 1:
   title: Fastbot
   tags:
   - old
-f3 0:
-  url: http://oss.digirati.com.br/f3/
-  title: 'f3 - Fight Flash Fraud: an alternative disk fraud checker compatible to h2testw'
-  tags:
-  - open source
-  - disk drive checker
-  - usb
-f4c 1:
-  url: http://www.fileformat.info/info/unicode/char/{%codepoint}/fontsupport.htm
-  title: Search for a font supporting a specific character
-  tags:
-  - old
 facebook 0:
   url: http://www.facebook.com
   title: Facebook Start Page
@@ -2601,11 +2589,6 @@ ga 1:
   title: Google News Archive Search
   tags:
   - old
-gads 1:
-  url: http://www.google.com/sponsoredlinks?q={%adword}
-  title: Goode Ads
-  tags:
-  - old
 gameserver 1:
   url: http://www.game-monitor.com/search.php?search={%query}&type=server&location=all&game=all&x=0&y=0&num=30
   title: Spiel Server Suchen game-monitor.com
@@ -2629,52 +2612,6 @@ gat 1:
   title: Google News Archive Search - Timeline
   tags:
   - old
-gatherer 1:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-gatherer 2:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]&color=+[{%w}]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-gatherer 3:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]&color=+[{%w}]|[{%u}]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-gatherer 4:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]&color=+[{%w}]|[{%u}]|[{%b}]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-gatherer 5:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]&color=+[{%w}]|[{%u}]|[{%b}]|[{%r}]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-gb 0:
-  url: http://www.google.com/blogsearch?hl={$language}
-  title: Google Blog Search
-  tags:
-  - google
-  - web search
-  - blogs
-gb 1:
-  url: https://www.google.com/search?hl={$language}&q={%query}&tbm=blg
-  title: Google Blog Search
-  tags:
-  - google
-  - web search
-  - blogs
-  examples:
-    berlin: Search for blog articles about "berlin"
 gbooks 0:
   url: http://books.google.com/
   title: Google Books
@@ -2696,11 +2633,6 @@ gby 2:
   - google
   - search
   - archive
-gc 0:
-  url: http://http://www.geocaching.com/seek/nearest.aspx?key=
-  title: Geocaching
-  tags:
-  - old
 gc 1:
   url: http://google.com/search?hl={$language}&q=cache:{%query}
   title: Google Cache
@@ -2872,16 +2804,6 @@ gen 1:
   title: Google Web, only in English
   tags:
   - old
-genmeta 2:
-  url: http://meta.genealogy.net/Search.do?lastName={%Nachname}&placeName={%Ort}
-  title: Genealogy.net Metasuche
-  tags:
-  - old
-gentoo 1:
-  url: http://packages.gentoo.org/package/{%package}
-  title: Gentoo Package Search
-  tags:
-  - old
 gentoo-forums 0:
   url: http://forums.gentoo.org
   title: Gentoo Forums
@@ -2890,28 +2812,6 @@ gentoo-forums 0:
 gentoo-planet 0:
   url: http://planet.gentoo.org
   title: Gentoo Planet
-  tags:
-  - old
-gentoo-wiki 0:
-  url: http://{$language}.gentoo-wiki.com
-  title: Gentoo Wiki
-  tags:
-  - old
-gentoo-wiki 1:
-  url: http://{$language}.gentoo-wiki.com/Special:Search?search={%query}&fulltext=Search
-  title: Gentoo Wiki Search
-  tags:
-  - old
-geoip 1:
-  url: http://www.geoiptool.com/?IP={%IP or Hostname}
-  title: GeoIP
-  tags:
-  - ip
-  examples:
-    www.google.com: Find Location of www.google.com
-getdeb 1:
-  url: http://getdeb.net/search.php?keywords={%software}
-  title: GetDeb.net
   tags:
   - old
 getty 0:
@@ -3137,11 +3037,6 @@ gl 2:
   examples:
     fr, berlin: Search for "berlin" on sites in French
     cs, praha: Search for "praha" on sites in Czech
-glin 1:
-  url: http://www.google.com/linux?hl={$language}&q={%query}
-  title: Google Linux
-  tags:
-  - old
 glist 1:
   url: http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Listing
@@ -3153,11 +3048,6 @@ glopd 0:
 glopd 1:
   url: http://www.glottopedia.org/index.php/Special:Search?search={%query}&go=Go
   title: Glottopedia
-  tags:
-  - old
-glw 1:
-  url: http://www.google.com/search?hl={$language}&as_q={%query}&num=50&as_qdr=w&safe=off
-  title: Google Web Search (last week)
   tags:
   - old
 gm 0:
@@ -3283,21 +3173,6 @@ gn 1:
   - google
   examples:
     berlin: Search Google News for berlin
-gnbug 0:
-  url: http://bugzilla.gnome.org/query.cgi?format=advanced
-  title: gnome bugs
-  tags:
-  - old
-gnbug 2:
-  url: http://bugzilla.gnome.org/buglist.cgi?query=product%3A{%product}+{%query}
-  title: query bugs in a gnome product
-  tags:
-  - old
-gnbugq 1:
-  url: http://bugzilla.gnome.org/buglist.cgi?query={%query}
-  title: search for a term in gnome bugs (query)
-  tags:
-  - old
 gns 1:
   url: https://www.google.de/search?q={%query}&tbm=nws&hl={$language}
   title: Google News search in your language
@@ -3428,11 +3303,6 @@ gpo 1:
   title: Gentoo Overlay Search
   tags:
   - old
-gpuse 0:
-  url: http://gentoo-portage.com/USE
-  title: Show Gentoo USE Flags
-  tags:
-  - old
 gr 1:
   url: https://www.goodreads.com/search?utf8=%E2%9C%93&query={%query}
   title: Goodreads
@@ -3472,13 +3342,6 @@ groovesalad 0:
   tags:
   - internetradio
   - radio station
-gs 1:
-  url: http://listen.grooveshark.com/#/search/songs/?query={%query}
-  title: Grooveshark
-  tags:
-  - music
-  examples:
-    beatles: Search for Beatles
 gsch 0:
   url: http://scholar.google.com/scholar?hl={$language}
   title: Google Scholar Homepage
@@ -3599,11 +3462,6 @@ gtrends 2:
 guk 1:
   url: http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google United Kingdom
-  tags:
-  - old
-gux 1:
-  url: http://www.google.com/linux?hl={$language}&q={%query}
-  title: Google Linux
   tags:
   - old
 gv 0:
