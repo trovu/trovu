@@ -2933,14 +2933,14 @@ gfp 1:
   examples:
     berlin: Search for "berlin"
 gg 0:
-  url: http://www.google.de/groups?hl={$language}
+  url: https://groups.google.com/search?hl={$language}
   title: Google Groups
   tags:
   - google
   - newsgroups
   - usenet
 gg 1:
-  url: http://www.google.de/groups?hl={$language}&q={%query}
+  url: https://groups.google.com/search?hl={$language}&q={%query}
   title: Google Groups
   tags:
   - google
