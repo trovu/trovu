@@ -1880,11 +1880,6 @@ ed 1:
   title: Ebay.de
   tags:
   - old
-edv 1:
-  url: http://www.edv-abkuerzungen.de/index.php?query={%query}
-  title: Edv Abkürzungen search
-  tags:
-  - old
 efa 0:
   url: http://www.efa-bw.de
   title: Efa bw
@@ -1989,9 +1984,6 @@ era-sms 0:
   title: Era-sms
   tags:
   - old
-eti 1:
-  url: http://etimologias.dechile.net/?{%palabra}
-  title: Diccionaria Etimolólico Castellano
 etools 1:
   url: http://www.etools.ch/searchSubmit.do?query={%query}
   title: ETools.ch Metasearch
@@ -2113,14 +2105,6 @@ fbgr 1:
   - social network
   examples:
     pancakes: Search for "pancakes"
-fbgraph 1:
-  url: https://developers.facebook.com/tools/explorer?method=GET&path={%path}
-  title: Facebook Graph API Explorer
-  tags:
-  - facebook
-  - social network
-  examples:
-    amnestyglobal: Facebook graph representation of Amnesty International's page
 fbi 0:
   url: http://www.facebook.com/inbox/#!/messages/
   title: Facebook Messages
@@ -2229,12 +2213,6 @@ fddb 1:
   title: Kalorien in der Lebensmittel-Datenbank
   tags:
   - old
-fed 1:
-  url: https://admin.fedoraproject.org/pkgdb/search/?type=package&term={%query}
-  title: Fedora Packages
-  tags:
-  - linux
-  - fedora
 fedbug 0:
   url: http://bugzilla.redhat.com/query.cgi
   title: Fedora bugs
@@ -2253,11 +2231,6 @@ fedex 1:
   - shipping
   examples:
     '123456789012': track shipment with the number 123456789012
-fedora 1:
-  url: http://admin.fedoraproject.org/pkgdb/apps/search/{%query}
-  title: Fedora Packages
-  tags:
-  - old
 fedora-wiki 1:
   url: http://fedoraproject.org/wiki/Special:Search?search={%query}
   title: Fedora Wiki Search
@@ -2330,11 +2303,6 @@ filsh 1:
   - files
   - convert
   - youtube
-findfiles 1:
-  url: http://findfiles.com/list.php?string={%filename}&db=Both
-  title: FindFiles
-  tags:
-  - old
 findutf 0:
   url: http://shapecatcher.com
   title: Find UTF code by simply drawing its shape omline (Shapecatcher)
@@ -2446,13 +2414,6 @@ fm 1:
 fnet 1:
   url: http://www.finanzen.net/suchergebnis.asp?_search={%query}
   title: Finanzen.net Query
-fo 1:
-  url: http://de.forestle.org/search.php?q={%query}
-  title: Forestle Web search
-  tags:
-  - web search
-  examples:
-    berlin: Search for "berlin"
 foo 1:
   url: http://en.fooooo.com/search.php?q={%query}&submit=+search+&ranking=0
   title: Fooooo Video Search
@@ -2499,21 +2460,6 @@ fotofinder 1:
   title: Fotofinder
   tags:
   - old
-fotolia 0:
-  url: http://www.fotolia.com
-  title: Fotolia
-  tags:
-  - images
-  - stock agency
-fotolia 1:
-  url: http://us.fotolia.com/search?k={%query}&search.x=0&search.y=0&filters[content_type%3Aphoto]=1&filters[content_type%3Aillustration]=1&filters[content_type%3Avector]=1&filters[content_type%3Avideo]=1&order=relevance&tmplaceref=206627820
-  title: Fotolia
-  tags:
-  - images
-  - stock agency
-  - affiliate
-  examples:
-    christmas: search photos about christmas
 foxy 1:
   url: http://www.foxytunes.com/search?q={%query}
   title: Foxytunes planet
@@ -2587,33 +2533,11 @@ frv 1:
   - pronunciation
   examples:
     berlin: Search for the pronunciation of "berlin"
-fs 1:
-  url: http://www.filesearching.com/cgi-bin/s?q={%filename}
-  title: FileSearching.com
-  tags:
-  - old
-fs-cca 1:
-  url: http://www.zoo-m.com/flickr-storm/flickrize.php?license=4&q={%query}
-  title: FlickrStorm CC Attribution
-  tags:
-  - old
 fsc 1:
   url: http://www.google.com/search?q={%query}&sitesearch=fscklog.com
   title: Fscklog
   tags:
   - old
-fst 1:
-  url: http://de.forestle.org/search.php?q={%Suche}
-  title: Forestle
-  tags:
-  - old
-ft 1:
-  url: http://www.filestube.com/query.html?q={%query}&select=All
-  title: FilesTube
-  tags:
-  - downloads
-  examples:
-    creative commons music: Search for creative commons music
 fv 1:
   url: http://validator.w3.org/feed/check.cgi?url={%url}
   title: W3C Feed Validation Service
@@ -2622,11 +2546,6 @@ fv 1:
 fx 1:
   url: http://www.frederix.de/index.php?searchword={%query}&option=com_search&Itemid=5
   title: Frederix Computer GmbH
-  tags:
-  - old
-fy 1:
-  url: chrome://feedly/content/app/feedly.htm#today@search.{%query}
-  title: Feedly
   tags:
   - old
 fz 1:
