@@ -189,13 +189,6 @@ abp 0:
   - bicycle
   - maps
   - tools
-academic 1:
-  url: http://academic.research.microsoft.com/Search.aspx?query={%query}
-  title: Microsoft Academic Search
-  tags:
-  - science
-  examples:
-    chomsky: Search for "chomsky"
 acl 0:
   url: https://www.aclweb.org/anthology/
   title: ACL Anthology
@@ -403,18 +396,6 @@ am 2:
   examples:
     b, Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
     hh, berliner tor: Show Berliner Tor in Hamburg
-ani 0:
-  url: http://www.anilinkz.com
-  title: Anilinkz
-  tags:
-  - anime
-ani 1:
-  url: http://anilinkz.com/search?q={%query}
-  title: Anilinkz
-  tags:
-  - anime
-  examples:
-    foo: Suche nach "foo"
 anidb 1:
   url: http://anidb.net/perl-bin/animedb.pl?show=animelist&adb.search={%query}&do.search=search
   title: AniDB - Anime DataBase
