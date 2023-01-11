@@ -4667,11 +4667,6 @@ oca 1:
   - public domain
   examples:
     rss: Search for free RSS icons
-oe1 0:
-  url: http://oe1.orf.at/konsole?show=live
-  title: Oe1
-  tags:
-  - old
 oeis 1:
   url: https://oeis.org/search?q={%sequence}
   title: On-Line Encyclopedia of Integer Sequences
@@ -4683,11 +4678,6 @@ oeis 1:
 of 1:
   url: http://www.dicfro.org/?dict=gdf&word={%query}
   title: Old french dictionnary
-  tags:
-  - old
-oh 1:
-  url: http://www.ohnorobot.com/index.pl?s={%query}
-  title: Oh No Robot
   tags:
   - old
 okf 1:
@@ -4705,10 +4695,8 @@ oms 1:
   tags:
   - old
 openbsd 1:
-  url: http://www.openbsd.org/cgi-bin/man.cgi?query={%query}
+  url: https://man.openbsd.org/{%query}
   title: OpenBSD Manual Pages
-  tags:
-  - old
 opennlp 1:
   url: http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.opennlp.org%2Fapi%2Findex.html%20{%query}&ie=utf-8
   title: OpenNLP API
@@ -4893,27 +4881,9 @@ osmw 1:
   - copyleft
   examples:
     '23425344': Search for "23425344"
-ossearch 1:
-  url: http://en.opensuse.org/Spezial:Search?search={%query}
-  title: OpenSUSE search
-  tags:
-  - old
-otn 1:
-  url: http://forums.oracle.com/forums/search.jspa?threadID=&q={%query}&objID=c84&dateRange=all&userID=&numResults=30&rankBy=10001
-  title: Oracle OTN Forum Search
-  tags:
-  - old
 otr 0:
   url: http://www.onlinetvrecorder.com/
   title: OnlineTvRecorder (Web Online TV Recorder)
-otrs 1:
-  url: http://www.otr-search.com/index.php?q={%Suche}
-  title: otr-search.com
-  tags:
-  - tv
-  - onlinetvrecorder
-  examples:
-    nachrichten: Suche nach Nachrichten
 otto 1:
   url: https://www.otto.de/suche/{%product}/
   title: Otto product search
@@ -4970,11 +4940,6 @@ patent 1:
   description: Worldwide patent service. Multi-language interface.
   tags:
   - patents
-pb 1:
-  url: http://verbs.colorado.edu/framesets/{%predicate}-v.html
-  title: PropBank
-  tags:
-  - old
 pciid 1:
   url: http://pci-ids.ucw.cz/read/PC/{%vendorid}
   title: PCI ID Repository
@@ -4989,11 +4954,6 @@ pciid 2:
   - electronics
   examples:
     8086,10de: Search for PCI Device with Vendor ID 8086 and Device ID 10de
-pdb 1:
-  url: http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId={%key}
-  title: Protein Data Bank
-  tags:
-  - old
 pdf 1:
   url: http://docs.google.com/viewer?url={%url}
   title: Google PDF Viewer
@@ -5033,18 +4993,6 @@ perseus 1:
 pg 1:
   url: http://www.pricegrabber.com/search.php?form_keyword={%query}&st=query
   title: Price Grabber
-  tags:
-  - old
-pgp 1:
-  url: http://pgp.mit.edu:11371/pks/lookup?search={%query}&op=vindex
-  title: PGP Keysearch
-  tags:
-  - pgp
-  examples:
-    fefe: Search for PGPs for "fefe"
-pgpkey 1:
-  url: http://pgp.mit.edu:11371/pks/lookup?search=0x{%query}
-  title: PGP Keysearch
   tags:
   - old
 ph 1:
@@ -5123,9 +5071,6 @@ ping 1:
   title: Web-based ping
   tags:
   - old
-pix 1:
-  url: https://pixabay.com/de/photos/?image_type=&cat=&min_width=&min_height=&q={%keyword}&order=popular
-  title: Pixabay Pictures
 play 0:
   url: http://www.play.com/
   title: Play.com
@@ -5185,11 +5130,6 @@ pm 1:
   - health
   examples:
     bacteria: Search for "bacteria"
-podnova 1:
-  url: http://www.podnova.com/search/{%query}/
-  title: Podnova
-  tags:
-  - old
 podster 1:
   url: http://www.podster.de/search?q={%query}
   title: Podster Podcastsuche
@@ -5221,16 +5161,6 @@ poew 1:
     Vaal Orb: Search inofficial Path of Exile Wiki for "Vaal Orb"
   tests:
     health: Search results
-postbank 1:
-  url: http://www.postbank.de/-snm-0184330278-1314787205-0734700014-000000958-1314813579-enm-privatkunden/pk_suche.html?q={%query}
-  title: Postbank Search
-  tags:
-  - old
-pr 1:
-  url: http://www.preisroboter.de/search.php?search={%query}
-  title: Preisroboter.de Preisvergleich
-  tags:
-  - old
 praktiker 1:
   url: http://praktiker.de/Search.action?searchTerm={%query}
   title: Praktiker Baumarkt Online Shop
@@ -5239,11 +5169,6 @@ praktiker 1:
 printertestfiles 0:
   url: http://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
   title: Printer test files
-prot 1:
-  url: http://www.expasy.org/cgi-bin/sprot-search-de?{%query}
-  title: SwissProt
-  tags:
-  - old
 ps 1:
   url: http://thepiratebay.org/search/{%query}
   title: The Pirate Bay
@@ -5271,26 +5196,6 @@ pubchem 1:
 puls 0:
   url: http://puls.uni-potsdam.de
   title: Uni Potsdam, Puls
-  tags:
-  - old
-puppet 1:
-  url: http://reductivelabs.com/trac/puppet/search?q={%query}
-  title: Search all content
-  tags:
-  - old
-puppetc 1:
-  url: http://reductivelabs.com/trac/puppet/search?q={%query}&changeset=on
-  title: Search only changesets
-  tags:
-  - old
-puppett 1:
-  url: http://reductivelabs.com/trac/puppet/search?q={%query}&ticket=on
-  title: Search only tickets
-  tags:
-  - old
-puppetw 1:
-  url: http://reductivelabs.com/trac/puppet/search?q={%query}&wiki=on
-  title: Search only the wiki
   tags:
   - old
 pvx 1:
@@ -5508,11 +5413,6 @@ r2r 2:
   - travel
   examples:
     london, berlin: Search Rome2Rio for a connection from London to Berlin
-radarberlin 0:
-  url: http://wind.met.fu-berlin.de/loops/radar_200/R.NEW.gif
-  title: Regenradar FU-Berlin
-  tags:
-  - old
 rae 1:
   url: http://dle.rae.es/?w={%query}
   title: Diccionario RAE
@@ -5670,11 +5570,6 @@ rg 1:
   - reddit
   examples:
     berlin: Search for "berlin"
-ripe 1:
-  url: http://www.db.ripe.net/whois?searchtext={%query}
-  title: RIPE Database
-  tags:
-  - old
 rl 1:
   url: http://rapidlibrary.com/index.php?q={%query}&filetype=0
   title: Rapidlibrary Search
