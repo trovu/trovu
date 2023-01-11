@@ -991,12 +991,12 @@ correos 1:
   - correos
   - shipping
 couch 0:
-  url: http://www.couchsurfing.com
+  url: https://www.couchsurfing.com
   title: Couchsurfing Start Page
   tags:
   - old
 couch 1:
-  url: http://www.couchsurfing.com/people/{%query}
+  url: https://www.couchsurfing.com/people/{%query}
   title: Couchsurfing User Search
   tags:
   - old
