@@ -3558,9 +3558,6 @@ here 1:
   - maps
   examples:
     berlin: Search Here.com for "berlin"
-hex 0:
-  url: http://calc.50x.eu
-  title: Online Hex-Dec-Bin conversion
 hexdec 1:
   url: http://stefanschramm.net/dev/hex/?hex={%hex value}
   title: Hex decode
@@ -3611,16 +3608,6 @@ http 1:
   - url
   examples:
     example.com: Go to http://example.com
-htz 1:
-  url: http://www.testzentrale.de/programm/catalogsearch/result/?q={%query}
-  title: Hogrefe Testzentrale Suche
-  tags:
-  - old
-hub 1:
-  url: http://www.hubmed.org/search.cgi?q={%query}&sort=date
-  title: Hubmed
-  tags:
-  - old
 hype 1:
   url: http://hype.non-standard.net/search/{%query}
   title: Hype Machine
@@ -3695,29 +3682,9 @@ idealo 1:
   tags:
   - preisvergleich
   - shopping
-identica 1:
-  url: http://identi.ca/search/notice?q={%query}
-  title: Identi.ca Notice
-  tags:
-  - old
 ieee 1:
   url: http://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText={%query}
   title: IEEE Xplore Search
-  tags:
-  - old
-ierender 0:
-  url: http://meineipadresse.de/netrenderer/index.php
-  title: Render a Homepage with Internet Explorer 7.0
-  tags:
-  - old
-ierender 1:
-  url: http://meineipadresse.de/netrenderer/index.php?url={%url}&browser=ie7
-  title: Render a Homepage with Internet Explorer 7.0
-  tags:
-  - old
-ierender 2:
-  url: http://meineipadresse.de/netrenderer/index.php?url={%url}&browser={%engine}
-  title: Render a Homepage with an Internet Explorer Engine
   tags:
   - old
 if 1:
@@ -3754,11 +3721,6 @@ im 1:
   title: Imeem
   tags:
   - old
-imagepoint 1:
-  url: http://www.imagepoint.biz/result.php?reset=1&search={%query}
-  title: ImagePoint
-  tags:
-  - old
 imdb 0:
   url: http://www.imdb.com
   title: Internet Movie Database Homepage
@@ -3787,30 +3749,11 @@ imfdb 1:
   title: Imfdb
   tags:
   - old
-img 1:
-  url: http://elzr.com/imagery?query={%query}&size=20&safe=off&imgsz=&imgc=&filetype=
-  title: Imagery
-  tags:
-  - old
 imhalal 1:
   url: http://www.imhalal.com/beta/index.php/web/{%query}
   title: ImHalal Web Search
   tags:
   - old
-imp 0:
-  url: http://www.imagepoint.biz/
-  title: ImagePoint
-  tags:
-  - images
-  - stock agency
-imp 1:
-  url: http://www.imagepoint.biz/result.php?reset=1&search={%query}
-  title: ImagePoint
-  tags:
-  - images
-  - stock agency
-  examples:
-    christmas: search photos about christmas
 imslp 0:
   url: http://imslp.org/index.php?title=Special:Search&search=
   title: Petrucci Library
@@ -3822,11 +3765,6 @@ inf 1:
 infrarot 1:
   url: http://www.infrarot.de/search?words={%query}&suggested=&x=0&y=0
   title: InfraRot mail order
-  tags:
-  - old
-ing 1:
-  url: http://www.ingenieur.de/default.aspx?q={%query}&knoq=1
-  title: Die Suchmaschine für Ingenieure
   tags:
   - old
 ink 1:
@@ -3872,18 +3810,6 @@ ipkat 0:
   - intellectual property
   - ip law
   - copyright
-iplocator 1:
-  url: http://www.geobytes.com/IpLocator.htm?GetLocation&ipaddress={%ipaddress}
-  title: IP Address Locator
-  tags:
-  - ip
-  examples:
-    1.2.3.4: Locate the server with the IP address 1.2.3.4
-iptools 0:
-  url: http://www.iptools.biz
-  title: DNS and IP tools
-  tags:
-  - internet tool
 ist 0:
   url: http://www.istockphoto.com
   title: Istockphoto
@@ -3937,11 +3863,6 @@ jam 1:
   - copyleft
   examples:
     electronic: Search Jamendo for "electronic"
-jamt 1:
-  url: http://www.jamendo.com/tag/{%style of music}
-  title: Jamendo
-  tags:
-  - old
 japi 1:
   url: http://www.google.com/search?hl=en&q={%query}+inurl%3Ajavase+6+docs+api+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: Java Platform SE6 API Search
@@ -4062,19 +3983,9 @@ journalup 1:
   title: Uni Potsdam Zeitschriftenbibliothek
   tags:
   - old
-jp 1:
-  url: http://www.jappy.de/suche?name={%query}
-  title: Jappy
-  tags:
-  - old
 jpc 1:
   url: http://www.jpc.de/jpcng/home/search?fastsearch={%query}&pd_orderby=score
   title: JPC fast search
-  tags:
-  - old
-jq 1:
-  url: http://docs.jquery.com/Special:Search?search={%query}
-  title: JQuery API Search
   tags:
   - old
 jqg 1:
@@ -4082,15 +3993,6 @@ jqg 1:
   title: JQuery API Search
   tags:
   - old
-jquery 1:
-  url: http://docs.jquery.com/Special:Search?search={%query}
-  title: JQuery API Search
-  tags:
-  - programming
-  - jquery
-  - javascript
-  examples:
-    append: Search for .append() function
 jr 2:
   url: http://www.jorudan.co.jp/norikae/cgi/nori.cgi?rf=top&eok1=0&eok2=0&pg=0&eki1={%start}&rec1=-&eki2={%ziel}&Cway=0&S.x=60&S.y=11&S=%E6%A4%9C%E7%B4%A2&Csg=1
   title: Jorudan japanese journey database
@@ -4101,40 +4003,11 @@ jsr 1:
   title: Java Specification Requests
   tags:
   - old
-junit 0:
-  url: http://junit.sourceforge.net/javadoc/
-  title: Junit API Search
-  tags:
-  - old
-junit 1:
-  url: https://www.google.com/search?hl=en&q=site%3Ahttp%3A%2F%2Fjunit.sourceforge.net%2Fjavadoc%2F+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
-  title: Junit API Search
-  tags:
-  - old
-jx 1:
-  url: http://jux2.com/best.php?q={%query}&submit=Search
-  title: Jux2.com
-  tags:
-  - old
 k 1:
   url: http://www.korrekturen.de/cgi-bin/wortliste_suche.pl?ordner=vollsuche&suchbegr={%query}
   title: Korrekturen.de
   tags:
   - old
-kat 0:
-  url: https://kickass.cd
-  title: KickassTorrents
-  tags:
-  - torrent
-  - download
-kat 1:
-  url: https://katcr.co/katsearch/page/1/{%query}
-  title: KickassTorrents
-  tags:
-  - torrent
-  - download
-  examples:
-    kat theme song: Search for the sites’s theme song
 keepvid 1:
   url: http://keepvid.com/?url={%url}&site=aa
   title: Keepvid
@@ -4175,24 +4048,6 @@ kuler 1:
   title: Kuler
   tags:
   - old
-kultura 1:
-  url: http://www.culture.pl/en/culture/wyszukiwanie/szukaj?query={%query}
-  title: Culture.pl
-  tags:
-  - old
-ky 2:
-  url: http://www.kayak.de/flights/{%departure-destination}/20{%date YY-MM-DD}
-  title: Kayak flight search
-  tags:
-  - old
-ky 3:
-  url: http://www.kayak.de/flights/{%from}-{%to}/20{%date}
-  title: Kayak Flight Search
-  tags:
-  - travel
-  - flights
-  examples:
-    txl, tfs, 13-12-24: search for flights from TXL to TFS on Dec 24, 2013
 kym 1:
   url: http://knowyourmeme.com/search?q={%query}
   title: Know Your Meme
@@ -4304,20 +4159,6 @@ lg 1:
 lh 0:
   url: http://www.lufthansa.com
   title: Lufthansa
-lily 0:
-  url: http://www.lilyproject.org/maven-site/current/cr/lily-repository/lily-repository-api/apidocs/index.html
-  title: Lily API
-  tags:
-  - programming
-  - lily
-lily 1:
-  url: https://www.google.com/search?hl=en&q=site%3Ahttp://www.lilyproject.org/maven-site/2.0/cr/lily-repository/lily-repository-api/apidocs/+{%query}&ie=utf-8&btnI=1
-  title: Lily API
-  tags:
-  - programming
-  - lily
-  examples:
-    record: search for interface Record in the Lily API
 lin 1:
   url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
   title: Linguee
@@ -4390,21 +4231,9 @@ ln 1:
   - social network
   examples:
     john smith: Search for a John Smith
-lo 1:
-  url: http://label-online.de/index.php/action/textsearch?suchen={%query}&submit=ok
-  title: Label Online
-  tags:
-  - old
-loc 1:
-  url: http://www.loc.gov/fedsearch/metasearch/?cclquery={%query}
-  title: Library Of Congress
-  tags:
-  - old
 loe 1:
   url: https://en.wikipedia.org/wiki/List_of_{%title}_episodes
   title: List of episodes on Wikipedia
-  tags:
-  - old
 lotto 0:
   url: http://www.lottozahlen.info/
   title: Lottozahlen
@@ -4447,22 +4276,6 @@ lyrc 2:
   title: Lyrc
   tags:
   - old
-lyric 1:
-  url: http://lyrics.wikia.com/Special:Search?go=Article&search={%article}
-  title: LyricWiki
-  tags:
-  - music
-  - lyrics
-m2 1:
-  url: http://metager2.de/search/index.php?ses=web&q={%query}
-  title: MetaGer
-  tags:
-  - old
-ma 1:
-  url: http://mahalo.com/Special:Search?search={%query}
-  title: Mahalo
-  tags:
-  - old
 macs 1:
   url: http://www.coffer.com/mac_find?string={%query}
   title: MAC address search
@@ -4471,11 +4284,6 @@ macs 1:
   - mac
   - address
   - network
-mailinator 1:
-  url: http://mailinator.com/maildir.jsp?email={%mailbox}
-  title: Mailinator
-  tags:
-  - old
 maj 1:
   url: http://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q={%query}&btnG=Search&sitesearch=MajorGeeks.com
   title: Majorgeeks
@@ -4573,16 +4381,6 @@ medipreis 1:
   title: Medipreis Apothekenpreisvergleich
   tags:
   - old
-melz 1:
-  url: http://www.melzoo.com/en/search?query={%query}&type=web
-  title: Melzoo search
-  tags:
-  - old
-melzoo 1:
-  url: http://www.melzoo.com/en/search?query={%query}&type=web
-  title: Melzoo search
-  tags:
-  - old
 mema 1:
   url: http://memory-alpha.org/index.php?title=Special%3ASearch&search={%query}
   title: Memory Alpha
@@ -4591,16 +4389,6 @@ mema 1:
   - science-fiction
   examples:
     kirk: Search for "kirk"
-mensahu 0:
-  url: http://www.studentenwerk-berlin.de/mensen/speiseplan/
-  title: Humboldt-Universität Berlin, Speiseplan
-  tags:
-  - old
-mensaup 0:
-  url: http://www.studentenwerk-potsdam.de/speiseplan/
-  title: Uni Potsdam, Speiseplan
-  tags:
-  - old
 mesh 1:
   url: http://www.ncbi.nlm.nih.gov/mesh?term={%termName}
   title: MeSH term
@@ -4611,16 +4399,6 @@ metal 1:
   title: Metal Archives
   tags:
   - old
-mf 1:
-  url: http://megafilez.co/search.html?q={%query}
-  title: MegaFilez.co
-  tags:
-  - files
-  - file sharing
-  - downloads
-  - mega
-  examples:
-    free music: search for free music Mega
 mg 1:
   url: http://www.mobygames.com/search/quick?q={%query}
   title: MobyGames Quick Search
@@ -4634,11 +4412,6 @@ mga 1:
   - mageia
   examples:
     http://mageia.madb.org/package/list/t_search/kde: Search for kde packages
-mi 1:
-  url: http://www.mininova.org/search/?search={%query}
-  title: Mininova
-  tags:
-  - old
 mind 1:
   url: https://www.mindfactory.de/search_result.php?search_query={%query}
   title: Mindfactory.de
@@ -4679,31 +4452,11 @@ mouser 1:
   title: mouser.de
   examples:
     Z80: Search mouser.de for "Z80"
-mozbot 1:
-  url: http://www.mozbot.com/search?q={%query}
-  title: Mozbot
-  tags:
-  - old
-msdn 1:
-  url: http://social.msdn.microsoft.com/Search/en-US?query={%query}
-  title: Microsoft Developers Network
-  tags:
-  - programming
-  examples:
-    regex: Search for "regex"
-msdn2 1:
-  url: http://msdn2.microsoft.com/en-us/library/{%query}.aspx
-  title: Microsoft Developers Network
-  tags:
-  - old
 msn 1:
   url: http://search.msn.com/results.aspx?q={%query}
   title: MSN Search
   tags:
   - old
-mstar 1:
-  url: https://www.morningstar.com/stocks/xnys/{%ticker}/quote.html
-  title: Morningstar Stock Quote
 mt 1:
   url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff={%query}
   title: Mac-TV Archiv
@@ -4712,29 +4465,6 @@ mt 1:
 mtf 1:
   url: http://www.mac-tv.de/Forum/search.php?do=process&query={%query}
   title: Mac-TV Forum
-  tags:
-  - old
-mtg 1:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-mtgdb 1:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-mtgdbscg 1:
-  url: http://gatherer.wizards.com/Pages/Search/Default.aspx?name=+["{%query}"]||type=+["{%query}"]||subtype=+["{%query}"]||text=+["{%query}"]
-  title: Gatherer Magic Card Database
-  tags:
-  - magic
-  - cards
-mu 1:
-  url: http://www.macupdate.com/search.php?arch=all&keywords={%query}&os=macosx
-  title: MacUpdate.com
   tags:
   - old
 mv 0:
@@ -4786,11 +4516,6 @@ myg 1:
 myip 0:
   url: http://ipinfo.info/html/privacy-check.php
   title: Myip
-  tags:
-  - old
-myleo 1:
-  url: http://pda.leo.org/ende?lp=&search={%query}
-  title: Mobile Leo
   tags:
   - old
 mymk 1:
@@ -4934,14 +4659,6 @@ nv 1:
   title: Neeva
   tags:
   - web search
-nzb 1:
-  url: http://www.nzbclub.com/search.aspx?q={%query}
-  title: NZBClub.com
-  tags:
-  - downloads
-  - file sharing
-  examples:
-    creative commons: Search for "creative commons"
 oca 1:
   url: http://openclipart.org/search/?query={%query}
   title: Open Clip Art Library
