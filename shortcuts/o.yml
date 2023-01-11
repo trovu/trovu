@@ -2501,7 +2501,7 @@ freenode 1:
   examples:
     android: Search for Android-related IRC channels on Freenode
 freesound 1:
-  url: http://www.freesound.org/searchText.php?search={%query}
+  url: https://freesound.org/search/?q={%query}
   title: Freesound
 fremdwort 1:
   url: http://www.fremdwort.de/suche.php?term={%query}
