@@ -4534,10 +4534,8 @@ myspace 1:
   tags:
   - old
 mysql 1:
-  url: http://dev.mysql.com/doc/mysql/search.php?q={%query}
+  url: https://dev.mysql.com/doc/search/?q={%query}
   title: MySQL Documentation
-  tags:
-  - old
 mytv 0:
   url: http://m.tvtoday.de
   title: Mobile TVInfo
