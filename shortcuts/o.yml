@@ -6746,10 +6746,8 @@ viaf 1:
   examples:
     noam chomsky: returns author records on Noam Chomsky from several national libraries
 vim 1:
-  url: http://vim.wikia.com/wiki/index.php?search={%query}
-  title: Vim
-  tags:
-  - old
+  url: https://vim.fandom.com/wiki/Special:Search?search={%query}
+  title: Vim Tips Wiki
 vimeo 0:
   url: http://vimeo.com
   title: Vimeo
