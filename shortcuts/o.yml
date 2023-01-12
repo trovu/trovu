@@ -722,15 +722,6 @@ btv 1:
   - entertainment
   examples:
     star trek: Search for "star trek"
-buerklin 1:
-  url: https://www.buerklin.com/default.asp?l=e&event=ShowSE%28%29&search={%Artikel}
-  title: Bürklin Elektronics
-  tags:
-  - shopping
-  - electronics
-  - bürklin
-  examples:
-    USB: search for "USB"
 bv 1:
   url: http://www.bing.com/videos/?q={%video-query}
   title: Bing Videos
@@ -6893,16 +6884,6 @@ wa 1:
   - wolfram alpha
   examples:
     gdp of germany vs. usa: Compare the GDP of Germany and the USA
-waceu 2:
-  url: http://{%server}-eu.warcrafter.net/{%name}
-  title: Warcrafter search EU-server
-  tags:
-  - old
-wacus 2:
-  url: http://{%server}-us.warcrafter.net/{%name}
-  title: Warcrafter search US-server
-  tags:
-  - old
 wadoku 1:
   url: http://www.wadoku.de/wadoku/search/{%suchwort}
   title: Wadoku suche
@@ -6940,11 +6921,6 @@ wb 1:
   tags:
   - wiki
   - copyleft
-wbg 1:
-  url: http://www.wbg-wissenverbindet.de/WBGShop/php/Proxy.php?purl=%2Fwbg%2Fproducts%2Fsearch%2Fresult.html&quick={%Suche}&go.x=5&go.y=5
-  title: Wissenschaftliche Buchgesellschaft
-  tags:
-  - old
 wbit 1:
   url: http://www.woerterbuch.info/?query={%query}&s=dict&l=en
   title: Woerterbuch.info
@@ -7119,19 +7095,9 @@ whois 1:
   - domains
   examples:
     google.com: show the owner of the domain google.com
-whosangsong 1:
-  url: http://www.secondhandsongs.com/cgi/cluster.php?title=stand+by+me&topsearch={%query}&topsearchtype=song
-  title: Secondhandsongs
-  tags:
-  - old
 wikia 1:
   url: http://www.wikia.com/wiki/Special:Search?tab=1&search={%query}
   title: Wikia
-  tags:
-  - old
-wikileaks 0:
-  url: http://www.taz.de/support-WikiLeaks
-  title: Wikileaks
   tags:
   - old
 wikimapia 1:
@@ -7161,11 +7127,6 @@ wissen 1:
 wit 1:
   url: https://it.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikipedia Italia
-wkl-ż 1:
-  url: http://www.gotowanie.wkl.pl/szukaj.php?key={%query}&szukaj
-  title: Wielkie Żarcie
-  tags:
-  - old
 wl 0:
   url: http://www.taz.de/support-WikiLeaks
   title: Wikileaks
@@ -7182,16 +7143,6 @@ wle 1:
     how i: List of all "How I Met Your Mother" episodes on Wikipedia
     girls: List of all "Girls" episodes on Wikipedia
     simpsons horror: List of all "The Simpsons Treehouse of Horror" episodes on Wikipedia
-wlwf 1:
-  url: http://www.wlw.de/sse/MainServlet?sprache=de&land=DE&suchbegriff={%firm}&anzeige=firma
-  title: Wer liefert was? - Suche
-  tags:
-  - old
-wlwp 1:
-  url: http://www.wlw.de/sse/MainServlet?sprache=de&land=DE&anzeige=produkt&suchbegriff={%product}
-  title: Wer liefert was? - Suche
-  tags:
-  - old
 wm 0:
   url: https://{$language}.m.wikipedia.org/
   title: Wikipedia, mobile
@@ -7256,11 +7207,6 @@ wordnet 1:
   - dictionary
   examples:
     complicated: look up senses of "complicated" in WordNet
-wow 1:
-  url: http://www.google.com/search?hl={$language}&sitesearch=www.sfs.uni-tuebingen.de&q={%query}+inurl%3A%2F%7Elothar%2Fnw%2F&ie=utf-8
-  title: Google-Suche in der Wortwarte
-  tags:
-  - old
 wpp 0:
   url: http://wordpress.org/plugins/
   title: WordPress Plugin Directory
@@ -7346,22 +7292,6 @@ wssl 0:
 wst 1:
   url: https://translate.google.de/translate?hl={$language}&sl=en&tl={$language}&u=https://simple.wikipedia.org/wiki/{%query}
   title: Simple Wikipedia translated
-wt 0:
-  url: http://wikitravel.org/{$language}/
-  title: Wikitravel
-  tags:
-  - wiki
-  - travel
-  - guide
-wt 1:
-  url: http://wikitravel.org/{$language}/{%article}
-  title: Wikitravel
-  tags:
-  - wiki
-  - travel
-  - guide
-  examples:
-    berlin: Open Wikitravel's tourist information about Berlin
 wu 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Search?go=Article&search=User:{%user}
   title: Wikipedia, User Namespace
