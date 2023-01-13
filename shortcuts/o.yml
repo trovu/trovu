@@ -572,7 +572,7 @@ bible 1:
   examples:
     flesh: Search the bible for "flesh"
 bible 2:
-  url: http://www.bibleserver.com/search/{%translation}/{%query}/1
+  url: https://www.bibleserver.com/search/{%translation}/{%query}
   title: Bibleserver.com
   tags:
   - bible
