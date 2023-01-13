@@ -76,15 +76,6 @@
   title: 29c3 Wiki Search
   tags:
   - ccc
-2v 1:
-  url: http://www.2video.de/?action=download&dl={%url}&req=downloads
-  title: 2Video
-  tags:
-  - video
-  - download
-  - youtube
-  examples:
-    http://de.youtube.com/watch?v=PAYxTJX-4L4: generate download link for Youtube-Video, identified by the specified URL; does also work for several other video-portals
 32c3 0:
   url: https://events.ccc.de/congress/2015/
   title: 32nd Chaos Communication Congress Hamburg
@@ -99,9 +90,6 @@
 33c3lt 0:
   url: https://events.ccc.de/congress/2016/wiki/Static:Lightning_Talks
   title: 33C3 Lightning Talks
-33c3streams 0:
-  url: http://streaming.media.ccc.de/33c3/
-  title: 33C3 Videostreams
 34c3 0:
   url: https://events.ccc.de/tag/34c3/
   title: 34C3 Chaos Communication Congress 2017 Leipzig
@@ -748,11 +736,6 @@ cadsilly 0:
   title: Current Ctrl-Alt-Del-Silly
   tags:
   - old
-cake 1:
-  url: http://api.cakephp.org/search/render{%query}
-  title: CakePHP API
-  tags:
-  - old
 calc 0:
   url: https://web2.0calc.com/
   title: Scientific online calculator
@@ -1123,16 +1106,6 @@ d 1:
   - web search
   examples:
     berlin: Search DuckDuckGo for "berlin"
-dadd 1:
-  url: http://delicious.com/post?url={%url}
-  title: 'delicious: add URL'
-  tags:
-  - delicious
-  - links
-  - social
-  - bookmarks
-  examples:
-    http://www.serchilo.net: Add Serchilo.net to your delicious bookmarks
 dao 0:
   url: http://dragonage.wikia.com/wiki/Dragon_Age_Wiki
   title: Dragon Age Origins Wiki
@@ -1141,11 +1114,6 @@ dao 0:
 dao 1:
   url: http://dragonage.wikia.com/wiki/Special:Search?search={%query}&go=1
   title: Dragon Age Origins Wiki
-  tags:
-  - old
-dart 1:
-  url: http://www.dart-europe.eu/basic-results.php?kw={%keywords}
-  title: DART-Europe E-theses Portal
   tags:
   - old
 datecalc 0:
@@ -1275,11 +1243,6 @@ debian-wiki 0:
   title: Debian Wiki
   tags:
   - old
-debian-wiki 1:
-  url: https://wiki.debian.org/?action=fullsearch&context=180&value={%query}&fullsearch=Text
-  title: Debian Wiki Search
-  tags:
-  - old
 debp 0:
   url: https://planet.debian.org/
   title: Debian Planet
@@ -1362,11 +1325,6 @@ derivative 1:
 derstandard 1:
   url: http://derstandard.at/suche?query={%query}
   title: DerStandard.at search
-  tags:
-  - old
-df 0:
-  url: http://df.magmawiki.com/index.php/Main_Page
-  title: Dwarf Fortress Wiki
   tags:
   - old
 dh 1:
@@ -1716,36 +1674,6 @@ dsh 1:
   - datasheet
   examples:
     ADXL320: Search for ADXL320 sensor in datasheetcatalog.com
-dt 1:
-  url: http://delicious.com/tag/{%tag}
-  title: 'delicious: tag search'
-  tags:
-  - delicious
-  - links
-  - social
-  - bookmarks
-  examples:
-    berlin: Search for links tagged with 'berlin'
-du 1:
-  url: http://delicious.com/{%user}
-  title: 'delicious: user bookmarks'
-  tags:
-  - delicious
-  - links
-  - social
-  - bookmarks
-  examples:
-    bob: Show links of delicious user "bob"
-du 2:
-  url: http://delicious.com/{%user}/{%tag}
-  title: 'delicious: user bookmarks with tag'
-  tags:
-  - delicious
-  - links
-  - social
-  - bookmarks
-  examples:
-    bob, language: Show links of delicious user "bob" tagged with "language"
 duck 1:
   url: http://duckduckgo.com/?q={%query}
   title: Duck Duck Go
@@ -1817,14 +1745,6 @@ ebook 1:
   title: Ebooks Search Engine
   tags:
   - old
-ebookee 1:
-  url: http://www.ebookee.net/search.php?q={%query}
-  title: Ebookee
-  tags:
-  - ebooks
-  - downloads
-  examples:
-    free tutorials: Search for free tutorial ebooks
 ec 0:
   url: http://ecosia.org/
   title: Ecosia
@@ -3624,16 +3544,6 @@ iafd 1:
   title: Internet adult film database
   tags:
   - old
-iata 1:
-  url: http://www.world-airport-codes.com/search/?apt={%code or city}
-  title: Airport Codes (world-airport-codes.com)
-  tags:
-  - travel
-  - airports
-  - aviation
-  examples:
-    lpa: search for the airport code "LPA"
-    berlin: search for airports in Berlin
 ibash 0:
   url: http://ibash.de/neueste_1.html
   title: Ibash
@@ -3692,21 +3602,6 @@ ikeanl 1:
   title: Ikea
   tags:
   - old
-il 1:
-  url: http://iload.to/de/category/-1-Alle-Downloads/search/{%query}/
-  title: ILoad.to search
-  tags:
-  - old
-iload 1:
-  url: http://www.google.de/search?hl=de&source=hp&btnI=Auf+gut+Glück!&aq=f&aqi=g7&aql=&oq=&q={%query}+iload
-  title: ILoad.to Suche
-  tags:
-  - old
-im 1:
-  url: http://www.imeem.com/tag/?q={%query}
-  title: Imeem
-  tags:
-  - old
 imdb 0:
   url: http://www.imdb.com
   title: Internet Movie Database Homepage
@@ -3733,11 +3628,6 @@ imeem 1:
 imfdb 1:
   url: http://www.imfdb.org/wiki/{%query}
   title: Imfdb
-  tags:
-  - old
-imhalal 1:
-  url: http://www.imhalal.com/beta/index.php/web/{%query}
-  title: ImHalal Web Search
   tags:
   - old
 imslp 0:
@@ -3797,7 +3687,7 @@ ipkat 0:
   - ip law
   - copyright
 ist 0:
-  url: http://www.istockphoto.com
+  url: https://www.istockphoto.com
   title: Istockphoto
   tags:
   - images
@@ -3805,7 +3695,7 @@ ist 0:
   examples:
     christmas: search photos about christmas
 ist 1:
-  url: http://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
+  url: https://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
   title: Istockphoto
   tags:
   - images
@@ -3813,7 +3703,7 @@ ist 1:
   examples:
     christmas: search photos about christmas
 istockphoto 1:
-  url: http://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
+  url: https://www.istockphoto.com/file_search.php?action=file&text={%query}&refnum=serchilo
   title: Istockphoto
   tags:
   - old
@@ -3824,23 +3714,6 @@ isup 1:
   - domains
   examples:
     google.com: Check is google.com is down
-ix 0:
-  url: https://ixquick.com/
-  title: Ixquick Homepage
-  tags:
-  - web search
-ix 1:
-  url: https://ixquick.com/do/metasearch.pl?query={%query}
-  title: Ixquick
-  tags:
-  - web search
-  examples:
-    berlin: Search for "berlin"
-ixs 0:
-  url: https://ixquick.com/
-  title: Ixquick Meta Search
-  tags:
-  - old
 jam 1:
   url: https://www.jamendo.com/search?qs=q={%query}
   title: Jamendo
@@ -3987,11 +3860,6 @@ jr 2:
 jsr 1:
   url: http://jcp.org/en/jsr/summary?id={%query}
   title: Java Specification Requests
-  tags:
-  - old
-k 1:
-  url: http://www.korrekturen.de/cgi-bin/wortliste_suche.pl?ordner=vollsuche&suchbegr={%query}
-  title: Korrekturen.de
   tags:
   - old
 keepvid 1:
@@ -5369,14 +5237,6 @@ qtdoc 1:
   title: Search Qt documentation
   tags:
   - old
-quiet 1:
-  url: http://quietube.com/v.php/{%URL|encoding=none}
-  title: Quietube
-  tags:
-  - video
-  - youtube
-  examples:
-    http://www.youtube.com/watch?v=3TIN955FYeg: Open video on a blank page, without any menus / add
 qw 1:
   url: https://www.qwant.com/?q={%query}
   title: qwant search engine
@@ -5768,11 +5628,6 @@ si 1:
 skapiec 0:
   url: http://www.skapiec.pl/szukaj/w_calym_serwisie/${query}
   title: Skapiec - Polish price comparison site
-  tags:
-  - old
-skreemr 1:
-  url: http://www.skreemr.com/results.jsp?q={%query}
-  title: SkreemR
   tags:
   - old
 skyrock 1:
@@ -7127,11 +6982,6 @@ wissen 1:
 wit 1:
   url: https://it.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikipedia Italia
-wl 0:
-  url: http://www.taz.de/support-WikiLeaks
-  title: Wikileaks
-  tags:
-  - old
 wle 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Aen.wikipedia.org+intitle%3A"list+of"+intitle%3A"episodes"+{%title}
   title: Wikipedia, List of episodes
@@ -7369,11 +7219,6 @@ x 1:
   title: Exalead
   tags:
   - old
-x86 1:
-  url: http://www.google.com/search?hl=en&q=site%3Avitaly_filatov.tripod.com+intitle:{%command}
-  title: X86 Assembler
-  tags:
-  - old
 xing 0:
   url: https://www.xing.com/
   title: Xing
@@ -7408,11 +7253,6 @@ xkcds 1:
   - comic
   examples:
     correlation: search for xkcd comics about "correlation"
-xle 1:
-  url: http://www.google.com/search?hl={$language}&lr=lang_&q={%query}%20site%3Awww2.parc.com%20inurl%3A%22%2Fisl%2Fgroups%2Fnltt%2Fxle%2Fdoc%2F%22&ie=utf-8
-  title: XLE Documentation
-  tags:
-  - old
 xtvi 0:
   url: http://www.xtvi.com
   title: XTVi
@@ -7421,11 +7261,6 @@ xtvi 0:
 xtvi 1:
   url: http://www.xtvi.com/?mode=search&q={%query}
   title: XTVi
-  tags:
-  - old
-xw 1:
-  url: http://www.exalead.com/search/wikipedia/results/?q={%wiki-query}
-  title: Exalead
   tags:
   - old
 y 1:
@@ -7621,14 +7456,6 @@ yt 1:
   - youtube
   examples:
     cartoon: Youtube search for "cartoon"
-ytc 1:
-  url: http://www.youtube.com/user/{%user}/?hl={$language}&persist_hl=1
-  title: Youtube channel
-  tags:
-  - video
-  - youtube
-  examples:
-    zdf: Search for "zdf"
 ytd 1:
   url: https://www.youtube.com/results?sp=CAI%253D&search_query={%query}
   title: Youtube, sorted by upload date
@@ -7663,11 +7490,6 @@ ytm 1:
   - youtube
   examples:
     cartoon: search cartoon videos
-ytorr 1:
-  url: http://www.youtorrent.com/tag/?q={%query}
-  title: YouTorrent
-  tags:
-  - old
 ytp 1:
   url: http://www.youtube.com/results?search_type=search_playlists&uni=3&search_query={%query}
   title: Youtube Playlists
@@ -7729,11 +7551,6 @@ zeitdiff 0:
   - time
   - date
   - difference
-zf 1:
-  url: http://framework.zend.com/search?query={%query}&language={$language}&type%5B%5D=all
-  title: Zend Framework
-  tags:
-  - old
 zhen 1:
   url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
   title: Chinese
@@ -7766,26 +7583,6 @@ zp 1:
 zt 0:
   url: http://{$language}.znout.org
   title: Znout Search
-  tags:
-  - old
-zt 1:
-  url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8
-  title: Znout Search
-  tags:
-  - old
-zt! 1:
-  url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&btnI=1
-  title: Znout I'm Feeling Lucky
-  tags:
-  - old
-zt100 1:
-  url: http://www.google.com/cse?cx=partner-pub-5089391050563016%3Armet75cxijr&hl={$language}&q={%query}&ie=utf-8&num=100
-  title: 'Znout: Show 100 results at once'
-  tags:
-  - old
-zvdd 1:
-  url: http://www.digitalisiertedrucke.de/search?p={%query}
-  title: Zentrales Verzeichnis Digitalisierter Drucke
   tags:
   - old
 zvv 2:
