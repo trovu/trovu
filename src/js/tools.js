@@ -232,8 +232,8 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
     return shortcut;
   }
   // Only letter a for now.
-  if (!key[0].match(/[abc]/)) {
-    return shortcut;
+  if (!key[0].match(/[^a-z]/)) {
+    //return shortcut;
   }
   let url = shortcut.url;
   const args = ['foo', 'bar', 'baz', 'a', 'b', 'c'];
