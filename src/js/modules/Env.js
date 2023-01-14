@@ -478,6 +478,7 @@ export default class Env {
       for (const key in shortcuts) {
         const shortcut = shortcuts[key];
 
+        shortcut.key = key;
         [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
         shortcut.namespace = namespace.name;
         shortcut.arguments = UrlProcessor.getArgumentsFromString(
