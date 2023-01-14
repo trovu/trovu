@@ -6560,14 +6560,6 @@ validator 1:
   title: W3 Validator
   tags:
   - old
-vbblive 0:
-  url: http://fahrinfo.vbb.de/bin/help.exe/dn?L=vs_mobilitymap&tpl=fullmap&tabApp=show
-  title: VBB Verkehrsverbund Berlin-Brandenburg Livemap
-  tags:
-  - berlin
-  - brandenburg
-  - public transport
-  - live map
 vbn 2:
   url: http://www.fahrplaner.de/hafas/query.exe/dn?L=vbn&{%Start},{%Ziel}
   title: VBN Verkehrsverbund NDS/Bremen
@@ -6750,11 +6742,6 @@ wam 1:
 watchz 1:
   url: http://zattoo.com/view/{%channel}
   title: Zattoo
-  tags:
-  - old
-way 1:
-  url: http://www.worryaboutyou.com/?q={%query}
-  title: Worry About You
   tags:
   - old
 wb 0:
