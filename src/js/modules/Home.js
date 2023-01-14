@@ -99,6 +99,18 @@ export default class Home {
           '#alert',
         ).innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
         break;
+      case 'removed':
+        document.querySelector('#alert').removeAttribute('hidden');
+        document.querySelector(
+          '#alert',
+        ).innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
+          params.key,
+        )}+repo%3Atrovu%2Ftrovu-data&type=code">
+          ${params.query}</a> was removed as does not adhere to our 
+          <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Content-policy">Content policy</a>. 
+          But you can <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts">
+          create a user shortcut in your own namespace</a>.`;
+        break;
     }
   }
 
