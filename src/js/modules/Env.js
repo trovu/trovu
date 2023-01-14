@@ -47,6 +47,9 @@ export default class Env {
     if (this.alternative) {
       params['alternative'] = this.alternative;
     }
+    if (this.key) {
+      params['key'] = this.key;
+    }
 
     return params;
   }
