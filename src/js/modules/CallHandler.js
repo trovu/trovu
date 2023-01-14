@@ -146,6 +146,9 @@ export default class CallHandler {
       case 'deprecated':
         params.alternative = response.alternative;
         break;
+      case 'removed':
+        params.key = response.key;
+        break;
     }
     params.status = response.status;
     const paramStr = Helper.getUrlParamStr(params);
