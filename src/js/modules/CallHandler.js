@@ -78,14 +78,19 @@ export default class CallHandler {
       return response;
     }
 
-    if (!shortcut.deprecated) {
-      response.redirectUrl = shortcut.url;
-    } else {
+    if (shortcut.deprecated) {
       response.status = 'deprecated';
       response.alternative = this.getAlternative(shortcut, env);
       return response;
     }
 
+    if (shortcut.removed) {
+      response.status = 'removed';
+      response.key = shortcut.key;
+      return response;
+    }
+
+    response.redirectUrl = shortcut.url;
     response.status = 'found';
 
     if (env.debug) Helper.log('');
