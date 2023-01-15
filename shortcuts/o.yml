@@ -2046,14 +2046,6 @@ fbp 0:
   tags:
   - facebook
   - social network
-fbp 1:
-  url: https://www.facebook.com/search/people/?q={%person}
-  title: Facebook, People
-  tags:
-  - facebook
-  - social network
-  examples:
-    john: Search for people named "John"
 fbpa 1:
   url: https://www.facebook.com/search/pages/?q={%query}
   title: Facebook, Pages
