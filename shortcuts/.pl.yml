@@ -205,7 +205,7 @@ nk 1:
   examples:
     kowalski: Szukaj "kowalski"
 pkp 2:
-  url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&start=1&queryPageDisplayed=yes
+  url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
   tags:
   - travel
@@ -216,7 +216,7 @@ pkp 2:
     w, p: następne połączenie z Warszawy do Poznania
     gdansk!, wroclaw!: następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny
 pkp 3:
-  url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&T={%czas|type=time|output=HH:mm}&start=1&queryPageDisplayed=yes
+  url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&T={%czas|type=time|output=HH:mm}&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
   tags:
   - travel
@@ -225,7 +225,7 @@ pkp 3:
   examples:
     kutno, gniezno, 10: połączenie z Kutna do Gniezna dzisiaj o godz. 10
 pkp 4:
-  url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}&Z={%cel|type=city}&T={%czas|type=time|output=HH:mm}&D={%data|type=date|output=DD.MM.YYYY}&start=1&queryPageDisplayed=yes
+  url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&T={%czas|type=time|output=HH:mm}&D={%data|type=date|output=DD.MM.YYYY}&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
   tags:
   - travel
