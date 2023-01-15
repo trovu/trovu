@@ -2055,13 +2055,13 @@ fbp 1:
   examples:
     john: Search for people named "John"
 fbpa 1:
-  url: https://www.facebook.com/search/results.php?q={%page}&type=pages
-  title: 'Facebook Search: Pages'
+  url: https://www.facebook.com/search/pages/?q={%query}
+  title: Facebook, Pages
   tags:
   - facebook
   - social network
   examples:
-    serchilo: Search for "serchilo"
+    berlin: Search for pages about Berlin
 fbpe 1:
   url: https://www.facebook.com/search/results.php?q={%name}&type=users
   title: 'Facebook Search: People'
