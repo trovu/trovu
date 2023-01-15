@@ -1961,14 +1961,6 @@ fb 1:
   - social network
   examples:
     john doe: Facebook search for "john doe"
-fbapp 1:
-  url: https://www.facebook.com/search/results.php?q={%app}&type=apps
-  title: 'Facebook Search: Apps'
-  tags:
-  - facebook
-  - social network
-  examples:
-    tetris: Search for "tetris"
 fbe 0:
   url: http://www.facebook.com/events
   title: Facebook, Events
