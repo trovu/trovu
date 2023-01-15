@@ -2035,15 +2035,15 @@ fbmu 1:
   examples:
     madonna: Search for "madonna"
 fbook 0:
-  url: http://www.facebook.com
-  title: Facebook Start Page
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fb
+    created: '2023-01-15'
 fbook 1:
-  url: http://www.facebook.com/s.php?q={%query}&init=q
-  title: Facebook Global Search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fb {%1}
+    created: '2023-01-15'
 fbot 1:
   url: http://www.fastbot.de/index.php?query={%query}
   title: Fastbot
