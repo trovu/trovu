@@ -1976,8 +1976,8 @@ fbe 0:
   - facebook
   - social network
 fbe 1:
-  url: https://www.facebook.com/search/results.php?q={%event}&type=events
-  title: 'Facebook Search: Events'
+  url: https://www.facebook.com/search/events/?q={%event}
+  title: Facebook, Events
   tags:
   - facebook
   - social network
