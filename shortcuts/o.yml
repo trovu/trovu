@@ -1983,7 +1983,7 @@ fbev 1:
 fbf 1:
   deprecated:
     alternative:
-      query: fbp {%1}
+      query: fbpe {%1}
     created: '2023-01-15'
 fbg 1:
   url: https://www.facebook.com/search/groups/?q={%groups}
