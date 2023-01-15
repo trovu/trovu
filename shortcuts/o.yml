@@ -2109,6 +2109,14 @@ fbugq 1:
   title: search for a term in freedesktop.org bugs (query)
   tags:
   - old
+fbv 1:
+  url: https://www.facebook.com/search/videos/?q={%query}
+  title: Facebook, Videos
+  tags:
+  - facebook
+  - social network
+  examples:
+    berlin: Search for videos about Berlin
 fbw 0:
   url: https://www.fahrerbewertung.de
   title: Fahrerbewertung
