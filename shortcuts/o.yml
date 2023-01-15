@@ -1989,18 +1989,23 @@ fbev 1:
       query: fbe {%1}
     created: '2023-01-15'
 fbf 1:
-  url: http://www.facebook.com/friends.php?fq={%name}
-  title: Facebook Friend Search
-  tags:
-  - old
-fbgr 1:
-  url: https://www.facebook.com/search/results.php?q={%group}&type=groups
+  deprecated:
+    alternative:
+      query: fbp {%1}
+    created: '2023-01-15'
+fbg 1:
+  url: https://www.facebook.com/search/groups/?q={%groups}
   title: 'Facebook Search: Groups'
   tags:
   - facebook
   - social network
   examples:
-    pancakes: Search for "pancakes"
+    pancakes: Search for groups about pancakes
+fbgr 1:
+  deprecated:
+    alternative:
+      query: fbg {%1}
+    created: '2023-01-15'
 fbi 0:
   url: http://www.facebook.com/inbox/#!/messages/
   title: Facebook Messages
@@ -2057,6 +2062,14 @@ fbp 0:
   tags:
   - facebook
   - social network
+fbp 1:
+  url: https://www.facebook.com/search/people/?q={%person}
+  title: Facebook, People
+  tags:
+  - facebook
+  - social network
+  examples:
+    john: Search for people named "John"
 fbpa 1:
   url: https://www.facebook.com/search/results.php?q={%page}&type=pages
   title: 'Facebook Search: Pages'
