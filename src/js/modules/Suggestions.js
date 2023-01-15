@@ -138,7 +138,7 @@ export default class Suggestions {
 
     for (const namespace of this.namespaces) {
       for (const shortcut of Object.values(namespace.shortcuts)) {
-        if (shortcut.deprecated) {
+        if (shortcut.deprecated || shortcut.removed) {
           continue;
         }
         if (keyword == shortcut.keyword) {

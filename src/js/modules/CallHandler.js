@@ -10,34 +10,30 @@ import UrlProcessor from './UrlProcessor.js';
 
 export default class CallHandler {
   /**
-   * Redirect in case a shortcut was not found.
-   *
-   * @param {string} status       - The status of the call.
-   *
-   * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
+   * The 'main' function of this class.
    */
-  static redirectHome(response) {
-    const params = Helper.getUrlParams();
-    switch (response.status) {
-      case 'deprecated':
-        params.alternative = response.alternative;
-        break;
-    }
-    params.status = response.status;
-    const paramStr = Helper.getUrlParamStr(params);
-    const redirectUrl = '../index.html#' + paramStr;
-    return redirectUrl;
-  }
+  static async handleCall() {
+    const env = new Env();
+    await env.populate();
 
-  /**
-   * Rewrite browser history to make Back button work properly.
-   */
-  static rewriteBrowserHistory() {
-    const currentUrlWithoutProcess = window.location.href.replace(
-      'process/',
-      '',
-    );
-    history.replaceState({}, 'trovu.net', currentUrlWithoutProcess);
+    let redirectUrl;
+
+    const response = await this.getRedirectResponse(env);
+
+    if (response.status === 'found') {
+      redirectUrl = response.redirectUrl;
+    } else {
+      redirectUrl = this.getRedirectUrlToHome(response);
+    }
+
+    if (env.debug) {
+      Helper.log('Redirect to:   ' + redirectUrl);
+      return;
+    }
+
+    if (!env.error) {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
@@ -71,7 +67,7 @@ export default class CallHandler {
     // but that's maybe worth it,
     // also to merge this with the reload:/debug: parse.
     if (env.extraNamespaceName) {
-      await CallHandler.addExtraNamespace(env);
+      await this.addExtraNamespace(env);
     }
 
     const shortcuts = await ShortcutFinder.collectShortcuts(env);
@@ -82,14 +78,19 @@ export default class CallHandler {
       return response;
     }
 
-    if (!shortcut.deprecated) {
-      response.redirectUrl = shortcut.url;
-    } else {
+    if (shortcut.deprecated) {
       response.status = 'deprecated';
-      response.alternative = CallHandler.getAlternative(shortcut, env);
+      response.alternative = this.getAlternative(shortcut, env);
       return response;
     }
 
+    if (shortcut.removed) {
+      response.status = 'removed';
+      response.key = shortcut.key;
+      return response;
+    }
+
+    response.redirectUrl = shortcut.url;
     response.status = 'found';
 
     if (env.debug) Helper.log('');
@@ -111,17 +112,6 @@ export default class CallHandler {
     return response;
   }
 
-  static getAlternative(shortcut, env) {
-    let alternative = shortcut.deprecated.alternative.query;
-    for (const i in env.args) {
-      alternative = alternative.replace(
-        '{%' + (parseInt(i) + 1) + '}',
-        env.args[i],
-      );
-    }
-    return alternative;
-  }
-
   /**
    * Adding extra namespace if such one was called in the query.
    */
@@ -137,32 +127,37 @@ export default class CallHandler {
     }
   }
 
+  static getAlternative(shortcut, env) {
+    let alternative = shortcut.deprecated.alternative.query;
+    for (const i in env.args) {
+      alternative = alternative.replace(
+        '{%' + (parseInt(i) + 1) + '}',
+        env.args[i],
+      );
+    }
+    return alternative;
+  }
+
   /**
-   * The 'main' function of this class.
+   * Redirect in case a shortcut was not found.
+   *
+   * @param {string} status       - The status of the call.
+   *
+   * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static async handleCall() {
-    const env = new Env();
-    await env.populate();
-
-    let redirectUrl;
-
-    const response = await this.getRedirectResponse(env);
-
-    if (response.status === 'found') {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = this.redirectHome(response);
+  static getRedirectUrlToHome(response) {
+    const params = Helper.getUrlParams();
+    switch (response.status) {
+      case 'deprecated':
+        params.alternative = response.alternative;
+        break;
+      case 'removed':
+        params.key = response.key;
+        break;
     }
-
-    if (env.debug) {
-      Helper.log('Redirect to:   ' + redirectUrl);
-      return;
-    }
-
-    this.rewriteBrowserHistory();
-
-    if (!env.error) {
-      window.location.href = redirectUrl;
-    }
+    params.status = response.status;
+    const paramStr = Helper.getUrlParamStr(params);
+    const redirectUrl = '../index.html#' + paramStr;
+    return redirectUrl;
   }
 }

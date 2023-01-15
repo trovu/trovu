@@ -12,12 +12,14 @@ export default class Settings {
     this.setLanguagesAndCountriesList();
     this.displaySettings();
 
-    document.querySelector('#settingsSave').onclick = this.saveSettings;
+    document
+      .querySelector('#settings')
+      .addEventListener('hidden.bs.modal', this.saveSettings);
 
     window.addEventListener(
       'hashchange',
       function () {
-        location.reload();
+        window.location.reload();
       },
       false,
     );

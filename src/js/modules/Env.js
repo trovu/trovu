@@ -47,6 +47,9 @@ export default class Env {
     if (this.alternative) {
       params['alternative'] = this.alternative;
     }
+    if (this.key) {
+      params['key'] = this.key;
+    }
 
     return params;
   }
@@ -93,11 +96,15 @@ export default class Env {
 
     await this.setDefaults();
     this.addFetchUrlToNamespaces();
-    await this.getShortcuts(this.namespaces, this.reload, this.debug);
+    this.namespaces = await this.getShortcuts(
+      this.namespaces,
+      this.reload,
+      this.debug,
+    );
   }
 
   async getShortcuts(namespaces, reload, debug) {
-    await this.fetchShortcuts(namespaces, reload, debug);
+    namespaces = await this.fetchShortcuts(namespaces, reload, debug);
     this.normalizeShortcuts(namespaces);
     this.addIncludesToShortcuts(namespaces);
     this.addInfoToShortcuts(namespaces);
@@ -474,6 +481,7 @@ export default class Env {
       for (const key in shortcuts) {
         const shortcut = shortcuts[key];
 
+        shortcut.key = key;
         [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
         shortcut.namespace = namespace.name;
         shortcut.arguments = UrlProcessor.getArgumentsFromString(

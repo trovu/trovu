@@ -10,7 +10,7 @@ import dayjs from 'dayjs';
 
 /** Process a shortcut URL for redirect. */
 
-export default class ProcessUrl {
+export default class UrlProcessor {
   /**
    * Get placeholder names from a string.
    *

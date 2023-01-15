@@ -4,6 +4,8 @@ const fs = require('fs');
 const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain');
 
+import UrlProcessor from './modules/UrlProcessor';
+
 const actions = {};
 const modifiers = {};
 
@@ -88,14 +90,19 @@ async function fetchWithTimeout(resource, options = {}) {
 
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), timeout);
-  const response = await fetch(resource, {
-    ...options,
-    signal: controller.signal,
-    headers: {
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-    },
-  });
+  let response;
+  try {
+    response = await fetch(resource, {
+      ...options,
+      signal: controller.signal,
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+      },
+    });
+  } catch (e) {
+    return { status: 500 };
+  }
   clearTimeout(id);
   return response;
 }
@@ -134,6 +141,7 @@ actions['applyModifier'] = async function () {
     }
   }
   writeYmls(ymls);
+  console.log('Done');
 };
 
 modifiers['addTagOld'] = async function (key, shortcut) {
@@ -215,6 +223,27 @@ modifiers['removeDeadDomains'] = async function (key, shortcut) {
     console.log(url.host);
     console.error(error);
     return false;
+  }
+  return shortcut;
+};
+
+modifiers['checkShortcutResponse'] = async function (key, shortcut) {
+  if (shortcut.deprecated) {
+    return shortcut;
+  }
+  // Only letter a for now.
+  if (!key[0].match(/[^a-z]/)) {
+    //return shortcut;
+  }
+  let url = shortcut.url;
+  const args = ['foo', 'bar', 'baz', 'a', 'b', 'c'];
+  const env = { language: 'de', country: 'de' };
+  url = await UrlProcessor.replaceArguments(url, args, env);
+  url = await UrlProcessor.replaceVariables(url, env);
+  console.log(key);
+  const response = await fetchWithTimeout(url);
+  if (response.status != 200) {
+    console.log(response.status, url);
   }
   return shortcut;
 };
