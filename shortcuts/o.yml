@@ -1943,8 +1943,10 @@ facebook 1:
       query: fb {%1}
     created: '2023-01-15'
 faust 1:
-  url: https://www.faust.ch/shop/qsrch.htm?Keyval={%query}&UID=55006243ffc5000000000000
-  title: Faust Laborbedarf
+  deprecated:
+    alternative:
+      query: .ch.faust {%1}
+    created: '2023-01-15'
 fb 0:
   url: https://www.facebook.com/
   title: Facebook Homepage
