@@ -1949,13 +1949,13 @@ faust 1:
     created: '2023-01-15'
 fb 0:
   url: https://www.facebook.com/
-  title: Facebook Homepage
+  title: Facebook, Homepage
   tags:
   - facebook
   - social network
 fb 1:
   url: https://www.facebook.com/search/top/?q={%query}
-  title: Facebook Search
+  title: Facebook
   tags:
   - facebook
   - social network
@@ -1971,7 +1971,7 @@ fbapp 1:
     tetris: Search for "tetris"
 fbe 0:
   url: http://www.facebook.com/events
-  title: Facebook Events
+  title: Facebook, Events
   tags:
   - facebook
   - social network
