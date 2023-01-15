@@ -2023,14 +2023,6 @@ fbm 0:
   tags:
   - facebook
   - social network
-fbmu 1:
-  url: https://www.facebook.com/search/results.php?q={%artist}&type=music
-  title: 'Facebook Search: Music'
-  tags:
-  - facebook
-  - social network
-  examples:
-    madonna: Search for "madonna"
 fbook 0:
   deprecated:
     alternative:
