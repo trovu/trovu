@@ -2070,6 +2070,14 @@ fbpe 1:
   - social network
   examples:
     john doe: Search for "john doe"
+fbph 1:
+  url: https://www.facebook.com/search/photos/?q={%query}
+  title: Facebook, Photos
+  tags:
+  - facebook
+  - social network
+  examples:
+    berlin: Search for photos about Berlin
 fbpl 1:
   url: https://www.facebook.com/search/results.php?q={%place}&type=places
   title: 'Facebook Search: Places'
