@@ -1975,7 +1975,7 @@ fbe 0:
   tags:
   - facebook
   - social network
-fbev 1:
+fbe 1:
   url: https://www.facebook.com/search/results.php?q={%event}&type=events
   title: 'Facebook Search: Events'
   tags:
@@ -1983,6 +1983,11 @@ fbev 1:
   - social network
   examples:
     berlin: Search for "berlin"
+fbev 1:
+  deprecated:
+    alternative:
+      query: fbe {%1}
+    created: '2023-01-15'
 fbf 1:
   url: http://www.facebook.com/friends.php?fq={%name}
   title: Facebook Friend Search
