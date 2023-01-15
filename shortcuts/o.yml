@@ -1968,13 +1968,13 @@ fbe 0:
   - facebook
   - social network
 fbe 1:
-  url: https://www.facebook.com/search/events/?q={%event}
+  url: https://www.facebook.com/search/events/?q={%query}
   title: Facebook, Events
   tags:
   - facebook
   - social network
   examples:
-    berlin: Search for "berlin"
+    berlin: Search for events containing "berlin"
 fbev 1:
   deprecated:
     alternative:
