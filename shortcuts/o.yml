@@ -1999,10 +1999,10 @@ fbgr 1:
       query: fbg {%1}
     created: '2023-01-15'
 fbi 0:
-  url: http://www.facebook.com/inbox/#!/messages/
-  title: Facebook Messages
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fbm
+    created: '2023-01-15'
 fbk 0:
   url: https://www.facebook.com/marketplace/
   title: Facebook Marketplace
