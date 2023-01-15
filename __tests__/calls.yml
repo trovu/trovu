@@ -88,3 +88,9 @@
   response:
     status: deprecated
     alternative: gm hal,hbf
+- title: removed
+  env:
+    query: abp
+  response:
+    status: removed
+    key: abp 0
