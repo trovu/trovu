@@ -204,6 +204,20 @@ nk 1:
   - nasza klasa
   examples:
     kowalski: Szukaj "kowalski"
+olx 0:
+  url: https://www.olx.pl/
+  title: OLX, strona główna
+  tags:
+  - shopping
+  - olx
+olx 1:
+  url: https://www.olx.pl/d/oferty/q-{%przedmiot}/
+  title: OLX
+  tags:
+  - shopping
+  - olx
+  examples:
+    smartfon: szukaj "smartfon" w OLX
 pkp 2:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
