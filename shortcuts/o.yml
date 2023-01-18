@@ -6078,12 +6078,10 @@ timer 1:
     10 sec: Start a timer with 10 seconds duration
     2 min: Start a timer with 2 minutes duration
 timestamp 1:
-  url: http://stefanschramm.net/dev/timestamp/index.php?timestamp={%timestamp}
-  title: UNIX Timestamp
-  tags:
-  - programming
-  examples:
-    '1361987427': Show time of 1361987427 in human-readable form.
+  deprecated:
+    alternative:
+      query: tst {%1}
+    created: '2023-01-18'
 tinyurl 0:
   url: http://tinyurl.com/
   title: TinyURL
@@ -6179,6 +6177,13 @@ tsq 1:
   - photo
   examples:
     berlin: Search for "berlin"
+tst 1:
+  url: https://timestamp.online/countdown/{%timestamp}
+  title: UNIX Timestamp
+  tags:
+  - programming
+  examples:
+    '1361987427': Show time of 1361987427 in human-readable form.
 tv 1:
   url: https://www.thingiverse.com/search?q={%argument_name}&type=things&sort=relevant
   title: Thingiverse
