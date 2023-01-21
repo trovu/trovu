@@ -78,11 +78,8 @@ export default class Env {
       await this.setWithUserConfigFromGithub(params);
     }
 
-    // Override all with params.
     Object.assign(this, params);
-
     Object.assign(this, QueryParser.parse(this.query));
-
     await this.setDefaults();
 
     if (this.extraNamespaceName) {
