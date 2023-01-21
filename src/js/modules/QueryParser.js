@@ -114,23 +114,12 @@ export default class QueryParser {
    */
   static parse(query) {
     const env = {};
-
-    // Check within query for special commands.
-    if (query) {
-      // Check for debug.
-      if (query.match(/^debug:/)) {
-        env.debug = true;
-        query = query.replace(/^debug:/, '');
-      }
-      // Check for reload.
-      if (query.match(/^reload:/) || query.match(/^reload$/)) {
-        env.reload = true;
-        query = query.replace(/^reload(:?)/, '');
-      }
-    }
     env.query = query;
+    Object.assign(env, QueryParser.setFlagsFromQuery(env));
 
-    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(query);
+    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(
+      env.query,
+    );
     env.keyword = env.keyword.toLowerCase();
     env.args = this.getArguments(env.argumentString);
 
@@ -143,6 +132,22 @@ export default class QueryParser {
       Object.assign(env, languageOrCountry);
     }
 
+    return env;
+  }
+
+  static setFlagsFromQuery(env) {
+    if (env.query) {
+      // Check for debug.
+      if (env.query.match(/^debug:/)) {
+        env.debug = true;
+        env.query = env.query.replace(/^debug:/, '');
+      }
+      // Check for reload.
+      if (env.query.match(/^reload:/) || env.query.match(/^reload$/)) {
+        env.reload = true;
+        env.query = env.query.replace(/^reload(:?)/, '');
+      }
+    }
     return env;
   }
 }
