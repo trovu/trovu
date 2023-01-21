@@ -2004,11 +2004,10 @@ fbi 0:
       query: fbm
     created: '2023-01-15'
 fbk 0:
-  url: https://www.facebook.com/marketplace/
-  title: Facebook Marketplace
-  tags:
-  - facebook
-  - social network
+  deprecated:
+    alternative:
+      query: fbmp
+    created: '2023-01-21'
 fblint 1:
   url: http://developers.facebook.com/tools/lint/?url={%query}
   title: Facebook URL Linter
@@ -2023,6 +2022,18 @@ fbm 0:
   tags:
   - facebook
   - social network
+fbmp 0:
+  url: https://www.facebook.com/marketplace/
+  title: Facebook Marketplace
+  tags:
+  - facebook
+  - classifieds
+fbmp 1:
+  url: https://www.facebook.com/marketplace/search/?query={%query}
+  title: Facebook Marketplace Search
+  tags:
+  - facebook
+  - classifieds
 fbook 0:
   deprecated:
     alternative:
@@ -6218,11 +6229,6 @@ twb 0:
   - twitter
   - social network
   - bookmarks
-twick 1:
-  url: http://twick.it/find_topic.php?search={%query}
-  title: Twick.it - the Explain Engine
-  tags:
-  - old
 twingly 0:
   url: http://twingly.com/
   title: Twingly Main page
