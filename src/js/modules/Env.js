@@ -105,9 +105,9 @@ export default class Env {
   async getNamespaceInfos(namespaces, reload, debug) {
     namespaces = this.addFetchUrlToNamespaces(namespaces);
     namespaces = await this.fetchShortcuts(namespaces, reload, debug);
-    this.normalizeShortcuts(namespaces);
-    this.addIncludesToShortcuts(namespaces);
-    this.addInfoToShortcuts(namespaces);
+    namespaces = this.normalizeShortcuts(namespaces);
+    namespaces = this.addIncludesToShortcuts(namespaces);
+    namespaces = this.addInfoToShortcuts(namespaces);
     return namespaces;
   }
 
@@ -451,6 +451,7 @@ export default class Env {
     for (const i in namespaces) {
       this.addIncludesToShortcutsOfNamespace(namespaces[i].shortcuts);
     }
+    return namespaces;
   }
 
   addIncludesToShortcutsOfNamespace(shortcuts) {
@@ -506,5 +507,6 @@ export default class Env {
         foundShortcuts[key] = true;
       }
     }
+    return namespaces;
   }
 }
