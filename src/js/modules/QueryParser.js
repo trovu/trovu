@@ -15,7 +15,16 @@ export default class QueryParser {
    * - {string} argumentString    - The whole argument string.
    */
   static getKeywordAndArgumentString(query) {
-    const [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
+    let keyword, argumentString;
+
+    [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
+
+    if (typeof keyword === 'undefined') {
+      keyword = '';
+    }
+    if (typeof argumentString === 'undefined') {
+      argumentString = '';
+    }
 
     return [keyword, argumentString];
   }
