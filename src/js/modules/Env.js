@@ -95,7 +95,7 @@ export default class Env {
     Object.assign(this, params);
 
     await this.setDefaults();
-    this.addFetchUrlToNamespaces();
+    this.namespaces = this.addFetchUrlToNamespaces(this.namespaces);
     this.namespaces = await this.getNamespaceInfos(
       this.namespaces,
       this.reload,
@@ -325,11 +325,12 @@ export default class Env {
   /**
    * To every namespace, add a fetch URL template.
    */
-  addFetchUrlToNamespaces() {
-    this.namespaces.forEach((namespace, i, namespaces) => {
+  addFetchUrlToNamespaces(namespaces) {
+    namespaces.forEach((namespace, i, namespaces) => {
       namespace = this.addFetchUrlToNamespace(namespace);
       namespaces[i] = namespace;
     });
+    return namespaces;
   }
 
   /**
