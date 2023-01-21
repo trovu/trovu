@@ -943,11 +943,6 @@ couch 1:
     alternative:
       query: csf {%1}
     created: '2023-01-23'
-cp 1:
-  url: http://cover-paradies.to/?Module=ExtendedSearch&SearchString={%query}
-  title: Cover Paradies
-  tags:
-  - old
 cpan 0:
   url: https://metacpan.org/
   title: Metacpan
