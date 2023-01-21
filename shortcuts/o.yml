@@ -5199,20 +5199,6 @@ pz 1:
   title: ProZ terminology search
   tags:
   - old
-q 0:
-  url: http://www.qype.com/
-  title: Qype.com Homepage
-  tags:
-  - qype
-  - shopping
-q 2:
-  url: http://www.qype.com/search/find?qype_query={%business}&locator={%location}
-  title: Qype.com
-  tags:
-  - qype
-  - shopping
-  examples:
-    pizza, berlin: Search for Pizza in Berlin
 qr 1:
   url: http://chart.apis.google.com/chart?cht=qr&chs=350x350&chl={%content}
   title: QR Kaywa URL Barcode
