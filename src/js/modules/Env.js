@@ -84,6 +84,11 @@ export default class Env {
     Object.assign(this, QueryParser.parse(this.query));
 
     await this.setDefaults();
+
+    if (this.extraNamespaceName) {
+      this.namespaces.push(this.extraNamespaceName);
+    }
+
     this.namespaces = await this.getNamespaceInfos(
       this.namespaces,
       this.reload,
@@ -306,8 +311,6 @@ export default class Env {
     namespaces = namespaces.filter(
       (namespace) => typeof namespace !== 'undefined',
     );
-    // We only need to return here
-    // for receiving in CallHandler.addExtraNamespace().
     return namespaces;
   }
 
