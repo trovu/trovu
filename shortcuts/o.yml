@@ -6242,11 +6242,10 @@ twingly 1:
   tags:
   - old
 twitter 0:
-  url: https://twitter.com
-  title: Twitter
-  tags:
-  - twitter
-  - social network
+  deprecated:
+    alternative:
+      query: tw
+    created: '2023-01-23'
 twk 0:
   url: http://tweaks.com
   title: Tweaks
