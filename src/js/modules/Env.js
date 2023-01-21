@@ -3,6 +3,7 @@
 import jsyaml from 'js-yaml';
 import Helper from './Helper.js';
 import UrlProcessor from './UrlProcessor.js';
+import QueryParser from './QueryParser.js';
 
 /** Set and remember the environment. */
 
@@ -93,6 +94,8 @@ export default class Env {
 
     // Override all with params.
     Object.assign(this, params);
+
+    Object.assign(this, QueryParser.parse(this.query));
 
     await this.setDefaults();
     this.namespaces = await this.getNamespaceInfos(

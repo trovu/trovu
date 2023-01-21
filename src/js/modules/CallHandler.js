@@ -3,7 +3,6 @@
 import Env from './Env.js';
 import ShortcutFinder from './ShortcutFinder.js';
 import Helper from './Helper.js';
-import QueryParser from './QueryParser.js';
 import UrlProcessor from './UrlProcessor.js';
 
 /** Handle a call. */
@@ -56,8 +55,6 @@ export default class CallHandler {
       response.redirectUrl = false;
       return response;
     }
-
-    Object.assign(env, QueryParser.parse(env.query));
 
     // Add extraNamespace if parsed in query.
     // TODO: Maybe move this to Env,
