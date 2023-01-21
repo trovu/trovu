@@ -6,6 +6,36 @@ import Helper from './Helper.js';
 
 export default class QueryParser {
   /**
+   * Parse the query into its all details.
+   *
+   * @param {string} query          - The whole query.
+   *
+   * @return {object}               - Contains various values parsed from the query.
+   */
+  static parse(query) {
+    const env = {};
+    env.query = query;
+    Object.assign(env, QueryParser.setFlagsFromQuery(env));
+
+    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(
+      env.query,
+    );
+    env.keyword = env.keyword.toLowerCase();
+    env.args = this.getArguments(env.argumentString);
+
+    [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(env.keyword);
+    if (env.extraNamespaceName) {
+      const languageOrCountry =
+        this.getLanguageAndCountryFromExtraNamespaceName(
+          env.extraNamespaceName,
+        );
+      Object.assign(env, languageOrCountry);
+    }
+
+    return env;
+  }
+
+  /**
    * Get keyword and argument string from query.
    *
    * @param {string} query          - The whole query.
@@ -102,36 +132,6 @@ export default class QueryParser {
         env.country = extraNamespaceName.substring(1);
         break;
     }
-    return env;
-  }
-
-  /**
-   * Parse the query into its all details.
-   *
-   * @param {string} query          - The whole query.
-   *
-   * @return {object}               - Contains various values parsed from the query.
-   */
-  static parse(query) {
-    const env = {};
-    env.query = query;
-    Object.assign(env, QueryParser.setFlagsFromQuery(env));
-
-    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(
-      env.query,
-    );
-    env.keyword = env.keyword.toLowerCase();
-    env.args = this.getArguments(env.argumentString);
-
-    [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(env.keyword);
-    if (env.extraNamespaceName) {
-      const languageOrCountry =
-        this.getLanguageAndCountryFromExtraNamespaceName(
-          env.extraNamespaceName,
-        );
-      Object.assign(env, languageOrCountry);
-    }
-
     return env;
   }
 
