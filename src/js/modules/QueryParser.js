@@ -115,6 +115,21 @@ export default class QueryParser {
   static parse(query) {
     const env = {};
 
+    // Check within query for special commands.
+    if (query) {
+      // Check for debug.
+      if (query.match(/^debug:/)) {
+        env.debug = true;
+        query = query.replace(/^debug:/, '');
+      }
+      // Check for reload.
+      if (query.match(/^reload:/) || query.match(/^reload$/)) {
+        env.reload = true;
+        query = query.replace(/^reload(:?)/, '');
+      }
+    }
+    env.query = query;
+
     [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(query);
     env.keyword = env.keyword.toLowerCase();
     env.args = this.getArguments(env.argumentString);

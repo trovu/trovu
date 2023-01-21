@@ -74,20 +74,6 @@ export default class Env {
       params = Helper.getUrlParams();
     }
 
-    // Check within query for special commands.
-    if (params.query) {
-      // Check for debug.
-      if (params.query.match(/^debug:/)) {
-        params.debug = true;
-        params.query = params.query.replace(/^debug:/, '');
-      }
-      // Check for reload.
-      if (params.query.match(/^reload:/) || params.query.match(/^reload$/)) {
-        params.reload = true;
-        params.query = params.query.replace(/^reload(:?)/, '');
-      }
-    }
-
     if (typeof params.github === 'string' && params.github !== '') {
       await this.setWithUserConfigFromGithub(params);
     }
