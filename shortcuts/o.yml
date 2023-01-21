@@ -6336,16 +6336,6 @@ twum 1:
   - social network
   examples:
     serchilo: Go to user page of @serchilo
-tx 1:
-  url: http://www.tixuma.de/index.php?mp=search&sc={%query}&tg=0
-  title: Tixuma Suche
-  tags:
-  - old
-txl 0:
-  url: http://www.berlin-airport.de/en/travellers-txl/index.php
-  title: Berlin Airport (Tegel)
-  tags:
-  - airports
 ty 0:
   url: http://twingly.com/
   title: Twingly Main page
