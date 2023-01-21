@@ -95,7 +95,6 @@ export default class Env {
     Object.assign(this, params);
 
     await this.setDefaults();
-    this.namespaces = this.addFetchUrlToNamespaces(this.namespaces);
     this.namespaces = await this.getNamespaceInfos(
       this.namespaces,
       this.reload,
@@ -104,6 +103,7 @@ export default class Env {
   }
 
   async getNamespaceInfos(namespaces, reload, debug) {
+    namespaces = this.addFetchUrlToNamespaces(namespaces);
     namespaces = await this.fetchShortcuts(namespaces, reload, debug);
     this.normalizeShortcuts(namespaces);
     this.addIncludesToShortcuts(namespaces);
