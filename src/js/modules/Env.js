@@ -397,7 +397,7 @@ export default class Env {
         continue;
       }
 
-      namespaceInfo.shortcuts = this.normalizeShortcutsOfNamespace(
+      namespaceInfo.shortcuts = this.verifyShortcuts(
         namespaceInfo.shortcuts,
         namespaceName,
       );
@@ -538,6 +538,42 @@ export default class Env {
    * @return {array} shortcuts - The normalized shortcuts.
    */
   normalizeShortcutsOfNamespace(shortcuts, namespaceName) {
+    const incorrectKeys = [];
+    for (const key in shortcuts) {
+      if (!key.match(/\S+ \d/)) {
+        incorrectKeys.push(key);
+      }
+      // Check for 'only URL' (string) shortcuts
+      // and make an object of them.
+      if (typeof shortcuts[key] === 'string') {
+        const url = shortcuts[key];
+        shortcuts[key] = {
+          url: url,
+        };
+      }
+    }
+    if (incorrectKeys.length > 0) {
+      Helper.log(
+        "Incorrect keys found in namespace '" +
+          namespaceName +
+          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
+          '\n\n' +
+          incorrectKeys.join('\n'),
+      );
+      this.error = true;
+    }
+    return shortcuts;
+  }
+
+  /**
+   * Ensure shortcuts have the correct structure.
+   *
+   * @param {array} shortcuts      - The shortcuts to normalize.
+   * @param {string} namespaceName - The namespace name to show in error message.
+   *
+   * @return {array} shortcuts - The normalized shortcuts.
+   */
+  verifyShortcuts(shortcuts, namespaceName) {
     const incorrectKeys = [];
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
