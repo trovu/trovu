@@ -393,7 +393,7 @@ export default class Env {
           'Error parsing ' + namespaceInfo.url + ':\n\n' + error.message,
         );
         this.error = true;
-        namespaceInfos[i] = undefined;
+        namespaceInfo.shortcuts = [];
         continue;
       }
 
