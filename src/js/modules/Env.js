@@ -300,15 +300,15 @@ export default class Env {
    */
   async startFetches2(namespaceInfos, reload) {
     const promises = [];
-    for (const i of Object.keys(namespaceInfos).sort()) {
-      const namespaceInfo = namespaceInfos[i];
+    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
       if (!namespaceInfo.url) {
-        continue;
+        // TODO: Handle this as error.
+        return;
       }
-      promises.push(
-        fetch(namespaceInfo.url, { cache: reload ? 'reload' : 'force-cache' }),
-      );
-    }
+      promises[namespaceInfo.priority] = fetch(namespaceInfo.url, {
+        cache: reload ? 'reload' : 'force-cache',
+      });
+    });
     return promises;
   }
 
@@ -381,18 +381,15 @@ export default class Env {
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
 
-    const namespaceNames = Object.keys(namespaceInfos).sort();
-    for (const i in namespaceNames) {
-      const response = responses[i];
-      const namespaceName = namespaceNames[i];
-      const namespaceInfo = namespaceInfos[namespaceName];
+    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+      const response = responses[namespaceInfo.priority];
       if (!response || response.status != 200) {
         if (debug)
           Helper.log(
             (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaceInfo.url,
           );
         namespaceInfo.shortcuts = [];
-        continue;
+        return namespaceInfo;
       }
       this.logSuccess(debug, reload, response);
 
@@ -404,9 +401,10 @@ export default class Env {
 
       namespaceInfo.shortcuts = this.verifyShortcuts(
         namespaceInfo.shortcuts,
-        namespaceName,
+        namespaceInfo.name,
       );
-    }
+      return namespaceInfo;
+    });
     return namespaceInfos;
   }
 
