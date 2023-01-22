@@ -379,11 +379,7 @@ export default class Env {
       const namespaceName = namespaceNames[i];
       const namespaceInfo = namespaceInfos[namespaceName];
       if (!response || response.status != 200) {
-        if (debug)
-          Helper.log(
-            (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaceInfo.url,
-          );
-        namespaceInfo.shortcuts = [];
+        this.setShortcutsEmpty(debug, reload, namespaceInfo);
         continue;
       }
       if (debug)
@@ -414,6 +410,14 @@ export default class Env {
       namespaceInfo.shortcuts = shortcuts;
     }
     return namespaceInfos;
+  }
+
+  setShortcutsEmpty(debug, reload, namespaceInfo) {
+    if (debug)
+      Helper.log(
+        (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaceInfo.url,
+      );
+    namespaceInfo.shortcuts = [];
   }
 
   /**
