@@ -113,7 +113,6 @@ export default class Env {
 
     namespaceInfos = await this.fetchShortcuts2(namespaceInfos, reload, debug);
     return;
-    namespaces = this.normalizeShortcuts(namespaces);
     namespaces = this.addIncludesToShortcuts(namespaces);
     namespaces = this.addInfoToShortcuts(namespaces);
     return namespaces;
@@ -407,6 +406,11 @@ export default class Env {
         namespaceInfos[i] = undefined;
         continue;
       }
+
+      namespaceInfo.shortcuts = this.normalizeShortcutsOfNamespace(
+        namespaceInfo.shortcuts,
+        namespaceName,
+      );
       namespaceInfo.shortcuts = shortcuts;
     }
     return namespaceInfos;
