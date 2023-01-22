@@ -109,11 +109,13 @@ export default class Env {
   }
 
   async getNamespaceInfos2(namespaces, reload, debug) {
-    let namespaceInfos = this.getInitialNamespaceInfos(namespaces);
-
-    namespaceInfos = await this.fetchShortcuts2(namespaceInfos, reload, debug);
     Object.values(namespaceInfos).forEach((namespaceInfo) => {
       namespaceInfo.shortcuts = this.addIncludes(namespaceInfo.shortcuts);
+    const namespaceInfos = await this.fetchShortcuts2(
+      namespaces,
+      reload,
+      debug,
+    );
     });
     return;
     namespaces = this.addIncludesToShortcuts(namespaces);
@@ -370,7 +372,9 @@ export default class Env {
    *
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
-  async fetchShortcuts2(namespaceInfos, reload, debug) {
+  async fetchShortcuts2(namespaces, reload, debug) {
+
+    const namespaceInfos = this.getInitialNamespaceInfos(namespaces);
     const promises = await this.startFetches2(namespaceInfos, reload);
 
     // Wait until all fetch calls are done.
