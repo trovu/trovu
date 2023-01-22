@@ -86,6 +86,12 @@ export default class Env {
       this.namespaces.push(this.extraNamespaceName);
     }
 
+    this.namespacesInfos = await this.getNamespaceInfos2(
+      this.namespaces,
+      this.reload,
+      this.debug,
+    );
+
     this.namespaces = await this.getNamespaceInfos(
       this.namespaces,
       this.reload,
@@ -100,6 +106,26 @@ export default class Env {
     namespaces = this.addIncludesToShortcuts(namespaces);
     namespaces = this.addInfoToShortcuts(namespaces);
     return namespaces;
+  }
+
+  async getNamespaceInfos2(namespaces, reload, debug) {
+    let namespaceInfos = this.getInitialNamespaceInfos(namespaces);
+
+    namespaceInfos = await this.fetchShortcuts2(namespaceInfos, reload, debug);
+    return;
+    namespaces = this.normalizeShortcuts(namespaces);
+    namespaces = this.addIncludesToShortcuts(namespaces);
+    namespaces = this.addInfoToShortcuts(namespaces);
+    return namespaces;
+  }
+
+  getInitialNamespaceInfos(namespaces) {
+    return Object.fromEntries(
+      namespaces.map((namespace) => {
+        const namespaceInfo = this.getInitalNamespaceInfo(namespace);
+        return [namespaceInfo.name, namespaceInfo];
+      }),
+    );
   }
 
   /**
@@ -259,6 +285,28 @@ export default class Env {
   }
 
   /**
+   * Start fetching shortcuts per namespace.
+   *
+   * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
+   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
+   *
+   * @return {array} promises - The promises from the fetch() calls.
+   */
+  async startFetches2(namespaceInfos, reload) {
+    const promises = [];
+    for (const i of Object.keys(namespaceInfos).sort()) {
+      const namespaceInfo = namespaceInfos[i];
+      if (!namespaceInfo.url) {
+        continue;
+      }
+      promises.push(
+        fetch(namespaceInfo.url, { cache: reload ? 'reload' : 'force-cache' }),
+      );
+    }
+    return promises;
+  }
+
+  /**
    * Add a fetch URL template to a namespace.
    *
    * @param {array} namespaces - The namespaces to fetch shortcuts for.
@@ -312,6 +360,59 @@ export default class Env {
   }
 
   /**
+   * Add a fetch URL template to a namespace.
+   *
+   * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
+   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
+   * @param {boolean} debug    - Flag whether to print debug messages.
+   *
+   * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
+   */
+  async fetchShortcuts2(namespaceInfos, reload, debug) {
+    const promises = await this.startFetches2(namespaceInfos, reload);
+
+    // Wait until all fetch calls are done.
+    const responses = await Promise.all(promises);
+
+    const namespaceNames = Object.keys(namespaceInfos).sort();
+    for (const i in namespaceNames) {
+      const response = responses[i];
+      const namespaceName = namespaceNames[i];
+      const namespaceInfo = namespaceInfos[namespaceName];
+      if (!responses[i] || responses[i].status != 200) {
+        if (debug)
+          Helper.log(
+            (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaceInfo.url,
+          );
+        namespaceInfo.shortcuts = [];
+        continue;
+      }
+      if (debug)
+        Helper.log(
+          (reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url,
+        );
+      if (!debug) {
+        Helper.log('.', false);
+      }
+      const text = await response.text();
+
+      let shortcuts;
+      try {
+        shortcuts = jsyaml.load(text);
+      } catch (error) {
+        Helper.log(
+          'Error parsing ' + namespaceInfo.url + ':\n\n' + error.message,
+        );
+        this.error = true;
+        namespaceInfos[i] = undefined;
+        continue;
+      }
+      namespaceInfo.shortcuts = shortcuts;
+    }
+    return namespaceInfos;
+  }
+
+  /**
    * To every namespace, add a fetch URL template.
    */
   addFetchUrlToNamespaces(namespaces) {
@@ -330,6 +431,34 @@ export default class Env {
    * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToNamespace(namespace) {
+    // Site namespaces:
+    if (typeof namespace == 'string' && namespace.length < 4) {
+      namespace = this.addFetchUrlToSiteNamespace(namespace);
+      return namespace;
+    }
+    // User namespace 1 – custom URL:
+    if (namespace.url && namespace.name) {
+      // Just add the type.
+      namespace.type = 'user';
+      return namespace;
+    }
+    // Now remains: User namespace 2 – Github:
+    if (typeof namespace == 'string') {
+      // Create an object.
+      namespace = { github: namespace };
+    }
+    namespace = this.addFetchUrlToGithubNamespace(namespace);
+    return namespace;
+  }
+
+  /**
+   * Add a fetch URL template to a namespace.
+   *
+   * @param {(string|Object)} namespace - The namespace to add the URL template to.
+   *
+   * @return {Object} namespace - The namespace with the added URL template.
+   */
+  getInitalNamespaceInfo(namespace) {
     // Site namespaces:
     if (typeof namespace == 'string' && namespace.length < 4) {
       namespace = this.addFetchUrlToSiteNamespace(namespace);
