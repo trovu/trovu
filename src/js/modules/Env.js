@@ -636,9 +636,12 @@ export default class Env {
       let shortcut = shortcuts[key];
       if (shortcut.include) {
         if (shortcut.include.key && shortcuts[shortcut.include.key]) {
-          const shortcutToInclude = shortcuts[shortcut.include.key];
-          shortcut = Object.assign(shortcut, shortcutToInclude);
-          // TODO: Handle different namespace.
+          if (shortcut.include.namespace) {
+            // TODO: Handle include with namespace.
+          } else {
+            const shortcutToInclude = shortcuts[shortcut.include.key];
+            shortcut = Object.assign(shortcut, shortcutToInclude);
+          }
         } else {
           Helper.log(`Incorrect include found at ${key}`);
           this.error = true;
