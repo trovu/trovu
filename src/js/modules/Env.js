@@ -385,9 +385,8 @@ export default class Env {
       this.logSuccess(debug, reload, response);
       const text = await response.text();
 
-      let shortcuts;
       try {
-        shortcuts = jsyaml.load(text);
+        namespaceInfo.shortcuts = jsyaml.load(text);
       } catch (error) {
         Helper.log(
           'Error parsing ' + namespaceInfo.url + ':\n\n' + error.message,
@@ -401,7 +400,6 @@ export default class Env {
         namespaceInfo.shortcuts,
         namespaceName,
       );
-      namespaceInfo.shortcuts = shortcuts;
     }
     return namespaceInfos;
   }
