@@ -382,13 +382,7 @@ export default class Env {
         this.setShortcutsEmpty(debug, reload, namespaceInfo);
         continue;
       }
-      if (debug)
-        Helper.log(
-          (reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url,
-        );
-      if (!debug) {
-        Helper.log('.', false);
-      }
+      this.logSuccess(debug, reload, response);
       const text = await response.text();
 
       let shortcuts;
@@ -410,6 +404,14 @@ export default class Env {
       namespaceInfo.shortcuts = shortcuts;
     }
     return namespaceInfos;
+  }
+
+  logSuccess(debug, reload, response) {
+    if (debug)
+      Helper.log((reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url);
+    if (!debug) {
+      Helper.log('.', false);
+    }
   }
 
   setShortcutsEmpty(debug, reload, namespaceInfo) {
