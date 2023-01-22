@@ -57,7 +57,7 @@ ikea 0:
   - furniture
   - shopping
 ikea 1:
-  url: http://www.ikea.com/nl/nl/search/?query={%query}
+  url: http://www.ikea.com/nl/nl/search/?q={%query}
   title: IKEA Nederland
   tags:
   - ikea

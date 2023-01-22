@@ -276,7 +276,7 @@ ikea 0:
   - furniture
   - shopping
 ikea 1:
-  url: http://www.ikea.com/ch/de/search/?query={%query}
+  url: http://www.ikea.com/ch/de/search/?q={%query}
   title: IKEA Schweiz
   tags:
   - ikea

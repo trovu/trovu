@@ -39,7 +39,7 @@ ikea 0:
   examples:
     madras: Søger "madras"
 ikea 1:
-  url: http://www.ikea.com/dk/da/search/?query={%query}
+  url: http://www.ikea.com/dk/da/search/?q={%query}
   title: IKEA Danmark
   tags:
   - ikea

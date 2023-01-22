@@ -101,7 +101,7 @@ ikea 0:
   - furniture
   - shopping
 ikea 1:
-  url: http://www.ikea.com/pl/pl/search/?query={%query}
+  url: http://www.ikea.com/pl/pl/search/?q={%query}
   title: IKEA Polska
   tags:
   - ikea

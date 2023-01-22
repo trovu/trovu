@@ -60,7 +60,7 @@ idos 4:
     praha, brno, 20, 10.12.: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
 ikea 0:
   url: http://www.ikea.com/cz/cs/
-  title: IKEA Česká republika
+  title: IKEA Česko
   tags:
   - ikea
   - furniture
@@ -68,8 +68,8 @@ ikea 0:
   examples:
     matrace: Hledej matrace
 ikea 1:
-  url: http://www.ikea.com/cz/cs/search/?query={%query}
-  title: IKEA Česká republika
+  url: http://www.ikea.com/cz/cs/search/?q={%query}
+  title: IKEA Česko
   tags:
   - ikea
   - furniture
