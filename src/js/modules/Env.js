@@ -109,13 +109,16 @@ export default class Env {
   }
 
   async getNamespaceInfos2(namespaces, reload, debug) {
-    Object.values(namespaceInfos).forEach((namespaceInfo) => {
-      namespaceInfo.shortcuts = this.addIncludes(namespaceInfo.shortcuts);
     const namespaceInfos = await this.fetchShortcuts2(
       namespaces,
       reload,
       debug,
     );
+    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+      namespaceInfo.shortcuts = await this.addIncludes(
+        namespaceInfo.shortcuts,
+        namespaceInfos,
+      );
     });
     return;
     namespaces = this.addIncludesToShortcuts(namespaces);
@@ -634,13 +637,19 @@ export default class Env {
     }
   }
 
-  addIncludes(shortcuts) {
+  async addIncludes(shortcuts, namespaceInfos) {
     for (const key in shortcuts) {
       let shortcut = shortcuts[key];
       if (shortcut.include) {
-        if (shortcut.include.key && shortcuts[shortcut.include.key]) {
+        if (shortcut.include.key) {
           if (shortcut.include.namespace) {
             // TODO: Handle include with namespace.
+            const shortcutToInclude = await this.getShortcutFromNamespace(
+              shortcut.include.key,
+              shortcut.include.namespace,
+              namespaceInfos,
+            );
+            shortcut = Object.assign(shortcut, shortcutToInclude);
           } else {
             const shortcutToInclude = shortcuts[shortcut.include.key];
             shortcut = Object.assign(shortcut, shortcutToInclude);
@@ -653,6 +662,15 @@ export default class Env {
       }
     }
     return shortcuts;
+  }
+
+  async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
+    if (!namespaceInfos[namespaceName]) {
+      const newNamespaceInfos = await this.fetchShortcuts2([namespaceName]);
+      Object.assign(namespaceInfos, newNamespaceInfos);
+    }
+    const shortcut = namespaceInfos[namespaceName].shortcuts[key];
+    return shortcut;
   }
 
   /**
