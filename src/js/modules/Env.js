@@ -112,6 +112,9 @@ export default class Env {
     let namespaceInfos = this.getInitialNamespaceInfos(namespaces);
 
     namespaceInfos = await this.fetchShortcuts2(namespaceInfos, reload, debug);
+    Object.values(namespaceInfos).forEach((namespaceInfo) => {
+      namespaceInfo.shortcuts = this.addIncludes(namespaceInfo.shortcuts);
+    });
     return;
     namespaces = this.addIncludesToShortcuts(namespaces);
     namespaces = this.addInfoToShortcuts(namespaces);
@@ -626,6 +629,24 @@ export default class Env {
         // TODO: Handle different namespace.
       }
     }
+  }
+
+  addIncludes(shortcuts) {
+    for (const key in shortcuts) {
+      let shortcut = shortcuts[key];
+      if (shortcut.include) {
+        if (shortcut.include.key && shortcuts[shortcut.include.key]) {
+          const shortcutToInclude = shortcuts[shortcut.include.key];
+          shortcut = Object.assign(shortcut, shortcutToInclude);
+          // TODO: Handle different namespace.
+        } else {
+          Helper.log(`Incorrect include found at ${key}`);
+          this.error = true;
+          continue;
+        }
+      }
+    }
+    return shortcuts;
   }
 
   /**
