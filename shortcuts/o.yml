@@ -3627,10 +3627,10 @@ ig 1:
   examples:
     ellierosapowers: Show the user ellierosapowers content.
 ikeanl 1:
-  url: http://www.ikea.com/nl/nl/search/?query={%query}
-  title: Ikea
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .nl.ikea {%1}
+    created: '2023-01-22'
 imdb 0:
   url: http://www.imdb.com
   title: Internet Movie Database Homepage
