@@ -121,7 +121,6 @@ export default class Env {
       );
     });
     return;
-    namespaces = this.addIncludesToShortcuts(namespaces);
     namespaces = this.addInfoToShortcuts(namespaces);
     return namespaces;
   }
