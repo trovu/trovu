@@ -378,7 +378,7 @@ export default class Env {
       const response = responses[i];
       const namespaceName = namespaceNames[i];
       const namespaceInfo = namespaceInfos[namespaceName];
-      if (!responses[i] || responses[i].status != 200) {
+      if (!response || response.status != 200) {
         if (debug)
           Helper.log(
             (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaceInfo.url,
