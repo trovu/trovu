@@ -387,18 +387,12 @@ export default class Env {
         continue;
       }
       this.logSuccess(debug, reload, response);
-      const text = await response.text();
 
-      try {
-        namespaceInfo.shortcuts = jsyaml.load(text);
-      } catch (error) {
-        Helper.log(
-          'Error parsing ' + namespaceInfo.url + ':\n\n' + error.message,
-        );
-        this.error = true;
-        namespaceInfo.shortcuts = [];
-        continue;
-      }
+      const text = await response.text();
+      namespaceInfo.shortcuts = this.parseShortcutsFromYml(
+        text,
+        namespaceInfo.url,
+      );
 
       namespaceInfo.shortcuts = this.verifyShortcuts(
         namespaceInfo.shortcuts,
@@ -406,6 +400,17 @@ export default class Env {
       );
     }
     return namespaceInfos;
+  }
+
+  parseShortcutsFromYml(text, url) {
+    try {
+      const shortcuts = jsyaml.load(text);
+      return shortcuts;
+    } catch (error) {
+      Helper.log('Error parsing ' + url + ':\n\n' + error.message);
+      this.error = true;
+      return [];
+    }
   }
 
   logSuccess(debug, reload, response) {
