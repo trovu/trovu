@@ -381,7 +381,8 @@ export default class Env {
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
 
-    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+    for (const namespaceName in namespaceInfos) {
+      const namespaceInfo = namespaceInfos[namespaceName];
       const response = responses[namespaceInfo.priority];
       if (!response || response.status != 200) {
         if (debug)
@@ -389,7 +390,7 @@ export default class Env {
             (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaceInfo.url,
           );
         namespaceInfo.shortcuts = [];
-        return namespaceInfo;
+        continue;
       }
       this.logSuccess(debug, reload, response);
 
@@ -403,8 +404,7 @@ export default class Env {
         namespaceInfo.shortcuts,
         namespaceInfo.name,
       );
-      return namespaceInfo;
-    });
+    }
     return namespaceInfos;
   }
 
