@@ -86,7 +86,7 @@ export default class Env {
       this.namespaces.push(this.extraNamespaceName);
     }
 
-    this.namespacesInfos = await this.getNamespaceInfos2(
+    this.namespaceInfos = await this.getNamespaceInfos2(
       this.namespaces,
       this.reload,
       this.debug,
