@@ -114,7 +114,7 @@ export default class Env {
       reload,
       debug,
     );
-    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+    await Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
       namespaceInfo.shortcuts = await this.addIncludes(
         namespaceInfo.shortcuts,
         namespaceInfos,
