@@ -120,7 +120,7 @@ export default class Env {
         namespaceInfos,
       );
     });
-    namespaces = this.addReachable(namespaces);
+    this.addReachable(namespaceInfos, namespaces);
     return namespaceInfos;
   }
 
@@ -721,7 +721,7 @@ export default class Env {
    *
    * @param {object} namespaces - Current namespaces keyed by their name.
    */
-  addReachable(namespaces) {
+  addReachable(namespaceInfos, namespaces) {
     // Remember found shortcuts
     // to know which ones are reachable.
     const foundShortcuts = {};
