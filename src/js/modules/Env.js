@@ -373,7 +373,6 @@ export default class Env {
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
   async fetchShortcuts2(namespaces, reload, debug) {
-
     const namespaceInfos = this.getInitialNamespaceInfos(namespaces);
     const promises = await this.startFetches2(namespaceInfos, reload);
 
