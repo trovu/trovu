@@ -50,3 +50,18 @@ If the shortcut shall belong to a language or country namespace, then its websit
 A keyword with 2 letters shall be used for a dictionary of that language, using its [ISO-639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Table_of_all_possible_two_letter_codes) (e.g. `en`, `fr`, `be`). Such shortcuts should be put into a language namespace.
 
 If the shortcut is not about a dictionary, then it should *not* use a ISO-639-1 language code. This is to keep the space for a potential future dictionary shortcut.
+
+### Abbreviate by first sounds of words and/or syllables
+
+A good keyword shall be easily memorable, and also not a word itself. We try to achieve this by taking the first letters of the website's name (if it contains multiple words) or syllables. For example:
+
+- `fb` for *FaceBook*
+- `db` for *Deutsche Bahn*
+- `ad` for *AnDroid*
+- `bmf` for *Besser MitFahren*
+- `bmn` for *BugMeNot*
+ 
+Exceptions can be made if there's already a common abbreviation of the service
+
+- `ig` for *InstaGram*
+
