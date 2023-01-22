@@ -122,7 +122,7 @@ export default class Env {
     });
     return;
     namespaces = this.addInfoToShortcuts(namespaces);
-    return namespaces;
+    return namespaceInfos;
   }
 
   getInitialNamespaceInfos(namespaces) {
