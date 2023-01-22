@@ -2,7 +2,7 @@ This page is about which shortcuts may be in the **curated repository** [trovu-d
 
 Note that you can [add any shortcut to your user repository](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#personal-shortcuts), completely ignoring this policy.
 
-*Caveat: You might note that many curated shortcuts at this moment don't match the listed criteria. This is because Trovu's first version (named **Serchilo**) existed since 2005, with user-created shortcuts available since 2007, and this policy was started to be written in 2023. Thus, the goal is to finally define some standards and then slowly applying them, with as little as possible breaking of existing user habits.*
+*Caveat: You might note that many curated shortcuts at this moment don't match the listed criteria. This is because Trovu's first version (named **Serchilo**) has existed since 2005, with user-created shortcuts available since 2007, and this policy started to be written in 2023. Thus, the goal is to finally define some standards and then slowly applying them, with as little as possible breaking of existing user habits.*
 
 ## Shortcuts
 
@@ -24,9 +24,9 @@ But a bookmark shortcut that has no corresponding 1-or-more-argument shortcut sh
 
 ### Avoid common words
 
-Many users use Trovu with a [default keyword](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#default-keyword): They can enter any query, and if it's not matched with a shortcut, they default keyword will be used – often it refers to Google.
+Many users use Trovu with a [default keyword](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#default-keyword): They can enter any query, and if it's not matched with a shortcut, the default keyword will be used – often it refers to Google.
 
-Thus, such users often perform their Google searches with out `g` – because it will be applied automatically if not shortcut is found.
+Thus, such users often perform their Google searches without `g` – because it will be applied automatically if not shortcut is found.
 
 However, if there *is* a shortcut with a keyword `apple` or `app`, this breaks.
 
