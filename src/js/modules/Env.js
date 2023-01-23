@@ -729,6 +729,12 @@ export default class Env {
    * @param {object} namespaces - Current namespaces keyed by their name.
    */
   addReachable(namespaceInfos) {
+    const namespacesByPriority = [];
+
+    Object.values(namespaceInfos).forEach((namespaceInfo) => {
+      namespacesByPriority[namespaceInfo.priority] = namespaceInfo.name;
+    });
+
     // Remember found shortcuts
     // to know which ones are reachable.
     const foundShortcuts = {};
