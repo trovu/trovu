@@ -741,8 +741,12 @@ export default class Env {
 
     // Iterate over namespaces in reverse order.
     // Slice to keep original.
-    for (const namespace of namespaces.slice().reverse()) {
-      const shortcuts = namespace.shortcuts;
+    for (const namespaceName of namespacesByPriority.slice().reverse()) {
+      const namespaceInfo = namespaceInfos[namespaceName];
+      if (!namespaceInfo.subscribed) {
+        continue;
+      }
+      const shortcuts = namespaceInfo.shortcuts;
 
       for (const key in shortcuts) {
         const shortcut = shortcuts[key];
