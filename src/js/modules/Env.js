@@ -749,7 +749,7 @@ export default class Env {
 
         shortcut.key = key;
         [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
-        shortcut.namespace = namespace.name;
+        shortcut.namespace = namespaceInfo.name;
         shortcut.arguments = UrlProcessor.getArgumentsFromString(
           shortcuts[key].url,
         );
@@ -771,6 +771,6 @@ export default class Env {
         foundShortcuts[key] = true;
       }
     }
-    return namespaces;
+    return namespaceInfos;
   }
 }
