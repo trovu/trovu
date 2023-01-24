@@ -1634,14 +1634,8 @@ wort 1:
   title: Digitales Wörterbuch der Deutschen Sprache
   tags:
   - old
-ws 0:
-  url: http://wortschatz.uni-leipzig.de
-  title: Wortschatz-Lexikon
-  tags:
-  - language
-  - german
-ws 1:
-  url: http://corpora.uni-leipzig.de/de/res?word={%Wort}&corpusId=deu_newscrawl_2011
+wsl 1:
+  url: https://corpora.uni-leipzig.de/de/res?word={%Wort}&corpusId=deu_newscrawl_2011
   title: Wortschatz-Lexikon (Deutsch)
   tags:
   - language

@@ -14,8 +14,8 @@ last 1:
   - lastfm
   examples:
     beatles: Search for "beatles"
-ws 1:
-  url: http://corpora.uni-leipzig.de/de/res?corpusId=rus_mixed_2013&word={%слово}
+wsl 1:
+  url: https://corpora.uni-leipzig.de/de/res?corpusId=rus_mixed_2013&word={%слово}
   title: Wortschatz-Lexikon (Русский)
   tags:
   - language
