@@ -2115,6 +2115,16 @@ fbugq 1:
   title: search for a term in freedesktop.org bugs (query)
   tags:
   - old
+fbsd 1:
+  url: https://www.freebsd.org/cgi/man.cgi?query={%manpage}
+  title: FreeBSD Manual Pages
+  tags:
+  - freebsd
+fbsd 2:
+  url: https://www.freebsd.org/cgi/man.cgi?sektion={%section}&query={%manpage}
+  title: FreeBSD Manual Pages
+  tags:
+  - freebsd
 fbv 1:
   url: https://www.facebook.com/search/videos/?q={%query}
   title: Facebook, Videos
