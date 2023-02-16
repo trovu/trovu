@@ -5091,6 +5091,18 @@ puls 0:
   title: Uni Potsdam, Puls
   tags:
   - old
+putlocker 0
+  url: https://putlocker.sb
+  title: Putlocker
+  tags:
+  - movies
+  - tv
+putlocker 1
+  url: https://putlocker.sb/search/{%query}
+  title: Putlocker
+  tags:
+  - movies
+  - tv
 pvx 1:
   url: http://pvx.wikia.com/wiki/Special:Search?search={%query}&go=1
   title: PvX Wiki
