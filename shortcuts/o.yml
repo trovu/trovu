@@ -7491,19 +7491,19 @@ ytl 0:
   - video
   - youtube
 ytm 0:
-  url: http://m.youtube.com/
-  title: Youtube, mobile
+  url: http://music.youtube.com/
+  title: Youtube Music
   tags:
-  - video
+  - music
   - youtube
 ytm 1:
-  url: http://m.youtube.com/results?hl={$language}&q={%query}
-  title: Youtube, mobile
+  url: https://music.youtube.com/search?q={%query}
+  title: Youtube Music
   tags:
-  - video
+  - music
   - youtube
   examples:
-    cartoon: search cartoon videos
+    anhedonia: search Anhedonia music
 ytp 1:
   url: http://www.youtube.com/results?search_type=search_playlists&uni=3&search_query={%query}
   title: Youtube Playlists
