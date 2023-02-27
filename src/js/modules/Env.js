@@ -125,12 +125,11 @@ export default class Env {
     return namespaceInfos;
   }
 
-  getInitialNamespaceInfos(namespaces, subscribed) {
+  getInitialNamespaceInfos(namespaces) {
     return Object.fromEntries(
       namespaces.map((namespace, index) => {
         const namespaceInfo = this.getInitalNamespaceInfo(namespace);
         namespaceInfo.priority = index;
-        namespaceInfo.subscribed = subscribed;
         return [namespaceInfo.name, namespaceInfo];
       }),
     );
@@ -376,11 +375,8 @@ export default class Env {
    *
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
-  async fetchShortcuts2(namespaces, subscribed, reload, debug) {
-    const namespaceInfos = this.getInitialNamespaceInfos(
-      namespaces,
-      subscribed,
-    );
+  async fetchShortcuts2(namespaces, reload, debug) {
+    const namespaceInfos = this.getInitialNamespaceInfos(namespaces);
     const promises = await this.startFetches2(namespaceInfos, reload);
 
     // Wait until all fetch calls are done.
@@ -743,9 +739,6 @@ export default class Env {
     // Slice to keep original.
     for (const namespaceName of namespacesByPriority.slice().reverse()) {
       const namespaceInfo = namespaceInfos[namespaceName];
-      if (!namespaceInfo.subscribed) {
-        continue;
-      }
       const shortcuts = namespaceInfo.shortcuts;
 
       for (const key in shortcuts) {
