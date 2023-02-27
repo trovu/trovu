@@ -725,11 +725,11 @@ export default class Env {
    * @param {object} namespaces - Current namespaces keyed by their name.
    */
   addReachable(namespaceInfos) {
-    const namespacesByPriority = [];
-
-    Object.values(namespaceInfos).forEach((namespaceInfo) => {
-      namespacesByPriority[namespaceInfo.priority - 1] = namespaceInfo.name;
-    });
+    const namespaceInfosByPriority = Object.values(namespaceInfos).sort(
+      (a, b) => {
+        return b.priority - a.priority;
+      },
+    );
 
     // Remember found shortcuts
     // to know which ones are reachable.
@@ -737,8 +737,7 @@ export default class Env {
 
     // Iterate over namespaces in reverse order.
     // Slice to keep original.
-    for (const namespaceName of namespacesByPriority.slice().reverse()) {
-      const namespaceInfo = namespaceInfos[namespaceName];
+    for (const namespaceInfo of namespaceInfosByPriority) {
       const shortcuts = namespaceInfo.shortcuts;
 
       for (const key in shortcuts) {
