@@ -39,15 +39,15 @@ export default class ShortcutFinder {
    */
   static async matchShortcuts2(keyword, args, namespaceInfos, reload, debug) {
     const shortcuts = {};
-    for (let namespace of namespaces) {
+    for (let namespaceInfo of namespaceInfos) {
       // If shortcuts are empty.
       // (e.g. because of previous fetch error)
-      if (!namespace.shortcuts) {
+      if (!namespaceInfo.shortcuts) {
         continue;
       }
-      const shortcut = namespace.shortcuts[keyword + ' ' + args.length];
+      const shortcut = namespaceInfo.shortcuts[keyword + ' ' + args.length];
       if (shortcut) {
-        shortcuts[namespace.name] = shortcut;
+        shortcuts[namespaceInfo.name] = shortcut;
       }
     }
     return shortcuts;
