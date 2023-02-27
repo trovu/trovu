@@ -728,7 +728,7 @@ export default class Env {
     const namespacesByPriority = [];
 
     Object.values(namespaceInfos).forEach((namespaceInfo) => {
-      namespacesByPriority[namespaceInfo.priority] = namespaceInfo.name;
+      namespacesByPriority[namespaceInfo.priority - 1] = namespaceInfo.name;
     });
 
     // Remember found shortcuts
