@@ -129,7 +129,7 @@ export default class Env {
     return Object.fromEntries(
       namespaces.map((namespace, index) => {
         const namespaceInfo = this.getInitalNamespaceInfo(namespace);
-        namespaceInfo.priority = index;
+        namespaceInfo.priority = index + 1;
         return [namespaceInfo.name, namespaceInfo];
       }),
     );
