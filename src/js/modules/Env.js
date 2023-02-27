@@ -751,6 +751,8 @@ export default class Env {
       for (const key in shortcuts) {
         const shortcut = shortcuts[key];
 
+        // TODO: Move these to another method
+        // as the name is not matching.
         shortcut.key = key;
         [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
         shortcut.namespace = namespaceInfo.name;
