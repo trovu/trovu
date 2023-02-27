@@ -61,7 +61,7 @@ export default class ShortcutFinder {
    * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
    */
   static async collectShortcuts(env) {
-    let shortcuts = await this.matchShortcuts(
+    let shortcuts = await this.matchShortcuts2(
       env.keyword,
       env.args,
       env.namespaces,
