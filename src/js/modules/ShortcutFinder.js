@@ -110,13 +110,12 @@ export default class ShortcutFinder {
    * @return {object} shortcut        - The shortcut from the picked namespace.
    */
   static pickShortcut(shortcuts, namespaces) {
-    // Find first shortcut in our namespace hierarchy.
-    // Use .slice() to keep original array.
-    for (let namespace of namespaces.slice().reverse()) {
-      if (shortcuts[namespace.name]) {
-        return shortcuts[namespace.name];
-        // TODO: Process POST arguments.
+    for (const shortcut of Object.values(shortcuts)) {
+      if (shortcut.reachable) {
+        return shortcut;
       }
     }
+    // TODO: Handle error here
+    // because it should not occur to have no reachable shortcut.
   }
 }
