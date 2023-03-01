@@ -102,7 +102,7 @@ export default class ShortcutFinder {
   }
 
   /**
-   * Collect shortcuts from all available namespaces.
+   * Pick the final shortcut.
    *
    * @param {object} shortcuts        - The collected shortcuts.
    * @param {array} namespaces        - The set namespaces.
