@@ -111,7 +111,6 @@ export default class Env {
   async getNamespaceInfos2(namespaces, reload, debug) {
     const namespaceInfos = await this.fetchShortcuts2(
       namespaces,
-      true,
       reload,
       debug,
     );
