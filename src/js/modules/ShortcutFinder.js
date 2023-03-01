@@ -75,7 +75,7 @@ export default class ShortcutFinder {
       if (env.debug)
         Helper.log('Not found yet, trying via whole argument string.');
       env.args = [env.argumentString];
-      shortcuts = await this.matchShortcuts(
+      shortcuts = await this.matchShortcuts2(
         env.keyword,
         env.args,
         env.namespaces,
@@ -89,7 +89,7 @@ export default class ShortcutFinder {
     if (Object.keys(shortcuts).length === 0 && env.defaultKeyword) {
       if (env.debug) Helper.log('Not found yet, trying via default keyword.');
       env.args = [env.query];
-      shortcuts = await this.matchShortcuts(
+      shortcuts = await this.matchShortcuts2(
         env.defaultKeyword,
         env.args,
         env.namespaces,
