@@ -665,7 +665,8 @@ export default class Env {
     if (!namespaceInfos[namespaceName]) {
       const newNamespaceInfos = await this.fetchShortcuts2(
         [namespaceName],
-        false,
+        this.reload, // TODO: Handle debug and reload params properly.
+        this.debug, // TODO: Handle debug and reload params properly.
       );
       Object.assign(namespaceInfos, newNamespaceInfos);
     }
