@@ -86,19 +86,15 @@ export default class Env {
       this.namespaces.push(this.extraNamespaceName);
     }
 
-    this.namespaceInfos = await this.getNamespaceInfos2(
+    this.namespaceInfos = await this.getNamespaceInfos(
       this.namespaces,
       this.reload,
       this.debug,
     );
   }
 
-  async getNamespaceInfos2(namespaces, reload, debug) {
-    const namespaceInfos = await this.fetchShortcuts2(
-      namespaces,
-      reload,
-      debug,
-    );
+  async getNamespaceInfos(namespaces, reload, debug) {
+    const namespaceInfos = await this.fetchShortcuts(namespaces, reload, debug);
     await Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
       namespaceInfo.shortcuts = await this.addIncludes(
         namespaceInfo.shortcuts,
@@ -283,7 +279,7 @@ export default class Env {
    *
    * @return {array} promises - The promises from the fetch() calls.
    */
-  async startFetches2(namespaceInfos, reload) {
+  async startFetches(namespaceInfos, reload) {
     const promises = [];
     Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
       if (!namespaceInfo.url) {
@@ -306,9 +302,9 @@ export default class Env {
    *
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
-  async fetchShortcuts2(namespaces, reload, debug) {
+  async fetchShortcuts(namespaces, reload, debug) {
     const namespaceInfos = this.getInitialNamespaceInfos(namespaces);
-    const promises = await this.startFetches2(namespaceInfos, reload);
+    const promises = await this.startFetches(namespaceInfos, reload);
 
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
@@ -492,7 +488,7 @@ export default class Env {
 
   async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
     if (!namespaceInfos[namespaceName]) {
-      const newNamespaceInfos = await this.fetchShortcuts2(
+      const newNamespaceInfos = await this.fetchShortcuts(
         [namespaceName],
         this.reload, // TODO: Handle debug and reload params properly.
         this.debug, // TODO: Handle debug and reload params properly.
