@@ -14,18 +14,15 @@ export default class ShortcutFinder {
    * @return {array} shortcuts  - The array of found shortcuts.
    */
   static async matchShortcuts2(keyword, args, namespaceInfos, reload, debug) {
-    const shortcuts = {};
-
-    await Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+    for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
-        return;
+        continue;
       }
       const shortcut = namespaceInfo.shortcuts[keyword + ' ' + args.length];
-      if (shortcut) {
-        shortcuts[namespaceInfo.name] = shortcut;
+      if (shortcut && shortcut.reachable) {
+        return shortcut;
       }
-    });
-    return shortcuts;
+    }
   }
 
   /**
@@ -35,8 +32,8 @@ export default class ShortcutFinder {
    *
    * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
    */
-  static async collectShortcuts(env) {
-    let shortcuts = await this.matchShortcuts2(
+  static async findShortcut(env) {
+    let shortcut = await this.matchShortcuts2(
       env.keyword,
       env.args,
       env.namespaceInfos,
@@ -46,11 +43,11 @@ export default class ShortcutFinder {
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
-    if (Object.keys(shortcuts).length === 0 && env.args.length > 0) {
+    if (!shortcut && env.args.length > 0) {
       if (env.debug)
         Helper.log('Not found yet, trying via whole argument string.');
       env.args = [env.argumentString];
-      shortcuts = await this.matchShortcuts2(
+      shortcut = await this.matchShortcuts2(
         env.keyword,
         env.args,
         env.namespaceInfos,
@@ -61,10 +58,10 @@ export default class ShortcutFinder {
 
     // If nothing found:
     // Try default keyword.
-    if (Object.keys(shortcuts).length === 0 && env.defaultKeyword) {
+    if (!shortcut && env.defaultKeyword) {
       if (env.debug) Helper.log('Not found yet, trying via default keyword.');
       env.args = [env.query];
-      shortcuts = await this.matchShortcuts2(
+      shortcut = await this.matchShortcuts2(
         env.defaultKeyword,
         env.args,
         env.namespaceInfos,
@@ -72,25 +69,6 @@ export default class ShortcutFinder {
         env.debug,
       );
     }
-
-    return shortcuts;
-  }
-
-  /**
-   * Pick the final shortcut.
-   *
-   * @param {object} shortcuts        - The collected shortcuts.
-   * @param {array} namespaces        - The set namespaces.
-   *
-   * @return {object} shortcut        - The shortcut from the picked namespace.
-   */
-  static pickShortcut(shortcuts, namespaces) {
-    for (const shortcut of Object.values(shortcuts)) {
-      if (shortcut.reachable) {
-        return shortcut;
-      }
-    }
-    // TODO: Handle error here
-    // because it should not occur to have no reachable shortcut.
+    return shortcut;
   }
 }

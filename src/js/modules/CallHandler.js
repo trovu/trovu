@@ -56,8 +56,7 @@ export default class CallHandler {
       return response;
     }
 
-    const shortcuts = await ShortcutFinder.collectShortcuts(env);
-    const shortcut = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
+    const shortcut = await ShortcutFinder.findShortcut(env);
 
     if (!shortcut) {
       response.status = 'not_found';
