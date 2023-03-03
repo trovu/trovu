@@ -311,6 +311,13 @@ export default class Env {
         namespaceInfo.shortcuts,
         namespaceInfo.name,
       );
+      for (const key in namespaceInfo.shortcuts) {
+        namespaceInfo.shortcuts[key] = this.addInfoToShortcut(
+          namespaceInfo.shortcuts[key],
+          key,
+          namespaceInfo,
+        );
+      }
     }
     return namespaceInfos;
   }
@@ -504,8 +511,6 @@ export default class Env {
 
       for (const key in shortcuts) {
         let shortcut = shortcuts[key];
-
-        shortcut = this.addInfoToShortcut(shortcut, key, namespaceInfo);
 
         // If not yet present: reachable.
         // (Because we started with most precendent namespace.)
