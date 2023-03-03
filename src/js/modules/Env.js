@@ -300,59 +300,6 @@ export default class Env {
   /**
    * Add a fetch URL template to a namespace.
    *
-   * @param {array} namespaces - The namespaces to fetch shortcuts for.
-   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
-   * @param {boolean} debug    - Flag whether to print debug messages.
-   *
-   * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
-   */
-  async fetchShortcuts(namespaces, reload, debug) {
-    const promises = await this.startFetches(namespaces, reload);
-
-    // Wait until all fetch calls are done.
-    const responses = await Promise.all(promises);
-
-    for (const i in namespaces) {
-      if (!responses[i] || responses[i].status != 200) {
-        if (debug)
-          Helper.log(
-            (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaces[i].url,
-          );
-        // Mark namespace for deletion.
-        namespaces[i] = undefined;
-        continue;
-      }
-      if (debug)
-        Helper.log(
-          (reload ? 'reload ' : 'cache  ') + 'Success: ' + responses[i].url,
-        );
-      if (!debug) {
-        Helper.log('.', false);
-      }
-      const text = await responses[i].text();
-      let shortcuts;
-      try {
-        shortcuts = jsyaml.load(text);
-      } catch (error) {
-        Helper.log(
-          'Error parsing ' + namespaces[i].url + ':\n\n' + error.message,
-        );
-        this.error = true;
-        namespaces[i] = undefined;
-        continue;
-      }
-      namespaces[i].shortcuts = shortcuts;
-    }
-    // Delete marked namespaces.
-    namespaces = namespaces.filter(
-      (namespace) => typeof namespace !== 'undefined',
-    );
-    return namespaces;
-  }
-
-  /**
-   * Add a fetch URL template to a namespace.
-   *
    * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
    * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
    * @param {boolean} debug    - Flag whether to print debug messages.
