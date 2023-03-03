@@ -322,6 +322,14 @@ export default class Env {
     return namespaceInfos;
   }
 
+  /**
+   * Parse a YAML string.
+   *
+   * @param {string} text - String to parse.
+   * @param {string} url - The URL of the YAML, for error reporting.
+   *
+   * @return {object} namespaces - The parsed shortcuts.
+   */
   parseShortcutsFromYml(text, url) {
     try {
       const shortcuts = jsyaml.load(text);
@@ -445,6 +453,14 @@ export default class Env {
     return shortcuts;
   }
 
+  /**
+   *  Add shortcuts to be included.
+   *
+   * @param {object} shortcuts - The shortcuts the parsed for includes
+   * @param {object} namespaceInfos - The namespaceInfos object
+   *
+   * @return {object} shortcuts - Shortcuts with includes.
+   */
   async addIncludes(shortcuts, namespaceInfos) {
     for (const key in shortcuts) {
       let shortcut = shortcuts[key];
@@ -472,6 +488,14 @@ export default class Env {
     return shortcuts;
   }
 
+  /**
+   *  Reference a shortcut from (another) namespace.
+   *
+   * @param {string} key - The key.
+   * @param {string} namespaceName - The namespace name.
+   *
+   * @return {object} shortcut - Shortcuts to include.
+   */
   async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
     if (!namespaceInfos[namespaceName]) {
       const newNamespaceInfos = await this.fetchShortcuts(
@@ -530,6 +554,15 @@ export default class Env {
     return namespaceInfos;
   }
 
+  /**
+   *  Add info like keyword, arguments to a shortcut.
+   *
+   * @param {object} shortcut - The shortcut.
+   * @param {string} key - The shortcut key.
+   * @param {object} namespaceInfo - The namespace info.
+   *
+   * @return {object} shortcut - Shortcut with info.
+   */
   addInfoToShortcut(shortcut, key, namespaceInfo) {
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
