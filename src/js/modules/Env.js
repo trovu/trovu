@@ -503,18 +503,9 @@ export default class Env {
       const shortcuts = namespaceInfo.shortcuts;
 
       for (const key in shortcuts) {
-        const shortcut = shortcuts[key];
+        let shortcut = shortcuts[key];
 
-        // TODO: Move these to another method
-        // as the name is not matching.
-        shortcut.key = key;
-        [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
-        shortcut.namespace = namespaceInfo.name;
-        shortcut.arguments = UrlProcessor.getArgumentsFromString(
-          shortcuts[key].url,
-        );
-
-        shortcut.title = shortcut.title || '';
+        shortcut = this.addInfoToShortcut(shortcut, key, namespaceInfo);
 
         // If not yet present: reachable.
         // (Because we started with most precendent namespace.)
@@ -532,6 +523,15 @@ export default class Env {
       }
     }
     return namespaceInfos;
+  }
+
+  addInfoToShortcut(shortcut, key, namespaceInfo) {
+    shortcut.key = key;
+    [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
+    shortcut.namespace = namespaceInfo.name;
+    shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
+    shortcut.title = shortcut.title || '';
+    return shortcut;
   }
 
   /**
