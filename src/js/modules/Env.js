@@ -91,21 +91,6 @@ export default class Env {
       this.reload,
       this.debug,
     );
-
-    this.namespaces = await this.getNamespaceInfos(
-      this.namespaces,
-      this.reload,
-      this.debug,
-    );
-  }
-
-  async getNamespaceInfos(namespaces, reload, debug) {
-    namespaces = this.addFetchUrlToNamespaces(namespaces);
-    namespaces = await this.fetchShortcuts(namespaces, reload, debug);
-    namespaces = this.normalizeShortcuts(namespaces);
-    namespaces = this.addIncludesToShortcuts(namespaces);
-    namespaces = this.addInfoToShortcuts(namespaces);
-    return namespaces;
   }
 
   async getNamespaceInfos2(namespaces, reload, debug) {
@@ -428,45 +413,6 @@ export default class Env {
   }
 
   /**
-   * To every namespace, add a fetch URL template.
-   */
-  addFetchUrlToNamespaces(namespaces) {
-    namespaces.forEach((namespace, i, namespaces) => {
-      namespace = this.addFetchUrlToNamespace(namespace);
-      namespaces[i] = namespace;
-    });
-    return namespaces;
-  }
-
-  /**
-   * Add a fetch URL template to a namespace.
-   *
-   * @param {(string|Object)} namespace - The namespace to add the URL template to.
-   *
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  addFetchUrlToNamespace(namespace) {
-    // Site namespaces:
-    if (typeof namespace == 'string' && namespace.length < 4) {
-      namespace = this.addFetchUrlToSiteNamespace(namespace);
-      return namespace;
-    }
-    // User namespace 1 – custom URL:
-    if (namespace.url && namespace.name) {
-      // Just add the type.
-      namespace.type = 'user';
-      return namespace;
-    }
-    // Now remains: User namespace 2 – Github:
-    if (typeof namespace == 'string') {
-      // Create an object.
-      namespace = { github: namespace };
-    }
-    namespace = this.addFetchUrlToGithubNamespace(namespace);
-    return namespace;
-  }
-
-  /**
    * Add a fetch URL template to a namespace.
    *
    * @param {(string|Object)} namespace - The namespace to add the URL template to.
@@ -542,42 +488,6 @@ export default class Env {
    *
    * @return {array} shortcuts - The normalized shortcuts.
    */
-  normalizeShortcutsOfNamespace(shortcuts, namespaceName) {
-    const incorrectKeys = [];
-    for (const key in shortcuts) {
-      if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
-      }
-      // Check for 'only URL' (string) shortcuts
-      // and make an object of them.
-      if (typeof shortcuts[key] === 'string') {
-        const url = shortcuts[key];
-        shortcuts[key] = {
-          url: url,
-        };
-      }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
-    }
-    return shortcuts;
-  }
-
-  /**
-   * Ensure shortcuts have the correct structure.
-   *
-   * @param {array} shortcuts      - The shortcuts to normalize.
-   * @param {string} namespaceName - The namespace name to show in error message.
-   *
-   * @return {array} shortcuts - The normalized shortcuts.
-   */
   verifyShortcuts(shortcuts, namespaceName) {
     const incorrectKeys = [];
     for (const key in shortcuts) {
@@ -604,34 +514,6 @@ export default class Env {
       this.error = true;
     }
     return shortcuts;
-  }
-
-  normalizeShortcuts(namespaces) {
-    for (const i in namespaces) {
-      namespaces[i].shortcuts = this.normalizeShortcutsOfNamespace(
-        namespaces[i].shortcuts,
-        namespaces[i].name,
-      );
-    }
-    return namespaces;
-  }
-
-  addIncludesToShortcuts(namespaces) {
-    for (const i in namespaces) {
-      this.addIncludesToShortcutsOfNamespace(namespaces[i].shortcuts);
-    }
-    return namespaces;
-  }
-
-  addIncludesToShortcutsOfNamespace(shortcuts) {
-    for (const key in shortcuts) {
-      let shortcut = shortcuts[key];
-      if (shortcut.include) {
-        const shortcutToInclude = shortcuts[shortcut.include.key];
-        shortcut = Object.assign(shortcut, shortcutToInclude);
-        // TODO: Handle different namespace.
-      }
-    }
   }
 
   async addIncludes(shortcuts, namespaceInfos) {
@@ -672,51 +554,6 @@ export default class Env {
     }
     const shortcut = namespaceInfos[namespaceName].shortcuts[key];
     return shortcut;
-  }
-
-  /**
-   * Enrich shortcuts with their own information: argument & namespace names, reachable.
-   *
-   * @param {object} namespaces - Current namespaces keyed by their name.
-   */
-  addInfoToShortcuts(namespaces) {
-    // Remember found shortcuts
-    // to know which ones are reachable.
-    const foundShortcuts = {};
-
-    // Iterate over namespaces in reverse order.
-    // Slice to keep original.
-    for (const namespace of namespaces.slice().reverse()) {
-      const shortcuts = namespace.shortcuts;
-
-      for (const key in shortcuts) {
-        const shortcut = shortcuts[key];
-
-        shortcut.key = key;
-        [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
-        shortcut.namespace = namespace.name;
-        shortcut.arguments = UrlProcessor.getArgumentsFromString(
-          shortcuts[key].url,
-        );
-
-        shortcut.title = shortcut.title || '';
-
-        // If not yet present: reachable.
-        // (Because we started with most precendent namespace.)
-        if (!(key in foundShortcuts)) {
-          shortcut.reachable = true;
-        }
-        // Others are unreachable
-        // but can be reached with namespace forcing.
-        else {
-          shortcut.reachable = false;
-        }
-
-        shortcuts[key] = shortcut;
-        foundShortcuts[key] = true;
-      }
-    }
-    return namespaces;
   }
 
   /**
