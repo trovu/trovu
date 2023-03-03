@@ -253,27 +253,6 @@ export default class Env {
   /**
    * Start fetching shortcuts per namespace.
    *
-   * @param {array} namespaces - The namespaces to fetch shortcuts for.
-   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
-   *
-   * @return {array} promises - The promises from the fetch() calls.
-   */
-  async startFetches(namespaces, reload) {
-    const promises = [];
-    namespaces.forEach((namespace, i, namespaces) => {
-      if (!namespace.url) {
-        return namespaces;
-      }
-      promises.push(
-        fetch(namespace.url, { cache: reload ? 'reload' : 'force-cache' }),
-      );
-    });
-    return promises;
-  }
-
-  /**
-   * Start fetching shortcuts per namespace.
-   *
    * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
    * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
    *
