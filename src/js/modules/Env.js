@@ -467,7 +467,6 @@ export default class Env {
       if (shortcut.include) {
         if (shortcut.include.key) {
           if (shortcut.include.namespace) {
-            // TODO: Handle include with namespace.
             const shortcutToInclude = await this.getShortcutFromNamespace(
               shortcut.include.key,
               shortcut.include.namespace,
