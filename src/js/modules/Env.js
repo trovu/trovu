@@ -534,20 +534,8 @@ export default class Env {
       const shortcuts = namespaceInfo.shortcuts;
 
       for (const key in shortcuts) {
-        let shortcut = shortcuts[key];
-
         // If not yet present: reachable.
-        // (Because we started with most precendent namespace.)
-        if (!(key in foundShortcuts)) {
-          shortcut.reachable = true;
-        }
-        // Others are unreachable
-        // but can be reached with namespace forcing.
-        else {
-          shortcut.reachable = false;
-        }
-
-        shortcuts[key] = shortcut;
+        shortcuts[key].reachable = !(key in foundShortcuts);
         foundShortcuts[key] = true;
       }
     }
