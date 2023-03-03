@@ -525,8 +525,6 @@ export default class Env {
     // to know which ones are reachable.
     const foundShortcuts = new Set();
 
-    // Iterate over namespaces in reverse order.
-    // Slice to keep original.
     for (const namespaceInfo of namespaceInfosByPriority) {
       if (!this.isSubscribed(namespaceInfo)) {
         continue;
