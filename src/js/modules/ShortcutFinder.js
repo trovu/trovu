@@ -39,17 +39,16 @@ export default class ShortcutFinder {
    */
   static async matchShortcuts2(keyword, args, namespaceInfos, reload, debug) {
     const shortcuts = {};
-    for (let namespaceInfo of namespaceInfos) {
-      // If shortcuts are empty.
-      // (e.g. because of previous fetch error)
+
+    await Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
       if (!namespaceInfo.shortcuts) {
-        continue;
+        return;
       }
       const shortcut = namespaceInfo.shortcuts[keyword + ' ' + args.length];
       if (shortcut) {
         shortcuts[namespaceInfo.name] = shortcut;
       }
-    }
+    });
     return shortcuts;
   }
 
@@ -64,7 +63,7 @@ export default class ShortcutFinder {
     let shortcuts = await this.matchShortcuts2(
       env.keyword,
       env.args,
-      env.namespaces,
+      env.namespaceInfos,
       env.reload,
       env.debug,
     );
@@ -78,7 +77,7 @@ export default class ShortcutFinder {
       shortcuts = await this.matchShortcuts2(
         env.keyword,
         env.args,
-        env.namespaces,
+        env.namespaceInfos,
         env.reload,
         env.debug,
       );
@@ -92,7 +91,7 @@ export default class ShortcutFinder {
       shortcuts = await this.matchShortcuts2(
         env.defaultKeyword,
         env.args,
-        env.namespaces,
+        env.namespaceInfos,
         env.reload,
         env.debug,
       );
