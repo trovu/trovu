@@ -523,7 +523,7 @@ export default class Env {
 
     // Remember found shortcuts
     // to know which ones are reachable.
-    const foundShortcuts = {};
+    const foundShortcuts = new Set();
 
     // Iterate over namespaces in reverse order.
     // Slice to keep original.
@@ -535,8 +535,8 @@ export default class Env {
 
       for (const key in shortcuts) {
         // If not yet present: reachable.
-        shortcuts[key].reachable = !(key in foundShortcuts);
-        foundShortcuts[key] = true;
+        shortcuts[key].reachable = !foundShortcuts.has(key);
+        foundShortcuts.add(key);
       }
     }
     return namespaceInfos;
