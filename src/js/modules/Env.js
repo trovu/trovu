@@ -518,6 +518,9 @@ export default class Env {
     // Iterate over namespaces in reverse order.
     // Slice to keep original.
     for (const namespaceInfo of namespaceInfosByPriority) {
+      if (!this.isSubscribed(namespaceInfo)) {
+        continue;
+      }
       const shortcuts = namespaceInfo.shortcuts;
 
       for (const key in shortcuts) {
@@ -550,5 +553,16 @@ export default class Env {
       }
     }
     return namespaceInfos;
+  }
+
+  /**
+   * Check if namespace is subscribed to.
+   *
+   * @param {object} namespaceInfo - namespace to be checked.
+   *
+   * @return {boolean} isSubscribed - TRUE if subscribed.
+   */
+  isSubscribed(namespaceInfo) {
+    return namespaceInfo.priority && namespaceInfo.priority > 0;
   }
 }
