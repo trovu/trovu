@@ -529,11 +529,9 @@ export default class Env {
       if (!this.isSubscribed(namespaceInfo)) {
         continue;
       }
-      const shortcuts = namespaceInfo.shortcuts;
-
-      for (const key in shortcuts) {
+      for (const key in namespaceInfo.shortcuts) {
         // If not yet present: reachable.
-        shortcuts[key].reachable = !foundShortcuts.has(key);
+        namespaceInfo.shortcuts[key].reachable = !foundShortcuts.has(key);
         foundShortcuts.add(key);
       }
     }
