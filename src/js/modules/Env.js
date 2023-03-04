@@ -104,7 +104,7 @@ export default class Env {
     this.addReachable(namespaceInfos);
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = this.fillShortcut(
+        namespaceInfo.shortcuts[key] = this.addInfo(
           namespaceInfo.shortcuts[key],
           key,
           namespaceInfo,
@@ -549,7 +549,7 @@ export default class Env {
    *
    * @return {object} shortcut - Shortcut with info.
    */
-  fillShortcut(shortcut, key, namespaceInfo) {
+  addInfo(shortcut, key, namespaceInfo) {
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
     shortcut.namespace = namespaceInfo.name;
