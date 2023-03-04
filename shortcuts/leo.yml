@@ -9,7 +9,7 @@ de-en 1:
   - leo
 de-es 1:
   url: http://dict.leo.org/esde?search={%word}
-  title: Spanish-German (leo.org)
+  title: Alemán-Español (leo.org)
   tags:
   - dictionary
   - german
@@ -17,7 +17,7 @@ de-es 1:
   - spanish
 de-fr 1:
   url: http://dict.leo.org/frde?search={%word}
-  title: French-German (leo.org)
+  title: Allemand-Français (leo.org)
   tags:
   - dictionary
   - french
@@ -25,7 +25,7 @@ de-fr 1:
   - language
 de-it 1:
   url: http://dict.leo.org/itde?search={%word}
-  title: Italian-German (leo.org)
+  title: Tedesco-Italiano (leo.org)
   tags:
   - dictionary
   - german
@@ -33,7 +33,7 @@ de-it 1:
   - language
 de-ru 1:
   url: http://dict.leo.org/rude?search={%word}
-  title: Russian-German (leo.org)
+  title: Немецко-русский (leo.org)
   tags:
   - dictionary
   - german
@@ -41,9 +41,13 @@ de-ru 1:
   - russian
 de-zh 1:
   url: http://dict.leo.org/chde?search={%word}
-  title: Chinese-German (leo.org)
+  title: 德汉词典 (leo.org)
   tags:
   - chinese
   - dictionary
   - german
   - language
+en-de 1:
+  title: Englisch-Deutsch (leo.org)
+  include:
+    key: de-en 1
