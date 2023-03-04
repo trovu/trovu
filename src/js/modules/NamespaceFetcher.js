@@ -33,37 +33,6 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
-  getInitialNamespaceInfos(namespaces) {
-    return Object.fromEntries(
-      namespaces.map((namespace, index) => {
-        const namespaceInfo = this.getInitalNamespaceInfo(namespace);
-        namespaceInfo.priority = index + 1;
-        return [namespaceInfo.name, namespaceInfo];
-      }),
-    );
-  }
-  /**
-   * Start fetching shortcuts per namespace.
-   *
-   * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
-   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
-   *
-   * @return {array} promises - The promises from the fetch() calls.
-   */
-  async startFetches(namespaceInfos, reload) {
-    const promises = [];
-    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
-      if (!namespaceInfo.url) {
-        // TODO: Handle this as error.
-        return;
-      }
-      promises[namespaceInfo.priority] = fetch(namespaceInfo.url, {
-        cache: reload ? 'reload' : 'force-cache',
-      });
-    });
-    return promises;
-  }
-
   /**
    * Add a fetch URL template to a namespace.
    *
@@ -105,88 +74,6 @@ export default class NamespaceFetcher {
       );
     }
     return namespaceInfos;
-  }
-
-  /**
-   * Parse a YAML string.
-   *
-   * @param {string} text - String to parse.
-   * @param {string} url - The URL of the YAML, for error reporting.
-   *
-   * @return {object} namespaces - The parsed shortcuts.
-   */
-  parseShortcutsFromYml(text, url) {
-    try {
-      const shortcuts = jsyaml.load(text);
-      return shortcuts;
-    } catch (error) {
-      Helper.log('Error parsing ' + url + ':\n\n' + error.message);
-      this.error = true;
-      return [];
-    }
-  }
-
-  logSuccess(debug, reload, response) {
-    if (debug)
-      Helper.log((reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url);
-    if (!debug) {
-      Helper.log('.', false);
-    }
-  }
-
-  /**
-   * Add a fetch URL template to a namespace.
-   *
-   * @param {(string|Object)} namespace - The namespace to add the URL template to.
-   *
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  getInitalNamespaceInfo(namespace) {
-    // Site namespaces:
-    if (typeof namespace == 'string' && namespace.length < 4) {
-      namespace = this.addFetchUrlToSiteNamespace(namespace);
-      return namespace;
-    }
-    // User namespace 1 – custom URL:
-    if (namespace.url && namespace.name) {
-      // Just add the type.
-      namespace.type = 'user';
-      return namespace;
-    }
-    // Now remains: User namespace 2 – Github:
-    if (typeof namespace == 'string') {
-      // Create an object.
-      namespace = { github: namespace };
-    }
-    namespace = this.addFetchUrlToGithubNamespace(namespace);
-    return namespace;
-  }
-  /**
-   * Ensure shortcuts have the correct structure.
-   *
-   * @param {array} shortcuts      - The shortcuts to normalize.
-   * @param {string} namespaceName - The namespace name to show in error message.
-   *
-   * @return {array} shortcuts - The normalized shortcuts.
-   */
-  checkKeySyntax(shortcuts, namespaceName) {
-    const incorrectKeys = [];
-    for (const key in shortcuts) {
-      if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
-      }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
-    }
-    return shortcuts;
   }
 
   /**
@@ -238,27 +125,6 @@ export default class NamespaceFetcher {
   }
 
   /**
-   *  Reference a shortcut from (another) namespace.
-   *
-   * @param {string} key - The key.
-   * @param {string} namespaceName - The namespace name.
-   *
-   * @return {object} shortcut - Shortcuts to include.
-   */
-  async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
-    if (!namespaceInfos[namespaceName]) {
-      const newNamespaceInfos = await this.fetchShortcuts(
-        [namespaceName],
-        this.reload, // TODO: Handle debug and reload params properly.
-        this.debug, // TODO: Handle debug and reload params properly.
-      );
-      Object.assign(namespaceInfos, newNamespaceInfos);
-    }
-    const shortcut = namespaceInfos[namespaceName].shortcuts[key];
-    return shortcut;
-  }
-
-  /**
    * Enrich shortcuts with their own information: argument & namespace names, reachable.
    *
    * @param {object} namespaces - Current namespaces keyed by their name.
@@ -302,6 +168,142 @@ export default class NamespaceFetcher {
     shortcut.namespace = namespaceInfo.name;
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
     shortcut.title = shortcut.title || '';
+    return shortcut;
+  }
+
+  getInitialNamespaceInfos(namespaces) {
+    return Object.fromEntries(
+      namespaces.map((namespace, index) => {
+        const namespaceInfo = this.getInitalNamespaceInfo(namespace);
+        namespaceInfo.priority = index + 1;
+        return [namespaceInfo.name, namespaceInfo];
+      }),
+    );
+  }
+
+  /**
+   * Add a fetch URL template to a namespace.
+   *
+   * @param {(string|Object)} namespace - The namespace to add the URL template to.
+   *
+   * @return {Object} namespace - The namespace with the added URL template.
+   */
+  getInitalNamespaceInfo(namespace) {
+    // Site namespaces:
+    if (typeof namespace == 'string' && namespace.length < 4) {
+      namespace = this.addFetchUrlToSiteNamespace(namespace);
+      return namespace;
+    }
+    // User namespace 1 – custom URL:
+    if (namespace.url && namespace.name) {
+      // Just add the type.
+      namespace.type = 'user';
+      return namespace;
+    }
+    // Now remains: User namespace 2 – Github:
+    if (typeof namespace == 'string') {
+      // Create an object.
+      namespace = { github: namespace };
+    }
+    namespace = this.addFetchUrlToGithubNamespace(namespace);
+    return namespace;
+  }
+
+  /**
+   * Start fetching shortcuts per namespace.
+   *
+   * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
+   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
+   *
+   * @return {array} promises - The promises from the fetch() calls.
+   */
+  async startFetches(namespaceInfos, reload) {
+    const promises = [];
+    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+      if (!namespaceInfo.url) {
+        // TODO: Handle this as error.
+        return;
+      }
+      promises[namespaceInfo.priority] = fetch(namespaceInfo.url, {
+        cache: reload ? 'reload' : 'force-cache',
+      });
+    });
+    return promises;
+  }
+
+  /**
+   * Parse a YAML string.
+   *
+   * @param {string} text - String to parse.
+   * @param {string} url - The URL of the YAML, for error reporting.
+   *
+   * @return {object} namespaces - The parsed shortcuts.
+   */
+  parseShortcutsFromYml(text, url) {
+    try {
+      const shortcuts = jsyaml.load(text);
+      return shortcuts;
+    } catch (error) {
+      Helper.log('Error parsing ' + url + ':\n\n' + error.message);
+      this.error = true;
+      return [];
+    }
+  }
+
+  /**
+   * Ensure shortcuts have the correct structure.
+   *
+   * @param {array} shortcuts      - The shortcuts to normalize.
+   * @param {string} namespaceName - The namespace name to show in error message.
+   *
+   * @return {array} shortcuts - The normalized shortcuts.
+   */
+  checkKeySyntax(shortcuts, namespaceName) {
+    const incorrectKeys = [];
+    for (const key in shortcuts) {
+      if (!key.match(/\S+ \d/)) {
+        incorrectKeys.push(key);
+      }
+    }
+    if (incorrectKeys.length > 0) {
+      Helper.log(
+        "Incorrect keys found in namespace '" +
+          namespaceName +
+          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
+          '\n\n' +
+          incorrectKeys.join('\n'),
+      );
+      this.error = true;
+    }
+    return shortcuts;
+  }
+
+  logSuccess(debug, reload, response) {
+    if (debug)
+      Helper.log((reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url);
+    if (!debug) {
+      Helper.log('.', false);
+    }
+  }
+
+  /**
+   *  Reference a shortcut from (another) namespace.
+   *
+   * @param {string} key - The key.
+   * @param {string} namespaceName - The namespace name.
+   *
+   * @return {object} shortcut - Shortcuts to include.
+   */
+  async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
+    if (!namespaceInfos[namespaceName]) {
+      const newNamespaceInfos = await this.fetchShortcuts(
+        [namespaceName],
+        this.reload, // TODO: Handle debug and reload params properly.
+        this.debug, // TODO: Handle debug and reload params properly.
+      );
+      Object.assign(namespaceInfos, newNamespaceInfos);
+    }
+    const shortcut = namespaceInfos[namespaceName].shortcuts[key];
     return shortcut;
   }
 
