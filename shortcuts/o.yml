@@ -4997,6 +4997,18 @@ plg 1:
   title: Prima Legion search
   tags:
   - old
+plk 0:
+  url: https://putlocker.sb
+  title: Putlocker
+  tags:
+  - movies
+  - tv
+plk 1:
+  url: https://putlocker.sb/search/{%query}
+  title: Putlocker
+  tags:
+  - movies
+  - tv
 plot 1:
   url: http://plot20.kesto.de/#{"functions":["{%function}"]}
   title: Plot 2.0
@@ -5098,18 +5110,6 @@ puls 0:
   title: Uni Potsdam, Puls
   tags:
   - old
-plk 0:
-  url: https://putlocker.sb
-  title: Putlocker
-  tags:
-  - movies
-  - tv
-plk 1:
-  url: https://putlocker.sb/search/{%query}
-  title: Putlocker
-  tags:
-  - movies
-  - tv
 pvx 1:
   url: http://pvx.wikia.com/wiki/Special:Search?search={%query}&go=1
   title: PvX Wiki
