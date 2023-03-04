@@ -16,10 +16,7 @@ export default class NamespaceFetcher {
           namespaceInfo.shortcuts[key],
         );
       }
-      namespaceInfo.shortcuts = await this.addIncludes(
-        namespaceInfo.shortcuts,
-        namespaceInfos,
-      );
+      namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
     }
     this.addReachable(namespaceInfos);
     for (const namespaceInfo of Object.values(namespaceInfos)) {
@@ -105,7 +102,7 @@ export default class NamespaceFetcher {
    *
    * @return {object} shortcuts - Shortcuts with includes.
    */
-  async addIncludes(shortcuts, namespaceInfos) {
+  async addIncludes(shortcuts) {
     for (const key in shortcuts) {
       let shortcut = shortcuts[key];
       if (shortcut.include) {
