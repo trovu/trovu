@@ -101,6 +101,13 @@ export default class Env {
         namespaceInfos,
       );
     }
+    for (const namespaceInfo of Object.values(namespaceInfos)) {
+      for (const key in namespaceInfo.shortcuts) {
+        namespaceInfo.shortcuts[key] = this.convertToObject(
+          namespaceInfo.shortcuts[key],
+        );
+      }
+    }
     this.addReachable(namespaceInfos);
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
@@ -433,7 +440,6 @@ export default class Env {
       if (!key.match(/\S+ \d/)) {
         incorrectKeys.push(key);
       }
-      shortcuts[key] = this.convertToObject(shortcuts[key]);
     }
     if (incorrectKeys.length > 0) {
       Helper.log(
