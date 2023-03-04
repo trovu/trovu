@@ -215,10 +215,6 @@ export default class NamespaceFetcher {
   async startFetches(newNamespaceInfos) {
     const promises = [];
     Object.values(newNamespaceInfos).forEach(async (namespaceInfo) => {
-      if (!namespaceInfo.url) {
-        // TODO: Handle this as error.
-        return;
-      }
       promises[namespaceInfo.priority] = fetch(namespaceInfo.url, {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
