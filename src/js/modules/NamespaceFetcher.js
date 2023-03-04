@@ -208,13 +208,13 @@ export default class NamespaceFetcher {
   /**
    * Start fetching shortcuts per namespace.
    *
-   * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
+   * @param {array} newNamespaceInfos - The namespaces to fetch shortcuts for.
    *
    * @return {array} promises - The promises from the fetch() calls.
    */
-  async startFetches(namespaceInfos) {
+  async startFetches(newNamespaceInfos) {
     const promises = [];
-    Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+    Object.values(newNamespaceInfos).forEach(async (namespaceInfo) => {
       if (!namespaceInfo.url) {
         // TODO: Handle this as error.
         return;
