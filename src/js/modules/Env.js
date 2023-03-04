@@ -91,6 +91,16 @@ export default class Env {
       this.reload,
       this.debug,
     );
+
+    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
+      for (const key in namespaceInfo.shortcuts) {
+        namespaceInfo.shortcuts[key] = this.addInfoToShortcut(
+          namespaceInfo.shortcuts[key],
+          key,
+          namespaceInfo,
+        );
+      }
+    }
   }
 
   async getNamespaceInfos(namespaces, reload, debug) {
@@ -311,13 +321,6 @@ export default class Env {
         namespaceInfo.shortcuts,
         namespaceInfo.name,
       );
-      for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = this.addInfoToShortcut(
-          namespaceInfo.shortcuts[key],
-          key,
-          namespaceInfo,
-        );
-      }
     }
     return namespaceInfos;
   }
