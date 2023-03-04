@@ -5,6 +5,7 @@ import UrlProcessor from './UrlProcessor.js';
 export default class NamespaceFetcher {
   constructor(env) {
     this.env = env;
+    this.namespaceInfos = {};
   }
 
   async getNamespaceInfos(namespaces) {
@@ -41,14 +42,20 @@ export default class NamespaceFetcher {
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
   async ensureNamespaceInfos(namespaces) {
-    const namespaceInfos = this.getInitialNamespaceInfos(namespaces);
-    const promises = await this.startFetches(namespaceInfos);
+    const newNamespaceInfos = this.getInitialNamespaceInfos(namespaces);
+    for (const namespaceName in newNamespaceInfos) {
+      if (namespaceName in this.namespaceInfos) {
+        // Remove existing, to not fetch them again.
+        delete newNamespaceInfos.namespaceName;
+      }
+    }
+    const promises = await this.startFetches(newNamespaceInfos);
 
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
 
-    for (const namespaceName in namespaceInfos) {
-      const namespaceInfo = namespaceInfos[namespaceName];
+    for (const namespaceName in newNamespaceInfos) {
+      const namespaceInfo = newNamespaceInfos[namespaceName];
       const response = responses[namespaceInfo.priority];
       if (!response || response.status != 200) {
         if (this.env.debug)
@@ -73,7 +80,8 @@ export default class NamespaceFetcher {
         namespaceInfo.name,
       );
     }
-    return namespaceInfos;
+    Object.assign(this.namespaceInfos, newNamespaceInfos);
+    return this.namespaceInfos;
   }
 
   /**
