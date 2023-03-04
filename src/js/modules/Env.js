@@ -91,16 +91,6 @@ export default class Env {
       this.reload,
       this.debug,
     );
-
-    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
-      for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = this.fillShortcut(
-          namespaceInfo.shortcuts[key],
-          key,
-          namespaceInfo,
-        );
-      }
-    }
   }
 
   async getNamespaceInfos(namespaces, reload, debug) {
@@ -112,6 +102,15 @@ export default class Env {
       );
     }
     this.addReachable(namespaceInfos);
+    for (const namespaceInfo of Object.values(namespaceInfos)) {
+      for (const key in namespaceInfo.shortcuts) {
+        namespaceInfo.shortcuts[key] = this.fillShortcut(
+          namespaceInfo.shortcuts[key],
+          key,
+          namespaceInfo,
+        );
+      }
+    }
     return namespaceInfos;
   }
 
