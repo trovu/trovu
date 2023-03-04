@@ -9,9 +9,9 @@ export default class NamespaceFetcher {
   }
 
   async getNamespaceInfos(namespaces) {
-    const namespaceInfos = await this.ensureNamespaceInfos(namespaces);
-    this.addReachable(namespaceInfos);
-    for (const namespaceInfo of Object.values(namespaceInfos)) {
+    await this.ensureNamespaceInfos(namespaces);
+    this.addReachable();
+    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
         namespaceInfo.shortcuts[key] = this.addInfo(
           namespaceInfo.shortcuts[key],
@@ -20,7 +20,7 @@ export default class NamespaceFetcher {
         );
       }
     }
-    return namespaceInfos;
+    return this.namespaceInfos;
   }
 
   /**
@@ -131,8 +131,8 @@ export default class NamespaceFetcher {
    *
    * @param {object} namespaces - Current namespaces keyed by their name.
    */
-  addReachable(namespaceInfos) {
-    const namespaceInfosByPriority = Object.values(namespaceInfos).sort(
+  addReachable() {
+    const namespaceInfosByPriority = Object.values(this.namespaceInfos).sort(
       (a, b) => {
         return b.priority - a.priority;
       },
@@ -152,7 +152,6 @@ export default class NamespaceFetcher {
         foundShortcuts.add(key);
       }
     }
-    return namespaceInfos;
   }
 
   /**
