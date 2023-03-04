@@ -72,7 +72,7 @@ export default class NamespaceFetcher {
       namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
     }
     Object.assign(this.namespaceInfos, newNamespaceInfos);
-    return this.namespaceInfos;
+    return newNamespaceInfos;
   }
 
   /**
