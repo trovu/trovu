@@ -115,7 +115,6 @@ export default class NamespaceFetcher {
           } else {
             shortcutToInclude = shortcuts[shortcut.include.key];
           }
-          delete shortcutToInclude.namespace; // Remove namespace to keep namespace from target.
           shortcut = Object.assign(shortcut, shortcutToInclude);
         } else {
           Helper.log(`Incorrect include found at ${key}`);
