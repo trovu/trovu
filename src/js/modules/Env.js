@@ -94,7 +94,7 @@ export default class Env {
 
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = this.addInfoToShortcut(
+        namespaceInfo.shortcuts[key] = this.fillShortcut(
           namespaceInfo.shortcuts[key],
           key,
           namespaceInfo,
@@ -550,7 +550,7 @@ export default class Env {
    *
    * @return {object} shortcut - Shortcut with info.
    */
-  addInfoToShortcut(shortcut, key, namespaceInfo) {
+  fillShortcut(shortcut, key, namespaceInfo) {
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
     shortcut.namespace = namespaceInfo.name;
