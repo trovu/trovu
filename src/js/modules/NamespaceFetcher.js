@@ -8,7 +8,7 @@ export default class NamespaceFetcher {
   }
 
   async getNamespaceInfos(namespaces) {
-    const namespaceInfos = await this.fetchShortcuts(namespaces);
+    const namespaceInfos = await this.ensureNamespaceInfos(namespaces);
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
         namespaceInfo.shortcuts[key] = this.convertToObject(
@@ -40,7 +40,7 @@ export default class NamespaceFetcher {
    *
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
-  async fetchShortcuts(namespaces) {
+  async ensureNamespaceInfos(namespaces) {
     const namespaceInfos = this.getInitialNamespaceInfos(namespaces);
     const promises = await this.startFetches(namespaceInfos);
 
@@ -297,7 +297,9 @@ export default class NamespaceFetcher {
    */
   async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
     if (!namespaceInfos[namespaceName]) {
-      const newNamespaceInfos = await this.fetchShortcuts([namespaceName]);
+      const newNamespaceInfos = await this.ensureNamespaceInfos([
+        namespaceName,
+      ]);
       Object.assign(namespaceInfos, newNamespaceInfos);
     }
     const shortcut = namespaceInfos[namespaceName].shortcuts[key];
