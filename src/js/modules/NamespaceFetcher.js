@@ -24,11 +24,7 @@ export default class NamespaceFetcher {
   }
 
   /**
-   * Add a fetch URL template to a namespace.
-   *
-   * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
-   *
-   * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
+   * Ensure that infos for a namespace exist.
    */
   async ensureNamespaceInfos(namespaces) {
     const newNamespaceInfos = this.getInitialNamespaceInfos(namespaces);
@@ -96,7 +92,6 @@ export default class NamespaceFetcher {
    *  Add shortcuts to be included.
    *
    * @param {object} shortcuts - The shortcuts the parsed for includes
-   * @param {object} namespaceInfos - The namespaceInfos object
    *
    * @return {object} shortcuts - Shortcuts with includes.
    */
