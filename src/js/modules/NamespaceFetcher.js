@@ -7,8 +7,8 @@ export default class NamespaceFetcher {
     this.env = env;
   }
 
-  async getNamespaceInfos(namespaces, reload, debug) {
-    const namespaceInfos = await this.fetchShortcuts(namespaces, reload, debug);
+  async getNamespaceInfos(namespaces) {
+    const namespaceInfos = await this.fetchShortcuts(namespaces);
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
         namespaceInfo.shortcuts[key] = this.convertToObject(
@@ -37,14 +37,12 @@ export default class NamespaceFetcher {
    * Add a fetch URL template to a namespace.
    *
    * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
-   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
-   * @param {boolean} debug    - Flag whether to print debug messages.
    *
    * @return {array} namespaces - The namespaces with their fetched shortcuts, in a new property namespace.shortcuts.
    */
-  async fetchShortcuts(namespaces, reload, debug) {
+  async fetchShortcuts(namespaces) {
     const namespaceInfos = this.getInitialNamespaceInfos(namespaces);
-    const promises = await this.startFetches(namespaceInfos, reload);
+    const promises = await this.startFetches(namespaceInfos);
 
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
@@ -53,14 +51,16 @@ export default class NamespaceFetcher {
       const namespaceInfo = namespaceInfos[namespaceName];
       const response = responses[namespaceInfo.priority];
       if (!response || response.status != 200) {
-        if (debug)
+        if (this.env.debug)
           Helper.log(
-            (reload ? 'reload ' : 'cache  ') + 'Fail:    ' + namespaceInfo.url,
+            (this.env.reload ? 'reload ' : 'cache  ') +
+              'Fail:    ' +
+              namespaceInfo.url,
           );
         namespaceInfo.shortcuts = [];
         continue;
       }
-      this.logSuccess(debug, reload, response);
+      this.logSuccess(response);
 
       const text = await response.text();
       namespaceInfo.shortcuts = this.parseShortcutsFromYml(
@@ -213,11 +213,10 @@ export default class NamespaceFetcher {
    * Start fetching shortcuts per namespace.
    *
    * @param {array} namespaceInfos - The namespaces to fetch shortcuts for.
-   * @param {boolean} reload   - Flag whether to call fetch() with reload. Otherwise, it will be called with 'force-cache'.
    *
    * @return {array} promises - The promises from the fetch() calls.
    */
-  async startFetches(namespaceInfos, reload) {
+  async startFetches(namespaceInfos) {
     const promises = [];
     Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
       if (!namespaceInfo.url) {
@@ -225,7 +224,7 @@ export default class NamespaceFetcher {
         return;
       }
       promises[namespaceInfo.priority] = fetch(namespaceInfo.url, {
-        cache: reload ? 'reload' : 'force-cache',
+        cache: this.env.reload ? 'reload' : 'force-cache',
       });
     });
     return promises;
@@ -278,10 +277,12 @@ export default class NamespaceFetcher {
     return shortcuts;
   }
 
-  logSuccess(debug, reload, response) {
-    if (debug)
-      Helper.log((reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url);
-    if (!debug) {
+  logSuccess(response) {
+    if (this.env.debug)
+      Helper.log(
+        (this.env.reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url,
+      );
+    if (!this.env.debug) {
       Helper.log('.', false);
     }
   }
@@ -296,11 +297,7 @@ export default class NamespaceFetcher {
    */
   async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
     if (!namespaceInfos[namespaceName]) {
-      const newNamespaceInfos = await this.fetchShortcuts(
-        [namespaceName],
-        this.reload, // TODO: Handle debug and reload params properly.
-        this.debug, // TODO: Handle debug and reload params properly.
-      );
+      const newNamespaceInfos = await this.fetchShortcuts([namespaceName]);
       Object.assign(namespaceInfos, newNamespaceInfos);
     }
     const shortcut = namespaceInfos[namespaceName].shortcuts[key];
