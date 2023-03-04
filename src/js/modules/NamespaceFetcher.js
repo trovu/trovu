@@ -291,25 +291,6 @@ export default class NamespaceFetcher {
   }
 
   /**
-   *  Reference a shortcut from (another) namespace.
-   *
-   * @param {string} key - The key.
-   * @param {string} namespaceName - The namespace name.
-   *
-   * @return {object} shortcut - Shortcuts to include.
-   */
-  async getShortcutFromNamespace(key, namespaceName, namespaceInfos) {
-    if (!namespaceInfos[namespaceName]) {
-      const newNamespaceInfos = await this.ensureNamespaceInfos([
-        namespaceName,
-      ]);
-      Object.assign(namespaceInfos, newNamespaceInfos);
-    }
-    const shortcut = namespaceInfos[namespaceName].shortcuts[key];
-    return shortcut;
-  }
-
-  /**
    * Check if namespace is subscribed to.
    *
    * @param {object} namespaceInfo - namespace to be checked.
