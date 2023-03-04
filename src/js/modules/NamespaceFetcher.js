@@ -31,7 +31,7 @@ export default class NamespaceFetcher {
     for (const namespaceName in newNamespaceInfos) {
       if (namespaceName in this.namespaceInfos) {
         // Remove existing, to not fetch them again.
-        delete newNamespaceInfos.namespaceName;
+        delete newNamespaceInfos[namespaceName];
       }
     }
     const promises = await this.startFetches(newNamespaceInfos);
