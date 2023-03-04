@@ -316,7 +316,7 @@ export default class Env {
         namespaceInfo.url,
       );
 
-      namespaceInfo.shortcuts = this.verifyShortcuts(
+      namespaceInfo.shortcuts = this.checkKeySyntax(
         namespaceInfo.shortcuts,
         namespaceInfo.name,
       );
@@ -427,7 +427,7 @@ export default class Env {
    *
    * @return {array} shortcuts - The normalized shortcuts.
    */
-  verifyShortcuts(shortcuts, namespaceName) {
+  checkKeySyntax(shortcuts, namespaceName) {
     const incorrectKeys = [];
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
