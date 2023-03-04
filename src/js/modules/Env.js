@@ -95,12 +95,12 @@ export default class Env {
 
   async getNamespaceInfos(namespaces, reload, debug) {
     const namespaceInfos = await this.fetchShortcuts(namespaces, reload, debug);
-    await Object.values(namespaceInfos).forEach(async (namespaceInfo) => {
+    for (const namespaceInfo of Object.values(namespaceInfos)) {
       namespaceInfo.shortcuts = await this.addIncludes(
         namespaceInfo.shortcuts,
         namespaceInfos,
       );
-    });
+    }
     this.addReachable(namespaceInfos);
     return namespaceInfos;
   }
