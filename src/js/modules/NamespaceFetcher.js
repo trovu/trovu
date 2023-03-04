@@ -10,6 +10,9 @@ export default class NamespaceFetcher {
 
   async getNamespaceInfos(namespaces) {
     await this.ensureNamespaceInfos(namespaces);
+    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
+      namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
+    }
     this.addReachable();
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
@@ -69,7 +72,6 @@ export default class NamespaceFetcher {
           namespaceInfo.shortcuts[key],
         );
       }
-      namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
     }
     Object.assign(this.namespaceInfos, newNamespaceInfos);
     return newNamespaceInfos;
