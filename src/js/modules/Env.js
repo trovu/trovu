@@ -472,6 +472,7 @@ export default class Env {
               shortcut.include.namespace,
               namespaceInfos,
             );
+            delete shortcutToInclude.namespace; // Remove namespace to keep namespace from target.
             shortcut = Object.assign(shortcut, shortcutToInclude);
           } else {
             const shortcutToInclude = shortcuts[shortcut.include.key];
