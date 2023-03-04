@@ -433,14 +433,7 @@ export default class Env {
       if (!key.match(/\S+ \d/)) {
         incorrectKeys.push(key);
       }
-      // Check for 'only URL' (string) shortcuts
-      // and make an object of them.
-      if (typeof shortcuts[key] === 'string') {
-        const url = shortcuts[key];
-        shortcuts[key] = {
-          url: url,
-        };
-      }
+      shortcuts[key] = this.convertToObject(shortcuts[key]);
     }
     if (incorrectKeys.length > 0) {
       Helper.log(
@@ -453,6 +446,19 @@ export default class Env {
       this.error = true;
     }
     return shortcuts;
+  }
+
+  /**
+   *  Check for 'only URL' (string) shortcuts and make an object of them.
+   */
+  convertToObject(shortcut) {
+    if (typeof shortcut === 'string') {
+      const url = shortcut;
+      shortcut = {
+        url: url,
+      };
+    }
+    return shortcut;
   }
 
   /**
