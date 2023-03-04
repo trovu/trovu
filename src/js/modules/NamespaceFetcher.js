@@ -107,6 +107,7 @@ export default class NamespaceFetcher {
             const newNamespaceInfos = await this.ensureNamespaceInfos([
               shortcut.include.namespace,
             ]);
+            // TODO: Make sure to avoid infinite loop.
             for (const namespaceInfo of Object.values(newNamespaceInfos)) {
               namespaceInfo.shortcuts = await this.addIncludes(
                 namespaceInfo.shortcuts,
