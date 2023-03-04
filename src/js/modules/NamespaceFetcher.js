@@ -105,11 +105,16 @@ export default class NamespaceFetcher {
       let shortcut = shortcuts[key];
       if (shortcut.include) {
         if (shortcut.include.key) {
-          await this.ensureNamespaceInfos([shortcut.include.namespace]);
-          const shortcutToInclude =
-            this.namespaceInfos[shortcut.include.namespace].shortcuts[
-              shortcut.include.key
-            ];
+          let shortcutToInclude;
+          if (shortcut.include.namespace) {
+            await this.ensureNamespaceInfos([shortcut.include.namespace]);
+            shortcutToInclude =
+              this.namespaceInfos[shortcut.include.namespace].shortcuts[
+                shortcut.include.key
+              ];
+          } else {
+            shortcutToInclude = shortcuts[shortcut.include.key];
+          }
           delete shortcutToInclude.namespace; // Remove namespace to keep namespace from target.
           shortcut = Object.assign(shortcut, shortcutToInclude);
         } else {
