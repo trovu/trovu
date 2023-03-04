@@ -1,6 +1,6 @@
 /** @module Suggestions */
 
-import awesomplete from 'awesomplete';
+import Awesomplete from 'awesomplete';
 import 'awesomplete/awesomplete.css';
 
 import Helper from './Helper.js';
