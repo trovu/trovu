@@ -9,7 +9,7 @@ export default class NamespaceFetcher {
   }
 
   async getNamespaceInfos(namespaces) {
-    await this.ensureNamespaceInfos(namespaces);
+    await this.fetchNamespaceInfos(namespaces);
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
     }
@@ -29,7 +29,7 @@ export default class NamespaceFetcher {
   /**
    * Ensure that infos for a namespace exist.
    */
-  async ensureNamespaceInfos(namespaces) {
+  async fetchNamespaceInfos(namespaces) {
     const newNamespaceInfos = this.getInitialNamespaceInfos(namespaces);
     for (const namespaceName in newNamespaceInfos) {
       if (namespaceName in this.namespaceInfos) {
@@ -104,7 +104,7 @@ export default class NamespaceFetcher {
         if (shortcut.include.key) {
           let shortcutToInclude;
           if (shortcut.include.namespace) {
-            const newNamespaceInfos = await this.ensureNamespaceInfos([
+            const newNamespaceInfos = await this.fetchNamespaceInfos([
               shortcut.include.namespace,
             ]);
             // TODO: Make sure to avoid infinite loop.
