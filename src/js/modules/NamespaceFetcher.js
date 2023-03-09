@@ -9,10 +9,7 @@ export default class NamespaceFetcher {
   }
 
   async getNamespaceInfos(namespaces) {
-    await this.fetchNamespaceInfos(namespaces);
-    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
-      namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
-    }
+    await this.ensureNamespaceInfos(namespaces);
     this.addReachable();
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
@@ -24,6 +21,13 @@ export default class NamespaceFetcher {
       }
     }
     return this.namespaceInfos;
+  }
+
+  async ensureNamespaceInfos(namespaces) {
+    await this.fetchNamespaceInfos(namespaces);
+    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
+      namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
+    }
   }
 
   /**
