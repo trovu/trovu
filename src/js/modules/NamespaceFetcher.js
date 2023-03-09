@@ -108,15 +108,7 @@ export default class NamespaceFetcher {
         if (shortcut.include.key) {
           let shortcutToInclude;
           if (shortcut.include.namespace) {
-            const newNamespaceInfos = await this.fetchNamespaceInfos([
-              shortcut.include.namespace,
-            ]);
-            // TODO: Make sure to avoid infinite loop.
-            for (const namespaceInfo of Object.values(newNamespaceInfos)) {
-              namespaceInfo.shortcuts = await this.addIncludes(
-                namespaceInfo.shortcuts,
-              );
-            }
+            await this.ensureNamespaceInfos([shortcut.include.namespace]);
             shortcutToInclude =
               this.namespaceInfos[shortcut.include.namespace].shortcuts[
                 shortcut.include.key
