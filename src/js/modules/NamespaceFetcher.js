@@ -24,8 +24,8 @@ export default class NamespaceFetcher {
   }
 
   async ensureNamespaceInfos(namespaces) {
-    await this.fetchNamespaceInfos(namespaces);
-    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
+    const newNamespaceInfos = await this.fetchNamespaceInfos(namespaces);
+    for (const namespaceInfo of Object.values(newNamespaceInfos)) {
       namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
     }
   }
