@@ -547,6 +547,7 @@ actions['createDictionaryInfo'] = async function () {
     console.log('  tags:');
     console.log('  - dictionary');
     console.log('  - language');
+    console.log('  - leo');
     console.log(`  - ${t.lang.tag[lang1]}`);
     console.log(`  - ${t.lang.tag[lang2]}`);
   }
