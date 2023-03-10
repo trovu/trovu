@@ -540,7 +540,7 @@ actions['createDictionaryInfo'] = async function () {
   function logTitle(lang1, lang2) {
     console.log(
       '  title:',
-      `${t.lang.title[lang2][lang1]}-${t.lang.title[lang1][lang1]} (leo.org)`,
+      `${t.lang.title[lang1][lang2]}-${t.lang.title[lang2][lang2]} (leo.org)`,
     );
   }
   function logTags(lang1, lang2) {
