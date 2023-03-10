@@ -580,26 +580,30 @@ actions['createDictionaryInfo'] = async function () {
     console.log('  - dictionary');
     console.log('  - language');
     console.log('  - leo');
-    console.log(`  - ${t.lang.tag[lang1]}`);
-    console.log(`  - ${t.lang.tag[lang2]}`);
+    console.log(`  - ${anticapitalize(languages.getName(lang1, 'en'))}`);
+    console.log(`  - ${anticapitalize(languages.getName(lang2, 'en'))}`);
   }
   function logExamples(lang1, lang2) {
     console.log('  examples:');
     console.log(
       '   ',
       `${t.tree[lang1]}: ${t.desc[lang2]
-        .replace('{lang}', t.lang.desc[lang2][lang2])
+        .replace('{lang}', languages.getName(lang2, lang2))
         .replace('{tree}', t.tree[lang1])}`,
     );
     console.log(
       '   ',
       `${t.tree[lang2]}: ${t.desc[lang2]
-        .replace('{lang}', t.lang.desc[lang1][lang2])
+        .replace('{lang}', languages.getName(lang1, lang2))
         .replace('{tree}', t.tree[lang2])}`,
     );
   }
   function capitalize(str) {
     const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+    return capitalized;
+  }
+  function anticapitalize(str) {
+    const capitalized = str.charAt(0).toLowerCase() + str.slice(1);
     return capitalized;
   }
 };
