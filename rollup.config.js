@@ -6,9 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import html from '@rollup/plugin-html';
 import { readFileSync } from 'fs';
 import copy from 'rollup-plugin-copy';
-import watch from "rollup-plugin-watch";
-
-
+import watch from 'rollup-plugin-watch';
 
 const isProduction = process.env.BUILD === 'production';
 
@@ -34,8 +32,8 @@ export default [
     input: 'src/js/index.js',
     output: output,
     plugins: [
-      watch({ dir: "src/html/" }),
-      watch({ dir: "src/img/" }),
+      watch({ dir: 'src/html/' }),
+      watch({ dir: 'src/img/' }),
       resolve(),
       commonjs(),
       json(),
