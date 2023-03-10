@@ -94,3 +94,15 @@
   response:
     status: removed
     key: abp 0
+- title: included 1 level
+  env:
+    github: georgjaehnig
+    query: test-include-leo-de-en baum
+  response:
+    redirectUrl: http://dict.leo.org/ende?search=baum
+- title: included 2 level
+  env:
+    github: georgjaehnig
+    query: test-include-leo-fr-de baum
+  response:
+    redirectUrl: http://dict.leo.org/frde?search=baum
