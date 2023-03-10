@@ -596,6 +596,10 @@ actions['createDictionaryInfo'] = async function () {
         .replace('{tree}', t.tree[lang2])}`,
     );
   }
+  function capitalize(str) {
+    const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+    return capitalized;
+  }
 };
 
 main();
