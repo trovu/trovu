@@ -20,6 +20,7 @@ export default class NamespaceFetcher {
         );
       }
     }
+    console.log(this.namespaceInfos);
     return this.namespaceInfos;
   }
 
@@ -109,14 +110,18 @@ export default class NamespaceFetcher {
           let shortcutToInclude;
           if (shortcut.include.namespace) {
             await this.ensureNamespaceInfos([shortcut.include.namespace]);
-            shortcutToInclude =
+            shortcutToInclude = structuredClone(
               this.namespaceInfos[shortcut.include.namespace].shortcuts[
                 shortcut.include.key
-              ];
+              ],
+            );
           } else {
-            shortcutToInclude = shortcuts[shortcut.include.key];
+            shortcutToInclude = structuredClone(
+              shortcuts[shortcut.include.key],
+            );
           }
-          shortcut = Object.assign(shortcut, shortcutToInclude);
+          const newShortcut = Object.assign(shortcutToInclude, shortcut);
+          shortcuts[key] = newShortcut;
         } else {
           Helper.log(`Incorrect include found at ${key}`);
           this.error = true;
