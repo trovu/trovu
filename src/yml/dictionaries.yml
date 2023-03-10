@@ -1,57 +1,60 @@
 bab:
-  da:
-    de: https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}
-  de:
-    es: https://de.bab.la/woerterbuch/spanisch-deutsch/{%word}
-    fr: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%word}
-    it: https://de.bab.la/woerterbuch/italienisch-deutsch/{%word}
-    pl: https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}
-    ru: https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
-    sv: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
-    # tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+  pairs:
+    da:
+      de: https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}
+    de:
+      es: https://de.bab.la/woerterbuch/spanisch-deutsch/{%word}
+      fr: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%word}
+      it: https://de.bab.la/woerterbuch/italienisch-deutsch/{%word}
+      pl: https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}
+      ru: https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
+      sv: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
+      # tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
 leo:
-  de:
-    en: https://dict.leo.org/german-english/{%word}
-    es: https://dict.leo.org/spanisch-deutsch/{%word}
-    fr: https://dict.leo.org/französisch-deutsch/{%word}
-    it: https://dict.leo.org/italienisch-deutsch/{%word}
-    pl: https://dict.leo.org/polnisch-deutsch/{%word}
-    pt: https://dict.leo.org/portugiesisch-deutsch/{%word}
-    ru: https://dict.leo.org/russisch-deutsch/{%word}
-    zh: https://dict.leo.org/chinesisch-deutsch/{%word}
-  en:
-    es: https://dict.leo.org/spanish-english/{%word}
-    fr: https://dict.leo.org/french-english/{%word}
-    ru: https://dict.leo.org/russian-english/{%word}
-  es:
-    pt: https://dict.leo.org/espanhol-português/{%word}
+  pairs:
+    de:
+      en: https://dict.leo.org/german-english/{%word}
+      es: https://dict.leo.org/spanisch-deutsch/{%word}
+      fr: https://dict.leo.org/französisch-deutsch/{%word}
+      it: https://dict.leo.org/italienisch-deutsch/{%word}
+      pl: https://dict.leo.org/polnisch-deutsch/{%word}
+      pt: https://dict.leo.org/portugiesisch-deutsch/{%word}
+      ru: https://dict.leo.org/russisch-deutsch/{%word}
+      zh: https://dict.leo.org/chinesisch-deutsch/{%word}
+    en:
+      es: https://dict.leo.org/spanish-english/{%word}
+      fr: https://dict.leo.org/french-english/{%word}
+      ru: https://dict.leo.org/russian-english/{%word}
+    es:
+      pt: https://dict.leo.org/espanhol-português/{%word}
 lgs:
-  de:
-    ar: https://de.langenscheidt.com/deutsch-arabisch/{%word}
-    bg: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
-    cs: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
-    da: https://de.langenscheidt.com/deutsch-daenisch/{%word}
-    el: https://de.langenscheidt.com/deutsch-griechisch/{%word}
-    en: https://de.langenscheidt.com/deutsch-englisch/{%word}
-    es: https://de.langenscheidt.com/deutsch-spanisch/{%word}
-    fa: https://de.langenscheidt.com/deutsch-persisch/{%word}
-    fi: https://de.langenscheidt.com/deutsch-finnisch/{%word}
-    fr: https://de.langenscheidt.com/deutsch-franzoesisch/{%word}
-    hr: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
-    hu: https://de.langenscheidt.com/deutsch-ungarisch/{%word}
-    is: https://de.langenscheidt.com/deutsch-islaendisch/{%word}
-    it: https://de.langenscheidt.com/deutsch-italienisch/{%word}
-    ja: https://de.langenscheidt.com/deutsch-japanisch/{%word}
-    la: https://de.langenscheidt.com/deutsch-latein/{%word}
-    nl: https://de.langenscheidt.com/deutsch-niederlaendisch/{%word}
-    no: https://de.langenscheidt.com/deutsch-norwegisch/{%word}
-    pl: https://de.langenscheidt.com/deutsch-polnisch/{%word}
-    pt: https://de.langenscheidt.com/deutsch-portugiesisch/{%word}
-    ro: https://de.langenscheidt.com/deutsch-rumaenisch/{%word}
-    ru: https://de.langenscheidt.com/deutsch-russisch/{%word}
-    sk: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
-    sl: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
-    sr: https://de.langenscheidt.com/deutsch-serbisch/{%word}
-    sv: https://de.langenscheidt.com/deutsch-schwedisch/{%word}
-    tr: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
-    zh: https://de.langenscheidt.com/deutsch-chinesisch/{%word}
+  pairs:
+    de:
+      ar: https://de.langenscheidt.com/deutsch-arabisch/{%word}
+      bg: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
+      cs: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
+      da: https://de.langenscheidt.com/deutsch-daenisch/{%word}
+      el: https://de.langenscheidt.com/deutsch-griechisch/{%word}
+      en: https://de.langenscheidt.com/deutsch-englisch/{%word}
+      es: https://de.langenscheidt.com/deutsch-spanisch/{%word}
+      fa: https://de.langenscheidt.com/deutsch-persisch/{%word}
+      fi: https://de.langenscheidt.com/deutsch-finnisch/{%word}
+      fr: https://de.langenscheidt.com/deutsch-franzoesisch/{%word}
+      hr: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
+      hu: https://de.langenscheidt.com/deutsch-ungarisch/{%word}
+      is: https://de.langenscheidt.com/deutsch-islaendisch/{%word}
+      it: https://de.langenscheidt.com/deutsch-italienisch/{%word}
+      ja: https://de.langenscheidt.com/deutsch-japanisch/{%word}
+      la: https://de.langenscheidt.com/deutsch-latein/{%word}
+      nl: https://de.langenscheidt.com/deutsch-niederlaendisch/{%word}
+      no: https://de.langenscheidt.com/deutsch-norwegisch/{%word}
+      pl: https://de.langenscheidt.com/deutsch-polnisch/{%word}
+      pt: https://de.langenscheidt.com/deutsch-portugiesisch/{%word}
+      ro: https://de.langenscheidt.com/deutsch-rumaenisch/{%word}
+      ru: https://de.langenscheidt.com/deutsch-russisch/{%word}
+      sk: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
+      sl: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
+      sr: https://de.langenscheidt.com/deutsch-serbisch/{%word}
+      sv: https://de.langenscheidt.com/deutsch-schwedisch/{%word}
+      tr: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
+      zh: https://de.langenscheidt.com/deutsch-chinesisch/{%word}

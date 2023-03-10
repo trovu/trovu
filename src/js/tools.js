@@ -256,8 +256,8 @@ actions['createDictionaryInfo'] = async function () {
   );
   const dict = process.argv[3];
 
-  for (const lang1 in dicts[dict]) {
-    for (const lang2 in dicts[dict][lang1]) {
+  for (const lang1 in dicts[dict].pairs) {
+    for (const lang2 in dicts[dict].pairs[lang1]) {
       logKey(lang1, lang2);
       logUrl(lang1, lang2);
       logTitle(lang1, lang2);
@@ -278,7 +278,7 @@ actions['createDictionaryInfo'] = async function () {
     console.log(`    key: ${lang2}-${lang1} 1`);
   }
   function logUrl(lang1, lang2) {
-    console.log(`  url: ${dicts[dict][lang1][lang2]}`);
+    console.log(`  url: ${dicts[dict].pairs[lang1][lang2]}`);
   }
   function logTitle(lang1, lang2) {
     console.log(
