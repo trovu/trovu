@@ -1,0 +1,133 @@
+da-de 1:
+  url: https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}
+  title: Dänisch-Deutsch (leo.org)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - danish
+  - german
+  examples:
+    træ: Deutsch-Übersetzung von "træ"
+    baum: Dänisch-Übersetzung von "baum"
+de-da 1:
+  title: Tysk-Dansk (leo.org)
+  include:
+    key: da-de 1
+  examples:
+    baum: dansk oversættelse af "baum"
+    træ: tysk oversættelse af "træ"
+de-es 1:
+  url: https://de.bab.la/woerterbuch/spanisch-deutsch/{%word}
+  title: Alemán-Español (leo.org)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - spanish
+  examples:
+    baum: Traducción al Español de "baum"
+    árbol: Traducción al Alemán de "árbol"
+de-fr 1:
+  url: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%word}
+  title: Allemand-Français (leo.org)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - french
+  examples:
+    baum: Traduction en Français de "baum"
+    arbre: Traduction en Allemand de "arbre"
+de-it 1:
+  url: https://de.bab.la/woerterbuch/italienisch-deutsch/{%word}
+  title: Tedesco-Italiano (leo.org)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - italian
+  examples:
+    baum: Traduzione in italiano di "baum"
+    albero: Traduzione in tedesco di "albero"
+de-pl 1:
+  url: https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}
+  title: Niemiecki-Polski (leo.org)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - polish
+  examples:
+    baum: Tłumaczenie na język polski dla "baum"
+    drzewo: Tłumaczenie na język niemiecki dla "drzewo"
+de-ru 1:
+  url: https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
+  title: Немецкий-Русский (leo.org)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - russian
+  examples:
+    baum: Перевод на русский язык для "baum"
+    дерево: Перевод на немецкий язык для "дерево"
+de-sv 1:
+  url: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
+  title: Tyska-Svenska (leo.org)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - swedish
+  examples:
+    baum: svenska-översättning av "baum"
+    träd: tyska-översättning av "träd"
+es-de 1:
+  title: Spanisch-Deutsch (leo.org)
+  include:
+    key: de-es 1
+  examples:
+    árbol: Deutsch-Übersetzung von "árbol"
+    baum: Spanisch-Übersetzung von "baum"
+fr-de 1:
+  title: Französisch-Deutsch (leo.org)
+  include:
+    key: de-fr 1
+  examples:
+    arbre: Deutsch-Übersetzung von "arbre"
+    baum: Französisch-Übersetzung von "baum"
+it-de 1:
+  title: Italienisch-Deutsch (leo.org)
+  include:
+    key: de-it 1
+  examples:
+    albero: Deutsch-Übersetzung von "albero"
+    baum: Italienisch-Übersetzung von "baum"
+pl-de 1:
+  title: Polnisch-Deutsch (leo.org)
+  include:
+    key: de-pl 1
+  examples:
+    drzewo: Deutsch-Übersetzung von "drzewo"
+    baum: Polnisch-Übersetzung von "baum"
+ru-de 1:
+  title: Russisch-Deutsch (leo.org)
+  include:
+    key: de-ru 1
+  examples:
+    дерево: Deutsch-Übersetzung von "дерево"
+    baum: Russisch-Übersetzung von "baum"
+sv-de 1:
+  title: Schwedisch-Deutsch (leo.org)
+  include:
+    key: de-sv 1
+  examples:
+    träd: Deutsch-Übersetzung von "träd"
+    baum: Schwedisch-Übersetzung von "baum"
