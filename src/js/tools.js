@@ -253,11 +253,16 @@ actions['createDictionaryInfo'] = async function () {
     tree: {
       de: 'baum',
       en: 'tree',
+      es: 'árbol',
+      fr: 'arbre',
+      it: 'albero',
+      pl: 'drzewo',
+      pt: 'árvore',
+      ru: 'дерево',
+      zh: '树',
     },
     desc: {
       de: '{lang}-Übersetzung von "{tree}"',
-      de: '{lang}-Übersetzung von "{tree}"',
-      en: '{lang} translation of "{tree}"',
       en: '{lang} translation of "{tree}"',
       es: 'Traducción al {lang} de "{tree}"',
       fr: 'Traduction en {lang} de "{tree}"',
@@ -273,8 +278,6 @@ actions['createDictionaryInfo'] = async function () {
           de: 'Englisch',
           en: 'English',
           es: 'Inglés',
-          es: 'Inglés',
-          fr: 'Anglais',
           fr: 'Anglais',
           it: 'Inglese',
           pl: 'Angielski',
@@ -487,23 +490,52 @@ actions['createDictionaryInfo'] = async function () {
   };
   const urls = {
     de: {
-      en: 'http://dict.leo.org/german-english/{%word}',
+      en: 'https://dict.leo.org/german-english/{%word}',
+      es: 'https://dict.leo.org/spanisch-deutsch/{%word}',
+      fr: 'https://dict.leo.org/französisch-deutsch/{%word}',
+      it: 'https://dict.leo.org/italienisch-deutsch/{%word}',
+      pl: 'https://dict.leo.org/polnisch-deutsch/{%word}',
+      pt: 'https://dict.leo.org/portugiesisch-deutsch/{%word}',
+      ru: 'https://dict.leo.org/russisch-deutsch/{%word}',
+      zh: 'https://dict.leo.org/chinesisch-deutsch/{%word}',
+    },
+    es: {
+      en: 'https://dict.leo.org/spanish-english/{%word}',
+    },
+    fr: {
+      en: 'https://dict.leo.org/french-english/{%word}',
+    },
+    ru: {
+      en: 'https://dict.leo.org/russian-english/{%word}',
+    },
+    pt: {
+      es: 'https://dict.leo.org/espanhol-português/{%word}',
     },
   };
+
   for (const lang1 in urls) {
     for (const lang2 in urls[lang1]) {
       logKey(lang1, lang2);
       logTitle(lang1, lang2);
+      logUrl(lang1, lang2);
       logTags(lang1, lang2);
       logExamples(lang1, lang2);
       logKey(lang2, lang1);
       logTitle(lang2, lang1);
+      logInclude(lang2, lang1);
       logExamples(lang2, lang1);
     }
   }
 
   function logKey(lang1, lang2) {
     console.log(`${lang1}-${lang2} 1:`);
+  }
+  function logInclude(lang1, lang2) {
+    console.log(`  include:`);
+    console.log(`    key: ${lang2}-${lang1} 1`);
+  }
+  function logUrl(lang1, lang2) {
+    console.log(`  url: ${urls[lang1][lang2]}`);
   }
   function logTitle(lang1, lang2) {
     console.log(
