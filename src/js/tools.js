@@ -251,14 +251,25 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
 actions['createDictionaryInfo'] = async function () {
   const t = {
     tree: {
+      ar: 'شجرة',
+      bs: 'drvo',
+      cs: 'strom',
+      da: 'træ',
       de: 'baum',
       en: 'tree',
       es: 'árbol',
       fr: 'arbre',
+      hr: 'stablo',
+      hu: 'fa',
       it: 'albero',
+      no: 'tre',
       pl: 'drzewo',
       pt: 'árvore',
       ru: 'дерево',
+      sk: 'strom',
+      sr: 'дрво',
+      sv: 'träd',
+      tr: 'ağaç',
       zh: '树',
     },
     desc: {
