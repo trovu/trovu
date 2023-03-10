@@ -516,8 +516,8 @@ actions['createDictionaryInfo'] = async function () {
   for (const lang1 in urls) {
     for (const lang2 in urls[lang1]) {
       logKey(lang1, lang2);
-      logTitle(lang1, lang2);
       logUrl(lang1, lang2);
+      logTitle(lang1, lang2);
       logTags(lang1, lang2);
       logExamples(lang1, lang2);
       logKey(lang2, lang1);
