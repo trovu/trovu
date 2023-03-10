@@ -248,4 +248,77 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
   return shortcut;
 };
 
+actions['createDictionaryInfo'] = async function () {
+  const t = {
+    tree: {
+      de: 'baum',
+      en: 'tree',
+    },
+    desc: {
+      en: '{lang} translation of "{tree}"',
+      de: '{lang}-Übersetzung von "{tree}"',
+    },
+    lang: {
+      title: {
+        en: {
+          de: 'Englisch',
+          en: 'English',
+        },
+        de: {
+          de: 'Deutsch',
+          en: 'German',
+        },
+      },
+      desc: {
+        en: {
+          de: 'Englisch',
+          en: 'English',
+        },
+        de: {
+          de: 'Deutsch',
+          en: 'German',
+        },
+      },
+      tag: {
+        en: 'english',
+        de: 'german',
+      },
+    },
+  };
+  const langs = ['de', 'en'];
+  for (let i = 0; i < langs.length; i++) {
+    for (let j = i + 1; j < langs.length; j++) {
+      const lang1 = langs[i];
+      const lang2 = langs[j];
+      logInfo(lang1, lang2);
+      logInfo(lang2, lang1);
+    }
+  }
+
+  function logInfo(lang1, lang2) {
+    console.log(
+      '  title:',
+      `${t.lang.title[lang2][lang1]}-${t.lang.title[lang1][lang1]} (leo.org)`,
+    );
+    console.log('  tags:');
+    console.log('  - dictionary');
+    console.log('  - language');
+    console.log(`  - ${t.lang.tag[lang1]}`);
+    console.log(`  - ${t.lang.tag[lang2]}`);
+    console.log('  examples:');
+    console.log(
+      '    ',
+      `${t.tree[lang1]}: ${t.desc[lang1]
+        .replace('{lang}', t.lang.desc[lang2][lang1])
+        .replace('{tree}', t.tree[lang1])}`,
+    );
+    console.log(
+      '    ',
+      `${t.tree[lang2]}: ${t.desc[lang1]
+        .replace('{lang}', t.lang.desc[lang1][lang1])
+        .replace('{tree}', t.tree[lang2])}`,
+    );
+  }
+};
+
 main();
