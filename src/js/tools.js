@@ -252,8 +252,8 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
 actions['createDictionaryInfo'] = async function () {
   const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
   const urls = jsyaml.load(fs.readFileSync('src/yml/dictionaries.yml', 'utf8'));
-
   const dict = process.argv[3];
+
   for (const lang1 in urls[dict]) {
     for (const lang2 in urls[dict][lang1]) {
       logKey(lang1, lang2);
