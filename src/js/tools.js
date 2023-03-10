@@ -499,17 +499,13 @@ actions['createDictionaryInfo'] = async function () {
       ru: 'http://dict.leo.org/russisch-deutsch/{%word}',
       zh: 'http://dict.leo.org/chinesisch-deutsch/{%word}',
     },
+    en: {
+      es: 'http://dict.leo.org/spanish-english/{%word}',
+      fr: 'http://dict.leo.org/french-english/{%word}',
+      ru: 'http://dict.leo.org/russian-english/{%word}',
+    },
     es: {
-      en: 'http://dict.leo.org/spanish-english/{%word}',
-    },
-    fr: {
-      en: 'http://dict.leo.org/french-english/{%word}',
-    },
-    ru: {
-      en: 'http://dict.leo.org/russian-english/{%word}',
-    },
-    pt: {
-      es: 'http://dict.leo.org/espanhol-português/{%word}',
+      pt: 'http://dict.leo.org/espanhol-português/{%word}',
     },
   };
 
