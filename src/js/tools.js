@@ -3,6 +3,7 @@
 const fs = require('fs');
 const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain');
+const languages = require('@cospired/i18n-iso-languages');
 
 import UrlProcessor from './modules/UrlProcessor';
 
