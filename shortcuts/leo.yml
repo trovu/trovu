@@ -72,6 +72,17 @@ en-de 1:
   examples:
     baum: Englisch-Übersetzung von "baum"
     tree: Deutsch-Übersetzung von "tree"
+en-es 1:
+  url: http://dict.leo.org/spanish-english/?search={%word}
+  title: Alemán-Español (leo.org)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+  examples:
+    tree: Traducción al español de "tree".
+    árbol: Traducción al inglés de "árbol
 es-de 1:
   title: Spanisch-Deutsch (leo.org)
   include:
@@ -79,6 +90,13 @@ es-de 1:
   examples:
     baum: Spanisch-Übersetzung von "baum"
     árbol: Deutsch-Übersetzung von "árbol"
+es-en 1:
+  title: Spanish-English (leo.org)
+  include:
+    key: en-es 1
+  examples:
+    árbol: English translation of "árbol"
+    tree: Spanish translation of "tree"
 fr-de 1:
   title: Französisch-Deutsch (leo.org)
   include:
