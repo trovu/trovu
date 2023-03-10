@@ -110,13 +110,13 @@ export default class NamespaceFetcher {
           let shortcutToInclude;
           if (shortcut.include.namespace) {
             await this.ensureNamespaceInfos([shortcut.include.namespace]);
-            shortcutToInclude = structuredClone(
+            shortcutToInclude = this.cloneShortcut(
               this.namespaceInfos[shortcut.include.namespace].shortcuts[
                 shortcut.include.key
               ],
             );
           } else {
-            shortcutToInclude = structuredClone(
+            shortcutToInclude = this.cloneShortcut(
               shortcuts[shortcut.include.key],
             );
           }
@@ -130,6 +130,13 @@ export default class NamespaceFetcher {
       }
     }
     return shortcuts;
+  }
+
+  cloneShortcut(shortcut) {
+    // This approach seems more browser-supported than structuredClone().
+    const str = JSON.stringify(shortcut);
+    const clonedShortcut = JSON.parse(str);
+    return clonedShortcut;
   }
 
   /**
