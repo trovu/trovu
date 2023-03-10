@@ -323,7 +323,6 @@ actions['createDictionaryInfo'] = async function () {
         de: 'https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}',
       },
       de: {
-        da: 'https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}',
         es: 'https://de.bab.la/woerterbuch/spanisch-deutsch/{%word}',
         fr: 'https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%word}',
         it: 'https://de.bab.la/woerterbuch/italienisch-deutsch/{%word}',
