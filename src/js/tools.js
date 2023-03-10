@@ -330,7 +330,7 @@ actions['createDictionaryInfo'] = async function () {
         pl: 'https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}',
         ru: 'https://de.bab.la/woerterbuch/russisch-deutsch/{%word}',
         sv: 'https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}',
-        tr: 'https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}',
+        // tr: 'https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}',
       },
     },
   };
