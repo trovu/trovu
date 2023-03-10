@@ -554,15 +554,15 @@ actions['createDictionaryInfo'] = async function () {
   function logExamples(lang1, lang2) {
     console.log('  examples:');
     console.log(
-      '    ',
-      `${t.tree[lang1]}: ${t.desc[lang1]
-        .replace('{lang}', t.lang.desc[lang2][lang1])
+      '   ',
+      `${t.tree[lang1]}: ${t.desc[lang2]
+        .replace('{lang}', t.lang.desc[lang2][lang2])
         .replace('{tree}', t.tree[lang1])}`,
     );
     console.log(
-      '    ',
-      `${t.tree[lang2]}: ${t.desc[lang1]
-        .replace('{lang}', t.lang.desc[lang1][lang1])
+      '   ',
+      `${t.tree[lang2]}: ${t.desc[lang2]
+        .replace('{lang}', t.lang.desc[lang1][lang2])
         .replace('{tree}', t.tree[lang2])}`,
     );
   }
