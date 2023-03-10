@@ -20,7 +20,6 @@ export default class NamespaceFetcher {
         );
       }
     }
-    console.log(this.namespaceInfos);
     return this.namespaceInfos;
   }
 
