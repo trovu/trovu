@@ -109,7 +109,7 @@ export default class NamespaceFetcher {
    */
   async addIncludes(shortcuts) {
     for (const key in shortcuts) {
-      let shortcut = shortcuts[key];
+      const shortcut = shortcuts[key];
       if (shortcut.include) {
         if (shortcut.include.key) {
           if (shortcut.include.namespace) {
