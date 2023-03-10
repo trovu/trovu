@@ -88,8 +88,6 @@ export default class Env {
 
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(
       this.namespaces,
-      this.reload,
-      this.debug,
     );
   }
 
