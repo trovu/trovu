@@ -255,56 +255,270 @@ actions['createDictionaryInfo'] = async function () {
       en: 'tree',
     },
     desc: {
-      en: '{lang} translation of "{tree}"',
       de: '{lang}-Übersetzung von "{tree}"',
+      de: '{lang}-Übersetzung von "{tree}"',
+      en: '{lang} translation of "{tree}"',
+      en: '{lang} translation of "{tree}"',
+      es: 'Traducción al {lang} de "{tree}"',
+      fr: 'Traduction en {lang} de "{tree}"',
+      it: 'Traduzione in {lang} di "{tree}"',
+      pl: 'Tłumaczenie na język {lang} dla "{tree}"',
+      pt: 'Tradução em {lang} de "{tree}"',
+      ru: 'Перевод на {lang} язык для "{tree}"',
+      zh: '{lang}翻译"{tree}"',
     },
     lang: {
       title: {
         en: {
           de: 'Englisch',
           en: 'English',
+          es: 'Inglés',
+          es: 'Inglés',
+          fr: 'Anglais',
+          fr: 'Anglais',
+          it: 'Inglese',
+          pl: 'Angielski',
+          pt: 'Inglês',
+          ru: 'Английский',
+          zh: '英语',
         },
         de: {
           de: 'Deutsch',
           en: 'German',
+          es: 'Alemán',
+          fr: 'Allemand',
+          it: 'Tedesco',
+          pl: 'Niemiecki',
+          pt: 'Alemão',
+          ru: 'Немецкий',
+          zh: '德语',
+        },
+        es: {
+          de: 'Spanisch',
+          en: 'Spanish',
+          es: 'Español',
+          fr: 'Espagnol',
+          it: 'Spagnolo',
+          pl: 'Hiszpański',
+          pt: 'Espanhol',
+          ru: 'Испанский',
+          zh: '西班牙语',
+        },
+        fr: {
+          de: 'Französisch',
+          en: 'French',
+          es: 'Francés',
+          fr: 'Français',
+          it: 'Francese',
+          pl: 'Francuski',
+          pt: 'Francês',
+          ru: 'Французский',
+          zh: '法语',
+        },
+        ru: {
+          de: 'Russisch',
+          en: 'Russian',
+          es: 'Ruso',
+          fr: 'Russe',
+          it: 'Russo ',
+          pl: 'Rosyjski',
+          pt: 'Russo',
+          ru: 'Русский',
+          zh: '俄语',
+        },
+        it: {
+          de: 'Italienisch',
+          en: 'Italian',
+          es: 'italiano',
+          fr: 'italien',
+          it: 'italiano',
+          pl: 'włoski',
+          pt: 'italiano',
+          ru: 'итальянский',
+          zh: '意大利语',
+        },
+        zh: {
+          de: 'Chinesisch',
+          en: 'Chinese',
+          es: 'Chino',
+          fr: 'Chinois',
+          it: 'Cinese',
+          pl: 'Chiński',
+          pt: 'Chinês',
+          ru: 'Китайский',
+          zh: '汉语/中文',
+        },
+        pt: {
+          de: 'Portugiesisch',
+          en: 'Portuguese',
+          es: 'Portugués',
+          fr: 'Portugais',
+          it: 'Portoghese',
+          pl: 'Portugalski',
+          pt: 'Português',
+          ru: 'Португальский',
+          zh: '葡萄牙语',
+        },
+        pl: {
+          de: 'Polnisch',
+          en: 'Polish',
+          es: 'Polaco',
+          fr: 'Polonais',
+          it: 'Polacco',
+          pl: 'Polski',
+          pt: 'Polonês',
+          ru: 'Польский',
+          zh: '波兰语',
         },
       },
       desc: {
         en: {
           de: 'Englisch',
           en: 'English',
+          es: 'inglés',
+          fr: 'anglais',
+          it: 'inglese',
+          pl: 'angielski',
+          pt: 'inglês',
+          ru: 'английский',
+          zh: '英',
         },
         de: {
           de: 'Deutsch',
           en: 'German',
+          es: 'alemán',
+          fr: 'allemand',
+          ru: 'немецкий',
+          it: 'tedesco',
+          zh: '德语',
+          pt: 'alemão',
+          pl: 'niemiecki',
+        },
+        es: {
+          de: 'Spanisch',
+          en: 'Spanish',
+          es: 'español',
+          fr: 'espagnol',
+          ru: 'испанский',
+          it: 'spagnolo',
+          zh: '西班牙语',
+          pt: 'espanhol',
+          pl: 'hiszpański',
+        },
+        fr: {
+          de: 'Französisch',
+          en: 'French',
+          es: 'francés',
+          fr: 'français',
+          ru: 'французский',
+          it: 'francese',
+          zh: '法语',
+          pt: 'francês',
+          pl: 'francuski',
+        },
+        ru: {
+          de: 'Russisch',
+          en: 'Russian',
+          es: 'ruso',
+          fr: 'russe',
+          ru: 'русский',
+          it: 'russo',
+          zh: '俄语',
+          pt: 'russo',
+          pl: 'rosyjski',
+        },
+        it: {
+          de: 'Italienisch',
+          en: 'Italian',
+          es: 'italiano',
+          fr: 'italien',
+          ru: 'итальянский',
+          it: 'italiano',
+          zh: '意大利语',
+          pt: 'italiano',
+          pl: 'włoski',
+        },
+        zh: {
+          de: 'Chinesisch',
+          en: 'Chinese',
+          es: 'chino',
+          fr: 'chinois',
+          ru: 'китайский',
+          it: 'cinese',
+          zh: '汉语',
+          pt: 'chinês',
+          pl: 'chiński',
+        },
+        pt: {
+          de: 'Portugiesisch',
+          en: 'Portuguese',
+          es: 'portugués',
+          fr: 'portugais',
+          ru: 'португальский',
+          it: 'portoghese',
+          zh: '葡萄牙语',
+          pt: 'português',
+          pl: 'portugalski',
+        },
+        pl: {
+          de: 'Polnisch',
+          en: 'Polish',
+          es: 'polaco',
+          fr: 'polonais',
+          ru: 'польский',
+          it: 'polacco',
+          zh: '波兰语',
+          pt: 'polonês',
+          pl: 'polski',
         },
       },
       tag: {
         en: 'english',
         de: 'german',
+        es: 'spanish',
+        fr: 'french',
+        ru: 'russian',
+        it: 'italian',
+        zh: 'chinese',
+        pt: 'portuguese',
+        pl: 'polish',
       },
     },
   };
-  const langs = ['de', 'en'];
-  for (let i = 0; i < langs.length; i++) {
-    for (let j = i + 1; j < langs.length; j++) {
-      const lang1 = langs[i];
-      const lang2 = langs[j];
-      logInfo(lang1, lang2);
-      logInfo(lang2, lang1);
+  const urls = {
+    de: {
+      en: 'http://dict.leo.org/german-english/{%word}',
+    },
+  };
+  for (const lang1 in urls) {
+    for (const lang2 in urls[lang1]) {
+      logKey(lang1, lang2);
+      logTitle(lang1, lang2);
+      logTags(lang1, lang2);
+      logExamples(lang1, lang2);
+      logKey(lang2, lang1);
+      logTitle(lang2, lang1);
+      logExamples(lang2, lang1);
     }
   }
 
-  function logInfo(lang1, lang2) {
+  function logKey(lang1, lang2) {
+    console.log(`${lang1}-${lang2} 1:`);
+  }
+  function logTitle(lang1, lang2) {
     console.log(
       '  title:',
       `${t.lang.title[lang2][lang1]}-${t.lang.title[lang1][lang1]} (leo.org)`,
     );
+  }
+  function logTags(lang1, lang2) {
     console.log('  tags:');
     console.log('  - dictionary');
     console.log('  - language');
     console.log(`  - ${t.lang.tag[lang1]}`);
     console.log(`  - ${t.lang.tag[lang2]}`);
+  }
+  function logExamples(lang1, lang2) {
     console.log('  examples:');
     console.log(
       '    ',
