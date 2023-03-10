@@ -43,8 +43,30 @@ de-it 1:
   examples:
     baum: traduzione in italiano di "baum"
     albero: traduzione in tedesco di "albero"
+de-pl 1:
+  url: http://dict.leo.org/polnisch-deutsch/{%word}
+  title: Niemiecko-Polski (leo.org)
+  tags:
+  - dictionary
+  - german
+  - language
+  - polish
+  examples:
+    baum: Traducción al español de "baum".
+    árbol: Traducción al alemán de "árbol
+de-pt 1:
+  url: http://dict.leo.org/portugiesisch-deutsch/{%word}
+  title: Alemán-Português (leo.org)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
+  examples:
+    árvore: tradução alemã de "árvore"
+    baum: tradução portuguesa de "baum"
 de-ru 1:
-  url: http://dict.leo.org/rude?search={%word}
+  url: http://dict.leo.org/russisch-deutsch/{%word}
   title: Немецко-русский (leo.org)
   tags:
   - dictionary
@@ -55,7 +77,7 @@ de-ru 1:
     baum: русский перевод "baum"
     дерево: немецкий перевод "дерево"
 de-zh 1:
-  url: http://dict.leo.org/chde?search={%word}
+  url: http://dict.leo.org/chinesisch-deutsch/{%word}
   title: 德汉词典 (leo.org)
   tags:
   - chinese
@@ -73,7 +95,7 @@ en-de 1:
     baum: Englisch-Übersetzung von "baum"
     tree: Deutsch-Übersetzung von "tree"
 en-es 1:
-  url: http://dict.leo.org/spanish-english/?search={%word}
+  url: http://dict.leo.org/spanish-english/{%word}
   title: Alemán-Español (leo.org)
   tags:
   - dictionary
@@ -83,6 +105,30 @@ en-es 1:
   examples:
     tree: Traducción al español de "tree".
     árbol: Traducción al inglés de "árbol
+en-fr 1:
+  url: http://dict.leo.org/french-english/{%word}
+  title: Anglais-Français (leo.org)
+  tags:
+  - language
+  - dictionary
+  - french
+  - english
+  - leo
+  examples:
+    arbre: English translation of "arbre"
+    tree: French translation of "tree"
+en-ru 1:
+  url: http://dict.leo.org/russian-english/{%word}
+  title: Немецко-русский
+  tags:
+  - language
+  - dictionary
+  - french
+  - english
+  - leo
+  examples:
+    arbre: English translation of "arbre"
+    tree: French translation of "tree"
 es-de 1:
   title: Spanisch-Deutsch (leo.org)
   include:
@@ -97,6 +143,17 @@ es-en 1:
   examples:
     árbol: English translation of "árbol"
     tree: Spanish translation of "tree"
+es-pt 1:
+  url: http://dict.leo.org/espanhol-português/{%word}
+  title: Espanhol-Português (leo.org)
+  tags:
+  - dictionary
+  - portuguese
+  - language
+  - spanish
+  examples:
+    árbol: tradução portuguesa de "árbol"
+    árvore: tradução espanhola de "árvore"
 fr-de 1:
   title: Französisch-Deutsch (leo.org)
   include:
@@ -104,6 +161,13 @@ fr-de 1:
   examples:
     baum: Französisch-Übersetzung von "baum"
     arbre: Deutsch-Übersetzung von "arbre"
+fr-en 1:
+  title: French-English (leo.org)
+  include:
+    key: en-fr 1
+  examples:
+    arbre: English translation of "arbre"
+    tree: French translation of "tree"
 it-de 1:
   title: Italienisch-Deutsch (leo.org)
   include:
@@ -111,6 +175,24 @@ it-de 1:
   examples:
     baum: Italienisch-Übersetzung von "baum"
     albero: Deutsch-Übersetzung von "albero"
+pl-de 1:
+  title: Polnisch-Deutsch (leo.org)
+  include:
+    key: de-pl 1
+pt-de 1:
+  title: Porgugiesisch-Deutsch (leo.org)
+  include:
+    key: de-pl 1
+  examples:
+    baum: Portugiesisch-Übersetzung von "baum"
+    árvore: Deutsch-Übersetzung von "树木"
+pt-es 1:
+  title: Portugués-español (leo.org)
+  include:
+    key: es-pt 1
+  examples:
+    árbol: traducción al portugués de "árbol"
+    árvore: traducción al español de "árvore"
 ru-de 1:
   title: Russisch-Deutsch (leo.org)
   include:
@@ -118,6 +200,10 @@ ru-de 1:
   examples:
     baum: Russisch-Übersetzung von "baum"
     дерево: Deutsch-Übersetzung von "дерево"
+ru-en 1:
+  title: Russian-English (leo.org)
+  include:
+    key: en-ru 1
 zh-de 1:
   title: Chinesisch-Deutsch (leo.org)
   include:
