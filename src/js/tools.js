@@ -490,22 +490,22 @@ actions['createDictionaryInfo'] = async function () {
   };
   const urls = {
     de: {
-      en: 'http://dict.leo.org/german-english/{%word}',
-      es: 'http://dict.leo.org/spanisch-deutsch/{%word}',
-      fr: 'http://dict.leo.org/französisch-deutsch/{%word}',
-      it: 'http://dict.leo.org/italienisch-deutsch/{%word}',
-      pl: 'http://dict.leo.org/polnisch-deutsch/{%word}',
-      pt: 'http://dict.leo.org/portugiesisch-deutsch/{%word}',
-      ru: 'http://dict.leo.org/russisch-deutsch/{%word}',
-      zh: 'http://dict.leo.org/chinesisch-deutsch/{%word}',
+      en: 'https://dict.leo.org/german-english/{%word}',
+      es: 'https://dict.leo.org/spanisch-deutsch/{%word}',
+      fr: 'https://dict.leo.org/französisch-deutsch/{%word}',
+      it: 'https://dict.leo.org/italienisch-deutsch/{%word}',
+      pl: 'https://dict.leo.org/polnisch-deutsch/{%word}',
+      pt: 'https://dict.leo.org/portugiesisch-deutsch/{%word}',
+      ru: 'https://dict.leo.org/russisch-deutsch/{%word}',
+      zh: 'https://dict.leo.org/chinesisch-deutsch/{%word}',
     },
     en: {
-      es: 'http://dict.leo.org/spanish-english/{%word}',
-      fr: 'http://dict.leo.org/french-english/{%word}',
-      ru: 'http://dict.leo.org/russian-english/{%word}',
+      es: 'https://dict.leo.org/spanish-english/{%word}',
+      fr: 'https://dict.leo.org/french-english/{%word}',
+      ru: 'https://dict.leo.org/russian-english/{%word}',
     },
     es: {
-      pt: 'http://dict.leo.org/espanhol-português/{%word}',
+      pt: 'https://dict.leo.org/espanhol-português/{%word}',
     },
   };
 
