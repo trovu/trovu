@@ -120,8 +120,7 @@ export default class NamespaceFetcher {
               shortcuts[shortcut.include.key],
             );
           }
-          const newShortcut = Object.assign(shortcutToInclude, shortcut);
-          shortcuts[key] = newShortcut;
+          shortcuts[key] = Object.assign(shortcutToInclude, shortcut);
         } else {
           Helper.log(`Incorrect include found at ${key}`);
           this.error = true;
