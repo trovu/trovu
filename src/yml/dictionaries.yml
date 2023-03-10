@@ -11,6 +11,34 @@ bab:
       ru: https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
       sv: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
       # tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+dcc:
+  name: dict.cc
+  pairs:
+    bg:
+      # de: https://debg.dict.cc/?s={%word}
+    cs:
+      de: https://decs.dict.cc/?s={%word}
+    da:
+      de: https://deda.dict.cc/?s={%word}
+    de:
+      # el: https://deel.dict.cc/?s={%word}
+      en: https://deen.dict.cc/?s={%word}
+      es: https://dees.dict.cc/?s={%word}
+      fi: https://defi.dict.cc/?s={%word}
+      fr: https://defr.dict.cc/?s={%word}
+      hu: https://dehu.dict.cc/?s={%word}
+      is: https://deis.dict.cc/?s={%word}
+      it: https://deit.dict.cc/?s={%word}
+      # la: https://dela.dict.cc/?s={%word}
+      nl: https://denl.dict.cc/?s={%word}
+      no: https://deno.dict.cc/?s={%word}
+      pl: https://depl.dict.cc/?s={%word}
+      pt: https://dept.dict.cc/?s={%word}
+      ro: https://dero.dict.cc/?s={%word}
+      ru: https://deru.dict.cc/?s={%word}
+      # sk: https://desk.dict.cc/?s={%word}
+      sv: https://desv.dict.cc/?s={%word}
+      # tr: https://detr.dict.cc/?s={%word}
 leo:
   name: leo.org
   pairs:
