@@ -1,5 +1,5 @@
 de-en 1:
-  url: http://dict.leo.org/ende?search={%word}
+  url: http://dict.leo.org/german-english/{%word}
   title: German-English (leo.org)
   tags:
   - language
@@ -11,7 +11,7 @@ de-en 1:
     baum: English translation of "baum"
     tree: German translation of "tree"
 de-es 1:
-  url: http://dict.leo.org/esde?search={%word}
+  url: http://dict.leo.org/spanisch-deutsch/{%word}
   title: Alemán-Español (leo.org)
   tags:
   - dictionary
@@ -22,7 +22,7 @@ de-es 1:
     baum: Traducción al español de "baum".
     árbol: Traducción al alemán de "árbol
 de-fr 1:
-  url: http://dict.leo.org/frde?search={%word}
+  url: http://dict.leo.org/französisch-deutsch/{%word}
   title: Allemand-Français (leo.org)
   tags:
   - dictionary
@@ -33,7 +33,7 @@ de-fr 1:
     baum: Traduction française de "baum".
     arbre: Traduction française de "arbre
 de-it 1:
-  url: http://dict.leo.org/itde?search={%word}
+  url: http://dict.leo.org/italienisch-deutsch/{%word}
   title: Tedesco-Italiano (leo.org)
   tags:
   - dictionary
