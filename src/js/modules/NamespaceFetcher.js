@@ -232,11 +232,11 @@ export default class NamespaceFetcher {
    */
   async startFetches(newNamespaceInfos) {
     const promises = [];
-    Object.values(newNamespaceInfos).forEach(async (namespaceInfo) => {
+    for (const namespaceInfo of Object.values(newNamespaceInfos)) {
       promises[namespaceInfo.priority] = fetch(namespaceInfo.url, {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
-    });
+    }
     return promises;
   }
 
