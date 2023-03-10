@@ -332,12 +332,12 @@ actions['createDictionaryInfo'] = async function () {
         it: {
           de: 'Italienisch',
           en: 'Italian',
-          es: 'italiano',
-          fr: 'italien',
-          it: 'italiano',
-          pl: 'włoski',
-          pt: 'italiano',
-          ru: 'итальянский',
+          es: 'Italiano',
+          fr: 'Italien',
+          it: 'Italiano',
+          pl: 'Włoski',
+          pt: 'Italiano',
+          ru: 'Итальянский',
           zh: '意大利语',
         },
         zh: {
