@@ -1,4 +1,5 @@
 bab:
+  name: bab.la
   pairs:
     da:
       de: https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}
@@ -11,6 +12,7 @@ bab:
       sv: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
       # tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
 leo:
+  name: leo.org
   pairs:
     de:
       en: https://dict.leo.org/german-english/{%word}
@@ -28,6 +30,7 @@ leo:
     es:
       pt: https://dict.leo.org/espanhol-português/{%word}
 lgs:
+  name: Langenscheidt
   pairs:
     de:
       ar: https://de.langenscheidt.com/deutsch-arabisch/{%word}

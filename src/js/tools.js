@@ -285,7 +285,7 @@ actions['createDictionaryInfo'] = async function () {
       '  title:',
       `${capitalize(languages.getName(lang1, lang2))}-${capitalize(
         languages.getName(lang2, lang2),
-      )} (leo.org)`,
+      )} (${dicts[dict].name})`,
     );
   }
   function logTags(lang1, lang2) {
