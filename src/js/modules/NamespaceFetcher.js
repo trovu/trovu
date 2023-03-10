@@ -9,7 +9,7 @@ export default class NamespaceFetcher {
   }
 
   async getNamespaceInfos(namespaces) {
-    await this.ensureNamespaceInfos(namespaces);
+    await this.ensureNamespaceInfos(namespaces, 1);
     this.addReachable();
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
@@ -23,8 +23,11 @@ export default class NamespaceFetcher {
     return this.namespaceInfos;
   }
 
-  async ensureNamespaceInfos(namespaces) {
-    const newNamespaceInfos = await this.fetchNamespaceInfos(namespaces);
+  async ensureNamespaceInfos(namespaces, priorityOffset) {
+    const newNamespaceInfos = await this.fetchNamespaceInfos(
+      namespaces,
+      priorityOffset,
+    );
     for (const namespaceInfo of Object.values(newNamespaceInfos)) {
       namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
     }
@@ -33,8 +36,11 @@ export default class NamespaceFetcher {
   /**
    * Ensure that infos for a namespace exist.
    */
-  async fetchNamespaceInfos(namespaces) {
-    const newNamespaceInfos = this.getInitialNamespaceInfos(namespaces);
+  async fetchNamespaceInfos(namespaces, priorityOffset) {
+    const newNamespaceInfos = this.getInitialNamespaceInfos(
+      namespaces,
+      priorityOffset,
+    );
     for (const namespaceName in newNamespaceInfos) {
       if (namespaceName in this.namespaceInfos) {
         // Remove existing, to not fetch them again.
@@ -108,7 +114,7 @@ export default class NamespaceFetcher {
         if (shortcut.include.key) {
           let shortcutToInclude;
           if (shortcut.include.namespace) {
-            await this.ensureNamespaceInfos([shortcut.include.namespace]);
+            await this.ensureNamespaceInfos([shortcut.include.namespace], 0);
             shortcutToInclude = this.cloneShortcut(
               this.namespaceInfos[shortcut.include.namespace].shortcuts[
                 shortcut.include.key
@@ -183,11 +189,11 @@ export default class NamespaceFetcher {
     return shortcut;
   }
 
-  getInitialNamespaceInfos(namespaces) {
+  getInitialNamespaceInfos(namespaces, priorityOffset) {
     return Object.fromEntries(
       namespaces.map((namespace, index) => {
         const namespaceInfo = this.getInitalNamespaceInfo(namespace);
-        namespaceInfo.priority = index + 1;
+        namespaceInfo.priority = index + priorityOffset;
         return [namespaceInfo.name, namespaceInfo];
       }),
     );
