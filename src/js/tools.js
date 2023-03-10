@@ -489,28 +489,31 @@ actions['createDictionaryInfo'] = async function () {
     },
   };
   const urls = {
-    de: {
-      en: 'https://dict.leo.org/german-english/{%word}',
-      es: 'https://dict.leo.org/spanisch-deutsch/{%word}',
-      fr: 'https://dict.leo.org/französisch-deutsch/{%word}',
-      it: 'https://dict.leo.org/italienisch-deutsch/{%word}',
-      pl: 'https://dict.leo.org/polnisch-deutsch/{%word}',
-      pt: 'https://dict.leo.org/portugiesisch-deutsch/{%word}',
-      ru: 'https://dict.leo.org/russisch-deutsch/{%word}',
-      zh: 'https://dict.leo.org/chinesisch-deutsch/{%word}',
-    },
-    en: {
-      es: 'https://dict.leo.org/spanish-english/{%word}',
-      fr: 'https://dict.leo.org/french-english/{%word}',
-      ru: 'https://dict.leo.org/russian-english/{%word}',
-    },
-    es: {
-      pt: 'https://dict.leo.org/espanhol-português/{%word}',
+    leo: {
+      de: {
+        en: 'https://dict.leo.org/german-english/{%word}',
+        es: 'https://dict.leo.org/spanisch-deutsch/{%word}',
+        fr: 'https://dict.leo.org/französisch-deutsch/{%word}',
+        it: 'https://dict.leo.org/italienisch-deutsch/{%word}',
+        pl: 'https://dict.leo.org/polnisch-deutsch/{%word}',
+        pt: 'https://dict.leo.org/portugiesisch-deutsch/{%word}',
+        ru: 'https://dict.leo.org/russisch-deutsch/{%word}',
+        zh: 'https://dict.leo.org/chinesisch-deutsch/{%word}',
+      },
+      en: {
+        es: 'https://dict.leo.org/spanish-english/{%word}',
+        fr: 'https://dict.leo.org/french-english/{%word}',
+        ru: 'https://dict.leo.org/russian-english/{%word}',
+      },
+      es: {
+        pt: 'https://dict.leo.org/espanhol-português/{%word}',
+      },
     },
   };
 
-  for (const lang1 in urls) {
-    for (const lang2 in urls[lang1]) {
+  const dict = 'leo';
+  for (const lang1 in urls[dict]) {
+    for (const lang2 in urls[dict][lang1]) {
       logKey(lang1, lang2);
       logUrl(lang1, lang2);
       logTitle(lang1, lang2);
@@ -531,7 +534,7 @@ actions['createDictionaryInfo'] = async function () {
     console.log(`    key: ${lang2}-${lang1} 1`);
   }
   function logUrl(lang1, lang2) {
-    console.log(`  url: ${urls[lang1][lang2]}`);
+    console.log(`  url: ${urls[dict][lang1][lang2]}`);
   }
   function logTitle(lang1, lang2) {
     console.log(
