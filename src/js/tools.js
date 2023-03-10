@@ -524,6 +524,21 @@ actions['createDictionaryInfo'] = async function () {
         pt: 'https://dict.leo.org/espanhol-português/{%word}',
       },
     },
+    bab: {
+      da: {
+        de: 'https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}',
+      },
+      de: {
+        da: 'https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}',
+        es: 'https://de.bab.la/woerterbuch/spanisch-deutsch/{%word}',
+        fr: 'https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%word}',
+        it: 'https://de.bab.la/woerterbuch/italienisch-deutsch/{%word}',
+        pl: 'https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}',
+        ru: 'https://de.bab.la/woerterbuch/russisch-deutsch/{%word}',
+        sv: 'https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}',
+        tr: 'https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}',
+      },
+    },
   };
 
   const dict = 'leo';
