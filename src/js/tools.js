@@ -262,6 +262,14 @@ actions['createDictionaryInfo'] = async function () {
         console.log(`Missing code for ${lang1}-${lang2}`);
         return;
       }
+      if (!t.tree[lang1]) {
+        console.log(`Missing tree for ${lang1}`);
+        return;
+      }
+      if (!t.tree[lang2]) {
+        console.log(`Missing tree for ${lang2}`);
+        return;
+      }
       logKey(lang1, lang2);
       logUrl(lang1, lang2);
       logTitle(lang1, lang2);
