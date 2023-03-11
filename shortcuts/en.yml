@@ -130,17 +130,6 @@ esp 1:
   - spanish
   examples:
     tree: ' translation for "tree"'
-fi 1:
-  url: http://www.fincd.com/index.php?txtSearch={%query}
-  title: Finnish-English
-  tags:
-  - dictionary
-  - language
-  - english
-  - finnish
-  examples:
-    tree: Translation of "tree"
-    puu: Translation of "puu"
 fr 1:
   url: http://www.linguee.com/english-french/search?source=auto&query={%word}
   title: French-English (Linguee)
