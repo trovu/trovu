@@ -31,7 +31,7 @@ export default class NamespaceFetcher {
   /**
    * Ensures that the given namespaces have their information fetched and stored
    * @param {Array} namespaces - An array of namespace names
-   * @param {number} priorityOffset - The priority offset for fetching the information
+   * @param {number} priorityOffset - The offset to be used when setting the priority.
    */
   async ensureNamespaceInfos(namespaces, priorityOffset) {
     const newNamespaceInfos = await this.fetchNamespaceInfos(
@@ -46,7 +46,7 @@ export default class NamespaceFetcher {
   /**
    * Fetches the information for the given namespaces from an external source
    * @param {Array} namespaces - An array of namespace names
-   * @param {number} priorityOffset - The priority offset for fetching the information
+   * @param {number} priorityOffset - The offset to be used when setting the priority.
    * @returns {Object} An object containing the fetched information for each given namespace
    */
   async fetchNamespaceInfos(namespaces, priorityOffset) {
@@ -219,7 +219,7 @@ export default class NamespaceFetcher {
   /**
    * Gets initial namespace information for given namespaces
    * @param {Array} namespaces - An array of namespace names
-   * @param {number} priorityOffset - An offset when setting the namespace priority
+   * @param {number} priorityOffset - The offset to be used when setting the priority.
    * @returns {Object} An object containing initial namespace information for each given namespace
    */
   getInitialNamespaceInfos(namespaces, priorityOffset) {
