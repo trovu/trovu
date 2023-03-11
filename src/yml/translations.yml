@@ -2,12 +2,14 @@ tree:
   ar: شجرة
   bg: дърво
   bs: drvo
+  ca: arbre
   cs: strom
   da: træ
   de: baum
   el: δέντρο
   en: tree
   es: árbol
+  et: puu
   fa: درخت
   fi: puu
   fr: arbre
@@ -16,6 +18,7 @@ tree:
   is: tré
   it: albero
   ja: 木
+  ko: 나무
   la: arbor
   nl: boom
   no: tre
@@ -33,12 +36,14 @@ desc:
   ar: 'ترجمة {lang} من "{tree}"'
   bg: '{lang} превод за "{tree}"'
   bs: '{lang} prijevod od "{tree}"'
+  ca: 'Traducció al {lang} de "{tree}"'
   cs: '{lang} překlad pro "{tree}"'
   da: '{lang} oversættelse af "{tree}"'
   de: '{lang}-Übersetzung von "{tree}"'
   el: 'Μετάφραση στα {lang} για το "{tree}"'
   en: '{lang} translation of "{tree}"'
   es: 'Traducción al {lang} de "{tree}"'
+  et: '{lang} tõlge "{tree}"'
   fa: 'ترجمه به {lang} برای "{tree}"'
   fi: '{lang}-käännös sanalle "{tree}"'
   fr: 'Traduction en {lang} de "{tree}"'
@@ -47,6 +52,7 @@ desc:
   is: '{lang}-þýðing á "{tree}"'
   it: 'Traduzione in {lang} di "{tree}"'
   ja: '{lang}翻訳"{tree}"'
+  ko: '{lang} 번역 "{tree}"'
   la: 'Translatio in {lang} pro "{tree}"'
   nl: '{lang}-vertaling van "{tree}"'
   no: '{lang} oversettelse av "{tree}"'
