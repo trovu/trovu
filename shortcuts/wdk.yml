@@ -1,0 +1,19 @@
+de-ja 1:
+  url: http://www.wadoku.de/wadoku/search/{%word}
+  title: ドイツ語-日本語 (Wadoku)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - japanese
+  examples:
+    baum: 日本語翻訳"baum"
+    木: ドイツ語翻訳"木"
+ja-de 1:
+  title: Japanisch-Deutsch (Wadoku)
+  include:
+    key: de-ja 1
+  examples:
+    木: Deutsch-Übersetzung von "木"
+    baum: Japanisch-Übersetzung von "baum"
