@@ -8,6 +8,11 @@ export default class NamespaceFetcher {
     this.namespaceInfos = {};
   }
 
+  /**
+   * Gets namespace information for given namespaces
+   * @param {Array} namespaces - An array of namespace names
+   * @returns {Object} An object containing namespace information
+   */
   async getNamespaceInfos(namespaces) {
     await this.ensureNamespaceInfos(namespaces, 1);
     this.addReachable();
@@ -23,6 +28,11 @@ export default class NamespaceFetcher {
     return this.namespaceInfos;
   }
 
+  /**
+   * Ensures that the given namespaces have their information fetched and stored
+   * @param {Array} namespaces - An array of namespace names
+   * @param {number} priorityOffset - The priority offset for fetching the information
+   */
   async ensureNamespaceInfos(namespaces, priorityOffset) {
     const newNamespaceInfos = await this.fetchNamespaceInfos(
       namespaces,
@@ -34,7 +44,10 @@ export default class NamespaceFetcher {
   }
 
   /**
-   * Ensure that infos for a namespace exist.
+   * Fetches the information for the given namespaces from an external source
+   * @param {Array} namespaces - An array of namespace names
+   * @param {number} priorityOffset - The priority offset for fetching the information
+   * @returns {Object} An object containing the fetched information for each given namespace
    */
   async fetchNamespaceInfos(namespaces, priorityOffset) {
     const newNamespaceInfos = this.getInitialNamespaceInfos(
@@ -57,6 +70,14 @@ export default class NamespaceFetcher {
     return newNamespaceInfos;
   }
 
+  /**
+   * Processes responses and updates namespace information.
+   *
+   * @param {Object} newNamespaceInfos - An object containing new namespace information.
+   * @param {Array} responses - An array of responses to process.
+   *
+   * @returns {Object} The updated namespace information object.
+   */
   async processResponses(newNamespaceInfos, responses) {
     for (const namespaceName in newNamespaceInfos) {
       const namespaceInfo = newNamespaceInfos[namespaceName];
@@ -93,7 +114,9 @@ export default class NamespaceFetcher {
   }
 
   /**
-   *  Check for 'only URL' (string) shortcuts and make an object of them.
+   * Converts a given shortcut to an object
+   * @param {string|Object} shortcut - The shortcut to convert
+   * @returns {Object} The converted shortcut object
    */
   convertToObject(shortcut) {
     if (typeof shortcut === 'string') {
@@ -106,11 +129,9 @@ export default class NamespaceFetcher {
   }
 
   /**
-   *  Add shortcuts to be included.
-   *
-   * @param {object} shortcuts - The shortcuts the parsed for includes
-   *
-   * @return {object} shortcuts - Shortcuts with includes.
+   * Adds included shortcuts to the given shortcuts object
+   * @param {Object} shortcuts - An object containing shortcuts
+   * @returns {Object} The updated shortcuts object with included shortcuts added
    */
   async addIncludes(shortcuts) {
     for (const key in shortcuts) {
@@ -137,6 +158,11 @@ export default class NamespaceFetcher {
     return shortcuts;
   }
 
+  /**
+   * Clones a given shortcut object
+   * @param {Object} shortcut - The shortcut object to clone
+   * @returns {Object} The cloned shortcut object
+   */
   cloneShortcut(shortcut) {
     // This approach seems more browser-supported than structuredClone().
     const str = JSON.stringify(shortcut);
@@ -190,6 +216,12 @@ export default class NamespaceFetcher {
     return shortcut;
   }
 
+  /**
+   * Gets initial namespace information for given namespaces
+   * @param {Array} namespaces - An array of namespace names
+   * @param {number} priorityOffset - An offset when setting the namespace priority
+   * @returns {Object} An object containing initial namespace information for each given namespace
+   */
   getInitialNamespaceInfos(namespaces, priorityOffset) {
     return Object.fromEntries(
       namespaces.map((namespace, index) => {
