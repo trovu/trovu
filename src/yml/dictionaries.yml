@@ -10,7 +10,7 @@ bab:
       pl: https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}
       ru: https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
       sv: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
-      # tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+      tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
 beo:
   name: Beolingus
   pairs:
@@ -20,13 +20,13 @@ dcc:
   name: dict.cc
   pairs:
     bg:
-      # de: https://debg.dict.cc/?s={%word}
+      de: https://debg.dict.cc/?s={%word}
     cs:
       de: https://decs.dict.cc/?s={%word}
     da:
       de: https://deda.dict.cc/?s={%word}
     de:
-      # el: https://deel.dict.cc/?s={%word}
+      el: https://deel.dict.cc/?s={%word}
       en: https://deen.dict.cc/?s={%word}
       es: https://dees.dict.cc/?s={%word}
       fi: https://defi.dict.cc/?s={%word}
@@ -41,9 +41,9 @@ dcc:
       pt: https://dept.dict.cc/?s={%word}
       ro: https://dero.dict.cc/?s={%word}
       ru: https://deru.dict.cc/?s={%word}
-      # sk: https://desk.dict.cc/?s={%word}
+      sk: https://desk.dict.cc/?s={%word}
       sv: https://desv.dict.cc/?s={%word}
-      # tr: https://detr.dict.cc/?s={%word}
+      tr: https://detr.dict.cc/?s={%word}
 dpl:
   name: DeepL
   pairs:
@@ -57,7 +57,7 @@ dpl:
       pl: https://www.deepl.com/translator#de/pl/{%text}
       pt: https://www.deepl.com/translator#de/pt/{%text}
       ru: https://www.deepl.com/translator#de/ru/{%text}
-      # tr: https://www.deepl.com/translator#en/tr/{%text}
+      tr: https://www.deepl.com/translator#en/tr/{%text}
       zh: https://www.deepl.com/translator#de/zh/{%text}
 leo:
   name: leo.org
@@ -85,29 +85,29 @@ lga:
       en: https://slovniky.lingea.cz/anglicko-cesky/{%word}
       es: https://slovniky.lingea.cz/spanelsko-cesky/{%word}
       fr: https://slovniky.lingea.cz/francouzsko-cesky/{%word}
-      # hr: https://slovniky.lingea.cz/chorvatsko-cesky/{%word}
+      hr: https://slovniky.lingea.cz/chorvatsko-cesky/{%word}
       pl: https://slovniky.lingea.cz/polsko-cesky/{%word}
       ru: https://slovniky.lingea.cz/rusko-cesky/{%word}
-      # sk: https://slovniky.lingea.cz/slovensko-cesky/{%word}
-      # uk: https://slovniky.lingea.cz/ukrajinsko-cesky/{%word}
-      # vi: https://slovniky.lingea.cz/vietnamsko-cesky/{%word}
+      sk: https://slovniky.lingea.cz/slovensko-cesky/{%word}
+      uk: https://slovniky.lingea.cz/ukrajinsko-cesky/{%word}
+      vi: https://slovniky.lingea.cz/vietnamsko-cesky/{%word}
     de:
-      # sk: https://slovniky.lingea.sk/nemecko-slovensky/{%word}
+      sk: https://slovniky.lingea.sk/nemecko-slovensky/{%word}
 lgs:
   name: Langenscheidt
   pairs:
     de:
-      # ar: https://de.langenscheidt.com/deutsch-arabisch/{%word}
-      # bg: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
+      ar: https://de.langenscheidt.com/deutsch-arabisch/{%word}
+      bg: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
       cs: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
       da: https://de.langenscheidt.com/deutsch-daenisch/{%word}
-      # el: https://de.langenscheidt.com/deutsch-griechisch/{%word}
+      el: https://de.langenscheidt.com/deutsch-griechisch/{%word}
       en: https://de.langenscheidt.com/deutsch-englisch/{%word}
       es: https://de.langenscheidt.com/deutsch-spanisch/{%word}
-      # fa: https://de.langenscheidt.com/deutsch-persisch/{%word}
+      fa: https://de.langenscheidt.com/deutsch-persisch/{%word}
       fi: https://de.langenscheidt.com/deutsch-finnisch/{%word}
       fr: https://de.langenscheidt.com/deutsch-franzoesisch/{%word}
-      # hr: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
+      hr: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
       hu: https://de.langenscheidt.com/deutsch-ungarisch/{%word}
       is: https://de.langenscheidt.com/deutsch-islaendisch/{%word}
       it: https://de.langenscheidt.com/deutsch-italienisch/{%word}
@@ -119,18 +119,18 @@ lgs:
       pt: https://de.langenscheidt.com/deutsch-portugiesisch/{%word}
       ro: https://de.langenscheidt.com/deutsch-rumaenisch/{%word}
       ru: https://de.langenscheidt.com/deutsch-russisch/{%word}
-      # sk: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
-      # sl: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
-      # sr: https://de.langenscheidt.com/deutsch-serbisch/{%word}
+      sk: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
+      sl: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
+      sr: https://de.langenscheidt.com/deutsch-serbisch/{%word}
       sv: https://de.langenscheidt.com/deutsch-schwedisch/{%word}
-      # tr: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
+      tr: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
       zh: https://de.langenscheidt.com/deutsch-chinesisch/{%word}
 pns:
   name: Pons
   pairs:
     de:
       en: http://en.pons.com/translate?q={%word}&l=deen
-      # el: http://en.pons.com/translate?q={%word}&l=deel
+      el: http://en.pons.com/translate?q={%word}&l=deel
       es: http://en.pons.com/translate?q={%word}&l=dees
       fr: http://en.pons.com/translate?q={%word}&l=defr
       hu: http://en.pons.com/translate?q={%word}&l=dehu
@@ -141,7 +141,7 @@ pns:
     en:
       es: http://en.pons.com/translate?q={%word}&l=enes
       fr: http://en.pons.com/translate?q={%word}&l=enfr
-      # sl: http://en.pons.com/translate?q={%word}&l=ensl
+      sl: http://en.pons.com/translate?q={%word}&l=ensl
     fr:
       pl: http://en.pons.com/translate?q={%word}&l=frpl
 wdk:
