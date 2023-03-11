@@ -44,6 +44,136 @@ dcc:
       sk: https://desk.dict.cc/?s={%word}
       sv: https://desv.dict.cc/?s={%word}
       tr: https://detr.dict.cc/?s={%word}
+dcm:
+  name: dict.com
+  pairs:
+    ar:
+      de: https://www.dict.com/arabisch-deutsch/{%word}
+      sk: https://www.dict.com/arabsko-slovensky/{%word}
+    bg:
+      de: https://www.dict.com/bulgarisch-deutsch/{%word}
+      sk: https://www.dict.com/bulharsko-slovensky/{%word}
+    ca:
+      de: https://www.dict.com/katalanisch-deutsch/{%word}
+      sk: https://www.dict.com/katalansko-slovensky/{%word}
+    cs:
+      da: https://www.dict.com/dansko-cesky/{%word}
+      de: https://www.dict.com/nemecko-cesky/{%word}
+      el: https://www.dict.com/recko-cesky/{%word}
+      en: https://www.dict.com/anglicko-cesky/{%word}
+      es: https://www.dict.com/spanelsko-cesky/{%word}
+      et: https://www.dict.com/estonsko-cesky/{%word}
+      fi: https://www.dict.com/finsko-cesky/{%word}
+      fr: https://www.dict.com/francouzsko-cesky/{%word}
+      he: https://www.dict.com/hebrejsko-cesky/{%word}
+      hr: https://www.dict.com/chorvatsko-cesky/{%word}
+      hu: https://www.dict.com/madarsko-cesky/{%word}
+      id: https://www.dict.com/indonesko-cesky/{%word}
+      it: https://www.dict.com/italsko-cesky/{%word}
+      ja: https://www.dict.com/japonsko-cesky/{%word}
+      ko: https://www.dict.com/korejsko-cesky/{%word}
+      lt: https://www.dict.com/litevsko-cesky/{%word}
+      lv: https://www.dict.com/lotyssko-cesky/{%word}
+      nl: https://www.dict.com/nizozemsko-cesky/{%word}
+      no: https://www.dict.com/norsko-cesky/{%word}
+      pl: https://www.dict.com/polsko-cesky/{%word}
+      pt: https://www.dict.com/portugalsko-cesky/{%word}
+      ro: https://www.dict.com/rumunsko-cesky/{%word}
+      ru: https://www.dict.com/rusko-cesky/{%word}
+      sk: https://www.dict.com/slovensko-cesky/{%word}
+      sl: https://www.dict.com/slovinsko-cesky/{%word}
+      sr: https://www.dict.com/srbsko-cesky/{%word}
+      sv: https://www.dict.com/svedsko-cesky/{%word}
+      th: https://www.dict.com/thajsko-cesky/{%word}
+      tr: https://www.dict.com/turecko-cesky/{%word}
+      uk: https://www.dict.com/ukrajinsko-cesky/{%word}
+      vi: https://www.dict.com/vietnamsko-cesky/{%word}
+      zh: https://www.dict.com/cinsko-cesky/{%word}
+    da:
+      de: https://www.dict.com/danisch-deutsch/{%word}
+      sk: https://www.dict.com/dansko-slovensky/{%word}
+    de:
+      el: https://www.dict.com/griechisch-deutsch/{%word}
+      en: https://www.dict.com/englisch-deutsch/{%word}
+      es: https://www.dict.com/spanisch-deutsch/{%word}
+      et: https://www.dict.com/estnisch-deutsch/{%word}
+      fi: https://www.dict.com/finnisch-deutsch/{%word}
+      fr: https://www.dict.com/franz-deutsch/{%word}
+      he: https://www.dict.com/hebraisch-deutsch/{%word}
+      hr: https://www.dict.com/kroatisch-deutsch/{%word}
+      hu: https://www.dict.com/ungarisch-deutsch/{%word}
+      id: https://www.dict.com/indonesisch-deutsch/{%word}
+      it: https://www.dict.com/italienisch-deutsch/{%word}
+      ja: https://www.dict.com/japanisch-deutsch/{%word}
+      ko: https://www.dict.com/koreanisch-deutsch/{%word}
+      lt: https://www.dict.com/litauisch-deutsch/{%word}
+      lv: https://www.dict.com/lettisch-deutsch/{%word}
+      nl: https://www.dict.com/niederlandisch-deutsch/{%word}
+      no: https://www.dict.com/norwegisch-deutsch/{%word}
+      pl: https://www.dict.com/polnisch-deutsch/{%word}
+      pt: https://www.dict.com/portugiesisch-deutsch/{%word}
+      ro: https://www.dict.com/rumanisch-deutsch/{%word}
+      ru: https://www.dict.com/russisch-deutsch/{%word}
+      sk: https://www.dict.com/slowakisch-deutsch/{%word}
+      sl: https://www.dict.com/slowenisch-deutsch/{%word}
+      sr: https://www.dict.com/serbisch-deutsch/{%word}
+      sv: https://www.dict.com/schwedisch-deutsch/{%word}
+      th: https://www.dict.com/thai-deutsch/{%word}
+      tr: https://www.dict.com/tuerkisch-deutsch/{%word}
+      uk: https://www.dict.com/ukrainisch-deutsch/{%word}
+      vi: https://www.dict.com/vietnamesisch-deutsch/{%word}
+      zh: https://www.dict.com/chinesisch-deutsch/{%word}
+    el:
+      sk: https://www.dict.com/grecko-slovensky/{%word}
+    en:
+      sk: https://www.dict.com/anglicko-slovensky/{%word}
+    es:
+      sk: https://www.dict.com/spanielsko-slovensky/{%word}
+    et:
+      sk: https://www.dict.com/estonsko-slovensky/{%word}
+    fi:
+      sk: https://www.dict.com/finsko-slovensky/{%word}
+    fr:
+      sk: https://www.dict.com/francuzsko-slovensky/{%word}
+    he:
+      sk: https://www.dict.com/hebrejsko-slovensky/{%word}
+    hr:
+      sk: https://www.dict.com/chorvatsko-slovensky/{%word}
+    hu:
+      sk: https://www.dict.com/madarsko-slovensky/{%word}
+    id:
+      sk: https://www.dict.com/indonezsko-slovensky/{%word}
+    it:
+      sk: https://www.dict.com/taliansko-slovensky/{%word}
+    ja:
+      sk: https://www.dict.com/japonsko-slovensky/{%word}
+    ko:
+      sk: https://www.dict.com/korejsko-slovensky/{%word}
+    lt:
+      sk: https://www.dict.com/litovsko-slovensky/{%word}
+    lv:
+      sk: https://www.dict.com/lotyssko-slovensky/{%word}
+    nl:
+      sk: https://www.dict.com/holandsko-slovensky/{%word}
+    no:
+      sk: https://www.dict.com/norsko-slovensky/{%word}
+    pl:
+      sk: https://www.dict.com/polsko-slovensky/{%word}
+    pt:
+      sk: https://www.dict.com/portugalsko-slovensky/{%word}
+    ro:
+      sk: https://www.dict.com/rumunsko-slovensky/{%word}
+    ru:
+      sk: https://www.dict.com/rusko-slovensky/{%word}
+    sk:
+      sl: https://www.dict.com/slovinsko-slovensky/{%word}
+      sr: https://www.dict.com/srbsko-slovensky/{%word}
+      sv: https://www.dict.com/svedsko-slovensky/{%word}
+      th: https://www.dict.com/thajsko-slovensky/{%word}
+      tr: https://www.dict.com/turecko-slovensky/{%word}
+      uk: https://www.dict.com/ukrajinsko-slovensky/{%word}
+      vi: https://www.dict.com/vietnamsko-slovensky/{%word}
+      zh: https://www.dict.com/cinsko-slovensky/{%word}
 dpl:
   name: DeepL
   pairs:
