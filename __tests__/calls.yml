@@ -99,10 +99,10 @@
     github: georgjaehnig
     query: test-include-leo-de-en baum
   response:
-    redirectUrl: http://dict.leo.org/ende?search=baum
+    redirectUrl: https://dict.leo.org/german-english/baum
 - title: included 2 level
   env:
     github: georgjaehnig
     query: test-include-leo-fr-de baum
   response:
-    redirectUrl: http://dict.leo.org/frde?search=baum
+    redirectUrl: https://dict.leo.org/französisch-deutsch/baum
