@@ -52,6 +52,12 @@ function writeYmls(ymls) {
     const ymlFilePath = ymlDirPath + ymlFileName;
     const yml = ymls[ymlFileName];
     const ymlSorted = sortObject(yml);
+    for (const shortcut of Object.values(yml)) {
+      if (!shortcut.tags) {
+        continue;
+      }
+      shortcut.tags.sort();
+    }
     // TODO:
     // trim strings: - keys - titles - examples - description
     // make sure, subkeys are in reverse particular order: url, post_params, description, tags, examples
