@@ -1,11 +1,7 @@
 de 1:
-  url: http://dict.leo.org/itde?search={%parola}
-  title: Tedesco-italiano (leo.org)
-  tags:
-  - dictionary
-  - language
-  examples:
-    albero: Search for "albero"
+  include:
+    key: de-it 1
+    namespace: leo
 last 1:
   url: http://www.last.fm/search?setlang=it&q={%artist}
   title: Last.fm

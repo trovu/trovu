@@ -52,19 +52,9 @@ cs 1:
     tree: '"tree" in Czech'
     strom: '"strom" in English'
 de 1:
-  url: http://dict.leo.org/ende?search={%word}
-  title: German-English (leo.org)
-  tags:
-  - deutsch
-  - dictionary
-  - englisch
-  - english
-  - german
-  - language
-  - leo
-  examples:
-    tree: Translation of "tree" in German
-    baum: Translation of "baum" in English
+  include:
+    key: de-en 1
+    namespace: leo
 dei 1:
   url: http://www.linguee.com/english-german/search?source=auto&query={%word}
   title: German-English (Linguee)

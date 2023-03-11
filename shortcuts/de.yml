@@ -378,16 +378,9 @@ eld 1:
   examples:
     baum: Search for "baum"
 en 1:
-  url: http://dict.leo.org/ende/?search={%Wort}
-  title: Englisch-Deutsch (leo.org)
-  tags:
-  - dictionary
-  - english
-  - german
-  - language
-  - leo
-  examples:
-    baum: Englisch-Übersetzung von baum
+  include:
+    key: en-de 1
+    namespace: leo
 en-leo 1:
   include:
     key: en-de 1
@@ -459,13 +452,9 @@ eo 1:
     baum: Suche nach "baum" auf Esperanto
     arbo: Suche nach "arbo" auf Deutsch
 es 1:
-  url: http://dict.leo.org/esde?search={%Wort}
-  title: Spanisch-Deutsch (leo.org)
-  tags:
-  - dictionary
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: es-de 1
+    namespace: leo
 es-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Spanisch-Deutsch PONS
@@ -578,13 +567,9 @@ fool 1:
   url: https://www.fool.de/?s={%keyword}&submit=&lang=de
   title: Fool.de article search
 fr 1:
-  url: http://dict.leo.org/frde?search={%Wort}
-  title: Französisch-Deutsch (leo.org)
-  tags:
-  - dictionary
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: fr-de 1
+    namespace: leo
 fr-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
   title: Französisch-Deutsch PONS
@@ -842,13 +827,9 @@ isbn 1:
   url: http://de.wikipedia.org/wiki/Spezial:Booksources/{%isbn}
   title: ISBN-Suche bei Wikipedia
 it 1:
-  url: http://dict.leo.org/itde?search={%Wort}
-  title: Italienisch-Deutsch (leo.org)
-  tags:
-  - dictionary
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: it-de 1
+    namespace: leo
 itb 1:
   url: https://de.bab.la/woerterbuch/italienisch-deutsch/{%Wort}
   title: Italienisch-Deutsch (bab.la)
@@ -1278,13 +1259,9 @@ ro 1:
   examples:
     baum: Search for "baum"
 ru 1:
-  url: http://dict.leo.org/rude?search={%Wort}
-  title: Russisch-Deutsch (leo.org)
-  tags:
-  - dictionary
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: ru-de 1
+    namespace: leo
 rub 1:
   url: https://de.bab.la/woerterbuch/russisch-deutsch/{%Wort}
   title: Russisch-Deutsch (bab.la)
@@ -1644,13 +1621,9 @@ zeit 1:
   examples:
     berlin: Suche im Archiv von Zeit Online nach Berlin
 zh 1:
-  url: http://dict.leo.org/chde?search={%Wort}
-  title: Chinesisch-Deutsch (leo.org)
-  tags:
-  - dictionary
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: zh-de 1
+    namespace: leo
 zv 1:
   url: http://www.zwangsversteigerung.de/suche?q={%KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID}&ergebnisZeigen=ja
   title: Zwangsversteigerung

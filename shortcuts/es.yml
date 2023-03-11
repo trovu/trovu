@@ -1,18 +1,7 @@
 de 1:
-  url: http://dict.leo.org/esde?search={%palabra}
-  title: Español-Alemán (leo.org)
-  tags:
-  - alemán
-  - diccionario
-  - dictionary
-  - español
-  - german
-  - language
-  - leo
-  - spanish
-  examples:
-    árbol: traducción de "baum"
-    baum: traducción de "árbol"
+  include:
+    key: de-es 1
+    namespace: leo
 dep 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Español–Alemán (Pons)

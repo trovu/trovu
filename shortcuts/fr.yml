@@ -20,17 +20,9 @@ cs 1:
     arbre: '"arbre" český'
     strom: '"strom" francouzký'
 de 1:
-  url: http://dict.leo.org/frde/?search={%mot}
-  title: Allemand-Français (leo.org)
-  tags:
-  - dictionary
-  - french
-  - german
-  - language
-  - leo
-  examples:
-    arbre: '"arbre" en allemand'
-    baum: '"baum" en français.'
+  include:
+    key: de-fr 1
+    namespace: leo
 en 1:
   url: http://dictionary.reverso.net/french-english/{%mot}
   title: Anglais-Français (reverso.net)
