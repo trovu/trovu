@@ -44,6 +44,21 @@ dcc:
       # sk: https://desk.dict.cc/?s={%word}
       sv: https://desv.dict.cc/?s={%word}
       # tr: https://detr.dict.cc/?s={%word}
+dpl:
+  name: DeepL
+  pairs:
+    de:
+      en: https://www.deepl.com/translator#de/en/{%text}
+      es: https://www.deepl.com/translator#de/es/{%text}
+      fr: https://www.deepl.com/translator#de/fr/{%text}
+      it: https://www.deepl.com/translator#de/it/{%text}
+      ja: https://www.deepl.com/translator#de/ja/{%text}
+      nl: https://www.deepl.com/translator#de/nl/{%text}
+      po: https://www.deepl.com/translator#de/po/{%text}
+      pt: https://www.deepl.com/translator#de/pt/{%text}
+      ru: https://www.deepl.com/translator#de/ru/{%text}
+      tr: https://www.deepl.com/translator#en/tr/{%text}
+      zh: https://www.deepl.com/translator#de/zh/{%text}
 leo:
   name: leo.org
   pairs:
