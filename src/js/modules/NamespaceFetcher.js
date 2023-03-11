@@ -52,6 +52,12 @@ export default class NamespaceFetcher {
     // Wait until all fetch calls are done.
     const responses = await Promise.all(promises);
 
+    await this.processResponses(newNamespaceInfos, responses);
+    Object.assign(this.namespaceInfos, newNamespaceInfos);
+    return newNamespaceInfos;
+  }
+
+  async processResponses(newNamespaceInfos, responses) {
     for (const namespaceName in newNamespaceInfos) {
       const namespaceInfo = newNamespaceInfos[namespaceName];
       const response = responses[namespaceInfo.priority];
@@ -83,7 +89,6 @@ export default class NamespaceFetcher {
         );
       }
     }
-    Object.assign(this.namespaceInfos, newNamespaceInfos);
     return newNamespaceInfos;
   }
 
