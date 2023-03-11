@@ -65,8 +65,8 @@ export default class NamespaceFetcher {
         if (this.env.debug)
           Helper.log(
             (this.env.reload ? 'reload ' : 'cache  ') +
-            'Fail:    ' +
-            namespaceInfo.url,
+              'Fail:    ' +
+              namespaceInfo.url,
           );
         namespaceInfo.shortcuts = [];
         continue;
@@ -282,10 +282,10 @@ export default class NamespaceFetcher {
     if (incorrectKeys.length > 0) {
       Helper.log(
         "Incorrect keys found in namespace '" +
-        namespaceName +
-        "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-        '\n\n' +
-        incorrectKeys.join('\n'),
+          namespaceName +
+          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
+          '\n\n' +
+          incorrectKeys.join('\n'),
       );
       this.error = true;
     }
