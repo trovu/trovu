@@ -388,6 +388,10 @@ en 1:
   - leo
   examples:
     baum: Englisch-Übersetzung von baum
+en-leo 1:
+  include:
+    key: en-de 1
+    namespace: leo
 enb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?lang=de&service=deen&opterrors=0&optpro=0&query={%query}
   title: Englisch-Deutsch (Beolingus)
@@ -946,10 +950,10 @@ last 1:
   examples:
     beatles: Search for "beatles"
 leo 1:
-  url: http://dict.leo.org/?search={%Wort}
-  title: 'Englisch-Deutsch: leo.org'
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en-leo {%1}
+      created: '2023-03-12'
 lobby 0:
   url: http://lobbycontrol.de/
   title: LobbyControl
