@@ -1,3 +1,15 @@
+de-el 1:
+  url: http://en.pons.com/translate?q={%word}&l=deel
+  title: Γερμανικά-Ελληνικά (Pons)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - greek (modern)
+  examples:
+    baum: Μετάφραση στα Ελληνικά για το "baum"
+    δέντρο: Μετάφραση στα Γερμανικά για το "δέντρο"
 de-en 1:
   url: http://en.pons.com/translate?q={%word}&l=deen
   title: German-English (Pons)
@@ -94,6 +106,13 @@ de-ru 1:
   examples:
     baum: Перевод на русский язык для "baum"
     дерево: Перевод на немецкий язык для "дерево"
+el-de 1:
+  title: Griechisch-Deutsch (Pons)
+  include:
+    key: de-el 1
+  examples:
+    δέντρο: Deutsch-Übersetzung von "δέντρο"
+    baum: Griechisch-Übersetzung von "baum"
 en-de 1:
   title: Englisch-Deutsch (Pons)
   include:
@@ -125,6 +144,18 @@ en-fr 1:
   examples:
     tree: Traduction en Français de "tree"
     arbre: Traduction en Anglais de "arbre"
+en-sl 1:
+  url: http://en.pons.com/translate?q={%word}&l=ensl
+  title: Angleščina-Slovenščina (Pons)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - english
+  - slovenian
+  examples:
+    tree: Prevod v slovenščina za besedo "tree"
+    drevo: Prevod v Angleščina za besedo "drevo"
 es-de 1:
   title: Spanisch-Deutsch (Pons)
   include:
@@ -207,3 +238,10 @@ ru-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Russisch-Übersetzung von "baum"
+sl-en 1:
+  title: Slovenian-English (Pons)
+  include:
+    key: en-sl 1
+  examples:
+    drevo: English translation of "drevo"
+    tree: Slovenian translation of "tree"

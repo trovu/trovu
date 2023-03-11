@@ -1,3 +1,17 @@
+ar-de 1:
+  title: Arabisch-Deutsch (Langenscheidt)
+  include:
+    key: de-ar 1
+  examples:
+    شجرة: Deutsch-Übersetzung von "شجرة"
+    baum: Arabisch-Übersetzung von "baum"
+bg-de 1:
+  title: Bulgarisch-Deutsch (Langenscheidt)
+  include:
+    key: de-bg 1
+  examples:
+    дърво: Deutsch-Übersetzung von "дърво"
+    baum: Bulgarisch-Übersetzung von "baum"
 cs-de 1:
   title: Tschechisch-Deutsch (Langenscheidt)
   include:
@@ -12,6 +26,30 @@ da-de 1:
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Dänisch-Übersetzung von "baum"
+de-ar 1:
+  url: https://de.langenscheidt.com/deutsch-arabisch/{%word}
+  title: ألمانية-عربية (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - arabic
+  examples:
+    baum: ترجمة عربية من "baum"
+    شجرة: ترجمة ألمانية من "شجرة"
+de-bg 1:
+  url: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
+  title: Немски-Български (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - bulgarian
+  examples:
+    baum: български превод за "baum"
+    дърво: немски превод за "дърво"
 de-cs 1:
   url: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
   title: Němčina-Čeština (Langenscheidt)
@@ -36,6 +74,18 @@ de-da 1:
   examples:
     baum: dansk oversættelse af "baum"
     træ: tysk oversættelse af "træ"
+de-el 1:
+  url: https://de.langenscheidt.com/deutsch-griechisch/{%word}
+  title: Γερμανικά-Ελληνικά (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - greek (modern)
+  examples:
+    baum: Μετάφραση στα Ελληνικά για το "baum"
+    δέντρο: Μετάφραση στα Γερμανικά για το "δέντρο"
 de-en 1:
   url: https://de.langenscheidt.com/deutsch-englisch/{%word}
   title: German-English (Langenscheidt)
@@ -60,6 +110,18 @@ de-es 1:
   examples:
     baum: Traducción al Español de "baum"
     árbol: Traducción al Alemán de "árbol"
+de-fa 1:
+  url: https://de.langenscheidt.com/deutsch-persisch/{%word}
+  title: زبان آلمانی-زبان فارسی (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - persian
+  examples:
+    baum: ترجمه به زبان فارسی برای "baum"
+    درخت: ترجمه به زبان آلمانی برای "درخت"
 de-fi 1:
   url: https://de.langenscheidt.com/deutsch-finnisch/{%word}
   title: Saksa-Suomi (Langenscheidt)
@@ -84,6 +146,18 @@ de-fr 1:
   examples:
     baum: Traduction en Français de "baum"
     arbre: Traduction en Allemand de "arbre"
+de-hr 1:
+  url: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
+  title: Njemački-Hrvatski (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - croatian
+  examples:
+    baum: hrvatski prijevod od "baum"
+    stablo: njemački prijevod od "stablo"
 de-hu 1:
   url: https://de.langenscheidt.com/deutsch-ungarisch/{%word}
   title: Német-Magyar (Langenscheidt)
@@ -204,6 +278,42 @@ de-ru 1:
   examples:
     baum: Перевод на русский язык для "baum"
     дерево: Перевод на немецкий язык для "дерево"
+de-sk 1:
+  url: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
+  title: Nemčina-Slovenčina (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - slovak
+  examples:
+    baum: slovenčina preklad pre "baum"
+    strom: nemčina preklad pre "strom"
+de-sl 1:
+  url: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
+  title: Nemščina-Slovenščina (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - slovenian
+  examples:
+    baum: Prevod v slovenščina za besedo "baum"
+    drevo: Prevod v Nemščina za besedo "drevo"
+de-sr 1:
+  url: https://de.langenscheidt.com/deutsch-serbisch/{%word}
+  title: Немачки-Српски (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - serbian
+  examples:
+    baum: Превод на Српски за "baum"
+    дрво: Превод на Немачки за "дрво"
 de-sv 1:
   url: https://de.langenscheidt.com/deutsch-schwedisch/{%word}
   title: Tyska-Svenska (Langenscheidt)
@@ -216,6 +326,18 @@ de-sv 1:
   examples:
     baum: svenska-översättning av "baum"
     träd: tyska-översättning av "träd"
+de-tr 1:
+  url: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
+  title: Almanca-Türkçe (Langenscheidt)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - turkish
+  examples:
+    baum: '"baum" için Türkçe çevirisi'
+    ağaç: '"ağaç" için Almanca çevirisi'
 de-zh 1:
   url: https://de.langenscheidt.com/deutsch-chinesisch/{%word}
   title: 德语-汉语 (Langenscheidt)
@@ -228,6 +350,13 @@ de-zh 1:
   examples:
     baum: 汉语翻译"baum"
     树: 德语翻译"树"
+el-de 1:
+  title: Griechisch-Deutsch (Langenscheidt)
+  include:
+    key: de-el 1
+  examples:
+    δέντρο: Deutsch-Übersetzung von "δέντρο"
+    baum: Griechisch-Übersetzung von "baum"
 en-de 1:
   title: Englisch-Deutsch (Langenscheidt)
   include:
@@ -242,6 +371,13 @@ es-de 1:
   examples:
     árbol: Deutsch-Übersetzung von "árbol"
     baum: Spanisch-Übersetzung von "baum"
+fa-de 1:
+  title: Persisch-Deutsch (Langenscheidt)
+  include:
+    key: de-fa 1
+  examples:
+    درخت: Deutsch-Übersetzung von "درخت"
+    baum: Persisch-Übersetzung von "baum"
 fi-de 1:
   title: Finnisch-Deutsch (Langenscheidt)
   include:
@@ -256,6 +392,13 @@ fr-de 1:
   examples:
     arbre: Deutsch-Übersetzung von "arbre"
     baum: Französisch-Übersetzung von "baum"
+hr-de 1:
+  title: Kroatisch-Deutsch (Langenscheidt)
+  include:
+    key: de-hr 1
+  examples:
+    stablo: Deutsch-Übersetzung von "stablo"
+    baum: Kroatisch-Übersetzung von "baum"
 hu-de 1:
   title: Ungarisch-Deutsch (Langenscheidt)
   include:
@@ -326,6 +469,27 @@ ru-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Russisch-Übersetzung von "baum"
+sk-de 1:
+  title: Slowakisch-Deutsch (Langenscheidt)
+  include:
+    key: de-sk 1
+  examples:
+    strom: Deutsch-Übersetzung von "strom"
+    baum: Slowakisch-Übersetzung von "baum"
+sl-de 1:
+  title: Slowenisch-Deutsch (Langenscheidt)
+  include:
+    key: de-sl 1
+  examples:
+    drevo: Deutsch-Übersetzung von "drevo"
+    baum: Slowenisch-Übersetzung von "baum"
+sr-de 1:
+  title: Serbisch-Deutsch (Langenscheidt)
+  include:
+    key: de-sr 1
+  examples:
+    дрво: Deutsch-Übersetzung von "дрво"
+    baum: Serbisch-Übersetzung von "baum"
 sv-de 1:
   title: Schwedisch-Deutsch (Langenscheidt)
   include:
@@ -333,6 +497,13 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+tr-de 1:
+  title: Türkisch-Deutsch (Langenscheidt)
+  include:
+    key: de-tr 1
+  examples:
+    ağaç: Deutsch-Übersetzung von "ağaç"
+    baum: Türkisch-Übersetzung von "baum"
 zh-de 1:
   title: Chinesisch-Deutsch (Langenscheidt)
   include:
