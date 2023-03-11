@@ -11,6 +11,11 @@ bab:
       ru: https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
       sv: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
       # tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+beo:
+  name: Beolingus
+  pairs:
+    de:
+      en: https://dict.tu-chemnitz.de/dings.cgi?service=deen&query={%word}
 dcc:
   name: dict.cc
   pairs:
