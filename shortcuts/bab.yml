@@ -89,6 +89,18 @@ de-sv 1:
   examples:
     baum: svenska-översättning av "baum"
     träd: tyska-översättning av "träd"
+de-tr 1:
+  url: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+  title: Almanca-Türkçe (bab.la)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - turkish
+  examples:
+    baum: '"baum" için Türkçe çevirisi'
+    ağaç: '"ağaç" için Almanca çevirisi'
 es-de 1:
   title: Spanisch-Deutsch (bab.la)
   include:
@@ -131,3 +143,10 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+tr-de 1:
+  title: Türkisch-Deutsch (bab.la)
+  include:
+    key: de-tr 1
+  examples:
+    ağaç: Deutsch-Übersetzung von "ağaç"
+    baum: Türkisch-Übersetzung von "baum"
