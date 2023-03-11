@@ -129,3 +129,8 @@ pns:
       # sl: http://en.pons.com/translate?q={%word}&l=ensl
     fr:
       pl: http://en.pons.com/translate?q={%word}&l=frpl
+wdk:
+  name: Wadoku
+  pairs:
+    de:
+      ja: http://www.wadoku.de/wadoku/search/{%word}
