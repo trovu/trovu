@@ -93,6 +93,19 @@ lga:
       vi: https://slovniky.lingea.cz/vietnamsko-cesky/{%word}
     de:
       sk: https://slovniky.lingea.sk/nemecko-slovensky/{%word}
+lge:
+  name: Linguee
+  pairs:
+    de:
+      en: https://www.linguee.com/english-german/search?query={%word}
+      es: httsp://www.linguee.es/espanol-aleman/search?query={%word}
+      fr: https://www.linguee.fr/francais-allemand/search?query={%word}
+      pl: https://www.linguee.de/deutsch-polnisch/search?query={%word}
+      pt: https://www.linguee.pt/portugues-alemao/search?query={%word}
+    en:
+      es: https://www.linguee.com/english-spanish/search?query={%word}
+      fr: https://www.linguee.com/english-french/search?query={%word}
+      pt: https://www.linguee.com/english-portuguese/search?query={%word}
 lgs:
   name: Langenscheidt
   pairs:
