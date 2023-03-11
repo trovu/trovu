@@ -98,8 +98,8 @@ pns:
   name: Pons
   pairs:
     de:
-      # el: http://en.pons.com/translate?q={%word}&l=deel
       en: http://en.pons.com/translate?q={%word}&l=deen
+      # el: http://en.pons.com/translate?q={%word}&l=deel
       es: http://en.pons.com/translate?q={%word}&l=dees
       fr: http://en.pons.com/translate?q={%word}&l=defr
       hu: http://en.pons.com/translate?q={%word}&l=dehu
@@ -110,6 +110,6 @@ pns:
     en:
       es: http://en.pons.com/translate?q={%word}&l=enes
       fr: http://en.pons.com/translate?q={%word}&l=enfr
-      sl: http://en.pons.com/translate?q={%word}&l=ensl
+      # sl: http://en.pons.com/translate?q={%word}&l=ensl
     fr:
       pl: http://en.pons.com/translate?q={%word}&l=frpl
