@@ -2,13 +2,13 @@ de 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%word}
   title: Alemão-Português
   tags:
-  - dictionary
-  - language
-  - german
-  - portuguese
-  - deutsch
-  - portugiesisch
   - alemão
+  - deutsch
+  - dictionary
+  - german
+  - language
+  - portugiesisch
+  - portuguese
   - português
   examples:
     baum: '"baum" auf Portugiesisch'
@@ -17,7 +17,7 @@ last 1:
   url: http://www.last.fm/search?setlang=pt&q={%artist}
   title: Last.fm
   tags:
-  - music
   - lastfm
+  - music
   examples:
     beatles: Search for "beatles"

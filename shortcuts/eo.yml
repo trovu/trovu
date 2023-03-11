@@ -2,58 +2,58 @@ kt 0:
   url: https://komputeko.net/
   title: Komputeko, ĉefpaĝo
   tags:
-  - esperanto
-  - dictionary
-  - vortaro
   - computer
+  - dictionary
+  - esperanto
+  - vortaro
 kt 1:
   url: https://komputeko.net/#{%vorto}
   title: Komputeko
   tags:
-  - esperanto
-  - dictionary
-  - vortaro
   - computer
+  - dictionary
+  - esperanto
+  - vortaro
   examples:
     shortcut: Find the Esperanto word for "shortcut"
 piv 0:
   url: http://vortaro.net/
   title: Plena Ilustrita Vortaro, ĉefpaĝo
   tags:
-  - language
   - esperanto
+  - language
 piv 1:
   url: http://vortaro.net/#{%vorto}
   title: Plena Ilustrita Vortaro
   tags:
-  - language
   - esperanto
+  - language
   examples:
     arbo: Serĉu "arbo"
 rv 0:
   url: https://www.reta-vortaro.de/
   title: Reta Vortaro, ĉefpaĝo
   tags:
-  - language
   - dictionary
   - esperanto
+  - language
   examples:
     vorto: Search for "vorto"
 rv 1:
   url: https://www.reta-vortaro.de/revo/dlg/index-2f.html?q={%vorto}
   title: Reta Vortaro
   tags:
-  - language
   - dictionary
   - esperanto
+  - language
   examples:
     vorto: Search for "vorto"
 rvg 1:
   url: http://www.google.com/search?hl={$language}&sitesearch=reta-vortaro.de&domains=reta-vortaro.de&q={%vorto}
   title: Reta Vortaro tra Google
   tags:
-  - language
   - dictionary
   - esperanto
+  - language
   examples:
     arbo: Serĉu "arbo"

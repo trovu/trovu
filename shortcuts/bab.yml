@@ -2,11 +2,11 @@ da-de 1:
   url: https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}
   title: Dänisch-Deutsch (bab.la)
   tags:
+  - danish
   - dictionary
+  - german
   - language
   - leo
-  - danish
-  - german
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Dänisch-Übersetzung von "baum"
@@ -22,9 +22,9 @@ de-es 1:
   title: Alemán-Español (bab.la)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - spanish
   examples:
     baum: Traducción al Español de "baum"
@@ -34,10 +34,10 @@ de-fr 1:
   title: Allemand-Français (bab.la)
   tags:
   - dictionary
+  - french
+  - german
   - language
   - leo
-  - german
-  - french
   examples:
     baum: Traduction en Français de "baum"
     arbre: Traduction en Allemand de "arbre"
@@ -46,10 +46,10 @@ de-it 1:
   title: Tedesco-Italiano (bab.la)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - italian
+  - language
+  - leo
   examples:
     baum: Traduzione in italiano di "baum"
     albero: Traduzione in tedesco di "albero"
@@ -58,9 +58,9 @@ de-pl 1:
   title: Niemiecki-Polski (bab.la)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - polish
   examples:
     baum: Tłumaczenie na język polski dla "baum"
@@ -70,9 +70,9 @@ de-ru 1:
   title: Немецкий-Русский (bab.la)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - russian
   examples:
     baum: Перевод на русский язык для "baum"
@@ -82,9 +82,9 @@ de-sv 1:
   title: Tyska-Svenska (bab.la)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - swedish
   examples:
     baum: svenska-översättning av "baum"
@@ -94,9 +94,9 @@ de-tr 1:
   title: Almanca-Türkçe (bab.la)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - turkish
   examples:
     baum: '"baum" için Türkçe çevirisi'

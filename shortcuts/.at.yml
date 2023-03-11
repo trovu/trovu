@@ -2,58 +2,58 @@ a 0:
   url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=at&tag=serchilo-21
   title: Amazon.at Startseite
   tags:
-  - amazon
-  - shopping
-  - books
   - affiliate
+  - amazon
+  - books
+  - shopping
 a 1:
   url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&site-redirect=at&linkCode=ur2&tag=serchilo-21
   title: Amazon.at
   tags:
-  - amazon
-  - shopping
-  - books
   - affiliate
+  - amazon
+  - books
+  - shopping
   examples:
     goethe: Suche auf Amazon.at nach "goethe"
 conrad 0:
   url: http://www.conrad.at/
   title: Conrad Elektronik Österreich
   tags:
-  - shopping
-  - electronics
   - conrad
+  - electronics
+  - shopping
 conrad 1:
   url: https://www.conrad.at/de/search.html?search={%Artikel}
   title: Conrad Elektronik Österreich
   tags:
-  - shopping
-  - electronics
   - conrad
+  - electronics
+  - shopping
   examples:
     glühlampe: Suche nach Glühlampen
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
 e 1:
   url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
   examples:
     smartphone: Search for "smartphone"
 g 1:
   url: https://www.google.at/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.at
   tags:
-  - web search
   - google
+  - web search
   examples:
     wien: Google-Suche nach "wien"
 gh 0:
@@ -61,23 +61,23 @@ gh 0:
   title: Geizhals Österreich Hauptseite
   tags:
   - geizhals
-  - shopping
   - preisvergleich
+  - shopping
 gh 1:
   url: http://geizhals.at/?fs={%Produkt|encoding=iso-8859-1}
   title: Geizhals Österreich
   tags:
   - geizhals
-  - shopping
   - preisvergleich
+  - shopping
   examples:
     fernseher: Search for "fernseher"
 gm 2:
   url: https://www.google.com/maps/search/{%Stadt|type=city}%2C%20{%Straße}%2C%20Österreich/?hl={$language}
   title: Google Maps Österreich
   tags:
-  - maps
   - google
+  - maps
   examples:
     w, praterstern: Zeige Praterstern in Wien
     gd, haupstr.: Zeige Hauptstraße in Gmünd
@@ -85,8 +85,8 @@ gmam 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Amstetten%2C%20%C3%96sterreich
   title: Google Maps Amstetten
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Amstetten
   deprecated:
@@ -97,8 +97,8 @@ gmb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bregenz%2C%20%C3%96sterreich
   title: Google Maps Bregenz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Bregenz
   deprecated:
@@ -109,8 +109,8 @@ gmba 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bad+Aussee%2C%20%C3%96sterreich
   title: Google Maps Bad Aussee
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Bad Aussee
   deprecated:
@@ -121,8 +121,8 @@ gmbl 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Leitha%2C%20%C3%96sterreich
   title: Google Maps Bruck an der Leitha
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Bruck an der Leitha
   deprecated:
@@ -133,8 +133,8 @@ gmbm 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Mur%2C%20%C3%96sterreich
   title: Google Maps Bruck an der Mur
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Bruck an der Mur
   deprecated:
@@ -145,8 +145,8 @@ gmbn 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Baden%2C%20%C3%96sterreich
   title: Google Maps Baden
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Baden
   deprecated:
@@ -157,8 +157,8 @@ gmbr 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Braunau+am+Inn%2C%20%C3%96sterreich
   title: Google Maps Braunau am Inn
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Braunau am Inn
   deprecated:
@@ -169,8 +169,8 @@ gmbz 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bludenz%2C%20%C3%96sterreich
   title: Google Maps Bludenz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Bludenz
   deprecated:
@@ -181,8 +181,8 @@ gmdl 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Deutschlandsberg%2C%20%C3%96sterreich
   title: Google Maps Deutschlandsberg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Deutschlandsberg
   deprecated:
@@ -193,8 +193,8 @@ gmdo 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Dornbirn%2C%20%C3%96sterreich
   title: Google Maps Dornbirn
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Dornbirn
   deprecated:
@@ -205,8 +205,8 @@ gme 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eisenstadt%2C%20%C3%96sterreich
   title: Google Maps Eisenstadt
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Eisenstadt
   deprecated:
@@ -217,8 +217,8 @@ gmef 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eferding%2C%20%C3%96sterreich
   title: Google Maps Eferding
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Eferding
   deprecated:
@@ -229,8 +229,8 @@ gmfb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldbach%2C%20%C3%96sterreich
   title: Google Maps Feldbach
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Feldbach
   deprecated:
@@ -241,8 +241,8 @@ gmfe 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirchen%2C%20%C3%96sterreich
   title: Google Maps Feldkirchen
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Feldkirchen
   deprecated:
@@ -253,8 +253,8 @@ gmff 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20F%C3%BCrstenfeld%2C%20%C3%96sterreich
   title: Google Maps Fürstenfeld
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Fürstenfeld
   deprecated:
@@ -265,8 +265,8 @@ gmfk 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirch%2C%20%C3%96sterreich
   title: Google Maps Feldkirch
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Feldkirch
   deprecated:
@@ -277,8 +277,8 @@ gmfr 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Freistadt%2C%20%C3%96sterreich
   title: Google Maps Freistadt
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Freistadt
   deprecated:
@@ -289,8 +289,8 @@ gmg 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Graz%2C%20%C3%96sterreich
   title: Google Maps Graz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Graz
   deprecated:
@@ -301,8 +301,8 @@ gmgb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gr%C3%B6bming%2C%20%C3%96sterreich
   title: Google Maps Gröbming
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Gröbming
   deprecated:
@@ -313,8 +313,8 @@ gmgd 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gm%C3%BCnd%2C%20%C3%96sterreich
   title: Google Maps Gmünd
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Gmünd
   deprecated:
@@ -325,8 +325,8 @@ gmgf 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%A4nserndorf%2C%20%C3%96sterreich
   title: Google Maps Gänserndorf
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Gänserndorf
   deprecated:
@@ -337,8 +337,8 @@ gmgm 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gmunden%2C%20%C3%96sterreich
   title: Google Maps Gmunden
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Gmunden
   deprecated:
@@ -349,8 +349,8 @@ gmgr 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Grieskirchen%2C%20%C3%96sterreich
   title: Google Maps Grieskirchen
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Grieskirchen
   deprecated:
@@ -361,8 +361,8 @@ gmgs 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%BCssing%2C%20%C3%96sterreich
   title: Google Maps Güssing
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Güssing
   deprecated:
@@ -373,8 +373,8 @@ gmha 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hallein%2C%20%C3%96sterreich
   title: Google Maps Hallein
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Hallein
   deprecated:
@@ -385,8 +385,8 @@ gmhb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hartberg%2C%20%C3%96sterreich
   title: Google Maps Hartberg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Hartberg
   deprecated:
@@ -397,8 +397,8 @@ gmhe 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hermagor%2C%20%C3%96sterreich
   title: Google Maps Hermagor
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Hermagor
   deprecated:
@@ -409,8 +409,8 @@ gmhl 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hollabrunn%2C%20%C3%96sterreich
   title: Google Maps Hollabrunn
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Hollabrunn
   deprecated:
@@ -421,8 +421,8 @@ gmho 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Horn%2C%20%C3%96sterreich
   title: Google Maps Horn
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Horn
   deprecated:
@@ -433,8 +433,8 @@ gmi 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Innsbruck%2C%20%C3%96sterreich
   title: Google Maps Innsbruck
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Innsbruck
   deprecated:
@@ -445,8 +445,8 @@ gmim 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Imst%2C%20%C3%96sterreich
   title: Google Maps Imst
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Imst
   deprecated:
@@ -457,8 +457,8 @@ gmje 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Jennersdorf%2C%20%C3%96sterreich
   title: Google Maps Jennersdorf
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Jennersdorf
   deprecated:
@@ -469,8 +469,8 @@ gmjo 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+Johann%2C%20%C3%96sterreich
   title: Google Maps St. Johann
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in St. Johann
   deprecated:
@@ -481,8 +481,8 @@ gmju 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Judenburg%2C%20%C3%96sterreich
   title: Google Maps Judenburg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Judenburg
   deprecated:
@@ -493,8 +493,8 @@ gmk 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Klagenfurt%2C%20%C3%96sterreich
   title: Google Maps Klagenfurt
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Klagenfurt
   deprecated:
@@ -505,8 +505,8 @@ gmkb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kitzb%C3%BChel%2C%20%C3%96sterreich
   title: Google Maps Kitzbühel
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Kitzbühel
   deprecated:
@@ -517,8 +517,8 @@ gmkf 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Knittelfeld%2C%20%C3%96sterreich
   title: Google Maps Knittelfeld
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Knittelfeld
   deprecated:
@@ -529,8 +529,8 @@ gmki 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kirchdorf+Krems%2C%20%C3%96sterreich
   title: Google Maps Kirchdorf Krems
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Kirchdorf Krems
   deprecated:
@@ -541,8 +541,8 @@ gmko 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Korneuburg%2C%20%C3%96sterreich
   title: Google Maps Korneuburg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Korneuburg
   deprecated:
@@ -553,8 +553,8 @@ gmks 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Krems%2C%20%C3%96sterreich
   title: Google Maps Krems
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Krems
   deprecated:
@@ -565,8 +565,8 @@ gmku 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kufstein%2C%20%C3%96sterreich
   title: Google Maps Kufstein
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Kufstein
   deprecated:
@@ -577,8 +577,8 @@ gml 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Linz%2C%20%C3%96sterreich
   title: Google Maps Linz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Linz
   deprecated:
@@ -589,8 +589,8 @@ gmla 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Landeck%2C%20%C3%96sterreich
   title: Google Maps Landeck
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Landeck
   deprecated:
@@ -601,8 +601,8 @@ gmlb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leibnitz%2C%20%C3%96sterreich
   title: Google Maps Leibnitz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Leibnitz
   deprecated:
@@ -613,8 +613,8 @@ gmle 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leoben%2C%20%C3%96sterreich
   title: Google Maps Leoben
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Leoben
   deprecated:
@@ -625,8 +625,8 @@ gmlf 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lilienfeld%2C%20%C3%96sterreich
   title: Google Maps Lilienfeld
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Lilienfeld
   deprecated:
@@ -637,8 +637,8 @@ gmli 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Liezen%2C%20%C3%96sterreich
   title: Google Maps Liezen
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Liezen
   deprecated:
@@ -649,8 +649,8 @@ gmlz 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lienz%2C%20%C3%96sterreich
   title: Google Maps Lienz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Lienz
   deprecated:
@@ -661,8 +661,8 @@ gmma 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mattersburg%2C%20%C3%96sterreich
   title: Google Maps Mattersburg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Mattersburg
   deprecated:
@@ -673,8 +673,8 @@ gmmd 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%B6dling%2C%20%C3%96sterreich
   title: Google Maps Mödling
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Mödling
   deprecated:
@@ -685,8 +685,8 @@ gmme 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Melk%2C%20%C3%96sterreich
   title: Google Maps Melk
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Melk
   deprecated:
@@ -697,8 +697,8 @@ gmmi 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mistelbach%2C%20%C3%96sterreich
   title: Google Maps Mistelbach
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Mistelbach
   deprecated:
@@ -709,8 +709,8 @@ gmmu 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Murau%2C%20%C3%96sterreich
   title: Google Maps Murau
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Murau
   deprecated:
@@ -721,8 +721,8 @@ gmmz 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%BCrzzuschlag%2C%20%C3%96sterreich
   title: Google Maps Mürzzuschlag
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Mürzzuschlag
   deprecated:
@@ -733,8 +733,8 @@ gmnd 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neusiedl+am+See%2C%20%C3%96sterreich
   title: Google Maps Neusiedl am See
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Neusiedl am See
   deprecated:
@@ -745,8 +745,8 @@ gmnk 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neunkirchen%2C%20%C3%96sterreich
   title: Google Maps Neunkirchen
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Neunkirchen
   deprecated:
@@ -757,8 +757,8 @@ gmop 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberpullendorf%2C%20%C3%96sterreich
   title: Google Maps Oberpullendorf
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Oberpullendorf
   deprecated:
@@ -769,8 +769,8 @@ gmow 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberwart%2C%20%C3%96sterreich
   title: Google Maps Oberwart
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Oberwart
   deprecated:
@@ -781,8 +781,8 @@ gmp 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+P%C3%B6lten%2C%20%C3%96sterreich
   title: Google Maps St. Pölten
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in St. Pölten
   deprecated:
@@ -793,8 +793,8 @@ gmpe 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Perg%2C%20%C3%96sterreich
   title: Google Maps Perg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Perg
   deprecated:
@@ -805,8 +805,8 @@ gmra 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Radkersburg%2C%20%C3%96sterreich
   title: Google Maps Radkersburg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Radkersburg
   deprecated:
@@ -817,8 +817,8 @@ gmre 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Reutte%2C%20%C3%96sterreich
   title: Google Maps Reutte
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Reutte
   deprecated:
@@ -829,8 +829,8 @@ gmri 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Ried+im+Innkreis%2C%20%C3%96sterreich
   title: Google Maps Ried im Innkreis
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Ried im Innkreis
   deprecated:
@@ -841,8 +841,8 @@ gmro 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Rohrbach%2C%20%C3%96sterreich
   title: Google Maps Rohrbach
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Rohrbach
   deprecated:
@@ -853,8 +853,8 @@ gms 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Salzburg%2C%20%C3%96sterreich
   title: Google Maps Salzburg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Salzburg
   deprecated:
@@ -865,8 +865,8 @@ gmsb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Scheibbs%2C%20%C3%96sterreich
   title: Google Maps Scheibbs
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Scheibbs
   deprecated:
@@ -877,8 +877,8 @@ gmsd 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sch%C3%A4rding%2C%20%C3%96sterreich
   title: Google Maps Schärding
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Schärding
   deprecated:
@@ -889,8 +889,8 @@ gmsp 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Spittal+an+der+Drau%2C%20%C3%96sterreich
   title: Google Maps Spittal an der Drau
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Spittal an der Drau
   deprecated:
@@ -901,8 +901,8 @@ gmsr 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Steyr%2C%20%C3%96sterreich
   title: Google Maps Steyr
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Steyr
   deprecated:
@@ -913,8 +913,8 @@ gmsv 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sankt+Veit+an+der+Glan%2C%20%C3%96sterreich
   title: Google Maps Sankt Veit an der Glan
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Sankt Veit an der Glan
   deprecated:
@@ -925,8 +925,8 @@ gmsw 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwechat%2C%20%C3%96sterreich
   title: Google Maps Schwechat
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Schwechat
   deprecated:
@@ -937,8 +937,8 @@ gmsz 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwaz%2C%20%C3%96sterreich
   title: Google Maps Schwaz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Schwaz
   deprecated:
@@ -949,8 +949,8 @@ gmta 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tamsweg%2C%20%C3%96sterreich
   title: Google Maps Tamsweg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Tamsweg
   deprecated:
@@ -961,8 +961,8 @@ gmtu 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tulln%2C%20%C3%96sterreich
   title: Google Maps Tulln
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Tulln
   deprecated:
@@ -973,8 +973,8 @@ gmvb 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6cklabruck%2C%20%C3%96sterreich
   title: Google Maps Vöcklabruck
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Vöcklabruck
   deprecated:
@@ -985,8 +985,8 @@ gmvi 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Villach%2C%20%C3%96sterreich
   title: Google Maps Villach
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Villach
   deprecated:
@@ -997,8 +997,8 @@ gmvk 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6lkermarkt%2C%20%C3%96sterreich
   title: Google Maps Völkermarkt
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Völkermarkt
   deprecated:
@@ -1009,8 +1009,8 @@ gmvo 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Voitsberg%2C%20%C3%96sterreich
   title: Google Maps Voitsberg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Voitsberg
   deprecated:
@@ -1021,8 +1021,8 @@ gmw 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wien%2C%20%C3%96sterreich
   title: Google Maps Wien
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Wien
   deprecated:
@@ -1033,8 +1033,8 @@ gmwe 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wels%2C%20%C3%96sterreich
   title: Google Maps Wels
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Wels
   deprecated:
@@ -1045,8 +1045,8 @@ gmwn 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wiener+Neustadt%2C%20%C3%96sterreich
   title: Google Maps Wiener Neustadt
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Wiener Neustadt
   deprecated:
@@ -1057,8 +1057,8 @@ gmwo 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wolfsberg%2C%20%C3%96sterreich
   title: Google Maps Wolfsberg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Wolfsberg
   deprecated:
@@ -1069,8 +1069,8 @@ gmwt 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Thaya%2C%20%C3%96sterreich
   title: Google Maps Waidhofen an der Thaya
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Waidhofen an der Thaya
   deprecated:
@@ -1081,8 +1081,8 @@ gmwy 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Ybbs%2C%20%C3%96sterreich
   title: Google Maps Waidhofen an der Ybbs
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Waidhofen an der Ybbs
   deprecated:
@@ -1093,8 +1093,8 @@ gmwz 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Weiz%2C%20%C3%96sterreich
   title: Google Maps Weiz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Weiz
   deprecated:
@@ -1105,8 +1105,8 @@ gmze 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zell+am+See%2C%20%C3%96sterreich
   title: Google Maps Zell am See
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Zell am See
   deprecated:
@@ -1117,8 +1117,8 @@ gmzt 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zwettl%2C%20%C3%96sterreich
   title: Google Maps Zwettl
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Zwettl
   deprecated:
@@ -1129,15 +1129,15 @@ ikea 0:
   url: http://www.ikea.com/at/de/
   title: IKEA Österreich
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
 ikea 1:
   url: http://www.ikea.com/at/de/search/?q={%query}
   title: IKEA Österreich
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
   examples:
     matratze: Suche nach Matratzen
@@ -1162,8 +1162,8 @@ rsc 1:
   url: http://at.rs-online.com/web/c/?searchTerm={%Produkt}
   title: RS Components Österreich
   tags:
-  - shopping
   - electronics
+  - shopping
   examples:
     Battery: Suche bei RS Components nach "Battery"
 we 0:

@@ -2,20 +2,20 @@ cjg 1:
   url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}
   title: Le conjugueur
   tags:
-  - language
   - french
+  - language
   examples:
     venir: Conjugate "venir"
 cs 1:
   url: https://slovniky.lingea.cz/francouzsko-cesky/{%mot}
   title: Tchèque-Français (Lingea)
   tags:
+  - czech
   - dictionary
+  - french
   - language
   - lingea
   - slovník
-  - czech
-  - french
   examples:
     arbre: '"arbre" český'
     strom: '"strom" francouzký'
@@ -23,10 +23,10 @@ de 1:
   url: http://dict.leo.org/frde/?search={%mot}
   title: Allemand-Français (leo.org)
   tags:
-  - language
   - dictionary
-  - german
   - french
+  - german
+  - language
   - leo
   examples:
     arbre: '"arbre" en allemand'
@@ -35,8 +35,8 @@ en 1:
   url: http://dictionary.reverso.net/french-english/{%mot}
   title: Anglais-Français (reverso.net)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     arbre: Translate arbre to English
     tree: Translate tree to French
@@ -44,42 +44,42 @@ lar 1:
   url: http://www.larousse.fr/dictionnaires/francais/{%mot}
   title: Larousse, Dictionnaires de français
   tags:
-  - language
   - dictionary
-  - french
   - dictionnaire
   - français
+  - french
+  - language
   examples:
     arbre: Cherche "arbre"
 last 1:
   url: http://www.last.fm/search?setlang=fr&q={%artist}
   title: Last.fm
   tags:
-  - music
   - lastfm
+  - music
   examples:
     beatles: Search for "beatles"
 lit 1:
   url: http://www.littre.org/recherche?_hasdata=&f2={%mot}
   title: Littré
   tags:
-  - language
-  - french
   - dictionary
+  - french
+  - language
   examples:
     arbre: Cherche "arbre" dans le dictionnaire Littré
 marmiton 0:
   url: http://www.marmiton.org/
   title: Marmiton
   tags:
-  - recettes
   - marmiton
+  - recettes
 marmiton 1:
   url: http://www.marmiton.org/recettes/recherche.aspx?aqt={%mot}
   title: Marmiton
   tags:
-  - recettes
   - marmiton
+  - recettes
   examples:
     pizza: Recherche des recettes de pizza
 pl 1:
@@ -95,8 +95,8 @@ pt 1:
   url: http://dictionnaire.reverso.net/francais-portugais/{%mot}
   title: Français-portugais
   tags:
-  - language
   - dictionary
+  - language
   examples:
     voiture: Search for "voiture"
 sv 1:

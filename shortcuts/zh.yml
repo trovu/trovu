@@ -2,8 +2,8 @@ de 1:
   url: http://dict.leo.org/chde?search={%Wort}
   title: Deutsch-Chinesisch (leo.org)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     baum: Search for "baum"
 en 1:
@@ -11,9 +11,9 @@ en 1:
   title: English-Chinese
   tags:
   - chinese
-  - language
   - dictionary
   - english
+  - language
   examples:
     tree: Translation of "tree"
     木: Translation of 木
@@ -21,7 +21,7 @@ last 1:
   url: http://www.last.fm/search?setlang=zh&q={%artist}
   title: Last.fm
   tags:
-  - music
   - lastfm
+  - music
   examples:
     beatles: Search for "beatles"

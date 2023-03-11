@@ -2,14 +2,14 @@ al 0:
   url: https://allegro.pl/
   title: Allegro
   tags:
-  - shopping
   - allegro
+  - shopping
 al 1:
   url: https://allegro.pl/listing?string={%przedmiot}
   title: Allegro
   tags:
-  - shopping
   - allegro
+  - shopping
   examples:
     smartfon: szukaj "smartfon"
 ceneo 0:
@@ -28,52 +28,52 @@ e 0:
   url: http://www.ebay.pl/
   title: Ebay.pl
   tags:
-  - shopping
   - ebay
+  - shopping
 e 1:
   url: http://www.ebay.pl/sch/i.html?_nkw={%query}
   title: Ebay.pl
   tags:
-  - shopping
   - ebay
+  - shopping
   examples:
     smartphone: Search for "smartphone"
 ep 2:
   url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}
   title: e-podróżnik.pl
   tags:
-  - travel
-  - railway
-  - pkp
   - e-podróżnik
+  - pkp
+  - railway
+  - travel
   examples:
     kutno, gniezno: połączenie z Kutna do Gniezna
 ep 3:
   url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}
   title: e-podróżnik.pl
   tags:
-  - travel
-  - railway
-  - pkp
   - e-podróżnik
+  - pkp
+  - railway
+  - travel
   examples:
     kutno, gniezno, 10: połączenie z Kutna do Gniezna o godz. 10
 ep 4:
   url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}&formCompositeSearcherFinal.date={%data}
   title: e-podróżnik.pl
   tags:
-  - travel
-  - railway
-  - pkp
   - e-podróżnik
+  - pkp
+  - railway
+  - travel
   examples:
     kutno, gniezno, 10, 31.1.13: połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
 g 1:
   url: https://www.google.pl/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.pl
   tags:
-  - web search
   - google
+  - web search
   examples:
     warszawa: Szukaj "warszawa" w Google.pl
 gastro 2:
@@ -88,8 +88,8 @@ gm 2:
   url: https://www.google.com/maps/search/{%miasto|type=city}%2C%20{%adres}%2C%20Polska/?hl={$language}
   title: Google Maps Polska
   tags:
-  - maps
   - google
+  - maps
   examples:
     w, rynek: Pokaż rynek w Warszawie
     dw, rynek: Pokaż rynek we Wrocławiu
@@ -97,15 +97,15 @@ ikea 0:
   url: http://www.ikea.com/pl/pl/
   title: IKEA Polska
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
 ikea 1:
   url: http://www.ikea.com/pl/pl/search/?q={%query}
   title: IKEA Polska
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
   examples:
     materac: Szukaj materace
@@ -113,8 +113,8 @@ jddw 2:
   url: http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Wrocław
   tags:
-  - travel
   - jakdojade
+  - travel
   - wrocław
   examples:
     rynek, dworzec gł: połączenie z Rynka do Dworca Głównego
@@ -122,8 +122,8 @@ jddw 3:
   url: http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&as=true
   title: jakdojade.pl, Wrocław
   tags:
-  - travel
   - jakdojade
+  - travel
   - wrocław
   examples:
     rynek, dworzec gł, 10: połączenie z Rynka do Dworca Głównego o godz. 10
@@ -131,8 +131,8 @@ jddw 4:
   url: http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true
   title: jakdojade.pl, Wrocław
   tags:
-  - travel
   - jakdojade
+  - travel
   - wrocław
   examples:
     rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
@@ -140,35 +140,35 @@ jdpo 2:
   url: http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Poznań
   tags:
-  - travel
   - jakdojade
   - poznań
+  - travel
   examples:
     rynek, dworzec gł: połączenie z Rynka do Dworca Głównego
 jdpo 3:
   url: http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&as=true
   title: jakdojade.pl, Poznań
   tags:
-  - travel
   - jakdojade
   - poznań
+  - travel
   examples:
     rynek, dworzec gł, 10: połączenie z Rynka do Dworca Głównego o godz. 10
 jdpo 4:
   url: http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true
   title: jakdojade.pl, Poznań
   tags:
-  - travel
   - jakdojade
   - poznań
+  - travel
   examples:
     rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
 jdw 2:
   url: http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Warszawa
   tags:
-  - travel
   - jakdojade
+  - travel
   - warszawa
   examples:
     stare miasto, centrum: połączenie ze Starego miasta do Centrum
@@ -176,8 +176,8 @@ jdw 3:
   url: http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&as=true
   title: jakdojade.pl, Warszawa
   tags:
-  - travel
   - jakdojade
+  - travel
   - warszawa
   examples:
     stare miasto, centrum, 10: połączenie ze Starego miasta do Centrum o godz. 10
@@ -185,8 +185,8 @@ jdw 4:
   url: http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true
   title: jakdojade.pl, Warszawa
   tags:
-  - travel
   - jakdojade
+  - travel
   - warszawa
   examples:
     stare miasto, centrum, 10, 31.12.13: połączenie ze Starego miasta do Centrum 31 grudnia 2013 o godz. 10
@@ -194,37 +194,37 @@ nk 0:
   url: http://nk.pl/
   title: Nasza Klasa
   tags:
-  - social network
   - nasza klasa
+  - social network
 nk 1:
   url: http://nk.pl/#szukaj#{%nazwisko / grupa}
   title: Nasza Klasa
   tags:
-  - social network
   - nasza klasa
+  - social network
   examples:
     kowalski: Szukaj "kowalski"
 olx 0:
   url: https://www.olx.pl/
   title: OLX, strona główna
   tags:
-  - shopping
   - olx
+  - shopping
 olx 1:
   url: https://www.olx.pl/d/oferty/q-{%przedmiot}/
   title: OLX
   tags:
-  - shopping
   - olx
+  - shopping
   examples:
     smartfon: szukaj "smartfon" w OLX
 pkp 2:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
   tags:
-  - travel
-  - railway
   - pkp
+  - railway
+  - travel
   examples:
     kutno, gniezno: następne połączenie PKP z Kutna do Gniezna
     w, p: następne połączenie z Warszawy do Poznania
@@ -233,27 +233,27 @@ pkp 3:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&T={%czas|type=time|output=HH:mm}&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
   tags:
-  - travel
-  - railway
   - pkp
+  - railway
+  - travel
   examples:
     kutno, gniezno, 10: połączenie z Kutna do Gniezna dzisiaj o godz. 10
 pkp 4:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&T={%czas|type=time|output=HH:mm}&D={%data|type=date|output=DD.MM.YYYY}&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
   tags:
-  - travel
-  - railway
   - pkp
+  - railway
+  - travel
   examples:
     kutno, gniezno, 10, 31.1.: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
 tm 1:
   url: http://www.google.com/search?hl={$language}&sitesearch=teleman.pl&domains=teleman.pl&q={%szukaj}
   title: teleman.pl program telewizyjny
   tags:
-  - tv
-  - polska
   - poland
+  - polska
+  - tv
   examples:
     tvn: Szukaj programy TVN
 zal 1:

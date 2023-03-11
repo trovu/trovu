@@ -42,12 +42,12 @@ cs 1:
     data: '{%word|encoding=none}'
   title: Czech-English (Lingea)
   tags:
+  - czech
   - dictionary
+  - english
   - language
   - lingea
   - slovník
-  - czech
-  - english
   examples:
     tree: '"tree" in Czech'
     strom: '"strom" in English'
@@ -55,12 +55,12 @@ de 1:
   url: http://dict.leo.org/ende?search={%word}
   title: German-English (leo.org)
   tags:
-  - language
-  - dictionary
-  - german
-  - english
   - deutsch
+  - dictionary
   - englisch
+  - english
+  - german
+  - language
   - leo
   examples:
     tree: Translation of "tree" in German
@@ -69,18 +69,18 @@ dei 1:
   url: http://www.linguee.com/english-german/search?source=auto&query={%word}
   title: German-English (Linguee)
   tags:
-  - language
   - dictionary
   - english
   - german
+  - language
   examples:
     tree: Translation of "tree"
 dict 1:
   url: http://dictionary.reference.com/browse/{%query}
   title: Dictionary.com
   tags:
-  - language
   - english
+  - language
   examples:
     tree: Search for "tree"
 edram 0:
@@ -101,11 +101,11 @@ es 1:
   url: http://www.spanishdict.com/translate/{%word}
   title: Spanish-English (spanishdict.com)
   tags:
-  - language
   - dictionary
   - english
-  - spanish
+  - language
   - linguee
+  - spanish
   examples:
     tree: Translation of "tree"
     arbol: Translation of "arbol"
@@ -113,20 +113,20 @@ esi 1:
   url: http://www.linguee.com/english-spanish/search?source=auto&query={%word}
   title: Spanish-English (Linguee)
   tags:
-  - language
   - dictionary
   - english
-  - spanish
+  - language
   - linguee
+  - spanish
   examples:
     tree: Translation of "tree"
 esp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=enes
   title: Spanish-English (Pons)
   tags:
-  - language
   - dictionary
   - english
+  - language
   - spanish
   examples:
     tree: ' translation for "tree"'
@@ -134,20 +134,20 @@ fr 1:
   url: http://www.linguee.com/english-french/search?source=auto&query={%word}
   title: French-English (Linguee)
   tags:
-  - language
   - dictionary
   - english
   - french
+  - language
   examples:
     tree: Translation of "tree"
 frp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=enfr
   title: French-English (Pons)
   tags:
-  - language
   - dictionary
   - english
   - french
+  - language
   examples:
     tree: translation for "tree"
 ga 1:
@@ -164,15 +164,15 @@ gfp 0:
   url: http://german-foreign-policy.com/en/news/
   title: German Foreign Policy
   tags:
-  - politics
-  - news
   - germany
+  - news
+  - politics
 last 1:
   url: http://www.last.fm/search?setlang=en&q={%artist}
   title: Last.fm
   tags:
-  - music
   - lastfm
+  - music
   examples:
     beatles: Search for "beatles"
 mw 1:
@@ -195,9 +195,9 @@ nl 1:
   url: http://ennl.dict.cc/?s={%word}
   title: Dutch-English (dict.cc)
   tags:
-  - english
-  - dutch
   - dictionary
+  - dutch
+  - english
   - language
   examples:
     opdracht: Translate "opdracht" to English.
@@ -207,8 +207,8 @@ ox 1:
   title: Oxford Dictionaries British & World English
   tags:
   - dictionary
-  - language
   - english
+  - language
 oxford 1:
   url: https://www.oxforddictionaries.com/definition/english/{%query}
   title: Oxford dictionary
@@ -216,9 +216,9 @@ pt 1:
   url: http://www.linguee.com/english-portuguese/search?source=auto&query={%word}
   title: Portuguese-English (Linguee)
   tags:
-  - language
   - dictionary
   - english
+  - language
   - portuguese
   examples:
     tree: Translation of "tree"
@@ -227,9 +227,9 @@ sl 1:
   title: Slovenian-English (Pons)
   tags:
   - dictionary
-  - slovenian
   - english
   - pons
+  - slovenian
   examples:
     tree: Search Slovenian-English (Pons) for "tree"
 sta 0:
@@ -248,10 +248,10 @@ sv 1:
   url: http://folkets-lexikon.csc.kth.se/folkets/#lookup&{%word}&l=SVEENG
   title: Swedish-English
   tags:
-  - language
   - dictionary
-  - swedish
   - english
+  - language
+  - swedish
   examples:
     tree: Translation of "tree"
     träd: Translation of "träd"
@@ -259,17 +259,17 @@ syn 1:
   url: http://thesaurus.com/browse/{%word}
   title: Thesaurus.com
   tags:
-  - thesaurus
   - english
+  - thesaurus
   examples:
     'important ': Search for synonyms of "important"
 tr 1:
   url: http://www.zargan.com/sozluk.asp?Sozcuk={%query}&OpenSearch=1&DisplayLang=2
   title: Turkish-English
   tags:
-  - language
   - dictionary
   - english
+  - language
   - turkish
   examples:
     tree: Translation of "tree"
@@ -278,18 +278,18 @@ uvi 0:
   url: http://verbs.colorado.edu/verb-index/vn3.3
   title: Unified Verb Index
   tags:
-  - language
   - english
-  - linguistics
   - grammar
+  - language
+  - linguistics
 uvi 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://verbs.colorado.edu/verb-index/vn3.3/search.php&txtSearchRequest={%query}
   title: Unified Verb Index
   tags:
-  - language
   - english
-  - linguistics
   - grammar
+  - language
+  - linguistics
   examples:
     walk: Look up the verb "walk"
 wk 0:
@@ -297,8 +297,8 @@ wk 0:
   title: Wordnik.com
   tags:
   - dictionary
-  - language
   - english
+  - language
   - thesaurus
   examples:
     tree: Look up "tree"
@@ -307,8 +307,8 @@ wk 1:
   title: Wordnik.com
   tags:
   - dictionary
-  - language
   - english
+  - language
   - thesaurus
   examples:
     tree: Look up "tree"
@@ -316,16 +316,16 @@ wordnik 1:
   url: http://www.wordnik.com/words/{%word}
   title: Wordnik
   tags:
-  - language
   - english
+  - language
   examples:
     tree: Search Wordnik for "tree".
 wsl 1:
   url: http://corpora.uni-leipzig.de/de/res?word={%word}&corpusId=eng-uk_web_2002
   title: Wortschatz-Lexikon (English)
   tags:
-  - language
   - english
+  - language
   examples:
     chair: Search for "chair"
 ygl 1:
@@ -333,9 +333,9 @@ ygl 1:
   title: YouGlish English Pronounciation Help
   description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
-  - youtube
   - language
   - pronunciation
+  - youtube
   examples:
     dough: Find videos where someone says "dough"
 youglish 1:
@@ -343,9 +343,9 @@ youglish 1:
   title: YouGlish English Pronounciation Help
   description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
-  - youtube
   - language
   - pronunciation
+  - youtube
   examples:
     dough: Find videos where someone says "dough"
 zh 0:
@@ -353,17 +353,17 @@ zh 0:
   title: Chinese-English
   tags:
   - chinese
-  - language
   - dictionary
   - english
+  - language
 zh 1:
   url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={%query}
   title: Chinese-English
   tags:
   - chinese
-  - language
   - dictionary
   - english
+  - language
   examples:
     tree: Translation of "tree"
     木: Translation of 木

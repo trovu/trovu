@@ -3,10 +3,10 @@ de-en 1:
   title: German-English (DeepL)
   tags:
   - dictionary
+  - english
+  - german
   - language
   - leo
-  - german
-  - english
   examples:
     baum: English translation of "baum"
     tree: German translation of "tree"
@@ -15,9 +15,9 @@ de-es 1:
   title: Alemán-Español (DeepL)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - spanish
   examples:
     baum: Traducción al Español de "baum"
@@ -27,10 +27,10 @@ de-fr 1:
   title: Allemand-Français (DeepL)
   tags:
   - dictionary
+  - french
+  - german
   - language
   - leo
-  - german
-  - french
   examples:
     baum: Traduction en Français de "baum"
     arbre: Traduction en Allemand de "arbre"
@@ -39,10 +39,10 @@ de-it 1:
   title: Tedesco-Italiano (DeepL)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - italian
+  - language
+  - leo
   examples:
     baum: Traduzione in italiano di "baum"
     albero: Traduzione in tedesco di "albero"
@@ -51,10 +51,10 @@ de-ja 1:
   title: ドイツ語-日本語 (DeepL)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - japanese
+  - language
+  - leo
   examples:
     baum: 日本語翻訳"baum"
     木: ドイツ語翻訳"木"
@@ -63,10 +63,10 @@ de-nl 1:
   title: Duits-Nederlands (DeepL)
   tags:
   - dictionary
+  - dutch
+  - german
   - language
   - leo
-  - german
-  - dutch
   examples:
     baum: Nederlands-vertaling van "baum"
     boom: Duits-vertaling van "boom"
@@ -75,9 +75,9 @@ de-pl 1:
   title: Niemiecki-Polski (DeepL)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - polish
   examples:
     baum: Tłumaczenie na język polski dla "baum"
@@ -87,9 +87,9 @@ de-pt 1:
   title: Alemão-Português (DeepL)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - portuguese
   examples:
     baum: Tradução em português de "baum"
@@ -99,9 +99,9 @@ de-ru 1:
   title: Немецкий-Русский (DeepL)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - russian
   examples:
     baum: Перевод на русский язык для "baum"
@@ -111,9 +111,9 @@ de-tr 1:
   title: Almanca-Türkçe (DeepL)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - turkish
   examples:
     baum: '"baum" için Türkçe çevirisi'
@@ -122,11 +122,11 @@ de-zh 1:
   url: https://www.deepl.com/translator#de/zh/{%text}
   title: 德语-汉语 (DeepL)
   tags:
+  - chinese
   - dictionary
+  - german
   - language
   - leo
-  - german
-  - chinese
   examples:
     baum: 汉语翻译"baum"
     树: 德语翻译"树"

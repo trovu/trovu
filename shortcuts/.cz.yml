@@ -17,16 +17,16 @@ g 1:
   url: https://www.google.cz/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.cz
   tags:
-  - web search
   - google
+  - web search
   examples:
     praha: Hledat "praha" Googlem
 gm 2:
   url: https://www.google.com/maps/search/{%město|type=city}%2C%20{%adresa}%2C%20Česko/?hl={$language}
   title: Google Maps Česko
   tags:
-  - maps
   - google
+  - maps
   examples:
     a, lazarská: Ukáž Lazarská v Praze
     b, zelný trh: Ukáž Zelný trh v Brně
@@ -35,35 +35,35 @@ idos 2:
   url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&submit=1&pt=true
   title: IDOS Jízdní řády
   tags:
+  - idos
   - train
   - travel
-  - idos
   examples:
     praha, brno: Vlak nebo bus z Prahy do Brna
 idos 3:
   url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&submit=1&pt=true
   title: IDOS Jízdní řády
   tags:
+  - idos
   - train
   - travel
-  - idos
   examples:
     praha, brno, 20: Vlak nebo bus z Prahy do Brna ve 20:00h
 idos 4:
   url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&date={%datum|type=date|output=DD.MM.YYYY}&submit=1&pt=true
   title: IDOS Jízdní řády
   tags:
+  - idos
   - train
   - travel
-  - idos
   examples:
     praha, brno, 20, 10.12.: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
 ikea 0:
   url: http://www.ikea.com/cz/cs/
   title: IKEA Česko
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
   examples:
     matrace: Hledej matrace
@@ -71,8 +71,8 @@ ikea 1:
   url: http://www.ikea.com/cz/cs/search/?q={%query}
   title: IKEA Česko
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
   examples:
     matrace: Hledej matrace
@@ -112,14 +112,14 @@ tv 0:
   url: http://tvprogram.centrum.cz/
   title: TV programy Česko
   tags:
-  - tv
   - centrum
+  - tv
 u 1:
   url: https://uloz.to/hledej?q={%výraz}
   title: Ulož.to
   tags:
-  - uloz
   - download
+  - uloz
   examples:
     free music: Hledej "free music"
 z 1:

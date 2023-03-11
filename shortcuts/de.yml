@@ -2,8 +2,8 @@
   url: https://www.1und1.de/login
   title: 1und1 Kundenlogin
   tags:
-  - internetprovider
   - communications
+  - internetprovider
 abk 1:
   url: http://www.abkuerzungen.de/result.php?language=&abbreviation={%Abkürzung}
   title: Abkürzungen
@@ -21,10 +21,10 @@ ar 1:
   url: http://www.arabdict.com/deutsch-arabisch/{%Wort}
   title: Arabisch-Deutsch
   tags:
-  - german
   - arabic
-  - language
   - dictionary
+  - german
+  - language
   examples:
     baum: Übersetzung von "baum" auf Arabisch
     شجرة: Übersetzung von "شجرة" auf Deutsch
@@ -32,18 +32,18 @@ ardtext 1:
   url: http://www.ard-text.de/index.php?page={%Seitennummer}
   title: ARD-Text
   tags:
-  - videotext
-  - teletext
   - ard
+  - teletext
+  - videotext
   examples:
     '100': Gehe zu Seite 100
 at 1:
   url: https://www.ostarrichi.org/suche?search={%Wort}
   title: Österreichisch-Hochdeutsch (Ostarrichi.org)
   tags:
-  - language
-  - german
   - austrian
+  - german
+  - language
   examples:
     paradeisa: '"paradeisa" auf Hochdeutsch'
 awf 1:
@@ -51,8 +51,8 @@ awf 1:
   title: Anderes Wort für – Synonymlexikon
   tags:
   - german
-  - synonyms
   - language
+  - synonyms
   examples:
     wirtschaft: Suche nach Synonymen für "wirtschaft"
 awort 1:
@@ -66,9 +66,9 @@ base 1:
   url: http://www.base-search.net/Search/Results?lookfor={%Suche}
   title: Bielefeld Academic Search Engine
   tags:
-  - science
-  - bielefeld
   - academia
+  - bielefeld
+  - science
   examples:
     sprache: Suche nach "sprache"
 bbs 1:
@@ -87,17 +87,17 @@ bg 1:
   url: http://debg.dict.cc/?s={%Wort}
   title: Bulgarisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 bk 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch={%query}
   title: Buchkatalog
   tags:
-  - shopping
   - books
+  - shopping
   examples:
     goethe: Suche nach Goethe
 bl 1:
@@ -107,31 +107,31 @@ bla 1:
   url: http://www.buffed.de/?f={%suchwort}
   title: Buffed.de
   tags:
-  - games
   - admin:change keyword
+  - games
 blb 0:
   url: http://www.booklooker.de/app/sec/login.php
   title: Booklooker
   tags:
-  - shopping
-  - books
   - booklooker
+  - books
+  - shopping
 blb 1:
   url: http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor}
   title: Booklooker
   tags:
-  - shopping
-  - books
   - booklooker
+  - books
+  - shopping
   examples:
     goethe: Suche nach Büchern von Goethe
 blb 2:
   url: http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor|encoding=iso-8859-1}&titel={%Titel|encoding=iso-8859-1}
   title: Booklooker
   tags:
-  - shopping
-  - books
   - booklooker
+  - books
+  - shopping
   examples:
     goethe, faust: Suche nach "Faust" von Goethe
 bzl 1:
@@ -230,10 +230,10 @@ cs 1:
   url: https://de.langenscheidt.com/deutsch-tschechisch/search?term={%Wort}
   title: Tschechisch-Deutsch (Langenscheidt)
   tags:
-  - language
+  - czech
   - dictionary
   - german
-  - czech
+  - language
   examples:
     baum: Übersetzung von "baum"
     strom: Übersetzung von "strom"
@@ -242,33 +242,33 @@ cs-de 1:
   title: Tschechisch-Deutsch via Slovnik.cz
   tags:
   - czech
-  - german
   - dictionary
+  - german
 csd 1:
   url: http://decs.dict.cc/?s={%Wort}
   title: Tschechisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 css 1:
   url: http://www.google.de/search?q=site%3Acss4you.de+{%query}
   title: Css4you
   tags:
-  - programming
   - css
+  - programming
   examples:
     white-space: Suche nach "white-space"
 da 1:
   url: http://deda.dict.cc/?s={%Wort}
   title: Dänisch-Deutsch (dict.cc)
   tags:
-  - language
+  - danish
   - dictionary
   - german
-  - danish
+  - language
   examples:
     baum: '"baum" auf Dänisch'
     træ: '"træ" auf Deutsch'
@@ -276,10 +276,10 @@ dab 1:
   url: https://de.bab.la/woerterbuch/daenisch-deutsch/{%Wort}
   title: Dänisch-Deutsch (bab.la)
   tags:
-  - language
+  - danish
   - dictionary
   - german
-  - danish
+  - language
   examples:
     baum: Übersetzung von "baum"
     træ: Übersetzung von "træ"
@@ -287,37 +287,37 @@ dclj 0:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
   title: De.comp.lang.javascript
   tags:
-  - programming
   - javascript
+  - programming
 dclj 1:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/{%query}
   title: De.comp.lang.javascript
   tags:
-  - programming
   - javascript
+  - programming
   examples:
     'var ': Suche nach "var"
 dclp 0:
   url: http://groups.google.de/group/de.comp.lang.php
   title: De.comp.lang.php
   tags:
-  - programming
   - php
+  - programming
 dclp 1:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.php/{%query}
   title: De.comp.lang.php
   tags:
-  - programming
   - php
+  - programming
   examples:
     strlen: Search for "strlen"
 dd 1:
   url: http://www.duden.de/suchen/dudenonline/{%wort}
   title: Duden
   tags:
-  - language
-  - german
   - deutsch
+  - german
+  - language
   - rechtschreibung
   examples:
     stuhl: Nachschlagen des Wortes "Stuhl"
@@ -326,16 +326,16 @@ de-cs 1:
   title: Deutsch-Tschechisch via Slovnik.cz
   tags:
   - czech
-  - german
   - dictionary
+  - german
 denl 1:
   url: http://www.mijnwoordenboek.nl/vertalen.php?src=DE&des=NL&woord={%query}
   title: Deutsch-Niederländisch (mijnwoordenboek.nl)
   tags:
-  - german
-  - dutch
-  - language
   - dictionary
+  - dutch
+  - german
+  - language
   examples:
     baum: Search Deutsch-Niederländisch (mijnwoordenboek.nl) for "baum"
 dnb 1:
@@ -362,29 +362,29 @@ el 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deel
   title: Griechisch-Deutsch (pons.de)
   tags:
-  - language
   - dictionary
   - german
   - greek
+  - language
   examples:
     baum: Übersetzung von "baum"
 eld 1:
   url: http://deel.dict.cc/?s={%Wort}
   title: Griechisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 en 1:
   url: http://dict.leo.org/ende/?search={%Wort}
   title: Englisch-Deutsch (leo.org)
   tags:
-  - language
   - dictionary
-  - german
   - english
+  - german
+  - language
   - leo
   examples:
     baum: Englisch-Übersetzung von baum
@@ -392,14 +392,14 @@ enb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?lang=de&service=deen&opterrors=0&optpro=0&query={%query}
   title: Englisch-Deutsch (Beolingus)
   tags:
-  - english
-  - german
-  - englisch
+  - beolingus
   - deutsch
   - dictionary
-  - wörterbuch
+  - englisch
+  - english
+  - german
   - sprache
-  - beolingus
+  - wörterbuch
   examples:
     baum: Übersetzung von "baum" auf Englisch
     tree: Übersetzung von "tree" auf Deutsch
@@ -407,28 +407,28 @@ end 1:
   url: http://deen.dict.cc/?s={%Wort}
   title: Englisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
-  - german
   - english
+  - german
+  - language
   examples:
     baum: Search for "baum"
 endung 1:
   url: http://www.endungen.de/ResultList/ResultList.aspx?searchExtension={%Dateieindung}&searchPlatform=win;mac;unix;os2&searchMode=contains
   title: Endungen.de
   tags:
-  - files
   - extension
+  - files
   examples:
     flv: Search Endungen.de for "flv"
 eni 1:
   url: http://www.linguee.com/english-german/search?source=auto&query={%Wort}
   title: Englisch-Deutsch (Linguee)
   tags:
-  - language
   - dictionary
   - english
   - german
+  - language
   - linguee
   examples:
     tree: Translation of "tree"
@@ -436,21 +436,21 @@ enp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deen
   title: Englisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
-  - german
   - english
+  - german
+  - language
   examples:
     baum: Übersetzung für "baum"
 eo 1:
   url: http://www.pauker.at/pauker/DE_DE/EO/wb/?modus=&suche={%Wort}
   title: Esperanto-Deutsch
   tags:
-  - dictionary
-  - language
-  - esperanto
   - deutsch
+  - dictionary
+  - esperanto
   - german
+  - language
   examples:
     baum: Suche nach "baum" auf Esperanto
     arbo: Suche nach "arbo" auf Deutsch
@@ -458,8 +458,8 @@ es 1:
   url: http://dict.leo.org/esde?search={%Wort}
   title: Spanisch-Deutsch (leo.org)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     baum: Search for "baum"
 es-pons 1:
@@ -471,9 +471,9 @@ esb 1:
   url: https://de.bab.la/woerterbuch/spanisch-deutsch/{%Wort}
   title: Spanisch-Deutsch (bab.la)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - spanish
   examples:
     baum: Übersetzung von "baum"
@@ -482,27 +482,27 @@ esd 1:
   url: http://dees.dict.cc/?s={%Wort}
   title: Spanisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 esi 1:
   url: http://www.linguee.es/espanol-aleman/search?source=auto&query={%Wort}
   title: Spanisch-Deutsch (Linguee)
   tags:
-  - language
   - dictionary
-  - spanish
   - german
+  - language
   - linguee
+  - spanish
 esp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Spanisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - spanish
   examples:
     baum: Übersetzung für "baum"
@@ -557,10 +557,10 @@ fi 1:
   url: http://defi.dict.cc/?s={%Wort}
   title: Finnisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
-  - german
   - finnish
+  - german
+  - language
   examples:
     baum: Übersetzung von "baum"
 fmb 2:
@@ -577,8 +577,8 @@ fr 1:
   url: http://dict.leo.org/frde?search={%Wort}
   title: Französisch-Deutsch (leo.org)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     baum: Search for "baum"
 fr-pons 1:
@@ -590,10 +590,10 @@ frb 1:
   url: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%Wort}
   title: Französisch-Deutsch (bab.la)
   tags:
-  - language
   - dictionary
-  - german
   - french
+  - german
+  - language
   examples:
     baum: Übersetzung von "baum"
     arbre: Übersetzung von "arbre"
@@ -613,28 +613,28 @@ frd 1:
   url: http://defr.dict.cc/?s={%Wort}
   title: Französisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 fri 1:
   url: http://www.linguee.fr/francais-allemand/search?source=auto&query={%Wort}
   title: Französisch-Deutsch (Linguee)
   tags:
-  - language
   - dictionary
   - french
   - german
+  - language
   - linguee
 frp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
   title: Französisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
-  - german
   - french
+  - german
+  - language
   examples:
     baum: Übersetzung für "baum"
 ftr 1:
@@ -651,27 +651,27 @@ gfp 0:
   url: https://german-foreign-policy.com/
   title: German Foreign Policy
   tags:
-  - politics
-  - news
   - germany
+  - news
+  - politics
 gfp 1:
   url: https://www.german-foreign-policy.com/news/archiv/detailsuche?tx_news_pi1%5B__referrer%5D%5B%40extension%5D=News&tx_news_pi1%5B__referrer%5D%5B%40controller%5D=News&tx_news_pi1%5B__referrer%5D%5B%40action%5D=searchForm&tx_news_pi1%5B__referrer%5D%5Barguments%5D=YToxOntzOjY6InNlYXJjaCI7YTozOntzOjc6InN1YmplY3QiO3M6NjoiYmVybGluIjtzOjExOiJtaW5pbXVtRGF0ZSI7czowOiIiO3M6MTE6Im1heGltdW1EYXRlIjtzOjA6IiI7fX0%3D3b9217b53b1d289bca1b4f26fd2398df277bac78&tx_news_pi1%5B__referrer%5D%5B%40request%5D=%7B%22%40extension%22%3A%22News%22%2C%22%40controller%22%3A%22News%22%2C%22%40action%22%3A%22searchForm%22%7Dd2832a7a705ce8933853e4c9a9a5a984dbceaeba&tx_news_pi1%5B__trustedProperties%5D=%7B%22search%22%3A%7B%22subject%22%3A1%2C%22minimumDate%22%3A1%2C%22maximumDate%22%3A1%7D%7D813cf46d860682b222ed4db70f7cf713def828ff&tx_news_pi1%5Bsearch%5D%5Bsubject%5D={%Suche}&tx_news_pi1%5Bsearch%5D%5BminimumDate%5D=&tx_news_pi1%5Bsearch%5D%5BmaximumDate%5D=
   title: German Foreign Policy
   tags:
-  - politics
-  - news
   - germany
+  - news
+  - politics
   examples:
     berlin: Suche nach "berlin"
 grc 1:
   url: http://www.albertmartin.de/altgriechisch/?q={%suchwort}
   title: Altgriechisch Wörterbuch
   tags:
-  - dictionary
-  - language
   - altgriechisch
   - deutsch
+  - dictionary
   - german
+  - language
   examples:
     baum: Übersetzung von "Baum" auf Altgriechisch
     ξύλον: 'Übersetzung von "ξύλον" auf Deutsch '
@@ -679,9 +679,9 @@ gz 0:
   url: https://www.griechenland.net/
   title: Griechenland Zeitung
   tags:
-  - news
   - greece
   - griechenland
+  - news
 h 0:
   url: http://www.heise.de
   title: Heise Startseite
@@ -710,8 +710,8 @@ hls 1:
   url: https://hls-dhs-dss.ch/de/search/?text={%Suce}
   title: Historisches Lexikon der Schweiz
   tags:
-  - history
   - geschichte
+  - history
   examples:
     basel: Search Historisches Lexikon der Schweiz for "basel"
 hn 0:
@@ -737,8 +737,8 @@ hotf 0:
   url: http://www.heise.de/extras/foren/S-Special-Off-Topic-Archiv-15/forum-206680/list/
   title: Heise Off-Topic-Forum
   tags:
-  - heise
   - forum
+  - heise
 hpreis 0:
   url: http://www.heise.de/preisvergleich
   title: Heise Preisvergleich Startseite
@@ -757,10 +757,10 @@ hr 1:
   url: https://www.crodict.com/german-croatian/{%Wort}
   title: Kroatisch-Deutsch (crodict.com)
   tags:
-  - language
-  - dictionary
   - croatian
+  - dictionary
   - english
+  - language
   examples:
     baum: Übersetzung für "baum"
 hsoft 0:
@@ -784,10 +784,10 @@ hu 1:
   url: https://de.langenscheidt.com/deutsch-ungarisch/search?term={%Wort}
   title: Ungarisch-Deutsch (Langenscheidt)
   tags:
-  - language
   - dictionary
   - german
   - hungarian
+  - language
   examples:
     baum: Übersetzung von "baum"
     fa: Übersetzung von "fa"
@@ -795,19 +795,19 @@ hud 1:
   url: http://dehu.dict.cc/?s={%Wort}
   title: Ungarisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 hup 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dehu
   title: Ungarisch-Deutsch (pons.de)
   tags:
-  - language
   - dictionary
   - german
   - hungarian
+  - language
   examples:
     baum: Übersetzung von "baum"
 hwho 1:
@@ -829,9 +829,9 @@ is 1:
   url: http://deis.dict.cc/?s={%Wort}
   title: Isländisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 isbn 1:
@@ -841,18 +841,18 @@ it 1:
   url: http://dict.leo.org/itde?search={%Wort}
   title: Italienisch-Deutsch (leo.org)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     baum: Search for "baum"
 itb 1:
   url: https://de.bab.la/woerterbuch/italienisch-deutsch/{%Wort}
   title: Italienisch-Deutsch (bab.la)
   tags:
-  - language
   - dictionary
   - german
   - italian
+  - language
   examples:
     baum: Übersetzung von "baum"
     albero: Übersetzung von "albero"
@@ -860,27 +860,27 @@ itd 1:
   url: http://deit.dict.cc/?s={%Wort}
   title: Italienisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 itp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deit
   title: Italienisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
   - german
   - italian
+  - language
   examples:
     baum: Übersetzung für "baum"
 ja 1:
   url: http://www.wadoku.de/wadoku/search/{%Wort}
   title: Japanisch-Deutsch (Wadoku)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     baum: Übersetzung für "baum"
     木根: Übersetzung für "木根"
@@ -888,9 +888,9 @@ kam 1:
   url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search={%Suche}
   title: Kamelopedia
   tags:
-  - wiki
   - encyclopedia
   - humor
+  - wiki
   examples:
     Berlin: Artikel zu "Berlin"
 kicker 0:
@@ -921,10 +921,10 @@ la 1:
   url: http://www.albertmartin.de/latein/?q={%query}
   title: Latein-Deutsch
   tags:
-  - language
   - dictionary
-  - latin
   - german
+  - language
+  - latin
   examples:
     baum: Übersetzung von "baum"
     arbor: Übersetzung von "arbor"
@@ -932,17 +932,17 @@ lad 1:
   url: http://dela.dict.cc/?s={%Wort}
   title: Latein-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 last 1:
   url: http://www.last.fm/search?setlang=de&q={%artist}
   title: Last.fm
   tags:
-  - music
   - lastfm
+  - music
   examples:
     beatles: Search for "beatles"
 leo 1:
@@ -966,8 +966,8 @@ m 1:
   url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe={%query}
   title: Metager
   tags:
-  - search engine
   - search
+  - search engine
   - web search
 morgenpost 1:
   url: http://www.morgenpost.de/suche/?q={%Suche}
@@ -980,9 +980,9 @@ mp 1:
   url: http://www.moviepilot.de/suche?q={%query}
   title: Moviepilot
   tags:
+  - film
   - moviepilot
   - movies
-  - film
 nds 0:
   url: http://www.nachdenkseiten.de
   title: Nachdenkseiten
@@ -1001,36 +1001,36 @@ nl 1:
   url: http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!
   title: Niederländisch-Deutsch (uitmuntend.de)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     lekker: Search for "lekker"
 nld 1:
   url: http://denl.dict.cc/?s={%Wort}
   title: Niederländisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 nlde 1:
   url: http://www.mijnwoordenboek.nl/vertalen.php?src=NL&des=DE&woord={%query}
   title: Niederländisch-Deutsch (mijnwoordenboek.nl)
   tags:
-  - german
-  - dutch
-  - language
   - dictionary
+  - dutch
+  - german
+  - language
   examples:
     boom: Search Niederländisch-Deutsch (mijnwoordenboek.nl) for "boom"
 no 1:
   url: http://deno.dict.cc/?s={%Wort}
   title: Norwegisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - norwegian
   examples:
     baum: Übersetzung von "baum"
@@ -1070,16 +1070,16 @@ osm? 0:
   url: https://wiki.openstreetmap.org/index.php/Hauptseite
   title: OpenStreetMap Wiki
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
 osmf 0:
   url: https://forum.openstreetmap.org/viewforum.php?id=14
   title: OpenStreetMap Forum Deutsch
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
 ot 0:
   url: http://www.openthesaurus.de/
   title: OpenThesaurus
@@ -1104,9 +1104,9 @@ pl 1:
   url: https://de.langenscheidt.com/deutsch-polnisch/search?term={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Langenscheidt)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - polish
   examples:
     baum: Übersetzung von "baum"
@@ -1115,9 +1115,9 @@ plb 1:
   url: https://de.bab.la/woerterbuch/polnisch-deutsch/{%Wort}
   title: Polnisch-Deutsch (bab.la)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - polish
   examples:
     baum: Übersetzung von "baum"
@@ -1126,18 +1126,18 @@ pld 1:
   url: http://depl.dict.cc/?s={%Wort}
   title: Polnisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 pli 1:
   url: https://www.linguee.de/deutsch-polnisch/search?query={%Wort}&source=auto
   title: Polnisch-Deutsch (Linguee)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - polish
   examples:
     baum: Übersetzung von "baum"
@@ -1146,9 +1146,9 @@ plp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - polish
   examples:
     baum: Übersetzung von "baum"
@@ -1157,9 +1157,9 @@ pt 1:
   url: http://en.pons.com/translate?q={%query}&in=&l=dept
   title: Portugiesisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - portugese
   examples:
     baum: Übersetzung für "baum"
@@ -1167,11 +1167,11 @@ ptb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%wort}
   title: Portugiesisch-Deutsch (Beolingus)
   tags:
-  - language
   - dictionary
   - german
-  - portuguese
+  - language
   - old
+  - portuguese
   examples:
     baum: Übersetzung von "baum"
     árvore: Übersetzung von "árvore"
@@ -1179,27 +1179,27 @@ ptd 1:
   url: http://dept.dict.cc/?s={%Wort}
   title: Portugiesisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 pti 1:
   url: https://www.linguee.pt/portugues-alemao/search?source=auto&query={%Wort}
   title: Portugiesisch-Deutsch (Linguee)
   tags:
-  - language
   - dictionary
-  - spanish
   - german
+  - language
   - linguee
+  - spanish
 ptp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dept
   title: Portugiesisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - portuguese
   examples:
     baum: Übersetzung für "baum"
@@ -1210,16 +1210,16 @@ rblcheck 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress={%ipaddress}
   title: RBL-Check (Realtime Blackhole List)
   tags:
-  - rbl
   - email
+  - rbl
   examples:
     127.0.0.1: Check if 127.0.0.1 is on the RBL
 reim 1:
   url: http://www.2rhyme.ch/Reimt-auf/{%Wortendung}
   title: 2 Rhyme Reimlexikon
   tags:
-  - language
   - german
+  - language
   - reime
   examples:
     auen: Suche Reime auf "auen"
@@ -1261,33 +1261,33 @@ rm 1:
   description: Dictionary German <-> Rumantsch Grischun
   tags:
   - dictionary
-  - rumantsch grischun
-  - language
   - german
+  - language
+  - rumantsch grischun
 ro 1:
   url: http://dero.dict.cc/?s={%Wort}
   title: Rumänisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 ru 1:
   url: http://dict.leo.org/rude?search={%Wort}
   title: Russisch-Deutsch (leo.org)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     baum: Search for "baum"
 rub 1:
   url: https://de.bab.la/woerterbuch/russisch-deutsch/{%Wort}
   title: Russisch-Deutsch (bab.la)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - russian
   examples:
     baum: Übersetzung von "baum"
@@ -1296,9 +1296,9 @@ rud 1:
   url: http://deru.dict.cc/?s={%Wort}
   title: Russisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 rundschau 1:
@@ -1312,9 +1312,9 @@ rup 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deru
   title: Russisch-Deutsch (Pons)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - russian
   examples:
     baum: Übersetzung für "baum"
@@ -1327,64 +1327,64 @@ sfr 1:
   url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}
   title: Stayfriends
   tags:
-  - social network
   - school
+  - social network
   examples:
     stefan: Suchen nach Personen namens Stefan
 sfr 2:
   url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}&PersonSearch.school={%Ort}
   title: Stayfriends
   tags:
-  - social network
   - school
+  - social network
   examples:
     stefan, berlin: Suchen nach Personen namens Stefan in Berlin
 sh 0:
   url: http://de.selfhtml.org/
   title: Selfhtml
   tags:
-  - selfhtml
-  - programming
+  - doc
+  - documentation
   - html
   - javascript
   - perl
-  - xml
-  - documentation
-  - doc
+  - programming
+  - selfhtml
   - tutorial
+  - xml
 sh 1:
   url: http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage={%Suche}
   title: Selfhtml
   tags:
-  - documentation
   - doc
-  - tutorial
+  - documentation
   - html
   - javascript
+  - tutorial
   examples:
     div: Suche nach "div"
 shg 1:
   url: http://www.google.com/search?q={%Suche}&sitesearch=wiki.selfhtml.org
   title: Selfhtml via Google
   tags:
-  - selfhtml
-  - programming
+  - doc
+  - documentation
   - html
   - javascript
   - perl
-  - xml
-  - documentation
-  - doc
+  - programming
+  - selfhtml
   - tutorial
+  - xml
   examples:
     doctype: description about doctype declaration
 sk 1:
   url: http://desk.dict.cc/?s={%Wort}
   title: Slowakisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 spon 0:
@@ -1417,19 +1417,19 @@ sv 1:
   url: http://rio.pauker.at/pauker/DE/SE/wb/?s={%Wort}
   title: Schwedisch-Deutsch (pauker.at)
   tags:
-  - language
   - dictionary
-  - swedish
   - german
+  - language
+  - swedish
   examples:
     baum: Übersetzung für "baum"
 svb 1:
   url: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%Wort}
   title: Schwedisch-Deutsch (bab.la)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - swedish
   examples:
     baum: Übersetzung von "baum"
@@ -1438,9 +1438,9 @@ svd 1:
   url: http://desv.dict.cc/?s={%Wort}
   title: Schwedisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 syn 1:
@@ -1461,8 +1461,8 @@ sz 1:
   url: http://www.sueddeutsche.de/news?search={%query}
   title: Süddeutsche Zeitung
   tags:
-  - newspaper
   - news
+  - newspaper
   - print
 taz 0:
   url: http://www.taz.de/
@@ -1474,36 +1474,36 @@ tomdestages 0:
   url: https://www.taz.de/#!tom=tomdestages
   title: Tom Touché (Tom des Tages)
   tags:
-  - taz
   - comic
+  - taz
 tomshuffle 0:
   url: https://www.taz.de/#!tom=tomshuffle
   title: Tom Touché (Random)
   tags:
-  - taz
   - comic
+  - taz
 tomtouche 0:
   url: https://www.taz.de/#!tom=tomdestages
   title: Tom Touché (Tom des Tages)
   tags:
-  - taz
   - comic
+  - taz
 tr 1:
   url: http://detr.dict.cc/?s={%Wort}
   title: Türkisch-Deutsch (dict.cc)
   tags:
-  - language
   - dictionary
   - german
+  - language
   examples:
     baum: Search for "baum"
 trb 1:
   url: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%Wort}
   title: Türkisch-Deutsch (bab.la)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - turkish
   examples:
     baum: Übersetzung von "baum"
@@ -1512,9 +1512,9 @@ trd 1:
   url: http://www.deutsch-tuerkisch.net/suche/{%Wort}
   title: Türkisch-Deutsch (Deutsch-Tuerkisch.net)
   tags:
-  - language
   - dictionary
   - german
+  - language
   - turkish
   examples:
     baum: Übersetzung von "baum" auf Türkisch
@@ -1559,44 +1559,44 @@ uu 0:
   url: http://www.ubuntuusers.de/
   title: UbuntuUsers.de
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
 uuf 0:
   url: http://forum.ubuntuusers.de/
   title: 'UbuntuUsers.de: Startseite des Forum'
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
 uuf~ 0:
   url: http://forum.ubuntuusers.de/egosearch/
   title: 'UbuntuUsers.de: Eigene Beiträge im Forum'
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
 uui 0:
   url: http://ikhaya.ubuntuusers.de/
   title: 'UbuntuUsers.de: Ikhaya-Startseite'
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
 uup 0:
   url: http://planet.ubuntuusers.de/
   title: 'UbuntuUsers.de: Startseite des Planeten'
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
 uuw 0:
   url: http://wiki.ubuntuusers.de/Startseite
   title: 'UbuntuUsers.de: Startseite des Wiki'
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
 wetter 1:
   url: http://de.wetter.com/suche/?search={%Ort}
   title: Wetter.com
@@ -1606,10 +1606,10 @@ wn 1:
   url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort={%query}
   title: Wörterbuchnetz
   tags:
+  - deutsch
   - dictionary
   - german
   - wörterbuch
-  - deutsch
   examples:
     haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
 wort 1:
@@ -1621,8 +1621,8 @@ wsl 1:
   url: https://corpora.uni-leipzig.de/de/res?word={%Wort}&corpusId=deu_newscrawl_2011
   title: Wortschatz-Lexikon (Deutsch)
   tags:
-  - language
   - german
+  - language
   examples:
     Stuhl: Search for "Stuhl"
 zeit 0:
@@ -1643,8 +1643,8 @@ zh 1:
   url: http://dict.leo.org/chde?search={%Wort}
   title: Chinesisch-Deutsch (leo.org)
   tags:
-  - language
   - dictionary
+  - language
   examples:
     baum: Search for "baum"
 zv 1:

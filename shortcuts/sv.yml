@@ -3,8 +3,8 @@ de 1:
   title: Tysk-Svensk
   tags:
   - dictionary
-  - languange
   - german
+  - languange
   - swedish
   examples:
     baum: Swedish translation for "baum"
@@ -13,10 +13,10 @@ en 1:
   url: http://folkets-lexikon.csc.kth.se/folkets/#lookup&{%ord}&l=SVEENG
   title: Engelsk-Svensk
   tags:
-  - language
   - dictionary
-  - swedish
   - english
+  - language
+  - swedish
   examples:
     tree: Translation of "tree"
     träd: Translation of "träd"
@@ -25,8 +25,8 @@ fr 1:
   title: Fransk-Svensk (Azoria)
   tags:
   - dictionary
-  - language
   - french
+  - language
   - swedish
   examples:
     arbre: Swedish translation for "arbre"
@@ -36,15 +36,15 @@ fr-sv 1:
   title: Fransk-Svensk (Sensagent)
   tags:
   - dictionary
+  - french
   - language
   - swedish
-  - french
 last 1:
   url: http://www.last.fm/search?setlang=sv&q={%artist}
   title: Last.fm
   tags:
-  - music
   - lastfm
+  - music
   examples:
     beatles: Search for "beatles"
 rim 1:
@@ -60,6 +60,6 @@ sv-fr 1:
   title: Svensk-Fransk (Sensagent)
   tags:
   - dictionary
+  - french
   - language
   - swedish
-  - french

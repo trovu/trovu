@@ -13,55 +13,55 @@ bol 1:
   title: Bol.com Nederlands
   tags:
   - bol
-  - shoppings
   - books
+  - shoppings
   examples:
     shakespeare: Search for Shakespeare
 e 0:
   url: https://www.ebay.nl/?mkcid=1&mkrid=1346-53482-19255-0&siteid=146&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.nl
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
 e 1:
   url: https://www.ebay.nl/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=1346-53482-19255-0&siteid=146&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.nl
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
   examples:
     smartphone: Search for "smartphone"
 g 1:
   url: https://www.google.nl/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.nl
   tags:
-  - web search
   - google
+  - web search
   examples:
     amsterdam: Google zoeken naar "amsterdam"
 gn 1:
   url: https://www.google.de/search?ned=nl_nl&q={%query}&tbm=nws&source=lnms
   title: Google Nieuws (Nederland)
   tags:
-  - news
   - google
+  - news
   examples:
     obama: Op Google News naar obama zoeken
 ikea 0:
   url: http://www.ikea.com/nl/nl/
   title: IKEA Nederland
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
 ikea 1:
   url: http://www.ikea.com/nl/nl/search/?q={%query}
   title: IKEA Nederland
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
   examples:
     matras: zoek na matrassen

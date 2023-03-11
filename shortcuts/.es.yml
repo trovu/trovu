@@ -2,85 +2,85 @@ a 0:
   url: http://www.amazon.es/?_encoding=UTF8&camp=3626&creative=24790&linkCode=ur2&tag=serchilo04-21
   title: Amazon.es
   tags:
-  - amazon
-  - shopping
-  - books
   - affiliate
+  - amazon
+  - books
+  - shopping
 a 1:
   url: http://www.amazon.es/gp/search?ie=UTF8&camp=3626&creative=24790&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo04-21
   title: Amazon.es
   tags:
-  - amazon
-  - shopping
-  - books
   - affiliate
+  - amazon
+  - books
+  - shopping
   examples:
     shakespeare: Search for "shakespeare"
 e 0:
   url: https://www.ebay.es/?mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
 e 1:
   url: https://www.ebay.es/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
   examples:
     smartphone: Buscar "smartphone" en Ebay
 g 1:
   url: https://www.google.es/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.es
   tags:
-  - web search
   - google
+  - web search
   examples:
     madrid: Buscar "madrid" con Google
 gdfv 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura, España&daddr={%destination}, Fuerteventura, España
   title: Google Maps Directions (Routing), Fuerteventura
   tags:
-  - maps
-  - google
-  - routing
-  - route
   - fuerteventura
+  - google
+  - maps
+  - route
+  - routing
   examples:
     corralejo, morro jable: Get a route from Corralejo to Morro Jable
 gdgc 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria, España&daddr={%destination}, Gran Canaria, España
   title: Google Maps Directions (Routing), Gran Canaria
   tags:
-  - maps
   - google
-  - routing
-  - route
   - gran canaria
+  - maps
+  - route
+  - routing
   examples:
     las palmas, maspalomas: Get a route from Las Palmas to Maspalomas
 gdlz 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote, España&daddr={%destination}, Lanzarote, España
   title: Google Maps Directions (Routing), Lanzarote
   tags:
-  - maps
   - google
-  - routing
-  - route
   - lanzarote
+  - maps
+  - route
+  - routing
   examples:
     arrecife, playa blanca: Get a route from Arrecife to Playa Blanca
 gdtf 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife, España&daddr={%destination}, Tenerife, España
   title: Google Maps Directions (Routing), Tenerife
   tags:
-  - maps
   - google
-  - routing
+  - maps
   - route
+  - routing
   - tenerife
   examples:
     santa cruz, la laguna: Get a route from Santa Cruz to La Laguna
@@ -88,8 +88,8 @@ gm 2:
   url: https://www.google.com/maps/search/{%cuidad|type=city}%2C%20{%dirección}%2C%20España/?hl={$language}
   title: Google Maps España
   tags:
-  - maps
   - google
+  - maps
   examples:
     b, barceloneta: buscar la Barceloneta en Barcelona
     m, puerta del sol: buscar la Puerta del Sol en Madrid
@@ -97,15 +97,15 @@ ikea 0:
   url: http://www.ikea.com/es/es/
   title: IKEA España
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
 ikea 1:
   url: http://www.ikea.com/es/es/search/?q={%query}
   title: IKEA España
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
   examples:
     colchón: Buscar colchón
@@ -118,9 +118,9 @@ ma 1:
   title: Milanuncios
   description: venta de productos de segunda mano
   tags:
-  - shopping
-  - segunda mano
   - anuncios
+  - segunda mano
+  - shopping
   examples:
     palmera: Busqueda de "palmera"
 mil 0:
@@ -139,22 +139,22 @@ titsa 2:
   url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
   tags:
+  - google
+  - maps
   - tenerife
   - titsa
   - travel
-  - google
-  - maps
   examples:
     weyler, trinidad: Próxima connection de Weyler a Trinidad
 titsa 3:
   url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&time={%salida}&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
   tags:
+  - google
+  - maps
   - tenerife
   - titsa
   - travel
-  - google
-  - maps
   examples:
     weyler, trinidad, 10: Connection de Weyler a Trinidad a las 10
 zal 1:

@@ -2,76 +2,76 @@ a 0:
   url: http://www.amazon.co.uk/?_encoding=UTF8&camp=1634&creative=6738&linkCode=ur2&tag=serchilo02-21
   title: Amazon.co.uk Homepage
   tags:
-  - amazon
-  - shopping
-  - books
   - affiliate
+  - amazon
+  - books
+  - shopping
 a 1:
   url: http://www.amazon.co.uk/gp/search?ie=UTF8&camp=1634&creative=6738&index=aps&keywords={%query|encoding=iso-8859-1}&linkCode=ur2&tag=serchilo02-21
   title: Amazon.co.uk
   tags:
-  - amazon
-  - shopping
-  - books
   - affiliate
+  - amazon
+  - books
+  - shopping
   examples:
     shakespeare: Search for "shakespeare"
 e 0:
   url: https://www.ebay.co.uk/?mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.co.uk
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
 e 1:
   url: https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.co.uk
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
   examples:
     smartphone: Search for "smartphone"
 g 1:
   url: https://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.co.uk
   tags:
-  - web search
   - google
+  - web search
   examples:
     london: Search Google for "london"
 tfl 2:
   url: http://journeyplanner.tfl.gov.uk/user/XSLT_TRIP_REQUEST2?language=en&sessionID=0&requestID=0&ptOptionsActive=1&itOptionsActive=1&imparedOptionsActive=1&ptAdvancedOptions=1&advOptActive_2=1&advOpt_2=1&execInst=normal&command=&itdLPxx_request=&itdLPxx_view=&itdLPxx_tubeMap=&calculateDistance=1&imageFormat=png|pdf&imageOnly=1&imageWidth=705&imageHeight=500&tt_valid_until=20131223&name_origin={%from}&nameState_origin=notidentified&nameDefaultText_origin=Enter+start+location...&type_origin=stop&place_origin=London&name_destination={%to}&nameState_destination=notidentified&nameDefaultText_destination=Enter+end+location...&type_destination=stop&place_destination=London&placeDefaultText_via=London&name_via=Enter+location...&nameState_via=notidentified&nameDefaultText_via=Enter+location...&type_via=stop&place_via=London&itdTripDateTimeDepArr=dep&stepfree-access=no-requirements&routeType=LEASTTIME&includedMeans=checkbox&inclMOT_11=on&inclMOT_2=on&inclMOT_1=on&inclMOT_5=on&inclMOT_0=on&inclMOT_4=on&inclMOT_9=on&inclMOT_7=on&inclMOT_8=on&inclMOT_3=on&trITMOTvalue=20&trITMOT=100&changeSpeed=normal
   title: Transport for London
   tags:
-  - travel
-  - transport
   - london
+  - transport
+  - travel
   examples:
     brixton, paddington: Search the next connection from Brixton to Paddington
 tfl 3:
   url: http://journeyplanner.tfl.gov.uk/user/XSLT_TRIP_REQUEST2?language=en&sessionID=0&requestID=0&ptOptionsActive=1&itOptionsActive=1&imparedOptionsActive=1&ptAdvancedOptions=1&advOptActive_2=1&advOpt_2=1&execInst=normal&command=&itdLPxx_request=&itdLPxx_view=&itdLPxx_tubeMap=&calculateDistance=1&imageFormat=png|pdf&imageOnly=1&imageWidth=705&imageHeight=500&tt_valid_until=20131223&name_origin={%from}&nameState_origin=notidentified&nameDefaultText_origin=Enter+start+location...&type_origin=stop&place_origin=London&name_destination={%to}&nameState_destination=notidentified&nameDefaultText_destination=Enter+end+location...&type_destination=stop&place_destination=London&placeDefaultText_via=London&name_via=Enter+location...&nameState_via=notidentified&nameDefaultText_via=Enter+location...&type_via=stop&place_via=London&itdTripDateTimeDepArr=dep&stepfree-access=no-requirements&routeType=LEASTTIME&includedMeans=checkbox&inclMOT_11=on&inclMOT_2=on&inclMOT_1=on&inclMOT_5=on&inclMOT_0=on&inclMOT_4=on&inclMOT_9=on&inclMOT_7=on&inclMOT_8=on&inclMOT_3=on&trITMOTvalue=20&trITMOT=100&changeSpeed=normal&itdTime={%hour}:00
   title: Transport for London
   tags:
-  - travel
-  - transport
   - london
+  - transport
+  - travel
   examples:
     brixton, paddington, 10: Search the next connection from Brixton to Paddington at 10:00
 tl 2:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{$now|output=DD/MM/YY/HH/mm}/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com
   tags:
-  - travel
   - transport
+  - travel
   examples:
     manchester, london: Search for trains from Manchester to London
 tl 4:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{%date}/{%time}/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com
   tags:
-  - travel
   - transport
+  - travel
   examples:
     manchester, london, 22/06/16, 14/30: Search for trains from Manchester to London
 tv 0:

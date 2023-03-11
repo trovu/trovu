@@ -2,16 +2,16 @@ blocket 1:
   url: http://www.blocket.se/li?q={%query}
   title: Blocket.se
   tags:
-  - shopping
   - blocket
+  - shopping
   examples:
     iphone: Search for "iphone"
 gm 2:
   url: https://www.google.com/maps/search/{%stad|type=city}%2C%20{%gata}%2C%20Sverige/?hl={$language}
   title: Google Maps Sverige
   tags:
-  - maps
   - google
+  - maps
   examples:
     s, centrum: sök centrum i Stockholm
     lu, centrum: sök centrum i Lund
@@ -19,34 +19,34 @@ llt 2:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&cmdAction=search
   title: Luleå Lokaltrafik
   tags:
-  - travel
   - luleå
+  - travel
   examples:
     sotargatan, järnvägen: Nästa buss från Sotargatan till Järnvägen
 llt 3:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&inpTime={%Avgång}00&cmdAction=search
   title: Luleå Lokaltrafik
   tags:
-  - travel
   - luleå
+  - travel
   examples:
     sotargatan, järnvägen,10: Buss från Sotargatan till Järnvägen, avgång kl. 10
 ltnbd 2:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&start=1
   title: Länstraffiken Norbotten
   tags:
-  - travel
   - luleå
   - norbotten
+  - travel
   examples:
     boden, luleå: Nästa buss från Boden till Luleå
 ltnbd 3:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&T={%Avgång}&start=1
   title: Länstraffiken Norbotten
   tags:
-  - travel
   - luleå
   - norbotten
+  - travel
   examples:
     boden, luleå, 10: Buss från Boden till Luleå, avgång kl. 10
 rr 2:

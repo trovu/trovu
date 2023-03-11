@@ -30,11 +30,11 @@ de-ar 1:
   url: https://de.langenscheidt.com/deutsch-arabisch/{%word}
   title: ألمانية-عربية (Langenscheidt)
   tags:
+  - arabic
   - dictionary
+  - german
   - language
   - leo
-  - german
-  - arabic
   examples:
     baum: ترجمة عربية من "baum"
     شجرة: ترجمة ألمانية من "شجرة"
@@ -42,11 +42,11 @@ de-bg 1:
   url: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
   title: Немски-Български (Langenscheidt)
   tags:
+  - bulgarian
   - dictionary
+  - german
   - language
   - leo
-  - german
-  - bulgarian
   examples:
     baum: български превод за "baum"
     дърво: немски превод за "дърво"
@@ -54,11 +54,11 @@ de-cs 1:
   url: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
   title: Němčina-Čeština (Langenscheidt)
   tags:
+  - czech
   - dictionary
+  - german
   - language
   - leo
-  - german
-  - czech
   examples:
     baum: čeština překlad pro "baum"
     strom: němčina překlad pro "strom"
@@ -66,11 +66,11 @@ de-da 1:
   url: https://de.langenscheidt.com/deutsch-daenisch/{%word}
   title: Tysk-Dansk (Langenscheidt)
   tags:
+  - danish
   - dictionary
+  - german
   - language
   - leo
-  - german
-  - danish
   examples:
     baum: dansk oversættelse af "baum"
     træ: tysk oversættelse af "træ"
@@ -79,10 +79,10 @@ de-el 1:
   title: Γερμανικά-Ελληνικά (Langenscheidt)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - greek (modern)
+  - language
+  - leo
   examples:
     baum: Μετάφραση στα Ελληνικά για το "baum"
     δέντρο: Μετάφραση στα Γερμανικά για το "δέντρο"
@@ -91,10 +91,10 @@ de-en 1:
   title: German-English (Langenscheidt)
   tags:
   - dictionary
+  - english
+  - german
   - language
   - leo
-  - german
-  - english
   examples:
     baum: English translation of "baum"
     tree: German translation of "tree"
@@ -103,9 +103,9 @@ de-es 1:
   title: Alemán-Español (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - spanish
   examples:
     baum: Traducción al Español de "baum"
@@ -115,9 +115,9 @@ de-fa 1:
   title: زبان آلمانی-زبان فارسی (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - persian
   examples:
     baum: ترجمه به زبان فارسی برای "baum"
@@ -127,10 +127,10 @@ de-fi 1:
   title: Saksa-Suomi (Langenscheidt)
   tags:
   - dictionary
+  - finnish
+  - german
   - language
   - leo
-  - german
-  - finnish
   examples:
     baum: suomi-käännös sanalle "baum"
     puu: saksa-käännös sanalle "puu"
@@ -139,10 +139,10 @@ de-fr 1:
   title: Allemand-Français (Langenscheidt)
   tags:
   - dictionary
+  - french
+  - german
   - language
   - leo
-  - german
-  - french
   examples:
     baum: Traduction en Français de "baum"
     arbre: Traduction en Allemand de "arbre"
@@ -150,11 +150,11 @@ de-hr 1:
   url: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
   title: Njemački-Hrvatski (Langenscheidt)
   tags:
+  - croatian
   - dictionary
+  - german
   - language
   - leo
-  - german
-  - croatian
   examples:
     baum: hrvatski prijevod od "baum"
     stablo: njemački prijevod od "stablo"
@@ -163,10 +163,10 @@ de-hu 1:
   title: Német-Magyar (Langenscheidt)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - hungarian
+  - language
+  - leo
   examples:
     baum: magyar fordítás a(z) "baum" számára
     fa: német fordítás a(z) "fa" számára
@@ -175,10 +175,10 @@ de-is 1:
   title: Þýska-Íslenska (Langenscheidt)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - icelandic
+  - language
+  - leo
   examples:
     baum: Íslenska-þýðing á "baum"
     tré: Þýska-þýðing á "tré"
@@ -187,10 +187,10 @@ de-it 1:
   title: Tedesco-Italiano (Langenscheidt)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - italian
+  - language
+  - leo
   examples:
     baum: Traduzione in italiano di "baum"
     albero: Traduzione in tedesco di "albero"
@@ -199,10 +199,10 @@ de-ja 1:
   title: ドイツ語-日本語 (Langenscheidt)
   tags:
   - dictionary
-  - language
-  - leo
   - german
   - japanese
+  - language
+  - leo
   examples:
     baum: 日本語翻訳"baum"
     木: ドイツ語翻訳"木"
@@ -211,10 +211,10 @@ de-nl 1:
   title: Duits-Nederlands (Langenscheidt)
   tags:
   - dictionary
+  - dutch
+  - german
   - language
   - leo
-  - german
-  - dutch
   examples:
     baum: Nederlands-vertaling van "baum"
     boom: Duits-vertaling van "boom"
@@ -223,9 +223,9 @@ de-no 1:
   title: Tysk-Norsk (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - norwegian
   examples:
     baum: norsk oversettelse av "baum"
@@ -235,9 +235,9 @@ de-pl 1:
   title: Niemiecki-Polski (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - polish
   examples:
     baum: Tłumaczenie na język polski dla "baum"
@@ -247,9 +247,9 @@ de-pt 1:
   title: Alemão-Português (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - portuguese
   examples:
     baum: Tradução em português de "baum"
@@ -259,9 +259,9 @@ de-ro 1:
   title: Germană-Română (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - romanian
   examples:
     baum: Traducere în română pentru "baum"
@@ -271,9 +271,9 @@ de-ru 1:
   title: Немецкий-Русский (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - russian
   examples:
     baum: Перевод на русский язык для "baum"
@@ -283,9 +283,9 @@ de-sk 1:
   title: Nemčina-Slovenčina (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - slovak
   examples:
     baum: slovenčina preklad pre "baum"
@@ -295,9 +295,9 @@ de-sl 1:
   title: Nemščina-Slovenščina (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - slovenian
   examples:
     baum: Prevod v slovenščina za besedo "baum"
@@ -307,9 +307,9 @@ de-sr 1:
   title: Немачки-Српски (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - serbian
   examples:
     baum: Превод на Српски за "baum"
@@ -319,9 +319,9 @@ de-sv 1:
   title: Tyska-Svenska (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - swedish
   examples:
     baum: svenska-översättning av "baum"
@@ -331,9 +331,9 @@ de-tr 1:
   title: Almanca-Türkçe (Langenscheidt)
   tags:
   - dictionary
+  - german
   - language
   - leo
-  - german
   - turkish
   examples:
     baum: '"baum" için Türkçe çevirisi'
@@ -342,11 +342,11 @@ de-zh 1:
   url: https://de.langenscheidt.com/deutsch-chinesisch/{%word}
   title: 德语-汉语 (Langenscheidt)
   tags:
+  - chinese
   - dictionary
+  - german
   - language
   - leo
-  - german
-  - chinese
   examples:
     baum: 汉语翻译"baum"
     树: 德语翻译"树"

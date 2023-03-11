@@ -153,10 +153,10 @@ a 1:
   url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20
   title: Amazon.com
   tags:
-  - amazon
-  - shopping
-  - books
   - affiliate
+  - amazon
+  - books
+  - shopping
   examples:
     shakespeare: Search for "shakespeare"
 abbr 1:
@@ -175,55 +175,55 @@ acl 0:
   title: ACL Anthology
   description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
   tags:
+  - academia
+  - acl
+  - bibliography
+  - computational linguistics
   - language
   - linguistics
-  - science
-  - acl
-  - computational linguistics
   - literature
-  - academia
-  - bibliography
+  - science
 acl 1:
   url: https://www.aclweb.org/anthology/search/?q={%query}
   title: ACL Anthology
   description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
   tags:
+  - academia
+  - acl
+  - bibliography
+  - computational linguistics
   - language
   - linguistics
-  - science
-  - acl
-  - computational linguistics
   - literature
-  - academia
-  - bibliography
+  - science
   examples:
     machine translation: search for machine translation in the ACL Anthology
 aclg 1:
   url: http://www.google.com/search?hl={$language}&q=site:aclweb.org%20{%query}&ie=utf-8
   title: ACL Anthology via Google
   tags:
+  - academia
+  - acl
+  - bibliography
+  - computational linguistics
   - language
   - linguistics
-  - science
-  - acl
-  - computational linguistics
   - literature
-  - academia
-  - bibliography
+  - science
   examples:
     machine translation: search for machine translation in the ACL Anthology
 aclw 1:
   url: http://www.aclweb.org/aclwiki/index.php?search={%query}&go=Go
   title: ACL wiki
   tags:
+  - academia
+  - acl
+  - bibliography
+  - computational linguistics
   - language
   - linguistics
-  - science
-  - acl
-  - computational linguistics
   - literature
-  - academia
-  - bibliography
+  - science
   - wiki
   examples:
     ' SAT Analogy Questions': go to page (or search for) SAT Analogy Questions on ACLWiki
@@ -246,16 +246,16 @@ adfcb 0:
   url: https://adfc-berlin.de
   title: ADFC Berlin
   tags:
-  - bicycle
   - berlin
+  - bicycle
   removed: '2023-01-14'
 adror 1:
   url: http://apidock.com/rails/search?query={%query}
   title: 'Apidock: Ruby on Rails'
   tags:
-  - ruby
-  - ror
   - programming
+  - ror
+  - ruby
   examples:
     set: Search for "set"
 ads 1:
@@ -276,14 +276,14 @@ ae 0:
   url: http://www.aliexpress.com/
   title: Aliexpress
   tags:
-  - shopping
   - aliexpress
+  - shopping
 ae 1:
   url: http://www.aliexpress.com/wholesale?SearchText={%query}
   title: Aliexpress
   tags:
-  - shopping
   - aliexpress
+  - shopping
   examples:
     bicycle light: Search Aliexpress for "bicycle light"
 af 1:
@@ -315,8 +315,8 @@ allmovie 1:
   url: http://www.allmovie.com/search/all/{%movie}
   title: All Movie
   tags:
-  - movies
   - cinema
+  - movies
   examples:
     forrest gump: Search for "forrest gump"
 allmusic 1:
@@ -330,8 +330,8 @@ alp 1:
   url: http://archlinux.org/packages/search/?repo=all&category=all&q={%package}&lastupdate=&limit=50
   title: Arch Linux Package Search
   tags:
-  - archlinux
   - arch
+  - archlinux
   - linux
   - packages
   examples:
@@ -340,22 +340,22 @@ alt 0:
   url: https://alternativeto.net/
   title: AlternativeTo
   tags:
-  - software
   - alternative
+  - software
 alt 1:
   url: https://alternativeto.net/browse/search/?q={%product}
   title: AlternativeTo
   tags:
-  - software
   - alternative
+  - software
   examples:
     word: Search for alternative software to Word
 alw 1:
   url: https://wiki.archlinux.org/index.php?title=Special%3ASearch&search={%query}&go=Go
   title: Arch Linux Wiki
   tags:
-  - linux
   - archlinux
+  - linux
   - wiki
   examples:
     cups: Suche nach "cups"
@@ -364,8 +364,8 @@ am 1:
   title: Apple Maps
   description: Apple Maps for desktop/browser.  If place was not found, try adding country or country code.
   tags:
-  - maps
   - apple
+  - maps
   examples:
     Berlin Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
 am 2:
@@ -373,8 +373,8 @@ am 2:
   title: Apple Maps
   description: Apple Maps for desktop/browser. City can be given with common abbreviations, e.g. car number plates
   tags:
-  - maps
   - apple
+  - maps
   examples:
     b, Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
     hh, berliner tor: Show Berliner Tor in Hamburg
@@ -401,8 +401,8 @@ answers 1:
   url: http://www.answers.com/search?q={%query}
   title: Answers.com
   tags:
-  - encyclopedia
   - answers
+  - encyclopedia
   examples:
     milk: Search for "milk"
 ao 1:
@@ -417,8 +417,8 @@ apb 1:
   url: http://www.appbrain.com/search?q={%query}
   title: Appbrain App Search
   tags:
-  - apps
   - android
+  - apps
   examples:
     calculator: Search for calculator apps
 apl 1:
@@ -434,11 +434,11 @@ arch 1:
   title: Arch Chinese Stroke Animation & Dictionary
   tags:
   - chinese
-  - language
+  - chinese characters
   - dictionary
   - hanzi
+  - language
   - stroke orders
-  - chinese characters
   examples:
     聊: find out how to write the character 聊 and how it's composed
 archive 1:
@@ -460,13 +460,13 @@ arxiv 1:
   url: http://arxiv.org/search?query={%query}
   title: ArXiv
   tags:
-  - open access
-  - science
-  - physics
-  - mathematics
   - computer science
+  - mathematics
+  - open access
+  - physics
   - quantitative biology
   - quantitative finance
+  - science
   - statistics
   examples:
     einstein: Search for all articles including "einstein"
@@ -474,8 +474,8 @@ ask 1:
   url: http://www.ask.com/web?q={%query}&qsrc=0&o=333&l=dir
   title: Ask.com
   tags:
-  - web search
   - ask
+  - web search
   examples:
     berlin: Search for berlin
 asterisk 1:
@@ -496,14 +496,14 @@ b 0:
   url: http://www.bing.com
   title: Bing
   tags:
-  - web search
   - bing
+  - web search
 b 1:
   url: http://www.bing.com/search?q={%query}
   title: Bing
   tags:
-  - web search
   - bing
+  - web search
   examples:
     berlin: Search for "berlin"
 ba 1:
@@ -539,8 +539,8 @@ bi 1:
   url: http://www.bing.com/images/?q={%image-query}
   title: Bing Images
   tags:
-  - web search
   - bing
+  - web search
   examples:
     berlin: Search for "berlin"
 bibkit 1:
@@ -569,8 +569,8 @@ bible 2:
   url: https://www.bibleserver.com/search/{%translation}/{%query}
   title: Bibleserver.com
   tags:
-  - bible
   - bibel
+  - bible
   - christianity
   examples:
     lut, fleisch: Search for "fleisch" in Luther translation
@@ -578,8 +578,8 @@ biblec 2:
   url: http://www.bibleserver.com/text/{%translation}/{%chapter}
   title: Bibleserver.com, go to chapter
   tags:
-  - bible
   - bibel
+  - bible
   - christianity
   examples:
     lut, philipper: Open Philipper chapter of Luther translation
@@ -587,15 +587,15 @@ bibso 0:
   url: http://www.bibsonomy.org
   title: Bibsonomy
   tags:
-  - bookmarks
   - bibsonomy
+  - bookmarks
   - social
 bibso 1:
   url: http://www.bibsonomy.org/search/{%query}
   title: Bibsonomy
   tags:
-  - bookmarks
   - bibsonomy
+  - bookmarks
   - social
   examples:
     google: Search for bookmarks and publications about Google
@@ -603,8 +603,8 @@ bibso+ 1:
   url: http://www.bibsonomy.org/editBookmark?url={%url}
   title: Bibsonomy, add Bookmark
   tags:
-  - bookmarks
   - bibsonomy
+  - bookmarks
   - social
   examples:
     http://www.serchilo.net/: Add http://www.serchilo.net/ to Bibsonomy
@@ -620,46 +620,46 @@ bm 1:
   url: http://www.bing.com/maps/?q={%map-query}
   title: Bing Maps
   tags:
-  - web search
   - bing
+  - web search
   examples:
     berlin: Search for "berlin"
 bmf 0:
   url: http://www.bessermitfahren.de/
   title: Besser mitfahren
   tags:
-  - travel
   - mitfahrgelegenheit
+  - travel
 bmf 2:
   url: http://www.bessermitfahren.de/{%Start}/{%Ziel}/angebote
   title: Besser mitfahren
   tags:
-  - travel
   - mitfahrgelegenheit
+  - travel
   examples:
     berlin, hamburg: Mitfahrgelegenheiten von Berlin nach Hamburg
 bmn 1:
   url: https://bugmenot.com/view/{%site}
   title: BugMeNot
   tags:
-  - mail
   - login
+  - mail
   examples:
     heise.de: Get logins for heise.de
 bn 1:
   url: https://www.bing.com/news/search?q={%query}
   title: Bing News Search
   tags:
-  - news
   - bing
+  - news
 booking 1:
   url: https://www.booking.com/searchresults.html?spnsbr=1&ss={%destination}&idf=on&error_url=%2F%3Faid%3D1303859%3B&si=ai%2Cco%2Cci%2Cre%2Cdi&label=&aid=1303859&utm_campaign=nsb&utm_medium=sp&utm_source=FP_Searchbox&utm_term=1303862
   title: Booking.com
   tags:
-  - travel
-  - hotels
-  - hostels
   - affiliate
+  - hostels
+  - hotels
+  - travel
   examples:
     berlin: Search Booking.com for hotels and hostels in Berlin.
 bp 1:
@@ -698,32 +698,32 @@ btv 1:
   url: http://www.btvguide.com/searchresults/?q={%query}
   title: Btvguide
   tags:
-  - tv
+  - entertainment
   - series
   - shows
-  - entertainment
+  - tv
   examples:
     star trek: Search for "star trek"
 bv 1:
   url: http://www.bing.com/videos/?q={%video-query}
   title: Bing Videos
   tags:
-  - web search
   - bing
+  - web search
   examples:
     berlin: Search for "berlin"
 c++ 0:
   url: https://cppreference.com/
   title: C++ Reference (cppreference.com)
   tags:
-  - programming
   - c++
+  - programming
 c++ 1:
   url: https://www.google.com/search?hl={$language}&btnI=&sourceid=navclient&gfns=1&q=site:cppreference.com%20{%query}&ie=utf-8
   title: C++ Reference (cppreference.com)
   tags:
-  - programming
   - c++
+  - programming
 c3tv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
@@ -848,10 +848,10 @@ clubic 1:
   url: http://www.clubic.com/telecharger/r/{%logiciel}
   title: Clubic
   tags:
-  - logiciels
-  - software
   - clublic
   - download
+  - logiciels
+  - software
   examples:
     inkscape: Search Clubic for "inkscape"
 cma 0:
@@ -859,8 +859,8 @@ cma 0:
   title: Critical Maps
   description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
   tags:
-  - critical mass
   - critical maps
+  - critical mass
 co 1:
   url: http://collectr.net/={%query}
   title: Collectr
@@ -892,16 +892,16 @@ commons 0:
   url: http://commons.wikimedia.org/
   title: Wikimedia Commons Main Page
   tags:
-  - wikipedia
-  - wikimedia
   - commons
+  - wikimedia
+  - wikipedia
 commons 1:
   url: http://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search={%query}&uselang={$language}
   title: Wikimedia Commons
   tags:
-  - wikipedia
-  - wikimedia
   - commons
+  - wikimedia
+  - wikipedia
   examples:
     berlin: Wikimedia pictures, videos and other media about Berlin
 conj 1:
@@ -909,10 +909,10 @@ conj 1:
   title: Logos Conjugator
   tags:
   - grammar
+  - inflection
   - language
   - verb
   - verbs
-  - inflection
   examples:
     blasen: look up inflected forms of the German verb "blasen"
 copu 1:
@@ -979,8 +979,8 @@ cpp 1:
   url: http://en.cppreference.com/mwiki/index.php?search={%query}
   title: C++ Reference (cppreference.com)
   tags:
-  - programming
   - c++
+  - programming
   examples:
     sprintf: Search C++ Reference (cppreference.com) for "sprintf"
 cppc 1:
@@ -1003,8 +1003,8 @@ cran 1:
   title: Comprehensive R Archive Network (CRAN) via Google
   tags:
   - programming
-  - statistics
   - r
+  - statistics
   examples:
     bibtex: Show bibtex package
 crc32 1:
@@ -1044,20 +1044,20 @@ crug 1:
   title: SmartCat
   description: Library catalog of the University of Groningen
   tags:
-  - library
-  - university
   - catalog
   - catalogue
+  - library
+  - university
   examples:
     linguistics in the netherlands: Find issues of the journal "Linguistics in the Netherlands" in the catalog
 crx 1:
   url: https://chrome.google.com/webstore/search/{%query}?_category=extensions
   title: Chrome Extensions
   tags:
-  - google
-  - chrome
   - browser
+  - chrome
   - extension
+  - google
   examples:
     page rank: Search for Google Chrome extensions about "page rank"
 csdblp 0:
@@ -1087,8 +1087,8 @@ cutlist 1:
   url: http://cutlist.at/?find={%Suche}
   title: cutlist.at
   tags:
-  - tv
   - onlinetvrecorder
+  - tv
   examples:
     tagesschau: search cutlists for "tagesschau"
 cve 1:
@@ -1138,10 +1138,10 @@ dbp 1:
   url: http://dbpedia.org/page/{%title}
   title: DBpedia
   tags:
-  - semanticweb
+  - database
   - knowledge
   - knowledgebase
-  - database
+  - semanticweb
   examples:
     Tunisia: Open DBpedia page about Tunisia
 dbug 0:
@@ -1163,18 +1163,18 @@ dclpm 0:
   url: http://groups.google.de/group/de.comp.lang.perl.misc
   title: De.comp.lang.perl.misc
   tags:
-  - perl
-  - programming
   - google
   - newsgroups
+  - perl
+  - programming
 dclpm 1:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.perl.misc/{%query}
   title: De.comp.lang.perl.misc
   tags:
-  - perl
-  - programming
   - google
   - newsgroups
+  - perl
+  - programming
   examples:
     array: Search for "array"
 dd24 0:
@@ -1192,15 +1192,15 @@ dea 0:
   title: DeviantART
   tags:
   - art
-  - images
   - deviantart
+  - images
 dea 1:
   url: http://browse.deviantart.com/?q={%query}
   title: DeviantART
   tags:
   - art
-  - images
   - deviantart
+  - images
   examples:
     abstract: search for abstract deviations on deviantART
 deac 1:
@@ -1213,16 +1213,16 @@ deau 1:
   title: DeviantART
   tags:
   - art
-  - images
   - deviantart
+  - images
   examples:
     account: Go to account.deviantart.com
 deb 1:
   url: http://packages.debian.org/search?keywords={%query}&searchon=names&suite=all&section=all
   title: debian Packages
   tags:
-  - linux
   - debian
+  - linux
   examples:
     tetris: Search debian packages for "tetris"
 debb 1:
@@ -1319,8 +1319,8 @@ derivative 1:
   url: http://www.wolframalpha.com/input/?i=derivative%20{%query}
   title: 'WolframAlpha: Derivative'
   tags:
-  - science
   - mathematics
+  - science
   - wolfram alpha
   examples:
     x^2: Calculate the derivative of x^2
@@ -1356,16 +1356,16 @@ dii 1:
   url: https://www.diigo.com/search?what={%tag}
   title: Diigo Social Bookmarking
   tags:
-  - web search
   - bookmarks
+  - web search
   examples:
     obama: search for bookmarks tagged with "obama"
 diia 1:
   url: https://www.diigo.com/sign-in?referInfo=%2Fpost%3Furl%3D{%URL}
   title: Diigo Social Bookmarking
   tags:
-  - web search
   - bookmarks
+  - web search
   examples:
     http://www.example.com: add 'example.com' to your bookmarks
 disc 1:
@@ -1426,10 +1426,10 @@ dlde 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
+  - german
   - google translate
   - translate
-  - german
+  - translation
   examples:
     'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into German. '
 dlen 1:
@@ -1438,10 +1438,10 @@ dlen 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
+  - english
   - google translate
   - translate
-  - english
+  - translation
   examples:
     'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into English. '
 dles 1:
@@ -1450,10 +1450,10 @@ dles 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
   - google translate
-  - translate
   - spanish
+  - translate
+  - translation
   examples:
     'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Spanish. '
 dlfr 1:
@@ -1462,10 +1462,10 @@ dlfr 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
+  - french
   - google translate
   - translate
-  - french
+  - translation
   examples:
     'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into French. '
 dlit 1:
@@ -1474,10 +1474,10 @@ dlit 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
   - google translate
-  - translate
   - italian
+  - translate
+  - translation
   examples:
     'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Italian. '
 dlja 1:
@@ -1486,10 +1486,10 @@ dlja 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
   - google translate
-  - translate
   - japanese
+  - translate
+  - translation
   examples:
     'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Japanese. '
 dlnl 1:
@@ -1498,10 +1498,10 @@ dlnl 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
+  - dutch
   - google translate
   - translate
-  - dutch
+  - translation
   examples:
     'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Dutch. '
 dlpo 1:
@@ -1510,10 +1510,10 @@ dlpo 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
   - google translate
-  - translate
   - polish
+  - translate
+  - translation
   examples:
     'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Polish. '
 dlpt 1:
@@ -1522,10 +1522,10 @@ dlpt 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
   - google translate
-  - translate
   - portuguese
+  - translate
+  - translation
   examples:
     'Hallo, wie geht es Dir? ': 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Portuguese. '
 dlru 1:
@@ -1534,10 +1534,10 @@ dlru 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
   - google translate
-  - translate
   - russian
+  - translate
+  - translation
   examples:
     'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Russian. '
 dltr 1:
@@ -1546,9 +1546,9 @@ dltr 1:
   description: Translate whole text.
   tags:
   - deepl
-  - translation
   - google translate
   - translate
+  - translation
   - turkish
   - türkçe
   examples:
@@ -1558,19 +1558,19 @@ dlzh 1:
   title: deepL Translator to Chinese
   description: Translate whole text.
   tags:
+  - chinese
   - deepl
-  - translation
   - google translate
   - translate
-  - chinese
+  - translation
   examples:
     'Hello, how are you? ': 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese. '
 dm 1:
   url: http://www.dailymotion.com/?search={%query}
   title: Dailymotion
   tags:
-  - video
   - dailymotion
+  - video
   examples:
     berlin: Search for videos about "berlin"
 dnd 0:
@@ -1685,9 +1685,9 @@ duden 1:
   url: http://www.duden.de/suchen/dudenonline/{%wort}
   title: Duden
   tags:
-  - language
-  - german
   - deutsch
+  - german
+  - language
   - rechtschreibung
   examples:
     stuhl: Nachschlagen des Wortes "Stuhl"
@@ -1720,16 +1720,16 @@ e 0:
   url: https://www.ebay.com/?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
 e 1:
   url: https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
   examples:
     smartphone: Search for smartphones
 eb 1:
@@ -1752,14 +1752,14 @@ ec 0:
   url: http://ecosia.org/
   title: Ecosia
   tags:
-  - web search
   - ecosia
+  - web search
 ec 1:
   url: https://www.ecosia.org/search?q={%query}
   title: Ecosia
   tags:
-  - web search
   - ecosia
+  - web search
   examples:
     berlin: Search for "berlin"
 ecl 0:
@@ -1813,8 +1813,8 @@ ekn 0:
   url: https://www.ebay-kleinanzeigen.de/m-nachrichten.html
   title: Ebay-Kleinanzeigen, Nachrichten
   tags:
-  - shopping
   - ebay
+  - shopping
 el 0:
   url: http://www.eclipse.org/eclipselink/api/2.0.2/index.html
   title: EclipseLink API
@@ -1869,9 +1869,9 @@ eo 1:
   url: http://www.google.com/search?hl={$language}&sitesearch=reta-vortaro.de&domains=reta-vortaro.de&q={%query}
   title: Reta vortaro
   tags:
-  - language
   - dictionary
   - esperanto
+  - language
   examples:
     vorto: Search for "vorto"
 eprint 0:
@@ -1930,14 +1930,14 @@ exkcd 0:
   url: http://www.explainxkcd.com/
   title: Explain xkcd
   tags:
-  - xkcd
   - wiki
+  - xkcd
 exkcd 1:
   url: http://www.explainxkcd.com/wiki/index.php?search={%query}&go=Go
   title: Explain xkcd
   tags:
-  - xkcd
   - wiki
+  - xkcd
   examples:
     polish sausage: Explain the comic about polish sausage
 facebook 0:
@@ -2034,14 +2034,14 @@ fbmp 0:
   url: https://www.facebook.com/marketplace/
   title: Facebook Marketplace
   tags:
-  - facebook
   - classifieds
+  - facebook
 fbmp 1:
   url: https://www.facebook.com/marketplace/search/?query={%query}
   title: Facebook Marketplace Search
   tags:
-  - facebook
   - classifieds
+  - facebook
   examples:
     iphone: Search for "iphone"
 fbook 0:
@@ -2195,15 +2195,15 @@ ffaddon 0:
   url: https://addons.mozilla.org/firefox/
   title: Firefox Add-ons
   tags:
-  - firefox
   - addons
+  - firefox
   - mozilla
 ffaddon 1:
   url: https://addons.mozilla.org/firefox/search?q={%addon}
   title: Firefox Add-ons
   tags:
-  - firefox
   - addons
+  - firefox
   - mozilla
   examples:
     serchilo: Search for Serchilo Firefox addon
@@ -2240,27 +2240,27 @@ filsh 1:
   url: http://en.filsh.net/download?url={%url}
   title: Filsh.net Online Clip Converter
   tags:
-  - files
   - convert
+  - files
   - youtube
 findutf 0:
   url: http://shapecatcher.com
   title: Find UTF code by simply drawing its shape omline (Shapecatcher)
   tags:
-  - utf
-  - unicode character
   - image
   - online tool
+  - unicode character
+  - utf
 fisbroker 0:
   url: https://fbinter.stadt-berlin.de/fb/index.jsp
   title: FIS-Broker Geodatenportal Berlin (Geo- und Sachdatenabfrage)
   description: "Ein umfangreicher Geodatenkatalog bietet Karten, Pläne und andere Daten mit Raumbezug aus Berlin. Hier kann räumlich, z.B. über Adressen und inhaltlich (z.B. nach Schlagworten) gesucht werden. Die datenbereitstellenden Dienste sind bei den Datensätzen genannt.\r\n\r\nIn einem Viewer können Karten angesehen, überlagert und mit Sachdaten verknüpft werden. Über die Dossierfunktion können schnell viele Informationen für ein Grundstück abgerufen werden."
   tags:
   - berlin
+  - fisbroker
   - geodata
   - gis
   - kataster
-  - fisbroker
 fiverr 0:
   url: https://www.fiverr.com/
   title: Fiverr
@@ -2278,72 +2278,72 @@ fli 1:
   url: http://flickr.com/search/?q={%query}
   title: 'Flickr: full text search'
   tags:
-  - images
   - flickr
+  - images
   examples:
     christmas: search photos about christmas
 flicc 1:
   url: http://flickr.com/search/?q={%query}&l=cc
   title: 'Flickr: full text search for content with a Creative Commons license'
   tags:
-  - images
   - flickr
+  - images
   examples:
     christmas: search photos about christmas
 flicca 1:
   url: http://flickr.com/search/?q={%query}&l=deriv
   title: 'Flickr: full text search for content to adapt, modify and build upon'
   tags:
-  - images
   - flickr
+  - images
   examples:
     christmas: search photos about christmas
 fliccc 1:
   url: http://flickr.com/search/?q={%query}&l=comm
   title: 'Flickr: full text search for content to use commercially'
   tags:
-  - images
   - flickr
+  - images
   examples:
     christmas: search photos about christmas
 fliccca 1:
   url: http://flickr.com/search/?q={%query}&l=commderiv
   title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
   tags:
-  - images
   - flickr
+  - images
   examples:
     christmas: search photos about christmas
 flickr 1:
   url: http://flickr.com/search/?q={%query}&ct=5
   title: 'Flickr: full text search for photos and "other stuff"'
   tags:
-  - images
   - flickr
+  - images
   examples:
     christmas: search photos about christmas
 flickrshow 1:
   url: http://flickr.com/search/show/?q={%query}
   title: 'Flickr: creates a slideshow of your query'
   tags:
-  - images
   - flickr
+  - images
   examples:
     berlin: create a slideshow of photos about berlin
 flt 1:
   url: http://flickr.com/photos/tags/{%tag}
   title: 'Flickr: photos with tag'
   tags:
-  - images
   - flickr
+  - images
   examples:
     berlin: search for photos tagged "berlin"
 flu 1:
   url: http://www.flickr.com/search/people/?q={%user}
   title: 'Flickr: search for user'
   tags:
-  - images
   - flickr
+  - images
   examples:
     john: search for users named "john"
 fm 1:
@@ -2379,22 +2379,22 @@ fosspatent 0:
   url: http://www.fosspatents.com
   title: FOSSpatents blog (Free open source software & patent blog)
   tags:
-  - patents
-  - patent law
+  - copyright
   - intellectual property
   - ip law
-  - copyright
   - open source
+  - patent law
+  - patents
 fosspatents 0:
   url: http://www.fosspatents.com
   title: FOSSpatents blog (Free open source software & patent blog)
   tags:
-  - patents
-  - patent law
+  - copyright
   - intellectual property
   - ip law
-  - copyright
   - open source
+  - patent law
+  - patents
 fotofinder 1:
   url: http://www.fotofinder.com/?text={%Suche}&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   title: Fotofinder
@@ -2434,10 +2434,10 @@ freenode 1:
   url: http://irc.netsplit.de/channels/?net=freenode&chat={%query}
   title: Freenode IRC channels
   tags:
-  - irc
-  - freenode
-  - chat
   - channels
+  - chat
+  - freenode
+  - irc
   examples:
     android: Search for Android-related IRC channels on Freenode
 freesound 1:
@@ -2495,22 +2495,22 @@ g 0:
   url: https://www.google.com/search?hl={$language}
   title: Google Web Homepage
   tags:
-  - web search
   - google
+  - web search
 g 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.com
   tags:
-  - web search
   - google
+  - web search
   examples:
     berlin: Google search for "berlin"
 g! 1:
   url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&btnI=1
   title: Google Web, go directly to first result
   tags:
-  - web search
   - google
+  - web search
   examples:
     berlin: Search for "berlin"
 g-en-de 1:
@@ -2527,8 +2527,8 @@ g100 1:
   url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&num=100
   title: Google Web, 100 results at once
   tags:
-  - web search
   - google
+  - web search
   examples:
     berlin: Search for "berlin"
 g? 0:
@@ -2555,8 +2555,8 @@ gan 1:
   url: http://www.google.com/search?hl=en&q=android%20{%query}&ie=utf-8
   title: Google search for android related pages only
   tags:
-  - google
   - android
+  - google
   examples:
     apps: Search for Android apps
 gat 1:
@@ -2568,23 +2568,23 @@ gbooks 0:
   url: http://books.google.com/
   title: Google Books
   tags:
-  - google
   - books
+  - google
 gbooks 1:
   url: http://books.google.com/books?hl={$language}&q={%query}
   title: Google Books
   tags:
-  - google
   - books
+  - google
   examples:
     shakespeare: Search for "shakespeare"
 gby 2:
   url: https://www.google.de/search?tbs=cdr%3A1%2Ccd_min%3A%2Ccd_max%3A {%year}&q= {%query}&hl=de&source=lnt&tbm=
   title: Google Search before Year
   tags:
+  - archive
   - google
   - search
-  - archive
 gc 1:
   url: http://google.com/search?hl={$language}&q=cache:{%query}
   title: Google Cache
@@ -2594,14 +2594,14 @@ gcal 0:
   url: http://www.google.com/calendar
   title: Google Calendar
   tags:
-  - google
   - calendar
+  - google
 gcal 1:
   url: https://www.google.com/calendar/render?q={%query}
   title: Google Calendar
   tags:
-  - google
   - calendar
+  - google
   examples:
     berlin: Search for "berlin"
 gcbug 1:
@@ -2641,10 +2641,10 @@ gd 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start|type=city}&daddr={%destination|type=city}
   title: Google Maps Directions (Routing)
   tags:
-  - maps
   - google
-  - routing
+  - maps
   - route
+  - routing
   examples:
     berlin DE, hamburg DE: Get a route from Berlin, Germany, to Hamburg, Germany
     new york, chicago: Get a route from New York to Chicago
@@ -2652,21 +2652,21 @@ gdb 2:
   url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode= bicycling
   title: Google Maps Directions (Routing), by Bike
   tags:
-  - maps
-  - google
-  - routing
-  - route
   - bike
+  - google
+  - maps
+  - route
+  - routing
   examples:
     brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz, Berlin, by bike
 gdd 2:
   url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode=driving
   title: Google Maps Directions (Routing), by Driving
   tags:
-  - maps
   - google
-  - routing
+  - maps
   - route
+  - routing
   examples:
     brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by walking
 gde 1:
@@ -2686,45 +2686,45 @@ gdocs 1:
   url: https://docs.google.com/document/u/0/?q={%query}
   title: Google Docs search
   tags:
-  - google
   - docs
+  - google
 gdr 0:
   url: https://drive.google.com/
   title: Google Drive
   tags:
-  - storage
   - cloud
-  - documents
   - collaboration
+  - documents
+  - storage
 gdr 1:
   url: https://drive.google.com/#search/{%query}
   title: Google Drive
   tags:
-  - storage
   - cloud
-  - documents
   - collaboration
+  - documents
+  - storage
   examples:
     grades: Search for documents with keyword "grades" in your Google Drive
 gdt 2:
   url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode=transit
   title: Google Maps Directions (Routing), by Transit / Public Transport
   tags:
-  - maps
   - google
-  - routing
-  - route
+  - maps
   - public transport
+  - route
+  - routing
   examples:
     brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by public transport
 gdw 2:
   url: https://www.google.com/maps/dir/?api=1&origin={%start|type=city}&destination={%destination|type=city}&travelmode=walking
   title: Google Maps Directions (Routing), by Walking
   tags:
-  - maps
   - google
-  - routing
+  - maps
   - route
+  - routing
   examples:
     brandenburger tor, potsdamer platz: Get a route Brandenburger Tor to Potsdamer Platz by walking
 gede 0:
@@ -2746,9 +2746,9 @@ gem 1:
   url: https://rubygems.org/search?utf8=✓&query={%query}
   title: Rubygems Search
   tags:
+  - gem
   - programming
   - ruby
-  - gem
   examples:
     query: Search for a gem called 'query' on rubygems.org
 gen 1:
@@ -2789,8 +2789,8 @@ gf 2:
   url: https://www.google.com/search?hl={$language}&q=filetype%3A{%filetype}%20{%query}&ie=utf-8
   title: Google Web, only of filetype
   tags:
-  - web search
   - google
+  - web search
   examples:
     pdf, berlin: search PDF-files for "berlin"
 gfight 2:
@@ -2804,84 +2804,84 @@ gfin 0:
   url: http://finance.google.com/
   title: Google Finance
   tags:
-  - google
   - finance
+  - google
 gfin 1:
   url: http://finance.google.com/finance?q={%value}
   title: Google Finance
   tags:
-  - google
   - finance
+  - google
   examples:
     'ford ': Show data for Ford Motor Company
 gfl 0:
   url: https://www.google.com/flights/
   title: Google Flights Homepage
   tags:
+  - flights
   - google
   - travel
-  - flights
 gfl 1:
   url: https://www.google.com/travel/flights?q={%query}
   title: Google Flights, any query in any language
   tags:
+  - flights
   - google
   - travel
-  - flights
   examples:
     one-way flight next month from berlin to tenerife: Search for one-way flights from Berlin to Tenerife next month
 gfl 2:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}
   title: Google Flights, round trip
   tags:
+  - flights
   - google
   - travel
-  - flights
   examples:
     ber, lpa: Search for flights from Berlin to Las Palmas
 gfl 3:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}
   title: Google Flights, round trip
   tags:
+  - flights
   - google
   - travel
-  - flights
   examples:
     ber, lpa, fr: Search for round trips from Berlin to Las Palmas, departing next Friday
 gfl 4:
   url: https://www.google.com/travel/flights?q=Flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}%20through%20{%arrival date|type=date}
   title: Google Flights, round trip
   tags:
+  - flights
   - google
   - travel
-  - flights
   examples:
     ber, lpa, fr, 30: Search for round trips from Berlin to Las Palmas, departing next Friday, returning on the 30th of this month
 gfl1 2:
   url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from}%20to%20{%to}
   title: Google Flights, one-way
   tags:
+  - flights
   - google
   - travel
-  - flights
   examples:
     ber, lpa: Search for one-way flights from Berlin to Las Palmas.
 gfl1 3:
   url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20{%from}%20to%20{%to}%20on%20{%departure date|type=date}
   title: Google Flights, one-way
   tags:
+  - flights
   - google
   - travel
-  - flights
   examples:
     ber, lpa, fr: Search for one-way flights from Berlin to Las Palmas, departing next Friday
 gfp 1:
   url: http://german-foreign-policy.com/index.php?lang=en&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and={%query}
   title: German Foreign Policy (English)
   tags:
-  - politics
-  - news
   - germany
+  - news
+  - politics
   examples:
     berlin: Search for "berlin"
 gg 0:
@@ -2910,37 +2910,37 @@ gh 0:
   title: Geizhals EU Hauptseite
   tags:
   - geizhals
-  - shopping
   - preisvergleich
+  - shopping
 gh 1:
   url: http://geizhals.at/eu/?fs={%Produkt|encoding=iso-8859-1}
   title: Geizhals EU
   tags:
   - geizhals
-  - shopping
   - preisvergleich
+  - shopping
   examples:
     fernseher: Search for "fernseher"
 gi 0:
   url: https://www.google.com/imghp?hl={$language}
   title: Google Images Homepage
   tags:
-  - images
   - google
+  - images
 gi 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&tbm=isch
   title: Google Images
   tags:
-  - images
   - google
+  - images
   examples:
     flower: Google image search for "flower"
 gif 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&tbm=isch&tbs=itp:face
   title: Google Images, only faces
   tags:
-  - images
   - google
+  - images
   examples:
     berlin: Search for "berlin"
 gilson 1:
@@ -2962,30 +2962,30 @@ gitlab 0:
   url: https://gitlab.com
   title: GitLab software repository
   tags:
+  - open source
   - programming
   - software
-  - open source
 gitlab 1:
   url: https://gitlab.com/{%repository}
   title: GitLab software repository
   tags:
+  - open source
   - programming
   - software
-  - open source
 gl 1:
   url: https://www.google.com/search?hl={$language}&lr=lang_{$language}&q={%query}&ie=utf-8
   title: Google Web, only in my language
   tags:
-  - web search
   - google
+  - web search
   examples:
     berlin: Search for "berlin" on pages of my language (determined by language namespace)
 gl 2:
   url: https://www.google.com/search?hl={$language}&lr=lang_{%language}&q={%query}&ie=utf-8
   title: Google Web, only in given language
   tags:
-  - web search
   - google
+  - web search
   examples:
     fr, berlin: Search for "berlin" on sites in French
     cs, praha: Search for "praha" on sites in Czech
@@ -3006,14 +3006,14 @@ gm 0:
   url: https://www.google.com/maps?hl={$language}
   title: Google Maps Homepage
   tags:
-  - maps
   - google
+  - maps
 gm 1:
   url: https://www.google.com/maps/search/{%location}/?hl={$language}
   title: Google Maps
   tags:
-  - maps
   - google
+  - maps
   examples:
     london: Show London on Google Maps
 gmail 0:
@@ -3115,22 +3115,22 @@ gn 0:
   url: https://news.google.com/topstories?&gl={$country|uppercase}
   title: Google News of your country
   tags:
-  - news
   - google
+  - news
 gn 1:
   url: https://news.google.com/search?q={%query}&gl={$country|uppercase}
   title: Google News of your country
   tags:
-  - news
   - google
+  - news
   examples:
     berlin: Search Google News for berlin
 gns 1:
   url: https://www.google.de/search?q={%query}&tbm=nws&hl={$language}
   title: Google News search in your language
   tags:
-  - news
   - google
+  - news
   examples:
     berlin: Search Google News for berlin
 gnu 2:
@@ -3166,18 +3166,18 @@ gopkg 0:
   title: pkg.go.dev
   description: Package browser for the Go programming language
   tags:
-  - programming
   - go
   - golang
+  - programming
   - software
 gopkg 1:
   url: https://pkg.go.dev/search?q={%query}
   title: pkg.go.dev
   description: Package browser for the Go programming language
   tags:
-  - programming
   - go
   - golang
+  - programming
   - software
   examples:
     levenshtein: Search pkg.go.dev for Levenshtein-related packages
@@ -3185,30 +3185,30 @@ gp 0:
   url: https://play.google.com/store
   title: Google Play
   tags:
-  - music
   - app
   - apps
-  - store
   - appstore
-  - movies
+  - book
   - books
   - devices
   - movie
-  - book
+  - movies
+  - music
+  - store
 gp 1:
   url: https://play.google.com/store/search?q={%query}
   title: Google Play
   tags:
-  - music
   - app
   - apps
-  - store
   - appstore
-  - movies
+  - book
   - books
   - devices
   - movie
-  - book
+  - movies
+  - music
+  - store
   examples:
     chambermaid swing: search for "Chambermaid Swing" in the Google Play store
 gpa 1:
@@ -3223,9 +3223,9 @@ gpdf 1:
   url: https://www.google.com/search?hl={$language}&q={%query}+filetype:pdf&ie=utf-8
   title: Google.com filetype:pdf
   tags:
-  - web search
   - google
   - pdf
+  - web search
   examples:
     berlin: Search for PDF files containing "berlin"
 gph 0:
@@ -3260,8 +3260,8 @@ gr 1:
   title: Goodreads
   tags:
   - books
-  - reading
   - literature
+  - reading
   - social network
   examples:
     shakespeare: Search for books of Shakespeare
@@ -3275,10 +3275,10 @@ grhp 2:
   title: GraphHopper (Routing via OSM)
   tags:
   - maps
-  - osm
   - openstreetmap
-  - routing
+  - osm
   - route
+  - routing
   examples:
     berlin DE, hamburg DE: Berechnet eine Route von Berlin nach Hamburg.
     oxford UK, london UK: Calculates a route from Oxford to London.
@@ -3326,20 +3326,20 @@ gsheets 1:
   url: https://docs.google.com/spreadsheets/u/0/?q={%query}
   title: Google Sheets search
   tags:
-  - google
   - docs
+  - google
 gslides 1:
   url: https://docs.google.com/presentation/u/0/?q={%query}
   title: Google Slides search
   tags:
-  - google
   - docs
+  - google
 gss 2:
   url: http://www.google.com/search?hl={$language}&q=site%3A{%site}%20{%query}
   title: Google Web, search only on site
   tags:
-  - web search
   - google
+  - web search
   examples:
     cnn.com, berlin: Search for "berlin" on cnn.com
 gssl 0:
@@ -3356,8 +3356,8 @@ gt 2:
   url: http://www.google.com/search?hl={$language}&tbs=qdr:{%time}&q={%query}&ie=utf-8
   title: Google Web, only of certain time range
   tags:
-  - web search
   - google
+  - web search
   examples:
     y, eruption: Search web pages for "eruption" that have been altered within the last year
     m, eruption: Search web pages for "eruption" that have been altered within the last month
@@ -3420,14 +3420,14 @@ gv 0:
   url: https://www.google.com/videohp?hl={$language}
   title: Google Video Homepage
   tags:
-  - video
   - google
+  - video
 gv 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&tbm=vid
   title: Google Video
   tags:
-  - video
   - google
+  - video
   examples:
     cat: Google video search for "cat"
 gvid 1:
@@ -3570,9 +3570,9 @@ i 0:
   title: Internet Movie Database
   tags:
   - cinema
+  - film
   - imdb
   - movies
-  - film
   examples:
     batman: Search International Movie Database for "batman"
 i 1:
@@ -3580,9 +3580,9 @@ i 1:
   title: Internet Movie Database
   tags:
   - cinema
+  - film
   - imdb
   - movies
-  - film
   examples:
     batman: Search International Movie Database for "batman"
 iafd 1:
@@ -3609,8 +3609,8 @@ icq 1:
   url: https://www.google.com/search?hl={$language}&sitesearch=icq.im&q={%nickname}
   title: ICQ People search
   tags:
-  - icq
   - chat
+  - icq
   examples:
     steven: Search ICQ People Search for "steven"
 ida 1:
@@ -3639,8 +3639,8 @@ ig 1:
   tags:
   - instagram
   - photo sharing
-  - video sharing
   - social networking service
+  - video sharing
   examples:
     ellierosapowers: Show the user ellierosapowers content.
 ikeanl 1:
@@ -3653,17 +3653,17 @@ imdb 0:
   title: Internet Movie Database Homepage
   tags:
   - cinema
+  - film
   - imdb
   - movies
-  - film
 imdb 1:
   url: http://www.imdb.com/find?s=all&q={%query}
   title: Internet Movie Database
   tags:
   - cinema
+  - film
   - imdb
   - movies
-  - film
   examples:
     batman: Search International Movie Database for "batman"
 imeem 1:
@@ -3698,8 +3698,8 @@ integral 1:
   url: http://www.wolframalpha.com/input/?i=integral%20{%query}
   title: 'WolframAlpha: Integral'
   tags:
-  - science
   - mathematics
+  - science
   - wolfram alpha
   examples:
     x^2: Calculate the integral of x^2
@@ -3727,11 +3727,11 @@ ipkat 0:
   url: http://ipkitten.blogspot.de
   title: The IPKat (Intellectual Property) blog
   tags:
-  - patents
-  - patent law
+  - copyright
   - intellectual property
   - ip law
-  - copyright
+  - patent law
+  - patents
 ist 0:
   url: https://www.istockphoto.com
   title: Istockphoto
@@ -3764,8 +3764,8 @@ jam 1:
   url: https://www.jamendo.com/search?qs=q={%query}
   title: Jamendo
   tags:
-  - music
   - copyleft
+  - music
   examples:
     electronic: Search Jamendo for "electronic"
 japi 1:
@@ -3782,16 +3782,16 @@ java 0:
   url: http://download.oracle.com/javase/7/docs/api/index.html
   title: Java Platform SE 7 API
   tags:
+  - api
   - java
   - programming
-  - api
 java 1:
   url: http://www.google.com/search?hl=en&q=inurl%3Ajavase%2F7%2Fdocs%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: Java Platform SE 7 API
   tags:
+  - api
   - java
   - programming
-  - api
   examples:
     void: Search for "void"
 java5 0:
@@ -3818,9 +3818,9 @@ java8 1:
   url: http://www.google.com/search?hl={$language}&q=inurl%3Ajavase%2F8%2Fdocs%2Fapi%2F+Class+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: Java Platform SE 8 API
   tags:
+  - api
   - java
   - programming
-  - api
   examples:
     void: Search for docs about "void"
 jb 2:
@@ -3953,8 +3953,8 @@ kym 1:
   title: Know Your Meme
   tags:
   - fun
-  - meme
   - internet culture
+  - meme
   examples:
     x y is x: search for the "X Y is X" meme
 l 1:
@@ -3976,14 +3976,14 @@ laredoute 0:
   url: http://www.laredoute.com
   title: La Redoute
   tags:
-  - shopping
   - fashion
+  - shopping
 laredoute 1:
   url: http://www.laredoute.com/search.aspx?keyword={%query}
   title: La Redoute
   tags:
-  - shopping
   - fashion
+  - shopping
   examples:
     chaussures: Recherche chaussures
 larousse 1:
@@ -4007,15 +4007,15 @@ laste 0:
   url: http://www.last.fm/events
   title: 'Last.fm: Events'
   tags:
-  - music
-  - lastfm
   - events
+  - lastfm
+  - music
 lastl 1:
   url: http://www.last.fm/listen/artist/{%artist}
   title: 'Last.fm: Listen to artist'
   tags:
-  - music
   - lastfm
+  - music
   examples:
     beatles: Listen to the Beatles
 latex 1:
@@ -4093,30 +4093,30 @@ lipsum 0:
   url: http://www.lipsum.com/feed/html?name=start
   title: Lorem Ipsum
   tags:
-  - lorem ipsum
   - lipsum
+  - lorem ipsum
 lipsum 1:
   url: http://www.lipsum.com/feed/html?amount={%amount}&what=words&name=start
   title: Lorem Ipsum
   tags:
-  - lorem ipsum
   - lipsum
+  - lorem ipsum
   examples:
     '200': Generate 200 words of "Lorem Ipsum"
 lipsum 2:
   url: http://www.lipsum.com/feed/html?amount={%amount}&what={%paragraphs/words/bytes/lists}&name=start
   title: Lorem Ipsum
   tags:
-  - lorem ipsum
   - lipsum
+  - lorem ipsum
   examples:
     200, bytes: Generate 200 bytes of "Lorem Ipsum"
 ll 1:
   url: http://www.liveleak.com/browse?q={%query}
   title: LiveLeak.com
   tags:
-  - video
   - liveleak
+  - video
 ln 0:
   url: http://www.linkedin.com/
   title: Linkedin
@@ -4153,14 +4153,14 @@ lucene 0:
   url: http://lucene.apache.org/core/3_6_0/api/all/index.html
   title: Lucene API
   tags:
-  - programming
   - java
+  - programming
 lucene 1:
   url: https://www.google.com/search?hl=en&q=site%3Ahttp://lucene.apache.org/core/4_1_0/+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: Lucene API
   tags:
-  - programming
   - java
+  - programming
   examples:
     facet: Search for "facet"
 lw 1:
@@ -4181,8 +4181,8 @@ macs 1:
   title: MAC address search
   description: "Match your MAC address to its vendor.\r\nMatch a vendor to the MAC addresses it uses."
   tags:
-  - mac
   - address
+  - mac
   - network
 maj 1:
   url: http://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q={%query}&btnG=Search&sitesearch=MajorGeeks.com
@@ -4214,9 +4214,9 @@ maven 1:
   url: http://search.maven.org/#search|ga|1|{%query}
   title: Maven Search
   tags:
-  - programming
   - java
   - maven
+  - programming
   examples:
     print: Search for "print"
 maxent 0:
@@ -4253,8 +4253,8 @@ md5 1:
   url: http://stefanschramm.net/dev/hash/?algo=md5&q={%data}
   title: MD5 Hash
   tags:
-  - md5
   - hash
+  - md5
   - programming
   examples:
     foo: Calculate MD5 hash of "foo"
@@ -4262,8 +4262,8 @@ mdn 1:
   url: http://developer.mozilla.org/{$language}/search?q={%query}
   title: Mozilla Developer Network
   tags:
-  - programming
   - mozilla
+  - programming
   examples:
     javascript: Search for "javascript"
 me 1:
@@ -4285,8 +4285,8 @@ mema 1:
   url: http://memory-alpha.org/index.php?title=Special%3ASearch&search={%query}
   title: Memory Alpha
   tags:
-  - star trek
   - science-fiction
+  - star trek
   examples:
     kirk: Search for "kirk"
 mesh 1:
@@ -4322,8 +4322,8 @@ mink 1:
   title: Mink
   description: Mink is an open source browser controller/emulator for web applications, written in PHP.
   tags:
-  - mink
   - behat
+  - mink
   - programming
   examples:
     getTagName: Search Mink for "getTagName"
@@ -4381,33 +4381,33 @@ mwe 0:
   url: http://www.mediawiki.org/wiki/Category:Extensions
   title: Browse MediaWiki Extensions
   tags:
-  - wiki
   - mediawiki
+  - wiki
 mwe 1:
   url: http://www.mediawiki.org/wiki/Special:Search?search={%query}&ns102=1&fulltext=Search
   title: Search MediaWiki Extensions
   tags:
-  - wiki
   - mediawiki
+  - wiki
 mww 1:
   url: http://www.mediawiki.org/wiki/Special:Search?search={%query}&go=Go
   title: Mediawiki Wiki
   tags:
-  - wiki
   - mediawiki
+  - wiki
 mwwg 1:
   url: http://www.google.com/search?hl={$language}&sitesearch=mediawiki.org&domains=mediawiki.org&q={%query}
   title: Mediawiki Wiki via Google
   tags:
-  - wiki
   - mediawiki
+  - wiki
 myfritz 0:
   url: https://www.myfritz.net/login.xhtml
   title: fritz.box access worldwide
   tags:
   - internetprovider
-  - router
   - remoteaccess
+  - router
 myg 1:
   url: http://www.google.com/search?q={%query}
   title: Google search
@@ -4451,8 +4451,8 @@ n 0:
   title: Netflix
   description: go to Netflix homepage
   tags:
-  - netflix
   - movies
+  - netflix
   - series
   - stream
 n 1:
@@ -4460,8 +4460,8 @@ n 1:
   title: Netflix
   description: searches Netflix for a movie or series
   tags:
-  - netflix
   - movies
+  - netflix
   - series
   - stream
   examples:
@@ -4485,10 +4485,10 @@ ng 0:
   url: http://docs.angularjs.org/
   title: AngularJS Documentation
   tags:
-  - programming
-  - javascript
   - angular
   - angularjs
+  - javascript
+  - programming
   examples:
     repeat: Show documentation on "ng-repeat"
     filter: Show documentation on "filter"
@@ -4496,10 +4496,10 @@ ng 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=inurl%3Adocs.angularjs.org%2Fapi%20{%query}
   title: AngularJS Documentation
   tags:
-  - programming
-  - javascript
   - angular
   - angularjs
+  - javascript
+  - programming
   examples:
     repeat: Show documentation on "ng-repeat"
     filter: Show documentation on "filter"
@@ -4532,9 +4532,9 @@ npm 1:
   url: https://npmjs.org/search?q={%query}
   title: Node.js Package Manager
   tags:
-  - programming
   - javascript
   - node.js
+  - programming
   examples:
     mkdir: search for a module to create folders on the filesystem
 npr 1:
@@ -4561,9 +4561,9 @@ oca 1:
   url: http://openclipart.org/search/?query={%query}
   title: Open Clip Art Library
   tags:
-  - images
   - clipart
   - free
+  - images
   - public domain
   examples:
     rss: Search for free RSS icons
@@ -4571,8 +4571,8 @@ oeis 1:
   url: https://oeis.org/search?q={%sequence}
   title: On-Line Encyclopedia of Integer Sequences
   tags:
-  - mathematics
   - math
+  - mathematics
   examples:
     13 17 19: Search the sequence 1 3 5 7 11
 of 1:
@@ -4584,9 +4584,9 @@ okf 1:
   url: http://otrkeyfinder.com/de/?search={%Suche}
   title: otrkeyfinder.com
   tags:
-  - tv
-  - otr
   - onlinetvrecorder
+  - otr
+  - tv
   examples:
     nachrichten: Suche nach Nachrichten
 oms 1:
@@ -4621,9 +4621,9 @@ orm 1:
   url: http://www.openrailwaymap.org/?q={%query}
   title: OpenRailwayMap
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   - railway
   examples:
     berlin: Search OpenRailwayMap for "berlin"
@@ -4636,149 +4636,149 @@ osm 0:
   url: https://openstreetmap.org
   title: OpenStreetMap
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
 osm 1:
   url: https://www.openstreetmap.org/search?query={%location}
   title: OpenStreetMap
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
   - openstreetmap
+  - osm
   examples:
     berlin: Search for "berlin"
 osm 2:
   url: https://www.openstreetmap.org/search?query={%city|type=city}%2C%20{%location}
   title: OpenStreetMap with city
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
   - openstreetmap
+  - osm
   examples:
     b, brandenburger tor: Search for Brandenburger Tor in Berlin (abbreviated city name)
 osm! 1:
   url: https://nominatim.openstreetmap.org/search.php?q={%location}
   title: OpenStreetMap Nominatim
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     berlin: Search for "berlin"
 osm? 0:
   url: https://wiki.openstreetmap.org/index.php/Main_Page
   title: OpenStreetMap Wiki
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
 osm? 1:
   url: https://wiki.openstreetmap.org/index.php/Special:Search?search={%query}&fulltext=Search
   title: OpenStreetMap Wiki
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     import: Search for "import"
 osmc 1:
   url: https://www.openstreetmap.org/browse/changeset/{%changeset}
   title: OpenStreetMap Changeset Browser
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     '5275118': Search for "5275118"
 osmf 0:
   url: https://forum.openstreetmap.org
   title: OpenStreetMap Forum
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
 osmg 1:
   url: https://www.google.com/search?hl={$language}&sitesearch=wiki.openstreetmap.org&domains=wiki.openstreetmap.org&q={%page}
   title: OpenStreetMap Wiki via Google
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     import: Search for "import"
 osmk 1:
   url: https://wiki.openstreetmap.org/wiki/Key:{%key}
   title: 'OpenStreetMap Wiki: Key Reference'
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     highway: Search for "highway"
 osmn 1:
   url: https://www.openstreetmap.org/browse/node/{%node}
   title: OpenStreetMap Node Browser
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     '847124696': Search for "847124696"
 osmr 1:
   url: https://www.openstreetmap.org/browse/relation/{%relation}
   title: OpenStreetMap Relation Browser
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     '206570': Search for "206570"
 osmrank 1:
   url: http://hdyc.neis-one.org/?{%user}
   title: OpenStreetMap User Rank
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     jorges: Search for "jorges"
 osmti 1:
   url: https://taginfo.openstreetmap.org/keys/{%key}
   title: OpenStreetMap Tag Info
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     highway: Search for "highway"
 osmti 2:
   url: https://taginfo.openstreetmap.org/tags/{%key}={%value}
   title: OpenStreetMap Tag Info
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     higway, residential: Search for highway=residential
 osmu 1:
   url: https://www.openstreetmap.org/user/{%user}
   title: OpenStreetMap User
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     jorges: Search for "jorges"
 osmw 1:
   url: https://www.openstreetmap.org/browse/way/{%way}
   title: OpenStreetMap Way Browser
   tags:
-  - osm
-  - maps
   - copyleft
+  - maps
+  - osm
   examples:
     '23425344': Search for "23425344"
 otr 0:
@@ -4811,8 +4811,8 @@ owncloud 0:
   description: owncloud is a Open source cloud server and client software.
   tags:
   - cloud
-  - open source
   - copyleft
+  - open source
 p2r 0:
   url: http://page2rss.com
   title: Page2RSS homepage
@@ -4873,19 +4873,19 @@ perl 1:
   url: http://perldoc.perl.org/search.html?q={%query}
   title: Perldoc
   tags:
-  - programming
   - perl
+  - programming
   examples:
     our: search for "our"
 perseus 1:
   url: http://www.perseus.tufts.edu/hopper/searchresults?q={%query}
   title: Perseus Digital Library
   tags:
-  - language
-  - latin
-  - greek
   - english
   - german
+  - greek
+  - language
+  - latin
   - old english
   - old norse
   examples:
@@ -4975,16 +4975,16 @@ play 0:
   url: http://www.play.com/
   title: Play.com
   tags:
-  - shopping
-  - music
   - film
+  - music
+  - shopping
 play 1:
   url: http://www.play.com/Search.aspx?searchtype=allproducts&searchstring={%query}&page=search&pa=search&go.x=0&go.y=0
   title: Play.com
   tags:
-  - shopping
-  - music
   - film
+  - music
+  - shopping
   examples:
     forrest gump: Search for Forrest Gump media (DVD, CD)
 player 1:
@@ -5019,27 +5019,27 @@ plt 1:
   title: matplotlib via Google
   description: Quickly Google for help with matplotlib because oh boy, you need all the help you can get, and you don't want to waste time typing the unwieldy name of that library.
   tags:
-  - scientific computing
   - plot
   - plotting
   - programming
   - python
+  - scientific computing
   examples:
     heatmap: Get help on creating heatmaps with matplotlib
 plz 1:
   url: http://www.plz-postleitzahl.de/site.plz/search.html?c=plz&q={%Postleitzahl}
   title: Ort aus Postleitzahl
   tags:
-  - postleitzahl
   - post
+  - postleitzahl
   examples:
     '10117': Suche nach Ort für die Postleitzahl 10117
 pm 1:
   url: http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?CMD=search&DB=pubmed&term={%query}
   title: PubMed
   tags:
-  - science
   - health
+  - science
   examples:
     bacteria: Search for "bacteria"
 podster 1:
@@ -5064,9 +5064,9 @@ poew 1:
   title: Inofficial Path of Exile Wiki
   description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that acts as the main knowledgebase for PoE-players.
   tags:
+  - gamepedia
   - path of exile
   - poe
-  - gamepedia
   examples:
     Rhoa: Search inofficial Path of Exile Wiki for "Rhoa"
     Vendor recipe system: Search inofficial Path of Exile Wiki for "Vendor recipe system"
@@ -5100,9 +5100,9 @@ pubchem 1:
   url: http://www.ncbi.nlm.nih.gov/pccompound/?term={%compound}
   title: PubChem
   tags:
-  - science
   - chemistry
   - pubchem
+  - science
   examples:
     carbon dioxide: Search PubChem for "carbon dioxide"
 puls 0:
@@ -5233,8 +5233,8 @@ qr 1:
   url: http://chart.apis.google.com/chart?cht=qr&chs=350x350&chl={%content}
   title: QR Kaywa URL Barcode
   tags:
-  - qr
   - google
+  - qr
   examples:
     http://www.serchilo.net: Create QR code for http://www.serchilo.net
 qrdecoder 0:
@@ -5289,8 +5289,8 @@ r 1:
   title: R Statistical Data Analysis Manual
   tags:
   - programming
-  - statistics
   - r
+  - statistics
   examples:
     read.table: Show manual about "read.table"
 r2r 2:
@@ -5298,9 +5298,9 @@ r2r 2:
   title: Rome2Rio
   tags:
   - navigation
-  - vacation
   - routing
   - travel
+  - vacation
   examples:
     london, berlin: Search Rome2Rio for a connection from London to Berlin
 rae 1:
@@ -5317,15 +5317,15 @@ rails 0:
   title: Ruby on Rails Documentation
   tags:
   - programming
-  - ruby
   - rails
+  - ruby
 rails 1:
   url: http://apidock.com/rails/search?query={%query}
   title: Ruby on Rails Documentation
   tags:
   - programming
-  - ruby
   - rails
+  - ruby
   examples:
     redirect_to: Search for "redirect_to"
     link_to_remote: Search for "link_to_remote"
@@ -5344,58 +5344,58 @@ rarbg 0:
   title: RARBG
   description: RARBG torrent tracker
   tags:
-  - torrent
-  - torrents
   - download
   - downloads
+  - torrent
+  - torrents
 rarbg 1:
   url: http://rarbg.to/torrents.php?search={%query}
   title: RARBG
   description: RARBG torrent tracker
   tags:
-  - torrent
-  - torrents
   - download
   - downloads
+  - torrent
+  - torrents
 rb 0:
   url: http://www.ruby-doc.org/
   title: Ruby Documentation
   tags:
   - programming
-  - ruby
   - rails
+  - ruby
 rb 1:
   url: http://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q={%query}&sa=Search
   title: Ruby Documentation
   tags:
   - programming
-  - ruby
   - rails
+  - ruby
   examples:
     downcase: Search for "downcase"
 rbg 1:
   url: https://rubygems.org/search?utf8=%E2%9C%93&query={%query}
   title: RubyGems
   tags:
-  - ruby
   - programming
+  - ruby
   examples:
     safe_yaml: Search RubyGems for "safe_yaml"
 rblcheck 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/en/rbl-quick-check/check/&ipaddress={%ipaddress}
   title: RBL-Check (Realtime Blackhole List)
   tags:
-  - rbl
   - email
+  - rbl
   examples:
     127.0.0.1: Check if 127.0.0.1 is on the RBL
 rblcheckapi 1:
   url: http://rbl-check.org/rbl_api.php?ipaddress={%ipaddress}
   title: RBL-Check API
   tags:
-  - rbl
-  - check
   - api
+  - check
+  - rbl
   examples:
     127.0.0.1: Check if 127.0.0.1 is on the RBL
 rea 0:
@@ -5419,8 +5419,8 @@ reddit 1:
   title: Reddit
   tags:
   - forum
-  - reddit
   - old
+  - reddit
   examples:
     berlin: Search for "berlin"
 remnant 1:
@@ -5432,9 +5432,9 @@ remove 1:
   url: http://www.shouldiremoveit.com/programs.aspx?q={%product}
   title: ShouldIRemoveIt
   tags:
-  - software
-  - malware
   - adware
+  - malware
+  - software
   examples:
     Browserdefender: Search for recommendations if Browserdefender is a useful program.
 rfc 0:
@@ -5479,8 +5479,8 @@ rp18 0:
   url: https://18.re-publica.com/
   title: 'Re: Publica Congress Berlin 2018'
   tags:
-  - congress
   - berlin
+  - congress
 rs 1:
   url: http://www.rapidshare1.com/search.php?search={%file}
   title: Rapidshare
@@ -5490,8 +5490,8 @@ rt 1:
   url: http://www.rottentomatoes.com/search/?search={%query}
   title: Rotten Tomatoes
   tags:
-  - movies
   - film
+  - movies
   examples:
     forrest gump: Search Rotten Tomatoes for "forrest gump"
 rtm 0:
@@ -5555,24 +5555,24 @@ scala 0:
   url: http://www.scala-lang.org/api/current/
   title: Scala Standard Library
   tags:
-  - scala
-  - programming
-  - jvm
-  - programming language
   - api
   - apidoc
   - documentation
+  - jvm
+  - programming
+  - programming language
+  - scala
 scala 1:
   url: http://www.scala-lang.org/api/current/?search={%query}
   title: Scala Standard Library
   tags:
-  - scala
-  - programming
-  - jvm
-  - programming language
   - api
   - apidoc
   - documentation
+  - jvm
+  - programming
+  - programming language
+  - scala
   examples:
     AnyVal: Search for "AnyVal"
 scholar 1:
@@ -5678,8 +5678,8 @@ skyrock 1:
   url: http://www.skyrock.com/search/articles/?q={%query}
   title: Skyrock.com
   tags:
-  - music
   - blogs
+  - music
   examples:
     music: Search for "music"
 slashdot 0:
@@ -5730,16 +5730,16 @@ solrj 0:
   url: http://lucene.apache.org/solr/4_0_0/solr-solrj/index.html
   title: Solr Java Client API
   tags:
-  - programming
   - java
+  - programming
   examples:
     QueryResponse: search for class QueryResponse in the Solr Java Client API
 solrj 1:
   url: https://www.google.com/search?hl={$language}&q=site%3Ahttp://lucene.apache.org/solr/+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
   title: Solr Java Client API
   tags:
-  - programming
   - java
+  - programming
 somafm 0:
   url: https://somafm.com
   title: SomaFM Internetradio
@@ -5877,20 +5877,20 @@ swipl 0:
   url: http://www.swi-prolog.org/pldoc/index.html
   title: SWI-Prolog documentation
   tags:
-  - manual
-  - prolog
-  - programming
-  - documentation
   - doc
+  - documentation
+  - manual
+  - programming
+  - prolog
 swipl 1:
   url: http://www.swi-prolog.org/pldoc/search?for={%query}&in=all&match=summary
   title: SWI-Prolog documentation
   tags:
+  - doc
+  - documentation
+  - manual
   - programming
   - prolog
-  - documentation
-  - doc
-  - manual
   examples:
     append: Search SWI-Prolog site for documentation on appending
 swt 1:
@@ -5912,11 +5912,11 @@ tat 2:
   title: Tatoeba search with specified target language
   description: Use 3-letter language code!
   tags:
-  - langugage
-  - phrases
-  - phrasebook
   - dictionary
   - languages
+  - langugage
+  - phrasebook
+  - phrases
   examples:
     ita, not at all: search for Italian translations of the phrase "not at all"
 tat 3:
@@ -5924,11 +5924,11 @@ tat 3:
   title: Tatoeba search with specified source and target language
   description: Use 3-letter language codes!
   tags:
-  - langugage
-  - phrases
-  - phrasebook
   - dictionary
   - languages
+  - langugage
+  - phrasebook
+  - phrases
   examples:
     en, ita, not at all: search for Italian translations of the English phrase "not at all"
 taz 1:
@@ -5940,16 +5940,16 @@ tbaddon 0:
   url: https://addons.mozilla.org/thunderbird/
   title: Thunderbird Add-ons
   tags:
-  - thunderbird
-  - mozilla
   - addons
+  - mozilla
+  - thunderbird
 tbaddon 1:
   url: https://addons.mozilla.org/thunderbird/search?q={%addon}
   title: Thunderbird Add-ons
   tags:
-  - thunderbird
-  - mozilla
   - addons
+  - mozilla
+  - thunderbird
   examples:
     spam: Search for Thunderbird Addon about "spam"
 tc 0:
@@ -5976,24 +5976,24 @@ tdrm 0:
   url: https://tdrm.fiff.de/
   title: TDRM Tihange Doel Radiation Monitoring Network
   tags:
-  - measurement
-  - radiation measurement
-  - measurement network
   - belgium
   - france
   - germany
+  - measurement
+  - measurement network
+  - radiation measurement
 tds 0:
   url: http://www.thedailyshow.com/full-episodes/
   title: 'The Daily Show: Latest full episode'
   tags:
-  - tv
   - comedy
+  - tv
 tds 1:
   url: http://www.thedailyshow.com/video/?searchterm={%query}
   title: 'The Daily Show: Search archives'
   tags:
-  - tv
   - comedy
+  - tv
   examples:
     germany: Search "The Daily Show" archives for "germany"
 te 1:
@@ -6005,11 +6005,11 @@ techrightsfeed 0:
   url: http://techrights.org/feed/
   title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS feed)
   tags:
-  - patents
-  - patent law
+  - copyright
   - intellectual property
   - ip law
-  - copyright
+  - patent law
+  - patents
 ted 1:
   url: http://www.ted.com/search?q={%query}
   title: TED
@@ -6077,8 +6077,8 @@ time 1:
   url: http://www.timeanddate.com/worldclock/results.html?query={%location}
   title: Timeanddate.com
   tags:
-  - time
   - date
+  - time
   - timezones
   examples:
     berlin: Look up the current time and date in Berlin
@@ -6086,18 +6086,18 @@ timedate 0:
   url: https://www.timeanddate.com
   title: Time and date calculations online
   tags:
+  - date
   - info
   - service
   - time
-  - date
 timediff 0:
   url: https://www.timeanddate.com/date/duration.html
   title: Time and date difference calculator
   tags:
+  - date
   - info
   - service
   - time
-  - date
 timer 1:
   url: https://www.google.com/search?hl=en&q=timer+{%period}
   title: Timer via Google
@@ -6140,8 +6140,8 @@ tmdb 1:
   url: http://www.themoviedb.org/search?query={%title}
   title: The Open Movie Database
   tags:
-  - movies
   - cinema
+  - movies
   examples:
     forrest gump: Search for "forrest gump"
 topo 1:
@@ -6184,9 +6184,9 @@ trianglify 0:
   url: https://snorpey.github.io/triangulation/
   title: Triangulation (Low poly generation) online
   tags:
+  - image processing
   - javascript
   - online tool
-  - image processing
 trim 1:
   url: http://tr.im/marklet?url={%url}
   title: Tr.im
@@ -6196,14 +6196,14 @@ tsq 0:
   url: http://www.turbosquid.com/
   title: TurboSquid
   tags:
-  - photography
   - photo
+  - photography
 tsq 1:
   url: http://www.turbosquid.com/Search/Index.cfm?keyword={%query}
   title: TurboSquid
   tags:
-  - photography
   - photo
+  - photography
   examples:
     berlin: Search for "berlin"
 tst 1:
@@ -6222,31 +6222,31 @@ tvdb 1:
   url: http://thetvdb.com/?searchseriesid=&tab=listseries&function=Search&string={%tv-series}
   title: TVDB TV Series Search
   tags:
-  - tv
   - series
+  - tv
   examples:
     wonder years: Search for the TV show "The Wonder Years"
 tw 0:
   url: https://twitter.com/?lang={$language}
   title: Twitter Homepage
   tags:
-  - twitter
   - social network
+  - twitter
 tw 1:
   url: https://twitter.com/search?lang={$language}&q={%query}
   title: Twitter Search
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     berlin: Search Twitter for "berlin"
 twb 0:
   url: https://twitter.com/i/bookmarks
   title: Twitter Bookmarks
   tags:
-  - twitter
-  - social network
   - bookmarks
+  - social network
+  - twitter
 twingly 0:
   url: http://twingly.com/
   title: Twingly Main page
@@ -6271,30 +6271,30 @@ twl 1:
   url: https://twitter.com/search?lang={$language}&q=lang%3A{$language}%20{%query}
   title: Twitter Search, only in my language
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     berlin: Search Twitter for "berlin" only in my language
 twl 2:
   url: https://twitter.com/search?lang={$language}&q=lang%3A{%language}%20{%query}
   title: Twitter Search, only in language
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     en, berlin: Search Twitter for "berlin" only in English tweets
 twm 0:
   url: https://twitter.com/messages
   title: Twitter Messages
   tags:
-  - twitter
-  - social network
+  - chat
+  - instant message
   - message
   - messaging
-  - chat
-  - private message
-  - instant message
   - messenger
+  - private message
+  - social network
+  - twitter
 twm 1:
   url: http://twitter.com/#!/search/%40{%user}
   title: Search for Tweets that mention a specific user
@@ -6304,52 +6304,52 @@ twme 1:
   url: https://twitter.com/search?lang={$language}&q={%query}
   title: Twitter mentions
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     serchilo: Search for "serchilo"
 twn 0:
   url: https://twitter.com/notifications
   title: Twitter Notifications
   tags:
-  - twitter
-  - social network
+  - chat
+  - instant message
   - message
   - messaging
-  - chat
-  - private message
-  - instant message
   - messenger
+  - private message
+  - social network
+  - twitter
 twr 1:
   url: https://twitter.com/search?q={%query}&vertical=default&f=tweets&lang={$language}
   title: Twitter Search, realtime
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     berlin: Search for "berlin"
 twrm 1:
   url: https://mobile.twitter.com/search?lang={$language}&q={%query}
   title: Twitter Search, realtime, mobile
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     berlin: Search for "berlin"
 twu 1:
   url: https://twitter.com/{%user}?lang={$language}
   title: Twitter User
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     serchilo: Go to user page of @serchilo
 twum 1:
   url: https://mobile.twitter.com/{%user}
   title: Twitter User, mobile
   tags:
-  - twitter
   - social network
+  - twitter
   examples:
     serchilo: Go to user page of @serchilo
 ty 0:
@@ -6381,26 +6381,26 @@ ubman 1:
   url: http://manpages.ubuntu.com/cgi-bin/search.py?&ie=UTF-8&q={%query}
   title: Ubuntu Manpage
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
   examples:
     ls: Search for "ls"
 ubp 1:
   url: http://packages.ubuntu.com/{%package}
   title: Ubuntu Packages
   tags:
-  - ubuntu
   - linux
   - packages
+  - ubuntu
   examples:
     tetex: Search for tetex packages
 ubplanet 0:
   url: http://planet.ubuntu.com/
   title: Ubuntu Planet
   tags:
-  - ubuntu
   - linux
+  - ubuntu
 ubu 1:
   url: http://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query={%query}
   title: Ubu.com
@@ -6445,17 +6445,17 @@ ubw 0:
   url: https://wiki.ubuntu.com/
   title: Ubuntu.com Wiki
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
   - wiki
 ubw 1:
   url: https://wiki.ubuntu.com/?action=fullsearch&context=180&value={%query}&titlesearch=Titles
   title: Ubuntu.com Wiki
   tags:
-  - ubuntu
-  - linux
   - documentation
+  - linux
+  - ubuntu
   - wiki
   examples:
     server: Search for "server"
@@ -6463,17 +6463,17 @@ uc 1:
   url: http://www.fileformat.info/info/unicode/char/search.htm?preview=entity&q={%query}
   title: Unicode character info
   tags:
-  - unicode
   - character
+  - unicode
   examples:
     ä: Look up information about the character "ä"
 ucb 0:
   url: http://www.fileformat.info/info/unicode/block/index.htm
   title: List of Unicode blocks
   tags:
-  - unicode
-  - characters
   - blocks
+  - characters
+  - unicode
 ucs 1:
   url: http://www.fileformat.info/info/unicode/char/search.htm?q={%query}&preview=entity
   title: Unicode Character Search, not including Han codepoints
@@ -6489,15 +6489,15 @@ ud 0:
   title: Urban Dictionary
   tags:
   - dictionary
-  - slang
   - english
+  - slang
 ud 1:
   url: http://www.urbandictionary.com/define.php?term={%query}
   title: Urban Dictionary
   tags:
   - dictionary
-  - slang
   - english
+  - slang
   examples:
     wheelbo: Look up "wheelbo" in the Urban Dictionary
 uesp 1:
@@ -6509,16 +6509,16 @@ ugb 1:
   url: http://www.ultimate-guitar.com/search.php?s={%band}&w=bands
   title: 'Ultimate Guitar: Bands'
   tags:
-  - music
   - guitar
+  - music
   examples:
     beatles: Search for Beatles songs
 ugs 1:
   url: https://www.ultimate-guitar.com/search.php?search_type=title&value={%song}
   title: 'Ultimate Guitar: Songs'
   tags:
-  - music
   - guitar
+  - music
   examples:
     yesterday: Search for songs about "yesterday"
 uima 0:
@@ -6545,8 +6545,8 @@ ups 1:
   url: http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum={%tracking number}
   title: UPS tracking
   tags:
-  - ups
   - shipping
+  - ups
   examples:
     1Z9999999999999999: track shipment with the number 1Z9999999999999999
 us 1:
@@ -6577,18 +6577,18 @@ uxse 0:
   url: https://unix.stackexchange.com/
   title: Unix Stack Exchange
   tags:
-  - programming
-  - unix
   - linux
+  - programming
   - stackexchange
+  - unix
 uxse 1:
   url: https://unix.stackexchange.com/search?q={%query}
   title: Unix Stack Exchange
   tags:
-  - programming
-  - unix
   - linux
+  - programming
   - stackexchange
+  - unix
   examples:
     debian: Questions about debian
 v 1:
@@ -6613,8 +6613,8 @@ viaf 1:
   url: http://viaf.org/viaf/search?query=local.names+all+{%name}&stylesheet=/viaf/xsl/results.xsl&sortKeys=holdingscount&maximumRecords=100
   title: Virtual International Authority File
   tags:
-  - science
   - books
+  - science
   examples:
     noam chomsky: returns author records on Noam Chomsky from several national libraries
 vim 1:
@@ -6638,14 +6638,14 @@ vine 0:
   url: https://vine.co/
   title: Vine
   tags:
-  - vine
   - video
+  - vine
 vine 1:
   url: https://vine.co/search/{%query}
   title: Vine
   tags:
-  - vine
   - video
+  - vine
   examples:
     cat: Search Vine for "cat"
 visuwords 1:
@@ -6657,111 +6657,111 @@ vk 0:
   url: http://vk.com
   title: Vkontakte
   tags:
-  - vkontakte
   - social network
+  - vkontakte
 vk 1:
   url: http://vk.com/search?c%5Bq%5D={%name}
   title: Vkontakte
   tags:
-  - vkontakte
   - social network
+  - vkontakte
   examples:
     putin: search for people named "putin" on Vkontakte
 vka 0:
   url: http://vk.com/audio
   title: Vkontakte, my audio/music
   tags:
-  - vkontakte
-  - social network
   - music
+  - social network
+  - vkontakte
 vka 1:
   url: http://vk.com/audio?q={%query}
   title: Vkontakte audio/music
   tags:
-  - vkontakte
-  - social network
   - music
+  - social network
+  - vkontakte
   examples:
     chillout: search for chillout music on Vkontakte
 vkfave 0:
   url: http://vk.com/fave
   title: Vkontakte, my favourites
   tags:
-  - vkontakte
   - social network
+  - vkontakte
 vkfeed 0:
   url: http://vk.com/feed
   title: Vkontakte, my news/feed
   tags:
-  - vkontakte
   - social network
+  - vkontakte
 vkg 0:
   url: http://vk.com/groups
   title: Vkontakte, my groups/communities
   tags:
-  - vkontakte
   - social network
+  - vkontakte
 vkg 1:
   url: http://vk.com/search?c%5Bsection%5D=communities&c%5Bq%5D={%query}
   title: Vkontakte groups/communities
   tags:
-  - vkontakte
   - social network
+  - vkontakte
   examples:
     berlin: search for groups about "berlin"
 vkim 0:
   url: http://vk.com/im
   title: Vkontakte, my messages
   tags:
-  - vkontakte
   - social network
+  - vkontakte
 vkv 0:
   url: http://vk.com/video
   title: Vkontakte, my videos
   tags:
-  - vkontakte
   - social network
   - video
+  - vkontakte
 vkv 1:
   url: http://vk.com/video?q={%query}
   title: Vkontakte videos
   tags:
-  - vkontakte
   - social network
   - video
+  - vkontakte
   examples:
     berlin: search for videos about "berlin" on Vkontakte
 w 0:
   url: https://{$language}.wikipedia.org/
   title: Wikipedia Main Page
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
 w 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikipedia Article Search
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     berlin: Wikipedia article about Berlin
 wa 0:
   url: http://www.wolframalpha.com
   title: WolframAlpha
   tags:
-  - science
   - mathematics
+  - science
   - wolfram alpha
 wa 1:
   url: http://www.wolframalpha.com/input/?i={%query}
   title: WolframAlpha
   tags:
-  - science
   - mathematics
+  - science
   - wolfram alpha
   examples:
     gdp of germany vs. usa: Compare the GDP of Germany and the USA
@@ -6774,10 +6774,10 @@ wam 1:
   url: http://m.wolframalpha.com/input/?i={%query}
   title: WolframAlpha Mobile
   tags:
-  - mobile
-  - wolfram alpha
-  - science
   - mathematics
+  - mobile
+  - science
+  - wolfram alpha
   examples:
     gdp of germany vs. usa: Compare the GDP of Germany and the USA
 watchz 1:
@@ -6789,14 +6789,14 @@ wb 0:
   url: http://{$language}.wikibooks.org/
   title: Wikibooks
   tags:
-  - wiki
   - copyleft
+  - wiki
 wb 1:
   url: http://{$language}.wikibooks.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikibooks
   tags:
-  - wiki
   - copyleft
+  - wiki
 wbit 1:
   url: http://www.woerterbuch.info/?query={%query}&s=dict&l=en
   title: Woerterbuch.info
@@ -6812,9 +6812,9 @@ wbm 1:
   title: Wayback Machine
   description: Explore past snapshots of the given Web page
   tags:
+  - archive
   - internet
   - web
-  - archive
 wbn 1:
   url: http://germazope.uni-trier.de:8080/Projekte/WBB2009/StartSeite/startGlobalSearch?stichwort={%wort}
   title: Wörterbuchnetz
@@ -6824,30 +6824,30 @@ wc 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Contributions/{%user}
   title: Wikipedia, User Contributions
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     FlaBot: Search for "FlaBot"
 wd 0:
   url: https://www.wikidata.org/w/index.php?uselang={$language}
   title: Wikidata, Homepage
   tags:
-  - wikimedia
-  - wikidata
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikidata
+  - wikimedia
 wd 1:
   url: https://www.wikidata.org/w/index.php?uselang={$language}&search={%article}
   title: Wikidata
   tags:
-  - wikimedia
-  - wikidata
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikidata
+  - wikimedia
   examples:
     berlin: Search Wikidata for "Berlin"
 wde 1:
@@ -6886,20 +6886,20 @@ wf 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Search?fulltext=Search&search={%query}
   title: Wikipedia Fulltext Search
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     berlin: Search for "berlin"
 wf 2:
   url: https://{%lang}.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikipedia Article Search with free language choice
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     'als, berlin ': Alemannische Wikipedia article about Berlin
 wfr 1:
@@ -6909,38 +6909,38 @@ wg 1:
   url: https://www.google.com/search?hl={$language}&sitesearch={$language}.wikipedia.org&q={%article}
   title: Wikipedia via Google
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
   - google
+  - wiki
+  - wikipedia
   examples:
     berlin: Search for "berlin"
 wg! 1:
   url: https://www.google.com/search?hl={$language}&sitesearch={$language}.wikipedia.org&q={%article}&btnI=1
   title: Wikipedia via Google, go directly to first result
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
   - google
+  - wiki
+  - wikipedia
   examples:
     berlin: Search for "berlin"
 wg* 1:
   url: https://www.google.com/search?hl={$language}&sitesearch=wikipedia.org&q={%article}
   title: Wikipedia Article Search via Google in all languages
   tags:
-  - wikipedia
   - encyclopedia
+  - wikipedia
 wgo 1:
   url: https://www.google.com/search?hl={$language}&sitesearch=wikipedia.org&q={%article}
   title: Wikipedia via Google in all languages
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     berlin: Search for "berlin"
 wh 1:
@@ -6985,11 +6985,11 @@ wipr 0:
   url: http://www.worldipreview.com
   title: World Intellectual Property Review (WIPR)
   tags:
-  - patents
-  - patent law
+  - copyright
   - intellectual property
   - ip law
-  - copyright
+  - patent law
+  - patents
 wis 1:
   url: http://www.woerterbuch.info/?query={%query}&s=thesaurus&dl=0&l=de&showlang=de
   title: Woerterbuch.info
@@ -7007,9 +7007,9 @@ wle 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Aen.wikipedia.org+intitle%3A"list+of"+intitle%3A"episodes"+{%title}
   title: Wikipedia, List of episodes
   tags:
-  - wikipedia
-  - tv
   - series
+  - tv
+  - wikipedia
   examples:
     how i: List of all "How I Met Your Mother" episodes on Wikipedia
     girls: List of all "Girls" episodes on Wikipedia
@@ -7018,18 +7018,18 @@ wm 0:
   url: https://{$language}.m.wikipedia.org/
   title: Wikipedia, mobile
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
 wm 1:
   url: https://{$language}.m.wikipedia.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikipedia, mobile
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     berlin: Go to Wikipedia article about Berlin
 wmob 0:
@@ -7051,12 +7051,12 @@ wo 1:
   url: https://{$language}.wikipedia.org/wiki/Category:{%title}
   title: Wikipedia Category
   tags:
-  - wikipedia
-  - encyclopedia
-  - taxonomy
-  - ontology
-  - category
   - categories
+  - category
+  - encyclopedia
+  - ontology
+  - taxonomy
+  - wikipedia
   examples:
     berlin: Go to the Wikipedia category page for Berlin
 word 1:
@@ -7068,14 +7068,14 @@ wordnet 1:
   url: http://wordnetweb.princeton.edu/perl/webwn?s={%query}
   title: WordNet Search
   tags:
-  - linguistics
-  - english
   - computational linguistics
-  - word
-  - words
+  - dictionary
+  - english
+  - linguistics
   - sense
   - senses
-  - dictionary
+  - word
+  - words
   examples:
     complicated: look up senses of "complicated" in WordNet
 wpp 0:
@@ -7083,18 +7083,18 @@ wpp 0:
   title: WordPress Plugin Directory
   tags:
   - blog
+  - blog engine
   - php
   - plugin
-  - blog engine
   - wordpress
 wpp 1:
   url: http://wordpress.org/plugins/search.php?q={%query}
   title: WordPress Plugin Directory
   tags:
   - blog
+  - blog engine
   - php
   - plugin
-  - blog engine
   - wordpress
   examples:
     twitter widget: search for WordPress plugins for displaying a Twitter widget
@@ -7102,30 +7102,30 @@ wpt 0:
   url: https://wordpress.org/themes/
   title: WordPress Theme Directory
   tags:
-  - wordpress
   - themes
+  - wordpress
 wpt 1:
   url: https://wordpress.org/themes/search.php?q={%query}
   title: WordPress Theme Directory
   tags:
-  - wordpress
   - themes
+  - wordpress
   examples:
     bootstrap: search for Themes related to Bootstrap
 wq 0:
   url: http://{$language}.wikiquote.org/
   title: Wikiquote Main Page
   tags:
-  - wikiquote
-  - quotes
   - copyleft
+  - quotes
+  - wikiquote
 wq 1:
   url: http://{$language}.wikiquote.org/wiki/Special:Search?go=Article&search={%article}
   title: Wikiquote Article Search
   tags:
-  - wikiquote
-  - quotes
   - copyleft
+  - quotes
+  - wikiquote
   examples:
     einstein: Search for Einstein quotes
 wr 1:
@@ -7137,16 +7137,16 @@ ws 0:
   url: https://{$language}.wikisource.org/
   title: Wikisource
   tags:
-  - wikisource
-  - wikimedia
   - copyleft
+  - wikimedia
+  - wikisource
 ws 1:
   url: https://{$language}.wikisource.org/wiki/Special:Search?go=Article&search={%query}
   title: Wikisource
   tags:
-  - wikisource
-  - wikimedia
   - copyleft
+  - wikimedia
+  - wikisource
 wseu 1:
   url: http://watchseries.eu/search/{%query}
   title: Watch Series
@@ -7172,10 +7172,10 @@ wu 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Search?go=Article&search=User:{%user}
   title: Wikipedia, User Namespace
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     FlaBot: Search for "FlaBot"
 wv 0:
@@ -7198,10 +7198,10 @@ ww 1:
   url: https://{$language}.wikipedia.org/wiki/Special:Search?go=Article&search=Wikipedia:{%project page}
   title: Wikipedia, Wikipedia Namespace
   tags:
-  - wikipedia
-  - wiki
-  - encyclopedia
   - copyleft
+  - encyclopedia
+  - wiki
+  - wikipedia
   examples:
     npov: Search for "npov"
 wwk 1:
@@ -7223,15 +7223,15 @@ wy 0:
   url: http://{$language}.wiktionary.org/
   title: Wiktionary Main Page
   tags:
-  - wiki
   - language
+  - wiki
   - wiktionary
 wy 1:
   url: http://{$language}.wiktionary.org/wiki/Special:Search?go=Article&search={%article}
   title: Wiktionary
   tags:
-  - wiki
   - language
+  - wiki
   - wiktionary
   examples:
     stuhl: Search for "stuhl"
@@ -7256,22 +7256,22 @@ xkcd 0:
   url: http://xkcd.com/
   title: xkcd
   tags:
-  - xkcd
   - comic
+  - xkcd
 xkcd 1:
   url: http://xkcd.com/{%episode-number}/
   title: xkcd
   tags:
-  - xkcd
   - comic
+  - xkcd
   examples:
     '552': go to comic 552
 xkcds 1:
   url: https://www.ohnorobot.com/index.php?s={%query}&Search=Search&comic=56
   title: ohnorobot.com (xkcd search)
   tags:
-  - xkcd
   - comic
+  - xkcd
   examples:
     correlation: search for xkcd comics about "correlation"
 xtvi 0:
@@ -7312,8 +7312,8 @@ yandex 1:
   url: http://yandex.com/yandsearch?text={%query}
   title: Yandex Web
   tags:
-  - web search
   - old
+  - web search
   examples:
     berlin: Search for "berlin"
 yatego 1:
@@ -7333,33 +7333,33 @@ ycc 3:
   url: http://finance.yahoo.com/currency-converter/#from={%from code};to={%to code};amt={%amount}
   title: Yahoo Currency converter
   tags:
-  - finance
   - currency
+  - finance
   examples:
     usd,eur,1: Convert 1 US Dollar into Euros
 ye 0:
   url: http://www.yelp.com/
   title: Yelp
   tags:
-  - yelp
   - food
   - restaurants
+  - yelp
 ye 1:
   url: http://www.yelp.com/search?find_desc={%what}
   title: Yelp
   tags:
-  - yelp
   - food
   - restaurants
+  - yelp
   examples:
     pizza: Find pizza places in the city you were searching last on Yelp
 ye 2:
   url: http://www.yelp.com/search?find_desc={%what}&find_loc={%where}
   title: Yelp
   tags:
-  - yelp
   - food
   - restaurants
+  - yelp
   examples:
     pizza, new york: Find pizza places in New York
 yf 1:
@@ -7394,8 +7394,8 @@ yi 1:
   url: http://images.search.yahoo.com/search/images?p={%query}
   title: Yahoo Images
   tags:
-  - yahoo
   - images
+  - yahoo
   examples:
     berlin: Search for "berlin"
 yl 2:
@@ -7410,8 +7410,8 @@ ym 1:
   url: http://maps.yahoo.com/#q1={%query}
   title: Yahoo Maps
   tags:
-  - yahoo
   - maps
+  - yahoo
   examples:
     berlin: Search for "berlin"
 ymail 0:
@@ -7423,8 +7423,8 @@ yn 1:
   url: http://news.search.yahoo.com/search/news?fr=sfp&ei=UTF-8&p={%query}&vl=lang_{$language}
   title: Yahoo News
   tags:
-  - yahoo
   - news
+  - yahoo
   examples:
     berlin: Search for "berlin"
 youtube 0:
@@ -7446,16 +7446,16 @@ ypr 0:
   title: YouPronounce.it
   description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
-  - youtube
   - language
   - pronunciation
+  - youtube
 yr 1:
   url: https://yr-web-prod.we.yr.azure.nrk.cloud/nb/s%C3%B8k?q={%query}
   title: Yr weather report
   description: "yr.no is a Norwegian website for weather forecasting and other meteorological information (which is also in English). The site is a joint responsibility of the Norwegian Broadcasting Corporation and the Norwegian Meteorological Institute.\r\n\r\nThe website offers forecasts (as graphs, symbols and maps) for more than 9 million places in the world. The Norwegian forecasts are supplemented with textual forecasts, weather radars, satellite images and a wide range of more specialised forecasts. The forecasts are based on data from the Norwegian Meteorological Institute and several international meteorological organisations (ECMWF, EUMETSAT etc.)."
   tags:
-  - weather
   - forecast
+  - weather
   examples:
     Berlin: Look up the weather in Berlin
 ys 1:
@@ -7536,8 +7536,8 @@ yv 1:
   url: http://video.search.yahoo.com/search/video?p={%query}
   title: Yahoo Video
   tags:
-  - yahoo
   - video
+  - yahoo
   examples:
     berlin: Search for "berlin"
 z 1:
@@ -7569,9 +7569,9 @@ zeitdiff 0:
   url: https://www.rechner.club/datum-uhrzeit/zeitraum-berechnen
   title: Zeit- und Datumsdifferenzberechnung
   tags:
-  - time
   - date
   - difference
+  - time
 zhen 1:
   url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
   title: Chinese

@@ -2,54 +2,54 @@ bibbs 0:
   url: https://www.stadtbibliothekbasel.ch/
   title: Stadtbibliothek Basel
   tags:
-  - bibliothek
   - basel
+  - bibliothek
 bibbs 1:
   url: https://katalog.stadtbibliothekbasel.ch/GGG/WebOPAC/search/shortview?searchtype=Simple&searchField=W&searchTerm={%Suche}
   title: Stadtbibliothek Basel
   tags:
-  - bibliothek
   - basel
+  - bibliothek
   examples:
     houellebecq: Suche nach Werken von und über "houellebecq"
 campz 0:
   url: http://www.campz.ch
   title: CAMPZ Schweiz
   tags:
-  - shop
-  - outdoor
   - adventure
+  - outdoor
+  - shop
 campz 1:
   url: https://www.campz.ch/suche/?q={%Produkt}
   title: CAMPZ Schweiz
   tags:
-  - shop
-  - outdoor
   - adventure
+  - outdoor
+  - shop
   examples:
     Kocher: Search CAMPZ Schweiz for "Kocher"
 conrad 0:
   url: http://www.conrad.ch/
   title: Conrad Elektronik Schweiz
   tags:
-  - shopping
-  - electronics
   - conrad
+  - electronics
+  - shopping
 conrad 1:
   url: https://www.conrad.ch/de/search.html?search={%Artikel}
   title: Conrad Elektronik Schweiz
   tags:
-  - shopping
-  - electronics
   - conrad
+  - electronics
+  - shopping
   examples:
     glühlampe: Search Conrad Elektronik Schweiz for "glühlampe"
 digi 1:
   url: https://www.digitec.ch/de/Search?q={%query}
   title: Digitec Onlineshop
   tags:
-  - shopping
   - electronics
+  - shopping
 doit 1:
   url: http://www.doitgarden.ch/de/search/?fh_search={%query}
   title: Migros Do-it&Garden
@@ -60,16 +60,16 @@ e 0:
   url: https://www.ebay.ch/?mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ch
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
 e 1:
   url: https://www.ebay.ch/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ch
   tags:
-  - shopping
-  - ebay
   - affiliate
+  - ebay
+  - shopping
   examples:
     smartphone: Search for "smartphone"
 faust 1:
@@ -79,16 +79,16 @@ g 1:
   url: https://www.google.ch/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.ch
   tags:
-  - web search
   - google
+  - web search
   examples:
     bern: Google-Suche nach "bern"
 gm 2:
   url: https://www.google.com/maps/search/{%Stadt|type=city}%2C%20{%Straße}%2C%20Schweiz/?hl={$language}
   title: Google Maps Schweiz
   tags:
-  - maps
   - google
+  - maps
   examples:
     zh, hauptstr: Zeige Haupststraße in Zürich
     be, hauptstr: Zeige Haupststraße in Bern
@@ -96,8 +96,8 @@ gmag 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Aargau%2C%20Schweiz
   title: Google Maps Aargau
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Aargau
   deprecated:
@@ -108,8 +108,8 @@ gmbe 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bern%2C%20Schweiz
   title: Google Maps Bern
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Bern
   deprecated:
@@ -120,8 +120,8 @@ gmbs 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Basel%2C%20Schweiz
   title: Google Maps Basel
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Basel
   deprecated:
@@ -132,8 +132,8 @@ gmfr 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Freiburg%2C%20Schweiz
   title: Google Maps Freiburg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Freiburg
   deprecated:
@@ -144,8 +144,8 @@ gmge 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Genf%2C%20Schweiz
   title: Google Maps Genf
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Genf
   deprecated:
@@ -156,8 +156,8 @@ gmgl 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Glarus%2C%20Schweiz
   title: Google Maps Glarus
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Glarus
   deprecated:
@@ -168,8 +168,8 @@ gmlu 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Luzern%2C%20Schweiz
   title: Google Maps Luzern
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Luzern
   deprecated:
@@ -180,8 +180,8 @@ gmne 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neuenburg%2C%20Schweiz
   title: Google Maps Neuenburg
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Neuenburg
   deprecated:
@@ -192,8 +192,8 @@ gmsg 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+Gallen%2C%20Schweiz
   title: Google Maps St. Gallen
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in St. Gallen
   deprecated:
@@ -204,8 +204,8 @@ gmsh 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schaffhausen%2C%20Schweiz
   title: Google Maps Schaffhausen
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Schaffhausen
   deprecated:
@@ -216,8 +216,8 @@ gmso 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Solothurn%2C%20Schweiz
   title: Google Maps Solothurn
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Solothurn
   deprecated:
@@ -228,8 +228,8 @@ gmsz 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwyz%2C%20Schweiz
   title: Google Maps Schwyz
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Schwyz
   deprecated:
@@ -240,8 +240,8 @@ gmzg 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zug%2C%20Schweiz
   title: Google Maps Zug
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Zug
   deprecated:
@@ -252,8 +252,8 @@ gmzh 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Z%C3%BCrich%2C%20Schweiz
   title: Google Maps Zürich
   tags:
-  - maps
   - google
+  - maps
   examples:
     hauptstr.: Zeige Hauptstr. in Zürich
   deprecated:
@@ -264,23 +264,23 @@ gps 1:
   url: http://www.google.ch/products?hl={$language}&q={%query}
   title: Google Products (Schweiz)
   tags:
-  - shopping
   - google
+  - shopping
   examples:
     iphone: Suche nach "iphone"
 ikea 0:
   url: http://www.ikea.com/ch/
   title: IKEA Schweiz
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
 ikea 1:
   url: http://www.ikea.com/ch/de/search/?q={%query}
   title: IKEA Schweiz
   tags:
-  - ikea
   - furniture
+  - ikea
   - shopping
   examples:
     matratze: Suche nach Matratzen
@@ -311,14 +311,14 @@ plz 0:
   url: http://www.plz-suche.org/postleitzahlen-schweiz
   title: Postleitzahlen Schweiz
   tags:
-  - postleitzahl
   - geolocation
+  - postleitzahl
 plz 1:
   url: http://www.plz-suche.org/ch/plz/{%query}
   title: Postleitzahlen Schweiz
   tags:
-  - postleitzahl
   - geolocation
+  - postleitzahl
   examples:
     '3000': Search Postleitzahlen Schweiz for "3000" (Bern)
 poststelle 1:
@@ -331,8 +331,8 @@ rsc 1:
   url: http://dech.rs-online.com/web/c/?searchTerm={%Produkt}
   title: RS Components Schweiz
   tags:
-  - shopping
   - electronics
+  - shopping
   examples:
     Battery: Suche bei RS Components nach "Battery"
 sbb 0:
