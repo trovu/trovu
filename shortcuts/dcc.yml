@@ -1,3 +1,15 @@
+bg-de 1:
+  url: https://debg.dict.cc/?s={%word}
+  title: Bulgarisch-Deutsch (dict.cc)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - bulgarian
+  - german
+  examples:
+    дърво: Deutsch-Übersetzung von "дърво"
+    baum: Bulgarisch-Übersetzung von "baum"
 cs-de 1:
   url: https://decs.dict.cc/?s={%word}
   title: Tschechisch-Deutsch (dict.cc)
@@ -22,6 +34,13 @@ da-de 1:
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Dänisch-Übersetzung von "baum"
+de-bg 1:
+  title: Немски-Български (dict.cc)
+  include:
+    key: bg-de 1
+  examples:
+    baum: български превод за "baum"
+    дърво: немски превод за "дърво"
 de-cs 1:
   title: Němčina-Čeština (dict.cc)
   include:
@@ -36,6 +55,18 @@ de-da 1:
   examples:
     baum: dansk oversættelse af "baum"
     træ: tysk oversættelse af "træ"
+de-el 1:
+  url: https://deel.dict.cc/?s={%word}
+  title: Γερμανικά-Ελληνικά (dict.cc)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - greek (modern)
+  examples:
+    baum: Μετάφραση στα Ελληνικά για το "baum"
+    δέντρο: Μετάφραση στα Γερμανικά για το "δέντρο"
 de-en 1:
   url: https://deen.dict.cc/?s={%word}
   title: German-English (dict.cc)
@@ -192,6 +223,18 @@ de-ru 1:
   examples:
     baum: Перевод на русский язык для "baum"
     дерево: Перевод на немецкий язык для "дерево"
+de-sk 1:
+  url: https://desk.dict.cc/?s={%word}
+  title: Nemčina-Slovenčina (dict.cc)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - slovak
+  examples:
+    baum: slovenčina preklad pre "baum"
+    strom: nemčina preklad pre "strom"
 de-sv 1:
   url: https://desv.dict.cc/?s={%word}
   title: Tyska-Svenska (dict.cc)
@@ -204,6 +247,25 @@ de-sv 1:
   examples:
     baum: svenska-översättning av "baum"
     träd: tyska-översättning av "träd"
+de-tr 1:
+  url: https://detr.dict.cc/?s={%word}
+  title: Almanca-Türkçe (dict.cc)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - turkish
+  examples:
+    baum: '"baum" için Türkçe çevirisi'
+    ağaç: '"ağaç" için Almanca çevirisi'
+el-de 1:
+  title: Griechisch-Deutsch (dict.cc)
+  include:
+    key: de-el 1
+  examples:
+    δέντρο: Deutsch-Übersetzung von "δέντρο"
+    baum: Griechisch-Übersetzung von "baum"
 en-de 1:
   title: Englisch-Deutsch (dict.cc)
   include:
@@ -295,6 +357,13 @@ ru-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Russisch-Übersetzung von "baum"
+sk-de 1:
+  title: Slowakisch-Deutsch (dict.cc)
+  include:
+    key: de-sk 1
+  examples:
+    strom: Deutsch-Übersetzung von "strom"
+    baum: Slowakisch-Übersetzung von "baum"
 sv-de 1:
   title: Schwedisch-Deutsch (dict.cc)
   include:
@@ -302,3 +371,10 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+tr-de 1:
+  title: Türkisch-Deutsch (dict.cc)
+  include:
+    key: de-tr 1
+  examples:
+    ağaç: Deutsch-Übersetzung von "ağaç"
+    baum: Türkisch-Übersetzung von "baum"
