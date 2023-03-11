@@ -16,7 +16,7 @@ export default class NamespaceFetcher {
         namespaceInfo.shortcuts[key] = this.addInfo(
           namespaceInfo.shortcuts[key],
           key,
-          namespaceInfo,
+          namespaceInfo.name,
         );
       }
     }
@@ -176,10 +176,10 @@ export default class NamespaceFetcher {
    *
    * @return {object} shortcut - Shortcut with info.
    */
-  addInfo(shortcut, key, namespaceInfo) {
+  addInfo(shortcut, key, namespaceName) {
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
-    shortcut.namespace = namespaceInfo.name;
+    shortcut.namespace = namespaceName;
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
     shortcut.title = shortcut.title || '';
     return shortcut;
