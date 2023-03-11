@@ -258,6 +258,10 @@ actions['createDictionaryInfo'] = async function () {
 
   for (const lang1 in dicts[dict].pairs) {
     for (const lang2 in dicts[dict].pairs[lang1]) {
+      if (!languages.getName(lang1, lang2)) {
+        console.log(`Missing code for ${lang1}-${lang2}`);
+        return;
+      }
       logKey(lang1, lang2);
       logUrl(lang1, lang2);
       logTitle(lang1, lang2);
