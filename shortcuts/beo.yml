@@ -1,0 +1,19 @@
+de-en 1:
+  url: https://dict.tu-chemnitz.de/dings.cgi?service=deen&query={%word}
+  title: German-English (Beolingus)
+  tags:
+  - dictionary
+  - language
+  - leo
+  - german
+  - english
+  examples:
+    baum: English translation of "baum"
+    tree: German translation of "tree"
+en-de 1:
+  title: Englisch-Deutsch (Beolingus)
+  include:
+    key: de-en 1
+  examples:
+    tree: Deutsch-Übersetzung von "tree"
+    baum: Englisch-Übersetzung von "baum"
