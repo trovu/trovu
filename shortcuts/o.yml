@@ -712,13 +712,13 @@ bv 1:
   - web search
   examples:
     berlin: Search for "berlin"
-c++ 0:
+cpp 0:
   url: https://cppreference.com/
   title: C++ Reference (cppreference.com)
   tags:
   - c++
   - programming
-c++ 1:
+cpp 1:
   url: https://www.google.com/search?hl={$language}&btnI=&sourceid=navclient&gfns=1&q=site:cppreference.com%20{%query}&ie=utf-8
   title: C++ Reference (cppreference.com)
   tags:
