@@ -66,7 +66,7 @@ export default class Home {
         break;
     }
 
-    new Suggestions(this.env.namespaces, this.submitQuery);
+    new Suggestions(this.env.namespaceInfos, this.submitQuery);
     document.querySelector('#query').focus();
   }
 

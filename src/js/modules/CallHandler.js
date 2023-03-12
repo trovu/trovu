@@ -3,7 +3,6 @@
 import Env from './Env.js';
 import ShortcutFinder from './ShortcutFinder.js';
 import Helper from './Helper.js';
-import QueryParser from './QueryParser.js';
 import UrlProcessor from './UrlProcessor.js';
 
 /** Handle a call. */
@@ -57,21 +56,7 @@ export default class CallHandler {
       return response;
     }
 
-    Object.assign(env, QueryParser.parse(env.query));
-
-    // Add extraNamespace if parsed in query.
-    // TODO: Maybe move this to Env,
-    // as it would be good to do the fetching all at once.
-    // Yes, this would mean to call QueryParser.parse() much earlier,
-    // i.e. before env.populate
-    // but that's maybe worth it,
-    // also to merge this with the reload:/debug: parse.
-    if (env.extraNamespaceName) {
-      await this.addExtraNamespace(env);
-    }
-
-    const shortcuts = await ShortcutFinder.collectShortcuts(env);
-    const shortcut = ShortcutFinder.pickShortcut(shortcuts, env.namespaces);
+    const shortcut = await ShortcutFinder.findShortcut(env);
 
     if (!shortcut) {
       response.status = 'not_found';
@@ -110,21 +95,6 @@ export default class CallHandler {
     );
 
     return response;
-  }
-
-  /**
-   * Adding extra namespace if such one was called in the query.
-   */
-  static async addExtraNamespace(env) {
-    env.extraNamespace = env.addFetchUrlToNamespace(env.extraNamespaceName);
-    [env.extraNamespace] = await env.getShortcuts(
-      [env.extraNamespace],
-      env.reload,
-      env.debug,
-    );
-    if (env.extraNamespace) {
-      env.namespaces.push(env.extraNamespace);
-    }
   }
 
   static getAlternative(shortcut, env) {

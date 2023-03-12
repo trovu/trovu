@@ -1,6 +1,5 @@
 /** @module Settings */
 
-import jsyaml from 'js-yaml';
 import countriesList from 'countries-list';
 
 /** Settings methods. */

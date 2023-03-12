@@ -6,6 +6,36 @@ import Helper from './Helper.js';
 
 export default class QueryParser {
   /**
+   * Parse the query into its all details.
+   *
+   * @param {string} query          - The whole query.
+   *
+   * @return {object}               - Contains various values parsed from the query.
+   */
+  static parse(query) {
+    const env = {};
+    env.query = query;
+    Object.assign(env, QueryParser.setFlagsFromQuery(env));
+
+    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(
+      env.query,
+    );
+    env.keyword = env.keyword.toLowerCase();
+    env.args = this.getArguments(env.argumentString);
+
+    [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(env.keyword);
+    if (env.extraNamespaceName) {
+      const languageOrCountry =
+        this.getLanguageAndCountryFromExtraNamespaceName(
+          env.extraNamespaceName,
+        );
+      Object.assign(env, languageOrCountry);
+    }
+
+    return env;
+  }
+
+  /**
    * Get keyword and argument string from query.
    *
    * @param {string} query          - The whole query.
@@ -15,7 +45,16 @@ export default class QueryParser {
    * - {string} argumentString    - The whole argument string.
    */
   static getKeywordAndArgumentString(query) {
-    const [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
+    let keyword, argumentString;
+
+    [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
+
+    if (typeof keyword === 'undefined') {
+      keyword = '';
+    }
+    if (typeof argumentString === 'undefined') {
+      argumentString = '';
+    }
 
     return [keyword, argumentString];
   }
@@ -96,29 +135,19 @@ export default class QueryParser {
     return env;
   }
 
-  /**
-   * Parse the query into its all details.
-   *
-   * @param {string} query          - The whole query.
-   *
-   * @return {object}               - Contains various values parsed from the query.
-   */
-  static parse(query) {
-    const env = {};
-
-    [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(query);
-    env.keyword = env.keyword.toLowerCase();
-    env.args = this.getArguments(env.argumentString);
-
-    [env.extraNamespaceName, env.keyword] = this.getExtraNamespace(env.keyword);
-    if (env.extraNamespaceName) {
-      const languageOrCountry =
-        this.getLanguageAndCountryFromExtraNamespaceName(
-          env.extraNamespaceName,
-        );
-      Object.assign(env, languageOrCountry);
+  static setFlagsFromQuery(env) {
+    if (env.query) {
+      // Check for debug.
+      if (env.query.match(/^debug:/)) {
+        env.debug = true;
+        env.query = env.query.replace(/^debug:/, '');
+      }
+      // Check for reload.
+      if (env.query.match(/^reload:/) || env.query.match(/^reload$/)) {
+        env.reload = true;
+        env.query = env.query.replace(/^reload(:?)/, '');
+      }
     }
-
     return env;
   }
 }

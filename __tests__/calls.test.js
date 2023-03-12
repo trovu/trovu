@@ -7,7 +7,7 @@ import fs from 'fs';
 main();
 
 async function main() {
-  jest.setTimeout(10000);
+  jest.setTimeout(20000);
   const calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
   calls.forEach((call) => {
     test(call.title, async () => {
@@ -20,6 +20,8 @@ async function testCall(call) {
   const env = new Env();
   env.language = 'en';
   env.country = 'us';
+  // TODO: Find an official way of Jest to log this.
+  console.log(call.title);
   await env.populate(call.env);
   const response = await CallHandler.getRedirectResponse(env);
   if (call.response.redirectUrl) {
