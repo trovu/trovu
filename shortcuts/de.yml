@@ -385,6 +385,10 @@ en-leo 1:
   include:
     key: en-de 1
     namespace: leo
+en-lge 1:
+  include:
+    key: en-de 1
+    namespace: lge
 enb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?lang=de&service=deen&opterrors=0&optpro=0&query={%query}
   title: Englisch-Deutsch (Beolingus)
@@ -455,6 +459,10 @@ es 1:
   include:
     key: es-de 1
     namespace: leo
+es-lge 1:
+  include:
+    key: es-de 1
+    namespace: lge
 es-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Spanisch-Deutsch PONS
@@ -570,6 +578,10 @@ fr 1:
   include:
     key: fr-de 1
     namespace: leo
+fr-lge 1:
+  include:
+    key: fr-de 1
+    namespace: lge
 fr-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
   title: Französisch-Deutsch PONS
@@ -1096,6 +1108,10 @@ pl 1:
   examples:
     baum: Übersetzung von "baum"
     drzewo: Übersetzung von "drzewo"
+pl-lge 1:
+  include:
+    key: pl-de 1
+    namespace: lge
 plb 1:
   url: https://de.bab.la/woerterbuch/polnisch-deutsch/{%Wort}
   title: Polnisch-Deutsch (bab.la)
@@ -1148,6 +1164,10 @@ pt 1:
   - portugese
   examples:
     baum: Übersetzung für "baum"
+pt-lge 1:
+  include:
+    key: pt-de 1
+    namespace: lge
 ptb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%wort}
   title: Portugiesisch-Deutsch (Beolingus)
