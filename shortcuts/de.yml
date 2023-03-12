@@ -423,16 +423,10 @@ endung 1:
   examples:
     flv: Search Endungen.de for "flv"
 eni 1:
-  url: http://www.linguee.com/english-german/search?source=auto&query={%Wort}
-  title: Englisch-Deutsch (Linguee)
-  tags:
-  - dictionary
-  - english
-  - german
-  - language
-  - linguee
-  examples:
-    tree: Translation of "tree"
+  deprecated:
+    alternative:
+      query: en-lge {%1}
+      created: '2023-03-12'
 enp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=deen
   title: Englisch-Deutsch (Pons)
@@ -489,14 +483,10 @@ esd 1:
   examples:
     baum: Search for "baum"
 esi 1:
-  url: http://www.linguee.es/espanol-aleman/search?source=auto&query={%Wort}
-  title: Spanisch-Deutsch (Linguee)
-  tags:
-  - dictionary
-  - german
-  - language
-  - linguee
-  - spanish
+  deprecated:
+    alternative:
+      query: es-lge {%1}
+      created: '2023-03-12'
 esp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Spanisch-Deutsch (Pons)
@@ -620,14 +610,10 @@ frd 1:
   examples:
     baum: Search for "baum"
 fri 1:
-  url: http://www.linguee.fr/francais-allemand/search?source=auto&query={%Wort}
-  title: Französisch-Deutsch (Linguee)
-  tags:
-  - dictionary
-  - french
-  - german
-  - language
-  - linguee
+  deprecated:
+    alternative:
+      query: fr-lge {%1}
+      created: '2023-03-12'
 frp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
   title: Französisch-Deutsch (Pons)
@@ -1133,16 +1119,10 @@ pld 1:
   examples:
     baum: Search for "baum"
 pli 1:
-  url: https://www.linguee.de/deutsch-polnisch/search?query={%Wort}&source=auto
-  title: Polnisch-Deutsch (Linguee)
-  tags:
-  - dictionary
-  - german
-  - language
-  - polish
-  examples:
-    baum: Übersetzung von "baum"
-    drzewo: Übersetzung von "drzewo"
+  deprecated:
+    alternative:
+      query: pl-lge {%1}
+      created: '2023-03-12'
 plp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Pons)
@@ -1190,14 +1170,10 @@ ptd 1:
   examples:
     baum: Search for "baum"
 pti 1:
-  url: https://www.linguee.pt/portugues-alemao/search?source=auto&query={%Wort}
-  title: Portugiesisch-Deutsch (Linguee)
-  tags:
-  - dictionary
-  - german
-  - language
-  - linguee
-  - spanish
+  deprecated:
+    alternative:
+      query: pt-lge {%1}
+      created: '2023-03-12'
 ptp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dept
   title: Portugiesisch-Deutsch (Pons)
