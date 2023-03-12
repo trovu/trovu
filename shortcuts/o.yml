@@ -712,18 +712,6 @@ bv 1:
   - web search
   examples:
     berlin: Search for "berlin"
-cpp 0:
-  url: https://cppreference.com/
-  title: C++ Reference (cppreference.com)
-  tags:
-  - c++
-  - programming
-cpp 1:
-  url: https://www.google.com/search?hl={$language}&btnI=&sourceid=navclient&gfns=1&q=site:cppreference.com%20{%query}&ie=utf-8
-  title: C++ Reference (cppreference.com)
-  tags:
-  - c++
-  - programming
 c3tv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
@@ -975,8 +963,14 @@ cplusplus 1:
   title: Cplusplus.com
   tags:
   - old
+cpp 0:
+  url: https://cppreference.com/
+  title: C++ Reference (cppreference.com)
+  tags:
+  - c++
+  - programming
 cpp 1:
-  url: http://en.cppreference.com/mwiki/index.php?search={%query}
+  url: https://www.google.com/search?hl={$language}&btnI=&sourceid=navclient&gfns=1&q=site:cppreference.com%20{%query}&ie=utf-8
   title: C++ Reference (cppreference.com)
   tags:
   - c++
