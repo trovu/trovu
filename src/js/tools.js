@@ -307,7 +307,6 @@ actions['createDictionaryInfo'] = async function () {
     console.log('  tags:');
     console.log('  - dictionary');
     console.log('  - language');
-    console.log('  - leo');
     console.log(`  - ${anticapitalize(languages.getName(lang1, 'en'))}`);
     console.log(`  - ${anticapitalize(languages.getName(lang2, 'en'))}`);
   }
