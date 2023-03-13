@@ -53,10 +53,7 @@ function writeYmls(ymls) {
     const yml = ymls[ymlFileName];
     const ymlSorted = sortObject(yml);
     for (const shortcut of Object.values(yml)) {
-      if (!shortcut.tags) {
-        continue;
-      }
-      shortcut.tags.sort();
+      if (shortcut.tags) shortcut.tags.sort();
     }
     // TODO:
     // trim strings: - keys - titles - examples - description
