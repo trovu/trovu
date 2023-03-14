@@ -7,6 +7,7 @@ import html from '@rollup/plugin-html';
 import { readFileSync } from 'fs';
 import copy from 'rollup-plugin-copy';
 import watch from 'rollup-plugin-watch';
+import gitInfo from 'rollup-plugin-git-info';
 
 const isProduction = process.env.BUILD === 'production';
 
@@ -15,6 +16,7 @@ const output = {
   name: 'process',
   entryFileNames: '[name].[hash].js',
   sourcemap: true,
+  format: 'es',
 };
 
 const template = (templateFilePath) => {
@@ -53,6 +55,7 @@ export default [
           { src: 'src/opensearch/', dest: 'dist/public/' },
         ],
       }),
+      gitInfo(),
     ],
   },
   {
