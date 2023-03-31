@@ -1934,16 +1934,6 @@ exkcd 1:
   - xkcd
   examples:
     polish sausage: Explain the comic about polish sausage
-facebook 0:
-  deprecated:
-    alternative:
-      query: fb
-    created: '2023-01-15'
-facebook 1:
-  deprecated:
-    alternative:
-      query: fb {%1}
-    created: '2023-01-15'
 faust 1:
   deprecated:
     alternative:
