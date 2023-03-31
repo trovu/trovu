@@ -1,5 +1,7 @@
 /** @module Helper */
 
+import pkg from '../../../package.json';
+
 /** Helper methods. */
 
 export default class Helper {
@@ -113,5 +115,9 @@ export default class Helper {
     }
     urlParams.sort();
     return urlParams;
+  }
+
+  static logVersion() {
+    console.log(`Trovu running version ${pkg.version}`);
   }
 }

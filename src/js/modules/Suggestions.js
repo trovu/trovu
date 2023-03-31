@@ -1,8 +1,7 @@
 /** @module Suggestions */
 
-import Awesomplete from 'awesomplete';
 import 'awesomplete/awesomplete.css';
-
+import Awesomplete from 'awesomplete';
 import Helper from './Helper.js';
 import QueryParser from './QueryParser.js';
 

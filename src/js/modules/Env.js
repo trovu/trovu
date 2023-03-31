@@ -1,9 +1,9 @@
 /** @module Env */
 
-import jsyaml from 'js-yaml';
 import Helper from './Helper.js';
-import QueryParser from './QueryParser.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
+import QueryParser from './QueryParser.js';
+import jsyaml from 'js-yaml';
 
 /** Set and remember the environment. */
 
