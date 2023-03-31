@@ -1,7 +1,6 @@
 /** @module Home */
 
 import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
-import pkg from '../../../package.json';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../scss/style.scss';
@@ -17,7 +16,7 @@ export default class Home {
   constructor() {}
 
   async initialize() {
-    console.log(`Trovu running version ${pkg.version}`);
+    Helper.logVersion();
 
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
