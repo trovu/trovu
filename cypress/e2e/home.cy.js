@@ -12,16 +12,11 @@ describe('template spec', () => {
   });
 
   it('should contain an Opensearch tag', () => {
-    cy.wait(500);
-    cy.get('link [rel="search"]').should(
-      'have.attr',
-      'href',
-      '/opensearch/?country=gb&amp;language=en',
+    cy.get(
+      'head link[rel="search"][href="/opensearch/?country=gb&language=en"]',
     );
-    //.contains(
-    //  '<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/?country=gb&amp;language=en" title="Trovu">',
-    //);
   });
+
   it('should have Suggestions', () => {
     cy.get('#query').first().focus();
     cy.wait(500);
