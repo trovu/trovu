@@ -4022,6 +4022,20 @@ lc 1:
   title: Logos Universal Conjugator
   tags:
   - old
+lcn 0:
+  url: http://lucene.apache.org/core/3_6_0/api/all/index.html
+  title: Lucene API
+  tags:
+  - java
+  - programming
+lcn 1:
+  url: https://www.google.com/search?hl=en&q=site%3Ahttp://lucene.apache.org/core/4_1_0/+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: Lucene API
+  tags:
+  - java
+  - programming
+  examples:
+    facet: Search for "facet"
 ldc 1:
   url: https://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.ldc.upenn.edu%2FCatalog%20{%query}&ie=utf-8
   title: Linguistic Data Consortium catalog
@@ -4143,20 +4157,6 @@ lt 1:
   title: Lingro
   tags:
   - old
-lucene 0:
-  url: http://lucene.apache.org/core/3_6_0/api/all/index.html
-  title: Lucene API
-  tags:
-  - java
-  - programming
-lucene 1:
-  url: https://www.google.com/search?hl=en&q=site%3Ahttp://lucene.apache.org/core/4_1_0/+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
-  title: Lucene API
-  tags:
-  - java
-  - programming
-  examples:
-    facet: Search for "facet"
 lw 1:
   url: https://www.lampenwelt.de/catalogsearch/result/?q={%query}
   title: Lampenwelt.de
