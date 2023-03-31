@@ -1,10 +1,9 @@
 /** @module UrlProcessor */
 
-import Helper from './Helper.js';
-
-import DateType from './type/date.js';
-import TimeType from './type/time.js';
 import CityType from './type/city.js';
+import DateType from './type/date.js';
+import Helper from './Helper.js';
+import TimeType from './type/time.js';
 
 import dayjs from 'dayjs';
 

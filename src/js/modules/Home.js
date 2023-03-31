@@ -1,14 +1,12 @@
 /** @module Home */
 
-import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
-
-import 'bootstrap/dist/css/bootstrap.css';
 import '../../scss/style.scss';
-
-import Helper from './Helper.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import Env from './Env.js';
-import Suggestions from './Suggestions';
+import Helper from './Helper.js';
 import Settings from './home/Settings.js';
+import Suggestions from './Suggestions';
 
 /** Set and manage the homepage. */
 

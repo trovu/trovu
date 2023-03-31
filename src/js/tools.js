@@ -1,14 +1,13 @@
 // Helper scripts for managing shortcuts in https://github.com/trovu/trovu-data/.
 
+const actions = {};
 const fs = require('fs');
-const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain');
+const jsyaml = require('js-yaml');
 const languages = require('@cospired/i18n-iso-languages');
+const modifiers = {};
 
 import UrlProcessor from './modules/UrlProcessor';
-
-const actions = {};
-const modifiers = {};
 
 let ymlDirPath;
 
