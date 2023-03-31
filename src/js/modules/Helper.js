@@ -118,6 +118,6 @@ export default class Helper {
   }
 
   static logVersion() {
-    console.log(`Trovu running version ${pkg.version}`);
+    console.log(`Trovu running version`, pkg.gitCommitHash, pkg.gitDate);
   }
 }
