@@ -17,7 +17,7 @@ export default class Home {
   constructor() {}
 
   async initialize() {
-    console.log(`running version ${pkg.version}`);
+    console.log(`Trovu running version ${pkg.version}`);
 
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
