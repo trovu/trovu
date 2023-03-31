@@ -4,6 +4,7 @@ import Env from './Env.js';
 import ShortcutFinder from './ShortcutFinder.js';
 import Helper from './Helper.js';
 import UrlProcessor from './UrlProcessor.js';
+import pkg from '../../../package.json';
 
 /** Handle a call. */
 
@@ -12,6 +13,8 @@ export default class CallHandler {
    * The 'main' function of this class.
    */
   static async handleCall() {
+    console.log(`Trovu running version ${pkg.version}`);
+
     const env = new Env();
     await env.populate();
 
