@@ -7431,20 +7431,6 @@ yn 1:
   - yahoo
   examples:
     berlin: Search for "berlin"
-youtube 0:
-  url: http://www.youtube.com/?hl={$language}&persist_hl=1
-  title: Youtube Homepage
-  tags:
-  - video
-  - youtube
-youtube 1:
-  url: http://www.youtube.com/results?hl={$language}&persist_hl=1&search_query={%query}
-  title: Youtube
-  tags:
-  - video
-  - youtube
-  examples:
-    cartoon: Youtube search for "cartoon"
 ypr 0:
   url: http://youpronounce.it/
   title: YouPronounce.it
