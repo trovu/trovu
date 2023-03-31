@@ -1,16 +1,15 @@
 /** @module Suggestions */
 
-import awesomplete from 'awesomplete';
 import 'awesomplete/awesomplete.css';
-
+import Awesomplete from 'awesomplete';
 import Helper from './Helper.js';
 import QueryParser from './QueryParser.js';
 
 /** Set and manage the Suggestions. */
 
 export default class Suggestions {
-  constructor(namespaces, submitQuery) {
-    this.namespaces = namespaces;
+  constructor(namespaceInfos, submitQuery) {
+    this.namespacesInfos = namespaceInfos;
     this.submitQuery = submitQuery;
 
     const queryInput = document.querySelector('#query');
@@ -136,8 +135,8 @@ export default class Suggestions {
       urlMiddleUnreachable: [],
     };
 
-    for (const namespace of this.namespaces) {
-      for (const shortcut of Object.values(namespace.shortcuts)) {
+    for (const namespaceInfo of Object.values(this.namespacesInfos)) {
+      for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
           continue;
         }

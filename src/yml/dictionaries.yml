@@ -1,0 +1,278 @@
+bab:
+  name: bab.la
+  pairs:
+    da:
+      de: https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}
+    de:
+      es: https://de.bab.la/woerterbuch/spanisch-deutsch/{%word}
+      fr: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%word}
+      it: https://de.bab.la/woerterbuch/italienisch-deutsch/{%word}
+      pl: https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}
+      ru: https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
+      sv: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
+      tr: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+beo:
+  name: Beolingus
+  pairs:
+    de:
+      en: https://dict.tu-chemnitz.de/dings.cgi?service=deen&query={%word}
+dcc:
+  name: dict.cc
+  pairs:
+    bg:
+      de: https://debg.dict.cc/?s={%word}
+    cs:
+      de: https://decs.dict.cc/?s={%word}
+    da:
+      de: https://deda.dict.cc/?s={%word}
+    de:
+      el: https://deel.dict.cc/?s={%word}
+      en: https://deen.dict.cc/?s={%word}
+      es: https://dees.dict.cc/?s={%word}
+      fi: https://defi.dict.cc/?s={%word}
+      fr: https://defr.dict.cc/?s={%word}
+      hu: https://dehu.dict.cc/?s={%word}
+      is: https://deis.dict.cc/?s={%word}
+      it: https://deit.dict.cc/?s={%word}
+      # la: https://dela.dict.cc/?s={%word}
+      nl: https://denl.dict.cc/?s={%word}
+      no: https://deno.dict.cc/?s={%word}
+      pl: https://depl.dict.cc/?s={%word}
+      pt: https://dept.dict.cc/?s={%word}
+      ro: https://dero.dict.cc/?s={%word}
+      ru: https://deru.dict.cc/?s={%word}
+      sk: https://desk.dict.cc/?s={%word}
+      sv: https://desv.dict.cc/?s={%word}
+      tr: https://detr.dict.cc/?s={%word}
+dcm:
+  name: dict.com
+  pairs:
+    ar:
+      de: https://www.dict.com/arabisch-deutsch/{%word}
+      sk: https://www.dict.com/arabsko-slovensky/{%word}
+    bg:
+      de: https://www.dict.com/bulgarisch-deutsch/{%word}
+      sk: https://www.dict.com/bulharsko-slovensky/{%word}
+    ca:
+      de: https://www.dict.com/katalanisch-deutsch/{%word}
+      sk: https://www.dict.com/katalansko-slovensky/{%word}
+    cs:
+      da: https://www.dict.com/dansko-cesky/{%word}
+      de: https://www.dict.com/nemecko-cesky/{%word}
+      el: https://www.dict.com/recko-cesky/{%word}
+      en: https://www.dict.com/anglicko-cesky/{%word}
+      es: https://www.dict.com/spanelsko-cesky/{%word}
+      et: https://www.dict.com/estonsko-cesky/{%word}
+      fi: https://www.dict.com/finsko-cesky/{%word}
+      fr: https://www.dict.com/francouzsko-cesky/{%word}
+      he: https://www.dict.com/hebrejsko-cesky/{%word}
+      hr: https://www.dict.com/chorvatsko-cesky/{%word}
+      hu: https://www.dict.com/madarsko-cesky/{%word}
+      id: https://www.dict.com/indonesko-cesky/{%word}
+      it: https://www.dict.com/italsko-cesky/{%word}
+      ja: https://www.dict.com/japonsko-cesky/{%word}
+      ko: https://www.dict.com/korejsko-cesky/{%word}
+      lt: https://www.dict.com/litevsko-cesky/{%word}
+      lv: https://www.dict.com/lotyssko-cesky/{%word}
+      nl: https://www.dict.com/nizozemsko-cesky/{%word}
+      no: https://www.dict.com/norsko-cesky/{%word}
+      pl: https://www.dict.com/polsko-cesky/{%word}
+      pt: https://www.dict.com/portugalsko-cesky/{%word}
+      ro: https://www.dict.com/rumunsko-cesky/{%word}
+      ru: https://www.dict.com/rusko-cesky/{%word}
+      sk: https://www.dict.com/slovensko-cesky/{%word}
+      sl: https://www.dict.com/slovinsko-cesky/{%word}
+      sr: https://www.dict.com/srbsko-cesky/{%word}
+      sv: https://www.dict.com/svedsko-cesky/{%word}
+      th: https://www.dict.com/thajsko-cesky/{%word}
+      tr: https://www.dict.com/turecko-cesky/{%word}
+      uk: https://www.dict.com/ukrajinsko-cesky/{%word}
+      vi: https://www.dict.com/vietnamsko-cesky/{%word}
+      zh: https://www.dict.com/cinsko-cesky/{%word}
+    da:
+      de: https://www.dict.com/danisch-deutsch/{%word}
+      sk: https://www.dict.com/dansko-slovensky/{%word}
+    de:
+      el: https://www.dict.com/griechisch-deutsch/{%word}
+      en: https://www.dict.com/englisch-deutsch/{%word}
+      es: https://www.dict.com/spanisch-deutsch/{%word}
+      et: https://www.dict.com/estnisch-deutsch/{%word}
+      fi: https://www.dict.com/finnisch-deutsch/{%word}
+      fr: https://www.dict.com/franz-deutsch/{%word}
+      he: https://www.dict.com/hebraisch-deutsch/{%word}
+      hr: https://www.dict.com/kroatisch-deutsch/{%word}
+      hu: https://www.dict.com/ungarisch-deutsch/{%word}
+      id: https://www.dict.com/indonesisch-deutsch/{%word}
+      it: https://www.dict.com/italienisch-deutsch/{%word}
+      ja: https://www.dict.com/japanisch-deutsch/{%word}
+      ko: https://www.dict.com/koreanisch-deutsch/{%word}
+      lt: https://www.dict.com/litauisch-deutsch/{%word}
+      lv: https://www.dict.com/lettisch-deutsch/{%word}
+      nl: https://www.dict.com/niederlandisch-deutsch/{%word}
+      no: https://www.dict.com/norwegisch-deutsch/{%word}
+      pl: https://www.dict.com/polnisch-deutsch/{%word}
+      pt: https://www.dict.com/portugiesisch-deutsch/{%word}
+      ro: https://www.dict.com/rumanisch-deutsch/{%word}
+      ru: https://www.dict.com/russisch-deutsch/{%word}
+      sk: https://www.dict.com/slowakisch-deutsch/{%word}
+      sl: https://www.dict.com/slowenisch-deutsch/{%word}
+      sr: https://www.dict.com/serbisch-deutsch/{%word}
+      sv: https://www.dict.com/schwedisch-deutsch/{%word}
+      th: https://www.dict.com/thai-deutsch/{%word}
+      tr: https://www.dict.com/tuerkisch-deutsch/{%word}
+      uk: https://www.dict.com/ukrainisch-deutsch/{%word}
+      vi: https://www.dict.com/vietnamesisch-deutsch/{%word}
+      zh: https://www.dict.com/chinesisch-deutsch/{%word}
+    el:
+      sk: https://www.dict.com/grecko-slovensky/{%word}
+    en:
+      sk: https://www.dict.com/anglicko-slovensky/{%word}
+    es:
+      sk: https://www.dict.com/spanielsko-slovensky/{%word}
+    et:
+      sk: https://www.dict.com/estonsko-slovensky/{%word}
+    fi:
+      sk: https://www.dict.com/finsko-slovensky/{%word}
+    fr:
+      sk: https://www.dict.com/francuzsko-slovensky/{%word}
+    he:
+      sk: https://www.dict.com/hebrejsko-slovensky/{%word}
+    hr:
+      sk: https://www.dict.com/chorvatsko-slovensky/{%word}
+    hu:
+      sk: https://www.dict.com/madarsko-slovensky/{%word}
+    id:
+      sk: https://www.dict.com/indonezsko-slovensky/{%word}
+    it:
+      sk: https://www.dict.com/taliansko-slovensky/{%word}
+    ja:
+      sk: https://www.dict.com/japonsko-slovensky/{%word}
+    ko:
+      sk: https://www.dict.com/korejsko-slovensky/{%word}
+    lt:
+      sk: https://www.dict.com/litovsko-slovensky/{%word}
+    lv:
+      sk: https://www.dict.com/lotyssko-slovensky/{%word}
+    nl:
+      sk: https://www.dict.com/holandsko-slovensky/{%word}
+    no:
+      sk: https://www.dict.com/norsko-slovensky/{%word}
+    pl:
+      sk: https://www.dict.com/polsko-slovensky/{%word}
+    pt:
+      sk: https://www.dict.com/portugalsko-slovensky/{%word}
+    ro:
+      sk: https://www.dict.com/rumunsko-slovensky/{%word}
+    ru:
+      sk: https://www.dict.com/rusko-slovensky/{%word}
+    sk:
+      sl: https://www.dict.com/slovinsko-slovensky/{%word}
+      sr: https://www.dict.com/srbsko-slovensky/{%word}
+      sv: https://www.dict.com/svedsko-slovensky/{%word}
+      th: https://www.dict.com/thajsko-slovensky/{%word}
+      tr: https://www.dict.com/turecko-slovensky/{%word}
+      uk: https://www.dict.com/ukrajinsko-slovensky/{%word}
+      vi: https://www.dict.com/vietnamsko-slovensky/{%word}
+      zh: https://www.dict.com/cinsko-slovensky/{%word}
+dpl:
+  name: DeepL
+  pairs:
+    de:
+      en: https://www.deepl.com/translator#de/en/{%text}
+      es: https://www.deepl.com/translator#de/es/{%text}
+      fr: https://www.deepl.com/translator#de/fr/{%text}
+      it: https://www.deepl.com/translator#de/it/{%text}
+      ja: https://www.deepl.com/translator#de/ja/{%text}
+      nl: https://www.deepl.com/translator#de/nl/{%text}
+      pl: https://www.deepl.com/translator#de/pl/{%text}
+      pt: https://www.deepl.com/translator#de/pt/{%text}
+      ru: https://www.deepl.com/translator#de/ru/{%text}
+      tr: https://www.deepl.com/translator#en/tr/{%text}
+      zh: https://www.deepl.com/translator#de/zh/{%text}
+leo:
+  name: leo.org
+  pairs:
+    de:
+      en: https://dict.leo.org/german-english/{%word}
+      es: https://dict.leo.org/spanisch-deutsch/{%word}
+      fr: https://dict.leo.org/französisch-deutsch/{%word}
+      it: https://dict.leo.org/italienisch-deutsch/{%word}
+      pl: https://dict.leo.org/polnisch-deutsch/{%word}
+      pt: https://dict.leo.org/portugiesisch-deutsch/{%word}
+      ru: https://dict.leo.org/russisch-deutsch/{%word}
+      zh: https://dict.leo.org/chinesisch-deutsch/{%word}
+    en:
+      es: https://dict.leo.org/spanish-english/{%word}
+      fr: https://dict.leo.org/french-english/{%word}
+      ru: https://dict.leo.org/russian-english/{%word}
+    es:
+      pt: https://dict.leo.org/espanhol-português/{%word}
+lge:
+  name: Linguee
+  pairs:
+    de:
+      en: https://www.linguee.com/english-german/search?query={%word}
+      es: httsp://www.linguee.es/espanol-aleman/search?query={%word}
+      fr: https://www.linguee.fr/francais-allemand/search?query={%word}
+      pl: https://www.linguee.de/deutsch-polnisch/search?query={%word}
+      pt: https://www.linguee.pt/portugues-alemao/search?query={%word}
+    en:
+      es: https://www.linguee.com/english-spanish/search?query={%word}
+      fr: https://www.linguee.com/english-french/search?query={%word}
+      pt: https://www.linguee.com/english-portuguese/search?query={%word}
+lgs:
+  name: Langenscheidt
+  pairs:
+    de:
+      ar: https://de.langenscheidt.com/deutsch-arabisch/{%word}
+      bg: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
+      cs: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
+      da: https://de.langenscheidt.com/deutsch-daenisch/{%word}
+      el: https://de.langenscheidt.com/deutsch-griechisch/{%word}
+      en: https://de.langenscheidt.com/deutsch-englisch/{%word}
+      es: https://de.langenscheidt.com/deutsch-spanisch/{%word}
+      fa: https://de.langenscheidt.com/deutsch-persisch/{%word}
+      fi: https://de.langenscheidt.com/deutsch-finnisch/{%word}
+      fr: https://de.langenscheidt.com/deutsch-franzoesisch/{%word}
+      hr: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
+      hu: https://de.langenscheidt.com/deutsch-ungarisch/{%word}
+      is: https://de.langenscheidt.com/deutsch-islaendisch/{%word}
+      it: https://de.langenscheidt.com/deutsch-italienisch/{%word}
+      ja: https://de.langenscheidt.com/deutsch-japanisch/{%word}
+      # la: https://de.langenscheidt.com/deutsch-latein/{%word}
+      nl: https://de.langenscheidt.com/deutsch-niederlaendisch/{%word}
+      no: https://de.langenscheidt.com/deutsch-norwegisch/{%word}
+      pl: https://de.langenscheidt.com/deutsch-polnisch/{%word}
+      pt: https://de.langenscheidt.com/deutsch-portugiesisch/{%word}
+      ro: https://de.langenscheidt.com/deutsch-rumaenisch/{%word}
+      ru: https://de.langenscheidt.com/deutsch-russisch/{%word}
+      sk: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
+      sl: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
+      sr: https://de.langenscheidt.com/deutsch-serbisch/{%word}
+      sv: https://de.langenscheidt.com/deutsch-schwedisch/{%word}
+      tr: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
+      zh: https://de.langenscheidt.com/deutsch-chinesisch/{%word}
+pns:
+  name: Pons
+  pairs:
+    de:
+      en: http://en.pons.com/translate?q={%word}&l=deen
+      el: http://en.pons.com/translate?q={%word}&l=deel
+      es: http://en.pons.com/translate?q={%word}&l=dees
+      fr: http://en.pons.com/translate?q={%word}&l=defr
+      hu: http://en.pons.com/translate?q={%word}&l=dehu
+      it: http://en.pons.com/translate?q={%word}&l=deit
+      pl: http://en.pons.com/translate?q={%word}&l=depl
+      pt: http://en.pons.com/translate?q={%word}&l=dept
+      ru: http://en.pons.com/translate?q={%word}&l=deru
+    en:
+      es: http://en.pons.com/translate?q={%word}&l=enes
+      fr: http://en.pons.com/translate?q={%word}&l=enfr
+      sl: http://en.pons.com/translate?q={%word}&l=ensl
+    fr:
+      pl: http://en.pons.com/translate?q={%word}&l=frpl
+wdk:
+  name: Wadoku
+  pairs:
+    de:
+      ja: http://www.wadoku.de/wadoku/search/{%word}

@@ -6,9 +6,8 @@ import { terser } from 'rollup-plugin-terser';
 import html from '@rollup/plugin-html';
 import { readFileSync } from 'fs';
 import copy from 'rollup-plugin-copy';
-import watch from "rollup-plugin-watch";
-
-
+import watch from 'rollup-plugin-watch';
+import gitInfo from 'rollup-plugin-git-info';
 
 const isProduction = process.env.BUILD === 'production';
 
@@ -17,6 +16,7 @@ const output = {
   name: 'process',
   entryFileNames: '[name].[hash].js',
   sourcemap: true,
+  format: 'es',
 };
 
 const template = (templateFilePath) => {
@@ -34,11 +34,11 @@ export default [
     input: 'src/js/index.js',
     output: output,
     plugins: [
-      watch({ dir: "src/html/" }),
-      watch({ dir: "src/img/" }),
+      watch({ dir: 'src/html/' }),
+      watch({ dir: 'src/img/' }),
       resolve(),
       commonjs(),
-      json(),
+      gitInfo(), // includes also json()
       scss({
         output: 'dist/public/style.css',
         outputStyle: isProduction ? 'compressed' : 'expanded',
@@ -63,7 +63,7 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      json(),
+      gitInfo(), // includes also json()
       isProduction && terser(),
       html({
         fileName: 'process/index.html',

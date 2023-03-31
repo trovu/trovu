@@ -1,13 +1,13 @@
 // Helper scripts for managing shortcuts in https://github.com/trovu/trovu-data/.
 
+const actions = {};
 const fs = require('fs');
-const jsyaml = require('js-yaml');
 const isValidDomain = require('is-valid-domain');
+const jsyaml = require('js-yaml');
+const languages = require('@cospired/i18n-iso-languages');
+const modifiers = {};
 
 import UrlProcessor from './modules/UrlProcessor';
-
-const actions = {};
-const modifiers = {};
 
 let ymlDirPath;
 
@@ -51,6 +51,9 @@ function writeYmls(ymls) {
     const ymlFilePath = ymlDirPath + ymlFileName;
     const yml = ymls[ymlFileName];
     const ymlSorted = sortObject(yml);
+    for (const shortcut of Object.values(yml)) {
+      if (shortcut.tags) shortcut.tags.sort();
+    }
     // TODO:
     // trim strings: - keys - titles - examples - description
     // make sure, subkeys are in reverse particular order: url, post_params, description, tags, examples
@@ -246,6 +249,89 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
     console.log(response.status, url);
   }
   return shortcut;
+};
+
+actions['createDictionaryInfo'] = async function () {
+  const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
+  const dicts = jsyaml.load(
+    fs.readFileSync('src/yml/dictionaries.yml', 'utf8'),
+  );
+  const dict = process.argv[3];
+
+  for (const lang1 in dicts[dict].pairs) {
+    for (const lang2 in dicts[dict].pairs[lang1]) {
+      if (!languages.getName(lang1, lang2)) {
+        console.log(`Missing code for ${lang1}-${lang2}`);
+        return;
+      }
+      if (!t.tree[lang1]) {
+        console.log(`Missing tree for ${lang1}`);
+        return;
+      }
+      if (!t.tree[lang2]) {
+        console.log(`Missing tree for ${lang2}`);
+        return;
+      }
+      logKey(lang1, lang2);
+      logUrl(lang1, lang2);
+      logTitle(lang1, lang2);
+      logTags(lang1, lang2);
+      logExamples(lang1, lang2);
+      logKey(lang2, lang1);
+      logTitle(lang2, lang1);
+      logInclude(lang2, lang1);
+      logExamples(lang2, lang1);
+    }
+  }
+
+  function logKey(lang1, lang2) {
+    console.log(`${lang1}-${lang2} 1:`);
+  }
+  function logInclude(lang1, lang2) {
+    console.log(`  include:`);
+    console.log(`    key: ${lang2}-${lang1} 1`);
+  }
+  function logUrl(lang1, lang2) {
+    console.log(`  url: ${dicts[dict].pairs[lang1][lang2]}`);
+  }
+  function logTitle(lang1, lang2) {
+    console.log(
+      '  title:',
+      `${capitalize(languages.getName(lang1, lang2))}-${capitalize(
+        languages.getName(lang2, lang2),
+      )} (${dicts[dict].name})`,
+    );
+  }
+  function logTags(lang1, lang2) {
+    console.log('  tags:');
+    console.log('  - dictionary');
+    console.log('  - language');
+    console.log(`  - ${anticapitalize(languages.getName(lang1, 'en'))}`);
+    console.log(`  - ${anticapitalize(languages.getName(lang2, 'en'))}`);
+  }
+  function logExamples(lang1, lang2) {
+    console.log('  examples:');
+    console.log(
+      '   ',
+      `${t.tree[lang1]}: ${t.desc[lang2]
+        .replace('{lang}', languages.getName(lang2, lang2))
+        .replace('{tree}', t.tree[lang1])}`,
+    );
+    console.log(
+      '   ',
+      `${t.tree[lang2]}: ${t.desc[lang2]
+        .replace('{lang}', languages.getName(lang1, lang2))
+        .replace('{tree}', t.tree[lang2])}`,
+    );
+  }
+  function capitalize(str) {
+    const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+    return capitalized;
+  }
+  function anticapitalize(str) {
+    const capitalized = str.charAt(0).toLowerCase() + str.slice(1);
+    return capitalized;
+  }
 };
 
 main();
