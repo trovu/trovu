@@ -38,7 +38,7 @@ export default [
       watch({ dir: 'src/img/' }),
       resolve(),
       commonjs(),
-      json(),
+      gitInfo(), // includes also json()
       scss({
         output: 'dist/public/style.css',
         outputStyle: isProduction ? 'compressed' : 'expanded',
@@ -55,7 +55,6 @@ export default [
           { src: 'src/opensearch/', dest: 'dist/public/' },
         ],
       }),
-      gitInfo(),
     ],
   },
   {
@@ -64,7 +63,7 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      json(),
+      gitInfo(), // includes also json()
       isProduction && terser(),
       html({
         fileName: 'process/index.html',
