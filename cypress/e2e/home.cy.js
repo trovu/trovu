@@ -24,6 +24,7 @@ describe('template spec', () => {
   });
   it('should have Suggestions', () => {
     cy.get('#query').first().focus();
+    cy.wait(500);
     cy.get('#query').type('g');
     cy.contains('Google Web Homepage');
   });
