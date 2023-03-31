@@ -3010,6 +3010,16 @@ gm 1:
   - maps
   examples:
     london: Show London on Google Maps
+gm 2:
+  url: https://www.google.com/maps/search/{%Stadt|type=city}%2C%20{%Straße}/?hl={$language}
+  title: Google Maps of a city
+  tags:
+  - google
+  - maps
+  examples:
+    b, brandenburger tor: Show Brandenburger Tor in Berlin (if using .de as country setting)
+    hh, alster: Show Alster in Hamburg (if using .de as country setting)
+    w, prater: Show Prater in Vienna (if using .at as country setting)
 gmail 0:
   url: https://mail.google.com
   title: Google Mail

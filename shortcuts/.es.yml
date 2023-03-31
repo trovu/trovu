@@ -84,15 +84,6 @@ gdtf 2:
   - tenerife
   examples:
     santa cruz, la laguna: Get a route from Santa Cruz to La Laguna
-gm 2:
-  url: https://www.google.com/maps/search/{%cuidad|type=city}%2C%20{%dirección}%2C%20España/?hl={$language}
-  title: Google Maps España
-  tags:
-  - google
-  - maps
-  examples:
-    b, barceloneta: buscar la Barceloneta en Barcelona
-    m, puerta del sol: buscar la Puerta del Sol en Madrid
 ikea 0:
   url: http://www.ikea.com/es/es/
   title: IKEA España

@@ -28,15 +28,6 @@ cp 4:
   - travel
   examples:
     bratislava, košice: Vlak alebo bus z Bratislavy do Košić o 20:00h 10.12.
-gm 2:
-  url: https://www.google.com/maps/search/{%mesto|type=city}%2C%20{%adresa}%2C%20Slovensko/?hl={$language}
-  title: Google Maps Slovensko
-  tags:
-  - google
-  - maps
-  examples:
-    ba, hlavná: Ukáž Hlavná v meste Bratislava
-    ke, hlavná: Ukáž Hlavná v meste Košice
 zsr 2:
   url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}
   title: Vlakové spojenia ŽSR

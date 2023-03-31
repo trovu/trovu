@@ -84,15 +84,6 @@ gastro 2:
   - restaurant
   examples:
     warszawa, bar mleczny: bary mleczne w Warszawie
-gm 2:
-  url: https://www.google.com/maps/search/{%miasto|type=city}%2C%20{%adres}%2C%20Polska/?hl={$language}
-  title: Google Maps Polska
-  tags:
-  - google
-  - maps
-  examples:
-    w, rynek: Pokaż rynek w Warszawie
-    dw, rynek: Pokaż rynek we Wrocławiu
 ikea 0:
   url: http://www.ikea.com/pl/pl/
   title: IKEA Polska

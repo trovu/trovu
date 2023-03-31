@@ -83,15 +83,6 @@ g 1:
   - web search
   examples:
     bern: Google-Suche nach "bern"
-gm 2:
-  url: https://www.google.com/maps/search/{%Stadt|type=city}%2C%20{%Straße}%2C%20Schweiz/?hl={$language}
-  title: Google Maps Schweiz
-  tags:
-  - google
-  - maps
-  examples:
-    zh, hauptstr: Zeige Haupststraße in Zürich
-    be, hauptstr: Zeige Haupststraße in Bern
 gmag 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Aargau%2C%20Schweiz
   title: Google Maps Aargau

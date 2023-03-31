@@ -22,15 +22,6 @@ g 1:
   - web search
   examples:
     dublin: Search Google for "dublin"
-gm 2:
-  url: https://www.google.com/maps/search/{%city|type=city}%2C%20{%street}%2C%20Ireland/?hl={$language}
-  title: Google Maps Ireland
-  tags:
-  - google
-  - maps
-  examples:
-    d, main st: Show Main Street in Dublin
-    c, main st: Show Main Street in Cork
 luas 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.luas.ie%20{%station}
   title: Luas Dublin Light Rail

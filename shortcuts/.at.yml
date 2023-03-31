@@ -72,15 +72,6 @@ gh 1:
   - shopping
   examples:
     fernseher: Search for "fernseher"
-gm 2:
-  url: https://www.google.com/maps/search/{%Stadt|type=city}%2C%20{%Straße}%2C%20Österreich/?hl={$language}
-  title: Google Maps Österreich
-  tags:
-  - google
-  - maps
-  examples:
-    w, praterstern: Zeige Praterstern in Wien
-    gd, haupstr.: Zeige Hauptstraße in Gmünd
 gmam 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Amstetten%2C%20%C3%96sterreich
   title: Google Maps Amstetten
