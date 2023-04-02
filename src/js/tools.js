@@ -272,11 +272,21 @@ actions['createDictionaryInfo'] = async function () {
         console.log(`Missing tree for ${lang2}`);
         return;
       }
+      logKey(lang1, lang2, 0);
+      logUrl(lang1, lang2, 0);
+      logTitle(lang1, lang2);
+      logTags(lang1, lang2);
+
       logKey(lang1, lang2, 1);
       logUrl(lang1, lang2, 1);
       logTitle(lang1, lang2);
       logTags(lang1, lang2);
       logExamples(lang1, lang2);
+
+      logKey(lang2, lang1, 0);
+      logTitle(lang2, lang1);
+      logInclude(lang2, lang1, 0);
+
       logKey(lang2, lang1, 1);
       logTitle(lang2, lang1);
       logInclude(lang2, lang1, 1);
