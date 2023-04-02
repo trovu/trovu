@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Homepage startup', () => {
   beforeEach(() => {
     cy.visit('/');
   });
