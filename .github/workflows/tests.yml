@@ -1,0 +1,19 @@
+name: Cypress Tests
+on:
+  push:
+    branches: [$default-branch, '*']
+  pull_request:
+    branches: [$default-branch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm run test
