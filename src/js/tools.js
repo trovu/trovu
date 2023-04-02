@@ -292,7 +292,7 @@ actions['createDictionaryInfo'] = async function () {
     console.log(`    key: ${lang2}-${lang1} 1`);
   }
   function logUrl(lang1, lang2) {
-    console.log(`  url: ${dicts[dict].pairs[lang1][lang2]}`);
+    console.log(`  url: ${dicts[dict].pairs[lang1][lang2][1]}`);
   }
   function logTitle(lang1, lang2) {
     console.log(
