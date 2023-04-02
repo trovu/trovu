@@ -33,3 +33,13 @@ describe('Homepage startup', () => {
     cy.hash().should('match', /language=pl/);
   });
 });
+
+describe('Homepage, Shortcut not found', () => {
+  it('should show not_found', () => {
+    cy.visit('/#country=gb&language=en&query=foobar&status=not_found');
+    cy.wait(500);
+    cy.contains('Could not find a matching shortcut for this query.').should(
+      'be.visible',
+    );
+  });
+});
