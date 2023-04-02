@@ -1,3 +1,11 @@
+bg-de 0:
+  url: https://debg.dict.cc/
+  title: Bulgarisch-Deutsch (dict.cc)
+  tags:
+  - bulgarian
+  - dictionary
+  - german
+  - language
 bg-de 1:
   url: https://debg.dict.cc/?s={%word}
   title: Bulgarisch-Deutsch (dict.cc)
@@ -9,6 +17,14 @@ bg-de 1:
   examples:
     дърво: Deutsch-Übersetzung von "дърво"
     baum: Bulgarisch-Übersetzung von "baum"
+cs-de 0:
+  url: https://decs.dict.cc/
+  title: Tschechisch-Deutsch (dict.cc)
+  tags:
+  - czech
+  - dictionary
+  - german
+  - language
 cs-de 1:
   url: https://decs.dict.cc/?s={%word}
   title: Tschechisch-Deutsch (dict.cc)
@@ -20,6 +36,14 @@ cs-de 1:
   examples:
     strom: Deutsch-Übersetzung von "strom"
     baum: Tschechisch-Übersetzung von "baum"
+da-de 0:
+  url: https://deda.dict.cc/
+  title: Dänisch-Deutsch (dict.cc)
+  tags:
+  - danish
+  - dictionary
+  - german
+  - language
 da-de 1:
   url: https://deda.dict.cc/?s={%word}
   title: Dänisch-Deutsch (dict.cc)
@@ -31,6 +55,10 @@ da-de 1:
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Dänisch-Übersetzung von "baum"
+de-bg 0:
+  title: Немски-Български (dict.cc)
+  include:
+    key: bg-de 0
 de-bg 1:
   title: Немски-Български (dict.cc)
   include:
@@ -38,6 +66,10 @@ de-bg 1:
   examples:
     baum: български превод за "baum"
     дърво: немски превод за "дърво"
+de-cs 0:
+  title: Němčina-Čeština (dict.cc)
+  include:
+    key: cs-de 0
 de-cs 1:
   title: Němčina-Čeština (dict.cc)
   include:
@@ -45,6 +77,10 @@ de-cs 1:
   examples:
     baum: čeština překlad pro "baum"
     strom: němčina překlad pro "strom"
+de-da 0:
+  title: Tysk-Dansk (dict.cc)
+  include:
+    key: da-de 0
 de-da 1:
   title: Tysk-Dansk (dict.cc)
   include:
@@ -52,6 +88,14 @@ de-da 1:
   examples:
     baum: dansk oversættelse af "baum"
     træ: tysk oversættelse af "træ"
+de-el 0:
+  url: https://deel.dict.cc/
+  title: Γερμανικά-Ελληνικά (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - greek (modern)
+  - language
 de-el 1:
   url: https://deel.dict.cc/?s={%word}
   title: Γερμανικά-Ελληνικά (dict.cc)
@@ -63,6 +107,14 @@ de-el 1:
   examples:
     baum: Μετάφραση στα Ελληνικά για το "baum"
     δέντρο: Μετάφραση στα Γερμανικά για το "δέντρο"
+de-en 0:
+  url: https://deen.dict.cc/
+  title: German-English (dict.cc)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
 de-en 1:
   url: https://deen.dict.cc/?s={%word}
   title: German-English (dict.cc)
@@ -74,6 +126,14 @@ de-en 1:
   examples:
     baum: English translation of "baum"
     tree: German translation of "tree"
+de-es 0:
+  url: https://dees.dict.cc/
+  title: Alemán-Español (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
 de-es 1:
   url: https://dees.dict.cc/?s={%word}
   title: Alemán-Español (dict.cc)
@@ -85,6 +145,14 @@ de-es 1:
   examples:
     baum: Traducción al Español de "baum"
     árbol: Traducción al Alemán de "árbol"
+de-fi 0:
+  url: https://defi.dict.cc/
+  title: Saksa-Suomi (dict.cc)
+  tags:
+  - dictionary
+  - finnish
+  - german
+  - language
 de-fi 1:
   url: https://defi.dict.cc/?s={%word}
   title: Saksa-Suomi (dict.cc)
@@ -96,6 +164,14 @@ de-fi 1:
   examples:
     baum: suomi-käännös sanalle "baum"
     puu: saksa-käännös sanalle "puu"
+de-fr 0:
+  url: https://defr.dict.cc/
+  title: Allemand-Français (dict.cc)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
 de-fr 1:
   url: https://defr.dict.cc/?s={%word}
   title: Allemand-Français (dict.cc)
@@ -107,6 +183,14 @@ de-fr 1:
   examples:
     baum: Traduction en Français de "baum"
     arbre: Traduction en Allemand de "arbre"
+de-hu 0:
+  url: https://dehu.dict.cc/
+  title: Német-Magyar (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - hungarian
+  - language
 de-hu 1:
   url: https://dehu.dict.cc/?s={%word}
   title: Német-Magyar (dict.cc)
@@ -118,6 +202,14 @@ de-hu 1:
   examples:
     baum: magyar fordítás a(z) "baum" számára
     fa: német fordítás a(z) "fa" számára
+de-is 0:
+  url: https://deis.dict.cc/
+  title: Þýska-Íslenska (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - icelandic
+  - language
 de-is 1:
   url: https://deis.dict.cc/?s={%word}
   title: Þýska-Íslenska (dict.cc)
@@ -129,6 +221,14 @@ de-is 1:
   examples:
     baum: Íslenska-þýðing á "baum"
     tré: Þýska-þýðing á "tré"
+de-it 0:
+  url: https://deit.dict.cc/
+  title: Tedesco-Italiano (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - italian
+  - language
 de-it 1:
   url: https://deit.dict.cc/?s={%word}
   title: Tedesco-Italiano (dict.cc)
@@ -140,6 +240,33 @@ de-it 1:
   examples:
     baum: Traduzione in italiano di "baum"
     albero: Traduzione in tedesco di "albero"
+de-la 0:
+  url: https://dela.dict.cc/
+  title: Germanica-Latina (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latin
+de-la 1:
+  url: https://dela.dict.cc/?s={%word}
+  title: Germanica-Latina (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latin
+  examples:
+    baum: Translatio in Latina pro "baum"
+    arbor: Translatio in Germanica pro "arbor"
+de-nl 0:
+  url: https://denl.dict.cc/
+  title: Duits-Nederlands (dict.cc)
+  tags:
+  - dictionary
+  - dutch
+  - german
+  - language
 de-nl 1:
   url: https://denl.dict.cc/?s={%word}
   title: Duits-Nederlands (dict.cc)
@@ -151,6 +278,14 @@ de-nl 1:
   examples:
     baum: Nederlands-vertaling van "baum"
     boom: Duits-vertaling van "boom"
+de-no 0:
+  url: https://deno.dict.cc/
+  title: Tysk-Norsk (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian
 de-no 1:
   url: https://deno.dict.cc/?s={%word}
   title: Tysk-Norsk (dict.cc)
@@ -162,6 +297,14 @@ de-no 1:
   examples:
     baum: norsk oversettelse av "baum"
     tre: tysk oversettelse av "tre"
+de-pl 0:
+  url: https://depl.dict.cc/
+  title: Niemiecki-Polski (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - polish
 de-pl 1:
   url: https://depl.dict.cc/?s={%word}
   title: Niemiecki-Polski (dict.cc)
@@ -173,6 +316,14 @@ de-pl 1:
   examples:
     baum: Tłumaczenie na język polski dla "baum"
     drzewo: Tłumaczenie na język niemiecki dla "drzewo"
+de-pt 0:
+  url: https://dept.dict.cc/
+  title: Alemão-Português (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
 de-pt 1:
   url: https://dept.dict.cc/?s={%word}
   title: Alemão-Português (dict.cc)
@@ -184,6 +335,14 @@ de-pt 1:
   examples:
     baum: Tradução em português de "baum"
     árvore: Tradução em alemão de "árvore"
+de-ro 0:
+  url: https://dero.dict.cc/
+  title: Germană-Română (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - romanian
 de-ro 1:
   url: https://dero.dict.cc/?s={%word}
   title: Germană-Română (dict.cc)
@@ -195,6 +354,14 @@ de-ro 1:
   examples:
     baum: Traducere în română pentru "baum"
     arbore: Traducere în germană pentru "arbore"
+de-ru 0:
+  url: https://deru.dict.cc/
+  title: Немецкий-Русский (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - russian
 de-ru 1:
   url: https://deru.dict.cc/?s={%word}
   title: Немецкий-Русский (dict.cc)
@@ -206,6 +373,14 @@ de-ru 1:
   examples:
     baum: Перевод на русский язык для "baum"
     дерево: Перевод на немецкий язык для "дерево"
+de-sk 0:
+  url: https://desk.dict.cc/
+  title: Nemčina-Slovenčina (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - slovak
 de-sk 1:
   url: https://desk.dict.cc/?s={%word}
   title: Nemčina-Slovenčina (dict.cc)
@@ -217,6 +392,14 @@ de-sk 1:
   examples:
     baum: slovenčina preklad pre "baum"
     strοmček: nemčina preklad pre "strοmček"
+de-sv 0:
+  url: https://desv.dict.cc/
+  title: Tyska-Svenska (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - swedish
 de-sv 1:
   url: https://desv.dict.cc/?s={%word}
   title: Tyska-Svenska (dict.cc)
@@ -228,6 +411,14 @@ de-sv 1:
   examples:
     baum: svenska-översättning av "baum"
     träd: tyska-översättning av "träd"
+de-tr 0:
+  url: https://detr.dict.cc/
+  title: Almanca-Türkçe (dict.cc)
+  tags:
+  - dictionary
+  - german
+  - language
+  - turkish
 de-tr 1:
   url: https://detr.dict.cc/?s={%word}
   title: Almanca-Türkçe (dict.cc)
@@ -239,6 +430,10 @@ de-tr 1:
   examples:
     baum: '"baum" için Türkçe çevirisi'
     ağaç: '"ağaç" için Almanca çevirisi'
+el-de 0:
+  title: Griechisch-Deutsch (dict.cc)
+  include:
+    key: de-el 0
 el-de 1:
   title: Griechisch-Deutsch (dict.cc)
   include:
@@ -246,6 +441,10 @@ el-de 1:
   examples:
     δέντρο: Deutsch-Übersetzung von "δέντρο"
     baum: Griechisch-Übersetzung von "baum"
+en-de 0:
+  title: Englisch-Deutsch (dict.cc)
+  include:
+    key: de-en 0
 en-de 1:
   title: Englisch-Deutsch (dict.cc)
   include:
@@ -253,6 +452,10 @@ en-de 1:
   examples:
     tree: Deutsch-Übersetzung von "tree"
     baum: Englisch-Übersetzung von "baum"
+es-de 0:
+  title: Spanisch-Deutsch (dict.cc)
+  include:
+    key: de-es 0
 es-de 1:
   title: Spanisch-Deutsch (dict.cc)
   include:
@@ -260,6 +463,10 @@ es-de 1:
   examples:
     árbol: Deutsch-Übersetzung von "árbol"
     baum: Spanisch-Übersetzung von "baum"
+fi-de 0:
+  title: Finnisch-Deutsch (dict.cc)
+  include:
+    key: de-fi 0
 fi-de 1:
   title: Finnisch-Deutsch (dict.cc)
   include:
@@ -267,6 +474,10 @@ fi-de 1:
   examples:
     puu: Deutsch-Übersetzung von "puu"
     baum: Finnisch-Übersetzung von "baum"
+fr-de 0:
+  title: Französisch-Deutsch (dict.cc)
+  include:
+    key: de-fr 0
 fr-de 1:
   title: Französisch-Deutsch (dict.cc)
   include:
@@ -274,6 +485,10 @@ fr-de 1:
   examples:
     arbre: Deutsch-Übersetzung von "arbre"
     baum: Französisch-Übersetzung von "baum"
+hu-de 0:
+  title: Ungarisch-Deutsch (dict.cc)
+  include:
+    key: de-hu 0
 hu-de 1:
   title: Ungarisch-Deutsch (dict.cc)
   include:
@@ -281,6 +496,10 @@ hu-de 1:
   examples:
     fa: Deutsch-Übersetzung von "fa"
     baum: Ungarisch-Übersetzung von "baum"
+is-de 0:
+  title: Isländisch-Deutsch (dict.cc)
+  include:
+    key: de-is 0
 is-de 1:
   title: Isländisch-Deutsch (dict.cc)
   include:
@@ -288,6 +507,10 @@ is-de 1:
   examples:
     tré: Deutsch-Übersetzung von "tré"
     baum: Isländisch-Übersetzung von "baum"
+it-de 0:
+  title: Italienisch-Deutsch (dict.cc)
+  include:
+    key: de-it 0
 it-de 1:
   title: Italienisch-Deutsch (dict.cc)
   include:
@@ -295,6 +518,21 @@ it-de 1:
   examples:
     albero: Deutsch-Übersetzung von "albero"
     baum: Italienisch-Übersetzung von "baum"
+la-de 0:
+  title: Latein-Deutsch (dict.cc)
+  include:
+    key: de-la 0
+la-de 1:
+  title: Latein-Deutsch (dict.cc)
+  include:
+    key: de-la 1
+  examples:
+    arbor: Deutsch-Übersetzung von "arbor"
+    baum: Latein-Übersetzung von "baum"
+nl-de 0:
+  title: Niederländisch-Deutsch (dict.cc)
+  include:
+    key: de-nl 0
 nl-de 1:
   title: Niederländisch-Deutsch (dict.cc)
   include:
@@ -302,6 +540,10 @@ nl-de 1:
   examples:
     boom: Deutsch-Übersetzung von "boom"
     baum: Niederländisch-Übersetzung von "baum"
+no-de 0:
+  title: Norwegisch-Deutsch (dict.cc)
+  include:
+    key: de-no 0
 no-de 1:
   title: Norwegisch-Deutsch (dict.cc)
   include:
@@ -309,6 +551,10 @@ no-de 1:
   examples:
     tre: Deutsch-Übersetzung von "tre"
     baum: Norwegisch-Übersetzung von "baum"
+pl-de 0:
+  title: Polnisch-Deutsch (dict.cc)
+  include:
+    key: de-pl 0
 pl-de 1:
   title: Polnisch-Deutsch (dict.cc)
   include:
@@ -316,6 +562,10 @@ pl-de 1:
   examples:
     drzewo: Deutsch-Übersetzung von "drzewo"
     baum: Polnisch-Übersetzung von "baum"
+pt-de 0:
+  title: Portugiesisch-Deutsch (dict.cc)
+  include:
+    key: de-pt 0
 pt-de 1:
   title: Portugiesisch-Deutsch (dict.cc)
   include:
@@ -323,6 +573,10 @@ pt-de 1:
   examples:
     árvore: Deutsch-Übersetzung von "árvore"
     baum: Portugiesisch-Übersetzung von "baum"
+ro-de 0:
+  title: Rumänisch-Deutsch (dict.cc)
+  include:
+    key: de-ro 0
 ro-de 1:
   title: Rumänisch-Deutsch (dict.cc)
   include:
@@ -330,6 +584,10 @@ ro-de 1:
   examples:
     arbore: Deutsch-Übersetzung von "arbore"
     baum: Rumänisch-Übersetzung von "baum"
+ru-de 0:
+  title: Russisch-Deutsch (dict.cc)
+  include:
+    key: de-ru 0
 ru-de 1:
   title: Russisch-Deutsch (dict.cc)
   include:
@@ -337,6 +595,10 @@ ru-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Russisch-Übersetzung von "baum"
+sk-de 0:
+  title: Slowakisch-Deutsch (dict.cc)
+  include:
+    key: de-sk 0
 sk-de 1:
   title: Slowakisch-Deutsch (dict.cc)
   include:
@@ -344,6 +606,10 @@ sk-de 1:
   examples:
     strοmček: Deutsch-Übersetzung von "strοmček"
     baum: Slowakisch-Übersetzung von "baum"
+sv-de 0:
+  title: Schwedisch-Deutsch (dict.cc)
+  include:
+    key: de-sv 0
 sv-de 1:
   title: Schwedisch-Deutsch (dict.cc)
   include:
@@ -351,6 +617,10 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+tr-de 0:
+  title: Türkisch-Deutsch (dict.cc)
+  include:
+    key: de-tr 0
 tr-de 1:
   title: Türkisch-Deutsch (dict.cc)
   include:

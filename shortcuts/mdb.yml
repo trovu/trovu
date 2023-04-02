@@ -1,3 +1,11 @@
+en-zh 0:
+  url: https://www.mdbg.net/chinese/dictionary
+  title: 英语-汉语 (MDBG)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
 en-zh 1:
   url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={query}
   title: 英语-汉语 (MDBG)
@@ -9,6 +17,10 @@ en-zh 1:
   examples:
     tree: 汉语翻译"tree"
     树: 英语翻译"树"
+zh-en 0:
+  title: Chinese-English (MDBG)
+  include:
+    key: en-zh 0
 zh-en 1:
   title: Chinese-English (MDBG)
   include:
