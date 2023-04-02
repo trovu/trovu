@@ -1,0 +1,18 @@
+en-zh 1:
+  url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={query}
+  title: 英语-汉语 (MDBG)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
+  examples:
+    tree: 汉语翻译"tree"
+    树: 英语翻译"树"
+zh-en 1:
+  title: Chinese-English (MDBG)
+  include:
+    key: en-zh 1
+  examples:
+    树: English translation of "树"
+    tree: Chinese translation of "tree"
