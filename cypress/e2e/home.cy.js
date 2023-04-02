@@ -23,4 +23,13 @@ describe('template spec', () => {
     cy.get('#query').type('g');
     cy.contains('Google Web Homepage');
   });
+
+  it('should have a working Settings modal', () => {
+    cy.wait(200);
+    cy.get('span#settings-button').should('be.visible').click();
+    cy.get('select#languageSetting').should('be.visible').select('pl');
+    cy.get('#settings-close').click();
+    cy.wait(500); // TODO: Find cleaner solution.
+    cy.hash().should('match', /language=pl/);
+  });
 });
