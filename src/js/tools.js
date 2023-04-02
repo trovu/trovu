@@ -272,27 +272,27 @@ actions['createDictionaryInfo'] = async function () {
         console.log(`Missing tree for ${lang2}`);
         return;
       }
-      logKey(lang1, lang2);
-      logUrl(lang1, lang2);
+      logKey(lang1, lang2, 1);
+      logUrl(lang1, lang2, 1);
       logTitle(lang1, lang2);
       logTags(lang1, lang2);
       logExamples(lang1, lang2);
-      logKey(lang2, lang1);
+      logKey(lang2, lang1, 1);
       logTitle(lang2, lang1);
-      logInclude(lang2, lang1);
+      logInclude(lang2, lang1, 1);
       logExamples(lang2, lang1);
     }
   }
 
-  function logKey(lang1, lang2) {
-    console.log(`${lang1}-${lang2} 1:`);
+  function logKey(lang1, lang2, argumentCount) {
+    console.log(`${lang1}-${lang2} ${argumentCount}:`);
   }
-  function logInclude(lang1, lang2) {
+  function logInclude(lang1, lang2, argumentCount) {
     console.log(`  include:`);
-    console.log(`    key: ${lang2}-${lang1} 1`);
+    console.log(`    key: ${lang2}-${lang1} ${argumentCount}`);
   }
-  function logUrl(lang1, lang2) {
-    console.log(`  url: ${dicts[dict].pairs[lang1][lang2][1]}`);
+  function logUrl(lang1, lang2, argumentCount) {
+    console.log(`  url: ${dicts[dict].pairs[lang1][lang2][argumentCount]}`);
   }
   function logTitle(lang1, lang2) {
     console.log(
