@@ -1594,6 +1594,20 @@ doi 1:
   - science
   examples:
     10.1000/182: Search for object with DOI 10.1000/182
+dpl 0:
+  url: https://www.deepl.com/translator#./{$language}/
+  title: DeepL, homepage
+  tags:
+  - dictionary
+  - language
+dpl 1:
+  url: https://www.deepl.com/translator#./{$language}/{%text}
+  title: DeepL, translate to my language
+  tags:
+  - dictionary
+  - language
+  examples:
+    arbol: Detect language of "arbol" and translate it into my language
 drag 0:
   url: http://www.dragosien.de/?t=village
   title: Dragosien
