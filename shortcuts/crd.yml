@@ -1,0 +1,60 @@
+de-hr 0:
+  url: https://www.crodict.com/german-croatian/
+  title: Njemački-Hrvatski (CroDict)
+  tags:
+  - croatian
+  - dictionary
+  - german
+  - language
+de-hr 1:
+  url: https://www.crodict.com/german-croatian/{%Wort}
+  title: Njemački-Hrvatski (CroDict)
+  tags:
+  - croatian
+  - dictionary
+  - german
+  - language
+  examples:
+    baum: hrvatski prijevod od "baum"
+    stablo: njemački prijevod od "stablo"
+en-hr 0:
+  url: https://www.crodict.com/phrases/view?l=englisch-kroatisch
+  title: Engleski-Hrvatski (CroDict)
+  tags:
+  - croatian
+  - dictionary
+  - english
+  - language
+en-hr 1:
+  url: https://www.crodict.com/phrases/view?l=englisch-kroatisch&q=drvo
+  title: Engleski-Hrvatski (CroDict)
+  tags:
+  - croatian
+  - dictionary
+  - english
+  - language
+  examples:
+    tree: hrvatski prijevod od "tree"
+    stablo: engleski prijevod od "stablo"
+hr-de 0:
+  title: Kroatisch-Deutsch (CroDict)
+  include:
+    key: de-hr 0
+hr-de 1:
+  title: Kroatisch-Deutsch (CroDict)
+  include:
+    key: de-hr 1
+  examples:
+    stablo: Deutsch-Übersetzung von "stablo"
+    baum: Kroatisch-Übersetzung von "baum"
+hr-en 0:
+  title: Croatian-English (CroDict)
+  include:
+    key: en-hr 0
+hr-en 1:
+  title: Croatian-English (CroDict)
+  include:
+    key: en-hr 1
+  examples:
+    stablo: English translation of "stablo"
+    tree: Croatian translation of "tree"

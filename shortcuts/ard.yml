@@ -1,0 +1,180 @@
+ar-de 0:
+  url: https://www.arabdict.com/german-arabic/
+  title: Arabisch-Deutsch (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - german
+  - language
+ar-de 1:
+  url: https://www.arabdict.com/german-arabic/{%word}
+  title: Arabisch-Deutsch (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - german
+  - language
+  examples:
+    شجرة: Deutsch-Übersetzung von "شجرة"
+    baum: Arabisch-Übersetzung von "baum"
+ar-en 0:
+  url: https://www.arabdict.com/english-arabic/
+  title: Arabic-English (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - english
+  - language
+ar-en 1:
+  url: https://www.arabdict.com/english-arabic/{%word}
+  title: Arabic-English (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - english
+  - language
+  examples:
+    شجرة: English translation of "شجرة"
+    tree: Arabic translation of "tree"
+ar-es 0:
+  url: https://www.arabdict.com/spanish-arabic/
+  title: Arabe-Español (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - language
+  - spanish
+ar-es 1:
+  url: https://www.arabdict.com/spanish-arabic/{%word}
+  title: Arabe-Español (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - language
+  - spanish
+  examples:
+    شجرة: Traducción al Español de "شجرة"
+    árbol: Traducción al Arabe de "árbol"
+ar-fr 0:
+  url: https://www.arabdict.com/french-arabic/
+  title: Arabe-Français (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - french
+  - language
+ar-fr 1:
+  url: https://www.arabdict.com/french-arabic/{%word}
+  title: Arabe-Français (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - french
+  - language
+  examples:
+    شجرة: Traduction en Français de "شجرة"
+    arbre: Traduction en Arabe de "arbre"
+ar-it 0:
+  url: https://www.arabdict.com/italian-arabic/
+  title: Arabo-Italiano (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - italian
+  - language
+ar-it 1:
+  url: https://www.arabdict.com/italian-arabic/{%word}
+  title: Arabo-Italiano (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - italian
+  - language
+  examples:
+    شجرة: Traduzione in italiano di "شجرة"
+    albero: Traduzione in arabo di "albero"
+ar-tr 0:
+  url: https://www.arabdict.com/turkish-arabic/
+  title: Arapça-Türkçe (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - language
+  - turkish
+ar-tr 1:
+  url: https://www.arabdict.com/turkish-arabic/{%word}
+  title: Arapça-Türkçe (arabdict)
+  tags:
+  - arabic
+  - dictionary
+  - language
+  - turkish
+  examples:
+    شجرة: '"شجرة" için Türkçe çevirisi'
+    ağaç: '"ağaç" için Arapça çevirisi'
+de-ar 0:
+  title: ألمانية-عربية (arabdict)
+  include:
+    key: ar-de 0
+de-ar 1:
+  title: ألمانية-عربية (arabdict)
+  include:
+    key: ar-de 1
+  examples:
+    baum: ترجمة عربية من "baum"
+    شجرة: ترجمة ألمانية من "شجرة"
+en-ar 0:
+  title: إنجليزية-عربية (arabdict)
+  include:
+    key: ar-en 0
+en-ar 1:
+  title: إنجليزية-عربية (arabdict)
+  include:
+    key: ar-en 1
+  examples:
+    tree: ترجمة عربية من "tree"
+    شجرة: ترجمة إنجليزية من "شجرة"
+es-ar 0:
+  title: إسبانية-عربية (arabdict)
+  include:
+    key: ar-es 0
+es-ar 1:
+  title: إسبانية-عربية (arabdict)
+  include:
+    key: ar-es 1
+  examples:
+    árbol: ترجمة عربية من "árbol"
+    شجرة: ترجمة إسبانية من "شجرة"
+fr-ar 0:
+  title: فرنسية-عربية (arabdict)
+  include:
+    key: ar-fr 0
+fr-ar 1:
+  title: فرنسية-عربية (arabdict)
+  include:
+    key: ar-fr 1
+  examples:
+    arbre: ترجمة عربية من "arbre"
+    شجرة: ترجمة فرنسية من "شجرة"
+it-ar 0:
+  title: إيطالية-عربية (arabdict)
+  include:
+    key: ar-it 0
+it-ar 1:
+  title: إيطالية-عربية (arabdict)
+  include:
+    key: ar-it 1
+  examples:
+    albero: ترجمة عربية من "albero"
+    شجرة: ترجمة إيطالية من "شجرة"
+tr-ar 0:
+  title: التركية-عربية (arabdict)
+  include:
+    key: ar-tr 0
+tr-ar 1:
+  title: التركية-عربية (arabdict)
+  include:
+    key: ar-tr 1
+  examples:
+    ağaç: ترجمة عربية من "ağaç"
+    شجرة: ترجمة التركية من "شجرة"
