@@ -676,6 +676,13 @@ pns:
       pl:
         - http://en.pons.com/translate?l=frpl
         - http://en.pons.com/translate?l=frpl&q={%word}
+umt:
+  name: Uitmuntend
+  pairs:
+    de:
+      nl:
+        - https://www.uitmuntend.de/
+        - https://www.uitmuntend.de/search.html?search={%word}
 wdk:
   name: Wadoku
   pairs:
