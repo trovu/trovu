@@ -1,82 +1,320 @@
 tree:
+  aa: waayaha
+  af: boom
+  am: ዓሣ
   ar: شجرة
+  as: গাছ
+  ay: khana
+  az: agac
+  be: дрэва
   bg: дърво
+  bh: पेड़
+  bi: omo
+  bn: গাছ
+  bo: རི་མོ་
+  br: dervenn
   bs: drvo
   ca: arbre
+  co: alberu
   cs: strom
+  cy: coeden
   da: træ
   de: baum
+  dz: སྣ་ཚོགས་
   el: δέντρο
   en: tree
+  eo: arbo
   es: árbol
   et: puu
+  eu: zuhaitz
   fa: درخت
   fi: puu
+  fj: kau
+  fo: træ
   fr: arbre
+  fy: beam
+  ga: crann
+  gd: craobh
+  gl: árbore
+  gn: yvoty
+  gu: વૃક્ષ
+  gv: billey
+  ha: gashi
   he: עץ
+  hi: पेड़
   hr: stablo
+  ht: pyebwa
   hu: fa
+  hy: ծառ
+  ia: arbore
   id: pohon
+  ie: arbor
+  ig: ụlọ
+  ii: ꆇꉙ
+  ik: naunraaq
   is: tré
   it: albero
+  iu: ᐊᒥᐊᓂ
   ja: 木
+  jv: woh
+  ka: ხე
+  kg: mukaka
+  ki: muthiga
+  kj: ombala
+  kk: ағаш
+  kl: pisinnaatitaq
+  km: ដើម
+  kn: ಮರ
   ko: 나무
+  kr: bwa
+  ks: بُرز
+  ku: dar
+  kv: лудо
+  kw: gogow
+  ky: агач
   la: arbor
+  lb: Beem
+  lg: ensolo
+  li: beum
+  ln: molongo
+  lo: ພາກໃຕ້
   lt: medis
   lv: koks
+  mg: hazo
+  mh: rakau
+  mi: rākau
+  mk: дрво
+  ml: മരം
+  mn: мод
+  mr: झाड
+  ms: pokok
+  mt: siġra
+  my: အိုးသတ္တု
+  na: ane
+  nb: tre
+  nd: indlala
+  ne: रूख
+  ng: mti
   nl: boom
+  nn: tre
   no: tre
+  nr: indlala
+  nv: tó
+  ny: mtengo
+  oc: arbre
+  om: dhukesa
+  or: ବାଣ
+  os: дӕрвӕ
+  pa: ਰੁੱਖ
+  pi: rukha
   pl: drzewo
+  ps: درخت
   pt: árvore
-  ro: arbore
+  qu: kulli
+  rm: tree
+  rn: umutumbudu
+  ro: copac
   ru: дерево
-  sk: strοmček
+  rw: umusozi
+  sa: वृक्षः
+  sd: ٽنګ، جنگل جو پيڙو
+  se: oahppu
+  sg: mbombo
+  si: ගස
+  sk: strom
   sl: drevo
+  sm: la'au
+  sn: mutsvairo
+  so: geed
+  sq: pemë
   sr: дрво
+  ss: umuthi
+  st: mohlare
+  su: galuh
   sv: träd
+  sw: mti
+  ta: மரம்
+  te: చెట్టు
+  tg: дарахт
   th: ต้นไม้
+  ti: ኣበባ
+  tk: agajyk
+  tl: puno
+  tn: mohoebi
+  to: kahoa
   tr: ağaç
+  ts: mukhovha
+  tt: агач
+  tw: ebom
+  ty: "'aito"
+  ug: قۇش
   uk: дерево
+  ur: درخت
+  uz: daraxt
   vi: cây
+  vo: blon
+  wa: tchene
+  wo: gen
+  xh: umthi
+  yi: בוים
+  yo: igi
   zh: 树
+  zu: isihlahla
 desc:
+  aa: 'Tartiibadda {lang} ee "{tree}"'
+  af: '{lang} vertaling van "{tree}"'
+  am: '{lang} translation of "{tree}"'
   ar: 'ترجمة {lang} من "{tree}"'
+  as: '{lang} translation of "{tree}"'
+  ay: '{lang} traducción de "{tree}"'
+  az: '{lang} tərcüməsi "{tree}"'
+  be: 'Пераклад на {lang} для "{tree}"'
   bg: '{lang} превод за "{tree}"'
-  bs: '{lang} prijevod od "{tree}"'
+  bh: '{lang} translation of "{tree}"'
+  bi: '{lang} translation of "{tree}"'
+  bn: '{lang} অনুবাদ "{tree}"'
+  bo: '{lang} translation of "{tree}"'
+  br: 'Evezhiadenn {lang} evit "{tree}"'
   ca: 'Traducció al {lang} de "{tree}"'
+  co: '{lang} traduzzione di "{tree}"'
   cs: '{lang} překlad pro "{tree}"'
+  cy: '{lang} translation of "{tree}"'
   da: '{lang} oversættelse af "{tree}"'
   de: '{lang}-Übersetzung von "{tree}"'
+  dz: '{lang} བོད་ཡིག བསྐྱར་བཅོས། "{tree}"'
   el: 'Μετάφραση στα {lang} για το "{tree}"'
   en: '{lang} translation of "{tree}"'
+  eo: '{lang} traduko de "{tree}"'
   es: 'Traducción al {lang} de "{tree}"'
   et: '{lang} tõlge "{tree}"'
+  eu: '{lang} itzulpena "{tree}"'
   fa: 'ترجمه به {lang} برای "{tree}"'
   fi: '{lang}-käännös sanalle "{tree}"'
+  fj: '{lang} translation of "{tree}"'
+  fo: '{lang} týðing á "{tree}"'
   fr: 'Traduction en {lang} de "{tree}"'
+  fy: '{lang} oersetting fan "{tree}"'
+  ga: '{lang} aistriúchán de "{tree}"'
+  gd: '{lang} eadar-theangaichte de "{tree}"'
+  gl: 'Tradución ao {lang} de "{tree}"'
+  gn: '{lang} ojejapóva "{tree}"'
+  gu: '{lang} translation of "{tree}"'
+  gv: 'Hansh {lang} dy ghloyr "tree"'
+  ha: 'Tarjama ta {lang} daga "{tree}"'
   he: '{lang} תרגום של "{tree}"'
+  hi: ' "{tree}" का {lang} अनुवाद'
   hr: '{lang} prijevod od "{tree}"'
+  ht: '{lang} tradiksyon nan "{tree}"'
   hu: '{lang} fordítás a(z) "{tree}" számára'
+  hy: '{lang} թարգմանություն "{tree}"'
+  ia: 'Traduction in {lang} pro "{tree}"'
   id: 'terjemahan {lang} dari "{tree}"'
-  is: '{lang}-þýðing á "{tree}"'
+  ie: '{lang} traduction de "{tree}"'
+  ig: 'Ọdịnaya {lang} nke "{tree}"'
+  ii: '「{tree}」的{lang}翻译'
+  ik: 'Translation for "{tree}" in {lang}'
+  is: '{lang} þýðing fyrir "{tree}"'
   it: 'Traduzione in {lang} di "{tree}"'
-  ja: '{lang}翻訳"{tree}"'
-  ko: '{lang} 번역 "{tree}"'
+  iu: '{tree} ᐃᓄᒃᑎᑐᑦ "{lang}"-ᑕ'
+  ja: '"{tree}"の{lang}翻訳'
+  jv: 'Terjemahan {lang} "{tree}"'
+  ka: 'თარგმანი {lang} - "{tree}"'
+  kg: 'Tɛmɛnɛ {lang} pu "{tree}"'
+  ki: 'Rũmeera {lang} kũmbũ "{tree}"'
+  kj: 'Translation ka "{tree}" na {lang}'
+  kk: '"{tree}" сөзінің {lang} аудармасы'
+  kl: '{tree}-inik {lang}-ippassuseq'
+  km: 'ការបកប្រែភាសា {lang} នៃ "{tree}"'
+  kn: '{lang}ನ {tree} ನ್ನು ಅನುವಾದಿಸಿ'
+  ko: '"{tree}"의 {lang} 번역'
+  kr: '{lang} - Tarihi "{tree}"'
+  ks: 'ترجمه برای "{tree}" در {lang}'
+  ku: 'Wergera "{tree}" ji bo {lang}ê'
+  kv: '{lang} тӧрӧӵ "{tree}"'
+  kw: 'Tendysgya {lang} rag "{tree}"'
+  ky: '{tree} ичине {lang} тилеги'
   la: 'Translatio in {lang} pro "{tree}"'
+  lb: '{lang} Iwwersetzung vun "{tree}"'
+  lg: 'Oluvanyizo lwa "{tree}" ku {lang}'
+  li: '{lang} vertaling van "{tree}"'
+  ln: 'Traduction {lang} de "{tree}"'
+  lo: 'ການແປພາສາ {lang} ເປັນ "{tree}"'
   lt: '{lang} vertimas žodžiui "{tree}"'
   lv: '{lang} tulkojums vārdam "{tree}"'
+  mg: 'Famoronana eo an-toerana "{tree}" ao amin''i {lang}'
+  mh: 'Translation {lang} im "{tree}"'
+  mi: 'Tāhuhu ki te {lang} o "{tree}"'
+  mk: 'Превод на {lang} за "{tree}"'
+  ml: '"{tree}"ന്‍റെ {lang} പരിഭാഷ'
+  mn: '{tree} -н {lang} орчуулга'
+  mr: '"{tree}" च्या "{lang}" भाषेतील अनुवाद'
+  ms: 'Terjemahan {lang} bagi "{tree}"'
+  mt: 'Traduzzjoni bil-{lang} ta "{tree}"'
+  my: '"{lang}" ဘာသာပြန်ထားသော "{tree}" ဘာသာပြန်ထားသည်'
+  na: '{lang} lalolagi o le "{tree}"'
+  nb: '{lang}-oversettelse av "{tree}"'
+  nd: 'Isihloko seNdebele sokuhlolwa kwebhuloho: "{tree}"'
+  ne: '"{tree}"को "{lang}"मा अनुवाद गर्नुहोस्'
   nl: '{lang}-vertaling van "{tree}"'
-  no: '{lang} oversettelse av "{tree}"'
+  nn: '{lang}-oversetjing av "{tree}"'
+  no: '{lang}-oversettelse av "{tree}"'
+  nr: 'Ibhuku lesiNdebele sokuhlolwa kwebhuloho: "{tree}"'
+  nv: '"{tree}" yiníshłį́go áłtsʼíísígo dóó "{lang}" bizaad'
+  ny: 'Kutsimikizira ku {lang} kwa "{tree}"'
+  om: 'Fayyadamaloota {lang}ti {tree} qofa'
+  or: '"{tree}" ପାଳନାରେ "{lang}" ଅନୁବାଦ'
+  os: '{lang} æвзаг къæртон "{tree}"'
+  pa: '"{tree}" ਦਾ "{lang}" ਵਿੱਚ ਅਨੁਵਾਦ'
   pl: 'Tłumaczenie na język {lang} dla "{tree}"'
+  ps: 'د "{tree}" د {lang} ترجمه'
   pt: 'Tradução em {lang} de "{tree}"'
+  qu: '{lang}-pi "{tree}"ta tʼikray'
+  rm: 'Traducziun en {lang} dad "{tree}"'
+  rn: 'Ijambo ry''in Kirundi ryitwa "{tree}" rirahindutse mu guswera kwa "{lang}"'
   ro: 'Traducere în {lang} pentru "{tree}"'
   ru: 'Перевод на {lang} язык для "{tree}"'
+  rw: 'Itangazo ry''ururimi rwa Kinyarwanda rishya ryitwa "{tree}" mu gitabo "{lang}"'
+  sa: 'वृक्षः "{tree}" का {lang} में अनुवादः'
+  sd: 'ترجمو مانڊڙ {lang} جي "{tree}" جو'
+  se: '{lang} dáppeaddji "{tree}"'
+  sg: 'Traduction {lang} de "{tree}"'
+  si: '{lang} පරිවර්තකය "{tree}" සඳහා'
   sk: '{lang} preklad pre "{tree}"'
   sl: 'Prevod v {lang} za besedo "{tree}"'
+  sm: '{lang} faʻamatalaga o le "{tree}"'
+  sn: '{lang} chitaura cha "{tree}"'
+  so: '{lang} turjumaad "{tree}"'
+  sq: 'Përkthim në {lang} të "{tree}"'
   sr: 'Превод на {lang} за "{tree}"'
+  ss: 'Isihloko sokuhambelana {lang} sokuthi "{tree}"'
+  st: 'Mosebetsi oa {lang} oa "{tree}"'
+  su: 'Terjemahan {lang} "{tree}"'
   sv: '{lang}-översättning av "{tree}"'
+  sw: 'Tafsiri ya {lang} ya "{tree}"'
+  ta: 'தமிழ் மொழியில் "{tree}" பெயர்ச்சி'
+  te: '{lang} అనువాదం "{tree}" కోసం'
+  tg: 'Тарҷумаи {lang} барои "{tree}"'
   th: 'การแปล{lang}ของคำว่า "{tree}"'
-  tr: '''"{tree}" için {lang} çevirisi'''
+  ti: '{lang} translation of "{tree}"'
+  tk: 'Türkmen dilinde "{tree}" sözüni {lang} terjimesi'
+  tl: 'Pagsasalin sa {lang} ng "{tree}"'
+  tn: 'Kutsiho ya {lang} ya "{tree}"'
+  to: 'Fakafanua {lang} ki he "{tree}"'
+  tr: '"{tree}" için {lang} çevirisi'
+  ts: 'Vonaka ra {lang} rito "{tree}"'
+  tt: '«{tree}» өчен {lang} тәрҗемәсе'
+  tw: 'Fɔsɔw {lang} wɔ "{tree}" yɛn'
+  ty: 'Traduction en {lang} de "{tree}"'
+  ug: '{lang} ھۆججەتتىكى "دەرۋازە" ناملىق سۆزنى تەرجىمىسى'
   uk: 'Переклад {lang} для "{tree}"'
+  ur: '{tree} کے {lang} ترجمہ'
+  uz: '{lang} tiliga "{tree}" tarjima'
   vi: 'Bản dịch {lang} của "{tree}"'
-  zh: '{lang}翻译"{tree}"'
+  vo: 'Volapükikön {lang} tefläd "{tree}"'
+  wa: 'Traduction en {lang} de "{tree}"'
+  wo: 'Turu {lang} {tree} yi'
+  xh: 'Ukubhalisa kwesiXhosa kwe "{tree}"'
+  yi: '{lang} יידיש יבערזעצונג פון "{tree}"'
+  yo: 'Itumọ rẹ ni {lang} lati "{tree}"'
+  zh: '{lang} 的"{tree}"翻译'
+  zu: 'Ukuthathwa kwe {lang} kuka "{tree}"'
