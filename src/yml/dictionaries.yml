@@ -465,43 +465,6 @@ dcm:
       zh:
         - https://www.dict.com/cinsko-slovensky/
         - https://www.dict.com/cinsko-slovensky/{%word}
-dpl:
-  name: DeepL
-  pairs:
-    de:
-      en:
-        - https://www.deepl.com/translator#de/en/
-        - https://www.deepl.com/translator#de/en/{%text}
-      es:
-        - https://www.deepl.com/translator#de/es/
-        - https://www.deepl.com/translator#de/es/{%text}
-      fr:
-        - https://www.deepl.com/translator#de/fr/
-        - https://www.deepl.com/translator#de/fr/{%text}
-      it:
-        - https://www.deepl.com/translator#de/it/
-        - https://www.deepl.com/translator#de/it/{%text}
-      ja:
-        - https://www.deepl.com/translator#de/ja/
-        - https://www.deepl.com/translator#de/ja/{%text}
-      nl:
-        - https://www.deepl.com/translator#de/nl/
-        - https://www.deepl.com/translator#de/nl/{%text}
-      pl:
-        - https://www.deepl.com/translator#de/pl/
-        - https://www.deepl.com/translator#de/pl/{%text}
-      pt:
-        - https://www.deepl.com/translator#de/pt/
-        - https://www.deepl.com/translator#de/pt/{%text}
-      ru:
-        - https://www.deepl.com/translator#de/ru/
-        - https://www.deepl.com/translator#de/ru/{%text}
-      tr:
-        - https://www.deepl.com/translator#en/tr/
-        - https://www.deepl.com/translator#en/tr/{%text}
-      zh:
-        - https://www.deepl.com/translator#de/zh/
-        - https://www.deepl.com/translator#de/zh/{%text}
 leo:
   name: leo.org
   pairs:
