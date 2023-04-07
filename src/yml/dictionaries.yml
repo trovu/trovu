@@ -1,3 +1,25 @@
+ard:
+  name: arabdict
+  pairs:
+    ar:
+      de:
+        - https://www.arabdict.com/german-arabic/
+        - https://www.arabdict.com/german-arabic/{%word}
+      en:
+        - https://www.arabdict.com/english-arabic/
+        - https://www.arabdict.com/english-arabic/{%word}
+      fr:
+        - https://www.arabdict.com/french-arabic/
+        - https://www.arabdict.com/french-arabic/{%word}
+      es:
+        - https://www.arabdict.com/spanish-arabic/
+        - https://www.arabdict.com/spanish-arabic/{%word}
+      it:
+        - https://www.arabdict.com/italian-arabic/
+        - https://www.arabdict.com/italian-arabic/{%word}
+      tr:
+        - https://www.arabdict.com/turkish-arabic/
+        - https://www.arabdict.com/turkish-arabic/{%word}
 bab:
   name: bab.la
   pairs:
@@ -34,6 +56,17 @@ beo:
       en:
         - https://dict.tu-chemnitz.de/
         - https://dict.tu-chemnitz.de/dings.cgi?service=deen&query={%word}
+crd:
+  name: CroDict
+  pairs:
+    de:
+      hr:
+        - https://www.crodict.com/german-croatian/
+        - https://www.crodict.com/german-croatian/{%Wort}
+    en:
+      hr:
+        - https://www.crodict.com/phrases/view?l=englisch-kroatisch
+        - https://www.crodict.com/phrases/view?l=englisch-kroatisch&q=drvo
 dcc:
   name: dict.cc
   pairs:
