@@ -260,7 +260,6 @@ actions['createDictionaries'] = async function () {
 
   const ymls = {};
   for (const dict in dicts) {
-    console.log(dict);
     const shortcuts = {};
     for (const lang1 in dicts[dict].pairs) {
       for (const lang2 in dicts[dict].pairs[lang1]) {
