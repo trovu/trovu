@@ -252,6 +252,8 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
 };
 
 actions['createDictionaryInfo'] = async function () {
+  const langs = getLanguageList();
+
   const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
   const dicts = jsyaml.load(
     fs.readFileSync('src/yml/dictionaries.yml', 'utf8'),
@@ -260,7 +262,7 @@ actions['createDictionaryInfo'] = async function () {
 
   for (const lang1 in dicts[dict].pairs) {
     for (const lang2 in dicts[dict].pairs[lang1]) {
-      if (!languages.getName(lang1, lang2)) {
+      if (!langs[lang2][lang1]) {
         console.log(`Missing code for ${lang1}-${lang2}`);
         return;
       }
@@ -294,6 +296,21 @@ actions['createDictionaryInfo'] = async function () {
     }
   }
 
+  function getLanguageList() {
+    const langs = {};
+    const dirs = fs.readdirSync('./node_modules/languagelist/data/');
+    for (const dir of dirs) {
+      const lang = jsyaml.load(
+        fs.readFileSync(
+          `./node_modules/languagelist/data/${dir}/language.yaml`,
+          'utf8',
+        ),
+      );
+      langs[dir] = lang;
+    }
+    return langs;
+  }
+
   function logKey(lang1, lang2, argumentCount) {
     console.log(`${lang1}-${lang2} ${argumentCount}:`);
   }
@@ -307,30 +324,30 @@ actions['createDictionaryInfo'] = async function () {
   function logTitle(lang1, lang2) {
     console.log(
       '  title:',
-      `${capitalize(languages.getName(lang1, lang2))}-${capitalize(
-        languages.getName(lang2, lang2),
-      )} (${dicts[dict].name})`,
+      `${capitalize(langs[lang2][lang1])}-${capitalize(langs[lang2][lang2])} (${
+        dicts[dict].name
+      })`,
     );
   }
   function logTags(lang1, lang2) {
     console.log('  tags:');
     console.log('  - dictionary');
     console.log('  - language');
-    console.log(`  - ${anticapitalize(languages.getName(lang1, 'en'))}`);
-    console.log(`  - ${anticapitalize(languages.getName(lang2, 'en'))}`);
+    console.log(`  - ${anticapitalize(langs['en'][lang1])}`);
+    console.log(`  - ${anticapitalize(langs['en'][lang2])}`);
   }
   function logExamples(lang1, lang2) {
     console.log('  examples:');
     console.log(
       '   ',
       `${t.tree[lang1]}: ${t.desc[lang2]
-        .replace('{lang}', languages.getName(lang2, lang2))
+        .replace('{lang}', langs[lang2][lang2])
         .replace('{tree}', t.tree[lang1])}`,
     );
     console.log(
       '   ',
       `${t.tree[lang2]}: ${t.desc[lang2]
-        .replace('{lang}', languages.getName(lang1, lang2))
+        .replace('{lang}', langs[lang2][lang1])
         .replace('{tree}', t.tree[lang2])}`,
     );
   }
