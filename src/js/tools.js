@@ -253,47 +253,53 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
 
 actions['createDictionaryInfo'] = async function () {
   const langs = getLanguageList();
-
   const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
   const dicts = jsyaml.load(
     fs.readFileSync('src/yml/dictionaries.yml', 'utf8'),
   );
-  const dict = process.argv[3];
 
-  for (const lang1 in dicts[dict].pairs) {
-    for (const lang2 in dicts[dict].pairs[lang1]) {
-      if (!langs[lang2][lang1]) {
-        console.log(`Missing code for ${lang1}-${lang2}`);
-        return;
+  const ymls = {};
+  for (const dict in dicts) {
+    console.log(dict);
+    const shortcuts = {};
+    for (const lang1 in dicts[dict].pairs) {
+      for (const lang2 in dicts[dict].pairs[lang1]) {
+        if (!langs[lang2][lang1]) {
+          console.log(`Missing code for ${lang1}-${lang2}`);
+          return;
+        }
+        if (!t.tree[lang1]) {
+          console.log(`Missing tree for ${lang1}`);
+          return;
+        }
+        if (!t.tree[lang2]) {
+          console.log(`Missing tree for ${lang2}`);
+          return;
+        }
+        shortcuts[getKey(lang1, lang2, 0)] = {
+          url: dicts[dict].pairs[lang1][lang2][0],
+          title: getTitle(lang1, lang2, dicts[dict].name),
+          tags: getTags(lang1, lang2),
+        };
+        shortcuts[getKey(lang1, lang2, 1)] = {
+          url: dicts[dict].pairs[lang1][lang2][1],
+          title: getTitle(lang1, lang2, dicts[dict].name),
+          tags: getTags(lang1, lang2),
+          examples: getExamples(lang1, lang2),
+        };
+        shortcuts[getKey(lang2, lang1, 0)] = {
+          title: getTitle(lang2, lang1, dicts[dict].name),
+          include: { key: getKey(lang1, lang2, 0) },
+        };
+        shortcuts[getKey(lang2, lang1, 1)] = {
+          title: getTitle(lang2, lang1, dicts[dict].name),
+          include: { key: getKey(lang1, lang2, 1) },
+          examples: getExamples(lang2, lang1),
+        };
       }
-      if (!t.tree[lang1]) {
-        console.log(`Missing tree for ${lang1}`);
-        return;
-      }
-      if (!t.tree[lang2]) {
-        console.log(`Missing tree for ${lang2}`);
-        return;
-      }
-      logKey(lang1, lang2, 0);
-      logUrl(lang1, lang2, 0);
-      logTitle(lang1, lang2);
-      logTags(lang1, lang2);
-
-      logKey(lang1, lang2, 1);
-      logUrl(lang1, lang2, 1);
-      logTitle(lang1, lang2);
-      logTags(lang1, lang2);
-      logExamples(lang1, lang2);
-
-      logKey(lang2, lang1, 0);
-      logTitle(lang2, lang1);
-      logInclude(lang2, lang1, 0);
-
-      logKey(lang2, lang1, 1);
-      logTitle(lang2, lang1);
-      logInclude(lang2, lang1, 1);
-      logExamples(lang2, lang1);
     }
+    ymls[`${dict}.yml`] = shortcuts;
+    writeYmls(ymls);
   }
 
   function getLanguageList() {
@@ -311,45 +317,31 @@ actions['createDictionaryInfo'] = async function () {
     return langs;
   }
 
-  function logKey(lang1, lang2, argumentCount) {
-    console.log(`${lang1}-${lang2} ${argumentCount}:`);
+  function getKey(lang1, lang2, argumentCount) {
+    return `${lang1}-${lang2} ${argumentCount}`;
   }
-  function logInclude(lang1, lang2, argumentCount) {
-    console.log(`  include:`);
-    console.log(`    key: ${lang2}-${lang1} ${argumentCount}`);
+  function getTitle(lang1, lang2, name) {
+    return `${capitalize(langs[lang2][lang1])}-${capitalize(
+      langs[lang2][lang2],
+    )} (${name})`;
   }
-  function logUrl(lang1, lang2, argumentCount) {
-    console.log(`  url: ${dicts[dict].pairs[lang1][lang2][argumentCount]}`);
+  function getTags(lang1, lang2) {
+    return [
+      'dictionary',
+      'language',
+      anticapitalize(langs['en'][lang1]),
+      anticapitalize(langs['en'][lang2]),
+    ];
   }
-  function logTitle(lang1, lang2) {
-    console.log(
-      '  title:',
-      `${capitalize(langs[lang2][lang1])}-${capitalize(langs[lang2][lang2])} (${
-        dicts[dict].name
-      })`,
-    );
-  }
-  function logTags(lang1, lang2) {
-    console.log('  tags:');
-    console.log('  - dictionary');
-    console.log('  - language');
-    console.log(`  - ${anticapitalize(langs['en'][lang1])}`);
-    console.log(`  - ${anticapitalize(langs['en'][lang2])}`);
-  }
-  function logExamples(lang1, lang2) {
-    console.log('  examples:');
-    console.log(
-      '   ',
-      `${t.tree[lang1]}: ${t.desc[lang2]
+  function getExamples(lang1, lang2) {
+    return {
+      [t.tree[lang1]]: t.desc[lang2]
         .replace('{lang}', langs[lang2][lang2])
-        .replace('{tree}', t.tree[lang1])}`,
-    );
-    console.log(
-      '   ',
-      `${t.tree[lang2]}: ${t.desc[lang2]
+        .replace('{tree}', t.tree[lang1]),
+      [t.tree[lang2]]: t.desc[lang2]
         .replace('{lang}', langs[lang2][lang1])
-        .replace('{tree}', t.tree[lang2])}`,
-    );
+        .replace('{tree}', t.tree[lang2]),
+    };
   }
   function capitalize(str) {
     const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
