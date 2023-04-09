@@ -1,0 +1,30 @@
+en-es 0:
+  url: https://www.spanishdict.com/
+  title: Inglés-Español (SpanishDict)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+en-es 1:
+  url: https://www.spanishdict.com/translate/{%word}
+  title: Inglés-Español (SpanishDict)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+  examples:
+    tree: Traducción al español de "tree"
+    árbol: Traducción al inglés de "árbol"
+es-en 0:
+  title: Spanish-English (SpanishDict)
+  include:
+    key: en-es 0
+es-en 1:
+  title: Spanish-English (SpanishDict)
+  include:
+    key: en-es 1
+  examples:
+    árbol: English translation of "árbol"
+    tree: Spanish translation of "tree"

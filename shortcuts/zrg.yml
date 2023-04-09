@@ -1,0 +1,30 @@
+en-tr 0:
+  url: https://www.zargan.com/
+  title: İngilizce-Türkçe (Zargan)
+  tags:
+  - dictionary
+  - english
+  - language
+  - turkish
+en-tr 1:
+  url: https://www.zargan.com/tr/q/{%word}
+  title: İngilizce-Türkçe (Zargan)
+  tags:
+  - dictionary
+  - english
+  - language
+  - turkish
+  examples:
+    tree: '"tree" için Türkçe çevirisi'
+    ağaç: '"ağaç" için İngilizce çevirisi'
+tr-en 0:
+  title: Turkish-English (Zargan)
+  include:
+    key: en-tr 0
+tr-en 1:
+  title: Turkish-English (Zargan)
+  include:
+    key: en-tr 1
+  examples:
+    ağaç: English translation of "ağaç"
+    tree: Turkish translation of "tree"

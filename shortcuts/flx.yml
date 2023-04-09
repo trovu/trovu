@@ -1,0 +1,30 @@
+en-sv 0:
+  url: https://folkets-lexikon.csc.kth.se/
+  title: Engelska-Svenska (Folkets lexikon)
+  tags:
+  - dictionary
+  - english
+  - language
+  - swedish
+en-sv 1:
+  url: https://folkets-lexikon.csc.kth.se/folkets/#lookup&{%word}
+  title: Engelska-Svenska (Folkets lexikon)
+  tags:
+  - dictionary
+  - english
+  - language
+  - swedish
+  examples:
+    tree: svenska-översättning av "tree"
+    träd: engelska-översättning av "träd"
+sv-en 0:
+  title: Swedish-English (Folkets lexikon)
+  include:
+    key: en-sv 0
+sv-en 1:
+  title: Swedish-English (Folkets lexikon)
+  include:
+    key: en-sv 1
+  examples:
+    träd: English translation of "träd"
+    tree: Swedish translation of "tree"
