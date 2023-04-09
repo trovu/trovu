@@ -34,19 +34,14 @@ da-dcm 1:
   include:
     key: da-cs 1
     namespace: dcm
+de 0:
+  include:
+    key: de-cs 0
+    namespace: dcm
 de 1:
-  url: https://slovniky.lingea.cz/nemecko-cesky/{%výraz}
-  title: Německo-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - german
-  - language
-  - lingea
-  - slovník
-  examples:
-    baum: '"baum" česky'
-    strom: '"strom" německy'
+  include:
+    key: de-cs 1
+    namespace: dcm
 de-dcc 0:
   include:
     key: de-cs 0
@@ -87,19 +82,14 @@ el-dcm 1:
   include:
     key: el-cs 1
     namespace: dcm
+en 0:
+  incluen:
+    key: en-cs 0
+    namespace: dcm
 en 1:
-  url: https://slovniky.lingea.cz/anglicko-cesky/{%výraz}
-  title: Anglicko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - english
-  - language
-  - lingea
-  - slovník
-  examples:
-    tree: '"tree" česky'
-    strom: '"strom" anglicky'
+  incluen:
+    key: en-cs 1
+    namespace: dcm
 en-dcm 0:
   include:
     key: en-cs 0
@@ -108,19 +98,14 @@ en-dcm 1:
   include:
     key: en-cs 1
     namespace: dcm
+es 0:
+  inclues:
+    key: es-cs 0
+    namespace: dcm
 es 1:
-  url: https://slovniky.lingea.cz/spanelsko-cesky/{%výraz}
-  title: Španělsko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - spanish
-  examples:
-    árbol: '"árbol" česky'
-    strom: '"strom" španělsky'
+  inclues:
+    key: es-cs 1
+    namespace: dcm
 es-dcm 0:
   include:
     key: es-cs 0
@@ -145,19 +130,14 @@ fi-dcm 1:
   include:
     key: fi-cs 1
     namespace: dcm
+fr 0:
+  inclufr:
+    key: fr-cs 0
+    namespace: dcm
 fr 1:
-  url: https://slovniky.lingea.cz/francouzsko-cesky/{%výraz}
-  title: Francouzsko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - french
-  - language
-  - lingea
-  - slovník
-  examples:
-    arbre: '"arbre" česky'
-    strom: '"strom" francouzsky'
+  inclufr:
+    key: fr-cs 1
+    namespace: dcm
 fr-dcm 0:
   include:
     key: fr-cs 0
@@ -174,19 +154,14 @@ he-dcm 1:
   include:
     key: he-cs 1
     namespace: dcm
+hr 0:
+  include:
+    key: hr-cs 0
+    namespace: dcm
 hr 1:
-  url: https://slovniky.lingea.cz/chorvatsko-cesky/{%výraz}
-  title: Chorvatsko-český (Lingea)
-  tags:
-  - croatian
-  - czech
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  examples:
-    drvo: '"drvo" česky'
-    strom: '"strom" chorvatsky'
+  include:
+    key: hr-cs 1
+    namespace: dcm
 hr-dcm 0:
   include:
     key: hr-cs 0
@@ -274,19 +249,14 @@ no-dcm 1:
   include:
     key: no-cs 1
     namespace: dcm
+pl 0:
+  include:
+    key: pl-cs 0
+    namespace: dcm
 pl 1:
-  url: https://slovniky.lingea.cz/polsko-cesky/{%výraz}
-  title: Polsko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - language
-  - lingea
-  - polish
-  - slovník
-  examples:
-    drzewo: '"drzewo" česky'
-    strom: '"strom" polsky'
+  include:
+    key: pl-cs 1
+    namespace: dcm
 pl-dcm 0:
   include:
     key: pl-cs 0
@@ -311,19 +281,14 @@ ro-dcm 1:
   include:
     key: ro-cs 1
     namespace: dcm
+ru 0:
+  include:
+    key: ru-cs 0
+    namespace: dcm
 ru 1:
-  url: https://slovniky.lingea.cz/rusko-cesky/{%výraz}
-  title: Rusko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - language
-  - lingea
-  - russian
-  - slovník
-  examples:
-    магазин: '"магазин" česky'
-    prodejna: '"prodejna" rusky'
+  include:
+    key: ru-cs 1
+    namespace: dcm
 ru-dcm 0:
   include:
     key: ru-cs 0
@@ -332,17 +297,14 @@ ru-dcm 1:
   include:
     key: ru-cs 1
     namespace: dcm
+sk 0:
+  include:
+    key: sk-cs 0
+    namespace: dcm
 sk 1:
-  url: https://slovniky.lingea.cz/slovensko-cesky/{%výraz}
-  title: Slovensko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  examples:
-    obrúčka: '"obrúčka" česky'
+  include:
+    key: sk-cs 1
+    namespace: dcm
 sk-dcm 0:
   include:
     key: sk-cs 0
@@ -397,19 +359,14 @@ tr-dcm 1:
   include:
     key: tr-cs 1
     namespace: dcm
+uk 0:
+  include:
+    key: uk-cs 0
+    namespace: dcm
 uk 1:
-  url: https://slovniky.lingea.cz/ukrajinsko-cesky/{%výraz}
-  title: Ukrajinsko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - ukrainian
-  examples:
-    дім: '"дім" česky'
-    dům: '"dům" ukrajinsky'
+  include:
+    key: uk-cs 1
+    namespace: dcm
 uk-dcm 0:
   include:
     key: uk-cs 0
@@ -418,19 +375,14 @@ uk-dcm 1:
   include:
     key: uk-cs 1
     namespace: dcm
+vi 0:
+  include:
+    key: vi-cs 0
+    namespace: dcm
 vi 1:
-  url: https://slovniky.lingea.cz/vietnamsko-cesky/{%výraz}
-  title: Vietnamsko-český (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - language
-  - lingea
-  - slovník
-  - vietnamese
-  examples:
-    cây: '"cây" česky'
-    strom: '"strom" vietnamsky'
+  include:
+    key: vi-cs 1
+    namespace: dcm
 vi-dcm 0:
   include:
     key: vi-cs 0
