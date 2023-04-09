@@ -56,6 +56,14 @@ eo 1:
   - language
   examples:
     ord: Traduko de "ord"
+eo-deo 0:
+  include:
+    key: eo-da 0
+    namespace: deo
+eo-deo 1:
+  include:
+    key: eo-da 1
+    namespace: deo
 gyl 1:
   url: http://ordbog.gyldendal.dk/sitecore/content/Ordbog/Home/Opslag/Resultat.aspx?lcode=DAEN&q={%ord}
   title: Gyldendals Røde Ordbøger

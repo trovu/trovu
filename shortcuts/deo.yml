@@ -1,0 +1,30 @@
+da-eo 0:
+  url: https://www.vortaro.dk/
+  title: Dana-Esperanto (Dansk↔Esperanto ordbog)
+  tags:
+  - danish
+  - dictionary
+  - esperanto
+  - language
+da-eo 1:
+  url: https://www.vortaro.dk/?q={%word}
+  title: Dana-Esperanto (Dansk↔Esperanto ordbog)
+  tags:
+  - danish
+  - dictionary
+  - esperanto
+  - language
+  examples:
+    træ: esperanto traduko de "træ"
+    arbo: dana traduko de "arbo"
+eo-da 0:
+  title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
+  include:
+    key: da-eo 0
+eo-da 1:
+  title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
+  include:
+    key: da-eo 1
+  examples:
+    arbo: dansk oversættelse af "arbo"
+    træ: esperanto oversættelse af "træ"
