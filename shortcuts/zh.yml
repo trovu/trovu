@@ -42,17 +42,14 @@ de-pka 1:
   include:
     key: de-zh 1
     namespace: pka
+en 0:
+  include:
+    key: en-zh 0
+    namespace: mdb
 en 1:
-  url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
-  title: English-Chinese
-  tags:
-  - chinese
-  - dictionary
-  - english
-  - language
-  examples:
-    tree: Translation of "tree"
-    木: Translation of 木
+  include:
+    key: en-zh 1
+    namespace: mdb
 en-mdb 0:
   include:
     key: en-zh 0
@@ -65,8 +62,8 @@ last 1:
   url: http://www.last.fm/search?setlang=zh&q={%artist}
   title: Last.fm
   tags:
-  - lastfm
-  - music
+    - lastfm
+    - music
   examples:
     beatles: Search for "beatles"
 sk-dcm 0:
