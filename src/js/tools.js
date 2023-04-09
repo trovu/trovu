@@ -19,7 +19,7 @@ async function main() {
 
   if (!process.env.TROVU_DATA_PATH) {
     console.log(
-      'Environment variable TROVU_DATA_PATH must contain full path to trovu-data directory. Pleas set with:',
+      'Environment variable TROVU_DATA_PATH must contain full path to trovu-data directory. Please set with:',
     );
     console.log('export TROVU_DATA_PATH=/path/to/trovu-data');
     return;
