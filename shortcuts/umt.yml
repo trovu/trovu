@@ -1,0 +1,30 @@
+de-nl 0:
+  url: https://www.uitmuntend.de/
+  title: Duits-Nederlands (Uitmuntend)
+  tags:
+  - dictionary
+  - dutch
+  - german
+  - language
+de-nl 1:
+  url: https://www.uitmuntend.de/search.html?search={%word}
+  title: Duits-Nederlands (Uitmuntend)
+  tags:
+  - dictionary
+  - dutch
+  - german
+  - language
+  examples:
+    baum: Nederlands-vertaling van "baum"
+    boom: Duits-vertaling van "boom"
+nl-de 0:
+  title: Niederländisch-Deutsch (Uitmuntend)
+  include:
+    key: de-nl 0
+nl-de 1:
+  title: Niederländisch-Deutsch (Uitmuntend)
+  include:
+    key: de-nl 1
+  examples:
+    boom: Deutsch-Übersetzung von "boom"
+    baum: Niederländisch-Übersetzung von "baum"
