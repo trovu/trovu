@@ -6729,6 +6729,22 @@ vkv 1:
   - vkontakte
   examples:
     berlin: search for videos about "berlin" on Vkontakte
+vkvn 0:
+  url: http://vk.com/video?notsafe=1
+  title: Vkontakte, videos search incl. "not safe"
+  tags:
+  - social network
+  - video
+  - vkontakte
+vkvn 1:
+  url: http://vk.com/video?notsafe=1&q={%query}
+  title: Vkontakte videos, incl. "not safe"
+  tags:
+  - social network
+  - video
+  - vkontakte
+  examples:
+    berlin: search for videos about "berlin", incl. NSFW
 w 0:
   url: https://{$language}.wikipedia.org/
   title: Wikipedia Main Page
