@@ -6652,13 +6652,13 @@ visuwords 1:
   tags:
   - old
 vk 0:
-  url: http://vk.com
+  url: https://vk.com
   title: Vkontakte
   tags:
   - social network
   - vkontakte
 vk 1:
-  url: http://vk.com/search?c%5Bq%5D={%name}
+  url: https://vk.com/search?c%5Bq%5D={%name}
   title: Vkontakte
   tags:
   - social network
@@ -6666,14 +6666,14 @@ vk 1:
   examples:
     putin: search for people named "putin" on Vkontakte
 vka 0:
-  url: http://vk.com/audio
+  url: https://vk.com/audio
   title: Vkontakte, my audio/music
   tags:
   - music
   - social network
   - vkontakte
 vka 1:
-  url: http://vk.com/audio?q={%query}
+  url: https://vk.com/audio?q={%query}
   title: Vkontakte audio/music
   tags:
   - music
@@ -6682,25 +6682,25 @@ vka 1:
   examples:
     chillout: search for chillout music on Vkontakte
 vkfave 0:
-  url: http://vk.com/fave
+  url: https://vk.com/fave
   title: Vkontakte, my favourites
   tags:
   - social network
   - vkontakte
 vkfeed 0:
-  url: http://vk.com/feed
+  url: https://vk.com/feed
   title: Vkontakte, my news/feed
   tags:
   - social network
   - vkontakte
 vkg 0:
-  url: http://vk.com/groups
+  url: https://vk.com/groups
   title: Vkontakte, my groups/communities
   tags:
   - social network
   - vkontakte
 vkg 1:
-  url: http://vk.com/search?c%5Bsection%5D=communities&c%5Bq%5D={%query}
+  url: https://vk.com/search?c%5Bsection%5D=communities&c%5Bq%5D={%query}
   title: Vkontakte groups/communities
   tags:
   - social network
@@ -6708,20 +6708,20 @@ vkg 1:
   examples:
     berlin: search for groups about "berlin"
 vkim 0:
-  url: http://vk.com/im
+  url: https://vk.com/im
   title: Vkontakte, my messages
   tags:
   - social network
   - vkontakte
 vkv 0:
-  url: http://vk.com/video
+  url: https://vk.com/video
   title: Vkontakte, my videos
   tags:
   - social network
   - video
   - vkontakte
 vkv 1:
-  url: http://vk.com/video?q={%query}
+  url: https://vk.com/video?q={%query}
   title: Vkontakte videos
   tags:
   - social network
@@ -6730,14 +6730,14 @@ vkv 1:
   examples:
     berlin: search for videos about "berlin" on Vkontakte
 vkvn 0:
-  url: http://vk.com/video?notsafe=1
+  url: https://vk.com/video?notsafe=1
   title: Vkontakte, videos search incl. "not safe"
   tags:
   - social network
   - video
   - vkontakte
 vkvn 1:
-  url: http://vk.com/video?notsafe=1&q={%query}
+  url: https://vk.com/video?notsafe=1&q={%query}
   title: Vkontakte videos, incl. "not safe"
   tags:
   - social network
