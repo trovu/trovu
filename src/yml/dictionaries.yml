@@ -1,3 +1,10 @@
+ama:
+  name: albertmartin.de
+  pairs:
+    de:
+      la:
+        - https://www.albertmartin.de/latein/
+        - https://www.albertmartin.de/latein/?q={%Wort}
 ard:
   name: arabdict
   pairs:
@@ -465,6 +472,27 @@ dcm:
       zh:
         - https://www.dict.com/cinsko-slovensky/
         - https://www.dict.com/cinsko-slovensky/{%word}
+dtn:
+  name: deutsch-tuerkisch.net
+  pairs:
+    de:
+      tr:
+        - https://deutsch-tuerkisch.net/
+        - https://deutsch-tuerkisch.net/suche/{%word}
+esd:
+  name: SpanishDict
+  pairs:
+    en:
+      es:
+        - https://www.spanishdict.com/
+        - https://www.spanishdict.com/translate/{%word}
+flx:
+  name: Folkets lexikon
+  pairs:
+    en:
+      sv:
+        - https://folkets-lexikon.csc.kth.se/
+        - https://folkets-lexikon.csc.kth.se/folkets/#lookup&{%word}
 leo:
   name: leo.org
   pairs:
@@ -1050,3 +1078,10 @@ wdk:
       ja:
         - http://www.wadoku.de/
         - http://www.wadoku.de/wadoku/search/{%word}
+zrg:
+  name: Zargan
+  pairs:
+    en:
+      tr:
+        - https://www.zargan.com/
+        - https://www.zargan.com/tr/q/{%word}
