@@ -1,87 +1,7 @@
-ar-ard 0:
-  include:
-    key: ar-es 0
-    namespace: ard
-ar-ard 1:
-  include:
-    key: ar-es 1
-    namespace: ard
-cs-dcm 0:
-  include:
-    key: cs-es 0
-    namespace: dcm
-cs-dcm 1:
-  include:
-    key: cs-es 1
-    namespace: dcm
 de 1:
   include:
     key: de-es 1
     namespace: leo
-de-bab 0:
-  include:
-    key: de-es 0
-    namespace: bab
-de-bab 1:
-  include:
-    key: de-es 1
-    namespace: bab
-de-dcc 0:
-  include:
-    key: de-es 0
-    namespace: dcc
-de-dcc 1:
-  include:
-    key: de-es 1
-    namespace: dcc
-de-dcm 0:
-  include:
-    key: de-es 0
-    namespace: dcm
-de-dcm 1:
-  include:
-    key: de-es 1
-    namespace: dcm
-de-leo 0:
-  include:
-    key: de-es 0
-    namespace: leo
-de-leo 1:
-  include:
-    key: de-es 1
-    namespace: leo
-de-lge 0:
-  include:
-    key: de-es 0
-    namespace: lge
-de-lge 1:
-  include:
-    key: de-es 1
-    namespace: lge
-de-lgs 0:
-  include:
-    key: de-es 0
-    namespace: lgs
-de-lgs 1:
-  include:
-    key: de-es 1
-    namespace: lgs
-de-pka 0:
-  include:
-    key: de-es 0
-    namespace: pka
-de-pka 1:
-  include:
-    key: de-es 1
-    namespace: pka
-de-pns 0:
-  include:
-    key: de-es 0
-    namespace: pns
-de-pns 1:
-  include:
-    key: de-es 1
-    namespace: pns
 dep 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Español–Alemán (Pons)
@@ -113,38 +33,6 @@ en 1:
   examples:
     tree: Traducción de "tree"
     arbol: Traducción de "arbol"
-en-esd 0:
-  include:
-    key: en-es 0
-    namespace: esd
-en-esd 1:
-  include:
-    key: en-es 1
-    namespace: esd
-en-leo 0:
-  include:
-    key: en-es 0
-    namespace: leo
-en-leo 1:
-  include:
-    key: en-es 1
-    namespace: leo
-en-lge 0:
-  include:
-    key: en-es 0
-    namespace: lge
-en-lge 1:
-  include:
-    key: en-es 1
-    namespace: lge
-en-pns 0:
-  include:
-    key: en-es 0
-    namespace: pns
-en-pns 1:
-  include:
-    key: en-es 1
-    namespace: pns
 last 1:
   url: http://www.last.fm/search?setlang=es&q={%artist}
   title: Last.fm
@@ -153,18 +41,6 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
-pt-leo:
-  include:
-    key: pt-es 0
-    namespace: leo
-pt-leo 0:
-  include:
-    key: pt-es 0
-    namespace: leo
-pt-leo 1:
-  include:
-    key: pt-es 1
-    namespace: leo
 rae 1:
   url: http://dle.rae.es/?w={%query}
   title: Diccionario RAE
@@ -183,15 +59,3 @@ raed 1:
   examples:
     capaz: looks for "capaz" in the RAE dictionary of doubts
     decir: busca por la palabra «decir» en el diccionario panhíspanico de dudas de la Real Academia Española
-sk-dcm:
-  include:
-    key: sk-es 0
-    namespace: dcm
-sk-dcm 0:
-  include:
-    key: sk-es 0
-    namespace: dcm
-sk-dcm 1:
-  include:
-    key: sk-es 1
-    namespace: dcm
