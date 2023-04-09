@@ -38,7 +38,7 @@ ar-en 1:
     tree: Arabic translation of "tree"
 ar-es 0:
   url: https://www.arabdict.com/spanish-arabic/
-  title: Arabe-Español (arabdict)
+  title: Árabe-Español (arabdict)
   tags:
   - arabic
   - dictionary
@@ -46,15 +46,15 @@ ar-es 0:
   - spanish
 ar-es 1:
   url: https://www.arabdict.com/spanish-arabic/{%word}
-  title: Arabe-Español (arabdict)
+  title: Árabe-Español (arabdict)
   tags:
   - arabic
   - dictionary
   - language
   - spanish
   examples:
-    شجرة: Traducción al Español de "شجرة"
-    árbol: Traducción al Arabe de "árbol"
+    شجرة: Traducción al español de "شجرة"
+    árbol: Traducción al árabe de "árbol"
 ar-fr 0:
   url: https://www.arabdict.com/french-arabic/
   title: Arabe-Français (arabdict)
@@ -72,8 +72,8 @@ ar-fr 1:
   - french
   - language
   examples:
-    شجرة: Traduction en Français de "شجرة"
-    arbre: Traduction en Arabe de "arbre"
+    شجرة: Traduction en français de "شجرة"
+    arbre: Traduction en arabe de "arbre"
 ar-it 0:
   url: https://www.arabdict.com/italian-arabic/
   title: Arabo-Italiano (arabdict)
@@ -113,68 +113,68 @@ ar-tr 1:
     شجرة: '"شجرة" için Türkçe çevirisi'
     ağaç: '"ağaç" için Arapça çevirisi'
 de-ar 0:
-  title: ألمانية-عربية (arabdict)
+  title: الألمانية-العربية (arabdict)
   include:
     key: ar-de 0
 de-ar 1:
-  title: ألمانية-عربية (arabdict)
+  title: الألمانية-العربية (arabdict)
   include:
     key: ar-de 1
   examples:
-    baum: ترجمة عربية من "baum"
-    شجرة: ترجمة ألمانية من "شجرة"
+    baum: ترجمة العربية من "baum"
+    شجرة: ترجمة الألمانية من "شجرة"
 en-ar 0:
-  title: إنجليزية-عربية (arabdict)
+  title: الإنجليزية-العربية (arabdict)
   include:
     key: ar-en 0
 en-ar 1:
-  title: إنجليزية-عربية (arabdict)
+  title: الإنجليزية-العربية (arabdict)
   include:
     key: ar-en 1
   examples:
-    tree: ترجمة عربية من "tree"
-    شجرة: ترجمة إنجليزية من "شجرة"
+    tree: ترجمة العربية من "tree"
+    شجرة: ترجمة الإنجليزية من "شجرة"
 es-ar 0:
-  title: إسبانية-عربية (arabdict)
+  title: الإسبانية-العربية (arabdict)
   include:
     key: ar-es 0
 es-ar 1:
-  title: إسبانية-عربية (arabdict)
+  title: الإسبانية-العربية (arabdict)
   include:
     key: ar-es 1
   examples:
-    árbol: ترجمة عربية من "árbol"
-    شجرة: ترجمة إسبانية من "شجرة"
+    árbol: ترجمة العربية من "árbol"
+    شجرة: ترجمة الإسبانية من "شجرة"
 fr-ar 0:
-  title: فرنسية-عربية (arabdict)
+  title: الفرنسية-العربية (arabdict)
   include:
     key: ar-fr 0
 fr-ar 1:
-  title: فرنسية-عربية (arabdict)
+  title: الفرنسية-العربية (arabdict)
   include:
     key: ar-fr 1
   examples:
-    arbre: ترجمة عربية من "arbre"
-    شجرة: ترجمة فرنسية من "شجرة"
+    arbre: ترجمة العربية من "arbre"
+    شجرة: ترجمة الفرنسية من "شجرة"
 it-ar 0:
-  title: إيطالية-عربية (arabdict)
+  title: الإيطالية-العربية (arabdict)
   include:
     key: ar-it 0
 it-ar 1:
-  title: إيطالية-عربية (arabdict)
+  title: الإيطالية-العربية (arabdict)
   include:
     key: ar-it 1
   examples:
-    albero: ترجمة عربية من "albero"
-    شجرة: ترجمة إيطالية من "شجرة"
+    albero: ترجمة العربية من "albero"
+    شجرة: ترجمة الإيطالية من "شجرة"
 tr-ar 0:
-  title: التركية-عربية (arabdict)
+  title: التركية-العربية (arabdict)
   include:
     key: ar-tr 0
 tr-ar 1:
-  title: التركية-عربية (arabdict)
+  title: التركية-العربية (arabdict)
   include:
     key: ar-tr 1
   examples:
-    ağaç: ترجمة عربية من "ağaç"
+    ağaç: ترجمة العربية من "ağaç"
     شجرة: ترجمة التركية من "شجرة"

@@ -4,7 +4,7 @@ de-el 0:
   tags:
   - dictionary
   - german
-  - greek (modern)
+  - greek
   - language
 de-el 1:
   url: http://en.pons.com/translate?l=deel&q={%word}
@@ -12,7 +12,7 @@ de-el 1:
   tags:
   - dictionary
   - german
-  - greek (modern)
+  - greek
   - language
   examples:
     baum: Μετάφραση στα Ελληνικά για το "baum"
@@ -53,8 +53,8 @@ de-es 1:
   - language
   - spanish
   examples:
-    baum: Traducción al Español de "baum"
-    árbol: Traducción al Alemán de "árbol"
+    baum: Traducción al español de "baum"
+    árbol: Traducción al alemán de "árbol"
 de-fr 0:
   url: http://en.pons.com/translate?l=defr
   title: Allemand-Français (Pons)
@@ -72,8 +72,8 @@ de-fr 1:
   - german
   - language
   examples:
-    baum: Traduction en Français de "baum"
-    arbre: Traduction en Allemand de "arbre"
+    baum: Traduction en français de "baum"
+    arbre: Traduction en allemand de "arbre"
 de-hu 0:
   url: http://en.pons.com/translate?l=dehu
   title: Német-Magyar (Pons)
@@ -208,8 +208,8 @@ en-es 1:
   - language
   - spanish
   examples:
-    tree: Traducción al Español de "tree"
-    árbol: Traducción al Inglés de "árbol"
+    tree: Traducción al español de "tree"
+    árbol: Traducción al inglés de "árbol"
 en-fr 0:
   url: http://en.pons.com/translate?l=enfr
   title: Anglais-Français (Pons)
@@ -227,8 +227,8 @@ en-fr 1:
   - french
   - language
   examples:
-    tree: Traduction en Français de "tree"
-    arbre: Traduction en Anglais de "arbre"
+    tree: Traduction en français de "tree"
+    arbre: Traduction en anglais de "arbre"
 en-sl 0:
   url: http://en.pons.com/translate?l=ensl
   title: Angleščina-Slovenščina (Pons)
@@ -247,7 +247,7 @@ en-sl 1:
   - slovenian
   examples:
     tree: Prevod v slovenščina za besedo "tree"
-    drevo: Prevod v Angleščina za besedo "drevo"
+    drevo: Prevod v angleščina za besedo "drevo"
 es-de 0:
   title: Spanisch-Deutsch (Pons)
   include:
@@ -353,8 +353,8 @@ pl-fr 1:
   include:
     key: fr-pl 1
   examples:
-    drzewo: Traduction en Français de "drzewo"
-    arbre: Traduction en Polonais de "arbre"
+    drzewo: Traduction en français de "drzewo"
+    arbre: Traduction en polonais de "arbre"
 pt-de 0:
   title: Portugiesisch-Deutsch (Pons)
   include:

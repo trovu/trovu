@@ -35,7 +35,7 @@ ar-sk 1:
   - slovak
   examples:
     شجرة: slovenčina preklad pre "شجرة"
-    strοmček: arabčina preklad pre "strοmček"
+    stromček: arabčina preklad pre "stromček"
 bg-de 0:
   url: https://www.dict.com/bulgarisch-deutsch/
   title: Bulgarisch-Deutsch (dict.com)
@@ -73,7 +73,7 @@ bg-sk 1:
   - slovak
   examples:
     дърво: slovenčina preklad pre "дърво"
-    strοmček: bulharčina preklad pre "strοmček"
+    stromček: bulharčina preklad pre "stromček"
 ca-de 0:
   url: https://www.dict.com/katalanisch-deutsch/
   title: Katalanisch-Deutsch (dict.com)
@@ -111,7 +111,7 @@ ca-sk 1:
   - slovak
   examples:
     arbre: slovenčina preklad pre "arbre"
-    strοmček: katalánčina preklad pre "strοmček"
+    stromček: katalánčina preklad pre "stromček"
 cs-da 0:
   url: https://www.dict.com/dansko-cesky/
   title: Tjekkisk-Dansk (dict.com)
@@ -156,7 +156,7 @@ cs-el 0:
   tags:
   - czech
   - dictionary
-  - greek (modern)
+  - greek
   - language
 cs-el 1:
   url: https://www.dict.com/recko-cesky/{%word}
@@ -164,7 +164,7 @@ cs-el 1:
   tags:
   - czech
   - dictionary
-  - greek (modern)
+  - greek
   - language
   examples:
     strom: Μετάφραση στα Ελληνικά για το "strom"
@@ -205,8 +205,8 @@ cs-es 1:
   - language
   - spanish
   examples:
-    strom: Traducción al Español de "strom"
-    árbol: Traducción al Checo de "árbol"
+    strom: Traducción al español de "strom"
+    árbol: Traducción al checo de "árbol"
 cs-et 0:
   url: https://www.dict.com/estonsko-cesky/
   title: Tšehhi-Eesti (dict.com)
@@ -262,15 +262,15 @@ cs-fr 1:
   - french
   - language
   examples:
-    strom: Traduction en Français de "strom"
-    arbre: Traduction en Tchèque de "arbre"
+    strom: Traduction en français de "strom"
+    arbre: Traduction en tchèque de "arbre"
 cs-he 0:
   url: https://www.dict.com/hebrejsko-cesky/
   title: צ׳כית-עברית (dict.com)
   tags:
   - czech
   - dictionary
-  - hebrew (modern)
+  - hebrew
   - language
 cs-he 1:
   url: https://www.dict.com/hebrejsko-cesky/{%word}
@@ -278,7 +278,7 @@ cs-he 1:
   tags:
   - czech
   - dictionary
-  - hebrew (modern)
+  - hebrew
   - language
   examples:
     strom: עברית תרגום של "strom"
@@ -376,8 +376,8 @@ cs-ja 1:
   - japanese
   - language
   examples:
-    strom: 日本語翻訳"strom"
-    木: チェコ語翻訳"木"
+    strom: '"strom"の日本語翻訳'
+    木: '"木"のチェコ語翻訳'
 cs-ko 0:
   url: https://www.dict.com/korejsko-cesky/
   title: 체코어-한국어 (dict.com)
@@ -395,11 +395,11 @@ cs-ko 1:
   - korean
   - language
   examples:
-    strom: 한국어 번역 "strom"
-    나무: 체코어 번역 "나무"
+    strom: '"strom"의 한국어 번역'
+    나무: '"나무"의 체코어 번역'
 cs-lt 0:
   url: https://www.dict.com/litevsko-cesky/
-  title: Čekų kalba-Lietuvių kalba (dict.com)
+  title: Čekų-Lietuvių (dict.com)
   tags:
   - czech
   - dictionary
@@ -407,18 +407,18 @@ cs-lt 0:
   - lithuanian
 cs-lt 1:
   url: https://www.dict.com/litevsko-cesky/{%word}
-  title: Čekų kalba-Lietuvių kalba (dict.com)
+  title: Čekų-Lietuvių (dict.com)
   tags:
   - czech
   - dictionary
   - language
   - lithuanian
   examples:
-    strom: Lietuvių kalba vertimas žodžiui "strom"
-    medis: Čekų kalba vertimas žodžiui "medis"
+    strom: lietuvių vertimas žodžiui "strom"
+    medis: čekų vertimas žodžiui "medis"
 cs-lv 0:
   url: https://www.dict.com/lotyssko-cesky/
-  title: Čehu valoda-Latviešu valoda (dict.com)
+  title: Čehu-Latviešu (dict.com)
   tags:
   - czech
   - dictionary
@@ -426,15 +426,15 @@ cs-lv 0:
   - latvian
 cs-lv 1:
   url: https://www.dict.com/lotyssko-cesky/{%word}
-  title: Čehu valoda-Latviešu valoda (dict.com)
+  title: Čehu-Latviešu (dict.com)
   tags:
   - czech
   - dictionary
   - language
   - latvian
   examples:
-    strom: Latviešu valoda tulkojums vārdam "strom"
-    koks: Čehu valoda tulkojums vārdam "koks"
+    strom: latviešu tulkojums vārdam "strom"
+    koks: čehu tulkojums vārdam "koks"
 cs-nl 0:
   url: https://www.dict.com/nizozemsko-cesky/
   title: Tsjechisch-Nederlands (dict.com)
@@ -471,8 +471,8 @@ cs-no 1:
   - language
   - norwegian
   examples:
-    strom: norsk oversettelse av "strom"
-    tre: tsjekkisk oversettelse av "tre"
+    strom: norsk-oversettelse av "strom"
+    tre: tsjekkisk-oversettelse av "tre"
 cs-pl 0:
   url: https://www.dict.com/polsko-cesky/
   title: Czeski-Polski (dict.com)
@@ -494,7 +494,7 @@ cs-pl 1:
     drzewo: Tłumaczenie na język czeski dla "drzewo"
 cs-pt 0:
   url: https://www.dict.com/portugalsko-cesky/
-  title: Checo-Português (dict.com)
+  title: Tcheco-Português (dict.com)
   tags:
   - czech
   - dictionary
@@ -502,7 +502,7 @@ cs-pt 0:
   - portuguese
 cs-pt 1:
   url: https://www.dict.com/portugalsko-cesky/{%word}
-  title: Checo-Português (dict.com)
+  title: Tcheco-Português (dict.com)
   tags:
   - czech
   - dictionary
@@ -510,7 +510,7 @@ cs-pt 1:
   - portuguese
   examples:
     strom: Tradução em português de "strom"
-    árvore: Tradução em checo de "árvore"
+    árvore: Tradução em tcheco de "árvore"
 cs-ro 0:
   url: https://www.dict.com/rumunsko-cesky/
   title: Cehă-Română (dict.com)
@@ -529,7 +529,7 @@ cs-ro 1:
   - romanian
   examples:
     strom: Traducere în română pentru "strom"
-    arbore: Traducere în cehă pentru "arbore"
+    copac: Traducere în cehă pentru "copac"
 cs-ru 0:
   url: https://www.dict.com/rusko-cesky/
   title: Чешский-Русский (dict.com)
@@ -567,7 +567,7 @@ cs-sk 1:
   - slovak
   examples:
     strom: slovenčina preklad pre "strom"
-    strοmček: čeština preklad pre "strοmček"
+    stromček: čeština preklad pre "stromček"
 cs-sl 0:
   url: https://www.dict.com/slovinsko-cesky/
   title: Češčina-Slovenščina (dict.com)
@@ -586,7 +586,7 @@ cs-sl 1:
   - slovenian
   examples:
     strom: Prevod v slovenščina za besedo "strom"
-    drevo: Prevod v Češčina za besedo "drevo"
+    drevo: Prevod v češčina za besedo "drevo"
 cs-sr 0:
   url: https://www.dict.com/srbsko-cesky/
   title: Чешки-Српски (dict.com)
@@ -604,8 +604,8 @@ cs-sr 1:
   - language
   - serbian
   examples:
-    strom: Превод на Српски за "strom"
-    дрво: Превод на Чешки за "дрво"
+    strom: Превод на српски за "strom"
+    дрво: Превод на чешки за "дрво"
 cs-sv 0:
   url: https://www.dict.com/svedsko-cesky/
   title: Tjeckiska-Svenska (dict.com)
@@ -703,7 +703,7 @@ cs-vi 1:
     cây: Bản dịch Tiếng Séc của "cây"
 cs-zh 0:
   url: https://www.dict.com/cinsko-cesky/
-  title: 捷克语-汉语 (dict.com)
+  title: 捷克文-中文 (dict.com)
   tags:
   - chinese
   - czech
@@ -711,15 +711,15 @@ cs-zh 0:
   - language
 cs-zh 1:
   url: https://www.dict.com/cinsko-cesky/{%word}
-  title: 捷克语-汉语 (dict.com)
+  title: 捷克文-中文 (dict.com)
   tags:
   - chinese
   - czech
   - dictionary
   - language
   examples:
-    strom: 汉语翻译"strom"
-    树: 捷克语翻译"树"
+    strom: 中文 的"strom"翻译
+    树: 捷克文 的"树"翻译
 da-cs 0:
   title: Dánština-Čeština (dict.com)
   include:
@@ -768,18 +768,18 @@ da-sk 1:
   - slovak
   examples:
     træ: slovenčina preklad pre "træ"
-    strοmček: dánčina preklad pre "strοmček"
+    stromček: dánčina preklad pre "stromček"
 de-ar 0:
-  title: ألمانية-عربية (dict.com)
+  title: الألمانية-العربية (dict.com)
   include:
     key: ar-de 0
 de-ar 1:
-  title: ألمانية-عربية (dict.com)
+  title: الألمانية-العربية (dict.com)
   include:
     key: ar-de 1
   examples:
-    baum: ترجمة عربية من "baum"
-    شجرة: ترجمة ألمانية من "شجرة"
+    baum: ترجمة العربية من "baum"
+    شجرة: ترجمة الألمانية من "شجرة"
 de-bg 0:
   title: Немски-Български (dict.com)
   include:
@@ -830,7 +830,7 @@ de-el 0:
   tags:
   - dictionary
   - german
-  - greek (modern)
+  - greek
   - language
 de-el 1:
   url: https://www.dict.com/griechisch-deutsch/{%word}
@@ -838,7 +838,7 @@ de-el 1:
   tags:
   - dictionary
   - german
-  - greek (modern)
+  - greek
   - language
   examples:
     baum: Μετάφραση στα Ελληνικά για το "baum"
@@ -879,8 +879,8 @@ de-es 1:
   - language
   - spanish
   examples:
-    baum: Traducción al Español de "baum"
-    árbol: Traducción al Alemán de "árbol"
+    baum: Traducción al español de "baum"
+    árbol: Traducción al alemán de "árbol"
 de-et 0:
   url: https://www.dict.com/estnisch-deutsch/
   title: Saksa-Eesti (dict.com)
@@ -936,15 +936,15 @@ de-fr 1:
   - german
   - language
   examples:
-    baum: Traduction en Français de "baum"
-    arbre: Traduction en Allemand de "arbre"
+    baum: Traduction en français de "baum"
+    arbre: Traduction en allemand de "arbre"
 de-he 0:
   url: https://www.dict.com/hebraisch-deutsch/
   title: גרמנית-עברית (dict.com)
   tags:
   - dictionary
   - german
-  - hebrew (modern)
+  - hebrew
   - language
 de-he 1:
   url: https://www.dict.com/hebraisch-deutsch/{%word}
@@ -952,7 +952,7 @@ de-he 1:
   tags:
   - dictionary
   - german
-  - hebrew (modern)
+  - hebrew
   - language
   examples:
     baum: עברית תרגום של "baum"
@@ -1050,8 +1050,8 @@ de-ja 1:
   - japanese
   - language
   examples:
-    baum: 日本語翻訳"baum"
-    木: ドイツ語翻訳"木"
+    baum: '"baum"の日本語翻訳'
+    木: '"木"のドイツ語翻訳'
 de-ko 0:
   url: https://www.dict.com/koreanisch-deutsch/
   title: 독일어-한국어 (dict.com)
@@ -1069,11 +1069,11 @@ de-ko 1:
   - korean
   - language
   examples:
-    baum: 한국어 번역 "baum"
-    나무: 독일어 번역 "나무"
+    baum: '"baum"의 한국어 번역'
+    나무: '"나무"의 독일어 번역'
 de-lt 0:
   url: https://www.dict.com/litauisch-deutsch/
-  title: Vokiečių kalba-Lietuvių kalba (dict.com)
+  title: Vokiečių-Lietuvių (dict.com)
   tags:
   - dictionary
   - german
@@ -1081,18 +1081,18 @@ de-lt 0:
   - lithuanian
 de-lt 1:
   url: https://www.dict.com/litauisch-deutsch/{%word}
-  title: Vokiečių kalba-Lietuvių kalba (dict.com)
+  title: Vokiečių-Lietuvių (dict.com)
   tags:
   - dictionary
   - german
   - language
   - lithuanian
   examples:
-    baum: Lietuvių kalba vertimas žodžiui "baum"
-    medis: Vokiečių kalba vertimas žodžiui "medis"
+    baum: lietuvių vertimas žodžiui "baum"
+    medis: vokiečių vertimas žodžiui "medis"
 de-lv 0:
   url: https://www.dict.com/lettisch-deutsch/
-  title: Vācu valoda-Latviešu valoda (dict.com)
+  title: Vācu-Latviešu (dict.com)
   tags:
   - dictionary
   - german
@@ -1100,15 +1100,15 @@ de-lv 0:
   - latvian
 de-lv 1:
   url: https://www.dict.com/lettisch-deutsch/{%word}
-  title: Vācu valoda-Latviešu valoda (dict.com)
+  title: Vācu-Latviešu (dict.com)
   tags:
   - dictionary
   - german
   - language
   - latvian
   examples:
-    baum: Latviešu valoda tulkojums vārdam "baum"
-    koks: Vācu valoda tulkojums vārdam "koks"
+    baum: latviešu tulkojums vārdam "baum"
+    koks: vācu tulkojums vārdam "koks"
 de-nl 0:
   url: https://www.dict.com/niederlandisch-deutsch/
   title: Duits-Nederlands (dict.com)
@@ -1145,8 +1145,8 @@ de-no 1:
   - language
   - norwegian
   examples:
-    baum: norsk oversettelse av "baum"
-    tre: tysk oversettelse av "tre"
+    baum: norsk-oversettelse av "baum"
+    tre: tysk-oversettelse av "tre"
 de-pl 0:
   url: https://www.dict.com/polnisch-deutsch/
   title: Niemiecki-Polski (dict.com)
@@ -1203,7 +1203,7 @@ de-ro 1:
   - romanian
   examples:
     baum: Traducere în română pentru "baum"
-    arbore: Traducere în germană pentru "arbore"
+    copac: Traducere în germană pentru "copac"
 de-ru 0:
   url: https://www.dict.com/russisch-deutsch/
   title: Немецкий-Русский (dict.com)
@@ -1241,7 +1241,7 @@ de-sk 1:
   - slovak
   examples:
     baum: slovenčina preklad pre "baum"
-    strοmček: nemčina preklad pre "strοmček"
+    stromček: nemčina preklad pre "stromček"
 de-sl 0:
   url: https://www.dict.com/slowenisch-deutsch/
   title: Nemščina-Slovenščina (dict.com)
@@ -1260,7 +1260,7 @@ de-sl 1:
   - slovenian
   examples:
     baum: Prevod v slovenščina za besedo "baum"
-    drevo: Prevod v Nemščina za besedo "drevo"
+    drevo: Prevod v nemščina za besedo "drevo"
 de-sr 0:
   url: https://www.dict.com/serbisch-deutsch/
   title: Немачки-Српски (dict.com)
@@ -1278,8 +1278,8 @@ de-sr 1:
   - language
   - serbian
   examples:
-    baum: Превод на Српски за "baum"
-    дрво: Превод на Немачки за "дрво"
+    baum: Превод на српски за "baum"
+    дрво: Превод на немачки за "дрво"
 de-sv 0:
   url: https://www.dict.com/schwedisch-deutsch/
   title: Tyska-Svenska (dict.com)
@@ -1377,7 +1377,7 @@ de-vi 1:
     cây: Bản dịch Tiếng Đức của "cây"
 de-zh 0:
   url: https://www.dict.com/chinesisch-deutsch/
-  title: 德语-汉语 (dict.com)
+  title: 德文-中文 (dict.com)
   tags:
   - chinese
   - dictionary
@@ -1385,15 +1385,15 @@ de-zh 0:
   - language
 de-zh 1:
   url: https://www.dict.com/chinesisch-deutsch/{%word}
-  title: 德语-汉语 (dict.com)
+  title: 德文-中文 (dict.com)
   tags:
   - chinese
   - dictionary
   - german
   - language
   examples:
-    baum: 汉语翻译"baum"
-    树: 德语翻译"树"
+    baum: 中文 的"baum"翻译
+    树: 德文 的"树"翻译
 el-cs 0:
   title: Řečtina-Čeština (dict.com)
   include:
@@ -1421,7 +1421,7 @@ el-sk 0:
   title: Gréčtina-Slovenčina (dict.com)
   tags:
   - dictionary
-  - greek (modern)
+  - greek
   - language
   - slovak
 el-sk 1:
@@ -1429,12 +1429,12 @@ el-sk 1:
   title: Gréčtina-Slovenčina (dict.com)
   tags:
   - dictionary
-  - greek (modern)
+  - greek
   - language
   - slovak
   examples:
     δέντρο: slovenčina preklad pre "δέντρο"
-    strοmček: gréčtina preklad pre "strοmček"
+    stromček: gréčtina preklad pre "stromček"
 en-cs 0:
   title: Angličtina-Čeština (dict.com)
   include:
@@ -1475,7 +1475,7 @@ en-sk 1:
   - slovak
   examples:
     tree: slovenčina preklad pre "tree"
-    strοmček: angličtina preklad pre "strοmček"
+    stromček: angličtina preklad pre "stromček"
 es-cs 0:
   title: Španělština-Čeština (dict.com)
   include:
@@ -1516,7 +1516,7 @@ es-sk 1:
   - spanish
   examples:
     árbol: slovenčina preklad pre "árbol"
-    strοmček: španielčina preklad pre "strοmček"
+    stromček: španielčina preklad pre "stromček"
 et-cs 0:
   title: Estonština-Čeština (dict.com)
   include:
@@ -1557,7 +1557,7 @@ et-sk 1:
   - slovak
   examples:
     puu: slovenčina preklad pre "puu"
-    strοmček: estónčina preklad pre "strοmček"
+    stromček: estónčina preklad pre "stromček"
 fi-cs 0:
   title: Finština-Čeština (dict.com)
   include:
@@ -1598,7 +1598,7 @@ fi-sk 1:
   - slovak
   examples:
     puu: slovenčina preklad pre "puu"
-    strοmček: fínčina preklad pre "strοmček"
+    stromček: fínčina preklad pre "stromček"
 fr-cs 0:
   title: Francouzština-Čeština (dict.com)
   include:
@@ -1639,7 +1639,7 @@ fr-sk 1:
   - slovak
   examples:
     arbre: slovenčina preklad pre "arbre"
-    strοmček: francúzština preklad pre "strοmček"
+    stromček: francúzština preklad pre "stromček"
 he-cs 0:
   title: Hebrejština-Čeština (dict.com)
   include:
@@ -1667,7 +1667,7 @@ he-sk 0:
   title: Hebrejčina-Slovenčina (dict.com)
   tags:
   - dictionary
-  - hebrew (modern)
+  - hebrew
   - language
   - slovak
 he-sk 1:
@@ -1675,12 +1675,12 @@ he-sk 1:
   title: Hebrejčina-Slovenčina (dict.com)
   tags:
   - dictionary
-  - hebrew (modern)
+  - hebrew
   - language
   - slovak
   examples:
     עץ: slovenčina preklad pre "עץ"
-    strοmček: hebrejčina preklad pre "strοmček"
+    stromček: hebrejčina preklad pre "stromček"
 hr-cs 0:
   title: Chorvatština-Čeština (dict.com)
   include:
@@ -1721,7 +1721,7 @@ hr-sk 1:
   - slovak
   examples:
     stablo: slovenčina preklad pre "stablo"
-    strοmček: chorvátčina preklad pre "strοmček"
+    stromček: chorvátčina preklad pre "stromček"
 hu-cs 0:
   title: Maďarština-Čeština (dict.com)
   include:
@@ -1762,7 +1762,7 @@ hu-sk 1:
   - slovak
   examples:
     fa: slovenčina preklad pre "fa"
-    strοmček: maďarčina preklad pre "strοmček"
+    stromček: maďarčina preklad pre "stromček"
 id-cs 0:
   title: Indonéština-Čeština (dict.com)
   include:
@@ -1803,7 +1803,7 @@ id-sk 1:
   - slovak
   examples:
     pohon: slovenčina preklad pre "pohon"
-    strοmček: indonézština preklad pre "strοmček"
+    stromček: indonézština preklad pre "stromček"
 it-cs 0:
   title: Italština-Čeština (dict.com)
   include:
@@ -1844,7 +1844,7 @@ it-sk 1:
   - slovak
   examples:
     albero: slovenčina preklad pre "albero"
-    strοmček: taliančina preklad pre "strοmček"
+    stromček: taliančina preklad pre "stromček"
 ja-cs 0:
   title: Japonština-Čeština (dict.com)
   include:
@@ -1885,7 +1885,7 @@ ja-sk 1:
   - slovak
   examples:
     木: slovenčina preklad pre "木"
-    strοmček: japončina preklad pre "strοmček"
+    stromček: japončina preklad pre "stromček"
 ko-cs 0:
   title: Korejština-Čeština (dict.com)
   include:
@@ -1926,7 +1926,7 @@ ko-sk 1:
   - slovak
   examples:
     나무: slovenčina preklad pre "나무"
-    strοmček: kórejčina preklad pre "strοmček"
+    stromček: kórejčina preklad pre "stromček"
 lt-cs 0:
   title: Litevština-Čeština (dict.com)
   include:
@@ -1967,7 +1967,7 @@ lt-sk 1:
   - slovak
   examples:
     medis: slovenčina preklad pre "medis"
-    strοmček: litovčina preklad pre "strοmček"
+    stromček: litovčina preklad pre "stromček"
 lv-cs 0:
   title: Lotyština-Čeština (dict.com)
   include:
@@ -2008,7 +2008,7 @@ lv-sk 1:
   - slovak
   examples:
     koks: slovenčina preklad pre "koks"
-    strοmček: lotyština preklad pre "strοmček"
+    stromček: lotyština preklad pre "stromček"
 nl-cs 0:
   title: Nizozemština-Čeština (dict.com)
   include:
@@ -2049,7 +2049,7 @@ nl-sk 1:
   - slovak
   examples:
     boom: slovenčina preklad pre "boom"
-    strοmček: holandčina preklad pre "strοmček"
+    stromček: holandčina preklad pre "stromček"
 no-cs 0:
   title: Norština-Čeština (dict.com)
   include:
@@ -2090,7 +2090,7 @@ no-sk 1:
   - slovak
   examples:
     tre: slovenčina preklad pre "tre"
-    strοmček: nórčina preklad pre "strοmček"
+    stromček: nórčina preklad pre "stromček"
 pl-cs 0:
   title: Polština-Čeština (dict.com)
   include:
@@ -2131,7 +2131,7 @@ pl-sk 1:
   - slovak
   examples:
     drzewo: slovenčina preklad pre "drzewo"
-    strοmček: poľština preklad pre "strοmček"
+    stromček: poľština preklad pre "stromček"
 pt-cs 0:
   title: Portugalština-Čeština (dict.com)
   include:
@@ -2172,7 +2172,7 @@ pt-sk 1:
   - slovak
   examples:
     árvore: slovenčina preklad pre "árvore"
-    strοmček: portugalčina preklad pre "strοmček"
+    stromček: portugalčina preklad pre "stromček"
 ro-cs 0:
   title: Rumunština-Čeština (dict.com)
   include:
@@ -2182,7 +2182,7 @@ ro-cs 1:
   include:
     key: cs-ro 1
   examples:
-    arbore: čeština překlad pro "arbore"
+    copac: čeština překlad pro "copac"
     strom: rumunština překlad pro "strom"
 ro-de 0:
   title: Rumänisch-Deutsch (dict.com)
@@ -2193,7 +2193,7 @@ ro-de 1:
   include:
     key: de-ro 1
   examples:
-    arbore: Deutsch-Übersetzung von "arbore"
+    copac: Deutsch-Übersetzung von "copac"
     baum: Rumänisch-Übersetzung von "baum"
 ro-sk 0:
   url: https://www.dict.com/rumunsko-slovensky/
@@ -2212,8 +2212,8 @@ ro-sk 1:
   - romanian
   - slovak
   examples:
-    arbore: slovenčina preklad pre "arbore"
-    strοmček: rumunčina preklad pre "strοmček"
+    copac: slovenčina preklad pre "copac"
+    stromček: rumunčina preklad pre "stromček"
 ru-cs 0:
   title: Ruština-Čeština (dict.com)
   include:
@@ -2254,17 +2254,17 @@ ru-sk 1:
   - slovak
   examples:
     дерево: slovenčina preklad pre "дерево"
-    strοmček: ruština preklad pre "strοmček"
+    stromček: ruština preklad pre "stromček"
 sk-ar 0:
-  title: السلوفاكية-عربية (dict.com)
+  title: السلوفاكية-العربية (dict.com)
   include:
     key: ar-sk 0
 sk-ar 1:
-  title: السلوفاكية-عربية (dict.com)
+  title: السلوفاكية-العربية (dict.com)
   include:
     key: ar-sk 1
   examples:
-    strοmček: ترجمة عربية من "strοmček"
+    stromček: ترجمة العربية من "stromček"
     شجرة: ترجمة السلوفاكية من "شجرة"
 sk-bg 0:
   title: Словашки-Български (dict.com)
@@ -2275,7 +2275,7 @@ sk-bg 1:
   include:
     key: bg-sk 1
   examples:
-    strοmček: български превод за "strοmček"
+    stromček: български превод за "stromček"
     дърво: словашки превод за "дърво"
 sk-ca 0:
   title: Eslovac-Català (dict.com)
@@ -2286,7 +2286,7 @@ sk-ca 1:
   include:
     key: ca-sk 1
   examples:
-    strοmček: Traducció al català de "strοmček"
+    stromček: Traducció al català de "stromček"
     arbre: Traducció al eslovac de "arbre"
 sk-cs 0:
   title: Slovenština-Čeština (dict.com)
@@ -2297,7 +2297,7 @@ sk-cs 1:
   include:
     key: cs-sk 1
   examples:
-    strοmček: čeština překlad pro "strοmček"
+    stromček: čeština překlad pro "stromček"
     strom: slovenština překlad pro "strom"
 sk-da 0:
   title: Slovakisk-Dansk (dict.com)
@@ -2308,7 +2308,7 @@ sk-da 1:
   include:
     key: da-sk 1
   examples:
-    strοmček: dansk oversættelse af "strοmček"
+    stromček: dansk oversættelse af "stromček"
     træ: slovakisk oversættelse af "træ"
 sk-de 0:
   title: Slowakisch-Deutsch (dict.com)
@@ -2319,7 +2319,7 @@ sk-de 1:
   include:
     key: de-sk 1
   examples:
-    strοmček: Deutsch-Übersetzung von "strοmček"
+    stromček: Deutsch-Übersetzung von "stromček"
     baum: Slowakisch-Übersetzung von "baum"
 sk-el 0:
   title: Σλοβακικά-Ελληνικά (dict.com)
@@ -2330,7 +2330,7 @@ sk-el 1:
   include:
     key: el-sk 1
   examples:
-    strοmček: Μετάφραση στα Ελληνικά για το "strοmček"
+    stromček: Μετάφραση στα Ελληνικά για το "stromček"
     δέντρο: Μετάφραση στα Σλοβακικά για το "δέντρο"
 sk-en 0:
   title: Slovak-English (dict.com)
@@ -2341,7 +2341,7 @@ sk-en 1:
   include:
     key: en-sk 1
   examples:
-    strοmček: English translation of "strοmček"
+    stromček: English translation of "stromček"
     tree: Slovak translation of "tree"
 sk-es 0:
   title: Eslovaco-Español (dict.com)
@@ -2352,8 +2352,8 @@ sk-es 1:
   include:
     key: es-sk 1
   examples:
-    strοmček: Traducción al Español de "strοmček"
-    árbol: Traducción al Eslovaco de "árbol"
+    stromček: Traducción al español de "stromček"
+    árbol: Traducción al eslovaco de "árbol"
 sk-et 0:
   title: Slovaki-Eesti (dict.com)
   include:
@@ -2363,7 +2363,7 @@ sk-et 1:
   include:
     key: et-sk 1
   examples:
-    strοmček: eesti tõlge "strοmček"
+    stromček: eesti tõlge "stromček"
     puu: slovaki tõlge "puu"
 sk-fi 0:
   title: Slovakki-Suomi (dict.com)
@@ -2374,7 +2374,7 @@ sk-fi 1:
   include:
     key: fi-sk 1
   examples:
-    strοmček: suomi-käännös sanalle "strοmček"
+    stromček: suomi-käännös sanalle "stromček"
     puu: slovakki-käännös sanalle "puu"
 sk-fr 0:
   title: Slovaque-Français (dict.com)
@@ -2385,8 +2385,8 @@ sk-fr 1:
   include:
     key: fr-sk 1
   examples:
-    strοmček: Traduction en Français de "strοmček"
-    arbre: Traduction en Slovaque de "arbre"
+    stromček: Traduction en français de "stromček"
+    arbre: Traduction en slovaque de "arbre"
 sk-he 0:
   title: סלובקית-עברית (dict.com)
   include:
@@ -2396,7 +2396,7 @@ sk-he 1:
   include:
     key: he-sk 1
   examples:
-    strοmček: עברית תרגום של "strοmček"
+    stromček: עברית תרגום של "stromček"
     עץ: סלובקית תרגום של "עץ"
 sk-hr 0:
   title: Slovački-Hrvatski (dict.com)
@@ -2407,7 +2407,7 @@ sk-hr 1:
   include:
     key: hr-sk 1
   examples:
-    strοmček: hrvatski prijevod od "strοmček"
+    stromček: hrvatski prijevod od "stromček"
     stablo: slovački prijevod od "stablo"
 sk-hu 0:
   title: Szlovák-Magyar (dict.com)
@@ -2418,7 +2418,7 @@ sk-hu 1:
   include:
     key: hu-sk 1
   examples:
-    strοmček: magyar fordítás a(z) "strοmček" számára
+    stromček: magyar fordítás a(z) "stromček" számára
     fa: szlovák fordítás a(z) "fa" számára
 sk-id 0:
   title: Slovak-Bahasa Indonesia (dict.com)
@@ -2429,7 +2429,7 @@ sk-id 1:
   include:
     key: id-sk 1
   examples:
-    strοmček: terjemahan Bahasa Indonesia dari "strοmček"
+    stromček: terjemahan Bahasa Indonesia dari "stromček"
     pohon: terjemahan Slovak dari "pohon"
 sk-it 0:
   title: Slovacco-Italiano (dict.com)
@@ -2440,7 +2440,7 @@ sk-it 1:
   include:
     key: it-sk 1
   examples:
-    strοmček: Traduzione in italiano di "strοmček"
+    stromček: Traduzione in italiano di "stromček"
     albero: Traduzione in slovacco di "albero"
 sk-ja 0:
   title: スロバキア語-日本語 (dict.com)
@@ -2451,8 +2451,8 @@ sk-ja 1:
   include:
     key: ja-sk 1
   examples:
-    strοmček: 日本語翻訳"strοmček"
-    木: スロバキア語翻訳"木"
+    stromček: '"stromček"の日本語翻訳'
+    木: '"木"のスロバキア語翻訳'
 sk-ko 0:
   title: 슬로바키아어-한국어 (dict.com)
   include:
@@ -2462,30 +2462,30 @@ sk-ko 1:
   include:
     key: ko-sk 1
   examples:
-    strοmček: 한국어 번역 "strοmček"
-    나무: 슬로바키아어 번역 "나무"
+    stromček: '"stromček"의 한국어 번역'
+    나무: '"나무"의 슬로바키아어 번역'
 sk-lt 0:
-  title: Slovakų kalba-Lietuvių kalba (dict.com)
+  title: Slovakų-Lietuvių (dict.com)
   include:
     key: lt-sk 0
 sk-lt 1:
-  title: Slovakų kalba-Lietuvių kalba (dict.com)
+  title: Slovakų-Lietuvių (dict.com)
   include:
     key: lt-sk 1
   examples:
-    strοmček: Lietuvių kalba vertimas žodžiui "strοmček"
-    medis: Slovakų kalba vertimas žodžiui "medis"
+    stromček: lietuvių vertimas žodžiui "stromček"
+    medis: slovakų vertimas žodžiui "medis"
 sk-lv 0:
-  title: Slovāku valoda-Latviešu valoda (dict.com)
+  title: Slovāku-Latviešu (dict.com)
   include:
     key: lv-sk 0
 sk-lv 1:
-  title: Slovāku valoda-Latviešu valoda (dict.com)
+  title: Slovāku-Latviešu (dict.com)
   include:
     key: lv-sk 1
   examples:
-    strοmček: Latviešu valoda tulkojums vārdam "strοmček"
-    koks: Slovāku valoda tulkojums vārdam "koks"
+    stromček: latviešu tulkojums vārdam "stromček"
+    koks: slovāku tulkojums vārdam "koks"
 sk-nl 0:
   title: Slowaaks-Nederlands (dict.com)
   include:
@@ -2495,7 +2495,7 @@ sk-nl 1:
   include:
     key: nl-sk 1
   examples:
-    strοmček: Nederlands-vertaling van "strοmček"
+    stromček: Nederlands-vertaling van "stromček"
     boom: Slowaaks-vertaling van "boom"
 sk-no 0:
   title: Slovakisk-Norsk (dict.com)
@@ -2506,8 +2506,8 @@ sk-no 1:
   include:
     key: no-sk 1
   examples:
-    strοmček: norsk oversettelse av "strοmček"
-    tre: slovakisk oversettelse av "tre"
+    stromček: norsk-oversettelse av "stromček"
+    tre: slovakisk-oversettelse av "tre"
 sk-pl 0:
   title: Słowacki-Polski (dict.com)
   include:
@@ -2517,7 +2517,7 @@ sk-pl 1:
   include:
     key: pl-sk 1
   examples:
-    strοmček: Tłumaczenie na język polski dla "strοmček"
+    stromček: Tłumaczenie na język polski dla "stromček"
     drzewo: Tłumaczenie na język słowacki dla "drzewo"
 sk-pt 0:
   title: Eslovaco-Português (dict.com)
@@ -2528,7 +2528,7 @@ sk-pt 1:
   include:
     key: pt-sk 1
   examples:
-    strοmček: Tradução em português de "strοmček"
+    stromček: Tradução em português de "stromček"
     árvore: Tradução em eslovaco de "árvore"
 sk-ro 0:
   title: Slovacă-Română (dict.com)
@@ -2539,8 +2539,8 @@ sk-ro 1:
   include:
     key: ro-sk 1
   examples:
-    strοmček: Traducere în română pentru "strοmček"
-    arbore: Traducere în slovacă pentru "arbore"
+    stromček: Traducere în română pentru "stromček"
+    copac: Traducere în slovacă pentru "copac"
 sk-ru 0:
   title: Словацкий-Русский (dict.com)
   include:
@@ -2550,7 +2550,7 @@ sk-ru 1:
   include:
     key: ru-sk 1
   examples:
-    strοmček: Перевод на русский язык для "strοmček"
+    stromček: Перевод на русский язык для "stromček"
     дерево: Перевод на словацкий язык для "дерево"
 sk-sl 0:
   url: https://www.dict.com/slovinsko-slovensky/
@@ -2569,7 +2569,7 @@ sk-sl 1:
   - slovak
   - slovenian
   examples:
-    strοmček: Prevod v slovenščina za besedo "strοmček"
+    stromček: Prevod v slovenščina za besedo "stromček"
     drevo: Prevod v slovaščina za besedo "drevo"
 sk-sr 0:
   url: https://www.dict.com/srbsko-slovensky/
@@ -2588,8 +2588,8 @@ sk-sr 1:
   - serbian
   - slovak
   examples:
-    strοmček: Превод на Српски за "strοmček"
-    дрво: Превод на Словачки за "дрво"
+    stromček: Превод на српски за "stromček"
+    дрво: Превод на словачки за "дрво"
 sk-sv 0:
   url: https://www.dict.com/svedsko-slovensky/
   title: Slovakiska-Svenska (dict.com)
@@ -2607,7 +2607,7 @@ sk-sv 1:
   - slovak
   - swedish
   examples:
-    strοmček: svenska-översättning av "strοmček"
+    stromček: svenska-översättning av "stromček"
     träd: slovakiska-översättning av "träd"
 sk-th 0:
   url: https://www.dict.com/thajsko-slovensky/
@@ -2626,7 +2626,7 @@ sk-th 1:
   - slovak
   - thai
   examples:
-    strοmček: การแปลไทยของคำว่า "strοmček"
+    stromček: การแปลไทยของคำว่า "stromček"
     ต้นไม้: การแปลสโลวักของคำว่า "ต้นไม้"
 sk-tr 0:
   url: https://www.dict.com/turecko-slovensky/
@@ -2645,7 +2645,7 @@ sk-tr 1:
   - slovak
   - turkish
   examples:
-    strοmček: '"strοmček" için Türkçe çevirisi'
+    stromček: '"stromček" için Türkçe çevirisi'
     ağaç: '"ağaç" için Slovakça çevirisi'
 sk-uk 0:
   url: https://www.dict.com/ukrajinsko-slovensky/
@@ -2664,7 +2664,7 @@ sk-uk 1:
   - slovak
   - ukrainian
   examples:
-    strοmček: Переклад українська для "strοmček"
+    stromček: Переклад українська для "stromček"
     дерево: Переклад словацька для "дерево"
 sk-vi 0:
   url: https://www.dict.com/vietnamsko-slovensky/
@@ -2683,11 +2683,11 @@ sk-vi 1:
   - slovak
   - vietnamese
   examples:
-    strοmček: Bản dịch Tiếng Việt của "strοmček"
+    stromček: Bản dịch Tiếng Việt của "stromček"
     cây: Bản dịch Tiếng Slovak của "cây"
 sk-zh 0:
   url: https://www.dict.com/cinsko-slovensky/
-  title: 斯洛伐克语-汉语 (dict.com)
+  title: 斯洛伐克文-中文 (dict.com)
   tags:
   - chinese
   - dictionary
@@ -2695,15 +2695,15 @@ sk-zh 0:
   - slovak
 sk-zh 1:
   url: https://www.dict.com/cinsko-slovensky/{%word}
-  title: 斯洛伐克语-汉语 (dict.com)
+  title: 斯洛伐克文-中文 (dict.com)
   tags:
   - chinese
   - dictionary
   - language
   - slovak
   examples:
-    strοmček: 汉语翻译"strοmček"
-    树: 斯洛伐克语翻译"树"
+    stromček: 中文 的"stromček"翻译
+    树: 斯洛伐克文 的"树"翻译
 sl-cs 0:
   title: Slovinština-Čeština (dict.com)
   include:
@@ -2736,7 +2736,7 @@ sl-sk 1:
     key: sk-sl 1
   examples:
     drevo: slovenčina preklad pre "drevo"
-    strοmček: slovinčina preklad pre "strοmček"
+    stromček: slovinčina preklad pre "stromček"
 sr-cs 0:
   title: Srbština-Čeština (dict.com)
   include:
@@ -2769,7 +2769,7 @@ sr-sk 1:
     key: sk-sr 1
   examples:
     дрво: slovenčina preklad pre "дрво"
-    strοmček: srbčina preklad pre "strοmček"
+    stromček: srbčina preklad pre "stromček"
 sv-cs 0:
   title: Švédština-Čeština (dict.com)
   include:
@@ -2802,7 +2802,7 @@ sv-sk 1:
     key: sk-sv 1
   examples:
     träd: slovenčina preklad pre "träd"
-    strοmček: švédčina preklad pre "strοmček"
+    stromček: švédčina preklad pre "stromček"
 th-cs 0:
   title: Thajština-Čeština (dict.com)
   include:
@@ -2835,7 +2835,7 @@ th-sk 1:
     key: sk-th 1
   examples:
     ต้นไม้: slovenčina preklad pre "ต้นไม้"
-    strοmček: thajčina preklad pre "strοmček"
+    stromček: thajčina preklad pre "stromček"
 tr-cs 0:
   title: Turečtina-Čeština (dict.com)
   include:
@@ -2868,7 +2868,7 @@ tr-sk 1:
     key: sk-tr 1
   examples:
     ağaç: slovenčina preklad pre "ağaç"
-    strοmček: turečtina preklad pre "strοmček"
+    stromček: turečtina preklad pre "stromček"
 uk-cs 0:
   title: Ukrajinština-Čeština (dict.com)
   include:
@@ -2901,7 +2901,7 @@ uk-sk 1:
     key: sk-uk 1
   examples:
     дерево: slovenčina preklad pre "дерево"
-    strοmček: ukrajinčina preklad pre "strοmček"
+    stromček: ukrajinčina preklad pre "stromček"
 vi-cs 0:
   title: Vietnamština-Čeština (dict.com)
   include:
@@ -2934,7 +2934,7 @@ vi-sk 1:
     key: sk-vi 1
   examples:
     cây: slovenčina preklad pre "cây"
-    strοmček: vietnamčina preklad pre "strοmček"
+    stromček: vietnamčina preklad pre "stromček"
 zh-cs 0:
   title: Čínština-Čeština (dict.com)
   include:
@@ -2967,4 +2967,4 @@ zh-sk 1:
     key: sk-zh 1
   examples:
     树: slovenčina preklad pre "树"
-    strοmček: čínština preklad pre "strοmček"
+    stromček: čínština preklad pre "stromček"

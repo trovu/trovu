@@ -94,7 +94,7 @@ de-el 0:
   tags:
   - dictionary
   - german
-  - greek (modern)
+  - greek
   - language
 de-el 1:
   url: https://deel.dict.cc/?s={%word}
@@ -102,7 +102,7 @@ de-el 1:
   tags:
   - dictionary
   - german
-  - greek (modern)
+  - greek
   - language
   examples:
     baum: Μετάφραση στα Ελληνικά για το "baum"
@@ -143,8 +143,8 @@ de-es 1:
   - language
   - spanish
   examples:
-    baum: Traducción al Español de "baum"
-    árbol: Traducción al Alemán de "árbol"
+    baum: Traducción al español de "baum"
+    árbol: Traducción al alemán de "árbol"
 de-fi 0:
   url: https://defi.dict.cc/
   title: Saksa-Suomi (dict.cc)
@@ -181,8 +181,8 @@ de-fr 1:
   - german
   - language
   examples:
-    baum: Traduction en Français de "baum"
-    arbre: Traduction en Allemand de "arbre"
+    baum: Traduction en français de "baum"
+    arbre: Traduction en allemand de "arbre"
 de-hu 0:
   url: https://dehu.dict.cc/
   title: Német-Magyar (dict.cc)
@@ -219,8 +219,8 @@ de-is 1:
   - icelandic
   - language
   examples:
-    baum: Íslenska-þýðing á "baum"
-    tré: Þýska-þýðing á "tré"
+    baum: íslenska þýðing fyrir "baum"
+    tré: þýska þýðing fyrir "tré"
 de-it 0:
   url: https://deit.dict.cc/
   title: Tedesco-Italiano (dict.cc)
@@ -295,8 +295,8 @@ de-no 1:
   - language
   - norwegian
   examples:
-    baum: norsk oversettelse av "baum"
-    tre: tysk oversettelse av "tre"
+    baum: norsk-oversettelse av "baum"
+    tre: tysk-oversettelse av "tre"
 de-pl 0:
   url: https://depl.dict.cc/
   title: Niemiecki-Polski (dict.cc)
@@ -353,7 +353,7 @@ de-ro 1:
   - romanian
   examples:
     baum: Traducere în română pentru "baum"
-    arbore: Traducere în germană pentru "arbore"
+    copac: Traducere în germană pentru "copac"
 de-ru 0:
   url: https://deru.dict.cc/
   title: Немецкий-Русский (dict.cc)
@@ -391,7 +391,7 @@ de-sk 1:
   - slovak
   examples:
     baum: slovenčina preklad pre "baum"
-    strοmček: nemčina preklad pre "strοmček"
+    stromček: nemčina preklad pre "stromček"
 de-sv 0:
   url: https://desv.dict.cc/
   title: Tyska-Svenska (dict.cc)
@@ -582,7 +582,7 @@ ro-de 1:
   include:
     key: de-ro 1
   examples:
-    arbore: Deutsch-Übersetzung von "arbore"
+    copac: Deutsch-Übersetzung von "copac"
     baum: Rumänisch-Übersetzung von "baum"
 ru-de 0:
   title: Russisch-Deutsch (dict.cc)
@@ -604,7 +604,7 @@ sk-de 1:
   include:
     key: de-sk 1
   examples:
-    strοmček: Deutsch-Übersetzung von "strοmček"
+    stromček: Deutsch-Übersetzung von "stromček"
     baum: Slowakisch-Übersetzung von "baum"
 sv-de 0:
   title: Schwedisch-Deutsch (dict.cc)
