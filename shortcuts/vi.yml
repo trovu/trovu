@@ -1,0 +1,32 @@
+cs-dcm 0:
+  include:
+    key: cs-vi 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-vi 1
+    namespace: dcm
+de-dcm 0:
+  include:
+    key: de-vi 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-vi 1
+    namespace: dcm
+de-pka 0:
+  include:
+    key: de-vi 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-vi 1
+    namespace: pka
+sk-dcm 0:
+  include:
+    key: sk-vi 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-vi 1
+    namespace: dcm

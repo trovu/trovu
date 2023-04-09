@@ -1,0 +1,24 @@
+de-dcm 0:
+  include:
+    key: de-ca 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-ca 1
+    namespace: dcm
+de-pka 0:
+  include:
+    key: de-ca 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-ca 1
+    namespace: pka
+sk-dcm 0:
+  include:
+    key: sk-ca 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-ca 1
+    namespace: dcm

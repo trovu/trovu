@@ -1,0 +1,80 @@
+ar-ard 0:
+  include:
+    key: ar-tr 0
+    namespace: ard
+ar-ard 1:
+  include:
+    key: ar-tr 1
+    namespace: ard
+cs-dcm 0:
+  include:
+    key: cs-tr 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-tr 1
+    namespace: dcm
+de-bab 0:
+  include:
+    key: de-tr 0
+    namespace: bab
+de-bab 1:
+  include:
+    key: de-tr 1
+    namespace: bab
+de-dcc 0:
+  include:
+    key: de-tr 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-tr 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-tr 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-tr 1
+    namespace: dcm
+de-dtn 0:
+  include:
+    key: de-tr 0
+    namespace: dtn
+de-dtn 1:
+  include:
+    key: de-tr 1
+    namespace: dtn
+de-lgs 0:
+  include:
+    key: de-tr 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-tr 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-tr 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-tr 1
+    namespace: pka
+en-zrg 0:
+  include:
+    key: en-tr 0
+    namespace: zrg
+en-zrg 1:
+  include:
+    key: en-tr 1
+    namespace: zrg
+sk-dcm 0:
+  include:
+    key: sk-tr 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-tr 1
+    namespace: dcm

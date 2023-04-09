@@ -1,0 +1,56 @@
+cs-dcm 0:
+  include:
+    key: cs-hr 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-hr 1
+    namespace: dcm
+de-crd 0:
+  include:
+    key: de-hr 0
+    namespace: crd
+de-crd 1:
+  include:
+    key: de-hr 1
+    namespace: crd
+de-dcm 0:
+  include:
+    key: de-hr 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-hr 1
+    namespace: dcm
+de-lgs 0:
+  include:
+    key: de-hr 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-hr 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-hr 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-hr 1
+    namespace: pka
+en-crd 0:
+  include:
+    key: en-hr 0
+    namespace: crd
+en-crd 1:
+  include:
+    key: en-hr 1
+    namespace: crd
+sk-dcm 0:
+  include:
+    key: sk-hr 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-hr 1
+    namespace: dcm

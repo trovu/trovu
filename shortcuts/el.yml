@@ -1,0 +1,56 @@
+cs-dcm 0:
+  include:
+    key: cs-el 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-el 1
+    namespace: dcm
+de-dcc 0:
+  include:
+    key: de-el 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-el 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-el 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-el 1
+    namespace: dcm
+de-lgs 0:
+  include:
+    key: de-el 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-el 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-el 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-el 1
+    namespace: pka
+de-pns 0:
+  include:
+    key: de-el 0
+    namespace: pns
+de-pns 1:
+  include:
+    key: de-el 1
+    namespace: pns
+sk-dcm 0:
+  include:
+    key: sk-el 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-el 1
+    namespace: dcm

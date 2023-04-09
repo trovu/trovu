@@ -1,0 +1,48 @@
+cs-dcm 0:
+  include:
+    key: cs-fi 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-fi 1
+    namespace: dcm
+de-dcc 0:
+  include:
+    key: de-fi 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-fi 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-fi 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-fi 1
+    namespace: dcm
+de-lgs 0:
+  include:
+    key: de-fi 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-fi 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-fi 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-fi 1
+    namespace: pka
+sk-dcm 0:
+  include:
+    key: sk-fi 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-fi 1
+    namespace: dcm
