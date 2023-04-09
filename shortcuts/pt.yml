@@ -1,3 +1,11 @@
+cs-dcm 0:
+  include:
+    key: cs-pt 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-pt 1
+    namespace: dcm
 de 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%word}
   title: Alemão-Português
@@ -13,6 +21,78 @@ de 1:
   examples:
     baum: '"baum" auf Portugiesisch'
     árvore: '"árvore" auf Deutsch'
+de-dcc 0:
+  include:
+    key: de-pt 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-pt 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-pt 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-pt 1
+    namespace: dcm
+de-leo 0:
+  include:
+    key: de-pt 0
+    namespace: leo
+de-leo 1:
+  include:
+    key: de-pt 1
+    namespace: leo
+de-lge 0:
+  include:
+    key: de-pt 0
+    namespace: lge
+de-lge 1:
+  include:
+    key: de-pt 1
+    namespace: lge
+de-lgs 0:
+  include:
+    key: de-pt 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-pt 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-pt 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-pt 1
+    namespace: pka
+de-pns 0:
+  include:
+    key: de-pt 0
+    namespace: pns
+de-pns 1:
+  include:
+    key: de-pt 1
+    namespace: pns
+en-lge 0:
+  include:
+    key: en-pt 0
+    namespace: lge
+en-lge 1:
+  include:
+    key: en-pt 1
+    namespace: lge
+es-leo 0:
+  include:
+    key: es-pt 0
+    namespace: leo
+es-leo 1:
+  include:
+    key: es-pt 1
+    namespace: leo
 last 1:
   url: http://www.last.fm/search?setlang=pt&q={%artist}
   title: Last.fm
@@ -21,3 +101,11 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
+sk-dcm 0:
+  include:
+    key: sk-pt 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-pt 1
+    namespace: dcm

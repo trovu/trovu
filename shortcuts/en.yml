@@ -1,3 +1,11 @@
+ar-ard 0:
+  include:
+    key: ar-en 0
+    namespace: ard
+ar-ard 1:
+  include:
+    key: ar-en 1
+    namespace: ard
 camb-en 1:
   url: https://dictionary.cambridge.org/dictionary/english/{%word}
   title: Cambridge English Dictionary
@@ -51,10 +59,82 @@ cs 1:
   examples:
     tree: '"tree" in Czech'
     strom: '"strom" in English'
+cs-dcm 0:
+  include:
+    key: cs-en 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-en 1
+    namespace: dcm
 de 1:
   include:
     key: de-en 1
     namespace: leo
+de-beo 0:
+  include:
+    key: de-en 0
+    namespace: beo
+de-beo 1:
+  include:
+    key: de-en 1
+    namespace: beo
+de-dcc 0:
+  include:
+    key: de-en 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-en 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-en 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-en 1
+    namespace: dcm
+de-leo 0:
+  include:
+    key: de-en 0
+    namespace: leo
+de-leo 1:
+  include:
+    key: de-en 1
+    namespace: leo
+de-lge 0:
+  include:
+    key: de-en 0
+    namespace: lge
+de-lge 1:
+  include:
+    key: de-en 1
+    namespace: lge
+de-lgs 0:
+  include:
+    key: de-en 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-en 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-en 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-en 1
+    namespace: pka
+de-pns 0:
+  include:
+    key: de-en 0
+    namespace: pns
+de-pns 1:
+  include:
+    key: de-en 1
+    namespace: pns
 dei 1:
   url: http://www.linguee.com/english-german/search?source=auto&query={%word}
   title: German-English (Linguee)
@@ -99,6 +179,38 @@ es 1:
   examples:
     tree: Translation of "tree"
     arbol: Translation of "arbol"
+es-esd 0:
+  include:
+    key: es-en 0
+    namespace: esd
+es-esd 1:
+  include:
+    key: es-en 1
+    namespace: esd
+es-leo 0:
+  include:
+    key: es-en 0
+    namespace: leo
+es-leo 1:
+  include:
+    key: es-en 1
+    namespace: leo
+es-lge 0:
+  include:
+    key: es-en 0
+    namespace: lge
+es-lge 1:
+  include:
+    key: es-en 1
+    namespace: lge
+es-pns 0:
+  include:
+    key: es-en 0
+    namespace: pns
+es-pns 1:
+  include:
+    key: es-en 1
+    namespace: pns
 esi 1:
   url: http://www.linguee.com/english-spanish/search?source=auto&query={%word}
   title: Spanish-English (Linguee)
@@ -130,6 +242,30 @@ fr 1:
   - language
   examples:
     tree: Translation of "tree"
+fr-leo 0:
+  include:
+    key: fr-en 0
+    namespace: leo
+fr-leo 1:
+  include:
+    key: fr-en 1
+    namespace: leo
+fr-lge 0:
+  include:
+    key: fr-en 0
+    namespace: lge
+fr-lge 1:
+  include:
+    key: fr-en 1
+    namespace: lge
+fr-pns 0:
+  include:
+    key: fr-en 0
+    namespace: pns
+fr-pns 1:
+  include:
+    key: fr-en 1
+    namespace: pns
 frp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=enfr
   title: French-English (Pons)
@@ -157,6 +293,14 @@ gfp 0:
   - germany
   - news
   - politics
+hr-crd 0:
+  include:
+    key: hr-en 0
+    namespace: crd
+hr-crd 1:
+  include:
+    key: hr-en 1
+    namespace: crd
 last 1:
   url: http://www.last.fm/search?setlang=en&q={%artist}
   title: Last.fm
@@ -212,6 +356,30 @@ pt 1:
   - portuguese
   examples:
     tree: Translation of "tree"
+pt-lge 0:
+  include:
+    key: pt-en 0
+    namespace: lge
+pt-lge 1:
+  include:
+    key: pt-en 1
+    namespace: lge
+ru-leo 0:
+  include:
+    key: ru-en 0
+    namespace: leo
+ru-leo 1:
+  include:
+    key: ru-en 1
+    namespace: leo
+sk-dcm 0:
+  include:
+    key: sk-en 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-en 1
+    namespace: dcm
 sl 1:
   url: https://en.pons.com/translate?q={%query}&l=ensl&in=en&lf=en
   title: Slovenian-English (Pons)
@@ -222,6 +390,14 @@ sl 1:
   - slovenian
   examples:
     tree: Search Slovenian-English (Pons) for "tree"
+sl-pns 0:
+  include:
+    key: sl-en 0
+    namespace: pns
+sl-pns 1:
+  include:
+    key: sl-en 1
+    namespace: pns
 sta 0:
   url: http://start.csail.mit.edu
   title: START (SynTactic Analysis using Reversible Transformations)
@@ -245,6 +421,14 @@ sv 1:
   examples:
     tree: Translation of "tree"
     träd: Translation of "träd"
+sv-flx 0:
+  include:
+    key: sv-en 0
+    namespace: flx
+sv-flx 1:
+  include:
+    key: sv-en 1
+    namespace: flx
 syn 1:
   url: http://thesaurus.com/browse/{%word}
   title: Thesaurus.com
@@ -264,6 +448,14 @@ tr 1:
   examples:
     tree: Translation of "tree"
     ağaç: Translation of "ağaç"
+tr-zrg 0:
+  include:
+    key: tr-en 0
+    namespace: zrg
+tr-zrg 1:
+  include:
+    key: tr-en 1
+    namespace: zrg
 uvi 0:
   url: http://verbs.colorado.edu/verb-index/vn3.3
   title: Unified Verb Index
@@ -357,3 +549,11 @@ zh 1:
   examples:
     tree: Translation of "tree"
     木: Translation of 木
+zh-mdb 0:
+  include:
+    key: zh-en 0
+    namespace: mdb
+zh-mdb 1:
+  include:
+    key: zh-en 1
+    namespace: mdb

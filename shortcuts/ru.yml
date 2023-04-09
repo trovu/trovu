@@ -1,6 +1,78 @@
+cs-dcm 0:
+  include:
+    key: cs-ru 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-ru 1
+    namespace: dcm
 de 1:
   include:
     key: de-ru 1
+    namespace: leo
+de-bab 0:
+  include:
+    key: de-ru 0
+    namespace: bab
+de-bab 1:
+  include:
+    key: de-ru 1
+    namespace: bab
+de-dcc 0:
+  include:
+    key: de-ru 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-ru 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-ru 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-ru 1
+    namespace: dcm
+de-leo 0:
+  include:
+    key: de-ru 0
+    namespace: leo
+de-leo 1:
+  include:
+    key: de-ru 1
+    namespace: leo
+de-lgs 0:
+  include:
+    key: de-ru 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-ru 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-ru 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-ru 1
+    namespace: pka
+de-pns 0:
+  include:
+    key: de-ru 0
+    namespace: pns
+de-pns 1:
+  include:
+    key: de-ru 1
+    namespace: pns
+en-leo 0:
+  include:
+    key: en-ru 0
+    namespace: leo
+en-leo 1:
+  include:
+    key: en-ru 1
     namespace: leo
 last 1:
   url: http://www.last.fm/search?setlang=ru&q={%artist}
@@ -10,6 +82,14 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
+sk-dcm 0:
+  include:
+    key: sk-ru 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-ru 1
+    namespace: dcm
 wsl 1:
   url: https://corpora.uni-leipzig.de/de/res?corpusId=rus_mixed_2013&word={%слово}
   title: Wortschatz-Lexikon (Русский)

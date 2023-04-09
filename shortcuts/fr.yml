@@ -1,3 +1,11 @@
+ar-ard 0:
+  include:
+    key: ar-fr 0
+    namespace: ard
+ar-ard 1:
+  include:
+    key: ar-fr 1
+    namespace: ard
 cjg 1:
   url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}
   title: Le conjugueur
@@ -19,10 +27,82 @@ cs 1:
   examples:
     arbre: '"arbre" český'
     strom: '"strom" francouzký'
+cs-dcm 0:
+  include:
+    key: cs-fr 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-fr 1
+    namespace: dcm
 de 1:
   include:
     key: de-fr 1
     namespace: leo
+de-bab 0:
+  include:
+    key: de-fr 0
+    namespace: bab
+de-bab 1:
+  include:
+    key: de-fr 1
+    namespace: bab
+de-dcc 0:
+  include:
+    key: de-fr 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-fr 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-fr 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-fr 1
+    namespace: dcm
+de-leo 0:
+  include:
+    key: de-fr 0
+    namespace: leo
+de-leo 1:
+  include:
+    key: de-fr 1
+    namespace: leo
+de-lge 0:
+  include:
+    key: de-fr 0
+    namespace: lge
+de-lge 1:
+  include:
+    key: de-fr 1
+    namespace: lge
+de-lgs 0:
+  include:
+    key: de-fr 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-fr 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-fr 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-fr 1
+    namespace: pka
+de-pns 0:
+  include:
+    key: de-fr 0
+    namespace: pns
+de-pns 1:
+  include:
+    key: de-fr 1
+    namespace: pns
 en 1:
   url: http://dictionary.reverso.net/french-english/{%mot}
   title: Anglais-Français (reverso.net)
@@ -32,6 +112,30 @@ en 1:
   examples:
     arbre: Translate arbre to English
     tree: Translate tree to French
+en-leo 0:
+  include:
+    key: en-fr 0
+    namespace: leo
+en-leo 1:
+  include:
+    key: en-fr 1
+    namespace: leo
+en-lge 0:
+  include:
+    key: en-fr 0
+    namespace: lge
+en-lge 1:
+  include:
+    key: en-fr 1
+    namespace: lge
+en-pns 0:
+  include:
+    key: en-fr 0
+    namespace: pns
+en-pns 1:
+  include:
+    key: en-fr 1
+    namespace: pns
 lar 1:
   url: http://www.larousse.fr/dictionnaires/francais/{%mot}
   title: Larousse, Dictionnaires de français
@@ -83,6 +187,14 @@ pl 1:
   - polish
   examples:
     mot: '"mot" en polonais'
+pl-pns 0:
+  include:
+    key: pl-fr 0
+    namespace: pns
+pl-pns 1:
+  include:
+    key: pl-fr 1
+    namespace: pns
 pt 1:
   url: http://dictionnaire.reverso.net/francais-portugais/{%mot}
   title: Français-portugais
@@ -91,6 +203,14 @@ pt 1:
   - language
   examples:
     voiture: Search for "voiture"
+sk-dcm 0:
+  include:
+    key: sk-fr 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-fr 1
+    namespace: dcm
 sv 1:
   url: https://www.dict.com/suedois-francais/{%mot}
   title: Suédois-Français via Dict.com

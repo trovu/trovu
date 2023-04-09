@@ -1,3 +1,11 @@
+cs-dcm 0:
+  include:
+    key: cs-sv 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-sv 1
+    namespace: dcm
 de 1:
   url: http://rio.pauker.at/pauker/DE/SE/wb/?s={%ord}
   title: Tysk-Svensk
@@ -9,6 +17,46 @@ de 1:
   examples:
     baum: Swedish translation for "baum"
     träd: German translation for "träd"
+de-bab 0:
+  include:
+    key: de-sv 0
+    namespace: bab
+de-bab 1:
+  include:
+    key: de-sv 1
+    namespace: bab
+de-dcc 0:
+  include:
+    key: de-sv 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-sv 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-sv 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-sv 1
+    namespace: dcm
+de-lgs 0:
+  include:
+    key: de-sv 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-sv 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-sv 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-sv 1
+    namespace: pka
 en 1:
   url: http://folkets-lexikon.csc.kth.se/folkets/#lookup&{%ord}&l=SVEENG
   title: Engelsk-Svensk
@@ -20,6 +68,14 @@ en 1:
   examples:
     tree: Translation of "tree"
     träd: Translation of "träd"
+en-flx 0:
+  include:
+    key: en-sv 0
+    namespace: flx
+en-flx 1:
+  include:
+    key: en-sv 1
+    namespace: flx
 fr 1:
   url: http://www.azoria.com/php/search.php?word={%ord}
   title: Fransk-Svensk (Azoria)
@@ -55,6 +111,14 @@ rim 1:
   - swedish
   examples:
     träd: Search rhymes for "träd"
+sk-dcm 0:
+  include:
+    key: sk-sv 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-sv 1
+    namespace: dcm
 sv-fr 1:
   url: http://www.sensagent.com/dictionnaires/sv-fr/{%ord}/ALEXMN/
   title: Svensk-Fransk (Sensagent)

@@ -1,3 +1,11 @@
+cs-dcm 0:
+  include:
+    key: cs-nl 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-nl 1
+    namespace: dcm
 dbp 1:
   url: http://nl.dbpedia.org/page/{%title}
   title: DBpedia (Dutch)
@@ -16,6 +24,46 @@ de 1:
   - language
   examples:
     käse: Search for "käse"
+de-dcc 0:
+  include:
+    key: de-nl 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-nl 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-nl 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-nl 1
+    namespace: dcm
+de-lgs 0:
+  include:
+    key: de-nl 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-nl 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-nl 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-nl 1
+    namespace: pka
+de-umt 0:
+  include:
+    key: de-nl 0
+    namespace: umt
+de-umt 1:
+  include:
+    key: de-nl 1
+    namespace: umt
 en 1:
   url: http://ennl.dict.cc/?s={%word}
   title: Engels-Nederlands (dict.cc)
@@ -65,3 +113,11 @@ rijm 1:
   - rijm
   examples:
     koud: vind woorden die rijmen op "koud"
+sk-dcm 0:
+  include:
+    key: sk-nl 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-nl 1
+    namespace: dcm

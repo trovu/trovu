@@ -1,3 +1,11 @@
+cs-dcm 0:
+  include:
+    key: cs-ja 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-ja 1
+    namespace: dcm
 de 1:
   url: http://www.wadoku.de/wadoku/search/{%Wort}
   title: Deutsch-Japanisch (Wadoku)
@@ -7,6 +15,38 @@ de 1:
   examples:
     木根: Übersetzung für "木根"
     baum: Übersetzung für "baum"
+de-dcm 0:
+  include:
+    key: de-ja 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-ja 1
+    namespace: dcm
+de-lgs 0:
+  include:
+    key: de-ja 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-ja 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-ja 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-ja 1
+    namespace: pka
+de-wdk 0:
+  include:
+    key: de-ja 0
+    namespace: wdk
+de-wdk 1:
+  include:
+    key: de-ja 1
+    namespace: wdk
 last 1:
   url: http://www.last.fm/search?setlang=ja&q={%artist}
   title: Last.fm
@@ -15,3 +55,11 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
+sk-dcm 0:
+  include:
+    key: sk-ja 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-ja 1
+    namespace: dcm

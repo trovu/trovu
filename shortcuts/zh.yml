@@ -1,7 +1,47 @@
+cs-dcm 0:
+  include:
+    key: cs-zh 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-zh 1
+    namespace: dcm
 de 1:
   include:
     key: de-ru 1
     namespace: leo
+de-dcm 0:
+  include:
+    key: de-zh 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-zh 1
+    namespace: dcm
+de-leo 0:
+  include:
+    key: de-zh 0
+    namespace: leo
+de-leo 1:
+  include:
+    key: de-zh 1
+    namespace: leo
+de-lgs 0:
+  include:
+    key: de-zh 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-zh 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-zh 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-zh 1
+    namespace: pka
 en 1:
   url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
   title: English-Chinese
@@ -13,6 +53,14 @@ en 1:
   examples:
     tree: Translation of "tree"
     木: Translation of 木
+en-mdb 0:
+  include:
+    key: en-zh 0
+    namespace: mdb
+en-mdb 1:
+  include:
+    key: en-zh 1
+    namespace: mdb
 last 1:
   url: http://www.last.fm/search?setlang=zh&q={%artist}
   title: Last.fm
@@ -21,3 +69,11 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
+sk-dcm 0:
+  include:
+    key: sk-zh 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-zh 1
+    namespace: dcm

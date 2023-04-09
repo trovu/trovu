@@ -9,6 +9,22 @@ abk 1:
   title: Abkürzungen
   examples:
     cia: Suche nach der Abkürzung "cia"
+af-pka 0:
+  include:
+    key: af-de 0
+    namespace: pka
+af-pka 1:
+  include:
+    key: af-de 1
+    namespace: pka
+am-pka 0:
+  include:
+    key: am-de 0
+    namespace: pka
+am-pka 1:
+  include:
+    key: am-de 1
+    namespace: pka
 anagramm 1:
   url: http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text={%query}&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
   title: Anagramm-Suche
@@ -28,6 +44,38 @@ ar 1:
   examples:
     baum: Übersetzung von "baum" auf Arabisch
     شجرة: Übersetzung von "شجرة" auf Deutsch
+ar-ard 0:
+  include:
+    key: ar-de 0
+    namespace: ard
+ar-ard 1:
+  include:
+    key: ar-de 1
+    namespace: ard
+ar-dcm 0:
+  include:
+    key: ar-de 0
+    namespace: dcm
+ar-dcm 1:
+  include:
+    key: ar-de 1
+    namespace: dcm
+ar-lgs 0:
+  include:
+    key: ar-de 0
+    namespace: lgs
+ar-lgs 1:
+  include:
+    key: ar-de 1
+    namespace: lgs
+ar-pka 0:
+  include:
+    key: ar-de 0
+    namespace: pka
+ar-pka 1:
+  include:
+    key: ar-de 1
+    namespace: pka
 ardtext 1:
   url: http://www.ard-text.de/index.php?page={%Seitennummer}
   title: ARD-Text
@@ -37,6 +85,14 @@ ardtext 1:
   - videotext
   examples:
     '100': Gehe zu Seite 100
+as-pka 0:
+  include:
+    key: as-de 0
+    namespace: pka
+as-pka 1:
+  include:
+    key: as-de 1
+    namespace: pka
 at 1:
   url: https://www.ostarrichi.org/suche?search={%Wort}
   title: Österreichisch-Hochdeutsch (Ostarrichi.org)
@@ -62,6 +118,14 @@ awort 1:
     alternative:
       query: awf {%1}
       created: '2023-01-10'
+az-pka 0:
+  include:
+    key: az-de 0
+    namespace: pka
+az-pka 1:
+  include:
+    key: az-de 1
+    namespace: pka
 base 1:
   url: http://www.base-search.net/Search/Results?lookfor={%Suche}
   title: Bielefeld Academic Search Engine
@@ -83,6 +147,14 @@ bbs 1:
 bc 1:
   url: https://www.bestcheck.de/search?q={%query}
   title: BestCheck
+be-pka 0:
+  include:
+    key: be-de 0
+    namespace: pka
+be-pka 1:
+  include:
+    key: be-de 1
+    namespace: pka
 bg 1:
   url: http://debg.dict.cc/?s={%Wort}
   title: Bulgarisch-Deutsch (dict.cc)
@@ -92,6 +164,38 @@ bg 1:
   - language
   examples:
     baum: Search for "baum"
+bg-dcc 0:
+  include:
+    key: bg-de 0
+    namespace: dcc
+bg-dcc 1:
+  include:
+    key: bg-de 1
+    namespace: dcc
+bg-dcm 0:
+  include:
+    key: bg-de 0
+    namespace: dcm
+bg-dcm 1:
+  include:
+    key: bg-de 1
+    namespace: dcm
+bg-lgs 0:
+  include:
+    key: bg-de 0
+    namespace: lgs
+bg-lgs 1:
+  include:
+    key: bg-de 1
+    namespace: lgs
+bg-pka 0:
+  include:
+    key: bg-de 0
+    namespace: pka
+bg-pka 1:
+  include:
+    key: bg-de 1
+    namespace: pka
 bk 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch={%query}
   title: Buchkatalog
@@ -134,6 +238,30 @@ blb 2:
   - shopping
   examples:
     goethe, faust: Suche nach "Faust" von Goethe
+bn-pka 0:
+  include:
+    key: bn-de 0
+    namespace: pka
+bn-pka 1:
+  include:
+    key: bn-de 1
+    namespace: pka
+bo-pka 0:
+  include:
+    key: bo-de 0
+    namespace: pka
+bo-pka 1:
+  include:
+    key: bo-de 1
+    namespace: pka
+br-pka 0:
+  include:
+    key: br-de 0
+    namespace: pka
+br-pka 1:
+  include:
+    key: br-de 1
+    namespace: pka
 bzl 1:
   url: https://www.bookzilla.de/shop/quickSearch?searchString={%Suche}
   title: Bookzilla
@@ -146,6 +274,22 @@ ca 1:
   include:
     key: ca-de 1
     namespace: dcm
+ca-dcm 0:
+  include:
+    key: ca-de 0
+    namespace: dcm
+ca-dcm 1:
+  include:
+    key: ca-de 1
+    namespace: dcm
+ca-pka 0:
+  include:
+    key: ca-de 0
+    namespace: pka
+ca-pka 1:
+  include:
+    key: ca-de 1
+    namespace: pka
 cb 0:
   url: http://www.computerbase.de/
   title: Computerbase
@@ -237,6 +381,22 @@ cs 1:
   examples:
     baum: Übersetzung von "baum"
     strom: Übersetzung von "strom"
+cs-dcc 0:
+  include:
+    key: cs-de 0
+    namespace: dcc
+cs-dcc 1:
+  include:
+    key: cs-de 1
+    namespace: dcc
+cs-dcm 0:
+  include:
+    key: cs-de 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-de 1
+    namespace: dcm
 cs-de 1:
   url: http://slovnik.cz/bin/mld.fpl?vcb={%Wort}&trn=translate&dictdir=gecz.cz_d&lines=20&hptxt=0&js=1&lang=0
   title: Tschechisch-Deutsch via Slovnik.cz
@@ -244,6 +404,22 @@ cs-de 1:
   - czech
   - dictionary
   - german
+cs-lgs 0:
+  include:
+    key: cs-de 0
+    namespace: lgs
+cs-lgs 1:
+  include:
+    key: cs-de 1
+    namespace: lgs
+cs-pka 0:
+  include:
+    key: cs-de 0
+    namespace: pka
+cs-pka 1:
+  include:
+    key: cs-de 1
+    namespace: pka
 csd 1:
   url: http://decs.dict.cc/?s={%Wort}
   title: Tschechisch-Deutsch (dict.cc)
@@ -261,6 +437,14 @@ css 1:
   - programming
   examples:
     white-space: Suche nach "white-space"
+cy-pka 0:
+  include:
+    key: cy-de 0
+    namespace: pka
+cy-pka 1:
+  include:
+    key: cy-de 1
+    namespace: pka
 da 1:
   url: http://deda.dict.cc/?s={%Wort}
   title: Dänisch-Deutsch (dict.cc)
@@ -272,6 +456,46 @@ da 1:
   examples:
     baum: '"baum" auf Dänisch'
     træ: '"træ" auf Deutsch'
+da-bab 0:
+  include:
+    key: da-de 0
+    namespace: bab
+da-bab 1:
+  include:
+    key: da-de 1
+    namespace: bab
+da-dcc 0:
+  include:
+    key: da-de 0
+    namespace: dcc
+da-dcc 1:
+  include:
+    key: da-de 1
+    namespace: dcc
+da-dcm 0:
+  include:
+    key: da-de 0
+    namespace: dcm
+da-dcm 1:
+  include:
+    key: da-de 1
+    namespace: dcm
+da-lgs 0:
+  include:
+    key: da-de 0
+    namespace: lgs
+da-lgs 1:
+  include:
+    key: da-de 1
+    namespace: lgs
+da-pka 0:
+  include:
+    key: da-de 0
+    namespace: pka
+da-pka 1:
+  include:
+    key: da-de 1
+    namespace: pka
 dab 1:
   url: https://de.bab.la/woerterbuch/daenisch-deutsch/{%Wort}
   title: Dänisch-Deutsch (bab.la)
@@ -352,6 +576,14 @@ dw 1:
 dwds 1:
   url: http://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu={%Wort}
   title: Digitales Wörterbuch der Deutschen Sprache
+dz-pka 0:
+  include:
+    key: dz-de 0
+    namespace: pka
+dz-pka 1:
+  include:
+    key: dz-de 1
+    namespace: pka
 e 0:
   url: https://ebay.de
   title: eBay
@@ -368,6 +600,46 @@ el 1:
   - language
   examples:
     baum: Übersetzung von "baum"
+el-dcc 0:
+  include:
+    key: el-de 0
+    namespace: dcc
+el-dcc 1:
+  include:
+    key: el-de 1
+    namespace: dcc
+el-dcm 0:
+  include:
+    key: el-de 0
+    namespace: dcm
+el-dcm 1:
+  include:
+    key: el-de 1
+    namespace: dcm
+el-lgs 0:
+  include:
+    key: el-de 0
+    namespace: lgs
+el-lgs 1:
+  include:
+    key: el-de 1
+    namespace: lgs
+el-pka 0:
+  include:
+    key: el-de 0
+    namespace: pka
+el-pka 1:
+  include:
+    key: el-de 1
+    namespace: pka
+el-pns 0:
+  include:
+    key: el-de 0
+    namespace: pns
+el-pns 1:
+  include:
+    key: el-de 1
+    namespace: pns
 eld 1:
   url: http://deel.dict.cc/?s={%Wort}
   title: Griechisch-Deutsch (dict.cc)
@@ -381,14 +653,70 @@ en 1:
   include:
     key: en-de 1
     namespace: leo
+en-beo 0:
+  include:
+    key: en-de 0
+    namespace: beo
+en-beo 1:
+  include:
+    key: en-de 1
+    namespace: beo
+en-dcc 0:
+  include:
+    key: en-de 0
+    namespace: dcc
+en-dcc 1:
+  include:
+    key: en-de 1
+    namespace: dcc
+en-dcm 0:
+  include:
+    key: en-de 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-de 1
+    namespace: dcm
+en-leo 0:
+  include:
+    key: en-de 0
+    namespace: leo
 en-leo 1:
   include:
     key: en-de 1
     namespace: leo
+en-lge 0:
+  include:
+    key: en-de 0
+    namespace: lge
 en-lge 1:
   include:
     key: en-de 1
     namespace: lge
+en-lgs 0:
+  include:
+    key: en-de 0
+    namespace: lgs
+en-lgs 1:
+  include:
+    key: en-de 1
+    namespace: lgs
+en-pka 0:
+  include:
+    key: en-de 0
+    namespace: pka
+en-pka 1:
+  include:
+    key: en-de 1
+    namespace: pka
+en-pns 0:
+  include:
+    key: en-de 0
+    namespace: pns
+en-pns 1:
+  include:
+    key: en-de 1
+    namespace: pns
 enb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?lang=de&service=deen&opterrors=0&optpro=0&query={%query}
   title: Englisch-Deutsch (Beolingus)
@@ -449,14 +777,82 @@ eo 1:
   examples:
     baum: Suche nach "baum" auf Esperanto
     arbo: Suche nach "arbo" auf Deutsch
+eo-pka 0:
+  include:
+    key: eo-de 0
+    namespace: pka
+eo-pka 1:
+  include:
+    key: eo-de 1
+    namespace: pka
 es 1:
   include:
     key: es-de 1
     namespace: leo
+es-bab 0:
+  include:
+    key: es-de 0
+    namespace: bab
+es-bab 1:
+  include:
+    key: es-de 1
+    namespace: bab
+es-dcc 0:
+  include:
+    key: es-de 0
+    namespace: dcc
+es-dcc 1:
+  include:
+    key: es-de 1
+    namespace: dcc
+es-dcm 0:
+  include:
+    key: es-de 0
+    namespace: dcm
+es-dcm 1:
+  include:
+    key: es-de 1
+    namespace: dcm
+es-leo 0:
+  include:
+    key: es-de 0
+    namespace: leo
+es-leo 1:
+  include:
+    key: es-de 1
+    namespace: leo
+es-lge 0:
+  include:
+    key: es-de 0
+    namespace: lge
 es-lge 1:
   include:
     key: es-de 1
     namespace: lge
+es-lgs 0:
+  include:
+    key: es-de 0
+    namespace: lgs
+es-lgs 1:
+  include:
+    key: es-de 1
+    namespace: lgs
+es-pka 0:
+  include:
+    key: es-de 0
+    namespace: pka
+es-pka 1:
+  include:
+    key: es-de 1
+    namespace: pka
+es-pns 0:
+  include:
+    key: es-de 0
+    namespace: pns
+es-pns 1:
+  include:
+    key: es-de 1
+    namespace: pns
 es-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
   title: Spanisch-Deutsch PONS
@@ -497,6 +893,46 @@ esp 1:
   - spanish
   examples:
     baum: Übersetzung für "baum"
+et-dcm 0:
+  include:
+    key: et-de 0
+    namespace: dcm
+et-dcm 1:
+  include:
+    key: et-de 1
+    namespace: dcm
+et-pka 0:
+  include:
+    key: et-de 0
+    namespace: pka
+et-pka 1:
+  include:
+    key: et-de 1
+    namespace: pka
+eu-pka 0:
+  include:
+    key: eu-de 0
+    namespace: pka
+eu-pka 1:
+  include:
+    key: eu-de 1
+    namespace: pka
+fa-lgs 0:
+  include:
+    key: fa-de 0
+    namespace: lgs
+fa-lgs 1:
+  include:
+    key: fa-de 1
+    namespace: lgs
+fa-pka 0:
+  include:
+    key: fa-de 0
+    namespace: pka
+fa-pka 1:
+  include:
+    key: fa-de 1
+    namespace: pka
 fball 1:
   url: https://fireball.com/search?q={%suchbegriff}
   title: Fireball Websuche
@@ -554,6 +990,38 @@ fi 1:
   - language
   examples:
     baum: Übersetzung von "baum"
+fi-dcc 0:
+  include:
+    key: fi-de 0
+    namespace: dcc
+fi-dcc 1:
+  include:
+    key: fi-de 1
+    namespace: dcc
+fi-dcm 0:
+  include:
+    key: fi-de 0
+    namespace: dcm
+fi-dcm 1:
+  include:
+    key: fi-de 1
+    namespace: dcm
+fi-lgs 0:
+  include:
+    key: fi-de 0
+    namespace: lgs
+fi-lgs 1:
+  include:
+    key: fi-de 1
+    namespace: lgs
+fi-pka 0:
+  include:
+    key: fi-de 0
+    namespace: pka
+fi-pka 1:
+  include:
+    key: fi-de 1
+    namespace: pka
 fmb 2:
   url: http://findmybook.de/input.php?form%5Btitle%5D={%Titel}&form%5Bauthor%5D={%Autor}
   title: Findmybook.de
@@ -561,6 +1029,14 @@ fmb 2:
   - books
   examples:
     houellebecq, elementarteilchen: Search for "houellebecq"
+fo-pka 0:
+  include:
+    key: fo-de 0
+    namespace: pka
+fo-pka 1:
+  include:
+    key: fo-de 1
+    namespace: pka
 fool 1:
   url: https://www.fool.de/?s={%keyword}&submit=&lang=de
   title: Fool.de article search
@@ -568,10 +1044,70 @@ fr 1:
   include:
     key: fr-de 1
     namespace: leo
+fr-bab 0:
+  include:
+    key: fr-de 0
+    namespace: bab
+fr-bab 1:
+  include:
+    key: fr-de 1
+    namespace: bab
+fr-dcc 0:
+  include:
+    key: fr-de 0
+    namespace: dcc
+fr-dcc 1:
+  include:
+    key: fr-de 1
+    namespace: dcc
+fr-dcm 0:
+  include:
+    key: fr-de 0
+    namespace: dcm
+fr-dcm 1:
+  include:
+    key: fr-de 1
+    namespace: dcm
+fr-leo 0:
+  include:
+    key: fr-de 0
+    namespace: leo
+fr-leo 1:
+  include:
+    key: fr-de 1
+    namespace: leo
+fr-lge 0:
+  include:
+    key: fr-de 0
+    namespace: lge
 fr-lge 1:
   include:
     key: fr-de 1
     namespace: lge
+fr-lgs 0:
+  include:
+    key: fr-de 0
+    namespace: lgs
+fr-lgs 1:
+  include:
+    key: fr-de 1
+    namespace: lgs
+fr-pka 0:
+  include:
+    key: fr-de 0
+    namespace: pka
+fr-pka 1:
+  include:
+    key: fr-de 1
+    namespace: pka
+fr-pns 0:
+  include:
+    key: fr-de 0
+    namespace: pns
+fr-pns 1:
+  include:
+    key: fr-de 1
+    namespace: pns
 fr-pons 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
   title: Französisch-Deutsch PONS
@@ -634,6 +1170,30 @@ ftr 1:
   - finance
   examples:
     twitter: Search Finanztreff for "twitter"
+fy-pka 0:
+  include:
+    key: fy-de 0
+    namespace: pka
+fy-pka 1:
+  include:
+    key: fy-de 1
+    namespace: pka
+ga-pka 0:
+  include:
+    key: ga-de 0
+    namespace: pka
+ga-pka 1:
+  include:
+    key: ga-de 1
+    namespace: pka
+gd-pka 0:
+  include:
+    key: gd-de 0
+    namespace: pka
+gd-pka 1:
+  include:
+    key: gd-de 1
+    namespace: pka
 gfp 0:
   url: https://german-foreign-policy.com/
   title: German Foreign Policy
@@ -650,6 +1210,14 @@ gfp 1:
   - politics
   examples:
     berlin: Suche nach "berlin"
+gl-pka 0:
+  include:
+    key: gl-de 0
+    namespace: pka
+gl-pka 1:
+  include:
+    key: gl-de 1
+    namespace: pka
 grc 1:
   url: http://www.albertmartin.de/altgriechisch/?q={%suchwort}
   title: Altgriechisch Wörterbuch
@@ -662,6 +1230,22 @@ grc 1:
   examples:
     baum: Übersetzung von "Baum" auf Altgriechisch
     ξύλον: 'Übersetzung von "ξύλον" auf Deutsch '
+gu-pka 0:
+  include:
+    key: gu-de 0
+    namespace: pka
+gu-pka 1:
+  include:
+    key: gu-de 1
+    namespace: pka
+gv-pka 0:
+  include:
+    key: gv-de 0
+    namespace: pka
+gv-pka 1:
+  include:
+    key: gv-de 1
+    namespace: pka
 gz 0:
   url: https://www.griechenland.net/
   title: Griechenland Zeitung
@@ -681,6 +1265,30 @@ h 1:
   - heise
   examples:
     linux: Search for "linux"
+ha-pka 0:
+  include:
+    key: ha-de 0
+    namespace: pka
+ha-pka 1:
+  include:
+    key: ha-de 1
+    namespace: pka
+he-dcm 0:
+  include:
+    key: he-de 0
+    namespace: dcm
+he-dcm 1:
+  include:
+    key: he-de 1
+    namespace: dcm
+he-pka 0:
+  include:
+    key: he-de 0
+    namespace: pka
+he-pka 1:
+  include:
+    key: he-de 1
+    namespace: pka
 heise 0:
   url: http://www.heise.de/
   title: Heise.de
@@ -693,6 +1301,14 @@ heisenews 0:
   tags:
   - heise
   - news
+hi-pka 0:
+  include:
+    key: hi-de 0
+    namespace: pka
+hi-pka 1:
+  include:
+    key: hi-de 1
+    namespace: pka
 hls 1:
   url: https://hls-dhs-dss.ch/de/search/?text={%Suce}
   title: Historisches Lexikon der Schweiz
@@ -750,6 +1366,38 @@ hr 1:
   - language
   examples:
     baum: Übersetzung für "baum"
+hr-crd 0:
+  include:
+    key: hr-de 0
+    namespace: crd
+hr-crd 1:
+  include:
+    key: hr-de 1
+    namespace: crd
+hr-dcm 0:
+  include:
+    key: hr-de 0
+    namespace: dcm
+hr-dcm 1:
+  include:
+    key: hr-de 1
+    namespace: dcm
+hr-lgs 0:
+  include:
+    key: hr-de 0
+    namespace: lgs
+hr-lgs 1:
+  include:
+    key: hr-de 1
+    namespace: lgs
+hr-pka 0:
+  include:
+    key: hr-de 0
+    namespace: pka
+hr-pka 1:
+  include:
+    key: hr-de 1
+    namespace: pka
 hsoft 0:
   url: http://www.heise.de/software/
   title: Heise Softwareverzeichnis Startseite
@@ -778,6 +1426,46 @@ hu 1:
   examples:
     baum: Übersetzung von "baum"
     fa: Übersetzung von "fa"
+hu-dcc 0:
+  include:
+    key: hu-de 0
+    namespace: dcc
+hu-dcc 1:
+  include:
+    key: hu-de 1
+    namespace: dcc
+hu-dcm 0:
+  include:
+    key: hu-de 0
+    namespace: dcm
+hu-dcm 1:
+  include:
+    key: hu-de 1
+    namespace: dcm
+hu-lgs 0:
+  include:
+    key: hu-de 0
+    namespace: lgs
+hu-lgs 1:
+  include:
+    key: hu-de 1
+    namespace: lgs
+hu-pka 0:
+  include:
+    key: hu-de 0
+    namespace: pka
+hu-pka 1:
+  include:
+    key: hu-de 1
+    namespace: pka
+hu-pns 0:
+  include:
+    key: hu-de 0
+    namespace: pns
+hu-pns 1:
+  include:
+    key: hu-de 1
+    namespace: pns
 hud 1:
   url: http://dehu.dict.cc/?s={%Wort}
   title: Ungarisch-Deutsch (dict.cc)
@@ -804,6 +1492,30 @@ hwho 1:
   - heise
   examples:
     '1': Search for "1"
+hy-pka 0:
+  include:
+    key: hy-de 0
+    namespace: pka
+hy-pka 1:
+  include:
+    key: hy-de 1
+    namespace: pka
+id-dcm 0:
+  include:
+    key: id-de 0
+    namespace: dcm
+id-dcm 1:
+  include:
+    key: id-de 1
+    namespace: dcm
+id-pka 0:
+  include:
+    key: id-de 0
+    namespace: pka
+id-pka 1:
+  include:
+    key: id-de 1
+    namespace: pka
 ifun 1:
   url: http://www.ifun.de/suche/{%query}
   title: ifun.de
@@ -812,6 +1524,22 @@ ifun 1:
   - news
   examples:
     macbook: Search ifun.de for "macbook"
+ig-pka 0:
+  include:
+    key: ig-de 0
+    namespace: pka
+ig-pka 1:
+  include:
+    key: ig-de 1
+    namespace: pka
+ii-pka 0:
+  include:
+    key: ii-de 0
+    namespace: pka
+ii-pka 1:
+  include:
+    key: ii-de 1
+    namespace: pka
 is 1:
   url: http://deis.dict.cc/?s={%Wort}
   title: Isländisch-Deutsch (dict.cc)
@@ -821,6 +1549,30 @@ is 1:
   - language
   examples:
     baum: Search for "baum"
+is-dcc 0:
+  include:
+    key: is-de 0
+    namespace: dcc
+is-dcc 1:
+  include:
+    key: is-de 1
+    namespace: dcc
+is-lgs 0:
+  include:
+    key: is-de 0
+    namespace: lgs
+is-lgs 1:
+  include:
+    key: is-de 1
+    namespace: lgs
+is-pka 0:
+  include:
+    key: is-de 0
+    namespace: pka
+is-pka 1:
+  include:
+    key: is-de 1
+    namespace: pka
 isbn 1:
   url: http://de.wikipedia.org/wiki/Spezial:Booksources/{%isbn}
   title: ISBN-Suche bei Wikipedia
@@ -828,6 +1580,62 @@ it 1:
   include:
     key: it-de 1
     namespace: leo
+it-bab 0:
+  include:
+    key: it-de 0
+    namespace: bab
+it-bab 1:
+  include:
+    key: it-de 1
+    namespace: bab
+it-dcc 0:
+  include:
+    key: it-de 0
+    namespace: dcc
+it-dcc 1:
+  include:
+    key: it-de 1
+    namespace: dcc
+it-dcm 0:
+  include:
+    key: it-de 0
+    namespace: dcm
+it-dcm 1:
+  include:
+    key: it-de 1
+    namespace: dcm
+it-leo 0:
+  include:
+    key: it-de 0
+    namespace: leo
+it-leo 1:
+  include:
+    key: it-de 1
+    namespace: leo
+it-lgs 0:
+  include:
+    key: it-de 0
+    namespace: lgs
+it-lgs 1:
+  include:
+    key: it-de 1
+    namespace: lgs
+it-pka 0:
+  include:
+    key: it-de 0
+    namespace: pka
+it-pka 1:
+  include:
+    key: it-de 1
+    namespace: pka
+it-pns 0:
+  include:
+    key: it-de 0
+    namespace: pns
+it-pns 1:
+  include:
+    key: it-de 1
+    namespace: pns
 itb 1:
   url: https://de.bab.la/woerterbuch/italienisch-deutsch/{%Wort}
   title: Italienisch-Deutsch (bab.la)
@@ -867,6 +1675,46 @@ ja 1:
   examples:
     baum: Übersetzung für "baum"
     木根: Übersetzung für "木根"
+ja-dcm 0:
+  include:
+    key: ja-de 0
+    namespace: dcm
+ja-dcm 1:
+  include:
+    key: ja-de 1
+    namespace: dcm
+ja-lgs 0:
+  include:
+    key: ja-de 0
+    namespace: lgs
+ja-lgs 1:
+  include:
+    key: ja-de 1
+    namespace: lgs
+ja-pka 0:
+  include:
+    key: ja-de 0
+    namespace: pka
+ja-pka 1:
+  include:
+    key: ja-de 1
+    namespace: pka
+ja-wdk 0:
+  include:
+    key: ja-de 0
+    namespace: wdk
+ja-wdk 1:
+  include:
+    key: ja-de 1
+    namespace: wdk
+ka-pka 0:
+  include:
+    key: ka-de 0
+    namespace: pka
+ka-pka 1:
+  include:
+    key: ka-de 1
+    namespace: pka
 kam 1:
   url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search={%Suche}
   title: Kamelopedia
@@ -876,6 +1724,14 @@ kam 1:
   - wiki
   examples:
     Berlin: Artikel zu "Berlin"
+ki-pka 0:
+  include:
+    key: ki-de 0
+    namespace: pka
+ki-pka 1:
+  include:
+    key: ki-de 1
+    namespace: pka
 kicker 0:
   url: http://www.kicker.de/
   title: Kicker.de
@@ -890,6 +1746,62 @@ kicker 1:
   - sport
   examples:
     berlin: Search for "berlin"
+kk-pka 0:
+  include:
+    key: kk-de 0
+    namespace: pka
+kk-pka 1:
+  include:
+    key: kk-de 1
+    namespace: pka
+kl-pka 0:
+  include:
+    key: kl-de 0
+    namespace: pka
+kl-pka 1:
+  include:
+    key: kl-de 1
+    namespace: pka
+km-pka 0:
+  include:
+    key: km-de 0
+    namespace: pka
+km-pka 1:
+  include:
+    key: km-de 1
+    namespace: pka
+kn-pka 0:
+  include:
+    key: kn-de 0
+    namespace: pka
+kn-pka 1:
+  include:
+    key: kn-de 1
+    namespace: pka
+ko-dcm 0:
+  include:
+    key: ko-de 0
+    namespace: dcm
+ko-dcm 1:
+  include:
+    key: ko-de 1
+    namespace: dcm
+ko-pka 0:
+  include:
+    key: ko-de 0
+    namespace: pka
+ko-pka 1:
+  include:
+    key: ko-de 1
+    namespace: pka
+ks-pka 0:
+  include:
+    key: ks-de 0
+    namespace: pka
+ks-pka 1:
+  include:
+    key: ks-de 1
+    namespace: pka
 kw 1:
   url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo
   title: Kreuzworträtsel-Datenbank
@@ -900,6 +1812,22 @@ kw 2:
   title: Kreuzworträtsel-Datenbank
   tags:
   - old
+kw-pka 0:
+  include:
+    key: kw-de 0
+    namespace: pka
+kw-pka 1:
+  include:
+    key: kw-de 1
+    namespace: pka
+ky-pka 0:
+  include:
+    key: ky-de 0
+    namespace: pka
+ky-pka 1:
+  include:
+    key: ky-de 1
+    namespace: pka
 la 1:
   url: http://www.albertmartin.de/latein/?q={%query}
   title: Latein-Deutsch
@@ -911,6 +1839,38 @@ la 1:
   examples:
     baum: Übersetzung von "baum"
     arbor: Übersetzung von "arbor"
+la-ama 0:
+  include:
+    key: la-de 0
+    namespace: ama
+la-ama 1:
+  include:
+    key: la-de 1
+    namespace: ama
+la-dcc 0:
+  include:
+    key: la-de 0
+    namespace: dcc
+la-dcc 1:
+  include:
+    key: la-de 1
+    namespace: dcc
+la-lgs 0:
+  include:
+    key: la-de 0
+    namespace: lgs
+la-lgs 1:
+  include:
+    key: la-de 1
+    namespace: lgs
+la-pka 0:
+  include:
+    key: la-de 0
+    namespace: pka
+la-pka 1:
+  include:
+    key: la-de 1
+    namespace: pka
 lad 1:
   url: http://dela.dict.cc/?s={%Wort}
   title: Latein-Deutsch (dict.cc)
@@ -928,11 +1888,43 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
+lb-pka 0:
+  include:
+    key: lb-de 0
+    namespace: pka
+lb-pka 1:
+  include:
+    key: lb-de 1
+    namespace: pka
 leo 1:
   deprecated:
     alternative:
       query: en-leo {%1}
       created: '2023-03-12'
+lg-pka 0:
+  include:
+    key: lg-de 0
+    namespace: pka
+lg-pka 1:
+  include:
+    key: lg-de 1
+    namespace: pka
+ln-pka 0:
+  include:
+    key: ln-de 0
+    namespace: pka
+ln-pka 1:
+  include:
+    key: ln-de 1
+    namespace: pka
+lo-pka 0:
+  include:
+    key: lo-de 0
+    namespace: pka
+lo-pka 1:
+  include:
+    key: lo-de 1
+    namespace: pka
 lobby 0:
   url: http://lobbycontrol.de/
   title: LobbyControl
@@ -945,6 +1937,38 @@ lobby 1:
   - politics
   examples:
     berlin: Search LobbyControl for "berlin"
+lt-dcm 0:
+  include:
+    key: lt-de 0
+    namespace: dcm
+lt-dcm 1:
+  include:
+    key: lt-de 1
+    namespace: dcm
+lt-pka 0:
+  include:
+    key: lt-de 0
+    namespace: pka
+lt-pka 1:
+  include:
+    key: lt-de 1
+    namespace: pka
+lv-dcm 0:
+  include:
+    key: lv-de 0
+    namespace: dcm
+lv-dcm 1:
+  include:
+    key: lv-de 1
+    namespace: dcm
+lv-pka 0:
+  include:
+    key: lv-de 0
+    namespace: pka
+lv-pka 1:
+  include:
+    key: lv-de 1
+    namespace: pka
 m 1:
   url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe={%query}
   title: Metager
@@ -952,6 +1976,38 @@ m 1:
   - search
   - search engine
   - web search
+mg-pka 0:
+  include:
+    key: mg-de 0
+    namespace: pka
+mg-pka 1:
+  include:
+    key: mg-de 1
+    namespace: pka
+mk-pka 0:
+  include:
+    key: mk-de 0
+    namespace: pka
+mk-pka 1:
+  include:
+    key: mk-de 1
+    namespace: pka
+ml-pka 0:
+  include:
+    key: ml-de 0
+    namespace: pka
+ml-pka 1:
+  include:
+    key: ml-de 1
+    namespace: pka
+mn-pka 0:
+  include:
+    key: mn-de 0
+    namespace: pka
+mn-pka 1:
+  include:
+    key: mn-de 1
+    namespace: pka
 morgenpost 1:
   url: http://www.morgenpost.de/suche/?q={%Suche}
   title: Berliner Morgenpost Archiv
@@ -966,6 +2022,54 @@ mp 1:
   - film
   - moviepilot
   - movies
+mr-pka 0:
+  include:
+    key: mr-de 0
+    namespace: pka
+mr-pka 1:
+  include:
+    key: mr-de 1
+    namespace: pka
+ms-pka 0:
+  include:
+    key: ms-de 0
+    namespace: pka
+ms-pka 1:
+  include:
+    key: ms-de 1
+    namespace: pka
+mt-pka 0:
+  include:
+    key: mt-de 0
+    namespace: pka
+mt-pka 1:
+  include:
+    key: mt-de 1
+    namespace: pka
+my-pka 0:
+  include:
+    key: my-de 0
+    namespace: pka
+my-pka 1:
+  include:
+    key: my-de 1
+    namespace: pka
+nb-pka 0:
+  include:
+    key: nb-de 0
+    namespace: pka
+nb-pka 1:
+  include:
+    key: nb-de 1
+    namespace: pka
+nd-pka 0:
+  include:
+    key: nd-de 0
+    namespace: pka
+nd-pka 1:
+  include:
+    key: nd-de 1
+    namespace: pka
 nds 0:
   url: http://www.nachdenkseiten.de
   title: Nachdenkseiten
@@ -980,6 +2084,14 @@ nds 1:
   - politik
   examples:
     grundeinkommen: Suche nach "grundeinkommen"
+ne-pka 0:
+  include:
+    key: ne-de 0
+    namespace: pka
+ne-pka 1:
+  include:
+    key: ne-de 1
+    namespace: pka
 nl 1:
   url: http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!
   title: Niederländisch-Deutsch (uitmuntend.de)
@@ -988,6 +2100,46 @@ nl 1:
   - language
   examples:
     lekker: Search for "lekker"
+nl-dcc 0:
+  include:
+    key: nl-de 0
+    namespace: dcc
+nl-dcc 1:
+  include:
+    key: nl-de 1
+    namespace: dcc
+nl-dcm 0:
+  include:
+    key: nl-de 0
+    namespace: dcm
+nl-dcm 1:
+  include:
+    key: nl-de 1
+    namespace: dcm
+nl-lgs 0:
+  include:
+    key: nl-de 0
+    namespace: lgs
+nl-lgs 1:
+  include:
+    key: nl-de 1
+    namespace: lgs
+nl-pka 0:
+  include:
+    key: nl-de 0
+    namespace: pka
+nl-pka 1:
+  include:
+    key: nl-de 1
+    namespace: pka
+nl-umt 0:
+  include:
+    key: nl-de 0
+    namespace: umt
+nl-umt 1:
+  include:
+    key: nl-de 1
+    namespace: umt
 nld 1:
   url: http://denl.dict.cc/?s={%Wort}
   title: Niederländisch-Deutsch (dict.cc)
@@ -1007,6 +2159,14 @@ nlde 1:
   - language
   examples:
     boom: Search Niederländisch-Deutsch (mijnwoordenboek.nl) for "boom"
+nn-pka 0:
+  include:
+    key: nn-de 0
+    namespace: pka
+nn-pka 1:
+  include:
+    key: nn-de 1
+    namespace: pka
 no 1:
   url: http://deno.dict.cc/?s={%Wort}
   title: Norwegisch-Deutsch (dict.cc)
@@ -1017,6 +2177,38 @@ no 1:
   - norwegian
   examples:
     baum: Übersetzung von "baum"
+no-dcc 0:
+  include:
+    key: no-de 0
+    namespace: dcc
+no-dcc 1:
+  include:
+    key: no-de 1
+    namespace: dcc
+no-dcm 0:
+  include:
+    key: no-de 0
+    namespace: dcm
+no-dcm 1:
+  include:
+    key: no-de 1
+    namespace: dcm
+no-lgs 0:
+  include:
+    key: no-de 0
+    namespace: lgs
+no-lgs 1:
+  include:
+    key: no-de 1
+    namespace: lgs
+no-pka 0:
+  include:
+    key: no-de 0
+    namespace: pka
+no-pka 1:
+  include:
+    key: no-de 1
+    namespace: pka
 ntv 0:
   url: http://www.n-tv.de
   title: n-tv.de
@@ -1049,6 +2241,30 @@ ok 1:
   title: otrkey.com
   tags:
   - old
+om-pka 0:
+  include:
+    key: om-de 0
+    namespace: pka
+om-pka 1:
+  include:
+    key: om-de 1
+    namespace: pka
+or-pka 0:
+  include:
+    key: or-de 0
+    namespace: pka
+or-pka 1:
+  include:
+    key: or-de 1
+    namespace: pka
+os-pka 0:
+  include:
+    key: os-de 0
+    namespace: pka
+os-pka 1:
+  include:
+    key: os-de 1
+    namespace: pka
 osm? 0:
   url: https://wiki.openstreetmap.org/index.php/Hauptseite
   title: OpenStreetMap Wiki
@@ -1083,6 +2299,14 @@ ot? 0:
   tags:
   - language
   - thesaurus
+pa-pka 0:
+  include:
+    key: pa-de 0
+    namespace: pka
+pa-pka 1:
+  include:
+    key: pa-de 1
+    namespace: pka
 pl 1:
   url: https://de.langenscheidt.com/deutsch-polnisch/search?term={%Wort}&in=&l=depl
   title: Polnisch-Deutsch (Langenscheidt)
@@ -1094,10 +2318,70 @@ pl 1:
   examples:
     baum: Übersetzung von "baum"
     drzewo: Übersetzung von "drzewo"
+pl-bab 0:
+  include:
+    key: pl-de 0
+    namespace: bab
+pl-bab 1:
+  include:
+    key: pl-de 1
+    namespace: bab
+pl-dcc 0:
+  include:
+    key: pl-de 0
+    namespace: dcc
+pl-dcc 1:
+  include:
+    key: pl-de 1
+    namespace: dcc
+pl-dcm 0:
+  include:
+    key: pl-de 0
+    namespace: dcm
+pl-dcm 1:
+  include:
+    key: pl-de 1
+    namespace: dcm
+pl-leo 0:
+  include:
+    key: pl-de 0
+    namespace: leo
+pl-leo 1:
+  include:
+    key: pl-de 1
+    namespace: leo
+pl-lge 0:
+  include:
+    key: pl-de 0
+    namespace: lge
 pl-lge 1:
   include:
     key: pl-de 1
     namespace: lge
+pl-lgs 0:
+  include:
+    key: pl-de 0
+    namespace: lgs
+pl-lgs 1:
+  include:
+    key: pl-de 1
+    namespace: lgs
+pl-pka 0:
+  include:
+    key: pl-de 0
+    namespace: pka
+pl-pka 1:
+  include:
+    key: pl-de 1
+    namespace: pka
+pl-pns 0:
+  include:
+    key: pl-de 0
+    namespace: pns
+pl-pns 1:
+  include:
+    key: pl-de 1
+    namespace: pns
 plb 1:
   url: https://de.bab.la/woerterbuch/polnisch-deutsch/{%Wort}
   title: Polnisch-Deutsch (bab.la)
@@ -1134,6 +2418,14 @@ plp 1:
   examples:
     baum: Übersetzung von "baum"
     drzewo: Übersetzung von "drzewo"
+ps-pka 0:
+  include:
+    key: ps-de 0
+    namespace: pka
+ps-pka 1:
+  include:
+    key: ps-de 1
+    namespace: pka
 pt 1:
   url: http://en.pons.com/translate?q={%query}&in=&l=dept
   title: Portugiesisch-Deutsch (Pons)
@@ -1144,10 +2436,62 @@ pt 1:
   - portugese
   examples:
     baum: Übersetzung für "baum"
+pt-dcc 0:
+  include:
+    key: pt-de 0
+    namespace: dcc
+pt-dcc 1:
+  include:
+    key: pt-de 1
+    namespace: dcc
+pt-dcm 0:
+  include:
+    key: pt-de 0
+    namespace: dcm
+pt-dcm 1:
+  include:
+    key: pt-de 1
+    namespace: dcm
+pt-leo 0:
+  include:
+    key: pt-de 0
+    namespace: leo
+pt-leo 1:
+  include:
+    key: pt-de 1
+    namespace: leo
+pt-lge 0:
+  include:
+    key: pt-de 0
+    namespace: lge
 pt-lge 1:
   include:
     key: pt-de 1
     namespace: lge
+pt-lgs 0:
+  include:
+    key: pt-de 0
+    namespace: lgs
+pt-lgs 1:
+  include:
+    key: pt-de 1
+    namespace: lgs
+pt-pka 0:
+  include:
+    key: pt-de 0
+    namespace: pka
+pt-pka 1:
+  include:
+    key: pt-de 1
+    namespace: pka
+pt-pns 0:
+  include:
+    key: pt-de 0
+    namespace: pns
+pt-pns 1:
+  include:
+    key: pt-de 1
+    namespace: pns
 ptb 1:
   url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%wort}
   title: Portugiesisch-Deutsch (Beolingus)
@@ -1187,6 +2531,14 @@ ptp 1:
 qa 1:
   url: https://lite.qwant.com/?q={%query}
   title: QWANT
+qu-pka 0:
+  include:
+    key: qu-de 0
+    namespace: pka
+qu-pka 1:
+  include:
+    key: qu-de 1
+    namespace: pka
 rblcheck 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress={%ipaddress}
   title: RBL-Check (Realtime Blackhole List)
@@ -1245,6 +2597,22 @@ rm 1:
   - german
   - language
   - rumantsch grischun
+rm-pka 0:
+  include:
+    key: rm-de 0
+    namespace: pka
+rm-pka 1:
+  include:
+    key: rm-de 1
+    namespace: pka
+rn-pka 0:
+  include:
+    key: rn-de 0
+    namespace: pka
+rn-pka 1:
+  include:
+    key: rn-de 1
+    namespace: pka
 ro 1:
   url: http://dero.dict.cc/?s={%Wort}
   title: Rumänisch-Deutsch (dict.cc)
@@ -1254,10 +2622,98 @@ ro 1:
   - language
   examples:
     baum: Search for "baum"
+ro-dcc 0:
+  include:
+    key: ro-de 0
+    namespace: dcc
+ro-dcc 1:
+  include:
+    key: ro-de 1
+    namespace: dcc
+ro-dcm 0:
+  include:
+    key: ro-de 0
+    namespace: dcm
+ro-dcm 1:
+  include:
+    key: ro-de 1
+    namespace: dcm
+ro-lgs 0:
+  include:
+    key: ro-de 0
+    namespace: lgs
+ro-lgs 1:
+  include:
+    key: ro-de 1
+    namespace: lgs
+ro-pka 0:
+  include:
+    key: ro-de 0
+    namespace: pka
+ro-pka 1:
+  include:
+    key: ro-de 1
+    namespace: pka
 ru 1:
   include:
     key: ru-de 1
     namespace: leo
+ru-bab 0:
+  include:
+    key: ru-de 0
+    namespace: bab
+ru-bab 1:
+  include:
+    key: ru-de 1
+    namespace: bab
+ru-dcc 0:
+  include:
+    key: ru-de 0
+    namespace: dcc
+ru-dcc 1:
+  include:
+    key: ru-de 1
+    namespace: dcc
+ru-dcm 0:
+  include:
+    key: ru-de 0
+    namespace: dcm
+ru-dcm 1:
+  include:
+    key: ru-de 1
+    namespace: dcm
+ru-leo 0:
+  include:
+    key: ru-de 0
+    namespace: leo
+ru-leo 1:
+  include:
+    key: ru-de 1
+    namespace: leo
+ru-lgs 0:
+  include:
+    key: ru-de 0
+    namespace: lgs
+ru-lgs 1:
+  include:
+    key: ru-de 1
+    namespace: lgs
+ru-pka 0:
+  include:
+    key: ru-de 0
+    namespace: pka
+ru-pka 1:
+  include:
+    key: ru-de 1
+    namespace: pka
+ru-pns 0:
+  include:
+    key: ru-de 0
+    namespace: pns
+ru-pns 1:
+  include:
+    key: ru-de 1
+    namespace: pns
 rub 1:
   url: https://de.bab.la/woerterbuch/russisch-deutsch/{%Wort}
   title: Russisch-Deutsch (bab.la)
@@ -1295,11 +2751,27 @@ rup 1:
   - russian
   examples:
     baum: Übersetzung für "baum"
+rw-pka 0:
+  include:
+    key: rw-de 0
+    namespace: pka
+rw-pka 1:
+  include:
+    key: rw-de 1
+    namespace: pka
 sc 1:
   url: http://www.scienceticker.info/index.php?s={%Suche}&sc
   title: Scienceticker
   tags:
   - old
+se-pka 0:
+  include:
+    key: se-de 0
+    namespace: pka
+se-pka 1:
+  include:
+    key: se-de 1
+    namespace: pka
 sfr 1:
   url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}
   title: Stayfriends
@@ -1316,6 +2788,14 @@ sfr 2:
   - social network
   examples:
     stefan, berlin: Suchen nach Personen namens Stefan in Berlin
+sg-pka 0:
+  include:
+    key: sg-de 0
+    namespace: pka
+sg-pka 1:
+  include:
+    key: sg-de 1
+    namespace: pka
 sh 0:
   url: http://de.selfhtml.org/
   title: Selfhtml
@@ -1355,6 +2835,14 @@ shg 1:
   - xml
   examples:
     doctype: description about doctype declaration
+si-pka 0:
+  include:
+    key: si-de 0
+    namespace: pka
+si-pka 1:
+  include:
+    key: si-de 1
+    namespace: pka
 sk 1:
   url: http://desk.dict.cc/?s={%Wort}
   title: Slowakisch-Deutsch (dict.cc)
@@ -1364,6 +2852,78 @@ sk 1:
   - language
   examples:
     baum: Search for "baum"
+sk-dcc 0:
+  include:
+    key: sk-de 0
+    namespace: dcc
+sk-dcc 1:
+  include:
+    key: sk-de 1
+    namespace: dcc
+sk-dcm 0:
+  include:
+    key: sk-de 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-de 1
+    namespace: dcm
+sk-lgs 0:
+  include:
+    key: sk-de 0
+    namespace: lgs
+sk-lgs 1:
+  include:
+    key: sk-de 1
+    namespace: lgs
+sk-pka 0:
+  include:
+    key: sk-de 0
+    namespace: pka
+sk-pka 1:
+  include:
+    key: sk-de 1
+    namespace: pka
+sl-dcm 0:
+  include:
+    key: sl-de 0
+    namespace: dcm
+sl-dcm 1:
+  include:
+    key: sl-de 1
+    namespace: dcm
+sl-lgs 0:
+  include:
+    key: sl-de 0
+    namespace: lgs
+sl-lgs 1:
+  include:
+    key: sl-de 1
+    namespace: lgs
+sl-pka 0:
+  include:
+    key: sl-de 0
+    namespace: pka
+sl-pka 1:
+  include:
+    key: sl-de 1
+    namespace: pka
+sn-pka 0:
+  include:
+    key: sn-de 0
+    namespace: pka
+sn-pka 1:
+  include:
+    key: sn-de 1
+    namespace: pka
+so-pka 0:
+  include:
+    key: so-de 0
+    namespace: pka
+so-pka 1:
+  include:
+    key: so-de 1
+    namespace: pka
 spon 0:
   url: http://www.spiegel.de/
   title: Spiegel Online
@@ -1378,6 +2938,38 @@ spon 1:
   - spiegel
   examples:
     berlin: Suche nach "berlin"
+sq-pka 0:
+  include:
+    key: sq-de 0
+    namespace: pka
+sq-pka 1:
+  include:
+    key: sq-de 1
+    namespace: pka
+sr-dcm 0:
+  include:
+    key: sr-de 0
+    namespace: dcm
+sr-dcm 1:
+  include:
+    key: sr-de 1
+    namespace: dcm
+sr-lgs 0:
+  include:
+    key: sr-de 0
+    namespace: lgs
+sr-lgs 1:
+  include:
+    key: sr-de 1
+    namespace: lgs
+sr-pka 0:
+  include:
+    key: sr-de 0
+    namespace: pka
+sr-pka 1:
+  include:
+    key: sr-de 1
+    namespace: pka
 stupi 0:
   url: http://www.stupidedia.org/
   title: Stupipedia Hauptseite
@@ -1400,6 +2992,46 @@ sv 1:
   - swedish
   examples:
     baum: Übersetzung für "baum"
+sv-bab 0:
+  include:
+    key: sv-de 0
+    namespace: bab
+sv-bab 1:
+  include:
+    key: sv-de 1
+    namespace: bab
+sv-dcc 0:
+  include:
+    key: sv-de 0
+    namespace: dcc
+sv-dcc 1:
+  include:
+    key: sv-de 1
+    namespace: dcc
+sv-dcm 0:
+  include:
+    key: sv-de 0
+    namespace: dcm
+sv-dcm 1:
+  include:
+    key: sv-de 1
+    namespace: dcm
+sv-lgs 0:
+  include:
+    key: sv-de 0
+    namespace: lgs
+sv-lgs 1:
+  include:
+    key: sv-de 1
+    namespace: lgs
+sv-pka 0:
+  include:
+    key: sv-de 0
+    namespace: pka
+sv-pka 1:
+  include:
+    key: sv-de 1
+    namespace: pka
 svb 1:
   url: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%Wort}
   title: Schwedisch-Deutsch (bab.la)
@@ -1420,6 +3052,14 @@ svd 1:
   - language
   examples:
     baum: Search for "baum"
+sw-pka 0:
+  include:
+    key: sw-de 0
+    namespace: pka
+sw-pka 1:
+  include:
+    key: sw-de 1
+    namespace: pka
 syn 1:
   url: http://synonyme.woxikon.de/synonyme/{%wort}.php
   title: Synonyme
@@ -1441,12 +3081,68 @@ sz 1:
   - news
   - newspaper
   - print
+ta-pka 0:
+  include:
+    key: ta-de 0
+    namespace: pka
+ta-pka 1:
+  include:
+    key: ta-de 1
+    namespace: pka
 taz 0:
   url: http://www.taz.de/
   title: taz. die tageszeitung
   tags:
   - news
   - zeitung
+te-pka 0:
+  include:
+    key: te-de 0
+    namespace: pka
+te-pka 1:
+  include:
+    key: te-de 1
+    namespace: pka
+th-dcm 0:
+  include:
+    key: th-de 0
+    namespace: dcm
+th-dcm 1:
+  include:
+    key: th-de 1
+    namespace: dcm
+th-pka 0:
+  include:
+    key: th-de 0
+    namespace: pka
+th-pka 1:
+  include:
+    key: th-de 1
+    namespace: pka
+ti-pka 0:
+  include:
+    key: ti-de 0
+    namespace: pka
+ti-pka 1:
+  include:
+    key: ti-de 1
+    namespace: pka
+tl-pka 0:
+  include:
+    key: tl-de 0
+    namespace: pka
+tl-pka 1:
+  include:
+    key: tl-de 1
+    namespace: pka
+to-pka 0:
+  include:
+    key: to-de 0
+    namespace: pka
+to-pka 1:
+  include:
+    key: to-de 1
+    namespace: pka
 tomdestages 0:
   url: https://www.taz.de/#!tom=tomdestages
   title: Tom Touché (Tom des Tages)
@@ -1474,6 +3170,54 @@ tr 1:
   - language
   examples:
     baum: Search for "baum"
+tr-bab 0:
+  include:
+    key: tr-de 0
+    namespace: bab
+tr-bab 1:
+  include:
+    key: tr-de 1
+    namespace: bab
+tr-dcc 0:
+  include:
+    key: tr-de 0
+    namespace: dcc
+tr-dcc 1:
+  include:
+    key: tr-de 1
+    namespace: dcc
+tr-dcm 0:
+  include:
+    key: tr-de 0
+    namespace: dcm
+tr-dcm 1:
+  include:
+    key: tr-de 1
+    namespace: dcm
+tr-dtn 0:
+  include:
+    key: tr-de 0
+    namespace: dtn
+tr-dtn 1:
+  include:
+    key: tr-de 1
+    namespace: dtn
+tr-lgs 0:
+  include:
+    key: tr-de 0
+    namespace: lgs
+tr-lgs 1:
+  include:
+    key: tr-de 1
+    namespace: lgs
+tr-pka 0:
+  include:
+    key: tr-de 0
+    namespace: pka
+tr-pka 1:
+  include:
+    key: tr-de 1
+    namespace: pka
 trb 1:
   url: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%Wort}
   title: Türkisch-Deutsch (bab.la)
@@ -1532,6 +3276,38 @@ tspg 1:
   - newspaper
   examples:
     Friedrichshain: Search "Friedrichshain"
+ug-pka 0:
+  include:
+    key: ug-de 0
+    namespace: pka
+ug-pka 1:
+  include:
+    key: ug-de 1
+    namespace: pka
+uk-dcm 0:
+  include:
+    key: uk-de 0
+    namespace: dcm
+uk-dcm 1:
+  include:
+    key: uk-de 1
+    namespace: dcm
+uk-pka 0:
+  include:
+    key: uk-de 0
+    namespace: pka
+uk-pka 1:
+  include:
+    key: uk-de 1
+    namespace: pka
+ur-pka 0:
+  include:
+    key: ur-de 0
+    namespace: pka
+ur-pka 1:
+  include:
+    key: ur-de 1
+    namespace: pka
 uu 0:
   url: http://www.ubuntuusers.de/
   title: UbuntuUsers.de
@@ -1574,6 +3350,30 @@ uuw 0:
   - documentation
   - linux
   - ubuntu
+uz-pka 0:
+  include:
+    key: uz-de 0
+    namespace: pka
+uz-pka 1:
+  include:
+    key: uz-de 1
+    namespace: pka
+vi-dcm 0:
+  include:
+    key: vi-de 0
+    namespace: dcm
+vi-dcm 1:
+  include:
+    key: vi-de 1
+    namespace: dcm
+vi-pka 0:
+  include:
+    key: vi-de 0
+    namespace: pka
+vi-pka 1:
+  include:
+    key: vi-de 1
+    namespace: pka
 wetter 1:
   url: http://de.wetter.com/suche/?search={%Ort}
   title: Wetter.com
@@ -1602,6 +3402,22 @@ wsl 1:
   - language
   examples:
     Stuhl: Search for "Stuhl"
+yi-pka 0:
+  include:
+    key: yi-de 0
+    namespace: pka
+yi-pka 1:
+  include:
+    key: yi-de 1
+    namespace: pka
+yo-pka 0:
+  include:
+    key: yo-de 0
+    namespace: pka
+yo-pka 1:
+  include:
+    key: yo-de 1
+    namespace: pka
 zeit 0:
   url: http://www.zeit.de/
   title: Zeit Online
@@ -1620,6 +3436,46 @@ zh 1:
   include:
     key: zh-de 1
     namespace: leo
+zh-dcm 0:
+  include:
+    key: zh-de 0
+    namespace: dcm
+zh-dcm 1:
+  include:
+    key: zh-de 1
+    namespace: dcm
+zh-leo 0:
+  include:
+    key: zh-de 0
+    namespace: leo
+zh-leo 1:
+  include:
+    key: zh-de 1
+    namespace: leo
+zh-lgs 0:
+  include:
+    key: zh-de 0
+    namespace: lgs
+zh-lgs 1:
+  include:
+    key: zh-de 1
+    namespace: lgs
+zh-pka 0:
+  include:
+    key: zh-de 0
+    namespace: pka
+zh-pka 1:
+  include:
+    key: zh-de 1
+    namespace: pka
+zu-pka 0:
+  include:
+    key: zu-de 0
+    namespace: pka
+zu-pka 1:
+  include:
+    key: zu-de 1
+    namespace: pka
 zv 1:
   url: http://www.zwangsversteigerung.de/suche?q={%KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID}&ergebnisZeigen=ja
   title: Zwangsversteigerung

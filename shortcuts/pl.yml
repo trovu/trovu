@@ -1,3 +1,75 @@
+cs-dcm 0:
+  include:
+    key: cs-pl 0
+    namespace: dcm
+cs-dcm 1:
+  include:
+    key: cs-pl 1
+    namespace: dcm
+de-bab 0:
+  include:
+    key: de-pl 0
+    namespace: bab
+de-bab 1:
+  include:
+    key: de-pl 1
+    namespace: bab
+de-dcc 0:
+  include:
+    key: de-pl 0
+    namespace: dcc
+de-dcc 1:
+  include:
+    key: de-pl 1
+    namespace: dcc
+de-dcm 0:
+  include:
+    key: de-pl 0
+    namespace: dcm
+de-dcm 1:
+  include:
+    key: de-pl 1
+    namespace: dcm
+de-leo 0:
+  include:
+    key: de-pl 0
+    namespace: leo
+de-leo 1:
+  include:
+    key: de-pl 1
+    namespace: leo
+de-lge 0:
+  include:
+    key: de-pl 0
+    namespace: lge
+de-lge 1:
+  include:
+    key: de-pl 1
+    namespace: lge
+de-lgs 0:
+  include:
+    key: de-pl 0
+    namespace: lgs
+de-lgs 1:
+  include:
+    key: de-pl 1
+    namespace: lgs
+de-pka 0:
+  include:
+    key: de-pl 0
+    namespace: pka
+de-pka 1:
+  include:
+    key: de-pl 1
+    namespace: pka
+de-pns 0:
+  include:
+    key: de-pl 0
+    namespace: pns
+de-pns 1:
+  include:
+    key: de-pl 1
+    namespace: pns
 en 1:
   url: https://pl.bab.la/slownik/angielski-polski/{%słowo}
   title: Angielsko-polski (bab.la)
@@ -9,6 +81,14 @@ en 1:
   examples:
     tree: Tłumaczenie słowa "tree" na polski
     drzewo: Tłumaczenie słowa "drzewo" na angielski
+fr-pns 0:
+  include:
+    key: fr-pl 0
+    namespace: pns
+fr-pns 1:
+  include:
+    key: fr-pl 1
+    namespace: pns
 fw 1:
   url: http://www.filmweb.pl/search?q={%tytuł/osoba}
   title: FilmWeb
@@ -50,3 +130,11 @@ pwn 1:
   - słownik
   examples:
     drzewo: Szukaj "drzewo"
+sk-dcm 0:
+  include:
+    key: sk-pl 0
+    namespace: dcm
+sk-dcm 1:
+  include:
+    key: sk-pl 1
+    namespace: dcm
