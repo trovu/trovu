@@ -1,0 +1,30 @@
+de-tr 0:
+  url: https://deutsch-tuerkisch.net/
+  title: Almanca-Türkçe (deutsch-tuerkisch.net)
+  tags:
+  - dictionary
+  - german
+  - language
+  - turkish
+de-tr 1:
+  url: https://deutsch-tuerkisch.net/suche/{%word}
+  title: Almanca-Türkçe (deutsch-tuerkisch.net)
+  tags:
+  - dictionary
+  - german
+  - language
+  - turkish
+  examples:
+    baum: '"baum" için Türkçe çevirisi'
+    ağaç: '"ağaç" için Almanca çevirisi'
+tr-de 0:
+  title: Türkisch-Deutsch (deutsch-tuerkisch.net)
+  include:
+    key: de-tr 0
+tr-de 1:
+  title: Türkisch-Deutsch (deutsch-tuerkisch.net)
+  include:
+    key: de-tr 1
+  examples:
+    ağaç: Deutsch-Übersetzung von "ağaç"
+    baum: Türkisch-Übersetzung von "baum"
