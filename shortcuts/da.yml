@@ -46,16 +46,14 @@ de-pka 1:
   include:
     key: de-da 1
     namespace: pka
+eo 0:
+  include:
+    key: eo-da 0
+    namespace: deo
 eo 1:
-  url: http://www.vortaro.dk/#/{%soegeord}
-  title: Esperanto-Dansk
-  tags:
-  - danish
-  - dictionary
-  - esperanto
-  - language
-  examples:
-    ord: Traduko de "ord"
+  include:
+    key: eo-da 1
+    namespace: deo
 eo-deo 0:
   include:
     key: eo-da 0
