@@ -254,9 +254,7 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
 actions['createDictionaries'] = async function () {
   const langs = getLanguageList();
   const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
-  const dicts = jsyaml.load(
-    fs.readFileSync('src/yml/dictionaries.yml', 'utf8'),
-  );
+  const dicts = getDictionaries();
 
   const ymls = {};
   for (const dict in dicts) {
@@ -351,5 +349,9 @@ actions['createDictionaries'] = async function () {
     return capitalized;
   }
 };
+
+function getDictionaries() {
+  return jsyaml.load(fs.readFileSync('src/yml/dictionaries.yml', 'utf8'));
+}
 
 main();
