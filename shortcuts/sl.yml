@@ -30,6 +30,14 @@ de-pka 1:
   include:
     key: de-sl 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-sl 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-sl 1
+    namespace: dcm
 en-pns 0:
   include:
     key: en-sl 0

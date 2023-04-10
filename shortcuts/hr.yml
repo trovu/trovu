@@ -46,6 +46,14 @@ en-crd 1:
   include:
     key: en-hr 1
     namespace: crd
+en-dcm 0:
+  include:
+    key: en-hr 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-hr 1
+    namespace: dcm
 sk-dcm 0:
   include:
     key: sk-hr 0

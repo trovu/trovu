@@ -22,6 +22,14 @@ de-pka 1:
   include:
     key: de-ko 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-ko 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-ko 1
+    namespace: dcm
 fr-rvs 0:
   include:
     key: fr-ko 0

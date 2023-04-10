@@ -80,6 +80,14 @@ en-dcc 1:
   include:
     key: en-nl 1
     namespace: dcc
+en-dcm 0:
+  include:
+    key: en-nl 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-nl 1
+    namespace: dcm
 enc 0:
   url: http://www.encyclo.nl/
   title: Encyclo Online Encyclopedie

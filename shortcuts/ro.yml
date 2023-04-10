@@ -38,6 +38,14 @@ de-pka 1:
   include:
     key: de-ro 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-ro 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-ro 1
+    namespace: dcm
 fr-rvs 0:
   include:
     key: fr-ro 0

@@ -46,6 +46,14 @@ de-pka 1:
   include:
     key: de-da 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-da 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-da 1
+    namespace: dcm
 eo 0:
   include:
     key: eo-da 0

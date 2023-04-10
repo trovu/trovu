@@ -66,6 +66,14 @@ de-pns 1:
   include:
     key: de-ru 1
     namespace: pns
+en-dcm 0:
+  include:
+    key: en-ru 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-ru 1
+    namespace: dcm
 en-leo 0:
   include:
     key: en-ru 0

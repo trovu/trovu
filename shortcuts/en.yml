@@ -6,6 +6,30 @@ ar-ard 1:
   include:
     key: ar-en 1
     namespace: ard
+ar-dcm 0:
+  include:
+    key: ar-en 0
+    namespace: dcm
+ar-dcm 1:
+  include:
+    key: ar-en 1
+    namespace: dcm
+bg-dcm 0:
+  include:
+    key: bg-en 0
+    namespace: dcm
+bg-dcm 1:
+  include:
+    key: bg-en 1
+    namespace: dcm
+ca-dcm 0:
+  include:
+    key: ca-en 0
+    namespace: dcm
+ca-dcm 1:
+  include:
+    key: ca-en 1
+    namespace: dcm
 camb-en 1:
   url: https://dictionary.cambridge.org/dictionary/english/{%word}
   title: Cambridge English Dictionary
@@ -66,6 +90,14 @@ cs-dcm 0:
 cs-dcm 1:
   include:
     key: cs-en 1
+    namespace: dcm
+da-dcm 0:
+  include:
+    key: da-en 0
+    namespace: dcm
+da-dcm 1:
+  include:
+    key: da-en 1
     namespace: dcm
 de 1:
   include:
@@ -167,6 +199,14 @@ edram 1:
   - humor
   examples:
     Boxxy: Encyclopedia Dramatica Article about Boxxy
+el-dcm 0:
+  include:
+    key: el-en 0
+    namespace: dcm
+el-dcm 1:
+  include:
+    key: el-en 1
+    namespace: dcm
 es 1:
   url: http://www.spanishdict.com/translate/{%word}
   title: Spanish-English (spanishdict.com)
@@ -232,6 +272,22 @@ esp 1:
   - spanish
   examples:
     tree: ' translation for "tree"'
+et-dcm 0:
+  include:
+    key: et-en 0
+    namespace: dcm
+et-dcm 1:
+  include:
+    key: et-en 1
+    namespace: dcm
+fi-dcm 0:
+  include:
+    key: fi-en 0
+    namespace: dcm
+fi-dcm 1:
+  include:
+    key: fi-en 1
+    namespace: dcm
 fr 1:
   url: http://www.linguee.com/english-french/search?source=auto&query={%word}
   title: French-English (Linguee)
@@ -242,6 +298,14 @@ fr 1:
   - language
   examples:
     tree: Translation of "tree"
+fr-dcm 0:
+  include:
+    key: fr-en 0
+    namespace: dcm
+fr-dcm 1:
+  include:
+    key: fr-en 1
+    namespace: dcm
 fr-leo 0:
   include:
     key: fr-en 0
@@ -301,6 +365,14 @@ gfp 0:
   - germany
   - news
   - politics
+he-dcm 0:
+  include:
+    key: he-en 0
+    namespace: dcm
+he-dcm 1:
+  include:
+    key: he-en 1
+    namespace: dcm
 hr-crd 0:
   include:
     key: hr-en 0
@@ -309,6 +381,54 @@ hr-crd 1:
   include:
     key: hr-en 1
     namespace: crd
+hr-dcm 0:
+  include:
+    key: hr-en 0
+    namespace: dcm
+hr-dcm 1:
+  include:
+    key: hr-en 1
+    namespace: dcm
+hu-dcm 0:
+  include:
+    key: hu-en 0
+    namespace: dcm
+hu-dcm 1:
+  include:
+    key: hu-en 1
+    namespace: dcm
+id-dcm 0:
+  include:
+    key: id-en 0
+    namespace: dcm
+id-dcm 1:
+  include:
+    key: id-en 1
+    namespace: dcm
+it-dcm 0:
+  include:
+    key: it-en 0
+    namespace: dcm
+it-dcm 1:
+  include:
+    key: it-en 1
+    namespace: dcm
+ja-dcm 0:
+  include:
+    key: ja-en 0
+    namespace: dcm
+ja-dcm 1:
+  include:
+    key: ja-en 1
+    namespace: dcm
+ko-dcm 0:
+  include:
+    key: ko-en 0
+    namespace: dcm
+ko-dcm 1:
+  include:
+    key: ko-en 1
+    namespace: dcm
 last 1:
   url: http://www.last.fm/search?setlang=en&q={%artist}
   title: Last.fm
@@ -317,6 +437,22 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
+lt-dcm 0:
+  include:
+    key: lt-en 0
+    namespace: dcm
+lt-dcm 1:
+  include:
+    key: lt-en 1
+    namespace: dcm
+lv-dcm 0:
+  include:
+    key: lv-en 0
+    namespace: dcm
+lv-dcm 1:
+  include:
+    key: lv-en 1
+    namespace: dcm
 mw 1:
   url: http://www.merriam-webster.com/dictionary/{%query}
   title: Merriam-Webster dictionary
@@ -352,6 +488,22 @@ nl-dcc 1:
   include:
     key: nl-en 1
     namespace: dcc
+nl-dcm 0:
+  include:
+    key: nl-en 0
+    namespace: dcm
+nl-dcm 1:
+  include:
+    key: nl-en 1
+    namespace: dcm
+no-dcm 0:
+  include:
+    key: no-en 0
+    namespace: dcm
+no-dcm 1:
+  include:
+    key: no-en 1
+    namespace: dcm
 ox 1:
   url: https://en.oxforddictionaries.com/definition/{%word}
   title: Oxford Dictionaries British & World English
@@ -370,6 +522,14 @@ pl-bab 1:
   include:
     key: pl-en 1
     namespace: bab
+pl-dcm 0:
+  include:
+    key: pl-en 0
+    namespace: dcm
+pl-dcm 1:
+  include:
+    key: pl-en 1
+    namespace: dcm
 pt 1:
   url: http://www.linguee.com/english-portuguese/search?source=auto&query={%word}
   title: Portuguese-English (Linguee)
@@ -380,6 +540,14 @@ pt 1:
   - portuguese
   examples:
     tree: Translation of "tree"
+pt-dcm 0:
+  include:
+    key: pt-en 0
+    namespace: dcm
+pt-dcm 1:
+  include:
+    key: pt-en 1
+    namespace: dcm
 pt-lge 0:
   include:
     key: pt-en 0
@@ -388,6 +556,22 @@ pt-lge 1:
   include:
     key: pt-en 1
     namespace: lge
+ro-dcm 0:
+  include:
+    key: ro-en 0
+    namespace: dcm
+ro-dcm 1:
+  include:
+    key: ro-en 1
+    namespace: dcm
+ru-dcm 0:
+  include:
+    key: ru-en 0
+    namespace: dcm
+ru-dcm 1:
+  include:
+    key: ru-en 1
+    namespace: dcm
 ru-leo 0:
   include:
     key: ru-en 0
@@ -414,6 +598,14 @@ sl 1:
   - slovenian
   examples:
     tree: Search Slovenian-English (Pons) for "tree"
+sl-dcm 0:
+  include:
+    key: sl-en 0
+    namespace: dcm
+sl-dcm 1:
+  include:
+    key: sl-en 1
+    namespace: dcm
 sl-pns 0:
   include:
     key: sl-en 0
@@ -422,6 +614,14 @@ sl-pns 1:
   include:
     key: sl-en 1
     namespace: pns
+sr-dcm 0:
+  include:
+    key: sr-en 0
+    namespace: dcm
+sr-dcm 1:
+  include:
+    key: sr-en 1
+    namespace: dcm
 sta 0:
   url: http://start.csail.mit.edu
   title: START (SynTactic Analysis using Reversible Transformations)
@@ -445,6 +645,14 @@ sv 1:
   examples:
     tree: Translation of "tree"
     träd: Translation of "träd"
+sv-dcm 0:
+  include:
+    key: sv-en 0
+    namespace: dcm
+sv-dcm 1:
+  include:
+    key: sv-en 1
+    namespace: dcm
 sv-flx 0:
   include:
     key: sv-en 0
@@ -461,6 +669,14 @@ syn 1:
   - thesaurus
   examples:
     'important ': Search for synonyms of "important"
+th-dcm 0:
+  include:
+    key: th-en 0
+    namespace: dcm
+th-dcm 1:
+  include:
+    key: th-en 1
+    namespace: dcm
 tr 1:
   url: http://www.zargan.com/sozluk.asp?Sozcuk={%query}&OpenSearch=1&DisplayLang=2
   title: Turkish-English
@@ -472,6 +688,14 @@ tr 1:
   examples:
     tree: Translation of "tree"
     ağaç: Translation of "ağaç"
+tr-dcm 0:
+  include:
+    key: tr-en 0
+    namespace: dcm
+tr-dcm 1:
+  include:
+    key: tr-en 1
+    namespace: dcm
 tr-zrg 0:
   include:
     key: tr-en 0
@@ -480,6 +704,14 @@ tr-zrg 1:
   include:
     key: tr-en 1
     namespace: zrg
+uk-dcm 0:
+  include:
+    key: uk-en 0
+    namespace: dcm
+uk-dcm 1:
+  include:
+    key: uk-en 1
+    namespace: dcm
 uvi 0:
   url: http://verbs.colorado.edu/verb-index/vn3.3
   title: Unified Verb Index
@@ -498,6 +730,14 @@ uvi 1:
   - linguistics
   examples:
     walk: Look up the verb "walk"
+vi-dcm 0:
+  include:
+    key: vi-en 0
+    namespace: dcm
+vi-dcm 1:
+  include:
+    key: vi-en 1
+    namespace: dcm
 wk 0:
   url: http://www.wordnik.com/
   title: Wordnik.com
@@ -573,6 +813,14 @@ zh 1:
   examples:
     tree: Translation of "tree"
     木: Translation of 木
+zh-dcm 0:
+  include:
+    key: zh-en 0
+    namespace: dcm
+zh-dcm 1:
+  include:
+    key: zh-en 1
+    namespace: dcm
 zh-mdb 0:
   include:
     key: zh-en 0

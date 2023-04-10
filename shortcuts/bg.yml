@@ -30,6 +30,14 @@ de-pka 1:
   include:
     key: de-bg 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-bg 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-bg 1
+    namespace: dcm
 sk-dcm 0:
   include:
     key: sk-bg 0

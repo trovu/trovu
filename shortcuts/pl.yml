@@ -86,6 +86,14 @@ en-bab 1:
   include:
     key: en-pl 1
     namespace: bab
+en-dcm 0:
+  include:
+    key: en-pl 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-pl 1
+    namespace: dcm
 fr-pns 0:
   include:
     key: fr-pl 0

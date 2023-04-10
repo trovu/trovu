@@ -14,6 +14,14 @@ de-pka 1:
   include:
     key: de-ca 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-ca 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-ca 1
+    namespace: dcm
 sk-dcm 0:
   include:
     key: sk-ca 0

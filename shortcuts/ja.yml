@@ -46,6 +46,14 @@ de-wdk 1:
   include:
     key: de-ja 1
     namespace: wdk
+en-dcm 0:
+  include:
+    key: en-ja 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-ja 1
+    namespace: dcm
 fr-rvs 0:
   include:
     key: fr-ja 0

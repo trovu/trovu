@@ -50,6 +50,14 @@ en 1:
   include:
     key: en-zh 1
     namespace: mdb
+en-dcm 0:
+  include:
+    key: en-zh 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-zh 1
+    namespace: dcm
 en-mdb 0:
   include:
     key: en-zh 0

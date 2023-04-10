@@ -38,6 +38,14 @@ de-pka 1:
   include:
     key: de-fi 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-fi 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-fi 1
+    namespace: dcm
 sk-dcm 0:
   include:
     key: sk-fi 0

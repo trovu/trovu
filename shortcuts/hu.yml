@@ -46,6 +46,14 @@ de-pns 1:
   include:
     key: de-hu 1
     namespace: pns
+en-dcm 0:
+  include:
+    key: en-hu 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-hu 1
+    namespace: dcm
 sk-dcm 0:
   include:
     key: sk-hu 0

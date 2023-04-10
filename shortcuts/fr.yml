@@ -126,6 +126,14 @@ en 1:
   include:
     key: en-fr 1
     namespace: rvs
+en-dcm 0:
+  include:
+    key: en-fr 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-fr 1
+    namespace: dcm
 en-leo 0:
   include:
     key: en-fr 0

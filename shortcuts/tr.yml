@@ -62,6 +62,14 @@ de-pka 1:
   include:
     key: de-tr 1
     namespace: pka
+en-dcm 0:
+  include:
+    key: en-tr 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-tr 1
+    namespace: dcm
 en-zrg 0:
   include:
     key: en-tr 0

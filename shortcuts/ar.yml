@@ -38,6 +38,14 @@ en-ard 1:
   include:
     key: en-ar 1
     namespace: ard
+en-dcm 0:
+  include:
+    key: en-ar 0
+    namespace: dcm
+en-dcm 1:
+  include:
+    key: en-ar 1
+    namespace: dcm
 es-ard 0:
   include:
     key: es-ar 0
