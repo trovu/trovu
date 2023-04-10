@@ -65,24 +65,14 @@ cong 1:
   title: Google as a Concordancer
   examples:
     palpable: See how the word "palpable" is used on the Web
+cs 0:
+  include:
+    key: cs-en 0
+    namespace: dcm
 cs 1:
-  url: https://slovniky.lingea.cz/anglicko-cesky/{%word}
-  post parameters:
-    set: _encz
-    type: ''
-    word: '{%word|encoding=none}'
-    data: '{%word|encoding=none}'
-  title: Czech-English (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - english
-  - language
-  - lingea
-  - slovník
-  examples:
-    tree: '"tree" in Czech'
-    strom: '"strom" in English'
+  include:
+    key: cs-en 1
+    namespace: dcm
 cs-dcm 0:
   include:
     key: cs-en 0
@@ -207,18 +197,14 @@ el-dcm 1:
   include:
     key: el-en 1
     namespace: dcm
+es 0:
+  include:
+    key: es-en 0
+    namespace: esd
 es 1:
-  url: http://www.spanishdict.com/translate/{%word}
-  title: Spanish-English (spanishdict.com)
-  tags:
-  - dictionary
-  - english
-  - language
-  - linguee
-  - spanish
-  examples:
-    tree: Translation of "tree"
-    arbol: Translation of "arbol"
+  include:
+    key: es-en 1
+    namespace: esd
 es-esd 0:
   include:
     key: es-en 0
@@ -288,16 +274,14 @@ fi-dcm 1:
   include:
     key: fi-en 1
     namespace: dcm
+fr 0:
+  include:
+    key: fr-en 0
+    namespace: lge
 fr 1:
-  url: http://www.linguee.com/english-french/search?source=auto&query={%word}
-  title: French-English (Linguee)
-  tags:
-  - dictionary
-  - english
-  - french
-  - language
-  examples:
-    tree: Translation of "tree"
+  include:
+    key: fr-en 1
+    namespace: lge
 fr-dcm 0:
   include:
     key: fr-en 0
@@ -469,17 +453,14 @@ mwt 1:
   - english
   examples:
     'important ': Search for synonyms of "important"
+nl 0:
+  include:
+    key: nl-en 0
+    namespace: dcc
 nl 1:
-  url: http://ennl.dict.cc/?s={%word}
-  title: Dutch-English (dict.cc)
-  tags:
-  - dictionary
-  - dutch
-  - english
-  - language
-  examples:
-    opdracht: Translate "opdracht" to English.
-    assignment: Translate "assignment" to Dutch.
+  include:
+    key: nl-en 1
+    namespace: dcc
 nl-dcc 0:
   include:
     key: nl-en 0
@@ -530,16 +511,14 @@ pl-dcm 1:
   include:
     key: pl-en 1
     namespace: dcm
+pt 0:
+  include:
+    key: pt-en 0
+    namespace: lge
 pt 1:
-  url: http://www.linguee.com/english-portuguese/search?source=auto&query={%word}
-  title: Portuguese-English (Linguee)
-  tags:
-  - dictionary
-  - english
-  - language
-  - portuguese
-  examples:
-    tree: Translation of "tree"
+  include:
+    key: pt-en 1
+    namespace: lge
 pt-dcm 0:
   include:
     key: pt-en 0
@@ -588,16 +567,14 @@ sk-dcm 1:
   include:
     key: sk-en 1
     namespace: dcm
+sl 0:
+  include:
+    key: sl-en 0
+    namespace: pns
 sl 1:
-  url: https://en.pons.com/translate?q={%query}&l=ensl&in=en&lf=en
-  title: Slovenian-English (Pons)
-  tags:
-  - dictionary
-  - english
-  - pons
-  - slovenian
-  examples:
-    tree: Search Slovenian-English (Pons) for "tree"
+  include:
+    key: sl-en 1
+    namespace: pns
 sl-dcm 0:
   include:
     key: sl-en 0
@@ -634,17 +611,14 @@ sta 1:
   - semantic search
   examples:
     How many people live in Berlin?: Answers the question.
+sv 0:
+  include:
+    key: sv-en 0
+    namespace: flx
 sv 1:
-  url: http://folkets-lexikon.csc.kth.se/folkets/#lookup&{%word}&l=SVEENG
-  title: Swedish-English
-  tags:
-  - dictionary
-  - english
-  - language
-  - swedish
-  examples:
-    tree: Translation of "tree"
-    träd: Translation of "träd"
+  include:
+    key: sv-en 1
+    namespace: flx
 sv-dcm 0:
   include:
     key: sv-en 0
