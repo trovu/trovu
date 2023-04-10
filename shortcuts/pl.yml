@@ -81,6 +81,14 @@ en 1:
   examples:
     tree: Tłumaczenie słowa "tree" na polski
     drzewo: Tłumaczenie słowa "drzewo" na angielski
+en-bab 0:
+  include:
+    key: en-pl 0
+    namespace: bab
+en-bab 1:
+  include:
+    key: en-pl 1
+    namespace: bab
 fr-pns 0:
   include:
     key: fr-pl 0

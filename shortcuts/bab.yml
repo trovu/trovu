@@ -161,6 +161,25 @@ de-tr 1:
   examples:
     baum: '"baum" için Türkçe çevirisi'
     ağaç: '"ağaç" için Almanca çevirisi'
+en-pl 0:
+  url: https://pl.bab.la/slownik/angielski-polski/
+  title: Angielski-Polski (bab.la)
+  tags:
+  - dictionary
+  - english
+  - language
+  - polish
+en-pl 1:
+  url: https://pl.bab.la/slownik/angielski-polski/{%word}
+  title: Angielski-Polski (bab.la)
+  tags:
+  - dictionary
+  - english
+  - language
+  - polish
+  examples:
+    tree: Tłumaczenie na język polski dla "tree"
+    drzewo: Tłumaczenie na język angielski dla "drzewo"
 es-de 0:
   title: Spanisch-Deutsch (bab.la)
   include:
@@ -205,6 +224,17 @@ pl-de 1:
   examples:
     drzewo: Deutsch-Übersetzung von "drzewo"
     baum: Polnisch-Übersetzung von "baum"
+pl-en 0:
+  title: Polish-English (bab.la)
+  include:
+    key: en-pl 0
+pl-en 1:
+  title: Polish-English (bab.la)
+  include:
+    key: en-pl 1
+  examples:
+    drzewo: English translation of "drzewo"
+    tree: Polish translation of "tree"
 ru-de 0:
   title: Russisch-Deutsch (bab.la)
   include:

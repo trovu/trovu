@@ -346,6 +346,14 @@ ox 1:
 oxford 1:
   url: https://www.oxforddictionaries.com/definition/english/{%query}
   title: Oxford dictionary
+pl-bab 0:
+  include:
+    key: pl-en 0
+    namespace: bab
+pl-bab 1:
+  include:
+    key: pl-en 1
+    namespace: bab
 pt 1:
   url: http://www.linguee.com/english-portuguese/search?source=auto&query={%word}
   title: Portuguese-English (Linguee)
