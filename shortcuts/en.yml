@@ -158,15 +158,10 @@ de-pns 1:
     key: de-en 1
     namespace: pns
 dei 1:
-  url: http://www.linguee.com/english-german/search?source=auto&query={%word}
-  title: German-English (Linguee)
-  tags:
-  - dictionary
-  - english
-  - german
-  - language
-  examples:
-    tree: Translation of "tree"
+  deprecated:
+    alternative:
+      query: de-lge {%1}
+      created: '2023-04-10'
 dict 1:
   url: http://dictionary.reference.com/browse/{%query}
   title: Dictionary.com
@@ -238,26 +233,15 @@ es-pns 1:
     key: es-en 1
     namespace: pns
 esi 1:
-  url: http://www.linguee.com/english-spanish/search?source=auto&query={%word}
-  title: Spanish-English (Linguee)
-  tags:
-  - dictionary
-  - english
-  - language
-  - linguee
-  - spanish
-  examples:
-    tree: Translation of "tree"
+  deprecated:
+    alternative:
+      query: es-lge {%1}
+      created: '2023-04-10'
 esp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=enes
-  title: Spanish-English (Pons)
-  tags:
-  - dictionary
-  - english
-  - language
-  - spanish
-  examples:
-    tree: ' translation for "tree"'
+  deprecated:
+    alternative:
+      query: es-pns {%1}
+      created: '2023-04-10'
 et-dcm 0:
   include:
     key: et-en 0
@@ -323,15 +307,10 @@ fr-rvs 1:
     key: fr-en 1
     namespace: rvs
 frp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=enfr
-  title: French-English (Pons)
-  tags:
-  - dictionary
-  - english
-  - french
-  - language
-  examples:
-    tree: translation for "tree"
+  deprecated:
+    alternative:
+      query: fr-pns {%1}
+      created: '2023-04-10'
 ga 1:
   url: http://www.irishionary.com/search/{%word}/
   title: Irish-English (Irishionary)
