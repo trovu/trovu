@@ -2809,16 +2809,14 @@ stupi 1:
   - wiki
   examples:
     berlin: Search Stupipedia Artikelsuche for "berlin"
+sv 0:
+  include:
+    key: sv-de 0
+    namespace: dcm
 sv 1:
-  url: http://rio.pauker.at/pauker/DE/SE/wb/?s={%Wort}
-  title: Schwedisch-Deutsch (pauker.at)
-  tags:
-  - dictionary
-  - german
-  - language
-  - swedish
-  examples:
-    baum: Übersetzung für "baum"
+  include:
+    key: sv-de 1
+    namespace: dcm
 sv-bab 0:
   include:
     key: sv-de 0
