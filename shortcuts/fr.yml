@@ -119,15 +119,14 @@ de-rvs 1:
   include:
     key: de-fr 1
     namespace: rvs
+en 0:
+  include:
+    key: en-fr 0
+    namespace: rvs
 en 1:
-  url: http://dictionary.reverso.net/french-english/{%mot}
-  title: Anglais-Français (reverso.net)
-  tags:
-  - dictionary
-  - language
-  examples:
-    arbre: Translate arbre to English
-    tree: Translate tree to French
+  include:
+    key: en-fr 1
+    namespace: rvs
 en-leo 0:
   include:
     key: en-fr 0
