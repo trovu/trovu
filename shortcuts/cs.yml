@@ -83,11 +83,11 @@ el-dcm 1:
     key: el-cs 1
     namespace: dcm
 en 0:
-  incluen:
+  include:
     key: en-cs 0
     namespace: dcm
 en 1:
-  incluen:
+  include:
     key: en-cs 1
     namespace: dcm
 en-dcm 0:
@@ -99,11 +99,11 @@ en-dcm 1:
     key: en-cs 1
     namespace: dcm
 es 0:
-  inclues:
+  include:
     key: es-cs 0
     namespace: dcm
 es 1:
-  inclues:
+  include:
     key: es-cs 1
     namespace: dcm
 es-dcm 0:
@@ -131,11 +131,11 @@ fi-dcm 1:
     key: fi-cs 1
     namespace: dcm
 fr 0:
-  inclufr:
+  include:
     key: fr-cs 0
     namespace: dcm
 fr 1:
-  inclufr:
+  include:
     key: fr-cs 1
     namespace: dcm
 fr-dcm 0:
