@@ -1265,10 +1265,10 @@ debw 1:
   tags:
   - old
 deen 1:
-  url: http://www.dict.cc/?s={%word}
-  title: Translation German to English
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.en {%1}
+      created: '2023-04-10'
 deep 1:
   url: http://www.deepdyve.com/search?query={%query}
   title: DeepDyve search
@@ -1337,10 +1337,10 @@ di 1:
   examples:
     di flowers: Shows Images of Flowers
 dic 1:
-  url: http://www.dict.cc/?s={%query}
-  title: Dict.cc Dictionary
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.en {%1}
+      created: '2023-04-10'
 diff 1:
   url: http://www.differencebetween.net/search/?cx=partner-pub-1911891147296207%3Aw80z4hjpu14&cof=FORID%3A9&ie=ISO-8859-1&q={%query}&sa=Search
   title: Difference Between search
@@ -2414,15 +2414,15 @@ fpwg 0:
   tags:
   - passwords
 fr-an 1:
-  url: http://dictionnaire.reverso.net/francais-anglais/{%query}
-  title: 'Traduction Reverso : du français à l''anglais'
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fr.en {%1}
+      created: '2023-04-10'
 frde 1:
-  url: http://dict.leo.org/?lp=frde&lang=de&search={%word}
-  title: Translation French to German
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fr.de {%1}
+      created: '2023-04-10'
 freedb 1:
   url: http://www.freedb.org/freedb_search.php?words={%query}&allfields=NO&fields=artist&fields=title&allcats=YES&grouping=none&x=0&y=0
   title: FreeDB
@@ -2457,10 +2457,10 @@ frf 1:
   tags:
   - old
 frsv 1:
-  url: http://www.sensagent.com/dictionnaires/fr-sv/{%word}/ALEXMN/
-  title: Translation French to Swedish
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fr.sv {%1}
+      created: '2023-04-10'
 frv 1:
   url: http://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -3995,10 +3995,10 @@ laredoute 1:
   examples:
     chaussures: Recherche chaussures
 larousse 1:
-  url: http://www.larousse.com/fr/dictionnaires/francais/{%query}
-  title: Dictionnaire Larousse
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fr.lrs {%1}
+      created: '2023-04-10'
 last 0:
   url: http://www.last.fm/
   title: Last.fm
@@ -4064,15 +4064,15 @@ le 0:
   - certificate authority
   - open source
 leo 1:
-  url: http://dict.leo.org/ende/?search={%Wort}
-  title: English-German (Leo)
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.en-leo {%1}
+      created: '2023-04-10'
 leo_es 1:
-  url: http://dict.leo.org/esde?lp=esde&search?q={%query}
-  title: Leo
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.es-leo {%1}
+      created: '2023-04-10'
 lg 1:
   url: https://libgen.is/search.php?req={%query}
   title: Library Genesis
@@ -4082,20 +4082,15 @@ lh 0:
   url: http://www.lufthansa.com
   title: Lufthansa
 lin 1:
-  url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
-  title: Linguee
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.en-lge {%1}
+      created: '2023-04-10'
 linfr 1:
-  url: http://www.linguee.fr/francais-anglais/search?query={%mot ou expression à traduire}
-  title: Linguee
-  tags:
-  - old
-lingro 1:
-  url: http://lingro.com/translate/{%website/word to translate}
-  title: Lingro
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.fr-lge {%1}
+      created: '2023-04-10'
 linguee 1:
   url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
   title: Linguee
