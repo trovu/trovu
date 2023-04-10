@@ -6,21 +6,14 @@ cs-dcm 1:
   include:
     key: cs-pt 1
     namespace: dcm
+de 0:
+  include:
+    key: de-pt 0
+    namespace: beo
 de 1:
-  url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%word}
-  title: Alemão-Português
-  tags:
-  - alemão
-  - deutsch
-  - dictionary
-  - german
-  - language
-  - portugiesisch
-  - portuguese
-  - português
-  examples:
-    baum: '"baum" auf Portugiesisch'
-    árvore: '"árvore" auf Deutsch'
+  include:
+    key: de-pt 1
+    namespace: beo
 de-beo 0:
   include:
     key: de-pt 0
