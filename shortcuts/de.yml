@@ -581,16 +581,14 @@ e 0:
 e 1:
   url: https://www.ebay.de/sch/i.html?_nkw={%suche}
   title: eBay Suche
+el 0:
+  include:
+    key: el-de 0
+    namespace: pns
 el 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=deel
-  title: Griechisch-Deutsch (pons.de)
-  tags:
-  - dictionary
-  - german
-  - greek
-  - language
-  examples:
-    baum: Übersetzung von "baum"
+  include:
+    key: el-de 1
+    namespace: pns
 el-dcc 0:
   include:
     key: el-de 0
@@ -756,18 +754,14 @@ enp 1:
   - language
   examples:
     baum: Übersetzung für "baum"
+eo 0:
+  include:
+    key: eo-de 0
+    namespace: pka
 eo 1:
-  url: http://www.pauker.at/pauker/DE_DE/EO/wb/?modus=&suche={%Wort}
-  title: Esperanto-Deutsch
-  tags:
-  - deutsch
-  - dictionary
-  - esperanto
-  - german
-  - language
-  examples:
-    baum: Suche nach "baum" auf Esperanto
-    arbo: Suche nach "arbo" auf Deutsch
+  include:
+    key: eo-de 1
+    namespace: pka
 eo-pka 0:
   include:
     key: eo-de 0
