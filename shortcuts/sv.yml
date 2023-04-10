@@ -132,10 +132,7 @@ sk-dcm 1:
     key: sk-sv 1
     namespace: dcm
 sv-fr 1:
-  url: http://www.sensagent.com/dictionnaires/sv-fr/{%ord}/ALEXMN/
-  title: Svensk-Fransk (Sensagent)
-  tags:
-  - dictionary
-  - french
-  - language
-  - swedish
+  deprecated:
+    alternative:
+      query: fr {%1}
+      created: '2023-04-10'
