@@ -74,6 +74,14 @@ en-leo 1:
   include:
     key: en-ru 1
     namespace: leo
+fr-rvs 0:
+  include:
+    key: fr-ru 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-ru 1
+    namespace: rvs
 last 1:
   url: http://www.last.fm/search?setlang=ru&q={%artist}
   title: Last.fm

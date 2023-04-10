@@ -46,6 +46,14 @@ de-wdk 1:
   include:
     key: de-ja 1
     namespace: wdk
+fr-rvs 0:
+  include:
+    key: fr-ja 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-ja 1
+    namespace: rvs
 last 1:
   url: http://www.last.fm/search?setlang=ja&q={%artist}
   title: Last.fm

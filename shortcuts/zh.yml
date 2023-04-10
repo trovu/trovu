@@ -58,6 +58,14 @@ en-mdb 1:
   include:
     key: en-zh 1
     namespace: mdb
+fr-rvs 0:
+  include:
+    key: fr-zh 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-zh 1
+    namespace: rvs
 last 1:
   url: http://www.last.fm/search?setlang=zh&q={%artist}
   title: Last.fm

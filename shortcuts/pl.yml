@@ -94,6 +94,14 @@ fr-pns 1:
   include:
     key: fr-pl 1
     namespace: pns
+fr-rvs 0:
+  include:
+    key: fr-pl 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-pl 1
+    namespace: rvs
 fw 1:
   url: http://www.filmweb.pl/search?q={%tytuł/osoba}
   title: FilmWeb

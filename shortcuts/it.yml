@@ -74,6 +74,14 @@ de-pns 1:
   include:
     key: de-it 1
     namespace: pns
+fr-rvs 0:
+  include:
+    key: fr-it 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-it 1
+    namespace: rvs
 last 1:
   url: http://www.last.fm/search?setlang=it&q={%artist}
   title: Last.fm

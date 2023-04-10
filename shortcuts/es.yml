@@ -153,6 +153,14 @@ en-pns 1:
   include:
     key: en-es 1
     namespace: pns
+fr-rvs 0:
+  include:
+    key: fr-es 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-es 1
+    namespace: rvs
 last 1:
   url: http://www.last.fm/search?setlang=es&q={%artist}
   title: Last.fm

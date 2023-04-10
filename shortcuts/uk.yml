@@ -22,6 +22,14 @@ de-pka 1:
   include:
     key: de-uk 1
     namespace: pka
+fr-rvs 0:
+  include:
+    key: fr-uk 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-uk 1
+    namespace: rvs
 sk-dcm 0:
   include:
     key: sk-uk 0

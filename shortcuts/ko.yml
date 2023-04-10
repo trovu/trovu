@@ -22,6 +22,14 @@ de-pka 1:
   include:
     key: de-ko 1
     namespace: pka
+fr-rvs 0:
+  include:
+    key: fr-ko 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-ko 1
+    namespace: rvs
 last 1:
   url: http://www.last.fm/search?setlang=ko&q={%artist}
   title: Last.fm

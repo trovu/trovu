@@ -94,6 +94,14 @@ es-leo 1:
   include:
     key: es-pt 1
     namespace: leo
+fr-rvs 0:
+  include:
+    key: fr-pt 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-pt 1
+    namespace: rvs
 last 1:
   url: http://www.last.fm/search?setlang=pt&q={%artist}
   title: Last.fm

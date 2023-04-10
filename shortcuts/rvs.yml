@@ -1,0 +1,510 @@
+ar-fr 0:
+  url: https://dictionnaire.reverso.net/francais-arabe/
+  title: Arabe-Français (Reverso)
+  tags:
+  - arabic
+  - dictionary
+  - french
+  - language
+ar-fr 1:
+  url: https://dictionnaire.reverso.net/francais-arabe/{%word}
+  title: Arabe-Français (Reverso)
+  tags:
+  - arabic
+  - dictionary
+  - french
+  - language
+  examples:
+    شجرة: Traduction en français de "شجرة"
+    arbre: Traduction en arabe de "arbre"
+de-fr 0:
+  url: https://dictionnaire.reverso.net/francais-allemand/
+  title: Allemand-Français (Reverso)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+de-fr 1:
+  url: https://dictionnaire.reverso.net/francais-allemand/{%word}
+  title: Allemand-Français (Reverso)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+  examples:
+    baum: Traduction en français de "baum"
+    arbre: Traduction en allemand de "arbre"
+en-fr 0:
+  url: https://dictionnaire.reverso.net/francais-anglais/
+  title: Anglais-Français (Reverso)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+en-fr 1:
+  url: https://dictionnaire.reverso.net/francais-anglais/{%word}
+  title: Anglais-Français (Reverso)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+  examples:
+    tree: Traduction en français de "tree"
+    arbre: Traduction en anglais de "arbre"
+es-fr 0:
+  url: https://dictionnaire.reverso.net/francais-espagnol/
+  title: Espagnol-Français (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - spanish
+es-fr 1:
+  url: https://dictionnaire.reverso.net/francais-espagnol/{%word}
+  title: Espagnol-Français (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - spanish
+  examples:
+    árbol: Traduction en français de "árbol"
+    arbre: Traduction en espagnol de "arbre"
+fr-ar 0:
+  title: الفرنسية-العربية (Reverso)
+  include:
+    key: ar-fr 0
+fr-ar 1:
+  title: الفرنسية-العربية (Reverso)
+  include:
+    key: ar-fr 1
+  examples:
+    arbre: ترجمة العربية من "arbre"
+    شجرة: ترجمة الفرنسية من "شجرة"
+fr-de 0:
+  title: Französisch-Deutsch (Reverso)
+  include:
+    key: de-fr 0
+fr-de 1:
+  title: Französisch-Deutsch (Reverso)
+  include:
+    key: de-fr 1
+  examples:
+    arbre: Deutsch-Übersetzung von "arbre"
+    baum: Französisch-Übersetzung von "baum"
+fr-en 0:
+  title: French-English (Reverso)
+  include:
+    key: en-fr 0
+fr-en 1:
+  title: French-English (Reverso)
+  include:
+    key: en-fr 1
+  examples:
+    arbre: English translation of "arbre"
+    tree: French translation of "tree"
+fr-es 0:
+  title: Francés-Español (Reverso)
+  include:
+    key: es-fr 0
+fr-es 1:
+  title: Francés-Español (Reverso)
+  include:
+    key: es-fr 1
+  examples:
+    arbre: Traducción al español de "arbre"
+    árbol: Traducción al francés de "árbol"
+fr-he 0:
+  url: https://dictionnaire.reverso.net/francais-hebreu/
+  title: צרפתית-עברית (Reverso)
+  tags:
+  - dictionary
+  - french
+  - hebrew
+  - language
+fr-he 1:
+  url: https://dictionnaire.reverso.net/francais-hebreu/{%word}
+  title: צרפתית-עברית (Reverso)
+  tags:
+  - dictionary
+  - french
+  - hebrew
+  - language
+  examples:
+    arbre: עברית תרגום של "arbre"
+    עץ: צרפתית תרגום של "עץ"
+fr-it 0:
+  url: https://dictionnaire.reverso.net/francais-italien/
+  title: Francese-Italiano (Reverso)
+  tags:
+  - dictionary
+  - french
+  - italian
+  - language
+fr-it 1:
+  url: https://dictionnaire.reverso.net/francais-italien/{%word}
+  title: Francese-Italiano (Reverso)
+  tags:
+  - dictionary
+  - french
+  - italian
+  - language
+  examples:
+    arbre: Traduzione in italiano di "arbre"
+    albero: Traduzione in francese di "albero"
+fr-ja 0:
+  url: https://dictionnaire.reverso.net/francais-japonais/
+  title: フランス語-日本語 (Reverso)
+  tags:
+  - dictionary
+  - french
+  - japanese
+  - language
+fr-ja 1:
+  url: https://dictionnaire.reverso.net/francais-japonais/{%word}
+  title: フランス語-日本語 (Reverso)
+  tags:
+  - dictionary
+  - french
+  - japanese
+  - language
+  examples:
+    arbre: '"arbre"の日本語翻訳'
+    木: '"木"のフランス語翻訳'
+fr-ko 0:
+  url: https://dictionnaire.reverso.net/francais-coreen/
+  title: 프랑스어-한국어 (Reverso)
+  tags:
+  - dictionary
+  - french
+  - korean
+  - language
+fr-ko 1:
+  url: https://dictionnaire.reverso.net/francais-coreen/{%word}
+  title: 프랑스어-한국어 (Reverso)
+  tags:
+  - dictionary
+  - french
+  - korean
+  - language
+  examples:
+    arbre: '"arbre"의 한국어 번역'
+    나무: '"나무"의 프랑스어 번역'
+fr-nl 0:
+  url: https://dictionnaire.reverso.net/francais-neerlandais/
+  title: Frans-Nederlands (Reverso)
+  tags:
+  - dictionary
+  - dutch
+  - french
+  - language
+fr-nl 1:
+  url: https://dictionnaire.reverso.net/francais-neerlandais/{%word}
+  title: Frans-Nederlands (Reverso)
+  tags:
+  - dictionary
+  - dutch
+  - french
+  - language
+  examples:
+    arbre: Nederlands-vertaling van "arbre"
+    boom: Frans-vertaling van "boom"
+fr-pl 0:
+  url: https://dictionnaire.reverso.net/francais-polonais/
+  title: Francuski-Polski (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - polish
+fr-pl 1:
+  url: https://dictionnaire.reverso.net/francais-polonais/{%word}
+  title: Francuski-Polski (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - polish
+  examples:
+    arbre: Tłumaczenie na język polski dla "arbre"
+    drzewo: Tłumaczenie na język francuski dla "drzewo"
+fr-pt 0:
+  url: https://dictionnaire.reverso.net/francais-portugais/
+  title: Francês-Português (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - portuguese
+fr-pt 1:
+  url: https://dictionnaire.reverso.net/francais-portugais/{%word}
+  title: Francês-Português (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - portuguese
+  examples:
+    arbre: Tradução em português de "arbre"
+    árvore: Tradução em francês de "árvore"
+fr-ro 0:
+  url: https://dictionnaire.reverso.net/francais-roumain/
+  title: Franceză-Română (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - romanian
+fr-ro 1:
+  url: https://dictionnaire.reverso.net/francais-roumain/{%word}
+  title: Franceză-Română (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - romanian
+  examples:
+    arbre: Traducere în română pentru "arbre"
+    copac: Traducere în franceză pentru "copac"
+fr-ru 0:
+  url: https://dictionnaire.reverso.net/francais-russe/
+  title: Французский-Русский (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - russian
+fr-ru 1:
+  url: https://dictionnaire.reverso.net/francais-russe/{%word}
+  title: Французский-Русский (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - russian
+  examples:
+    arbre: Перевод на русский язык для "arbre"
+    дерево: Перевод на французский язык для "дерево"
+fr-sv 0:
+  url: https://dictionnaire.reverso.net/francais-suedois/
+  title: Franska-Svenska (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - swedish
+fr-sv 1:
+  url: https://dictionnaire.reverso.net/francais-suedois/{%word}
+  title: Franska-Svenska (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - swedish
+  examples:
+    arbre: svenska-översättning av "arbre"
+    träd: franska-översättning av "träd"
+fr-tr 0:
+  url: https://dictionnaire.reverso.net/francais-turc/
+  title: Fransızca-Türkçe (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - turkish
+fr-tr 1:
+  url: https://dictionnaire.reverso.net/francais-turc/{%word}
+  title: Fransızca-Türkçe (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - turkish
+  examples:
+    arbre: '"arbre" için Türkçe çevirisi'
+    ağaç: '"ağaç" için Fransızca çevirisi'
+fr-uk 0:
+  url: https://dictionnaire.reverso.net/francais-ukrainien/
+  title: Французька-Українська (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - ukrainian
+fr-uk 1:
+  url: https://dictionnaire.reverso.net/francais-ukrainien/{%word}
+  title: Французька-Українська (Reverso)
+  tags:
+  - dictionary
+  - french
+  - language
+  - ukrainian
+  examples:
+    arbre: Переклад українська для "arbre"
+    дерево: Переклад французька для "дерево"
+fr-zh 0:
+  url: https://dictionnaire.reverso.net/francais-chinois/
+  title: 法文-中文 (Reverso)
+  tags:
+  - chinese
+  - dictionary
+  - french
+  - language
+fr-zh 1:
+  url: https://dictionnaire.reverso.net/francais-chinois/{%word}
+  title: 法文-中文 (Reverso)
+  tags:
+  - chinese
+  - dictionary
+  - french
+  - language
+  examples:
+    arbre: 中文 的"arbre"翻译
+    树: 法文 的"树"翻译
+he-fr 0:
+  title: Hébreu-Français (Reverso)
+  include:
+    key: fr-he 0
+he-fr 1:
+  title: Hébreu-Français (Reverso)
+  include:
+    key: fr-he 1
+  examples:
+    עץ: Traduction en français de "עץ"
+    arbre: Traduction en hébreu de "arbre"
+it-fr 0:
+  title: Italien-Français (Reverso)
+  include:
+    key: fr-it 0
+it-fr 1:
+  title: Italien-Français (Reverso)
+  include:
+    key: fr-it 1
+  examples:
+    albero: Traduction en français de "albero"
+    arbre: Traduction en italien de "arbre"
+ja-fr 0:
+  title: Japonais-Français (Reverso)
+  include:
+    key: fr-ja 0
+ja-fr 1:
+  title: Japonais-Français (Reverso)
+  include:
+    key: fr-ja 1
+  examples:
+    木: Traduction en français de "木"
+    arbre: Traduction en japonais de "arbre"
+ko-fr 0:
+  title: Coréen-Français (Reverso)
+  include:
+    key: fr-ko 0
+ko-fr 1:
+  title: Coréen-Français (Reverso)
+  include:
+    key: fr-ko 1
+  examples:
+    나무: Traduction en français de "나무"
+    arbre: Traduction en coréen de "arbre"
+nl-fr 0:
+  title: Néerlandais-Français (Reverso)
+  include:
+    key: fr-nl 0
+nl-fr 1:
+  title: Néerlandais-Français (Reverso)
+  include:
+    key: fr-nl 1
+  examples:
+    boom: Traduction en français de "boom"
+    arbre: Traduction en néerlandais de "arbre"
+pl-fr 0:
+  title: Polonais-Français (Reverso)
+  include:
+    key: fr-pl 0
+pl-fr 1:
+  title: Polonais-Français (Reverso)
+  include:
+    key: fr-pl 1
+  examples:
+    drzewo: Traduction en français de "drzewo"
+    arbre: Traduction en polonais de "arbre"
+pt-fr 0:
+  title: Portugais-Français (Reverso)
+  include:
+    key: fr-pt 0
+pt-fr 1:
+  title: Portugais-Français (Reverso)
+  include:
+    key: fr-pt 1
+  examples:
+    árvore: Traduction en français de "árvore"
+    arbre: Traduction en portugais de "arbre"
+ro-fr 0:
+  title: Roumain-Français (Reverso)
+  include:
+    key: fr-ro 0
+ro-fr 1:
+  title: Roumain-Français (Reverso)
+  include:
+    key: fr-ro 1
+  examples:
+    copac: Traduction en français de "copac"
+    arbre: Traduction en roumain de "arbre"
+ru-fr 0:
+  title: Russe-Français (Reverso)
+  include:
+    key: fr-ru 0
+ru-fr 1:
+  title: Russe-Français (Reverso)
+  include:
+    key: fr-ru 1
+  examples:
+    дерево: Traduction en français de "дерево"
+    arbre: Traduction en russe de "arbre"
+sv-fr 0:
+  title: Suédois-Français (Reverso)
+  include:
+    key: fr-sv 0
+sv-fr 1:
+  title: Suédois-Français (Reverso)
+  include:
+    key: fr-sv 1
+  examples:
+    träd: Traduction en français de "träd"
+    arbre: Traduction en suédois de "arbre"
+tr-fr 0:
+  title: Turc-Français (Reverso)
+  include:
+    key: fr-tr 0
+tr-fr 1:
+  title: Turc-Français (Reverso)
+  include:
+    key: fr-tr 1
+  examples:
+    ağaç: Traduction en français de "ağaç"
+    arbre: Traduction en turc de "arbre"
+uk-fr 0:
+  title: Ukrainien-Français (Reverso)
+  include:
+    key: fr-uk 0
+uk-fr 1:
+  title: Ukrainien-Français (Reverso)
+  include:
+    key: fr-uk 1
+  examples:
+    дерево: Traduction en français de "дерево"
+    arbre: Traduction en ukrainien de "arbre"
+zh-fr 0:
+  title: Chinois-Français (Reverso)
+  include:
+    key: fr-zh 0
+zh-fr 1:
+  title: Chinois-Français (Reverso)
+  include:
+    key: fr-zh 1
+  examples:
+    树: Traduction en français de "树"
+    arbre: Traduction en chinois de "arbre"

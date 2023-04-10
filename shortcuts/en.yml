@@ -266,6 +266,14 @@ fr-pns 1:
   include:
     key: fr-en 1
     namespace: pns
+fr-rvs 0:
+  include:
+    key: fr-en 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-en 1
+    namespace: rvs
 frp 1:
   url: http://en.pons.com/translate?q={%Wort}&in=&l=enfr
   title: French-English (Pons)

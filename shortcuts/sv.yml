@@ -86,6 +86,14 @@ fr-dcm 1:
   include:
     key: fr-sv 1
     namespace: dcm
+fr-rvs 0:
+  include:
+    key: fr-sv 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-sv 1
+    namespace: rvs
 fr-sv 1:
   deprecated:
     alternative:

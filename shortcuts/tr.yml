@@ -70,6 +70,14 @@ en-zrg 1:
   include:
     key: en-tr 1
     namespace: zrg
+fr-rvs 0:
+  include:
+    key: fr-tr 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-tr 1
+    namespace: rvs
 sk-dcm 0:
   include:
     key: sk-tr 0

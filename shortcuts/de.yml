@@ -1121,6 +1121,14 @@ fr-pons 1:
   title: Französisch-Deutsch PONS
   tags:
   - old
+fr-rvs 0:
+  include:
+    key: fr-de 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-de 1
+    namespace: rvs
 frb 1:
   url: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%Wort}
   title: Französisch-Deutsch (bab.la)

@@ -54,6 +54,14 @@ fr-ard 1:
   include:
     key: fr-ar 1
     namespace: ard
+fr-rvs 0:
+  include:
+    key: fr-ar 0
+    namespace: rvs
+fr-rvs 1:
+  include:
+    key: fr-ar 1
+    namespace: rvs
 it-ard 0:
   include:
     key: it-ar 0

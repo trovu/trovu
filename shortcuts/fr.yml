@@ -6,6 +6,14 @@ ar-ard 1:
   include:
     key: ar-fr 1
     namespace: ard
+ar-rvs 0:
+  include:
+    key: ar-fr 0
+    namespace: rvs
+ar-rvs 1:
+  include:
+    key: ar-fr 1
+    namespace: rvs
 cjg 1:
   url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}
   title: Le conjugueur
@@ -103,6 +111,14 @@ de-pns 1:
   include:
     key: de-fr 1
     namespace: pns
+de-rvs 0:
+  include:
+    key: de-fr 0
+    namespace: rvs
+de-rvs 1:
+  include:
+    key: de-fr 1
+    namespace: rvs
 en 1:
   url: http://dictionary.reverso.net/french-english/{%mot}
   title: Anglais-Français (reverso.net)
@@ -136,6 +152,54 @@ en-pns 1:
   include:
     key: en-fr 1
     namespace: pns
+en-rvs 0:
+  include:
+    key: en-fr 0
+    namespace: rvs
+en-rvs 1:
+  include:
+    key: en-fr 1
+    namespace: rvs
+es-rvs 0:
+  include:
+    key: es-fr 0
+    namespace: rvs
+es-rvs 1:
+  include:
+    key: es-fr 1
+    namespace: rvs
+he-rvs 0:
+  include:
+    key: he-fr 0
+    namespace: rvs
+he-rvs 1:
+  include:
+    key: he-fr 1
+    namespace: rvs
+it-rvs 0:
+  include:
+    key: it-fr 0
+    namespace: rvs
+it-rvs 1:
+  include:
+    key: it-fr 1
+    namespace: rvs
+ja-rvs 0:
+  include:
+    key: ja-fr 0
+    namespace: rvs
+ja-rvs 1:
+  include:
+    key: ja-fr 1
+    namespace: rvs
+ko-rvs 0:
+  include:
+    key: ko-fr 0
+    namespace: rvs
+ko-rvs 1:
+  include:
+    key: ko-fr 1
+    namespace: rvs
 lar 1:
   url: http://www.larousse.fr/dictionnaires/francais/{%mot}
   title: Larousse, Dictionnaires de français
@@ -178,6 +242,14 @@ marmiton 1:
   - recettes
   examples:
     pizza: Recherche des recettes de pizza
+nl-rvs 0:
+  include:
+    key: nl-fr 0
+    namespace: rvs
+nl-rvs 1:
+  include:
+    key: nl-fr 1
+    namespace: rvs
 pl 1:
   url: https://pl.pons.com/t%C5%82umaczenie/francuski-polski/{%mot}
   title: Polonais-Français via PONS
@@ -195,6 +267,14 @@ pl-pns 1:
   include:
     key: pl-fr 1
     namespace: pns
+pl-rvs 0:
+  include:
+    key: pl-fr 0
+    namespace: rvs
+pl-rvs 1:
+  include:
+    key: pl-fr 1
+    namespace: rvs
 pt 1:
   url: http://dictionnaire.reverso.net/francais-portugais/{%mot}
   title: Français-portugais
@@ -203,6 +283,30 @@ pt 1:
   - language
   examples:
     voiture: Search for "voiture"
+pt-rvs 0:
+  include:
+    key: pt-fr 0
+    namespace: rvs
+pt-rvs 1:
+  include:
+    key: pt-fr 1
+    namespace: rvs
+ro-rvs 0:
+  include:
+    key: ro-fr 0
+    namespace: rvs
+ro-rvs 1:
+  include:
+    key: ro-fr 1
+    namespace: rvs
+ru-rvs 0:
+  include:
+    key: ru-fr 0
+    namespace: rvs
+ru-rvs 1:
+  include:
+    key: ru-fr 1
+    namespace: rvs
 sk-dcm 0:
   include:
     key: sk-fr 0
@@ -229,6 +333,14 @@ sv-dcm 1:
   include:
     key: sv-fr 1
     namespace: dcm
+sv-rvs 0:
+  include:
+    key: sv-fr 0
+    namespace: rvs
+sv-rvs 1:
+  include:
+    key: sv-fr 1
+    namespace: rvs
 syn 1:
   url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
   title: Synonyme
@@ -246,3 +358,27 @@ tlf 1:
   - language
   examples:
     arbre: Cherche "arbre" dans le Trésor de la langue française
+tr-rvs 0:
+  include:
+    key: tr-fr 0
+    namespace: rvs
+tr-rvs 1:
+  include:
+    key: tr-fr 1
+    namespace: rvs
+uk-rvs 0:
+  include:
+    key: uk-fr 0
+    namespace: rvs
+uk-rvs 1:
+  include:
+    key: uk-fr 1
+    namespace: rvs
+zh-rvs 0:
+  include:
+    key: zh-fr 0
+    namespace: rvs
+zh-rvs 1:
+  include:
+    key: zh-fr 1
+    namespace: rvs
