@@ -630,14 +630,10 @@ el-pns 1:
     key: el-de 1
     namespace: pns
 eld 1:
-  url: http://deel.dict.cc/?s={%Wort}
-  title: Griechisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: el-dcc {%1}
+      created: '2023-04-10'
 en 1:
   include:
     key: en-de 1
@@ -707,30 +703,15 @@ en-pns 1:
     key: en-de 1
     namespace: pns
 enb 1:
-  url: http://dict.tu-chemnitz.de/dings.cgi?lang=de&service=deen&opterrors=0&optpro=0&query={%query}
-  title: Englisch-Deutsch (Beolingus)
-  tags:
-  - beolingus
-  - deutsch
-  - dictionary
-  - englisch
-  - english
-  - german
-  - sprache
-  - wörterbuch
-  examples:
-    baum: Übersetzung von "baum" auf Englisch
-    tree: Übersetzung von "tree" auf Deutsch
+  deprecated:
+    alternative:
+      query: en-beo {%1}
+      created: '2023-04-10'
 end 1:
-  url: http://deen.dict.cc/?s={%Wort}
-  title: Englisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - english
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: en-dcc {%1}
+      created: '2023-04-10'
 endung 1:
   url: http://www.endungen.de/ResultList/ResultList.aspx?searchExtension={%Dateieindung}&searchPlatform=win;mac;unix;os2&searchMode=contains
   title: Endungen.de
@@ -745,15 +726,10 @@ eni 1:
       query: en-lge {%1}
       created: '2023-03-12'
 enp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=deen
-  title: Englisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - english
-  - german
-  - language
-  examples:
-    baum: Übersetzung für "baum"
+  deprecated:
+    alternative:
+      query: en-pns {%1}
+      created: '2023-04-10'
 eo 0:
   include:
     key: eo-de 0
@@ -847,45 +823,30 @@ es-pns 1:
     key: es-de 1
     namespace: pns
 es-pons 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
-  title: Spanisch-Deutsch PONS
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: es-pns {%1}
+      created: '2023-04-10'
 esb 1:
-  url: https://de.bab.la/woerterbuch/spanisch-deutsch/{%Wort}
-  title: Spanisch-Deutsch (bab.la)
-  tags:
-  - dictionary
-  - german
-  - language
-  - spanish
-  examples:
-    baum: Übersetzung von "baum"
-    arbol: Übersetzung von "arbol"
+  deprecated:
+    alternative:
+      query: es-bab {%1}
+      created: '2023-04-10'
 esd 1:
-  url: http://dees.dict.cc/?s={%Wort}
-  title: Spanisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: es-dcc {%1}
+      created: '2023-04-10'
 esi 1:
   deprecated:
     alternative:
       query: es-lge {%1}
       created: '2023-03-12'
 esp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=dees
-  title: Spanisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - german
-  - language
-  - spanish
-  examples:
-    baum: Übersetzung für "baum"
+  deprecated:
+    alternative:
+      query: es-pns {%1}
+      created: '2023-04-10'
 et-dcm 0:
   include:
     key: et-de 0
