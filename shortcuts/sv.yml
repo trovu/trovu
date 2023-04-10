@@ -6,17 +6,14 @@ cs-dcm 1:
   include:
     key: cs-sv 1
     namespace: dcm
+de 0:
+  include:
+    key: de-sv 0
+    namespace: dcm
 de 1:
-  url: http://rio.pauker.at/pauker/DE/SE/wb/?s={%ord}
-  title: Tysk-Svensk
-  tags:
-  - dictionary
-  - german
-  - languange
-  - swedish
-  examples:
-    baum: Swedish translation for "baum"
-    träd: German translation for "träd"
+  include:
+    key: de-sv 1
+    namespace: dcm
 de-bab 0:
   include:
     key: de-sv 0
@@ -57,17 +54,14 @@ de-pka 1:
   include:
     key: de-sv 1
     namespace: pka
+en 0:
+  include:
+    key: en-sv 0
+    namespace: flx
 en 1:
-  url: http://folkets-lexikon.csc.kth.se/folkets/#lookup&{%ord}&l=SVEENG
-  title: Engelsk-Svensk
-  tags:
-  - dictionary
-  - english
-  - language
-  - swedish
-  examples:
-    tree: Translation of "tree"
-    träd: Translation of "träd"
+  include:
+    key: en-sv 1
+    namespace: flx
 en-flx 0:
   include:
     key: en-sv 0
@@ -76,25 +70,27 @@ en-flx 1:
   include:
     key: en-sv 1
     namespace: flx
+fr 0:
+  include:
+    key: fr-sv 0
+    namespace: dcm
 fr 1:
-  url: http://www.azoria.com/php/search.php?word={%ord}
-  title: Fransk-Svensk (Azoria)
-  tags:
-  - dictionary
-  - french
-  - language
-  - swedish
-  examples:
-    arbre: Swedish translation for "arbre"
-    träd: French translation for "träd"
+  include:
+    key: fr-sv 1
+    namespace: dcm
+fr-dcm 0:
+  include:
+    key: fr-sv 0
+    namespace: dcm
+fr-dcm 1:
+  include:
+    key: fr-sv 1
+    namespace: dcm
 fr-sv 1:
-  url: http://www.sensagent.com/dictionnaires/fr-sv/{%ord}/ALEXMN/
-  title: Fransk-Svensk (Sensagent)
-  tags:
-  - dictionary
-  - french
-  - language
-  - swedish
+  deprecated:
+    alternative:
+      query: fr {%1}
+      created: '2023-04-10'
 last 1:
   url: http://www.last.fm/search?setlang=sv&q={%artist}
   title: Last.fm

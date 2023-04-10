@@ -221,6 +221,14 @@ sv 1:
   examples:
     clé: Translation of "clé"
     klav: Translation of "klav"
+sv-dcm 0:
+  include:
+    key: sv-fr 0
+    namespace: dcm
+sv-dcm 1:
+  include:
+    key: sv-fr 1
+    namespace: dcm
 syn 1:
   url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
   title: Synonyme
