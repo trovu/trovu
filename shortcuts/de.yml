@@ -1335,17 +1335,14 @@ htp 0:
   title: Telepolis Startseite
   tags:
   - heise
+hu 0:
+  include:
+    key: hu-de 0
+    namespace: lgs
 hu 1:
-  url: https://de.langenscheidt.com/deutsch-ungarisch/search?term={%Wort}
-  title: Ungarisch-Deutsch (Langenscheidt)
-  tags:
-  - dictionary
-  - german
-  - hungarian
-  - language
-  examples:
-    baum: Übersetzung von "baum"
-    fa: Übersetzung von "fa"
+  include:
+    key: hu-de 1
+    namespace: lgs
 hu-dcc 0:
   include:
     key: hu-de 0
@@ -1387,24 +1384,15 @@ hu-pns 1:
     key: hu-de 1
     namespace: pns
 hud 1:
-  url: http://dehu.dict.cc/?s={%Wort}
-  title: Ungarisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: hu-dcc {%1}
+      created: '2023-04-10'
 hup 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=dehu
-  title: Ungarisch-Deutsch (pons.de)
-  tags:
-  - dictionary
-  - german
-  - hungarian
-  - language
-  examples:
-    baum: Übersetzung von "baum"
+  deprecated:
+    alternative:
+      query: hu-pns {%1}
+      created: '2023-04-10'
 hwho 1:
   url: http://www.heise.de/netze/tools?rm=whois&plugin={%URL}
   title: Heise Whois Netzwerk-Tool
@@ -1460,15 +1448,14 @@ ii-pka 1:
   include:
     key: ii-de 1
     namespace: pka
+is 0:
+  include:
+    key: is-de 0
+    namespace: dcc
 is 1:
-  url: http://deis.dict.cc/?s={%Wort}
-  title: Isländisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: is-de 1
+    namespace: dcc
 is-dcc 0:
   include:
     key: is-de 0
@@ -1557,44 +1544,28 @@ it-pns 1:
     key: it-de 1
     namespace: pns
 itb 1:
-  url: https://de.bab.la/woerterbuch/italienisch-deutsch/{%Wort}
-  title: Italienisch-Deutsch (bab.la)
-  tags:
-  - dictionary
-  - german
-  - italian
-  - language
-  examples:
-    baum: Übersetzung von "baum"
-    albero: Übersetzung von "albero"
+  deprecated:
+    alternative:
+      query: it-bab {%1}
+      created: '2023-04-10'
 itd 1:
-  url: http://deit.dict.cc/?s={%Wort}
-  title: Italienisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: it-dcc {%1}
+      created: '2023-04-10'
 itp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=deit
-  title: Italienisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - german
-  - italian
-  - language
-  examples:
-    baum: Übersetzung für "baum"
+  deprecated:
+    alternative:
+      query: it-pns {%1}
+      created: '2023-04-10'
+ja 0:
+  include:
+    key: ja-de 0
+    namespace: wdk
 ja 1:
-  url: http://www.wadoku.de/wadoku/search/{%Wort}
-  title: Japanisch-Deutsch (Wadoku)
-  tags:
-  - dictionary
-  - language
-  examples:
-    baum: Übersetzung für "baum"
-    木根: Übersetzung für "木根"
+  include:
+    key: ja-de 1
+    namespace: wdk
 ja-dcm 0:
   include:
     key: ja-de 0
@@ -1748,17 +1719,14 @@ ky-pka 1:
   include:
     key: ky-de 1
     namespace: pka
+la 0:
+  include:
+    key: la-de 0
+    namespace: ama
 la 1:
-  url: http://www.albertmartin.de/latein/?q={%query}
-  title: Latein-Deutsch
-  tags:
-  - dictionary
-  - german
-  - language
-  - latin
-  examples:
-    baum: Übersetzung von "baum"
-    arbor: Übersetzung von "arbor"
+  include:
+    key: la-de 1
+    namespace: ama
 la-ama 0:
   include:
     key: la-de 0
@@ -1792,14 +1760,10 @@ la-pka 1:
     key: la-de 1
     namespace: pka
 lad 1:
-  url: http://dela.dict.cc/?s={%Wort}
-  title: Latein-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: la-dcc {%1}
+      created: '2023-04-10'
 last 1:
   url: http://www.last.fm/search?setlang=de&q={%artist}
   title: Last.fm
@@ -2012,14 +1976,14 @@ ne-pka 1:
   include:
     key: ne-de 1
     namespace: pka
+nl 0:
+  include:
+    key: nl-de 0
+    namespace: umt
 nl 1:
-  url: http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!
-  title: Niederländisch-Deutsch (uitmuntend.de)
-  tags:
-  - dictionary
-  - language
-  examples:
-    lekker: Search for "lekker"
+  include:
+    key: nl-de 1
+    namespace: umt
 nl-dcc 0:
   include:
     key: nl-de 0
@@ -2061,14 +2025,10 @@ nl-umt 1:
     key: nl-de 1
     namespace: umt
 nld 1:
-  url: http://denl.dict.cc/?s={%Wort}
-  title: Niederländisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: nl-dcc {%1}
+      created: '2023-04-10'
 nlde 1:
   deprecated:
     alternative:
@@ -2082,16 +2042,14 @@ nn-pka 1:
   include:
     key: nn-de 1
     namespace: pka
+no 0:
+  include:
+    key: no-de 0
+    namespace: dcc
 no 1:
-  url: http://deno.dict.cc/?s={%Wort}
-  title: Norwegisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  - norwegian
-  examples:
-    baum: Übersetzung von "baum"
+  include:
+    key: no-de 1
+    namespace: dcc
 no-dcc 0:
   include:
     key: no-de 0
@@ -2222,17 +2180,14 @@ pa-pka 1:
   include:
     key: pa-de 1
     namespace: pka
+pl 0:
+  include:
+    key: pl-de 0
+    namespace: lge
 pl 1:
-  url: https://de.langenscheidt.com/deutsch-polnisch/search?term={%Wort}&in=&l=depl
-  title: Polnisch-Deutsch (Langenscheidt)
-  tags:
-  - dictionary
-  - german
-  - language
-  - polish
-  examples:
-    baum: Übersetzung von "baum"
-    drzewo: Übersetzung von "drzewo"
+  include:
+    key: pl-de 1
+    namespace: lge
 pl-bab 0:
   include:
     key: pl-de 0
