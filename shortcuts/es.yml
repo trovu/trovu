@@ -104,18 +104,14 @@ dle 1:
   - spanish
   examples:
     árbol: Search diccionario de la lengua española for "arbol"
+en 0:
+  include:
+    key: en-es 0
+    namespace: esd
 en 1:
-  url: http://www.spanishdict.com/translate/{%palabra}
-  title: Inglés-Español (spanishdict.com)
-  tags:
-  - dictionary
-  - english
-  - language
-  - linguee
-  - spanish
-  examples:
-    tree: Traducción de "tree"
-    arbol: Traducción de "arbol"
+  include:
+    key: en-es 1
+    namespace: esd
 en-esd 0:
   include:
     key: en-es 0
