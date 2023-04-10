@@ -398,12 +398,10 @@ cs-dcm 1:
     key: cs-de 1
     namespace: dcm
 cs-de 1:
-  url: http://slovnik.cz/bin/mld.fpl?vcb={%Wort}&trn=translate&dictdir=gecz.cz_d&lines=20&hptxt=0&js=1&lang=0
-  title: Tschechisch-Deutsch via Slovnik.cz
-  tags:
-  - czech
-  - dictionary
-  - german
+  deprecated:
+    alternative:
+      query: cs {%1}
+      created: '2023-04-10'
 cs-lgs 0:
   include:
     key: cs-de 0
@@ -546,12 +544,10 @@ dd 1:
   examples:
     stuhl: Nachschlagen des Wortes "Stuhl"
 de-cs 1:
-  url: http://slovnik.cz/bin/mld.fpl?vcb={%Wort}&dictdir=gecz.ge&lines=20&hptxt=0&js=1&lang=0
-  title: Deutsch-Tschechisch via Slovnik.cz
-  tags:
-  - czech
-  - dictionary
-  - german
+  deprecated:
+    alternative:
+      query: cs {%1}
+      created: '2023-04-10'
 denl 1:
   deprecated:
     alternative:
