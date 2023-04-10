@@ -6,15 +6,14 @@ cs-dcm 1:
   include:
     key: cs-ja 1
     namespace: dcm
+de 0:
+  include:
+    key: de-ja 0
+    namespace: wdk
 de 1:
-  url: http://www.wadoku.de/wadoku/search/{%Wort}
-  title: Deutsch-Japanisch (Wadoku)
-  tags:
-  - dictionary
-  - language
-  examples:
-    木根: Übersetzung für "木根"
-    baum: Übersetzung für "baum"
+  include:
+    key: de-ja 1
+    namespace: wdk
 de-dcm 0:
   include:
     key: de-ja 0
