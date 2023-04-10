@@ -1640,6 +1640,25 @@ fr-sk 1:
   examples:
     arbre: slovenčina preklad pre "arbre"
     stromček: francúzština preklad pre "stromček"
+fr-sv 0:
+  url: https://www.dict.com/suedois-francais/test
+  title: Franska-Svenska (dict.com)
+  tags:
+  - dictionary
+  - french
+  - language
+  - swedish
+fr-sv 1:
+  url: https://www.dict.com/suedois-francais/{%word}
+  title: Franska-Svenska (dict.com)
+  tags:
+  - dictionary
+  - french
+  - language
+  - swedish
+  examples:
+    arbre: svenska-översättning av "arbre"
+    träd: franska-översättning av "träd"
 he-cs 0:
   title: Hebrejština-Čeština (dict.com)
   include:
@@ -2792,6 +2811,17 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+sv-fr 0:
+  title: Suédois-Français (dict.com)
+  include:
+    key: fr-sv 0
+sv-fr 1:
+  title: Suédois-Français (dict.com)
+  include:
+    key: fr-sv 1
+  examples:
+    träd: Traduction en français de "träd"
+    arbre: Traduction en suédois de "arbre"
 sv-sk 0:
   title: Švédčina-Slovenčina (dict.com)
   include:
