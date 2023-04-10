@@ -70,17 +70,14 @@ de-pns 1:
   include:
     key: de-pl 1
     namespace: pns
+en 0:
+  include:
+    key: en-pl 0
+    namespace: bab
 en 1:
-  url: https://pl.bab.la/slownik/angielski-polski/{%słowo}
-  title: Angielsko-polski (bab.la)
-  tags:
-  - dictionary
-  - english
-  - language
-  - polish
-  examples:
-    tree: Tłumaczenie słowa "tree" na polski
-    drzewo: Tłumaczenie słowa "drzewo" na angielski
+  include:
+    key: en-pl 1
+    namespace: bab
 en-bab 0:
   include:
     key: en-pl 0
