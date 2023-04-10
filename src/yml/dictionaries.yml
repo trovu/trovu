@@ -56,6 +56,10 @@ bab:
       tr:
         - https://de.bab.la/woerterbuch/tuerkisch-deutsch/
         - https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+    en:
+      pl:
+        - https://pl.bab.la/slownik/angielski-polski/
+        - https://pl.bab.la/slownik/angielski-polski/{%word}
 beo:
   name: Beolingus
   pairs:
@@ -63,6 +67,12 @@ beo:
       en:
         - https://dict.tu-chemnitz.de/
         - https://dict.tu-chemnitz.de/dings.cgi?service=deen&query={%word}
+      es:
+        - https://dict.tu-chemnitz.de/
+        - https://dict.tu-chemnitz.de/dings.cgi?service=dees&query={%word}
+      pt:
+        - https://dict.tu-chemnitz.de/
+        - https://dict.tu-chemnitz.de/dings.cgi?service=dept&query={%word}
 crd:
   name: CroDict
   pairs:
@@ -144,6 +154,10 @@ dcc:
       tr:
         - https://detr.dict.cc/
         - https://detr.dict.cc/?s={%word}
+    en:
+      nl:
+        - https://ennl.dict.cc/
+        - https://ennl.dict.cc/?s={%word}
 dcm:
   name: dict.com
   pairs:
@@ -387,6 +401,9 @@ dcm:
       sk:
         - https://www.dict.com/francuzsko-slovensky/
         - https://www.dict.com/francuzsko-slovensky/{%word}
+      sv:
+        - https://www.dict.com/suedois-francais/test
+        - https://www.dict.com/suedois-francais/{%word}
     he:
       sk:
         - https://www.dict.com/hebrejsko-slovensky/
@@ -472,6 +489,13 @@ dcm:
       zh:
         - https://www.dict.com/cinsko-slovensky/
         - https://www.dict.com/cinsko-slovensky/{%word}
+deo:
+  name: Dansk↔Esperanto ordbog
+  pairs:
+    da:
+      eo:
+        - https://www.vortaro.dk/
+        - https://www.vortaro.dk/?q={%word}
 dtn:
   name: deutsch-tuerkisch.net
   pairs:
@@ -1064,6 +1088,66 @@ pns:
       pl:
         - http://en.pons.com/translate?l=frpl
         - http://en.pons.com/translate?l=frpl&q={%word}
+rvs:
+  name: Reverso
+  pairs:
+    ar:
+      fr:
+        - https://dictionnaire.reverso.net/francais-arabe/
+        - https://dictionnaire.reverso.net/francais-arabe/{%word}
+    de:
+      fr:
+        - https://dictionnaire.reverso.net/francais-allemand/
+        - https://dictionnaire.reverso.net/francais-allemand/{%word}
+    en:
+      fr:
+        - https://dictionnaire.reverso.net/francais-anglais/
+        - https://dictionnaire.reverso.net/francais-anglais/{%word}
+    es:
+      fr:
+        - https://dictionnaire.reverso.net/francais-espagnol/
+        - https://dictionnaire.reverso.net/francais-espagnol/{%word}
+    fr:
+      he:
+        - https://dictionnaire.reverso.net/francais-hebreu/
+        - https://dictionnaire.reverso.net/francais-hebreu/{%word}
+      it:
+        - https://dictionnaire.reverso.net/francais-italien/
+        - https://dictionnaire.reverso.net/francais-italien/{%word}
+      ja:
+        - https://dictionnaire.reverso.net/francais-japonais/
+        - https://dictionnaire.reverso.net/francais-japonais/{%word}
+      ko:
+        - https://dictionnaire.reverso.net/francais-coreen/
+        - https://dictionnaire.reverso.net/francais-coreen/{%word}
+      nl:
+        - https://dictionnaire.reverso.net/francais-neerlandais/
+        - https://dictionnaire.reverso.net/francais-neerlandais/{%word}
+      pl:
+        - https://dictionnaire.reverso.net/francais-polonais/
+        - https://dictionnaire.reverso.net/francais-polonais/{%word}
+      pt:
+        - https://dictionnaire.reverso.net/francais-portugais/
+        - https://dictionnaire.reverso.net/francais-portugais/{%word}
+      ro:
+        - https://dictionnaire.reverso.net/francais-roumain/
+        - https://dictionnaire.reverso.net/francais-roumain/{%word}
+      ru:
+        - https://dictionnaire.reverso.net/francais-russe/
+        - https://dictionnaire.reverso.net/francais-russe/{%word}
+      sv:
+        - https://dictionnaire.reverso.net/francais-suedois/
+        - https://dictionnaire.reverso.net/francais-suedois/{%word}
+      tr:
+        - https://dictionnaire.reverso.net/francais-turc/
+        - https://dictionnaire.reverso.net/francais-turc/{%word}
+      uk:
+        - https://dictionnaire.reverso.net/francais-ukrainien/
+        - https://dictionnaire.reverso.net/francais-ukrainien/{%word}
+      zh:
+        - https://dictionnaire.reverso.net/francais-chinois/
+        - https://dictionnaire.reverso.net/francais-chinois/{%word}
+
 umt:
   name: Uitmuntend
   pairs:
