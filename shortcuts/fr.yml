@@ -22,19 +22,14 @@ cjg 1:
   - language
   examples:
     venir: Conjugate "venir"
+cs 0:
+  include:
+    key: cs-fr 0
+    namespace: dcm
 cs 1:
-  url: https://slovniky.lingea.cz/francouzsko-cesky/{%mot}
-  title: Tchèque-Français (Lingea)
-  tags:
-  - czech
-  - dictionary
-  - french
-  - language
-  - lingea
-  - slovník
-  examples:
-    arbre: '"arbre" český'
-    strom: '"strom" francouzký'
+  include:
+    key: cs-fr 1
+    namespace: dcm
 cs-dcm 0:
   include:
     key: cs-fr 0
@@ -43,6 +38,10 @@ cs-dcm 1:
   include:
     key: cs-fr 1
     namespace: dcm
+de 0:
+  include:
+    key: de-fr 0
+    namespace: leo
 de 1:
   include:
     key: de-fr 1
@@ -249,15 +248,14 @@ nl-rvs 1:
   include:
     key: nl-fr 1
     namespace: rvs
+pl 0:
+  include:
+    key: pl-fr 0
+    namespace: pns
 pl 1:
-  url: https://pl.pons.com/t%C5%82umaczenie/francuski-polski/{%mot}
-  title: Polonais-Français via PONS
-  tags:
-  - dictionary
-  - french
-  - polish
-  examples:
-    mot: '"mot" en polonais'
+  include:
+    key: pl-fr 1
+    namespace: pns
 pl-pns 0:
   include:
     key: pl-fr 0
@@ -274,14 +272,14 @@ pl-rvs 1:
   include:
     key: pl-fr 1
     namespace: rvs
+pt 0:
+  include:
+    key: pt-fr 0
+    namespace: rvs
 pt 1:
-  url: http://dictionnaire.reverso.net/francais-portugais/{%mot}
-  title: Français-portugais
-  tags:
-  - dictionary
-  - language
-  examples:
-    voiture: Search for "voiture"
+  include:
+    key: pt-fr 1
+    namespace: rvs
 pt-rvs 0:
   include:
     key: pt-fr 0
@@ -314,16 +312,14 @@ sk-dcm 1:
   include:
     key: sk-fr 1
     namespace: dcm
+sv 0:
+  include:
+    key: sv-fr 0
+    namespace: dcm
 sv 1:
-  url: https://www.dict.com/suedois-francais/{%mot}
-  title: Suédois-Français via Dict.com
-  tags:
-  - dictionary
-  - french
-  - swedish
-  examples:
-    clé: Translation of "clé"
-    klav: Translation of "klav"
+  include:
+    key: sv-fr 1
+    namespace: dcm
 sv-dcm 0:
   include:
     key: sv-fr 0
