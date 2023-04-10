@@ -677,17 +677,14 @@ th-dcm 1:
   include:
     key: th-en 1
     namespace: dcm
+tr 0:
+  include:
+    key: tr-en 0
+    namespace: zrg
 tr 1:
-  url: http://www.zargan.com/sozluk.asp?Sozcuk={%query}&OpenSearch=1&DisplayLang=2
-  title: Turkish-English
-  tags:
-  - dictionary
-  - english
-  - language
-  - turkish
-  examples:
-    tree: Translation of "tree"
-    ağaç: Translation of "ağaç"
+  include:
+    key: tr-en 1
+    namespace: zrg
 tr-dcm 0:
   include:
     key: tr-en 0
