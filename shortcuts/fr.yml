@@ -207,16 +207,10 @@ ko-rvs 1:
     key: ko-fr 1
     namespace: rvs
 lar 1:
-  url: http://www.larousse.fr/dictionnaires/francais/{%mot}
-  title: Larousse, Dictionnaires de français
-  tags:
-  - dictionary
-  - dictionnaire
-  - français
-  - french
-  - language
-  examples:
-    arbre: Cherche "arbre"
+  deprecated:
+    alternative:
+      query: lrs {%1}
+      created: '2023-04-10'
 last 1:
   url: http://www.last.fm/search?setlang=fr&q={%artist}
   title: Last.fm
@@ -234,6 +228,17 @@ lit 1:
   - language
   examples:
     arbre: Cherche "arbre" dans le dictionnaire Littré
+lrs 1:
+  url: http://www.larousse.fr/dictionnaires/francais/{%mot}
+  title: Larousse, Dictionnaires de français
+  tags:
+  - dictionary
+  - dictionnaire
+  - français
+  - french
+  - language
+  examples:
+    arbre: Cherche "arbre"
 marmiton 0:
   url: http://www.marmiton.org/
   title: Marmiton
