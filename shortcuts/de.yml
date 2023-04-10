@@ -797,6 +797,14 @@ es-bab 1:
   include:
     key: es-de 1
     namespace: bab
+es-beo 0:
+  include:
+    key: es-de 0
+    namespace: beo
+es-beo 1:
+  include:
+    key: es-de 1
+    namespace: beo
 es-dcc 0:
   include:
     key: es-de 0
@@ -2436,6 +2444,14 @@ pt 1:
   - portugese
   examples:
     baum: Übersetzung für "baum"
+pt-beo 0:
+  include:
+    key: pt-de 0
+    namespace: beo
+pt-beo 1:
+  include:
+    key: pt-de 1
+    namespace: beo
 pt-dcc 0:
   include:
     key: pt-de 0

@@ -21,6 +21,14 @@ de 1:
   examples:
     baum: '"baum" auf Portugiesisch'
     árvore: '"árvore" auf Deutsch'
+de-beo 0:
+  include:
+    key: de-pt 0
+    namespace: beo
+de-beo 1:
+  include:
+    key: de-pt 1
+    namespace: beo
 de-dcc 0:
   include:
     key: de-pt 0

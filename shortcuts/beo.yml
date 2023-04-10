@@ -17,6 +17,44 @@ de-en 1:
   examples:
     baum: English translation of "baum"
     tree: German translation of "tree"
+de-es 0:
+  url: https://dict.tu-chemnitz.de/
+  title: Alemán-Español (Beolingus)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+de-es 1:
+  url: https://dict.tu-chemnitz.de/dings.cgi?service=dees&query={%word}
+  title: Alemán-Español (Beolingus)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+  examples:
+    baum: Traducción al español de "baum"
+    árbol: Traducción al alemán de "árbol"
+de-pt 0:
+  url: https://dict.tu-chemnitz.de/
+  title: Alemão-Português (Beolingus)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
+de-pt 1:
+  url: https://dict.tu-chemnitz.de/dings.cgi?service=dept&query={%word}
+  title: Alemão-Português (Beolingus)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
+  examples:
+    baum: Tradução em português de "baum"
+    árvore: Tradução em alemão de "árvore"
 en-de 0:
   title: Englisch-Deutsch (Beolingus)
   include:
@@ -28,3 +66,25 @@ en-de 1:
   examples:
     tree: Deutsch-Übersetzung von "tree"
     baum: Englisch-Übersetzung von "baum"
+es-de 0:
+  title: Spanisch-Deutsch (Beolingus)
+  include:
+    key: de-es 0
+es-de 1:
+  title: Spanisch-Deutsch (Beolingus)
+  include:
+    key: de-es 1
+  examples:
+    árbol: Deutsch-Übersetzung von "árbol"
+    baum: Spanisch-Übersetzung von "baum"
+pt-de 0:
+  title: Portugiesisch-Deutsch (Beolingus)
+  include:
+    key: de-pt 0
+pt-de 1:
+  title: Portugiesisch-Deutsch (Beolingus)
+  include:
+    key: de-pt 1
+  examples:
+    árvore: Deutsch-Übersetzung von "árvore"
+    baum: Portugiesisch-Übersetzung von "baum"
