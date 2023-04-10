@@ -33,17 +33,14 @@ anagramm 1:
   - language
   examples:
     rentner: Anagramm-Suchen nach "rentner"
+ar 0:
+  include:
+    key: ar-de 0
+    namespace: ard
 ar 1:
-  url: http://www.arabdict.com/deutsch-arabisch/{%Wort}
-  title: Arabisch-Deutsch
-  tags:
-  - arabic
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Übersetzung von "baum" auf Arabisch
-    شجرة: Übersetzung von "شجرة" auf Deutsch
+  include:
+    key: ar-de 1
+    namespace: ard
 ar-ard 0:
   include:
     key: ar-de 0
@@ -155,15 +152,14 @@ be-pka 1:
   include:
     key: be-de 1
     namespace: pka
+bg 0:
+  include:
+    key: bg-de 0
+    namespace: dcc
 bg 1:
-  url: http://debg.dict.cc/?s={%Wort}
-  title: Bulgarisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: bg-de 1
+    namespace: dcc
 bg-dcc 0:
   include:
     key: bg-de 0
@@ -370,17 +366,14 @@ cook 1:
   - cooking
   examples:
     risotto: Show recipes for risottos
+cs 0:
+  include:
+    key: cs-de 0
+    namespace: dcm
 cs 1:
-  url: https://de.langenscheidt.com/deutsch-tschechisch/search?term={%Wort}
-  title: Tschechisch-Deutsch (Langenscheidt)
-  tags:
-  - czech
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Übersetzung von "baum"
-    strom: Übersetzung von "strom"
+  include:
+    key: cs-de 1
+    namespace: dcm
 cs-dcc 0:
   include:
     key: cs-de 0
@@ -934,16 +927,14 @@ fefescss 1:
   - news
   examples:
     manpage: Fefes Blog mit dem CSS-Style manpage.css
+fi 0:
+  include:
+    key: fi-de 0
+    namespace: dcc
 fi 1:
-  url: http://defi.dict.cc/?s={%Wort}
-  title: Finnisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - finnish
-  - german
-  - language
-  examples:
-    baum: Übersetzung von "baum"
+  include:
+    key: fi-de 1
+    namespace: dcc
 fi-dcc 0:
   include:
     key: fi-de 0
