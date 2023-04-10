@@ -2976,15 +2976,14 @@ tomtouche 0:
   tags:
   - comic
   - taz
+tr 0:
+  include:
+    key: tr-de 0
+    namespace: dtn
 tr 1:
-  url: http://detr.dict.cc/?s={%Wort}
-  title: Türkisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: tr-de 1
+    namespace: dtn
 tr-bab 0:
   include:
     key: tr-de 0

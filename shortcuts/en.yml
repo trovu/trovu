@@ -745,24 +745,13 @@ youglish 1:
   examples:
     dough: Find videos where someone says "dough"
 zh 0:
-  url: https://www.mdbg.net/chinese/dictionary
-  title: Chinese-English
-  tags:
-  - chinese
-  - dictionary
-  - english
-  - language
+  include:
+    key: zh-en 0
+    namespace: mdb
 zh 1:
-  url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={%query}
-  title: Chinese-English
-  tags:
-  - chinese
-  - dictionary
-  - english
-  - language
-  examples:
-    tree: Translation of "tree"
-    木: Translation of 木
+  include:
+    key: zh-en 1
+    namespace: mdb
 zh-dcm 0:
   include:
     key: zh-en 0
