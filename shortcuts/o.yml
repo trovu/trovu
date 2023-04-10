@@ -4092,10 +4092,10 @@ linfr 1:
       query: de.fr-lge {%1}
       created: '2023-04-10'
 linguee 1:
-  url: http://www.linguee.com/search?direction=auto&query={%word or expression to translate}
-  title: Linguee
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.en-lge {%1}
+      created: '2023-04-10'
 lintian 1:
   url: http://lintian.debian.org/tags/{%query}.html
   title: show the given debian lintian report
@@ -5095,10 +5095,10 @@ psql 0:
   tags:
   - old
 pt-pons 1:
-  url: http://en.pons.com/translate?q={%query}&in=&l=dept
-  title: PONS Portuguese dictionary
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en.pt-pns {%1}
+      created: '2023-04-10'
 pubchem 1:
   url: http://www.ncbi.nlm.nih.gov/pccompound/?term={%compound}
   title: PubChem
@@ -5307,14 +5307,10 @@ r2r 2:
   examples:
     london, berlin: Search Rome2Rio for a connection from London to Berlin
 rae 1:
-  url: http://dle.rae.es/?w={%query}
-  title: Diccionario RAE
-  description: Relevant for spanish language, but as it shows the official and latest rules, should be interesting for all.
-  tags:
-  - dictionary spanish
-  examples:
-    capaz: looks for "capaz" in RAE dictionary
-    decir: busca por la palabra «decir» en el diccionario de la lengua española de la Real Academia Española
+  deprecated:
+    alternative:
+      query: es.rae {%1}
+      created: '2023-04-10'
 rails 0:
   url: http://apidock.com/rails/
   title: Ruby on Rails Documentation
@@ -5862,10 +5858,10 @@ suepo 0:
   - patents
   - suepo
 svfr 1:
-  url: http://www.sensagent.com/dictionnaires/sv-fr/{%word}/ALEXMN/
-  title: Translation Swedish to French
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: rf.sv {%1}
+      created: '2023-04-10'
 swipl 0:
   url: http://www.swi-prolog.org/pldoc/index.html
   title: SWI-Prolog documentation
