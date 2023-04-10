@@ -432,17 +432,14 @@ cy-pka 1:
   include:
     key: cy-de 1
     namespace: pka
+da 0:
+  include:
+    key: da-de 0
+    namespace: dcc
 da 1:
-  url: http://deda.dict.cc/?s={%Wort}
-  title: Dänisch-Deutsch (dict.cc)
-  tags:
-  - danish
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: '"baum" auf Dänisch'
-    træ: '"træ" auf Deutsch'
+  include:
+    key: da-de 1
+    namespace: dcc
 da-bab 0:
   include:
     key: da-de 0
@@ -1302,16 +1299,14 @@ hpreis 1:
   - shopping
   examples:
     computer: Search for "computer"
+hr 0:
+  include:
+    key: hr-de 0
+    namespace: crd
 hr 1:
-  url: https://www.crodict.com/german-croatian/{%Wort}
-  title: Kroatisch-Deutsch (crodict.com)
-  tags:
-  - croatian
-  - dictionary
-  - english
-  - language
-  examples:
-    baum: Übersetzung für "baum"
+  include:
+    key: hr-de 1
+    namespace: crd
 hr-crd 0:
   include:
     key: hr-de 0
