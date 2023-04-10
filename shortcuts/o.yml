@@ -7551,10 +7551,10 @@ zam 1:
   tags:
   - old
 zar 1:
-  url: http://www.zargan.com/sozluk.asp?Sozcuk={%query}&OpenSearch=1&DisplayLang=2
-  title: Turkish-English
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en.tr {%1}
+      created: '2023-04-10'
 zattoo 0:
   url: http://watch.zattoo.com
   title: Zattoo
