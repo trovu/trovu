@@ -553,15 +553,10 @@ de-cs 1:
   - dictionary
   - german
 denl 1:
-  url: http://www.mijnwoordenboek.nl/vertalen.php?src=DE&des=NL&woord={%query}
-  title: Deutsch-Niederländisch (mijnwoordenboek.nl)
-  tags:
-  - dictionary
-  - dutch
-  - german
-  - language
-  examples:
-    baum: Search Deutsch-Niederländisch (mijnwoordenboek.nl) for "baum"
+  deprecated:
+    alternative:
+      query: nl {%1}
+      created: '2023-04-10'
 dnb 1:
   url: https://portal.dnb.de/opac.htm?query={%Suche}&method=simpleSearch
   title: Deutsche Nationalbibliothek
@@ -2166,15 +2161,10 @@ nld 1:
   examples:
     baum: Search for "baum"
 nlde 1:
-  url: http://www.mijnwoordenboek.nl/vertalen.php?src=NL&des=DE&woord={%query}
-  title: Niederländisch-Deutsch (mijnwoordenboek.nl)
-  tags:
-  - dictionary
-  - dutch
-  - german
-  - language
-  examples:
-    boom: Search Niederländisch-Deutsch (mijnwoordenboek.nl) for "boom"
+  deprecated:
+    alternative:
+      query: nl {%1}
+      created: '2023-04-10'
 nn-pka 0:
   include:
     key: nn-de 0
