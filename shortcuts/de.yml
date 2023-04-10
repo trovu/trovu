@@ -481,16 +481,10 @@ da-pka 1:
     key: da-de 1
     namespace: pka
 dab 1:
-  url: https://de.bab.la/woerterbuch/daenisch-deutsch/{%Wort}
-  title: Dänisch-Deutsch (bab.la)
-  tags:
-  - danish
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Übersetzung von "baum"
-    træ: Übersetzung von "træ"
+  deprecated:
+    alternative:
+      query: da-bab {%1}
+      created: '2023-04-10'
 dclj 0:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
   title: De.comp.lang.javascript
@@ -1044,10 +1038,10 @@ fr-pns 1:
     key: fr-de 1
     namespace: pns
 fr-pons 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
-  title: Französisch-Deutsch PONS
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: fr-pns {%1}
+      created: '2023-04-10'
 fr-rvs 0:
   include:
     key: fr-de 0
@@ -1057,16 +1051,10 @@ fr-rvs 1:
     key: fr-de 1
     namespace: rvs
 frb 1:
-  url: https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%Wort}
-  title: Französisch-Deutsch (bab.la)
-  tags:
-  - dictionary
-  - french
-  - german
-  - language
-  examples:
-    baum: Übersetzung von "baum"
-    arbre: Übersetzung von "arbre"
+  deprecated:
+    alternative:
+      query: fr-bab {%1}
+      created: '2023-04-10'
 frbuch 0:
   url: http://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm
   title: Französisch-Lehrbuch
@@ -1080,29 +1068,20 @@ frbuch 1:
   examples:
     subjonctif: Search Französisch-Lehrbuch for "subjonctif"
 frd 1:
-  url: http://defr.dict.cc/?s={%Wort}
-  title: Französisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: fr-dcc {%1}
+      created: '2023-04-10'
 fri 1:
   deprecated:
     alternative:
       query: fr-lge {%1}
       created: '2023-03-12'
 frp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=defr
-  title: Französisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - french
-  - german
-  - language
-  examples:
-    baum: Übersetzung für "baum"
+  deprecated:
+    alternative:
+      query: fr-pns {%1}
+      created: '2023-04-10'
 ftr 1:
   url: http://www.finanztreff.de/kurse/suche/
   post parameters:
