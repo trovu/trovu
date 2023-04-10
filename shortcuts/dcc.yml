@@ -452,6 +452,25 @@ en-de 1:
   examples:
     tree: Deutsch-Übersetzung von "tree"
     baum: Englisch-Übersetzung von "baum"
+en-nl 0:
+  url: https://ennl.dict.cc/
+  title: Engels-Nederlands (dict.cc)
+  tags:
+  - dictionary
+  - dutch
+  - english
+  - language
+en-nl 1:
+  url: https://ennl.dict.cc/?s={%word}
+  title: Engels-Nederlands (dict.cc)
+  tags:
+  - dictionary
+  - dutch
+  - english
+  - language
+  examples:
+    tree: Nederlands-vertaling van "tree"
+    boom: Engels-vertaling van "boom"
 es-de 0:
   title: Spanisch-Deutsch (dict.cc)
   include:
@@ -540,6 +559,17 @@ nl-de 1:
   examples:
     boom: Deutsch-Übersetzung von "boom"
     baum: Niederländisch-Übersetzung von "baum"
+nl-en 0:
+  title: Dutch-English (dict.cc)
+  include:
+    key: en-nl 0
+nl-en 1:
+  title: Dutch-English (dict.cc)
+  include:
+    key: en-nl 1
+  examples:
+    boom: English translation of "boom"
+    tree: Dutch translation of "tree"
 no-de 0:
   title: Norwegisch-Deutsch (dict.cc)
   include:

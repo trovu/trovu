@@ -16,14 +16,14 @@ dbp 1:
   - semanticweb
   examples:
     Tunisia: Open DBpedia page about Tunisia
+de 0:
+  include:
+    key: de-nl 0
+    namespace: umt
 de 1:
-  url: http://www.uitmuntend.de/woordenboek.html?search={%Wort}&action=go!
-  title: Duits-Nederlands (uitmuntend.de)
-  tags:
-  - dictionary
-  - language
-  examples:
-    käse: Search for "käse"
+  include:
+    key: de-nl 1
+    namespace: umt
 de-dcc 0:
   include:
     key: de-nl 0
@@ -64,19 +64,22 @@ de-umt 1:
   include:
     key: de-nl 1
     namespace: umt
+en 0:
+  include:
+    key: en-nl 0
+    namespace: dcc
 en 1:
-  url: http://ennl.dict.cc/?s={%word}
-  title: Engels-Nederlands (dict.cc)
-  tags:
-  - dictionary
-  - dutch
-  - engels
-  - english
-  - language
-  - nederlands
-  examples:
-    opdracht: Translate "opdracht" to English.
-    assignment: Translate "assignment" to Dutch.
+  include:
+    key: en-nl 1
+    namespace: dcc
+en-dcc 0:
+  include:
+    key: en-nl 0
+    namespace: dcc
+en-dcc 1:
+  include:
+    key: en-nl 1
+    namespace: dcc
 enc 0:
   url: http://www.encyclo.nl/
   title: Encyclo Online Encyclopedie

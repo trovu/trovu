@@ -336,6 +336,14 @@ nl 1:
   examples:
     opdracht: Translate "opdracht" to English.
     assignment: Translate "assignment" to Dutch.
+nl-dcc 0:
+  include:
+    key: nl-en 0
+    namespace: dcc
+nl-dcc 1:
+  include:
+    key: nl-en 1
+    namespace: dcc
 ox 1:
   url: https://en.oxforddictionaries.com/definition/{%word}
   title: Oxford Dictionaries British & World English
