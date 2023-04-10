@@ -2253,41 +2253,25 @@ pl-pns 1:
     key: pl-de 1
     namespace: pns
 plb 1:
-  url: https://de.bab.la/woerterbuch/polnisch-deutsch/{%Wort}
-  title: Polnisch-Deutsch (bab.la)
-  tags:
-  - dictionary
-  - german
-  - language
-  - polish
-  examples:
-    baum: Übersetzung von "baum"
-    drzewo: Übersetzung von "drzewo"
+  deprecated:
+    alternative:
+      query: pl-bab {%1}
+      created: '2023-04-10'
 pld 1:
-  url: http://depl.dict.cc/?s={%Wort}
-  title: Polnisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: pl-dcc {%1}
+      created: '2023-04-10'
 pli 1:
   deprecated:
     alternative:
       query: pl-lge {%1}
-      created: '2023-03-12'
+      created: '2023-04-10'
 plp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=depl
-  title: Polnisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - german
-  - language
-  - polish
-  examples:
-    baum: Übersetzung von "baum"
-    drzewo: Übersetzung von "drzewo"
+  deprecated:
+    alternative:
+      query: pl-pns {%1}
+      created: '2023-04-10'
 ps-pka 0:
   include:
     key: ps-de 0
@@ -2296,16 +2280,14 @@ ps-pka 1:
   include:
     key: ps-de 1
     namespace: pka
+pt 0:
+  include:
+    key: pt-de 0
+    namespace: pns
 pt 1:
-  url: http://en.pons.com/translate?q={%query}&in=&l=dept
-  title: Portugiesisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - german
-  - language
-  - portugese
-  examples:
-    baum: Übersetzung für "baum"
+  include:
+    key: pt-de 1
+    namespace: pns
 pt-beo 0:
   include:
     key: pt-de 0
@@ -2371,41 +2353,25 @@ pt-pns 1:
     key: pt-de 1
     namespace: pns
 ptb 1:
-  url: http://dict.tu-chemnitz.de/dings.cgi?service=dept&opterrors=0&query={%wort}
-  title: Portugiesisch-Deutsch (Beolingus)
-  tags:
-  - dictionary
-  - german
-  - language
-  - old
-  - portuguese
-  examples:
-    baum: Übersetzung von "baum"
-    árvore: Übersetzung von "árvore"
+  deprecated:
+    alternative:
+      query: pt-beo {%1}
+      created: '2023-04-10'
 ptd 1:
-  url: http://dept.dict.cc/?s={%Wort}
-  title: Portugiesisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: pt-dcc {%1}
+      created: '2023-04-10'
 pti 1:
   deprecated:
     alternative:
       query: pt-lge {%1}
       created: '2023-03-12'
 ptp 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=dept
-  title: Portugiesisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - german
-  - language
-  - portuguese
-  examples:
-    baum: Übersetzung für "baum"
+  deprecated:
+    alternative:
+      query: pt-pns {%1}
+      created: '2023-04-10'
 qa 1:
   url: https://lite.qwant.com/?q={%query}
   title: QWANT
@@ -2491,15 +2457,14 @@ rn-pka 1:
   include:
     key: rn-de 1
     namespace: pka
+ro 0:
+  include:
+    key: ro-de 0
+    namespace: dcc
 ro 1:
-  url: http://dero.dict.cc/?s={%Wort}
-  title: Rumänisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: ro-de 1
+    namespace: dcc
 ro-dcc 0:
   include:
     key: ro-de 0
@@ -2593,25 +2558,15 @@ ru-pns 1:
     key: ru-de 1
     namespace: pns
 rub 1:
-  url: https://de.bab.la/woerterbuch/russisch-deutsch/{%Wort}
-  title: Russisch-Deutsch (bab.la)
-  tags:
-  - dictionary
-  - german
-  - language
-  - russian
-  examples:
-    baum: Übersetzung von "baum"
-    дерево: Übersetzung von "дерево"
+  deprecated:
+    alternative:
+      query: ru-bab {%1}
+      created: '2023-04-10'
 rud 1:
-  url: http://deru.dict.cc/?s={%Wort}
-  title: Russisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: ru-dcc {%1}
+      created: '2023-04-10'
 rundschau 1:
   url: https://www.fr.de/suche/?qr={%Suche}
   title: Frankfurter Rundschau Archiv
@@ -2620,15 +2575,10 @@ rundschau 1:
   examples:
     berlin: Suche im Frankfurter-Rundschau-Archiv nach "berlin"
 rup 1:
-  url: http://en.pons.com/translate?q={%Wort}&in=&l=deru
-  title: Russisch-Deutsch (Pons)
-  tags:
-  - dictionary
-  - german
-  - language
-  - russian
-  examples:
-    baum: Übersetzung für "baum"
+  deprecated:
+    alternative:
+      query: ru-pns {%1}
+      created: '2023-04-10'
 rw-pka 0:
   include:
     key: rw-de 0
@@ -2721,15 +2671,14 @@ si-pka 1:
   include:
     key: si-de 1
     namespace: pka
+sk 0:
+  include:
+    key: sk-de 0
+    namespace: dcm
 sk 1:
-  url: http://desk.dict.cc/?s={%Wort}
-  title: Slowakisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  include:
+    key: sk-de 1
+    namespace: dcm
 sk-dcc 0:
   include:
     key: sk-de 0
@@ -2911,25 +2860,15 @@ sv-pka 1:
     key: sv-de 1
     namespace: pka
 svb 1:
-  url: https://de.bab.la/woerterbuch/schwedisch-deutsch/{%Wort}
-  title: Schwedisch-Deutsch (bab.la)
-  tags:
-  - dictionary
-  - german
-  - language
-  - swedish
-  examples:
-    baum: Übersetzung von "baum"
-    bom: Übersetzung von "bom"
+  deprecated:
+    alternative:
+      query: sv-bab {%1}
+      created: '2023-04-10'
 svd 1:
-  url: http://desv.dict.cc/?s={%Wort}
-  title: Schwedisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: sv-dcc {%1}
+      created: '2023-04-10'
 sw-pka 0:
   include:
     key: sw-de 0
@@ -3097,27 +3036,15 @@ tr-pka 1:
     key: tr-de 1
     namespace: pka
 trb 1:
-  url: https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%Wort}
-  title: Türkisch-Deutsch (bab.la)
-  tags:
-  - dictionary
-  - german
-  - language
-  - turkish
-  examples:
-    baum: Übersetzung von "baum"
-    ağaç: Übersetzung von "ağaç"
+  deprecated:
+    alternative:
+      query: tr-bab {%1}
+      created: '2023-04-10'
 trd 1:
-  url: http://www.deutsch-tuerkisch.net/suche/{%Wort}
-  title: Türkisch-Deutsch (Deutsch-Tuerkisch.net)
-  tags:
-  - dictionary
-  - german
-  - language
-  - turkish
-  examples:
-    baum: Übersetzung von "baum" auf Türkisch
-    ağaç: Übersetzung von "ağaç" auf Deutsch
+  deprecated:
+    alternative:
+      query: tr-dcc {%1}
+      created: '2023-04-10'
 ts 0:
   url: http://www.tagesschau.de/
   title: Tagesschau
