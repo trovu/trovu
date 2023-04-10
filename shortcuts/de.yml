@@ -412,14 +412,10 @@ cs-pka 1:
     key: cs-de 1
     namespace: pka
 csd 1:
-  url: http://decs.dict.cc/?s={%Wort}
-  title: Tschechisch-Deutsch (dict.cc)
-  tags:
-  - dictionary
-  - german
-  - language
-  examples:
-    baum: Search for "baum"
+  deprecated:
+    alternative:
+      query: cs-dcc {%1}
+      created: '2023-04-10'
 css 1:
   url: http://www.google.de/search?q=site%3Acss4you.de+{%query}
   title: Css4you
