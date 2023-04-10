@@ -251,6 +251,44 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
   return shortcut;
 };
 
+actions['addDictionaryIncludes'] = async function () {
+  const dicts = getDictionaries();
+  const ymls = loadYmls();
+  for (const dict in dicts) {
+    for (const lang1 in dicts[dict].pairs) {
+      for (const lang2 in dicts[dict].pairs[lang1]) {
+        ensureNamespace(ymls, lang1);
+        ymls[`${lang1}.yml`][`${lang2}-${dict} 0`] = {
+          include: {
+            key: `${lang2}-${lang1} 0`,
+            namespace: dict,
+          },
+        };
+        ymls[`${lang1}.yml`][`${lang2}-${dict} 1`] = {
+          include: {
+            key: `${lang2}-${lang1} 1`,
+            namespace: dict,
+          },
+        };
+        ensureNamespace(ymls, lang2);
+        ymls[`${lang2}.yml`][`${lang1}-${dict} 0`] = {
+          include: {
+            key: `${lang1}-${lang2} 0`,
+            namespace: dict,
+          },
+        };
+        ymls[`${lang2}.yml`][`${lang1}-${dict} 1`] = {
+          include: {
+            key: `${lang1}-${lang2} 1`,
+            namespace: dict,
+          },
+        };
+      }
+    }
+  }
+  writeYmls(ymls);
+};
+
 actions['createDictionaries'] = async function () {
   const langs = getLanguageList();
   const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
@@ -349,6 +387,12 @@ actions['createDictionaries'] = async function () {
     return capitalized;
   }
 };
+
+function ensureNamespace(ymls, lang1) {
+  if (!ymls[lang1 + '.yml']) {
+    ymls[lang1 + '.yml'] = {};
+  }
+}
 
 function getDictionaries() {
   return jsyaml.load(fs.readFileSync('src/yml/dictionaries.yml', 'utf8'));
