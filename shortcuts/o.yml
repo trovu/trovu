@@ -7564,10 +7564,10 @@ zeitdiff 0:
   - difference
   - time
 zhen 1:
-  url: http://www.mdbg.net/chindict/chindict.php?page=worddict&wdrst=0&wdqb={%query}
-  title: Chinese
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en.zh {%1}
+      created: '2023-04-11'
 zhr 1:
   url: http://en.wiktionary.org/wiki/Index:Chinese_radical/{%radical}
   title: Chinese radical index on English Wiktionary
