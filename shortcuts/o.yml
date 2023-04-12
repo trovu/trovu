@@ -3134,7 +3134,7 @@ gn 1:
   examples:
     berlin: Search Google News for berlin
 gns 1:
-  url: https://www.google.de/search?q={%query}&tbm=nws&hl={$language}
+  url: https://www.google.com/search?q={%query}&tbm=nws&hl={$language}
   title: Google News search in your language
   tags:
   - google
