@@ -2115,6 +2115,18 @@ fbsd 2:
   title: FreeBSD Manual Pages
   tags:
   - freebsd
+fbsdp 1:
+  url: https://ports.freebsd.org/cgi/ports.cgi?query={%query}
+  title: FreeBSD Ports Search
+  tags:
+  - freebsd
+fbsdp 2:
+  url: https://ports.freebsd.org/cgi/ports.cgi?sektion={%category}&query={%query}
+  title: FreeBSD Ports Search
+  tags:
+  - freebsd
+  examples:
+    www,firefox: Search for firefox in category www
 fbu 1:
   url: http://www.facebook.com/{%username}
   title: Facebook User
