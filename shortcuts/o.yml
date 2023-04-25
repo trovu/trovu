@@ -2474,7 +2474,7 @@ frsv 1:
       query: fr.sv {%1}
       created: '2023-04-10'
 frv 1:
-  url: http://{$language}.forvo.com/search/{%word}/
+  url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo
   tags:
   - language
