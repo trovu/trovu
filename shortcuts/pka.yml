@@ -484,7 +484,7 @@ de-eo 0:
   - german
   - language
 de-eo 1:
-  url: https://www.pauker.at/pauker/DE_DE/eo/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/eo/wb?suche={%word|transform=eo-cx}
   title: Germana-Esperanto (Pauker.at)
   tags:
   - dictionary

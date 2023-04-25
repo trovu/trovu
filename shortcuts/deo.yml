@@ -7,7 +7,7 @@ da-eo 0:
   - esperanto
   - language
 da-eo 1:
-  url: https://www.vortaro.dk/?q={%word}
+  url: https://www.vortaro.dk/?q={%word|transform=eo-cx}
   title: Dana-Esperanto (Dansk↔Esperanto ordbog)
   tags:
   - danish
