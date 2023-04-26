@@ -101,7 +101,9 @@ export default class DateType {
           date.setDate(
             date.getDate() + desired_day_of_week_index - date.getDay(),
           );
-          if (date < now) {
+          // If calculated day is in the past or today:
+          // Set next week.
+          if (date <= now) {
             date.setDate(date.getDate() + 7);
           }
           break;
