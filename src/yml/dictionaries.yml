@@ -591,7 +591,7 @@ deo:
     da:
       eo:
         - https://www.vortaro.dk/
-        - https://www.vortaro.dk/?q={%word}
+        - https://www.vortaro.dk/?q={%word|transform=eo-cx}
 dtn:
   name: deutsch-tuerkisch.net
   pairs:
@@ -850,7 +850,7 @@ pka:
         - https://www.pauker.at/pauker/DE_DE/en/wb?suche={%word}
       eo:
         - https://www.pauker.at/pauker/DE_DE/eo/wb
-        - https://www.pauker.at/pauker/DE_DE/eo/wb?suche={%word}
+        - https://www.pauker.at/pauker/DE_DE/eo/wb?suche={%word|transform=eo-cx}
       es:
         - https://www.pauker.at/pauker/DE_DE/es/wb
         - https://www.pauker.at/pauker/DE_DE/es/wb?suche={%word}
