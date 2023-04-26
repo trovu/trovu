@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "test": "npm run test-unit && npm run test-fe",
-    "test-unit": "jest env -c jest.config.js && jest helper -c jest.config.js && npm run test-calls",
+    "test-unit": "jest env -c jest.config.js && jest helper -c jest.config.js && jest src/js/ -c jest.config.js",
     "test-calls": "jest calls -c jest.config.js",
     "test-fe": "cypress run",
     "doc": "rm -r doc ; jsdoc src/js/* --configure jsdoc.json --destination doc",
