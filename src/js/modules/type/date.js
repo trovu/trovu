@@ -13,7 +13,7 @@ export default class DateType {
       }
     }
     // Match '22.11' and '22.11.'
-    if ((matches = str.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/))) {
+    else if ((matches = str.match(/^(\d{1,2})\.(\d{1,2})(\.)?$/))) {
       const [, day, month] = matches;
       date = new Date();
       date.setMonth(month - 1, day);
@@ -22,18 +22,18 @@ export default class DateType {
       }
     }
     // Match '22.11.13'
-    if ((matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{2})?$/))) {
+    else if ((matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{2})?$/))) {
       const [, day, month, year] = matches;
       date = new Date(`${month}, ${day} ${year}`);
     }
     // Match '22.11.2013'
-    if ((matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})?$/))) {
+    else if ((matches = str.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})?$/))) {
       const [, day, month, year] = matches;
       date = new Date(`${month}, ${day} ${year}`);
     }
 
     // Match '11/22'.
-    if ((matches = str.match(/^(\d{1,2})\/(\d{1,2})$/))) {
+    else if ((matches = str.match(/^(\d{1,2})\/(\d{1,2})$/))) {
       const [, month, day] = matches;
       date = new Date();
       date.setMonth(month - 1, day);
@@ -42,17 +42,17 @@ export default class DateType {
       }
     }
     // Match '11/22/13'
-    if ((matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2})?$/))) {
+    else if ((matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2})?$/))) {
       const [, month, day, year] = matches;
       date = new Date(`${month}, ${day} ${year}`);
     }
     // Match '11/22/2013'
-    if ((matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})?$/))) {
+    else if ((matches = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})?$/))) {
       const [, month, day, year] = matches;
       date = new Date(`${month}, ${day} ${year}`);
     }
     // Match '+1' or '-2'
-    if ((matches = str.match(/^(-|\+)(\d+)$/))) {
+    else if ((matches = str.match(/^(-|\+)(\d+)$/))) {
       const [, operator, offset] = matches;
       switch (operator) {
         case '+':
@@ -66,7 +66,7 @@ export default class DateType {
       }
     }
     // Match 'Su', 'Mo', ...
-    if ((matches = str.match(/^([A-Za-z\u00E0-\u00FC]+)$/))) {
+    else if ((matches = str.match(/^([A-Za-z\u00E0-\u00FC]+)$/))) {
       let maps = [];
       switch (locale.substr(0, 2)) {
         case 'cs':
