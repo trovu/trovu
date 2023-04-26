@@ -207,6 +207,9 @@ export default class UrlProcessor {
       case 'lowercase':
         processedArgument = processedArgument.toLowerCase();
         break;
+      case 'eo-cx':
+        processedArgument = this.mapEsperantoChars(processedArgument);
+        break;
     }
     return processedArgument;
   }
@@ -260,6 +263,28 @@ export default class UrlProcessor {
         str = str.replace(new RegExp(Helper.escapeRegExp(match), 'g'), value);
       }
     }
+    return str;
+  }
+
+  /**
+   * Replaces Esperanto character codes in a given string with their corresponding characters.
+   *
+   * @param {string} str - The input string to map Esperanto character codes from.
+   *
+   * @returns {string} The resulting string with mapped Esperanto character codes.
+   */
+  static mapEsperantoChars(str) {
+    const charMap = {
+      cx: 'ĉ',
+      gx: 'ĝ',
+      hx: 'ĥ',
+      jx: 'ĵ',
+      sx: 'ŝ',
+      ux: 'ŭ',
+    };
+
+    const regex = new RegExp(Object.keys(charMap).join('|'), 'g');
+    str = str.replace(regex, (matched) => charMap[matched]);
     return str;
   }
 }
