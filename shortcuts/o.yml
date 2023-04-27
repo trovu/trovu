@@ -2474,8 +2474,9 @@ frsv 1:
       query: fr.sv {%1}
       created: '2023-04-10'
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://forvo.com/search/{%word}/
   title: Forvo
+  description: Forvo pronunciation database, English interface
   tags:
   - language
   - pronunciation
