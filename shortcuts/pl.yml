@@ -110,6 +110,15 @@ fr-rvs 1:
   include:
     key: fr-pl 1
     namespace: rvs
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+    berlin: Search for the pronunciation of "berlin"
 fw 1:
   url: http://www.filmweb.pl/search?q={%tytuł/osoba}
   title: FilmWeb

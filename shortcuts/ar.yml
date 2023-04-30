@@ -70,6 +70,15 @@ fr-rvs 1:
   include:
     key: fr-ar 1
     namespace: rvs
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+    berlin: Search for the pronunciation of "berlin"
 it-ard 0:
   include:
     key: it-ar 0

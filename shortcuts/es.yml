@@ -152,6 +152,15 @@ fr-rvs 1:
   include:
     key: fr-es 1
     namespace: rvs
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+    berlin: Search for the pronunciation of "berlin"
 last 1:
   url: http://www.last.fm/search?setlang=es&q={%artist}
   title: Last.fm

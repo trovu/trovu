@@ -6,3 +6,12 @@ de-pka 1:
   include:
     key: de-eu 1
     namespace: pka
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+    berlin: Search for the pronunciation of "berlin"
