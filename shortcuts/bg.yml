@@ -38,6 +38,15 @@ en-dcm 1:
   include:
     key: en-bg 1
     namespace: dcm
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+    berlin: Search for the pronunciation of "berlin"
 sk-dcm 0:
   include:
     key: sk-bg 0

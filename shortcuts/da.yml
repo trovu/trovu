@@ -70,6 +70,15 @@ eo-deo 1:
   include:
     key: eo-da 1
     namespace: deo
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+    berlin: Search for the pronunciation of "berlin"
 gyl 1:
   url: http://ordbog.gyldendal.dk/sitecore/content/Ordbog/Home/Opslag/Resultat.aspx?lcode=DAEN&q={%ord}
   title: Gyldendals Røde Ordbøger
