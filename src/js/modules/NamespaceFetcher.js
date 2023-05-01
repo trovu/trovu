@@ -142,7 +142,7 @@ export default class NamespaceFetcher {
         continue;
       }
       if (!shortcut.include.key) {
-        Helper.log(`Incorrect include found at ${key}`);
+        Helper.log(`Include with missing key at: ${key}`);
         this.error = true;
         delete shortcuts[key];
         continue;
