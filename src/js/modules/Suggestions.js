@@ -186,6 +186,9 @@ export default class Suggestions {
             }
           }
         }
+        if (!shortcut.url) {
+          console.log(shortcut);
+        }
         pos = shortcut.url.search(new RegExp(keyword, 'i'));
         if (pos > 0) {
           if (shortcut.reachable) {

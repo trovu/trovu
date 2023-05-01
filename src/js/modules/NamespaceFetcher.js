@@ -41,6 +41,7 @@ export default class NamespaceFetcher {
       priorityOffset,
     );
     for (const namespaceInfo of Object.values(newNamespaceInfos)) {
+      // console.log(namespaceInfo.name);
       namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
     }
   }
@@ -69,6 +70,8 @@ export default class NamespaceFetcher {
 
     await this.processResponses(newNamespaceInfos, responses);
     Object.assign(this.namespaceInfos, newNamespaceInfos);
+
+    // console.log(this.namespaceInfos);
     return newNamespaceInfos;
   }
 
@@ -171,7 +174,7 @@ export default class NamespaceFetcher {
       : shortcuts;
 
     if (!shortcutsToIncludeFrom[key]) {
-      console.log(key, shortcut.include.namespace, shortcutsToIncludeFrom[key]);
+      // console.log(key, shortcut.include.namespace, shortcutsToIncludeFrom[key]);
       return false;
     }
     if (shortcutsToIncludeFrom[key].include) {
@@ -218,12 +221,14 @@ export default class NamespaceFetcher {
     // to know which ones are reachable.
     const foundShortcuts = new Set();
 
+    console.log(this.namespaceInfos);
     for (const namespaceInfo of namespaceInfosByPriority) {
       if (!this.isSubscribed(namespaceInfo)) {
         continue;
       }
       for (const key in namespaceInfo.shortcuts) {
         // If not yet present: reachable.
+        // console.log(namespaceInfo.name, key, namespaceInfo.shortcuts[key]);
         namespaceInfo.shortcuts[key].reachable = !foundShortcuts.has(key);
         foundShortcuts.add(key);
       }
@@ -306,6 +311,7 @@ export default class NamespaceFetcher {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
     }
+    console.log(promises);
     return promises;
   }
 
