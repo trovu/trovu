@@ -169,6 +169,7 @@ export default class NamespaceFetcher {
           shortcutsToIncludeFrom[keyToIncludeFromProcessed],
         );
         shortcuts[key] = Object.assign(shortcutToInclude, shortcut);
+        delete shortcuts[key].include;
       } else {
         delete shortcuts[key];
         // TODO: Report this on some low level.
