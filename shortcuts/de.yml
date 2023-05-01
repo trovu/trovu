@@ -614,6 +614,10 @@ eld 1:
     alternative:
       query: el-dcc {%1}
       created: '2023-04-10'
+en 0:
+  include:
+    key: en-de 0
+    namespace: leo
 en 1:
   include:
     key: en-de 1
