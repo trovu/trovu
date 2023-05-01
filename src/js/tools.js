@@ -255,35 +255,25 @@ actions['addDictionaryIncludes'] = async function () {
   const dicts = getDictionaries();
   const ymls = loadYmls();
   for (const dict in dicts) {
+    const langs = new Set();
     for (const lang1 in dicts[dict].pairs) {
+      langs.add(lang1);
       for (const lang2 in dicts[dict].pairs[lang1]) {
-        ensureNamespace(ymls, lang1);
-        ymls[`${lang1}.yml`][`${lang2}-${dict} 0`] = {
-          include: {
-            key: `${lang2}-${lang1} 0`,
-            namespace: dict,
-          },
-        };
-        ymls[`${lang1}.yml`][`${lang2}-${dict} 1`] = {
-          include: {
-            key: `${lang2}-${lang1} 1`,
-            namespace: dict,
-          },
-        };
-        ensureNamespace(ymls, lang2);
-        ymls[`${lang2}.yml`][`${lang1}-${dict} 0`] = {
-          include: {
-            key: `${lang1}-${lang2} 0`,
-            namespace: dict,
-          },
-        };
-        ymls[`${lang2}.yml`][`${lang1}-${dict} 1`] = {
-          include: {
-            key: `${lang1}-${lang2} 1`,
-            namespace: dict,
-          },
-        };
+        langs.add(lang2);
       }
+    }
+    // Add local includes with {$language} variable.
+    for (const lang of langs) {
+      ymls[`${dict}.yml`][`${lang} 0`] = {
+        include: {
+          key: lang + '-${language} 0',
+        },
+      };
+      ymls[`${dict}.yml`][`${lang} 1`] = {
+        include: {
+          key: lang + '-${language} 1',
+        },
+      };
     }
   }
   writeYmls(ymls);
