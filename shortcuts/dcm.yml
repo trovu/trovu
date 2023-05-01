@@ -1,9 +1,3 @@
-ar 0:
-  include:
-    key: ar-${language} 0
-ar 1:
-  include:
-    key: ar-${language} 1
 ar-de 0:
   url: https://www.dict.com/arabisch-deutsch/
   title: Arabisch-Deutsch (dict.com)
@@ -61,12 +55,6 @@ ar-sk 1:
   examples:
     شجرة: slovenčina preklad pre "شجرة"
     stromček: arabčina preklad pre "stromček"
-bg 0:
-  include:
-    key: bg-${language} 0
-bg 1:
-  include:
-    key: bg-${language} 1
 bg-de 0:
   url: https://www.dict.com/bulgarisch-deutsch/
   title: Bulgarisch-Deutsch (dict.com)
@@ -124,12 +112,6 @@ bg-sk 1:
   examples:
     дърво: slovenčina preklad pre "дърво"
     stromček: bulharčina preklad pre "stromček"
-ca 0:
-  include:
-    key: ca-${language} 0
-ca 1:
-  include:
-    key: ca-${language} 1
 ca-de 0:
   url: https://www.dict.com/katalanisch-deutsch/
   title: Katalanisch-Deutsch (dict.com)
@@ -187,12 +169,6 @@ ca-sk 1:
   examples:
     arbre: slovenčina preklad pre "arbre"
     stromček: katalánčina preklad pre "stromček"
-cs 0:
-  include:
-    key: cs-${language} 0
-cs 1:
-  include:
-    key: cs-${language} 1
 cs-da 0:
   url: https://www.dict.com/dansko-cesky/
   title: Tjekkisk-Dansk (dict.com)
@@ -801,12 +777,6 @@ cs-zh 1:
   examples:
     strom: 中文 的"strom"翻译
     树: 捷克文 的"树"翻译
-da 0:
-  include:
-    key: da-${language} 0
-da 1:
-  include:
-    key: da-${language} 1
 da-cs 0:
   title: Dánština-Čeština (dict.com)
   include:
@@ -875,12 +845,6 @@ da-sk 1:
   examples:
     træ: slovenčina preklad pre "træ"
     stromček: dánčina preklad pre "stromček"
-de 0:
-  include:
-    key: de-${language} 0
-de 1:
-  include:
-    key: de-${language} 1
 de-ar 0:
   title: الألمانية-العربية (dict.com)
   include:
@@ -1498,12 +1462,6 @@ de-zh 1:
   examples:
     baum: 中文 的"baum"翻译
     树: 德文 的"树"翻译
-el 0:
-  include:
-    key: el-${language} 0
-el 1:
-  include:
-    key: el-${language} 1
 el-cs 0:
   title: Řečtina-Čeština (dict.com)
   include:
@@ -1556,12 +1514,6 @@ el-sk 1:
   examples:
     δέντρο: slovenčina preklad pre "δέντρο"
     stromček: gréčtina preklad pre "stromček"
-en 0:
-  include:
-    key: en-${language} 0
-en 1:
-  include:
-    key: en-${language} 1
 en-ar 0:
   title: الإنجليزية-العربية (dict.com)
   include:
@@ -2168,12 +2120,6 @@ en-zh 1:
   examples:
     tree: 中文 的"tree"翻译
     树: 英文 的"树"翻译
-es 0:
-  include:
-    key: es-${language} 0
-es 1:
-  include:
-    key: es-${language} 1
 es-cs 0:
   title: Španělština-Čeština (dict.com)
   include:
@@ -2215,12 +2161,6 @@ es-sk 1:
   examples:
     árbol: slovenčina preklad pre "árbol"
     stromček: španielčina preklad pre "stromček"
-et 0:
-  include:
-    key: et-${language} 0
-et 1:
-  include:
-    key: et-${language} 1
 et-cs 0:
   title: Estonština-Čeština (dict.com)
   include:
@@ -2273,12 +2213,6 @@ et-sk 1:
   examples:
     puu: slovenčina preklad pre "puu"
     stromček: estónčina preklad pre "stromček"
-fi 0:
-  include:
-    key: fi-${language} 0
-fi 1:
-  include:
-    key: fi-${language} 1
 fi-cs 0:
   title: Finština-Čeština (dict.com)
   include:
@@ -2331,12 +2265,6 @@ fi-sk 1:
   examples:
     puu: slovenčina preklad pre "puu"
     stromček: fínčina preklad pre "stromček"
-fr 0:
-  include:
-    key: fr-${language} 0
-fr 1:
-  include:
-    key: fr-${language} 1
 fr-cs 0:
   title: Francouzština-Čeština (dict.com)
   include:
@@ -2408,12 +2336,6 @@ fr-sv 1:
   examples:
     arbre: svenska-översättning av "arbre"
     träd: franska-översättning av "träd"
-he 0:
-  include:
-    key: he-${language} 0
-he 1:
-  include:
-    key: he-${language} 1
 he-cs 0:
   title: Hebrejština-Čeština (dict.com)
   include:
@@ -2466,12 +2388,6 @@ he-sk 1:
   examples:
     עץ: slovenčina preklad pre "עץ"
     stromček: hebrejčina preklad pre "stromček"
-hr 0:
-  include:
-    key: hr-${language} 0
-hr 1:
-  include:
-    key: hr-${language} 1
 hr-cs 0:
   title: Chorvatština-Čeština (dict.com)
   include:
@@ -2524,12 +2440,6 @@ hr-sk 1:
   examples:
     stablo: slovenčina preklad pre "stablo"
     stromček: chorvátčina preklad pre "stromček"
-hu 0:
-  include:
-    key: hu-${language} 0
-hu 1:
-  include:
-    key: hu-${language} 1
 hu-cs 0:
   title: Maďarština-Čeština (dict.com)
   include:
@@ -2582,12 +2492,6 @@ hu-sk 1:
   examples:
     fa: slovenčina preklad pre "fa"
     stromček: maďarčina preklad pre "stromček"
-id 0:
-  include:
-    key: id-${language} 0
-id 1:
-  include:
-    key: id-${language} 1
 id-cs 0:
   title: Indonéština-Čeština (dict.com)
   include:
@@ -2640,12 +2544,6 @@ id-sk 1:
   examples:
     pohon: slovenčina preklad pre "pohon"
     stromček: indonézština preklad pre "stromček"
-it 0:
-  include:
-    key: it-${language} 0
-it 1:
-  include:
-    key: it-${language} 1
 it-cs 0:
   title: Italština-Čeština (dict.com)
   include:
@@ -2698,12 +2596,6 @@ it-sk 1:
   examples:
     albero: slovenčina preklad pre "albero"
     stromček: taliančina preklad pre "stromček"
-ja 0:
-  include:
-    key: ja-${language} 0
-ja 1:
-  include:
-    key: ja-${language} 1
 ja-cs 0:
   title: Japonština-Čeština (dict.com)
   include:
@@ -2756,12 +2648,6 @@ ja-sk 1:
   examples:
     木: slovenčina preklad pre "木"
     stromček: japončina preklad pre "stromček"
-ko 0:
-  include:
-    key: ko-${language} 0
-ko 1:
-  include:
-    key: ko-${language} 1
 ko-cs 0:
   title: Korejština-Čeština (dict.com)
   include:
@@ -2814,12 +2700,6 @@ ko-sk 1:
   examples:
     나무: slovenčina preklad pre "나무"
     stromček: kórejčina preklad pre "stromček"
-lt 0:
-  include:
-    key: lt-${language} 0
-lt 1:
-  include:
-    key: lt-${language} 1
 lt-cs 0:
   title: Litevština-Čeština (dict.com)
   include:
@@ -2872,12 +2752,6 @@ lt-sk 1:
   examples:
     medis: slovenčina preklad pre "medis"
     stromček: litovčina preklad pre "stromček"
-lv 0:
-  include:
-    key: lv-${language} 0
-lv 1:
-  include:
-    key: lv-${language} 1
 lv-cs 0:
   title: Lotyština-Čeština (dict.com)
   include:
@@ -2930,12 +2804,6 @@ lv-sk 1:
   examples:
     koks: slovenčina preklad pre "koks"
     stromček: lotyština preklad pre "stromček"
-nl 0:
-  include:
-    key: nl-${language} 0
-nl 1:
-  include:
-    key: nl-${language} 1
 nl-cs 0:
   title: Nizozemština-Čeština (dict.com)
   include:
@@ -2988,12 +2856,6 @@ nl-sk 1:
   examples:
     boom: slovenčina preklad pre "boom"
     stromček: holandčina preklad pre "stromček"
-no 0:
-  include:
-    key: no-${language} 0
-no 1:
-  include:
-    key: no-${language} 1
 no-cs 0:
   title: Norština-Čeština (dict.com)
   include:
@@ -3046,12 +2908,6 @@ no-sk 1:
   examples:
     tre: slovenčina preklad pre "tre"
     stromček: nórčina preklad pre "stromček"
-pl 0:
-  include:
-    key: pl-${language} 0
-pl 1:
-  include:
-    key: pl-${language} 1
 pl-cs 0:
   title: Polština-Čeština (dict.com)
   include:
@@ -3104,12 +2960,6 @@ pl-sk 1:
   examples:
     drzewo: slovenčina preklad pre "drzewo"
     stromček: poľština preklad pre "stromček"
-pt 0:
-  include:
-    key: pt-${language} 0
-pt 1:
-  include:
-    key: pt-${language} 1
 pt-cs 0:
   title: Portugalština-Čeština (dict.com)
   include:
@@ -3162,12 +3012,6 @@ pt-sk 1:
   examples:
     árvore: slovenčina preklad pre "árvore"
     stromček: portugalčina preklad pre "stromček"
-ro 0:
-  include:
-    key: ro-${language} 0
-ro 1:
-  include:
-    key: ro-${language} 1
 ro-cs 0:
   title: Rumunština-Čeština (dict.com)
   include:
@@ -3220,12 +3064,6 @@ ro-sk 1:
   examples:
     copac: slovenčina preklad pre "copac"
     stromček: rumunčina preklad pre "stromček"
-ru 0:
-  include:
-    key: ru-${language} 0
-ru 1:
-  include:
-    key: ru-${language} 1
 ru-cs 0:
   title: Ruština-Čeština (dict.com)
   include:
@@ -3278,12 +3116,6 @@ ru-sk 1:
   examples:
     дерево: slovenčina preklad pre "дерево"
     stromček: ruština preklad pre "stromček"
-sk 0:
-  include:
-    key: sk-${language} 0
-sk 1:
-  include:
-    key: sk-${language} 1
 sk-ar 0:
   title: السلوفاكية-العربية (dict.com)
   include:
@@ -3733,12 +3565,6 @@ sk-zh 1:
   examples:
     stromček: 中文 的"stromček"翻译
     树: 斯洛伐克文 的"树"翻译
-sl 0:
-  include:
-    key: sl-${language} 0
-sl 1:
-  include:
-    key: sl-${language} 1
 sl-cs 0:
   title: Slovinština-Čeština (dict.com)
   include:
@@ -3783,12 +3609,6 @@ sl-sk 1:
   examples:
     drevo: slovenčina preklad pre "drevo"
     stromček: slovinčina preklad pre "stromček"
-sr 0:
-  include:
-    key: sr-${language} 0
-sr 1:
-  include:
-    key: sr-${language} 1
 sr-cs 0:
   title: Srbština-Čeština (dict.com)
   include:
@@ -3833,12 +3653,6 @@ sr-sk 1:
   examples:
     дрво: slovenčina preklad pre "дрво"
     stromček: srbčina preklad pre "stromček"
-sv 0:
-  include:
-    key: sv-${language} 0
-sv 1:
-  include:
-    key: sv-${language} 1
 sv-cs 0:
   title: Švédština-Čeština (dict.com)
   include:
@@ -3894,12 +3708,6 @@ sv-sk 1:
   examples:
     träd: slovenčina preklad pre "träd"
     stromček: švédčina preklad pre "stromček"
-th 0:
-  include:
-    key: th-${language} 0
-th 1:
-  include:
-    key: th-${language} 1
 th-cs 0:
   title: Thajština-Čeština (dict.com)
   include:
@@ -3944,12 +3752,6 @@ th-sk 1:
   examples:
     ต้นไม้: slovenčina preklad pre "ต้นไม้"
     stromček: thajčina preklad pre "stromček"
-tr 0:
-  include:
-    key: tr-${language} 0
-tr 1:
-  include:
-    key: tr-${language} 1
 tr-cs 0:
   title: Turečtina-Čeština (dict.com)
   include:
@@ -3994,12 +3796,6 @@ tr-sk 1:
   examples:
     ağaç: slovenčina preklad pre "ağaç"
     stromček: turečtina preklad pre "stromček"
-uk 0:
-  include:
-    key: uk-${language} 0
-uk 1:
-  include:
-    key: uk-${language} 1
 uk-cs 0:
   title: Ukrajinština-Čeština (dict.com)
   include:
@@ -4044,12 +3840,6 @@ uk-sk 1:
   examples:
     дерево: slovenčina preklad pre "дерево"
     stromček: ukrajinčina preklad pre "stromček"
-vi 0:
-  include:
-    key: vi-${language} 0
-vi 1:
-  include:
-    key: vi-${language} 1
 vi-cs 0:
   title: Vietnamština-Čeština (dict.com)
   include:
@@ -4094,12 +3884,6 @@ vi-sk 1:
   examples:
     cây: slovenčina preklad pre "cây"
     stromček: vietnamčina preklad pre "stromček"
-zh 0:
-  include:
-    key: zh-${language} 0
-zh 1:
-  include:
-    key: zh-${language} 1
 zh-cs 0:
   title: Čínština-Čeština (dict.com)
   include:
