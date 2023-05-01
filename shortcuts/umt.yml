@@ -1,3 +1,9 @@
+de 0:
+  include:
+    key: de-{$language} 0
+de 1:
+  include:
+    key: de-{$language} 1
 de-nl 0:
   url: https://www.uitmuntend.de/
   title: Duits-Nederlands (Uitmuntend)
@@ -17,6 +23,12 @@ de-nl 1:
   examples:
     baum: Nederlands-vertaling van "baum"
     boom: Duits-vertaling van "boom"
+nl 0:
+  include:
+    key: nl-{$language} 0
+nl 1:
+  include:
+    key: nl-{$language} 1
 nl-de 0:
   title: Niederländisch-Deutsch (Uitmuntend)
   include:
