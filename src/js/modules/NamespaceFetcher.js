@@ -138,38 +138,40 @@ export default class NamespaceFetcher {
   async addIncludes(shortcuts) {
     for (const key in shortcuts) {
       const shortcut = shortcuts[key];
-      if (shortcut.include) {
-        if (shortcut.include.key) {
-          const keyToIncludeFrom = shortcut.include.key;
-          // Replace variables.
-          const keyToIncludeFromProcessed = await UrlProcessor.replaceVariables(
-            keyToIncludeFrom,
-            {
-              language: this.env.language,
-              country: this.env.country,
-            },
-          );
-          if (shortcut.include.namespace) {
-            await this.ensureNamespaceInfos([shortcut.include.namespace], 0);
-          }
-          // Pick the right namespace to include from.
-          const shortcutsToIncludeFrom = shortcut.include.namespace
-            ? this.namespaceInfos[shortcut.include.namespace].shortcuts
-            : shortcuts;
-          // Only include if shortcut to include exists.
-          if (shortcutsToIncludeFrom[keyToIncludeFromProcessed]) {
-            const shortcutToInclude = this.cloneShortcut(
-              shortcutsToIncludeFrom[keyToIncludeFromProcessed],
-            );
-            shortcuts[key] = Object.assign(shortcutToInclude, shortcut);
-          } else {
-            delete shortcuts[key];
-          }
-        } else {
-          Helper.log(`Incorrect include found at ${key}`);
-          this.error = true;
-          continue;
-        }
+      if (!shortcut.include) {
+        continue;
+      }
+      if (!shortcut.include.key) {
+        Helper.log(`Incorrect include found at ${key}`);
+        this.error = true;
+        delete shortcuts[key];
+        continue;
+      }
+      const keyToIncludeFrom = shortcut.include.key;
+      // Replace variables.
+      const keyToIncludeFromProcessed = await UrlProcessor.replaceVariables(
+        keyToIncludeFrom,
+        {
+          language: this.env.language,
+          country: this.env.country,
+        },
+      );
+      if (shortcut.include.namespace) {
+        await this.ensureNamespaceInfos([shortcut.include.namespace], 0);
+      }
+      // Pick the right namespace to include from.
+      const shortcutsToIncludeFrom = shortcut.include.namespace
+        ? this.namespaceInfos[shortcut.include.namespace].shortcuts
+        : shortcuts;
+      // Only include if shortcut to include exists.
+      if (shortcutsToIncludeFrom[keyToIncludeFromProcessed]) {
+        const shortcutToInclude = this.cloneShortcut(
+          shortcutsToIncludeFrom[keyToIncludeFromProcessed],
+        );
+        shortcuts[key] = Object.assign(shortcutToInclude, shortcut);
+      } else {
+        delete shortcuts[key];
+        // TODO: Report this on some low level.
       }
     }
     return shortcuts;
