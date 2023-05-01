@@ -141,6 +141,7 @@ export default class NamespaceFetcher {
       if (shortcut.include) {
         if (shortcut.include.key) {
           const keyToIncludeFrom = shortcut.include.key;
+          // Replace variables.
           const keyToIncludeFromProcessed = await UrlProcessor.replaceVariables(
             keyToIncludeFrom,
             {
@@ -151,6 +152,7 @@ export default class NamespaceFetcher {
           if (shortcut.include.namespace) {
             await this.ensureNamespaceInfos([shortcut.include.namespace], 0);
           }
+          // Pick the right namespace to include from.
           const shortcutsToIncludeFrom = shortcut.include.namespace
             ? this.namespaceInfos[shortcut.include.namespace].shortcuts
             : shortcuts;
