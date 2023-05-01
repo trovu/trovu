@@ -266,12 +266,12 @@ actions['addDictionaryIncludes'] = async function () {
     for (const lang of langs) {
       ymls[`${dict}.yml`][`${lang} 0`] = {
         include: {
-          key: lang + '-${language} 0',
+          key: lang + '-{$language} 0',
         },
       };
       ymls[`${dict}.yml`][`${lang} 1`] = {
         include: {
-          key: lang + '-${language} 1',
+          key: lang + '-{$language} 1',
         },
       };
     }
