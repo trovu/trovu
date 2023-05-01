@@ -171,7 +171,7 @@ export default class NamespaceFetcher {
       : shortcuts;
 
     if (!shortcutsToIncludeFrom[key]) {
-      console.log(key, shortcut.include.namespace, shortcutsToIncludeFrom[key]);
+      // console.log(key, shortcut.include.namespace, shortcutsToIncludeFrom[key]);
       return false;
     }
     if (shortcutsToIncludeFrom[key].include) {
