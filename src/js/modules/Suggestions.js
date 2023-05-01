@@ -243,20 +243,33 @@ export default class Suggestions {
     const input = QueryParser.parse(inputText);
     const suggestion = event.text.label;
 
+    let newInputText = suggestion.keyword;
+
+    // Prefix with namespace if not reachable.
+    if (!suggestion.reachable) {
+      newInputText = `${suggestion.namespace}.${newInputText}`;
+    }
+
+    // Immediately submit if 0-arg shortcut.
     if (suggestion.argumentCount == 0) {
-      this.awesomplete.replace({ value: suggestion.keyword });
+      this.awesomplete.replace({ value: newInputText });
       this.submitQuery();
       return;
     }
 
+    // Append argumentString.
+    newInputText = `${newInputText} ${input.argumentString}`;
+
+    // Default: replace with suggested.
     this.awesomplete.replace({
-      value: suggestion.keyword + ' ' + input.argumentString,
+      value: `${newInputText}`,
     });
 
-    if (input.args.length == suggestion.argumentCount) {
-      this.submitQuery();
-      return;
-    }
+    // Remove for now as I can't see its sense.
+    // if (input.args.length == suggestion.argumentCount) {
+    //   this.submitQuery();
+    //   return;
+    // }
     this.updateSuggestions(event);
   };
 }
