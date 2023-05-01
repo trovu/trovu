@@ -140,6 +140,14 @@ export default class NamespaceFetcher {
       const shortcut = shortcuts[key];
       if (shortcut.include) {
         if (shortcut.include.key) {
+          const keyToIncludeFrom = shortcut.include.key;
+          const keyToIncludeFromProcessed = await UrlProcessor.replaceVariables(
+            keyToIncludeFrom,
+            {
+              language: this.env.language,
+              country: this.env.country,
+            },
+          );
           if (shortcut.include.namespace) {
             await this.ensureNamespaceInfos([shortcut.include.namespace], 0);
           }
@@ -147,7 +155,7 @@ export default class NamespaceFetcher {
             ? this.namespaceInfos[shortcut.include.namespace].shortcuts
             : shortcuts;
           const shortcutToInclude = this.cloneShortcut(
-            shortcutsToIncludeFrom[shortcut.include.key],
+            shortcutsToIncludeFrom[keyToIncludeFromProcessed],
           );
           shortcuts[key] = Object.assign(shortcutToInclude, shortcut);
         } else {
