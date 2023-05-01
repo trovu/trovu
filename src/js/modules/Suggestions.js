@@ -253,10 +253,11 @@ export default class Suggestions {
       value: suggestion.keyword + ' ' + input.argumentString,
     });
 
-    if (input.args.length == suggestion.argumentCount) {
-      this.submitQuery();
-      return;
-    }
+    // Remove for now as I can't see its sense.
+    // if (input.args.length == suggestion.argumentCount) {
+    //   this.submitQuery();
+    //   return;
+    // }
     this.updateSuggestions(event);
   };
 }
