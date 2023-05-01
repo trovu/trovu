@@ -147,9 +147,9 @@ export default class NamespaceFetcher {
         delete shortcuts[key];
         continue;
       }
-      shortcuts[key] = await this.processInclude(shortcut, shortcuts);
-      if (!shortcuts[key]) {
-        delete shortcuts[key];
+      const result = await this.processInclude(shortcut, shortcuts);
+      if (result) {
+        shortcuts[key] = result;
       }
     }
     return shortcuts;
