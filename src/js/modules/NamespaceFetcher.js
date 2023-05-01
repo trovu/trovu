@@ -16,6 +16,31 @@ export default class NamespaceFetcher {
    * @returns {Object} An object containing namespace information
    */
   async getNamespaceInfos(namespaces) {
+    this.namespaceInfos = {};
+    for (const namespace of namespaces) {
+      this.namespaceInfos[namespace] = false;
+    }
+    while (this.hasEmptyObjectValue(this.namespaceInfos)) {
+      for (const namespaceName in this.namespaceInfos) {
+        this.namespaceInfos[namespaceName] =
+          this.getInitalNamespaceInfo(namespaceName);
+      }
+      const promises = await this.startFetches(this.namespaceInfos);
+
+      console.log('promises', promises);
+      // Wait until all fetch calls are done.
+      const responses = await Promise.all(promises);
+
+      console.log('responses', responses);
+      this.namespaceInfos = await this.processResponses(
+        this.namespaceInfos,
+        responses,
+      );
+    }
+    console.log(this.namespaceInfos);
+    return this.namespaceInfos;
+
+    console.log(namespaces);
     await this.ensureNamespaceInfos(namespaces, 1);
     this.addReachable();
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
@@ -28,6 +53,15 @@ export default class NamespaceFetcher {
       }
     }
     return this.namespaceInfos;
+  }
+
+  hasEmptyObjectValue(obj) {
+    for (const key in obj) {
+      if (!obj[key]) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
