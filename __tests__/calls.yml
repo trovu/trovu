@@ -106,6 +106,12 @@
     query: test-include-leo-fr-de baum
   response:
     redirectUrl: https://dict.leo.org/französisch-deutsch/baum
+- title: included 2 level with var
+  env:
+    github: georgjaehnig
+    query: test-include-leo-fr-language baum
+  response:
+    redirectUrl: https://dict.leo.org/französisch-deutsch/baum
 - title: map EO chars
   env:
     query: de.eo sxuo
