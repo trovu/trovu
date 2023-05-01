@@ -1,3 +1,9 @@
+bg 0:
+  include:
+    key: bg-${language} 0
+bg 1:
+  include:
+    key: bg-${language} 1
 bg-de 0:
   url: https://debg.dict.cc/
   title: Bulgarisch-Deutsch (dict.cc)
@@ -17,6 +23,12 @@ bg-de 1:
   examples:
     дърво: Deutsch-Übersetzung von "дърво"
     baum: Bulgarisch-Übersetzung von "baum"
+cs 0:
+  include:
+    key: cs-${language} 0
+cs 1:
+  include:
+    key: cs-${language} 1
 cs-de 0:
   url: https://decs.dict.cc/
   title: Tschechisch-Deutsch (dict.cc)
@@ -36,6 +48,12 @@ cs-de 1:
   examples:
     strom: Deutsch-Übersetzung von "strom"
     baum: Tschechisch-Übersetzung von "baum"
+da 0:
+  include:
+    key: da-${language} 0
+da 1:
+  include:
+    key: da-${language} 1
 da-de 0:
   url: https://deda.dict.cc/
   title: Dänisch-Deutsch (dict.cc)
@@ -55,6 +73,12 @@ da-de 1:
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Dänisch-Übersetzung von "baum"
+de 0:
+  include:
+    key: de-${language} 0
+de 1:
+  include:
+    key: de-${language} 1
 de-bg 0:
   title: Немски-Български (dict.cc)
   include:
@@ -430,6 +454,12 @@ de-tr 1:
   examples:
     baum: '"baum" için Türkçe çevirisi'
     ağaç: '"ağaç" için Almanca çevirisi'
+el 0:
+  include:
+    key: el-${language} 0
+el 1:
+  include:
+    key: el-${language} 1
 el-de 0:
   title: Griechisch-Deutsch (dict.cc)
   include:
@@ -441,6 +471,12 @@ el-de 1:
   examples:
     δέντρο: Deutsch-Übersetzung von "δέντρο"
     baum: Griechisch-Übersetzung von "baum"
+en 0:
+  include:
+    key: en-${language} 0
+en 1:
+  include:
+    key: en-${language} 1
 en-de 0:
   title: Englisch-Deutsch (dict.cc)
   include:
@@ -471,6 +507,12 @@ en-nl 1:
   examples:
     tree: Nederlands-vertaling van "tree"
     boom: Engels-vertaling van "boom"
+es 0:
+  include:
+    key: es-${language} 0
+es 1:
+  include:
+    key: es-${language} 1
 es-de 0:
   title: Spanisch-Deutsch (dict.cc)
   include:
@@ -482,6 +524,12 @@ es-de 1:
   examples:
     árbol: Deutsch-Übersetzung von "árbol"
     baum: Spanisch-Übersetzung von "baum"
+fi 0:
+  include:
+    key: fi-${language} 0
+fi 1:
+  include:
+    key: fi-${language} 1
 fi-de 0:
   title: Finnisch-Deutsch (dict.cc)
   include:
@@ -493,6 +541,12 @@ fi-de 1:
   examples:
     puu: Deutsch-Übersetzung von "puu"
     baum: Finnisch-Übersetzung von "baum"
+fr 0:
+  include:
+    key: fr-${language} 0
+fr 1:
+  include:
+    key: fr-${language} 1
 fr-de 0:
   title: Französisch-Deutsch (dict.cc)
   include:
@@ -504,6 +558,12 @@ fr-de 1:
   examples:
     arbre: Deutsch-Übersetzung von "arbre"
     baum: Französisch-Übersetzung von "baum"
+hu 0:
+  include:
+    key: hu-${language} 0
+hu 1:
+  include:
+    key: hu-${language} 1
 hu-de 0:
   title: Ungarisch-Deutsch (dict.cc)
   include:
@@ -515,6 +575,12 @@ hu-de 1:
   examples:
     fa: Deutsch-Übersetzung von "fa"
     baum: Ungarisch-Übersetzung von "baum"
+is 0:
+  include:
+    key: is-${language} 0
+is 1:
+  include:
+    key: is-${language} 1
 is-de 0:
   title: Isländisch-Deutsch (dict.cc)
   include:
@@ -526,6 +592,12 @@ is-de 1:
   examples:
     tré: Deutsch-Übersetzung von "tré"
     baum: Isländisch-Übersetzung von "baum"
+it 0:
+  include:
+    key: it-${language} 0
+it 1:
+  include:
+    key: it-${language} 1
 it-de 0:
   title: Italienisch-Deutsch (dict.cc)
   include:
@@ -537,6 +609,12 @@ it-de 1:
   examples:
     albero: Deutsch-Übersetzung von "albero"
     baum: Italienisch-Übersetzung von "baum"
+la 0:
+  include:
+    key: la-${language} 0
+la 1:
+  include:
+    key: la-${language} 1
 la-de 0:
   title: Latein-Deutsch (dict.cc)
   include:
@@ -548,6 +626,12 @@ la-de 1:
   examples:
     arbor: Deutsch-Übersetzung von "arbor"
     baum: Latein-Übersetzung von "baum"
+nl 0:
+  include:
+    key: nl-${language} 0
+nl 1:
+  include:
+    key: nl-${language} 1
 nl-de 0:
   title: Niederländisch-Deutsch (dict.cc)
   include:
@@ -570,6 +654,12 @@ nl-en 1:
   examples:
     boom: English translation of "boom"
     tree: Dutch translation of "tree"
+no 0:
+  include:
+    key: no-${language} 0
+no 1:
+  include:
+    key: no-${language} 1
 no-de 0:
   title: Norwegisch-Deutsch (dict.cc)
   include:
@@ -581,6 +671,12 @@ no-de 1:
   examples:
     tre: Deutsch-Übersetzung von "tre"
     baum: Norwegisch-Übersetzung von "baum"
+pl 0:
+  include:
+    key: pl-${language} 0
+pl 1:
+  include:
+    key: pl-${language} 1
 pl-de 0:
   title: Polnisch-Deutsch (dict.cc)
   include:
@@ -592,6 +688,12 @@ pl-de 1:
   examples:
     drzewo: Deutsch-Übersetzung von "drzewo"
     baum: Polnisch-Übersetzung von "baum"
+pt 0:
+  include:
+    key: pt-${language} 0
+pt 1:
+  include:
+    key: pt-${language} 1
 pt-de 0:
   title: Portugiesisch-Deutsch (dict.cc)
   include:
@@ -603,6 +705,12 @@ pt-de 1:
   examples:
     árvore: Deutsch-Übersetzung von "árvore"
     baum: Portugiesisch-Übersetzung von "baum"
+ro 0:
+  include:
+    key: ro-${language} 0
+ro 1:
+  include:
+    key: ro-${language} 1
 ro-de 0:
   title: Rumänisch-Deutsch (dict.cc)
   include:
@@ -614,6 +722,12 @@ ro-de 1:
   examples:
     copac: Deutsch-Übersetzung von "copac"
     baum: Rumänisch-Übersetzung von "baum"
+ru 0:
+  include:
+    key: ru-${language} 0
+ru 1:
+  include:
+    key: ru-${language} 1
 ru-de 0:
   title: Russisch-Deutsch (dict.cc)
   include:
@@ -625,6 +739,12 @@ ru-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Russisch-Übersetzung von "baum"
+sk 0:
+  include:
+    key: sk-${language} 0
+sk 1:
+  include:
+    key: sk-${language} 1
 sk-de 0:
   title: Slowakisch-Deutsch (dict.cc)
   include:
@@ -636,6 +756,12 @@ sk-de 1:
   examples:
     stromček: Deutsch-Übersetzung von "stromček"
     baum: Slowakisch-Übersetzung von "baum"
+sv 0:
+  include:
+    key: sv-${language} 0
+sv 1:
+  include:
+    key: sv-${language} 1
 sv-de 0:
   title: Schwedisch-Deutsch (dict.cc)
   include:
@@ -647,6 +773,12 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+tr 0:
+  include:
+    key: tr-${language} 0
+tr 1:
+  include:
+    key: tr-${language} 1
 tr-de 0:
   title: Türkisch-Deutsch (dict.cc)
   include:

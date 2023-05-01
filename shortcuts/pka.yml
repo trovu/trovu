@@ -1,3 +1,9 @@
+af 0:
+  include:
+    key: af-${language} 0
+af 1:
+  include:
+    key: af-${language} 1
 af-de 0:
   url: https://www.pauker.at/pauker/DE_DE/af/wb
   title: Afrikaans-Deutsch (Pauker.at)
@@ -17,6 +23,12 @@ af-de 1:
   examples:
     boom: Deutsch-Übersetzung von "boom"
     baum: Afrikaans-Übersetzung von "baum"
+am 0:
+  include:
+    key: am-${language} 0
+am 1:
+  include:
+    key: am-${language} 1
 am-de 0:
   url: https://www.pauker.at/pauker/DE_DE/am/wb
   title: Amharisch-Deutsch (Pauker.at)
@@ -36,6 +48,12 @@ am-de 1:
   examples:
     ዓሣ: Deutsch-Übersetzung von "ዓሣ"
     baum: Amharisch-Übersetzung von "baum"
+ar 0:
+  include:
+    key: ar-${language} 0
+ar 1:
+  include:
+    key: ar-${language} 1
 ar-de 0:
   url: https://www.pauker.at/pauker/DE_DE/ar/wb
   title: Arabisch-Deutsch (Pauker.at)
@@ -55,6 +73,12 @@ ar-de 1:
   examples:
     شجرة: Deutsch-Übersetzung von "شجرة"
     baum: Arabisch-Übersetzung von "baum"
+as 0:
+  include:
+    key: as-${language} 0
+as 1:
+  include:
+    key: as-${language} 1
 as-de 0:
   url: https://www.pauker.at/pauker/DE_DE/as/wb
   title: Assamesisch-Deutsch (Pauker.at)
@@ -74,6 +98,12 @@ as-de 1:
   examples:
     গাছ: Deutsch-Übersetzung von "গাছ"
     baum: Assamesisch-Übersetzung von "baum"
+az 0:
+  include:
+    key: az-${language} 0
+az 1:
+  include:
+    key: az-${language} 1
 az-de 0:
   url: https://www.pauker.at/pauker/DE_DE/az/wb
   title: Aserbaidschanisch-Deutsch (Pauker.at)
@@ -93,6 +123,12 @@ az-de 1:
   examples:
     agac: Deutsch-Übersetzung von "agac"
     baum: Aserbaidschanisch-Übersetzung von "baum"
+be 0:
+  include:
+    key: be-${language} 0
+be 1:
+  include:
+    key: be-${language} 1
 be-de 0:
   url: https://www.pauker.at/pauker/DE_DE/be/wb
   title: Weißrussisch-Deutsch (Pauker.at)
@@ -112,6 +148,12 @@ be-de 1:
   examples:
     дрэва: Deutsch-Übersetzung von "дрэва"
     baum: Weißrussisch-Übersetzung von "baum"
+bg 0:
+  include:
+    key: bg-${language} 0
+bg 1:
+  include:
+    key: bg-${language} 1
 bg-de 0:
   url: https://www.pauker.at/pauker/DE_DE/bg/wb
   title: Bulgarisch-Deutsch (Pauker.at)
@@ -131,6 +173,12 @@ bg-de 1:
   examples:
     дърво: Deutsch-Übersetzung von "дърво"
     baum: Bulgarisch-Übersetzung von "baum"
+bn 0:
+  include:
+    key: bn-${language} 0
+bn 1:
+  include:
+    key: bn-${language} 1
 bn-de 0:
   url: https://www.pauker.at/pauker/DE_DE/bn/wb
   title: Bengalisch-Deutsch (Pauker.at)
@@ -150,6 +198,12 @@ bn-de 1:
   examples:
     গাছ: Deutsch-Übersetzung von "গাছ"
     baum: Bengalisch-Übersetzung von "baum"
+bo 0:
+  include:
+    key: bo-${language} 0
+bo 1:
+  include:
+    key: bo-${language} 1
 bo-de 0:
   url: https://www.pauker.at/pauker/DE_DE/bo/wb
   title: Tibetisch-Deutsch (Pauker.at)
@@ -169,6 +223,12 @@ bo-de 1:
   examples:
     རི་མོ་: Deutsch-Übersetzung von "རི་མོ་"
     baum: Tibetisch-Übersetzung von "baum"
+br 0:
+  include:
+    key: br-${language} 0
+br 1:
+  include:
+    key: br-${language} 1
 br-de 0:
   url: https://www.pauker.at/pauker/DE_DE/br/wb
   title: Bretonisch-Deutsch (Pauker.at)
@@ -188,6 +248,12 @@ br-de 1:
   examples:
     dervenn: Deutsch-Übersetzung von "dervenn"
     baum: Bretonisch-Übersetzung von "baum"
+ca 0:
+  include:
+    key: ca-${language} 0
+ca 1:
+  include:
+    key: ca-${language} 1
 ca-de 0:
   url: https://www.pauker.at/pauker/DE_DE/ca/wb
   title: Katalanisch-Deutsch (Pauker.at)
@@ -207,6 +273,12 @@ ca-de 1:
   examples:
     arbre: Deutsch-Übersetzung von "arbre"
     baum: Katalanisch-Übersetzung von "baum"
+cs 0:
+  include:
+    key: cs-${language} 0
+cs 1:
+  include:
+    key: cs-${language} 1
 cs-de 0:
   url: https://www.pauker.at/pauker/DE_DE/cs/wb
   title: Tschechisch-Deutsch (Pauker.at)
@@ -226,6 +298,12 @@ cs-de 1:
   examples:
     strom: Deutsch-Übersetzung von "strom"
     baum: Tschechisch-Übersetzung von "baum"
+cy 0:
+  include:
+    key: cy-${language} 0
+cy 1:
+  include:
+    key: cy-${language} 1
 cy-de 0:
   url: https://www.pauker.at/pauker/DE_DE/cy/wb
   title: Walisisch-Deutsch (Pauker.at)
@@ -245,6 +323,12 @@ cy-de 1:
   examples:
     coeden: Deutsch-Übersetzung von "coeden"
     baum: Walisisch-Übersetzung von "baum"
+da 0:
+  include:
+    key: da-${language} 0
+da 1:
+  include:
+    key: da-${language} 1
 da-de 0:
   url: https://www.pauker.at/pauker/DE_DE/da/wb
   title: Dänisch-Deutsch (Pauker.at)
@@ -264,6 +348,12 @@ da-de 1:
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Dänisch-Übersetzung von "baum"
+de 0:
+  include:
+    key: de-${language} 0
+de 1:
+  include:
+    key: de-${language} 1
 de-af 0:
   title: Duits-Afrikaans (Pauker.at)
   include:
@@ -2318,6 +2408,12 @@ de-zu 1:
   examples:
     baum: Ukuthathwa kwe isiZulu kuka "baum"
     isihlahla: Ukuthathwa kwe isi-German kuka "isihlahla"
+dz 0:
+  include:
+    key: dz-${language} 0
+dz 1:
+  include:
+    key: dz-${language} 1
 dz-de 0:
   title: Bhutanisch-Deutsch (Pauker.at)
   include:
@@ -2329,6 +2425,12 @@ dz-de 1:
   examples:
     སྣ་ཚོགས་: Deutsch-Übersetzung von "སྣ་ཚོགས་"
     baum: Bhutanisch-Übersetzung von "baum"
+el 0:
+  include:
+    key: el-${language} 0
+el 1:
+  include:
+    key: el-${language} 1
 el-de 0:
   title: Griechisch-Deutsch (Pauker.at)
   include:
@@ -2340,6 +2442,12 @@ el-de 1:
   examples:
     δέντρο: Deutsch-Übersetzung von "δέντρο"
     baum: Griechisch-Übersetzung von "baum"
+en 0:
+  include:
+    key: en-${language} 0
+en 1:
+  include:
+    key: en-${language} 1
 en-de 0:
   title: Englisch-Deutsch (Pauker.at)
   include:
@@ -2351,6 +2459,12 @@ en-de 1:
   examples:
     tree: Deutsch-Übersetzung von "tree"
     baum: Englisch-Übersetzung von "baum"
+eo 0:
+  include:
+    key: eo-${language} 0
+eo 1:
+  include:
+    key: eo-${language} 1
 eo-de 0:
   title: Esperanto-Deutsch (Pauker.at)
   include:
@@ -2362,6 +2476,12 @@ eo-de 1:
   examples:
     arbo: Deutsch-Übersetzung von "arbo"
     baum: Esperanto-Übersetzung von "baum"
+es 0:
+  include:
+    key: es-${language} 0
+es 1:
+  include:
+    key: es-${language} 1
 es-de 0:
   title: Spanisch-Deutsch (Pauker.at)
   include:
@@ -2373,6 +2493,12 @@ es-de 1:
   examples:
     árbol: Deutsch-Übersetzung von "árbol"
     baum: Spanisch-Übersetzung von "baum"
+et 0:
+  include:
+    key: et-${language} 0
+et 1:
+  include:
+    key: et-${language} 1
 et-de 0:
   title: Estnisch-Deutsch (Pauker.at)
   include:
@@ -2384,6 +2510,12 @@ et-de 1:
   examples:
     puu: Deutsch-Übersetzung von "puu"
     baum: Estnisch-Übersetzung von "baum"
+eu 0:
+  include:
+    key: eu-${language} 0
+eu 1:
+  include:
+    key: eu-${language} 1
 eu-de 0:
   title: Baskisch-Deutsch (Pauker.at)
   include:
@@ -2395,6 +2527,12 @@ eu-de 1:
   examples:
     zuhaitz: Deutsch-Übersetzung von "zuhaitz"
     baum: Baskisch-Übersetzung von "baum"
+fa 0:
+  include:
+    key: fa-${language} 0
+fa 1:
+  include:
+    key: fa-${language} 1
 fa-de 0:
   title: Persisch-Deutsch (Pauker.at)
   include:
@@ -2406,6 +2544,12 @@ fa-de 1:
   examples:
     درخت: Deutsch-Übersetzung von "درخت"
     baum: Persisch-Übersetzung von "baum"
+fi 0:
+  include:
+    key: fi-${language} 0
+fi 1:
+  include:
+    key: fi-${language} 1
 fi-de 0:
   title: Finnisch-Deutsch (Pauker.at)
   include:
@@ -2417,6 +2561,12 @@ fi-de 1:
   examples:
     puu: Deutsch-Übersetzung von "puu"
     baum: Finnisch-Übersetzung von "baum"
+fo 0:
+  include:
+    key: fo-${language} 0
+fo 1:
+  include:
+    key: fo-${language} 1
 fo-de 0:
   title: Färöisch-Deutsch (Pauker.at)
   include:
@@ -2428,6 +2578,12 @@ fo-de 1:
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Färöisch-Übersetzung von "baum"
+fr 0:
+  include:
+    key: fr-${language} 0
+fr 1:
+  include:
+    key: fr-${language} 1
 fr-de 0:
   title: Französisch-Deutsch (Pauker.at)
   include:
@@ -2439,6 +2595,12 @@ fr-de 1:
   examples:
     arbre: Deutsch-Übersetzung von "arbre"
     baum: Französisch-Übersetzung von "baum"
+fy 0:
+  include:
+    key: fy-${language} 0
+fy 1:
+  include:
+    key: fy-${language} 1
 fy-de 0:
   title: Westfriesisch-Deutsch (Pauker.at)
   include:
@@ -2450,6 +2612,12 @@ fy-de 1:
   examples:
     beam: Deutsch-Übersetzung von "beam"
     baum: Westfriesisch-Übersetzung von "baum"
+ga 0:
+  include:
+    key: ga-${language} 0
+ga 1:
+  include:
+    key: ga-${language} 1
 ga-de 0:
   title: Irisch-Deutsch (Pauker.at)
   include:
@@ -2461,6 +2629,12 @@ ga-de 1:
   examples:
     crann: Deutsch-Übersetzung von "crann"
     baum: Irisch-Übersetzung von "baum"
+gd 0:
+  include:
+    key: gd-${language} 0
+gd 1:
+  include:
+    key: gd-${language} 1
 gd-de 0:
   title: Schottisches Gälisch-Deutsch (Pauker.at)
   include:
@@ -2472,6 +2646,12 @@ gd-de 1:
   examples:
     craobh: Deutsch-Übersetzung von "craobh"
     baum: Schottisches Gälisch-Übersetzung von "baum"
+gl 0:
+  include:
+    key: gl-${language} 0
+gl 1:
+  include:
+    key: gl-${language} 1
 gl-de 0:
   title: Galizisch-Deutsch (Pauker.at)
   include:
@@ -2483,6 +2663,12 @@ gl-de 1:
   examples:
     árbore: Deutsch-Übersetzung von "árbore"
     baum: Galizisch-Übersetzung von "baum"
+gu 0:
+  include:
+    key: gu-${language} 0
+gu 1:
+  include:
+    key: gu-${language} 1
 gu-de 0:
   title: Gujarati-Deutsch (Pauker.at)
   include:
@@ -2494,6 +2680,12 @@ gu-de 1:
   examples:
     વૃક્ષ: Deutsch-Übersetzung von "વૃક્ષ"
     baum: Gujarati-Übersetzung von "baum"
+gv 0:
+  include:
+    key: gv-${language} 0
+gv 1:
+  include:
+    key: gv-${language} 1
 gv-de 0:
   title: Manx-Deutsch (Pauker.at)
   include:
@@ -2505,6 +2697,12 @@ gv-de 1:
   examples:
     billey: Deutsch-Übersetzung von "billey"
     baum: Manx-Übersetzung von "baum"
+ha 0:
+  include:
+    key: ha-${language} 0
+ha 1:
+  include:
+    key: ha-${language} 1
 ha-de 0:
   title: Hausa-Deutsch (Pauker.at)
   include:
@@ -2516,6 +2714,12 @@ ha-de 1:
   examples:
     gashi: Deutsch-Übersetzung von "gashi"
     baum: Hausa-Übersetzung von "baum"
+he 0:
+  include:
+    key: he-${language} 0
+he 1:
+  include:
+    key: he-${language} 1
 he-de 0:
   title: Hebräisch-Deutsch (Pauker.at)
   include:
@@ -2527,6 +2731,12 @@ he-de 1:
   examples:
     עץ: Deutsch-Übersetzung von "עץ"
     baum: Hebräisch-Übersetzung von "baum"
+hi 0:
+  include:
+    key: hi-${language} 0
+hi 1:
+  include:
+    key: hi-${language} 1
 hi-de 0:
   title: Hindi-Deutsch (Pauker.at)
   include:
@@ -2538,6 +2748,12 @@ hi-de 1:
   examples:
     पेड़: Deutsch-Übersetzung von "पेड़"
     baum: Hindi-Übersetzung von "baum"
+hr 0:
+  include:
+    key: hr-${language} 0
+hr 1:
+  include:
+    key: hr-${language} 1
 hr-de 0:
   title: Kroatisch-Deutsch (Pauker.at)
   include:
@@ -2549,6 +2765,12 @@ hr-de 1:
   examples:
     stablo: Deutsch-Übersetzung von "stablo"
     baum: Kroatisch-Übersetzung von "baum"
+hu 0:
+  include:
+    key: hu-${language} 0
+hu 1:
+  include:
+    key: hu-${language} 1
 hu-de 0:
   title: Ungarisch-Deutsch (Pauker.at)
   include:
@@ -2560,6 +2782,12 @@ hu-de 1:
   examples:
     fa: Deutsch-Übersetzung von "fa"
     baum: Ungarisch-Übersetzung von "baum"
+hy 0:
+  include:
+    key: hy-${language} 0
+hy 1:
+  include:
+    key: hy-${language} 1
 hy-de 0:
   title: Armenisch-Deutsch (Pauker.at)
   include:
@@ -2571,6 +2799,12 @@ hy-de 1:
   examples:
     ծառ: Deutsch-Übersetzung von "ծառ"
     baum: Armenisch-Übersetzung von "baum"
+id 0:
+  include:
+    key: id-${language} 0
+id 1:
+  include:
+    key: id-${language} 1
 id-de 0:
   title: Indonesisch-Deutsch (Pauker.at)
   include:
@@ -2582,6 +2816,12 @@ id-de 1:
   examples:
     pohon: Deutsch-Übersetzung von "pohon"
     baum: Indonesisch-Übersetzung von "baum"
+ig 0:
+  include:
+    key: ig-${language} 0
+ig 1:
+  include:
+    key: ig-${language} 1
 ig-de 0:
   title: Igbo-Deutsch (Pauker.at)
   include:
@@ -2593,6 +2833,12 @@ ig-de 1:
   examples:
     ụlọ: Deutsch-Übersetzung von "ụlọ"
     baum: Igbo-Übersetzung von "baum"
+ii 0:
+  include:
+    key: ii-${language} 0
+ii 1:
+  include:
+    key: ii-${language} 1
 ii-de 0:
   title: Yi-Deutsch (Pauker.at)
   include:
@@ -2604,6 +2850,12 @@ ii-de 1:
   examples:
     ꆇꉙ: Deutsch-Übersetzung von "ꆇꉙ"
     baum: Yi-Übersetzung von "baum"
+is 0:
+  include:
+    key: is-${language} 0
+is 1:
+  include:
+    key: is-${language} 1
 is-de 0:
   title: Isländisch-Deutsch (Pauker.at)
   include:
@@ -2615,6 +2867,12 @@ is-de 1:
   examples:
     tré: Deutsch-Übersetzung von "tré"
     baum: Isländisch-Übersetzung von "baum"
+it 0:
+  include:
+    key: it-${language} 0
+it 1:
+  include:
+    key: it-${language} 1
 it-de 0:
   title: Italienisch-Deutsch (Pauker.at)
   include:
@@ -2626,6 +2884,12 @@ it-de 1:
   examples:
     albero: Deutsch-Übersetzung von "albero"
     baum: Italienisch-Übersetzung von "baum"
+ja 0:
+  include:
+    key: ja-${language} 0
+ja 1:
+  include:
+    key: ja-${language} 1
 ja-de 0:
   title: Japanisch-Deutsch (Pauker.at)
   include:
@@ -2637,6 +2901,12 @@ ja-de 1:
   examples:
     木: Deutsch-Übersetzung von "木"
     baum: Japanisch-Übersetzung von "baum"
+ka 0:
+  include:
+    key: ka-${language} 0
+ka 1:
+  include:
+    key: ka-${language} 1
 ka-de 0:
   title: Georgisch-Deutsch (Pauker.at)
   include:
@@ -2648,6 +2918,12 @@ ka-de 1:
   examples:
     ხე: Deutsch-Übersetzung von "ხე"
     baum: Georgisch-Übersetzung von "baum"
+ki 0:
+  include:
+    key: ki-${language} 0
+ki 1:
+  include:
+    key: ki-${language} 1
 ki-de 0:
   title: Kikuyu-Deutsch (Pauker.at)
   include:
@@ -2659,6 +2935,12 @@ ki-de 1:
   examples:
     muthiga: Deutsch-Übersetzung von "muthiga"
     baum: Kikuyu-Übersetzung von "baum"
+kk 0:
+  include:
+    key: kk-${language} 0
+kk 1:
+  include:
+    key: kk-${language} 1
 kk-de 0:
   title: Kasachisch-Deutsch (Pauker.at)
   include:
@@ -2670,6 +2952,12 @@ kk-de 1:
   examples:
     ағаш: Deutsch-Übersetzung von "ағаш"
     baum: Kasachisch-Übersetzung von "baum"
+kl 0:
+  include:
+    key: kl-${language} 0
+kl 1:
+  include:
+    key: kl-${language} 1
 kl-de 0:
   title: Grönländisch-Deutsch (Pauker.at)
   include:
@@ -2681,6 +2969,12 @@ kl-de 1:
   examples:
     pisinnaatitaq: Deutsch-Übersetzung von "pisinnaatitaq"
     baum: Grönländisch-Übersetzung von "baum"
+km 0:
+  include:
+    key: km-${language} 0
+km 1:
+  include:
+    key: km-${language} 1
 km-de 0:
   title: Kambodschanisch-Deutsch (Pauker.at)
   include:
@@ -2692,6 +2986,12 @@ km-de 1:
   examples:
     ដើម: Deutsch-Übersetzung von "ដើម"
     baum: Kambodschanisch-Übersetzung von "baum"
+kn 0:
+  include:
+    key: kn-${language} 0
+kn 1:
+  include:
+    key: kn-${language} 1
 kn-de 0:
   title: Kannada-Deutsch (Pauker.at)
   include:
@@ -2703,6 +3003,12 @@ kn-de 1:
   examples:
     ಮರ: Deutsch-Übersetzung von "ಮರ"
     baum: Kannada-Übersetzung von "baum"
+ko 0:
+  include:
+    key: ko-${language} 0
+ko 1:
+  include:
+    key: ko-${language} 1
 ko-de 0:
   title: Koreanisch-Deutsch (Pauker.at)
   include:
@@ -2714,6 +3020,12 @@ ko-de 1:
   examples:
     나무: Deutsch-Übersetzung von "나무"
     baum: Koreanisch-Übersetzung von "baum"
+ks 0:
+  include:
+    key: ks-${language} 0
+ks 1:
+  include:
+    key: ks-${language} 1
 ks-de 0:
   title: Kaschmirisch-Deutsch (Pauker.at)
   include:
@@ -2725,6 +3037,12 @@ ks-de 1:
   examples:
     بُرز: Deutsch-Übersetzung von "بُرز"
     baum: Kaschmirisch-Übersetzung von "baum"
+kw 0:
+  include:
+    key: kw-${language} 0
+kw 1:
+  include:
+    key: kw-${language} 1
 kw-de 0:
   title: Kornisch-Deutsch (Pauker.at)
   include:
@@ -2736,6 +3054,12 @@ kw-de 1:
   examples:
     gogow: Deutsch-Übersetzung von "gogow"
     baum: Kornisch-Übersetzung von "baum"
+ky 0:
+  include:
+    key: ky-${language} 0
+ky 1:
+  include:
+    key: ky-${language} 1
 ky-de 0:
   title: Kirgisisch-Deutsch (Pauker.at)
   include:
@@ -2747,6 +3071,12 @@ ky-de 1:
   examples:
     агач: Deutsch-Übersetzung von "агач"
     baum: Kirgisisch-Übersetzung von "baum"
+la 0:
+  include:
+    key: la-${language} 0
+la 1:
+  include:
+    key: la-${language} 1
 la-de 0:
   title: Latein-Deutsch (Pauker.at)
   include:
@@ -2758,6 +3088,12 @@ la-de 1:
   examples:
     arbor: Deutsch-Übersetzung von "arbor"
     baum: Latein-Übersetzung von "baum"
+lb 0:
+  include:
+    key: lb-${language} 0
+lb 1:
+  include:
+    key: lb-${language} 1
 lb-de 0:
   title: Luxemburgisch-Deutsch (Pauker.at)
   include:
@@ -2769,6 +3105,12 @@ lb-de 1:
   examples:
     Beem: Deutsch-Übersetzung von "Beem"
     baum: Luxemburgisch-Übersetzung von "baum"
+lg 0:
+  include:
+    key: lg-${language} 0
+lg 1:
+  include:
+    key: lg-${language} 1
 lg-de 0:
   title: Ganda-Deutsch (Pauker.at)
   include:
@@ -2780,6 +3122,12 @@ lg-de 1:
   examples:
     ensolo: Deutsch-Übersetzung von "ensolo"
     baum: Ganda-Übersetzung von "baum"
+ln 0:
+  include:
+    key: ln-${language} 0
+ln 1:
+  include:
+    key: ln-${language} 1
 ln-de 0:
   title: Lingala-Deutsch (Pauker.at)
   include:
@@ -2791,6 +3139,12 @@ ln-de 1:
   examples:
     molongo: Deutsch-Übersetzung von "molongo"
     baum: Lingala-Übersetzung von "baum"
+lo 0:
+  include:
+    key: lo-${language} 0
+lo 1:
+  include:
+    key: lo-${language} 1
 lo-de 0:
   title: Laotisch-Deutsch (Pauker.at)
   include:
@@ -2802,6 +3156,12 @@ lo-de 1:
   examples:
     ພາກໃຕ້: Deutsch-Übersetzung von "ພາກໃຕ້"
     baum: Laotisch-Übersetzung von "baum"
+lt 0:
+  include:
+    key: lt-${language} 0
+lt 1:
+  include:
+    key: lt-${language} 1
 lt-de 0:
   title: Litauisch-Deutsch (Pauker.at)
   include:
@@ -2813,6 +3173,12 @@ lt-de 1:
   examples:
     medis: Deutsch-Übersetzung von "medis"
     baum: Litauisch-Übersetzung von "baum"
+lv 0:
+  include:
+    key: lv-${language} 0
+lv 1:
+  include:
+    key: lv-${language} 1
 lv-de 0:
   title: Lettisch-Deutsch (Pauker.at)
   include:
@@ -2824,6 +3190,12 @@ lv-de 1:
   examples:
     koks: Deutsch-Übersetzung von "koks"
     baum: Lettisch-Übersetzung von "baum"
+mg 0:
+  include:
+    key: mg-${language} 0
+mg 1:
+  include:
+    key: mg-${language} 1
 mg-de 0:
   title: Madagassisch-Deutsch (Pauker.at)
   include:
@@ -2835,6 +3207,12 @@ mg-de 1:
   examples:
     hazo: Deutsch-Übersetzung von "hazo"
     baum: Madagassisch-Übersetzung von "baum"
+mk 0:
+  include:
+    key: mk-${language} 0
+mk 1:
+  include:
+    key: mk-${language} 1
 mk-de 0:
   title: Mazedonisch-Deutsch (Pauker.at)
   include:
@@ -2846,6 +3224,12 @@ mk-de 1:
   examples:
     дрво: Deutsch-Übersetzung von "дрво"
     baum: Mazedonisch-Übersetzung von "baum"
+ml 0:
+  include:
+    key: ml-${language} 0
+ml 1:
+  include:
+    key: ml-${language} 1
 ml-de 0:
   title: Malayalam-Deutsch (Pauker.at)
   include:
@@ -2857,6 +3241,12 @@ ml-de 1:
   examples:
     മരം: Deutsch-Übersetzung von "മരം"
     baum: Malayalam-Übersetzung von "baum"
+mn 0:
+  include:
+    key: mn-${language} 0
+mn 1:
+  include:
+    key: mn-${language} 1
 mn-de 0:
   title: Mongolisch-Deutsch (Pauker.at)
   include:
@@ -2868,6 +3258,12 @@ mn-de 1:
   examples:
     мод: Deutsch-Übersetzung von "мод"
     baum: Mongolisch-Übersetzung von "baum"
+mr 0:
+  include:
+    key: mr-${language} 0
+mr 1:
+  include:
+    key: mr-${language} 1
 mr-de 0:
   title: Marathi-Deutsch (Pauker.at)
   include:
@@ -2879,6 +3275,12 @@ mr-de 1:
   examples:
     झाड: Deutsch-Übersetzung von "झाड"
     baum: Marathi-Übersetzung von "baum"
+ms 0:
+  include:
+    key: ms-${language} 0
+ms 1:
+  include:
+    key: ms-${language} 1
 ms-de 0:
   title: Malaiisch-Deutsch (Pauker.at)
   include:
@@ -2890,6 +3292,12 @@ ms-de 1:
   examples:
     pokok: Deutsch-Übersetzung von "pokok"
     baum: Malaiisch-Übersetzung von "baum"
+mt 0:
+  include:
+    key: mt-${language} 0
+mt 1:
+  include:
+    key: mt-${language} 1
 mt-de 0:
   title: Maltesisch-Deutsch (Pauker.at)
   include:
@@ -2901,6 +3309,12 @@ mt-de 1:
   examples:
     siġra: Deutsch-Übersetzung von "siġra"
     baum: Maltesisch-Übersetzung von "baum"
+my 0:
+  include:
+    key: my-${language} 0
+my 1:
+  include:
+    key: my-${language} 1
 my-de 0:
   title: Birmanisch-Deutsch (Pauker.at)
   include:
@@ -2912,6 +3326,12 @@ my-de 1:
   examples:
     အိုးသတ္တု: Deutsch-Übersetzung von "အိုးသတ္တု"
     baum: Birmanisch-Übersetzung von "baum"
+nb 0:
+  include:
+    key: nb-${language} 0
+nb 1:
+  include:
+    key: nb-${language} 1
 nb-de 0:
   title: Norwegisch Bokmål-Deutsch (Pauker.at)
   include:
@@ -2923,6 +3343,12 @@ nb-de 1:
   examples:
     tre: Deutsch-Übersetzung von "tre"
     baum: Norwegisch Bokmål-Übersetzung von "baum"
+nd 0:
+  include:
+    key: nd-${language} 0
+nd 1:
+  include:
+    key: nd-${language} 1
 nd-de 0:
   title: Nord-Ndebele-Sprache-Deutsch (Pauker.at)
   include:
@@ -2934,6 +3360,12 @@ nd-de 1:
   examples:
     indlala: Deutsch-Übersetzung von "indlala"
     baum: Nord-Ndebele-Sprache-Übersetzung von "baum"
+ne 0:
+  include:
+    key: ne-${language} 0
+ne 1:
+  include:
+    key: ne-${language} 1
 ne-de 0:
   title: Nepalesisch-Deutsch (Pauker.at)
   include:
@@ -2945,6 +3377,12 @@ ne-de 1:
   examples:
     रूख: Deutsch-Übersetzung von "रूख"
     baum: Nepalesisch-Übersetzung von "baum"
+nl 0:
+  include:
+    key: nl-${language} 0
+nl 1:
+  include:
+    key: nl-${language} 1
 nl-de 0:
   title: Niederländisch-Deutsch (Pauker.at)
   include:
@@ -2956,6 +3394,12 @@ nl-de 1:
   examples:
     boom: Deutsch-Übersetzung von "boom"
     baum: Niederländisch-Übersetzung von "baum"
+nn 0:
+  include:
+    key: nn-${language} 0
+nn 1:
+  include:
+    key: nn-${language} 1
 nn-de 0:
   title: Norwegisch Nynorsk-Deutsch (Pauker.at)
   include:
@@ -2967,6 +3411,12 @@ nn-de 1:
   examples:
     tre: Deutsch-Übersetzung von "tre"
     baum: Norwegisch Nynorsk-Übersetzung von "baum"
+no 0:
+  include:
+    key: no-${language} 0
+no 1:
+  include:
+    key: no-${language} 1
 no-de 0:
   title: Norwegisch-Deutsch (Pauker.at)
   include:
@@ -2978,6 +3428,12 @@ no-de 1:
   examples:
     tre: Deutsch-Übersetzung von "tre"
     baum: Norwegisch-Übersetzung von "baum"
+om 0:
+  include:
+    key: om-${language} 0
+om 1:
+  include:
+    key: om-${language} 1
 om-de 0:
   title: Oromo-Deutsch (Pauker.at)
   include:
@@ -2989,6 +3445,12 @@ om-de 1:
   examples:
     dhukesa: Deutsch-Übersetzung von "dhukesa"
     baum: Oromo-Übersetzung von "baum"
+or 0:
+  include:
+    key: or-${language} 0
+or 1:
+  include:
+    key: or-${language} 1
 or-de 0:
   title: Oriya-Deutsch (Pauker.at)
   include:
@@ -3000,6 +3462,12 @@ or-de 1:
   examples:
     ବାଣ: Deutsch-Übersetzung von "ବାଣ"
     baum: Oriya-Übersetzung von "baum"
+os 0:
+  include:
+    key: os-${language} 0
+os 1:
+  include:
+    key: os-${language} 1
 os-de 0:
   title: Ossetisch-Deutsch (Pauker.at)
   include:
@@ -3011,6 +3479,12 @@ os-de 1:
   examples:
     дӕрвӕ: Deutsch-Übersetzung von "дӕрвӕ"
     baum: Ossetisch-Übersetzung von "baum"
+pa 0:
+  include:
+    key: pa-${language} 0
+pa 1:
+  include:
+    key: pa-${language} 1
 pa-de 0:
   title: Panjabi-Deutsch (Pauker.at)
   include:
@@ -3022,6 +3496,12 @@ pa-de 1:
   examples:
     ਰੁੱਖ: Deutsch-Übersetzung von "ਰੁੱਖ"
     baum: Panjabi-Übersetzung von "baum"
+pl 0:
+  include:
+    key: pl-${language} 0
+pl 1:
+  include:
+    key: pl-${language} 1
 pl-de 0:
   title: Polnisch-Deutsch (Pauker.at)
   include:
@@ -3033,6 +3513,12 @@ pl-de 1:
   examples:
     drzewo: Deutsch-Übersetzung von "drzewo"
     baum: Polnisch-Übersetzung von "baum"
+ps 0:
+  include:
+    key: ps-${language} 0
+ps 1:
+  include:
+    key: ps-${language} 1
 ps-de 0:
   title: Paschtu-Deutsch (Pauker.at)
   include:
@@ -3044,6 +3530,12 @@ ps-de 1:
   examples:
     درخت: Deutsch-Übersetzung von "درخت"
     baum: Paschtu-Übersetzung von "baum"
+pt 0:
+  include:
+    key: pt-${language} 0
+pt 1:
+  include:
+    key: pt-${language} 1
 pt-de 0:
   title: Portugiesisch-Deutsch (Pauker.at)
   include:
@@ -3055,6 +3547,12 @@ pt-de 1:
   examples:
     árvore: Deutsch-Übersetzung von "árvore"
     baum: Portugiesisch-Übersetzung von "baum"
+qu 0:
+  include:
+    key: qu-${language} 0
+qu 1:
+  include:
+    key: qu-${language} 1
 qu-de 0:
   title: Quechua-Deutsch (Pauker.at)
   include:
@@ -3066,6 +3564,12 @@ qu-de 1:
   examples:
     kulli: Deutsch-Übersetzung von "kulli"
     baum: Quechua-Übersetzung von "baum"
+rm 0:
+  include:
+    key: rm-${language} 0
+rm 1:
+  include:
+    key: rm-${language} 1
 rm-de 0:
   title: Rätoromanisch-Deutsch (Pauker.at)
   include:
@@ -3077,6 +3581,12 @@ rm-de 1:
   examples:
     tree: Deutsch-Übersetzung von "tree"
     baum: Rätoromanisch-Übersetzung von "baum"
+rn 0:
+  include:
+    key: rn-${language} 0
+rn 1:
+  include:
+    key: rn-${language} 1
 rn-de 0:
   title: Rundi-Sprache-Deutsch (Pauker.at)
   include:
@@ -3088,6 +3598,12 @@ rn-de 1:
   examples:
     umutumbudu: Deutsch-Übersetzung von "umutumbudu"
     baum: Rundi-Sprache-Übersetzung von "baum"
+ro 0:
+  include:
+    key: ro-${language} 0
+ro 1:
+  include:
+    key: ro-${language} 1
 ro-de 0:
   title: Rumänisch-Deutsch (Pauker.at)
   include:
@@ -3099,6 +3615,12 @@ ro-de 1:
   examples:
     copac: Deutsch-Übersetzung von "copac"
     baum: Rumänisch-Übersetzung von "baum"
+ru 0:
+  include:
+    key: ru-${language} 0
+ru 1:
+  include:
+    key: ru-${language} 1
 ru-de 0:
   title: Russisch-Deutsch (Pauker.at)
   include:
@@ -3110,6 +3632,12 @@ ru-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Russisch-Übersetzung von "baum"
+rw 0:
+  include:
+    key: rw-${language} 0
+rw 1:
+  include:
+    key: rw-${language} 1
 rw-de 0:
   title: Ruandisch-Deutsch (Pauker.at)
   include:
@@ -3121,6 +3649,12 @@ rw-de 1:
   examples:
     umusozi: Deutsch-Übersetzung von "umusozi"
     baum: Ruandisch-Übersetzung von "baum"
+se 0:
+  include:
+    key: se-${language} 0
+se 1:
+  include:
+    key: se-${language} 1
 se-de 0:
   title: Nord-Samisch-Deutsch (Pauker.at)
   include:
@@ -3132,6 +3666,12 @@ se-de 1:
   examples:
     oahppu: Deutsch-Übersetzung von "oahppu"
     baum: Nord-Samisch-Übersetzung von "baum"
+sg 0:
+  include:
+    key: sg-${language} 0
+sg 1:
+  include:
+    key: sg-${language} 1
 sg-de 0:
   title: Sango-Deutsch (Pauker.at)
   include:
@@ -3143,6 +3683,12 @@ sg-de 1:
   examples:
     mbombo: Deutsch-Übersetzung von "mbombo"
     baum: Sango-Übersetzung von "baum"
+si 0:
+  include:
+    key: si-${language} 0
+si 1:
+  include:
+    key: si-${language} 1
 si-de 0:
   title: Singhalesisch-Deutsch (Pauker.at)
   include:
@@ -3154,6 +3700,12 @@ si-de 1:
   examples:
     ගස: Deutsch-Übersetzung von "ගස"
     baum: Singhalesisch-Übersetzung von "baum"
+sk 0:
+  include:
+    key: sk-${language} 0
+sk 1:
+  include:
+    key: sk-${language} 1
 sk-de 0:
   title: Slowakisch-Deutsch (Pauker.at)
   include:
@@ -3165,6 +3717,12 @@ sk-de 1:
   examples:
     stromček: Deutsch-Übersetzung von "stromček"
     baum: Slowakisch-Übersetzung von "baum"
+sl 0:
+  include:
+    key: sl-${language} 0
+sl 1:
+  include:
+    key: sl-${language} 1
 sl-de 0:
   title: Slowenisch-Deutsch (Pauker.at)
   include:
@@ -3176,6 +3734,12 @@ sl-de 1:
   examples:
     drevo: Deutsch-Übersetzung von "drevo"
     baum: Slowenisch-Übersetzung von "baum"
+sn 0:
+  include:
+    key: sn-${language} 0
+sn 1:
+  include:
+    key: sn-${language} 1
 sn-de 0:
   title: Shona-Deutsch (Pauker.at)
   include:
@@ -3187,6 +3751,12 @@ sn-de 1:
   examples:
     mutsvairo: Deutsch-Übersetzung von "mutsvairo"
     baum: Shona-Übersetzung von "baum"
+so 0:
+  include:
+    key: so-${language} 0
+so 1:
+  include:
+    key: so-${language} 1
 so-de 0:
   title: Somali-Deutsch (Pauker.at)
   include:
@@ -3198,6 +3768,12 @@ so-de 1:
   examples:
     geed: Deutsch-Übersetzung von "geed"
     baum: Somali-Übersetzung von "baum"
+sq 0:
+  include:
+    key: sq-${language} 0
+sq 1:
+  include:
+    key: sq-${language} 1
 sq-de 0:
   title: Albanisch-Deutsch (Pauker.at)
   include:
@@ -3209,6 +3785,12 @@ sq-de 1:
   examples:
     pemë: Deutsch-Übersetzung von "pemë"
     baum: Albanisch-Übersetzung von "baum"
+sr 0:
+  include:
+    key: sr-${language} 0
+sr 1:
+  include:
+    key: sr-${language} 1
 sr-de 0:
   title: Serbisch-Deutsch (Pauker.at)
   include:
@@ -3220,6 +3802,12 @@ sr-de 1:
   examples:
     дрво: Deutsch-Übersetzung von "дрво"
     baum: Serbisch-Übersetzung von "baum"
+sv 0:
+  include:
+    key: sv-${language} 0
+sv 1:
+  include:
+    key: sv-${language} 1
 sv-de 0:
   title: Schwedisch-Deutsch (Pauker.at)
   include:
@@ -3231,6 +3819,12 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+sw 0:
+  include:
+    key: sw-${language} 0
+sw 1:
+  include:
+    key: sw-${language} 1
 sw-de 0:
   title: Suaheli-Deutsch (Pauker.at)
   include:
@@ -3242,6 +3836,12 @@ sw-de 1:
   examples:
     mti: Deutsch-Übersetzung von "mti"
     baum: Suaheli-Übersetzung von "baum"
+ta 0:
+  include:
+    key: ta-${language} 0
+ta 1:
+  include:
+    key: ta-${language} 1
 ta-de 0:
   title: Tamilisch-Deutsch (Pauker.at)
   include:
@@ -3253,6 +3853,12 @@ ta-de 1:
   examples:
     மரம்: Deutsch-Übersetzung von "மரம்"
     baum: Tamilisch-Übersetzung von "baum"
+te 0:
+  include:
+    key: te-${language} 0
+te 1:
+  include:
+    key: te-${language} 1
 te-de 0:
   title: Telugu-Deutsch (Pauker.at)
   include:
@@ -3264,6 +3870,12 @@ te-de 1:
   examples:
     చెట్టు: Deutsch-Übersetzung von "చెట్టు"
     baum: Telugu-Übersetzung von "baum"
+th 0:
+  include:
+    key: th-${language} 0
+th 1:
+  include:
+    key: th-${language} 1
 th-de 0:
   title: Thailändisch-Deutsch (Pauker.at)
   include:
@@ -3275,6 +3887,12 @@ th-de 1:
   examples:
     ต้นไม้: Deutsch-Übersetzung von "ต้นไม้"
     baum: Thailändisch-Übersetzung von "baum"
+ti 0:
+  include:
+    key: ti-${language} 0
+ti 1:
+  include:
+    key: ti-${language} 1
 ti-de 0:
   title: Tigrinja-Deutsch (Pauker.at)
   include:
@@ -3286,6 +3904,12 @@ ti-de 1:
   examples:
     ኣበባ: Deutsch-Übersetzung von "ኣበባ"
     baum: Tigrinja-Übersetzung von "baum"
+tl 0:
+  include:
+    key: tl-${language} 0
+tl 1:
+  include:
+    key: tl-${language} 1
 tl-de 0:
   title: Tagalog-Deutsch (Pauker.at)
   include:
@@ -3297,6 +3921,12 @@ tl-de 1:
   examples:
     puno: Deutsch-Übersetzung von "puno"
     baum: Tagalog-Übersetzung von "baum"
+to 0:
+  include:
+    key: to-${language} 0
+to 1:
+  include:
+    key: to-${language} 1
 to-de 0:
   title: Tongaisch-Deutsch (Pauker.at)
   include:
@@ -3308,6 +3938,12 @@ to-de 1:
   examples:
     kahoa: Deutsch-Übersetzung von "kahoa"
     baum: Tongaisch-Übersetzung von "baum"
+tr 0:
+  include:
+    key: tr-${language} 0
+tr 1:
+  include:
+    key: tr-${language} 1
 tr-de 0:
   title: Türkisch-Deutsch (Pauker.at)
   include:
@@ -3319,6 +3955,12 @@ tr-de 1:
   examples:
     ağaç: Deutsch-Übersetzung von "ağaç"
     baum: Türkisch-Übersetzung von "baum"
+ug 0:
+  include:
+    key: ug-${language} 0
+ug 1:
+  include:
+    key: ug-${language} 1
 ug-de 0:
   title: Uigurisch-Deutsch (Pauker.at)
   include:
@@ -3330,6 +3972,12 @@ ug-de 1:
   examples:
     قۇش: Deutsch-Übersetzung von "قۇش"
     baum: Uigurisch-Übersetzung von "baum"
+uk 0:
+  include:
+    key: uk-${language} 0
+uk 1:
+  include:
+    key: uk-${language} 1
 uk-de 0:
   title: Ukrainisch-Deutsch (Pauker.at)
   include:
@@ -3341,6 +3989,12 @@ uk-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Ukrainisch-Übersetzung von "baum"
+ur 0:
+  include:
+    key: ur-${language} 0
+ur 1:
+  include:
+    key: ur-${language} 1
 ur-de 0:
   title: Urdu-Deutsch (Pauker.at)
   include:
@@ -3352,6 +4006,12 @@ ur-de 1:
   examples:
     درخت: Deutsch-Übersetzung von "درخت"
     baum: Urdu-Übersetzung von "baum"
+uz 0:
+  include:
+    key: uz-${language} 0
+uz 1:
+  include:
+    key: uz-${language} 1
 uz-de 0:
   title: Usbekisch-Deutsch (Pauker.at)
   include:
@@ -3363,6 +4023,12 @@ uz-de 1:
   examples:
     daraxt: Deutsch-Übersetzung von "daraxt"
     baum: Usbekisch-Übersetzung von "baum"
+vi 0:
+  include:
+    key: vi-${language} 0
+vi 1:
+  include:
+    key: vi-${language} 1
 vi-de 0:
   title: Vietnamesisch-Deutsch (Pauker.at)
   include:
@@ -3374,6 +4040,12 @@ vi-de 1:
   examples:
     cây: Deutsch-Übersetzung von "cây"
     baum: Vietnamesisch-Übersetzung von "baum"
+yi 0:
+  include:
+    key: yi-${language} 0
+yi 1:
+  include:
+    key: yi-${language} 1
 yi-de 0:
   title: Jiddisch-Deutsch (Pauker.at)
   include:
@@ -3385,6 +4057,12 @@ yi-de 1:
   examples:
     בוים: Deutsch-Übersetzung von "בוים"
     baum: Jiddisch-Übersetzung von "baum"
+yo 0:
+  include:
+    key: yo-${language} 0
+yo 1:
+  include:
+    key: yo-${language} 1
 yo-de 0:
   title: Yoruba-Deutsch (Pauker.at)
   include:
@@ -3396,6 +4074,12 @@ yo-de 1:
   examples:
     igi: Deutsch-Übersetzung von "igi"
     baum: Yoruba-Übersetzung von "baum"
+zh 0:
+  include:
+    key: zh-${language} 0
+zh 1:
+  include:
+    key: zh-${language} 1
 zh-de 0:
   title: Chinesisch-Deutsch (Pauker.at)
   include:
@@ -3407,6 +4091,12 @@ zh-de 1:
   examples:
     树: Deutsch-Übersetzung von "树"
     baum: Chinesisch-Übersetzung von "baum"
+zu 0:
+  include:
+    key: zu-${language} 0
+zu 1:
+  include:
+    key: zu-${language} 1
 zu-de 0:
   title: Zulu-Deutsch (Pauker.at)
   include:

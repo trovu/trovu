@@ -1,3 +1,9 @@
+de 0:
+  include:
+    key: de-${language} 0
+de 1:
+  include:
+    key: de-${language} 1
 de-en 0:
   url: https://dict.leo.org/german-english/
   title: German-English (leo.org)
@@ -150,6 +156,12 @@ de-zh 1:
   examples:
     baum: 中文 的"baum"翻译
     树: 德文 的"树"翻译
+en 0:
+  include:
+    key: en-${language} 0
+en 1:
+  include:
+    key: en-${language} 1
 en-de 0:
   title: Englisch-Deutsch (leo.org)
   include:
@@ -218,6 +230,12 @@ en-ru 1:
   examples:
     tree: Перевод на русский язык для "tree"
     дерево: Перевод на английский язык для "дерево"
+es 0:
+  include:
+    key: es-${language} 0
+es 1:
+  include:
+    key: es-${language} 1
 es-de 0:
   title: Spanisch-Deutsch (leo.org)
   include:
@@ -259,6 +277,12 @@ es-pt 1:
   examples:
     árbol: Tradução em português de "árbol"
     árvore: Tradução em espanhol de "árvore"
+fr 0:
+  include:
+    key: fr-${language} 0
+fr 1:
+  include:
+    key: fr-${language} 1
 fr-de 0:
   title: Französisch-Deutsch (leo.org)
   include:
@@ -281,6 +305,12 @@ fr-en 1:
   examples:
     arbre: English translation of "arbre"
     tree: French translation of "tree"
+it 0:
+  include:
+    key: it-${language} 0
+it 1:
+  include:
+    key: it-${language} 1
 it-de 0:
   title: Italienisch-Deutsch (leo.org)
   include:
@@ -292,6 +322,12 @@ it-de 1:
   examples:
     albero: Deutsch-Übersetzung von "albero"
     baum: Italienisch-Übersetzung von "baum"
+pl 0:
+  include:
+    key: pl-${language} 0
+pl 1:
+  include:
+    key: pl-${language} 1
 pl-de 0:
   title: Polnisch-Deutsch (leo.org)
   include:
@@ -303,6 +339,12 @@ pl-de 1:
   examples:
     drzewo: Deutsch-Übersetzung von "drzewo"
     baum: Polnisch-Übersetzung von "baum"
+pt 0:
+  include:
+    key: pt-${language} 0
+pt 1:
+  include:
+    key: pt-${language} 1
 pt-de 0:
   title: Portugiesisch-Deutsch (leo.org)
   include:
@@ -325,6 +367,12 @@ pt-es 1:
   examples:
     árvore: Traducción al español de "árvore"
     árbol: Traducción al portugués de "árbol"
+ru 0:
+  include:
+    key: ru-${language} 0
+ru 1:
+  include:
+    key: ru-${language} 1
 ru-de 0:
   title: Russisch-Deutsch (leo.org)
   include:
@@ -347,6 +395,12 @@ ru-en 1:
   examples:
     дерево: English translation of "дерево"
     tree: Russian translation of "tree"
+zh 0:
+  include:
+    key: zh-${language} 0
+zh 1:
+  include:
+    key: zh-${language} 1
 zh-de 0:
   title: Chinesisch-Deutsch (leo.org)
   include:
