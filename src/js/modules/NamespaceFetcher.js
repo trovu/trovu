@@ -156,10 +156,15 @@ export default class NamespaceFetcher {
           const shortcutsToIncludeFrom = shortcut.include.namespace
             ? this.namespaceInfos[shortcut.include.namespace].shortcuts
             : shortcuts;
-          const shortcutToInclude = this.cloneShortcut(
-            shortcutsToIncludeFrom[keyToIncludeFromProcessed],
-          );
-          shortcuts[key] = Object.assign(shortcutToInclude, shortcut);
+          // Only include if shortcut to include exists.
+          if (shortcutsToIncludeFrom[keyToIncludeFromProcessed]) {
+            const shortcutToInclude = this.cloneShortcut(
+              shortcutsToIncludeFrom[keyToIncludeFromProcessed],
+            );
+            shortcuts[key] = Object.assign(shortcutToInclude, shortcut);
+          } else {
+            delete shortcuts[key];
+          }
         } else {
           Helper.log(`Incorrect include found at ${key}`);
           this.error = true;
