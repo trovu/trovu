@@ -1,9 +1,3 @@
-en 0:
-  include:
-    key: en-{$language} 0
-en 1:
-  include:
-    key: en-{$language} 1
 en-tr 0:
   url: https://www.zargan.com/
   title: İngilizce-Türkçe (Zargan)
@@ -23,12 +17,6 @@ en-tr 1:
   examples:
     tree: '"tree" için Türkçe çevirisi'
     ağaç: '"ağaç" için İngilizce çevirisi'
-tr 0:
-  include:
-    key: tr-{$language} 0
-tr 1:
-  include:
-    key: tr-{$language} 1
 tr-en 0:
   title: Turkish-English (Zargan)
   include:

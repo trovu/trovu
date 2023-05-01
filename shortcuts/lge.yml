@@ -1,9 +1,3 @@
-de 0:
-  include:
-    key: de-{$language} 0
-de 1:
-  include:
-    key: de-{$language} 1
 de-en 0:
   url: https://www.linguee.com/english-german/
   title: German-English (Linguee)
@@ -99,12 +93,6 @@ de-pt 1:
   examples:
     baum: Tradução em português de "baum"
     árvore: Tradução em alemão de "árvore"
-en 0:
-  include:
-    key: en-{$language} 0
-en 1:
-  include:
-    key: en-{$language} 1
 en-de 0:
   title: Englisch-Deutsch (Linguee)
   include:
@@ -173,12 +161,6 @@ en-pt 1:
   examples:
     tree: Tradução em português de "tree"
     árvore: Tradução em inglês de "árvore"
-es 0:
-  include:
-    key: es-{$language} 0
-es 1:
-  include:
-    key: es-{$language} 1
 es-de 0:
   title: Spanisch-Deutsch (Linguee)
   include:
@@ -201,12 +183,6 @@ es-en 1:
   examples:
     árbol: English translation of "árbol"
     tree: Spanish translation of "tree"
-fr 0:
-  include:
-    key: fr-{$language} 0
-fr 1:
-  include:
-    key: fr-{$language} 1
 fr-de 0:
   title: Französisch-Deutsch (Linguee)
   include:
@@ -229,12 +205,6 @@ fr-en 1:
   examples:
     arbre: English translation of "arbre"
     tree: French translation of "tree"
-pl 0:
-  include:
-    key: pl-{$language} 0
-pl 1:
-  include:
-    key: pl-{$language} 1
 pl-de 0:
   title: Polnisch-Deutsch (Linguee)
   include:
@@ -246,12 +216,6 @@ pl-de 1:
   examples:
     drzewo: Deutsch-Übersetzung von "drzewo"
     baum: Polnisch-Übersetzung von "baum"
-pt 0:
-  include:
-    key: pt-{$language} 0
-pt 1:
-  include:
-    key: pt-{$language} 1
 pt-de 0:
   title: Portugiesisch-Deutsch (Linguee)
   include:

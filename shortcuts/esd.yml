@@ -1,9 +1,3 @@
-en 0:
-  include:
-    key: en-{$language} 0
-en 1:
-  include:
-    key: en-{$language} 1
 en-es 0:
   url: https://www.spanishdict.com/
   title: Inglés-Español (SpanishDict)
@@ -23,12 +17,6 @@ en-es 1:
   examples:
     tree: Traducción al español de "tree"
     árbol: Traducción al inglés de "árbol"
-es 0:
-  include:
-    key: es-{$language} 0
-es 1:
-  include:
-    key: es-{$language} 1
 es-en 0:
   title: Spanish-English (SpanishDict)
   include:

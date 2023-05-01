@@ -1,9 +1,3 @@
-de 0:
-  include:
-    key: de-{$language} 0
-de 1:
-  include:
-    key: de-{$language} 1
 de-ja 0:
   url: http://www.wadoku.de/
   title: ドイツ語-日本語 (Wadoku)
@@ -23,12 +17,6 @@ de-ja 1:
   examples:
     baum: '"baum"の日本語翻訳'
     木: '"木"のドイツ語翻訳'
-ja 0:
-  include:
-    key: ja-{$language} 0
-ja 1:
-  include:
-    key: ja-{$language} 1
 ja-de 0:
   title: Japanisch-Deutsch (Wadoku)
   include:
