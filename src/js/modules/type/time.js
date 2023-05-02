@@ -10,7 +10,7 @@ export default class TimeType {
     }
     // Match '11:23' and '11.23'
     if ((matches = str.match(/^(\d+)(\.|:)(\d+)$/))) {
-      const [, hours, minutes] = matches;
+      const [, hours, , minutes] = matches;
       time = new Date();
       time.setHours(hours);
       time.setMinutes(minutes);
