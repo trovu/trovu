@@ -281,6 +281,18 @@ export default class UrlProcessor {
       jx: 'ĵ',
       sx: 'ŝ',
       ux: 'ŭ',
+      CX: 'Ĉ',
+      GX: 'Ĝ',
+      HX: 'Ĥ',
+      JX: 'Ĵ',
+      SX: 'Ŝ',
+      UX: 'Ŭ',
+      Cx: 'Ĉ',
+      Gx: 'Ĝ',
+      Hx: 'Ĥ',
+      Jx: 'Ĵ',
+      Sx: 'Ŝ',
+      Ux: 'Ŭ',
     };
 
     const regex = new RegExp(Object.keys(charMap).join('|'), 'g');
