@@ -1,5 +1,5 @@
 export default class TimeType {
-  static async parse(str, locale) {
+  static async parse(str) {
     let time, matches;
 
     // Match '11'
