@@ -1,6 +1,6 @@
 import DateType from './date.js';
 
-test('parseDateType', async () => {
+test('DateType.parse', async () => {
   const locale = 'en-US';
   jest.useFakeTimers().setSystemTime(new Date(2020, 11, 31));
   const expectations = {
