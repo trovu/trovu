@@ -170,7 +170,7 @@ export default class UrlProcessor {
   }
 
   static async processTypeTime(processedArgument, locale, attributes) {
-    const timeNative = await TimeType.parse(processedArgument, locale);
+    const timeNative = await TimeType.parse(processedArgument);
     const time = dayjs(timeNative);
     // If time could be parsed:
     // Set argument.

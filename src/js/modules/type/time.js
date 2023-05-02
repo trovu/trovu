@@ -1,5 +1,5 @@
 export default class TimeType {
-  static async parse(str, locale) {
+  static async parse(str) {
     let time, matches;
 
     // Match '11'
@@ -10,7 +10,7 @@ export default class TimeType {
     }
     // Match '11:23' and '11.23'
     if ((matches = str.match(/^(\d+)(\.|:)(\d+)$/))) {
-      const [, hours, minutes] = matches;
+      const [, hours, , minutes] = matches;
       time = new Date();
       time.setHours(hours);
       time.setMinutes(minutes);
