@@ -208,7 +208,7 @@ export default class UrlProcessor {
         processedArgument = processedArgument.toLowerCase();
         break;
       case 'eo-cx':
-        processedArgument = this.mapEsperantoChars(processedArgument);
+        processedArgument = this.transformEoCx(processedArgument);
         break;
     }
     return processedArgument;
@@ -273,7 +273,7 @@ export default class UrlProcessor {
    *
    * @returns {string} The resulting string with mapped Esperanto character codes.
    */
-  static mapEsperantoChars(str) {
+  static transformEoCx(str) {
     const charMap = {
       cx: 'ĉ',
       gx: 'ĝ',
