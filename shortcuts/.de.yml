@@ -9610,6 +9610,17 @@ sub 1:
   - library
   examples:
     houellebecq: Suche nach "houellebecq"
+swb 1:
+  url: http://www.schwaebisches-woerterbuch.de/default.asp?q={%Suchwort|encoding=iso-8859-1}
+  title: Schwäbisches Wörterbuch
+  description: Suche im schwäbischen Wörterbuch
+  tags:
+    - dialect
+    - dictionary
+    - German
+    - Swabian
+  examples:
+    Gschäfd: Der Ort, wo man schafft.
 swp 0:
   url: https://www.swp-berlin.org/
   title: Stiftung Wissenschaft und Politik
