@@ -346,7 +346,7 @@ bu7 1:
   examples:
     Windward Banks: Suche nach einem Buch nach Titel und Autor, unspezifisch
 bu7a 1:
-  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&contributor={%autor}
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&contributor={%Autor}
   title: Buch7 Autorensuche
   description: Suche nach Autor (»contributor«) beim Online-Buchhändler buch7
   tags:
@@ -368,7 +368,7 @@ bu7i 1:
   examples:
     '9780226389578': Sucht nach einem Buch mit bekannter ISBN
 bu7t 1:
-  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%titel}
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%Titel}
   title: Buch7 Titelsuche
   description: Suche nach Buchtitel beim Online-Buchhändlers buch7
   tags:
@@ -379,7 +379,7 @@ bu7t 1:
   examples:
     all men of genius: Buchsuche nach Titel
 bu7ta 2:
-  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%titel}&contributor={%autor}
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%Titel}&contributor={%Autor}
   title: Buch7 Titel- und Autorensuche
   description: Suche nach Titel und Autor beim Online-Buchhändler buch7
   tags:
