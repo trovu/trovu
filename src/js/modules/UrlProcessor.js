@@ -217,6 +217,8 @@ export default class UrlProcessor {
   static processAttributeEncoding(attributes, processedArgument) {
     switch (attributes.encoding) {
       case 'iso-8859-1':
+        // TODO: replace with encodeURIComponent
+        // check if no regression.
         processedArgument = escape(processedArgument);
         break;
       case 'none':
