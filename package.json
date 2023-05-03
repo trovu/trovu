@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "test": "npm run test-unit && npm run test-calls && npm run test-fe",
-    "test-unit": "jest env helper src/js/ ",
-    "test-calls": "jest calls",
+    "test-unit": "jest --verbose env helper src/js/ ",
+    "test-calls": "jest --verbose calls",
     "test-fe": "cypress run",
     "doc": "rm -r doc ; jsdoc src/js/* --configure jsdoc.json --destination doc",
     "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
