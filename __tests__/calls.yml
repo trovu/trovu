@@ -119,8 +119,3 @@
     defaultKeyword: false
   response:
     status: not_found
-- title: map EO chars
-  env:
-    query: de.eo sxuo
-  response:
-    redirectUrl: https://www.pauker.at/pauker/DE_DE/eo/wb?suche=%C5%9Duo
