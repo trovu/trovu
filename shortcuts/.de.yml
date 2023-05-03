@@ -327,6 +327,69 @@ bsvg 2:
   - travel
   examples:
     Ludwigstraße,Siekgraben: Verbindung von Ludwigstraße nach Siekgraben
+bu7 0:
+  url: https://www.buch7.de
+  title: Buch7 Online-Buchhändler
+  description: Startseite des Online-Buchhändlers buch7
+  tags:
+    - books
+    - bookshop
+    - Germany
+bu7 1:
+  url: https://www.buch7.de/suche?utf8=%E2%9C%93&search={%Suche}
+  title: Buch7 Suche
+  description: Allgemeine Suche bei buch7
+  tags:
+    - books
+    - bookshop
+    - Germany
+  examples:
+    Windward Banks: Suche nach einem Buch nach Titel und Autor, unspezifisch
+bu7a 1:
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&contributor={%autor}
+  title: Buch7 Autorensuche
+  description: Suche nach Autor (»contributor«) beim Online-Buchhändler buch7
+  tags:
+    - books
+    - bookshop
+    - Germany
+    - Autor
+  examples:
+    Sarah Gailey: Suche nach Büchern einer bestimmten Autorin
+bu7i 1:
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&isbn={%isbn}
+  title: Buch7 ISBN-Suche
+  description: Suche nach ISBN beim Online-Buchhändler buch7
+  tags:
+    - books
+    - bookshop
+    - Germany
+    - ISBN
+  examples:
+    9780226389578: Sucht nach einem Buch mit bekannter ISBN
+bu7t 1:
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%titel}
+  title: Buch7 Titelsuche
+  description: Suche nach Buchtitel beim Online-Buchhändlers buch7
+  tags:
+    - books
+    - bookshop
+    - Germany
+    - Titel
+  examples:
+    all men of genius: Buchsuche nach Titel
+bu7ta 2:
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%titel}&contributor={%autor}
+  title: Buch7 Titel- und Autorensuche
+  description: Suche nach Titel und Autor beim Online-Buchhändler buch7
+  tags:
+    - books
+    - bookshop
+    - Germany
+    - Titel
+    - Autor
+  examples:
+    Cheer, Frasier: Buchsuche nach Titel und Autor
 bvb 0:
   url: https://www.bib-bvb.de/
   title: BibliotheksVerbund Bayern
