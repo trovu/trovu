@@ -2888,6 +2888,14 @@ sw-pka 1:
   include:
     key: sw-de 1
     namespace: pka
+swb 0:
+  url: http://www.schwaebisches-woerterbuch.de/
+  title: Schwäbisches Wörterbuch
+  description: Schwäbischen Wörterbuch
+  tags:
+  - Swabian
+  - dialect
+  - dictionary
 swb 1:
   url: http://www.schwaebisches-woerterbuch.de/default.asp?q={%Suchwort|encoding=iso-8859-1}
   title: Schwäbisches Wörterbuch
