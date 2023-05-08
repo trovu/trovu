@@ -17,7 +17,7 @@ export default class NamespaceFetcher {
    */
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
-    await this.fetchNamespaceInfos2(namespaces);
+    this.namespaceInfos = await this.fetchNamespaceInfos2(namespaces);
     return;
     await this.ensureNamespaceInfos(namespaces, 1);
     this.addReachable();
@@ -49,6 +49,7 @@ export default class NamespaceFetcher {
         this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
       }
     }
+    return this.namespaceInfos;
   }
 
   startFetches2(newNamespaceInfos) {
