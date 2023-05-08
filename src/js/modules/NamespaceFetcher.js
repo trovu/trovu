@@ -16,6 +16,9 @@ export default class NamespaceFetcher {
    * @returns {Object} An object containing namespace information
    */
   async getNamespaceInfos(namespaces) {
+    this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
+    await this.fetchNamespaceInfos2(namespaces);
+    return;
     await this.ensureNamespaceInfos(namespaces, 1);
     this.addReachable();
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
@@ -28,6 +31,30 @@ export default class NamespaceFetcher {
       }
     }
     return this.namespaceInfos;
+  }
+
+  async fetchNamespaceInfos2(namespaces) {
+    while (
+      Object.values(this.namespaceInfos).filter(
+        (item) => !('shortcuts' in item),
+      ).length > 0
+    ) {
+      const newNamespaceInfos = Object.values(this.namespaceInfos).filter(
+        (item) => !('shortcuts' in item),
+      );
+      const promises = [];
+      for (const namespaceInfo of newNamespaceInfos) {
+        const promise = fetch(namespaceInfo.url, {
+          cache: this.env.reload ? 'reload' : 'force-cache',
+        });
+        promises.push(promise);
+      }
+      const responses = await Promise.all(promises);
+      await this.processResponses(newNamespaceInfos, responses);
+      for (const namespaceInfo of newNamespaceInfos) {
+        this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+      }
+    }
   }
 
   /**
@@ -81,9 +108,8 @@ export default class NamespaceFetcher {
    * @returns {Object} The updated namespace information object.
    */
   async processResponses(newNamespaceInfos, responses) {
-    for (const namespaceName in newNamespaceInfos) {
-      const namespaceInfo = newNamespaceInfos[namespaceName];
-      const response = responses[namespaceInfo.priority];
+    for (const namespaceInfo of newNamespaceInfos) {
+      const response = responses.shift();
       if (!response || response.status != 200) {
         if (this.env.debug)
           Helper.log(
