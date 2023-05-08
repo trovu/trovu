@@ -42,19 +42,24 @@ export default class NamespaceFetcher {
       const newNamespaceInfos = Object.values(this.namespaceInfos).filter(
         (item) => !('shortcuts' in item),
       );
-      const promises = [];
-      for (const namespaceInfo of newNamespaceInfos) {
-        const promise = fetch(namespaceInfo.url, {
-          cache: this.env.reload ? 'reload' : 'force-cache',
-        });
-        promises.push(promise);
-      }
+      const promises = this.startFetches2(newNamespaceInfos);
       const responses = await Promise.all(promises);
       await this.processResponses(newNamespaceInfos, responses);
       for (const namespaceInfo of newNamespaceInfos) {
         this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
       }
     }
+  }
+
+  startFetches2(newNamespaceInfos) {
+    const promises = [];
+    for (const namespaceInfo of newNamespaceInfos) {
+      const promise = fetch(namespaceInfo.url, {
+        cache: this.env.reload ? 'reload' : 'force-cache',
+      });
+      promises.push(promise);
+    }
+    return promises;
   }
 
   /**
