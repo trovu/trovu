@@ -110,6 +110,7 @@ export default class NamespaceFetcher {
         namespaceInfo.shortcuts[key] = this.convertToObject(
           namespaceInfo.shortcuts[key],
         );
+        this.addNamespacesFromInclude(namespaceInfo.shortcuts[key]);
       }
     }
     return newNamespaceInfos;
@@ -128,6 +129,17 @@ export default class NamespaceFetcher {
       };
     }
     return shortcut;
+  }
+
+  addNamespacesFromInclude(shortcut) {
+    if (shortcut.include && shortcut.include.namespace) {
+      const namespaceInfo = this.getInitalNamespaceInfo(
+        shortcut.include.namespace,
+      );
+      if (!this.namespaceInfos[namespaceInfo.name]) {
+        this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+      }
+    }
   }
 
   /**
