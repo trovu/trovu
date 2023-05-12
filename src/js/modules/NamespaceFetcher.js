@@ -17,7 +17,8 @@ export default class NamespaceFetcher {
    */
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
-    this.namespaceInfos = await this.fetchNamespaceInfos2(namespaces);
+    this.namespaceInfos = await this.fetchNamespaceInfos2(this.namespaceInfos);
+    console.log(this.namespaceInfos);
     return;
     await this.ensureNamespaceInfos(namespaces, 1);
     this.addReachable();
@@ -33,28 +34,27 @@ export default class NamespaceFetcher {
     return this.namespaceInfos;
   }
 
-  async fetchNamespaceInfos2(namespaces) {
+  async fetchNamespaceInfos2(namespaceInfos) {
     for (
       let i = 0;
-      Object.values(this.namespaceInfos).filter(
-        (item) => !('shortcuts' in item),
-      ).length > 0 && i <= 10;
+      Object.values(namespaceInfos).filter((item) => !('shortcuts' in item))
+        .length > 0 && i <= 10;
       i++
     ) {
       if (i >= 10) {
         throw new Error(`NamespaceFetcher loop ran already ${i} times.`);
       }
-      const newNamespaceInfos = Object.values(this.namespaceInfos).filter(
+      const newNamespaceInfos = Object.values(namespaceInfos).filter(
         (item) => !('shortcuts' in item),
       );
       const promises = this.startFetches2(newNamespaceInfos);
       const responses = await Promise.all(promises);
       await this.processResponses(newNamespaceInfos, responses);
       for (const namespaceInfo of newNamespaceInfos) {
-        this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+        namespaceInfos[namespaceInfo.name] = namespaceInfo;
       }
     }
-    return this.namespaceInfos;
+    return namespaceInfos;
   }
 
   startFetches2(newNamespaceInfos) {
