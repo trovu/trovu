@@ -34,11 +34,16 @@ export default class NamespaceFetcher {
   }
 
   async fetchNamespaceInfos2(namespaces) {
-    while (
+    for (
+      let i = 0;
       Object.values(this.namespaceInfos).filter(
         (item) => !('shortcuts' in item),
-      ).length > 0
+      ).length > 0 && i <= 10;
+      i++
     ) {
+      if (i >= 10) {
+        throw new Error(`NamespaceFetcher loop ran already ${i} times.`);
+      }
       const newNamespaceInfos = Object.values(this.namespaceInfos).filter(
         (item) => !('shortcuts' in item),
       );
