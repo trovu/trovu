@@ -83,13 +83,10 @@ export default class CallHandler {
     if (env.debug) Helper.log('');
     if (env.debug) Helper.log('Used template: ' + response.redirectUrl);
 
-    response.redirectUrl = await UrlProcessor.replaceVariables(
-      response.redirectUrl,
-      {
-        language: env.language,
-        country: env.country,
-      },
-    );
+    response.redirectUrl = UrlProcessor.replaceVariables(response.redirectUrl, {
+      language: env.language,
+      country: env.country,
+    });
     response.redirectUrl = await UrlProcessor.replaceArguments(
       response.redirectUrl,
       env.args,

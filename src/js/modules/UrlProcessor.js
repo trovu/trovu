@@ -238,7 +238,7 @@ export default class UrlProcessor {
    *
    * @return {string} str       - The string with the replaced variables.
    */
-  static async replaceVariables(str, variables) {
+  static replaceVariables(str, variables) {
     const placeholders = this.getVariablesFromString(str);
 
     for (const varName in placeholders) {
