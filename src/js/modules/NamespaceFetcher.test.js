@@ -41,6 +41,23 @@ describe('NamespaceFetcher.processInclude', () => {
     });
   });
 
+  test('with variable', () => {
+    const shortcut = jsyaml.load(`
+    include:
+      key: fr-{$language} 1
+    `);
+    expect(
+      new NamespaceFetcher({ language: 'de' }).processInclude(
+        shortcut,
+        'leo',
+        namespaceInfos,
+      ),
+    ).toEqual({
+      url: 'https://dict.leo.org/französisch-deutsch/{%word}',
+      title: 'Französisch-Deutsch (leo.org)',
+    });
+  });
+
   test('with loop', () => {
     const namespaceInfosLoop = jsyaml.load(`
       leo:
