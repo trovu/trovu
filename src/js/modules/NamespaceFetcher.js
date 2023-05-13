@@ -212,7 +212,6 @@ export default class NamespaceFetcher {
     if (!shortcut.include.key) {
       Helper.log(`Include with missing key at: ${key}`);
       this.error = true;
-      delete shortcuts[key];
       return false;
     }
     const key = shortcut.include.key;
@@ -228,7 +227,6 @@ export default class NamespaceFetcher {
         namespaceInfos,
       );
     }
-    delete shortcut.include;
     const shortcutToIncludeCloned = this.cloneShortcut(shortcutToInclude);
     shortcut = Object.assign(shortcutToIncludeCloned, shortcut);
     //shortcut = Object.assign(shortcutToInclude, shortcut);
