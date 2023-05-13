@@ -203,18 +203,16 @@ export default class NamespaceFetcher {
   }
 
   processInclude(shortcut, namespaceName, namespaceInfos) {
-    // const keyUnprocessed = shortcut.include.key;
-    // // Replace variables.
-    // const key = await UrlProcessor.replaceVariables(keyUnprocessed, {
-    //   language: this.env.language,
-    //   country: this.env.country,
-    // });
     if (!shortcut.include.key) {
       Helper.log(`Include with missing key at: ${key}`);
       this.error = true;
       return false;
     }
-    const key = shortcut.include.key;
+    const keyUnprocessed = shortcut.include.key;
+    const key = UrlProcessor.replaceVariables(keyUnprocessed, {
+      language: this.env.language,
+      country: this.env.country,
+    });
     namespaceName = shortcut.include.namespace || namespaceName;
     let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
     if (!shortcutToInclude) {
