@@ -189,12 +189,6 @@ export default class NamespaceFetcher {
         if (!shortcut.include) {
           continue;
         }
-        if (!shortcut.include.key) {
-          Helper.log(`Include with missing key at: ${key}`);
-          this.error = true;
-          delete shortcuts[key];
-          continue;
-        }
         shortcuts[key] = await this.processInclude(
           shortcut,
           namespaceName,
@@ -215,6 +209,12 @@ export default class NamespaceFetcher {
     //   language: this.env.language,
     //   country: this.env.country,
     // });
+    if (!shortcut.include.key) {
+      Helper.log(`Include with missing key at: ${key}`);
+      this.error = true;
+      delete shortcuts[key];
+      return false;
+    }
     const key = shortcut.include.key;
     if (shortcut.include.namespace) {
       namespaceName = shortcut.include.namespace;
