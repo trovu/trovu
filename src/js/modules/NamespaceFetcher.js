@@ -208,31 +208,6 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
-  /**
-   * Adds included shortcuts to the given shortcuts object
-   * @param {Object} shortcuts - An object containing shortcuts
-   * @returns {Object} The updated shortcuts object with included shortcuts added
-   */
-  async addIncludes(shortcuts) {
-    for (const key in shortcuts) {
-      const shortcut = shortcuts[key];
-      if (!shortcut.include) {
-        continue;
-      }
-      if (!shortcut.include.key) {
-        Helper.log(`Include with missing key at: ${key}`);
-        this.error = true;
-        delete shortcuts[key];
-        continue;
-      }
-      shortcuts[key] = this.processInclude(shortcut, shortcuts);
-      if (!shortcuts[key]) {
-        delete shortcuts[key];
-      }
-    }
-    return shortcuts;
-  }
-
   processInclude(shortcut, namespaceName, namespaceInfos) {
     // const keyUnprocessed = shortcut.include.key;
     // // Replace variables.
