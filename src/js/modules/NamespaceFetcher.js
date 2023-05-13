@@ -225,7 +225,7 @@ export default class NamespaceFetcher {
         delete shortcuts[key];
         continue;
       }
-      shortcuts[key] = await this.processInclude(shortcut, shortcuts);
+      shortcuts[key] = this.processInclude(shortcut, shortcuts);
       if (!shortcuts[key]) {
         delete shortcuts[key];
       }
@@ -233,7 +233,7 @@ export default class NamespaceFetcher {
     return shortcuts;
   }
 
-  async processInclude(shortcut, namespaceName, namespaceInfos) {
+  processInclude(shortcut, namespaceName, namespaceInfos) {
     // const keyUnprocessed = shortcut.include.key;
     // // Replace variables.
     // const key = await UrlProcessor.replaceVariables(keyUnprocessed, {
