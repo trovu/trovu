@@ -203,6 +203,13 @@ export default class NamespaceFetcher {
   }
 
   processInclude(shortcut, namespaceName, namespaceInfos) {
+    const namespaceNameOrg = namespaceName;
+    if (
+      namespaceNameOrg == 'georgjaehnig' &&
+      shortcut.include.key == 'fr-de 1'
+    ) {
+      console.log(JSON.stringify(shortcut));
+    }
     // const keyUnprocessed = shortcut.include.key;
     // // Replace variables.
     // const key = await UrlProcessor.replaceVariables(keyUnprocessed, {
@@ -218,6 +225,9 @@ export default class NamespaceFetcher {
     const key = shortcut.include.key;
     namespaceName = shortcut.include.namespace || namespaceName;
     let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
+    if (namespaceNameOrg == 'georgjaehnig' && key == 'fr-de 1') {
+      console.log(JSON.stringify(shortcutToInclude));
+    }
     if (!shortcutToInclude) {
       return false;
     }
@@ -229,9 +239,16 @@ export default class NamespaceFetcher {
       );
     }
     delete shortcut.include;
+    if (namespaceNameOrg == 'georgjaehnig' && key == 'fr-de 1') {
+      console.log(JSON.stringify(shortcutToInclude));
+    }
     const shortcutToIncludeCloned = this.cloneShortcut(shortcutToInclude);
     shortcut = Object.assign(shortcutToIncludeCloned, shortcut);
     //shortcut = Object.assign(shortcutToInclude, shortcut);
+    delete shortcut.include;
+    if (namespaceNameOrg == 'georgjaehnig' && key == 'fr-de 1') {
+      console.log(JSON.stringify(shortcut));
+    }
     return shortcut;
   }
 
