@@ -40,4 +40,27 @@ describe('NamespaceFetcher.processInclude', () => {
       title: 'Französisch-Deutsch (leo.org)',
     });
   });
+
+  const namespaceInfosLoop = jsyaml.load(`
+    leo:
+      shortcuts:
+        tic 1:
+          include:
+            key: tac 1
+        tac 1:
+          include:
+            key: toe 1
+        toe 1:
+          include:
+            key: tic 1
+  `);
+  test('with loop', () => {
+    const shortcut = jsyaml.load(`
+    include:
+      key: tic 1
+    `);
+    expect(
+      new NamespaceFetcher({}).processInclude(shortcut, 'leo', namespaceInfos),
+    ).toEqual(false);
+  });
 });
