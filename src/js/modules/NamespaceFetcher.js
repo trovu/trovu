@@ -229,7 +229,6 @@ export default class NamespaceFetcher {
     }
     const shortcutToIncludeCloned = this.cloneShortcut(shortcutToInclude);
     shortcut = Object.assign(shortcutToIncludeCloned, shortcut);
-    //shortcut = Object.assign(shortcutToInclude, shortcut);
     delete shortcut.include;
     return shortcut;
   }
