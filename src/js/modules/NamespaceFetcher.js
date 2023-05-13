@@ -18,6 +18,7 @@ export default class NamespaceFetcher {
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
     this.namespaceInfos = await this.fetchNamespaceInfos2(this.namespaceInfos);
+    this.namespaceInfos = await this.processIncludes(this.namespaceInfos);
     console.log(this.namespaceInfos);
     return;
     await this.ensureNamespaceInfos(namespaces, 1);
@@ -194,7 +195,11 @@ export default class NamespaceFetcher {
           delete shortcuts[key];
           continue;
         }
-        //shortcuts[key] = await this.processInclude(shortcut, shortcuts);
+        shortcuts[key] = await this.processInclude(
+          shortcut,
+          namespaceName,
+          namespaceInfos,
+        );
         if (!shortcuts[key]) {
           delete shortcuts[key];
         }
@@ -228,38 +233,35 @@ export default class NamespaceFetcher {
     return shortcuts;
   }
 
-  async processInclude(shortcut, shortcuts) {
-    const keyUnprocessed = shortcut.include.key;
-    // Replace variables.
-    const key = await UrlProcessor.replaceVariables(keyUnprocessed, {
-      language: this.env.language,
-      country: this.env.country,
-    });
-    if (shortcut.include.namespace) {
-      await this.ensureNamespaceInfos([shortcut.include.namespace], 0);
+  async processInclude(shortcut, namespaceName, namespaceInfos) {
+    // const keyUnprocessed = shortcut.include.key;
+    // // Replace variables.
+    // const key = await UrlProcessor.replaceVariables(keyUnprocessed, {
+    //   language: this.env.language,
+    //   country: this.env.country,
+    // });
+    const key = shortcut.include.key;
+    if (key == 'fr-de 1') {
+      console.log(key);
     }
-    // Pick the right namespace to include from.
-    const shortcutsToIncludeFrom = shortcut.include.namespace
-      ? this.namespaceInfos[shortcut.include.namespace].shortcuts
-      : shortcuts;
-
-    if (!shortcutsToIncludeFrom[key]) {
-      // console.log(key, shortcut.include.namespace, shortcutsToIncludeFrom[key]);
+    if (shortcut.include.namespace) {
+      namespaceName = shortcut.include.namespace;
+    }
+    let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
+    if (!shortcutToInclude) {
       return false;
     }
-    if (shortcutsToIncludeFrom[key].include) {
-      shortcutsToIncludeFrom[key] = await this.processInclude(
-        shortcutsToIncludeFrom[key],
-        shortcuts,
+    if (shortcutToInclude.include) {
+      shortcutToInclude = this.processInclude(
+        shortcutToInclude,
+        namespaceName,
+        namespaceInfos,
       );
     }
-    if (!shortcutsToIncludeFrom[key]) {
-      return false;
-      // TODO: Report this on some low level.
-    }
-    const shortcutToInclude = this.cloneShortcut(shortcutsToIncludeFrom[key]);
-    shortcut = Object.assign(shortcutToInclude, shortcut);
     delete shortcut.include;
+    const shortcutToIncludeCloned = this.cloneShortcut(shortcutToInclude);
+    shortcut = Object.assign(shortcutToIncludeCloned, shortcut);
+    //shortcut = Object.assign(shortcutToInclude, shortcut);
     return shortcut;
   }
 
