@@ -216,9 +216,7 @@ export default class NamespaceFetcher {
       return false;
     }
     const key = shortcut.include.key;
-    if (shortcut.include.namespace) {
-      namespaceName = shortcut.include.namespace;
-    }
+    namespaceName = shortcut.include.namespace || namespaceName;
     let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
     if (!shortcutToInclude) {
       return false;
