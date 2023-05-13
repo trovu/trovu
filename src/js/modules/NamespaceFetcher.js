@@ -241,9 +241,6 @@ export default class NamespaceFetcher {
     //   country: this.env.country,
     // });
     const key = shortcut.include.key;
-    if (key == 'fr-de 1') {
-      console.log(key);
-    }
     if (shortcut.include.namespace) {
       namespaceName = shortcut.include.namespace;
     }
