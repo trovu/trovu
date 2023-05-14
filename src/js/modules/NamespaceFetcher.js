@@ -366,6 +366,14 @@ export default class NamespaceFetcher {
         `Missing url or deprecated in ${shortcut.namespace}.${shortcut.key}.`,
       );
     }
+    if (
+      shortcut.url &&
+      shortcut.argumentCount != Object.keys(shortcut.arguments).length
+    ) {
+      throw new Error(
+        `Mismatch in argumentCount of key and arguments.length of url in ${shortcut.namespace}.${shortcut.key} .`,
+      );
+    }
   }
 
   /**
