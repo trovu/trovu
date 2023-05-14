@@ -265,7 +265,9 @@ export default class NamespaceFetcher {
       });
       namespaceName = include.namespace || namespaceName;
       if (!namespaceInfos[namespaceName]) {
-        Helper.log(`Namespace to include from "${key}" does not exist.`);
+        Helper.log(
+          `Namespace to include from "${namespaceName}" does not exist.`,
+        );
         this.error = true;
         continue;
       }
