@@ -126,12 +126,15 @@ describe('NamespaceFetcher.processInclude', () => {
             title: Französisch-Deutsch (leo.org)
             include:
               key: de-fr 1
+          fr 1:
+            include:
+              key: fr-{$language} 1
     `);
     const shortcut = jsyaml.load(`
     include:
-    - key: fr-{$language} 1
+    - key: fr 1
       namespace: lge
-    - key: fr-{$language} 1
+    - key: fr 1
       namespace: leo
     `);
     expect(
