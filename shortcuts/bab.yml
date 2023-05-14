@@ -1,3 +1,9 @@
+da 0:
+  include:
+    key: da-{$language} 0
+da 1:
+  include:
+    key: da-{$language} 1
 da-de 0:
   url: https://de.bab.la/woerterbuch/daenisch-deutsch/
   title: Dänisch-Deutsch (bab.la)
@@ -17,6 +23,12 @@ da-de 1:
   examples:
     træ: Deutsch-Übersetzung von "træ"
     baum: Dänisch-Übersetzung von "baum"
+de 0:
+  include:
+    key: de-{$language} 0
+de 1:
+  include:
+    key: de-{$language} 1
 de-da 0:
   title: Tysk-Dansk (bab.la)
   include:
@@ -161,6 +173,12 @@ de-tr 1:
   examples:
     baum: '"baum" için Türkçe çevirisi'
     ağaç: '"ağaç" için Almanca çevirisi'
+en 0:
+  include:
+    key: en-{$language} 0
+en 1:
+  include:
+    key: en-{$language} 1
 en-pl 0:
   url: https://pl.bab.la/slownik/angielski-polski/
   title: Angielski-Polski (bab.la)
@@ -180,6 +198,12 @@ en-pl 1:
   examples:
     tree: Tłumaczenie na język polski dla "tree"
     drzewo: Tłumaczenie na język angielski dla "drzewo"
+es 0:
+  include:
+    key: es-{$language} 0
+es 1:
+  include:
+    key: es-{$language} 1
 es-de 0:
   title: Spanisch-Deutsch (bab.la)
   include:
@@ -191,6 +215,12 @@ es-de 1:
   examples:
     árbol: Deutsch-Übersetzung von "árbol"
     baum: Spanisch-Übersetzung von "baum"
+fr 0:
+  include:
+    key: fr-{$language} 0
+fr 1:
+  include:
+    key: fr-{$language} 1
 fr-de 0:
   title: Französisch-Deutsch (bab.la)
   include:
@@ -202,6 +232,12 @@ fr-de 1:
   examples:
     arbre: Deutsch-Übersetzung von "arbre"
     baum: Französisch-Übersetzung von "baum"
+it 0:
+  include:
+    key: it-{$language} 0
+it 1:
+  include:
+    key: it-{$language} 1
 it-de 0:
   title: Italienisch-Deutsch (bab.la)
   include:
@@ -213,6 +249,12 @@ it-de 1:
   examples:
     albero: Deutsch-Übersetzung von "albero"
     baum: Italienisch-Übersetzung von "baum"
+pl 0:
+  include:
+    key: pl-{$language} 0
+pl 1:
+  include:
+    key: pl-{$language} 1
 pl-de 0:
   title: Polnisch-Deutsch (bab.la)
   include:
@@ -235,6 +277,12 @@ pl-en 1:
   examples:
     drzewo: English translation of "drzewo"
     tree: Polish translation of "tree"
+ru 0:
+  include:
+    key: ru-{$language} 0
+ru 1:
+  include:
+    key: ru-{$language} 1
 ru-de 0:
   title: Russisch-Deutsch (bab.la)
   include:
@@ -246,6 +294,12 @@ ru-de 1:
   examples:
     дерево: Deutsch-Übersetzung von "дерево"
     baum: Russisch-Übersetzung von "baum"
+sv 0:
+  include:
+    key: sv-{$language} 0
+sv 1:
+  include:
+    key: sv-{$language} 1
 sv-de 0:
   title: Schwedisch-Deutsch (bab.la)
   include:
@@ -257,6 +311,12 @@ sv-de 1:
   examples:
     träd: Deutsch-Übersetzung von "träd"
     baum: Schwedisch-Übersetzung von "baum"
+tr 0:
+  include:
+    key: tr-{$language} 0
+tr 1:
+  include:
+    key: tr-{$language} 1
 tr-de 0:
   title: Türkisch-Deutsch (bab.la)
   include:
