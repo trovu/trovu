@@ -160,7 +160,7 @@ de-pns 1:
 dei 1:
   deprecated:
     alternative:
-      query: de-lge {%1}
+      query: lge.de {%1}
       created: '2023-04-10'
 dict 1:
   url: http://dictionary.reference.com/browse/{%query}
@@ -235,12 +235,12 @@ es-pns 1:
 esi 1:
   deprecated:
     alternative:
-      query: es-lge {%1}
+      query: lge.es {%1}
       created: '2023-04-10'
 esp 1:
   deprecated:
     alternative:
-      query: es-pns {%1}
+      query: pns.es {%1}
       created: '2023-04-10'
 et-dcm 0:
   include:
@@ -309,7 +309,7 @@ fr-rvs 1:
 frp 1:
   deprecated:
     alternative:
-      query: fr-pns {%1}
+      query: pns.fr {%1}
       created: '2023-04-10'
 ga 1:
   url: http://www.irishionary.com/search/{%word}/

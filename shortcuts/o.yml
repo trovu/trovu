@@ -4095,12 +4095,12 @@ le 0:
 leo 1:
   deprecated:
     alternative:
-      query: de.en-leo {%1}
+      query: leo.en {%1}
       created: '2023-04-10'
 leo_es 1:
   deprecated:
     alternative:
-      query: de.es-leo {%1}
+      query: leo.es {%1}
       created: '2023-04-10'
 lg 1:
   url: https://libgen.is/search.php?req={%query}
@@ -4113,17 +4113,17 @@ lh 0:
 lin 1:
   deprecated:
     alternative:
-      query: de.en-lge {%1}
+      query: lgs.en {%1}
       created: '2023-04-10'
 linfr 1:
   deprecated:
     alternative:
-      query: de.fr-lge {%1}
+      query: lge.fr {%1}
       created: '2023-04-10'
 linguee 1:
   deprecated:
     alternative:
-      query: de.en-lge {%1}
+      query: lge.en {%1}
       created: '2023-04-10'
 lintian 1:
   url: http://lintian.debian.org/tags/{%query}.html
@@ -5126,7 +5126,7 @@ psql 0:
 pt-pons 1:
   deprecated:
     alternative:
-      query: en.pt-pns {%1}
+      query: pns.pt {%1}
       created: '2023-04-10'
 pubchem 1:
   url: http://www.ncbi.nlm.nih.gov/pccompound/?term={%compound}
@@ -5889,7 +5889,7 @@ suepo 0:
 svfr 1:
   deprecated:
     alternative:
-      query: rf.sv {%1}
+      query: fr.sv {%1}
       created: '2023-04-10'
 swipl 0:
   url: http://www.swi-prolog.org/pldoc/index.html

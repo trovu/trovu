@@ -414,7 +414,7 @@ cs-pka 1:
 csd 1:
   deprecated:
     alternative:
-      query: cs-dcc {%1}
+      query: dcc.cs {%1}
       created: '2023-04-10'
 css 1:
   url: http://www.google.de/search?q=site%3Acss4you.de+{%query}
@@ -483,7 +483,7 @@ da-pka 1:
 dab 1:
   deprecated:
     alternative:
-      query: da-bab {%1}
+      query: bab.da {%1}
       created: '2023-04-10'
 dclj 0:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
@@ -612,7 +612,7 @@ el-pns 1:
 eld 1:
   deprecated:
     alternative:
-      query: el-dcc {%1}
+      query: dcc.el {%1}
       created: '2023-04-10'
 en 0:
   include:
@@ -689,12 +689,12 @@ en-pns 1:
 enb 1:
   deprecated:
     alternative:
-      query: en-beo {%1}
+      query: beo.en {%1}
       created: '2023-04-10'
 end 1:
   deprecated:
     alternative:
-      query: en-dcc {%1}
+      query: dcc.en {%1}
       created: '2023-04-10'
 endung 1:
   url: http://www.endungen.de/ResultList/ResultList.aspx?searchExtension={%Dateieindung}&searchPlatform=win;mac;unix;os2&searchMode=contains
@@ -707,12 +707,12 @@ endung 1:
 eni 1:
   deprecated:
     alternative:
-      query: en-lge {%1}
+      query: lge.en {%1}
       created: '2023-03-12'
 enp 1:
   deprecated:
     alternative:
-      query: en-pns {%1}
+      query: pns.en {%1}
       created: '2023-04-10'
 eo 0:
   include:
@@ -809,27 +809,27 @@ es-pns 1:
 es-pons 1:
   deprecated:
     alternative:
-      query: es-pns {%1}
+      query: pns.es {%1}
       created: '2023-04-10'
 esb 1:
   deprecated:
     alternative:
-      query: es-bab {%1}
+      query: bab.es {%1}
       created: '2023-04-10'
 esd 1:
   deprecated:
     alternative:
-      query: es-dcc {%1}
+      query: dcc.es {%1}
       created: '2023-04-10'
 esi 1:
   deprecated:
     alternative:
-      query: es-lge {%1}
+      query: lge.es {%1}
       created: '2023-03-12'
 esp 1:
   deprecated:
     alternative:
-      query: es-pns {%1}
+      query: pns.es {%1}
       created: '2023-04-10'
 et-dcm 0:
   include:
@@ -1044,7 +1044,7 @@ fr-pns 1:
 fr-pons 1:
   deprecated:
     alternative:
-      query: fr-pns {%1}
+      query: pns.fr {%1}
       created: '2023-04-10'
 fr-rvs 0:
   include:
@@ -1057,7 +1057,7 @@ fr-rvs 1:
 frb 1:
   deprecated:
     alternative:
-      query: fr-bab {%1}
+      query: bab.fr {%1}
       created: '2023-04-10'
 frbuch 0:
   url: http://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm
@@ -1074,17 +1074,17 @@ frbuch 1:
 frd 1:
   deprecated:
     alternative:
-      query: fr-dcc {%1}
+      query: dcc.fr {%1}
       created: '2023-04-10'
 fri 1:
   deprecated:
     alternative:
-      query: fr-lge {%1}
+      query: lge.fr {%1}
       created: '2023-03-12'
 frp 1:
   deprecated:
     alternative:
-      query: fr-pns {%1}
+      query: pns.fr {%1}
       created: '2023-04-10'
 frv 1:
   url: https://de.forvo.com/search/{%word}/
@@ -1389,12 +1389,12 @@ hu-pns 1:
 hud 1:
   deprecated:
     alternative:
-      query: hu-dcc {%1}
+      query: dcc.hu {%1}
       created: '2023-04-10'
 hup 1:
   deprecated:
     alternative:
-      query: hu-pns {%1}
+      query: pns.hu {%1}
       created: '2023-04-10'
 hwho 1:
   url: http://www.heise.de/netze/tools?rm=whois&plugin={%URL}
@@ -1549,17 +1549,17 @@ it-pns 1:
 itb 1:
   deprecated:
     alternative:
-      query: it-bab {%1}
+      query: bab.it {%1}
       created: '2023-04-10'
 itd 1:
   deprecated:
     alternative:
-      query: it-dcc {%1}
+      query: dcc.it {%1}
       created: '2023-04-10'
 itp 1:
   deprecated:
     alternative:
-      query: it-pns {%1}
+      query: pns.it {%1}
       created: '2023-04-10'
 ja 0:
   include:
@@ -1765,7 +1765,7 @@ la-pka 1:
 lad 1:
   deprecated:
     alternative:
-      query: la-dcc {%1}
+      query: dcc.la {%1}
       created: '2023-04-10'
 last 1:
   url: http://www.last.fm/search?setlang=de&q={%artist}
@@ -1786,7 +1786,7 @@ lb-pka 1:
 leo 1:
   deprecated:
     alternative:
-      query: en-leo {%1}
+      query: leo.en {%1}
       created: '2023-03-12'
 lg-pka 0:
   include:
@@ -2030,7 +2030,7 @@ nl-umt 1:
 nld 1:
   deprecated:
     alternative:
-      query: nl-dcc {%1}
+      query: dcc.nl {%1}
       created: '2023-04-10'
 nlde 1:
   deprecated:
@@ -2258,22 +2258,22 @@ pl-pns 1:
 plb 1:
   deprecated:
     alternative:
-      query: pl-bab {%1}
+      query: bab.pl {%1}
       created: '2023-04-10'
 pld 1:
   deprecated:
     alternative:
-      query: pl-dcc {%1}
+      query: dcc.pl {%1}
       created: '2023-04-10'
 pli 1:
   deprecated:
     alternative:
-      query: pl-lge {%1}
+      query: lge.pl {%1}
       created: '2023-04-10'
 plp 1:
   deprecated:
     alternative:
-      query: pl-pns {%1}
+      query: pns.pl {%1}
       created: '2023-04-10'
 ps-pka 0:
   include:
@@ -2358,22 +2358,22 @@ pt-pns 1:
 ptb 1:
   deprecated:
     alternative:
-      query: pt-beo {%1}
+      query: beo.pt {%1}
       created: '2023-04-10'
 ptd 1:
   deprecated:
     alternative:
-      query: pt-dcc {%1}
+      query: dcc.pt {%1}
       created: '2023-04-10'
 pti 1:
   deprecated:
     alternative:
-      query: pt-lge {%1}
+      query: lge.pt {%1}
       created: '2023-03-12'
 ptp 1:
   deprecated:
     alternative:
-      query: pt-pns {%1}
+      query: pns.pt {%1}
       created: '2023-04-10'
 qa 1:
   url: https://lite.qwant.com/?q={%query}
@@ -2563,12 +2563,12 @@ ru-pns 1:
 rub 1:
   deprecated:
     alternative:
-      query: ru-bab {%1}
+      query: bab.ru {%1}
       created: '2023-04-10'
 rud 1:
   deprecated:
     alternative:
-      query: ru-dcc {%1}
+      query: dcc.ru {%1}
       created: '2023-04-10'
 rundschau 1:
   url: https://www.fr.de/suche/?qr={%Suche}
@@ -2580,7 +2580,7 @@ rundschau 1:
 rup 1:
   deprecated:
     alternative:
-      query: ru-pns {%1}
+      query: pns.ru {%1}
       created: '2023-04-10'
 rw-pka 0:
   include:
@@ -2863,12 +2863,12 @@ sv-pka 1:
 svb 1:
   deprecated:
     alternative:
-      query: sv-bab {%1}
+      query: bab.sv {%1}
       created: '2023-04-10'
 svd 1:
   deprecated:
     alternative:
-      query: sv-dcc {%1}
+      query: dcc.sv {%1}
       created: '2023-04-10'
 sw-pka 0:
   include:
@@ -3057,12 +3057,12 @@ tr-pka 1:
 trb 1:
   deprecated:
     alternative:
-      query: tr-bab {%1}
+      query: bab.tr {%1}
       created: '2023-04-10'
 trd 1:
   deprecated:
     alternative:
-      query: tr-dcc {%1}
+      query: dcc.tr {%1}
       created: '2023-04-10'
 ts 0:
   url: http://www.tagesschau.de/

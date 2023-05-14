@@ -93,7 +93,7 @@ de-pns 1:
 dep 1:
   deprecated:
     alternative:
-      query: de-pns {%1}
+      query: pns.de {%1}
       created: '2023-04-10'
 dle 1:
   url: http://dle.rae.es/?w={%palabra}
