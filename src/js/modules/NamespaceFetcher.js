@@ -217,6 +217,34 @@ export default class NamespaceFetcher {
     }
   }
 
+  /**
+   * Ensure shortcuts have the correct structure.
+   *
+   * @param {array} shortcuts      - The shortcuts to normalize.
+   * @param {string} namespaceName - The namespace name to show in error message.
+   *
+   * @return {array} shortcuts - The normalized shortcuts.
+   */
+  checkKeySyntax(shortcuts, namespaceName) {
+    const incorrectKeys = [];
+    for (const key in shortcuts) {
+      if (!key.match(/\S+ \d/)) {
+        incorrectKeys.push(key);
+      }
+    }
+    if (incorrectKeys.length > 0) {
+      Helper.log(
+        "Incorrect keys found in namespace '" +
+          namespaceName +
+          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
+          '\n\n' +
+          incorrectKeys.join('\n'),
+      );
+      this.error = true;
+    }
+    return shortcuts;
+  }
+
   addNamespacesFromInclude(shortcut) {
     if (shortcut.include && shortcut.include.namespace) {
       const namespaceInfo = this.getInitalNamespaceInfo(
@@ -412,34 +440,6 @@ export default class NamespaceFetcher {
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
     shortcut.title = shortcut.title || '';
     return shortcut;
-  }
-
-  /**
-   * Ensure shortcuts have the correct structure.
-   *
-   * @param {array} shortcuts      - The shortcuts to normalize.
-   * @param {string} namespaceName - The namespace name to show in error message.
-   *
-   * @return {array} shortcuts - The normalized shortcuts.
-   */
-  checkKeySyntax(shortcuts, namespaceName) {
-    const incorrectKeys = [];
-    for (const key in shortcuts) {
-      if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
-      }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
-    }
-    return shortcuts;
   }
 
   logSuccess(response) {
