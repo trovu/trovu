@@ -24,6 +24,22 @@ export default class NamespaceFetcher {
     return this.namespaceInfos;
   }
 
+  /**
+   * Gets initial namespace information for given namespaces
+   * @param {Array} namespaces - An array of namespace names
+   * @param {number} priorityOffset - The offset to be used when setting the priority.
+   * @returns {Object} An object containing initial namespace information for each given namespace
+   */
+  getInitialNamespaceInfos(namespaces, priorityOffset) {
+    return Object.fromEntries(
+      namespaces.map((namespace, index) => {
+        const namespaceInfo = this.getInitalNamespaceInfo(namespace);
+        namespaceInfo.priority = index + priorityOffset;
+        return [namespaceInfo.name, namespaceInfo];
+      }),
+    );
+  }
+
   addInfos(namespaceInfos) {
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
@@ -254,22 +270,6 @@ export default class NamespaceFetcher {
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
     shortcut.title = shortcut.title || '';
     return shortcut;
-  }
-
-  /**
-   * Gets initial namespace information for given namespaces
-   * @param {Array} namespaces - An array of namespace names
-   * @param {number} priorityOffset - The offset to be used when setting the priority.
-   * @returns {Object} An object containing initial namespace information for each given namespace
-   */
-  getInitialNamespaceInfos(namespaces, priorityOffset) {
-    return Object.fromEntries(
-      namespaces.map((namespace, index) => {
-        const namespaceInfo = this.getInitalNamespaceInfo(namespace);
-        namespaceInfo.priority = index + priorityOffset;
-        return [namespaceInfo.name, namespaceInfo];
-      }),
-    );
   }
 
   /**
