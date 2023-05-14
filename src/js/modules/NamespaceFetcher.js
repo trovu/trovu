@@ -19,8 +19,6 @@ export default class NamespaceFetcher {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
     this.namespaceInfos = await this.fetchNamespaceInfos2(this.namespaceInfos);
     this.namespaceInfos = this.processIncludes(this.namespaceInfos);
-    console.log(this.namespaceInfos);
-    return;
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
