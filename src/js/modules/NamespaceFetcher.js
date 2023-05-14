@@ -398,6 +398,25 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
+  /**
+   *  Add info like keyword, arguments to a shortcut.
+   *
+   * @param {object} shortcut - The shortcut.
+   * @param {string} key - The shortcut key.
+   * @param {object} namespaceInfo - The namespace info.
+   *
+   * @return {object} shortcut - Shortcut with info.
+   */
+  addInfo(shortcut, key, namespaceName) {
+    shortcut.key = key;
+    [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
+    shortcut.argumentCount = parseInt(shortcut.argumentCount);
+    shortcut.namespace = namespaceName;
+    shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
+    shortcut.title = shortcut.title || '';
+    return shortcut;
+  }
+
   verifyAll(namespaceInfos) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
@@ -421,25 +440,6 @@ export default class NamespaceFetcher {
         `Mismatch in argumentCount of key and arguments.length of url in ${shortcut.namespace}.${shortcut.key} .`,
       );
     }
-  }
-
-  /**
-   *  Add info like keyword, arguments to a shortcut.
-   *
-   * @param {object} shortcut - The shortcut.
-   * @param {string} key - The shortcut key.
-   * @param {object} namespaceInfo - The namespace info.
-   *
-   * @return {object} shortcut - Shortcut with info.
-   */
-  addInfo(shortcut, key, namespaceName) {
-    shortcut.key = key;
-    [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
-    shortcut.argumentCount = parseInt(shortcut.argumentCount);
-    shortcut.namespace = namespaceName;
-    shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
-    shortcut.title = shortcut.title || '';
-    return shortcut;
   }
 
   logSuccess(response) {
