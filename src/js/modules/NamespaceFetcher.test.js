@@ -106,14 +106,15 @@ describe('NamespaceFetcher.processInclude', () => {
     include:
       key: tic 1
     `);
-    expect(
+    expect(() => {
       new NamespaceFetcher({}).processInclude(
         shortcut,
         'leo',
         namespaceInfosLoop,
-      ),
-    ).toEqual(false);
+      );
+    }).toThrow(Error);
   });
+
   test('multiple', () => {
     const namespaceInfosMultiple = jsyaml.load(`
       leo:
