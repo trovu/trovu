@@ -286,6 +286,7 @@ export default class NamespaceFetcher {
   addInfo(shortcut, key, namespaceName) {
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
+    shortcut.argumentCount = parseInt(shortcut.argumentCount);
     shortcut.namespace = namespaceName;
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
     shortcut.title = shortcut.title || '';
