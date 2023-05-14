@@ -245,14 +245,16 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
-  processInclude(shortcut, namespaceName, namespaceInfos) {
+  processInclude(shortcut, namespaceName, namespaceInfos, depth = 0) {
+    if (depth >= 10) {
+      throw new Error(`NamespaceFetcher loop ran already ${depth} times.`);
+    }
     let includes = [];
     if (Array.isArray(shortcut.include)) {
       includes = shortcut.include;
     } else {
       includes.push(shortcut.include);
     }
-    delete shortcut.include; // to break loops.
     for (const include of includes) {
       if (!include.key) {
         Helper.log(`Include with missing key at: ${key}`);
@@ -281,6 +283,7 @@ export default class NamespaceFetcher {
           shortcutToInclude,
           namespaceName,
           namespaceInfos,
+          depth + 1,
         );
       }
       if (Object.keys(shortcutToInclude).length === 0) {
