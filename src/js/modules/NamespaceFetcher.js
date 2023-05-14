@@ -37,6 +37,11 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
+  /**
+   * Fetches the information for the given namespaces from an external source
+   * @param {Object} namespaceInfos - An object of initial namespace infos.
+   * @returns {Object} An object containing the fetched information for each given namespace
+   */
   async fetchNamespaceInfos2(namespaceInfos) {
     for (
       let i = 0;
