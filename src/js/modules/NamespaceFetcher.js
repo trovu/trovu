@@ -17,7 +17,7 @@ export default class NamespaceFetcher {
    */
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
-    this.namespaceInfos = await this.fetchNamespaceInfos2(this.namespaceInfos);
+    this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = this.processIncludes(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
     this.namespaceInfos = this.addInfos(this.namespaceInfos);
@@ -42,7 +42,7 @@ export default class NamespaceFetcher {
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
    */
-  async fetchNamespaceInfos2(namespaceInfos) {
+  async fetchNamespaceInfos(namespaceInfos) {
     for (
       let i = 0;
       Object.values(namespaceInfos).filter((item) => !('shortcuts' in item))
@@ -55,7 +55,7 @@ export default class NamespaceFetcher {
       const newNamespaceInfos = Object.values(namespaceInfos).filter(
         (item) => !('shortcuts' in item),
       );
-      const promises = this.startFetches2(newNamespaceInfos);
+      const promises = this.startFetches(newNamespaceInfos);
       const responses = await Promise.all(promises);
       await this.processResponses(newNamespaceInfos, responses);
       for (const namespaceInfo of newNamespaceInfos) {
@@ -65,7 +65,7 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
-  startFetches2(newNamespaceInfos) {
+  startFetches(newNamespaceInfos) {
     const promises = [];
     for (const namespaceInfo of newNamespaceInfos) {
       const promise = fetch(namespaceInfo.url, {
