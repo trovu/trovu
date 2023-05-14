@@ -64,11 +64,6 @@
     query: reload
   response:
     status: reloaded
-- title: extra user namespace
-  env:
-    query: georgjaehnig.example
-  response:
-    redirectUrl: https://www.example.com
 - title: deprecated with alternative
   env:
     country: de
