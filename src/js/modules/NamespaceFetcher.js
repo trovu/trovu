@@ -21,6 +21,7 @@ export default class NamespaceFetcher {
     this.namespaceInfos = this.processIncludeAll(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
     this.namespaceInfos = this.addInfoAll(this.namespaceInfos);
+    this.verifyAll(this.namespaceInfos);
     return this.namespaceInfos;
   }
 
@@ -348,6 +349,23 @@ export default class NamespaceFetcher {
       }
     }
     return namespaceInfos;
+  }
+
+  verifyAll(namespaceInfos) {
+    for (const namespaceInfo of Object.values(namespaceInfos)) {
+      for (const key in namespaceInfo.shortcuts) {
+        this.verifyShortcut(namespaceInfo.shortcuts[key]);
+      }
+    }
+    return namespaceInfos;
+  }
+
+  verifyShortcut(shortcut) {
+    if (!shortcut.url && !shortcut.deprecated) {
+      throw new Error(
+        `Shortcut ${shortcut.namespace}.${shortcut.key} is missing url or deprecated.`,
+      );
+    }
   }
 
   /**
