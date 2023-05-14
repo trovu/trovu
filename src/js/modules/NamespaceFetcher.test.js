@@ -81,3 +81,37 @@ describe('NamespaceFetcher.processInclude', () => {
     ).toEqual(false);
   });
 });
+
+describe('NamespaceFetcher.addReachable', () => {
+  const namespaceInfos = jsyaml.load(`
+    o:
+      priority: 1
+      shortcuts:
+        eo 1:
+          title: Esperanto dictionary
+    de:
+      priority: 2
+      shortcuts:
+        eo 1:
+          title: Esperanto-Wörterbuch
+  `);
+
+  test('simple', () => {
+    expect(new NamespaceFetcher({}).addReachable(namespaceInfos)).toEqual(
+      jsyaml.load(`
+        o:
+          priority: 1
+          shortcuts:
+            eo 1:
+              title: Esperanto dictionary
+              reachable: false
+        de:
+          priority: 2
+          shortcuts:
+            eo 1:
+              title: Esperanto-Wörterbuch
+              reachable: true
+      `),
+    );
+  });
+});
