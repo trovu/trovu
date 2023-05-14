@@ -68,6 +68,46 @@ export default class NamespaceFetcher {
     return namespace;
   }
 
+  /**
+   * Add a URL template to a namespace that refers to a namespace in trovu-data.
+   *
+   * @param {string} name - The namespace name.
+   *
+   * @return {Object} namespace - The namespace with the added URL template.
+   */
+  addFetchUrlToSiteNamespace(name) {
+    const namespace = {
+      name: name,
+      type: 'site',
+      url: 'https://data.trovu.net/data/shortcuts/' + name + '.yml',
+    };
+    return namespace;
+  }
+
+  /**
+   * Add a URL template to a namespace that refers to a Github user repo.
+   *
+   * @param {string} name - The namespace name.
+   *
+   * @return {Object} namespace - The namespace with the added URL template.
+   */
+  addFetchUrlToGithubNamespace(namespace) {
+    if (namespace.github == '.') {
+      // Set to current user.
+      namespace.github = this.env.github;
+    }
+    // Default name to Github name.
+    if (!namespace.name) {
+      namespace.name = namespace.github;
+    }
+    namespace.url =
+      'https://raw.githubusercontent.com/' +
+      namespace.github +
+      '/trovu-data-user/master/shortcuts.yml';
+    namespace.type = 'user';
+    return namespace;
+  }
+
   addInfos(namespaceInfos) {
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
@@ -373,44 +413,5 @@ export default class NamespaceFetcher {
    */
   isSubscribed(namespaceInfo) {
     return namespaceInfo.priority && namespaceInfo.priority > 0;
-  }
-  /**
-   * Add a URL template to a namespace that refers to a namespace in trovu-data.
-   *
-   * @param {string} name - The namespace name.
-   *
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  addFetchUrlToSiteNamespace(name) {
-    const namespace = {
-      name: name,
-      type: 'site',
-      url: 'https://data.trovu.net/data/shortcuts/' + name + '.yml',
-    };
-    return namespace;
-  }
-
-  /**
-   * Add a URL template to a namespace that refers to a Github user repo.
-   *
-   * @param {string} name - The namespace name.
-   *
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  addFetchUrlToGithubNamespace(namespace) {
-    if (namespace.github == '.') {
-      // Set to current user.
-      namespace.github = this.env.github;
-    }
-    // Default name to Github name.
-    if (!namespace.name) {
-      namespace.name = namespace.github;
-    }
-    namespace.url =
-      'https://raw.githubusercontent.com/' +
-      namespace.github +
-      '/trovu-data-user/master/shortcuts.yml';
-    namespace.type = 'user';
-    return namespace;
   }
 }
