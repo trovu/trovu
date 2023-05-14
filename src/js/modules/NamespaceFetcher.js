@@ -150,6 +150,24 @@ export default class NamespaceFetcher {
   }
 
   /**
+   * Start fetching shortcuts per namespace.
+   *
+   * @param {array} newNamespaceInfos - The namespaces to fetch shortcuts for.
+   *
+   * @return {array} promises - The promises from the fetch() calls.
+   */
+  startFetches(newNamespaceInfos) {
+    const promises = [];
+    for (const namespaceInfo of newNamespaceInfos) {
+      const promise = fetch(namespaceInfo.url, {
+        cache: this.env.reload ? 'reload' : 'force-cache',
+      });
+      promises.push(promise);
+    }
+    return promises;
+  }
+
+  /**
    * Processes responses and updates namespace information.
    *
    * @param {Object} newNamespaceInfos - An object containing new namespace information.
@@ -327,24 +345,6 @@ export default class NamespaceFetcher {
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
     shortcut.title = shortcut.title || '';
     return shortcut;
-  }
-
-  /**
-   * Start fetching shortcuts per namespace.
-   *
-   * @param {array} newNamespaceInfos - The namespaces to fetch shortcuts for.
-   *
-   * @return {array} promises - The promises from the fetch() calls.
-   */
-  startFetches(newNamespaceInfos) {
-    const promises = [];
-    for (const namespaceInfo of newNamespaceInfos) {
-      const promise = fetch(namespaceInfo.url, {
-        cache: this.env.reload ? 'reload' : 'force-cache',
-      });
-      promises.push(promise);
-    }
-    return promises;
   }
 
   /**
