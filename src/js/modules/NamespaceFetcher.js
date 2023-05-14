@@ -21,7 +21,7 @@ export default class NamespaceFetcher {
     this.namespaceInfos = this.processIncludes(this.namespaceInfos);
     console.log(this.namespaceInfos);
     return;
-    this.addReachable();
+    this.namespaceInfos = this.addReachable(this.namespaceInfos);
     for (const namespaceInfo of Object.values(this.namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
         namespaceInfo.shortcuts[key] = this.addInfo(
@@ -247,8 +247,8 @@ export default class NamespaceFetcher {
    *
    * @param {object} namespaces - Current namespaces keyed by their name.
    */
-  addReachable() {
-    const namespaceInfosByPriority = Object.values(this.namespaceInfos).sort(
+  addReachable(namespaceInfos) {
+    const namespaceInfosByPriority = Object.values(namespaceInfos).sort(
       (a, b) => {
         return b.priority - a.priority;
       },
@@ -268,6 +268,7 @@ export default class NamespaceFetcher {
         foundShortcuts.add(key);
       }
     }
+    return namespaceInfos;
   }
 
   /**
