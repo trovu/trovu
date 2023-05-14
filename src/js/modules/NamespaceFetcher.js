@@ -81,17 +81,6 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
-  startFetches(newNamespaceInfos) {
-    const promises = [];
-    for (const namespaceInfo of newNamespaceInfos) {
-      const promise = fetch(namespaceInfo.url, {
-        cache: this.env.reload ? 'reload' : 'force-cache',
-      });
-      promises.push(promise);
-    }
-    return promises;
-  }
-
   /**
    * Processes responses and updates namespace information.
    *
@@ -307,12 +296,13 @@ export default class NamespaceFetcher {
    *
    * @return {array} promises - The promises from the fetch() calls.
    */
-  async startFetches(newNamespaceInfos) {
+  startFetches(newNamespaceInfos) {
     const promises = [];
-    for (const namespaceInfo of Object.values(newNamespaceInfos)) {
-      promises[namespaceInfo.priority] = fetch(namespaceInfo.url, {
+    for (const namespaceInfo of newNamespaceInfos) {
+      const promise = fetch(namespaceInfo.url, {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
+      promises.push(promise);
     }
     return promises;
   }
