@@ -108,19 +108,6 @@ export default class NamespaceFetcher {
     return namespace;
   }
 
-  addInfos(namespaceInfos) {
-    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
-      for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = this.addInfo(
-          namespaceInfo.shortcuts[key],
-          key,
-          namespaceInfo.name,
-        );
-      }
-    }
-    return namespaceInfos;
-  }
-
   /**
    * Fetches the information for the given namespaces from an external source
    * @param {Object} namespaceInfos - An object of initial namespace infos.
@@ -323,6 +310,19 @@ export default class NamespaceFetcher {
         // If not yet present: reachable.
         namespaceInfo.shortcuts[key].reachable = !foundShortcuts.has(key);
         foundShortcuts.add(key);
+      }
+    }
+    return namespaceInfos;
+  }
+
+  addInfos(namespaceInfos) {
+    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
+      for (const key in namespaceInfo.shortcuts) {
+        namespaceInfo.shortcuts[key] = this.addInfo(
+          namespaceInfo.shortcuts[key],
+          key,
+          namespaceInfo.name,
+        );
       }
     }
     return namespaceInfos;
