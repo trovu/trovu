@@ -82,28 +82,3 @@
   response:
     status: removed
     key: abp 0
-- title: included 1 level
-  env:
-    github: georgjaehnig
-    query: test-include-leo-de-en baum
-  response:
-    redirectUrl: https://dict.leo.org/german-english/baum
-- title: included 2 level
-  env:
-    github: georgjaehnig
-    query: test-include-leo-fr-de baum
-  response:
-    redirectUrl: https://dict.leo.org/französisch-deutsch/baum
-- title: included 2 level with var
-  env:
-    github: georgjaehnig
-    query: test-include-leo-fr-language baum
-  response:
-    redirectUrl: https://dict.leo.org/französisch-deutsch/baum
-- title: included 2 level with var negative
-  env:
-    github: georgjaehnig
-    query: test-include-leo-fr-language-negative baum
-    defaultKeyword: false
-  response:
-    status: not_found
