@@ -420,13 +420,13 @@ export default class NamespaceFetcher {
   verifyAll(namespaceInfos) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
-        this.verifyShortcut(namespaceInfo.shortcuts[key]);
+        this.verify(namespaceInfo.shortcuts[key]);
       }
     }
     return namespaceInfos;
   }
 
-  verifyShortcut(shortcut) {
+  verify(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
       throw new Error(
         `Missing url or deprecated in ${shortcut.namespace}.${shortcut.key}.`,
