@@ -96,7 +96,7 @@ describe('NamespaceFetcher.addReachable', () => {
           title: Esperanto-Wörterbuch
   `);
 
-  test('simple', () => {
+  test('standard', () => {
     expect(new NamespaceFetcher({}).addReachable(namespaceInfos)).toEqual(
       jsyaml.load(`
         o:
