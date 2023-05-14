@@ -198,6 +198,25 @@ export default class NamespaceFetcher {
     return newNamespaceInfos;
   }
 
+  /**
+   * Parse a YAML string.
+   *
+   * @param {string} text - String to parse.
+   * @param {string} url - The URL of the YAML, for error reporting.
+   *
+   * @return {object} namespaces - The parsed shortcuts.
+   */
+  parseShortcutsFromYml(text, url) {
+    try {
+      const shortcuts = jsyaml.load(text);
+      return shortcuts;
+    } catch (error) {
+      Helper.log('Error parsing ' + url + ':\n\n' + error.message);
+      this.error = true;
+      return [];
+    }
+  }
+
   addNamespacesFromInclude(shortcut) {
     if (shortcut.include && shortcut.include.namespace) {
       const namespaceInfo = this.getInitalNamespaceInfo(
@@ -393,25 +412,6 @@ export default class NamespaceFetcher {
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
     shortcut.title = shortcut.title || '';
     return shortcut;
-  }
-
-  /**
-   * Parse a YAML string.
-   *
-   * @param {string} text - String to parse.
-   * @param {string} url - The URL of the YAML, for error reporting.
-   *
-   * @return {object} namespaces - The parsed shortcuts.
-   */
-  parseShortcutsFromYml(text, url) {
-    try {
-      const shortcuts = jsyaml.load(text);
-      return shortcuts;
-    } catch (error) {
-      Helper.log('Error parsing ' + url + ':\n\n' + error.message);
-      this.error = true;
-      return [];
-    }
   }
 
   /**
