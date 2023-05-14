@@ -1,95 +1,7 @@
-ar-ard 0:
-  include:
-    key: ar-it 0
-    namespace: ard
-ar-ard 1:
-  include:
-    key: ar-it 1
-    namespace: ard
-cs-dcm 0:
-  include:
-    key: cs-it 0
-    namespace: dcm
-cs-dcm 1:
-  include:
-    key: cs-it 1
-    namespace: dcm
 de 1:
   include:
     key: de-it 1
     namespace: leo
-de-bab 0:
-  include:
-    key: de-it 0
-    namespace: bab
-de-bab 1:
-  include:
-    key: de-it 1
-    namespace: bab
-de-dcc 0:
-  include:
-    key: de-it 0
-    namespace: dcc
-de-dcc 1:
-  include:
-    key: de-it 1
-    namespace: dcc
-de-dcm 0:
-  include:
-    key: de-it 0
-    namespace: dcm
-de-dcm 1:
-  include:
-    key: de-it 1
-    namespace: dcm
-de-leo 0:
-  include:
-    key: de-it 0
-    namespace: leo
-de-leo 1:
-  include:
-    key: de-it 1
-    namespace: leo
-de-lgs 0:
-  include:
-    key: de-it 0
-    namespace: lgs
-de-lgs 1:
-  include:
-    key: de-it 1
-    namespace: lgs
-de-pka 0:
-  include:
-    key: de-it 0
-    namespace: pka
-de-pka 1:
-  include:
-    key: de-it 1
-    namespace: pka
-de-pns 0:
-  include:
-    key: de-it 0
-    namespace: pns
-de-pns 1:
-  include:
-    key: de-it 1
-    namespace: pns
-en-dcm 0:
-  include:
-    key: en-it 0
-    namespace: dcm
-en-dcm 1:
-  include:
-    key: en-it 1
-    namespace: dcm
-fr-rvs 0:
-  include:
-    key: fr-it 0
-    namespace: rvs
-fr-rvs 1:
-  include:
-    key: fr-it 1
-    namespace: rvs
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -107,11 +19,3 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
-sk-dcm 0:
-  include:
-    key: sk-it 0
-    namespace: dcm
-sk-dcm 1:
-  include:
-    key: sk-it 1
-    namespace: dcm

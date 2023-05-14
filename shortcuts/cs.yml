@@ -26,14 +26,6 @@ csfd 1:
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
-da-dcm 0:
-  include:
-    key: da-cs 0
-    namespace: dcm
-da-dcm 1:
-  include:
-    key: da-cs 1
-    namespace: dcm
 de 0:
   include:
     key: de-cs 0
@@ -42,59 +34,11 @@ de 1:
   include:
     key: de-cs 1
     namespace: dcm
-de-dcc 0:
-  include:
-    key: de-cs 0
-    namespace: dcc
-de-dcc 1:
-  include:
-    key: de-cs 1
-    namespace: dcc
-de-dcm 0:
-  include:
-    key: de-cs 0
-    namespace: dcm
-de-dcm 1:
-  include:
-    key: de-cs 1
-    namespace: dcm
-de-lgs 0:
-  include:
-    key: de-cs 0
-    namespace: lgs
-de-lgs 1:
-  include:
-    key: de-cs 1
-    namespace: lgs
-de-pka 0:
-  include:
-    key: de-cs 0
-    namespace: pka
-de-pka 1:
-  include:
-    key: de-cs 1
-    namespace: pka
-el-dcm 0:
-  include:
-    key: el-cs 0
-    namespace: dcm
-el-dcm 1:
-  include:
-    key: el-cs 1
-    namespace: dcm
 en 0:
   include:
     key: en-cs 0
     namespace: dcm
 en 1:
-  include:
-    key: en-cs 1
-    namespace: dcm
-en-dcm 0:
-  include:
-    key: en-cs 0
-    namespace: dcm
-en-dcm 1:
   include:
     key: en-cs 1
     namespace: dcm
@@ -106,43 +50,11 @@ es 1:
   include:
     key: es-cs 1
     namespace: dcm
-es-dcm 0:
-  include:
-    key: es-cs 0
-    namespace: dcm
-es-dcm 1:
-  include:
-    key: es-cs 1
-    namespace: dcm
-et-dcm 0:
-  include:
-    key: et-cs 0
-    namespace: dcm
-et-dcm 1:
-  include:
-    key: et-cs 1
-    namespace: dcm
-fi-dcm 0:
-  include:
-    key: fi-cs 0
-    namespace: dcm
-fi-dcm 1:
-  include:
-    key: fi-cs 1
-    namespace: dcm
 fr 0:
   include:
     key: fr-cs 0
     namespace: dcm
 fr 1:
-  include:
-    key: fr-cs 1
-    namespace: dcm
-fr-dcm 0:
-  include:
-    key: fr-cs 0
-    namespace: dcm
-fr-dcm 1:
   include:
     key: fr-cs 1
     namespace: dcm
@@ -155,14 +67,6 @@ frv 1:
   - pronunciation
   examples:
     berlin: Search for the pronunciation of "berlin"
-he-dcm 0:
-  include:
-    key: he-cs 0
-    namespace: dcm
-he-dcm 1:
-  include:
-    key: he-cs 1
-    namespace: dcm
 hr 0:
   include:
     key: hr-cs 0
@@ -171,46 +75,6 @@ hr 1:
   include:
     key: hr-cs 1
     namespace: dcm
-hr-dcm 0:
-  include:
-    key: hr-cs 0
-    namespace: dcm
-hr-dcm 1:
-  include:
-    key: hr-cs 1
-    namespace: dcm
-hu-dcm 0:
-  include:
-    key: hu-cs 0
-    namespace: dcm
-hu-dcm 1:
-  include:
-    key: hu-cs 1
-    namespace: dcm
-id-dcm 0:
-  include:
-    key: id-cs 0
-    namespace: dcm
-id-dcm 1:
-  include:
-    key: id-cs 1
-    namespace: dcm
-it-dcm 0:
-  include:
-    key: it-cs 0
-    namespace: dcm
-it-dcm 1:
-  include:
-    key: it-cs 1
-    namespace: dcm
-ja-dcm 0:
-  include:
-    key: ja-cs 0
-    namespace: dcm
-ja-dcm 1:
-  include:
-    key: ja-cs 1
-    namespace: dcm
 kinobox 1:
   url: http://www.kinobox.cz/najdi?t={%query}
   title: Kinobox.cz
@@ -218,46 +82,6 @@ kinobox 1:
   - movies
   examples:
     forrest gump: Search for "forrest gump"
-ko-dcm 0:
-  include:
-    key: ko-cs 0
-    namespace: dcm
-ko-dcm 1:
-  include:
-    key: ko-cs 1
-    namespace: dcm
-lt-dcm 0:
-  include:
-    key: lt-cs 0
-    namespace: dcm
-lt-dcm 1:
-  include:
-    key: lt-cs 1
-    namespace: dcm
-lv-dcm 0:
-  include:
-    key: lv-cs 0
-    namespace: dcm
-lv-dcm 1:
-  include:
-    key: lv-cs 1
-    namespace: dcm
-nl-dcm 0:
-  include:
-    key: nl-cs 0
-    namespace: dcm
-nl-dcm 1:
-  include:
-    key: nl-cs 1
-    namespace: dcm
-no-dcm 0:
-  include:
-    key: no-cs 0
-    namespace: dcm
-no-dcm 1:
-  include:
-    key: no-cs 1
-    namespace: dcm
 pl 0:
   include:
     key: pl-cs 0
@@ -266,43 +90,11 @@ pl 1:
   include:
     key: pl-cs 1
     namespace: dcm
-pl-dcm 0:
-  include:
-    key: pl-cs 0
-    namespace: dcm
-pl-dcm 1:
-  include:
-    key: pl-cs 1
-    namespace: dcm
-pt-dcm 0:
-  include:
-    key: pt-cs 0
-    namespace: dcm
-pt-dcm 1:
-  include:
-    key: pt-cs 1
-    namespace: dcm
-ro-dcm 0:
-  include:
-    key: ro-cs 0
-    namespace: dcm
-ro-dcm 1:
-  include:
-    key: ro-cs 1
-    namespace: dcm
 ru 0:
   include:
     key: ru-cs 0
     namespace: dcm
 ru 1:
-  include:
-    key: ru-cs 1
-    namespace: dcm
-ru-dcm 0:
-  include:
-    key: ru-cs 0
-    namespace: dcm
-ru-dcm 1:
   include:
     key: ru-cs 1
     namespace: dcm
@@ -314,73 +106,17 @@ sk 1:
   include:
     key: sk-cs 1
     namespace: dcm
-sk-dcm 0:
-  include:
-    key: sk-cs 0
-    namespace: dcm
-sk-dcm 1:
-  include:
-    key: sk-cs 1
-    namespace: dcm
-sl-dcm 0:
-  include:
-    key: sl-cs 0
-    namespace: dcm
-sl-dcm 1:
-  include:
-    key: sl-cs 1
-    namespace: dcm
-sr-dcm 0:
-  include:
-    key: sr-cs 0
-    namespace: dcm
-sr-dcm 1:
-  include:
-    key: sr-cs 1
-    namespace: dcm
 sub 1:
   url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
   title: Filmové titulky (Open Subtitles)
   tags:
   - subtitles
   - titulky
-sv-dcm 0:
-  include:
-    key: sv-cs 0
-    namespace: dcm
-sv-dcm 1:
-  include:
-    key: sv-cs 1
-    namespace: dcm
-th-dcm 0:
-  include:
-    key: th-cs 0
-    namespace: dcm
-th-dcm 1:
-  include:
-    key: th-cs 1
-    namespace: dcm
-tr-dcm 0:
-  include:
-    key: tr-cs 0
-    namespace: dcm
-tr-dcm 1:
-  include:
-    key: tr-cs 1
-    namespace: dcm
 uk 0:
   include:
     key: uk-cs 0
     namespace: dcm
 uk 1:
-  include:
-    key: uk-cs 1
-    namespace: dcm
-uk-dcm 0:
-  include:
-    key: uk-cs 0
-    namespace: dcm
-uk-dcm 1:
   include:
     key: uk-cs 1
     namespace: dcm
@@ -391,20 +127,4 @@ vi 0:
 vi 1:
   include:
     key: vi-cs 1
-    namespace: dcm
-vi-dcm 0:
-  include:
-    key: vi-cs 0
-    namespace: dcm
-vi-dcm 1:
-  include:
-    key: vi-cs 1
-    namespace: dcm
-zh-dcm 0:
-  include:
-    key: zh-cs 0
-    namespace: dcm
-zh-dcm 1:
-  include:
-    key: zh-cs 1
     namespace: dcm

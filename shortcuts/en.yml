@@ -1,35 +1,3 @@
-ar-ard 0:
-  include:
-    key: ar-en 0
-    namespace: ard
-ar-ard 1:
-  include:
-    key: ar-en 1
-    namespace: ard
-ar-dcm 0:
-  include:
-    key: ar-en 0
-    namespace: dcm
-ar-dcm 1:
-  include:
-    key: ar-en 1
-    namespace: dcm
-bg-dcm 0:
-  include:
-    key: bg-en 0
-    namespace: dcm
-bg-dcm 1:
-  include:
-    key: bg-en 1
-    namespace: dcm
-ca-dcm 0:
-  include:
-    key: ca-en 0
-    namespace: dcm
-ca-dcm 1:
-  include:
-    key: ca-en 1
-    namespace: dcm
 camb-en 1:
   url: https://dictionary.cambridge.org/dictionary/english/{%word}
   title: Cambridge English Dictionary
@@ -73,90 +41,10 @@ cs 1:
   include:
     key: cs-en 1
     namespace: dcm
-cs-dcm 0:
-  include:
-    key: cs-en 0
-    namespace: dcm
-cs-dcm 1:
-  include:
-    key: cs-en 1
-    namespace: dcm
-da-dcm 0:
-  include:
-    key: da-en 0
-    namespace: dcm
-da-dcm 1:
-  include:
-    key: da-en 1
-    namespace: dcm
 de 1:
   include:
     key: de-en 1
     namespace: leo
-de-beo 0:
-  include:
-    key: de-en 0
-    namespace: beo
-de-beo 1:
-  include:
-    key: de-en 1
-    namespace: beo
-de-dcc 0:
-  include:
-    key: de-en 0
-    namespace: dcc
-de-dcc 1:
-  include:
-    key: de-en 1
-    namespace: dcc
-de-dcm 0:
-  include:
-    key: de-en 0
-    namespace: dcm
-de-dcm 1:
-  include:
-    key: de-en 1
-    namespace: dcm
-de-leo 0:
-  include:
-    key: de-en 0
-    namespace: leo
-de-leo 1:
-  include:
-    key: de-en 1
-    namespace: leo
-de-lge 0:
-  include:
-    key: de-en 0
-    namespace: lge
-de-lge 1:
-  include:
-    key: de-en 1
-    namespace: lge
-de-lgs 0:
-  include:
-    key: de-en 0
-    namespace: lgs
-de-lgs 1:
-  include:
-    key: de-en 1
-    namespace: lgs
-de-pka 0:
-  include:
-    key: de-en 0
-    namespace: pka
-de-pka 1:
-  include:
-    key: de-en 1
-    namespace: pka
-de-pns 0:
-  include:
-    key: de-en 0
-    namespace: pns
-de-pns 1:
-  include:
-    key: de-en 1
-    namespace: pns
 dei 1:
   deprecated:
     alternative:
@@ -184,14 +72,6 @@ edram 1:
   - humor
   examples:
     Boxxy: Encyclopedia Dramatica Article about Boxxy
-el-dcm 0:
-  include:
-    key: el-en 0
-    namespace: dcm
-el-dcm 1:
-  include:
-    key: el-en 1
-    namespace: dcm
 es 0:
   include:
     key: es-en 0
@@ -200,38 +80,6 @@ es 1:
   include:
     key: es-en 1
     namespace: esd
-es-esd 0:
-  include:
-    key: es-en 0
-    namespace: esd
-es-esd 1:
-  include:
-    key: es-en 1
-    namespace: esd
-es-leo 0:
-  include:
-    key: es-en 0
-    namespace: leo
-es-leo 1:
-  include:
-    key: es-en 1
-    namespace: leo
-es-lge 0:
-  include:
-    key: es-en 0
-    namespace: lge
-es-lge 1:
-  include:
-    key: es-en 1
-    namespace: lge
-es-pns 0:
-  include:
-    key: es-en 0
-    namespace: pns
-es-pns 1:
-  include:
-    key: es-en 1
-    namespace: pns
 esi 1:
   deprecated:
     alternative:
@@ -242,22 +90,6 @@ esp 1:
     alternative:
       query: pns.es {%1}
       created: '2023-04-10'
-et-dcm 0:
-  include:
-    key: et-en 0
-    namespace: dcm
-et-dcm 1:
-  include:
-    key: et-en 1
-    namespace: dcm
-fi-dcm 0:
-  include:
-    key: fi-en 0
-    namespace: dcm
-fi-dcm 1:
-  include:
-    key: fi-en 1
-    namespace: dcm
 fr 0:
   include:
     key: fr-en 0
@@ -266,46 +98,6 @@ fr 1:
   include:
     key: fr-en 1
     namespace: lge
-fr-dcm 0:
-  include:
-    key: fr-en 0
-    namespace: dcm
-fr-dcm 1:
-  include:
-    key: fr-en 1
-    namespace: dcm
-fr-leo 0:
-  include:
-    key: fr-en 0
-    namespace: leo
-fr-leo 1:
-  include:
-    key: fr-en 1
-    namespace: leo
-fr-lge 0:
-  include:
-    key: fr-en 0
-    namespace: lge
-fr-lge 1:
-  include:
-    key: fr-en 1
-    namespace: lge
-fr-pns 0:
-  include:
-    key: fr-en 0
-    namespace: pns
-fr-pns 1:
-  include:
-    key: fr-en 1
-    namespace: pns
-fr-rvs 0:
-  include:
-    key: fr-en 0
-    namespace: rvs
-fr-rvs 1:
-  include:
-    key: fr-en 1
-    namespace: rvs
 frp 1:
   deprecated:
     alternative:
@@ -328,70 +120,6 @@ gfp 0:
   - germany
   - news
   - politics
-he-dcm 0:
-  include:
-    key: he-en 0
-    namespace: dcm
-he-dcm 1:
-  include:
-    key: he-en 1
-    namespace: dcm
-hr-crd 0:
-  include:
-    key: hr-en 0
-    namespace: crd
-hr-crd 1:
-  include:
-    key: hr-en 1
-    namespace: crd
-hr-dcm 0:
-  include:
-    key: hr-en 0
-    namespace: dcm
-hr-dcm 1:
-  include:
-    key: hr-en 1
-    namespace: dcm
-hu-dcm 0:
-  include:
-    key: hu-en 0
-    namespace: dcm
-hu-dcm 1:
-  include:
-    key: hu-en 1
-    namespace: dcm
-id-dcm 0:
-  include:
-    key: id-en 0
-    namespace: dcm
-id-dcm 1:
-  include:
-    key: id-en 1
-    namespace: dcm
-it-dcm 0:
-  include:
-    key: it-en 0
-    namespace: dcm
-it-dcm 1:
-  include:
-    key: it-en 1
-    namespace: dcm
-ja-dcm 0:
-  include:
-    key: ja-en 0
-    namespace: dcm
-ja-dcm 1:
-  include:
-    key: ja-en 1
-    namespace: dcm
-ko-dcm 0:
-  include:
-    key: ko-en 0
-    namespace: dcm
-ko-dcm 1:
-  include:
-    key: ko-en 1
-    namespace: dcm
 last 1:
   url: http://www.last.fm/search?setlang=en&q={%artist}
   title: Last.fm
@@ -400,22 +128,6 @@ last 1:
   - music
   examples:
     beatles: Search for "beatles"
-lt-dcm 0:
-  include:
-    key: lt-en 0
-    namespace: dcm
-lt-dcm 1:
-  include:
-    key: lt-en 1
-    namespace: dcm
-lv-dcm 0:
-  include:
-    key: lv-en 0
-    namespace: dcm
-lv-dcm 1:
-  include:
-    key: lv-en 1
-    namespace: dcm
 mw 1:
   url: http://www.merriam-webster.com/dictionary/{%query}
   title: Merriam-Webster dictionary
@@ -440,30 +152,6 @@ nl 1:
   include:
     key: nl-en 1
     namespace: dcc
-nl-dcc 0:
-  include:
-    key: nl-en 0
-    namespace: dcc
-nl-dcc 1:
-  include:
-    key: nl-en 1
-    namespace: dcc
-nl-dcm 0:
-  include:
-    key: nl-en 0
-    namespace: dcm
-nl-dcm 1:
-  include:
-    key: nl-en 1
-    namespace: dcm
-no-dcm 0:
-  include:
-    key: no-en 0
-    namespace: dcm
-no-dcm 1:
-  include:
-    key: no-en 1
-    namespace: dcm
 ox 1:
   url: https://en.oxforddictionaries.com/definition/{%word}
   title: Oxford Dictionaries British & World English
@@ -474,22 +162,6 @@ ox 1:
 oxford 1:
   url: https://www.oxforddictionaries.com/definition/english/{%query}
   title: Oxford dictionary
-pl-bab 0:
-  include:
-    key: pl-en 0
-    namespace: bab
-pl-bab 1:
-  include:
-    key: pl-en 1
-    namespace: bab
-pl-dcm 0:
-  include:
-    key: pl-en 0
-    namespace: dcm
-pl-dcm 1:
-  include:
-    key: pl-en 1
-    namespace: dcm
 pt 0:
   include:
     key: pt-en 0
@@ -498,54 +170,6 @@ pt 1:
   include:
     key: pt-en 1
     namespace: lge
-pt-dcm 0:
-  include:
-    key: pt-en 0
-    namespace: dcm
-pt-dcm 1:
-  include:
-    key: pt-en 1
-    namespace: dcm
-pt-lge 0:
-  include:
-    key: pt-en 0
-    namespace: lge
-pt-lge 1:
-  include:
-    key: pt-en 1
-    namespace: lge
-ro-dcm 0:
-  include:
-    key: ro-en 0
-    namespace: dcm
-ro-dcm 1:
-  include:
-    key: ro-en 1
-    namespace: dcm
-ru-dcm 0:
-  include:
-    key: ru-en 0
-    namespace: dcm
-ru-dcm 1:
-  include:
-    key: ru-en 1
-    namespace: dcm
-ru-leo 0:
-  include:
-    key: ru-en 0
-    namespace: leo
-ru-leo 1:
-  include:
-    key: ru-en 1
-    namespace: leo
-sk-dcm 0:
-  include:
-    key: sk-en 0
-    namespace: dcm
-sk-dcm 1:
-  include:
-    key: sk-en 1
-    namespace: dcm
 sl 0:
   include:
     key: sl-en 0
@@ -554,30 +178,6 @@ sl 1:
   include:
     key: sl-en 1
     namespace: pns
-sl-dcm 0:
-  include:
-    key: sl-en 0
-    namespace: dcm
-sl-dcm 1:
-  include:
-    key: sl-en 1
-    namespace: dcm
-sl-pns 0:
-  include:
-    key: sl-en 0
-    namespace: pns
-sl-pns 1:
-  include:
-    key: sl-en 1
-    namespace: pns
-sr-dcm 0:
-  include:
-    key: sr-en 0
-    namespace: dcm
-sr-dcm 1:
-  include:
-    key: sr-en 1
-    namespace: dcm
 sta 0:
   url: http://start.csail.mit.edu
   title: START (SynTactic Analysis using Reversible Transformations)
@@ -598,22 +198,6 @@ sv 1:
   include:
     key: sv-en 1
     namespace: flx
-sv-dcm 0:
-  include:
-    key: sv-en 0
-    namespace: dcm
-sv-dcm 1:
-  include:
-    key: sv-en 1
-    namespace: dcm
-sv-flx 0:
-  include:
-    key: sv-en 0
-    namespace: flx
-sv-flx 1:
-  include:
-    key: sv-en 1
-    namespace: flx
 syn 1:
   url: http://thesaurus.com/browse/{%word}
   title: Thesaurus.com
@@ -622,14 +206,6 @@ syn 1:
   - thesaurus
   examples:
     'important ': Search for synonyms of "important"
-th-dcm 0:
-  include:
-    key: th-en 0
-    namespace: dcm
-th-dcm 1:
-  include:
-    key: th-en 1
-    namespace: dcm
 tr 0:
   include:
     key: tr-en 0
@@ -638,30 +214,6 @@ tr 1:
   include:
     key: tr-en 1
     namespace: zrg
-tr-dcm 0:
-  include:
-    key: tr-en 0
-    namespace: dcm
-tr-dcm 1:
-  include:
-    key: tr-en 1
-    namespace: dcm
-tr-zrg 0:
-  include:
-    key: tr-en 0
-    namespace: zrg
-tr-zrg 1:
-  include:
-    key: tr-en 1
-    namespace: zrg
-uk-dcm 0:
-  include:
-    key: uk-en 0
-    namespace: dcm
-uk-dcm 1:
-  include:
-    key: uk-en 1
-    namespace: dcm
 uvi 0:
   url: http://verbs.colorado.edu/verb-index/vn3.3
   title: Unified Verb Index
@@ -680,14 +232,6 @@ uvi 1:
   - linguistics
   examples:
     walk: Look up the verb "walk"
-vi-dcm 0:
-  include:
-    key: vi-en 0
-    namespace: dcm
-vi-dcm 1:
-  include:
-    key: vi-en 1
-    namespace: dcm
 wk 0:
   url: http://www.wordnik.com/
   title: Wordnik.com
@@ -749,22 +293,6 @@ zh 0:
     key: zh-en 0
     namespace: mdb
 zh 1:
-  include:
-    key: zh-en 1
-    namespace: mdb
-zh-dcm 0:
-  include:
-    key: zh-en 0
-    namespace: dcm
-zh-dcm 1:
-  include:
-    key: zh-en 1
-    namespace: dcm
-zh-mdb 0:
-  include:
-    key: zh-en 0
-    namespace: mdb
-zh-mdb 1:
   include:
     key: zh-en 1
     namespace: mdb

@@ -1,19 +1,3 @@
-ar-ard 0:
-  include:
-    key: ar-fr 0
-    namespace: ard
-ar-ard 1:
-  include:
-    key: ar-fr 1
-    namespace: ard
-ar-rvs 0:
-  include:
-    key: ar-fr 0
-    namespace: rvs
-ar-rvs 1:
-  include:
-    key: ar-fr 1
-    namespace: rvs
 cjg 1:
   url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}
   title: Le conjugueur
@@ -30,14 +14,6 @@ cs 1:
   include:
     key: cs-fr 1
     namespace: dcm
-cs-dcm 0:
-  include:
-    key: cs-fr 0
-    namespace: dcm
-cs-dcm 1:
-  include:
-    key: cs-fr 1
-    namespace: dcm
 de 0:
   include:
     key: de-fr 0
@@ -46,78 +22,6 @@ de 1:
   include:
     key: de-fr 1
     namespace: leo
-de-bab 0:
-  include:
-    key: de-fr 0
-    namespace: bab
-de-bab 1:
-  include:
-    key: de-fr 1
-    namespace: bab
-de-dcc 0:
-  include:
-    key: de-fr 0
-    namespace: dcc
-de-dcc 1:
-  include:
-    key: de-fr 1
-    namespace: dcc
-de-dcm 0:
-  include:
-    key: de-fr 0
-    namespace: dcm
-de-dcm 1:
-  include:
-    key: de-fr 1
-    namespace: dcm
-de-leo 0:
-  include:
-    key: de-fr 0
-    namespace: leo
-de-leo 1:
-  include:
-    key: de-fr 1
-    namespace: leo
-de-lge 0:
-  include:
-    key: de-fr 0
-    namespace: lge
-de-lge 1:
-  include:
-    key: de-fr 1
-    namespace: lge
-de-lgs 0:
-  include:
-    key: de-fr 0
-    namespace: lgs
-de-lgs 1:
-  include:
-    key: de-fr 1
-    namespace: lgs
-de-pka 0:
-  include:
-    key: de-fr 0
-    namespace: pka
-de-pka 1:
-  include:
-    key: de-fr 1
-    namespace: pka
-de-pns 0:
-  include:
-    key: de-fr 0
-    namespace: pns
-de-pns 1:
-  include:
-    key: de-fr 1
-    namespace: pns
-de-rvs 0:
-  include:
-    key: de-fr 0
-    namespace: rvs
-de-rvs 1:
-  include:
-    key: de-fr 1
-    namespace: rvs
 en 0:
   include:
     key: en-fr 0
@@ -125,54 +29,6 @@ en 0:
 en 1:
   include:
     key: en-fr 1
-    namespace: rvs
-en-dcm 0:
-  include:
-    key: en-fr 0
-    namespace: dcm
-en-dcm 1:
-  include:
-    key: en-fr 1
-    namespace: dcm
-en-leo 0:
-  include:
-    key: en-fr 0
-    namespace: leo
-en-leo 1:
-  include:
-    key: en-fr 1
-    namespace: leo
-en-lge 0:
-  include:
-    key: en-fr 0
-    namespace: lge
-en-lge 1:
-  include:
-    key: en-fr 1
-    namespace: lge
-en-pns 0:
-  include:
-    key: en-fr 0
-    namespace: pns
-en-pns 1:
-  include:
-    key: en-fr 1
-    namespace: pns
-en-rvs 0:
-  include:
-    key: en-fr 0
-    namespace: rvs
-en-rvs 1:
-  include:
-    key: en-fr 1
-    namespace: rvs
-es-rvs 0:
-  include:
-    key: es-fr 0
-    namespace: rvs
-es-rvs 1:
-  include:
-    key: es-fr 1
     namespace: rvs
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
@@ -183,38 +39,6 @@ frv 1:
   - pronunciation
   examples:
     berlin: Search for the pronunciation of "berlin"
-he-rvs 0:
-  include:
-    key: he-fr 0
-    namespace: rvs
-he-rvs 1:
-  include:
-    key: he-fr 1
-    namespace: rvs
-it-rvs 0:
-  include:
-    key: it-fr 0
-    namespace: rvs
-it-rvs 1:
-  include:
-    key: it-fr 1
-    namespace: rvs
-ja-rvs 0:
-  include:
-    key: ja-fr 0
-    namespace: rvs
-ja-rvs 1:
-  include:
-    key: ja-fr 1
-    namespace: rvs
-ko-rvs 0:
-  include:
-    key: ko-fr 0
-    namespace: rvs
-ko-rvs 1:
-  include:
-    key: ko-fr 1
-    namespace: rvs
 lar 1:
   deprecated:
     alternative:
@@ -262,14 +86,6 @@ marmiton 1:
   - recettes
   examples:
     pizza: Recherche des recettes de pizza
-nl-rvs 0:
-  include:
-    key: nl-fr 0
-    namespace: rvs
-nl-rvs 1:
-  include:
-    key: nl-fr 1
-    namespace: rvs
 pl 0:
   include:
     key: pl-fr 0
@@ -278,22 +94,6 @@ pl 1:
   include:
     key: pl-fr 1
     namespace: pns
-pl-pns 0:
-  include:
-    key: pl-fr 0
-    namespace: pns
-pl-pns 1:
-  include:
-    key: pl-fr 1
-    namespace: pns
-pl-rvs 0:
-  include:
-    key: pl-fr 0
-    namespace: rvs
-pl-rvs 1:
-  include:
-    key: pl-fr 1
-    namespace: rvs
 pt 0:
   include:
     key: pt-fr 0
@@ -302,38 +102,6 @@ pt 1:
   include:
     key: pt-fr 1
     namespace: rvs
-pt-rvs 0:
-  include:
-    key: pt-fr 0
-    namespace: rvs
-pt-rvs 1:
-  include:
-    key: pt-fr 1
-    namespace: rvs
-ro-rvs 0:
-  include:
-    key: ro-fr 0
-    namespace: rvs
-ro-rvs 1:
-  include:
-    key: ro-fr 1
-    namespace: rvs
-ru-rvs 0:
-  include:
-    key: ru-fr 0
-    namespace: rvs
-ru-rvs 1:
-  include:
-    key: ru-fr 1
-    namespace: rvs
-sk-dcm 0:
-  include:
-    key: sk-fr 0
-    namespace: dcm
-sk-dcm 1:
-  include:
-    key: sk-fr 1
-    namespace: dcm
 sv 0:
   include:
     key: sv-fr 0
@@ -342,22 +110,6 @@ sv 1:
   include:
     key: sv-fr 1
     namespace: dcm
-sv-dcm 0:
-  include:
-    key: sv-fr 0
-    namespace: dcm
-sv-dcm 1:
-  include:
-    key: sv-fr 1
-    namespace: dcm
-sv-rvs 0:
-  include:
-    key: sv-fr 0
-    namespace: rvs
-sv-rvs 1:
-  include:
-    key: sv-fr 1
-    namespace: rvs
 syn 1:
   url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
   title: Synonyme
@@ -375,27 +127,3 @@ tlf 1:
   - language
   examples:
     arbre: Cherche "arbre" dans le Trésor de la langue française
-tr-rvs 0:
-  include:
-    key: tr-fr 0
-    namespace: rvs
-tr-rvs 1:
-  include:
-    key: tr-fr 1
-    namespace: rvs
-uk-rvs 0:
-  include:
-    key: uk-fr 0
-    namespace: rvs
-uk-rvs 1:
-  include:
-    key: uk-fr 1
-    namespace: rvs
-zh-rvs 0:
-  include:
-    key: zh-fr 0
-    namespace: rvs
-zh-rvs 1:
-  include:
-    key: zh-fr 1
-    namespace: rvs

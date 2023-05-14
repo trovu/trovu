@@ -1,72 +1,8 @@
-cs-dcm 0:
-  include:
-    key: cs-da 0
-    namespace: dcm
-cs-dcm 1:
-  include:
-    key: cs-da 1
-    namespace: dcm
-de-bab 0:
-  include:
-    key: de-da 0
-    namespace: bab
-de-bab 1:
-  include:
-    key: de-da 1
-    namespace: bab
-de-dcc 0:
-  include:
-    key: de-da 0
-    namespace: dcc
-de-dcc 1:
-  include:
-    key: de-da 1
-    namespace: dcc
-de-dcm 0:
-  include:
-    key: de-da 0
-    namespace: dcm
-de-dcm 1:
-  include:
-    key: de-da 1
-    namespace: dcm
-de-lgs 0:
-  include:
-    key: de-da 0
-    namespace: lgs
-de-lgs 1:
-  include:
-    key: de-da 1
-    namespace: lgs
-de-pka 0:
-  include:
-    key: de-da 0
-    namespace: pka
-de-pka 1:
-  include:
-    key: de-da 1
-    namespace: pka
-en-dcm 0:
-  include:
-    key: en-da 0
-    namespace: dcm
-en-dcm 1:
-  include:
-    key: en-da 1
-    namespace: dcm
 eo 0:
   include:
     key: eo-da 0
     namespace: deo
 eo 1:
-  include:
-    key: eo-da 1
-    namespace: deo
-eo-deo 0:
-  include:
-    key: eo-da 0
-    namespace: deo
-eo-deo 1:
   include:
     key: eo-da 1
     namespace: deo
@@ -93,14 +29,6 @@ ods 1:
   - language
   examples:
     skrive: artikel om "skrive"
-sk-dcm 0:
-  include:
-    key: sk-da 0
-    namespace: dcm
-sk-dcm 1:
-  include:
-    key: sk-da 1
-    namespace: dcm
 spr 1:
   url: http://sproget.dk/lookup?SearchableText={%ord}
   title: Sproget.dk
