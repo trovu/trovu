@@ -115,3 +115,31 @@ describe('NamespaceFetcher.addReachable', () => {
     );
   });
 });
+
+describe('NamespaceFetcher.addInfo', () => {
+  test('standard', () => {
+    expect(
+      new NamespaceFetcher({}).addInfo(
+        {
+          url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&start=1',
+        },
+        'db 2',
+        '.de',
+      ),
+    ).toEqual(
+      jsyaml.load(`
+        url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&start=1
+        key: db 2
+        keyword: db
+        argumentCount: 2
+        namespace: .de
+        arguments:
+          Start:
+            '{%Start}': {}
+          Ziel:
+            '{%Ziel}': {}
+        title: '' 
+    `),
+    );
+  });
+});
