@@ -246,32 +246,46 @@ export default class NamespaceFetcher {
   }
 
   processInclude(shortcut, namespaceName, namespaceInfos) {
-    if (!shortcut.include.key) {
-      Helper.log(`Include with missing key at: ${key}`);
-      this.error = true;
-      return false;
+    let includes = [];
+    if (Array.isArray(shortcut.include)) {
+      includes = shortcut.include;
+    } else {
+      includes.push(shortcut.include);
     }
-    const keyUnprocessed = shortcut.include.key;
-    const key = UrlProcessor.replaceVariables(keyUnprocessed, {
-      language: this.env.language,
-      country: this.env.country,
-    });
-    namespaceName = shortcut.include.namespace || namespaceName;
-    let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
-    if (!shortcutToInclude) {
-      return false;
+    for (const include of includes) {
+      if (!include.key) {
+        Helper.log(`Include with missing key at: ${key}`);
+        this.error = true;
+        continue;
+      }
+      const keyUnprocessed = include.key;
+      const key = UrlProcessor.replaceVariables(keyUnprocessed, {
+        language: this.env.language,
+        country: this.env.country,
+      });
+      namespaceName = include.namespace || namespaceName;
+      if (!namespaceInfos[namespaceName]) {
+        Helper.log(`Namespace to include from "${key}" does not exist.`);
+        this.error = true;
+        continue;
+      }
+      let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
+      if (!shortcutToInclude) {
+        continue;
+      }
+      if (shortcutToInclude.include) {
+        shortcutToInclude = this.processInclude(
+          shortcutToInclude,
+          namespaceName,
+          namespaceInfos,
+        );
+      }
+      const shortcutToIncludeCloned = this.cloneShortcut(shortcutToInclude);
+      shortcut = Object.assign(shortcutToIncludeCloned, shortcut);
+      delete shortcut.include;
+      return shortcut;
     }
-    if (shortcutToInclude.include) {
-      shortcutToInclude = this.processInclude(
-        shortcutToInclude,
-        namespaceName,
-        namespaceInfos,
-      );
-    }
-    const shortcutToIncludeCloned = this.cloneShortcut(shortcutToInclude);
-    shortcut = Object.assign(shortcutToIncludeCloned, shortcut);
-    delete shortcut.include;
-    return shortcut;
+    return false;
   }
 
   /**

@@ -98,6 +98,36 @@ describe('NamespaceFetcher.processInclude', () => {
       new NamespaceFetcher({}).processInclude(shortcut, 'leo', namespaceInfos),
     ).toEqual(false);
   });
+  test('multiple', () => {
+    const namespaceInfosMultiple = jsyaml.load(`
+      leo:
+        shortcuts:
+          de-fr 1:
+            url: https://dict.leo.org/französisch-deutsch/{%word}
+            title: Allemand-Français (leo.org)
+          fr-de 1:
+            title: Französisch-Deutsch (leo.org)
+            include:
+              key: de-fr 1
+    `);
+    const shortcut = jsyaml.load(`
+    include:
+    - key: fr-{$language} 1
+      namespace: lge
+    - key: fr-{$language} 1
+      namespace: leo
+    `);
+    expect(
+      new NamespaceFetcher({ language: 'de' }).processInclude(
+        shortcut,
+        'o',
+        namespaceInfosMultiple,
+      ),
+    ).toEqual({
+      title: 'Französisch-Deutsch (leo.org)',
+      url: 'https://dict.leo.org/französisch-deutsch/{%word}',
+    });
+  });
 });
 
 describe('NamespaceFetcher.addReachable', () => {
