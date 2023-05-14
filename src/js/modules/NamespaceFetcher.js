@@ -197,6 +197,17 @@ export default class NamespaceFetcher {
     return newNamespaceInfos;
   }
 
+  addNamespacesFromInclude(shortcut) {
+    if (shortcut.include && shortcut.include.namespace) {
+      const namespaceInfo = this.getInitalNamespaceInfo(
+        shortcut.include.namespace,
+      );
+      if (!this.namespaceInfos[namespaceInfo.name]) {
+        this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+      }
+    }
+  }
+
   /**
    * Converts a given shortcut to an object
    * @param {string|Object} shortcut - The shortcut to convert
@@ -210,17 +221,6 @@ export default class NamespaceFetcher {
       };
     }
     return shortcut;
-  }
-
-  addNamespacesFromInclude(shortcut) {
-    if (shortcut.include && shortcut.include.namespace) {
-      const namespaceInfo = this.getInitalNamespaceInfo(
-        shortcut.include.namespace,
-      );
-      if (!this.namespaceInfos[namespaceInfo.name]) {
-        this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
-      }
-    }
   }
 
   processIncludes(namespaceInfos) {
