@@ -18,9 +18,9 @@ export default class NamespaceFetcher {
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
-    this.namespaceInfos = this.processIncludes(this.namespaceInfos);
+    this.namespaceInfos = this.processIncludeAll(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
-    this.namespaceInfos = this.addInfos(this.namespaceInfos);
+    this.namespaceInfos = this.addInfoAll(this.namespaceInfos);
     return this.namespaceInfos;
   }
 
@@ -223,7 +223,7 @@ export default class NamespaceFetcher {
     return shortcut;
   }
 
-  processIncludes(namespaceInfos) {
+  processIncludeAll(namespaceInfos) {
     for (const namespaceName in namespaceInfos) {
       const namespaceInfo = namespaceInfos[namespaceName];
       const shortcuts = namespaceInfo.shortcuts;
@@ -334,8 +334,8 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
-  addInfos(namespaceInfos) {
-    for (const namespaceInfo of Object.values(this.namespaceInfos)) {
+  addInfoAll(namespaceInfos) {
+    for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
         namespaceInfo.shortcuts[key] = this.addInfo(
           namespaceInfo.shortcuts[key],
