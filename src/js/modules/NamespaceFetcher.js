@@ -363,7 +363,7 @@ export default class NamespaceFetcher {
   verifyShortcut(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
       throw new Error(
-        `Shortcut ${shortcut.namespace}.${shortcut.key} is missing url or deprecated.`,
+        `Missing url or deprecated in ${shortcut.namespace}.${shortcut.key}.`,
       );
     }
   }
