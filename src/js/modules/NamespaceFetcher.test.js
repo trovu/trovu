@@ -1,6 +1,10 @@
 import NamespaceFetcher from './NamespaceFetcher.js';
 import jsyaml from 'js-yaml';
 
+function cloneObject(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
 describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('site', () => {
     expect(new NamespaceFetcher({}).getInitalNamespaceInfo('de')).toEqual({
@@ -38,7 +42,11 @@ describe('NamespaceFetcher.processInclude', () => {
       key: de-fr 1
     `);
     expect(
-      new NamespaceFetcher({}).processInclude(shortcut, 'leo', namespaceInfos),
+      new NamespaceFetcher({}).processInclude(
+        shortcut,
+        'leo',
+        cloneObject(namespaceInfos),
+      ),
     ).toEqual({
       url: 'https://dict.leo.org/französisch-deutsch/{%word}',
       title: 'Allemand-Français (leo.org)',
@@ -52,7 +60,11 @@ describe('NamespaceFetcher.processInclude', () => {
       namespace: leo
   `);
     expect(
-      new NamespaceFetcher({}).processInclude(shortcut, '', namespaceInfos),
+      new NamespaceFetcher({}).processInclude(
+        shortcut,
+        '',
+        cloneObject(namespaceInfos),
+      ),
     ).toEqual({
       url: 'https://dict.leo.org/französisch-deutsch/{%word}',
       title: 'Französisch-Deutsch (leo.org)',
@@ -68,7 +80,7 @@ describe('NamespaceFetcher.processInclude', () => {
       new NamespaceFetcher({ language: 'de' }).processInclude(
         shortcut,
         'leo',
-        namespaceInfos,
+        cloneObject(namespaceInfos),
       ),
     ).toEqual({
       url: 'https://dict.leo.org/französisch-deutsch/{%word}',
@@ -95,7 +107,11 @@ describe('NamespaceFetcher.processInclude', () => {
       key: tic 1
     `);
     expect(
-      new NamespaceFetcher({}).processInclude(shortcut, 'leo', namespaceInfos),
+      new NamespaceFetcher({}).processInclude(
+        shortcut,
+        'leo',
+        namespaceInfosLoop,
+      ),
     ).toEqual(false);
   });
   test('multiple', () => {
