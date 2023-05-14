@@ -1138,14 +1138,6 @@ shg 1:
   - xml
   examples:
     doctype: description about doctype declaration
-sk 0:
-  include:
-    key: sk-de 0
-    namespace: dcm
-sk 1:
-  include:
-    key: sk-de 1
-    namespace: dcm
 spon 0:
   url: http://www.spiegel.de/
   title: Spiegel Online

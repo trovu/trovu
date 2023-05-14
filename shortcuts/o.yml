@@ -5687,6 +5687,22 @@ si 1:
   - web search
   examples:
     berlin: Search for images of "berlin"
+sk 0:
+  include:
+  - key: sk 0
+    namespace: dcm
+  - key: sk 0
+    namespace: dcc
+  - key: sk 0
+    namespace: lgs
+sk 1:
+  include:
+  - key: sk 1
+    namespace: dcm
+  - key: sk 1
+    namespace: dcc
+  - key: sk 1
+    namespace: lgs
 skapiec 0:
   url: http://www.skapiec.pl/szukaj/w_calym_serwisie/${query}
   title: Skapiec - Polish price comparison site

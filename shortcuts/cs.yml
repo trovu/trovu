@@ -98,14 +98,6 @@ ru 1:
   include:
     key: ru-cs 1
     namespace: dcm
-sk 0:
-  include:
-    key: sk-cs 0
-    namespace: dcm
-sk 1:
-  include:
-    key: sk-cs 1
-    namespace: dcm
 sub 1:
   url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
   title: Filmové titulky (Open Subtitles)
