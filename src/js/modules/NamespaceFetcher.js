@@ -184,10 +184,6 @@ export default class NamespaceFetcher {
         namespaceInfo.url,
       );
 
-      namespaceInfo.shortcuts = this.checkKeySyntax(
-        namespaceInfo.shortcuts,
-        namespaceInfo.name,
-      );
       for (const key in namespaceInfo.shortcuts) {
         namespaceInfo.shortcuts[key] = this.convertToObject(
           namespaceInfo.shortcuts[key],
@@ -215,34 +211,6 @@ export default class NamespaceFetcher {
       this.error = true;
       return [];
     }
-  }
-
-  /**
-   * Ensure shortcuts have the correct structure.
-   *
-   * @param {array} shortcuts      - The shortcuts to normalize.
-   * @param {string} namespaceName - The namespace name to show in error message.
-   *
-   * @return {array} shortcuts - The normalized shortcuts.
-   */
-  checkKeySyntax(shortcuts, namespaceName) {
-    const incorrectKeys = [];
-    for (const key in shortcuts) {
-      if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
-      }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
-    }
-    return shortcuts;
   }
 
   addNamespacesFromInclude(shortcut) {
@@ -434,6 +402,9 @@ export default class NamespaceFetcher {
    */
   addInfo(shortcut, key, namespaceName) {
     shortcut.key = key;
+    if (!key.match(/\S+ \d/)) {
+      throw new Error(`Incorrect key at: ${namespaceName}.${key}`);
+    }
     [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
     shortcut.argumentCount = parseInt(shortcut.argumentCount);
     shortcut.namespace = namespaceName;

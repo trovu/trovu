@@ -207,4 +207,9 @@ describe('NamespaceFetcher.addInfo', () => {
     `),
     );
   });
+  test('incorrect key', () => {
+    expect(() => {
+      new NamespaceFetcher({}).addInfo({}, 'keyWithoutArgumentCount', 'o');
+    }).toThrow(Error);
+  });
 });
