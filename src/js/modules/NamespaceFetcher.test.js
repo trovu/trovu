@@ -1,6 +1,16 @@
 import NamespaceFetcher from './NamespaceFetcher.js';
 import jsyaml from 'js-yaml';
 
+describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
+  test('site', () => {
+    expect(new NamespaceFetcher({}).getInitalNamespaceInfo('de')).toEqual({
+      name: 'de',
+      type: 'site',
+      url: 'https://data.trovu.net/data/shortcuts/de.yml',
+    });
+  });
+});
+
 describe('NamespaceFetcher.processInclude', () => {
   const namespaceInfos = jsyaml.load(`
     leo:
