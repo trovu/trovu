@@ -14,11 +14,6 @@
     query: g bar,baz
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
-- title: uppercase keyword
-  env:
-    query: G barbaz
-  response:
-    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: db 4
   env:
     language: de
