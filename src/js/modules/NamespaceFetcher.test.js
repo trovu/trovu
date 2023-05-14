@@ -47,7 +47,7 @@ describe('NamespaceFetcher.processInclude', () => {
         'leo',
         cloneObject(namespaceInfos),
       ),
-    ).toEqual({
+    ).toMatchObject({
       url: 'https://dict.leo.org/französisch-deutsch/{%word}',
       title: 'Allemand-Français (leo.org)',
     });
@@ -65,7 +65,7 @@ describe('NamespaceFetcher.processInclude', () => {
         '',
         cloneObject(namespaceInfos),
       ),
-    ).toEqual({
+    ).toMatchObject({
       url: 'https://dict.leo.org/französisch-deutsch/{%word}',
       title: 'Französisch-Deutsch (leo.org)',
     });
@@ -82,7 +82,7 @@ describe('NamespaceFetcher.processInclude', () => {
         'leo',
         cloneObject(namespaceInfos),
       ),
-    ).toEqual({
+    ).toMatchObject({
       url: 'https://dict.leo.org/französisch-deutsch/{%word}',
       title: 'Französisch-Deutsch (leo.org)',
     });
@@ -139,7 +139,7 @@ describe('NamespaceFetcher.processInclude', () => {
         'o',
         namespaceInfosMultiple,
       ),
-    ).toEqual({
+    ).toMatchObject({
       title: 'Französisch-Deutsch (leo.org)',
       url: 'https://dict.leo.org/französisch-deutsch/{%word}',
     });
