@@ -79,11 +79,11 @@ crd:
     de:
       hr:
         - https://www.crodict.com/german-croatian/
-        - https://www.crodict.com/german-croatian/{%Wort}
+        - https://www.crodict.com/german-croatian/{%word}
     en:
       hr:
         - https://www.crodict.com/phrases/view?l=englisch-kroatisch
-        - https://www.crodict.com/phrases/view?l=englisch-kroatisch&q=drvo
+        - https://www.crodict.com/phrases/view?l=englisch-kroatisch&q={%word}
 dcc:
   name: dict.cc
   pairs:

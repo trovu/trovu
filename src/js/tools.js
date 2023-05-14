@@ -242,7 +242,7 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
   const args = ['foo', 'bar', 'baz', 'a', 'b', 'c'];
   const env = { language: 'de', country: 'de' };
   url = await UrlProcessor.replaceArguments(url, args, env);
-  url = await UrlProcessor.replaceVariables(url, env);
+  url = UrlProcessor.replaceVariables(url, env);
   console.log(key);
   const response = await fetchWithTimeout(url);
   if (response.status != 200) {

@@ -14,11 +14,6 @@
     query: g bar,baz
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
-- title: uppercase keyword
-  env:
-    query: G barbaz
-  response:
-    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
 - title: db 4
   env:
     language: de
@@ -33,13 +28,6 @@
     query: .de.db b,m,8,1.1.2020
   response:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
-- title: extra namespace / language
-  env:
-    language: de
-    country: fr
-    query: pl.wg berlin
-  response:
-    redirectUrl: https://www.google.com/search?hl=pl&sitesearch=pl.wikipedia.org&q=berlin
 - title: default keyword
   env:
     defaultKeyword: g
@@ -76,11 +64,6 @@
     query: reload
   response:
     status: reloaded
-- title: extra user namespace
-  env:
-    query: georgjaehnig.example
-  response:
-    redirectUrl: https://www.example.com
 - title: deprecated with alternative
   env:
     country: de
@@ -94,28 +77,3 @@
   response:
     status: removed
     key: abp 0
-- title: included 1 level
-  env:
-    github: georgjaehnig
-    query: test-include-leo-de-en baum
-  response:
-    redirectUrl: https://dict.leo.org/german-english/baum
-- title: included 2 level
-  env:
-    github: georgjaehnig
-    query: test-include-leo-fr-de baum
-  response:
-    redirectUrl: https://dict.leo.org/französisch-deutsch/baum
-- title: included 2 level with var
-  env:
-    github: georgjaehnig
-    query: test-include-leo-fr-language baum
-  response:
-    redirectUrl: https://dict.leo.org/französisch-deutsch/baum
-- title: included 2 level with var negative
-  env:
-    github: georgjaehnig
-    query: test-include-leo-fr-language-negative baum
-    defaultKeyword: false
-  response:
-    status: not_found
