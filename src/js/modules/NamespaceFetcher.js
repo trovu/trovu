@@ -77,48 +77,6 @@ export default class NamespaceFetcher {
   }
 
   /**
-   * Ensures that the given namespaces have their information fetched and stored
-   * @param {Array} namespaces - An array of namespace names
-   * @param {number} priorityOffset - The offset to be used when setting the priority.
-   */
-  async ensureNamespaceInfos(namespaces, priorityOffset) {
-    const newNamespaceInfos = await this.fetchNamespaceInfos(
-      namespaces,
-      priorityOffset,
-    );
-    for (const namespaceInfo of Object.values(newNamespaceInfos)) {
-      namespaceInfo.shortcuts = await this.addIncludes(namespaceInfo.shortcuts);
-    }
-  }
-
-  /**
-   * Fetches the information for the given namespaces from an external source
-   * @param {Array} namespaces - An array of namespace names
-   * @param {number} priorityOffset - The offset to be used when setting the priority.
-   * @returns {Object} An object containing the fetched information for each given namespace
-   */
-  async fetchNamespaceInfos(namespaces, priorityOffset) {
-    const newNamespaceInfos = this.getInitialNamespaceInfos(
-      namespaces,
-      priorityOffset,
-    );
-    for (const namespaceName in newNamespaceInfos) {
-      if (namespaceName in this.namespaceInfos) {
-        // Remove existing, to not fetch them again.
-        delete newNamespaceInfos[namespaceName];
-      }
-    }
-    const promises = await this.startFetches(newNamespaceInfos);
-
-    // Wait until all fetch calls are done.
-    const responses = await Promise.all(promises);
-
-    await this.processResponses(newNamespaceInfos, responses);
-    Object.assign(this.namespaceInfos, newNamespaceInfos);
-    return newNamespaceInfos;
-  }
-
-  /**
    * Processes responses and updates namespace information.
    *
    * @param {Object} newNamespaceInfos - An object containing new namespace information.
