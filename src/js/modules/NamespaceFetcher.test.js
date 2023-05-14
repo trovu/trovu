@@ -9,6 +9,14 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       url: 'https://data.trovu.net/data/shortcuts/de.yml',
     });
   });
+  test('github', () => {
+    expect(new NamespaceFetcher({}).getInitalNamespaceInfo('johndoe')).toEqual({
+      github: 'johndoe',
+      name: 'johndoe',
+      type: 'user',
+      url: 'https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml',
+    });
+  });
 });
 
 describe('NamespaceFetcher.processInclude', () => {
