@@ -190,6 +190,15 @@ modifiers['deprecateGoogleMapsCities'] = async function (key, shortcut) {
   return shortcut;
 };
 
+modifiers['removeDictionaryDashIncludes'] = async function (key, shortcut) {
+  let matches;
+  if ((matches = key.match(new RegExp('^..-...'))) && shortcut.include) {
+    console.log(`Removing ${key}`);
+    return false;
+  }
+  return shortcut;
+};
+
 modifiers['removeDeadDomains'] = async function (key, shortcut) {
   const skipDomains = [
     'colourlovers.com',
