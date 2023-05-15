@@ -22,6 +22,7 @@ export default class NamespaceFetcher {
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
     this.namespaceInfos = this.addInfoAll(this.namespaceInfos);
     this.verifyAll(this.namespaceInfos);
+    console.log(this.namespaceInfos);
     return this.namespaceInfos;
   }
 
@@ -246,12 +247,13 @@ export default class NamespaceFetcher {
   }
 
   addNamespacesFromInclude(shortcut) {
-    if (shortcut.include && shortcut.include.namespace) {
-      const namespaceInfo = this.getInitalNamespaceInfo(
-        shortcut.include.namespace,
-      );
-      if (!this.namespaceInfos[namespaceInfo.name]) {
-        this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+    const includes = this.getIncludes(shortcut);
+    for (const include of includes) {
+      if (include && include.namespace) {
+        const namespaceInfo = this.getInitalNamespaceInfo(include.namespace);
+        if (!this.namespaceInfos[namespaceInfo.name]) {
+          this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+        }
       }
     }
   }
