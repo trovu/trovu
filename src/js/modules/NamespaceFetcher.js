@@ -297,12 +297,7 @@ export default class NamespaceFetcher {
     if (depth >= 10) {
       throw new Error(`NamespaceFetcher loop ran already ${depth} times.`);
     }
-    let includes = [];
-    if (Array.isArray(shortcut.include)) {
-      includes = shortcut.include;
-    } else {
-      includes.push(shortcut.include);
-    }
+    const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (!include.key) {
         Helper.log(`Include with missing key at: ${key}`);
@@ -342,6 +337,16 @@ export default class NamespaceFetcher {
       return shortcut;
     }
     return false;
+  }
+
+  getIncludes(shortcut) {
+    let includes = [];
+    if (Array.isArray(shortcut.include)) {
+      includes = shortcut.include;
+    } else {
+      includes.push(shortcut.include);
+    }
+    return includes;
   }
 
   /**
