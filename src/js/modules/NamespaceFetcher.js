@@ -22,7 +22,6 @@ export default class NamespaceFetcher {
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
     this.namespaceInfos = this.addInfoAll(this.namespaceInfos);
     this.verifyAll(this.namespaceInfos);
-    console.log(this.namespaceInfos);
     return this.namespaceInfos;
   }
 
