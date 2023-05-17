@@ -336,21 +336,6 @@ actions['createDictionaries'] = async function () {
     writeYmls(ymls);
   }
 
-  function getLanguageList() {
-    const langs = {};
-    const dirs = fs.readdirSync('./node_modules/languagelist/data/');
-    for (const dir of dirs) {
-      const lang = jsyaml.load(
-        fs.readFileSync(
-          `./node_modules/languagelist/data/${dir}/language.yaml`,
-          'utf8',
-        ),
-      );
-      langs[dir] = lang;
-    }
-    return langs;
-  }
-
   function getKey(lang1, lang2, argumentCount) {
     return `${lang1}-${lang2} ${argumentCount}`;
   }
@@ -395,6 +380,21 @@ function ensureNamespace(ymls, lang1) {
 
 function getDictionaries() {
   return jsyaml.load(fs.readFileSync('src/yml/dictionaries.yml', 'utf8'));
+}
+
+function getLanguageList() {
+  const langs = {};
+  const dirs = fs.readdirSync('./node_modules/languagelist/data/');
+  for (const dir of dirs) {
+    const lang = jsyaml.load(
+      fs.readFileSync(
+        `./node_modules/languagelist/data/${dir}/language.yaml`,
+        'utf8',
+      ),
+    );
+    langs[dir] = lang;
+  }
+  return langs;
 }
 
 main();
