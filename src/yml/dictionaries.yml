@@ -122,9 +122,9 @@ bab:
       no:
         - https://bab.la/dictionary/english-norwegian/
         - https://bab.la/dictionary/english-norwegian/{%word}
-      nso:
-        - https://bab.la/dictionary/english-northern-sotho/
-        - https://bab.la/dictionary/english-northern-sotho/{%word}
+      # nso:
+      #   - https://bab.la/dictionary/english-northern-sotho/
+      #   - https://bab.la/dictionary/english-northern-sotho/{%word}
       pl:
         - https://bab.la/dictionary/english-polish/
         - https://bab.la/dictionary/english-polish/{%word}
@@ -149,18 +149,21 @@ bab:
       te:
         - https://bab.la/dictionary/english-telugu/
         - https://bab.la/dictionary/english-telugu/{%word}
-      tg:
-        - https://bab.la/dictionary/english-tajik/
-        - https://bab.la/dictionary/english-tajik/{%word}
-      tk:
-        - https://bab.la/dictionary/english-turkmen/
-        - https://bab.la/dictionary/english-turkmen/{%word}
-      tpi:
-        - https://bab.la/dictionary/english-tok-pisin/
-        - https://bab.la/dictionary/english-tok-pisin/{%word}
-      tt:
-        - https://bab.la/dictionary/english-tatar/
-        - https://bab.la/dictionary/english-tatar/{%word}
+      # tg:
+      #   - https://bab.la/dictionary/english-tajik/
+      #   - https://bab.la/dictionary/english-tajik/{%word}
+      # tk:
+      #   - https://bab.la/dictionary/english-turkmen/
+      #   - https://bab.la/dictionary/english-turkmen/{%word}
+      # tpi:
+      #   - https://bab.la/dictionary/english-tok-pisin/
+      #   - https://bab.la/dictionary/english-tok-pisin/{%word}
+      # tt:
+      #   - https://bab.la/dictionary/english-tatar/
+      #   - https://bab.la/dictionary/english-tatar/{%word}
+      # tn:
+      #   - https://bab.la/dictionary/english-tswana/
+      #   - https://bab.la/dictionary/english-tswana/{%word}
       tr:
         - https://bab.la/dictionary/english-turkish/
         - https://bab.la/dictionary/english-turkish/{%word}
@@ -170,12 +173,9 @@ bab:
       vi:
         - https://bab.la/dictionary/english-vietnamese/
         - https://bab.la/dictionary/english-vietnamese/{%word}
-      tn:
-        - https://bab.la/dictionary/english-tswana/
-        - https://bab.la/dictionary/english-tswana/{%word}
-      xh:
-        - https://bab.la/dictionary/english-xhosa/
-        - https://bab.la/dictionary/english-xhosa/{%word}
+      # xh:
+      #   - https://bab.la/dictionary/english-xhosa/
+      #   - https://bab.la/dictionary/english-xhosa/{%word}
       zh:
         - https://bab.la/dictionary/english-chinese/
         - https://bab.la/dictionary/english-chinese/{%word}
