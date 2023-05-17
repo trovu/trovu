@@ -47,8 +47,11 @@ bab:
         - https://bab.la/dictionary/english-danish/{%word}
     de:
       en:
-        - https://bab.la/dictionary/english-german/
-        - https://bab.la/dictionary/english-german/{%word}
+        - https://bab.la/dictionary/german-english/
+        - https://bab.la/dictionary/german-english/{%word}
+      es:
+        - https://bab.la/dictionary/german-spanish/
+        - https://bab.la/dictionary/german-spanish/{%word}
       fr:
         - https://bab.la/dictionary/german-french/
         - https://bab.la/dictionary/german-french/{%word}
@@ -67,12 +70,6 @@ bab:
       ru:
         - https://bab.la/dictionary/german-russian/
         - https://bab.la/dictionary/german-russian/{%word}
-      en:
-        - https://bab.la/dictionary/german-english/
-        - https://bab.la/dictionary/german-english/{%word}
-      es:
-        - https://bab.la/dictionary/german-spanish/
-        - https://bab.la/dictionary/german-spanish/{%word}
       sv:
         - https://bab.la/dictionary/german-swedish/
         - https://bab.la/dictionary/german-swedish/{%word}
@@ -186,9 +183,6 @@ bab:
         - https://bab.la/dictionary/english-zulu/
         - https://bab.la/dictionary/english-zulu/{%word}
     es:
-      de:
-        - https://bab.la/dictionary/spanish-german/
-        - https://bab.la/dictionary/spanish-german/{%word}
       fr:
         - https://bab.la/dictionary/spanish-french/
         - https://bab.la/dictionary/spanish-french/{%word}
@@ -207,12 +201,12 @@ bab:
         - https://bab.la/dictionary/french-italian/{%word}
     it:
       ro:
-      - https://bab.la/dictionary/italian-romanian/
-      - https://bab.la/dictionary/italian-romanian/{%word}
+        - https://bab.la/dictionary/italian-romanian/
+        - https://bab.la/dictionary/italian-romanian/{%word}
     pl:
       ru:
-      - https://bab.la/dictionary/polish-russian/
-      - https://bab.la/dictionary/polish-russian/{%word}
+        - https://bab.la/dictionary/polish-russian/
+        - https://bab.la/dictionary/polish-russian/{%word}
 beo:
   name: Beolingus
   pairs:
