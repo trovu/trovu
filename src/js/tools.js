@@ -147,6 +147,28 @@ actions['applyModifier'] = async function () {
   console.log('Done');
 };
 
+actions['createDictionaryScaffold'] = async function () {
+  const langs = getLanguageList();
+  const dcm_langs_str =
+    'ar bg ca zh hr cs da nl et fi fr de el he hu id it ja ko lv lt no pl pt ro ru sr sk sl es sv th tr uk vi';
+  const dcmLangs = dcm_langs_str.split(' ');
+  const scaffold = {};
+  for (let i = 0; i < dcmLangs.length - 1; i++) {
+    scaffold[dcmLangs[i]] = {};
+    for (let j = i + 1; j < dcmLangs.length; j++) {
+      const template = `https://www.dict.com/${langs['en'][
+        dcmLangs[i]
+      ].toLowerCase()}-${langs['en'][dcmLangs[j]].toLowerCase()}/`;
+      scaffold[dcmLangs[i]][dcmLangs[j]] = [template, template + '{%word}'];
+    }
+  }
+  const scaffoldStr = jsyaml.dump(scaffold, {
+    noArrayIndent: true,
+    lineWidth: -1,
+  });
+  console.log(scaffoldStr);
+};
+
 modifiers['addTagOld'] = async function (key, shortcut) {
   if (!shortcut.tags) {
     shortcut.tags = [];
