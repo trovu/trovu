@@ -30,36 +30,189 @@ ard:
 bab:
   name: bab.la
   pairs:
+    ar:
+      en:
+        - https://bab.la/dictionary/english-arabic/
+        - https://bab.la/dictionary/english-arabic/{%word}
+    cs:
+      en:
+        - https://bab.la/dictionary/english-czech/
+        - https://bab.la/dictionary/english-czech/{%word}
     da:
       de:
-        - https://de.bab.la/woerterbuch/daenisch-deutsch/
-        - https://de.bab.la/woerterbuch/daenisch-deutsch/{%word}
+        - https://bab.la/woerterbuch/daenisch-deutsch/
+        - https://bab.la/woerterbuch/daenisch-deutsch/{%word}
+      en:
+        - https://bab.la/dictionary/english-danish/
+        - https://bab.la/dictionary/english-danish/{%word}
     de:
-      es:
-        - https://de.bab.la/woerterbuch/spanisch-deutsch/
-        - https://de.bab.la/woerterbuch/spanisch-deutsch/{%word}
+      en:
+        - https://bab.la/dictionary/english-german/
+        - https://bab.la/dictionary/english-german/{%word}
       fr:
-        - https://de.bab.la/woerterbuch/franzoesisch-deutsch/
-        - https://de.bab.la/woerterbuch/franzoesisch-deutsch/{%word}
+        - https://bab.la/dictionary/german-french/
+        - https://bab.la/dictionary/german-french/{%word}
       it:
-        - https://de.bab.la/woerterbuch/italienisch-deutsch/
-        - https://de.bab.la/woerterbuch/italienisch-deutsch/{%word}
+        - https://bab.la/dictionary/german-italian/
+        - https://bab.la/dictionary/german-italian/{%word}
+      nl:
+        - https://bab.la/dictionary/german-dutch/
+        - https://bab.la/dictionary/german-dutch/{%word}
       pl:
-        - https://de.bab.la/woerterbuch/polnisch-deutsch/
-        - https://de.bab.la/woerterbuch/polnisch-deutsch/{%word}
+        - https://bab.la/dictionary/german-polish/
+        - https://bab.la/dictionary/german-polish/{%word}
+      pt:
+        - https://bab.la/dictionary/german-portuguese/
+        - https://bab.la/dictionary/german-portuguese/{%word}
       ru:
-        - https://de.bab.la/woerterbuch/russisch-deutsch/
-        - https://de.bab.la/woerterbuch/russisch-deutsch/{%word}
+        - https://bab.la/dictionary/german-russian/
+        - https://bab.la/dictionary/german-russian/{%word}
+      en:
+        - https://bab.la/dictionary/german-english/
+        - https://bab.la/dictionary/german-english/{%word}
+      es:
+        - https://bab.la/dictionary/german-spanish/
+        - https://bab.la/dictionary/german-spanish/{%word}
       sv:
-        - https://de.bab.la/woerterbuch/schwedisch-deutsch/
-        - https://de.bab.la/woerterbuch/schwedisch-deutsch/{%word}
+        - https://bab.la/dictionary/german-swedish/
+        - https://bab.la/dictionary/german-swedish/{%word}
       tr:
-        - https://de.bab.la/woerterbuch/tuerkisch-deutsch/
-        - https://de.bab.la/woerterbuch/tuerkisch-deutsch/{%word}
+        - https://bab.la/dictionary/german-turkish/
+        - https://bab.la/dictionary/german-turkish/{%word}
     en:
+      eo:
+        - https://bab.la/dictionary/english-esperanto/
+        - https://bab.la/dictionary/english-esperanto/{%word}
+      es:
+        - https://bab.la/dictionary/english-spanish/
+        - https://bab.la/dictionary/english-spanish/{%word}
+      fi:
+        - https://bab.la/dictionary/english-finnish/
+        - https://bab.la/dictionary/english-finnish/{%word}
+      fr:
+        - https://bab.la/dictionary/english-french/
+        - https://bab.la/dictionary/english-french/{%word}
+      ka:
+        - https://bab.la/dictionary/english-georgian/
+        - https://bab.la/dictionary/english-georgian/{%word}
+      nl:
+        - https://bab.la/dictionary/english-dutch/
+        - https://bab.la/dictionary/english-dutch/{%word}
+      el:
+        - https://bab.la/dictionary/english-greek/
+        - https://bab.la/dictionary/english-greek/{%word}
+      hi:
+        - https://bab.la/dictionary/english-hindi/
+        - https://bab.la/dictionary/english-hindi/{%word}
+      hu:
+        - https://bab.la/dictionary/english-hungarian/
+        - https://bab.la/dictionary/english-hungarian/{%word}
+      id:
+        - https://bab.la/dictionary/english-indonesian/
+        - https://bab.la/dictionary/english-indonesian/{%word}
+      it:
+        - https://bab.la/dictionary/english-italian/
+        - https://bab.la/dictionary/english-italian/{%word}
+      ja:
+        - https://bab.la/dictionary/english-japanese/
+        - https://bab.la/dictionary/english-japanese/{%word}
+      ko:
+        - https://bab.la/dictionary/english-korean/
+        - https://bab.la/dictionary/english-korean/{%word}
+      ms:
+        - https://bab.la/dictionary/english-malay/
+        - https://bab.la/dictionary/english-malay/{%word}
+      no:
+        - https://bab.la/dictionary/english-norwegian/
+        - https://bab.la/dictionary/english-norwegian/{%word}
+      nso:
+        - https://bab.la/dictionary/english-northern-sotho/
+        - https://bab.la/dictionary/english-northern-sotho/{%word}
       pl:
-        - https://pl.bab.la/slownik/angielski-polski/
-        - https://pl.bab.la/slownik/angielski-polski/{%word}
+        - https://bab.la/dictionary/english-polish/
+        - https://bab.la/dictionary/english-polish/{%word}
+      pt:
+        - https://bab.la/dictionary/english-portuguese/
+        - https://bab.la/dictionary/english-portuguese/{%word}
+      ro:
+        - https://bab.la/dictionary/english-romanian/
+        - https://bab.la/dictionary/english-romanian/{%word}
+      ru:
+        - https://bab.la/dictionary/english-russian/
+        - https://bab.la/dictionary/english-russian/{%word}
+      sv:
+        - https://bab.la/dictionary/english-swedish/
+        - https://bab.la/dictionary/english-swedish/{%word}
+      sw:
+        - https://bab.la/dictionary/english-swahili/
+        - https://bab.la/dictionary/english-swahili/{%word}
+      th:
+        - https://bab.la/dictionary/english-thai/
+        - https://bab.la/dictionary/english-thai/{%word}
+      te:
+        - https://bab.la/dictionary/english-telugu/
+        - https://bab.la/dictionary/english-telugu/{%word}
+      tg:
+        - https://bab.la/dictionary/english-tajik/
+        - https://bab.la/dictionary/english-tajik/{%word}
+      tk:
+        - https://bab.la/dictionary/english-turkmen/
+        - https://bab.la/dictionary/english-turkmen/{%word}
+      tpi:
+        - https://bab.la/dictionary/english-tok-pisin/
+        - https://bab.la/dictionary/english-tok-pisin/{%word}
+      tt:
+        - https://bab.la/dictionary/english-tatar/
+        - https://bab.la/dictionary/english-tatar/{%word}
+      tr:
+        - https://bab.la/dictionary/english-turkish/
+        - https://bab.la/dictionary/english-turkish/{%word}
+      ur:
+        - https://bab.la/dictionary/english-urdu/
+        - https://bab.la/dictionary/english-urdu/{%word}
+      vi:
+        - https://bab.la/dictionary/english-vietnamese/
+        - https://bab.la/dictionary/english-vietnamese/{%word}
+      tn:
+        - https://bab.la/dictionary/english-tswana/
+        - https://bab.la/dictionary/english-tswana/{%word}
+      xh:
+        - https://bab.la/dictionary/english-xhosa/
+        - https://bab.la/dictionary/english-xhosa/{%word}
+      zh:
+        - https://bab.la/dictionary/english-chinese/
+        - https://bab.la/dictionary/english-chinese/{%word}
+      zu:
+        - https://bab.la/dictionary/english-zulu/
+        - https://bab.la/dictionary/english-zulu/{%word}
+    es:
+      de:
+        - https://bab.la/dictionary/spanish-german/
+        - https://bab.la/dictionary/spanish-german/{%word}
+      fr:
+        - https://bab.la/dictionary/spanish-french/
+        - https://bab.la/dictionary/spanish-french/{%word}
+      it:
+        - https://bab.la/dictionary/spanish-italian/
+        - https://bab.la/dictionary/spanish-italian/{%word}
+      pt:
+        - https://bab.la/dictionary/spanish-portuguese/
+        - https://bab.la/dictionary/spanish-portuguese/{%word}
+      qu:
+        - https://bab.la/dictionary/spanish-quechua/
+        - https://bab.la/dictionary/spanish-quechua/{%word}
+    fr:
+      it:
+        - https://bab.la/dictionary/french-italian/
+        - https://bab.la/dictionary/french-italian/{%word}
+    it:
+      ro:
+      - https://bab.la/dictionary/italian-romanian/
+      - https://bab.la/dictionary/italian-romanian/{%word}
+    pl:
+      ru:
+      - https://bab.la/dictionary/polish-russian/
+      - https://bab.la/dictionary/polish-russian/{%word}
 beo:
   name: Beolingus
   pairs:
