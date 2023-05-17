@@ -162,429 +162,1825 @@ dcm:
   name: dict.com
   pairs:
     ar:
+      bg:
+        - https://www.dict.com/arabic-bulgarian/
+        - https://www.dict.com/arabic-bulgarian/{%word}
+      ca:
+        - https://www.dict.com/arabic-catalan/
+        - https://www.dict.com/arabic-catalan/{%word}
+      zh:
+        - https://www.dict.com/arabic-chinese/
+        - https://www.dict.com/arabic-chinese/{%word}
+      hr:
+        - https://www.dict.com/arabic-croatian/
+        - https://www.dict.com/arabic-croatian/{%word}
+      cs:
+        - https://www.dict.com/arabic-czech/
+        - https://www.dict.com/arabic-czech/{%word}
+      da:
+        - https://www.dict.com/arabic-danish/
+        - https://www.dict.com/arabic-danish/{%word}
+      nl:
+        - https://www.dict.com/arabic-dutch/
+        - https://www.dict.com/arabic-dutch/{%word}
+      et:
+        - https://www.dict.com/arabic-estonian/
+        - https://www.dict.com/arabic-estonian/{%word}
+      fi:
+        - https://www.dict.com/arabic-finnish/
+        - https://www.dict.com/arabic-finnish/{%word}
+      fr:
+        - https://www.dict.com/arabic-french/
+        - https://www.dict.com/arabic-french/{%word}
       de:
-        - https://www.dict.com/arabisch-deutsch/
-        - https://www.dict.com/arabisch-deutsch/{%word}
-      en:
-        - https://www.dict.com/arabic-english/
-        - https://www.dict.com/arabic-english/{%word}
+        - https://www.dict.com/arabic-german/
+        - https://www.dict.com/arabic-german/{%word}
+      el:
+        - https://www.dict.com/arabic-greek/
+        - https://www.dict.com/arabic-greek/{%word}
+      he:
+        - https://www.dict.com/arabic-hebrew/
+        - https://www.dict.com/arabic-hebrew/{%word}
+      hu:
+        - https://www.dict.com/arabic-hungarian/
+        - https://www.dict.com/arabic-hungarian/{%word}
+      id:
+        - https://www.dict.com/arabic-indonesian/
+        - https://www.dict.com/arabic-indonesian/{%word}
+      it:
+        - https://www.dict.com/arabic-italian/
+        - https://www.dict.com/arabic-italian/{%word}
+      ja:
+        - https://www.dict.com/arabic-japanese/
+        - https://www.dict.com/arabic-japanese/{%word}
+      ko:
+        - https://www.dict.com/arabic-korean/
+        - https://www.dict.com/arabic-korean/{%word}
+      lv:
+        - https://www.dict.com/arabic-latvian/
+        - https://www.dict.com/arabic-latvian/{%word}
+      lt:
+        - https://www.dict.com/arabic-lithuanian/
+        - https://www.dict.com/arabic-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/arabic-norwegian/
+        - https://www.dict.com/arabic-norwegian/{%word}
+      pl:
+        - https://www.dict.com/arabic-polish/
+        - https://www.dict.com/arabic-polish/{%word}
+      pt:
+        - https://www.dict.com/arabic-portuguese/
+        - https://www.dict.com/arabic-portuguese/{%word}
+      ro:
+        - https://www.dict.com/arabic-romanian/
+        - https://www.dict.com/arabic-romanian/{%word}
+      ru:
+        - https://www.dict.com/arabic-russian/
+        - https://www.dict.com/arabic-russian/{%word}
+      sr:
+        - https://www.dict.com/arabic-serbian/
+        - https://www.dict.com/arabic-serbian/{%word}
       sk:
-        - https://www.dict.com/arabsko-slovensky/
-        - https://www.dict.com/arabsko-slovensky/{%word}
+        - https://www.dict.com/arabic-slovak/
+        - https://www.dict.com/arabic-slovak/{%word}
+      sl:
+        - https://www.dict.com/arabic-slovenian/
+        - https://www.dict.com/arabic-slovenian/{%word}
+      es:
+        - https://www.dict.com/arabic-spanish/
+        - https://www.dict.com/arabic-spanish/{%word}
+      sv:
+        - https://www.dict.com/arabic-swedish/
+        - https://www.dict.com/arabic-swedish/{%word}
+      th:
+        - https://www.dict.com/arabic-thai/
+        - https://www.dict.com/arabic-thai/{%word}
+      tr:
+        - https://www.dict.com/arabic-turkish/
+        - https://www.dict.com/arabic-turkish/{%word}
+      uk:
+        - https://www.dict.com/arabic-ukrainian/
+        - https://www.dict.com/arabic-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/arabic-vietnamese/
+        - https://www.dict.com/arabic-vietnamese/{%word}
     bg:
+      ca:
+        - https://www.dict.com/bulgarian-catalan/
+        - https://www.dict.com/bulgarian-catalan/{%word}
+      zh:
+        - https://www.dict.com/bulgarian-chinese/
+        - https://www.dict.com/bulgarian-chinese/{%word}
+      hr:
+        - https://www.dict.com/bulgarian-croatian/
+        - https://www.dict.com/bulgarian-croatian/{%word}
+      cs:
+        - https://www.dict.com/bulgarian-czech/
+        - https://www.dict.com/bulgarian-czech/{%word}
+      da:
+        - https://www.dict.com/bulgarian-danish/
+        - https://www.dict.com/bulgarian-danish/{%word}
+      nl:
+        - https://www.dict.com/bulgarian-dutch/
+        - https://www.dict.com/bulgarian-dutch/{%word}
+      et:
+        - https://www.dict.com/bulgarian-estonian/
+        - https://www.dict.com/bulgarian-estonian/{%word}
+      fi:
+        - https://www.dict.com/bulgarian-finnish/
+        - https://www.dict.com/bulgarian-finnish/{%word}
+      fr:
+        - https://www.dict.com/bulgarian-french/
+        - https://www.dict.com/bulgarian-french/{%word}
       de:
-        - https://www.dict.com/bulgarisch-deutsch/
-        - https://www.dict.com/bulgarisch-deutsch/{%word}
-      en:
-        - https://www.dict.com/bulgarian-english/
-        - https://www.dict.com/bulgarian-english/{%word}
+        - https://www.dict.com/bulgarian-german/
+        - https://www.dict.com/bulgarian-german/{%word}
+      el:
+        - https://www.dict.com/bulgarian-greek/
+        - https://www.dict.com/bulgarian-greek/{%word}
+      he:
+        - https://www.dict.com/bulgarian-hebrew/
+        - https://www.dict.com/bulgarian-hebrew/{%word}
+      hu:
+        - https://www.dict.com/bulgarian-hungarian/
+        - https://www.dict.com/bulgarian-hungarian/{%word}
+      id:
+        - https://www.dict.com/bulgarian-indonesian/
+        - https://www.dict.com/bulgarian-indonesian/{%word}
+      it:
+        - https://www.dict.com/bulgarian-italian/
+        - https://www.dict.com/bulgarian-italian/{%word}
+      ja:
+        - https://www.dict.com/bulgarian-japanese/
+        - https://www.dict.com/bulgarian-japanese/{%word}
+      ko:
+        - https://www.dict.com/bulgarian-korean/
+        - https://www.dict.com/bulgarian-korean/{%word}
+      lv:
+        - https://www.dict.com/bulgarian-latvian/
+        - https://www.dict.com/bulgarian-latvian/{%word}
+      lt:
+        - https://www.dict.com/bulgarian-lithuanian/
+        - https://www.dict.com/bulgarian-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/bulgarian-norwegian/
+        - https://www.dict.com/bulgarian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/bulgarian-polish/
+        - https://www.dict.com/bulgarian-polish/{%word}
+      pt:
+        - https://www.dict.com/bulgarian-portuguese/
+        - https://www.dict.com/bulgarian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/bulgarian-romanian/
+        - https://www.dict.com/bulgarian-romanian/{%word}
+      ru:
+        - https://www.dict.com/bulgarian-russian/
+        - https://www.dict.com/bulgarian-russian/{%word}
+      sr:
+        - https://www.dict.com/bulgarian-serbian/
+        - https://www.dict.com/bulgarian-serbian/{%word}
       sk:
-        - https://www.dict.com/bulharsko-slovensky/
-        - https://www.dict.com/bulharsko-slovensky/{%word}
+        - https://www.dict.com/bulgarian-slovak/
+        - https://www.dict.com/bulgarian-slovak/{%word}
+      sl:
+        - https://www.dict.com/bulgarian-slovenian/
+        - https://www.dict.com/bulgarian-slovenian/{%word}
+      es:
+        - https://www.dict.com/bulgarian-spanish/
+        - https://www.dict.com/bulgarian-spanish/{%word}
+      sv:
+        - https://www.dict.com/bulgarian-swedish/
+        - https://www.dict.com/bulgarian-swedish/{%word}
+      th:
+        - https://www.dict.com/bulgarian-thai/
+        - https://www.dict.com/bulgarian-thai/{%word}
+      tr:
+        - https://www.dict.com/bulgarian-turkish/
+        - https://www.dict.com/bulgarian-turkish/{%word}
+      uk:
+        - https://www.dict.com/bulgarian-ukrainian/
+        - https://www.dict.com/bulgarian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/bulgarian-vietnamese/
+        - https://www.dict.com/bulgarian-vietnamese/{%word}
     ca:
+      zh:
+        - https://www.dict.com/catalan-chinese/
+        - https://www.dict.com/catalan-chinese/{%word}
+      hr:
+        - https://www.dict.com/catalan-croatian/
+        - https://www.dict.com/catalan-croatian/{%word}
+      cs:
+        - https://www.dict.com/catalan-czech/
+        - https://www.dict.com/catalan-czech/{%word}
+      da:
+        - https://www.dict.com/catalan-danish/
+        - https://www.dict.com/catalan-danish/{%word}
+      nl:
+        - https://www.dict.com/catalan-dutch/
+        - https://www.dict.com/catalan-dutch/{%word}
+      et:
+        - https://www.dict.com/catalan-estonian/
+        - https://www.dict.com/catalan-estonian/{%word}
+      fi:
+        - https://www.dict.com/catalan-finnish/
+        - https://www.dict.com/catalan-finnish/{%word}
+      fr:
+        - https://www.dict.com/catalan-french/
+        - https://www.dict.com/catalan-french/{%word}
       de:
-        - https://www.dict.com/katalanisch-deutsch/
-        - https://www.dict.com/katalanisch-deutsch/{%word}
-      en:
-        - https://www.dict.com/catalan-english/
-        - https://www.dict.com/catalan-english/{%word}
+        - https://www.dict.com/catalan-german/
+        - https://www.dict.com/catalan-german/{%word}
+      el:
+        - https://www.dict.com/catalan-greek/
+        - https://www.dict.com/catalan-greek/{%word}
+      he:
+        - https://www.dict.com/catalan-hebrew/
+        - https://www.dict.com/catalan-hebrew/{%word}
+      hu:
+        - https://www.dict.com/catalan-hungarian/
+        - https://www.dict.com/catalan-hungarian/{%word}
+      id:
+        - https://www.dict.com/catalan-indonesian/
+        - https://www.dict.com/catalan-indonesian/{%word}
+      it:
+        - https://www.dict.com/catalan-italian/
+        - https://www.dict.com/catalan-italian/{%word}
+      ja:
+        - https://www.dict.com/catalan-japanese/
+        - https://www.dict.com/catalan-japanese/{%word}
+      ko:
+        - https://www.dict.com/catalan-korean/
+        - https://www.dict.com/catalan-korean/{%word}
+      lv:
+        - https://www.dict.com/catalan-latvian/
+        - https://www.dict.com/catalan-latvian/{%word}
+      lt:
+        - https://www.dict.com/catalan-lithuanian/
+        - https://www.dict.com/catalan-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/catalan-norwegian/
+        - https://www.dict.com/catalan-norwegian/{%word}
+      pl:
+        - https://www.dict.com/catalan-polish/
+        - https://www.dict.com/catalan-polish/{%word}
+      pt:
+        - https://www.dict.com/catalan-portuguese/
+        - https://www.dict.com/catalan-portuguese/{%word}
+      ro:
+        - https://www.dict.com/catalan-romanian/
+        - https://www.dict.com/catalan-romanian/{%word}
+      ru:
+        - https://www.dict.com/catalan-russian/
+        - https://www.dict.com/catalan-russian/{%word}
+      sr:
+        - https://www.dict.com/catalan-serbian/
+        - https://www.dict.com/catalan-serbian/{%word}
       sk:
-        - https://www.dict.com/katalansko-slovensky/
-        - https://www.dict.com/katalansko-slovensky/{%word}
+        - https://www.dict.com/catalan-slovak/
+        - https://www.dict.com/catalan-slovak/{%word}
+      sl:
+        - https://www.dict.com/catalan-slovenian/
+        - https://www.dict.com/catalan-slovenian/{%word}
+      es:
+        - https://www.dict.com/catalan-spanish/
+        - https://www.dict.com/catalan-spanish/{%word}
+      sv:
+        - https://www.dict.com/catalan-swedish/
+        - https://www.dict.com/catalan-swedish/{%word}
+      th:
+        - https://www.dict.com/catalan-thai/
+        - https://www.dict.com/catalan-thai/{%word}
+      tr:
+        - https://www.dict.com/catalan-turkish/
+        - https://www.dict.com/catalan-turkish/{%word}
+      uk:
+        - https://www.dict.com/catalan-ukrainian/
+        - https://www.dict.com/catalan-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/catalan-vietnamese/
+        - https://www.dict.com/catalan-vietnamese/{%word}
+    zh:
+      hr:
+        - https://www.dict.com/chinese-croatian/
+        - https://www.dict.com/chinese-croatian/{%word}
+      cs:
+        - https://www.dict.com/chinese-czech/
+        - https://www.dict.com/chinese-czech/{%word}
+      da:
+        - https://www.dict.com/chinese-danish/
+        - https://www.dict.com/chinese-danish/{%word}
+      nl:
+        - https://www.dict.com/chinese-dutch/
+        - https://www.dict.com/chinese-dutch/{%word}
+      et:
+        - https://www.dict.com/chinese-estonian/
+        - https://www.dict.com/chinese-estonian/{%word}
+      fi:
+        - https://www.dict.com/chinese-finnish/
+        - https://www.dict.com/chinese-finnish/{%word}
+      fr:
+        - https://www.dict.com/chinese-french/
+        - https://www.dict.com/chinese-french/{%word}
+      de:
+        - https://www.dict.com/chinese-german/
+        - https://www.dict.com/chinese-german/{%word}
+      el:
+        - https://www.dict.com/chinese-greek/
+        - https://www.dict.com/chinese-greek/{%word}
+      he:
+        - https://www.dict.com/chinese-hebrew/
+        - https://www.dict.com/chinese-hebrew/{%word}
+      hu:
+        - https://www.dict.com/chinese-hungarian/
+        - https://www.dict.com/chinese-hungarian/{%word}
+      id:
+        - https://www.dict.com/chinese-indonesian/
+        - https://www.dict.com/chinese-indonesian/{%word}
+      it:
+        - https://www.dict.com/chinese-italian/
+        - https://www.dict.com/chinese-italian/{%word}
+      ja:
+        - https://www.dict.com/chinese-japanese/
+        - https://www.dict.com/chinese-japanese/{%word}
+      ko:
+        - https://www.dict.com/chinese-korean/
+        - https://www.dict.com/chinese-korean/{%word}
+      lv:
+        - https://www.dict.com/chinese-latvian/
+        - https://www.dict.com/chinese-latvian/{%word}
+      lt:
+        - https://www.dict.com/chinese-lithuanian/
+        - https://www.dict.com/chinese-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/chinese-norwegian/
+        - https://www.dict.com/chinese-norwegian/{%word}
+      pl:
+        - https://www.dict.com/chinese-polish/
+        - https://www.dict.com/chinese-polish/{%word}
+      pt:
+        - https://www.dict.com/chinese-portuguese/
+        - https://www.dict.com/chinese-portuguese/{%word}
+      ro:
+        - https://www.dict.com/chinese-romanian/
+        - https://www.dict.com/chinese-romanian/{%word}
+      ru:
+        - https://www.dict.com/chinese-russian/
+        - https://www.dict.com/chinese-russian/{%word}
+      sr:
+        - https://www.dict.com/chinese-serbian/
+        - https://www.dict.com/chinese-serbian/{%word}
+      sk:
+        - https://www.dict.com/chinese-slovak/
+        - https://www.dict.com/chinese-slovak/{%word}
+      sl:
+        - https://www.dict.com/chinese-slovenian/
+        - https://www.dict.com/chinese-slovenian/{%word}
+      es:
+        - https://www.dict.com/chinese-spanish/
+        - https://www.dict.com/chinese-spanish/{%word}
+      sv:
+        - https://www.dict.com/chinese-swedish/
+        - https://www.dict.com/chinese-swedish/{%word}
+      th:
+        - https://www.dict.com/chinese-thai/
+        - https://www.dict.com/chinese-thai/{%word}
+      tr:
+        - https://www.dict.com/chinese-turkish/
+        - https://www.dict.com/chinese-turkish/{%word}
+      uk:
+        - https://www.dict.com/chinese-ukrainian/
+        - https://www.dict.com/chinese-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/chinese-vietnamese/
+        - https://www.dict.com/chinese-vietnamese/{%word}
+    hr:
+      cs:
+        - https://www.dict.com/croatian-czech/
+        - https://www.dict.com/croatian-czech/{%word}
+      da:
+        - https://www.dict.com/croatian-danish/
+        - https://www.dict.com/croatian-danish/{%word}
+      nl:
+        - https://www.dict.com/croatian-dutch/
+        - https://www.dict.com/croatian-dutch/{%word}
+      et:
+        - https://www.dict.com/croatian-estonian/
+        - https://www.dict.com/croatian-estonian/{%word}
+      fi:
+        - https://www.dict.com/croatian-finnish/
+        - https://www.dict.com/croatian-finnish/{%word}
+      fr:
+        - https://www.dict.com/croatian-french/
+        - https://www.dict.com/croatian-french/{%word}
+      de:
+        - https://www.dict.com/croatian-german/
+        - https://www.dict.com/croatian-german/{%word}
+      el:
+        - https://www.dict.com/croatian-greek/
+        - https://www.dict.com/croatian-greek/{%word}
+      he:
+        - https://www.dict.com/croatian-hebrew/
+        - https://www.dict.com/croatian-hebrew/{%word}
+      hu:
+        - https://www.dict.com/croatian-hungarian/
+        - https://www.dict.com/croatian-hungarian/{%word}
+      id:
+        - https://www.dict.com/croatian-indonesian/
+        - https://www.dict.com/croatian-indonesian/{%word}
+      it:
+        - https://www.dict.com/croatian-italian/
+        - https://www.dict.com/croatian-italian/{%word}
+      ja:
+        - https://www.dict.com/croatian-japanese/
+        - https://www.dict.com/croatian-japanese/{%word}
+      ko:
+        - https://www.dict.com/croatian-korean/
+        - https://www.dict.com/croatian-korean/{%word}
+      lv:
+        - https://www.dict.com/croatian-latvian/
+        - https://www.dict.com/croatian-latvian/{%word}
+      lt:
+        - https://www.dict.com/croatian-lithuanian/
+        - https://www.dict.com/croatian-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/croatian-norwegian/
+        - https://www.dict.com/croatian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/croatian-polish/
+        - https://www.dict.com/croatian-polish/{%word}
+      pt:
+        - https://www.dict.com/croatian-portuguese/
+        - https://www.dict.com/croatian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/croatian-romanian/
+        - https://www.dict.com/croatian-romanian/{%word}
+      ru:
+        - https://www.dict.com/croatian-russian/
+        - https://www.dict.com/croatian-russian/{%word}
+      sr:
+        - https://www.dict.com/croatian-serbian/
+        - https://www.dict.com/croatian-serbian/{%word}
+      sk:
+        - https://www.dict.com/croatian-slovak/
+        - https://www.dict.com/croatian-slovak/{%word}
+      sl:
+        - https://www.dict.com/croatian-slovenian/
+        - https://www.dict.com/croatian-slovenian/{%word}
+      es:
+        - https://www.dict.com/croatian-spanish/
+        - https://www.dict.com/croatian-spanish/{%word}
+      sv:
+        - https://www.dict.com/croatian-swedish/
+        - https://www.dict.com/croatian-swedish/{%word}
+      th:
+        - https://www.dict.com/croatian-thai/
+        - https://www.dict.com/croatian-thai/{%word}
+      tr:
+        - https://www.dict.com/croatian-turkish/
+        - https://www.dict.com/croatian-turkish/{%word}
+      uk:
+        - https://www.dict.com/croatian-ukrainian/
+        - https://www.dict.com/croatian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/croatian-vietnamese/
+        - https://www.dict.com/croatian-vietnamese/{%word}
     cs:
       da:
-        - https://www.dict.com/dansko-cesky/
-        - https://www.dict.com/dansko-cesky/{%word}
-      de:
-        - https://www.dict.com/nemecko-cesky/
-        - https://www.dict.com/nemecko-cesky/{%word}
-      el:
-        - https://www.dict.com/recko-cesky/
-        - https://www.dict.com/recko-cesky/{%word}
-      en:
-        - https://www.dict.com/anglicko-cesky/
-        - https://www.dict.com/anglicko-cesky/{%word}
-      es:
-        - https://www.dict.com/spanelsko-cesky/
-        - https://www.dict.com/spanelsko-cesky/{%word}
-      et:
-        - https://www.dict.com/estonsko-cesky/
-        - https://www.dict.com/estonsko-cesky/{%word}
-      fi:
-        - https://www.dict.com/finsko-cesky/
-        - https://www.dict.com/finsko-cesky/{%word}
-      fr:
-        - https://www.dict.com/francouzsko-cesky/
-        - https://www.dict.com/francouzsko-cesky/{%word}
-      he:
-        - https://www.dict.com/hebrejsko-cesky/
-        - https://www.dict.com/hebrejsko-cesky/{%word}
-      hr:
-        - https://www.dict.com/chorvatsko-cesky/
-        - https://www.dict.com/chorvatsko-cesky/{%word}
-      hu:
-        - https://www.dict.com/madarsko-cesky/
-        - https://www.dict.com/madarsko-cesky/{%word}
-      id:
-        - https://www.dict.com/indonesko-cesky/
-        - https://www.dict.com/indonesko-cesky/{%word}
-      it:
-        - https://www.dict.com/italsko-cesky/
-        - https://www.dict.com/italsko-cesky/{%word}
-      ja:
-        - https://www.dict.com/japonsko-cesky/
-        - https://www.dict.com/japonsko-cesky/{%word}
-      ko:
-        - https://www.dict.com/korejsko-cesky/
-        - https://www.dict.com/korejsko-cesky/{%word}
-      lt:
-        - https://www.dict.com/litevsko-cesky/
-        - https://www.dict.com/litevsko-cesky/{%word}
-      lv:
-        - https://www.dict.com/lotyssko-cesky/
-        - https://www.dict.com/lotyssko-cesky/{%word}
+        - https://www.dict.com/czech-danish/
+        - https://www.dict.com/czech-danish/{%word}
       nl:
-        - https://www.dict.com/nizozemsko-cesky/
-        - https://www.dict.com/nizozemsko-cesky/{%word}
-      no:
-        - https://www.dict.com/norsko-cesky/
-        - https://www.dict.com/norsko-cesky/{%word}
-      pl:
-        - https://www.dict.com/polsko-cesky/
-        - https://www.dict.com/polsko-cesky/{%word}
-      pt:
-        - https://www.dict.com/portugalsko-cesky/
-        - https://www.dict.com/portugalsko-cesky/{%word}
-      ro:
-        - https://www.dict.com/rumunsko-cesky/
-        - https://www.dict.com/rumunsko-cesky/{%word}
-      ru:
-        - https://www.dict.com/rusko-cesky/
-        - https://www.dict.com/rusko-cesky/{%word}
-      sk:
-        - https://www.dict.com/slovensko-cesky/
-        - https://www.dict.com/slovensko-cesky/{%word}
-      sl:
-        - https://www.dict.com/slovinsko-cesky/
-        - https://www.dict.com/slovinsko-cesky/{%word}
-      sr:
-        - https://www.dict.com/srbsko-cesky/
-        - https://www.dict.com/srbsko-cesky/{%word}
-      sv:
-        - https://www.dict.com/svedsko-cesky/
-        - https://www.dict.com/svedsko-cesky/{%word}
-      th:
-        - https://www.dict.com/thajsko-cesky/
-        - https://www.dict.com/thajsko-cesky/{%word}
-      tr:
-        - https://www.dict.com/turecko-cesky/
-        - https://www.dict.com/turecko-cesky/{%word}
-      uk:
-        - https://www.dict.com/ukrajinsko-cesky/
-        - https://www.dict.com/ukrajinsko-cesky/{%word}
-      vi:
-        - https://www.dict.com/vietnamsko-cesky/
-        - https://www.dict.com/vietnamsko-cesky/{%word}
-      zh:
-        - https://www.dict.com/cinsko-cesky/
-        - https://www.dict.com/cinsko-cesky/{%word}
-    da:
+        - https://www.dict.com/czech-dutch/
+        - https://www.dict.com/czech-dutch/{%word}
+      et:
+        - https://www.dict.com/czech-estonian/
+        - https://www.dict.com/czech-estonian/{%word}
+      fi:
+        - https://www.dict.com/czech-finnish/
+        - https://www.dict.com/czech-finnish/{%word}
+      fr:
+        - https://www.dict.com/czech-french/
+        - https://www.dict.com/czech-french/{%word}
       de:
-        - https://www.dict.com/danisch-deutsch/
-        - https://www.dict.com/danisch-deutsch/{%word}
-      en:
-        - https://www.dict.com/danish-english/
-        - https://www.dict.com/danish-english/{%word}
+        - https://www.dict.com/czech-german/
+        - https://www.dict.com/czech-german/{%word}
+      el:
+        - https://www.dict.com/czech-greek/
+        - https://www.dict.com/czech-greek/{%word}
+      he:
+        - https://www.dict.com/czech-hebrew/
+        - https://www.dict.com/czech-hebrew/{%word}
+      hu:
+        - https://www.dict.com/czech-hungarian/
+        - https://www.dict.com/czech-hungarian/{%word}
+      id:
+        - https://www.dict.com/czech-indonesian/
+        - https://www.dict.com/czech-indonesian/{%word}
+      it:
+        - https://www.dict.com/czech-italian/
+        - https://www.dict.com/czech-italian/{%word}
+      ja:
+        - https://www.dict.com/czech-japanese/
+        - https://www.dict.com/czech-japanese/{%word}
+      ko:
+        - https://www.dict.com/czech-korean/
+        - https://www.dict.com/czech-korean/{%word}
+      lv:
+        - https://www.dict.com/czech-latvian/
+        - https://www.dict.com/czech-latvian/{%word}
+      lt:
+        - https://www.dict.com/czech-lithuanian/
+        - https://www.dict.com/czech-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/czech-norwegian/
+        - https://www.dict.com/czech-norwegian/{%word}
+      pl:
+        - https://www.dict.com/czech-polish/
+        - https://www.dict.com/czech-polish/{%word}
+      pt:
+        - https://www.dict.com/czech-portuguese/
+        - https://www.dict.com/czech-portuguese/{%word}
+      ro:
+        - https://www.dict.com/czech-romanian/
+        - https://www.dict.com/czech-romanian/{%word}
+      ru:
+        - https://www.dict.com/czech-russian/
+        - https://www.dict.com/czech-russian/{%word}
+      sr:
+        - https://www.dict.com/czech-serbian/
+        - https://www.dict.com/czech-serbian/{%word}
       sk:
-        - https://www.dict.com/dansko-slovensky/
-        - https://www.dict.com/dansko-slovensky/{%word}
+        - https://www.dict.com/czech-slovak/
+        - https://www.dict.com/czech-slovak/{%word}
+      sl:
+        - https://www.dict.com/czech-slovenian/
+        - https://www.dict.com/czech-slovenian/{%word}
+      es:
+        - https://www.dict.com/czech-spanish/
+        - https://www.dict.com/czech-spanish/{%word}
+      sv:
+        - https://www.dict.com/czech-swedish/
+        - https://www.dict.com/czech-swedish/{%word}
+      th:
+        - https://www.dict.com/czech-thai/
+        - https://www.dict.com/czech-thai/{%word}
+      tr:
+        - https://www.dict.com/czech-turkish/
+        - https://www.dict.com/czech-turkish/{%word}
+      uk:
+        - https://www.dict.com/czech-ukrainian/
+        - https://www.dict.com/czech-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/czech-vietnamese/
+        - https://www.dict.com/czech-vietnamese/{%word}
+    da:
+      nl:
+        - https://www.dict.com/danish-dutch/
+        - https://www.dict.com/danish-dutch/{%word}
+      et:
+        - https://www.dict.com/danish-estonian/
+        - https://www.dict.com/danish-estonian/{%word}
+      fi:
+        - https://www.dict.com/danish-finnish/
+        - https://www.dict.com/danish-finnish/{%word}
+      fr:
+        - https://www.dict.com/danish-french/
+        - https://www.dict.com/danish-french/{%word}
+      de:
+        - https://www.dict.com/danish-german/
+        - https://www.dict.com/danish-german/{%word}
+      el:
+        - https://www.dict.com/danish-greek/
+        - https://www.dict.com/danish-greek/{%word}
+      he:
+        - https://www.dict.com/danish-hebrew/
+        - https://www.dict.com/danish-hebrew/{%word}
+      hu:
+        - https://www.dict.com/danish-hungarian/
+        - https://www.dict.com/danish-hungarian/{%word}
+      id:
+        - https://www.dict.com/danish-indonesian/
+        - https://www.dict.com/danish-indonesian/{%word}
+      it:
+        - https://www.dict.com/danish-italian/
+        - https://www.dict.com/danish-italian/{%word}
+      ja:
+        - https://www.dict.com/danish-japanese/
+        - https://www.dict.com/danish-japanese/{%word}
+      ko:
+        - https://www.dict.com/danish-korean/
+        - https://www.dict.com/danish-korean/{%word}
+      lv:
+        - https://www.dict.com/danish-latvian/
+        - https://www.dict.com/danish-latvian/{%word}
+      lt:
+        - https://www.dict.com/danish-lithuanian/
+        - https://www.dict.com/danish-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/danish-norwegian/
+        - https://www.dict.com/danish-norwegian/{%word}
+      pl:
+        - https://www.dict.com/danish-polish/
+        - https://www.dict.com/danish-polish/{%word}
+      pt:
+        - https://www.dict.com/danish-portuguese/
+        - https://www.dict.com/danish-portuguese/{%word}
+      ro:
+        - https://www.dict.com/danish-romanian/
+        - https://www.dict.com/danish-romanian/{%word}
+      ru:
+        - https://www.dict.com/danish-russian/
+        - https://www.dict.com/danish-russian/{%word}
+      sr:
+        - https://www.dict.com/danish-serbian/
+        - https://www.dict.com/danish-serbian/{%word}
+      sk:
+        - https://www.dict.com/danish-slovak/
+        - https://www.dict.com/danish-slovak/{%word}
+      sl:
+        - https://www.dict.com/danish-slovenian/
+        - https://www.dict.com/danish-slovenian/{%word}
+      es:
+        - https://www.dict.com/danish-spanish/
+        - https://www.dict.com/danish-spanish/{%word}
+      sv:
+        - https://www.dict.com/danish-swedish/
+        - https://www.dict.com/danish-swedish/{%word}
+      th:
+        - https://www.dict.com/danish-thai/
+        - https://www.dict.com/danish-thai/{%word}
+      tr:
+        - https://www.dict.com/danish-turkish/
+        - https://www.dict.com/danish-turkish/{%word}
+      uk:
+        - https://www.dict.com/danish-ukrainian/
+        - https://www.dict.com/danish-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/danish-vietnamese/
+        - https://www.dict.com/danish-vietnamese/{%word}
+    nl:
+      et:
+        - https://www.dict.com/dutch-estonian/
+        - https://www.dict.com/dutch-estonian/{%word}
+      fi:
+        - https://www.dict.com/dutch-finnish/
+        - https://www.dict.com/dutch-finnish/{%word}
+      fr:
+        - https://www.dict.com/dutch-french/
+        - https://www.dict.com/dutch-french/{%word}
+      de:
+        - https://www.dict.com/dutch-german/
+        - https://www.dict.com/dutch-german/{%word}
+      el:
+        - https://www.dict.com/dutch-greek/
+        - https://www.dict.com/dutch-greek/{%word}
+      he:
+        - https://www.dict.com/dutch-hebrew/
+        - https://www.dict.com/dutch-hebrew/{%word}
+      hu:
+        - https://www.dict.com/dutch-hungarian/
+        - https://www.dict.com/dutch-hungarian/{%word}
+      id:
+        - https://www.dict.com/dutch-indonesian/
+        - https://www.dict.com/dutch-indonesian/{%word}
+      it:
+        - https://www.dict.com/dutch-italian/
+        - https://www.dict.com/dutch-italian/{%word}
+      ja:
+        - https://www.dict.com/dutch-japanese/
+        - https://www.dict.com/dutch-japanese/{%word}
+      ko:
+        - https://www.dict.com/dutch-korean/
+        - https://www.dict.com/dutch-korean/{%word}
+      lv:
+        - https://www.dict.com/dutch-latvian/
+        - https://www.dict.com/dutch-latvian/{%word}
+      lt:
+        - https://www.dict.com/dutch-lithuanian/
+        - https://www.dict.com/dutch-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/dutch-norwegian/
+        - https://www.dict.com/dutch-norwegian/{%word}
+      pl:
+        - https://www.dict.com/dutch-polish/
+        - https://www.dict.com/dutch-polish/{%word}
+      pt:
+        - https://www.dict.com/dutch-portuguese/
+        - https://www.dict.com/dutch-portuguese/{%word}
+      ro:
+        - https://www.dict.com/dutch-romanian/
+        - https://www.dict.com/dutch-romanian/{%word}
+      ru:
+        - https://www.dict.com/dutch-russian/
+        - https://www.dict.com/dutch-russian/{%word}
+      sr:
+        - https://www.dict.com/dutch-serbian/
+        - https://www.dict.com/dutch-serbian/{%word}
+      sk:
+        - https://www.dict.com/dutch-slovak/
+        - https://www.dict.com/dutch-slovak/{%word}
+      sl:
+        - https://www.dict.com/dutch-slovenian/
+        - https://www.dict.com/dutch-slovenian/{%word}
+      es:
+        - https://www.dict.com/dutch-spanish/
+        - https://www.dict.com/dutch-spanish/{%word}
+      sv:
+        - https://www.dict.com/dutch-swedish/
+        - https://www.dict.com/dutch-swedish/{%word}
+      th:
+        - https://www.dict.com/dutch-thai/
+        - https://www.dict.com/dutch-thai/{%word}
+      tr:
+        - https://www.dict.com/dutch-turkish/
+        - https://www.dict.com/dutch-turkish/{%word}
+      uk:
+        - https://www.dict.com/dutch-ukrainian/
+        - https://www.dict.com/dutch-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/dutch-vietnamese/
+        - https://www.dict.com/dutch-vietnamese/{%word}
+    et:
+      fi:
+        - https://www.dict.com/estonian-finnish/
+        - https://www.dict.com/estonian-finnish/{%word}
+      fr:
+        - https://www.dict.com/estonian-french/
+        - https://www.dict.com/estonian-french/{%word}
+      de:
+        - https://www.dict.com/estonian-german/
+        - https://www.dict.com/estonian-german/{%word}
+      el:
+        - https://www.dict.com/estonian-greek/
+        - https://www.dict.com/estonian-greek/{%word}
+      he:
+        - https://www.dict.com/estonian-hebrew/
+        - https://www.dict.com/estonian-hebrew/{%word}
+      hu:
+        - https://www.dict.com/estonian-hungarian/
+        - https://www.dict.com/estonian-hungarian/{%word}
+      id:
+        - https://www.dict.com/estonian-indonesian/
+        - https://www.dict.com/estonian-indonesian/{%word}
+      it:
+        - https://www.dict.com/estonian-italian/
+        - https://www.dict.com/estonian-italian/{%word}
+      ja:
+        - https://www.dict.com/estonian-japanese/
+        - https://www.dict.com/estonian-japanese/{%word}
+      ko:
+        - https://www.dict.com/estonian-korean/
+        - https://www.dict.com/estonian-korean/{%word}
+      lv:
+        - https://www.dict.com/estonian-latvian/
+        - https://www.dict.com/estonian-latvian/{%word}
+      lt:
+        - https://www.dict.com/estonian-lithuanian/
+        - https://www.dict.com/estonian-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/estonian-norwegian/
+        - https://www.dict.com/estonian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/estonian-polish/
+        - https://www.dict.com/estonian-polish/{%word}
+      pt:
+        - https://www.dict.com/estonian-portuguese/
+        - https://www.dict.com/estonian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/estonian-romanian/
+        - https://www.dict.com/estonian-romanian/{%word}
+      ru:
+        - https://www.dict.com/estonian-russian/
+        - https://www.dict.com/estonian-russian/{%word}
+      sr:
+        - https://www.dict.com/estonian-serbian/
+        - https://www.dict.com/estonian-serbian/{%word}
+      sk:
+        - https://www.dict.com/estonian-slovak/
+        - https://www.dict.com/estonian-slovak/{%word}
+      sl:
+        - https://www.dict.com/estonian-slovenian/
+        - https://www.dict.com/estonian-slovenian/{%word}
+      es:
+        - https://www.dict.com/estonian-spanish/
+        - https://www.dict.com/estonian-spanish/{%word}
+      sv:
+        - https://www.dict.com/estonian-swedish/
+        - https://www.dict.com/estonian-swedish/{%word}
+      th:
+        - https://www.dict.com/estonian-thai/
+        - https://www.dict.com/estonian-thai/{%word}
+      tr:
+        - https://www.dict.com/estonian-turkish/
+        - https://www.dict.com/estonian-turkish/{%word}
+      uk:
+        - https://www.dict.com/estonian-ukrainian/
+        - https://www.dict.com/estonian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/estonian-vietnamese/
+        - https://www.dict.com/estonian-vietnamese/{%word}
+    fi:
+      fr:
+        - https://www.dict.com/finnish-french/
+        - https://www.dict.com/finnish-french/{%word}
+      de:
+        - https://www.dict.com/finnish-german/
+        - https://www.dict.com/finnish-german/{%word}
+      el:
+        - https://www.dict.com/finnish-greek/
+        - https://www.dict.com/finnish-greek/{%word}
+      he:
+        - https://www.dict.com/finnish-hebrew/
+        - https://www.dict.com/finnish-hebrew/{%word}
+      hu:
+        - https://www.dict.com/finnish-hungarian/
+        - https://www.dict.com/finnish-hungarian/{%word}
+      id:
+        - https://www.dict.com/finnish-indonesian/
+        - https://www.dict.com/finnish-indonesian/{%word}
+      it:
+        - https://www.dict.com/finnish-italian/
+        - https://www.dict.com/finnish-italian/{%word}
+      ja:
+        - https://www.dict.com/finnish-japanese/
+        - https://www.dict.com/finnish-japanese/{%word}
+      ko:
+        - https://www.dict.com/finnish-korean/
+        - https://www.dict.com/finnish-korean/{%word}
+      lv:
+        - https://www.dict.com/finnish-latvian/
+        - https://www.dict.com/finnish-latvian/{%word}
+      lt:
+        - https://www.dict.com/finnish-lithuanian/
+        - https://www.dict.com/finnish-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/finnish-norwegian/
+        - https://www.dict.com/finnish-norwegian/{%word}
+      pl:
+        - https://www.dict.com/finnish-polish/
+        - https://www.dict.com/finnish-polish/{%word}
+      pt:
+        - https://www.dict.com/finnish-portuguese/
+        - https://www.dict.com/finnish-portuguese/{%word}
+      ro:
+        - https://www.dict.com/finnish-romanian/
+        - https://www.dict.com/finnish-romanian/{%word}
+      ru:
+        - https://www.dict.com/finnish-russian/
+        - https://www.dict.com/finnish-russian/{%word}
+      sr:
+        - https://www.dict.com/finnish-serbian/
+        - https://www.dict.com/finnish-serbian/{%word}
+      sk:
+        - https://www.dict.com/finnish-slovak/
+        - https://www.dict.com/finnish-slovak/{%word}
+      sl:
+        - https://www.dict.com/finnish-slovenian/
+        - https://www.dict.com/finnish-slovenian/{%word}
+      es:
+        - https://www.dict.com/finnish-spanish/
+        - https://www.dict.com/finnish-spanish/{%word}
+      sv:
+        - https://www.dict.com/finnish-swedish/
+        - https://www.dict.com/finnish-swedish/{%word}
+      th:
+        - https://www.dict.com/finnish-thai/
+        - https://www.dict.com/finnish-thai/{%word}
+      tr:
+        - https://www.dict.com/finnish-turkish/
+        - https://www.dict.com/finnish-turkish/{%word}
+      uk:
+        - https://www.dict.com/finnish-ukrainian/
+        - https://www.dict.com/finnish-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/finnish-vietnamese/
+        - https://www.dict.com/finnish-vietnamese/{%word}
+    fr:
+      de:
+        - https://www.dict.com/french-german/
+        - https://www.dict.com/french-german/{%word}
+      el:
+        - https://www.dict.com/french-greek/
+        - https://www.dict.com/french-greek/{%word}
+      he:
+        - https://www.dict.com/french-hebrew/
+        - https://www.dict.com/french-hebrew/{%word}
+      hu:
+        - https://www.dict.com/french-hungarian/
+        - https://www.dict.com/french-hungarian/{%word}
+      id:
+        - https://www.dict.com/french-indonesian/
+        - https://www.dict.com/french-indonesian/{%word}
+      it:
+        - https://www.dict.com/french-italian/
+        - https://www.dict.com/french-italian/{%word}
+      ja:
+        - https://www.dict.com/french-japanese/
+        - https://www.dict.com/french-japanese/{%word}
+      ko:
+        - https://www.dict.com/french-korean/
+        - https://www.dict.com/french-korean/{%word}
+      lv:
+        - https://www.dict.com/french-latvian/
+        - https://www.dict.com/french-latvian/{%word}
+      lt:
+        - https://www.dict.com/french-lithuanian/
+        - https://www.dict.com/french-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/french-norwegian/
+        - https://www.dict.com/french-norwegian/{%word}
+      pl:
+        - https://www.dict.com/french-polish/
+        - https://www.dict.com/french-polish/{%word}
+      pt:
+        - https://www.dict.com/french-portuguese/
+        - https://www.dict.com/french-portuguese/{%word}
+      ro:
+        - https://www.dict.com/french-romanian/
+        - https://www.dict.com/french-romanian/{%word}
+      ru:
+        - https://www.dict.com/french-russian/
+        - https://www.dict.com/french-russian/{%word}
+      sr:
+        - https://www.dict.com/french-serbian/
+        - https://www.dict.com/french-serbian/{%word}
+      sk:
+        - https://www.dict.com/french-slovak/
+        - https://www.dict.com/french-slovak/{%word}
+      sl:
+        - https://www.dict.com/french-slovenian/
+        - https://www.dict.com/french-slovenian/{%word}
+      es:
+        - https://www.dict.com/french-spanish/
+        - https://www.dict.com/french-spanish/{%word}
+      sv:
+        - https://www.dict.com/french-swedish/
+        - https://www.dict.com/french-swedish/{%word}
+      th:
+        - https://www.dict.com/french-thai/
+        - https://www.dict.com/french-thai/{%word}
+      tr:
+        - https://www.dict.com/french-turkish/
+        - https://www.dict.com/french-turkish/{%word}
+      uk:
+        - https://www.dict.com/french-ukrainian/
+        - https://www.dict.com/french-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/french-vietnamese/
+        - https://www.dict.com/french-vietnamese/{%word}
     de:
       el:
-        - https://www.dict.com/griechisch-deutsch/
-        - https://www.dict.com/griechisch-deutsch/{%word}
-      en:
-        - https://www.dict.com/englisch-deutsch/
-        - https://www.dict.com/englisch-deutsch/{%word}
+        - https://www.dict.com/german-greek/
+        - https://www.dict.com/german-greek/{%word}
+      he:
+        - https://www.dict.com/german-hebrew/
+        - https://www.dict.com/german-hebrew/{%word}
+      hu:
+        - https://www.dict.com/german-hungarian/
+        - https://www.dict.com/german-hungarian/{%word}
+      id:
+        - https://www.dict.com/german-indonesian/
+        - https://www.dict.com/german-indonesian/{%word}
+      it:
+        - https://www.dict.com/german-italian/
+        - https://www.dict.com/german-italian/{%word}
+      ja:
+        - https://www.dict.com/german-japanese/
+        - https://www.dict.com/german-japanese/{%word}
+      ko:
+        - https://www.dict.com/german-korean/
+        - https://www.dict.com/german-korean/{%word}
+      lv:
+        - https://www.dict.com/german-latvian/
+        - https://www.dict.com/german-latvian/{%word}
+      lt:
+        - https://www.dict.com/german-lithuanian/
+        - https://www.dict.com/german-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/german-norwegian/
+        - https://www.dict.com/german-norwegian/{%word}
+      pl:
+        - https://www.dict.com/german-polish/
+        - https://www.dict.com/german-polish/{%word}
+      pt:
+        - https://www.dict.com/german-portuguese/
+        - https://www.dict.com/german-portuguese/{%word}
+      ro:
+        - https://www.dict.com/german-romanian/
+        - https://www.dict.com/german-romanian/{%word}
+      ru:
+        - https://www.dict.com/german-russian/
+        - https://www.dict.com/german-russian/{%word}
+      sr:
+        - https://www.dict.com/german-serbian/
+        - https://www.dict.com/german-serbian/{%word}
+      sk:
+        - https://www.dict.com/german-slovak/
+        - https://www.dict.com/german-slovak/{%word}
+      sl:
+        - https://www.dict.com/german-slovenian/
+        - https://www.dict.com/german-slovenian/{%word}
       es:
-        - https://www.dict.com/spanisch-deutsch/
-        - https://www.dict.com/spanisch-deutsch/{%word}
-      et:
-        - https://www.dict.com/estnisch-deutsch/
-        - https://www.dict.com/estnisch-deutsch/{%word}
-      fi:
-        - https://www.dict.com/finnisch-deutsch/
-        - https://www.dict.com/finnisch-deutsch/{%word}
-      fr:
-        - https://www.dict.com/franz-deutsch/
-        - https://www.dict.com/franz-deutsch/{%word}
-      he:
-        - https://www.dict.com/hebraisch-deutsch/
-        - https://www.dict.com/hebraisch-deutsch/{%word}
-      hr:
-        - https://www.dict.com/kroatisch-deutsch/
-        - https://www.dict.com/kroatisch-deutsch/{%word}
-      hu:
-        - https://www.dict.com/ungarisch-deutsch/
-        - https://www.dict.com/ungarisch-deutsch/{%word}
-      id:
-        - https://www.dict.com/indonesisch-deutsch/
-        - https://www.dict.com/indonesisch-deutsch/{%word}
-      it:
-        - https://www.dict.com/italienisch-deutsch/
-        - https://www.dict.com/italienisch-deutsch/{%word}
-      ja:
-        - https://www.dict.com/japanisch-deutsch/
-        - https://www.dict.com/japanisch-deutsch/{%word}
-      ko:
-        - https://www.dict.com/koreanisch-deutsch/
-        - https://www.dict.com/koreanisch-deutsch/{%word}
-      lt:
-        - https://www.dict.com/litauisch-deutsch/
-        - https://www.dict.com/litauisch-deutsch/{%word}
-      lv:
-        - https://www.dict.com/lettisch-deutsch/
-        - https://www.dict.com/lettisch-deutsch/{%word}
-      nl:
-        - https://www.dict.com/niederlandisch-deutsch/
-        - https://www.dict.com/niederlandisch-deutsch/{%word}
-      no:
-        - https://www.dict.com/norwegisch-deutsch/
-        - https://www.dict.com/norwegisch-deutsch/{%word}
-      pl:
-        - https://www.dict.com/polnisch-deutsch/
-        - https://www.dict.com/polnisch-deutsch/{%word}
-      pt:
-        - https://www.dict.com/portugiesisch-deutsch/
-        - https://www.dict.com/portugiesisch-deutsch/{%word}
-      ro:
-        - https://www.dict.com/rumanisch-deutsch/
-        - https://www.dict.com/rumanisch-deutsch/{%word}
-      ru:
-        - https://www.dict.com/russisch-deutsch/
-        - https://www.dict.com/russisch-deutsch/{%word}
-      sk:
-        - https://www.dict.com/slowakisch-deutsch/
-        - https://www.dict.com/slowakisch-deutsch/{%word}
-      sl:
-        - https://www.dict.com/slowenisch-deutsch/
-        - https://www.dict.com/slowenisch-deutsch/{%word}
-      sr:
-        - https://www.dict.com/serbisch-deutsch/
-        - https://www.dict.com/serbisch-deutsch/{%word}
+        - https://www.dict.com/german-spanish/
+        - https://www.dict.com/german-spanish/{%word}
       sv:
-        - https://www.dict.com/schwedisch-deutsch/
-        - https://www.dict.com/schwedisch-deutsch/{%word}
+        - https://www.dict.com/german-swedish/
+        - https://www.dict.com/german-swedish/{%word}
       th:
-        - https://www.dict.com/thai-deutsch/
-        - https://www.dict.com/thai-deutsch/{%word}
+        - https://www.dict.com/german-thai/
+        - https://www.dict.com/german-thai/{%word}
       tr:
-        - https://www.dict.com/tuerkisch-deutsch/
-        - https://www.dict.com/tuerkisch-deutsch/{%word}
+        - https://www.dict.com/german-turkish/
+        - https://www.dict.com/german-turkish/{%word}
       uk:
-        - https://www.dict.com/ukrainisch-deutsch/
-        - https://www.dict.com/ukrainisch-deutsch/{%word}
+        - https://www.dict.com/german-ukrainian/
+        - https://www.dict.com/german-ukrainian/{%word}
       vi:
-        - https://www.dict.com/vietnamesisch-deutsch/
-        - https://www.dict.com/vietnamesisch-deutsch/{%word}
-      zh:
-        - https://www.dict.com/chinesisch-deutsch/
-        - https://www.dict.com/chinesisch-deutsch/{%word}
+        - https://www.dict.com/german-vietnamese/
+        - https://www.dict.com/german-vietnamese/{%word}
     el:
-      sk:
-        - https://www.dict.com/grecko-slovensky/
-        - https://www.dict.com/grecko-slovensky/{%word}
-    en:
-      et:
-        - https://www.dict.com/estonian-english/
-        - https://www.dict.com/estonian-english/{%word}
-      fi:
-        - https://www.dict.com/finnish-english/
-        - https://www.dict.com/finnish-english/{%word}
-      fr:
-        - https://www.dict.com/french-english/
-        - https://www.dict.com/french-english/{%word}
-      de:
-        - https://www.dict.com/german-english/
-        - https://www.dict.com/german-english/{%word}
-      el:
-        - https://www.dict.com/greek-english/
-        - https://www.dict.com/greek-english/{%word}
       he:
-        - https://www.dict.com/hebrew-english/
-        - https://www.dict.com/hebrew-english/{%word}
-      hr:
-        - https://www.dict.com/croatian-english/
-        - https://www.dict.com/croatian-english/{%word}
+        - https://www.dict.com/greek-hebrew/
+        - https://www.dict.com/greek-hebrew/{%word}
       hu:
-        - https://www.dict.com/hungarian-english/
-        - https://www.dict.com/hungarian-english/{%word}
+        - https://www.dict.com/greek-hungarian/
+        - https://www.dict.com/greek-hungarian/{%word}
       id:
-        - https://www.dict.com/indonesian-english/
-        - https://www.dict.com/indonesian-english/{%word}
+        - https://www.dict.com/greek-indonesian/
+        - https://www.dict.com/greek-indonesian/{%word}
       it:
-        - https://www.dict.com/italian-english/
-        - https://www.dict.com/italian-english/{%word}
+        - https://www.dict.com/greek-italian/
+        - https://www.dict.com/greek-italian/{%word}
       ja:
-        - https://www.dict.com/japanese-english/
-        - https://www.dict.com/japanese-english/{%word}
+        - https://www.dict.com/greek-japanese/
+        - https://www.dict.com/greek-japanese/{%word}
       ko:
-        - https://www.dict.com/korean-english/
-        - https://www.dict.com/korean-english/{%word}
+        - https://www.dict.com/greek-korean/
+        - https://www.dict.com/greek-korean/{%word}
       lv:
-        - https://www.dict.com/latvian-english/
-        - https://www.dict.com/latvian-english/{%word}
+        - https://www.dict.com/greek-latvian/
+        - https://www.dict.com/greek-latvian/{%word}
       lt:
-        - https://www.dict.com/lithuanian-english/
-        - https://www.dict.com/lithuanian-english/{%word}
-      nl:
-        - https://www.dict.com/dutch-english/
-        - https://www.dict.com/dutch-english/{%word}
-      no:
-        - https://www.dict.com/norwegian-english/
-        - https://www.dict.com/norwegian-english/{%word}
+        - https://www.dict.com/greek-lithuanian/
+        - https://www.dict.com/greek-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/greek-norwegian/
+        - https://www.dict.com/greek-norwegian/{%word}
       pl:
-        - https://www.dict.com/polish-english/
-        - https://www.dict.com/polish-english/{%word}
+        - https://www.dict.com/greek-polish/
+        - https://www.dict.com/greek-polish/{%word}
       pt:
-        - https://www.dict.com/portuguese-english/
-        - https://www.dict.com/portuguese-english/{%word}
+        - https://www.dict.com/greek-portuguese/
+        - https://www.dict.com/greek-portuguese/{%word}
       ro:
-        - https://www.dict.com/romanian-english/
-        - https://www.dict.com/romanian-english/{%word}
+        - https://www.dict.com/greek-romanian/
+        - https://www.dict.com/greek-romanian/{%word}
       ru:
-        - https://www.dict.com/russian-english/
-        - https://www.dict.com/russian-english/{%word}
-      sk:
-        - https://www.dict.com/slovak-english/
-        - https://www.dict.com/slovak-english/{%word}
-      sl:
-        - https://www.dict.com/slovene-english/
-        - https://www.dict.com/slovene-english/{%word}
+        - https://www.dict.com/greek-russian/
+        - https://www.dict.com/greek-russian/{%word}
       sr:
-        - https://www.dict.com/serbian-english/
-        - https://www.dict.com/serbian-english/{%word}
+        - https://www.dict.com/greek-serbian/
+        - https://www.dict.com/greek-serbian/{%word}
+      sk:
+        - https://www.dict.com/greek-slovak/
+        - https://www.dict.com/greek-slovak/{%word}
+      sl:
+        - https://www.dict.com/greek-slovenian/
+        - https://www.dict.com/greek-slovenian/{%word}
+      es:
+        - https://www.dict.com/greek-spanish/
+        - https://www.dict.com/greek-spanish/{%word}
       sv:
-        - https://www.dict.com/swedish-english/
-        - https://www.dict.com/swedish-english/{%word}
+        - https://www.dict.com/greek-swedish/
+        - https://www.dict.com/greek-swedish/{%word}
       th:
-        - https://www.dict.com/thai-english/
-        - https://www.dict.com/thai-english/{%word}
+        - https://www.dict.com/greek-thai/
+        - https://www.dict.com/greek-thai/{%word}
       tr:
-        - https://www.dict.com/turkish-english/
-        - https://www.dict.com/turkish-english/{%word}
+        - https://www.dict.com/greek-turkish/
+        - https://www.dict.com/greek-turkish/{%word}
       uk:
-        - https://www.dict.com/ukrainian-english/
-        - https://www.dict.com/ukrainian-english/{%word}
+        - https://www.dict.com/greek-ukrainian/
+        - https://www.dict.com/greek-ukrainian/{%word}
       vi:
-        - https://www.dict.com/vietnamese-english/
-        - https://www.dict.com/vietnamese-english/{%word}
-      zh:
-        - https://www.dict.com/chinese-english/
-        - https://www.dict.com/chinese-english/{%word}
-    es:
-      sk:
-        - https://www.dict.com/spanielsko-slovensky/
-        - https://www.dict.com/spanielsko-slovensky/{%word}
-    et:
-      sk:
-        - https://www.dict.com/estonsko-slovensky/
-        - https://www.dict.com/estonsko-slovensky/{%word}
-    fi:
-      sk:
-        - https://www.dict.com/finsko-slovensky/
-        - https://www.dict.com/finsko-slovensky/{%word}
-    fr:
-      sk:
-        - https://www.dict.com/francuzsko-slovensky/
-        - https://www.dict.com/francuzsko-slovensky/{%word}
-      sv:
-        - https://www.dict.com/suedois-francais/test
-        - https://www.dict.com/suedois-francais/{%word}
+        - https://www.dict.com/greek-vietnamese/
+        - https://www.dict.com/greek-vietnamese/{%word}
     he:
+      hu:
+        - https://www.dict.com/hebrew-hungarian/
+        - https://www.dict.com/hebrew-hungarian/{%word}
+      id:
+        - https://www.dict.com/hebrew-indonesian/
+        - https://www.dict.com/hebrew-indonesian/{%word}
+      it:
+        - https://www.dict.com/hebrew-italian/
+        - https://www.dict.com/hebrew-italian/{%word}
+      ja:
+        - https://www.dict.com/hebrew-japanese/
+        - https://www.dict.com/hebrew-japanese/{%word}
+      ko:
+        - https://www.dict.com/hebrew-korean/
+        - https://www.dict.com/hebrew-korean/{%word}
+      lv:
+        - https://www.dict.com/hebrew-latvian/
+        - https://www.dict.com/hebrew-latvian/{%word}
+      lt:
+        - https://www.dict.com/hebrew-lithuanian/
+        - https://www.dict.com/hebrew-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/hebrew-norwegian/
+        - https://www.dict.com/hebrew-norwegian/{%word}
+      pl:
+        - https://www.dict.com/hebrew-polish/
+        - https://www.dict.com/hebrew-polish/{%word}
+      pt:
+        - https://www.dict.com/hebrew-portuguese/
+        - https://www.dict.com/hebrew-portuguese/{%word}
+      ro:
+        - https://www.dict.com/hebrew-romanian/
+        - https://www.dict.com/hebrew-romanian/{%word}
+      ru:
+        - https://www.dict.com/hebrew-russian/
+        - https://www.dict.com/hebrew-russian/{%word}
+      sr:
+        - https://www.dict.com/hebrew-serbian/
+        - https://www.dict.com/hebrew-serbian/{%word}
       sk:
-        - https://www.dict.com/hebrejsko-slovensky/
-        - https://www.dict.com/hebrejsko-slovensky/{%word}
-    hr:
-      sk:
-        - https://www.dict.com/chorvatsko-slovensky/
-        - https://www.dict.com/chorvatsko-slovensky/{%word}
+        - https://www.dict.com/hebrew-slovak/
+        - https://www.dict.com/hebrew-slovak/{%word}
+      sl:
+        - https://www.dict.com/hebrew-slovenian/
+        - https://www.dict.com/hebrew-slovenian/{%word}
+      es:
+        - https://www.dict.com/hebrew-spanish/
+        - https://www.dict.com/hebrew-spanish/{%word}
+      sv:
+        - https://www.dict.com/hebrew-swedish/
+        - https://www.dict.com/hebrew-swedish/{%word}
+      th:
+        - https://www.dict.com/hebrew-thai/
+        - https://www.dict.com/hebrew-thai/{%word}
+      tr:
+        - https://www.dict.com/hebrew-turkish/
+        - https://www.dict.com/hebrew-turkish/{%word}
+      uk:
+        - https://www.dict.com/hebrew-ukrainian/
+        - https://www.dict.com/hebrew-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/hebrew-vietnamese/
+        - https://www.dict.com/hebrew-vietnamese/{%word}
     hu:
+      id:
+        - https://www.dict.com/hungarian-indonesian/
+        - https://www.dict.com/hungarian-indonesian/{%word}
+      it:
+        - https://www.dict.com/hungarian-italian/
+        - https://www.dict.com/hungarian-italian/{%word}
+      ja:
+        - https://www.dict.com/hungarian-japanese/
+        - https://www.dict.com/hungarian-japanese/{%word}
+      ko:
+        - https://www.dict.com/hungarian-korean/
+        - https://www.dict.com/hungarian-korean/{%word}
+      lv:
+        - https://www.dict.com/hungarian-latvian/
+        - https://www.dict.com/hungarian-latvian/{%word}
+      lt:
+        - https://www.dict.com/hungarian-lithuanian/
+        - https://www.dict.com/hungarian-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/hungarian-norwegian/
+        - https://www.dict.com/hungarian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/hungarian-polish/
+        - https://www.dict.com/hungarian-polish/{%word}
+      pt:
+        - https://www.dict.com/hungarian-portuguese/
+        - https://www.dict.com/hungarian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/hungarian-romanian/
+        - https://www.dict.com/hungarian-romanian/{%word}
+      ru:
+        - https://www.dict.com/hungarian-russian/
+        - https://www.dict.com/hungarian-russian/{%word}
+      sr:
+        - https://www.dict.com/hungarian-serbian/
+        - https://www.dict.com/hungarian-serbian/{%word}
       sk:
-        - https://www.dict.com/madarsko-slovensky/
-        - https://www.dict.com/madarsko-slovensky/{%word}
+        - https://www.dict.com/hungarian-slovak/
+        - https://www.dict.com/hungarian-slovak/{%word}
+      sl:
+        - https://www.dict.com/hungarian-slovenian/
+        - https://www.dict.com/hungarian-slovenian/{%word}
+      es:
+        - https://www.dict.com/hungarian-spanish/
+        - https://www.dict.com/hungarian-spanish/{%word}
+      sv:
+        - https://www.dict.com/hungarian-swedish/
+        - https://www.dict.com/hungarian-swedish/{%word}
+      th:
+        - https://www.dict.com/hungarian-thai/
+        - https://www.dict.com/hungarian-thai/{%word}
+      tr:
+        - https://www.dict.com/hungarian-turkish/
+        - https://www.dict.com/hungarian-turkish/{%word}
+      uk:
+        - https://www.dict.com/hungarian-ukrainian/
+        - https://www.dict.com/hungarian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/hungarian-vietnamese/
+        - https://www.dict.com/hungarian-vietnamese/{%word}
     id:
+      it:
+        - https://www.dict.com/indonesian-italian/
+        - https://www.dict.com/indonesian-italian/{%word}
+      ja:
+        - https://www.dict.com/indonesian-japanese/
+        - https://www.dict.com/indonesian-japanese/{%word}
+      ko:
+        - https://www.dict.com/indonesian-korean/
+        - https://www.dict.com/indonesian-korean/{%word}
+      lv:
+        - https://www.dict.com/indonesian-latvian/
+        - https://www.dict.com/indonesian-latvian/{%word}
+      lt:
+        - https://www.dict.com/indonesian-lithuanian/
+        - https://www.dict.com/indonesian-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/indonesian-norwegian/
+        - https://www.dict.com/indonesian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/indonesian-polish/
+        - https://www.dict.com/indonesian-polish/{%word}
+      pt:
+        - https://www.dict.com/indonesian-portuguese/
+        - https://www.dict.com/indonesian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/indonesian-romanian/
+        - https://www.dict.com/indonesian-romanian/{%word}
+      ru:
+        - https://www.dict.com/indonesian-russian/
+        - https://www.dict.com/indonesian-russian/{%word}
+      sr:
+        - https://www.dict.com/indonesian-serbian/
+        - https://www.dict.com/indonesian-serbian/{%word}
       sk:
-        - https://www.dict.com/indonezsko-slovensky/
-        - https://www.dict.com/indonezsko-slovensky/{%word}
+        - https://www.dict.com/indonesian-slovak/
+        - https://www.dict.com/indonesian-slovak/{%word}
+      sl:
+        - https://www.dict.com/indonesian-slovenian/
+        - https://www.dict.com/indonesian-slovenian/{%word}
+      es:
+        - https://www.dict.com/indonesian-spanish/
+        - https://www.dict.com/indonesian-spanish/{%word}
+      sv:
+        - https://www.dict.com/indonesian-swedish/
+        - https://www.dict.com/indonesian-swedish/{%word}
+      th:
+        - https://www.dict.com/indonesian-thai/
+        - https://www.dict.com/indonesian-thai/{%word}
+      tr:
+        - https://www.dict.com/indonesian-turkish/
+        - https://www.dict.com/indonesian-turkish/{%word}
+      uk:
+        - https://www.dict.com/indonesian-ukrainian/
+        - https://www.dict.com/indonesian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/indonesian-vietnamese/
+        - https://www.dict.com/indonesian-vietnamese/{%word}
     it:
+      ja:
+        - https://www.dict.com/italian-japanese/
+        - https://www.dict.com/italian-japanese/{%word}
+      ko:
+        - https://www.dict.com/italian-korean/
+        - https://www.dict.com/italian-korean/{%word}
+      lv:
+        - https://www.dict.com/italian-latvian/
+        - https://www.dict.com/italian-latvian/{%word}
+      lt:
+        - https://www.dict.com/italian-lithuanian/
+        - https://www.dict.com/italian-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/italian-norwegian/
+        - https://www.dict.com/italian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/italian-polish/
+        - https://www.dict.com/italian-polish/{%word}
+      pt:
+        - https://www.dict.com/italian-portuguese/
+        - https://www.dict.com/italian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/italian-romanian/
+        - https://www.dict.com/italian-romanian/{%word}
+      ru:
+        - https://www.dict.com/italian-russian/
+        - https://www.dict.com/italian-russian/{%word}
+      sr:
+        - https://www.dict.com/italian-serbian/
+        - https://www.dict.com/italian-serbian/{%word}
       sk:
-        - https://www.dict.com/taliansko-slovensky/
-        - https://www.dict.com/taliansko-slovensky/{%word}
+        - https://www.dict.com/italian-slovak/
+        - https://www.dict.com/italian-slovak/{%word}
+      sl:
+        - https://www.dict.com/italian-slovenian/
+        - https://www.dict.com/italian-slovenian/{%word}
+      es:
+        - https://www.dict.com/italian-spanish/
+        - https://www.dict.com/italian-spanish/{%word}
+      sv:
+        - https://www.dict.com/italian-swedish/
+        - https://www.dict.com/italian-swedish/{%word}
+      th:
+        - https://www.dict.com/italian-thai/
+        - https://www.dict.com/italian-thai/{%word}
+      tr:
+        - https://www.dict.com/italian-turkish/
+        - https://www.dict.com/italian-turkish/{%word}
+      uk:
+        - https://www.dict.com/italian-ukrainian/
+        - https://www.dict.com/italian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/italian-vietnamese/
+        - https://www.dict.com/italian-vietnamese/{%word}
     ja:
+      ko:
+        - https://www.dict.com/japanese-korean/
+        - https://www.dict.com/japanese-korean/{%word}
+      lv:
+        - https://www.dict.com/japanese-latvian/
+        - https://www.dict.com/japanese-latvian/{%word}
+      lt:
+        - https://www.dict.com/japanese-lithuanian/
+        - https://www.dict.com/japanese-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/japanese-norwegian/
+        - https://www.dict.com/japanese-norwegian/{%word}
+      pl:
+        - https://www.dict.com/japanese-polish/
+        - https://www.dict.com/japanese-polish/{%word}
+      pt:
+        - https://www.dict.com/japanese-portuguese/
+        - https://www.dict.com/japanese-portuguese/{%word}
+      ro:
+        - https://www.dict.com/japanese-romanian/
+        - https://www.dict.com/japanese-romanian/{%word}
+      ru:
+        - https://www.dict.com/japanese-russian/
+        - https://www.dict.com/japanese-russian/{%word}
+      sr:
+        - https://www.dict.com/japanese-serbian/
+        - https://www.dict.com/japanese-serbian/{%word}
       sk:
-        - https://www.dict.com/japonsko-slovensky/
-        - https://www.dict.com/japonsko-slovensky/{%word}
+        - https://www.dict.com/japanese-slovak/
+        - https://www.dict.com/japanese-slovak/{%word}
+      sl:
+        - https://www.dict.com/japanese-slovenian/
+        - https://www.dict.com/japanese-slovenian/{%word}
+      es:
+        - https://www.dict.com/japanese-spanish/
+        - https://www.dict.com/japanese-spanish/{%word}
+      sv:
+        - https://www.dict.com/japanese-swedish/
+        - https://www.dict.com/japanese-swedish/{%word}
+      th:
+        - https://www.dict.com/japanese-thai/
+        - https://www.dict.com/japanese-thai/{%word}
+      tr:
+        - https://www.dict.com/japanese-turkish/
+        - https://www.dict.com/japanese-turkish/{%word}
+      uk:
+        - https://www.dict.com/japanese-ukrainian/
+        - https://www.dict.com/japanese-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/japanese-vietnamese/
+        - https://www.dict.com/japanese-vietnamese/{%word}
     ko:
+      lv:
+        - https://www.dict.com/korean-latvian/
+        - https://www.dict.com/korean-latvian/{%word}
+      lt:
+        - https://www.dict.com/korean-lithuanian/
+        - https://www.dict.com/korean-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/korean-norwegian/
+        - https://www.dict.com/korean-norwegian/{%word}
+      pl:
+        - https://www.dict.com/korean-polish/
+        - https://www.dict.com/korean-polish/{%word}
+      pt:
+        - https://www.dict.com/korean-portuguese/
+        - https://www.dict.com/korean-portuguese/{%word}
+      ro:
+        - https://www.dict.com/korean-romanian/
+        - https://www.dict.com/korean-romanian/{%word}
+      ru:
+        - https://www.dict.com/korean-russian/
+        - https://www.dict.com/korean-russian/{%word}
+      sr:
+        - https://www.dict.com/korean-serbian/
+        - https://www.dict.com/korean-serbian/{%word}
       sk:
-        - https://www.dict.com/korejsko-slovensky/
-        - https://www.dict.com/korejsko-slovensky/{%word}
-    lt:
-      sk:
-        - https://www.dict.com/litovsko-slovensky/
-        - https://www.dict.com/litovsko-slovensky/{%word}
+        - https://www.dict.com/korean-slovak/
+        - https://www.dict.com/korean-slovak/{%word}
+      sl:
+        - https://www.dict.com/korean-slovenian/
+        - https://www.dict.com/korean-slovenian/{%word}
+      es:
+        - https://www.dict.com/korean-spanish/
+        - https://www.dict.com/korean-spanish/{%word}
+      sv:
+        - https://www.dict.com/korean-swedish/
+        - https://www.dict.com/korean-swedish/{%word}
+      th:
+        - https://www.dict.com/korean-thai/
+        - https://www.dict.com/korean-thai/{%word}
+      tr:
+        - https://www.dict.com/korean-turkish/
+        - https://www.dict.com/korean-turkish/{%word}
+      uk:
+        - https://www.dict.com/korean-ukrainian/
+        - https://www.dict.com/korean-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/korean-vietnamese/
+        - https://www.dict.com/korean-vietnamese/{%word}
     lv:
+      lt:
+        - https://www.dict.com/latvian-lithuanian/
+        - https://www.dict.com/latvian-lithuanian/{%word}
+      'no':
+        - https://www.dict.com/latvian-norwegian/
+        - https://www.dict.com/latvian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/latvian-polish/
+        - https://www.dict.com/latvian-polish/{%word}
+      pt:
+        - https://www.dict.com/latvian-portuguese/
+        - https://www.dict.com/latvian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/latvian-romanian/
+        - https://www.dict.com/latvian-romanian/{%word}
+      ru:
+        - https://www.dict.com/latvian-russian/
+        - https://www.dict.com/latvian-russian/{%word}
+      sr:
+        - https://www.dict.com/latvian-serbian/
+        - https://www.dict.com/latvian-serbian/{%word}
       sk:
-        - https://www.dict.com/lotyssko-slovensky/
-        - https://www.dict.com/lotyssko-slovensky/{%word}
-    nl:
+        - https://www.dict.com/latvian-slovak/
+        - https://www.dict.com/latvian-slovak/{%word}
+      sl:
+        - https://www.dict.com/latvian-slovenian/
+        - https://www.dict.com/latvian-slovenian/{%word}
+      es:
+        - https://www.dict.com/latvian-spanish/
+        - https://www.dict.com/latvian-spanish/{%word}
+      sv:
+        - https://www.dict.com/latvian-swedish/
+        - https://www.dict.com/latvian-swedish/{%word}
+      th:
+        - https://www.dict.com/latvian-thai/
+        - https://www.dict.com/latvian-thai/{%word}
+      tr:
+        - https://www.dict.com/latvian-turkish/
+        - https://www.dict.com/latvian-turkish/{%word}
+      uk:
+        - https://www.dict.com/latvian-ukrainian/
+        - https://www.dict.com/latvian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/latvian-vietnamese/
+        - https://www.dict.com/latvian-vietnamese/{%word}
+    lt:
+      'no':
+        - https://www.dict.com/lithuanian-norwegian/
+        - https://www.dict.com/lithuanian-norwegian/{%word}
+      pl:
+        - https://www.dict.com/lithuanian-polish/
+        - https://www.dict.com/lithuanian-polish/{%word}
+      pt:
+        - https://www.dict.com/lithuanian-portuguese/
+        - https://www.dict.com/lithuanian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/lithuanian-romanian/
+        - https://www.dict.com/lithuanian-romanian/{%word}
+      ru:
+        - https://www.dict.com/lithuanian-russian/
+        - https://www.dict.com/lithuanian-russian/{%word}
+      sr:
+        - https://www.dict.com/lithuanian-serbian/
+        - https://www.dict.com/lithuanian-serbian/{%word}
       sk:
-        - https://www.dict.com/holandsko-slovensky/
-        - https://www.dict.com/holandsko-slovensky/{%word}
-    no:
+        - https://www.dict.com/lithuanian-slovak/
+        - https://www.dict.com/lithuanian-slovak/{%word}
+      sl:
+        - https://www.dict.com/lithuanian-slovenian/
+        - https://www.dict.com/lithuanian-slovenian/{%word}
+      es:
+        - https://www.dict.com/lithuanian-spanish/
+        - https://www.dict.com/lithuanian-spanish/{%word}
+      sv:
+        - https://www.dict.com/lithuanian-swedish/
+        - https://www.dict.com/lithuanian-swedish/{%word}
+      th:
+        - https://www.dict.com/lithuanian-thai/
+        - https://www.dict.com/lithuanian-thai/{%word}
+      tr:
+        - https://www.dict.com/lithuanian-turkish/
+        - https://www.dict.com/lithuanian-turkish/{%word}
+      uk:
+        - https://www.dict.com/lithuanian-ukrainian/
+        - https://www.dict.com/lithuanian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/lithuanian-vietnamese/
+        - https://www.dict.com/lithuanian-vietnamese/{%word}
+    'no':
+      pl:
+        - https://www.dict.com/norwegian-polish/
+        - https://www.dict.com/norwegian-polish/{%word}
+      pt:
+        - https://www.dict.com/norwegian-portuguese/
+        - https://www.dict.com/norwegian-portuguese/{%word}
+      ro:
+        - https://www.dict.com/norwegian-romanian/
+        - https://www.dict.com/norwegian-romanian/{%word}
+      ru:
+        - https://www.dict.com/norwegian-russian/
+        - https://www.dict.com/norwegian-russian/{%word}
+      sr:
+        - https://www.dict.com/norwegian-serbian/
+        - https://www.dict.com/norwegian-serbian/{%word}
       sk:
-        - https://www.dict.com/norsko-slovensky/
-        - https://www.dict.com/norsko-slovensky/{%word}
+        - https://www.dict.com/norwegian-slovak/
+        - https://www.dict.com/norwegian-slovak/{%word}
+      sl:
+        - https://www.dict.com/norwegian-slovenian/
+        - https://www.dict.com/norwegian-slovenian/{%word}
+      es:
+        - https://www.dict.com/norwegian-spanish/
+        - https://www.dict.com/norwegian-spanish/{%word}
+      sv:
+        - https://www.dict.com/norwegian-swedish/
+        - https://www.dict.com/norwegian-swedish/{%word}
+      th:
+        - https://www.dict.com/norwegian-thai/
+        - https://www.dict.com/norwegian-thai/{%word}
+      tr:
+        - https://www.dict.com/norwegian-turkish/
+        - https://www.dict.com/norwegian-turkish/{%word}
+      uk:
+        - https://www.dict.com/norwegian-ukrainian/
+        - https://www.dict.com/norwegian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/norwegian-vietnamese/
+        - https://www.dict.com/norwegian-vietnamese/{%word}
     pl:
+      pt:
+        - https://www.dict.com/polish-portuguese/
+        - https://www.dict.com/polish-portuguese/{%word}
+      ro:
+        - https://www.dict.com/polish-romanian/
+        - https://www.dict.com/polish-romanian/{%word}
+      ru:
+        - https://www.dict.com/polish-russian/
+        - https://www.dict.com/polish-russian/{%word}
+      sr:
+        - https://www.dict.com/polish-serbian/
+        - https://www.dict.com/polish-serbian/{%word}
       sk:
-        - https://www.dict.com/polsko-slovensky/
-        - https://www.dict.com/polsko-slovensky/{%word}
+        - https://www.dict.com/polish-slovak/
+        - https://www.dict.com/polish-slovak/{%word}
+      sl:
+        - https://www.dict.com/polish-slovenian/
+        - https://www.dict.com/polish-slovenian/{%word}
+      es:
+        - https://www.dict.com/polish-spanish/
+        - https://www.dict.com/polish-spanish/{%word}
+      sv:
+        - https://www.dict.com/polish-swedish/
+        - https://www.dict.com/polish-swedish/{%word}
+      th:
+        - https://www.dict.com/polish-thai/
+        - https://www.dict.com/polish-thai/{%word}
+      tr:
+        - https://www.dict.com/polish-turkish/
+        - https://www.dict.com/polish-turkish/{%word}
+      uk:
+        - https://www.dict.com/polish-ukrainian/
+        - https://www.dict.com/polish-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/polish-vietnamese/
+        - https://www.dict.com/polish-vietnamese/{%word}
     pt:
+      ro:
+        - https://www.dict.com/portuguese-romanian/
+        - https://www.dict.com/portuguese-romanian/{%word}
+      ru:
+        - https://www.dict.com/portuguese-russian/
+        - https://www.dict.com/portuguese-russian/{%word}
+      sr:
+        - https://www.dict.com/portuguese-serbian/
+        - https://www.dict.com/portuguese-serbian/{%word}
       sk:
-        - https://www.dict.com/portugalsko-slovensky/
-        - https://www.dict.com/portugalsko-slovensky/{%word}
+        - https://www.dict.com/portuguese-slovak/
+        - https://www.dict.com/portuguese-slovak/{%word}
+      sl:
+        - https://www.dict.com/portuguese-slovenian/
+        - https://www.dict.com/portuguese-slovenian/{%word}
+      es:
+        - https://www.dict.com/portuguese-spanish/
+        - https://www.dict.com/portuguese-spanish/{%word}
+      sv:
+        - https://www.dict.com/portuguese-swedish/
+        - https://www.dict.com/portuguese-swedish/{%word}
+      th:
+        - https://www.dict.com/portuguese-thai/
+        - https://www.dict.com/portuguese-thai/{%word}
+      tr:
+        - https://www.dict.com/portuguese-turkish/
+        - https://www.dict.com/portuguese-turkish/{%word}
+      uk:
+        - https://www.dict.com/portuguese-ukrainian/
+        - https://www.dict.com/portuguese-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/portuguese-vietnamese/
+        - https://www.dict.com/portuguese-vietnamese/{%word}
     ro:
+      ru:
+        - https://www.dict.com/romanian-russian/
+        - https://www.dict.com/romanian-russian/{%word}
+      sr:
+        - https://www.dict.com/romanian-serbian/
+        - https://www.dict.com/romanian-serbian/{%word}
       sk:
-        - https://www.dict.com/rumunsko-slovensky/
-        - https://www.dict.com/rumunsko-slovensky/{%word}
+        - https://www.dict.com/romanian-slovak/
+        - https://www.dict.com/romanian-slovak/{%word}
+      sl:
+        - https://www.dict.com/romanian-slovenian/
+        - https://www.dict.com/romanian-slovenian/{%word}
+      es:
+        - https://www.dict.com/romanian-spanish/
+        - https://www.dict.com/romanian-spanish/{%word}
+      sv:
+        - https://www.dict.com/romanian-swedish/
+        - https://www.dict.com/romanian-swedish/{%word}
+      th:
+        - https://www.dict.com/romanian-thai/
+        - https://www.dict.com/romanian-thai/{%word}
+      tr:
+        - https://www.dict.com/romanian-turkish/
+        - https://www.dict.com/romanian-turkish/{%word}
+      uk:
+        - https://www.dict.com/romanian-ukrainian/
+        - https://www.dict.com/romanian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/romanian-vietnamese/
+        - https://www.dict.com/romanian-vietnamese/{%word}
     ru:
+      sr:
+        - https://www.dict.com/russian-serbian/
+        - https://www.dict.com/russian-serbian/{%word}
       sk:
-        - https://www.dict.com/rusko-slovensky/
-        - https://www.dict.com/rusko-slovensky/{%word}
+        - https://www.dict.com/russian-slovak/
+        - https://www.dict.com/russian-slovak/{%word}
+      sl:
+        - https://www.dict.com/russian-slovenian/
+        - https://www.dict.com/russian-slovenian/{%word}
+      es:
+        - https://www.dict.com/russian-spanish/
+        - https://www.dict.com/russian-spanish/{%word}
+      sv:
+        - https://www.dict.com/russian-swedish/
+        - https://www.dict.com/russian-swedish/{%word}
+      th:
+        - https://www.dict.com/russian-thai/
+        - https://www.dict.com/russian-thai/{%word}
+      tr:
+        - https://www.dict.com/russian-turkish/
+        - https://www.dict.com/russian-turkish/{%word}
+      uk:
+        - https://www.dict.com/russian-ukrainian/
+        - https://www.dict.com/russian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/russian-vietnamese/
+        - https://www.dict.com/russian-vietnamese/{%word}
+    sr:
+      sk:
+        - https://www.dict.com/serbian-slovak/
+        - https://www.dict.com/serbian-slovak/{%word}
+      sl:
+        - https://www.dict.com/serbian-slovenian/
+        - https://www.dict.com/serbian-slovenian/{%word}
+      es:
+        - https://www.dict.com/serbian-spanish/
+        - https://www.dict.com/serbian-spanish/{%word}
+      sv:
+        - https://www.dict.com/serbian-swedish/
+        - https://www.dict.com/serbian-swedish/{%word}
+      th:
+        - https://www.dict.com/serbian-thai/
+        - https://www.dict.com/serbian-thai/{%word}
+      tr:
+        - https://www.dict.com/serbian-turkish/
+        - https://www.dict.com/serbian-turkish/{%word}
+      uk:
+        - https://www.dict.com/serbian-ukrainian/
+        - https://www.dict.com/serbian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/serbian-vietnamese/
+        - https://www.dict.com/serbian-vietnamese/{%word}
     sk:
       sl:
-        - https://www.dict.com/slovinsko-slovensky/
-        - https://www.dict.com/slovinsko-slovensky/{%word}
-      sr:
-        - https://www.dict.com/srbsko-slovensky/
-        - https://www.dict.com/srbsko-slovensky/{%word}
+        - https://www.dict.com/slovak-slovenian/
+        - https://www.dict.com/slovak-slovenian/{%word}
+      es:
+        - https://www.dict.com/slovak-spanish/
+        - https://www.dict.com/slovak-spanish/{%word}
       sv:
-        - https://www.dict.com/svedsko-slovensky/
-        - https://www.dict.com/svedsko-slovensky/{%word}
+        - https://www.dict.com/slovak-swedish/
+        - https://www.dict.com/slovak-swedish/{%word}
       th:
-        - https://www.dict.com/thajsko-slovensky/
-        - https://www.dict.com/thajsko-slovensky/{%word}
+        - https://www.dict.com/slovak-thai/
+        - https://www.dict.com/slovak-thai/{%word}
       tr:
-        - https://www.dict.com/turecko-slovensky/
-        - https://www.dict.com/turecko-slovensky/{%word}
+        - https://www.dict.com/slovak-turkish/
+        - https://www.dict.com/slovak-turkish/{%word}
       uk:
-        - https://www.dict.com/ukrajinsko-slovensky/
-        - https://www.dict.com/ukrajinsko-slovensky/{%word}
+        - https://www.dict.com/slovak-ukrainian/
+        - https://www.dict.com/slovak-ukrainian/{%word}
       vi:
-        - https://www.dict.com/vietnamsko-slovensky/
-        - https://www.dict.com/vietnamsko-slovensky/{%word}
-      zh:
-        - https://www.dict.com/cinsko-slovensky/
-        - https://www.dict.com/cinsko-slovensky/{%word}
+        - https://www.dict.com/slovak-vietnamese/
+        - https://www.dict.com/slovak-vietnamese/{%word}
+    sl:
+      es:
+        - https://www.dict.com/slovenian-spanish/
+        - https://www.dict.com/slovenian-spanish/{%word}
+      sv:
+        - https://www.dict.com/slovenian-swedish/
+        - https://www.dict.com/slovenian-swedish/{%word}
+      th:
+        - https://www.dict.com/slovenian-thai/
+        - https://www.dict.com/slovenian-thai/{%word}
+      tr:
+        - https://www.dict.com/slovenian-turkish/
+        - https://www.dict.com/slovenian-turkish/{%word}
+      uk:
+        - https://www.dict.com/slovenian-ukrainian/
+        - https://www.dict.com/slovenian-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/slovenian-vietnamese/
+        - https://www.dict.com/slovenian-vietnamese/{%word}
+    es:
+      sv:
+        - https://www.dict.com/spanish-swedish/
+        - https://www.dict.com/spanish-swedish/{%word}
+      th:
+        - https://www.dict.com/spanish-thai/
+        - https://www.dict.com/spanish-thai/{%word}
+      tr:
+        - https://www.dict.com/spanish-turkish/
+        - https://www.dict.com/spanish-turkish/{%word}
+      uk:
+        - https://www.dict.com/spanish-ukrainian/
+        - https://www.dict.com/spanish-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/spanish-vietnamese/
+        - https://www.dict.com/spanish-vietnamese/{%word}
+    sv:
+      th:
+        - https://www.dict.com/swedish-thai/
+        - https://www.dict.com/swedish-thai/{%word}
+      tr:
+        - https://www.dict.com/swedish-turkish/
+        - https://www.dict.com/swedish-turkish/{%word}
+      uk:
+        - https://www.dict.com/swedish-ukrainian/
+        - https://www.dict.com/swedish-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/swedish-vietnamese/
+        - https://www.dict.com/swedish-vietnamese/{%word}
+    th:
+      tr:
+        - https://www.dict.com/thai-turkish/
+        - https://www.dict.com/thai-turkish/{%word}
+      uk:
+        - https://www.dict.com/thai-ukrainian/
+        - https://www.dict.com/thai-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/thai-vietnamese/
+        - https://www.dict.com/thai-vietnamese/{%word}
+    tr:
+      uk:
+        - https://www.dict.com/turkish-ukrainian/
+        - https://www.dict.com/turkish-ukrainian/{%word}
+      vi:
+        - https://www.dict.com/turkish-vietnamese/
+        - https://www.dict.com/turkish-vietnamese/{%word}
+    uk:
+      vi:
+        - https://www.dict.com/ukrainian-vietnamese/
+        - https://www.dict.com/ukrainian-vietnamese/{%word}
+
 deo:
   name: Dansk↔Esperanto ordbog
   pairs:
