@@ -282,34 +282,6 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
   return shortcut;
 };
 
-actions['addDictionaryIncludes'] = async function () {
-  const dicts = getDictionaries();
-  const ymls = loadYmls();
-  for (const dict in dicts) {
-    const langs = new Set();
-    for (const lang1 in dicts[dict].pairs) {
-      langs.add(lang1);
-      for (const lang2 in dicts[dict].pairs[lang1]) {
-        langs.add(lang2);
-      }
-    }
-    // Add local includes with {$language} variable.
-    for (const lang of langs) {
-      ymls[`${dict}.yml`][`${lang} 0`] = {
-        include: {
-          key: lang + '-{$language} 0',
-        },
-      };
-      ymls[`${dict}.yml`][`${lang} 1`] = {
-        include: {
-          key: lang + '-{$language} 1',
-        },
-      };
-    }
-  }
-  writeYmls(ymls);
-};
-
 actions['createDictionaries'] = async function () {
   const langs = getLanguageList();
   const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
@@ -355,8 +327,32 @@ actions['createDictionaries'] = async function () {
       }
     }
     ymls[`${dict}.yml`] = shortcuts;
-    writeYmls(ymls);
   }
+  for (const dict in dicts) {
+    console.log(dict);
+    const langs = new Set();
+    // Remember all langs we have in this dict.
+    for (const lang1 in dicts[dict].pairs) {
+      langs.add(lang1);
+      for (const lang2 in dicts[dict].pairs[lang1]) {
+        langs.add(lang2);
+      }
+    }
+    // Add local includes with {$language} variable.
+    for (const lang of langs) {
+      ymls[`${dict}.yml`][`${lang} 0`] = {
+        include: {
+          key: lang + '-{$language} 0',
+        },
+      };
+      ymls[`${dict}.yml`][`${lang} 1`] = {
+        include: {
+          key: lang + '-{$language} 1',
+        },
+      };
+    }
+  }
+  writeYmls(ymls);
 
   function getKey(lang1, lang2, argumentCount) {
     return `${lang1}-${lang2} ${argumentCount}`;
