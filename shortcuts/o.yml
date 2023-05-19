@@ -4354,16 +4354,6 @@ mink 1:
   - programming
   examples:
     getTagName: Search Mink for "getTagName"
-mn 1:
-  url: http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt={$language}-{$language}
-  title: MSN News
-  tags:
-  - old
-mnen 1:
-  url: http://search.msn.com/news/results.aspx?q={%query}&FORM=MSNH&mkt=en-US
-  title: MSN News
-  tags:
-  - old
 month 0:
   url: http://timeanddate.com/calendar/monthly.html
   title: This month
