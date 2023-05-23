@@ -359,25 +359,6 @@ alw 1:
   - wiki
   examples:
     cups: Suche nach "cups"
-am 1:
-  url: https://maps.apple.com/place?address={%address}
-  title: Apple Maps
-  description: Apple Maps for desktop/browser.  If place was not found, try adding country or country code.
-  tags:
-  - apple
-  - maps
-  examples:
-    Berlin Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
-am 2:
-  url: https://maps.apple.com/place?address={%city|type=city},{%address}
-  title: Apple Maps
-  description: Apple Maps for desktop/browser. City can be given with common abbreviations, e.g. car number plates
-  tags:
-  - apple
-  - maps
-  examples:
-    b, Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
-    hh, berliner tor: Show Berliner Tor in Hamburg
 anidb 1:
   url: http://anidb.net/perl-bin/animedb.pl?show=animelist&adb.search={%query}&do.search=search
   title: AniDB - Anime DataBase
@@ -429,6 +410,25 @@ apl 1:
   - apps
   examples:
     map: Search for map apps
+apm 1:
+  url: https://maps.apple.com/place?address={%address}
+  title: Apple Maps
+  description: Apple Maps for desktop/browser.  If place was not found, try adding country or country code.
+  tags:
+  - apple
+  - maps
+  examples:
+    Berlin Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
+apm 2:
+  url: https://maps.apple.com/place?address={%city|type=city},{%address}
+  title: Apple Maps
+  description: Apple Maps for desktop/browser. City can be given with common abbreviations, e.g. car number plates
+  tags:
+  - apple
+  - maps
+  examples:
+    b, Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
+    hh, berliner tor: Show Berliner Tor in Hamburg
 arch 1:
   url: http://www.archchinese.com/chinese_english_dictionary.html?find={%query}
   title: Arch Chinese Stroke Animation & Dictionary
