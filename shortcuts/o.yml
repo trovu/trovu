@@ -5988,11 +5988,6 @@ tds 1:
   - tv
   examples:
     germany: Search "The Daily Show" archives for "germany"
-te 1:
-  url: http://www.tineye.com/search?url={%url}
-  title: TinEye
-  tags:
-  - old
 techrightsfeed 0:
   url: http://techrights.org/feed/
   title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS feed)
@@ -6015,6 +6010,11 @@ teltarif 1:
   title: Teltarif.de
   tags:
   - old
+tey 1:
+  url: https://www.tineye.com/search?url={%url}
+  title: TinEye
+  tags:
+  - images
 tfm 1:
   url: http://www.transfermarkt.de/de/undefined/suche/ergebnis.html?quicksearch={%query}&x=0&y=0
   title: Transfermarkt.de
