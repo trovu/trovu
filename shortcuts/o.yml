@@ -4234,6 +4234,16 @@ mb 1:
   title: Musicbrainz - Music Metabase
   tags:
   - old
+mbg 0:
+  url: https://www.mobygames.com/
+  title: MobyGames
+  tags:
+  - games
+mbg 1:
+  url: https://www.mobygames.com/search/quick?q={%query}
+  title: MobyGames
+  tags:
+  - games
 mc 1:
   url: http://www.metacritic.com/search/all/{%query}/results
   title: Metacritic Search
@@ -4297,11 +4307,6 @@ mesh 1:
 metal 1:
   url: http://www.metal-archives.com/search?searchString={%query}&type=band_name
   title: Metal Archives
-  tags:
-  - old
-mg 1:
-  url: http://www.mobygames.com/search/quick?q={%query}
-  title: MobyGames Quick Search
   tags:
   - old
 mga 1:
