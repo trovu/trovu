@@ -2977,23 +2977,6 @@ gitlab 1:
   - open source
   - programming
   - software
-gl 1:
-  url: https://www.google.com/search?hl={$language}&lr=lang_{$language}&q={%query}&ie=utf-8
-  title: Google Web, only in my language
-  tags:
-  - google
-  - web search
-  examples:
-    berlin: Search for "berlin" on pages of my language (determined by language namespace)
-gl 2:
-  url: https://www.google.com/search?hl={$language}&lr=lang_{%language}&q={%query}&ie=utf-8
-  title: Google Web, only in given language
-  tags:
-  - google
-  - web search
-  examples:
-    fr, berlin: Search for "berlin" on sites in French
-    cs, praha: Search for "praha" on sites in Czech
 glist 1:
   url: http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Listing
@@ -3166,6 +3149,23 @@ god 1:
   title: Godchecker Mythology Encyclopedia
   tags:
   - old
+gol 1:
+  url: https://www.google.com/search?hl={$language}&lr=lang_{$language}&q={%query}&ie=utf-8
+  title: Google Web, only in my language
+  tags:
+  - google
+  - web search
+  examples:
+    berlin: Search for "berlin" on pages of my language (determined by language namespace)
+gol 2:
+  url: https://www.google.com/search?hl={$language}&lr=lang_{%language}&q={%query}&ie=utf-8
+  title: Google Web, only in given language
+  tags:
+  - google
+  - web search
+  examples:
+    fr, berlin: Search for "berlin" on sites in French
+    cs, praha: Search for "praha" on sites in Czech
 goof 0:
   url: http://finance.google.com/
   title: Google Finance
