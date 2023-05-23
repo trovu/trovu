@@ -4088,11 +4088,20 @@ libg 1:
   title: Library Genesis
   tags:
   - ebooks
+lin 0:
+  url: http://www.linkedin.com/
+  title: Linkedin
+  tags:
+  - linkedin
+  - social network
 lin 1:
-  deprecated:
-    alternative:
-      query: lgs.en {%1}
-      created: '2023-04-10'
+  url: https://www.linkedin.com/search/results/people/?keywords={%query}
+  title: Linkedin people search
+  tags:
+  - linkedin
+  - social network
+  examples:
+    john smith: Search for a John Smith
 linfr 1:
   deprecated:
     alternative:
@@ -4141,20 +4150,6 @@ ll 1:
   tags:
   - liveleak
   - video
-ln 0:
-  url: http://www.linkedin.com/
-  title: Linkedin
-  tags:
-  - linkedin
-  - social network
-ln 1:
-  url: https://www.linkedin.com/search/results/people/?keywords={%query}
-  title: Linkedin people search
-  tags:
-  - linkedin
-  - social network
-  examples:
-    john smith: Search for a John Smith
 loe 1:
   url: https://en.wikipedia.org/wiki/List_of_{%title}_episodes
   title: List of episodes on Wikipedia
