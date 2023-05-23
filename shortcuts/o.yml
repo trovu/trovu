@@ -1710,14 +1710,14 @@ dwd 0:
   title: Deutscher Wetter Dienst
   tags:
   - old
-dz 0:
-  url: http://www.deezer.com/
+dzr 0:
+  url: https://www.deezer.com/
   title: Deezer Homepage
   tags:
   - deezer
   - music
-dz 1:
-  url: http://www.deezer.com/search/{%query}
+dzr 1:
+  url: https://www.deezer.com/search/{%query}
   title: Deezer
   tags:
   - deezer
