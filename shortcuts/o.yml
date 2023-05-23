@@ -394,6 +394,14 @@ aol 0:
   title: Aol.com
   tags:
   - aol
+ap 1:
+  url: http://www.apple.com/search/?q={%query}
+  title: Apple.com
+  tags:
+  - apple
+  - apps
+  examples:
+    map: Search for map apps
 apb 1:
   url: http://www.appbrain.com/search?q={%query}
   title: Appbrain App Search
@@ -402,14 +410,6 @@ apb 1:
   - apps
   examples:
     calculator: Search for calculator apps
-apl 1:
-  url: http://www.apple.com/search/?q={%query}
-  title: Apple.com
-  tags:
-  - apple
-  - apps
-  examples:
-    map: Search for map apps
 apm 1:
   url: https://maps.apple.com/place?address={%address}
   title: Apple Maps
