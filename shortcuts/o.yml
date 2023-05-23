@@ -4080,14 +4080,14 @@ leo_es 1:
     alternative:
       query: leo.es {%1}
       created: '2023-04-10'
-lg 1:
+lh 0:
+  url: http://www.lufthansa.com
+  title: Lufthansa
+libg 1:
   url: https://libgen.is/search.php?req={%query}
   title: Library Genesis
   tags:
   - ebooks
-lh 0:
-  url: http://www.lufthansa.com
-  title: Lufthansa
 lin 1:
   deprecated:
     alternative:
