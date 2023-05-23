@@ -646,7 +646,7 @@ bmn 1:
   - mail
   examples:
     heise.de: Get logins for heise.de
-bn 1:
+bns 1:
   url: https://www.bing.com/news/search?q={%query}
   title: Bing News Search
   tags:
