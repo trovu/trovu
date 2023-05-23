@@ -1770,6 +1770,18 @@ ec 1:
   - web search
   examples:
     berlin: Search for "berlin"
+ecl 0:
+  url: http://www.eclipse.org/eclipselink/api/2.0.2/index.html
+  title: EclipseLink API
+  tags:
+  - eclipse
+  - java
+ecl 1:
+  url: https://www.google.com/search?hl=en&q=site%3Ahttp://www.eclipse.org/eclipselink/api/2.4+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
+  title: EclipseLink API
+  tags:
+  - eclipse
+  - java
 eco 0:
   url: http://ecosia.org/
   title: Ecosia
@@ -1813,16 +1825,6 @@ ekn 0:
   tags:
   - ebay
   - shopping
-el 0:
-  url: http://www.eclipse.org/eclipselink/api/2.0.2/index.html
-  title: EclipseLink API
-  tags:
-  - old
-el 1:
-  url: https://www.google.com/search?hl=en&q=site%3Ahttp://www.eclipse.org/eclipselink/api/2.4+{%query}+intitle%3A{%query}&ie=utf-8&btnI=1
-  title: EclipseLink API
-  tags:
-  - old
 emy 0:
   url: http://signin.ebay.com
   title: Ebay.de My eBay
