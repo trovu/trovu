@@ -1770,16 +1770,6 @@ ec 1:
   - web search
   examples:
     berlin: Search for "berlin"
-ecl 0:
-  url: http://ecosia.org/ecolink.php
-  title: Ecosia
-  tags:
-  - old
-ecl 1:
-  url: http://ecosia.org/ecolink.php?q={%query}
-  title: Ecosia
-  tags:
-  - old
 eco 0:
   url: http://ecosia.org/
   title: Ecosia
