@@ -1873,15 +1873,6 @@ enzh 1:
     alternative:
       query: en.zh {%1}
       created: '2023-04-10'
-eo 1:
-  url: http://www.google.com/search?hl={$language}&sitesearch=reta-vortaro.de&domains=reta-vortaro.de&q={%query}
-  title: Reta vortaro
-  tags:
-  - dictionary
-  - esperanto
-  - language
-  examples:
-    vorto: Search for "vorto"
 eprint 0:
   url: https://eprint.iacr.org/
   title: 'IACR Cryptology ePrint Archive: Complete archive'
