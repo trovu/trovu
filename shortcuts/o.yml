@@ -5283,6 +5283,11 @@ r 1:
   - statistics
   examples:
     read.table: Show manual about "read.table"
+r/ 1:
+  url: https://www.reddit.com/r/{%subreddit}
+  title: Reddit sub-reddit
+  tags:
+  - reddit
 r2r 2:
   url: http://www.rome2rio.com/de/map/{%from}/{%to}
   title: Rome2Rio
@@ -5793,16 +5798,11 @@ sqp 1:
   title: Seeqpod
   tags:
   - old
-sr 1:
-  url: https://www.reddit.com/r/{%forum}
-  title: Reddit
-  tags:
-  - old
 sreddit 1:
   url: https://www.reddit.com/r/{%forum}
-  title: Reddit
+  title: Reddit sub-reddit
   tags:
-  - old
+  - reddit
 ssch 0:
   url: https://www.semanticscholar.org/
   title: Semantic Scholar
