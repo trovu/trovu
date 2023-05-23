@@ -3647,17 +3647,6 @@ ieee 1:
 if 1:
   url: http://www.iconfinder.com/search/?q={%query}
   title: IconFinder query
-ig 1:
-  url: https://www.instagram.com/{%name}
-  title: Instagram
-  description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
-  tags:
-  - instagram
-  - photo sharing
-  - social networking service
-  - video sharing
-  examples:
-    ellierosapowers: Show the user ellierosapowers content.
 ikeanl 1:
   deprecated:
     alternative:
@@ -3747,6 +3736,17 @@ ipkat 0:
   - ip law
   - patent law
   - patents
+isg 1:
+  url: https://www.instagram.com/{%name}
+  title: Instagram
+  description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
+  tags:
+  - instagram
+  - photo sharing
+  - social networking service
+  - video sharing
+  examples:
+    ellierosapowers: Show the user ellierosapowers content.
 ist 0:
   url: https://www.istockphoto.com
   title: Istockphoto
