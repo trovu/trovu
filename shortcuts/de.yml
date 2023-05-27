@@ -807,6 +807,11 @@ m 1:
   - search
   - search engine
   - web search
+mactv 1:
+  url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff={%query}
+  title: Mac-TV Archiv
+  tags:
+  - apple
 morgenpost 1:
   url: http://www.morgenpost.de/suche/?q={%Suche}
   title: Berliner Morgenpost Archiv
