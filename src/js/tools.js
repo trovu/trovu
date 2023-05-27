@@ -150,7 +150,7 @@ actions['applyModifier'] = async function () {
 actions['createDictionaryScaffold'] = async function () {
   const langs = getLanguageList();
   const dcm_langs_str =
-    'ar bg ca zh hr cs da nl et fi fr de el he hu id it ja ko lv lt no pl pt ro ru sr sk sl es sv th tr uk vi';
+    'ar bg ca cs da de el en es et fi fr he hr hu id it ja ko lt lv nl no pl pt ro ru sk sl sr sv th tr uk vi zh';
   const dcmLangs = dcm_langs_str.split(' ');
   const scaffold = {};
   for (let i = 0; i < dcmLangs.length - 1; i++) {
