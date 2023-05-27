@@ -5709,6 +5709,11 @@ so 1:
   examples:
     java: search for Java-related questions
 soa 1:
+  deprecated:
+    alternative:
+      query: sofa {%1}
+      created: '2023-05-27'
+sofa 1:
   url: http://stackoverflow.com/search?q=%5Bandroid%5D+{%query}
   title: Stackoverflow android tag
   tags:
