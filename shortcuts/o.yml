@@ -669,13 +669,6 @@ bp 1:
   - music
   examples:
     trance: Search for "trance"
-br 0:
-  url: https://bikerouter.de
-  title: Bike Router
-  description: Open source bike router, openstreetmap
-  tags:
-  - bike
-  - router
 brew 1:
   url: https://www.google.de/search?hl={$language}&q=site%3Abrew.sh%20{%query}&ie=utf-8
   title: Homebrew Package Manager
