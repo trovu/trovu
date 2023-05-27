@@ -1,28 +1,3 @@
-af 0:
-  include:
-    key: af-{$language} 0
-af 1:
-  include:
-    key: af-{$language} 1
-af-de 0:
-  url: https://www.pauker.at/pauker/DE_DE/af/wb
-  title: Afrikaans-Deutsch (Pauker.at)
-  tags:
-  - afrikaans
-  - dictionary
-  - german
-  - language
-af-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/af/wb?suche={%word}
-  title: Afrikaans-Deutsch (Pauker.at)
-  tags:
-  - afrikaans
-  - dictionary
-  - german
-  - language
-  examples:
-    boom: Deutsch-Übersetzung von "boom"
-    baum: Afrikaans-Übersetzung von "baum"
 am 0:
   include:
     key: am-{$language} 0
@@ -354,17 +329,6 @@ de 0:
 de 1:
   include:
     key: de-{$language} 1
-de-af 0:
-  title: Duits-Afrikaans (Pauker.at)
-  include:
-    key: af-de 0
-de-af 1:
-  title: Duits-Afrikaans (Pauker.at)
-  include:
-    key: af-de 1
-  examples:
-    baum: Afrikaans vertaling van "baum"
-    boom: Duits vertaling van "boom"
 de-am 0:
   title: ጀርመን-አማርኛ (Pauker.at)
   include:
@@ -812,25 +776,6 @@ de-gu 1:
   examples:
     baum: ગુજરાતી translation of "baum"
     વૃક્ષ: જર્મન translation of "વૃક્ષ"
-de-gv 0:
-  url: https://www.pauker.at/pauker/DE_DE/gv/wb
-  title: German-Gaelg (Pauker.at)
-  tags:
-  - dictionary
-  - german
-  - language
-  - manx
-de-gv 1:
-  url: https://www.pauker.at/pauker/DE_DE/gv/wb?suche={%word}
-  title: German-Gaelg (Pauker.at)
-  tags:
-  - dictionary
-  - german
-  - language
-  - manx
-  examples:
-    baum: Hansh Gaelg dy ghloyr "tree"
-    billey: Hansh German dy ghloyr "tree"
 de-ha 0:
   url: https://www.pauker.at/pauker/DE_DE/ha/wb
   title: Jamusanci-Hausa (Pauker.at)
@@ -2680,23 +2625,6 @@ gu-de 1:
   examples:
     વૃક્ષ: Deutsch-Übersetzung von "વૃક્ષ"
     baum: Gujarati-Übersetzung von "baum"
-gv 0:
-  include:
-    key: gv-{$language} 0
-gv 1:
-  include:
-    key: gv-{$language} 1
-gv-de 0:
-  title: Manx-Deutsch (Pauker.at)
-  include:
-    key: de-gv 0
-gv-de 1:
-  title: Manx-Deutsch (Pauker.at)
-  include:
-    key: de-gv 1
-  examples:
-    billey: Deutsch-Übersetzung von "billey"
-    baum: Manx-Übersetzung von "baum"
 ha 0:
   include:
     key: ha-{$language} 0
