@@ -5696,23 +5696,23 @@ snipmp3 1:
   title: Snipmp3
   tags:
   - old
-so 0:
+soa 1:
+  deprecated:
+    alternative:
+      query: sofa {%1}
+      created: '2023-05-27'
+sof 0:
   url: http://stackoverflow.com/
   title: Stack Overflow
   tags:
   - programming
-so 1:
+sof 1:
   url: http://stackoverflow.com/search?q={%query}
   title: Stack Overflow
   tags:
   - programming
   examples:
     java: search for Java-related questions
-soa 1:
-  deprecated:
-    alternative:
-      query: sofa {%1}
-      created: '2023-05-27'
 sofa 1:
   url: http://stackoverflow.com/search?q=%5Bandroid%5D+{%query}
   title: Stackoverflow android tag
