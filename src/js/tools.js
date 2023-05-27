@@ -282,6 +282,54 @@ modifiers['checkShortcutResponse'] = async function (key, shortcut) {
   return shortcut;
 };
 
+actions['addDictionaryIncludes'] = async function () {
+  const dicts = getDictionaries();
+  const langs = {};
+  for (const dict in dicts) {
+    // Remember all langs we have in this dict.
+    for (const lang1 in dicts[dict].pairs) {
+      if (!langs[lang1]) {
+        langs[lang1] = new Set();
+      }
+
+      langs[lang1].add(dict);
+      for (const lang2 in dicts[dict].pairs[lang1]) {
+        if (!langs[lang2]) {
+          langs[lang2] = new Set();
+        }
+        langs[lang2].add(dict);
+      }
+    }
+  }
+  const dictsByPrioStr =
+    'ama ard dtn crd deo esd flx hzn mdb umt wdk zrg lge dcm bab leo dcc lgs pns rvs beo pka';
+
+  const dictsByPrio = dictsByPrioStr.split(' ');
+
+  const ymls = loadYmls();
+  const yml = ymls['o.yml'];
+  for (const lang in langs) {
+    if (yml[`${lang} 1`]) {
+      console.log(lang, yml[`${lang} 1`].title);
+    }
+    for (const dict of dictsByPrio) {
+      if (langs[lang].has(dict)) {
+        if (!yml[`${lang} 0`]) {
+          yml[`${lang} 0`] = {};
+        }
+        if (!yml[`${lang} 0`].include) {
+          yml[`${lang} 0`].include = [];
+        }
+        yml[`${lang} 0`].include.push({
+          key: `${lang} 0`,
+          namespace: dict,
+        });
+      }
+    }
+  }
+  writeYmls(ymls);
+};
+
 actions['createDictionaries'] = async function () {
   const langs = getLanguageList();
   const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
