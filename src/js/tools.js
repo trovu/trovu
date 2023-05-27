@@ -291,7 +291,6 @@ actions['addDictionaryIncludes'] = async function () {
       if (!langs[lang1]) {
         langs[lang1] = new Set();
       }
-
       langs[lang1].add(dict);
       for (const lang2 in dicts[dict].pairs[lang1]) {
         if (!langs[lang2]) {
