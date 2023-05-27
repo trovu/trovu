@@ -1,27 +1,3 @@
-de 0:
-  include:
-    key: de-sv 0
-    namespace: dcm
-de 1:
-  include:
-    key: de-sv 1
-    namespace: dcm
-en 0:
-  include:
-    key: en-sv 0
-    namespace: flx
-en 1:
-  include:
-    key: en-sv 1
-    namespace: flx
-fr 0:
-  include:
-    key: fr-sv 0
-    namespace: dcm
-fr 1:
-  include:
-    key: fr-sv 1
-    namespace: dcm
 fr-sv 1:
   deprecated:
     alternative:

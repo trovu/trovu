@@ -1,11 +1,3 @@
-eo 0:
-  include:
-    key: eo-da 0
-    namespace: deo
-eo 1:
-  include:
-    key: eo-da 1
-    namespace: deo
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo

@@ -6,30 +6,6 @@ cjg 1:
   - language
   examples:
     venir: Conjugate "venir"
-cs 0:
-  include:
-    key: cs-fr 0
-    namespace: dcm
-cs 1:
-  include:
-    key: cs-fr 1
-    namespace: dcm
-de 0:
-  include:
-    key: de-fr 0
-    namespace: leo
-de 1:
-  include:
-    key: de-fr 1
-    namespace: leo
-en 0:
-  include:
-    key: en-fr 0
-    namespace: rvs
-en 1:
-  include:
-    key: en-fr 1
-    namespace: rvs
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -86,30 +62,6 @@ marmiton 1:
   - recettes
   examples:
     pizza: Recherche des recettes de pizza
-pl 0:
-  include:
-    key: pl-fr 0
-    namespace: pns
-pl 1:
-  include:
-    key: pl-fr 1
-    namespace: pns
-pt 0:
-  include:
-    key: pt-fr 0
-    namespace: rvs
-pt 1:
-  include:
-    key: pt-fr 1
-    namespace: rvs
-sv 0:
-  include:
-    key: sv-fr 0
-    namespace: dcm
-sv 1:
-  include:
-    key: sv-fr 1
-    namespace: dcm
 syn 1:
   url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
   title: Synonyme

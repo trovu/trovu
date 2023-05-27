@@ -1,7 +1,3 @@
-de 1:
-  include:
-    key: de-ru 1
-    namespace: leo
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo

@@ -17,14 +17,6 @@ anagramm 1:
   - language
   examples:
     rentner: Anagramm-Suchen nach "rentner"
-ar 0:
-  include:
-    key: ar-de 0
-    namespace: ard
-ar 1:
-  include:
-    key: ar-de 1
-    namespace: ard
 ardtext 1:
   url: http://www.ard-text.de/index.php?page={%Seitennummer}
   title: ARD-Text
@@ -80,14 +72,6 @@ bbs 1:
 bc 1:
   url: https://www.bestcheck.de/search?q={%query}
   title: BestCheck
-bg 0:
-  include:
-    key: bg-de 0
-    namespace: dcc
-bg 1:
-  include:
-    key: bg-de 1
-    namespace: dcc
 bk 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch={%query}
   title: Buchkatalog
@@ -138,10 +122,6 @@ bzl 1:
   - shopping
   examples:
     goethe: Search Bookzilla for "goethe"
-ca 1:
-  include:
-    key: ca-de 1
-    namespace: dcm
 cb 0:
   url: http://www.computerbase.de/
   title: Computerbase
@@ -222,14 +202,6 @@ cook 1:
   - cooking
   examples:
     risotto: Show recipes for risottos
-cs 0:
-  include:
-    key: cs-de 0
-    namespace: dcm
-cs 1:
-  include:
-    key: cs-de 1
-    namespace: dcm
 cs-de 1:
   deprecated:
     alternative:
@@ -248,14 +220,6 @@ css 1:
   - programming
   examples:
     white-space: Suche nach "white-space"
-da 0:
-  include:
-    key: da-de 0
-    namespace: dcc
-da 1:
-  include:
-    key: da-de 1
-    namespace: dcc
 dab 1:
   deprecated:
     alternative:
@@ -329,27 +293,11 @@ e 0:
 e 1:
   url: https://www.ebay.de/sch/i.html?_nkw={%suche}
   title: eBay Suche
-el 0:
-  include:
-    key: el-de 0
-    namespace: pns
-el 1:
-  include:
-    key: el-de 1
-    namespace: pns
 eld 1:
   deprecated:
     alternative:
       query: dcc.el {%1}
       created: '2023-04-10'
-en 0:
-  include:
-    key: en-de 0
-    namespace: leo
-en 1:
-  include:
-    key: en-de 1
-    namespace: leo
 enb 1:
   deprecated:
     alternative:
@@ -378,18 +326,6 @@ enp 1:
     alternative:
       query: pns.en {%1}
       created: '2023-04-10'
-eo 0:
-  include:
-    key: eo-de 0
-    namespace: pka
-eo 1:
-  include:
-    key: eo-de 1
-    namespace: pka
-es 1:
-  include:
-    key: es-de 1
-    namespace: leo
 es-pons 1:
   deprecated:
     alternative:
@@ -462,14 +398,6 @@ fefescss 1:
   - news
   examples:
     manpage: Fefes Blog mit dem CSS-Style manpage.css
-fi 0:
-  include:
-    key: fi-de 0
-    namespace: dcc
-fi 1:
-  include:
-    key: fi-de 1
-    namespace: dcc
 fmb 2:
   url: http://findmybook.de/input.php?form%5Btitle%5D={%Titel}&form%5Bauthor%5D={%Autor}
   title: Findmybook.de
@@ -477,10 +405,6 @@ fmb 2:
   - books
   examples:
     houellebecq, elementarteilchen: Search for "houellebecq"
-fr 1:
-  include:
-    key: fr-de 1
-    namespace: leo
 fr-pons 1:
   deprecated:
     alternative:
@@ -633,14 +557,6 @@ hpreis 1:
   - shopping
   examples:
     computer: Search for "computer"
-hr 0:
-  include:
-    key: hr-de 0
-    namespace: crd
-hr 1:
-  include:
-    key: hr-de 1
-    namespace: crd
 hsoft 0:
   url: http://www.heise.de/software/
   title: Heise Softwareverzeichnis Startseite
@@ -658,14 +574,6 @@ htp 0:
   title: Telepolis Startseite
   tags:
   - heise
-hu 0:
-  include:
-    key: hu-de 0
-    namespace: lgs
-hu 1:
-  include:
-    key: hu-de 1
-    namespace: lgs
 hud 1:
   deprecated:
     alternative:
@@ -691,21 +599,9 @@ ifun 1:
   - news
   examples:
     macbook: Search ifun.de for "macbook"
-is 0:
-  include:
-    key: is-de 0
-    namespace: dcc
-is 1:
-  include:
-    key: is-de 1
-    namespace: dcc
 isbn 1:
   url: http://de.wikipedia.org/wiki/Spezial:Booksources/{%isbn}
   title: ISBN-Suche bei Wikipedia
-it 1:
-  include:
-    key: it-de 1
-    namespace: leo
 itb 1:
   deprecated:
     alternative:
@@ -721,14 +617,6 @@ itp 1:
     alternative:
       query: pns.it {%1}
       created: '2023-04-10'
-ja 0:
-  include:
-    key: ja-de 0
-    namespace: wdk
-ja 1:
-  include:
-    key: ja-de 1
-    namespace: wdk
 kam 1:
   url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search={%Suche}
   title: Kamelopedia
@@ -762,14 +650,6 @@ kw 2:
   title: Kreuzworträtsel-Datenbank
   tags:
   - old
-la 0:
-  include:
-    key: la-de 0
-    namespace: ama
-la 1:
-  include:
-    key: la-de 1
-    namespace: ama
 lad 1:
   deprecated:
     alternative:
@@ -840,14 +720,6 @@ nds 1:
   - politik
   examples:
     grundeinkommen: Suche nach "grundeinkommen"
-nl 0:
-  include:
-    key: nl-de 0
-    namespace: umt
-nl 1:
-  include:
-    key: nl-de 1
-    namespace: umt
 nld 1:
   deprecated:
     alternative:
@@ -858,14 +730,6 @@ nlde 1:
     alternative:
       query: nl {%1}
       created: '2023-04-10'
-no 0:
-  include:
-    key: no-de 0
-    namespace: dcc
-no 1:
-  include:
-    key: no-de 1
-    namespace: dcc
 ntv 0:
   url: http://www.n-tv.de
   title: n-tv.de
@@ -932,14 +796,6 @@ ot? 0:
   tags:
   - language
   - thesaurus
-pl 0:
-  include:
-    key: pl-de 0
-    namespace: dcm
-pl 1:
-  include:
-    key: pl-de 1
-    namespace: dcm
 plb 1:
   deprecated:
     alternative:
@@ -960,14 +816,6 @@ plp 1:
     alternative:
       query: pns.pl {%1}
       created: '2023-04-10'
-pt 0:
-  include:
-    key: pt-de 0
-    namespace: pns
-pt 1:
-  include:
-    key: pt-de 1
-    namespace: pns
 ptb 1:
   deprecated:
     alternative:
@@ -1049,18 +897,6 @@ rm 1:
   - german
   - language
   - rumantsch grischun
-ro 0:
-  include:
-    key: ro-de 0
-    namespace: dcc
-ro 1:
-  include:
-    key: ro-de 1
-    namespace: dcc
-ru 1:
-  include:
-    key: ru-de 1
-    namespace: leo
 rub 1:
   deprecated:
     alternative:
@@ -1169,14 +1005,6 @@ stupi 1:
   - wiki
   examples:
     berlin: Search Stupipedia Artikelsuche for "berlin"
-sv 0:
-  include:
-    key: sv-de 0
-    namespace: dcm
-sv 1:
-  include:
-    key: sv-de 1
-    namespace: dcm
 svb 1:
   deprecated:
     alternative:
@@ -1251,14 +1079,6 @@ tomtouche 0:
   tags:
   - comic
   - taz
-tr 0:
-  include:
-    key: tr-de 0
-    namespace: dtn
-tr 1:
-  include:
-    key: tr-de 1
-    namespace: dtn
 trb 1:
   deprecated:
     alternative:
@@ -1389,10 +1209,6 @@ zeit 1:
   - zeit
   examples:
     berlin: Suche im Archiv von Zeit Online nach Berlin
-zh 1:
-  include:
-    key: zh-de 1
-    namespace: leo
 zv 1:
   url: http://www.zwangsversteigerung.de/suche?q={%KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID}&ergebnisZeigen=ja
   title: Zwangsversteigerung

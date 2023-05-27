@@ -1,7 +1,3 @@
-de 1:
-  include:
-    key: de-es 1
-    namespace: leo
 dep 1:
   deprecated:
     alternative:
@@ -16,14 +12,6 @@ dle 1:
   - spanish
   examples:
     árbol: Search diccionario de la lengua española for "arbol"
-en 0:
-  include:
-    key: en-es 0
-    namespace: esd
-en 1:
-  include:
-    key: en-es 1
-    namespace: esd
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo

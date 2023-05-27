@@ -26,38 +26,6 @@ csfd 1:
   - slovak
   examples:
     Pelíšky: Hledat "Pelíšky"
-de 0:
-  include:
-    key: de-cs 0
-    namespace: dcm
-de 1:
-  include:
-    key: de-cs 1
-    namespace: dcm
-en 0:
-  include:
-    key: en-cs 0
-    namespace: dcm
-en 1:
-  include:
-    key: en-cs 1
-    namespace: dcm
-es 0:
-  include:
-    key: es-cs 0
-    namespace: dcm
-es 1:
-  include:
-    key: es-cs 1
-    namespace: dcm
-fr 0:
-  include:
-    key: fr-cs 0
-    namespace: dcm
-fr 1:
-  include:
-    key: fr-cs 1
-    namespace: dcm
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -67,14 +35,6 @@ frv 1:
   - pronunciation
   examples:
     berlin: Search for the pronunciation of "berlin"
-hr 0:
-  include:
-    key: hr-cs 0
-    namespace: dcm
-hr 1:
-  include:
-    key: hr-cs 1
-    namespace: dcm
 kinobox 1:
   url: http://www.kinobox.cz/najdi?t={%query}
   title: Kinobox.cz
@@ -82,41 +42,9 @@ kinobox 1:
   - movies
   examples:
     forrest gump: Search for "forrest gump"
-pl 0:
-  include:
-    key: pl-cs 0
-    namespace: dcm
-pl 1:
-  include:
-    key: pl-cs 1
-    namespace: dcm
-ru 0:
-  include:
-    key: ru-cs 0
-    namespace: dcm
-ru 1:
-  include:
-    key: ru-cs 1
-    namespace: dcm
 sub 1:
   url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
   title: Filmové titulky (Open Subtitles)
   tags:
   - subtitles
   - titulky
-uk 0:
-  include:
-    key: uk-cs 0
-    namespace: dcm
-uk 1:
-  include:
-    key: uk-cs 1
-    namespace: dcm
-vi 0:
-  include:
-    key: vi-cs 0
-    namespace: dcm
-vi 1:
-  include:
-    key: vi-cs 1
-    namespace: dcm
