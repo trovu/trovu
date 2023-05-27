@@ -313,16 +313,18 @@ actions['addDictionaryIncludes'] = async function () {
     }
     for (const dict of dictsByPrio) {
       if (langs[lang].has(dict)) {
-        if (!yml[`${lang} 0`]) {
-          yml[`${lang} 0`] = {};
+        for (const argCount of [0, 1]) {
+          if (!yml[`${lang} ${argCount}`]) {
+            yml[`${lang} ${argCount}`] = {};
+          }
+          if (!yml[`${lang} ${argCount}`].include) {
+            yml[`${lang} ${argCount}`].include = [];
+          }
+          yml[`${lang} ${argCount}`].include.push({
+            key: `${lang} ${argCount}`,
+            namespace: dict,
+          });
         }
-        if (!yml[`${lang} 0`].include) {
-          yml[`${lang} 0`].include = [];
-        }
-        yml[`${lang} 0`].include.push({
-          key: `${lang} 0`,
-          namespace: dict,
-        });
       }
     }
   }
