@@ -1,35 +1,3 @@
-cs-dcm 0:
-  include:
-    key: cs-th 0
-    namespace: dcm
-cs-dcm 1:
-  include:
-    key: cs-th 1
-    namespace: dcm
-de-dcm 0:
-  include:
-    key: de-th 0
-    namespace: dcm
-de-dcm 1:
-  include:
-    key: de-th 1
-    namespace: dcm
-de-pka 0:
-  include:
-    key: de-th 0
-    namespace: pka
-de-pka 1:
-  include:
-    key: de-th 1
-    namespace: pka
-en-dcm 0:
-  include:
-    key: en-th 0
-    namespace: dcm
-en-dcm 1:
-  include:
-    key: en-th 1
-    namespace: dcm
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -39,11 +7,3 @@ frv 1:
   - pronunciation
   examples:
     berlin: Search for the pronunciation of "berlin"
-sk-dcm 0:
-  include:
-    key: sk-th 0
-    namespace: dcm
-sk-dcm 1:
-  include:
-    key: sk-th 1
-    namespace: dcm
