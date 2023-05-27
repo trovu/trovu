@@ -33,18 +33,6 @@ cong 1:
   title: Google as a Concordancer
   examples:
     palpable: See how the word "palpable" is used on the Web
-cs 0:
-  include:
-    key: cs-en 0
-    namespace: dcm
-cs 1:
-  include:
-    key: cs-en 1
-    namespace: dcm
-de 1:
-  include:
-    key: de-en 1
-    namespace: leo
 dei 1:
   deprecated:
     alternative:
@@ -72,14 +60,6 @@ edram 1:
   - humor
   examples:
     Boxxy: Encyclopedia Dramatica Article about Boxxy
-es 0:
-  include:
-    key: es-en 0
-    namespace: esd
-es 1:
-  include:
-    key: es-en 1
-    namespace: esd
 esi 1:
   deprecated:
     alternative:
@@ -90,14 +70,6 @@ esp 1:
     alternative:
       query: pns.es {%1}
       created: '2023-04-10'
-fr 0:
-  include:
-    key: fr-en 0
-    namespace: lge
-fr 1:
-  include:
-    key: fr-en 1
-    namespace: lge
 frp 1:
   deprecated:
     alternative:
@@ -144,14 +116,6 @@ mwt 1:
   - english
   examples:
     'important ': Search for synonyms of "important"
-nl 0:
-  include:
-    key: nl-en 0
-    namespace: dcc
-nl 1:
-  include:
-    key: nl-en 1
-    namespace: dcc
 ox 1:
   url: https://en.oxforddictionaries.com/definition/{%word}
   title: Oxford Dictionaries British & World English
@@ -162,22 +126,6 @@ ox 1:
 oxford 1:
   url: https://www.oxforddictionaries.com/definition/english/{%query}
   title: Oxford dictionary
-pt 0:
-  include:
-    key: pt-en 0
-    namespace: lge
-pt 1:
-  include:
-    key: pt-en 1
-    namespace: lge
-sl 0:
-  include:
-    key: sl-en 0
-    namespace: pns
-sl 1:
-  include:
-    key: sl-en 1
-    namespace: pns
 sta 0:
   url: http://start.csail.mit.edu
   title: START (SynTactic Analysis using Reversible Transformations)
@@ -190,14 +138,6 @@ sta 1:
   - semantic search
   examples:
     How many people live in Berlin?: Answers the question.
-sv 0:
-  include:
-    key: sv-en 0
-    namespace: flx
-sv 1:
-  include:
-    key: sv-en 1
-    namespace: flx
 syn 1:
   url: http://thesaurus.com/browse/{%word}
   title: Thesaurus.com
@@ -206,14 +146,6 @@ syn 1:
   - thesaurus
   examples:
     'important ': Search for synonyms of "important"
-tr 0:
-  include:
-    key: tr-en 0
-    namespace: zrg
-tr 1:
-  include:
-    key: tr-en 1
-    namespace: zrg
 uvi 0:
   url: http://verbs.colorado.edu/verb-index/vn3.3
   title: Unified Verb Index
@@ -288,11 +220,3 @@ youglish 1:
   - youtube
   examples:
     dough: Find videos where someone says "dough"
-zh 0:
-  include:
-    key: zh-en 0
-    namespace: mdb
-zh 1:
-  include:
-    key: zh-en 1
-    namespace: mdb
