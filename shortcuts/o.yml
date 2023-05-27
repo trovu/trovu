@@ -2927,12 +2927,24 @@ gh 1:
   examples:
     fernseher: Search for "fernseher"
 gi 0:
+  include:
+    key: gim 0
+gi 1:
+  include:
+    key: gim 1
+gif 1:
+  include:
+    key: gimf 1
+gilson 1:
+  url: https://ch.gilson.com/CHSV/catalogsearch/result/?q={%query}
+  title: Gilson
+gim 0:
   url: https://www.google.com/imghp?hl={$language}
   title: Google Images Homepage
   tags:
   - google
   - images
-gi 1:
+gim 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&tbm=isch
   title: Google Images
   tags:
@@ -2940,7 +2952,7 @@ gi 1:
   - images
   examples:
     flower: Google image search for "flower"
-gif 1:
+gimf 1:
   url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&tbm=isch&tbs=itp:face
   title: Google Images, only faces
   tags:
@@ -2948,9 +2960,6 @@ gif 1:
   - images
   examples:
     berlin: Search for "berlin"
-gilson 1:
-  url: https://ch.gilson.com/CHSV/catalogsearch/result/?q={%query}
-  title: Gilson
 github 0:
   url: https://github.com/
   title: GitHub
