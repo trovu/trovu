@@ -359,6 +359,14 @@ alw 1:
   - wiki
   examples:
     cups: Suche nach "cups"
+am 0:
+  include:
+  - key: am 0
+    namespace: pka
+am 1:
+  include:
+  - key: am 1
+    namespace: pka
 anidb 1:
   url: http://anidb.net/perl-bin/animedb.pl?show=animelist&adb.search={%query}&do.search=search
   title: AniDB - Anime DataBase
@@ -429,6 +437,34 @@ apm 2:
   examples:
     b, Pariser Platz 1: Show Berlin, Pariser Platz 1 on Apple Maps.
     hh, berliner tor: Show Berliner Tor in Hamburg
+ar 0:
+  include:
+  - key: ar 0
+    namespace: ard
+  - key: ar 0
+    namespace: dcm
+  - key: ar 0
+    namespace: bab
+  - key: ar 0
+    namespace: lgs
+  - key: ar 0
+    namespace: rvs
+  - key: ar 0
+    namespace: pka
+ar 1:
+  include:
+  - key: ar 1
+    namespace: ard
+  - key: ar 1
+    namespace: dcm
+  - key: ar 1
+    namespace: bab
+  - key: ar 1
+    namespace: lgs
+  - key: ar 1
+    namespace: rvs
+  - key: ar 1
+    namespace: pka
 arch 1:
   url: http://www.archchinese.com/chinese_english_dictionary.html?find={%query}
   title: Arch Chinese Stroke Animation & Dictionary
@@ -470,6 +506,14 @@ arxiv 1:
   - statistics
   examples:
     einstein: Search for all articles including "einstein"
+as 0:
+  include:
+  - key: as 0
+    namespace: pka
+as 1:
+  include:
+  - key: as 1
+    namespace: pka
 ask 1:
   url: http://www.ask.com/web?q={%query}&qsrc=0&o=333&l=dir
   title: Ask.com
@@ -492,6 +536,14 @@ atrf 1:
   - rage faces
   examples:
     scared: Search for scared
+az 0:
+  include:
+  - key: az 0
+    namespace: pka
+az 1:
+  include:
+  - key: az 1
+    namespace: pka
 b 0:
   url: http://www.bing.com
   title: Bing
@@ -522,11 +574,39 @@ bd 1:
   - sercurity
   examples:
     www.google.com: Check if Google.com contains malware
+be 0:
+  include:
+  - key: be 0
+    namespace: pka
+be 1:
+  include:
+  - key: be 1
+    namespace: pka
 bf 1:
   url: http://www.boerse-frankfurt.de/suchergebnisse?_search={%query}
   title: Börse Frankfurt Abfrage
   examples:
     Telekom: Search Börse Frankfurt Abfrage for "bf Telekom"
+bg 0:
+  include:
+  - key: bg 0
+    namespace: dcm
+  - key: bg 0
+    namespace: dcc
+  - key: bg 0
+    namespace: lgs
+  - key: bg 0
+    namespace: pka
+bg 1:
+  include:
+  - key: bg 1
+    namespace: dcm
+  - key: bg 1
+    namespace: dcc
+  - key: bg 1
+    namespace: lgs
+  - key: bg 1
+    namespace: pka
 bgo 1:
   url: http://bugs.gentoo.org/buglist.cgi?quicksearch={%query}
   title: Gentoo Bugzilla
@@ -646,12 +726,28 @@ bmn 1:
   - mail
   examples:
     heise.de: Get logins for heise.de
+bn 0:
+  include:
+  - key: bn 0
+    namespace: pka
+bn 1:
+  include:
+  - key: bn 1
+    namespace: pka
 bns 1:
   url: https://www.bing.com/news/search?q={%query}
   title: Bing News Search
   tags:
   - bing
   - news
+bo 0:
+  include:
+  - key: bo 0
+    namespace: pka
+bo 1:
+  include:
+  - key: bo 1
+    namespace: pka
 booking 1:
   url: https://www.booking.com/searchresults.html?spnsbr=1&ss={%destination}&idf=on&error_url=%2F%3Faid%3D1303859%3B&si=ai%2Cco%2Cci%2Cre%2Cdi&label=&aid=1303859&utm_campaign=nsb&utm_medium=sp&utm_source=FP_Searchbox&utm_term=1303862
   title: Booking.com
@@ -669,6 +765,14 @@ bp 1:
   - music
   examples:
     trance: Search for "trance"
+br 0:
+  include:
+  - key: br 0
+    namespace: pka
+br 1:
+  include:
+  - key: br 1
+    namespace: pka
 brew 1:
   url: https://www.google.de/search?hl={$language}&q=site%3Abrew.sh%20{%query}&ie=utf-8
   title: Homebrew Package Manager
@@ -708,6 +812,18 @@ bv 1:
 c3tv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
+ca 0:
+  include:
+  - key: ca 0
+    namespace: dcm
+  - key: ca 0
+    namespace: pka
+ca 1:
+  include:
+  - key: ca 1
+    namespace: dcm
+  - key: ca 1
+    namespace: pka
 cad 0:
   url: http://cad-comic.com/cad
   title: Current Ctrl-Alt-Del-Comic
@@ -1047,6 +1163,30 @@ crx 1:
   - google
   examples:
     page rank: Search for Google Chrome extensions about "page rank"
+cs 0:
+  include:
+  - key: cs 0
+    namespace: dcm
+  - key: cs 0
+    namespace: bab
+  - key: cs 0
+    namespace: dcc
+  - key: cs 0
+    namespace: lgs
+  - key: cs 0
+    namespace: pka
+cs 1:
+  include:
+  - key: cs 1
+    namespace: dcm
+  - key: cs 1
+    namespace: bab
+  - key: cs 1
+    namespace: dcc
+  - key: cs 1
+    namespace: lgs
+  - key: cs 1
+    namespace: pka
 csdblp 0:
   url: http://www.dblp.org/search/
   title: 'CompleteSearch DBLP: Load plain website'
@@ -1083,6 +1223,14 @@ cve 1:
   title: CVE Common vulnerabilities and exposures
   tags:
   - old
+cy 0:
+  include:
+  - key: cy 0
+    namespace: pka
+cy 1:
+  include:
+  - key: cy 1
+    namespace: pka
 d 0:
   url: https://duckduckgo.com/
   title: Duck Duck Go
@@ -1095,6 +1243,34 @@ d 1:
   - web search
   examples:
     berlin: Search DuckDuckGo for "berlin"
+da 0:
+  include:
+  - key: da 0
+    namespace: deo
+  - key: da 0
+    namespace: dcm
+  - key: da 0
+    namespace: bab
+  - key: da 0
+    namespace: dcc
+  - key: da 0
+    namespace: lgs
+  - key: da 0
+    namespace: pka
+da 1:
+  include:
+  - key: da 1
+    namespace: deo
+  - key: da 1
+    namespace: dcm
+  - key: da 1
+    namespace: bab
+  - key: da 1
+    namespace: dcc
+  - key: da 1
+    namespace: lgs
+  - key: da 1
+    namespace: pka
 dao 0:
   url: http://dragonage.wikia.com/wiki/Dragon_Age_Wiki
   title: Dragon Age Origins Wiki
@@ -1174,6 +1350,78 @@ ddgs 0:
   title: Duck Duck Go
   tags:
   - old
+de 0:
+  include:
+  - key: de 0
+    namespace: ama
+  - key: de 0
+    namespace: ard
+  - key: de 0
+    namespace: dtn
+  - key: de 0
+    namespace: crd
+  - key: de 0
+    namespace: hzn
+  - key: de 0
+    namespace: umt
+  - key: de 0
+    namespace: wdk
+  - key: de 0
+    namespace: lge
+  - key: de 0
+    namespace: dcm
+  - key: de 0
+    namespace: bab
+  - key: de 0
+    namespace: leo
+  - key: de 0
+    namespace: dcc
+  - key: de 0
+    namespace: lgs
+  - key: de 0
+    namespace: pns
+  - key: de 0
+    namespace: rvs
+  - key: de 0
+    namespace: beo
+  - key: de 0
+    namespace: pka
+de 1:
+  include:
+  - key: de 1
+    namespace: ama
+  - key: de 1
+    namespace: ard
+  - key: de 1
+    namespace: dtn
+  - key: de 1
+    namespace: crd
+  - key: de 1
+    namespace: hzn
+  - key: de 1
+    namespace: umt
+  - key: de 1
+    namespace: wdk
+  - key: de 1
+    namespace: lge
+  - key: de 1
+    namespace: dcm
+  - key: de 1
+    namespace: bab
+  - key: de 1
+    namespace: leo
+  - key: de 1
+    namespace: dcc
+  - key: de 1
+    namespace: lgs
+  - key: de 1
+    namespace: pns
+  - key: de 1
+    namespace: rvs
+  - key: de 1
+    namespace: beo
+  - key: de 1
+    namespace: pka
 dea 0:
   url: http://www.deviantart.com
   title: DeviantART
@@ -1703,6 +1951,14 @@ dwd 0:
   title: Deutscher Wetter Dienst
   tags:
   - old
+dz 0:
+  include:
+  - key: dz 0
+    namespace: pka
+dz 1:
+  include:
+  - key: dz 1
+    namespace: pka
 dzr 0:
   url: https://www.deezer.com/
   title: Deezer Homepage
@@ -1818,11 +2074,103 @@ ekn 0:
   tags:
   - ebay
   - shopping
+el 0:
+  include:
+  - key: el 0
+    namespace: dcm
+  - key: el 0
+    namespace: bab
+  - key: el 0
+    namespace: dcc
+  - key: el 0
+    namespace: lgs
+  - key: el 0
+    namespace: pns
+  - key: el 0
+    namespace: pka
+el 1:
+  include:
+  - key: el 1
+    namespace: dcm
+  - key: el 1
+    namespace: bab
+  - key: el 1
+    namespace: dcc
+  - key: el 1
+    namespace: lgs
+  - key: el 1
+    namespace: pns
+  - key: el 1
+    namespace: pka
 emy 0:
   url: http://signin.ebay.com
   title: Ebay.de My eBay
   tags:
   - old
+en 0:
+  include:
+  - key: en 0
+    namespace: ard
+  - key: en 0
+    namespace: crd
+  - key: en 0
+    namespace: esd
+  - key: en 0
+    namespace: flx
+  - key: en 0
+    namespace: mdb
+  - key: en 0
+    namespace: zrg
+  - key: en 0
+    namespace: lge
+  - key: en 0
+    namespace: bab
+  - key: en 0
+    namespace: leo
+  - key: en 0
+    namespace: dcc
+  - key: en 0
+    namespace: lgs
+  - key: en 0
+    namespace: pns
+  - key: en 0
+    namespace: rvs
+  - key: en 0
+    namespace: beo
+  - key: en 0
+    namespace: pka
+en 1:
+  include:
+  - key: en 1
+    namespace: ard
+  - key: en 1
+    namespace: crd
+  - key: en 1
+    namespace: esd
+  - key: en 1
+    namespace: flx
+  - key: en 1
+    namespace: mdb
+  - key: en 1
+    namespace: zrg
+  - key: en 1
+    namespace: lge
+  - key: en 1
+    namespace: bab
+  - key: en 1
+    namespace: leo
+  - key: en 1
+    namespace: dcc
+  - key: en 1
+    namespace: lgs
+  - key: en 1
+    namespace: pns
+  - key: en 1
+    namespace: rvs
+  - key: en 1
+    namespace: beo
+  - key: en 1
+    namespace: pka
 ende 1:
   url: http://www.dict.cc/?s={%word}
   title: Translation English to German
@@ -1858,6 +2206,22 @@ enzh 1:
     alternative:
       query: en.zh {%1}
       created: '2023-04-10'
+eo 0:
+  include:
+  - key: eo 0
+    namespace: deo
+  - key: eo 0
+    namespace: bab
+  - key: eo 0
+    namespace: pka
+eo 1:
+  include:
+  - key: eo 1
+    namespace: deo
+  - key: eo 1
+    namespace: bab
+  - key: eo 1
+    namespace: pka
 eprint 0:
   url: https://eprint.iacr.org/
   title: 'IACR Cryptology ePrint Archive: Complete archive'
@@ -1882,6 +2246,70 @@ era-sms 0:
   title: Era-sms
   tags:
   - old
+es 0:
+  include:
+  - key: es 0
+    namespace: ard
+  - key: es 0
+    namespace: esd
+  - key: es 0
+    namespace: lge
+  - key: es 0
+    namespace: dcm
+  - key: es 0
+    namespace: bab
+  - key: es 0
+    namespace: leo
+  - key: es 0
+    namespace: dcc
+  - key: es 0
+    namespace: lgs
+  - key: es 0
+    namespace: pns
+  - key: es 0
+    namespace: rvs
+  - key: es 0
+    namespace: beo
+  - key: es 0
+    namespace: pka
+es 1:
+  include:
+  - key: es 1
+    namespace: ard
+  - key: es 1
+    namespace: esd
+  - key: es 1
+    namespace: lge
+  - key: es 1
+    namespace: dcm
+  - key: es 1
+    namespace: bab
+  - key: es 1
+    namespace: leo
+  - key: es 1
+    namespace: dcc
+  - key: es 1
+    namespace: lgs
+  - key: es 1
+    namespace: pns
+  - key: es 1
+    namespace: rvs
+  - key: es 1
+    namespace: beo
+  - key: es 1
+    namespace: pka
+et 0:
+  include:
+  - key: et 0
+    namespace: dcm
+  - key: et 0
+    namespace: pka
+et 1:
+  include:
+  - key: et 1
+    namespace: dcm
+  - key: et 1
+    namespace: pka
 etools 1:
   url: http://www.etools.ch/searchSubmit.do?query={%query}
   title: ETools.ch Metasearch
@@ -1892,6 +2320,14 @@ ety 1:
   title: Etymology lookup
   tags:
   - old
+eu 0:
+  include:
+  - key: eu 0
+    namespace: pka
+eu 1:
+  include:
+  - key: eu 1
+    namespace: pka
 eucomp 1:
   url: http://ec.europa.eu/competition/elojade/isef/index.cfm?fuseaction=dsp_result&case_title={%company}
   title: EU Competition Authority Case search
@@ -1924,6 +2360,18 @@ exkcd 1:
   - xkcd
   examples:
     polish sausage: Explain the comic about polish sausage
+fa 0:
+  include:
+  - key: fa 0
+    namespace: lgs
+  - key: fa 0
+    namespace: pka
+fa 1:
+  include:
+  - key: fa 1
+    namespace: lgs
+  - key: fa 1
+    namespace: pka
 faust 1:
   deprecated:
     alternative:
@@ -2207,6 +2655,30 @@ ffi 1:
   - stock agency
   examples:
     weihnachten: Suche Fotos zum Thema "weihnachten"
+fi 0:
+  include:
+  - key: fi 0
+    namespace: dcm
+  - key: fi 0
+    namespace: bab
+  - key: fi 0
+    namespace: dcc
+  - key: fi 0
+    namespace: lgs
+  - key: fi 0
+    namespace: pka
+fi 1:
+  include:
+  - key: fi 1
+    namespace: dcm
+  - key: fi 1
+    namespace: bab
+  - key: fi 1
+    namespace: dcc
+  - key: fi 1
+    namespace: lgs
+  - key: fi 1
+    namespace: pka
 fien 1:
   url: http://www.fincd.com/index.php?txtSearch={%query}&lang=en
   title: Finnish-English
@@ -2340,6 +2812,14 @@ fm 1:
 fnet 1:
   url: http://www.finanzen.net/suchergebnis.asp?_search={%query}
   title: Finanzen.net Query
+fo 0:
+  include:
+  - key: fo 0
+    namespace: pka
+fo 1:
+  include:
+  - key: fo 1
+    namespace: pka
 foo 1:
   url: http://en.fooooo.com/search.php?q={%query}&submit=+search+&ranking=0
   title: Fooooo Video Search
@@ -2401,6 +2881,50 @@ fpwg 0:
   title: Frank's password generator (Kessnux; javascript)
   tags:
   - passwords
+fr 0:
+  include:
+  - key: fr 0
+    namespace: ard
+  - key: fr 0
+    namespace: lge
+  - key: fr 0
+    namespace: dcm
+  - key: fr 0
+    namespace: bab
+  - key: fr 0
+    namespace: leo
+  - key: fr 0
+    namespace: dcc
+  - key: fr 0
+    namespace: lgs
+  - key: fr 0
+    namespace: pns
+  - key: fr 0
+    namespace: rvs
+  - key: fr 0
+    namespace: pka
+fr 1:
+  include:
+  - key: fr 1
+    namespace: ard
+  - key: fr 1
+    namespace: lge
+  - key: fr 1
+    namespace: dcm
+  - key: fr 1
+    namespace: bab
+  - key: fr 1
+    namespace: leo
+  - key: fr 1
+    namespace: dcc
+  - key: fr 1
+    namespace: lgs
+  - key: fr 1
+    namespace: pns
+  - key: fr 1
+    namespace: rvs
+  - key: fr 1
+    namespace: pka
 fr-an 1:
   deprecated:
     alternative:
@@ -2489,6 +3013,14 @@ fx 1:
   title: Frederix Computer GmbH
   tags:
   - old
+fy 0:
+  include:
+  - key: fy 0
+    namespace: pka
+fy 1:
+  include:
+  - key: fy 1
+    namespace: pka
 fz 1:
   url: http://fizy.com/?q={%name of song xor artist}
   title: Fizy videomusic
@@ -2539,6 +3071,14 @@ g? 0:
   title: About Google
   tags:
   - old
+ga 0:
+  include:
+  - key: ga 0
+    namespace: pka
+ga 1:
+  include:
+  - key: ga 1
+    namespace: pka
 gameserver 1:
   url: http://www.game-monitor.com/search.php?search={%query}&type=server&location=all&game=all&x=0&y=0&num=30
   title: Spiel Server Suchen game-monitor.com
@@ -2635,6 +3175,14 @@ gcode 1:
   title: Google Code
   tags:
   - old
+gd 0:
+  include:
+  - key: gd 0
+    namespace: pka
+gd 1:
+  include:
+  - key: gd 1
+    namespace: pka
 gd 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start|type=city}&daddr={%destination|type=city}
   title: Google Maps Directions (Routing)
@@ -2979,6 +3527,14 @@ gitlab 1:
   - open source
   - programming
   - software
+gl 0:
+  include:
+  - key: gl 0
+    namespace: pka
+gl 1:
+  include:
+  - key: gl 1
+    namespace: pka
 glist 1:
   url: http://google.com/search?hl={$language}&q={%query}+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Listing
@@ -3428,6 +3984,14 @@ gtrends 2:
   - trends
   examples:
     pl, berlin: See statistics for the term "berlin" on Google web search for Poland
+gu 0:
+  include:
+  - key: gu 0
+    namespace: pka
+gu 1:
+  include:
+  - key: gu 1
+    namespace: pka
 guk 1:
   url: http://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google United Kingdom
@@ -3505,6 +4069,14 @@ gww 1:
 gy 1:
   url: https://www.google.de/search?q={%query}&hl=de&tbs=qdr:y
   title: Google search last year timeframe
+ha 0:
+  include:
+  - key: ha 0
+    namespace: pka
+ha 1:
+  include:
+  - key: ha 1
+    namespace: pka
 hbr 1:
   url: http://hbr.org/search/{%query}
   title: Harvard Business Research
@@ -3515,6 +4087,22 @@ hdb 1:
   title: Haskell package page
   tags:
   - old
+he 0:
+  include:
+  - key: he 0
+    namespace: dcm
+  - key: he 0
+    namespace: rvs
+  - key: he 0
+    namespace: pka
+he 1:
+  include:
+  - key: he 1
+    namespace: dcm
+  - key: he 1
+    namespace: rvs
+  - key: he 1
+    namespace: pka
 here 0:
   url: https://wego.here.com/
   title: Here.com
@@ -3537,6 +4125,18 @@ hexenc 1:
   title: Hex encode
   tags:
   - old
+hi 0:
+  include:
+  - key: hi 0
+    namespace: bab
+  - key: hi 0
+    namespace: pka
+hi 1:
+  include:
+  - key: hi 1
+    namespace: bab
+  - key: hi 1
+    namespace: pka
 hm 1:
   url: http://hypem.com/search/{%query}
   title: Hype Machine
@@ -3560,6 +4160,26 @@ hotu 1:
   title: Home of the Underdogs
   tags:
   - old
+hr 0:
+  include:
+  - key: hr 0
+    namespace: crd
+  - key: hr 0
+    namespace: dcm
+  - key: hr 0
+    namespace: lgs
+  - key: hr 0
+    namespace: pka
+hr 1:
+  include:
+  - key: hr 1
+    namespace: crd
+  - key: hr 1
+    namespace: dcm
+  - key: hr 1
+    namespace: lgs
+  - key: hr 1
+    namespace: pka
 html-pdf 1:
   url: http://www.html-pdf-converter.com/convert.php?u={%url}&x=0&y=0
   title: HTML to PDF Converter
@@ -3577,6 +4197,42 @@ http 1:
   - url
   examples:
     example.com: Go to http://example.com
+hu 0:
+  include:
+  - key: hu 0
+    namespace: dcm
+  - key: hu 0
+    namespace: bab
+  - key: hu 0
+    namespace: dcc
+  - key: hu 0
+    namespace: lgs
+  - key: hu 0
+    namespace: pns
+  - key: hu 0
+    namespace: pka
+hu 1:
+  include:
+  - key: hu 1
+    namespace: dcm
+  - key: hu 1
+    namespace: bab
+  - key: hu 1
+    namespace: dcc
+  - key: hu 1
+    namespace: lgs
+  - key: hu 1
+    namespace: pns
+  - key: hu 1
+    namespace: pka
+hy 0:
+  include:
+  - key: hy 0
+    namespace: pka
+hy 1:
+  include:
+  - key: hy 1
+    namespace: pka
 hype 1:
   url: http://hype.non-standard.net/search/{%query}
   title: Hype Machine
@@ -3630,6 +4286,22 @@ icq 1:
   - icq
   examples:
     steven: Search ICQ People Search for "steven"
+id 0:
+  include:
+  - key: id 0
+    namespace: dcm
+  - key: id 0
+    namespace: bab
+  - key: id 0
+    namespace: pka
+id 1:
+  include:
+  - key: id 1
+    namespace: dcm
+  - key: id 1
+    namespace: bab
+  - key: id 1
+    namespace: pka
 ida 1:
   url: http://www.imdb.com/find?s=tt&site=aka&q={%query}
   title: IMDb AKA Title Search
@@ -3649,6 +4321,22 @@ ieee 1:
 if 1:
   url: http://www.iconfinder.com/search/?q={%query}
   title: IconFinder query
+ig 0:
+  include:
+  - key: ig 0
+    namespace: pka
+ig 1:
+  include:
+  - key: ig 1
+    namespace: pka
+ii 0:
+  include:
+  - key: ii 0
+    namespace: pka
+ii 1:
+  include:
+  - key: ii 1
+    namespace: pka
 ikeanl 1:
   deprecated:
     alternative:
@@ -3738,6 +4426,22 @@ ipkat 0:
   - ip law
   - patent law
   - patents
+is 0:
+  include:
+  - key: is 0
+    namespace: dcc
+  - key: is 0
+    namespace: lgs
+  - key: is 0
+    namespace: pka
+is 1:
+  include:
+  - key: is 1
+    namespace: dcc
+  - key: is 1
+    namespace: lgs
+  - key: is 1
+    namespace: pka
 isg 1:
   url: https://www.instagram.com/{%name}
   title: Instagram
@@ -3777,6 +4481,74 @@ isup 1:
   - domains
   examples:
     google.com: Check is google.com is down
+it 0:
+  include:
+  - key: it 0
+    namespace: ard
+  - key: it 0
+    namespace: dcm
+  - key: it 0
+    namespace: bab
+  - key: it 0
+    namespace: leo
+  - key: it 0
+    namespace: dcc
+  - key: it 0
+    namespace: lgs
+  - key: it 0
+    namespace: pns
+  - key: it 0
+    namespace: rvs
+  - key: it 0
+    namespace: pka
+it 1:
+  include:
+  - key: it 1
+    namespace: ard
+  - key: it 1
+    namespace: dcm
+  - key: it 1
+    namespace: bab
+  - key: it 1
+    namespace: leo
+  - key: it 1
+    namespace: dcc
+  - key: it 1
+    namespace: lgs
+  - key: it 1
+    namespace: pns
+  - key: it 1
+    namespace: rvs
+  - key: it 1
+    namespace: pka
+ja 0:
+  include:
+  - key: ja 0
+    namespace: wdk
+  - key: ja 0
+    namespace: dcm
+  - key: ja 0
+    namespace: bab
+  - key: ja 0
+    namespace: lgs
+  - key: ja 0
+    namespace: rvs
+  - key: ja 0
+    namespace: pka
+ja 1:
+  include:
+  - key: ja 1
+    namespace: wdk
+  - key: ja 1
+    namespace: dcm
+  - key: ja 1
+    namespace: bab
+  - key: ja 1
+    namespace: lgs
+  - key: ja 1
+    namespace: rvs
+  - key: ja 1
+    namespace: pka
 jam 1:
   url: https://www.jamendo.com/search?qs=q={%query}
   title: Jamendo
@@ -3925,6 +4697,18 @@ jsr 1:
   title: Java Specification Requests
   tags:
   - old
+ka 0:
+  include:
+  - key: ka 0
+    namespace: bab
+  - key: ka 0
+    namespace: pka
+ka 1:
+  include:
+  - key: ka 1
+    namespace: bab
+  - key: ka 1
+    namespace: pka
 keepvid 1:
   url: http://keepvid.com/?url={%url}&site=aa
   title: Keepvid
@@ -3940,6 +4724,66 @@ keno 1:
   title: Kenozahlen
   tags:
   - old
+ki 0:
+  include:
+  - key: ki 0
+    namespace: pka
+ki 1:
+  include:
+  - key: ki 1
+    namespace: pka
+kk 0:
+  include:
+  - key: kk 0
+    namespace: pka
+kk 1:
+  include:
+  - key: kk 1
+    namespace: pka
+kl 0:
+  include:
+  - key: kl 0
+    namespace: pka
+kl 1:
+  include:
+  - key: kl 1
+    namespace: pka
+km 0:
+  include:
+  - key: km 0
+    namespace: pka
+km 1:
+  include:
+  - key: km 1
+    namespace: pka
+kn 0:
+  include:
+  - key: kn 0
+    namespace: pka
+kn 1:
+  include:
+  - key: kn 1
+    namespace: pka
+ko 0:
+  include:
+  - key: ko 0
+    namespace: dcm
+  - key: ko 0
+    namespace: bab
+  - key: ko 0
+    namespace: rvs
+  - key: ko 0
+    namespace: pka
+ko 1:
+  include:
+  - key: ko 1
+    namespace: dcm
+  - key: ko 1
+    namespace: bab
+  - key: ko 1
+    namespace: rvs
+  - key: ko 1
+    namespace: pka
 koders 1:
   url: http://www.koders.com/?s={%query}&la=*&li=*
   title: Koders
@@ -3952,6 +4796,14 @@ kong 1:
   - games
   examples:
     tetris: Play Tetris online
+ks 0:
+  include:
+  - key: ks 0
+    namespace: pka
+ks 1:
+  include:
+  - key: ks 1
+    namespace: pka
 kt 1:
   url: http://kinox.to/Search.html?q={%query}
   title: Kinox.to
@@ -3965,6 +4817,22 @@ kuler 1:
   title: Kuler
   tags:
   - old
+kw 0:
+  include:
+  - key: kw 0
+    namespace: pka
+kw 1:
+  include:
+  - key: kw 1
+    namespace: pka
+ky 0:
+  include:
+  - key: ky 0
+    namespace: pka
+ky 1:
+  include:
+  - key: ky 1
+    namespace: pka
 kym 1:
   url: http://knowyourmeme.com/search?q={%query}
   title: Know Your Meme
@@ -3979,6 +4847,26 @@ l 1:
   title: Windows Live Web search
   tags:
   - old
+la 0:
+  include:
+  - key: la 0
+    namespace: ama
+  - key: la 0
+    namespace: dcc
+  - key: la 0
+    namespace: lgs
+  - key: la 0
+    namespace: pka
+la 1:
+  include:
+  - key: la 1
+    namespace: ama
+  - key: la 1
+    namespace: dcc
+  - key: la 1
+    namespace: lgs
+  - key: la 1
+    namespace: pka
 lambda 0:
   url: http://lambda-the-ultimate.org
   title: Lambda the ultimate
@@ -4040,6 +4928,14 @@ latex 1:
   title: Latex Reference
   tags:
   - old
+lb 0:
+  include:
+  - key: lb 0
+    namespace: pka
+lb 1:
+  include:
+  - key: lb 1
+    namespace: pka
 lc 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo={%verb}
   title: Logos Universal Conjugator
@@ -4082,6 +4978,14 @@ leo_es 1:
     alternative:
       query: leo.es {%1}
       created: '2023-04-10'
+lg 0:
+  include:
+  - key: lg 0
+    namespace: pka
+lg 1:
+  include:
+  - key: lg 1
+    namespace: pka
 lh 0:
   url: http://www.lufthansa.com
   title: Lufthansa
@@ -4152,6 +5056,22 @@ ll 1:
   tags:
   - liveleak
   - video
+ln 0:
+  include:
+  - key: ln 0
+    namespace: pka
+ln 1:
+  include:
+  - key: ln 1
+    namespace: pka
+lo 0:
+  include:
+  - key: lo 0
+    namespace: pka
+lo 1:
+  include:
+  - key: lo 1
+    namespace: pka
 loe 1:
   url: https://en.wikipedia.org/wiki/List_of_{%title}_episodes
   title: List of episodes on Wikipedia
@@ -4165,6 +5085,30 @@ lotto 1:
   title: Lottozahlen
   tags:
   - old
+lt 0:
+  include:
+  - key: lt 0
+    namespace: dcm
+  - key: lt 0
+    namespace: pka
+lt 1:
+  include:
+  - key: lt 1
+    namespace: dcm
+  - key: lt 1
+    namespace: pka
+lv 0:
+  include:
+  - key: lv 0
+    namespace: dcm
+  - key: lv 0
+    namespace: pka
+lv 1:
+  include:
+  - key: lv 1
+    namespace: dcm
+  - key: lv 1
+    namespace: pka
 lw 1:
   url: https://www.lampenwelt.de/catalogsearch/result/?q={%query}
   title: Lampenwelt.de
@@ -4311,6 +5255,14 @@ metal 1:
   title: Metal Archives
   tags:
   - old
+mg 0:
+  include:
+  - key: mg 0
+    namespace: pka
+mg 1:
+  include:
+  - key: mg 1
+    namespace: pka
 mga 1:
   url: http://mageia.madb.org/package/list/arch/x86_64/application/0?t_search={%query}
   title: Mageia
@@ -4334,6 +5286,30 @@ mink 1:
   - programming
   examples:
     getTagName: Search Mink for "getTagName"
+mk 0:
+  include:
+  - key: mk 0
+    namespace: pka
+mk 1:
+  include:
+  - key: mk 1
+    namespace: pka
+ml 0:
+  include:
+  - key: ml 0
+    namespace: pka
+ml 1:
+  include:
+  - key: ml 1
+    namespace: pka
+mn 0:
+  include:
+  - key: mn 0
+    namespace: pka
+mn 1:
+  include:
+  - key: mn 1
+    namespace: pka
 month 0:
   url: http://timeanddate.com/calendar/monthly.html
   title: This month
@@ -4349,11 +5325,39 @@ mouser 1:
   title: mouser.de
   examples:
     Z80: Search mouser.de for "Z80"
+mr 0:
+  include:
+  - key: mr 0
+    namespace: pka
+mr 1:
+  include:
+  - key: mr 1
+    namespace: pka
+ms 0:
+  include:
+  - key: ms 0
+    namespace: bab
+  - key: ms 0
+    namespace: pka
+ms 1:
+  include:
+  - key: ms 1
+    namespace: bab
+  - key: ms 1
+    namespace: pka
 msn 1:
   url: http://search.msn.com/results.aspx?q={%query}
   title: MSN Search
   tags:
   - old
+mt 0:
+  include:
+  - key: mt 0
+    namespace: pka
+mt 1:
+  include:
+  - key: mt 1
+    namespace: pka
 mtf 1:
   url: http://www.mac-tv.de/Forum/search.php?do=process&query={%query}
   title: Mac-TV Forum
@@ -4393,6 +5397,14 @@ mwwg 1:
   tags:
   - mediawiki
   - wiki
+my 0:
+  include:
+  - key: my 0
+    namespace: pka
+my 1:
+  include:
+  - key: my 1
+    namespace: pka
 myfritz 0:
   url: https://www.myfritz.net/login.xhtml
   title: fritz.box access worldwide
@@ -4473,6 +5485,30 @@ nag 1:
   title: Nagios
   tags:
   - old
+nb 0:
+  include:
+  - key: nb 0
+    namespace: pka
+nb 1:
+  include:
+  - key: nb 1
+    namespace: pka
+nd 0:
+  include:
+  - key: nd 0
+    namespace: pka
+nd 1:
+  include:
+  - key: nd 1
+    namespace: pka
+ne 0:
+  include:
+  - key: ne 0
+    namespace: pka
+ne 1:
+  include:
+  - key: ne 1
+    namespace: pka
 ng 0:
   url: http://docs.angularjs.org/
   title: AngularJS Documentation
@@ -4510,6 +5546,74 @@ nicebooks:us 1:
   title: NiceBooks
   tags:
   - old
+nl 0:
+  include:
+  - key: nl 0
+    namespace: umt
+  - key: nl 0
+    namespace: dcm
+  - key: nl 0
+    namespace: bab
+  - key: nl 0
+    namespace: dcc
+  - key: nl 0
+    namespace: lgs
+  - key: nl 0
+    namespace: rvs
+  - key: nl 0
+    namespace: pka
+nl 1:
+  include:
+  - key: nl 1
+    namespace: umt
+  - key: nl 1
+    namespace: dcm
+  - key: nl 1
+    namespace: bab
+  - key: nl 1
+    namespace: dcc
+  - key: nl 1
+    namespace: lgs
+  - key: nl 1
+    namespace: rvs
+  - key: nl 1
+    namespace: pka
+nn 0:
+  include:
+  - key: nn 0
+    namespace: pka
+nn 1:
+  include:
+  - key: nn 1
+    namespace: pka
+no 0:
+  include:
+  - key: no 0
+    namespace: hzn
+  - key: no 0
+    namespace: dcm
+  - key: no 0
+    namespace: bab
+  - key: no 0
+    namespace: dcc
+  - key: no 0
+    namespace: lgs
+  - key: no 0
+    namespace: pka
+no 1:
+  include:
+  - key: no 1
+    namespace: hzn
+  - key: no 1
+    namespace: dcm
+  - key: no 1
+    namespace: bab
+  - key: no 1
+    namespace: dcc
+  - key: no 1
+    namespace: lgs
+  - key: no 1
+    namespace: pka
 nobi 1:
   url: http://www.notebookinfo.de/suche/{%query}
   title: Notebookinfo
@@ -4576,6 +5680,14 @@ okf 1:
   - tv
   examples:
     nachrichten: Suche nach Nachrichten
+om 0:
+  include:
+  - key: om 0
+    namespace: pka
+om 1:
+  include:
+  - key: om 1
+    namespace: pka
 oms 1:
   url: http://www.operamini.com/demo/?url={%url}
   title: Opera Mini Simulator
@@ -4599,6 +5711,14 @@ opensub 1:
 opensuse 0:
   url: https://www.opensuse.org/
   title: openSUSE Linux Operating System
+or 0:
+  include:
+  - key: or 0
+    namespace: pka
+or 1:
+  include:
+  - key: or 1
+    namespace: pka
 ora 1:
   url: http://www.ora-code.com/result.html?cx=partner-pub-8150570856315117%3Afghww0-78vd&cof=FORID%3A10&ie=ISO-8859-1&q={%query}&sa=Search#755
   title: Oracle Error Code
@@ -4614,6 +5734,14 @@ orm 1:
   - railway
   examples:
     berlin: Search OpenRailwayMap for "berlin"
+os 0:
+  include:
+  - key: os 0
+    namespace: pka
+os 1:
+  include:
+  - key: os 1
+    namespace: pka
 osm 0:
   url: https://openstreetmap.org
   title: OpenStreetMap
@@ -4810,6 +5938,14 @@ p2r 1:
   title: Request update feed
   tags:
   - old
+pa 0:
+  include:
+  - key: pa 0
+    namespace: pka
+pa 1:
+  include:
+  - key: pa 1
+    namespace: pka
 pastebin 0:
   url: http://pastebin.com/
   title: Paste Your Code
@@ -4958,6 +6094,46 @@ ping 1:
   title: Web-based ping
   tags:
   - old
+pl 0:
+  include:
+  - key: pl 0
+    namespace: lge
+  - key: pl 0
+    namespace: dcm
+  - key: pl 0
+    namespace: bab
+  - key: pl 0
+    namespace: leo
+  - key: pl 0
+    namespace: dcc
+  - key: pl 0
+    namespace: lgs
+  - key: pl 0
+    namespace: pns
+  - key: pl 0
+    namespace: rvs
+  - key: pl 0
+    namespace: pka
+pl 1:
+  include:
+  - key: pl 1
+    namespace: lge
+  - key: pl 1
+    namespace: dcm
+  - key: pl 1
+    namespace: bab
+  - key: pl 1
+    namespace: leo
+  - key: pl 1
+    namespace: dcc
+  - key: pl 1
+    namespace: lgs
+  - key: pl 1
+    namespace: pns
+  - key: pl 1
+    namespace: rvs
+  - key: pl 1
+    namespace: pka
 play 0:
   url: http://www.play.com/
   title: Play.com
@@ -5068,11 +6244,63 @@ praktiker 1:
 printertestfiles 0:
   url: http://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
   title: Printer test files
+ps 0:
+  include:
+  - key: ps 0
+    namespace: pka
+ps 1:
+  include:
+  - key: ps 1
+    namespace: pka
 psql 0:
   url: http://www.postgresql.org/
   title: PostgreSQL
   tags:
   - old
+pt 0:
+  include:
+  - key: pt 0
+    namespace: lge
+  - key: pt 0
+    namespace: dcm
+  - key: pt 0
+    namespace: bab
+  - key: pt 0
+    namespace: leo
+  - key: pt 0
+    namespace: dcc
+  - key: pt 0
+    namespace: lgs
+  - key: pt 0
+    namespace: pns
+  - key: pt 0
+    namespace: rvs
+  - key: pt 0
+    namespace: beo
+  - key: pt 0
+    namespace: pka
+pt 1:
+  include:
+  - key: pt 1
+    namespace: lge
+  - key: pt 1
+    namespace: dcm
+  - key: pt 1
+    namespace: bab
+  - key: pt 1
+    namespace: leo
+  - key: pt 1
+    namespace: dcc
+  - key: pt 1
+    namespace: lgs
+  - key: pt 1
+    namespace: pns
+  - key: pt 1
+    namespace: rvs
+  - key: pt 1
+    namespace: beo
+  - key: pt 1
+    namespace: pka
 pt-pons 1:
   deprecated:
     alternative:
@@ -5263,6 +6491,18 @@ qtdoc 1:
   title: Search Qt documentation
   tags:
   - old
+qu 0:
+  include:
+  - key: qu 0
+    namespace: bab
+  - key: qu 0
+    namespace: pka
+qu 1:
+  include:
+  - key: qu 1
+    namespace: bab
+  - key: qu 1
+    namespace: pka
 qw 1:
   url: https://www.qwant.com/?q={%query}
   title: qwant search engine
@@ -5448,11 +6688,55 @@ rl 1:
   title: Rapidlibrary Search
   tags:
   - old
+rm 0:
+  include:
+  - key: rm 0
+    namespace: pka
+rm 1:
+  include:
+  - key: rm 1
+    namespace: pka
 rmsk 0:
   url: http://www.rms-austria.at/service-center/kontakt/katrin-lacina/
   title: Rmsk
   tags:
   - old
+rn 0:
+  include:
+  - key: rn 0
+    namespace: pka
+rn 1:
+  include:
+  - key: rn 1
+    namespace: pka
+ro 0:
+  include:
+  - key: ro 0
+    namespace: dcm
+  - key: ro 0
+    namespace: bab
+  - key: ro 0
+    namespace: dcc
+  - key: ro 0
+    namespace: lgs
+  - key: ro 0
+    namespace: rvs
+  - key: ro 0
+    namespace: pka
+ro 1:
+  include:
+  - key: ro 1
+    namespace: dcm
+  - key: ro 1
+    namespace: bab
+  - key: ro 1
+    namespace: dcc
+  - key: ro 1
+    namespace: lgs
+  - key: ro 1
+    namespace: rvs
+  - key: ro 1
+    namespace: pka
 route 2:
   url: https://www.google.com/maps?hl={$language}&saddr={%from}&daddr={%to}
   title: Google Maps Route
@@ -5482,6 +6766,42 @@ rtm 0:
   title: Remember the milk
   tags:
   - old
+ru 0:
+  include:
+  - key: ru 0
+    namespace: dcm
+  - key: ru 0
+    namespace: bab
+  - key: ru 0
+    namespace: leo
+  - key: ru 0
+    namespace: dcc
+  - key: ru 0
+    namespace: lgs
+  - key: ru 0
+    namespace: pns
+  - key: ru 0
+    namespace: rvs
+  - key: ru 0
+    namespace: pka
+ru 1:
+  include:
+  - key: ru 1
+    namespace: dcm
+  - key: ru 1
+    namespace: bab
+  - key: ru 1
+    namespace: leo
+  - key: ru 1
+    namespace: dcc
+  - key: ru 1
+    namespace: lgs
+  - key: ru 1
+    namespace: pns
+  - key: ru 1
+    namespace: rvs
+  - key: ru 1
+    namespace: pka
 ruby 1:
   url: http://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q={%query}&sa=Search
   title: Ruby Documentation
@@ -5490,6 +6810,14 @@ ruby 1:
 rustd 1:
   url: https://doc.rust-lang.org/std/?search={%query}
   title: Rust std API Documentation
+rw 0:
+  include:
+  - key: rw 0
+    namespace: pka
+rw 1:
+  include:
+  - key: rw 1
+    namespace: pka
 rwth 1:
   url: http://www.campus.rwth-aachen.de/rwth/all/lecturerlist.asp?find={%name}
   title: RWTH Aachen Campus Phonebook
@@ -5564,6 +6892,14 @@ sci-hub 1:
 scry 1:
   url: https://scryfall.com/search?q={%query}
   title: 'Scryfall: Magic the Gathering cards'
+se 0:
+  include:
+  - key: se 0
+    namespace: pka
+se 1:
+  include:
+  - key: se 1
+    namespace: pka
 se 2:
   url: http://{%subpage}.stackexchange.com/search?q={%query}
   title: Stack Exchange
@@ -5595,6 +6931,14 @@ sf 1:
   title: Sourceforge
   tags:
   - old
+sg 0:
+  include:
+  - key: sg 0
+    namespace: pka
+sg 1:
+  include:
+  - key: sg 1
+    namespace: pka
 sgo 0:
   url: http://sources.gentoo.org/{$1}/{$2}
   title: Show Gentoo ebuild sources
@@ -5635,6 +6979,14 @@ shot 1:
   title: Screenshot from Url
   tags:
   - old
+si 0:
+  include:
+  - key: si 0
+    namespace: pka
+si 1:
+  include:
+  - key: si 1
+    namespace: pka
 sim 1:
   url: https://startpage.com/do/search?query={%query}&cat=pics
   title: Startpage.com images
@@ -5642,6 +6994,26 @@ sim 1:
   - web search
   examples:
     berlin: Search for images of "berlin"
+sk 0:
+  include:
+  - key: sk 0
+    namespace: dcm
+  - key: sk 0
+    namespace: dcc
+  - key: sk 0
+    namespace: lgs
+  - key: sk 0
+    namespace: pka
+sk 1:
+  include:
+  - key: sk 1
+    namespace: dcm
+  - key: sk 1
+    namespace: dcc
+  - key: sk 1
+    namespace: lgs
+  - key: sk 1
+    namespace: pka
 skapiec 0:
   url: http://www.skapiec.pl/szukaj/w_calym_serwisie/${query}
   title: Skapiec - Polish price comparison site
@@ -5655,6 +7027,26 @@ skyrock 1:
   - music
   examples:
     music: Search for "music"
+sl 0:
+  include:
+  - key: sl 0
+    namespace: dcm
+  - key: sl 0
+    namespace: lgs
+  - key: sl 0
+    namespace: pns
+  - key: sl 0
+    namespace: pka
+sl 1:
+  include:
+  - key: sl 1
+    namespace: dcm
+  - key: sl 1
+    namespace: lgs
+  - key: sl 1
+    namespace: pns
+  - key: sl 1
+    namespace: pka
 slashdot 0:
   url: http://slashdot.org/
   title: Slashdot
@@ -5677,11 +7069,27 @@ smw 1:
   title: SimilarWeb
   examples:
     findfind.it: Search SimilarWeb for "findfind.it"
+sn 0:
+  include:
+  - key: sn 0
+    namespace: pka
+sn 1:
+  include:
+  - key: sn 1
+    namespace: pka
 snipmp3 1:
   url: http://snipmp3.com/?url={%url}
   title: Snipmp3
   tags:
   - old
+so 0:
+  include:
+  - key: so 0
+    namespace: pka
+so 1:
+  include:
+  - key: so 1
+    namespace: pka
 soa 1:
   deprecated:
     alternative:
@@ -5774,11 +7182,35 @@ spo 1:
   title: Scholarpedia
   tags:
   - old
+sq 0:
+  include:
+  - key: sq 0
+    namespace: pka
+sq 1:
+  include:
+  - key: sq 1
+    namespace: pka
 sqp 1:
   url: http://www.seeqpod.com/music/?q={%query}
   title: Seeqpod
   tags:
   - old
+sr 0:
+  include:
+  - key: sr 0
+    namespace: dcm
+  - key: sr 0
+    namespace: lgs
+  - key: sr 0
+    namespace: pka
+sr 1:
+  include:
+  - key: sr 1
+    namespace: dcm
+  - key: sr 1
+    namespace: lgs
+  - key: sr 1
+    namespace: pka
 sreddit 1:
   url: https://www.reddit.com/r/{%forum}
   title: Reddit sub-reddit
@@ -5841,11 +7273,55 @@ suepo 0:
   tags:
   - patents
   - suepo
+sv 0:
+  include:
+  - key: sv 0
+    namespace: flx
+  - key: sv 0
+    namespace: dcm
+  - key: sv 0
+    namespace: bab
+  - key: sv 0
+    namespace: dcc
+  - key: sv 0
+    namespace: lgs
+  - key: sv 0
+    namespace: rvs
+  - key: sv 0
+    namespace: pka
+sv 1:
+  include:
+  - key: sv 1
+    namespace: flx
+  - key: sv 1
+    namespace: dcm
+  - key: sv 1
+    namespace: bab
+  - key: sv 1
+    namespace: dcc
+  - key: sv 1
+    namespace: lgs
+  - key: sv 1
+    namespace: rvs
+  - key: sv 1
+    namespace: pka
 svfr 1:
   deprecated:
     alternative:
       query: fr.sv {%1}
       created: '2023-04-10'
+sw 0:
+  include:
+  - key: sw 0
+    namespace: bab
+  - key: sw 0
+    namespace: pka
+sw 1:
+  include:
+  - key: sw 1
+    namespace: bab
+  - key: sw 1
+    namespace: pka
 swipl 0:
   url: http://www.swi-prolog.org/pldoc/index.html
   title: SWI-Prolog documentation
@@ -5876,6 +7352,14 @@ sxf 0:
   title: Berlin Airport (Schönefeld)
   tags:
   - airports
+ta 0:
+  include:
+  - key: ta 0
+    namespace: pka
+ta 1:
+  include:
+  - key: ta 1
+    namespace: pka
 tails 0:
   url: https://tails.boum.org/
   title: The amnesic incoginto live system, that aims to preserve your privacy and anonymity.
@@ -5969,6 +7453,18 @@ tds 1:
   - tv
   examples:
     germany: Search "The Daily Show" archives for "germany"
+te 0:
+  include:
+  - key: te 0
+    namespace: bab
+  - key: te 0
+    namespace: pka
+te 1:
+  include:
+  - key: te 1
+    namespace: bab
+  - key: te 1
+    namespace: pka
 techrightsfeed 0:
   url: http://techrights.org/feed/
   title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS feed)
@@ -6006,6 +7502,22 @@ tg 1:
   title: Tagoo Music Search
   tags:
   - old
+th 0:
+  include:
+  - key: th 0
+    namespace: dcm
+  - key: th 0
+    namespace: bab
+  - key: th 0
+    namespace: pka
+th 1:
+  include:
+  - key: th 1
+    namespace: dcm
+  - key: th 1
+    namespace: bab
+  - key: th 1
+    namespace: pka
 thomann 1:
   url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw={%query}&x=&y=
   title: Thomann Suche
@@ -6016,6 +7528,14 @@ thsr 1:
   title: Roget's Thesaurus
   tags:
   - old
+ti 0:
+  include:
+  - key: ti 0
+    namespace: pka
+ti 1:
+  include:
+  - key: ti 1
+    namespace: pka
 tik 0:
   url: https://www.tiktok.com/
   title: TikTok, Homepage
@@ -6104,6 +7624,14 @@ titulky 1:
   - titulky
   examples:
     loose change: Find subtitles for "loose change"
+tl 0:
+  include:
+  - key: tl 0
+    namespace: pka
+tl 1:
+  include:
+  - key: tl 1
+    namespace: pka
 tldp 1:
   url: http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q={%query}
   title: The Linux Documentation Project
@@ -6117,6 +7645,14 @@ tmdb 1:
   - movies
   examples:
     forrest gump: Search for "forrest gump"
+to 0:
+  include:
+  - key: to 0
+    namespace: pka
+to 1:
+  include:
+  - key: to 1
+    namespace: pka
 topo 1:
   url: http://torrentportal.com/torrents-search.php?search={%query}
   title: Torrent Portal
@@ -6148,6 +7684,46 @@ tpbv 1:
   - torrent
   examples:
     mozart: Search for "mozart"
+tr 0:
+  include:
+  - key: tr 0
+    namespace: ard
+  - key: tr 0
+    namespace: dtn
+  - key: tr 0
+    namespace: zrg
+  - key: tr 0
+    namespace: dcm
+  - key: tr 0
+    namespace: bab
+  - key: tr 0
+    namespace: dcc
+  - key: tr 0
+    namespace: lgs
+  - key: tr 0
+    namespace: rvs
+  - key: tr 0
+    namespace: pka
+tr 1:
+  include:
+  - key: tr 1
+    namespace: ard
+  - key: tr 1
+    namespace: dtn
+  - key: tr 1
+    namespace: zrg
+  - key: tr 1
+    namespace: dcm
+  - key: tr 1
+    namespace: bab
+  - key: tr 1
+    namespace: dcc
+  - key: tr 1
+    namespace: lgs
+  - key: tr 1
+    namespace: rvs
+  - key: tr 1
+    namespace: pka
 trends 1:
   url: http://www.google.com/trends?q={%query}
   title: Google Trends
@@ -6478,6 +8054,14 @@ uesp 1:
   title: Unofficial Elder Scrolls Pages
   tags:
   - old
+ug 0:
+  include:
+  - key: ug 0
+    namespace: pka
+ug 1:
+  include:
+  - key: ug 1
+    namespace: pka
 ugb 1:
   url: http://www.ultimate-guitar.com/search.php?s={%band}&w=bands
   title: 'Ultimate Guitar: Bands'
@@ -6504,6 +8088,22 @@ uima 1:
   title: UIMA API
   tags:
   - old
+uk 0:
+  include:
+  - key: uk 0
+    namespace: dcm
+  - key: uk 0
+    namespace: rvs
+  - key: uk 0
+    namespace: pka
+uk 1:
+  include:
+  - key: uk 1
+    namespace: dcm
+  - key: uk 1
+    namespace: rvs
+  - key: uk 1
+    namespace: pka
 uniprot 1:
   url: http://www.uniprot.org/uniprot/?query={%query}&sort=score
   title: Uniprot
@@ -6522,6 +8122,18 @@ ups 1:
   - ups
   examples:
     1Z9999999999999999: track shipment with the number 1Z9999999999999999
+ur 0:
+  include:
+  - key: ur 0
+    namespace: bab
+  - key: ur 0
+    namespace: pka
+ur 1:
+  include:
+  - key: ur 1
+    namespace: bab
+  - key: ur 1
+    namespace: pka
 us 1:
   url: http://userscripts.org/scripts/search?q={%query}
   title: Userscripts
@@ -6564,6 +8176,14 @@ uxse 1:
   - unix
   examples:
     debian: Questions about debian
+uz 0:
+  include:
+  - key: uz 0
+    namespace: pka
+uz 1:
+  include:
+  - key: uz 1
+    namespace: pka
 v 1:
   url: http://vimeo.com/search?q={%query}
   title: Vimeo
@@ -6582,6 +8202,22 @@ vbn 2:
 vcpkg 1:
   url: https://vcpkg.io/en/packages.html?query={%query}
   title: vcpkg package search
+vi 0:
+  include:
+  - key: vi 0
+    namespace: dcm
+  - key: vi 0
+    namespace: bab
+  - key: vi 0
+    namespace: pka
+vi 1:
+  include:
+  - key: vi 1
+    namespace: dcm
+  - key: vi 1
+    namespace: bab
+  - key: vi 1
+    namespace: pka
 viaf 1:
   url: http://viaf.org/viaf/search?query=local.names+all+{%name}&stylesheet=/viaf/xsl/results.xsl&sortKeys=holdingscount&maximumRecords=100
   title: Virtual International Authority File
@@ -7379,6 +9015,14 @@ yg 1:
 ygi 1:
   url: https://www.yeggi.com/q/{%argument_name}/
   title: Yeggi
+yi 0:
+  include:
+  - key: yi 0
+    namespace: pka
+yi 1:
+  include:
+  - key: yi 1
+    namespace: pka
 yim 1:
   url: https://images.search.yahoo.com/search/images?p={%query}
   title: Yahoo Images
@@ -7416,6 +9060,14 @@ yn 1:
   - yahoo
   examples:
     berlin: Search for "berlin"
+yo 0:
+  include:
+  - key: yo 0
+    namespace: pka
+yo 1:
+  include:
+  - key: yo 1
+    namespace: pka
 ypr 0:
   url: http://youpronounce.it/
   title: YouPronounce.it
@@ -7547,6 +9199,38 @@ zeitdiff 0:
   - date
   - difference
   - time
+zh 0:
+  include:
+  - key: zh 0
+    namespace: mdb
+  - key: zh 0
+    namespace: dcm
+  - key: zh 0
+    namespace: bab
+  - key: zh 0
+    namespace: leo
+  - key: zh 0
+    namespace: lgs
+  - key: zh 0
+    namespace: rvs
+  - key: zh 0
+    namespace: pka
+zh 1:
+  include:
+  - key: zh 1
+    namespace: mdb
+  - key: zh 1
+    namespace: dcm
+  - key: zh 1
+    namespace: bab
+  - key: zh 1
+    namespace: leo
+  - key: zh 1
+    namespace: lgs
+  - key: zh 1
+    namespace: rvs
+  - key: zh 1
+    namespace: pka
 zhen 1:
   deprecated:
     alternative:
@@ -7576,6 +9260,18 @@ zt 0:
   title: Znout Search
   tags:
   - old
+zu 0:
+  include:
+  - key: zu 0
+    namespace: bab
+  - key: zu 0
+    namespace: pka
+zu 1:
+  include:
+  - key: zu 1
+    namespace: bab
+  - key: zu 1
+    namespace: pka
 zvv 2:
   url: http://www.zvv.ch/de/fahrplan/online-fahrplan.html?start=1&date_start={%Start}&target={%Ziel}
   title: ZVV-Auskunft
