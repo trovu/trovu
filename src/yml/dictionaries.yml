@@ -2156,6 +2156,13 @@ flx:
       sv:
         - https://folkets-lexikon.csc.kth.se/
         - https://folkets-lexikon.csc.kth.se/folkets/#lookup&{%word}
+hzn:
+  name: Heinzelnisse
+  pairs:
+    de:
+      no:
+        - https://www.heinzelnisse.info/
+        - https://www.heinzelnisse.info/no/dict?searchItem={%word}
 leo:
   name: leo.org
   pairs:
@@ -2325,10 +2332,10 @@ mdb:
 pka:
   name: Pauker.at
   pairs:
-    af:
-      de:
-        - https://www.pauker.at/pauker/DE_DE/af/wb
-        - https://www.pauker.at/pauker/DE_DE/af/wb?suche={%word}
+    # af:
+    #   de:
+    #     - https://www.pauker.at/pauker/DE_DE/af/wb
+    #     - https://www.pauker.at/pauker/DE_DE/af/wb?suche={%word}
     am:
       de:
         - https://www.pauker.at/pauker/DE_DE/am/wb
@@ -2430,9 +2437,9 @@ pka:
       gu:
         - https://www.pauker.at/pauker/DE_DE/gu/wb
         - https://www.pauker.at/pauker/DE_DE/gu/wb?suche={%word}
-      gv:
-        - https://www.pauker.at/pauker/DE_DE/gv/wb
-        - https://www.pauker.at/pauker/DE_DE/gv/wb?suche={%word}
+      # gv:
+      #   - https://www.pauker.at/pauker/DE_DE/gv/wb
+      #   - https://www.pauker.at/pauker/DE_DE/gv/wb?suche={%word}
       ha:
         - https://www.pauker.at/pauker/DE_DE/ha/wb
         - https://www.pauker.at/pauker/DE_DE/ha/wb?suche={%word}
