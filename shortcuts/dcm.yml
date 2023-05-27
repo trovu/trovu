@@ -118,6 +118,25 @@ ar-el 1:
   examples:
     شجرة: Μετάφραση στα Ελληνικά για το "شجرة"
     δέντρο: Μετάφραση στα Αραβικά για το "δέντρο"
+ar-en 0:
+  url: https://www.dict.com/arabic-english/
+  title: Arabic-English (dict.com)
+  tags:
+  - arabic
+  - dictionary
+  - english
+  - language
+ar-en 1:
+  url: https://www.dict.com/arabic-english/{%word}
+  title: Arabic-English (dict.com)
+  tags:
+  - arabic
+  - dictionary
+  - english
+  - language
+  examples:
+    شجرة: English translation of "شجرة"
+    tree: Arabic translation of "tree"
 ar-es 0:
   url: https://www.dict.com/arabic-spanish/
   title: Árabe-Español (dict.com)
@@ -762,6 +781,25 @@ bg-el 1:
   examples:
     дърво: Μετάφραση στα Ελληνικά για το "дърво"
     δέντρο: Μετάφραση στα Βουλγαρικά για το "δέντρο"
+bg-en 0:
+  url: https://www.dict.com/bulgarian-english/
+  title: Bulgarian-English (dict.com)
+  tags:
+  - bulgarian
+  - dictionary
+  - english
+  - language
+bg-en 1:
+  url: https://www.dict.com/bulgarian-english/{%word}
+  title: Bulgarian-English (dict.com)
+  tags:
+  - bulgarian
+  - dictionary
+  - english
+  - language
+  examples:
+    дърво: English translation of "дърво"
+    tree: Bulgarian translation of "tree"
 bg-es 0:
   url: https://www.dict.com/bulgarian-spanish/
   title: Búlgaro-Español (dict.com)
@@ -1398,6 +1436,25 @@ ca-el 1:
   examples:
     arbre: Μετάφραση στα Ελληνικά για το "arbre"
     δέντρο: Μετάφραση στα Καταλανικά για το "δέντρο"
+ca-en 0:
+  url: https://www.dict.com/catalan-english/
+  title: Catalan-English (dict.com)
+  tags:
+  - catalan
+  - dictionary
+  - english
+  - language
+ca-en 1:
+  url: https://www.dict.com/catalan-english/{%word}
+  title: Catalan-English (dict.com)
+  tags:
+  - catalan
+  - dictionary
+  - english
+  - language
+  examples:
+    arbre: English translation of "arbre"
+    tree: Catalan translation of "tree"
 ca-es 0:
   url: https://www.dict.com/catalan-spanish/
   title: Catalán-Español (dict.com)
@@ -2025,6 +2082,25 @@ cs-el 1:
   examples:
     strom: Μετάφραση στα Ελληνικά για το "strom"
     δέντρο: Μετάφραση στα Τσεχικά για το "δέντρο"
+cs-en 0:
+  url: https://www.dict.com/czech-english/
+  title: Czech-English (dict.com)
+  tags:
+  - czech
+  - dictionary
+  - english
+  - language
+cs-en 1:
+  url: https://www.dict.com/czech-english/{%word}
+  title: Czech-English (dict.com)
+  tags:
+  - czech
+  - dictionary
+  - english
+  - language
+  examples:
+    strom: English translation of "strom"
+    tree: Czech translation of "tree"
 cs-es 0:
   url: https://www.dict.com/czech-spanish/
   title: Checo-Español (dict.com)
@@ -2121,13 +2197,21 @@ cs-he 1:
     strom: עברית תרגום של "strom"
     עץ: צ׳כית תרגום של "עץ"
 cs-hr 0:
+  url: https://www.dict.com/czech-croatian/
   title: Češki-Hrvatski (dict.com)
-  include:
-    key: hr-cs 0
+  tags:
+  - croatian
+  - czech
+  - dictionary
+  - language
 cs-hr 1:
+  url: https://www.dict.com/czech-croatian/{%word}
   title: Češki-Hrvatski (dict.com)
-  include:
-    key: hr-cs 1
+  tags:
+  - croatian
+  - czech
+  - dictionary
+  - language
   examples:
     strom: hrvatski prijevod od "strom"
     stablo: češki prijevod od "stablo"
@@ -2531,13 +2615,21 @@ cs-vi 1:
     strom: Bản dịch Tiếng Việt của "strom"
     cây: Bản dịch Tiếng Séc của "cây"
 cs-zh 0:
+  url: https://www.dict.com/czech-chinese/
   title: 捷克文-中文 (dict.com)
-  include:
-    key: zh-cs 0
+  tags:
+  - chinese
+  - czech
+  - dictionary
+  - language
 cs-zh 1:
+  url: https://www.dict.com/czech-chinese/{%word}
   title: 捷克文-中文 (dict.com)
-  include:
-    key: zh-cs 1
+  tags:
+  - chinese
+  - czech
+  - dictionary
+  - language
   examples:
     strom: 中文 的"strom"翻译
     树: 捷克文 的"树"翻译
@@ -2629,6 +2721,25 @@ da-el 1:
   examples:
     træ: Μετάφραση στα Ελληνικά για το "træ"
     δέντρο: Μετάφραση στα Δανικά για το "δέντρο"
+da-en 0:
+  url: https://www.dict.com/danish-english/
+  title: Danish-English (dict.com)
+  tags:
+  - danish
+  - dictionary
+  - english
+  - language
+da-en 1:
+  url: https://www.dict.com/danish-english/{%word}
+  title: Danish-English (dict.com)
+  tags:
+  - danish
+  - dictionary
+  - english
+  - language
+  examples:
+    træ: English translation of "træ"
+    tree: Danish translation of "tree"
 da-es 0:
   url: https://www.dict.com/danish-spanish/
   title: Danés-Español (dict.com)
@@ -2725,13 +2836,21 @@ da-he 1:
     træ: עברית תרגום של "træ"
     עץ: דנית תרגום של "עץ"
 da-hr 0:
+  url: https://www.dict.com/danish-croatian/
   title: Danski-Hrvatski (dict.com)
-  include:
-    key: hr-da 0
+  tags:
+  - croatian
+  - danish
+  - dictionary
+  - language
 da-hr 1:
+  url: https://www.dict.com/danish-croatian/{%word}
   title: Danski-Hrvatski (dict.com)
-  include:
-    key: hr-da 1
+  tags:
+  - croatian
+  - danish
+  - dictionary
+  - language
   examples:
     træ: hrvatski prijevod od "træ"
     stablo: danski prijevod od "stablo"
@@ -3135,13 +3254,21 @@ da-vi 1:
     træ: Bản dịch Tiếng Việt của "træ"
     cây: Bản dịch Tiếng Đan Mạch của "cây"
 da-zh 0:
+  url: https://www.dict.com/danish-chinese/
   title: 丹麦文-中文 (dict.com)
-  include:
-    key: zh-da 0
+  tags:
+  - chinese
+  - danish
+  - dictionary
+  - language
 da-zh 1:
+  url: https://www.dict.com/danish-chinese/{%word}
   title: 丹麦文-中文 (dict.com)
-  include:
-    key: zh-da 1
+  tags:
+  - chinese
+  - danish
+  - dictionary
+  - language
   examples:
     træ: 中文 的"træ"翻译
     树: 丹麦文 的"树"翻译
@@ -3225,6 +3352,25 @@ de-el 1:
   examples:
     baum: Μετάφραση στα Ελληνικά για το "baum"
     δέντρο: Μετάφραση στα Γερμανικά για το "δέντρο"
+de-en 0:
+  url: https://www.dict.com/german-english/
+  title: German-English (dict.com)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+de-en 1:
+  url: https://www.dict.com/german-english/{%word}
+  title: German-English (dict.com)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+    baum: English translation of "baum"
+    tree: German translation of "tree"
 de-es 0:
   url: https://www.dict.com/german-spanish/
   title: Alemán-Español (dict.com)
@@ -3245,35 +3391,59 @@ de-es 1:
     baum: Traducción al español de "baum"
     árbol: Traducción al alemán de "árbol"
 de-et 0:
+  url: https://www.dict.com/german-estonian/
   title: Saksa-Eesti (dict.com)
-  include:
-    key: et-de 0
+  tags:
+  - dictionary
+  - estonian
+  - german
+  - language
 de-et 1:
+  url: https://www.dict.com/german-estonian/{%word}
   title: Saksa-Eesti (dict.com)
-  include:
-    key: et-de 1
+  tags:
+  - dictionary
+  - estonian
+  - german
+  - language
   examples:
     baum: eesti tõlge "baum"
     puu: saksa tõlge "puu"
 de-fi 0:
+  url: https://www.dict.com/german-finnish/
   title: Saksa-Suomi (dict.com)
-  include:
-    key: fi-de 0
+  tags:
+  - dictionary
+  - finnish
+  - german
+  - language
 de-fi 1:
+  url: https://www.dict.com/german-finnish/{%word}
   title: Saksa-Suomi (dict.com)
-  include:
-    key: fi-de 1
+  tags:
+  - dictionary
+  - finnish
+  - german
+  - language
   examples:
     baum: suomi-käännös sanalle "baum"
     puu: saksa-käännös sanalle "puu"
 de-fr 0:
+  url: https://www.dict.com/german-french/
   title: Allemand-Français (dict.com)
-  include:
-    key: fr-de 0
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
 de-fr 1:
+  url: https://www.dict.com/german-french/{%word}
   title: Allemand-Français (dict.com)
-  include:
-    key: fr-de 1
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
   examples:
     baum: Traduction en français de "baum"
     arbre: Traduction en allemand de "arbre"
@@ -3297,13 +3467,21 @@ de-he 1:
     baum: עברית תרגום של "baum"
     עץ: גרמנית תרגום של "עץ"
 de-hr 0:
+  url: https://www.dict.com/german-croatian/
   title: Njemački-Hrvatski (dict.com)
-  include:
-    key: hr-de 0
+  tags:
+  - croatian
+  - dictionary
+  - german
+  - language
 de-hr 1:
+  url: https://www.dict.com/german-croatian/{%word}
   title: Njemački-Hrvatski (dict.com)
-  include:
-    key: hr-de 1
+  tags:
+  - croatian
+  - dictionary
+  - german
+  - language
   examples:
     baum: hrvatski prijevod od "baum"
     stablo: njemački prijevod od "stablo"
@@ -3441,13 +3619,21 @@ de-lv 1:
     baum: latviešu tulkojums vārdam "baum"
     koks: vācu tulkojums vārdam "koks"
 de-nl 0:
+  url: https://www.dict.com/german-dutch/
   title: Duits-Nederlands (dict.com)
-  include:
-    key: nl-de 0
+  tags:
+  - dictionary
+  - dutch
+  - german
+  - language
 de-nl 1:
+  url: https://www.dict.com/german-dutch/{%word}
   title: Duits-Nederlands (dict.com)
-  include:
-    key: nl-de 1
+  tags:
+  - dictionary
+  - dutch
+  - german
+  - language
   examples:
     baum: Nederlands-vertaling van "baum"
     boom: Duits-vertaling van "boom"
@@ -3699,13 +3885,21 @@ de-vi 1:
     baum: Bản dịch Tiếng Việt của "baum"
     cây: Bản dịch Tiếng Đức của "cây"
 de-zh 0:
+  url: https://www.dict.com/german-chinese/
   title: 德文-中文 (dict.com)
-  include:
-    key: zh-de 0
+  tags:
+  - chinese
+  - dictionary
+  - german
+  - language
 de-zh 1:
+  url: https://www.dict.com/german-chinese/{%word}
   title: 德文-中文 (dict.com)
-  include:
-    key: zh-de 1
+  tags:
+  - chinese
+  - dictionary
+  - german
+  - language
   examples:
     baum: 中文 的"baum"翻译
     树: 德文 的"树"翻译
@@ -3781,6 +3975,25 @@ el-de 1:
   examples:
     δέντρο: Deutsch-Übersetzung von "δέντρο"
     baum: Griechisch-Übersetzung von "baum"
+el-en 0:
+  url: https://www.dict.com/greek-english/
+  title: Greek-English (dict.com)
+  tags:
+  - dictionary
+  - english
+  - greek
+  - language
+el-en 1:
+  url: https://www.dict.com/greek-english/{%word}
+  title: Greek-English (dict.com)
+  tags:
+  - dictionary
+  - english
+  - greek
+  - language
+  examples:
+    δέντρο: English translation of "δέντρο"
+    tree: Greek translation of "tree"
 el-es 0:
   url: https://www.dict.com/greek-spanish/
   title: Griego-Español (dict.com)
@@ -3801,35 +4014,59 @@ el-es 1:
     δέντρο: Traducción al español de "δέντρο"
     árbol: Traducción al griego de "árbol"
 el-et 0:
+  url: https://www.dict.com/greek-estonian/
   title: Kreeka-Eesti (dict.com)
-  include:
-    key: et-el 0
+  tags:
+  - dictionary
+  - estonian
+  - greek
+  - language
 el-et 1:
+  url: https://www.dict.com/greek-estonian/{%word}
   title: Kreeka-Eesti (dict.com)
-  include:
-    key: et-el 1
+  tags:
+  - dictionary
+  - estonian
+  - greek
+  - language
   examples:
     δέντρο: eesti tõlge "δέντρο"
     puu: kreeka tõlge "puu"
 el-fi 0:
+  url: https://www.dict.com/greek-finnish/
   title: Kreikka-Suomi (dict.com)
-  include:
-    key: fi-el 0
+  tags:
+  - dictionary
+  - finnish
+  - greek
+  - language
 el-fi 1:
+  url: https://www.dict.com/greek-finnish/{%word}
   title: Kreikka-Suomi (dict.com)
-  include:
-    key: fi-el 1
+  tags:
+  - dictionary
+  - finnish
+  - greek
+  - language
   examples:
     δέντρο: suomi-käännös sanalle "δέντρο"
     puu: kreikka-käännös sanalle "puu"
 el-fr 0:
+  url: https://www.dict.com/greek-french/
   title: Grec-Français (dict.com)
-  include:
-    key: fr-el 0
+  tags:
+  - dictionary
+  - french
+  - greek
+  - language
 el-fr 1:
+  url: https://www.dict.com/greek-french/{%word}
   title: Grec-Français (dict.com)
-  include:
-    key: fr-el 1
+  tags:
+  - dictionary
+  - french
+  - greek
+  - language
   examples:
     δέντρο: Traduction en français de "δέντρο"
     arbre: Traduction en grec de "arbre"
@@ -3853,13 +4090,21 @@ el-he 1:
     δέντρο: עברית תרגום של "δέντρο"
     עץ: יוונית תרגום של "עץ"
 el-hr 0:
+  url: https://www.dict.com/greek-croatian/
   title: Grčki-Hrvatski (dict.com)
-  include:
-    key: hr-el 0
+  tags:
+  - croatian
+  - dictionary
+  - greek
+  - language
 el-hr 1:
+  url: https://www.dict.com/greek-croatian/{%word}
   title: Grčki-Hrvatski (dict.com)
-  include:
-    key: hr-el 1
+  tags:
+  - croatian
+  - dictionary
+  - greek
+  - language
   examples:
     δέντρο: hrvatski prijevod od "δέντρο"
     stablo: grčki prijevod od "stablo"
@@ -3997,13 +4242,21 @@ el-lv 1:
     δέντρο: latviešu tulkojums vārdam "δέντρο"
     koks: grieķu tulkojums vārdam "koks"
 el-nl 0:
+  url: https://www.dict.com/greek-dutch/
   title: Grieks-Nederlands (dict.com)
-  include:
-    key: nl-el 0
+  tags:
+  - dictionary
+  - dutch
+  - greek
+  - language
 el-nl 1:
+  url: https://www.dict.com/greek-dutch/{%word}
   title: Grieks-Nederlands (dict.com)
-  include:
-    key: nl-el 1
+  tags:
+  - dictionary
+  - dutch
+  - greek
+  - language
   examples:
     δέντρο: Nederlands-vertaling van "δέντρο"
     boom: Grieks-vertaling van "boom"
@@ -4255,16 +4508,639 @@ el-vi 1:
     δέντρο: Bản dịch Tiếng Việt của "δέντρο"
     cây: Bản dịch Tiếng Hy Lạp của "cây"
 el-zh 0:
+  url: https://www.dict.com/greek-chinese/
   title: 希腊文-中文 (dict.com)
-  include:
-    key: zh-el 0
+  tags:
+  - chinese
+  - dictionary
+  - greek
+  - language
 el-zh 1:
+  url: https://www.dict.com/greek-chinese/{%word}
   title: 希腊文-中文 (dict.com)
-  include:
-    key: zh-el 1
+  tags:
+  - chinese
+  - dictionary
+  - greek
+  - language
   examples:
     δέντρο: 中文 的"δέντρο"翻译
     树: 希腊文 的"树"翻译
+en 0:
+  include:
+    key: en-{$language} 0
+en 1:
+  include:
+    key: en-{$language} 1
+en-ar 0:
+  title: الإنجليزية-العربية (dict.com)
+  include:
+    key: ar-en 0
+en-ar 1:
+  title: الإنجليزية-العربية (dict.com)
+  include:
+    key: ar-en 1
+  examples:
+    tree: ترجمة العربية من "tree"
+    شجرة: ترجمة الإنجليزية من "شجرة"
+en-bg 0:
+  title: Английски-Български (dict.com)
+  include:
+    key: bg-en 0
+en-bg 1:
+  title: Английски-Български (dict.com)
+  include:
+    key: bg-en 1
+  examples:
+    tree: български превод за "tree"
+    дърво: английски превод за "дърво"
+en-ca 0:
+  title: Anglès-Català (dict.com)
+  include:
+    key: ca-en 0
+en-ca 1:
+  title: Anglès-Català (dict.com)
+  include:
+    key: ca-en 1
+  examples:
+    tree: Traducció al català de "tree"
+    arbre: Traducció al anglès de "arbre"
+en-cs 0:
+  title: Angličtina-Čeština (dict.com)
+  include:
+    key: cs-en 0
+en-cs 1:
+  title: Angličtina-Čeština (dict.com)
+  include:
+    key: cs-en 1
+  examples:
+    tree: čeština překlad pro "tree"
+    strom: angličtina překlad pro "strom"
+en-da 0:
+  title: Engelsk-Dansk (dict.com)
+  include:
+    key: da-en 0
+en-da 1:
+  title: Engelsk-Dansk (dict.com)
+  include:
+    key: da-en 1
+  examples:
+    tree: dansk oversættelse af "tree"
+    træ: engelsk oversættelse af "træ"
+en-de 0:
+  title: Englisch-Deutsch (dict.com)
+  include:
+    key: de-en 0
+en-de 1:
+  title: Englisch-Deutsch (dict.com)
+  include:
+    key: de-en 1
+  examples:
+    tree: Deutsch-Übersetzung von "tree"
+    baum: Englisch-Übersetzung von "baum"
+en-el 0:
+  title: Αγγλικά-Ελληνικά (dict.com)
+  include:
+    key: el-en 0
+en-el 1:
+  title: Αγγλικά-Ελληνικά (dict.com)
+  include:
+    key: el-en 1
+  examples:
+    tree: Μετάφραση στα Ελληνικά για το "tree"
+    δέντρο: Μετάφραση στα Αγγλικά για το "δέντρο"
+en-es 0:
+  url: https://www.dict.com/english-spanish/
+  title: Inglés-Español (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+en-es 1:
+  url: https://www.dict.com/english-spanish/{%word}
+  title: Inglés-Español (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+  examples:
+    tree: Traducción al español de "tree"
+    árbol: Traducción al inglés de "árbol"
+en-et 0:
+  url: https://www.dict.com/english-estonian/
+  title: Inglise-Eesti (dict.com)
+  tags:
+  - dictionary
+  - english
+  - estonian
+  - language
+en-et 1:
+  url: https://www.dict.com/english-estonian/{%word}
+  title: Inglise-Eesti (dict.com)
+  tags:
+  - dictionary
+  - english
+  - estonian
+  - language
+  examples:
+    tree: eesti tõlge "tree"
+    puu: inglise tõlge "puu"
+en-fi 0:
+  url: https://www.dict.com/english-finnish/
+  title: Englanti-Suomi (dict.com)
+  tags:
+  - dictionary
+  - english
+  - finnish
+  - language
+en-fi 1:
+  url: https://www.dict.com/english-finnish/{%word}
+  title: Englanti-Suomi (dict.com)
+  tags:
+  - dictionary
+  - english
+  - finnish
+  - language
+  examples:
+    tree: suomi-käännös sanalle "tree"
+    puu: englanti-käännös sanalle "puu"
+en-fr 0:
+  url: https://www.dict.com/english-french/
+  title: Anglais-Français (dict.com)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+en-fr 1:
+  url: https://www.dict.com/english-french/{%word}
+  title: Anglais-Français (dict.com)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+  examples:
+    tree: Traduction en français de "tree"
+    arbre: Traduction en anglais de "arbre"
+en-he 0:
+  url: https://www.dict.com/english-hebrew/
+  title: אנגלית-עברית (dict.com)
+  tags:
+  - dictionary
+  - english
+  - hebrew
+  - language
+en-he 1:
+  url: https://www.dict.com/english-hebrew/{%word}
+  title: אנגלית-עברית (dict.com)
+  tags:
+  - dictionary
+  - english
+  - hebrew
+  - language
+  examples:
+    tree: עברית תרגום של "tree"
+    עץ: אנגלית תרגום של "עץ"
+en-hr 0:
+  url: https://www.dict.com/english-croatian/
+  title: Engleski-Hrvatski (dict.com)
+  tags:
+  - croatian
+  - dictionary
+  - english
+  - language
+en-hr 1:
+  url: https://www.dict.com/english-croatian/{%word}
+  title: Engleski-Hrvatski (dict.com)
+  tags:
+  - croatian
+  - dictionary
+  - english
+  - language
+  examples:
+    tree: hrvatski prijevod od "tree"
+    stablo: engleski prijevod od "stablo"
+en-hu 0:
+  url: https://www.dict.com/english-hungarian/
+  title: Angol-Magyar (dict.com)
+  tags:
+  - dictionary
+  - english
+  - hungarian
+  - language
+en-hu 1:
+  url: https://www.dict.com/english-hungarian/{%word}
+  title: Angol-Magyar (dict.com)
+  tags:
+  - dictionary
+  - english
+  - hungarian
+  - language
+  examples:
+    tree: magyar fordítás a(z) "tree" számára
+    fa: angol fordítás a(z) "fa" számára
+en-id 0:
+  url: https://www.dict.com/english-indonesian/
+  title: Inggris-Bahasa Indonesia (dict.com)
+  tags:
+  - dictionary
+  - english
+  - indonesian
+  - language
+en-id 1:
+  url: https://www.dict.com/english-indonesian/{%word}
+  title: Inggris-Bahasa Indonesia (dict.com)
+  tags:
+  - dictionary
+  - english
+  - indonesian
+  - language
+  examples:
+    tree: terjemahan Bahasa Indonesia dari "tree"
+    pohon: terjemahan Inggris dari "pohon"
+en-it 0:
+  url: https://www.dict.com/english-italian/
+  title: Inglese-Italiano (dict.com)
+  tags:
+  - dictionary
+  - english
+  - italian
+  - language
+en-it 1:
+  url: https://www.dict.com/english-italian/{%word}
+  title: Inglese-Italiano (dict.com)
+  tags:
+  - dictionary
+  - english
+  - italian
+  - language
+  examples:
+    tree: Traduzione in italiano di "tree"
+    albero: Traduzione in inglese di "albero"
+en-ja 0:
+  url: https://www.dict.com/english-japanese/
+  title: 英語-日本語 (dict.com)
+  tags:
+  - dictionary
+  - english
+  - japanese
+  - language
+en-ja 1:
+  url: https://www.dict.com/english-japanese/{%word}
+  title: 英語-日本語 (dict.com)
+  tags:
+  - dictionary
+  - english
+  - japanese
+  - language
+  examples:
+    tree: '"tree"の日本語翻訳'
+    木: '"木"の英語翻訳'
+en-ko 0:
+  url: https://www.dict.com/english-korean/
+  title: 영어-한국어 (dict.com)
+  tags:
+  - dictionary
+  - english
+  - korean
+  - language
+en-ko 1:
+  url: https://www.dict.com/english-korean/{%word}
+  title: 영어-한국어 (dict.com)
+  tags:
+  - dictionary
+  - english
+  - korean
+  - language
+  examples:
+    tree: '"tree"의 한국어 번역'
+    나무: '"나무"의 영어 번역'
+en-lt 0:
+  url: https://www.dict.com/english-lithuanian/
+  title: Anglų-Lietuvių (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - lithuanian
+en-lt 1:
+  url: https://www.dict.com/english-lithuanian/{%word}
+  title: Anglų-Lietuvių (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - lithuanian
+  examples:
+    tree: lietuvių vertimas žodžiui "tree"
+    medis: anglų vertimas žodžiui "medis"
+en-lv 0:
+  url: https://www.dict.com/english-latvian/
+  title: Angļu-Latviešu (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - latvian
+en-lv 1:
+  url: https://www.dict.com/english-latvian/{%word}
+  title: Angļu-Latviešu (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - latvian
+  examples:
+    tree: latviešu tulkojums vārdam "tree"
+    koks: angļu tulkojums vārdam "koks"
+en-nl 0:
+  url: https://www.dict.com/english-dutch/
+  title: Engels-Nederlands (dict.com)
+  tags:
+  - dictionary
+  - dutch
+  - english
+  - language
+en-nl 1:
+  url: https://www.dict.com/english-dutch/{%word}
+  title: Engels-Nederlands (dict.com)
+  tags:
+  - dictionary
+  - dutch
+  - english
+  - language
+  examples:
+    tree: Nederlands-vertaling van "tree"
+    boom: Engels-vertaling van "boom"
+en-no 0:
+  url: https://www.dict.com/english-norwegian/
+  title: Engelsk-Norsk (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - norwegian
+en-no 1:
+  url: https://www.dict.com/english-norwegian/{%word}
+  title: Engelsk-Norsk (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - norwegian
+  examples:
+    tree: norsk-oversettelse av "tree"
+    tre: engelsk-oversettelse av "tre"
+en-pl 0:
+  url: https://www.dict.com/english-polish/
+  title: Angielski-Polski (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - polish
+en-pl 1:
+  url: https://www.dict.com/english-polish/{%word}
+  title: Angielski-Polski (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - polish
+  examples:
+    tree: Tłumaczenie na język polski dla "tree"
+    drzewo: Tłumaczenie na język angielski dla "drzewo"
+en-pt 0:
+  url: https://www.dict.com/english-portuguese/
+  title: Inglês-Português (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - portuguese
+en-pt 1:
+  url: https://www.dict.com/english-portuguese/{%word}
+  title: Inglês-Português (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - portuguese
+  examples:
+    tree: Tradução em português de "tree"
+    árvore: Tradução em inglês de "árvore"
+en-ro 0:
+  url: https://www.dict.com/english-romanian/
+  title: Engleză-Română (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - romanian
+en-ro 1:
+  url: https://www.dict.com/english-romanian/{%word}
+  title: Engleză-Română (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - romanian
+  examples:
+    tree: Traducere în română pentru "tree"
+    copac: Traducere în engleză pentru "copac"
+en-ru 0:
+  url: https://www.dict.com/english-russian/
+  title: Английский-Русский (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - russian
+en-ru 1:
+  url: https://www.dict.com/english-russian/{%word}
+  title: Английский-Русский (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - russian
+  examples:
+    tree: Перевод на русский язык для "tree"
+    дерево: Перевод на английский язык для "дерево"
+en-sk 0:
+  url: https://www.dict.com/english-slovak/
+  title: Angličtina-Slovenčina (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - slovak
+en-sk 1:
+  url: https://www.dict.com/english-slovak/{%word}
+  title: Angličtina-Slovenčina (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - slovak
+  examples:
+    tree: slovenčina preklad pre "tree"
+    stromček: angličtina preklad pre "stromček"
+en-sl 0:
+  url: https://www.dict.com/english-slovenian/
+  title: Angleščina-Slovenščina (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - slovenian
+en-sl 1:
+  url: https://www.dict.com/english-slovenian/{%word}
+  title: Angleščina-Slovenščina (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - slovenian
+  examples:
+    tree: Prevod v slovenščina za besedo "tree"
+    drevo: Prevod v angleščina za besedo "drevo"
+en-sr 0:
+  url: https://www.dict.com/english-serbian/
+  title: Енглески-Српски (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - serbian
+en-sr 1:
+  url: https://www.dict.com/english-serbian/{%word}
+  title: Енглески-Српски (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - serbian
+  examples:
+    tree: Превод на српски за "tree"
+    дрво: Превод на енглески за "дрво"
+en-sv 0:
+  url: https://www.dict.com/english-swedish/
+  title: Engelska-Svenska (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - swedish
+en-sv 1:
+  url: https://www.dict.com/english-swedish/{%word}
+  title: Engelska-Svenska (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - swedish
+  examples:
+    tree: svenska-översättning av "tree"
+    träd: engelska-översättning av "träd"
+en-th 0:
+  url: https://www.dict.com/english-thai/
+  title: อังกฤษ-ไทย (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - thai
+en-th 1:
+  url: https://www.dict.com/english-thai/{%word}
+  title: อังกฤษ-ไทย (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - thai
+  examples:
+    tree: การแปลไทยของคำว่า "tree"
+    ต้นไม้: การแปลอังกฤษของคำว่า "ต้นไม้"
+en-tr 0:
+  url: https://www.dict.com/english-turkish/
+  title: İngilizce-Türkçe (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - turkish
+en-tr 1:
+  url: https://www.dict.com/english-turkish/{%word}
+  title: İngilizce-Türkçe (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - turkish
+  examples:
+    tree: '"tree" için Türkçe çevirisi'
+    ağaç: '"ağaç" için İngilizce çevirisi'
+en-uk 0:
+  url: https://www.dict.com/english-ukrainian/
+  title: Англійська-Українська (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - ukrainian
+en-uk 1:
+  url: https://www.dict.com/english-ukrainian/{%word}
+  title: Англійська-Українська (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - ukrainian
+  examples:
+    tree: Переклад українська для "tree"
+    дерево: Переклад англійська для "дерево"
+en-vi 0:
+  url: https://www.dict.com/english-vietnamese/
+  title: Tiếng Anh-Tiếng Việt (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - vietnamese
+en-vi 1:
+  url: https://www.dict.com/english-vietnamese/{%word}
+  title: Tiếng Anh-Tiếng Việt (dict.com)
+  tags:
+  - dictionary
+  - english
+  - language
+  - vietnamese
+  examples:
+    tree: Bản dịch Tiếng Việt của "tree"
+    cây: Bản dịch Tiếng Anh của "cây"
+en-zh 0:
+  url: https://www.dict.com/english-chinese/
+  title: 英文-中文 (dict.com)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
+en-zh 1:
+  url: https://www.dict.com/english-chinese/{%word}
+  title: 英文-中文 (dict.com)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
+  examples:
+    tree: 中文 的"tree"翻译
+    树: 英文 的"树"翻译
 es 0:
   include:
     key: es-{$language} 0
@@ -4348,234 +5224,413 @@ es-el 1:
   examples:
     árbol: Μετάφραση στα Ελληνικά για το "árbol"
     δέντρο: Μετάφραση στα Ισπανικά για το "δέντρο"
+es-en 0:
+  title: Spanish-English (dict.com)
+  include:
+    key: en-es 0
+es-en 1:
+  title: Spanish-English (dict.com)
+  include:
+    key: en-es 1
+  examples:
+    árbol: English translation of "árbol"
+    tree: Spanish translation of "tree"
 es-et 0:
+  url: https://www.dict.com/spanish-estonian/
   title: Hispaania-Eesti (dict.com)
-  include:
-    key: et-es 0
+  tags:
+  - dictionary
+  - estonian
+  - language
+  - spanish
 es-et 1:
+  url: https://www.dict.com/spanish-estonian/{%word}
   title: Hispaania-Eesti (dict.com)
-  include:
-    key: et-es 1
+  tags:
+  - dictionary
+  - estonian
+  - language
+  - spanish
   examples:
     árbol: eesti tõlge "árbol"
     puu: hispaania tõlge "puu"
 es-fi 0:
+  url: https://www.dict.com/spanish-finnish/
   title: Espanja-Suomi (dict.com)
-  include:
-    key: fi-es 0
+  tags:
+  - dictionary
+  - finnish
+  - language
+  - spanish
 es-fi 1:
+  url: https://www.dict.com/spanish-finnish/{%word}
   title: Espanja-Suomi (dict.com)
-  include:
-    key: fi-es 1
+  tags:
+  - dictionary
+  - finnish
+  - language
+  - spanish
   examples:
     árbol: suomi-käännös sanalle "árbol"
     puu: espanja-käännös sanalle "puu"
 es-fr 0:
+  url: https://www.dict.com/spanish-french/
   title: Espagnol-Français (dict.com)
-  include:
-    key: fr-es 0
+  tags:
+  - dictionary
+  - french
+  - language
+  - spanish
 es-fr 1:
+  url: https://www.dict.com/spanish-french/{%word}
   title: Espagnol-Français (dict.com)
-  include:
-    key: fr-es 1
+  tags:
+  - dictionary
+  - french
+  - language
+  - spanish
   examples:
     árbol: Traduction en français de "árbol"
     arbre: Traduction en espagnol de "arbre"
 es-he 0:
+  url: https://www.dict.com/spanish-hebrew/
   title: ספרדית-עברית (dict.com)
-  include:
-    key: he-es 0
+  tags:
+  - dictionary
+  - hebrew
+  - language
+  - spanish
 es-he 1:
+  url: https://www.dict.com/spanish-hebrew/{%word}
   title: ספרדית-עברית (dict.com)
-  include:
-    key: he-es 1
+  tags:
+  - dictionary
+  - hebrew
+  - language
+  - spanish
   examples:
     árbol: עברית תרגום של "árbol"
     עץ: ספרדית תרגום של "עץ"
 es-hr 0:
+  url: https://www.dict.com/spanish-croatian/
   title: Španjolski-Hrvatski (dict.com)
-  include:
-    key: hr-es 0
+  tags:
+  - croatian
+  - dictionary
+  - language
+  - spanish
 es-hr 1:
+  url: https://www.dict.com/spanish-croatian/{%word}
   title: Španjolski-Hrvatski (dict.com)
-  include:
-    key: hr-es 1
+  tags:
+  - croatian
+  - dictionary
+  - language
+  - spanish
   examples:
     árbol: hrvatski prijevod od "árbol"
     stablo: španjolski prijevod od "stablo"
 es-hu 0:
+  url: https://www.dict.com/spanish-hungarian/
   title: Spanyol-Magyar (dict.com)
-  include:
-    key: hu-es 0
+  tags:
+  - dictionary
+  - hungarian
+  - language
+  - spanish
 es-hu 1:
+  url: https://www.dict.com/spanish-hungarian/{%word}
   title: Spanyol-Magyar (dict.com)
-  include:
-    key: hu-es 1
+  tags:
+  - dictionary
+  - hungarian
+  - language
+  - spanish
   examples:
     árbol: magyar fordítás a(z) "árbol" számára
     fa: spanyol fordítás a(z) "fa" számára
 es-id 0:
+  url: https://www.dict.com/spanish-indonesian/
   title: Spanyol-Bahasa Indonesia (dict.com)
-  include:
-    key: id-es 0
+  tags:
+  - dictionary
+  - indonesian
+  - language
+  - spanish
 es-id 1:
+  url: https://www.dict.com/spanish-indonesian/{%word}
   title: Spanyol-Bahasa Indonesia (dict.com)
-  include:
-    key: id-es 1
+  tags:
+  - dictionary
+  - indonesian
+  - language
+  - spanish
   examples:
     árbol: terjemahan Bahasa Indonesia dari "árbol"
     pohon: terjemahan Spanyol dari "pohon"
 es-it 0:
+  url: https://www.dict.com/spanish-italian/
   title: Spagnolo-Italiano (dict.com)
-  include:
-    key: it-es 0
+  tags:
+  - dictionary
+  - italian
+  - language
+  - spanish
 es-it 1:
+  url: https://www.dict.com/spanish-italian/{%word}
   title: Spagnolo-Italiano (dict.com)
-  include:
-    key: it-es 1
+  tags:
+  - dictionary
+  - italian
+  - language
+  - spanish
   examples:
     árbol: Traduzione in italiano di "árbol"
     albero: Traduzione in spagnolo di "albero"
 es-ja 0:
+  url: https://www.dict.com/spanish-japanese/
   title: スペイン語-日本語 (dict.com)
-  include:
-    key: ja-es 0
+  tags:
+  - dictionary
+  - japanese
+  - language
+  - spanish
 es-ja 1:
+  url: https://www.dict.com/spanish-japanese/{%word}
   title: スペイン語-日本語 (dict.com)
-  include:
-    key: ja-es 1
+  tags:
+  - dictionary
+  - japanese
+  - language
+  - spanish
   examples:
     árbol: '"árbol"の日本語翻訳'
     木: '"木"のスペイン語翻訳'
 es-ko 0:
+  url: https://www.dict.com/spanish-korean/
   title: 스페인어-한국어 (dict.com)
-  include:
-    key: ko-es 0
+  tags:
+  - dictionary
+  - korean
+  - language
+  - spanish
 es-ko 1:
+  url: https://www.dict.com/spanish-korean/{%word}
   title: 스페인어-한국어 (dict.com)
-  include:
-    key: ko-es 1
+  tags:
+  - dictionary
+  - korean
+  - language
+  - spanish
   examples:
     árbol: '"árbol"의 한국어 번역'
     나무: '"나무"의 스페인어 번역'
 es-lt 0:
+  url: https://www.dict.com/spanish-lithuanian/
   title: Ispanų-Lietuvių (dict.com)
-  include:
-    key: lt-es 0
+  tags:
+  - dictionary
+  - language
+  - lithuanian
+  - spanish
 es-lt 1:
+  url: https://www.dict.com/spanish-lithuanian/{%word}
   title: Ispanų-Lietuvių (dict.com)
-  include:
-    key: lt-es 1
+  tags:
+  - dictionary
+  - language
+  - lithuanian
+  - spanish
   examples:
     árbol: lietuvių vertimas žodžiui "árbol"
     medis: ispanų vertimas žodžiui "medis"
 es-lv 0:
+  url: https://www.dict.com/spanish-latvian/
   title: Spāņu-Latviešu (dict.com)
-  include:
-    key: lv-es 0
+  tags:
+  - dictionary
+  - language
+  - latvian
+  - spanish
 es-lv 1:
+  url: https://www.dict.com/spanish-latvian/{%word}
   title: Spāņu-Latviešu (dict.com)
-  include:
-    key: lv-es 1
+  tags:
+  - dictionary
+  - language
+  - latvian
+  - spanish
   examples:
     árbol: latviešu tulkojums vārdam "árbol"
     koks: spāņu tulkojums vārdam "koks"
 es-nl 0:
+  url: https://www.dict.com/spanish-dutch/
   title: Spaans-Nederlands (dict.com)
-  include:
-    key: nl-es 0
+  tags:
+  - dictionary
+  - dutch
+  - language
+  - spanish
 es-nl 1:
+  url: https://www.dict.com/spanish-dutch/{%word}
   title: Spaans-Nederlands (dict.com)
-  include:
-    key: nl-es 1
+  tags:
+  - dictionary
+  - dutch
+  - language
+  - spanish
   examples:
     árbol: Nederlands-vertaling van "árbol"
     boom: Spaans-vertaling van "boom"
 es-no 0:
+  url: https://www.dict.com/spanish-norwegian/
   title: Spansk-Norsk (dict.com)
-  include:
-    key: no-es 0
+  tags:
+  - dictionary
+  - language
+  - norwegian
+  - spanish
 es-no 1:
+  url: https://www.dict.com/spanish-norwegian/{%word}
   title: Spansk-Norsk (dict.com)
-  include:
-    key: no-es 1
+  tags:
+  - dictionary
+  - language
+  - norwegian
+  - spanish
   examples:
     árbol: norsk-oversettelse av "árbol"
     tre: spansk-oversettelse av "tre"
 es-pl 0:
+  url: https://www.dict.com/spanish-polish/
   title: Hiszpański-Polski (dict.com)
-  include:
-    key: pl-es 0
+  tags:
+  - dictionary
+  - language
+  - polish
+  - spanish
 es-pl 1:
+  url: https://www.dict.com/spanish-polish/{%word}
   title: Hiszpański-Polski (dict.com)
-  include:
-    key: pl-es 1
+  tags:
+  - dictionary
+  - language
+  - polish
+  - spanish
   examples:
     árbol: Tłumaczenie na język polski dla "árbol"
     drzewo: Tłumaczenie na język hiszpański dla "drzewo"
 es-pt 0:
+  url: https://www.dict.com/spanish-portuguese/
   title: Espanhol-Português (dict.com)
-  include:
-    key: pt-es 0
+  tags:
+  - dictionary
+  - language
+  - portuguese
+  - spanish
 es-pt 1:
+  url: https://www.dict.com/spanish-portuguese/{%word}
   title: Espanhol-Português (dict.com)
-  include:
-    key: pt-es 1
+  tags:
+  - dictionary
+  - language
+  - portuguese
+  - spanish
   examples:
     árbol: Tradução em português de "árbol"
     árvore: Tradução em espanhol de "árvore"
 es-ro 0:
+  url: https://www.dict.com/spanish-romanian/
   title: Spaniolă-Română (dict.com)
-  include:
-    key: ro-es 0
+  tags:
+  - dictionary
+  - language
+  - romanian
+  - spanish
 es-ro 1:
+  url: https://www.dict.com/spanish-romanian/{%word}
   title: Spaniolă-Română (dict.com)
-  include:
-    key: ro-es 1
+  tags:
+  - dictionary
+  - language
+  - romanian
+  - spanish
   examples:
     árbol: Traducere în română pentru "árbol"
     copac: Traducere în spaniolă pentru "copac"
 es-ru 0:
+  url: https://www.dict.com/spanish-russian/
   title: Испанский-Русский (dict.com)
-  include:
-    key: ru-es 0
+  tags:
+  - dictionary
+  - language
+  - russian
+  - spanish
 es-ru 1:
+  url: https://www.dict.com/spanish-russian/{%word}
   title: Испанский-Русский (dict.com)
-  include:
-    key: ru-es 1
+  tags:
+  - dictionary
+  - language
+  - russian
+  - spanish
   examples:
     árbol: Перевод на русский язык для "árbol"
     дерево: Перевод на испанский язык для "дерево"
 es-sk 0:
+  url: https://www.dict.com/spanish-slovak/
   title: Španielčina-Slovenčina (dict.com)
-  include:
-    key: sk-es 0
+  tags:
+  - dictionary
+  - language
+  - slovak
+  - spanish
 es-sk 1:
+  url: https://www.dict.com/spanish-slovak/{%word}
   title: Španielčina-Slovenčina (dict.com)
-  include:
-    key: sk-es 1
+  tags:
+  - dictionary
+  - language
+  - slovak
+  - spanish
   examples:
     árbol: slovenčina preklad pre "árbol"
     stromček: španielčina preklad pre "stromček"
 es-sl 0:
+  url: https://www.dict.com/spanish-slovenian/
   title: Španščina-Slovenščina (dict.com)
-  include:
-    key: sl-es 0
+  tags:
+  - dictionary
+  - language
+  - slovenian
+  - spanish
 es-sl 1:
+  url: https://www.dict.com/spanish-slovenian/{%word}
   title: Španščina-Slovenščina (dict.com)
-  include:
-    key: sl-es 1
+  tags:
+  - dictionary
+  - language
+  - slovenian
+  - spanish
   examples:
     árbol: Prevod v slovenščina za besedo "árbol"
     drevo: Prevod v španščina za besedo "drevo"
 es-sr 0:
+  url: https://www.dict.com/spanish-serbian/
   title: Шпански-Српски (dict.com)
-  include:
-    key: sr-es 0
+  tags:
+  - dictionary
+  - language
+  - serbian
+  - spanish
 es-sr 1:
+  url: https://www.dict.com/spanish-serbian/{%word}
   title: Шпански-Српски (dict.com)
-  include:
-    key: sr-es 1
+  tags:
+  - dictionary
+  - language
+  - serbian
+  - spanish
   examples:
     árbol: Превод на српски за "árbol"
     дрво: Превод на шпански за "дрво"
@@ -4675,13 +5730,21 @@ es-vi 1:
     árbol: Bản dịch Tiếng Việt của "árbol"
     cây: Bản dịch Tiếng Tây Ban Nha của "cây"
 es-zh 0:
+  url: https://www.dict.com/spanish-chinese/
   title: 西班牙文-中文 (dict.com)
-  include:
-    key: zh-es 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - spanish
 es-zh 1:
+  url: https://www.dict.com/spanish-chinese/{%word}
   title: 西班牙文-中文 (dict.com)
-  include:
-    key: zh-es 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - spanish
   examples:
     árbol: 中文 的"árbol"翻译
     树: 西班牙文 的"树"翻译
@@ -4747,59 +5810,46 @@ et-da 1:
     puu: dansk oversættelse af "puu"
     træ: estisk oversættelse af "træ"
 et-de 0:
-  url: https://www.dict.com/estonian-german/
   title: Estnisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - estonian
-  - german
-  - language
+  include:
+    key: de-et 0
 et-de 1:
-  url: https://www.dict.com/estonian-german/{%word}
   title: Estnisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - estonian
-  - german
-  - language
+  include:
+    key: de-et 1
   examples:
     puu: Deutsch-Übersetzung von "puu"
     baum: Estnisch-Übersetzung von "baum"
 et-el 0:
-  url: https://www.dict.com/estonian-greek/
   title: Εσθονικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - estonian
-  - greek
-  - language
+  include:
+    key: el-et 0
 et-el 1:
-  url: https://www.dict.com/estonian-greek/{%word}
   title: Εσθονικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - estonian
-  - greek
-  - language
+  include:
+    key: el-et 1
   examples:
     puu: Μετάφραση στα Ελληνικά για το "puu"
     δέντρο: Μετάφραση στα Εσθονικά για το "δέντρο"
+et-en 0:
+  title: Estonian-English (dict.com)
+  include:
+    key: en-et 0
+et-en 1:
+  title: Estonian-English (dict.com)
+  include:
+    key: en-et 1
+  examples:
+    puu: English translation of "puu"
+    tree: Estonian translation of "tree"
 et-es 0:
-  url: https://www.dict.com/estonian-spanish/
   title: Estonio-Español (dict.com)
-  tags:
-  - dictionary
-  - estonian
-  - language
-  - spanish
+  include:
+    key: es-et 0
 et-es 1:
-  url: https://www.dict.com/estonian-spanish/{%word}
   title: Estonio-Español (dict.com)
-  tags:
-  - dictionary
-  - estonian
-  - language
-  - spanish
+  include:
+    key: es-et 1
   examples:
     puu: Traducción al español de "puu"
     árbol: Traducción al estonio de "árbol"
@@ -4860,13 +5910,21 @@ et-he 1:
     puu: עברית תרגום של "puu"
     עץ: אסטונית תרגום של "עץ"
 et-hr 0:
+  url: https://www.dict.com/estonian-croatian/
   title: Estonski-Hrvatski (dict.com)
-  include:
-    key: hr-et 0
+  tags:
+  - croatian
+  - dictionary
+  - estonian
+  - language
 et-hr 1:
+  url: https://www.dict.com/estonian-croatian/{%word}
   title: Estonski-Hrvatski (dict.com)
-  include:
-    key: hr-et 1
+  tags:
+  - croatian
+  - dictionary
+  - estonian
+  - language
   examples:
     puu: hrvatski prijevod od "puu"
     stablo: estonski prijevod od "stablo"
@@ -5004,13 +6062,21 @@ et-lv 1:
     puu: latviešu tulkojums vārdam "puu"
     koks: igauņu tulkojums vārdam "koks"
 et-nl 0:
+  url: https://www.dict.com/estonian-dutch/
   title: Estisch-Nederlands (dict.com)
-  include:
-    key: nl-et 0
+  tags:
+  - dictionary
+  - dutch
+  - estonian
+  - language
 et-nl 1:
+  url: https://www.dict.com/estonian-dutch/{%word}
   title: Estisch-Nederlands (dict.com)
-  include:
-    key: nl-et 1
+  tags:
+  - dictionary
+  - dutch
+  - estonian
+  - language
   examples:
     puu: Nederlands-vertaling van "puu"
     boom: Estisch-vertaling van "boom"
@@ -5262,13 +6328,21 @@ et-vi 1:
     puu: Bản dịch Tiếng Việt của "puu"
     cây: Bản dịch Tiếng Estonia của "cây"
 et-zh 0:
+  url: https://www.dict.com/estonian-chinese/
   title: 爱沙尼亚文-中文 (dict.com)
-  include:
-    key: zh-et 0
+  tags:
+  - chinese
+  - dictionary
+  - estonian
+  - language
 et-zh 1:
+  url: https://www.dict.com/estonian-chinese/{%word}
   title: 爱沙尼亚文-中文 (dict.com)
-  include:
-    key: zh-et 1
+  tags:
+  - chinese
+  - dictionary
+  - estonian
+  - language
   examples:
     puu: 中文 的"puu"翻译
     树: 爱沙尼亚文 的"树"翻译
@@ -5334,59 +6408,46 @@ fi-da 1:
     puu: dansk oversættelse af "puu"
     træ: finsk oversættelse af "træ"
 fi-de 0:
-  url: https://www.dict.com/finnish-german/
   title: Finnisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - finnish
-  - german
-  - language
+  include:
+    key: de-fi 0
 fi-de 1:
-  url: https://www.dict.com/finnish-german/{%word}
   title: Finnisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - finnish
-  - german
-  - language
+  include:
+    key: de-fi 1
   examples:
     puu: Deutsch-Übersetzung von "puu"
     baum: Finnisch-Übersetzung von "baum"
 fi-el 0:
-  url: https://www.dict.com/finnish-greek/
   title: Φινλανδικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - finnish
-  - greek
-  - language
+  include:
+    key: el-fi 0
 fi-el 1:
-  url: https://www.dict.com/finnish-greek/{%word}
   title: Φινλανδικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - finnish
-  - greek
-  - language
+  include:
+    key: el-fi 1
   examples:
     puu: Μετάφραση στα Ελληνικά για το "puu"
     δέντρο: Μετάφραση στα Φινλανδικά για το "δέντρο"
+fi-en 0:
+  title: Finnish-English (dict.com)
+  include:
+    key: en-fi 0
+fi-en 1:
+  title: Finnish-English (dict.com)
+  include:
+    key: en-fi 1
+  examples:
+    puu: English translation of "puu"
+    tree: Finnish translation of "tree"
 fi-es 0:
-  url: https://www.dict.com/finnish-spanish/
   title: Finés-Español (dict.com)
-  tags:
-  - dictionary
-  - finnish
-  - language
-  - spanish
+  include:
+    key: es-fi 0
 fi-es 1:
-  url: https://www.dict.com/finnish-spanish/{%word}
   title: Finés-Español (dict.com)
-  tags:
-  - dictionary
-  - finnish
-  - language
-  - spanish
+  include:
+    key: es-fi 1
   examples:
     puu: Traducción al español de "puu"
     árbol: Traducción al finés de "árbol"
@@ -5439,13 +6500,21 @@ fi-he 1:
     puu: עברית תרגום של "puu"
     עץ: פינית תרגום של "עץ"
 fi-hr 0:
+  url: https://www.dict.com/finnish-croatian/
   title: Finski-Hrvatski (dict.com)
-  include:
-    key: hr-fi 0
+  tags:
+  - croatian
+  - dictionary
+  - finnish
+  - language
 fi-hr 1:
+  url: https://www.dict.com/finnish-croatian/{%word}
   title: Finski-Hrvatski (dict.com)
-  include:
-    key: hr-fi 1
+  tags:
+  - croatian
+  - dictionary
+  - finnish
+  - language
   examples:
     puu: hrvatski prijevod od "puu"
     stablo: finski prijevod od "stablo"
@@ -5583,13 +6652,21 @@ fi-lv 1:
     puu: latviešu tulkojums vārdam "puu"
     koks: somu tulkojums vārdam "koks"
 fi-nl 0:
+  url: https://www.dict.com/finnish-dutch/
   title: Fins-Nederlands (dict.com)
-  include:
-    key: nl-fi 0
+  tags:
+  - dictionary
+  - dutch
+  - finnish
+  - language
 fi-nl 1:
+  url: https://www.dict.com/finnish-dutch/{%word}
   title: Fins-Nederlands (dict.com)
-  include:
-    key: nl-fi 1
+  tags:
+  - dictionary
+  - dutch
+  - finnish
+  - language
   examples:
     puu: Nederlands-vertaling van "puu"
     boom: Fins-vertaling van "boom"
@@ -5841,13 +6918,21 @@ fi-vi 1:
     puu: Bản dịch Tiếng Việt của "puu"
     cây: Bản dịch Tiếng Phần Lan của "cây"
 fi-zh 0:
+  url: https://www.dict.com/finnish-chinese/
   title: 芬兰文-中文 (dict.com)
-  include:
-    key: zh-fi 0
+  tags:
+  - chinese
+  - dictionary
+  - finnish
+  - language
 fi-zh 1:
+  url: https://www.dict.com/finnish-chinese/{%word}
   title: 芬兰文-中文 (dict.com)
-  include:
-    key: zh-fi 1
+  tags:
+  - chinese
+  - dictionary
+  - finnish
+  - language
   examples:
     puu: 中文 的"puu"翻译
     树: 芬兰文 的"树"翻译
@@ -5912,59 +6997,46 @@ fr-da 1:
     arbre: dansk oversættelse af "arbre"
     træ: fransk oversættelse af "træ"
 fr-de 0:
-  url: https://www.dict.com/french-german/
   title: Französisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - french
-  - german
-  - language
+  include:
+    key: de-fr 0
 fr-de 1:
-  url: https://www.dict.com/french-german/{%word}
   title: Französisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - french
-  - german
-  - language
+  include:
+    key: de-fr 1
   examples:
     arbre: Deutsch-Übersetzung von "arbre"
     baum: Französisch-Übersetzung von "baum"
 fr-el 0:
-  url: https://www.dict.com/french-greek/
   title: Γαλλικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - french
-  - greek
-  - language
+  include:
+    key: el-fr 0
 fr-el 1:
-  url: https://www.dict.com/french-greek/{%word}
   title: Γαλλικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - french
-  - greek
-  - language
+  include:
+    key: el-fr 1
   examples:
     arbre: Μετάφραση στα Ελληνικά για το "arbre"
     δέντρο: Μετάφραση στα Γαλλικά για το "δέντρο"
+fr-en 0:
+  title: French-English (dict.com)
+  include:
+    key: en-fr 0
+fr-en 1:
+  title: French-English (dict.com)
+  include:
+    key: en-fr 1
+  examples:
+    arbre: English translation of "arbre"
+    tree: French translation of "tree"
 fr-es 0:
-  url: https://www.dict.com/french-spanish/
   title: Francés-Español (dict.com)
-  tags:
-  - dictionary
-  - french
-  - language
-  - spanish
+  include:
+    key: es-fr 0
 fr-es 1:
-  url: https://www.dict.com/french-spanish/{%word}
   title: Francés-Español (dict.com)
-  tags:
-  - dictionary
-  - french
-  - language
-  - spanish
+  include:
+    key: es-fr 1
   examples:
     arbre: Traducción al español de "arbre"
     árbol: Traducción al francés de "árbol"
@@ -6010,13 +7082,21 @@ fr-he 1:
     arbre: עברית תרגום של "arbre"
     עץ: צרפתית תרגום של "עץ"
 fr-hr 0:
+  url: https://www.dict.com/french-croatian/
   title: Francuski-Hrvatski (dict.com)
-  include:
-    key: hr-fr 0
+  tags:
+  - croatian
+  - dictionary
+  - french
+  - language
 fr-hr 1:
+  url: https://www.dict.com/french-croatian/{%word}
   title: Francuski-Hrvatski (dict.com)
-  include:
-    key: hr-fr 1
+  tags:
+  - croatian
+  - dictionary
+  - french
+  - language
   examples:
     arbre: hrvatski prijevod od "arbre"
     stablo: francuski prijevod od "stablo"
@@ -6154,13 +7234,21 @@ fr-lv 1:
     arbre: latviešu tulkojums vārdam "arbre"
     koks: franču tulkojums vārdam "koks"
 fr-nl 0:
+  url: https://www.dict.com/french-dutch/
   title: Frans-Nederlands (dict.com)
-  include:
-    key: nl-fr 0
+  tags:
+  - dictionary
+  - dutch
+  - french
+  - language
 fr-nl 1:
+  url: https://www.dict.com/french-dutch/{%word}
   title: Frans-Nederlands (dict.com)
-  include:
-    key: nl-fr 1
+  tags:
+  - dictionary
+  - dutch
+  - french
+  - language
   examples:
     arbre: Nederlands-vertaling van "arbre"
     boom: Frans-vertaling van "boom"
@@ -6412,13 +7500,21 @@ fr-vi 1:
     arbre: Bản dịch Tiếng Việt của "arbre"
     cây: Bản dịch Tiếng Pháp của "cây"
 fr-zh 0:
+  url: https://www.dict.com/french-chinese/
   title: 法文-中文 (dict.com)
-  include:
-    key: zh-fr 0
+  tags:
+  - chinese
+  - dictionary
+  - french
+  - language
 fr-zh 1:
+  url: https://www.dict.com/french-chinese/{%word}
   title: 法文-中文 (dict.com)
-  include:
-    key: zh-fr 1
+  tags:
+  - chinese
+  - dictionary
+  - french
+  - language
   examples:
     arbre: 中文 的"arbre"翻译
     树: 法文 的"树"翻译
@@ -6505,22 +7601,25 @@ he-el 1:
   examples:
     עץ: Μετάφραση στα Ελληνικά για το "עץ"
     δέντρο: Μετάφραση στα Εβραϊκά για το "δέντρο"
+he-en 0:
+  title: Hebrew-English (dict.com)
+  include:
+    key: en-he 0
+he-en 1:
+  title: Hebrew-English (dict.com)
+  include:
+    key: en-he 1
+  examples:
+    עץ: English translation of "עץ"
+    tree: Hebrew translation of "tree"
 he-es 0:
-  url: https://www.dict.com/hebrew-spanish/
   title: Hebreo-Español (dict.com)
-  tags:
-  - dictionary
-  - hebrew
-  - language
-  - spanish
+  include:
+    key: es-he 0
 he-es 1:
-  url: https://www.dict.com/hebrew-spanish/{%word}
   title: Hebreo-Español (dict.com)
-  tags:
-  - dictionary
-  - hebrew
-  - language
-  - spanish
+  include:
+    key: es-he 1
   examples:
     עץ: Traducción al español de "עץ"
     árbol: Traducción al hebreo de "árbol"
@@ -6558,13 +7657,21 @@ he-fr 1:
     עץ: Traduction en français de "עץ"
     arbre: Traduction en hébreu de "arbre"
 he-hr 0:
+  url: https://www.dict.com/hebrew-croatian/
   title: Hebrejski-Hrvatski (dict.com)
-  include:
-    key: hr-he 0
+  tags:
+  - croatian
+  - dictionary
+  - hebrew
+  - language
 he-hr 1:
+  url: https://www.dict.com/hebrew-croatian/{%word}
   title: Hebrejski-Hrvatski (dict.com)
-  include:
-    key: hr-he 1
+  tags:
+  - croatian
+  - dictionary
+  - hebrew
+  - language
   examples:
     עץ: hrvatski prijevod od "עץ"
     stablo: hebrejski prijevod od "stablo"
@@ -6702,13 +7809,21 @@ he-lv 1:
     עץ: latviešu tulkojums vārdam "עץ"
     koks: ivrits tulkojums vārdam "koks"
 he-nl 0:
+  url: https://www.dict.com/hebrew-dutch/
   title: Hebreeuws-Nederlands (dict.com)
-  include:
-    key: nl-he 0
+  tags:
+  - dictionary
+  - dutch
+  - hebrew
+  - language
 he-nl 1:
+  url: https://www.dict.com/hebrew-dutch/{%word}
   title: Hebreeuws-Nederlands (dict.com)
-  include:
-    key: nl-he 1
+  tags:
+  - dictionary
+  - dutch
+  - hebrew
+  - language
   examples:
     עץ: Nederlands-vertaling van "עץ"
     boom: Hebreeuws-vertaling van "boom"
@@ -6960,13 +8075,21 @@ he-vi 1:
     עץ: Bản dịch Tiếng Việt của "עץ"
     cây: Bản dịch Tiếng Do Thái của "cây"
 he-zh 0:
+  url: https://www.dict.com/hebrew-chinese/
   title: 希伯来文-中文 (dict.com)
-  include:
-    key: zh-he 0
+  tags:
+  - chinese
+  - dictionary
+  - hebrew
+  - language
 he-zh 1:
+  url: https://www.dict.com/hebrew-chinese/{%word}
   title: 希伯来文-中文 (dict.com)
-  include:
-    key: zh-he 1
+  tags:
+  - chinese
+  - dictionary
+  - hebrew
+  - language
   examples:
     עץ: 中文 的"עץ"翻译
     树: 希伯来文 的"树"翻译
@@ -7010,173 +8133,112 @@ hr-ca 1:
     stablo: Traducció al català de "stablo"
     arbre: Traducció al croat de "arbre"
 hr-cs 0:
-  url: https://www.dict.com/croatian-czech/
   title: Chorvatština-Čeština (dict.com)
-  tags:
-  - croatian
-  - czech
-  - dictionary
-  - language
+  include:
+    key: cs-hr 0
 hr-cs 1:
-  url: https://www.dict.com/croatian-czech/{%word}
   title: Chorvatština-Čeština (dict.com)
-  tags:
-  - croatian
-  - czech
-  - dictionary
-  - language
+  include:
+    key: cs-hr 1
   examples:
     stablo: čeština překlad pro "stablo"
     strom: chorvatština překlad pro "strom"
 hr-da 0:
-  url: https://www.dict.com/croatian-danish/
   title: Kroatisk-Dansk (dict.com)
-  tags:
-  - croatian
-  - danish
-  - dictionary
-  - language
+  include:
+    key: da-hr 0
 hr-da 1:
-  url: https://www.dict.com/croatian-danish/{%word}
   title: Kroatisk-Dansk (dict.com)
-  tags:
-  - croatian
-  - danish
-  - dictionary
-  - language
+  include:
+    key: da-hr 1
   examples:
     stablo: dansk oversættelse af "stablo"
     træ: kroatisk oversættelse af "træ"
 hr-de 0:
-  url: https://www.dict.com/croatian-german/
   title: Kroatisch-Deutsch (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - german
-  - language
+  include:
+    key: de-hr 0
 hr-de 1:
-  url: https://www.dict.com/croatian-german/{%word}
   title: Kroatisch-Deutsch (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - german
-  - language
+  include:
+    key: de-hr 1
   examples:
     stablo: Deutsch-Übersetzung von "stablo"
     baum: Kroatisch-Übersetzung von "baum"
 hr-el 0:
-  url: https://www.dict.com/croatian-greek/
   title: Κροατικά-Ελληνικά (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - greek
-  - language
+  include:
+    key: el-hr 0
 hr-el 1:
-  url: https://www.dict.com/croatian-greek/{%word}
   title: Κροατικά-Ελληνικά (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - greek
-  - language
+  include:
+    key: el-hr 1
   examples:
     stablo: Μετάφραση στα Ελληνικά για το "stablo"
     δέντρο: Μετάφραση στα Κροατικά για το "δέντρο"
+hr-en 0:
+  title: Croatian-English (dict.com)
+  include:
+    key: en-hr 0
+hr-en 1:
+  title: Croatian-English (dict.com)
+  include:
+    key: en-hr 1
+  examples:
+    stablo: English translation of "stablo"
+    tree: Croatian translation of "tree"
 hr-es 0:
-  url: https://www.dict.com/croatian-spanish/
   title: Croata-Español (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - language
-  - spanish
+  include:
+    key: es-hr 0
 hr-es 1:
-  url: https://www.dict.com/croatian-spanish/{%word}
   title: Croata-Español (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - language
-  - spanish
+  include:
+    key: es-hr 1
   examples:
     stablo: Traducción al español de "stablo"
     árbol: Traducción al croata de "árbol"
 hr-et 0:
-  url: https://www.dict.com/croatian-estonian/
   title: Horvaadi-Eesti (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - estonian
-  - language
+  include:
+    key: et-hr 0
 hr-et 1:
-  url: https://www.dict.com/croatian-estonian/{%word}
   title: Horvaadi-Eesti (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - estonian
-  - language
+  include:
+    key: et-hr 1
   examples:
     stablo: eesti tõlge "stablo"
     puu: horvaadi tõlge "puu"
 hr-fi 0:
-  url: https://www.dict.com/croatian-finnish/
   title: Kroatia-Suomi (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - finnish
-  - language
+  include:
+    key: fi-hr 0
 hr-fi 1:
-  url: https://www.dict.com/croatian-finnish/{%word}
   title: Kroatia-Suomi (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - finnish
-  - language
+  include:
+    key: fi-hr 1
   examples:
     stablo: suomi-käännös sanalle "stablo"
     puu: kroatia-käännös sanalle "puu"
 hr-fr 0:
-  url: https://www.dict.com/croatian-french/
   title: Croate-Français (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - french
-  - language
+  include:
+    key: fr-hr 0
 hr-fr 1:
-  url: https://www.dict.com/croatian-french/{%word}
   title: Croate-Français (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - french
-  - language
+  include:
+    key: fr-hr 1
   examples:
     stablo: Traduction en français de "stablo"
     arbre: Traduction en croate de "arbre"
 hr-he 0:
-  url: https://www.dict.com/croatian-hebrew/
   title: קרואטית-עברית (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - hebrew
-  - language
+  include:
+    key: he-hr 0
 hr-he 1:
-  url: https://www.dict.com/croatian-hebrew/{%word}
   title: קרואטית-עברית (dict.com)
-  tags:
-  - croatian
-  - dictionary
-  - hebrew
-  - language
+  include:
+    key: he-hr 1
   examples:
     stablo: עברית תרגום של "stablo"
     עץ: קרואטית תרגום של "עץ"
@@ -7580,13 +8642,21 @@ hr-vi 1:
     stablo: Bản dịch Tiếng Việt của "stablo"
     cây: Bản dịch Tiếng Croatia của "cây"
 hr-zh 0:
+  url: https://www.dict.com/croatian-chinese/
   title: 克罗地亚文-中文 (dict.com)
-  include:
-    key: zh-hr 0
+  tags:
+  - chinese
+  - croatian
+  - dictionary
+  - language
 hr-zh 1:
+  url: https://www.dict.com/croatian-chinese/{%word}
   title: 克罗地亚文-中文 (dict.com)
-  include:
-    key: zh-hr 1
+  tags:
+  - chinese
+  - croatian
+  - dictionary
+  - language
   examples:
     stablo: 中文 的"stablo"翻译
     树: 克罗地亚文 的"树"翻译
@@ -7673,22 +8743,25 @@ hu-el 1:
   examples:
     fa: Μετάφραση στα Ελληνικά για το "fa"
     δέντρο: Μετάφραση στα Ουγγρικά για το "δέντρο"
+hu-en 0:
+  title: Hungarian-English (dict.com)
+  include:
+    key: en-hu 0
+hu-en 1:
+  title: Hungarian-English (dict.com)
+  include:
+    key: en-hu 1
+  examples:
+    fa: English translation of "fa"
+    tree: Hungarian translation of "tree"
 hu-es 0:
-  url: https://www.dict.com/hungarian-spanish/
   title: Húngaro-Español (dict.com)
-  tags:
-  - dictionary
-  - hungarian
-  - language
-  - spanish
+  include:
+    key: es-hu 0
 hu-es 1:
-  url: https://www.dict.com/hungarian-spanish/{%word}
   title: Húngaro-Español (dict.com)
-  tags:
-  - dictionary
-  - hungarian
-  - language
-  - spanish
+  include:
+    key: es-hu 1
   examples:
     fa: Traducción al español de "fa"
     árbol: Traducción al húngaro de "árbol"
@@ -7862,13 +8935,21 @@ hu-lv 1:
     fa: latviešu tulkojums vārdam "fa"
     koks: ungāru tulkojums vārdam "koks"
 hu-nl 0:
+  url: https://www.dict.com/hungarian-dutch/
   title: Hongaars-Nederlands (dict.com)
-  include:
-    key: nl-hu 0
+  tags:
+  - dictionary
+  - dutch
+  - hungarian
+  - language
 hu-nl 1:
+  url: https://www.dict.com/hungarian-dutch/{%word}
   title: Hongaars-Nederlands (dict.com)
-  include:
-    key: nl-hu 1
+  tags:
+  - dictionary
+  - dutch
+  - hungarian
+  - language
   examples:
     fa: Nederlands-vertaling van "fa"
     boom: Hongaars-vertaling van "boom"
@@ -8120,13 +9201,21 @@ hu-vi 1:
     fa: Bản dịch Tiếng Việt của "fa"
     cây: Bản dịch Tiếng Hungary của "cây"
 hu-zh 0:
+  url: https://www.dict.com/hungarian-chinese/
   title: 匈牙利文-中文 (dict.com)
-  include:
-    key: zh-hu 0
+  tags:
+  - chinese
+  - dictionary
+  - hungarian
+  - language
 hu-zh 1:
+  url: https://www.dict.com/hungarian-chinese/{%word}
   title: 匈牙利文-中文 (dict.com)
-  include:
-    key: zh-hu 1
+  tags:
+  - chinese
+  - dictionary
+  - hungarian
+  - language
   examples:
     fa: 中文 的"fa"翻译
     树: 匈牙利文 的"树"翻译
@@ -8213,22 +9302,25 @@ id-el 1:
   examples:
     pohon: Μετάφραση στα Ελληνικά για το "pohon"
     δέντρο: Μετάφραση στα Ινδονησιακά για το "δέντρο"
+id-en 0:
+  title: Indonesian-English (dict.com)
+  include:
+    key: en-id 0
+id-en 1:
+  title: Indonesian-English (dict.com)
+  include:
+    key: en-id 1
+  examples:
+    pohon: English translation of "pohon"
+    tree: Indonesian translation of "tree"
 id-es 0:
-  url: https://www.dict.com/indonesian-spanish/
   title: Indonesio-Español (dict.com)
-  tags:
-  - dictionary
-  - indonesian
-  - language
-  - spanish
+  include:
+    key: es-id 0
 id-es 1:
-  url: https://www.dict.com/indonesian-spanish/{%word}
   title: Indonesio-Español (dict.com)
-  tags:
-  - dictionary
-  - indonesian
-  - language
-  - spanish
+  include:
+    key: es-id 1
   examples:
     pohon: Traducción al español de "pohon"
     árbol: Traducción al indonesio de "árbol"
@@ -8394,13 +9486,21 @@ id-lv 1:
     pohon: latviešu tulkojums vārdam "pohon"
     koks: indonēziešu tulkojums vārdam "koks"
 id-nl 0:
+  url: https://www.dict.com/indonesian-dutch/
   title: Indonesisch-Nederlands (dict.com)
-  include:
-    key: nl-id 0
+  tags:
+  - dictionary
+  - dutch
+  - indonesian
+  - language
 id-nl 1:
+  url: https://www.dict.com/indonesian-dutch/{%word}
   title: Indonesisch-Nederlands (dict.com)
-  include:
-    key: nl-id 1
+  tags:
+  - dictionary
+  - dutch
+  - indonesian
+  - language
   examples:
     pohon: Nederlands-vertaling van "pohon"
     boom: Indonesisch-vertaling van "boom"
@@ -8652,13 +9752,21 @@ id-vi 1:
     pohon: Bản dịch Tiếng Việt của "pohon"
     cây: Bản dịch Tiếng Indonesia của "cây"
 id-zh 0:
+  url: https://www.dict.com/indonesian-chinese/
   title: 印度尼西亚文-中文 (dict.com)
-  include:
-    key: zh-id 0
+  tags:
+  - chinese
+  - dictionary
+  - indonesian
+  - language
 id-zh 1:
+  url: https://www.dict.com/indonesian-chinese/{%word}
   title: 印度尼西亚文-中文 (dict.com)
-  include:
-    key: zh-id 1
+  tags:
+  - chinese
+  - dictionary
+  - indonesian
+  - language
   examples:
     pohon: 中文 的"pohon"翻译
     树: 印度尼西亚文 的"树"翻译
@@ -8745,22 +9853,25 @@ it-el 1:
   examples:
     albero: Μετάφραση στα Ελληνικά για το "albero"
     δέντρο: Μετάφραση στα Ιταλικά για το "δέντρο"
+it-en 0:
+  title: Italian-English (dict.com)
+  include:
+    key: en-it 0
+it-en 1:
+  title: Italian-English (dict.com)
+  include:
+    key: en-it 1
+  examples:
+    albero: English translation of "albero"
+    tree: Italian translation of "tree"
 it-es 0:
-  url: https://www.dict.com/italian-spanish/
   title: Italiano-Español (dict.com)
-  tags:
-  - dictionary
-  - italian
-  - language
-  - spanish
+  include:
+    key: es-it 0
 it-es 1:
-  url: https://www.dict.com/italian-spanish/{%word}
   title: Italiano-Español (dict.com)
-  tags:
-  - dictionary
-  - italian
-  - language
-  - spanish
+  include:
+    key: es-it 1
   examples:
     albero: Traducción al español de "albero"
     árbol: Traducción al italiano de "árbol"
@@ -8918,13 +10029,21 @@ it-lv 1:
     albero: latviešu tulkojums vārdam "albero"
     koks: itāļu tulkojums vārdam "koks"
 it-nl 0:
+  url: https://www.dict.com/italian-dutch/
   title: Italiaans-Nederlands (dict.com)
-  include:
-    key: nl-it 0
+  tags:
+  - dictionary
+  - dutch
+  - italian
+  - language
 it-nl 1:
+  url: https://www.dict.com/italian-dutch/{%word}
   title: Italiaans-Nederlands (dict.com)
-  include:
-    key: nl-it 1
+  tags:
+  - dictionary
+  - dutch
+  - italian
+  - language
   examples:
     albero: Nederlands-vertaling van "albero"
     boom: Italiaans-vertaling van "boom"
@@ -9176,13 +10295,21 @@ it-vi 1:
     albero: Bản dịch Tiếng Việt của "albero"
     cây: Bản dịch Tiếng Ý của "cây"
 it-zh 0:
+  url: https://www.dict.com/italian-chinese/
   title: 意大利文-中文 (dict.com)
-  include:
-    key: zh-it 0
+  tags:
+  - chinese
+  - dictionary
+  - italian
+  - language
 it-zh 1:
+  url: https://www.dict.com/italian-chinese/{%word}
   title: 意大利文-中文 (dict.com)
-  include:
-    key: zh-it 1
+  tags:
+  - chinese
+  - dictionary
+  - italian
+  - language
   examples:
     albero: 中文 的"albero"翻译
     树: 意大利文 的"树"翻译
@@ -9269,22 +10396,25 @@ ja-el 1:
   examples:
     木: Μετάφραση στα Ελληνικά για το "木"
     δέντρο: Μετάφραση στα Ιαπωνικά για το "δέντρο"
+ja-en 0:
+  title: Japanese-English (dict.com)
+  include:
+    key: en-ja 0
+ja-en 1:
+  title: Japanese-English (dict.com)
+  include:
+    key: en-ja 1
+  examples:
+    木: English translation of "木"
+    tree: Japanese translation of "tree"
 ja-es 0:
-  url: https://www.dict.com/japanese-spanish/
   title: Japonés-Español (dict.com)
-  tags:
-  - dictionary
-  - japanese
-  - language
-  - spanish
+  include:
+    key: es-ja 0
 ja-es 1:
-  url: https://www.dict.com/japanese-spanish/{%word}
   title: Japonés-Español (dict.com)
-  tags:
-  - dictionary
-  - japanese
-  - language
-  - spanish
+  include:
+    key: es-ja 1
   examples:
     木: Traducción al español de "木"
     árbol: Traducción al japonés de "árbol"
@@ -9434,13 +10564,21 @@ ja-lv 1:
     木: latviešu tulkojums vārdam "木"
     koks: japāņu tulkojums vārdam "koks"
 ja-nl 0:
+  url: https://www.dict.com/japanese-dutch/
   title: Japans-Nederlands (dict.com)
-  include:
-    key: nl-ja 0
+  tags:
+  - dictionary
+  - dutch
+  - japanese
+  - language
 ja-nl 1:
+  url: https://www.dict.com/japanese-dutch/{%word}
   title: Japans-Nederlands (dict.com)
-  include:
-    key: nl-ja 1
+  tags:
+  - dictionary
+  - dutch
+  - japanese
+  - language
   examples:
     木: Nederlands-vertaling van "木"
     boom: Japans-vertaling van "boom"
@@ -9692,13 +10830,21 @@ ja-vi 1:
     木: Bản dịch Tiếng Việt của "木"
     cây: Bản dịch Tiếng Nhật của "cây"
 ja-zh 0:
+  url: https://www.dict.com/japanese-chinese/
   title: 日文-中文 (dict.com)
-  include:
-    key: zh-ja 0
+  tags:
+  - chinese
+  - dictionary
+  - japanese
+  - language
 ja-zh 1:
+  url: https://www.dict.com/japanese-chinese/{%word}
   title: 日文-中文 (dict.com)
-  include:
-    key: zh-ja 1
+  tags:
+  - chinese
+  - dictionary
+  - japanese
+  - language
   examples:
     木: 中文 的"木"翻译
     树: 日文 的"树"翻译
@@ -9785,22 +10931,25 @@ ko-el 1:
   examples:
     나무: Μετάφραση στα Ελληνικά για το "나무"
     δέντρο: Μετάφραση στα Κορεατικά για το "δέντρο"
+ko-en 0:
+  title: Korean-English (dict.com)
+  include:
+    key: en-ko 0
+ko-en 1:
+  title: Korean-English (dict.com)
+  include:
+    key: en-ko 1
+  examples:
+    나무: English translation of "나무"
+    tree: Korean translation of "tree"
 ko-es 0:
-  url: https://www.dict.com/korean-spanish/
   title: Coreano-Español (dict.com)
-  tags:
-  - dictionary
-  - korean
-  - language
-  - spanish
+  include:
+    key: es-ko 0
 ko-es 1:
-  url: https://www.dict.com/korean-spanish/{%word}
   title: Coreano-Español (dict.com)
-  tags:
-  - dictionary
-  - korean
-  - language
-  - spanish
+  include:
+    key: es-ko 1
   examples:
     나무: Traducción al español de "나무"
     árbol: Traducción al coreano de "árbol"
@@ -9942,13 +11091,21 @@ ko-lv 1:
     나무: latviešu tulkojums vārdam "나무"
     koks: korejiešu tulkojums vārdam "koks"
 ko-nl 0:
+  url: https://www.dict.com/korean-dutch/
   title: Koreaans-Nederlands (dict.com)
-  include:
-    key: nl-ko 0
+  tags:
+  - dictionary
+  - dutch
+  - korean
+  - language
 ko-nl 1:
+  url: https://www.dict.com/korean-dutch/{%word}
   title: Koreaans-Nederlands (dict.com)
-  include:
-    key: nl-ko 1
+  tags:
+  - dictionary
+  - dutch
+  - korean
+  - language
   examples:
     나무: Nederlands-vertaling van "나무"
     boom: Koreaans-vertaling van "boom"
@@ -10200,13 +11357,21 @@ ko-vi 1:
     나무: Bản dịch Tiếng Việt của "나무"
     cây: Bản dịch Tiếng Hàn của "cây"
 ko-zh 0:
+  url: https://www.dict.com/korean-chinese/
   title: 韩文-中文 (dict.com)
-  include:
-    key: zh-ko 0
+  tags:
+  - chinese
+  - dictionary
+  - korean
+  - language
 ko-zh 1:
+  url: https://www.dict.com/korean-chinese/{%word}
   title: 韩文-中文 (dict.com)
-  include:
-    key: zh-ko 1
+  tags:
+  - chinese
+  - dictionary
+  - korean
+  - language
   examples:
     나무: 中文 的"나무"翻译
     树: 韩文 的"树"翻译
@@ -10293,22 +11458,25 @@ lt-el 1:
   examples:
     medis: Μετάφραση στα Ελληνικά για το "medis"
     δέντρο: Μετάφραση στα Λιθουανικά για το "δέντρο"
+lt-en 0:
+  title: Lithuanian-English (dict.com)
+  include:
+    key: en-lt 0
+lt-en 1:
+  title: Lithuanian-English (dict.com)
+  include:
+    key: en-lt 1
+  examples:
+    medis: English translation of "medis"
+    tree: Lithuanian translation of "tree"
 lt-es 0:
-  url: https://www.dict.com/lithuanian-spanish/
   title: Lituano-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - lithuanian
-  - spanish
+  include:
+    key: es-lt 0
 lt-es 1:
-  url: https://www.dict.com/lithuanian-spanish/{%word}
   title: Lituano-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - lithuanian
-  - spanish
+  include:
+    key: es-lt 1
   examples:
     medis: Traducción al español de "medis"
     árbol: Traducción al lituano de "árbol"
@@ -10423,24 +11591,40 @@ lt-ko 1:
     medis: '"medis"의 한국어 번역'
     나무: '"나무"의 리투아니아어 번역'
 lt-lv 0:
+  url: https://www.dict.com/lithuanian-latvian/
   title: Lietuviešu-Latviešu (dict.com)
-  include:
-    key: lv-lt 0
+  tags:
+  - dictionary
+  - language
+  - latvian
+  - lithuanian
 lt-lv 1:
+  url: https://www.dict.com/lithuanian-latvian/{%word}
   title: Lietuviešu-Latviešu (dict.com)
-  include:
-    key: lv-lt 1
+  tags:
+  - dictionary
+  - language
+  - latvian
+  - lithuanian
   examples:
     medis: latviešu tulkojums vārdam "medis"
     koks: lietuviešu tulkojums vārdam "koks"
 lt-nl 0:
+  url: https://www.dict.com/lithuanian-dutch/
   title: Litouws-Nederlands (dict.com)
-  include:
-    key: nl-lt 0
+  tags:
+  - dictionary
+  - dutch
+  - language
+  - lithuanian
 lt-nl 1:
+  url: https://www.dict.com/lithuanian-dutch/{%word}
   title: Litouws-Nederlands (dict.com)
-  include:
-    key: nl-lt 1
+  tags:
+  - dictionary
+  - dutch
+  - language
+  - lithuanian
   examples:
     medis: Nederlands-vertaling van "medis"
     boom: Litouws-vertaling van "boom"
@@ -10692,13 +11876,21 @@ lt-vi 1:
     medis: Bản dịch Tiếng Việt của "medis"
     cây: Bản dịch Tiếng Lít-va của "cây"
 lt-zh 0:
+  url: https://www.dict.com/lithuanian-chinese/
   title: 立陶宛文-中文 (dict.com)
-  include:
-    key: zh-lt 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - lithuanian
 lt-zh 1:
+  url: https://www.dict.com/lithuanian-chinese/{%word}
   title: 立陶宛文-中文 (dict.com)
-  include:
-    key: zh-lt 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - lithuanian
   examples:
     medis: 中文 的"medis"翻译
     树: 立陶宛文 的"树"翻译
@@ -10785,22 +11977,25 @@ lv-el 1:
   examples:
     koks: Μετάφραση στα Ελληνικά για το "koks"
     δέντρο: Μετάφραση στα Λετονικά για το "δέντρο"
+lv-en 0:
+  title: Latvian-English (dict.com)
+  include:
+    key: en-lv 0
+lv-en 1:
+  title: Latvian-English (dict.com)
+  include:
+    key: en-lv 1
+  examples:
+    koks: English translation of "koks"
+    tree: Latvian translation of "tree"
 lv-es 0:
-  url: https://www.dict.com/latvian-spanish/
   title: Letón-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - latvian
-  - spanish
+  include:
+    key: es-lv 0
 lv-es 1:
-  url: https://www.dict.com/latvian-spanish/{%word}
   title: Letón-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - latvian
-  - spanish
+  include:
+    key: es-lv 1
   examples:
     koks: Traducción al español de "koks"
     árbol: Traducción al letón de "árbol"
@@ -10915,32 +12110,32 @@ lv-ko 1:
     koks: '"koks"의 한국어 번역'
     나무: '"나무"의 라트비아어 번역'
 lv-lt 0:
-  url: https://www.dict.com/latvian-lithuanian/
   title: Latvių-Lietuvių (dict.com)
-  tags:
-  - dictionary
-  - language
-  - latvian
-  - lithuanian
+  include:
+    key: lt-lv 0
 lv-lt 1:
-  url: https://www.dict.com/latvian-lithuanian/{%word}
   title: Latvių-Lietuvių (dict.com)
-  tags:
-  - dictionary
-  - language
-  - latvian
-  - lithuanian
+  include:
+    key: lt-lv 1
   examples:
     koks: lietuvių vertimas žodžiui "koks"
     medis: latvių vertimas žodžiui "medis"
 lv-nl 0:
+  url: https://www.dict.com/latvian-dutch/
   title: Lets-Nederlands (dict.com)
-  include:
-    key: nl-lv 0
+  tags:
+  - dictionary
+  - dutch
+  - language
+  - latvian
 lv-nl 1:
+  url: https://www.dict.com/latvian-dutch/{%word}
   title: Lets-Nederlands (dict.com)
-  include:
-    key: nl-lv 1
+  tags:
+  - dictionary
+  - dutch
+  - language
+  - latvian
   examples:
     koks: Nederlands-vertaling van "koks"
     boom: Lets-vertaling van "boom"
@@ -11192,13 +12387,21 @@ lv-vi 1:
     koks: Bản dịch Tiếng Việt của "koks"
     cây: Bản dịch Tiếng Latvia của "cây"
 lv-zh 0:
+  url: https://www.dict.com/latvian-chinese/
   title: 拉脱维亚文-中文 (dict.com)
-  include:
-    key: zh-lv 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - latvian
 lv-zh 1:
+  url: https://www.dict.com/latvian-chinese/{%word}
   title: 拉脱维亚文-中文 (dict.com)
-  include:
-    key: zh-lv 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - latvian
   examples:
     koks: 中文 的"koks"翻译
     树: 拉脱维亚文 的"树"翻译
@@ -11264,135 +12467,90 @@ nl-da 1:
     boom: dansk oversættelse af "boom"
     træ: hollandsk oversættelse af "træ"
 nl-de 0:
-  url: https://www.dict.com/dutch-german/
   title: Niederländisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - german
-  - language
+  include:
+    key: de-nl 0
 nl-de 1:
-  url: https://www.dict.com/dutch-german/{%word}
   title: Niederländisch-Deutsch (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - german
-  - language
+  include:
+    key: de-nl 1
   examples:
     boom: Deutsch-Übersetzung von "boom"
     baum: Niederländisch-Übersetzung von "baum"
 nl-el 0:
-  url: https://www.dict.com/dutch-greek/
   title: Ολλανδικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - greek
-  - language
+  include:
+    key: el-nl 0
 nl-el 1:
-  url: https://www.dict.com/dutch-greek/{%word}
   title: Ολλανδικά-Ελληνικά (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - greek
-  - language
+  include:
+    key: el-nl 1
   examples:
     boom: Μετάφραση στα Ελληνικά για το "boom"
     δέντρο: Μετάφραση στα Ολλανδικά για το "δέντρο"
+nl-en 0:
+  title: Dutch-English (dict.com)
+  include:
+    key: en-nl 0
+nl-en 1:
+  title: Dutch-English (dict.com)
+  include:
+    key: en-nl 1
+  examples:
+    boom: English translation of "boom"
+    tree: Dutch translation of "tree"
 nl-es 0:
-  url: https://www.dict.com/dutch-spanish/
   title: Neerlandés-Español (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - language
-  - spanish
+  include:
+    key: es-nl 0
 nl-es 1:
-  url: https://www.dict.com/dutch-spanish/{%word}
   title: Neerlandés-Español (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - language
-  - spanish
+  include:
+    key: es-nl 1
   examples:
     boom: Traducción al español de "boom"
     árbol: Traducción al neerlandés de "árbol"
 nl-et 0:
-  url: https://www.dict.com/dutch-estonian/
   title: Hollandi-Eesti (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - estonian
-  - language
+  include:
+    key: et-nl 0
 nl-et 1:
-  url: https://www.dict.com/dutch-estonian/{%word}
   title: Hollandi-Eesti (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - estonian
-  - language
+  include:
+    key: et-nl 1
   examples:
     boom: eesti tõlge "boom"
     puu: hollandi tõlge "puu"
 nl-fi 0:
-  url: https://www.dict.com/dutch-finnish/
   title: Hollanti-Suomi (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - finnish
-  - language
+  include:
+    key: fi-nl 0
 nl-fi 1:
-  url: https://www.dict.com/dutch-finnish/{%word}
   title: Hollanti-Suomi (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - finnish
-  - language
+  include:
+    key: fi-nl 1
   examples:
     boom: suomi-käännös sanalle "boom"
     puu: hollanti-käännös sanalle "puu"
 nl-fr 0:
-  url: https://www.dict.com/dutch-french/
   title: Néerlandais-Français (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - french
-  - language
+  include:
+    key: fr-nl 0
 nl-fr 1:
-  url: https://www.dict.com/dutch-french/{%word}
   title: Néerlandais-Français (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - french
-  - language
+  include:
+    key: fr-nl 1
   examples:
     boom: Traduction en français de "boom"
     arbre: Traduction en néerlandais de "arbre"
 nl-he 0:
-  url: https://www.dict.com/dutch-hebrew/
   title: הולנדית-עברית (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - hebrew
-  - language
+  include:
+    key: he-nl 0
 nl-he 1:
-  url: https://www.dict.com/dutch-hebrew/{%word}
   title: הולנדית-עברית (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - hebrew
-  - language
+  include:
+    key: he-nl 1
   examples:
     boom: עברית תרגום של "boom"
     עץ: הולנדית תרגום של "עץ"
@@ -11408,135 +12566,79 @@ nl-hr 1:
     boom: hrvatski prijevod od "boom"
     stablo: nizozemski prijevod od "stablo"
 nl-hu 0:
-  url: https://www.dict.com/dutch-hungarian/
   title: Holland-Magyar (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - hungarian
-  - language
+  include:
+    key: hu-nl 0
 nl-hu 1:
-  url: https://www.dict.com/dutch-hungarian/{%word}
   title: Holland-Magyar (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - hungarian
-  - language
+  include:
+    key: hu-nl 1
   examples:
     boom: magyar fordítás a(z) "boom" számára
     fa: holland fordítás a(z) "fa" számára
 nl-id 0:
-  url: https://www.dict.com/dutch-indonesian/
   title: Belanda-Bahasa Indonesia (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - indonesian
-  - language
+  include:
+    key: id-nl 0
 nl-id 1:
-  url: https://www.dict.com/dutch-indonesian/{%word}
   title: Belanda-Bahasa Indonesia (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - indonesian
-  - language
+  include:
+    key: id-nl 1
   examples:
     boom: terjemahan Bahasa Indonesia dari "boom"
     pohon: terjemahan Belanda dari "pohon"
 nl-it 0:
-  url: https://www.dict.com/dutch-italian/
   title: Olandese-Italiano (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - italian
-  - language
+  include:
+    key: it-nl 0
 nl-it 1:
-  url: https://www.dict.com/dutch-italian/{%word}
   title: Olandese-Italiano (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - italian
-  - language
+  include:
+    key: it-nl 1
   examples:
     boom: Traduzione in italiano di "boom"
     albero: Traduzione in olandese di "albero"
 nl-ja 0:
-  url: https://www.dict.com/dutch-japanese/
   title: オランダ語-日本語 (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - japanese
-  - language
+  include:
+    key: ja-nl 0
 nl-ja 1:
-  url: https://www.dict.com/dutch-japanese/{%word}
   title: オランダ語-日本語 (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - japanese
-  - language
+  include:
+    key: ja-nl 1
   examples:
     boom: '"boom"の日本語翻訳'
     木: '"木"のオランダ語翻訳'
 nl-ko 0:
-  url: https://www.dict.com/dutch-korean/
   title: 네덜란드어-한국어 (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - korean
-  - language
+  include:
+    key: ko-nl 0
 nl-ko 1:
-  url: https://www.dict.com/dutch-korean/{%word}
   title: 네덜란드어-한국어 (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - korean
-  - language
+  include:
+    key: ko-nl 1
   examples:
     boom: '"boom"의 한국어 번역'
     나무: '"나무"의 네덜란드어 번역'
 nl-lt 0:
-  url: https://www.dict.com/dutch-lithuanian/
   title: Olandų-Lietuvių (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - language
-  - lithuanian
+  include:
+    key: lt-nl 0
 nl-lt 1:
-  url: https://www.dict.com/dutch-lithuanian/{%word}
   title: Olandų-Lietuvių (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - language
-  - lithuanian
+  include:
+    key: lt-nl 1
   examples:
     boom: lietuvių vertimas žodžiui "boom"
     medis: olandų vertimas žodžiui "medis"
 nl-lv 0:
-  url: https://www.dict.com/dutch-latvian/
   title: Holandiešu-Latviešu (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - language
-  - latvian
+  include:
+    key: lv-nl 0
 nl-lv 1:
-  url: https://www.dict.com/dutch-latvian/{%word}
   title: Holandiešu-Latviešu (dict.com)
-  tags:
-  - dictionary
-  - dutch
-  - language
-  - latvian
+  include:
+    key: lv-nl 1
   examples:
     boom: latviešu tulkojums vārdam "boom"
     koks: holandiešu tulkojums vārdam "koks"
@@ -11788,13 +12890,21 @@ nl-vi 1:
     boom: Bản dịch Tiếng Việt của "boom"
     cây: Bản dịch Tiếng Hà Lan của "cây"
 nl-zh 0:
+  url: https://www.dict.com/dutch-chinese/
   title: 荷兰文-中文 (dict.com)
-  include:
-    key: zh-nl 0
+  tags:
+  - chinese
+  - dictionary
+  - dutch
+  - language
 nl-zh 1:
+  url: https://www.dict.com/dutch-chinese/{%word}
   title: 荷兰文-中文 (dict.com)
-  include:
-    key: zh-nl 1
+  tags:
+  - chinese
+  - dictionary
+  - dutch
+  - language
   examples:
     boom: 中文 的"boom"翻译
     树: 荷兰文 的"树"翻译
@@ -11881,22 +12991,25 @@ no-el 1:
   examples:
     tre: Μετάφραση στα Ελληνικά για το "tre"
     δέντρο: Μετάφραση στα Νορβηγικά για το "δέντρο"
+no-en 0:
+  title: Norwegian-English (dict.com)
+  include:
+    key: en-no 0
+no-en 1:
+  title: Norwegian-English (dict.com)
+  include:
+    key: en-no 1
+  examples:
+    tre: English translation of "tre"
+    tree: Norwegian translation of "tree"
 no-es 0:
-  url: https://www.dict.com/norwegian-spanish/
   title: Noruego-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - norwegian
-  - spanish
+  include:
+    key: es-no 0
 no-es 1:
-  url: https://www.dict.com/norwegian-spanish/{%word}
   title: Noruego-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - norwegian
-  - spanish
+  include:
+    key: es-no 1
   examples:
     tre: Traducción al español de "tre"
     árbol: Traducción al noruego de "árbol"
@@ -12272,13 +13385,21 @@ no-vi 1:
     tre: Bản dịch Tiếng Việt của "tre"
     cây: Bản dịch Tiếng Na Uy của "cây"
 no-zh 0:
+  url: https://www.dict.com/norwegian-chinese/
   title: 挪威文-中文 (dict.com)
-  include:
-    key: zh-no 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - norwegian
 no-zh 1:
+  url: https://www.dict.com/norwegian-chinese/{%word}
   title: 挪威文-中文 (dict.com)
-  include:
-    key: zh-no 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - norwegian
   examples:
     tre: 中文 的"tre"翻译
     树: 挪威文 的"树"翻译
@@ -12365,22 +13486,25 @@ pl-el 1:
   examples:
     drzewo: Μετάφραση στα Ελληνικά για το "drzewo"
     δέντρο: Μετάφραση στα Πολωνικά για το "δέντρο"
+pl-en 0:
+  title: Polish-English (dict.com)
+  include:
+    key: en-pl 0
+pl-en 1:
+  title: Polish-English (dict.com)
+  include:
+    key: en-pl 1
+  examples:
+    drzewo: English translation of "drzewo"
+    tree: Polish translation of "tree"
 pl-es 0:
-  url: https://www.dict.com/polish-spanish/
   title: Polaco-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - polish
-  - spanish
+  include:
+    key: es-pl 0
 pl-es 1:
-  url: https://www.dict.com/polish-spanish/{%word}
   title: Polaco-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - polish
-  - spanish
+  include:
+    key: es-pl 1
   examples:
     drzewo: Traducción al español de "drzewo"
     árbol: Traducción al polaco de "árbol"
@@ -12748,13 +13872,21 @@ pl-vi 1:
     drzewo: Bản dịch Tiếng Việt của "drzewo"
     cây: Bản dịch Tiếng Ba Lan của "cây"
 pl-zh 0:
+  url: https://www.dict.com/polish-chinese/
   title: 波兰文-中文 (dict.com)
-  include:
-    key: zh-pl 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - polish
 pl-zh 1:
+  url: https://www.dict.com/polish-chinese/{%word}
   title: 波兰文-中文 (dict.com)
-  include:
-    key: zh-pl 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - polish
   examples:
     drzewo: 中文 的"drzewo"翻译
     树: 波兰文 的"树"翻译
@@ -12841,22 +13973,25 @@ pt-el 1:
   examples:
     árvore: Μετάφραση στα Ελληνικά για το "árvore"
     δέντρο: Μετάφραση στα Πορτογαλικά για το "δέντρο"
+pt-en 0:
+  title: Portuguese-English (dict.com)
+  include:
+    key: en-pt 0
+pt-en 1:
+  title: Portuguese-English (dict.com)
+  include:
+    key: en-pt 1
+  examples:
+    árvore: English translation of "árvore"
+    tree: Portuguese translation of "tree"
 pt-es 0:
-  url: https://www.dict.com/portuguese-spanish/
   title: Portugués-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - portuguese
-  - spanish
+  include:
+    key: es-pt 0
 pt-es 1:
-  url: https://www.dict.com/portuguese-spanish/{%word}
   title: Portugués-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - portuguese
-  - spanish
+  include:
+    key: es-pt 1
   examples:
     árvore: Traducción al español de "árvore"
     árbol: Traducción al portugués de "árbol"
@@ -13216,13 +14351,21 @@ pt-vi 1:
     árvore: Bản dịch Tiếng Việt của "árvore"
     cây: Bản dịch Tiếng Bồ Đào Nha của "cây"
 pt-zh 0:
+  url: https://www.dict.com/portuguese-chinese/
   title: 葡萄牙文-中文 (dict.com)
-  include:
-    key: zh-pt 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - portuguese
 pt-zh 1:
+  url: https://www.dict.com/portuguese-chinese/{%word}
   title: 葡萄牙文-中文 (dict.com)
-  include:
-    key: zh-pt 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - portuguese
   examples:
     árvore: 中文 的"árvore"翻译
     树: 葡萄牙文 的"树"翻译
@@ -13309,22 +14452,25 @@ ro-el 1:
   examples:
     copac: Μετάφραση στα Ελληνικά για το "copac"
     δέντρο: Μετάφραση στα Ρουμανικά για το "δέντρο"
+ro-en 0:
+  title: Romanian-English (dict.com)
+  include:
+    key: en-ro 0
+ro-en 1:
+  title: Romanian-English (dict.com)
+  include:
+    key: en-ro 1
+  examples:
+    copac: English translation of "copac"
+    tree: Romanian translation of "tree"
 ro-es 0:
-  url: https://www.dict.com/romanian-spanish/
   title: Rumano-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - romanian
-  - spanish
+  include:
+    key: es-ro 0
 ro-es 1:
-  url: https://www.dict.com/romanian-spanish/{%word}
   title: Rumano-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - romanian
-  - spanish
+  include:
+    key: es-ro 1
   examples:
     copac: Traducción al español de "copac"
     árbol: Traducción al rumano de "árbol"
@@ -13676,13 +14822,21 @@ ro-vi 1:
     copac: Bản dịch Tiếng Việt của "copac"
     cây: Bản dịch Tiếng Rumani của "cây"
 ro-zh 0:
+  url: https://www.dict.com/romanian-chinese/
   title: 罗马尼亚文-中文 (dict.com)
-  include:
-    key: zh-ro 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - romanian
 ro-zh 1:
+  url: https://www.dict.com/romanian-chinese/{%word}
   title: 罗马尼亚文-中文 (dict.com)
-  include:
-    key: zh-ro 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - romanian
   examples:
     copac: 中文 的"copac"翻译
     树: 罗马尼亚文 的"树"翻译
@@ -13769,22 +14923,25 @@ ru-el 1:
   examples:
     дерево: Μετάφραση στα Ελληνικά για το "дерево"
     δέντρο: Μετάφραση στα Ρωσικά για το "δέντρο"
+ru-en 0:
+  title: Russian-English (dict.com)
+  include:
+    key: en-ru 0
+ru-en 1:
+  title: Russian-English (dict.com)
+  include:
+    key: en-ru 1
+  examples:
+    дерево: English translation of "дерево"
+    tree: Russian translation of "tree"
 ru-es 0:
-  url: https://www.dict.com/russian-spanish/
   title: Ruso-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - russian
-  - spanish
+  include:
+    key: es-ru 0
 ru-es 1:
-  url: https://www.dict.com/russian-spanish/{%word}
   title: Ruso-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - russian
-  - spanish
+  include:
+    key: es-ru 1
   examples:
     дерево: Traducción al español de "дерево"
     árbol: Traducción al ruso de "árbol"
@@ -14127,13 +15284,21 @@ ru-vi 1:
     дерево: Bản dịch Tiếng Việt của "дерево"
     cây: Bản dịch Tiếng Nga của "cây"
 ru-zh 0:
+  url: https://www.dict.com/russian-chinese/
   title: 俄文-中文 (dict.com)
-  include:
-    key: zh-ru 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - russian
 ru-zh 1:
+  url: https://www.dict.com/russian-chinese/{%word}
   title: 俄文-中文 (dict.com)
-  include:
-    key: zh-ru 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - russian
   examples:
     дерево: 中文 的"дерево"翻译
     树: 俄文 的"树"翻译
@@ -14220,22 +15385,25 @@ sk-el 1:
   examples:
     stromček: Μετάφραση στα Ελληνικά για το "stromček"
     δέντρο: Μετάφραση στα Σλοβακικά για το "δέντρο"
+sk-en 0:
+  title: Slovak-English (dict.com)
+  include:
+    key: en-sk 0
+sk-en 1:
+  title: Slovak-English (dict.com)
+  include:
+    key: en-sk 1
+  examples:
+    stromček: English translation of "stromček"
+    tree: Slovak translation of "tree"
 sk-es 0:
-  url: https://www.dict.com/slovak-spanish/
   title: Eslovaco-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - slovak
-  - spanish
+  include:
+    key: es-sk 0
 sk-es 1:
-  url: https://www.dict.com/slovak-spanish/{%word}
   title: Eslovaco-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - slovak
-  - spanish
+  include:
+    key: es-sk 1
   examples:
     stromček: Traducción al español de "stromček"
     árbol: Traducción al eslovaco de "árbol"
@@ -14457,13 +15625,21 @@ sk-sl 1:
     stromček: Prevod v slovenščina za besedo "stromček"
     drevo: Prevod v slovaščina za besedo "drevo"
 sk-sr 0:
+  url: https://www.dict.com/slovak-serbian/
   title: Словачки-Српски (dict.com)
-  include:
-    key: sr-sk 0
+  tags:
+  - dictionary
+  - language
+  - serbian
+  - slovak
 sk-sr 1:
+  url: https://www.dict.com/slovak-serbian/{%word}
   title: Словачки-Српски (dict.com)
-  include:
-    key: sr-sk 1
+  tags:
+  - dictionary
+  - language
+  - serbian
+  - slovak
   examples:
     stromček: Превод на српски за "stromček"
     дрво: Превод на словачки за "дрво"
@@ -14563,13 +15739,21 @@ sk-vi 1:
     stromček: Bản dịch Tiếng Việt của "stromček"
     cây: Bản dịch Tiếng Slovak của "cây"
 sk-zh 0:
+  url: https://www.dict.com/slovak-chinese/
   title: 斯洛伐克文-中文 (dict.com)
-  include:
-    key: zh-sk 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - slovak
 sk-zh 1:
+  url: https://www.dict.com/slovak-chinese/{%word}
   title: 斯洛伐克文-中文 (dict.com)
-  include:
-    key: zh-sk 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - slovak
   examples:
     stromček: 中文 的"stromček"翻译
     树: 斯洛伐克文 的"树"翻译
@@ -14656,22 +15840,25 @@ sl-el 1:
   examples:
     drevo: Μετάφραση στα Ελληνικά για το "drevo"
     δέντρο: Μετάφραση στα Σλοβενικά για το "δέντρο"
+sl-en 0:
+  title: Slovenian-English (dict.com)
+  include:
+    key: en-sl 0
+sl-en 1:
+  title: Slovenian-English (dict.com)
+  include:
+    key: en-sl 1
+  examples:
+    drevo: English translation of "drevo"
+    tree: Slovenian translation of "tree"
 sl-es 0:
-  url: https://www.dict.com/slovenian-spanish/
   title: Esloveno-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - slovenian
-  - spanish
+  include:
+    key: es-sl 0
 sl-es 1:
-  url: https://www.dict.com/slovenian-spanish/{%word}
   title: Esloveno-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - slovenian
-  - spanish
+  include:
+    key: es-sl 1
   examples:
     drevo: Traducción al español de "drevo"
     árbol: Traducción al esloveno de "árbol"
@@ -14885,13 +16072,21 @@ sl-sk 1:
     drevo: slovenčina preklad pre "drevo"
     stromček: slovinčina preklad pre "stromček"
 sl-sr 0:
+  url: https://www.dict.com/slovenian-serbian/
   title: Словеначки-Српски (dict.com)
-  include:
-    key: sr-sl 0
+  tags:
+  - dictionary
+  - language
+  - serbian
+  - slovenian
 sl-sr 1:
+  url: https://www.dict.com/slovenian-serbian/{%word}
   title: Словеначки-Српски (dict.com)
-  include:
-    key: sr-sl 1
+  tags:
+  - dictionary
+  - language
+  - serbian
+  - slovenian
   examples:
     drevo: Превод на српски за "drevo"
     дрво: Превод на словеначки за "дрво"
@@ -14991,13 +16186,21 @@ sl-vi 1:
     drevo: Bản dịch Tiếng Việt của "drevo"
     cây: Bản dịch Tiếng Slovenia của "cây"
 sl-zh 0:
+  url: https://www.dict.com/slovenian-chinese/
   title: 斯洛文尼亚文-中文 (dict.com)
-  include:
-    key: zh-sl 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - slovenian
 sl-zh 1:
+  url: https://www.dict.com/slovenian-chinese/{%word}
   title: 斯洛文尼亚文-中文 (dict.com)
-  include:
-    key: zh-sl 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - slovenian
   examples:
     drevo: 中文 的"drevo"翻译
     树: 斯洛文尼亚文 的"树"翻译
@@ -15084,22 +16287,25 @@ sr-el 1:
   examples:
     дрво: Μετάφραση στα Ελληνικά για το "дрво"
     δέντρο: Μετάφραση στα Σερβικά για το "δέντρο"
+sr-en 0:
+  title: Serbian-English (dict.com)
+  include:
+    key: en-sr 0
+sr-en 1:
+  title: Serbian-English (dict.com)
+  include:
+    key: en-sr 1
+  examples:
+    дрво: English translation of "дрво"
+    tree: Serbian translation of "tree"
 sr-es 0:
-  url: https://www.dict.com/serbian-spanish/
   title: Serbio-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - serbian
-  - spanish
+  include:
+    key: es-sr 0
 sr-es 1:
-  url: https://www.dict.com/serbian-spanish/{%word}
   title: Serbio-Español (dict.com)
-  tags:
-  - dictionary
-  - language
-  - serbian
-  - spanish
+  include:
+    key: es-sr 1
   examples:
     дрво: Traducción al español de "дрво"
     árbol: Traducción al serbio de "árbol"
@@ -15302,40 +16508,24 @@ sr-ru 1:
     дрво: Перевод на русский язык для "дрво"
     дерево: Перевод на сербский язык для "дерево"
 sr-sk 0:
-  url: https://www.dict.com/serbian-slovak/
   title: Srbčina-Slovenčina (dict.com)
-  tags:
-  - dictionary
-  - language
-  - serbian
-  - slovak
+  include:
+    key: sk-sr 0
 sr-sk 1:
-  url: https://www.dict.com/serbian-slovak/{%word}
   title: Srbčina-Slovenčina (dict.com)
-  tags:
-  - dictionary
-  - language
-  - serbian
-  - slovak
+  include:
+    key: sk-sr 1
   examples:
     дрво: slovenčina preklad pre "дрво"
     stromček: srbčina preklad pre "stromček"
 sr-sl 0:
-  url: https://www.dict.com/serbian-slovenian/
   title: Srbščina-Slovenščina (dict.com)
-  tags:
-  - dictionary
-  - language
-  - serbian
-  - slovenian
+  include:
+    key: sl-sr 0
 sr-sl 1:
-  url: https://www.dict.com/serbian-slovenian/{%word}
   title: Srbščina-Slovenščina (dict.com)
-  tags:
-  - dictionary
-  - language
-  - serbian
-  - slovenian
+  include:
+    key: sl-sr 1
   examples:
     дрво: Prevod v slovenščina za besedo "дрво"
     drevo: Prevod v srbščina za besedo "drevo"
@@ -15435,13 +16625,21 @@ sr-vi 1:
     дрво: Bản dịch Tiếng Việt của "дрво"
     cây: Bản dịch Tiếng Serbia của "cây"
 sr-zh 0:
+  url: https://www.dict.com/serbian-chinese/
   title: 塞尔维亚文-中文 (dict.com)
-  include:
-    key: zh-sr 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - serbian
 sr-zh 1:
+  url: https://www.dict.com/serbian-chinese/{%word}
   title: 塞尔维亚文-中文 (dict.com)
-  include:
-    key: zh-sr 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - serbian
   examples:
     дрво: 中文 的"дрво"翻译
     树: 塞尔维亚文 的"树"翻译
@@ -15528,6 +16726,17 @@ sv-el 1:
   examples:
     träd: Μετάφραση στα Ελληνικά για το "träd"
     δέντρο: Μετάφραση στα Σουηδικά για το "δέντρο"
+sv-en 0:
+  title: Swedish-English (dict.com)
+  include:
+    key: en-sv 0
+sv-en 1:
+  title: Swedish-English (dict.com)
+  include:
+    key: en-sv 1
+  examples:
+    träd: English translation of "träd"
+    tree: Swedish translation of "tree"
 sv-es 0:
   title: Sueco-Español (dict.com)
   include:
@@ -15847,13 +17056,21 @@ sv-vi 1:
     träd: Bản dịch Tiếng Việt của "träd"
     cây: Bản dịch Tiếng Thụy Điển của "cây"
 sv-zh 0:
+  url: https://www.dict.com/swedish-chinese/
   title: 瑞典文-中文 (dict.com)
-  include:
-    key: zh-sv 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - swedish
 sv-zh 1:
+  url: https://www.dict.com/swedish-chinese/{%word}
   title: 瑞典文-中文 (dict.com)
-  include:
-    key: zh-sv 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - swedish
   examples:
     träd: 中文 的"träd"翻译
     树: 瑞典文 的"树"翻译
@@ -15940,6 +17157,17 @@ th-el 1:
   examples:
     ต้นไม้: Μετάφραση στα Ελληνικά για το "ต้นไม้"
     δέντρο: Μετάφραση στα Ταϊλανδικά για το "δέντρο"
+th-en 0:
+  title: Thai-English (dict.com)
+  include:
+    key: en-th 0
+th-en 1:
+  title: Thai-English (dict.com)
+  include:
+    key: en-th 1
+  examples:
+    ต้นไม้: English translation of "ต้นไม้"
+    tree: Thai translation of "tree"
 th-es 0:
   title: Tailandés-Español (dict.com)
   include:
@@ -16251,13 +17479,21 @@ th-vi 1:
     ต้นไม้: Bản dịch Tiếng Việt của "ต้นไม้"
     cây: Bản dịch Tiếng Thái của "cây"
 th-zh 0:
+  url: https://www.dict.com/thai-chinese/
   title: 泰文-中文 (dict.com)
-  include:
-    key: zh-th 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - thai
 th-zh 1:
+  url: https://www.dict.com/thai-chinese/{%word}
   title: 泰文-中文 (dict.com)
-  include:
-    key: zh-th 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - thai
   examples:
     ต้นไม้: 中文 的"ต้นไม้"翻译
     树: 泰文 的"树"翻译
@@ -16344,6 +17580,17 @@ tr-el 1:
   examples:
     ağaç: Μετάφραση στα Ελληνικά για το "ağaç"
     δέντρο: Μετάφραση στα Τουρκικά για το "δέντρο"
+tr-en 0:
+  title: Turkish-English (dict.com)
+  include:
+    key: en-tr 0
+tr-en 1:
+  title: Turkish-English (dict.com)
+  include:
+    key: en-tr 1
+  examples:
+    ağaç: English translation of "ağaç"
+    tree: Turkish translation of "tree"
 tr-es 0:
   title: Turco-Español (dict.com)
   include:
@@ -16647,13 +17894,21 @@ tr-vi 1:
     ağaç: Bản dịch Tiếng Việt của "ağaç"
     cây: Bản dịch Tiếng Thổ Nhĩ Kỳ của "cây"
 tr-zh 0:
+  url: https://www.dict.com/turkish-chinese/
   title: 土耳其文-中文 (dict.com)
-  include:
-    key: zh-tr 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - turkish
 tr-zh 1:
+  url: https://www.dict.com/turkish-chinese/{%word}
   title: 土耳其文-中文 (dict.com)
-  include:
-    key: zh-tr 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - turkish
   examples:
     ağaç: 中文 的"ağaç"翻译
     树: 土耳其文 的"树"翻译
@@ -16740,6 +17995,17 @@ uk-el 1:
   examples:
     дерево: Μετάφραση στα Ελληνικά για το "дерево"
     δέντρο: Μετάφραση στα Ουκρανικά για το "δέντρο"
+uk-en 0:
+  title: Ukrainian-English (dict.com)
+  include:
+    key: en-uk 0
+uk-en 1:
+  title: Ukrainian-English (dict.com)
+  include:
+    key: en-uk 1
+  examples:
+    дерево: English translation of "дерево"
+    tree: Ukrainian translation of "tree"
 uk-es 0:
   title: Ucraniano-Español (dict.com)
   include:
@@ -17034,13 +18300,21 @@ uk-vi 1:
     дерево: Bản dịch Tiếng Việt của "дерево"
     cây: Bản dịch Tiếng Ucraina của "cây"
 uk-zh 0:
+  url: https://www.dict.com/ukrainian-chinese/
   title: 乌克兰文-中文 (dict.com)
-  include:
-    key: zh-uk 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - ukrainian
 uk-zh 1:
+  url: https://www.dict.com/ukrainian-chinese/{%word}
   title: 乌克兰文-中文 (dict.com)
-  include:
-    key: zh-uk 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - ukrainian
   examples:
     дерево: 中文 的"дерево"翻译
     树: 乌克兰文 的"树"翻译
@@ -17127,6 +18401,17 @@ vi-el 1:
   examples:
     cây: Μετάφραση στα Ελληνικά για το "cây"
     δέντρο: Μετάφραση στα Βιετναμικά για το "δέντρο"
+vi-en 0:
+  title: Vietnamese-English (dict.com)
+  include:
+    key: en-vi 0
+vi-en 1:
+  title: Vietnamese-English (dict.com)
+  include:
+    key: en-vi 1
+  examples:
+    cây: English translation of "cây"
+    tree: Vietnamese translation of "tree"
 vi-es 0:
   title: Vietnamita-Español (dict.com)
   include:
@@ -17414,13 +18699,21 @@ vi-uk 1:
     cây: Переклад українська для "cây"
     дерево: Переклад вʼєтнамська для "дерево"
 vi-zh 0:
+  url: https://www.dict.com/vietnamese-chinese/
   title: 越南文-中文 (dict.com)
-  include:
-    key: zh-vi 0
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - vietnamese
 vi-zh 1:
+  url: https://www.dict.com/vietnamese-chinese/{%word}
   title: 越南文-中文 (dict.com)
-  include:
-    key: zh-vi 1
+  tags:
+  - chinese
+  - dictionary
+  - language
+  - vietnamese
   examples:
     cây: 中文 的"cây"翻译
     树: 越南文 的"树"翻译
@@ -17464,591 +18757,354 @@ zh-ca 1:
     树: Traducció al català de "树"
     arbre: Traducció al xinès de "arbre"
 zh-cs 0:
-  url: https://www.dict.com/chinese-czech/
   title: Čínština-Čeština (dict.com)
-  tags:
-  - chinese
-  - czech
-  - dictionary
-  - language
+  include:
+    key: cs-zh 0
 zh-cs 1:
-  url: https://www.dict.com/chinese-czech/{%word}
   title: Čínština-Čeština (dict.com)
-  tags:
-  - chinese
-  - czech
-  - dictionary
-  - language
+  include:
+    key: cs-zh 1
   examples:
     树: čeština překlad pro "树"
     strom: čínština překlad pro "strom"
 zh-da 0:
-  url: https://www.dict.com/chinese-danish/
   title: Kinesisk-Dansk (dict.com)
-  tags:
-  - chinese
-  - danish
-  - dictionary
-  - language
+  include:
+    key: da-zh 0
 zh-da 1:
-  url: https://www.dict.com/chinese-danish/{%word}
   title: Kinesisk-Dansk (dict.com)
-  tags:
-  - chinese
-  - danish
-  - dictionary
-  - language
+  include:
+    key: da-zh 1
   examples:
     树: dansk oversættelse af "树"
     træ: kinesisk oversættelse af "træ"
 zh-de 0:
-  url: https://www.dict.com/chinese-german/
   title: Chinesisch-Deutsch (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - german
-  - language
+  include:
+    key: de-zh 0
 zh-de 1:
-  url: https://www.dict.com/chinese-german/{%word}
   title: Chinesisch-Deutsch (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - german
-  - language
+  include:
+    key: de-zh 1
   examples:
     树: Deutsch-Übersetzung von "树"
     baum: Chinesisch-Übersetzung von "baum"
 zh-el 0:
-  url: https://www.dict.com/chinese-greek/
   title: Κινεζικά-Ελληνικά (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - greek
-  - language
+  include:
+    key: el-zh 0
 zh-el 1:
-  url: https://www.dict.com/chinese-greek/{%word}
   title: Κινεζικά-Ελληνικά (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - greek
-  - language
+  include:
+    key: el-zh 1
   examples:
     树: Μετάφραση στα Ελληνικά για το "树"
     δέντρο: Μετάφραση στα Κινεζικά για το "δέντρο"
+zh-en 0:
+  title: Chinese-English (dict.com)
+  include:
+    key: en-zh 0
+zh-en 1:
+  title: Chinese-English (dict.com)
+  include:
+    key: en-zh 1
+  examples:
+    树: English translation of "树"
+    tree: Chinese translation of "tree"
 zh-es 0:
-  url: https://www.dict.com/chinese-spanish/
   title: Chino-Español (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - spanish
+  include:
+    key: es-zh 0
 zh-es 1:
-  url: https://www.dict.com/chinese-spanish/{%word}
   title: Chino-Español (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - spanish
+  include:
+    key: es-zh 1
   examples:
     树: Traducción al español de "树"
     árbol: Traducción al chino de "árbol"
 zh-et 0:
-  url: https://www.dict.com/chinese-estonian/
   title: Hiina-Eesti (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - estonian
-  - language
+  include:
+    key: et-zh 0
 zh-et 1:
-  url: https://www.dict.com/chinese-estonian/{%word}
   title: Hiina-Eesti (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - estonian
-  - language
+  include:
+    key: et-zh 1
   examples:
     树: eesti tõlge "树"
     puu: hiina tõlge "puu"
 zh-fi 0:
-  url: https://www.dict.com/chinese-finnish/
   title: Kiina-Suomi (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - finnish
-  - language
+  include:
+    key: fi-zh 0
 zh-fi 1:
-  url: https://www.dict.com/chinese-finnish/{%word}
   title: Kiina-Suomi (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - finnish
-  - language
+  include:
+    key: fi-zh 1
   examples:
     树: suomi-käännös sanalle "树"
     puu: kiina-käännös sanalle "puu"
 zh-fr 0:
-  url: https://www.dict.com/chinese-french/
   title: Chinois-Français (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - french
-  - language
+  include:
+    key: fr-zh 0
 zh-fr 1:
-  url: https://www.dict.com/chinese-french/{%word}
   title: Chinois-Français (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - french
-  - language
+  include:
+    key: fr-zh 1
   examples:
     树: Traduction en français de "树"
     arbre: Traduction en chinois de "arbre"
 zh-he 0:
-  url: https://www.dict.com/chinese-hebrew/
   title: סינית-עברית (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - hebrew
-  - language
+  include:
+    key: he-zh 0
 zh-he 1:
-  url: https://www.dict.com/chinese-hebrew/{%word}
   title: סינית-עברית (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - hebrew
-  - language
+  include:
+    key: he-zh 1
   examples:
     树: עברית תרגום של "树"
     עץ: סינית תרגום של "עץ"
 zh-hr 0:
-  url: https://www.dict.com/chinese-croatian/
   title: Kineski-Hrvatski (dict.com)
-  tags:
-  - chinese
-  - croatian
-  - dictionary
-  - language
+  include:
+    key: hr-zh 0
 zh-hr 1:
-  url: https://www.dict.com/chinese-croatian/{%word}
   title: Kineski-Hrvatski (dict.com)
-  tags:
-  - chinese
-  - croatian
-  - dictionary
-  - language
+  include:
+    key: hr-zh 1
   examples:
     树: hrvatski prijevod od "树"
     stablo: kineski prijevod od "stablo"
 zh-hu 0:
-  url: https://www.dict.com/chinese-hungarian/
   title: Kínai-Magyar (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - hungarian
-  - language
+  include:
+    key: hu-zh 0
 zh-hu 1:
-  url: https://www.dict.com/chinese-hungarian/{%word}
   title: Kínai-Magyar (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - hungarian
-  - language
+  include:
+    key: hu-zh 1
   examples:
     树: magyar fordítás a(z) "树" számára
     fa: kínai fordítás a(z) "fa" számára
 zh-id 0:
-  url: https://www.dict.com/chinese-indonesian/
   title: China-Bahasa Indonesia (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - indonesian
-  - language
+  include:
+    key: id-zh 0
 zh-id 1:
-  url: https://www.dict.com/chinese-indonesian/{%word}
   title: China-Bahasa Indonesia (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - indonesian
-  - language
+  include:
+    key: id-zh 1
   examples:
     树: terjemahan Bahasa Indonesia dari "树"
     pohon: terjemahan China dari "pohon"
 zh-it 0:
-  url: https://www.dict.com/chinese-italian/
   title: Cinese-Italiano (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - italian
-  - language
+  include:
+    key: it-zh 0
 zh-it 1:
-  url: https://www.dict.com/chinese-italian/{%word}
   title: Cinese-Italiano (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - italian
-  - language
+  include:
+    key: it-zh 1
   examples:
     树: Traduzione in italiano di "树"
     albero: Traduzione in cinese di "albero"
 zh-ja 0:
-  url: https://www.dict.com/chinese-japanese/
   title: 中国語-日本語 (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - japanese
-  - language
+  include:
+    key: ja-zh 0
 zh-ja 1:
-  url: https://www.dict.com/chinese-japanese/{%word}
   title: 中国語-日本語 (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - japanese
-  - language
+  include:
+    key: ja-zh 1
   examples:
     树: '"树"の日本語翻訳'
     木: '"木"の中国語翻訳'
 zh-ko 0:
-  url: https://www.dict.com/chinese-korean/
   title: 중국어-한국어 (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - korean
-  - language
+  include:
+    key: ko-zh 0
 zh-ko 1:
-  url: https://www.dict.com/chinese-korean/{%word}
   title: 중국어-한국어 (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - korean
-  - language
+  include:
+    key: ko-zh 1
   examples:
     树: '"树"의 한국어 번역'
     나무: '"나무"의 중국어 번역'
 zh-lt 0:
-  url: https://www.dict.com/chinese-lithuanian/
   title: Kinų-Lietuvių (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - lithuanian
+  include:
+    key: lt-zh 0
 zh-lt 1:
-  url: https://www.dict.com/chinese-lithuanian/{%word}
   title: Kinų-Lietuvių (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - lithuanian
+  include:
+    key: lt-zh 1
   examples:
     树: lietuvių vertimas žodžiui "树"
     medis: kinų vertimas žodžiui "medis"
 zh-lv 0:
-  url: https://www.dict.com/chinese-latvian/
   title: Ķīniešu-Latviešu (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - latvian
+  include:
+    key: lv-zh 0
 zh-lv 1:
-  url: https://www.dict.com/chinese-latvian/{%word}
   title: Ķīniešu-Latviešu (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - latvian
+  include:
+    key: lv-zh 1
   examples:
     树: latviešu tulkojums vārdam "树"
     koks: ķīniešu tulkojums vārdam "koks"
 zh-nl 0:
-  url: https://www.dict.com/chinese-dutch/
   title: Chinees-Nederlands (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - dutch
-  - language
+  include:
+    key: nl-zh 0
 zh-nl 1:
-  url: https://www.dict.com/chinese-dutch/{%word}
   title: Chinees-Nederlands (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - dutch
-  - language
+  include:
+    key: nl-zh 1
   examples:
     树: Nederlands-vertaling van "树"
     boom: Chinees-vertaling van "boom"
 zh-no 0:
-  url: https://www.dict.com/chinese-norwegian/
   title: Kinesisk-Norsk (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - norwegian
+  include:
+    key: no-zh 0
 zh-no 1:
-  url: https://www.dict.com/chinese-norwegian/{%word}
   title: Kinesisk-Norsk (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - norwegian
+  include:
+    key: no-zh 1
   examples:
     树: norsk-oversettelse av "树"
     tre: kinesisk-oversettelse av "tre"
 zh-pl 0:
-  url: https://www.dict.com/chinese-polish/
   title: Chiński-Polski (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - polish
+  include:
+    key: pl-zh 0
 zh-pl 1:
-  url: https://www.dict.com/chinese-polish/{%word}
   title: Chiński-Polski (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - polish
+  include:
+    key: pl-zh 1
   examples:
     树: Tłumaczenie na język polski dla "树"
     drzewo: Tłumaczenie na język chiński dla "drzewo"
 zh-pt 0:
-  url: https://www.dict.com/chinese-portuguese/
   title: Chinês-Português (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - portuguese
+  include:
+    key: pt-zh 0
 zh-pt 1:
-  url: https://www.dict.com/chinese-portuguese/{%word}
   title: Chinês-Português (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - portuguese
+  include:
+    key: pt-zh 1
   examples:
     树: Tradução em português de "树"
     árvore: Tradução em chinês de "árvore"
 zh-ro 0:
-  url: https://www.dict.com/chinese-romanian/
   title: Chineză-Română (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - romanian
+  include:
+    key: ro-zh 0
 zh-ro 1:
-  url: https://www.dict.com/chinese-romanian/{%word}
   title: Chineză-Română (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - romanian
+  include:
+    key: ro-zh 1
   examples:
     树: Traducere în română pentru "树"
     copac: Traducere în chineză pentru "copac"
 zh-ru 0:
-  url: https://www.dict.com/chinese-russian/
   title: Китайский-Русский (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - russian
+  include:
+    key: ru-zh 0
 zh-ru 1:
-  url: https://www.dict.com/chinese-russian/{%word}
   title: Китайский-Русский (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - russian
+  include:
+    key: ru-zh 1
   examples:
     树: Перевод на русский язык для "树"
     дерево: Перевод на китайский язык для "дерево"
 zh-sk 0:
-  url: https://www.dict.com/chinese-slovak/
   title: Čínština-Slovenčina (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - slovak
+  include:
+    key: sk-zh 0
 zh-sk 1:
-  url: https://www.dict.com/chinese-slovak/{%word}
   title: Čínština-Slovenčina (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - slovak
+  include:
+    key: sk-zh 1
   examples:
     树: slovenčina preklad pre "树"
     stromček: čínština preklad pre "stromček"
 zh-sl 0:
-  url: https://www.dict.com/chinese-slovenian/
   title: Kitajščina-Slovenščina (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - slovenian
+  include:
+    key: sl-zh 0
 zh-sl 1:
-  url: https://www.dict.com/chinese-slovenian/{%word}
   title: Kitajščina-Slovenščina (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - slovenian
+  include:
+    key: sl-zh 1
   examples:
     树: Prevod v slovenščina za besedo "树"
     drevo: Prevod v kitajščina za besedo "drevo"
 zh-sr 0:
-  url: https://www.dict.com/chinese-serbian/
   title: Кинески-Српски (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - serbian
+  include:
+    key: sr-zh 0
 zh-sr 1:
-  url: https://www.dict.com/chinese-serbian/{%word}
   title: Кинески-Српски (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - serbian
+  include:
+    key: sr-zh 1
   examples:
     树: Превод на српски за "树"
     дрво: Превод на кинески за "дрво"
 zh-sv 0:
-  url: https://www.dict.com/chinese-swedish/
   title: Kinesiska-Svenska (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - swedish
+  include:
+    key: sv-zh 0
 zh-sv 1:
-  url: https://www.dict.com/chinese-swedish/{%word}
   title: Kinesiska-Svenska (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - swedish
+  include:
+    key: sv-zh 1
   examples:
     树: svenska-översättning av "树"
     träd: kinesiska-översättning av "träd"
 zh-th 0:
-  url: https://www.dict.com/chinese-thai/
   title: จีน-ไทย (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - thai
+  include:
+    key: th-zh 0
 zh-th 1:
-  url: https://www.dict.com/chinese-thai/{%word}
   title: จีน-ไทย (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - thai
+  include:
+    key: th-zh 1
   examples:
     树: การแปลไทยของคำว่า "树"
     ต้นไม้: การแปลจีนของคำว่า "ต้นไม้"
 zh-tr 0:
-  url: https://www.dict.com/chinese-turkish/
   title: Çince-Türkçe (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - turkish
+  include:
+    key: tr-zh 0
 zh-tr 1:
-  url: https://www.dict.com/chinese-turkish/{%word}
   title: Çince-Türkçe (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - turkish
+  include:
+    key: tr-zh 1
   examples:
     树: '"树" için Türkçe çevirisi'
     ağaç: '"ağaç" için Çince çevirisi'
 zh-uk 0:
-  url: https://www.dict.com/chinese-ukrainian/
   title: Китайська-Українська (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - ukrainian
+  include:
+    key: uk-zh 0
 zh-uk 1:
-  url: https://www.dict.com/chinese-ukrainian/{%word}
   title: Китайська-Українська (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - ukrainian
+  include:
+    key: uk-zh 1
   examples:
     树: Переклад українська для "树"
     дерево: Переклад китайська для "дерево"
 zh-vi 0:
-  url: https://www.dict.com/chinese-vietnamese/
   title: Tiếng Trung-Tiếng Việt (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - vietnamese
+  include:
+    key: vi-zh 0
 zh-vi 1:
-  url: https://www.dict.com/chinese-vietnamese/{%word}
   title: Tiếng Trung-Tiếng Việt (dict.com)
-  tags:
-  - chinese
-  - dictionary
-  - language
-  - vietnamese
+  include:
+    key: vi-zh 1
   examples:
     树: Bản dịch Tiếng Việt của "树"
     cây: Bản dịch Tiếng Trung của "cây"
