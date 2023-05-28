@@ -11,6 +11,8 @@ Depending on the country in your settings and thus the namespaces you use, the c
 
 But even more: You can also override shortcuts: For instance, while all other users use the keyword `g` for Google, you might use it for something else – with your user namespace.
 
+Namespaces work well together with [[Includes]], especially for dictionaries.
+
 ## Namespace types
 
 Namespace type | Example namespaces | Naming convention | Contains | Example shortcuts
