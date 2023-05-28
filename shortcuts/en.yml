@@ -75,16 +75,6 @@ frp 1:
     alternative:
       query: pns.fr {%1}
       created: '2023-04-10'
-ga 1:
-  url: http://www.irishionary.com/search/{%word}/
-  title: Irish-English (Irishionary)
-  tags:
-  - dictionary
-  - english
-  - irish
-  examples:
-    tree: Translation of "tree"
-    crann: Translation of "crann"
 gfp 0:
   url: http://german-foreign-policy.com/en/news/
   title: German Foreign Policy
