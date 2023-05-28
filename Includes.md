@@ -49,4 +49,40 @@ If the language from settings is e.g. `de`, it includes from `en-de 1`. (And if 
         key: en 1
         namespace: leo
 
-This can for example be set in one's user settings, to ensure using leo.org as the dictionary for English, no matter what is used in the site namespaces.
+This can for example be set in one's user settings, to ensure using leo.org as the dictionary for English, no matter what is used in the site [[namespaces]].
+
+## Multiple includes propositions
+
+`include:` may instead of only one `key:` (and `namespace:`) also include several. For instance, in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) we have:
+
+    ar 1:
+      include:
+      - key: ar 1
+        namespace: ard
+      - key: ar 1
+        namespace: dcm
+      - key: ar 1
+        namespace: bab
+      - key: ar 1
+        namespace: lgs
+      - key: ar 1
+        namespace: rvs
+      - key: ar 1
+        namespace: pka 
+
+This shortcut for an Arabic dictionary tries first to include from [ard](https://github.com/trovu/trovu-data/tree/master/shortcuts/ard.yml), the namespace for arabdict.com. And there also exists:
+
+    ar 1:
+      include:
+        key: ar-{$language} 1
+
+However, this namespace only contains Arabic dictionaries for a few languages (`de`, `en`, `fr`, `it`, `tr`).
+
+If the user's language is e.g. `pl`, the include process will fail at this point.
+
+In this case, the process goes back to [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) and tries the second entry:
+
+      - key: ar 1
+        namespace: dcm
+
+As [dcm](https://github.com/trovu/trovu-data/tree/master/shortcuts/dcm.yml) does contain `ar-pl 1`, this inclusion succeeds, and the Arabic dictionary is taken frm dict.com.
