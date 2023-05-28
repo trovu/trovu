@@ -2118,6 +2118,8 @@ en 0:
   - key: en 0
     namespace: flx
   - key: en 0
+    namespace: irs
+  - key: en 0
     namespace: mdb
   - key: en 0
     namespace: zrg
@@ -2151,6 +2153,8 @@ en 1:
     namespace: esd
   - key: en 1
     namespace: flx
+  - key: en 1
+    namespace: irs
   - key: en 1
     namespace: mdb
   - key: en 1
@@ -3078,9 +3082,13 @@ g? 0:
 ga 0:
   include:
   - key: ga 0
+    namespace: irs
+  - key: ga 0
     namespace: pka
 ga 1:
   include:
+  - key: ga 1
+    namespace: irs
   - key: ga 1
     namespace: pka
 gameserver 1:
