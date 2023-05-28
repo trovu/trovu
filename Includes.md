@@ -85,4 +85,4 @@ In this case, the process goes back to [o](https://github.com/trovu/trovu-data/t
       - key: ar 1
         namespace: dcm
 
-As [dcm](https://github.com/trovu/trovu-data/tree/master/shortcuts/dcm.yml) does contain `ar-pl 1`, this inclusion succeeds, and the Arabic dictionary is taken frm dict.com.
+As [dcm](https://github.com/trovu/trovu-data/tree/master/shortcuts/dcm.yml) does contain `ar-pl 1`, this inclusion succeeds, and the Arabic dictionary is taken from dict.com.
