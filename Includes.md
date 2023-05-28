@@ -40,4 +40,13 @@ This way, the shortcut URL needs to be maintained only once.
 
 If the language from settings is e.g. `de`, it includes from `en-de 1`. (And if `en-de 1` contains `include:`, it also includes from there, and so on.)
 
- 
+## Includes from another namespace
+
+`include` may also include from another namespace:
+
+    en 1:
+      include:
+        key: en 1
+        namespace: leo
+
+This can for example be set in one's user settings, to ensure using leo.org as the dictionary for English, no matter what is used in the site namespaces.
