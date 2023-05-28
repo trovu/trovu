@@ -1,13 +1,13 @@
-Every shortcut belongs to exactly one namespace. Namespaces allow the same keyword to be used for different shortcuts – according to the user's language, location or personal setup. This comes in handy for dictionaries:
+Every shortcut belongs to exactly one namespace. Namespaces allow the same keyword to be used for different shortcuts – according to the user's language, location or personal setup. This comes in handy e.g. for multi-country websites like Amazon:
 
-- `en tree` shall look up the English translation for "tree" – but into which language?
+- `a shakespeare` shall search Amazon for books from Shakespeare – but Amazon from which country?
 
-Thanks to namespaces, we can have the keyword `en` both
+Thanks to namespaces, we can have the keyword `a` both
 
-- in the French language namespace `fr`,
-- as also in the German language namespace `de`
+- in the US country namespace `.us`,
+- as also in the Germany namespace `.de`
 
-Depending on the language in your settings and thus the namespaces you use, the right dictionary will be picked.
+Depending on the country in your settings and thus the namespaces you use, the correct shortcut for Amazon will be picked.
 
 But even more: You can also override shortcuts: For instance, while all other users use the keyword `g` for Google, you might use it for something else – with your user namespace.
 
@@ -15,9 +15,10 @@ But even more: You can also override shortcuts: For instance, while all other us
 
 Namespace type | Example namespaces | Naming convention | Contains | Example shortcuts
 --- | --- | --- | --- | ---
-language | [de](https://github.com/trovu/trovu-data/tree/master/shortcuts/de), [en](https://github.com/trovu/trovu-data/tree/master/shortcuts/en) | 2 chars, by [ISO 639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | shortcuts related to a particular language | English-German dictionary: `en tree`
-country | [.de](https://github.com/trovu/trovu-data/tree/master/shortcuts/.de), [.us](https://github.com/trovu/trovu-data/tree/master/shortcuts/.us) | dot and 2 chars, by [ISO 3166-1 alpha2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | shortcuts related to a particular country | Deutsche Bahn Fahrplanauskunft: `db berlin, hamburg`
-user | [georgjaehnig](https://github.com/georgjaehnig/trovu-data/tree/master/shortcuts/)| a github user name (can be overridden with a custom name) | custom shortcuts created by a user in their repo | Trains from my home station: `db> hamburg`
+language | [de](https://github.com/trovu/trovu-data/tree/master/shortcuts/de.yml), [en](https://github.com/trovu/trovu-data/tree/master/shortcuts/en.yml) | 2 chars, by [ISO 639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | shortcuts related to a particular language | English-German dictionary: `en tree`
+country | [.de](https://github.com/trovu/trovu-data/tree/master/shortcuts/.de.yml), [.us](https://github.com/trovu/trovu-data/tree/master/shortcuts/.us.yml) | dot and 2 chars, by [ISO 3166-1 alpha2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | shortcuts related to a particular country | Deutsche Bahn Fahrplanauskunft: `db berlin, hamburg`
+dictionary | [dcm](https://github.com/trovu/trovu-data/tree/master/shortcuts/dcm.yml) (dict.com), [lge](https://github.com/trovu/trovu-data/tree/master/shortcuts/lge.yml) (Linguee) | 3 chars, by their abbreviated name | shortcuts from a dictionary website | German-English: `de-en tree`, `en-de tree`, `en-{$language} tree` (using `language` variable from settings)
+user | [georgjaehnig](https://github.com/georgjaehnig/trovu-data/tree/master/shortcuts/)| a Github user name (can be overridden with a custom name) | custom shortcuts created by a user in their repo | Trains from my home station: `db> hamburg`
 planet | [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o)| the shape of the planet |         shortcuts unrelated to a language or country | Google web search: `g berlin`
 
 `language` and `country` are __site namespaces__. They are curated and 
