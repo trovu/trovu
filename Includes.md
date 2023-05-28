@@ -53,7 +53,7 @@ This can for example be set in one's user settings, to ensure using leo.org as t
 
 ## Multiple include propositions
 
-`include:` may instead of only one `key:` (and `namespace:`) also include several. For instance, in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) we have:
+`include:` may instead of only one `key:` (and `namespace:`) also contain several ones. For instance, in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) we have:
 
     ar 1:
       include:
