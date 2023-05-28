@@ -78,7 +78,7 @@ This shortcut for an Arabic dictionary tries first to include from [ard](https:/
 
 However, this namespace only contains Arabic dictionaries for a few languages (`de`, `en`, `fr`, `it`, `tr`).
 
-If the user's language is e.g. `pl`, the include process will fail at this point.
+If the user's language is e.g. `pl`, the include process will fail at this point, as there is no `ar-pl 1` in this namespace.
 
 In this case, the process goes back to [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) and tries the second entry:
 
