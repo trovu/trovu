@@ -51,7 +51,7 @@ If the language from settings is e.g. `de`, it includes from `en-de 1`. (And if 
 
 This can for example be set in one's user settings, to ensure using leo.org as the dictionary for English, no matter what is used in the site [[namespaces]].
 
-## Multiple includes propositions
+## Multiple include propositions
 
 `include:` may instead of only one `key:` (and `namespace:`) also include several. For instance, in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) we have:
 
