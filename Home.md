@@ -18,6 +18,7 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 - [[Namespaces]]
 - [[How a query is processed]]
+- [[Includes]]
 - [[Shortcut URLs]]
 - [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
 - [[Trovu compared to Serchilo / FindFind.it|Differences to Serchilo and FindFind.it]]
