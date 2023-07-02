@@ -849,6 +849,22 @@ gh 1:
   - shopping
   examples:
     fernseher: Search for "fernseher"
+gii 0:
+  url: https://www.gesetze-im-internet.de/
+  title: Gesetze im Internet
+  tags:
+  - gesetze
+  - law
+gii 2:
+  url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20{%Paragraph}%20{%Gesetz}
+  title: Gesetze im Internet
+  tags:
+  - gesetze
+  - law
+  examples:
+    5, gg: Zeige Artikel 5 des Grundgesetzes
+    12, bgb: Zeige Paragraph 12 des Bürgerlichen Gesetzbuchs
+    129a, stgb: Zeige Paragraph 129a des Strafgesetzbuchs
 gls 1:
   url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1. Paket-Nr.}
   title: GLS Sendungsverfolgung
@@ -9485,16 +9501,6 @@ nsr 1:
   - wetter
   examples:
     berlin: Wettervorhersage für Berlin
-p 2:
-  url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20"{%Paragraph}%20{%Gesetz}"
-  title: Gesetze im Internet
-  tags:
-  - gesetze
-  - law
-  examples:
-    5, gg: Zeige Artikel 5 des Grundgesetzes
-    12, bgb: Zeige Paragraph 12 des Bürgerlichen Gesetzbuchs
-    129a, stgb: Zeige Paragraph 129a des Strafgesetzbuchs
 pollin 0:
   url: http://www.pollin.de/
   title: Pollin Electronic
