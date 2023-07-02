@@ -9524,7 +9524,7 @@ osii 1:
   - isbn13
   examples:
     9783442453023: Sucht nach einem bestimmten Buch
-p 2
+p 2:
   deprecated:
     alternative:
       query: gii {%1}, {%2}
