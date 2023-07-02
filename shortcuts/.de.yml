@@ -9485,6 +9485,29 @@ nsr 1:
   - wetter
   examples:
     berlin: Wettervorhersage für Berlin
+osi 0:
+  url: https://www.osiander.de/
+  title: Osiander (Buchhändler)
+  tags:
+  - books
+  - onlinestore
+osi 1:
+  url: https://www.osiander.de/suche?sq={%Suche}
+  title: Osiander-Suche
+  tags:
+  - books
+  - onlinestore
+  examples:
+    Iain M. Banks: Sucht nach dem Science-Fiction-Autor
+osii 1:
+  url: https://www.osiander.de/details.cfm?isbn={%isbn13}
+  title: Osiander-Suche, ISBN13
+  tags:
+  - books
+  - onlinestore
+  - isbn13
+  examples:
+    9783442453023: Sucht nach einem bestimmten Buch
 p 2:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20"{%Paragraph}%20{%Gesetz}"
   title: Gesetze im Internet
