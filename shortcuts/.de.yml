@@ -9524,6 +9524,11 @@ osii 1:
   - isbn13
   examples:
     9783442453023: Sucht nach einem bestimmten Buch
+p 2
+  deprecated:
+    alternative:
+      query: gii {%1}, {%2}
+      created: '2023-07-02'
 pollin 0:
   url: http://www.pollin.de/
   title: Pollin Electronic
