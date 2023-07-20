@@ -53,20 +53,49 @@ Your namespaces are [derived from your config.yml](https://github.com/trovu/trov
 
 The latter, the higher: So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`.
 
-## Forcing a namespace
+## Forcing a namespace (and overriding `language` or `country` setting)
 
-You can force to use a certain namespace by prefixing the query with "[namespace]."
+You can force to use a certain namespace by prefixing the query with `[namespace].` If `[namespace]` happens to be a language or country namespace, it will also override the current language or country. 
 
-- example namespace setting:
-  - `o`
-  - `de`
-  - `fr`
-  - `.us`
-- example query: `de.en tree`
-- result: Instead of the French-English dictionary (from `fr`), the shortcut for the German-English dictionary (from `de`) is called.
-- explanation: Although `fr` has a higher priority than `de`, prefixing the query with `de.` forced to use the shortcut from `de`.
+### Example
+#### Settings
 
-The forced namespace can be any namespace, even a site namespace you did not set up in your configuration.
+Let's assume we use Trovu with these [settings](https://github.com/trovu/trovu-data-user/blob/master/config.yml):
+
+```yaml
+language: en
+country: us
+namespaces:
+- o
+- en
+- .us
+```
+
+#### Query
+Now we call this query:
+
+    de.en tree
+
+Here, we force the namespace [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml). This means that for this very query
+
+- the [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml) namespace is added to the `namespaces` list, with the highest priority.
+- Also, since `de` is a language, the language setting is changed to `de`.
+
+So this query is now processed as if the settings were:
+
+```yaml
+language: de
+country: us
+namespaces:
+- o
+- en
+- .us
+- de
+```
+
+#### Result
+
+Instead of the French-English dictionary (from `fr`), the shortcut for the German-English dictionary (from `de`) is called – because dictionaries are picked via [[Includes]] based on the `language` setting.
 
 ## Default language and country
 
