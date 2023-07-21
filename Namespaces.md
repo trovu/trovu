@@ -55,9 +55,9 @@ The lower a namespace is in the `namespaces` list, the higher it's precedence. T
 
 So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`. 
 
-## Forcing a namespace (and overriding `language` or `country` setting)
+## Adding a namespace (and overriding `language` or `country` setting)
 
-You can force to use a certain namespace by prefixing the query with `[namespace].` If `[namespace]` happens to be a language or country namespace, it will also override the current language or country. 
+You can add a certain namespace to the subscribed namespaces by prefixing the query with `[namespace].` If `[namespace]` happens to be a language or country namespace, it will also override the current language or country. 
 
 ### Example
 #### Settings
@@ -78,7 +78,7 @@ Now we call this query:
 
     de.w berlin
 
-Here, we force the namespace [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml). This means that for this very query
+Here, we add the namespace [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml). This means that for this very query
 
 - the [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml) namespace is added to the `namespaces` list, with the highest priority.
 - Also, since `de` is a language, the language setting is changed to `de`.
