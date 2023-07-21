@@ -74,7 +74,7 @@ namespaces:
 #### Query
 Now we call this query:
 
-    de.en tree
+    de.w berlin
 
 Here, we force the namespace [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml). This means that for this very query
 
@@ -95,7 +95,9 @@ namespaces:
 
 #### Result
 
-Instead of the French-English dictionary (from `fr`), the shortcut for the German-English dictionary (from `de`) is called – because dictionaries are picked via [[Includes]] based on the `language` setting.
+Instead of the English Wikipedia (that would have been used with `language: en`), the German Wikipedia is used, because `language` is now set to  `de`, and the Wikipedia shortcut's URL is defined as `url: https://{$language}.wikipedia.org/...`.
+
+Had another shortcut `w 1` existed in namespace [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml), then this shortcut would have been called, because we had added this namespaces to the subscribed namespaces, with the highest priority.
 
 ## Default language and country
 
