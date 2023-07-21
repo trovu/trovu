@@ -51,7 +51,7 @@ Your namespaces are [derived from your config.yml](https://github.com/trovu/trov
 
 ## Priority of namespaces
 
-The lower a namespace is in the `namespaces` list, the higher it's precedence. This is similar to [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), when method needs to be picked from inherited classes.
+The lower a namespace is in the `namespaces` list, the higher it's precedence. This is similar to [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), when a method needs to be picked from inheriting classes.
 
 So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`. 
 
