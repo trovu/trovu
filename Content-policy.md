@@ -60,8 +60,3 @@ A good keyword shall be easily memorable, and also not a word itself. We try to 
 - `ad` for *AnDroid*
 - `bmf` for *Besser MitFahren*
 - `bmn` for *BugMeNot*
- 
-Exceptions can be made if there's already a common abbreviation of the service
-
-- `ig` for *InstaGram*
-
