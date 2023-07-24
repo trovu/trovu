@@ -3164,6 +3164,13 @@ gch 1:
   title: Google Switzerland
   tags:
   - old
+gcm 2:
+  url: https://www.greatcirclemap.com/?routes={%from IATA}-{%to IATA}
+  title: Great Circle Map
+  description: Enter two or more airports to draw a route between them on the map and calculate the distance.
+  tags:
+  - travel
+  - flights
 gco 0:
   url: https://www.google.com/contacts/
   title: Google Contacts
