@@ -148,7 +148,7 @@ export default class Env {
 
     if (!country) {
       try {
-        country = await this.getCountryFromIP();
+        country = await this.getCountryFromIp();
       } catch (error) {
         // TODO: Log about error, but don't stop.
       }
@@ -194,7 +194,7 @@ export default class Env {
    *
    * @return {string} country - The country as ISO 3166‑1 alpha-2 code
    */
-  async getCountryFromIP() {
+  async getCountryFromIp() {
     const ipInfoText = await this.fetchDbIp();
     const ipInfo = JSON.parse(ipInfoText);
     const country = ipInfo.countryCode;
