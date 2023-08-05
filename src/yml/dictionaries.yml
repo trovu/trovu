@@ -2268,6 +2268,13 @@ hzn:
       no:
         - https://www.heinzelnisse.info/
         - https://www.heinzelnisse.info/no/dict?searchItem={%word}
+irs:
+  name: Irishionary
+  pairs:
+    en:
+      ga:
+        - https://www.irishionary.com/
+        - https://www.irishionary.com/search/{%word}/
 leo:
   name: leo.org
   pairs:
