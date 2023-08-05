@@ -2440,7 +2440,7 @@ mdb:
     en:
       zh:
         - https://www.mdbg.net/chinese/dictionary
-        - https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={query}
+        - https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={%query}
 pka:
   name: Pauker.at
   pairs:
