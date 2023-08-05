@@ -195,11 +195,16 @@ export default class Env {
    * @return {string} country - The country as ISO 3166‑1 alpha-2 code
    */
   async getCountryFromIP() {
-    const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
-    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, false);
+    const ipInfoText = await this.fetchDbIp();
     const ipInfo = JSON.parse(ipInfoText);
     const country = ipInfo.countryCode;
     return country;
+  }
+
+  async fetchDbIp() {
+    const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
+    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, false);
+    return ipInfoText;
   }
 
   /**
