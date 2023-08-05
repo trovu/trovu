@@ -5,11 +5,6 @@ const getNavigatorLanguageEnUk = () => {
   return languageStr;
 };
 
-const getNavigatorLanguageEmpty = () => {
-  const languageStr = '';
-  return languageStr;
-};
-
 test('getNavigatorLanguage', () => {
   const env = new Env();
   env.getNavigatorLanguage = getNavigatorLanguageEnUk;
