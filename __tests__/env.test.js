@@ -1,41 +1,46 @@
-import Env from "../src/js/modules/Env.js";
+import Env from '../src/js/modules/Env.js';
 
 const getNavigatorLanguageEnUk = () => {
-  const languageStr = "en-uk";
+  const languageStr = 'en-uk';
   return languageStr;
 };
 
 const getNavigatorLanguageEmpty = () => {
-  const languageStr = "";
+  const languageStr = '';
   return languageStr;
 };
 
-test("getNavigatorLanguage", () => {
+test('getNavigatorLanguage', () => {
   const env = new Env();
   env.getNavigatorLanguage = getNavigatorLanguageEnUk;
-  expect(env.getNavigatorLanguage()).toMatch("en-uk");
+  expect(env.getNavigatorLanguage()).toMatch('en-uk');
 });
 
-test("getLanguageAndCountryFromBrowser", () => {
+test('getLanguageAndCountryFromBrowser', () => {
   const env = new Env();
   env.getNavigatorLanguage = getNavigatorLanguageEnUk;
   expect(env.getLanguageAndCountryFromBrowser()).toEqual({
-    language: "en",
-    country: "uk"
+    language: 'en',
+    country: 'uk',
   });
 });
 
-test("setWithUserConfigFromGithub", async () => {
+test('setWithUserConfigFromGithub', async () => {
   const env = new Env();
   env.getNavigatorLanguage = getNavigatorLanguageEnUk;
   env.getUserConfigFromGithub = async () => {
     return {
-      namespaces: ["o", "en", ".us", { github: ".", name: "my" }],
-      defaultKeyword: "g",
-      language: "en",
-      country: "us"
+      namespaces: ['o', 'en', '.us', { github: '.', name: 'my' }],
+      defaultKeyword: 'g',
+      language: 'en',
+      country: 'us',
     };
   };
   await env.setWithUserConfigFromGithub();
-  expect(env.namespaces).toEqual(["o", "en", ".us", { github: ".", name: "my" }]);
+  expect(env.namespaces).toEqual([
+    'o',
+    'en',
+    '.us',
+    { github: '.', name: 'my' },
+  ]);
 });
