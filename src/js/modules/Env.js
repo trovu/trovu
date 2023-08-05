@@ -147,7 +147,11 @@ export default class Env {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
     if (!country) {
-      country = await this.getCountryFromIP();
+      try {
+        country = await this.getCountryFromIp();
+      } catch (error) {
+        // TODO: Log about error, but don't stop.
+      }
     }
 
     // Set defaults.
@@ -172,6 +176,7 @@ export default class Env {
     if (languageStr) {
       [language, country] = languageStr.split('-');
     }
+
     return { language, country };
   }
 
@@ -190,12 +195,17 @@ export default class Env {
    *
    * @return {string} country - The country as ISO 3166‑1 alpha-2 code
    */
-  async getCountryFromIP() {
-    const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
-    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, false);
+  async getCountryFromIp() {
+    const ipInfoText = await this.fetchDbIp();
     const ipInfo = JSON.parse(ipInfoText);
     const country = ipInfo.countryCode;
     return country;
+  }
+
+  async fetchDbIp() {
+    const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
+    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, false);
+    return ipInfoText;
   }
 
   /**
