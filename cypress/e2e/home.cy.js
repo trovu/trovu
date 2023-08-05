@@ -1,6 +1,7 @@
 describe('Homepage startup', () => {
   beforeEach(() => {
     cy.visit('/');
+    cy.get('[data-page-loaded="true"]', { timeout: 10000 }).should('exist');
   });
 
   it('should redirect to hash with language and country', () => {

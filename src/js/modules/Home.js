@@ -35,6 +35,7 @@ export default class Home {
     this.setQueryElement();
 
     document.getElementById('query-form').onsubmit = this.submitQuery;
+    document.documentElement.setAttribute('data-page-loaded', 'true');
   }
 
   /**
