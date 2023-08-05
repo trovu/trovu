@@ -27,9 +27,13 @@ describe('Homepage startup', () => {
   it('should have a working Settings modal', () => {
     cy.get('span#settings-button').should('be.visible').click();
     cy.get('select#languageSetting').should('be.visible').select('pl');
+    cy.get('select#countrySetting').should('be.visible').select('cz');
     cy.get('#settings-close').click();
     cy.wait(500); // TODO: Find cleaner solution.
     cy.hash().should('match', /language=pl/);
+    cy.hash().should('match', /country=cz/);
+    cy.get('.navbar .language').should('contain', 'pl');
+    cy.get('.navbar .country').should('contain', '🇨🇿');
   });
 });
 
