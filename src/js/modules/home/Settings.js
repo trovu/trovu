@@ -25,10 +25,19 @@ export default class Settings {
   }
 
   /**
-   * Fill in the fields of the settings modal.
+   * Update settings wherever they are displayed.
    */
   displaySettings() {
-    // Set settings fields from environment.
+    // Set settings fields in navbar.
+    const language = countriesList.languages[this.env.language];
+    document.querySelector('.navbar .language').innerText = this.env.language;
+    document.querySelector('.navbar .language').title = language.name;
+
+    const country = countriesList.countries[this.env.country.toUpperCase()];
+    document.querySelector('.navbar .country').innerText = country.emoji;
+    document.querySelector('.navbar .country').title = country.name;
+
+    // Set settings fields in settings modal.
     document.querySelector('#languageSetting').value = this.env.language;
     document.querySelector('#countrySetting').value = this.env.country;
 
