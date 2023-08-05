@@ -301,7 +301,7 @@ actions['setDictionaryIncludes'] = async function () {
     }
   }
   const dictsByPrioStr =
-    'ama ard dtn crd deo esd flx hzn mdb umt wdk zrg lge dcm bab leo dcc lgs pns rvs beo pka';
+    'ama ard dtn crd deo esd flx hzn irs mdb umt wdk zrg lge dcm bab leo dcc lgs pns rvs beo pka';
 
   const dictsByPrio = dictsByPrioStr.split(' ');
 
