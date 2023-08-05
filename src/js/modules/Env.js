@@ -147,7 +147,11 @@ export default class Env {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
     if (!country) {
-      country = await this.getCountryFromIP();
+      try {
+        country = await this.getCountryFromIP();
+      } catch (error) {
+        // TODO: Log about error, but don't stop.
+      }
     }
 
     // Set defaults.
