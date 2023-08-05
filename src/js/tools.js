@@ -308,9 +308,8 @@ actions['setDictionaryIncludes'] = async function () {
   const ymls = loadYmls();
   const yml = ymls['o.yml'];
   for (const lang in langs) {
-    if (yml[`${lang} 1`]) {
-      console.log(lang, yml[`${lang} 1`].title);
-    }
+    yml[`${lang} 0`] = {};
+    yml[`${lang} 1`] = {};
     for (const dict of dictsByPrio) {
       if (langs[lang].has(dict)) {
         for (const argCount of [0, 1]) {
