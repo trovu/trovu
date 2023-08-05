@@ -176,6 +176,10 @@ export default class Env {
     if (languageStr) {
       [language, country] = languageStr.split('-');
     }
+
+    language = language.toLowerCase();
+    country = country.toLowerCase();
+
     return { language, country };
   }
 
