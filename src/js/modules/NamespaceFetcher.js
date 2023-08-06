@@ -167,12 +167,7 @@ export default class NamespaceFetcher {
     for (const namespaceInfo of newNamespaceInfos) {
       const response = responses.shift();
       if (!response || response.status != 200) {
-        if (this.env.debug)
-          Helper.log(
-            (this.env.reload ? 'reload ' : 'cache  ') +
-              'Fail:    ' +
-              namespaceInfo.url,
-          );
+        this.env.warning(`Error fetching ${namespaceInfo.url}`);
         namespaceInfo.shortcuts = [];
         continue;
       }

@@ -44,8 +44,9 @@ export default class ShortcutFinder {
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
     if (!shortcut && env.args.length > 0) {
-      if (env.debug)
-        Helper.log('Not found yet, trying via whole argument string.');
+      this.env.warning(
+        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with the whole argument string as the only argument.`,
+      );
       env.args = [env.argumentString];
       shortcut = await this.matchShortcuts(
         env.keyword,
@@ -59,7 +60,9 @@ export default class ShortcutFinder {
     // If nothing found:
     // Try default keyword.
     if (!shortcut && env.defaultKeyword) {
-      if (env.debug) Helper.log('Not found yet, trying via default keyword.');
+      this.env.warning(
+        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`,
+      );
       env.args = [env.query];
       shortcut = await this.matchShortcuts(
         env.defaultKeyword,
