@@ -235,4 +235,36 @@ export default class Env {
       this.debug = Boolean(this.debug);
     }
   }
+
+  // Logging ==========================================================
+
+  log(level, message) {
+    this.logs.push({
+      level: level,
+      message: message,
+    });
+    if (this.debug) {
+      Helper.log(message, true);
+    } else {
+      Helper.log('.');
+    }
+  }
+  info(message) {
+    this.log('info', message);
+  }
+  warning(message) {
+    this.log('warning', message);
+  }
+  success(message) {
+    this.log('success', message);
+  }
+  error(message, halt = false) {
+    this.log('error', message);
+    if (halt) {
+      for (const error in this.errors) {
+        Helper.log(error.message);
+      }
+      throw new Error(message);
+    }
+  }
 }
