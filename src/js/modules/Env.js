@@ -251,7 +251,7 @@ export default class Env {
   success(message) {
     this.log('success', message);
   }
-  error(message, halt = false) {
+  error(message) {
     this.log('error', message);
     if (halt) {
       for (const error in this.errors) {
