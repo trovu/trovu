@@ -279,14 +279,12 @@ export default class NamespaceFetcher {
 
   processInclude(shortcut, namespaceName, namespaceInfos, depth = 0) {
     if (depth >= 10) {
-      throw new Error(`NamespaceFetcher loop ran already ${depth} times.`);
+      this.env.error(`NamespaceFetcher loop ran already ${depth} times.`);
     }
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (!include.key) {
-        Helper.log(`Include with missing key at: ${key}`);
-        this.error = true;
-        continue;
+        this.env.error(`Include with missing key at: ${key}`);
       }
       const keyUnprocessed = include.key;
       const key = UrlProcessor.replaceVariables(keyUnprocessed, {
@@ -295,11 +293,7 @@ export default class NamespaceFetcher {
       });
       namespaceName = include.namespace || namespaceName;
       if (!namespaceInfos[namespaceName]) {
-        Helper.log(
-          `Namespace to include from "${namespaceName}" does not exist.`,
-        );
-        this.error = true;
-        continue;
+        this.env.error(`Namespace "${namespaceName}" does not exist.`);
       }
       let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
       if (!shortcutToInclude) {
@@ -417,7 +411,7 @@ export default class NamespaceFetcher {
 
   verify(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
-      throw new Error(
+      this.env.error(
         `Missing url or deprecated in ${shortcut.namespace}.${shortcut.key}.`,
       );
     }
