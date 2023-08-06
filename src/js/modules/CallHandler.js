@@ -32,9 +32,7 @@ export default class CallHandler {
       return;
     }
 
-    if (!env.error) {
-      window.location.replace(redirectUrl);
-    }
+    window.location.replace(redirectUrl);
   }
 
   /**
