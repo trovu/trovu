@@ -176,7 +176,7 @@ export default class NamespaceFetcher {
         namespaceInfo.shortcuts = [];
         continue;
       }
-      this.logSuccess(response);
+      this.env.success(`Success fetching ${response.url}`);
 
       const text = await response.text();
       namespaceInfo.shortcuts = this.parseShortcutsFromYml(
