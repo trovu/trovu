@@ -122,7 +122,7 @@ export default class NamespaceFetcher {
       i++
     ) {
       if (i >= 10) {
-        throw new Error(`NamespaceFetcher loop ran already ${i} times.`);
+        this.env.error(`NamespaceFetcher loop ran already ${i} times.`);
       }
       const newNamespaceInfos = Object.values(namespaceInfos).filter(
         (item) => !('shortcuts' in item),
