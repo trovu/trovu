@@ -206,9 +206,7 @@ export default class NamespaceFetcher {
       const shortcuts = jsyaml.load(text);
       return shortcuts;
     } catch (error) {
-      Helper.log('Error parsing ' + url + ':\n\n' + error.message);
-      this.error = true;
-      return [];
+      this.env.error(`Parse error in ${url}: ${error.message}`);
     }
   }
 
@@ -224,18 +222,8 @@ export default class NamespaceFetcher {
     const incorrectKeys = [];
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
+        this.env.error(`Incorrect key "${key}" in namespace ${namespaceName}`);
       }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
     }
     return shortcuts;
   }
