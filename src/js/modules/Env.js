@@ -122,13 +122,10 @@ export default class Env {
         const config = jsyaml.load(configYml);
         return config;
       } catch (error) {
-        this.error(
-          'Error parsing ' + configUrl + ':\n\n' + error.message,
-          true,
-        );
+        this.error(`Error parsing ${configUrl}: ${error.message}`);
       }
     } else {
-      this.error('Failed to read Github config from ' + configUrl, true);
+      this.error(`Error reading Github config from ${configUrl}`);
     }
   }
 
