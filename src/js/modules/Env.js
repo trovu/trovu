@@ -116,24 +116,19 @@ export default class Env {
       '{%github}',
       params.github,
     );
-    const configYml = await Helper.fetchAsync(
-      configUrl,
-      params.reload,
-      params.debug,
-    );
+    const configYml = await Helper.fetchAsync(configUrl, this);
     if (configYml) {
       try {
         const config = jsyaml.load(configYml);
         return config;
       } catch (error) {
-        Helper.log('Error parsing ' + configUrl + ':\n\n' + error.message);
-        this.error = true;
-        return false;
+        this.error(
+          'Error parsing ' + configUrl + ':\n\n' + error.message,
+          true,
+        );
       }
     } else {
-      Helper.log('Failed to read Github config from ' + configUrl);
-      this.error = true;
-      return false;
+      this.error('Failed to read Github config from ' + configUrl, true);
     }
   }
 
@@ -205,7 +200,7 @@ export default class Env {
 
   async fetchDbIp() {
     const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
-    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, false);
+    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, this);
     return ipInfoText;
   }
 

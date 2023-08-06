@@ -59,19 +59,15 @@ export default class Helper {
    *
    * @return {string} text  - The content.
    */
-  static async fetchAsync(url, reload, debug = false) {
+  static async fetchAsync(url, env) {
     const response = await fetch(url, {
-      cache: reload ? 'reload' : 'force-cache',
+      cache: env.reload ? 'reload' : 'force-cache',
     });
     if (response.status != 200) {
-      if (debug) this.log((reload ? 'reload ' : 'cache  ') + 'Fail:    ' + url);
+      env.warning('Error fetching ' + url + ': ' + response.status);
       return null;
     }
-    if (debug) {
-      this.log((reload ? 'reload ' : 'cache  ') + 'Success: ' + url);
-    } else {
-      this.log('.', false);
-    }
+    env.success('Success fetching: ' + url);
     const text = await response.text();
     return text;
   }
