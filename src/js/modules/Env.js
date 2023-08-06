@@ -257,7 +257,8 @@ export default class Env {
       for (const error in this.errors) {
         Helper.log(error.message);
       }
-      throw new Error(message);
     }
+    // Stop execution.
+    throw new Error(message);
   }
 }
