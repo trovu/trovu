@@ -253,7 +253,9 @@ export default class Env {
   }
   error(message) {
     this.log('error', message);
-    if (halt) {
+    // Log all errors if debug is false,
+    // because with debug, the errors were already logged.
+    if (!this.debug) {
       for (const error in this.errors) {
         Helper.log(error.message);
       }
