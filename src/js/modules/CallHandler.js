@@ -31,10 +31,6 @@ export default class CallHandler {
       Helper.log('Redirect to:   ' + redirectUrl);
       return;
     }
-
-    if (!env.error) {
-      window.location.replace(redirectUrl);
-    }
   }
 
   /**
