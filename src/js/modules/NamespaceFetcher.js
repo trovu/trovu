@@ -427,16 +427,6 @@ export default class NamespaceFetcher {
     // }
   }
 
-  logSuccess(response) {
-    if (this.env.debug)
-      Helper.log(
-        (this.env.reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url,
-      );
-    if (!this.env.debug) {
-      Helper.log('.', false);
-    }
-  }
-
   /**
    * Check if namespace is subscribed to.
    *
