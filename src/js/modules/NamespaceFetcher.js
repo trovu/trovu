@@ -293,7 +293,8 @@ export default class NamespaceFetcher {
       });
       namespaceName = include.namespace || namespaceName;
       if (!namespaceInfos[namespaceName]) {
-        this.env.error(`Namespace "${namespaceName}" does not exist.`);
+        this.env.warning(`Namespace "${namespaceName}" does not exist.`);
+        continue;
       }
       let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
       if (!shortcutToInclude) {
