@@ -11,10 +11,20 @@ export default class Env {
   /**
    * Set helper variables.
    */
-  constructor() {
+  constructor(env) {
+    this.setToThis(env);
     this.configUrlTemplate =
       'https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml';
     this.logs = [];
+  }
+
+  setToThis(env) {
+    if (!env) {
+      return;
+    }
+    for (const key in env) {
+      this[key] = env[key];
+    }
   }
 
   /**
