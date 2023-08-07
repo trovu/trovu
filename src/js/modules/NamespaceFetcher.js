@@ -167,11 +167,19 @@ export default class NamespaceFetcher {
     for (const namespaceInfo of newNamespaceInfos) {
       const response = responses.shift();
       if (!response || response.status != 200) {
-        this.env.warning(`Error fetching ${namespaceInfo.url}`);
+        this.env.warning(
+          `Error fetching via ${this.env.reload ? 'reload' : 'cache'} ${
+            namespaceInfo.url
+          }`,
+        );
         namespaceInfo.shortcuts = [];
         continue;
       }
-      this.env.success(`Success fetching ${response.url}`);
+      this.env.success(
+        `Success fetching via ${this.env.reload ? 'reload' : 'cache'} ${
+          namespaceInfo.url
+        }`,
+      );
 
       const text = await response.text();
       namespaceInfo.shortcuts = this.parseShortcutsFromYml(

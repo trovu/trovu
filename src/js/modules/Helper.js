@@ -64,10 +64,16 @@ export default class Helper {
       cache: env.reload ? 'reload' : 'force-cache',
     });
     if (response.status != 200) {
-      env.warning(`Error fetching ${url}: ${response.status}`);
+      env.warning(
+        `Error fetching via ${env.reload ? 'reload' : 'cache'} ${url}: ${
+          response.status
+        }`,
+      );
       return null;
     }
-    env.success(`Success fetching ${url}`);
+    env.success(
+      `Success fetching via ${env.reload ? 'reload' : 'cache'} ${url}`,
+    );
     const text = await response.text();
     return text;
   }
