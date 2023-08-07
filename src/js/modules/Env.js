@@ -247,9 +247,7 @@ export default class Env {
       message: message,
     });
     if (this.debug) {
-      Helper.log(message, true);
-    } else {
-      Helper.log('.', false);
+      Helper.log(message);
     }
   }
   info(message) {
