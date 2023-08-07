@@ -28,7 +28,7 @@ export default class CallHandler {
     }
 
     if (env.debug) {
-      Helper.log('Redirect to:   ' + redirectUrl);
+      env.info('Redirect to:   ' + redirectUrl);
       return;
     }
 
@@ -78,8 +78,7 @@ export default class CallHandler {
     response.redirectUrl = shortcut.url;
     response.status = 'found';
 
-    if (env.debug) Helper.log('');
-    if (env.debug) Helper.log('Used template: ' + response.redirectUrl);
+    env.info('Used template: ' + response.redirectUrl);
 
     response.redirectUrl = UrlProcessor.replaceVariables(response.redirectUrl, {
       language: env.language,
