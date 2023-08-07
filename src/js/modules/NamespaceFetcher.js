@@ -229,7 +229,9 @@ export default class NamespaceFetcher {
   checkKeySyntax(shortcuts, namespaceName) {
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
-        this.env.error(`Incorrect key "${key}" in namespace ${namespaceName}`);
+        this.env.error(
+          `Incorrect key "${key}" in namespace ${namespaceName}: Must have form "KEYWORD ARGUMENTCOUNT".`,
+        );
       }
     }
     return shortcuts;
