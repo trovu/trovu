@@ -265,9 +265,9 @@ export default class Env {
     this.log('error', message);
     // Log all errors if debug is false,
     // because with debug, the errors were already logged.
+    console.table(this.logs);
     if (!this.debug) {
       for (const log of this.logs) {
-        console.log(log);
         Helper.log(log.message);
       }
     }
