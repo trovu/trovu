@@ -227,7 +227,6 @@ export default class NamespaceFetcher {
    * @return {array} shortcuts - The normalized shortcuts.
    */
   checkKeySyntax(shortcuts, namespaceName) {
-    const incorrectKeys = [];
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
         this.env.error(`Incorrect key "${key}" in namespace ${namespaceName}`);
