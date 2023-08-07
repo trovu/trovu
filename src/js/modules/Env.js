@@ -249,7 +249,7 @@ export default class Env {
     if (this.debug) {
       Helper.log(message, true);
     } else {
-      Helper.log('.');
+      Helper.log('.', false);
     }
   }
   info(message) {
