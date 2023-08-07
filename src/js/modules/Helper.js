@@ -39,17 +39,16 @@ export default class Helper {
    * @param {string} str      - The string to output.
    * @param {boolean} newLine - Whether to prefix it with a line break.
    */
-  static log(str, newLine = true) {
+  static log(str) {
     if (typeof document === 'undefined') {
       return;
     }
-    if (!document.querySelector('#log')) {
+    const logElement = document.querySelector('#log');
+    if (!logElement) {
       return;
     }
-    if (newLine) {
-      document.querySelector('#log').textContent += '\n';
-    }
-    document.querySelector('#log').textContent += str;
+    logElement.removeAttribute('hidden');
+    logElement.textContent += `${str}\n`;
   }
 
   /**
