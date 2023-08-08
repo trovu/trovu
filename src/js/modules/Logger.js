@@ -10,7 +10,7 @@ export default class Logger {
    */
   constructor(logElementSelector) {
     this.logs = [];
-    if (document) {
+    if (!typeof document === 'undefined') {
       this.logElement = document.querySelector(logElementSelector);
     }
   }
