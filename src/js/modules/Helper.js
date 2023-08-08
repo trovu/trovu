@@ -34,24 +34,6 @@ export default class Helper {
   }
 
   /**
-   * Output text into the #log element.
-   *
-   * @param {string} str      - The string to output.
-   * @param {boolean} newLine - Whether to prefix it with a line break.
-   */
-  static log(str) {
-    if (typeof document === 'undefined') {
-      return;
-    }
-    const logElement = document.querySelector('#log');
-    if (!logElement) {
-      return;
-    }
-    logElement.removeAttribute('hidden');
-    logElement.textContent += `${str}\n`;
-  }
-
-  /**
    * Fetch the content of a file behind an URL.
    *
    * @param {string} url    - The URL of the file to fetch.

@@ -239,38 +239,4 @@ export default class Env {
       this.debug = Boolean(this.debug);
     }
   }
-
-  // Logging ==========================================================
-
-  log(level, message) {
-    this.logs.push({
-      level: level,
-      message: message,
-    });
-    if (this.debug) {
-      Helper.log(message);
-    }
-  }
-  info(message) {
-    this.log('info', message);
-  }
-  warning(message) {
-    this.log('warning', message);
-  }
-  success(message) {
-    this.log('success', message);
-  }
-  error(message) {
-    this.log('error', message);
-    // Log all errors if debug is false,
-    // because with debug, the errors were already logged.
-    console.table(this.logs);
-    if (!this.debug) {
-      for (const log of this.logs) {
-        Helper.log(log.message);
-      }
-    }
-    // Stop execution.
-    throw new Error(message);
-  }
 }
