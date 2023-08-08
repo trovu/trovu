@@ -16,7 +16,7 @@ export default class Env {
     this.setToThis(env);
     this.configUrlTemplate =
       'https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml';
-    this.logger = new Logger();
+    this.logger = new Logger('#log');
   }
 
   setToThis(env) {

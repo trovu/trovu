@@ -8,10 +8,10 @@ export default class Logger {
   /**
    * Set helper variables.
    */
-  constructor() {
+  constructor(logElementSelector) {
     this.logs = [];
     if (document) {
-      this.logElement = document.querySelector('#log');
+      this.logElement = document.querySelector(logElementSelector);
     }
   }
 
