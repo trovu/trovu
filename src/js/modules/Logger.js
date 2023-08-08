@@ -1,7 +1,5 @@
 /** @module Env */
 
-import Helper from './Helper.js';
-
 /** Set and remember the environment. */
 
 export default class Logger {
