@@ -86,6 +86,13 @@ export default class Env {
       params = Helper.getUrlParams();
     }
 
+    // Set debug and reload from URL params.
+    for (const paramName of ['debug', 'reload']) {
+      if (params[paramName] === '1') {
+        this[paramName] = true;
+      }
+    }
+
     if (typeof params.github === 'string' && params.github !== '') {
       await this.setWithUserConfigFromGithub(params);
     }
