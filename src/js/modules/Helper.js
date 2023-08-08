@@ -34,44 +34,27 @@ export default class Helper {
   }
 
   /**
-   * Output text into the #log element.
-   *
-   * @param {string} str      - The string to output.
-   * @param {boolean} newLine - Whether to prefix it with a line break.
-   */
-  static log(str, newLine = true) {
-    if (typeof document === 'undefined') {
-      return;
-    }
-    if (!document.querySelector('#log')) {
-      return;
-    }
-    if (newLine) {
-      document.querySelector('#log').textContent += '\n';
-    }
-    document.querySelector('#log').textContent += str;
-  }
-
-  /**
    * Fetch the content of a file behind an URL.
    *
    * @param {string} url    - The URL of the file to fetch.
    *
    * @return {string} text  - The content.
    */
-  static async fetchAsync(url, reload, debug = false) {
+  static async fetchAsync(url, env) {
     const response = await fetch(url, {
-      cache: reload ? 'reload' : 'force-cache',
+      cache: env.reload ? 'reload' : 'force-cache',
     });
     if (response.status != 200) {
-      if (debug) this.log((reload ? 'reload ' : 'cache  ') + 'Fail:    ' + url);
+      env.logger.warning(
+        `Error fetching via ${env.reload ? 'reload' : 'cache'} ${url}: ${
+          response.status
+        }`,
+      );
       return null;
     }
-    if (debug) {
-      this.log((reload ? 'reload ' : 'cache  ') + 'Success: ' + url);
-    } else {
-      this.log('.', false);
-    }
+    env.logger.success(
+      `Success fetching via ${env.reload ? 'reload' : 'cache'} ${url}`,
+    );
     const text = await response.text();
     return text;
   }
@@ -118,6 +101,10 @@ export default class Helper {
   }
 
   static logVersion() {
-    console.log(`Trovu running version`, pkg.gitCommitHash, pkg.gitDate);
+    console.log(
+      `Trovu running version`,
+      pkg.gitCommitHash.slice(0, 7),
+      pkg.gitDate,
+    );
   }
 }

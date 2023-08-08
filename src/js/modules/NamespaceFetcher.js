@@ -122,7 +122,7 @@ export default class NamespaceFetcher {
       i++
     ) {
       if (i >= 10) {
-        throw new Error(`NamespaceFetcher loop ran already ${i} times.`);
+        this.env.logger.error(`NamespaceFetcher loop ran already ${i} times.`);
       }
       const newNamespaceInfos = Object.values(namespaceInfos).filter(
         (item) => !('shortcuts' in item),
@@ -167,16 +167,19 @@ export default class NamespaceFetcher {
     for (const namespaceInfo of newNamespaceInfos) {
       const response = responses.shift();
       if (!response || response.status != 200) {
-        if (this.env.debug)
-          Helper.log(
-            (this.env.reload ? 'reload ' : 'cache  ') +
-              'Fail:    ' +
-              namespaceInfo.url,
-          );
+        this.env.logger.warning(
+          `Error fetching via ${this.env.reload ? 'reload' : 'cache'} ${
+            namespaceInfo.url
+          }`,
+        );
         namespaceInfo.shortcuts = [];
         continue;
       }
-      this.logSuccess(response);
+      this.env.logger.success(
+        `Success fetching via ${this.env.reload ? 'reload' : 'cache'} ${
+          namespaceInfo.url
+        }`,
+      );
 
       const text = await response.text();
       namespaceInfo.shortcuts = this.parseShortcutsFromYml(
@@ -211,9 +214,7 @@ export default class NamespaceFetcher {
       const shortcuts = jsyaml.load(text);
       return shortcuts;
     } catch (error) {
-      Helper.log('Error parsing ' + url + ':\n\n' + error.message);
-      this.error = true;
-      return [];
+      this.env.logger.error(`Parse error in ${url}: ${error.message}`);
     }
   }
 
@@ -226,21 +227,12 @@ export default class NamespaceFetcher {
    * @return {array} shortcuts - The normalized shortcuts.
    */
   checkKeySyntax(shortcuts, namespaceName) {
-    const incorrectKeys = [];
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
-        incorrectKeys.push(key);
+        this.env.logger.error(
+          `Incorrect key "${key}" in namespace ${namespaceName}: Must have form "KEYWORD ARGUMENTCOUNT".`,
+        );
       }
-    }
-    if (incorrectKeys.length > 0) {
-      Helper.log(
-        "Incorrect keys found in namespace '" +
-          namespaceName +
-          "'. Keys must have the form 'KEYWORD ARGCOUNT', e.g.: 'foo 0'" +
-          '\n\n' +
-          incorrectKeys.join('\n'),
-      );
-      this.error = true;
     }
     return shortcuts;
   }
@@ -296,14 +288,14 @@ export default class NamespaceFetcher {
 
   processInclude(shortcut, namespaceName, namespaceInfos, depth = 0) {
     if (depth >= 10) {
-      throw new Error(`NamespaceFetcher loop ran already ${depth} times.`);
+      this.env.logger.error(
+        `NamespaceFetcher loop ran already ${depth} times.`,
+      );
     }
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (!include.key) {
-        Helper.log(`Include with missing key at: ${key}`);
-        this.error = true;
-        continue;
+        this.env.error(`Include with missing key at: ${key}`);
       }
       const keyUnprocessed = include.key;
       const key = UrlProcessor.replaceVariables(keyUnprocessed, {
@@ -312,10 +304,7 @@ export default class NamespaceFetcher {
       });
       namespaceName = include.namespace || namespaceName;
       if (!namespaceInfos[namespaceName]) {
-        Helper.log(
-          `Namespace to include from "${namespaceName}" does not exist.`,
-        );
-        this.error = true;
+        this.env.logger.warning(`Namespace "${namespaceName}" does not exist.`);
         continue;
       }
       let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
@@ -434,7 +423,7 @@ export default class NamespaceFetcher {
 
   verify(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
-      throw new Error(
+      this.env.logger.error(
         `Missing url or deprecated in ${shortcut.namespace}.${shortcut.key}.`,
       );
     }
@@ -448,16 +437,6 @@ export default class NamespaceFetcher {
     //     `Mismatch in argumentCount of key and arguments.length of url in ${shortcut.namespace}.${shortcut.key} .`,
     //   );
     // }
-  }
-
-  logSuccess(response) {
-    if (this.env.debug)
-      Helper.log(
-        (this.env.reload ? 'reload ' : 'cache  ') + 'Success: ' + response.url,
-      );
-    if (!this.env.debug) {
-      Helper.log('.', false);
-    }
   }
 
   /**

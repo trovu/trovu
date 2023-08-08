@@ -34,6 +34,10 @@ export default class Home {
     this.setLocationHash();
     this.setQueryElement();
 
+    if (this.env.debug) {
+      this.env.logger.showLog();
+    }
+
     document.getElementById('query-form').onsubmit = this.submitQuery;
     document.documentElement.setAttribute('data-page-loaded', 'true');
   }

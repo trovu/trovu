@@ -2,7 +2,8 @@ import jsyaml from 'js-yaml';
 import Helper from '../Helper.js';
 
 export default class CityType {
-  static async parse(str, country, reload, debug) {
+  static async parse(str, env) {
+    let country = env.country;
     const fetchUrlTemplate =
       'https://data.trovu.net/data/types/city/{%country}.yml';
     let matches;
@@ -14,7 +15,7 @@ export default class CityType {
 
     const fetchUrl = fetchUrlTemplate.replace('{%country}', country);
 
-    const citiesYml = await Helper.fetchAsync(fetchUrl, reload, debug);
+    const citiesYml = await Helper.fetchAsync(fetchUrl, env);
     if (citiesYml) {
       const cities = jsyaml.load(citiesYml);
       if (abbreviation in cities) {

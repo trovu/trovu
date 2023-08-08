@@ -185,12 +185,7 @@ export default class UrlProcessor {
   }
 
   static async processTypeCity(processedArgument, env) {
-    const city = await CityType.parse(
-      processedArgument,
-      env.country,
-      env.reload,
-      env.debug,
-    );
+    const city = await CityType.parse(processedArgument, env);
     // If city could be parsed:
     // Set argument.
     if (city) {

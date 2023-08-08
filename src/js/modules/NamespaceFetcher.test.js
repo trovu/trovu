@@ -1,5 +1,6 @@
 import NamespaceFetcher from './NamespaceFetcher.js';
 import jsyaml from 'js-yaml';
+import Env from './Env.js';
 
 function cloneObject(obj) {
   return JSON.parse(JSON.stringify(obj));
@@ -7,14 +8,18 @@ function cloneObject(obj) {
 
 describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('site', () => {
-    expect(new NamespaceFetcher({}).getInitalNamespaceInfo('de')).toEqual({
+    expect(
+      new NamespaceFetcher(new Env()).getInitalNamespaceInfo('de'),
+    ).toEqual({
       name: 'de',
       type: 'site',
       url: 'https://data.trovu.net/data/shortcuts/de.yml',
     });
   });
   test('github', () => {
-    expect(new NamespaceFetcher({}).getInitalNamespaceInfo('johndoe')).toEqual({
+    expect(
+      new NamespaceFetcher(new Env()).getInitalNamespaceInfo('johndoe'),
+    ).toEqual({
       github: 'johndoe',
       name: 'johndoe',
       type: 'user',
@@ -42,7 +47,7 @@ describe('NamespaceFetcher.processInclude', () => {
       key: de-fr 1
     `);
     expect(
-      new NamespaceFetcher({}).processInclude(
+      new NamespaceFetcher(new Env()).processInclude(
         shortcut,
         'leo',
         cloneObject(namespaceInfos),
@@ -60,7 +65,7 @@ describe('NamespaceFetcher.processInclude', () => {
       namespace: leo
   `);
     expect(
-      new NamespaceFetcher({}).processInclude(
+      new NamespaceFetcher(new Env()).processInclude(
         shortcut,
         '',
         cloneObject(namespaceInfos),
@@ -77,7 +82,7 @@ describe('NamespaceFetcher.processInclude', () => {
       key: fr-{$language} 1
     `);
     expect(
-      new NamespaceFetcher({ language: 'de' }).processInclude(
+      new NamespaceFetcher(new Env({ language: 'de' })).processInclude(
         shortcut,
         'leo',
         cloneObject(namespaceInfos),
@@ -107,7 +112,7 @@ describe('NamespaceFetcher.processInclude', () => {
       key: tic 1
     `);
     expect(() => {
-      new NamespaceFetcher({}).processInclude(
+      new NamespaceFetcher(new Env({})).processInclude(
         shortcut,
         'leo',
         namespaceInfosLoop,
@@ -138,7 +143,7 @@ describe('NamespaceFetcher.processInclude', () => {
       namespace: leo
     `);
     expect(
-      new NamespaceFetcher({ language: 'de' }).processInclude(
+      new NamespaceFetcher(new Env({ language: 'de' })).processInclude(
         shortcut,
         'o',
         namespaceInfosMultiple,
@@ -165,7 +170,9 @@ describe('NamespaceFetcher.addReachable', () => {
   `);
 
   test('standard', () => {
-    expect(new NamespaceFetcher({}).addReachable(namespaceInfos)).toEqual(
+    expect(
+      new NamespaceFetcher(new Env({})).addReachable(namespaceInfos),
+    ).toEqual(
       jsyaml.load(`
         o:
           priority: 1
@@ -187,7 +194,7 @@ describe('NamespaceFetcher.addReachable', () => {
 describe('NamespaceFetcher.addInfo', () => {
   test('standard', () => {
     expect(
-      new NamespaceFetcher({}).addInfo(
+      new NamespaceFetcher(new Env({})).addInfo(
         {
           url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&start=1',
         },

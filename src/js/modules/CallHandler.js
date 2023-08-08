@@ -17,6 +17,10 @@ export default class CallHandler {
     const env = new Env();
     await env.populate();
 
+    if (env.debug) {
+      env.logger.showLog();
+    }
+
     let redirectUrl;
 
     const response = await this.getRedirectResponse(env);
@@ -27,14 +31,13 @@ export default class CallHandler {
       redirectUrl = this.getRedirectUrlToHome(response);
     }
 
+    env.logger.info('Redirect to:   ' + redirectUrl);
+
     if (env.debug) {
-      Helper.log('Redirect to:   ' + redirectUrl);
       return;
     }
 
-    if (!env.error) {
-      window.location.replace(redirectUrl);
-    }
+    window.location.replace(redirectUrl);
   }
 
   /**
@@ -80,8 +83,7 @@ export default class CallHandler {
     response.redirectUrl = shortcut.url;
     response.status = 'found';
 
-    if (env.debug) Helper.log('');
-    if (env.debug) Helper.log('Used template: ' + response.redirectUrl);
+    env.logger.info('Used template: ' + response.redirectUrl);
 
     response.redirectUrl = UrlProcessor.replaceVariables(response.redirectUrl, {
       language: env.language,

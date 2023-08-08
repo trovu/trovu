@@ -1,6 +1,7 @@
 /** @module Env */
 
 import Helper from './Helper.js';
+import Logger from './Logger.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
 import jsyaml from 'js-yaml';
@@ -11,9 +12,20 @@ export default class Env {
   /**
    * Set helper variables.
    */
-  constructor() {
+  constructor(env) {
+    this.setToThis(env);
     this.configUrlTemplate =
       'https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml';
+    this.logger = new Logger('#log');
+  }
+
+  setToThis(env) {
+    if (!env) {
+      return;
+    }
+    for (const key in env) {
+      this[key] = env[key];
+    }
   }
 
   /**
@@ -74,6 +86,13 @@ export default class Env {
       params = Helper.getUrlParams();
     }
 
+    // Set debug and reload from URL params.
+    for (const paramName of ['debug', 'reload']) {
+      if (params[paramName] === '1') {
+        this[paramName] = true;
+      }
+    }
+
     if (typeof params.github === 'string' && params.github !== '') {
       await this.setWithUserConfigFromGithub(params);
     }
@@ -115,24 +134,16 @@ export default class Env {
       '{%github}',
       params.github,
     );
-    const configYml = await Helper.fetchAsync(
-      configUrl,
-      params.reload,
-      params.debug,
-    );
+    const configYml = await Helper.fetchAsync(configUrl, this);
     if (configYml) {
       try {
         const config = jsyaml.load(configYml);
         return config;
       } catch (error) {
-        Helper.log('Error parsing ' + configUrl + ':\n\n' + error.message);
-        this.error = true;
-        return false;
+        this.logger.error(`Error parsing ${configUrl}: ${error.message}`);
       }
     } else {
-      Helper.log('Failed to read Github config from ' + configUrl);
-      this.error = true;
-      return false;
+      this.logger.error(`Error reading Github config from ${configUrl}`);
     }
   }
 
@@ -204,7 +215,7 @@ export default class Env {
 
   async fetchDbIp() {
     const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
-    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, false);
+    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, this);
     return ipInfoText;
   }
 
