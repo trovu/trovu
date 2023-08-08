@@ -17,6 +17,10 @@ export default class CallHandler {
     const env = new Env();
     await env.populate();
 
+    if (env.debug) {
+      env.logger.showLog();
+    }
+
     let redirectUrl;
 
     const response = await this.getRedirectResponse(env);
