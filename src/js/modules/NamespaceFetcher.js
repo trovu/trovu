@@ -122,7 +122,7 @@ export default class NamespaceFetcher {
       i++
     ) {
       if (i >= 10) {
-        this.env.error(`NamespaceFetcher loop ran already ${i} times.`);
+        this.env.logger.error(`NamespaceFetcher loop ran already ${i} times.`);
       }
       const newNamespaceInfos = Object.values(namespaceInfos).filter(
         (item) => !('shortcuts' in item),
@@ -167,7 +167,7 @@ export default class NamespaceFetcher {
     for (const namespaceInfo of newNamespaceInfos) {
       const response = responses.shift();
       if (!response || response.status != 200) {
-        this.env.warning(
+        this.env.logger.warning(
           `Error fetching via ${this.env.reload ? 'reload' : 'cache'} ${
             namespaceInfo.url
           }`,
@@ -175,7 +175,7 @@ export default class NamespaceFetcher {
         namespaceInfo.shortcuts = [];
         continue;
       }
-      this.env.success(
+      this.env.logger.success(
         `Success fetching via ${this.env.reload ? 'reload' : 'cache'} ${
           namespaceInfo.url
         }`,
@@ -214,7 +214,7 @@ export default class NamespaceFetcher {
       const shortcuts = jsyaml.load(text);
       return shortcuts;
     } catch (error) {
-      this.env.error(`Parse error in ${url}: ${error.message}`);
+      this.env.logger.error(`Parse error in ${url}: ${error.message}`);
     }
   }
 
@@ -229,7 +229,7 @@ export default class NamespaceFetcher {
   checkKeySyntax(shortcuts, namespaceName) {
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
-        this.env.error(
+        this.env.logger.error(
           `Incorrect key "${key}" in namespace ${namespaceName}: Must have form "KEYWORD ARGUMENTCOUNT".`,
         );
       }
@@ -288,7 +288,9 @@ export default class NamespaceFetcher {
 
   processInclude(shortcut, namespaceName, namespaceInfos, depth = 0) {
     if (depth >= 10) {
-      this.env.error(`NamespaceFetcher loop ran already ${depth} times.`);
+      this.env.logger.error(
+        `NamespaceFetcher loop ran already ${depth} times.`,
+      );
     }
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
@@ -302,7 +304,7 @@ export default class NamespaceFetcher {
       });
       namespaceName = include.namespace || namespaceName;
       if (!namespaceInfos[namespaceName]) {
-        this.env.warning(`Namespace "${namespaceName}" does not exist.`);
+        this.env.logger.warning(`Namespace "${namespaceName}" does not exist.`);
         continue;
       }
       let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
@@ -421,7 +423,7 @@ export default class NamespaceFetcher {
 
   verify(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
-      this.env.error(
+      this.env.logger.error(
         `Missing url or deprecated in ${shortcut.namespace}.${shortcut.key}.`,
       );
     }

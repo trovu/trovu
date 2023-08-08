@@ -63,14 +63,14 @@ export default class Helper {
       cache: env.reload ? 'reload' : 'force-cache',
     });
     if (response.status != 200) {
-      env.warning(
+      env.logger.warning(
         `Error fetching via ${env.reload ? 'reload' : 'cache'} ${url}: ${
           response.status
         }`,
       );
       return null;
     }
-    env.success(
+    env.logger.success(
       `Success fetching via ${env.reload ? 'reload' : 'cache'} ${url}`,
     );
     const text = await response.text();
