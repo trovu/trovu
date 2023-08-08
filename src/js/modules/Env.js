@@ -1,6 +1,7 @@
 /** @module Env */
 
 import Helper from './Helper.js';
+import Logger from './Logger.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
 import jsyaml from 'js-yaml';
@@ -15,7 +16,7 @@ export default class Env {
     this.setToThis(env);
     this.configUrlTemplate =
       'https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml';
-    this.logs = [];
+    this.logger = new Logger();
   }
 
   setToThis(env) {
