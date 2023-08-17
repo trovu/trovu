@@ -424,7 +424,7 @@ export default class NamespaceFetcher {
   verify(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
       this.env.logger.error(
-        `Missing url or deprecated in ${shortcut.namespace}.${shortcut.key}.`,
+        `Missing url in ${shortcut.namespace}.${shortcut.key}.`,
       );
     }
     // Remove until not having proper logging
