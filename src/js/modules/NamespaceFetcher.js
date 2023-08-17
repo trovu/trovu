@@ -427,16 +427,14 @@ export default class NamespaceFetcher {
         `Missing url in ${shortcut.namespace}.${shortcut.key}.`,
       );
     }
-    // Remove until not having proper logging
-    // as it might break given faulty user shortcuts.
-    // if (
-    //   shortcut.url &&
-    //   shortcut.argumentCount != Object.keys(shortcut.arguments).length
-    // ) {
-    //   throw new Error(
-    //     `Mismatch in argumentCount of key and arguments.length of url in ${shortcut.namespace}.${shortcut.key} .`,
-    //   );
-    // }
+    if (
+      shortcut.url &&
+      shortcut.argumentCount != Object.keys(shortcut.arguments).length
+    ) {
+      this.env.logger.error(
+        `Mismatch in argumentCount of key and arguments.length of url in "${shortcut.namespace}.${shortcut.key}".`,
+      );
+    }
   }
 
   /**
