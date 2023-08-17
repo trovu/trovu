@@ -93,12 +93,13 @@ export default class Env {
       }
     }
 
+    Object.assign(this, params);
+    Object.assign(this, QueryParser.parse(this.query));
+
     if (typeof params.github === 'string' && params.github !== '') {
       await this.setWithUserConfigFromGithub(params);
     }
 
-    Object.assign(this, params);
-    Object.assign(this, QueryParser.parse(this.query));
     await this.setDefaults();
 
     if (this.extraNamespaceName) {
