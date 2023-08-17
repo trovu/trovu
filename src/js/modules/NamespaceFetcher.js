@@ -168,7 +168,7 @@ export default class NamespaceFetcher {
       const response = responses.shift();
       if (!response || response.status != 200) {
         this.env.logger.warning(
-          `Error fetching via ${this.env.reload ? 'reload' : 'cache'} ${
+          `Problem fetching via ${this.env.reload ? 'reload' : 'cache'} ${
             namespaceInfo.url
           }`,
         );
