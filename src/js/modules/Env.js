@@ -136,15 +136,14 @@ export default class Env {
       params.github,
     );
     const configYml = await Helper.fetchAsync(configUrl, this);
-    if (configYml) {
-      try {
-        const config = jsyaml.load(configYml);
-        return config;
-      } catch (error) {
-        this.logger.error(`Error parsing ${configUrl}: ${error.message}`);
-      }
-    } else {
+    if (!configYml) {
       this.logger.error(`Error reading Github config from ${configUrl}`);
+    }
+    try {
+      const config = jsyaml.load(configYml);
+      return config;
+    } catch (error) {
+      this.logger.error(`Error parsing ${configUrl}: ${error.message}`);
     }
   }
 
