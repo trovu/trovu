@@ -28,6 +28,12 @@
     query: .de.db b,m,8,1.1.2020
   response:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+- title: fr.w berlin
+  env:
+    language: de
+    query: fr.w berlin
+  response:
+    redirectUrl: https://fr.wikipedia.org/wiki/Special:Search?go=Article&search=berlin
 - title: default keyword
   env:
     defaultKeyword: g
