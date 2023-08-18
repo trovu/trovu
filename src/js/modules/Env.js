@@ -5,6 +5,7 @@ import Logger from './Logger.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
 import jsyaml from 'js-yaml';
+import pkg from '../../../package.json';
 
 /** Set and remember the environment. */
 
@@ -14,8 +15,8 @@ export default class Env {
    */
   constructor(env) {
     this.setToThis(env);
-    this.configUrlTemplate =
-      'https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml';
+    this.commitHash = pkg.gitCommitHash.slice(0, 7);
+    this.configUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     this.logger = new Logger('#log');
   }
 
