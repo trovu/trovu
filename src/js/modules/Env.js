@@ -15,7 +15,12 @@ export default class Env {
    */
   constructor(env) {
     this.setToThis(env);
-    this.commitHash = pkg.gitCommitHash.slice(0, 7);
+    if (pkg.gitCommitHash) {
+      this.commitHash = pkg.gitCommitHash.slice(0, 7);
+    } else {
+      this.commitHash = 'unknown';
+    }
+
     this.configUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     this.logger = new Logger('#log');
   }
