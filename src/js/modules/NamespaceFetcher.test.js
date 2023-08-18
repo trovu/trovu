@@ -8,23 +8,23 @@ function cloneObject(obj) {
 
 describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('site', () => {
-    expect(
-      new NamespaceFetcher(new Env()).getInitalNamespaceInfo('de'),
-    ).toEqual({
+    const env = new Env();
+    expect(new NamespaceFetcher(env).getInitalNamespaceInfo('de')).toEqual({
       name: 'de',
       type: 'site',
-      url: 'https://data.trovu.net/data/shortcuts/de.yml',
+      url: `https://data.trovu.net/data/shortcuts/de.yml?${env.commitHash}`,
     });
   });
   test('github', () => {
-    expect(
-      new NamespaceFetcher(new Env()).getInitalNamespaceInfo('johndoe'),
-    ).toEqual({
-      github: 'johndoe',
-      name: 'johndoe',
-      type: 'user',
-      url: 'https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml',
-    });
+    const env = new Env();
+    expect(new NamespaceFetcher(env).getInitalNamespaceInfo('johndoe')).toEqual(
+      {
+        github: 'johndoe',
+        name: 'johndoe',
+        type: 'user',
+        url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
+      },
+    );
   });
 });
 
