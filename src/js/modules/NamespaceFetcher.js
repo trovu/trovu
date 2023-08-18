@@ -4,6 +4,8 @@ import Helper from './Helper.js';
 import UrlProcessor from './UrlProcessor.js';
 import jsyaml from 'js-yaml';
 
+import pkg from '../../../package.json';
+
 export default class NamespaceFetcher {
   constructor(env) {
     this.env = env;
@@ -80,7 +82,10 @@ export default class NamespaceFetcher {
     const namespace = {
       name: name,
       type: 'site',
-      url: 'https://data.trovu.net/data/shortcuts/' + name + '.yml',
+      url: `https://data.trovu.net/data/shortcuts/${name}.yml?${pkg.gitCommitHash.slice(
+        0,
+        7,
+      )}`,
     };
     return namespace;
   }
@@ -101,10 +106,9 @@ export default class NamespaceFetcher {
     if (!namespace.name) {
       namespace.name = namespace.github;
     }
-    namespace.url =
-      'https://raw.githubusercontent.com/' +
-      namespace.github +
-      '/trovu-data-user/master/shortcuts.yml';
+    namespace.url = `https://raw.githubusercontent.com/${
+      namespace.github
+    }/trovu-data-user/master/shortcuts.yml?${pkg.gitCommitHash.slice(0, 7)}`;
     namespace.type = 'user';
     return namespace;
   }
