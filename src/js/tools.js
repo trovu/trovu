@@ -71,6 +71,16 @@ function writeYmls(ymls) {
         shortcut.examples = examples;
       }
     }
+    // Cleanup deprecated shortcuts.
+    for (const shortcut of Object.values(yml)) {
+      if (shortcut.deprecated) {
+        delete shortcut.tags;
+        delete shortcut.examples;
+        delete shortcut.description;
+        delete shortcut.url;
+        delete shortcut.title;
+      }
+    }
     // TODO:
     // trim strings: - keys - titles - examples - description
     // make sure, subkeys are in reverse particular order: url, post_params, description, tags, examples
