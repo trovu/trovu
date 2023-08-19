@@ -5332,6 +5332,12 @@ mn 1:
 month 0:
   url: http://timeanddate.com/calendar/monthly.html
   title: This month
+mj 1:
+  url: https://www.mojeek.com/search?q={%search}
+  title: Mojeek
+mkd 2:
+  url: http://finance.yahoo.com/currency-converter/#from=mkd;to={%to code};amt={%amount}
+  title: Convert Macedonian denar (Yahoo)
   tags:
   - old
 moodleup 0:
