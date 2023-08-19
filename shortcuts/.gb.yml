@@ -15,7 +15,8 @@ a 1:
   - books
   - shopping
   examples:
-    shakespeare: Search for "shakespeare"
+  - arguments: shakespeare
+    description: Search for "shakespeare"
 e 0:
   url: https://www.ebay.co.uk/?mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.co.uk
@@ -31,7 +32,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 g 1:
   url: https://www.google.co.uk/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.co.uk
@@ -39,7 +41,8 @@ g 1:
   - google
   - web search
   examples:
-    london: Search Google for "london"
+  - arguments: london
+    description: Search Google for "london"
 tfl 2:
   url: http://journeyplanner.tfl.gov.uk/user/XSLT_TRIP_REQUEST2?language=en&sessionID=0&requestID=0&ptOptionsActive=1&itOptionsActive=1&imparedOptionsActive=1&ptAdvancedOptions=1&advOptActive_2=1&advOpt_2=1&execInst=normal&command=&itdLPxx_request=&itdLPxx_view=&itdLPxx_tubeMap=&calculateDistance=1&imageFormat=png|pdf&imageOnly=1&imageWidth=705&imageHeight=500&tt_valid_until=20131223&name_origin={%from}&nameState_origin=notidentified&nameDefaultText_origin=Enter+start+location...&type_origin=stop&place_origin=London&name_destination={%to}&nameState_destination=notidentified&nameDefaultText_destination=Enter+end+location...&type_destination=stop&place_destination=London&placeDefaultText_via=London&name_via=Enter+location...&nameState_via=notidentified&nameDefaultText_via=Enter+location...&type_via=stop&place_via=London&itdTripDateTimeDepArr=dep&stepfree-access=no-requirements&routeType=LEASTTIME&includedMeans=checkbox&inclMOT_11=on&inclMOT_2=on&inclMOT_1=on&inclMOT_5=on&inclMOT_0=on&inclMOT_4=on&inclMOT_9=on&inclMOT_7=on&inclMOT_8=on&inclMOT_3=on&trITMOTvalue=20&trITMOT=100&changeSpeed=normal
   title: Transport for London
@@ -48,7 +51,8 @@ tfl 2:
   - transport
   - travel
   examples:
-    brixton, paddington: Search the next connection from Brixton to Paddington
+  - arguments: brixton, paddington
+    description: Search the next connection from Brixton to Paddington
 tfl 3:
   url: http://journeyplanner.tfl.gov.uk/user/XSLT_TRIP_REQUEST2?language=en&sessionID=0&requestID=0&ptOptionsActive=1&itOptionsActive=1&imparedOptionsActive=1&ptAdvancedOptions=1&advOptActive_2=1&advOpt_2=1&execInst=normal&command=&itdLPxx_request=&itdLPxx_view=&itdLPxx_tubeMap=&calculateDistance=1&imageFormat=png|pdf&imageOnly=1&imageWidth=705&imageHeight=500&tt_valid_until=20131223&name_origin={%from}&nameState_origin=notidentified&nameDefaultText_origin=Enter+start+location...&type_origin=stop&place_origin=London&name_destination={%to}&nameState_destination=notidentified&nameDefaultText_destination=Enter+end+location...&type_destination=stop&place_destination=London&placeDefaultText_via=London&name_via=Enter+location...&nameState_via=notidentified&nameDefaultText_via=Enter+location...&type_via=stop&place_via=London&itdTripDateTimeDepArr=dep&stepfree-access=no-requirements&routeType=LEASTTIME&includedMeans=checkbox&inclMOT_11=on&inclMOT_2=on&inclMOT_1=on&inclMOT_5=on&inclMOT_0=on&inclMOT_4=on&inclMOT_9=on&inclMOT_7=on&inclMOT_8=on&inclMOT_3=on&trITMOTvalue=20&trITMOT=100&changeSpeed=normal&itdTime={%hour}:00
   title: Transport for London
@@ -57,7 +61,8 @@ tfl 3:
   - transport
   - travel
   examples:
-    brixton, paddington, 10: Search the next connection from Brixton to Paddington at 10:00
+  - arguments: brixton, paddington, 10
+    description: Search the next connection from Brixton to Paddington at 10:00
 tl 2:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{$now|output=DD/MM/YY/HH/mm}/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com
@@ -65,7 +70,8 @@ tl 2:
   - transport
   - travel
   examples:
-    manchester, london: Search for trains from Manchester to London
+  - arguments: manchester, london
+    description: Search for trains from Manchester to London
 tl 4:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/{%from}/{%to}/{%date}/{%time}/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com
@@ -73,7 +79,8 @@ tl 4:
   - transport
   - travel
   examples:
-    manchester, london, 22/06/16, 14/30: Search for trains from Manchester to London
+  - arguments: manchester, london, 22/06/16, 14/30
+    description: Search for trains from Manchester to London
 tv 0:
   url: http://www.tvguide.co.uk/
   title: tvguide.co.uk
@@ -86,4 +93,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    shoes: search for shoes
+  - arguments: shoes
+    description: search for shoes

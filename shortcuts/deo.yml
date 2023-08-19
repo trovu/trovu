@@ -21,8 +21,10 @@ da-eo 1:
   - esperanto
   - language
   examples:
-    træ: esperanto traduko de "træ"
-    arbo: dana traduko de "arbo"
+  - arguments: træ
+    description: esperanto traduko de "træ"
+  - arguments: arbo
+    description: dana traduko de "arbo"
 eo 0:
   include:
     key: eo-{$language} 0
@@ -38,5 +40,7 @@ eo-da 1:
   include:
     key: da-eo 1
   examples:
-    arbo: dansk oversættelse af "arbo"
-    træ: esperanto oversættelse af "træ"
+  - arguments: arbo
+    description: dansk oversættelse af "arbo"
+  - arguments: træ
+    description: esperanto oversættelse af "træ"

@@ -21,8 +21,10 @@ de-nl 1:
   - german
   - language
   examples:
-    baum: Nederlands-vertaling van "baum"
-    boom: Duits-vertaling van "boom"
+  - arguments: baum
+    description: Nederlands-vertaling van "baum"
+  - arguments: boom
+    description: Duits-vertaling van "boom"
 nl 0:
   include:
     key: nl-{$language} 0
@@ -38,5 +40,7 @@ nl-de 1:
   include:
     key: de-nl 1
   examples:
-    boom: Deutsch-Übersetzung von "boom"
-    baum: Niederländisch-Übersetzung von "baum"
+  - arguments: boom
+    description: Deutsch-Übersetzung von "boom"
+  - arguments: baum
+    description: Niederländisch-Übersetzung von "baum"

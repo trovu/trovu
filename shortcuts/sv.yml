@@ -11,7 +11,8 @@ frv 1:
   - language
   - pronunciation
   examples:
-    berlin: Search for the pronunciation of "berlin"
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
 last 1:
   url: http://www.last.fm/search?setlang=sv&q={%artist}
   title: Last.fm
@@ -19,7 +20,8 @@ last 1:
   - lastfm
   - music
   examples:
-    beatles: Search for "beatles"
+  - arguments: beatles
+    description: Search for "beatles"
 rim 1:
   url: https://www.rimlexikon.se/ord/{%ord}
   title: Rimlexikon
@@ -27,7 +29,8 @@ rim 1:
   - language
   - swedish
   examples:
-    träd: Search rhymes for "träd"
+  - arguments: träd
+    description: Search rhymes for "träd"
 sv-fr 1:
   deprecated:
     alternative:

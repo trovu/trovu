@@ -21,8 +21,10 @@ en-zh 1:
   - english
   - language
   examples:
-    tree: 中文 的"tree"翻译
-    树: 英文 的"树"翻译
+  - arguments: tree
+    description: 中文 的"tree"翻译
+  - arguments: 树
+    description: 英文 的"树"翻译
 zh 0:
   include:
     key: zh-{$language} 0
@@ -38,5 +40,7 @@ zh-en 1:
   include:
     key: en-zh 1
   examples:
-    树: English translation of "树"
-    tree: Chinese translation of "tree"
+  - arguments: 树
+    description: English translation of "树"
+  - arguments: tree
+    description: Chinese translation of "tree"

@@ -11,7 +11,8 @@
   - 3suisses
   - shopping
   examples:
-    chaussures: Cherche chaussures
+  - arguments: chaussures
+    description: Cherche chaussures
 a 0:
   url: http://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21
   title: Amazon.fr Homepage
@@ -29,7 +30,8 @@ a 1:
   - books
   - shopping
   examples:
-    balzac: Search for "balzac"
+  - arguments: balzac
+    description: Search for "balzac"
 cdiscount 1:
   url: http://www.cdiscount.com/search/10/{%query}.html
   title: CDiscount.com
@@ -37,7 +39,8 @@ cdiscount 1:
   - cdiscount
   - shopping
   examples:
-    iphone: Search CDiscount.com for "iphone"
+  - arguments: iphone
+    description: Search CDiscount.com for "iphone"
 e 0:
   url: https://www.ebay.fr/?mkcid=1&mkrid=709-53476-19255-0&siteid=71&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.fr
@@ -53,7 +56,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    veste: Search for "veste"
+  - arguments: veste
+    description: Search for "veste"
 g 1:
   url: https://www.google.fr/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.fr
@@ -61,7 +65,8 @@ g 1:
   - google
   - web search
   examples:
-    paris: Recherche Google par "paris"
+  - arguments: paris
+    description: Recherche Google par "paris"
 ikea 0:
   url: http://www.ikea.com/fr/fr/
   title: IKEA France
@@ -77,7 +82,8 @@ ikea 1:
   - ikea
   - shopping
   examples:
-    matelas: Cherche "matelas"
+  - arguments: matelas
+    description: Cherche "matelas"
 kiabi 0:
   url: http://www.kiabi.com/
   title: Kiabi.com
@@ -91,7 +97,8 @@ kiabi 1:
   - kiabi
   - shopping
   examples:
-    chaussures: Recherche chaussures
+  - arguments: chaussures
+    description: Recherche chaussures
 pj 0:
   url: https://www.pagesjaunes.fr
   title: Pages Jaunes
@@ -99,7 +106,8 @@ pj 2:
   url: https://www.pagesjaunes.fr/annuaire/chercherlespros?quoiqui={%quoiqui}&ou={%ou}&univers=pagesjaunes&idOu=
   title: Pages Jaunes
   examples:
-    tv, paris: Search Pages Jaunes for TV in Paris
+  - arguments: tv, paris
+    description: Search Pages Jaunes for TV in Paris
 soc 1:
   url: http://www.societe.com/cgi-bin/search?champs={%name}
   title: Societé Company Register
@@ -110,4 +118,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    chaussures: Cherche chaussures
+  - arguments: chaussures
+    description: Cherche chaussures

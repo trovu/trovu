@@ -8,7 +8,8 @@ abk 1:
   url: http://www.abkuerzungen.de/result.php?language=&abbreviation={%Abkürzung}
   title: Abkürzungen
   examples:
-    cia: Suche nach der Abkürzung "cia"
+  - arguments: cia
+    description: Suche nach der Abkürzung "cia"
 anagramm 1:
   url: http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text={%query}&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
   title: Anagramm-Suche
@@ -16,7 +17,8 @@ anagramm 1:
   - german
   - language
   examples:
-    rentner: Anagramm-Suchen nach "rentner"
+  - arguments: rentner
+    description: Anagramm-Suchen nach "rentner"
 ardtext 1:
   url: http://www.ard-text.de/index.php?page={%Seitennummer}
   title: ARD-Text
@@ -25,7 +27,8 @@ ardtext 1:
   - teletext
   - videotext
   examples:
-    '100': Gehe zu Seite 100
+  - arguments: '100'
+    description: Gehe zu Seite 100
 at 1:
   url: https://www.ostarrichi.org/suche?search={%Wort}
   title: Österreichisch-Hochdeutsch (Ostarrichi.org)
@@ -34,7 +37,8 @@ at 1:
   - german
   - language
   examples:
-    paradeisa: '"paradeisa" auf Hochdeutsch'
+  - arguments: paradeisa
+    description: '"paradeisa" auf Hochdeutsch'
 awf 1:
   url: https://anderes-wort-fuer.de/{%Wort}/
   title: Anderes Wort für – Synonymlexikon
@@ -43,7 +47,8 @@ awf 1:
   - language
   - synonyms
   examples:
-    wirtschaft: Suche nach Synonymen für "wirtschaft"
+  - arguments: wirtschaft
+    description: Suche nach Synonymen für "wirtschaft"
 awort 1:
   url: https://anderes-wort-fuer.de/{%Wort}/
   title: anderes Wort für
@@ -59,7 +64,8 @@ base 1:
   - bielefeld
   - science
   examples:
-    sprache: Suche nach "sprache"
+  - arguments: sprache
+    description: Suche nach "sprache"
 bbs 1:
   url: http://www.babyblaue-seiten.de/index.php?searchQuery={%Suche}&content=search&searchWhere=0&content=search
   title: Babyblaue Seiten
@@ -68,7 +74,8 @@ bbs 1:
   - progressive rock
   - rock
   examples:
-    Mekong Delta: Suche nach Mekong Delta
+  - arguments: Mekong Delta
+    description: Suche nach Mekong Delta
 bc 1:
   url: https://www.bestcheck.de/search?q={%query}
   title: BestCheck
@@ -79,7 +86,8 @@ bk 1:
   - books
   - shopping
   examples:
-    goethe: Suche nach Goethe
+  - arguments: goethe
+    description: Suche nach Goethe
 bl 1:
   url: https://www.google.de/search?q={%query}+site:www.chip.de%2Fbestenlisten
   title: CHIP Bestenliste
@@ -104,7 +112,8 @@ blb 1:
   - books
   - shopping
   examples:
-    goethe: Suche nach Büchern von Goethe
+  - arguments: goethe
+    description: Suche nach Büchern von Goethe
 blb 2:
   url: http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor|encoding=iso-8859-1}&titel={%Titel|encoding=iso-8859-1}
   title: Booklooker
@@ -113,7 +122,8 @@ blb 2:
   - books
   - shopping
   examples:
-    goethe, faust: Suche nach "Faust" von Goethe
+  - arguments: goethe, faust
+    description: Suche nach "Faust" von Goethe
 bzl 1:
   url: https://www.bookzilla.de/shop/quickSearch?searchString={%Suche}
   title: Bookzilla
@@ -121,7 +131,8 @@ bzl 1:
   - books
   - shopping
   examples:
-    goethe: Search Bookzilla for "goethe"
+  - arguments: goethe
+    description: Search Bookzilla for "goethe"
 cb 0:
   url: http://www.computerbase.de/
   title: Computerbase
@@ -135,7 +146,8 @@ cb 1:
   - computer science
   - linux
   examples:
-    linux: Suche nach Artikel über "linux"
+  - arguments: linux
+    description: Suche nach Artikel über "linux"
 ch 1:
   url: https://www.google.de/search?q={%query}+site:www.chip.de
   title: CHIP
@@ -150,7 +162,8 @@ chill 1:
   tags:
   - video
   examples:
-    parkour: Search Chilloutzone for "parkour"
+  - arguments: parkour
+    description: Search Chilloutzone for "parkour"
 chip 1:
   url: http://search.chip.de/?q={%query}&sort_by_date=desc
   title: CHIP Online
@@ -158,7 +171,8 @@ chip 1:
   - chip
   - download
   examples:
-    linux: Search CHIP Online for "linux"
+  - arguments: linux
+    description: Search CHIP Online for "linux"
 chipd 1:
   url: http://search.chip.de/?q={%query}&f=softwarereview
   title: CHIP Online Downloads
@@ -166,14 +180,16 @@ chipd 1:
   - chip
   - download
   examples:
-    skype: Search CHIP Online Downloads for "skype"
+  - arguments: skype
+    description: Search CHIP Online Downloads for "skype"
 ciao 1:
   url: https://www.ciao.de/suche?anfrage={%Suche}
   title: Ciao.de Preisvergleich
   tags:
   - shopping
   examples:
-    smartphone: Search Ciao.de Preisvergleich for "smartphone"
+  - arguments: smartphone
+    description: Search Ciao.de Preisvergleich for "smartphone"
 ck 0:
   url: http://www.chefkoch.de
   title: Chefkoch
@@ -187,21 +203,24 @@ ck 1:
   - cooking
   - recipes
   examples:
-    pizza: Rezepte für Pizza
+  - arguments: pizza
+    description: Rezepte für Pizza
 cng 1:
   url: https://www.gas-tankstellen.de/list.php?suchenach=t&land=D&lpganlage=0&mode=cng&suchkennz={%KFZ-Kennzeichen}
   title: LPG- und CNG-Tankstellen
   tags:
   - gas
   examples:
-    bi: Suche nach LPG- und CNG-Tankstellen um Bielefeld
+  - arguments: bi
+    description: Suche nach LPG- und CNG-Tankstellen um Bielefeld
 cook 1:
   url: https://cookidoo.de/search/de-DE?query={%Suche}
   title: Cookidoo (Thermomix-Rezept-Portal)
   tags:
   - cooking
   examples:
-    risotto: Show recipes for risottos
+  - arguments: risotto
+    description: Show recipes for risottos
 cs-de 1:
   deprecated:
     alternative:
@@ -219,7 +238,8 @@ css 1:
   - css
   - programming
   examples:
-    white-space: Suche nach "white-space"
+  - arguments: white-space
+    description: Suche nach "white-space"
 dab 1:
   deprecated:
     alternative:
@@ -238,7 +258,8 @@ dclj 1:
   - javascript
   - programming
   examples:
-    'var ': Suche nach "var"
+  - arguments: 'var '
+    description: Suche nach "var"
 dclp 0:
   url: http://groups.google.de/group/de.comp.lang.php
   title: De.comp.lang.php
@@ -252,7 +273,8 @@ dclp 1:
   - php
   - programming
   examples:
-    strlen: Search for "strlen"
+  - arguments: strlen
+    description: Search for "strlen"
 dd 1:
   url: http://www.duden.de/suchen/dudenonline/{%wort}
   title: Duden
@@ -262,7 +284,8 @@ dd 1:
   - language
   - rechtschreibung
   examples:
-    stuhl: Nachschlagen des Wortes "Stuhl"
+  - arguments: stuhl
+    description: Nachschlagen des Wortes "Stuhl"
 de-cs 1:
   deprecated:
     alternative:
@@ -280,7 +303,8 @@ dnb 1:
   - german
   - library
   examples:
-    goethe: Search Deutsche Nationalbibliothek for "goethe"
+  - arguments: goethe
+    description: Search Deutsche Nationalbibliothek for "goethe"
 dw 1:
   url: https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item={%suche}
   title: Deutsche Welle, Nachrichten auf Deutsch
@@ -315,7 +339,8 @@ endung 1:
   - extension
   - files
   examples:
-    flv: Search Endungen.de for "flv"
+  - arguments: flv
+    description: Search Endungen.de for "flv"
 eni 1:
   deprecated:
     alternative:
@@ -367,7 +392,8 @@ fefe 1:
   - blog
   - news
   examples:
-    atomenergie: Search for "atomenergie"
+  - arguments: atomenergie
+    description: Search for "atomenergie"
 fefecss 1:
   url: http://blog.fefe.de?css={%Style}.css
   title: Fefes Blog, anderer CSS-Style
@@ -375,7 +401,8 @@ fefecss 1:
   - blog
   - news
   examples:
-    manpage: Fefes Blog mit dem CSS-Style manpage.css
+  - arguments: manpage
+    description: Fefes Blog mit dem CSS-Style manpage.css
 fefes 0:
   url: https://blog.fefe.de
   title: Fefes Blog, SSL
@@ -389,7 +416,8 @@ fefes 1:
   - blog
   - news
   examples:
-    berlin: Search for "berlin"
+  - arguments: berlin
+    description: Search for "berlin"
 fefescss 1:
   url: https://blog.fefe.de?css={%Style}.css
   title: Fefes Blog, anderer CSS-Style, SSL
@@ -397,14 +425,16 @@ fefescss 1:
   - blog
   - news
   examples:
-    manpage: Fefes Blog mit dem CSS-Style manpage.css
+  - arguments: manpage
+    description: Fefes Blog mit dem CSS-Style manpage.css
 fmb 2:
   url: http://findmybook.de/input.php?form%5Btitle%5D={%Titel}&form%5Bauthor%5D={%Autor}
   title: Findmybook.de
   tags:
   - books
   examples:
-    houellebecq, elementarteilchen: Search for "houellebecq"
+  - arguments: houellebecq, elementarteilchen
+    description: Search for "houellebecq"
 fr-pons 1:
   deprecated:
     alternative:
@@ -426,7 +456,8 @@ frbuch 1:
   tags:
   - french
   examples:
-    subjonctif: Search Französisch-Lehrbuch for "subjonctif"
+  - arguments: subjonctif
+    description: Search Französisch-Lehrbuch for "subjonctif"
 frd 1:
   deprecated:
     alternative:
@@ -450,7 +481,8 @@ frv 1:
   - language
   - pronunciation
   examples:
-    Soest: Sucht nach der Aussprache von "Soest"
+  - arguments: Soest
+    description: Sucht nach der Aussprache von "Soest"
 gfp 0:
   url: https://german-foreign-policy.com/
   title: German Foreign Policy
@@ -466,7 +498,8 @@ gfp 1:
   - news
   - politics
   examples:
-    berlin: Suche nach "berlin"
+  - arguments: berlin
+    description: Suche nach "berlin"
 grc 1:
   url: http://www.albertmartin.de/altgriechisch/?q={%suchwort}
   title: Altgriechisch Wörterbuch
@@ -477,8 +510,10 @@ grc 1:
   - german
   - language
   examples:
-    baum: Übersetzung von "Baum" auf Altgriechisch
-    ξύλον: 'Übersetzung von "ξύλον" auf Deutsch '
+  - arguments: baum
+    description: Übersetzung von "Baum" auf Altgriechisch
+  - arguments: ξύλον
+    description: 'Übersetzung von "ξύλον" auf Deutsch '
 gz 0:
   url: https://www.griechenland.net/
   title: Griechenland Zeitung
@@ -497,7 +532,8 @@ h 1:
   tags:
   - heise
   examples:
-    linux: Search for "linux"
+  - arguments: linux
+    description: Search for "linux"
 heise 0:
   url: http://www.heise.de/
   title: Heise.de
@@ -517,7 +553,8 @@ hls 1:
   - geschichte
   - history
   examples:
-    basel: Search Historisches Lexikon der Schweiz for "basel"
+  - arguments: basel
+    description: Search Historisches Lexikon der Schweiz for "basel"
 hn 0:
   url: http://www.heise.de/newsticker
   title: Heise Newsticker
@@ -529,14 +566,16 @@ hn 1:
   tags:
   - heise
   examples:
-    apple: Search for "apple"
+  - arguments: apple
+    description: Search for "apple"
 hoax 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms={%query}
   title: Hoax-Info (TU-Berlin)
   tags:
   - hoax
   examples:
-    Nigeria-Connection: Hoax-Info über die "Nigeria-Connection"
+  - arguments: Nigeria-Connection
+    description: Hoax-Info über die "Nigeria-Connection"
 hotf 0:
   url: http://www.heise.de/extras/foren/S-Special-Off-Topic-Archiv-15/forum-206680/list/
   title: Heise Off-Topic-Forum
@@ -556,7 +595,8 @@ hpreis 1:
   - heise
   - shopping
   examples:
-    computer: Search for "computer"
+  - arguments: computer
+    description: Search for "computer"
 hsoft 0:
   url: http://www.heise.de/software/
   title: Heise Softwareverzeichnis Startseite
@@ -568,7 +608,8 @@ hsoft 1:
   tags:
   - heise
   examples:
-    bildbearbeitung: Search for "bildbearbeitung"
+  - arguments: bildbearbeitung
+    description: Search for "bildbearbeitung"
 htp 0:
   url: http://www.heise.de/tp/
   title: Telepolis Startseite
@@ -590,7 +631,8 @@ hwho 1:
   tags:
   - heise
   examples:
-    '1': Search for "1"
+  - arguments: '1'
+    description: Search for "1"
 ifun 1:
   url: http://www.ifun.de/suche/{%query}
   title: ifun.de
@@ -598,7 +640,8 @@ ifun 1:
   - apple
   - news
   examples:
-    macbook: Search ifun.de for "macbook"
+  - arguments: macbook
+    description: Search ifun.de for "macbook"
 isbn 1:
   url: http://de.wikipedia.org/wiki/Spezial:Booksources/{%isbn}
   title: ISBN-Suche bei Wikipedia
@@ -625,7 +668,8 @@ kam 1:
   - humor
   - wiki
   examples:
-    Berlin: Artikel zu "Berlin"
+  - arguments: Berlin
+    description: Artikel zu "Berlin"
 kicker 0:
   url: http://www.kicker.de/
   title: Kicker.de
@@ -639,7 +683,8 @@ kicker 1:
   - news
   - sport
   examples:
-    berlin: Search for "berlin"
+  - arguments: berlin
+    description: Search for "berlin"
 kw 1:
   url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo
   title: Kreuzworträtsel-Datenbank
@@ -662,7 +707,8 @@ last 1:
   - lastfm
   - music
   examples:
-    beatles: Search for "beatles"
+  - arguments: beatles
+    description: Search for "beatles"
 leo 1:
   deprecated:
     alternative:
@@ -679,7 +725,8 @@ lobby 1:
   tags:
   - politics
   examples:
-    berlin: Search LobbyControl for "berlin"
+  - arguments: berlin
+    description: Search LobbyControl for "berlin"
 m 1:
   url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe={%query}
   title: Metager
@@ -698,7 +745,8 @@ morgenpost 1:
   tags:
   - news
   examples:
-    berlin: Search Berliner Morgenpost Archiv for "berlin"
+  - arguments: berlin
+    description: Search Berliner Morgenpost Archiv for "berlin"
 mp 1:
   url: http://www.moviepilot.de/suche?q={%query}
   title: Moviepilot
@@ -719,7 +767,8 @@ nds 1:
   - blog
   - politik
   examples:
-    grundeinkommen: Suche nach "grundeinkommen"
+  - arguments: grundeinkommen
+    description: Suche nach "grundeinkommen"
 nld 1:
   deprecated:
     alternative:
@@ -741,7 +790,8 @@ ntv 1:
   tags:
   - news
   examples:
-    berlin: Search n-tv.de for "berlin"
+  - arguments: berlin
+    description: Search n-tv.de for "berlin"
 nzz 1:
   url: http://www.nzz.ch/suche?form%5Bq%5D={%Suchbegriff}
   title: NZZ Neue Züricher Zeitung, Archiv
@@ -749,14 +799,16 @@ nzz 1:
   - news
   - nzz
   examples:
-    schweiz: Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"
+  - arguments: schweiz
+    description: Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"
 ofdb 1:
   url: http://www.ofdb.de/view.php?page=suchergebnis&SText={%Suche}
   title: Online Filmdatenbank
   tags:
   - movies
   examples:
-    forrest gump: Search for information about Forrest Gump
+  - arguments: forrest gump
+    description: Search for information about Forrest Gump
 ok 1:
   url: https://otrkey.com/download/{%Suche}.html
   title: otrkey.com
@@ -789,7 +841,8 @@ ot 1:
   - language
   - thesaurus
   examples:
-    wichtig: Synonyme für "wichtig"
+  - arguments: wichtig
+    description: Synonyme für "wichtig"
 ot? 0:
   url: http://www.openthesaurus.de/faq.php
   title: OpenThesaurus Hilfe
@@ -846,7 +899,8 @@ rblcheck 1:
   - email
   - rbl
   examples:
-    127.0.0.1: Check if 127.0.0.1 is on the RBL
+  - arguments: 127.0.0.1
+    description: Check if 127.0.0.1 is on the RBL
 reim 1:
   url: http://www.2rhyme.ch/Reimt-auf/{%Wortendung}
   title: 2 Rhyme Reimlexikon
@@ -855,7 +909,8 @@ reim 1:
   - language
   - reime
   examples:
-    auen: Suche Reime auf "auen"
+  - arguments: auen
+    description: Suche Reime auf "auen"
 rezeptefuchs 0:
   url: http://www.rezeptefuchs.de/
   title: Rezeptefuchs Startseite
@@ -867,7 +922,8 @@ rezeptefuchs 1:
   tags:
   - cooking
   examples:
-    tomate: Suche nach Rezepten mit Tomate
+  - arguments: tomate
+    description: Suche nach Rezepten mit Tomate
 rgs 1:
   url: https://www.google.de/search?hl={$language}&q=site%3Aruhrgebietssprache.de%20{%Suche}&ie=utf-8
   title: Ruhrgebietssprache
@@ -875,7 +931,8 @@ rgs 1:
   - german
   - language
   examples:
-    abdackeln: Suche Ruhrgebietssprache nach "abdackeln"
+  - arguments: abdackeln
+    description: Suche Ruhrgebietssprache nach "abdackeln"
 rivva 0:
   url: https://rivva.de
   title: Rivva Blog Aggregator
@@ -887,7 +944,8 @@ rivva 1:
   tags:
   - blogs
   examples:
-    berlin: Search Rivva blog aggregator for "berlin"
+  - arguments: berlin
+    description: Search Rivva blog aggregator for "berlin"
 rm 1:
   url: http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase={%pled}
   title: Romanisch-Deutsch via Pledari Grond
@@ -913,7 +971,8 @@ rundschau 1:
   tags:
   - news
   examples:
-    berlin: Suche im Frankfurter-Rundschau-Archiv nach "berlin"
+  - arguments: berlin
+    description: Suche im Frankfurter-Rundschau-Archiv nach "berlin"
 rup 1:
   deprecated:
     alternative:
@@ -931,7 +990,8 @@ sfr 1:
   - school
   - social network
   examples:
-    stefan: Suchen nach Personen namens Stefan
+  - arguments: stefan
+    description: Suchen nach Personen namens Stefan
 sfr 2:
   url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}&PersonSearch.school={%Ort}
   title: Stayfriends
@@ -939,7 +999,8 @@ sfr 2:
   - school
   - social network
   examples:
-    stefan, berlin: Suchen nach Personen namens Stefan in Berlin
+  - arguments: stefan, berlin
+    description: Suchen nach Personen namens Stefan in Berlin
 sh 0:
   url: http://de.selfhtml.org/
   title: Selfhtml
@@ -963,7 +1024,8 @@ sh 1:
   - javascript
   - tutorial
   examples:
-    div: Suche nach "div"
+  - arguments: div
+    description: Suche nach "div"
 shg 1:
   url: http://www.google.com/search?q={%Suche}&sitesearch=wiki.selfhtml.org
   title: Selfhtml via Google
@@ -978,7 +1040,8 @@ shg 1:
   - tutorial
   - xml
   examples:
-    doctype: description about doctype declaration
+  - arguments: doctype
+    description: description about doctype declaration
 spon 0:
   url: http://www.spiegel.de/
   title: Spiegel Online
@@ -992,7 +1055,8 @@ spon 1:
   - news
   - spiegel
   examples:
-    berlin: Suche nach "berlin"
+  - arguments: berlin
+    description: Suche nach "berlin"
 stupi 0:
   url: http://www.stupidedia.org/
   title: Stupipedia Hauptseite
@@ -1004,7 +1068,8 @@ stupi 1:
   tags:
   - wiki
   examples:
-    berlin: Search Stupipedia Artikelsuche for "berlin"
+  - arguments: berlin
+    description: Search Stupipedia Artikelsuche for "berlin"
 svb 1:
   deprecated:
     alternative:
@@ -1033,7 +1098,8 @@ swb 1:
   - dialect
   - dictionary
   examples:
-    Gschäfd: Der Ort, wo man schafft.
+  - arguments: Gschäfd
+    description: Der Ort, wo man schafft.
 syn 1:
   url: http://synonyme.woxikon.de/synonyme/{%wort}.php
   title: Synonyme
@@ -1041,7 +1107,8 @@ syn 1:
   - language
   - thesaurus
   examples:
-    wichtig: Synonyme für "wichtig"
+  - arguments: wichtig
+    description: Synonyme für "wichtig"
 sz 0:
   url: http://www.sueddeutsche.de/
   title: Süddeutsche Zeitung
@@ -1102,7 +1169,8 @@ ts 1:
   - news
   - tagesschau
   examples:
-    berlin: Suche nach Nachrichten zu Berlin
+  - arguments: berlin
+    description: Suche nach Nachrichten zu Berlin
 tsp 0:
   url: https://www.tagesspiegel.de/
   title: Tagesspiegel, Homepage
@@ -1116,7 +1184,8 @@ tsp 1:
   - berlin
   - newspaper
   examples:
-    Friedrichshain: Search Tagesspiegel for "Friedrichshain"
+  - arguments: Friedrichshain
+    description: Search Tagesspiegel for "Friedrichshain"
 tspg 1:
   url: https://www.google.de/search?q=site:tagesspiegel.de%20{%Suche}
   title: Tagesspiegel via Google
@@ -1124,7 +1193,8 @@ tspg 1:
   - berlin
   - newspaper
   examples:
-    Friedrichshain: Search "Friedrichshain"
+  - arguments: Friedrichshain
+    description: Search "Friedrichshain"
 uu 0:
   url: http://www.ubuntuusers.de/
   title: UbuntuUsers.de
@@ -1181,7 +1251,8 @@ wn 1:
   - german
   - wörterbuch
   examples:
-    haus: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
+  - arguments: haus
+    description: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
 wort 1:
   url: http://www.dwds.de/?qu={%Wort}&view=1
   title: Digitales Wörterbuch der Deutschen Sprache
@@ -1194,7 +1265,8 @@ wsl 1:
   - german
   - language
   examples:
-    Stuhl: Search for "Stuhl"
+  - arguments: Stuhl
+    description: Search for "Stuhl"
 zeit 0:
   url: http://www.zeit.de/
   title: Zeit Online
@@ -1208,14 +1280,16 @@ zeit 1:
   - news
   - zeit
   examples:
-    berlin: Suche im Archiv von Zeit Online nach Berlin
+  - arguments: berlin
+    description: Suche im Archiv von Zeit Online nach Berlin
 zv 1:
   url: http://www.zwangsversteigerung.de/suche?q={%KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID}&ergebnisZeigen=ja
   title: Zwangsversteigerung
   tags:
   - zwangsversteigerung
   examples:
-    gi: Suche nach Zwangsversteigerungen in Gießen
+  - arguments: gi
+    description: Suche nach Zwangsversteigerungen in Gießen
 zvab 0:
   url: https://www.zvab.com
   title: Zentrales Verzeichnis Antiquarischer Bücher (ZVAB)

@@ -11,7 +11,8 @@ bibbs 1:
   - basel
   - bibliothek
   examples:
-    houellebecq: Suche nach Werken von und über "houellebecq"
+  - arguments: houellebecq
+    description: Suche nach Werken von und über "houellebecq"
 campz 0:
   url: http://www.campz.ch
   title: CAMPZ Schweiz
@@ -27,7 +28,8 @@ campz 1:
   - outdoor
   - shop
   examples:
-    Kocher: Search CAMPZ Schweiz for "Kocher"
+  - arguments: Kocher
+    description: Search CAMPZ Schweiz for "Kocher"
 conrad 0:
   url: http://www.conrad.ch/
   title: Conrad Elektronik Schweiz
@@ -43,7 +45,8 @@ conrad 1:
   - electronics
   - shopping
   examples:
-    glühlampe: Search Conrad Elektronik Schweiz for "glühlampe"
+  - arguments: glühlampe
+    description: Search Conrad Elektronik Schweiz for "glühlampe"
 digi 1:
   url: https://www.digitec.ch/de/Search?q={%query}
   title: Digitec Onlineshop
@@ -71,7 +74,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 faust 1:
   url: https://www.faust.ch/shop/qsrch.htm?Keyval={%query}&UID=55006243ffc5000000000000
   title: Faust Laborbedarf
@@ -82,7 +86,8 @@ g 1:
   - google
   - web search
   examples:
-    bern: Google-Suche nach "bern"
+  - arguments: bern
+    description: Google-Suche nach "bern"
 gmag 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Aargau%2C%20Schweiz
   title: Google Maps Aargau
@@ -90,7 +95,8 @@ gmag 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Aargau
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Aargau
   deprecated:
     alternative:
       query: gm ag,{%1}
@@ -102,7 +108,8 @@ gmbe 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Bern
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Bern
   deprecated:
     alternative:
       query: gm be,{%1}
@@ -114,7 +121,8 @@ gmbs 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Basel
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Basel
   deprecated:
     alternative:
       query: gm bs,{%1}
@@ -126,7 +134,8 @@ gmfr 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Freiburg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Freiburg
   deprecated:
     alternative:
       query: gm fr,{%1}
@@ -138,7 +147,8 @@ gmge 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Genf
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Genf
   deprecated:
     alternative:
       query: gm ge,{%1}
@@ -150,7 +160,8 @@ gmgl 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Glarus
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Glarus
   deprecated:
     alternative:
       query: gm gl,{%1}
@@ -162,7 +173,8 @@ gmlu 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Luzern
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Luzern
   deprecated:
     alternative:
       query: gm lu,{%1}
@@ -174,7 +186,8 @@ gmne 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Neuenburg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Neuenburg
   deprecated:
     alternative:
       query: gm ne,{%1}
@@ -186,7 +199,8 @@ gmsg 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in St. Gallen
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in St. Gallen
   deprecated:
     alternative:
       query: gm sg,{%1}
@@ -198,7 +212,8 @@ gmsh 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Schaffhausen
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Schaffhausen
   deprecated:
     alternative:
       query: gm sh,{%1}
@@ -210,7 +225,8 @@ gmso 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Solothurn
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Solothurn
   deprecated:
     alternative:
       query: gm so,{%1}
@@ -222,7 +238,8 @@ gmsz 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Schwyz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Schwyz
   deprecated:
     alternative:
       query: gm sz,{%1}
@@ -234,7 +251,8 @@ gmzg 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Zug
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Zug
   deprecated:
     alternative:
       query: gm zg,{%1}
@@ -246,7 +264,8 @@ gmzh 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Zürich
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Zürich
   deprecated:
     alternative:
       query: gm zh,{%1}
@@ -258,7 +277,8 @@ gps 1:
   - google
   - shopping
   examples:
-    iphone: Suche nach "iphone"
+  - arguments: iphone
+    description: Suche nach "iphone"
 ikea 0:
   url: http://www.ikea.com/ch/
   title: IKEA Schweiz
@@ -274,13 +294,15 @@ ikea 1:
   - ikea
   - shopping
   examples:
-    matratze: Suche nach Matratzen
+  - arguments: matratze
+    description: Suche nach Matratzen
 local 2:
   url: https://tel.local.ch/de/q?what={%Name}&where={%Ort}
   title: local.ch Telefonbuch
   description: Telefonbuch-Suche über local.ch
   examples:
-    Hans Muster, Bern: Suche auf local.ch nach "Hans Muster" in "Bern"
+  - arguments: Hans Muster, Bern
+    description: Suche auf local.ch nach "Hans Muster" in "Bern"
 mc 0:
   url: https://www.meteocentrale.ch/
   title: Meteocentrale.ch
@@ -292,12 +314,14 @@ mc 1:
   tags:
   - weather
   examples:
-    '8000': Zeige Wetterwarnungen für Postleitzahl 8000
+  - arguments: '8000'
+    description: Zeige Wetterwarnungen für Postleitzahl 8000
 migros 1:
   url: https://www.migros.ch/de/search?query={%Produkt}
   title: Migros Sortiment
   examples:
-    toblerone: Search Migros Sortiment for "toblerone"
+  - arguments: toblerone
+    description: Search Migros Sortiment for "toblerone"
 plz 0:
   url: http://www.plz-suche.org/postleitzahlen-schweiz
   title: Postleitzahlen Schweiz
@@ -311,7 +335,8 @@ plz 1:
   - geolocation
   - postleitzahl
   examples:
-    '3000': Search Postleitzahlen Schweiz for "3000" (Bern)
+  - arguments: '3000'
+    description: Search Postleitzahlen Schweiz for "3000" (Bern)
 poststelle 1:
   url: https://places.post.ch/?topic=1&PreselectText={%query}&from_directentry=True
   title: Die Post - Poststellensuche
@@ -325,7 +350,8 @@ rsc 1:
   - electronics
   - shopping
   examples:
-    Battery: Suche bei RS Components nach "Battery"
+  - arguments: Battery
+    description: Suche bei RS Components nach "Battery"
 sbb 0:
   url: http://sbb.ch/
   title: SBB (Schweizerische Bundesbahnen)
@@ -339,7 +365,8 @@ sbb 2:
   - bahn
   - travel
   examples:
-    bern, basel: Nächste Verbindung von Bern nach Basel
+  - arguments: bern, basel
+    description: Nächste Verbindung von Bern nach Basel
 sbb 3:
   url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&start=1
   title: SBB-Auskunft
@@ -347,7 +374,8 @@ sbb 3:
   - bahn
   - travel
   examples:
-    bern, basel, 10: Verbindung von Bern nach Basel um 10:00 Uhr
+  - arguments: bern, basel, 10
+    description: Verbindung von Bern nach Basel um 10:00 Uhr
 sbb 4:
   url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
   title: SBB-Auskunft
@@ -355,7 +383,8 @@ sbb 4:
   - bahn
   - travel
   examples:
-    bern, basel, 10, 1.1.: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
+  - arguments: bern, basel, 10, 1.1.
+    description: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
 sbbt 4:
   url: http://fahrplan.sbb.ch/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
   title: SBB-Auskunft Textversion
@@ -363,7 +392,8 @@ sbbt 4:
   - bahn
   - travel
   examples:
-    bern, basel, 10, 1.1.: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
+  - arguments: bern, basel, 10, 1.1.
+    description: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
 transa 0:
   url: http://www.transa.ch
   title: Transa
@@ -378,7 +408,8 @@ we 1:
   tags:
   - weather
   examples:
-    berlin: Search for "berlin"
+  - arguments: berlin
+    description: Search for "berlin"
 zal 1:
   url: http://www.zalando.ch/katalog/?q={%Produkt}
   title: Zalando.ch
@@ -386,4 +417,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    schuhe: Suche nach Schuhen
+  - arguments: schuhe
+    description: Suche nach Schuhen

@@ -21,8 +21,10 @@ en-ga 1:
   - irish
   - language
   examples:
-    tree: Gaeilge aistriúchán de "tree"
-    crann: Béarla aistriúchán de "crann"
+  - arguments: tree
+    description: Gaeilge aistriúchán de "tree"
+  - arguments: crann
+    description: Béarla aistriúchán de "crann"
 ga 0:
   include:
     key: ga-{$language} 0
@@ -38,5 +40,7 @@ ga-en 1:
   include:
     key: en-ga 1
   examples:
-    crann: English translation of "crann"
-    tree: Irish translation of "tree"
+  - arguments: crann
+    description: English translation of "crann"
+  - arguments: tree
+    description: Irish translation of "tree"

@@ -21,8 +21,10 @@ de-la 1:
   - language
   - latin
   examples:
-    baum: Translatio in Latina pro "baum"
-    arbor: Translatio in Germanica pro "arbor"
+  - arguments: baum
+    description: Translatio in Latina pro "baum"
+  - arguments: arbor
+    description: Translatio in Germanica pro "arbor"
 la 0:
   include:
     key: la-{$language} 0
@@ -38,5 +40,7 @@ la-de 1:
   include:
     key: de-la 1
   examples:
-    arbor: Deutsch-Übersetzung von "arbor"
-    baum: Latein-Übersetzung von "baum"
+  - arguments: arbor
+    description: Deutsch-Übersetzung von "arbor"
+  - arguments: baum
+    description: Latein-Übersetzung von "baum"

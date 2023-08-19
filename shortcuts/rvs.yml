@@ -21,8 +21,10 @@ ar-fr 1:
   - french
   - language
   examples:
-    شجرة: Traduction en français de "شجرة"
-    arbre: Traduction en arabe de "arbre"
+  - arguments: شجرة
+    description: Traduction en français de "شجرة"
+  - arguments: arbre
+    description: Traduction en arabe de "arbre"
 de 0:
   include:
     key: de-{$language} 0
@@ -46,8 +48,10 @@ de-fr 1:
   - german
   - language
   examples:
-    baum: Traduction en français de "baum"
-    arbre: Traduction en allemand de "arbre"
+  - arguments: baum
+    description: Traduction en français de "baum"
+  - arguments: arbre
+    description: Traduction en allemand de "arbre"
 en 0:
   include:
     key: en-{$language} 0
@@ -71,8 +75,10 @@ en-fr 1:
   - french
   - language
   examples:
-    tree: Traduction en français de "tree"
-    arbre: Traduction en anglais de "arbre"
+  - arguments: tree
+    description: Traduction en français de "tree"
+  - arguments: arbre
+    description: Traduction en anglais de "arbre"
 es 0:
   include:
     key: es-{$language} 0
@@ -96,8 +102,10 @@ es-fr 1:
   - language
   - spanish
   examples:
-    árbol: Traduction en français de "árbol"
-    arbre: Traduction en espagnol de "arbre"
+  - arguments: árbol
+    description: Traduction en français de "árbol"
+  - arguments: arbre
+    description: Traduction en espagnol de "arbre"
 fr 0:
   include:
     key: fr-{$language} 0
@@ -113,8 +121,10 @@ fr-ar 1:
   include:
     key: ar-fr 1
   examples:
-    arbre: ترجمة العربية من "arbre"
-    شجرة: ترجمة الفرنسية من "شجرة"
+  - arguments: arbre
+    description: ترجمة العربية من "arbre"
+  - arguments: شجرة
+    description: ترجمة الفرنسية من "شجرة"
 fr-de 0:
   title: Französisch-Deutsch (Reverso)
   include:
@@ -124,8 +134,10 @@ fr-de 1:
   include:
     key: de-fr 1
   examples:
-    arbre: Deutsch-Übersetzung von "arbre"
-    baum: Französisch-Übersetzung von "baum"
+  - arguments: arbre
+    description: Deutsch-Übersetzung von "arbre"
+  - arguments: baum
+    description: Französisch-Übersetzung von "baum"
 fr-en 0:
   title: French-English (Reverso)
   include:
@@ -135,8 +147,10 @@ fr-en 1:
   include:
     key: en-fr 1
   examples:
-    arbre: English translation of "arbre"
-    tree: French translation of "tree"
+  - arguments: arbre
+    description: English translation of "arbre"
+  - arguments: tree
+    description: French translation of "tree"
 fr-es 0:
   title: Francés-Español (Reverso)
   include:
@@ -146,8 +160,10 @@ fr-es 1:
   include:
     key: es-fr 1
   examples:
-    arbre: Traducción al español de "arbre"
-    árbol: Traducción al francés de "árbol"
+  - arguments: arbre
+    description: Traducción al español de "arbre"
+  - arguments: árbol
+    description: Traducción al francés de "árbol"
 fr-he 0:
   url: https://dictionnaire.reverso.net/francais-hebreu/
   title: צרפתית-עברית (Reverso)
@@ -165,8 +181,10 @@ fr-he 1:
   - hebrew
   - language
   examples:
-    arbre: עברית תרגום של "arbre"
-    עץ: צרפתית תרגום של "עץ"
+  - arguments: arbre
+    description: עברית תרגום של "arbre"
+  - arguments: עץ
+    description: צרפתית תרגום של "עץ"
 fr-it 0:
   url: https://dictionnaire.reverso.net/francais-italien/
   title: Francese-Italiano (Reverso)
@@ -184,8 +202,10 @@ fr-it 1:
   - italian
   - language
   examples:
-    arbre: Traduzione in italiano di "arbre"
-    albero: Traduzione in francese di "albero"
+  - arguments: arbre
+    description: Traduzione in italiano di "arbre"
+  - arguments: albero
+    description: Traduzione in francese di "albero"
 fr-ja 0:
   url: https://dictionnaire.reverso.net/francais-japonais/
   title: フランス語-日本語 (Reverso)
@@ -203,8 +223,10 @@ fr-ja 1:
   - japanese
   - language
   examples:
-    arbre: '"arbre"の日本語翻訳'
-    木: '"木"のフランス語翻訳'
+  - arguments: arbre
+    description: '"arbre"の日本語翻訳'
+  - arguments: 木
+    description: '"木"のフランス語翻訳'
 fr-ko 0:
   url: https://dictionnaire.reverso.net/francais-coreen/
   title: 프랑스어-한국어 (Reverso)
@@ -222,8 +244,10 @@ fr-ko 1:
   - korean
   - language
   examples:
-    arbre: '"arbre"의 한국어 번역'
-    나무: '"나무"의 프랑스어 번역'
+  - arguments: arbre
+    description: '"arbre"의 한국어 번역'
+  - arguments: 나무
+    description: '"나무"의 프랑스어 번역'
 fr-nl 0:
   url: https://dictionnaire.reverso.net/francais-neerlandais/
   title: Frans-Nederlands (Reverso)
@@ -241,8 +265,10 @@ fr-nl 1:
   - french
   - language
   examples:
-    arbre: Nederlands-vertaling van "arbre"
-    boom: Frans-vertaling van "boom"
+  - arguments: arbre
+    description: Nederlands-vertaling van "arbre"
+  - arguments: boom
+    description: Frans-vertaling van "boom"
 fr-pl 0:
   url: https://dictionnaire.reverso.net/francais-polonais/
   title: Francuski-Polski (Reverso)
@@ -260,8 +286,10 @@ fr-pl 1:
   - language
   - polish
   examples:
-    arbre: Tłumaczenie na język polski dla "arbre"
-    drzewo: Tłumaczenie na język francuski dla "drzewo"
+  - arguments: arbre
+    description: Tłumaczenie na język polski dla "arbre"
+  - arguments: drzewo
+    description: Tłumaczenie na język francuski dla "drzewo"
 fr-pt 0:
   url: https://dictionnaire.reverso.net/francais-portugais/
   title: Francês-Português (Reverso)
@@ -279,8 +307,10 @@ fr-pt 1:
   - language
   - portuguese
   examples:
-    arbre: Tradução em português de "arbre"
-    árvore: Tradução em francês de "árvore"
+  - arguments: arbre
+    description: Tradução em português de "arbre"
+  - arguments: árvore
+    description: Tradução em francês de "árvore"
 fr-ro 0:
   url: https://dictionnaire.reverso.net/francais-roumain/
   title: Franceză-Română (Reverso)
@@ -298,8 +328,10 @@ fr-ro 1:
   - language
   - romanian
   examples:
-    arbre: Traducere în română pentru "arbre"
-    copac: Traducere în franceză pentru "copac"
+  - arguments: arbre
+    description: Traducere în română pentru "arbre"
+  - arguments: copac
+    description: Traducere în franceză pentru "copac"
 fr-ru 0:
   url: https://dictionnaire.reverso.net/francais-russe/
   title: Французский-Русский (Reverso)
@@ -317,8 +349,10 @@ fr-ru 1:
   - language
   - russian
   examples:
-    arbre: Перевод на русский язык для "arbre"
-    дерево: Перевод на французский язык для "дерево"
+  - arguments: arbre
+    description: Перевод на русский язык для "arbre"
+  - arguments: дерево
+    description: Перевод на французский язык для "дерево"
 fr-sv 0:
   url: https://dictionnaire.reverso.net/francais-suedois/
   title: Franska-Svenska (Reverso)
@@ -336,8 +370,10 @@ fr-sv 1:
   - language
   - swedish
   examples:
-    arbre: svenska-översättning av "arbre"
-    träd: franska-översättning av "träd"
+  - arguments: arbre
+    description: svenska-översättning av "arbre"
+  - arguments: träd
+    description: franska-översättning av "träd"
 fr-tr 0:
   url: https://dictionnaire.reverso.net/francais-turc/
   title: Fransızca-Türkçe (Reverso)
@@ -355,8 +391,10 @@ fr-tr 1:
   - language
   - turkish
   examples:
-    arbre: '"arbre" için Türkçe çevirisi'
-    ağaç: '"ağaç" için Fransızca çevirisi'
+  - arguments: arbre
+    description: '"arbre" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için Fransızca çevirisi'
 fr-uk 0:
   url: https://dictionnaire.reverso.net/francais-ukrainien/
   title: Французька-Українська (Reverso)
@@ -374,8 +412,10 @@ fr-uk 1:
   - language
   - ukrainian
   examples:
-    arbre: Переклад українська для "arbre"
-    дерево: Переклад французька для "дерево"
+  - arguments: arbre
+    description: Переклад українська для "arbre"
+  - arguments: дерево
+    description: Переклад французька для "дерево"
 fr-zh 0:
   url: https://dictionnaire.reverso.net/francais-chinois/
   title: 法文-中文 (Reverso)
@@ -393,8 +433,10 @@ fr-zh 1:
   - french
   - language
   examples:
-    arbre: 中文 的"arbre"翻译
-    树: 法文 的"树"翻译
+  - arguments: arbre
+    description: 中文 的"arbre"翻译
+  - arguments: 树
+    description: 法文 的"树"翻译
 he 0:
   include:
     key: he-{$language} 0
@@ -410,8 +452,10 @@ he-fr 1:
   include:
     key: fr-he 1
   examples:
-    עץ: Traduction en français de "עץ"
-    arbre: Traduction en hébreu de "arbre"
+  - arguments: עץ
+    description: Traduction en français de "עץ"
+  - arguments: arbre
+    description: Traduction en hébreu de "arbre"
 it 0:
   include:
     key: it-{$language} 0
@@ -427,8 +471,10 @@ it-fr 1:
   include:
     key: fr-it 1
   examples:
-    albero: Traduction en français de "albero"
-    arbre: Traduction en italien de "arbre"
+  - arguments: albero
+    description: Traduction en français de "albero"
+  - arguments: arbre
+    description: Traduction en italien de "arbre"
 ja 0:
   include:
     key: ja-{$language} 0
@@ -444,8 +490,10 @@ ja-fr 1:
   include:
     key: fr-ja 1
   examples:
-    木: Traduction en français de "木"
-    arbre: Traduction en japonais de "arbre"
+  - arguments: 木
+    description: Traduction en français de "木"
+  - arguments: arbre
+    description: Traduction en japonais de "arbre"
 ko 0:
   include:
     key: ko-{$language} 0
@@ -461,8 +509,10 @@ ko-fr 1:
   include:
     key: fr-ko 1
   examples:
-    나무: Traduction en français de "나무"
-    arbre: Traduction en coréen de "arbre"
+  - arguments: 나무
+    description: Traduction en français de "나무"
+  - arguments: arbre
+    description: Traduction en coréen de "arbre"
 nl 0:
   include:
     key: nl-{$language} 0
@@ -478,8 +528,10 @@ nl-fr 1:
   include:
     key: fr-nl 1
   examples:
-    boom: Traduction en français de "boom"
-    arbre: Traduction en néerlandais de "arbre"
+  - arguments: boom
+    description: Traduction en français de "boom"
+  - arguments: arbre
+    description: Traduction en néerlandais de "arbre"
 pl 0:
   include:
     key: pl-{$language} 0
@@ -495,8 +547,10 @@ pl-fr 1:
   include:
     key: fr-pl 1
   examples:
-    drzewo: Traduction en français de "drzewo"
-    arbre: Traduction en polonais de "arbre"
+  - arguments: drzewo
+    description: Traduction en français de "drzewo"
+  - arguments: arbre
+    description: Traduction en polonais de "arbre"
 pt 0:
   include:
     key: pt-{$language} 0
@@ -512,8 +566,10 @@ pt-fr 1:
   include:
     key: fr-pt 1
   examples:
-    árvore: Traduction en français de "árvore"
-    arbre: Traduction en portugais de "arbre"
+  - arguments: árvore
+    description: Traduction en français de "árvore"
+  - arguments: arbre
+    description: Traduction en portugais de "arbre"
 ro 0:
   include:
     key: ro-{$language} 0
@@ -529,8 +585,10 @@ ro-fr 1:
   include:
     key: fr-ro 1
   examples:
-    copac: Traduction en français de "copac"
-    arbre: Traduction en roumain de "arbre"
+  - arguments: copac
+    description: Traduction en français de "copac"
+  - arguments: arbre
+    description: Traduction en roumain de "arbre"
 ru 0:
   include:
     key: ru-{$language} 0
@@ -546,8 +604,10 @@ ru-fr 1:
   include:
     key: fr-ru 1
   examples:
-    дерево: Traduction en français de "дерево"
-    arbre: Traduction en russe de "arbre"
+  - arguments: дерево
+    description: Traduction en français de "дерево"
+  - arguments: arbre
+    description: Traduction en russe de "arbre"
 sv 0:
   include:
     key: sv-{$language} 0
@@ -563,8 +623,10 @@ sv-fr 1:
   include:
     key: fr-sv 1
   examples:
-    träd: Traduction en français de "träd"
-    arbre: Traduction en suédois de "arbre"
+  - arguments: träd
+    description: Traduction en français de "träd"
+  - arguments: arbre
+    description: Traduction en suédois de "arbre"
 tr 0:
   include:
     key: tr-{$language} 0
@@ -580,8 +642,10 @@ tr-fr 1:
   include:
     key: fr-tr 1
   examples:
-    ağaç: Traduction en français de "ağaç"
-    arbre: Traduction en turc de "arbre"
+  - arguments: ağaç
+    description: Traduction en français de "ağaç"
+  - arguments: arbre
+    description: Traduction en turc de "arbre"
 uk 0:
   include:
     key: uk-{$language} 0
@@ -597,8 +661,10 @@ uk-fr 1:
   include:
     key: fr-uk 1
   examples:
-    дерево: Traduction en français de "дерево"
-    arbre: Traduction en ukrainien de "arbre"
+  - arguments: дерево
+    description: Traduction en français de "дерево"
+  - arguments: arbre
+    description: Traduction en ukrainien de "arbre"
 zh 0:
   include:
     key: zh-{$language} 0
@@ -614,5 +680,7 @@ zh-fr 1:
   include:
     key: fr-zh 1
   examples:
-    树: Traduction en français de "树"
-    arbre: Traduction en chinois de "arbre"
+  - arguments: 树
+    description: Traduction en français de "树"
+  - arguments: arbre
+    description: Traduction en chinois de "arbre"

@@ -21,8 +21,10 @@ en-sv 1:
   - language
   - swedish
   examples:
-    tree: svenska-översättning av "tree"
-    träd: engelska-översättning av "träd"
+  - arguments: tree
+    description: svenska-översättning av "tree"
+  - arguments: träd
+    description: engelska-översättning av "träd"
 sv 0:
   include:
     key: sv-{$language} 0
@@ -38,5 +40,7 @@ sv-en 1:
   include:
     key: en-sv 1
   examples:
-    träd: English translation of "träd"
-    tree: Swedish translation of "tree"
+  - arguments: träd
+    description: English translation of "träd"
+  - arguments: tree
+    description: Swedish translation of "tree"

@@ -21,8 +21,10 @@ ar-en 1:
   - english
   - language
   examples:
-    شجرة: English translation of "شجرة"
-    tree: Arabic translation of "tree"
+  - arguments: شجرة
+    description: English translation of "شجرة"
+  - arguments: tree
+    description: Arabic translation of "tree"
 cs 0:
   include:
     key: cs-{$language} 0
@@ -46,8 +48,10 @@ cs-en 1:
   - english
   - language
   examples:
-    strom: English translation of "strom"
-    tree: Czech translation of "tree"
+  - arguments: strom
+    description: English translation of "strom"
+  - arguments: tree
+    description: Czech translation of "tree"
 da 0:
   include:
     key: da-{$language} 0
@@ -71,8 +75,10 @@ da-de 1:
   - german
   - language
   examples:
-    træ: Deutsch-Übersetzung von "træ"
-    baum: Dänisch-Übersetzung von "baum"
+  - arguments: træ
+    description: Deutsch-Übersetzung von "træ"
+  - arguments: baum
+    description: Dänisch-Übersetzung von "baum"
 da-en 0:
   url: https://bab.la/dictionary/english-danish/
   title: Danish-English (bab.la)
@@ -90,8 +96,10 @@ da-en 1:
   - english
   - language
   examples:
-    træ: English translation of "træ"
-    tree: Danish translation of "tree"
+  - arguments: træ
+    description: English translation of "træ"
+  - arguments: tree
+    description: Danish translation of "tree"
 de 0:
   include:
     key: de-{$language} 0
@@ -107,8 +115,10 @@ de-da 1:
   include:
     key: da-de 1
   examples:
-    baum: dansk oversættelse af "baum"
-    træ: tysk oversættelse af "træ"
+  - arguments: baum
+    description: dansk oversættelse af "baum"
+  - arguments: træ
+    description: tysk oversættelse af "træ"
 de-en 0:
   url: https://bab.la/dictionary/german-english/
   title: German-English (bab.la)
@@ -126,8 +136,10 @@ de-en 1:
   - german
   - language
   examples:
-    baum: English translation of "baum"
-    tree: German translation of "tree"
+  - arguments: baum
+    description: English translation of "baum"
+  - arguments: tree
+    description: German translation of "tree"
 de-es 0:
   url: https://bab.la/dictionary/german-spanish/
   title: Alemán-Español (bab.la)
@@ -145,8 +157,10 @@ de-es 1:
   - language
   - spanish
   examples:
-    baum: Traducción al español de "baum"
-    árbol: Traducción al alemán de "árbol"
+  - arguments: baum
+    description: Traducción al español de "baum"
+  - arguments: árbol
+    description: Traducción al alemán de "árbol"
 de-fr 0:
   url: https://bab.la/dictionary/german-french/
   title: Allemand-Français (bab.la)
@@ -164,8 +178,10 @@ de-fr 1:
   - german
   - language
   examples:
-    baum: Traduction en français de "baum"
-    arbre: Traduction en allemand de "arbre"
+  - arguments: baum
+    description: Traduction en français de "baum"
+  - arguments: arbre
+    description: Traduction en allemand de "arbre"
 de-it 0:
   url: https://bab.la/dictionary/german-italian/
   title: Tedesco-Italiano (bab.la)
@@ -183,8 +199,10 @@ de-it 1:
   - italian
   - language
   examples:
-    baum: Traduzione in italiano di "baum"
-    albero: Traduzione in tedesco di "albero"
+  - arguments: baum
+    description: Traduzione in italiano di "baum"
+  - arguments: albero
+    description: Traduzione in tedesco di "albero"
 de-nl 0:
   url: https://bab.la/dictionary/german-dutch/
   title: Duits-Nederlands (bab.la)
@@ -202,8 +220,10 @@ de-nl 1:
   - german
   - language
   examples:
-    baum: Nederlands-vertaling van "baum"
-    boom: Duits-vertaling van "boom"
+  - arguments: baum
+    description: Nederlands-vertaling van "baum"
+  - arguments: boom
+    description: Duits-vertaling van "boom"
 de-pl 0:
   url: https://bab.la/dictionary/german-polish/
   title: Niemiecki-Polski (bab.la)
@@ -221,8 +241,10 @@ de-pl 1:
   - language
   - polish
   examples:
-    baum: Tłumaczenie na język polski dla "baum"
-    drzewo: Tłumaczenie na język niemiecki dla "drzewo"
+  - arguments: baum
+    description: Tłumaczenie na język polski dla "baum"
+  - arguments: drzewo
+    description: Tłumaczenie na język niemiecki dla "drzewo"
 de-pt 0:
   url: https://bab.la/dictionary/german-portuguese/
   title: Alemão-Português (bab.la)
@@ -240,8 +262,10 @@ de-pt 1:
   - language
   - portuguese
   examples:
-    baum: Tradução em português de "baum"
-    árvore: Tradução em alemão de "árvore"
+  - arguments: baum
+    description: Tradução em português de "baum"
+  - arguments: árvore
+    description: Tradução em alemão de "árvore"
 de-ru 0:
   url: https://bab.la/dictionary/german-russian/
   title: Немецкий-Русский (bab.la)
@@ -259,8 +283,10 @@ de-ru 1:
   - language
   - russian
   examples:
-    baum: Перевод на русский язык для "baum"
-    дерево: Перевод на немецкий язык для "дерево"
+  - arguments: baum
+    description: Перевод на русский язык для "baum"
+  - arguments: дерево
+    description: Перевод на немецкий язык для "дерево"
 de-sv 0:
   url: https://bab.la/dictionary/german-swedish/
   title: Tyska-Svenska (bab.la)
@@ -278,8 +304,10 @@ de-sv 1:
   - language
   - swedish
   examples:
-    baum: svenska-översättning av "baum"
-    träd: tyska-översättning av "träd"
+  - arguments: baum
+    description: svenska-översättning av "baum"
+  - arguments: träd
+    description: tyska-översättning av "träd"
 de-tr 0:
   url: https://bab.la/dictionary/german-turkish/
   title: Almanca-Türkçe (bab.la)
@@ -297,8 +325,10 @@ de-tr 1:
   - language
   - turkish
   examples:
-    baum: '"baum" için Türkçe çevirisi'
-    ağaç: '"ağaç" için Almanca çevirisi'
+  - arguments: baum
+    description: '"baum" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için Almanca çevirisi'
 el 0:
   include:
     key: el-{$language} 0
@@ -314,8 +344,10 @@ el-en 1:
   include:
     key: en-el 1
   examples:
-    δέντρο: English translation of "δέντρο"
-    tree: Greek translation of "tree"
+  - arguments: δέντρο
+    description: English translation of "δέντρο"
+  - arguments: tree
+    description: Greek translation of "tree"
 en 0:
   include:
     key: en-{$language} 0
@@ -331,8 +363,10 @@ en-ar 1:
   include:
     key: ar-en 1
   examples:
-    tree: ترجمة العربية من "tree"
-    شجرة: ترجمة الإنجليزية من "شجرة"
+  - arguments: tree
+    description: ترجمة العربية من "tree"
+  - arguments: شجرة
+    description: ترجمة الإنجليزية من "شجرة"
 en-cs 0:
   title: Angličtina-Čeština (bab.la)
   include:
@@ -342,8 +376,10 @@ en-cs 1:
   include:
     key: cs-en 1
   examples:
-    tree: čeština překlad pro "tree"
-    strom: angličtina překlad pro "strom"
+  - arguments: tree
+    description: čeština překlad pro "tree"
+  - arguments: strom
+    description: angličtina překlad pro "strom"
 en-da 0:
   title: Engelsk-Dansk (bab.la)
   include:
@@ -353,8 +389,10 @@ en-da 1:
   include:
     key: da-en 1
   examples:
-    tree: dansk oversættelse af "tree"
-    træ: engelsk oversættelse af "træ"
+  - arguments: tree
+    description: dansk oversættelse af "tree"
+  - arguments: træ
+    description: engelsk oversættelse af "træ"
 en-de 0:
   title: Englisch-Deutsch (bab.la)
   include:
@@ -364,8 +402,10 @@ en-de 1:
   include:
     key: de-en 1
   examples:
-    tree: Deutsch-Übersetzung von "tree"
-    baum: Englisch-Übersetzung von "baum"
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Englisch-Übersetzung von "baum"
 en-el 0:
   url: https://bab.la/dictionary/english-greek/
   title: Αγγλικά-Ελληνικά (bab.la)
@@ -383,8 +423,10 @@ en-el 1:
   - greek
   - language
   examples:
-    tree: Μετάφραση στα Ελληνικά για το "tree"
-    δέντρο: Μετάφραση στα Αγγλικά για το "δέντρο"
+  - arguments: tree
+    description: Μετάφραση στα Ελληνικά για το "tree"
+  - arguments: δέντρο
+    description: Μετάφραση στα Αγγλικά για το "δέντρο"
 en-eo 0:
   url: https://bab.la/dictionary/english-esperanto/
   title: Angla-Esperanto (bab.la)
@@ -402,8 +444,10 @@ en-eo 1:
   - esperanto
   - language
   examples:
-    tree: esperanto traduko de "tree"
-    arbo: angla traduko de "arbo"
+  - arguments: tree
+    description: esperanto traduko de "tree"
+  - arguments: arbo
+    description: angla traduko de "arbo"
 en-es 0:
   url: https://bab.la/dictionary/english-spanish/
   title: Inglés-Español (bab.la)
@@ -421,8 +465,10 @@ en-es 1:
   - language
   - spanish
   examples:
-    tree: Traducción al español de "tree"
-    árbol: Traducción al inglés de "árbol"
+  - arguments: tree
+    description: Traducción al español de "tree"
+  - arguments: árbol
+    description: Traducción al inglés de "árbol"
 en-fi 0:
   url: https://bab.la/dictionary/english-finnish/
   title: Englanti-Suomi (bab.la)
@@ -440,8 +486,10 @@ en-fi 1:
   - finnish
   - language
   examples:
-    tree: suomi-käännös sanalle "tree"
-    puu: englanti-käännös sanalle "puu"
+  - arguments: tree
+    description: suomi-käännös sanalle "tree"
+  - arguments: puu
+    description: englanti-käännös sanalle "puu"
 en-fr 0:
   url: https://bab.la/dictionary/english-french/
   title: Anglais-Français (bab.la)
@@ -459,8 +507,10 @@ en-fr 1:
   - french
   - language
   examples:
-    tree: Traduction en français de "tree"
-    arbre: Traduction en anglais de "arbre"
+  - arguments: tree
+    description: Traduction en français de "tree"
+  - arguments: arbre
+    description: Traduction en anglais de "arbre"
 en-hi 0:
   url: https://bab.la/dictionary/english-hindi/
   title: अंग्रेज़ी-हिन्दी (bab.la)
@@ -478,8 +528,10 @@ en-hi 1:
   - hindi
   - language
   examples:
-    tree: ' "tree" का हिन्दी अनुवाद'
-    पेड़: ' "पेड़" का अंग्रेज़ी अनुवाद'
+  - arguments: tree
+    description: ' "tree" का हिन्दी अनुवाद'
+  - arguments: पेड़
+    description: ' "पेड़" का अंग्रेज़ी अनुवाद'
 en-hu 0:
   url: https://bab.la/dictionary/english-hungarian/
   title: Angol-Magyar (bab.la)
@@ -497,8 +549,10 @@ en-hu 1:
   - hungarian
   - language
   examples:
-    tree: magyar fordítás a(z) "tree" számára
-    fa: angol fordítás a(z) "fa" számára
+  - arguments: tree
+    description: magyar fordítás a(z) "tree" számára
+  - arguments: fa
+    description: angol fordítás a(z) "fa" számára
 en-id 0:
   url: https://bab.la/dictionary/english-indonesian/
   title: Inggris-Bahasa Indonesia (bab.la)
@@ -516,8 +570,10 @@ en-id 1:
   - indonesian
   - language
   examples:
-    tree: terjemahan Bahasa Indonesia dari "tree"
-    pohon: terjemahan Inggris dari "pohon"
+  - arguments: tree
+    description: terjemahan Bahasa Indonesia dari "tree"
+  - arguments: pohon
+    description: terjemahan Inggris dari "pohon"
 en-it 0:
   url: https://bab.la/dictionary/english-italian/
   title: Inglese-Italiano (bab.la)
@@ -535,8 +591,10 @@ en-it 1:
   - italian
   - language
   examples:
-    tree: Traduzione in italiano di "tree"
-    albero: Traduzione in inglese di "albero"
+  - arguments: tree
+    description: Traduzione in italiano di "tree"
+  - arguments: albero
+    description: Traduzione in inglese di "albero"
 en-ja 0:
   url: https://bab.la/dictionary/english-japanese/
   title: 英語-日本語 (bab.la)
@@ -554,8 +612,10 @@ en-ja 1:
   - japanese
   - language
   examples:
-    tree: '"tree"の日本語翻訳'
-    木: '"木"の英語翻訳'
+  - arguments: tree
+    description: '"tree"の日本語翻訳'
+  - arguments: 木
+    description: '"木"の英語翻訳'
 en-ka 0:
   url: https://bab.la/dictionary/english-georgian/
   title: Ინგლისური-Ქართული (bab.la)
@@ -573,8 +633,10 @@ en-ka 1:
   - georgian
   - language
   examples:
-    tree: თარგმანი ქართული - "tree"
-    ხე: თარგმანი ინგლისური - "ხე"
+  - arguments: tree
+    description: თარგმანი ქართული - "tree"
+  - arguments: ხე
+    description: თარგმანი ინგლისური - "ხე"
 en-ko 0:
   url: https://bab.la/dictionary/english-korean/
   title: 영어-한국어 (bab.la)
@@ -592,8 +654,10 @@ en-ko 1:
   - korean
   - language
   examples:
-    tree: '"tree"의 한국어 번역'
-    나무: '"나무"의 영어 번역'
+  - arguments: tree
+    description: '"tree"의 한국어 번역'
+  - arguments: 나무
+    description: '"나무"의 영어 번역'
 en-ms 0:
   url: https://bab.la/dictionary/english-malay/
   title: Inggeris-Bahasa Melayu (bab.la)
@@ -611,8 +675,10 @@ en-ms 1:
   - language
   - malay
   examples:
-    tree: Terjemahan Bahasa Melayu bagi "tree"
-    pokok: Terjemahan Inggeris bagi "pokok"
+  - arguments: tree
+    description: Terjemahan Bahasa Melayu bagi "tree"
+  - arguments: pokok
+    description: Terjemahan Inggeris bagi "pokok"
 en-nl 0:
   url: https://bab.la/dictionary/english-dutch/
   title: Engels-Nederlands (bab.la)
@@ -630,8 +696,10 @@ en-nl 1:
   - english
   - language
   examples:
-    tree: Nederlands-vertaling van "tree"
-    boom: Engels-vertaling van "boom"
+  - arguments: tree
+    description: Nederlands-vertaling van "tree"
+  - arguments: boom
+    description: Engels-vertaling van "boom"
 en-no 0:
   url: https://bab.la/dictionary/english-norwegian/
   title: Engelsk-Norsk (bab.la)
@@ -649,8 +717,10 @@ en-no 1:
   - language
   - norwegian
   examples:
-    tree: norsk-oversettelse av "tree"
-    tre: engelsk-oversettelse av "tre"
+  - arguments: tree
+    description: norsk-oversettelse av "tree"
+  - arguments: tre
+    description: engelsk-oversettelse av "tre"
 en-pl 0:
   url: https://bab.la/dictionary/english-polish/
   title: Angielski-Polski (bab.la)
@@ -668,8 +738,10 @@ en-pl 1:
   - language
   - polish
   examples:
-    tree: Tłumaczenie na język polski dla "tree"
-    drzewo: Tłumaczenie na język angielski dla "drzewo"
+  - arguments: tree
+    description: Tłumaczenie na język polski dla "tree"
+  - arguments: drzewo
+    description: Tłumaczenie na język angielski dla "drzewo"
 en-pt 0:
   url: https://bab.la/dictionary/english-portuguese/
   title: Inglês-Português (bab.la)
@@ -687,8 +759,10 @@ en-pt 1:
   - language
   - portuguese
   examples:
-    tree: Tradução em português de "tree"
-    árvore: Tradução em inglês de "árvore"
+  - arguments: tree
+    description: Tradução em português de "tree"
+  - arguments: árvore
+    description: Tradução em inglês de "árvore"
 en-ro 0:
   url: https://bab.la/dictionary/english-romanian/
   title: Engleză-Română (bab.la)
@@ -706,8 +780,10 @@ en-ro 1:
   - language
   - romanian
   examples:
-    tree: Traducere în română pentru "tree"
-    copac: Traducere în engleză pentru "copac"
+  - arguments: tree
+    description: Traducere în română pentru "tree"
+  - arguments: copac
+    description: Traducere în engleză pentru "copac"
 en-ru 0:
   url: https://bab.la/dictionary/english-russian/
   title: Английский-Русский (bab.la)
@@ -725,8 +801,10 @@ en-ru 1:
   - language
   - russian
   examples:
-    tree: Перевод на русский язык для "tree"
-    дерево: Перевод на английский язык для "дерево"
+  - arguments: tree
+    description: Перевод на русский язык для "tree"
+  - arguments: дерево
+    description: Перевод на английский язык для "дерево"
 en-sv 0:
   url: https://bab.la/dictionary/english-swedish/
   title: Engelska-Svenska (bab.la)
@@ -744,8 +822,10 @@ en-sv 1:
   - language
   - swedish
   examples:
-    tree: svenska-översättning av "tree"
-    träd: engelska-översättning av "träd"
+  - arguments: tree
+    description: svenska-översättning av "tree"
+  - arguments: träd
+    description: engelska-översättning av "träd"
 en-sw 0:
   url: https://bab.la/dictionary/english-swahili/
   title: Kiingereza-Kiswahili (bab.la)
@@ -763,8 +843,10 @@ en-sw 1:
   - language
   - swahili
   examples:
-    tree: Tafsiri ya Kiswahili ya "tree"
-    mti: Tafsiri ya Kiingereza ya "mti"
+  - arguments: tree
+    description: Tafsiri ya Kiswahili ya "tree"
+  - arguments: mti
+    description: Tafsiri ya Kiingereza ya "mti"
 en-te 0:
   url: https://bab.la/dictionary/english-telugu/
   title: ఆంగ్లం-తెలుగు (bab.la)
@@ -782,8 +864,10 @@ en-te 1:
   - language
   - telugu
   examples:
-    tree: తెలుగు అనువాదం "tree" కోసం
-    చెట్టు: ఆంగ్లం అనువాదం "చెట్టు" కోసం
+  - arguments: tree
+    description: తెలుగు అనువాదం "tree" కోసం
+  - arguments: చెట్టు
+    description: ఆంగ్లం అనువాదం "చెట్టు" కోసం
 en-th 0:
   url: https://bab.la/dictionary/english-thai/
   title: อังกฤษ-ไทย (bab.la)
@@ -801,8 +885,10 @@ en-th 1:
   - language
   - thai
   examples:
-    tree: การแปลไทยของคำว่า "tree"
-    ต้นไม้: การแปลอังกฤษของคำว่า "ต้นไม้"
+  - arguments: tree
+    description: การแปลไทยของคำว่า "tree"
+  - arguments: ต้นไม้
+    description: การแปลอังกฤษของคำว่า "ต้นไม้"
 en-tr 0:
   url: https://bab.la/dictionary/english-turkish/
   title: İngilizce-Türkçe (bab.la)
@@ -820,8 +906,10 @@ en-tr 1:
   - language
   - turkish
   examples:
-    tree: '"tree" için Türkçe çevirisi'
-    ağaç: '"ağaç" için İngilizce çevirisi'
+  - arguments: tree
+    description: '"tree" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için İngilizce çevirisi'
 en-ur 0:
   url: https://bab.la/dictionary/english-urdu/
   title: انگریزی-اردو (bab.la)
@@ -839,8 +927,10 @@ en-ur 1:
   - language
   - urdu
   examples:
-    tree: tree کے اردو ترجمہ
-    درخت: درخت کے انگریزی ترجمہ
+  - arguments: tree
+    description: tree کے اردو ترجمہ
+  - arguments: درخت
+    description: درخت کے انگریزی ترجمہ
 en-vi 0:
   url: https://bab.la/dictionary/english-vietnamese/
   title: Tiếng Anh-Tiếng Việt (bab.la)
@@ -858,8 +948,10 @@ en-vi 1:
   - language
   - vietnamese
   examples:
-    tree: Bản dịch Tiếng Việt của "tree"
-    cây: Bản dịch Tiếng Anh của "cây"
+  - arguments: tree
+    description: Bản dịch Tiếng Việt của "tree"
+  - arguments: cây
+    description: Bản dịch Tiếng Anh của "cây"
 en-zh 0:
   url: https://bab.la/dictionary/english-chinese/
   title: 英文-中文 (bab.la)
@@ -877,8 +969,10 @@ en-zh 1:
   - english
   - language
   examples:
-    tree: 中文 的"tree"翻译
-    树: 英文 的"树"翻译
+  - arguments: tree
+    description: 中文 的"tree"翻译
+  - arguments: 树
+    description: 英文 的"树"翻译
 en-zu 0:
   url: https://bab.la/dictionary/english-zulu/
   title: I-English-IsiZulu (bab.la)
@@ -896,8 +990,10 @@ en-zu 1:
   - language
   - zulu
   examples:
-    tree: Ukuthathwa kwe isiZulu kuka "tree"
-    isihlahla: Ukuthathwa kwe i-English kuka "isihlahla"
+  - arguments: tree
+    description: Ukuthathwa kwe isiZulu kuka "tree"
+  - arguments: isihlahla
+    description: Ukuthathwa kwe i-English kuka "isihlahla"
 eo 0:
   include:
     key: eo-{$language} 0
@@ -913,8 +1009,10 @@ eo-en 1:
   include:
     key: en-eo 1
   examples:
-    arbo: English translation of "arbo"
-    tree: Esperanto translation of "tree"
+  - arguments: arbo
+    description: English translation of "arbo"
+  - arguments: tree
+    description: Esperanto translation of "tree"
 es 0:
   include:
     key: es-{$language} 0
@@ -930,8 +1028,10 @@ es-de 1:
   include:
     key: de-es 1
   examples:
-    árbol: Deutsch-Übersetzung von "árbol"
-    baum: Spanisch-Übersetzung von "baum"
+  - arguments: árbol
+    description: Deutsch-Übersetzung von "árbol"
+  - arguments: baum
+    description: Spanisch-Übersetzung von "baum"
 es-en 0:
   title: Spanish-English (bab.la)
   include:
@@ -941,8 +1041,10 @@ es-en 1:
   include:
     key: en-es 1
   examples:
-    árbol: English translation of "árbol"
-    tree: Spanish translation of "tree"
+  - arguments: árbol
+    description: English translation of "árbol"
+  - arguments: tree
+    description: Spanish translation of "tree"
 es-fr 0:
   url: https://bab.la/dictionary/spanish-french/
   title: Espagnol-Français (bab.la)
@@ -960,8 +1062,10 @@ es-fr 1:
   - language
   - spanish
   examples:
-    árbol: Traduction en français de "árbol"
-    arbre: Traduction en espagnol de "arbre"
+  - arguments: árbol
+    description: Traduction en français de "árbol"
+  - arguments: arbre
+    description: Traduction en espagnol de "arbre"
 es-it 0:
   url: https://bab.la/dictionary/spanish-italian/
   title: Spagnolo-Italiano (bab.la)
@@ -979,8 +1083,10 @@ es-it 1:
   - language
   - spanish
   examples:
-    árbol: Traduzione in italiano di "árbol"
-    albero: Traduzione in spagnolo di "albero"
+  - arguments: árbol
+    description: Traduzione in italiano di "árbol"
+  - arguments: albero
+    description: Traduzione in spagnolo di "albero"
 es-pt 0:
   url: https://bab.la/dictionary/spanish-portuguese/
   title: Espanhol-Português (bab.la)
@@ -998,8 +1104,10 @@ es-pt 1:
   - portuguese
   - spanish
   examples:
-    árbol: Tradução em português de "árbol"
-    árvore: Tradução em espanhol de "árvore"
+  - arguments: árbol
+    description: Tradução em português de "árbol"
+  - arguments: árvore
+    description: Tradução em espanhol de "árvore"
 es-qu 0:
   url: https://bab.la/dictionary/spanish-quechua/
   title: Español Simi-Runasimi (bab.la)
@@ -1017,8 +1125,10 @@ es-qu 1:
   - quechua
   - spanish
   examples:
-    árbol: Runasimi-pi "árbol"ta tʼikray
-    kulli: Español Simi-pi "kulli"ta tʼikray
+  - arguments: árbol
+    description: Runasimi-pi "árbol"ta tʼikray
+  - arguments: kulli
+    description: Español Simi-pi "kulli"ta tʼikray
 fi 0:
   include:
     key: fi-{$language} 0
@@ -1034,8 +1144,10 @@ fi-en 1:
   include:
     key: en-fi 1
   examples:
-    puu: English translation of "puu"
-    tree: Finnish translation of "tree"
+  - arguments: puu
+    description: English translation of "puu"
+  - arguments: tree
+    description: Finnish translation of "tree"
 fr 0:
   include:
     key: fr-{$language} 0
@@ -1051,8 +1163,10 @@ fr-de 1:
   include:
     key: de-fr 1
   examples:
-    arbre: Deutsch-Übersetzung von "arbre"
-    baum: Französisch-Übersetzung von "baum"
+  - arguments: arbre
+    description: Deutsch-Übersetzung von "arbre"
+  - arguments: baum
+    description: Französisch-Übersetzung von "baum"
 fr-en 0:
   title: French-English (bab.la)
   include:
@@ -1062,8 +1176,10 @@ fr-en 1:
   include:
     key: en-fr 1
   examples:
-    arbre: English translation of "arbre"
-    tree: French translation of "tree"
+  - arguments: arbre
+    description: English translation of "arbre"
+  - arguments: tree
+    description: French translation of "tree"
 fr-es 0:
   title: Francés-Español (bab.la)
   include:
@@ -1073,8 +1189,10 @@ fr-es 1:
   include:
     key: es-fr 1
   examples:
-    arbre: Traducción al español de "arbre"
-    árbol: Traducción al francés de "árbol"
+  - arguments: arbre
+    description: Traducción al español de "arbre"
+  - arguments: árbol
+    description: Traducción al francés de "árbol"
 fr-it 0:
   url: https://bab.la/dictionary/french-italian/
   title: Francese-Italiano (bab.la)
@@ -1092,8 +1210,10 @@ fr-it 1:
   - italian
   - language
   examples:
-    arbre: Traduzione in italiano di "arbre"
-    albero: Traduzione in francese di "albero"
+  - arguments: arbre
+    description: Traduzione in italiano di "arbre"
+  - arguments: albero
+    description: Traduzione in francese di "albero"
 hi 0:
   include:
     key: hi-{$language} 0
@@ -1109,8 +1229,10 @@ hi-en 1:
   include:
     key: en-hi 1
   examples:
-    पेड़: English translation of "पेड़"
-    tree: Hindi translation of "tree"
+  - arguments: पेड़
+    description: English translation of "पेड़"
+  - arguments: tree
+    description: Hindi translation of "tree"
 hu 0:
   include:
     key: hu-{$language} 0
@@ -1126,8 +1248,10 @@ hu-en 1:
   include:
     key: en-hu 1
   examples:
-    fa: English translation of "fa"
-    tree: Hungarian translation of "tree"
+  - arguments: fa
+    description: English translation of "fa"
+  - arguments: tree
+    description: Hungarian translation of "tree"
 id 0:
   include:
     key: id-{$language} 0
@@ -1143,8 +1267,10 @@ id-en 1:
   include:
     key: en-id 1
   examples:
-    pohon: English translation of "pohon"
-    tree: Indonesian translation of "tree"
+  - arguments: pohon
+    description: English translation of "pohon"
+  - arguments: tree
+    description: Indonesian translation of "tree"
 it 0:
   include:
     key: it-{$language} 0
@@ -1160,8 +1286,10 @@ it-de 1:
   include:
     key: de-it 1
   examples:
-    albero: Deutsch-Übersetzung von "albero"
-    baum: Italienisch-Übersetzung von "baum"
+  - arguments: albero
+    description: Deutsch-Übersetzung von "albero"
+  - arguments: baum
+    description: Italienisch-Übersetzung von "baum"
 it-en 0:
   title: Italian-English (bab.la)
   include:
@@ -1171,8 +1299,10 @@ it-en 1:
   include:
     key: en-it 1
   examples:
-    albero: English translation of "albero"
-    tree: Italian translation of "tree"
+  - arguments: albero
+    description: English translation of "albero"
+  - arguments: tree
+    description: Italian translation of "tree"
 it-es 0:
   title: Italiano-Español (bab.la)
   include:
@@ -1182,8 +1312,10 @@ it-es 1:
   include:
     key: es-it 1
   examples:
-    albero: Traducción al español de "albero"
-    árbol: Traducción al italiano de "árbol"
+  - arguments: albero
+    description: Traducción al español de "albero"
+  - arguments: árbol
+    description: Traducción al italiano de "árbol"
 it-fr 0:
   title: Italien-Français (bab.la)
   include:
@@ -1193,8 +1325,10 @@ it-fr 1:
   include:
     key: fr-it 1
   examples:
-    albero: Traduction en français de "albero"
-    arbre: Traduction en italien de "arbre"
+  - arguments: albero
+    description: Traduction en français de "albero"
+  - arguments: arbre
+    description: Traduction en italien de "arbre"
 it-ro 0:
   url: https://bab.la/dictionary/italian-romanian/
   title: Italiană-Română (bab.la)
@@ -1212,8 +1346,10 @@ it-ro 1:
   - language
   - romanian
   examples:
-    albero: Traducere în română pentru "albero"
-    copac: Traducere în italiană pentru "copac"
+  - arguments: albero
+    description: Traducere în română pentru "albero"
+  - arguments: copac
+    description: Traducere în italiană pentru "copac"
 ja 0:
   include:
     key: ja-{$language} 0
@@ -1229,8 +1365,10 @@ ja-en 1:
   include:
     key: en-ja 1
   examples:
-    木: English translation of "木"
-    tree: Japanese translation of "tree"
+  - arguments: 木
+    description: English translation of "木"
+  - arguments: tree
+    description: Japanese translation of "tree"
 ka 0:
   include:
     key: ka-{$language} 0
@@ -1246,8 +1384,10 @@ ka-en 1:
   include:
     key: en-ka 1
   examples:
-    ხე: English translation of "ხე"
-    tree: Georgian translation of "tree"
+  - arguments: ხე
+    description: English translation of "ხე"
+  - arguments: tree
+    description: Georgian translation of "tree"
 ko 0:
   include:
     key: ko-{$language} 0
@@ -1263,8 +1403,10 @@ ko-en 1:
   include:
     key: en-ko 1
   examples:
-    나무: English translation of "나무"
-    tree: Korean translation of "tree"
+  - arguments: 나무
+    description: English translation of "나무"
+  - arguments: tree
+    description: Korean translation of "tree"
 ms 0:
   include:
     key: ms-{$language} 0
@@ -1280,8 +1422,10 @@ ms-en 1:
   include:
     key: en-ms 1
   examples:
-    pokok: English translation of "pokok"
-    tree: Malay translation of "tree"
+  - arguments: pokok
+    description: English translation of "pokok"
+  - arguments: tree
+    description: Malay translation of "tree"
 nl 0:
   include:
     key: nl-{$language} 0
@@ -1297,8 +1441,10 @@ nl-de 1:
   include:
     key: de-nl 1
   examples:
-    boom: Deutsch-Übersetzung von "boom"
-    baum: Niederländisch-Übersetzung von "baum"
+  - arguments: boom
+    description: Deutsch-Übersetzung von "boom"
+  - arguments: baum
+    description: Niederländisch-Übersetzung von "baum"
 nl-en 0:
   title: Dutch-English (bab.la)
   include:
@@ -1308,8 +1454,10 @@ nl-en 1:
   include:
     key: en-nl 1
   examples:
-    boom: English translation of "boom"
-    tree: Dutch translation of "tree"
+  - arguments: boom
+    description: English translation of "boom"
+  - arguments: tree
+    description: Dutch translation of "tree"
 no 0:
   include:
     key: no-{$language} 0
@@ -1325,8 +1473,10 @@ no-en 1:
   include:
     key: en-no 1
   examples:
-    tre: English translation of "tre"
-    tree: Norwegian translation of "tree"
+  - arguments: tre
+    description: English translation of "tre"
+  - arguments: tree
+    description: Norwegian translation of "tree"
 pl 0:
   include:
     key: pl-{$language} 0
@@ -1342,8 +1492,10 @@ pl-de 1:
   include:
     key: de-pl 1
   examples:
-    drzewo: Deutsch-Übersetzung von "drzewo"
-    baum: Polnisch-Übersetzung von "baum"
+  - arguments: drzewo
+    description: Deutsch-Übersetzung von "drzewo"
+  - arguments: baum
+    description: Polnisch-Übersetzung von "baum"
 pl-en 0:
   title: Polish-English (bab.la)
   include:
@@ -1353,8 +1505,10 @@ pl-en 1:
   include:
     key: en-pl 1
   examples:
-    drzewo: English translation of "drzewo"
-    tree: Polish translation of "tree"
+  - arguments: drzewo
+    description: English translation of "drzewo"
+  - arguments: tree
+    description: Polish translation of "tree"
 pl-ru 0:
   url: https://bab.la/dictionary/polish-russian/
   title: Польский-Русский (bab.la)
@@ -1372,8 +1526,10 @@ pl-ru 1:
   - polish
   - russian
   examples:
-    drzewo: Перевод на русский язык для "drzewo"
-    дерево: Перевод на польский язык для "дерево"
+  - arguments: drzewo
+    description: Перевод на русский язык для "drzewo"
+  - arguments: дерево
+    description: Перевод на польский язык для "дерево"
 pt 0:
   include:
     key: pt-{$language} 0
@@ -1389,8 +1545,10 @@ pt-de 1:
   include:
     key: de-pt 1
   examples:
-    árvore: Deutsch-Übersetzung von "árvore"
-    baum: Portugiesisch-Übersetzung von "baum"
+  - arguments: árvore
+    description: Deutsch-Übersetzung von "árvore"
+  - arguments: baum
+    description: Portugiesisch-Übersetzung von "baum"
 pt-en 0:
   title: Portuguese-English (bab.la)
   include:
@@ -1400,8 +1558,10 @@ pt-en 1:
   include:
     key: en-pt 1
   examples:
-    árvore: English translation of "árvore"
-    tree: Portuguese translation of "tree"
+  - arguments: árvore
+    description: English translation of "árvore"
+  - arguments: tree
+    description: Portuguese translation of "tree"
 pt-es 0:
   title: Portugués-Español (bab.la)
   include:
@@ -1411,8 +1571,10 @@ pt-es 1:
   include:
     key: es-pt 1
   examples:
-    árvore: Traducción al español de "árvore"
-    árbol: Traducción al portugués de "árbol"
+  - arguments: árvore
+    description: Traducción al español de "árvore"
+  - arguments: árbol
+    description: Traducción al portugués de "árbol"
 qu 0:
   include:
     key: qu-{$language} 0
@@ -1428,8 +1590,10 @@ qu-es 1:
   include:
     key: es-qu 1
   examples:
-    kulli: Traducción al español de "kulli"
-    árbol: Traducción al quechua de "árbol"
+  - arguments: kulli
+    description: Traducción al español de "kulli"
+  - arguments: árbol
+    description: Traducción al quechua de "árbol"
 ro 0:
   include:
     key: ro-{$language} 0
@@ -1445,8 +1609,10 @@ ro-en 1:
   include:
     key: en-ro 1
   examples:
-    copac: English translation of "copac"
-    tree: Romanian translation of "tree"
+  - arguments: copac
+    description: English translation of "copac"
+  - arguments: tree
+    description: Romanian translation of "tree"
 ro-it 0:
   title: Rumeno-Italiano (bab.la)
   include:
@@ -1456,8 +1622,10 @@ ro-it 1:
   include:
     key: it-ro 1
   examples:
-    copac: Traduzione in italiano di "copac"
-    albero: Traduzione in rumeno di "albero"
+  - arguments: copac
+    description: Traduzione in italiano di "copac"
+  - arguments: albero
+    description: Traduzione in rumeno di "albero"
 ru 0:
   include:
     key: ru-{$language} 0
@@ -1473,8 +1641,10 @@ ru-de 1:
   include:
     key: de-ru 1
   examples:
-    дерево: Deutsch-Übersetzung von "дерево"
-    baum: Russisch-Übersetzung von "baum"
+  - arguments: дерево
+    description: Deutsch-Übersetzung von "дерево"
+  - arguments: baum
+    description: Russisch-Übersetzung von "baum"
 ru-en 0:
   title: Russian-English (bab.la)
   include:
@@ -1484,8 +1654,10 @@ ru-en 1:
   include:
     key: en-ru 1
   examples:
-    дерево: English translation of "дерево"
-    tree: Russian translation of "tree"
+  - arguments: дерево
+    description: English translation of "дерево"
+  - arguments: tree
+    description: Russian translation of "tree"
 ru-pl 0:
   title: Rosyjski-Polski (bab.la)
   include:
@@ -1495,8 +1667,10 @@ ru-pl 1:
   include:
     key: pl-ru 1
   examples:
-    дерево: Tłumaczenie na język polski dla "дерево"
-    drzewo: Tłumaczenie na język rosyjski dla "drzewo"
+  - arguments: дерево
+    description: Tłumaczenie na język polski dla "дерево"
+  - arguments: drzewo
+    description: Tłumaczenie na język rosyjski dla "drzewo"
 sv 0:
   include:
     key: sv-{$language} 0
@@ -1512,8 +1686,10 @@ sv-de 1:
   include:
     key: de-sv 1
   examples:
-    träd: Deutsch-Übersetzung von "träd"
-    baum: Schwedisch-Übersetzung von "baum"
+  - arguments: träd
+    description: Deutsch-Übersetzung von "träd"
+  - arguments: baum
+    description: Schwedisch-Übersetzung von "baum"
 sv-en 0:
   title: Swedish-English (bab.la)
   include:
@@ -1523,8 +1699,10 @@ sv-en 1:
   include:
     key: en-sv 1
   examples:
-    träd: English translation of "träd"
-    tree: Swedish translation of "tree"
+  - arguments: träd
+    description: English translation of "träd"
+  - arguments: tree
+    description: Swedish translation of "tree"
 sw 0:
   include:
     key: sw-{$language} 0
@@ -1540,8 +1718,10 @@ sw-en 1:
   include:
     key: en-sw 1
   examples:
-    mti: English translation of "mti"
-    tree: Swahili translation of "tree"
+  - arguments: mti
+    description: English translation of "mti"
+  - arguments: tree
+    description: Swahili translation of "tree"
 te 0:
   include:
     key: te-{$language} 0
@@ -1557,8 +1737,10 @@ te-en 1:
   include:
     key: en-te 1
   examples:
-    చెట్టు: English translation of "చెట్టు"
-    tree: Telugu translation of "tree"
+  - arguments: చెట్టు
+    description: English translation of "చెట్టు"
+  - arguments: tree
+    description: Telugu translation of "tree"
 th 0:
   include:
     key: th-{$language} 0
@@ -1574,8 +1756,10 @@ th-en 1:
   include:
     key: en-th 1
   examples:
-    ต้นไม้: English translation of "ต้นไม้"
-    tree: Thai translation of "tree"
+  - arguments: ต้นไม้
+    description: English translation of "ต้นไม้"
+  - arguments: tree
+    description: Thai translation of "tree"
 tr 0:
   include:
     key: tr-{$language} 0
@@ -1591,8 +1775,10 @@ tr-de 1:
   include:
     key: de-tr 1
   examples:
-    ağaç: Deutsch-Übersetzung von "ağaç"
-    baum: Türkisch-Übersetzung von "baum"
+  - arguments: ağaç
+    description: Deutsch-Übersetzung von "ağaç"
+  - arguments: baum
+    description: Türkisch-Übersetzung von "baum"
 tr-en 0:
   title: Turkish-English (bab.la)
   include:
@@ -1602,8 +1788,10 @@ tr-en 1:
   include:
     key: en-tr 1
   examples:
-    ağaç: English translation of "ağaç"
-    tree: Turkish translation of "tree"
+  - arguments: ağaç
+    description: English translation of "ağaç"
+  - arguments: tree
+    description: Turkish translation of "tree"
 ur 0:
   include:
     key: ur-{$language} 0
@@ -1619,8 +1807,10 @@ ur-en 1:
   include:
     key: en-ur 1
   examples:
-    درخت: English translation of "درخت"
-    tree: Urdu translation of "tree"
+  - arguments: درخت
+    description: English translation of "درخت"
+  - arguments: tree
+    description: Urdu translation of "tree"
 vi 0:
   include:
     key: vi-{$language} 0
@@ -1636,8 +1826,10 @@ vi-en 1:
   include:
     key: en-vi 1
   examples:
-    cây: English translation of "cây"
-    tree: Vietnamese translation of "tree"
+  - arguments: cây
+    description: English translation of "cây"
+  - arguments: tree
+    description: Vietnamese translation of "tree"
 zh 0:
   include:
     key: zh-{$language} 0
@@ -1653,8 +1845,10 @@ zh-en 1:
   include:
     key: en-zh 1
   examples:
-    树: English translation of "树"
-    tree: Chinese translation of "tree"
+  - arguments: 树
+    description: English translation of "树"
+  - arguments: tree
+    description: Chinese translation of "tree"
 zu 0:
   include:
     key: zu-{$language} 0
@@ -1670,5 +1864,7 @@ zu-en 1:
   include:
     key: en-zu 1
   examples:
-    isihlahla: English translation of "isihlahla"
-    tree: Zulu translation of "tree"
+  - arguments: isihlahla
+    description: English translation of "isihlahla"
+  - arguments: tree
+    description: Zulu translation of "tree"

@@ -13,7 +13,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 g 1:
   url: https://www.google.ie/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.ie
@@ -21,7 +22,8 @@ g 1:
   - google
   - web search
   examples:
-    dublin: Search Google for "dublin"
+  - arguments: dublin
+    description: Search Google for "dublin"
 luas 1:
   url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.luas.ie%20{%station}
   title: Luas Dublin Light Rail
@@ -29,4 +31,5 @@ luas 1:
   - dublin
   - travel
   examples:
-    harcourt: show next trams from Harcourt station
+  - arguments: harcourt
+    description: show next trams from Harcourt station

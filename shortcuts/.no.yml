@@ -6,7 +6,8 @@ yr 1:
   - forecast
   - weather
   examples:
-    Oslo: Look up the weather in Oslo
+  - arguments: Oslo
+    description: Look up the weather in Oslo
 zal 1:
   url: http://www.zalando.no/katalog/?q={%produkt}
   title: Zalando.no
@@ -14,4 +15,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    sko: søke sko
+  - arguments: sko
+    description: søke sko

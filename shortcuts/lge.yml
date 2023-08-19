@@ -21,8 +21,10 @@ de-en 1:
   - german
   - language
   examples:
-    baum: English translation of "baum"
-    tree: German translation of "tree"
+  - arguments: baum
+    description: English translation of "baum"
+  - arguments: tree
+    description: German translation of "tree"
 de-es 0:
   url: https://www.linguee.es/espanol-aleman/
   title: Alemán-Español (Linguee)
@@ -40,8 +42,10 @@ de-es 1:
   - language
   - spanish
   examples:
-    baum: Traducción al español de "baum"
-    árbol: Traducción al alemán de "árbol"
+  - arguments: baum
+    description: Traducción al español de "baum"
+  - arguments: árbol
+    description: Traducción al alemán de "árbol"
 de-fr 0:
   url: https://www.linguee.fr/francais-allemand/
   title: Allemand-Français (Linguee)
@@ -59,8 +63,10 @@ de-fr 1:
   - german
   - language
   examples:
-    baum: Traduction en français de "baum"
-    arbre: Traduction en allemand de "arbre"
+  - arguments: baum
+    description: Traduction en français de "baum"
+  - arguments: arbre
+    description: Traduction en allemand de "arbre"
 de-pl 0:
   url: https://www.linguee.de/deutsch-polnisch/
   title: Niemiecki-Polski (Linguee)
@@ -78,8 +84,10 @@ de-pl 1:
   - language
   - polish
   examples:
-    baum: Tłumaczenie na język polski dla "baum"
-    drzewo: Tłumaczenie na język niemiecki dla "drzewo"
+  - arguments: baum
+    description: Tłumaczenie na język polski dla "baum"
+  - arguments: drzewo
+    description: Tłumaczenie na język niemiecki dla "drzewo"
 de-pt 0:
   url: https://www.linguee.pt/portugues-alemao/
   title: Alemão-Português (Linguee)
@@ -97,8 +105,10 @@ de-pt 1:
   - language
   - portuguese
   examples:
-    baum: Tradução em português de "baum"
-    árvore: Tradução em alemão de "árvore"
+  - arguments: baum
+    description: Tradução em português de "baum"
+  - arguments: árvore
+    description: Tradução em alemão de "árvore"
 en 0:
   include:
     key: en-{$language} 0
@@ -114,8 +124,10 @@ en-de 1:
   include:
     key: de-en 1
   examples:
-    tree: Deutsch-Übersetzung von "tree"
-    baum: Englisch-Übersetzung von "baum"
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Englisch-Übersetzung von "baum"
 en-es 0:
   url: https://www.linguee.com/english-spanish/
   title: Inglés-Español (Linguee)
@@ -133,8 +145,10 @@ en-es 1:
   - language
   - spanish
   examples:
-    tree: Traducción al español de "tree"
-    árbol: Traducción al inglés de "árbol"
+  - arguments: tree
+    description: Traducción al español de "tree"
+  - arguments: árbol
+    description: Traducción al inglés de "árbol"
 en-fr 0:
   url: https://www.linguee.com/english-french/
   title: Anglais-Français (Linguee)
@@ -152,8 +166,10 @@ en-fr 1:
   - french
   - language
   examples:
-    tree: Traduction en français de "tree"
-    arbre: Traduction en anglais de "arbre"
+  - arguments: tree
+    description: Traduction en français de "tree"
+  - arguments: arbre
+    description: Traduction en anglais de "arbre"
 en-pt 0:
   url: https://www.linguee.com/english-portuguese/
   title: Inglês-Português (Linguee)
@@ -171,8 +187,10 @@ en-pt 1:
   - language
   - portuguese
   examples:
-    tree: Tradução em português de "tree"
-    árvore: Tradução em inglês de "árvore"
+  - arguments: tree
+    description: Tradução em português de "tree"
+  - arguments: árvore
+    description: Tradução em inglês de "árvore"
 es 0:
   include:
     key: es-{$language} 0
@@ -188,8 +206,10 @@ es-de 1:
   include:
     key: de-es 1
   examples:
-    árbol: Deutsch-Übersetzung von "árbol"
-    baum: Spanisch-Übersetzung von "baum"
+  - arguments: árbol
+    description: Deutsch-Übersetzung von "árbol"
+  - arguments: baum
+    description: Spanisch-Übersetzung von "baum"
 es-en 0:
   title: Spanish-English (Linguee)
   include:
@@ -199,8 +219,10 @@ es-en 1:
   include:
     key: en-es 1
   examples:
-    árbol: English translation of "árbol"
-    tree: Spanish translation of "tree"
+  - arguments: árbol
+    description: English translation of "árbol"
+  - arguments: tree
+    description: Spanish translation of "tree"
 fr 0:
   include:
     key: fr-{$language} 0
@@ -216,8 +238,10 @@ fr-de 1:
   include:
     key: de-fr 1
   examples:
-    arbre: Deutsch-Übersetzung von "arbre"
-    baum: Französisch-Übersetzung von "baum"
+  - arguments: arbre
+    description: Deutsch-Übersetzung von "arbre"
+  - arguments: baum
+    description: Französisch-Übersetzung von "baum"
 fr-en 0:
   title: French-English (Linguee)
   include:
@@ -227,8 +251,10 @@ fr-en 1:
   include:
     key: en-fr 1
   examples:
-    arbre: English translation of "arbre"
-    tree: French translation of "tree"
+  - arguments: arbre
+    description: English translation of "arbre"
+  - arguments: tree
+    description: French translation of "tree"
 pl 0:
   include:
     key: pl-{$language} 0
@@ -244,8 +270,10 @@ pl-de 1:
   include:
     key: de-pl 1
   examples:
-    drzewo: Deutsch-Übersetzung von "drzewo"
-    baum: Polnisch-Übersetzung von "baum"
+  - arguments: drzewo
+    description: Deutsch-Übersetzung von "drzewo"
+  - arguments: baum
+    description: Polnisch-Übersetzung von "baum"
 pt 0:
   include:
     key: pt-{$language} 0
@@ -261,8 +289,10 @@ pt-de 1:
   include:
     key: de-pt 1
   examples:
-    árvore: Deutsch-Übersetzung von "árvore"
-    baum: Portugiesisch-Übersetzung von "baum"
+  - arguments: árvore
+    description: Deutsch-Übersetzung von "árvore"
+  - arguments: baum
+    description: Portugiesisch-Übersetzung von "baum"
 pt-en 0:
   title: Portuguese-English (Linguee)
   include:
@@ -272,5 +302,7 @@ pt-en 1:
   include:
     key: en-pt 1
   examples:
-    árvore: English translation of "árvore"
-    tree: Portuguese translation of "tree"
+  - arguments: árvore
+    description: English translation of "árvore"
+  - arguments: tree
+    description: Portuguese translation of "tree"

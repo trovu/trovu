@@ -21,8 +21,10 @@ de-hr 1:
   - german
   - language
   examples:
-    baum: hrvatski prijevod od "baum"
-    stablo: njemački prijevod od "stablo"
+  - arguments: baum
+    description: hrvatski prijevod od "baum"
+  - arguments: stablo
+    description: njemački prijevod od "stablo"
 en 0:
   include:
     key: en-{$language} 0
@@ -46,8 +48,10 @@ en-hr 1:
   - english
   - language
   examples:
-    tree: hrvatski prijevod od "tree"
-    stablo: engleski prijevod od "stablo"
+  - arguments: tree
+    description: hrvatski prijevod od "tree"
+  - arguments: stablo
+    description: engleski prijevod od "stablo"
 hr 0:
   include:
     key: hr-{$language} 0
@@ -63,8 +67,10 @@ hr-de 1:
   include:
     key: de-hr 1
   examples:
-    stablo: Deutsch-Übersetzung von "stablo"
-    baum: Kroatisch-Übersetzung von "baum"
+  - arguments: stablo
+    description: Deutsch-Übersetzung von "stablo"
+  - arguments: baum
+    description: Kroatisch-Übersetzung von "baum"
 hr-en 0:
   title: Croatian-English (CroDict)
   include:
@@ -74,5 +80,7 @@ hr-en 1:
   include:
     key: en-hr 1
   examples:
-    stablo: English translation of "stablo"
-    tree: Croatian translation of "tree"
+  - arguments: stablo
+    description: English translation of "stablo"
+  - arguments: tree
+    description: Croatian translation of "tree"

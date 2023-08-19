@@ -12,7 +12,8 @@ efr 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 enl 0:
   url: http://www.benl.ebay.be/
   title: Ebay.be
@@ -26,7 +27,8 @@ enl 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 g 1:
   url: https://www.google.be/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.be
@@ -34,7 +36,8 @@ g 1:
   - google
   - web search
   examples:
-    amsterdam: Google zoeken naar "amsterdam"
+  - arguments: amsterdam
+    description: Google zoeken naar "amsterdam"
 zal 1:
   url: http://www.zalando.be/catalogus/?q={%product}
   title: Zalando.be
@@ -42,4 +45,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    schoenen: zoek schoenen
+  - arguments: schoenen
+    description: zoek schoenen

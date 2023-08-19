@@ -5,14 +5,16 @@ alza 1:
   - seznam
   - shopping
   examples:
-    televizor: Hledej "televizor"
+  - arguments: televizor
+    description: Hledej "televizor"
 ba 1:
   url: https://www.bazos.cz/search.php?hledat={%výraz}
   title: Bazoš.cz
   tags:
   - bazoš
   examples:
-    vrtačka: Hledej použitou vrtačku
+  - arguments: vrtačka
+    description: Hledej použitou vrtačku
 g 1:
   url: https://www.google.cz/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.cz
@@ -20,7 +22,8 @@ g 1:
   - google
   - web search
   examples:
-    praha: Hledat "praha" Googlem
+  - arguments: praha
+    description: Hledat "praha" Googlem
 idos 2:
   url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&submit=1&pt=true
   title: IDOS Jízdní řády
@@ -29,7 +32,8 @@ idos 2:
   - train
   - travel
   examples:
-    praha, brno: Vlak nebo bus z Prahy do Brna
+  - arguments: praha, brno
+    description: Vlak nebo bus z Prahy do Brna
 idos 3:
   url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&submit=1&pt=true
   title: IDOS Jízdní řády
@@ -38,7 +42,8 @@ idos 3:
   - train
   - travel
   examples:
-    praha, brno, 20: Vlak nebo bus z Prahy do Brna ve 20:00h
+  - arguments: praha, brno, 20
+    description: Vlak nebo bus z Prahy do Brna ve 20:00h
 idos 4:
   url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&date={%datum|type=date|output=DD.MM.YYYY}&submit=1&pt=true
   title: IDOS Jízdní řády
@@ -47,7 +52,8 @@ idos 4:
   - train
   - travel
   examples:
-    praha, brno, 20, 10.12.: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
+  - arguments: praha, brno, 20, 10.12.
+    description: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
 ikea 0:
   url: http://www.ikea.com/cz/cs/
   title: IKEA Česko
@@ -56,7 +62,8 @@ ikea 0:
   - ikea
   - shopping
   examples:
-    matrace: Hledej matrace
+  - arguments: matrace
+    description: Hledej matrace
 ikea 1:
   url: http://www.ikea.com/cz/cs/search/?q={%query}
   title: IKEA Česko
@@ -65,7 +72,8 @@ ikea 1:
   - ikea
   - shopping
   examples:
-    matrace: Hledej matrace
+  - arguments: matrace
+    description: Hledej matrace
 m 1:
   url: https://mapy.cz/zakladni?q={%místo}
   title: Mapy.cz
@@ -73,7 +81,8 @@ m 1:
   - maps
   - mapy
   examples:
-    praha: Praha na mapy.cz
+  - arguments: praha
+    description: Praha na mapy.cz
 m 2:
   url: https://mapy.cz/zakladni?q={%město|type=city}%2C%20{%místo}
   title: Mapy.cz
@@ -81,7 +90,8 @@ m 2:
   - maps
   - mapy
   examples:
-    a, lazarska: Lazarská v Praze na mapy.cz
+  - arguments: a, lazarska
+    description: Lazarská v Praze na mapy.cz
 mapy 1:
   url: https://mapy.cz/zakladni?q={%místo}
   title: Mapy.cz
@@ -89,7 +99,8 @@ mapy 1:
   - maps
   - mapy
   examples:
-    praha: Praha na mapy.cz
+  - arguments: praha
+    description: Praha na mapy.cz
 seznam 1:
   url: http://search.seznam.cz/search.cgi?w={%query}
   title: Seznam
@@ -97,7 +108,8 @@ seznam 1:
   - seznam
   - web search
   examples:
-    praha: Hledej "praha"
+  - arguments: praha
+    description: Hledej "praha"
 tv 0:
   url: http://tvprogram.centrum.cz/
   title: TV programy Česko
@@ -111,7 +123,8 @@ u 1:
   - download
   - uloz
   examples:
-    free music: Hledej "free music"
+  - arguments: free music
+    description: Hledej "free music"
 z 1:
   url: https://www.zbozi.cz/hledej/?q={%výraz}
   title: Zboží.cz
@@ -119,7 +132,8 @@ z 1:
   - seznam
   - shopping
   examples:
-    televizor: Hledej "televizor"
+  - arguments: televizor
+    description: Hledej "televizor"
 zbozi 1:
   url: https://www.zbozi.cz/hledej/?q={%výraz}
   title: Zboží.cz
@@ -127,4 +141,5 @@ zbozi 1:
   - seznam
   - shopping
   examples:
-    televizor: Hledej "televizor"
+  - arguments: televizor
+    description: Hledej "televizor"

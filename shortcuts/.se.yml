@@ -5,7 +5,8 @@ blocket 1:
   - blocket
   - shopping
   examples:
-    iphone: Search for "iphone"
+  - arguments: iphone
+    description: Search for "iphone"
 llt 2:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&cmdAction=search
   title: Luleå Lokaltrafik
@@ -13,7 +14,8 @@ llt 2:
   - luleå
   - travel
   examples:
-    sotargatan, järnvägen: Nästa buss från Sotargatan till Järnvägen
+  - arguments: sotargatan, järnvägen
+    description: Nästa buss från Sotargatan till Järnvägen
 llt 3:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr={%Fra}&inpPointTo={%Till}&inpTime={%Avgång}00&cmdAction=search
   title: Luleå Lokaltrafik
@@ -21,7 +23,8 @@ llt 3:
   - luleå
   - travel
   examples:
-    sotargatan, järnvägen,10: Buss från Sotargatan till Järnvägen, avgång kl. 10
+  - arguments: sotargatan, järnvägen,10
+    description: Buss från Sotargatan till Järnvägen, avgång kl. 10
 ltnbd 2:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&start=1
   title: Länstraffiken Norbotten
@@ -30,7 +33,8 @@ ltnbd 2:
   - norbotten
   - travel
   examples:
-    boden, luleå: Nästa buss från Boden till Luleå
+  - arguments: boden, luleå
+    description: Nästa buss från Boden till Luleå
 ltnbd 3:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S={%Från}!&Z={%Till}!&T={%Avgång}&start=1
   title: Länstraffiken Norbotten
@@ -39,21 +43,24 @@ ltnbd 3:
   - norbotten
   - travel
   examples:
-    boden, luleå, 10: Buss från Boden till Luleå, avgång kl. 10
+  - arguments: boden, luleå, 10
+    description: Buss från Boden till Luleå, avgång kl. 10
 rr 2:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&start=1
   title: Resrobot
   tags:
   - travel
   examples:
-    stockholm, malmö: Nästa tåg från Stockholm till Malmö
+  - arguments: stockholm, malmö
+    description: Nästa tåg från Stockholm till Malmö
 rr 3:
   url: http://reseplanerare.resrobot.se/bin/query.exe/sn?S={%Från}!&Z={%Till}!&T={%Avgång}&start=1
   title: Resrobot
   tags:
   - travel
   examples:
-    stockholm, malmö, 10: Tåg från Stockholm till Malmö, avgång kl. 10
+  - arguments: stockholm, malmö, 10
+    description: Tåg från Stockholm till Malmö, avgång kl. 10
 srse 1:
   url: http://sverigesradio.se/sida/sok.aspx?q={%programmets namn}&sort=relevance
   title: Sveriges radio search
@@ -61,7 +68,8 @@ srse 1:
   - radio
   - sweden
   examples:
-    stockholm: Search for "stockholm".
+  - arguments: stockholm
+    description: Search for "stockholm".
 zal 1:
   url: http://www.zalando.se/katalog/?q={%produkt}
   title: Zalando.se
@@ -69,4 +77,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    kläder: söka kläder
+  - arguments: kläder
+    description: söka kläder

@@ -15,7 +15,8 @@ a 1:
   - books
   - shopping
   examples:
-    goethe: Suche auf Amazon.at nach "goethe"
+  - arguments: goethe
+    description: Suche auf Amazon.at nach "goethe"
 conrad 0:
   url: http://www.conrad.at/
   title: Conrad Elektronik Österreich
@@ -31,7 +32,8 @@ conrad 1:
   - electronics
   - shopping
   examples:
-    glühlampe: Suche nach Glühlampen
+  - arguments: glühlampe
+    description: Suche nach Glühlampen
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
@@ -47,7 +49,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 g 1:
   url: https://www.google.at/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.at
@@ -55,7 +58,8 @@ g 1:
   - google
   - web search
   examples:
-    wien: Google-Suche nach "wien"
+  - arguments: wien
+    description: Google-Suche nach "wien"
 gh 0:
   url: http://geizhals.at/
   title: Geizhals Österreich Hauptseite
@@ -71,7 +75,8 @@ gh 1:
   - preisvergleich
   - shopping
   examples:
-    fernseher: Search for "fernseher"
+  - arguments: fernseher
+    description: Search for "fernseher"
 gmam 1:
   url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Amstetten%2C%20%C3%96sterreich
   title: Google Maps Amstetten
@@ -79,7 +84,8 @@ gmam 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Amstetten
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Amstetten
   deprecated:
     alternative:
       query: gm am,{%1}
@@ -91,7 +97,8 @@ gmb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Bregenz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Bregenz
   deprecated:
     alternative:
       query: gm b,{%1}
@@ -103,7 +110,8 @@ gmba 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Bad Aussee
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Bad Aussee
   deprecated:
     alternative:
       query: gm ba,{%1}
@@ -115,7 +123,8 @@ gmbl 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Bruck an der Leitha
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Bruck an der Leitha
   deprecated:
     alternative:
       query: gm bl,{%1}
@@ -127,7 +136,8 @@ gmbm 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Bruck an der Mur
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Bruck an der Mur
   deprecated:
     alternative:
       query: gm bm,{%1}
@@ -139,7 +149,8 @@ gmbn 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Baden
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Baden
   deprecated:
     alternative:
       query: gm bn,{%1}
@@ -151,7 +162,8 @@ gmbr 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Braunau am Inn
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Braunau am Inn
   deprecated:
     alternative:
       query: gm br,{%1}
@@ -163,7 +175,8 @@ gmbz 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Bludenz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Bludenz
   deprecated:
     alternative:
       query: gm bz,{%1}
@@ -175,7 +188,8 @@ gmdl 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Deutschlandsberg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Deutschlandsberg
   deprecated:
     alternative:
       query: gm dl,{%1}
@@ -187,7 +201,8 @@ gmdo 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Dornbirn
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Dornbirn
   deprecated:
     alternative:
       query: gm do,{%1}
@@ -199,7 +214,8 @@ gme 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Eisenstadt
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Eisenstadt
   deprecated:
     alternative:
       query: gm e,{%1}
@@ -211,7 +227,8 @@ gmef 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Eferding
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Eferding
   deprecated:
     alternative:
       query: gm ef,{%1}
@@ -223,7 +240,8 @@ gmfb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Feldbach
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Feldbach
   deprecated:
     alternative:
       query: gm fb,{%1}
@@ -235,7 +253,8 @@ gmfe 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Feldkirchen
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Feldkirchen
   deprecated:
     alternative:
       query: gm fe,{%1}
@@ -247,7 +266,8 @@ gmff 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Fürstenfeld
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Fürstenfeld
   deprecated:
     alternative:
       query: gm ff,{%1}
@@ -259,7 +279,8 @@ gmfk 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Feldkirch
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Feldkirch
   deprecated:
     alternative:
       query: gm fk,{%1}
@@ -271,7 +292,8 @@ gmfr 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Freistadt
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Freistadt
   deprecated:
     alternative:
       query: gm fr,{%1}
@@ -283,7 +305,8 @@ gmg 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Graz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Graz
   deprecated:
     alternative:
       query: gm g,{%1}
@@ -295,7 +318,8 @@ gmgb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Gröbming
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Gröbming
   deprecated:
     alternative:
       query: gm gb,{%1}
@@ -307,7 +331,8 @@ gmgd 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Gmünd
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Gmünd
   deprecated:
     alternative:
       query: gm gd,{%1}
@@ -319,7 +344,8 @@ gmgf 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Gänserndorf
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Gänserndorf
   deprecated:
     alternative:
       query: gm gf,{%1}
@@ -331,7 +357,8 @@ gmgm 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Gmunden
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Gmunden
   deprecated:
     alternative:
       query: gm gm,{%1}
@@ -343,7 +370,8 @@ gmgr 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Grieskirchen
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Grieskirchen
   deprecated:
     alternative:
       query: gm gr,{%1}
@@ -355,7 +383,8 @@ gmgs 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Güssing
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Güssing
   deprecated:
     alternative:
       query: gm gs,{%1}
@@ -367,7 +396,8 @@ gmha 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Hallein
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Hallein
   deprecated:
     alternative:
       query: gm ha,{%1}
@@ -379,7 +409,8 @@ gmhb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Hartberg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Hartberg
   deprecated:
     alternative:
       query: gm hb,{%1}
@@ -391,7 +422,8 @@ gmhe 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Hermagor
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Hermagor
   deprecated:
     alternative:
       query: gm he,{%1}
@@ -403,7 +435,8 @@ gmhl 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Hollabrunn
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Hollabrunn
   deprecated:
     alternative:
       query: gm hl,{%1}
@@ -415,7 +448,8 @@ gmho 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Horn
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Horn
   deprecated:
     alternative:
       query: gm ho,{%1}
@@ -427,7 +461,8 @@ gmi 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Innsbruck
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Innsbruck
   deprecated:
     alternative:
       query: gm i,{%1}
@@ -439,7 +474,8 @@ gmim 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Imst
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Imst
   deprecated:
     alternative:
       query: gm im,{%1}
@@ -451,7 +487,8 @@ gmje 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Jennersdorf
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Jennersdorf
   deprecated:
     alternative:
       query: gm je,{%1}
@@ -463,7 +500,8 @@ gmjo 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in St. Johann
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in St. Johann
   deprecated:
     alternative:
       query: gm jo,{%1}
@@ -475,7 +513,8 @@ gmju 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Judenburg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Judenburg
   deprecated:
     alternative:
       query: gm ju,{%1}
@@ -487,7 +526,8 @@ gmk 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Klagenfurt
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Klagenfurt
   deprecated:
     alternative:
       query: gm k,{%1}
@@ -499,7 +539,8 @@ gmkb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Kitzbühel
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Kitzbühel
   deprecated:
     alternative:
       query: gm kb,{%1}
@@ -511,7 +552,8 @@ gmkf 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Knittelfeld
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Knittelfeld
   deprecated:
     alternative:
       query: gm kf,{%1}
@@ -523,7 +565,8 @@ gmki 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Kirchdorf Krems
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Kirchdorf Krems
   deprecated:
     alternative:
       query: gm ki,{%1}
@@ -535,7 +578,8 @@ gmko 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Korneuburg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Korneuburg
   deprecated:
     alternative:
       query: gm ko,{%1}
@@ -547,7 +591,8 @@ gmks 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Krems
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Krems
   deprecated:
     alternative:
       query: gm ks,{%1}
@@ -559,7 +604,8 @@ gmku 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Kufstein
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Kufstein
   deprecated:
     alternative:
       query: gm ku,{%1}
@@ -571,7 +617,8 @@ gml 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Linz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Linz
   deprecated:
     alternative:
       query: gm l,{%1}
@@ -583,7 +630,8 @@ gmla 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Landeck
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Landeck
   deprecated:
     alternative:
       query: gm la,{%1}
@@ -595,7 +643,8 @@ gmlb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Leibnitz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Leibnitz
   deprecated:
     alternative:
       query: gm lb,{%1}
@@ -607,7 +656,8 @@ gmle 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Leoben
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Leoben
   deprecated:
     alternative:
       query: gm le,{%1}
@@ -619,7 +669,8 @@ gmlf 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Lilienfeld
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Lilienfeld
   deprecated:
     alternative:
       query: gm lf,{%1}
@@ -631,7 +682,8 @@ gmli 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Liezen
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Liezen
   deprecated:
     alternative:
       query: gm li,{%1}
@@ -643,7 +695,8 @@ gmlz 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Lienz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Lienz
   deprecated:
     alternative:
       query: gm lz,{%1}
@@ -655,7 +708,8 @@ gmma 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Mattersburg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Mattersburg
   deprecated:
     alternative:
       query: gm ma,{%1}
@@ -667,7 +721,8 @@ gmmd 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Mödling
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Mödling
   deprecated:
     alternative:
       query: gm md,{%1}
@@ -679,7 +734,8 @@ gmme 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Melk
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Melk
   deprecated:
     alternative:
       query: gm me,{%1}
@@ -691,7 +747,8 @@ gmmi 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Mistelbach
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Mistelbach
   deprecated:
     alternative:
       query: gm mi,{%1}
@@ -703,7 +760,8 @@ gmmu 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Murau
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Murau
   deprecated:
     alternative:
       query: gm mu,{%1}
@@ -715,7 +773,8 @@ gmmz 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Mürzzuschlag
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Mürzzuschlag
   deprecated:
     alternative:
       query: gm mz,{%1}
@@ -727,7 +786,8 @@ gmnd 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Neusiedl am See
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Neusiedl am See
   deprecated:
     alternative:
       query: gm nd,{%1}
@@ -739,7 +799,8 @@ gmnk 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Neunkirchen
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Neunkirchen
   deprecated:
     alternative:
       query: gm nk,{%1}
@@ -751,7 +812,8 @@ gmop 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Oberpullendorf
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Oberpullendorf
   deprecated:
     alternative:
       query: gm op,{%1}
@@ -763,7 +825,8 @@ gmow 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Oberwart
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Oberwart
   deprecated:
     alternative:
       query: gm ow,{%1}
@@ -775,7 +838,8 @@ gmp 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in St. Pölten
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in St. Pölten
   deprecated:
     alternative:
       query: gm p,{%1}
@@ -787,7 +851,8 @@ gmpe 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Perg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Perg
   deprecated:
     alternative:
       query: gm pe,{%1}
@@ -799,7 +864,8 @@ gmra 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Radkersburg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Radkersburg
   deprecated:
     alternative:
       query: gm ra,{%1}
@@ -811,7 +877,8 @@ gmre 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Reutte
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Reutte
   deprecated:
     alternative:
       query: gm re,{%1}
@@ -823,7 +890,8 @@ gmri 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Ried im Innkreis
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Ried im Innkreis
   deprecated:
     alternative:
       query: gm ri,{%1}
@@ -835,7 +903,8 @@ gmro 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Rohrbach
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Rohrbach
   deprecated:
     alternative:
       query: gm ro,{%1}
@@ -847,7 +916,8 @@ gms 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Salzburg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Salzburg
   deprecated:
     alternative:
       query: gm s,{%1}
@@ -859,7 +929,8 @@ gmsb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Scheibbs
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Scheibbs
   deprecated:
     alternative:
       query: gm sb,{%1}
@@ -871,7 +942,8 @@ gmsd 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Schärding
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Schärding
   deprecated:
     alternative:
       query: gm sd,{%1}
@@ -883,7 +955,8 @@ gmsp 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Spittal an der Drau
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Spittal an der Drau
   deprecated:
     alternative:
       query: gm sp,{%1}
@@ -895,7 +968,8 @@ gmsr 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Steyr
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Steyr
   deprecated:
     alternative:
       query: gm sr,{%1}
@@ -907,7 +981,8 @@ gmsv 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Sankt Veit an der Glan
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Sankt Veit an der Glan
   deprecated:
     alternative:
       query: gm sv,{%1}
@@ -919,7 +994,8 @@ gmsw 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Schwechat
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Schwechat
   deprecated:
     alternative:
       query: gm sw,{%1}
@@ -931,7 +1007,8 @@ gmsz 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Schwaz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Schwaz
   deprecated:
     alternative:
       query: gm sz,{%1}
@@ -943,7 +1020,8 @@ gmta 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Tamsweg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Tamsweg
   deprecated:
     alternative:
       query: gm ta,{%1}
@@ -955,7 +1033,8 @@ gmtu 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Tulln
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Tulln
   deprecated:
     alternative:
       query: gm tu,{%1}
@@ -967,7 +1046,8 @@ gmvb 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Vöcklabruck
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Vöcklabruck
   deprecated:
     alternative:
       query: gm vb,{%1}
@@ -979,7 +1059,8 @@ gmvi 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Villach
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Villach
   deprecated:
     alternative:
       query: gm vi,{%1}
@@ -991,7 +1072,8 @@ gmvk 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Völkermarkt
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Völkermarkt
   deprecated:
     alternative:
       query: gm vk,{%1}
@@ -1003,7 +1085,8 @@ gmvo 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Voitsberg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Voitsberg
   deprecated:
     alternative:
       query: gm vo,{%1}
@@ -1015,7 +1098,8 @@ gmw 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Wien
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Wien
   deprecated:
     alternative:
       query: gm w,{%1}
@@ -1027,7 +1111,8 @@ gmwe 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Wels
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Wels
   deprecated:
     alternative:
       query: gm we,{%1}
@@ -1039,7 +1124,8 @@ gmwn 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Wiener Neustadt
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Wiener Neustadt
   deprecated:
     alternative:
       query: gm wn,{%1}
@@ -1051,7 +1137,8 @@ gmwo 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Wolfsberg
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Wolfsberg
   deprecated:
     alternative:
       query: gm wo,{%1}
@@ -1063,7 +1150,8 @@ gmwt 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Waidhofen an der Thaya
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Waidhofen an der Thaya
   deprecated:
     alternative:
       query: gm wt,{%1}
@@ -1075,7 +1163,8 @@ gmwy 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Waidhofen an der Ybbs
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Waidhofen an der Ybbs
   deprecated:
     alternative:
       query: gm wy,{%1}
@@ -1087,7 +1176,8 @@ gmwz 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Weiz
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Weiz
   deprecated:
     alternative:
       query: gm wz,{%1}
@@ -1099,7 +1189,8 @@ gmze 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Zell am See
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Zell am See
   deprecated:
     alternative:
       query: gm ze,{%1}
@@ -1111,7 +1202,8 @@ gmzt 1:
   - google
   - maps
   examples:
-    hauptstr.: Zeige Hauptstr. in Zwettl
+  - arguments: hauptstr.
+    description: Zeige Hauptstr. in Zwettl
   deprecated:
     alternative:
       query: gm zt,{%1}
@@ -1131,7 +1223,8 @@ ikea 1:
   - ikea
   - shopping
   examples:
-    matratze: Suche nach Matratzen
+  - arguments: matratze
+    description: Suche nach Matratzen
 obv 1:
   url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,{%Suche}&displayField=all&pcAvailabiltyMode=false
   title: OBV Suche - Österreichischer Bibliothekenverbund
@@ -1139,7 +1232,8 @@ obv 1:
   - library
   - obv
   examples:
-    elfriede jelinek: Suche nach Literatur von und über Elfriede Jelinek
+  - arguments: elfriede jelinek
+    description: Suche nach Literatur von und über Elfriede Jelinek
 oebb 2:
   include:
     key: öbb 2
@@ -1156,7 +1250,8 @@ rsc 1:
   - electronics
   - shopping
   examples:
-    Battery: Suche bei RS Components nach "Battery"
+  - arguments: Battery
+    description: Suche bei RS Components nach "Battery"
 we 0:
   url: http://at.wetter.com/?forcesite=1
   title: Wetter.com
@@ -1168,7 +1263,8 @@ we 1:
   tags:
   - weather
   examples:
-    berlin: Search for "berlin"
+  - arguments: berlin
+    description: Search for "berlin"
 zal 1:
   url: http://www.zalando.at/katalog/?q={%Produkt}
   title: Zalando.at
@@ -1176,7 +1272,8 @@ zal 1:
   - shopping
   - zalando
   examples:
-    schuhe: Suche nach Schuhen
+  - arguments: schuhe
+    description: Suche nach Schuhen
 öbb 2:
   url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
   title: ÖBB-Auskunft
@@ -1184,7 +1281,8 @@ zal 1:
   - bahn
   - travel
   examples:
-    wien, salzburg: Verbindung von Wien nach Salzburg
+  - arguments: wien, salzburg
+    description: Verbindung von Wien nach Salzburg
 öbb 3:
   url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time}&start=1
   title: ÖBB-Auskunft
@@ -1192,7 +1290,8 @@ zal 1:
   - bahn
   - travel
   examples:
-    wien, salzburg, 10: Verbindung von Wien nach Salzburg um 10:00 Uhr
+  - arguments: wien, salzburg, 10
+    description: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
   url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: ÖBB-Auskunft
@@ -1200,4 +1299,5 @@ zal 1:
   - bahn
   - travel
   examples:
-    wien, salzburg, 10, 1.1.: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
+  - arguments: wien, salzburg, 10, 1.1.
+    description: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.

@@ -15,7 +15,8 @@ a 1:
   - books
   - shopping
   examples:
-    shakespeare: Search for "shakespeare"
+  - arguments: shakespeare
+    description: Search for "shakespeare"
 culpa 1:
   url: https://www.culpa.info/#/search?entity=all&query={%name}&alphabetize=True
   title: CULPA Columbia Professor Search
@@ -23,7 +24,8 @@ culpa 1:
   - columbia
   - uni
   examples:
-    smith: Search for a professor named Smith
+  - arguments: smith
+    description: Search for a professor named Smith
 e 0:
   url: https://www.ebay.com/?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
@@ -39,7 +41,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for smartphones
+  - arguments: smartphone
+    description: Search for smartphones
 gmla 1:
   url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Los%20Angeles%2C%20California
   title: Google Maps Los Angeles
@@ -47,7 +50,8 @@ gmla 1:
   - google
   - maps
   examples:
-    hollywood: Show Hollywood on Google Maps
+  - arguments: hollywood
+    description: Show Hollywood on Google Maps
 gmnyc 1:
   url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20New%20York%20City%2C%20New%20York
   title: Google Maps New York City
@@ -55,7 +59,8 @@ gmnyc 1:
   - google
   - maps
   examples:
-    central park: Show Central Park
+  - arguments: central park
+    description: Show Central Park
 gmsf 1:
   url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20San%20Francisco%2C%20California
   title: Google Maps San Francisco
@@ -64,7 +69,8 @@ gmsf 1:
   - maps
   - san francisco
   examples:
-    golden gate bridge: Show Golden Gate Bridge on Google Maps
+  - arguments: golden gate bridge
+    description: Show Golden Gate Bridge on Google Maps
 gps 1:
   url: http://www.google.com/products?hl={$language}&q={%query}
   title: Google Products (USA)
@@ -72,28 +78,32 @@ gps 1:
   - google
   - shopping
   examples:
-    iphone: Search for "iphone"
+  - arguments: iphone
+    description: Search for "iphone"
 sec 1:
   url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
   examples:
-    Honeywell: General company search
+  - arguments: Honeywell
+    description: General company search
 sec 2:
   url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type={%filing type}
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
   examples:
-    Rio Tinto, 8-K: search for a company with 8-K annual reports
+  - arguments: Rio Tinto, 8-K
+    description: search for a company with 8-K annual reports
 sec20f 1:
   url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=20-F
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
   examples:
-    Rio Tinto: search for a company with 20-F annual reports
+  - arguments: Rio Tinto
+    description: search for a company with 20-F annual reports
 sic 1:
   url: http://www.osha.gov/pls/imis/sicsearch.html?p_sic={%SIC digit}&p_search=
   title: Standard Industrial Classification (SIC)
@@ -101,7 +111,8 @@ sic 1:
   - industry
   - standard
   examples:
-    '1231': Search descriptive information for SIC "1231"
+  - arguments: '1231'
+    description: Search descriptive information for SIC "1231"
 yp 2:
   url: http://www.yellowpages.com/search?search_terms={%business name}&geo_location_terms={%city or zip}
   title: Yellow Pages
@@ -109,4 +120,5 @@ yp 2:
   - phone
   - shopping
   examples:
-    pizza, new york: Search for Pizza in New York
+  - arguments: pizza, new york
+    description: Search for Pizza in New York

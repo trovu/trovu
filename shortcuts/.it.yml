@@ -7,7 +7,8 @@ a 1:
   - books
   - shopping
   examples:
-    shakespeare: Search for "shakespeare"
+  - arguments: shakespeare
+    description: Search for "shakespeare"
 e 0:
   url: https://www.ebay.it/?mkcid=1&mkrid=724-53478-19255-0&siteid=101&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.it
@@ -23,7 +24,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 zal 1:
   url: http://www.zalando.it/catalogo/?q={%prodotto}
   title: Zalando.it
@@ -31,4 +33,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    'calzature ': cercare calzature
+  - arguments: 'calzature '
+    description: cercare calzature

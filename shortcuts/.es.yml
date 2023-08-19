@@ -15,7 +15,8 @@ a 1:
   - books
   - shopping
   examples:
-    shakespeare: Search for "shakespeare"
+  - arguments: shakespeare
+    description: Search for "shakespeare"
 e 0:
   url: https://www.ebay.es/?mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es
@@ -31,7 +32,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Buscar "smartphone" en Ebay
+  - arguments: smartphone
+    description: Buscar "smartphone" en Ebay
 g 1:
   url: https://www.google.es/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.es
@@ -39,7 +41,8 @@ g 1:
   - google
   - web search
   examples:
-    madrid: Buscar "madrid" con Google
+  - arguments: madrid
+    description: Buscar "madrid" con Google
 gdfv 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura, España&daddr={%destination}, Fuerteventura, España
   title: Google Maps Directions (Routing), Fuerteventura
@@ -50,7 +53,8 @@ gdfv 2:
   - route
   - routing
   examples:
-    corralejo, morro jable: Get a route from Corralejo to Morro Jable
+  - arguments: corralejo, morro jable
+    description: Get a route from Corralejo to Morro Jable
 gdgc 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria, España&daddr={%destination}, Gran Canaria, España
   title: Google Maps Directions (Routing), Gran Canaria
@@ -61,7 +65,8 @@ gdgc 2:
   - route
   - routing
   examples:
-    las palmas, maspalomas: Get a route from Las Palmas to Maspalomas
+  - arguments: las palmas, maspalomas
+    description: Get a route from Las Palmas to Maspalomas
 gdlz 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote, España&daddr={%destination}, Lanzarote, España
   title: Google Maps Directions (Routing), Lanzarote
@@ -72,7 +77,8 @@ gdlz 2:
   - route
   - routing
   examples:
-    arrecife, playa blanca: Get a route from Arrecife to Playa Blanca
+  - arguments: arrecife, playa blanca
+    description: Get a route from Arrecife to Playa Blanca
 gdtf 2:
   url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife, España&daddr={%destination}, Tenerife, España
   title: Google Maps Directions (Routing), Tenerife
@@ -83,7 +89,8 @@ gdtf 2:
   - routing
   - tenerife
   examples:
-    santa cruz, la laguna: Get a route from Santa Cruz to La Laguna
+  - arguments: santa cruz, la laguna
+    description: Get a route from Santa Cruz to La Laguna
 ikea 0:
   url: http://www.ikea.com/es/es/
   title: IKEA España
@@ -99,7 +106,8 @@ ikea 1:
   - ikea
   - shopping
   examples:
-    colchón: Buscar colchón
+  - arguments: colchón
+    description: Buscar colchón
 ma 0:
   url: https://www.milanuncios.com/
   title: Milanuncios
@@ -113,7 +121,8 @@ ma 1:
   - segunda mano
   - shopping
   examples:
-    palmera: Busqueda de "palmera"
+  - arguments: palmera
+    description: Busqueda de "palmera"
 mil 0:
   title: Mil Anuncios
   deprecated:
@@ -136,7 +145,8 @@ titsa 2:
   - titsa
   - travel
   examples:
-    weyler, trinidad: Próxima connection de Weyler a Trinidad
+  - arguments: weyler, trinidad
+    description: Próxima connection de Weyler a Trinidad
 titsa 3:
   url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&time={%salida}&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
@@ -147,7 +157,8 @@ titsa 3:
   - titsa
   - travel
   examples:
-    weyler, trinidad, 10: Connection de Weyler a Trinidad a las 10
+  - arguments: weyler, trinidad, 10
+    description: Connection de Weyler a Trinidad a las 10
 zal 1:
   url: http://www.zalando.es/catalogo/?q={%product}
   title: Zalando.es
@@ -155,4 +166,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    calzado: buscar calzado
+  - arguments: calzado
+    description: buscar calzado

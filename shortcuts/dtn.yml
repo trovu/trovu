@@ -21,8 +21,10 @@ de-tr 1:
   - language
   - turkish
   examples:
-    baum: '"baum" için Türkçe çevirisi'
-    ağaç: '"ağaç" için Almanca çevirisi'
+  - arguments: baum
+    description: '"baum" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için Almanca çevirisi'
 tr 0:
   include:
     key: tr-{$language} 0
@@ -38,5 +40,7 @@ tr-de 1:
   include:
     key: de-tr 1
   examples:
-    ağaç: Deutsch-Übersetzung von "ağaç"
-    baum: Türkisch-Übersetzung von "baum"
+  - arguments: ağaç
+    description: Deutsch-Übersetzung von "ağaç"
+  - arguments: baum
+    description: Türkisch-Übersetzung von "baum"

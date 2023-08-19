@@ -21,8 +21,10 @@ de-en 1:
   - german
   - language
   examples:
-    baum: English translation of "baum"
-    tree: German translation of "tree"
+  - arguments: baum
+    description: English translation of "baum"
+  - arguments: tree
+    description: German translation of "tree"
 de-es 0:
   url: https://dict.tu-chemnitz.de/
   title: Alemán-Español (Beolingus)
@@ -40,8 +42,10 @@ de-es 1:
   - language
   - spanish
   examples:
-    baum: Traducción al español de "baum"
-    árbol: Traducción al alemán de "árbol"
+  - arguments: baum
+    description: Traducción al español de "baum"
+  - arguments: árbol
+    description: Traducción al alemán de "árbol"
 de-pt 0:
   url: https://dict.tu-chemnitz.de/
   title: Alemão-Português (Beolingus)
@@ -59,8 +63,10 @@ de-pt 1:
   - language
   - portuguese
   examples:
-    baum: Tradução em português de "baum"
-    árvore: Tradução em alemão de "árvore"
+  - arguments: baum
+    description: Tradução em português de "baum"
+  - arguments: árvore
+    description: Tradução em alemão de "árvore"
 en 0:
   include:
     key: en-{$language} 0
@@ -76,8 +82,10 @@ en-de 1:
   include:
     key: de-en 1
   examples:
-    tree: Deutsch-Übersetzung von "tree"
-    baum: Englisch-Übersetzung von "baum"
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Englisch-Übersetzung von "baum"
 es 0:
   include:
     key: es-{$language} 0
@@ -93,8 +101,10 @@ es-de 1:
   include:
     key: de-es 1
   examples:
-    árbol: Deutsch-Übersetzung von "árbol"
-    baum: Spanisch-Übersetzung von "baum"
+  - arguments: árbol
+    description: Deutsch-Übersetzung von "árbol"
+  - arguments: baum
+    description: Spanisch-Übersetzung von "baum"
 pt 0:
   include:
     key: pt-{$language} 0
@@ -110,5 +120,7 @@ pt-de 1:
   include:
     key: de-pt 1
   examples:
-    árvore: Deutsch-Übersetzung von "árvore"
-    baum: Portugiesisch-Übersetzung von "baum"
+  - arguments: árvore
+    description: Deutsch-Übersetzung von "árvore"
+  - arguments: baum
+    description: Portugiesisch-Übersetzung von "baum"

@@ -21,8 +21,10 @@ de-no 1:
   - language
   - norwegian
   examples:
-    baum: norsk-oversettelse av "baum"
-    tre: tysk-oversettelse av "tre"
+  - arguments: baum
+    description: norsk-oversettelse av "baum"
+  - arguments: tre
+    description: tysk-oversettelse av "tre"
 no 0:
   include:
     key: no-{$language} 0
@@ -38,5 +40,7 @@ no-de 1:
   include:
     key: de-no 1
   examples:
-    tre: Deutsch-Übersetzung von "tre"
-    baum: Norwegisch-Übersetzung von "baum"
+  - arguments: tre
+    description: Deutsch-Übersetzung von "tre"
+  - arguments: baum
+    description: Norwegisch-Übersetzung von "baum"

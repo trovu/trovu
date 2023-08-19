@@ -21,8 +21,10 @@ de-ja 1:
   - japanese
   - language
   examples:
-    baum: '"baum"の日本語翻訳'
-    木: '"木"のドイツ語翻訳'
+  - arguments: baum
+    description: '"baum"の日本語翻訳'
+  - arguments: 木
+    description: '"木"のドイツ語翻訳'
 ja 0:
   include:
     key: ja-{$language} 0
@@ -38,5 +40,7 @@ ja-de 1:
   include:
     key: de-ja 1
   examples:
-    木: Deutsch-Übersetzung von "木"
-    baum: Japanisch-Übersetzung von "baum"
+  - arguments: 木
+    description: Deutsch-Übersetzung von "木"
+  - arguments: baum
+    description: Japanisch-Übersetzung von "baum"

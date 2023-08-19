@@ -6,25 +6,29 @@ frv 1:
   - language
   - pronunciation
   examples:
-    berlin: Search for the pronunciation of "berlin"
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
 gyl 1:
   url: http://ordbog.gyldendal.dk/sitecore/content/Ordbog/Home/Opslag/Resultat.aspx?lcode=DAEN&q={%ord}
   title: Gyldendals Røde Ordbøger
   tags:
   - language
   examples:
-    kaffe: Search for "kaffe"
+  - arguments: kaffe
+    description: Search for "kaffe"
 ods 1:
   url: https://ordnet.dk/ods/ordbog?query={%ord}
   title: Ordbog over det danske sprog
   tags:
   - language
   examples:
-    skrive: artikel om "skrive"
+  - arguments: skrive
+    description: artikel om "skrive"
 spr 1:
   url: http://sproget.dk/lookup?SearchableText={%ord}
   title: Sproget.dk
   tags:
   - language
   examples:
-    bog: Search for "bog"
+  - arguments: bog
+    description: Search for "bog"

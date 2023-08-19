@@ -21,8 +21,10 @@ ar-de 1:
   - german
   - language
   examples:
-    شجرة: Deutsch-Übersetzung von "شجرة"
-    baum: Arabisch-Übersetzung von "baum"
+  - arguments: شجرة
+    description: Deutsch-Übersetzung von "شجرة"
+  - arguments: baum
+    description: Arabisch-Übersetzung von "baum"
 ar-en 0:
   url: https://www.arabdict.com/english-arabic/
   title: Arabic-English (arabdict)
@@ -40,8 +42,10 @@ ar-en 1:
   - english
   - language
   examples:
-    شجرة: English translation of "شجرة"
-    tree: Arabic translation of "tree"
+  - arguments: شجرة
+    description: English translation of "شجرة"
+  - arguments: tree
+    description: Arabic translation of "tree"
 ar-es 0:
   url: https://www.arabdict.com/spanish-arabic/
   title: Árabe-Español (arabdict)
@@ -59,8 +63,10 @@ ar-es 1:
   - language
   - spanish
   examples:
-    شجرة: Traducción al español de "شجرة"
-    árbol: Traducción al árabe de "árbol"
+  - arguments: شجرة
+    description: Traducción al español de "شجرة"
+  - arguments: árbol
+    description: Traducción al árabe de "árbol"
 ar-fr 0:
   url: https://www.arabdict.com/french-arabic/
   title: Arabe-Français (arabdict)
@@ -78,8 +84,10 @@ ar-fr 1:
   - french
   - language
   examples:
-    شجرة: Traduction en français de "شجرة"
-    arbre: Traduction en arabe de "arbre"
+  - arguments: شجرة
+    description: Traduction en français de "شجرة"
+  - arguments: arbre
+    description: Traduction en arabe de "arbre"
 ar-it 0:
   url: https://www.arabdict.com/italian-arabic/
   title: Arabo-Italiano (arabdict)
@@ -97,8 +105,10 @@ ar-it 1:
   - italian
   - language
   examples:
-    شجرة: Traduzione in italiano di "شجرة"
-    albero: Traduzione in arabo di "albero"
+  - arguments: شجرة
+    description: Traduzione in italiano di "شجرة"
+  - arguments: albero
+    description: Traduzione in arabo di "albero"
 ar-tr 0:
   url: https://www.arabdict.com/turkish-arabic/
   title: Arapça-Türkçe (arabdict)
@@ -116,8 +126,10 @@ ar-tr 1:
   - language
   - turkish
   examples:
-    شجرة: '"شجرة" için Türkçe çevirisi'
-    ağaç: '"ağaç" için Arapça çevirisi'
+  - arguments: شجرة
+    description: '"شجرة" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için Arapça çevirisi'
 de 0:
   include:
     key: de-{$language} 0
@@ -133,8 +145,10 @@ de-ar 1:
   include:
     key: ar-de 1
   examples:
-    baum: ترجمة العربية من "baum"
-    شجرة: ترجمة الألمانية من "شجرة"
+  - arguments: baum
+    description: ترجمة العربية من "baum"
+  - arguments: شجرة
+    description: ترجمة الألمانية من "شجرة"
 en 0:
   include:
     key: en-{$language} 0
@@ -150,8 +164,10 @@ en-ar 1:
   include:
     key: ar-en 1
   examples:
-    tree: ترجمة العربية من "tree"
-    شجرة: ترجمة الإنجليزية من "شجرة"
+  - arguments: tree
+    description: ترجمة العربية من "tree"
+  - arguments: شجرة
+    description: ترجمة الإنجليزية من "شجرة"
 es 0:
   include:
     key: es-{$language} 0
@@ -167,8 +183,10 @@ es-ar 1:
   include:
     key: ar-es 1
   examples:
-    árbol: ترجمة العربية من "árbol"
-    شجرة: ترجمة الإسبانية من "شجرة"
+  - arguments: árbol
+    description: ترجمة العربية من "árbol"
+  - arguments: شجرة
+    description: ترجمة الإسبانية من "شجرة"
 fr 0:
   include:
     key: fr-{$language} 0
@@ -184,8 +202,10 @@ fr-ar 1:
   include:
     key: ar-fr 1
   examples:
-    arbre: ترجمة العربية من "arbre"
-    شجرة: ترجمة الفرنسية من "شجرة"
+  - arguments: arbre
+    description: ترجمة العربية من "arbre"
+  - arguments: شجرة
+    description: ترجمة الفرنسية من "شجرة"
 it 0:
   include:
     key: it-{$language} 0
@@ -201,8 +221,10 @@ it-ar 1:
   include:
     key: ar-it 1
   examples:
-    albero: ترجمة العربية من "albero"
-    شجرة: ترجمة الإيطالية من "شجرة"
+  - arguments: albero
+    description: ترجمة العربية من "albero"
+  - arguments: شجرة
+    description: ترجمة الإيطالية من "شجرة"
 tr 0:
   include:
     key: tr-{$language} 0
@@ -218,5 +240,7 @@ tr-ar 1:
   include:
     key: ar-tr 1
   examples:
-    ağaç: ترجمة العربية من "ağaç"
-    شجرة: ترجمة التركية من "شجرة"
+  - arguments: ağaç
+    description: ترجمة العربية من "ağaç"
+  - arguments: شجرة
+    description: ترجمة التركية من "شجرة"

@@ -11,7 +11,8 @@ al 1:
   - allegro
   - shopping
   examples:
-    smartfon: szukaj "smartfon"
+  - arguments: smartfon
+    description: szukaj "smartfon"
 ceneo 0:
   url: http://www.ceneo.pl/
   title: Ceneo
@@ -23,7 +24,8 @@ ceneo 1:
   tags:
   - shopping
   examples:
-    iphone: ceny iPhone'a
+  - arguments: iphone
+    description: ceny iPhone'a
 e 0:
   url: http://www.ebay.pl/
   title: Ebay.pl
@@ -37,7 +39,8 @@ e 1:
   - ebay
   - shopping
   examples:
-    smartphone: Search for "smartphone"
+  - arguments: smartphone
+    description: Search for "smartphone"
 ep 2:
   url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}
   title: e-podróżnik.pl
@@ -47,7 +50,8 @@ ep 2:
   - railway
   - travel
   examples:
-    kutno, gniezno: połączenie z Kutna do Gniezna
+  - arguments: kutno, gniezno
+    description: połączenie z Kutna do Gniezna
 ep 3:
   url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}
   title: e-podróżnik.pl
@@ -57,7 +61,8 @@ ep 3:
   - railway
   - travel
   examples:
-    kutno, gniezno, 10: połączenie z Kutna do Gniezna o godz. 10
+  - arguments: kutno, gniezno, 10
+    description: połączenie z Kutna do Gniezna o godz. 10
 ep 4:
   url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText={%start}&formCompositeSearcherFinal.toText={%cel}&formCompositeSearcherFinal.time={%czas}&formCompositeSearcherFinal.date={%data}
   title: e-podróżnik.pl
@@ -67,7 +72,8 @@ ep 4:
   - railway
   - travel
   examples:
-    kutno, gniezno, 10, 31.1.13: połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
+  - arguments: kutno, gniezno, 10, 31.1.13
+    description: połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
 g 1:
   url: https://www.google.pl/search?hl={$language}&q={%query}&ie=utf-8
   title: Google.pl
@@ -75,7 +81,8 @@ g 1:
   - google
   - web search
   examples:
-    warszawa: Szukaj "warszawa" w Google.pl
+  - arguments: warszawa
+    description: Szukaj "warszawa" w Google.pl
 gastro 2:
   url: http://www.gastronauci.pl/pl/restauracje/{%miasto}?kind={%lokal/kuchnia}
   title: gastronauci.pl
@@ -83,7 +90,8 @@ gastro 2:
   - food
   - restaurant
   examples:
-    warszawa, bar mleczny: bary mleczne w Warszawie
+  - arguments: warszawa, bar mleczny
+    description: bary mleczne w Warszawie
 ikea 0:
   url: http://www.ikea.com/pl/pl/
   title: IKEA Polska
@@ -99,7 +107,8 @@ ikea 1:
   - ikea
   - shopping
   examples:
-    materac: Szukaj materace
+  - arguments: materac
+    description: Szukaj materace
 jddw 2:
   url: http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Wrocław
@@ -108,7 +117,8 @@ jddw 2:
   - travel
   - wrocław
   examples:
-    rynek, dworzec gł: połączenie z Rynka do Dworca Głównego
+  - arguments: rynek, dworzec gł
+    description: połączenie z Rynka do Dworca Głównego
 jddw 3:
   url: http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&as=true
   title: jakdojade.pl, Wrocław
@@ -117,7 +127,8 @@ jddw 3:
   - travel
   - wrocław
   examples:
-    rynek, dworzec gł, 10: połączenie z Rynka do Dworca Głównego o godz. 10
+  - arguments: rynek, dworzec gł, 10
+    description: połączenie z Rynka do Dworca Głównego o godz. 10
 jddw 4:
   url: http://jakdojade.pl?cid=2000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true
   title: jakdojade.pl, Wrocław
@@ -126,7 +137,8 @@ jddw 4:
   - travel
   - wrocław
   examples:
-    rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
+  - arguments: rynek, dworzec gł, 10, 31.12.13
+    description: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
 jdpo 2:
   url: http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Poznań
@@ -135,7 +147,8 @@ jdpo 2:
   - poznań
   - travel
   examples:
-    rynek, dworzec gł: połączenie z Rynka do Dworca Głównego
+  - arguments: rynek, dworzec gł
+    description: połączenie z Rynka do Dworca Głównego
 jdpo 3:
   url: http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&as=true
   title: jakdojade.pl, Poznań
@@ -144,7 +157,8 @@ jdpo 3:
   - poznań
   - travel
   examples:
-    rynek, dworzec gł, 10: połączenie z Rynka do Dworca Głównego o godz. 10
+  - arguments: rynek, dworzec gł, 10
+    description: połączenie z Rynka do Dworca Głównego o godz. 10
 jdpo 4:
   url: http://jakdojade.pl?cid=1000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true
   title: jakdojade.pl, Poznań
@@ -153,7 +167,8 @@ jdpo 4:
   - poznań
   - travel
   examples:
-    rynek, dworzec gł, 10, 31.12.13: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
+  - arguments: rynek, dworzec gł, 10, 31.12.13
+    description: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
 jdw 2:
   url: http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&as=true
   title: jakdojade.pl, Warszawa
@@ -162,7 +177,8 @@ jdw 2:
   - travel
   - warszawa
   examples:
-    stare miasto, centrum: połączenie ze Starego miasta do Centrum
+  - arguments: stare miasto, centrum
+    description: połączenie ze Starego miasta do Centrum
 jdw 3:
   url: http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&as=true
   title: jakdojade.pl, Warszawa
@@ -171,7 +187,8 @@ jdw 3:
   - travel
   - warszawa
   examples:
-    stare miasto, centrum, 10: połączenie ze Starego miasta do Centrum o godz. 10
+  - arguments: stare miasto, centrum, 10
+    description: połączenie ze Starego miasta do Centrum o godz. 10
 jdw 4:
   url: http://jakdojade.pl?cid=3000&fn={%start}&tn={%cel}&h={%czas}&d={%dzień}&as=true
   title: jakdojade.pl, Warszawa
@@ -180,7 +197,8 @@ jdw 4:
   - travel
   - warszawa
   examples:
-    stare miasto, centrum, 10, 31.12.13: połączenie ze Starego miasta do Centrum 31 grudnia 2013 o godz. 10
+  - arguments: stare miasto, centrum, 10, 31.12.13
+    description: połączenie ze Starego miasta do Centrum 31 grudnia 2013 o godz. 10
 nk 0:
   url: http://nk.pl/
   title: Nasza Klasa
@@ -194,7 +212,8 @@ nk 1:
   - nasza klasa
   - social network
   examples:
-    kowalski: Szukaj "kowalski"
+  - arguments: kowalski
+    description: Szukaj "kowalski"
 olx 0:
   url: https://www.olx.pl/
   title: OLX, strona główna
@@ -208,7 +227,8 @@ olx 1:
   - olx
   - shopping
   examples:
-    smartfon: szukaj "smartfon" w OLX
+  - arguments: smartfon
+    description: szukaj "smartfon" w OLX
 pkp 2:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
@@ -217,9 +237,12 @@ pkp 2:
   - railway
   - travel
   examples:
-    kutno, gniezno: następne połączenie PKP z Kutna do Gniezna
-    w, p: następne połączenie z Warszawy do Poznania
-    gdansk!, wroclaw!: następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny
+  - arguments: kutno, gniezno
+    description: następne połączenie PKP z Kutna do Gniezna
+  - arguments: w, p
+    description: następne połączenie z Warszawy do Poznania
+  - arguments: gdansk!, wroclaw!
+    description: następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny
 pkp 3:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&T={%czas|type=time|output=HH:mm}&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
@@ -228,7 +251,8 @@ pkp 3:
   - railway
   - travel
   examples:
-    kutno, gniezno, 10: połączenie z Kutna do Gniezna dzisiaj o godz. 10
+  - arguments: kutno, gniezno, 10
+    description: połączenie z Kutna do Gniezna dzisiaj o godz. 10
 pkp 4:
   url: http://rozklad-pkp.pl/pl/tp?S={%start|type=city}!&Z={%cel|type=city}!&T={%czas|type=time|output=HH:mm}&D={%data|type=date|output=DD.MM.YYYY}&start=1&queryPageDisplayed=yes
   title: PKP rozkład jazdy
@@ -237,7 +261,8 @@ pkp 4:
   - railway
   - travel
   examples:
-    kutno, gniezno, 10, 31.1.: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
+  - arguments: kutno, gniezno, 10, 31.1.
+    description: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
 tm 1:
   url: http://www.google.com/search?hl={$language}&sitesearch=teleman.pl&domains=teleman.pl&q={%szukaj}
   title: teleman.pl program telewizyjny
@@ -246,7 +271,8 @@ tm 1:
   - polska
   - tv
   examples:
-    tvn: Szukaj programy TVN
+  - arguments: tvn
+    description: Szukaj programy TVN
 zal 1:
   url: http://www.zalando.pl/katalog/?q={%produkt}
   title: Zalando.pl
@@ -254,4 +280,5 @@ zal 1:
   - shopping
   - zalando
   examples:
-    buty: Szukaj buty
+  - arguments: buty
+    description: Szukaj buty

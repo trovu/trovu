@@ -7,7 +7,8 @@ dbp 1:
   - knowledgebase
   - semanticweb
   examples:
-    Tunisia: Open DBpedia page about Tunisia
+  - arguments: Tunisia
+    description: Open DBpedia page about Tunisia
 enc 0:
   url: http://www.encyclo.nl/
   title: Encyclo Online Encyclopedie
@@ -26,7 +27,8 @@ enc 1:
   - language
   - words
   examples:
-    op naam: zoek na de betekenis van de uitdrukking "op naam"
+  - arguments: op naam
+    description: zoek na de betekenis van de uitdrukking "op naam"
 ety 0:
   url: http://www.etymologiebank.nl/
   title: etymologiebank.nl
@@ -38,7 +40,8 @@ frv 1:
   - language
   - pronunciation
   examples:
-    berlin: Search for the pronunciation of "berlin"
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
 rijm 0:
   url: http://www.rijm.nu/
   title: Rijm.nu!
@@ -52,4 +55,5 @@ rijm 1:
   - gedicht
   - rijm
   examples:
-    koud: vind woorden die rijmen op "koud"
+  - arguments: koud
+    description: vind woorden die rijmen op "koud"

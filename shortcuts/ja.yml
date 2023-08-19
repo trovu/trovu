@@ -6,7 +6,8 @@ frv 1:
   - language
   - pronunciation
   examples:
-    berlin: Search for the pronunciation of "berlin"
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
 last 1:
   url: http://www.last.fm/search?setlang=ja&q={%artist}
   title: Last.fm
@@ -14,4 +15,5 @@ last 1:
   - lastfm
   - music
   examples:
-    beatles: Search for "beatles"
+  - arguments: beatles
+    description: Search for "beatles"

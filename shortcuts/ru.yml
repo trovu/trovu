@@ -6,7 +6,8 @@ frv 1:
   - language
   - pronunciation
   examples:
-    berlin: Search for the pronunciation of "berlin"
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
 last 1:
   url: http://www.last.fm/search?setlang=ru&q={%artist}
   title: Last.fm
@@ -14,7 +15,8 @@ last 1:
   - lastfm
   - music
   examples:
-    beatles: Search for "beatles"
+  - arguments: beatles
+    description: Search for "beatles"
 wsl 1:
   url: https://corpora.uni-leipzig.de/de/res?corpusId=rus_mixed_2013&word={%слово}
   title: Wortschatz-Lexikon (Русский)
@@ -22,7 +24,8 @@ wsl 1:
   - language
   - russian
   examples:
-    стул: Search for "стул"
+  - arguments: стул
+    description: Search for "стул"
 ya 1:
   url: http://yandex.ru/yandsearch?text={%query}
   title: Yandex Web, Russian
@@ -30,4 +33,5 @@ ya 1:
   - web search
   - yandex
   examples:
-    berlin: Search for "berlin"
+  - arguments: berlin
+    description: Search for "berlin"

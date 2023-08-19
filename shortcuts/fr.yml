@@ -5,7 +5,8 @@ cjg 1:
   - french
   - language
   examples:
-    venir: Conjugate "venir"
+  - arguments: venir
+    description: Conjugate "venir"
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -14,7 +15,8 @@ frv 1:
   - language
   - pronunciation
   examples:
-    berlin: Search for the pronunciation of "berlin"
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
 lar 1:
   deprecated:
     alternative:
@@ -27,7 +29,8 @@ last 1:
   - lastfm
   - music
   examples:
-    beatles: Search for "beatles"
+  - arguments: beatles
+    description: Search for "beatles"
 lit 1:
   url: http://www.littre.org/recherche?_hasdata=&f2={%mot}
   title: Littré
@@ -36,7 +39,8 @@ lit 1:
   - french
   - language
   examples:
-    arbre: Cherche "arbre" dans le dictionnaire Littré
+  - arguments: arbre
+    description: Cherche "arbre" dans le dictionnaire Littré
 lrs 1:
   url: http://www.larousse.fr/dictionnaires/francais/{%mot}
   title: Larousse, Dictionnaires de français
@@ -47,7 +51,8 @@ lrs 1:
   - french
   - language
   examples:
-    arbre: Cherche "arbre"
+  - arguments: arbre
+    description: Cherche "arbre"
 marmiton 0:
   url: http://www.marmiton.org/
   title: Marmiton
@@ -61,7 +66,8 @@ marmiton 1:
   - marmiton
   - recettes
   examples:
-    pizza: Recherche des recettes de pizza
+  - arguments: pizza
+    description: Recherche des recettes de pizza
 syn 1:
   url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
   title: Synonyme
@@ -69,7 +75,8 @@ syn 1:
   - language
   - thesaurus
   examples:
-    important: Search for "important"
+  - arguments: important
+    description: Search for "important"
 tlf 1:
   url: http://www.cnrtl.fr/definition/{%query}
   title: Trésor de la langue française
@@ -78,4 +85,5 @@ tlf 1:
   - french
   - language
   examples:
-    arbre: Cherche "arbre" dans le Trésor de la langue française
+  - arguments: arbre
+    description: Cherche "arbre" dans le Trésor de la langue française

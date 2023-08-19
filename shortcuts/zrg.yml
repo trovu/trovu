@@ -21,8 +21,10 @@ en-tr 1:
   - language
   - turkish
   examples:
-    tree: '"tree" için Türkçe çevirisi'
-    ağaç: '"ağaç" için İngilizce çevirisi'
+  - arguments: tree
+    description: '"tree" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için İngilizce çevirisi'
 tr 0:
   include:
     key: tr-{$language} 0
@@ -38,5 +40,7 @@ tr-en 1:
   include:
     key: en-tr 1
   examples:
-    ağaç: English translation of "ağaç"
-    tree: Turkish translation of "tree"
+  - arguments: ağaç
+    description: English translation of "ağaç"
+  - arguments: tree
+    description: Turkish translation of "tree"

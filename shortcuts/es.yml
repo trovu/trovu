@@ -11,7 +11,8 @@ dle 1:
   - language
   - spanish
   examples:
-    árbol: Search diccionario de la lengua española for "arbol"
+  - arguments: árbol
+    description: Search diccionario de la lengua española for "arbol"
 frv 1:
   url: https://{$language}.forvo.com/search/{%word}/
   title: Forvo
@@ -20,7 +21,8 @@ frv 1:
   - language
   - pronunciation
   examples:
-    berlin: Search for the pronunciation of "berlin"
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
 last 1:
   url: http://www.last.fm/search?setlang=es&q={%artist}
   title: Last.fm
@@ -28,7 +30,8 @@ last 1:
   - lastfm
   - music
   examples:
-    beatles: Search for "beatles"
+  - arguments: beatles
+    description: Search for "beatles"
 rae 1:
   url: http://dle.rae.es/?w={%query}
   title: Diccionario RAE
@@ -37,8 +40,10 @@ rae 1:
   - dictionary
   - spanish
   examples:
-    capaz: looks for "capaz" in RAE dictionary
-    decir: busca por la palabra «decir» en el diccionario de la lengua española de la Real Academia Española
+  - arguments: capaz
+    description: looks for "capaz" in RAE dictionary
+  - arguments: decir
+    description: busca por la palabra «decir» en el diccionario de la lengua española de la Real Academia Española
 raed 1:
   url: https://www.rae.es/dpd/{%query}
   title: Diccionario panhispánico de dudas de la RAE
@@ -46,5 +51,7 @@ raed 1:
   tags:
   - dictionary spanish
   examples:
-    capaz: looks for "capaz" in the RAE dictionary of doubts
-    decir: busca por la palabra «decir» en el diccionario panhíspanico de dudas de la Real Academia Española
+  - arguments: capaz
+    description: looks for "capaz" in the RAE dictionary of doubts
+  - arguments: decir
+    description: busca por la palabra «decir» en el diccionario panhíspanico de dudas de la Real Academia Española
