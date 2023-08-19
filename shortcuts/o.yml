@@ -3169,8 +3169,8 @@ gcm 2:
   title: Great Circle Map
   description: Enter two or more airports to draw a route between them on the map and calculate the distance.
   tags:
-  - travel
   - flights
+  - travel
 gco 0:
   url: https://www.google.com/contacts/
   title: Google Contacts
@@ -5305,6 +5305,9 @@ mink 1:
   - programming
   examples:
     getTagName: Search Mink for "getTagName"
+mj 1:
+  url: https://www.mojeek.com/search?q={%search}
+  title: Mojeek
 mk 0:
   include:
   - key: mk 0
@@ -5313,6 +5316,11 @@ mk 1:
   include:
   - key: mk 1
     namespace: pka
+mkd 2:
+  url: http://finance.yahoo.com/currency-converter/#from=mkd;to={%to code};amt={%amount}
+  title: Convert Macedonian denar (Yahoo)
+  tags:
+  - old
 ml 0:
   include:
   - key: ml 0
@@ -5332,14 +5340,6 @@ mn 1:
 month 0:
   url: http://timeanddate.com/calendar/monthly.html
   title: This month
-mj 1:
-  url: https://www.mojeek.com/search?q={%search}
-  title: Mojeek
-mkd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mkd;to={%to code};amt={%amount}
-  title: Convert Macedonian denar (Yahoo)
-  tags:
-  - old
 moodleup 0:
   url: http://moodle.uni-potsdam.de
   title: Uni Potsdam, Moodle
