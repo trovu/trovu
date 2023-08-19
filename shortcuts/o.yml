@@ -5316,11 +5316,6 @@ mk 1:
   include:
   - key: mk 1
     namespace: pka
-mkd 2:
-  url: http://finance.yahoo.com/currency-converter/#from=mkd;to={%to code};amt={%amount}
-  title: Convert Macedonian denar (Yahoo)
-  tags:
-  - old
 ml 0:
   include:
   - key: ml 0
