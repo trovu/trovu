@@ -67,7 +67,7 @@ export default class Suggestions {
     const argument_names = Object.keys(listItem.label.arguments).join(', ');
 
     li.innerHTML = `
-    <span${listItem.label.reachable ? `` : ` class="unreachable"`}>
+    <div class="main ${listItem.label.reachable ? `` : ` unreachable`}">
       <span class="left">  
       <span class="keyword">${listItem.label.keyword}</span>  
       <span class="argument-names">${argument_names}</span> 
@@ -76,7 +76,15 @@ export default class Suggestions {
         <span class="title">${listItem.label.title}</span>
         <span class="namespace">${listItem.label.namespace}</span>
       </span>
-    </span>
+    </div>
+    <div class="examples">
+      <span class="left">  
+        <span class="query">db berlin, hamburg</span>  
+      </span>
+      <span class="right">
+        <span class="description">Nächste Verbindung von Berlin nach Hamburg</span>  
+      </span>
+    </div>
     `;
     return li;
   }

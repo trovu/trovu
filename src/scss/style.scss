@@ -39,7 +39,7 @@ main .jumbotron {
       color: white;
       padding: 0.2em;
     }
-    > span {
+    div {
       display: grid;
       grid-template-columns: 50% 50%;
       .left {
@@ -48,6 +48,9 @@ main .jumbotron {
       .right {
         text-align: right;
       }
+    }
+    div.examples {
+      display: none;
     }
     .unreachable {
       .keyword {
@@ -65,6 +68,9 @@ main .jumbotron {
     }
   }
   li[aria-selected='true'] {
+    div.examples {
+      display: grid;
+    }
     .keyword {
       color: #fff;
     }
