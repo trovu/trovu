@@ -50,8 +50,6 @@ awf 1:
   - arguments: wirtschaft
     description: Suche nach Synonymen für "wirtschaft"
 awort 1:
-  url: https://anderes-wort-fuer.de/{%Wort}/
-  title: anderes Wort für
   deprecated:
     alternative:
       query: awf {%1}

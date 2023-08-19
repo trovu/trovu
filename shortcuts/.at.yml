@@ -78,1132 +78,436 @@ gh 1:
   - arguments: fernseher
     description: Search for "fernseher"
 gmam 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Amstetten%2C%20%C3%96sterreich
-  title: Google Maps Amstetten
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Amstetten
   deprecated:
     alternative:
       query: gm am,{%1}
     created: '2023-01-07'
 gmb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bregenz%2C%20%C3%96sterreich
-  title: Google Maps Bregenz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Bregenz
   deprecated:
     alternative:
       query: gm b,{%1}
     created: '2023-01-07'
 gmba 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bad+Aussee%2C%20%C3%96sterreich
-  title: Google Maps Bad Aussee
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Bad Aussee
   deprecated:
     alternative:
       query: gm ba,{%1}
     created: '2023-01-07'
 gmbl 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Leitha%2C%20%C3%96sterreich
-  title: Google Maps Bruck an der Leitha
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Bruck an der Leitha
   deprecated:
     alternative:
       query: gm bl,{%1}
     created: '2023-01-07'
 gmbm 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bruck+an+der+Mur%2C%20%C3%96sterreich
-  title: Google Maps Bruck an der Mur
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Bruck an der Mur
   deprecated:
     alternative:
       query: gm bm,{%1}
     created: '2023-01-07'
 gmbn 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Baden%2C%20%C3%96sterreich
-  title: Google Maps Baden
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Baden
   deprecated:
     alternative:
       query: gm bn,{%1}
     created: '2023-01-07'
 gmbr 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Braunau+am+Inn%2C%20%C3%96sterreich
-  title: Google Maps Braunau am Inn
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Braunau am Inn
   deprecated:
     alternative:
       query: gm br,{%1}
     created: '2023-01-07'
 gmbz 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Bludenz%2C%20%C3%96sterreich
-  title: Google Maps Bludenz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Bludenz
   deprecated:
     alternative:
       query: gm bz,{%1}
     created: '2023-01-07'
 gmdl 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Deutschlandsberg%2C%20%C3%96sterreich
-  title: Google Maps Deutschlandsberg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Deutschlandsberg
   deprecated:
     alternative:
       query: gm dl,{%1}
     created: '2023-01-07'
 gmdo 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Dornbirn%2C%20%C3%96sterreich
-  title: Google Maps Dornbirn
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Dornbirn
   deprecated:
     alternative:
       query: gm do,{%1}
     created: '2023-01-07'
 gme 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eisenstadt%2C%20%C3%96sterreich
-  title: Google Maps Eisenstadt
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Eisenstadt
   deprecated:
     alternative:
       query: gm e,{%1}
     created: '2023-01-07'
 gmef 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Eferding%2C%20%C3%96sterreich
-  title: Google Maps Eferding
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Eferding
   deprecated:
     alternative:
       query: gm ef,{%1}
     created: '2023-01-07'
 gmfb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldbach%2C%20%C3%96sterreich
-  title: Google Maps Feldbach
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Feldbach
   deprecated:
     alternative:
       query: gm fb,{%1}
     created: '2023-01-07'
 gmfe 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirchen%2C%20%C3%96sterreich
-  title: Google Maps Feldkirchen
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Feldkirchen
   deprecated:
     alternative:
       query: gm fe,{%1}
     created: '2023-01-07'
 gmff 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20F%C3%BCrstenfeld%2C%20%C3%96sterreich
-  title: Google Maps Fürstenfeld
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Fürstenfeld
   deprecated:
     alternative:
       query: gm ff,{%1}
     created: '2023-01-07'
 gmfk 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Feldkirch%2C%20%C3%96sterreich
-  title: Google Maps Feldkirch
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Feldkirch
   deprecated:
     alternative:
       query: gm fk,{%1}
     created: '2023-01-07'
 gmfr 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Freistadt%2C%20%C3%96sterreich
-  title: Google Maps Freistadt
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Freistadt
   deprecated:
     alternative:
       query: gm fr,{%1}
     created: '2023-01-07'
 gmg 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Graz%2C%20%C3%96sterreich
-  title: Google Maps Graz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Graz
   deprecated:
     alternative:
       query: gm g,{%1}
     created: '2023-01-07'
 gmgb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gr%C3%B6bming%2C%20%C3%96sterreich
-  title: Google Maps Gröbming
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Gröbming
   deprecated:
     alternative:
       query: gm gb,{%1}
     created: '2023-01-07'
 gmgd 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gm%C3%BCnd%2C%20%C3%96sterreich
-  title: Google Maps Gmünd
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Gmünd
   deprecated:
     alternative:
       query: gm gd,{%1}
     created: '2023-01-07'
 gmgf 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%A4nserndorf%2C%20%C3%96sterreich
-  title: Google Maps Gänserndorf
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Gänserndorf
   deprecated:
     alternative:
       query: gm gf,{%1}
     created: '2023-01-07'
 gmgm 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Gmunden%2C%20%C3%96sterreich
-  title: Google Maps Gmunden
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Gmunden
   deprecated:
     alternative:
       query: gm gm,{%1}
     created: '2023-01-07'
 gmgr 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Grieskirchen%2C%20%C3%96sterreich
-  title: Google Maps Grieskirchen
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Grieskirchen
   deprecated:
     alternative:
       query: gm gr,{%1}
     created: '2023-01-07'
 gmgs 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20G%C3%BCssing%2C%20%C3%96sterreich
-  title: Google Maps Güssing
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Güssing
   deprecated:
     alternative:
       query: gm gs,{%1}
     created: '2023-01-07'
 gmha 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hallein%2C%20%C3%96sterreich
-  title: Google Maps Hallein
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Hallein
   deprecated:
     alternative:
       query: gm ha,{%1}
     created: '2023-01-07'
 gmhb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hartberg%2C%20%C3%96sterreich
-  title: Google Maps Hartberg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Hartberg
   deprecated:
     alternative:
       query: gm hb,{%1}
     created: '2023-01-07'
 gmhe 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hermagor%2C%20%C3%96sterreich
-  title: Google Maps Hermagor
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Hermagor
   deprecated:
     alternative:
       query: gm he,{%1}
     created: '2023-01-07'
 gmhl 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Hollabrunn%2C%20%C3%96sterreich
-  title: Google Maps Hollabrunn
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Hollabrunn
   deprecated:
     alternative:
       query: gm hl,{%1}
     created: '2023-01-07'
 gmho 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Horn%2C%20%C3%96sterreich
-  title: Google Maps Horn
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Horn
   deprecated:
     alternative:
       query: gm ho,{%1}
     created: '2023-01-07'
 gmi 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Innsbruck%2C%20%C3%96sterreich
-  title: Google Maps Innsbruck
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Innsbruck
   deprecated:
     alternative:
       query: gm i,{%1}
     created: '2023-01-07'
 gmim 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Imst%2C%20%C3%96sterreich
-  title: Google Maps Imst
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Imst
   deprecated:
     alternative:
       query: gm im,{%1}
     created: '2023-01-07'
 gmje 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Jennersdorf%2C%20%C3%96sterreich
-  title: Google Maps Jennersdorf
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Jennersdorf
   deprecated:
     alternative:
       query: gm je,{%1}
     created: '2023-01-07'
 gmjo 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+Johann%2C%20%C3%96sterreich
-  title: Google Maps St. Johann
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in St. Johann
   deprecated:
     alternative:
       query: gm jo,{%1}
     created: '2023-01-07'
 gmju 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Judenburg%2C%20%C3%96sterreich
-  title: Google Maps Judenburg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Judenburg
   deprecated:
     alternative:
       query: gm ju,{%1}
     created: '2023-01-07'
 gmk 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Klagenfurt%2C%20%C3%96sterreich
-  title: Google Maps Klagenfurt
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Klagenfurt
   deprecated:
     alternative:
       query: gm k,{%1}
     created: '2023-01-07'
 gmkb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kitzb%C3%BChel%2C%20%C3%96sterreich
-  title: Google Maps Kitzbühel
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Kitzbühel
   deprecated:
     alternative:
       query: gm kb,{%1}
     created: '2023-01-07'
 gmkf 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Knittelfeld%2C%20%C3%96sterreich
-  title: Google Maps Knittelfeld
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Knittelfeld
   deprecated:
     alternative:
       query: gm kf,{%1}
     created: '2023-01-07'
 gmki 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kirchdorf+Krems%2C%20%C3%96sterreich
-  title: Google Maps Kirchdorf Krems
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Kirchdorf Krems
   deprecated:
     alternative:
       query: gm ki,{%1}
     created: '2023-01-07'
 gmko 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Korneuburg%2C%20%C3%96sterreich
-  title: Google Maps Korneuburg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Korneuburg
   deprecated:
     alternative:
       query: gm ko,{%1}
     created: '2023-01-07'
 gmks 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Krems%2C%20%C3%96sterreich
-  title: Google Maps Krems
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Krems
   deprecated:
     alternative:
       query: gm ks,{%1}
     created: '2023-01-07'
 gmku 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Kufstein%2C%20%C3%96sterreich
-  title: Google Maps Kufstein
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Kufstein
   deprecated:
     alternative:
       query: gm ku,{%1}
     created: '2023-01-07'
 gml 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Linz%2C%20%C3%96sterreich
-  title: Google Maps Linz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Linz
   deprecated:
     alternative:
       query: gm l,{%1}
     created: '2023-01-07'
 gmla 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Landeck%2C%20%C3%96sterreich
-  title: Google Maps Landeck
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Landeck
   deprecated:
     alternative:
       query: gm la,{%1}
     created: '2023-01-07'
 gmlb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leibnitz%2C%20%C3%96sterreich
-  title: Google Maps Leibnitz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Leibnitz
   deprecated:
     alternative:
       query: gm lb,{%1}
     created: '2023-01-07'
 gmle 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Leoben%2C%20%C3%96sterreich
-  title: Google Maps Leoben
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Leoben
   deprecated:
     alternative:
       query: gm le,{%1}
     created: '2023-01-07'
 gmlf 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lilienfeld%2C%20%C3%96sterreich
-  title: Google Maps Lilienfeld
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Lilienfeld
   deprecated:
     alternative:
       query: gm lf,{%1}
     created: '2023-01-07'
 gmli 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Liezen%2C%20%C3%96sterreich
-  title: Google Maps Liezen
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Liezen
   deprecated:
     alternative:
       query: gm li,{%1}
     created: '2023-01-07'
 gmlz 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Lienz%2C%20%C3%96sterreich
-  title: Google Maps Lienz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Lienz
   deprecated:
     alternative:
       query: gm lz,{%1}
     created: '2023-01-07'
 gmma 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mattersburg%2C%20%C3%96sterreich
-  title: Google Maps Mattersburg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Mattersburg
   deprecated:
     alternative:
       query: gm ma,{%1}
     created: '2023-01-07'
 gmmd 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%B6dling%2C%20%C3%96sterreich
-  title: Google Maps Mödling
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Mödling
   deprecated:
     alternative:
       query: gm md,{%1}
     created: '2023-01-07'
 gmme 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Melk%2C%20%C3%96sterreich
-  title: Google Maps Melk
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Melk
   deprecated:
     alternative:
       query: gm me,{%1}
     created: '2023-01-07'
 gmmi 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Mistelbach%2C%20%C3%96sterreich
-  title: Google Maps Mistelbach
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Mistelbach
   deprecated:
     alternative:
       query: gm mi,{%1}
     created: '2023-01-07'
 gmmu 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Murau%2C%20%C3%96sterreich
-  title: Google Maps Murau
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Murau
   deprecated:
     alternative:
       query: gm mu,{%1}
     created: '2023-01-07'
 gmmz 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20M%C3%BCrzzuschlag%2C%20%C3%96sterreich
-  title: Google Maps Mürzzuschlag
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Mürzzuschlag
   deprecated:
     alternative:
       query: gm mz,{%1}
     created: '2023-01-07'
 gmnd 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neusiedl+am+See%2C%20%C3%96sterreich
-  title: Google Maps Neusiedl am See
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Neusiedl am See
   deprecated:
     alternative:
       query: gm nd,{%1}
     created: '2023-01-07'
 gmnk 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Neunkirchen%2C%20%C3%96sterreich
-  title: Google Maps Neunkirchen
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Neunkirchen
   deprecated:
     alternative:
       query: gm nk,{%1}
     created: '2023-01-07'
 gmop 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberpullendorf%2C%20%C3%96sterreich
-  title: Google Maps Oberpullendorf
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Oberpullendorf
   deprecated:
     alternative:
       query: gm op,{%1}
     created: '2023-01-07'
 gmow 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Oberwart%2C%20%C3%96sterreich
-  title: Google Maps Oberwart
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Oberwart
   deprecated:
     alternative:
       query: gm ow,{%1}
     created: '2023-01-07'
 gmp 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20St.+P%C3%B6lten%2C%20%C3%96sterreich
-  title: Google Maps St. Pölten
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in St. Pölten
   deprecated:
     alternative:
       query: gm p,{%1}
     created: '2023-01-07'
 gmpe 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Perg%2C%20%C3%96sterreich
-  title: Google Maps Perg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Perg
   deprecated:
     alternative:
       query: gm pe,{%1}
     created: '2023-01-07'
 gmra 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Radkersburg%2C%20%C3%96sterreich
-  title: Google Maps Radkersburg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Radkersburg
   deprecated:
     alternative:
       query: gm ra,{%1}
     created: '2023-01-07'
 gmre 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Reutte%2C%20%C3%96sterreich
-  title: Google Maps Reutte
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Reutte
   deprecated:
     alternative:
       query: gm re,{%1}
     created: '2023-01-07'
 gmri 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Ried+im+Innkreis%2C%20%C3%96sterreich
-  title: Google Maps Ried im Innkreis
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Ried im Innkreis
   deprecated:
     alternative:
       query: gm ri,{%1}
     created: '2023-01-07'
 gmro 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Rohrbach%2C%20%C3%96sterreich
-  title: Google Maps Rohrbach
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Rohrbach
   deprecated:
     alternative:
       query: gm ro,{%1}
     created: '2023-01-07'
 gms 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Salzburg%2C%20%C3%96sterreich
-  title: Google Maps Salzburg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Salzburg
   deprecated:
     alternative:
       query: gm s,{%1}
     created: '2023-01-07'
 gmsb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Scheibbs%2C%20%C3%96sterreich
-  title: Google Maps Scheibbs
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Scheibbs
   deprecated:
     alternative:
       query: gm sb,{%1}
     created: '2023-01-07'
 gmsd 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sch%C3%A4rding%2C%20%C3%96sterreich
-  title: Google Maps Schärding
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Schärding
   deprecated:
     alternative:
       query: gm sd,{%1}
     created: '2023-01-07'
 gmsp 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Spittal+an+der+Drau%2C%20%C3%96sterreich
-  title: Google Maps Spittal an der Drau
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Spittal an der Drau
   deprecated:
     alternative:
       query: gm sp,{%1}
     created: '2023-01-07'
 gmsr 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Steyr%2C%20%C3%96sterreich
-  title: Google Maps Steyr
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Steyr
   deprecated:
     alternative:
       query: gm sr,{%1}
     created: '2023-01-07'
 gmsv 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Sankt+Veit+an+der+Glan%2C%20%C3%96sterreich
-  title: Google Maps Sankt Veit an der Glan
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Sankt Veit an der Glan
   deprecated:
     alternative:
       query: gm sv,{%1}
     created: '2023-01-07'
 gmsw 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwechat%2C%20%C3%96sterreich
-  title: Google Maps Schwechat
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Schwechat
   deprecated:
     alternative:
       query: gm sw,{%1}
     created: '2023-01-07'
 gmsz 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Schwaz%2C%20%C3%96sterreich
-  title: Google Maps Schwaz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Schwaz
   deprecated:
     alternative:
       query: gm sz,{%1}
     created: '2023-01-07'
 gmta 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tamsweg%2C%20%C3%96sterreich
-  title: Google Maps Tamsweg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Tamsweg
   deprecated:
     alternative:
       query: gm ta,{%1}
     created: '2023-01-07'
 gmtu 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Tulln%2C%20%C3%96sterreich
-  title: Google Maps Tulln
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Tulln
   deprecated:
     alternative:
       query: gm tu,{%1}
     created: '2023-01-07'
 gmvb 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6cklabruck%2C%20%C3%96sterreich
-  title: Google Maps Vöcklabruck
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Vöcklabruck
   deprecated:
     alternative:
       query: gm vb,{%1}
     created: '2023-01-07'
 gmvi 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Villach%2C%20%C3%96sterreich
-  title: Google Maps Villach
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Villach
   deprecated:
     alternative:
       query: gm vi,{%1}
     created: '2023-01-07'
 gmvk 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20V%C3%B6lkermarkt%2C%20%C3%96sterreich
-  title: Google Maps Völkermarkt
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Völkermarkt
   deprecated:
     alternative:
       query: gm vk,{%1}
     created: '2023-01-07'
 gmvo 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Voitsberg%2C%20%C3%96sterreich
-  title: Google Maps Voitsberg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Voitsberg
   deprecated:
     alternative:
       query: gm vo,{%1}
     created: '2023-01-07'
 gmw 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wien%2C%20%C3%96sterreich
-  title: Google Maps Wien
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Wien
   deprecated:
     alternative:
       query: gm w,{%1}
     created: '2023-01-07'
 gmwe 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wels%2C%20%C3%96sterreich
-  title: Google Maps Wels
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Wels
   deprecated:
     alternative:
       query: gm we,{%1}
     created: '2023-01-07'
 gmwn 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wiener+Neustadt%2C%20%C3%96sterreich
-  title: Google Maps Wiener Neustadt
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Wiener Neustadt
   deprecated:
     alternative:
       query: gm wn,{%1}
     created: '2023-01-07'
 gmwo 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Wolfsberg%2C%20%C3%96sterreich
-  title: Google Maps Wolfsberg
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Wolfsberg
   deprecated:
     alternative:
       query: gm wo,{%1}
     created: '2023-01-07'
 gmwt 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Thaya%2C%20%C3%96sterreich
-  title: Google Maps Waidhofen an der Thaya
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Waidhofen an der Thaya
   deprecated:
     alternative:
       query: gm wt,{%1}
     created: '2023-01-07'
 gmwy 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Waidhofen+an+der+Ybbs%2C%20%C3%96sterreich
-  title: Google Maps Waidhofen an der Ybbs
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Waidhofen an der Ybbs
   deprecated:
     alternative:
       query: gm wy,{%1}
     created: '2023-01-07'
 gmwz 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Weiz%2C%20%C3%96sterreich
-  title: Google Maps Weiz
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Weiz
   deprecated:
     alternative:
       query: gm wz,{%1}
     created: '2023-01-07'
 gmze 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zell+am+See%2C%20%C3%96sterreich
-  title: Google Maps Zell am See
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Zell am See
   deprecated:
     alternative:
       query: gm ze,{%1}
     created: '2023-01-07'
 gmzt 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%Straße}%2C%20Zwettl%2C%20%C3%96sterreich
-  title: Google Maps Zwettl
-  tags:
-  - google
-  - maps
-  examples:
-  - arguments: hauptstr.
-    description: Zeige Hauptstr. in Zwettl
   deprecated:
     alternative:
       query: gm zt,{%1}

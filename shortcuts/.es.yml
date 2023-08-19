@@ -124,13 +124,11 @@ ma 1:
   - arguments: palmera
     description: Busqueda de "palmera"
 mil 0:
-  title: Mil Anuncios
   deprecated:
     alternative:
       query: ma
     created: '2023-01-11'
 mil 1:
-  title: Mil Anuncios
   deprecated:
     alternative:
       query: ma {%1}
