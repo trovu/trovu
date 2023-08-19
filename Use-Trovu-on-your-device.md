@@ -8,7 +8,7 @@
 1. Open [trovu.net](https://trovu.net/), either [with your Github user name](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts) or without:
    - `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
    - `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
-1. In the browser address bar, right-click.
+1. In the **browser address bar**, right-click.
 1. Select **Add "Trovu"**. It is the last item.
 1. Open a [new tab](about:blank) with the URL:
 
