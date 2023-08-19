@@ -2,6 +2,9 @@
 
 ## Firefox
 
+<img align="right" src="https://github-production-user-asset-6210df.s3.amazonaws.com/1092628/261806062-3e08675d-72b0-4c10-ad21-9d0a7ac77ec8.png" width="600">
+
+
 1. Open [trovu.net](https://trovu.net/), either [with your Github user name](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts) or without:
    - `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
    - `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
