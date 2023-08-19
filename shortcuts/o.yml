@@ -2422,6 +2422,14 @@ g 0:
   tags:
   - web search
   - google
+g 1:
+  url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
+  title: Google.com
+  tags:
+  - web search
+  - google
+  examples:
+    berlin: Google search for "berlin"
 g! 1:
   url: http://www.google.com/search?hl={$language}&q={%query}&ie=utf-8&btnI=1
   title: Google Web, go directly to first result
@@ -3325,7 +3333,7 @@ iata 1:
     berlin: search for airports in Berlin
 icq 1:
   url: https://www.google.com/search?hl={$language}&sitesearch=icq.im&q={%nickname}
-  title: Willem knuffelbeertje
+  title: ICQ People Search
   tags:
   - icq
   - chat
@@ -3564,15 +3572,6 @@ jpy 2:
   - yahoo
   examples:
     eur, 1: Convert 1 Japanese yen into Euros
-jquery 1:
-  url: http://docs.jquery.com/Special:Search?search={%query}
-  title: JQuery API Search
-  tags:
-  - programming
-  - jquery
-  - javascript
-  examples:
-    append: Search for .append() function
 kat 0:
   url: https://kickass.cd
   title: KickassTorrents
@@ -3996,6 +3995,9 @@ mink 1:
   - programming
   examples:
     getTagName: Search Mink for "getTagName"
+mj 1:
+  url: https://www.mojeek.com/search?q={%search}
+  title: Mojeek
 mkd 2:
   url: http://finance.yahoo.com/currency-converter/#from=mkd;to={%to code};amt={%amount}
   title: Convert Macedonian denar (Yahoo)
