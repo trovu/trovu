@@ -241,38 +241,40 @@ rsc 1:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
 sbb 0:
-  url: http://sbb.ch/
+  url: https://sbb.ch/
   title: SBB (Schweizerische Bundesbahnen)
   tags:
   - bahn
   - travel
 sbb 2:
-  url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&start=1
-  title: SBB-Auskunft
+  url: https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von={%Start|type=city}&nach={%Ziel|type=city}
+  title: SBB Fahrplan
   tags:
   - bahn
   - travel
   examples:
-  - arguments: bern, basel
+  - arguments: Bern, Basel
     description: Nächste Verbindung von Bern nach Basel
+  - arguments: be, bs
+    description: Nächste Verbindung von Bern nach Basel, Eingabe über Autokennzeichen
 sbb 3:
-  url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&start=1
-  title: SBB-Auskunft
+  url: https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von={%Start|type=city}&nach={%Ziel|type=city}&zeit={%zeit}
+  title: SBB Fahrplan
   tags:
   - bahn
   - travel
   examples:
-  - arguments: bern, basel, 10
+  - arguments: Bern, Basel, 10:00
     description: Verbindung von Bern nach Basel um 10:00 Uhr
 sbb 4:
-  url: http://fahrplan.sbb.ch/bin/query.exe/d?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
-  title: SBB-Auskunft
+  url: https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von={%Start|type=city}&nach={%Ziel|type=city}&datum={%datum}&zeit={%zeit}
+  title: SBB Fahrplan
   tags:
   - bahn
   - travel
   examples:
-  - arguments: bern, basel, 10, 1.1.
-    description: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
+  - arguments: Bern, Basel, 01.01.2020, 10:00
+    description: Verbindung von Bern nach Basel am 01.01.2020 um 10:00 Uhr
 sbbt 4:
   url: http://fahrplan.sbb.ch/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit}&D={%Datum}&start=1
   title: SBB-Auskunft Textversion
