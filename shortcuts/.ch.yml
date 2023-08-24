@@ -267,7 +267,7 @@ sbb 3:
   - arguments: Bern, Basel, 10:00
     description: Verbindung von Bern nach Basel um 10:00 Uhr
 sbb 4:
-  url: https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von={%Start|type=city}&nach={%Ziel|type=city}&datum={%Datum|type=date}&zeit={%Zeit|type=time}
+  url: https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von={%Start|type=city}&nach={%Ziel|type=city}&zeit={%Zeit|type=time}&datum={%Datum|type=date}
   title: SBB Fahrplan
   tags:
   - bahn
