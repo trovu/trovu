@@ -1256,15 +1256,15 @@ cs 1:
   - key: cs 1
     namespace: pka
 csdblp 0:
-  url: http://www.dblp.org/search/
-  title: 'CompleteSearch DBLP: Load plain website'
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: dblp
+    created: '2023-08-31'
 csdblp 1:
-  url: http://www.dblp.org/search/#query={%query}
-  title: CompleteSearch DBLP
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: dblp {%1}
+    created: '2023-08-31'
 csf 0:
   url: https://www.couchsurfing.com
   title: Couchsurfing Homepage
