@@ -1364,11 +1364,19 @@ datev 1:
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
-dblp 1:
-  url: http://dblp.uni-trier.de/search/author?author={%query}
-  title: The DBLP Computer Science Bibliography
+dblp 0:
+  url: https://www.dblp.org/search/
+  title: DBLP Computer Science Bibliography
   tags:
-  - old
+  - academia
+dblp 1:
+  url: https://dblp.org/search?q={%query}
+  title: DBLP Computer Science Bibliography
+  tags:
+  - academia
+  examples:
+  - arguments: Turing
+    description: Search for "Turing"
 dbp 1:
   url: http://dbpedia.org/page/{%title}
   title: DBpedia
@@ -1655,7 +1663,7 @@ di 1:
   url: https://duckduckgo.com/?q={%query}&iax=images&ia=images
   title: Duck Duck Go Images
   examples:
-  - arguments: di flowers
+  - arguments: flowers
     description: Shows Images of Flowers
 dic 1:
   deprecated:
@@ -2341,9 +2349,17 @@ eo 1:
     namespace: pka
 eprint 0:
   url: https://eprint.iacr.org/
-  title: 'IACR Cryptology ePrint Archive: Complete archive'
+  title: IACR Cryptology ePrint Archive
   tags:
   - academia
+eprint 1:
+  url: https://eprint.iacr.org/search?q={%query}
+  title: IACR Cryptology ePrint Archive
+  tags:
+  - academia
+  examples:
+  - arguments: encryption
+    description: Search IACR Cryptology ePrint Archive for "encryption"
 eprinta 1:
   url: https://eprint.iacr.org/search?authors={%query}
   title: IACR Cryptology ePrint Archive (author search)
@@ -9216,14 +9232,14 @@ wu 1:
   - arguments: FlaBot
     description: Search for "FlaBot"
 wv 0:
-  url: http://{$language}.wikivoyage.org/
+  url: https://{$language}.wikivoyage.org/
   title: Wikivoyage Main Page
   tags:
   - travel
   - wiki
   - wikivoyage
 wv 1:
-  url: http://{$language}.wikivoyage.org/w/index.php?title=Special%3ASearch&go=Article&search={%article}
+  url: https://{$language}.wikivoyage.org/w/index.php?title=Special%3ASearch&go=Article&search={%article}
   title: Wikivoyage
   tags:
   - travel
