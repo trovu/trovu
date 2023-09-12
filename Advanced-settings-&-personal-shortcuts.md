@@ -79,7 +79,7 @@ examplekeyword 1: http://www.example.com/?q={%query}
 And with more arguments: `examplekeyword foo, bar`:
 
 ```yaml
-examplekeyword 1: http://www.example.com/?q={%query}&p={%puery}
+examplekeyword 2: http://www.example.com/?q={%query}&p={%puery}
 ```
 
 ### Long notation
