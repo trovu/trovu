@@ -76,9 +76,15 @@ This shortcut will match for `examplekeyword foo`, so for the same keyword but w
 examplekeyword 1: http://www.example.com/?q={%query}
 ```
 
+And with more arguments: `examplekeyword foo, bar`:
+
+```yaml
+examplekeyword 1: http://www.example.com/?q={%query}&p={%puery}
+```
+
 ### Long notation
 
-This shortcut will match for `examplekeyword foo, bar`. Here you can define optional title, description and tags:
+In the long notation, you can also define title, description and tags:
 
 ```yaml
 examplekeyword 2:
