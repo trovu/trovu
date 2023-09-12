@@ -70,7 +70,7 @@ This shortcut will match for `examplekeyword` with no arguments:
 examplekeyword 0: http://www.example.com/
 ```
 
-This shortcut will match for "examplekeyword foo", so for the same keyword but with one argument:
+This shortcut will match for `examplekeyword foo`, so for the same keyword but with one argument:
 
 ```yaml
 examplekeyword 1: http://www.example.com/?q={%query}
