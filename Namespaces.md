@@ -26,6 +26,36 @@ planet | [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml)| t
 `language`, `country`, `dictionary`  and `o (planet)` are __site namespaces__. They are curated and 
 [here to find](https://github.com/trovu/trovu-data/tree/master/shortcuts). (Pull requests are welcome.)
 
+### Dictionary namespaces ###
+
+Currently, the following dictionary namespaces are defined:
+
+Namespace | Dictionary
+--- | ---
+`alm` | [Online Latein Wörterbuch](https://albertmartin.de/latein/)
+`ard` | [arabdict](https://www.arabdict.com/)
+`bab` | [bab.la](https://bab.la/)
+`beo` | [BEOLINGUS](https://dict.tu-chemnitz.de/)
+`crd` | [croDict](https://crodict.com/)
+`dcc` | [dict.cc](https://dict.cc/)
+`dcm` | [Dictionary.com](https://www.dictionary.com/)
+`deo` | [Dans-Esperanto ordbog](https://www.vortaro.dk/)
+`dtn` | [Deutsch-Tuerkisch.net](https://deutsch-tuerkisch.net/)
+`esd` | [SpanishDictionary.com](https://www.spanishdict.com/)
+`flx` | [Folkets lexikon](https://folkets-lexikon.csc.kth.se/)
+`hzn` | [Heinzelnisse](https://www.heinzelnisse.info/)
+`irs` | [Irishionary.com](https://www.irishionary.com/)
+`leo` | [leo.org](https://www.leo.org/)
+`lge` | [Linguee](https://www.linguee.com/)
+`lgs` | [Langenscheidt](https://www.langenscheidt.com/)
+`mdb` | [MDBG Chinese Dictionary](https://www.mdbg.net/)
+`pka` | [pauker.at](https://www.pauker.at/)
+`pns` | [PONS dictionary](https://pons.com/)
+`rvs` | [Reverso](https://www.reverso.net/)
+`umt` | [uitmuntend](https://www.uitmuntend.de/)
+`wdk` | [Wadoku](https://www.wadoku.de/)
+`zrg` | [Zargan](https://www.zargan.com/)
+
 ## Uniqueness in a namespace
 
 In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml).
