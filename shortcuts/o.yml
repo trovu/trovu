@@ -9727,11 +9727,6 @@ zu 1:
     namespace: bab
   - key: zu 1
     namespace: pka
-zvv 2:
-  url: http://www.zvv.ch/de/fahrplan/online-fahrplan.html?start=1&date_start={%Start}&target={%Ziel}
-  title: ZVV-Auskunft
-  tags:
-  - old
 zwatch 1:
   url: http://zattoo.com/view/{%channel}
   title: Zattoo
