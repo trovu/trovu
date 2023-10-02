@@ -321,7 +321,7 @@ zvv 2:
   - arguments: hb, winterthur
     description: Nächste Verbindung von Zürich HB nach Winterthur
 zvv 3:
-  url: https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname={%Start|type=city}&toname={%Ziel|type=city}&time={%Ziel|type=time}
+  url: https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname={%Start|type=city}&toname={%Ziel|type=city}&time={%Zeit|type=time}
   title: ZVV-Auskunft
   description: Fahrplanauskunft des Züricher Verkehrverbundes
   tags:
@@ -332,7 +332,7 @@ zvv 3:
   - arguments: hb, winterthur, 10
     description: Verbindung von Zürich HB nach Winterthur um 10 Uhr heute
 zvv 4:
-  url: https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname={%Start|type=city}&toname={%Ziel|type=city}&time={%Ziel|type=time}&date={%Datum|type=date}
+  url: https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname={%Start|type=city}&toname={%Ziel|type=city}&time={%Zeit|type=time}&date={%Datum|type=date}
   title: ZVV-Auskunft
   description: Fahrplanauskunft des Züricher Verkehrverbundes
   tags:
