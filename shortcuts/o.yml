@@ -2186,11 +2186,10 @@ eis 1:
   tags:
   - old
 ekn 0:
-  url: https://www.ebay-kleinanzeigen.de/m-nachrichten.html
-  title: Ebay-Kleinanzeigen, Nachrichten
-  tags:
-  - ebay
-  - shopping
+  deprecated:
+    alternative:
+      query: .de.kazn
+      created: '2023-10-13'
 el 0:
   include:
   - key: el 0
