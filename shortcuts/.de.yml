@@ -844,20 +844,6 @@ ek 2:
   examples:
   - arguments: kühlschrank, berlin
     description: Suche nach "kühlschrank" in Berlin
-ek+ 0:
-  url: https://www.ebay-kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
-  title: eBay Kleinanzeigen - Anzeige aufgeben
-  tags:
-  - ebay
-  - selling
-  - shopping
-eka 0:
-  url: https://www.ebay-kleinanzeigen.de/m-meine-anzeigen.html
-  title: eBay Kleinanzeigen - Meine Anzeigen
-  tags:
-  - ebay
-  - selling
-  - shopping
 farnell 1:
   url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt={%query}
   title: Farnell Deutschland
@@ -4595,6 +4581,18 @@ jw 1:
   tags:
   - movies
   - series
+k+ 0:
+  url: https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
+  title: Kleinanzeigen - Anzeige aufgeben
+  tags:
+  - selling
+  - shopping
+ka 0:
+  url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
+  title: Kleinanzeigen - Meine Anzeigen
+  tags:
+  - selling
+  - shopping
 kaufland 0:
   url: https://www.kaufland.de/
   title: Kaufland Online Marktplatz
