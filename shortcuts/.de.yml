@@ -819,31 +819,6 @@ ebay 1:
   tags:
   - affiliate
   - old
-ek 0:
-  url: https://www.ebay-kleinanzeigen.de/
-  title: eBay Kleinanzeigen, Homepage
-  tags:
-  - ebay
-  - selling
-  - shopping
-ek 1:
-  url: https://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}
-  title: Ebay-Kleinanzeigen
-  tags:
-  - ebay
-  - shopping
-  examples:
-  - arguments: kühlschrank
-    description: Suche nach "kühlschrank"
-ek 2:
-  url: https://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
-  title: Ebay-Kleinanzeigen
-  tags:
-  - ebay
-  - shopping
-  examples:
-  - arguments: kühlschrank, berlin
-    description: Suche nach "kühlschrank" in Berlin
 farnell 1:
   url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt={%query}
   title: Farnell Deutschland
@@ -4581,18 +4556,6 @@ jw 1:
   tags:
   - movies
   - series
-k+ 0:
-  url: https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
-  title: Kleinanzeigen - Anzeige aufgeben
-  tags:
-  - selling
-  - shopping
-ka 0:
-  url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
-  title: Kleinanzeigen - Meine Anzeigen
-  tags:
-  - selling
-  - shopping
 kaufland 0:
   url: https://www.kaufland.de/
   title: Kaufland Online Marktplatz
@@ -4606,6 +4569,49 @@ kaufland 1:
   examples:
   - arguments: spiele
     description: Suche auf Kaufland.de nach "spiele"
+kaz 0:
+  url: https://www.kleinanzeigen.de/
+  title: Kleinanzeigen.de, Homepage
+  tags:
+  - ebay
+  - selling
+  - shopping
+kaz 1:
+  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords={%query}
+  title: Kleinanzeigen.de
+  tags:
+  - ebay
+  - shopping
+  examples:
+  - arguments: kühlschrank
+    description: Suche nach "kühlschrank"
+kaz 2:
+  url: https://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
+  title: Kleinanzeigen.
+  tags:
+  - ebay
+  - shopping
+  examples:
+  - arguments: kühlschrank, berlin
+    description: Suche nach "kühlschrank" in Berlin
+kaz+ 0:
+  url: https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
+  title: Kleinanzeigen - Anzeige aufgeben
+  tags:
+  - selling
+  - shopping
+kaza 0:
+  url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
+  title: Kleinanzeigen - Meine Anzeigen
+  tags:
+  - selling
+  - shopping
+kazn 0:
+  url: https://www.kleinanzeigen.de/m-nachrichten.html
+  title: Kleinanzeigen - Meine Nachrichten
+  tags:
+  - selling
+  - shopping
 kfz 1:
   url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20{%Ort/Kennzeichen}&ie=utf-8
   title: KFZ-Kennzeichen Deutschland
@@ -4636,12 +4642,6 @@ kit 1:
   examples:
   - arguments: alumni
     description: Suche nach "alumni"
-kn 0:
-  url: https://www.kleinanzeigen.de/m-nachrichten.html
-  title: Kleinanzeigen - Meine Nachrichten
-  tags:
-  - selling
-  - shopping
 koka 0:
   url: https://www.koka36.de/
   title: Koka36.de Konzertkasse
