@@ -2185,12 +2185,6 @@ eis 1:
   title: Eis-machen.de Search
   tags:
   - old
-ekn 0:
-  url: https://www.ebay-kleinanzeigen.de/m-nachrichten.html
-  title: Ebay-Kleinanzeigen, Nachrichten
-  tags:
-  - ebay
-  - shopping
 el 0:
   include:
   - key: el 0
@@ -5016,6 +5010,11 @@ km 1:
   include:
   - key: km 1
     namespace: pka
+kn 0:
+  url: https://www.kleinanzeigen.de/m-nachrichten.html
+  title: Kleinanzeigen, Nachrichten
+  tags:
+  - shopping
 kn 0:
   include:
   - key: kn 0
