@@ -4616,8 +4616,8 @@ kaz 1:
   - arguments: kühlschrank
     description: Suche nach "kühlschrank"
 kaz 2:
-  url: https://www.ebay-kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
-  title: Kleinanzeigen.
+  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
+  title: Kleinanzeigen.de
   tags:
   - ebay
   - shopping
