@@ -19,6 +19,7 @@ export default class Suggestions {
         return input.parentNode.parentNode;
       },
       minChars: 1,
+      maxItems: 15,
       filter: function (text, input) {
         return true;
       },
