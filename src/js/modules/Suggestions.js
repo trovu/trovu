@@ -50,8 +50,8 @@ export default class Suggestions {
     );
     const suggestions = this.getSuggestions(keyword);
 
-    const list = this.convertSuggestionsToAwesompleteList(suggestions);
-    this.awesomplete.list = list.slice(0, 10);
+    this.awesomplete.list =
+      this.convertSuggestionsToAwesompleteList(suggestions);
 
     this.awesomplete.evaluate();
   };
@@ -120,7 +120,6 @@ export default class Suggestions {
       matches.urlMiddleReachable,
       matches.urlMiddleUnreachable,
     );
-    suggestions = suggestions.slice(0, 10);
 
     return suggestions;
   }
