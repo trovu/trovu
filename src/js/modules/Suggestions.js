@@ -67,25 +67,30 @@ export default class Suggestions {
     const argument_names = Object.keys(listItem.label.arguments).join(', ');
 
     li.innerHTML = `
-    <div class="main ${listItem.label.reachable ? `` : ` unreachable`}">
-      <span class="left">  
-      <span class="keyword">${listItem.label.keyword}</span>  
-      <span class="argument-names">${argument_names}</span> 
-      </span>
-      <span class="right">
-        <span class="title">${listItem.label.title}</span>
-        <span class="namespace">${listItem.label.namespace}</span>
-      </span>
-    </div>
-    <div class="examples">
-      <span class="left">  
-        <span class="query">db berlin, hamburg</span>  
-      </span>
-      <span class="right">
-        <span class="description">Nächste Verbindung von Berlin nach Hamburg</span>  
-      </span>
-    </div>
+      <div class="main ${listItem.label.reachable ? `` : ` unreachable`}">
+        <span class="left">  
+        <span class="keyword">${listItem.label.keyword}</span>  
+        <span class="argument-names">${argument_names}</span> 
+        </span>
+        <span class="right">
+          <span class="title">${listItem.label.title}</span>
+          <span class="namespace">${listItem.label.namespace}</span>
+        </span>
+      </div>
     `;
+    if (listItem.label.examples && Array.isArray(listItem.label.examples)) {
+      let examplesInnerDiv = '';
+      for (const example of listItem.label.examples) {
+        examplesInnerDiv += `
+          <span class="left">  
+            <span class="query">${listItem.label.keyword} ${example.arguments}</span>  
+          </span>
+          <span class="right">
+            <span class="description">${example.description}</span>  
+          </span>`;
+      }
+      li.innerHTML += `<div class="examples">${examplesInnerDiv}</div>`;
+    }
     return li;
   }
 
