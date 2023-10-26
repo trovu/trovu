@@ -73,6 +73,17 @@ export default class Home {
 
     // new Suggestions(this.env.namespaceInfos, this.submitQuery);
     document.querySelector('#query').focus();
+    document.querySelector('#query').addEventListener('input', (event) => {
+      if (event.target.value.trim() === '') {
+        document.querySelector('nav.navbar').style.display = 'block';
+        document.querySelector('#examples-and-about').style.display = 'block';
+        document.querySelector('.jumbotron').style.padding = '3em 1em';
+      } else {
+        document.querySelector('nav.navbar').style.display = 'none';
+        document.querySelector('#examples-and-about').style.display = 'none';
+        document.querySelector('.jumbotron').style.padding = '1em 1em';
+      }
+    });
   }
 
   setLocationHash() {
