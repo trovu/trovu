@@ -40,6 +40,7 @@ main .jumbotron {
   > li {
     background: #fff;
     border-bottom: 1px solid #eee;
+    padding-left: 1.5em !important;
     .keyword {
       font-weight: bold;
     }
@@ -80,11 +81,18 @@ main .jumbotron {
       }
     }
   }
-  > li[aria-selected='true']::before {
-    content: '▶';
+  > li::before {
     display: inline;
     position: absolute;
-    left: 0;
+    left: 0.3em;
+    color: #aaa;
+  }
+  > li[aria-selected='false']::before,
+  li:not([aria-selected])::before {
+    content: '▶';
+  }
+  > li[aria-selected='true']::before {
+    content: '▼';
   }
   li[aria-selected='true'] {
     position: relative;
