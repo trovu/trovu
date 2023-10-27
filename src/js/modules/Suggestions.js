@@ -79,6 +79,25 @@ export default class Suggestions {
         </span>
       </div>
     `;
+    if (listItem.label.description || listItem.label.tags) {
+      let description = '';
+      if (listItem.label.description) {
+        description = listItem.label.description;
+      } else if (
+        listItem.label.examples &&
+        Array.isArray(listItem.label.examples)
+      ) {
+        description = 'Examples:';
+      }
+      let tags = '';
+      if (listItem.label.tags && Array.isArray(listItem.label.tags)) {
+        tags = listItem.label.tags.join(', ');
+      }
+      li.innerHTML += `<div class="description-and-tags">
+        <span class="left">${description}</span>
+        <span class="right">${tags}</span>
+      </div>`;
+    }
     if (listItem.label.examples && Array.isArray(listItem.label.examples)) {
       let examplesInnerDiv = '';
       for (const example of listItem.label.examples) {
