@@ -564,7 +564,7 @@ db 4:
 dbb 3:
   url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare
   title: Deutsche Bahn (Bestpreis)
-  description: "Show all best prices in one day.\r\nDeutsche Bahn Best Price (Unsere Bestpreise anzeigen)\r\nhttps://wiki.fhem.de/w/images/6/63/Parametrisierte_%C3%9Cbergabe_Bahnauskunft%28V_5.12-R4.30c%2C_f%C3%BCr.pdf"
+  description: Zeige die Bestpreise für die Verbindung an.
   tags:
   - bahn
   - train
