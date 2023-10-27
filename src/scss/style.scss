@@ -62,9 +62,15 @@ main .jumbotron {
         text-align: right;
       }
     }
-    div.examples {
+    div.examples,
+    div.description-and-tags {
       display: none;
       padding-left: 1em;
+    }
+    div.description-and-tags {
+      .left {
+        font-style: italic;
+      }
     }
     .unreachable {
       .keyword {
@@ -96,7 +102,8 @@ main .jumbotron {
   }
   li[aria-selected='true'] {
     position: relative;
-    div.examples {
+    div.examples,
+    div.description-and-tags {
       display: grid;
     }
     .keyword {
