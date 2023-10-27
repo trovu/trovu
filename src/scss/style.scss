@@ -51,7 +51,7 @@ main .jumbotron {
       color: white;
       padding: 0.2em;
     }
-    div {
+    > div {
       display: grid;
       grid-template-columns: 50% 50%;
       .left {
