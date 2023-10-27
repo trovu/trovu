@@ -257,6 +257,11 @@ export default class Suggestions {
     const input = QueryParser.parse(inputText);
     const suggestion = event.text.label;
 
+    if (event.originalEvent.type === 'click') {
+      this.awesomplete.goto(suggestion.position);
+      return;
+    }
+
     let newInputText = suggestion.keyword;
 
     // Prefix with namespace if not reachable.
