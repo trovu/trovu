@@ -36,8 +36,8 @@ main .jumbotron {
   border: 0;
 }
 
-.awesomplete ul {
-  li {
+.awesomplete > ul {
+  > li {
     background: #fff;
     padding: 0.1em 0.9em;
     border-bottom: 1px solid #eee;
