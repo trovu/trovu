@@ -263,13 +263,6 @@ export default class Suggestions {
       newInputText = `${suggestion.namespace}.${newInputText}`;
     }
 
-    // Immediately submit if 0-arg shortcut.
-    if (suggestion.argumentCount == 0) {
-      this.awesomplete.replace({ value: newInputText });
-      this.submitQuery();
-      return;
-    }
-
     // Append argumentString.
     newInputText = `${newInputText} ${input.argumentString}`;
 
