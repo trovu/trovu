@@ -258,6 +258,10 @@ export default class Suggestions {
     const suggestion = event.text.label;
 
     if (event.originalEvent.type === 'click') {
+      // Unselect all at first because Awesomplete apparently doesn't.
+      document.querySelectorAll('#query-form li').forEach((li) => {
+        li.setAttribute('aria-selected', 'false');
+      });
       this.awesomplete.goto(suggestion.position);
       return;
     }
