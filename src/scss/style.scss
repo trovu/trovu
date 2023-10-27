@@ -81,7 +81,14 @@ main .jumbotron {
       }
     }
   }
+  > li[aria-selected='true']::before {
+    content: '▶';
+    display: inline;
+    position: absolute;
+    left: 0;
+  }
   li[aria-selected='true'] {
+    position: relative;
     div.examples {
       display: grid;
     }
