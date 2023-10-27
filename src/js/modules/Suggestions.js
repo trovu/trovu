@@ -235,7 +235,8 @@ export default class Suggestions {
    */
   convertSuggestionsToAwesompleteList(suggestions) {
     const list = [];
-    for (const suggestion of suggestions) {
+    for (const [index, suggestion] of suggestions.entries()) {
+      suggestion.position = index;
       const item = {
         value: '', // We are not using this on select.
         label: suggestion,
