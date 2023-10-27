@@ -564,7 +564,6 @@ db 4:
 dbb 3:
   url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare
   title: Deutsche Bahn (Bestpreis)
-  description: Zeige die Bestpreise für die Verbindung an.
   tags:
   - bahn
   - train
