@@ -51,8 +51,35 @@ function writeYmls(ymls) {
     const ymlFilePath = ymlDirPath + ymlFileName;
     const yml = ymls[ymlFileName];
     const ymlSorted = sortObject(yml);
+    // Sort tags.
     for (const shortcut of Object.values(yml)) {
       if (shortcut.tags) shortcut.tags.sort();
+    }
+    // Normalize examples.
+    for (const shortcut of Object.values(yml)) {
+      if (shortcut.examples && !Array.isArray(shortcut.examples)) {
+        const examples = [];
+        for (const [argumentString, description] of Object.entries(
+          shortcut.examples,
+        )) {
+          const example = {
+            arguments: argumentString,
+            description: description,
+          };
+          examples.push(example);
+        }
+        shortcut.examples = examples;
+      }
+    }
+    // Cleanup deprecated shortcuts.
+    for (const shortcut of Object.values(yml)) {
+      if (shortcut.deprecated) {
+        delete shortcut.tags;
+        delete shortcut.examples;
+        delete shortcut.description;
+        delete shortcut.url;
+        delete shortcut.title;
+      }
     }
     // TODO:
     // trim strings: - keys - titles - examples - description

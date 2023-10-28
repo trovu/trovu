@@ -73,6 +73,18 @@ export default class Home {
 
     new Suggestions(this.env.namespaceInfos, this.submitQuery);
     document.querySelector('#query').focus();
+    document.querySelector('#query').addEventListener('input', (event) => {
+      // Toggle display of navbar and examples.
+      if (event.target.value.trim() === '') {
+        document.querySelector('nav.navbar').style.display = 'block';
+        document.querySelector('#examples-and-about').style.display = 'block';
+        document.querySelector('.jumbotron').style.padding = '3em 1em';
+      } else {
+        document.querySelector('nav.navbar').style.display = 'none';
+        document.querySelector('#examples-and-about').style.display = 'none';
+        document.querySelector('.jumbotron').style.padding = '1em 1em';
+      }
+    });
   }
 
   setLocationHash() {
@@ -85,30 +97,23 @@ export default class Home {
    */
   showInfoAlerts() {
     const params = Helper.getUrlParams();
-
-    // Show info alerts.
+    const alert = document.querySelector('#alert');
+    if (params.status) {
+      alert.removeAttribute('hidden');
+    }
     switch (params.status) {
       case 'not_found':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector('#alert').innerHTML =
+        alert.innerHTML =
           'Could not find a matching shortcut for this query. Try <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Troubleshooting">Troubleshooting</a>.';
         break;
       case 'reloaded':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector('#alert').textContent =
-          'Shortcuts were reloaded in all namespaces.';
+        alert.textContent = 'Shortcuts were reloaded in all namespaces.';
         break;
       case 'deprecated':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector(
-          '#alert',
-        ).innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
+        alert.innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
         break;
       case 'removed':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector(
-          '#alert',
-        ).innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
+        alert.innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
           params.key,
         )}+repo%3Atrovu%2Ftrovu-data&type=code">
           ${params.query}</a> was removed as does not adhere to our 

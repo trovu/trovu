@@ -19,6 +19,7 @@ export default class Suggestions {
         return input.parentNode.parentNode;
       },
       minChars: 1,
+      maxItems: 15,
       filter: function (text, input) {
         return true;
       },
@@ -50,8 +51,8 @@ export default class Suggestions {
     );
     const suggestions = this.getSuggestions(keyword);
 
-    const list = this.convertSuggestionsToAwesompleteList(suggestions);
-    this.awesomplete.list = list.slice(0, 10);
+    this.awesomplete.list =
+      this.convertSuggestionsToAwesompleteList(suggestions);
 
     this.awesomplete.evaluate();
   };
@@ -63,22 +64,74 @@ export default class Suggestions {
     const li = document.createElement('li', {
       role: 'option',
     });
-
-    const argument_names = Object.keys(listItem.label.arguments).join(', ');
-
-    li.innerHTML = `
-    <span${listItem.label.reachable ? `` : ` class="unreachable"`}>
-      <span class="left">  
-      <span class="keyword">${listItem.label.keyword}</span>  
-      <span class="argument-names">${argument_names}</span> 
-      </span>
-      <span class="right">
-        <span class="title">${listItem.label.title}</span>
-        <span class="namespace">${listItem.label.namespace}</span>
-      </span>
-    </span>
-    `;
+    li.innerHTML += getSuggestionMain(listItem.label);
+    li.innerHTML += getSuggestionDescriptionAndTags(listItem.label);
+    li.innerHTML += getSuggestionExamples(listItem.label);
     return li;
+
+    function getSuggestionMain(suggestion) {
+      const argument_names = Object.keys(suggestion.arguments).join(', ');
+
+      const main = `
+      <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
+        <span class="left">  
+        <span class="keyword">${suggestion.keyword}</span>  
+        <span class="argument-names">${argument_names}</span> 
+        </span>
+        <span class="right">
+          <span class="title">${suggestion.title}</span>
+          <span class="namespace">${suggestion.namespace}</span>
+        </span>
+      </div>
+    `;
+      return main;
+    }
+
+    function getSuggestionDescriptionAndTags(suggestion) {
+      if (!listItem.label.description && !listItem.label.tags) {
+        return '';
+      }
+      let description = '';
+      // If there is a description, use it.
+      if (listItem.label.description) {
+        description = listItem.label.description;
+        // If it's empty and there are examples, use 'Examples'.
+      } else if (
+        listItem.label.examples &&
+        Array.isArray(listItem.label.examples)
+      ) {
+        description = 'Examples:';
+      }
+      let tags = '';
+      if (listItem.label.tags && Array.isArray(listItem.label.tags)) {
+        for (const tag of listItem.label.tags) {
+          tags += `<span class="tag">${tag}</span>`;
+        }
+      }
+      const descriptionAndTags = `<div class="description-and-tags">
+        <span class="left">${description}</span>
+        <span class="right">${tags}</span>
+      </div>`;
+      return descriptionAndTags;
+    }
+
+    function getSuggestionExamples(suggestion) {
+      if (!listItem.label.examples || !Array.isArray(listItem.label.examples)) {
+        return '';
+      }
+      let examplesInnerDiv = '';
+      for (const example of listItem.label.examples) {
+        examplesInnerDiv += `
+          <span class="left">  
+            <span class="query">${listItem.label.keyword} ${example.arguments}</span>  
+          </span>
+          <span class="right">
+            <span class="description">${example.description}</span>  
+          </span>`;
+      }
+      const examples = `<div class="examples">${examplesInnerDiv}</div>`;
+      return examples;
+    }
   }
 
   /**
@@ -107,7 +160,6 @@ export default class Suggestions {
       matches.urlMiddleReachable,
       matches.urlMiddleUnreachable,
     );
-    suggestions = suggestions.slice(0, 10);
 
     return suggestions;
   }
@@ -222,7 +274,8 @@ export default class Suggestions {
    */
   convertSuggestionsToAwesompleteList(suggestions) {
     const list = [];
-    for (const suggestion of suggestions) {
+    for (const [index, suggestion] of suggestions.entries()) {
+      suggestion.position = index;
       const item = {
         value: '', // We are not using this on select.
         label: suggestion,
@@ -243,18 +296,20 @@ export default class Suggestions {
     const input = QueryParser.parse(inputText);
     const suggestion = event.text.label;
 
+    if (event.originalEvent.type === 'click') {
+      // Unselect all at first because Awesomplete apparently doesn't.
+      document.querySelectorAll('#query-form li').forEach((li) => {
+        li.setAttribute('aria-selected', 'false');
+      });
+      this.awesomplete.goto(suggestion.position);
+      return;
+    }
+
     let newInputText = suggestion.keyword;
 
     // Prefix with namespace if not reachable.
     if (!suggestion.reachable) {
       newInputText = `${suggestion.namespace}.${newInputText}`;
-    }
-
-    // Immediately submit if 0-arg shortcut.
-    if (suggestion.argumentCount == 0) {
-      this.awesomplete.replace({ value: newInputText });
-      this.submitQuery();
-      return;
     }
 
     // Append argumentString.

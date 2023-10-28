@@ -1,3 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  padding: 1em 1em;
+}
 .navbar .container {
   padding: 0 2em;
 }
@@ -23,11 +36,12 @@ main .jumbotron {
   border: 0;
 }
 
-.awesomplete ul {
-  li {
+.awesomplete > ul {
+  > li {
     background: #fff;
-    padding: 0.1em 0.9em;
     border-bottom: 1px solid #eee;
+    padding-left: 1.5em !important;
+    padding-right: 0.2em !important;
     .keyword {
       font-weight: bold;
     }
@@ -38,15 +52,35 @@ main .jumbotron {
       background: var(--red);
       color: white;
       padding: 0.2em;
+      margin: 0.1em 0.2em;
     }
-    > span {
+    .tag {
+      background: var(--yellow);
+      color: black;
+      padding: 0.2em;
+      margin: 0.1em 0.2em;
+    }
+    > div {
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: auto auto;
       .left {
         text-align: left;
       }
       .right {
         text-align: right;
+      }
+    }
+    div.examples,
+    div.description-and-tags {
+      display: none;
+      padding-left: 1em;
+    }
+    div.examples {
+      padding-right: 0.2em;
+    }
+    div.description-and-tags {
+      .left {
+        font-style: italic;
       }
     }
     .unreachable {
@@ -64,7 +98,25 @@ main .jumbotron {
       }
     }
   }
+  > li::before {
+    display: inline;
+    position: absolute;
+    left: 0.3em;
+    color: #aaa;
+  }
+  > li[aria-selected='false']::before,
+  li:not([aria-selected])::before {
+    content: '▶';
+  }
+  > li[aria-selected='true']::before {
+    content: '▼';
+  }
   li[aria-selected='true'] {
+    position: relative;
+    div.examples,
+    div.description-and-tags {
+      display: grid;
+    }
     .keyword {
       color: #fff;
     }
