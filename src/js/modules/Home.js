@@ -98,24 +98,21 @@ export default class Home {
   showInfoAlerts() {
     const params = Helper.getUrlParams();
     const alert = document.querySelector('#alert');
-
-    // Show info alerts.
+    if (params.status) {
+      alert.removeAttribute('hidden');
+    }
     switch (params.status) {
       case 'not_found':
-        alert.removeAttribute('hidden');
         alert.innerHTML =
           'Could not find a matching shortcut for this query. Try <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Troubleshooting">Troubleshooting</a>.';
         break;
       case 'reloaded':
-        alert.removeAttribute('hidden');
         alert.textContent = 'Shortcuts were reloaded in all namespaces.';
         break;
       case 'deprecated':
-        alert.removeAttribute('hidden');
         alert.innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
         break;
       case 'removed':
-        alert.removeAttribute('hidden');
         alert.innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
           params.key,
         )}+repo%3Atrovu%2Ftrovu-data&type=code">
