@@ -51,6 +51,13 @@ main .jumbotron {
       background: var(--red);
       color: white;
       padding: 0.2em;
+      margin: 0.1em 0.2em;
+    }
+    .tag {
+      background: var(--yellow);
+      color: black;
+      padding: 0.2em;
+      margin: 0.1em 0.2em;
     }
     > div {
       display: grid;
