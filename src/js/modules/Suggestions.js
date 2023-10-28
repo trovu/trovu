@@ -64,25 +64,38 @@ export default class Suggestions {
     const li = document.createElement('li', {
       role: 'option',
     });
+    li.innerHTML += getSuggestionMain(listItem.label);
+    li.innerHTML += getSuggestionDescriptionAndTags(listItem.label);
+    li.innerHTML += getSuggestionExamples(listItem.label);
+    return li;
 
-    const argument_names = Object.keys(listItem.label.arguments).join(', ');
+    function getSuggestionMain(suggestion) {
+      const argument_names = Object.keys(suggestion.arguments).join(', ');
 
-    li.innerHTML = `
-      <div class="main ${listItem.label.reachable ? `` : ` unreachable`}">
+      const main = `
+      <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
         <span class="left">  
-        <span class="keyword">${listItem.label.keyword}</span>  
+        <span class="keyword">${suggestion.keyword}</span>  
         <span class="argument-names">${argument_names}</span> 
         </span>
         <span class="right">
-          <span class="title">${listItem.label.title}</span>
-          <span class="namespace">${listItem.label.namespace}</span>
+          <span class="title">${suggestion.title}</span>
+          <span class="namespace">${suggestion.namespace}</span>
         </span>
       </div>
     `;
-    if (listItem.label.description || listItem.label.tags) {
+      return main;
+    }
+
+    function getSuggestionDescriptionAndTags(suggestion) {
+      if (!listItem.label.description && !listItem.label.tags) {
+        return '';
+      }
       let description = '';
+      // If there is a description, use it.
       if (listItem.label.description) {
         description = listItem.label.description;
+        // If it's empty and there are examples, use 'Examples'.
       } else if (
         listItem.label.examples &&
         Array.isArray(listItem.label.examples)
@@ -91,14 +104,21 @@ export default class Suggestions {
       }
       let tags = '';
       if (listItem.label.tags && Array.isArray(listItem.label.tags)) {
-        tags = listItem.label.tags.join(', ');
+        for (const tag of listItem.label.tags) {
+          tags += `<span class="tag">${tag}</span>`;
+        }
       }
-      li.innerHTML += `<div class="description-and-tags">
+      const descriptionAndTags = `<div class="description-and-tags">
         <span class="left">${description}</span>
         <span class="right">${tags}</span>
       </div>`;
+      return descriptionAndTags;
     }
-    if (listItem.label.examples && Array.isArray(listItem.label.examples)) {
+
+    function getSuggestionExamples(suggestion) {
+      if (!listItem.label.examples || !Array.isArray(listItem.label.examples)) {
+        return '';
+      }
       let examplesInnerDiv = '';
       for (const example of listItem.label.examples) {
         examplesInnerDiv += `
@@ -109,9 +129,9 @@ export default class Suggestions {
             <span class="description">${example.description}</span>  
           </span>`;
       }
-      li.innerHTML += `<div class="examples">${examplesInnerDiv}</div>`;
+      const examples = `<div class="examples">${examplesInnerDiv}</div>`;
+      return examples;
     }
-    return li;
   }
 
   /**
