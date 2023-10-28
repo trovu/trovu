@@ -105,7 +105,7 @@ export default class Suggestions {
       let tags = '';
       if (listItem.label.tags && Array.isArray(listItem.label.tags)) {
         for (const tag of listItem.label.tags) {
-          tags += `<span class="tag">${tag}</span>`;
+          tags += `<span class="tag">${tag}</span> `;
         }
       }
       const descriptionAndTags = `<div class="description-and-tags">
