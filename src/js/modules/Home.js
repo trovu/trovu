@@ -97,30 +97,26 @@ export default class Home {
    */
   showInfoAlerts() {
     const params = Helper.getUrlParams();
+    const alert = document.querySelector('#alert');
 
     // Show info alerts.
     switch (params.status) {
       case 'not_found':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector('#alert').innerHTML =
+        alert.removeAttribute('hidden');
+        alert.innerHTML =
           'Could not find a matching shortcut for this query. Try <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Troubleshooting">Troubleshooting</a>.';
         break;
       case 'reloaded':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector('#alert').textContent =
-          'Shortcuts were reloaded in all namespaces.';
+        alert.removeAttribute('hidden');
+        alert.textContent = 'Shortcuts were reloaded in all namespaces.';
         break;
       case 'deprecated':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector(
-          '#alert',
-        ).innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
+        alert.removeAttribute('hidden');
+        alert.innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
         break;
       case 'removed':
-        document.querySelector('#alert').removeAttribute('hidden');
-        document.querySelector(
-          '#alert',
-        ).innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
+        alert.removeAttribute('hidden');
+        alert.innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
           params.key,
         )}+repo%3Atrovu%2Ftrovu-data&type=code">
           ${params.query}</a> was removed as does not adhere to our 
