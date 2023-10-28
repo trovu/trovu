@@ -65,6 +65,9 @@ main .jumbotron {
       grid-template-columns: auto auto;
       .left {
         text-align: left;
+        /* Don't indent first line but subsequent ones. */
+        text-indent: -0.5em;
+        margin-left: 0.5em;
       }
       .right {
         text-align: right;
