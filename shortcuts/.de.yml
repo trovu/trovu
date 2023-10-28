@@ -531,7 +531,6 @@ db 2:
   url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
   tags:
-  - affiliate
   - bahn
   - travel
   examples:
@@ -545,7 +544,6 @@ db 3:
   url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&time={%Zeit|type=time|output=HH:mm}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
   tags:
-  - affiliate
   - bahn
   - travel
   examples:
@@ -555,7 +553,6 @@ db 4:
   url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
   tags:
-  - affiliate
   - bahn
   - travel
   examples:
