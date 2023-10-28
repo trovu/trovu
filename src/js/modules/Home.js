@@ -74,6 +74,7 @@ export default class Home {
     new Suggestions(this.env.namespaceInfos, this.submitQuery);
     document.querySelector('#query').focus();
     document.querySelector('#query').addEventListener('input', (event) => {
+      // Toggle display of navbar and examples.
       if (event.target.value.trim() === '') {
         document.querySelector('nav.navbar').style.display = 'block';
         document.querySelector('#examples-and-about').style.display = 'block';
