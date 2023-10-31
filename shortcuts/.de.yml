@@ -529,7 +529,7 @@ db 1:
   - arguments: berlin hbf
     description: Verspätungen / aktuelle Abfahrten in Berlin Hbf
 db 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
   tags:
   - bahn
@@ -542,7 +542,7 @@ db 2:
   - arguments: sxf, txl
     description: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld, Eingabe über IATA-Flughafencodes
 db 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&time={%Zeit|type=time|output=HH:mm}&timesel=depart&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
   tags:
   - bahn
@@ -551,7 +551,7 @@ db 3:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
 db 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1
   title: Deutsche Bahn Fahrplanauskunft
   tags:
   - bahn
@@ -569,7 +569,7 @@ dbb 3:
   - arguments: köln, münchen, 30.11.
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
 dbm 2:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&start=1
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   tags:
   - bahn
@@ -579,7 +579,7 @@ dbm 2:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
 dbm 3:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&start=1
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   tags:
   - bahn
@@ -589,7 +589,7 @@ dbm 3:
   - arguments: berlin, hamburg, 10
     description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
 dbm 4:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   tags:
   - bahn
@@ -599,7 +599,7 @@ dbm 4:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
 dbmn 2:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&journeyProducts=1016&start=1
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   tags:
   - bahn
@@ -609,7 +609,7 @@ dbmn 2:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
 dbmn 3:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   tags:
   - bahn
@@ -619,7 +619,7 @@ dbmn 3:
   - arguments: berlin, hamburg, 10
     description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
 dbmn 4:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
+  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   tags:
   - bahn
@@ -629,7 +629,7 @@ dbmn 4:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
 dbn 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&journeyProducts=1016&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&timesel=depart&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   tags:
   - affiliate
@@ -643,7 +643,7 @@ dbn 2:
   - arguments: sxf, txl
     description: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld, Eingabe über IATA-Flughafencodes
 dbn 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&time={%Zeit|type=time|output=HH:mm}&timesel=depart&journeyProducts=1016&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&timesel=depart&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   tags:
   - affiliate
@@ -653,7 +653,7 @@ dbn 3:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
 dbn 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&journeyProducts=1016&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   tags:
   - affiliate
@@ -663,7 +663,7 @@ dbn 4:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
 dbt 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion
   tags:
   - bahn
@@ -672,7 +672,7 @@ dbt 2:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
 dbt 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion
   tags:
   - bahn
@@ -681,7 +681,7 @@ dbt 3:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
 dbt 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion
   tags:
   - bahn
@@ -690,7 +690,7 @@ dbt 4:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
 dbtn 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&journeyProducts=1016&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   tags:
   - bahn
@@ -699,7 +699,7 @@ dbtn 2:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
 dbtn 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   tags:
   - bahn
@@ -708,7 +708,7 @@ dbtn 3:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
 dbtn 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start}&Z={%Ziel}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
+  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}&Z={%Ziel|type=city}&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   tags:
   - bahn
