@@ -18,16 +18,16 @@
   env:
     language: de
     country: de
-    query: db b,m,8,1.1.20
+    query: db b,hh,8,1.1.20
   response:
-    redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+    redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin%21&Z=Hamburg%21&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - title: .de.db 4
   env:
     language: de
     country: pl
-    query: .de.db b,m,8,1.1.2020
+    query: .de.db b,hh,8,1.1.2020
   response:
-    redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=b&Z=m&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+    redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin%21&Z=Hamburg%21&time=08%3A00&date=01.01.2020&timesel=depart&start=1
 - title: fr.w berlin
   env:
     language: de
