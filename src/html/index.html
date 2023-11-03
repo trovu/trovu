@@ -135,20 +135,32 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
-          <div>
+          <div class="left">
             <a href="?">
               <img src="/img/logo.svg" alt="trovu – Search with shortcuts." />
             </a>
           </div>
-          <span
-            id="settings-button"
-            class="settings"
-            data-toggle="modal"
-            data-target="#settings"
-          >
-            <span class="language"></span>
-            <span class="country"></span>
-          </span>
+          <div class="right">
+            <span
+              id="settings-button"
+              class="settings"
+              data-toggle="modal"
+              data-target="#settings"
+            >
+              <span class="language"></span>
+              <span class="country"></span>
+            </span>
+            <span
+              class="reload"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Reload settings and shortcuts: click here or call 'reload' if data on Github has changed."
+            >
+              <a class="reload" href="#"
+                ><i class="fa fa-refresh" aria-hidden="true"></i
+              ></a>
+            </span>
+          </div>
         </div>
       </nav>
     </header>
