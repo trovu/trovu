@@ -16,6 +16,9 @@ export default class NamespaceFetcher {
    */
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
+    this.namespaceInfos = await this.fetchSiteNamespaceInfos(
+      this.namespaceInfos,
+    );
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = this.processIncludeAll(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
