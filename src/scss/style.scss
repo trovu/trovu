@@ -30,6 +30,12 @@ main .jumbotron {
   padding: 3em 1em;
 }
 
+#query-form {
+  button[type='submit'] {
+    font-size: 1.4em;
+  }
+}
+
 .awesomplete {
   width: 100%;
   padding: 0;
