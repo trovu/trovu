@@ -106,6 +106,42 @@ export default class NamespaceFetcher {
   }
 
   /**
+   * Fetches the information for the site namespaces from Trovu server.
+   * @param {Object} namespaceInfos - An object of initial namespace infos.
+   * @returns {Object} An object containing the fetched information for each given namespace
+   */
+  async fetchSiteNamespaceInfos(namespaceInfos) {
+    const url = `https://data.trovu.net/data/data.json?${this.env.commitHash}`;
+    const response = await fetch(url, {
+      cache: this.env.reload ? 'reload' : 'force-cache',
+    });
+    if (!response || response.status != 200) {
+      this.env.logger.warning(
+        `Problem fetching via ${this.env.reload ? 'reload' : 'cache'} ${url}`,
+      );
+      return namespaceInfos;
+    }
+    this.env.logger.success(
+      `Success fetching via ${this.env.reload ? 'reload' : 'cache'} ${url}`,
+    );
+    let data = {};
+    try {
+      data = await response.json();
+    } catch (error) {
+      this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
+      return namespaceInfos;
+    }
+    for (const namespaceName in data.shortcuts) {
+      if (!namespaceInfos[namespaceName]) {
+        namespaceInfos[namespaceName] = {};
+      }
+      namespaceInfos[namespaceName].name = namespaceName;
+      namespaceInfos[namespaceName].shortcuts = data.shortcuts[namespaceName];
+    }
+    return namespaceInfos;
+  }
+
+  /**
    * Fetches the information for the given namespaces from an external source
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
