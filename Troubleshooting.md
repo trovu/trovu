@@ -29,11 +29,7 @@ You can also combine debugging and reloading, e.g. `debug:reload:g foobar`
 
 This might be a caching issue.
 
-First of all, make sure that `data.trovu.net` has updated the raw version of the shortcut file you edited. For example, 
-
-- `o`-namespace (planet) shortcuts are at https://data.trovu.net/data/shortcuts/o.yml.
-- `de`-namespace (German language) shortcuts are at https://data.trovu.net/data/shortcuts/de.yml.
-- `.de`-namespace (Germany) shortcuts are at https://data.trovu.net/data/shortcuts/.de.yml.
+First of all, make sure if your edit arrived in https://data.trovu.net/data/data.json . It should get updated automatically by a Github webhook on the *git push* event.
 
 Then, you can either
 
