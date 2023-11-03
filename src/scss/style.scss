@@ -104,15 +104,19 @@ main .jumbotron {
   > li::before {
     display: inline;
     position: absolute;
-    left: 0.3em;
     color: #aaa;
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 1.1em;
   }
   > li[aria-selected='false']::before,
   li:not([aria-selected])::before {
-    content: '▶';
+    content: '\f0da';
+    left: 0.5em;
   }
   > li[aria-selected='true']::before {
-    content: '▼';
+    content: '\f0d7';
+    left: 0.4em;
   }
   li[aria-selected='true'] {
     position: relative;
