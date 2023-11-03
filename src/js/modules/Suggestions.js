@@ -1,5 +1,6 @@
 /** @module Suggestions */
 
+import 'font-awesome/css/font-awesome.min.css';
 import 'awesomplete/awesomplete.css';
 import Awesomplete from 'awesomplete';
 import Helper from './Helper.js';
