@@ -75,6 +75,9 @@ main .jumbotron {
     div.description-and-tags {
       display: none;
     }
+    div.description-and-tags {
+      align-items: end;
+    }
     div.examples {
       padding-right: 0.2em;
     }
