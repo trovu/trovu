@@ -2,6 +2,7 @@
 
 import UrlProcessor from './UrlProcessor.js';
 import jsyaml from 'js-yaml';
+import Helper from './Helper.js';
 
 export default class NamespaceFetcher {
   constructor(env) {
@@ -16,6 +17,9 @@ export default class NamespaceFetcher {
    */
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
+    this.namespaceInfos = await this.fetchSiteNamespaceInfos(
+      this.namespaceInfos,
+    );
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = this.processIncludeAll(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
@@ -103,6 +107,34 @@ export default class NamespaceFetcher {
     namespace.url = `https://raw.githubusercontent.com/${namespace.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
     namespace.type = 'user';
     return namespace;
+  }
+
+  /**
+   * Fetches the information for the site namespaces from Trovu server.
+   * @param {Object} namespaceInfos - An object of initial namespace infos.
+   * @returns {Object} An object containing the fetched information for each given namespace
+   */
+  async fetchSiteNamespaceInfos(namespaceInfos) {
+    const url = `https://data.trovu.net/data/data.json?${this.env.commitHash}`;
+    const text = await Helper.fetchAsync(url, this.env);
+    if (!text) {
+      return namespaceInfos;
+    }
+    let data = {};
+    try {
+      data = await JSON.parse(text);
+    } catch (error) {
+      this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
+      return namespaceInfos;
+    }
+    for (const namespaceName in data.shortcuts) {
+      if (!namespaceInfos[namespaceName]) {
+        namespaceInfos[namespaceName] = {};
+      }
+      namespaceInfos[namespaceName].name = namespaceName;
+      namespaceInfos[namespaceName].shortcuts = data.shortcuts[namespaceName];
+    }
+    return namespaceInfos;
   }
 
   /**
