@@ -2,6 +2,7 @@
 
 import UrlProcessor from './UrlProcessor.js';
 import jsyaml from 'js-yaml';
+import Helper from './Helper.js';
 
 export default class NamespaceFetcher {
   constructor(env) {
@@ -115,21 +116,13 @@ export default class NamespaceFetcher {
    */
   async fetchSiteNamespaceInfos(namespaceInfos) {
     const url = `https://data.trovu.net/data/data.json?${this.env.commitHash}`;
-    const response = await fetch(url, {
-      cache: this.env.reload ? 'reload' : 'force-cache',
-    });
-    if (!response || response.status != 200) {
-      this.env.logger.warning(
-        `Problem fetching via ${this.env.reload ? 'reload' : 'cache'} ${url}`,
-      );
+    const text = await Helper.fetchAsync(url, this.env);
+    if (!text) {
       return namespaceInfos;
     }
-    this.env.logger.success(
-      `Success fetching via ${this.env.reload ? 'reload' : 'cache'} ${url}`,
-    );
     let data = {};
     try {
-      data = await response.json();
+      data = await JSON.parse(text);
     } catch (error) {
       this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
       return namespaceInfos;
