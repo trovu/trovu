@@ -98,6 +98,18 @@ actions['normalize'] = async function () {
   writeYmls(ymls);
 };
 
+actions['compile-data'] = async function () {
+  const ymls = loadYmls();
+  const compiled = {};
+  compiled['shortcuts'] = {};
+  for (const ymlFileName in ymls) {
+    const yml = ymls[ymlFileName];
+    const namespace = ymlFileName.replace('.yml', '');
+    compiled.shortcuts[namespace] = ymls[ymlFileName];
+  }
+  console.log(JSON.stringify(compiled));
+};
+
 function sortObject(obj) {
   return Object.keys(obj)
     .sort()
