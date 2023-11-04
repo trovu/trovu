@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.4
 // @description  Fills input fields  with URL parameters and submits form.
-// @downloadURL  
+// @downloadURL
 // @author       Ralf Anders, Georg Jaehnig
 // @match        *://*/*
 // @exclude      *://*.google.*/*
@@ -11,8 +11,7 @@
 // ==/UserScript==
 
 (function () {
-
-  "use strict";
+  'use strict';
 
   var qs = require('qs');
 
@@ -33,7 +32,7 @@
   if (!'fill' in serchilo) return;
   if (!'submit' in serchilo) return;
 
-  // Iterate over serchilo[fill] keys 
+  // Iterate over serchilo[fill] keys
   // and fill the fields with values.
   for (var selector in serchilo.fill) {
     var element = document.querySelector(selector);
@@ -48,6 +47,4 @@
   if (!'click' in element) return;
 
   element.click();
-
-}());
-
+})();
