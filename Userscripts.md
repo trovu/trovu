@@ -1,3 +1,4 @@
+
 # fill-and-submit
 
 Userscript for auto-filling and submitting forms on target websites. This may help when queries cannot passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.  
@@ -22,10 +23,10 @@ Userscript for auto-filling and submitting forms on target websites. This may he
 The shortcut URL should look like this (linebreaks only for clarity):
 
     https://patentscope.wipo.int/search/en/search.jsf#
-      serchilo[fill][%23simpleSearchSearchForm\:fpSearch]={%query}&
-      serchilo[submit]=%23simpleSearchSearchForm\:commandSimpleFPSearch
+      trovu[fill][%23simpleSearchSearchForm\:fpSearch]={%query}&
+      trovu[submit]=%23simpleSearchSearchForm\:commandSimpleFPSearch
 
-So to make use of the userscript, add a hash parameter (after a `#`), called `serchilo`. It must contain the properties `[fill]` and `[submit]`.
+So to make use of the userscript, add a hash parameter (after a `#`), called `trovu`. It must contain the properties `[fill]` and `[submit]`.
 
 Given the example above, it:
 
@@ -35,12 +36,12 @@ Given the example above, it:
 
 ### Documentation:
 
-- `serchilo[fill]`: array containing selectors and values
-  - `serchilo[fill][selector1]=value1`
-  - `serchilo[fill][selector2]=value2`
+- `trovu[fill]`: array containing selectors and values
+  - `trovu[fill][selector1]=value1`
+  - `trovu[fill][selector2]=value2`
   - `...`
 
-- `serchilo[submit]`: string with selector of element to click on.
+- `trovu[submit]`: string with selector of element to click on.
 
 #### Notation: selector string must escape some chars:
 
