@@ -12,19 +12,19 @@
 (function () {
   'use strict';
 
-  var qs = require('qs');
+  const qs = require('qs');
 
   // Get queryString from URL, cut off '#'.
-  var queryString = window.location.hash.substr(1);
+  const queryString = window.location.hash.substr(1);
 
   if (!queryString) return;
 
-  var queryStringObject = qs.parse(queryString);
+  const queryStringObject = qs.parse(queryString);
 
   // Check if parameter 'serchilo' is set.
   if (!'serchilo' in queryStringObject) return;
 
-  var params = queryStringObject.serchilo;
+  const params = queryStringObject.serchilo;
   if (typeof params != 'object') return;
 
   // Check if serchilo[fill] and serchilo[submit] is set.
@@ -33,8 +33,8 @@
 
   // Iterate over serchilo[fill] keys
   // and fill the fields with values.
-  for (var selector in params.fill) {
-    var element = document.querySelector(selector);
+  for (const selector in params.fill) {
+    const element = document.querySelector(selector);
     if (!element) continue;
     if (!'value' in element) continue;
     element.value = params.fill[selector];
