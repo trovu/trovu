@@ -1,0 +1,85 @@
+- title: g 1
+  env:
+    query: g foo
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foo&ie=utf-8
+- title: g 1 with language without namespace
+  env:
+    language: dz
+    query: g foo
+  response:
+    redirectUrl: https://www.google.com/search?hl=dz&q=foo&ie=utf-8
+- title: g 1 with 2 arguments to be reduced to 1
+  env:
+    query: g bar,baz
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=bar%2Cbaz&ie=utf-8
+- title: db 4
+  env:
+    language: de
+    country: de
+    query: db b,hh,8,1.1.20
+  response:
+    redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin%21&Z=Hamburg%21&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+- title: .de.db 4
+  env:
+    language: de
+    country: pl
+    query: .de.db b,hh,8,1.1.2020
+  response:
+    redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin%21&Z=Hamburg%21&time=08%3A00&date=01.01.2020&timesel=depart&start=1
+- title: fr.w berlin
+  env:
+    language: de
+    query: fr.w berlin
+  response:
+    redirectUrl: https://fr.wikipedia.org/wiki/Special:Search?go=Article&search=berlin
+- title: default keyword
+  env:
+    defaultKeyword: g
+    query: foobar
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
+- title: defaultKeyword from user setting
+  env:
+    github: georgjaehnig
+    query: foobar
+  response:
+    redirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
+- title: query negative
+  env:
+    language: en
+    country: us
+    query: someQueryThatWillNotSuccess
+  response:
+    status: not_found
+- title: gd 2 with city mapping
+  env:
+    language: de
+    country: de
+    query: gd b,m
+  response:
+    redirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
+- title: reload with query
+  env:
+    query: reload:g barbaz
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
+- title: reload without query
+  env:
+    query: reload
+  response:
+    status: reloaded
+- title: deprecated with alternative
+  env:
+    country: de
+    query: gmhal hbf
+  response:
+    status: deprecated
+    alternative: gm hal,hbf
+- title: removed
+  env:
+    query: abp
+  response:
+    status: removed
+    key: abp 0

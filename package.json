@@ -1,0 +1,71 @@
+{
+  "name": "trovu-web",
+  "version": "1.0.0",
+  "description": "Trovu web interface.",
+  "main": "",
+  "scripts": {
+    "test": "npm run test-unit && npm run test-calls && npm run test-fe",
+    "test-unit": "jest --verbose env helper src/js/ ",
+    "test-calls": "jest --verbose calls",
+    "test-fe": "cypress run",
+    "doc": "rm -r doc ; jsdoc src/js/* --configure jsdoc.json --destination doc",
+    "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
+    "watch": "rollup --config --watch",
+    "serve": "http-server ./dist/public/ --port 8081 --cors",
+    "clean": "rm -r dist/",
+    "sync": "rsync -vr --delete-after dist/public/ ntro:~/trovu.net/",
+    "deploy": "npm run clean || true && npm run build && npm run sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trovu/trovu-web.git"
+  },
+  "keywords": [
+    "javascript",
+    "shortcuts",
+    "social",
+    "bootstrap"
+  ],
+  "author": "Georg Jaehnig",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/trovu/trovu-web/issues"
+  },
+  "homepage": "https://github.com/trovu/trovu-web#readme",
+  "jest": {},
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@cospired/i18n-iso-languages": "github:georgjaehnig/i18n-iso-languages#new-languages",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-html": "^0.2.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "cypress": "^12.3.0",
+    "esm": "^3.2.25",
+    "http-server": "^14.1.1",
+    "is-valid-domain": "^0.1.6",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^27.3.1",
+    "jsdoc": "^4.0.2",
+    "languagelist": "github:georgjaehnig/language-list",
+    "rollup": "^2.38.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-css-only": "^2.1.0",
+    "rollup-plugin-git-info": "github:vapier/rollup-plugin-git-info",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-watch": "^1.0.2",
+    "sass": "^1.39.0"
+  },
+  "dependencies": {
+    "awesomplete": "^1.1.5",
+    "bootstrap": "^4.6.0",
+    "bootstrap.native": "^3.0.14",
+    "countries-list": "^2.6.1",
+    "dayjs": "^1.11.7",
+    "detect-browser": "^5.2.0",
+    "font-awesome": "^4.7.0",
+    "js-yaml": "^4.1.0"
+  }
+}
