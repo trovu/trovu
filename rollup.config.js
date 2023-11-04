@@ -52,6 +52,10 @@ export default [
         targets: [
           { src: 'src/ico/favicon.ico', dest: 'dist/public/' },
           { src: 'src/img/*', dest: 'dist/public/img/' },
+          {
+            src: 'src/js/userscripts/*.user.js',
+            dest: 'dist/public/userscripts/',
+          },
           { src: 'src/opensearch/', dest: 'dist/public/' },
           { src: 'node_modules/font-awesome/fonts/', dest: 'dist/public/' },
         ],
