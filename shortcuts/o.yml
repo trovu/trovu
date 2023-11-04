@@ -8014,6 +8014,22 @@ tmdb 1:
   examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
+tmu 0:
+  url: https://www.temu.com/
+  title: Temu
+  tags:
+  - shopping
+  examples:
+  - arguments: camera
+    description: Go to homepage
+tmu 1:
+  url: https://www.temu.com/search_result.html?search_key={%query}
+  title: Temu
+  tags:
+  - shopping
+  examples:
+  - arguments: camera
+    description: Search for cameras
 to 0:
   include:
   - key: to 0
