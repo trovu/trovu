@@ -137,7 +137,11 @@
         <div class="container">
           <div class="left">
             <a href="?">
-              <img src="/img/logo.svg" alt="trovu – Search with shortcuts." />
+              <picture>
+                <source media="(min-width: 400px)" srcset="/img/logo.1.svg" />
+                <source media="(max-width: 399px)" srcset="/img/logo.2.svg" />
+                <img src="/img/logo.2.svg" alt="Logo" class="logo" />
+              </picture>
             </a>
           </div>
           <div class="right">
