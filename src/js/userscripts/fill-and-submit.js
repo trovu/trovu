@@ -15,7 +15,7 @@
   const qs = require('qs');
 
   // Get queryString from URL, cut off '#'.
-  const queryString = window.location.hash.substr(1);
+  const queryString = window.location.hash.substring(1);
 
   if (!queryString) return;
 
