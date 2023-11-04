@@ -24,24 +24,24 @@
   // Check if parameter 'serchilo' is set.
   if (!'serchilo' in queryStringObject) return;
 
-  var serchilo = queryStringObject.serchilo;
-  if (typeof serchilo != 'object') return;
+  var params = queryStringObject.serchilo;
+  if (typeof params != 'object') return;
 
   // Check if serchilo[fill] and serchilo[submit] is set.
-  if (!'fill' in serchilo) return;
-  if (!'submit' in serchilo) return;
+  if (!'fill' in params) return;
+  if (!'submit' in params) return;
 
   // Iterate over serchilo[fill] keys
   // and fill the fields with values.
-  for (var selector in serchilo.fill) {
+  for (var selector in params.fill) {
     var element = document.querySelector(selector);
     if (!element) continue;
     if (!'value' in element) continue;
-    element.value = serchilo.fill[selector];
+    element.value = params.fill[selector];
   }
 
   // Find submit element.
-  element = document.querySelector(serchilo.submit);
+  element = document.querySelector(params.submit);
   if (!element) return;
   if (!'click' in element) return;
 
