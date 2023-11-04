@@ -2,7 +2,7 @@
 
 Userscript for auto-filling and submitting forms on target websites. This may help when queries cannot passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.  
 
-## For Users
+## For users
 
 ### Requirements
 
@@ -15,7 +15,7 @@ Userscript for auto-filling and submitting forms on target websites. This may he
 2. There should be a dialog opening that offers to install the user script. 
 3. Install and you are done.
 
-## For Shortcut editors
+## For shortcut editors
 
 ### Creating shortcut that use the userscript
 
@@ -49,7 +49,7 @@ Given the example above, it:
 -  `#` = `%23`
  
 
-## For Developers
+## For developers
 
 ### Requirements
 
