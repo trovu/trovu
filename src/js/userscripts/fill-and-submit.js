@@ -6,7 +6,6 @@
 // @downloadURL
 // @author       Ralf Anders, Georg Jaehnig
 // @match        *://*/*
-// @exclude      *://*.google.*/*
 // @grant        none
 // ==/UserScript==
 
