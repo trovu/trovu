@@ -21,10 +21,8 @@
 
   const queryStringObject = qs.parse(queryString);
 
-  // Check if parameter 'serchilo' is set.
-  if (!'serchilo' in queryStringObject) return;
+  const params = queryStringObject.serchilo || queryStringObject.trovu || false;
 
-  const params = queryStringObject.serchilo;
   if (typeof params != 'object') return;
 
   // Check if serchilo[fill] and serchilo[submit] is set.
