@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         FindFind.it / Serchilo: Fill and Submit 
+// @name         Trovu: Fill and Submit
 // @namespace    http://tampermonkey.net/
 // @version      0.4
 // @description  Fills input fields  with URL parameters and submits form.
