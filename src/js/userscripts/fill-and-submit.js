@@ -12,16 +12,16 @@
 (function () {
   'use strict';
 
-  var qs = require('qs');
+  const qs = require('qs');
 
   // Get queryString from URL, cut off '#'.
-  var queryString = window.location.hash.substring(1);
+  const queryString = window.location.hash.substring(1);
 
   if (!queryString) return;
 
-  var queryStringObject = qs.parse(queryString);
+  const queryStringObject = qs.parse(queryString);
 
-  var params = queryStringObject.serchilo || queryStringObject.trovu || false;
+  const params = queryStringObject.serchilo || queryStringObject.trovu || false;
 
   if (typeof params != 'object') return;
 
