@@ -31,17 +31,16 @@
 
   // Iterate over serchilo[fill] keys
   // and fill the fields with values.
-  for (var selector in params.fill) {
-    var element = document.querySelector(selector);
-    if (!element) continue;
-    if (!'value' in element) continue;
-    element.value = params.fill[selector];
+  for (const selector in params.fill) {
+    const fillElement = document.querySelector(selector);
+    if (!fillElement || !('value' in fillElement)) continue;
+    fillElement.value = params.fill[selector];
   }
 
   // Find submit element.
-  element = document.querySelector(params.submit);
-  if (!element) return;
-  if (!'click' in element) return;
+  const submitElement = document.querySelector(params.submit);
+  if (!submitElement) return;
+  if (!'click' in submitElement) return;
 
-  element.click();
+  submitElement.click();
 })();
