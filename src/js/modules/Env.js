@@ -12,6 +12,8 @@ import pkg from '../../../package.json';
 export default class Env {
   /**
    * Set helper variables.
+   *
+   * @param {object} env - The environment variables.
    */
   constructor(env) {
     this.setToThis(env);
@@ -25,6 +27,12 @@ export default class Env {
     this.logger = new Logger('#log');
   }
 
+  /**
+   * Set the environment variables from the given object.
+   *
+   * @param {object} env - The environment variables.
+   * @returns
+   */
   setToThis(env) {
     if (!env) {
       return;
@@ -108,7 +116,7 @@ export default class Env {
       await this.setWithUserConfigFromGithub(params);
     }
 
-    // // Assign again, to override user config.
+    // Assign again, to override user config.
     Object.assign(this, params);
     Object.assign(this, params_from_query);
 
