@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "browserify": "^14.3.0",
-    "qs": "^6.4.0"
-  },
-  "scripts": {
-    "build": "browserify fill-and-submit.user.src.js -o fill-and-submit.user.js"
-  }
-}
