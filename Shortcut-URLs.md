@@ -86,3 +86,7 @@ Property | Conversion | Example input | Example output | Explanation
 `lowercase` | The output will be lowercased. | `Sxf` | `sxf` | Makes sure all letters are lowercase.
 `eo-cx`     | `cx gx hx jx sx ux` to `ĉ ĝ ĥ ĵ ŝ ŭ` | `ehxosxangxo cxiujxauxde` | `eĥoŝanĝo ĉiuĵaŭde` | Converts transcribed Esperanto characters.
 
+## Filling and submitting with userscripts
+
+If a website does not allow passing arguments via (GET) parameters, a solution can be targetting the search form, and then [[letting the fields fill by a userscript|Userscripts#fill-and-submit]]. 
+
