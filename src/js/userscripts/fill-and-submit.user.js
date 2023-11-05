@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Trovu: Fill and Submit
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.5.1
 // @description  Fills input fields with URL parameters and submits form.
 // @downloadURL  https://trovu.net/userscripts/fill-and-submit.user.js
 // @author       Ralf Anders, Georg Jaehnig
