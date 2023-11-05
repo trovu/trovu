@@ -14,7 +14,7 @@
     "serve": "http-server ./dist/public/ --port 8081 --cors",
     "clean": "rm -r dist/",
     "sync": "rsync -vr --delete-after dist/public/ ntro:~/trovu.net/",
-    "deploy": "npm run clean || true && npm run build-userscripts && npm run build && npm run sync"
+    "deploy": "npm run clean || true && npm run build && npm run sync"
   },
   "repository": {
     "type": "git",
