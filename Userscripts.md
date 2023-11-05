@@ -52,12 +52,7 @@ Given the example above, it:
 
 ## For developers
 
-### Requirements
-
-- [Node.js](https://nodejs.org/)
-- [NPM](https://www.npmjs.com)
-
 ### Edit and install
 
-- Edit `src/js/userscripts/fill-and-submit.js`
-- `npm run build-userscripts` This will create `fill-and-submit.user.js`.
+- Edit `src/js/userscripts/fill-and-submit.user.js`
+- `npm run deploy` will also deploy `fill-and-submit.user.js`.
