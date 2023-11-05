@@ -23,16 +23,16 @@ Userscript for auto-filling and submitting forms on target websites. This may he
 The shortcut URL should look like this (linebreaks only for clarity):
 
     https://patentscope.wipo.int/search/en/search.jsf#
-      trovu[fill][%23simpleSearchSearchForm\:fpSearch]={%query}&
-      trovu[submit]=%23simpleSearchSearchForm\:commandSimpleFPSearch
+      trovu[fill][%23simpleSearchForm\:fpSearch\:input]={%query}&
+      trovu[submit]=%5Bid%5E%3D%22simpleSearchForm%3AfpSearch%3Aj%22%5D
 
 So to make use of the userscript, add a hash parameter (after a `#`), called `trovu`. It must contain the properties `[fill]` and `[submit]`.
 
 Given the example above, it:
 
 1. calls the URL
-2. fills input field found with CSS selector `#simpleSearchSearchForm:fpSearch` with value from `{%query}`
-3. submits form with submit button selected by `#simpleSearchSearchForm:commandSimpleFPSearch`
+2. fills input field found with CSS selector `#simpleSearchForm:fpSearch:input` with value from `{%query}`
+3. submits form with submit button selected by `[id^="simpleSearchForm:fpSearch:j"]`
 
 ### Documentation:
 
