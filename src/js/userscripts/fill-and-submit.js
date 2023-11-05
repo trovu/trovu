@@ -2,7 +2,7 @@
 // @name         Trovu: Fill and Submit
 // @namespace    http://tampermonkey.net/
 // @version      0.5
-// @description  Fills input fields  with URL parameters and submits form.
+// @description  Fills input fields with URL parameters and submits form.
 // @downloadURL
 // @author       Ralf Anders, Georg Jaehnig
 // @match        *://*/*
