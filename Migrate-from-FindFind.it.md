@@ -6,6 +6,10 @@ This page helps you how to switch to Trovu.
 
 Your migration depends on whether you used FindFind.it with or without a personal account.
 
+## Without a FindFind.it account
+
+Read how to [[use Trovu on your device]]. Make sure you set the correct language and country, either via the URL or Settings.
+
 ## With a FindFind.it account
 
 In this case, you can migrate your settings and user shortcuts. It should **not take longer than 5 minutes**.
@@ -24,10 +28,6 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 1. Do the same for `shortcuts.yml`.
 1. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME
 1. Read how to [[use Trovu on your device]].
-
-## Without a FindFind.it account
-
-In this case, read how to [[use Trovu on your device]]. Make sure that you set the correct language and country, either via the URL or Settings.
 
 ## Read more
 
