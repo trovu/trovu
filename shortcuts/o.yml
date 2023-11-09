@@ -9435,7 +9435,7 @@ ye 1:
   - arguments: pizza
     description: Find pizza places in the city you were searching last on Yelp
 ye 2:
-  url: http://www.yelp.com/search?find_desc={%what}&find_loc={%where}
+  url: http://www.yelp.com/search?find_desc={%what}&find_loc={%where|type=city}
   title: Yelp
   tags:
   - food
