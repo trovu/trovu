@@ -170,13 +170,13 @@ export default class Home {
         params.delete(key);
       }
     }
-    const xml = `<link
+    const link = `<link
     rel="search"
     type="application/opensearchdescription+xml"
     href="https://nabo.trovu.net/src/opensearch/?${params.toString()}"
     title="Trovu"
     />`;
     const head = document.querySelector('head');
-    head.innerHTML += xml;
+    head.innerHTML += link;
   }
 }
