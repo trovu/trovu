@@ -46,9 +46,7 @@ export default class NamespaceFetcher {
 
   /**
    * Add a fetch URL template to a namespace.
-   *
    * @param {(string|Object)} namespace - The namespace to add the URL template to.
-   *
    * @return {Object} namespace - The namespace with the added URL template.
    */
   getInitalNamespaceInfo(namespace) {
@@ -74,9 +72,7 @@ export default class NamespaceFetcher {
 
   /**
    * Add a URL template to a namespace that refers to a namespace in trovu-data.
-   *
    * @param {string} name - The namespace name.
-   *
    * @return {Object} namespace - The namespace with the added URL template.
    */
   addFetchUrlToSiteNamespace(name) {
