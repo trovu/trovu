@@ -18,4 +18,4 @@ jobs:
           folder: dist/public/
           branch: gh-pages
           repository-name: trovu/trovu.github.io
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
