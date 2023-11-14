@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 185-automate-deployment-on-push
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
