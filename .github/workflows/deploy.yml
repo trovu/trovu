@@ -13,6 +13,7 @@ jobs:
           node-version: 21
       - run: npm clean-install
       - run: npm run build
+      - run: npm run test
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/public/
