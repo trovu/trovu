@@ -13,3 +13,7 @@ jobs:
           node-version: 16
       - run: npm clean-install
       - run: npm run build
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/public/
+          branch: gh-pages
