@@ -16,6 +16,6 @@ jobs:
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/public/
-          branch: gh-pages
+          branch: master
           repository-name: trovu/trovu.github.io
           ssh-key: ${{ secrets.DEPLOY_KEY }}
