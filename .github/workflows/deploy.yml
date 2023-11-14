@@ -19,5 +19,6 @@ jobs:
           repository-name: trovu/trovu.github.io
           branch: master
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-          target-folder: ${{ github.head_ref || github.ref_name }}
+          # Either to "master" or "dev", depending on the branch.
+          target-folder: ${{ (github.ref == 'refs/heads/master' && 'master') || 'dev' }}
           clean: true
