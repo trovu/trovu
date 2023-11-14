@@ -20,3 +20,4 @@ jobs:
           branch: master
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           target-folder: 185-automate-deployment-on-push
+          clean: true
