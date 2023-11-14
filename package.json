@@ -9,7 +9,7 @@
     "test-calls": "jest --verbose calls",
     "test-fe": "cypress run",
     "doc": "rm -r doc ; jsdoc src/js/* --configure jsdoc.json --destination doc",
-    "build2": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
+    "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
     "watch": "rollup --config --watch",
     "serve": "http-server ./dist/public/ --port 8081 --cors",
     "clean": "rm -r dist/",
