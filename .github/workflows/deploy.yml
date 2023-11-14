@@ -1,0 +1,23 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
+      - run: npm clean-install
+      - run: npm run build
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/public/
+          repository-name: trovu/trovu.github.io
+          branch: master
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          target-folder: ${{ github.head_ref || github.ref_name }}
+          clean: true
