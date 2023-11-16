@@ -15,6 +15,7 @@ plugins:
 # Navigation structure (if needed)
 nav:
   - Home: index.md
+  - privacy.md
   - User guide:
       - users/integration.md
       - users/advanced.md
@@ -32,8 +33,7 @@ nav:
   - Legacy:
       - legacy/differences.md
       - legacy/migrate.md
-  - privacy.md
-  - presentations.md
+      - presentations.md
 
 extra:
   social:
