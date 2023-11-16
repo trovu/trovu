@@ -1,3 +1,3 @@
 # Presentations
 
--   FOSSASIA 2019: [pdf](https://github.com/trovu/trovu.github.io/blob/master/presentations/fossasia.pdf)
+-   FOSSASIA 2019: [pdf](pdf/fossasia.pdf)
