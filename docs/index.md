@@ -38,9 +38,9 @@ This repository contains all the data, e.g.
 
 Fork this repository to add or edit shortcuts (and send then a pull request).
 
-### [trovu-web](https://github.com/trovu/trovu-web)
+### [trovu](https://github.com/trovu/trovu)
 
-This repository contains the web frontend.
+This (future mono-)repository contains now the web frontend and this documentation.
 
 ## Live web version
 
