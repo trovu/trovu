@@ -17,10 +17,23 @@ nav:
   - Home: index.md
   - User guide:
       - users/integration.md
+      - users/advanced.md
+      - users/support.md
+      - users/troubleshooting.md
+  - Shortcuts:
+      - shortcuts/namespaces.md
+      - shortcuts/urls.md
+      - shortcuts/includes.md
+      - shortcuts/userscripts.md
   - Editor guide:
       - editors/policy.md
   - Developer guide:
       - developers/processing.md
+  - Legacy:
+      - legacy/differences.md
+      - legacy/migrate.md
+  - privacy.md
+  - presentations.md
 
 extra:
   social:
