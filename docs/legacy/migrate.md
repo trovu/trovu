@@ -1,6 +1,6 @@
 # Migrate from FindFind.it
 
-[FindFind.it](https://www.findfind.it/) will **end its service in ~~October~~ December 2023**, with the [end of life of Drupal 7](https://www.drupal.org/psa-2022-02-23).
+[FindFind.it](https://www.findfind.it/) will **end its service in <del>October</del> December 2023**, with the [end of life of Drupal 7](https://www.drupal.org/psa-2022-02-23).
 
 But its **successor [trovu.net](https://trovu.net/)** is already running. Trovu is a [little different to FindFind.it / Serchilo](differences.md).
 
