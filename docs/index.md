@@ -19,8 +19,8 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 -   [Namespaces](shortcuts/namespaces.md)
 -   [How a query is processed](developers/processing.md)
 -   [Includes](shortcuts/includes.md)
--   [Shortcut URLs](shortcuts/includes.md)
--   [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
+-   [Shortcut URLs](shortcuts/urls.md)
+-   [Advanced settings & personal shortcuts](users/advanced.md)
 -   [Trovu compared to Serchilo / FindFind.it](legacy/differences.md)
 -   [Migrate from FindFind.it](legacy/migrate.md)
 -   [Troubleshooting / FAQ](users/troubleshooting.md)
@@ -34,7 +34,7 @@ This repository contains all the data, e.g.
 
 -   shortcuts
 -   types/city
-    -   mappings for [argument type _city_](https://github.com/trovu/trovu.github.io/wiki/Shortcut-URLs#city)
+    -   mappings for [argument type _city_](shortcuts/urls.md#city)
 
 Fork this repository to add or edit shortcuts (and send then a pull request).
 
