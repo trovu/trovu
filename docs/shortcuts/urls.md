@@ -93,4 +93,4 @@ Finally, with `{%foo|transform=uppercase}` the output string can be transformed.
 
 ## Filling and submitting with userscripts
 
-If a website does not allow passing arguments via (GET) parameters, a solution can be targetting the search form, and then [[letting the fields fill by a userscript|Userscripts#fill-and-submit]].
+If a website does not allow passing arguments via (GET) parameters, a solution can be targetting the search form, and then [letting the fields fill by a userscript](userscripts.md#fill-and-submit).

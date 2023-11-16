@@ -51,7 +51,7 @@ If the language from settings is e.g. `de`, it includes from `en-de 1`. (And if 
         key: en 1
         namespace: leo
 
-This can for example be set in one's user settings, to ensure using leo.org as the dictionary for English, no matter what is used in the site [[namespaces]].
+This can for example be set in one's user settings, to ensure using leo.org as the dictionary for English, no matter what is used in the site [namespaces](namespaces.md).
 
 ## Multiple include propositions
 

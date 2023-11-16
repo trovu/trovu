@@ -68,7 +68,7 @@ Firefox allows to add custom search engines: Any URL with a `%s` placeholder wor
 1. Tap on _➕ Add search engine_
 1. Tap on Other
 1. Enter a name, e.g. `Trovu`
-1. Enter the template URL, like for [[Other][#other]]
+1. Enter the template URL, like for [Other](#other)
 1. Tap on ✔ (in the upper right corner)
 
 Here is an example setting for the user `georgjaehnig`:
