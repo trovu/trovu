@@ -1,12 +1,12 @@
 # [trovu.net](https://trovu.net/) – Web shortcuts, social, private.
 
-trovu is a spin-off from [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [[differences|Differences to Serchilo and FindFind.it]].
+trovu is a spin-off from [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](Differences-to-Serchilo-and-FindFind.it.md).
 
 trovu allows you to define shortcuts for URLs / websites and then quickly access them in a command-line way, e.g.
 
 - `g berlin` – search Google for "berlin".
 - `w berlin` – Wikipedia article for "berlin" in your language.
-- `gd london, liverpool` – find a route on Google Maps from London to Liverpool. 
+- `gd london, liverpool` – find a route on Google Maps from London to Liverpool.
 
 ## Key features
 
@@ -16,15 +16,15 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ## Read more
 
-- [[Namespaces]]
-- [[How a query is processed]]
-- [[Includes]]
-- [[Shortcut URLs]]
+- [Namespaces](Namespaces.md)
+- [How a query is processed](How-a-query-is-processed.md)
+- [Includes](Includes.md)
+- [Shortcut URLs](Shortcut-URLs.md)
 - [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
-- [[Trovu compared to Serchilo / FindFind.it|Differences to Serchilo and FindFind.it]]
-- [[Migrate from FindFind.it]]
-- **[[Troubleshooting / FAQ|Troubleshooting]]**
-- [[Support]]
+- [Trovu compared to Serchilo / FindFind.it](Differences-to-Serchilo-and-FindFind.it.md)
+- [Migrate from FindFind.it](Migrate-from-FindFind.it.md)
+- [Troubleshooting / FAQ](Troubleshooting.md)
+- [Support](Support.md)
 
 ## Repositories
 
@@ -34,7 +34,7 @@ This repository contains all the data, e.g.
 
 - shortcuts
 - types/city
-  - mappings for [argument type *city*](https://github.com/trovu/trovu.github.io/wiki/Shortcut-URLs#city)
+  - mappings for [argument type _city_](https://github.com/trovu/trovu.github.io/wiki/Shortcut-URLs#city)
 
 Fork this repository to add or edit shortcuts (and send then a pull request).
 
@@ -44,4 +44,4 @@ This repository contains the web frontend.
 
 ## Live web version
 
-https://trovu.net/
+[https://trovu.net/](https://trovu.net/)
