@@ -5,7 +5,7 @@ site_url: https://trovu.net
 docs_dir: docs
 site_dir: dist/public/docs
 theme:
-  name: material  # Replace with your chosen theme, e.g., 'mkdocs', 'readthedocs', etc.
+  name: material # Replace with your chosen theme, e.g., 'mkdocs', 'readthedocs', etc.
 
 plugins:
   - search
