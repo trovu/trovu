@@ -1,4 +1,4 @@
-# Differences to Serchilo and FindFind.it
+# Use Trovu on your device
 
 ## Desktop web browser
 
