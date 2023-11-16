@@ -8,7 +8,7 @@ Your migration depends on whether you used FindFind.it with or without a persona
 
 ## Without a FindFind.it account
 
-Read how to [use Trovu on your device](../integration.md). Make sure you set the correct language and country, either via the URL or Settings.
+Read how to [use Trovu on your device](../users/integration.md). Make sure you set the correct language and country, either via the URL or Settings.
 
 ## With a FindFind.it account
 
@@ -27,10 +27,10 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 1. Click on _Commit changes_.
 1. Do the same for `shortcuts.yml`.
 1. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME
-1. Read how to [use Trovu on your device](../integration.md).
+1. Read how to [use Trovu on your device](../users/integration.md).
 
 ## Read more
 
 - [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
 
-If you have problems or questions, get [support](../support.md).
+If you have problems or questions, get [support](../users/support.md).

@@ -16,15 +16,15 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 
 ## Read more
 
-- [Namespaces](Namespaces.md)
-- [How a query is processed](How-a-query-is-processed.md)
-- [Includes](Includes.md)
-- [Shortcut URLs](Shortcut-URLs.md)
+- [Namespaces](shortcuts/namespaces.md)
+- [How a query is processed](developers/processing.md)
+- [Includes](shortcuts/includes.md)
+- [Shortcut URLs](shortcuts/includes.md)
 - [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
 - [Trovu compared to Serchilo / FindFind.it](legacy/differences.md)
 - [Migrate from FindFind.it](legacy/migrate.md)
-- [Troubleshooting / FAQ](Troubleshooting.md)
-- [Support](support.md)
+- [Troubleshooting / FAQ](users/troubleshooting.md)
+- [Support](users/support.md)
 
 ## Repositories
 
