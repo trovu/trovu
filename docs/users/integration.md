@@ -1,6 +1,6 @@
-# Desktop web browser
+## Desktop web browser
 
-## Firefox
+### Firefox
 
 <img align="right" src="https://github-production-user-asset-6210df.s3.amazonaws.com/1092628/261806062-3e08675d-72b0-4c10-ad21-9d0a7ac77ec8.png" width="600">
 
@@ -16,7 +16,7 @@
 
 1. Under **Default Search Engine**, select *Trovu*.
 
-## Chrome
+### Chrome
 
 1. Open [trovu.net](https://trovu.net/), either [with your Github user name](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts) or without:
    - `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
@@ -29,7 +29,7 @@
 1. When found, click the 3 dots right to it.
 1. Select **Make default**.
 
-## Other
+### Other
 
 Use one of these URL templates and add it where your browser allows to set custom browser search engines:
 
@@ -38,9 +38,9 @@ Use one of these URL templates and add it where your browser allows to set custo
 
 (Note the `process/` part in the URL! You may need to adjust your `country`, `language` or `github` parameter.)
 
-# Android
+## Android
 
-## SearchBar Ex - Search Widget
+### SearchBar Ex - Search Widget
 
 This a free, generic app to search any search engine that supports URL with a `%s` placeholder.
 
@@ -57,7 +57,7 @@ This a free, generic app to search any search engine that supports URL with a `%
 
 Now, you can enter Trovu queries which will be redirected to your browser.
 
-## Firefox for Android
+### Firefox for Android
 
 Firefox allows to add custom search engines: Any URL with a `%s` placeholder works.
 
