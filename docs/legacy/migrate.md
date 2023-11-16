@@ -31,6 +31,6 @@ You must have an account at <a href="https://github.com/">Github</a>. It is free
 
 ## Read more
 
-- [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
+-   [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
 
 If you have problems or questions, get [support](../users/support.md).

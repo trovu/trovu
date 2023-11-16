@@ -1,19 +1,18 @@
-
 # fill-and-submit
 
-Userscript for auto-filling and submitting forms on target websites. This may help when queries cannot passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.  
+Userscript for auto-filling and submitting forms on target websites. This may help when queries cannot passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.
 
 ## For users
 
 ### Requirements
 
-- for Firefox: [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/) 
-- for Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+-   for Firefox: [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
+-   for Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
 ### Install
 
 1. In your browser, open https://www.trovu.net/userscripts/fill-and-submit.user.js
-2. There should be a dialog opening that offers to install the user script. 
+2. There should be a dialog opening that offers to install the user script.
 3. Install and you are done.
 
 ## For shortcut editors
@@ -36,23 +35,23 @@ Given the example above, it:
 
 ### Documentation:
 
-- `trovu[fill]`: array containing selectors and values
-  - `trovu[fill][selector1]=value1`
-  - `trovu[fill][selector2]=value2`
-  - `...`
+-   `trovu[fill]`: array containing selectors and values
 
-- `trovu[submit]`: string with selector of element to click on.
+    -   `trovu[fill][selector1]=value1`
+    -   `trovu[fill][selector2]=value2`
+    -   `...`
+
+-   `trovu[submit]`: string with selector of element to click on.
 
 #### Notation: selector string must escape some chars:
 
--  `:` = `\:`
--  `.` = `\.`
--  `#` = `%23`
- 
+-   `:` = `\:`
+-   `.` = `\.`
+-   `#` = `%23`
 
 ## For developers
 
 ### Edit and install
 
-- Edit `src/js/userscripts/fill-and-submit.user.js`
-- `npm run deploy` will also deploy `fill-and-submit.user.js`.
+-   Edit `src/js/userscripts/fill-and-submit.user.js`
+-   `npm run deploy` will also deploy `fill-and-submit.user.js`.

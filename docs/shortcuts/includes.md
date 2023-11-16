@@ -68,7 +68,7 @@ This can for example be set in one's user settings, to ensure using leo.org as t
       - key: ar 1
         namespace: rvs
       - key: ar 1
-        namespace: pka 
+        namespace: pka
 
 This shortcut for an Arabic dictionary tries first to include from [ard](https://github.com/trovu/trovu-data/tree/master/shortcuts/ard.yml), the namespace for arabdict.com. And there also exists:
 
