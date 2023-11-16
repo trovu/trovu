@@ -1,3 +1,5 @@
+# Differences to Serchilo and FindFind.it
+
 [Trovu](https://trovu.net/) is the official successor of Serchilo / [FindFind.it](https://www.findfind.it/). FindFind.it will be **closed latest in October 2023**, with the [end of life of Drupal 7](https://www.drupal.org/psa-2022-02-23).
 
 If you know FindFind.it, then you almost know how Trovu works. However, a few things are different:
