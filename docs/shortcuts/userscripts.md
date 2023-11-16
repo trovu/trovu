@@ -1,23 +1,23 @@
-# fill-and-submit
+## fill-and-submit
 
 Userscript for auto-filling and submitting forms on target websites. This may help when queries cannot passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.
 
-## For users
+### For users
 
-### Requirements
+#### Requirements
 
 -   for Firefox: [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
 -   for Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
-### Install
+#### Install
 
 1. In your browser, open https://www.trovu.net/userscripts/fill-and-submit.user.js
 2. There should be a dialog opening that offers to install the user script.
 3. Install and you are done.
 
-## For shortcut editors
+### For shortcut editors
 
-### Creating shortcut that use the userscript
+#### Creating shortcut that use the userscript
 
 The shortcut URL should look like this (linebreaks only for clarity):
 
