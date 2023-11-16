@@ -21,10 +21,10 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 - [Includes](Includes.md)
 - [Shortcut URLs](Shortcut-URLs.md)
 - [Advanced settings & personal shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts)
-- [Trovu compared to Serchilo / FindFind.it](Differences-to-Serchilo-and-FindFind.it.md)
-- [Migrate from FindFind.it](Migrate-from-FindFind.it.md)
+- [Trovu compared to Serchilo / FindFind.it](legacy/differences.md)
+- [Migrate from FindFind.it](legacy/migrate.md)
 - [Troubleshooting / FAQ](Troubleshooting.md)
-- [Support](Support.md)
+- [Support](support.md)
 
 ## Repositories
 
