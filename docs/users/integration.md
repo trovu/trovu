@@ -53,7 +53,7 @@ This a free, generic app to search any search engine that supports URL with a `%
 1. Select **Search**
 1. Select **Custom Search**
 1. For _name_, enter "Trovu"
-1. For _URL_, enter a URL template like in [Browser / other](Use-Trovu-on-your-device#other).
+1. For _URL_, enter a URL template like in [Browser / other](#other).
 1. Click the back button of the app in the upper left corner
 
 Now, you can enter Trovu queries which will be redirected to your browser.
