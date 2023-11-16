@@ -17,7 +17,7 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 ## Read more
 
 -   [Namespaces](shortcuts/namespaces.md)
--   [How a query is processed](developers/processing.md)
+-   [How a query is processed](users/processing.md)
 -   [Includes](shortcuts/includes.md)
 -   [Shortcut URLs](shortcuts/urls.md)
 -   [Advanced settings & personal shortcuts](users/advanced.md)

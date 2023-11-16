@@ -17,6 +17,7 @@ nav:
   - Home: index.md
   - privacy.md
   - User guide:
+      - users/processing.md
       - users/integration.md
       - users/advanced.md
       - users/support.md
@@ -28,8 +29,6 @@ nav:
       - shortcuts/userscripts.md
   - Editor guide:
       - editors/policy.md
-  - Developer guide:
-      - developers/processing.md
   - Legacy:
       - legacy/differences.md
       - legacy/migrate.md
