@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 mkdocs = "*"
-minify = "*"
+mkdocs-minify-plugin = "*"
 
 [dev-packages]
 
