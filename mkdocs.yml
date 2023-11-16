@@ -5,7 +5,10 @@ site_url: https://trovu.net
 docs_dir: docs
 site_dir: dist/public/docs
 theme:
-  name: readthedocs
+  name: material
+  repo_url: https://github.com/trovu/trovu
+  repo_name: 'trovu'
+  edit_uri: '/docs/'
 
 plugins:
   - search
