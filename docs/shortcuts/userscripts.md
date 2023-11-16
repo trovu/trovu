@@ -33,7 +33,7 @@ Given the example above, it:
 2. fills input field found with CSS selector `#simpleSearchForm:fpSearch:input` with value from `{%query}`
 3. submits form with submit button selected by `[id^="simpleSearchForm:fpSearch:j"]`
 
-### Documentation:
+#### Documentation:
 
 -   `trovu[fill]`: array containing selectors and values
 
@@ -43,15 +43,15 @@ Given the example above, it:
 
 -   `trovu[submit]`: string with selector of element to click on.
 
-#### Notation: selector string must escape some chars:
+##### Notation: selector string must escape some chars:
 
 -   `:` = `\:`
 -   `.` = `\.`
 -   `#` = `%23`
 
-## For developers
+### For developers
 
-### Edit and install
+#### Edit and install
 
 -   Edit `src/js/userscripts/fill-and-submit.user.js`
 -   `npm run deploy` will also deploy `fill-and-submit.user.js`.
