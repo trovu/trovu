@@ -1,3 +1,5 @@
+# Includes
+
 Includes allow to use the same shortcut properties in different shortcuts. They are heavily used for dictionary shortcuts.
 
 ## Simple includes

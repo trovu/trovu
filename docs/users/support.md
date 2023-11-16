@@ -1,3 +1,5 @@
+# Support
+
 Here you can find support:
 
 -   Some problems may be listed in [[Troubleshooting]].

@@ -1,3 +1,5 @@
+# Privacy policy
+
 Trovu does not log your personal information.
 
 In particular:

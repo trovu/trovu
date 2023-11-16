@@ -1,3 +1,5 @@
+# Advanced settings & personal shortcuts
+
 You can create and manage your own user shortcuts and set advanced settings:
 
 1. If you don't have one, [create a Github.com account](https://github.com/signup). It is free.

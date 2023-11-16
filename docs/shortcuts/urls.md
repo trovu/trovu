@@ -1,3 +1,5 @@
+# Shortcut URLs
+
 A shortcut URL may contain placeholders. This page is about them.
 
 ## Example

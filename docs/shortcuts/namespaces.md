@@ -1,3 +1,5 @@
+# Namespaces
+
 Every shortcut belongs to exactly one namespace. Namespaces allow the same keyword to be used for different shortcuts – according to the user's language, location or personal setup. This comes in handy e.g. for multi-country websites like Amazon:
 
 -   `a shakespeare` shall search Amazon for books from Shakespeare – but Amazon from which country?
