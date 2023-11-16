@@ -1,6 +1,6 @@
 # [trovu.net](https://trovu.net/) – Web shortcuts, social, private.
 
-Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](Differences-to-Serchilo-and-FindFind.it.md).
+Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](legacy/differences.md).
 
 trovu allows you to define shortcuts for URLs / websites and then quickly access them in a command-line way, e.g.
 
