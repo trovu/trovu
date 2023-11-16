@@ -1,6 +1,6 @@
 # How a query is processed
 
-The purpose of a query is to match with a shortcut. And shortcuts are organized by [[namespaces]]: Every shortcut belongs exactly to one namespace.
+The purpose of a query is to match with a shortcut. And shortcuts are organized by [Namespaces](../shortcuts/namespaces.md): Every shortcut belongs exactly to one namespace.
 
 ## Namespace setting
 
