@@ -4,7 +4,7 @@
 
 ### Firefox
 
-<img align="right" src="https://github-production-user-asset-6210df.s3.amazonaws.com/1092628/261806062-3e08675d-72b0-4c10-ad21-9d0a7ac77ec8.png" width="600">
+![Screenshot](img/firefox.png)
 
 1.  Open [trovu.net](https://trovu.net/), either [with your Github user name](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts) or without:
     -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
@@ -73,4 +73,4 @@ Firefox allows to add custom search engines: Any URL with a `%s` placeholder wor
 
 Here is an example setting for the user `georgjaehnig`:
 
-<img src="https://user-images.githubusercontent.com/1092628/210268732-5bd8eb06-b34e-44c2-b557-276fa3a7c8c3.png" width="600">
+![Screenshot](img/chrome.png)
