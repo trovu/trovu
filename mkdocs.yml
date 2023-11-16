@@ -15,6 +15,12 @@ plugins:
 # Navigation structure (if needed)
 nav:
   - Home: index.md
+  - User guide:
+      - users/integration.md
+  - Editor guide:
+      - editors/policy.md
+  - Developer guide:
+      - developers/processing.md
 
 extra:
   social:
