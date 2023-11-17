@@ -25,7 +25,7 @@ export default class DataManager {
       const filePath = ymlDirPath + fileName;
       const str = fs.readFileSync(filePath, 'utf8');
       const data = jsyaml.load(str);
-      const fileRoot = fileName.split('.')[0];
+      const fileRoot = fileName.replace(/\.yml$/, '');
       dataByFileRoot[fileRoot] = data;
     }
     return dataByFileRoot;
