@@ -1,17 +1,13 @@
 site_name: Trovu
 site_description: Search with shortcuts.
 site_url: https://trovu.net
+repo_url: https://github.com/trovu/trovu
+edit_uri: tree/master/docs/
 
 docs_dir: docs
 site_dir: dist/public/docs
 theme:
-  name: material
-  repo_url: https://github.com/trovu/trovu
-  repo_name: 'trovu'
-  edit_uri: '/docs/'
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/trovu
+  name: readthedocs
 
 plugins:
   - search
