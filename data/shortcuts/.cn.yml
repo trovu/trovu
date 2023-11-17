@@ -1,0 +1,11 @@
+a 1:
+  url: http://www.amazon.cn/s/?field-keywords={%query}
+  title: Amazon.cn
+  tags:
+  - affiliate
+  - amazon
+  - books
+  - shopping
+  examples:
+  - arguments: shakespeare
+    description: Search for "shakespeare"

@@ -1,0 +1,4486 @@
+am 0:
+  include:
+    key: am-{$language} 0
+am 1:
+  include:
+    key: am-{$language} 1
+am-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/am/wb
+  title: Amharisch-Deutsch (Pauker.at)
+  tags:
+  - amharic
+  - dictionary
+  - german
+  - language
+am-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/am/wb?suche={%word}
+  title: Amharisch-Deutsch (Pauker.at)
+  tags:
+  - amharic
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: ዓሣ
+    description: Deutsch-Übersetzung von "ዓሣ"
+  - arguments: baum
+    description: Amharisch-Übersetzung von "baum"
+ar 0:
+  include:
+    key: ar-{$language} 0
+ar 1:
+  include:
+    key: ar-{$language} 1
+ar-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/ar/wb
+  title: Arabisch-Deutsch (Pauker.at)
+  tags:
+  - arabic
+  - dictionary
+  - german
+  - language
+ar-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/ar/wb?suche={%word}
+  title: Arabisch-Deutsch (Pauker.at)
+  tags:
+  - arabic
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: شجرة
+    description: Deutsch-Übersetzung von "شجرة"
+  - arguments: baum
+    description: Arabisch-Übersetzung von "baum"
+as 0:
+  include:
+    key: as-{$language} 0
+as 1:
+  include:
+    key: as-{$language} 1
+as-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/as/wb
+  title: Assamesisch-Deutsch (Pauker.at)
+  tags:
+  - assamese
+  - dictionary
+  - german
+  - language
+as-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/as/wb?suche={%word}
+  title: Assamesisch-Deutsch (Pauker.at)
+  tags:
+  - assamese
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: গাছ
+    description: Deutsch-Übersetzung von "গাছ"
+  - arguments: baum
+    description: Assamesisch-Übersetzung von "baum"
+az 0:
+  include:
+    key: az-{$language} 0
+az 1:
+  include:
+    key: az-{$language} 1
+az-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/az/wb
+  title: Aserbaidschanisch-Deutsch (Pauker.at)
+  tags:
+  - azerbaijani
+  - dictionary
+  - german
+  - language
+az-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/az/wb?suche={%word}
+  title: Aserbaidschanisch-Deutsch (Pauker.at)
+  tags:
+  - azerbaijani
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: agac
+    description: Deutsch-Übersetzung von "agac"
+  - arguments: baum
+    description: Aserbaidschanisch-Übersetzung von "baum"
+be 0:
+  include:
+    key: be-{$language} 0
+be 1:
+  include:
+    key: be-{$language} 1
+be-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/be/wb
+  title: Weißrussisch-Deutsch (Pauker.at)
+  tags:
+  - belarusian
+  - dictionary
+  - german
+  - language
+be-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/be/wb?suche={%word}
+  title: Weißrussisch-Deutsch (Pauker.at)
+  tags:
+  - belarusian
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: дрэва
+    description: Deutsch-Übersetzung von "дрэва"
+  - arguments: baum
+    description: Weißrussisch-Übersetzung von "baum"
+bg 0:
+  include:
+    key: bg-{$language} 0
+bg 1:
+  include:
+    key: bg-{$language} 1
+bg-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/bg/wb
+  title: Bulgarisch-Deutsch (Pauker.at)
+  tags:
+  - bulgarian
+  - dictionary
+  - german
+  - language
+bg-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/bg/wb?suche={%word}
+  title: Bulgarisch-Deutsch (Pauker.at)
+  tags:
+  - bulgarian
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: дърво
+    description: Deutsch-Übersetzung von "дърво"
+  - arguments: baum
+    description: Bulgarisch-Übersetzung von "baum"
+bn 0:
+  include:
+    key: bn-{$language} 0
+bn 1:
+  include:
+    key: bn-{$language} 1
+bn-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/bn/wb
+  title: Bengalisch-Deutsch (Pauker.at)
+  tags:
+  - bengali
+  - dictionary
+  - german
+  - language
+bn-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/bn/wb?suche={%word}
+  title: Bengalisch-Deutsch (Pauker.at)
+  tags:
+  - bengali
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: গাছ
+    description: Deutsch-Übersetzung von "গাছ"
+  - arguments: baum
+    description: Bengalisch-Übersetzung von "baum"
+bo 0:
+  include:
+    key: bo-{$language} 0
+bo 1:
+  include:
+    key: bo-{$language} 1
+bo-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/bo/wb
+  title: Tibetisch-Deutsch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tibetan
+bo-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/bo/wb?suche={%word}
+  title: Tibetisch-Deutsch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tibetan
+  examples:
+  - arguments: རི་མོ་
+    description: Deutsch-Übersetzung von "རི་མོ་"
+  - arguments: baum
+    description: Tibetisch-Übersetzung von "baum"
+br 0:
+  include:
+    key: br-{$language} 0
+br 1:
+  include:
+    key: br-{$language} 1
+br-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/br/wb
+  title: Bretonisch-Deutsch (Pauker.at)
+  tags:
+  - breton
+  - dictionary
+  - german
+  - language
+br-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/br/wb?suche={%word}
+  title: Bretonisch-Deutsch (Pauker.at)
+  tags:
+  - breton
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: dervenn
+    description: Deutsch-Übersetzung von "dervenn"
+  - arguments: baum
+    description: Bretonisch-Übersetzung von "baum"
+ca 0:
+  include:
+    key: ca-{$language} 0
+ca 1:
+  include:
+    key: ca-{$language} 1
+ca-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/ca/wb
+  title: Katalanisch-Deutsch (Pauker.at)
+  tags:
+  - catalan
+  - dictionary
+  - german
+  - language
+ca-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/ca/wb?suche={%word}
+  title: Katalanisch-Deutsch (Pauker.at)
+  tags:
+  - catalan
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: arbre
+    description: Deutsch-Übersetzung von "arbre"
+  - arguments: baum
+    description: Katalanisch-Übersetzung von "baum"
+cs 0:
+  include:
+    key: cs-{$language} 0
+cs 1:
+  include:
+    key: cs-{$language} 1
+cs-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/cs/wb
+  title: Tschechisch-Deutsch (Pauker.at)
+  tags:
+  - czech
+  - dictionary
+  - german
+  - language
+cs-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/cs/wb?suche={%word}
+  title: Tschechisch-Deutsch (Pauker.at)
+  tags:
+  - czech
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: strom
+    description: Deutsch-Übersetzung von "strom"
+  - arguments: baum
+    description: Tschechisch-Übersetzung von "baum"
+cy 0:
+  include:
+    key: cy-{$language} 0
+cy 1:
+  include:
+    key: cy-{$language} 1
+cy-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/cy/wb
+  title: Walisisch-Deutsch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - welsh
+cy-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/cy/wb?suche={%word}
+  title: Walisisch-Deutsch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - welsh
+  examples:
+  - arguments: coeden
+    description: Deutsch-Übersetzung von "coeden"
+  - arguments: baum
+    description: Walisisch-Übersetzung von "baum"
+da 0:
+  include:
+    key: da-{$language} 0
+da 1:
+  include:
+    key: da-{$language} 1
+da-de 0:
+  url: https://www.pauker.at/pauker/DE_DE/da/wb
+  title: Dänisch-Deutsch (Pauker.at)
+  tags:
+  - danish
+  - dictionary
+  - german
+  - language
+da-de 1:
+  url: https://www.pauker.at/pauker/DE_DE/da/wb?suche={%word}
+  title: Dänisch-Deutsch (Pauker.at)
+  tags:
+  - danish
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: træ
+    description: Deutsch-Übersetzung von "træ"
+  - arguments: baum
+    description: Dänisch-Übersetzung von "baum"
+de 0:
+  include:
+    key: de-{$language} 0
+de 1:
+  include:
+    key: de-{$language} 1
+de-am 0:
+  title: ጀርመን-አማርኛ (Pauker.at)
+  include:
+    key: am-de 0
+de-am 1:
+  title: ጀርመን-አማርኛ (Pauker.at)
+  include:
+    key: am-de 1
+  examples:
+  - arguments: baum
+    description: አማርኛ translation of "baum"
+  - arguments: ዓሣ
+    description: ጀርመን translation of "ዓሣ"
+de-ar 0:
+  title: الألمانية-العربية (Pauker.at)
+  include:
+    key: ar-de 0
+de-ar 1:
+  title: الألمانية-العربية (Pauker.at)
+  include:
+    key: ar-de 1
+  examples:
+  - arguments: baum
+    description: ترجمة العربية من "baum"
+  - arguments: شجرة
+    description: ترجمة الألمانية من "شجرة"
+de-as 0:
+  title: German-অসমীয়া (Pauker.at)
+  include:
+    key: as-de 0
+de-as 1:
+  title: German-অসমীয়া (Pauker.at)
+  include:
+    key: as-de 1
+  examples:
+  - arguments: baum
+    description: অসমীয়া translation of "baum"
+  - arguments: গাছ
+    description: German translation of "গাছ"
+de-az 0:
+  title: Alman-Azərbaycan (Pauker.at)
+  include:
+    key: az-de 0
+de-az 1:
+  title: Alman-Azərbaycan (Pauker.at)
+  include:
+    key: az-de 1
+  examples:
+  - arguments: baum
+    description: azərbaycan tərcüməsi "baum"
+  - arguments: agac
+    description: alman tərcüməsi "agac"
+de-be 0:
+  title: Нямецкая-Беларуская (Pauker.at)
+  include:
+    key: be-de 0
+de-be 1:
+  title: Нямецкая-Беларуская (Pauker.at)
+  include:
+    key: be-de 1
+  examples:
+  - arguments: baum
+    description: Пераклад на беларуская для "baum"
+  - arguments: дрэва
+    description: Пераклад на нямецкая для "дрэва"
+de-bg 0:
+  title: Немски-Български (Pauker.at)
+  include:
+    key: bg-de 0
+de-bg 1:
+  title: Немски-Български (Pauker.at)
+  include:
+    key: bg-de 1
+  examples:
+  - arguments: baum
+    description: български превод за "baum"
+  - arguments: дърво
+    description: немски превод за "дърво"
+de-bn 0:
+  title: জার্মান-বাংলা (Pauker.at)
+  include:
+    key: bn-de 0
+de-bn 1:
+  title: জার্মান-বাংলা (Pauker.at)
+  include:
+    key: bn-de 1
+  examples:
+  - arguments: baum
+    description: বাংলা অনুবাদ "baum"
+  - arguments: গাছ
+    description: জার্মান অনুবাদ "গাছ"
+de-bo 0:
+  title: German-བོད་སྐད་ (Pauker.at)
+  include:
+    key: bo-de 0
+de-bo 1:
+  title: German-བོད་སྐད་ (Pauker.at)
+  include:
+    key: bo-de 1
+  examples:
+  - arguments: baum
+    description: བོད་སྐད་ translation of "baum"
+  - arguments: རི་མོ་
+    description: German translation of "རི་མོ་"
+de-br 0:
+  title: Alamaneg-Brezhoneg (Pauker.at)
+  include:
+    key: br-de 0
+de-br 1:
+  title: Alamaneg-Brezhoneg (Pauker.at)
+  include:
+    key: br-de 1
+  examples:
+  - arguments: baum
+    description: Evezhiadenn brezhoneg evit "baum"
+  - arguments: dervenn
+    description: Evezhiadenn alamaneg evit "dervenn"
+de-ca 0:
+  title: Alemany-Català (Pauker.at)
+  include:
+    key: ca-de 0
+de-ca 1:
+  title: Alemany-Català (Pauker.at)
+  include:
+    key: ca-de 1
+  examples:
+  - arguments: baum
+    description: Traducció al català de "baum"
+  - arguments: arbre
+    description: Traducció al alemany de "arbre"
+de-cs 0:
+  title: Němčina-Čeština (Pauker.at)
+  include:
+    key: cs-de 0
+de-cs 1:
+  title: Němčina-Čeština (Pauker.at)
+  include:
+    key: cs-de 1
+  examples:
+  - arguments: baum
+    description: čeština překlad pro "baum"
+  - arguments: strom
+    description: němčina překlad pro "strom"
+de-cy 0:
+  title: Almaeneg-Cymraeg (Pauker.at)
+  include:
+    key: cy-de 0
+de-cy 1:
+  title: Almaeneg-Cymraeg (Pauker.at)
+  include:
+    key: cy-de 1
+  examples:
+  - arguments: baum
+    description: Cymraeg translation of "baum"
+  - arguments: coeden
+    description: Almaeneg translation of "coeden"
+de-da 0:
+  title: Tysk-Dansk (Pauker.at)
+  include:
+    key: da-de 0
+de-da 1:
+  title: Tysk-Dansk (Pauker.at)
+  include:
+    key: da-de 1
+  examples:
+  - arguments: baum
+    description: dansk oversættelse af "baum"
+  - arguments: træ
+    description: tysk oversættelse af "træ"
+de-dz 0:
+  url: https://www.pauker.at/pauker/DE_DE/dz/wb
+  title: ཇཱར་མཱན་ཁ-རྫོང་ཁ (Pauker.at)
+  tags:
+  - dictionary
+  - dzongkha
+  - german
+  - language
+de-dz 1:
+  url: https://www.pauker.at/pauker/DE_DE/dz/wb?suche={%word}
+  title: ཇཱར་མཱན་ཁ-རྫོང་ཁ (Pauker.at)
+  tags:
+  - dictionary
+  - dzongkha
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: རྫོང་ཁ བོད་ཡིག བསྐྱར་བཅོས། "baum"
+  - arguments: སྣ་ཚོགས་
+    description: ཇཱར་མཱན་ཁ བོད་ཡིག བསྐྱར་བཅོས། "སྣ་ཚོགས་"
+de-el 0:
+  url: https://www.pauker.at/pauker/DE_DE/el/wb
+  title: Γερμανικά-Ελληνικά (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - greek
+  - language
+de-el 1:
+  url: https://www.pauker.at/pauker/DE_DE/el/wb?suche={%word}
+  title: Γερμανικά-Ελληνικά (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - greek
+  - language
+  examples:
+  - arguments: baum
+    description: Μετάφραση στα Ελληνικά για το "baum"
+  - arguments: δέντρο
+    description: Μετάφραση στα Γερμανικά για το "δέντρο"
+de-en 0:
+  url: https://www.pauker.at/pauker/DE_DE/en/wb
+  title: German-English (Pauker.at)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+de-en 1:
+  url: https://www.pauker.at/pauker/DE_DE/en/wb?suche={%word}
+  title: German-English (Pauker.at)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: English translation of "baum"
+  - arguments: tree
+    description: German translation of "tree"
+de-eo 0:
+  url: https://www.pauker.at/pauker/DE_DE/eo/wb
+  title: Germana-Esperanto (Pauker.at)
+  tags:
+  - dictionary
+  - esperanto
+  - german
+  - language
+de-eo 1:
+  url: https://www.pauker.at/pauker/DE_DE/eo/wb?suche={%word|transform=eo-cx}
+  title: Germana-Esperanto (Pauker.at)
+  tags:
+  - dictionary
+  - esperanto
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: esperanto traduko de "baum"
+  - arguments: arbo
+    description: germana traduko de "arbo"
+de-es 0:
+  url: https://www.pauker.at/pauker/DE_DE/es/wb
+  title: Alemán-Español (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+de-es 1:
+  url: https://www.pauker.at/pauker/DE_DE/es/wb?suche={%word}
+  title: Alemán-Español (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+  examples:
+  - arguments: baum
+    description: Traducción al español de "baum"
+  - arguments: árbol
+    description: Traducción al alemán de "árbol"
+de-et 0:
+  url: https://www.pauker.at/pauker/DE_DE/et/wb
+  title: Saksa-Eesti (Pauker.at)
+  tags:
+  - dictionary
+  - estonian
+  - german
+  - language
+de-et 1:
+  url: https://www.pauker.at/pauker/DE_DE/et/wb?suche={%word}
+  title: Saksa-Eesti (Pauker.at)
+  tags:
+  - dictionary
+  - estonian
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: eesti tõlge "baum"
+  - arguments: puu
+    description: saksa tõlge "puu"
+de-eu 0:
+  url: https://www.pauker.at/pauker/DE_DE/eu/wb
+  title: Alemana-Euskara (Pauker.at)
+  tags:
+  - basque
+  - dictionary
+  - german
+  - language
+de-eu 1:
+  url: https://www.pauker.at/pauker/DE_DE/eu/wb?suche={%word}
+  title: Alemana-Euskara (Pauker.at)
+  tags:
+  - basque
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: euskara itzulpena "baum"
+  - arguments: zuhaitz
+    description: alemana itzulpena "zuhaitz"
+de-fa 0:
+  url: https://www.pauker.at/pauker/DE_DE/fa/wb
+  title: آلمانی-فارسی (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - persian
+de-fa 1:
+  url: https://www.pauker.at/pauker/DE_DE/fa/wb?suche={%word}
+  title: آلمانی-فارسی (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - persian
+  examples:
+  - arguments: baum
+    description: ترجمه به فارسی برای "baum"
+  - arguments: درخت
+    description: ترجمه به آلمانی برای "درخت"
+de-fi 0:
+  url: https://www.pauker.at/pauker/DE_DE/fi/wb
+  title: Saksa-Suomi (Pauker.at)
+  tags:
+  - dictionary
+  - finnish
+  - german
+  - language
+de-fi 1:
+  url: https://www.pauker.at/pauker/DE_DE/fi/wb?suche={%word}
+  title: Saksa-Suomi (Pauker.at)
+  tags:
+  - dictionary
+  - finnish
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: suomi-käännös sanalle "baum"
+  - arguments: puu
+    description: saksa-käännös sanalle "puu"
+de-fo 0:
+  url: https://www.pauker.at/pauker/DE_DE/fo/wb
+  title: Týskt-Føroyskt (Pauker.at)
+  tags:
+  - dictionary
+  - faroese
+  - german
+  - language
+de-fo 1:
+  url: https://www.pauker.at/pauker/DE_DE/fo/wb?suche={%word}
+  title: Týskt-Føroyskt (Pauker.at)
+  tags:
+  - dictionary
+  - faroese
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: føroyskt týðing á "baum"
+  - arguments: træ
+    description: týskt týðing á "træ"
+de-fr 0:
+  url: https://www.pauker.at/pauker/DE_DE/fr/wb
+  title: Allemand-Français (Pauker.at)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+de-fr 1:
+  url: https://www.pauker.at/pauker/DE_DE/fr/wb?suche={%word}
+  title: Allemand-Français (Pauker.at)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Traduction en français de "baum"
+  - arguments: arbre
+    description: Traduction en allemand de "arbre"
+de-fy 0:
+  url: https://www.pauker.at/pauker/DE_DE/fy/wb
+  title: Dútsk-West-Frysk (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - western Frisian
+de-fy 1:
+  url: https://www.pauker.at/pauker/DE_DE/fy/wb?suche={%word}
+  title: Dútsk-West-Frysk (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - western Frisian
+  examples:
+  - arguments: baum
+    description: West-Frysk oersetting fan "baum"
+  - arguments: beam
+    description: Dútsk oersetting fan "beam"
+de-ga 0:
+  url: https://www.pauker.at/pauker/DE_DE/ga/wb
+  title: Gearmáinis-Gaeilge (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - irish
+  - language
+de-ga 1:
+  url: https://www.pauker.at/pauker/DE_DE/ga/wb?suche={%word}
+  title: Gearmáinis-Gaeilge (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - irish
+  - language
+  examples:
+  - arguments: baum
+    description: Gaeilge aistriúchán de "baum"
+  - arguments: crann
+    description: Gearmáinis aistriúchán de "crann"
+de-gd 0:
+  url: https://www.pauker.at/pauker/DE_DE/gd/wb
+  title: Gearmailtis-Gàidhlig (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - scottish Gaelic
+de-gd 1:
+  url: https://www.pauker.at/pauker/DE_DE/gd/wb?suche={%word}
+  title: Gearmailtis-Gàidhlig (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - scottish Gaelic
+  examples:
+  - arguments: baum
+    description: Gàidhlig eadar-theangaichte de "baum"
+  - arguments: craobh
+    description: Gearmailtis eadar-theangaichte de "craobh"
+de-gl 0:
+  url: https://www.pauker.at/pauker/DE_DE/gl/wb
+  title: Alemán-Galego (Pauker.at)
+  tags:
+  - dictionary
+  - galician
+  - german
+  - language
+de-gl 1:
+  url: https://www.pauker.at/pauker/DE_DE/gl/wb?suche={%word}
+  title: Alemán-Galego (Pauker.at)
+  tags:
+  - dictionary
+  - galician
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Tradución ao galego de "baum"
+  - arguments: árbore
+    description: Tradución ao alemán de "árbore"
+de-gu 0:
+  url: https://www.pauker.at/pauker/DE_DE/gu/wb
+  title: જર્મન-ગુજરાતી (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - gujarati
+  - language
+de-gu 1:
+  url: https://www.pauker.at/pauker/DE_DE/gu/wb?suche={%word}
+  title: જર્મન-ગુજરાતી (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - gujarati
+  - language
+  examples:
+  - arguments: baum
+    description: ગુજરાતી translation of "baum"
+  - arguments: વૃક્ષ
+    description: જર્મન translation of "વૃક્ષ"
+de-ha 0:
+  url: https://www.pauker.at/pauker/DE_DE/ha/wb
+  title: Jamusanci-Hausa (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hausa
+  - language
+de-ha 1:
+  url: https://www.pauker.at/pauker/DE_DE/ha/wb?suche={%word}
+  title: Jamusanci-Hausa (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hausa
+  - language
+  examples:
+  - arguments: baum
+    description: Tarjama ta Hausa daga "baum"
+  - arguments: gashi
+    description: Tarjama ta Jamusanci daga "gashi"
+de-he 0:
+  url: https://www.pauker.at/pauker/DE_DE/he/wb
+  title: גרמנית-עברית (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hebrew
+  - language
+de-he 1:
+  url: https://www.pauker.at/pauker/DE_DE/he/wb?suche={%word}
+  title: גרמנית-עברית (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hebrew
+  - language
+  examples:
+  - arguments: baum
+    description: עברית תרגום של "baum"
+  - arguments: עץ
+    description: גרמנית תרגום של "עץ"
+de-hi 0:
+  url: https://www.pauker.at/pauker/DE_DE/hi/wb
+  title: जर्मन-हिन्दी (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hindi
+  - language
+de-hi 1:
+  url: https://www.pauker.at/pauker/DE_DE/hi/wb?suche={%word}
+  title: जर्मन-हिन्दी (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hindi
+  - language
+  examples:
+  - arguments: baum
+    description: ' "baum" का हिन्दी अनुवाद'
+  - arguments: पेड़
+    description: ' "पेड़" का जर्मन अनुवाद'
+de-hr 0:
+  url: https://www.pauker.at/pauker/DE_DE/hr/wb
+  title: Njemački-Hrvatski (Pauker.at)
+  tags:
+  - croatian
+  - dictionary
+  - german
+  - language
+de-hr 1:
+  url: https://www.pauker.at/pauker/DE_DE/hr/wb?suche={%word}
+  title: Njemački-Hrvatski (Pauker.at)
+  tags:
+  - croatian
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: hrvatski prijevod od "baum"
+  - arguments: stablo
+    description: njemački prijevod od "stablo"
+de-hu 0:
+  url: https://www.pauker.at/pauker/DE_DE/hu/wb
+  title: Német-Magyar (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hungarian
+  - language
+de-hu 1:
+  url: https://www.pauker.at/pauker/DE_DE/hu/wb?suche={%word}
+  title: Német-Magyar (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - hungarian
+  - language
+  examples:
+  - arguments: baum
+    description: magyar fordítás a(z) "baum" számára
+  - arguments: fa
+    description: német fordítás a(z) "fa" számára
+de-hy 0:
+  url: https://www.pauker.at/pauker/DE_DE/hy/wb
+  title: Գերմաներեն-Հայերեն (Pauker.at)
+  tags:
+  - armenian
+  - dictionary
+  - german
+  - language
+de-hy 1:
+  url: https://www.pauker.at/pauker/DE_DE/hy/wb?suche={%word}
+  title: Գերմաներեն-Հայերեն (Pauker.at)
+  tags:
+  - armenian
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: հայերեն թարգմանություն "baum"
+  - arguments: ծառ
+    description: գերմաներեն թարգմանություն "ծառ"
+de-id 0:
+  url: https://www.pauker.at/pauker/DE_DE/id/wb
+  title: Jerman-Bahasa Indonesia (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - indonesian
+  - language
+de-id 1:
+  url: https://www.pauker.at/pauker/DE_DE/id/wb?suche={%word}
+  title: Jerman-Bahasa Indonesia (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - indonesian
+  - language
+  examples:
+  - arguments: baum
+    description: terjemahan Bahasa Indonesia dari "baum"
+  - arguments: pohon
+    description: terjemahan Jerman dari "pohon"
+de-ig 0:
+  url: https://www.pauker.at/pauker/DE_DE/ig/wb
+  title: Jamaan-Igbo (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - igbo
+  - language
+de-ig 1:
+  url: https://www.pauker.at/pauker/DE_DE/ig/wb?suche={%word}
+  title: Jamaan-Igbo (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - igbo
+  - language
+  examples:
+  - arguments: baum
+    description: Ọdịnaya Igbo nke "baum"
+  - arguments: ụlọ
+    description: Ọdịnaya Jamaan nke "ụlọ"
+de-ii 0:
+  url: https://www.pauker.at/pauker/DE_DE/ii/wb
+  title: ꄓꇩꉙ-ꆈꌠꉙ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - sichuan Yi
+de-ii 1:
+  url: https://www.pauker.at/pauker/DE_DE/ii/wb?suche={%word}
+  title: ꄓꇩꉙ-ꆈꌠꉙ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - sichuan Yi
+  examples:
+  - arguments: baum
+    description: 「baum」的ꆈꌠꉙ翻译
+  - arguments: ꆇꉙ
+    description: 「ꆇꉙ」的ꄓꇩꉙ翻译
+de-is 0:
+  url: https://www.pauker.at/pauker/DE_DE/is/wb
+  title: Þýska-Íslenska (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - icelandic
+  - language
+de-is 1:
+  url: https://www.pauker.at/pauker/DE_DE/is/wb?suche={%word}
+  title: Þýska-Íslenska (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - icelandic
+  - language
+  examples:
+  - arguments: baum
+    description: íslenska þýðing fyrir "baum"
+  - arguments: tré
+    description: þýska þýðing fyrir "tré"
+de-it 0:
+  url: https://www.pauker.at/pauker/DE_DE/it/wb
+  title: Tedesco-Italiano (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - italian
+  - language
+de-it 1:
+  url: https://www.pauker.at/pauker/DE_DE/it/wb?suche={%word}
+  title: Tedesco-Italiano (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - italian
+  - language
+  examples:
+  - arguments: baum
+    description: Traduzione in italiano di "baum"
+  - arguments: albero
+    description: Traduzione in tedesco di "albero"
+de-ja 0:
+  url: https://www.pauker.at/pauker/DE_DE/ja/wb
+  title: ドイツ語-日本語 (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - japanese
+  - language
+de-ja 1:
+  url: https://www.pauker.at/pauker/DE_DE/ja/wb?suche={%word}
+  title: ドイツ語-日本語 (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - japanese
+  - language
+  examples:
+  - arguments: baum
+    description: '"baum"の日本語翻訳'
+  - arguments: 木
+    description: '"木"のドイツ語翻訳'
+de-ka 0:
+  url: https://www.pauker.at/pauker/DE_DE/ka/wb
+  title: Გერმანული-Ქართული (Pauker.at)
+  tags:
+  - dictionary
+  - georgian
+  - german
+  - language
+de-ka 1:
+  url: https://www.pauker.at/pauker/DE_DE/ka/wb?suche={%word}
+  title: Გერმანული-Ქართული (Pauker.at)
+  tags:
+  - dictionary
+  - georgian
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: თარგმანი ქართული - "baum"
+  - arguments: ხე
+    description: თარგმანი გერმანული - "ხე"
+de-ki 0:
+  url: https://www.pauker.at/pauker/DE_DE/ki/wb
+  title: Kĩnjeremani-Gikuyu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kikuyu
+  - language
+de-ki 1:
+  url: https://www.pauker.at/pauker/DE_DE/ki/wb?suche={%word}
+  title: Kĩnjeremani-Gikuyu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kikuyu
+  - language
+  examples:
+  - arguments: baum
+    description: Rũmeera Gikuyu kũmbũ "baum"
+  - arguments: muthiga
+    description: Rũmeera Kĩnjeremani kũmbũ "muthiga"
+de-kk 0:
+  url: https://www.pauker.at/pauker/DE_DE/kk/wb
+  title: Неміс тілі-Қазақ тілі (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kazakh
+  - language
+de-kk 1:
+  url: https://www.pauker.at/pauker/DE_DE/kk/wb?suche={%word}
+  title: Неміс тілі-Қазақ тілі (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kazakh
+  - language
+  examples:
+  - arguments: baum
+    description: '"baum" сөзінің қазақ тілі аудармасы'
+  - arguments: ағаш
+    description: '"ағаш" сөзінің неміс тілі аудармасы'
+de-kl 0:
+  url: https://www.pauker.at/pauker/DE_DE/kl/wb
+  title: German-Kalaallisut (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kalaallisut
+  - language
+de-kl 1:
+  url: https://www.pauker.at/pauker/DE_DE/kl/wb?suche={%word}
+  title: German-Kalaallisut (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kalaallisut
+  - language
+  examples:
+  - arguments: baum
+    description: baum-inik kalaallisut-ippassuseq
+  - arguments: pisinnaatitaq
+    description: pisinnaatitaq-inik German-ippassuseq
+de-km 0:
+  url: https://www.pauker.at/pauker/DE_DE/km/wb
+  title: អាល្លឺម៉ង់-ខ្មែរ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - khmer
+  - language
+de-km 1:
+  url: https://www.pauker.at/pauker/DE_DE/km/wb?suche={%word}
+  title: អាល្លឺម៉ង់-ខ្មែរ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - khmer
+  - language
+  examples:
+  - arguments: baum
+    description: ការបកប្រែភាសា ខ្មែរ នៃ "baum"
+  - arguments: ដើម
+    description: ការបកប្រែភាសា អាល្លឺម៉ង់ នៃ "ដើម"
+de-kn 0:
+  url: https://www.pauker.at/pauker/DE_DE/kn/wb
+  title: ಜರ್ಮನ್-ಕನ್ನಡ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kannada
+  - language
+de-kn 1:
+  url: https://www.pauker.at/pauker/DE_DE/kn/wb?suche={%word}
+  title: ಜರ್ಮನ್-ಕನ್ನಡ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kannada
+  - language
+  examples:
+  - arguments: baum
+    description: ಕನ್ನಡನ baum ನ್ನು ಅನುವಾದಿಸಿ
+  - arguments: ಮರ
+    description: ಜರ್ಮನ್ನ ಮರ ನ್ನು ಅನುವಾದಿಸಿ
+de-ko 0:
+  url: https://www.pauker.at/pauker/DE_DE/ko/wb
+  title: 독일어-한국어 (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - korean
+  - language
+de-ko 1:
+  url: https://www.pauker.at/pauker/DE_DE/ko/wb?suche={%word}
+  title: 독일어-한국어 (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - korean
+  - language
+  examples:
+  - arguments: baum
+    description: '"baum"의 한국어 번역'
+  - arguments: 나무
+    description: '"나무"의 독일어 번역'
+de-ks 0:
+  url: https://www.pauker.at/pauker/DE_DE/ks/wb
+  title: جٔرمَن-کٲشُر (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kashmiri
+  - language
+de-ks 1:
+  url: https://www.pauker.at/pauker/DE_DE/ks/wb?suche={%word}
+  title: جٔرمَن-کٲشُر (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kashmiri
+  - language
+  examples:
+  - arguments: baum
+    description: ترجمه برای "baum" در کٲشُر
+  - arguments: بُرز
+    description: ترجمه برای "بُرز" در جٔرمَن
+de-kw 0:
+  url: https://www.pauker.at/pauker/DE_DE/kw/wb
+  title: German-Kernewek (Pauker.at)
+  tags:
+  - cornish
+  - dictionary
+  - german
+  - language
+de-kw 1:
+  url: https://www.pauker.at/pauker/DE_DE/kw/wb?suche={%word}
+  title: German-Kernewek (Pauker.at)
+  tags:
+  - cornish
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Tendysgya kernewek rag "baum"
+  - arguments: gogow
+    description: Tendysgya German rag "gogow"
+de-ky 0:
+  url: https://www.pauker.at/pauker/DE_DE/ky/wb
+  title: Немисче-Кыргызча (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kyrgyz
+  - language
+de-ky 1:
+  url: https://www.pauker.at/pauker/DE_DE/ky/wb?suche={%word}
+  title: Немисче-Кыргызча (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kyrgyz
+  - language
+  examples:
+  - arguments: baum
+    description: baum ичине кыргызча тилеги
+  - arguments: агач
+    description: агач ичине немисче тилеги
+de-la 0:
+  url: https://www.pauker.at/pauker/DE_DE/la/wb
+  title: Germanica-Latina (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latin
+de-la 1:
+  url: https://www.pauker.at/pauker/DE_DE/la/wb?suche={%word}
+  title: Germanica-Latina (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latin
+  examples:
+  - arguments: baum
+    description: Translatio in Latina pro "baum"
+  - arguments: arbor
+    description: Translatio in Germanica pro "arbor"
+de-lb 0:
+  url: https://www.pauker.at/pauker/DE_DE/lb/wb
+  title: Däitsch-Lëtzebuergesch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - luxembourgish
+de-lb 1:
+  url: https://www.pauker.at/pauker/DE_DE/lb/wb?suche={%word}
+  title: Däitsch-Lëtzebuergesch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - luxembourgish
+  examples:
+  - arguments: baum
+    description: Lëtzebuergesch Iwwersetzung vun "baum"
+  - arguments: Beem
+    description: Däitsch Iwwersetzung vun "Beem"
+de-lg 0:
+  url: https://www.pauker.at/pauker/DE_DE/lg/wb
+  title: Ludaaki-Luganda (Pauker.at)
+  tags:
+  - dictionary
+  - ganda
+  - german
+  - language
+de-lg 1:
+  url: https://www.pauker.at/pauker/DE_DE/lg/wb?suche={%word}
+  title: Ludaaki-Luganda (Pauker.at)
+  tags:
+  - dictionary
+  - ganda
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Oluvanyizo lwa "baum" ku Luganda
+  - arguments: ensolo
+    description: Oluvanyizo lwa "ensolo" ku Ludaaki
+de-ln 0:
+  url: https://www.pauker.at/pauker/DE_DE/ln/wb
+  title: Lialemá-Lingála (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - lingala
+de-ln 1:
+  url: https://www.pauker.at/pauker/DE_DE/ln/wb?suche={%word}
+  title: Lialemá-Lingála (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - lingala
+  examples:
+  - arguments: baum
+    description: Traduction lingála de "baum"
+  - arguments: molongo
+    description: Traduction lialemá de "molongo"
+de-lo 0:
+  url: https://www.pauker.at/pauker/DE_DE/lo/wb
+  title: ເຢຍລະມັນ-ລາວ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - lao
+de-lo 1:
+  url: https://www.pauker.at/pauker/DE_DE/lo/wb?suche={%word}
+  title: ເຢຍລະມັນ-ລາວ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - lao
+  examples:
+  - arguments: baum
+    description: ການແປພາສາ ລາວ ເປັນ "baum"
+  - arguments: ພາກໃຕ້
+    description: ການແປພາສາ ເຢຍລະມັນ ເປັນ "ພາກໃຕ້"
+de-lt 0:
+  url: https://www.pauker.at/pauker/DE_DE/lt/wb
+  title: Vokiečių-Lietuvių (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - lithuanian
+de-lt 1:
+  url: https://www.pauker.at/pauker/DE_DE/lt/wb?suche={%word}
+  title: Vokiečių-Lietuvių (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - lithuanian
+  examples:
+  - arguments: baum
+    description: lietuvių vertimas žodžiui "baum"
+  - arguments: medis
+    description: vokiečių vertimas žodžiui "medis"
+de-lv 0:
+  url: https://www.pauker.at/pauker/DE_DE/lv/wb
+  title: Vācu-Latviešu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latvian
+de-lv 1:
+  url: https://www.pauker.at/pauker/DE_DE/lv/wb?suche={%word}
+  title: Vācu-Latviešu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latvian
+  examples:
+  - arguments: baum
+    description: latviešu tulkojums vārdam "baum"
+  - arguments: koks
+    description: vācu tulkojums vārdam "koks"
+de-mg 0:
+  url: https://www.pauker.at/pauker/DE_DE/mg/wb
+  title: Alemanina-Malagasy (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - malagasy
+de-mg 1:
+  url: https://www.pauker.at/pauker/DE_DE/mg/wb?suche={%word}
+  title: Alemanina-Malagasy (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - malagasy
+  examples:
+  - arguments: baum
+    description: Famoronana eo an-toerana "baum" ao amin'i Malagasy
+  - arguments: hazo
+    description: Famoronana eo an-toerana "hazo" ao amin'i Alemanina
+de-mk 0:
+  url: https://www.pauker.at/pauker/DE_DE/mk/wb
+  title: Германски-Македонски (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - macedonian
+de-mk 1:
+  url: https://www.pauker.at/pauker/DE_DE/mk/wb?suche={%word}
+  title: Германски-Македонски (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - macedonian
+  examples:
+  - arguments: baum
+    description: Превод на македонски за "baum"
+  - arguments: дрво
+    description: Превод на германски за "дрво"
+de-ml 0:
+  url: https://www.pauker.at/pauker/DE_DE/ml/wb
+  title: ജർമ്മൻ-മലയാളം (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - malayalam
+de-ml 1:
+  url: https://www.pauker.at/pauker/DE_DE/ml/wb?suche={%word}
+  title: ജർമ്മൻ-മലയാളം (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - malayalam
+  examples:
+  - arguments: baum
+    description: '"baum"ന്‍റെ മലയാളം പരിഭാഷ'
+  - arguments: മരം
+    description: '"മരം"ന്‍റെ ജർമ്മൻ പരിഭാഷ'
+de-mn 0:
+  url: https://www.pauker.at/pauker/DE_DE/mn/wb
+  title: Герман-Монгол (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - mongolian
+de-mn 1:
+  url: https://www.pauker.at/pauker/DE_DE/mn/wb?suche={%word}
+  title: Герман-Монгол (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - mongolian
+  examples:
+  - arguments: baum
+    description: baum -н монгол орчуулга
+  - arguments: мод
+    description: мод -н герман орчуулга
+de-mr 0:
+  url: https://www.pauker.at/pauker/DE_DE/mr/wb
+  title: जर्मन-मराठी (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - marathi
+de-mr 1:
+  url: https://www.pauker.at/pauker/DE_DE/mr/wb?suche={%word}
+  title: जर्मन-मराठी (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - marathi
+  examples:
+  - arguments: baum
+    description: '"baum" च्या "मराठी" भाषेतील अनुवाद'
+  - arguments: झाड
+    description: '"झाड" च्या "जर्मन" भाषेतील अनुवाद'
+de-ms 0:
+  url: https://www.pauker.at/pauker/DE_DE/ms/wb
+  title: Jerman-Bahasa Melayu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - malay
+de-ms 1:
+  url: https://www.pauker.at/pauker/DE_DE/ms/wb?suche={%word}
+  title: Jerman-Bahasa Melayu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - malay
+  examples:
+  - arguments: baum
+    description: Terjemahan Bahasa Melayu bagi "baum"
+  - arguments: pokok
+    description: Terjemahan Jerman bagi "pokok"
+de-mt 0:
+  url: https://www.pauker.at/pauker/DE_DE/mt/wb
+  title: Ġermaniż-Malti (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - maltese
+de-mt 1:
+  url: https://www.pauker.at/pauker/DE_DE/mt/wb?suche={%word}
+  title: Ġermaniż-Malti (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - maltese
+  examples:
+  - arguments: baum
+    description: Traduzzjoni bil-Malti ta "baum"
+  - arguments: siġra
+    description: Traduzzjoni bil-Ġermaniż ta "siġra"
+de-my 0:
+  url: https://www.pauker.at/pauker/DE_DE/my/wb
+  title: ဂျာမန်-ဗမာ (Pauker.at)
+  tags:
+  - burmese
+  - dictionary
+  - german
+  - language
+de-my 1:
+  url: https://www.pauker.at/pauker/DE_DE/my/wb?suche={%word}
+  title: ဂျာမန်-ဗမာ (Pauker.at)
+  tags:
+  - burmese
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: '"ဗမာ" ဘာသာပြန်ထားသော "baum" ဘာသာပြန်ထားသည်'
+  - arguments: အိုးသတ္တု
+    description: '"ဂျာမန်" ဘာသာပြန်ထားသော "အိုးသတ္တု" ဘာသာပြန်ထားသည်'
+de-nb 0:
+  url: https://www.pauker.at/pauker/DE_DE/nb/wb
+  title: Tysk-Norsk bokmål (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian Bokmål
+de-nb 1:
+  url: https://www.pauker.at/pauker/DE_DE/nb/wb?suche={%word}
+  title: Tysk-Norsk bokmål (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian Bokmål
+  examples:
+  - arguments: baum
+    description: norsk bokmål-oversettelse av "baum"
+  - arguments: tre
+    description: tysk-oversettelse av "tre"
+de-nd 0:
+  url: https://www.pauker.at/pauker/DE_DE/nd/wb
+  title: Isi-Jalimani-IsiNdebele (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - north Ndebele
+de-nd 1:
+  url: https://www.pauker.at/pauker/DE_DE/nd/wb?suche={%word}
+  title: Isi-Jalimani-IsiNdebele (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - north Ndebele
+  examples:
+  - arguments: baum
+    description: 'Isihloko seNdebele sokuhlolwa kwebhuloho: "baum"'
+  - arguments: indlala
+    description: 'Isihloko seNdebele sokuhlolwa kwebhuloho: "indlala"'
+de-ne 0:
+  url: https://www.pauker.at/pauker/DE_DE/ne/wb
+  title: जर्मन-नेपाली (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - nepali
+de-ne 1:
+  url: https://www.pauker.at/pauker/DE_DE/ne/wb?suche={%word}
+  title: जर्मन-नेपाली (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - nepali
+  examples:
+  - arguments: baum
+    description: '"baum"को "नेपाली"मा अनुवाद गर्नुहोस्'
+  - arguments: रूख
+    description: '"रूख"को "जर्मन"मा अनुवाद गर्नुहोस्'
+de-nl 0:
+  url: https://www.pauker.at/pauker/DE_DE/nl/wb
+  title: Duits-Nederlands (Pauker.at)
+  tags:
+  - dictionary
+  - dutch
+  - german
+  - language
+de-nl 1:
+  url: https://www.pauker.at/pauker/DE_DE/nl/wb?suche={%word}
+  title: Duits-Nederlands (Pauker.at)
+  tags:
+  - dictionary
+  - dutch
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Nederlands-vertaling van "baum"
+  - arguments: boom
+    description: Duits-vertaling van "boom"
+de-nn 0:
+  url: https://www.pauker.at/pauker/DE_DE/nn/wb
+  title: Tysk-Nynorsk (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian Nynorsk
+de-nn 1:
+  url: https://www.pauker.at/pauker/DE_DE/nn/wb?suche={%word}
+  title: Tysk-Nynorsk (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian Nynorsk
+  examples:
+  - arguments: baum
+    description: nynorsk-oversetjing av "baum"
+  - arguments: tre
+    description: tysk-oversetjing av "tre"
+de-no 0:
+  url: https://www.pauker.at/pauker/DE_DE/no/wb
+  title: Tysk-Norsk (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian
+de-no 1:
+  url: https://www.pauker.at/pauker/DE_DE/no/wb?suche={%word}
+  title: Tysk-Norsk (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian
+  examples:
+  - arguments: baum
+    description: norsk-oversettelse av "baum"
+  - arguments: tre
+    description: tysk-oversettelse av "tre"
+de-om 0:
+  url: https://www.pauker.at/pauker/DE_DE/om/wb
+  title: Afaan Jarmanii-Oromoo (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - oromo
+de-om 1:
+  url: https://www.pauker.at/pauker/DE_DE/om/wb?suche={%word}
+  title: Afaan Jarmanii-Oromoo (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - oromo
+  examples:
+  - arguments: baum
+    description: Fayyadamaloota Oromooti baum qofa
+  - arguments: dhukesa
+    description: Fayyadamaloota Afaan Jarmaniiti dhukesa qofa
+de-or 0:
+  url: https://www.pauker.at/pauker/DE_DE/or/wb
+  title: ଜର୍ମାନ୍-ଓଡ଼ିଆ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - oriya
+de-or 1:
+  url: https://www.pauker.at/pauker/DE_DE/or/wb?suche={%word}
+  title: ଜର୍ମାନ୍-ଓଡ଼ିଆ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - oriya
+  examples:
+  - arguments: baum
+    description: '"baum" ପାଳନାରେ "ଓଡ଼ିଆ" ଅନୁବାଦ'
+  - arguments: ବାଣ
+    description: '"ବାଣ" ପାଳନାରେ "ଜର୍ମାନ୍" ଅନୁବାଦ'
+de-os 0:
+  url: https://www.pauker.at/pauker/DE_DE/os/wb
+  title: Немыцаг-Ирон (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - ossetic
+de-os 1:
+  url: https://www.pauker.at/pauker/DE_DE/os/wb?suche={%word}
+  title: Немыцаг-Ирон (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - ossetic
+  examples:
+  - arguments: baum
+    description: ирон æвзаг къæртон "baum"
+  - arguments: дӕрвӕ
+    description: немыцаг æвзаг къæртон "дӕрвӕ"
+de-pa 0:
+  url: https://www.pauker.at/pauker/DE_DE/pa/wb
+  title: ਜਰਮਨ-ਪੰਜਾਬੀ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - punjabi
+de-pa 1:
+  url: https://www.pauker.at/pauker/DE_DE/pa/wb?suche={%word}
+  title: ਜਰਮਨ-ਪੰਜਾਬੀ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - punjabi
+  examples:
+  - arguments: baum
+    description: '"baum" ਦਾ "ਪੰਜਾਬੀ" ਵਿੱਚ ਅਨੁਵਾਦ'
+  - arguments: ਰੁੱਖ
+    description: '"ਰੁੱਖ" ਦਾ "ਜਰਮਨ" ਵਿੱਚ ਅਨੁਵਾਦ'
+de-pl 0:
+  url: https://www.pauker.at/pauker/DE_DE/pl/wb
+  title: Niemiecki-Polski (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - polish
+de-pl 1:
+  url: https://www.pauker.at/pauker/DE_DE/pl/wb?suche={%word}
+  title: Niemiecki-Polski (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - polish
+  examples:
+  - arguments: baum
+    description: Tłumaczenie na język polski dla "baum"
+  - arguments: drzewo
+    description: Tłumaczenie na język niemiecki dla "drzewo"
+de-ps 0:
+  url: https://www.pauker.at/pauker/DE_DE/ps/wb
+  title: الماني-پښتو (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - pashto
+de-ps 1:
+  url: https://www.pauker.at/pauker/DE_DE/ps/wb?suche={%word}
+  title: الماني-پښتو (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - pashto
+  examples:
+  - arguments: baum
+    description: د "baum" د پښتو ترجمه
+  - arguments: درخت
+    description: د "درخت" د الماني ترجمه
+de-pt 0:
+  url: https://www.pauker.at/pauker/DE_DE/pt/wb
+  title: Alemão-Português (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
+de-pt 1:
+  url: https://www.pauker.at/pauker/DE_DE/pt/wb?suche={%word}
+  title: Alemão-Português (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
+  examples:
+  - arguments: baum
+    description: Tradução em português de "baum"
+  - arguments: árvore
+    description: Tradução em alemão de "árvore"
+de-qu 0:
+  url: https://www.pauker.at/pauker/DE_DE/qu/wb
+  title: Aleman Simi-Runasimi (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - quechua
+de-qu 1:
+  url: https://www.pauker.at/pauker/DE_DE/qu/wb?suche={%word}
+  title: Aleman Simi-Runasimi (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - quechua
+  examples:
+  - arguments: baum
+    description: Runasimi-pi "baum"ta tʼikray
+  - arguments: kulli
+    description: Aleman Simi-pi "kulli"ta tʼikray
+de-rm 0:
+  url: https://www.pauker.at/pauker/DE_DE/rm/wb
+  title: Tudestg-Rumantsch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - romansh
+de-rm 1:
+  url: https://www.pauker.at/pauker/DE_DE/rm/wb?suche={%word}
+  title: Tudestg-Rumantsch (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - romansh
+  examples:
+  - arguments: baum
+    description: Traducziun en rumantsch dad "baum"
+  - arguments: tree
+    description: Traducziun en tudestg dad "tree"
+de-rn 0:
+  url: https://www.pauker.at/pauker/DE_DE/rn/wb
+  title: Ikidage-Ikirundi (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - rundi
+de-rn 1:
+  url: https://www.pauker.at/pauker/DE_DE/rn/wb?suche={%word}
+  title: Ikidage-Ikirundi (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - rundi
+  examples:
+  - arguments: baum
+    description: Ijambo ry'in Kirundi ryitwa "baum" rirahindutse mu guswera kwa "Ikirundi"
+  - arguments: umutumbudu
+    description: Ijambo ry'in Kirundi ryitwa "umutumbudu" rirahindutse mu guswera kwa "Ikidage"
+de-ro 0:
+  url: https://www.pauker.at/pauker/DE_DE/ro/wb
+  title: Germană-Română (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - romanian
+de-ro 1:
+  url: https://www.pauker.at/pauker/DE_DE/ro/wb?suche={%word}
+  title: Germană-Română (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - romanian
+  examples:
+  - arguments: baum
+    description: Traducere în română pentru "baum"
+  - arguments: copac
+    description: Traducere în germană pentru "copac"
+de-ru 0:
+  url: https://www.pauker.at/pauker/DE_DE/ru/wb
+  title: Немецкий-Русский (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - russian
+de-ru 1:
+  url: https://www.pauker.at/pauker/DE_DE/ru/wb?suche={%word}
+  title: Немецкий-Русский (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - russian
+  examples:
+  - arguments: baum
+    description: Перевод на русский язык для "baum"
+  - arguments: дерево
+    description: Перевод на немецкий язык для "дерево"
+de-rw 0:
+  url: https://www.pauker.at/pauker/DE_DE/rw/wb
+  title: Ikidage-Kinyarwanda (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kinyarwanda
+  - language
+de-rw 1:
+  url: https://www.pauker.at/pauker/DE_DE/rw/wb?suche={%word}
+  title: Ikidage-Kinyarwanda (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - kinyarwanda
+  - language
+  examples:
+  - arguments: baum
+    description: Itangazo ry'ururimi rwa Kinyarwanda rishya ryitwa "baum" mu gitabo "Kinyarwanda"
+  - arguments: umusozi
+    description: Itangazo ry'ururimi rwa Kinyarwanda rishya ryitwa "umusozi" mu gitabo "Ikidage"
+de-se 0:
+  url: https://www.pauker.at/pauker/DE_DE/se/wb
+  title: Duiskkagiella-Davvisámegiella (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - northern Sami
+de-se 1:
+  url: https://www.pauker.at/pauker/DE_DE/se/wb?suche={%word}
+  title: Duiskkagiella-Davvisámegiella (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - northern Sami
+  examples:
+  - arguments: baum
+    description: davvisámegiella dáppeaddji "baum"
+  - arguments: oahppu
+    description: duiskkagiella dáppeaddji "oahppu"
+de-sg 0:
+  url: https://www.pauker.at/pauker/DE_DE/sg/wb
+  title: Zâmani-Sängö (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - sango
+de-sg 1:
+  url: https://www.pauker.at/pauker/DE_DE/sg/wb?suche={%word}
+  title: Zâmani-Sängö (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - sango
+  examples:
+  - arguments: baum
+    description: Traduction Sängö de "baum"
+  - arguments: mbombo
+    description: Traduction Zâmani de "mbombo"
+de-si 0:
+  url: https://www.pauker.at/pauker/DE_DE/si/wb
+  title: ජර්මන්-සිංහල (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - sinhala
+de-si 1:
+  url: https://www.pauker.at/pauker/DE_DE/si/wb?suche={%word}
+  title: ජර්මන්-සිංහල (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - sinhala
+  examples:
+  - arguments: baum
+    description: සිංහල පරිවර්තකය "baum" සඳහා
+  - arguments: ගස
+    description: ජර්මන් පරිවර්තකය "ගස" සඳහා
+de-sk 0:
+  url: https://www.pauker.at/pauker/DE_DE/sk/wb
+  title: Nemčina-Slovenčina (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - slovak
+de-sk 1:
+  url: https://www.pauker.at/pauker/DE_DE/sk/wb?suche={%word}
+  title: Nemčina-Slovenčina (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - slovak
+  examples:
+  - arguments: baum
+    description: slovenčina preklad pre "baum"
+  - arguments: stromček
+    description: nemčina preklad pre "stromček"
+de-sl 0:
+  url: https://www.pauker.at/pauker/DE_DE/sl/wb
+  title: Nemščina-Slovenščina (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - slovenian
+de-sl 1:
+  url: https://www.pauker.at/pauker/DE_DE/sl/wb?suche={%word}
+  title: Nemščina-Slovenščina (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - slovenian
+  examples:
+  - arguments: baum
+    description: Prevod v slovenščina za besedo "baum"
+  - arguments: drevo
+    description: Prevod v nemščina za besedo "drevo"
+de-sn 0:
+  url: https://www.pauker.at/pauker/DE_DE/sn/wb
+  title: ChiJerimani-ChiShona (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - shona
+de-sn 1:
+  url: https://www.pauker.at/pauker/DE_DE/sn/wb?suche={%word}
+  title: ChiJerimani-ChiShona (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - shona
+  examples:
+  - arguments: baum
+    description: chiShona chitaura cha "baum"
+  - arguments: mutsvairo
+    description: chiJerimani chitaura cha "mutsvairo"
+de-so 0:
+  url: https://www.pauker.at/pauker/DE_DE/so/wb
+  title: Jarmal-Soomaali (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - somali
+de-so 1:
+  url: https://www.pauker.at/pauker/DE_DE/so/wb?suche={%word}
+  title: Jarmal-Soomaali (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - somali
+  examples:
+  - arguments: baum
+    description: Soomaali turjumaad "baum"
+  - arguments: geed
+    description: Jarmal turjumaad "geed"
+de-sq 0:
+  url: https://www.pauker.at/pauker/DE_DE/sq/wb
+  title: Gjermanisht-Shqip (Pauker.at)
+  tags:
+  - albanian
+  - dictionary
+  - german
+  - language
+de-sq 1:
+  url: https://www.pauker.at/pauker/DE_DE/sq/wb?suche={%word}
+  title: Gjermanisht-Shqip (Pauker.at)
+  tags:
+  - albanian
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Përkthim në shqip të "baum"
+  - arguments: pemë
+    description: Përkthim në gjermanisht të "pemë"
+de-sr 0:
+  url: https://www.pauker.at/pauker/DE_DE/sr/wb
+  title: Немачки-Српски (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - serbian
+de-sr 1:
+  url: https://www.pauker.at/pauker/DE_DE/sr/wb?suche={%word}
+  title: Немачки-Српски (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - serbian
+  examples:
+  - arguments: baum
+    description: Превод на српски за "baum"
+  - arguments: дрво
+    description: Превод на немачки за "дрво"
+de-sv 0:
+  url: https://www.pauker.at/pauker/DE_DE/sv/wb
+  title: Tyska-Svenska (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - swedish
+de-sv 1:
+  url: https://www.pauker.at/pauker/DE_DE/sv/wb?suche={%word}
+  title: Tyska-Svenska (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - swedish
+  examples:
+  - arguments: baum
+    description: svenska-översättning av "baum"
+  - arguments: träd
+    description: tyska-översättning av "träd"
+de-sw 0:
+  url: https://www.pauker.at/pauker/DE_DE/sw/wb
+  title: Kijerumani-Kiswahili (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - swahili
+de-sw 1:
+  url: https://www.pauker.at/pauker/DE_DE/sw/wb?suche={%word}
+  title: Kijerumani-Kiswahili (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - swahili
+  examples:
+  - arguments: baum
+    description: Tafsiri ya Kiswahili ya "baum"
+  - arguments: mti
+    description: Tafsiri ya Kijerumani ya "mti"
+de-ta 0:
+  url: https://www.pauker.at/pauker/DE_DE/ta/wb
+  title: ஜெர்மன்-தமிழ் (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tamil
+de-ta 1:
+  url: https://www.pauker.at/pauker/DE_DE/ta/wb?suche={%word}
+  title: ஜெர்மன்-தமிழ் (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tamil
+  examples:
+  - arguments: baum
+    description: தமிழ் மொழியில் "baum" பெயர்ச்சி
+  - arguments: மரம்
+    description: தமிழ் மொழியில் "மரம்" பெயர்ச்சி
+de-te 0:
+  url: https://www.pauker.at/pauker/DE_DE/te/wb
+  title: జర్మన్-తెలుగు (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - telugu
+de-te 1:
+  url: https://www.pauker.at/pauker/DE_DE/te/wb?suche={%word}
+  title: జర్మన్-తెలుగు (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - telugu
+  examples:
+  - arguments: baum
+    description: తెలుగు అనువాదం "baum" కోసం
+  - arguments: చెట్టు
+    description: జర్మన్ అనువాదం "చెట్టు" కోసం
+de-th 0:
+  url: https://www.pauker.at/pauker/DE_DE/th/wb
+  title: เยอรมัน-ไทย (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - thai
+de-th 1:
+  url: https://www.pauker.at/pauker/DE_DE/th/wb?suche={%word}
+  title: เยอรมัน-ไทย (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - thai
+  examples:
+  - arguments: baum
+    description: การแปลไทยของคำว่า "baum"
+  - arguments: ต้นไม้
+    description: การแปลเยอรมันของคำว่า "ต้นไม้"
+de-ti 0:
+  url: https://www.pauker.at/pauker/DE_DE/ti/wb
+  title: ጀርመን-ትግርኛ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tigrinya
+de-ti 1:
+  url: https://www.pauker.at/pauker/DE_DE/ti/wb?suche={%word}
+  title: ጀርመን-ትግርኛ (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tigrinya
+  examples:
+  - arguments: baum
+    description: ትግርኛ translation of "baum"
+  - arguments: ኣበባ
+    description: ጀርመን translation of "ኣበባ"
+de-tl 0:
+  url: https://www.pauker.at/pauker/DE_DE/tl/wb
+  title: German-Tagalog (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tagalog
+de-tl 1:
+  url: https://www.pauker.at/pauker/DE_DE/tl/wb?suche={%word}
+  title: German-Tagalog (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tagalog
+  examples:
+  - arguments: baum
+    description: Pagsasalin sa Tagalog ng "baum"
+  - arguments: puno
+    description: Pagsasalin sa German ng "puno"
+de-to 0:
+  url: https://www.pauker.at/pauker/DE_DE/to/wb
+  title: Lea fakasiamane-Lea fakatonga (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tongan
+de-to 1:
+  url: https://www.pauker.at/pauker/DE_DE/to/wb?suche={%word}
+  title: Lea fakasiamane-Lea fakatonga (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - tongan
+  examples:
+  - arguments: baum
+    description: Fakafanua lea fakatonga ki he "baum"
+  - arguments: kahoa
+    description: Fakafanua lea fakasiamane ki he "kahoa"
+de-tr 0:
+  url: https://www.pauker.at/pauker/DE_DE/tr/wb
+  title: Almanca-Türkçe (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - turkish
+de-tr 1:
+  url: https://www.pauker.at/pauker/DE_DE/tr/wb?suche={%word}
+  title: Almanca-Türkçe (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - turkish
+  examples:
+  - arguments: baum
+    description: '"baum" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için Almanca çevirisi'
+de-ug 0:
+  url: https://www.pauker.at/pauker/DE_DE/ug/wb
+  title: گېرمانچە-ئۇيغۇرچە (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - uyghur
+de-ug 1:
+  url: https://www.pauker.at/pauker/DE_DE/ug/wb?suche={%word}
+  title: گېرمانچە-ئۇيغۇرچە (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - uyghur
+  examples:
+  - arguments: baum
+    description: ئۇيغۇرچە ھۆججەتتىكى "دەرۋازە" ناملىق سۆزنى تەرجىمىسى
+  - arguments: قۇش
+    description: گېرمانچە ھۆججەتتىكى "دەرۋازە" ناملىق سۆزنى تەرجىمىسى
+de-uk 0:
+  url: https://www.pauker.at/pauker/DE_DE/uk/wb
+  title: Німецька-Українська (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - ukrainian
+de-uk 1:
+  url: https://www.pauker.at/pauker/DE_DE/uk/wb?suche={%word}
+  title: Німецька-Українська (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - ukrainian
+  examples:
+  - arguments: baum
+    description: Переклад українська для "baum"
+  - arguments: дерево
+    description: Переклад німецька для "дерево"
+de-ur 0:
+  url: https://www.pauker.at/pauker/DE_DE/ur/wb
+  title: جرمن-اردو (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - urdu
+de-ur 1:
+  url: https://www.pauker.at/pauker/DE_DE/ur/wb?suche={%word}
+  title: جرمن-اردو (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - urdu
+  examples:
+  - arguments: baum
+    description: baum کے اردو ترجمہ
+  - arguments: درخت
+    description: درخت کے جرمن ترجمہ
+de-uz 0:
+  url: https://www.pauker.at/pauker/DE_DE/uz/wb
+  title: Nemischa-Oʻzbekcha (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - uzbek
+de-uz 1:
+  url: https://www.pauker.at/pauker/DE_DE/uz/wb?suche={%word}
+  title: Nemischa-Oʻzbekcha (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - uzbek
+  examples:
+  - arguments: baum
+    description: oʻzbekcha tiliga "baum" tarjima
+  - arguments: daraxt
+    description: nemischa tiliga "daraxt" tarjima
+de-vi 0:
+  url: https://www.pauker.at/pauker/DE_DE/vi/wb
+  title: Tiếng Đức-Tiếng Việt (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - vietnamese
+de-vi 1:
+  url: https://www.pauker.at/pauker/DE_DE/vi/wb?suche={%word}
+  title: Tiếng Đức-Tiếng Việt (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - vietnamese
+  examples:
+  - arguments: baum
+    description: Bản dịch Tiếng Việt của "baum"
+  - arguments: cây
+    description: Bản dịch Tiếng Đức của "cây"
+de-yi 0:
+  url: https://www.pauker.at/pauker/DE_DE/yi/wb
+  title: דײַטש-ייִדיש (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - yiddish
+de-yi 1:
+  url: https://www.pauker.at/pauker/DE_DE/yi/wb?suche={%word}
+  title: דײַטש-ייִדיש (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - yiddish
+  examples:
+  - arguments: baum
+    description: ייִדיש יידיש יבערזעצונג פון "baum"
+  - arguments: בוים
+    description: דײַטש יידיש יבערזעצונג פון "בוים"
+de-yo 0:
+  url: https://www.pauker.at/pauker/DE_DE/yo/wb
+  title: Èdè Ilẹ̀ Gemani-Èdè Yorùbá (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - yoruba
+de-yo 1:
+  url: https://www.pauker.at/pauker/DE_DE/yo/wb?suche={%word}
+  title: Èdè Ilẹ̀ Gemani-Èdè Yorùbá (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - yoruba
+  examples:
+  - arguments: baum
+    description: Itumọ rẹ ni Èdè Yorùbá lati "baum"
+  - arguments: igi
+    description: Itumọ rẹ ni Èdè Ilẹ̀ Gemani lati "igi"
+de-zh 0:
+  url: https://www.pauker.at/pauker/DE_DE/zh/wb
+  title: 德文-中文 (Pauker.at)
+  tags:
+  - chinese
+  - dictionary
+  - german
+  - language
+de-zh 1:
+  url: https://www.pauker.at/pauker/DE_DE/zh/wb?suche={%word}
+  title: 德文-中文 (Pauker.at)
+  tags:
+  - chinese
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: 中文 的"baum"翻译
+  - arguments: 树
+    description: 德文 的"树"翻译
+de-zu 0:
+  url: https://www.pauker.at/pauker/DE_DE/zu/wb
+  title: Isi-German-IsiZulu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - zulu
+de-zu 1:
+  url: https://www.pauker.at/pauker/DE_DE/zu/wb?suche={%word}
+  title: Isi-German-IsiZulu (Pauker.at)
+  tags:
+  - dictionary
+  - german
+  - language
+  - zulu
+  examples:
+  - arguments: baum
+    description: Ukuthathwa kwe isiZulu kuka "baum"
+  - arguments: isihlahla
+    description: Ukuthathwa kwe isi-German kuka "isihlahla"
+dz 0:
+  include:
+    key: dz-{$language} 0
+dz 1:
+  include:
+    key: dz-{$language} 1
+dz-de 0:
+  title: Bhutanisch-Deutsch (Pauker.at)
+  include:
+    key: de-dz 0
+dz-de 1:
+  title: Bhutanisch-Deutsch (Pauker.at)
+  include:
+    key: de-dz 1
+  examples:
+  - arguments: སྣ་ཚོགས་
+    description: Deutsch-Übersetzung von "སྣ་ཚོགས་"
+  - arguments: baum
+    description: Bhutanisch-Übersetzung von "baum"
+el 0:
+  include:
+    key: el-{$language} 0
+el 1:
+  include:
+    key: el-{$language} 1
+el-de 0:
+  title: Griechisch-Deutsch (Pauker.at)
+  include:
+    key: de-el 0
+el-de 1:
+  title: Griechisch-Deutsch (Pauker.at)
+  include:
+    key: de-el 1
+  examples:
+  - arguments: δέντρο
+    description: Deutsch-Übersetzung von "δέντρο"
+  - arguments: baum
+    description: Griechisch-Übersetzung von "baum"
+en 0:
+  include:
+    key: en-{$language} 0
+en 1:
+  include:
+    key: en-{$language} 1
+en-de 0:
+  title: Englisch-Deutsch (Pauker.at)
+  include:
+    key: de-en 0
+en-de 1:
+  title: Englisch-Deutsch (Pauker.at)
+  include:
+    key: de-en 1
+  examples:
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Englisch-Übersetzung von "baum"
+eo 0:
+  include:
+    key: eo-{$language} 0
+eo 1:
+  include:
+    key: eo-{$language} 1
+eo-de 0:
+  title: Esperanto-Deutsch (Pauker.at)
+  include:
+    key: de-eo 0
+eo-de 1:
+  title: Esperanto-Deutsch (Pauker.at)
+  include:
+    key: de-eo 1
+  examples:
+  - arguments: arbo
+    description: Deutsch-Übersetzung von "arbo"
+  - arguments: baum
+    description: Esperanto-Übersetzung von "baum"
+es 0:
+  include:
+    key: es-{$language} 0
+es 1:
+  include:
+    key: es-{$language} 1
+es-de 0:
+  title: Spanisch-Deutsch (Pauker.at)
+  include:
+    key: de-es 0
+es-de 1:
+  title: Spanisch-Deutsch (Pauker.at)
+  include:
+    key: de-es 1
+  examples:
+  - arguments: árbol
+    description: Deutsch-Übersetzung von "árbol"
+  - arguments: baum
+    description: Spanisch-Übersetzung von "baum"
+et 0:
+  include:
+    key: et-{$language} 0
+et 1:
+  include:
+    key: et-{$language} 1
+et-de 0:
+  title: Estnisch-Deutsch (Pauker.at)
+  include:
+    key: de-et 0
+et-de 1:
+  title: Estnisch-Deutsch (Pauker.at)
+  include:
+    key: de-et 1
+  examples:
+  - arguments: puu
+    description: Deutsch-Übersetzung von "puu"
+  - arguments: baum
+    description: Estnisch-Übersetzung von "baum"
+eu 0:
+  include:
+    key: eu-{$language} 0
+eu 1:
+  include:
+    key: eu-{$language} 1
+eu-de 0:
+  title: Baskisch-Deutsch (Pauker.at)
+  include:
+    key: de-eu 0
+eu-de 1:
+  title: Baskisch-Deutsch (Pauker.at)
+  include:
+    key: de-eu 1
+  examples:
+  - arguments: zuhaitz
+    description: Deutsch-Übersetzung von "zuhaitz"
+  - arguments: baum
+    description: Baskisch-Übersetzung von "baum"
+fa 0:
+  include:
+    key: fa-{$language} 0
+fa 1:
+  include:
+    key: fa-{$language} 1
+fa-de 0:
+  title: Persisch-Deutsch (Pauker.at)
+  include:
+    key: de-fa 0
+fa-de 1:
+  title: Persisch-Deutsch (Pauker.at)
+  include:
+    key: de-fa 1
+  examples:
+  - arguments: درخت
+    description: Deutsch-Übersetzung von "درخت"
+  - arguments: baum
+    description: Persisch-Übersetzung von "baum"
+fi 0:
+  include:
+    key: fi-{$language} 0
+fi 1:
+  include:
+    key: fi-{$language} 1
+fi-de 0:
+  title: Finnisch-Deutsch (Pauker.at)
+  include:
+    key: de-fi 0
+fi-de 1:
+  title: Finnisch-Deutsch (Pauker.at)
+  include:
+    key: de-fi 1
+  examples:
+  - arguments: puu
+    description: Deutsch-Übersetzung von "puu"
+  - arguments: baum
+    description: Finnisch-Übersetzung von "baum"
+fo 0:
+  include:
+    key: fo-{$language} 0
+fo 1:
+  include:
+    key: fo-{$language} 1
+fo-de 0:
+  title: Färöisch-Deutsch (Pauker.at)
+  include:
+    key: de-fo 0
+fo-de 1:
+  title: Färöisch-Deutsch (Pauker.at)
+  include:
+    key: de-fo 1
+  examples:
+  - arguments: træ
+    description: Deutsch-Übersetzung von "træ"
+  - arguments: baum
+    description: Färöisch-Übersetzung von "baum"
+fr 0:
+  include:
+    key: fr-{$language} 0
+fr 1:
+  include:
+    key: fr-{$language} 1
+fr-de 0:
+  title: Französisch-Deutsch (Pauker.at)
+  include:
+    key: de-fr 0
+fr-de 1:
+  title: Französisch-Deutsch (Pauker.at)
+  include:
+    key: de-fr 1
+  examples:
+  - arguments: arbre
+    description: Deutsch-Übersetzung von "arbre"
+  - arguments: baum
+    description: Französisch-Übersetzung von "baum"
+fy 0:
+  include:
+    key: fy-{$language} 0
+fy 1:
+  include:
+    key: fy-{$language} 1
+fy-de 0:
+  title: Westfriesisch-Deutsch (Pauker.at)
+  include:
+    key: de-fy 0
+fy-de 1:
+  title: Westfriesisch-Deutsch (Pauker.at)
+  include:
+    key: de-fy 1
+  examples:
+  - arguments: beam
+    description: Deutsch-Übersetzung von "beam"
+  - arguments: baum
+    description: Westfriesisch-Übersetzung von "baum"
+ga 0:
+  include:
+    key: ga-{$language} 0
+ga 1:
+  include:
+    key: ga-{$language} 1
+ga-de 0:
+  title: Irisch-Deutsch (Pauker.at)
+  include:
+    key: de-ga 0
+ga-de 1:
+  title: Irisch-Deutsch (Pauker.at)
+  include:
+    key: de-ga 1
+  examples:
+  - arguments: crann
+    description: Deutsch-Übersetzung von "crann"
+  - arguments: baum
+    description: Irisch-Übersetzung von "baum"
+gd 0:
+  include:
+    key: gd-{$language} 0
+gd 1:
+  include:
+    key: gd-{$language} 1
+gd-de 0:
+  title: Schottisches Gälisch-Deutsch (Pauker.at)
+  include:
+    key: de-gd 0
+gd-de 1:
+  title: Schottisches Gälisch-Deutsch (Pauker.at)
+  include:
+    key: de-gd 1
+  examples:
+  - arguments: craobh
+    description: Deutsch-Übersetzung von "craobh"
+  - arguments: baum
+    description: Schottisches Gälisch-Übersetzung von "baum"
+gl 0:
+  include:
+    key: gl-{$language} 0
+gl 1:
+  include:
+    key: gl-{$language} 1
+gl-de 0:
+  title: Galizisch-Deutsch (Pauker.at)
+  include:
+    key: de-gl 0
+gl-de 1:
+  title: Galizisch-Deutsch (Pauker.at)
+  include:
+    key: de-gl 1
+  examples:
+  - arguments: árbore
+    description: Deutsch-Übersetzung von "árbore"
+  - arguments: baum
+    description: Galizisch-Übersetzung von "baum"
+gu 0:
+  include:
+    key: gu-{$language} 0
+gu 1:
+  include:
+    key: gu-{$language} 1
+gu-de 0:
+  title: Gujarati-Deutsch (Pauker.at)
+  include:
+    key: de-gu 0
+gu-de 1:
+  title: Gujarati-Deutsch (Pauker.at)
+  include:
+    key: de-gu 1
+  examples:
+  - arguments: વૃક્ષ
+    description: Deutsch-Übersetzung von "વૃક્ષ"
+  - arguments: baum
+    description: Gujarati-Übersetzung von "baum"
+ha 0:
+  include:
+    key: ha-{$language} 0
+ha 1:
+  include:
+    key: ha-{$language} 1
+ha-de 0:
+  title: Hausa-Deutsch (Pauker.at)
+  include:
+    key: de-ha 0
+ha-de 1:
+  title: Hausa-Deutsch (Pauker.at)
+  include:
+    key: de-ha 1
+  examples:
+  - arguments: gashi
+    description: Deutsch-Übersetzung von "gashi"
+  - arguments: baum
+    description: Hausa-Übersetzung von "baum"
+he 0:
+  include:
+    key: he-{$language} 0
+he 1:
+  include:
+    key: he-{$language} 1
+he-de 0:
+  title: Hebräisch-Deutsch (Pauker.at)
+  include:
+    key: de-he 0
+he-de 1:
+  title: Hebräisch-Deutsch (Pauker.at)
+  include:
+    key: de-he 1
+  examples:
+  - arguments: עץ
+    description: Deutsch-Übersetzung von "עץ"
+  - arguments: baum
+    description: Hebräisch-Übersetzung von "baum"
+hi 0:
+  include:
+    key: hi-{$language} 0
+hi 1:
+  include:
+    key: hi-{$language} 1
+hi-de 0:
+  title: Hindi-Deutsch (Pauker.at)
+  include:
+    key: de-hi 0
+hi-de 1:
+  title: Hindi-Deutsch (Pauker.at)
+  include:
+    key: de-hi 1
+  examples:
+  - arguments: पेड़
+    description: Deutsch-Übersetzung von "पेड़"
+  - arguments: baum
+    description: Hindi-Übersetzung von "baum"
+hr 0:
+  include:
+    key: hr-{$language} 0
+hr 1:
+  include:
+    key: hr-{$language} 1
+hr-de 0:
+  title: Kroatisch-Deutsch (Pauker.at)
+  include:
+    key: de-hr 0
+hr-de 1:
+  title: Kroatisch-Deutsch (Pauker.at)
+  include:
+    key: de-hr 1
+  examples:
+  - arguments: stablo
+    description: Deutsch-Übersetzung von "stablo"
+  - arguments: baum
+    description: Kroatisch-Übersetzung von "baum"
+hu 0:
+  include:
+    key: hu-{$language} 0
+hu 1:
+  include:
+    key: hu-{$language} 1
+hu-de 0:
+  title: Ungarisch-Deutsch (Pauker.at)
+  include:
+    key: de-hu 0
+hu-de 1:
+  title: Ungarisch-Deutsch (Pauker.at)
+  include:
+    key: de-hu 1
+  examples:
+  - arguments: fa
+    description: Deutsch-Übersetzung von "fa"
+  - arguments: baum
+    description: Ungarisch-Übersetzung von "baum"
+hy 0:
+  include:
+    key: hy-{$language} 0
+hy 1:
+  include:
+    key: hy-{$language} 1
+hy-de 0:
+  title: Armenisch-Deutsch (Pauker.at)
+  include:
+    key: de-hy 0
+hy-de 1:
+  title: Armenisch-Deutsch (Pauker.at)
+  include:
+    key: de-hy 1
+  examples:
+  - arguments: ծառ
+    description: Deutsch-Übersetzung von "ծառ"
+  - arguments: baum
+    description: Armenisch-Übersetzung von "baum"
+id 0:
+  include:
+    key: id-{$language} 0
+id 1:
+  include:
+    key: id-{$language} 1
+id-de 0:
+  title: Indonesisch-Deutsch (Pauker.at)
+  include:
+    key: de-id 0
+id-de 1:
+  title: Indonesisch-Deutsch (Pauker.at)
+  include:
+    key: de-id 1
+  examples:
+  - arguments: pohon
+    description: Deutsch-Übersetzung von "pohon"
+  - arguments: baum
+    description: Indonesisch-Übersetzung von "baum"
+ig 0:
+  include:
+    key: ig-{$language} 0
+ig 1:
+  include:
+    key: ig-{$language} 1
+ig-de 0:
+  title: Igbo-Deutsch (Pauker.at)
+  include:
+    key: de-ig 0
+ig-de 1:
+  title: Igbo-Deutsch (Pauker.at)
+  include:
+    key: de-ig 1
+  examples:
+  - arguments: ụlọ
+    description: Deutsch-Übersetzung von "ụlọ"
+  - arguments: baum
+    description: Igbo-Übersetzung von "baum"
+ii 0:
+  include:
+    key: ii-{$language} 0
+ii 1:
+  include:
+    key: ii-{$language} 1
+ii-de 0:
+  title: Yi-Deutsch (Pauker.at)
+  include:
+    key: de-ii 0
+ii-de 1:
+  title: Yi-Deutsch (Pauker.at)
+  include:
+    key: de-ii 1
+  examples:
+  - arguments: ꆇꉙ
+    description: Deutsch-Übersetzung von "ꆇꉙ"
+  - arguments: baum
+    description: Yi-Übersetzung von "baum"
+is 0:
+  include:
+    key: is-{$language} 0
+is 1:
+  include:
+    key: is-{$language} 1
+is-de 0:
+  title: Isländisch-Deutsch (Pauker.at)
+  include:
+    key: de-is 0
+is-de 1:
+  title: Isländisch-Deutsch (Pauker.at)
+  include:
+    key: de-is 1
+  examples:
+  - arguments: tré
+    description: Deutsch-Übersetzung von "tré"
+  - arguments: baum
+    description: Isländisch-Übersetzung von "baum"
+it 0:
+  include:
+    key: it-{$language} 0
+it 1:
+  include:
+    key: it-{$language} 1
+it-de 0:
+  title: Italienisch-Deutsch (Pauker.at)
+  include:
+    key: de-it 0
+it-de 1:
+  title: Italienisch-Deutsch (Pauker.at)
+  include:
+    key: de-it 1
+  examples:
+  - arguments: albero
+    description: Deutsch-Übersetzung von "albero"
+  - arguments: baum
+    description: Italienisch-Übersetzung von "baum"
+ja 0:
+  include:
+    key: ja-{$language} 0
+ja 1:
+  include:
+    key: ja-{$language} 1
+ja-de 0:
+  title: Japanisch-Deutsch (Pauker.at)
+  include:
+    key: de-ja 0
+ja-de 1:
+  title: Japanisch-Deutsch (Pauker.at)
+  include:
+    key: de-ja 1
+  examples:
+  - arguments: 木
+    description: Deutsch-Übersetzung von "木"
+  - arguments: baum
+    description: Japanisch-Übersetzung von "baum"
+ka 0:
+  include:
+    key: ka-{$language} 0
+ka 1:
+  include:
+    key: ka-{$language} 1
+ka-de 0:
+  title: Georgisch-Deutsch (Pauker.at)
+  include:
+    key: de-ka 0
+ka-de 1:
+  title: Georgisch-Deutsch (Pauker.at)
+  include:
+    key: de-ka 1
+  examples:
+  - arguments: ხე
+    description: Deutsch-Übersetzung von "ხე"
+  - arguments: baum
+    description: Georgisch-Übersetzung von "baum"
+ki 0:
+  include:
+    key: ki-{$language} 0
+ki 1:
+  include:
+    key: ki-{$language} 1
+ki-de 0:
+  title: Kikuyu-Deutsch (Pauker.at)
+  include:
+    key: de-ki 0
+ki-de 1:
+  title: Kikuyu-Deutsch (Pauker.at)
+  include:
+    key: de-ki 1
+  examples:
+  - arguments: muthiga
+    description: Deutsch-Übersetzung von "muthiga"
+  - arguments: baum
+    description: Kikuyu-Übersetzung von "baum"
+kk 0:
+  include:
+    key: kk-{$language} 0
+kk 1:
+  include:
+    key: kk-{$language} 1
+kk-de 0:
+  title: Kasachisch-Deutsch (Pauker.at)
+  include:
+    key: de-kk 0
+kk-de 1:
+  title: Kasachisch-Deutsch (Pauker.at)
+  include:
+    key: de-kk 1
+  examples:
+  - arguments: ағаш
+    description: Deutsch-Übersetzung von "ағаш"
+  - arguments: baum
+    description: Kasachisch-Übersetzung von "baum"
+kl 0:
+  include:
+    key: kl-{$language} 0
+kl 1:
+  include:
+    key: kl-{$language} 1
+kl-de 0:
+  title: Grönländisch-Deutsch (Pauker.at)
+  include:
+    key: de-kl 0
+kl-de 1:
+  title: Grönländisch-Deutsch (Pauker.at)
+  include:
+    key: de-kl 1
+  examples:
+  - arguments: pisinnaatitaq
+    description: Deutsch-Übersetzung von "pisinnaatitaq"
+  - arguments: baum
+    description: Grönländisch-Übersetzung von "baum"
+km 0:
+  include:
+    key: km-{$language} 0
+km 1:
+  include:
+    key: km-{$language} 1
+km-de 0:
+  title: Kambodschanisch-Deutsch (Pauker.at)
+  include:
+    key: de-km 0
+km-de 1:
+  title: Kambodschanisch-Deutsch (Pauker.at)
+  include:
+    key: de-km 1
+  examples:
+  - arguments: ដើម
+    description: Deutsch-Übersetzung von "ដើម"
+  - arguments: baum
+    description: Kambodschanisch-Übersetzung von "baum"
+kn 0:
+  include:
+    key: kn-{$language} 0
+kn 1:
+  include:
+    key: kn-{$language} 1
+kn-de 0:
+  title: Kannada-Deutsch (Pauker.at)
+  include:
+    key: de-kn 0
+kn-de 1:
+  title: Kannada-Deutsch (Pauker.at)
+  include:
+    key: de-kn 1
+  examples:
+  - arguments: ಮರ
+    description: Deutsch-Übersetzung von "ಮರ"
+  - arguments: baum
+    description: Kannada-Übersetzung von "baum"
+ko 0:
+  include:
+    key: ko-{$language} 0
+ko 1:
+  include:
+    key: ko-{$language} 1
+ko-de 0:
+  title: Koreanisch-Deutsch (Pauker.at)
+  include:
+    key: de-ko 0
+ko-de 1:
+  title: Koreanisch-Deutsch (Pauker.at)
+  include:
+    key: de-ko 1
+  examples:
+  - arguments: 나무
+    description: Deutsch-Übersetzung von "나무"
+  - arguments: baum
+    description: Koreanisch-Übersetzung von "baum"
+ks 0:
+  include:
+    key: ks-{$language} 0
+ks 1:
+  include:
+    key: ks-{$language} 1
+ks-de 0:
+  title: Kaschmirisch-Deutsch (Pauker.at)
+  include:
+    key: de-ks 0
+ks-de 1:
+  title: Kaschmirisch-Deutsch (Pauker.at)
+  include:
+    key: de-ks 1
+  examples:
+  - arguments: بُرز
+    description: Deutsch-Übersetzung von "بُرز"
+  - arguments: baum
+    description: Kaschmirisch-Übersetzung von "baum"
+kw 0:
+  include:
+    key: kw-{$language} 0
+kw 1:
+  include:
+    key: kw-{$language} 1
+kw-de 0:
+  title: Kornisch-Deutsch (Pauker.at)
+  include:
+    key: de-kw 0
+kw-de 1:
+  title: Kornisch-Deutsch (Pauker.at)
+  include:
+    key: de-kw 1
+  examples:
+  - arguments: gogow
+    description: Deutsch-Übersetzung von "gogow"
+  - arguments: baum
+    description: Kornisch-Übersetzung von "baum"
+ky 0:
+  include:
+    key: ky-{$language} 0
+ky 1:
+  include:
+    key: ky-{$language} 1
+ky-de 0:
+  title: Kirgisisch-Deutsch (Pauker.at)
+  include:
+    key: de-ky 0
+ky-de 1:
+  title: Kirgisisch-Deutsch (Pauker.at)
+  include:
+    key: de-ky 1
+  examples:
+  - arguments: агач
+    description: Deutsch-Übersetzung von "агач"
+  - arguments: baum
+    description: Kirgisisch-Übersetzung von "baum"
+la 0:
+  include:
+    key: la-{$language} 0
+la 1:
+  include:
+    key: la-{$language} 1
+la-de 0:
+  title: Latein-Deutsch (Pauker.at)
+  include:
+    key: de-la 0
+la-de 1:
+  title: Latein-Deutsch (Pauker.at)
+  include:
+    key: de-la 1
+  examples:
+  - arguments: arbor
+    description: Deutsch-Übersetzung von "arbor"
+  - arguments: baum
+    description: Latein-Übersetzung von "baum"
+lb 0:
+  include:
+    key: lb-{$language} 0
+lb 1:
+  include:
+    key: lb-{$language} 1
+lb-de 0:
+  title: Luxemburgisch-Deutsch (Pauker.at)
+  include:
+    key: de-lb 0
+lb-de 1:
+  title: Luxemburgisch-Deutsch (Pauker.at)
+  include:
+    key: de-lb 1
+  examples:
+  - arguments: Beem
+    description: Deutsch-Übersetzung von "Beem"
+  - arguments: baum
+    description: Luxemburgisch-Übersetzung von "baum"
+lg 0:
+  include:
+    key: lg-{$language} 0
+lg 1:
+  include:
+    key: lg-{$language} 1
+lg-de 0:
+  title: Ganda-Deutsch (Pauker.at)
+  include:
+    key: de-lg 0
+lg-de 1:
+  title: Ganda-Deutsch (Pauker.at)
+  include:
+    key: de-lg 1
+  examples:
+  - arguments: ensolo
+    description: Deutsch-Übersetzung von "ensolo"
+  - arguments: baum
+    description: Ganda-Übersetzung von "baum"
+ln 0:
+  include:
+    key: ln-{$language} 0
+ln 1:
+  include:
+    key: ln-{$language} 1
+ln-de 0:
+  title: Lingala-Deutsch (Pauker.at)
+  include:
+    key: de-ln 0
+ln-de 1:
+  title: Lingala-Deutsch (Pauker.at)
+  include:
+    key: de-ln 1
+  examples:
+  - arguments: molongo
+    description: Deutsch-Übersetzung von "molongo"
+  - arguments: baum
+    description: Lingala-Übersetzung von "baum"
+lo 0:
+  include:
+    key: lo-{$language} 0
+lo 1:
+  include:
+    key: lo-{$language} 1
+lo-de 0:
+  title: Laotisch-Deutsch (Pauker.at)
+  include:
+    key: de-lo 0
+lo-de 1:
+  title: Laotisch-Deutsch (Pauker.at)
+  include:
+    key: de-lo 1
+  examples:
+  - arguments: ພາກໃຕ້
+    description: Deutsch-Übersetzung von "ພາກໃຕ້"
+  - arguments: baum
+    description: Laotisch-Übersetzung von "baum"
+lt 0:
+  include:
+    key: lt-{$language} 0
+lt 1:
+  include:
+    key: lt-{$language} 1
+lt-de 0:
+  title: Litauisch-Deutsch (Pauker.at)
+  include:
+    key: de-lt 0
+lt-de 1:
+  title: Litauisch-Deutsch (Pauker.at)
+  include:
+    key: de-lt 1
+  examples:
+  - arguments: medis
+    description: Deutsch-Übersetzung von "medis"
+  - arguments: baum
+    description: Litauisch-Übersetzung von "baum"
+lv 0:
+  include:
+    key: lv-{$language} 0
+lv 1:
+  include:
+    key: lv-{$language} 1
+lv-de 0:
+  title: Lettisch-Deutsch (Pauker.at)
+  include:
+    key: de-lv 0
+lv-de 1:
+  title: Lettisch-Deutsch (Pauker.at)
+  include:
+    key: de-lv 1
+  examples:
+  - arguments: koks
+    description: Deutsch-Übersetzung von "koks"
+  - arguments: baum
+    description: Lettisch-Übersetzung von "baum"
+mg 0:
+  include:
+    key: mg-{$language} 0
+mg 1:
+  include:
+    key: mg-{$language} 1
+mg-de 0:
+  title: Madagassisch-Deutsch (Pauker.at)
+  include:
+    key: de-mg 0
+mg-de 1:
+  title: Madagassisch-Deutsch (Pauker.at)
+  include:
+    key: de-mg 1
+  examples:
+  - arguments: hazo
+    description: Deutsch-Übersetzung von "hazo"
+  - arguments: baum
+    description: Madagassisch-Übersetzung von "baum"
+mk 0:
+  include:
+    key: mk-{$language} 0
+mk 1:
+  include:
+    key: mk-{$language} 1
+mk-de 0:
+  title: Mazedonisch-Deutsch (Pauker.at)
+  include:
+    key: de-mk 0
+mk-de 1:
+  title: Mazedonisch-Deutsch (Pauker.at)
+  include:
+    key: de-mk 1
+  examples:
+  - arguments: дрво
+    description: Deutsch-Übersetzung von "дрво"
+  - arguments: baum
+    description: Mazedonisch-Übersetzung von "baum"
+ml 0:
+  include:
+    key: ml-{$language} 0
+ml 1:
+  include:
+    key: ml-{$language} 1
+ml-de 0:
+  title: Malayalam-Deutsch (Pauker.at)
+  include:
+    key: de-ml 0
+ml-de 1:
+  title: Malayalam-Deutsch (Pauker.at)
+  include:
+    key: de-ml 1
+  examples:
+  - arguments: മരം
+    description: Deutsch-Übersetzung von "മരം"
+  - arguments: baum
+    description: Malayalam-Übersetzung von "baum"
+mn 0:
+  include:
+    key: mn-{$language} 0
+mn 1:
+  include:
+    key: mn-{$language} 1
+mn-de 0:
+  title: Mongolisch-Deutsch (Pauker.at)
+  include:
+    key: de-mn 0
+mn-de 1:
+  title: Mongolisch-Deutsch (Pauker.at)
+  include:
+    key: de-mn 1
+  examples:
+  - arguments: мод
+    description: Deutsch-Übersetzung von "мод"
+  - arguments: baum
+    description: Mongolisch-Übersetzung von "baum"
+mr 0:
+  include:
+    key: mr-{$language} 0
+mr 1:
+  include:
+    key: mr-{$language} 1
+mr-de 0:
+  title: Marathi-Deutsch (Pauker.at)
+  include:
+    key: de-mr 0
+mr-de 1:
+  title: Marathi-Deutsch (Pauker.at)
+  include:
+    key: de-mr 1
+  examples:
+  - arguments: झाड
+    description: Deutsch-Übersetzung von "झाड"
+  - arguments: baum
+    description: Marathi-Übersetzung von "baum"
+ms 0:
+  include:
+    key: ms-{$language} 0
+ms 1:
+  include:
+    key: ms-{$language} 1
+ms-de 0:
+  title: Malaiisch-Deutsch (Pauker.at)
+  include:
+    key: de-ms 0
+ms-de 1:
+  title: Malaiisch-Deutsch (Pauker.at)
+  include:
+    key: de-ms 1
+  examples:
+  - arguments: pokok
+    description: Deutsch-Übersetzung von "pokok"
+  - arguments: baum
+    description: Malaiisch-Übersetzung von "baum"
+mt 0:
+  include:
+    key: mt-{$language} 0
+mt 1:
+  include:
+    key: mt-{$language} 1
+mt-de 0:
+  title: Maltesisch-Deutsch (Pauker.at)
+  include:
+    key: de-mt 0
+mt-de 1:
+  title: Maltesisch-Deutsch (Pauker.at)
+  include:
+    key: de-mt 1
+  examples:
+  - arguments: siġra
+    description: Deutsch-Übersetzung von "siġra"
+  - arguments: baum
+    description: Maltesisch-Übersetzung von "baum"
+my 0:
+  include:
+    key: my-{$language} 0
+my 1:
+  include:
+    key: my-{$language} 1
+my-de 0:
+  title: Birmanisch-Deutsch (Pauker.at)
+  include:
+    key: de-my 0
+my-de 1:
+  title: Birmanisch-Deutsch (Pauker.at)
+  include:
+    key: de-my 1
+  examples:
+  - arguments: အိုးသတ္တု
+    description: Deutsch-Übersetzung von "အိုးသတ္တု"
+  - arguments: baum
+    description: Birmanisch-Übersetzung von "baum"
+nb 0:
+  include:
+    key: nb-{$language} 0
+nb 1:
+  include:
+    key: nb-{$language} 1
+nb-de 0:
+  title: Norwegisch Bokmål-Deutsch (Pauker.at)
+  include:
+    key: de-nb 0
+nb-de 1:
+  title: Norwegisch Bokmål-Deutsch (Pauker.at)
+  include:
+    key: de-nb 1
+  examples:
+  - arguments: tre
+    description: Deutsch-Übersetzung von "tre"
+  - arguments: baum
+    description: Norwegisch Bokmål-Übersetzung von "baum"
+nd 0:
+  include:
+    key: nd-{$language} 0
+nd 1:
+  include:
+    key: nd-{$language} 1
+nd-de 0:
+  title: Nord-Ndebele-Sprache-Deutsch (Pauker.at)
+  include:
+    key: de-nd 0
+nd-de 1:
+  title: Nord-Ndebele-Sprache-Deutsch (Pauker.at)
+  include:
+    key: de-nd 1
+  examples:
+  - arguments: indlala
+    description: Deutsch-Übersetzung von "indlala"
+  - arguments: baum
+    description: Nord-Ndebele-Sprache-Übersetzung von "baum"
+ne 0:
+  include:
+    key: ne-{$language} 0
+ne 1:
+  include:
+    key: ne-{$language} 1
+ne-de 0:
+  title: Nepalesisch-Deutsch (Pauker.at)
+  include:
+    key: de-ne 0
+ne-de 1:
+  title: Nepalesisch-Deutsch (Pauker.at)
+  include:
+    key: de-ne 1
+  examples:
+  - arguments: रूख
+    description: Deutsch-Übersetzung von "रूख"
+  - arguments: baum
+    description: Nepalesisch-Übersetzung von "baum"
+nl 0:
+  include:
+    key: nl-{$language} 0
+nl 1:
+  include:
+    key: nl-{$language} 1
+nl-de 0:
+  title: Niederländisch-Deutsch (Pauker.at)
+  include:
+    key: de-nl 0
+nl-de 1:
+  title: Niederländisch-Deutsch (Pauker.at)
+  include:
+    key: de-nl 1
+  examples:
+  - arguments: boom
+    description: Deutsch-Übersetzung von "boom"
+  - arguments: baum
+    description: Niederländisch-Übersetzung von "baum"
+nn 0:
+  include:
+    key: nn-{$language} 0
+nn 1:
+  include:
+    key: nn-{$language} 1
+nn-de 0:
+  title: Norwegisch Nynorsk-Deutsch (Pauker.at)
+  include:
+    key: de-nn 0
+nn-de 1:
+  title: Norwegisch Nynorsk-Deutsch (Pauker.at)
+  include:
+    key: de-nn 1
+  examples:
+  - arguments: tre
+    description: Deutsch-Übersetzung von "tre"
+  - arguments: baum
+    description: Norwegisch Nynorsk-Übersetzung von "baum"
+no 0:
+  include:
+    key: no-{$language} 0
+no 1:
+  include:
+    key: no-{$language} 1
+no-de 0:
+  title: Norwegisch-Deutsch (Pauker.at)
+  include:
+    key: de-no 0
+no-de 1:
+  title: Norwegisch-Deutsch (Pauker.at)
+  include:
+    key: de-no 1
+  examples:
+  - arguments: tre
+    description: Deutsch-Übersetzung von "tre"
+  - arguments: baum
+    description: Norwegisch-Übersetzung von "baum"
+om 0:
+  include:
+    key: om-{$language} 0
+om 1:
+  include:
+    key: om-{$language} 1
+om-de 0:
+  title: Oromo-Deutsch (Pauker.at)
+  include:
+    key: de-om 0
+om-de 1:
+  title: Oromo-Deutsch (Pauker.at)
+  include:
+    key: de-om 1
+  examples:
+  - arguments: dhukesa
+    description: Deutsch-Übersetzung von "dhukesa"
+  - arguments: baum
+    description: Oromo-Übersetzung von "baum"
+or 0:
+  include:
+    key: or-{$language} 0
+or 1:
+  include:
+    key: or-{$language} 1
+or-de 0:
+  title: Oriya-Deutsch (Pauker.at)
+  include:
+    key: de-or 0
+or-de 1:
+  title: Oriya-Deutsch (Pauker.at)
+  include:
+    key: de-or 1
+  examples:
+  - arguments: ବାଣ
+    description: Deutsch-Übersetzung von "ବାଣ"
+  - arguments: baum
+    description: Oriya-Übersetzung von "baum"
+os 0:
+  include:
+    key: os-{$language} 0
+os 1:
+  include:
+    key: os-{$language} 1
+os-de 0:
+  title: Ossetisch-Deutsch (Pauker.at)
+  include:
+    key: de-os 0
+os-de 1:
+  title: Ossetisch-Deutsch (Pauker.at)
+  include:
+    key: de-os 1
+  examples:
+  - arguments: дӕрвӕ
+    description: Deutsch-Übersetzung von "дӕрвӕ"
+  - arguments: baum
+    description: Ossetisch-Übersetzung von "baum"
+pa 0:
+  include:
+    key: pa-{$language} 0
+pa 1:
+  include:
+    key: pa-{$language} 1
+pa-de 0:
+  title: Panjabi-Deutsch (Pauker.at)
+  include:
+    key: de-pa 0
+pa-de 1:
+  title: Panjabi-Deutsch (Pauker.at)
+  include:
+    key: de-pa 1
+  examples:
+  - arguments: ਰੁੱਖ
+    description: Deutsch-Übersetzung von "ਰੁੱਖ"
+  - arguments: baum
+    description: Panjabi-Übersetzung von "baum"
+pl 0:
+  include:
+    key: pl-{$language} 0
+pl 1:
+  include:
+    key: pl-{$language} 1
+pl-de 0:
+  title: Polnisch-Deutsch (Pauker.at)
+  include:
+    key: de-pl 0
+pl-de 1:
+  title: Polnisch-Deutsch (Pauker.at)
+  include:
+    key: de-pl 1
+  examples:
+  - arguments: drzewo
+    description: Deutsch-Übersetzung von "drzewo"
+  - arguments: baum
+    description: Polnisch-Übersetzung von "baum"
+ps 0:
+  include:
+    key: ps-{$language} 0
+ps 1:
+  include:
+    key: ps-{$language} 1
+ps-de 0:
+  title: Paschtu-Deutsch (Pauker.at)
+  include:
+    key: de-ps 0
+ps-de 1:
+  title: Paschtu-Deutsch (Pauker.at)
+  include:
+    key: de-ps 1
+  examples:
+  - arguments: درخت
+    description: Deutsch-Übersetzung von "درخت"
+  - arguments: baum
+    description: Paschtu-Übersetzung von "baum"
+pt 0:
+  include:
+    key: pt-{$language} 0
+pt 1:
+  include:
+    key: pt-{$language} 1
+pt-de 0:
+  title: Portugiesisch-Deutsch (Pauker.at)
+  include:
+    key: de-pt 0
+pt-de 1:
+  title: Portugiesisch-Deutsch (Pauker.at)
+  include:
+    key: de-pt 1
+  examples:
+  - arguments: árvore
+    description: Deutsch-Übersetzung von "árvore"
+  - arguments: baum
+    description: Portugiesisch-Übersetzung von "baum"
+qu 0:
+  include:
+    key: qu-{$language} 0
+qu 1:
+  include:
+    key: qu-{$language} 1
+qu-de 0:
+  title: Quechua-Deutsch (Pauker.at)
+  include:
+    key: de-qu 0
+qu-de 1:
+  title: Quechua-Deutsch (Pauker.at)
+  include:
+    key: de-qu 1
+  examples:
+  - arguments: kulli
+    description: Deutsch-Übersetzung von "kulli"
+  - arguments: baum
+    description: Quechua-Übersetzung von "baum"
+rm 0:
+  include:
+    key: rm-{$language} 0
+rm 1:
+  include:
+    key: rm-{$language} 1
+rm-de 0:
+  title: Rätoromanisch-Deutsch (Pauker.at)
+  include:
+    key: de-rm 0
+rm-de 1:
+  title: Rätoromanisch-Deutsch (Pauker.at)
+  include:
+    key: de-rm 1
+  examples:
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Rätoromanisch-Übersetzung von "baum"
+rn 0:
+  include:
+    key: rn-{$language} 0
+rn 1:
+  include:
+    key: rn-{$language} 1
+rn-de 0:
+  title: Rundi-Sprache-Deutsch (Pauker.at)
+  include:
+    key: de-rn 0
+rn-de 1:
+  title: Rundi-Sprache-Deutsch (Pauker.at)
+  include:
+    key: de-rn 1
+  examples:
+  - arguments: umutumbudu
+    description: Deutsch-Übersetzung von "umutumbudu"
+  - arguments: baum
+    description: Rundi-Sprache-Übersetzung von "baum"
+ro 0:
+  include:
+    key: ro-{$language} 0
+ro 1:
+  include:
+    key: ro-{$language} 1
+ro-de 0:
+  title: Rumänisch-Deutsch (Pauker.at)
+  include:
+    key: de-ro 0
+ro-de 1:
+  title: Rumänisch-Deutsch (Pauker.at)
+  include:
+    key: de-ro 1
+  examples:
+  - arguments: copac
+    description: Deutsch-Übersetzung von "copac"
+  - arguments: baum
+    description: Rumänisch-Übersetzung von "baum"
+ru 0:
+  include:
+    key: ru-{$language} 0
+ru 1:
+  include:
+    key: ru-{$language} 1
+ru-de 0:
+  title: Russisch-Deutsch (Pauker.at)
+  include:
+    key: de-ru 0
+ru-de 1:
+  title: Russisch-Deutsch (Pauker.at)
+  include:
+    key: de-ru 1
+  examples:
+  - arguments: дерево
+    description: Deutsch-Übersetzung von "дерево"
+  - arguments: baum
+    description: Russisch-Übersetzung von "baum"
+rw 0:
+  include:
+    key: rw-{$language} 0
+rw 1:
+  include:
+    key: rw-{$language} 1
+rw-de 0:
+  title: Ruandisch-Deutsch (Pauker.at)
+  include:
+    key: de-rw 0
+rw-de 1:
+  title: Ruandisch-Deutsch (Pauker.at)
+  include:
+    key: de-rw 1
+  examples:
+  - arguments: umusozi
+    description: Deutsch-Übersetzung von "umusozi"
+  - arguments: baum
+    description: Ruandisch-Übersetzung von "baum"
+se 0:
+  include:
+    key: se-{$language} 0
+se 1:
+  include:
+    key: se-{$language} 1
+se-de 0:
+  title: Nord-Samisch-Deutsch (Pauker.at)
+  include:
+    key: de-se 0
+se-de 1:
+  title: Nord-Samisch-Deutsch (Pauker.at)
+  include:
+    key: de-se 1
+  examples:
+  - arguments: oahppu
+    description: Deutsch-Übersetzung von "oahppu"
+  - arguments: baum
+    description: Nord-Samisch-Übersetzung von "baum"
+sg 0:
+  include:
+    key: sg-{$language} 0
+sg 1:
+  include:
+    key: sg-{$language} 1
+sg-de 0:
+  title: Sango-Deutsch (Pauker.at)
+  include:
+    key: de-sg 0
+sg-de 1:
+  title: Sango-Deutsch (Pauker.at)
+  include:
+    key: de-sg 1
+  examples:
+  - arguments: mbombo
+    description: Deutsch-Übersetzung von "mbombo"
+  - arguments: baum
+    description: Sango-Übersetzung von "baum"
+si 0:
+  include:
+    key: si-{$language} 0
+si 1:
+  include:
+    key: si-{$language} 1
+si-de 0:
+  title: Singhalesisch-Deutsch (Pauker.at)
+  include:
+    key: de-si 0
+si-de 1:
+  title: Singhalesisch-Deutsch (Pauker.at)
+  include:
+    key: de-si 1
+  examples:
+  - arguments: ගස
+    description: Deutsch-Übersetzung von "ගස"
+  - arguments: baum
+    description: Singhalesisch-Übersetzung von "baum"
+sk 0:
+  include:
+    key: sk-{$language} 0
+sk 1:
+  include:
+    key: sk-{$language} 1
+sk-de 0:
+  title: Slowakisch-Deutsch (Pauker.at)
+  include:
+    key: de-sk 0
+sk-de 1:
+  title: Slowakisch-Deutsch (Pauker.at)
+  include:
+    key: de-sk 1
+  examples:
+  - arguments: stromček
+    description: Deutsch-Übersetzung von "stromček"
+  - arguments: baum
+    description: Slowakisch-Übersetzung von "baum"
+sl 0:
+  include:
+    key: sl-{$language} 0
+sl 1:
+  include:
+    key: sl-{$language} 1
+sl-de 0:
+  title: Slowenisch-Deutsch (Pauker.at)
+  include:
+    key: de-sl 0
+sl-de 1:
+  title: Slowenisch-Deutsch (Pauker.at)
+  include:
+    key: de-sl 1
+  examples:
+  - arguments: drevo
+    description: Deutsch-Übersetzung von "drevo"
+  - arguments: baum
+    description: Slowenisch-Übersetzung von "baum"
+sn 0:
+  include:
+    key: sn-{$language} 0
+sn 1:
+  include:
+    key: sn-{$language} 1
+sn-de 0:
+  title: Shona-Deutsch (Pauker.at)
+  include:
+    key: de-sn 0
+sn-de 1:
+  title: Shona-Deutsch (Pauker.at)
+  include:
+    key: de-sn 1
+  examples:
+  - arguments: mutsvairo
+    description: Deutsch-Übersetzung von "mutsvairo"
+  - arguments: baum
+    description: Shona-Übersetzung von "baum"
+so 0:
+  include:
+    key: so-{$language} 0
+so 1:
+  include:
+    key: so-{$language} 1
+so-de 0:
+  title: Somali-Deutsch (Pauker.at)
+  include:
+    key: de-so 0
+so-de 1:
+  title: Somali-Deutsch (Pauker.at)
+  include:
+    key: de-so 1
+  examples:
+  - arguments: geed
+    description: Deutsch-Übersetzung von "geed"
+  - arguments: baum
+    description: Somali-Übersetzung von "baum"
+sq 0:
+  include:
+    key: sq-{$language} 0
+sq 1:
+  include:
+    key: sq-{$language} 1
+sq-de 0:
+  title: Albanisch-Deutsch (Pauker.at)
+  include:
+    key: de-sq 0
+sq-de 1:
+  title: Albanisch-Deutsch (Pauker.at)
+  include:
+    key: de-sq 1
+  examples:
+  - arguments: pemë
+    description: Deutsch-Übersetzung von "pemë"
+  - arguments: baum
+    description: Albanisch-Übersetzung von "baum"
+sr 0:
+  include:
+    key: sr-{$language} 0
+sr 1:
+  include:
+    key: sr-{$language} 1
+sr-de 0:
+  title: Serbisch-Deutsch (Pauker.at)
+  include:
+    key: de-sr 0
+sr-de 1:
+  title: Serbisch-Deutsch (Pauker.at)
+  include:
+    key: de-sr 1
+  examples:
+  - arguments: дрво
+    description: Deutsch-Übersetzung von "дрво"
+  - arguments: baum
+    description: Serbisch-Übersetzung von "baum"
+sv 0:
+  include:
+    key: sv-{$language} 0
+sv 1:
+  include:
+    key: sv-{$language} 1
+sv-de 0:
+  title: Schwedisch-Deutsch (Pauker.at)
+  include:
+    key: de-sv 0
+sv-de 1:
+  title: Schwedisch-Deutsch (Pauker.at)
+  include:
+    key: de-sv 1
+  examples:
+  - arguments: träd
+    description: Deutsch-Übersetzung von "träd"
+  - arguments: baum
+    description: Schwedisch-Übersetzung von "baum"
+sw 0:
+  include:
+    key: sw-{$language} 0
+sw 1:
+  include:
+    key: sw-{$language} 1
+sw-de 0:
+  title: Suaheli-Deutsch (Pauker.at)
+  include:
+    key: de-sw 0
+sw-de 1:
+  title: Suaheli-Deutsch (Pauker.at)
+  include:
+    key: de-sw 1
+  examples:
+  - arguments: mti
+    description: Deutsch-Übersetzung von "mti"
+  - arguments: baum
+    description: Suaheli-Übersetzung von "baum"
+ta 0:
+  include:
+    key: ta-{$language} 0
+ta 1:
+  include:
+    key: ta-{$language} 1
+ta-de 0:
+  title: Tamilisch-Deutsch (Pauker.at)
+  include:
+    key: de-ta 0
+ta-de 1:
+  title: Tamilisch-Deutsch (Pauker.at)
+  include:
+    key: de-ta 1
+  examples:
+  - arguments: மரம்
+    description: Deutsch-Übersetzung von "மரம்"
+  - arguments: baum
+    description: Tamilisch-Übersetzung von "baum"
+te 0:
+  include:
+    key: te-{$language} 0
+te 1:
+  include:
+    key: te-{$language} 1
+te-de 0:
+  title: Telugu-Deutsch (Pauker.at)
+  include:
+    key: de-te 0
+te-de 1:
+  title: Telugu-Deutsch (Pauker.at)
+  include:
+    key: de-te 1
+  examples:
+  - arguments: చెట్టు
+    description: Deutsch-Übersetzung von "చెట్టు"
+  - arguments: baum
+    description: Telugu-Übersetzung von "baum"
+th 0:
+  include:
+    key: th-{$language} 0
+th 1:
+  include:
+    key: th-{$language} 1
+th-de 0:
+  title: Thailändisch-Deutsch (Pauker.at)
+  include:
+    key: de-th 0
+th-de 1:
+  title: Thailändisch-Deutsch (Pauker.at)
+  include:
+    key: de-th 1
+  examples:
+  - arguments: ต้นไม้
+    description: Deutsch-Übersetzung von "ต้นไม้"
+  - arguments: baum
+    description: Thailändisch-Übersetzung von "baum"
+ti 0:
+  include:
+    key: ti-{$language} 0
+ti 1:
+  include:
+    key: ti-{$language} 1
+ti-de 0:
+  title: Tigrinja-Deutsch (Pauker.at)
+  include:
+    key: de-ti 0
+ti-de 1:
+  title: Tigrinja-Deutsch (Pauker.at)
+  include:
+    key: de-ti 1
+  examples:
+  - arguments: ኣበባ
+    description: Deutsch-Übersetzung von "ኣበባ"
+  - arguments: baum
+    description: Tigrinja-Übersetzung von "baum"
+tl 0:
+  include:
+    key: tl-{$language} 0
+tl 1:
+  include:
+    key: tl-{$language} 1
+tl-de 0:
+  title: Tagalog-Deutsch (Pauker.at)
+  include:
+    key: de-tl 0
+tl-de 1:
+  title: Tagalog-Deutsch (Pauker.at)
+  include:
+    key: de-tl 1
+  examples:
+  - arguments: puno
+    description: Deutsch-Übersetzung von "puno"
+  - arguments: baum
+    description: Tagalog-Übersetzung von "baum"
+to 0:
+  include:
+    key: to-{$language} 0
+to 1:
+  include:
+    key: to-{$language} 1
+to-de 0:
+  title: Tongaisch-Deutsch (Pauker.at)
+  include:
+    key: de-to 0
+to-de 1:
+  title: Tongaisch-Deutsch (Pauker.at)
+  include:
+    key: de-to 1
+  examples:
+  - arguments: kahoa
+    description: Deutsch-Übersetzung von "kahoa"
+  - arguments: baum
+    description: Tongaisch-Übersetzung von "baum"
+tr 0:
+  include:
+    key: tr-{$language} 0
+tr 1:
+  include:
+    key: tr-{$language} 1
+tr-de 0:
+  title: Türkisch-Deutsch (Pauker.at)
+  include:
+    key: de-tr 0
+tr-de 1:
+  title: Türkisch-Deutsch (Pauker.at)
+  include:
+    key: de-tr 1
+  examples:
+  - arguments: ağaç
+    description: Deutsch-Übersetzung von "ağaç"
+  - arguments: baum
+    description: Türkisch-Übersetzung von "baum"
+ug 0:
+  include:
+    key: ug-{$language} 0
+ug 1:
+  include:
+    key: ug-{$language} 1
+ug-de 0:
+  title: Uigurisch-Deutsch (Pauker.at)
+  include:
+    key: de-ug 0
+ug-de 1:
+  title: Uigurisch-Deutsch (Pauker.at)
+  include:
+    key: de-ug 1
+  examples:
+  - arguments: قۇش
+    description: Deutsch-Übersetzung von "قۇش"
+  - arguments: baum
+    description: Uigurisch-Übersetzung von "baum"
+uk 0:
+  include:
+    key: uk-{$language} 0
+uk 1:
+  include:
+    key: uk-{$language} 1
+uk-de 0:
+  title: Ukrainisch-Deutsch (Pauker.at)
+  include:
+    key: de-uk 0
+uk-de 1:
+  title: Ukrainisch-Deutsch (Pauker.at)
+  include:
+    key: de-uk 1
+  examples:
+  - arguments: дерево
+    description: Deutsch-Übersetzung von "дерево"
+  - arguments: baum
+    description: Ukrainisch-Übersetzung von "baum"
+ur 0:
+  include:
+    key: ur-{$language} 0
+ur 1:
+  include:
+    key: ur-{$language} 1
+ur-de 0:
+  title: Urdu-Deutsch (Pauker.at)
+  include:
+    key: de-ur 0
+ur-de 1:
+  title: Urdu-Deutsch (Pauker.at)
+  include:
+    key: de-ur 1
+  examples:
+  - arguments: درخت
+    description: Deutsch-Übersetzung von "درخت"
+  - arguments: baum
+    description: Urdu-Übersetzung von "baum"
+uz 0:
+  include:
+    key: uz-{$language} 0
+uz 1:
+  include:
+    key: uz-{$language} 1
+uz-de 0:
+  title: Usbekisch-Deutsch (Pauker.at)
+  include:
+    key: de-uz 0
+uz-de 1:
+  title: Usbekisch-Deutsch (Pauker.at)
+  include:
+    key: de-uz 1
+  examples:
+  - arguments: daraxt
+    description: Deutsch-Übersetzung von "daraxt"
+  - arguments: baum
+    description: Usbekisch-Übersetzung von "baum"
+vi 0:
+  include:
+    key: vi-{$language} 0
+vi 1:
+  include:
+    key: vi-{$language} 1
+vi-de 0:
+  title: Vietnamesisch-Deutsch (Pauker.at)
+  include:
+    key: de-vi 0
+vi-de 1:
+  title: Vietnamesisch-Deutsch (Pauker.at)
+  include:
+    key: de-vi 1
+  examples:
+  - arguments: cây
+    description: Deutsch-Übersetzung von "cây"
+  - arguments: baum
+    description: Vietnamesisch-Übersetzung von "baum"
+yi 0:
+  include:
+    key: yi-{$language} 0
+yi 1:
+  include:
+    key: yi-{$language} 1
+yi-de 0:
+  title: Jiddisch-Deutsch (Pauker.at)
+  include:
+    key: de-yi 0
+yi-de 1:
+  title: Jiddisch-Deutsch (Pauker.at)
+  include:
+    key: de-yi 1
+  examples:
+  - arguments: בוים
+    description: Deutsch-Übersetzung von "בוים"
+  - arguments: baum
+    description: Jiddisch-Übersetzung von "baum"
+yo 0:
+  include:
+    key: yo-{$language} 0
+yo 1:
+  include:
+    key: yo-{$language} 1
+yo-de 0:
+  title: Yoruba-Deutsch (Pauker.at)
+  include:
+    key: de-yo 0
+yo-de 1:
+  title: Yoruba-Deutsch (Pauker.at)
+  include:
+    key: de-yo 1
+  examples:
+  - arguments: igi
+    description: Deutsch-Übersetzung von "igi"
+  - arguments: baum
+    description: Yoruba-Übersetzung von "baum"
+zh 0:
+  include:
+    key: zh-{$language} 0
+zh 1:
+  include:
+    key: zh-{$language} 1
+zh-de 0:
+  title: Chinesisch-Deutsch (Pauker.at)
+  include:
+    key: de-zh 0
+zh-de 1:
+  title: Chinesisch-Deutsch (Pauker.at)
+  include:
+    key: de-zh 1
+  examples:
+  - arguments: 树
+    description: Deutsch-Übersetzung von "树"
+  - arguments: baum
+    description: Chinesisch-Übersetzung von "baum"
+zu 0:
+  include:
+    key: zu-{$language} 0
+zu 1:
+  include:
+    key: zu-{$language} 1
+zu-de 0:
+  title: Zulu-Deutsch (Pauker.at)
+  include:
+    key: de-zu 0
+zu-de 1:
+  title: Zulu-Deutsch (Pauker.at)
+  include:
+    key: de-zu 1
+  examples:
+  - arguments: isihlahla
+    description: Deutsch-Übersetzung von "isihlahla"
+  - arguments: baum
+    description: Zulu-Übersetzung von "baum"

@@ -1,0 +1,64 @@
+bdk 1:
+  url: https://bibliotek.dk/da/search/work?search_block_form={%fritekst}
+  title: bibliotek.dk
+  tags:
+  - library
+  examples:
+  - arguments: nesbø
+    description: Search for Nesbø
+dsb 2:
+  url: http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&start=1
+  title: Danske Statsbaner
+  tags:
+  - railway
+  - travel
+  examples:
+  - arguments: aarhus, københavn
+    description: næste tog fra Aarhus til København
+dsb 3:
+  url: http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&start=1
+  title: Danske Statsbaner
+  tags:
+  - railway
+  - travel
+  examples:
+  - arguments: aarhus, københavn, 10
+    description: tog fra Aarhus til København kl. 10
+dsb 4:
+  url: http://www.dsb.dk/Rejseplan/bin/query.exe/mn?S={%Fra}&Z={%Til}&T={%Kl.}&D={%Dato}&start=1
+  title: Danske Statsbaner
+  tags:
+  - railway
+  - travel
+  examples:
+  - arguments: aarhus, københavn, 10, 28.1.
+    description: tog fra Aarhus til København kl. 10 den 28.1.
+ikea 0:
+  url: http://www.ikea.com/dk/da/
+  title: IKEA Danmark
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - arguments: madras
+    description: Søger "madras"
+ikea 1:
+  url: http://www.ikea.com/dk/da/search/?q={%query}
+  title: IKEA Danmark
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - arguments: madras
+    description: Søger "madras"
+zal 1:
+  url: http://www.zalando.dk/katalog/?q={%produkt}
+  title: Zalando.dk
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - arguments: sko
+    description: søge sko

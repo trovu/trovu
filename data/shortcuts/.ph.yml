@@ -1,0 +1,15 @@
+e 0:
+  url: http://www.ebay.ph/
+  title: Ebay.ph
+  tags:
+  - ebay
+  - shopping
+e 1:
+  url: http://www.ebay.ph/sch/i.html?_nkw={%query}
+  title: Ebay.ph
+  tags:
+  - ebay
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"

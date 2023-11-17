@@ -1,0 +1,1300 @@
+1und1 0:
+  url: https://www.1und1.de/login
+  title: 1und1 Kundenlogin
+  tags:
+  - communications
+  - internetprovider
+abk 1:
+  url: http://www.abkuerzungen.de/result.php?language=&abbreviation={%Abkürzung}
+  title: Abkürzungen
+  examples:
+  - arguments: cia
+    description: Suche nach der Abkürzung "cia"
+anagramm 1:
+  url: http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text={%query}&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
+  title: Anagramm-Suche
+  tags:
+  - german
+  - language
+  examples:
+  - arguments: rentner
+    description: Anagramm-Suchen nach "rentner"
+ardtext 1:
+  url: http://www.ard-text.de/index.php?page={%Seitennummer}
+  title: ARD-Text
+  tags:
+  - ard
+  - teletext
+  - videotext
+  examples:
+  - arguments: '100'
+    description: Gehe zu Seite 100
+at 1:
+  url: https://www.ostarrichi.org/suche?search={%Wort}
+  title: Österreichisch-Hochdeutsch (Ostarrichi.org)
+  tags:
+  - austrian
+  - german
+  - language
+  examples:
+  - arguments: paradeisa
+    description: '"paradeisa" auf Hochdeutsch'
+awf 1:
+  url: https://anderes-wort-fuer.de/{%Wort}/
+  title: Anderes Wort für – Synonymlexikon
+  tags:
+  - german
+  - language
+  - synonyms
+  examples:
+  - arguments: wirtschaft
+    description: Suche nach Synonymen für "wirtschaft"
+awort 1:
+  deprecated:
+    alternative:
+      query: awf {%1}
+      created: '2023-01-10'
+base 1:
+  url: http://www.base-search.net/Search/Results?lookfor={%Suche}
+  title: Bielefeld Academic Search Engine
+  tags:
+  - academia
+  - bielefeld
+  - science
+  examples:
+  - arguments: sprache
+    description: Suche nach "sprache"
+bbs 1:
+  url: http://www.babyblaue-seiten.de/index.php?searchQuery={%Suche}&content=search&searchWhere=0&content=search
+  title: Babyblaue Seiten
+  tags:
+  - musik
+  - progressive rock
+  - rock
+  examples:
+  - arguments: Mekong Delta
+    description: Suche nach Mekong Delta
+bc 1:
+  url: https://www.bestcheck.de/search?q={%query}
+  title: BestCheck
+bk 1:
+  url: http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch={%query}
+  title: Buchkatalog
+  tags:
+  - books
+  - shopping
+  examples:
+  - arguments: goethe
+    description: Suche nach Goethe
+bl 1:
+  url: https://www.google.de/search?q={%query}+site:www.chip.de%2Fbestenlisten
+  title: CHIP Bestenliste
+bla 1:
+  url: http://www.buffed.de/?f={%suchwort}
+  title: Buffed.de
+  tags:
+  - admin:change keyword
+  - games
+blb 0:
+  url: http://www.booklooker.de/app/sec/login.php
+  title: Booklooker
+  tags:
+  - booklooker
+  - books
+  - shopping
+blb 1:
+  url: http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor}
+  title: Booklooker
+  tags:
+  - booklooker
+  - books
+  - shopping
+  examples:
+  - arguments: goethe
+    description: Suche nach Büchern von Goethe
+blb 2:
+  url: http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor={%Autor|encoding=iso-8859-1}&titel={%Titel|encoding=iso-8859-1}
+  title: Booklooker
+  tags:
+  - booklooker
+  - books
+  - shopping
+  examples:
+  - arguments: goethe, faust
+    description: Suche nach "Faust" von Goethe
+bzl 1:
+  url: https://www.bookzilla.de/shop/quickSearch?searchString={%Suche}
+  title: Bookzilla
+  tags:
+  - books
+  - shopping
+  examples:
+  - arguments: goethe
+    description: Search Bookzilla for "goethe"
+cb 0:
+  url: http://www.computerbase.de/
+  title: Computerbase
+  tags:
+  - computer science
+  - linux
+cb 1:
+  url: http://www.computerbase.de/suche/?q={%query}&bereich=
+  title: Computerbase
+  tags:
+  - computer science
+  - linux
+  examples:
+  - arguments: linux
+    description: Suche nach Artikel über "linux"
+ch 1:
+  url: https://www.google.de/search?q={%query}+site:www.chip.de
+  title: CHIP
+chill 0:
+  url: http://www.chilloutzone.de/
+  title: Chilloutzone
+  tags:
+  - video
+chill 1:
+  url: http://www.google.de/custom?domains=chilloutzone.de&q={%query}&sitesearch=chilloutzone.de&sa=Google-Suche&client=pub-9587746511239945&forid=1&channel=0789999516&ie=ISO-8859-1&oe=ISO-8859-1&flav=0000&sig=2LvIwQoR9ke2veDK&cof=GALT%3A%23FF4500%3BGL%3A1%3BDIV%3A%23CCCCCC%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3Affffff%3BLBGC%3A666666%3BALC%3AFF4500%3BLC%3AFF4500%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A50%3BLW%3A245%3BL%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2Fblog%2Fimages%2Fbloghead.gif%3BS%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2F%3BFORID%3A1&hl=de
+  title: Chilloutzone
+  tags:
+  - video
+  examples:
+  - arguments: parkour
+    description: Search Chilloutzone for "parkour"
+chip 1:
+  url: http://search.chip.de/?q={%query}&sort_by_date=desc
+  title: CHIP Online
+  tags:
+  - chip
+  - download
+  examples:
+  - arguments: linux
+    description: Search CHIP Online for "linux"
+chipd 1:
+  url: http://search.chip.de/?q={%query}&f=softwarereview
+  title: CHIP Online Downloads
+  tags:
+  - chip
+  - download
+  examples:
+  - arguments: skype
+    description: Search CHIP Online Downloads for "skype"
+ciao 1:
+  url: https://www.ciao.de/suche?anfrage={%Suche}
+  title: Ciao.de Preisvergleich
+  tags:
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search Ciao.de Preisvergleich for "smartphone"
+ck 0:
+  url: http://www.chefkoch.de
+  title: Chefkoch
+  tags:
+  - cooking
+  - recipes
+ck 1:
+  url: http://www.chefkoch.de/rs/s0/{%Suche}/Rezepte.html
+  title: Chefkoch
+  tags:
+  - cooking
+  - recipes
+  examples:
+  - arguments: pizza
+    description: Rezepte für Pizza
+cng 1:
+  url: https://www.gas-tankstellen.de/list.php?suchenach=t&land=D&lpganlage=0&mode=cng&suchkennz={%KFZ-Kennzeichen}
+  title: LPG- und CNG-Tankstellen
+  tags:
+  - gas
+  examples:
+  - arguments: bi
+    description: Suche nach LPG- und CNG-Tankstellen um Bielefeld
+cook 1:
+  url: https://cookidoo.de/search/de-DE?query={%Suche}
+  title: Cookidoo (Thermomix-Rezept-Portal)
+  tags:
+  - cooking
+  examples:
+  - arguments: risotto
+    description: Show recipes for risottos
+cs-de 1:
+  deprecated:
+    alternative:
+      query: cs {%1}
+      created: '2023-04-10'
+csd 1:
+  deprecated:
+    alternative:
+      query: dcc.cs {%1}
+      created: '2023-04-10'
+css 1:
+  url: http://www.google.de/search?q=site%3Acss4you.de+{%query}
+  title: Css4you
+  tags:
+  - css
+  - programming
+  examples:
+  - arguments: white-space
+    description: Suche nach "white-space"
+dab 1:
+  deprecated:
+    alternative:
+      query: bab.da {%1}
+      created: '2023-04-10'
+dclj 0:
+  url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
+  title: De.comp.lang.javascript
+  tags:
+  - javascript
+  - programming
+dclj 1:
+  url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/{%query}
+  title: De.comp.lang.javascript
+  tags:
+  - javascript
+  - programming
+  examples:
+  - arguments: 'var '
+    description: Suche nach "var"
+dclp 0:
+  url: http://groups.google.de/group/de.comp.lang.php
+  title: De.comp.lang.php
+  tags:
+  - php
+  - programming
+dclp 1:
+  url: https://groups.google.com/forum/#!searchin/de.comp.lang.php/{%query}
+  title: De.comp.lang.php
+  tags:
+  - php
+  - programming
+  examples:
+  - arguments: strlen
+    description: Search for "strlen"
+dd 1:
+  url: http://www.duden.de/suchen/dudenonline/{%wort}
+  title: Duden
+  tags:
+  - deutsch
+  - german
+  - language
+  - rechtschreibung
+  examples:
+  - arguments: stuhl
+    description: Nachschlagen des Wortes "Stuhl"
+de-cs 1:
+  deprecated:
+    alternative:
+      query: cs {%1}
+      created: '2023-04-10'
+denl 1:
+  deprecated:
+    alternative:
+      query: nl {%1}
+      created: '2023-04-10'
+dnb 1:
+  url: https://portal.dnb.de/opac.htm?query={%Suche}&method=simpleSearch
+  title: Deutsche Nationalbibliothek
+  tags:
+  - german
+  - library
+  examples:
+  - arguments: goethe
+    description: Search Deutsche Nationalbibliothek for "goethe"
+dw 1:
+  url: https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item={%suche}
+  title: Deutsche Welle, Nachrichten auf Deutsch
+dwds 1:
+  url: http://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu={%Wort}
+  title: Digitales Wörterbuch der Deutschen Sprache
+e 0:
+  url: https://ebay.de
+  title: eBay
+e 1:
+  url: https://www.ebay.de/sch/i.html?_nkw={%suche}
+  title: eBay Suche
+eld 1:
+  deprecated:
+    alternative:
+      query: dcc.el {%1}
+      created: '2023-04-10'
+enb 1:
+  deprecated:
+    alternative:
+      query: beo.en {%1}
+      created: '2023-04-10'
+end 1:
+  deprecated:
+    alternative:
+      query: dcc.en {%1}
+      created: '2023-04-10'
+endung 1:
+  url: http://www.endungen.de/ResultList/ResultList.aspx?searchExtension={%Dateieindung}&searchPlatform=win;mac;unix;os2&searchMode=contains
+  title: Endungen.de
+  tags:
+  - extension
+  - files
+  examples:
+  - arguments: flv
+    description: Search Endungen.de for "flv"
+eni 1:
+  deprecated:
+    alternative:
+      query: lge.en {%1}
+      created: '2023-03-12'
+enp 1:
+  deprecated:
+    alternative:
+      query: pns.en {%1}
+      created: '2023-04-10'
+es-pons 1:
+  deprecated:
+    alternative:
+      query: pns.es {%1}
+      created: '2023-04-10'
+esb 1:
+  deprecated:
+    alternative:
+      query: bab.es {%1}
+      created: '2023-04-10'
+esd 1:
+  deprecated:
+    alternative:
+      query: dcc.es {%1}
+      created: '2023-04-10'
+esi 1:
+  deprecated:
+    alternative:
+      query: lge.es {%1}
+      created: '2023-03-12'
+esp 1:
+  deprecated:
+    alternative:
+      query: pns.es {%1}
+      created: '2023-04-10'
+fball 1:
+  url: https://fireball.com/search?q={%suchbegriff}
+  title: Fireball Websuche
+fefe 0:
+  url: http://blog.fefe.de
+  title: Fefes Blog
+  tags:
+  - blog
+  - news
+fefe 1:
+  url: https://www.google.com/search?hl={$language}&sitesearch=blog.fefe.de&q={%Suche}
+  title: Fefes Blog
+  tags:
+  - blog
+  - news
+  examples:
+  - arguments: atomenergie
+    description: Search for "atomenergie"
+fefecss 1:
+  url: http://blog.fefe.de?css={%Style}.css
+  title: Fefes Blog, anderer CSS-Style
+  tags:
+  - blog
+  - news
+  examples:
+  - arguments: manpage
+    description: Fefes Blog mit dem CSS-Style manpage.css
+fefes 0:
+  url: https://blog.fefe.de
+  title: Fefes Blog, SSL
+  tags:
+  - blog
+  - news
+fefes 1:
+  url: https://blog.fefe.de?q={%Suche}
+  title: Fefes Blog, SSL, case-sensitive Suche
+  tags:
+  - blog
+  - news
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
+fefescss 1:
+  url: https://blog.fefe.de?css={%Style}.css
+  title: Fefes Blog, anderer CSS-Style, SSL
+  tags:
+  - blog
+  - news
+  examples:
+  - arguments: manpage
+    description: Fefes Blog mit dem CSS-Style manpage.css
+fmb 2:
+  url: http://findmybook.de/input.php?form%5Btitle%5D={%Titel}&form%5Bauthor%5D={%Autor}
+  title: Findmybook.de
+  tags:
+  - books
+  examples:
+  - arguments: houellebecq, elementarteilchen
+    description: Search for "houellebecq"
+fr-pons 1:
+  deprecated:
+    alternative:
+      query: pns.fr {%1}
+      created: '2023-04-10'
+frb 1:
+  deprecated:
+    alternative:
+      query: bab.fr {%1}
+      created: '2023-04-10'
+frbuch 0:
+  url: http://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm
+  title: Französisch-Lehrbuch
+  tags:
+  - french
+frbuch 1:
+  url: https://www.google.de/search?hl=de&q={%Suche}%20site:franzoesisch-lehrbuch.de&ie=utf-8
+  title: Französisch-Lehrbuch
+  tags:
+  - french
+  examples:
+  - arguments: subjonctif
+    description: Search Französisch-Lehrbuch for "subjonctif"
+frd 1:
+  deprecated:
+    alternative:
+      query: dcc.fr {%1}
+      created: '2023-04-10'
+fri 1:
+  deprecated:
+    alternative:
+      query: lge.fr {%1}
+      created: '2023-03-12'
+frp 1:
+  deprecated:
+    alternative:
+      query: pns.fr {%1}
+      created: '2023-04-10'
+frv 1:
+  url: https://de.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo Aussprachedatenbank, deutsches Interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+  - arguments: Soest
+    description: Sucht nach der Aussprache von "Soest"
+gfp 0:
+  url: https://german-foreign-policy.com/
+  title: German Foreign Policy
+  tags:
+  - germany
+  - news
+  - politics
+gfp 1:
+  url: https://www.german-foreign-policy.com/news/archiv/detailsuche?tx_news_pi1%5B__referrer%5D%5B%40extension%5D=News&tx_news_pi1%5B__referrer%5D%5B%40controller%5D=News&tx_news_pi1%5B__referrer%5D%5B%40action%5D=searchForm&tx_news_pi1%5B__referrer%5D%5Barguments%5D=YToxOntzOjY6InNlYXJjaCI7YTozOntzOjc6InN1YmplY3QiO3M6NjoiYmVybGluIjtzOjExOiJtaW5pbXVtRGF0ZSI7czowOiIiO3M6MTE6Im1heGltdW1EYXRlIjtzOjA6IiI7fX0%3D3b9217b53b1d289bca1b4f26fd2398df277bac78&tx_news_pi1%5B__referrer%5D%5B%40request%5D=%7B%22%40extension%22%3A%22News%22%2C%22%40controller%22%3A%22News%22%2C%22%40action%22%3A%22searchForm%22%7Dd2832a7a705ce8933853e4c9a9a5a984dbceaeba&tx_news_pi1%5B__trustedProperties%5D=%7B%22search%22%3A%7B%22subject%22%3A1%2C%22minimumDate%22%3A1%2C%22maximumDate%22%3A1%7D%7D813cf46d860682b222ed4db70f7cf713def828ff&tx_news_pi1%5Bsearch%5D%5Bsubject%5D={%Suche}&tx_news_pi1%5Bsearch%5D%5BminimumDate%5D=&tx_news_pi1%5Bsearch%5D%5BmaximumDate%5D=
+  title: German Foreign Policy
+  tags:
+  - germany
+  - news
+  - politics
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
+grc 1:
+  url: http://www.albertmartin.de/altgriechisch/?q={%suchwort}
+  title: Altgriechisch Wörterbuch
+  tags:
+  - altgriechisch
+  - deutsch
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Übersetzung von "Baum" auf Altgriechisch
+  - arguments: ξύλον
+    description: 'Übersetzung von "ξύλον" auf Deutsch '
+gz 0:
+  url: https://www.griechenland.net/
+  title: Griechenland Zeitung
+  tags:
+  - greece
+  - griechenland
+  - news
+h 0:
+  url: http://www.heise.de
+  title: Heise Startseite
+  tags:
+  - heise
+h 1:
+  url: http://www.heise.de/newsticker/suche/?rm=search&q={%Suchbegriff}
+  title: Heise Newssuche
+  tags:
+  - heise
+  examples:
+  - arguments: linux
+    description: Search for "linux"
+heise 0:
+  url: http://www.heise.de/
+  title: Heise.de
+  tags:
+  - heise
+  - news
+heisenews 0:
+  url: http://www.heise.de/newsticker
+  title: Heise Newsticker
+  tags:
+  - heise
+  - news
+hls 1:
+  url: https://hls-dhs-dss.ch/de/search/?text={%Suce}
+  title: Historisches Lexikon der Schweiz
+  tags:
+  - geschichte
+  - history
+  examples:
+  - arguments: basel
+    description: Search Historisches Lexikon der Schweiz for "basel"
+hn 0:
+  url: http://www.heise.de/newsticker
+  title: Heise Newsticker
+  tags:
+  - heise
+hn 1:
+  url: http://www.heise.de/suche/?rm=search;q={%query};channel=newsticker
+  title: Heise Newsticker
+  tags:
+  - heise
+  examples:
+  - arguments: apple
+    description: Search for "apple"
+hoax 1:
+  url: http://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms={%query}
+  title: Hoax-Info (TU-Berlin)
+  tags:
+  - hoax
+  examples:
+  - arguments: Nigeria-Connection
+    description: Hoax-Info über die "Nigeria-Connection"
+hotf 0:
+  url: http://www.heise.de/extras/foren/S-Special-Off-Topic-Archiv-15/forum-206680/list/
+  title: Heise Off-Topic-Forum
+  tags:
+  - forum
+  - heise
+hpreis 0:
+  url: http://www.heise.de/preisvergleich
+  title: Heise Preisvergleich Startseite
+  tags:
+  - heise
+  - shopping
+hpreis 1:
+  url: http://www.heise.de/preisvergleich/?fs={%Suchbegriff}
+  title: Heise Preisvergleich
+  tags:
+  - heise
+  - shopping
+  examples:
+  - arguments: computer
+    description: Search for "computer"
+hsoft 0:
+  url: http://www.heise.de/software/
+  title: Heise Softwareverzeichnis Startseite
+  tags:
+  - heise
+hsoft 1:
+  url: https://www.heise.de/download/search?terms={%Suche}
+  title: Heise Softwareverzeichnis
+  tags:
+  - heise
+  examples:
+  - arguments: bildbearbeitung
+    description: Search for "bildbearbeitung"
+htp 0:
+  url: http://www.heise.de/tp/
+  title: Telepolis Startseite
+  tags:
+  - heise
+hud 1:
+  deprecated:
+    alternative:
+      query: dcc.hu {%1}
+      created: '2023-04-10'
+hup 1:
+  deprecated:
+    alternative:
+      query: pns.hu {%1}
+      created: '2023-04-10'
+hwho 1:
+  url: http://www.heise.de/netze/tools?rm=whois&plugin={%URL}
+  title: Heise Whois Netzwerk-Tool
+  tags:
+  - heise
+  examples:
+  - arguments: '1'
+    description: Search for "1"
+ifun 1:
+  url: http://www.ifun.de/suche/{%query}
+  title: ifun.de
+  tags:
+  - apple
+  - news
+  examples:
+  - arguments: macbook
+    description: Search ifun.de for "macbook"
+isbn 1:
+  url: http://de.wikipedia.org/wiki/Spezial:Booksources/{%isbn}
+  title: ISBN-Suche bei Wikipedia
+itb 1:
+  deprecated:
+    alternative:
+      query: bab.it {%1}
+      created: '2023-04-10'
+itd 1:
+  deprecated:
+    alternative:
+      query: dcc.it {%1}
+      created: '2023-04-10'
+itp 1:
+  deprecated:
+    alternative:
+      query: pns.it {%1}
+      created: '2023-04-10'
+kam 1:
+  url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search={%Suche}
+  title: Kamelopedia
+  tags:
+  - encyclopedia
+  - humor
+  - wiki
+  examples:
+  - arguments: Berlin
+    description: Artikel zu "Berlin"
+kicker 0:
+  url: http://www.kicker.de/
+  title: Kicker.de
+  tags:
+  - news
+  - sport
+kicker 1:
+  url: https://www.google.de/search?q={%query}+site:www.kicker.de
+  title: Kicker.de
+  tags:
+  - news
+  - sport
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
+kw 1:
+  url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&sourceid=serchilo
+  title: Kreuzworträtsel-Datenbank
+  tags:
+  - old
+kw 2:
+  url: http://www.kwdb.ch/searchanswer.asp?search={%Suche}&BScount={%Buchstabenanzahl}&sourceid=serchilo
+  title: Kreuzworträtsel-Datenbank
+  tags:
+  - old
+lad 1:
+  deprecated:
+    alternative:
+      query: dcc.la {%1}
+      created: '2023-04-10'
+last 1:
+  url: http://www.last.fm/search?setlang=de&q={%artist}
+  title: Last.fm
+  tags:
+  - lastfm
+  - music
+  examples:
+  - arguments: beatles
+    description: Search for "beatles"
+leo 1:
+  deprecated:
+    alternative:
+      query: leo.en {%1}
+      created: '2023-03-12'
+lobby 0:
+  url: http://lobbycontrol.de/
+  title: LobbyControl
+  tags:
+  - politics
+lobby 1:
+  url: https://www.lobbycontrol.de/suche/{%Suche}/
+  title: LobbyControl
+  tags:
+  - politics
+  examples:
+  - arguments: berlin
+    description: Search LobbyControl for "berlin"
+m 1:
+  url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe={%query}
+  title: Metager
+  tags:
+  - search
+  - search engine
+  - web search
+mactv 1:
+  url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff={%query}
+  title: Mac-TV Archiv
+  tags:
+  - apple
+morgenpost 1:
+  url: http://www.morgenpost.de/suche/?q={%Suche}
+  title: Berliner Morgenpost Archiv
+  tags:
+  - news
+  examples:
+  - arguments: berlin
+    description: Search Berliner Morgenpost Archiv for "berlin"
+mp 1:
+  url: http://www.moviepilot.de/suche?q={%query}
+  title: Moviepilot
+  tags:
+  - film
+  - moviepilot
+  - movies
+nds 0:
+  url: http://www.nachdenkseiten.de
+  title: Nachdenkseiten
+  tags:
+  - blog
+  - politik
+nds 1:
+  url: http://www.nachdenkseiten.de/?s={%Begriff}&Submit.x=0&Submit.y=0
+  title: Nachdenkseiten
+  tags:
+  - blog
+  - politik
+  examples:
+  - arguments: grundeinkommen
+    description: Suche nach "grundeinkommen"
+nld 1:
+  deprecated:
+    alternative:
+      query: dcc.nl {%1}
+      created: '2023-04-10'
+nlde 1:
+  deprecated:
+    alternative:
+      query: nl {%1}
+      created: '2023-04-10'
+ntv 0:
+  url: http://www.n-tv.de
+  title: n-tv.de
+  tags:
+  - news
+ntv 1:
+  url: http://www.n-tv.de/suche/?q={%query}&searchabout=ntv&a=search&at=all&qwg=&qw=&qa=&sdd=&sdm=&sdy=&edd=&edm=&edy=
+  title: n-tv.de
+  tags:
+  - news
+  examples:
+  - arguments: berlin
+    description: Search n-tv.de for "berlin"
+nzz 1:
+  url: http://www.nzz.ch/suche?form%5Bq%5D={%Suchbegriff}
+  title: NZZ Neue Züricher Zeitung, Archiv
+  tags:
+  - news
+  - nzz
+  examples:
+  - arguments: schweiz
+    description: Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"
+ofdb 1:
+  url: http://www.ofdb.de/view.php?page=suchergebnis&SText={%Suche}
+  title: Online Filmdatenbank
+  tags:
+  - movies
+  examples:
+  - arguments: forrest gump
+    description: Search for information about Forrest Gump
+ok 1:
+  url: https://otrkey.com/download/{%Suche}.html
+  title: otrkey.com
+  tags:
+  - old
+osm? 0:
+  url: https://wiki.openstreetmap.org/index.php/Hauptseite
+  title: OpenStreetMap Wiki
+  tags:
+  - copyleft
+  - maps
+  - osm
+osmf 0:
+  url: https://forum.openstreetmap.org/viewforum.php?id=14
+  title: OpenStreetMap Forum Deutsch
+  tags:
+  - copyleft
+  - maps
+  - osm
+ot 0:
+  url: http://www.openthesaurus.de/
+  title: OpenThesaurus
+  tags:
+  - language
+  - thesaurus
+ot 1:
+  url: https://www.openthesaurus.de/synonyme/{%Wort}
+  title: OpenThesaurus
+  tags:
+  - language
+  - thesaurus
+  examples:
+  - arguments: wichtig
+    description: Synonyme für "wichtig"
+ot? 0:
+  url: http://www.openthesaurus.de/faq.php
+  title: OpenThesaurus Hilfe
+  tags:
+  - language
+  - thesaurus
+plb 1:
+  deprecated:
+    alternative:
+      query: bab.pl {%1}
+      created: '2023-04-10'
+pld 1:
+  deprecated:
+    alternative:
+      query: dcc.pl {%1}
+      created: '2023-04-10'
+pli 1:
+  deprecated:
+    alternative:
+      query: lge.pl {%1}
+      created: '2023-04-10'
+plp 1:
+  deprecated:
+    alternative:
+      query: pns.pl {%1}
+      created: '2023-04-10'
+ptb 1:
+  deprecated:
+    alternative:
+      query: beo.pt {%1}
+      created: '2023-04-10'
+ptd 1:
+  deprecated:
+    alternative:
+      query: dcc.pt {%1}
+      created: '2023-04-10'
+pti 1:
+  deprecated:
+    alternative:
+      query: lge.pt {%1}
+      created: '2023-03-12'
+ptp 1:
+  deprecated:
+    alternative:
+      query: pns.pt {%1}
+      created: '2023-04-10'
+qa 1:
+  url: https://lite.qwant.com/?q={%query}
+  title: QWANT
+rblcheck 1:
+  url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress={%ipaddress}
+  title: RBL-Check (Realtime Blackhole List)
+  tags:
+  - email
+  - rbl
+  examples:
+  - arguments: 127.0.0.1
+    description: Check if 127.0.0.1 is on the RBL
+reim 1:
+  url: http://www.2rhyme.ch/Reimt-auf/{%Wortendung}
+  title: 2 Rhyme Reimlexikon
+  tags:
+  - german
+  - language
+  - reime
+  examples:
+  - arguments: auen
+    description: Suche Reime auf "auen"
+rezeptefuchs 0:
+  url: http://www.rezeptefuchs.de/
+  title: Rezeptefuchs Startseite
+  tags:
+  - cooking
+rezeptefuchs 1:
+  url: http://www.rezeptefuchs.de/Search?q={%Suche}
+  title: Rezeptefuchs
+  tags:
+  - cooking
+  examples:
+  - arguments: tomate
+    description: Suche nach Rezepten mit Tomate
+rgs 1:
+  url: https://www.google.de/search?hl={$language}&q=site%3Aruhrgebietssprache.de%20{%Suche}&ie=utf-8
+  title: Ruhrgebietssprache
+  tags:
+  - german
+  - language
+  examples:
+  - arguments: abdackeln
+    description: Suche Ruhrgebietssprache nach "abdackeln"
+rivva 0:
+  url: https://rivva.de
+  title: Rivva Blog Aggregator
+  tags:
+  - blogs
+rivva 1:
+  url: https://www.google.de/search?hl=de&q=site%3Arivva.de%20{%Suche}&ie=utf-8
+  title: Rivva Blog Aggregator
+  tags:
+  - blogs
+  examples:
+  - arguments: berlin
+    description: Search Rivva blog aggregator for "berlin"
+rm 1:
+  url: http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase={%pled}
+  title: Romanisch-Deutsch via Pledari Grond
+  description: Dictionary German <-> Rumantsch Grischun
+  tags:
+  - dictionary
+  - german
+  - language
+  - rumantsch grischun
+rub 1:
+  deprecated:
+    alternative:
+      query: bab.ru {%1}
+      created: '2023-04-10'
+rud 1:
+  deprecated:
+    alternative:
+      query: dcc.ru {%1}
+      created: '2023-04-10'
+rundschau 1:
+  url: https://www.fr.de/suche/?qr={%Suche}
+  title: Frankfurter Rundschau Archiv
+  tags:
+  - news
+  examples:
+  - arguments: berlin
+    description: Suche im Frankfurter-Rundschau-Archiv nach "berlin"
+rup 1:
+  deprecated:
+    alternative:
+      query: pns.ru {%1}
+      created: '2023-04-10'
+sc 1:
+  url: http://www.scienceticker.info/index.php?s={%Suche}&sc
+  title: Scienceticker
+  tags:
+  - old
+sfr 1:
+  url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}
+  title: Stayfriends
+  tags:
+  - school
+  - social network
+  examples:
+  - arguments: stefan
+    description: Suchen nach Personen namens Stefan
+sfr 2:
+  url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name={%name}&PersonSearch.school={%Ort}
+  title: Stayfriends
+  tags:
+  - school
+  - social network
+  examples:
+  - arguments: stefan, berlin
+    description: Suchen nach Personen namens Stefan in Berlin
+sh 0:
+  url: http://de.selfhtml.org/
+  title: Selfhtml
+  tags:
+  - doc
+  - documentation
+  - html
+  - javascript
+  - perl
+  - programming
+  - selfhtml
+  - tutorial
+  - xml
+sh 1:
+  url: http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage={%Suche}
+  title: Selfhtml
+  tags:
+  - doc
+  - documentation
+  - html
+  - javascript
+  - tutorial
+  examples:
+  - arguments: div
+    description: Suche nach "div"
+shg 1:
+  url: http://www.google.com/search?q={%Suche}&sitesearch=wiki.selfhtml.org
+  title: Selfhtml via Google
+  tags:
+  - doc
+  - documentation
+  - html
+  - javascript
+  - perl
+  - programming
+  - selfhtml
+  - tutorial
+  - xml
+  examples:
+  - arguments: doctype
+    description: description about doctype declaration
+spon 0:
+  url: http://www.spiegel.de/
+  title: Spiegel Online
+  tags:
+  - news
+  - spiegel
+spon 1:
+  url: https://www.spiegel.de/suche/?suchbegriff={%Suche}
+  title: Spiegel Online
+  tags:
+  - news
+  - spiegel
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
+stupi 0:
+  url: http://www.stupidedia.org/
+  title: Stupipedia Hauptseite
+  tags:
+  - wiki
+stupi 1:
+  url: http://www.stupidedia.org/stupi/Special:Search?go=Article&search={%article}
+  title: Stupipedia Artikelsuche
+  tags:
+  - wiki
+  examples:
+  - arguments: berlin
+    description: Search Stupipedia Artikelsuche for "berlin"
+svb 1:
+  deprecated:
+    alternative:
+      query: bab.sv {%1}
+      created: '2023-04-10'
+svd 1:
+  deprecated:
+    alternative:
+      query: dcc.sv {%1}
+      created: '2023-04-10'
+swb 0:
+  url: http://www.schwaebisches-woerterbuch.de/
+  title: Schwäbisches Wörterbuch
+  description: Schwäbischen Wörterbuch
+  tags:
+  - Swabian
+  - dialect
+  - dictionary
+swb 1:
+  url: http://www.schwaebisches-woerterbuch.de/default.asp?q={%Suchwort|encoding=iso-8859-1}
+  title: Schwäbisches Wörterbuch
+  description: Suche im schwäbischen Wörterbuch
+  tags:
+  - German
+  - Swabian
+  - dialect
+  - dictionary
+  examples:
+  - arguments: Gschäfd
+    description: Der Ort, wo man schafft.
+syn 1:
+  url: http://synonyme.woxikon.de/synonyme/{%wort}.php
+  title: Synonyme
+  tags:
+  - language
+  - thesaurus
+  examples:
+  - arguments: wichtig
+    description: Synonyme für "wichtig"
+sz 0:
+  url: http://www.sueddeutsche.de/
+  title: Süddeutsche Zeitung
+  tags:
+  - news
+  - zeitung
+sz 1:
+  url: http://www.sueddeutsche.de/news?search={%query}
+  title: Süddeutsche Zeitung
+  tags:
+  - news
+  - newspaper
+  - print
+taz 0:
+  url: http://www.taz.de/
+  title: taz. die tageszeitung
+  tags:
+  - news
+  - zeitung
+tomdestages 0:
+  url: https://www.taz.de/#!tom=tomdestages
+  title: Tom Touché (Tom des Tages)
+  tags:
+  - comic
+  - taz
+tomshuffle 0:
+  url: https://www.taz.de/#!tom=tomshuffle
+  title: Tom Touché (Random)
+  tags:
+  - comic
+  - taz
+tomtouche 0:
+  url: https://www.taz.de/#!tom=tomdestages
+  title: Tom Touché (Tom des Tages)
+  tags:
+  - comic
+  - taz
+trb 1:
+  deprecated:
+    alternative:
+      query: bab.tr {%1}
+      created: '2023-04-10'
+trd 1:
+  deprecated:
+    alternative:
+      query: dcc.tr {%1}
+      created: '2023-04-10'
+ts 0:
+  url: http://www.tagesschau.de/
+  title: Tagesschau
+  tags:
+  - news
+  - tagesschau
+ts 1:
+  url: http://www.tagesschau.de/suche2.html?searchText={%query}
+  title: Tagesschau
+  tags:
+  - news
+  - tagesschau
+  examples:
+  - arguments: berlin
+    description: Suche nach Nachrichten zu Berlin
+tsp 0:
+  url: https://www.tagesspiegel.de/
+  title: Tagesspiegel, Homepage
+  tags:
+  - berlin
+  - newspaper
+tsp 1:
+  url: https://background.tagesspiegel.de/suche?text={%Suche}
+  title: Tagesspiegel
+  tags:
+  - berlin
+  - newspaper
+  examples:
+  - arguments: Friedrichshain
+    description: Search Tagesspiegel for "Friedrichshain"
+tspg 1:
+  url: https://www.google.de/search?q=site:tagesspiegel.de%20{%Suche}
+  title: Tagesspiegel via Google
+  tags:
+  - berlin
+  - newspaper
+  examples:
+  - arguments: Friedrichshain
+    description: Search "Friedrichshain"
+uu 0:
+  url: http://www.ubuntuusers.de/
+  title: UbuntuUsers.de
+  tags:
+  - documentation
+  - linux
+  - ubuntu
+uuf 0:
+  url: http://forum.ubuntuusers.de/
+  title: 'UbuntuUsers.de: Startseite des Forum'
+  tags:
+  - documentation
+  - linux
+  - ubuntu
+uuf~ 0:
+  url: http://forum.ubuntuusers.de/egosearch/
+  title: 'UbuntuUsers.de: Eigene Beiträge im Forum'
+  tags:
+  - documentation
+  - linux
+  - ubuntu
+uui 0:
+  url: http://ikhaya.ubuntuusers.de/
+  title: 'UbuntuUsers.de: Ikhaya-Startseite'
+  tags:
+  - documentation
+  - linux
+  - ubuntu
+uup 0:
+  url: http://planet.ubuntuusers.de/
+  title: 'UbuntuUsers.de: Startseite des Planeten'
+  tags:
+  - documentation
+  - linux
+  - ubuntu
+uuw 0:
+  url: http://wiki.ubuntuusers.de/Startseite
+  title: 'UbuntuUsers.de: Startseite des Wiki'
+  tags:
+  - documentation
+  - linux
+  - ubuntu
+wetter 1:
+  url: http://de.wetter.com/suche/?search={%Ort}
+  title: Wetter.com
+  tags:
+  - old
+wn 1:
+  url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort={%query}
+  title: Wörterbuchnetz
+  tags:
+  - deutsch
+  - dictionary
+  - german
+  - wörterbuch
+  examples:
+  - arguments: haus
+    description: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
+wort 1:
+  url: http://www.dwds.de/?qu={%Wort}&view=1
+  title: Digitales Wörterbuch der Deutschen Sprache
+  tags:
+  - old
+wsl 1:
+  url: https://corpora.uni-leipzig.de/de/res?word={%Wort}&corpusId=deu_newscrawl_2011
+  title: Wortschatz-Lexikon (Deutsch)
+  tags:
+  - german
+  - language
+  examples:
+  - arguments: Stuhl
+    description: Search for "Stuhl"
+zeit 0:
+  url: http://www.zeit.de/
+  title: Zeit Online
+  tags:
+  - news
+  - zeit
+zeit 1:
+  url: http://www.zeit.de/suche/index?searchtype=on&q={%Suche}
+  title: Zeit Online
+  tags:
+  - news
+  - zeit
+  examples:
+  - arguments: berlin
+    description: Suche im Archiv von Zeit Online nach Berlin
+zv 1:
+  url: http://www.zwangsversteigerung.de/suche?q={%KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID}&ergebnisZeigen=ja
+  title: Zwangsversteigerung
+  tags:
+  - zwangsversteigerung
+  examples:
+  - arguments: gi
+    description: Suche nach Zwangsversteigerungen in Gießen
+zvab 0:
+  url: https://www.zvab.com
+  title: Zentrales Verzeichnis Antiquarischer Bücher (ZVAB)
+  tags:
+  - books
+zvab 1:
+  url: http://www.zvab.com/basicSearch.do?anyWords={%Suche}&author=&title=&lastXDays=-1&itemsPerPage=10
+  title: Zentrales Verzeichnis Antiquarischer Bücher
+  tags:
+  - books

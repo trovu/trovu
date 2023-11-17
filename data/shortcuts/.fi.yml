@@ -1,0 +1,9 @@
+zal 1:
+  url: http://www.zalando.fi/katalogi/?q={%tavara}
+  title: Zalando.fi
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - arguments: jalkine
+    description: search for "jalkine"

@@ -1,0 +1,19 @@
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
+last 1:
+  url: http://www.last.fm/search?setlang=ko&q={%artist}
+  title: Last.fm
+  tags:
+  - lastfm
+  - music
+  examples:
+  - arguments: beatles
+    description: Search for "beatles"

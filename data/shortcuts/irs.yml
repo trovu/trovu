@@ -1,0 +1,46 @@
+en 0:
+  include:
+    key: en-{$language} 0
+en 1:
+  include:
+    key: en-{$language} 1
+en-ga 0:
+  url: https://www.irishionary.com/
+  title: Béarla-Gaeilge (Irishionary)
+  tags:
+  - dictionary
+  - english
+  - irish
+  - language
+en-ga 1:
+  url: https://www.irishionary.com/search/{%word}/
+  title: Béarla-Gaeilge (Irishionary)
+  tags:
+  - dictionary
+  - english
+  - irish
+  - language
+  examples:
+  - arguments: tree
+    description: Gaeilge aistriúchán de "tree"
+  - arguments: crann
+    description: Béarla aistriúchán de "crann"
+ga 0:
+  include:
+    key: ga-{$language} 0
+ga 1:
+  include:
+    key: ga-{$language} 1
+ga-en 0:
+  title: Irish-English (Irishionary)
+  include:
+    key: en-ga 0
+ga-en 1:
+  title: Irish-English (Irishionary)
+  include:
+    key: en-ga 1
+  examples:
+  - arguments: crann
+    description: English translation of "crann"
+  - arguments: tree
+    description: Irish translation of "tree"

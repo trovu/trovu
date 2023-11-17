@@ -1,0 +1,46 @@
+de 0:
+  include:
+    key: de-{$language} 0
+de 1:
+  include:
+    key: de-{$language} 1
+de-la 0:
+  url: https://www.albertmartin.de/latein/
+  title: Germanica-Latina (albertmartin.de)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latin
+de-la 1:
+  url: https://www.albertmartin.de/latein/?q={%Wort}
+  title: Germanica-Latina (albertmartin.de)
+  tags:
+  - dictionary
+  - german
+  - language
+  - latin
+  examples:
+  - arguments: baum
+    description: Translatio in Latina pro "baum"
+  - arguments: arbor
+    description: Translatio in Germanica pro "arbor"
+la 0:
+  include:
+    key: la-{$language} 0
+la 1:
+  include:
+    key: la-{$language} 1
+la-de 0:
+  title: Latein-Deutsch (albertmartin.de)
+  include:
+    key: de-la 0
+la-de 1:
+  title: Latein-Deutsch (albertmartin.de)
+  include:
+    key: de-la 1
+  examples:
+  - arguments: arbor
+    description: Deutsch-Übersetzung von "arbor"
+  - arguments: baum
+    description: Latein-Übersetzung von "baum"

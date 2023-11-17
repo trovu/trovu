@@ -1,0 +1,46 @@
+de 0:
+  include:
+    key: de-{$language} 0
+de 1:
+  include:
+    key: de-{$language} 1
+de-no 0:
+  url: https://www.heinzelnisse.info/
+  title: Tysk-Norsk (Heinzelnisse)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian
+de-no 1:
+  url: https://www.heinzelnisse.info/no/dict?searchItem={%word}
+  title: Tysk-Norsk (Heinzelnisse)
+  tags:
+  - dictionary
+  - german
+  - language
+  - norwegian
+  examples:
+  - arguments: baum
+    description: norsk-oversettelse av "baum"
+  - arguments: tre
+    description: tysk-oversettelse av "tre"
+no 0:
+  include:
+    key: no-{$language} 0
+no 1:
+  include:
+    key: no-{$language} 1
+no-de 0:
+  title: Norwegisch-Deutsch (Heinzelnisse)
+  include:
+    key: de-no 0
+no-de 1:
+  title: Norwegisch-Deutsch (Heinzelnisse)
+  include:
+    key: de-no 1
+  examples:
+  - arguments: tre
+    description: Deutsch-Übersetzung von "tre"
+  - arguments: baum
+    description: Norwegisch-Übersetzung von "baum"
