@@ -18,6 +18,11 @@ export default class DataManager {
     return data;
   }
 
+  /**
+   * Read YAML files from a directory.
+   * @param   {string} ymlDirPath
+   * @returns {object} dataByFileRoot - The data from the YAML files.
+   */
   static readYmls(ymlDirPath) {
     const dataByFileRoot = {};
     const fileNames = fs.readdirSync(ymlDirPath);
