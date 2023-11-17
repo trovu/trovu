@@ -79,7 +79,15 @@ The input will be parsed as a time.
 
 ### _city_
 
-...
+The input will be parsed as an abbreviation for a city name, depending on the current setting for `country`. Usually, the mappings are based on the local vehicle registration plates' abbreviations.
+
+| `country` | Example input | Example output |
+| --------- | ------------- | -------------- |
+| `de`      | `hh`          | `Hamburg`      |
+| `pl`      | `dw`          | `Wrocław`      |
+| `ch`      | `be`          | `Bern`         |
+
+The mappings are stored in [/data/types/city](https://github.com/trovu/trovu/tree/master/data/types/city).
 
 ## Transforming
 
