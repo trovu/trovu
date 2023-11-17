@@ -7,7 +7,13 @@ edit_uri: tree/master/docs/
 docs_dir: docs
 site_dir: dist/public/docs
 theme:
-  name: readthedocs
+  name: material
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - navigation.expand
+    - navigation.footer
 
 plugins:
   - search
