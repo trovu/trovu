@@ -9,6 +9,9 @@ theme:
   repo_url: https://github.com/trovu/trovu
   repo_name: 'trovu'
   edit_uri: '/docs/'
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/trovu
 
 plugins:
   - search
