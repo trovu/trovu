@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 173-move-documentation-to-this-future-monorepo
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
