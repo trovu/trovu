@@ -15,7 +15,6 @@ export default class DataManager {
     data['shortcuts'] = DataManager.readYmls(`${ymlDirPath}/shortcuts/`);
     data['types'] = {};
     data['types']['city'] = DataManager.readYmls(`${ymlDirPath}/types/city/`);
-    console.log(data);
     return data;
   }
 
