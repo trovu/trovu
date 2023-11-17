@@ -12,6 +12,7 @@
     "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
     "watch": "rollup --config --watch",
     "serve": "http-server ./dist/public/ --port 8081 --cors",
+    "compile-data": "node -r esm src/js/tools.js compile-data > dist/public/data.json",
     "clean": "rm -r dist/",
     "sync": "rsync -vr --delete-after dist/public/ ntro:~/trovu.net/",
     "deploy": "npm run clean || true && npm run build && npm run sync"
