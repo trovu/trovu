@@ -79,7 +79,7 @@ your namespaces will be:
 
 ### Advanced (with your Github account)
 
-Your namespaces are [derived from your config.yml](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts). With your personal configuration, you can use more than 3 namespaces. This can be useful when you like to use shortcuts from multiple languages and countries, e.g. dictionaries or public transport while travelling.
+Your namespaces are [derived from your config.yml](../users/advanced.md). With your personal configuration, you can use more than 3 namespaces. This can be useful when you like to use shortcuts from multiple languages and countries, e.g. dictionaries or public transport while travelling.
 
 ## Priority of namespaces
 

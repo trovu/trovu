@@ -26,7 +26,7 @@ Placeholders are either
 | `{%foobar}`                                                 | argument from query. <br>If there is more than one argument placeholder, their order in URL also defines the expected order in the shortcut query. |
 | `{%foobar\|encoding=iso-8859-1}`                            | ... with encoding specified. See Input encoding below.                                                                                             |
 | `{%Datum\|type=date\|output=Y-m-d}`<br>`{%Ziel\|type=city}` | ... with a specified type. See Argument types below.                                                                                               |
-| `{%IATA-Code\|transform=uppercase}`                         | ... with a transformation definition. See [Transforming](https://github.com/trovu/trovu.github.io/wiki/Shortcut-URLs#transforming) below.          |
+| `{%IATA-Code\|transform=uppercase}`                         | ... with a transformation definition. See [Transforming](#transforming) below.                                                                     |
 
 ### Variable placeholders
 

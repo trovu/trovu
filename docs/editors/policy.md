@@ -2,7 +2,7 @@
 
 This page is about which shortcuts may be in the **curated repository** [trovu-data](https://github.com/trovu/trovu-data), and how they should look like.
 
-Note that you can [add any shortcut to your user repository](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#personal-shortcuts), completely ignoring this policy.
+Note that you can [add any shortcut to your user repository](../users/advanced.md#personal-shortcuts), completely ignoring this policy.
 
 _Caveat: You might note that many curated shortcuts at this moment don't match the listed criteria. This is because Trovu's first version (named **Serchilo**) has existed since 2005, with user-created shortcuts available since 2007, and this policy started to be written in 2023. Thus, the goal is to finally define some standards and then slowly applying them, with as little as possible breaking of existing user habits._
 
@@ -20,13 +20,13 @@ You use it by simply entering `g` and hitting Enter.
 
 This shortcut to the Google Web Homepage is fine because it is not alone: There is also a shortcut for the Google Websearch `g 1`.
 
-But a bookmark shortcut that has no corresponding 1-or-more-argument shortcut should be avoided. You may put them into [your user shortcuts](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#personal-shortcuts).
+But a bookmark shortcut that has no corresponding 1-or-more-argument shortcut should be avoided. You may put them into [your user shortcuts](../users/advanced.md#personal-shortcuts).
 
 ## Keywords
 
 ### Avoid common words
 
-Many users use Trovu with a [default keyword](https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts#default-keyword): They can enter any query, and if it's not matched with a shortcut, the default keyword will be used – often it refers to Google.
+Many users use Trovu with a [default keyword](../users/advanced.md#default-keyword): They can enter any query, and if it's not matched with a shortcut, the default keyword will be used – often it refers to Google.
 
 Thus, such users often perform their Google searches without `g` – because it will be applied automatically if not shortcut is found.
 
