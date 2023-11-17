@@ -12,6 +12,7 @@ theme:
 plugins:
   - search
   - git-authors
+  - git-revision-date-localized
   - minify:
       minify_html: true
 
