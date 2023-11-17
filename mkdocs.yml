@@ -20,6 +20,9 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
 
+extra_css:
+  - stylesheets/extra.css
+
 plugins:
   - offline
   - search
