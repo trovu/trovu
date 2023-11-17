@@ -106,7 +106,7 @@ export default class Home {
     switch (params.status) {
       case 'not_found':
         alert.innerHTML =
-          'Could not find a matching shortcut for this query. Try <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Troubleshooting">Troubleshooting</a>.';
+          'Could not find a matching shortcut for this query. Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>.';
         break;
       case 'reloaded':
         alert.textContent = 'Shortcuts were reloaded in all namespaces.';
@@ -119,8 +119,8 @@ export default class Home {
           params.key,
         )}+repo%3Atrovu%2Ftrovu-data&type=code">
           ${params.query}</a> was removed as does not adhere to our 
-          <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Content-policy">Content policy</a>. 
-          But you can <a target="_blank" href="https://github.com/trovu/trovu.github.io/wiki/Advanced-settings-&-personal-shortcuts">
+          <a target="_blank" href="/docs/editors/policy/">Content policy</a>. 
+          But you can <a target="_blank" href="/docs/users/advanced/">
           create a user shortcut in your own namespace</a>.`;
         break;
     }
