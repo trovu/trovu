@@ -11,6 +11,7 @@ theme:
 
 plugins:
   - search
+  - git-authors
   - minify:
       minify_html: true
 
