@@ -10,6 +10,7 @@ program
   .description('Compile YAML data files to JSON')
   .action(() => {
     const data = DataManager.load();
-    console.log(JSON.stringify(data));
+    const json = JSON.stringify(data);
+    process.stdout.write(json);
   });
 program.parse();
