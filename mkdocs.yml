@@ -24,7 +24,6 @@ extra_css:
   - stylesheets/extra.css
 
 plugins:
-  - offline
   - search
   - minify:
       minify_html: true
