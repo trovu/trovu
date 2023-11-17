@@ -1,0 +1,52 @@
+site_name: Trovu docs
+site_description: Search with shortcuts.
+site_url: https://trovu.net
+repo_url: https://github.com/trovu/trovu
+edit_uri: tree/master/docs/
+
+docs_dir: docs
+site_dir: dist/public/docs
+theme:
+  name: material
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - navigation.expand
+    - navigation.footer
+  font: false # Keep privacy and do not download external fonts.
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Navigation structure (if needed)
+nav:
+  - Home: index.md
+  - privacy.md
+  - User guide:
+      - users/processing.md
+      - users/integration.md
+      - users/advanced.md
+      - users/troubleshooting.md
+      - users/support.md
+  - Shortcuts:
+      - shortcuts/namespaces.md
+      - shortcuts/urls.md
+      - shortcuts/includes.md
+      - shortcuts/userscripts.md
+  - Editor guide:
+      - editors/policy.md
+  - Legacy:
+      - legacy/differences.md
+      - legacy/migrate.md
+      - presentations.md

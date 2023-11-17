@@ -8,6 +8,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+      - name: Cache Pipenv virtualenv
+        uses: actions/cache@v2
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pipenv-
+      - name: Install dependencies
+        run: |
+          pip install pipenv
+          pipenv install
+      - name: Build MkDocs site
+        run: |
+          pipenv run mkdocs build
       - uses: actions/setup-node@v4
         with:
           node-version: 21
@@ -17,7 +35,7 @@ jobs:
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/public/
-          repository-name: trovu/trovu.github.io
+          repository-name: trovu/trovu-deploy
           branch: master
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           # Either to "master" or "dev", depending on the branch.
