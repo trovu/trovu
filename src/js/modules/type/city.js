@@ -14,7 +14,6 @@ export default class CityType {
       const city = cities[abbreviation];
       return city;
     }
-
     return false;
   }
 }
