@@ -273,7 +273,12 @@ export default class Env {
    * @returns {Object} An object containing the fetched data.
    */
   async getData() {
-    const url = `/data.json?${this.commitHash}`;
+    let url = `/data.json?${this.commitHash}`;
+    // Add domain for local runs,
+    // as fetch() in NodeJS can't do relative URLs.
+    if (typeof window === 'undefined') {
+      url = `http://127.0.0.1:8081${url}`;
+    }
     const text = await Helper.fetchAsync(url, this);
     if (!text) {
       return false;
