@@ -5,7 +5,7 @@ export default class CityType {
   static async parse(str, env) {
     let country = env.country;
     let matches;
-    let abbreviation = str;
+    const abbreviation = str;
     if ((matches = str.match(/^(\w\w+)(\.)(.+)$/))) {
       [, country, , abbreviation] = matches;
     }
