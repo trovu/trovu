@@ -126,6 +126,7 @@ export default class Env {
       this.namespaces.push(this.extraNamespaceName);
     }
 
+    this.data = await this.getData();
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(
       this.namespaces,
     );
@@ -264,6 +265,25 @@ export default class Env {
     // Default debug.
     if (typeof this.debug != 'boolean') {
       this.debug = Boolean(this.debug);
+    }
+  }
+
+  /**
+   * Fetches data from /data.
+   * @returns {Object} An object containing the fetched data.
+   */
+  async getData() {
+    const url = `/data.json?${this.commitHash}`;
+    const text = await Helper.fetchAsync(url, this);
+    if (!text) {
+      return false;
+    }
+    try {
+      const data = await JSON.parse(text);
+      return data;
+    } catch (error) {
+      this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
+      return false;
     }
   }
 }
