@@ -4,13 +4,7 @@ You are welcome to contribute to Trovu [shortcuts](../shortcuts/namespaces.md), 
 
 ## Edit directly or fork + pull request
 
-Members of the [editors](https://github.com/orgs/trovu/teams/editors) team can edit directly the [Trovu repo](https://github.com/trovu/trovu). Others please fork it, edit and create a pull request.
-
-## Deploy via Github Actions
-
-For every contribution to the monorepo, be it data (shortcuts) or documentation, be aware that it needs to be deployed. This happens automatically after changes to the `master` branch.
-
-You can follow the execution of the action execution on [Github Actions](https://github.com/trovu/trovu/actions). Seconds after it finished successfully, the changes should be published on [trovu.net](https://trovu.net/)
+Members of the [editors](https://github.com/orgs/trovu/teams/editors) team can edit directly the [Trovu repo](https://github.com/trovu/trovu). Others please fork and edit it, and create a pull request.
 
 ## Contribute shortcuts
 
@@ -23,3 +17,13 @@ Also city abbreviations are part of the [/data](https://github.com/trovu/trovu/t
 ## Contribute documentation
 
 Documentation lives in the [/docs](https://github.com/trovu/trovu/tree/master/docs) subdirectory. You are welcome to make any improvements.
+
+## Deploy via Github Actions
+
+For every contribution to the monorepo, be it data (shortcuts) or documentation, be aware that it needs to be deployed. This happens automatically after changes to the `master` branch.
+
+You can follow the execution of the action execution on [Github Actions](https://github.com/trovu/trovu/actions). Seconds after it finished successfully, the changes should be published on [trovu.net](https://trovu.net/)
+
+During deployment, shortcuts get compiled into [trovu.net/data.json](https://trovu.net/data.json). This is your first place to check anything does not work as expected.
+
+Before deployment, the current build is pushed to [trovu/trovu-deploy](https://github.com/trovu/trovu-deploy). This is the second place to check your change is missing.
