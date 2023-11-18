@@ -1,6 +1,3 @@
-import jsyaml from 'js-yaml';
-import Helper from '../Helper.js';
-
 export default class CityType {
   static async parse(str, env) {
     let country = env.country;
