@@ -4,10 +4,11 @@
   "description": "Trovu web interface.",
   "main": "",
   "scripts": {
+    "lint-yaml": "npx yaml-lint 'data/**/*.yml'",
     "test-unit": "jest --verbose env helper src/js/ ",
     "test-calls": "jest --verbose calls",
     "test-fe": "cypress run",
-    "test": "npm run test-unit && npm run test-calls && npm run test-fe",
+    "test": "npm lint-yaml && npm run test-unit && npm run test-calls && npm run test-fe",
     "doc": "rm -r doc ; jsdoc src/js/* --configure jsdoc.json --destination doc",
     "build": "rollup --config --environment INCLUDE_DEPS,BUILD:production",
     "watch": "rollup --config --watch",
