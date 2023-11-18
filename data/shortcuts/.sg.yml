@@ -1,0 +1,15 @@
+e 0:
+  url: http://www.ebay.com.sg/
+  title: Ebay.com.sg
+  tags:
+  - ebay
+  - shopping
+e 1:
+  url: http://www.ebay.com.sg/sch/i.html?_nkw={%query}
+  title: Ebay.com.sg
+  tags:
+  - ebay
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"

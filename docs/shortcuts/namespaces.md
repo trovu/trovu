@@ -1,5 +1,7 @@
 # Namespaces
 
+Shortcuts are stored in [YAML](https://en.wikipedia.org/wiki/YAML) files, organized by namespaces. They are part of the [/data](https://github.com/trovu/trovu/tree/master/data) subdirectory.
+
 Every shortcut belongs to exactly one namespace. Namespaces allow the same keyword to be used for different shortcuts – according to the user's language, location or personal setup. This comes in handy e.g. for multi-country websites like Amazon:
 
 -   `a shakespeare` shall search Amazon for books from Shakespeare – but Amazon from which country?
@@ -19,14 +21,14 @@ Namespaces work well together with [Includes](includes.md), especially for dicti
 
 | Namespace type | Example namespaces                                                                                                                                                      | Naming convention                                                                         | Contains                                         | Example shortcuts                                                                                                                    |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| language       | [de](https://github.com/trovu/trovu-data/tree/master/shortcuts/de.yml), [en](https://github.com/trovu/trovu-data/tree/master/shortcuts/en.yml)                          | 2 chars, by [ISO 639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)             | shortcuts related to a particular language       | Merriam-Webster dictionary: `mw tree` (from [en](https://github.com/trovu/trovu-data/blob/master/shortcuts/en.yml))                  |
-| country        | [.de](https://github.com/trovu/trovu-data/tree/master/shortcuts/.de.yml), [.us](https://github.com/trovu/trovu-data/tree/master/shortcuts/.us.yml)                      | dot and 2 chars, by [ISO 3166-1 alpha2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | shortcuts related to a particular country        | Deutsche Bahn Fahrplanauskunft: `db berlin, hamburg` (from [.de](https://github.com/trovu/trovu-data/blob/master/shortcuts/.de.yml)) |
-| dictionary     | [dcm](https://github.com/trovu/trovu-data/tree/master/shortcuts/dcm.yml) (dict.com), [lge](https://github.com/trovu/trovu-data/tree/master/shortcuts/lge.yml) (Linguee) | 3 chars, by their abbreviated name                                                        | shortcuts from a dictionary website              | German-English: `de-en tree`, `en-de tree`, `en-{$language} tree` (using `language` variable from settings)                          |
+| language       | [de](https://github.com/trovu/trovu/tree/master/data/shortcuts/de.yml), [en](https://github.com/trovu/trovu/tree/master/data/shortcuts/en.yml)                          | 2 chars, by [ISO 639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)             | shortcuts related to a particular language       | Merriam-Webster dictionary: `mw tree` (from [en](https://github.com/trovu/trovu-data/blob/master/shortcuts/en.yml))                  |
+| country        | [.de](https://github.com/trovu/trovu/tree/master/data/shortcuts/.de.yml), [.us](https://github.com/trovu/trovu/tree/master/data/shortcuts/.us.yml)                      | dot and 2 chars, by [ISO 3166-1 alpha2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | shortcuts related to a particular country        | Deutsche Bahn Fahrplanauskunft: `db berlin, hamburg` (from [.de](https://github.com/trovu/trovu-data/blob/master/shortcuts/.de.yml)) |
+| dictionary     | [dcm](https://github.com/trovu/trovu/tree/master/data/shortcuts/dcm.yml) (dict.com), [lge](https://github.com/trovu/trovu/tree/master/data/shortcuts/lge.yml) (Linguee) | 3 chars, by their abbreviated name                                                        | shortcuts from a dictionary website              | German-English: `de-en tree`, `en-de tree`, `en-{$language} tree` (using `language` variable from settings)                          |
 | user           | [georgjaehnig](https://github.com/georgjaehnig/trovu-data-user/blob/master/shortcuts.yml)                                                                               | a Github user name (can be overridden with a custom name)                                 | custom shortcuts created by a user in their repo | Trains from my home station: `db> hamburg`                                                                                           |
-| planet         | [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml)                                                                                                    | the shape of the planet                                                                   | shortcuts unrelated to a language or country     | Google web search: `g berlin`                                                                                                        |
+| planet         | [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml)                                                                                                    | the shape of the planet                                                                   | shortcuts unrelated to a language or country     | Google web search: `g berlin`                                                                                                        |
 
 `language`, `country`, `dictionary` and `o (planet)` are **site namespaces**. They are curated and
-[here to find](https://github.com/trovu/trovu-data/tree/master/shortcuts). (Pull requests are welcome.)
+[here to find](https://github.com/trovu/trovu/tree/master/data/shortcuts). (Pull requests are welcome.)
 
 ### Dictionary namespaces
 
@@ -60,7 +62,7 @@ Currently, the following dictionary namespaces are defined:
 
 ## Uniqueness in a namespace
 
-In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml).
+In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml).
 
 ## Using namespaces
 

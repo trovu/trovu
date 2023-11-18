@@ -1,0 +1,91 @@
+beslist 0:
+  url: http://www.beslist.nl/
+  title: BESLIST.nl
+  examples:
+  - arguments: kartonnen poef
+    description: Zoek waar je online een kartonnen poef kunt kopen
+beslist 1:
+  url: http://www.beslist.nl/products/r/{%zoekwoorden}/
+  title: BESLIST.nl
+  examples:
+  - arguments: kartonnen poef
+    description: Zoek waar je online een kartonnen poef kunt kopen
+bol 1:
+  url: http://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/{%query}/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html
+  title: Bol.com Nederlands
+  tags:
+  - bol
+  - books
+  - shoppings
+  examples:
+  - arguments: shakespeare
+    description: Search for Shakespeare
+e 0:
+  url: https://www.ebay.nl/?mkcid=1&mkrid=1346-53482-19255-0&siteid=146&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.nl
+  tags:
+  - affiliate
+  - ebay
+  - shopping
+e 1:
+  url: https://www.ebay.nl/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=1346-53482-19255-0&siteid=146&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.nl
+  tags:
+  - affiliate
+  - ebay
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+g 1:
+  url: https://www.google.nl/search?hl={$language}&q={%query}&ie=utf-8
+  title: Google.nl
+  tags:
+  - google
+  - web search
+  examples:
+  - arguments: amsterdam
+    description: Google zoeken naar "amsterdam"
+gn 1:
+  url: https://www.google.de/search?ned=nl_nl&q={%query}&tbm=nws&source=lnms
+  title: Google Nieuws (Nederland)
+  tags:
+  - google
+  - news
+  examples:
+  - arguments: obama
+    description: Op Google News naar obama zoeken
+ikea 0:
+  url: http://www.ikea.com/nl/nl/
+  title: IKEA Nederland
+  tags:
+  - furniture
+  - ikea
+  - shopping
+ikea 1:
+  url: http://www.ikea.com/nl/nl/search/?q={%query}
+  title: IKEA Nederland
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - arguments: matras
+    description: zoek na matrassen
+kenteken 1:
+  url: http://publiek.vwe.nl/?txtkentekenveld={%query}
+  title: RDW kenteken zoeken
+  tags:
+  - kenteken
+  examples:
+  - arguments: 8kxz29
+    description: zoek kenteken 8kxz29
+zal 1:
+  url: http://www.zalando.nl/catalogus/?q={%product}
+  title: Zalando.nl
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - arguments: schoenen
+    description: zoek schoenen

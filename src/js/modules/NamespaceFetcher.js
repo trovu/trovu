@@ -17,7 +17,7 @@ export default class NamespaceFetcher {
    */
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
-    this.namespaceInfos = await this.fetchSiteNamespaceInfos(
+    this.namespaceInfos = await this.assignShortcutsFromData(
       this.namespaceInfos,
     );
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
@@ -110,19 +110,8 @@ export default class NamespaceFetcher {
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
    */
-  async fetchSiteNamespaceInfos(namespaceInfos) {
-    const url = `https://data.trovu.net/data/data.json?${this.env.commitHash}`;
-    const text = await Helper.fetchAsync(url, this.env);
-    if (!text) {
-      return namespaceInfos;
-    }
-    let data = {};
-    try {
-      data = await JSON.parse(text);
-    } catch (error) {
-      this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
-      return namespaceInfos;
-    }
+  async assignShortcutsFromData(namespaceInfos) {
+    const data = this.env.data;
     for (const namespaceName in data.shortcuts) {
       if (!namespaceInfos[namespaceName]) {
         namespaceInfos[namespaceName] = {};

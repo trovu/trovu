@@ -1,0 +1,38 @@
+/** @module DataManager */
+
+import fs from 'fs';
+import jsyaml from 'js-yaml';
+
+export default class DataManager {
+  /**
+   * Load data from /data.
+   *
+   * @return {object} data      - The loaded data from /data.
+   */
+  static load() {
+    const ymlDirPath = './data/';
+    const data = {};
+    data['shortcuts'] = DataManager.readYmls(`${ymlDirPath}/shortcuts/`);
+    data['types'] = {};
+    data['types']['city'] = DataManager.readYmls(`${ymlDirPath}/types/city/`);
+    return data;
+  }
+
+  /**
+   * Read YAML files from a directory.
+   * @param   {string} ymlDirPath
+   * @returns {object} dataByFileRoot - The data from the YAML files.
+   */
+  static readYmls(ymlDirPath) {
+    const dataByFileRoot = {};
+    const fileNames = fs.readdirSync(ymlDirPath);
+    for (const fileName of fileNames) {
+      const filePath = ymlDirPath + fileName;
+      const str = fs.readFileSync(filePath, 'utf8');
+      const data = jsyaml.load(str);
+      const fileRoot = fileName.replace(/\.yml$/, '');
+      dataByFileRoot[fileRoot] = data;
+    }
+    return dataByFileRoot;
+  }
+}

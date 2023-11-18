@@ -8,6 +8,7 @@ import { readFileSync } from 'fs';
 import copy from 'rollup-plugin-copy';
 import watch from 'rollup-plugin-watch';
 import gitInfo from 'rollup-plugin-git-info';
+import execute from 'rollup-plugin-execute';
 
 const isProduction = process.env.BUILD === 'production';
 
@@ -43,6 +44,7 @@ export default [
         output: 'dist/public/style.css',
         outputStyle: isProduction ? 'compressed' : 'expanded',
       }),
+      execute('npm run compile-data'),
       isProduction && terser(),
       html({
         fileName: 'index.html',

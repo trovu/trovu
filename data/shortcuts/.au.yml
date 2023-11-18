@@ -1,0 +1,26 @@
+e 0:
+  url: https://www.ebay.com.au/?mkcid=1&mkrid=705-53470-19255-0&siteid=15&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.com.au
+  tags:
+  - affiliate
+  - ebay
+  - shopping
+e 1:
+  url: https://www.ebay.com.au/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=705-53470-19255-0&siteid=15&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.com.au
+  tags:
+  - affiliate
+  - ebay
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+g 1:
+  url: https://www.google.com.au/search?hl={$language}&q={%query}&ie=utf-8
+  title: Google.com.au
+  tags:
+  - google
+  - web search
+  examples:
+  - arguments: sydney
+    description: Search Google for "sydney"

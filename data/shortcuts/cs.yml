@@ -1,0 +1,55 @@
+c 1:
+  url: http://www.csfd.cz/hledat/?q={%výraz}
+  title: Česko-Slovenská filmová databáze
+  tags:
+  - czech
+  - movies
+  - slovak
+  examples:
+  - arguments: Pelíšky
+    description: Hledat "Pelíšky"
+cs 1:
+  url: https://ssjc.ujc.cas.cz/search.php?heslo={%výraz}&sti=EMPTY&where=hesla&hsubstr=no
+  title: Slovník spisovného jazyka českého
+  tags:
+  - czech
+  - dictionary
+  - language
+  - slovník
+  examples:
+  - arguments: strom
+    description: '"strom" – dřevina s kmenem'
+csfd 1:
+  url: http://www.csfd.cz/hledat/?q={%výraz}
+  title: Česko-Slovenská filmová databáze
+  tags:
+  - czech
+  - movies
+  - slovak
+  examples:
+  - arguments: Pelíšky
+    description: Hledat "Pelíšky"
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
+kinobox 1:
+  url: http://www.kinobox.cz/najdi?t={%query}
+  title: Kinobox.cz
+  tags:
+  - movies
+  examples:
+  - arguments: forrest gump
+    description: Search for "forrest gump"
+sub 1:
+  url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
+  title: Filmové titulky (Open Subtitles)
+  tags:
+  - subtitles
+  - titulky

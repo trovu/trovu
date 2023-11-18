@@ -1,0 +1,229 @@
+camb-en 1:
+  url: https://dictionary.cambridge.org/dictionary/english/{%word}
+  title: Cambridge English Dictionary
+  tags:
+  - dictionary
+  - english
+  examples:
+  - arguments: tree
+    description: Search Cambridge English Dictionary for "tree"
+cia 0:
+  url: https://www.cia.gov/the-world-factbook/
+  title: CIA Factbook
+  tags:
+  - cia
+cia 1:
+  url: http://www.google.com/search?hl={$language}&ie=utf-8&domains=cia.gov&sitesearch=cia.gov&btnI=1&q=intitle%3Afactbook%20{%country}
+  title: CIA Factbook
+  tags:
+  - cia
+cliff 0:
+  url: http://www.cliffsnotes.com/
+  title: Cliffsnotes.com
+  tags:
+  - literature
+cliff 1:
+  url: https://www.cliffsnotes.com/search?q={%query}
+  title: Cliffsnotes.com
+  tags:
+  - literature
+  examples:
+  - arguments: tom sawyer
+    description: Search for Cliff's notes on Tom Sawyer
+cong 1:
+  url: http://www.google.com/search?hl=de&ie=utf-8&lr=lang_en&q={%word}%20-site%3Adict.cc%20-site%3Adictionary.reference.com%20-site%3Awoxikon.de%20-site%3Amerriam-webster.com%20-site%3Awordreference.com%20-site%3Ababylon.com%20-site%3Aanswers.com%20-site%3Awiktionary.org%20-site%3Awissen.de%20-site%3Awoerterbuch.info%20-site%3Aflexidict.de%20-site%3Avocabulix.com%20-site%3Aespanien.de%20-site%3Alinternaute.com%20-site%3Amediadico.com%20-site%3Athefreedictionary.com%20-site%3Aenglish-test.net%20-site%3Ayourdictionary.com%20-site%3Adict.tu-chemnitz.de%20-site%3Adictionary.cambridge.org%20-site%3Agoenglish.com%20-site%3Alinguee.de%20-site%3Areverso.net%20-site%3Astudent-online.net%20-site%3Areference.com%20-site%3Awordwebonline.com%20-site%3Aaudioenglish.net
+  title: Google as a Concordancer
+  examples:
+  - arguments: palpable
+    description: See how the word "palpable" is used on the Web
+dei 1:
+  deprecated:
+    alternative:
+      query: lge.de {%1}
+      created: '2023-04-10'
+dict 1:
+  url: http://dictionary.reference.com/browse/{%query}
+  title: Dictionary.com
+  tags:
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: Search for "tree"
+edram 0:
+  url: https://encyclopediadramatica.online/
+  title: Encyclopedia Dramatica
+  tags:
+  - encyclopedia
+  - humor
+edram 1:
+  url: https://encyclopediadramatica.online/Special:Search?go=Article&search={%article}
+  title: Encyclopedia Dramatica
+  tags:
+  - encyclopedia
+  - humor
+  examples:
+  - arguments: Boxxy
+    description: Encyclopedia Dramatica Article about Boxxy
+esi 1:
+  deprecated:
+    alternative:
+      query: lge.es {%1}
+      created: '2023-04-10'
+esp 1:
+  deprecated:
+    alternative:
+      query: pns.es {%1}
+      created: '2023-04-10'
+frp 1:
+  deprecated:
+    alternative:
+      query: pns.fr {%1}
+      created: '2023-04-10'
+gfp 0:
+  url: http://german-foreign-policy.com/en/news/
+  title: German Foreign Policy
+  tags:
+  - germany
+  - news
+  - politics
+last 1:
+  url: http://www.last.fm/search?setlang=en&q={%artist}
+  title: Last.fm
+  tags:
+  - lastfm
+  - music
+  examples:
+  - arguments: beatles
+    description: Search for "beatles"
+mw 1:
+  url: http://www.merriam-webster.com/dictionary/{%query}
+  title: Merriam-Webster dictionary
+  tags:
+  - dictionary
+  - english
+  examples:
+  - arguments: asleep
+    description: Look up the English word "asleep"
+mwt 1:
+  url: http://www.merriam-webster.com/thesaurus/{%query}
+  title: Merriam-Webster theraurus
+  tags:
+  - dictionary
+  - english
+  examples:
+  - arguments: 'important '
+    description: Search for synonyms of "important"
+ox 1:
+  url: https://en.oxforddictionaries.com/definition/{%word}
+  title: Oxford Dictionaries British & World English
+  tags:
+  - dictionary
+  - english
+  - language
+oxford 1:
+  url: https://www.oxforddictionaries.com/definition/english/{%query}
+  title: Oxford dictionary
+sta 0:
+  url: http://start.csail.mit.edu
+  title: START (SynTactic Analysis using Reversible Transformations)
+  tags:
+  - semantic search
+sta 1:
+  url: http://start.csail.mit.edu/startfarm.cgi?query={%question}
+  title: START (SynTactic Analysis using Reversible Transformations)
+  tags:
+  - semantic search
+  examples:
+  - arguments: How many people live in Berlin?
+    description: Answers the question.
+syn 1:
+  url: http://thesaurus.com/browse/{%word}
+  title: Thesaurus.com
+  tags:
+  - english
+  - thesaurus
+  examples:
+  - arguments: 'important '
+    description: Search for synonyms of "important"
+uvi 0:
+  url: http://verbs.colorado.edu/verb-index/vn3.3
+  title: Unified Verb Index
+  tags:
+  - english
+  - grammar
+  - language
+  - linguistics
+uvi 1:
+  url: http://stefanschramm.net/dev/postredirector/?_target=http://verbs.colorado.edu/verb-index/vn3.3/search.php&txtSearchRequest={%query}
+  title: Unified Verb Index
+  tags:
+  - english
+  - grammar
+  - language
+  - linguistics
+  examples:
+  - arguments: walk
+    description: Look up the verb "walk"
+wk 0:
+  url: http://www.wordnik.com/
+  title: Wordnik.com
+  tags:
+  - dictionary
+  - english
+  - language
+  - thesaurus
+  examples:
+  - arguments: tree
+    description: Look up "tree"
+wk 1:
+  url: http://www.wordnik.com/words/{%word}
+  title: Wordnik.com
+  tags:
+  - dictionary
+  - english
+  - language
+  - thesaurus
+  examples:
+  - arguments: tree
+    description: Look up "tree"
+wordnik 1:
+  url: http://www.wordnik.com/words/{%word}
+  title: Wordnik
+  tags:
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: Search Wordnik for "tree".
+wsl 1:
+  url: http://corpora.uni-leipzig.de/de/res?word={%word}&corpusId=eng-uk_web_2002
+  title: Wortschatz-Lexikon (English)
+  tags:
+  - english
+  - language
+  examples:
+  - arguments: chair
+    description: Search for "chair"
+ygl 1:
+  url: https://youglish.com/pronounce/{%word}/english
+  title: YouGlish English Pronounciation Help
+  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
+  tags:
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - arguments: dough
+    description: Find videos where someone says "dough"
+youglish 1:
+  url: https://youglish.com/pronounce/{%word}/english
+  title: YouGlish English Pronounciation Help
+  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
+  tags:
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - arguments: dough
+    description: Find videos where someone says "dough"

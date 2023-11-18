@@ -1,0 +1,13 @@
+abi 1:
+  url: https://www.abi.bo/index.php/component/search/?searchword={%termino}&searchphrase=all&Itemid=101
+  title: Agencia Boliviana de Informacion busqueda
+notbol 1:
+  url: http://www.noticiasbolivianas.com/busqueda?searchword={%palabra}&searchphrase=all
+  title: Noticias Bolivianas
+  tags:
+  - bolivia
+  - news
+  - noticias
+  examples:
+  - arguments: deporte
+    description: Noticias sobre deporte

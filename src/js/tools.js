@@ -17,14 +17,7 @@ async function main() {
     return;
   }
 
-  if (!process.env.TROVU_DATA_PATH) {
-    console.log(
-      'Environment variable TROVU_DATA_PATH must contain full path to trovu-data directory. Please set with:',
-    );
-    console.log('export TROVU_DATA_PATH=/path/to/trovu-data');
-    return;
-  }
-  ymlDirPath = process.env.TROVU_DATA_PATH;
+  ymlDirPath = `./data/shortcuts/`;
 
   const action = process.argv[2];
   if (action in actions) {

@@ -1,0 +1,89 @@
+cjg 1:
+  url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}
+  title: Le conjugueur
+  tags:
+  - french
+  - language
+  examples:
+  - arguments: venir
+    description: Conjugate "venir"
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
+lar 1:
+  deprecated:
+    alternative:
+      query: lrs {%1}
+      created: '2023-04-10'
+last 1:
+  url: http://www.last.fm/search?setlang=fr&q={%artist}
+  title: Last.fm
+  tags:
+  - lastfm
+  - music
+  examples:
+  - arguments: beatles
+    description: Search for "beatles"
+lit 1:
+  url: http://www.littre.org/recherche?_hasdata=&f2={%mot}
+  title: Littré
+  tags:
+  - dictionary
+  - french
+  - language
+  examples:
+  - arguments: arbre
+    description: Cherche "arbre" dans le dictionnaire Littré
+lrs 1:
+  url: http://www.larousse.fr/dictionnaires/francais/{%mot}
+  title: Larousse, Dictionnaires de français
+  tags:
+  - dictionary
+  - dictionnaire
+  - français
+  - french
+  - language
+  examples:
+  - arguments: arbre
+    description: Cherche "arbre"
+marmiton 0:
+  url: http://www.marmiton.org/
+  title: Marmiton
+  tags:
+  - marmiton
+  - recettes
+marmiton 1:
+  url: http://www.marmiton.org/recettes/recherche.aspx?aqt={%mot}
+  title: Marmiton
+  tags:
+  - marmiton
+  - recettes
+  examples:
+  - arguments: pizza
+    description: Recherche des recettes de pizza
+syn 1:
+  url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
+  title: Synonyme
+  tags:
+  - language
+  - thesaurus
+  examples:
+  - arguments: important
+    description: Search for "important"
+tlf 1:
+  url: http://www.cnrtl.fr/definition/{%query}
+  title: Trésor de la langue française
+  tags:
+  - dictionary
+  - french
+  - language
+  examples:
+  - arguments: arbre
+    description: Cherche "arbre" dans le Trésor de la langue française

@@ -1,0 +1,59 @@
+dbp 1:
+  url: http://nl.dbpedia.org/page/{%title}
+  title: DBpedia (Dutch)
+  tags:
+  - database
+  - knowledge
+  - knowledgebase
+  - semanticweb
+  examples:
+  - arguments: Tunisia
+    description: Open DBpedia page about Tunisia
+enc 0:
+  url: http://www.encyclo.nl/
+  title: Encyclo Online Encyclopedie
+  tags:
+  - dictionary
+  - dutch
+  - encyclopedia
+  - language
+enc 1:
+  url: http://www.encyclo.nl/zoek.php?woord={%woord}
+  title: Encyclo Online Encyclopedie
+  tags:
+  - dictionary
+  - dutch
+  - encyclopedia
+  - language
+  - words
+  examples:
+  - arguments: op naam
+    description: zoek na de betekenis van de uitdrukking "op naam"
+ety 0:
+  url: http://www.etymologiebank.nl/
+  title: etymologiebank.nl
+frv 1:
+  url: https://{$language}.forvo.com/search/{%word}/
+  title: Forvo
+  description: Forvo pronunciation database, localized interface
+  tags:
+  - language
+  - pronunciation
+  examples:
+  - arguments: berlin
+    description: Search for the pronunciation of "berlin"
+rijm 0:
+  url: http://www.rijm.nu/
+  title: Rijm.nu!
+  tags:
+  - gedicht
+  - rijm
+rijm 1:
+  url: http://www.rijm.nu/rijmen/rijmen.php?woord={%woord}&v=1
+  title: Rijm.nu!
+  tags:
+  - gedicht
+  - rijm
+  examples:
+  - arguments: koud
+    description: vind woorden die rijmen op "koud"

@@ -1,0 +1,46 @@
+de 0:
+  include:
+    key: de-{$language} 0
+de 1:
+  include:
+    key: de-{$language} 1
+de-ja 0:
+  url: http://www.wadoku.de/
+  title: ドイツ語-日本語 (Wadoku)
+  tags:
+  - dictionary
+  - german
+  - japanese
+  - language
+de-ja 1:
+  url: http://www.wadoku.de/wadoku/search/{%word}
+  title: ドイツ語-日本語 (Wadoku)
+  tags:
+  - dictionary
+  - german
+  - japanese
+  - language
+  examples:
+  - arguments: baum
+    description: '"baum"の日本語翻訳'
+  - arguments: 木
+    description: '"木"のドイツ語翻訳'
+ja 0:
+  include:
+    key: ja-{$language} 0
+ja 1:
+  include:
+    key: ja-{$language} 1
+ja-de 0:
+  title: Japanisch-Deutsch (Wadoku)
+  include:
+    key: de-ja 0
+ja-de 1:
+  title: Japanisch-Deutsch (Wadoku)
+  include:
+    key: de-ja 1
+  examples:
+  - arguments: 木
+    description: Deutsch-Übersetzung von "木"
+  - arguments: baum
+    description: Japanisch-Übersetzung von "baum"
