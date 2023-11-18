@@ -315,15 +315,6 @@ ais 0:
   tags:
   - maritime
   - traffic
-alexa 1:
-  url: http://www.alexa.com/data/details/traffic_details?site0={%site}&y=p&z=1&h=300&w=610&range=1y&size=Medium&url={%site}
-  title: Alexa
-  tags:
-  - alexa
-  - traffic
-  examples:
-  - arguments: google.com
-    description: Show traffic stats for google.com
 alibaba 1:
   url: https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText={%name}
   title: Alibaba Product Search
