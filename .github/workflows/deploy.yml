@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 127-move-trovu-data-to-monorepo
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
