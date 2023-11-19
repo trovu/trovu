@@ -31,7 +31,7 @@ export default class Env {
    * Set the environment variables from the given object.
    *
    * @param {object} env - The environment variables.
-   * @returns
+   * @returns {void}
    */
   setToThis(env) {
     if (!env) {
