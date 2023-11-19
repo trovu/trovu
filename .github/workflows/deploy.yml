@@ -30,6 +30,7 @@ jobs:
         with:
           node-version: 21
       - run: npm clean-install
+      - run: npm run build-jsdoc
       - run: npm run build
       - run: npm run lint-yaml
       - run: npm run test-unit
