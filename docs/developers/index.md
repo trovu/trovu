@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Nodejs >= 18
-- npm >= 10
+-   Nodejs >= 18
+-   npm >= 10
 
 ## Installation
 
@@ -18,3 +18,7 @@ Now, open the displayed URL of the local server in your browser. You should see 
 ## Use Local Installation
 
 If you prefer your local installation over [trovu.net](https://trovu.net/), you can [set your local Trovu as your default search engine](../users/integration.md) (just use your localhost as its domain).
+
+## Code documentation
+
+An auto-created documentation of the code by [JSdoc](https://jsdoc.app/) is also [available](code/).
