@@ -157,6 +157,10 @@ titsa 3:
   examples:
   - arguments: weyler, trinidad, 10
     description: Connection de Weyler a Trinidad a las 10
+wallapop 1:
+  url: https://es.wallapop.com/app/search?filters_source=search_box&keywords={%query}
+  title: Wallapop
+  description: compra y vende cosas de segunda mano
 zal 1:
   url: http://www.zalando.es/catalogo/?q={%product}
   title: Zalando.es
