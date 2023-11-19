@@ -8,7 +8,7 @@
 ## Installation
 
 ```bash
-npm run clean-install  # Install dependencies
+npm clean-install      # Install dependencies
 npm run build          # Build the website incl. data
 npm run serve          # Run the local server
 ```
