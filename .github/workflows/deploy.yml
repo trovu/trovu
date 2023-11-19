@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 202-add-jsdoc-output-to-docs
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
