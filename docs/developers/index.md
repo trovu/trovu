@@ -18,3 +18,7 @@ Now, open the displayed URL of the local server in your browser. You should see 
 ## Use local installation
 
 If you prefer your local installation over [trovu.net](https://trovu.net/), you can [set your local Trovu as your default search engine](../users/integration.md) (just use you localhost as its domain).
+
+## Code documentation
+
+An auto-created documentation of the code by [JSdoc](https://jsdoc.app/) is also [available](code/).
