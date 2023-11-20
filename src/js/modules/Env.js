@@ -122,14 +122,14 @@ export default class Env {
 
     await this.setDefaults();
 
-    if (this.extraNamespaceName) {
-      this.namespaces.push(this.extraNamespaceName);
-    }
-
     this.data = await this.getData();
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(
       this.namespaces,
     );
+
+    if (this.extraNamespaceName) {
+      this.namespaces.push(this.extraNamespaceName);
+    }
   }
 
   /**
