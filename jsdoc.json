@@ -1,3 +1,19 @@
 {
-  "plugins": ["plugins/markdown"]
+  "source": {
+    "include": [
+      "src"
+    ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {},
+  "opts": {
+    "encoding": "utf8",
+    "destination": "./dist/public/docs/developers/code",
+    "recurse": true,
+    "verbose": true
+  }
 }
