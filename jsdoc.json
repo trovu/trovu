@@ -1,3 +1,21 @@
 {
-  "plugins": ["plugins/markdown"]
+  "source": {
+    "include": [
+      "src"
+    ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "jsdoc-mermaid",
+    "node_modules/@jsdoc/standard-plugin"
+  ],
+  "templates": {},
+  "opts": {
+    "encoding": "utf8",
+    "destination": "./docs/developers/code",
+    "recurse": true,
+    "verbose": true
+  }
 }
