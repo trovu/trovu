@@ -43,9 +43,9 @@
 - title: default keyword with invalid namespace
   env:
     defaultKeyword: g
-    query: foo.bar
+    query: foo.de test
   response:
-    redirectUrl: https://www.google.com/search?hl=en&q=foo.bar&ie=utf-8
+    redirectUrl: https://www.google.com/search?hl=en&q=foo.de%20test&ie=utf-8
 - title: defaultKeyword from user setting
   env:
     github: georgjaehnig
