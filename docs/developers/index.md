@@ -17,7 +17,7 @@ Now, open the displayed URL of the local server in your browser. You should see 
 
 ## Use Local Installation
 
-If you prefer your local installation over [trovu.net](https://trovu.net/), you can [set your local Trovu as your default search engine](../users/integration.md) (just use your localhost as its domain).
+If you prefer your local installation over [trovu.net](https://trovu.net/), you can [set your local Trovu as your default search engine](../users/integration.md) (just use you localhost as its domain).
 
 ## Code documentation
 
