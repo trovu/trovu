@@ -40,6 +40,12 @@
     query: foobar
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
+- title: default keyword also with invalid namespace
+  env:
+    defaultKeyword: g
+    query: foo.bar
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foo.bar&ie=utf-8
 - title: defaultKeyword from user setting
   env:
     github: georgjaehnig
