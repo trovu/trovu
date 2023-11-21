@@ -127,17 +127,15 @@ export default class NamespaceFetcher {
    * @returns {Object} An object containing the fetched information for each given namespace
    */
   async fetchNamespaceInfos(namespaceInfos) {
-    for (
-      let i = 0;
-      Object.values(namespaceInfos).filter(
-        (item) => item.type == 'user' && typeof item.shortcuts === 'undefined',
-      ).length > 0 && i <= 10;
-      i++
-    ) {
+    let i = 0;
+    let newNamespaceInfos;
+    do {
+      i++;
       if (i >= 10) {
         this.env.logger.error(`NamespaceFetcher loop ran already ${i} times.`);
       }
-      const newNamespaceInfos = Object.values(namespaceInfos).filter(
+      // Get user namespaces without shortcuts.
+      newNamespaceInfos = Object.values(namespaceInfos).filter(
         (item) => item.type == 'user' && typeof item.shortcuts === 'undefined',
       );
       const promises = this.startFetches(newNamespaceInfos);
@@ -146,7 +144,7 @@ export default class NamespaceFetcher {
       for (const namespaceInfo of newNamespaceInfos) {
         namespaceInfos[namespaceInfo.name] = namespaceInfo;
       }
-    }
+    } while (newNamespaceInfos.length > 0);
     return namespaceInfos;
   }
 
