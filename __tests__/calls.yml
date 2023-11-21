@@ -52,6 +52,12 @@
     query: foo.cz test
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foo.cz%20test&ie=utf-8
+- title: call extra namespace that is not yet in namespaces
+  env:
+    defaultKeyword: g
+    query: georgjaehnig.zz test
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q="zeitzeichen"%20test&ie=utf-8
 - title: defaultKeyword from user setting
   env:
     github: georgjaehnig
