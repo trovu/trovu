@@ -12,7 +12,6 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
     expect(new NamespaceFetcher(env).getInitalNamespaceInfo('de')).toEqual({
       name: 'de',
       type: 'site',
-      url: `https://data.trovu.net/data/shortcuts/de.yml?${env.commitHash}`,
     });
   });
   test('github', () => {
