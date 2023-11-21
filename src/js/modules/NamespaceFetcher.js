@@ -185,7 +185,7 @@ export default class NamespaceFetcher {
             namespaceInfo.url
           }`,
         );
-        namespaceInfo.shortcuts = [];
+        namespaceInfo.shortcuts = {};
         continue;
       }
       this.env.logger.success(
