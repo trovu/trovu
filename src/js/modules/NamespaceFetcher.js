@@ -159,6 +159,10 @@ export default class NamespaceFetcher {
   startFetches(newNamespaceInfos) {
     const promises = [];
     for (const namespaceInfo of newNamespaceInfos) {
+      // Skip namespaces without URL.
+      if (!namespaceInfo.url) {
+        continue;
+      }
       const promise = fetch(namespaceInfo.url, {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
@@ -177,6 +181,10 @@ export default class NamespaceFetcher {
    */
   async processResponses(newNamespaceInfos, responses) {
     for (const namespaceInfo of newNamespaceInfos) {
+      // Skip namespaces without URL.
+      if (!namespaceInfo.url) {
+        continue;
+      }
       const response = responses.shift();
       if (!response || response.status != 200) {
         this.env.logger.warning(
