@@ -258,6 +258,14 @@ export default class NamespaceFetcher {
     return shortcuts;
   }
 
+  /**
+   * Add namespaces that an include refers to,
+   * so that they are fetched as well in the next loop.
+   *
+   * @param {object} shortcut
+   *
+   * @returns {void}
+   */
   addNamespacesFromInclude(shortcut) {
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
@@ -285,6 +293,11 @@ export default class NamespaceFetcher {
     return shortcut;
   }
 
+  /**
+   * Process all includes in the given namespace infos.
+   * @param {object} namespaceInfos
+   * @returns {object} The processed namespace infos
+   */
   processIncludeAll(namespaceInfos) {
     for (const namespaceName in namespaceInfos) {
       const namespaceInfo = namespaceInfos[namespaceName];
