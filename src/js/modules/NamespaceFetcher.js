@@ -138,6 +138,10 @@ export default class NamespaceFetcher {
       newNamespaceInfos = Object.values(namespaceInfos).filter(
         (item) => item.type === 'user' && !item.shortcuts,
       );
+      // Get out if no more namespaces to fetch.
+      if (newNamespaceInfos.length === 0) {
+        break;
+      }
       const promises = this.startFetches(newNamespaceInfos);
       const responses = await Promise.all(promises);
       await this.processResponses(newNamespaceInfos, responses);
