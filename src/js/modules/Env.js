@@ -156,6 +156,13 @@ export default class Env {
     ) {
       return true;
     }
+    if (this.isSiteNamespace(namespace)) {
+      return true;
+    }
+    return false;
+  }
+
+  isSiteNamespace(namespace) {
     // Language.
     if (namespace.length === 2) {
       return true;
