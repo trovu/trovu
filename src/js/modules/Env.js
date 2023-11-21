@@ -131,6 +131,40 @@ export default class Env {
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(
       this.namespaces,
     );
+
+    // Remove extra namespace if it turned out to be invalid.
+    if (
+      this.extraNamespaceName &&
+      !this.isValidNamespace(this.extraNamespaceName)
+    ) {
+      delete this.extraNamespaceName;
+      this.keyword = '';
+      this.arguments = [this.query];
+    }
+  }
+
+  /**
+     Check if namespace is valid.
+   * @param {string} namespace 
+   * @returns {boolean}
+   */
+  isValidNamespace(namespace) {
+    if (
+      namespace in this.namespaceInfos &&
+      this.namespaceInfos[namespace].shortcuts &&
+      this.namespaceInfos[namespace].shortcuts != {}
+    ) {
+      return true;
+    }
+    // Language.
+    if (namespace.length === 2) {
+      return true;
+    }
+    // Country.
+    if (namespace.startsWith('.') && namespace.length === 3) {
+      return true;
+    }
+    return false;
   }
 
   /**
