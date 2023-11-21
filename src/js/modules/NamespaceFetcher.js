@@ -79,7 +79,6 @@ export default class NamespaceFetcher {
     const namespace = {
       name: name,
       type: 'site',
-      url: `https://data.trovu.net/data/shortcuts/${name}.yml?${this.env.commitHash}`,
     };
     return namespace;
   }
