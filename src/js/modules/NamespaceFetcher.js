@@ -129,16 +129,16 @@ export default class NamespaceFetcher {
   async fetchNamespaceInfos(namespaceInfos) {
     for (
       let i = 0;
-      i <
-      Object.values(namespaceInfos).filter((item) => item.type == 'user')
-        .length;
+      Object.values(namespaceInfos).filter(
+        (item) => item.type == 'user' && typeof item.shortcuts === 'undefined',
+      ).length > 0 && i <= 10;
       i++
     ) {
       if (i >= 10) {
         this.env.logger.error(`NamespaceFetcher loop ran already ${i} times.`);
       }
       const newNamespaceInfos = Object.values(namespaceInfos).filter(
-        (item) => !('shortcuts' in item),
+        (item) => item.type == 'user' && typeof item.shortcuts === 'undefined',
       );
       const promises = this.startFetches(newNamespaceInfos);
       const responses = await Promise.all(promises);
