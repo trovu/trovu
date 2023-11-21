@@ -40,7 +40,7 @@
     query: foobar
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
-- title: default keyword with invalid namespace
+- title: default keyword with invalid extra namespace
   env:
     defaultKeyword: g
     query: foo.de test
