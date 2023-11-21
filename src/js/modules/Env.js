@@ -122,6 +122,7 @@ export default class Env {
 
     await this.setDefaults();
 
+    // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
       this.namespaces.push(this.extraNamespaceName);
     }
