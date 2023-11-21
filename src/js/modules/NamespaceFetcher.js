@@ -136,7 +136,7 @@ export default class NamespaceFetcher {
       }
       // Get user namespaces without shortcuts.
       newNamespaceInfos = Object.values(namespaceInfos).filter(
-        (item) => item.type == 'user' && typeof item.shortcuts === 'undefined',
+        (item) => item.type === 'user' && !item.shortcuts,
       );
       const promises = this.startFetches(newNamespaceInfos);
       const responses = await Promise.all(promises);
