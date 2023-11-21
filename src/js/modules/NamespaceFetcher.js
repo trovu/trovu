@@ -129,8 +129,9 @@ export default class NamespaceFetcher {
   async fetchNamespaceInfos(namespaceInfos) {
     for (
       let i = 0;
-      Object.values(namespaceInfos).filter((item) => !('shortcuts' in item))
-        .length > 0 && i <= 10;
+      i <
+      Object.values(namespaceInfos).filter((item) => item.type == 'user')
+        .length;
       i++
     ) {
       if (i >= 10) {
