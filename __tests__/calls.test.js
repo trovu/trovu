@@ -16,6 +16,30 @@ async function main() {
   });
 }
 
+global.fetch = jest.fn((url) => {
+  if (url.includes('/georgjaehnig/trovu-data-user/master/config.yml')) {
+    return Promise.resolve({
+      status: 200,
+      text: () => Promise.resolve('defaultKeyword: g'),
+    });
+  } else if (
+    url.includes('/georgjaehnig/trovu-data-user/master/shortcuts.yml')
+  ) {
+    // Handle other URLs or simulate errors
+    return Promise.resolve({
+      status: 200, // or another status code as appropriate
+      text: () =>
+        Promise.resolve(
+          'trovu-test1 1: https://www.google.de/search?hl=de&q=trovu-test1%20{%query}&ie=utf-8',
+        ),
+    });
+  }
+});
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 async function testCall(call) {
   const env = new Env();
   env.language = 'en';
