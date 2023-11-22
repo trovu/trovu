@@ -74,7 +74,7 @@
     github: georgjaehnig
     query: foobar
   response:
-    redirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
+    redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
 - title: query negative
   env:
     language: en
