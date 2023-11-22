@@ -156,9 +156,6 @@ export default class Env {
     ) {
       return true;
     }
-    if (this.isSiteNamespace(namespace)) {
-      return true;
-    }
     return false;
   }
 
