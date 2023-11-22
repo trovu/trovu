@@ -84,6 +84,11 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
+  /**
+   * Adds type and possibly url to namespaceInfos.
+   * @param {Object} namespaceInfos
+   * @returns {Object} namespaceInfos with added information
+   */
   addNamespaceInfos(namespaceInfos) {
     return Object.fromEntries(
       Object.entries(namespaceInfos).map(([name, info]) => {
@@ -93,6 +98,11 @@ export default class NamespaceFetcher {
     );
   }
 
+  /**
+   * Adds type and possibly url to namespaceInfo.
+   * @param {Object} namespaceInfo
+   * @returns {Object} namespaceInfo with added information
+   */
   addNamespaceInfo(namespaceInfo) {
     // No shortcuts means it was not in data.json
     // so it must be a user namespace.

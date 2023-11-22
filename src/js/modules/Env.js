@@ -159,6 +159,11 @@ export default class Env {
     return false;
   }
 
+  /**
+   * Checks if object is empty.
+   * @param {Object} obj
+   * @returns {boolean}
+   */
   isEmptyObject(obj) {
     return Object.keys(obj).length === 0;
   }
