@@ -46,7 +46,7 @@ export default class NamespaceFetcher {
   }
 
   /**
-   * Add a fetch URL template to a namespace.
+   * Add initial namespace information.
    * @param {(string|Object)} namespace - The namespace to add the URL template to.
    * @return {Object} namespace - The namespace with the added URL template.
    */
