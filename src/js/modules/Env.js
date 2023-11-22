@@ -162,6 +162,10 @@ export default class Env {
     return false;
   }
 
+  isEmptyObject(obj) {
+    return Object.keys(obj).length === 0;
+  }
+
   isSiteNamespace(namespace) {
     // Language.
     if (namespace.length === 2) {
