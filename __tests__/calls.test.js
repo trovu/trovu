@@ -20,8 +20,6 @@ async function testCall(call) {
   const env = new Env();
   env.language = 'en';
   env.country = 'us';
-  // TODO: Find an official way of Jest to log this.
-  console.log(call.title);
   await env.populate(call.env);
   const response = await CallHandler.getRedirectResponse(env);
   if (call.response.redirectUrl) {
