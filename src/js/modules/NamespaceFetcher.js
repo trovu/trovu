@@ -72,40 +72,6 @@ export default class NamespaceFetcher {
   }
 
   /**
-   * Add a URL template to a namespace that refers to a namespace in trovu-data.
-   * @param {string} name - The namespace name.
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  addInfoToSiteNamespace(name) {
-    const namespace = {
-      name: name,
-      type: 'site',
-    };
-    return namespace;
-  }
-
-  /**
-   * Add a URL template to a namespace that refers to a Github user repo.
-   *
-   * @param {string} name - The namespace name.
-   *
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  addInfoToGithubNamespace(namespace) {
-    if (namespace.github == '.') {
-      // Set to current user.
-      namespace.github = this.env.github;
-    }
-    // Default name to Github name.
-    if (!namespace.name) {
-      namespace.name = namespace.github;
-    }
-    namespace.url = `https://raw.githubusercontent.com/${namespace.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
-    namespace.type = 'user';
-    return namespace;
-  }
-
-  /**
    * Fetches the information for the site namespaces from Trovu server.
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
