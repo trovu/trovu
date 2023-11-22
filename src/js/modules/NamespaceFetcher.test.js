@@ -11,17 +11,13 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
     const env = new Env();
     expect(new NamespaceFetcher(env).getInitalNamespaceInfo('de')).toEqual({
       name: 'de',
-      type: 'site',
     });
   });
   test('github', () => {
     const env = new Env();
     expect(new NamespaceFetcher(env).getInitalNamespaceInfo('johndoe')).toEqual(
       {
-        github: 'johndoe',
         name: 'johndoe',
-        type: 'user',
-        url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
       },
     );
   });
