@@ -51,24 +51,20 @@ export default class NamespaceFetcher {
    * @return {Object} namespace - The namespace with the added URL template.
    */
   getInitalNamespaceInfo(namespace) {
-    // Site namespaces:
-    if (typeof namespace == 'string' && namespace.length < 4) {
-      namespace = this.addInfoToSiteNamespace(namespace);
-      return namespace;
-    }
-    // User namespace 1 – custom URL:
-    if (namespace.url && namespace.name) {
-      // Just add the type.
-      namespace.type = 'user';
-      return namespace;
-    }
-    // Now remains: User namespace 2 – Github:
+    const namespaceInfo = {};
     if (typeof namespace == 'string') {
-      // Create an object.
-      namespace = { github: namespace };
+      namespaceInfo.name = namespace;
+    } else if ((namespace.url && namespace.name) || namespace.github) {
+      if (namespace.github == '.') {
+        // Set to current user.
+        namespace.github = this.env.github;
+      }
+      if (!namespace.name) {
+        namespace.name = namespace.github;
+      }
+      Object.assign(namespaceInfo, namespace);
     }
-    namespace = this.addInfoToGithubNamespace(namespace);
-    return namespace;
+    return namespaceInfo;
   }
 
   /**
