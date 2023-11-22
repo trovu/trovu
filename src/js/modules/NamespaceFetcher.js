@@ -20,6 +20,7 @@ export default class NamespaceFetcher {
     this.namespaceInfos = await this.assignShortcutsFromData(
       this.namespaceInfos,
     );
+    this.namespaceInfos = this.addNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = this.processIncludeAll(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
@@ -45,64 +46,25 @@ export default class NamespaceFetcher {
   }
 
   /**
-   * Add a fetch URL template to a namespace.
+   * Add initial namespace information.
    * @param {(string|Object)} namespace - The namespace to add the URL template to.
    * @return {Object} namespace - The namespace with the added URL template.
    */
   getInitalNamespaceInfo(namespace) {
-    // Site namespaces:
-    if (typeof namespace == 'string' && namespace.length < 4) {
-      namespace = this.addFetchUrlToSiteNamespace(namespace);
-      return namespace;
-    }
-    // User namespace 1 – custom URL:
-    if (namespace.url && namespace.name) {
-      // Just add the type.
-      namespace.type = 'user';
-      return namespace;
-    }
-    // Now remains: User namespace 2 – Github:
+    const namespaceInfo = {};
     if (typeof namespace == 'string') {
-      // Create an object.
-      namespace = { github: namespace };
+      namespaceInfo.name = namespace;
+    } else if ((namespace.url && namespace.name) || namespace.github) {
+      if (namespace.github == '.') {
+        // Set to current user.
+        namespace.github = this.env.github;
+      }
+      if (!namespace.name) {
+        namespace.name = namespace.github;
+      }
+      Object.assign(namespaceInfo, namespace);
     }
-    namespace = this.addFetchUrlToGithubNamespace(namespace);
-    return namespace;
-  }
-
-  /**
-   * Add a URL template to a namespace that refers to a namespace in trovu-data.
-   * @param {string} name - The namespace name.
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  addFetchUrlToSiteNamespace(name) {
-    const namespace = {
-      name: name,
-      type: 'site',
-      url: `https://data.trovu.net/data/shortcuts/${name}.yml?${this.env.commitHash}`,
-    };
-    return namespace;
-  }
-
-  /**
-   * Add a URL template to a namespace that refers to a Github user repo.
-   *
-   * @param {string} name - The namespace name.
-   *
-   * @return {Object} namespace - The namespace with the added URL template.
-   */
-  addFetchUrlToGithubNamespace(namespace) {
-    if (namespace.github == '.') {
-      // Set to current user.
-      namespace.github = this.env.github;
-    }
-    // Default name to Github name.
-    if (!namespace.name) {
-      namespace.name = namespace.github;
-    }
-    namespace.url = `https://raw.githubusercontent.com/${namespace.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
-    namespace.type = 'user';
-    return namespace;
+    return namespaceInfo;
   }
 
   /**
@@ -123,30 +85,68 @@ export default class NamespaceFetcher {
   }
 
   /**
+   * Adds type and possibly url to namespaceInfos.
+   * @param {Object} namespaceInfos
+   * @returns {Object} namespaceInfos with added information
+   */
+  addNamespaceInfos(namespaceInfos) {
+    return Object.fromEntries(
+      Object.entries(namespaceInfos).map(([name, info]) => {
+        const namespaceInfo = this.addNamespaceInfo(info);
+        return [name, namespaceInfo];
+      }),
+    );
+  }
+
+  /**
+   * Adds type and possibly url to namespaceInfo.
+   * @param {Object} namespaceInfo
+   * @returns {Object} namespaceInfo with added information
+   */
+  addNamespaceInfo(namespaceInfo) {
+    // No shortcuts means it was not in data.json
+    // so it must be a user namespace.
+    if (!namespaceInfo.shortcuts) {
+      namespaceInfo.type = 'user';
+      // Case when user namespace was added as extra namespace.
+      if (!namespaceInfo.github) {
+        namespaceInfo.github = namespaceInfo.name;
+      }
+      namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
+    } else {
+      namespaceInfo.type = 'site';
+    }
+    return namespaceInfo;
+  }
+
+  /**
    * Fetches the information for the given namespaces from an external source
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
    */
   async fetchNamespaceInfos(namespaceInfos) {
-    for (
-      let i = 0;
-      Object.values(namespaceInfos).filter((item) => !('shortcuts' in item))
-        .length > 0 && i <= 10;
-      i++
-    ) {
+    let i = 0;
+    let newNamespaceInfos;
+    do {
+      i++;
       if (i >= 10) {
         this.env.logger.error(`NamespaceFetcher loop ran already ${i} times.`);
       }
-      const newNamespaceInfos = Object.values(namespaceInfos).filter(
-        (item) => !('shortcuts' in item),
+      // Get user namespaces without shortcuts.
+      newNamespaceInfos = Object.values(namespaceInfos).filter(
+        (item) => item.type === 'user' && !item.shortcuts,
       );
+      // Get out if no more namespaces to fetch.
+      if (newNamespaceInfos.length === 0) {
+        break;
+      }
       const promises = this.startFetches(newNamespaceInfos);
       const responses = await Promise.all(promises);
       await this.processResponses(newNamespaceInfos, responses);
       for (const namespaceInfo of newNamespaceInfos) {
         namespaceInfos[namespaceInfo.name] = namespaceInfo;
       }
-    }
+    } while (newNamespaceInfos.length > 0);
     return namespaceInfos;
   }
 
@@ -160,6 +160,10 @@ export default class NamespaceFetcher {
   startFetches(newNamespaceInfos) {
     const promises = [];
     for (const namespaceInfo of newNamespaceInfos) {
+      // Skip namespaces without URL.
+      if (!namespaceInfo.url) {
+        continue;
+      }
       const promise = fetch(namespaceInfo.url, {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
@@ -178,6 +182,10 @@ export default class NamespaceFetcher {
    */
   async processResponses(newNamespaceInfos, responses) {
     for (const namespaceInfo of newNamespaceInfos) {
+      // Skip namespaces without URL.
+      if (!namespaceInfo.url) {
+        continue;
+      }
       const response = responses.shift();
       if (!response || response.status != 200) {
         this.env.logger.warning(
@@ -185,7 +193,7 @@ export default class NamespaceFetcher {
             namespaceInfo.url
           }`,
         );
-        namespaceInfo.shortcuts = [];
+        namespaceInfo.shortcuts = {};
         continue;
       }
       this.env.logger.success(
@@ -250,13 +258,22 @@ export default class NamespaceFetcher {
     return shortcuts;
   }
 
+  /**
+   * Add namespaces that an include refers to,
+   * so that they are fetched as well in the next loop.
+   *
+   * @param {object} shortcut
+   *
+   * @returns {void}
+   */
   addNamespacesFromInclude(shortcut) {
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (include && include.namespace) {
         const namespaceInfo = this.getInitalNamespaceInfo(include.namespace);
         if (!this.namespaceInfos[namespaceInfo.name]) {
-          this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+          this.namespaceInfos[namespaceInfo.name] =
+            this.addNamespaceInfo(namespaceInfo);
         }
       }
     }
@@ -277,6 +294,11 @@ export default class NamespaceFetcher {
     return shortcut;
   }
 
+  /**
+   * Process all includes in the given namespace infos.
+   * @param {object} namespaceInfos
+   * @returns {object} The processed namespace infos
+   */
   processIncludeAll(namespaceInfos) {
     for (const namespaceName in namespaceInfos) {
       const namespaceInfo = namespaceInfos[namespaceName];

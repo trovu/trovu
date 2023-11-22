@@ -1,6 +1,7 @@
 /** @module QueryParser */
 
 import Helper from './Helper.js';
+import countriesList from 'countries-list';
 
 /** Parse a query. */
 
@@ -122,16 +123,14 @@ export default class QueryParser {
   static getLanguageAndCountryFromExtraNamespaceName(extraNamespaceName) {
     const env = {};
 
-    // Set language and country again.
-    switch (extraNamespaceName.length) {
-      case 2:
-        env.language = extraNamespaceName;
-        break;
-      case 3:
-        // Cut the dot at the beginning.
-        env.country = extraNamespaceName.substring(1);
-        break;
+    if (extraNamespaceName in countriesList.languages) {
+      env.language = extraNamespaceName;
+    } else if (
+      extraNamespaceName.substring(1).toUpperCase() in countriesList.countries
+    ) {
+      env.country = extraNamespaceName.substring(1);
     }
+
     return env;
   }
 

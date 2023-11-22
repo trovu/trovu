@@ -11,20 +11,42 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
     const env = new Env();
     expect(new NamespaceFetcher(env).getInitalNamespaceInfo('de')).toEqual({
       name: 'de',
-      type: 'site',
-      url: `https://data.trovu.net/data/shortcuts/de.yml?${env.commitHash}`,
     });
   });
   test('github', () => {
     const env = new Env();
     expect(new NamespaceFetcher(env).getInitalNamespaceInfo('johndoe')).toEqual(
       {
-        github: 'johndoe',
         name: 'johndoe',
-        type: 'user',
-        url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
       },
     );
+  });
+});
+
+describe('NamespaceFetcher.addNamespaceInfo', () => {
+  test('site', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).addNamespaceInfo({
+        name: 'de',
+        shortcuts: true,
+      }),
+    ).toEqual({
+      name: 'de',
+      shortcuts: true,
+      type: 'site',
+    });
+  });
+  test('github', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).addNamespaceInfo({ name: 'johndoe' }),
+    ).toEqual({
+      github: 'johndoe',
+      name: 'johndoe',
+      type: 'user',
+      url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
+    });
   });
 });
 

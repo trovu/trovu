@@ -6,6 +6,7 @@ import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
 import jsyaml from 'js-yaml';
 import pkg from '../../../package.json';
+import countriesList from 'countries-list';
 
 /** Set and remember the environment. */
 
@@ -122,6 +123,7 @@ export default class Env {
 
     await this.setDefaults();
 
+    // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
       this.namespaces.push(this.extraNamespaceName);
     }
@@ -130,6 +132,48 @@ export default class Env {
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(
       this.namespaces,
     );
+
+    // Remove extra namespace if it turned out to be invalid.
+    if (
+      this.extraNamespaceName &&
+      !this.isValidNamespace(this.extraNamespaceName)
+    ) {
+      delete this.extraNamespaceName;
+      this.keyword = '';
+      this.arguments = [this.query];
+    }
+  }
+
+  /**
+     Check if namespace is valid.
+   * @param {string} namespace 
+   * @returns {boolean}
+   */
+  isValidNamespace(namespace) {
+    if (
+      namespace in this.namespaceInfos &&
+      this.namespaceInfos[namespace].shortcuts &&
+      !this.isEmptyObject(this.namespaceInfos[namespace].shortcuts)
+    ) {
+      return true;
+    }
+    if (namespace in countriesList.languages) {
+      return true;
+    } else if (
+      namespace.substring(1).toUpperCase() in countriesList.countries
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Checks if object is empty.
+   * @param {Object} obj
+   * @returns {boolean}
+   */
+  isEmptyObject(obj) {
+    return Object.keys(obj).length === 0;
   }
 
   /**

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 200-weltde-öffnet-lingea
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

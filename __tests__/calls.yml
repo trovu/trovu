@@ -40,12 +40,41 @@
     query: foobar
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
+- title: default keyword with invalid extra namespace
+  env:
+    defaultKeyword: g
+    query: foo.de test
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foo.de%20test&ie=utf-8
+- title: default keyword with invalid extra namespace and keyword that is also no language
+  env:
+    defaultKeyword: g
+    query: foo.cz test
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foo.cz%20test&ie=utf-8
+- title: default keyword with another invalid extra namespace
+  env:
+    defaultKeyword: g
+    query: welt.de test
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=welt.de%20test&ie=utf-8
+- title: call extra namespace that is not yet in namespaces
+  env:
+    defaultKeyword: g
+    query: testuser.keyword1 arg1
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=keyword1%20arg1&ie=utf-8
+- title: call extra namespace that is a language but without shortcuts
+  env:
+    query: dz.w
+  response:
+    redirectUrl: https://dz.wikipedia.org/
 - title: defaultKeyword from user setting
   env:
-    github: georgjaehnig
+    github: testuser
     query: foobar
   response:
-    redirectUrl: https://www.google.de/search?hl=de&q=foobar&ie=utf-8
+    redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8
 - title: query negative
   env:
     language: en
