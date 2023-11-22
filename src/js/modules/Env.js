@@ -163,6 +163,11 @@ export default class Env {
     return Object.keys(obj).length === 0;
   }
 
+  /**
+   * Checks if namespace is a site namespace.
+   * @param {(string|Object)} namespace - The namespace to be checked
+   * @return {boolean}
+   */
   isSiteNamespace(namespace) {
     // Language.
     if (namespace.length === 2) {
