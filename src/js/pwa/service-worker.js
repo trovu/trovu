@@ -3,9 +3,8 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/process/index.html',
-  '/includes/yourscript.js',
-  '/data.json'
-  // Add other assets
+  '/includes/yourscript.js', // Fix this with actual JS.
+  '/data.json',
 ];
 
 self.addEventListener('install', (event) => {
