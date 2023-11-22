@@ -23,6 +23,33 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   });
 });
 
+describe('NamespaceFetcher.addNamespaceInfo', () => {
+  test('site', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).addNamespaceInfo({
+        name: 'de',
+        shortcuts: true,
+      }),
+    ).toEqual({
+      name: 'de',
+      shortcuts: true,
+      type: 'site',
+    });
+  });
+  test('github', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).addNamespaceInfo({ name: 'johndoe' }),
+    ).toEqual({
+      github: 'johndoe',
+      name: 'johndoe',
+      type: 'user',
+      url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
+    });
+  });
+});
+
 describe('NamespaceFetcher.processInclude', () => {
   const namespaceInfos = jsyaml.load(`
     leo:
