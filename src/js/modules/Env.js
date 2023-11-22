@@ -169,12 +169,13 @@ export default class Env {
    * @return {boolean}
    */
   isSiteNamespace(namespace) {
+    const namespaceName = namespace.name ?? namespace;
     // Language.
-    if (namespace.length === 2) {
+    if (namespaceName.length === 2) {
       return true;
     }
     // Country.
-    if (namespace.startsWith('.') && namespace.length === 3) {
+    if (namespaceName.startsWith('.') && namespaceName.length === 3) {
       return true;
     }
     return false;
