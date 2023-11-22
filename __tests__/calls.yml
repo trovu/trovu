@@ -66,9 +66,9 @@
     redirectUrl: https://www.google.de/search?hl=de&q=trovu-test1%20arg1&ie=utf-8
 - title: call extra namespace that is a language but without shortcuts
   env:
-    query: ig.w
+    query: dz.w
   response:
-    redirectUrl: https://www.google.de/search?hl=de&q=trovu-test1%20arg1&ie=utf-8
+    redirectUrl: https://dz.wikipedia.org/
 - title: defaultKeyword from user setting
   env:
     github: georgjaehnig
