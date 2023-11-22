@@ -28,7 +28,7 @@ global.fetch = jest.fn((url) => {
       status: 200, // or another status code as appropriate
       text: () =>
         Promise.resolve(
-          'trovu-test1 1: https://www.google.de/search?hl=de&q=trovu-test1%20{%query}&ie=utf-8',
+          'keyword1 1: https://www.google.com/search?hl=en&q=keyword1%20{%query}&ie=utf-8',
         ),
     });
   }
