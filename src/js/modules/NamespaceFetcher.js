@@ -483,4 +483,25 @@ export default class NamespaceFetcher {
   isSubscribed(namespaceInfo) {
     return namespaceInfo.priority && namespaceInfo.priority > 0;
   }
+
+  addNamespaceInfos(namespaceInfos) {
+    return Object.fromEntries(
+      Object.entries(namespaceInfos).map(([name, info]) => {
+        const namespaceInfo = this.addNamespaceInfo(info);
+        return [name, namespaceInfo];
+      }),
+    );
+  }
+
+  addNamespaceInfo(namespaceInfo) {
+    // No shortcuts means it was not in data.json
+    // so it must be a user namespace.
+    if (!namespaceInfo.shortcuts) {
+      namespaceInfo.type = 'user';
+      namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
+    } else {
+      namespaceInfo.type = 'site';
+    }
+    return namespaceInfo;
+  }
 }
