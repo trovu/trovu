@@ -152,7 +152,7 @@ export default class Env {
     if (
       namespace in this.namespaceInfos &&
       this.namespaceInfos[namespace].shortcuts &&
-      this.isEmptyObject(this.namespaceInfos[namespace].shortcuts)
+      !this.isEmptyObject(this.namespaceInfos[namespace].shortcuts)
     ) {
       return true;
     }
