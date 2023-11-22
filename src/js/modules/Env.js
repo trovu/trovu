@@ -6,6 +6,7 @@ import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
 import jsyaml from 'js-yaml';
 import pkg from '../../../package.json';
+import countriesList from 'countries-list';
 
 /** Set and remember the environment. */
 
@@ -153,6 +154,13 @@ export default class Env {
       namespace in this.namespaceInfos &&
       this.namespaceInfos[namespace].shortcuts &&
       !this.isEmptyObject(this.namespaceInfos[namespace].shortcuts)
+    ) {
+      return true;
+    }
+    if (namespace in countriesList.languages) {
+      return true;
+    } else if (
+      namespace.substring(1).toUpperCase() in countriesList.countries
     ) {
       return true;
     }
