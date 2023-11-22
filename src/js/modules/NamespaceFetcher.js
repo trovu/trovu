@@ -84,6 +84,31 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
+  addNamespaceInfos(namespaceInfos) {
+    return Object.fromEntries(
+      Object.entries(namespaceInfos).map(([name, info]) => {
+        const namespaceInfo = this.addNamespaceInfo(info);
+        return [name, namespaceInfo];
+      }),
+    );
+  }
+
+  addNamespaceInfo(namespaceInfo) {
+    // No shortcuts means it was not in data.json
+    // so it must be a user namespace.
+    if (!namespaceInfo.shortcuts) {
+      namespaceInfo.type = 'user';
+      // Case when user namespace was added as extra namespace.
+      if (!namespaceInfo.github) {
+        namespaceInfo.github = namespaceInfo.name;
+      }
+      namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
+    } else {
+      namespaceInfo.type = 'site';
+    }
+    return namespaceInfo;
+  }
+
   /**
    * Fetches the information for the given namespaces from an external source
    * @param {Object} namespaceInfos - An object of initial namespace infos.
@@ -446,30 +471,5 @@ export default class NamespaceFetcher {
    */
   isSubscribed(namespaceInfo) {
     return namespaceInfo.priority && namespaceInfo.priority > 0;
-  }
-
-  addNamespaceInfos(namespaceInfos) {
-    return Object.fromEntries(
-      Object.entries(namespaceInfos).map(([name, info]) => {
-        const namespaceInfo = this.addNamespaceInfo(info);
-        return [name, namespaceInfo];
-      }),
-    );
-  }
-
-  addNamespaceInfo(namespaceInfo) {
-    // No shortcuts means it was not in data.json
-    // so it must be a user namespace.
-    if (!namespaceInfo.shortcuts) {
-      namespaceInfo.type = 'user';
-      // Case when user namespace was added as extra namespace.
-      if (!namespaceInfo.github) {
-        namespaceInfo.github = namespaceInfo.name;
-      }
-      namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
-    } else {
-      namespaceInfo.type = 'site';
-    }
-    return namespaceInfo;
   }
 }
