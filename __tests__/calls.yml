@@ -61,9 +61,9 @@
 - title: call extra namespace that is not yet in namespaces
   env:
     defaultKeyword: g
-    query: georgjaehnig.trovu-test1 arg1
+    query: testuser.keyword1 arg1
   response:
-    redirectUrl: https://www.google.de/search?hl=de&q=trovu-test1%20arg1&ie=utf-8
+    redirectUrl: https://www.google.com/search?hl=en&q=keyword1%20arg1&ie=utf-8
 - title: call extra namespace that is a language but without shortcuts
   env:
     query: dz.w
@@ -71,7 +71,7 @@
     redirectUrl: https://dz.wikipedia.org/
 - title: defaultKeyword from user setting
   env:
-    github: georgjaehnig
+    github: testuser
     query: foobar
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foobar&ie=utf-8

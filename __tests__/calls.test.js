@@ -17,14 +17,12 @@ async function main() {
 }
 
 global.fetch = jest.fn((url) => {
-  if (url.includes('/georgjaehnig/trovu-data-user/master/config.yml')) {
+  if (url.includes('/testuser/trovu-data-user/master/config.yml')) {
     return Promise.resolve({
       status: 200,
       text: () => Promise.resolve('defaultKeyword: g'),
     });
-  } else if (
-    url.includes('/georgjaehnig/trovu-data-user/master/shortcuts.yml')
-  ) {
+  } else if (url.includes('/testuser/trovu-data-user/master/shortcuts.yml')) {
     // Handle other URLs or simulate errors
     return Promise.resolve({
       status: 200, // or another status code as appropriate
