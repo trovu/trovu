@@ -64,6 +64,11 @@
     query: georgjaehnig.trovu-test1 arg1
   response:
     redirectUrl: https://www.google.de/search?hl=de&q=trovu-test1%20arg1&ie=utf-8
+- title: call extra namespace that is a language but without shortcuts
+  env:
+    query: ig.w
+  response:
+    redirectUrl: https://www.google.de/search?hl=de&q=trovu-test1%20arg1&ie=utf-8
 - title: defaultKeyword from user setting
   env:
     github: georgjaehnig
