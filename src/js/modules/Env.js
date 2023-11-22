@@ -164,24 +164,6 @@ export default class Env {
   }
 
   /**
-   * Checks if namespace is a site namespace.
-   * @param {(string|Object)} namespace - The namespace to be checked
-   * @return {boolean}
-   */
-  isSiteNamespace(namespace) {
-    const namespaceName = namespace.name ?? namespace;
-    // Language.
-    if (namespaceName.length === 2) {
-      return true;
-    }
-    // Country.
-    if (namespaceName.startsWith('.') && namespaceName.length === 3) {
-      return true;
-    }
-    return false;
-  }
-
-  /**
    * Set the user configuration from their fork in their Github profile.
    *
    * @param {array} params - Here, 'github' and 'debug' will be used
