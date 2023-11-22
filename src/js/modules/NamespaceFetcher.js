@@ -275,7 +275,8 @@ export default class NamespaceFetcher {
       if (include && include.namespace) {
         const namespaceInfo = this.getInitalNamespaceInfo(include.namespace);
         if (!this.namespaceInfos[namespaceInfo.name]) {
-          this.namespaceInfos[namespaceInfo.name] = namespaceInfo;
+          this.namespaceInfos[namespaceInfo.name] =
+            this.addNamespaceInfo(namespaceInfo);
         }
       }
     }
