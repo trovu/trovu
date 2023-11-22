@@ -462,6 +462,10 @@ export default class NamespaceFetcher {
     // so it must be a user namespace.
     if (!namespaceInfo.shortcuts) {
       namespaceInfo.type = 'user';
+      // Case when user namespace was added as extra namespace.
+      if (!namespaceInfo.github) {
+        namespaceInfo.github = namespaceInfo.name;
+      }
       namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
     } else {
       namespaceInfo.type = 'site';
