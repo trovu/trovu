@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 43-create-a-pwa
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
