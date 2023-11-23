@@ -18,6 +18,16 @@ export default class DataManager {
   }
 
   /**
+   * Write data to /data.
+   * @param {object} data      - The data to write
+   */
+  static write(data) {
+    const ymlDirPath = './data/';
+    DataManager.writeYmls(`${ymlDirPath}/shortcuts/`, data['shortcuts']);
+    DataManager.writeYmls(`${ymlDirPath}/types/city/`, data['types']['city']);
+  }
+
+  /**
    * Read YAML files from a directory.
    * @param   {string} ymlDirPath
    * @returns {object} dataByFileRoot - The data from the YAML files.
@@ -33,5 +43,21 @@ export default class DataManager {
       dataByFileRoot[fileRoot] = data;
     }
     return dataByFileRoot;
+  }
+
+  /**
+   * Write YAML files to a directory.
+   * @param {string} ymlDirPath
+   * @param {object} dataByFileRoot - The data to write to YAML files.
+   */
+  static writeYmls(ymlDirPath, dataByFileRoot) {
+    for (const fileRoot in dataByFileRoot) {
+      const filePath = `${ymlDirPath}/${fileRoot}.yml`;
+      const str = jsyaml.dump(dataByFileRoot[fileRoot], {
+        noArrayIndent: true,
+        lineWidth: -1,
+      });
+      fs.writeFileSync(filePath, str, 'utf8');
+    }
   }
 }
