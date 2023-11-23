@@ -100,7 +100,10 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getArgumentsFromString(str) {
-    return this.getPlaceholdersFromStringLegacy(str, '%');
+    const placeholders = {};
+    Object.assign(placeholders, this.getPlaceholdersFromString(str, ''));
+    Object.assign(placeholders, this.getPlaceholdersFromStringLegacy(str, '%'));
+    return placeholders;
   }
 
   /**
