@@ -15,7 +15,7 @@ export default class QueryParser {
    */
   static parse(query) {
     const env = {};
-    env.query = query;
+    env.query = query.trim();
     Object.assign(env, QueryParser.setFlagsFromQuery(env));
 
     [env.keyword, env.argumentString] = this.getKeywordAndArgumentString(
