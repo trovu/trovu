@@ -15,7 +15,7 @@ program
   });
 
 program
-  .command('normalize')
+  .command('normalize-data')
   .description('Normalize YAML data files')
   .action(() => {
     const data = DataManager.load();
