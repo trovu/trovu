@@ -19,6 +19,23 @@ test('UrlProcessor.getVariablesFromString new', async () => {
     language: {
       '<$language>': {},
     },
+  });
+});
+
+test('UrlProcessor.getVariablesFromString legacy', async () => {
+  expect(
+    UrlProcessor.getVariablesFromString('https://{$language}.{%query}'),
+  ).toEqual({
+    language: {
+      '{$language}': {},
+    },
+  });
+});
+
+test('UrlProcessor.getArgumentsFromString new', async () => {
+  expect(
+    UrlProcessor.getArgumentsFromString('https://<$language>.<query>'),
+  ).toEqual({
     query: {
       '<query>': {},
     },
