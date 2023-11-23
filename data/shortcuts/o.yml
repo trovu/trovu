@@ -7288,7 +7288,7 @@ sg 1:
   - key: sg 1
     namespace: pka
 sgo 0:
-  url: http://sources.gentoo.org/{$1}/{$2}
+  url: http://sources.gentoo.org/
   title: Show Gentoo ebuild sources
   tags:
   - old
