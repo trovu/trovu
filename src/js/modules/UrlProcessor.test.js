@@ -16,7 +16,7 @@ test('UrlProcessor.getVariablesFromString new', async () => {
   expect(
     UrlProcessor.getVariablesFromString('https://<$language>.<query>'),
   ).toEqual({
-    $language: {
+    language: {
       '<$language>': {},
     },
     query: {
