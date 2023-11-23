@@ -20,62 +20,7 @@ program
 program
   .command('migrate-placeholders')
   .description('Migrate custom placeholder format to YAML ')
-  .action(() => {
-    const data = DataManager.load();
-    for (const namespace in data.shortcuts) {
-      for (const key in data.shortcuts[namespace]) {
-        const shortcut = data.shortcuts[namespace][key];
-        const url = shortcut.url;
-        if (url) {
-          let newUrl = url;
-          const placeholders = UrlProcessor.getPlaceholdersFromString(url, '%');
-          if (placeholders) {
-            for (const placeholderName in placeholders) {
-              let newPlaceholder;
-              const placeholder = placeholders[placeholderName];
-              const match = Object.keys(placeholder)[0];
-              const attributes = Object.values(placeholder)[0];
-              if (Object.keys(attributes).length === 0) {
-                newPlaceholder = placeholderName;
-              } else {
-                newPlaceholder = {};
-                newPlaceholder[placeholderName] = attributes;
-              }
-              const newPlaceholderYaml = jsyaml
-                .dump(newPlaceholder, {
-                  flowLevel: 1,
-                  // noArrayIndent: true,
-                  // lineWidth: -1,
-                  // noCompatMode: true,
-                  // condenseFlow: true,
-                })
-                .trim();
-              const newPlaceholderYamlBrackets = `<${newPlaceholderYaml}>`;
-              newUrl = newUrl.replace(match, newPlaceholderYamlBrackets);
-              continue;
-              console.log(
-                placeholder,
-                '\t',
-                placeholderName,
-                '\t',
-                match,
-                '\t',
-                attributes,
-                '\t',
-                newPlaceholder,
-                '\t',
-                newPlaceholderYaml,
-                '\t',
-                newPlaceholderYamlBrackets,
-              );
-            }
-            shortcut.url = newUrl;
-          }
-        }
-      }
-      DataManager.write(data);
-    }
-  });
+  .action(migratePlaceholders);
 
 program.parse();
 
@@ -88,4 +33,61 @@ function compileData() {
 function normalizeData() {
   const data = DataManager.load();
   DataManager.write(data);
+}
+
+function migratePlaceholders() {
+  const data = DataManager.load();
+  for (const namespace in data.shortcuts) {
+    for (const key in data.shortcuts[namespace]) {
+      const shortcut = data.shortcuts[namespace][key];
+      const url = shortcut.url;
+      if (url) {
+        let newUrl = url;
+        const placeholders = UrlProcessor.getPlaceholdersFromString(url, '%');
+        if (placeholders) {
+          for (const placeholderName in placeholders) {
+            let newPlaceholder;
+            const placeholder = placeholders[placeholderName];
+            const match = Object.keys(placeholder)[0];
+            const attributes = Object.values(placeholder)[0];
+            if (Object.keys(attributes).length === 0) {
+              newPlaceholder = placeholderName;
+            } else {
+              newPlaceholder = {};
+              newPlaceholder[placeholderName] = attributes;
+            }
+            const newPlaceholderYaml = jsyaml
+              .dump(newPlaceholder, {
+                flowLevel: 1,
+                // noArrayIndent: true,
+                // lineWidth: -1,
+                // noCompatMode: true,
+                // condenseFlow: true,
+              })
+              .trim();
+            const newPlaceholderYamlBrackets = `<${newPlaceholderYaml}>`;
+            newUrl = newUrl.replace(match, newPlaceholderYamlBrackets);
+            continue;
+            console.log(
+              placeholder,
+              '\t',
+              placeholderName,
+              '\t',
+              match,
+              '\t',
+              attributes,
+              '\t',
+              newPlaceholder,
+              '\t',
+              newPlaceholderYaml,
+              '\t',
+              newPlaceholderYamlBrackets,
+            );
+          }
+          shortcut.url = newUrl;
+        }
+      }
+    }
+    DataManager.write(data);
+  }
 }
