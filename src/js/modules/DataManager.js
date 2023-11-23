@@ -23,8 +23,15 @@ export default class DataManager {
    */
   static write(data) {
     const ymlDirPath = './data/';
+    this.sortTags(data.shortcuts);
     DataManager.writeYmls(`${ymlDirPath}/shortcuts/`, data['shortcuts']);
     DataManager.writeYmls(`${ymlDirPath}/types/city/`, data['types']['city']);
+  }
+
+  static sortTags(shortcuts) {
+    for (const key in shortcuts) {
+      if (shortcuts[key].tags) shortcuts[key].tags.sort();
+    }
   }
 
   /**
