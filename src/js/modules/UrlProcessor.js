@@ -114,7 +114,10 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getVariablesFromString(str) {
-    return this.getPlaceholdersFromStringLegacy(str, '\\$');
+    const variables = {};
+    Object.assign(variables, this.getPlaceholdersFromString(str, '\\$'));
+    Object.assign(variables, this.getPlaceholdersFromStringLegacy(str, '\\$'));
+    return variables;
   }
 
   /**
