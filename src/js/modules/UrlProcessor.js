@@ -6,6 +6,7 @@ import Helper from './Helper.js';
 import TimeType from './type/time.js';
 
 import dayjs from 'dayjs';
+import jsyaml from 'js-yaml';
 
 /** Process a shortcut URL for redirect. */
 
