@@ -47,6 +47,20 @@ export default class UrlProcessor {
     return placeholders;
   }
 
+  static getPlaceholderFromMatch(match) {
+    const yaml = match[1];
+    const parsed = jsyaml.load(yaml);
+    if (typeof parsed === 'string') {
+      const name = parsed;
+      const placeholder = {};
+      return { name, placeholder };
+    } else {
+      const name = Object.keys(parsed)[0];
+      const placeholder = parsed[name];
+      return { name, placeholder };
+    }
+  }
+
   static getPlaceholderFromMatchLegacy(match) {
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
