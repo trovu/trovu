@@ -12,6 +12,27 @@ test('UrlProcessor.transformEoCx', async () => {
   }
 });
 
+test('UrlProcessor.getArgumentsFromString new', async () => {
+  expect(
+    UrlProcessor.getArgumentsFromString('https://<$language>.<query>'),
+  ).toEqual({
+    $language: {
+      '<$language>': {},
+    },
+    query: {
+      '<query>': {},
+    },
+  });
+});
+
+test('UrlProcessor.getArgumentsFromString legacy', async () => {
+  expect(UrlProcessor.getArgumentsFromString('https://{%query}')).toEqual({
+    query: {
+      '{%query}': {},
+    },
+  });
+});
+
 test('UrlProcessor.getPlaceholdersFromString', async () => {
   expect(UrlProcessor.getPlaceholdersFromString('https://<query>', '')).toEqual(
     {
