@@ -13,4 +13,13 @@ program
     const json = JSON.stringify(data);
     process.stdout.write(json);
   });
+
+program
+  .command('normalize')
+  .description('Normalize YAML data files')
+  .action(() => {
+    const data = DataManager.load();
+    DataManager.write(data);
+  });
+
 program.parse();
