@@ -48,7 +48,7 @@ function migratePlaceholders() {
             url,
             prefix,
           );
-          if (placeholders) {
+          if (Object.keys(placeholders).length > 0) {
             for (const placeholderName in placeholders) {
               let newPlaceholder;
               const placeholder = placeholders[placeholderName];
