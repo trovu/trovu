@@ -6,7 +6,6 @@ import jsyaml from 'js-yaml';
 export default class DataManager {
   /**
    * Load data from /data.
-   *
    * @return {object} data      - The loaded data from /data.
    */
   static load() {
