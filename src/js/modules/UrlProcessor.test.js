@@ -37,10 +37,28 @@ test('UrlProcessor.getPlaceholdersFromStringLegacy', async () => {
   });
 });
 
+test('UrlProcessor.getPlaceholderFromMatch', async () => {
+  expect(UrlProcessor.getPlaceholderFromMatch([, 'query'])).toEqual({
+    name: 'query',
+    placeholder: {},
+  });
+});
+
 test('UrlProcessor.getPlaceholderFromMatchLegacy', async () => {
   expect(UrlProcessor.getPlaceholderFromMatchLegacy([, 'query'])).toEqual({
     name: 'query',
     placeholder: {},
+  });
+});
+
+test('UrlProcessor.getPlaceholderFromMatch', async () => {
+  expect(
+    UrlProcessor.getPlaceholderFromMatch([, 'Start: { type: city}']),
+  ).toEqual({
+    name: 'Start',
+    placeholder: {
+      type: 'city',
+    },
   });
 });
 
