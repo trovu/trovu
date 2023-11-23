@@ -12,21 +12,10 @@ program
   .description('Compile YAML data files to JSON')
   .action(() => compileData);
 
-function compileData() {
-  const data = DataManager.load();
-  const json = JSON.stringify(data);
-  process.stdout.write(json);
-}
-
 program
   .command('normalize-data')
   .description('Normalize YAML data files')
   .action(() => normalizeData);
-
-function normalizeData() {
-  const data = DataManager.load();
-  DataManager.write(data);
-}
 
 program
   .command('migrate-placeholders')
@@ -89,3 +78,14 @@ program
   });
 
 program.parse();
+
+function compileData() {
+  const data = DataManager.load();
+  const json = JSON.stringify(data);
+  process.stdout.write(json);
+}
+
+function normalizeData() {
+  const data = DataManager.load();
+  DataManager.write(data);
+}
