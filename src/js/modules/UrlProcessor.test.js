@@ -11,3 +11,16 @@ test('UrlProcessor.transformEoCx', async () => {
     expect(output).toEqual(expectations[input]);
   }
 });
+
+test('UrlProcessor.getPlaceholdersFromStringLegacy', async () => {
+  expect(
+    UrlProcessor.getPlaceholdersFromStringLegacy(
+      'https://www.google.com/search?hl=en&q=keyword1%20{%query}&ie=utf-8',
+      '%',
+    ),
+  ).toEqual({
+    query: {
+      '{%query}': {},
+    },
+  });
+});
