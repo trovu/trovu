@@ -13,7 +13,7 @@ ar-en 0:
   - english
   - language
 ar-en 1:
-  url: https://bab.la/dictionary/english-arabic/{%word}
+  url: https://bab.la/dictionary/english-arabic/<word>
   title: Arabic-English (bab.la)
   tags:
   - arabic
@@ -40,7 +40,7 @@ cs-en 0:
   - english
   - language
 cs-en 1:
-  url: https://bab.la/dictionary/english-czech/{%word}
+  url: https://bab.la/dictionary/english-czech/<word>
   title: Czech-English (bab.la)
   tags:
   - czech
@@ -67,7 +67,7 @@ da-de 0:
   - german
   - language
 da-de 1:
-  url: https://bab.la/woerterbuch/daenisch-deutsch/{%word}
+  url: https://bab.la/woerterbuch/daenisch-deutsch/<word>
   title: Dänisch-Deutsch (bab.la)
   tags:
   - danish
@@ -88,7 +88,7 @@ da-en 0:
   - english
   - language
 da-en 1:
-  url: https://bab.la/dictionary/english-danish/{%word}
+  url: https://bab.la/dictionary/english-danish/<word>
   title: Danish-English (bab.la)
   tags:
   - danish
@@ -128,7 +128,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://bab.la/dictionary/german-english/{%word}
+  url: https://bab.la/dictionary/german-english/<word>
   title: German-English (bab.la)
   tags:
   - dictionary
@@ -149,7 +149,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://bab.la/dictionary/german-spanish/{%word}
+  url: https://bab.la/dictionary/german-spanish/<word>
   title: Alemán-Español (bab.la)
   tags:
   - dictionary
@@ -170,7 +170,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://bab.la/dictionary/german-french/{%word}
+  url: https://bab.la/dictionary/german-french/<word>
   title: Allemand-Français (bab.la)
   tags:
   - dictionary
@@ -191,7 +191,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://bab.la/dictionary/german-italian/{%word}
+  url: https://bab.la/dictionary/german-italian/<word>
   title: Tedesco-Italiano (bab.la)
   tags:
   - dictionary
@@ -212,7 +212,7 @@ de-nl 0:
   - german
   - language
 de-nl 1:
-  url: https://bab.la/dictionary/german-dutch/{%word}
+  url: https://bab.la/dictionary/german-dutch/<word>
   title: Duits-Nederlands (bab.la)
   tags:
   - dictionary
@@ -233,7 +233,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://bab.la/dictionary/german-polish/{%word}
+  url: https://bab.la/dictionary/german-polish/<word>
   title: Niemiecki-Polski (bab.la)
   tags:
   - dictionary
@@ -254,7 +254,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://bab.la/dictionary/german-portuguese/{%word}
+  url: https://bab.la/dictionary/german-portuguese/<word>
   title: Alemão-Português (bab.la)
   tags:
   - dictionary
@@ -275,7 +275,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://bab.la/dictionary/german-russian/{%word}
+  url: https://bab.la/dictionary/german-russian/<word>
   title: Немецкий-Русский (bab.la)
   tags:
   - dictionary
@@ -296,7 +296,7 @@ de-sv 0:
   - language
   - swedish
 de-sv 1:
-  url: https://bab.la/dictionary/german-swedish/{%word}
+  url: https://bab.la/dictionary/german-swedish/<word>
   title: Tyska-Svenska (bab.la)
   tags:
   - dictionary
@@ -317,7 +317,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://bab.la/dictionary/german-turkish/{%word}
+  url: https://bab.la/dictionary/german-turkish/<word>
   title: Almanca-Türkçe (bab.la)
   tags:
   - dictionary
@@ -415,7 +415,7 @@ en-el 0:
   - greek
   - language
 en-el 1:
-  url: https://bab.la/dictionary/english-greek/{%word}
+  url: https://bab.la/dictionary/english-greek/<word>
   title: Αγγλικά-Ελληνικά (bab.la)
   tags:
   - dictionary
@@ -436,7 +436,7 @@ en-eo 0:
   - esperanto
   - language
 en-eo 1:
-  url: https://bab.la/dictionary/english-esperanto/{%word}
+  url: https://bab.la/dictionary/english-esperanto/<word>
   title: Angla-Esperanto (bab.la)
   tags:
   - dictionary
@@ -457,7 +457,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: https://bab.la/dictionary/english-spanish/{%word}
+  url: https://bab.la/dictionary/english-spanish/<word>
   title: Inglés-Español (bab.la)
   tags:
   - dictionary
@@ -478,7 +478,7 @@ en-fi 0:
   - finnish
   - language
 en-fi 1:
-  url: https://bab.la/dictionary/english-finnish/{%word}
+  url: https://bab.la/dictionary/english-finnish/<word>
   title: Englanti-Suomi (bab.la)
   tags:
   - dictionary
@@ -499,7 +499,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://bab.la/dictionary/english-french/{%word}
+  url: https://bab.la/dictionary/english-french/<word>
   title: Anglais-Français (bab.la)
   tags:
   - dictionary
@@ -520,7 +520,7 @@ en-hi 0:
   - hindi
   - language
 en-hi 1:
-  url: https://bab.la/dictionary/english-hindi/{%word}
+  url: https://bab.la/dictionary/english-hindi/<word>
   title: अंग्रेज़ी-हिन्दी (bab.la)
   tags:
   - dictionary
@@ -541,7 +541,7 @@ en-hu 0:
   - hungarian
   - language
 en-hu 1:
-  url: https://bab.la/dictionary/english-hungarian/{%word}
+  url: https://bab.la/dictionary/english-hungarian/<word>
   title: Angol-Magyar (bab.la)
   tags:
   - dictionary
@@ -562,7 +562,7 @@ en-id 0:
   - indonesian
   - language
 en-id 1:
-  url: https://bab.la/dictionary/english-indonesian/{%word}
+  url: https://bab.la/dictionary/english-indonesian/<word>
   title: Inggris-Bahasa Indonesia (bab.la)
   tags:
   - dictionary
@@ -583,7 +583,7 @@ en-it 0:
   - italian
   - language
 en-it 1:
-  url: https://bab.la/dictionary/english-italian/{%word}
+  url: https://bab.la/dictionary/english-italian/<word>
   title: Inglese-Italiano (bab.la)
   tags:
   - dictionary
@@ -604,7 +604,7 @@ en-ja 0:
   - japanese
   - language
 en-ja 1:
-  url: https://bab.la/dictionary/english-japanese/{%word}
+  url: https://bab.la/dictionary/english-japanese/<word>
   title: 英語-日本語 (bab.la)
   tags:
   - dictionary
@@ -625,7 +625,7 @@ en-ka 0:
   - georgian
   - language
 en-ka 1:
-  url: https://bab.la/dictionary/english-georgian/{%word}
+  url: https://bab.la/dictionary/english-georgian/<word>
   title: Ინგლისური-Ქართული (bab.la)
   tags:
   - dictionary
@@ -646,7 +646,7 @@ en-ko 0:
   - korean
   - language
 en-ko 1:
-  url: https://bab.la/dictionary/english-korean/{%word}
+  url: https://bab.la/dictionary/english-korean/<word>
   title: 영어-한국어 (bab.la)
   tags:
   - dictionary
@@ -667,7 +667,7 @@ en-ms 0:
   - language
   - malay
 en-ms 1:
-  url: https://bab.la/dictionary/english-malay/{%word}
+  url: https://bab.la/dictionary/english-malay/<word>
   title: Inggeris-Bahasa Melayu (bab.la)
   tags:
   - dictionary
@@ -688,7 +688,7 @@ en-nl 0:
   - english
   - language
 en-nl 1:
-  url: https://bab.la/dictionary/english-dutch/{%word}
+  url: https://bab.la/dictionary/english-dutch/<word>
   title: Engels-Nederlands (bab.la)
   tags:
   - dictionary
@@ -709,7 +709,7 @@ en-no 0:
   - language
   - norwegian
 en-no 1:
-  url: https://bab.la/dictionary/english-norwegian/{%word}
+  url: https://bab.la/dictionary/english-norwegian/<word>
   title: Engelsk-Norsk (bab.la)
   tags:
   - dictionary
@@ -730,7 +730,7 @@ en-pl 0:
   - language
   - polish
 en-pl 1:
-  url: https://bab.la/dictionary/english-polish/{%word}
+  url: https://bab.la/dictionary/english-polish/<word>
   title: Angielski-Polski (bab.la)
   tags:
   - dictionary
@@ -751,7 +751,7 @@ en-pt 0:
   - language
   - portuguese
 en-pt 1:
-  url: https://bab.la/dictionary/english-portuguese/{%word}
+  url: https://bab.la/dictionary/english-portuguese/<word>
   title: Inglês-Português (bab.la)
   tags:
   - dictionary
@@ -772,7 +772,7 @@ en-ro 0:
   - language
   - romanian
 en-ro 1:
-  url: https://bab.la/dictionary/english-romanian/{%word}
+  url: https://bab.la/dictionary/english-romanian/<word>
   title: Engleză-Română (bab.la)
   tags:
   - dictionary
@@ -793,7 +793,7 @@ en-ru 0:
   - language
   - russian
 en-ru 1:
-  url: https://bab.la/dictionary/english-russian/{%word}
+  url: https://bab.la/dictionary/english-russian/<word>
   title: Английский-Русский (bab.la)
   tags:
   - dictionary
@@ -814,7 +814,7 @@ en-sv 0:
   - language
   - swedish
 en-sv 1:
-  url: https://bab.la/dictionary/english-swedish/{%word}
+  url: https://bab.la/dictionary/english-swedish/<word>
   title: Engelska-Svenska (bab.la)
   tags:
   - dictionary
@@ -835,7 +835,7 @@ en-sw 0:
   - language
   - swahili
 en-sw 1:
-  url: https://bab.la/dictionary/english-swahili/{%word}
+  url: https://bab.la/dictionary/english-swahili/<word>
   title: Kiingereza-Kiswahili (bab.la)
   tags:
   - dictionary
@@ -856,7 +856,7 @@ en-te 0:
   - language
   - telugu
 en-te 1:
-  url: https://bab.la/dictionary/english-telugu/{%word}
+  url: https://bab.la/dictionary/english-telugu/<word>
   title: ఆంగ్లం-తెలుగు (bab.la)
   tags:
   - dictionary
@@ -877,7 +877,7 @@ en-th 0:
   - language
   - thai
 en-th 1:
-  url: https://bab.la/dictionary/english-thai/{%word}
+  url: https://bab.la/dictionary/english-thai/<word>
   title: อังกฤษ-ไทย (bab.la)
   tags:
   - dictionary
@@ -898,7 +898,7 @@ en-tr 0:
   - language
   - turkish
 en-tr 1:
-  url: https://bab.la/dictionary/english-turkish/{%word}
+  url: https://bab.la/dictionary/english-turkish/<word>
   title: İngilizce-Türkçe (bab.la)
   tags:
   - dictionary
@@ -919,7 +919,7 @@ en-ur 0:
   - language
   - urdu
 en-ur 1:
-  url: https://bab.la/dictionary/english-urdu/{%word}
+  url: https://bab.la/dictionary/english-urdu/<word>
   title: انگریزی-اردو (bab.la)
   tags:
   - dictionary
@@ -940,7 +940,7 @@ en-vi 0:
   - language
   - vietnamese
 en-vi 1:
-  url: https://bab.la/dictionary/english-vietnamese/{%word}
+  url: https://bab.la/dictionary/english-vietnamese/<word>
   title: Tiếng Anh-Tiếng Việt (bab.la)
   tags:
   - dictionary
@@ -961,7 +961,7 @@ en-zh 0:
   - english
   - language
 en-zh 1:
-  url: https://bab.la/dictionary/english-chinese/{%word}
+  url: https://bab.la/dictionary/english-chinese/<word>
   title: 英文-中文 (bab.la)
   tags:
   - chinese
@@ -982,7 +982,7 @@ en-zu 0:
   - language
   - zulu
 en-zu 1:
-  url: https://bab.la/dictionary/english-zulu/{%word}
+  url: https://bab.la/dictionary/english-zulu/<word>
   title: I-English-IsiZulu (bab.la)
   tags:
   - dictionary
@@ -1054,7 +1054,7 @@ es-fr 0:
   - language
   - spanish
 es-fr 1:
-  url: https://bab.la/dictionary/spanish-french/{%word}
+  url: https://bab.la/dictionary/spanish-french/<word>
   title: Espagnol-Français (bab.la)
   tags:
   - dictionary
@@ -1075,7 +1075,7 @@ es-it 0:
   - language
   - spanish
 es-it 1:
-  url: https://bab.la/dictionary/spanish-italian/{%word}
+  url: https://bab.la/dictionary/spanish-italian/<word>
   title: Spagnolo-Italiano (bab.la)
   tags:
   - dictionary
@@ -1096,7 +1096,7 @@ es-pt 0:
   - portuguese
   - spanish
 es-pt 1:
-  url: https://bab.la/dictionary/spanish-portuguese/{%word}
+  url: https://bab.la/dictionary/spanish-portuguese/<word>
   title: Espanhol-Português (bab.la)
   tags:
   - dictionary
@@ -1117,7 +1117,7 @@ es-qu 0:
   - quechua
   - spanish
 es-qu 1:
-  url: https://bab.la/dictionary/spanish-quechua/{%word}
+  url: https://bab.la/dictionary/spanish-quechua/<word>
   title: Español Simi-Runasimi (bab.la)
   tags:
   - dictionary
@@ -1202,7 +1202,7 @@ fr-it 0:
   - italian
   - language
 fr-it 1:
-  url: https://bab.la/dictionary/french-italian/{%word}
+  url: https://bab.la/dictionary/french-italian/<word>
   title: Francese-Italiano (bab.la)
   tags:
   - dictionary
@@ -1338,7 +1338,7 @@ it-ro 0:
   - language
   - romanian
 it-ro 1:
-  url: https://bab.la/dictionary/italian-romanian/{%word}
+  url: https://bab.la/dictionary/italian-romanian/<word>
   title: Italiană-Română (bab.la)
   tags:
   - dictionary
@@ -1518,7 +1518,7 @@ pl-ru 0:
   - polish
   - russian
 pl-ru 1:
-  url: https://bab.la/dictionary/polish-russian/{%word}
+  url: https://bab.la/dictionary/polish-russian/<word>
   title: Польский-Русский (bab.la)
   tags:
   - dictionary

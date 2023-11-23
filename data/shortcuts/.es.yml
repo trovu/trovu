@@ -7,7 +7,7 @@ a 0:
   - books
   - shopping
 a 1:
-  url: http://www.amazon.es/gp/search?ie=UTF8&camp=3626&creative=24790&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo04-21
+  url: http://www.amazon.es/gp/search?ie=UTF8&camp=3626&creative=24790&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo04-21
   title: Amazon.es
   tags:
   - affiliate
@@ -25,7 +25,7 @@ e 0:
   - ebay
   - shopping
 e 1:
-  url: https://www.ebay.es/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.es/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es
   tags:
   - affiliate
@@ -35,7 +35,7 @@ e 1:
   - arguments: smartphone
     description: Buscar "smartphone" en Ebay
 g 1:
-  url: https://www.google.es/search?hl={$language}&q={%query}&ie=utf-8
+  url: https://www.google.es/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.es
   tags:
   - google
@@ -44,7 +44,7 @@ g 1:
   - arguments: madrid
     description: Buscar "madrid" con Google
 gdfv 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Fuerteventura, España&daddr={%destination}, Fuerteventura, España
+  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Fuerteventura, España&daddr=<destination>, Fuerteventura, España
   title: Google Maps Directions (Routing), Fuerteventura
   tags:
   - fuerteventura
@@ -56,7 +56,7 @@ gdfv 2:
   - arguments: corralejo, morro jable
     description: Get a route from Corralejo to Morro Jable
 gdgc 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Gran Canaria, España&daddr={%destination}, Gran Canaria, España
+  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Gran Canaria, España&daddr=<destination>, Gran Canaria, España
   title: Google Maps Directions (Routing), Gran Canaria
   tags:
   - google
@@ -68,7 +68,7 @@ gdgc 2:
   - arguments: las palmas, maspalomas
     description: Get a route from Las Palmas to Maspalomas
 gdlz 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Lanzarote, España&daddr={%destination}, Lanzarote, España
+  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Lanzarote, España&daddr=<destination>, Lanzarote, España
   title: Google Maps Directions (Routing), Lanzarote
   tags:
   - google
@@ -80,7 +80,7 @@ gdlz 2:
   - arguments: arrecife, playa blanca
     description: Get a route from Arrecife to Playa Blanca
 gdtf 2:
-  url: http://maps.google.com/maps?hl={$language}&saddr={%start}, Tenerife, España&daddr={%destination}, Tenerife, España
+  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Tenerife, España&daddr=<destination>, Tenerife, España
   title: Google Maps Directions (Routing), Tenerife
   tags:
   - google
@@ -99,7 +99,7 @@ ikea 0:
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/es/es/search/?q={%query}
+  url: http://www.ikea.com/es/es/search/?q=<query>
   title: IKEA España
   tags:
   - furniture
@@ -113,7 +113,7 @@ ma 0:
   title: Milanuncios
   description: venta de productos de segunda mano
 ma 1:
-  url: https://www.milanuncios.com/anuncios/?s={%búsqueda}&orden=relevance&fromSearch=1&fromSuggester=1&suggestionUsed=0&hitOrigin=home_search
+  url: https://www.milanuncios.com/anuncios/?s=<búsqueda>&orden=relevance&fromSearch=1&fromSuggester=1&suggestionUsed=0&hitOrigin=home_search
   title: Milanuncios
   description: venta de productos de segunda mano
   tags:
@@ -134,7 +134,7 @@ mil 1:
       query: ma {%1}
     created: '2023-01-11'
 titsa 2:
-  url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r
+  url: https://www.google.com/maps?hl=<$language>&saddr=<origen>,%20Tenerife,+Espa%C3%B1a&daddr=<destino>,%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
   tags:
   - google
@@ -146,7 +146,7 @@ titsa 2:
   - arguments: weyler, trinidad
     description: Próxima connection de Weyler a Trinidad
 titsa 3:
-  url: https://www.google.com/maps?hl={$language}&saddr={%origen},%20Tenerife,+Espa%C3%B1a&daddr={%destino},%20Tenerife,%20Espa%C3%B1a&time={%salida}&f=d&dirflg=r
+  url: https://www.google.com/maps?hl=<$language>&saddr=<origen>,%20Tenerife,+Espa%C3%B1a&daddr=<destino>,%20Tenerife,%20Espa%C3%B1a&time=<salida>&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
   tags:
   - google
@@ -162,11 +162,11 @@ wlp 0:
   title: Wallapop
   description: venta de productos de segunda mano
 wlp 1:
-  url: https://es.wallapop.com/app/search?filters_source=search_box&keywords={%query}
+  url: https://es.wallapop.com/app/search?filters_source=search_box&keywords=<query>
   title: Wallapop
   description: venta de productos de segunda mano
 zal 1:
-  url: http://www.zalando.es/catalogo/?q={%product}
+  url: http://www.zalando.es/catalogo/?q=<product>
   title: Zalando.es
   tags:
   - shopping

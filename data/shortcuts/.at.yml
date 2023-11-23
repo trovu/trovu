@@ -25,7 +25,7 @@ conrad 0:
   - electronics
   - shopping
 conrad 1:
-  url: https://www.conrad.at/de/search.html?search={%Artikel}
+  url: https://www.conrad.at/de/search.html?search=<Artikel>
   title: Conrad Elektronik Österreich
   tags:
   - conrad
@@ -42,7 +42,7 @@ e 0:
   - ebay
   - shopping
 e 1:
-  url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
   tags:
   - affiliate
@@ -52,7 +52,7 @@ e 1:
   - arguments: smartphone
     description: Search for "smartphone"
 g 1:
-  url: https://www.google.at/search?hl={$language}&q={%query}&ie=utf-8
+  url: https://www.google.at/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.at
   tags:
   - google
@@ -68,7 +68,7 @@ gh 0:
   - preisvergleich
   - shopping
 gh 1:
-  url: http://geizhals.at/?fs={%Produkt|encoding=iso-8859-1}
+  url: 'http://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
   title: Geizhals Österreich
   tags:
   - geizhals
@@ -520,7 +520,7 @@ ikea 0:
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/at/de/search/?q={%query}
+  url: http://www.ikea.com/at/de/search/?q=<query>
   title: IKEA Österreich
   tags:
   - furniture
@@ -530,7 +530,7 @@ ikea 1:
   - arguments: matratze
     description: Suche nach Matratzen
 obv 1:
-  url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,{%Suche}&displayField=all&pcAvailabiltyMode=false
+  url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
   title: OBV Suche - Österreichischer Bibliothekenverbund
   tags:
   - library
@@ -548,7 +548,7 @@ oebb 4:
   include:
     key: öbb 4
 rsc 1:
-  url: http://at.rs-online.com/web/c/?searchTerm={%Produkt}
+  url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Österreich
   tags:
   - electronics
@@ -562,7 +562,7 @@ we 0:
   tags:
   - weather
 we 1:
-  url: http://at.wetter.com/suche/?search={%Ort}
+  url: http://at.wetter.com/suche/?search=<Ort>
   title: Wetter.com
   tags:
   - weather
@@ -570,7 +570,7 @@ we 1:
   - arguments: berlin
     description: Search for "berlin"
 zal 1:
-  url: http://www.zalando.at/katalog/?q={%Produkt}
+  url: http://www.zalando.at/katalog/?q=<Produkt>
   title: Zalando.at
   tags:
   - shopping
@@ -579,7 +579,7 @@ zal 1:
   - arguments: schuhe
     description: Suche nach Schuhen
 öbb 2:
-  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&start=1
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
   title: ÖBB-Auskunft
   tags:
   - bahn
@@ -588,7 +588,7 @@ zal 1:
   - arguments: wien, salzburg
     description: Verbindung von Wien nach Salzburg
 öbb 3:
-  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time}&start=1
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&start=1'
   title: ÖBB-Auskunft
   tags:
   - bahn
@@ -597,7 +597,7 @@ zal 1:
   - arguments: wien, salzburg, 10
     description: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
-  url: https://fahrplan.oebb.at/webapp/?S={%Start|type=city}&Z={%Ziel|type=city}&time={%Zeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: ÖBB-Auskunft
   tags:
   - bahn

@@ -13,7 +13,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://www.linguee.com/english-german/search?query={%word}
+  url: https://www.linguee.com/english-german/search?query=<word>
   title: German-English (Linguee)
   tags:
   - dictionary
@@ -34,7 +34,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://www.linguee.es/espanol-aleman/search?query={%word}
+  url: https://www.linguee.es/espanol-aleman/search?query=<word>
   title: Alemán-Español (Linguee)
   tags:
   - dictionary
@@ -55,7 +55,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://www.linguee.fr/francais-allemand/search?query={%word}
+  url: https://www.linguee.fr/francais-allemand/search?query=<word>
   title: Allemand-Français (Linguee)
   tags:
   - dictionary
@@ -76,7 +76,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://www.linguee.de/deutsch-polnisch/search?query={%word}
+  url: https://www.linguee.de/deutsch-polnisch/search?query=<word>
   title: Niemiecki-Polski (Linguee)
   tags:
   - dictionary
@@ -97,7 +97,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://www.linguee.pt/portugues-alemao/search?query={%word}
+  url: https://www.linguee.pt/portugues-alemao/search?query=<word>
   title: Alemão-Português (Linguee)
   tags:
   - dictionary
@@ -137,7 +137,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: https://www.linguee.com/english-spanish/search?query={%word}
+  url: https://www.linguee.com/english-spanish/search?query=<word>
   title: Inglés-Español (Linguee)
   tags:
   - dictionary
@@ -158,7 +158,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://www.linguee.com/english-french/search?query={%word}
+  url: https://www.linguee.com/english-french/search?query=<word>
   title: Anglais-Français (Linguee)
   tags:
   - dictionary
@@ -179,7 +179,7 @@ en-pt 0:
   - language
   - portuguese
 en-pt 1:
-  url: https://www.linguee.com/english-portuguese/search?query={%word}
+  url: https://www.linguee.com/english-portuguese/search?query=<word>
   title: Inglês-Português (Linguee)
   tags:
   - dictionary

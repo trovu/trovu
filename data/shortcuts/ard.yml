@@ -13,7 +13,7 @@ ar-de 0:
   - german
   - language
 ar-de 1:
-  url: https://www.arabdict.com/german-arabic/{%word}
+  url: https://www.arabdict.com/german-arabic/<word>
   title: Arabisch-Deutsch (arabdict)
   tags:
   - arabic
@@ -34,7 +34,7 @@ ar-en 0:
   - english
   - language
 ar-en 1:
-  url: https://www.arabdict.com/english-arabic/{%word}
+  url: https://www.arabdict.com/english-arabic/<word>
   title: Arabic-English (arabdict)
   tags:
   - arabic
@@ -55,7 +55,7 @@ ar-es 0:
   - language
   - spanish
 ar-es 1:
-  url: https://www.arabdict.com/spanish-arabic/{%word}
+  url: https://www.arabdict.com/spanish-arabic/<word>
   title: Árabe-Español (arabdict)
   tags:
   - arabic
@@ -76,7 +76,7 @@ ar-fr 0:
   - french
   - language
 ar-fr 1:
-  url: https://www.arabdict.com/french-arabic/{%word}
+  url: https://www.arabdict.com/french-arabic/<word>
   title: Arabe-Français (arabdict)
   tags:
   - arabic
@@ -97,7 +97,7 @@ ar-it 0:
   - italian
   - language
 ar-it 1:
-  url: https://www.arabdict.com/italian-arabic/{%word}
+  url: https://www.arabdict.com/italian-arabic/<word>
   title: Arabo-Italiano (arabdict)
   tags:
   - arabic
@@ -118,7 +118,7 @@ ar-tr 0:
   - language
   - turkish
 ar-tr 1:
-  url: https://www.arabdict.com/turkish-arabic/{%word}
+  url: https://www.arabdict.com/turkish-arabic/<word>
   title: Arapça-Türkçe (arabdict)
   tags:
   - arabic

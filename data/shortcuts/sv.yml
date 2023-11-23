@@ -4,7 +4,7 @@ fr-sv 1:
       query: fr {%1}
       created: '2023-04-10'
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -14,7 +14,7 @@ frv 1:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
 last 1:
-  url: http://www.last.fm/search?setlang=sv&q={%artist}
+  url: http://www.last.fm/search?setlang=sv&q=<artist>
   title: Last.fm
   tags:
   - lastfm
@@ -23,7 +23,7 @@ last 1:
   - arguments: beatles
     description: Search for "beatles"
 rim 1:
-  url: https://www.rimlexikon.se/ord/{%ord}
+  url: https://www.rimlexikon.se/ord/<ord>
   title: Rimlexikon
   tags:
   - language

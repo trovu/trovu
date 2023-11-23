@@ -1,5 +1,5 @@
 cp 2:
-  url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&submit=1&pt=true
+  url: 'https://cp.hnonline.sk/vlakbusmhd/spojenie/?f=<odkiaľ: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
   title: Cestovné poriadky
   tags:
   - bus
@@ -10,7 +10,7 @@ cp 2:
   - arguments: bratislava, košice
     description: Vlak alebo bus z Bratislavy do Košić
 cp 3:
-  url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&submit=1&pt=true
+  url: 'https://cp.hnonline.sk/vlakbusmhd/spojenie/?f=<odkiaľ: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&submit=1&pt=true'
   title: Cestovné poriadky
   tags:
   - bus
@@ -21,7 +21,7 @@ cp 3:
   - arguments: bratislava, košice
     description: Vlak alebo bus z Bratislavy do Košić o 20:00h
 cp 4:
-  url: https://cp.hnonline.sk/vlakbusmhd/spojenie/?f={%odkiaľ|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&date={%datum|type=date|output=DD.MM.YYYY}&submit=1&pt=true
+  url: 'https://cp.hnonline.sk/vlakbusmhd/spojenie/?f=<odkiaľ: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>&submit=1&pt=true'
   title: Cestovné poriadky
   tags:
   - bus
@@ -32,7 +32,7 @@ cp 4:
   - arguments: bratislava, košice
     description: Vlak alebo bus z Bratislavy do Košić o 20:00h 10.12.
 zsr 2:
-  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}
+  url: 'https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom=<odkiaľ: {type: city}>&txtTo=<kam: {type: city}>'
   title: Vlakové spojenia ŽSR
   tags:
   - railway
@@ -43,7 +43,7 @@ zsr 2:
   - arguments: ba, ke
     description: Spojenie z Brastislavy do Košíc teraz
 zsr 3:
-  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}&txtTime={%čas|type=time}
+  url: 'https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom=<odkiaľ: {type: city}>&txtTo=<kam: {type: city}>&txtTime=<čas: {type: time}>'
   title: Vlakové spojenia ŽSR
   tags:
   - railway
@@ -54,7 +54,7 @@ zsr 3:
   - arguments: ba, ke, 10
     description: Spojenie z Brastislavy do Košíc v 10 hod.
 zsr 4:
-  url: https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom={%odkiaľ|type=city}&txtTo={%kam|type=city}&txtTime={%čas|type=time}&txtDate={%dátum|type=date}
+  url: 'https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom=<odkiaľ: {type: city}>&txtTo=<kam: {type: city}>&txtTime=<čas: {type: time}>&txtDate=<dátum: {type: date}>'
   title: Vlakové spojenia ŽSR
   tags:
   - railway

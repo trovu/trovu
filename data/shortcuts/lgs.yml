@@ -89,7 +89,7 @@ de-ar 0:
   - german
   - language
 de-ar 1:
-  url: https://de.langenscheidt.com/deutsch-arabisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-arabisch/<word>
   title: الألمانية-العربية (Langenscheidt)
   tags:
   - arabic
@@ -110,7 +110,7 @@ de-bg 0:
   - german
   - language
 de-bg 1:
-  url: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-bulgarisch/<word>
   title: Немски-Български (Langenscheidt)
   tags:
   - bulgarian
@@ -131,7 +131,7 @@ de-cs 0:
   - german
   - language
 de-cs 1:
-  url: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-tschechisch/<word>
   title: Němčina-Čeština (Langenscheidt)
   tags:
   - czech
@@ -152,7 +152,7 @@ de-da 0:
   - german
   - language
 de-da 1:
-  url: https://de.langenscheidt.com/deutsch-daenisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-daenisch/<word>
   title: Tysk-Dansk (Langenscheidt)
   tags:
   - danish
@@ -173,7 +173,7 @@ de-el 0:
   - greek
   - language
 de-el 1:
-  url: https://de.langenscheidt.com/deutsch-griechisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-griechisch/<word>
   title: Γερμανικά-Ελληνικά (Langenscheidt)
   tags:
   - dictionary
@@ -194,7 +194,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://de.langenscheidt.com/deutsch-englisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-englisch/<word>
   title: German-English (Langenscheidt)
   tags:
   - dictionary
@@ -215,7 +215,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://de.langenscheidt.com/deutsch-spanisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-spanisch/<word>
   title: Alemán-Español (Langenscheidt)
   tags:
   - dictionary
@@ -236,7 +236,7 @@ de-fa 0:
   - language
   - persian
 de-fa 1:
-  url: https://de.langenscheidt.com/deutsch-persisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-persisch/<word>
   title: آلمانی-فارسی (Langenscheidt)
   tags:
   - dictionary
@@ -257,7 +257,7 @@ de-fi 0:
   - german
   - language
 de-fi 1:
-  url: https://de.langenscheidt.com/deutsch-finnisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-finnisch/<word>
   title: Saksa-Suomi (Langenscheidt)
   tags:
   - dictionary
@@ -278,7 +278,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://de.langenscheidt.com/deutsch-franzoesisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-franzoesisch/<word>
   title: Allemand-Français (Langenscheidt)
   tags:
   - dictionary
@@ -299,7 +299,7 @@ de-hr 0:
   - german
   - language
 de-hr 1:
-  url: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-kroatisch/<word>
   title: Njemački-Hrvatski (Langenscheidt)
   tags:
   - croatian
@@ -320,7 +320,7 @@ de-hu 0:
   - hungarian
   - language
 de-hu 1:
-  url: https://de.langenscheidt.com/deutsch-ungarisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-ungarisch/<word>
   title: Német-Magyar (Langenscheidt)
   tags:
   - dictionary
@@ -341,7 +341,7 @@ de-is 0:
   - icelandic
   - language
 de-is 1:
-  url: https://de.langenscheidt.com/deutsch-islaendisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-islaendisch/<word>
   title: Þýska-Íslenska (Langenscheidt)
   tags:
   - dictionary
@@ -362,7 +362,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://de.langenscheidt.com/deutsch-italienisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-italienisch/<word>
   title: Tedesco-Italiano (Langenscheidt)
   tags:
   - dictionary
@@ -383,7 +383,7 @@ de-ja 0:
   - japanese
   - language
 de-ja 1:
-  url: https://de.langenscheidt.com/deutsch-japanisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-japanisch/<word>
   title: ドイツ語-日本語 (Langenscheidt)
   tags:
   - dictionary
@@ -404,7 +404,7 @@ de-la 0:
   - language
   - latin
 de-la 1:
-  url: https://de.langenscheidt.com/deutsch-latein/{%word}
+  url: https://de.langenscheidt.com/deutsch-latein/<word>
   title: Germanica-Latina (Langenscheidt)
   tags:
   - dictionary
@@ -425,7 +425,7 @@ de-nl 0:
   - german
   - language
 de-nl 1:
-  url: https://de.langenscheidt.com/deutsch-niederlaendisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-niederlaendisch/<word>
   title: Duits-Nederlands (Langenscheidt)
   tags:
   - dictionary
@@ -446,7 +446,7 @@ de-no 0:
   - language
   - norwegian
 de-no 1:
-  url: https://de.langenscheidt.com/deutsch-norwegisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-norwegisch/<word>
   title: Tysk-Norsk (Langenscheidt)
   tags:
   - dictionary
@@ -467,7 +467,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://de.langenscheidt.com/deutsch-polnisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-polnisch/<word>
   title: Niemiecki-Polski (Langenscheidt)
   tags:
   - dictionary
@@ -488,7 +488,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://de.langenscheidt.com/deutsch-portugiesisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-portugiesisch/<word>
   title: Alemão-Português (Langenscheidt)
   tags:
   - dictionary
@@ -509,7 +509,7 @@ de-ro 0:
   - language
   - romanian
 de-ro 1:
-  url: https://de.langenscheidt.com/deutsch-rumaenisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-rumaenisch/<word>
   title: Germană-Română (Langenscheidt)
   tags:
   - dictionary
@@ -530,7 +530,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://de.langenscheidt.com/deutsch-russisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-russisch/<word>
   title: Немецкий-Русский (Langenscheidt)
   tags:
   - dictionary
@@ -551,7 +551,7 @@ de-sk 0:
   - language
   - slovak
 de-sk 1:
-  url: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-slowakisch/<word>
   title: Nemčina-Slovenčina (Langenscheidt)
   tags:
   - dictionary
@@ -572,7 +572,7 @@ de-sl 0:
   - language
   - slovenian
 de-sl 1:
-  url: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-slowenisch/<word>
   title: Nemščina-Slovenščina (Langenscheidt)
   tags:
   - dictionary
@@ -593,7 +593,7 @@ de-sr 0:
   - language
   - serbian
 de-sr 1:
-  url: https://de.langenscheidt.com/deutsch-serbisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-serbisch/<word>
   title: Немачки-Српски (Langenscheidt)
   tags:
   - dictionary
@@ -614,7 +614,7 @@ de-sv 0:
   - language
   - swedish
 de-sv 1:
-  url: https://de.langenscheidt.com/deutsch-schwedisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-schwedisch/<word>
   title: Tyska-Svenska (Langenscheidt)
   tags:
   - dictionary
@@ -635,7 +635,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-tuerkisch/<word>
   title: Almanca-Türkçe (Langenscheidt)
   tags:
   - dictionary
@@ -656,7 +656,7 @@ de-zh 0:
   - german
   - language
 de-zh 1:
-  url: https://de.langenscheidt.com/deutsch-chinesisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-chinesisch/<word>
   title: 德文-中文 (Langenscheidt)
   tags:
   - chinese

@@ -13,7 +13,7 @@ ar-fr 0:
   - french
   - language
 ar-fr 1:
-  url: https://dictionnaire.reverso.net/francais-arabe/{%word}
+  url: https://dictionnaire.reverso.net/francais-arabe/<word>
   title: Arabe-Français (Reverso)
   tags:
   - arabic
@@ -40,7 +40,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://dictionnaire.reverso.net/francais-allemand/{%word}
+  url: https://dictionnaire.reverso.net/francais-allemand/<word>
   title: Allemand-Français (Reverso)
   tags:
   - dictionary
@@ -67,7 +67,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://dictionnaire.reverso.net/francais-anglais/{%word}
+  url: https://dictionnaire.reverso.net/francais-anglais/<word>
   title: Anglais-Français (Reverso)
   tags:
   - dictionary
@@ -94,7 +94,7 @@ es-fr 0:
   - language
   - spanish
 es-fr 1:
-  url: https://dictionnaire.reverso.net/francais-espagnol/{%word}
+  url: https://dictionnaire.reverso.net/francais-espagnol/<word>
   title: Espagnol-Français (Reverso)
   tags:
   - dictionary
@@ -173,7 +173,7 @@ fr-he 0:
   - hebrew
   - language
 fr-he 1:
-  url: https://dictionnaire.reverso.net/francais-hebreu/{%word}
+  url: https://dictionnaire.reverso.net/francais-hebreu/<word>
   title: צרפתית-עברית (Reverso)
   tags:
   - dictionary
@@ -194,7 +194,7 @@ fr-it 0:
   - italian
   - language
 fr-it 1:
-  url: https://dictionnaire.reverso.net/francais-italien/{%word}
+  url: https://dictionnaire.reverso.net/francais-italien/<word>
   title: Francese-Italiano (Reverso)
   tags:
   - dictionary
@@ -215,7 +215,7 @@ fr-ja 0:
   - japanese
   - language
 fr-ja 1:
-  url: https://dictionnaire.reverso.net/francais-japonais/{%word}
+  url: https://dictionnaire.reverso.net/francais-japonais/<word>
   title: フランス語-日本語 (Reverso)
   tags:
   - dictionary
@@ -236,7 +236,7 @@ fr-ko 0:
   - korean
   - language
 fr-ko 1:
-  url: https://dictionnaire.reverso.net/francais-coreen/{%word}
+  url: https://dictionnaire.reverso.net/francais-coreen/<word>
   title: 프랑스어-한국어 (Reverso)
   tags:
   - dictionary
@@ -257,7 +257,7 @@ fr-nl 0:
   - french
   - language
 fr-nl 1:
-  url: https://dictionnaire.reverso.net/francais-neerlandais/{%word}
+  url: https://dictionnaire.reverso.net/francais-neerlandais/<word>
   title: Frans-Nederlands (Reverso)
   tags:
   - dictionary
@@ -278,7 +278,7 @@ fr-pl 0:
   - language
   - polish
 fr-pl 1:
-  url: https://dictionnaire.reverso.net/francais-polonais/{%word}
+  url: https://dictionnaire.reverso.net/francais-polonais/<word>
   title: Francuski-Polski (Reverso)
   tags:
   - dictionary
@@ -299,7 +299,7 @@ fr-pt 0:
   - language
   - portuguese
 fr-pt 1:
-  url: https://dictionnaire.reverso.net/francais-portugais/{%word}
+  url: https://dictionnaire.reverso.net/francais-portugais/<word>
   title: Francês-Português (Reverso)
   tags:
   - dictionary
@@ -320,7 +320,7 @@ fr-ro 0:
   - language
   - romanian
 fr-ro 1:
-  url: https://dictionnaire.reverso.net/francais-roumain/{%word}
+  url: https://dictionnaire.reverso.net/francais-roumain/<word>
   title: Franceză-Română (Reverso)
   tags:
   - dictionary
@@ -341,7 +341,7 @@ fr-ru 0:
   - language
   - russian
 fr-ru 1:
-  url: https://dictionnaire.reverso.net/francais-russe/{%word}
+  url: https://dictionnaire.reverso.net/francais-russe/<word>
   title: Французский-Русский (Reverso)
   tags:
   - dictionary
@@ -362,7 +362,7 @@ fr-sv 0:
   - language
   - swedish
 fr-sv 1:
-  url: https://dictionnaire.reverso.net/francais-suedois/{%word}
+  url: https://dictionnaire.reverso.net/francais-suedois/<word>
   title: Franska-Svenska (Reverso)
   tags:
   - dictionary
@@ -383,7 +383,7 @@ fr-tr 0:
   - language
   - turkish
 fr-tr 1:
-  url: https://dictionnaire.reverso.net/francais-turc/{%word}
+  url: https://dictionnaire.reverso.net/francais-turc/<word>
   title: Fransızca-Türkçe (Reverso)
   tags:
   - dictionary
@@ -404,7 +404,7 @@ fr-uk 0:
   - language
   - ukrainian
 fr-uk 1:
-  url: https://dictionnaire.reverso.net/francais-ukrainien/{%word}
+  url: https://dictionnaire.reverso.net/francais-ukrainien/<word>
   title: Французька-Українська (Reverso)
   tags:
   - dictionary
@@ -425,7 +425,7 @@ fr-zh 0:
   - french
   - language
 fr-zh 1:
-  url: https://dictionnaire.reverso.net/francais-chinois/{%word}
+  url: https://dictionnaire.reverso.net/francais-chinois/<word>
   title: 法文-中文 (Reverso)
   tags:
   - chinese

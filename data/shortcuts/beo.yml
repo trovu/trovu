@@ -13,7 +13,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://dict.tu-chemnitz.de/dings.cgi?service=deen&query={%word}
+  url: https://dict.tu-chemnitz.de/dings.cgi?service=deen&query=<word>
   title: German-English (Beolingus)
   tags:
   - dictionary
@@ -34,7 +34,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://dict.tu-chemnitz.de/dings.cgi?service=dees&query={%word}
+  url: https://dict.tu-chemnitz.de/dings.cgi?service=dees&query=<word>
   title: Alemán-Español (Beolingus)
   tags:
   - dictionary
@@ -55,7 +55,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://dict.tu-chemnitz.de/dings.cgi?service=dept&query={%word}
+  url: https://dict.tu-chemnitz.de/dings.cgi?service=dept&query=<word>
   title: Alemão-Português (Beolingus)
   tags:
   - dictionary

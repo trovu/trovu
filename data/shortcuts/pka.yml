@@ -13,7 +13,7 @@ am-de 0:
   - german
   - language
 am-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/am/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/am/wb?suche=<word>
   title: Amharisch-Deutsch (Pauker.at)
   tags:
   - amharic
@@ -40,7 +40,7 @@ ar-de 0:
   - german
   - language
 ar-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/ar/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ar/wb?suche=<word>
   title: Arabisch-Deutsch (Pauker.at)
   tags:
   - arabic
@@ -67,7 +67,7 @@ as-de 0:
   - german
   - language
 as-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/as/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/as/wb?suche=<word>
   title: Assamesisch-Deutsch (Pauker.at)
   tags:
   - assamese
@@ -94,7 +94,7 @@ az-de 0:
   - german
   - language
 az-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/az/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/az/wb?suche=<word>
   title: Aserbaidschanisch-Deutsch (Pauker.at)
   tags:
   - azerbaijani
@@ -121,7 +121,7 @@ be-de 0:
   - german
   - language
 be-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/be/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/be/wb?suche=<word>
   title: Weißrussisch-Deutsch (Pauker.at)
   tags:
   - belarusian
@@ -148,7 +148,7 @@ bg-de 0:
   - german
   - language
 bg-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/bg/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/bg/wb?suche=<word>
   title: Bulgarisch-Deutsch (Pauker.at)
   tags:
   - bulgarian
@@ -175,7 +175,7 @@ bn-de 0:
   - german
   - language
 bn-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/bn/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/bn/wb?suche=<word>
   title: Bengalisch-Deutsch (Pauker.at)
   tags:
   - bengali
@@ -202,7 +202,7 @@ bo-de 0:
   - language
   - tibetan
 bo-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/bo/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/bo/wb?suche=<word>
   title: Tibetisch-Deutsch (Pauker.at)
   tags:
   - dictionary
@@ -229,7 +229,7 @@ br-de 0:
   - german
   - language
 br-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/br/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/br/wb?suche=<word>
   title: Bretonisch-Deutsch (Pauker.at)
   tags:
   - breton
@@ -256,7 +256,7 @@ ca-de 0:
   - german
   - language
 ca-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/ca/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ca/wb?suche=<word>
   title: Katalanisch-Deutsch (Pauker.at)
   tags:
   - catalan
@@ -283,7 +283,7 @@ cs-de 0:
   - german
   - language
 cs-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/cs/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/cs/wb?suche=<word>
   title: Tschechisch-Deutsch (Pauker.at)
   tags:
   - czech
@@ -310,7 +310,7 @@ cy-de 0:
   - language
   - welsh
 cy-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/cy/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/cy/wb?suche=<word>
   title: Walisisch-Deutsch (Pauker.at)
   tags:
   - dictionary
@@ -337,7 +337,7 @@ da-de 0:
   - german
   - language
 da-de 1:
-  url: https://www.pauker.at/pauker/DE_DE/da/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/da/wb?suche=<word>
   title: Dänisch-Deutsch (Pauker.at)
   tags:
   - danish
@@ -533,7 +533,7 @@ de-dz 0:
   - german
   - language
 de-dz 1:
-  url: https://www.pauker.at/pauker/DE_DE/dz/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/dz/wb?suche=<word>
   title: ཇཱར་མཱན་ཁ-རྫོང་ཁ (Pauker.at)
   tags:
   - dictionary
@@ -554,7 +554,7 @@ de-el 0:
   - greek
   - language
 de-el 1:
-  url: https://www.pauker.at/pauker/DE_DE/el/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/el/wb?suche=<word>
   title: Γερμανικά-Ελληνικά (Pauker.at)
   tags:
   - dictionary
@@ -575,7 +575,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://www.pauker.at/pauker/DE_DE/en/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/en/wb?suche=<word>
   title: German-English (Pauker.at)
   tags:
   - dictionary
@@ -596,7 +596,7 @@ de-eo 0:
   - german
   - language
 de-eo 1:
-  url: https://www.pauker.at/pauker/DE_DE/eo/wb?suche={%word|transform=eo-cx}
+  url: 'https://www.pauker.at/pauker/DE_DE/eo/wb?suche=<word: {transform: eo-cx}>'
   title: Germana-Esperanto (Pauker.at)
   tags:
   - dictionary
@@ -617,7 +617,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://www.pauker.at/pauker/DE_DE/es/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/es/wb?suche=<word>
   title: Alemán-Español (Pauker.at)
   tags:
   - dictionary
@@ -638,7 +638,7 @@ de-et 0:
   - german
   - language
 de-et 1:
-  url: https://www.pauker.at/pauker/DE_DE/et/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/et/wb?suche=<word>
   title: Saksa-Eesti (Pauker.at)
   tags:
   - dictionary
@@ -659,7 +659,7 @@ de-eu 0:
   - german
   - language
 de-eu 1:
-  url: https://www.pauker.at/pauker/DE_DE/eu/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/eu/wb?suche=<word>
   title: Alemana-Euskara (Pauker.at)
   tags:
   - basque
@@ -680,7 +680,7 @@ de-fa 0:
   - language
   - persian
 de-fa 1:
-  url: https://www.pauker.at/pauker/DE_DE/fa/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/fa/wb?suche=<word>
   title: آلمانی-فارسی (Pauker.at)
   tags:
   - dictionary
@@ -701,7 +701,7 @@ de-fi 0:
   - german
   - language
 de-fi 1:
-  url: https://www.pauker.at/pauker/DE_DE/fi/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/fi/wb?suche=<word>
   title: Saksa-Suomi (Pauker.at)
   tags:
   - dictionary
@@ -722,7 +722,7 @@ de-fo 0:
   - german
   - language
 de-fo 1:
-  url: https://www.pauker.at/pauker/DE_DE/fo/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/fo/wb?suche=<word>
   title: Týskt-Føroyskt (Pauker.at)
   tags:
   - dictionary
@@ -743,7 +743,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://www.pauker.at/pauker/DE_DE/fr/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/fr/wb?suche=<word>
   title: Allemand-Français (Pauker.at)
   tags:
   - dictionary
@@ -764,7 +764,7 @@ de-fy 0:
   - language
   - western Frisian
 de-fy 1:
-  url: https://www.pauker.at/pauker/DE_DE/fy/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/fy/wb?suche=<word>
   title: Dútsk-West-Frysk (Pauker.at)
   tags:
   - dictionary
@@ -785,7 +785,7 @@ de-ga 0:
   - irish
   - language
 de-ga 1:
-  url: https://www.pauker.at/pauker/DE_DE/ga/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ga/wb?suche=<word>
   title: Gearmáinis-Gaeilge (Pauker.at)
   tags:
   - dictionary
@@ -806,7 +806,7 @@ de-gd 0:
   - language
   - scottish Gaelic
 de-gd 1:
-  url: https://www.pauker.at/pauker/DE_DE/gd/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/gd/wb?suche=<word>
   title: Gearmailtis-Gàidhlig (Pauker.at)
   tags:
   - dictionary
@@ -827,7 +827,7 @@ de-gl 0:
   - german
   - language
 de-gl 1:
-  url: https://www.pauker.at/pauker/DE_DE/gl/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/gl/wb?suche=<word>
   title: Alemán-Galego (Pauker.at)
   tags:
   - dictionary
@@ -848,7 +848,7 @@ de-gu 0:
   - gujarati
   - language
 de-gu 1:
-  url: https://www.pauker.at/pauker/DE_DE/gu/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/gu/wb?suche=<word>
   title: જર્મન-ગુજરાતી (Pauker.at)
   tags:
   - dictionary
@@ -869,7 +869,7 @@ de-ha 0:
   - hausa
   - language
 de-ha 1:
-  url: https://www.pauker.at/pauker/DE_DE/ha/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ha/wb?suche=<word>
   title: Jamusanci-Hausa (Pauker.at)
   tags:
   - dictionary
@@ -890,7 +890,7 @@ de-he 0:
   - hebrew
   - language
 de-he 1:
-  url: https://www.pauker.at/pauker/DE_DE/he/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/he/wb?suche=<word>
   title: גרמנית-עברית (Pauker.at)
   tags:
   - dictionary
@@ -911,7 +911,7 @@ de-hi 0:
   - hindi
   - language
 de-hi 1:
-  url: https://www.pauker.at/pauker/DE_DE/hi/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/hi/wb?suche=<word>
   title: जर्मन-हिन्दी (Pauker.at)
   tags:
   - dictionary
@@ -932,7 +932,7 @@ de-hr 0:
   - german
   - language
 de-hr 1:
-  url: https://www.pauker.at/pauker/DE_DE/hr/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/hr/wb?suche=<word>
   title: Njemački-Hrvatski (Pauker.at)
   tags:
   - croatian
@@ -953,7 +953,7 @@ de-hu 0:
   - hungarian
   - language
 de-hu 1:
-  url: https://www.pauker.at/pauker/DE_DE/hu/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/hu/wb?suche=<word>
   title: Német-Magyar (Pauker.at)
   tags:
   - dictionary
@@ -974,7 +974,7 @@ de-hy 0:
   - german
   - language
 de-hy 1:
-  url: https://www.pauker.at/pauker/DE_DE/hy/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/hy/wb?suche=<word>
   title: Գերմաներեն-Հայերեն (Pauker.at)
   tags:
   - armenian
@@ -995,7 +995,7 @@ de-id 0:
   - indonesian
   - language
 de-id 1:
-  url: https://www.pauker.at/pauker/DE_DE/id/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/id/wb?suche=<word>
   title: Jerman-Bahasa Indonesia (Pauker.at)
   tags:
   - dictionary
@@ -1016,7 +1016,7 @@ de-ig 0:
   - igbo
   - language
 de-ig 1:
-  url: https://www.pauker.at/pauker/DE_DE/ig/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ig/wb?suche=<word>
   title: Jamaan-Igbo (Pauker.at)
   tags:
   - dictionary
@@ -1037,7 +1037,7 @@ de-ii 0:
   - language
   - sichuan Yi
 de-ii 1:
-  url: https://www.pauker.at/pauker/DE_DE/ii/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ii/wb?suche=<word>
   title: ꄓꇩꉙ-ꆈꌠꉙ (Pauker.at)
   tags:
   - dictionary
@@ -1058,7 +1058,7 @@ de-is 0:
   - icelandic
   - language
 de-is 1:
-  url: https://www.pauker.at/pauker/DE_DE/is/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/is/wb?suche=<word>
   title: Þýska-Íslenska (Pauker.at)
   tags:
   - dictionary
@@ -1079,7 +1079,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://www.pauker.at/pauker/DE_DE/it/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/it/wb?suche=<word>
   title: Tedesco-Italiano (Pauker.at)
   tags:
   - dictionary
@@ -1100,7 +1100,7 @@ de-ja 0:
   - japanese
   - language
 de-ja 1:
-  url: https://www.pauker.at/pauker/DE_DE/ja/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ja/wb?suche=<word>
   title: ドイツ語-日本語 (Pauker.at)
   tags:
   - dictionary
@@ -1121,7 +1121,7 @@ de-ka 0:
   - german
   - language
 de-ka 1:
-  url: https://www.pauker.at/pauker/DE_DE/ka/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ka/wb?suche=<word>
   title: Გერმანული-Ქართული (Pauker.at)
   tags:
   - dictionary
@@ -1142,7 +1142,7 @@ de-ki 0:
   - kikuyu
   - language
 de-ki 1:
-  url: https://www.pauker.at/pauker/DE_DE/ki/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ki/wb?suche=<word>
   title: Kĩnjeremani-Gikuyu (Pauker.at)
   tags:
   - dictionary
@@ -1163,7 +1163,7 @@ de-kk 0:
   - kazakh
   - language
 de-kk 1:
-  url: https://www.pauker.at/pauker/DE_DE/kk/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/kk/wb?suche=<word>
   title: Неміс тілі-Қазақ тілі (Pauker.at)
   tags:
   - dictionary
@@ -1184,7 +1184,7 @@ de-kl 0:
   - kalaallisut
   - language
 de-kl 1:
-  url: https://www.pauker.at/pauker/DE_DE/kl/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/kl/wb?suche=<word>
   title: German-Kalaallisut (Pauker.at)
   tags:
   - dictionary
@@ -1205,7 +1205,7 @@ de-km 0:
   - khmer
   - language
 de-km 1:
-  url: https://www.pauker.at/pauker/DE_DE/km/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/km/wb?suche=<word>
   title: អាល្លឺម៉ង់-ខ្មែរ (Pauker.at)
   tags:
   - dictionary
@@ -1226,7 +1226,7 @@ de-kn 0:
   - kannada
   - language
 de-kn 1:
-  url: https://www.pauker.at/pauker/DE_DE/kn/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/kn/wb?suche=<word>
   title: ಜರ್ಮನ್-ಕನ್ನಡ (Pauker.at)
   tags:
   - dictionary
@@ -1247,7 +1247,7 @@ de-ko 0:
   - korean
   - language
 de-ko 1:
-  url: https://www.pauker.at/pauker/DE_DE/ko/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ko/wb?suche=<word>
   title: 독일어-한국어 (Pauker.at)
   tags:
   - dictionary
@@ -1268,7 +1268,7 @@ de-ks 0:
   - kashmiri
   - language
 de-ks 1:
-  url: https://www.pauker.at/pauker/DE_DE/ks/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ks/wb?suche=<word>
   title: جٔرمَن-کٲشُر (Pauker.at)
   tags:
   - dictionary
@@ -1289,7 +1289,7 @@ de-kw 0:
   - german
   - language
 de-kw 1:
-  url: https://www.pauker.at/pauker/DE_DE/kw/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/kw/wb?suche=<word>
   title: German-Kernewek (Pauker.at)
   tags:
   - cornish
@@ -1310,7 +1310,7 @@ de-ky 0:
   - kyrgyz
   - language
 de-ky 1:
-  url: https://www.pauker.at/pauker/DE_DE/ky/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ky/wb?suche=<word>
   title: Немисче-Кыргызча (Pauker.at)
   tags:
   - dictionary
@@ -1331,7 +1331,7 @@ de-la 0:
   - language
   - latin
 de-la 1:
-  url: https://www.pauker.at/pauker/DE_DE/la/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/la/wb?suche=<word>
   title: Germanica-Latina (Pauker.at)
   tags:
   - dictionary
@@ -1352,7 +1352,7 @@ de-lb 0:
   - language
   - luxembourgish
 de-lb 1:
-  url: https://www.pauker.at/pauker/DE_DE/lb/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/lb/wb?suche=<word>
   title: Däitsch-Lëtzebuergesch (Pauker.at)
   tags:
   - dictionary
@@ -1373,7 +1373,7 @@ de-lg 0:
   - german
   - language
 de-lg 1:
-  url: https://www.pauker.at/pauker/DE_DE/lg/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/lg/wb?suche=<word>
   title: Ludaaki-Luganda (Pauker.at)
   tags:
   - dictionary
@@ -1394,7 +1394,7 @@ de-ln 0:
   - language
   - lingala
 de-ln 1:
-  url: https://www.pauker.at/pauker/DE_DE/ln/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ln/wb?suche=<word>
   title: Lialemá-Lingála (Pauker.at)
   tags:
   - dictionary
@@ -1415,7 +1415,7 @@ de-lo 0:
   - language
   - lao
 de-lo 1:
-  url: https://www.pauker.at/pauker/DE_DE/lo/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/lo/wb?suche=<word>
   title: ເຢຍລະມັນ-ລາວ (Pauker.at)
   tags:
   - dictionary
@@ -1436,7 +1436,7 @@ de-lt 0:
   - language
   - lithuanian
 de-lt 1:
-  url: https://www.pauker.at/pauker/DE_DE/lt/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/lt/wb?suche=<word>
   title: Vokiečių-Lietuvių (Pauker.at)
   tags:
   - dictionary
@@ -1457,7 +1457,7 @@ de-lv 0:
   - language
   - latvian
 de-lv 1:
-  url: https://www.pauker.at/pauker/DE_DE/lv/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/lv/wb?suche=<word>
   title: Vācu-Latviešu (Pauker.at)
   tags:
   - dictionary
@@ -1478,7 +1478,7 @@ de-mg 0:
   - language
   - malagasy
 de-mg 1:
-  url: https://www.pauker.at/pauker/DE_DE/mg/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/mg/wb?suche=<word>
   title: Alemanina-Malagasy (Pauker.at)
   tags:
   - dictionary
@@ -1499,7 +1499,7 @@ de-mk 0:
   - language
   - macedonian
 de-mk 1:
-  url: https://www.pauker.at/pauker/DE_DE/mk/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/mk/wb?suche=<word>
   title: Германски-Македонски (Pauker.at)
   tags:
   - dictionary
@@ -1520,7 +1520,7 @@ de-ml 0:
   - language
   - malayalam
 de-ml 1:
-  url: https://www.pauker.at/pauker/DE_DE/ml/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ml/wb?suche=<word>
   title: ജർമ്മൻ-മലയാളം (Pauker.at)
   tags:
   - dictionary
@@ -1541,7 +1541,7 @@ de-mn 0:
   - language
   - mongolian
 de-mn 1:
-  url: https://www.pauker.at/pauker/DE_DE/mn/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/mn/wb?suche=<word>
   title: Герман-Монгол (Pauker.at)
   tags:
   - dictionary
@@ -1562,7 +1562,7 @@ de-mr 0:
   - language
   - marathi
 de-mr 1:
-  url: https://www.pauker.at/pauker/DE_DE/mr/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/mr/wb?suche=<word>
   title: जर्मन-मराठी (Pauker.at)
   tags:
   - dictionary
@@ -1583,7 +1583,7 @@ de-ms 0:
   - language
   - malay
 de-ms 1:
-  url: https://www.pauker.at/pauker/DE_DE/ms/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ms/wb?suche=<word>
   title: Jerman-Bahasa Melayu (Pauker.at)
   tags:
   - dictionary
@@ -1604,7 +1604,7 @@ de-mt 0:
   - language
   - maltese
 de-mt 1:
-  url: https://www.pauker.at/pauker/DE_DE/mt/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/mt/wb?suche=<word>
   title: Ġermaniż-Malti (Pauker.at)
   tags:
   - dictionary
@@ -1625,7 +1625,7 @@ de-my 0:
   - german
   - language
 de-my 1:
-  url: https://www.pauker.at/pauker/DE_DE/my/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/my/wb?suche=<word>
   title: ဂျာမန်-ဗမာ (Pauker.at)
   tags:
   - burmese
@@ -1646,7 +1646,7 @@ de-nb 0:
   - language
   - norwegian Bokmål
 de-nb 1:
-  url: https://www.pauker.at/pauker/DE_DE/nb/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/nb/wb?suche=<word>
   title: Tysk-Norsk bokmål (Pauker.at)
   tags:
   - dictionary
@@ -1667,7 +1667,7 @@ de-nd 0:
   - language
   - north Ndebele
 de-nd 1:
-  url: https://www.pauker.at/pauker/DE_DE/nd/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/nd/wb?suche=<word>
   title: Isi-Jalimani-IsiNdebele (Pauker.at)
   tags:
   - dictionary
@@ -1688,7 +1688,7 @@ de-ne 0:
   - language
   - nepali
 de-ne 1:
-  url: https://www.pauker.at/pauker/DE_DE/ne/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ne/wb?suche=<word>
   title: जर्मन-नेपाली (Pauker.at)
   tags:
   - dictionary
@@ -1709,7 +1709,7 @@ de-nl 0:
   - german
   - language
 de-nl 1:
-  url: https://www.pauker.at/pauker/DE_DE/nl/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/nl/wb?suche=<word>
   title: Duits-Nederlands (Pauker.at)
   tags:
   - dictionary
@@ -1730,7 +1730,7 @@ de-nn 0:
   - language
   - norwegian Nynorsk
 de-nn 1:
-  url: https://www.pauker.at/pauker/DE_DE/nn/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/nn/wb?suche=<word>
   title: Tysk-Nynorsk (Pauker.at)
   tags:
   - dictionary
@@ -1751,7 +1751,7 @@ de-no 0:
   - language
   - norwegian
 de-no 1:
-  url: https://www.pauker.at/pauker/DE_DE/no/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/no/wb?suche=<word>
   title: Tysk-Norsk (Pauker.at)
   tags:
   - dictionary
@@ -1772,7 +1772,7 @@ de-om 0:
   - language
   - oromo
 de-om 1:
-  url: https://www.pauker.at/pauker/DE_DE/om/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/om/wb?suche=<word>
   title: Afaan Jarmanii-Oromoo (Pauker.at)
   tags:
   - dictionary
@@ -1793,7 +1793,7 @@ de-or 0:
   - language
   - oriya
 de-or 1:
-  url: https://www.pauker.at/pauker/DE_DE/or/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/or/wb?suche=<word>
   title: ଜର୍ମାନ୍-ଓଡ଼ିଆ (Pauker.at)
   tags:
   - dictionary
@@ -1814,7 +1814,7 @@ de-os 0:
   - language
   - ossetic
 de-os 1:
-  url: https://www.pauker.at/pauker/DE_DE/os/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/os/wb?suche=<word>
   title: Немыцаг-Ирон (Pauker.at)
   tags:
   - dictionary
@@ -1835,7 +1835,7 @@ de-pa 0:
   - language
   - punjabi
 de-pa 1:
-  url: https://www.pauker.at/pauker/DE_DE/pa/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/pa/wb?suche=<word>
   title: ਜਰਮਨ-ਪੰਜਾਬੀ (Pauker.at)
   tags:
   - dictionary
@@ -1856,7 +1856,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://www.pauker.at/pauker/DE_DE/pl/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/pl/wb?suche=<word>
   title: Niemiecki-Polski (Pauker.at)
   tags:
   - dictionary
@@ -1877,7 +1877,7 @@ de-ps 0:
   - language
   - pashto
 de-ps 1:
-  url: https://www.pauker.at/pauker/DE_DE/ps/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ps/wb?suche=<word>
   title: الماني-پښتو (Pauker.at)
   tags:
   - dictionary
@@ -1898,7 +1898,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://www.pauker.at/pauker/DE_DE/pt/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/pt/wb?suche=<word>
   title: Alemão-Português (Pauker.at)
   tags:
   - dictionary
@@ -1919,7 +1919,7 @@ de-qu 0:
   - language
   - quechua
 de-qu 1:
-  url: https://www.pauker.at/pauker/DE_DE/qu/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/qu/wb?suche=<word>
   title: Aleman Simi-Runasimi (Pauker.at)
   tags:
   - dictionary
@@ -1940,7 +1940,7 @@ de-rm 0:
   - language
   - romansh
 de-rm 1:
-  url: https://www.pauker.at/pauker/DE_DE/rm/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/rm/wb?suche=<word>
   title: Tudestg-Rumantsch (Pauker.at)
   tags:
   - dictionary
@@ -1961,7 +1961,7 @@ de-rn 0:
   - language
   - rundi
 de-rn 1:
-  url: https://www.pauker.at/pauker/DE_DE/rn/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/rn/wb?suche=<word>
   title: Ikidage-Ikirundi (Pauker.at)
   tags:
   - dictionary
@@ -1982,7 +1982,7 @@ de-ro 0:
   - language
   - romanian
 de-ro 1:
-  url: https://www.pauker.at/pauker/DE_DE/ro/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ro/wb?suche=<word>
   title: Germană-Română (Pauker.at)
   tags:
   - dictionary
@@ -2003,7 +2003,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://www.pauker.at/pauker/DE_DE/ru/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ru/wb?suche=<word>
   title: Немецкий-Русский (Pauker.at)
   tags:
   - dictionary
@@ -2024,7 +2024,7 @@ de-rw 0:
   - kinyarwanda
   - language
 de-rw 1:
-  url: https://www.pauker.at/pauker/DE_DE/rw/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/rw/wb?suche=<word>
   title: Ikidage-Kinyarwanda (Pauker.at)
   tags:
   - dictionary
@@ -2045,7 +2045,7 @@ de-se 0:
   - language
   - northern Sami
 de-se 1:
-  url: https://www.pauker.at/pauker/DE_DE/se/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/se/wb?suche=<word>
   title: Duiskkagiella-Davvisámegiella (Pauker.at)
   tags:
   - dictionary
@@ -2066,7 +2066,7 @@ de-sg 0:
   - language
   - sango
 de-sg 1:
-  url: https://www.pauker.at/pauker/DE_DE/sg/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sg/wb?suche=<word>
   title: Zâmani-Sängö (Pauker.at)
   tags:
   - dictionary
@@ -2087,7 +2087,7 @@ de-si 0:
   - language
   - sinhala
 de-si 1:
-  url: https://www.pauker.at/pauker/DE_DE/si/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/si/wb?suche=<word>
   title: ජර්මන්-සිංහල (Pauker.at)
   tags:
   - dictionary
@@ -2108,7 +2108,7 @@ de-sk 0:
   - language
   - slovak
 de-sk 1:
-  url: https://www.pauker.at/pauker/DE_DE/sk/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sk/wb?suche=<word>
   title: Nemčina-Slovenčina (Pauker.at)
   tags:
   - dictionary
@@ -2129,7 +2129,7 @@ de-sl 0:
   - language
   - slovenian
 de-sl 1:
-  url: https://www.pauker.at/pauker/DE_DE/sl/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sl/wb?suche=<word>
   title: Nemščina-Slovenščina (Pauker.at)
   tags:
   - dictionary
@@ -2150,7 +2150,7 @@ de-sn 0:
   - language
   - shona
 de-sn 1:
-  url: https://www.pauker.at/pauker/DE_DE/sn/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sn/wb?suche=<word>
   title: ChiJerimani-ChiShona (Pauker.at)
   tags:
   - dictionary
@@ -2171,7 +2171,7 @@ de-so 0:
   - language
   - somali
 de-so 1:
-  url: https://www.pauker.at/pauker/DE_DE/so/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/so/wb?suche=<word>
   title: Jarmal-Soomaali (Pauker.at)
   tags:
   - dictionary
@@ -2192,7 +2192,7 @@ de-sq 0:
   - german
   - language
 de-sq 1:
-  url: https://www.pauker.at/pauker/DE_DE/sq/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sq/wb?suche=<word>
   title: Gjermanisht-Shqip (Pauker.at)
   tags:
   - albanian
@@ -2213,7 +2213,7 @@ de-sr 0:
   - language
   - serbian
 de-sr 1:
-  url: https://www.pauker.at/pauker/DE_DE/sr/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sr/wb?suche=<word>
   title: Немачки-Српски (Pauker.at)
   tags:
   - dictionary
@@ -2234,7 +2234,7 @@ de-sv 0:
   - language
   - swedish
 de-sv 1:
-  url: https://www.pauker.at/pauker/DE_DE/sv/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sv/wb?suche=<word>
   title: Tyska-Svenska (Pauker.at)
   tags:
   - dictionary
@@ -2255,7 +2255,7 @@ de-sw 0:
   - language
   - swahili
 de-sw 1:
-  url: https://www.pauker.at/pauker/DE_DE/sw/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/sw/wb?suche=<word>
   title: Kijerumani-Kiswahili (Pauker.at)
   tags:
   - dictionary
@@ -2276,7 +2276,7 @@ de-ta 0:
   - language
   - tamil
 de-ta 1:
-  url: https://www.pauker.at/pauker/DE_DE/ta/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ta/wb?suche=<word>
   title: ஜெர்மன்-தமிழ் (Pauker.at)
   tags:
   - dictionary
@@ -2297,7 +2297,7 @@ de-te 0:
   - language
   - telugu
 de-te 1:
-  url: https://www.pauker.at/pauker/DE_DE/te/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/te/wb?suche=<word>
   title: జర్మన్-తెలుగు (Pauker.at)
   tags:
   - dictionary
@@ -2318,7 +2318,7 @@ de-th 0:
   - language
   - thai
 de-th 1:
-  url: https://www.pauker.at/pauker/DE_DE/th/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/th/wb?suche=<word>
   title: เยอรมัน-ไทย (Pauker.at)
   tags:
   - dictionary
@@ -2339,7 +2339,7 @@ de-ti 0:
   - language
   - tigrinya
 de-ti 1:
-  url: https://www.pauker.at/pauker/DE_DE/ti/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ti/wb?suche=<word>
   title: ጀርመን-ትግርኛ (Pauker.at)
   tags:
   - dictionary
@@ -2360,7 +2360,7 @@ de-tl 0:
   - language
   - tagalog
 de-tl 1:
-  url: https://www.pauker.at/pauker/DE_DE/tl/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/tl/wb?suche=<word>
   title: German-Tagalog (Pauker.at)
   tags:
   - dictionary
@@ -2381,7 +2381,7 @@ de-to 0:
   - language
   - tongan
 de-to 1:
-  url: https://www.pauker.at/pauker/DE_DE/to/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/to/wb?suche=<word>
   title: Lea fakasiamane-Lea fakatonga (Pauker.at)
   tags:
   - dictionary
@@ -2402,7 +2402,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://www.pauker.at/pauker/DE_DE/tr/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/tr/wb?suche=<word>
   title: Almanca-Türkçe (Pauker.at)
   tags:
   - dictionary
@@ -2423,7 +2423,7 @@ de-ug 0:
   - language
   - uyghur
 de-ug 1:
-  url: https://www.pauker.at/pauker/DE_DE/ug/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ug/wb?suche=<word>
   title: گېرمانچە-ئۇيغۇرچە (Pauker.at)
   tags:
   - dictionary
@@ -2444,7 +2444,7 @@ de-uk 0:
   - language
   - ukrainian
 de-uk 1:
-  url: https://www.pauker.at/pauker/DE_DE/uk/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/uk/wb?suche=<word>
   title: Німецька-Українська (Pauker.at)
   tags:
   - dictionary
@@ -2465,7 +2465,7 @@ de-ur 0:
   - language
   - urdu
 de-ur 1:
-  url: https://www.pauker.at/pauker/DE_DE/ur/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/ur/wb?suche=<word>
   title: جرمن-اردو (Pauker.at)
   tags:
   - dictionary
@@ -2486,7 +2486,7 @@ de-uz 0:
   - language
   - uzbek
 de-uz 1:
-  url: https://www.pauker.at/pauker/DE_DE/uz/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/uz/wb?suche=<word>
   title: Nemischa-Oʻzbekcha (Pauker.at)
   tags:
   - dictionary
@@ -2507,7 +2507,7 @@ de-vi 0:
   - language
   - vietnamese
 de-vi 1:
-  url: https://www.pauker.at/pauker/DE_DE/vi/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/vi/wb?suche=<word>
   title: Tiếng Đức-Tiếng Việt (Pauker.at)
   tags:
   - dictionary
@@ -2528,7 +2528,7 @@ de-yi 0:
   - language
   - yiddish
 de-yi 1:
-  url: https://www.pauker.at/pauker/DE_DE/yi/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/yi/wb?suche=<word>
   title: דײַטש-ייִדיש (Pauker.at)
   tags:
   - dictionary
@@ -2549,7 +2549,7 @@ de-yo 0:
   - language
   - yoruba
 de-yo 1:
-  url: https://www.pauker.at/pauker/DE_DE/yo/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/yo/wb?suche=<word>
   title: Èdè Ilẹ̀ Gemani-Èdè Yorùbá (Pauker.at)
   tags:
   - dictionary
@@ -2570,7 +2570,7 @@ de-zh 0:
   - german
   - language
 de-zh 1:
-  url: https://www.pauker.at/pauker/DE_DE/zh/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/zh/wb?suche=<word>
   title: 德文-中文 (Pauker.at)
   tags:
   - chinese
@@ -2591,7 +2591,7 @@ de-zu 0:
   - language
   - zulu
 de-zu 1:
-  url: https://www.pauker.at/pauker/DE_DE/zu/wb?suche={%word}
+  url: https://www.pauker.at/pauker/DE_DE/zu/wb?suche=<word>
   title: Isi-German-IsiZulu (Pauker.at)
   tags:
   - dictionary

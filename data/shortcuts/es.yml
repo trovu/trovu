@@ -4,7 +4,7 @@ dep 1:
       query: pns.de {%1}
       created: '2023-04-10'
 dle 1:
-  url: http://dle.rae.es/?w={%palabra}
+  url: http://dle.rae.es/?w=<palabra>
   title: Diccionario de la Lengua Española
   tags:
   - dictionary
@@ -14,7 +14,7 @@ dle 1:
   - arguments: árbol
     description: Search diccionario de la lengua española for "arbol"
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -24,7 +24,7 @@ frv 1:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
 last 1:
-  url: http://www.last.fm/search?setlang=es&q={%artist}
+  url: http://www.last.fm/search?setlang=es&q=<artist>
   title: Last.fm
   tags:
   - lastfm
@@ -33,7 +33,7 @@ last 1:
   - arguments: beatles
     description: Search for "beatles"
 rae 1:
-  url: http://dle.rae.es/?w={%query}
+  url: http://dle.rae.es/?w=<query>
   title: Diccionario RAE
   description: Relevant for spanish language, but as it shows the official and latest rules, should be interesting for all.
   tags:
@@ -45,7 +45,7 @@ rae 1:
   - arguments: decir
     description: busca por la palabra «decir» en el diccionario de la lengua española de la Real Academia Española
 raed 1:
-  url: https://www.rae.es/dpd/{%query}
+  url: https://www.rae.es/dpd/<query>
   title: Diccionario panhispánico de dudas de la RAE
   description: A Spanish dictionary with the goal of resolving questions related to the proper use of the Spanish language
   tags:

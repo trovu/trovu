@@ -1,5 +1,5 @@
 dbp 1:
-  url: http://nl.dbpedia.org/page/{%title}
+  url: http://nl.dbpedia.org/page/<title>
   title: DBpedia (Dutch)
   tags:
   - database
@@ -18,7 +18,7 @@ enc 0:
   - encyclopedia
   - language
 enc 1:
-  url: http://www.encyclo.nl/zoek.php?woord={%woord}
+  url: http://www.encyclo.nl/zoek.php?woord=<woord>
   title: Encyclo Online Encyclopedie
   tags:
   - dictionary
@@ -33,7 +33,7 @@ ety 0:
   url: http://www.etymologiebank.nl/
   title: etymologiebank.nl
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -49,7 +49,7 @@ rijm 0:
   - gedicht
   - rijm
 rijm 1:
-  url: http://www.rijm.nu/rijmen/rijmen.php?woord={%woord}&v=1
+  url: http://www.rijm.nu/rijmen/rijmen.php?woord=<woord>&v=1
   title: Rijm.nu!
   tags:
   - gedicht

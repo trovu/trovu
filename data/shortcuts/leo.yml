@@ -13,7 +13,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://dict.leo.org/german-english/{%word}
+  url: https://dict.leo.org/german-english/<word>
   title: German-English (leo.org)
   tags:
   - dictionary
@@ -34,7 +34,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://dict.leo.org/spanisch-deutsch/{%word}
+  url: https://dict.leo.org/spanisch-deutsch/<word>
   title: Alemán-Español (leo.org)
   tags:
   - dictionary
@@ -55,7 +55,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://dict.leo.org/französisch-deutsch/{%word}
+  url: https://dict.leo.org/französisch-deutsch/<word>
   title: Allemand-Français (leo.org)
   tags:
   - dictionary
@@ -76,7 +76,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://dict.leo.org/italienisch-deutsch/{%word}
+  url: https://dict.leo.org/italienisch-deutsch/<word>
   title: Tedesco-Italiano (leo.org)
   tags:
   - dictionary
@@ -97,7 +97,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://dict.leo.org/polnisch-deutsch/{%word}
+  url: https://dict.leo.org/polnisch-deutsch/<word>
   title: Niemiecki-Polski (leo.org)
   tags:
   - dictionary
@@ -118,7 +118,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://dict.leo.org/portugiesisch-deutsch/{%word}
+  url: https://dict.leo.org/portugiesisch-deutsch/<word>
   title: Alemão-Português (leo.org)
   tags:
   - dictionary
@@ -139,7 +139,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://dict.leo.org/russisch-deutsch/{%word}
+  url: https://dict.leo.org/russisch-deutsch/<word>
   title: Немецкий-Русский (leo.org)
   tags:
   - dictionary
@@ -160,7 +160,7 @@ de-zh 0:
   - german
   - language
 de-zh 1:
-  url: https://dict.leo.org/chinesisch-deutsch/{%word}
+  url: https://dict.leo.org/chinesisch-deutsch/<word>
   title: 德文-中文 (leo.org)
   tags:
   - chinese
@@ -200,7 +200,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: https://dict.leo.org/spanish-english/{%word}
+  url: https://dict.leo.org/spanish-english/<word>
   title: Inglés-Español (leo.org)
   tags:
   - dictionary
@@ -221,7 +221,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://dict.leo.org/french-english/{%word}
+  url: https://dict.leo.org/french-english/<word>
   title: Anglais-Français (leo.org)
   tags:
   - dictionary
@@ -242,7 +242,7 @@ en-ru 0:
   - language
   - russian
 en-ru 1:
-  url: https://dict.leo.org/russian-english/{%word}
+  url: https://dict.leo.org/russian-english/<word>
   title: Английский-Русский (leo.org)
   tags:
   - dictionary
@@ -295,7 +295,7 @@ es-pt 0:
   - portuguese
   - spanish
 es-pt 1:
-  url: https://dict.leo.org/espanhol-português/{%word}
+  url: https://dict.leo.org/espanhol-português/<word>
   title: Espanhol-Português (leo.org)
   tags:
   - dictionary

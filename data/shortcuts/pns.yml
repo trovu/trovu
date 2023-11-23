@@ -13,7 +13,7 @@ de-el 0:
   - greek
   - language
 de-el 1:
-  url: http://en.pons.com/translate?l=deel&q={%word}
+  url: http://en.pons.com/translate?l=deel&q=<word>
   title: Γερμανικά-Ελληνικά (Pons)
   tags:
   - dictionary
@@ -34,7 +34,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: http://en.pons.com/translate?l=deen&q={%word}
+  url: http://en.pons.com/translate?l=deen&q=<word>
   title: German-English (Pons)
   tags:
   - dictionary
@@ -55,7 +55,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: http://en.pons.com/translate?l=dees&q={%word}
+  url: http://en.pons.com/translate?l=dees&q=<word>
   title: Alemán-Español (Pons)
   tags:
   - dictionary
@@ -76,7 +76,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: http://en.pons.com/translate?l=defr&q={%word}
+  url: http://en.pons.com/translate?l=defr&q=<word>
   title: Allemand-Français (Pons)
   tags:
   - dictionary
@@ -97,7 +97,7 @@ de-hu 0:
   - hungarian
   - language
 de-hu 1:
-  url: http://en.pons.com/translate?l=dehu&q={%word}
+  url: http://en.pons.com/translate?l=dehu&q=<word>
   title: Német-Magyar (Pons)
   tags:
   - dictionary
@@ -118,7 +118,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: http://en.pons.com/translate?l=deit&q={%word}
+  url: http://en.pons.com/translate?l=deit&q=<word>
   title: Tedesco-Italiano (Pons)
   tags:
   - dictionary
@@ -139,7 +139,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: http://en.pons.com/translate?l=depl&q={%word}
+  url: http://en.pons.com/translate?l=depl&q=<word>
   title: Niemiecki-Polski (Pons)
   tags:
   - dictionary
@@ -160,7 +160,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: http://en.pons.com/translate?l=dept&q={%word}
+  url: http://en.pons.com/translate?l=dept&q=<word>
   title: Alemão-Português (Pons)
   tags:
   - dictionary
@@ -181,7 +181,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: http://en.pons.com/translate?l=deru&q={%word}
+  url: http://en.pons.com/translate?l=deru&q=<word>
   title: Немецкий-Русский (Pons)
   tags:
   - dictionary
@@ -240,7 +240,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: http://en.pons.com/translate?l=enes&q={%word}
+  url: http://en.pons.com/translate?l=enes&q=<word>
   title: Inglés-Español (Pons)
   tags:
   - dictionary
@@ -261,7 +261,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: http://en.pons.com/translate?l=enfr&q={%word}
+  url: http://en.pons.com/translate?l=enfr&q=<word>
   title: Anglais-Français (Pons)
   tags:
   - dictionary
@@ -282,7 +282,7 @@ en-sl 0:
   - language
   - slovenian
 en-sl 1:
-  url: http://en.pons.com/translate?l=ensl&q={%word}
+  url: http://en.pons.com/translate?l=ensl&q=<word>
   title: Angleščina-Slovenščina (Pons)
   tags:
   - dictionary
@@ -367,7 +367,7 @@ fr-pl 0:
   - language
   - polish
 fr-pl 1:
-  url: http://en.pons.com/translate?l=frpl&q={%word}
+  url: http://en.pons.com/translate?l=frpl&q=<word>
   title: Francuski-Polski (Pons)
   tags:
   - dictionary
