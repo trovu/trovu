@@ -22,12 +22,20 @@ test('UrlProcessor.getPlaceholdersFromString', async () => {
   });
 });
 
-test('UrlProcessor.getPlaceholdersFromStringLegacy', async () => {
+test('UrlProcessor.getPlaceholderFromMatchLegacy', async () => {
+  expect(UrlProcessor.getPlaceholderFromMatchLegacy([, 'query'])).toEqual({
+    name: 'query',
+    placeholder: {},
+  });
+});
+
+test('UrlProcessor.getPlaceholderFromMatchLegacy', async () => {
   expect(
-    UrlProcessor.getPlaceholdersFromStringLegacy('https://{%query}', '%'),
+    UrlProcessor.getPlaceholderFromMatchLegacy([, 'Start|type=city']),
   ).toEqual({
-    query: {
-      '{%query}': {},
+    name: 'Start',
+    placeholder: {
+      type: 'city',
     },
   });
 });
