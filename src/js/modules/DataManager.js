@@ -24,8 +24,8 @@ export default class DataManager {
   static write(data) {
     const ymlDirPath = './data/';
     this.sortTags(data.shortcuts);
-    DataManager.writeYmls(`${ymlDirPath}/shortcuts/`, data['shortcuts']);
-    DataManager.writeYmls(`${ymlDirPath}/types/city/`, data['types']['city']);
+    DataManager.writeYmls(`${ymlDirPath}/shortcuts/`, data.shortcuts);
+    DataManager.writeYmls(`${ymlDirPath}/types/city/`, data.types.city);
   }
 
   static sortTags(shortcuts) {
