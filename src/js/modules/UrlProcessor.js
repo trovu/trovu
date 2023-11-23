@@ -101,7 +101,10 @@ export default class UrlProcessor {
    */
   static getArgumentsFromString(str) {
     const placeholders = {};
-    Object.assign(placeholders, this.getPlaceholdersFromString(str, ''));
+    Object.assign(
+      placeholders,
+      this.getPlaceholdersFromString(str, '(?![\\$])'),
+    );
     Object.assign(placeholders, this.getPlaceholdersFromStringLegacy(str, '%'));
     return placeholders;
   }
