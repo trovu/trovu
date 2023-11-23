@@ -11,6 +11,19 @@ import jsyaml from 'js-yaml';
 /** Process a shortcut URL for redirect. */
 
 export default class UrlProcessor {
+  static getPlaceholdersFromString(str, prefix) {
+    const pattern = '<' + prefix + '(.+?)>';
+    const re = RegExp(pattern, 'g');
+    let match;
+    const placeholders = {};
+    while ((match = re.exec(str))) {
+      const { name, placeholder } = this.getPlaceholderFromMatch(match);
+      placeholders[name] = placeholders[name] || {};
+      placeholders[name][match[0]] = placeholder;
+    }
+    return placeholders;
+  }
+
   /**
    * Get placeholder names from a string.
    *
