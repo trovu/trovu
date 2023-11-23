@@ -14,10 +14,7 @@ test('UrlProcessor.transformEoCx', async () => {
 
 test('UrlProcessor.getPlaceholdersFromStringLegacy', async () => {
   expect(
-    UrlProcessor.getPlaceholdersFromStringLegacy(
-      'https://www.google.com/search?hl=en&q=keyword1%20{%query}&ie=utf-8',
-      '%',
-    ),
+    UrlProcessor.getPlaceholdersFromStringLegacy('https://{%query}', '%'),
   ).toEqual({
     query: {
       '{%query}': {},
