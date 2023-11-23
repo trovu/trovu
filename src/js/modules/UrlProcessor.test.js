@@ -12,6 +12,16 @@ test('UrlProcessor.transformEoCx', async () => {
   }
 });
 
+test('UrlProcessor.getPlaceholdersFromString', async () => {
+  expect(
+    UrlProcessor.getPlaceholdersFromString('https://<query>', '%'),
+  ).toEqual({
+    query: {
+      '{%query}': {},
+    },
+  });
+});
+
 test('UrlProcessor.getPlaceholdersFromStringLegacy', async () => {
   expect(
     UrlProcessor.getPlaceholdersFromStringLegacy('https://{%query}', '%'),
