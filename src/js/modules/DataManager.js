@@ -28,9 +28,18 @@ export default class DataManager {
     DataManager.writeYmls(`${ymlDirPath}/types/city/`, data.types.city);
   }
 
+  /**
+   * Sort tags in every shortcut.
+   * @param {Object} shortcuts by namespace
+   */
   static sortTags(shortcuts) {
-    for (const key in shortcuts) {
-      if (shortcuts[key].tags) shortcuts[key].tags.sort();
+    for (const namespace in shortcuts) {
+      for (const key in shortcuts[namespace]) {
+        const shortcut = shortcuts[namespace][key];
+        if (shortcut.tags) {
+          shortcut.tags.sort();
+        }
+      }
     }
   }
 
