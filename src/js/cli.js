@@ -44,7 +44,7 @@ function migratePlaceholders() {
       if (url) {
         let newUrl = url;
         for (const prefix of ['%', '\\$']) {
-          const placeholders = UrlProcessor.getPlaceholdersFromString(
+          const placeholders = UrlProcessor.getPlaceholdersFromStringLegacy(
             url,
             prefix,
           );

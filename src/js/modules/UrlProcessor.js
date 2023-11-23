@@ -34,7 +34,7 @@ export default class UrlProcessor {
    *     }
    *   }
    */
-  static getPlaceholdersFromString(str, prefix) {
+  static getPlaceholdersFromStringLegacy(str, prefix) {
     const pattern = '{' + prefix + '(.+?)}';
     const re = RegExp(pattern, 'g');
     let match;
@@ -72,7 +72,7 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getArgumentsFromString(str) {
-    return this.getPlaceholdersFromString(str, '%');
+    return this.getPlaceholdersFromStringLegacy(str, '%');
   }
 
   /**
@@ -83,7 +83,7 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getVariablesFromString(str) {
-    return this.getPlaceholdersFromString(str, '\\$');
+    return this.getPlaceholdersFromStringLegacy(str, '\\$');
   }
 
   /**
