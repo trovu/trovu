@@ -12,9 +12,9 @@ test('UrlProcessor.transformEoCx', async () => {
   }
 });
 
-test('UrlProcessor.getArgumentsFromString new', async () => {
+test('UrlProcessor.getVariablesFromString new', async () => {
   expect(
-    UrlProcessor.getArgumentsFromString('https://<$language>.<query>'),
+    UrlProcessor.getVariablesFromString('https://<$language>.<query>'),
   ).toEqual({
     $language: {
       '<$language>': {},
