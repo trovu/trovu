@@ -94,6 +94,11 @@
     query: reload:g barbaz
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=barbaz&ie=utf-8
+- title: untrimmed query
+  env:
+    query: ' g foo '
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foo&ie=utf-8
 - title: reload without query
   env:
     query: reload
