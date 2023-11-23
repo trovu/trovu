@@ -50,6 +50,11 @@ function migratePlaceholders() {
           );
           if (Object.keys(placeholders).length > 0) {
             for (const placeholderName in placeholders) {
+              if (isOnlyNumber(placeholderName)) {
+                console.log(
+                  `Warning: In shortcut ${namespace}.${key}, placeholder name ${placeholderName} is only a number.`,
+                );
+              }
               let newPlaceholder;
               const placeholder = placeholders[placeholderName];
               const match = Object.keys(placeholder)[0];
@@ -103,4 +108,8 @@ function migratePlaceholders() {
     }
     DataManager.write(data);
   }
+}
+
+function isOnlyNumber(str) {
+  return Number.isFinite(Number(str));
 }
