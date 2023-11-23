@@ -40,14 +40,14 @@ export default class UrlProcessor {
     let match;
     const placeholders = {};
     while ((match = re.exec(str))) {
-      const { name, placeholder } = this.getPlaceholderFromMatch(match);
+      const { name, placeholder } = this.getPlaceholderFromMatchLegacy(match);
       placeholders[name] = placeholders[name] || {};
       placeholders[name][match[0]] = placeholder;
     }
     return placeholders;
   }
 
-  static getPlaceholderFromMatch(match) {
+  static getPlaceholderFromMatchLegacy(match) {
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
     const nameAndAttributes = match[1].split('|');
