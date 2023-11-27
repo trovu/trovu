@@ -2,8 +2,8 @@
 
 You can create and manage your own user shortcuts and set advanced settings:
 
-1. If you don't have one, [create a Github.com account](https://github.com/signup). It is free.
-1. Fork [trovu-data-user](https://github.com/trovu/trovu-data-user) into your own Github account.
+1. If you don't have one, [create a GitHub.com account](https://github.com/signup). It is free.
+1. Fork [trovu-data-user](https://github.com/trovu/trovu-data-user) into your own GitHub account.
 1. In there, adjust `config.yml` to your needs, and add your own shortcuts to `shortcuts.yml`. (Both are [YAML files](https://en.wikipedia.org/wiki/YAML).)
 1. Call Trovu with `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`
 
@@ -27,8 +27,8 @@ namespaces:
 This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use. Every entry may be either
 
 -   a string: Then it refers to an (official) site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts in there are curated by the Trovu community.
--   key/value pairs, then they refer to a custom namespace, e.g. your (or someone else's) user namespace in Github. Every entry must contain:
-    -   `github:` A Github user name, or a dot
+-   key/value pairs, then they refer to a custom namespace, e.g. your (or someone else's) user namespace in GitHub. Every entry must contain:
+    -   `github:` A GitHub user name, or a dot
     -   (optional) `name:` Some custom name (default: value from `github:`)
 
 The dot will refer to the **current GitHub user** (where this `config.yml` is located).

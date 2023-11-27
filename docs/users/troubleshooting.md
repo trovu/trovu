@@ -33,7 +33,7 @@ You can also combine debugging and reloading, e.g. `debug:reload:g foobar`
 
 This might be a caching issue.
 
-First of all, make sure if your edit arrived in https://data.trovu.net/data/data.json . It should get updated automatically by a Github webhook on the _git push_ event.
+First of all, make sure if your edit arrived in https://data.trovu.net/data/data.json . It should get updated automatically by a GitHub webhook on the _git push_ event.
 
 Then, you can either
 
