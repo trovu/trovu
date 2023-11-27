@@ -33,7 +33,7 @@ This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use
 
 The dot will refer to the **current GitHub user** (where this `config.yml` is located).
 
-The **order** is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `my` have highest precedence.
+The **order** is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `my` have the highest precedence.
 
 ### Default keyword
 

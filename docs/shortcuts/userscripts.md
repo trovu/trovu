@@ -2,7 +2,7 @@
 
 ## fill-and-submit
 
-Userscript for auto-filling and submitting forms on target websites. This may help when queries cannot passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.
+Userscript for autofilling and submitting forms on target websites. This may help when queries cannot be passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.
 
 ### For users
 

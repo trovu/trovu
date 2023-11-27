@@ -2,7 +2,7 @@
 
 Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](legacy/differences.md).
 
-trovu allows you to define shortcuts for URLs / websites and then quickly access them in a command-line way, e.g.
+Trovu allows you to define shortcuts for URLs / websites and then quickly access them in a command-line way, e.g.
 
 -   `g berlin` – search Google for "berlin".
 -   `w berlin` – Wikipedia article for "berlin" in your language.

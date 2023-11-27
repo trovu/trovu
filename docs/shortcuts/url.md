@@ -50,7 +50,7 @@ The input will be parsed as a date.
 -   American and European inputs will be distinguished.
 -   An input containing only a number will be assumed as a day of month.
 -   A date in the future will be enforced.
--   Also relative inputs are possible.
+-   Also, relative inputs are possible.
 -   Weekday abbreviations are understood, too. The language is assumed from the configured language.
 -   With the attribute `output`, an output format based on [dayjs's format](https://day.js.org/docs/en/display/format) can be specified. Defaults to YYYY-MM-DD.
 
