@@ -49,5 +49,5 @@ These attributes serve only for informational purposes. They have no effect on w
 Read more about other attributes:
 
 -   [`url:`](url.md)
--   [`include:`](includes.md)
+-   [`include:`](include.md)
 -   [`deprecated:`](deprecated.md)
