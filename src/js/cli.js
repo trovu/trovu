@@ -88,22 +88,6 @@ function migratePlaceholders() {
             while (newUrl.includes(match)) {
               newUrl = newUrl.replace(match, newPlaceholderYamlBrackets);
             }
-            continue;
-            console.log(
-              placeholder,
-              '\t',
-              placeholderName,
-              '\t',
-              match,
-              '\t',
-              attributes,
-              '\t',
-              newPlaceholder,
-              '\t',
-              newPlaceholderYaml,
-              '\t',
-              newPlaceholderYamlBrackets,
-            );
           }
           shortcut.url = newUrl;
         }
