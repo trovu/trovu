@@ -26,22 +26,6 @@ trovu allows you to define shortcuts for URLs / websites and then quickly access
 -   [Troubleshooting / FAQ](users/troubleshooting.md)
 -   [Support](users/support.md)
 
-## Repositories
-
-### [trovu-data](https://github.com/trovu/trovu-data)
-
-This repository contains all the data, e.g.
-
--   shortcuts
--   types/city
-    -   mappings for [argument type _city_](shortcuts/urls.md#city)
-
-Fork this repository to add or edit shortcuts (and send then a pull request).
-
-### [trovu](https://github.com/trovu/trovu)
-
-This (future mono-)repository contains now the web frontend and this documentation.
-
 ## Live web version
 
 [https://trovu.net/](https://trovu.net/)
