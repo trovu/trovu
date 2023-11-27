@@ -117,3 +117,14 @@
   response:
     status: removed
     key: abp 0
+- title: included dictionary
+  env:
+    language: de
+    namespaces:
+      - o
+      - de
+      - .de
+      - lge
+    query: pl baum
+  response:
+    redirectUrl: https://www.linguee.de/deutsch-polnisch/search?query=baum
