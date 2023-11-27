@@ -13,7 +13,7 @@ _Caveat: You might note that many curated shortcuts at this moment don't match t
 Bookmark shortcuts refer to shortcuts with 0 arguments, e.g.:
 
     g 0:
-      url: https://www.google.com/search?hl={$language}
+      url: https://www.google.com/search?hl=<$language>
       title: Google Web Homepage
 
 You use it by simply entering `g` and hitting Enter.

@@ -49,7 +49,7 @@ If no keyword is recognized in a query, this one will be used. Useful for settin
 language: en
 ```
 
-For Wikipedia in your language (or other shortcuts using `{$language}`). Basically, it fills the `{$language}` variable in the shortcut URLs. Now, using the `w` shortcut will get you to the Wikipedia in your language, as its shortcut URL is set as `https://{$language}.wikipedia.org/`.
+For Wikipedia in your language (or other shortcuts using `<$language>`). Basically, it fills the `<$language>` variable in the shortcut URLs. Now, using the `w` shortcut will get you to the Wikipedia in your language, as its shortcut URL is set as `https://<$language>.wikipedia.org/`.
 
 ### Country
 
@@ -57,7 +57,7 @@ For Wikipedia in your language (or other shortcuts using `{$language}`). Basical
 country: de
 ```
 
-For shortcuts that use `{$country}` in their URL. Works similarly as `{$language}`.
+For shortcuts that use `<$country>` in their URL. Works similarly as `<$language>`.
 
 ## Personal shortcuts
 

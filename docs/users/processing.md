@@ -30,9 +30,9 @@ Now, let's look at the processing of a query:
     - and one in [.de](https://github.com/trovu/trovu/tree/master/data/shortcuts/.de.yml), pointing to `google.de`
 1. From the found matches, the results are evaluated in namespace order.
 1. Since namespace `.de` has higher priority than `o`, its URL is used for further processing
-    - `https://www.google.de/search?hl={$language}&q={%query}&ie=utf-8`
-1. The `{$language}` placeholder is being replaced with the variable `de`.
-1. The `{%query}` placeholder is being replaced with the query argument `foobar`.
+    - `https://www.google.de/search?hl=<$language>&q=<query>&ie=utf-8`
+1. The `<$language>` placeholder is being replaced with the variable `de`.
+1. The `<query>` placeholder is being replaced with the query argument `foobar`.
 1. A redirect to the URL is made.
 
 ## Reloading shortcuts

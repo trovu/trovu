@@ -8,7 +8,7 @@ Includes are defined with `include:`. For example, [dcm](https://github.com/trov
 
 ```yaml
 de-en 1:
-    url: https://www.dict.com/german-english/{%word}
+    url: https://www.dict.com/german-english/<word>
     title: German-English (dict.com)
     tags:
         - dictionary
@@ -43,7 +43,7 @@ This way, the shortcut URL needs to be maintained only once.
 ```yaml
 en 1:
     include:
-        key: en-{$language} 1
+        key: en-<$language> 1
 ```
 
 If the language from settings is e.g. `de`, it includes from `en-de 1`. (And if `en-de 1` contains `include:`, it also includes from there, and so on.)
@@ -87,7 +87,7 @@ This shortcut for an Arabic dictionary tries first to include from [ard](https:/
 ```yaml
 ar 1:
     include:
-        key: ar-{$language} 1
+        key: ar-<$language> 1
 ```
 
 However, this namespace only contains Arabic dictionaries for a few languages (`de`, `en`, `fr`, `it`, `tr`).

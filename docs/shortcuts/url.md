@@ -7,33 +7,35 @@ The `url:` item of a shortcut may contain placeholders. This page is about them.
 Consider for instance the URL of the Google shortcut:
 
 ```yaml
-url: https://www.google.com/search?hl={$language}&q={%query}&ie=utf-8
+url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8
 ```
 
-It contains 2 placeholders: `{%query}` and `{$language}`.
+It contains 2 placeholders: `<query>` and `<$language>`.
 
 ## Placeholders
 
 Placeholders are either
 
--   arguments (starting with `%`): Then they are replaced with the input from the current query,
--   variables (starting with `$`): Then they are replaced with settings from the current configuration.
+-   arguments (starting with `<` and ending with `>`): They are replaced with the input from the current query,
+-   variables (starting with `<$` and ending with `>`): They are replaced with settings from the current configuration.
+
+The contents of a placeholder follows [YAML Flow Style](https://www.yaml.info/learn/flowstyle.html).
 
 ### Argument placeholders
 
-| Example                                                     | Will be replaced with                                                                                                                              |
-| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{%foobar}`                                                 | argument from query. <br>If there is more than one argument placeholder, their order in URL also defines the expected order in the shortcut query. |
-| `{%foobar\|encoding=iso-8859-1}`                            | ... with encoding specified. See Input encoding below.                                                                                             |
-| `{%Datum\|type=date\|output=Y-m-d}`<br>`{%Ziel\|type=city}` | ... with a specified type. See Argument types below.                                                                                               |
-| `{%IATA-Code\|transform=uppercase}`                         | ... with a transformation definition. See [Transforming](#transforming) below.                                                                     |
+| Example                                                          | Will be replaced with                                                                                                                              |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<foobar>`                                                       | argument from query. <br>If there is more than one argument placeholder, their order in URL also defines the expected order in the shortcut query. |
+| `<foobar: {encoding: iso-8859-1}>`                               | ... with encoding specified. See Input encoding below.                                                                                             |
+| `<Datum: {type: date, output: Y-m-d}>`<br>`<Ziel: {type: city}>` | ... with a specified type. See Argument types below.                                                                                               |
+| `<IATA-Code: {transform: uppercase}>`                            | ... with a transformation definition. See [Transforming](#transforming) below.                                                                     |
 
 ### Variable placeholders
 
-| Example                | Will be replaced with                                                                                                                                                       |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{$language}`          | configured language                                                                                                                                                         |
-| `{$now\|output=HH-mm}` | current date and time, attribute `output` defines the output format which must be based on [dayjs's format](https://day.js.org/docs/en/display/format). Default is `HH-mm`. |
+| Example                   | Will be replaced with                                                                                                                                                       |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<$language>`             | configured language                                                                                                                                                         |
+| `<$now: {output: HH-mm}>` | current date and time, attribute `output` defines the output format which must be based on [dayjs's format](https://day.js.org/docs/en/display/format). Default is `HH-mm`. |
 
 ## Input encoding
 
@@ -91,7 +93,7 @@ The mappings are stored in [/data/types/city](https://github.com/trovu/trovu/tre
 
 ## Transforming
 
-Finally, with `{%foo|transform=uppercase}` the output string can be transformed.
+Finally, with `<foo: {transform: uppercase}>` the output string can be transformed.
 
 | Property    | Conversion                           | Example input             | Example output      | Explanation                                |
 | ----------- | ------------------------------------ | ------------------------- | ------------------- | ------------------------------------------ |
