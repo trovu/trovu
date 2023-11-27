@@ -4,7 +4,7 @@ test('CallHandler.getAlternative', async () => {
   const shortcut = {
     deprecated: {
       alternative: {
-        query: 'gm b,{%1}',
+        query: 'gm b,<1>',
       },
     },
   };
