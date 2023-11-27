@@ -25,7 +25,6 @@ extra_css:
 
 plugins:
   - search
-  - link-marker
   - minify:
       minify_html: true
 
