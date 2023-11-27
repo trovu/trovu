@@ -1,6 +1,6 @@
 # shortcut.url
 
-A shortcut URL may contain placeholders. This page is about them.
+The `url:` item of a shortcut may contain placeholders. This page is about them.
 
 ## Example
 
