@@ -1,9 +1,9 @@
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-el 0:
   url: http://en.pons.com/translate?l=deel
   title: Γερμανικά-Ελληνικά (Pons)
@@ -195,10 +195,10 @@ de-ru 1:
     description: Перевод на немецкий язык для "дерево"
 el 0:
   include:
-    key: el-{$language} 0
+    key: el-<$language> 0
 el 1:
   include:
-    key: el-{$language} 1
+    key: el-<$language> 1
 el-de 0:
   title: Griechisch-Deutsch (Pons)
   include:
@@ -214,10 +214,10 @@ el-de 1:
     description: Griechisch-Übersetzung von "baum"
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (Pons)
   include:
@@ -296,10 +296,10 @@ en-sl 1:
     description: Prevod v angleščina za besedo "drevo"
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (Pons)
   include:
@@ -328,10 +328,10 @@ es-en 1:
     description: Spanish translation of "tree"
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (Pons)
   include:
@@ -381,10 +381,10 @@ fr-pl 1:
     description: Tłumaczenie na język francuski dla "drzewo"
 hu 0:
   include:
-    key: hu-{$language} 0
+    key: hu-<$language> 0
 hu 1:
   include:
-    key: hu-{$language} 1
+    key: hu-<$language> 1
 hu-de 0:
   title: Ungarisch-Deutsch (Pons)
   include:
@@ -400,10 +400,10 @@ hu-de 1:
     description: Ungarisch-Übersetzung von "baum"
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (Pons)
   include:
@@ -419,10 +419,10 @@ it-de 1:
     description: Italienisch-Übersetzung von "baum"
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (Pons)
   include:
@@ -451,10 +451,10 @@ pl-fr 1:
     description: Traduction en polonais de "arbre"
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (Pons)
   include:
@@ -470,10 +470,10 @@ pt-de 1:
     description: Portugiesisch-Übersetzung von "baum"
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (Pons)
   include:
@@ -489,10 +489,10 @@ ru-de 1:
     description: Russisch-Übersetzung von "baum"
 sl 0:
   include:
-    key: sl-{$language} 0
+    key: sl-<$language> 0
 sl 1:
   include:
-    key: sl-{$language} 1
+    key: sl-<$language> 1
 sl-en 0:
   title: Slovenian-English (Pons)
   include:

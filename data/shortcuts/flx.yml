@@ -1,9 +1,9 @@
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-sv 0:
   url: https://folkets-lexikon.csc.kth.se/
   title: Engelska-Svenska (Folkets lexikon)
@@ -27,10 +27,10 @@ en-sv 1:
     description: engelska-översättning av "träd"
 sv 0:
   include:
-    key: sv-{$language} 0
+    key: sv-<$language> 0
 sv 1:
   include:
-    key: sv-{$language} 1
+    key: sv-<$language> 1
 sv-en 0:
   title: Swedish-English (Folkets lexikon)
   include:

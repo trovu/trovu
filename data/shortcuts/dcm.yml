@@ -1,9 +1,9 @@
 ar 0:
   include:
-    key: ar-{$language} 0
+    key: ar-<$language> 0
 ar 1:
   include:
-    key: ar-{$language} 1
+    key: ar-<$language> 1
 ar-bg 0:
   url: https://www.dict.com/arabic-bulgarian/
   title: Арабски-Български (dict.com)
@@ -741,10 +741,10 @@ ar-zh 1:
     description: 阿拉伯文 的"树"翻译
 bg 0:
   include:
-    key: bg-{$language} 0
+    key: bg-<$language> 0
 bg 1:
   include:
-    key: bg-{$language} 1
+    key: bg-<$language> 1
 bg-ar 0:
   title: البلغارية-العربية (dict.com)
   include:
@@ -1474,10 +1474,10 @@ bg-zh 1:
     description: 保加利亚文 的"树"翻译
 ca 0:
   include:
-    key: ca-{$language} 0
+    key: ca-<$language> 0
 ca 1:
   include:
-    key: ca-{$language} 1
+    key: ca-<$language> 1
 ca-ar 0:
   title: الكتالانية-العربية (dict.com)
   include:
@@ -2197,10 +2197,10 @@ ca-zh 1:
     description: 加泰罗尼亚文 的"树"翻译
 cs 0:
   include:
-    key: cs-{$language} 0
+    key: cs-<$language> 0
 cs 1:
   include:
-    key: cs-{$language} 1
+    key: cs-<$language> 1
 cs-ar 0:
   title: التشيكية-العربية (dict.com)
   include:
@@ -2914,10 +2914,10 @@ cs-zh 1:
     description: 捷克文 的"树"翻译
 da 0:
   include:
-    key: da-{$language} 0
+    key: da-<$language> 0
 da 1:
   include:
-    key: da-{$language} 1
+    key: da-<$language> 1
 da-ar 0:
   title: الدانماركية-العربية (dict.com)
   include:
@@ -3623,10 +3623,10 @@ da-zh 1:
     description: 丹麦文 的"树"翻译
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-ar 0:
   title: الألمانية-العربية (dict.com)
   include:
@@ -4324,10 +4324,10 @@ de-zh 1:
     description: 德文 的"树"翻译
 el 0:
   include:
-    key: el-{$language} 0
+    key: el-<$language> 0
 el 1:
   include:
-    key: el-{$language} 1
+    key: el-<$language> 1
 el-ar 0:
   title: اليونانية-العربية (dict.com)
   include:
@@ -5017,10 +5017,10 @@ el-zh 1:
     description: 希腊文 的"树"翻译
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-ar 0:
   title: الإنجليزية-العربية (dict.com)
   include:
@@ -5702,10 +5702,10 @@ en-zh 1:
     description: 英文 的"树"翻译
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-ar 0:
   title: الإسبانية-العربية (dict.com)
   include:
@@ -6379,10 +6379,10 @@ es-zh 1:
     description: 西班牙文 的"树"翻译
 et 0:
   include:
-    key: et-{$language} 0
+    key: et-<$language> 0
 et 1:
   include:
-    key: et-{$language} 1
+    key: et-<$language> 1
 et-ar 0:
   title: الإستونية-العربية (dict.com)
   include:
@@ -7046,10 +7046,10 @@ et-zh 1:
     description: 爱沙尼亚文 的"树"翻译
 fi 0:
   include:
-    key: fi-{$language} 0
+    key: fi-<$language> 0
 fi 1:
   include:
-    key: fi-{$language} 1
+    key: fi-<$language> 1
 fi-ar 0:
   title: الفنلندية-العربية (dict.com)
   include:
@@ -7705,10 +7705,10 @@ fi-zh 1:
     description: 芬兰文 的"树"翻译
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-ar 0:
   title: الفرنسية-العربية (dict.com)
   include:
@@ -8356,10 +8356,10 @@ fr-zh 1:
     description: 法文 的"树"翻译
 he 0:
   include:
-    key: he-{$language} 0
+    key: he-<$language> 0
 he 1:
   include:
-    key: he-{$language} 1
+    key: he-<$language> 1
 he-ar 0:
   title: العبرية-العربية (dict.com)
   include:
@@ -9001,10 +9001,10 @@ he-zh 1:
     description: 希伯来文 的"树"翻译
 hr 0:
   include:
-    key: hr-{$language} 0
+    key: hr-<$language> 0
 hr 1:
   include:
-    key: hr-{$language} 1
+    key: hr-<$language> 1
 hr-ar 0:
   title: الكرواتية-العربية (dict.com)
   include:
@@ -9638,10 +9638,10 @@ hr-zh 1:
     description: 克罗地亚文 的"树"翻译
 hu 0:
   include:
-    key: hu-{$language} 0
+    key: hu-<$language> 0
 hu 1:
   include:
-    key: hu-{$language} 1
+    key: hu-<$language> 1
 hu-ar 0:
   title: الهنغارية-العربية (dict.com)
   include:
@@ -10267,10 +10267,10 @@ hu-zh 1:
     description: 匈牙利文 的"树"翻译
 id 0:
   include:
-    key: id-{$language} 0
+    key: id-<$language> 0
 id 1:
   include:
-    key: id-{$language} 1
+    key: id-<$language> 1
 id-ar 0:
   title: الإندونيسية-العربية (dict.com)
   include:
@@ -10888,10 +10888,10 @@ id-zh 1:
     description: 印度尼西亚文 的"树"翻译
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-ar 0:
   title: الإيطالية-العربية (dict.com)
   include:
@@ -11501,10 +11501,10 @@ it-zh 1:
     description: 意大利文 的"树"翻译
 ja 0:
   include:
-    key: ja-{$language} 0
+    key: ja-<$language> 0
 ja 1:
   include:
-    key: ja-{$language} 1
+    key: ja-<$language> 1
 ja-ar 0:
   title: اليابانية-العربية (dict.com)
   include:
@@ -12106,10 +12106,10 @@ ja-zh 1:
     description: 日文 的"树"翻译
 ko 0:
   include:
-    key: ko-{$language} 0
+    key: ko-<$language> 0
 ko 1:
   include:
-    key: ko-{$language} 1
+    key: ko-<$language> 1
 ko-ar 0:
   title: الكورية-العربية (dict.com)
   include:
@@ -12703,10 +12703,10 @@ ko-zh 1:
     description: 韩文 的"树"翻译
 lt 0:
   include:
-    key: lt-{$language} 0
+    key: lt-<$language> 0
 lt 1:
   include:
-    key: lt-{$language} 1
+    key: lt-<$language> 1
 lt-ar 0:
   title: اللتوانية-العربية (dict.com)
   include:
@@ -13292,10 +13292,10 @@ lt-zh 1:
     description: 立陶宛文 的"树"翻译
 lv 0:
   include:
-    key: lv-{$language} 0
+    key: lv-<$language> 0
 lv 1:
   include:
-    key: lv-{$language} 1
+    key: lv-<$language> 1
 lv-ar 0:
   title: اللاتفية-العربية (dict.com)
   include:
@@ -13873,10 +13873,10 @@ lv-zh 1:
     description: 拉脱维亚文 的"树"翻译
 nl 0:
   include:
-    key: nl-{$language} 0
+    key: nl-<$language> 0
 nl 1:
   include:
-    key: nl-{$language} 1
+    key: nl-<$language> 1
 nl-ar 0:
   title: الهولندية-العربية (dict.com)
   include:
@@ -14446,10 +14446,10 @@ nl-zh 1:
     description: 荷兰文 的"树"翻译
 no 0:
   include:
-    key: no-{$language} 0
+    key: no-<$language> 0
 no 1:
   include:
-    key: no-{$language} 1
+    key: no-<$language> 1
 no-ar 0:
   title: النرويجية-العربية (dict.com)
   include:
@@ -15011,10 +15011,10 @@ no-zh 1:
     description: 挪威文 的"树"翻译
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-ar 0:
   title: البولندية-العربية (dict.com)
   include:
@@ -15568,10 +15568,10 @@ pl-zh 1:
     description: 波兰文 的"树"翻译
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-ar 0:
   title: البرتغالية-العربية (dict.com)
   include:
@@ -16117,10 +16117,10 @@ pt-zh 1:
     description: 葡萄牙文 的"树"翻译
 ro 0:
   include:
-    key: ro-{$language} 0
+    key: ro-<$language> 0
 ro 1:
   include:
-    key: ro-{$language} 1
+    key: ro-<$language> 1
 ro-ar 0:
   title: الرومانية-العربية (dict.com)
   include:
@@ -16658,10 +16658,10 @@ ro-zh 1:
     description: 罗马尼亚文 的"树"翻译
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-ar 0:
   title: الروسية-العربية (dict.com)
   include:
@@ -17189,10 +17189,10 @@ ru-zh 1:
     description: 俄文 的"树"翻译
 sk 0:
   include:
-    key: sk-{$language} 0
+    key: sk-<$language> 0
 sk 1:
   include:
-    key: sk-{$language} 1
+    key: sk-<$language> 1
 sk-ar 0:
   title: السلوفاكية-العربية (dict.com)
   include:
@@ -17714,10 +17714,10 @@ sk-zh 1:
     description: 斯洛伐克文 的"树"翻译
 sl 0:
   include:
-    key: sl-{$language} 0
+    key: sl-<$language> 0
 sl 1:
   include:
-    key: sl-{$language} 1
+    key: sl-<$language> 1
 sl-ar 0:
   title: السلوفانية-العربية (dict.com)
   include:
@@ -18231,10 +18231,10 @@ sl-zh 1:
     description: 斯洛文尼亚文 的"树"翻译
 sr 0:
   include:
-    key: sr-{$language} 0
+    key: sr-<$language> 0
 sr 1:
   include:
-    key: sr-{$language} 1
+    key: sr-<$language> 1
 sr-ar 0:
   title: الصربية-العربية (dict.com)
   include:
@@ -18740,10 +18740,10 @@ sr-zh 1:
     description: 塞尔维亚文 的"树"翻译
 sv 0:
   include:
-    key: sv-{$language} 0
+    key: sv-<$language> 0
 sv 1:
   include:
-    key: sv-{$language} 1
+    key: sv-<$language> 1
 sv-ar 0:
   title: السويدية-العربية (dict.com)
   include:
@@ -19241,10 +19241,10 @@ sv-zh 1:
     description: 瑞典文 的"树"翻译
 th 0:
   include:
-    key: th-{$language} 0
+    key: th-<$language> 0
 th 1:
   include:
-    key: th-{$language} 1
+    key: th-<$language> 1
 th-ar 0:
   title: التايلاندية-العربية (dict.com)
   include:
@@ -19734,10 +19734,10 @@ th-zh 1:
     description: 泰文 的"树"翻译
 tr 0:
   include:
-    key: tr-{$language} 0
+    key: tr-<$language> 0
 tr 1:
   include:
-    key: tr-{$language} 1
+    key: tr-<$language> 1
 tr-ar 0:
   title: التركية-العربية (dict.com)
   include:
@@ -20219,10 +20219,10 @@ tr-zh 1:
     description: 土耳其文 的"树"翻译
 uk 0:
   include:
-    key: uk-{$language} 0
+    key: uk-<$language> 0
 uk 1:
   include:
-    key: uk-{$language} 1
+    key: uk-<$language> 1
 uk-ar 0:
   title: الأوكرانية-العربية (dict.com)
   include:
@@ -20694,10 +20694,10 @@ uk-zh 1:
     description: 乌克兰文 的"树"翻译
 vi 0:
   include:
-    key: vi-{$language} 0
+    key: vi-<$language> 0
 vi 1:
   include:
-    key: vi-{$language} 1
+    key: vi-<$language> 1
 vi-ar 0:
   title: الفيتنامية-العربية (dict.com)
   include:
@@ -21163,10 +21163,10 @@ vi-zh 1:
     description: 越南文 的"树"翻译
 zh 0:
   include:
-    key: zh-{$language} 0
+    key: zh-<$language> 0
 zh 1:
   include:
-    key: zh-{$language} 1
+    key: zh-<$language> 1
 zh-ar 0:
   title: الصينية-العربية (dict.com)
   include:

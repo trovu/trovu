@@ -1,9 +1,9 @@
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-no 0:
   url: https://www.heinzelnisse.info/
   title: Tysk-Norsk (Heinzelnisse)
@@ -27,10 +27,10 @@ de-no 1:
     description: tysk-oversettelse av "tre"
 no 0:
   include:
-    key: no-{$language} 0
+    key: no-<$language> 0
 no 1:
   include:
-    key: no-{$language} 1
+    key: no-<$language> 1
 no-de 0:
   title: Norwegisch-Deutsch (Heinzelnisse)
   include:
