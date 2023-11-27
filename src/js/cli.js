@@ -40,6 +40,14 @@ function migratePlaceholders() {
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
       const shortcut = data.shortcuts[namespace][key];
+      if (
+        shortcut.deprecated &&
+        shortcut.deprecated.alternative &&
+        shortcut.deprecated.alternative.query
+      ) {
+        shortcut.deprecated.alternative.query =
+          shortcut.deprecated.alternative.query.replace(/\{%(\d)\}/g, '<$1>');
+      }
       if (shortcut.url) {
         let newUrl = shortcut.url;
         for (const prefix of ['%', '\\$']) {
