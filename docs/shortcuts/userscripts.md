@@ -19,7 +19,7 @@ Userscript for auto-filling and submitting forms on target websites. This may he
 
 ### For shortcut editors
 
-#### Creating shortcut that use the userscript
+#### Creating a shortcut that use the userscript
 
 The shortcut URL should look like this (linebreaks only for clarity):
 
