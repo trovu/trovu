@@ -136,6 +136,12 @@ test('UrlProcessor.getPlaceholderFromMatchLegacy', async () => {
   });
 });
 
+test('UrlProcessor.processAttributeEncoding default', async () => {
+  expect(UrlProcessor.processAttributeEncoding({}, 'ÄÖÜäöü')).toEqual(
+    '%C3%84%C3%96%C3%9C%C3%A4%C3%B6%C3%BC',
+  );
+});
+
 test('UrlProcessor.processAttributeEncoding iso-8859-1', async () => {
   expect(
     UrlProcessor.processAttributeEncoding({ encoding: 'iso-8859-1' }, 'ÄÖÜäöü'),
