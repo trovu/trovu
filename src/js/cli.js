@@ -40,12 +40,11 @@ function migratePlaceholders() {
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
       const shortcut = data.shortcuts[namespace][key];
-      const url = shortcut.url;
-      if (url) {
-        let newUrl = url;
+      if (shortcut.url) {
+        let newUrl = shortcut.url;
         for (const prefix of ['%', '\\$']) {
           const placeholders = UrlProcessor.getPlaceholdersFromStringLegacy(
-            url,
+            shortcut.url,
             prefix,
           );
           for (const placeholderName in placeholders) {
