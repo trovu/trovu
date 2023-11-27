@@ -49,18 +49,17 @@ function migratePlaceholders() {
           shortcut.deprecated.alternative.query.replace(/\{%(\d)\}/g, '<$1>');
       }
       if (shortcut.url) {
-        replacePlaceholders(shortcut, namespace, key);
+        shortcut.url = replacePlaceholders(shortcut.url, namespace, key);
       }
     }
     DataManager.write(data);
   }
 }
 
-function replacePlaceholders(shortcut, namespace, key) {
-  let newUrl = shortcut.url;
+function replacePlaceholders(str, namespace, key) {
   for (const prefix of ['%', '\\$']) {
     const placeholders = UrlProcessor.getPlaceholdersFromStringLegacy(
-      shortcut.url,
+      str,
       prefix,
     );
     for (const placeholderName in placeholders) {
@@ -93,12 +92,12 @@ function replacePlaceholders(shortcut, namespace, key) {
           break;
       }
       newPlaceholderYamlBrackets += `${newPlaceholderYaml}>`;
-      while (newUrl.includes(match)) {
-        newUrl = newUrl.replace(match, newPlaceholderYamlBrackets);
+      while (str.includes(match)) {
+        str = str.replace(match, newPlaceholderYamlBrackets);
       }
     }
   }
-  shortcut.url = newUrl;
+  return str;
 }
 
 function isOnlyNumber(str) {
