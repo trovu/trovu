@@ -67,10 +67,6 @@ function migratePlaceholders() {
             const newPlaceholderYaml = jsyaml
               .dump(newPlaceholder, {
                 flowLevel: 1,
-                // noArrayIndent: true,
-                // lineWidth: -1,
-                // noCompatMode: true,
-                // condenseFlow: true,
               })
               .trim();
             let newPlaceholderYamlBrackets = '<';
