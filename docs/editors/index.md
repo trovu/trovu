@@ -12,7 +12,7 @@ Shortcuts are part of the [/data](https://github.com/trovu/trovu/tree/master/dat
 
 ## Contribute cities
 
-Also city abbreviations are part of the [/data](https://github.com/trovu/trovu/tree/master/data) subdirectory, organized by countries. You are welcome to add abbreviations for new countries. They should follow a system or pattern well-known to the country's citizens (e.g. [vehicle registration plates](https://en.wikipedia.org/wiki/Vehicle_registration_plate) in Germany).
+Also, city abbreviations are part of the [/data](https://github.com/trovu/trovu/tree/master/data) subdirectory, organized by countries. You are welcome to add abbreviations for new countries. They should follow a system or pattern well-known to the country's citizens (e.g. [vehicle registration plates](https://en.wikipedia.org/wiki/Vehicle_registration_plate) in Germany).
 
 ## Contribute documentation
 
