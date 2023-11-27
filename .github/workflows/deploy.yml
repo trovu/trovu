@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 145-syntax-for-arguments-placeholders-should-be-standard
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
