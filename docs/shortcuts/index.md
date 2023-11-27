@@ -40,13 +40,13 @@ examplekeyword 2:
         - custom
 ```
 
+These attributes serve only for informational purposes, they have no effect on which shortcut is matched to a query:
+
 -   The `title:` can be any string. It will be shown in the list of shortcuts on the homepage.
 -   `description:` can be a longer string. It will be shown in the list of shortcuts when a shortcut is expanded.
 -   `tags:` can be a list of labels.
 
-These attributes serve only for informational purposes. They have no effect on which shortcut is matched to a query.
-
-Read more about other attributes:
+The next attributes matter for matching a query:
 
 -   [`url:`](url.md)
 -   [`include:`](include.md)
