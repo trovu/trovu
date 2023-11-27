@@ -52,7 +52,7 @@ awf 1:
 awort 1:
   deprecated:
     alternative:
-      query: awf {%1}
+      query: awf <1>
       created: '2023-01-10'
 base 1:
   url: http://www.base-search.net/Search/Results?lookfor=<Suche>
@@ -222,12 +222,12 @@ cook 1:
 cs-de 1:
   deprecated:
     alternative:
-      query: cs {%1}
+      query: cs <1>
       created: '2023-04-10'
 csd 1:
   deprecated:
     alternative:
-      query: dcc.cs {%1}
+      query: dcc.cs <1>
       created: '2023-04-10'
 css 1:
   url: http://www.google.de/search?q=site%3Acss4you.de+<query>
@@ -241,7 +241,7 @@ css 1:
 dab 1:
   deprecated:
     alternative:
-      query: bab.da {%1}
+      query: bab.da <1>
       created: '2023-04-10'
 dclj 0:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
@@ -287,12 +287,12 @@ dd 1:
 de-cs 1:
   deprecated:
     alternative:
-      query: cs {%1}
+      query: cs <1>
       created: '2023-04-10'
 denl 1:
   deprecated:
     alternative:
-      query: nl {%1}
+      query: nl <1>
       created: '2023-04-10'
 dnb 1:
   url: https://portal.dnb.de/opac.htm?query=<Suche>&method=simpleSearch
@@ -318,17 +318,17 @@ e 1:
 eld 1:
   deprecated:
     alternative:
-      query: dcc.el {%1}
+      query: dcc.el <1>
       created: '2023-04-10'
 enb 1:
   deprecated:
     alternative:
-      query: beo.en {%1}
+      query: beo.en <1>
       created: '2023-04-10'
 end 1:
   deprecated:
     alternative:
-      query: dcc.en {%1}
+      query: dcc.en <1>
       created: '2023-04-10'
 endung 1:
   url: http://www.endungen.de/ResultList/ResultList.aspx?searchExtension=<Dateieindung>&searchPlatform=win;mac;unix;os2&searchMode=contains
@@ -342,37 +342,37 @@ endung 1:
 eni 1:
   deprecated:
     alternative:
-      query: lge.en {%1}
+      query: lge.en <1>
       created: '2023-03-12'
 enp 1:
   deprecated:
     alternative:
-      query: pns.en {%1}
+      query: pns.en <1>
       created: '2023-04-10'
 es-pons 1:
   deprecated:
     alternative:
-      query: pns.es {%1}
+      query: pns.es <1>
       created: '2023-04-10'
 esb 1:
   deprecated:
     alternative:
-      query: bab.es {%1}
+      query: bab.es <1>
       created: '2023-04-10'
 esd 1:
   deprecated:
     alternative:
-      query: dcc.es {%1}
+      query: dcc.es <1>
       created: '2023-04-10'
 esi 1:
   deprecated:
     alternative:
-      query: lge.es {%1}
+      query: lge.es <1>
       created: '2023-03-12'
 esp 1:
   deprecated:
     alternative:
-      query: pns.es {%1}
+      query: pns.es <1>
       created: '2023-04-10'
 fball 1:
   url: https://fireball.com/search?q=<suchbegriff>
@@ -436,12 +436,12 @@ fmb 2:
 fr-pons 1:
   deprecated:
     alternative:
-      query: pns.fr {%1}
+      query: pns.fr <1>
       created: '2023-04-10'
 frb 1:
   deprecated:
     alternative:
-      query: bab.fr {%1}
+      query: bab.fr <1>
       created: '2023-04-10'
 frbuch 0:
   url: http://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm
@@ -459,17 +459,17 @@ frbuch 1:
 frd 1:
   deprecated:
     alternative:
-      query: dcc.fr {%1}
+      query: dcc.fr <1>
       created: '2023-04-10'
 fri 1:
   deprecated:
     alternative:
-      query: lge.fr {%1}
+      query: lge.fr <1>
       created: '2023-03-12'
 frp 1:
   deprecated:
     alternative:
-      query: pns.fr {%1}
+      query: pns.fr <1>
       created: '2023-04-10'
 frv 1:
   url: https://de.forvo.com/search/<word>/
@@ -616,12 +616,12 @@ htp 0:
 hud 1:
   deprecated:
     alternative:
-      query: dcc.hu {%1}
+      query: dcc.hu <1>
       created: '2023-04-10'
 hup 1:
   deprecated:
     alternative:
-      query: pns.hu {%1}
+      query: pns.hu <1>
       created: '2023-04-10'
 hwho 1:
   url: http://www.heise.de/netze/tools?rm=whois&plugin=<URL>
@@ -646,17 +646,17 @@ isbn 1:
 itb 1:
   deprecated:
     alternative:
-      query: bab.it {%1}
+      query: bab.it <1>
       created: '2023-04-10'
 itd 1:
   deprecated:
     alternative:
-      query: dcc.it {%1}
+      query: dcc.it <1>
       created: '2023-04-10'
 itp 1:
   deprecated:
     alternative:
-      query: pns.it {%1}
+      query: pns.it <1>
       created: '2023-04-10'
 kam 1:
   url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search=<Suche>
@@ -696,7 +696,7 @@ kw 2:
 lad 1:
   deprecated:
     alternative:
-      query: dcc.la {%1}
+      query: dcc.la <1>
       created: '2023-04-10'
 last 1:
   url: http://www.last.fm/search?setlang=de&q=<artist>
@@ -710,7 +710,7 @@ last 1:
 leo 1:
   deprecated:
     alternative:
-      query: leo.en {%1}
+      query: leo.en <1>
       created: '2023-03-12'
 lobby 0:
   url: http://lobbycontrol.de/
@@ -770,12 +770,12 @@ nds 1:
 nld 1:
   deprecated:
     alternative:
-      query: dcc.nl {%1}
+      query: dcc.nl <1>
       created: '2023-04-10'
 nlde 1:
   deprecated:
     alternative:
-      query: nl {%1}
+      query: nl <1>
       created: '2023-04-10'
 ntv 0:
   url: http://www.n-tv.de
@@ -850,42 +850,42 @@ ot? 0:
 plb 1:
   deprecated:
     alternative:
-      query: bab.pl {%1}
+      query: bab.pl <1>
       created: '2023-04-10'
 pld 1:
   deprecated:
     alternative:
-      query: dcc.pl {%1}
+      query: dcc.pl <1>
       created: '2023-04-10'
 pli 1:
   deprecated:
     alternative:
-      query: lge.pl {%1}
+      query: lge.pl <1>
       created: '2023-04-10'
 plp 1:
   deprecated:
     alternative:
-      query: pns.pl {%1}
+      query: pns.pl <1>
       created: '2023-04-10'
 ptb 1:
   deprecated:
     alternative:
-      query: beo.pt {%1}
+      query: beo.pt <1>
       created: '2023-04-10'
 ptd 1:
   deprecated:
     alternative:
-      query: dcc.pt {%1}
+      query: dcc.pt <1>
       created: '2023-04-10'
 pti 1:
   deprecated:
     alternative:
-      query: lge.pt {%1}
+      query: lge.pt <1>
       created: '2023-03-12'
 ptp 1:
   deprecated:
     alternative:
-      query: pns.pt {%1}
+      query: pns.pt <1>
       created: '2023-04-10'
 qa 1:
   url: https://lite.qwant.com/?q=<query>
@@ -956,12 +956,12 @@ rm 1:
 rub 1:
   deprecated:
     alternative:
-      query: bab.ru {%1}
+      query: bab.ru <1>
       created: '2023-04-10'
 rud 1:
   deprecated:
     alternative:
-      query: dcc.ru {%1}
+      query: dcc.ru <1>
       created: '2023-04-10'
 rundschau 1:
   url: https://www.fr.de/suche/?qr=<Suche>
@@ -974,7 +974,7 @@ rundschau 1:
 rup 1:
   deprecated:
     alternative:
-      query: pns.ru {%1}
+      query: pns.ru <1>
       created: '2023-04-10'
 sc 1:
   url: http://www.scienceticker.info/index.php?s=<Suche>&sc
@@ -1071,12 +1071,12 @@ stupi 1:
 svb 1:
   deprecated:
     alternative:
-      query: bab.sv {%1}
+      query: bab.sv <1>
       created: '2023-04-10'
 svd 1:
   deprecated:
     alternative:
-      query: dcc.sv {%1}
+      query: dcc.sv <1>
       created: '2023-04-10'
 swb 0:
   url: http://www.schwaebisches-woerterbuch.de/
@@ -1147,12 +1147,12 @@ tomtouche 0:
 trb 1:
   deprecated:
     alternative:
-      query: bab.tr {%1}
+      query: bab.tr <1>
       created: '2023-04-10'
 trd 1:
   deprecated:
     alternative:
-      query: dcc.tr {%1}
+      query: dcc.tr <1>
       created: '2023-04-10'
 ts 0:
   url: http://www.tagesschau.de/

@@ -39,7 +39,7 @@ cong 1:
 dei 1:
   deprecated:
     alternative:
-      query: lge.de {%1}
+      query: lge.de <1>
       created: '2023-04-10'
 dict 1:
   url: http://dictionary.reference.com/browse/<query>
@@ -68,17 +68,17 @@ edram 1:
 esi 1:
   deprecated:
     alternative:
-      query: lge.es {%1}
+      query: lge.es <1>
       created: '2023-04-10'
 esp 1:
   deprecated:
     alternative:
-      query: pns.es {%1}
+      query: pns.es <1>
       created: '2023-04-10'
 frp 1:
   deprecated:
     alternative:
-      query: pns.fr {%1}
+      query: pns.fr <1>
       created: '2023-04-10'
 gfp 0:
   url: http://german-foreign-policy.com/en/news/

@@ -20,7 +20,7 @@ frv 1:
 lar 1:
   deprecated:
     alternative:
-      query: lrs {%1}
+      query: lrs <1>
       created: '2023-04-10'
 last 1:
   url: http://www.last.fm/search?setlang=fr&q=<artist>

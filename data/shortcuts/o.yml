@@ -1107,7 +1107,7 @@ couch 0:
 couch 1:
   deprecated:
     alternative:
-      query: csf {%1}
+      query: csf <1>
     created: '2023-01-23'
 cpan 0:
   url: https://metacpan.org/
@@ -1264,7 +1264,7 @@ csdblp 0:
 csdblp 1:
   deprecated:
     alternative:
-      query: dblp {%1}
+      query: dblp <1>
     created: '2023-08-31'
 csf 0:
   url: https://www.couchsurfing.com
@@ -1595,7 +1595,7 @@ debw 1:
 deen 1:
   deprecated:
     alternative:
-      query: de.en {%1}
+      query: de.en <1>
       created: '2023-04-10'
 deep 1:
   url: http://www.deepdyve.com/search?query=<query>
@@ -1669,7 +1669,7 @@ di 1:
 dic 1:
   deprecated:
     alternative:
-      query: de.en {%1}
+      query: de.en <1>
       created: '2023-04-10'
 diff 1:
   url: http://www.differencebetween.net/search/?cx=partner-pub-1911891147296207%3Aw80z4hjpu14&cof=FORID%3A9&ie=ISO-8859-1&q=<query>&sa=Search
@@ -2329,7 +2329,7 @@ enr 1:
 enzh 1:
   deprecated:
     alternative:
-      query: en.zh {%1}
+      query: en.zh <1>
       created: '2023-04-10'
 eo 0:
   include:
@@ -2512,7 +2512,7 @@ fa 1:
 faust 1:
   deprecated:
     alternative:
-      query: .ch.faust {%1}
+      query: .ch.faust <1>
     created: '2023-01-15'
 fb 0:
   url: https://www.facebook.com/
@@ -2547,12 +2547,12 @@ fbe 1:
 fbev 1:
   deprecated:
     alternative:
-      query: fbe {%1}
+      query: fbe <1>
     created: '2023-01-15'
 fbf 1:
   deprecated:
     alternative:
-      query: fbpe {%1}
+      query: fbpe <1>
     created: '2023-01-15'
 fbg 1:
   url: https://www.facebook.com/search/groups/?q=<groups>
@@ -2566,7 +2566,7 @@ fbg 1:
 fbgr 1:
   deprecated:
     alternative:
-      query: fbg {%1}
+      query: fbg <1>
     created: '2023-01-15'
 fbi 0:
   deprecated:
@@ -2616,7 +2616,7 @@ fbook 0:
 fbook 1:
   deprecated:
     alternative:
-      query: fb {%1}
+      query: fb <1>
     created: '2023-01-15'
 fbot 1:
   url: http://www.fastbot.de/index.php?query=<query>
@@ -3092,12 +3092,12 @@ fr 1:
 fr-an 1:
   deprecated:
     alternative:
-      query: fr.en {%1}
+      query: fr.en <1>
       created: '2023-04-10'
 frde 1:
   deprecated:
     alternative:
-      query: fr.de {%1}
+      query: fr.de <1>
       created: '2023-04-10'
 freedb 1:
   url: http://www.freedb.org/freedb_search.php?words=<query>&allfields=NO&fields=artist&fields=title&allcats=YES&grouping=none&x=0&y=0
@@ -3136,7 +3136,7 @@ frf 1:
 frsv 1:
   deprecated:
     alternative:
-      query: fr.sv {%1}
+      query: fr.sv <1>
       created: '2023-04-10'
 frv 1:
   url: https://forvo.com/search/<word>/
@@ -4591,7 +4591,7 @@ ii 1:
 ikeanl 1:
   deprecated:
     alternative:
-      query: .nl.ikea {%1}
+      query: .nl.ikea <1>
     created: '2023-01-22'
 imdb 0:
   url: http://www.imdb.com
@@ -5158,7 +5158,7 @@ laredoute 1:
 larousse 1:
   deprecated:
     alternative:
-      query: fr.lrs {%1}
+      query: fr.lrs <1>
       created: '2023-04-10'
 last 0:
   url: http://www.last.fm/
@@ -5239,12 +5239,12 @@ le 0:
 leo 1:
   deprecated:
     alternative:
-      query: leo.en {%1}
+      query: leo.en <1>
       created: '2023-04-10'
 leo_es 1:
   deprecated:
     alternative:
-      query: leo.es {%1}
+      query: leo.es <1>
       created: '2023-04-10'
 lg 0:
   include:
@@ -5280,12 +5280,12 @@ lin 1:
 linfr 1:
   deprecated:
     alternative:
-      query: lge.fr {%1}
+      query: lge.fr <1>
       created: '2023-04-10'
 linguee 1:
   deprecated:
     alternative:
-      query: lge.en {%1}
+      query: lge.en <1>
       created: '2023-04-10'
 lintian 1:
   url: http://lintian.debian.org/tags/<query>.html
@@ -6627,7 +6627,7 @@ pt 1:
 pt-pons 1:
   deprecated:
     alternative:
-      query: pns.pt {%1}
+      query: pns.pt <1>
       created: '2023-04-10'
 pubchem 1:
   url: http://www.ncbi.nlm.nih.gov/pccompound/?term=<compound>
@@ -6865,7 +6865,7 @@ r2r 2:
 rae 1:
   deprecated:
     alternative:
-      query: es.rae {%1}
+      query: es.rae <1>
       created: '2023-04-10'
 rails 0:
   url: http://apidock.com/rails/
@@ -7445,7 +7445,7 @@ so 1:
 soa 1:
   deprecated:
     alternative:
-      query: sofa {%1}
+      query: sofa <1>
       created: '2023-05-27'
 sof 0:
   url: http://stackoverflow.com/
@@ -7665,7 +7665,7 @@ sv 1:
 svfr 1:
   deprecated:
     alternative:
-      query: fr.sv {%1}
+      query: fr.sv <1>
       created: '2023-04-10'
 sw 0:
   include:
@@ -7918,7 +7918,7 @@ tik 1:
 tiktok 1:
   deprecated:
     alternative:
-      query: tiku {%1}
+      query: tiku <1>
     created: '2023-01-11'
 tiku 1:
   url: https://www.tiktok.com/@<user>
@@ -7969,7 +7969,7 @@ timer 1:
 timestamp 1:
   deprecated:
     alternative:
-      query: tst {%1}
+      query: tst <1>
     created: '2023-01-18'
 tinyurl 0:
   url: http://tinyurl.com/
@@ -9650,7 +9650,7 @@ zam 1:
 zar 1:
   deprecated:
     alternative:
-      query: en.tr {%1}
+      query: en.tr <1>
       created: '2023-04-10'
 zattoo 0:
   url: http://watch.zattoo.com
@@ -9704,7 +9704,7 @@ zh 1:
 zhen 1:
   deprecated:
     alternative:
-      query: en.zh {%1}
+      query: en.zh <1>
       created: '2023-04-11'
 zhr 1:
   url: http://en.wiktionary.org/wiki/Index:Chinese_radical/<radical>
