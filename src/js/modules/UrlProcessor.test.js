@@ -141,3 +141,9 @@ test('UrlProcessor.processAttributeEncoding iso-8859-1', async () => {
     UrlProcessor.processAttributeEncoding({ encoding: 'iso-8859-1' }, 'ÄÖÜäöü'),
   ).toEqual('%C4%D6%DC%E4%F6%FC');
 });
+
+test('UrlProcessor.processAttributeEncoding none', async () => {
+  expect(
+    UrlProcessor.processAttributeEncoding({ encoding: 'none' }, 'ÄÖÜäöü'),
+  ).toEqual('ÄÖÜäöü');
+});
