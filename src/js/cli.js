@@ -89,8 +89,8 @@ function migratePlaceholders() {
               newUrl = newUrl.replace(match, newPlaceholderYamlBrackets);
             }
           }
-          shortcut.url = newUrl;
         }
+        shortcut.url = newUrl;
       }
     }
     DataManager.write(data);
