@@ -51,6 +51,13 @@ function migratePlaceholders() {
       if (shortcut.url) {
         shortcut.url = replacePlaceholders(shortcut.url, namespace, key);
       }
+      if (shortcut.include && shortcut.include.key) {
+        shortcut.include.key = replacePlaceholders(
+          shortcut.include.key,
+          namespace,
+          key,
+        );
+      }
     }
     DataManager.write(data);
   }
