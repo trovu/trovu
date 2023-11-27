@@ -222,14 +222,6 @@ export default class Env {
   async getDefaultLanguageAndCountry() {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
-    if (!country) {
-      try {
-        country = await this.getCountryFromIp();
-      } catch (error) {
-        // TODO: Log about error, but don't stop.
-      }
-    }
-
     // Set defaults.
     language = language || 'en';
     country = country || 'us';
@@ -264,24 +256,6 @@ export default class Env {
   getNavigatorLanguage() {
     const languageStr = navigator.language;
     return languageStr;
-  }
-
-  /**
-   * Get the country from the IP address.
-   *
-   * @return {string} country - The country as ISO 3166‑1 alpha-2 code
-   */
-  async getCountryFromIp() {
-    const ipInfoText = await this.fetchDbIp();
-    const ipInfo = JSON.parse(ipInfoText);
-    const country = ipInfo.countryCode;
-    return country;
-  }
-
-  async fetchDbIp() {
-    const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
-    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, this);
-    return ipInfoText;
   }
 
   /**
