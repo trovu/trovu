@@ -4,7 +4,7 @@ Includes allow to use the same shortcut properties in different shortcuts. They 
 
 ## Simple includes
 
-Includes are defined with `include:`. For example, [dcm](https://github.com/trovu/trovu-data/tree/master/shortcuts/dcm.yml) contains:
+Includes are defined with `include:`. For example, [dcm](https://github.com/trovu/trovu/tree/master/data/shortcuts/dcm.yml) contains:
 
     de-en 1:
       url: https://www.dict.com/german-english/{%word}
@@ -55,7 +55,7 @@ This can for example be set in one's user settings, to ensure using leo.org as t
 
 ## Multiple include propositions
 
-`include:` may instead of only one `key:` (and `namespace:`) also contain several ones. For instance, in [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) we have:
+`include:` may instead of only one `key:` (and `namespace:`) also contain several ones. For instance, in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml) we have:
 
     ar 1:
       include:
@@ -72,7 +72,7 @@ This can for example be set in one's user settings, to ensure using leo.org as t
       - key: ar 1
         namespace: pka
 
-This shortcut for an Arabic dictionary tries first to include from [ard](https://github.com/trovu/trovu-data/tree/master/shortcuts/ard.yml), the namespace for arabdict.com. And there also exists:
+This shortcut for an Arabic dictionary tries first to include from [ard](https://github.com/trovu/trovu/tree/master/data/shortcuts/ard.yml), the namespace for arabdict.com. And there also exists:
 
     ar 1:
       include:
@@ -82,9 +82,9 @@ However, this namespace only contains Arabic dictionaries for a few languages (`
 
 If the user's language is e.g. `pl`, the include process will fail at this point, as there is no `ar-pl 1` in this namespace.
 
-In this case, the process goes back to [o](https://github.com/trovu/trovu-data/tree/master/shortcuts/o.yml) and tries the second entry:
+In this case, the process goes back to [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml) and tries the second entry:
 
       - key: ar 1
         namespace: dcm
 
-As [dcm](https://github.com/trovu/trovu-data/tree/master/shortcuts/dcm.yml) does contain `ar-pl 1`, this inclusion succeeds, and the Arabic dictionary is taken from dict.com.
+As [dcm](https://github.com/trovu/trovu/tree/master/data/shortcuts/dcm.yml) does contain `ar-pl 1`, this inclusion succeeds, and the Arabic dictionary is taken from dict.com.

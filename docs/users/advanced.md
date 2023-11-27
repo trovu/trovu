@@ -26,7 +26,7 @@ namespaces:
 
 This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use. Every entry may be either
 
--   a string: Then it refers to an (official) site namespace, i.e. one in the [trovu-data](https://github.com/trovu/trovu-data) repository. Shortcuts in there are curated by the Trovu community.
+-   a string: Then it refers to an (official) site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts in there are curated by the Trovu community.
 -   key/value pairs, then they refer to a custom namespace, e.g. your (or someone else's) user namespace in Github. Every entry must contain:
     -   `github:` A Github user name, or a dot
     -   (optional) `name:` Some custom name (default: value from `github:`)

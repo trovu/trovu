@@ -1,6 +1,6 @@
 # Content policy
 
-This page is about which shortcuts may be in the **curated repository** [trovu-data](https://github.com/trovu/trovu-data), and how they should look like.
+This policy is for our **[curated shortcuts](https://github.com/trovu/trovu/tree/master/data/shortcuts)**, and how they should look like.
 
 Note that you can [add any shortcut to your user repository](../users/advanced.md#personal-shortcuts), completely ignoring this policy.
 
