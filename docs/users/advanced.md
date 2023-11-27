@@ -61,41 +61,4 @@ For shortcuts that use `{$country}` in their URL. Works similarly as `{$language
 
 ## Personal shortcuts
 
-Add personal shortcuts to `shortcuts.yml`.
-
-Your shortcuts are an associative array, with `KEYWORD ARGUMENT_COUNT` as its key. Keys must be unique.
-
-For the value, there is a short and a long notation possible.
-
-### Short notation
-
-This shortcut will match for `examplekeyword` with no arguments:
-
-```yaml
-examplekeyword 0: http://www.example.com/
-```
-
-This shortcut will match for `examplekeyword foo`, so for the same keyword but with one argument:
-
-```yaml
-examplekeyword 1: http://www.example.com/?q={%query}
-```
-
-And with more arguments: `examplekeyword foo, bar`:
-
-```yaml
-examplekeyword 2: http://www.example.com/?q={%query}&p={%puery}
-```
-
-### Long notation
-
-In the long notation, you can also define title, description and tags:
-
-```yaml
-examplekeyword 2:
-    url: http://www.example.com/?q={%query}&p={%puery}
-    title: Custom shortcut
-    description: My custom shortcut with the keyword examplekeyword and 2 arguments.
-    tags:
-        - example
-```
+Add personal [shortcuts](../shortcuts/index.md) to `shortcuts.yml`.
