@@ -20,6 +20,8 @@ program
 program
   .command('migrate-placeholders')
   .description('Migrate custom placeholder format to YAML ')
+  .option('-s, --shortcuts <path>', 'path to shortcuts.yml')
+  .option('-f, --filter <string>', 'only apply to files containing <string>')
   .action(migratePlaceholders);
 
 program.parse();
