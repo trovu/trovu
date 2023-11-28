@@ -2,7 +2,7 @@
 
 ## fill-and-submit
 
-Userscript for autofilling and submitting forms on target websites. This may help when queries cannot be passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by Javascript.
+Userscript for autofilling and submitting forms on target websites. This may help when queries cannot be passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by JavaScript.
 
 ### For users
 
@@ -21,7 +21,7 @@ Userscript for autofilling and submitting forms on target websites. This may hel
 
 #### Creating a shortcut that use the userscript
 
-The shortcut URL should look like this (linebreaks only for clarity):
+The shortcut URL should look like this (line breaks only for clarity):
 
     https://patentscope.wipo.int/search/en/search.jsf#
       trovu[fill][%23simpleSearchForm\:fpSearch\:input]=<query>&

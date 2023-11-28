@@ -1,1 +1,1 @@
-This page moved to [url](url.md).
+This page moved to [/url](url.md).

@@ -16,12 +16,12 @@ Now, let's look at the processing of a query:
 
 1. A query comes in, e.g. `g foobar`.
 1. The current namespace setting is `o,de,.de`.
-1. Given the namespaces, all the shortcuts are fetched from their YAML files into a Javascript variable in the client.
+1. Given the namespaces, all the shortcuts are fetched from their YAML files into a JavaScript variable in the client.
 
     - The fetch() call checks also if the files are already in the browser cache, and only requests them from remote if they are not cached yet.
     - To reload the shortcuts, use the `reload` command (see below).
 
-1. The query is parsed – in the client by Javascript – into
+1. The query is parsed – in the client by JavaScript – into
     - keyword: `g`
     - argument: `foobar`
 1. Based on the query and the namespace settings, the loaded shortcuts are searched whether they match a query with the keyword `g` and one argument, i.e. if they contain a shortcut keyed with `g 1`.
