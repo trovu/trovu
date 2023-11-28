@@ -49,7 +49,11 @@ function migratePlaceholders(options) {
   const data = DataManager.load(dataPath, shortcutsPath, typesPath, filter);
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
-      const shortcut = data.shortcuts[namespace][key];
+      let shortcut = data.shortcuts[namespace][key];
+      // if shortcut typeoff string, convert to object
+      if (typeof shortcut === 'string') {
+        shortcut = replacePlaceholders(shortcut, namespace, key);
+      }
       if (shortcut.url) {
         shortcut.url = replacePlaceholders(shortcut.url, namespace, key);
       }
@@ -68,6 +72,7 @@ function migratePlaceholders(options) {
           key,
         );
       }
+      data.shortcuts[namespace][key] = shortcut;
     }
     DataManager.write(data, dataPath, shortcutsPath, typesPath);
   }
