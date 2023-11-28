@@ -17,6 +17,8 @@ program
   .description('Normalize YAML data files')
   .action(normalizeData);
 
+// Call for user data:
+// node -r esm src/js/cli.js migrate-placeholders -d /Users/jrg/dta/int/cde/web/tro/trovu-data-user/ -s '' -f shortcuts
 program
   .command('migrate-placeholders')
   .description('Migrate custom placeholder format to YAML ')
