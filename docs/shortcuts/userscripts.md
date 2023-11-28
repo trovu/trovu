@@ -21,7 +21,7 @@ Userscript for autofilling and submitting forms on target websites. This may hel
 
 #### Creating a shortcut that use the userscript
 
-The shortcut URL should look like this (line breaks only for clarity):
+The [shortcut URL](url.md) should look like this (line breaks only for clarity):
 
     https://patentscope.wipo.int/search/en/search.jsf#
       trovu[fill][%23simpleSearchForm\:fpSearch\:input]=<query>&
