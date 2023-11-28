@@ -63,7 +63,16 @@ export default class DataManager {
    */
   static readYmls(ymlDirPath, filter = false) {
     const dataByFileRoot = {};
-    let fileNames = fs.readdirSync(ymlDirPath);
+    let fileNames = [];
+    try {
+      fileNames = fs.readdirSync(ymlDirPath);
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        console.log(`Warning: No such directory: ${ymlDirPath}`);
+      } else {
+        throw err;
+      }
+    }
     // Filter files by filter.
     if (filter) {
       fileNames = fileNames.filter((fileName) => {
