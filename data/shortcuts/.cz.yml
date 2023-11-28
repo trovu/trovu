@@ -1,5 +1,5 @@
 alza 1:
-  url: https://www.alza.cz/search.htm?exps={%výraz}
+  url: https://www.alza.cz/search.htm?exps=<výraz>
   title: Alza.cz
   tags:
   - seznam
@@ -8,7 +8,7 @@ alza 1:
   - arguments: televizor
     description: Hledej "televizor"
 ba 1:
-  url: https://www.bazos.cz/search.php?hledat={%výraz}
+  url: https://www.bazos.cz/search.php?hledat=<výraz>
   title: Bazoš.cz
   tags:
   - bazoš
@@ -16,7 +16,7 @@ ba 1:
   - arguments: vrtačka
     description: Hledej použitou vrtačku
 g 1:
-  url: https://www.google.cz/search?hl={$language}&q={%query}&ie=utf-8
+  url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.cz
   tags:
   - google
@@ -25,7 +25,7 @@ g 1:
   - arguments: praha
     description: Hledat "praha" Googlem
 idos 2:
-  url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&submit=1&pt=true
+  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
   title: IDOS Jízdní řády
   tags:
   - idos
@@ -35,7 +35,7 @@ idos 2:
   - arguments: praha, brno
     description: Vlak nebo bus z Prahy do Brna
 idos 3:
-  url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&submit=1&pt=true
+  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&submit=1&pt=true'
   title: IDOS Jízdní řády
   tags:
   - idos
@@ -45,7 +45,7 @@ idos 3:
   - arguments: praha, brno, 20
     description: Vlak nebo bus z Prahy do Brna ve 20:00h
 idos 4:
-  url: http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f={%odkud|type=city}&t={%kam|type=city}&time={%čas|type=time|output=HH:mm}&date={%datum|type=date|output=DD.MM.YYYY}&submit=1&pt=true
+  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>&submit=1&pt=true'
   title: IDOS Jízdní řády
   tags:
   - idos
@@ -65,7 +65,7 @@ ikea 0:
   - arguments: matrace
     description: Hledej matrace
 ikea 1:
-  url: http://www.ikea.com/cz/cs/search/?q={%query}
+  url: http://www.ikea.com/cz/cs/search/?q=<query>
   title: IKEA Česko
   tags:
   - furniture
@@ -75,7 +75,7 @@ ikea 1:
   - arguments: matrace
     description: Hledej matrace
 m 1:
-  url: https://mapy.cz/zakladni?q={%místo}
+  url: https://mapy.cz/zakladni?q=<místo>
   title: Mapy.cz
   tags:
   - maps
@@ -84,7 +84,7 @@ m 1:
   - arguments: praha
     description: Praha na mapy.cz
 m 2:
-  url: https://mapy.cz/zakladni?q={%město|type=city}%2C%20{%místo}
+  url: 'https://mapy.cz/zakladni?q=<město: {type: city}>%2C%20<místo>'
   title: Mapy.cz
   tags:
   - maps
@@ -93,7 +93,7 @@ m 2:
   - arguments: a, lazarska
     description: Lazarská v Praze na mapy.cz
 mapy 1:
-  url: https://mapy.cz/zakladni?q={%místo}
+  url: https://mapy.cz/zakladni?q=<místo>
   title: Mapy.cz
   tags:
   - maps
@@ -102,7 +102,7 @@ mapy 1:
   - arguments: praha
     description: Praha na mapy.cz
 seznam 1:
-  url: http://search.seznam.cz/search.cgi?w={%query}
+  url: http://search.seznam.cz/search.cgi?w=<query>
   title: Seznam
   tags:
   - seznam
@@ -117,7 +117,7 @@ tv 0:
   - centrum
   - tv
 u 1:
-  url: https://uloz.to/hledej?q={%výraz}
+  url: https://uloz.to/hledej?q=<výraz>
   title: Ulož.to
   tags:
   - download
@@ -126,7 +126,7 @@ u 1:
   - arguments: free music
     description: Hledej "free music"
 z 1:
-  url: https://www.zbozi.cz/hledej/?q={%výraz}
+  url: https://www.zbozi.cz/hledej/?q=<výraz>
   title: Zboží.cz
   tags:
   - seznam
@@ -135,7 +135,7 @@ z 1:
   - arguments: televizor
     description: Hledej "televizor"
 zbozi 1:
-  url: https://www.zbozi.cz/hledej/?q={%výraz}
+  url: https://www.zbozi.cz/hledej/?q=<výraz>
   title: Zboží.cz
   tags:
   - seznam

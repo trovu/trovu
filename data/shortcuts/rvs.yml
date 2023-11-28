@@ -1,9 +1,9 @@
 ar 0:
   include:
-    key: ar-{$language} 0
+    key: ar-<$language> 0
 ar 1:
   include:
-    key: ar-{$language} 1
+    key: ar-<$language> 1
 ar-fr 0:
   url: https://dictionnaire.reverso.net/francais-arabe/
   title: Arabe-Français (Reverso)
@@ -13,7 +13,7 @@ ar-fr 0:
   - french
   - language
 ar-fr 1:
-  url: https://dictionnaire.reverso.net/francais-arabe/{%word}
+  url: https://dictionnaire.reverso.net/francais-arabe/<word>
   title: Arabe-Français (Reverso)
   tags:
   - arabic
@@ -27,10 +27,10 @@ ar-fr 1:
     description: Traduction en arabe de "arbre"
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-fr 0:
   url: https://dictionnaire.reverso.net/francais-allemand/
   title: Allemand-Français (Reverso)
@@ -40,7 +40,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://dictionnaire.reverso.net/francais-allemand/{%word}
+  url: https://dictionnaire.reverso.net/francais-allemand/<word>
   title: Allemand-Français (Reverso)
   tags:
   - dictionary
@@ -54,10 +54,10 @@ de-fr 1:
     description: Traduction en allemand de "arbre"
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-fr 0:
   url: https://dictionnaire.reverso.net/francais-anglais/
   title: Anglais-Français (Reverso)
@@ -67,7 +67,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://dictionnaire.reverso.net/francais-anglais/{%word}
+  url: https://dictionnaire.reverso.net/francais-anglais/<word>
   title: Anglais-Français (Reverso)
   tags:
   - dictionary
@@ -81,10 +81,10 @@ en-fr 1:
     description: Traduction en anglais de "arbre"
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-fr 0:
   url: https://dictionnaire.reverso.net/francais-espagnol/
   title: Espagnol-Français (Reverso)
@@ -94,7 +94,7 @@ es-fr 0:
   - language
   - spanish
 es-fr 1:
-  url: https://dictionnaire.reverso.net/francais-espagnol/{%word}
+  url: https://dictionnaire.reverso.net/francais-espagnol/<word>
   title: Espagnol-Français (Reverso)
   tags:
   - dictionary
@@ -108,10 +108,10 @@ es-fr 1:
     description: Traduction en espagnol de "arbre"
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-ar 0:
   title: الفرنسية-العربية (Reverso)
   include:
@@ -173,7 +173,7 @@ fr-he 0:
   - hebrew
   - language
 fr-he 1:
-  url: https://dictionnaire.reverso.net/francais-hebreu/{%word}
+  url: https://dictionnaire.reverso.net/francais-hebreu/<word>
   title: צרפתית-עברית (Reverso)
   tags:
   - dictionary
@@ -194,7 +194,7 @@ fr-it 0:
   - italian
   - language
 fr-it 1:
-  url: https://dictionnaire.reverso.net/francais-italien/{%word}
+  url: https://dictionnaire.reverso.net/francais-italien/<word>
   title: Francese-Italiano (Reverso)
   tags:
   - dictionary
@@ -215,7 +215,7 @@ fr-ja 0:
   - japanese
   - language
 fr-ja 1:
-  url: https://dictionnaire.reverso.net/francais-japonais/{%word}
+  url: https://dictionnaire.reverso.net/francais-japonais/<word>
   title: フランス語-日本語 (Reverso)
   tags:
   - dictionary
@@ -236,7 +236,7 @@ fr-ko 0:
   - korean
   - language
 fr-ko 1:
-  url: https://dictionnaire.reverso.net/francais-coreen/{%word}
+  url: https://dictionnaire.reverso.net/francais-coreen/<word>
   title: 프랑스어-한국어 (Reverso)
   tags:
   - dictionary
@@ -257,7 +257,7 @@ fr-nl 0:
   - french
   - language
 fr-nl 1:
-  url: https://dictionnaire.reverso.net/francais-neerlandais/{%word}
+  url: https://dictionnaire.reverso.net/francais-neerlandais/<word>
   title: Frans-Nederlands (Reverso)
   tags:
   - dictionary
@@ -278,7 +278,7 @@ fr-pl 0:
   - language
   - polish
 fr-pl 1:
-  url: https://dictionnaire.reverso.net/francais-polonais/{%word}
+  url: https://dictionnaire.reverso.net/francais-polonais/<word>
   title: Francuski-Polski (Reverso)
   tags:
   - dictionary
@@ -299,7 +299,7 @@ fr-pt 0:
   - language
   - portuguese
 fr-pt 1:
-  url: https://dictionnaire.reverso.net/francais-portugais/{%word}
+  url: https://dictionnaire.reverso.net/francais-portugais/<word>
   title: Francês-Português (Reverso)
   tags:
   - dictionary
@@ -320,7 +320,7 @@ fr-ro 0:
   - language
   - romanian
 fr-ro 1:
-  url: https://dictionnaire.reverso.net/francais-roumain/{%word}
+  url: https://dictionnaire.reverso.net/francais-roumain/<word>
   title: Franceză-Română (Reverso)
   tags:
   - dictionary
@@ -341,7 +341,7 @@ fr-ru 0:
   - language
   - russian
 fr-ru 1:
-  url: https://dictionnaire.reverso.net/francais-russe/{%word}
+  url: https://dictionnaire.reverso.net/francais-russe/<word>
   title: Французский-Русский (Reverso)
   tags:
   - dictionary
@@ -362,7 +362,7 @@ fr-sv 0:
   - language
   - swedish
 fr-sv 1:
-  url: https://dictionnaire.reverso.net/francais-suedois/{%word}
+  url: https://dictionnaire.reverso.net/francais-suedois/<word>
   title: Franska-Svenska (Reverso)
   tags:
   - dictionary
@@ -383,7 +383,7 @@ fr-tr 0:
   - language
   - turkish
 fr-tr 1:
-  url: https://dictionnaire.reverso.net/francais-turc/{%word}
+  url: https://dictionnaire.reverso.net/francais-turc/<word>
   title: Fransızca-Türkçe (Reverso)
   tags:
   - dictionary
@@ -404,7 +404,7 @@ fr-uk 0:
   - language
   - ukrainian
 fr-uk 1:
-  url: https://dictionnaire.reverso.net/francais-ukrainien/{%word}
+  url: https://dictionnaire.reverso.net/francais-ukrainien/<word>
   title: Французька-Українська (Reverso)
   tags:
   - dictionary
@@ -425,7 +425,7 @@ fr-zh 0:
   - french
   - language
 fr-zh 1:
-  url: https://dictionnaire.reverso.net/francais-chinois/{%word}
+  url: https://dictionnaire.reverso.net/francais-chinois/<word>
   title: 法文-中文 (Reverso)
   tags:
   - chinese
@@ -439,10 +439,10 @@ fr-zh 1:
     description: 法文 的"树"翻译
 he 0:
   include:
-    key: he-{$language} 0
+    key: he-<$language> 0
 he 1:
   include:
-    key: he-{$language} 1
+    key: he-<$language> 1
 he-fr 0:
   title: Hébreu-Français (Reverso)
   include:
@@ -458,10 +458,10 @@ he-fr 1:
     description: Traduction en hébreu de "arbre"
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-fr 0:
   title: Italien-Français (Reverso)
   include:
@@ -477,10 +477,10 @@ it-fr 1:
     description: Traduction en italien de "arbre"
 ja 0:
   include:
-    key: ja-{$language} 0
+    key: ja-<$language> 0
 ja 1:
   include:
-    key: ja-{$language} 1
+    key: ja-<$language> 1
 ja-fr 0:
   title: Japonais-Français (Reverso)
   include:
@@ -496,10 +496,10 @@ ja-fr 1:
     description: Traduction en japonais de "arbre"
 ko 0:
   include:
-    key: ko-{$language} 0
+    key: ko-<$language> 0
 ko 1:
   include:
-    key: ko-{$language} 1
+    key: ko-<$language> 1
 ko-fr 0:
   title: Coréen-Français (Reverso)
   include:
@@ -515,10 +515,10 @@ ko-fr 1:
     description: Traduction en coréen de "arbre"
 nl 0:
   include:
-    key: nl-{$language} 0
+    key: nl-<$language> 0
 nl 1:
   include:
-    key: nl-{$language} 1
+    key: nl-<$language> 1
 nl-fr 0:
   title: Néerlandais-Français (Reverso)
   include:
@@ -534,10 +534,10 @@ nl-fr 1:
     description: Traduction en néerlandais de "arbre"
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-fr 0:
   title: Polonais-Français (Reverso)
   include:
@@ -553,10 +553,10 @@ pl-fr 1:
     description: Traduction en polonais de "arbre"
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-fr 0:
   title: Portugais-Français (Reverso)
   include:
@@ -572,10 +572,10 @@ pt-fr 1:
     description: Traduction en portugais de "arbre"
 ro 0:
   include:
-    key: ro-{$language} 0
+    key: ro-<$language> 0
 ro 1:
   include:
-    key: ro-{$language} 1
+    key: ro-<$language> 1
 ro-fr 0:
   title: Roumain-Français (Reverso)
   include:
@@ -591,10 +591,10 @@ ro-fr 1:
     description: Traduction en roumain de "arbre"
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-fr 0:
   title: Russe-Français (Reverso)
   include:
@@ -610,10 +610,10 @@ ru-fr 1:
     description: Traduction en russe de "arbre"
 sv 0:
   include:
-    key: sv-{$language} 0
+    key: sv-<$language> 0
 sv 1:
   include:
-    key: sv-{$language} 1
+    key: sv-<$language> 1
 sv-fr 0:
   title: Suédois-Français (Reverso)
   include:
@@ -629,10 +629,10 @@ sv-fr 1:
     description: Traduction en suédois de "arbre"
 tr 0:
   include:
-    key: tr-{$language} 0
+    key: tr-<$language> 0
 tr 1:
   include:
-    key: tr-{$language} 1
+    key: tr-<$language> 1
 tr-fr 0:
   title: Turc-Français (Reverso)
   include:
@@ -648,10 +648,10 @@ tr-fr 1:
     description: Traduction en turc de "arbre"
 uk 0:
   include:
-    key: uk-{$language} 0
+    key: uk-<$language> 0
 uk 1:
   include:
-    key: uk-{$language} 1
+    key: uk-<$language> 1
 uk-fr 0:
   title: Ukrainien-Français (Reverso)
   include:
@@ -667,10 +667,10 @@ uk-fr 1:
     description: Traduction en ukrainien de "arbre"
 zh 0:
   include:
-    key: zh-{$language} 0
+    key: zh-<$language> 0
 zh 1:
   include:
-    key: zh-{$language} 1
+    key: zh-<$language> 1
 zh-fr 0:
   title: Chinois-Français (Reverso)
   include:

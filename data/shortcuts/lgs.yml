@@ -1,9 +1,9 @@
 ar 0:
   include:
-    key: ar-{$language} 0
+    key: ar-<$language> 0
 ar 1:
   include:
-    key: ar-{$language} 1
+    key: ar-<$language> 1
 ar-de 0:
   title: Arabisch-Deutsch (Langenscheidt)
   include:
@@ -19,10 +19,10 @@ ar-de 1:
     description: Arabisch-Übersetzung von "baum"
 bg 0:
   include:
-    key: bg-{$language} 0
+    key: bg-<$language> 0
 bg 1:
   include:
-    key: bg-{$language} 1
+    key: bg-<$language> 1
 bg-de 0:
   title: Bulgarisch-Deutsch (Langenscheidt)
   include:
@@ -38,10 +38,10 @@ bg-de 1:
     description: Bulgarisch-Übersetzung von "baum"
 cs 0:
   include:
-    key: cs-{$language} 0
+    key: cs-<$language> 0
 cs 1:
   include:
-    key: cs-{$language} 1
+    key: cs-<$language> 1
 cs-de 0:
   title: Tschechisch-Deutsch (Langenscheidt)
   include:
@@ -57,10 +57,10 @@ cs-de 1:
     description: Tschechisch-Übersetzung von "baum"
 da 0:
   include:
-    key: da-{$language} 0
+    key: da-<$language> 0
 da 1:
   include:
-    key: da-{$language} 1
+    key: da-<$language> 1
 da-de 0:
   title: Dänisch-Deutsch (Langenscheidt)
   include:
@@ -76,10 +76,10 @@ da-de 1:
     description: Dänisch-Übersetzung von "baum"
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-ar 0:
   url: https://de.langenscheidt.com/deutsch-arabisch/
   title: الألمانية-العربية (Langenscheidt)
@@ -89,7 +89,7 @@ de-ar 0:
   - german
   - language
 de-ar 1:
-  url: https://de.langenscheidt.com/deutsch-arabisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-arabisch/<word>
   title: الألمانية-العربية (Langenscheidt)
   tags:
   - arabic
@@ -110,7 +110,7 @@ de-bg 0:
   - german
   - language
 de-bg 1:
-  url: https://de.langenscheidt.com/deutsch-bulgarisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-bulgarisch/<word>
   title: Немски-Български (Langenscheidt)
   tags:
   - bulgarian
@@ -131,7 +131,7 @@ de-cs 0:
   - german
   - language
 de-cs 1:
-  url: https://de.langenscheidt.com/deutsch-tschechisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-tschechisch/<word>
   title: Němčina-Čeština (Langenscheidt)
   tags:
   - czech
@@ -152,7 +152,7 @@ de-da 0:
   - german
   - language
 de-da 1:
-  url: https://de.langenscheidt.com/deutsch-daenisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-daenisch/<word>
   title: Tysk-Dansk (Langenscheidt)
   tags:
   - danish
@@ -173,7 +173,7 @@ de-el 0:
   - greek
   - language
 de-el 1:
-  url: https://de.langenscheidt.com/deutsch-griechisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-griechisch/<word>
   title: Γερμανικά-Ελληνικά (Langenscheidt)
   tags:
   - dictionary
@@ -194,7 +194,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://de.langenscheidt.com/deutsch-englisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-englisch/<word>
   title: German-English (Langenscheidt)
   tags:
   - dictionary
@@ -215,7 +215,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://de.langenscheidt.com/deutsch-spanisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-spanisch/<word>
   title: Alemán-Español (Langenscheidt)
   tags:
   - dictionary
@@ -236,7 +236,7 @@ de-fa 0:
   - language
   - persian
 de-fa 1:
-  url: https://de.langenscheidt.com/deutsch-persisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-persisch/<word>
   title: آلمانی-فارسی (Langenscheidt)
   tags:
   - dictionary
@@ -257,7 +257,7 @@ de-fi 0:
   - german
   - language
 de-fi 1:
-  url: https://de.langenscheidt.com/deutsch-finnisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-finnisch/<word>
   title: Saksa-Suomi (Langenscheidt)
   tags:
   - dictionary
@@ -278,7 +278,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://de.langenscheidt.com/deutsch-franzoesisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-franzoesisch/<word>
   title: Allemand-Français (Langenscheidt)
   tags:
   - dictionary
@@ -299,7 +299,7 @@ de-hr 0:
   - german
   - language
 de-hr 1:
-  url: https://de.langenscheidt.com/deutsch-kroatisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-kroatisch/<word>
   title: Njemački-Hrvatski (Langenscheidt)
   tags:
   - croatian
@@ -320,7 +320,7 @@ de-hu 0:
   - hungarian
   - language
 de-hu 1:
-  url: https://de.langenscheidt.com/deutsch-ungarisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-ungarisch/<word>
   title: Német-Magyar (Langenscheidt)
   tags:
   - dictionary
@@ -341,7 +341,7 @@ de-is 0:
   - icelandic
   - language
 de-is 1:
-  url: https://de.langenscheidt.com/deutsch-islaendisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-islaendisch/<word>
   title: Þýska-Íslenska (Langenscheidt)
   tags:
   - dictionary
@@ -362,7 +362,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://de.langenscheidt.com/deutsch-italienisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-italienisch/<word>
   title: Tedesco-Italiano (Langenscheidt)
   tags:
   - dictionary
@@ -383,7 +383,7 @@ de-ja 0:
   - japanese
   - language
 de-ja 1:
-  url: https://de.langenscheidt.com/deutsch-japanisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-japanisch/<word>
   title: ドイツ語-日本語 (Langenscheidt)
   tags:
   - dictionary
@@ -404,7 +404,7 @@ de-la 0:
   - language
   - latin
 de-la 1:
-  url: https://de.langenscheidt.com/deutsch-latein/{%word}
+  url: https://de.langenscheidt.com/deutsch-latein/<word>
   title: Germanica-Latina (Langenscheidt)
   tags:
   - dictionary
@@ -425,7 +425,7 @@ de-nl 0:
   - german
   - language
 de-nl 1:
-  url: https://de.langenscheidt.com/deutsch-niederlaendisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-niederlaendisch/<word>
   title: Duits-Nederlands (Langenscheidt)
   tags:
   - dictionary
@@ -446,7 +446,7 @@ de-no 0:
   - language
   - norwegian
 de-no 1:
-  url: https://de.langenscheidt.com/deutsch-norwegisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-norwegisch/<word>
   title: Tysk-Norsk (Langenscheidt)
   tags:
   - dictionary
@@ -467,7 +467,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://de.langenscheidt.com/deutsch-polnisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-polnisch/<word>
   title: Niemiecki-Polski (Langenscheidt)
   tags:
   - dictionary
@@ -488,7 +488,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://de.langenscheidt.com/deutsch-portugiesisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-portugiesisch/<word>
   title: Alemão-Português (Langenscheidt)
   tags:
   - dictionary
@@ -509,7 +509,7 @@ de-ro 0:
   - language
   - romanian
 de-ro 1:
-  url: https://de.langenscheidt.com/deutsch-rumaenisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-rumaenisch/<word>
   title: Germană-Română (Langenscheidt)
   tags:
   - dictionary
@@ -530,7 +530,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://de.langenscheidt.com/deutsch-russisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-russisch/<word>
   title: Немецкий-Русский (Langenscheidt)
   tags:
   - dictionary
@@ -551,7 +551,7 @@ de-sk 0:
   - language
   - slovak
 de-sk 1:
-  url: https://de.langenscheidt.com/deutsch-slowakisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-slowakisch/<word>
   title: Nemčina-Slovenčina (Langenscheidt)
   tags:
   - dictionary
@@ -572,7 +572,7 @@ de-sl 0:
   - language
   - slovenian
 de-sl 1:
-  url: https://de.langenscheidt.com/deutsch-slowenisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-slowenisch/<word>
   title: Nemščina-Slovenščina (Langenscheidt)
   tags:
   - dictionary
@@ -593,7 +593,7 @@ de-sr 0:
   - language
   - serbian
 de-sr 1:
-  url: https://de.langenscheidt.com/deutsch-serbisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-serbisch/<word>
   title: Немачки-Српски (Langenscheidt)
   tags:
   - dictionary
@@ -614,7 +614,7 @@ de-sv 0:
   - language
   - swedish
 de-sv 1:
-  url: https://de.langenscheidt.com/deutsch-schwedisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-schwedisch/<word>
   title: Tyska-Svenska (Langenscheidt)
   tags:
   - dictionary
@@ -635,7 +635,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://de.langenscheidt.com/deutsch-tuerkisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-tuerkisch/<word>
   title: Almanca-Türkçe (Langenscheidt)
   tags:
   - dictionary
@@ -656,7 +656,7 @@ de-zh 0:
   - german
   - language
 de-zh 1:
-  url: https://de.langenscheidt.com/deutsch-chinesisch/{%word}
+  url: https://de.langenscheidt.com/deutsch-chinesisch/<word>
   title: 德文-中文 (Langenscheidt)
   tags:
   - chinese
@@ -670,10 +670,10 @@ de-zh 1:
     description: 德文 的"树"翻译
 el 0:
   include:
-    key: el-{$language} 0
+    key: el-<$language> 0
 el 1:
   include:
-    key: el-{$language} 1
+    key: el-<$language> 1
 el-de 0:
   title: Griechisch-Deutsch (Langenscheidt)
   include:
@@ -689,10 +689,10 @@ el-de 1:
     description: Griechisch-Übersetzung von "baum"
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (Langenscheidt)
   include:
@@ -708,10 +708,10 @@ en-de 1:
     description: Englisch-Übersetzung von "baum"
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (Langenscheidt)
   include:
@@ -727,10 +727,10 @@ es-de 1:
     description: Spanisch-Übersetzung von "baum"
 fa 0:
   include:
-    key: fa-{$language} 0
+    key: fa-<$language> 0
 fa 1:
   include:
-    key: fa-{$language} 1
+    key: fa-<$language> 1
 fa-de 0:
   title: Persisch-Deutsch (Langenscheidt)
   include:
@@ -746,10 +746,10 @@ fa-de 1:
     description: Persisch-Übersetzung von "baum"
 fi 0:
   include:
-    key: fi-{$language} 0
+    key: fi-<$language> 0
 fi 1:
   include:
-    key: fi-{$language} 1
+    key: fi-<$language> 1
 fi-de 0:
   title: Finnisch-Deutsch (Langenscheidt)
   include:
@@ -765,10 +765,10 @@ fi-de 1:
     description: Finnisch-Übersetzung von "baum"
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (Langenscheidt)
   include:
@@ -784,10 +784,10 @@ fr-de 1:
     description: Französisch-Übersetzung von "baum"
 hr 0:
   include:
-    key: hr-{$language} 0
+    key: hr-<$language> 0
 hr 1:
   include:
-    key: hr-{$language} 1
+    key: hr-<$language> 1
 hr-de 0:
   title: Kroatisch-Deutsch (Langenscheidt)
   include:
@@ -803,10 +803,10 @@ hr-de 1:
     description: Kroatisch-Übersetzung von "baum"
 hu 0:
   include:
-    key: hu-{$language} 0
+    key: hu-<$language> 0
 hu 1:
   include:
-    key: hu-{$language} 1
+    key: hu-<$language> 1
 hu-de 0:
   title: Ungarisch-Deutsch (Langenscheidt)
   include:
@@ -822,10 +822,10 @@ hu-de 1:
     description: Ungarisch-Übersetzung von "baum"
 is 0:
   include:
-    key: is-{$language} 0
+    key: is-<$language> 0
 is 1:
   include:
-    key: is-{$language} 1
+    key: is-<$language> 1
 is-de 0:
   title: Isländisch-Deutsch (Langenscheidt)
   include:
@@ -841,10 +841,10 @@ is-de 1:
     description: Isländisch-Übersetzung von "baum"
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (Langenscheidt)
   include:
@@ -860,10 +860,10 @@ it-de 1:
     description: Italienisch-Übersetzung von "baum"
 ja 0:
   include:
-    key: ja-{$language} 0
+    key: ja-<$language> 0
 ja 1:
   include:
-    key: ja-{$language} 1
+    key: ja-<$language> 1
 ja-de 0:
   title: Japanisch-Deutsch (Langenscheidt)
   include:
@@ -879,10 +879,10 @@ ja-de 1:
     description: Japanisch-Übersetzung von "baum"
 la 0:
   include:
-    key: la-{$language} 0
+    key: la-<$language> 0
 la 1:
   include:
-    key: la-{$language} 1
+    key: la-<$language> 1
 la-de 0:
   title: Latein-Deutsch (Langenscheidt)
   include:
@@ -898,10 +898,10 @@ la-de 1:
     description: Latein-Übersetzung von "baum"
 nl 0:
   include:
-    key: nl-{$language} 0
+    key: nl-<$language> 0
 nl 1:
   include:
-    key: nl-{$language} 1
+    key: nl-<$language> 1
 nl-de 0:
   title: Niederländisch-Deutsch (Langenscheidt)
   include:
@@ -917,10 +917,10 @@ nl-de 1:
     description: Niederländisch-Übersetzung von "baum"
 no 0:
   include:
-    key: no-{$language} 0
+    key: no-<$language> 0
 no 1:
   include:
-    key: no-{$language} 1
+    key: no-<$language> 1
 no-de 0:
   title: Norwegisch-Deutsch (Langenscheidt)
   include:
@@ -936,10 +936,10 @@ no-de 1:
     description: Norwegisch-Übersetzung von "baum"
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (Langenscheidt)
   include:
@@ -955,10 +955,10 @@ pl-de 1:
     description: Polnisch-Übersetzung von "baum"
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (Langenscheidt)
   include:
@@ -974,10 +974,10 @@ pt-de 1:
     description: Portugiesisch-Übersetzung von "baum"
 ro 0:
   include:
-    key: ro-{$language} 0
+    key: ro-<$language> 0
 ro 1:
   include:
-    key: ro-{$language} 1
+    key: ro-<$language> 1
 ro-de 0:
   title: Rumänisch-Deutsch (Langenscheidt)
   include:
@@ -993,10 +993,10 @@ ro-de 1:
     description: Rumänisch-Übersetzung von "baum"
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (Langenscheidt)
   include:
@@ -1012,10 +1012,10 @@ ru-de 1:
     description: Russisch-Übersetzung von "baum"
 sk 0:
   include:
-    key: sk-{$language} 0
+    key: sk-<$language> 0
 sk 1:
   include:
-    key: sk-{$language} 1
+    key: sk-<$language> 1
 sk-de 0:
   title: Slowakisch-Deutsch (Langenscheidt)
   include:
@@ -1031,10 +1031,10 @@ sk-de 1:
     description: Slowakisch-Übersetzung von "baum"
 sl 0:
   include:
-    key: sl-{$language} 0
+    key: sl-<$language> 0
 sl 1:
   include:
-    key: sl-{$language} 1
+    key: sl-<$language> 1
 sl-de 0:
   title: Slowenisch-Deutsch (Langenscheidt)
   include:
@@ -1050,10 +1050,10 @@ sl-de 1:
     description: Slowenisch-Übersetzung von "baum"
 sr 0:
   include:
-    key: sr-{$language} 0
+    key: sr-<$language> 0
 sr 1:
   include:
-    key: sr-{$language} 1
+    key: sr-<$language> 1
 sr-de 0:
   title: Serbisch-Deutsch (Langenscheidt)
   include:
@@ -1069,10 +1069,10 @@ sr-de 1:
     description: Serbisch-Übersetzung von "baum"
 sv 0:
   include:
-    key: sv-{$language} 0
+    key: sv-<$language> 0
 sv 1:
   include:
-    key: sv-{$language} 1
+    key: sv-<$language> 1
 sv-de 0:
   title: Schwedisch-Deutsch (Langenscheidt)
   include:
@@ -1088,10 +1088,10 @@ sv-de 1:
     description: Schwedisch-Übersetzung von "baum"
 tr 0:
   include:
-    key: tr-{$language} 0
+    key: tr-<$language> 0
 tr 1:
   include:
-    key: tr-{$language} 1
+    key: tr-<$language> 1
 tr-de 0:
   title: Türkisch-Deutsch (Langenscheidt)
   include:
@@ -1107,10 +1107,10 @@ tr-de 1:
     description: Türkisch-Übersetzung von "baum"
 zh 0:
   include:
-    key: zh-{$language} 0
+    key: zh-<$language> 0
 zh 1:
   include:
-    key: zh-{$language} 1
+    key: zh-<$language> 1
 zh-de 0:
   title: Chinesisch-Deutsch (Langenscheidt)
   include:

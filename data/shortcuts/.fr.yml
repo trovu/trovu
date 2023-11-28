@@ -5,7 +5,7 @@
   - 3suisses
   - shopping
 3s 1:
-  url: http://www.3suisses.fr/home?searchTerms={%recherche}
+  url: http://www.3suisses.fr/home?searchTerms=<recherche>
   title: 3Suisses.fr
   tags:
   - 3suisses
@@ -22,7 +22,7 @@ a 0:
   - books
   - shopping
 a 1:
-  url: http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords={%query|encoding=iso-8859-1}&linkCode=ur2&tag=serchilo0e-21
+  url: 'http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords=<query: {encoding: iso-8859-1}>&linkCode=ur2&tag=serchilo0e-21'
   title: Amazon.fr
   tags:
   - affiliate
@@ -33,7 +33,7 @@ a 1:
   - arguments: balzac
     description: Search for "balzac"
 cdiscount 1:
-  url: http://www.cdiscount.com/search/10/{%query}.html
+  url: http://www.cdiscount.com/search/10/<query>.html
   title: CDiscount.com
   tags:
   - cdiscount
@@ -49,7 +49,7 @@ e 0:
   - ebay
   - shopping
 e 1:
-  url: https://www.ebay.fr/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=709-53476-19255-0&siteid=71&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.fr/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=709-53476-19255-0&siteid=71&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.fr
   tags:
   - affiliate
@@ -59,7 +59,7 @@ e 1:
   - arguments: veste
     description: Search for "veste"
 g 1:
-  url: https://www.google.fr/search?hl={$language}&q={%query}&ie=utf-8
+  url: https://www.google.fr/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.fr
   tags:
   - google
@@ -75,7 +75,7 @@ ikea 0:
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/fr/fr/search/?q={%query}
+  url: http://www.ikea.com/fr/fr/search/?q=<query>
   title: IKEA France
   tags:
   - furniture
@@ -91,7 +91,7 @@ kiabi 0:
   - kiabi
   - shopping
 kiabi 1:
-  url: http://www.kiabi.com/search.ep?keyWords={%recherche}
+  url: http://www.kiabi.com/search.ep?keyWords=<recherche>
   title: Kiabi.com
   tags:
   - kiabi
@@ -103,16 +103,16 @@ pj 0:
   url: https://www.pagesjaunes.fr
   title: Pages Jaunes
 pj 2:
-  url: https://www.pagesjaunes.fr/annuaire/chercherlespros?quoiqui={%quoiqui}&ou={%ou}&univers=pagesjaunes&idOu=
+  url: https://www.pagesjaunes.fr/annuaire/chercherlespros?quoiqui=<quoiqui>&ou=<ou>&univers=pagesjaunes&idOu=
   title: Pages Jaunes
   examples:
   - arguments: tv, paris
     description: Search Pages Jaunes for TV in Paris
 soc 1:
-  url: http://www.societe.com/cgi-bin/search?champs={%name}
+  url: http://www.societe.com/cgi-bin/search?champs=<name>
   title: Societé Company Register
 zal 1:
-  url: http://www.zalando.fr/catalogue/?q={%produit}
+  url: http://www.zalando.fr/catalogue/?q=<produit>
   title: Zalando.fr
   tags:
   - shopping

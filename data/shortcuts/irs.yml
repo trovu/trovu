@@ -1,9 +1,9 @@
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-ga 0:
   url: https://www.irishionary.com/
   title: Béarla-Gaeilge (Irishionary)
@@ -13,7 +13,7 @@ en-ga 0:
   - irish
   - language
 en-ga 1:
-  url: https://www.irishionary.com/search/{%word}/
+  url: https://www.irishionary.com/search/<word>/
   title: Béarla-Gaeilge (Irishionary)
   tags:
   - dictionary
@@ -27,10 +27,10 @@ en-ga 1:
     description: Béarla aistriúchán de "crann"
 ga 0:
   include:
-    key: ga-{$language} 0
+    key: ga-<$language> 0
 ga 1:
   include:
-    key: ga-{$language} 1
+    key: ga-<$language> 1
 ga-en 0:
   title: Irish-English (Irishionary)
   include:

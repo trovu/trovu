@@ -1,5 +1,5 @@
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -9,7 +9,7 @@ frv 1:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
 fw 1:
-  url: http://www.filmweb.pl/search?q={%tytuł/osoba}
+  url: http://www.filmweb.pl/search?q=<tytuł/osoba>
   title: FilmWeb
   tags:
   - film
@@ -17,7 +17,7 @@ fw 1:
   - arguments: forrest gump
     description: Search for "forrest gump"
 last 1:
-  url: http://www.last.fm/search?setlang=pl&q={%artist}
+  url: http://www.last.fm/search?setlang=pl&q=<artist>
   title: Last.fm
   tags:
   - lastfm
@@ -34,7 +34,7 @@ mo 0:
   - arguments: signals and slots
     description: Searches "signals and slots" from Qt documentation
 mo 1:
-  url: https://www.google.com/search?hl={$language}&btnI=&sourceid=navclient&gfns=1&q=site:money.pl%20{%nazwa waloru}&ie=utf-8
+  url: https://www.google.com/search?hl=<$language>&btnI=&sourceid=navclient&gfns=1&q=site:money.pl%20<nazwa waloru>&ie=utf-8
   title: Money.pl
   tags:
   - finance
@@ -44,7 +44,7 @@ mo 1:
   - arguments: złoto
     description: Pokaż kurs złota
 pwn 1:
-  url: https://sjp.pwn.pl/szukaj/{%słowo}.html
+  url: https://sjp.pwn.pl/szukaj/<słowo>.html
   title: 'Słownik języka polskiego: PWN'
   tags:
   - dictionary

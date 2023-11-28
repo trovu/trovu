@@ -1,9 +1,9 @@
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-en 0:
   url: https://dict.leo.org/german-english/
   title: German-English (leo.org)
@@ -13,7 +13,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://dict.leo.org/german-english/{%word}
+  url: https://dict.leo.org/german-english/<word>
   title: German-English (leo.org)
   tags:
   - dictionary
@@ -34,7 +34,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://dict.leo.org/spanisch-deutsch/{%word}
+  url: https://dict.leo.org/spanisch-deutsch/<word>
   title: Alemán-Español (leo.org)
   tags:
   - dictionary
@@ -55,7 +55,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://dict.leo.org/französisch-deutsch/{%word}
+  url: https://dict.leo.org/französisch-deutsch/<word>
   title: Allemand-Français (leo.org)
   tags:
   - dictionary
@@ -76,7 +76,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://dict.leo.org/italienisch-deutsch/{%word}
+  url: https://dict.leo.org/italienisch-deutsch/<word>
   title: Tedesco-Italiano (leo.org)
   tags:
   - dictionary
@@ -97,7 +97,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://dict.leo.org/polnisch-deutsch/{%word}
+  url: https://dict.leo.org/polnisch-deutsch/<word>
   title: Niemiecki-Polski (leo.org)
   tags:
   - dictionary
@@ -118,7 +118,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://dict.leo.org/portugiesisch-deutsch/{%word}
+  url: https://dict.leo.org/portugiesisch-deutsch/<word>
   title: Alemão-Português (leo.org)
   tags:
   - dictionary
@@ -139,7 +139,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://dict.leo.org/russisch-deutsch/{%word}
+  url: https://dict.leo.org/russisch-deutsch/<word>
   title: Немецкий-Русский (leo.org)
   tags:
   - dictionary
@@ -160,7 +160,7 @@ de-zh 0:
   - german
   - language
 de-zh 1:
-  url: https://dict.leo.org/chinesisch-deutsch/{%word}
+  url: https://dict.leo.org/chinesisch-deutsch/<word>
   title: 德文-中文 (leo.org)
   tags:
   - chinese
@@ -174,10 +174,10 @@ de-zh 1:
     description: 德文 的"树"翻译
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (leo.org)
   include:
@@ -200,7 +200,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: https://dict.leo.org/spanish-english/{%word}
+  url: https://dict.leo.org/spanish-english/<word>
   title: Inglés-Español (leo.org)
   tags:
   - dictionary
@@ -221,7 +221,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://dict.leo.org/french-english/{%word}
+  url: https://dict.leo.org/french-english/<word>
   title: Anglais-Français (leo.org)
   tags:
   - dictionary
@@ -242,7 +242,7 @@ en-ru 0:
   - language
   - russian
 en-ru 1:
-  url: https://dict.leo.org/russian-english/{%word}
+  url: https://dict.leo.org/russian-english/<word>
   title: Английский-Русский (leo.org)
   tags:
   - dictionary
@@ -256,10 +256,10 @@ en-ru 1:
     description: Перевод на английский язык для "дерево"
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (leo.org)
   include:
@@ -295,7 +295,7 @@ es-pt 0:
   - portuguese
   - spanish
 es-pt 1:
-  url: https://dict.leo.org/espanhol-português/{%word}
+  url: https://dict.leo.org/espanhol-português/<word>
   title: Espanhol-Português (leo.org)
   tags:
   - dictionary
@@ -309,10 +309,10 @@ es-pt 1:
     description: Tradução em espanhol de "árvore"
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (leo.org)
   include:
@@ -341,10 +341,10 @@ fr-en 1:
     description: French translation of "tree"
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (leo.org)
   include:
@@ -360,10 +360,10 @@ it-de 1:
     description: Italienisch-Übersetzung von "baum"
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (leo.org)
   include:
@@ -379,10 +379,10 @@ pl-de 1:
     description: Polnisch-Übersetzung von "baum"
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (leo.org)
   include:
@@ -411,10 +411,10 @@ pt-es 1:
     description: Traducción al portugués de "árbol"
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (leo.org)
   include:
@@ -443,10 +443,10 @@ ru-en 1:
     description: Russian translation of "tree"
 zh 0:
   include:
-    key: zh-{$language} 0
+    key: zh-<$language> 0
 zh 1:
   include:
-    key: zh-{$language} 1
+    key: zh-<$language> 1
 zh-de 0:
   title: Chinesisch-Deutsch (leo.org)
   include:

@@ -1,9 +1,9 @@
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-hr 0:
   url: https://www.crodict.com/german-croatian/
   title: Njemački-Hrvatski (CroDict)
@@ -13,7 +13,7 @@ de-hr 0:
   - german
   - language
 de-hr 1:
-  url: https://www.crodict.com/german-croatian/{%word}
+  url: https://www.crodict.com/german-croatian/<word>
   title: Njemački-Hrvatski (CroDict)
   tags:
   - croatian
@@ -27,10 +27,10 @@ de-hr 1:
     description: njemački prijevod od "stablo"
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-hr 0:
   url: https://www.crodict.com/phrases/view?l=englisch-kroatisch
   title: Engleski-Hrvatski (CroDict)
@@ -40,7 +40,7 @@ en-hr 0:
   - english
   - language
 en-hr 1:
-  url: https://www.crodict.com/phrases/view?l=englisch-kroatisch&q={%word}
+  url: https://www.crodict.com/phrases/view?l=englisch-kroatisch&q=<word>
   title: Engleski-Hrvatski (CroDict)
   tags:
   - croatian
@@ -54,10 +54,10 @@ en-hr 1:
     description: engleski prijevod od "stablo"
 hr 0:
   include:
-    key: hr-{$language} 0
+    key: hr-<$language> 0
 hr 1:
   include:
-    key: hr-{$language} 1
+    key: hr-<$language> 1
 hr-de 0:
   title: Kroatisch-Deutsch (CroDict)
   include:

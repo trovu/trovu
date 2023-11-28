@@ -1,5 +1,5 @@
 cjg 1:
-  url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe={%query}
+  url: http://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe=<query>
   title: Le conjugueur
   tags:
   - french
@@ -8,7 +8,7 @@ cjg 1:
   - arguments: venir
     description: Conjugate "venir"
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -20,10 +20,10 @@ frv 1:
 lar 1:
   deprecated:
     alternative:
-      query: lrs {%1}
+      query: lrs <1>
       created: '2023-04-10'
 last 1:
-  url: http://www.last.fm/search?setlang=fr&q={%artist}
+  url: http://www.last.fm/search?setlang=fr&q=<artist>
   title: Last.fm
   tags:
   - lastfm
@@ -32,7 +32,7 @@ last 1:
   - arguments: beatles
     description: Search for "beatles"
 lit 1:
-  url: http://www.littre.org/recherche?_hasdata=&f2={%mot}
+  url: http://www.littre.org/recherche?_hasdata=&f2=<mot>
   title: Littré
   tags:
   - dictionary
@@ -42,7 +42,7 @@ lit 1:
   - arguments: arbre
     description: Cherche "arbre" dans le dictionnaire Littré
 lrs 1:
-  url: http://www.larousse.fr/dictionnaires/francais/{%mot}
+  url: http://www.larousse.fr/dictionnaires/francais/<mot>
   title: Larousse, Dictionnaires de français
   tags:
   - dictionary
@@ -60,7 +60,7 @@ marmiton 0:
   - marmiton
   - recettes
 marmiton 1:
-  url: http://www.marmiton.org/recettes/recherche.aspx?aqt={%mot}
+  url: http://www.marmiton.org/recettes/recherche.aspx?aqt=<mot>
   title: Marmiton
   tags:
   - marmiton
@@ -69,7 +69,7 @@ marmiton 1:
   - arguments: pizza
     description: Recherche des recettes de pizza
 syn 1:
-  url: http://dico.isc.cnrs.fr/dico/fr/chercher?r={%mot}&msend=Envoyer
+  url: http://dico.isc.cnrs.fr/dico/fr/chercher?r=<mot>&msend=Envoyer
   title: Synonyme
   tags:
   - language
@@ -78,7 +78,7 @@ syn 1:
   - arguments: important
     description: Search for "important"
 tlf 1:
-  url: http://www.cnrtl.fr/definition/{%query}
+  url: http://www.cnrtl.fr/definition/<query>
   title: Trésor de la langue française
   tags:
   - dictionary

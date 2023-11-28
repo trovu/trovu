@@ -1,4 +1,4 @@
-# General
+# Editors
 
 You are welcome to contribute to Trovu [shortcuts](../shortcuts/namespaces.md), [cities](../shortcuts/urls.md#city), [code](https://github.com/trovu/trovu) and more.
 
@@ -12,17 +12,17 @@ Shortcuts are part of the [/data](https://github.com/trovu/trovu/tree/master/dat
 
 ## Contribute cities
 
-Also city abbreviations are part of the [/data](https://github.com/trovu/trovu/tree/master/data) subdirectory, organized by countries. You are welcome to add abbreviations for new countries. They should follow a system or pattern well-known to the country's citizens (e.g. [vehicle registration plates](https://en.wikipedia.org/wiki/Vehicle_registration_plate) in Germany).
+Also, city abbreviations are part of the [/data](https://github.com/trovu/trovu/tree/master/data) subdirectory, organized by countries. You are welcome to add abbreviations for new countries. They should follow a system or pattern well-known to the country's citizens (e.g. [vehicle registration plates](https://en.wikipedia.org/wiki/Vehicle_registration_plate) in Germany).
 
 ## Contribute documentation
 
 Documentation lives in the [/docs](https://github.com/trovu/trovu/tree/master/docs) subdirectory. You are welcome to make any improvements.
 
-## Deploy via Github Actions
+## Deploy via GitHub Actions
 
 For every contribution to the monorepo, be it data (shortcuts) or documentation, be aware that it needs to be deployed. This happens automatically after changes to the `master` branch.
 
-You can follow the execution of the action execution on [Github Actions](https://github.com/trovu/trovu/actions). Seconds after it finished successfully, the changes should be published on [trovu.net](https://trovu.net/)
+You can follow the execution of the action execution on [GitHub Actions](https://github.com/trovu/trovu/actions). Seconds after it finished successfully, the changes should be published on [trovu.net](https://trovu.net/)
 
 During deployment, shortcuts get compiled into [trovu.net/data.json](https://trovu.net/data.json). This is your first place to check anything does not work as expected.
 

@@ -1,5 +1,5 @@
 a 1:
-  url: http://www.amazon.it/s/?field-keywords={%query}
+  url: http://www.amazon.it/s/?field-keywords=<query>
   title: Amazon.it
   tags:
   - affiliate
@@ -17,7 +17,7 @@ e 0:
   - ebay
   - shopping
 e 1:
-  url: https://www.ebay.it/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=724-53478-19255-0&siteid=101&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.it/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=724-53478-19255-0&siteid=101&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.it
   tags:
   - affiliate
@@ -27,7 +27,7 @@ e 1:
   - arguments: smartphone
     description: Search for "smartphone"
 zal 1:
-  url: http://www.zalando.it/catalogo/?q={%prodotto}
+  url: http://www.zalando.it/catalogo/?q=<prodotto>
   title: Zalando.it
   tags:
   - shopping

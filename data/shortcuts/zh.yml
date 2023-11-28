@@ -1,5 +1,5 @@
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -9,7 +9,7 @@ frv 1:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
 last 1:
-  url: http://www.last.fm/search?setlang=zh&q={%artist}
+  url: http://www.last.fm/search?setlang=zh&q=<artist>
   title: Last.fm
   tags:
   - lastfm

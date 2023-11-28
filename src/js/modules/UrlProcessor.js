@@ -6,10 +6,24 @@ import Helper from './Helper.js';
 import TimeType from './type/time.js';
 
 import dayjs from 'dayjs';
+import jsyaml from 'js-yaml';
 
 /** Process a shortcut URL for redirect. */
 
 export default class UrlProcessor {
+  static getPlaceholdersFromString(str, prefix) {
+    const pattern = '<' + prefix + '(.+?)>';
+    const re = RegExp(pattern, 'g');
+    let match;
+    const placeholders = {};
+    while ((match = re.exec(str))) {
+      const { name, placeholder } = this.getPlaceholderFromMatch(match);
+      placeholders[name] = placeholders[name] || {};
+      placeholders[name][match[0]] = placeholder;
+    }
+    return placeholders;
+  }
+
   /**
    * Get placeholder names from a string.
    *
@@ -34,13 +48,13 @@ export default class UrlProcessor {
    *     }
    *   }
    */
-  static getPlaceholdersFromString(str, prefix) {
+  static getPlaceholdersFromStringLegacy(str, prefix) {
     const pattern = '{' + prefix + '(.+?)}';
     const re = RegExp(pattern, 'g');
     let match;
     const placeholders = {};
     while ((match = re.exec(str))) {
-      const { name, placeholder } = this.getPlaceholderFromMatch(match);
+      const { name, placeholder } = this.getPlaceholderFromMatchLegacy(match);
       placeholders[name] = placeholders[name] || {};
       placeholders[name][match[0]] = placeholder;
     }
@@ -48,6 +62,20 @@ export default class UrlProcessor {
   }
 
   static getPlaceholderFromMatch(match) {
+    const yaml = match[1];
+    const parsed = jsyaml.load(yaml);
+    if (typeof parsed === 'string') {
+      const name = parsed;
+      const placeholder = {};
+      return { name, placeholder };
+    } else {
+      const name = Object.keys(parsed)[0];
+      const placeholder = parsed[name];
+      return { name, placeholder };
+    }
+  }
+
+  static getPlaceholderFromMatchLegacy(match) {
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
     const nameAndAttributes = match[1].split('|');
@@ -72,7 +100,13 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getArgumentsFromString(str) {
-    return this.getPlaceholdersFromString(str, '%');
+    const placeholders = {};
+    Object.assign(
+      placeholders,
+      this.getPlaceholdersFromString(str, '(?![\\$])'),
+    );
+    Object.assign(placeholders, this.getPlaceholdersFromStringLegacy(str, '%'));
+    return placeholders;
   }
 
   /**
@@ -83,7 +117,10 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getVariablesFromString(str) {
-    return this.getPlaceholdersFromString(str, '\\$');
+    const variables = {};
+    Object.assign(variables, this.getPlaceholdersFromString(str, '\\$'));
+    Object.assign(variables, this.getPlaceholdersFromStringLegacy(str, '\\$'));
+    return variables;
   }
 
   /**

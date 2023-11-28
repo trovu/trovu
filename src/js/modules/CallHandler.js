@@ -102,7 +102,7 @@ export default class CallHandler {
     let alternative = shortcut.deprecated.alternative.query;
     for (const i in env.args) {
       alternative = alternative.replace(
-        '{%' + (parseInt(i) + 1) + '}',
+        '<' + (parseInt(i) + 1) + '>',
         env.args[i],
       );
     }

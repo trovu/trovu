@@ -1,9 +1,9 @@
 bg 0:
   include:
-    key: bg-{$language} 0
+    key: bg-<$language> 0
 bg 1:
   include:
-    key: bg-{$language} 1
+    key: bg-<$language> 1
 bg-de 0:
   url: https://debg.dict.cc/
   title: Bulgarisch-Deutsch (dict.cc)
@@ -13,7 +13,7 @@ bg-de 0:
   - german
   - language
 bg-de 1:
-  url: https://debg.dict.cc/?s={%word}
+  url: https://debg.dict.cc/?s=<word>
   title: Bulgarisch-Deutsch (dict.cc)
   tags:
   - bulgarian
@@ -27,10 +27,10 @@ bg-de 1:
     description: Bulgarisch-Übersetzung von "baum"
 cs 0:
   include:
-    key: cs-{$language} 0
+    key: cs-<$language> 0
 cs 1:
   include:
-    key: cs-{$language} 1
+    key: cs-<$language> 1
 cs-de 0:
   url: https://decs.dict.cc/
   title: Tschechisch-Deutsch (dict.cc)
@@ -40,7 +40,7 @@ cs-de 0:
   - german
   - language
 cs-de 1:
-  url: https://decs.dict.cc/?s={%word}
+  url: https://decs.dict.cc/?s=<word>
   title: Tschechisch-Deutsch (dict.cc)
   tags:
   - czech
@@ -54,10 +54,10 @@ cs-de 1:
     description: Tschechisch-Übersetzung von "baum"
 da 0:
   include:
-    key: da-{$language} 0
+    key: da-<$language> 0
 da 1:
   include:
-    key: da-{$language} 1
+    key: da-<$language> 1
 da-de 0:
   url: https://deda.dict.cc/
   title: Dänisch-Deutsch (dict.cc)
@@ -67,7 +67,7 @@ da-de 0:
   - german
   - language
 da-de 1:
-  url: https://deda.dict.cc/?s={%word}
+  url: https://deda.dict.cc/?s=<word>
   title: Dänisch-Deutsch (dict.cc)
   tags:
   - danish
@@ -81,10 +81,10 @@ da-de 1:
     description: Dänisch-Übersetzung von "baum"
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-bg 0:
   title: Немски-Български (dict.cc)
   include:
@@ -133,7 +133,7 @@ de-el 0:
   - greek
   - language
 de-el 1:
-  url: https://deel.dict.cc/?s={%word}
+  url: https://deel.dict.cc/?s=<word>
   title: Γερμανικά-Ελληνικά (dict.cc)
   tags:
   - dictionary
@@ -154,7 +154,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://deen.dict.cc/?s={%word}
+  url: https://deen.dict.cc/?s=<word>
   title: German-English (dict.cc)
   tags:
   - dictionary
@@ -175,7 +175,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://dees.dict.cc/?s={%word}
+  url: https://dees.dict.cc/?s=<word>
   title: Alemán-Español (dict.cc)
   tags:
   - dictionary
@@ -196,7 +196,7 @@ de-fi 0:
   - german
   - language
 de-fi 1:
-  url: https://defi.dict.cc/?s={%word}
+  url: https://defi.dict.cc/?s=<word>
   title: Saksa-Suomi (dict.cc)
   tags:
   - dictionary
@@ -217,7 +217,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://defr.dict.cc/?s={%word}
+  url: https://defr.dict.cc/?s=<word>
   title: Allemand-Français (dict.cc)
   tags:
   - dictionary
@@ -238,7 +238,7 @@ de-hu 0:
   - hungarian
   - language
 de-hu 1:
-  url: https://dehu.dict.cc/?s={%word}
+  url: https://dehu.dict.cc/?s=<word>
   title: Német-Magyar (dict.cc)
   tags:
   - dictionary
@@ -259,7 +259,7 @@ de-is 0:
   - icelandic
   - language
 de-is 1:
-  url: https://deis.dict.cc/?s={%word}
+  url: https://deis.dict.cc/?s=<word>
   title: Þýska-Íslenska (dict.cc)
   tags:
   - dictionary
@@ -280,7 +280,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://deit.dict.cc/?s={%word}
+  url: https://deit.dict.cc/?s=<word>
   title: Tedesco-Italiano (dict.cc)
   tags:
   - dictionary
@@ -301,7 +301,7 @@ de-la 0:
   - language
   - latin
 de-la 1:
-  url: https://dela.dict.cc/?s={%word}
+  url: https://dela.dict.cc/?s=<word>
   title: Germanica-Latina (dict.cc)
   tags:
   - dictionary
@@ -322,7 +322,7 @@ de-nl 0:
   - german
   - language
 de-nl 1:
-  url: https://denl.dict.cc/?s={%word}
+  url: https://denl.dict.cc/?s=<word>
   title: Duits-Nederlands (dict.cc)
   tags:
   - dictionary
@@ -343,7 +343,7 @@ de-no 0:
   - language
   - norwegian
 de-no 1:
-  url: https://deno.dict.cc/?s={%word}
+  url: https://deno.dict.cc/?s=<word>
   title: Tysk-Norsk (dict.cc)
   tags:
   - dictionary
@@ -364,7 +364,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://depl.dict.cc/?s={%word}
+  url: https://depl.dict.cc/?s=<word>
   title: Niemiecki-Polski (dict.cc)
   tags:
   - dictionary
@@ -385,7 +385,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://dept.dict.cc/?s={%word}
+  url: https://dept.dict.cc/?s=<word>
   title: Alemão-Português (dict.cc)
   tags:
   - dictionary
@@ -406,7 +406,7 @@ de-ro 0:
   - language
   - romanian
 de-ro 1:
-  url: https://dero.dict.cc/?s={%word}
+  url: https://dero.dict.cc/?s=<word>
   title: Germană-Română (dict.cc)
   tags:
   - dictionary
@@ -427,7 +427,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://deru.dict.cc/?s={%word}
+  url: https://deru.dict.cc/?s=<word>
   title: Немецкий-Русский (dict.cc)
   tags:
   - dictionary
@@ -448,7 +448,7 @@ de-sk 0:
   - language
   - slovak
 de-sk 1:
-  url: https://desk.dict.cc/?s={%word}
+  url: https://desk.dict.cc/?s=<word>
   title: Nemčina-Slovenčina (dict.cc)
   tags:
   - dictionary
@@ -469,7 +469,7 @@ de-sv 0:
   - language
   - swedish
 de-sv 1:
-  url: https://desv.dict.cc/?s={%word}
+  url: https://desv.dict.cc/?s=<word>
   title: Tyska-Svenska (dict.cc)
   tags:
   - dictionary
@@ -490,7 +490,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://detr.dict.cc/?s={%word}
+  url: https://detr.dict.cc/?s=<word>
   title: Almanca-Türkçe (dict.cc)
   tags:
   - dictionary
@@ -504,10 +504,10 @@ de-tr 1:
     description: '"ağaç" için Almanca çevirisi'
 el 0:
   include:
-    key: el-{$language} 0
+    key: el-<$language> 0
 el 1:
   include:
-    key: el-{$language} 1
+    key: el-<$language> 1
 el-de 0:
   title: Griechisch-Deutsch (dict.cc)
   include:
@@ -523,10 +523,10 @@ el-de 1:
     description: Griechisch-Übersetzung von "baum"
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (dict.cc)
   include:
@@ -549,7 +549,7 @@ en-nl 0:
   - english
   - language
 en-nl 1:
-  url: https://ennl.dict.cc/?s={%word}
+  url: https://ennl.dict.cc/?s=<word>
   title: Engels-Nederlands (dict.cc)
   tags:
   - dictionary
@@ -563,10 +563,10 @@ en-nl 1:
     description: Engels-vertaling van "boom"
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (dict.cc)
   include:
@@ -582,10 +582,10 @@ es-de 1:
     description: Spanisch-Übersetzung von "baum"
 fi 0:
   include:
-    key: fi-{$language} 0
+    key: fi-<$language> 0
 fi 1:
   include:
-    key: fi-{$language} 1
+    key: fi-<$language> 1
 fi-de 0:
   title: Finnisch-Deutsch (dict.cc)
   include:
@@ -601,10 +601,10 @@ fi-de 1:
     description: Finnisch-Übersetzung von "baum"
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (dict.cc)
   include:
@@ -620,10 +620,10 @@ fr-de 1:
     description: Französisch-Übersetzung von "baum"
 hu 0:
   include:
-    key: hu-{$language} 0
+    key: hu-<$language> 0
 hu 1:
   include:
-    key: hu-{$language} 1
+    key: hu-<$language> 1
 hu-de 0:
   title: Ungarisch-Deutsch (dict.cc)
   include:
@@ -639,10 +639,10 @@ hu-de 1:
     description: Ungarisch-Übersetzung von "baum"
 is 0:
   include:
-    key: is-{$language} 0
+    key: is-<$language> 0
 is 1:
   include:
-    key: is-{$language} 1
+    key: is-<$language> 1
 is-de 0:
   title: Isländisch-Deutsch (dict.cc)
   include:
@@ -658,10 +658,10 @@ is-de 1:
     description: Isländisch-Übersetzung von "baum"
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (dict.cc)
   include:
@@ -677,10 +677,10 @@ it-de 1:
     description: Italienisch-Übersetzung von "baum"
 la 0:
   include:
-    key: la-{$language} 0
+    key: la-<$language> 0
 la 1:
   include:
-    key: la-{$language} 1
+    key: la-<$language> 1
 la-de 0:
   title: Latein-Deutsch (dict.cc)
   include:
@@ -696,10 +696,10 @@ la-de 1:
     description: Latein-Übersetzung von "baum"
 nl 0:
   include:
-    key: nl-{$language} 0
+    key: nl-<$language> 0
 nl 1:
   include:
-    key: nl-{$language} 1
+    key: nl-<$language> 1
 nl-de 0:
   title: Niederländisch-Deutsch (dict.cc)
   include:
@@ -728,10 +728,10 @@ nl-en 1:
     description: Dutch translation of "tree"
 no 0:
   include:
-    key: no-{$language} 0
+    key: no-<$language> 0
 no 1:
   include:
-    key: no-{$language} 1
+    key: no-<$language> 1
 no-de 0:
   title: Norwegisch-Deutsch (dict.cc)
   include:
@@ -747,10 +747,10 @@ no-de 1:
     description: Norwegisch-Übersetzung von "baum"
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (dict.cc)
   include:
@@ -766,10 +766,10 @@ pl-de 1:
     description: Polnisch-Übersetzung von "baum"
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (dict.cc)
   include:
@@ -785,10 +785,10 @@ pt-de 1:
     description: Portugiesisch-Übersetzung von "baum"
 ro 0:
   include:
-    key: ro-{$language} 0
+    key: ro-<$language> 0
 ro 1:
   include:
-    key: ro-{$language} 1
+    key: ro-<$language> 1
 ro-de 0:
   title: Rumänisch-Deutsch (dict.cc)
   include:
@@ -804,10 +804,10 @@ ro-de 1:
     description: Rumänisch-Übersetzung von "baum"
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (dict.cc)
   include:
@@ -823,10 +823,10 @@ ru-de 1:
     description: Russisch-Übersetzung von "baum"
 sk 0:
   include:
-    key: sk-{$language} 0
+    key: sk-<$language> 0
 sk 1:
   include:
-    key: sk-{$language} 1
+    key: sk-<$language> 1
 sk-de 0:
   title: Slowakisch-Deutsch (dict.cc)
   include:
@@ -842,10 +842,10 @@ sk-de 1:
     description: Slowakisch-Übersetzung von "baum"
 sv 0:
   include:
-    key: sv-{$language} 0
+    key: sv-<$language> 0
 sv 1:
   include:
-    key: sv-{$language} 1
+    key: sv-<$language> 1
 sv-de 0:
   title: Schwedisch-Deutsch (dict.cc)
   include:
@@ -861,10 +861,10 @@ sv-de 1:
     description: Schwedisch-Übersetzung von "baum"
 tr 0:
   include:
-    key: tr-{$language} 0
+    key: tr-<$language> 0
 tr 1:
   include:
-    key: tr-{$language} 1
+    key: tr-<$language> 1
 tr-de 0:
   title: Türkisch-Deutsch (dict.cc)
   include:

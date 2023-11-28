@@ -6,7 +6,6 @@ import jsyaml from 'js-yaml';
 export default class DataManager {
   /**
    * Load data from /data.
-   *
    * @return {object} data      - The loaded data from /data.
    */
   static load() {
@@ -16,6 +15,32 @@ export default class DataManager {
     data['types'] = {};
     data['types']['city'] = DataManager.readYmls(`${ymlDirPath}/types/city/`);
     return data;
+  }
+
+  /**
+   * Write data to /data.
+   * @param {object} data      - The data to write
+   */
+  static write(data) {
+    const ymlDirPath = './data/';
+    this.sortTags(data.shortcuts);
+    DataManager.writeYmls(`${ymlDirPath}/shortcuts/`, data.shortcuts);
+    DataManager.writeYmls(`${ymlDirPath}/types/city/`, data.types.city);
+  }
+
+  /**
+   * Sort tags in every shortcut.
+   * @param {Object} shortcuts by namespace
+   */
+  static sortTags(shortcuts) {
+    for (const namespace in shortcuts) {
+      for (const key in shortcuts[namespace]) {
+        const shortcut = shortcuts[namespace][key];
+        if (shortcut.tags) {
+          shortcut.tags.sort();
+        }
+      }
+    }
   }
 
   /**
@@ -34,5 +59,21 @@ export default class DataManager {
       dataByFileRoot[fileRoot] = data;
     }
     return dataByFileRoot;
+  }
+
+  /**
+   * Write YAML files to a directory.
+   * @param {string} ymlDirPath
+   * @param {object} dataByFileRoot - The data to write to YAML files.
+   */
+  static writeYmls(ymlDirPath, dataByFileRoot) {
+    for (const fileRoot in dataByFileRoot) {
+      const filePath = `${ymlDirPath}/${fileRoot}.yml`;
+      const str = jsyaml.dump(dataByFileRoot[fileRoot], {
+        noArrayIndent: true,
+        lineWidth: -1,
+      });
+      fs.writeFileSync(filePath, str, 'utf8');
+    }
   }
 }

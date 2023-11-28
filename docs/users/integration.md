@@ -6,7 +6,7 @@
 
 ![Screenshot](img/firefox.png)
 
-1.  Open [trovu.net](https://trovu.net/), either [with your Github user name](advanced.md) or without:
+1.  Open [trovu.net](https://trovu.net/), either [with your GitHub username](advanced.md) or without:
     -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
     -   `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
 1.  In the **browser address bar**, right-click.
@@ -19,7 +19,7 @@
 
 ### Chrome
 
-1.  Open [trovu.net](https://trovu.net/), either [with your Github user name](advanced.md) or without:
+1.  Open [trovu.net](https://trovu.net/), either [with your GitHub username](advanced.md) or without:
     -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
     -   `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
 1.  Open a [new tab](about:blank) with the URL:
@@ -60,7 +60,7 @@ Now, you can enter Trovu queries which will be redirected to your browser.
 
 ### Firefox for Android
 
-Firefox allows to add custom search engines: Any URL with a `%s` placeholder works.
+Firefox allows adding custom search engines: Any URL with a `%s` placeholder works.
 
 1. Tap on the address bar
 1. Tap on _🔍 Search engine_
