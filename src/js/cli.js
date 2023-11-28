@@ -63,7 +63,7 @@ function migratePlaceholders(options) {
         );
       }
     }
-    DataManager.write(data);
+    DataManager.write(data, shortcutsPath);
   }
 }
 

@@ -23,8 +23,7 @@ export default class DataManager {
    * Write data to /data.
    * @param {object} data      - The data to write
    */
-  static write(data) {
-    const ymlDirPath = './data/';
+  static write(data, ymlDirPath = './data/') {
     this.sortTags(data.shortcuts);
     DataManager.writeYmls(`${ymlDirPath}/shortcuts/`, data.shortcuts);
     DataManager.writeYmls(`${ymlDirPath}/types/city/`, data.types.city);
