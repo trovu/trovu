@@ -8,14 +8,21 @@ export default class DataManager {
    * Load data from /data.
    * @return {object} data      - The loaded data from /data.
    */
-  static load(ymlDirPath = './data/', filter = false) {
+  static load(
+    ymlDirPath = './data',
+    shortcutsPath = 'shortcuts',
+    typesPath = 'types',
+    filter = false,
+  ) {
     const data = {};
     data['shortcuts'] = DataManager.readYmls(
-      `${ymlDirPath}/shortcuts/`,
+      `${ymlDirPath}/${shortcutsPath}/`,
       filter,
     );
     data['types'] = {};
-    data['types']['city'] = DataManager.readYmls(`${ymlDirPath}/types/city/`);
+    data['types']['city'] = DataManager.readYmls(
+      `${ymlDirPath}/${typesPath}/city/`,
+    );
     return data;
   }
 
@@ -23,10 +30,15 @@ export default class DataManager {
    * Write data to /data.
    * @param {object} data      - The data to write
    */
-  static write(data, ymlDirPath = './data/') {
+  static write(
+    data,
+    ymlDirPath = './data/',
+    shortcutsPath = 'shortcuts',
+    typesPath = 'types',
+  ) {
     this.sortTags(data.shortcuts);
-    DataManager.writeYmls(`${ymlDirPath}/shortcuts/`, data.shortcuts);
-    DataManager.writeYmls(`${ymlDirPath}/types/city/`, data.types.city);
+    DataManager.writeYmls(`${ymlDirPath}/${shortcutsPath}/`, data.shortcuts);
+    DataManager.writeYmls(`${ymlDirPath}/${typesPath}/city/`, data.types.city);
   }
 
   /**

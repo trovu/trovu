@@ -21,6 +21,8 @@ program
   .command('migrate-placeholders')
   .description('Migrate custom placeholder format to YAML ')
   .option('-d, --data <path>', 'path to data directory')
+  .option('-s, --shortcuts <subpath>', 'subpath to shortcuts directory')
+  .option('-t, --types <subpath>', 'subpath to types directory')
   .option('-f, --filter <string>', 'only apply to files containing <string>')
   .action(migratePlaceholders);
 
@@ -38,9 +40,11 @@ function normalizeData() {
 }
 
 function migratePlaceholders(options) {
-  const dataPath = options.shortcuts;
+  const dataPath = options.data;
+  const shortcutsPath = options.shortcuts;
+  const typesPath = options.types;
   const filter = options.filter;
-  const data = DataManager.load(dataPath, filter);
+  const data = DataManager.load(dataPath, shortcutsPath, typesPath, filter);
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
       const shortcut = data.shortcuts[namespace][key];
@@ -63,7 +67,7 @@ function migratePlaceholders(options) {
         );
       }
     }
-    DataManager.write(data, dataPath);
+    DataManager.write(data, dataPath, shortcutsPath, typesPath);
   }
 }
 
