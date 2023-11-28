@@ -52,7 +52,13 @@ export default class DataManager {
    */
   static readYmls(ymlDirPath, filter = false) {
     const dataByFileRoot = {};
-    const fileNames = fs.readdirSync(ymlDirPath);
+    let fileNames = fs.readdirSync(ymlDirPath);
+    // Filter files by filter.
+    if (filter) {
+      fileNames = fileNames.filter((fileName) => {
+        return fileName.includes(filter);
+      });
+    }
     for (const fileName of fileNames) {
       const filePath = ymlDirPath + fileName;
       const str = fs.readFileSync(filePath, 'utf8');
