@@ -50,6 +50,9 @@ function migratePlaceholders(options) {
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
       const shortcut = data.shortcuts[namespace][key];
+      if (shortcut.url) {
+        shortcut.url = replacePlaceholders(shortcut.url, namespace, key);
+      }
       if (
         shortcut.deprecated &&
         shortcut.deprecated.alternative &&
@@ -57,9 +60,6 @@ function migratePlaceholders(options) {
       ) {
         shortcut.deprecated.alternative.query =
           shortcut.deprecated.alternative.query.replace(/\{%(\d)\}/g, '<$1>');
-      }
-      if (shortcut.url) {
-        shortcut.url = replacePlaceholders(shortcut.url, namespace, key);
       }
       if (shortcut.include && shortcut.include.key) {
         shortcut.include.key = replacePlaceholders(
