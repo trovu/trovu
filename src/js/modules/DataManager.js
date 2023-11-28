@@ -8,10 +8,12 @@ export default class DataManager {
    * Load data from /data.
    * @return {object} data      - The loaded data from /data.
    */
-  static load() {
-    const ymlDirPath = './data/';
+  static load(ymlDirPath = './data/', filter = false) {
     const data = {};
-    data['shortcuts'] = DataManager.readYmls(`${ymlDirPath}/shortcuts/`);
+    data['shortcuts'] = DataManager.readYmls(
+      `${ymlDirPath}/shortcuts/`,
+      filter,
+    );
     data['types'] = {};
     data['types']['city'] = DataManager.readYmls(`${ymlDirPath}/types/city/`);
     return data;
@@ -48,7 +50,7 @@ export default class DataManager {
    * @param   {string} ymlDirPath
    * @returns {object} dataByFileRoot - The data from the YAML files.
    */
-  static readYmls(ymlDirPath) {
+  static readYmls(ymlDirPath, filter = false) {
     const dataByFileRoot = {};
     const fileNames = fs.readdirSync(ymlDirPath);
     for (const fileName of fileNames) {

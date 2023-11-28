@@ -37,8 +37,10 @@ function normalizeData() {
   DataManager.write(data);
 }
 
-function migratePlaceholders() {
-  const data = DataManager.load();
+function migratePlaceholders(options) {
+  const shortcutsPath = options.shortcuts;
+  const filter = options.filter;
+  const data = DataManager.load(shortcutsPath, filter);
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
       const shortcut = data.shortcuts[namespace][key];
