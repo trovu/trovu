@@ -1,6 +1,7 @@
 import { Command } from 'commander';
 import DataManager from './modules/DataManager';
 import UrlProcessor from './modules/UrlProcessor';
+import fs from 'fs';
 import jsyaml from 'js-yaml';
 
 const program = new Command();
@@ -40,10 +41,10 @@ program
 
 program.parse();
 
-function compileData() {
+function compileData(options) {
   const data = DataManager.load();
   const json = JSON.stringify(data);
-  process.stdout.write(json);
+  fs.writeFileSync(options.output, json, 'utf8');
 }
 
 function normalizeData() {
