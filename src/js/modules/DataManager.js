@@ -56,7 +56,7 @@ export default class DataManager {
   static getDefaultOptions(options) {
     options.data = options.data === undefined ? './data/' : options.data;
     options.shortcuts =
-      options.shortcuts === undefined ? 'shortcuts ' : options.shortcuts;
+      options.shortcuts === undefined ? 'shortcuts' : options.shortcuts;
     options.types = options.types === undefined ? 'types' : options.types;
     options.filter = options.filter === undefined ? false : options.filter;
     return options;
