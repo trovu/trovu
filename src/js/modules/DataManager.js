@@ -9,19 +9,15 @@ export default class DataManager {
    * @return {object} data      - The loaded data from /data.
    */
   static load(options) {
-    const ymlDirPath = options.data === undefined ? './data/' : options.data;
-    const shortcutsPath =
-      options.shortcuts === undefined ? 'shortcuts ' : options.shortcuts;
-    const typesPath = options.types === undefined ? 'types' : options.types;
-    const filter = options.filter === undefined ? false : options.filter;
+    options = this.getDefaultOptions(options);
     const data = {};
     data['shortcuts'] = DataManager.readYmls(
-      `${ymlDirPath}/${shortcutsPath}/`,
-      filter,
+      `${options.data}/${options.shortcuts}/`,
+      options.filter,
     );
     data['types'] = {};
     data['types']['city'] = DataManager.readYmls(
-      `${ymlDirPath}/${typesPath}/city/`,
+      `${options.data}/${options.types}/city/`,
     );
     return data;
   }
@@ -31,14 +27,16 @@ export default class DataManager {
    * @param {object} data      - The data to write
    */
   static write(data, options) {
-    const ymlDirPath = options.data === undefined ? './data/' : options.data;
-    const shortcutsPath =
-      options.shortcuts === undefined ? 'shortcuts ' : options.shortcuts;
-    const typesPath = options.types === undefined ? 'types' : options.types;
-    const filter = options.filter === undefined ? false : options.filter;
+    options = this.getDefaultOptions(options);
     this.sortTags(data.shortcuts);
-    DataManager.writeYmls(`${ymlDirPath}/${shortcutsPath}/`, data.shortcuts);
-    DataManager.writeYmls(`${ymlDirPath}/${typesPath}/city/`, data.types.city);
+    DataManager.writeYmls(
+      `${options.data}/${options.shortcuts}/`,
+      data.shortcuts,
+    );
+    DataManager.writeYmls(
+      `${options.data}/${options.types}/city/`,
+      data.types.city,
+    );
   }
 
   /**
@@ -54,6 +52,14 @@ export default class DataManager {
         }
       }
     }
+  }
+  static getDefaultOptions(options) {
+    options.data = options.data === undefined ? './data/' : options.data;
+    options.shortcuts =
+      options.shortcuts === undefined ? 'shortcuts ' : options.shortcuts;
+    options.types = options.types === undefined ? 'types' : options.types;
+    options.filter = options.filter === undefined ? false : options.filter;
+    return options;
   }
 
   /**
