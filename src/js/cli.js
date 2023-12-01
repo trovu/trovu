@@ -1,6 +1,7 @@
 import { Command } from 'commander';
 import DataManager from './modules/DataManager';
 import UrlProcessor from './modules/UrlProcessor';
+import fs from 'fs';
 import jsyaml from 'js-yaml';
 
 const program = new Command();
@@ -10,6 +11,7 @@ program.name('trovu').description('CLI for trovu.net').version('0.0.1');
 program
   .command('compile-data')
   .description('Compile YAML data files to JSON')
+  .requiredOption('-o, --output <path>', 'path to output file')
   .action(compileData);
 
 program
@@ -39,10 +41,10 @@ program
 
 program.parse();
 
-function compileData() {
+function compileData(options) {
   const data = DataManager.load();
   const json = JSON.stringify(data);
-  process.stdout.write(json);
+  fs.writeFileSync(options.output, json, 'utf8');
 }
 
 function normalizeData() {
