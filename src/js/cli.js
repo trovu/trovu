@@ -28,6 +28,15 @@ program
   .option('-f, --filter <string>', 'only apply to files containing <string>')
   .action(migratePlaceholders);
 
+program
+  .command('migrate-examples')
+  .description('Migrate examples to new format')
+  .option('-d, --data <path>', 'path to data directory')
+  .option('-s, --shortcuts <subpath>', 'subpath to shortcuts directory')
+  .option('-t, --types <subpath>', 'subpath to types directory')
+  .option('-f, --filter <string>', 'only apply to files containing <string>')
+  .action(migrateExamples);
+
 program.parse();
 
 function compileData() {
@@ -124,4 +133,29 @@ function replacePlaceholders(str, namespace, key) {
 
 function isOnlyNumber(str) {
   return Number.isFinite(Number(str));
+}
+
+function migrateExamples(options) {
+  const data = DataManager.load(options);
+  for (const namespace in data.shortcuts) {
+    for (const key in data.shortcuts[namespace]) {
+      let shortcut = data.shortcuts[namespace][key];
+      // Normalize examples.
+      if (shortcut.examples && !Array.isArray(shortcut.examples)) {
+        const examples = [];
+        for (const [argumentString, description] of Object.entries(
+          shortcut.examples,
+        )) {
+          const example = {
+            arguments: argumentString,
+            description: description,
+          };
+          examples.push(example);
+        }
+        shortcut.examples = examples;
+      }
+      data.shortcuts[namespace][key] = shortcut;
+    }
+    DataManager.write(data, options);
+  }
 }
