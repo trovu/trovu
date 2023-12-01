@@ -8,7 +8,7 @@ export default class DataManager {
    * Load data from /data.
    * @return {object} data      - The loaded data from /data.
    */
-  static load(options) {
+  static load(options = {}) {
     options = this.getDefaultOptions(options);
     const data = {};
     data['shortcuts'] = DataManager.readYmls(
@@ -26,7 +26,7 @@ export default class DataManager {
    * Write data to /data.
    * @param {object} data      - The data to write
    */
-  static write(data, options) {
+  static write(data, options = {}) {
     options = this.getDefaultOptions(options);
     this.sortTags(data.shortcuts);
     DataManager.writeYmls(
