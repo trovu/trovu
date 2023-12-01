@@ -136,11 +136,7 @@ function isOnlyNumber(str) {
 }
 
 function migrateExamples(options) {
-  const dataPath = options.data;
-  const shortcutsPath = options.shortcuts;
-  const typesPath = options.types;
-  const filter = options.filter;
-  const data = DataManager.load(dataPath, shortcutsPath, typesPath, filter);
+  const data = DataManager.load(options);
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
       let shortcut = data.shortcuts[namespace][key];
@@ -160,6 +156,6 @@ function migrateExamples(options) {
       }
       data.shortcuts[namespace][key] = shortcut;
     }
-    DataManager.write(data, dataPath, shortcutsPath, typesPath);
+    DataManager.write(data, options);
   }
 }

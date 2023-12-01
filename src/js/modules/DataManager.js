@@ -8,12 +8,12 @@ export default class DataManager {
    * Load data from /data.
    * @return {object} data      - The loaded data from /data.
    */
-  static load(
-    ymlDirPath = './data',
-    shortcutsPath = 'shortcuts',
-    typesPath = 'types',
-    filter = false,
-  ) {
+  static load(options) {
+    const ymlDirPath = options.data === undefined ? './data/' : options.data;
+    const shortcutsPath =
+      options.shortcuts === undefined ? 'shortcuts ' : options.shortcuts;
+    const typesPath = options.types === undefined ? 'types' : options.types;
+    const filter = options.filter === undefined ? false : options.filter;
     const data = {};
     data['shortcuts'] = DataManager.readYmls(
       `${ymlDirPath}/${shortcutsPath}/`,
@@ -30,12 +30,12 @@ export default class DataManager {
    * Write data to /data.
    * @param {object} data      - The data to write
    */
-  static write(
-    data,
-    ymlDirPath = './data/',
-    shortcutsPath = 'shortcuts',
-    typesPath = 'types',
-  ) {
+  static write(data, options) {
+    const ymlDirPath = options.data === undefined ? './data/' : options.data;
+    const shortcutsPath =
+      options.shortcuts === undefined ? 'shortcuts ' : options.shortcuts;
+    const typesPath = options.types === undefined ? 'types' : options.types;
+    const filter = options.filter === undefined ? false : options.filter;
     this.sortTags(data.shortcuts);
     DataManager.writeYmls(`${ymlDirPath}/${shortcutsPath}/`, data.shortcuts);
     DataManager.writeYmls(`${ymlDirPath}/${typesPath}/city/`, data.types.city);
