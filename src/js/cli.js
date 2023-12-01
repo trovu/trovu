@@ -10,6 +10,7 @@ program.name('trovu').description('CLI for trovu.net').version('0.0.1');
 program
   .command('compile-data')
   .description('Compile YAML data files to JSON')
+  .requiredOption('-o, --output <path>', 'path to output file')
   .action(compileData);
 
 program
