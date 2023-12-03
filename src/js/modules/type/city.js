@@ -6,7 +6,7 @@ export default class CityType {
     if ((matches = str.match(/^(\w\w+)(\.)(.+)$/))) {
       [, country, , abbreviation] = matches;
     }
-    const cities = env.data.types.city[country];
+    const cities = env.data.types.city[country] || [];
     if (abbreviation in cities) {
       const city = cities[abbreviation];
       return city;
