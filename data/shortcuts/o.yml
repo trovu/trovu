@@ -745,6 +745,47 @@ bins 1:
   examples:
   - arguments: Freeware
     description: Search for "Freeware" in newsgroups
+bkg 0:
+  url: https://www.booking.com/?aid=1303859
+  title: Booking.com
+  tags:
+  - affiliate
+  - hostels
+  - hotels
+  - travel
+  examples:
+  - description: Go to homepage
+bkg 1:
+  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>'
+  examples:
+  - arguments: berlin
+    description: Search for hotels in Berlin
+  - arguments: de.b
+    description: Use city abbreviation
+  - arguments: b
+    description: Use city abbreviation when country setting is already set to Germany
+  include:
+  - key: bkg 0
+bkg 2:
+  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
+  examples:
+  - arguments: berlin, 31.12.
+    description: Search for hotels in Berlin, checkin on 31.12.
+  - arguments: berlin, 12/31.
+    description: Search for hotels in Berlin, checkin on 12/31 (US date format)
+  - arguments: berlin, fr
+    description: Search for hotels in Berlin, checkin on next Friday
+  include:
+  - key: bkg 0
+bkg 3:
+  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
+  examples:
+  - arguments: berlin, 31.12., 2.1.
+    description: Search for hotels in Berlin, checkin on 31.12.
+  - arguments: berlin, fr, su
+    description: Search for hotels in Berlin, checkin on next Friday, checkout on next Sunday
+  include:
+  - key: bkg 0
 bm 1:
   url: http://www.bing.com/maps/?q=<map-query>
   title: Bing Maps
@@ -800,47 +841,6 @@ bo 1:
   include:
   - key: bo 1
     namespace: pka
-bkg 0:
-  url: https://www.booking.com/?aid=1303859
-  title: Booking.com
-  tags:
-  - affiliate
-  - hostels
-  - hotels
-  - travel
-  examples:
-  - description: Go to homepage
-bkg 1:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>'
-  examples:
-  - arguments: berlin
-    description: Search for hotels in Berlin
-  - arguments: de.b
-    description: Use city abbreviation
-  - arguments: b
-    description: Use city abbreviation when country setting is already set to Germany
-  include:
-  - key: bkg 0
-bkg 2:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
-  examples:
-  - arguments: berlin, 31.12.
-    description: Search for hotels in Berlin, checkin on 31.12.
-  - arguments: berlin, 12/31.
-    description: Search for hotels in Berlin, checkin on 12/31 (US date format)
-  - arguments: berlin, fr
-    description: Search for hotels in Berlin, checkin on next Friday
-  include:
-  - key: bkg 0
-bkg 3:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
-  examples:
-  - arguments: berlin, 31.12., 2.1.
-    description: Search for hotels in Berlin, checkin on 31.12.
-  - arguments: berlin, fr, su
-    description: Search for hotels in Berlin, checkin on next Friday, checkout on next Sunday
-  include:
-  - key: bkg 0
 booking 1:
   deprecated:
     alternative:
