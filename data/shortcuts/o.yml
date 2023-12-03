@@ -800,7 +800,7 @@ bo 1:
   include:
   - key: bo 1
     namespace: pka
-booking 1:
+bkg 1:
   url: https://www.booking.com/searchresults.html?spnsbr=1&ss=<destination>&idf=on&error_url=%2F%3Faid%3D1303859%3B&si=ai%2Cco%2Cci%2Cre%2Cdi&label=&aid=1303859&utm_campaign=nsb&utm_medium=sp&utm_source=FP_Searchbox&utm_term=1303862
   title: Booking.com
   tags:
@@ -811,6 +811,11 @@ booking 1:
   examples:
   - arguments: berlin
     description: Search Booking.com for hotels and hostels in Berlin.
+booking 1:
+  deprecated:
+    alternative:
+      query: bkg <1>
+    created: '2023-12-03'
 bp 1:
   url: https://www.beatport.com/search?q=<query>
   title: Beatport
