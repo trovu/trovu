@@ -9263,6 +9263,21 @@ wsl 0:
 wso 1:
   url: http://www.wallstreet-online.de/suche/?suche=&q=<query>
   title: Wallstreet:Online Search
+wsp 0:
+  url: https://weatherspark.com/
+  title: Weather Spark
+  tags:
+  - climate
+  - travel
+  - vacation
+  - weather
+wsp 1:
+  url: 'https://weatherspark.com/search?q=<location: {type: city}>'
+  examples:
+  - arguments: berlin
+    description: Lookup climate data for Berlin
+  include:
+  - key: wsp 0
 wssl 0:
   url: https://secure.wikimedia.org/wikipedia/<$language>/wiki/
   title: Wikipedia Main Page via SSL
