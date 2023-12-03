@@ -809,8 +809,7 @@ bkg 0:
   - hotels
   - travel
   examples:
-  - arguments: ''
-    description: Go to homepage
+  - description: Go to homepage
 bkg 1:
   url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>'
   examples:
