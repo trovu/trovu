@@ -53,6 +53,7 @@ export default class DataManager {
       }
     }
   }
+
   static getDefaultOptions(options) {
     options.data = options.data === undefined ? './data/' : options.data;
     options.shortcuts =
