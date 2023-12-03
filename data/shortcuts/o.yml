@@ -863,17 +863,29 @@ br 1:
   - key: br 1
     namespace: pka
 brew 1:
-  url: https://www.google.de/search?hl=<$language>&q=site%3Abrew.sh%20<query>&ie=utf-8
-  title: Homebrew Package Manager
-  tags:
-  - osx
-  - packages
-  examples:
-  - arguments: vim
-    description: Search for packages about vim.
+  deprecated:
+    alternative:
+      query: brw <1>
+    created: '2023-12-03'
 briar 0:
   url: https://briarproject.org/
   title: Briar Software
+brw 0:
+  url: https://brew.sh/
+  title: Homebrew Package Manager
+  examples:
+  - description: Go to homepage
+  tags:
+  - osx
+  - packages
+brw 1:
+  url: https://www.google.de/search?hl=<$language>&q=site%3Abrew.sh%20<query>&ie=utf-8
+  title: Homebrew Package Manager
+  examples:
+  - arguments: vim
+    description: Search for packages about vim.
+  include:
+  - key: brw 0
 btc 1:
   url: https://www.blockchain.com/search?search=<address>
   title: Bitcoin Blockchain Explorer
