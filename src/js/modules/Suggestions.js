@@ -124,7 +124,9 @@ export default class Suggestions {
       for (const example of listItem.label.examples) {
         examplesInnerDiv += `
           <span class="left">  
-            <span class="query">${listItem.label.keyword} ${example.arguments}</span>  
+            <span class="query">${listItem.label.keyword} ${
+              example.arguments || ''
+            }</span>  
           </span>
           <span class="right">
             <span class="description">${example.description}</span>  
