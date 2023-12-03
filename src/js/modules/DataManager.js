@@ -103,6 +103,7 @@ export default class DataManager {
    */
   static writeYmls(ymlDirPath, dataByFileRoot) {
     for (const fileRoot in dataByFileRoot) {
+      dataByFileRoot[fileRoot] = this.sortObject(dataByFileRoot[fileRoot]);
       const filePath = `${ymlDirPath}/${fileRoot}.yml`;
       const str = jsyaml.dump(dataByFileRoot[fileRoot], {
         noArrayIndent: true,
