@@ -111,4 +111,13 @@ export default class DataManager {
       fs.writeFileSync(filePath, str, 'utf8');
     }
   }
+
+  static sortObject(obj) {
+    return Object.keys(obj)
+      .sort()
+      .reduce(function (result, key) {
+        result[key] = obj[key];
+        return result;
+      }, {});
+  }
 }
