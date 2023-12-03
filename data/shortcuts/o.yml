@@ -823,7 +823,7 @@ bkg 1:
   include:
   - key: bkg 0
 bkg 2:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin-date: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
   examples:
   - arguments: berlin, 31.12.
     description: Search for hotels in Berlin, checkin on 31.12.
