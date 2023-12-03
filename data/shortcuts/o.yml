@@ -800,8 +800,8 @@ bo 1:
   include:
   - key: bo 1
     namespace: pka
-bkg 1:
-  url: https://www.booking.com/searchresults.html?spnsbr=1&ss=<destination>&idf=on&error_url=%2F%3Faid%3D1303859%3B&si=ai%2Cco%2Cci%2Cre%2Cdi&label=&aid=1303859&utm_campaign=nsb&utm_medium=sp&utm_source=FP_Searchbox&utm_term=1303862
+bkg 0:
+  url: https://www.booking.com/?aid=1303859
   title: Booking.com
   tags:
   - affiliate
@@ -809,8 +809,15 @@ bkg 1:
   - hotels
   - travel
   examples:
+  - arguments: ''
+    description: Go to homepage
+bkg 1:
+  url: https://www.booking.com/searchresults.html?spnsbr=1&ss=<destination>&idf=on&error_url=%2F%3Faid%3D1303859%3B&si=ai%2Cco%2Cci%2Cre%2Cdi&label=&aid=1303859&utm_campaign=nsb&utm_medium=sp&utm_source=FP_Searchbox&utm_term=1303862
+  examples:
   - arguments: berlin
     description: Search Booking.com for hotels and hostels in Berlin.
+  include:
+  - key: bkg 0
 booking 1:
   deprecated:
     alternative:
