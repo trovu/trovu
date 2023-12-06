@@ -8120,18 +8120,6 @@ tpbv 1:
   examples:
   - arguments: mozart
     description: Search for "mozart"
-tpl 0:
-  url: https://www.trustpilot.com/
-  title: Trustpilot
-  tags:
-  - reviews
-tpl 1:
-  url: https://www.trustpilot.com/search?query=<query>
-  examples:
-  - arguments: vodafone
-    description: Search for reviews about Vodafone
-  include:
-  - key: tpl 0
 tr 0:
   include:
   - key: tr 0
