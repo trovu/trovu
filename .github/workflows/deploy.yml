@@ -33,8 +33,8 @@ jobs:
       - run: npm clean-install
       - run: npm run build-jsdoc
       - run: npm run build
-      - run: npm run compile-data
       - run: npm run lint-yaml
+      - run: npm run compile-data
       - run: npm run test-unit
       - run: npm run test-calls
       - uses: JamesIves/github-pages-deploy-action@v4
