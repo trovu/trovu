@@ -29,7 +29,7 @@ jobs:
           pipenv run mkdocs build
       - uses: actions/setup-node@v4
         with:
-          node-version: 21
+          node-version: 21.3.0
       - run: npm clean-install
       - run: npm run build-jsdoc
       - run: npm run build
