@@ -34,6 +34,7 @@ export default class Logger {
   }
   warning(message) {
     this.log('warning', message);
+    this.showLog();
   }
   success(message) {
     this.log('success', message);
