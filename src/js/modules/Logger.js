@@ -14,6 +14,13 @@ export default class Logger {
   }
 
   log(level, message) {
+    // Check if message is already in this.logs
+    // if yes, do not log again
+    if (
+      this.logs.some((log) => log.level === level && log.message === message)
+    ) {
+      return;
+    }
     this.logs.push({
       level: level,
       message: message,
