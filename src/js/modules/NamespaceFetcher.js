@@ -231,16 +231,16 @@ export default class NamespaceFetcher {
    * @return {object} namespaces - The parsed shortcuts.
    */
   parseShortcutsFromYml(text, url) {
+    let shortcuts;
     try {
-      const shortcuts = jsyaml.load(text);
-      return shortcuts;
+      shortcuts = jsyaml.load(text);
     } catch (error) {
       this.env.logger.warning(
         `Warning: Parse error in ${url}: ${error.message}`,
       );
-      const shortcuts = {};
-      return shortcuts;
+      shortcuts = {};
     }
+    return shortcuts;
   }
 
   /**
