@@ -188,7 +188,7 @@ export default class NamespaceFetcher {
       }
       const response = responses.shift();
       if (!response || response.status != 200) {
-        this.env.logger.warning(
+        this.env.logger.info(
           `Problem fetching via ${this.env.reload ? 'reload' : 'cache'} ${
             namespaceInfo.url
           }`,
@@ -231,12 +231,16 @@ export default class NamespaceFetcher {
    * @return {object} namespaces - The parsed shortcuts.
    */
   parseShortcutsFromYml(text, url) {
+    let shortcuts;
     try {
-      const shortcuts = jsyaml.load(text);
-      return shortcuts;
+      shortcuts = jsyaml.load(text);
     } catch (error) {
-      this.env.logger.error(`Parse error in ${url}: ${error.message}`);
+      this.env.logger.warning(
+        `Warning: Parse error in ${url}: ${error.message}`,
+      );
+      shortcuts = {};
     }
+    return shortcuts;
   }
 
   /**
