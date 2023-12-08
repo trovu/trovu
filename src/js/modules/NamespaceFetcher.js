@@ -235,7 +235,11 @@ export default class NamespaceFetcher {
       const shortcuts = jsyaml.load(text);
       return shortcuts;
     } catch (error) {
-      this.env.logger.error(`Parse error in ${url}: ${error.message}`);
+      this.env.logger.warning(
+        `Warning: Parse error in ${url}: ${error.message}`,
+      );
+      const shortcuts = {};
+      return shortcuts;
     }
   }
 
