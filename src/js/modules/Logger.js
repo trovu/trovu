@@ -25,6 +25,7 @@ export default class Logger {
       level: level,
       message: message,
     });
+    console.log(level, message);
     if (this.logElement) {
       this.logElement.textContent += `${message}\n`;
     }
@@ -42,7 +43,6 @@ export default class Logger {
   error(message) {
     this.log('error', message);
     this.showLog();
-    console.table(this.logs);
     throw new Error(message);
   }
   showLog() {
