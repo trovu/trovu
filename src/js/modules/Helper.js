@@ -45,8 +45,8 @@ export default class Helper {
       cache: env.reload ? 'reload' : 'force-cache',
     });
     if (response.status != 200) {
-      env.logger.warning(
-        `Error fetching via ${env.reload ? 'reload' : 'cache'} ${url}: ${
+      env.logger.info(
+        `Problem fetching via ${env.reload ? 'reload' : 'cache'} ${url}: ${
           response.status
         }`,
       );
