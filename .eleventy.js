@@ -14,6 +14,14 @@ const pluginImages = require('./eleventy.config.images.js');
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addDataExtension('yml', (contents) => yaml.load(contents));
+
+  // Copy the contents of the `public` folder to the output folder
+  // For example, `./public/css/` ends up in `_site/css/`
+  eleventyConfig.addPassthroughCopy({
+    './blog/public/': '.',
+    //'./node_modules/prismjs/themes/prism-okaidia.css': '/css/prism-okaidia.css',
+  });
+
   return {
     dir: {
       input: './blog/',
