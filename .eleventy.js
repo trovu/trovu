@@ -28,6 +28,10 @@ module.exports = (eleventyConfig) => {
   // Watch content images for the image pipeline.
   eleventyConfig.addWatchTarget('blog/content/**/*.{svg,webp,png,jpeg}');
 
+  // App plugins
+  eleventyConfig.addPlugin(pluginDrafts);
+  eleventyConfig.addPlugin(pluginImages);
+
   return {
     dir: {
       input: './blog/',
