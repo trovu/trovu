@@ -122,8 +122,8 @@ module.exports = (eleventyConfig) => {
     // These are all optional:
     dir: {
       input: './blog', // default: "."
-      includes: '../_includes', // default: "_includes"
-      data: '../_data', // default: "_data"
+      includes: '_includes', // default: "_includes"
+      data: './_data', // default: "_data"
       output: './dist/blog',
     },
 
