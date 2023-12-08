@@ -40,6 +40,7 @@ export default class Home {
     }
 
     document.getElementById('query-form').onsubmit = this.submitQuery;
+    document.querySelector('.navbar a.reload').onclick = this.reload;
     document.documentElement.setAttribute('data-page-loaded', 'true');
   }
 
@@ -140,6 +141,19 @@ export default class Home {
 
     // Redirect to process script.
     window.location.href = processUrl;
+  };
+
+  /**
+   * On triggering reload
+   *
+   * @param {object} event – The submitting event.
+   */
+  reload = (event) => {
+    if (event) {
+      event.preventDefault();
+    }
+    document.querySelector('#query').value = 'reload';
+    this.submitQuery();
   };
 
   /**
