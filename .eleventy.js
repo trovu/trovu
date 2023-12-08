@@ -32,6 +32,15 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginDrafts);
   eleventyConfig.addPlugin(pluginImages);
 
+  // Official plugins
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+    preAttributes: { tabindex: 0 },
+  });
+  eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(pluginBundle);
+
   return {
     dir: {
       input: './blog/',
