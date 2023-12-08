@@ -25,7 +25,7 @@ module.exports = (eleventyConfig) => {
   return {
     dir: {
       input: './blog/',
-      output: 'dist/blog',
+      output: './dist/blog',
     },
   };
 };
