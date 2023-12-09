@@ -45,9 +45,6 @@
 				<ul class="nav">
 					<li class="nav-item"><a href="../../">Home</a></li>
 					<li class="nav-item"><a href="../../docs/">Docs</a></li>
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
 					<li class="nav-item"><a href="../../docs/privacy">Privacy</a></li>
 					<li class="nav-item"><a href="https://github.com/trovu/">Github</a></li>
 				</ul>
