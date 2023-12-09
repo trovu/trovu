@@ -137,6 +137,6 @@ module.exports = (eleventyConfig) => {
     // When paired with the HTML <base> plugin https://www.11ty.dev/docs/plugins/html-base/
     // it will transform any absolute URLs in your HTML to include this
     // folder name and does **not** affect where things go in the output folder.
-    pathPrefix: '/',
+    pathPrefix: '/blog/',
   };
 };
