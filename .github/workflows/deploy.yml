@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 218-add-a-blog
     workflow_dispatch:
 jobs:
   build-and-deploy:
@@ -32,6 +33,7 @@ jobs:
           node-version: 21.3.0
       - run: npm clean-install
       - run: npm run build-jsdoc
+      - run: npm run build-blog
       - run: npm run build
       - run: npm run lint-yaml
       - run: npm run compile-data
