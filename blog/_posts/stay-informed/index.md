@@ -1,6 +1,6 @@
 ---
 title: Stay informed about Trovu
-description: Be updated with this blog and other sources.
+description: How to be updated with this blog.
 date: 2023-12-09
 tags:
     - rss
