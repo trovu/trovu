@@ -89,11 +89,17 @@ The lower a namespace is in the `namespaces` list, the higher it's precedence. T
 
 So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`.
 
-## Adding a namespace (and overriding `language` or `country` setting)
+## Per-call namespace, also overrides `language` or `country`
 
-You can add a certain namespace to the subscribed namespaces by prefixing the query with `[namespace].` If `[namespace]` happens to be a language or country namespace, it will also override the current language or country.
+Let's say you have configured `language=en` but this time, you want to search the German Wikipedia. In this case, call
+```
+de.w berlin
+```
+So for a single call, you can prefix your query with `NAMESPACE.`. This namespace will then have the highest priority.
 
-### Example
+If that prefixed namespace happens to be a language or country namespace, it will also override the current language or country.
+
+### Example in detail
 
 #### Settings
 
