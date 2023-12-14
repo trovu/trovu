@@ -60,7 +60,7 @@ export default class ShortcutFinder {
     // If nothing found:
     // Try default keyword.
     if (!shortcut && env.defaultKeyword) {
-      env.logger.warning(
+      env.logger.info(
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`,
       );
       env.args = [env.query];
