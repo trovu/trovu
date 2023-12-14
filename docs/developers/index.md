@@ -8,6 +8,8 @@
 ## Installation
 
 ```bash
+git clone https://github.com/trovu/trovu.git
+cd trovu
 npm clean-install      # Install dependencies
 npm run build          # Build the website including data
 npm run serve          # Run the local server
