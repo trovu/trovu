@@ -30,9 +30,13 @@ footer {
   background: #f8d7da;
   padding: 1em;
 }
+#intro {
+  margin: 0;
+}
 main .jumbotron {
   margin: 0;
-  padding: 3em 1em;
+  padding: 1em;
+  padding-bottom: 2em;
 }
 
 #query-form {

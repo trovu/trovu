@@ -44,7 +44,7 @@ export default class ShortcutFinder {
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
     if (!shortcut && env.args.length > 0) {
-      env.logger.warning(
+      env.logger.info(
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with the whole argument string as the only argument.`,
       );
       env.args = [env.argumentString];

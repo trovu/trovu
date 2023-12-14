@@ -80,11 +80,11 @@ export default class Home {
       if (event.target.value.trim() === '') {
         document.querySelector('nav.navbar').style.display = 'block';
         document.querySelector('#examples-and-about').style.display = 'block';
-        document.querySelector('.jumbotron').style.padding = '3em 1em';
+        document.querySelector('#intro').style.display = 'block';
       } else {
         document.querySelector('nav.navbar').style.display = 'none';
         document.querySelector('#examples-and-about').style.display = 'none';
-        document.querySelector('.jumbotron').style.padding = '1em 1em';
+        document.querySelector('#intro').style.display = 'none';
       }
     });
   }
