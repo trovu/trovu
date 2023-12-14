@@ -8,7 +8,7 @@ In particular:
 -   We do not record search queries.
 -   We do not serve cookies.
 
-You search queries are even not sent to the Trovu server, the whole processing happens in your browser.
+Your search queries are not even sent to the Trovu server; the entire processing happens in your browser.
 
 ## How a query is processed
 
