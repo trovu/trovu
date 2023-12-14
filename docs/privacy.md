@@ -8,15 +8,19 @@ In particular:
 -   We do not record search queries.
 -   We do not serve cookies.
 
-Your search queries are not even sent to the Trovu server; the entire processing happens in your browser.
+Your search queries are not even sent to the Trovu server;
+the entire processing happens in your browser.
 
 ## How a Query is Processed
 
-Every query is attempted to be matched with a shortcut. Shortcuts are organized by [Namespaces](../shortcuts/namespaces.md): Each shortcut belongs exactly to one namespace.
+Every query is attempted to be matched with a shortcut.
+Shortcuts are organized by [Namespaces](../shortcuts/namespaces.md):
+Each shortcut belongs exactly to one namespace.
 
 ### Namespace Setting
 
-When calling Trovu without query parameters, three default namespaces will be set based on the browser's language settings. For instance, if the browser's language is `de-DE`, these namespaces and their shortcut files will be used:
+When calling Trovu without query parameters, three default namespaces will be set based on the browser's language settings.
+For instance, if the browser's language is `de-DE`, these namespaces and their shortcut files will be used:
 
 -   [o.yml](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml) – planet namespace
 -   [de.yml](https://github.com/trovu/trovu/tree/master/data/shortcuts/de.yml) – German language namespace
@@ -47,7 +51,8 @@ Let's look at the processing of a query:
 
 ### Reloading Shortcuts
 
-Since shortcuts are cached in the browser cache, you may want to reload them once they are updated. Do so by
+Since shortcuts are cached in the browser cache, you may want to reload them once they are updated.
+Do so by
 
 -   either prefixing a query: `reload:g foobar`
 -   or only calling `reload`.
