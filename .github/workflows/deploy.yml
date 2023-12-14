@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 220-add-intro-on-homepage
     workflow_dispatch:
 jobs:
   build-and-deploy:
