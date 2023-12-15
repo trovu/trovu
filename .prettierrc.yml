@@ -6,3 +6,5 @@ overrides:
   - files: '*.md'
     options:
       tabWidth: 4
+plugins:
+  - '@trivago/prettier-plugin-sort-imports'

@@ -1,5 +1,4 @@
 /** @module Settings */
-
 import countriesList from 'countries-list';
 
 /** Settings methods. */
