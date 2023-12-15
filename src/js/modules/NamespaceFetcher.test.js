@@ -1,6 +1,6 @@
+import Env from './Env.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import jsyaml from 'js-yaml';
-import Env from './Env.js';
 
 function cloneObject(obj) {
   return JSON.parse(JSON.stringify(obj));

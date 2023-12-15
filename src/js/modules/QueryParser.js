@@ -1,5 +1,4 @@
 /** @module QueryParser */
-
 import Helper from './Helper.js';
 import countriesList from 'countries-list';
 

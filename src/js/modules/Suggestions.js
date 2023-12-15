@@ -1,10 +1,9 @@
 /** @module Suggestions */
-
-import 'font-awesome/css/font-awesome.min.css';
-import 'awesomplete/awesomplete.css';
-import Awesomplete from 'awesomplete';
 import Helper from './Helper.js';
 import QueryParser from './QueryParser.js';
+import Awesomplete from 'awesomplete';
+import 'awesomplete/awesomplete.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 /** Set and manage the Suggestions. */
 

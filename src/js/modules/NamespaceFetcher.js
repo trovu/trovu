@@ -1,5 +1,4 @@
 /** @module NamespaceFetcher */
-
 import UrlProcessor from './UrlProcessor.js';
 import jsyaml from 'js-yaml';
 

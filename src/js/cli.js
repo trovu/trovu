@@ -1,6 +1,6 @@
-import { Command } from 'commander';
 import DataManager from './modules/DataManager';
 import UrlProcessor from './modules/UrlProcessor';
+import { Command } from 'commander';
 import fs from 'fs';
 import jsyaml from 'js-yaml';
 
