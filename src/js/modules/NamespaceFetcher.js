@@ -468,7 +468,7 @@ export default class NamespaceFetcher {
       shortcut.url &&
       shortcut.argumentCount != Object.keys(shortcut.arguments).length
     ) {
-      this.env.logger.error(
+      this.env.logger.warning(
         `Mismatch in argumentCount of key and arguments.length of url in "${shortcut.namespace}.${shortcut.key}".`,
       );
     }
