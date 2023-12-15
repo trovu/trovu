@@ -581,20 +581,28 @@ hotf 0:
   - forum
   - heise
 hpreis 0:
-  url: http://www.heise.de/preisvergleich
-  title: Heise Preisvergleich Startseite
-  tags:
-  - heise
-  - shopping
+  deprecated:
+    alternative:
+      query: hpv
+    created: '2023-12-15'
 hpreis 1:
-  url: http://www.heise.de/preisvergleich/?fs=<Suchbegriff>
+  deprecated:
+    alternative:
+      query: hpv <1>
+    created: '2023-12-15'
+hpv 0:
+  url: http://www.heise.de/preisvergleich/
   title: Heise Preisvergleich
   tags:
   - heise
   - shopping
+hpv 1:
+  url: http://www.heise.de/preisvergleich/?fs=<Produkt>
   examples:
   - arguments: computer
     description: Search for "computer"
+  include:
+    key: hpv 0
 hsoft 0:
   url: http://www.heise.de/software/
   title: Heise Softwareverzeichnis Startseite
