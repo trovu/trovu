@@ -4503,10 +4503,19 @@ iban 1:
   - arguments: DE12500?0?170648489890
     description: Validate IBAN number, incl. unknown digits that will be calculated
 idealo 1:
-  url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=<Produkt>
+  deprecated:
+    alternative:
+      query: idl <1>
+    created: '2023-12-15'
+idl 0:
+  url: https://www.idealo.de/
   title: Idealo Preisvergleich
   tags:
   - shopping
+idl 1:
+  url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=<Produkt>
+  include:
+    key: idl <1>
   examples:
   - arguments: iphone
     description: Preisvergleich fürs iPhone
