@@ -70,13 +70,13 @@ export default class Suggestions {
     return li;
 
     function getSuggestionMain(suggestion) {
-      const argument_names = Object.keys(suggestion.arguments).join(', ');
+      const argument_names_str = Object.keys(suggestion.arguments).join(', ');
 
       const main = `
       <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
         <span class="left">  
         <span class="keyword">${suggestion.keyword}</span>  
-        <span class="argument-names">${argument_names}</span> 
+        <span class="argument-names">${argument_names_str}</span> 
         </span>
         <span class="right">
           <span class="title">${suggestion.title}</span>
