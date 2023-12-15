@@ -70,13 +70,13 @@ export default class Suggestions {
     return li;
 
     function getSuggestionMain(suggestion) {
-      const argument_names = Object.keys(suggestion.arguments).join(', ');
+      const argument_names_str = getArgumentsStr(suggestion.arguments);
 
       const main = `
       <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
         <span class="left">  
         <span class="keyword">${suggestion.keyword}</span>  
-        <span class="argument-names">${argument_names}</span> 
+        <span class="argument-names">${argument_names_str}</span> 
         </span>
         <span class="right">
           <span class="title">${suggestion.title}</span>
@@ -133,6 +133,22 @@ export default class Suggestions {
       }
       const examples = `<div class="examples">${examplesInnerDiv}</div>`;
       return examples;
+    }
+
+    function getArgumentsStr(args) {
+      const icons = {
+        city: '🏙',
+        date: '📅',
+        time: '🕒',
+      };
+      return Object.entries(args)
+        .map(([key, value]) => {
+          const type = Object.values(value)[0].type ?? null;
+          return icons[type]
+            ? `<span title="${type}">${icons[type]}</span>&thinsp;${key}`
+            : key;
+        })
+        .join(', ');
     }
   }
 

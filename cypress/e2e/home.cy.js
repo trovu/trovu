@@ -18,10 +18,16 @@ describe('Homepage startup', () => {
     );
   });
 
-  it('should have Suggestions', () => {
+  it('should have suggestions', () => {
     cy.get('#query').first().focus().should('be.focused');
     cy.get('#query').type('g');
     cy.contains('Google Web Homepage');
+  });
+
+  it('should have suggestions with type icons', () => {
+    cy.get('#query').first().focus().should('be.focused');
+    cy.get('#query').type('db');
+    cy.contains('📅');
   });
 
   it('should have a working Settings modal', () => {
