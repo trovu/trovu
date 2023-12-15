@@ -70,7 +70,7 @@ export default class Suggestions {
     return li;
 
     function getSuggestionMain(suggestion) {
-      const argument_names_str = getArgumentsStr(suggestion);
+      const argument_names_str = getArgumentsStr(suggestion.arguments);
 
       const main = `
       <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
@@ -135,9 +135,9 @@ export default class Suggestions {
       return examples;
     }
 
-    function getArgumentsStr(suggestion) {
+    function getArgumentsStr(args) {
       const argument_names = [];
-      for (const [key, value] of Object.entries(suggestion.arguments)) {
+      for (const [key, value] of Object.entries(args)) {
         let argument_name = key;
         if (Object.values(value).length > 0) {
           const attributes = Object.values(value)[0];
