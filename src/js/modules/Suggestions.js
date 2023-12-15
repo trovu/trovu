@@ -136,29 +136,19 @@ export default class Suggestions {
     }
 
     function getArgumentsStr(args) {
-      const argument_names = [];
-      for (const [key, value] of Object.entries(args)) {
-        let argument_name = key;
-        if (Object.values(value).length > 0) {
-          const attributes = Object.values(value)[0];
-          if (attributes.type) {
-            switch (attributes.type) {
-              case 'city':
-                argument_name = `<span title="city">🏙</span>&thinsp;${argument_name}`;
-                break;
-              case 'date':
-                argument_name = `<span title="date">📅</span>&thinsp;${argument_name}`;
-                break;
-              case 'time':
-                argument_name = `<span title="time">🕒</span>&thinsp;${argument_name}`;
-                break;
-            }
-          }
-        }
-        argument_names.push(argument_name);
-      }
-      const argument_names_str = argument_names.join(', ');
-      return argument_names_str;
+      const icons = {
+        city: '🏙',
+        date: '📅',
+        time: '🕒',
+      };
+      return Object.entries(args)
+        .map(([key, value]) => {
+          const type = Object.values(value)[0].type ?? null;
+          return icons[type]
+            ? `<span title="${type}">${icons[type]}</span>&thinsp;${key}`
+            : key;
+        })
+        .join(', ');
     }
   }
 
