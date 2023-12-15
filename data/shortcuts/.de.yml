@@ -4515,7 +4515,7 @@ idl 0:
 idl 1:
   url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=<Produkt>
   include:
-    key: idl <1>
+    key: idl 0
   examples:
   - arguments: iphone
     description: Preisvergleich fürs iPhone
