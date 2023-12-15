@@ -70,28 +70,7 @@ export default class Suggestions {
     return li;
 
     function getSuggestionMain(suggestion) {
-      const argument_names = [];
-      for (const [key, value] of Object.entries(suggestion.arguments)) {
-        let argument_name = key;
-        if (Object.values(value).length > 0) {
-          const attributes = Object.values(value)[0];
-          if (attributes.type) {
-            switch (attributes.type) {
-              case 'city':
-                argument_name = `<span title="city">🏙</span>&thinsp;${argument_name}`;
-                break;
-              case 'date':
-                argument_name = `<span title="date">📅</span>&thinsp;${argument_name}`;
-                break;
-              case 'time':
-                argument_name = `<span title="time">🕒</span>&thinsp;${argument_name}`;
-                break;
-            }
-          }
-        }
-        argument_names.push(argument_name);
-      }
-      const argument_names_str = argument_names.join(', ');
+      const argument_names_str = getArgumentsStr(suggestion);
 
       const main = `
       <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
@@ -154,6 +133,32 @@ export default class Suggestions {
       }
       const examples = `<div class="examples">${examplesInnerDiv}</div>`;
       return examples;
+    }
+
+    function getArgumentsStr(suggestion) {
+      const argument_names = [];
+      for (const [key, value] of Object.entries(suggestion.arguments)) {
+        let argument_name = key;
+        if (Object.values(value).length > 0) {
+          const attributes = Object.values(value)[0];
+          if (attributes.type) {
+            switch (attributes.type) {
+              case 'city':
+                argument_name = `<span title="city">🏙</span>&thinsp;${argument_name}`;
+                break;
+              case 'date':
+                argument_name = `<span title="date">📅</span>&thinsp;${argument_name}`;
+                break;
+              case 'time':
+                argument_name = `<span title="time">🕒</span>&thinsp;${argument_name}`;
+                break;
+            }
+          }
+        }
+        argument_names.push(argument_name);
+      }
+      const argument_names_str = argument_names.join(', ');
+      return argument_names_str;
     }
   }
 
