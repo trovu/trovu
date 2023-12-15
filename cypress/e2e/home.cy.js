@@ -24,6 +24,12 @@ describe('Homepage startup', () => {
     cy.contains('Google Web Homepage');
   });
 
+  it('should have suggestions with type icons', () => {
+    cy.get('#query').first().focus().should('be.focused');
+    cy.get('#query').type('db');
+    cy.contains('📅');
+  });
+
   it('should have a working Settings modal', () => {
     cy.get('span#settings-button').should('be.visible').click();
     cy.get('select#languageSetting').should('be.visible').select('pl');
