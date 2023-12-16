@@ -9,7 +9,7 @@ Search 1000+ websites in a command-line way, with
 
 It's like [DuckDuckGo bangs](https://duckduckgo.com/bangs), but on steroids. And it's [free](https://github.com/trovu/trovu/blob/master/LICENSE).
 
-## Examples:
+## Examples
 
 -   [`gd london, liverpool`](https://trovu.net/process/index.html#query=gd+london%2Cliverpool) – find a route on Google Directions from London to Liverpool.
 -   [`gfl1 ber, lpa, 1`](https://trovu.net/process/index.html#query=gfl1+ber%2Clpa%2C1) - search one-way flights with Google from Berlin to Las Palmas, on the first of next month
