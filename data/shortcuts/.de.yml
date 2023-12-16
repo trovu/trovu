@@ -535,8 +535,6 @@ db 2:
     description: Nächste Bahn-Verbindung von Berlin nach Hamburg
   - arguments: b, hh
     description: Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über Autokennzeichen
-  - arguments: sxf, txl
-    description: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld, Eingabe über IATA-Flughafencodes
   include:
     key: db 0
 db 3:
