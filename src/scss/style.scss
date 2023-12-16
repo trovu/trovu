@@ -52,6 +52,7 @@ main .jumbotron {
 }
 
 #suggestions ul {
+  list-style-type: none;
   > li {
     background: #fff;
     border-bottom: 1px solid #eee;
