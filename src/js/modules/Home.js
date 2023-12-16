@@ -1,13 +1,12 @@
 /** @module Home */
-
 import '../../scss/style.scss';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.min.css';
-import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import Env from './Env.js';
 import Helper from './Helper.js';
-import Settings from './home/Settings.js';
 import Suggestions from './Suggestions';
+import Settings from './home/Settings.js';
+import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 /** Set and manage the homepage. */
 
@@ -51,7 +50,7 @@ export default class Home {
     const params = this.env.getParams();
     params['query'] = document.getElementById('query').value;
 
-    const paramStr = Helper.getUrlParamStr(params);
+    const paramStr = Env.getUrlParamStr(params);
 
     // "?" causes Chrome to translate plus signs properly into %2B
     // even when called from address bar.
@@ -98,7 +97,7 @@ export default class Home {
    * Show custom alerts above query input.
    */
   showInfoAlerts() {
-    const params = Helper.getUrlParams();
+    const params = Env.getUrlParams();
     const alert = document.querySelector('#alert');
     if (params.status) {
       alert.removeAttribute('hidden');

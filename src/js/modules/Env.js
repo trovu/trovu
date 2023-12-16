@@ -1,12 +1,11 @@
 /** @module Env */
-
+import pkg from '../../../package.json';
 import Helper from './Helper.js';
 import Logger from './Logger.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
-import jsyaml from 'js-yaml';
-import pkg from '../../../package.json';
 import countriesList from 'countries-list';
+import jsyaml from 'js-yaml';
 
 /** Set and remember the environment. */
 
@@ -87,7 +86,7 @@ export default class Env {
    */
   getParamStr() {
     const params = this.getParams();
-    const paramStr = Helper.getUrlParamStr(params);
+    const paramStr = Env.getUrlParamStr(params);
     return paramStr;
   }
 
@@ -98,7 +97,7 @@ export default class Env {
    */
   async populate(params) {
     if (!params) {
-      params = Helper.getUrlParams();
+      params = Env.getUrlParams();
     }
 
     // Set debug and reload from URL params.
@@ -309,5 +308,46 @@ export default class Env {
       this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
       return false;
     }
+  }
+
+  /**
+   * From 'http://example.com/foo#bar=baz' get 'bar=baz'.
+   *
+   * @return {string} hash - The hash string.
+   */
+  static getUrlHash() {
+    const hash = window.location.hash.substr(1);
+    return hash;
+  }
+
+  /**
+   * Get parameters from the URL query string.
+   *
+   * @return {object} params - List of found parameters.
+   */
+  static getUrlParams() {
+    const urlParamStr = this.getUrlHash();
+    const urlParams = new URLSearchParams(urlParamStr);
+    const params = {};
+    urlParams.forEach((value, key) => {
+      params[key] = value;
+    });
+    return params;
+  }
+
+  /**
+   * Build URL param string from param object.
+   *
+   * @param {object} params       - List of parameters.
+   *
+   * @return {string} urlParamStr - Parameter as URL string.
+   */
+  static getUrlParamStr(params) {
+    const urlParams = new URLSearchParams();
+    for (const key in params) {
+      urlParams.set(key, params[key]);
+    }
+    urlParams.sort();
+    return urlParams;
   }
 }

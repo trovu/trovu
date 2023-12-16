@@ -1,5 +1,4 @@
 /** @module DataManager */
-
 import fs from 'fs';
 import jsyaml from 'js-yaml';
 
