@@ -67,11 +67,13 @@ main .jumbotron {
       background: var(--red);
       color: white;
       padding: 0.1em 0.2em;
+      border-radius: 0.2rem;
     }
     .tag {
       background: var(--yellow);
       color: black;
       padding: 0.1em 0.2em;
+      border-radius: 0.2rem;
     }
     > div {
       display: grid;
