@@ -97,8 +97,8 @@ Finally, with `<foo: {transform: uppercase}>` the output string can be transform
 
 | Property    | Conversion                           | Example input             | Example output      | Explanation                                |
 | ----------- | ------------------------------------ | ------------------------- | ------------------- | ------------------------------------------ |
-| `uppercase` | The output will be uppercased.       | `sxf`                     | `SXF`               | Makes sure all letters are uppercase.      |
-| `lowercase` | The output will be lowercased.       | `Sxf`                     | `sxf`               | Makes sure all letters are lowercase.      |
+| `uppercase` | The output will be uppercased.       | `lpa`                     | `LPA`               | Makes sure all letters are uppercase.      |
+| `lowercase` | The output will be lowercased.       | `Lpa`                     | `lpa`               | Makes sure all letters are lowercase.      |
 | `eo-cx`     | `cx gx hx jx sx ux` to `ĉ ĝ ĥ ĵ ŝ ŭ` | `ehxosxangxo cxiujxauxde` | `eĥoŝanĝo ĉiuĵaŭde` | Converts transcribed Esperanto characters. |
 
 ## Filling and submitting with userscripts
