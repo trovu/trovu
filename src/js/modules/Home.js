@@ -78,11 +78,9 @@ export default class Home {
       // Toggle display of navbar and examples.
       if (event.target.value.trim() === '') {
         document.querySelector('nav.navbar').style.display = 'block';
-        document.querySelector('#examples-and-about').style.display = 'block';
         document.querySelector('#intro').style.display = 'block';
       } else {
         document.querySelector('nav.navbar').style.display = 'none';
-        document.querySelector('#examples-and-about').style.display = 'none';
         document.querySelector('#intro').style.display = 'none';
       }
     });
