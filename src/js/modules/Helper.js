@@ -1,5 +1,4 @@
 /** @module Helper */
-
 import pkg from '../../../package.json';
 
 /** Helper methods. */

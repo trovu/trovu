@@ -1,12 +1,11 @@
 /** @module Env */
-
+import pkg from '../../../package.json';
 import Helper from './Helper.js';
 import Logger from './Logger.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
-import jsyaml from 'js-yaml';
-import pkg from '../../../package.json';
 import countriesList from 'countries-list';
+import jsyaml from 'js-yaml';
 
 /** Set and remember the environment. */
 

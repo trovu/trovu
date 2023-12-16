@@ -1,13 +1,12 @@
 /** @module Home */
-
 import '../../scss/style.scss';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.min.css';
-import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import Env from './Env.js';
 import Helper from './Helper.js';
-import Settings from './home/Settings.js';
 import Suggestions from './Suggestions';
+import Settings from './home/Settings.js';
+import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 /** Set and manage the homepage. */
 

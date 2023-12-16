@@ -1,4 +1,5 @@
 import Env from './Env.js';
+
 const env = new Env({});
 
 describe('Env.getDefaultLanguageAndCountry', () => {
