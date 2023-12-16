@@ -145,7 +145,7 @@ export default class Suggestions {
         .map(([key, value]) => {
           const type = Object.values(value)[0].type ?? null;
           return icons[type]
-            ? `<span title="${type}">${icons[type]}</span>&thinsp;${key}`
+            ? `<span title="${type}">${icons[type]}</span>&nbsp;&#x202F;${key}`
             : key;
         })
         .join(', ');
