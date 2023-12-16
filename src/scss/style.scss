@@ -129,11 +129,11 @@ main .jumbotron {
   > li[aria-selected='false']::before,
   li:not([aria-selected])::before {
     content: '\f0da';
-    left: 0.5em;
+    left: 1.2em;
   }
   > li[aria-selected='true']::before {
     content: '\f0d7';
-    left: 0.4em;
+    left: 0.2em;
   }
   li[aria-selected='true'] {
     background: #eee;
