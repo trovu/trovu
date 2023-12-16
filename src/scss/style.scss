@@ -53,8 +53,9 @@ main .jumbotron {
 
 #suggestions ul {
   list-style-type: none;
-  padding-left: 1em;
+  padding-left: 0em;
   > li {
+    padding-left: 1.2em;
     background: #fff;
     border-bottom: 1px solid #eee;
     .keyword {
