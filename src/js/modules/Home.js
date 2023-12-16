@@ -50,7 +50,7 @@ export default class Home {
     const params = this.env.getParams();
     params['query'] = document.getElementById('query').value;
 
-    const paramStr = Helper.getUrlParamStr(params);
+    const paramStr = Env.getUrlParamStr(params);
 
     // "?" causes Chrome to translate plus signs properly into %2B
     // even when called from address bar.
@@ -97,7 +97,7 @@ export default class Home {
    * Show custom alerts above query input.
    */
   showInfoAlerts() {
-    const params = Helper.getUrlParams();
+    const params = Env.getUrlParams();
     const alert = document.querySelector('#alert');
     if (params.status) {
       alert.removeAttribute('hidden');

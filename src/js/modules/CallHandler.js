@@ -116,7 +116,7 @@ export default class CallHandler {
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
   static getRedirectUrlToHome(response) {
-    const params = Helper.getUrlParams();
+    const params = Env.getUrlParams();
     if (params.query === 'reload' || params.query === 'debug:reload') {
       delete params.query;
     }
@@ -129,7 +129,7 @@ export default class CallHandler {
         break;
     }
     params.status = response.status;
-    const paramStr = Helper.getUrlParamStr(params);
+    const paramStr = Env.getUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
   }
