@@ -136,19 +136,11 @@ main .jumbotron {
     left: 0.4em;
   }
   li[aria-selected='true'] {
+    background: #eee;
     position: relative;
     div.examples,
     div.description-and-tags {
       display: grid;
-    }
-    .keyword {
-      color: #fff;
-    }
-    .argument-names {
-      color: #ddd;
-    }
-    .title {
-      color: #fff;
     }
   }
 }
