@@ -117,6 +117,9 @@ export default class CallHandler {
    */
   static getRedirectUrlToHome(response) {
     const params = Helper.getUrlParams();
+    if (params.query === 'reload' || params.query === 'debug:reload') {
+      delete params.query;
+    }
     switch (response.status) {
       case 'deprecated':
         params.alternative = response.alternative;
