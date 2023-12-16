@@ -1,8 +1,8 @@
 import CallHandler from '../src/js/modules/CallHandler.js';
 import Env from '../src/js/modules/Env.js';
+import fs from 'fs';
 import 'isomorphic-fetch';
 import jsyaml from 'js-yaml';
-import fs from 'fs';
 
 main();
 
