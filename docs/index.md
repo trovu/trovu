@@ -21,7 +21,7 @@ Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-dr
 
 ## Read more
 
-Follow the outline of the [Table of Contents](https://trovu/docs/).
+Follow the outline of the [Table of Contents](https://trovu.net/docs/).
 
 ## Live web version
 
