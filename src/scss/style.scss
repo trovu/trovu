@@ -55,7 +55,9 @@ main .jumbotron {
   list-style-type: none;
   padding-left: 0em;
   > li {
-    padding-left: 1.2em;
+    padding: 0.2em 0.4em;
+    padding-left: 1.3em;
+    border-radius: 0.2rem;
     background: #fff;
     border-bottom: 1px solid #eee;
     .keyword {
