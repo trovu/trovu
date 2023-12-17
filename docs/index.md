@@ -1,4 +1,4 @@
-# [trovu.net](https://trovu.net/) – Web shortcuts, social, private.
+# [trovu.net](https://trovu.net/) – Web shortcuts: social, private, free.
 
 Search 1000+ websites in a command-line way, with
 
