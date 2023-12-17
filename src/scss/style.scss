@@ -51,102 +51,122 @@ main .jumbotron {
   border: 0;
 }
 
-#suggestions ul {
-  list-style-type: none;
-  padding-left: 0em;
-  > li {
-    padding: 0.2em 0.4em;
-    padding-left: 1.3em;
-    border-radius: 0.2rem;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    .keyword {
-      font-weight: bold;
-    }
-    .argument-names {
-      color: #444;
-    }
-    .namespace {
-      background: var(--red);
-      color: white;
-      padding: 0.1em 0.2em;
+#suggestions {
+  overflow: auto;
+  position: relative;
+  overflow-y: auto;
+  ul {
+    list-style-type: none;
+    padding-left: 0em;
+    > li {
+      padding: 0.2em 0.4em;
+      padding-left: 1.3em;
       border-radius: 0.2rem;
-    }
-    .tag {
-      background: var(--yellow);
-      color: black;
-      padding: 0.1em 0.2em;
-      border-radius: 0.2rem;
-    }
-    > div {
-      display: grid;
-      grid-template-columns: auto auto;
-      .left {
-        text-align: left;
-        /* Don't indent first line but subsequent ones. */
-        text-indent: -0.5em;
-        margin-left: 0.5em;
-      }
-      .right {
-        text-align: right;
-      }
-    }
-    div.examples,
-    div.description-and-tags {
-      display: none;
-      color: #666;
-    }
-    div.description-and-tags {
-      align-items: end;
-    }
-    div.examples {
-      padding-right: 0.2em;
-    }
-    div.description-and-tags {
-      .left {
-        font-style: italic;
-      }
-    }
-    .unreachable {
+      background: #fff;
+      border-bottom: 1px solid #eee;
       .keyword {
-        color: #aaa;
+        font-weight: bold;
       }
       .argument-names {
-        color: #aaa;
-      }
-      .title {
-        color: #aaa;
+        color: #444;
       }
       .namespace {
-        background: #aaa;
+        background: var(--red);
+        color: white;
+        padding: 0.1em 0.2em;
+        border-radius: 0.2rem;
+      }
+      .tag {
+        background: var(--yellow);
+        color: black;
+        padding: 0.1em 0.2em;
+        border-radius: 0.2rem;
+      }
+      > div {
+        display: grid;
+        grid-template-columns: auto auto;
+        .left {
+          text-align: left;
+          /* Don't indent first line but subsequent ones. */
+          text-indent: -0.5em;
+          margin-left: 0.5em;
+        }
+        .right {
+          text-align: right;
+        }
+      }
+      div.examples,
+      div.description-and-tags {
+        display: none;
+        color: #666;
+      }
+      div.description-and-tags {
+        align-items: end;
+      }
+      div.examples {
+        padding-right: 0.2em;
+      }
+      div.description-and-tags {
+        .left {
+          font-style: italic;
+        }
+      }
+      .unreachable {
+        .keyword {
+          color: #aaa;
+        }
+        .argument-names {
+          color: #aaa;
+        }
+        .title {
+          color: #aaa;
+        }
+        .namespace {
+          background: #aaa;
+        }
+      }
+    }
+    > li::before {
+      display: inline;
+      position: absolute;
+      color: #aaa;
+      font-family: 'FontAwesome';
+      font-weight: 900;
+      font-size: 1.1em;
+    }
+    > li[aria-selected='false']::before,
+    li:not([aria-selected])::before {
+      content: '\f0da';
+      left: 1.2em;
+    }
+    > li[aria-selected='true']::before {
+      content: '\f0d7';
+      left: 0.3em;
+    }
+    li[aria-selected='true'] {
+      background: #eee;
+      position: relative;
+      div.examples,
+      div.description-and-tags {
+        display: grid;
       }
     }
   }
-  > li::before {
-    display: inline;
-    position: absolute;
-    color: #aaa;
-    font-family: 'FontAwesome';
-    font-weight: 900;
-    font-size: 1.1em;
-  }
-  > li[aria-selected='false']::before,
-  li:not([aria-selected])::before {
-    content: '\f0da';
-    left: 1.2em;
-  }
-  > li[aria-selected='true']::before {
-    content: '\f0d7';
-    left: 0.3em;
-  }
-  li[aria-selected='true'] {
-    background: #eee;
-    position: relative;
-    div.examples,
-    div.description-and-tags {
-      display: grid;
-    }
-  }
+}
+
+#suggestions::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px; /* Height of the fade effect */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  ); /* Adjust color to match the container's background */
+  pointer-events: none; /* Ensures the overlay doesn't interfere with scrolling/interaction */
 }
 
 .awesomplete > ul {
