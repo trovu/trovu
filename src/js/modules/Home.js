@@ -41,6 +41,24 @@ export default class Home {
     document.getElementById('query-form').onsubmit = this.submitQuery;
     document.querySelector('.navbar a.reload').onclick = this.reload;
     document.documentElement.setAttribute('data-page-loaded', 'true');
+
+    // Run the function on page load and window resize
+    Home.setMaxHeightForSuggestions();
+    // window.onload = setMaxHeightForSuggestions;
+    // window.onresize = setMaxHeightForSuggestions;
+  }
+
+  static setMaxHeightForSuggestions() {
+    const suggestionsDiv = document.querySelector('#suggestions');
+    suggestionsDiv.style.maxHeight = '100px';
+    const suggestionsTop = document
+      .querySelector('#suggestions')
+      .getBoundingClientRect().top;
+    const footerTop = document
+      .querySelector('footer')
+      .getBoundingClientRect().top;
+    suggestionsDiv.style.maxHeight = footerTop - suggestionsTop - 20 + 'px';
+    console.log(suggestionsTop, footerTop);
   }
 
   /**
