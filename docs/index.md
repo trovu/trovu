@@ -17,7 +17,7 @@ It's like [DuckDuckGo bangs](https://duckduckgo.com/bangs), but on steroids. And
 
 ## Legacy
 
-Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](https://trovu.net/docs/legacy/differences.md).
+Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](https://trovu.net/docs/legacy/differences/).
 
 ## Read more
 
