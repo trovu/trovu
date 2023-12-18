@@ -10,8 +10,9 @@ alza 1:
     description: Hledej "televizor"
 ba 1:
   deprecated:
-    alternative: bzs <1>
-  created: '2023-12-18'
+    alternative:
+      query: bzs <1>
+    created: '2023-12-18'
 bzs 0:
   url: https://www.bazos.cz/
   title: Bazoš
