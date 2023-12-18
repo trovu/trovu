@@ -8,13 +8,21 @@ alza 1:
   - arguments: televizor
     description: Hledej "televizor"
 ba 1:
-  url: https://www.bazos.cz/search.php?hledat=<výraz>
-  title: Bazoš.cz
+  deprecated:
+    alternative: bzs <1>
+  created: '2023-12-18'
+bzs 0:
+  url: https://www.bazos.cz/
+  title: Bazoš
   tags:
-  - bazoš
+  - classifieds
+bzs 1:
+  url: https://www.bazos.cz/search.php?hledat=<výraz>
   examples:
   - arguments: vrtačka
     description: Hledej použitou vrtačku
+  include:
+  - key: bzs 0
 g 1:
   url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.cz
