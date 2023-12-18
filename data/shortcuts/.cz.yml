@@ -135,16 +135,6 @@ tv 0:
   tags:
   - centrum
   - tv
-u 1:
-  url: https://uloz.to/hledej?q=<výraz>
-  description: Platforma pro sdílení a stahování souborů.
-  title: Ulož.to
-  tags:
-  - download
-  - uloz
-  examples:
-  - arguments: free music
-    description: Hledej "free music"
 z 1:
   deprecated:
     alternative:
