@@ -28,7 +28,7 @@ You must have an account at <a href="https://github.com/">GitHub</a>. It is free
 1. Replace the contents in the opened `config.yml` on GitHub with the contents of the **config.yml** field in FindFind.it.
 1. Click on _Commit changes_.
 1. Do the same for `shortcuts.yml`.
-1. Call Trovu with https://trovu.net/#github=YOUR_GITHUB_USERNAME
+1. Call Trovu with https://trovu.net/?#github=YOUR_GITHUB_USERNAME
 1. Read how to [use Trovu on your device](../users/integration.md).
 
 ## Read more
