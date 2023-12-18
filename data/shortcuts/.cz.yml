@@ -125,19 +125,6 @@ u 1:
   examples:
   - arguments: free music
     description: Hledej "free music"
-wck 0:
-  url: https://www.wckompas.cz/
-  title: WCkompas.cz
-  tags:
-  - map
-  - toilet
-wck 1:
-  url: 'https://www.wckompas.cz/search-results/pois?q=<místo: {type: city}>'
-  examples:
-  - arguments: praha
-    description: Najdi veřejné záchody v Praze
-  include:
-  - key: wck 0
 z 1:
   url: https://www.zbozi.cz/hledej/?q=<výraz>
   title: Zboží.cz
