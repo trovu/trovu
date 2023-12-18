@@ -25,7 +25,7 @@ bzs 1:
   - arguments: vrtačka
     description: Hledej použitou vrtačku
   include:
-  - key: bzs 0
+    key: bzs 0
 g 1:
   url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.cz
@@ -44,7 +44,7 @@ idos 0:
   - train
   - travel
   include:
-  - key: idos 0
+    key: idos 0
 idos 2:
   url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
   examples:
@@ -53,21 +53,21 @@ idos 2:
   - arguments: a, b
     description: totéž, ale se zkratkou SPZ
   include:
-  - key: idos 0
+    key: idos 0
 idos 3:
   url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&submit=1&pt=true'
   examples:
   - arguments: praha, brno, 20
     description: Vlak nebo bus z Prahy do Brna ve 20:00h
   include:
-  - key: idos 0
+    key: idos 0
 idos 4:
   url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>&submit=1&pt=true'
   examples:
   - arguments: praha, brno, 20, 10.12.
     description: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
   include:
-  - key: idos 0
+    key: idos 0
 ikea 0:
   url: http://www.ikea.com/cz/cs/
   title: IKEA Česko
@@ -84,7 +84,7 @@ ikea 1:
   - arguments: matrace
     description: Hledej matrace
   include:
-  - key: ikea 0
+    key: ikea 0
 m 0:
   url: https://mapy.cz/
   title: Mapy.cz
@@ -98,14 +98,14 @@ m 1:
   - arguments: praha
     description: Praha na mapy.cz
   include:
-  - key: m 0
+    key: m 0
 m 2:
   url: 'https://mapy.cz/zakladni?q=<město: {type: city}>%2C%20<místo>'
   examples:
   - arguments: a, lazarska
     description: Lazarská v Praze na mapy.cz
   include:
-  - key: m 0
+    key: m 0
 mapy 1:
   deprecated:
     alternative:
@@ -128,7 +128,7 @@ szn 1:
   - arguments: praha
     description: Hledej "praha"
   include:
-  - key: szn 0
+    key: szn 0
 tv 0:
   url: http://tvprogram.centrum.cz/
   title: TV programy Česko
