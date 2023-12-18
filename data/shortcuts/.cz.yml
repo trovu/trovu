@@ -85,24 +85,27 @@ ikea 1:
     description: Hledej matrace
   include:
   - key: ikea 0
-m 1:
-  url: https://mapy.cz/zakladni?q=<místo>
+m 0:
+  url: https://mapy.cz/
   title: Mapy.cz
+  description: Online mapa a plánovač tras.
   tags:
   - maps
   - mapy
+m 1:
+  url: https://mapy.cz/zakladni?q=<místo>
   examples:
   - arguments: praha
     description: Praha na mapy.cz
+  include:
+  - key: m 0
 m 2:
   url: 'https://mapy.cz/zakladni?q=<město: {type: city}>%2C%20<místo>'
-  title: Mapy.cz
-  tags:
-  - maps
-  - mapy
   examples:
   - arguments: a, lazarska
     description: Lazarská v Praze na mapy.cz
+  include:
+  - key: m 0
 mapy 1:
   url: https://mapy.cz/zakladni?q=<místo>
   title: Mapy.cz
