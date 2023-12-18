@@ -137,7 +137,7 @@ wck 1:
   - arguments: praha
     description: Najdi veřejné záchody v Praze
   include:
-  - wck 0
+  - key: wck 0
 z 1:
   url: https://www.zbozi.cz/hledej/?q=<výraz>
   title: Zboží.cz
