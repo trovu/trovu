@@ -79,14 +79,11 @@ ikea 0:
     description: Hledej matrace
 ikea 1:
   url: http://www.ikea.com/cz/cs/search/?q=<query>
-  title: IKEA Česko
-  tags:
-  - furniture
-  - ikea
-  - shopping
   examples:
   - arguments: matrace
     description: Hledej matrace
+  include:
+  - key: ikea 0
 m 1:
   url: https://mapy.cz/zakladni?q=<místo>
   title: Mapy.cz
