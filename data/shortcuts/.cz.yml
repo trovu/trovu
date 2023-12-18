@@ -1,6 +1,7 @@
 alza 1:
   url: https://www.alza.cz/search.htm?exps=<výraz>
   title: Alza.cz
+  description: Online obchod s širokou nabídkou elektroniky a dalšího zboží.
   tags:
   - seznam
   - shopping
@@ -14,6 +15,7 @@ ba 1:
 bzs 0:
   url: https://www.bazos.cz/
   title: Bazoš
+  description: Inzertní server pro koupi a prodej použitých věcí.
   tags:
   - classifieds
 bzs 1:
@@ -35,6 +37,7 @@ g 1:
 idos 2:
   url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
   title: IDOS Jízdní řády
+  description: Informační systém pro vyhledávání spojů ve veřejné dopravě.
   tags:
   - idos
   - train
