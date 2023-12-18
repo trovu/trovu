@@ -107,14 +107,10 @@ m 2:
   include:
   - key: m 0
 mapy 1:
-  url: https://mapy.cz/zakladni?q=<místo>
-  title: Mapy.cz
-  tags:
-  - maps
-  - mapy
-  examples:
-  - arguments: praha
-    description: Praha na mapy.cz
+  deprecated:
+    alternative:
+      query: m <1>
+    created: '2023-12-18'
 seznam 1:
   url: http://search.seznam.cz/search.cgi?w=<query>
   title: Seznam
