@@ -112,14 +112,23 @@ mapy 1:
       query: m <1>
     created: '2023-12-18'
 seznam 1:
-  url: http://search.seznam.cz/search.cgi?w=<query>
+  deprecated:
+    alternative:
+      query: s <1>
+szn 0:
+  url: https://www.seznam.cz/
   title: Seznam
+  description: Český internetový vyhledávač a informační portál.
   tags:
   - seznam
   - web search
+szn 1:
+  url: http://search.seznam.cz/search.cgi?w=<query>
   examples:
   - arguments: praha
     description: Hledej "praha"
+  include:
+  - key: szn 0
 tv 0:
   url: http://tvprogram.centrum.cz/
   title: TV programy Česko
