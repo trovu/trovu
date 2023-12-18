@@ -34,39 +34,39 @@ g 1:
   examples:
   - arguments: praha
     description: Hledat "praha" Googlem
-idos 2:
-  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
+idos 0:
+  url: http://jizdnirady.idnes.cz/
   title: IDOS Jízdní řády
   description: Informační systém pro vyhledávání spojů ve veřejné dopravě.
   tags:
   - idos
   - train
   - travel
+  include:
+  - key: idos 0
+idos 2:
+  url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
   examples:
   - arguments: praha, brno
     description: Vlak nebo bus z Prahy do Brna
   - arguments: a, b
     description: totéž, ale se zkratkou SPZ
+  include:
+  - key: idos 0
 idos 3:
   url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&submit=1&pt=true'
-  title: IDOS Jízdní řády
-  tags:
-  - idos
-  - train
-  - travel
   examples:
   - arguments: praha, brno, 20
     description: Vlak nebo bus z Prahy do Brna ve 20:00h
+  include:
+  - key: idos 0
 idos 4:
   url: 'http://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>&submit=1&pt=true'
-  title: IDOS Jízdní řády
-  tags:
-  - idos
-  - train
-  - travel
   examples:
   - arguments: praha, brno, 20, 10.12.
     description: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
+  include:
+  - key: idos 0
 ikea 0:
   url: http://www.ikea.com/cz/cs/
   title: IKEA Česko
