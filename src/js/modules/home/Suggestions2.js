@@ -7,16 +7,16 @@ export default class Suggestions2 {
   constructor(namespaceInfos) {
     this.namespacesInfos = namespaceInfos;
 
-    const queryInput = document.querySelector('#query');
+    this.queryInput = document.querySelector('#query');
     this.suggestionsList = document.querySelector('#suggestions ul');
 
-    queryInput.addEventListener('input', (event) => {
+    this.queryInput.addEventListener('input', (event) => {
       this.position = 0;
       this.updateSuggestions(event);
     });
     // Also update on focus,
     // for case when input is already filled (because no shortcut was not found).
-    queryInput.addEventListener('focus', this.updateSuggestions);
+    this.queryInput.addEventListener('focus', this.updateSuggestions);
     // queryInput.addEventListener('awesomplete-select', this.select);
     this.position = 0;
     this.suggestions = [];
