@@ -258,25 +258,6 @@ export default class Suggestions2 {
   }
 
   /**
-   * Convert Suggestions to Awesomplete list format.
-   *
-   * @param {array} suggestions – The found suggestions.
-   *
-   * @return {array} list – The found suggestions, converted for Awesomplete.
-   */
-  convertSuggestionsToAwesompleteList(suggestions) {
-    const list = [];
-    for (const [index, suggestion] of suggestions.entries()) {
-      suggestion.position = index;
-      const item = {
-        value: '', // We are not using this on select.
-        label: suggestion,
-      };
-      list.push(item);
-    }
-    return list;
-  }
-  /**
    * Handle selection of a suggestion.
    *
    * @param {object} event – The fired event.
