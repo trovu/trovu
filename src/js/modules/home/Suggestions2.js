@@ -34,17 +34,7 @@ export default class Suggestions2 {
       }
       if (event.key === 'Enter') {
         event.preventDefault();
-        const inputText = this.queryInput.value;
-        const input = QueryParser.parse(inputText);
-        const suggestion = this.suggestions[this.position - 1];
-        let newInputText = suggestion.keyword;
-        // Prefix with namespace if not reachable.
-        if (!suggestion.reachable) {
-          newInputText = `${suggestion.namespace}.${newInputText}`;
-        }
-        newInputText = `${newInputText} ${input.argumentString}`;
-        this.queryInput.value = newInputText;
-        this.updateSuggestions(event);
+        this.select(event);
       }
     });
   }
@@ -299,5 +289,24 @@ export default class Suggestions2 {
     for (const key in matches) {
       matches[key].sort(compareKeywords);
     }
+  }
+
+  /**
+   * Handle selection of a suggestion.
+   *
+   * @param {object} event – The fired event.
+   */
+  select(event) {
+    const inputText = this.queryInput.value;
+    const input = QueryParser.parse(inputText);
+    const suggestion = this.suggestions[this.position - 1];
+    let newInputText = suggestion.keyword;
+    // Prefix with namespace if not reachable.
+    if (!suggestion.reachable) {
+      newInputText = `${suggestion.namespace}.${newInputText}`;
+    }
+    newInputText = `${newInputText} ${input.argumentString}`;
+    this.queryInput.value = newInputText;
+    this.updateSuggestions(event);
   }
 }
