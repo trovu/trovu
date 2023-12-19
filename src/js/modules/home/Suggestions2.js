@@ -36,7 +36,7 @@ export default class Suggestions2 {
   /**
    * Render a suggestion item.
    */
-  renderAwesompleteItem(listItem, input, id) {
+  renderSuggestion(listItem, input, id) {
     const li = document.createElement('li', {
       role: 'option',
     });
