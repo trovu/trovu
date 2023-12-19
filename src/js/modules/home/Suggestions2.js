@@ -32,6 +32,26 @@ export default class Suggestions2 {
         this.position = Math.min(this.suggestions.length, this.position + 1);
         this.updateSuggestions(event);
       }
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        const inputText = this.queryInput.value;
+        const input = QueryParser.parse(inputText);
+        const suggestion = this.suggestions[this.position - 1];
+
+        let newInputText = suggestion.keyword;
+
+        // Prefix with namespace if not reachable.
+        if (!suggestion.reachable) {
+          newInputText = `${suggestion.namespace}.${newInputText}`;
+        }
+
+        // Append argumentString.
+        newInputText = `${newInputText} ${input.argumentString}`;
+
+        this.queryInput.value = newInputText;
+
+        this.updateSuggestions(event);
+      }
     });
   }
 
