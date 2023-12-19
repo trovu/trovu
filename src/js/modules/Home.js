@@ -22,9 +22,6 @@ export default class Home {
 
     this.env = new Env();
 
-    // Must be done before env.populate()
-    // otherwise Chrome does not autodiscover.
-
     // Init environment.
     await this.env.populate();
 
