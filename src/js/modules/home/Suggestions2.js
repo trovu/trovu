@@ -65,13 +65,14 @@ export default class Suggestions2 {
   /**
    * Render a suggestion item.
    */
-  renderSuggestion(suggestion) {
+  renderSuggestion(suggestion, index) {
     const li = document.createElement('li', {
       role: 'option',
     });
     li.innerHTML += this.getSuggestionMain(suggestion);
     li.innerHTML += this.getSuggestionDescriptionAndTags(suggestion);
     li.innerHTML += this.getSuggestionExamples(suggestion);
+    li.setAttribute('aria-selected', index == this.position ? 'true' : 'false');
     return li;
   }
 
