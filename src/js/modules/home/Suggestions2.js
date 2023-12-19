@@ -85,6 +85,7 @@ export default class Suggestions2 {
         suggestion.setAttribute('aria-selected', 'false');
       });
       li.setAttribute('aria-selected', 'true');
+      this.position = index;
     });
     return li;
   }
