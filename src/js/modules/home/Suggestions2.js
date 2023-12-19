@@ -15,6 +15,7 @@ export default class Suggestions2 {
     // for case when input is already filled (because no shortcut was not found).
     queryInput.addEventListener('focus', this.updateSuggestions);
     // queryInput.addEventListener('awesomplete-select', this.select);
+    this.position = 0;
     this.suggestions = [];
   }
 
