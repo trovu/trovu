@@ -30,7 +30,7 @@ export default class Suggestions2 {
         this.updateSuggestions(event);
       }
       if (event.key === 'ArrowUp') {
-        this.position = Math.max(0, this.position - 1);
+        this.position = Math.max(1, this.position - 1);
         this.updateSuggestions(event);
       }
     });
