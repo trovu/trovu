@@ -42,12 +42,13 @@ export default class Home {
     document.querySelector('.navbar a.reload').onclick = this.reload;
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
-    // Run the function on page load and window resize
+    Home.setHeights(Home);
+  }
+
+  static setHeights(Home) {
     Home.setMaxHeightForSuggestions();
-    // window.onload = Home.setMaxHeightForSuggestions;
     window.onresize = Home.setMaxHeightForSuggestions;
 
-    // Set the bottom position of the fade-out-overlay.
     const footerHeight = document.querySelector('footer').offsetHeight;
     document.querySelector('#fade-out-overlay').style.bottom =
       footerHeight + 'px';
