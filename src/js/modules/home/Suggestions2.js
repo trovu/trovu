@@ -300,43 +300,4 @@ export default class Suggestions2 {
       matches[key].sort(compareKeywords);
     }
   }
-
-  /**
-   * Handle selection of a suggestion.
-   *
-   * @param {object} event – The fired event.
-   */
-  select = (event) => {
-    event.preventDefault();
-
-    const inputText = event.target.value;
-    const input = QueryParser.parse(inputText);
-    const suggestion = event.text.label;
-
-    if (event.originalEvent.type === 'click') {
-      // Unselect all at first because Awesomplete apparently doesn't.
-      document.querySelectorAll('#query-form li').forEach((li) => {
-        li.setAttribute('aria-selected', 'false');
-      });
-      this.awesomplete.goto(suggestion.position);
-      return;
-    }
-
-    let newInputText = suggestion.keyword;
-
-    // Prefix with namespace if not reachable.
-    if (!suggestion.reachable) {
-      newInputText = `${suggestion.namespace}.${newInputText}`;
-    }
-
-    // Append argumentString.
-    newInputText = `${newInputText} ${input.argumentString}`;
-
-    // Default: replace with suggested.
-    this.awesomplete.replace({
-      value: `${newInputText}`,
-    });
-
-    this.updateSuggestions(event);
-  };
 }
