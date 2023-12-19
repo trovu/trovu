@@ -1,6 +1,6 @@
 /** @module Suggestions2 */
-import Helper from './Helper.js';
-import QueryParser from './QueryParser.js';
+import Helper from '../Helper.js';
+import QueryParser from '../QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Suggestions2 {
