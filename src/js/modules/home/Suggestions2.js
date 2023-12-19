@@ -54,8 +54,8 @@ export default class Suggestions2 {
 
   renderSuggestions(suggestions) {
     const fragment = document.createDocumentFragment();
-    suggestions.forEach((suggestion) => {
-      const li = this.renderSuggestion(suggestion);
+    suggestions.forEach((suggestion, index) => {
+      const li = this.renderSuggestion(suggestion, index + 1);
       fragment.appendChild(li);
     });
     this.suggestionsList.innerHTML = '';
