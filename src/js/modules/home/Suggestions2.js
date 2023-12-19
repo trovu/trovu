@@ -15,6 +15,7 @@ export default class Suggestions2 {
     // for case when input is already filled (because no shortcut was not found).
     queryInput.addEventListener('focus', this.updateSuggestions);
     // queryInput.addEventListener('awesomplete-select', this.select);
+    this.suggestions = [];
   }
 
   /**
@@ -31,9 +32,9 @@ export default class Suggestions2 {
       ' ',
       2,
     );
-    let suggestions = this.getSuggestions(keyword);
-    suggestions = suggestions.slice(0, 500);
-    this.renderSuggestions(suggestions);
+    this.suggestions = this.getSuggestions(keyword);
+    this.suggestions = this.suggestions.slice(0, 500);
+    this.renderSuggestions(this.suggestions);
   };
 
   renderSuggestions(suggestions) {
