@@ -41,9 +41,9 @@ export default class Suggestions2 {
     const li = document.createElement('li', {
       role: 'option',
     });
-    li.innerHTML += getSuggestionMain(listItem.label);
-    li.innerHTML += getSuggestionDescriptionAndTags(listItem.label);
-    li.innerHTML += getSuggestionExamples(listItem.label);
+    li.innerHTML += getSuggestionMain(suggestion);
+    li.innerHTML += getSuggestionDescriptionAndTags(suggestion);
+    li.innerHTML += getSuggestionExamples(suggestion);
     return li;
 
     function getSuggestionMain(suggestion) {
@@ -65,23 +65,20 @@ export default class Suggestions2 {
     }
 
     function getSuggestionDescriptionAndTags(suggestion) {
-      if (!listItem.label.description && !listItem.label.tags) {
+      if (!suggestion.description && !suggestion.tags) {
         return '';
       }
       let description = '';
       // If there is a description, use it.
-      if (listItem.label.description) {
-        description = listItem.label.description;
+      if (suggestion.description) {
+        description = suggestion.description;
         // If it's empty and there are examples, use 'Examples'.
-      } else if (
-        listItem.label.examples &&
-        Array.isArray(listItem.label.examples)
-      ) {
+      } else if (suggestion.examples && Array.isArray(suggestion.examples)) {
         description = 'Examples:';
       }
       let tags = '';
-      if (listItem.label.tags && Array.isArray(listItem.label.tags)) {
-        for (const tag of listItem.label.tags) {
+      if (suggestion.tags && Array.isArray(suggestion.tags)) {
+        for (const tag of suggestion.tags) {
           tags += `<span class="tag">${tag}</span> `;
         }
       }
@@ -93,14 +90,14 @@ export default class Suggestions2 {
     }
 
     function getSuggestionExamples(suggestion) {
-      if (!listItem.label.examples || !Array.isArray(listItem.label.examples)) {
+      if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
         return '';
       }
       let examplesInnerDiv = '';
-      for (const example of listItem.label.examples) {
+      for (const example of suggestion.examples) {
         examplesInnerDiv += `
           <span class="left">  
-            <span class="query">${listItem.label.keyword} ${
+            <span class="query">${suggestion.keyword} ${
               example.arguments || ''
             }</span>  
           </span>
