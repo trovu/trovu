@@ -106,6 +106,7 @@ export default class Home {
         document.querySelector('nav.navbar').style.display = 'none';
         document.querySelector('#intro').style.display = 'none';
       }
+      Home.setHeights();
     });
   }
 
