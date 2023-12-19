@@ -32,13 +32,19 @@ export default class Suggestions2 {
       2,
     );
     let suggestions = this.getSuggestions(keyword);
-    suggestions = suggestions.slice(0, 100);
-    this.suggestionsList.innerHTML = '';
-    for (const suggestion of suggestions) {
-      const li = this.renderSuggestion(suggestion, inputText);
-      this.suggestionsList.appendChild(li);
-    }
+    suggestions = suggestions.slice(0, 500);
+    this.renderSuggestions(suggestions);
   };
+
+  renderSuggestions(suggestions) {
+    const fragment = document.createDocumentFragment();
+    suggestions.forEach((suggestion) => {
+      const li = this.renderSuggestion(suggestion);
+      fragment.appendChild(li);
+    });
+    this.suggestionsList.innerHTML = '';
+    this.suggestionsList.appendChild(fragment);
+  }
 
   /**
    * Render a suggestion item.
