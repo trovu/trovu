@@ -44,8 +44,8 @@ export default class Home {
 
     // Run the function on page load and window resize
     Home.setMaxHeightForSuggestions();
-    // window.onload = setMaxHeightForSuggestions;
-    // window.onresize = setMaxHeightForSuggestions;
+    // window.onload = Home.setMaxHeightForSuggestions;
+    window.onresize = Home.setMaxHeightForSuggestions;
   }
 
   static setMaxHeightForSuggestions() {
