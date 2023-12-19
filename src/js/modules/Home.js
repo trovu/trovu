@@ -51,7 +51,6 @@ export default class Home {
     const footerHeight = document.querySelector('footer').offsetHeight;
     document.querySelector('.fade-out-overlay').style.bottom =
       footerHeight + 'px';
-    console.log(footerHeight);
   }
 
   static setMaxHeightForSuggestions() {
@@ -64,7 +63,6 @@ export default class Home {
       .querySelector('footer')
       .getBoundingClientRect().top;
     suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
-    console.log(suggestionsTop, footerTop);
   }
 
   /**
