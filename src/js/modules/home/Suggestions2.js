@@ -47,15 +47,16 @@ export default class Suggestions2 {
     const li = document.createElement('li', {
       role: 'option',
     });
-    li.innerHTML += getSuggestionMain(suggestion);
-    li.innerHTML += getSuggestionDescriptionAndTags(suggestion);
-    li.innerHTML += getSuggestionExamples(suggestion);
+    li.innerHTML += this.getSuggestionMain(suggestion);
+    li.innerHTML += this.getSuggestionDescriptionAndTags(suggestion);
+    li.innerHTML += this.getSuggestionExamples(suggestion);
     return li;
+  }
 
-    function getSuggestionMain(suggestion) {
-      const argument_names_str = getArgumentsStr(suggestion.arguments);
+  getSuggestionMain(suggestion) {
+    const argument_names_str = this.getArgumentsStr(suggestion.arguments);
 
-      const main = `
+    const main = `
       <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
         <span class="left">  
         <span class="keyword">${suggestion.keyword}</span>  
@@ -67,41 +68,41 @@ export default class Suggestions2 {
         </span>
       </div>
     `;
-      return main;
-    }
+    return main;
+  }
 
-    function getSuggestionDescriptionAndTags(suggestion) {
-      if (!suggestion.description && !suggestion.tags) {
-        return '';
+  getSuggestionDescriptionAndTags(suggestion) {
+    if (!suggestion.description && !suggestion.tags) {
+      return '';
+    }
+    let description = '';
+    // If there is a description, use it.
+    if (suggestion.description) {
+      description = suggestion.description;
+      // If it's empty and there are examples, use 'Examples'.
+    } else if (suggestion.examples && Array.isArray(suggestion.examples)) {
+      description = 'Examples:';
+    }
+    let tags = '';
+    if (suggestion.tags && Array.isArray(suggestion.tags)) {
+      for (const tag of suggestion.tags) {
+        tags += `<span class="tag">${tag}</span> `;
       }
-      let description = '';
-      // If there is a description, use it.
-      if (suggestion.description) {
-        description = suggestion.description;
-        // If it's empty and there are examples, use 'Examples'.
-      } else if (suggestion.examples && Array.isArray(suggestion.examples)) {
-        description = 'Examples:';
-      }
-      let tags = '';
-      if (suggestion.tags && Array.isArray(suggestion.tags)) {
-        for (const tag of suggestion.tags) {
-          tags += `<span class="tag">${tag}</span> `;
-        }
-      }
-      const descriptionAndTags = `<div class="description-and-tags">
+    }
+    const descriptionAndTags = `<div class="description-and-tags">
         <span class="left">${description}</span>
         <span class="right">${tags}</span>
       </div>`;
-      return descriptionAndTags;
-    }
+    return descriptionAndTags;
+  }
 
-    function getSuggestionExamples(suggestion) {
-      if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
-        return '';
-      }
-      let examplesInnerDiv = '';
-      for (const example of suggestion.examples) {
-        examplesInnerDiv += `
+  getSuggestionExamples(suggestion) {
+    if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
+      return '';
+    }
+    let examplesInnerDiv = '';
+    for (const example of suggestion.examples) {
+      examplesInnerDiv += `
           <span class="left">  
             <span class="query">${suggestion.keyword} ${
               example.arguments || ''
@@ -110,26 +111,25 @@ export default class Suggestions2 {
           <span class="right">
             <span class="description">${example.description}</span>  
           </span>`;
-      }
-      const examples = `<div class="examples">${examplesInnerDiv}</div>`;
-      return examples;
     }
+    const examples = `<div class="examples">${examplesInnerDiv}</div>`;
+    return examples;
+  }
 
-    function getArgumentsStr(args) {
-      const icons = {
-        city: '🏙',
-        date: '📅',
-        time: '🕒',
-      };
-      return Object.entries(args)
-        .map(([key, value]) => {
-          const type = Object.values(value)[0].type ?? null;
-          return icons[type]
-            ? `<span title="${type}">${icons[type]}</span>&nbsp;&#x202F;${key}`
-            : key;
-        })
-        .join(', ');
-    }
+  getArgumentsStr(args) {
+    const icons = {
+      city: '🏙',
+      date: '📅',
+      time: '🕒',
+    };
+    return Object.entries(args)
+      .map(([key, value]) => {
+        const type = Object.values(value)[0].type ?? null;
+        return icons[type]
+          ? `<span title="${type}">${icons[type]}</span>&nbsp;&#x202F;${key}`
+          : key;
+      })
+      .join(', ');
   }
 
   /**
