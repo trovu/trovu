@@ -27,10 +27,7 @@ export default class Suggestions2 {
         this.updateSuggestions(event);
       }
       if (event.key === 'ArrowDown') {
-        this.position = Math.min(
-          this.suggestions.length - 1,
-          this.position + 1,
-        );
+        this.position = Math.min(this.suggestions.length, this.position + 1);
         this.updateSuggestions(event);
       }
     });
