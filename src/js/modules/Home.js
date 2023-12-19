@@ -40,10 +40,10 @@ export default class Home {
     document.querySelector('.navbar a.reload').onclick = this.reload;
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
-    Home.setHeights(Home);
+    Home.setHeights();
   }
 
-  static setHeights(Home) {
+  static setHeights() {
     Home.setMaxHeightForSuggestions();
     window.onresize = Home.setMaxHeightForSuggestions;
 
