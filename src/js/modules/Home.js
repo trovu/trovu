@@ -49,7 +49,7 @@ export default class Home {
 
     // Set the bottom position of the fade-out-overlay.
     const footerHeight = document.querySelector('footer').offsetHeight;
-    document.querySelector('.fade-out-overlay').style.bottom =
+    document.querySelector('#fade-out-overlay').style.bottom =
       footerHeight + 'px';
   }
 
