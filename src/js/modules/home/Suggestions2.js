@@ -23,10 +23,12 @@ export default class Suggestions2 {
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowUp') {
+        event.preventDefault();
         this.position = Math.max(1, this.position - 1);
         this.updateSuggestions(event);
       }
       if (event.key === 'ArrowDown') {
+        event.preventDefault();
         this.position = Math.min(this.suggestions.length, this.position + 1);
         this.updateSuggestions(event);
       }
