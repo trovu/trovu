@@ -3,7 +3,7 @@ import Helper from './Helper.js';
 import QueryParser from './QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
-export default class Suggestions {
+export default class Suggestions2 {
   constructor(namespaceInfos, submitQuery) {
     this.namespacesInfos = namespaceInfos;
     this.submitQuery = submitQuery;
