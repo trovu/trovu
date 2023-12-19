@@ -22,15 +22,15 @@ export default class Suggestions2 {
     this.suggestions = [];
 
     document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowUp') {
+        this.position = Math.max(1, this.position - 1);
+        this.updateSuggestions(event);
+      }
       if (event.key === 'ArrowDown') {
         this.position = Math.min(
           this.suggestions.length - 1,
           this.position + 1,
         );
-        this.updateSuggestions(event);
-      }
-      if (event.key === 'ArrowUp') {
-        this.position = Math.max(1, this.position - 1);
         this.updateSuggestions(event);
       }
     });
