@@ -10,20 +10,6 @@ export default class Suggestions2 {
 
     const queryInput = document.querySelector('#query');
 
-    this.awesomplete = new Awesomplete(queryInput, {
-      container: function (input) {
-        return input.parentNode.parentNode;
-      },
-      minChars: 1,
-      maxItems: 15,
-      filter: function (text, input) {
-        return true;
-      },
-      list: [],
-      sort: false,
-      item: this.renderAwesompleteItem,
-    });
-
     queryInput.addEventListener('input', this.updateSuggestions);
     // Also update on focus,
     // for case when input is already filled (because no shortcut was not found).
