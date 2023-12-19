@@ -79,6 +79,13 @@ export default class Suggestions2 {
     li.innerHTML += this.getSuggestionDescriptionAndTags(suggestion);
     li.innerHTML += this.getSuggestionExamples(suggestion);
     li.setAttribute('aria-selected', index == this.position ? 'true' : 'false');
+    li.addEventListener('click', (event) => {
+      const suggestions = document.querySelectorAll('#suggestions li');
+      suggestions.forEach((suggestion) => {
+        suggestion.setAttribute('aria-selected', 'false');
+      });
+      li.setAttribute('aria-selected', 'true');
+    });
     return li;
   }
 
