@@ -4,9 +4,8 @@ import QueryParser from './QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Suggestions2 {
-  constructor(namespaceInfos, submitQuery) {
+  constructor(namespaceInfos) {
     this.namespacesInfos = namespaceInfos;
-    this.submitQuery = submitQuery;
 
     const queryInput = document.querySelector('#query');
 
@@ -320,11 +319,6 @@ export default class Suggestions2 {
       value: `${newInputText}`,
     });
 
-    // Remove for now as I can't see its sense.
-    // if (input.args.length == suggestion.argumentCount) {
-    //   this.submitQuery();
-    //   return;
-    // }
     this.updateSuggestions(event);
   };
 }
