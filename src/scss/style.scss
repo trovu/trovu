@@ -156,15 +156,16 @@ main .jumbotron {
 
 .fade-out-overlay {
   position: fixed;
-  bottom: 50px; /* Adjust this value to the height of your footer */
+  bottom: 3em; /* Adjust this value to the height of your footer */
   left: 0;
   right: 0;
-  height: 50px; /* Height of the fade-out effect */
+  height: 5em; /* Height of the fade-out effect */
   background: linear-gradient(
     to bottom,
-    transparent,
-    #fff
-  ); /* Use your page's background color */
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 70%
+  );
+
   z-index: 10; /* Ensure this is above #suggestions but below any fixed footers or elements */
   pointer-events: none; /* This allows clicks to pass through to elements below */
 }
