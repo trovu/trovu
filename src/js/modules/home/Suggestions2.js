@@ -33,7 +33,7 @@ export default class Suggestions2 {
       2,
     );
     this.suggestions = this.getSuggestions(keyword);
-    this.suggestions = this.suggestions.slice(0, 500);
+    this.suggestions = this.suggestions.slice(0, 50);
     this.renderSuggestions(this.suggestions);
   };
 
