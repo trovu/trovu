@@ -154,19 +154,19 @@ main .jumbotron {
   }
 }
 
-#suggestions::after {
-  content: '';
-  position: absolute;
+.fade-out-overlay {
+  position: fixed;
+  bottom: 50px; /* Adjust this value to the height of your footer */
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 50px; /* Height of the fade effect */
+  height: 50px; /* Height of the fade-out effect */
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1)
-  ); /* Adjust color to match the container's background */
-  pointer-events: none; /* Ensures the overlay doesn't interfere with scrolling/interaction */
+    transparent,
+    #fff
+  ); /* Use your page's background color */
+  z-index: 10; /* Ensure this is above #suggestions but below any fixed footers or elements */
+  pointer-events: none; /* This allows clicks to pass through to elements below */
 }
 
 .awesomplete > ul {
