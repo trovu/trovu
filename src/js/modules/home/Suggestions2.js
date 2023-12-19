@@ -37,7 +37,7 @@ export default class Suggestions2 {
   /**
    * Render a suggestion item.
    */
-  renderSuggestion(listItem, input, id) {
+  renderSuggestion(suggestion) {
     const li = document.createElement('li', {
       role: 'option',
     });
