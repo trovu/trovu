@@ -32,7 +32,7 @@ export default class Suggestions2 {
       2,
     );
     let suggestions = this.getSuggestions(keyword);
-    suggestions = suggestions.slice(0, 500);
+    suggestions = suggestions.slice(0, 100);
     this.suggestionsList.innerHTML = '';
     for (const suggestion of suggestions) {
       const li = this.renderSuggestion(suggestion, inputText);
