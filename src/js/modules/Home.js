@@ -2,8 +2,9 @@
 import '../../scss/style.scss';
 import Env from './Env.js';
 import Helper from './Helper.js';
-import Suggestions from './Suggestions';
+// import Suggestions from './Suggestions';
 import Settings from './home/Settings.js';
+import Suggestions2 from './home/Suggestions2.js';
 import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
@@ -93,7 +94,8 @@ export default class Home {
         break;
     }
 
-    new Suggestions(this.env.namespaceInfos, this.submitQuery);
+    // new Suggestions(this.env.namespaceInfos, this.submitQuery);
+    new Suggestions2(this.env.namespaceInfos, this.submitQuery);
     document.querySelector('#query').focus();
     document.querySelector('#query').addEventListener('input', (event) => {
       // Toggle display of navbar and examples.
