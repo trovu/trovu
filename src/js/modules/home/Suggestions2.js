@@ -31,7 +31,13 @@ export default class Suggestions2 {
       ' ',
       2,
     );
-    const suggestions = this.getSuggestions(keyword);
+    let suggestions = this.getSuggestions(keyword);
+    suggestions = suggestions.slice(0, 500);
+    this.suggestionsList.innerHTML = '';
+    for (const suggestion of suggestions) {
+      const li = this.renderSuggestion(suggestion, inputText);
+      this.suggestionsList.appendChild(li);
+    }
   };
 
   /**
