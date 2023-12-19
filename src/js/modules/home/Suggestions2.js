@@ -10,7 +10,10 @@ export default class Suggestions2 {
     const queryInput = document.querySelector('#query');
     this.suggestionsList = document.querySelector('#suggestions ul');
 
-    queryInput.addEventListener('input', this.updateSuggestions);
+    queryInput.addEventListener('input', (event) => {
+      this.position = 0;
+      this.updateSuggestions(event);
+    });
     // Also update on focus,
     // for case when input is already filled (because no shortcut was not found).
     queryInput.addEventListener('focus', this.updateSuggestions);
