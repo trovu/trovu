@@ -56,7 +56,8 @@ export default class Home {
 
   static setMaxHeightForSuggestions() {
     const suggestionsDiv = document.querySelector('#suggestions');
-    suggestionsDiv.style.maxHeight = '100px';
+    // Fallback value.
+    suggestionsDiv.style.maxHeight = '200px';
     const suggestionsTop = document
       .querySelector('#suggestions')
       .getBoundingClientRect().top;
