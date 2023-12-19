@@ -46,6 +46,12 @@ export default class Home {
     Home.setMaxHeightForSuggestions();
     // window.onload = Home.setMaxHeightForSuggestions;
     window.onresize = Home.setMaxHeightForSuggestions;
+
+    // Set the bottom position of the fade-out-overlay.
+    const footerHeight = document.querySelector('footer').offsetHeight;
+    document.querySelector('.fade-out-overlay').style.bottom =
+      footerHeight + 'px';
+    console.log(footerHeight);
   }
 
   static setMaxHeightForSuggestions() {
