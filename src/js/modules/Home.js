@@ -57,7 +57,7 @@ export default class Home {
     const footerTop = document
       .querySelector('footer')
       .getBoundingClientRect().top;
-    suggestionsDiv.style.maxHeight = footerTop - suggestionsTop - 20 + 'px';
+    suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
     console.log(suggestionsTop, footerTop);
   }
 
