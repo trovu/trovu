@@ -256,10 +256,9 @@ export default class Suggestions2 {
    * @param {string} keyword – The keyword from the query.
    */
   sortMatches(matches) {
+    const compareKeywords = (a, b) => a.keyword.localeCompare(b.keyword);
     for (const key in matches) {
-      matches[key].sort((a, b) => {
-        return a.keyword < b.keyword ? -1 : 1;
-      });
+      matches[key].sort(compareKeywords);
     }
   }
 
