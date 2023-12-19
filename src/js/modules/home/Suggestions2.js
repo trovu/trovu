@@ -8,6 +8,7 @@ export default class Suggestions2 {
     this.namespacesInfos = namespaceInfos;
 
     const queryInput = document.querySelector('#query');
+    this.suggestionsList = document.querySelector('#suggestions ul');
 
     queryInput.addEventListener('input', this.updateSuggestions);
     // Also update on focus,
