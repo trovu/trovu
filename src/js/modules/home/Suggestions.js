@@ -12,24 +12,24 @@ export default class Suggestions {
     this.suggestionsList = document.querySelector('#suggestions ul');
 
     this.queryInput.addEventListener('input', (event) => {
-      this.position = 0;
+      this.selected = 0;
       this.updateSuggestions(event);
     });
     // Also update on focus,
     // for case when input is already filled (because no shortcut was not found).
     this.queryInput.addEventListener('focus', this.updateSuggestions);
-    this.position = 0;
+    this.selected = 0;
     this.suggestions = [];
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowUp') {
         event.preventDefault();
-        this.position = Math.max(1, this.position - 1);
+        this.selected = Math.max(1, this.selected - 1);
         this.updateSuggestions(event);
       }
       if (event.key === 'ArrowDown') {
         event.preventDefault();
-        this.position = Math.min(this.suggestions.length, this.position + 1);
+        this.selected = Math.min(this.suggestions.length, this.selected + 1);
         this.updateSuggestions(event);
       }
       if (event.key === 'Enter') {
@@ -83,7 +83,7 @@ export default class Suggestions {
     li.innerHTML += this.getSuggestionMain(suggestion);
     li.innerHTML += this.getSuggestionDescriptionAndTags(suggestion);
     li.innerHTML += this.getSuggestionExamples(suggestion);
-    if (index === this.position) {
+    if (index === this.selected) {
       li.setAttribute('aria-selected', 'true');
     } else {
       li.setAttribute('aria-selected', 'false');
@@ -94,7 +94,7 @@ export default class Suggestions {
         suggestion.setAttribute('aria-selected', 'false');
       });
       li.setAttribute('aria-selected', 'true');
-      this.position = index;
+      this.selected = index;
       this.queryInput.focus();
     });
     return li;
@@ -336,13 +336,13 @@ export default class Suggestions {
    * @param {object} event – The fired event.
    */
   pick(event) {
-    if (this.position === 0) {
+    if (this.selected === 0) {
       return;
     }
     event.preventDefault();
     const inputText = this.queryInput.value;
     const input = QueryParser.parse(inputText);
-    const suggestion = this.suggestions[this.position - 1];
+    const suggestion = this.suggestions[this.selected - 1];
     console.log('pick', suggestion);
     let newInputText = suggestion.keyword;
     // Prefix with namespace if not reachable.
@@ -351,7 +351,7 @@ export default class Suggestions {
     }
     newInputText = `${newInputText} ${input.argumentString}`;
     this.queryInput.value = newInputText;
-    this.position = 0;
+    this.selected = 0;
     this.updateSuggestions(event);
   }
 }
