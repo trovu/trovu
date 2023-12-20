@@ -33,7 +33,6 @@ export default class Suggestions {
         this.updateSuggestions(event);
       }
       if (event.key === 'Enter') {
-        event.preventDefault();
         this.pick(event);
       }
     });
@@ -337,9 +336,14 @@ export default class Suggestions {
    * @param {object} event – The fired event.
    */
   pick(event) {
+    if (this.position === 0) {
+      return;
+    }
+    event.preventDefault();
     const inputText = this.queryInput.value;
     const input = QueryParser.parse(inputText);
     const suggestion = this.suggestions[this.position - 1];
+    console.log('pick', suggestion);
     let newInputText = suggestion.keyword;
     // Prefix with namespace if not reachable.
     if (!suggestion.reachable) {
