@@ -11,32 +11,9 @@ export default class Suggestions {
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
     this.suggestionsList = document.createElement('ul');
     this.suggestionsDiv.appendChild(this.suggestionsList);
-
-    this.queryInput.addEventListener('input', (event) => {
-      this.selected = 0;
-      this.updateSuggestions(event);
-    });
-    // Also update on focus,
-    // for case when input is already filled (because no shortcut was not found).
-    this.queryInput.addEventListener('focus', this.updateSuggestions);
     this.selected = 0;
     this.suggestions = [];
-
-    this.queryInput.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowUp') {
-        event.preventDefault();
-        this.selected = Math.max(1, this.selected - 1);
-        this.updateSuggestions(event);
-      }
-      if (event.key === 'ArrowDown') {
-        event.preventDefault();
-        this.selected = Math.min(this.suggestions.length, this.selected + 1);
-        this.updateSuggestions(event);
-      }
-      if (event.key === 'Enter') {
-        this.pick(event);
-      }
-    });
+    this.setListeners();
   }
 
   /**
@@ -57,6 +34,31 @@ export default class Suggestions {
     this.suggestions = this.suggestions.slice(0, 50);
     this.renderSuggestions(this.suggestions);
   };
+
+  setListeners() {
+    this.queryInput.addEventListener('input', (event) => {
+      this.selected = 0;
+      this.updateSuggestions(event);
+    });
+    // Also update on focus,
+    // for case when input is already filled (because no shortcut was not found).
+    this.queryInput.addEventListener('focus', this.updateSuggestions);
+    this.queryInput.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        this.selected = Math.max(1, this.selected - 1);
+        this.updateSuggestions(event);
+      }
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        this.selected = Math.min(this.suggestions.length, this.selected + 1);
+        this.updateSuggestions(event);
+      }
+      if (event.key === 'Enter') {
+        this.pick(event);
+      }
+    });
+  }
 
   renderSuggestions(suggestions) {
     const fragment = document.createDocumentFragment();
