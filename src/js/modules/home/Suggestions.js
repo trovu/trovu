@@ -83,9 +83,9 @@ export default class Suggestions {
     const li = document.createElement('li', {
       role: 'option',
     });
-    li.innerHTML += this.getSuggestionMain(suggestion);
-    li.innerHTML += this.getSuggestionDescriptionAndTags(suggestion);
-    li.innerHTML += this.getSuggestionExamples(suggestion);
+    li.innerHTML += this.getMain(suggestion);
+    li.innerHTML += this.getDescriptionAndTags(suggestion);
+    li.innerHTML += this.getExamples(suggestion);
     if (index === this.selected) {
       li.setAttribute('aria-selected', 'true');
     } else {
@@ -124,7 +124,7 @@ export default class Suggestions {
     }
   }
 
-  getSuggestionMain(suggestion) {
+  getMain(suggestion) {
     const argument_names_str = this.getArgumentsStr(suggestion.arguments);
 
     const main = `
@@ -142,7 +142,7 @@ export default class Suggestions {
     return main;
   }
 
-  getSuggestionDescriptionAndTags(suggestion) {
+  getDescriptionAndTags(suggestion) {
     if (!suggestion.description && !suggestion.tags) {
       return '';
     }
@@ -167,7 +167,7 @@ export default class Suggestions {
     return descriptionAndTags;
   }
 
-  getSuggestionExamples(suggestion) {
+  getExamples(suggestion) {
     if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
       return '';
     }
