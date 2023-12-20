@@ -124,82 +124,149 @@ export default class Suggestions {
   }
 
   getMain(suggestion) {
-    const argument_names_str = this.getArgumentsStr(suggestion.arguments);
+    // Create the main container div
+    const mainDiv = document.createElement('div');
+    mainDiv.className = `main ${suggestion.reachable ? '' : 'unreachable'}`;
 
-    const main = `
-      <div class="main ${suggestion.reachable ? `` : ` unreachable`}">
-        <span class="left">  
-        <span class="keyword">${suggestion.keyword}</span>  
-        <span class="argument-names">${argument_names_str}</span> 
-        </span>
-        <span class="right">
-          <span class="title">${suggestion.title}</span>
-          <span class="namespace">${suggestion.namespace}</span>
-        </span>
-      </div>
-    `;
-    return main;
+    // Create and append the 'left' container
+    const leftSpan = document.createElement('span');
+    leftSpan.className = 'left';
+    mainDiv.appendChild(leftSpan);
+
+    // Create and append the keyword span
+    const keywordSpan = document.createElement('span');
+    keywordSpan.className = 'keyword';
+    keywordSpan.textContent = suggestion.keyword;
+    leftSpan.appendChild(keywordSpan);
+
+    // Create and append the argument names span
+    const argNamesSpan = document.createElement('span');
+    argNamesSpan.className = 'argument-names';
+    // getArgumentsStr now returns a DocumentFragment, so we can directly append it
+    const argsFragment = this.getArgsFragment(suggestion.arguments);
+
+    argNamesSpan.appendChild(argsFragment);
+    leftSpan.appendChild(argNamesSpan);
+
+    // Create and append the 'right' container
+    const rightSpan = document.createElement('span');
+    rightSpan.className = 'right';
+    mainDiv.appendChild(rightSpan);
+
+    // Create and append the title span
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'title';
+    titleSpan.textContent = suggestion.title;
+    rightSpan.appendChild(titleSpan);
+
+    // Create and append the namespace span
+    const namespaceSpan = document.createElement('span');
+    namespaceSpan.className = 'namespace';
+    namespaceSpan.textContent = suggestion.namespace;
+    rightSpan.appendChild(namespaceSpan);
+
+    return mainDiv.outerHTML;
   }
 
   getDescriptionAndTags(suggestion) {
-    if (!suggestion.description && !suggestion.tags) {
-      return '';
-    }
-    let description = '';
-    // If there is a description, use it.
-    if (suggestion.description) {
-      description = suggestion.description;
-      // If it's empty and there are examples, use 'Examples'.
-    } else if (suggestion.examples && Array.isArray(suggestion.examples)) {
-      description = 'Examples:';
-    }
-    let tags = '';
+    // Create the container for the description and tags
+    const descriptionAndTagsDiv = document.createElement('div');
+    descriptionAndTagsDiv.className = 'description-and-tags';
+
+    // Create and append the 'left' span for description
+    const leftSpan = document.createElement('span');
+    leftSpan.className = 'left';
+    // Set the text content for the description
+    leftSpan.textContent =
+      suggestion.description ||
+      (suggestion.examples && Array.isArray(suggestion.examples)
+        ? 'Examples:'
+        : '');
+    descriptionAndTagsDiv.appendChild(leftSpan);
+
+    // Create and append the 'right' span for tags
+    const rightSpan = document.createElement('span');
+    rightSpan.className = 'right';
     if (suggestion.tags && Array.isArray(suggestion.tags)) {
-      for (const tag of suggestion.tags) {
-        tags += `<span class="tag">${tag}</span> `;
-      }
+      suggestion.tags.forEach((tag) => {
+        const tagSpan = document.createElement('span');
+        tagSpan.className = 'tag';
+        tagSpan.textContent = tag;
+        rightSpan.appendChild(tagSpan);
+        rightSpan.appendChild(document.createTextNode(' ')); // Add space after each tag
+      });
     }
-    const descriptionAndTags = `<div class="description-and-tags">
-        <span class="left">${description}</span>
-        <span class="right">${tags}</span>
-      </div>`;
-    return descriptionAndTags;
+    descriptionAndTagsDiv.appendChild(rightSpan);
+
+    return descriptionAndTagsDiv.outerHTML;
   }
 
   getExamples(suggestion) {
     if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
       return '';
+      return document.createDocumentFragment();
     }
-    let examplesInnerDiv = '';
+
+    const examplesDiv = document.createElement('div');
+    examplesDiv.className = 'examples';
+
     for (const example of suggestion.examples) {
-      examplesInnerDiv += `
-          <span class="left">  
-            <span class="query">${suggestion.keyword} ${
-              example.arguments || ''
-            }</span>  
-          </span>
-          <span class="right">
-            <span class="description">${example.description}</span>  
-          </span>`;
+      const leftSpan = document.createElement('span');
+      leftSpan.className = 'left';
+
+      const querySpan = document.createElement('span');
+      querySpan.className = 'query';
+      querySpan.textContent = `${suggestion.keyword} ${
+        example.arguments || ''
+      }`;
+      leftSpan.appendChild(querySpan);
+
+      const rightSpan = document.createElement('span');
+      rightSpan.className = 'right';
+
+      const descriptionSpan = document.createElement('span');
+      descriptionSpan.className = 'description';
+      descriptionSpan.textContent = example.description;
+      rightSpan.appendChild(descriptionSpan);
+
+      examplesDiv.appendChild(leftSpan);
+      examplesDiv.appendChild(rightSpan);
     }
-    const examples = `<div class="examples">${examplesInnerDiv}</div>`;
-    return examples;
+
+    return examplesDiv.outerHTML;
   }
 
-  getArgumentsStr(args) {
+  getArgsFragment(args) {
     const icons = {
-      city: '🏙',
+      city: '🏙️',
       date: '📅',
       time: '🕒',
     };
-    return Object.entries(args)
-      .map(([key, value]) => {
-        const type = Object.values(value)[0].type ?? null;
-        return icons[type]
-          ? `<span title="${type}">${icons[type]}</span>&nbsp;&#x202F;${key}`
-          : key;
-      })
-      .join(', ');
+
+    const argsFragment = document.createDocumentFragment();
+
+    Object.entries(args).forEach(([key, value], index, array) => {
+      const type = Object.values(value)[0].type ?? null;
+      const argSpan = document.createElement('span');
+      argSpan.title = type;
+
+      if (icons[type]) {
+        const iconText = document.createTextNode(icons[type] + '\u202F'); // Adding a narrow no-break space
+        argSpan.appendChild(iconText);
+      }
+
+      const argText = document.createTextNode(type ? key : `${key}, `);
+      argSpan.appendChild(argText);
+
+      argsFragment.appendChild(argSpan);
+
+      // If it's not the last argument, add a comma and a space
+      if (index < array.length - 1) {
+        argsFragment.appendChild(document.createTextNode(', '));
+      }
+    });
+
+    return argsFragment;
   }
 
   /**
