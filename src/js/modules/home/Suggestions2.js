@@ -8,6 +8,7 @@ export default class Suggestions2 {
     this.namespacesInfos = namespaceInfos;
 
     this.queryInput = document.querySelector('#query');
+    this.suggestionsDiv = document.querySelector('#suggestions');
     this.suggestionsList = document.querySelector('#suggestions ul');
 
     this.queryInput.addEventListener('input', (event) => {
@@ -78,7 +79,12 @@ export default class Suggestions2 {
     li.innerHTML += this.getSuggestionMain(suggestion);
     li.innerHTML += this.getSuggestionDescriptionAndTags(suggestion);
     li.innerHTML += this.getSuggestionExamples(suggestion);
-    li.setAttribute('aria-selected', index == this.position ? 'true' : 'false');
+    if (index === this.position) {
+      li.setAttribute('aria-selected', 'true');
+      this.ensureElementIsVisibleInContainer(li, this.suggestionsDiv);
+    } else {
+      li.setAttribute('aria-selected', 'false');
+    }
     li.addEventListener('click', (event) => {
       const suggestions = document.querySelectorAll('#suggestions li');
       suggestions.forEach((suggestion) => {
@@ -88,6 +94,19 @@ export default class Suggestions2 {
       this.position = index;
     });
     return li;
+  }
+
+  ensureElementIsVisibleInContainer(element, container) {
+    const elementRect = element.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    const isElementVisible =
+      elementRect.top >= containerRect.top &&
+      elementRect.bottom <= containerRect.bottom;
+
+    if (!isElementVisible) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
 
   getSuggestionMain(suggestion) {
