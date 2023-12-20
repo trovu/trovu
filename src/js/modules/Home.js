@@ -94,6 +94,10 @@ export default class Home {
     }
 
     new Suggestions(this.env.namespaceInfos, this.submitQuery);
+    this.setToggleByQuery(Home);
+  }
+
+  setToggleByQuery(Home) {
     document.querySelector('#query').focus();
     document.querySelector('#query').addEventListener('input', (event) => {
       // Toggle display of navbar and examples.
