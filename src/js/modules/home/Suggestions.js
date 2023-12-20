@@ -212,7 +212,7 @@ export default class Suggestions {
    */
   getSuggestions(keyword) {
     const matches = this.getMatches(keyword);
-    this.sortMatches(matches);
+    this.sort(matches);
 
     let suggestions = [];
     suggestions = suggestions.concat(
@@ -326,7 +326,7 @@ export default class Suggestions {
    *
    * @param {string} keyword – The keyword from the query.
    */
-  sortMatches(matches) {
+  sort(matches) {
     const compareKeywords = (a, b) => a.keyword.localeCompare(b.keyword);
     for (const key in matches) {
       matches[key].sort(compareKeywords);
