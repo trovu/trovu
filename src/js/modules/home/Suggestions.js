@@ -177,6 +177,9 @@ export default class Suggestions {
     namespaceSpan.addEventListener('click', () => {
       this.queryInput.value = `ns:${suggestion.namespace}`;
     });
+    namespaceSpan.addEventListener('mouseover', () => {
+      namespaceSpan.style.cursor = 'pointer';
+    });
 
     return mainDiv;
   }
@@ -209,6 +212,9 @@ export default class Suggestions {
         // On click, set the query input value to "tag:TAG".
         tagSpan.addEventListener('click', () => {
           this.queryInput.value = `tag:${tag}`;
+        });
+        tagSpan.addEventListener('mouseover', () => {
+          tagSpan.style.cursor = 'pointer';
         });
         rightSpan.appendChild(tagSpan);
         rightSpan.appendChild(document.createTextNode(' ')); // Add space after each tag
