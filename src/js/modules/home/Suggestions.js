@@ -9,7 +9,8 @@ export default class Suggestions {
 
     this.queryInput = document.querySelector('#query');
     this.suggestionsDiv = document.querySelector('#suggestions');
-    this.suggestionsList = document.querySelector('#suggestions ul');
+    this.suggestionsList = document.createElement('ul');
+    this.suggestionsDiv.appendChild(this.suggestionsList);
 
     this.queryInput.addEventListener('input', (event) => {
       this.selected = 0;
