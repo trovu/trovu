@@ -93,7 +93,6 @@ export default class Home {
         break;
     }
 
-    // new Suggestions(this.env.namespaceInfos, this.submitQuery);
     new Suggestions(this.env.namespaceInfos, this.submitQuery);
     document.querySelector('#query').focus();
     document.querySelector('#query').addEventListener('input', (event) => {
