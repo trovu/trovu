@@ -35,7 +35,7 @@ export default class Suggestions {
       }
       if (event.key === 'Enter') {
         event.preventDefault();
-        this.select(event);
+        this.pick(event);
       }
     });
   }
@@ -339,7 +339,7 @@ export default class Suggestions {
    *
    * @param {object} event – The fired event.
    */
-  select(event) {
+  pick(event) {
     const inputText = this.queryInput.value;
     const input = QueryParser.parse(inputText);
     const suggestion = this.suggestions[this.position - 1];
