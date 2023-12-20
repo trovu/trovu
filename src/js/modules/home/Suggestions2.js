@@ -104,25 +104,23 @@ export default class Suggestions2 {
   }
 
   ensureElementIsVisibleInContainer(element, container) {
-    const elementRect = element.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
+    // Assuming the height of the fade-out overlay is known (e.g., 100px)
+    const fadeOutHeight = 60; // Adjust the fade-out height accordingly
 
-    // Calculate the positions relative to the container
-    const elementTopRelativeToContainer =
-      elementRect.top - containerRect.top + container.scrollTop;
-    const elementBottomRelativeToContainer =
-      elementTopRelativeToContainer + elementRect.height;
+    // Get the bottom position of the element relative to the container's scrollable area
+    const elementBottom = element.offsetTop + element.offsetHeight;
 
-    // Check if the element is fully visible in the container
-    const isElementFullyVisible =
-      elementTopRelativeToContainer >= container.scrollTop &&
-      elementBottomRelativeToContainer <=
-        container.scrollTop + container.clientHeight;
-
-    if (!isElementFullyVisible) {
-      // Scroll the container to the element
-      // 'nearest' aligns the element inside the container in the nearest viewable area (top or bottom)
-      element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    // Check if the bottom of the element is below the visible area considering the fade out height
+    if (
+      elementBottom >
+      container.scrollTop + container.clientHeight - fadeOutHeight
+    ) {
+      // Scroll down to bring the element above the fade-out overlay
+      container.scrollTop =
+        elementBottom - container.clientHeight + fadeOutHeight;
+    } else if (element.offsetTop < container.scrollTop) {
+      // If the top of the element is above the visible area, scroll up to it
+      container.scrollTop = element.offsetTop;
     }
   }
 
