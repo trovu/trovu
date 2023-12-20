@@ -18,7 +18,6 @@ export default class Suggestions {
     // Also update on focus,
     // for case when input is already filled (because no shortcut was not found).
     this.queryInput.addEventListener('focus', this.updateSuggestions);
-    // queryInput.addEventListener('awesomplete-select', this.select);
     this.position = 0;
     this.suggestions = [];
 
@@ -67,8 +66,6 @@ export default class Suggestions {
     });
     this.suggestionsList.innerHTML = '';
     this.suggestionsList.appendChild(fragment);
-
-    // After rendering, ensure the selected item is visible
     const selectedLi = this.suggestionsList.querySelector(
       'li[aria-selected="true"]',
     );
