@@ -1,9 +1,9 @@
-/** @module Suggestions2 */
+/** @module Suggestions */
 import Helper from '../Helper.js';
 import QueryParser from '../QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
-export default class Suggestions2 {
+export default class Suggestions {
   constructor(namespaceInfos) {
     this.namespacesInfos = namespaceInfos;
 
