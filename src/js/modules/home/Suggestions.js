@@ -347,7 +347,7 @@ export default class Suggestions {
     }
     newInputText = `${newInputText} ${input.argumentString}`;
     this.queryInput.value = newInputText;
-    this.updateSuggestions(event);
     this.position = 0;
+    this.updateSuggestions(event);
   }
 }
