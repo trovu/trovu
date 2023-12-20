@@ -67,6 +67,14 @@ export default class Suggestions2 {
     });
     this.suggestionsList.innerHTML = '';
     this.suggestionsList.appendChild(fragment);
+
+    // After rendering, ensure the selected item is visible
+    const selectedLi = this.suggestionsList.querySelector(
+      'li[aria-selected="true"]',
+    );
+    if (selectedLi) {
+      this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
+    }
   }
 
   /**
@@ -81,7 +89,6 @@ export default class Suggestions2 {
     li.innerHTML += this.getSuggestionExamples(suggestion);
     if (index === this.position) {
       li.setAttribute('aria-selected', 'true');
-      this.ensureElementIsVisibleInContainer(li, this.suggestionsDiv);
     } else {
       li.setAttribute('aria-selected', 'false');
     }
