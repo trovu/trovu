@@ -4,11 +4,11 @@ import QueryParser from '../QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Suggestions {
-  constructor(namespaceInfos) {
+  constructor(querySelector, suggestionsSelector, namespaceInfos) {
     this.namespacesInfos = namespaceInfos;
 
-    this.queryInput = document.querySelector('#query');
-    this.suggestionsDiv = document.querySelector('#suggestions');
+    this.queryInput = document.querySelector(querySelector);
+    this.suggestionsDiv = document.querySelector(suggestionsSelector);
     this.suggestionsList = document.createElement('ul');
     this.suggestionsDiv.appendChild(this.suggestionsList);
 
