@@ -2,7 +2,6 @@
 import '../../scss/style.scss';
 import Env from './Env.js';
 import Helper from './Helper.js';
-// import Suggestions from './Suggestions';
 import Settings from './home/Settings.js';
 import Suggestions2 from './home/Suggestions2.js';
 import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
