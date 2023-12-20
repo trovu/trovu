@@ -173,6 +173,11 @@ export default class Suggestions {
     namespaceSpan.textContent = suggestion.namespace;
     rightSpan.appendChild(namespaceSpan);
 
+    // On click, set the query input value to "ns:NAMESPACE".
+    namespaceSpan.addEventListener('click', () => {
+      this.queryInput.value = `ns:${suggestion.namespace}`;
+    });
+
     return mainDiv;
   }
 
@@ -200,6 +205,11 @@ export default class Suggestions {
         const tagSpan = document.createElement('span');
         tagSpan.className = 'tag';
         tagSpan.textContent = tag;
+
+        // On click, set the query input value to "tag:TAG".
+        tagSpan.addEventListener('click', () => {
+          this.queryInput.value = `tag:${tag}`;
+        });
         rightSpan.appendChild(tagSpan);
         rightSpan.appendChild(document.createTextNode(' ')); // Add space after each tag
       });
