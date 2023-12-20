@@ -82,29 +82,16 @@ export default class Suggestions {
       'aria-selected',
       index === this.selected ? 'true' : 'false',
     );
-
-    // Create a document fragment to assemble the parts of the list item
     const fragment = document.createDocumentFragment();
-
-    // Append the main part of the suggestion
     fragment.appendChild(this.getMain(suggestion));
-
-    // Append the description and tags
     fragment.appendChild(this.getDescriptionAndTags(suggestion));
-
-    // Append the examples
     fragment.appendChild(this.getExamples(suggestion));
-
-    // Now append the complete fragment to the list item
     li.appendChild(fragment);
-
     li.addEventListener('click', () => {
-      // Update all at once to avoid querying the DOM multiple times
       this.updateAriaSelected(index);
       this.selected = index;
       this.queryInput.focus();
     });
-
     return li;
   }
 
