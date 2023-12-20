@@ -99,6 +99,7 @@ export default class Suggestions {
       });
       li.setAttribute('aria-selected', 'true');
       this.position = index;
+      this.queryInput.focus();
     });
     return li;
   }
