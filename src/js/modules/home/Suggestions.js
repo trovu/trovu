@@ -22,7 +22,7 @@ export default class Suggestions {
     this.selected = 0;
     this.suggestions = [];
 
-    document.addEventListener('keydown', (event) => {
+    this.queryInput.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowUp') {
         event.preventDefault();
         this.selected = Math.max(1, this.selected - 1);
