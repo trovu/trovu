@@ -100,11 +100,21 @@ export default class Suggestions2 {
     const elementRect = element.getBoundingClientRect();
     const containerRect = container.getBoundingClientRect();
 
-    const isElementVisible =
-      elementRect.top >= containerRect.top &&
-      elementRect.bottom <= containerRect.bottom;
+    // Calculate the positions relative to the container
+    const elementTopRelativeToContainer =
+      elementRect.top - containerRect.top + container.scrollTop;
+    const elementBottomRelativeToContainer =
+      elementTopRelativeToContainer + elementRect.height;
 
-    if (!isElementVisible) {
+    // Check if the element is fully visible in the container
+    const isElementFullyVisible =
+      elementTopRelativeToContainer >= container.scrollTop &&
+      elementBottomRelativeToContainer <=
+        container.scrollTop + container.clientHeight;
+
+    if (!isElementFullyVisible) {
+      // Scroll the container to the element
+      // 'nearest' aligns the element inside the container in the nearest viewable area (top or bottom)
       element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }
