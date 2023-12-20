@@ -75,31 +75,48 @@ export default class Suggestions {
     }
   }
 
-  /**
-   * Render a suggestion item.
-   */
   renderSuggestion(suggestion, index) {
-    const li = document.createElement('li', {
-      role: 'option',
-    });
-    li.innerHTML += this.getMain(suggestion);
-    li.innerHTML += this.getDescriptionAndTags(suggestion);
-    li.innerHTML += this.getExamples(suggestion);
-    if (index === this.selected) {
-      li.setAttribute('aria-selected', 'true');
-    } else {
-      li.setAttribute('aria-selected', 'false');
-    }
-    li.addEventListener('click', (event) => {
-      const suggestions = document.querySelectorAll('#suggestions li');
-      suggestions.forEach((suggestion) => {
-        suggestion.setAttribute('aria-selected', 'false');
-      });
-      li.setAttribute('aria-selected', 'true');
+    const li = document.createElement('li');
+    li.setAttribute('role', 'option');
+    li.setAttribute(
+      'aria-selected',
+      index === this.selected ? 'true' : 'false',
+    );
+
+    // Create a document fragment to assemble the parts of the list item
+    const fragment = document.createDocumentFragment();
+
+    // Append the main part of the suggestion
+    fragment.appendChild(this.getMain(suggestion));
+
+    // Append the description and tags
+    fragment.appendChild(this.getDescriptionAndTags(suggestion));
+
+    // Append the examples
+    fragment.appendChild(this.getExamples(suggestion));
+
+    // Now append the complete fragment to the list item
+    li.appendChild(fragment);
+
+    li.addEventListener('click', () => {
+      // Update all at once to avoid querying the DOM multiple times
+      this.updateAriaSelected(index);
       this.selected = index;
       this.queryInput.focus();
     });
+
     return li;
+  }
+
+  // New method to update aria-selected attribute for all items
+  updateAriaSelected(selectedIndex) {
+    const lis = this.suggestionsList.querySelectorAll('li');
+    lis.forEach((li, index) => {
+      li.setAttribute(
+        'aria-selected',
+        index === selectedIndex ? 'true' : 'false',
+      );
+    });
   }
 
   ensureElementIsVisibleInContainer(element, container) {
@@ -165,7 +182,7 @@ export default class Suggestions {
     namespaceSpan.textContent = suggestion.namespace;
     rightSpan.appendChild(namespaceSpan);
 
-    return mainDiv.outerHTML;
+    return mainDiv;
   }
 
   getDescriptionAndTags(suggestion) {
@@ -198,12 +215,11 @@ export default class Suggestions {
     }
     descriptionAndTagsDiv.appendChild(rightSpan);
 
-    return descriptionAndTagsDiv.outerHTML;
+    return descriptionAndTagsDiv;
   }
 
   getExamples(suggestion) {
     if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
-      return '';
       return document.createDocumentFragment();
     }
 
@@ -233,7 +249,7 @@ export default class Suggestions {
       examplesDiv.appendChild(rightSpan);
     }
 
-    return examplesDiv.outerHTML;
+    return examplesDiv;
   }
 
   getArgsFragment(args) {
