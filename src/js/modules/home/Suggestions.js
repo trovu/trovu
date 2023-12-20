@@ -6,7 +6,6 @@ import 'font-awesome/css/font-awesome.min.css';
 export default class Suggestions {
   constructor(querySelector, suggestionsSelector, namespaceInfos) {
     this.namespacesInfos = namespaceInfos;
-
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
     this.suggestionsList = document.createElement('ul');
