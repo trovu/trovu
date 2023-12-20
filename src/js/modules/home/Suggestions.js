@@ -60,12 +60,16 @@ export default class Suggestions {
   }
 
   renderSuggestions(suggestions) {
+    while (this.suggestionsList.firstChild) {
+      this.suggestionsList.removeChild(this.suggestionsList.firstChild);
+    }
+
     const fragment = document.createDocumentFragment();
     suggestions.forEach((suggestion, index) => {
       const li = this.renderSuggestion(suggestion, index + 1);
       fragment.appendChild(li);
     });
-    this.suggestionsList.innerHTML = '';
+
     this.suggestionsList.appendChild(fragment);
     const selectedLi = this.suggestionsList.querySelector(
       'li[aria-selected="true"]',
