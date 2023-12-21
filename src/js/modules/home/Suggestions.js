@@ -8,8 +8,6 @@ export default class Suggestions {
     this.namespacesInfos = namespaceInfos;
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
-    this.suggestionsList = document.createElement('ul');
-    this.suggestionsDiv.appendChild(this.suggestionsList);
     this.selected = 0;
     this.suggestions = [];
     this.setListeners();
@@ -53,9 +51,19 @@ export default class Suggestions {
   }
 
   renderSuggestions(suggestions) {
-    while (this.suggestionsList.firstChild) {
-      this.suggestionsList.removeChild(this.suggestionsList.firstChild);
+    while (this.suggestionsDiv.firstChild) {
+      this.suggestionsDiv.removeChild(this.suggestionsDiv.firstChild);
     }
+    if (suggestions.length === 0) {
+      const emptyDiv = document.createElement('div');
+      emptyDiv.textContent = '∅';
+      emptyDiv.className = 'empty';
+      this.suggestionsDiv.appendChild(emptyDiv);
+      return;
+    }
+
+    this.suggestionsList = document.createElement('ul');
+    this.suggestionsDiv.appendChild(this.suggestionsList);
 
     const fragment = document.createDocumentFragment();
     suggestions.forEach((suggestion, index) => {

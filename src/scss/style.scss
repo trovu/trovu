@@ -62,6 +62,12 @@ main .jumbotron {
   overflow: auto;
   position: relative;
   overflow-y: auto;
+  .empty {
+    color: #eee;
+    font-size: 10em;
+    font-weight: bold;
+    text-align: center;
+  }
   ul {
     list-style-type: none;
     padding-left: 0em;
