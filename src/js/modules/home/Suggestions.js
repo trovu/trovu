@@ -368,6 +368,14 @@ export default class Suggestions {
         if (filters.namespace && filters.namespace != shortcut.namespace) {
           continue;
         }
+        if (
+          filters.tag &&
+          (!shortcut.tags || !shortcut.tags.includes(filters.tag)) &&
+          (!shortcut.tags ||
+            !shortcut.tags.some((tag) => tag.includes(filters.tag)))
+        ) {
+          continue;
+        }
         if (env.keyword == shortcut.keyword) {
           if (shortcut.reachable) {
             matches.keywordFullReachable.push(shortcut);
