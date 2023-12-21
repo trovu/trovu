@@ -325,9 +325,26 @@ export default class Suggestions {
   getMatches(query) {
     const filters = {};
     const env = QueryParser.parse(query);
-    if (env.extraNamespaceName) {
-      filters.namespace = env.extraNamespaceName;
+    const queryParts = query.split(' ');
+    const remainingQueryParts = [];
+    for (const part of queryParts) {
+      if (part.startsWith('ns:')) {
+        filters.namespace = part.slice(3);
+        continue;
+      }
+      if (part.startsWith('tag:')) {
+        filters.tag = part.slice(4);
+        continue;
+      }
+      const [extraNamespaceName, keyword] = QueryParser.getExtraNamespace(part);
+      if (extraNamespaceName) {
+        filters.namespace = extraNamespaceName;
+        remainingQueryParts.push(keyword);
+        continue;
+      }
+      remainingQueryParts.push(part);
     }
+    const remainingQuery = remainingQueryParts.join(' ');
     const matches = {
       keywordFullReachable: [],
       keywordFullUnreachable: [],
@@ -343,7 +360,7 @@ export default class Suggestions {
       urlMiddleUnreachable: [],
     };
 
-    const keywordRegex = new RegExp(env.keyword, 'i');
+    const keywordRegex = new RegExp(remainingQuery, 'i');
     for (const namespaceInfo of Object.values(this.namespacesInfos)) {
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
