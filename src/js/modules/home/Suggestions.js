@@ -271,7 +271,7 @@ export default class Suggestions {
         argSpan.appendChild(iconText);
       }
 
-      const argText = document.createTextNode(type ? key : `${key}, `);
+      const argText = document.createTextNode(key);
       argSpan.appendChild(argText);
 
       argsFragment.appendChild(argSpan);
