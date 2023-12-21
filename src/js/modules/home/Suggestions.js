@@ -337,9 +337,8 @@ export default class Suggestions {
       urlMiddleReachable: [],
       urlMiddleUnreachable: [],
     };
-    const filters = {};
     const env = QueryParser.parse(query);
-    const searchRegex = this.getSearchRegex(query, filters);
+    const [searchRegExp, filters] = this.getSearchRegExp(query);
 
     for (const namespaceInfo of Object.values(this.namespacesInfos)) {
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
@@ -365,7 +364,7 @@ export default class Suggestions {
           }
           continue;
         }
-        let pos = shortcut.keyword.search(searchRegex);
+        let pos = shortcut.keyword.search(searchRegExp);
         if (pos == 0) {
           if (shortcut.reachable) {
             matches.keywordBeginReachable.push(shortcut);
@@ -374,7 +373,7 @@ export default class Suggestions {
           }
           continue;
         }
-        pos = shortcut.title.search(searchRegex);
+        pos = shortcut.title.search(searchRegExp);
         if (pos == 0) {
           if (shortcut.reachable) {
             matches.titleBeginReachable.push(shortcut);
@@ -393,7 +392,7 @@ export default class Suggestions {
         }
         if (shortcut.tags && Array.isArray(shortcut.tags)) {
           for (const tag of shortcut.tags) {
-            const pos = tag.search(searchRegex);
+            const pos = tag.search(searchRegExp);
             if (pos > -1) {
               if (shortcut.reachable) {
                 matches.tagMiddleReachable.push(shortcut);
@@ -403,7 +402,7 @@ export default class Suggestions {
             }
           }
         }
-        pos = shortcut.url.search(searchRegex);
+        pos = shortcut.url.search(searchRegExp);
         if (pos > 0) {
           if (shortcut.reachable) {
             matches.urlMiddleReachable.push(shortcut);
@@ -417,7 +416,8 @@ export default class Suggestions {
     return matches;
   }
 
-  getSearchRegex(query, filters) {
+  getSearchRegExp(query) {
+    const filters = {};
     const queryParts = query.split(' ');
     const remainingQueryParts = [];
     for (const part of queryParts) {
@@ -438,8 +438,8 @@ export default class Suggestions {
       remainingQueryParts.push(part);
     }
     const remainingQuery = remainingQueryParts.join(' ');
-    const searchRegex = new RegExp(remainingQuery, 'i');
-    return searchRegex;
+    const regexp = new RegExp(remainingQuery, 'i');
+    return [regexp, filters];
   }
 
   /**
