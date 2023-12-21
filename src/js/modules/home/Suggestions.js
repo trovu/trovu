@@ -323,6 +323,20 @@ export default class Suggestions {
    * @return {object} matches – The found matches, grouped by type of match.
    */
   getMatches(query) {
+    const matches = {
+      keywordFullReachable: [],
+      keywordFullUnreachable: [],
+      keywordBeginReachable: [],
+      keywordBeginUnreachable: [],
+      titleBeginReachable: [],
+      titleBeginUnreachable: [],
+      titleMiddleReachable: [],
+      titleMiddleUnreachable: [],
+      tagMiddleReachable: [],
+      tagMiddleUnreachable: [],
+      urlMiddleReachable: [],
+      urlMiddleUnreachable: [],
+    };
     const filters = {};
     const env = QueryParser.parse(query);
     const queryParts = query.split(' ');
@@ -345,21 +359,6 @@ export default class Suggestions {
       remainingQueryParts.push(part);
     }
     const remainingQuery = remainingQueryParts.join(' ');
-    const matches = {
-      keywordFullReachable: [],
-      keywordFullUnreachable: [],
-      keywordBeginReachable: [],
-      keywordBeginUnreachable: [],
-      titleBeginReachable: [],
-      titleBeginUnreachable: [],
-      titleMiddleReachable: [],
-      titleMiddleUnreachable: [],
-      tagMiddleReachable: [],
-      tagMiddleUnreachable: [],
-      urlMiddleReachable: [],
-      urlMiddleUnreachable: [],
-    };
-
     const keywordRegex = new RegExp(remainingQuery, 'i');
     for (const namespaceInfo of Object.values(this.namespacesInfos)) {
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
