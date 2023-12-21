@@ -5,7 +5,6 @@
 But its **successor [trovu.net](https://trovu.net/)** is already running. Trovu is a [little different to FindFind.it / Serchilo](differences.md).
 
 This page helps you how to switch to Trovu.
-
 Your migration depends on whether you used FindFind.it with or without a personal account.
 
 ## Without a FindFind.it account
