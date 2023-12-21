@@ -323,7 +323,11 @@ export default class Suggestions {
    * @return {object} matches – The found matches, grouped by type of match.
    */
   getMatches(query) {
-    const [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
+    const filters = {};
+    const env = QueryParser.parse(query);
+    if (env.extraNamespaceName) {
+      filters.namespace = env.extraNamespaceName;
+    }
     const matches = {
       keywordFullReachable: [],
       keywordFullUnreachable: [],
@@ -339,13 +343,16 @@ export default class Suggestions {
       urlMiddleUnreachable: [],
     };
 
-    const keywordRegex = new RegExp(keyword, 'i');
+    const keywordRegex = new RegExp(env.keyword, 'i');
     for (const namespaceInfo of Object.values(this.namespacesInfos)) {
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
           continue;
         }
-        if (keyword == shortcut.keyword) {
+        if (filters.namespace && filters.namespace != shortcut.namespace) {
+          continue;
+        }
+        if (env.keyword == shortcut.keyword) {
           if (shortcut.reachable) {
             matches.keywordFullReachable.push(shortcut);
           } else {
