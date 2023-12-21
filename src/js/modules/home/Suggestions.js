@@ -22,10 +22,7 @@ export default class Suggestions {
    */
   updateSuggestions = (event) => {
     const query = event.target.value;
-
-    // Only search by keyword / first word of user input.
-    const [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
-    this.suggestions = this.getSuggestions(keyword);
+    this.suggestions = this.getSuggestions(query);
     this.suggestions = this.suggestions.slice(0, 200);
     this.renderSuggestions(this.suggestions);
   };
@@ -295,8 +292,8 @@ export default class Suggestions {
    *
    * @return {array} suggestions – The found suggestions.
    */
-  getSuggestions(keyword) {
-    const matches = this.getMatches(keyword);
+  getSuggestions(query) {
+    const matches = this.getMatches(query);
     this.sort(matches);
 
     let suggestions = [];
@@ -325,7 +322,8 @@ export default class Suggestions {
    *
    * @return {object} matches – The found matches, grouped by type of match.
    */
-  getMatches(keyword) {
+  getMatches(query) {
+    const [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
     const matches = {
       keywordFullReachable: [],
       keywordFullUnreachable: [],
