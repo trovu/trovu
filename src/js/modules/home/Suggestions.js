@@ -339,27 +339,8 @@ export default class Suggestions {
     };
     const filters = {};
     const env = QueryParser.parse(query);
-    const queryParts = query.split(' ');
-    const remainingQueryParts = [];
-    for (const part of queryParts) {
-      if (part.startsWith('ns:')) {
-        filters.namespace = part.slice(3);
-        continue;
-      }
-      if (part.startsWith('tag:')) {
-        filters.tag = part.slice(4);
-        continue;
-      }
-      const [extraNamespaceName, keyword] = QueryParser.getExtraNamespace(part);
-      if (extraNamespaceName) {
-        filters.namespace = extraNamespaceName;
-        remainingQueryParts.push(keyword);
-        continue;
-      }
-      remainingQueryParts.push(part);
-    }
-    const remainingQuery = remainingQueryParts.join(' ');
-    const searchRegex = new RegExp(remainingQuery, 'i');
+    const searchRegex = this.getSearchRegex(query, filters);
+
     for (const namespaceInfo of Object.values(this.namespacesInfos)) {
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
@@ -434,6 +415,31 @@ export default class Suggestions {
       }
     }
     return matches;
+  }
+
+  getSearchRegex(query, filters) {
+    const queryParts = query.split(' ');
+    const remainingQueryParts = [];
+    for (const part of queryParts) {
+      if (part.startsWith('ns:')) {
+        filters.namespace = part.slice(3);
+        continue;
+      }
+      if (part.startsWith('tag:')) {
+        filters.tag = part.slice(4);
+        continue;
+      }
+      const [extraNamespaceName, keyword] = QueryParser.getExtraNamespace(part);
+      if (extraNamespaceName) {
+        filters.namespace = extraNamespaceName;
+        remainingQueryParts.push(keyword);
+        continue;
+      }
+      remainingQueryParts.push(part);
+    }
+    const remainingQuery = remainingQueryParts.join(' ');
+    const searchRegex = new RegExp(remainingQuery, 'i');
+    return searchRegex;
   }
 
   /**
