@@ -359,7 +359,7 @@ export default class Suggestions {
       remainingQueryParts.push(part);
     }
     const remainingQuery = remainingQueryParts.join(' ');
-    const keywordRegex = new RegExp(remainingQuery, 'i');
+    const searchRegex = new RegExp(remainingQuery, 'i');
     for (const namespaceInfo of Object.values(this.namespacesInfos)) {
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
@@ -376,7 +376,7 @@ export default class Suggestions {
           }
           continue;
         }
-        let pos = shortcut.keyword.search(keywordRegex);
+        let pos = shortcut.keyword.search(searchRegex);
         if (pos == 0) {
           if (shortcut.reachable) {
             matches.keywordBeginReachable.push(shortcut);
@@ -385,7 +385,7 @@ export default class Suggestions {
           }
           continue;
         }
-        pos = shortcut.title.search(keywordRegex);
+        pos = shortcut.title.search(searchRegex);
         if (pos == 0) {
           if (shortcut.reachable) {
             matches.titleBeginReachable.push(shortcut);
@@ -404,7 +404,7 @@ export default class Suggestions {
         }
         if (shortcut.tags && Array.isArray(shortcut.tags)) {
           for (const tag of shortcut.tags) {
-            const pos = tag.search(keywordRegex);
+            const pos = tag.search(searchRegex);
             if (pos > -1) {
               if (shortcut.reachable) {
                 matches.tagMiddleReachable.push(shortcut);
@@ -414,7 +414,7 @@ export default class Suggestions {
             }
           }
         }
-        pos = shortcut.url.search(keywordRegex);
+        pos = shortcut.url.search(searchRegex);
         if (pos > 0) {
           if (shortcut.reachable) {
             matches.urlMiddleReachable.push(shortcut);
