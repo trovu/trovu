@@ -21,14 +21,10 @@ export default class Suggestions {
    * @param {object} event – The fired event.
    */
   updateSuggestions = (event) => {
-    const inputText = event.target.value;
+    const query = event.target.value;
 
     // Only search by keyword / first word of user input.
-    const [keyword, argumentString] = Helper.splitKeepRemainder(
-      inputText,
-      ' ',
-      2,
-    );
+    const [keyword, argumentString] = Helper.splitKeepRemainder(query, ' ', 2);
     this.suggestions = this.getSuggestions(keyword);
     this.suggestions = this.suggestions.slice(0, 200);
     this.renderSuggestions(this.suggestions);
