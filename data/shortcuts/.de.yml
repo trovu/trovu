@@ -537,7 +537,7 @@ db 2:
     description: Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über Autokennzeichen
   include:
     key: db 0
-  showOnHome: 1
+  showOnHome: 700
 db 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&timesel=depart&start=1'
   title: Deutsche Bahn Fahrplanauskunft
@@ -562,7 +562,7 @@ dbb 3:
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
   include:
     key: db 0
-  showOnHome: 1
+  showOnHome: 710
 dbm 2:
   url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -853,7 +853,7 @@ g 1:
   examples:
   - arguments: berlin
     description: Google-Suche nach berlin
-  showOnHome: 100
+  showOnHome: 600
 gh 0:
   url: http://geizhals.de/
   title: Geizhals Deutschland Hauptseite
