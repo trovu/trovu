@@ -303,7 +303,6 @@ export default class Suggestions {
    */
   getSuggestions(query) {
     const matches = this.getMatches(query);
-    this.sort(matches);
 
     let suggestions = [];
     suggestions = suggestions.concat(
