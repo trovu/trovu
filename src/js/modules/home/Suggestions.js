@@ -244,7 +244,11 @@ export default class Suggestions {
       querySpan.textContent = `${suggestion.keyword} ${
         example.arguments || ''
       }`;
-      leftSpan.appendChild(querySpan);
+      // Surrond query with link to /process.
+      const queryLink = document.createElement('a');
+      queryLink.href = this.env.getProcessUrl({ query: querySpan.textContent });
+      queryLink.appendChild(querySpan);
+      leftSpan.appendChild(queryLink);
 
       const rightSpan = document.createElement('span');
       rightSpan.className = 'right';
