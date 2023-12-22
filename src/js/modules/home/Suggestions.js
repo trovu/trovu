@@ -8,7 +8,7 @@ export default class Suggestions {
     this.namespacesInfos = namespaceInfos;
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
-    this.selected = 0;
+    this.selected = 1;
     this.suggestions = [];
     this.setListeners();
   }
@@ -27,7 +27,7 @@ export default class Suggestions {
 
   setListeners() {
     this.queryInput.addEventListener('input', (event) => {
-      this.selected = 0;
+      this.selected = 1;
       this.updateSuggestions(event);
     });
     // Also update on focus,
