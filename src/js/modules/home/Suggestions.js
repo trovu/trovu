@@ -354,6 +354,11 @@ export default class Suggestions {
         if (shortcut.deprecated || shortcut.removed) {
           continue;
         }
+        if (query == '') {
+          if (!shortcut.showOnHome || !shortcut.reachable) {
+            continue;
+          }
+        }
         if (filters.namespace && filters.namespace != shortcut.namespace) {
           continue;
         }
