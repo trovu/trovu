@@ -174,6 +174,7 @@ a 1:
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
+  showOnHome: 1
 abbr 1:
   url: https://www.abbreviations.com/<abbr>
   title: Abbreviation search
@@ -766,6 +767,7 @@ bkg 1:
     description: Use city abbreviation when country setting is already set to Germany
   include:
   - key: bkg 0
+  showOnHome: 1
 bkg 2:
   url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
   examples:
@@ -2343,6 +2345,7 @@ en 1:
     namespace: beo
   - key: en 1
     namespace: pka
+  showOnHome: 100
 ende 1:
   url: http://www.dict.cc/?s=<word>
   title: Translation English to German
@@ -2480,6 +2483,7 @@ es 1:
     namespace: beo
   - key: es 1
     namespace: pka
+  showOnHome: 100
 et 0:
   include:
   - key: et 0
@@ -3255,6 +3259,7 @@ g 1:
   examples:
   - arguments: berlin
     description: Google search for "berlin"
+  showOnHome: 1
 g! 1:
   url: http://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&btnI=1
   title: Google Web, go directly to first result
@@ -3428,6 +3433,7 @@ gd 2:
     description: Get a route from Berlin, Germany, to Hamburg, Germany
   - arguments: new york, chicago
     description: Get a route from New York to Chicago
+  showOnHome: 1
 gdb 2:
   url: 'https://www.google.com/maps/dir/?api=1&origin=<start: {type: city}>&destination=<destination: {type: city}>&travelmode= bicycling'
   title: Google Maps Directions (Routing), by Bike
@@ -3652,6 +3658,7 @@ gfl 4:
   examples:
   - arguments: ber, lpa, fr, 30
     description: Search for round trips from Berlin to Las Palmas, departing next Friday, returning on the 30th of this month
+  showOnHome: 1
 gfl1 2:
   url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20<from>%20to%20<to>
   title: Google Flights, one-way
@@ -3821,7 +3828,7 @@ gm 1:
   - arguments: london
     description: Show London on Google Maps
 gm 2:
-  url: 'https://www.google.com/maps/search/<Stadt: {type: city}>%2C%20<Straße>/?hl=<$language>'
+  url: 'https://www.google.com/maps/search/<city: {type: city}>%2C%20<street>/?hl=<$language>'
   title: Google Maps of a city
   tags:
   - google
@@ -3833,6 +3840,7 @@ gm 2:
     description: Show Alster in Hamburg (if using .de as country setting)
   - arguments: w, prater
     description: Show Prater in Vienna (if using .at as country setting)
+  showOnHome: 100
 gmail 0:
   url: https://mail.google.com
   title: Google Mail
@@ -8843,6 +8851,7 @@ w 1:
   examples:
   - arguments: berlin
     description: Wikipedia article about Berlin
+  showOnHome: 1
 wa 0:
   url: http://www.wolframalpha.com
   title: WolframAlpha
@@ -9632,6 +9641,7 @@ yt 1:
   examples:
   - arguments: cartoon
     description: Youtube search for "cartoon"
+  showOnHome: 100
 ytd 1:
   url: https://www.youtube.com/results?sp=CAI%253D&search_query=<query>
   title: Youtube, sorted by upload date
@@ -9641,6 +9651,7 @@ ytd 1:
   examples:
   - arguments: cartoon
     description: Search for "cartoon"
+  showOnHome: 1
 yth 0:
   url: http://www.youtube.com/feed/history
   title: Youtube, my history
