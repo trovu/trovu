@@ -8,7 +8,7 @@ export default class Suggestions {
     this.env = env;
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
-    this.selected = 1;
+    this.selected = 0;
     this.suggestions = [];
     this.setListeners();
     this.updateSuggestions();
@@ -28,7 +28,7 @@ export default class Suggestions {
 
   setListeners() {
     this.queryInput.addEventListener('input', (event) => {
-      this.selected = 1;
+      this.selected = 0;
       this.updateSuggestions();
     });
     // Also update on focus,
