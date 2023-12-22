@@ -307,6 +307,7 @@ export default class Suggestions {
 
     let suggestions = [];
     suggestions = suggestions.concat(
+      matches.showOnHome,
       matches.keywordFullReachable,
       matches.keywordFullUnreachable,
       matches.keywordBeginReachable,
@@ -333,6 +334,7 @@ export default class Suggestions {
    */
   getMatches(query) {
     const matches = {
+      showOnHome: [],
       keywordFullReachable: [],
       keywordFullUnreachable: [],
       keywordBeginReachable: [],
