@@ -43,7 +43,7 @@ footer {
 main .jumbotron {
   margin: 0;
   padding: 1em;
-  padding-bottom: 2em;
+  padding-bottom: 0;
 }
 
 #query-form {
@@ -171,6 +171,10 @@ main .jumbotron {
   }
 }
 
+#help {
+  padding-top: 0.5em;
+  font-style: italic;
+}
 #fade-out-overlay {
   position: fixed;
   bottom: 3.5em; /* Adjust this value to the height of your footer */
