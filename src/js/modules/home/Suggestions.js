@@ -18,8 +18,8 @@ export default class Suggestions {
    *
    * @param {object} event – The fired event.
    */
-  updateSuggestions = (event) => {
-    const query = event.target.value;
+  updateSuggestions = () => {
+    const query = this.queryInput.value;
     this.suggestions = this.getSuggestions(query);
     this.suggestions = this.suggestions.slice(0, 200);
     this.renderSuggestions(this.suggestions);
@@ -28,21 +28,21 @@ export default class Suggestions {
   setListeners() {
     this.queryInput.addEventListener('input', (event) => {
       this.selected = 1;
-      this.updateSuggestions(event);
+      this.updateSuggestions();
     });
     // Also update on focus,
     // for case when input is already filled (because no shortcut was not found).
-    this.queryInput.addEventListener('focus', this.updateSuggestions);
+    // this.queryInput.addEventListener('focus', this.updateSuggestions);
     this.queryInput.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowUp') {
         event.preventDefault();
         this.selected = Math.max(1, this.selected - 1);
-        this.updateSuggestions(event);
+        this.updateSuggestions();
       }
       if (event.key === 'ArrowDown') {
         event.preventDefault();
         this.selected = Math.min(this.suggestions.length, this.selected + 1);
-        this.updateSuggestions(event);
+        this.updateSuggestions();
       }
       if (event.key === 'Enter') {
         this.pick(event);
@@ -484,6 +484,6 @@ export default class Suggestions {
     newInputText = `${newInputText} ${input.argumentString}`;
     this.queryInput.value = newInputText;
     this.selected = 0;
-    this.updateSuggestions(event);
+    this.updateSuggestions();
   }
 }
