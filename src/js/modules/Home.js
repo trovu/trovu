@@ -93,7 +93,7 @@ export default class Home {
         break;
     }
 
-    new Suggestions('#query', '#suggestions', this.env);
+    this.suggestions = new Suggestions('#query', '#suggestions', this.env);
     this.setToggleByQuery(Home);
   }
 
