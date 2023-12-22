@@ -359,9 +359,7 @@ export default class Suggestions {
         }
         if (
           filters.tag &&
-          (!shortcut.tags || !shortcut.tags.includes(filters.tag)) &&
-          (!shortcut.tags ||
-            !shortcut.tags.some((tag) => tag.includes(filters.tag)))
+          (!shortcut.tags || !shortcut.tags.includes(filters.tag))
         ) {
           continue;
         }
