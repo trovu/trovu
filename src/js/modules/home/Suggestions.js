@@ -303,8 +303,16 @@ export default class Suggestions {
    */
   getSuggestions(query) {
     const matches = this.getMatches(query);
-    this.sort(matches);
 
+    if (matches.showOnHome.length > 0) {
+      // sort matches.showOnHome by showOnHome integer
+      matches.showOnHome.sort((a, b) => {
+        return a.showOnHome - b.showOnHome;
+      });
+      return matches.showOnHome;
+    }
+
+    this.sort(matches);
     let suggestions = [];
     suggestions = suggestions.concat(
       matches.showOnHome,
