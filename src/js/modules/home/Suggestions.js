@@ -357,7 +357,8 @@ export default class Suggestions {
           continue;
         }
         if (query == '') {
-          if (!shortcut.showOnHome || !shortcut.reachable) {
+          if (shortcut.showOnHome && shortcut.reachable) {
+            matches.showOnHome.push(shortcut);
             continue;
           }
         }
