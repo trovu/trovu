@@ -178,7 +178,7 @@ export default class Suggestions {
     // On click, set the query input value to "ns:NAMESPACE".
     namespaceSpan.addEventListener('click', () => {
       this.queryInput.value = `ns:${suggestion.namespace}`;
-      this.updateSuggestions();
+      this.queryInput.dispatchEvent(new Event('input'));
     });
     namespaceSpan.addEventListener('mouseover', () => {
       namespaceSpan.style.cursor = 'pointer';
@@ -215,7 +215,7 @@ export default class Suggestions {
         // On click, set the query input value to "tag:TAG".
         tagSpan.addEventListener('click', () => {
           this.queryInput.value = `tag:${tag}`;
-          this.updateSuggestions();
+          this.queryInput.dispatchEvent(new Event('input'));
         });
         tagSpan.addEventListener('mouseover', () => {
           tagSpan.style.cursor = 'pointer';
