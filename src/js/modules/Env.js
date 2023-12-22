@@ -91,6 +91,12 @@ export default class Env {
     return paramStr;
   }
 
+  getProcessUrl(moreParams) {
+    const paramStr = this.getParamStr(moreParams);
+    const processUrl = 'process/index.html?#' + paramStr;
+    return processUrl;
+  }
+
   /**
    * Set the initial class environment vars either from params or from GET hash string.
    *
