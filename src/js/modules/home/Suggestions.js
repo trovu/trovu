@@ -8,6 +8,7 @@ export default class Suggestions {
     this.env = env;
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
+    this.helpDiv = document.querySelector('#help');
     this.selected = 0;
     this.suggestions = [];
     this.setListeners();
@@ -56,12 +57,10 @@ export default class Suggestions {
       this.suggestionsDiv.removeChild(this.suggestionsDiv.firstChild);
     }
     if (suggestions.length === 0) {
-      const emptyDiv = document.createElement('div');
-      emptyDiv.textContent = '∅';
-      emptyDiv.className = 'empty';
-      this.suggestionsDiv.appendChild(emptyDiv);
+      this.helpDiv.textContent = 'No matching shortcuts found.';
       return;
     }
+    this.helpDiv.textContent = '';
 
     this.suggestionsList = document.createElement('ul');
     this.suggestionsDiv.appendChild(this.suggestionsList);
