@@ -503,7 +503,6 @@ export default class Suggestions {
     const inputText = this.queryInput.value;
     const input = QueryParser.parse(inputText);
     const suggestion = this.suggestions[this.selected - 1];
-    console.log('pick', suggestion);
     let newInputText = suggestion.keyword;
     // Prefix with namespace if not reachable.
     if (!suggestion.reachable) {
