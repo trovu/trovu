@@ -79,7 +79,7 @@ g 1:
   title: Google.pl
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: warszawa
     description: Szukaj "warszawa" w Google.pl
@@ -203,14 +203,14 @@ nk 0:
   url: http://nk.pl/
   title: Nasza Klasa
   tags:
-  - nasza klasa
-  - social network
+  - nasza-klasa
+  - social-network
 nk 1:
   url: http://nk.pl/#szukaj#<nazwisko / grupa>
   title: Nasza Klasa
   tags:
-  - nasza klasa
-  - social network
+  - nasza-klasa
+  - social-network
   examples:
   - arguments: kowalski
     description: Szukaj "kowalski"

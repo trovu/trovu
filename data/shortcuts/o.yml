@@ -3,8 +3,8 @@
   title: 12ft
   tags:
   - adblock
-  - open access
-  - paywall remover
+  - open-access
+  - paywall-remover
   examples:
   - arguments: https://krautreporter.de/5111-einseitig-so-entscheide-ich-wie-ich-uber-israel-und-gaza-berichte
     description: Remove paywall from Krautreporter article
@@ -134,14 +134,14 @@
   tags:
   - foursquare
   - geolocation
-  - social network
+  - social-network
 4sq 1:
   url: http://foursquare.com/search?q=<what>
   title: Foursquare
   tags:
   - foursquare
   - geolocation
-  - social network
+  - social-network
   examples:
   - arguments: pizza
     description: Search for a pizza place near me
@@ -151,7 +151,7 @@
   tags:
   - foursquare
   - geolocation
-  - social network
+  - social-network
   examples:
   - arguments: pizza, new york
     description: Search for a pizza place in New York
@@ -194,7 +194,7 @@ acl 0:
   - academia
   - acl
   - bibliography
-  - computational linguistics
+  - computational-linguistics
   - language
   - linguistics
   - literature
@@ -207,7 +207,7 @@ acl 1:
   - academia
   - acl
   - bibliography
-  - computational linguistics
+  - computational-linguistics
   - language
   - linguistics
   - literature
@@ -222,7 +222,7 @@ aclg 1:
   - academia
   - acl
   - bibliography
-  - computational linguistics
+  - computational-linguistics
   - language
   - linguistics
   - literature
@@ -237,7 +237,7 @@ aclw 1:
   - academia
   - acl
   - bibliography
-  - computational linguistics
+  - computational-linguistics
   - language
   - linguistics
   - literature
@@ -501,11 +501,11 @@ arch 1:
   title: Arch Chinese Stroke Animation & Dictionary
   tags:
   - chinese
-  - chinese characters
+  - chinese-characters
   - dictionary
   - hanzi
   - language
-  - stroke orders
+  - stroke-orders
   examples:
   - arguments: 聊
     description: find out how to write the character 聊 and how it's composed
@@ -530,12 +530,12 @@ arxiv 1:
   url: http://arxiv.org/search?query=<query>
   title: ArXiv
   tags:
-  - computer science
+  - computer-science
   - mathematics
-  - open access
+  - open-access
   - physics
-  - quantitative biology
-  - quantitative finance
+  - quantitative-biology
+  - quantitative-finance
   - science
   - statistics
   examples:
@@ -554,7 +554,7 @@ ask 1:
   title: Ask.com
   tags:
   - ask
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for berlin
@@ -570,7 +570,7 @@ atrf 1:
   url: http://alltheragefaces.com/search/<query>
   title: All The Rage Faces!
   tags:
-  - rage faces
+  - rage-faces
   examples:
   - arguments: scared
     description: Search for scared
@@ -587,13 +587,13 @@ b 0:
   title: Bing
   tags:
   - bing
-  - web search
+  - web-search
 b 1:
   url: http://www.bing.com/search?q=<query>
   title: Bing
   tags:
   - bing
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -602,7 +602,7 @@ ba 1:
   title: Baidu
   tags:
   - baidu
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for berlin
@@ -662,7 +662,7 @@ bi 1:
   title: Bing Images
   tags:
   - bing
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -793,7 +793,7 @@ bm 1:
   title: Bing Maps
   tags:
   - bing
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -912,7 +912,7 @@ bv 1:
   title: Bing Videos
   tags:
   - bing
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -946,7 +946,7 @@ calc 0:
   title: Scientific online calculator
   tags:
   - calculator
-  - online tool
+  - online-tool
 cc 1:
   url: http://search.creativecommons.org/?q=<query>
   title: Creative Commons
@@ -1064,8 +1064,8 @@ cma 0:
   title: Critical Maps
   description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
   tags:
-  - critical maps
-  - critical mass
+  - critical-maps
+  - critical-mass
 co 1:
   url: http://collectr.net/=<query>
   title: Collectr
@@ -1082,7 +1082,7 @@ codej 1:
   description: Search for Java code examples
   tags:
   - programming
-  - programming language
+  - programming-language
 codex 1:
   url: http://wordpress.org/search/<query>
   title: Wordpress Codex Search
@@ -1132,13 +1132,13 @@ corbis 0:
   title: Corbis
   tags:
   - images
-  - stock agency
+  - stock-agency
 corbis 1:
   url: http://www.corbisimages.com/Search#q=<query>
   title: Corbis
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: christmas
     description: search photos about christmas
@@ -1355,12 +1355,12 @@ d 0:
   url: https://duckduckgo.com/
   title: Duck Duck Go
   tags:
-  - web search
+  - web-search
 d 1:
   url: https://duckduckgo.com/?q=<query>
   title: Duck Duck Go
   tags:
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search DuckDuckGo for "berlin"
@@ -1452,7 +1452,7 @@ dch 0:
   url: https://www.digitalconcerthall.com/
   title: Digital Concert Hall of the Berlin Philharmonic Orchestra (Berliner Philharmoniker)
   tags:
-  - classical music
+  - classical-music
 dclpm 0:
   url: http://groups.google.de/group/de.comp.lang.perl.misc
   title: De.comp.lang.perl.misc
@@ -1476,7 +1476,7 @@ dd24 0:
   url: https://www.domaindiscount24.com/de
   title: DomainDiscount24
   tags:
-  - internet registrar
+  - internet-registrar
 ddgs 0:
   url: https://duckduckgo.com/
   title: Duck Duck Go
@@ -1692,7 +1692,7 @@ derivative 1:
   tags:
   - mathematics
   - science
-  - wolfram alpha
+  - wolfram-alpha
   examples:
   - arguments: x^2
     description: Calculate the derivative of x^2
@@ -1730,7 +1730,7 @@ dii 1:
   title: Diigo Social Bookmarking
   tags:
   - bookmarks
-  - web search
+  - web-search
   examples:
   - arguments: obama
     description: search for bookmarks tagged with "obama"
@@ -1739,7 +1739,7 @@ diia 1:
   title: Diigo Social Bookmarking
   tags:
   - bookmarks
-  - web search
+  - web-search
   examples:
   - arguments: http://www.example.com
     description: add 'example.com' to your bookmarks
@@ -1803,7 +1803,7 @@ dlde 1:
   tags:
   - deepl
   - german
-  - google translate
+  - google-translate
   - translate
   - translation
   examples:
@@ -1816,7 +1816,7 @@ dlen 1:
   tags:
   - deepl
   - english
-  - google translate
+  - google-translate
   - translate
   - translation
   examples:
@@ -1828,7 +1828,7 @@ dles 1:
   description: Translate whole text.
   tags:
   - deepl
-  - google translate
+  - google-translate
   - spanish
   - translate
   - translation
@@ -1842,7 +1842,7 @@ dlfr 1:
   tags:
   - deepl
   - french
-  - google translate
+  - google-translate
   - translate
   - translation
   examples:
@@ -1854,7 +1854,7 @@ dlit 1:
   description: Translate whole text.
   tags:
   - deepl
-  - google translate
+  - google-translate
   - italian
   - translate
   - translation
@@ -1867,7 +1867,7 @@ dlja 1:
   description: Translate whole text.
   tags:
   - deepl
-  - google translate
+  - google-translate
   - japanese
   - translate
   - translation
@@ -1881,7 +1881,7 @@ dlnl 1:
   tags:
   - deepl
   - dutch
-  - google translate
+  - google-translate
   - translate
   - translation
   examples:
@@ -1893,7 +1893,7 @@ dlpo 1:
   description: Translate whole text.
   tags:
   - deepl
-  - google translate
+  - google-translate
   - polish
   - translate
   - translation
@@ -1906,7 +1906,7 @@ dlpt 1:
   description: Translate whole text.
   tags:
   - deepl
-  - google translate
+  - google-translate
   - portuguese
   - translate
   - translation
@@ -1919,7 +1919,7 @@ dlru 1:
   description: Translate whole text.
   tags:
   - deepl
-  - google translate
+  - google-translate
   - russian
   - translate
   - translation
@@ -1932,7 +1932,7 @@ dltr 1:
   description: Translate whole text.
   tags:
   - deepl
-  - google translate
+  - google-translate
   - translate
   - translation
   - turkish
@@ -1947,7 +1947,7 @@ dlzh 1:
   tags:
   - chinese
   - deepl
-  - google translate
+  - google-translate
   - translate
   - translation
   examples:
@@ -2020,13 +2020,13 @@ dreamstime 0:
   title: Dreamstime
   tags:
   - images
-  - stock agency
+  - stock-agency
 dreamstime 1:
   url: http://www.dreamstime.com/search.php?srh_field=<Suche>
   title: Dreamstime
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: christmas
     description: search photos about christmas
@@ -2175,13 +2175,13 @@ ec 0:
   title: Ecosia
   tags:
   - ecosia
-  - web search
+  - web-search
 ec 1:
   url: https://www.ecosia.org/search?q=<query>
   title: Ecosia
   tags:
   - ecosia
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -2201,12 +2201,12 @@ eco 0:
   url: http://ecosia.org/
   title: Ecosia
   tags:
-  - web search
+  - web-search
 eco 1:
   url: http://www.ecosia.org/search?q=<query>
   title: Ecosia
   tags:
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -2570,13 +2570,13 @@ fb 0:
   title: Facebook, Homepage
   tags:
   - facebook
-  - social network
+  - social-network
 fb 1:
   url: https://www.facebook.com/search/top/?q=<query>
   title: Facebook
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: john doe
     description: Facebook search for "john doe"
@@ -2585,13 +2585,13 @@ fbe 0:
   title: Facebook, Events
   tags:
   - facebook
-  - social network
+  - social-network
 fbe 1:
   url: https://www.facebook.com/search/events/?q=<query>
   title: Facebook, Events
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: berlin
     description: Search for events containing "berlin"
@@ -2610,7 +2610,7 @@ fbg 1:
   title: 'Facebook Search: Groups'
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: pancakes
     description: Search for groups about pancakes
@@ -2634,7 +2634,7 @@ fblint 1:
   title: Facebook URL Linter
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: http://serchilo.net
     description: The Facebook Information for serchilo.net
@@ -2643,7 +2643,7 @@ fbm 0:
   title: Facebook Messages
   tags:
   - facebook
-  - social network
+  - social-network
 fbmp 0:
   url: https://www.facebook.com/marketplace/
   title: Facebook Marketplace
@@ -2673,7 +2673,7 @@ fbot 1:
   url: http://www.fastbot.de/index.php?query=<query>
   title: Fastbot
   tags:
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -2682,13 +2682,13 @@ fbp 0:
   title: Facebook Profile
   tags:
   - facebook
-  - social network
+  - social-network
 fbpa 1:
   url: https://www.facebook.com/search/pages/?q=<query>
   title: Facebook, Pages
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: berlin
     description: Search for pages about Berlin
@@ -2697,7 +2697,7 @@ fbpe 1:
   title: Facebook, People
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: john doe
     description: Search for "john doe"
@@ -2706,7 +2706,7 @@ fbph 1:
   title: Facebook, Photos
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: berlin
     description: Search for photos about Berlin
@@ -2715,7 +2715,7 @@ fbpl 1:
   title: Facebook, Places
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: berlin
     description: Search for places in Berlin
@@ -2724,7 +2724,7 @@ fbpo 1:
   title: Facebook, Posts
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: berlin
     description: Search for posts about Berlin
@@ -2771,7 +2771,7 @@ fbv 1:
   title: Facebook, Videos
   tags:
   - facebook
-  - social network
+  - social-network
   examples:
   - arguments: berlin
     description: Search for videos about Berlin
@@ -2849,13 +2849,13 @@ ffi 0:
   title: Fotofinder
   tags:
   - images
-  - stock agency
+  - stock-agency
 ffi 1:
   url: http://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   title: Fotofinder
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
@@ -2910,8 +2910,8 @@ findutf 0:
   title: Find UTF code by simply drawing its shape omline (Shapecatcher)
   tags:
   - image
-  - online tool
-  - unicode character
+  - online-tool
+  - unicode-character
   - utf
 fisbroker 0:
   url: https://fbinter.stadt-berlin.de/fb/index.jsp
@@ -3043,7 +3043,7 @@ fos 0:
   title: Fotosearch
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
@@ -3052,7 +3052,7 @@ fos 1:
   title: Fotosearch
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
@@ -3061,20 +3061,20 @@ fosspatent 0:
   title: FOSSpatents blog (Free open source software & patent blog)
   tags:
   - copyright
-  - intellectual property
-  - ip law
-  - open source
-  - patent law
+  - intellectual-property
+  - ip-law
+  - open-source
+  - patent-law
   - patents
 fosspatents 0:
   url: http://www.fosspatents.com
   title: FOSSpatents blog (Free open source software & patent blog)
   tags:
   - copyright
-  - intellectual property
-  - ip law
-  - open source
-  - patent law
+  - intellectual-property
+  - ip-law
+  - open-source
+  - patent-law
   - patents
 fotofinder 1:
   url: http://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
@@ -3249,13 +3249,13 @@ g 0:
   title: Google Web Homepage
   tags:
   - google
-  - web search
+  - web-search
 g 1:
   url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.com
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Google search for "berlin"
@@ -3265,7 +3265,7 @@ g! 1:
   title: Google Web, go directly to first result
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -3284,7 +3284,7 @@ g100 1:
   title: Google Web, 100 results at once
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -3393,7 +3393,7 @@ gco 0:
   title: Google Contacts
   tags:
   - address
-  - address book
+  - address-book
   - contacts
   - google
 gco 1:
@@ -3401,7 +3401,7 @@ gco 1:
   title: Google Contacts
   tags:
   - address
-  - address book
+  - address-book
   - contacts
   - google
   examples:
@@ -3467,7 +3467,7 @@ gdl 1:
   title: Google Web, Directory Listing
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: mp3
     description: Search web sites with Apache directory listing containing "mp3"
@@ -3502,7 +3502,7 @@ gdt 2:
   tags:
   - google
   - maps
-  - public transport
+  - public-transport
   - route
   - routing
   examples:
@@ -3564,13 +3564,13 @@ getty 0:
   title: Getty Images
   tags:
   - images
-  - stock agency
+  - stock-agency
 getty 1:
   url: http://www.gettyimages.com/search/search.aspx?contractUrl=2&language=de-DE&family=creative&assetType=image&p=<query>&src=standard
   title: Getty Images
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: christmas
     description: search photos about christmas
@@ -3584,7 +3584,7 @@ gf 2:
   title: Google Web, only of filetype
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: pdf, berlin
     description: search PDF-files for "berlin"
@@ -3781,14 +3781,14 @@ gitlab 0:
   url: https://gitlab.com
   title: GitLab software repository
   tags:
-  - open source
+  - open-source
   - programming
   - software
 gitlab 1:
   url: https://gitlab.com/<repository>
   title: GitLab software repository
   tags:
-  - open source
+  - open-source
   - programming
   - software
 gl 0:
@@ -3986,7 +3986,7 @@ gol 1:
   title: Google Web, only in my language
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin" on pages of my language (determined by language namespace)
@@ -3995,7 +3995,7 @@ gol 2:
   title: Google Web, only in given language
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: fr, berlin
     description: Search for "berlin" on sites in French
@@ -4078,7 +4078,7 @@ gpdf 1:
   tags:
   - google
   - pdf
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for PDF files containing "berlin"
@@ -4118,7 +4118,7 @@ gr 1:
   - books
   - literature
   - reading
-  - social network
+  - social-network
   examples:
   - arguments: shakespeare
     description: Search for books of Shakespeare
@@ -4153,7 +4153,7 @@ groovesalad 0:
   title: SomaFm Groovesalad
   tags:
   - internetradio
-  - radio station
+  - radio-station
 gsch 0:
   url: http://scholar.google.com/scholar?hl=<$language>
   title: Google Scholar Homepage
@@ -4201,7 +4201,7 @@ gss 2:
   title: Google Web, search only on site
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: cnn.com, berlin
     description: Search for "berlin" on cnn.com
@@ -4220,7 +4220,7 @@ gt 2:
   title: Google Web, only of certain time range
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: y, eruption
     description: Search web pages for "eruption" that have been altered within the last year
@@ -4700,7 +4700,7 @@ integral 1:
   tags:
   - mathematics
   - science
-  - wolfram alpha
+  - wolfram-alpha
   examples:
   - arguments: x^2
     description: Calculate the integral of x^2
@@ -4729,9 +4729,9 @@ ipkat 0:
   title: The IPKat (Intellectual Property) blog
   tags:
   - copyright
-  - intellectual property
-  - ip law
-  - patent law
+  - intellectual-property
+  - ip-law
+  - patent-law
   - patents
 is 0:
   include:
@@ -4755,9 +4755,9 @@ isg 1:
   description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
   tags:
   - instagram
-  - photo sharing
-  - social networking service
-  - video sharing
+  - photo-sharing
+  - social-networking-service
+  - video-sharing
   examples:
   - arguments: ellierosapowers
     description: Show the user ellierosapowers content.
@@ -4766,7 +4766,7 @@ ist 0:
   title: Istockphoto
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: christmas
     description: search photos about christmas
@@ -4775,7 +4775,7 @@ ist 1:
   title: Istockphoto
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: christmas
     description: search photos about christmas
@@ -5154,7 +5154,7 @@ kym 1:
   title: Know Your Meme
   tags:
   - fun
-  - internet culture
+  - internet-culture
   - meme
   examples:
   - arguments: x y is x
@@ -5283,8 +5283,8 @@ le 0:
   url: https://letsencrypt.org
   title: Let's Encrypt
   tags:
-  - certificate authority
-  - open source
+  - certificate-authority
+  - open-source
 leo 1:
   deprecated:
     alternative:
@@ -5316,13 +5316,13 @@ lin 0:
   title: Linkedin
   tags:
   - linkedin
-  - social network
+  - social-network
 lin 1:
   url: https://www.linkedin.com/search/results/people/?keywords=<query>
   title: Linkedin people search
   tags:
   - linkedin
-  - social network
+  - social-network
   examples:
   - arguments: john smith
     description: Search for a John Smith
@@ -5351,13 +5351,13 @@ lipsum 0:
   title: Lorem Ipsum
   tags:
   - lipsum
-  - lorem ipsum
+  - lorem-ipsum
 lipsum 1:
   url: http://www.lipsum.com/feed/html?amount=<amount>&what=words&name=start
   title: Lorem Ipsum
   tags:
   - lipsum
-  - lorem ipsum
+  - lorem-ipsum
   examples:
   - arguments: '200'
     description: Generate 200 words of "Lorem Ipsum"
@@ -5366,7 +5366,7 @@ lipsum 2:
   title: Lorem Ipsum
   tags:
   - lipsum
-  - lorem ipsum
+  - lorem-ipsum
   examples:
   - arguments: 200, bytes
     description: Generate 200 bytes of "Lorem Ipsum"
@@ -5565,7 +5565,7 @@ mema 1:
   title: Memory Alpha
   tags:
   - science-fiction
-  - star trek
+  - star-trek
   examples:
   - arguments: kirk
     description: Search for "kirk"
@@ -5976,12 +5976,12 @@ nv 0:
   url: https://neeva.com/
   title: Neeva
   tags:
-  - web search
+  - web-search
 nv 1:
   url: https://neeva.com/search?q=<query>
   title: Neeva
   tags:
-  - web search
+  - web-search
 oca 1:
   url: http://openclipart.org/search/?query=<query>
   title: Open Clip Art Library
@@ -5989,7 +5989,7 @@ oca 1:
   - clipart
   - free
   - images
-  - public domain
+  - public-domain
   examples:
   - arguments: rss
     description: Search for free RSS icons
@@ -6281,7 +6281,7 @@ owncloud 0:
   tags:
   - cloud
   - copyleft
-  - open source
+  - open-source
 p2r 0:
   url: http://page2rss.com
   title: Page2RSS homepage
@@ -6366,8 +6366,8 @@ perseus 1:
   - greek
   - language
   - latin
-  - old english
-  - old norse
+  - old-english
+  - old-norse
   examples:
   - arguments: Agamemnon
     description: Search for "Agamemnon"
@@ -6386,13 +6386,13 @@ phb 0:
   title: Photobucket
   tags:
   - images
-  - stock agency
+  - stock-agency
 phb 1:
   url: http://photobucket.com/images/<query>
   title: Photobucket
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: christmas
     description: search photos about christmas
@@ -6401,7 +6401,7 @@ phbl 0:
   title: Photobucket Login
   tags:
   - images
-  - stock agency
+  - stock-agency
 php 0:
   url: http://www.php.net
   title: PHP Documentation
@@ -6550,7 +6550,7 @@ plt 1:
   - plotting
   - programming
   - python
-  - scientific computing
+  - scientific-computing
   examples:
   - arguments: heatmap
     description: Get help on creating heatmaps with matplotlib
@@ -6582,7 +6582,7 @@ poef 1:
   title: Official Path of Exile forum
   description: Official Forum for the F2P online ARPG "Path of Exile" (PoE).
   tags:
-  - path of exile
+  - path-of-exile
   - poe
   examples:
   - arguments: Rhoa
@@ -6597,7 +6597,7 @@ poew 1:
   description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that acts as the main knowledgebase for PoE-players.
   tags:
   - gamepedia
-  - path of exile
+  - path-of-exile
   - poe
   examples:
   - arguments: Rhoa
@@ -7221,12 +7221,12 @@ s 0:
   url: https://startpage.com/
   title: Startpage.com
   tags:
-  - web search
+  - web-search
 s 1:
   url: https://startpage.com/do/search?q=<query>
   title: Startpage.com
   tags:
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -7257,7 +7257,7 @@ scala 0:
   - documentation
   - jvm
   - programming
-  - programming language
+  - programming-language
   - scala
 scala 1:
   url: http://www.scala-lang.org/api/current/?search=<query>
@@ -7268,7 +7268,7 @@ scala 1:
   - documentation
   - jvm
   - programming
-  - programming language
+  - programming-language
   - scala
   examples:
   - arguments: AnyVal
@@ -7283,7 +7283,7 @@ sci-hub 1:
   title: Sci-Hub
   description: Sci-Hub is a shadow library website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers' paywalls in various ways.
   tags:
-  - open access
+  - open-access
   examples:
   - arguments: 10.1111/nyas.13068
     description: Search for "10.1111/nyas.13068"
@@ -7389,7 +7389,7 @@ sim 1:
   url: https://startpage.com/do/search?query=<query>&cat=pics
   title: Startpage.com images
   tags:
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for images of "berlin"
@@ -7535,13 +7535,13 @@ somafm 0:
   title: SomaFM Internetradio
   tags:
   - internetradio
-  - radio station
+  - radio-station
 somafm 1:
   url: https://somafm.com/player/#/now-playing/<radiochannel>
   title: SomaFM Internetradio
   tags:
   - internetradio
-  - radio station
+  - radio-station
 soundcloud 1:
   url: http://soundcloud.com/search?q[fulltext]=<query>
   title: Soundcloud
@@ -7843,8 +7843,8 @@ tdrm 0:
   - france
   - germany
   - measurement
-  - measurement network
-  - radiation measurement
+  - measurement-network
+  - radiation-measurement
 tds 0:
   url: http://www.thedailyshow.com/full-episodes/
   title: 'The Daily Show: Latest full episode'
@@ -7877,9 +7877,9 @@ techrightsfeed 0:
   title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS feed)
   tags:
   - copyright
-  - intellectual property
-  - ip law
-  - patent law
+  - intellectual-property
+  - ip-law
+  - patent-law
   - patents
 ted 1:
   url: http://www.ted.com/search?q=<query>
@@ -8179,9 +8179,9 @@ trianglify 0:
   url: https://snorpey.github.io/triangulation/
   title: Triangulation (Low poly generation) online
   tags:
-  - image processing
+  - image-processing
   - javascript
-  - online tool
+  - online-tool
 trim 1:
   url: http://tr.im/marklet?url=<url>
   title: Tr.im
@@ -8229,13 +8229,13 @@ tw 0:
   url: https://twitter.com/?lang=<$language>
   title: Twitter Homepage
   tags:
-  - social network
+  - social-network
   - twitter
 tw 1:
   url: https://twitter.com/search?lang=<$language>&q=<query>
   title: Twitter Search
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: berlin
@@ -8245,7 +8245,7 @@ twb 0:
   title: Twitter Bookmarks
   tags:
   - bookmarks
-  - social network
+  - social-network
   - twitter
 twingly 0:
   url: http://twingly.com/
@@ -8271,7 +8271,7 @@ twl 1:
   url: https://twitter.com/search?lang=<$language>&q=lang%3A<$language>%20<query>
   title: Twitter Search, only in my language
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: berlin
@@ -8280,7 +8280,7 @@ twl 2:
   url: https://twitter.com/search?lang=<$language>&q=lang%3A<language>%20<query>
   title: Twitter Search, only in language
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: en, berlin
@@ -8290,12 +8290,12 @@ twm 0:
   title: Twitter Messages
   tags:
   - chat
-  - instant message
+  - instant-message
   - message
   - messaging
   - messenger
-  - private message
-  - social network
+  - private-message
+  - social-network
   - twitter
 twm 1:
   url: http://twitter.com/#!/search/%40<user>
@@ -8306,7 +8306,7 @@ twme 1:
   url: https://twitter.com/search?lang=<$language>&q=<query>
   title: Twitter mentions
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: serchilo
@@ -8316,18 +8316,18 @@ twn 0:
   title: Twitter Notifications
   tags:
   - chat
-  - instant message
+  - instant-message
   - message
   - messaging
   - messenger
-  - private message
-  - social network
+  - private-message
+  - social-network
   - twitter
 twr 1:
   url: https://twitter.com/search?q=<query>&vertical=default&f=tweets&lang=<$language>
   title: Twitter Search, realtime
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: berlin
@@ -8336,7 +8336,7 @@ twrm 1:
   url: https://mobile.twitter.com/search?lang=<$language>&q=<query>
   title: Twitter Search, realtime, mobile
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: berlin
@@ -8345,7 +8345,7 @@ twu 1:
   url: https://twitter.com/<user>?lang=<$language>
   title: Twitter User
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: serchilo
@@ -8354,7 +8354,7 @@ twum 1:
   url: https://mobile.twitter.com/<user>
   title: Twitter User, mobile
   tags:
-  - social network
+  - social-network
   - twitter
   examples:
   - arguments: serchilo
@@ -8738,13 +8738,13 @@ vk 0:
   url: https://vk.com
   title: Vkontakte
   tags:
-  - social network
+  - social-network
   - vkontakte
 vk 1:
   url: https://vk.com/search?c%5Bq%5D=<name>
   title: Vkontakte
   tags:
-  - social network
+  - social-network
   - vkontakte
   examples:
   - arguments: putin
@@ -8754,14 +8754,14 @@ vka 0:
   title: Vkontakte, my audio/music
   tags:
   - music
-  - social network
+  - social-network
   - vkontakte
 vka 1:
   url: https://vk.com/audio?q=<query>
   title: Vkontakte audio/music
   tags:
   - music
-  - social network
+  - social-network
   - vkontakte
   examples:
   - arguments: chillout
@@ -8770,25 +8770,25 @@ vkfave 0:
   url: https://vk.com/fave
   title: Vkontakte, my favourites
   tags:
-  - social network
+  - social-network
   - vkontakte
 vkfeed 0:
   url: https://vk.com/feed
   title: Vkontakte, my news/feed
   tags:
-  - social network
+  - social-network
   - vkontakte
 vkg 0:
   url: https://vk.com/groups
   title: Vkontakte, my groups/communities
   tags:
-  - social network
+  - social-network
   - vkontakte
 vkg 1:
   url: https://vk.com/search?c%5Bsection%5D=communities&c%5Bq%5D=<query>
   title: Vkontakte groups/communities
   tags:
-  - social network
+  - social-network
   - vkontakte
   examples:
   - arguments: berlin
@@ -8797,20 +8797,20 @@ vkim 0:
   url: https://vk.com/im
   title: Vkontakte, my messages
   tags:
-  - social network
+  - social-network
   - vkontakte
 vkv 0:
   url: https://vk.com/video
   title: Vkontakte, my videos
   tags:
-  - social network
+  - social-network
   - video
   - vkontakte
 vkv 1:
   url: https://vk.com/video?q=<query>
   title: Vkontakte videos
   tags:
-  - social network
+  - social-network
   - video
   - vkontakte
   examples:
@@ -8820,14 +8820,14 @@ vkvn 0:
   url: https://vk.com/video?notsafe=1
   title: Vkontakte, videos search incl. "not safe"
   tags:
-  - social network
+  - social-network
   - video
   - vkontakte
 vkvn 1:
   url: https://vk.com/video?notsafe=1&q=<query>
   title: Vkontakte videos, incl. "not safe"
   tags:
-  - social network
+  - social-network
   - video
   - vkontakte
   examples:
@@ -8859,14 +8859,14 @@ wa 0:
   tags:
   - mathematics
   - science
-  - wolfram alpha
+  - wolfram-alpha
 wa 1:
   url: http://www.wolframalpha.com/input/?i=<query>
   title: WolframAlpha
   tags:
   - mathematics
   - science
-  - wolfram alpha
+  - wolfram-alpha
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
@@ -8882,7 +8882,7 @@ wam 1:
   - mathematics
   - mobile
   - science
-  - wolfram alpha
+  - wolfram-alpha
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
@@ -9103,9 +9103,9 @@ wipr 0:
   title: World Intellectual Property Review (WIPR)
   tags:
   - copyright
-  - intellectual property
-  - ip law
-  - patent law
+  - intellectual-property
+  - ip-law
+  - patent-law
   - patents
 wis 1:
   url: http://www.woerterbuch.info/?query=<query>&s=thesaurus&dl=0&l=de&showlang=de
@@ -9190,7 +9190,7 @@ wordnet 1:
   url: http://wordnetweb.princeton.edu/perl/webwn?s=<query>
   title: WordNet Search
   tags:
-  - computational linguistics
+  - computational-linguistics
   - dictionary
   - english
   - linguistics
@@ -9206,7 +9206,7 @@ wpp 0:
   title: WordPress Plugin Directory
   tags:
   - blog
-  - blog engine
+  - blog-engine
   - php
   - plugin
   - wordpress
@@ -9215,7 +9215,7 @@ wpp 1:
   title: WordPress Plugin Directory
   tags:
   - blog
-  - blog engine
+  - blog-engine
   - php
   - plugin
   - wordpress
@@ -9389,12 +9389,12 @@ xing 0:
   url: https://www.xing.com/
   title: Xing
   tags:
-  - social network
+  - social-network
 xing 1:
   url: https://www.xing.com/search/members?keywords=<query>
   title: Xing
   tags:
-  - social network
+  - social-network
   examples:
   - arguments: Hans Meier
     description: Search for people called Hans Meier
@@ -9436,7 +9436,7 @@ y 1:
   url: http://search.yahoo.com/search?p=<query>
   title: Yahoo Web
   tags:
-  - web search
+  - web-search
   - yahoo
   examples:
   - arguments: berlin
@@ -9445,7 +9445,7 @@ ya 1:
   url: https://yandex.com/yandsearch?text=<query>
   title: Yandex Web
   tags:
-  - web search
+  - web-search
   - yandex
   examples:
   - arguments: berlin
@@ -9464,7 +9464,7 @@ yandex 1:
   title: Yandex Web
   tags:
   - old
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -9568,7 +9568,7 @@ yl 2:
   url: http://search.yahoo.com/search?fl=1&vl=lang_<language>&p=<query>
   title: Yahoo Web, only of language
   tags:
-  - web search
+  - web-search
   - yahoo
   examples:
   - arguments: en, berlin
@@ -9791,13 +9791,13 @@ zn 0:
   title: Zoonar
   tags:
   - images
-  - stock agency
+  - stock-agency
 zn 1:
   url: http://www.zoonar.de/appgen/?cl=zoonar&cp=search&cmd=search_library&wid=1078&search[searchstring]=<Suche>
   title: Zoonar
   tags:
   - images
-  - stock agency
+  - stock-agency
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"

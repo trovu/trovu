@@ -141,9 +141,9 @@ bhnt 0:
   - berlin
   - c-base
   - hacktivism
-  - lightning talks
+  - lightning-talks
   - meetup
-  - open source
+  - open-source
 bibfu 0:
   url: https://www.fu-berlin.de/sites/ub/index.html
   title: FU Berlin Bibliothek
@@ -328,16 +328,16 @@ bpo 0:
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker
   tags:
   - berlin
-  - classical music
-  - cultural events
+  - classical-music
+  - cultural-events
   - music
 bpo 1:
   url: 'http://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
   tags:
   - berlin
-  - classical music
-  - cultural events
+  - classical-music
+  - cultural-events
   - music
 bsvg 2:
   url: http://www.verkehr-bs.de/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin=<Start>&name_destination=<Ziel>
@@ -721,7 +721,7 @@ dlf 0:
   tags:
   - germany
   - radio
-  - radio station
+  - radio-station
 doe 0:
   url: http://www.dasoertliche.de/
   title: DasOertliche.de Homepage
@@ -843,13 +843,13 @@ g 0:
   title: Google.de Homepage
   tags:
   - google
-  - web search
+  - web-search
 g 1:
   url: https://www.google.de/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.de
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Google-Suche nach berlin
