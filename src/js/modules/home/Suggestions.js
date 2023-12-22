@@ -11,6 +11,7 @@ export default class Suggestions {
     this.selected = 1;
     this.suggestions = [];
     this.setListeners();
+    this.updateSuggestions();
   }
 
   /**
