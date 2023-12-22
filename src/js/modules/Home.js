@@ -104,9 +104,11 @@ export default class Home {
       if (event.target.value.trim() === '') {
         document.querySelector('nav.navbar').style.display = 'block';
         document.querySelector('#intro').style.display = 'block';
+        document.querySelector('#alert').style.display = 'block';
       } else {
         document.querySelector('nav.navbar').style.display = 'none';
         document.querySelector('#intro').style.display = 'none';
+        document.querySelector('#alert').style.display = 'none';
       }
       Home.setHeights();
     });
