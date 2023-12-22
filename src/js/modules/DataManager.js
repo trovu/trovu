@@ -48,6 +48,10 @@ export default class DataManager {
         const shortcut = shortcuts[namespace][key];
         if (shortcut.tags) {
           shortcut.tags.sort();
+          // Replace spaces with dashes.
+          for (const i in shortcut.tags) {
+            shortcut.tags[i] = shortcut.tags[i].replace(/ /g, '-');
+          }
         }
       }
     }
