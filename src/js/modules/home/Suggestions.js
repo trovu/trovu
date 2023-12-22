@@ -4,8 +4,8 @@ import QueryParser from '../QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Suggestions {
-  constructor(querySelector, suggestionsSelector, namespaceInfos) {
-    this.namespacesInfos = namespaceInfos;
+  constructor(querySelector, suggestionsSelector, env) {
+    this.env = env;
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
     this.selected = 1;
@@ -359,7 +359,7 @@ export default class Suggestions {
     const env = QueryParser.parse(query);
     const [regExp, filters] = this.getRegExpAndFilters(query);
 
-    for (const namespaceInfo of Object.values(this.namespacesInfos)) {
+    for (const namespaceInfo of Object.values(this.env.namespaceInfos)) {
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
           continue;
