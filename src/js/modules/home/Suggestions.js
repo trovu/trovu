@@ -368,6 +368,9 @@ export default class Suggestions {
         ) {
           continue;
         }
+        if (filters.url && !shortcut.url.includes(filters.url)) {
+          continue;
+        }
         if (env.keyword == shortcut.keyword) {
           if (shortcut.reachable) {
             matches.keywordFullReachable.push(shortcut);
@@ -439,6 +442,10 @@ export default class Suggestions {
       }
       if (part.startsWith('tag:')) {
         filters.tag = part.slice(4);
+        continue;
+      }
+      if (part.startsWith('url:')) {
+        filters.url = part.slice(4);
         continue;
       }
       const [extraNamespaceName, keyword] = QueryParser.getExtraNamespace(part);
