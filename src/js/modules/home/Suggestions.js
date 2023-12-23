@@ -61,6 +61,7 @@ export default class Suggestions {
       return;
     }
     this.helpDiv.textContent = '';
+    this.helpDiv.innerHTML = `Select with ⬆️ ⬇️ for more info, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.`;
 
     this.suggestionsList = document.createElement('ul');
     this.suggestionsDiv.appendChild(this.suggestionsList);
