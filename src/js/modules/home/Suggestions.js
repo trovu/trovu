@@ -20,8 +20,8 @@ export default class Suggestions {
    * @param {object} event – The fired event.
    */
   updateSuggestions = () => {
-    const query = this.queryInput.value;
-    this.suggestions = this.getSuggestions(query);
+    this.query = this.queryInput.value;
+    this.suggestions = this.getSuggestions(this.query);
     this.suggestions = this.suggestions.slice(0, 500);
     this.renderSuggestions(this.suggestions);
   };
