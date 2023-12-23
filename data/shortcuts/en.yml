@@ -128,12 +128,12 @@ sta 0:
   url: http://start.csail.mit.edu
   title: START (SynTactic Analysis using Reversible Transformations)
   tags:
-  - semantic search
+  - semantic-search
 sta 1:
   url: http://start.csail.mit.edu/startfarm.cgi?query=<question>
   title: START (SynTactic Analysis using Reversible Transformations)
   tags:
-  - semantic search
+  - semantic-search
   examples:
   - arguments: How many people live in Berlin?
     description: Answers the question.

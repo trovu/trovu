@@ -31,7 +31,7 @@ g 1:
   title: Google.cz
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: praha
     description: Hledat "praha" Googlem
@@ -119,7 +119,7 @@ szn 0:
   description: Český internetový vyhledávač a informační portál.
   tags:
   - seznam
-  - web search
+  - web-search
 szn 1:
   url: http://search.seznam.cz/search.cgi?w=<query>
   examples:

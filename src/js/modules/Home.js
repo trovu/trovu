@@ -2,8 +2,8 @@
 import '../../scss/style.scss';
 import Env from './Env.js';
 import Helper from './Helper.js';
-import Suggestions from './Suggestions';
 import Settings from './home/Settings.js';
+import Suggestions from './home/Suggestions.js';
 import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
@@ -22,9 +22,6 @@ export default class Home {
 
     this.env = new Env();
 
-    // Must be done before env.populate()
-    // otherwise Chrome does not autodiscover.
-
     // Init environment.
     await this.env.populate();
 
@@ -41,6 +38,30 @@ export default class Home {
     document.getElementById('query-form').onsubmit = this.submitQuery;
     document.querySelector('.navbar a.reload').onclick = this.reload;
     document.documentElement.setAttribute('data-page-loaded', 'true');
+
+    Home.setHeights();
+  }
+
+  static setHeights() {
+    Home.setMaxHeightForSuggestions();
+    window.onresize = Home.setMaxHeightForSuggestions;
+
+    const footerHeight = document.querySelector('footer').offsetHeight;
+    document.querySelector('#fade-out-overlay').style.bottom =
+      footerHeight + 'px';
+  }
+
+  static setMaxHeightForSuggestions() {
+    const suggestionsDiv = document.querySelector('#suggestions');
+    // Fallback value.
+    suggestionsDiv.style.maxHeight = '200px';
+    const suggestionsTop = document
+      .querySelector('#suggestions')
+      .getBoundingClientRect().top;
+    const footerTop = document
+      .querySelector('footer')
+      .getBoundingClientRect().top;
+    suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
   }
 
   /**
@@ -72,20 +93,35 @@ export default class Home {
         break;
     }
 
-    new Suggestions(this.env.namespaceInfos, this.submitQuery);
+    this.suggestions = new Suggestions('#query', '#suggestions', this.env);
+    this.setToggleByQuery(Home);
+  }
+
+  setToggleByQuery(Home) {
     document.querySelector('#query').focus();
-    document.querySelector('#query').addEventListener('input', (event) => {
-      // Toggle display of navbar and examples.
-      if (event.target.value.trim() === '') {
-        document.querySelector('nav.navbar').style.display = 'block';
-        document.querySelector('#examples-and-about').style.display = 'block';
-        document.querySelector('#intro').style.display = 'block';
-      } else {
-        document.querySelector('nav.navbar').style.display = 'none';
-        document.querySelector('#examples-and-about').style.display = 'none';
-        document.querySelector('#intro').style.display = 'none';
-      }
+    document.querySelector('#query').addEventListener('input', () => {
+      this.toggleByQuery();
     });
+    document.querySelector('#suggestions').addEventListener('click', () => {
+      this.toggleByQuery();
+    });
+  }
+
+  toggleByQuery() {
+    // Toggle display of navbar and examples.
+    if (
+      document.querySelector('#query').value.trim() === '' &&
+      this.suggestions.selected === 0
+    ) {
+      document.querySelector('nav.navbar').style.display = 'block';
+      document.querySelector('#intro').style.display = 'block';
+      document.querySelector('#alert').style.display = 'block';
+    } else {
+      document.querySelector('nav.navbar').style.display = 'none';
+      document.querySelector('#intro').style.display = 'none';
+      document.querySelector('#alert').style.display = 'none';
+    }
+    Home.setHeights();
   }
 
   setLocationHash() {

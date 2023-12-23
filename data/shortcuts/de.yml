@@ -69,7 +69,7 @@ bbs 1:
   title: Babyblaue Seiten
   tags:
   - musik
-  - progressive rock
+  - progressive-rock
   - rock
   examples:
   - arguments: Mekong Delta
@@ -93,7 +93,7 @@ bla 1:
   url: http://www.buffed.de/?f=<suchwort>
   title: Buffed.de
   tags:
-  - admin:change keyword
+  - admin:change-keyword
   - games
 blb 0:
   url: http://www.booklooker.de/app/sec/login.php
@@ -135,13 +135,13 @@ cb 0:
   url: http://www.computerbase.de/
   title: Computerbase
   tags:
-  - computer science
+  - computer-science
   - linux
 cb 1:
   url: http://www.computerbase.de/suche/?q=<query>&bereich=
   title: Computerbase
   tags:
-  - computer science
+  - computer-science
   - linux
   examples:
   - arguments: linux
@@ -738,8 +738,8 @@ m 1:
   title: Metager
   tags:
   - search
-  - search engine
-  - web search
+  - search-engine
+  - web-search
 mactv 1:
   url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<query>
   title: Mac-TV Archiv
@@ -960,7 +960,7 @@ rm 1:
   - dictionary
   - german
   - language
-  - rumantsch grischun
+  - rumantsch-grischun
 rub 1:
   deprecated:
     alternative:
@@ -994,7 +994,7 @@ sfr 1:
   title: Stayfriends
   tags:
   - school
-  - social network
+  - social-network
   examples:
   - arguments: stefan
     description: Suchen nach Personen namens Stefan
@@ -1003,7 +1003,7 @@ sfr 2:
   title: Stayfriends
   tags:
   - school
-  - social network
+  - social-network
   examples:
   - arguments: stefan, berlin
     description: Suchen nach Personen namens Stefan in Berlin

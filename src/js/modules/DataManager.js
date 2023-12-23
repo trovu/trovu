@@ -27,7 +27,7 @@ export default class DataManager {
    */
   static write(data, options = {}) {
     options = this.getDefaultOptions(options);
-    this.sortTags(data.shortcuts);
+    this.normalizeTags(data.shortcuts);
     DataManager.writeYmls(
       `${options.data}/${options.shortcuts}/`,
       data.shortcuts,
@@ -39,15 +39,19 @@ export default class DataManager {
   }
 
   /**
-   * Sort tags in every shortcut.
+   * Normalize tags in every shortcut.
    * @param {Object} shortcuts by namespace
    */
-  static sortTags(shortcuts) {
+  static normalizeTags(shortcuts) {
     for (const namespace in shortcuts) {
       for (const key in shortcuts[namespace]) {
         const shortcut = shortcuts[namespace][key];
         if (shortcut.tags) {
           shortcut.tags.sort();
+          // Replace spaces with dashes.
+          for (const i in shortcut.tags) {
+            shortcut.tags[i] = shortcut.tags[i].replace(/ /g, '-');
+          }
         }
       }
     }

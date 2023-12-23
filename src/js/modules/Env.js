@@ -84,10 +84,17 @@ export default class Env {
   /**
    * Get the parameters as string.
    */
-  getParamStr() {
+  getParamStr(moreParams) {
     const params = this.getParams();
+    Object.assign(params, moreParams);
     const paramStr = Env.getUrlParamStr(params);
     return paramStr;
+  }
+
+  getProcessUrl(moreParams) {
+    const paramStr = this.getParamStr(moreParams);
+    const processUrl = 'process/index.html?#' + paramStr;
+    return processUrl;
   }
 
   /**

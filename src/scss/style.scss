@@ -1,15 +1,22 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
-  flex-grow: 1;
+  flex: 1 0 auto;
 }
 
 footer {
-  padding: 1em 1em;
+  flex-shrink: 0;
+  padding: 0;
+  padding-bottom: 1em;
 }
 .navbar .container {
   padding: 0 2em;
@@ -36,7 +43,7 @@ footer {
 main .jumbotron {
   margin: 0;
   padding: 1em;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 #query-form {
@@ -45,108 +52,135 @@ main .jumbotron {
   }
 }
 
-.awesomplete {
-  width: 100%;
-  padding: 0;
-  border: 0;
-}
-
-.awesomplete > ul {
-  > li {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    padding-left: 1.5em !important;
-    padding-right: 0.2em !important;
-    .keyword {
-      font-weight: bold;
-    }
-    .argument-names {
-      color: #444;
-    }
-    .namespace {
-      background: var(--red);
-      color: white;
-      padding: 0.1em 0.2em;
-    }
-    .tag {
-      background: var(--yellow);
-      color: black;
-      padding: 0.1em 0.2em;
-    }
-    > div {
-      display: grid;
-      grid-template-columns: auto auto;
-      .left {
-        text-align: left;
-        /* Don't indent first line but subsequent ones. */
-        text-indent: -0.5em;
-        margin-left: 0.5em;
-      }
-      .right {
-        text-align: right;
-      }
-    }
-    div.examples,
-    div.description-and-tags {
-      display: none;
-    }
-    div.description-and-tags {
-      align-items: end;
-    }
-    div.examples {
-      padding-right: 0.2em;
-    }
-    div.description-and-tags {
-      .left {
-        font-style: italic;
-      }
-    }
-    .unreachable {
+#suggestions {
+  overflow: auto;
+  position: relative;
+  overflow-y: auto;
+  .empty {
+    color: #eee;
+    font-size: 10em;
+    font-weight: bold;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0em;
+    > li {
+      padding: 0.2em 0.4em;
+      padding-left: 1.3em;
+      border-radius: 0.2rem;
+      background: #fff;
+      border-bottom: 1px solid #eee;
       .keyword {
-        color: #aaa;
+        font-weight: bold;
+        margin-right: 0.2em;
       }
       .argument-names {
-        color: #aaa;
-      }
-      .title {
-        color: #aaa;
+        color: #444;
+        margin-right: 0.2em;
       }
       .namespace {
-        background: #aaa;
+        background: var(--red);
+        color: white;
+        padding: 0.1em 0.2em;
+        border-radius: 0.2rem;
+        margin-left: 0.4em;
+      }
+      .tag {
+        background: var(--yellow);
+        color: black;
+        padding: 0.1em 0.2em;
+        border-radius: 0.2rem;
+        margin-left: 0.2em;
+      }
+      > div {
+        display: grid;
+        grid-template-columns: auto auto;
+        .left {
+          text-align: left;
+          /* Don't indent first line but subsequent ones. */
+          text-indent: -0.5em;
+          margin-left: 0.5em;
+        }
+        .right {
+          text-align: right;
+        }
+      }
+      div.examples,
+      div.description-and-tags {
+        display: none;
+        color: #666;
+      }
+      div.description-and-tags {
+        align-items: end;
+      }
+      div.examples {
+        padding-right: 0.2em;
+      }
+      div.description-and-tags {
+        .left {
+          font-style: italic;
+        }
+      }
+      .unreachable {
+        .keyword {
+          color: #aaa;
+        }
+        .argument-names {
+          color: #aaa;
+        }
+        .title {
+          color: #aaa;
+        }
+        .namespace {
+          background: #aaa;
+        }
+      }
+    }
+    > li::before {
+      display: inline;
+      position: absolute;
+      color: #aaa;
+      font-family: 'FontAwesome';
+      font-weight: 900;
+      font-size: 1.1em;
+    }
+    > li[aria-selected='false']::before,
+    li:not([aria-selected])::before {
+      content: '\f0da';
+      left: 1.2em;
+    }
+    > li[aria-selected='true']::before {
+      content: '\f0d7';
+      left: 0.3em;
+    }
+    li[aria-selected='true'] {
+      background: #eee;
+      position: relative;
+      div.examples,
+      div.description-and-tags {
+        display: grid;
       }
     }
   }
-  > li::before {
-    display: inline;
-    position: absolute;
-    color: #aaa;
-    font-family: 'FontAwesome';
-    font-weight: 900;
-    font-size: 1.1em;
-  }
-  > li[aria-selected='false']::before,
-  li:not([aria-selected])::before {
-    content: '\f0da';
-    left: 0.5em;
-  }
-  > li[aria-selected='true']::before {
-    content: '\f0d7';
-    left: 0.4em;
-  }
-  li[aria-selected='true'] {
-    position: relative;
-    div.examples,
-    div.description-and-tags {
-      display: grid;
-    }
-    .keyword {
-      color: #fff;
-    }
-    .argument-names {
-      color: #ddd;
-    }
-    .title {
-      color: #fff;
-    }
-  }
+}
+
+#help {
+  padding-top: 0.5em;
+  font-style: italic;
+}
+#fade-out-overlay {
+  position: fixed;
+  bottom: 3.5em; /* Adjust this value to the height of your footer */
+  left: 0;
+  right: 0;
+  height: 4em; /* Height of the fade-out effect */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 70%
+  );
+
+  z-index: 10; /* Ensure this is above #suggestions but below any fixed footers or elements */
+  pointer-events: none; /* This allows clicks to pass through to elements below */
 }
