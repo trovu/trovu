@@ -93,15 +93,19 @@ export default class Suggestions {
     fragment.appendChild(this.getExamples(suggestion));
     li.appendChild(fragment);
     li.addEventListener('click', () => {
-      if (this.selected == index) {
-        this.selected = 0;
-      } else {
-        this.selected = index;
-      }
-      this.updateAriaSelected(this.selected - 1);
-      this.queryInput.focus();
+      this.select(index);
     });
     return li;
+  }
+
+  select(index) {
+    if (this.selected == index) {
+      this.selected = 0;
+    } else {
+      this.selected = index;
+    }
+    this.updateAriaSelected(this.selected - 1);
+    this.queryInput.focus();
   }
 
   // New method to update aria-selected attribute for all items
