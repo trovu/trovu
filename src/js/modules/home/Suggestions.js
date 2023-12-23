@@ -59,8 +59,11 @@ export default class Suggestions {
       this.helpDiv.textContent = 'No matching shortcuts found.';
       return;
     }
-    this.helpDiv.textContent = '';
-    this.helpDiv.innerHTML = `Select with ⬆️ ⬇️ for more info, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.`;
+    if (this.query === '') {
+      this.helpDiv.innerHTML = `Select with ⬆️ ⬇️ for more info, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.`;
+    } else {
+      this.helpDiv.innerHTML = '';
+    }
 
     this.suggestionsList = document.createElement('ul');
     this.suggestionsDiv.appendChild(this.suggestionsList);
