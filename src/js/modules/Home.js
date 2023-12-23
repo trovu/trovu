@@ -101,7 +101,7 @@ export default class Home {
     document.querySelector('#query').focus();
     document.querySelector('#query').addEventListener('input', (event) => {
       // Toggle display of navbar and examples.
-      if (event.target.value.trim() === '') {
+      if (document.querySelector('#query').trim() === '') {
         document.querySelector('nav.navbar').style.display = 'block';
         document.querySelector('#intro').style.display = 'block';
         document.querySelector('#alert').style.display = 'block';
