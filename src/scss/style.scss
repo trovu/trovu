@@ -52,6 +52,21 @@ main .jumbotron {
   }
 }
 
+span.namespace {
+  background: var(--red);
+  color: white;
+  padding: 0.1em 0.2em;
+  border-radius: 0.2rem;
+  margin: 0 0.2em;
+}
+span.tag {
+  background: var(--yellow);
+  color: black;
+  padding: 0.1em 0.2em;
+  border-radius: 0.2rem;
+  margin-left: 0 0.2em;
+}
+
 #suggestions {
   overflow: auto;
   position: relative;
@@ -78,20 +93,6 @@ main .jumbotron {
       .argument-names {
         color: #444;
         margin-right: 0.2em;
-      }
-      .namespace {
-        background: var(--red);
-        color: white;
-        padding: 0.1em 0.2em;
-        border-radius: 0.2rem;
-        margin-left: 0.4em;
-      }
-      .tag {
-        background: var(--yellow);
-        color: black;
-        padding: 0.1em 0.2em;
-        border-radius: 0.2rem;
-        margin-left: 0.2em;
       }
       > div {
         display: grid;
