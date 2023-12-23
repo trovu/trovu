@@ -99,7 +99,7 @@ export default class Home {
 
   setToggleByQuery(Home) {
     document.querySelector('#query').focus();
-    document.querySelector('#query').addEventListener('input', (event) => {
+    document.querySelector('#query').addEventListener('input', () => {
       // Toggle display of navbar and examples.
       if (document.querySelector('#query').trim() === '') {
         document.querySelector('nav.navbar').style.display = 'block';
