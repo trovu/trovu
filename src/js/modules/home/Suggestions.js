@@ -104,16 +104,16 @@ export default class Suggestions {
     } else {
       this.selected = index;
     }
-    this.updateAriaSelected(this.selected - 1);
+    this.updateAriaSelected();
     this.queryInput.focus();
   }
 
-  updateAriaSelected(selectedIndex) {
+  updateAriaSelected() {
     const lis = this.suggestionsList.querySelectorAll('li');
     lis.forEach((li, index) => {
       li.setAttribute(
         'aria-selected',
-        index === selectedIndex ? 'true' : 'false',
+        index === this.selected - 1 ? 'true' : 'false',
       );
     });
   }
