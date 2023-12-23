@@ -75,11 +75,15 @@ export default class Suggestions {
     });
 
     this.suggestionsList.appendChild(fragment);
-    const selectedLi = this.suggestionsList.querySelector(
-      'li[aria-selected="true"]',
-    );
-    if (selectedLi) {
-      this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
+    if (this.selected > -1) {
+      const selectedLi = this.suggestionsList.querySelector(
+        'li[aria-selected="true"]',
+      );
+      if (selectedLi) {
+        this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
+      }
+    } else {
+      this.suggestionsDiv.scrollTop = 0;
     }
   }
 
