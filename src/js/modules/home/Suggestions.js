@@ -31,9 +31,6 @@ export default class Suggestions {
       this.selected = 0;
       this.updateSuggestions();
     });
-    // Also update on focus,
-    // for case when input is already filled (because no shortcut was not found).
-    // this.queryInput.addEventListener('focus', this.updateSuggestions);
     this.queryInput.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowUp') {
         event.preventDefault();
