@@ -93,8 +93,12 @@ export default class Suggestions {
     fragment.appendChild(this.getExamples(suggestion));
     li.appendChild(fragment);
     li.addEventListener('click', () => {
+      if (this.selected == index) {
+        this.selected = 0;
+      } else {
+        this.selected = index;
+      }
       this.updateAriaSelected(index - 1);
-      this.selected = index;
       this.queryInput.focus();
     });
     return li;
