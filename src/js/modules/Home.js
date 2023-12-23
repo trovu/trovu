@@ -100,18 +100,22 @@ export default class Home {
   setToggleByQuery(Home) {
     document.querySelector('#query').focus();
     document.querySelector('#query').addEventListener('input', () => {
-      // Toggle display of navbar and examples.
-      if (document.querySelector('#query').value.trim() === '') {
-        document.querySelector('nav.navbar').style.display = 'block';
-        document.querySelector('#intro').style.display = 'block';
-        document.querySelector('#alert').style.display = 'block';
-      } else {
-        document.querySelector('nav.navbar').style.display = 'none';
-        document.querySelector('#intro').style.display = 'none';
-        document.querySelector('#alert').style.display = 'none';
-      }
-      Home.setHeights();
+      this.toggleByQuery();
     });
+  }
+
+  toggleByQuery() {
+    // Toggle display of navbar and examples.
+    if (document.querySelector('#query').value.trim() === '') {
+      document.querySelector('nav.navbar').style.display = 'block';
+      document.querySelector('#intro').style.display = 'block';
+      document.querySelector('#alert').style.display = 'block';
+    } else {
+      document.querySelector('nav.navbar').style.display = 'none';
+      document.querySelector('#intro').style.display = 'none';
+      document.querySelector('#alert').style.display = 'none';
+    }
+    Home.setHeights();
   }
 
   setLocationHash() {
