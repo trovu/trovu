@@ -22,7 +22,7 @@ export default class Suggestions {
   updateSuggestions = () => {
     const query = this.queryInput.value;
     this.suggestions = this.getSuggestions(query);
-    this.suggestions = this.suggestions.slice(0, 200);
+    this.suggestions = this.suggestions.slice(0, 500);
     this.renderSuggestions(this.suggestions);
   };
 
