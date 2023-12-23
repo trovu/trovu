@@ -1,5 +1,4 @@
 /** @module Suggestions */
-import Helper from '../Helper.js';
 import QueryParser from '../QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
