@@ -107,18 +107,8 @@ export default class Suggestions {
     } else {
       this.selected = index;
     }
-    this.updateAriaSelected();
+    this.updateSuggestions();
     this.queryInput.focus();
-  }
-
-  updateAriaSelected() {
-    const lis = this.suggestionsList.querySelectorAll('li');
-    lis.forEach((li, index) => {
-      li.setAttribute(
-        'aria-selected',
-        index === this.selected ? 'true' : 'false',
-      );
-    });
   }
 
   ensureElementIsVisibleInContainer(element, container) {
