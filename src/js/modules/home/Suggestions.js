@@ -98,7 +98,7 @@ export default class Suggestions {
       } else {
         this.selected = index;
       }
-      this.updateAriaSelected(index - 1);
+      this.updateAriaSelected(this.selected - 1);
       this.queryInput.focus();
     });
     return li;
