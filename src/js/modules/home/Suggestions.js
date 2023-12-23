@@ -108,7 +108,6 @@ export default class Suggestions {
     this.queryInput.focus();
   }
 
-  // New method to update aria-selected attribute for all items
   updateAriaSelected(selectedIndex) {
     const lis = this.suggestionsList.querySelectorAll('li');
     lis.forEach((li, index) => {
