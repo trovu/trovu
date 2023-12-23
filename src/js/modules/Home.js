@@ -102,6 +102,9 @@ export default class Home {
     document.querySelector('#query').addEventListener('input', () => {
       this.toggleByQuery();
     });
+    document.querySelector('#suggestions').addEventListener('click', () => {
+      this.toggleByQuery();
+    });
   }
 
   toggleByQuery() {
