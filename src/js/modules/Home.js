@@ -109,7 +109,10 @@ export default class Home {
 
   toggleByQuery() {
     // Toggle display of navbar and examples.
-    if (document.querySelector('#query').value.trim() === '') {
+    if (
+      document.querySelector('#query').value.trim() === '' &&
+      this.suggestions.selected === 0
+    ) {
       document.querySelector('nav.navbar').style.display = 'block';
       document.querySelector('#intro').style.display = 'block';
       document.querySelector('#alert').style.display = 'block';
