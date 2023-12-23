@@ -8,7 +8,7 @@ export default class Suggestions {
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
     this.helpDiv = document.querySelector('#help');
-    this.selected = 0;
+    this.selected = -1;
     this.suggestions = [];
     this.setListeners();
     this.updateSuggestions();
@@ -28,18 +28,21 @@ export default class Suggestions {
 
   setListeners() {
     this.queryInput.addEventListener('input', (event) => {
-      this.selected = 0;
+      this.selected = -1;
       this.updateSuggestions();
     });
     this.queryInput.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowUp') {
         event.preventDefault();
-        this.selected = Math.max(1, this.selected - 1);
+        this.selected = Math.max(0, this.selected - 1);
         this.updateSuggestions();
       }
       if (event.key === 'ArrowDown') {
         event.preventDefault();
-        this.selected = Math.min(this.suggestions.length, this.selected + 1);
+        this.selected = Math.min(
+          this.suggestions.length - 1,
+          this.selected + 1,
+        );
         this.updateSuggestions();
       }
       if (event.key === 'Enter') {
@@ -67,7 +70,7 @@ export default class Suggestions {
 
     const fragment = document.createDocumentFragment();
     suggestions.forEach((suggestion, index) => {
-      const li = this.renderSuggestion(suggestion, index + 1);
+      const li = this.renderSuggestion(suggestion, index);
       fragment.appendChild(li);
     });
 
@@ -100,7 +103,7 @@ export default class Suggestions {
 
   select(index) {
     if (this.selected == index) {
-      this.selected = 0;
+      this.selected = -1;
     } else {
       this.selected = index;
     }
@@ -113,7 +116,7 @@ export default class Suggestions {
     lis.forEach((li, index) => {
       li.setAttribute(
         'aria-selected',
-        index === this.selected - 1 ? 'true' : 'false',
+        index === this.selected ? 'true' : 'false',
       );
     });
   }
@@ -508,7 +511,7 @@ export default class Suggestions {
     event.preventDefault();
     const inputText = this.queryInput.value;
     const input = QueryParser.parse(inputText);
-    const suggestion = this.suggestions[this.selected - 1];
+    const suggestion = this.suggestions[this.selected];
     let newInputText = suggestion.keyword;
     // Prefix with namespace if not reachable.
     if (!suggestion.reachable) {
@@ -516,7 +519,7 @@ export default class Suggestions {
     }
     newInputText = `${newInputText} ${input.argumentString}`;
     this.queryInput.value = newInputText;
-    this.selected = 0;
+    this.selected = -1;
     this.updateSuggestions();
   }
 }
