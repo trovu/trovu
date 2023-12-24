@@ -7214,6 +7214,12 @@ ruby 1:
 rustd 1:
   url: https://doc.rust-lang.org/std/?search=<query>
   title: Rust std API Documentation
+  tags:
+  - programming
+  - rust
+  examples:
+  - arguments: trait
+    description: Search for "trait"
 rw 0:
   include:
   - key: rw 0
