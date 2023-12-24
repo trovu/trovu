@@ -40,41 +40,6 @@ export default class Home {
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
     Home.setHeights();
-
-    startTypewriterEffect();
-
-    function startTypewriterEffect() {
-      const placeholders = [
-        'gd london, liverpol',
-        'gfl1 ber,lax,1',
-        'w london',
-      ];
-      let currentIndex = 0;
-      const input = document.getElementById('query');
-      const typingDelay = 100;
-      const deletingPause = 2000;
-
-      const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-      const typePlaceholder = async () => {
-        const placeholder = placeholders[currentIndex];
-        for (let charIndex = 0; charIndex <= placeholder.length; charIndex++) {
-          input.placeholder = placeholder.slice(0, charIndex);
-          await sleep(typingDelay);
-        }
-        await sleep(deletingPause);
-        await deletePlaceholder();
-      };
-
-      const deletePlaceholder = async () => {
-        input.placeholder = '';
-        currentIndex = (currentIndex + 1) % placeholders.length;
-        await sleep(typingDelay);
-        await typePlaceholder();
-      };
-
-      typePlaceholder();
-    }
   }
 
   static setHeights() {
