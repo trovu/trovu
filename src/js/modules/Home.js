@@ -41,37 +41,37 @@ export default class Home {
 
     Home.setHeights();
 
-    typewrite();
+    startTypewriterEffect();
 
-    function typewrite() {
-      var placeholders = ['gd london, liverpol', 'gfl1 ber,lax,1', 'w london'];
-      var currentIndex = 0;
-      var input = document.getElementById('query');
-      var charIndex = 0;
-      var typingDelay = 100;
-      var deletingDelay = 50;
-      var deletingPause = 2000;
+    function startTypewriterEffect() {
+      const placeholders = [
+        'gd london, liverpol',
+        'gfl1 ber,lax,1',
+        'w london',
+      ];
+      let currentIndex = 0;
+      const input = document.getElementById('query');
+      const typingDelay = 100;
+      const deletingPause = 2000;
 
-      function typePlaceholder() {
-        if (charIndex < placeholders[currentIndex].length) {
-          input.placeholder += placeholders[currentIndex].charAt(charIndex);
-          charIndex++;
-          setTimeout(typePlaceholder, typingDelay);
-        } else {
-          setTimeout(deletePlaceholder, deletingPause);
+      const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+      const typePlaceholder = async () => {
+        const placeholder = placeholders[currentIndex];
+        for (let charIndex = 0; charIndex <= placeholder.length; charIndex++) {
+          input.placeholder = placeholder.slice(0, charIndex);
+          await sleep(typingDelay);
         }
-      }
+        await sleep(deletingPause);
+        await deletePlaceholder();
+      };
 
-      function deletePlaceholder() {
-        if (charIndex > 0) {
-          input.placeholder = input.placeholder.substring(0, charIndex - 1);
-          charIndex--;
-          setTimeout(deletePlaceholder, deletingDelay);
-        } else {
-          currentIndex = (currentIndex + 1) % placeholders.length;
-          setTimeout(typePlaceholder, typingDelay);
-        }
-      }
+      const deletePlaceholder = async () => {
+        input.placeholder = '';
+        currentIndex = (currentIndex + 1) % placeholders.length;
+        await sleep(typingDelay);
+        await typePlaceholder();
+      };
 
       typePlaceholder();
     }
