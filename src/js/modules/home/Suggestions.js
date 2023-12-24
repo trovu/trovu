@@ -192,6 +192,7 @@ export default class Suggestions {
   handleTagOrNamespaceClick(event, query) {
     event.stopPropagation();
     this.queryInput.value = query;
+    this.queryInput.focus();
     this.queryInput.dispatchEvent(new Event('input'));
   }
 
