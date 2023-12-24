@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 161-improve-suggestions-shortcut-search
     workflow_dispatch:
 jobs:
   build-and-deploy:
