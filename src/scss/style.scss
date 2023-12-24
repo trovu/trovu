@@ -11,12 +11,6 @@ body {
 
 main {
   flex: 1 0 auto;
-  @media (max-width: 600px) {
-    .row-suggestions {
-      margin-left: -35px;
-      margin-right: -35px;
-    }
-  }
 }
 
 footer {
