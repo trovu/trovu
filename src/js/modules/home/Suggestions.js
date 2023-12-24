@@ -1,5 +1,4 @@
 /** @module Suggestions */
-import Helper from '../Helper.js';
 import QueryParser from '../QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -9,7 +8,7 @@ export default class Suggestions {
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
     this.helpDiv = document.querySelector('#help');
-    this.selected = 0;
+    this.selected = -1;
     this.suggestions = [];
     this.setListeners();
     this.updateSuggestions();
@@ -21,29 +20,29 @@ export default class Suggestions {
    * @param {object} event – The fired event.
    */
   updateSuggestions = () => {
-    const query = this.queryInput.value;
-    this.suggestions = this.getSuggestions(query);
-    this.suggestions = this.suggestions.slice(0, 200);
+    this.query = this.queryInput.value;
+    this.suggestions = this.getSuggestions(this.query);
+    this.suggestions = this.suggestions.slice(0, 500);
     this.renderSuggestions(this.suggestions);
   };
 
   setListeners() {
     this.queryInput.addEventListener('input', (event) => {
-      this.selected = 0;
+      this.selected = -1;
       this.updateSuggestions();
     });
-    // Also update on focus,
-    // for case when input is already filled (because no shortcut was not found).
-    // this.queryInput.addEventListener('focus', this.updateSuggestions);
     this.queryInput.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowUp') {
         event.preventDefault();
-        this.selected = Math.max(1, this.selected - 1);
+        this.selected = Math.max(0, this.selected - 1);
         this.updateSuggestions();
       }
       if (event.key === 'ArrowDown') {
         event.preventDefault();
-        this.selected = Math.min(this.suggestions.length, this.selected + 1);
+        this.selected = Math.min(
+          this.suggestions.length - 1,
+          this.selected + 1,
+        );
         this.updateSuggestions();
       }
       if (event.key === 'Enter') {
@@ -60,23 +59,31 @@ export default class Suggestions {
       this.helpDiv.textContent = 'No matching shortcuts found.';
       return;
     }
-    this.helpDiv.textContent = '';
+    if (this.query === '') {
+      this.helpDiv.innerHTML = `Select with ⬆️ ⬇️ for more info, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.`;
+    } else {
+      this.helpDiv.innerHTML = '';
+    }
 
     this.suggestionsList = document.createElement('ul');
     this.suggestionsDiv.appendChild(this.suggestionsList);
 
     const fragment = document.createDocumentFragment();
     suggestions.forEach((suggestion, index) => {
-      const li = this.renderSuggestion(suggestion, index + 1);
+      const li = this.renderSuggestion(suggestion, index);
       fragment.appendChild(li);
     });
 
     this.suggestionsList.appendChild(fragment);
-    const selectedLi = this.suggestionsList.querySelector(
-      'li[aria-selected="true"]',
-    );
-    if (selectedLi) {
-      this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
+    if (this.selected > -1) {
+      const selectedLi = this.suggestionsList.querySelector(
+        'li[aria-selected="true"]',
+      );
+      if (selectedLi) {
+        this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
+      }
+    } else {
+      this.suggestionsDiv.scrollTop = 0;
     }
   }
 
@@ -93,26 +100,19 @@ export default class Suggestions {
     fragment.appendChild(this.getExamples(suggestion));
     li.appendChild(fragment);
     li.addEventListener('click', () => {
-      if (this.selected == index) {
-        this.selected = 0;
-      } else {
-        this.selected = index;
-      }
-      this.updateAriaSelected(this.selected - 1);
-      this.queryInput.focus();
+      this.select(index);
     });
     return li;
   }
 
-  // New method to update aria-selected attribute for all items
-  updateAriaSelected(selectedIndex) {
-    const lis = this.suggestionsList.querySelectorAll('li');
-    lis.forEach((li, index) => {
-      li.setAttribute(
-        'aria-selected',
-        index === selectedIndex ? 'true' : 'false',
-      );
-    });
+  select(index) {
+    if (this.selected == index) {
+      this.selected = -1;
+    } else {
+      this.selected = index;
+    }
+    this.updateSuggestions();
+    this.queryInput.focus();
   }
 
   ensureElementIsVisibleInContainer(element, container) {
@@ -179,15 +179,20 @@ export default class Suggestions {
     rightSpan.appendChild(namespaceSpan);
 
     // On click, set the query input value to "ns:NAMESPACE".
-    namespaceSpan.addEventListener('click', () => {
-      this.queryInput.value = `ns:${suggestion.namespace}`;
-      this.queryInput.dispatchEvent(new Event('input'));
+    namespaceSpan.addEventListener('click', (event) => {
+      this.handleTagOrNamespaceClick(event, `ns:${suggestion.namespace}`);
     });
     namespaceSpan.addEventListener('mouseover', () => {
       namespaceSpan.style.cursor = 'pointer';
     });
 
     return mainDiv;
+  }
+
+  handleTagOrNamespaceClick(event, query) {
+    event.stopPropagation();
+    this.queryInput.value = query;
+    this.queryInput.dispatchEvent(new Event('input'));
   }
 
   getDescriptionAndTags(suggestion) {
@@ -216,9 +221,8 @@ export default class Suggestions {
         tagSpan.textContent = tag;
 
         // On click, set the query input value to "tag:TAG".
-        tagSpan.addEventListener('click', () => {
-          this.queryInput.value = `tag:${tag}`;
-          this.queryInput.dispatchEvent(new Event('input'));
+        tagSpan.addEventListener('click', (event) => {
+          this.handleTagOrNamespaceClick(event, `tag:${tag}`);
         });
         tagSpan.addEventListener('mouseover', () => {
           tagSpan.style.cursor = 'pointer';
@@ -505,7 +509,7 @@ export default class Suggestions {
     event.preventDefault();
     const inputText = this.queryInput.value;
     const input = QueryParser.parse(inputText);
-    const suggestion = this.suggestions[this.selected - 1];
+    const suggestion = this.suggestions[this.selected];
     let newInputText = suggestion.keyword;
     // Prefix with namespace if not reachable.
     if (!suggestion.reachable) {
@@ -513,7 +517,7 @@ export default class Suggestions {
     }
     newInputText = `${newInputText} ${input.argumentString}`;
     this.queryInput.value = newInputText;
-    this.selected = 0;
+    this.selected = -1;
     this.updateSuggestions();
   }
 }
