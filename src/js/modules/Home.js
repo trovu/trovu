@@ -40,6 +40,41 @@ export default class Home {
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
     Home.setHeights();
+
+    typewrite();
+
+    function typewrite() {
+      var placeholders = ['gd london, liverpol', 'gfl1 ber,lax,1', 'w london'];
+      var currentIndex = 0;
+      var input = document.getElementById('query');
+      var charIndex = 0;
+      var typingDelay = 100;
+      var deletingDelay = 50;
+      var deletingPause = 2000;
+
+      function typePlaceholder() {
+        if (charIndex < placeholders[currentIndex].length) {
+          input.placeholder += placeholders[currentIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typePlaceholder, typingDelay);
+        } else {
+          setTimeout(deletePlaceholder, deletingPause);
+        }
+      }
+
+      function deletePlaceholder() {
+        if (charIndex > 0) {
+          input.placeholder = input.placeholder.substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(deletePlaceholder, deletingDelay);
+        } else {
+          currentIndex = (currentIndex + 1) % placeholders.length;
+          setTimeout(typePlaceholder, typingDelay);
+        }
+      }
+
+      typePlaceholder();
+    }
   }
 
   static setHeights() {
