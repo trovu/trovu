@@ -504,7 +504,7 @@ export default class Suggestions {
    * @param {object} event – The fired event.
    */
   pick(event) {
-    if (this.selected === 0) {
+    if (this.selected === -1) {
       return;
     }
     event.preventDefault();
