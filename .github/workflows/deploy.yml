@@ -1,7 +1,11 @@
 name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches:
+      - master
+    workflow_dispatch:
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,19 +38,6 @@ jobs:
       - run: npm run compile-data
       - run: npm run test-unit
       - run: npm run test-calls
-      - uses: actions/upload-artifact@v4
-        with:
-          name: website
-          path: dist/public/
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.repository == 'trovu/trovu'
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: website
-          path: dist/public
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/public/
