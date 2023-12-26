@@ -13,8 +13,8 @@ Userscript for autofilling and submitting forms on target websites. This may hel
 
 #### Install
 
-1. In your browser, open https://www.trovu.net/userscripts/fill-and-submit.user.js
-2. There should be a dialog opening that offers to install the user script.
+1. In your browser, open [https://www.trovu.net/userscripts/fill-and-submit.user.js](https://www.trovu.net/userscripts/fill-and-submit.user.js)
+2. If you have installed the requirements before there should be now a dialog opening offering to install the user script.
 3. Install and you are done.
 
 ### For shortcut editors
