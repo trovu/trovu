@@ -41,13 +41,22 @@ jobs:
       # Additional step to list contents of the build directory
       - name: List output directory
         run: ls -alh dist/public/
-
+      - name: Upload dist/public as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: public-directory
+          path: dist/public/
   deploy:
     needs: build
     runs-on: ubuntu-latest
     if: github.repository == 'trovu/trovu'
     steps:
       - uses: actions/checkout@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: public-directory
+          path: dist/public
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/public/
