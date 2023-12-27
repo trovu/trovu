@@ -38,10 +38,16 @@ jobs:
       - run: npm run compile-data
       - run: npm run test-unit
       - run: npm run test-calls
+      # Additional step to list contents of the build directory
+      - name: List output directory
+        run: ls -alh dist/public/
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     if: github.repository == 'trovu/trovu'
     steps:
+      - uses: actions/checkout@v4
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/public/
