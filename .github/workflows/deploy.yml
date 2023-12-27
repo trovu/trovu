@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 247-deploy-only-this-repo
     workflow_dispatch:
 jobs:
   build:
