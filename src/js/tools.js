@@ -19,7 +19,7 @@ async function main() {
     return;
   }
 
-  ymlDirPath = `./data/shortcuts/`;
+  ymlDirPath = './data/shortcuts/';
 
   const action = process.argv[2];
   if (action in actions) {

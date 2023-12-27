@@ -60,7 +60,7 @@ export default class Helper {
 
   static logVersion() {
     console.log(
-      `Trovu running version`,
+      'Trovu running version',
       pkg.gitCommitHash.slice(0, 7),
       pkg.gitDate,
     );
