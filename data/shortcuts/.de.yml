@@ -819,32 +819,32 @@ ek 0:
   deprecated:
     alternative:
       query: kaz
-      created: '2023-10-13'
+    created: '2023-10-13'
 ek 1:
   deprecated:
     alternative:
       query: kaz <1>
-      created: '2023-10-13'
+    created: '2023-10-13'
 ek 2:
   deprecated:
     alternative:
       query: kaz <1>, <2>
-      created: '2023-10-13'
+    created: '2023-10-13'
 ek+ 0:
   deprecated:
     alternative:
       query: kaz+
-      created: '2023-10-13'
+    created: '2023-10-13'
 eka 0:
   deprecated:
     alternative:
       query: kaza
-      created: '2023-10-13'
+    created: '2023-10-13'
 ekn 0:
   deprecated:
     alternative:
       query: kazn
-      created: '2023-10-13'
+    created: '2023-10-13'
 farnell 1:
   url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt=<query>
   title: Farnell Deutschland
@@ -4841,7 +4841,7 @@ p 2:
   deprecated:
     alternative:
       query: gii <1>, <2>
-      created: '2023-07-02'
+    created: '2023-07-02'
 pollin 0:
   url: http://www.pollin.de/
   title: Pollin Electronic

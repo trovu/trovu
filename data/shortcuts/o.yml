@@ -1646,7 +1646,7 @@ deen 1:
   deprecated:
     alternative:
       query: de.en <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 deep 1:
   url: http://www.deepdyve.com/search?query=<query>
   title: DeepDyve search
@@ -1720,7 +1720,7 @@ dic 1:
   deprecated:
     alternative:
       query: de.en <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 diff 1:
   url: http://www.differencebetween.net/search/?cx=partner-pub-1911891147296207%3Aw80z4hjpu14&cof=FORID%3A9&ie=ISO-8859-1&q=<query>&sa=Search
   title: Difference Between search
@@ -2240,7 +2240,7 @@ ekn 0:
   deprecated:
     alternative:
       query: .de.kazn
-      created: '2023-10-13'
+    created: '2023-10-13'
 el 0:
   include:
   - key: el 0
@@ -2381,7 +2381,7 @@ enzh 1:
   deprecated:
     alternative:
       query: en.zh <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 eo 0:
   include:
   - key: eo 0
@@ -3145,12 +3145,12 @@ fr-an 1:
   deprecated:
     alternative:
       query: fr.en <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 frde 1:
   deprecated:
     alternative:
       query: fr.de <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 freedb 1:
   url: http://www.freedb.org/freedb_search.php?words=<query>&allfields=NO&fields=artist&fields=title&allcats=YES&grouping=none&x=0&y=0
   title: FreeDB
@@ -3189,7 +3189,7 @@ frsv 1:
   deprecated:
     alternative:
       query: fr.sv <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 frv 1:
   url: https://forvo.com/search/<word>/
   title: Forvo
@@ -5214,7 +5214,7 @@ larousse 1:
   deprecated:
     alternative:
       query: fr.lrs <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 last 0:
   url: http://www.last.fm/
   title: Last.fm
@@ -5290,12 +5290,12 @@ leo 1:
   deprecated:
     alternative:
       query: leo.en <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 leo_es 1:
   deprecated:
     alternative:
       query: leo.es <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 lg 0:
   include:
   - key: lg 0
@@ -5331,12 +5331,12 @@ linfr 1:
   deprecated:
     alternative:
       query: lge.fr <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 linguee 1:
   deprecated:
     alternative:
       query: lge.en <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 lintian 1:
   url: http://lintian.debian.org/tags/<query>.html
   title: show the given debian lintian report
@@ -6678,7 +6678,7 @@ pt-pons 1:
   deprecated:
     alternative:
       query: pns.pt <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 pubchem 1:
   url: http://www.ncbi.nlm.nih.gov/pccompound/?term=<compound>
   title: PubChem
@@ -6917,7 +6917,7 @@ rae 1:
   deprecated:
     alternative:
       query: es.rae <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 rails 0:
   url: http://apidock.com/rails/
   title: Ruby on Rails Documentation
@@ -7497,7 +7497,7 @@ soa 1:
   deprecated:
     alternative:
       query: sofa <1>
-      created: '2023-05-27'
+    created: '2023-05-27'
 sof 0:
   url: http://stackoverflow.com/
   title: Stack Overflow
@@ -7717,7 +7717,7 @@ svfr 1:
   deprecated:
     alternative:
       query: fr.sv <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 sw 0:
   include:
   - key: sw 0
@@ -9727,7 +9727,7 @@ zar 1:
   deprecated:
     alternative:
       query: en.tr <1>
-      created: '2023-04-10'
+    created: '2023-04-10'
 zattoo 0:
   url: http://watch.zattoo.com
   title: Zattoo
@@ -9781,7 +9781,7 @@ zhen 1:
   deprecated:
     alternative:
       query: en.zh <1>
-      created: '2023-04-11'
+    created: '2023-04-11'
 zhr 1:
   url: http://en.wiktionary.org/wiki/Index:Chinese_radical/<radical>
   title: Chinese radical index on English Wiktionary
