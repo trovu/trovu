@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
     workflow_dispatch:
 jobs:
   build:
@@ -38,7 +41,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.repository == 'trovu/trovu'
+    if: github.repository == 'trovu/trovu' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v2
