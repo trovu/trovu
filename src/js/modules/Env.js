@@ -298,12 +298,15 @@ export default class Env {
    */
   async getData() {
     let text;
+    let url;
     if (typeof window !== 'undefined') {
-      const url = `/data.json?${this.commitHash}`;
+      url = `/data.json?${this.commitHash}`;
       text = await Helper.fetchAsync(url, this);
     } else {
+      // eslint-disable-next-line no-undef
       const fs = require('fs');
-      text = fs.readFileSync('./dist/public/data.json', 'utf8');
+      url = './dist/public/data.json';
+      text = fs.readFileSync(url, 'utf8');
     }
     if (!text) {
       return false;

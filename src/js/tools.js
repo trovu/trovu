@@ -1,3 +1,6 @@
+// Ignoring all undefined here because require() is not recognized when linting as ESM.
+/* eslint-disable no-undef */
+
 import UrlProcessor from './modules/UrlProcessor';
 
 // Helper scripts for managing shortcuts in https://github.com/trovu/trovu-data/.

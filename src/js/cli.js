@@ -59,6 +59,7 @@ function validateData(options) {
     }
   }
   if (hasError) {
+    // eslint-disable-next-line no-undef
     process.exit(1);
   }
 }
