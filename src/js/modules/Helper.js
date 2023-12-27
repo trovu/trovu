@@ -29,7 +29,7 @@ export default class Helper {
    * @return {string} str   - The escaped string.
    */
   static escapeRegExp(str) {
-    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1');
+    return str.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
   }
 
   /**
