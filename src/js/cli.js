@@ -49,6 +49,21 @@ function compileData(options) {
 
 function normalizeData() {
   const data = DataManager.load();
+  // Normalize 'created' in 'deprecated'.
+  for (const namespace in data.shortcuts) {
+    for (const key in data.shortcuts[namespace]) {
+      const shortcut = data.shortcuts[namespace][key];
+      if (
+        shortcut.deprecated &&
+        shortcut.deprecated.alternative &&
+        shortcut.deprecated.alternative.created
+      ) {
+        shortcut.deprecated.created = shortcut.deprecated.alternative.created;
+        delete shortcut.deprecated.alternative.created;
+      }
+      data.shortcuts[namespace][key] = shortcut;
+    }
+  }
   DataManager.write(data);
 }
 
