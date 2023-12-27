@@ -163,18 +163,36 @@ bibfu 1:
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
+bibgvk 1:
+  url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<query>
+  title: Gemeinsamer Verbundkatalog des GBV
+  tags:
+  - library
+  examples:
+  - arguments: Basicode
+    description: Suche nach "Basicode"
+bibhbz 1:
+  url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
+  title: Hochschulbibliothekszentrum NRW
+  tags:
+  - library
+  examples:
+  - arguments: Basicode
+    description: Suche nach "Basicode"
 bibka 0:
   url: http://www.bibliotheksportal-karlsruhe.de/
   title: Bibliotheksportal Karlsruhe
   tags:
   - bibliothek
   - karlsruhe
+  - library
 bibka 1:
   url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=ka&input-charset=utf-8&title=Bibliotheksportal+Karlsruhe+%3A+Ergebnisanzeige&head=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fheader.html&footer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Ffooter.html&css=none&spacer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fspacer.html&target=_blank&olix_returnTo=%2F%2Fbibliotheksportal-karlsruhe.de%2F&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&kataloge=BLB_OPAC&kataloge=STABIKA&kataloge=KIT&kataloge=HSMUSIK_KA&kataloge=HSB&kataloge=MERKUR_KA&kataloge=AKBILDKUENSTE_KA&kataloge=BGH_OPAC&kataloge=BVG_OPAC&kataloge=KUNST_BADLAMUSEUM&kataloge=BISMARCK_KA&kataloge=EV_OBERKIRCHENRAT&kataloge=LBB&kataloge=MELANCHTON&kataloge=SCHEFFEL&kataloge=RELPAED_INST&kataloge=KUNST_KUHAKA&kataloge=ZKM&ref=direct&client-js=yes
   title: Bibliotheksportal Karlsruhe
   tags:
   - bibliothek
   - karlsruhe
+  - library
   examples:
   - arguments: goethe
     description: Suche nach Goethe
@@ -185,6 +203,7 @@ bibkit 0:
   - bibliothek
   - karlsruhe
   - kit
+  - library
 bibkit 1:
   url: http://services.bibliothek.kit.edu/primo/start.php?query=<query>
   title: KIT-Bibliothek
@@ -192,11 +211,12 @@ bibkit 1:
   - bibliothek
   - karlsruhe
   - kit
+  - library
   examples:
   - arguments: xml
     description: 'search for all XML books '
 bibkobv 1:
-  url: http://vs13.kobv.de/V/PVNF8HR8UYMQX54AQ854V7J7MG4BPQHXL4C492RMKIK6BESAMP-05191?func=meta-1-check&mode=advanced&find_code_2=WAU&find_request_2=<query>&find_op_1=AND&find_code_3=WTI&find_request_3=&ckbox=KOB00019&ckbox=SIG00002&ckbox=KOB00264&submit=go
+  url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<query>
   title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
   tags:
   - library
@@ -224,6 +244,14 @@ bibmr 1:
   examples:
   - arguments: goethe
     description: Suche nach Goethe
+bibswb 1:
+  url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<query>
+  title: Südwestdeutscher Bibliotheksverbund
+  tags:
+  - library
+  examples:
+  - arguments: Basicode
+    description: Suche nach "Basicode"
 bibtub 0:
   url: http://www.ub.tu-berlin.de/
   title: TU Berlin Bibliothek
