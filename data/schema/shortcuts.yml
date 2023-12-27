@@ -1,0 +1,80 @@
+type: object
+additionalProperties: false
+patternProperties:
+  "^[^ ]+ [0-9]+$":
+    type: object
+    additionalProperties: false
+    properties:
+      url:
+        type: string
+        pattern: "^https?://.*$"
+      title:
+        type: string
+      description:
+        type: string
+      tags:
+        type: array
+        items:
+          type: string
+          pattern: "^[^ _,;'\"\\[\\]{}*&^%$#@!<>?|\\\\/]+$" # stricter?
+      examples:
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          properties:
+            arguments:
+              type: string
+            description:
+              type: string
+          required:
+          - description
+      showOnHome:
+        type: number
+      removed:
+        type: string
+        pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+      include:
+        anyOf:
+        - type: array
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              key:
+                type: string
+              namespace:
+                type: string
+                pattern: "^[a-z]+$"
+            required:
+            - key
+        - type: object
+          additionalProperties: false
+          properties:
+            key:
+              type: string
+          required:
+          - key
+      deprecated:
+        type: object
+        additionalProperties: false
+        properties:
+          alternative:
+            type: object
+            additionalProperties: false
+            properties:
+              query:
+                type: string
+            required:
+            - query
+          created:
+            type: string
+            pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        required:
+        - alternative
+      tests:
+        type: object
+        additionalProperties: false
+        patternProperties:
+          "^.*$":
+            type: string
