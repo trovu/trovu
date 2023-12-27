@@ -4,6 +4,7 @@
   "description": "Trovu web interface.",
   "main": "",
   "scripts": {
+    "lint-js": "npx eslint src/",
     "lint-yaml": "npx yaml-lint 'data/**/*.yml'",
     "test-unit": "jest --verbose env helper src/js/ ",
     "test-calls": "jest --verbose calls",
