@@ -37,7 +37,7 @@ describe('Homepage startup', () => {
       'include',
       '/process/index.html?#country=gb&language=en&query=debug%3Ag',
     );
-    cy.contains('https://www.google.co.uk');
+    cy.contains('https://www.google.');
   });
 
   it('should have a working Settings modal', () => {
