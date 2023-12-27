@@ -10,23 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - uses: actions/setup-python@v2
         with:
           python-version: 3.11.6
-      - name: Cache Pipenv virtualenv
-        uses: actions/cache@v2
+      - uses: actions/cache@v2
         with:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
           restore-keys: ${{ runner.os }}-pipenv-
-      - name: Install dependencies
-        run: |
-          pip install pipenv
-          pipenv install
-      - name: Build MkDocs site
-        run: |
-          pipenv run mkdocs build
+      - run: pip install pipenv
+      - run: pipenv install
+      - run: pipenv run mkdocs build
       - uses: actions/setup-node@v4
         with:
           node-version: 21.3.0
@@ -38,11 +32,7 @@ jobs:
       - run: npm run compile-data
       - run: npm run test-unit
       - run: npm run test-calls
-      # Additional step to list contents of the build directory
-      - name: List output directory
-        run: ls -alh dist/public/
-      - name: Upload dist/public as artifact
-        uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v2
         with:
           name: public-directory
           path: dist/public/
@@ -52,8 +42,7 @@ jobs:
     if: github.repository == 'trovu/trovu'
     steps:
       - uses: actions/checkout@v4
-      - name: Download artifact
-        uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v2
         with:
           name: public-directory
           path: dist/public
