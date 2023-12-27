@@ -1,12 +1,18 @@
 import DataManager from './modules/DataManager';
 import UrlProcessor from './modules/UrlProcessor';
 import { Command } from 'commander';
+import ajv from 'ajv';
 import fs from 'fs';
 import jsyaml from 'js-yaml';
 
 const program = new Command();
 
 program.name('trovu').description('CLI for trovu.net').version('0.0.1');
+
+program
+  .command('validate-data')
+  .description('Validate YAML data against schema')
+  .action(validateData);
 
 program
   .command('compile-data')
@@ -40,6 +46,22 @@ program
   .action(migrateExamples);
 
 program.parse();
+
+function validateData(options) {
+  const validator = new ajv({strict: true});
+  const schema = jsyaml.load(fs.readFileSync('data/schema/shortcuts.yml'));
+  const data = DataManager.load();
+  let hasError = false;
+  for (const namespace in data.shortcuts) {
+    if (!validator.validate(schema, data.shortcuts[namespace])) {
+      hasError = true;
+      console.error(`Problem in namespace ${namespace}: ${validator.errorsText()}`);
+    }
+  }
+  if (hasError) {
+    process.exit(1);
+  }
+}
 
 function compileData(options) {
   const data = DataManager.load();
