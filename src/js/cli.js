@@ -47,7 +47,7 @@ program
 
 program.parse();
 
-function validateData(options) {
+function validateData() {
   const validator = new ajv({strict: true});
   const schema = jsyaml.load(fs.readFileSync('data/schema/shortcuts.yml'));
   const data = DataManager.load();

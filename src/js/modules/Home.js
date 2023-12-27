@@ -4,6 +4,7 @@ import Env from './Env.js';
 import Helper from './Helper.js';
 import Settings from './home/Settings.js';
 import Suggestions from './home/Suggestions.js';
+/* eslint-disable no-unused-vars */
 import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
@@ -94,10 +95,10 @@ export default class Home {
     }
 
     this.suggestions = new Suggestions('#query', '#suggestions', this.env);
-    this.setToggleByQuery(Home);
+    this.setToggleByQuery();
   }
 
-  setToggleByQuery(Home) {
+  setToggleByQuery() {
     document.querySelector('#query').focus();
     document.querySelector('#query').addEventListener('input', () => {
       this.toggleByQuery();
@@ -197,7 +198,7 @@ export default class Home {
   addLinkSearch() {
     const params = new URLSearchParams(location.hash.substring(1));
     // Only keep relevant parameters.
-    for (const [key, value] of params.entries()) {
+    for (const [key] of params.entries()) {
       if (!['language', 'country', 'github'].includes(key)) {
         params.delete(key);
       }
