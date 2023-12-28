@@ -13,7 +13,7 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       name: 'de',
     });
   });
-  test('github', () => {
+  test('github, named user', () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitalNamespaceInfo({ github: 'johndoe' }),
