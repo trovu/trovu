@@ -15,11 +15,12 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   });
   test('github', () => {
     const env = new Env();
-    expect(new NamespaceFetcher(env).getInitalNamespaceInfo('johndoe')).toEqual(
-      {
-        name: 'johndoe',
-      },
-    );
+    expect(
+      new NamespaceFetcher(env).getInitalNamespaceInfo({ github: 'johndoe' }),
+    ).toEqual({
+      name: 'johndoe',
+      github: 'johndoe',
+    });
   });
 });
 
