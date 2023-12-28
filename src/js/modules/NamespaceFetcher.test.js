@@ -63,6 +63,24 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       },
     });
   });
+  test('name and shortcuts, short notation', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        name: 'johndoe',
+        shortcuts: {
+          'example 0': 'https://example.com/',
+        },
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      shortcuts: {
+        'example 0': {
+          url: 'https://example.com/',
+        },
+      },
+    });
+  });
 });
 
 describe('NamespaceFetcher.addNamespaceInfo', () => {
