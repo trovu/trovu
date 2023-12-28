@@ -9,14 +9,14 @@ function cloneObject(obj) {
 describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('site', () => {
     const env = new Env();
-    expect(new NamespaceFetcher(env).getInitalNamespaceInfo('de')).toEqual({
+    expect(new NamespaceFetcher(env).getInitialNamespaceInfo('de')).toEqual({
       name: 'de',
     });
   });
   test('github, named user', () => {
     const env = new Env();
     expect(
-      new NamespaceFetcher(env).getInitalNamespaceInfo({ github: 'johndoe' }),
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: 'johndoe' }),
     ).toEqual({
       name: 'johndoe',
       github: 'johndoe',
@@ -25,7 +25,7 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('github, this user', () => {
     const env = new Env({ github: 'johndoe' });
     expect(
-      new NamespaceFetcher(env).getInitalNamespaceInfo({ github: '.' }),
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
     ).toEqual({
       name: 'johndoe',
       github: 'johndoe',
@@ -34,7 +34,7 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('name and url', () => {
     const env = new Env();
     expect(
-      new NamespaceFetcher(env).getInitalNamespaceInfo({
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
         name: 'johndoe',
         url: 'https://johndoe.com/trovu-data-user/',
       }),
@@ -46,7 +46,7 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('name and shortcuts', () => {
     const env = new Env();
     expect(
-      new NamespaceFetcher(env).getInitalNamespaceInfo({
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
         name: 'johndoe',
         shortcuts: {
           'example 0': {

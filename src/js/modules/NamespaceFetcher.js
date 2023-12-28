@@ -36,7 +36,7 @@ export default class NamespaceFetcher {
   getInitialNamespaceInfos(namespaces, priorityOffset) {
     return Object.fromEntries(
       namespaces.map((namespace, index) => {
-        const namespaceInfo = this.getInitalNamespaceInfo(namespace);
+        const namespaceInfo = this.getInitialNamespaceInfo(namespace);
         namespaceInfo.priority = index + priorityOffset;
         return [namespaceInfo.name, namespaceInfo];
       }),
@@ -48,7 +48,7 @@ export default class NamespaceFetcher {
    * @param {(string|Object)} namespace - The namespace to add the URL template to.
    * @return {Object} namespace - The namespace with the added URL template.
    */
-  getInitalNamespaceInfo(namespace) {
+  getInitialNamespaceInfo(namespace) {
     if (typeof namespace === 'string') {
       return { name: namespace };
     }
@@ -283,7 +283,7 @@ export default class NamespaceFetcher {
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (include && include.namespace) {
-        const namespaceInfo = this.getInitalNamespaceInfo(include.namespace);
+        const namespaceInfo = this.getInitialNamespaceInfo(include.namespace);
         if (!this.namespaceInfos[namespaceInfo.name]) {
           this.namespaceInfos[namespaceInfo.name] =
             this.addNamespaceInfo(namespaceInfo);
