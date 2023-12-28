@@ -22,6 +22,18 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       github: 'johndoe',
     });
   });
+  test('url and name', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitalNamespaceInfo({
+        name: 'johndoe',
+        url: 'https://johndoe.com/trovu-data-user/',
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      url: 'https://johndoe.com/trovu-data-user/',
+    });
+  });
 });
 
 describe('NamespaceFetcher.addNamespaceInfo', () => {
