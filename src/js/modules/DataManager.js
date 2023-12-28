@@ -80,7 +80,7 @@ export default class DataManager {
       if (error.code === 'ENOENT') {
         console.log(`Warning: No such directory: ${ymlDirPath}`);
       } else {
-        throw err;
+        throw error;
       }
     }
     // Filter files by filter.

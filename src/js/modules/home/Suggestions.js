@@ -27,7 +27,7 @@ export default class Suggestions {
   };
 
   setListeners() {
-    this.queryInput.addEventListener('input', (event) => {
+    this.queryInput.addEventListener('input', (_event) => {
       this.selected = -1;
       this.updateSuggestions();
     });
@@ -60,7 +60,7 @@ export default class Suggestions {
       return;
     }
     if (this.query === '') {
-      this.helpDiv.innerHTML = `Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.`;
+      this.helpDiv.innerHTML = 'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
     } else {
       this.helpDiv.innerHTML = '';
     }

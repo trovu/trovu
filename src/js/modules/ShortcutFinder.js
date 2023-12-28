@@ -1,5 +1,4 @@
 /** @module ShortcutFinder */
-import Helper from './Helper.js';
 
 /** Find matching shortcut. */
 
@@ -12,7 +11,7 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static async matchShortcuts(keyword, args, namespaceInfos, reload, debug) {
+  static async matchShortcuts(keyword, args, namespaceInfos, _reload, _debug) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;

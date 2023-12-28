@@ -1,3 +1,6 @@
+// Ignoring all undefined here because require() is not recognized when linting as ESM.
+/* eslint-disable no-undef */
+
 import UrlProcessor from './modules/UrlProcessor';
 
 // Helper scripts for managing shortcuts in https://github.com/trovu/trovu-data/.
@@ -6,7 +9,6 @@ const actions = {};
 const fs = require('fs');
 const isValidDomain = require('is-valid-domain');
 const jsyaml = require('js-yaml');
-const languages = require('@cospired/i18n-iso-languages');
 const modifiers = {};
 
 let ymlDirPath;
@@ -17,7 +19,7 @@ async function main() {
     return;
   }
 
-  ymlDirPath = `./data/shortcuts/`;
+  ymlDirPath = './data/shortcuts/';
 
   const action = process.argv[2];
   if (action in actions) {
@@ -96,7 +98,6 @@ actions['compile-data'] = async function () {
   const compiled = {};
   compiled['shortcuts'] = {};
   for (const ymlFileName in ymls) {
-    const yml = ymls[ymlFileName];
     const namespace = ymlFileName.replace('.yml', '');
     compiled.shortcuts[namespace] = ymls[ymlFileName];
   }
@@ -245,8 +246,7 @@ modifiers['deprecateGoogleMapsCities'] = async function (key, shortcut) {
 };
 
 modifiers['removeDictionaryDashIncludes'] = async function (key, shortcut) {
-  let matches;
-  if ((matches = key.match(new RegExp('^..-...'))) && shortcut.include) {
+  if (key.match(new RegExp('^..-...')) && shortcut.include) {
     console.log(`Removing ${key}`);
     return false;
   }
@@ -469,12 +469,6 @@ actions['setDictionaries'] = async function () {
     return capitalized;
   }
 };
-
-function ensureNamespace(ymls, lang1) {
-  if (!ymls[lang1 + '.yml']) {
-    ymls[lang1 + '.yml'] = {};
-  }
-}
 
 function getDictionaries() {
   return jsyaml.load(fs.readFileSync('src/yml/dictionaries.yml', 'utf8'));

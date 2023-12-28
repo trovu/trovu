@@ -278,6 +278,7 @@ export default class UrlProcessor {
         const attributes = matches[match];
         switch (varName) {
           case 'now':
+          {
             const time = dayjs();
 
             let format = 'HH:mm';
@@ -287,7 +288,7 @@ export default class UrlProcessor {
             value = time.format(format);
 
             break;
-
+          }
           default:
             value = variables[varName];
             break;

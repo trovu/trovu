@@ -29,7 +29,7 @@ export default class Helper {
    * @return {string} str   - The escaped string.
    */
   static escapeRegExp(str) {
-    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '\\$1');
+    return str.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
   }
 
   /**
@@ -60,7 +60,7 @@ export default class Helper {
 
   static logVersion() {
     console.log(
-      `Trovu running version`,
+      'Trovu running version',
       pkg.gitCommitHash.slice(0, 7),
       pkg.gitDate,
     );
