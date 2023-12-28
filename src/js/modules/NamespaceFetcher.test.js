@@ -31,7 +31,7 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       github: 'johndoe',
     });
   });
-  test('url and name', () => {
+  test('name and url', () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitalNamespaceInfo({
