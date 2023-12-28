@@ -43,6 +43,26 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       url: 'https://johndoe.com/trovu-data-user/',
     });
   });
+  test('name and shortcuts', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitalNamespaceInfo({
+        name: 'johndoe',
+        shortcuts: {
+          'example 0': {
+            url: 'https://example.com/',
+          },
+        },
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      shortcuts: {
+        'example 0': {
+          url: 'https://example.com/',
+        },
+      },
+    });
+  });
 });
 
 describe('NamespaceFetcher.addNamespaceInfo', () => {
