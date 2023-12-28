@@ -52,7 +52,8 @@ export default class NamespaceFetcher {
     const namespaceInfo = {};
     if (typeof namespace == 'string') {
       namespaceInfo.name = namespace;
-    } else if ((namespace.url && namespace.name) || namespace.github) {
+      return namespaceInfo;
+    } else if (namespace.github) {
       if (namespace.github == '.') {
         // Set to current user.
         namespace.github = this.env.github;
@@ -61,8 +62,22 @@ export default class NamespaceFetcher {
         namespace.name = namespace.github;
       }
       Object.assign(namespaceInfo, namespace);
+      return namespaceInfo;
+    } else {
+      if (namespace.name) {
+        if (namespace.url) {
+          Object.assign(namespaceInfo, namespace);
+          return namespaceInfo;
+        }
+        if (namespace.shortcuts) {
+          Object.assign(namespaceInfo, namespace);
+          return namespaceInfo;
+        }
+        this.env.logger.warning(
+          `Namespace "${namespace.name}" has no url or shortcuts.`,
+        );
+      }
     }
-    return namespaceInfo;
   }
 
   /**
