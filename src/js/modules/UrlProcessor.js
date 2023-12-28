@@ -277,8 +277,7 @@ export default class UrlProcessor {
       for (const match in matches) {
         const attributes = matches[match];
         switch (varName) {
-          case 'now':
-          {
+          case 'now': {
             const time = dayjs();
 
             let format = 'HH:mm';
