@@ -52,17 +52,13 @@ export default class NamespaceFetcher {
     if (typeof namespace === 'string') {
       return { name: namespace };
     }
-
     if (!namespace || typeof namespace !== 'object') {
       throw new Error('Invalid namespace: input must be an object or a string');
     }
-
     const namespaceInfo = {};
-
     if (namespace.name) {
       namespaceInfo.name = namespace.name;
     }
-
     if (namespace.github) {
       const githubName =
         namespace.github === '.' ? this.env.github : namespace.github;
@@ -71,15 +67,12 @@ export default class NamespaceFetcher {
         namespaceInfo.name = githubName;
       }
     }
-
     if (namespace.url) {
       namespaceInfo.url = namespace.url;
     }
-
     if (namespace.shortcuts) {
       namespaceInfo.shortcuts = namespace.shortcuts;
     }
-
     return namespaceInfo;
   }
 
