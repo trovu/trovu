@@ -16,14 +16,14 @@ jobs:
         with:
           node-version: 21.3.0
       - run: npm clean-install
-      - run: npm run build-jsdoc
-      - run: npm run build-blog
-      - run: npm run lint-js
-      - run: npm run build
       - run: npm run lint-yaml
       - run: npm run validate-data
-      - run: npm run compile-data
+      - run: npm run lint-js
       - run: npm run test-unit
+      - run: npm run build-jsdoc
+      - run: npm run build-blog
+      - run: npm run build
+      - run: npm run compile-data
       - run: npm run test-calls
       - uses: actions/setup-python@v2
         with:
