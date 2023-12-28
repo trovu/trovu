@@ -217,22 +217,21 @@ export default class NamespaceFetcher {
         namespaceInfo.url,
       );
 
-      this.processShortcuts(namespaceInfo);
+      namespaceInfo.shortcuts = this.processShortcuts(
+        namespaceInfo.shortcuts,
+        namespaceInfo.name,
+      );
     }
     return newNamespaceInfos;
   }
 
-  processShortcuts(namespaceInfo) {
-    namespaceInfo.shortcuts = this.checkKeySyntax(
-      namespaceInfo.shortcuts,
-      namespaceInfo.name,
-    );
-    for (const key in namespaceInfo.shortcuts) {
-      namespaceInfo.shortcuts[key] = this.convertToObject(
-        namespaceInfo.shortcuts[key],
-      );
-      this.addNamespacesFromInclude(namespaceInfo.shortcuts[key]);
+  processShortcuts(shortcuts, namespaceName) {
+    shortcuts = this.checkKeySyntax(shortcuts, namespaceName);
+    for (const key in shortcuts) {
+      shortcuts[key] = this.convertToObject(shortcuts[key]);
+      this.addNamespacesFromInclude(shortcuts[key]);
     }
+    return shortcuts;
   }
 
   /**
