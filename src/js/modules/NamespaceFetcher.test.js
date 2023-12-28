@@ -22,6 +22,15 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       github: 'johndoe',
     });
   });
+  test('github, this user', () => {
+    const env = new Env({ github: 'johndoe' });
+    expect(
+      new NamespaceFetcher(env).getInitalNamespaceInfo({ github: '.' }),
+    ).toEqual({
+      name: 'johndoe',
+      github: 'johndoe',
+    });
+  });
   test('url and name', () => {
     const env = new Env();
     expect(
