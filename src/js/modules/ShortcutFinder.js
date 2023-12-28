@@ -11,7 +11,7 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static async matchShortcuts(keyword, args, namespaceInfos, _reload, _debug) {
+  static async matchShortcuts(keyword, args, namespaceInfos) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
