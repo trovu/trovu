@@ -27,7 +27,7 @@ export default class Suggestions {
   };
 
   setListeners() {
-    this.queryInput.addEventListener('input', (_event) => {
+    this.queryInput.addEventListener('input', () => {
       this.selected = -1;
       this.updateSuggestions();
     });
