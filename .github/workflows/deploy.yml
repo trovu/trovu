@@ -12,6 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 21.3.0
+      - run: npm clean-install
+      - run: npm run lint-yaml
+      - run: npm run validate-data
+      - run: npm run lint-js
+      - run: npm run test-unit
+      - run: npm run build-jsdoc
+      - run: npm run build-blog
+      - run: npm run build
+      - run: npm run compile-data
+      - run: npm run test-calls
       - uses: actions/setup-python@v2
         with:
           python-version: 3.11.6
@@ -23,19 +36,6 @@ jobs:
       - run: pip install pipenv
       - run: pipenv install
       - run: pipenv run mkdocs build
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 21.3.0
-      - run: npm clean-install
-      - run: npm run build-jsdoc
-      - run: npm run build-blog
-      - run: npm run lint-js
-      - run: npm run build
-      - run: npm run lint-yaml
-      - run: npm run validate-data
-      - run: npm run compile-data
-      - run: npm run test-unit
-      - run: npm run test-calls
       - uses: actions/upload-artifact@v2
         with:
           name: public-directory
