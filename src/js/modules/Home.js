@@ -4,6 +4,7 @@ import Env from './Env.js';
 import Helper from './Helper.js';
 import Settings from './home/Settings.js';
 import Suggestions from './home/Suggestions.js';
+
 /* eslint-disable no-unused-vars */
 import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import 'bootstrap/dist/css/bootstrap.css';
