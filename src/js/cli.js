@@ -1,7 +1,7 @@
 import DataManager from './modules/DataManager';
 import UrlProcessor from './modules/UrlProcessor';
-import { Command } from 'commander';
 import ajv from 'ajv';
+import { Command } from 'commander';
 import fs from 'fs';
 import jsyaml from 'js-yaml';
 
@@ -48,14 +48,16 @@ program
 program.parse();
 
 function validateData() {
-  const validator = new ajv({strict: true});
+  const validator = new ajv({ strict: true });
   const schema = jsyaml.load(fs.readFileSync('data/schema/shortcuts.yml'));
   const data = DataManager.load();
   let hasError = false;
   for (const namespace in data.shortcuts) {
     if (!validator.validate(schema, data.shortcuts[namespace])) {
       hasError = true;
-      console.error(`Problem in namespace ${namespace}: ${validator.errorsText()}`);
+      console.error(
+        `Problem in namespace ${namespace}: ${validator.errorsText()}`,
+      );
     }
   }
   if (hasError) {

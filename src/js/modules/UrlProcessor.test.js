@@ -105,14 +105,18 @@ describe('UrlProcessor', () => {
 
   describe('getPlaceholderFromMatch', () => {
     test('without attributes', async () => {
-      expect(UrlProcessor.getPlaceholderFromMatch([undefined, 'query'])).toEqual({
+      expect(
+        UrlProcessor.getPlaceholderFromMatch([undefined, 'query']),
+      ).toEqual({
         name: 'query',
         placeholder: {},
       });
     });
 
     test('without attributes legacy', async () => {
-      expect(UrlProcessor.getPlaceholderFromMatchLegacy([undefined, 'query'])).toEqual({
+      expect(
+        UrlProcessor.getPlaceholderFromMatchLegacy([undefined, 'query']),
+      ).toEqual({
         name: 'query',
         placeholder: {},
       });
@@ -120,7 +124,10 @@ describe('UrlProcessor', () => {
 
     test('with attributes', async () => {
       expect(
-        UrlProcessor.getPlaceholderFromMatch([undefined, 'Start: { type: city}']),
+        UrlProcessor.getPlaceholderFromMatch([
+          undefined,
+          'Start: { type: city}',
+        ]),
       ).toEqual({
         name: 'Start',
         placeholder: {
@@ -131,7 +138,10 @@ describe('UrlProcessor', () => {
 
     test('with attributes legacy', async () => {
       expect(
-        UrlProcessor.getPlaceholderFromMatchLegacy([undefined, 'Start|type=city']),
+        UrlProcessor.getPlaceholderFromMatchLegacy([
+          undefined,
+          'Start|type=city',
+        ]),
       ).toEqual({
         name: 'Start',
         placeholder: {
