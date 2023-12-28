@@ -49,35 +49,38 @@ export default class NamespaceFetcher {
    * @return {Object} namespace - The namespace with the added URL template.
    */
   getInitalNamespaceInfo(namespace) {
+    if (typeof namespace === 'string') {
+      return { name: namespace };
+    }
+
+    if (!namespace || typeof namespace !== 'object') {
+      throw new Error('Invalid namespace: input must be an object or a string');
+    }
+
     const namespaceInfo = {};
-    if (typeof namespace == 'string') {
-      namespaceInfo.name = namespace;
-      return namespaceInfo;
-    } else if (namespace.github) {
-      if (namespace.github == '.') {
-        // Set to current user.
-        namespace.github = this.env.github;
-      }
-      if (!namespace.name) {
-        namespace.name = namespace.github;
-      }
-      Object.assign(namespaceInfo, namespace);
-      return namespaceInfo;
-    } else {
-      if (namespace.name) {
-        if (namespace.url) {
-          Object.assign(namespaceInfo, namespace);
-          return namespaceInfo;
-        }
-        if (namespace.shortcuts) {
-          Object.assign(namespaceInfo, namespace);
-          return namespaceInfo;
-        }
-        this.env.logger.warning(
-          `Namespace "${namespace.name}" has no url or shortcuts.`,
-        );
+
+    if (namespace.name) {
+      namespaceInfo.name = namespace.name;
+    }
+
+    if (namespace.github) {
+      const githubName =
+        namespace.github === '.' ? this.env.github : namespace.github;
+      namespaceInfo.github = githubName;
+      if (!namespaceInfo.name) {
+        namespaceInfo.name = githubName;
       }
     }
+
+    if (namespace.url) {
+      namespaceInfo.url = namespace.url;
+    }
+
+    if (namespace.shortcuts) {
+      namespaceInfo.shortcuts = namespace.shortcuts;
+    }
+
+    return namespaceInfo;
   }
 
   /**
