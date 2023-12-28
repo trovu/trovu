@@ -6,7 +6,7 @@ tags:
     - rss
 ---
 
-This blog will keep you updated about news around [Trovu](https://trovu.net). You can follow it via [RSS](/feed/):
+This blog will keep you updated about news around [Trovu](https://trovu.net), the successor of [FindFind.it/Serchilo](https://de.wikipedia.org/wiki/FindFind.it). You can follow it via [RSS](/feed/):
 
 ```md
 https://trovu.net/blog/feed/
