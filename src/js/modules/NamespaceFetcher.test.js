@@ -36,11 +36,11 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
     expect(
       new NamespaceFetcher(env).getInitialNamespaceInfo({
         name: 'johndoe',
-        url: 'https://johndoe.com/trovu-data-user/',
+        url: 'https://johndoe.com/trovu-data-user/shortcuts.yml',
       }),
     ).toEqual({
       name: 'johndoe',
-      url: 'https://johndoe.com/trovu-data-user/',
+      url: 'https://johndoe.com/trovu-data-user/shortcuts.yml',
     });
   });
   test('only url (negative)', () => {
