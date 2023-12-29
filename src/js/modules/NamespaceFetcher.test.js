@@ -43,22 +43,6 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       url: 'https://johndoe.com/trovu-data-user/shortcuts.yml',
     });
   });
-  test('only url (negative)', () => {
-    const env = new Env();
-    expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({
-        url: 'https://johndoe.com/trovu-data-user/',
-      }),
-    ).toEqual(false);
-  });
-  test('only shortcuts (negative)', () => {
-    const env = new Env();
-    expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({
-        shortcuts: {},
-      }),
-    ).toEqual(false);
-  });
   test('name and shortcuts', () => {
     const env = new Env();
     expect(
@@ -78,6 +62,22 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
         },
       },
     });
+  });
+  test('only url (negative)', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        url: 'https://johndoe.com/trovu-data-user/',
+      }),
+    ).toEqual(false);
+  });
+  test('only shortcuts (negative)', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        shortcuts: {},
+      }),
+    ).toEqual(false);
   });
   test('name and shortcuts, short notation', () => {
     const env = new Env();
