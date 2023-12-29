@@ -135,7 +135,8 @@ export default class NamespaceFetcher {
     if (namespaceInfo.url) {
       return namespaceInfo;
     }
-    // Case when user namespace was added as extra namespace.
+    // If still things are missing, assume it is a user namespace via Github,
+    // e.g. when it was added as extra namespace.
     if (!namespaceInfo.github) {
       namespaceInfo.github = namespaceInfo.name;
     }
