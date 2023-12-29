@@ -13,19 +13,19 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       name: 'de',
     });
   });
-  test('github, named user', () => {
-    const env = new Env();
+  test('github, this user', () => {
+    const env = new Env({ github: 'johndoe' });
     expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: 'johndoe' }),
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
     ).toEqual({
       name: 'johndoe',
       github: 'johndoe',
     });
   });
-  test('github, this user', () => {
-    const env = new Env({ github: 'johndoe' });
+  test('github, named user', () => {
+    const env = new Env();
     expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: 'johndoe' }),
     ).toEqual({
       name: 'johndoe',
       github: 'johndoe',
