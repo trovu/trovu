@@ -135,3 +135,15 @@
     query: pl baum
   response:
     redirectUrl: https://www.linguee.de/deutsch-polnisch/search?query=baum
+- title: call a shortcut that is defined within config
+  env:
+    query: local foo
+    namespaces:
+      - o
+      - de
+      - .de
+      - name: my
+        shortcuts:
+          local 1: https://www.google.com/search?hl=en&q=foo%200&ie=utf-8
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foo%200&ie=utf-8
