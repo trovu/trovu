@@ -73,6 +73,13 @@ export default class NamespaceFetcher {
     if (namespace.shortcuts) {
       namespaceInfo.shortcuts = this.processShortcuts(namespace.shortcuts);
     }
+    if (!namespaceInfo.name && (namespaceInfo.url || namespaceInfo.shortcuts)) {
+      const missingElement = namespaceInfo.url ? 'url' : 'shortcuts';
+      this.env.logger.warning(
+        `Invalid namespace: ${missingElement} provided without a name.`,
+      );
+      return false;
+    }
     return namespaceInfo;
   }
 
