@@ -332,6 +332,14 @@ export default class NamespaceFetcher {
     return namespaceInfos;
   }
 
+  /**
+   * Process an include.
+   * @param {object} shortcut - The shortcut to process.
+   * @param {string} namespaceName - The namespace name.
+   * @param {object} namespaceInfos - The namespace infos.
+   * @param {number} depth - The depth of the include.
+   * @returns {object} The processed shortcut.
+   */
   processInclude(shortcut, namespaceName, namespaceInfos, depth = 0) {
     if (depth >= 10) {
       this.env.logger.error(
@@ -375,6 +383,11 @@ export default class NamespaceFetcher {
     return false;
   }
 
+  /**
+   * Gets the includes from a given shortcut
+   * @param {Object} shortcut - The shortcut to get the includes from
+   * @returns {Array} An array of includes
+   */
   getIncludes(shortcut) {
     let includes = [];
     if (Array.isArray(shortcut.include)) {
