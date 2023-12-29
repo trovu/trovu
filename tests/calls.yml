@@ -144,6 +144,6 @@
       - .de
       - name: my
         shortcuts:
-          local 1: https://www.google.com/search?hl=en&q=foo%200&ie=utf-8
+          local 1: https://www.google.com/search?hl=en&q=<query>%200&ie=utf-8
   response:
     redirectUrl: https://www.google.com/search?hl=en&q=foo%200&ie=utf-8
