@@ -74,9 +74,10 @@ export default class NamespaceFetcher {
       namespaceInfo.shortcuts = this.processShortcuts(namespace.shortcuts);
     }
     if (!namespaceInfo.name && (namespaceInfo.url || namespaceInfo.shortcuts)) {
-      const missingElement = namespaceInfo.url ? 'url' : 'shortcuts';
       this.env.logger.warning(
-        `Invalid namespace: ${missingElement} provided without a name.`,
+        `Invalid namespace: ${JSON.stringify(
+          namespace,
+        )} provided without a name.`,
       );
       return false;
     }
