@@ -131,13 +131,15 @@ export default class NamespaceFetcher {
       return namespaceInfo;
     }
     namespaceInfo.type = 'user';
+    // If it has a URL, it is already well prepared for fetching.
+    if (namespaceInfo.url) {
+      return namespaceInfo;
+    }
     // Case when user namespace was added as extra namespace.
     if (!namespaceInfo.github) {
       namespaceInfo.github = namespaceInfo.name;
     }
-    if (!namespaceInfo.url) {
-      namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
-    }
+    namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
     return namespaceInfo;
   }
 
