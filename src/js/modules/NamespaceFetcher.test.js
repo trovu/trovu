@@ -124,6 +124,19 @@ describe('NamespaceFetcher.addNamespaceInfo', () => {
       url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
     });
   });
+  test('name and url', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).addNamespaceInfo({
+        name: 'johndoe',
+        url: 'https://example.com/shortcuts.yml',
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      type: 'user',
+      url: 'https://example.com/shortcuts.yml',
+    });
+  });
 });
 
 describe('NamespaceFetcher.processInclude', () => {
