@@ -8,7 +8,7 @@ main();
 
 async function main() {
   jest.setTimeout(20000);
-  const calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
+  const calls = jsyaml.load(fs.readFileSync('./tests/calls.yml', 'utf8'));
   calls.forEach((call) => {
     test(call.title, async () => {
       await testCall(call);
