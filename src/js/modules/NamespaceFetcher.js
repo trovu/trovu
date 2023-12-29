@@ -124,17 +124,19 @@ export default class NamespaceFetcher {
    * @returns {Object} namespaceInfo with added information
    */
   addNamespaceInfo(namespaceInfo) {
-    // No shortcuts means it was not in data.json
-    // so it must be a user namespace.
-    if (!namespaceInfo.shortcuts) {
-      namespaceInfo.type = 'user';
-      // Case when user namespace was added as extra namespace.
-      if (!namespaceInfo.github) {
-        namespaceInfo.github = namespaceInfo.name;
-      }
-      namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
-    } else {
+    // No shortcuts means it was in data.json
+    // so it must be a site namespace.
+    if (namespaceInfo.shortcuts) {
       namespaceInfo.type = 'site';
+      return namespaceInfo;
+    }
+    namespaceInfo.type = 'user';
+    // Case when user namespace was added as extra namespace.
+    if (!namespaceInfo.github) {
+      namespaceInfo.github = namespaceInfo.name;
+    }
+    if (!namespaceInfo.url) {
+      namespaceInfo.url = `https://raw.githubusercontent.com/${namespaceInfo.github}/trovu-data-user/master/shortcuts.yml?${this.env.commitHash}`;
     }
     return namespaceInfo;
   }
