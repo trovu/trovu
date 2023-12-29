@@ -10,7 +10,7 @@ export default class Suggestions {
     this.helpDiv = document.querySelector('#help');
     this.selected = -1;
     this.suggestions = [];
-    this.setListeners();
+      this.setListeners();
     this.updateSuggestions();
   }
 
