@@ -168,9 +168,7 @@ export default class NamespaceFetcher {
 
   /**
    * Start fetching shortcuts per namespace.
-   *
    * @param {array} newNamespaceInfos - The namespaces to fetch shortcuts for.
-   *
    * @return {array} promises - The promises from the fetch() calls.
    */
   startFetches(newNamespaceInfos) {
@@ -190,10 +188,8 @@ export default class NamespaceFetcher {
 
   /**
    * Processes responses and updates namespace information.
-   *
    * @param {Object} newNamespaceInfos - An object containing new namespace information.
    * @param {Array} responses - An array of responses to process.
-   *
    * @returns {Object} The updated namespace information object.
    */
   async processResponses(newNamespaceInfos, responses) {
@@ -217,13 +213,11 @@ export default class NamespaceFetcher {
           namespaceInfo.url
         }`,
       );
-
       const text = await response.text();
       namespaceInfo.shortcuts = this.parseShortcutsFromYml(
         text,
         namespaceInfo.url,
       );
-
       namespaceInfo.shortcuts = this.processShortcuts(
         namespaceInfo.shortcuts,
         namespaceInfo.name,
@@ -243,10 +237,8 @@ export default class NamespaceFetcher {
 
   /**
    * Parse a YAML string.
-   *
    * @param {string} text - String to parse.
    * @param {string} url - The URL of the YAML, for error reporting.
-   *
    * @return {object} namespaces - The parsed shortcuts.
    */
   parseShortcutsFromYml(text, url) {
@@ -264,10 +256,8 @@ export default class NamespaceFetcher {
 
   /**
    * Ensure shortcuts have the correct structure.
-   *
    * @param {array} shortcuts      - The shortcuts to normalize.
    * @param {string} namespaceName - The namespace name to show in error message.
-   *
    * @return {array} shortcuts - The normalized shortcuts.
    */
   checkKeySyntax(shortcuts, namespaceName) {
@@ -284,9 +274,7 @@ export default class NamespaceFetcher {
   /**
    * Add namespaces that an include refers to,
    * so that they are fetched as well in the next loop.
-   *
    * @param {object} shortcut
-   *
    * @returns {void}
    */
   addNamespacesFromInclude(shortcut) {
