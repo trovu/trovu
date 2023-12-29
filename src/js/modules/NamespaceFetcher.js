@@ -28,19 +28,22 @@ export default class NamespaceFetcher {
   }
 
   /**
-   * Gets initial namespace information for given namespaces
+   * Gets initial namespace information.
    * @param {Array} namespaces - An array of namespace names
-   * @param {number} priorityOffset - The offset to be used when setting the priority.
-   * @returns {Object} An object containing initial namespace information for each given namespace
+   * @param {number} priorityOffset - The priority offset to use for the namespaces
+   * @returns {Object} An object containing initial namespace information
    */
   getInitialNamespaceInfos(namespaces, priorityOffset) {
-    return Object.fromEntries(
-      namespaces.map((namespace, index) => {
-        const namespaceInfo = this.getInitialNamespaceInfo(namespace);
-        namespaceInfo.priority = index + priorityOffset;
-        return [namespaceInfo.name, namespaceInfo];
-      }),
-    );
+    const namespaceInfos = {};
+    namespaces.forEach((namespace, index) => {
+      const namespaceInfo = this.getInitialNamespaceInfo(namespace);
+      if (!namespaceInfo) {
+        return;
+      }
+      namespaceInfo.priority = index + priorityOffset;
+      namespaceInfos[namespaceInfo.name] = namespaceInfo;
+    });
+    return namespaceInfos;
   }
 
   /**
