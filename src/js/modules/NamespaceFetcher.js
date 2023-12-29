@@ -286,6 +286,9 @@ export default class NamespaceFetcher {
     for (const include of includes) {
       if (include && include.namespace) {
         const namespaceInfo = this.getInitialNamespaceInfo(include.namespace);
+        if (!namespaceInfo) {
+          continue;
+        }
         if (!this.namespaceInfos[namespaceInfo.name]) {
           this.namespaceInfos[namespaceInfo.name] =
             this.addNamespaceInfo(namespaceInfo);
