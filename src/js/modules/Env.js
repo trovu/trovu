@@ -52,6 +52,8 @@ export default class Env {
     // Put environment into hash.
     if (this.github) {
       params.github = this.github;
+    } else if (this.configUrl) {
+      params.configUrl = this.configUrl;
     } else {
       params.language = this.language;
       params.country = this.country;
