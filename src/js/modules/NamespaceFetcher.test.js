@@ -43,6 +43,12 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       name: 'myjohndoe',
     });
   });
+  test('configUrl, this user (negative)', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
+    ).toEqual(false);
+  });
   test('name and url', () => {
     const env = new Env();
     expect(
