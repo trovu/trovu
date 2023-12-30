@@ -42,7 +42,7 @@ namespaces:
     - github: .
 ```
 
-This is the most common setting. It refers to the current (=your) `trovu-data-user` repo. It will look for a `shortcuts.yml`, next to this very `config.yml`
+This is the most common setting. It refers to the current (=your) `trovu-data-user` repo. It will look for a `shortcuts.yml`, next to this very `config.yml`.
 
 ```yaml
 namespaces:
@@ -57,7 +57,7 @@ namespaces:
     - github: johndoe
 ```
 
-Will look for a repo `https://github.com/johndoe/trovu-data-user/` and use its shortcuts. Setting another `name:` is possible, too.
+Will look for a repo `https://github.com/johndoe/trovu-data-user/` and use its shortcuts. Setting another `name:` is possible.
 
 ```yaml
 - name: mydomain
@@ -75,7 +75,7 @@ Will take shortcuts from this URL. Make sure [CORS](https://en.wikipedia.org/wik
 
 Define a namespace with shortcuts just right here.
 
-(Beware: Unlike having them in a separate `shortcuts.yml`, this approach makes it impossible for others to use them, too.)
+(Beware: Unlike having them in a separate `shortcuts.yml`, this approach makes it impossible for others to use them.)
 
 ### Default keyword
 
