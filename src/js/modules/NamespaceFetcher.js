@@ -63,11 +63,22 @@ export default class NamespaceFetcher {
       namespaceInfo.name = namespace.name;
     }
     if (namespace.github) {
-      const githubName =
-        namespace.github === '.' ? this.env.github : namespace.github;
-      namespaceInfo.github = githubName;
+      if (namespace.github !== '.') {
+        namespaceInfo.github = namespace.github;
+      } else {
+        if (this.env.github) {
+          namespaceInfo.github = this.env.github;
+        } else {
+          this.env.logger.warning(
+            `Invalid namespace: ${JSON.stringify(
+              namespace,
+            )} provided without a github repository name.`,
+          );
+          return false;
+        }
+      }
       if (!namespaceInfo.name) {
-        namespaceInfo.name = githubName;
+        namespaceInfo.name = namespaceInfo.github;
       }
     }
     if (namespace.url) {
