@@ -11,10 +11,10 @@ You can create and manage your own user shortcuts and set advanced settings via 
 1. In there, adjust `config.yml` to your needs, and add your own shortcuts to `shortcuts.yml`. (Both are [YAML files](https://en.wikipedia.org/wiki/YAML).)
 1. Call Trovu with `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`
 
-### Via a self-hosted file.
+### Via a self-hosted file
 
 1. Put a file online matching the structure of [config.yml](https://github.com/trovu/trovu-data-user/blob/master/config.yml).
-1. Call Trovu with `https://trovu.net/?#configUrl=URL_TO_YOUR_CONFIG_YML.
+1. Call Trovu with `https://trovu.net/?#configUrl=URL_TO_YOUR_CONFIG_YML`.
 
 Note that creating your own shortcuts won't work with `github: .`
 
