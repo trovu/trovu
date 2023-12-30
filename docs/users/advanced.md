@@ -22,18 +22,60 @@ namespaces:
       name: john
     - github: .
       name: my
+    - url: https://example.com/shortcuts.yml
+      name: mydomain
 ```
 
 This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use. Every entry may be either
 
 -   a string: Then it refers to an (official) site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts in there are curated by the Trovu community.
--   key/value pairs, then they refer to a custom namespace, e.g. your (or someone else's) user namespace in GitHub. Every entry must contain:
-    -   `github:` A GitHub username, or a dot
-    -   (optional) `name:` Some custom name (default: value from `github:`)
-
-The dot will refer to the **current GitHub user** (where this `config.yml` is located).
+-   key/value pairs, then they refer to a user namespace, e.g. your (or someone else's) user namespace in GitHub. Read more below.
 
 The **order** is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `my` have the highest precedence.
+
+#### User namespaces
+
+User namespaces can look like this:
+
+```yaml
+namespaces:
+    - github: .
+```
+
+This is the most common setting. It refers to the current (=your) `trovu-data-user` repo. It will look for a `shortcuts.yml`, next to this very `config.yml`
+
+```yaml
+namespaces:
+    - github: .
+      name: my
+```
+
+You can also give it a custom name. Defaults to the current repo's name.
+
+```yaml
+namespaces:
+    - github: johndoe
+```
+
+Will look for a repo `https://github.com/johndoe/trovu-data-user/` and use its shortcuts. Setting another `name:` is possible, too.
+
+```yaml
+- name: mydomain
+  url: https://example.com/shortcuts.yml
+```
+
+Will take shortcuts from this URL. Make sure [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) is enabled.
+
+```yaml
+- name: righthere
+  shortcuts:
+      examplekeyword 0:
+          url: https://example.com/
+```
+
+Define a namespace with shortcuts just right here.
+
+(Beware: Unlike having them in a separate `shortcuts.yml`, this approach makes it impossible for others to use them, too.)
 
 ### Default keyword
 
