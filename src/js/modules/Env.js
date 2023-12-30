@@ -23,7 +23,6 @@ export default class Env {
       this.commitHash = 'unknown';
     }
 
-    this.githubConfigUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     this.logger = new Logger('#log');
   }
 
@@ -120,7 +119,8 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     if (typeof params.github === 'string' && params.github !== '') {
-      this.configUrl = this.githubConfigUrlTemplate.replace(
+      const githubConfigUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
+      this.configUrl = githubConfigUrlTemplate.replace(
         '{%github}',
         params.github,
       );
