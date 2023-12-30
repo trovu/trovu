@@ -51,32 +51,31 @@ export default class Env {
 
     // Put environment into hash.
     if (this.github) {
-      params['github'] = this.github;
+      params.github = this.github;
     } else {
-      params['language'] = this.language;
-      params['country'] = this.country;
+      params.language = this.language;
+      params.country = this.country;
     }
     if (this.debug) {
-      params['debug'] = 1;
+      params.debug = 1;
     }
     // Don't add defaultKeyword into params
     // when Github user is set.
     if (this.defaultKeyword && !this.github) {
-      params['defaultKeyword'] = this.defaultKeyword;
+      params.defaultKeyword = this.defaultKeyword;
     }
     if (this.status) {
-      params['status'] = this.status;
+      params.status = this.status;
     }
     if (this.query) {
-      params['query'] = this.query;
+      params.query = this.query;
     }
     if (this.alternative) {
-      params['alternative'] = this.alternative;
+      params.alternative = this.alternative;
     }
     if (this.key) {
-      params['key'] = this.key;
+      params.key = this.key;
     }
-
     return params;
   }
 
