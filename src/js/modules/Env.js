@@ -120,7 +120,16 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     if (typeof params.github === 'string' && params.github !== '') {
-      const config = await this.getUserConfigFromGithub(params);
+      this.configUrl = this.githubConfigUrlTemplate.replace(
+        '{%github}',
+        params.github,
+      );
+    }
+    if (typeof params.configUrl === 'string' && params.configUrl !== '') {
+      this.configUrl = params.configUrl;
+    }
+    if (this.configUrl) {
+      const config = await this.getUserConfigFromUrl(this.configUrl);
       if (config) {
         Object.assign(this, config);
       }
@@ -184,21 +193,6 @@ export default class Env {
     return Object.keys(obj).length === 0;
   }
 
-  /**
-   * Get the user configuration from their fork in their Github profile.
-   *
-   * @param {array} params - Here, 'github' and 'debug' will be used
-   *
-   * @return {(object|boolean)} config - The user's config object, or false if fetch failed.
-   */
-  async getUserConfigFromGithub(params) {
-    const configUrl = this.githubConfigUrlTemplate.replace(
-      '{%github}',
-      params.github,
-    );
-    const config = await this.getUserConfigFromUrl(configUrl);
-    return config;
-  }
   /**
    * Get the user configuration from a URL.
    * @param {string} configUrl - The URL to the config file.
