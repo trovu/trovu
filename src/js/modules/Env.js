@@ -199,7 +199,7 @@ export default class Env {
     );
     const configYml = await Helper.fetchAsync(configUrl, this);
     if (!configYml) {
-      this.logger.error(`Error reading Github config from ${configUrl}`);
+      this.logger.error(`Error reading config from ${configUrl}`);
     }
     try {
       const config = jsyaml.load(configYml);
