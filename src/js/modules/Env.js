@@ -197,6 +197,16 @@ export default class Env {
       '{%github}',
       params.github,
     );
+    const config = await this.getUserConfigFromUrl(configUrl);
+    return config;
+  }
+  /**
+   * Get the user configuration from a URL.
+   * @param {string} configUrl - The URL to the config file.
+   * @returns {(object|boolean)} config - The user's config object, or false if fetch failed.
+   */
+
+  async getUserConfigFromUrl(configUrl) {
     const configYml = await Helper.fetchAsync(configUrl, this);
     if (!configYml) {
       this.logger.error(`Error reading config from ${configUrl}`);
