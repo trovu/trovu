@@ -1,11 +1,24 @@
 # Advanced settings & personal shortcuts
 
-You can create and manage your own user shortcuts and set advanced settings:
+You can create and manage your own user shortcuts and set advanced settings via GitHub, or a self-hosted config file.
+
+## Set up a custom configuration
+
+### Via GitHub (recommended)
 
 1. If you don't have one, [create a GitHub.com account](https://github.com/signup). It is free.
 1. Fork [trovu-data-user](https://github.com/trovu/trovu-data-user) into your own GitHub account.
 1. In there, adjust `config.yml` to your needs, and add your own shortcuts to `shortcuts.yml`. (Both are [YAML files](https://en.wikipedia.org/wiki/YAML).)
 1. Call Trovu with `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`
+
+### Via a self-hosted file.
+
+1. Put a file online matching the structure of [config.yml](https://github.com/trovu/trovu-data-user/blob/master/config.yml).
+1. Call Trovu with `https://trovu.net/?#configUrl=URL_TO_YOUR_CONFIG_YML.
+
+Note that creating your own shortcuts won't work with `github: .`
+
+Instead, you will need to define them within the config file, see [Namespaces](#namespaces).
 
 ## Custom configuration
 
