@@ -64,17 +64,10 @@ export default class Env {
     if (this.defaultKeyword && !this.github) {
       params.defaultKeyword = this.defaultKeyword;
     }
-    if (this.status) {
-      params.status = this.status;
-    }
-    if (this.query) {
-      params.query = this.query;
-    }
-    if (this.alternative) {
-      params.alternative = this.alternative;
-    }
-    if (this.key) {
-      params.key = this.key;
+    for (const property of ['status', 'query', 'alternative', 'key']) {
+      if (this[property]) {
+        params[property] = this[property];
+      }
     }
     return params;
   }
