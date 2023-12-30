@@ -26,15 +26,12 @@ namespaces:
       name: mydomain
 ```
 
-This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use.
-Every entry may be either
+This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use. Every entry may be either
 
 -   a string: Then it refers to an (official) site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts in there are curated by the Trovu community.
 -   key/value pairs, then they refer to a user namespace, e.g. your (or someone else's) user namespace in GitHub. Read more below.
 
-The **order** is also relevant:
-The later the namespace appears in the list, the higher priority it has.
-So in the example above, shortcuts in `my` have the highest precedence.
+The **order** is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `my` have the highest precedence.
 
 #### User namespaces
 
@@ -53,24 +50,21 @@ namespaces:
       name: my
 ```
 
-You can also give it a custom name.
-Defaults to the current repo's name.
+You can also give it a custom name. Defaults to the current repo's name.
 
 ```yaml
 namespaces:
     - github: johndoe
 ```
 
-Will look for a repo `https://github.com/johndoe/trovu-data-user/` and use its shortcuts.
-Setting another `name:` is possible.
+Will look for a repo `https://github.com/johndoe/trovu-data-user/` and use its shortcuts. Setting another `name:` is possible.
 
 ```yaml
 - name: mydomain
   url: https://example.com/shortcuts.yml
 ```
 
-Will take shortcuts from this URL.
-Make sure [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) is enabled.
+Will take shortcuts from this URL. Make sure [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) is enabled.
 
 ```yaml
 - name: righthere
@@ -89,8 +83,7 @@ Define a namespace with shortcuts just right here.
 defaultKeyword: g
 ```
 
-If no keyword is recognized in a query, this one will be used.
-Useful for setting up a much used shortcut.
+If no keyword is recognized in a query, this one will be used. Useful for setting up a much used shortcut.
 
 ### Language
 
@@ -98,9 +91,7 @@ Useful for setting up a much used shortcut.
 language: en
 ```
 
-For Wikipedia in your language (or other shortcuts using `<$language>`).
-Basically, it fills the `<$language>` variable in the shortcut URLs.
-Now, using the `w` shortcut will get you to the Wikipedia in your language, as its shortcut URL is set as `https://<$language>.wikipedia.org/`.
+For Wikipedia in your language (or other shortcuts using `<$language>`). Basically, it fills the `<$language>` variable in the shortcut URLs. Now, using the `w` shortcut will get you to the Wikipedia in your language, as its shortcut URL is set as `https://<$language>.wikipedia.org/`.
 
 ### Country
 
@@ -108,8 +99,7 @@ Now, using the `w` shortcut will get you to the Wikipedia in your language, as i
 country: de
 ```
 
-For shortcuts that use `<$country>` in their URL.
-Works similarly as `<$language>`.
+For shortcuts that use `<$country>` in their URL. Works similarly as `<$language>`.
 
 ## Personal shortcuts
 
