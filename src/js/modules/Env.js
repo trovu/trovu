@@ -57,14 +57,12 @@ export default class Env {
     } else {
       params.language = this.language;
       params.country = this.country;
+      if (this.defaultKeyword) {
+        params.defaultKeyword = this.defaultKeyword;
+      }
     }
     if (this.debug) {
       params.debug = 1;
-    }
-    // Don't add defaultKeyword into params
-    // when Github user is set.
-    if (this.defaultKeyword && !this.github) {
-      params.defaultKeyword = this.defaultKeyword;
     }
     for (const property of ['status', 'query', 'alternative', 'key']) {
       if (this[property]) {
