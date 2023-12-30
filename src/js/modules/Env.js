@@ -125,7 +125,6 @@ export default class Env {
         Object.assign(this, config);
       }
     }
-
     // Assign again, to override user config.
     Object.assign(this, params);
     Object.assign(this, params_from_query);
