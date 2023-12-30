@@ -120,7 +120,10 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     if (typeof params.github === 'string' && params.github !== '') {
-      await this.setWithUserConfigFromGithub(params);
+      const config = await this.getUserConfigFromGithub(params);
+      if (config) {
+        Object.assign(this, config);
+      }
     }
 
     // Assign again, to override user config.
@@ -180,18 +183,6 @@ export default class Env {
    */
   isEmptyObject(obj) {
     return Object.keys(obj).length === 0;
-  }
-
-  /**
-   * Set the user configuration from their fork in their Github profile.
-   *
-   * @param {array} params - Here, 'github' and 'debug' will be used
-   */
-  async setWithUserConfigFromGithub(params) {
-    const config = await this.getUserConfigFromGithub(params);
-    if (config) {
-      Object.assign(this, config);
-    }
   }
 
   /**
