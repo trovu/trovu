@@ -23,7 +23,7 @@ export default class Env {
       this.commitHash = 'unknown';
     }
 
-    this.configUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
+    this.githubConfigUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     this.logger = new Logger('#log');
   }
 
@@ -202,7 +202,7 @@ export default class Env {
    * @return {(object|boolean)} config - The user's config object, or false if fetch failed.
    */
   async getUserConfigFromGithub(params) {
-    const configUrl = this.configUrlTemplate.replace(
+    const configUrl = this.githubConfigUrlTemplate.replace(
       '{%github}',
       params.github,
     );
