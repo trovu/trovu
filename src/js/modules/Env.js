@@ -119,11 +119,7 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     if (typeof params.github === 'string' && params.github !== '') {
-      const githubConfigUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
-      this.configUrl = githubConfigUrlTemplate.replace(
-        '{%github}',
-        params.github,
-      );
+      this.configUrl = this.getGithubConfigUrl(params.github);
     }
     if (typeof params.configUrl === 'string' && params.configUrl !== '') {
       this.configUrl = params.configUrl;
@@ -159,6 +155,17 @@ export default class Env {
       this.keyword = '';
       this.arguments = [this.query];
     }
+  }
+
+  /**
+   * Get the URL to the config file on Github.
+   * @param {string} github - The Github user name.
+   * @returns {string} The URL to the config file.
+   */
+  getGithubConfigUrl(github) {
+    const githubConfigUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
+    const configUrl = githubConfigUrlTemplate.replace('{%github}', github);
+    return configUrl;
   }
 
   /**
