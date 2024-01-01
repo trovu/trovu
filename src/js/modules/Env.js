@@ -23,7 +23,6 @@ export default class Env {
       this.commitHash = 'unknown';
     }
 
-    this.configUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     this.logger = new Logger('#log');
   }
 
@@ -52,32 +51,24 @@ export default class Env {
 
     // Put environment into hash.
     if (this.github) {
-      params['github'] = this.github;
+      params.github = this.github;
+    } else if (this.configUrl) {
+      params.configUrl = this.configUrl;
     } else {
-      params['language'] = this.language;
-      params['country'] = this.country;
+      params.language = this.language;
+      params.country = this.country;
+      if (this.defaultKeyword) {
+        params.defaultKeyword = this.defaultKeyword;
+      }
     }
     if (this.debug) {
-      params['debug'] = 1;
+      params.debug = 1;
     }
-    // Don't add defaultKeyword into params
-    // when Github user is set.
-    if (this.defaultKeyword && !this.github) {
-      params['defaultKeyword'] = this.defaultKeyword;
+    for (const property of ['status', 'query', 'alternative', 'key']) {
+      if (this[property]) {
+        params[property] = this[property];
+      }
     }
-    if (this.status) {
-      params['status'] = this.status;
-    }
-    if (this.query) {
-      params['query'] = this.query;
-    }
-    if (this.alternative) {
-      params['alternative'] = this.alternative;
-    }
-    if (this.key) {
-      params['key'] = this.key;
-    }
-
     return params;
   }
 
@@ -120,9 +111,17 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     if (typeof params.github === 'string' && params.github !== '') {
-      await this.setWithUserConfigFromGithub(params);
+      this.configUrl = this.getGithubConfigUrl(params.github);
     }
-
+    if (typeof params.configUrl === 'string' && params.configUrl !== '') {
+      this.configUrl = params.configUrl;
+    }
+    if (this.configUrl) {
+      const config = await this.getUserConfigFromUrl(this.configUrl);
+      if (config) {
+        Object.assign(this, config);
+      }
+    }
     // Assign again, to override user config.
     Object.assign(this, params);
     Object.assign(this, params_from_query);
@@ -148,6 +147,16 @@ export default class Env {
       this.keyword = '';
       this.arguments = [this.query];
     }
+  }
+
+  /**
+   * Get the URL to the config file on Github.
+   * @param {string} github - The Github user name.
+   * @returns {string} The URL to the config file.
+   */
+  getGithubConfigUrl(github) {
+    const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml?${this.commitHash}`;
+    return configUrl;
   }
 
   /**
@@ -183,32 +192,15 @@ export default class Env {
   }
 
   /**
-   * Set the user configuration from their fork in their Github profile.
-   *
-   * @param {array} params - Here, 'github' and 'debug' will be used
+   * Get the user configuration from a URL.
+   * @param {string} configUrl - The URL to the config file.
+   * @returns {(object|boolean)} config - The user's config object, or false if fetch failed.
    */
-  async setWithUserConfigFromGithub(params) {
-    const config = await this.getUserConfigFromGithub(params);
-    if (config) {
-      Object.assign(this, config);
-    }
-  }
 
-  /**
-   * Get the user configuration from their fork in their Github profile.
-   *
-   * @param {array} params - Here, 'github' and 'debug' will be used
-   *
-   * @return {(object|boolean)} config - The user's config object, or false if fetch failed.
-   */
-  async getUserConfigFromGithub(params) {
-    const configUrl = this.configUrlTemplate.replace(
-      '{%github}',
-      params.github,
-    );
+  async getUserConfigFromUrl(configUrl) {
     const configYml = await Helper.fetchAsync(configUrl, this);
     if (!configYml) {
-      this.logger.error(`Error reading Github config from ${configUrl}`);
+      this.logger.error(`Error reading config from ${configUrl}`);
     }
     try {
       const config = jsyaml.load(configYml);
