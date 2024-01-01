@@ -19,6 +19,14 @@ anagramm 1:
   examples:
   - arguments: rentner
     description: Anagramm-Suchen nach "rentner"
+ardmt 1:
+  url: https://www.ardmediathek.de/suche/<Suchbegriff>
+  title: ARD Mediathek
+  tags:
+  - ard
+  examples:
+  - arguments: Tatort
+    description: Suche nach "Tatort"
 ardtext 1:
   url: http://www.ard-text.de/index.php?page=<Seitennummer>
   title: ARD-Text
