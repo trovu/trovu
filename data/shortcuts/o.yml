@@ -1226,15 +1226,6 @@ cran 1:
   examples:
   - arguments: bibtex
     description: Show bibtex package
-crts 1:
-  url: https://crates.io/search?q=<query>
-  title: Crates.io
-  tags:
-  - programming
-  - rust
-  examples:
-  - arguments: gtk
-    description: Search for "gtk"
 crc32 1:
   url: http://stefanschramm.net/dev/hash/?algo=crc32&q=<data>
   title: Hash functions
@@ -1268,6 +1259,15 @@ crit 1:
   examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
+crts 1:
+  url: https://crates.io/search?q=<query>
+  title: Crates.io
+  tags:
+  - programming
+  - rust
+  examples:
+  - arguments: gtk
+    description: Search for "gtk"
 crug 1:
   url: https://rug.on.worldcat.org/search?databaseList=&queryString=<query>
   title: SmartCat
