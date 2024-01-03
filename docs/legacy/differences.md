@@ -6,7 +6,7 @@ If you know FindFind.it, then you almost know how Trovu works. However, a few th
 
 -   **Main difference:** search queries are not sent out to the server, all processing is done in the client.
     -   This means much more privacy.
--   The placeholder syntax [changed](../shortcuts/url.md), from `{query|type=date}` to `<query: {type: date}>`.
+-   The placeholder syntax [changed](../shortcuts/url.md), from `{%query}` to `<query>`.
 -   Country namespaces are not 3-letter but 2-letter-codes, prefixed with a dot. So they are much easier to remember, as they (mostly) follow top-level domains. For example:
     -   `.de` is the namespace for Germany (not `deu`),
     -   `.pl`is the namespace for Poland (not `pol`)
