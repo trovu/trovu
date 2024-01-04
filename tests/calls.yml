@@ -33,7 +33,7 @@
     country: fr
     query: gd 75,92
   response:
-    redirectUrl: http://maps.google.com/maps?hl=en&saddr=Paris&daddr=Nanterre
+    redirectUrl: https://maps.google.com/maps?hl=en&saddr=Paris&daddr=Nanterre
 - title: fr.w berlin
   env:
     language: de
