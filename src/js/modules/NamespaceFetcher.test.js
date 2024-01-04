@@ -235,7 +235,7 @@ describe('NamespaceFetcher.processInclude', () => {
     });
   });
 
-  test('with loop', () => {
+  test('with loop (negative)', () => {
     const namespaceInfosLoop = jsyaml.load(`
       leo:
         shortcuts:
