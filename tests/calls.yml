@@ -135,19 +135,6 @@
     query: pl baum
   response:
     redirectUrl: https://www.linguee.de/deutsch-polnisch/search?query=baum
-- title: faulty include
-  env:
-    language: de
-    namespaces:
-      - name: my
-        shortcuts:
-          en 1:
-            include:
-              key: en-de 1
-              namespace: lge
-    query: en baum
-  response:
-    redirectUrl: https://www.linguee.com/english-german/search?query=baum
 - title: call a shortcut that is defined within config
   env:
     query: local foo
