@@ -183,7 +183,7 @@ export default class UrlProcessor {
         );
         break;
       case 'city':
-        processedArgument = await this.processTypeCity(processedArgument, env);
+        processedArgument = this.processTypeCity(processedArgument, env);
         break;
     }
     return processedArgument;
