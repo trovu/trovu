@@ -24,7 +24,10 @@ const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
     const htmlTemplate = readFileSync(templateFilePath).toString();
-    const html = htmlTemplate.replace(/{{fileNameJs}}/g, fileNameJs);
+    const currentTimestamp = new Date().toISOString();
+    const html = htmlTemplate
+      .replace(/{{fileNameJs}}/g, `${fileNameJs}`)
+      .replace(/{{currentTimestamp}}/g, `${currentTimestamp}`);
     return html;
   };
   return templateFunc;
