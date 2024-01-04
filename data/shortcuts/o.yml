@@ -3431,7 +3431,7 @@ gd 1:
   - key: gd 1
     namespace: pka
 gd 2:
-  url: 'http://maps.google.com/maps?hl=<$language>&saddr=<start: {type: city}>&daddr=<destination: {type: city}>'
+  url: 'https://maps.google.com/maps?hl=<$language>&saddr=<start: {type: city}>&daddr=<destination: {type: city}>'
   title: Google Maps Directions (Routing)
   tags:
   - google
