@@ -129,7 +129,7 @@ export default class UrlProcessor {
    *
    * @return {string} str   - The string with the replaced placeholders.
    */
-  static async replaceArguments(str, args, env) {
+  static replaceArguments(str, args, env) {
     const placeholders = this.getArgumentsFromString(str);
 
     for (const argumentName in placeholders) {
@@ -139,7 +139,7 @@ export default class UrlProcessor {
       // so go over all of them.
       const matches = placeholders[argumentName];
       for (const match in matches) {
-        argument = await this.processAttributes(argument, matches[match], env);
+        argument = this.processAttributes(argument, matches[match], env);
         while (str.includes(match)) {
           str = str.replace(match, argument);
         }
@@ -148,8 +148,8 @@ export default class UrlProcessor {
     return str;
   }
 
-  static async processAttributes(processedArgument, attributes, env) {
-    processedArgument = await this.processAttributeType(
+  static processAttributes(processedArgument, attributes, env) {
+    processedArgument = this.processAttributeType(
       attributes,
       processedArgument,
       env,
@@ -165,7 +165,7 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static async processAttributeType(attributes, processedArgument, env) {
+  static processAttributeType(attributes, processedArgument, env) {
     const locale = env.language + '-' + env.country.toUpperCase();
     switch (attributes.type) {
       case 'date':
@@ -189,8 +189,8 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static async processTypeDate(processedArgument, locale, attributes) {
-    const dateNative = await DateType.parse(processedArgument, locale);
+  static processTypeDate(processedArgument, locale, attributes) {
+    const dateNative = DateType.parse(processedArgument, locale);
     const date = dayjs(dateNative);
     // If date could be parsed:
     // Set argument.
@@ -204,8 +204,8 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static async processTypeTime(processedArgument, locale, attributes) {
-    const timeNative = await TimeType.parse(processedArgument);
+  static processTypeTime(processedArgument, locale, attributes) {
+    const timeNative = TimeType.parse(processedArgument);
     const time = dayjs(timeNative);
     // If time could be parsed:
     // Set argument.
@@ -219,8 +219,8 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static async processTypeCity(processedArgument, env) {
-    const city = await CityType.parse(processedArgument, env);
+  static processTypeCity(processedArgument, env) {
+    const city = CityType.parse(processedArgument, env);
     // If city could be parsed:
     // Set argument.
     if (city) {
