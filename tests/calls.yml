@@ -28,12 +28,6 @@
     query: .de.db b,hh,8,1.1.2020
   response:
     redirectUrl: https://reiseauskunft.bahn.de/bin/query.exe/d?S=Berlin%21&Z=Hamburg%21&time=08%3A00&date=01.01.2020&timesel=depart&start=1
-- title: gd 2 with city mapping
-  env:
-    country: fr
-    query: gd 75,92
-  response:
-    redirectUrl: https://maps.google.com/maps?hl=en&saddr=Paris&daddr=Nanterre
 - title: fr.w berlin
   env:
     language: de
@@ -95,6 +89,12 @@
     query: gd b,m
   response:
     redirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
+- title: gd 2 with city mapping from france
+  env:
+    country: fr
+    query: gd 75,92
+  response:
+    redirectUrl: https://maps.google.com/maps?hl=en&saddr=Paris&daddr=Nanterre
 - title: gd 2 with city mapping from wrong country
   env:
     language: de
