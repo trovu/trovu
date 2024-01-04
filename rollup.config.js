@@ -15,7 +15,7 @@ const isProduction = process.env.BUILD === 'production';
 const output = {
   dir: 'dist/public/',
   name: 'process',
-  entryFileNames: '[name].[hash].js',
+  entryFileNames: '[name].js',
   sourcemap: true,
   format: 'es',
 };
