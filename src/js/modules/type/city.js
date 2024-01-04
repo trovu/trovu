@@ -1,5 +1,5 @@
 export default class CityType {
-  static async parse(str, env) {
+  static parse(str, env) {
     let country = env.country;
     let matches;
     let abbreviation = str;

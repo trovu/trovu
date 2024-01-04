@@ -88,14 +88,20 @@
     country: de
     query: gd b,m
   response:
-    redirectUrl: http://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
+    redirectUrl: https://maps.google.com/maps?hl=de&saddr=Berlin&daddr=M%C3%BCnchen
+- title: gd 2 with city mapping from france
+  env:
+    country: fr
+    query: gd 75,92
+  response:
+    redirectUrl: https://maps.google.com/maps?hl=en&saddr=Paris&daddr=Nanterre
 - title: gd 2 with city mapping from wrong country
   env:
     language: de
     country: us
     query: gd b,m
   response:
-    redirectUrl: http://maps.google.com/maps?hl=de&saddr=b&daddr=m
+    redirectUrl: https://maps.google.com/maps?hl=de&saddr=b&daddr=m
 - title: reload with query
   env:
     query: reload:g barbaz
