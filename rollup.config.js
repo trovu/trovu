@@ -1,14 +1,14 @@
-import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
-import scss from 'rollup-plugin-scss';
-import { terser } from 'rollup-plugin-terser';
 import html from '@rollup/plugin-html';
+import json from '@rollup/plugin-json';
+import resolve from '@rollup/plugin-node-resolve';
 import { readFileSync } from 'fs';
 import copy from 'rollup-plugin-copy';
-import watch from 'rollup-plugin-watch';
-import gitInfo from 'rollup-plugin-git-info';
 import execute from 'rollup-plugin-execute';
+import gitInfo from 'rollup-plugin-git-info';
+import scss from 'rollup-plugin-scss';
+import { terser } from 'rollup-plugin-terser';
+import watch from 'rollup-plugin-watch';
 
 const isProduction = process.env.BUILD === 'production';
 
