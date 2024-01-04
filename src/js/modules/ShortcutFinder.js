@@ -11,7 +11,7 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static async matchShortcuts(keyword, args, namespaceInfos) {
+  static matchShortcuts(keyword, args, namespaceInfos) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
@@ -30,8 +30,8 @@ export default class ShortcutFinder {
    *
    * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
    */
-  static async findShortcut(env) {
-    let shortcut = await this.matchShortcuts(
+  static findShortcut(env) {
+    let shortcut = this.matchShortcuts(
       env.keyword,
       env.args,
       env.namespaceInfos,
@@ -46,7 +46,7 @@ export default class ShortcutFinder {
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with the whole argument string as the only argument.`,
       );
       env.args = [env.argumentString];
-      shortcut = await this.matchShortcuts(
+      shortcut = this.matchShortcuts(
         env.keyword,
         env.args,
         env.namespaceInfos,
@@ -62,7 +62,7 @@ export default class ShortcutFinder {
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`,
       );
       env.args = [env.query];
-      shortcut = await this.matchShortcuts(
+      shortcut = this.matchShortcuts(
         env.defaultKeyword,
         env.args,
         env.namespaceInfos,

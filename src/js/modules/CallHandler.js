@@ -22,7 +22,7 @@ export default class CallHandler {
 
     let redirectUrl;
 
-    const response = await this.getRedirectResponse(env);
+    const response = this.getRedirectResponse(env);
 
     if (response.status === 'found') {
       redirectUrl = response.redirectUrl;
@@ -46,7 +46,7 @@ export default class CallHandler {
    *
    * @return {object} response  - Contains redirect URL, status.
    */
-  static async getRedirectResponse(env) {
+  static getRedirectResponse(env) {
     const response = {};
 
     if (env.reload && !env.query) {
@@ -60,7 +60,7 @@ export default class CallHandler {
       return response;
     }
 
-    const shortcut = await ShortcutFinder.findShortcut(env);
+    const shortcut = ShortcutFinder.findShortcut(env);
 
     if (!shortcut) {
       response.status = 'not_found';
@@ -88,7 +88,7 @@ export default class CallHandler {
       language: env.language,
       country: env.country,
     });
-    response.redirectUrl = await UrlProcessor.replaceArguments(
+    response.redirectUrl = UrlProcessor.replaceArguments(
       response.redirectUrl,
       env.args,
       env,
