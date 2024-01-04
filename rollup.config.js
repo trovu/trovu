@@ -1,21 +1,21 @@
-import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
-import scss from 'rollup-plugin-scss';
-import { terser } from 'rollup-plugin-terser';
 import html from '@rollup/plugin-html';
+import json from '@rollup/plugin-json';
+import resolve from '@rollup/plugin-node-resolve';
 import { readFileSync } from 'fs';
 import copy from 'rollup-plugin-copy';
-import watch from 'rollup-plugin-watch';
-import gitInfo from 'rollup-plugin-git-info';
 import execute from 'rollup-plugin-execute';
+import gitInfo from 'rollup-plugin-git-info';
+import scss from 'rollup-plugin-scss';
+import { terser } from 'rollup-plugin-terser';
+import watch from 'rollup-plugin-watch';
 
 const isProduction = process.env.BUILD === 'production';
 
 const output = {
   dir: 'dist/public/',
   name: 'process',
-  entryFileNames: '[name].[hash].js',
+  entryFileNames: '[name].js',
   sourcemap: true,
   format: 'es',
 };
@@ -24,7 +24,10 @@ const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
     const htmlTemplate = readFileSync(templateFilePath).toString();
-    const html = htmlTemplate.replace(/{{fileNameJs}}/g, fileNameJs);
+    const currentTimestamp = new Date().toISOString();
+    const html = htmlTemplate
+      .replace(/{{fileNameJs}}/g, `${fileNameJs}`)
+      .replace(/{{currentTimestamp}}/g, `${currentTimestamp}`);
     return html;
   };
   return templateFunc;
