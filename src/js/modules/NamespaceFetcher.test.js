@@ -235,7 +235,7 @@ describe('NamespaceFetcher.processInclude', () => {
     });
   });
 
-  test('with loop', () => {
+  test('with loop (negative)', () => {
     const namespaceInfosLoop = jsyaml.load(`
       leo:
         shortcuts:
@@ -258,6 +258,25 @@ describe('NamespaceFetcher.processInclude', () => {
         shortcut,
         'leo',
         namespaceInfosLoop,
+      );
+    }).toThrow(Error);
+  });
+
+  test('faulty (negative)', () => {
+    const namespaceInfos = jsyaml.load(`
+      leo:
+        shortcuts:
+          tic 1:
+            url: https://example.com/{%query}
+    `);
+    const shortcut = jsyaml.load(`
+    include: tic 1
+    `);
+    expect(() => {
+      new NamespaceFetcher(new Env({})).processInclude(
+        shortcut,
+        'leo',
+        namespaceInfos,
       );
     }).toThrow(Error);
   });
