@@ -169,14 +169,14 @@ export default class UrlProcessor {
     const locale = env.language + '-' + env.country.toUpperCase();
     switch (attributes.type) {
       case 'date':
-        processedArgument = await this.processTypeDate(
+        processedArgument = this.processTypeDate(
           processedArgument,
           locale,
           attributes,
         );
         break;
       case 'time':
-        processedArgument = await this.processTypeTime(
+        processedArgument = this.processTypeTime(
           processedArgument,
           locale,
           attributes,

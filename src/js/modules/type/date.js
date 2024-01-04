@@ -1,5 +1,5 @@
 export default class DateType {
-  static async parse(str, locale) {
+  static parse(str, locale) {
     const now = new Date();
     let date, matches;
 
