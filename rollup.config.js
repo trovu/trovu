@@ -55,7 +55,10 @@ export default [
       }),
       copy({
         targets: [
-          { src: 'src/ico/favicon.ico', dest: 'dist/public/' },
+          {
+            src: 'src/favicon/*.{ico,png,svg,webmanifest,xml}',
+            dest: 'dist/public/',
+          },
           { src: 'src/img/*', dest: 'dist/public/img/' },
           {
             src: 'src/js/userscripts/*.user.js',
