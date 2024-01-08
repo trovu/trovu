@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 207-fix-favicon
   pull_request:
     branches:
       - master
