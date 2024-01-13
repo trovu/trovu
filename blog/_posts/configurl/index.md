@@ -1,6 +1,6 @@
 ---
-title: New: User settings via URL
-description: How to be updated with this blog.
+title: 'New: User Settings via Self-Hosted File'
+description: … which can be private.
 date: 2024-01-14
 tags:
     - config
