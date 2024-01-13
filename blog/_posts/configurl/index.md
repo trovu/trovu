@@ -3,7 +3,7 @@ title: New: User settings via URL
 description: How to be updated with this blog.
 date: 2024-01-14
 tags:
-  - config
+    - config
 ---
 
 Until now, to use Trovu with advanced settings and personal shortcuts, you needed a Github account. Now, you can access these features with a self-hosted file.
