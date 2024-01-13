@@ -6,11 +6,10 @@ tags:
     - config
 ---
 
-Until now, to use Trovu with advanced settings and personal shortcuts, you needed a Github account. Now, you can access these features with a self-hosted file.
+Until now, to use Trovu with advanced settings and personal shortcuts, you needed a Github account.
+Now, these features are accessible [with a self-hosted file](https://trovu.net/docs/users/advanced/#via-a-self-hosted-file), which can remain private if hosted under a non-public URL.
 
-For guidance on what to do, please follow the instructions in the [docs](https://trovu.net/docs/users/advanced/#via-a-self-hosted-file).
-
-Currently, you create a file using the `config.yml` syntax. The new feature allows you to create shortcuts directly in the config file:
+To do this, create a file following the `config.yml` syntax. A new feature allows you to create shortcuts directly within the config file:
 
 ```yml
 language: en
