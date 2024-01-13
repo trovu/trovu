@@ -29,4 +29,8 @@ namespaces:
 Host this file anywhere your browser can access it.
 This could be a public URL, within an intranet, or on your `localhost`.
 
-Then, open Trovu with `https://trovu.net/?#configUrl=URL_TO_YOUR_CONFIG_FILE`.
+Then, open Trovu with:
+
+```
+https://trovu.net/?#configUrl=URL_TO_YOUR_CONFIG_FILE
+```
