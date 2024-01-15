@@ -17,13 +17,13 @@ examplekeyword 0: http://www.example.com/
 This shortcut will match for `examplekeyword foo`, so for the same keyword but with one argument:
 
 ```yaml
-examplekeyword 1: http://www.example.com/?q=<query>
+examplekeyword 1: http://www.example.com/?q=<param1>
 ```
 
 And with more arguments: `examplekeyword foo, bar`:
 
 ```yaml
-examplekeyword 2: http://www.example.com/?q=<query>&p=<puery>
+examplekeyword 2: http://www.example.com/?q=<param1>&p=<param2>
 ```
 
 ### Long notation
@@ -32,9 +32,9 @@ In the long notation, further info can be defined:
 
 ```yaml
 examplekeyword 2:
-    url: http://www.example.com/?q=<query>&p=<puery>
+    url: http://www.example.com/?q=<param1>&p=<param2>
     title: Custom shortcut
-    description: My custom shortcut with the keyword examplekeyword and 2 arguments.
+    description: My custom shortcut with the keyword examplekeyword and two arguments.
     tags:
         - example
         - custom
