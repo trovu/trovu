@@ -171,6 +171,15 @@ bibgvk 1:
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
+bibhal 1:
+  url: https://katalog.halle.de/Mediensuche?search=<query>
+  title: Stadtbibliothek Halle (Saale)
+  tags:
+  - library
+  - halle
+  examples:
+  - arguments: Unterleuten
+    description: Suche nach "Unterleuten"
 bibhbz 1:
   url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
   title: Hochschulbibliothekszentrum NRW
@@ -229,6 +238,15 @@ bibma 0:
   tags:
   - library
   - mannheim
+bibmlu 1:
+  url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<query>
+  title: Uni Halle Bibliothek
+  tags:
+  - library
+  - halle
+  examples:
+  - arguments: minix
+    description: Search Uni Halle library for "minix"
 bibmr 0:
   url: http://www.uni-marburg.de/bis/kataloge
   title: Uni Marburg Bibliothek
