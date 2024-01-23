@@ -175,8 +175,8 @@ bibhal 1:
   url: https://katalog.halle.de/Mediensuche?search=<query>
   title: Stadtbibliothek Halle (Saale)
   tags:
-  - library
   - halle
+  - library
   examples:
   - arguments: Unterleuten
     description: Suche nach "Unterleuten"
@@ -242,8 +242,8 @@ bibmlu 1:
   url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<query>
   title: Uni Halle Bibliothek
   tags:
-  - library
   - halle
+  - library
   examples:
   - arguments: minix
     description: Search Uni Halle library for "minix"
