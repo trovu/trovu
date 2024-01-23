@@ -175,8 +175,8 @@ bibhal 1:
   url: https://katalog.halle.de/Mediensuche?search=<query>
   title: Stadtbibliothek Halle (Saale)
   tags:
-  - library
   - halle
+  - library
   examples:
   - arguments: Unterleuten
     description: Suche nach "Unterleuten"
@@ -242,8 +242,8 @@ bibmlu 1:
   url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<query>
   title: Uni Halle Bibliothek
   tags:
-  - library
   - halle
+  - library
   examples:
   - arguments: minix
     description: Search Uni Halle library for "minix"
@@ -574,32 +574,15 @@ db 1:
   include:
     key: db 0
 db 2:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&timesel=depart&start=1'
-  title: Deutsche Bahn Fahrplanauskunft
-  examples:
-  - arguments: berlin, hamburg
-    description: Nächste Bahn-Verbindung von Berlin nach Hamburg
-  - arguments: b, hh
-    description: Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über Autokennzeichen
   include:
-    key: db 0
+    key: dbm 2
   showOnHome: 700
 db 3:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&timesel=depart&start=1'
-  title: Deutsche Bahn Fahrplanauskunft
-  examples:
-  - arguments: berlin, hamburg, 20:00
-    description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
   include:
-    key: db 0
+    key: dbm 3
 db 4:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&start=1'
-  title: Deutsche Bahn Fahrplanauskunft
-  examples:
-  - arguments: berlin, hamburg, 20:00, 31.12.
-    description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
   include:
-    key: db 0
+    key: dbm 4
 dbb 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare'
   title: Deutsche Bahn (Bestpreis)
