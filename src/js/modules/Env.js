@@ -265,11 +265,11 @@ export default class Env {
     ({ language, country } = await this.getDefaultLanguageAndCountry());
 
     // Default language.
-    if (typeof this.language != 'string') {
+    if (!(this.language in countriesList.languages)) {
       this.language = language;
     }
     // Default country.
-    if (typeof this.country != 'string') {
+    if (!(this.country in countriesList.countries)) {
       this.country = country;
     }
     // Default namespaces.
