@@ -262,9 +262,7 @@ export default class Env {
   async setDefaults() {
     let language, country;
 
-    if (typeof this.language != 'string' || typeof this.country != 'string') {
-      ({ language, country } = await this.getDefaultLanguageAndCountry());
-    }
+    ({ language, country } = await this.getDefaultLanguageAndCountry());
 
     // Default language.
     if (typeof this.language != 'string') {
