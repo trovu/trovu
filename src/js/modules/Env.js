@@ -126,7 +126,7 @@ export default class Env {
     Object.assign(this, params);
     Object.assign(this, params_from_query);
 
-    await this.setDefaults();
+    this.setDefaults();
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
@@ -210,14 +210,29 @@ export default class Env {
     }
   }
 
-  // Param getters ====================================================
+  /**
+   * Set default language and country if they are still empty.
+   * @returns {void}
+   */
+  setDefaultLanguageAndCountry() {
+    const { language, country } = this.getDefaultLanguageAndCountry();
+
+    // Default language.
+    if (!(this.language in countriesList.languages)) {
+      this.language = language;
+    }
+    // Default country.
+    if (!(this.country.toUpperCase() in countriesList.countries)) {
+      this.country = country;
+    }
+  }
 
   /**
    * Get the default language and country from browser.
    *
    * @return {object} [language, country] - The default language and country.
    */
-  async getDefaultLanguageAndCountry() {
+  getDefaultLanguageAndCountry() {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
     // Set defaults.
@@ -259,21 +274,9 @@ export default class Env {
   /**
    * Set default environment variables if they are still empty.
    */
-  async setDefaults() {
-    let language, country;
+  setDefaults() {
+    this.setDefaultLanguageAndCountry();
 
-    if (typeof this.language != 'string' || typeof this.country != 'string') {
-      ({ language, country } = await this.getDefaultLanguageAndCountry());
-    }
-
-    // Default language.
-    if (typeof this.language != 'string') {
-      this.language = language;
-    }
-    // Default country.
-    if (typeof this.country != 'string') {
-      this.country = country;
-    }
     // Default namespaces.
     if (typeof this.namespaces != 'object') {
       this.namespaces = ['o', this.language, '.' + this.country];

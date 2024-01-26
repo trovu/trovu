@@ -102,6 +102,13 @@
     query: gd b,m
   response:
     redirectUrl: https://maps.google.com/maps?hl=de&saddr=b&daddr=m
+- title: Non existing language and country
+  env:
+    query: g foo
+    language: non-existing
+    country: non-existing
+  response:
+    redirectUrl: https://www.google.com/search?hl=en&q=foo&ie=utf-8
 - title: reload with query
   env:
     query: reload:g barbaz
