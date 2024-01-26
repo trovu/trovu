@@ -214,8 +214,8 @@ export default class Env {
    * Set default language and country if they are still empty.
    * @returns {void}
    */
-  async setDefaultLanguageAndCountry() {
-    const { language, country } = await this.getDefaultLanguageAndCountry();
+  setDefaultLanguageAndCountry() {
+    const { language, country } = this.getDefaultLanguageAndCountry();
 
     // Default language.
     if (!(this.language in countriesList.languages)) {
@@ -232,7 +232,7 @@ export default class Env {
    *
    * @return {object} [language, country] - The default language and country.
    */
-  async getDefaultLanguageAndCountry() {
+  getDefaultLanguageAndCountry() {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
     // Set defaults.
@@ -275,7 +275,7 @@ export default class Env {
    * Set default environment variables if they are still empty.
    */
   async setDefaults() {
-    await this.setDefaultLanguageAndCountry();
+    this.setDefaultLanguageAndCountry();
 
     // Default namespaces.
     if (typeof this.namespaces != 'object') {
