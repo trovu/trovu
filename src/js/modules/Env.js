@@ -126,7 +126,7 @@ export default class Env {
     Object.assign(this, params);
     Object.assign(this, params_from_query);
 
-    await this.setDefaults();
+    this.setDefaults();
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
@@ -274,7 +274,7 @@ export default class Env {
   /**
    * Set default environment variables if they are still empty.
    */
-  async setDefaults() {
+  setDefaults() {
     this.setDefaultLanguageAndCountry();
 
     // Default namespaces.
