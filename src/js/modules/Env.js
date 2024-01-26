@@ -269,7 +269,7 @@ export default class Env {
       this.language = language;
     }
     // Default country.
-    if (!(this.country in countriesList.countries)) {
+    if (!(this.country.toUpperCase() in countriesList.countries)) {
       this.country = country;
     }
     // Default namespaces.
