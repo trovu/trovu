@@ -215,6 +215,14 @@ export default class Env {
    * @returns {void}
    */
   setDefaultLanguageAndCountry() {
+    if (
+      this.language in countriesList.languages &&
+      typeof this.country === 'string' &&
+      this.country.toUpperCase() in countriesList.countries
+    ) {
+      return;
+    }
+
     const { language, country } = this.getDefaultLanguageAndCountry();
 
     // Default language.
@@ -222,7 +230,10 @@ export default class Env {
       this.language = language;
     }
     // Default country.
-    if (!(this.country.toUpperCase() in countriesList.countries)) {
+    if (
+      !this.country ||
+      !(this.country.toUpperCase() in countriesList.countries)
+    ) {
       this.country = country;
     }
   }
