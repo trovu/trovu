@@ -260,9 +260,20 @@ export default class Env {
    * Set default environment variables if they are still empty.
    */
   async setDefaults() {
-    let language, country;
+    await this.setDefaultLanguageAndCountry();
 
-    ({ language, country } = await this.getDefaultLanguageAndCountry());
+    // Default namespaces.
+    if (typeof this.namespaces != 'object') {
+      this.namespaces = ['o', this.language, '.' + this.country];
+    }
+    // Default debug.
+    if (typeof this.debug != 'boolean') {
+      this.debug = Boolean(this.debug);
+    }
+  }
+
+  async setDefaultLanguageAndCountry() {
+    const { language, country } = await this.getDefaultLanguageAndCountry();
 
     // Default language.
     if (!(this.language in countriesList.languages)) {
@@ -271,14 +282,6 @@ export default class Env {
     // Default country.
     if (!(this.country.toUpperCase() in countriesList.countries)) {
       this.country = country;
-    }
-    // Default namespaces.
-    if (typeof this.namespaces != 'object') {
-      this.namespaces = ['o', this.language, '.' + this.country];
-    }
-    // Default debug.
-    if (typeof this.debug != 'boolean') {
-      this.debug = Boolean(this.debug);
     }
   }
 
