@@ -210,6 +210,10 @@ export default class Env {
     }
   }
 
+  /**
+   * Set default language and country if they are still empty.
+   * @returns {void}
+   */
   async setDefaultLanguageAndCountry() {
     const { language, country } = await this.getDefaultLanguageAndCountry();
 
