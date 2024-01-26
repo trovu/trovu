@@ -210,7 +210,18 @@ export default class Env {
     }
   }
 
-  // Param getters ====================================================
+  async setDefaultLanguageAndCountry() {
+    const { language, country } = await this.getDefaultLanguageAndCountry();
+
+    // Default language.
+    if (!(this.language in countriesList.languages)) {
+      this.language = language;
+    }
+    // Default country.
+    if (!(this.country.toUpperCase() in countriesList.countries)) {
+      this.country = country;
+    }
+  }
 
   /**
    * Get the default language and country from browser.
@@ -269,19 +280,6 @@ export default class Env {
     // Default debug.
     if (typeof this.debug != 'boolean') {
       this.debug = Boolean(this.debug);
-    }
-  }
-
-  async setDefaultLanguageAndCountry() {
-    const { language, country } = await this.getDefaultLanguageAndCountry();
-
-    // Default language.
-    if (!(this.language in countriesList.languages)) {
-      this.language = language;
-    }
-    // Default country.
-    if (!(this.country.toUpperCase() in countriesList.countries)) {
-      this.country = country;
     }
   }
 
