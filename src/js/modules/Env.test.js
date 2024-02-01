@@ -66,6 +66,22 @@ describe('Env', () => {
         country: 'us',
       });
     });
+    test('browser returns empty language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => '');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
+    test('browser returns invalid language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => 'invalid');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
   });
   test('getUrlParams', () => {
     Env.getUrlHash = getUrlHashFooBar;
