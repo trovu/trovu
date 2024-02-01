@@ -246,9 +246,13 @@ export default class Env {
   getDefaultLanguageAndCountry() {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
-    // Set defaults.
-    language = language || 'en';
-    country = country || 'us';
+    // Make sure language and country are in our lists.
+    if (!(language in countriesList.languages)) {
+      language = 'en';
+    }
+    if (!country || !(country.toUpperCase() in countriesList.countries)) {
+      country = 'us';
+    }
 
     // Ensure lowercase.
     language = language.toLowerCase();
