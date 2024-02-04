@@ -16,6 +16,7 @@ export default class Env {
    * @param {object} env - The environment variables.
    */
   constructor(env) {
+    countriesList.languages['eo'] = { name: 'Esperanto', native: 'Esperanto' };
     this.setToThis(env);
     if (pkg.gitCommitHash) {
       this.commitHash = pkg.gitCommitHash.slice(0, 7);
