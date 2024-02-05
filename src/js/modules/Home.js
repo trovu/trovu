@@ -47,10 +47,6 @@ export default class Home {
   static setHeights() {
     Home.setMaxHeightForSuggestions();
     window.onresize = Home.setMaxHeightForSuggestions;
-
-    const footerHeight = document.querySelector('footer').offsetHeight;
-    document.querySelector('#fade-out-overlay').style.bottom =
-      footerHeight + 'px';
   }
 
   static setMaxHeightForSuggestions() {
