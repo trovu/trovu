@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - master
+      - 276-suggestions-fadeout-wrongly-on-mobile
   pull_request:
     branches:
       - master
-      - 276-suggestions-fadeout-wrongly-on-mobile
     workflow_dispatch:
 jobs:
   build:
