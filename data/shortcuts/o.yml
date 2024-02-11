@@ -9855,7 +9855,7 @@ zwatch 1:
   title: Zattoo
   tags:
   - old
-! 0:
+'! 0':
   url: https://trovu.net/
   title: Trovu
   tags:
@@ -9864,7 +9864,7 @@ zwatch 1:
   examples:
   - arguments:
     description: go to Trovu homepage
-! 1:
+'! 1':
   url: https://trovu.net/#query=<query>
   title: Trovu
   tags:
@@ -9875,7 +9875,7 @@ zwatch 1:
     description: search Trovu for Maps-related shortcuts
   - arguments: trovu
     description: search Trovu for Trovu-related shortcuts
-!? 0:
+'!? 0':
   url: https://trovu.net/docs/
   title: Trovu docs
   tags:
