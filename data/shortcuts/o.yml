@@ -7674,7 +7674,7 @@ stract 0:
   - search
   examples:
   - arguments:
-  - description: go to Stract homepgae
+    description: go to Stract homepgae
 stract 1:
   url: https://stract.com/search?q=<query>
   title: Stract search
@@ -7682,7 +7682,7 @@ stract 1:
   - search
   examples:
   - arguments: film
-  - description: search Stract for film
+    description: search Stract for film
 su 1:
   url: http://superuser.com/search?q=<query>
   title: Super User
