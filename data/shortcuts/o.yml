@@ -7667,6 +7667,22 @@ stc 1:
 steam 1:
   url: https://store.steampowered.com/search/?term=<game%>
   title: Game on the steam platform
+stract 0:
+  url: https://stract.com/
+  title: Stract – Independent and Open Search
+  tags:
+  - search
+  examples:
+  - arguments:
+  - description: go to Stract homepgae
+stract 1:
+  url: https://stract.com/search?q=<query>
+  title: Stract search
+  tags:
+  - search
+  examples:
+  - arguments: film
+  - description: search Stract for film
 su 1:
   url: http://superuser.com/search?q=<query>
   title: Super User
