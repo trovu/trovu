@@ -9839,6 +9839,36 @@ zwatch 1:
   title: Zattoo
   tags:
   - old
+! 0:
+  url: https://trovu.net/
+  title: Trovu
+  tags:
+  - search
+  - meta
+  examples:
+  - arguments:
+    description: go to Trovu homepage
+! 1:
+  url: https://trovu.net/#query=<query>
+  title: Trovu
+  tags:
+  - search
+  - meta
+  examples:
+  - arguments: maps
+    description: search Trovu for Maps-related shortcuts
+  - arguments: trovu
+    description: search Trovu for Trovu-related shortcuts
+!? 0:
+  url: https://trovu.net/docs/
+  title: Trovu docs
+  tags:
+  - search
+  - meta
+  - help
+  examples:
+  - arguments:
+    description: go to Trovu documentation homepage
 § 2:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20"<Paragraph>%20<Gesetz>"
   title: Gesetze im Internet
