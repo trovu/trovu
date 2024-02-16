@@ -64,12 +64,6 @@ export default class Suggestions {
       this.helpDiv.textContent = 'No matching shortcuts found.';
       return;
     }
-    if (this.query === '') {
-      this.helpDiv.innerHTML = '';
-    } else {
-      this.helpDiv.innerHTML =
-        'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
-    }
 
     this.suggestionsList = document.createElement('ul');
     this.suggestionsDiv.appendChild(this.suggestionsList);

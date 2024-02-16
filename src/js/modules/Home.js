@@ -27,6 +27,9 @@ export default class Home {
     // Init environment.
     await this.env.populate();
 
+    this.helpDiv = document.querySelector('#help');
+    this.queryInput = document.querySelector('#query');
+
     new Settings(this.env);
 
     this.showInfoAlerts();
@@ -67,7 +70,7 @@ export default class Home {
    */
   getProcessUrl() {
     const params = this.env.getParams();
-    params['query'] = document.getElementById('query').value;
+    params['query'] = this.queryInput.value;
 
     const paramStr = Env.getUrlParamStr(params);
 
@@ -81,13 +84,13 @@ export default class Home {
   setQueryElement() {
     switch (this.env.status) {
       case 'deprecated':
-        document.querySelector('#query').value = this.env.alternative;
+        this.queryInput.value = this.env.alternative;
         break;
       case 'reloaded':
-        document.querySelector('#query').value = '';
+        this.queryInput.value = '';
         break;
       default:
-        document.querySelector('#query').value = this.env.query || '';
+        this.queryInput.value = this.env.query || '';
         break;
     }
 
@@ -96,8 +99,8 @@ export default class Home {
   }
 
   setToggleByQuery() {
-    document.querySelector('#query').focus();
-    document.querySelector('#query').addEventListener('input', () => {
+    this.queryInput.focus();
+    this.queryInput.addEventListener('input', () => {
       this.toggleByQuery();
     });
     document.querySelector('#suggestions').addEventListener('click', () => {
@@ -108,16 +111,19 @@ export default class Home {
   toggleByQuery() {
     // Toggle display of navbar and examples.
     if (
-      document.querySelector('#query').value.trim() === '' &&
+      this.queryInput.value.trim() === '' &&
       this.suggestions.selected === -1
     ) {
       document.querySelector('nav.navbar').style.display = 'block';
       document.querySelector('#intro').style.display = 'block';
       document.querySelector('#alert').style.display = 'block';
+      this.helpDiv.innerHTML = '';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('#alert').style.display = 'none';
+      this.helpDiv.innerHTML =
+        'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
     }
     Home.setHeights();
   }
@@ -169,9 +175,7 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-
     const processUrl = this.getProcessUrl();
-
     // Redirect to process script.
     window.location.href = processUrl;
   };
@@ -185,7 +189,7 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-    document.querySelector('#query').value = 'reload';
+    this.queryInput.value = 'reload';
     this.submitQuery();
   };
 
