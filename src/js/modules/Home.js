@@ -36,6 +36,7 @@ export default class Home {
     if (this.env.debug) {
       this.env.logger.showLog();
     }
+    this.helpDiv = document.querySelector('#help');
 
     document.getElementById('query-form').onsubmit = this.submitQuery;
     document.querySelector('.navbar a.reload').onclick = this.reload;
@@ -114,10 +115,13 @@ export default class Home {
       document.querySelector('nav.navbar').style.display = 'block';
       document.querySelector('#intro').style.display = 'block';
       document.querySelector('#alert').style.display = 'block';
+      this.helpDiv.innerHTML = '';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('#alert').style.display = 'none';
+      this.helpDiv.innerHTML =
+        'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
     }
     Home.setHeights();
   }
