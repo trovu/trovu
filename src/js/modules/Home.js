@@ -175,9 +175,7 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-
     const processUrl = this.getProcessUrl();
-
     // Redirect to process script.
     window.location.href = processUrl;
   };
