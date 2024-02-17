@@ -18,6 +18,9 @@ export default class DataManager {
     data['types']['city'] = DataManager.readYmls(
       `${options.data}/${options.types}/city/`,
     );
+    data['types']['date'] = DataManager.readYmls(
+      `${options.data}/${options.types}/date/`,
+    );
     return data;
   }
 
@@ -35,6 +38,10 @@ export default class DataManager {
     DataManager.writeYmls(
       `${options.data}/${options.types}/city/`,
       data.types.city,
+    );
+    DataManager.writeYmls(
+      `${options.data}/${options.types}/date/`,
+      data.types.date,
     );
   }
 
