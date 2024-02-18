@@ -171,8 +171,8 @@ export default class UrlProcessor {
       case 'date':
         processedArgument = this.processTypeDate(
           processedArgument,
-          locale,
           attributes,
+          env,
         );
         break;
       case 'time':
@@ -189,8 +189,8 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static processTypeDate(processedArgument, locale, attributes) {
-    const dateNative = DateType.parse(processedArgument, locale);
+  static processTypeDate(processedArgument, attributes, env) {
+    const dateNative = DateType.parse(processedArgument, env);
     const date = dayjs(dateNative);
     // If date could be parsed:
     // Set argument.
@@ -204,7 +204,7 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static processTypeTime(processedArgument, locale, attributes) {
+  static processTypeTime(processedArgument, attributes) {
     const timeNative = TimeType.parse(processedArgument);
     const time = dayjs(timeNative);
     // If time could be parsed:
