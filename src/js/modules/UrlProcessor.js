@@ -191,10 +191,10 @@ export default class UrlProcessor {
 
   static processTypeDate(processedArgument, attributes, env) {
     const dateNative = DateType.parse(processedArgument, env);
-    const date = dayjs(dateNative);
     // If date could be parsed:
     // Set argument.
-    if (date) {
+    if (dateNative) {
+      const date = dayjs(dateNative);
       let format = 'YYYY-MM-DD';
       if (attributes.output) {
         format = attributes.output;
