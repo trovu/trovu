@@ -315,14 +315,15 @@ export default class Suggestions {
   getNeedsUserscript() {
     const div = document.createElement('div');
     div.className = 'needs-userscript';
-    div.innerHTML = `🧩 Needs the <a href="https://trovu.net/docs/shortcuts/userscripts/">userscript</a> to be installed.`;
+    div.innerHTML =
+      '🧩 Needs the <a href="https://trovu.net/docs/shortcuts/userscripts/">userscript</a> to be installed.';
     return div;
   }
 
   getIsAffiliate() {
     const div = document.createElement('div');
     div.className = 'is-affiliate';
-    div.innerHTML = `🤝 Affiliate shortcut, we get paid for it.`;
+    div.innerHTML = '🤝 Affiliate shortcut, we get paid for it.';
     return div;
   }
 
