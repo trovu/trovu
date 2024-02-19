@@ -197,9 +197,9 @@ a 1:
   url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo-20
   title: Amazon.com
   tags:
-  - affiliate
   - amazon
   - books
+  - is-affiliate
   - shopping
   examples:
   - arguments: shakespeare
@@ -781,9 +781,9 @@ bkg 0:
   url: https://www.booking.com/?aid=1303859
   title: Booking.com
   tags:
-  - affiliate
   - hostels
   - hotels
+  - is-affiliate
   - travel
   examples:
   - description: Go to homepage
@@ -2181,15 +2181,15 @@ e 0:
   url: https://www.ebay.com/?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
 e 1:
   url: https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
   examples:
   - arguments: smartphone
