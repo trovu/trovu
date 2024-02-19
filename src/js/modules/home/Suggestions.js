@@ -100,10 +100,10 @@ export default class Suggestions {
     fragment.appendChild(this.getExamples(suggestion));
     fragment.appendChild(this.getUrl(suggestion));
     if (this.hasTag(suggestion, 'needs-userscript')) {
-      fragment.appendChild(this.getNeedsUserscript(suggestion));
+      fragment.appendChild(this.getNeedsUserscript());
     }
     if (this.hasTag(suggestion, 'is-affiliate')) {
-      fragment.appendChild(this.getIsAffiliate(suggestion));
+      fragment.appendChild(this.getIsAffiliate());
     }
     li.appendChild(fragment);
     li.addEventListener('click', () => {
@@ -312,14 +312,14 @@ export default class Suggestions {
     return urlDiv;
   }
 
-  getNeedsUserscript(suggestion) {
+  getNeedsUserscript() {
     const div = document.createElement('div');
     div.className = 'needs-userscript';
     div.innerHTML = `🧩 Needs the <a href="https://trovu.net/docs/shortcuts/userscripts/">userscript</a> to be installed.`;
     return div;
   }
 
-  getIsAffiliate(suggestion) {
+  getIsAffiliate() {
     const div = document.createElement('div');
     div.className = 'is-affiliate';
     div.innerHTML = `🤝 Affiliate shortcut, we get paid for it.`;
