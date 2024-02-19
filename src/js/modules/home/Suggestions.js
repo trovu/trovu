@@ -99,6 +99,9 @@ export default class Suggestions {
     fragment.appendChild(this.getDescriptionAndTags(suggestion));
     fragment.appendChild(this.getExamples(suggestion));
     fragment.appendChild(this.getUrl(suggestion));
+    if (this.needsUserscript(suggestion)) {
+      fragment.appendChild(this.getNeedsUserscript(suggestion));
+    }
     li.appendChild(fragment);
     li.addEventListener('click', () => {
       this.select(index);
@@ -171,6 +174,12 @@ export default class Suggestions {
     const titleSpan = document.createElement('span');
     titleSpan.className = 'title';
     titleSpan.textContent = suggestion.title;
+
+    if (this.needsUserscript(suggestion)) {
+      titleSpan.textContent += ' 🧩';
+    }
+
+    console.log(suggestion.tags);
     rightSpan.appendChild(titleSpan);
 
     // Create and append the namespace span
@@ -188,6 +197,13 @@ export default class Suggestions {
     });
 
     return mainDiv;
+  }
+
+  needsUserscript(suggestion) {
+    if (suggestion.tags && Array.isArray(suggestion.tags)) {
+      return suggestion.tags.includes('needs-userscript');
+    }
+    return false;
   }
 
   handleTagOrNamespaceClick(event, query) {
@@ -288,6 +304,13 @@ export default class Suggestions {
     urlLink.textContent = `${suggestion.url}`;
     urlDiv.appendChild(urlLink);
     return urlDiv;
+  }
+
+  getNeedsUserscript(suggestion) {
+    const div = document.createElement('div');
+    div.className = 'needs-userscript';
+    div.innerHTML = `🧩 Needs the <a href="https://trovu.net/docs/shortcuts/userscripts/">fill-and-submit userscript</a>.`;
+    return div;
   }
 
   getArgsFragment(args) {
