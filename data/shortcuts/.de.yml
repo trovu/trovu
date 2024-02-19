@@ -20,18 +20,16 @@
   - arguments: schuhe
     description: Suche nach Schuhen
 a 0:
-  url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21
+  url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de
   title: Amazon.de Startseite
   tags:
-  - affiliate
   - amazon
   - books
   - shopping
 a 1:
-  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&linkCode=ur2&tag=serchilo-21
+  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&linkCode=ur2
   title: Amazon.de
   tags:
-  - affiliate
   - amazon
   - books
   - shopping
@@ -65,10 +63,9 @@ alternate 1:
   - arguments: fernseher
     description: Suche nach Fernsehern
 amazon 1:
-  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&linkCode=ur2&tag=serchilo-21
+  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&linkCode=ur2
   title: Amazon.de
   tags:
-  - affiliate
   - amazon
   - books
   - shopping
@@ -791,15 +788,15 @@ e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
 e 1:
   url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
   examples:
   - arguments: smartphone
@@ -808,13 +805,13 @@ ebay 0:
   url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
   title: Ebay.de homepage
   tags:
-  - affiliate
+  - is-affiliate
   - old
 ebay 1:
   url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq=<query>&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
   title: Ebay.de
   tags:
-  - affiliate
+  - is-affiliate
   - old
 ek 0:
   deprecated:
@@ -4464,8 +4461,8 @@ hekticket 1:
   url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword=<Band>
   title: Hekticket
   tags:
-  - affiliate
   - concerts
+  - is-affiliate
   - music
   - tickets
   examples:

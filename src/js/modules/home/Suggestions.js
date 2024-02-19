@@ -98,6 +98,13 @@ export default class Suggestions {
     fragment.appendChild(this.getMain(suggestion));
     fragment.appendChild(this.getDescriptionAndTags(suggestion));
     fragment.appendChild(this.getExamples(suggestion));
+    fragment.appendChild(this.getUrl(suggestion));
+    if (this.hasTag(suggestion, 'needs-userscript')) {
+      fragment.appendChild(this.getNeedsUserscript());
+    }
+    if (this.hasTag(suggestion, 'is-affiliate')) {
+      fragment.appendChild(this.getIsAffiliate());
+    }
     li.appendChild(fragment);
     li.addEventListener('click', () => {
       this.select(index);
@@ -170,6 +177,15 @@ export default class Suggestions {
     const titleSpan = document.createElement('span');
     titleSpan.className = 'title';
     titleSpan.textContent = suggestion.title;
+
+    if (this.hasTag(suggestion, 'needs-userscript')) {
+      titleSpan.textContent += ' 🧩';
+    }
+    if (this.hasTag(suggestion, 'is-affiliate')) {
+      titleSpan.textContent += ' 🤝';
+    }
+
+    console.log(suggestion.tags);
     rightSpan.appendChild(titleSpan);
 
     // Create and append the namespace span
@@ -187,6 +203,13 @@ export default class Suggestions {
     });
 
     return mainDiv;
+  }
+
+  hasTag(suggestion, tag) {
+    if (suggestion.tags && Array.isArray(suggestion.tags)) {
+      return suggestion.tags.includes(tag);
+    }
+    return false;
   }
 
   handleTagOrNamespaceClick(event, query) {
@@ -273,6 +296,35 @@ export default class Suggestions {
     }
 
     return examplesDiv;
+  }
+
+  getUrl(suggestion) {
+    const urlDiv = document.createElement('div');
+    urlDiv.className = 'url';
+    // add text span with url icon, append it, put urllink next to it
+    const urlText = document.createElement('span');
+    urlText.textContent = '🔗 ';
+    urlDiv.appendChild(urlText);
+    const urlLink = document.createElement('a');
+    urlLink.href = suggestion.url;
+    urlLink.textContent = `${suggestion.url}`;
+    urlDiv.appendChild(urlLink);
+    return urlDiv;
+  }
+
+  getNeedsUserscript() {
+    const div = document.createElement('div');
+    div.className = 'needs-userscript';
+    div.innerHTML =
+      '🧩 Needs the <a href="https://trovu.net/docs/shortcuts/userscripts/">userscript</a> to be installed.';
+    return div;
+  }
+
+  getIsAffiliate() {
+    const div = document.createElement('div');
+    div.className = 'is-affiliate';
+    div.innerHTML = '🤝 Affiliate shortcut, we get paid for it.';
+    return div;
   }
 
   getArgsFragment(args) {

@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - 276-suggestions-fadeout-wrongly-on-mobile
+      - 229-show-info-above-input-on-special-tags
   pull_request:
     branches:
       - master

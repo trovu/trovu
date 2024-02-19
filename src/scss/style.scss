@@ -124,8 +124,11 @@ span.tag {
           text-align: right;
         }
       }
+      div.description-and-tags,
       div.examples,
-      div.description-and-tags {
+      div.url,
+      div.needs-userscript,
+      div.is-affiliate {
         display: none;
         color: #666;
       }
@@ -139,6 +142,11 @@ span.tag {
         .left {
           font-style: italic;
         }
+      }
+      div.url {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .unreachable {
         .keyword {
@@ -175,9 +183,14 @@ span.tag {
     li[aria-selected='true'] {
       background: #eee;
       position: relative;
-      div.examples,
-      div.description-and-tags {
+      div.description-and-tags,
+      div.examples {
         display: grid;
+      }
+      div.url,
+      div.needs-userscript,
+      div.is-affiliate {
+        display: block;
       }
     }
   }

@@ -17,17 +17,17 @@ a 0:
   url: http://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21
   title: Amazon.fr Homepage
   tags:
-  - affiliate
   - amazon
   - books
+  - is-affiliate
   - shopping
 a 1:
   url: 'http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords=<query: {encoding: iso-8859-1}>&linkCode=ur2&tag=serchilo0e-21'
   title: Amazon.fr
   tags:
-  - affiliate
   - amazon
   - books
+  - is-affiliate
   - shopping
   examples:
   - arguments: balzac
@@ -45,15 +45,15 @@ e 0:
   url: https://www.ebay.fr/?mkcid=1&mkrid=709-53476-19255-0&siteid=71&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.fr
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
 e 1:
   url: https://www.ebay.fr/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=709-53476-19255-0&siteid=71&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.fr
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
   examples:
   - arguments: veste
