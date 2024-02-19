@@ -98,6 +98,7 @@ export default class Suggestions {
     fragment.appendChild(this.getMain(suggestion));
     fragment.appendChild(this.getDescriptionAndTags(suggestion));
     fragment.appendChild(this.getExamples(suggestion));
+    fragment.appendChild(this.getUrl(suggestion));
     li.appendChild(fragment);
     li.addEventListener('click', () => {
       this.select(index);
@@ -273,6 +274,20 @@ export default class Suggestions {
     }
 
     return examplesDiv;
+  }
+
+  getUrl(suggestion) {
+    const urlDiv = document.createElement('div');
+    urlDiv.className = 'url';
+    // add text span with url icon, append it, put urllink next to it
+    const urlText = document.createElement('span');
+    urlText.textContent = '🔗 ';
+    urlDiv.appendChild(urlText);
+    const urlLink = document.createElement('a');
+    urlLink.href = suggestion.url;
+    urlLink.textContent = `${suggestion.url}`;
+    urlDiv.appendChild(urlLink);
+    return urlDiv;
   }
 
   getArgsFragment(args) {
