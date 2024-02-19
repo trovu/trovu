@@ -99,7 +99,7 @@ export default class Suggestions {
     fragment.appendChild(this.getDescriptionAndTags(suggestion));
     fragment.appendChild(this.getExamples(suggestion));
     fragment.appendChild(this.getUrl(suggestion));
-    if (this.needsUserscript(suggestion)) {
+    if (this.hasTag(suggestion, 'needs-userscript')) {
       fragment.appendChild(this.getNeedsUserscript(suggestion));
     }
     li.appendChild(fragment);
@@ -175,7 +175,7 @@ export default class Suggestions {
     titleSpan.className = 'title';
     titleSpan.textContent = suggestion.title;
 
-    if (this.needsUserscript(suggestion)) {
+    if (this.hasTag(suggestion, 'needs-userscript')) {
       titleSpan.textContent += ' 🧩';
     }
 
@@ -199,9 +199,9 @@ export default class Suggestions {
     return mainDiv;
   }
 
-  needsUserscript(suggestion) {
+  hasTag(suggestion, tag) {
     if (suggestion.tags && Array.isArray(suggestion.tags)) {
-      return suggestion.tags.includes('needs-userscript');
+      return suggestion.tags.includes(tag);
     }
     return false;
   }
