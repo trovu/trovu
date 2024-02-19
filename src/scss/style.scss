@@ -127,7 +127,8 @@ span.tag {
       div.description-and-tags,
       div.examples,
       div.url,
-      div.needs-userscript {
+      div.needs-userscript,
+      div.is-affiliate {
         display: none;
         color: #666;
       }
@@ -187,7 +188,8 @@ span.tag {
         display: grid;
       }
       div.url,
-      div.needs-userscript {
+      div.needs-userscript,
+      div.is-affiliate {
         display: block;
       }
     }

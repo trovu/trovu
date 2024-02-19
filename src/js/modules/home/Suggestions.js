@@ -102,6 +102,9 @@ export default class Suggestions {
     if (this.hasTag(suggestion, 'needs-userscript')) {
       fragment.appendChild(this.getNeedsUserscript(suggestion));
     }
+    if (this.hasTag(suggestion, 'is-affiliate')) {
+      fragment.appendChild(this.getIsAffiliate(suggestion));
+    }
     li.appendChild(fragment);
     li.addEventListener('click', () => {
       this.select(index);
@@ -177,6 +180,9 @@ export default class Suggestions {
 
     if (this.hasTag(suggestion, 'needs-userscript')) {
       titleSpan.textContent += ' 🧩';
+    }
+    if (this.hasTag(suggestion, 'is-affiliate')) {
+      titleSpan.textContent += ' 🤝';
     }
 
     console.log(suggestion.tags);
@@ -309,7 +315,14 @@ export default class Suggestions {
   getNeedsUserscript(suggestion) {
     const div = document.createElement('div');
     div.className = 'needs-userscript';
-    div.innerHTML = `🧩 Needs the <a href="https://trovu.net/docs/shortcuts/userscripts/">fill-and-submit userscript</a>.`;
+    div.innerHTML = `🧩 Needs the <a href="https://trovu.net/docs/shortcuts/userscripts/">userscript</a> to be installed.`;
+    return div;
+  }
+
+  getIsAffiliate(suggestion) {
+    const div = document.createElement('div');
+    div.className = 'is-affiliate';
+    div.innerHTML = `🤝 Affiliate shortcut, we get paid for it.`;
     return div;
   }
 
