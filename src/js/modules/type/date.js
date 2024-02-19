@@ -1,5 +1,5 @@
 export default class DateType {
-  static parse(str, locale) {
+  static parse(str, env) {
     const now = new Date();
     let date, matches;
 
@@ -67,32 +67,7 @@ export default class DateType {
     }
     // Match 'Su', 'Mo', ...
     else if ((matches = str.match(/^([A-Za-z\u00E0-\u00FC]+)$/))) {
-      let maps = [];
-      switch (locale.substr(0, 2)) {
-        case 'cs':
-          maps.push('ne po út st čt pá so');
-          maps.push('ne po ut st ct pa so');
-          break;
-        case 'de':
-          maps.push('so mo di mi do fr sa');
-          break;
-        case 'en':
-          maps.push('u m t w r f s');
-          maps.push('su mo tu we th fr sa');
-          maps.push('sun mon tue wed thu fri sat');
-          break;
-        case 'es':
-          maps.push('do lu ma mi ju vi sá');
-          maps.push('do lu ma mi ju vi sa');
-          break;
-        case 'pl':
-          maps.push('nd pn wt śr cz pt so');
-          maps.push('nd pn wt sr cz pt so');
-          break;
-        case 'sk':
-          maps.push('ne po ut st št pi so');
-          break;
-      }
+      const maps = env.data.types.date.days_of_the_week[env.language] || [];
       for (const map of maps) {
         const mapArray = map.split(' ');
         const desired_day_of_week_index = mapArray.indexOf(str.toLowerCase());
