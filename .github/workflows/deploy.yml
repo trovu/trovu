@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 229-show-info-above-input-on-special-tags
   pull_request:
     branches:
       - master
