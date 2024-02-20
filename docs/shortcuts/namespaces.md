@@ -15,16 +15,16 @@ Depending on the country in your settings and thus the namespaces you use, the c
 
 But even more: You can also override shortcuts: For instance, while all other users use the keyword `g` for Google, you might use it for something else – with your user namespace.
 
-Namespaces work well together with [Includes](includes.md), especially for dictionaries.
+Namespaces work well together with [Includes](include.md), especially for dictionaries.
 
 ## Namespace types
 
 | Namespace type | Example namespaces                                                                                                                                                      | Naming convention                                                                         | Contains                                         | Example shortcuts                                                                                                                    |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| language       | [de](https://github.com/trovu/trovu/tree/master/data/shortcuts/de.yml), [en](https://github.com/trovu/trovu/tree/master/data/shortcuts/en.yml)                          | 2 chars, by [ISO 639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)             | shortcuts related to a particular language       | Merriam-Webster dictionary: `mw tree` (from [en](https://github.com/trovu/trovu-data/blob/master/shortcuts/en.yml))                  |
-| country        | [.de](https://github.com/trovu/trovu/tree/master/data/shortcuts/.de.yml), [.us](https://github.com/trovu/trovu/tree/master/data/shortcuts/.us.yml)                      | dot and 2 chars, by [ISO 3166-1 alpha2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | shortcuts related to a particular country        | Deutsche Bahn Fahrplanauskunft: `db berlin, hamburg` (from [.de](https://github.com/trovu/trovu-data/blob/master/shortcuts/.de.yml)) |
-| dictionary     | [dcm](https://github.com/trovu/trovu/tree/master/data/shortcuts/dcm.yml) (dict.com), [lge](https://github.com/trovu/trovu/tree/master/data/shortcuts/lge.yml) (Linguee) | 3 chars, by their abbreviated name                                                        | shortcuts from a dictionary website              | German-English: `de-en tree`, `en-de tree`, `en-{$language} tree` (using `language` variable from settings)                          |
-| user           | [georgjaehnig](https://github.com/georgjaehnig/trovu-data-user/blob/master/shortcuts.yml)                                                                               | a Github user name (can be overridden with a custom name)                                 | custom shortcuts created by a user in their repo | Trains from my home station: `db> hamburg`                                                                                           |
+| language       | [de](https://github.com/trovu/trovu/tree/master/data/shortcuts/de.yml), [en](https://github.com/trovu/trovu/tree/master/data/shortcuts/en.yml)                          | 2 chars, by [ISO 639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)             | shortcuts related to a particular language       | Merriam-Webster dictionary: `mw tree` (from [en](https://github.com/trovu/trovu/tree/master/data/shortcuts/en.yml))                  |
+| country        | [.de](https://github.com/trovu/trovu/tree/master/data/shortcuts/.de.yml), [.us](https://github.com/trovu/trovu/tree/master/data/shortcuts/.us.yml)                      | dot and 2 chars, by [ISO 3166-1 alpha2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | shortcuts related to a particular country        | Deutsche Bahn Fahrplanauskunft: `db berlin, hamburg` (from [.de](https://github.com/trovu/trovu/tree/master/data/shortcuts/.de.yml)) |
+| dictionary     | [dcm](https://github.com/trovu/trovu/tree/master/data/shortcuts/dcm.yml) (dict.com), [lge](https://github.com/trovu/trovu/tree/master/data/shortcuts/lge.yml) (Linguee) | 3 chars, by their abbreviated name                                                        | shortcuts from a dictionary website              | German-English: `de-en tree`, `en-de tree`, `en-<$language> tree` (using `language` variable from settings)                          |
+| user           | [georgjaehnig](https://github.com/georgjaehnig/trovu-data-user/blob/master/shortcuts.yml)                                                                               | a GitHub username (can be overridden with a custom name)                                  | custom shortcuts created by a user in their repo | Trains from my home station: `db> hamburg`                                                                                           |
 | planet         | [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml)                                                                                                    | the shape of the planet                                                                   | shortcuts unrelated to a language or country     | Google web search: `g berlin`                                                                                                        |
 
 `language`, `country`, `dictionary` and `o (planet)` are **site namespaces**. They are curated and
@@ -62,7 +62,7 @@ Currently, the following dictionary namespaces are defined:
 
 ## Uniqueness in a namespace
 
-In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu-data/blob/master/shortcuts/o/g/1.yml).
+In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu/tree/master/data/shortcuts/o/g/1.yml).
 
 ## Using namespaces
 
@@ -79,7 +79,7 @@ your namespaces will be:
 -   `en` (English language)
 -   `.us` (USA)
 
-### Advanced (with your Github account)
+### Advanced (with your GitHub account)
 
 Your namespaces are [derived from your config.yml](../users/advanced.md). With your personal configuration, you can use more than 3 namespaces. This can be useful when you like to use shortcuts from multiple languages and countries, e.g. dictionaries or public transport while travelling.
 
@@ -89,11 +89,17 @@ The lower a namespace is in the `namespaces` list, the higher it's precedence. T
 
 So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`.
 
-## Adding a namespace (and overriding `language` or `country` setting)
+## Per-call namespace, also overrides `language` or `country`
 
-You can add a certain namespace to the subscribed namespaces by prefixing the query with `[namespace].` If `[namespace]` happens to be a language or country namespace, it will also override the current language or country.
+Let's say you have configured `language=en` but this time, you want to search the German Wikipedia. In this case, call
+```
+de.w berlin
+```
+So for a single call, you can prefix your query with `NAMESPACE.`. This namespace will then have the highest priority.
 
-### Example
+If that prefixed namespace happens to be a language or country namespace, it will also override the current language or country.
+
+### Example in detail
 
 #### Settings
 
@@ -114,9 +120,9 @@ Now we call this query:
 
     de.w berlin
 
-Here, we add the namespace [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml). This means that for this very query
+Here, we add the namespace [de](https://github.com/trovu/trovu/tree/master/data/shortcuts/de.yml). This means that for this very query
 
--   the [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml) namespace is added to the `namespaces` list, with the highest priority.
+-   the [de](https://github.com/trovu/trovu/tree/master/data/shortcuts/de.yml) namespace is added to the `namespaces` list, with the highest priority.
 -   Also, since `de` is a language, the language setting is changed to `de`.
 
 So this query is now processed as if the settings were:
@@ -133,9 +139,9 @@ namespaces:
 
 #### Result
 
-Instead of the English Wikipedia (that would have been used with `language: en`), the German Wikipedia is used, because `language` is now set to `de`, and the Wikipedia shortcut's URL is defined as `url: https://{$language}.wikipedia.org/...`.
+Instead of the English Wikipedia (that would have been used with `language: en`), the German Wikipedia is used, because `language` is now set to `de`, and the Wikipedia shortcut's URL is defined as `url: https://<$language>.wikipedia.org/...`.
 
-Had another shortcut `w 1` existed in namespace [de](https://github.com/trovu/trovu-data/blob/master/shortcuts/de.yml), then this shortcut would have been called, because we had added this namespaces to the subscribed namespaces, with the highest priority.
+Had another shortcut `w 1` existed in namespace [de](https://github.com/trovu/trovu/tree/master/data/shortcuts/de.yml), then this shortcut would have been called, because we had added these namespaces to the subscribed namespaces, with the highest priority.
 
 ## Default language and country
 

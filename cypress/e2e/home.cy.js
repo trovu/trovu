@@ -18,10 +18,26 @@ describe('Homepage startup', () => {
     );
   });
 
-  it('should have Suggestions', () => {
+  it('should have suggestions', () => {
     cy.get('#query').first().focus().should('be.focused');
     cy.get('#query').type('g');
     cy.contains('Google Web Homepage');
+  });
+
+  it('should have suggestions with type icons', () => {
+    cy.get('#query').first().focus().should('be.focused');
+    cy.get('#query').type('db');
+    cy.contains('📅');
+  });
+
+  it('should submit a query', () => {
+    cy.get('#query').first().focus().should('be.focused');
+    cy.get('#query').type('debug:g{enter}');
+    cy.url().should(
+      'include',
+      '/process/index.html?#country=gb&language=en&query=debug%3Ag',
+    );
+    cy.contains('https://www.google.');
   });
 
   it('should have a working Settings modal', () => {

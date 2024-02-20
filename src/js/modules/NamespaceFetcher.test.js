@@ -1,6 +1,6 @@
+import Env from './Env.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import jsyaml from 'js-yaml';
-import Env from './Env.js';
 
 function cloneObject(obj) {
   return JSON.parse(JSON.stringify(obj));
@@ -9,17 +9,111 @@ function cloneObject(obj) {
 describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
   test('site', () => {
     const env = new Env();
-    expect(new NamespaceFetcher(env).getInitalNamespaceInfo('de')).toEqual({
+    expect(new NamespaceFetcher(env).getInitialNamespaceInfo('de')).toEqual({
       name: 'de',
     });
   });
-  test('github', () => {
+  test('github, this user', () => {
+    const env = new Env({ github: 'johndoe' });
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
+    ).toEqual({
+      name: 'johndoe',
+      github: 'johndoe',
+    });
+  });
+  test('github, named user', () => {
     const env = new Env();
-    expect(new NamespaceFetcher(env).getInitalNamespaceInfo('johndoe')).toEqual(
-      {
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: 'johndoe' }),
+    ).toEqual({
+      name: 'johndoe',
+      github: 'johndoe',
+    });
+  });
+  test('name and github', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        github: 'johndoe',
+        name: 'myjohndoe',
+      }),
+    ).toEqual({
+      github: 'johndoe',
+      name: 'myjohndoe',
+    });
+  });
+  test('configUrl, this user (negative)', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
+    ).toEqual(false);
+  });
+  test('name and url', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
         name: 'johndoe',
+        url: 'https://johndoe.com/trovu-data-user/shortcuts.yml',
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      url: 'https://johndoe.com/trovu-data-user/shortcuts.yml',
+    });
+  });
+  test('name and shortcuts', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        name: 'johndoe',
+        shortcuts: {
+          'example 0': {
+            url: 'https://example.com/',
+          },
+        },
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      shortcuts: {
+        'example 0': {
+          url: 'https://example.com/',
+        },
       },
-    );
+    });
+  });
+  test('only url (negative)', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        url: 'https://johndoe.com/trovu-data-user/',
+      }),
+    ).toEqual(false);
+  });
+  test('only shortcuts (negative)', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        shortcuts: {},
+      }),
+    ).toEqual(false);
+  });
+  test('name and shortcuts, short notation', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).getInitialNamespaceInfo({
+        name: 'johndoe',
+        shortcuts: {
+          'example 0': 'https://example.com/',
+        },
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      shortcuts: {
+        'example 0': {
+          url: 'https://example.com/',
+        },
+      },
+    });
   });
 });
 
@@ -46,6 +140,32 @@ describe('NamespaceFetcher.addNamespaceInfo', () => {
       name: 'johndoe',
       type: 'user',
       url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
+    });
+  });
+  test('name and url', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).addNamespaceInfo({
+        name: 'johndoe',
+        url: 'https://example.com/shortcuts.yml',
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      type: 'user',
+      url: 'https://example.com/shortcuts.yml',
+    });
+  });
+  test('name', () => {
+    const env = new Env();
+    expect(
+      new NamespaceFetcher(env).addNamespaceInfo({
+        name: 'johndoe',
+      }),
+    ).toEqual({
+      name: 'johndoe',
+      github: 'johndoe',
+      type: 'user',
+      url: 'https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?unknown',
     });
   });
 });
@@ -115,7 +235,7 @@ describe('NamespaceFetcher.processInclude', () => {
     });
   });
 
-  test('with loop', () => {
+  test('with loop (negative)', () => {
     const namespaceInfosLoop = jsyaml.load(`
       leo:
         shortcuts:
@@ -138,6 +258,25 @@ describe('NamespaceFetcher.processInclude', () => {
         shortcut,
         'leo',
         namespaceInfosLoop,
+      );
+    }).toThrow(Error);
+  });
+
+  test('faulty (negative)', () => {
+    const namespaceInfos = jsyaml.load(`
+      leo:
+        shortcuts:
+          tic 1:
+            url: https://example.com/{%query}
+    `);
+    const shortcut = jsyaml.load(`
+    include: tic 1
+    `);
+    expect(() => {
+      new NamespaceFetcher(new Env({})).processInclude(
+        shortcut,
+        'leo',
+        namespaceInfos,
       );
     }).toThrow(Error);
   });

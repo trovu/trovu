@@ -5,7 +5,7 @@ e 0:
   - ebay
   - shopping
 e 1:
-  url: http://www.ebay.com.hk/sch/i.html?_nkw={%query}
+  url: http://www.ebay.com.hk/sch/i.html?_nkw=<query>
   title: Ebay.com.hk
   tags:
   - ebay

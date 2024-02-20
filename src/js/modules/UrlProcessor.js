@@ -1,15 +1,27 @@
 /** @module UrlProcessor */
-
+import Helper from './Helper.js';
 import CityType from './type/city.js';
 import DateType from './type/date.js';
-import Helper from './Helper.js';
 import TimeType from './type/time.js';
-
 import dayjs from 'dayjs';
+import jsyaml from 'js-yaml';
 
 /** Process a shortcut URL for redirect. */
 
 export default class UrlProcessor {
+  static getPlaceholdersFromString(str, prefix) {
+    const pattern = '<' + prefix + '(.+?)>';
+    const re = RegExp(pattern, 'g');
+    let match;
+    const placeholders = {};
+    while ((match = re.exec(str))) {
+      const { name, placeholder } = this.getPlaceholderFromMatch(match);
+      placeholders[name] = placeholders[name] || {};
+      placeholders[name][match[0]] = placeholder;
+    }
+    return placeholders;
+  }
+
   /**
    * Get placeholder names from a string.
    *
@@ -34,13 +46,13 @@ export default class UrlProcessor {
    *     }
    *   }
    */
-  static getPlaceholdersFromString(str, prefix) {
+  static getPlaceholdersFromStringLegacy(str, prefix) {
     const pattern = '{' + prefix + '(.+?)}';
     const re = RegExp(pattern, 'g');
     let match;
     const placeholders = {};
     while ((match = re.exec(str))) {
-      const { name, placeholder } = this.getPlaceholderFromMatch(match);
+      const { name, placeholder } = this.getPlaceholderFromMatchLegacy(match);
       placeholders[name] = placeholders[name] || {};
       placeholders[name][match[0]] = placeholder;
     }
@@ -48,6 +60,20 @@ export default class UrlProcessor {
   }
 
   static getPlaceholderFromMatch(match) {
+    const yaml = match[1];
+    const parsed = jsyaml.load(yaml);
+    if (typeof parsed === 'string') {
+      const name = parsed;
+      const placeholder = {};
+      return { name, placeholder };
+    } else {
+      const name = Object.keys(parsed)[0];
+      const placeholder = parsed[name];
+      return { name, placeholder };
+    }
+  }
+
+  static getPlaceholderFromMatchLegacy(match) {
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
     const nameAndAttributes = match[1].split('|');
@@ -72,7 +98,13 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getArgumentsFromString(str) {
-    return this.getPlaceholdersFromString(str, '%');
+    const placeholders = {};
+    Object.assign(
+      placeholders,
+      this.getPlaceholdersFromString(str, '(?![\\$])'),
+    );
+    Object.assign(placeholders, this.getPlaceholdersFromStringLegacy(str, '%'));
+    return placeholders;
   }
 
   /**
@@ -83,7 +115,10 @@ export default class UrlProcessor {
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
   static getVariablesFromString(str) {
-    return this.getPlaceholdersFromString(str, '\\$');
+    const variables = {};
+    Object.assign(variables, this.getPlaceholdersFromString(str, '\\$'));
+    Object.assign(variables, this.getPlaceholdersFromStringLegacy(str, '\\$'));
+    return variables;
   }
 
   /**
@@ -94,7 +129,7 @@ export default class UrlProcessor {
    *
    * @return {string} str   - The string with the replaced placeholders.
    */
-  static async replaceArguments(str, args, env) {
+  static replaceArguments(str, args, env) {
     const placeholders = this.getArgumentsFromString(str);
 
     for (const argumentName in placeholders) {
@@ -104,7 +139,7 @@ export default class UrlProcessor {
       // so go over all of them.
       const matches = placeholders[argumentName];
       for (const match in matches) {
-        argument = await this.processAttributes(argument, matches[match], env);
+        argument = this.processAttributes(argument, matches[match], env);
         while (str.includes(match)) {
           str = str.replace(match, argument);
         }
@@ -113,8 +148,8 @@ export default class UrlProcessor {
     return str;
   }
 
-  static async processAttributes(processedArgument, attributes, env) {
-    processedArgument = await this.processAttributeType(
+  static processAttributes(processedArgument, attributes, env) {
+    processedArgument = this.processAttributeType(
       attributes,
       processedArgument,
       env,
@@ -130,36 +165,36 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static async processAttributeType(attributes, processedArgument, env) {
+  static processAttributeType(attributes, processedArgument, env) {
     const locale = env.language + '-' + env.country.toUpperCase();
     switch (attributes.type) {
       case 'date':
-        processedArgument = await this.processTypeDate(
+        processedArgument = this.processTypeDate(
           processedArgument,
-          locale,
           attributes,
+          env,
         );
         break;
       case 'time':
-        processedArgument = await this.processTypeTime(
+        processedArgument = this.processTypeTime(
           processedArgument,
           locale,
           attributes,
         );
         break;
       case 'city':
-        processedArgument = await this.processTypeCity(processedArgument, env);
+        processedArgument = this.processTypeCity(processedArgument, env);
         break;
     }
     return processedArgument;
   }
 
-  static async processTypeDate(processedArgument, locale, attributes) {
-    const dateNative = await DateType.parse(processedArgument, locale);
-    const date = dayjs(dateNative);
+  static processTypeDate(processedArgument, attributes, env) {
+    const dateNative = DateType.parse(processedArgument, env);
     // If date could be parsed:
     // Set argument.
-    if (date) {
+    if (dateNative) {
+      const date = dayjs(dateNative);
       let format = 'YYYY-MM-DD';
       if (attributes.output) {
         format = attributes.output;
@@ -169,8 +204,8 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static async processTypeTime(processedArgument, locale, attributes) {
-    const timeNative = await TimeType.parse(processedArgument);
+  static processTypeTime(processedArgument, attributes) {
+    const timeNative = TimeType.parse(processedArgument);
     const time = dayjs(timeNative);
     // If time could be parsed:
     // Set argument.
@@ -184,8 +219,8 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static async processTypeCity(processedArgument, env) {
-    const city = await CityType.parse(processedArgument, env);
+  static processTypeCity(processedArgument, env) {
+    const city = CityType.parse(processedArgument, env);
     // If city could be parsed:
     // Set argument.
     if (city) {
@@ -242,7 +277,7 @@ export default class UrlProcessor {
       for (const match in matches) {
         const attributes = matches[match];
         switch (varName) {
-          case 'now':
+          case 'now': {
             const time = dayjs();
 
             let format = 'HH:mm';
@@ -252,7 +287,7 @@ export default class UrlProcessor {
             value = time.format(format);
 
             break;
-
+          }
           default:
             value = variables[varName];
             break;

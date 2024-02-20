@@ -2,12 +2,14 @@
 
 ## Prerequisites
 
--   Nodejs >= 18
--   npm >= 10
+-   NodeJS >= 18
+-   NPM >= 10
 
 ## Installation
 
 ```bash
+git clone https://github.com/trovu/trovu.git
+cd trovu
 npm clean-install      # Install dependencies
 npm run build          # Build the website including data
 npm run serve          # Run the local server
@@ -21,4 +23,4 @@ If you prefer your local installation over [trovu.net](https://trovu.net/), you 
 
 ## Code documentation
 
-An auto-created documentation of the code by [JSdoc](https://jsdoc.app/) is also [available](code/).
+An auto-created documentation of the code by [JSDoc](https://jsdoc.app/) is also [available](code/).

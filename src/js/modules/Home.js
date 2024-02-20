@@ -1,13 +1,14 @@
 /** @module Home */
-
 import '../../scss/style.scss';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'font-awesome/css/font-awesome.min.css';
-import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import Env from './Env.js';
 import Helper from './Helper.js';
 import Settings from './home/Settings.js';
-import Suggestions from './Suggestions';
+import Suggestions from './home/Suggestions.js';
+
+/* eslint-disable no-unused-vars */
+import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 /** Set and manage the homepage. */
 
@@ -23,11 +24,11 @@ export default class Home {
 
     this.env = new Env();
 
-    // Must be done before env.populate()
-    // otherwise Chrome does not autodiscover.
-
     // Init environment.
     await this.env.populate();
+
+    this.helpDiv = document.querySelector('#help');
+    this.queryInput = document.querySelector('#query');
 
     new Settings(this.env);
 
@@ -42,6 +43,26 @@ export default class Home {
     document.getElementById('query-form').onsubmit = this.submitQuery;
     document.querySelector('.navbar a.reload').onclick = this.reload;
     document.documentElement.setAttribute('data-page-loaded', 'true');
+
+    Home.setHeights();
+  }
+
+  static setHeights() {
+    Home.setMaxHeightForSuggestions();
+    window.onresize = Home.setMaxHeightForSuggestions;
+  }
+
+  static setMaxHeightForSuggestions() {
+    const suggestionsDiv = document.querySelector('#suggestions');
+    // Fallback value.
+    suggestionsDiv.style.maxHeight = '200px';
+    const suggestionsTop = document
+      .querySelector('#suggestions')
+      .getBoundingClientRect().top;
+    const footerTop = document
+      .querySelector('footer')
+      .getBoundingClientRect().top;
+    suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
   }
 
   /**
@@ -49,9 +70,9 @@ export default class Home {
    */
   getProcessUrl() {
     const params = this.env.getParams();
-    params['query'] = document.getElementById('query').value;
+    params['query'] = this.queryInput.value;
 
-    const paramStr = Helper.getUrlParamStr(params);
+    const paramStr = Env.getUrlParamStr(params);
 
     // "?" causes Chrome to translate plus signs properly into %2B
     // even when called from address bar.
@@ -63,30 +84,48 @@ export default class Home {
   setQueryElement() {
     switch (this.env.status) {
       case 'deprecated':
-        document.querySelector('#query').value = this.env.alternative;
+        this.queryInput.value = this.env.alternative;
         break;
       case 'reloaded':
-        document.querySelector('#query').value = '';
+        this.queryInput.value = '';
         break;
       default:
-        document.querySelector('#query').value = this.env.query || '';
+        this.queryInput.value = this.env.query || '';
         break;
     }
 
-    new Suggestions(this.env.namespaceInfos, this.submitQuery);
-    document.querySelector('#query').focus();
-    document.querySelector('#query').addEventListener('input', (event) => {
-      // Toggle display of navbar and examples.
-      if (event.target.value.trim() === '') {
-        document.querySelector('nav.navbar').style.display = 'block';
-        document.querySelector('#examples-and-about').style.display = 'block';
-        document.querySelector('.jumbotron').style.padding = '3em 1em';
-      } else {
-        document.querySelector('nav.navbar').style.display = 'none';
-        document.querySelector('#examples-and-about').style.display = 'none';
-        document.querySelector('.jumbotron').style.padding = '1em 1em';
-      }
+    this.suggestions = new Suggestions('#query', '#suggestions', this.env);
+    this.setToggleByQuery();
+  }
+
+  setToggleByQuery() {
+    this.queryInput.focus();
+    this.queryInput.addEventListener('input', () => {
+      this.toggleByQuery();
     });
+    document.querySelector('#suggestions').addEventListener('click', () => {
+      this.toggleByQuery();
+    });
+  }
+
+  toggleByQuery() {
+    // Toggle display of navbar and examples.
+    if (
+      this.queryInput.value.trim() === '' &&
+      this.suggestions.selected === -1
+    ) {
+      document.querySelector('nav.navbar').style.display = 'block';
+      document.querySelector('#intro').style.display = 'block';
+      document.querySelector('#alert').style.display = 'block';
+      this.helpDiv.innerHTML = '';
+    } else {
+      document.querySelector('nav.navbar').style.display = 'none';
+      document.querySelector('#intro').style.display = 'none';
+      document.querySelector('#alert').style.display = 'none';
+      this.helpDiv.innerHTML =
+        'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
+    }
+    Home.setHeights();
   }
 
   setLocationHash() {
@@ -98,7 +137,7 @@ export default class Home {
    * Show custom alerts above query input.
    */
   showInfoAlerts() {
-    const params = Helper.getUrlParams();
+    const params = Env.getUrlParams();
     const alert = document.querySelector('#alert');
     if (params.status) {
       alert.removeAttribute('hidden');
@@ -136,9 +175,7 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-
     const processUrl = this.getProcessUrl();
-
     // Redirect to process script.
     window.location.href = processUrl;
   };
@@ -152,7 +189,7 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-    document.querySelector('#query').value = 'reload';
+    this.queryInput.value = 'reload';
     this.submitQuery();
   };
 
@@ -162,7 +199,7 @@ export default class Home {
   addLinkSearch() {
     const params = new URLSearchParams(location.hash.substring(1));
     // Only keep relevant parameters.
-    for (const [key, value] of params.entries()) {
+    for (const [key] of params.entries()) {
       if (!['language', 'country', 'github'].includes(key)) {
         params.delete(key);
       }

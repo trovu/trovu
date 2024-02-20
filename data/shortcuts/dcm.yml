@@ -1,9 +1,9 @@
 ar 0:
   include:
-    key: ar-{$language} 0
+    key: ar-<$language> 0
 ar 1:
   include:
-    key: ar-{$language} 1
+    key: ar-<$language> 1
 ar-bg 0:
   url: https://www.dict.com/arabic-bulgarian/
   title: Арабски-Български (dict.com)
@@ -13,7 +13,7 @@ ar-bg 0:
   - dictionary
   - language
 ar-bg 1:
-  url: https://www.dict.com/arabic-bulgarian/{%word}
+  url: https://www.dict.com/arabic-bulgarian/<word>
   title: Арабски-Български (dict.com)
   tags:
   - arabic
@@ -34,7 +34,7 @@ ar-ca 0:
   - dictionary
   - language
 ar-ca 1:
-  url: https://www.dict.com/arabic-catalan/{%word}
+  url: https://www.dict.com/arabic-catalan/<word>
   title: Àrab-Català (dict.com)
   tags:
   - arabic
@@ -55,7 +55,7 @@ ar-cs 0:
   - dictionary
   - language
 ar-cs 1:
-  url: https://www.dict.com/arabic-czech/{%word}
+  url: https://www.dict.com/arabic-czech/<word>
   title: Arabština-Čeština (dict.com)
   tags:
   - arabic
@@ -76,7 +76,7 @@ ar-da 0:
   - dictionary
   - language
 ar-da 1:
-  url: https://www.dict.com/arabic-danish/{%word}
+  url: https://www.dict.com/arabic-danish/<word>
   title: Arabisk-Dansk (dict.com)
   tags:
   - arabic
@@ -97,7 +97,7 @@ ar-de 0:
   - german
   - language
 ar-de 1:
-  url: https://www.dict.com/arabic-german/{%word}
+  url: https://www.dict.com/arabic-german/<word>
   title: Arabisch-Deutsch (dict.com)
   tags:
   - arabic
@@ -118,7 +118,7 @@ ar-el 0:
   - greek
   - language
 ar-el 1:
-  url: https://www.dict.com/arabic-greek/{%word}
+  url: https://www.dict.com/arabic-greek/<word>
   title: Αραβικά-Ελληνικά (dict.com)
   tags:
   - arabic
@@ -139,7 +139,7 @@ ar-en 0:
   - english
   - language
 ar-en 1:
-  url: https://www.dict.com/arabic-english/{%word}
+  url: https://www.dict.com/arabic-english/<word>
   title: Arabic-English (dict.com)
   tags:
   - arabic
@@ -160,7 +160,7 @@ ar-es 0:
   - language
   - spanish
 ar-es 1:
-  url: https://www.dict.com/arabic-spanish/{%word}
+  url: https://www.dict.com/arabic-spanish/<word>
   title: Árabe-Español (dict.com)
   tags:
   - arabic
@@ -181,7 +181,7 @@ ar-et 0:
   - estonian
   - language
 ar-et 1:
-  url: https://www.dict.com/arabic-estonian/{%word}
+  url: https://www.dict.com/arabic-estonian/<word>
   title: Araabia-Eesti (dict.com)
   tags:
   - arabic
@@ -202,7 +202,7 @@ ar-fi 0:
   - finnish
   - language
 ar-fi 1:
-  url: https://www.dict.com/arabic-finnish/{%word}
+  url: https://www.dict.com/arabic-finnish/<word>
   title: Arabia-Suomi (dict.com)
   tags:
   - arabic
@@ -223,7 +223,7 @@ ar-fr 0:
   - french
   - language
 ar-fr 1:
-  url: https://www.dict.com/arabic-french/{%word}
+  url: https://www.dict.com/arabic-french/<word>
   title: Arabe-Français (dict.com)
   tags:
   - arabic
@@ -244,7 +244,7 @@ ar-he 0:
   - hebrew
   - language
 ar-he 1:
-  url: https://www.dict.com/arabic-hebrew/{%word}
+  url: https://www.dict.com/arabic-hebrew/<word>
   title: ערבית-עברית (dict.com)
   tags:
   - arabic
@@ -265,7 +265,7 @@ ar-hr 0:
   - dictionary
   - language
 ar-hr 1:
-  url: https://www.dict.com/arabic-croatian/{%word}
+  url: https://www.dict.com/arabic-croatian/<word>
   title: Arapski-Hrvatski (dict.com)
   tags:
   - arabic
@@ -286,7 +286,7 @@ ar-hu 0:
   - hungarian
   - language
 ar-hu 1:
-  url: https://www.dict.com/arabic-hungarian/{%word}
+  url: https://www.dict.com/arabic-hungarian/<word>
   title: Arab-Magyar (dict.com)
   tags:
   - arabic
@@ -307,7 +307,7 @@ ar-id 0:
   - indonesian
   - language
 ar-id 1:
-  url: https://www.dict.com/arabic-indonesian/{%word}
+  url: https://www.dict.com/arabic-indonesian/<word>
   title: Arab-Bahasa Indonesia (dict.com)
   tags:
   - arabic
@@ -328,7 +328,7 @@ ar-it 0:
   - italian
   - language
 ar-it 1:
-  url: https://www.dict.com/arabic-italian/{%word}
+  url: https://www.dict.com/arabic-italian/<word>
   title: Arabo-Italiano (dict.com)
   tags:
   - arabic
@@ -349,7 +349,7 @@ ar-ja 0:
   - japanese
   - language
 ar-ja 1:
-  url: https://www.dict.com/arabic-japanese/{%word}
+  url: https://www.dict.com/arabic-japanese/<word>
   title: アラビア語-日本語 (dict.com)
   tags:
   - arabic
@@ -370,7 +370,7 @@ ar-ko 0:
   - korean
   - language
 ar-ko 1:
-  url: https://www.dict.com/arabic-korean/{%word}
+  url: https://www.dict.com/arabic-korean/<word>
   title: 아랍어-한국어 (dict.com)
   tags:
   - arabic
@@ -391,7 +391,7 @@ ar-lt 0:
   - language
   - lithuanian
 ar-lt 1:
-  url: https://www.dict.com/arabic-lithuanian/{%word}
+  url: https://www.dict.com/arabic-lithuanian/<word>
   title: Arabų-Lietuvių (dict.com)
   tags:
   - arabic
@@ -412,7 +412,7 @@ ar-lv 0:
   - language
   - latvian
 ar-lv 1:
-  url: https://www.dict.com/arabic-latvian/{%word}
+  url: https://www.dict.com/arabic-latvian/<word>
   title: Arābu-Latviešu (dict.com)
   tags:
   - arabic
@@ -433,7 +433,7 @@ ar-nl 0:
   - dutch
   - language
 ar-nl 1:
-  url: https://www.dict.com/arabic-dutch/{%word}
+  url: https://www.dict.com/arabic-dutch/<word>
   title: Arabisch-Nederlands (dict.com)
   tags:
   - arabic
@@ -454,7 +454,7 @@ ar-no 0:
   - language
   - norwegian
 ar-no 1:
-  url: https://www.dict.com/arabic-norwegian/{%word}
+  url: https://www.dict.com/arabic-norwegian/<word>
   title: Arabisk-Norsk (dict.com)
   tags:
   - arabic
@@ -475,7 +475,7 @@ ar-pl 0:
   - language
   - polish
 ar-pl 1:
-  url: https://www.dict.com/arabic-polish/{%word}
+  url: https://www.dict.com/arabic-polish/<word>
   title: Arabski-Polski (dict.com)
   tags:
   - arabic
@@ -496,7 +496,7 @@ ar-pt 0:
   - language
   - portuguese
 ar-pt 1:
-  url: https://www.dict.com/arabic-portuguese/{%word}
+  url: https://www.dict.com/arabic-portuguese/<word>
   title: Árabe-Português (dict.com)
   tags:
   - arabic
@@ -517,7 +517,7 @@ ar-ro 0:
   - language
   - romanian
 ar-ro 1:
-  url: https://www.dict.com/arabic-romanian/{%word}
+  url: https://www.dict.com/arabic-romanian/<word>
   title: Arabă-Română (dict.com)
   tags:
   - arabic
@@ -538,7 +538,7 @@ ar-ru 0:
   - language
   - russian
 ar-ru 1:
-  url: https://www.dict.com/arabic-russian/{%word}
+  url: https://www.dict.com/arabic-russian/<word>
   title: Арабский-Русский (dict.com)
   tags:
   - arabic
@@ -559,7 +559,7 @@ ar-sk 0:
   - language
   - slovak
 ar-sk 1:
-  url: https://www.dict.com/arabic-slovak/{%word}
+  url: https://www.dict.com/arabic-slovak/<word>
   title: Arabčina-Slovenčina (dict.com)
   tags:
   - arabic
@@ -580,7 +580,7 @@ ar-sl 0:
   - language
   - slovenian
 ar-sl 1:
-  url: https://www.dict.com/arabic-slovenian/{%word}
+  url: https://www.dict.com/arabic-slovenian/<word>
   title: Arabščina-Slovenščina (dict.com)
   tags:
   - arabic
@@ -601,7 +601,7 @@ ar-sr 0:
   - language
   - serbian
 ar-sr 1:
-  url: https://www.dict.com/arabic-serbian/{%word}
+  url: https://www.dict.com/arabic-serbian/<word>
   title: Арапски-Српски (dict.com)
   tags:
   - arabic
@@ -622,7 +622,7 @@ ar-sv 0:
   - language
   - swedish
 ar-sv 1:
-  url: https://www.dict.com/arabic-swedish/{%word}
+  url: https://www.dict.com/arabic-swedish/<word>
   title: Arabiska-Svenska (dict.com)
   tags:
   - arabic
@@ -643,7 +643,7 @@ ar-th 0:
   - language
   - thai
 ar-th 1:
-  url: https://www.dict.com/arabic-thai/{%word}
+  url: https://www.dict.com/arabic-thai/<word>
   title: อาหรับ-ไทย (dict.com)
   tags:
   - arabic
@@ -664,7 +664,7 @@ ar-tr 0:
   - language
   - turkish
 ar-tr 1:
-  url: https://www.dict.com/arabic-turkish/{%word}
+  url: https://www.dict.com/arabic-turkish/<word>
   title: Arapça-Türkçe (dict.com)
   tags:
   - arabic
@@ -685,7 +685,7 @@ ar-uk 0:
   - language
   - ukrainian
 ar-uk 1:
-  url: https://www.dict.com/arabic-ukrainian/{%word}
+  url: https://www.dict.com/arabic-ukrainian/<word>
   title: Арабська-Українська (dict.com)
   tags:
   - arabic
@@ -706,7 +706,7 @@ ar-vi 0:
   - language
   - vietnamese
 ar-vi 1:
-  url: https://www.dict.com/arabic-vietnamese/{%word}
+  url: https://www.dict.com/arabic-vietnamese/<word>
   title: Tiếng Ả Rập-Tiếng Việt (dict.com)
   tags:
   - arabic
@@ -727,7 +727,7 @@ ar-zh 0:
   - dictionary
   - language
 ar-zh 1:
-  url: https://www.dict.com/arabic-chinese/{%word}
+  url: https://www.dict.com/arabic-chinese/<word>
   title: 阿拉伯文-中文 (dict.com)
   tags:
   - arabic
@@ -741,10 +741,10 @@ ar-zh 1:
     description: 阿拉伯文 的"树"翻译
 bg 0:
   include:
-    key: bg-{$language} 0
+    key: bg-<$language> 0
 bg 1:
   include:
-    key: bg-{$language} 1
+    key: bg-<$language> 1
 bg-ar 0:
   title: البلغارية-العربية (dict.com)
   include:
@@ -767,7 +767,7 @@ bg-ca 0:
   - dictionary
   - language
 bg-ca 1:
-  url: https://www.dict.com/bulgarian-catalan/{%word}
+  url: https://www.dict.com/bulgarian-catalan/<word>
   title: Búlgar-Català (dict.com)
   tags:
   - bulgarian
@@ -788,7 +788,7 @@ bg-cs 0:
   - dictionary
   - language
 bg-cs 1:
-  url: https://www.dict.com/bulgarian-czech/{%word}
+  url: https://www.dict.com/bulgarian-czech/<word>
   title: Bulharština-Čeština (dict.com)
   tags:
   - bulgarian
@@ -809,7 +809,7 @@ bg-da 0:
   - dictionary
   - language
 bg-da 1:
-  url: https://www.dict.com/bulgarian-danish/{%word}
+  url: https://www.dict.com/bulgarian-danish/<word>
   title: Bulgarsk-Dansk (dict.com)
   tags:
   - bulgarian
@@ -830,7 +830,7 @@ bg-de 0:
   - german
   - language
 bg-de 1:
-  url: https://www.dict.com/bulgarian-german/{%word}
+  url: https://www.dict.com/bulgarian-german/<word>
   title: Bulgarisch-Deutsch (dict.com)
   tags:
   - bulgarian
@@ -851,7 +851,7 @@ bg-el 0:
   - greek
   - language
 bg-el 1:
-  url: https://www.dict.com/bulgarian-greek/{%word}
+  url: https://www.dict.com/bulgarian-greek/<word>
   title: Βουλγαρικά-Ελληνικά (dict.com)
   tags:
   - bulgarian
@@ -872,7 +872,7 @@ bg-en 0:
   - english
   - language
 bg-en 1:
-  url: https://www.dict.com/bulgarian-english/{%word}
+  url: https://www.dict.com/bulgarian-english/<word>
   title: Bulgarian-English (dict.com)
   tags:
   - bulgarian
@@ -893,7 +893,7 @@ bg-es 0:
   - language
   - spanish
 bg-es 1:
-  url: https://www.dict.com/bulgarian-spanish/{%word}
+  url: https://www.dict.com/bulgarian-spanish/<word>
   title: Búlgaro-Español (dict.com)
   tags:
   - bulgarian
@@ -914,7 +914,7 @@ bg-et 0:
   - estonian
   - language
 bg-et 1:
-  url: https://www.dict.com/bulgarian-estonian/{%word}
+  url: https://www.dict.com/bulgarian-estonian/<word>
   title: Bulgaaria-Eesti (dict.com)
   tags:
   - bulgarian
@@ -935,7 +935,7 @@ bg-fi 0:
   - finnish
   - language
 bg-fi 1:
-  url: https://www.dict.com/bulgarian-finnish/{%word}
+  url: https://www.dict.com/bulgarian-finnish/<word>
   title: Bulgaria-Suomi (dict.com)
   tags:
   - bulgarian
@@ -956,7 +956,7 @@ bg-fr 0:
   - french
   - language
 bg-fr 1:
-  url: https://www.dict.com/bulgarian-french/{%word}
+  url: https://www.dict.com/bulgarian-french/<word>
   title: Bulgare-Français (dict.com)
   tags:
   - bulgarian
@@ -977,7 +977,7 @@ bg-he 0:
   - hebrew
   - language
 bg-he 1:
-  url: https://www.dict.com/bulgarian-hebrew/{%word}
+  url: https://www.dict.com/bulgarian-hebrew/<word>
   title: בולגרית-עברית (dict.com)
   tags:
   - bulgarian
@@ -998,7 +998,7 @@ bg-hr 0:
   - dictionary
   - language
 bg-hr 1:
-  url: https://www.dict.com/bulgarian-croatian/{%word}
+  url: https://www.dict.com/bulgarian-croatian/<word>
   title: Bugarski-Hrvatski (dict.com)
   tags:
   - bulgarian
@@ -1019,7 +1019,7 @@ bg-hu 0:
   - hungarian
   - language
 bg-hu 1:
-  url: https://www.dict.com/bulgarian-hungarian/{%word}
+  url: https://www.dict.com/bulgarian-hungarian/<word>
   title: Bolgár-Magyar (dict.com)
   tags:
   - bulgarian
@@ -1040,7 +1040,7 @@ bg-id 0:
   - indonesian
   - language
 bg-id 1:
-  url: https://www.dict.com/bulgarian-indonesian/{%word}
+  url: https://www.dict.com/bulgarian-indonesian/<word>
   title: Bulgar-Bahasa Indonesia (dict.com)
   tags:
   - bulgarian
@@ -1061,7 +1061,7 @@ bg-it 0:
   - italian
   - language
 bg-it 1:
-  url: https://www.dict.com/bulgarian-italian/{%word}
+  url: https://www.dict.com/bulgarian-italian/<word>
   title: Bulgaro-Italiano (dict.com)
   tags:
   - bulgarian
@@ -1082,7 +1082,7 @@ bg-ja 0:
   - japanese
   - language
 bg-ja 1:
-  url: https://www.dict.com/bulgarian-japanese/{%word}
+  url: https://www.dict.com/bulgarian-japanese/<word>
   title: ブルガリア語-日本語 (dict.com)
   tags:
   - bulgarian
@@ -1103,7 +1103,7 @@ bg-ko 0:
   - korean
   - language
 bg-ko 1:
-  url: https://www.dict.com/bulgarian-korean/{%word}
+  url: https://www.dict.com/bulgarian-korean/<word>
   title: 불가리아어-한국어 (dict.com)
   tags:
   - bulgarian
@@ -1124,7 +1124,7 @@ bg-lt 0:
   - language
   - lithuanian
 bg-lt 1:
-  url: https://www.dict.com/bulgarian-lithuanian/{%word}
+  url: https://www.dict.com/bulgarian-lithuanian/<word>
   title: Bulgarų-Lietuvių (dict.com)
   tags:
   - bulgarian
@@ -1145,7 +1145,7 @@ bg-lv 0:
   - language
   - latvian
 bg-lv 1:
-  url: https://www.dict.com/bulgarian-latvian/{%word}
+  url: https://www.dict.com/bulgarian-latvian/<word>
   title: Bulgāru-Latviešu (dict.com)
   tags:
   - bulgarian
@@ -1166,7 +1166,7 @@ bg-nl 0:
   - dutch
   - language
 bg-nl 1:
-  url: https://www.dict.com/bulgarian-dutch/{%word}
+  url: https://www.dict.com/bulgarian-dutch/<word>
   title: Bulgaars-Nederlands (dict.com)
   tags:
   - bulgarian
@@ -1187,7 +1187,7 @@ bg-no 0:
   - language
   - norwegian
 bg-no 1:
-  url: https://www.dict.com/bulgarian-norwegian/{%word}
+  url: https://www.dict.com/bulgarian-norwegian/<word>
   title: Bulgarsk-Norsk (dict.com)
   tags:
   - bulgarian
@@ -1208,7 +1208,7 @@ bg-pl 0:
   - language
   - polish
 bg-pl 1:
-  url: https://www.dict.com/bulgarian-polish/{%word}
+  url: https://www.dict.com/bulgarian-polish/<word>
   title: Bułgarski-Polski (dict.com)
   tags:
   - bulgarian
@@ -1229,7 +1229,7 @@ bg-pt 0:
   - language
   - portuguese
 bg-pt 1:
-  url: https://www.dict.com/bulgarian-portuguese/{%word}
+  url: https://www.dict.com/bulgarian-portuguese/<word>
   title: Búlgaro-Português (dict.com)
   tags:
   - bulgarian
@@ -1250,7 +1250,7 @@ bg-ro 0:
   - language
   - romanian
 bg-ro 1:
-  url: https://www.dict.com/bulgarian-romanian/{%word}
+  url: https://www.dict.com/bulgarian-romanian/<word>
   title: Bulgară-Română (dict.com)
   tags:
   - bulgarian
@@ -1271,7 +1271,7 @@ bg-ru 0:
   - language
   - russian
 bg-ru 1:
-  url: https://www.dict.com/bulgarian-russian/{%word}
+  url: https://www.dict.com/bulgarian-russian/<word>
   title: Болгарский-Русский (dict.com)
   tags:
   - bulgarian
@@ -1292,7 +1292,7 @@ bg-sk 0:
   - language
   - slovak
 bg-sk 1:
-  url: https://www.dict.com/bulgarian-slovak/{%word}
+  url: https://www.dict.com/bulgarian-slovak/<word>
   title: Bulharčina-Slovenčina (dict.com)
   tags:
   - bulgarian
@@ -1313,7 +1313,7 @@ bg-sl 0:
   - language
   - slovenian
 bg-sl 1:
-  url: https://www.dict.com/bulgarian-slovenian/{%word}
+  url: https://www.dict.com/bulgarian-slovenian/<word>
   title: Bolgarščina-Slovenščina (dict.com)
   tags:
   - bulgarian
@@ -1334,7 +1334,7 @@ bg-sr 0:
   - language
   - serbian
 bg-sr 1:
-  url: https://www.dict.com/bulgarian-serbian/{%word}
+  url: https://www.dict.com/bulgarian-serbian/<word>
   title: Бугарски-Српски (dict.com)
   tags:
   - bulgarian
@@ -1355,7 +1355,7 @@ bg-sv 0:
   - language
   - swedish
 bg-sv 1:
-  url: https://www.dict.com/bulgarian-swedish/{%word}
+  url: https://www.dict.com/bulgarian-swedish/<word>
   title: Bulgariska-Svenska (dict.com)
   tags:
   - bulgarian
@@ -1376,7 +1376,7 @@ bg-th 0:
   - language
   - thai
 bg-th 1:
-  url: https://www.dict.com/bulgarian-thai/{%word}
+  url: https://www.dict.com/bulgarian-thai/<word>
   title: บัลแกเรีย-ไทย (dict.com)
   tags:
   - bulgarian
@@ -1397,7 +1397,7 @@ bg-tr 0:
   - language
   - turkish
 bg-tr 1:
-  url: https://www.dict.com/bulgarian-turkish/{%word}
+  url: https://www.dict.com/bulgarian-turkish/<word>
   title: Bulgarca-Türkçe (dict.com)
   tags:
   - bulgarian
@@ -1418,7 +1418,7 @@ bg-uk 0:
   - language
   - ukrainian
 bg-uk 1:
-  url: https://www.dict.com/bulgarian-ukrainian/{%word}
+  url: https://www.dict.com/bulgarian-ukrainian/<word>
   title: Болгарська-Українська (dict.com)
   tags:
   - bulgarian
@@ -1439,7 +1439,7 @@ bg-vi 0:
   - language
   - vietnamese
 bg-vi 1:
-  url: https://www.dict.com/bulgarian-vietnamese/{%word}
+  url: https://www.dict.com/bulgarian-vietnamese/<word>
   title: Tiếng Bulgaria-Tiếng Việt (dict.com)
   tags:
   - bulgarian
@@ -1460,7 +1460,7 @@ bg-zh 0:
   - dictionary
   - language
 bg-zh 1:
-  url: https://www.dict.com/bulgarian-chinese/{%word}
+  url: https://www.dict.com/bulgarian-chinese/<word>
   title: 保加利亚文-中文 (dict.com)
   tags:
   - bulgarian
@@ -1474,10 +1474,10 @@ bg-zh 1:
     description: 保加利亚文 的"树"翻译
 ca 0:
   include:
-    key: ca-{$language} 0
+    key: ca-<$language> 0
 ca 1:
   include:
-    key: ca-{$language} 1
+    key: ca-<$language> 1
 ca-ar 0:
   title: الكتالانية-العربية (dict.com)
   include:
@@ -1513,7 +1513,7 @@ ca-cs 0:
   - dictionary
   - language
 ca-cs 1:
-  url: https://www.dict.com/catalan-czech/{%word}
+  url: https://www.dict.com/catalan-czech/<word>
   title: Katalánština-Čeština (dict.com)
   tags:
   - catalan
@@ -1534,7 +1534,7 @@ ca-da 0:
   - dictionary
   - language
 ca-da 1:
-  url: https://www.dict.com/catalan-danish/{%word}
+  url: https://www.dict.com/catalan-danish/<word>
   title: Catalansk-Dansk (dict.com)
   tags:
   - catalan
@@ -1555,7 +1555,7 @@ ca-de 0:
   - german
   - language
 ca-de 1:
-  url: https://www.dict.com/catalan-german/{%word}
+  url: https://www.dict.com/catalan-german/<word>
   title: Katalanisch-Deutsch (dict.com)
   tags:
   - catalan
@@ -1576,7 +1576,7 @@ ca-el 0:
   - greek
   - language
 ca-el 1:
-  url: https://www.dict.com/catalan-greek/{%word}
+  url: https://www.dict.com/catalan-greek/<word>
   title: Καταλανικά-Ελληνικά (dict.com)
   tags:
   - catalan
@@ -1597,7 +1597,7 @@ ca-en 0:
   - english
   - language
 ca-en 1:
-  url: https://www.dict.com/catalan-english/{%word}
+  url: https://www.dict.com/catalan-english/<word>
   title: Catalan-English (dict.com)
   tags:
   - catalan
@@ -1618,7 +1618,7 @@ ca-es 0:
   - language
   - spanish
 ca-es 1:
-  url: https://www.dict.com/catalan-spanish/{%word}
+  url: https://www.dict.com/catalan-spanish/<word>
   title: Catalán-Español (dict.com)
   tags:
   - catalan
@@ -1639,7 +1639,7 @@ ca-et 0:
   - estonian
   - language
 ca-et 1:
-  url: https://www.dict.com/catalan-estonian/{%word}
+  url: https://www.dict.com/catalan-estonian/<word>
   title: Katalaani-Eesti (dict.com)
   tags:
   - catalan
@@ -1660,7 +1660,7 @@ ca-fi 0:
   - finnish
   - language
 ca-fi 1:
-  url: https://www.dict.com/catalan-finnish/{%word}
+  url: https://www.dict.com/catalan-finnish/<word>
   title: Katalaani-Suomi (dict.com)
   tags:
   - catalan
@@ -1681,7 +1681,7 @@ ca-fr 0:
   - french
   - language
 ca-fr 1:
-  url: https://www.dict.com/catalan-french/{%word}
+  url: https://www.dict.com/catalan-french/<word>
   title: Catalan-Français (dict.com)
   tags:
   - catalan
@@ -1700,7 +1700,7 @@ ca-he 0:
   - hebrew
   - language
 ca-he 1:
-  url: https://www.dict.com/catalan-hebrew/{%word}
+  url: https://www.dict.com/catalan-hebrew/<word>
   title: קטלאנית-עברית (dict.com)
   tags:
   - catalan
@@ -1721,7 +1721,7 @@ ca-hr 0:
   - dictionary
   - language
 ca-hr 1:
-  url: https://www.dict.com/catalan-croatian/{%word}
+  url: https://www.dict.com/catalan-croatian/<word>
   title: Katalonski-Hrvatski (dict.com)
   tags:
   - catalan
@@ -1742,7 +1742,7 @@ ca-hu 0:
   - hungarian
   - language
 ca-hu 1:
-  url: https://www.dict.com/catalan-hungarian/{%word}
+  url: https://www.dict.com/catalan-hungarian/<word>
   title: Katalán-Magyar (dict.com)
   tags:
   - catalan
@@ -1763,7 +1763,7 @@ ca-id 0:
   - indonesian
   - language
 ca-id 1:
-  url: https://www.dict.com/catalan-indonesian/{%word}
+  url: https://www.dict.com/catalan-indonesian/<word>
   title: Katalan-Bahasa Indonesia (dict.com)
   tags:
   - catalan
@@ -1784,7 +1784,7 @@ ca-it 0:
   - italian
   - language
 ca-it 1:
-  url: https://www.dict.com/catalan-italian/{%word}
+  url: https://www.dict.com/catalan-italian/<word>
   title: Catalano-Italiano (dict.com)
   tags:
   - catalan
@@ -1805,7 +1805,7 @@ ca-ja 0:
   - japanese
   - language
 ca-ja 1:
-  url: https://www.dict.com/catalan-japanese/{%word}
+  url: https://www.dict.com/catalan-japanese/<word>
   title: カタロニア語-日本語 (dict.com)
   tags:
   - catalan
@@ -1826,7 +1826,7 @@ ca-ko 0:
   - korean
   - language
 ca-ko 1:
-  url: https://www.dict.com/catalan-korean/{%word}
+  url: https://www.dict.com/catalan-korean/<word>
   title: 카탈로니아어-한국어 (dict.com)
   tags:
   - catalan
@@ -1847,7 +1847,7 @@ ca-lt 0:
   - language
   - lithuanian
 ca-lt 1:
-  url: https://www.dict.com/catalan-lithuanian/{%word}
+  url: https://www.dict.com/catalan-lithuanian/<word>
   title: Katalonų-Lietuvių (dict.com)
   tags:
   - catalan
@@ -1868,7 +1868,7 @@ ca-lv 0:
   - language
   - latvian
 ca-lv 1:
-  url: https://www.dict.com/catalan-latvian/{%word}
+  url: https://www.dict.com/catalan-latvian/<word>
   title: Katalāņu-Latviešu (dict.com)
   tags:
   - catalan
@@ -1889,7 +1889,7 @@ ca-nl 0:
   - dutch
   - language
 ca-nl 1:
-  url: https://www.dict.com/catalan-dutch/{%word}
+  url: https://www.dict.com/catalan-dutch/<word>
   title: Catalaans-Nederlands (dict.com)
   tags:
   - catalan
@@ -1910,7 +1910,7 @@ ca-no 0:
   - language
   - norwegian
 ca-no 1:
-  url: https://www.dict.com/catalan-norwegian/{%word}
+  url: https://www.dict.com/catalan-norwegian/<word>
   title: Katalansk-Norsk (dict.com)
   tags:
   - catalan
@@ -1931,7 +1931,7 @@ ca-pl 0:
   - language
   - polish
 ca-pl 1:
-  url: https://www.dict.com/catalan-polish/{%word}
+  url: https://www.dict.com/catalan-polish/<word>
   title: Kataloński-Polski (dict.com)
   tags:
   - catalan
@@ -1952,7 +1952,7 @@ ca-pt 0:
   - language
   - portuguese
 ca-pt 1:
-  url: https://www.dict.com/catalan-portuguese/{%word}
+  url: https://www.dict.com/catalan-portuguese/<word>
   title: Catalão-Português (dict.com)
   tags:
   - catalan
@@ -1973,7 +1973,7 @@ ca-ro 0:
   - language
   - romanian
 ca-ro 1:
-  url: https://www.dict.com/catalan-romanian/{%word}
+  url: https://www.dict.com/catalan-romanian/<word>
   title: Catalană-Română (dict.com)
   tags:
   - catalan
@@ -1994,7 +1994,7 @@ ca-ru 0:
   - language
   - russian
 ca-ru 1:
-  url: https://www.dict.com/catalan-russian/{%word}
+  url: https://www.dict.com/catalan-russian/<word>
   title: Каталанский-Русский (dict.com)
   tags:
   - catalan
@@ -2015,7 +2015,7 @@ ca-sk 0:
   - language
   - slovak
 ca-sk 1:
-  url: https://www.dict.com/catalan-slovak/{%word}
+  url: https://www.dict.com/catalan-slovak/<word>
   title: Katalánčina-Slovenčina (dict.com)
   tags:
   - catalan
@@ -2036,7 +2036,7 @@ ca-sl 0:
   - language
   - slovenian
 ca-sl 1:
-  url: https://www.dict.com/catalan-slovenian/{%word}
+  url: https://www.dict.com/catalan-slovenian/<word>
   title: Katalonščina-Slovenščina (dict.com)
   tags:
   - catalan
@@ -2057,7 +2057,7 @@ ca-sr 0:
   - language
   - serbian
 ca-sr 1:
-  url: https://www.dict.com/catalan-serbian/{%word}
+  url: https://www.dict.com/catalan-serbian/<word>
   title: Каталонски-Српски (dict.com)
   tags:
   - catalan
@@ -2078,7 +2078,7 @@ ca-sv 0:
   - language
   - swedish
 ca-sv 1:
-  url: https://www.dict.com/catalan-swedish/{%word}
+  url: https://www.dict.com/catalan-swedish/<word>
   title: Katalanska-Svenska (dict.com)
   tags:
   - catalan
@@ -2099,7 +2099,7 @@ ca-th 0:
   - language
   - thai
 ca-th 1:
-  url: https://www.dict.com/catalan-thai/{%word}
+  url: https://www.dict.com/catalan-thai/<word>
   title: กาตาลัง-ไทย (dict.com)
   tags:
   - catalan
@@ -2120,7 +2120,7 @@ ca-tr 0:
   - language
   - turkish
 ca-tr 1:
-  url: https://www.dict.com/catalan-turkish/{%word}
+  url: https://www.dict.com/catalan-turkish/<word>
   title: Katalanca-Türkçe (dict.com)
   tags:
   - catalan
@@ -2141,7 +2141,7 @@ ca-uk 0:
   - language
   - ukrainian
 ca-uk 1:
-  url: https://www.dict.com/catalan-ukrainian/{%word}
+  url: https://www.dict.com/catalan-ukrainian/<word>
   title: Каталонська-Українська (dict.com)
   tags:
   - catalan
@@ -2162,7 +2162,7 @@ ca-vi 0:
   - language
   - vietnamese
 ca-vi 1:
-  url: https://www.dict.com/catalan-vietnamese/{%word}
+  url: https://www.dict.com/catalan-vietnamese/<word>
   title: Tiếng Catalan-Tiếng Việt (dict.com)
   tags:
   - catalan
@@ -2183,7 +2183,7 @@ ca-zh 0:
   - dictionary
   - language
 ca-zh 1:
-  url: https://www.dict.com/catalan-chinese/{%word}
+  url: https://www.dict.com/catalan-chinese/<word>
   title: 加泰罗尼亚文-中文 (dict.com)
   tags:
   - catalan
@@ -2197,10 +2197,10 @@ ca-zh 1:
     description: 加泰罗尼亚文 的"树"翻译
 cs 0:
   include:
-    key: cs-{$language} 0
+    key: cs-<$language> 0
 cs 1:
   include:
-    key: cs-{$language} 1
+    key: cs-<$language> 1
 cs-ar 0:
   title: التشيكية-العربية (dict.com)
   include:
@@ -2249,7 +2249,7 @@ cs-da 0:
   - dictionary
   - language
 cs-da 1:
-  url: https://www.dict.com/czech-danish/{%word}
+  url: https://www.dict.com/czech-danish/<word>
   title: Tjekkisk-Dansk (dict.com)
   tags:
   - czech
@@ -2270,7 +2270,7 @@ cs-de 0:
   - german
   - language
 cs-de 1:
-  url: https://www.dict.com/czech-german/{%word}
+  url: https://www.dict.com/czech-german/<word>
   title: Tschechisch-Deutsch (dict.com)
   tags:
   - czech
@@ -2291,7 +2291,7 @@ cs-el 0:
   - greek
   - language
 cs-el 1:
-  url: https://www.dict.com/czech-greek/{%word}
+  url: https://www.dict.com/czech-greek/<word>
   title: Τσεχικά-Ελληνικά (dict.com)
   tags:
   - czech
@@ -2312,7 +2312,7 @@ cs-en 0:
   - english
   - language
 cs-en 1:
-  url: https://www.dict.com/czech-english/{%word}
+  url: https://www.dict.com/czech-english/<word>
   title: Czech-English (dict.com)
   tags:
   - czech
@@ -2333,7 +2333,7 @@ cs-es 0:
   - language
   - spanish
 cs-es 1:
-  url: https://www.dict.com/czech-spanish/{%word}
+  url: https://www.dict.com/czech-spanish/<word>
   title: Checo-Español (dict.com)
   tags:
   - czech
@@ -2354,7 +2354,7 @@ cs-et 0:
   - estonian
   - language
 cs-et 1:
-  url: https://www.dict.com/czech-estonian/{%word}
+  url: https://www.dict.com/czech-estonian/<word>
   title: Tšehhi-Eesti (dict.com)
   tags:
   - czech
@@ -2375,7 +2375,7 @@ cs-fi 0:
   - finnish
   - language
 cs-fi 1:
-  url: https://www.dict.com/czech-finnish/{%word}
+  url: https://www.dict.com/czech-finnish/<word>
   title: Tšekki-Suomi (dict.com)
   tags:
   - czech
@@ -2396,7 +2396,7 @@ cs-fr 0:
   - french
   - language
 cs-fr 1:
-  url: https://www.dict.com/czech-french/{%word}
+  url: https://www.dict.com/czech-french/<word>
   title: Tchèque-Français (dict.com)
   tags:
   - czech
@@ -2417,7 +2417,7 @@ cs-he 0:
   - hebrew
   - language
 cs-he 1:
-  url: https://www.dict.com/czech-hebrew/{%word}
+  url: https://www.dict.com/czech-hebrew/<word>
   title: צ׳כית-עברית (dict.com)
   tags:
   - czech
@@ -2438,7 +2438,7 @@ cs-hr 0:
   - dictionary
   - language
 cs-hr 1:
-  url: https://www.dict.com/czech-croatian/{%word}
+  url: https://www.dict.com/czech-croatian/<word>
   title: Češki-Hrvatski (dict.com)
   tags:
   - croatian
@@ -2459,7 +2459,7 @@ cs-hu 0:
   - hungarian
   - language
 cs-hu 1:
-  url: https://www.dict.com/czech-hungarian/{%word}
+  url: https://www.dict.com/czech-hungarian/<word>
   title: Cseh-Magyar (dict.com)
   tags:
   - czech
@@ -2480,7 +2480,7 @@ cs-id 0:
   - indonesian
   - language
 cs-id 1:
-  url: https://www.dict.com/czech-indonesian/{%word}
+  url: https://www.dict.com/czech-indonesian/<word>
   title: Cheska-Bahasa Indonesia (dict.com)
   tags:
   - czech
@@ -2501,7 +2501,7 @@ cs-it 0:
   - italian
   - language
 cs-it 1:
-  url: https://www.dict.com/czech-italian/{%word}
+  url: https://www.dict.com/czech-italian/<word>
   title: Ceco-Italiano (dict.com)
   tags:
   - czech
@@ -2522,7 +2522,7 @@ cs-ja 0:
   - japanese
   - language
 cs-ja 1:
-  url: https://www.dict.com/czech-japanese/{%word}
+  url: https://www.dict.com/czech-japanese/<word>
   title: チェコ語-日本語 (dict.com)
   tags:
   - czech
@@ -2543,7 +2543,7 @@ cs-ko 0:
   - korean
   - language
 cs-ko 1:
-  url: https://www.dict.com/czech-korean/{%word}
+  url: https://www.dict.com/czech-korean/<word>
   title: 체코어-한국어 (dict.com)
   tags:
   - czech
@@ -2564,7 +2564,7 @@ cs-lt 0:
   - language
   - lithuanian
 cs-lt 1:
-  url: https://www.dict.com/czech-lithuanian/{%word}
+  url: https://www.dict.com/czech-lithuanian/<word>
   title: Čekų-Lietuvių (dict.com)
   tags:
   - czech
@@ -2585,7 +2585,7 @@ cs-lv 0:
   - language
   - latvian
 cs-lv 1:
-  url: https://www.dict.com/czech-latvian/{%word}
+  url: https://www.dict.com/czech-latvian/<word>
   title: Čehu-Latviešu (dict.com)
   tags:
   - czech
@@ -2606,7 +2606,7 @@ cs-nl 0:
   - dutch
   - language
 cs-nl 1:
-  url: https://www.dict.com/czech-dutch/{%word}
+  url: https://www.dict.com/czech-dutch/<word>
   title: Tsjechisch-Nederlands (dict.com)
   tags:
   - czech
@@ -2627,7 +2627,7 @@ cs-no 0:
   - language
   - norwegian
 cs-no 1:
-  url: https://www.dict.com/czech-norwegian/{%word}
+  url: https://www.dict.com/czech-norwegian/<word>
   title: Tsjekkisk-Norsk (dict.com)
   tags:
   - czech
@@ -2648,7 +2648,7 @@ cs-pl 0:
   - language
   - polish
 cs-pl 1:
-  url: https://www.dict.com/czech-polish/{%word}
+  url: https://www.dict.com/czech-polish/<word>
   title: Czeski-Polski (dict.com)
   tags:
   - czech
@@ -2669,7 +2669,7 @@ cs-pt 0:
   - language
   - portuguese
 cs-pt 1:
-  url: https://www.dict.com/czech-portuguese/{%word}
+  url: https://www.dict.com/czech-portuguese/<word>
   title: Tcheco-Português (dict.com)
   tags:
   - czech
@@ -2690,7 +2690,7 @@ cs-ro 0:
   - language
   - romanian
 cs-ro 1:
-  url: https://www.dict.com/czech-romanian/{%word}
+  url: https://www.dict.com/czech-romanian/<word>
   title: Cehă-Română (dict.com)
   tags:
   - czech
@@ -2711,7 +2711,7 @@ cs-ru 0:
   - language
   - russian
 cs-ru 1:
-  url: https://www.dict.com/czech-russian/{%word}
+  url: https://www.dict.com/czech-russian/<word>
   title: Чешский-Русский (dict.com)
   tags:
   - czech
@@ -2732,7 +2732,7 @@ cs-sk 0:
   - language
   - slovak
 cs-sk 1:
-  url: https://www.dict.com/czech-slovak/{%word}
+  url: https://www.dict.com/czech-slovak/<word>
   title: Čeština-Slovenčina (dict.com)
   tags:
   - czech
@@ -2753,7 +2753,7 @@ cs-sl 0:
   - language
   - slovenian
 cs-sl 1:
-  url: https://www.dict.com/czech-slovenian/{%word}
+  url: https://www.dict.com/czech-slovenian/<word>
   title: Češčina-Slovenščina (dict.com)
   tags:
   - czech
@@ -2774,7 +2774,7 @@ cs-sr 0:
   - language
   - serbian
 cs-sr 1:
-  url: https://www.dict.com/czech-serbian/{%word}
+  url: https://www.dict.com/czech-serbian/<word>
   title: Чешки-Српски (dict.com)
   tags:
   - czech
@@ -2795,7 +2795,7 @@ cs-sv 0:
   - language
   - swedish
 cs-sv 1:
-  url: https://www.dict.com/czech-swedish/{%word}
+  url: https://www.dict.com/czech-swedish/<word>
   title: Tjeckiska-Svenska (dict.com)
   tags:
   - czech
@@ -2816,7 +2816,7 @@ cs-th 0:
   - language
   - thai
 cs-th 1:
-  url: https://www.dict.com/czech-thai/{%word}
+  url: https://www.dict.com/czech-thai/<word>
   title: เช็ก-ไทย (dict.com)
   tags:
   - czech
@@ -2837,7 +2837,7 @@ cs-tr 0:
   - language
   - turkish
 cs-tr 1:
-  url: https://www.dict.com/czech-turkish/{%word}
+  url: https://www.dict.com/czech-turkish/<word>
   title: Çekçe-Türkçe (dict.com)
   tags:
   - czech
@@ -2858,7 +2858,7 @@ cs-uk 0:
   - language
   - ukrainian
 cs-uk 1:
-  url: https://www.dict.com/czech-ukrainian/{%word}
+  url: https://www.dict.com/czech-ukrainian/<word>
   title: Чеська-Українська (dict.com)
   tags:
   - czech
@@ -2879,7 +2879,7 @@ cs-vi 0:
   - language
   - vietnamese
 cs-vi 1:
-  url: https://www.dict.com/czech-vietnamese/{%word}
+  url: https://www.dict.com/czech-vietnamese/<word>
   title: Tiếng Séc-Tiếng Việt (dict.com)
   tags:
   - czech
@@ -2900,7 +2900,7 @@ cs-zh 0:
   - dictionary
   - language
 cs-zh 1:
-  url: https://www.dict.com/czech-chinese/{%word}
+  url: https://www.dict.com/czech-chinese/<word>
   title: 捷克文-中文 (dict.com)
   tags:
   - chinese
@@ -2914,10 +2914,10 @@ cs-zh 1:
     description: 捷克文 的"树"翻译
 da 0:
   include:
-    key: da-{$language} 0
+    key: da-<$language> 0
 da 1:
   include:
-    key: da-{$language} 1
+    key: da-<$language> 1
 da-ar 0:
   title: الدانماركية-العربية (dict.com)
   include:
@@ -2979,7 +2979,7 @@ da-de 0:
   - german
   - language
 da-de 1:
-  url: https://www.dict.com/danish-german/{%word}
+  url: https://www.dict.com/danish-german/<word>
   title: Dänisch-Deutsch (dict.com)
   tags:
   - danish
@@ -3000,7 +3000,7 @@ da-el 0:
   - greek
   - language
 da-el 1:
-  url: https://www.dict.com/danish-greek/{%word}
+  url: https://www.dict.com/danish-greek/<word>
   title: Δανικά-Ελληνικά (dict.com)
   tags:
   - danish
@@ -3021,7 +3021,7 @@ da-en 0:
   - english
   - language
 da-en 1:
-  url: https://www.dict.com/danish-english/{%word}
+  url: https://www.dict.com/danish-english/<word>
   title: Danish-English (dict.com)
   tags:
   - danish
@@ -3042,7 +3042,7 @@ da-es 0:
   - language
   - spanish
 da-es 1:
-  url: https://www.dict.com/danish-spanish/{%word}
+  url: https://www.dict.com/danish-spanish/<word>
   title: Danés-Español (dict.com)
   tags:
   - danish
@@ -3063,7 +3063,7 @@ da-et 0:
   - estonian
   - language
 da-et 1:
-  url: https://www.dict.com/danish-estonian/{%word}
+  url: https://www.dict.com/danish-estonian/<word>
   title: Taani-Eesti (dict.com)
   tags:
   - danish
@@ -3084,7 +3084,7 @@ da-fi 0:
   - finnish
   - language
 da-fi 1:
-  url: https://www.dict.com/danish-finnish/{%word}
+  url: https://www.dict.com/danish-finnish/<word>
   title: Tanska-Suomi (dict.com)
   tags:
   - danish
@@ -3105,7 +3105,7 @@ da-fr 0:
   - french
   - language
 da-fr 1:
-  url: https://www.dict.com/danish-french/{%word}
+  url: https://www.dict.com/danish-french/<word>
   title: Danois-Français (dict.com)
   tags:
   - danish
@@ -3126,7 +3126,7 @@ da-he 0:
   - hebrew
   - language
 da-he 1:
-  url: https://www.dict.com/danish-hebrew/{%word}
+  url: https://www.dict.com/danish-hebrew/<word>
   title: דנית-עברית (dict.com)
   tags:
   - danish
@@ -3147,7 +3147,7 @@ da-hr 0:
   - dictionary
   - language
 da-hr 1:
-  url: https://www.dict.com/danish-croatian/{%word}
+  url: https://www.dict.com/danish-croatian/<word>
   title: Danski-Hrvatski (dict.com)
   tags:
   - croatian
@@ -3168,7 +3168,7 @@ da-hu 0:
   - hungarian
   - language
 da-hu 1:
-  url: https://www.dict.com/danish-hungarian/{%word}
+  url: https://www.dict.com/danish-hungarian/<word>
   title: Dán-Magyar (dict.com)
   tags:
   - danish
@@ -3189,7 +3189,7 @@ da-id 0:
   - indonesian
   - language
 da-id 1:
-  url: https://www.dict.com/danish-indonesian/{%word}
+  url: https://www.dict.com/danish-indonesian/<word>
   title: Dansk-Bahasa Indonesia (dict.com)
   tags:
   - danish
@@ -3210,7 +3210,7 @@ da-it 0:
   - italian
   - language
 da-it 1:
-  url: https://www.dict.com/danish-italian/{%word}
+  url: https://www.dict.com/danish-italian/<word>
   title: Danese-Italiano (dict.com)
   tags:
   - danish
@@ -3231,7 +3231,7 @@ da-ja 0:
   - japanese
   - language
 da-ja 1:
-  url: https://www.dict.com/danish-japanese/{%word}
+  url: https://www.dict.com/danish-japanese/<word>
   title: デンマーク語-日本語 (dict.com)
   tags:
   - danish
@@ -3252,7 +3252,7 @@ da-ko 0:
   - korean
   - language
 da-ko 1:
-  url: https://www.dict.com/danish-korean/{%word}
+  url: https://www.dict.com/danish-korean/<word>
   title: 덴마크어-한국어 (dict.com)
   tags:
   - danish
@@ -3273,7 +3273,7 @@ da-lt 0:
   - language
   - lithuanian
 da-lt 1:
-  url: https://www.dict.com/danish-lithuanian/{%word}
+  url: https://www.dict.com/danish-lithuanian/<word>
   title: Danų-Lietuvių (dict.com)
   tags:
   - danish
@@ -3294,7 +3294,7 @@ da-lv 0:
   - language
   - latvian
 da-lv 1:
-  url: https://www.dict.com/danish-latvian/{%word}
+  url: https://www.dict.com/danish-latvian/<word>
   title: Dāņu-Latviešu (dict.com)
   tags:
   - danish
@@ -3315,7 +3315,7 @@ da-nl 0:
   - dutch
   - language
 da-nl 1:
-  url: https://www.dict.com/danish-dutch/{%word}
+  url: https://www.dict.com/danish-dutch/<word>
   title: Deens-Nederlands (dict.com)
   tags:
   - danish
@@ -3336,7 +3336,7 @@ da-no 0:
   - language
   - norwegian
 da-no 1:
-  url: https://www.dict.com/danish-norwegian/{%word}
+  url: https://www.dict.com/danish-norwegian/<word>
   title: Dansk-Norsk (dict.com)
   tags:
   - danish
@@ -3357,7 +3357,7 @@ da-pl 0:
   - language
   - polish
 da-pl 1:
-  url: https://www.dict.com/danish-polish/{%word}
+  url: https://www.dict.com/danish-polish/<word>
   title: Duński-Polski (dict.com)
   tags:
   - danish
@@ -3378,7 +3378,7 @@ da-pt 0:
   - language
   - portuguese
 da-pt 1:
-  url: https://www.dict.com/danish-portuguese/{%word}
+  url: https://www.dict.com/danish-portuguese/<word>
   title: Dinamarquês-Português (dict.com)
   tags:
   - danish
@@ -3399,7 +3399,7 @@ da-ro 0:
   - language
   - romanian
 da-ro 1:
-  url: https://www.dict.com/danish-romanian/{%word}
+  url: https://www.dict.com/danish-romanian/<word>
   title: Daneză-Română (dict.com)
   tags:
   - danish
@@ -3420,7 +3420,7 @@ da-ru 0:
   - language
   - russian
 da-ru 1:
-  url: https://www.dict.com/danish-russian/{%word}
+  url: https://www.dict.com/danish-russian/<word>
   title: Датский-Русский (dict.com)
   tags:
   - danish
@@ -3441,7 +3441,7 @@ da-sk 0:
   - language
   - slovak
 da-sk 1:
-  url: https://www.dict.com/danish-slovak/{%word}
+  url: https://www.dict.com/danish-slovak/<word>
   title: Dánčina-Slovenčina (dict.com)
   tags:
   - danish
@@ -3462,7 +3462,7 @@ da-sl 0:
   - language
   - slovenian
 da-sl 1:
-  url: https://www.dict.com/danish-slovenian/{%word}
+  url: https://www.dict.com/danish-slovenian/<word>
   title: Danščina-Slovenščina (dict.com)
   tags:
   - danish
@@ -3483,7 +3483,7 @@ da-sr 0:
   - language
   - serbian
 da-sr 1:
-  url: https://www.dict.com/danish-serbian/{%word}
+  url: https://www.dict.com/danish-serbian/<word>
   title: Дански-Српски (dict.com)
   tags:
   - danish
@@ -3504,7 +3504,7 @@ da-sv 0:
   - language
   - swedish
 da-sv 1:
-  url: https://www.dict.com/danish-swedish/{%word}
+  url: https://www.dict.com/danish-swedish/<word>
   title: Danska-Svenska (dict.com)
   tags:
   - danish
@@ -3525,7 +3525,7 @@ da-th 0:
   - language
   - thai
 da-th 1:
-  url: https://www.dict.com/danish-thai/{%word}
+  url: https://www.dict.com/danish-thai/<word>
   title: เดนมาร์ก-ไทย (dict.com)
   tags:
   - danish
@@ -3546,7 +3546,7 @@ da-tr 0:
   - language
   - turkish
 da-tr 1:
-  url: https://www.dict.com/danish-turkish/{%word}
+  url: https://www.dict.com/danish-turkish/<word>
   title: Danca-Türkçe (dict.com)
   tags:
   - danish
@@ -3567,7 +3567,7 @@ da-uk 0:
   - language
   - ukrainian
 da-uk 1:
-  url: https://www.dict.com/danish-ukrainian/{%word}
+  url: https://www.dict.com/danish-ukrainian/<word>
   title: Данська-Українська (dict.com)
   tags:
   - danish
@@ -3588,7 +3588,7 @@ da-vi 0:
   - language
   - vietnamese
 da-vi 1:
-  url: https://www.dict.com/danish-vietnamese/{%word}
+  url: https://www.dict.com/danish-vietnamese/<word>
   title: Tiếng Đan Mạch-Tiếng Việt (dict.com)
   tags:
   - danish
@@ -3609,7 +3609,7 @@ da-zh 0:
   - dictionary
   - language
 da-zh 1:
-  url: https://www.dict.com/danish-chinese/{%word}
+  url: https://www.dict.com/danish-chinese/<word>
   title: 丹麦文-中文 (dict.com)
   tags:
   - chinese
@@ -3623,10 +3623,10 @@ da-zh 1:
     description: 丹麦文 的"树"翻译
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-ar 0:
   title: الألمانية-العربية (dict.com)
   include:
@@ -3701,7 +3701,7 @@ de-el 0:
   - greek
   - language
 de-el 1:
-  url: https://www.dict.com/german-greek/{%word}
+  url: https://www.dict.com/german-greek/<word>
   title: Γερμανικά-Ελληνικά (dict.com)
   tags:
   - dictionary
@@ -3722,7 +3722,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://www.dict.com/german-english/{%word}
+  url: https://www.dict.com/german-english/<word>
   title: German-English (dict.com)
   tags:
   - dictionary
@@ -3743,7 +3743,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://www.dict.com/german-spanish/{%word}
+  url: https://www.dict.com/german-spanish/<word>
   title: Alemán-Español (dict.com)
   tags:
   - dictionary
@@ -3764,7 +3764,7 @@ de-et 0:
   - german
   - language
 de-et 1:
-  url: https://www.dict.com/german-estonian/{%word}
+  url: https://www.dict.com/german-estonian/<word>
   title: Saksa-Eesti (dict.com)
   tags:
   - dictionary
@@ -3785,7 +3785,7 @@ de-fi 0:
   - german
   - language
 de-fi 1:
-  url: https://www.dict.com/german-finnish/{%word}
+  url: https://www.dict.com/german-finnish/<word>
   title: Saksa-Suomi (dict.com)
   tags:
   - dictionary
@@ -3806,7 +3806,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://www.dict.com/german-french/{%word}
+  url: https://www.dict.com/german-french/<word>
   title: Allemand-Français (dict.com)
   tags:
   - dictionary
@@ -3827,7 +3827,7 @@ de-he 0:
   - hebrew
   - language
 de-he 1:
-  url: https://www.dict.com/german-hebrew/{%word}
+  url: https://www.dict.com/german-hebrew/<word>
   title: גרמנית-עברית (dict.com)
   tags:
   - dictionary
@@ -3848,7 +3848,7 @@ de-hr 0:
   - german
   - language
 de-hr 1:
-  url: https://www.dict.com/german-croatian/{%word}
+  url: https://www.dict.com/german-croatian/<word>
   title: Njemački-Hrvatski (dict.com)
   tags:
   - croatian
@@ -3869,7 +3869,7 @@ de-hu 0:
   - hungarian
   - language
 de-hu 1:
-  url: https://www.dict.com/german-hungarian/{%word}
+  url: https://www.dict.com/german-hungarian/<word>
   title: Német-Magyar (dict.com)
   tags:
   - dictionary
@@ -3890,7 +3890,7 @@ de-id 0:
   - indonesian
   - language
 de-id 1:
-  url: https://www.dict.com/german-indonesian/{%word}
+  url: https://www.dict.com/german-indonesian/<word>
   title: Jerman-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -3911,7 +3911,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://www.dict.com/german-italian/{%word}
+  url: https://www.dict.com/german-italian/<word>
   title: Tedesco-Italiano (dict.com)
   tags:
   - dictionary
@@ -3932,7 +3932,7 @@ de-ja 0:
   - japanese
   - language
 de-ja 1:
-  url: https://www.dict.com/german-japanese/{%word}
+  url: https://www.dict.com/german-japanese/<word>
   title: ドイツ語-日本語 (dict.com)
   tags:
   - dictionary
@@ -3953,7 +3953,7 @@ de-ko 0:
   - korean
   - language
 de-ko 1:
-  url: https://www.dict.com/german-korean/{%word}
+  url: https://www.dict.com/german-korean/<word>
   title: 독일어-한국어 (dict.com)
   tags:
   - dictionary
@@ -3974,7 +3974,7 @@ de-lt 0:
   - language
   - lithuanian
 de-lt 1:
-  url: https://www.dict.com/german-lithuanian/{%word}
+  url: https://www.dict.com/german-lithuanian/<word>
   title: Vokiečių-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -3995,7 +3995,7 @@ de-lv 0:
   - language
   - latvian
 de-lv 1:
-  url: https://www.dict.com/german-latvian/{%word}
+  url: https://www.dict.com/german-latvian/<word>
   title: Vācu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -4016,7 +4016,7 @@ de-nl 0:
   - german
   - language
 de-nl 1:
-  url: https://www.dict.com/german-dutch/{%word}
+  url: https://www.dict.com/german-dutch/<word>
   title: Duits-Nederlands (dict.com)
   tags:
   - dictionary
@@ -4037,7 +4037,7 @@ de-no 0:
   - language
   - norwegian
 de-no 1:
-  url: https://www.dict.com/german-norwegian/{%word}
+  url: https://www.dict.com/german-norwegian/<word>
   title: Tysk-Norsk (dict.com)
   tags:
   - dictionary
@@ -4058,7 +4058,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://www.dict.com/german-polish/{%word}
+  url: https://www.dict.com/german-polish/<word>
   title: Niemiecki-Polski (dict.com)
   tags:
   - dictionary
@@ -4079,7 +4079,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://www.dict.com/german-portuguese/{%word}
+  url: https://www.dict.com/german-portuguese/<word>
   title: Alemão-Português (dict.com)
   tags:
   - dictionary
@@ -4100,7 +4100,7 @@ de-ro 0:
   - language
   - romanian
 de-ro 1:
-  url: https://www.dict.com/german-romanian/{%word}
+  url: https://www.dict.com/german-romanian/<word>
   title: Germană-Română (dict.com)
   tags:
   - dictionary
@@ -4121,7 +4121,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://www.dict.com/german-russian/{%word}
+  url: https://www.dict.com/german-russian/<word>
   title: Немецкий-Русский (dict.com)
   tags:
   - dictionary
@@ -4142,7 +4142,7 @@ de-sk 0:
   - language
   - slovak
 de-sk 1:
-  url: https://www.dict.com/german-slovak/{%word}
+  url: https://www.dict.com/german-slovak/<word>
   title: Nemčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -4163,7 +4163,7 @@ de-sl 0:
   - language
   - slovenian
 de-sl 1:
-  url: https://www.dict.com/german-slovenian/{%word}
+  url: https://www.dict.com/german-slovenian/<word>
   title: Nemščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -4184,7 +4184,7 @@ de-sr 0:
   - language
   - serbian
 de-sr 1:
-  url: https://www.dict.com/german-serbian/{%word}
+  url: https://www.dict.com/german-serbian/<word>
   title: Немачки-Српски (dict.com)
   tags:
   - dictionary
@@ -4205,7 +4205,7 @@ de-sv 0:
   - language
   - swedish
 de-sv 1:
-  url: https://www.dict.com/german-swedish/{%word}
+  url: https://www.dict.com/german-swedish/<word>
   title: Tyska-Svenska (dict.com)
   tags:
   - dictionary
@@ -4226,7 +4226,7 @@ de-th 0:
   - language
   - thai
 de-th 1:
-  url: https://www.dict.com/german-thai/{%word}
+  url: https://www.dict.com/german-thai/<word>
   title: เยอรมัน-ไทย (dict.com)
   tags:
   - dictionary
@@ -4247,7 +4247,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://www.dict.com/german-turkish/{%word}
+  url: https://www.dict.com/german-turkish/<word>
   title: Almanca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -4268,7 +4268,7 @@ de-uk 0:
   - language
   - ukrainian
 de-uk 1:
-  url: https://www.dict.com/german-ukrainian/{%word}
+  url: https://www.dict.com/german-ukrainian/<word>
   title: Німецька-Українська (dict.com)
   tags:
   - dictionary
@@ -4289,7 +4289,7 @@ de-vi 0:
   - language
   - vietnamese
 de-vi 1:
-  url: https://www.dict.com/german-vietnamese/{%word}
+  url: https://www.dict.com/german-vietnamese/<word>
   title: Tiếng Đức-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -4310,7 +4310,7 @@ de-zh 0:
   - german
   - language
 de-zh 1:
-  url: https://www.dict.com/german-chinese/{%word}
+  url: https://www.dict.com/german-chinese/<word>
   title: 德文-中文 (dict.com)
   tags:
   - chinese
@@ -4324,10 +4324,10 @@ de-zh 1:
     description: 德文 的"树"翻译
 el 0:
   include:
-    key: el-{$language} 0
+    key: el-<$language> 0
 el 1:
   include:
-    key: el-{$language} 1
+    key: el-<$language> 1
 el-ar 0:
   title: اليونانية-العربية (dict.com)
   include:
@@ -4415,7 +4415,7 @@ el-en 0:
   - greek
   - language
 el-en 1:
-  url: https://www.dict.com/greek-english/{%word}
+  url: https://www.dict.com/greek-english/<word>
   title: Greek-English (dict.com)
   tags:
   - dictionary
@@ -4436,7 +4436,7 @@ el-es 0:
   - language
   - spanish
 el-es 1:
-  url: https://www.dict.com/greek-spanish/{%word}
+  url: https://www.dict.com/greek-spanish/<word>
   title: Griego-Español (dict.com)
   tags:
   - dictionary
@@ -4457,7 +4457,7 @@ el-et 0:
   - greek
   - language
 el-et 1:
-  url: https://www.dict.com/greek-estonian/{%word}
+  url: https://www.dict.com/greek-estonian/<word>
   title: Kreeka-Eesti (dict.com)
   tags:
   - dictionary
@@ -4478,7 +4478,7 @@ el-fi 0:
   - greek
   - language
 el-fi 1:
-  url: https://www.dict.com/greek-finnish/{%word}
+  url: https://www.dict.com/greek-finnish/<word>
   title: Kreikka-Suomi (dict.com)
   tags:
   - dictionary
@@ -4499,7 +4499,7 @@ el-fr 0:
   - greek
   - language
 el-fr 1:
-  url: https://www.dict.com/greek-french/{%word}
+  url: https://www.dict.com/greek-french/<word>
   title: Grec-Français (dict.com)
   tags:
   - dictionary
@@ -4520,7 +4520,7 @@ el-he 0:
   - hebrew
   - language
 el-he 1:
-  url: https://www.dict.com/greek-hebrew/{%word}
+  url: https://www.dict.com/greek-hebrew/<word>
   title: יוונית-עברית (dict.com)
   tags:
   - dictionary
@@ -4541,7 +4541,7 @@ el-hr 0:
   - greek
   - language
 el-hr 1:
-  url: https://www.dict.com/greek-croatian/{%word}
+  url: https://www.dict.com/greek-croatian/<word>
   title: Grčki-Hrvatski (dict.com)
   tags:
   - croatian
@@ -4562,7 +4562,7 @@ el-hu 0:
   - hungarian
   - language
 el-hu 1:
-  url: https://www.dict.com/greek-hungarian/{%word}
+  url: https://www.dict.com/greek-hungarian/<word>
   title: Görög-Magyar (dict.com)
   tags:
   - dictionary
@@ -4583,7 +4583,7 @@ el-id 0:
   - indonesian
   - language
 el-id 1:
-  url: https://www.dict.com/greek-indonesian/{%word}
+  url: https://www.dict.com/greek-indonesian/<word>
   title: Yunani-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -4604,7 +4604,7 @@ el-it 0:
   - italian
   - language
 el-it 1:
-  url: https://www.dict.com/greek-italian/{%word}
+  url: https://www.dict.com/greek-italian/<word>
   title: Greco-Italiano (dict.com)
   tags:
   - dictionary
@@ -4625,7 +4625,7 @@ el-ja 0:
   - japanese
   - language
 el-ja 1:
-  url: https://www.dict.com/greek-japanese/{%word}
+  url: https://www.dict.com/greek-japanese/<word>
   title: ギリシャ語-日本語 (dict.com)
   tags:
   - dictionary
@@ -4646,7 +4646,7 @@ el-ko 0:
   - korean
   - language
 el-ko 1:
-  url: https://www.dict.com/greek-korean/{%word}
+  url: https://www.dict.com/greek-korean/<word>
   title: 그리스어-한국어 (dict.com)
   tags:
   - dictionary
@@ -4667,7 +4667,7 @@ el-lt 0:
   - language
   - lithuanian
 el-lt 1:
-  url: https://www.dict.com/greek-lithuanian/{%word}
+  url: https://www.dict.com/greek-lithuanian/<word>
   title: Graikų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -4688,7 +4688,7 @@ el-lv 0:
   - language
   - latvian
 el-lv 1:
-  url: https://www.dict.com/greek-latvian/{%word}
+  url: https://www.dict.com/greek-latvian/<word>
   title: Grieķu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -4709,7 +4709,7 @@ el-nl 0:
   - greek
   - language
 el-nl 1:
-  url: https://www.dict.com/greek-dutch/{%word}
+  url: https://www.dict.com/greek-dutch/<word>
   title: Grieks-Nederlands (dict.com)
   tags:
   - dictionary
@@ -4730,7 +4730,7 @@ el-no 0:
   - language
   - norwegian
 el-no 1:
-  url: https://www.dict.com/greek-norwegian/{%word}
+  url: https://www.dict.com/greek-norwegian/<word>
   title: Gresk-Norsk (dict.com)
   tags:
   - dictionary
@@ -4751,7 +4751,7 @@ el-pl 0:
   - language
   - polish
 el-pl 1:
-  url: https://www.dict.com/greek-polish/{%word}
+  url: https://www.dict.com/greek-polish/<word>
   title: Grecki-Polski (dict.com)
   tags:
   - dictionary
@@ -4772,7 +4772,7 @@ el-pt 0:
   - language
   - portuguese
 el-pt 1:
-  url: https://www.dict.com/greek-portuguese/{%word}
+  url: https://www.dict.com/greek-portuguese/<word>
   title: Grego-Português (dict.com)
   tags:
   - dictionary
@@ -4793,7 +4793,7 @@ el-ro 0:
   - language
   - romanian
 el-ro 1:
-  url: https://www.dict.com/greek-romanian/{%word}
+  url: https://www.dict.com/greek-romanian/<word>
   title: Greacă-Română (dict.com)
   tags:
   - dictionary
@@ -4814,7 +4814,7 @@ el-ru 0:
   - language
   - russian
 el-ru 1:
-  url: https://www.dict.com/greek-russian/{%word}
+  url: https://www.dict.com/greek-russian/<word>
   title: Греческий-Русский (dict.com)
   tags:
   - dictionary
@@ -4835,7 +4835,7 @@ el-sk 0:
   - language
   - slovak
 el-sk 1:
-  url: https://www.dict.com/greek-slovak/{%word}
+  url: https://www.dict.com/greek-slovak/<word>
   title: Gréčtina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -4856,7 +4856,7 @@ el-sl 0:
   - language
   - slovenian
 el-sl 1:
-  url: https://www.dict.com/greek-slovenian/{%word}
+  url: https://www.dict.com/greek-slovenian/<word>
   title: Grščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -4877,7 +4877,7 @@ el-sr 0:
   - language
   - serbian
 el-sr 1:
-  url: https://www.dict.com/greek-serbian/{%word}
+  url: https://www.dict.com/greek-serbian/<word>
   title: Грчки-Српски (dict.com)
   tags:
   - dictionary
@@ -4898,7 +4898,7 @@ el-sv 0:
   - language
   - swedish
 el-sv 1:
-  url: https://www.dict.com/greek-swedish/{%word}
+  url: https://www.dict.com/greek-swedish/<word>
   title: Grekiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -4919,7 +4919,7 @@ el-th 0:
   - language
   - thai
 el-th 1:
-  url: https://www.dict.com/greek-thai/{%word}
+  url: https://www.dict.com/greek-thai/<word>
   title: กรีก-ไทย (dict.com)
   tags:
   - dictionary
@@ -4940,7 +4940,7 @@ el-tr 0:
   - language
   - turkish
 el-tr 1:
-  url: https://www.dict.com/greek-turkish/{%word}
+  url: https://www.dict.com/greek-turkish/<word>
   title: Yunanca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -4961,7 +4961,7 @@ el-uk 0:
   - language
   - ukrainian
 el-uk 1:
-  url: https://www.dict.com/greek-ukrainian/{%word}
+  url: https://www.dict.com/greek-ukrainian/<word>
   title: Грецька-Українська (dict.com)
   tags:
   - dictionary
@@ -4982,7 +4982,7 @@ el-vi 0:
   - language
   - vietnamese
 el-vi 1:
-  url: https://www.dict.com/greek-vietnamese/{%word}
+  url: https://www.dict.com/greek-vietnamese/<word>
   title: Tiếng Hy Lạp-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -5003,7 +5003,7 @@ el-zh 0:
   - greek
   - language
 el-zh 1:
-  url: https://www.dict.com/greek-chinese/{%word}
+  url: https://www.dict.com/greek-chinese/<word>
   title: 希腊文-中文 (dict.com)
   tags:
   - chinese
@@ -5017,10 +5017,10 @@ el-zh 1:
     description: 希腊文 的"树"翻译
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-ar 0:
   title: الإنجليزية-العربية (dict.com)
   include:
@@ -5121,7 +5121,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: https://www.dict.com/english-spanish/{%word}
+  url: https://www.dict.com/english-spanish/<word>
   title: Inglés-Español (dict.com)
   tags:
   - dictionary
@@ -5142,7 +5142,7 @@ en-et 0:
   - estonian
   - language
 en-et 1:
-  url: https://www.dict.com/english-estonian/{%word}
+  url: https://www.dict.com/english-estonian/<word>
   title: Inglise-Eesti (dict.com)
   tags:
   - dictionary
@@ -5163,7 +5163,7 @@ en-fi 0:
   - finnish
   - language
 en-fi 1:
-  url: https://www.dict.com/english-finnish/{%word}
+  url: https://www.dict.com/english-finnish/<word>
   title: Englanti-Suomi (dict.com)
   tags:
   - dictionary
@@ -5184,7 +5184,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://www.dict.com/english-french/{%word}
+  url: https://www.dict.com/english-french/<word>
   title: Anglais-Français (dict.com)
   tags:
   - dictionary
@@ -5205,7 +5205,7 @@ en-he 0:
   - hebrew
   - language
 en-he 1:
-  url: https://www.dict.com/english-hebrew/{%word}
+  url: https://www.dict.com/english-hebrew/<word>
   title: אנגלית-עברית (dict.com)
   tags:
   - dictionary
@@ -5226,7 +5226,7 @@ en-hr 0:
   - english
   - language
 en-hr 1:
-  url: https://www.dict.com/english-croatian/{%word}
+  url: https://www.dict.com/english-croatian/<word>
   title: Engleski-Hrvatski (dict.com)
   tags:
   - croatian
@@ -5247,7 +5247,7 @@ en-hu 0:
   - hungarian
   - language
 en-hu 1:
-  url: https://www.dict.com/english-hungarian/{%word}
+  url: https://www.dict.com/english-hungarian/<word>
   title: Angol-Magyar (dict.com)
   tags:
   - dictionary
@@ -5268,7 +5268,7 @@ en-id 0:
   - indonesian
   - language
 en-id 1:
-  url: https://www.dict.com/english-indonesian/{%word}
+  url: https://www.dict.com/english-indonesian/<word>
   title: Inggris-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -5289,7 +5289,7 @@ en-it 0:
   - italian
   - language
 en-it 1:
-  url: https://www.dict.com/english-italian/{%word}
+  url: https://www.dict.com/english-italian/<word>
   title: Inglese-Italiano (dict.com)
   tags:
   - dictionary
@@ -5310,7 +5310,7 @@ en-ja 0:
   - japanese
   - language
 en-ja 1:
-  url: https://www.dict.com/english-japanese/{%word}
+  url: https://www.dict.com/english-japanese/<word>
   title: 英語-日本語 (dict.com)
   tags:
   - dictionary
@@ -5331,7 +5331,7 @@ en-ko 0:
   - korean
   - language
 en-ko 1:
-  url: https://www.dict.com/english-korean/{%word}
+  url: https://www.dict.com/english-korean/<word>
   title: 영어-한국어 (dict.com)
   tags:
   - dictionary
@@ -5352,7 +5352,7 @@ en-lt 0:
   - language
   - lithuanian
 en-lt 1:
-  url: https://www.dict.com/english-lithuanian/{%word}
+  url: https://www.dict.com/english-lithuanian/<word>
   title: Anglų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -5373,7 +5373,7 @@ en-lv 0:
   - language
   - latvian
 en-lv 1:
-  url: https://www.dict.com/english-latvian/{%word}
+  url: https://www.dict.com/english-latvian/<word>
   title: Angļu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -5394,7 +5394,7 @@ en-nl 0:
   - english
   - language
 en-nl 1:
-  url: https://www.dict.com/english-dutch/{%word}
+  url: https://www.dict.com/english-dutch/<word>
   title: Engels-Nederlands (dict.com)
   tags:
   - dictionary
@@ -5415,7 +5415,7 @@ en-no 0:
   - language
   - norwegian
 en-no 1:
-  url: https://www.dict.com/english-norwegian/{%word}
+  url: https://www.dict.com/english-norwegian/<word>
   title: Engelsk-Norsk (dict.com)
   tags:
   - dictionary
@@ -5436,7 +5436,7 @@ en-pl 0:
   - language
   - polish
 en-pl 1:
-  url: https://www.dict.com/english-polish/{%word}
+  url: https://www.dict.com/english-polish/<word>
   title: Angielski-Polski (dict.com)
   tags:
   - dictionary
@@ -5457,7 +5457,7 @@ en-pt 0:
   - language
   - portuguese
 en-pt 1:
-  url: https://www.dict.com/english-portuguese/{%word}
+  url: https://www.dict.com/english-portuguese/<word>
   title: Inglês-Português (dict.com)
   tags:
   - dictionary
@@ -5478,7 +5478,7 @@ en-ro 0:
   - language
   - romanian
 en-ro 1:
-  url: https://www.dict.com/english-romanian/{%word}
+  url: https://www.dict.com/english-romanian/<word>
   title: Engleză-Română (dict.com)
   tags:
   - dictionary
@@ -5499,7 +5499,7 @@ en-ru 0:
   - language
   - russian
 en-ru 1:
-  url: https://www.dict.com/english-russian/{%word}
+  url: https://www.dict.com/english-russian/<word>
   title: Английский-Русский (dict.com)
   tags:
   - dictionary
@@ -5520,7 +5520,7 @@ en-sk 0:
   - language
   - slovak
 en-sk 1:
-  url: https://www.dict.com/english-slovak/{%word}
+  url: https://www.dict.com/english-slovak/<word>
   title: Angličtina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -5541,7 +5541,7 @@ en-sl 0:
   - language
   - slovenian
 en-sl 1:
-  url: https://www.dict.com/english-slovenian/{%word}
+  url: https://www.dict.com/english-slovenian/<word>
   title: Angleščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -5562,7 +5562,7 @@ en-sr 0:
   - language
   - serbian
 en-sr 1:
-  url: https://www.dict.com/english-serbian/{%word}
+  url: https://www.dict.com/english-serbian/<word>
   title: Енглески-Српски (dict.com)
   tags:
   - dictionary
@@ -5583,7 +5583,7 @@ en-sv 0:
   - language
   - swedish
 en-sv 1:
-  url: https://www.dict.com/english-swedish/{%word}
+  url: https://www.dict.com/english-swedish/<word>
   title: Engelska-Svenska (dict.com)
   tags:
   - dictionary
@@ -5604,7 +5604,7 @@ en-th 0:
   - language
   - thai
 en-th 1:
-  url: https://www.dict.com/english-thai/{%word}
+  url: https://www.dict.com/english-thai/<word>
   title: อังกฤษ-ไทย (dict.com)
   tags:
   - dictionary
@@ -5625,7 +5625,7 @@ en-tr 0:
   - language
   - turkish
 en-tr 1:
-  url: https://www.dict.com/english-turkish/{%word}
+  url: https://www.dict.com/english-turkish/<word>
   title: İngilizce-Türkçe (dict.com)
   tags:
   - dictionary
@@ -5646,7 +5646,7 @@ en-uk 0:
   - language
   - ukrainian
 en-uk 1:
-  url: https://www.dict.com/english-ukrainian/{%word}
+  url: https://www.dict.com/english-ukrainian/<word>
   title: Англійська-Українська (dict.com)
   tags:
   - dictionary
@@ -5667,7 +5667,7 @@ en-vi 0:
   - language
   - vietnamese
 en-vi 1:
-  url: https://www.dict.com/english-vietnamese/{%word}
+  url: https://www.dict.com/english-vietnamese/<word>
   title: Tiếng Anh-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -5688,7 +5688,7 @@ en-zh 0:
   - english
   - language
 en-zh 1:
-  url: https://www.dict.com/english-chinese/{%word}
+  url: https://www.dict.com/english-chinese/<word>
   title: 英文-中文 (dict.com)
   tags:
   - chinese
@@ -5702,10 +5702,10 @@ en-zh 1:
     description: 英文 的"树"翻译
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-ar 0:
   title: الإسبانية-العربية (dict.com)
   include:
@@ -5819,7 +5819,7 @@ es-et 0:
   - language
   - spanish
 es-et 1:
-  url: https://www.dict.com/spanish-estonian/{%word}
+  url: https://www.dict.com/spanish-estonian/<word>
   title: Hispaania-Eesti (dict.com)
   tags:
   - dictionary
@@ -5840,7 +5840,7 @@ es-fi 0:
   - language
   - spanish
 es-fi 1:
-  url: https://www.dict.com/spanish-finnish/{%word}
+  url: https://www.dict.com/spanish-finnish/<word>
   title: Espanja-Suomi (dict.com)
   tags:
   - dictionary
@@ -5861,7 +5861,7 @@ es-fr 0:
   - language
   - spanish
 es-fr 1:
-  url: https://www.dict.com/spanish-french/{%word}
+  url: https://www.dict.com/spanish-french/<word>
   title: Espagnol-Français (dict.com)
   tags:
   - dictionary
@@ -5882,7 +5882,7 @@ es-he 0:
   - language
   - spanish
 es-he 1:
-  url: https://www.dict.com/spanish-hebrew/{%word}
+  url: https://www.dict.com/spanish-hebrew/<word>
   title: ספרדית-עברית (dict.com)
   tags:
   - dictionary
@@ -5903,7 +5903,7 @@ es-hr 0:
   - language
   - spanish
 es-hr 1:
-  url: https://www.dict.com/spanish-croatian/{%word}
+  url: https://www.dict.com/spanish-croatian/<word>
   title: Španjolski-Hrvatski (dict.com)
   tags:
   - croatian
@@ -5924,7 +5924,7 @@ es-hu 0:
   - language
   - spanish
 es-hu 1:
-  url: https://www.dict.com/spanish-hungarian/{%word}
+  url: https://www.dict.com/spanish-hungarian/<word>
   title: Spanyol-Magyar (dict.com)
   tags:
   - dictionary
@@ -5945,7 +5945,7 @@ es-id 0:
   - language
   - spanish
 es-id 1:
-  url: https://www.dict.com/spanish-indonesian/{%word}
+  url: https://www.dict.com/spanish-indonesian/<word>
   title: Spanyol-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -5966,7 +5966,7 @@ es-it 0:
   - language
   - spanish
 es-it 1:
-  url: https://www.dict.com/spanish-italian/{%word}
+  url: https://www.dict.com/spanish-italian/<word>
   title: Spagnolo-Italiano (dict.com)
   tags:
   - dictionary
@@ -5987,7 +5987,7 @@ es-ja 0:
   - language
   - spanish
 es-ja 1:
-  url: https://www.dict.com/spanish-japanese/{%word}
+  url: https://www.dict.com/spanish-japanese/<word>
   title: スペイン語-日本語 (dict.com)
   tags:
   - dictionary
@@ -6008,7 +6008,7 @@ es-ko 0:
   - language
   - spanish
 es-ko 1:
-  url: https://www.dict.com/spanish-korean/{%word}
+  url: https://www.dict.com/spanish-korean/<word>
   title: 스페인어-한국어 (dict.com)
   tags:
   - dictionary
@@ -6029,7 +6029,7 @@ es-lt 0:
   - lithuanian
   - spanish
 es-lt 1:
-  url: https://www.dict.com/spanish-lithuanian/{%word}
+  url: https://www.dict.com/spanish-lithuanian/<word>
   title: Ispanų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -6050,7 +6050,7 @@ es-lv 0:
   - latvian
   - spanish
 es-lv 1:
-  url: https://www.dict.com/spanish-latvian/{%word}
+  url: https://www.dict.com/spanish-latvian/<word>
   title: Spāņu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -6071,7 +6071,7 @@ es-nl 0:
   - language
   - spanish
 es-nl 1:
-  url: https://www.dict.com/spanish-dutch/{%word}
+  url: https://www.dict.com/spanish-dutch/<word>
   title: Spaans-Nederlands (dict.com)
   tags:
   - dictionary
@@ -6092,7 +6092,7 @@ es-no 0:
   - norwegian
   - spanish
 es-no 1:
-  url: https://www.dict.com/spanish-norwegian/{%word}
+  url: https://www.dict.com/spanish-norwegian/<word>
   title: Spansk-Norsk (dict.com)
   tags:
   - dictionary
@@ -6113,7 +6113,7 @@ es-pl 0:
   - polish
   - spanish
 es-pl 1:
-  url: https://www.dict.com/spanish-polish/{%word}
+  url: https://www.dict.com/spanish-polish/<word>
   title: Hiszpański-Polski (dict.com)
   tags:
   - dictionary
@@ -6134,7 +6134,7 @@ es-pt 0:
   - portuguese
   - spanish
 es-pt 1:
-  url: https://www.dict.com/spanish-portuguese/{%word}
+  url: https://www.dict.com/spanish-portuguese/<word>
   title: Espanhol-Português (dict.com)
   tags:
   - dictionary
@@ -6155,7 +6155,7 @@ es-ro 0:
   - romanian
   - spanish
 es-ro 1:
-  url: https://www.dict.com/spanish-romanian/{%word}
+  url: https://www.dict.com/spanish-romanian/<word>
   title: Spaniolă-Română (dict.com)
   tags:
   - dictionary
@@ -6176,7 +6176,7 @@ es-ru 0:
   - russian
   - spanish
 es-ru 1:
-  url: https://www.dict.com/spanish-russian/{%word}
+  url: https://www.dict.com/spanish-russian/<word>
   title: Испанский-Русский (dict.com)
   tags:
   - dictionary
@@ -6197,7 +6197,7 @@ es-sk 0:
   - slovak
   - spanish
 es-sk 1:
-  url: https://www.dict.com/spanish-slovak/{%word}
+  url: https://www.dict.com/spanish-slovak/<word>
   title: Španielčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -6218,7 +6218,7 @@ es-sl 0:
   - slovenian
   - spanish
 es-sl 1:
-  url: https://www.dict.com/spanish-slovenian/{%word}
+  url: https://www.dict.com/spanish-slovenian/<word>
   title: Španščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -6239,7 +6239,7 @@ es-sr 0:
   - serbian
   - spanish
 es-sr 1:
-  url: https://www.dict.com/spanish-serbian/{%word}
+  url: https://www.dict.com/spanish-serbian/<word>
   title: Шпански-Српски (dict.com)
   tags:
   - dictionary
@@ -6260,7 +6260,7 @@ es-sv 0:
   - spanish
   - swedish
 es-sv 1:
-  url: https://www.dict.com/spanish-swedish/{%word}
+  url: https://www.dict.com/spanish-swedish/<word>
   title: Spanska-Svenska (dict.com)
   tags:
   - dictionary
@@ -6281,7 +6281,7 @@ es-th 0:
   - spanish
   - thai
 es-th 1:
-  url: https://www.dict.com/spanish-thai/{%word}
+  url: https://www.dict.com/spanish-thai/<word>
   title: สเปน-ไทย (dict.com)
   tags:
   - dictionary
@@ -6302,7 +6302,7 @@ es-tr 0:
   - spanish
   - turkish
 es-tr 1:
-  url: https://www.dict.com/spanish-turkish/{%word}
+  url: https://www.dict.com/spanish-turkish/<word>
   title: İspanyolca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -6323,7 +6323,7 @@ es-uk 0:
   - spanish
   - ukrainian
 es-uk 1:
-  url: https://www.dict.com/spanish-ukrainian/{%word}
+  url: https://www.dict.com/spanish-ukrainian/<word>
   title: Іспанська-Українська (dict.com)
   tags:
   - dictionary
@@ -6344,7 +6344,7 @@ es-vi 0:
   - spanish
   - vietnamese
 es-vi 1:
-  url: https://www.dict.com/spanish-vietnamese/{%word}
+  url: https://www.dict.com/spanish-vietnamese/<word>
   title: Tiếng Tây Ban Nha-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -6365,7 +6365,7 @@ es-zh 0:
   - language
   - spanish
 es-zh 1:
-  url: https://www.dict.com/spanish-chinese/{%word}
+  url: https://www.dict.com/spanish-chinese/<word>
   title: 西班牙文-中文 (dict.com)
   tags:
   - chinese
@@ -6379,10 +6379,10 @@ es-zh 1:
     description: 西班牙文 的"树"翻译
 et 0:
   include:
-    key: et-{$language} 0
+    key: et-<$language> 0
 et 1:
   include:
-    key: et-{$language} 1
+    key: et-<$language> 1
 et-ar 0:
   title: الإستونية-العربية (dict.com)
   include:
@@ -6509,7 +6509,7 @@ et-fi 0:
   - finnish
   - language
 et-fi 1:
-  url: https://www.dict.com/estonian-finnish/{%word}
+  url: https://www.dict.com/estonian-finnish/<word>
   title: Viro-Suomi (dict.com)
   tags:
   - dictionary
@@ -6528,7 +6528,7 @@ et-fr 0:
   - french
   - language
 et-fr 1:
-  url: https://www.dict.com/estonian-french/{%word}
+  url: https://www.dict.com/estonian-french/<word>
   title: Estonien-Français (dict.com)
   tags:
   - dictionary
@@ -6549,7 +6549,7 @@ et-he 0:
   - hebrew
   - language
 et-he 1:
-  url: https://www.dict.com/estonian-hebrew/{%word}
+  url: https://www.dict.com/estonian-hebrew/<word>
   title: אסטונית-עברית (dict.com)
   tags:
   - dictionary
@@ -6570,7 +6570,7 @@ et-hr 0:
   - estonian
   - language
 et-hr 1:
-  url: https://www.dict.com/estonian-croatian/{%word}
+  url: https://www.dict.com/estonian-croatian/<word>
   title: Estonski-Hrvatski (dict.com)
   tags:
   - croatian
@@ -6591,7 +6591,7 @@ et-hu 0:
   - hungarian
   - language
 et-hu 1:
-  url: https://www.dict.com/estonian-hungarian/{%word}
+  url: https://www.dict.com/estonian-hungarian/<word>
   title: Észt-Magyar (dict.com)
   tags:
   - dictionary
@@ -6612,7 +6612,7 @@ et-id 0:
   - indonesian
   - language
 et-id 1:
-  url: https://www.dict.com/estonian-indonesian/{%word}
+  url: https://www.dict.com/estonian-indonesian/<word>
   title: Esti-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -6633,7 +6633,7 @@ et-it 0:
   - italian
   - language
 et-it 1:
-  url: https://www.dict.com/estonian-italian/{%word}
+  url: https://www.dict.com/estonian-italian/<word>
   title: Estone-Italiano (dict.com)
   tags:
   - dictionary
@@ -6654,7 +6654,7 @@ et-ja 0:
   - japanese
   - language
 et-ja 1:
-  url: https://www.dict.com/estonian-japanese/{%word}
+  url: https://www.dict.com/estonian-japanese/<word>
   title: エストニア語-日本語 (dict.com)
   tags:
   - dictionary
@@ -6675,7 +6675,7 @@ et-ko 0:
   - korean
   - language
 et-ko 1:
-  url: https://www.dict.com/estonian-korean/{%word}
+  url: https://www.dict.com/estonian-korean/<word>
   title: 에스토니아어-한국어 (dict.com)
   tags:
   - dictionary
@@ -6696,7 +6696,7 @@ et-lt 0:
   - language
   - lithuanian
 et-lt 1:
-  url: https://www.dict.com/estonian-lithuanian/{%word}
+  url: https://www.dict.com/estonian-lithuanian/<word>
   title: Estų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -6717,7 +6717,7 @@ et-lv 0:
   - language
   - latvian
 et-lv 1:
-  url: https://www.dict.com/estonian-latvian/{%word}
+  url: https://www.dict.com/estonian-latvian/<word>
   title: Igauņu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -6738,7 +6738,7 @@ et-nl 0:
   - estonian
   - language
 et-nl 1:
-  url: https://www.dict.com/estonian-dutch/{%word}
+  url: https://www.dict.com/estonian-dutch/<word>
   title: Estisch-Nederlands (dict.com)
   tags:
   - dictionary
@@ -6759,7 +6759,7 @@ et-no 0:
   - language
   - norwegian
 et-no 1:
-  url: https://www.dict.com/estonian-norwegian/{%word}
+  url: https://www.dict.com/estonian-norwegian/<word>
   title: Estisk-Norsk (dict.com)
   tags:
   - dictionary
@@ -6780,7 +6780,7 @@ et-pl 0:
   - language
   - polish
 et-pl 1:
-  url: https://www.dict.com/estonian-polish/{%word}
+  url: https://www.dict.com/estonian-polish/<word>
   title: Estoński-Polski (dict.com)
   tags:
   - dictionary
@@ -6801,7 +6801,7 @@ et-pt 0:
   - language
   - portuguese
 et-pt 1:
-  url: https://www.dict.com/estonian-portuguese/{%word}
+  url: https://www.dict.com/estonian-portuguese/<word>
   title: Estoniano-Português (dict.com)
   tags:
   - dictionary
@@ -6822,7 +6822,7 @@ et-ro 0:
   - language
   - romanian
 et-ro 1:
-  url: https://www.dict.com/estonian-romanian/{%word}
+  url: https://www.dict.com/estonian-romanian/<word>
   title: Estoniană-Română (dict.com)
   tags:
   - dictionary
@@ -6843,7 +6843,7 @@ et-ru 0:
   - language
   - russian
 et-ru 1:
-  url: https://www.dict.com/estonian-russian/{%word}
+  url: https://www.dict.com/estonian-russian/<word>
   title: Эстонский-Русский (dict.com)
   tags:
   - dictionary
@@ -6864,7 +6864,7 @@ et-sk 0:
   - language
   - slovak
 et-sk 1:
-  url: https://www.dict.com/estonian-slovak/{%word}
+  url: https://www.dict.com/estonian-slovak/<word>
   title: Estónčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -6885,7 +6885,7 @@ et-sl 0:
   - language
   - slovenian
 et-sl 1:
-  url: https://www.dict.com/estonian-slovenian/{%word}
+  url: https://www.dict.com/estonian-slovenian/<word>
   title: Estonščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -6906,7 +6906,7 @@ et-sr 0:
   - language
   - serbian
 et-sr 1:
-  url: https://www.dict.com/estonian-serbian/{%word}
+  url: https://www.dict.com/estonian-serbian/<word>
   title: Естонски-Српски (dict.com)
   tags:
   - dictionary
@@ -6927,7 +6927,7 @@ et-sv 0:
   - language
   - swedish
 et-sv 1:
-  url: https://www.dict.com/estonian-swedish/{%word}
+  url: https://www.dict.com/estonian-swedish/<word>
   title: Estniska-Svenska (dict.com)
   tags:
   - dictionary
@@ -6948,7 +6948,7 @@ et-th 0:
   - language
   - thai
 et-th 1:
-  url: https://www.dict.com/estonian-thai/{%word}
+  url: https://www.dict.com/estonian-thai/<word>
   title: เอสโตเนีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -6969,7 +6969,7 @@ et-tr 0:
   - language
   - turkish
 et-tr 1:
-  url: https://www.dict.com/estonian-turkish/{%word}
+  url: https://www.dict.com/estonian-turkish/<word>
   title: Estonca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -6990,7 +6990,7 @@ et-uk 0:
   - language
   - ukrainian
 et-uk 1:
-  url: https://www.dict.com/estonian-ukrainian/{%word}
+  url: https://www.dict.com/estonian-ukrainian/<word>
   title: Естонська-Українська (dict.com)
   tags:
   - dictionary
@@ -7011,7 +7011,7 @@ et-vi 0:
   - language
   - vietnamese
 et-vi 1:
-  url: https://www.dict.com/estonian-vietnamese/{%word}
+  url: https://www.dict.com/estonian-vietnamese/<word>
   title: Tiếng Estonia-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -7032,7 +7032,7 @@ et-zh 0:
   - estonian
   - language
 et-zh 1:
-  url: https://www.dict.com/estonian-chinese/{%word}
+  url: https://www.dict.com/estonian-chinese/<word>
   title: 爱沙尼亚文-中文 (dict.com)
   tags:
   - chinese
@@ -7046,10 +7046,10 @@ et-zh 1:
     description: 爱沙尼亚文 的"树"翻译
 fi 0:
   include:
-    key: fi-{$language} 0
+    key: fi-<$language> 0
 fi 1:
   include:
-    key: fi-{$language} 1
+    key: fi-<$language> 1
 fi-ar 0:
   title: الفنلندية-العربية (dict.com)
   include:
@@ -7187,7 +7187,7 @@ fi-fr 0:
   - french
   - language
 fi-fr 1:
-  url: https://www.dict.com/finnish-french/{%word}
+  url: https://www.dict.com/finnish-french/<word>
   title: Finnois-Français (dict.com)
   tags:
   - dictionary
@@ -7208,7 +7208,7 @@ fi-he 0:
   - hebrew
   - language
 fi-he 1:
-  url: https://www.dict.com/finnish-hebrew/{%word}
+  url: https://www.dict.com/finnish-hebrew/<word>
   title: פינית-עברית (dict.com)
   tags:
   - dictionary
@@ -7229,7 +7229,7 @@ fi-hr 0:
   - finnish
   - language
 fi-hr 1:
-  url: https://www.dict.com/finnish-croatian/{%word}
+  url: https://www.dict.com/finnish-croatian/<word>
   title: Finski-Hrvatski (dict.com)
   tags:
   - croatian
@@ -7250,7 +7250,7 @@ fi-hu 0:
   - hungarian
   - language
 fi-hu 1:
-  url: https://www.dict.com/finnish-hungarian/{%word}
+  url: https://www.dict.com/finnish-hungarian/<word>
   title: Finn-Magyar (dict.com)
   tags:
   - dictionary
@@ -7271,7 +7271,7 @@ fi-id 0:
   - indonesian
   - language
 fi-id 1:
-  url: https://www.dict.com/finnish-indonesian/{%word}
+  url: https://www.dict.com/finnish-indonesian/<word>
   title: Suomi-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -7292,7 +7292,7 @@ fi-it 0:
   - italian
   - language
 fi-it 1:
-  url: https://www.dict.com/finnish-italian/{%word}
+  url: https://www.dict.com/finnish-italian/<word>
   title: Finlandese-Italiano (dict.com)
   tags:
   - dictionary
@@ -7313,7 +7313,7 @@ fi-ja 0:
   - japanese
   - language
 fi-ja 1:
-  url: https://www.dict.com/finnish-japanese/{%word}
+  url: https://www.dict.com/finnish-japanese/<word>
   title: フィンランド語-日本語 (dict.com)
   tags:
   - dictionary
@@ -7334,7 +7334,7 @@ fi-ko 0:
   - korean
   - language
 fi-ko 1:
-  url: https://www.dict.com/finnish-korean/{%word}
+  url: https://www.dict.com/finnish-korean/<word>
   title: 핀란드어-한국어 (dict.com)
   tags:
   - dictionary
@@ -7355,7 +7355,7 @@ fi-lt 0:
   - language
   - lithuanian
 fi-lt 1:
-  url: https://www.dict.com/finnish-lithuanian/{%word}
+  url: https://www.dict.com/finnish-lithuanian/<word>
   title: Suomių-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -7376,7 +7376,7 @@ fi-lv 0:
   - language
   - latvian
 fi-lv 1:
-  url: https://www.dict.com/finnish-latvian/{%word}
+  url: https://www.dict.com/finnish-latvian/<word>
   title: Somu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -7397,7 +7397,7 @@ fi-nl 0:
   - finnish
   - language
 fi-nl 1:
-  url: https://www.dict.com/finnish-dutch/{%word}
+  url: https://www.dict.com/finnish-dutch/<word>
   title: Fins-Nederlands (dict.com)
   tags:
   - dictionary
@@ -7418,7 +7418,7 @@ fi-no 0:
   - language
   - norwegian
 fi-no 1:
-  url: https://www.dict.com/finnish-norwegian/{%word}
+  url: https://www.dict.com/finnish-norwegian/<word>
   title: Finsk-Norsk (dict.com)
   tags:
   - dictionary
@@ -7439,7 +7439,7 @@ fi-pl 0:
   - language
   - polish
 fi-pl 1:
-  url: https://www.dict.com/finnish-polish/{%word}
+  url: https://www.dict.com/finnish-polish/<word>
   title: Fiński-Polski (dict.com)
   tags:
   - dictionary
@@ -7460,7 +7460,7 @@ fi-pt 0:
   - language
   - portuguese
 fi-pt 1:
-  url: https://www.dict.com/finnish-portuguese/{%word}
+  url: https://www.dict.com/finnish-portuguese/<word>
   title: Finlandês-Português (dict.com)
   tags:
   - dictionary
@@ -7481,7 +7481,7 @@ fi-ro 0:
   - language
   - romanian
 fi-ro 1:
-  url: https://www.dict.com/finnish-romanian/{%word}
+  url: https://www.dict.com/finnish-romanian/<word>
   title: Finlandeză-Română (dict.com)
   tags:
   - dictionary
@@ -7502,7 +7502,7 @@ fi-ru 0:
   - language
   - russian
 fi-ru 1:
-  url: https://www.dict.com/finnish-russian/{%word}
+  url: https://www.dict.com/finnish-russian/<word>
   title: Финский-Русский (dict.com)
   tags:
   - dictionary
@@ -7523,7 +7523,7 @@ fi-sk 0:
   - language
   - slovak
 fi-sk 1:
-  url: https://www.dict.com/finnish-slovak/{%word}
+  url: https://www.dict.com/finnish-slovak/<word>
   title: Fínčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -7544,7 +7544,7 @@ fi-sl 0:
   - language
   - slovenian
 fi-sl 1:
-  url: https://www.dict.com/finnish-slovenian/{%word}
+  url: https://www.dict.com/finnish-slovenian/<word>
   title: Finščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -7565,7 +7565,7 @@ fi-sr 0:
   - language
   - serbian
 fi-sr 1:
-  url: https://www.dict.com/finnish-serbian/{%word}
+  url: https://www.dict.com/finnish-serbian/<word>
   title: Фински-Српски (dict.com)
   tags:
   - dictionary
@@ -7586,7 +7586,7 @@ fi-sv 0:
   - language
   - swedish
 fi-sv 1:
-  url: https://www.dict.com/finnish-swedish/{%word}
+  url: https://www.dict.com/finnish-swedish/<word>
   title: Finska-Svenska (dict.com)
   tags:
   - dictionary
@@ -7607,7 +7607,7 @@ fi-th 0:
   - language
   - thai
 fi-th 1:
-  url: https://www.dict.com/finnish-thai/{%word}
+  url: https://www.dict.com/finnish-thai/<word>
   title: ฟินแลนด์-ไทย (dict.com)
   tags:
   - dictionary
@@ -7628,7 +7628,7 @@ fi-tr 0:
   - language
   - turkish
 fi-tr 1:
-  url: https://www.dict.com/finnish-turkish/{%word}
+  url: https://www.dict.com/finnish-turkish/<word>
   title: Fince-Türkçe (dict.com)
   tags:
   - dictionary
@@ -7649,7 +7649,7 @@ fi-uk 0:
   - language
   - ukrainian
 fi-uk 1:
-  url: https://www.dict.com/finnish-ukrainian/{%word}
+  url: https://www.dict.com/finnish-ukrainian/<word>
   title: Фінська-Українська (dict.com)
   tags:
   - dictionary
@@ -7670,7 +7670,7 @@ fi-vi 0:
   - language
   - vietnamese
 fi-vi 1:
-  url: https://www.dict.com/finnish-vietnamese/{%word}
+  url: https://www.dict.com/finnish-vietnamese/<word>
   title: Tiếng Phần Lan-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -7691,7 +7691,7 @@ fi-zh 0:
   - finnish
   - language
 fi-zh 1:
-  url: https://www.dict.com/finnish-chinese/{%word}
+  url: https://www.dict.com/finnish-chinese/<word>
   title: 芬兰文-中文 (dict.com)
   tags:
   - chinese
@@ -7705,10 +7705,10 @@ fi-zh 1:
     description: 芬兰文 的"树"翻译
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-ar 0:
   title: الفرنسية-العربية (dict.com)
   include:
@@ -7859,7 +7859,7 @@ fr-he 0:
   - hebrew
   - language
 fr-he 1:
-  url: https://www.dict.com/french-hebrew/{%word}
+  url: https://www.dict.com/french-hebrew/<word>
   title: צרפתית-עברית (dict.com)
   tags:
   - dictionary
@@ -7880,7 +7880,7 @@ fr-hr 0:
   - french
   - language
 fr-hr 1:
-  url: https://www.dict.com/french-croatian/{%word}
+  url: https://www.dict.com/french-croatian/<word>
   title: Francuski-Hrvatski (dict.com)
   tags:
   - croatian
@@ -7901,7 +7901,7 @@ fr-hu 0:
   - hungarian
   - language
 fr-hu 1:
-  url: https://www.dict.com/french-hungarian/{%word}
+  url: https://www.dict.com/french-hungarian/<word>
   title: Francia-Magyar (dict.com)
   tags:
   - dictionary
@@ -7922,7 +7922,7 @@ fr-id 0:
   - indonesian
   - language
 fr-id 1:
-  url: https://www.dict.com/french-indonesian/{%word}
+  url: https://www.dict.com/french-indonesian/<word>
   title: Prancis-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -7943,7 +7943,7 @@ fr-it 0:
   - italian
   - language
 fr-it 1:
-  url: https://www.dict.com/french-italian/{%word}
+  url: https://www.dict.com/french-italian/<word>
   title: Francese-Italiano (dict.com)
   tags:
   - dictionary
@@ -7964,7 +7964,7 @@ fr-ja 0:
   - japanese
   - language
 fr-ja 1:
-  url: https://www.dict.com/french-japanese/{%word}
+  url: https://www.dict.com/french-japanese/<word>
   title: フランス語-日本語 (dict.com)
   tags:
   - dictionary
@@ -7985,7 +7985,7 @@ fr-ko 0:
   - korean
   - language
 fr-ko 1:
-  url: https://www.dict.com/french-korean/{%word}
+  url: https://www.dict.com/french-korean/<word>
   title: 프랑스어-한국어 (dict.com)
   tags:
   - dictionary
@@ -8006,7 +8006,7 @@ fr-lt 0:
   - language
   - lithuanian
 fr-lt 1:
-  url: https://www.dict.com/french-lithuanian/{%word}
+  url: https://www.dict.com/french-lithuanian/<word>
   title: Prancūzų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -8027,7 +8027,7 @@ fr-lv 0:
   - language
   - latvian
 fr-lv 1:
-  url: https://www.dict.com/french-latvian/{%word}
+  url: https://www.dict.com/french-latvian/<word>
   title: Franču-Latviešu (dict.com)
   tags:
   - dictionary
@@ -8048,7 +8048,7 @@ fr-nl 0:
   - french
   - language
 fr-nl 1:
-  url: https://www.dict.com/french-dutch/{%word}
+  url: https://www.dict.com/french-dutch/<word>
   title: Frans-Nederlands (dict.com)
   tags:
   - dictionary
@@ -8069,7 +8069,7 @@ fr-no 0:
   - language
   - norwegian
 fr-no 1:
-  url: https://www.dict.com/french-norwegian/{%word}
+  url: https://www.dict.com/french-norwegian/<word>
   title: Fransk-Norsk (dict.com)
   tags:
   - dictionary
@@ -8090,7 +8090,7 @@ fr-pl 0:
   - language
   - polish
 fr-pl 1:
-  url: https://www.dict.com/french-polish/{%word}
+  url: https://www.dict.com/french-polish/<word>
   title: Francuski-Polski (dict.com)
   tags:
   - dictionary
@@ -8111,7 +8111,7 @@ fr-pt 0:
   - language
   - portuguese
 fr-pt 1:
-  url: https://www.dict.com/french-portuguese/{%word}
+  url: https://www.dict.com/french-portuguese/<word>
   title: Francês-Português (dict.com)
   tags:
   - dictionary
@@ -8132,7 +8132,7 @@ fr-ro 0:
   - language
   - romanian
 fr-ro 1:
-  url: https://www.dict.com/french-romanian/{%word}
+  url: https://www.dict.com/french-romanian/<word>
   title: Franceză-Română (dict.com)
   tags:
   - dictionary
@@ -8153,7 +8153,7 @@ fr-ru 0:
   - language
   - russian
 fr-ru 1:
-  url: https://www.dict.com/french-russian/{%word}
+  url: https://www.dict.com/french-russian/<word>
   title: Французский-Русский (dict.com)
   tags:
   - dictionary
@@ -8174,7 +8174,7 @@ fr-sk 0:
   - language
   - slovak
 fr-sk 1:
-  url: https://www.dict.com/french-slovak/{%word}
+  url: https://www.dict.com/french-slovak/<word>
   title: Francúzština-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -8195,7 +8195,7 @@ fr-sl 0:
   - language
   - slovenian
 fr-sl 1:
-  url: https://www.dict.com/french-slovenian/{%word}
+  url: https://www.dict.com/french-slovenian/<word>
   title: Francoščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -8216,7 +8216,7 @@ fr-sr 0:
   - language
   - serbian
 fr-sr 1:
-  url: https://www.dict.com/french-serbian/{%word}
+  url: https://www.dict.com/french-serbian/<word>
   title: Француски-Српски (dict.com)
   tags:
   - dictionary
@@ -8237,7 +8237,7 @@ fr-sv 0:
   - language
   - swedish
 fr-sv 1:
-  url: https://www.dict.com/french-swedish/{%word}
+  url: https://www.dict.com/french-swedish/<word>
   title: Franska-Svenska (dict.com)
   tags:
   - dictionary
@@ -8258,7 +8258,7 @@ fr-th 0:
   - language
   - thai
 fr-th 1:
-  url: https://www.dict.com/french-thai/{%word}
+  url: https://www.dict.com/french-thai/<word>
   title: ฝรั่งเศส-ไทย (dict.com)
   tags:
   - dictionary
@@ -8279,7 +8279,7 @@ fr-tr 0:
   - language
   - turkish
 fr-tr 1:
-  url: https://www.dict.com/french-turkish/{%word}
+  url: https://www.dict.com/french-turkish/<word>
   title: Fransızca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -8300,7 +8300,7 @@ fr-uk 0:
   - language
   - ukrainian
 fr-uk 1:
-  url: https://www.dict.com/french-ukrainian/{%word}
+  url: https://www.dict.com/french-ukrainian/<word>
   title: Французька-Українська (dict.com)
   tags:
   - dictionary
@@ -8321,7 +8321,7 @@ fr-vi 0:
   - language
   - vietnamese
 fr-vi 1:
-  url: https://www.dict.com/french-vietnamese/{%word}
+  url: https://www.dict.com/french-vietnamese/<word>
   title: Tiếng Pháp-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -8342,7 +8342,7 @@ fr-zh 0:
   - french
   - language
 fr-zh 1:
-  url: https://www.dict.com/french-chinese/{%word}
+  url: https://www.dict.com/french-chinese/<word>
   title: 法文-中文 (dict.com)
   tags:
   - chinese
@@ -8356,10 +8356,10 @@ fr-zh 1:
     description: 法文 的"树"翻译
 he 0:
   include:
-    key: he-{$language} 0
+    key: he-<$language> 0
 he 1:
   include:
-    key: he-{$language} 1
+    key: he-<$language> 1
 he-ar 0:
   title: العبرية-العربية (dict.com)
   include:
@@ -8525,7 +8525,7 @@ he-hr 0:
   - hebrew
   - language
 he-hr 1:
-  url: https://www.dict.com/hebrew-croatian/{%word}
+  url: https://www.dict.com/hebrew-croatian/<word>
   title: Hebrejski-Hrvatski (dict.com)
   tags:
   - croatian
@@ -8546,7 +8546,7 @@ he-hu 0:
   - hungarian
   - language
 he-hu 1:
-  url: https://www.dict.com/hebrew-hungarian/{%word}
+  url: https://www.dict.com/hebrew-hungarian/<word>
   title: Héber-Magyar (dict.com)
   tags:
   - dictionary
@@ -8567,7 +8567,7 @@ he-id 0:
   - indonesian
   - language
 he-id 1:
-  url: https://www.dict.com/hebrew-indonesian/{%word}
+  url: https://www.dict.com/hebrew-indonesian/<word>
   title: Ibrani-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -8588,7 +8588,7 @@ he-it 0:
   - italian
   - language
 he-it 1:
-  url: https://www.dict.com/hebrew-italian/{%word}
+  url: https://www.dict.com/hebrew-italian/<word>
   title: Ebraico-Italiano (dict.com)
   tags:
   - dictionary
@@ -8609,7 +8609,7 @@ he-ja 0:
   - japanese
   - language
 he-ja 1:
-  url: https://www.dict.com/hebrew-japanese/{%word}
+  url: https://www.dict.com/hebrew-japanese/<word>
   title: ヘブライ語-日本語 (dict.com)
   tags:
   - dictionary
@@ -8630,7 +8630,7 @@ he-ko 0:
   - korean
   - language
 he-ko 1:
-  url: https://www.dict.com/hebrew-korean/{%word}
+  url: https://www.dict.com/hebrew-korean/<word>
   title: 히브리어-한국어 (dict.com)
   tags:
   - dictionary
@@ -8651,7 +8651,7 @@ he-lt 0:
   - language
   - lithuanian
 he-lt 1:
-  url: https://www.dict.com/hebrew-lithuanian/{%word}
+  url: https://www.dict.com/hebrew-lithuanian/<word>
   title: Hebrajų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -8672,7 +8672,7 @@ he-lv 0:
   - language
   - latvian
 he-lv 1:
-  url: https://www.dict.com/hebrew-latvian/{%word}
+  url: https://www.dict.com/hebrew-latvian/<word>
   title: Ivrits-Latviešu (dict.com)
   tags:
   - dictionary
@@ -8693,7 +8693,7 @@ he-nl 0:
   - hebrew
   - language
 he-nl 1:
-  url: https://www.dict.com/hebrew-dutch/{%word}
+  url: https://www.dict.com/hebrew-dutch/<word>
   title: Hebreeuws-Nederlands (dict.com)
   tags:
   - dictionary
@@ -8714,7 +8714,7 @@ he-no 0:
   - language
   - norwegian
 he-no 1:
-  url: https://www.dict.com/hebrew-norwegian/{%word}
+  url: https://www.dict.com/hebrew-norwegian/<word>
   title: Hebraisk-Norsk (dict.com)
   tags:
   - dictionary
@@ -8735,7 +8735,7 @@ he-pl 0:
   - language
   - polish
 he-pl 1:
-  url: https://www.dict.com/hebrew-polish/{%word}
+  url: https://www.dict.com/hebrew-polish/<word>
   title: Hebrajski-Polski (dict.com)
   tags:
   - dictionary
@@ -8756,7 +8756,7 @@ he-pt 0:
   - language
   - portuguese
 he-pt 1:
-  url: https://www.dict.com/hebrew-portuguese/{%word}
+  url: https://www.dict.com/hebrew-portuguese/<word>
   title: Hebraico-Português (dict.com)
   tags:
   - dictionary
@@ -8777,7 +8777,7 @@ he-ro 0:
   - language
   - romanian
 he-ro 1:
-  url: https://www.dict.com/hebrew-romanian/{%word}
+  url: https://www.dict.com/hebrew-romanian/<word>
   title: Ebraică-Română (dict.com)
   tags:
   - dictionary
@@ -8798,7 +8798,7 @@ he-ru 0:
   - language
   - russian
 he-ru 1:
-  url: https://www.dict.com/hebrew-russian/{%word}
+  url: https://www.dict.com/hebrew-russian/<word>
   title: Иврит-Русский (dict.com)
   tags:
   - dictionary
@@ -8819,7 +8819,7 @@ he-sk 0:
   - language
   - slovak
 he-sk 1:
-  url: https://www.dict.com/hebrew-slovak/{%word}
+  url: https://www.dict.com/hebrew-slovak/<word>
   title: Hebrejčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -8840,7 +8840,7 @@ he-sl 0:
   - language
   - slovenian
 he-sl 1:
-  url: https://www.dict.com/hebrew-slovenian/{%word}
+  url: https://www.dict.com/hebrew-slovenian/<word>
   title: Hebrejščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -8861,7 +8861,7 @@ he-sr 0:
   - language
   - serbian
 he-sr 1:
-  url: https://www.dict.com/hebrew-serbian/{%word}
+  url: https://www.dict.com/hebrew-serbian/<word>
   title: Хебрејски-Српски (dict.com)
   tags:
   - dictionary
@@ -8882,7 +8882,7 @@ he-sv 0:
   - language
   - swedish
 he-sv 1:
-  url: https://www.dict.com/hebrew-swedish/{%word}
+  url: https://www.dict.com/hebrew-swedish/<word>
   title: Hebreiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -8903,7 +8903,7 @@ he-th 0:
   - language
   - thai
 he-th 1:
-  url: https://www.dict.com/hebrew-thai/{%word}
+  url: https://www.dict.com/hebrew-thai/<word>
   title: ฮิบรู-ไทย (dict.com)
   tags:
   - dictionary
@@ -8924,7 +8924,7 @@ he-tr 0:
   - language
   - turkish
 he-tr 1:
-  url: https://www.dict.com/hebrew-turkish/{%word}
+  url: https://www.dict.com/hebrew-turkish/<word>
   title: İbranice-Türkçe (dict.com)
   tags:
   - dictionary
@@ -8945,7 +8945,7 @@ he-uk 0:
   - language
   - ukrainian
 he-uk 1:
-  url: https://www.dict.com/hebrew-ukrainian/{%word}
+  url: https://www.dict.com/hebrew-ukrainian/<word>
   title: Іврит-Українська (dict.com)
   tags:
   - dictionary
@@ -8966,7 +8966,7 @@ he-vi 0:
   - language
   - vietnamese
 he-vi 1:
-  url: https://www.dict.com/hebrew-vietnamese/{%word}
+  url: https://www.dict.com/hebrew-vietnamese/<word>
   title: Tiếng Do Thái-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -8987,7 +8987,7 @@ he-zh 0:
   - hebrew
   - language
 he-zh 1:
-  url: https://www.dict.com/hebrew-chinese/{%word}
+  url: https://www.dict.com/hebrew-chinese/<word>
   title: 希伯来文-中文 (dict.com)
   tags:
   - chinese
@@ -9001,10 +9001,10 @@ he-zh 1:
     description: 希伯来文 的"树"翻译
 hr 0:
   include:
-    key: hr-{$language} 0
+    key: hr-<$language> 0
 hr 1:
   include:
-    key: hr-{$language} 1
+    key: hr-<$language> 1
 hr-ar 0:
   title: الكرواتية-العربية (dict.com)
   include:
@@ -9183,7 +9183,7 @@ hr-hu 0:
   - hungarian
   - language
 hr-hu 1:
-  url: https://www.dict.com/croatian-hungarian/{%word}
+  url: https://www.dict.com/croatian-hungarian/<word>
   title: Horvát-Magyar (dict.com)
   tags:
   - croatian
@@ -9204,7 +9204,7 @@ hr-id 0:
   - indonesian
   - language
 hr-id 1:
-  url: https://www.dict.com/croatian-indonesian/{%word}
+  url: https://www.dict.com/croatian-indonesian/<word>
   title: Kroasia-Bahasa Indonesia (dict.com)
   tags:
   - croatian
@@ -9225,7 +9225,7 @@ hr-it 0:
   - italian
   - language
 hr-it 1:
-  url: https://www.dict.com/croatian-italian/{%word}
+  url: https://www.dict.com/croatian-italian/<word>
   title: Croato-Italiano (dict.com)
   tags:
   - croatian
@@ -9246,7 +9246,7 @@ hr-ja 0:
   - japanese
   - language
 hr-ja 1:
-  url: https://www.dict.com/croatian-japanese/{%word}
+  url: https://www.dict.com/croatian-japanese/<word>
   title: クロアチア語-日本語 (dict.com)
   tags:
   - croatian
@@ -9267,7 +9267,7 @@ hr-ko 0:
   - korean
   - language
 hr-ko 1:
-  url: https://www.dict.com/croatian-korean/{%word}
+  url: https://www.dict.com/croatian-korean/<word>
   title: 크로아티아어-한국어 (dict.com)
   tags:
   - croatian
@@ -9288,7 +9288,7 @@ hr-lt 0:
   - language
   - lithuanian
 hr-lt 1:
-  url: https://www.dict.com/croatian-lithuanian/{%word}
+  url: https://www.dict.com/croatian-lithuanian/<word>
   title: Kroatų-Lietuvių (dict.com)
   tags:
   - croatian
@@ -9309,7 +9309,7 @@ hr-lv 0:
   - language
   - latvian
 hr-lv 1:
-  url: https://www.dict.com/croatian-latvian/{%word}
+  url: https://www.dict.com/croatian-latvian/<word>
   title: Horvātu-Latviešu (dict.com)
   tags:
   - croatian
@@ -9330,7 +9330,7 @@ hr-nl 0:
   - dutch
   - language
 hr-nl 1:
-  url: https://www.dict.com/croatian-dutch/{%word}
+  url: https://www.dict.com/croatian-dutch/<word>
   title: Kroatisch-Nederlands (dict.com)
   tags:
   - croatian
@@ -9351,7 +9351,7 @@ hr-no 0:
   - language
   - norwegian
 hr-no 1:
-  url: https://www.dict.com/croatian-norwegian/{%word}
+  url: https://www.dict.com/croatian-norwegian/<word>
   title: Kroatisk-Norsk (dict.com)
   tags:
   - croatian
@@ -9372,7 +9372,7 @@ hr-pl 0:
   - language
   - polish
 hr-pl 1:
-  url: https://www.dict.com/croatian-polish/{%word}
+  url: https://www.dict.com/croatian-polish/<word>
   title: Chorwacki-Polski (dict.com)
   tags:
   - croatian
@@ -9393,7 +9393,7 @@ hr-pt 0:
   - language
   - portuguese
 hr-pt 1:
-  url: https://www.dict.com/croatian-portuguese/{%word}
+  url: https://www.dict.com/croatian-portuguese/<word>
   title: Croata-Português (dict.com)
   tags:
   - croatian
@@ -9414,7 +9414,7 @@ hr-ro 0:
   - language
   - romanian
 hr-ro 1:
-  url: https://www.dict.com/croatian-romanian/{%word}
+  url: https://www.dict.com/croatian-romanian/<word>
   title: Croată-Română (dict.com)
   tags:
   - croatian
@@ -9435,7 +9435,7 @@ hr-ru 0:
   - language
   - russian
 hr-ru 1:
-  url: https://www.dict.com/croatian-russian/{%word}
+  url: https://www.dict.com/croatian-russian/<word>
   title: Хорватский-Русский (dict.com)
   tags:
   - croatian
@@ -9456,7 +9456,7 @@ hr-sk 0:
   - language
   - slovak
 hr-sk 1:
-  url: https://www.dict.com/croatian-slovak/{%word}
+  url: https://www.dict.com/croatian-slovak/<word>
   title: Chorvátčina-Slovenčina (dict.com)
   tags:
   - croatian
@@ -9477,7 +9477,7 @@ hr-sl 0:
   - language
   - slovenian
 hr-sl 1:
-  url: https://www.dict.com/croatian-slovenian/{%word}
+  url: https://www.dict.com/croatian-slovenian/<word>
   title: Hrvaščina-Slovenščina (dict.com)
   tags:
   - croatian
@@ -9498,7 +9498,7 @@ hr-sr 0:
   - language
   - serbian
 hr-sr 1:
-  url: https://www.dict.com/croatian-serbian/{%word}
+  url: https://www.dict.com/croatian-serbian/<word>
   title: Хрватски-Српски (dict.com)
   tags:
   - croatian
@@ -9519,7 +9519,7 @@ hr-sv 0:
   - language
   - swedish
 hr-sv 1:
-  url: https://www.dict.com/croatian-swedish/{%word}
+  url: https://www.dict.com/croatian-swedish/<word>
   title: Kroatiska-Svenska (dict.com)
   tags:
   - croatian
@@ -9540,7 +9540,7 @@ hr-th 0:
   - language
   - thai
 hr-th 1:
-  url: https://www.dict.com/croatian-thai/{%word}
+  url: https://www.dict.com/croatian-thai/<word>
   title: โครเอเชีย-ไทย (dict.com)
   tags:
   - croatian
@@ -9561,7 +9561,7 @@ hr-tr 0:
   - language
   - turkish
 hr-tr 1:
-  url: https://www.dict.com/croatian-turkish/{%word}
+  url: https://www.dict.com/croatian-turkish/<word>
   title: Hırvatça-Türkçe (dict.com)
   tags:
   - croatian
@@ -9582,7 +9582,7 @@ hr-uk 0:
   - language
   - ukrainian
 hr-uk 1:
-  url: https://www.dict.com/croatian-ukrainian/{%word}
+  url: https://www.dict.com/croatian-ukrainian/<word>
   title: Хорватська-Українська (dict.com)
   tags:
   - croatian
@@ -9603,7 +9603,7 @@ hr-vi 0:
   - language
   - vietnamese
 hr-vi 1:
-  url: https://www.dict.com/croatian-vietnamese/{%word}
+  url: https://www.dict.com/croatian-vietnamese/<word>
   title: Tiếng Croatia-Tiếng Việt (dict.com)
   tags:
   - croatian
@@ -9624,7 +9624,7 @@ hr-zh 0:
   - dictionary
   - language
 hr-zh 1:
-  url: https://www.dict.com/croatian-chinese/{%word}
+  url: https://www.dict.com/croatian-chinese/<word>
   title: 克罗地亚文-中文 (dict.com)
   tags:
   - chinese
@@ -9638,10 +9638,10 @@ hr-zh 1:
     description: 克罗地亚文 的"树"翻译
 hu 0:
   include:
-    key: hu-{$language} 0
+    key: hu-<$language> 0
 hu 1:
   include:
-    key: hu-{$language} 1
+    key: hu-<$language> 1
 hu-ar 0:
   title: الهنغارية-العربية (dict.com)
   include:
@@ -9833,7 +9833,7 @@ hu-id 0:
   - indonesian
   - language
 hu-id 1:
-  url: https://www.dict.com/hungarian-indonesian/{%word}
+  url: https://www.dict.com/hungarian-indonesian/<word>
   title: Hungaria-Bahasa Indonesia (dict.com)
   tags:
   - dictionary
@@ -9854,7 +9854,7 @@ hu-it 0:
   - italian
   - language
 hu-it 1:
-  url: https://www.dict.com/hungarian-italian/{%word}
+  url: https://www.dict.com/hungarian-italian/<word>
   title: Ungherese-Italiano (dict.com)
   tags:
   - dictionary
@@ -9875,7 +9875,7 @@ hu-ja 0:
   - japanese
   - language
 hu-ja 1:
-  url: https://www.dict.com/hungarian-japanese/{%word}
+  url: https://www.dict.com/hungarian-japanese/<word>
   title: ハンガリー語-日本語 (dict.com)
   tags:
   - dictionary
@@ -9896,7 +9896,7 @@ hu-ko 0:
   - korean
   - language
 hu-ko 1:
-  url: https://www.dict.com/hungarian-korean/{%word}
+  url: https://www.dict.com/hungarian-korean/<word>
   title: 헝가리어-한국어 (dict.com)
   tags:
   - dictionary
@@ -9917,7 +9917,7 @@ hu-lt 0:
   - language
   - lithuanian
 hu-lt 1:
-  url: https://www.dict.com/hungarian-lithuanian/{%word}
+  url: https://www.dict.com/hungarian-lithuanian/<word>
   title: Vengrų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -9938,7 +9938,7 @@ hu-lv 0:
   - language
   - latvian
 hu-lv 1:
-  url: https://www.dict.com/hungarian-latvian/{%word}
+  url: https://www.dict.com/hungarian-latvian/<word>
   title: Ungāru-Latviešu (dict.com)
   tags:
   - dictionary
@@ -9959,7 +9959,7 @@ hu-nl 0:
   - hungarian
   - language
 hu-nl 1:
-  url: https://www.dict.com/hungarian-dutch/{%word}
+  url: https://www.dict.com/hungarian-dutch/<word>
   title: Hongaars-Nederlands (dict.com)
   tags:
   - dictionary
@@ -9980,7 +9980,7 @@ hu-no 0:
   - language
   - norwegian
 hu-no 1:
-  url: https://www.dict.com/hungarian-norwegian/{%word}
+  url: https://www.dict.com/hungarian-norwegian/<word>
   title: Ungarsk-Norsk (dict.com)
   tags:
   - dictionary
@@ -10001,7 +10001,7 @@ hu-pl 0:
   - language
   - polish
 hu-pl 1:
-  url: https://www.dict.com/hungarian-polish/{%word}
+  url: https://www.dict.com/hungarian-polish/<word>
   title: Węgierski-Polski (dict.com)
   tags:
   - dictionary
@@ -10022,7 +10022,7 @@ hu-pt 0:
   - language
   - portuguese
 hu-pt 1:
-  url: https://www.dict.com/hungarian-portuguese/{%word}
+  url: https://www.dict.com/hungarian-portuguese/<word>
   title: Húngaro-Português (dict.com)
   tags:
   - dictionary
@@ -10043,7 +10043,7 @@ hu-ro 0:
   - language
   - romanian
 hu-ro 1:
-  url: https://www.dict.com/hungarian-romanian/{%word}
+  url: https://www.dict.com/hungarian-romanian/<word>
   title: Maghiară-Română (dict.com)
   tags:
   - dictionary
@@ -10064,7 +10064,7 @@ hu-ru 0:
   - language
   - russian
 hu-ru 1:
-  url: https://www.dict.com/hungarian-russian/{%word}
+  url: https://www.dict.com/hungarian-russian/<word>
   title: Венгерский-Русский (dict.com)
   tags:
   - dictionary
@@ -10085,7 +10085,7 @@ hu-sk 0:
   - language
   - slovak
 hu-sk 1:
-  url: https://www.dict.com/hungarian-slovak/{%word}
+  url: https://www.dict.com/hungarian-slovak/<word>
   title: Maďarčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -10106,7 +10106,7 @@ hu-sl 0:
   - language
   - slovenian
 hu-sl 1:
-  url: https://www.dict.com/hungarian-slovenian/{%word}
+  url: https://www.dict.com/hungarian-slovenian/<word>
   title: Madžarščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -10127,7 +10127,7 @@ hu-sr 0:
   - language
   - serbian
 hu-sr 1:
-  url: https://www.dict.com/hungarian-serbian/{%word}
+  url: https://www.dict.com/hungarian-serbian/<word>
   title: Мађарски-Српски (dict.com)
   tags:
   - dictionary
@@ -10148,7 +10148,7 @@ hu-sv 0:
   - language
   - swedish
 hu-sv 1:
-  url: https://www.dict.com/hungarian-swedish/{%word}
+  url: https://www.dict.com/hungarian-swedish/<word>
   title: Ungerska-Svenska (dict.com)
   tags:
   - dictionary
@@ -10169,7 +10169,7 @@ hu-th 0:
   - language
   - thai
 hu-th 1:
-  url: https://www.dict.com/hungarian-thai/{%word}
+  url: https://www.dict.com/hungarian-thai/<word>
   title: ฮังการี-ไทย (dict.com)
   tags:
   - dictionary
@@ -10190,7 +10190,7 @@ hu-tr 0:
   - language
   - turkish
 hu-tr 1:
-  url: https://www.dict.com/hungarian-turkish/{%word}
+  url: https://www.dict.com/hungarian-turkish/<word>
   title: Macarca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -10211,7 +10211,7 @@ hu-uk 0:
   - language
   - ukrainian
 hu-uk 1:
-  url: https://www.dict.com/hungarian-ukrainian/{%word}
+  url: https://www.dict.com/hungarian-ukrainian/<word>
   title: Угорська-Українська (dict.com)
   tags:
   - dictionary
@@ -10232,7 +10232,7 @@ hu-vi 0:
   - language
   - vietnamese
 hu-vi 1:
-  url: https://www.dict.com/hungarian-vietnamese/{%word}
+  url: https://www.dict.com/hungarian-vietnamese/<word>
   title: Tiếng Hungary-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -10253,7 +10253,7 @@ hu-zh 0:
   - hungarian
   - language
 hu-zh 1:
-  url: https://www.dict.com/hungarian-chinese/{%word}
+  url: https://www.dict.com/hungarian-chinese/<word>
   title: 匈牙利文-中文 (dict.com)
   tags:
   - chinese
@@ -10267,10 +10267,10 @@ hu-zh 1:
     description: 匈牙利文 的"树"翻译
 id 0:
   include:
-    key: id-{$language} 0
+    key: id-<$language> 0
 id 1:
   include:
-    key: id-{$language} 1
+    key: id-<$language> 1
 id-ar 0:
   title: الإندونيسية-العربية (dict.com)
   include:
@@ -10475,7 +10475,7 @@ id-it 0:
   - italian
   - language
 id-it 1:
-  url: https://www.dict.com/indonesian-italian/{%word}
+  url: https://www.dict.com/indonesian-italian/<word>
   title: Indonesiano-Italiano (dict.com)
   tags:
   - dictionary
@@ -10496,7 +10496,7 @@ id-ja 0:
   - japanese
   - language
 id-ja 1:
-  url: https://www.dict.com/indonesian-japanese/{%word}
+  url: https://www.dict.com/indonesian-japanese/<word>
   title: インドネシア語-日本語 (dict.com)
   tags:
   - dictionary
@@ -10517,7 +10517,7 @@ id-ko 0:
   - korean
   - language
 id-ko 1:
-  url: https://www.dict.com/indonesian-korean/{%word}
+  url: https://www.dict.com/indonesian-korean/<word>
   title: 인도네시아어-한국어 (dict.com)
   tags:
   - dictionary
@@ -10538,7 +10538,7 @@ id-lt 0:
   - language
   - lithuanian
 id-lt 1:
-  url: https://www.dict.com/indonesian-lithuanian/{%word}
+  url: https://www.dict.com/indonesian-lithuanian/<word>
   title: Indoneziečių-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -10559,7 +10559,7 @@ id-lv 0:
   - language
   - latvian
 id-lv 1:
-  url: https://www.dict.com/indonesian-latvian/{%word}
+  url: https://www.dict.com/indonesian-latvian/<word>
   title: Indonēziešu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -10580,7 +10580,7 @@ id-nl 0:
   - indonesian
   - language
 id-nl 1:
-  url: https://www.dict.com/indonesian-dutch/{%word}
+  url: https://www.dict.com/indonesian-dutch/<word>
   title: Indonesisch-Nederlands (dict.com)
   tags:
   - dictionary
@@ -10601,7 +10601,7 @@ id-no 0:
   - language
   - norwegian
 id-no 1:
-  url: https://www.dict.com/indonesian-norwegian/{%word}
+  url: https://www.dict.com/indonesian-norwegian/<word>
   title: Indonesisk-Norsk (dict.com)
   tags:
   - dictionary
@@ -10622,7 +10622,7 @@ id-pl 0:
   - language
   - polish
 id-pl 1:
-  url: https://www.dict.com/indonesian-polish/{%word}
+  url: https://www.dict.com/indonesian-polish/<word>
   title: Indonezyjski-Polski (dict.com)
   tags:
   - dictionary
@@ -10643,7 +10643,7 @@ id-pt 0:
   - language
   - portuguese
 id-pt 1:
-  url: https://www.dict.com/indonesian-portuguese/{%word}
+  url: https://www.dict.com/indonesian-portuguese/<word>
   title: Indonésio-Português (dict.com)
   tags:
   - dictionary
@@ -10664,7 +10664,7 @@ id-ro 0:
   - language
   - romanian
 id-ro 1:
-  url: https://www.dict.com/indonesian-romanian/{%word}
+  url: https://www.dict.com/indonesian-romanian/<word>
   title: Indoneziană-Română (dict.com)
   tags:
   - dictionary
@@ -10685,7 +10685,7 @@ id-ru 0:
   - language
   - russian
 id-ru 1:
-  url: https://www.dict.com/indonesian-russian/{%word}
+  url: https://www.dict.com/indonesian-russian/<word>
   title: Индонезийский-Русский (dict.com)
   tags:
   - dictionary
@@ -10706,7 +10706,7 @@ id-sk 0:
   - language
   - slovak
 id-sk 1:
-  url: https://www.dict.com/indonesian-slovak/{%word}
+  url: https://www.dict.com/indonesian-slovak/<word>
   title: Indonézština-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -10727,7 +10727,7 @@ id-sl 0:
   - language
   - slovenian
 id-sl 1:
-  url: https://www.dict.com/indonesian-slovenian/{%word}
+  url: https://www.dict.com/indonesian-slovenian/<word>
   title: Indonezijščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -10748,7 +10748,7 @@ id-sr 0:
   - language
   - serbian
 id-sr 1:
-  url: https://www.dict.com/indonesian-serbian/{%word}
+  url: https://www.dict.com/indonesian-serbian/<word>
   title: Индонежански-Српски (dict.com)
   tags:
   - dictionary
@@ -10769,7 +10769,7 @@ id-sv 0:
   - language
   - swedish
 id-sv 1:
-  url: https://www.dict.com/indonesian-swedish/{%word}
+  url: https://www.dict.com/indonesian-swedish/<word>
   title: Indonesiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -10790,7 +10790,7 @@ id-th 0:
   - language
   - thai
 id-th 1:
-  url: https://www.dict.com/indonesian-thai/{%word}
+  url: https://www.dict.com/indonesian-thai/<word>
   title: อินโดนีเชีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -10811,7 +10811,7 @@ id-tr 0:
   - language
   - turkish
 id-tr 1:
-  url: https://www.dict.com/indonesian-turkish/{%word}
+  url: https://www.dict.com/indonesian-turkish/<word>
   title: Endonezce-Türkçe (dict.com)
   tags:
   - dictionary
@@ -10832,7 +10832,7 @@ id-uk 0:
   - language
   - ukrainian
 id-uk 1:
-  url: https://www.dict.com/indonesian-ukrainian/{%word}
+  url: https://www.dict.com/indonesian-ukrainian/<word>
   title: Індонезійська-Українська (dict.com)
   tags:
   - dictionary
@@ -10853,7 +10853,7 @@ id-vi 0:
   - language
   - vietnamese
 id-vi 1:
-  url: https://www.dict.com/indonesian-vietnamese/{%word}
+  url: https://www.dict.com/indonesian-vietnamese/<word>
   title: Tiếng Indonesia-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -10874,7 +10874,7 @@ id-zh 0:
   - indonesian
   - language
 id-zh 1:
-  url: https://www.dict.com/indonesian-chinese/{%word}
+  url: https://www.dict.com/indonesian-chinese/<word>
   title: 印度尼西亚文-中文 (dict.com)
   tags:
   - chinese
@@ -10888,10 +10888,10 @@ id-zh 1:
     description: 印度尼西亚文 的"树"翻译
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-ar 0:
   title: الإيطالية-العربية (dict.com)
   include:
@@ -11109,7 +11109,7 @@ it-ja 0:
   - japanese
   - language
 it-ja 1:
-  url: https://www.dict.com/italian-japanese/{%word}
+  url: https://www.dict.com/italian-japanese/<word>
   title: イタリア語-日本語 (dict.com)
   tags:
   - dictionary
@@ -11130,7 +11130,7 @@ it-ko 0:
   - korean
   - language
 it-ko 1:
-  url: https://www.dict.com/italian-korean/{%word}
+  url: https://www.dict.com/italian-korean/<word>
   title: 이탈리아어-한국어 (dict.com)
   tags:
   - dictionary
@@ -11151,7 +11151,7 @@ it-lt 0:
   - language
   - lithuanian
 it-lt 1:
-  url: https://www.dict.com/italian-lithuanian/{%word}
+  url: https://www.dict.com/italian-lithuanian/<word>
   title: Italų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -11172,7 +11172,7 @@ it-lv 0:
   - language
   - latvian
 it-lv 1:
-  url: https://www.dict.com/italian-latvian/{%word}
+  url: https://www.dict.com/italian-latvian/<word>
   title: Itāļu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -11193,7 +11193,7 @@ it-nl 0:
   - italian
   - language
 it-nl 1:
-  url: https://www.dict.com/italian-dutch/{%word}
+  url: https://www.dict.com/italian-dutch/<word>
   title: Italiaans-Nederlands (dict.com)
   tags:
   - dictionary
@@ -11214,7 +11214,7 @@ it-no 0:
   - language
   - norwegian
 it-no 1:
-  url: https://www.dict.com/italian-norwegian/{%word}
+  url: https://www.dict.com/italian-norwegian/<word>
   title: Italiensk-Norsk (dict.com)
   tags:
   - dictionary
@@ -11235,7 +11235,7 @@ it-pl 0:
   - language
   - polish
 it-pl 1:
-  url: https://www.dict.com/italian-polish/{%word}
+  url: https://www.dict.com/italian-polish/<word>
   title: Włoski-Polski (dict.com)
   tags:
   - dictionary
@@ -11256,7 +11256,7 @@ it-pt 0:
   - language
   - portuguese
 it-pt 1:
-  url: https://www.dict.com/italian-portuguese/{%word}
+  url: https://www.dict.com/italian-portuguese/<word>
   title: Italiano-Português (dict.com)
   tags:
   - dictionary
@@ -11277,7 +11277,7 @@ it-ro 0:
   - language
   - romanian
 it-ro 1:
-  url: https://www.dict.com/italian-romanian/{%word}
+  url: https://www.dict.com/italian-romanian/<word>
   title: Italiană-Română (dict.com)
   tags:
   - dictionary
@@ -11298,7 +11298,7 @@ it-ru 0:
   - language
   - russian
 it-ru 1:
-  url: https://www.dict.com/italian-russian/{%word}
+  url: https://www.dict.com/italian-russian/<word>
   title: Итальянский-Русский (dict.com)
   tags:
   - dictionary
@@ -11319,7 +11319,7 @@ it-sk 0:
   - language
   - slovak
 it-sk 1:
-  url: https://www.dict.com/italian-slovak/{%word}
+  url: https://www.dict.com/italian-slovak/<word>
   title: Taliančina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -11340,7 +11340,7 @@ it-sl 0:
   - language
   - slovenian
 it-sl 1:
-  url: https://www.dict.com/italian-slovenian/{%word}
+  url: https://www.dict.com/italian-slovenian/<word>
   title: Italijanščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -11361,7 +11361,7 @@ it-sr 0:
   - language
   - serbian
 it-sr 1:
-  url: https://www.dict.com/italian-serbian/{%word}
+  url: https://www.dict.com/italian-serbian/<word>
   title: Италијански-Српски (dict.com)
   tags:
   - dictionary
@@ -11382,7 +11382,7 @@ it-sv 0:
   - language
   - swedish
 it-sv 1:
-  url: https://www.dict.com/italian-swedish/{%word}
+  url: https://www.dict.com/italian-swedish/<word>
   title: Italienska-Svenska (dict.com)
   tags:
   - dictionary
@@ -11403,7 +11403,7 @@ it-th 0:
   - language
   - thai
 it-th 1:
-  url: https://www.dict.com/italian-thai/{%word}
+  url: https://www.dict.com/italian-thai/<word>
   title: อิตาลี-ไทย (dict.com)
   tags:
   - dictionary
@@ -11424,7 +11424,7 @@ it-tr 0:
   - language
   - turkish
 it-tr 1:
-  url: https://www.dict.com/italian-turkish/{%word}
+  url: https://www.dict.com/italian-turkish/<word>
   title: İtalyanca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -11445,7 +11445,7 @@ it-uk 0:
   - language
   - ukrainian
 it-uk 1:
-  url: https://www.dict.com/italian-ukrainian/{%word}
+  url: https://www.dict.com/italian-ukrainian/<word>
   title: Італійська-Українська (dict.com)
   tags:
   - dictionary
@@ -11466,7 +11466,7 @@ it-vi 0:
   - language
   - vietnamese
 it-vi 1:
-  url: https://www.dict.com/italian-vietnamese/{%word}
+  url: https://www.dict.com/italian-vietnamese/<word>
   title: Tiếng Ý-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -11487,7 +11487,7 @@ it-zh 0:
   - italian
   - language
 it-zh 1:
-  url: https://www.dict.com/italian-chinese/{%word}
+  url: https://www.dict.com/italian-chinese/<word>
   title: 意大利文-中文 (dict.com)
   tags:
   - chinese
@@ -11501,10 +11501,10 @@ it-zh 1:
     description: 意大利文 的"树"翻译
 ja 0:
   include:
-    key: ja-{$language} 0
+    key: ja-<$language> 0
 ja 1:
   include:
-    key: ja-{$language} 1
+    key: ja-<$language> 1
 ja-ar 0:
   title: اليابانية-العربية (dict.com)
   include:
@@ -11735,7 +11735,7 @@ ja-ko 0:
   - korean
   - language
 ja-ko 1:
-  url: https://www.dict.com/japanese-korean/{%word}
+  url: https://www.dict.com/japanese-korean/<word>
   title: 일본어-한국어 (dict.com)
   tags:
   - dictionary
@@ -11756,7 +11756,7 @@ ja-lt 0:
   - language
   - lithuanian
 ja-lt 1:
-  url: https://www.dict.com/japanese-lithuanian/{%word}
+  url: https://www.dict.com/japanese-lithuanian/<word>
   title: Japonų-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -11777,7 +11777,7 @@ ja-lv 0:
   - language
   - latvian
 ja-lv 1:
-  url: https://www.dict.com/japanese-latvian/{%word}
+  url: https://www.dict.com/japanese-latvian/<word>
   title: Japāņu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -11798,7 +11798,7 @@ ja-nl 0:
   - japanese
   - language
 ja-nl 1:
-  url: https://www.dict.com/japanese-dutch/{%word}
+  url: https://www.dict.com/japanese-dutch/<word>
   title: Japans-Nederlands (dict.com)
   tags:
   - dictionary
@@ -11819,7 +11819,7 @@ ja-no 0:
   - language
   - norwegian
 ja-no 1:
-  url: https://www.dict.com/japanese-norwegian/{%word}
+  url: https://www.dict.com/japanese-norwegian/<word>
   title: Japansk-Norsk (dict.com)
   tags:
   - dictionary
@@ -11840,7 +11840,7 @@ ja-pl 0:
   - language
   - polish
 ja-pl 1:
-  url: https://www.dict.com/japanese-polish/{%word}
+  url: https://www.dict.com/japanese-polish/<word>
   title: Japoński-Polski (dict.com)
   tags:
   - dictionary
@@ -11861,7 +11861,7 @@ ja-pt 0:
   - language
   - portuguese
 ja-pt 1:
-  url: https://www.dict.com/japanese-portuguese/{%word}
+  url: https://www.dict.com/japanese-portuguese/<word>
   title: Japonês-Português (dict.com)
   tags:
   - dictionary
@@ -11882,7 +11882,7 @@ ja-ro 0:
   - language
   - romanian
 ja-ro 1:
-  url: https://www.dict.com/japanese-romanian/{%word}
+  url: https://www.dict.com/japanese-romanian/<word>
   title: Japoneză-Română (dict.com)
   tags:
   - dictionary
@@ -11903,7 +11903,7 @@ ja-ru 0:
   - language
   - russian
 ja-ru 1:
-  url: https://www.dict.com/japanese-russian/{%word}
+  url: https://www.dict.com/japanese-russian/<word>
   title: Японский-Русский (dict.com)
   tags:
   - dictionary
@@ -11924,7 +11924,7 @@ ja-sk 0:
   - language
   - slovak
 ja-sk 1:
-  url: https://www.dict.com/japanese-slovak/{%word}
+  url: https://www.dict.com/japanese-slovak/<word>
   title: Japončina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -11945,7 +11945,7 @@ ja-sl 0:
   - language
   - slovenian
 ja-sl 1:
-  url: https://www.dict.com/japanese-slovenian/{%word}
+  url: https://www.dict.com/japanese-slovenian/<word>
   title: Japonščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -11966,7 +11966,7 @@ ja-sr 0:
   - language
   - serbian
 ja-sr 1:
-  url: https://www.dict.com/japanese-serbian/{%word}
+  url: https://www.dict.com/japanese-serbian/<word>
   title: Јапански-Српски (dict.com)
   tags:
   - dictionary
@@ -11987,7 +11987,7 @@ ja-sv 0:
   - language
   - swedish
 ja-sv 1:
-  url: https://www.dict.com/japanese-swedish/{%word}
+  url: https://www.dict.com/japanese-swedish/<word>
   title: Japanska-Svenska (dict.com)
   tags:
   - dictionary
@@ -12008,7 +12008,7 @@ ja-th 0:
   - language
   - thai
 ja-th 1:
-  url: https://www.dict.com/japanese-thai/{%word}
+  url: https://www.dict.com/japanese-thai/<word>
   title: ญี่ปุ่น-ไทย (dict.com)
   tags:
   - dictionary
@@ -12029,7 +12029,7 @@ ja-tr 0:
   - language
   - turkish
 ja-tr 1:
-  url: https://www.dict.com/japanese-turkish/{%word}
+  url: https://www.dict.com/japanese-turkish/<word>
   title: Japonca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -12050,7 +12050,7 @@ ja-uk 0:
   - language
   - ukrainian
 ja-uk 1:
-  url: https://www.dict.com/japanese-ukrainian/{%word}
+  url: https://www.dict.com/japanese-ukrainian/<word>
   title: Японська-Українська (dict.com)
   tags:
   - dictionary
@@ -12071,7 +12071,7 @@ ja-vi 0:
   - language
   - vietnamese
 ja-vi 1:
-  url: https://www.dict.com/japanese-vietnamese/{%word}
+  url: https://www.dict.com/japanese-vietnamese/<word>
   title: Tiếng Nhật-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -12092,7 +12092,7 @@ ja-zh 0:
   - japanese
   - language
 ja-zh 1:
-  url: https://www.dict.com/japanese-chinese/{%word}
+  url: https://www.dict.com/japanese-chinese/<word>
   title: 日文-中文 (dict.com)
   tags:
   - chinese
@@ -12106,10 +12106,10 @@ ja-zh 1:
     description: 日文 的"树"翻译
 ko 0:
   include:
-    key: ko-{$language} 0
+    key: ko-<$language> 0
 ko 1:
   include:
-    key: ko-{$language} 1
+    key: ko-<$language> 1
 ko-ar 0:
   title: الكورية-العربية (dict.com)
   include:
@@ -12353,7 +12353,7 @@ ko-lt 0:
   - language
   - lithuanian
 ko-lt 1:
-  url: https://www.dict.com/korean-lithuanian/{%word}
+  url: https://www.dict.com/korean-lithuanian/<word>
   title: Korėjiečių-Lietuvių (dict.com)
   tags:
   - dictionary
@@ -12374,7 +12374,7 @@ ko-lv 0:
   - language
   - latvian
 ko-lv 1:
-  url: https://www.dict.com/korean-latvian/{%word}
+  url: https://www.dict.com/korean-latvian/<word>
   title: Korejiešu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -12395,7 +12395,7 @@ ko-nl 0:
   - korean
   - language
 ko-nl 1:
-  url: https://www.dict.com/korean-dutch/{%word}
+  url: https://www.dict.com/korean-dutch/<word>
   title: Koreaans-Nederlands (dict.com)
   tags:
   - dictionary
@@ -12416,7 +12416,7 @@ ko-no 0:
   - language
   - norwegian
 ko-no 1:
-  url: https://www.dict.com/korean-norwegian/{%word}
+  url: https://www.dict.com/korean-norwegian/<word>
   title: Koreansk-Norsk (dict.com)
   tags:
   - dictionary
@@ -12437,7 +12437,7 @@ ko-pl 0:
   - language
   - polish
 ko-pl 1:
-  url: https://www.dict.com/korean-polish/{%word}
+  url: https://www.dict.com/korean-polish/<word>
   title: Koreański-Polski (dict.com)
   tags:
   - dictionary
@@ -12458,7 +12458,7 @@ ko-pt 0:
   - language
   - portuguese
 ko-pt 1:
-  url: https://www.dict.com/korean-portuguese/{%word}
+  url: https://www.dict.com/korean-portuguese/<word>
   title: Coreano-Português (dict.com)
   tags:
   - dictionary
@@ -12479,7 +12479,7 @@ ko-ro 0:
   - language
   - romanian
 ko-ro 1:
-  url: https://www.dict.com/korean-romanian/{%word}
+  url: https://www.dict.com/korean-romanian/<word>
   title: Coreeană-Română (dict.com)
   tags:
   - dictionary
@@ -12500,7 +12500,7 @@ ko-ru 0:
   - language
   - russian
 ko-ru 1:
-  url: https://www.dict.com/korean-russian/{%word}
+  url: https://www.dict.com/korean-russian/<word>
   title: Корейский-Русский (dict.com)
   tags:
   - dictionary
@@ -12521,7 +12521,7 @@ ko-sk 0:
   - language
   - slovak
 ko-sk 1:
-  url: https://www.dict.com/korean-slovak/{%word}
+  url: https://www.dict.com/korean-slovak/<word>
   title: Kórejčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -12542,7 +12542,7 @@ ko-sl 0:
   - language
   - slovenian
 ko-sl 1:
-  url: https://www.dict.com/korean-slovenian/{%word}
+  url: https://www.dict.com/korean-slovenian/<word>
   title: Korejščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -12563,7 +12563,7 @@ ko-sr 0:
   - language
   - serbian
 ko-sr 1:
-  url: https://www.dict.com/korean-serbian/{%word}
+  url: https://www.dict.com/korean-serbian/<word>
   title: Корејски-Српски (dict.com)
   tags:
   - dictionary
@@ -12584,7 +12584,7 @@ ko-sv 0:
   - language
   - swedish
 ko-sv 1:
-  url: https://www.dict.com/korean-swedish/{%word}
+  url: https://www.dict.com/korean-swedish/<word>
   title: Koreanska-Svenska (dict.com)
   tags:
   - dictionary
@@ -12605,7 +12605,7 @@ ko-th 0:
   - language
   - thai
 ko-th 1:
-  url: https://www.dict.com/korean-thai/{%word}
+  url: https://www.dict.com/korean-thai/<word>
   title: เกาหลี-ไทย (dict.com)
   tags:
   - dictionary
@@ -12626,7 +12626,7 @@ ko-tr 0:
   - language
   - turkish
 ko-tr 1:
-  url: https://www.dict.com/korean-turkish/{%word}
+  url: https://www.dict.com/korean-turkish/<word>
   title: Korece-Türkçe (dict.com)
   tags:
   - dictionary
@@ -12647,7 +12647,7 @@ ko-uk 0:
   - language
   - ukrainian
 ko-uk 1:
-  url: https://www.dict.com/korean-ukrainian/{%word}
+  url: https://www.dict.com/korean-ukrainian/<word>
   title: Корейська-Українська (dict.com)
   tags:
   - dictionary
@@ -12668,7 +12668,7 @@ ko-vi 0:
   - language
   - vietnamese
 ko-vi 1:
-  url: https://www.dict.com/korean-vietnamese/{%word}
+  url: https://www.dict.com/korean-vietnamese/<word>
   title: Tiếng Hàn-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -12689,7 +12689,7 @@ ko-zh 0:
   - korean
   - language
 ko-zh 1:
-  url: https://www.dict.com/korean-chinese/{%word}
+  url: https://www.dict.com/korean-chinese/<word>
   title: 韩文-中文 (dict.com)
   tags:
   - chinese
@@ -12703,10 +12703,10 @@ ko-zh 1:
     description: 韩文 的"树"翻译
 lt 0:
   include:
-    key: lt-{$language} 0
+    key: lt-<$language> 0
 lt 1:
   include:
-    key: lt-{$language} 1
+    key: lt-<$language> 1
 lt-ar 0:
   title: اللتوانية-العربية (dict.com)
   include:
@@ -12963,7 +12963,7 @@ lt-lv 0:
   - latvian
   - lithuanian
 lt-lv 1:
-  url: https://www.dict.com/lithuanian-latvian/{%word}
+  url: https://www.dict.com/lithuanian-latvian/<word>
   title: Lietuviešu-Latviešu (dict.com)
   tags:
   - dictionary
@@ -12984,7 +12984,7 @@ lt-nl 0:
   - language
   - lithuanian
 lt-nl 1:
-  url: https://www.dict.com/lithuanian-dutch/{%word}
+  url: https://www.dict.com/lithuanian-dutch/<word>
   title: Litouws-Nederlands (dict.com)
   tags:
   - dictionary
@@ -13005,7 +13005,7 @@ lt-no 0:
   - lithuanian
   - norwegian
 lt-no 1:
-  url: https://www.dict.com/lithuanian-norwegian/{%word}
+  url: https://www.dict.com/lithuanian-norwegian/<word>
   title: Litauisk-Norsk (dict.com)
   tags:
   - dictionary
@@ -13026,7 +13026,7 @@ lt-pl 0:
   - lithuanian
   - polish
 lt-pl 1:
-  url: https://www.dict.com/lithuanian-polish/{%word}
+  url: https://www.dict.com/lithuanian-polish/<word>
   title: Litewski-Polski (dict.com)
   tags:
   - dictionary
@@ -13047,7 +13047,7 @@ lt-pt 0:
   - lithuanian
   - portuguese
 lt-pt 1:
-  url: https://www.dict.com/lithuanian-portuguese/{%word}
+  url: https://www.dict.com/lithuanian-portuguese/<word>
   title: Lituano-Português (dict.com)
   tags:
   - dictionary
@@ -13068,7 +13068,7 @@ lt-ro 0:
   - lithuanian
   - romanian
 lt-ro 1:
-  url: https://www.dict.com/lithuanian-romanian/{%word}
+  url: https://www.dict.com/lithuanian-romanian/<word>
   title: Lituaniană-Română (dict.com)
   tags:
   - dictionary
@@ -13089,7 +13089,7 @@ lt-ru 0:
   - lithuanian
   - russian
 lt-ru 1:
-  url: https://www.dict.com/lithuanian-russian/{%word}
+  url: https://www.dict.com/lithuanian-russian/<word>
   title: Литовский-Русский (dict.com)
   tags:
   - dictionary
@@ -13110,7 +13110,7 @@ lt-sk 0:
   - lithuanian
   - slovak
 lt-sk 1:
-  url: https://www.dict.com/lithuanian-slovak/{%word}
+  url: https://www.dict.com/lithuanian-slovak/<word>
   title: Litovčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -13131,7 +13131,7 @@ lt-sl 0:
   - lithuanian
   - slovenian
 lt-sl 1:
-  url: https://www.dict.com/lithuanian-slovenian/{%word}
+  url: https://www.dict.com/lithuanian-slovenian/<word>
   title: Litovščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -13152,7 +13152,7 @@ lt-sr 0:
   - lithuanian
   - serbian
 lt-sr 1:
-  url: https://www.dict.com/lithuanian-serbian/{%word}
+  url: https://www.dict.com/lithuanian-serbian/<word>
   title: Литвански-Српски (dict.com)
   tags:
   - dictionary
@@ -13173,7 +13173,7 @@ lt-sv 0:
   - lithuanian
   - swedish
 lt-sv 1:
-  url: https://www.dict.com/lithuanian-swedish/{%word}
+  url: https://www.dict.com/lithuanian-swedish/<word>
   title: Litauiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -13194,7 +13194,7 @@ lt-th 0:
   - lithuanian
   - thai
 lt-th 1:
-  url: https://www.dict.com/lithuanian-thai/{%word}
+  url: https://www.dict.com/lithuanian-thai/<word>
   title: ลิทัวเนีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -13215,7 +13215,7 @@ lt-tr 0:
   - lithuanian
   - turkish
 lt-tr 1:
-  url: https://www.dict.com/lithuanian-turkish/{%word}
+  url: https://www.dict.com/lithuanian-turkish/<word>
   title: Litvanyaca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -13236,7 +13236,7 @@ lt-uk 0:
   - lithuanian
   - ukrainian
 lt-uk 1:
-  url: https://www.dict.com/lithuanian-ukrainian/{%word}
+  url: https://www.dict.com/lithuanian-ukrainian/<word>
   title: Литовська-Українська (dict.com)
   tags:
   - dictionary
@@ -13257,7 +13257,7 @@ lt-vi 0:
   - lithuanian
   - vietnamese
 lt-vi 1:
-  url: https://www.dict.com/lithuanian-vietnamese/{%word}
+  url: https://www.dict.com/lithuanian-vietnamese/<word>
   title: Tiếng Lít-va-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -13278,7 +13278,7 @@ lt-zh 0:
   - language
   - lithuanian
 lt-zh 1:
-  url: https://www.dict.com/lithuanian-chinese/{%word}
+  url: https://www.dict.com/lithuanian-chinese/<word>
   title: 立陶宛文-中文 (dict.com)
   tags:
   - chinese
@@ -13292,10 +13292,10 @@ lt-zh 1:
     description: 立陶宛文 的"树"翻译
 lv 0:
   include:
-    key: lv-{$language} 0
+    key: lv-<$language> 0
 lv 1:
   include:
-    key: lv-{$language} 1
+    key: lv-<$language> 1
 lv-ar 0:
   title: اللاتفية-العربية (dict.com)
   include:
@@ -13565,7 +13565,7 @@ lv-nl 0:
   - language
   - latvian
 lv-nl 1:
-  url: https://www.dict.com/latvian-dutch/{%word}
+  url: https://www.dict.com/latvian-dutch/<word>
   title: Lets-Nederlands (dict.com)
   tags:
   - dictionary
@@ -13586,7 +13586,7 @@ lv-no 0:
   - latvian
   - norwegian
 lv-no 1:
-  url: https://www.dict.com/latvian-norwegian/{%word}
+  url: https://www.dict.com/latvian-norwegian/<word>
   title: Latvisk-Norsk (dict.com)
   tags:
   - dictionary
@@ -13607,7 +13607,7 @@ lv-pl 0:
   - latvian
   - polish
 lv-pl 1:
-  url: https://www.dict.com/latvian-polish/{%word}
+  url: https://www.dict.com/latvian-polish/<word>
   title: Łotewski-Polski (dict.com)
   tags:
   - dictionary
@@ -13628,7 +13628,7 @@ lv-pt 0:
   - latvian
   - portuguese
 lv-pt 1:
-  url: https://www.dict.com/latvian-portuguese/{%word}
+  url: https://www.dict.com/latvian-portuguese/<word>
   title: Letão-Português (dict.com)
   tags:
   - dictionary
@@ -13649,7 +13649,7 @@ lv-ro 0:
   - latvian
   - romanian
 lv-ro 1:
-  url: https://www.dict.com/latvian-romanian/{%word}
+  url: https://www.dict.com/latvian-romanian/<word>
   title: Letonă-Română (dict.com)
   tags:
   - dictionary
@@ -13670,7 +13670,7 @@ lv-ru 0:
   - latvian
   - russian
 lv-ru 1:
-  url: https://www.dict.com/latvian-russian/{%word}
+  url: https://www.dict.com/latvian-russian/<word>
   title: Латышский-Русский (dict.com)
   tags:
   - dictionary
@@ -13691,7 +13691,7 @@ lv-sk 0:
   - latvian
   - slovak
 lv-sk 1:
-  url: https://www.dict.com/latvian-slovak/{%word}
+  url: https://www.dict.com/latvian-slovak/<word>
   title: Lotyština-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -13712,7 +13712,7 @@ lv-sl 0:
   - latvian
   - slovenian
 lv-sl 1:
-  url: https://www.dict.com/latvian-slovenian/{%word}
+  url: https://www.dict.com/latvian-slovenian/<word>
   title: Latvijščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -13733,7 +13733,7 @@ lv-sr 0:
   - latvian
   - serbian
 lv-sr 1:
-  url: https://www.dict.com/latvian-serbian/{%word}
+  url: https://www.dict.com/latvian-serbian/<word>
   title: Летонски-Српски (dict.com)
   tags:
   - dictionary
@@ -13754,7 +13754,7 @@ lv-sv 0:
   - latvian
   - swedish
 lv-sv 1:
-  url: https://www.dict.com/latvian-swedish/{%word}
+  url: https://www.dict.com/latvian-swedish/<word>
   title: Lettiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -13775,7 +13775,7 @@ lv-th 0:
   - latvian
   - thai
 lv-th 1:
-  url: https://www.dict.com/latvian-thai/{%word}
+  url: https://www.dict.com/latvian-thai/<word>
   title: ลัตเวีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -13796,7 +13796,7 @@ lv-tr 0:
   - latvian
   - turkish
 lv-tr 1:
-  url: https://www.dict.com/latvian-turkish/{%word}
+  url: https://www.dict.com/latvian-turkish/<word>
   title: Letonca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -13817,7 +13817,7 @@ lv-uk 0:
   - latvian
   - ukrainian
 lv-uk 1:
-  url: https://www.dict.com/latvian-ukrainian/{%word}
+  url: https://www.dict.com/latvian-ukrainian/<word>
   title: Латвійська-Українська (dict.com)
   tags:
   - dictionary
@@ -13838,7 +13838,7 @@ lv-vi 0:
   - latvian
   - vietnamese
 lv-vi 1:
-  url: https://www.dict.com/latvian-vietnamese/{%word}
+  url: https://www.dict.com/latvian-vietnamese/<word>
   title: Tiếng Latvia-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -13859,7 +13859,7 @@ lv-zh 0:
   - language
   - latvian
 lv-zh 1:
-  url: https://www.dict.com/latvian-chinese/{%word}
+  url: https://www.dict.com/latvian-chinese/<word>
   title: 拉脱维亚文-中文 (dict.com)
   tags:
   - chinese
@@ -13873,10 +13873,10 @@ lv-zh 1:
     description: 拉脱维亚文 的"树"翻译
 nl 0:
   include:
-    key: nl-{$language} 0
+    key: nl-<$language> 0
 nl 1:
   include:
-    key: nl-{$language} 1
+    key: nl-<$language> 1
 nl-ar 0:
   title: الهولندية-العربية (dict.com)
   include:
@@ -14159,7 +14159,7 @@ nl-no 0:
   - language
   - norwegian
 nl-no 1:
-  url: https://www.dict.com/dutch-norwegian/{%word}
+  url: https://www.dict.com/dutch-norwegian/<word>
   title: Nederlandsk-Norsk (dict.com)
   tags:
   - dictionary
@@ -14180,7 +14180,7 @@ nl-pl 0:
   - language
   - polish
 nl-pl 1:
-  url: https://www.dict.com/dutch-polish/{%word}
+  url: https://www.dict.com/dutch-polish/<word>
   title: Niderlandzki-Polski (dict.com)
   tags:
   - dictionary
@@ -14201,7 +14201,7 @@ nl-pt 0:
   - language
   - portuguese
 nl-pt 1:
-  url: https://www.dict.com/dutch-portuguese/{%word}
+  url: https://www.dict.com/dutch-portuguese/<word>
   title: Holandês-Português (dict.com)
   tags:
   - dictionary
@@ -14222,7 +14222,7 @@ nl-ro 0:
   - language
   - romanian
 nl-ro 1:
-  url: https://www.dict.com/dutch-romanian/{%word}
+  url: https://www.dict.com/dutch-romanian/<word>
   title: Olandeză-Română (dict.com)
   tags:
   - dictionary
@@ -14243,7 +14243,7 @@ nl-ru 0:
   - language
   - russian
 nl-ru 1:
-  url: https://www.dict.com/dutch-russian/{%word}
+  url: https://www.dict.com/dutch-russian/<word>
   title: Голландский-Русский (dict.com)
   tags:
   - dictionary
@@ -14264,7 +14264,7 @@ nl-sk 0:
   - language
   - slovak
 nl-sk 1:
-  url: https://www.dict.com/dutch-slovak/{%word}
+  url: https://www.dict.com/dutch-slovak/<word>
   title: Holandčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -14285,7 +14285,7 @@ nl-sl 0:
   - language
   - slovenian
 nl-sl 1:
-  url: https://www.dict.com/dutch-slovenian/{%word}
+  url: https://www.dict.com/dutch-slovenian/<word>
   title: Nizozemščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -14306,7 +14306,7 @@ nl-sr 0:
   - language
   - serbian
 nl-sr 1:
-  url: https://www.dict.com/dutch-serbian/{%word}
+  url: https://www.dict.com/dutch-serbian/<word>
   title: Холандски-Српски (dict.com)
   tags:
   - dictionary
@@ -14327,7 +14327,7 @@ nl-sv 0:
   - language
   - swedish
 nl-sv 1:
-  url: https://www.dict.com/dutch-swedish/{%word}
+  url: https://www.dict.com/dutch-swedish/<word>
   title: Nederländska-Svenska (dict.com)
   tags:
   - dictionary
@@ -14348,7 +14348,7 @@ nl-th 0:
   - language
   - thai
 nl-th 1:
-  url: https://www.dict.com/dutch-thai/{%word}
+  url: https://www.dict.com/dutch-thai/<word>
   title: ดัตช์-ไทย (dict.com)
   tags:
   - dictionary
@@ -14369,7 +14369,7 @@ nl-tr 0:
   - language
   - turkish
 nl-tr 1:
-  url: https://www.dict.com/dutch-turkish/{%word}
+  url: https://www.dict.com/dutch-turkish/<word>
   title: Hollandaca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -14390,7 +14390,7 @@ nl-uk 0:
   - language
   - ukrainian
 nl-uk 1:
-  url: https://www.dict.com/dutch-ukrainian/{%word}
+  url: https://www.dict.com/dutch-ukrainian/<word>
   title: Голландська-Українська (dict.com)
   tags:
   - dictionary
@@ -14411,7 +14411,7 @@ nl-vi 0:
   - language
   - vietnamese
 nl-vi 1:
-  url: https://www.dict.com/dutch-vietnamese/{%word}
+  url: https://www.dict.com/dutch-vietnamese/<word>
   title: Tiếng Hà Lan-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -14432,7 +14432,7 @@ nl-zh 0:
   - dutch
   - language
 nl-zh 1:
-  url: https://www.dict.com/dutch-chinese/{%word}
+  url: https://www.dict.com/dutch-chinese/<word>
   title: 荷兰文-中文 (dict.com)
   tags:
   - chinese
@@ -14446,10 +14446,10 @@ nl-zh 1:
     description: 荷兰文 的"树"翻译
 no 0:
   include:
-    key: no-{$language} 0
+    key: no-<$language> 0
 no 1:
   include:
-    key: no-{$language} 1
+    key: no-<$language> 1
 no-ar 0:
   title: النرويجية-العربية (dict.com)
   include:
@@ -14745,7 +14745,7 @@ no-pl 0:
   - norwegian
   - polish
 no-pl 1:
-  url: https://www.dict.com/norwegian-polish/{%word}
+  url: https://www.dict.com/norwegian-polish/<word>
   title: Norweski-Polski (dict.com)
   tags:
   - dictionary
@@ -14766,7 +14766,7 @@ no-pt 0:
   - norwegian
   - portuguese
 no-pt 1:
-  url: https://www.dict.com/norwegian-portuguese/{%word}
+  url: https://www.dict.com/norwegian-portuguese/<word>
   title: Norueguês-Português (dict.com)
   tags:
   - dictionary
@@ -14787,7 +14787,7 @@ no-ro 0:
   - norwegian
   - romanian
 no-ro 1:
-  url: https://www.dict.com/norwegian-romanian/{%word}
+  url: https://www.dict.com/norwegian-romanian/<word>
   title: Norvegiană-Română (dict.com)
   tags:
   - dictionary
@@ -14808,7 +14808,7 @@ no-ru 0:
   - norwegian
   - russian
 no-ru 1:
-  url: https://www.dict.com/norwegian-russian/{%word}
+  url: https://www.dict.com/norwegian-russian/<word>
   title: Норвежский-Русский (dict.com)
   tags:
   - dictionary
@@ -14829,7 +14829,7 @@ no-sk 0:
   - norwegian
   - slovak
 no-sk 1:
-  url: https://www.dict.com/norwegian-slovak/{%word}
+  url: https://www.dict.com/norwegian-slovak/<word>
   title: Nórčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -14850,7 +14850,7 @@ no-sl 0:
   - norwegian
   - slovenian
 no-sl 1:
-  url: https://www.dict.com/norwegian-slovenian/{%word}
+  url: https://www.dict.com/norwegian-slovenian/<word>
   title: Norveščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -14871,7 +14871,7 @@ no-sr 0:
   - norwegian
   - serbian
 no-sr 1:
-  url: https://www.dict.com/norwegian-serbian/{%word}
+  url: https://www.dict.com/norwegian-serbian/<word>
   title: Норвешки-Српски (dict.com)
   tags:
   - dictionary
@@ -14892,7 +14892,7 @@ no-sv 0:
   - norwegian
   - swedish
 no-sv 1:
-  url: https://www.dict.com/norwegian-swedish/{%word}
+  url: https://www.dict.com/norwegian-swedish/<word>
   title: Norska-Svenska (dict.com)
   tags:
   - dictionary
@@ -14913,7 +14913,7 @@ no-th 0:
   - norwegian
   - thai
 no-th 1:
-  url: https://www.dict.com/norwegian-thai/{%word}
+  url: https://www.dict.com/norwegian-thai/<word>
   title: นอร์เวย์-ไทย (dict.com)
   tags:
   - dictionary
@@ -14934,7 +14934,7 @@ no-tr 0:
   - norwegian
   - turkish
 no-tr 1:
-  url: https://www.dict.com/norwegian-turkish/{%word}
+  url: https://www.dict.com/norwegian-turkish/<word>
   title: Norveççe-Türkçe (dict.com)
   tags:
   - dictionary
@@ -14955,7 +14955,7 @@ no-uk 0:
   - norwegian
   - ukrainian
 no-uk 1:
-  url: https://www.dict.com/norwegian-ukrainian/{%word}
+  url: https://www.dict.com/norwegian-ukrainian/<word>
   title: Норвезька-Українська (dict.com)
   tags:
   - dictionary
@@ -14976,7 +14976,7 @@ no-vi 0:
   - norwegian
   - vietnamese
 no-vi 1:
-  url: https://www.dict.com/norwegian-vietnamese/{%word}
+  url: https://www.dict.com/norwegian-vietnamese/<word>
   title: Tiếng Na Uy-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -14997,7 +14997,7 @@ no-zh 0:
   - language
   - norwegian
 no-zh 1:
-  url: https://www.dict.com/norwegian-chinese/{%word}
+  url: https://www.dict.com/norwegian-chinese/<word>
   title: 挪威文-中文 (dict.com)
   tags:
   - chinese
@@ -15011,10 +15011,10 @@ no-zh 1:
     description: 挪威文 的"树"翻译
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-ar 0:
   title: البولندية-العربية (dict.com)
   include:
@@ -15323,7 +15323,7 @@ pl-pt 0:
   - polish
   - portuguese
 pl-pt 1:
-  url: https://www.dict.com/polish-portuguese/{%word}
+  url: https://www.dict.com/polish-portuguese/<word>
   title: Polonês-Português (dict.com)
   tags:
   - dictionary
@@ -15344,7 +15344,7 @@ pl-ro 0:
   - polish
   - romanian
 pl-ro 1:
-  url: https://www.dict.com/polish-romanian/{%word}
+  url: https://www.dict.com/polish-romanian/<word>
   title: Poloneză-Română (dict.com)
   tags:
   - dictionary
@@ -15365,7 +15365,7 @@ pl-ru 0:
   - polish
   - russian
 pl-ru 1:
-  url: https://www.dict.com/polish-russian/{%word}
+  url: https://www.dict.com/polish-russian/<word>
   title: Польский-Русский (dict.com)
   tags:
   - dictionary
@@ -15386,7 +15386,7 @@ pl-sk 0:
   - polish
   - slovak
 pl-sk 1:
-  url: https://www.dict.com/polish-slovak/{%word}
+  url: https://www.dict.com/polish-slovak/<word>
   title: Poľština-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -15407,7 +15407,7 @@ pl-sl 0:
   - polish
   - slovenian
 pl-sl 1:
-  url: https://www.dict.com/polish-slovenian/{%word}
+  url: https://www.dict.com/polish-slovenian/<word>
   title: Poljščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -15428,7 +15428,7 @@ pl-sr 0:
   - polish
   - serbian
 pl-sr 1:
-  url: https://www.dict.com/polish-serbian/{%word}
+  url: https://www.dict.com/polish-serbian/<word>
   title: Пољски-Српски (dict.com)
   tags:
   - dictionary
@@ -15449,7 +15449,7 @@ pl-sv 0:
   - polish
   - swedish
 pl-sv 1:
-  url: https://www.dict.com/polish-swedish/{%word}
+  url: https://www.dict.com/polish-swedish/<word>
   title: Polska-Svenska (dict.com)
   tags:
   - dictionary
@@ -15470,7 +15470,7 @@ pl-th 0:
   - polish
   - thai
 pl-th 1:
-  url: https://www.dict.com/polish-thai/{%word}
+  url: https://www.dict.com/polish-thai/<word>
   title: โปแลนด์-ไทย (dict.com)
   tags:
   - dictionary
@@ -15491,7 +15491,7 @@ pl-tr 0:
   - polish
   - turkish
 pl-tr 1:
-  url: https://www.dict.com/polish-turkish/{%word}
+  url: https://www.dict.com/polish-turkish/<word>
   title: Lehçe-Türkçe (dict.com)
   tags:
   - dictionary
@@ -15512,7 +15512,7 @@ pl-uk 0:
   - polish
   - ukrainian
 pl-uk 1:
-  url: https://www.dict.com/polish-ukrainian/{%word}
+  url: https://www.dict.com/polish-ukrainian/<word>
   title: Польська-Українська (dict.com)
   tags:
   - dictionary
@@ -15533,7 +15533,7 @@ pl-vi 0:
   - polish
   - vietnamese
 pl-vi 1:
-  url: https://www.dict.com/polish-vietnamese/{%word}
+  url: https://www.dict.com/polish-vietnamese/<word>
   title: Tiếng Ba Lan-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -15554,7 +15554,7 @@ pl-zh 0:
   - language
   - polish
 pl-zh 1:
-  url: https://www.dict.com/polish-chinese/{%word}
+  url: https://www.dict.com/polish-chinese/<word>
   title: 波兰文-中文 (dict.com)
   tags:
   - chinese
@@ -15568,10 +15568,10 @@ pl-zh 1:
     description: 波兰文 的"树"翻译
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-ar 0:
   title: البرتغالية-العربية (dict.com)
   include:
@@ -15893,7 +15893,7 @@ pt-ro 0:
   - portuguese
   - romanian
 pt-ro 1:
-  url: https://www.dict.com/portuguese-romanian/{%word}
+  url: https://www.dict.com/portuguese-romanian/<word>
   title: Portugheză-Română (dict.com)
   tags:
   - dictionary
@@ -15914,7 +15914,7 @@ pt-ru 0:
   - portuguese
   - russian
 pt-ru 1:
-  url: https://www.dict.com/portuguese-russian/{%word}
+  url: https://www.dict.com/portuguese-russian/<word>
   title: Португальский-Русский (dict.com)
   tags:
   - dictionary
@@ -15935,7 +15935,7 @@ pt-sk 0:
   - portuguese
   - slovak
 pt-sk 1:
-  url: https://www.dict.com/portuguese-slovak/{%word}
+  url: https://www.dict.com/portuguese-slovak/<word>
   title: Portugalčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -15956,7 +15956,7 @@ pt-sl 0:
   - portuguese
   - slovenian
 pt-sl 1:
-  url: https://www.dict.com/portuguese-slovenian/{%word}
+  url: https://www.dict.com/portuguese-slovenian/<word>
   title: Portugalščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -15977,7 +15977,7 @@ pt-sr 0:
   - portuguese
   - serbian
 pt-sr 1:
-  url: https://www.dict.com/portuguese-serbian/{%word}
+  url: https://www.dict.com/portuguese-serbian/<word>
   title: Португалски-Српски (dict.com)
   tags:
   - dictionary
@@ -15998,7 +15998,7 @@ pt-sv 0:
   - portuguese
   - swedish
 pt-sv 1:
-  url: https://www.dict.com/portuguese-swedish/{%word}
+  url: https://www.dict.com/portuguese-swedish/<word>
   title: Portugisiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -16019,7 +16019,7 @@ pt-th 0:
   - portuguese
   - thai
 pt-th 1:
-  url: https://www.dict.com/portuguese-thai/{%word}
+  url: https://www.dict.com/portuguese-thai/<word>
   title: โปรตุเกส-ไทย (dict.com)
   tags:
   - dictionary
@@ -16040,7 +16040,7 @@ pt-tr 0:
   - portuguese
   - turkish
 pt-tr 1:
-  url: https://www.dict.com/portuguese-turkish/{%word}
+  url: https://www.dict.com/portuguese-turkish/<word>
   title: Portekizce-Türkçe (dict.com)
   tags:
   - dictionary
@@ -16061,7 +16061,7 @@ pt-uk 0:
   - portuguese
   - ukrainian
 pt-uk 1:
-  url: https://www.dict.com/portuguese-ukrainian/{%word}
+  url: https://www.dict.com/portuguese-ukrainian/<word>
   title: Португальська-Українська (dict.com)
   tags:
   - dictionary
@@ -16082,7 +16082,7 @@ pt-vi 0:
   - portuguese
   - vietnamese
 pt-vi 1:
-  url: https://www.dict.com/portuguese-vietnamese/{%word}
+  url: https://www.dict.com/portuguese-vietnamese/<word>
   title: Tiếng Bồ Đào Nha-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -16103,7 +16103,7 @@ pt-zh 0:
   - language
   - portuguese
 pt-zh 1:
-  url: https://www.dict.com/portuguese-chinese/{%word}
+  url: https://www.dict.com/portuguese-chinese/<word>
   title: 葡萄牙文-中文 (dict.com)
   tags:
   - chinese
@@ -16117,10 +16117,10 @@ pt-zh 1:
     description: 葡萄牙文 的"树"翻译
 ro 0:
   include:
-    key: ro-{$language} 0
+    key: ro-<$language> 0
 ro 1:
   include:
-    key: ro-{$language} 1
+    key: ro-<$language> 1
 ro-ar 0:
   title: الرومانية-العربية (dict.com)
   include:
@@ -16455,7 +16455,7 @@ ro-ru 0:
   - romanian
   - russian
 ro-ru 1:
-  url: https://www.dict.com/romanian-russian/{%word}
+  url: https://www.dict.com/romanian-russian/<word>
   title: Румынский-Русский (dict.com)
   tags:
   - dictionary
@@ -16476,7 +16476,7 @@ ro-sk 0:
   - romanian
   - slovak
 ro-sk 1:
-  url: https://www.dict.com/romanian-slovak/{%word}
+  url: https://www.dict.com/romanian-slovak/<word>
   title: Rumunčina-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -16497,7 +16497,7 @@ ro-sl 0:
   - romanian
   - slovenian
 ro-sl 1:
-  url: https://www.dict.com/romanian-slovenian/{%word}
+  url: https://www.dict.com/romanian-slovenian/<word>
   title: Romunščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -16518,7 +16518,7 @@ ro-sr 0:
   - romanian
   - serbian
 ro-sr 1:
-  url: https://www.dict.com/romanian-serbian/{%word}
+  url: https://www.dict.com/romanian-serbian/<word>
   title: Румунски-Српски (dict.com)
   tags:
   - dictionary
@@ -16539,7 +16539,7 @@ ro-sv 0:
   - romanian
   - swedish
 ro-sv 1:
-  url: https://www.dict.com/romanian-swedish/{%word}
+  url: https://www.dict.com/romanian-swedish/<word>
   title: Rumänska-Svenska (dict.com)
   tags:
   - dictionary
@@ -16560,7 +16560,7 @@ ro-th 0:
   - romanian
   - thai
 ro-th 1:
-  url: https://www.dict.com/romanian-thai/{%word}
+  url: https://www.dict.com/romanian-thai/<word>
   title: โรมาเนีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -16581,7 +16581,7 @@ ro-tr 0:
   - romanian
   - turkish
 ro-tr 1:
-  url: https://www.dict.com/romanian-turkish/{%word}
+  url: https://www.dict.com/romanian-turkish/<word>
   title: Romence-Türkçe (dict.com)
   tags:
   - dictionary
@@ -16602,7 +16602,7 @@ ro-uk 0:
   - romanian
   - ukrainian
 ro-uk 1:
-  url: https://www.dict.com/romanian-ukrainian/{%word}
+  url: https://www.dict.com/romanian-ukrainian/<word>
   title: Румунська-Українська (dict.com)
   tags:
   - dictionary
@@ -16623,7 +16623,7 @@ ro-vi 0:
   - romanian
   - vietnamese
 ro-vi 1:
-  url: https://www.dict.com/romanian-vietnamese/{%word}
+  url: https://www.dict.com/romanian-vietnamese/<word>
   title: Tiếng Rumani-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -16644,7 +16644,7 @@ ro-zh 0:
   - language
   - romanian
 ro-zh 1:
-  url: https://www.dict.com/romanian-chinese/{%word}
+  url: https://www.dict.com/romanian-chinese/<word>
   title: 罗马尼亚文-中文 (dict.com)
   tags:
   - chinese
@@ -16658,10 +16658,10 @@ ro-zh 1:
     description: 罗马尼亚文 的"树"翻译
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-ar 0:
   title: الروسية-العربية (dict.com)
   include:
@@ -17009,7 +17009,7 @@ ru-sk 0:
   - russian
   - slovak
 ru-sk 1:
-  url: https://www.dict.com/russian-slovak/{%word}
+  url: https://www.dict.com/russian-slovak/<word>
   title: Ruština-Slovenčina (dict.com)
   tags:
   - dictionary
@@ -17030,7 +17030,7 @@ ru-sl 0:
   - russian
   - slovenian
 ru-sl 1:
-  url: https://www.dict.com/russian-slovenian/{%word}
+  url: https://www.dict.com/russian-slovenian/<word>
   title: Ruščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -17051,7 +17051,7 @@ ru-sr 0:
   - russian
   - serbian
 ru-sr 1:
-  url: https://www.dict.com/russian-serbian/{%word}
+  url: https://www.dict.com/russian-serbian/<word>
   title: Руски-Српски (dict.com)
   tags:
   - dictionary
@@ -17072,7 +17072,7 @@ ru-sv 0:
   - russian
   - swedish
 ru-sv 1:
-  url: https://www.dict.com/russian-swedish/{%word}
+  url: https://www.dict.com/russian-swedish/<word>
   title: Ryska-Svenska (dict.com)
   tags:
   - dictionary
@@ -17093,7 +17093,7 @@ ru-th 0:
   - russian
   - thai
 ru-th 1:
-  url: https://www.dict.com/russian-thai/{%word}
+  url: https://www.dict.com/russian-thai/<word>
   title: รัสเซีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -17114,7 +17114,7 @@ ru-tr 0:
   - russian
   - turkish
 ru-tr 1:
-  url: https://www.dict.com/russian-turkish/{%word}
+  url: https://www.dict.com/russian-turkish/<word>
   title: Rusça-Türkçe (dict.com)
   tags:
   - dictionary
@@ -17135,7 +17135,7 @@ ru-uk 0:
   - russian
   - ukrainian
 ru-uk 1:
-  url: https://www.dict.com/russian-ukrainian/{%word}
+  url: https://www.dict.com/russian-ukrainian/<word>
   title: Російська-Українська (dict.com)
   tags:
   - dictionary
@@ -17154,7 +17154,7 @@ ru-vi 0:
   - russian
   - vietnamese
 ru-vi 1:
-  url: https://www.dict.com/russian-vietnamese/{%word}
+  url: https://www.dict.com/russian-vietnamese/<word>
   title: Tiếng Nga-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -17175,7 +17175,7 @@ ru-zh 0:
   - language
   - russian
 ru-zh 1:
-  url: https://www.dict.com/russian-chinese/{%word}
+  url: https://www.dict.com/russian-chinese/<word>
   title: 俄文-中文 (dict.com)
   tags:
   - chinese
@@ -17189,10 +17189,10 @@ ru-zh 1:
     description: 俄文 的"树"翻译
 sk 0:
   include:
-    key: sk-{$language} 0
+    key: sk-<$language> 0
 sk 1:
   include:
-    key: sk-{$language} 1
+    key: sk-<$language> 1
 sk-ar 0:
   title: السلوفاكية-العربية (dict.com)
   include:
@@ -17553,7 +17553,7 @@ sk-sl 0:
   - slovak
   - slovenian
 sk-sl 1:
-  url: https://www.dict.com/slovak-slovenian/{%word}
+  url: https://www.dict.com/slovak-slovenian/<word>
   title: Slovaščina-Slovenščina (dict.com)
   tags:
   - dictionary
@@ -17574,7 +17574,7 @@ sk-sr 0:
   - serbian
   - slovak
 sk-sr 1:
-  url: https://www.dict.com/slovak-serbian/{%word}
+  url: https://www.dict.com/slovak-serbian/<word>
   title: Словачки-Српски (dict.com)
   tags:
   - dictionary
@@ -17595,7 +17595,7 @@ sk-sv 0:
   - slovak
   - swedish
 sk-sv 1:
-  url: https://www.dict.com/slovak-swedish/{%word}
+  url: https://www.dict.com/slovak-swedish/<word>
   title: Slovakiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -17616,7 +17616,7 @@ sk-th 0:
   - slovak
   - thai
 sk-th 1:
-  url: https://www.dict.com/slovak-thai/{%word}
+  url: https://www.dict.com/slovak-thai/<word>
   title: สโลวัก-ไทย (dict.com)
   tags:
   - dictionary
@@ -17637,7 +17637,7 @@ sk-tr 0:
   - slovak
   - turkish
 sk-tr 1:
-  url: https://www.dict.com/slovak-turkish/{%word}
+  url: https://www.dict.com/slovak-turkish/<word>
   title: Slovakça-Türkçe (dict.com)
   tags:
   - dictionary
@@ -17658,7 +17658,7 @@ sk-uk 0:
   - slovak
   - ukrainian
 sk-uk 1:
-  url: https://www.dict.com/slovak-ukrainian/{%word}
+  url: https://www.dict.com/slovak-ukrainian/<word>
   title: Словацька-Українська (dict.com)
   tags:
   - dictionary
@@ -17679,7 +17679,7 @@ sk-vi 0:
   - slovak
   - vietnamese
 sk-vi 1:
-  url: https://www.dict.com/slovak-vietnamese/{%word}
+  url: https://www.dict.com/slovak-vietnamese/<word>
   title: Tiếng Slovak-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -17700,7 +17700,7 @@ sk-zh 0:
   - language
   - slovak
 sk-zh 1:
-  url: https://www.dict.com/slovak-chinese/{%word}
+  url: https://www.dict.com/slovak-chinese/<word>
   title: 斯洛伐克文-中文 (dict.com)
   tags:
   - chinese
@@ -17714,10 +17714,10 @@ sk-zh 1:
     description: 斯洛伐克文 的"树"翻译
 sl 0:
   include:
-    key: sl-{$language} 0
+    key: sl-<$language> 0
 sl 1:
   include:
-    key: sl-{$language} 1
+    key: sl-<$language> 1
 sl-ar 0:
   title: السلوفانية-العربية (dict.com)
   include:
@@ -18091,7 +18091,7 @@ sl-sr 0:
   - serbian
   - slovenian
 sl-sr 1:
-  url: https://www.dict.com/slovenian-serbian/{%word}
+  url: https://www.dict.com/slovenian-serbian/<word>
   title: Словеначки-Српски (dict.com)
   tags:
   - dictionary
@@ -18112,7 +18112,7 @@ sl-sv 0:
   - slovenian
   - swedish
 sl-sv 1:
-  url: https://www.dict.com/slovenian-swedish/{%word}
+  url: https://www.dict.com/slovenian-swedish/<word>
   title: Slovenska-Svenska (dict.com)
   tags:
   - dictionary
@@ -18133,7 +18133,7 @@ sl-th 0:
   - slovenian
   - thai
 sl-th 1:
-  url: https://www.dict.com/slovenian-thai/{%word}
+  url: https://www.dict.com/slovenian-thai/<word>
   title: สโลวีเนีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -18154,7 +18154,7 @@ sl-tr 0:
   - slovenian
   - turkish
 sl-tr 1:
-  url: https://www.dict.com/slovenian-turkish/{%word}
+  url: https://www.dict.com/slovenian-turkish/<word>
   title: Slovence-Türkçe (dict.com)
   tags:
   - dictionary
@@ -18175,7 +18175,7 @@ sl-uk 0:
   - slovenian
   - ukrainian
 sl-uk 1:
-  url: https://www.dict.com/slovenian-ukrainian/{%word}
+  url: https://www.dict.com/slovenian-ukrainian/<word>
   title: Словенська-Українська (dict.com)
   tags:
   - dictionary
@@ -18196,7 +18196,7 @@ sl-vi 0:
   - slovenian
   - vietnamese
 sl-vi 1:
-  url: https://www.dict.com/slovenian-vietnamese/{%word}
+  url: https://www.dict.com/slovenian-vietnamese/<word>
   title: Tiếng Slovenia-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -18217,7 +18217,7 @@ sl-zh 0:
   - language
   - slovenian
 sl-zh 1:
-  url: https://www.dict.com/slovenian-chinese/{%word}
+  url: https://www.dict.com/slovenian-chinese/<word>
   title: 斯洛文尼亚文-中文 (dict.com)
   tags:
   - chinese
@@ -18231,10 +18231,10 @@ sl-zh 1:
     description: 斯洛文尼亚文 的"树"翻译
 sr 0:
   include:
-    key: sr-{$language} 0
+    key: sr-<$language> 0
 sr 1:
   include:
-    key: sr-{$language} 1
+    key: sr-<$language> 1
 sr-ar 0:
   title: الصربية-العربية (dict.com)
   include:
@@ -18621,7 +18621,7 @@ sr-sv 0:
   - serbian
   - swedish
 sr-sv 1:
-  url: https://www.dict.com/serbian-swedish/{%word}
+  url: https://www.dict.com/serbian-swedish/<word>
   title: Serbiska-Svenska (dict.com)
   tags:
   - dictionary
@@ -18642,7 +18642,7 @@ sr-th 0:
   - serbian
   - thai
 sr-th 1:
-  url: https://www.dict.com/serbian-thai/{%word}
+  url: https://www.dict.com/serbian-thai/<word>
   title: เซอร์เบีย-ไทย (dict.com)
   tags:
   - dictionary
@@ -18663,7 +18663,7 @@ sr-tr 0:
   - serbian
   - turkish
 sr-tr 1:
-  url: https://www.dict.com/serbian-turkish/{%word}
+  url: https://www.dict.com/serbian-turkish/<word>
   title: Sırpça-Türkçe (dict.com)
   tags:
   - dictionary
@@ -18684,7 +18684,7 @@ sr-uk 0:
   - serbian
   - ukrainian
 sr-uk 1:
-  url: https://www.dict.com/serbian-ukrainian/{%word}
+  url: https://www.dict.com/serbian-ukrainian/<word>
   title: Сербська-Українська (dict.com)
   tags:
   - dictionary
@@ -18705,7 +18705,7 @@ sr-vi 0:
   - serbian
   - vietnamese
 sr-vi 1:
-  url: https://www.dict.com/serbian-vietnamese/{%word}
+  url: https://www.dict.com/serbian-vietnamese/<word>
   title: Tiếng Serbia-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -18726,7 +18726,7 @@ sr-zh 0:
   - language
   - serbian
 sr-zh 1:
-  url: https://www.dict.com/serbian-chinese/{%word}
+  url: https://www.dict.com/serbian-chinese/<word>
   title: 塞尔维亚文-中文 (dict.com)
   tags:
   - chinese
@@ -18740,10 +18740,10 @@ sr-zh 1:
     description: 塞尔维亚文 的"树"翻译
 sv 0:
   include:
-    key: sv-{$language} 0
+    key: sv-<$language> 0
 sv 1:
   include:
-    key: sv-{$language} 1
+    key: sv-<$language> 1
 sv-ar 0:
   title: السويدية-العربية (dict.com)
   include:
@@ -19143,7 +19143,7 @@ sv-th 0:
   - swedish
   - thai
 sv-th 1:
-  url: https://www.dict.com/swedish-thai/{%word}
+  url: https://www.dict.com/swedish-thai/<word>
   title: สวีเดน-ไทย (dict.com)
   tags:
   - dictionary
@@ -19164,7 +19164,7 @@ sv-tr 0:
   - swedish
   - turkish
 sv-tr 1:
-  url: https://www.dict.com/swedish-turkish/{%word}
+  url: https://www.dict.com/swedish-turkish/<word>
   title: İsveççe-Türkçe (dict.com)
   tags:
   - dictionary
@@ -19185,7 +19185,7 @@ sv-uk 0:
   - swedish
   - ukrainian
 sv-uk 1:
-  url: https://www.dict.com/swedish-ukrainian/{%word}
+  url: https://www.dict.com/swedish-ukrainian/<word>
   title: Шведська-Українська (dict.com)
   tags:
   - dictionary
@@ -19206,7 +19206,7 @@ sv-vi 0:
   - swedish
   - vietnamese
 sv-vi 1:
-  url: https://www.dict.com/swedish-vietnamese/{%word}
+  url: https://www.dict.com/swedish-vietnamese/<word>
   title: Tiếng Thụy Điển-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -19227,7 +19227,7 @@ sv-zh 0:
   - language
   - swedish
 sv-zh 1:
-  url: https://www.dict.com/swedish-chinese/{%word}
+  url: https://www.dict.com/swedish-chinese/<word>
   title: 瑞典文-中文 (dict.com)
   tags:
   - chinese
@@ -19241,10 +19241,10 @@ sv-zh 1:
     description: 瑞典文 的"树"翻译
 th 0:
   include:
-    key: th-{$language} 0
+    key: th-<$language> 0
 th 1:
   include:
-    key: th-{$language} 1
+    key: th-<$language> 1
 th-ar 0:
   title: التايلاندية-العربية (dict.com)
   include:
@@ -19657,7 +19657,7 @@ th-tr 0:
   - thai
   - turkish
 th-tr 1:
-  url: https://www.dict.com/thai-turkish/{%word}
+  url: https://www.dict.com/thai-turkish/<word>
   title: Tayca-Türkçe (dict.com)
   tags:
   - dictionary
@@ -19678,7 +19678,7 @@ th-uk 0:
   - thai
   - ukrainian
 th-uk 1:
-  url: https://www.dict.com/thai-ukrainian/{%word}
+  url: https://www.dict.com/thai-ukrainian/<word>
   title: Тайська-Українська (dict.com)
   tags:
   - dictionary
@@ -19699,7 +19699,7 @@ th-vi 0:
   - thai
   - vietnamese
 th-vi 1:
-  url: https://www.dict.com/thai-vietnamese/{%word}
+  url: https://www.dict.com/thai-vietnamese/<word>
   title: Tiếng Thái-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -19720,7 +19720,7 @@ th-zh 0:
   - language
   - thai
 th-zh 1:
-  url: https://www.dict.com/thai-chinese/{%word}
+  url: https://www.dict.com/thai-chinese/<word>
   title: 泰文-中文 (dict.com)
   tags:
   - chinese
@@ -19734,10 +19734,10 @@ th-zh 1:
     description: 泰文 的"树"翻译
 tr 0:
   include:
-    key: tr-{$language} 0
+    key: tr-<$language> 0
 tr 1:
   include:
-    key: tr-{$language} 1
+    key: tr-<$language> 1
 tr-ar 0:
   title: التركية-العربية (dict.com)
   include:
@@ -20163,7 +20163,7 @@ tr-uk 0:
   - turkish
   - ukrainian
 tr-uk 1:
-  url: https://www.dict.com/turkish-ukrainian/{%word}
+  url: https://www.dict.com/turkish-ukrainian/<word>
   title: Турецька-Українська (dict.com)
   tags:
   - dictionary
@@ -20184,7 +20184,7 @@ tr-vi 0:
   - turkish
   - vietnamese
 tr-vi 1:
-  url: https://www.dict.com/turkish-vietnamese/{%word}
+  url: https://www.dict.com/turkish-vietnamese/<word>
   title: Tiếng Thổ Nhĩ Kỳ-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -20205,7 +20205,7 @@ tr-zh 0:
   - language
   - turkish
 tr-zh 1:
-  url: https://www.dict.com/turkish-chinese/{%word}
+  url: https://www.dict.com/turkish-chinese/<word>
   title: 土耳其文-中文 (dict.com)
   tags:
   - chinese
@@ -20219,10 +20219,10 @@ tr-zh 1:
     description: 土耳其文 的"树"翻译
 uk 0:
   include:
-    key: uk-{$language} 0
+    key: uk-<$language> 0
 uk 1:
   include:
-    key: uk-{$language} 1
+    key: uk-<$language> 1
 uk-ar 0:
   title: الأوكرانية-العربية (dict.com)
   include:
@@ -20659,7 +20659,7 @@ uk-vi 0:
   - ukrainian
   - vietnamese
 uk-vi 1:
-  url: https://www.dict.com/ukrainian-vietnamese/{%word}
+  url: https://www.dict.com/ukrainian-vietnamese/<word>
   title: Tiếng Ucraina-Tiếng Việt (dict.com)
   tags:
   - dictionary
@@ -20680,7 +20680,7 @@ uk-zh 0:
   - language
   - ukrainian
 uk-zh 1:
-  url: https://www.dict.com/ukrainian-chinese/{%word}
+  url: https://www.dict.com/ukrainian-chinese/<word>
   title: 乌克兰文-中文 (dict.com)
   tags:
   - chinese
@@ -20694,10 +20694,10 @@ uk-zh 1:
     description: 乌克兰文 的"树"翻译
 vi 0:
   include:
-    key: vi-{$language} 0
+    key: vi-<$language> 0
 vi 1:
   include:
-    key: vi-{$language} 1
+    key: vi-<$language> 1
 vi-ar 0:
   title: الفيتنامية-العربية (dict.com)
   include:
@@ -21149,7 +21149,7 @@ vi-zh 0:
   - language
   - vietnamese
 vi-zh 1:
-  url: https://www.dict.com/vietnamese-chinese/{%word}
+  url: https://www.dict.com/vietnamese-chinese/<word>
   title: 越南文-中文 (dict.com)
   tags:
   - chinese
@@ -21163,10 +21163,10 @@ vi-zh 1:
     description: 越南文 的"树"翻译
 zh 0:
   include:
-    key: zh-{$language} 0
+    key: zh-<$language> 0
 zh 1:
   include:
-    key: zh-{$language} 1
+    key: zh-<$language> 1
 zh-ar 0:
   title: الصينية-العربية (dict.com)
   include:

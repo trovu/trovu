@@ -2,23 +2,23 @@ a 0:
   url: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20
   title: Amazon.com Homepage
   tags:
-  - affiliate
   - amazon
   - books
+  - is-affiliate
   - shopping
 a 1:
-  url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords={%query}&linkCode=ur2&tag=serchilo-20
+  url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo-20
   title: Amazon.com
   tags:
-  - affiliate
   - amazon
   - books
+  - is-affiliate
   - shopping
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
 culpa 1:
-  url: https://www.culpa.info/#/search?entity=all&query={%name}&alphabetize=True
+  url: https://www.culpa.info/#/search?entity=all&query=<name>&alphabetize=True
   title: CULPA Columbia Professor Search
   tags:
   - columbia
@@ -30,21 +30,21 @@ e 0:
   url: https://www.ebay.com/?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
 e 1:
-  url: https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
   examples:
   - arguments: smartphone
     description: Search for smartphones
 gmla 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20Los%20Angeles%2C%20California
+  url: http://maps.google.com/maps?hl=<$language>&q=<address>%2C%20Los%20Angeles%2C%20California
   title: Google Maps Los Angeles
   tags:
   - google
@@ -53,7 +53,7 @@ gmla 1:
   - arguments: hollywood
     description: Show Hollywood on Google Maps
 gmnyc 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20New%20York%20City%2C%20New%20York
+  url: http://maps.google.com/maps?hl=<$language>&q=<address>%2C%20New%20York%20City%2C%20New%20York
   title: Google Maps New York City
   tags:
   - google
@@ -62,17 +62,17 @@ gmnyc 1:
   - arguments: central park
     description: Show Central Park
 gmsf 1:
-  url: http://maps.google.com/maps?hl={$language}&q={%address}%2C%20San%20Francisco%2C%20California
+  url: http://maps.google.com/maps?hl=<$language>&q=<address>%2C%20San%20Francisco%2C%20California
   title: Google Maps San Francisco
   tags:
   - google
   - maps
-  - san francisco
+  - san-francisco
   examples:
   - arguments: golden gate bridge
     description: Show Golden Gate Bridge on Google Maps
 gps 1:
-  url: http://www.google.com/products?hl={$language}&q={%query}
+  url: http://www.google.com/products?hl=<$language>&q=<query>
   title: Google Products (USA)
   tags:
   - google
@@ -81,7 +81,7 @@ gps 1:
   - arguments: iphone
     description: Search for "iphone"
 sec 1:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=
+  url: http://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
@@ -89,7 +89,7 @@ sec 1:
   - arguments: Honeywell
     description: General company search
 sec 2:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type={%filing type}
+  url: http://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=<filing type>
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
@@ -97,7 +97,7 @@ sec 2:
   - arguments: Rio Tinto, 8-K
     description: search for a company with 8-K annual reports
 sec20f 1:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company={%company name}&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=20-F
+  url: http://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=20-F
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
@@ -105,7 +105,7 @@ sec20f 1:
   - arguments: Rio Tinto
     description: search for a company with 20-F annual reports
 sic 1:
-  url: http://www.osha.gov/pls/imis/sicsearch.html?p_sic={%SIC digit}&p_search=
+  url: http://www.osha.gov/pls/imis/sicsearch.html?p_sic=<SIC digit>&p_search=
   title: Standard Industrial Classification (SIC)
   tags:
   - industry
@@ -114,7 +114,7 @@ sic 1:
   - arguments: '1231'
     description: Search descriptive information for SIC "1231"
 yp 2:
-  url: http://www.yellowpages.com/search?search_terms={%business name}&geo_location_terms={%city or zip}
+  url: http://www.yellowpages.com/search?search_terms=<business name>&geo_location_terms=<city or zip>
   title: Yellow Pages
   tags:
   - phone

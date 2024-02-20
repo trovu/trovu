@@ -1,14 +1,14 @@
 import CallHandler from '../src/js/modules/CallHandler.js';
 import Env from '../src/js/modules/Env.js';
+import fs from 'fs';
 import 'isomorphic-fetch';
 import jsyaml from 'js-yaml';
-import fs from 'fs';
 
 main();
 
 async function main() {
   jest.setTimeout(20000);
-  const calls = jsyaml.load(fs.readFileSync('./__tests__/calls.yml', 'utf8'));
+  const calls = jsyaml.load(fs.readFileSync('./tests/calls.yml', 'utf8'));
   calls.forEach((call) => {
     test(call.title, async () => {
       await testCall(call);
@@ -23,9 +23,8 @@ global.fetch = jest.fn((url) => {
       text: () => Promise.resolve('defaultKeyword: g'),
     });
   } else if (url.includes('/testuser/trovu-data-user/master/shortcuts.yml')) {
-    // Handle other URLs or simulate errors
     return Promise.resolve({
-      status: 200, // or another status code as appropriate
+      status: 200,
       text: () =>
         Promise.resolve(
           'keyword1 1: https://www.google.com/search?hl=en&q=keyword1%20{%query}&ie=utf-8',
@@ -40,6 +39,7 @@ afterEach(() => {
 
 async function testCall(call) {
   const env = new Env();
+  env.getNavigatorLanguage = () => 'en-US';
   env.language = 'en';
   env.country = 'us';
   await env.populate(call.env);

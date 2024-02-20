@@ -1,6 +1,6 @@
 # Content policy
 
-This page is about which shortcuts may be in the **curated repository** [trovu-data](https://github.com/trovu/trovu-data), and how they should look like.
+This policy is for our **[curated shortcuts](https://github.com/trovu/trovu/tree/master/data/shortcuts)**, and how they should look like.
 
 Note that you can [add any shortcut to your user repository](../users/advanced.md#personal-shortcuts), completely ignoring this policy.
 
@@ -13,12 +13,12 @@ _Caveat: You might note that many curated shortcuts at this moment don't match t
 Bookmark shortcuts refer to shortcuts with 0 arguments, e.g.:
 
     g 0:
-      url: https://www.google.com/search?hl={$language}
+      url: https://www.google.com/search?hl=<$language>
       title: Google Web Homepage
 
 You use it by simply entering `g` and hitting Enter.
 
-This shortcut to the Google Web Homepage is fine because it is not alone: There is also a shortcut for the Google Websearch `g 1`.
+This shortcut to the Google Web Homepage is fine because it is not alone: There is also a shortcut for the Google Web search `g 1`.
 
 But a bookmark shortcut that has no corresponding 1-or-more-argument shortcut should be avoided. You may put them into [your user shortcuts](../users/advanced.md#personal-shortcuts).
 
@@ -43,7 +43,7 @@ The rule of thumb: The more popular the website, the shorter may be its keyword.
 
 ### 1-letter keywords: Only for top 50
 
-The English alphabet has 26 latin letters. Keyword of only 1 letter should therefore be only applied if the website belongs to the top 50 in visitor's count of the world (namespace `o`), to minimize the likelihood of clashes.
+The English alphabet has 26 Latin letters. Keyword of only 1 letter should therefore be only applied if the website belongs to the top 50 in visitor's count of the world (namespace `o`), to minimize the likelihood of clashes.
 
 If the shortcut shall belong to a language or country namespace, then its website should be top 50 of that country.
 

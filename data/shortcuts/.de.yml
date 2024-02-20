@@ -1,5 +1,5 @@
 0180 1:
-  url: http://www.tk-anbieter.de/0180/suche.html?nr=0180{%query}
+  url: http://www.tk-anbieter.de/0180/suche.html?nr=0180<query>
   title: 0180-Telefonbuch
   tags:
   - phone
@@ -11,7 +11,7 @@
   - 3suisses
   - shopping
 3s 1:
-  url: http://www.3suisses.de/search.html?query={%Suche}
+  url: http://www.3suisses.de/search.html?query=<Suche>
   title: 3Suisses.de
   tags:
   - 3suisses
@@ -20,18 +20,16 @@
   - arguments: schuhe
     description: Suche nach Schuhen
 a 0:
-  url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de&tag=serchilo-21
+  url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de
   title: Amazon.de Startseite
   tags:
-  - affiliate
   - amazon
   - books
   - shopping
 a 1:
-  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&linkCode=ur2&tag=serchilo-21
+  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&linkCode=ur2
   title: Amazon.de
   tags:
-  - affiliate
   - amazon
   - books
   - shopping
@@ -45,7 +43,7 @@ aa 0:
   - reise
   - travel
 aa 1:
-  url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=www.auswaertiges-amt.de%3ADE%3ALaenderinformationen%20{%Land}
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=www.auswaertiges-amt.de%3ADE%3ALaenderinformationen%20<Land>
   title: Auswärtiges Amt, Reise und Sicherheitshinweise
   tags:
   - reise
@@ -57,7 +55,7 @@ ac 0:
   url: https://www.amazon.de/gp/cart/view.html
   title: Amazon Einkaufswagen
 alternate 1:
-  url: http://www.alternate.de/html/search.html?searchCriteria={%Suche}
+  url: http://www.alternate.de/html/search.html?searchCriteria=<Suche>
   title: Alternate
   tags:
   - shopping
@@ -65,10 +63,9 @@ alternate 1:
   - arguments: fernseher
     description: Suche nach Fernsehern
 amazon 1:
-  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords={%Suche}&linkCode=ur2&tag=serchilo-21
+  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&linkCode=ur2
   title: Amazon.de
   tags:
-  - affiliate
   - amazon
   - books
   - shopping
@@ -84,7 +81,7 @@ aw 0:
   tags:
   - politics
 aw 1:
-  url: https://www.abgeordnetenwatch.de/profile?politician_search_keys={%Politiker oder Suchbegriff}
+  url: https://www.abgeordnetenwatch.de/profile?politician_search_keys=<Politiker oder Suchbegriff>
   title: Abgeordnetenwatch
   tags:
   - politics
@@ -99,14 +96,14 @@ bauhaus 0:
   - hardware
   - shopping
 bauhaus 1:
-  url: https://www.bauhaus.info/suche/produkte?text={%query}
+  url: https://www.bauhaus.info/suche/produkte?text=<query>
   title: BAUHAUS
   tags:
   - diy
   - hardware
   - shopping
 bbb 2:
-  url: http://www.bbbike.de/cgi-bin/bbbike.cgi?start={%Start}&via=&ziel={%Ziel}
+  url: http://www.bbbike.de/cgi-bin/bbbike.cgi?start=<Start>&via=&ziel=<Ziel>
   title: Berlin by Bike (BBBike.de)
   description: Fahrrad-Routenplaner für Berlin
   tags:
@@ -117,7 +114,7 @@ bbb 2:
   - arguments: alexanderplatz, zoo
     description: Zeige Fahrradroute von Alexanderplatz zum Zoo
 bex 1:
-  url: https://bahn.expert/{%Bahnhof}
+  url: https://bahn.expert/<Bahnhof>
   title: bahn.expert
   description: Zeigt Abfahrtstafel eines Bahnhofs
   tags:
@@ -127,7 +124,7 @@ bex 1:
   - arguments: berlin
     description: Abfahrtstafel von Berlin Hbf
 bhf 1:
-  url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query={%bahnhof}
+  url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query=<bahnhof>
   title: Bahnhofsauskunft, Deutsche Bahn
   tags:
   - bahn
@@ -141,9 +138,9 @@ bhnt 0:
   - berlin
   - c-base
   - hacktivism
-  - lightning talks
+  - lightning-talks
   - meetup
-  - open source
+  - open-source
 bibfu 0:
   url: https://www.fu-berlin.de/sites/ub/index.html
   title: FU Berlin Bibliothek
@@ -153,7 +150,7 @@ bibfu 0:
   - library
   - uni
 bibfu 1:
-  url: https://fu-berlin.primo.exlibrisgroup.com/discovery/search?institution=FUB&vid=49KOBV_FUB:FUB&tab=FUB_CDI&mode=Basic&backFromPreferences=true&search_scope=FUB_CDI&displayMode=full&bulkSize=10&highlight=true&dum=true&displayField=all&pcAvailabiltyMode=false&fromLocation=188&query=any,contains,{%Suche}
+  url: https://fu-berlin.primo.exlibrisgroup.com/discovery/search?institution=FUB&vid=49KOBV_FUB:FUB&tab=FUB_CDI&mode=Basic&backFromPreferences=true&search_scope=FUB_CDI&displayMode=full&bulkSize=10&highlight=true&dum=true&displayField=all&pcAvailabiltyMode=false&fromLocation=188&query=any,contains,<Suche>
   title: FU Berlin Bibliothek
   tags:
   - berlin
@@ -163,18 +160,45 @@ bibfu 1:
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
+bibgvk 1:
+  url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<query>
+  title: Gemeinsamer Verbundkatalog des GBV
+  tags:
+  - library
+  examples:
+  - arguments: Basicode
+    description: Suche nach "Basicode"
+bibhal 1:
+  url: https://katalog.halle.de/Mediensuche?search=<query>
+  title: Stadtbibliothek Halle (Saale)
+  tags:
+  - halle
+  - library
+  examples:
+  - arguments: Unterleuten
+    description: Suche nach "Unterleuten"
+bibhbz 1:
+  url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
+  title: Hochschulbibliothekszentrum NRW
+  tags:
+  - library
+  examples:
+  - arguments: Basicode
+    description: Suche nach "Basicode"
 bibka 0:
   url: http://www.bibliotheksportal-karlsruhe.de/
   title: Bibliotheksportal Karlsruhe
   tags:
   - bibliothek
   - karlsruhe
+  - library
 bibka 1:
-  url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=ka&input-charset=utf-8&title=Bibliotheksportal+Karlsruhe+%3A+Ergebnisanzeige&head=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fheader.html&footer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Ffooter.html&css=none&spacer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fspacer.html&target=_blank&olix_returnTo=%2F%2Fbibliotheksportal-karlsruhe.de%2F&ALL={%Suche}&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&kataloge=BLB_OPAC&kataloge=STABIKA&kataloge=KIT&kataloge=HSMUSIK_KA&kataloge=HSB&kataloge=MERKUR_KA&kataloge=AKBILDKUENSTE_KA&kataloge=BGH_OPAC&kataloge=BVG_OPAC&kataloge=KUNST_BADLAMUSEUM&kataloge=BISMARCK_KA&kataloge=EV_OBERKIRCHENRAT&kataloge=LBB&kataloge=MELANCHTON&kataloge=SCHEFFEL&kataloge=RELPAED_INST&kataloge=KUNST_KUHAKA&kataloge=ZKM&ref=direct&client-js=yes
+  url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=ka&input-charset=utf-8&title=Bibliotheksportal+Karlsruhe+%3A+Ergebnisanzeige&head=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fheader.html&footer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Ffooter.html&css=none&spacer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fspacer.html&target=_blank&olix_returnTo=%2F%2Fbibliotheksportal-karlsruhe.de%2F&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&kataloge=BLB_OPAC&kataloge=STABIKA&kataloge=KIT&kataloge=HSMUSIK_KA&kataloge=HSB&kataloge=MERKUR_KA&kataloge=AKBILDKUENSTE_KA&kataloge=BGH_OPAC&kataloge=BVG_OPAC&kataloge=KUNST_BADLAMUSEUM&kataloge=BISMARCK_KA&kataloge=EV_OBERKIRCHENRAT&kataloge=LBB&kataloge=MELANCHTON&kataloge=SCHEFFEL&kataloge=RELPAED_INST&kataloge=KUNST_KUHAKA&kataloge=ZKM&ref=direct&client-js=yes
   title: Bibliotheksportal Karlsruhe
   tags:
   - bibliothek
   - karlsruhe
+  - library
   examples:
   - arguments: goethe
     description: Suche nach Goethe
@@ -185,18 +209,20 @@ bibkit 0:
   - bibliothek
   - karlsruhe
   - kit
+  - library
 bibkit 1:
-  url: http://services.bibliothek.kit.edu/primo/start.php?query={%query}
+  url: http://services.bibliothek.kit.edu/primo/start.php?query=<query>
   title: KIT-Bibliothek
   tags:
   - bibliothek
   - karlsruhe
   - kit
+  - library
   examples:
   - arguments: xml
     description: 'search for all XML books '
 bibkobv 1:
-  url: http://vs13.kobv.de/V/PVNF8HR8UYMQX54AQ854V7J7MG4BPQHXL4C492RMKIK6BESAMP-05191?func=meta-1-check&mode=advanced&find_code_2=WAU&find_request_2={%query}&find_op_1=AND&find_code_3=WTI&find_request_3=&ckbox=KOB00019&ckbox=SIG00002&ckbox=KOB00264&submit=go
+  url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<query>
   title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
   tags:
   - library
@@ -209,6 +235,15 @@ bibma 0:
   tags:
   - library
   - mannheim
+bibmlu 1:
+  url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<query>
+  title: Uni Halle Bibliothek
+  tags:
+  - halle
+  - library
+  examples:
+  - arguments: minix
+    description: Search Uni Halle library for "minix"
 bibmr 0:
   url: http://www.uni-marburg.de/bis/kataloge
   title: Uni Marburg Bibliothek
@@ -216,7 +251,7 @@ bibmr 0:
   - library
   - marburg
 bibmr 1:
-  url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%query}
+  url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<query>
   title: Uni Marburg Bibliothek
   tags:
   - library
@@ -224,6 +259,14 @@ bibmr 1:
   examples:
   - arguments: goethe
     description: Suche nach Goethe
+bibswb 1:
+  url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<query>
+  title: Südwestdeutscher Bibliotheksverbund
+  tags:
+  - library
+  examples:
+  - arguments: Basicode
+    description: Suche nach "Basicode"
 bibtub 0:
   url: http://www.ub.tu-berlin.de/
   title: TU Berlin Bibliothek
@@ -241,7 +284,7 @@ bibup 0:
   - potsdam
   - uni
 bibup 1:
-  url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}
+  url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Uni Potsdam Bibliothek
   tags:
   - bibliothek
@@ -252,7 +295,7 @@ bibup 1:
   - arguments: goethe
     description: Suche nach "goethe"
 bibup 2:
-  url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHM&=Suchen&MATCFILTER=Y&MATCSET=Y&NOSCAN=Y&PARSE_MNEMONICS=N&PARSE_OPWORDS=N&PARSE_OLDSETS=N&ACT0=SRCH&IKT0=1016&TRM0=&ACT1=*&IKT1=5041&TRM1=&ACT2=*&IKT2=1004&TRM2={%Autor}&ADI_JVU={%Jahr}
+  url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHM&=Suchen&MATCFILTER=Y&MATCSET=Y&NOSCAN=Y&PARSE_MNEMONICS=N&PARSE_OPWORDS=N&PARSE_OLDSETS=N&ACT0=SRCH&IKT0=1016&TRM0=&ACT1=*&IKT1=5041&TRM1=&ACT2=*&IKT2=1004&TRM2=<Autor>&ADI_JVU=<Jahr>
   title: Uni Potsdam Bibliothek
   tags:
   - bibliothek
@@ -270,7 +313,7 @@ bkat 0:
   - germany
   - traffic
 bkat 1:
-  url: https://bkat.wikinaut.de/?q={%Suche}
+  url: https://bkat.wikinaut.de/?q=<Suche>
   title: BKatSearch Bußgeldkatalog
   description: Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
   tags:
@@ -283,7 +326,7 @@ bkat 1:
   - arguments: parken
     description: Suche nach Vergehen zum Thema "Parken".
 bls 2:
-  url: https://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={$now|output=YYYY-MM-DD}&Passengers=1
+  url: 'https://www.busliniensuche.de/suche?From=<Start: {type: city}>&To=<Ziel: {type: city}>&When=<$now: {output: YYYY-MM-DD}>&Passengers=1'
   title: Busliniensuche.de
   tags:
   - bus
@@ -292,7 +335,7 @@ bls 2:
   - arguments: berlin, bremen
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen
 bls 3:
-  url: https://www.busliniensuche.de/suche?From={%Start|type=city}&To={%Ziel|type=city}&When={%Datum|type=date|output=YYYY-MM-DD}&Passengers=1
+  url: 'https://www.busliniensuche.de/suche?From=<Start: {type: city}>&To=<Ziel: {type: city}>&When=<Datum: {type: date, output: YYYY-MM-DD}>&Passengers=1'
   title: Busliniensuche.de
   tags:
   - bus
@@ -301,7 +344,7 @@ bls 3:
   - arguments: berlin, bremen, 28
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen am 28. dieses Monats
 blz 1:
-  url: http://www.abfragen.de/finanzen3.asp?ort={%Ort/PLZ}
+  url: http://www.abfragen.de/finanzen3.asp?ort=<Ort/PLZ>
   title: Bankleitzahlen (abfragen.de)
   examples:
   - arguments: berlin
@@ -314,7 +357,7 @@ bol 0:
   - books
   - shopping
 bol 1:
-  url: https://www.bol.de/shop/bch_start_startseite/suche/?&ZANOX_PARTNER_PARAMETER_LABEL=ZANOX_PARTNER_PARAMETER_WERT&sq={%Suche}&x=-8&y=-9&zUserID=979254&zanpid=1802156177828978688
+  url: https://www.bol.de/shop/bch_start_startseite/suche/?&ZANOX_PARTNER_PARAMETER_LABEL=ZANOX_PARTNER_PARAMETER_WERT&sq=<Suche>&x=-8&y=-9&zUserID=979254&zanpid=1802156177828978688
   title: Bol.de Suche
   tags:
   - bol
@@ -328,19 +371,19 @@ bpo 0:
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker
   tags:
   - berlin
-  - classical music
-  - cultural events
+  - classical-music
+  - cultural-events
   - music
 bpo 1:
-  url: http://www.berliner-philharmoniker.de/konzerte/kalender/von/{%datum|type=date|output=YYYY-MM}/#{%datum|type=date|output=YYYY-MM-DD}
+  url: 'http://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
   tags:
   - berlin
-  - classical music
-  - cultural events
+  - classical-music
+  - cultural-events
   - music
 bsvg 2:
-  url: http://www.verkehr-bs.de/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin={%Start}&name_destination={%Ziel}
+  url: http://www.verkehr-bs.de/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin=<Start>&name_destination=<Ziel>
   title: Braunschweiger Verkehrs-GmbH
   tags:
   - bahn
@@ -357,7 +400,7 @@ bu7 0:
   - books
   - bookshop
 bu7 1:
-  url: https://www.buch7.de/suche?utf8=%E2%9C%93&search={%Suche}
+  url: https://www.buch7.de/suche?utf8=%E2%9C%93&search=<Suche>
   title: Buch7 Suche
   description: Allgemeine Suche bei buch7
   tags:
@@ -367,7 +410,7 @@ bu7 1:
   - arguments: Windward Banks
     description: Suche nach einem Buch nach Titel und Autor, unspezifisch
 bu7a 1:
-  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&contributor={%Autor}
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&contributor=<Autor>
   title: Buch7 Autorensuche
   description: Suche nach Autor (»contributor«) beim Online-Buchhändler buch7
   tags:
@@ -378,7 +421,7 @@ bu7a 1:
   - arguments: Sarah Gailey
     description: Suche nach Büchern einer bestimmten Autorin
 bu7i 1:
-  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&isbn={%isbn}
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&isbn=<isbn>
   title: Buch7 ISBN-Suche
   description: Suche nach ISBN beim Online-Buchhändler buch7
   tags:
@@ -389,7 +432,7 @@ bu7i 1:
   - arguments: '9780226389578'
     description: Sucht nach einem Buch mit bekannter ISBN
 bu7t 1:
-  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%Titel}
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel=<Titel>
   title: Buch7 Titelsuche
   description: Suche nach Buchtitel beim Online-Buchhändlers buch7
   tags:
@@ -400,7 +443,7 @@ bu7t 1:
   - arguments: all men of genius
     description: Buchsuche nach Titel
 bu7ta 2:
-  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel={%Titel}&contributor={%Autor}
+  url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel=<Titel>&contributor=<Autor>
   title: Buch7 Titel- und Autorensuche
   description: Suche nach Titel und Autor beim Online-Buchhändler buch7
   tags:
@@ -418,7 +461,7 @@ bvb 0:
   - books
   - library
 bvb 1:
-  url: https://bvb-new-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,{%Suche}&tab=all_tab&search_scope=all_scope&vid=49BVB_VU1&lang=de_DE&offset=0&fromRedirectFilter=true
+  url: https://bvb-new-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,<Suche>&tab=all_tab&search_scope=all_scope&vid=49BVB_VU1&lang=de_DE&offset=0&fromRedirectFilter=true
   title: BibliotheksVerbund Bayern
   tags:
   - books
@@ -431,7 +474,7 @@ bvg 0:
   - berlin
   - travel
 bvg 2:
-  url: https://www.bvg.de/de/verbindungen/verbindungssuche?S={%Start}&Z={%Ziel}&start=1
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&start=1
   title: BVG-Fahrplanauskunft
   tags:
   - bahn
@@ -441,7 +484,7 @@ bvg 2:
   - arguments: zoo!, frohnau
     description: Nächste Verbindung vom Zoo nach Frohnau
 bvg 3:
-  url: https://www.bvg.de/de/verbindungen/verbindungssuche?S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&start=1
+  url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&time=<Abfahrtszeit: {type: time}>&start=1'
   title: BVG-Fahrplanauskunft
   tags:
   - bahn
@@ -451,7 +494,7 @@ bvg 3:
   - arguments: zoo!, frohnau, 20:00
     description: Verbindung vom Zoo nach Frohnau heute um 20 Uhr
 bvg 4:
-  url: https://www.bvg.de/de/verbindungen/verbindungssuche?S={%Start}&Z={%Ziel}&time={%Abfahrtszeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: BVG-Fahrplanauskunft
   tags:
   - bahn
@@ -461,7 +504,7 @@ bvg 4:
   - arguments: zoo!, frohnau, 20:00, 27.10.
     description: Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
 bvgan 3:
-  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Ankunftszeit|type=time}&start=1
+  url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S=<Start>&Z=<Ziel>&time=<Ankunftszeit: {type: time}>&start=1'
   title: BVG-Auskunft
   tags:
   - bahn
@@ -471,7 +514,7 @@ bvgan 3:
   - arguments: zoo!, frohnau, 21
     description: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr
 bvgan 4:
-  url: https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S={%Start}&Z={%Ziel}&time={%Ankunftszeit|type=time}&date={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S=<Start>&Z=<Ziel>&time=<Ankunftszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: BVG-Auskunft
   tags:
   - bahn
@@ -481,7 +524,7 @@ bvgan 4:
   - arguments: zoo!, frohnau, 21, 27.10.
     description: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr am 27.10.
 charts 1:
-  url: http://www.top10-charts.com/list.php?suche={%query}
+  url: http://www.top10-charts.com/list.php?suche=<query>
   title: Top10-Charts
   tags:
   - music
@@ -493,7 +536,7 @@ conrad 0:
   - electronics
   - shopping
 conrad 1:
-  url: https://www.conrad.de/de/search.html?search={%Artikel}
+  url: https://www.conrad.de/de/search.html?search=<Artikel>
   title: Conrad Elektronik Deutschland
   tags:
   - conrad
@@ -503,7 +546,7 @@ conrad 1:
   - arguments: glühlampe
     description: Suche nach Glühlampen
 cys 1:
-  url: http://www.cyberport.de/?EVENT=itemsearch&query={%Produkt}
+  url: http://www.cyberport.de/?EVENT=itemsearch&query=<Produkt>
   title: Cyberport Store
   tags:
   - apple
@@ -520,7 +563,7 @@ db 0:
   - railway
   - travel
 db 1:
-  url: https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?input={%Bahnhof}&boardType=dep&time=actual&productsDefault=1111101&start=yes
+  url: https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?input=<Bahnhof>&boardType=dep&time=actual&productsDefault=1111101&start=yes
   title: Deutsche Bahn, Verspätungen / aktuelle Abfahrt
   examples:
   - arguments: berlin hbf
@@ -528,43 +571,26 @@ db 1:
   include:
     key: db 0
 db 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&timesel=depart&start=1
-  title: Deutsche Bahn Fahrplanauskunft
-  examples:
-  - arguments: berlin, hamburg
-    description: Nächste Bahn-Verbindung von Berlin nach Hamburg
-  - arguments: b, hh
-    description: Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über Autokennzeichen
-  - arguments: sxf, txl
-    description: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld, Eingabe über IATA-Flughafencodes
   include:
-    key: db 0
+    key: dbm 2
+  showOnHome: 700
 db 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&time={%Zeit|type=time|output=HH:mm}&timesel=depart&start=1
-  title: Deutsche Bahn Fahrplanauskunft
-  examples:
-  - arguments: berlin, hamburg, 20:00
-    description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
   include:
-    key: db 0
+    key: dbm 3
 db 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1
-  title: Deutsche Bahn Fahrplanauskunft
-  examples:
-  - arguments: berlin, hamburg, 20:00, 31.12.
-    description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
   include:
-    key: db 0
+    key: dbm 4
 dbb 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare'
   title: Deutsche Bahn (Bestpreis)
   examples:
   - arguments: köln, münchen, 30.11.
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
   include:
     key: db 0
+  showOnHome: 710
 dbm 2:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&start=1
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   examples:
   - arguments: berlin, hamburg
@@ -572,7 +598,7 @@ dbm 2:
   include:
     key: db 0
 dbm 3:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&start=1
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   examples:
   - arguments: berlin, hamburg, 10
@@ -580,7 +606,7 @@ dbm 3:
   include:
     key: db 0
 dbm 4:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
@@ -588,7 +614,7 @@ dbm 4:
   include:
     key: db 0
 dbmn 2:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&journeyProducts=1016&start=1
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg
@@ -596,7 +622,7 @@ dbmn 2:
   include:
     key: db 0
 dbmn 3:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 10
@@ -604,7 +630,7 @@ dbmn 3:
   include:
     key: db 0
 dbmn 4:
-  url: http://mobile.bahn.de/bin/mobil/query.exe/dox?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
+  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
@@ -612,7 +638,7 @@ dbmn 4:
   include:
     key: db 0
 dbn 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&timesel=depart&journeyProducts=1016&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg
@@ -624,7 +650,7 @@ dbn 2:
   include:
     key: db 0
 dbn 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&time={%Zeit|type=time|output=HH:mm}&timesel=depart&journeyProducts=1016&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 20:00
@@ -632,7 +658,7 @@ dbn 3:
   include:
     key: db 0
 dbn 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&time={%Zeit|type=time|output=HH:mm}&date={%Datum|type=date|output=DD.MM.YYYY}&timesel=depart&journeyProducts=1016&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
@@ -640,7 +666,7 @@ dbn 4:
   include:
     key: db 0
 dbt 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
   examples:
   - arguments: berlin, hamburg
@@ -648,7 +674,7 @@ dbt 2:
   include:
     key: db 0
 dbt 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
   examples:
   - arguments: berlin, hamburg, 20:00
@@ -656,7 +682,7 @@ dbt 3:
   include:
     key: db 0
 dbt 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
@@ -664,7 +690,7 @@ dbt 4:
   include:
     key: db 0
 dbtn 2:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&journeyProducts=1016&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg
@@ -672,7 +698,7 @@ dbtn 2:
   include:
     key: db 0
 dbtn 3:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&journeyProducts=1016&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 20:00
@@ -680,7 +706,7 @@ dbtn 3:
   include:
     key: db 0
 dbtn 4:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Zeit|type=time|output=HH:mm}&D={%Datum|type=date|output=DD.MM.YYYY}&journeyProducts=1016&start=1
+  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
@@ -688,7 +714,7 @@ dbtn 4:
   include:
     key: db 0
 dejure 1:
-  url: http://dejure.org/cgi-bin/suche?Suchenach={%Suche}
+  url: http://dejure.org/cgi-bin/suche?Suchenach=<Suche>
   title: Dejure.org Gesetze
   tags:
   - law
@@ -696,7 +722,7 @@ dejure 1:
   - arguments: gg
     description: Search Dejure.org Gesetze for "gg"
 denic 1:
-  url: http://www.denic.de/webwhois/?domain={%domain}
+  url: http://www.denic.de/webwhois/?domain=<domain>
   title: Whois (Denic)
   tags:
   - domains
@@ -704,13 +730,13 @@ denic 1:
   - arguments: google
     description: show the owner of the domain google.de
 dhl 1:
-  url: https://www.dhl.de/de/privatkunden.html?piececode={%Sendungsnummer}
+  url: https://www.dhl.de/de/privatkunden.html?piececode=<Sendungsnummer>
   title: DHL Sendungsverfolgung
   tags:
   - dhl
   - shipping
 dhl 2:
-  url: http://nolp.dhl.de/nextt-online-public/set_identcodes.do?lang=de&idc={%Sendungsnummer}&zip={%PLZ}
+  url: http://nolp.dhl.de/nextt-online-public/set_identcodes.do?lang=de&idc=<Sendungsnummer>&zip=<PLZ>
   title: DHL Sendungsverfolgung
   tags:
   - dhl
@@ -721,7 +747,7 @@ dlf 0:
   tags:
   - germany
   - radio
-  - radio station
+  - radio-station
 doe 0:
   url: http://www.dasoertliche.de/
   title: DasOertliche.de Homepage
@@ -729,7 +755,7 @@ doe 0:
   - phone
   - telefonbuch
 doe 1:
-  url: https://www.dasoertliche.de/?zvo_ok=&plz=&quarter=&district=&ciid=&ph={%Nummer}&kgs=&buab=&zbuab=&form_name=search_invkk
+  url: https://www.dasoertliche.de/?zvo_ok=&plz=&quarter=&district=&ciid=&ph=<Nummer>&kgs=&buab=&zbuab=&form_name=search_invkk
   title: DasOertliche.de, Rückwärtssuche
   tags:
   - phone
@@ -738,7 +764,7 @@ doe 1:
   - arguments: '1805996633'
     description: Suche nach Inhaber der Nummer 01805996633
 doe 2:
-  url: http://www2.dasoertliche.de/Controller?form_name=search_nat&kw={%Name}&ci={%Ort}
+  url: http://www2.dasoertliche.de/Controller?form_name=search_nat&kw=<Name>&ci=<Ort>
   title: DasOertliche.de
   tags:
   - phone
@@ -747,7 +773,7 @@ doe 2:
   - arguments: meier, dresden
     description: Suche Telefonnummern für "Meier" in Dresden
 dpd 1:
-  url: http://extranet.dpd.de/cgi-bin/delistrack?typ=1&lang=de&pknr={%Paketnummer}
+  url: http://extranet.dpd.de/cgi-bin/delistrack?typ=1&lang=de&pknr=<Paketnummer>
   title: DPD Sendungsverfolgung
   tags:
   - dpd
@@ -756,21 +782,21 @@ dpd 1:
   - arguments: '1895023888534'
     description: Verfolgt die Sendung mit der Paketscheinnummer 01895023888534
 duden 1:
-  url: http://www.duden.de/suchen/dudenonline/{%query}
+  url: http://www.duden.de/suchen/dudenonline/<query>
   title: Duden
 e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
 e 1:
-  url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
   examples:
   - arguments: smartphone
@@ -779,46 +805,46 @@ ebay 0:
   url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=1&pub=5575056757&toolid=10001&campid=5337375636&customid=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
   title: Ebay.de homepage
   tags:
-  - affiliate
+  - is-affiliate
   - old
 ebay 1:
-  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq={%query}&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq=<query>&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
   title: Ebay.de
   tags:
-  - affiliate
+  - is-affiliate
   - old
 ek 0:
   deprecated:
     alternative:
       query: kaz
-      created: '2023-10-13'
+    created: '2023-10-13'
 ek 1:
   deprecated:
     alternative:
-      query: kaz {%1}
-      created: '2023-10-13'
+      query: kaz <1>
+    created: '2023-10-13'
 ek 2:
   deprecated:
     alternative:
-      query: kaz {%1}, {%2}
-      created: '2023-10-13'
+      query: kaz <1>, <2>
+    created: '2023-10-13'
 ek+ 0:
   deprecated:
     alternative:
       query: kaz+
-      created: '2023-10-13'
+    created: '2023-10-13'
 eka 0:
   deprecated:
     alternative:
       query: kaza
-      created: '2023-10-13'
+    created: '2023-10-13'
 ekn 0:
   deprecated:
     alternative:
       query: kazn
-      created: '2023-10-13'
+    created: '2023-10-13'
 farnell 1:
-  url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt={%query}
+  url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt=<query>
   title: Farnell Deutschland
   tags:
   - shopping
@@ -826,10 +852,10 @@ farnell 1:
   - arguments: switch
     description: Farnell Deutschland search for switch
 faz 1:
-  url: http://www.faz.net/suche/?query={%query}&suchbegriffImage.x=0&suchbegriffImage.y=0&resultsPerPage=20
+  url: http://www.faz.net/suche/?query=<query>&suchbegriffImage.x=0&suchbegriffImage.y=0&resultsPerPage=20
   title: Frankfurter Allgemeine Zeitung Nachrichten-Suche
 fbw 1:
-  url: https://www.fahrerbewertung.de/{%Kennzeichen}
+  url: https://www.fahrerbewertung.de/<Kennzeichen>
   title: Fahrerbewertung
   tags:
   - driving
@@ -843,16 +869,17 @@ g 0:
   title: Google.de Homepage
   tags:
   - google
-  - web search
+  - web-search
 g 1:
-  url: https://www.google.de/search?hl={$language}&q={%query}&ie=utf-8
+  url: https://www.google.de/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.de
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: berlin
     description: Google-Suche nach berlin
+  showOnHome: 600
 gh 0:
   url: http://geizhals.de/
   title: Geizhals Deutschland Hauptseite
@@ -861,7 +888,7 @@ gh 0:
   - preisvergleich
   - shopping
 gh 1:
-  url: https://geizhals.de/?fs={%Produkt|encoding=iso-8859-1}
+  url: 'https://geizhals.de/?fs=<Produkt: {encoding: iso-8859-1}>'
   title: Geizhals Deutschland
   tags:
   - geizhals
@@ -877,7 +904,7 @@ gii 0:
   - gesetze
   - law
 gii 2:
-  url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20{%Paragraph}%20{%Gesetz}
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20<Paragraph>%20<Gesetz>
   title: Gesetze im Internet
   tags:
   - gesetze
@@ -890,7 +917,7 @@ gii 2:
   - arguments: 129a, stgb
     description: Zeige Paragraph 129a des Strafgesetzbuchs
 gls 1:
-  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1. Paket-Nr.}
+  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo=<1. Paket-Nr.>
   title: GLS Sendungsverfolgung
   tags:
   - gls
@@ -899,13 +926,13 @@ gls 1:
   - arguments: '12345678901'
     description: sucht nach Paket-Nr. 12345678901
 gls 2:
-  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1. Paket-Nr.},{%2. Paket-Nr.}
+  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo=<1. Paket-Nr.>,<2. Paket-Nr.>
   title: GLS Sendungsverfolgung
   tags:
   - gls
   - shipping
 gls 3:
-  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo={%1. Paket-Nr.},{%2. Paket-Nr.},{%3. Paket-Nr.}
+  url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo=<1. Paket-Nr.>,<2. Paket-Nr.>,<3. Paket-Nr.>
   title: GLS Sendungsverfolgung
   tags:
   - gls
@@ -913,3460 +940,3460 @@ gls 3:
 gma 1:
   deprecated:
     alternative:
-      query: gm a,{%1}
+      query: gm a,<1>
     created: '2023-01-07'
 gmaa 1:
   deprecated:
     alternative:
-      query: gm aa,{%1}
+      query: gm aa,<1>
     created: '2023-01-07'
 gmab 1:
   deprecated:
     alternative:
-      query: gm ab,{%1}
+      query: gm ab,<1>
     created: '2023-01-07'
 gmabg 1:
   deprecated:
     alternative:
-      query: gm abg,{%1}
+      query: gm abg,<1>
     created: '2023-01-07'
 gmac 1:
   deprecated:
     alternative:
-      query: gm ac,{%1}
+      query: gm ac,<1>
     created: '2023-01-07'
 gmae 1:
   deprecated:
     alternative:
-      query: gm ae,{%1}
+      query: gm ae,<1>
     created: '2023-01-07'
 gmah 1:
   deprecated:
     alternative:
-      query: gm ah,{%1}
+      query: gm ah,<1>
     created: '2023-01-07'
 gmaib 1:
   deprecated:
     alternative:
-      query: gm aib,{%1}
+      query: gm aib,<1>
     created: '2023-01-07'
 gmaic 1:
   deprecated:
     alternative:
-      query: gm aic,{%1}
+      query: gm aic,<1>
     created: '2023-01-07'
 gmak 1:
   deprecated:
     alternative:
-      query: gm ak,{%1}
+      query: gm ak,<1>
     created: '2023-01-07'
 gmal 1:
   deprecated:
     alternative:
-      query: gm al,{%1}
+      query: gm al,<1>
     created: '2023-01-07'
 gmalf 1:
   deprecated:
     alternative:
-      query: gm alf,{%1}
+      query: gm alf,<1>
     created: '2023-01-07'
 gmals 1:
   deprecated:
     alternative:
-      query: gm als,{%1}
+      query: gm als,<1>
     created: '2023-01-07'
 gmalz 1:
   deprecated:
     alternative:
-      query: gm alz,{%1}
+      query: gm alz,<1>
     created: '2023-01-07'
 gmam 1:
   deprecated:
     alternative:
-      query: gm am,{%1}
+      query: gm am,<1>
     created: '2023-01-07'
 gman 1:
   deprecated:
     alternative:
-      query: gm an,{%1}
+      query: gm an,<1>
     created: '2023-01-07'
 gmana 1:
   deprecated:
     alternative:
-      query: gm ana,{%1}
+      query: gm ana,<1>
     created: '2023-01-07'
 gmang 1:
   deprecated:
     alternative:
-      query: gm ang,{%1}
+      query: gm ang,<1>
     created: '2023-01-07'
 gmank 1:
   deprecated:
     alternative:
-      query: gm ank,{%1}
+      query: gm ank,<1>
     created: '2023-01-07'
 gmap 1:
   deprecated:
     alternative:
-      query: gm ap,{%1}
+      query: gm ap,<1>
     created: '2023-01-07'
 gmar 1:
   deprecated:
     alternative:
-      query: gm ar,{%1}
+      query: gm ar,<1>
     created: '2023-01-07'
 gmarn 1:
   deprecated:
     alternative:
-      query: gm arn,{%1}
+      query: gm arn,<1>
     created: '2023-01-07'
 gmart 1:
   deprecated:
     alternative:
-      query: gm art,{%1}
+      query: gm art,<1>
     created: '2023-01-07'
 gmasd 1:
   deprecated:
     alternative:
-      query: gm asd,{%1}
+      query: gm asd,<1>
     created: '2023-01-07'
 gmasl 1:
   deprecated:
     alternative:
-      query: gm asl,{%1}
+      query: gm asl,<1>
     created: '2023-01-07'
 gmat 1:
   deprecated:
     alternative:
-      query: gm at,{%1}
+      query: gm at,<1>
     created: '2023-01-07'
 gmau 1:
   deprecated:
     alternative:
-      query: gm au,{%1}
+      query: gm au,<1>
     created: '2023-01-07'
 gmaur 1:
   deprecated:
     alternative:
-      query: gm aur,{%1}
+      query: gm aur,<1>
     created: '2023-01-07'
 gmaw 1:
   deprecated:
     alternative:
-      query: gm aw,{%1}
+      query: gm aw,<1>
     created: '2023-01-07'
 gmaz 1:
   deprecated:
     alternative:
-      query: gm az,{%1}
+      query: gm az,<1>
     created: '2023-01-07'
 gmaö 1:
   deprecated:
     alternative:
-      query: gm aö,{%1}
+      query: gm aö,<1>
     created: '2023-01-07'
 gmb 1:
   deprecated:
     alternative:
-      query: gm b,{%1}
+      query: gm b,<1>
     created: '2023-01-07'
 gmba 1:
   deprecated:
     alternative:
-      query: gm ba,{%1}
+      query: gm ba,<1>
     created: '2023-01-07'
 gmbad 1:
   deprecated:
     alternative:
-      query: gm bad,{%1}
+      query: gm bad,<1>
     created: '2023-01-07'
 gmbb 1:
   deprecated:
     alternative:
-      query: gm bb,{%1}
+      query: gm bb,<1>
     created: '2023-01-07'
 gmbbg 1:
   deprecated:
     alternative:
-      query: gm bbg,{%1}
+      query: gm bbg,<1>
     created: '2023-01-07'
 gmbc 1:
   deprecated:
     alternative:
-      query: gm bc,{%1}
+      query: gm bc,<1>
     created: '2023-01-07'
 gmbch 1:
   deprecated:
     alternative:
-      query: gm bch,{%1}
+      query: gm bch,<1>
     created: '2023-01-07'
 gmbe 1:
   deprecated:
     alternative:
-      query: gm be,{%1}
+      query: gm be,<1>
     created: '2023-01-07'
 gmbed 1:
   deprecated:
     alternative:
-      query: gm bed,{%1}
+      query: gm bed,<1>
     created: '2023-01-07'
 gmbei 1:
   deprecated:
     alternative:
-      query: gm bei,{%1}
+      query: gm bei,<1>
     created: '2023-01-07'
 gmbel 1:
   deprecated:
     alternative:
-      query: gm bel,{%1}
+      query: gm bel,<1>
     created: '2023-01-07'
 gmber 1:
   deprecated:
     alternative:
-      query: gm ber,{%1}
+      query: gm ber,<1>
     created: '2023-01-07'
 gmbf 1:
   deprecated:
     alternative:
-      query: gm bf,{%1}
+      query: gm bf,<1>
     created: '2023-01-07'
 gmbgd 1:
   deprecated:
     alternative:
-      query: gm bgd,{%1}
+      query: gm bgd,<1>
     created: '2023-01-07'
 gmbh 1:
   deprecated:
     alternative:
-      query: gm bh,{%1}
+      query: gm bh,<1>
     created: '2023-01-07'
 gmbi 1:
   deprecated:
     alternative:
-      query: gm bi,{%1}
+      query: gm bi,<1>
     created: '2023-01-07'
 gmbid 1:
   deprecated:
     alternative:
-      query: gm bid,{%1}
+      query: gm bid,<1>
     created: '2023-01-07'
 gmbin 1:
   deprecated:
     alternative:
-      query: gm bin,{%1}
+      query: gm bin,<1>
     created: '2023-01-07'
 gmbir 1:
   deprecated:
     alternative:
-      query: gm bir,{%1}
+      query: gm bir,<1>
     created: '2023-01-07'
 gmbit 1:
   deprecated:
     alternative:
-      query: gm bit,{%1}
+      query: gm bit,<1>
     created: '2023-01-07'
 gmbiw 1:
   deprecated:
     alternative:
-      query: gm biw,{%1}
+      query: gm biw,<1>
     created: '2023-01-07'
 gmbk 1:
   deprecated:
     alternative:
-      query: gm bk,{%1}
+      query: gm bk,<1>
     created: '2023-01-07'
 gmbks 1:
   deprecated:
     alternative:
-      query: gm bks,{%1}
+      query: gm bks,<1>
     created: '2023-01-07'
 gmbl 1:
   deprecated:
     alternative:
-      query: gm bl,{%1}
+      query: gm bl,<1>
     created: '2023-01-07'
 gmblb 1:
   deprecated:
     alternative:
-      query: gm blb,{%1}
+      query: gm blb,<1>
     created: '2023-01-07'
 gmbm 1:
   deprecated:
     alternative:
-      query: gm bm,{%1}
+      query: gm bm,<1>
     created: '2023-01-07'
 gmbn 1:
   deprecated:
     alternative:
-      query: gm bn,{%1}
+      query: gm bn,<1>
     created: '2023-01-07'
 gmbna 1:
   deprecated:
     alternative:
-      query: gm bna,{%1}
+      query: gm bna,<1>
     created: '2023-01-07'
 gmbo 1:
   deprecated:
     alternative:
-      query: gm bo,{%1}
+      query: gm bo,<1>
     created: '2023-01-07'
 gmbog 1:
   deprecated:
     alternative:
-      query: gm bog,{%1}
+      query: gm bog,<1>
     created: '2023-01-07'
 gmboh 1:
   deprecated:
     alternative:
-      query: gm boh,{%1}
+      query: gm boh,<1>
     created: '2023-01-07'
 gmbor 1:
   deprecated:
     alternative:
-      query: gm bor,{%1}
+      query: gm bor,<1>
     created: '2023-01-07'
 gmbot 1:
   deprecated:
     alternative:
-      query: gm bot,{%1}
+      query: gm bot,<1>
     created: '2023-01-07'
 gmbr 1:
   deprecated:
     alternative:
-      query: gm br,{%1}
+      query: gm br,<1>
     created: '2023-01-07'
 gmbra 1:
   deprecated:
     alternative:
-      query: gm bra,{%1}
+      query: gm bra,<1>
     created: '2023-01-07'
 gmbrb 1:
   deprecated:
     alternative:
-      query: gm brb,{%1}
+      query: gm brb,<1>
     created: '2023-01-07'
 gmbrg 1:
   deprecated:
     alternative:
-      query: gm brg,{%1}
+      query: gm brg,<1>
     created: '2023-01-07'
 gmbri 1:
   deprecated:
     alternative:
-      query: gm bri,{%1}
+      query: gm bri,<1>
     created: '2023-01-07'
 gmbrk 1:
   deprecated:
     alternative:
-      query: gm brk,{%1}
+      query: gm brk,<1>
     created: '2023-01-07'
 gmbrl 1:
   deprecated:
     alternative:
-      query: gm brl,{%1}
+      query: gm brl,<1>
     created: '2023-01-07'
 gmbrv 1:
   deprecated:
     alternative:
-      query: gm brv,{%1}
+      query: gm brv,<1>
     created: '2023-01-07'
 gmbs 1:
   deprecated:
     alternative:
-      query: gm bs,{%1}
+      query: gm bs,<1>
     created: '2023-01-07'
 gmbsb 1:
   deprecated:
     alternative:
-      query: gm bsb,{%1}
+      query: gm bsb,<1>
     created: '2023-01-07'
 gmbsk 1:
   deprecated:
     alternative:
-      query: gm bsk,{%1}
+      query: gm bsk,<1>
     created: '2023-01-07'
 gmbt 1:
   deprecated:
     alternative:
-      query: gm bt,{%1}
+      query: gm bt,<1>
     created: '2023-01-07'
 gmbtf 1:
   deprecated:
     alternative:
-      query: gm btf,{%1}
+      query: gm btf,<1>
     created: '2023-01-07'
 gmbu 1:
   deprecated:
     alternative:
-      query: gm bu,{%1}
+      query: gm bu,<1>
     created: '2023-01-07'
 gmbul 1:
   deprecated:
     alternative:
-      query: gm bul,{%1}
+      query: gm bul,<1>
     created: '2023-01-07'
 gmbz 1:
   deprecated:
     alternative:
-      query: gm bz,{%1}
+      query: gm bz,<1>
     created: '2023-01-07'
 gmbza 1:
   deprecated:
     alternative:
-      query: gm bza,{%1}
+      query: gm bza,<1>
     created: '2023-01-07'
 gmbö 1:
   deprecated:
     alternative:
-      query: gm bö,{%1}
+      query: gm bö,<1>
     created: '2023-01-07'
 gmbüd 1:
   deprecated:
     alternative:
-      query: gm büd,{%1}
+      query: gm büd,<1>
     created: '2023-01-07'
 gmbür 1:
   deprecated:
     alternative:
-      query: gm bür,{%1}
+      query: gm bür,<1>
     created: '2023-01-07'
 gmbüs 1:
   deprecated:
     alternative:
-      query: gm büs,{%1}
+      query: gm büs,<1>
     created: '2023-01-07'
 gmbüz 1:
   deprecated:
     alternative:
-      query: gm büz,{%1}
+      query: gm büz,<1>
     created: '2023-01-07'
 gmc 1:
   deprecated:
     alternative:
-      query: gm c,{%1}
+      query: gm c,<1>
     created: '2023-01-07'
 gmca 1:
   deprecated:
     alternative:
-      query: gm ca,{%1}
+      query: gm ca,<1>
     created: '2023-01-07'
 gmcas 1:
   deprecated:
     alternative:
-      query: gm cas,{%1}
+      query: gm cas,<1>
     created: '2023-01-07'
 gmcb 1:
   deprecated:
     alternative:
-      query: gm cb,{%1}
+      query: gm cb,<1>
     created: '2023-01-07'
 gmce 1:
   deprecated:
     alternative:
-      query: gm ce,{%1}
+      query: gm ce,<1>
     created: '2023-01-07'
 gmcha 1:
   deprecated:
     alternative:
-      query: gm cha,{%1}
+      query: gm cha,<1>
     created: '2023-01-07'
 gmclp 1:
   deprecated:
     alternative:
-      query: gm clp,{%1}
+      query: gm clp,<1>
     created: '2023-01-07'
 gmco 1:
   deprecated:
     alternative:
-      query: gm co,{%1}
+      query: gm co,<1>
     created: '2023-01-07'
 gmcoc 1:
   deprecated:
     alternative:
-      query: gm coc,{%1}
+      query: gm coc,<1>
     created: '2023-01-07'
 gmcoe 1:
   deprecated:
     alternative:
-      query: gm coe,{%1}
+      query: gm coe,<1>
     created: '2023-01-07'
 gmcr 1:
   deprecated:
     alternative:
-      query: gm cr,{%1}
+      query: gm cr,<1>
     created: '2023-01-07'
 gmcux 1:
   deprecated:
     alternative:
-      query: gm cux,{%1}
+      query: gm cux,<1>
     created: '2023-01-07'
 gmcw 1:
   deprecated:
     alternative:
-      query: gm cw,{%1}
+      query: gm cw,<1>
     created: '2023-01-07'
 gmd 1:
   deprecated:
     alternative:
-      query: gm d,{%1}
+      query: gm d,<1>
     created: '2023-01-07'
 gmda 1:
   deprecated:
     alternative:
-      query: gm da,{%1}
+      query: gm da,<1>
     created: '2023-01-07'
 gmdah 1:
   deprecated:
     alternative:
-      query: gm dah,{%1}
+      query: gm dah,<1>
     created: '2023-01-07'
 gmdan 1:
   deprecated:
     alternative:
-      query: gm dan,{%1}
+      query: gm dan,<1>
     created: '2023-01-07'
 gmdau 1:
   deprecated:
     alternative:
-      query: gm dau,{%1}
+      query: gm dau,<1>
     created: '2023-01-07'
 gmdbr 1:
   deprecated:
     alternative:
-      query: gm dbr,{%1}
+      query: gm dbr,<1>
     created: '2023-01-07'
 gmdd 1:
   deprecated:
     alternative:
-      query: gm dd,{%1}
+      query: gm dd,<1>
     created: '2023-01-07'
 gmde 1:
   deprecated:
     alternative:
-      query: gm de,{%1}
+      query: gm de,<1>
     created: '2023-01-07'
 gmdeg 1:
   deprecated:
     alternative:
-      query: gm deg,{%1}
+      query: gm deg,<1>
     created: '2023-01-07'
 gmdel 1:
   deprecated:
     alternative:
-      query: gm del,{%1}
+      query: gm del,<1>
     created: '2023-01-07'
 gmdgf 1:
   deprecated:
     alternative:
-      query: gm dgf,{%1}
+      query: gm dgf,<1>
     created: '2023-01-07'
 gmdh 1:
   deprecated:
     alternative:
-      query: gm dh,{%1}
+      query: gm dh,<1>
     created: '2023-01-07'
 gmdi 1:
   deprecated:
     alternative:
-      query: gm di,{%1}
+      query: gm di,<1>
     created: '2023-01-07'
 gmdil 1:
   deprecated:
     alternative:
-      query: gm dil,{%1}
+      query: gm dil,<1>
     created: '2023-01-07'
 gmdin 1:
   deprecated:
     alternative:
-      query: gm din,{%1}
+      query: gm din,<1>
     created: '2023-01-07'
 gmdiz 1:
   deprecated:
     alternative:
-      query: gm diz,{%1}
+      query: gm diz,<1>
     created: '2023-01-07'
 gmdkb 1:
   deprecated:
     alternative:
-      query: gm dkb,{%1}
+      query: gm dkb,<1>
     created: '2023-01-07'
 gmdl 1:
   deprecated:
     alternative:
-      query: gm dl,{%1}
+      query: gm dl,<1>
     created: '2023-01-07'
 gmdlg 1:
   deprecated:
     alternative:
-      query: gm dlg,{%1}
+      query: gm dlg,<1>
     created: '2023-01-07'
 gmdm 1:
   deprecated:
     alternative:
-      query: gm dm,{%1}
+      query: gm dm,<1>
     created: '2023-01-07'
 gmdn 1:
   deprecated:
     alternative:
-      query: gm dn,{%1}
+      query: gm dn,<1>
     created: '2023-01-07'
 gmdo 1:
   deprecated:
     alternative:
-      query: gm do,{%1}
+      query: gm do,<1>
     created: '2023-01-07'
 gmdon 1:
   deprecated:
     alternative:
-      query: gm don,{%1}
+      query: gm don,<1>
     created: '2023-01-07'
 gmds 1:
   deprecated:
     alternative:
-      query: gm ds,{%1}
+      query: gm ds,<1>
     created: '2023-01-07'
 gmdt 1:
   deprecated:
     alternative:
-      query: gm dt,{%1}
+      query: gm dt,<1>
     created: '2023-01-07'
 gmdu 1:
   deprecated:
     alternative:
-      query: gm du,{%1}
+      query: gm du,<1>
     created: '2023-01-07'
 gmdud 1:
   deprecated:
     alternative:
-      query: gm dud,{%1}
+      query: gm dud,<1>
     created: '2023-01-07'
 gmdw 1:
   deprecated:
     alternative:
-      query: gm dw,{%1}
+      query: gm dw,<1>
     created: '2023-01-07'
 gmdz 1:
   deprecated:
     alternative:
-      query: gm dz,{%1}
+      query: gm dz,<1>
     created: '2023-01-07'
 gmdüw 1:
   deprecated:
     alternative:
-      query: gm düw,{%1}
+      query: gm düw,<1>
     created: '2023-01-07'
 gme 1:
   deprecated:
     alternative:
-      query: gm e,{%1}
+      query: gm e,<1>
     created: '2023-01-07'
 gmea 1:
   deprecated:
     alternative:
-      query: gm ea,{%1}
+      query: gm ea,<1>
     created: '2023-01-07'
 gmeb 1:
   deprecated:
     alternative:
-      query: gm eb,{%1}
+      query: gm eb,<1>
     created: '2023-01-07'
 gmebe 1:
   deprecated:
     alternative:
-      query: gm ebe,{%1}
+      query: gm ebe,<1>
     created: '2023-01-07'
 gmebn 1:
   deprecated:
     alternative:
-      query: gm ebn,{%1}
+      query: gm ebn,<1>
     created: '2023-01-07'
 gmebs 1:
   deprecated:
     alternative:
-      query: gm ebs,{%1}
+      query: gm ebs,<1>
     created: '2023-01-07'
 gmeck 1:
   deprecated:
     alternative:
-      query: gm eck,{%1}
+      query: gm eck,<1>
     created: '2023-01-07'
 gmed 1:
   deprecated:
     alternative:
-      query: gm ed,{%1}
+      query: gm ed,<1>
     created: '2023-01-07'
 gmef 1:
   deprecated:
     alternative:
-      query: gm ef,{%1}
+      query: gm ef,<1>
     created: '2023-01-07'
 gmeg 1:
   deprecated:
     alternative:
-      query: gm eg,{%1}
+      query: gm eg,<1>
     created: '2023-01-07'
 gmeh 1:
   deprecated:
     alternative:
-      query: gm eh,{%1}
+      query: gm eh,<1>
     created: '2023-01-07'
 gmehi 1:
   deprecated:
     alternative:
-      query: gm ehi,{%1}
+      query: gm ehi,<1>
     created: '2023-01-07'
 gmei 1:
   deprecated:
     alternative:
-      query: gm ei,{%1}
+      query: gm ei,<1>
     created: '2023-01-07'
 gmeic 1:
   deprecated:
     alternative:
-      query: gm eic,{%1}
+      query: gm eic,<1>
     created: '2023-01-07'
 gmeil 1:
   deprecated:
     alternative:
-      query: gm eil,{%1}
+      query: gm eil,<1>
     created: '2023-01-07'
 gmein 1:
   deprecated:
     alternative:
-      query: gm ein,{%1}
+      query: gm ein,<1>
     created: '2023-01-07'
 gmeis 1:
   deprecated:
     alternative:
-      query: gm eis,{%1}
+      query: gm eis,<1>
     created: '2023-01-07'
 gmem 1:
   deprecated:
     alternative:
-      query: gm em,{%1}
+      query: gm em,<1>
     created: '2023-01-07'
 gmemd 1:
   deprecated:
     alternative:
-      query: gm emd,{%1}
+      query: gm emd,<1>
     created: '2023-01-07'
 gmems 1:
   deprecated:
     alternative:
-      query: gm ems,{%1}
+      query: gm ems,<1>
     created: '2023-01-07'
 gmer 1:
   deprecated:
     alternative:
-      query: gm er,{%1}
+      query: gm er,<1>
     created: '2023-01-07'
 gmerb 1:
   deprecated:
     alternative:
-      query: gm erb,{%1}
+      query: gm erb,<1>
     created: '2023-01-07'
 gmerk 1:
   deprecated:
     alternative:
-      query: gm erk,{%1}
+      query: gm erk,<1>
     created: '2023-01-07'
 gmes 1:
   deprecated:
     alternative:
-      query: gm es,{%1}
+      query: gm es,<1>
     created: '2023-01-07'
 gmesb 1:
   deprecated:
     alternative:
-      query: gm esb,{%1}
+      query: gm esb,<1>
     created: '2023-01-07'
 gmesw 1:
   deprecated:
     alternative:
-      query: gm esw,{%1}
+      query: gm esw,<1>
     created: '2023-01-07'
 gmeu 1:
   deprecated:
     alternative:
-      query: gm eu,{%1}
+      query: gm eu,<1>
     created: '2023-01-07'
 gmeut 1:
   deprecated:
     alternative:
-      query: gm eut,{%1}
+      query: gm eut,<1>
     created: '2023-01-07'
 gmew 1:
   deprecated:
     alternative:
-      query: gm ew,{%1}
+      query: gm ew,<1>
     created: '2023-01-07'
 gmf 1:
   deprecated:
     alternative:
-      query: gm f,{%1}
+      query: gm f,<1>
     created: '2023-01-07'
 gmfal 1:
   deprecated:
     alternative:
-      query: gm fal,{%1}
+      query: gm fal,<1>
     created: '2023-01-07'
 gmfb 1:
   deprecated:
     alternative:
-      query: gm fb,{%1}
+      query: gm fb,<1>
     created: '2023-01-07'
 gmfd 1:
   deprecated:
     alternative:
-      query: gm fd,{%1}
+      query: gm fd,<1>
     created: '2023-01-07'
 gmfdb 1:
   deprecated:
     alternative:
-      query: gm fdb,{%1}
+      query: gm fdb,<1>
     created: '2023-01-07'
 gmfds 1:
   deprecated:
     alternative:
-      query: gm fds,{%1}
+      query: gm fds,<1>
     created: '2023-01-07'
 gmfeu 1:
   deprecated:
     alternative:
-      query: gm feu,{%1}
+      query: gm feu,<1>
     created: '2023-01-07'
 gmff 1:
   deprecated:
     alternative:
-      query: gm ff,{%1}
+      query: gm ff,<1>
     created: '2023-01-07'
 gmffb 1:
   deprecated:
     alternative:
-      query: gm ffb,{%1}
+      query: gm ffb,<1>
     created: '2023-01-07'
 gmfg 1:
   deprecated:
     alternative:
-      query: gm fg,{%1}
+      query: gm fg,<1>
     created: '2023-01-07'
 gmfi 1:
   deprecated:
     alternative:
-      query: gm fi,{%1}
+      query: gm fi,<1>
     created: '2023-01-07'
 gmfkb 1:
   deprecated:
     alternative:
-      query: gm fkb,{%1}
+      query: gm fkb,<1>
     created: '2023-01-07'
 gmfl 1:
   deprecated:
     alternative:
-      query: gm fl,{%1}
+      query: gm fl,<1>
     created: '2023-01-07'
 gmflö 1:
   deprecated:
     alternative:
-      query: gm flö,{%1}
+      query: gm flö,<1>
     created: '2023-01-07'
 gmfn 1:
   deprecated:
     alternative:
-      query: gm fn,{%1}
+      query: gm fn,<1>
     created: '2023-01-07'
 gmfo 1:
   deprecated:
     alternative:
-      query: gm fo,{%1}
+      query: gm fo,<1>
     created: '2023-01-07'
 gmfor 1:
   deprecated:
     alternative:
-      query: gm for,{%1}
+      query: gm for,<1>
     created: '2023-01-07'
 gmfr 1:
   deprecated:
     alternative:
-      query: gm fr,{%1}
+      query: gm fr,<1>
     created: '2023-01-07'
 gmfrg 1:
   deprecated:
     alternative:
-      query: gm frg,{%1}
+      query: gm frg,<1>
     created: '2023-01-07'
 gmfrw 1:
   deprecated:
     alternative:
-      query: gm frw,{%1}
+      query: gm frw,<1>
     created: '2023-01-07'
 gmfs 1:
   deprecated:
     alternative:
-      query: gm fs,{%1}
+      query: gm fs,<1>
     created: '2023-01-07'
 gmft 1:
   deprecated:
     alternative:
-      query: gm ft,{%1}
+      query: gm ft,<1>
     created: '2023-01-07'
 gmftl 1:
   deprecated:
     alternative:
-      query: gm ftl,{%1}
+      query: gm ftl,<1>
     created: '2023-01-07'
 gmfw 1:
   deprecated:
     alternative:
-      query: gm fw,{%1}
+      query: gm fw,<1>
     created: '2023-01-07'
 gmfz 1:
   deprecated:
     alternative:
-      query: gm fz,{%1}
+      query: gm fz,<1>
     created: '2023-01-07'
 gmfü 1:
   deprecated:
     alternative:
-      query: gm fü,{%1}
+      query: gm fü,<1>
     created: '2023-01-07'
 gmfüs 1:
   deprecated:
     alternative:
-      query: gm füs,{%1}
+      query: gm füs,<1>
     created: '2023-01-07'
 gmg 1:
   deprecated:
     alternative:
-      query: gm g,{%1}
+      query: gm g,<1>
     created: '2023-01-07'
 gmga 1:
   deprecated:
     alternative:
-      query: gm ga,{%1}
+      query: gm ga,<1>
     created: '2023-01-07'
 gmgan 1:
   deprecated:
     alternative:
-      query: gm gan,{%1}
+      query: gm gan,<1>
     created: '2023-01-07'
 gmgap 1:
   deprecated:
     alternative:
-      query: gm gap,{%1}
+      query: gm gap,<1>
     created: '2023-01-07'
 gmgc 1:
   deprecated:
     alternative:
-      query: gm gc,{%1}
+      query: gm gc,<1>
     created: '2023-01-07'
 gmgd 1:
   deprecated:
     alternative:
-      query: gm gd,{%1}
+      query: gm gd,<1>
     created: '2023-01-07'
 gmgdb 1:
   deprecated:
     alternative:
-      query: gm gdb,{%1}
+      query: gm gdb,<1>
     created: '2023-01-07'
 gmge 1:
   deprecated:
     alternative:
-      query: gm ge,{%1}
+      query: gm ge,<1>
     created: '2023-01-07'
 gmgel 1:
   deprecated:
     alternative:
-      query: gm gel,{%1}
+      query: gm gel,<1>
     created: '2023-01-07'
 gmgem 1:
   deprecated:
     alternative:
-      query: gm gem,{%1}
+      query: gm gem,<1>
     created: '2023-01-07'
 gmgeo 1:
   deprecated:
     alternative:
-      query: gm geo,{%1}
+      query: gm geo,<1>
     created: '2023-01-07'
 gmger 1:
   deprecated:
     alternative:
-      query: gm ger,{%1}
+      query: gm ger,<1>
     created: '2023-01-07'
 gmgf 1:
   deprecated:
     alternative:
-      query: gm gf,{%1}
+      query: gm gf,<1>
     created: '2023-01-07'
 gmgg 1:
   deprecated:
     alternative:
-      query: gm gg,{%1}
+      query: gm gg,<1>
     created: '2023-01-07'
 gmgha 1:
   deprecated:
     alternative:
-      query: gm gha,{%1}
+      query: gm gha,<1>
     created: '2023-01-07'
 gmghc 1:
   deprecated:
     alternative:
-      query: gm ghc,{%1}
+      query: gm ghc,<1>
     created: '2023-01-07'
 gmgi 1:
   deprecated:
     alternative:
-      query: gm gi,{%1}
+      query: gm gi,<1>
     created: '2023-01-07'
 gmgk 1:
   deprecated:
     alternative:
-      query: gm gk,{%1}
+      query: gm gk,<1>
     created: '2023-01-07'
 gmgl 1:
   deprecated:
     alternative:
-      query: gm gl,{%1}
+      query: gm gl,<1>
     created: '2023-01-07'
 gmgla 1:
   deprecated:
     alternative:
-      query: gm gla,{%1}
+      query: gm gla,<1>
     created: '2023-01-07'
 gmgm 1:
   deprecated:
     alternative:
-      query: gm gm,{%1}
+      query: gm gm,<1>
     created: '2023-01-07'
 gmgmn 1:
   deprecated:
     alternative:
-      query: gm gmn,{%1}
+      query: gm gmn,<1>
     created: '2023-01-07'
 gmgn 1:
   deprecated:
     alternative:
-      query: gm gn,{%1}
+      query: gm gn,<1>
     created: '2023-01-07'
 gmgnt 1:
   deprecated:
     alternative:
-      query: gm gnt,{%1}
+      query: gm gnt,<1>
     created: '2023-01-07'
 gmgoa 1:
   deprecated:
     alternative:
-      query: gm goa,{%1}
+      query: gm goa,<1>
     created: '2023-01-07'
 gmgoe 1:
   deprecated:
     alternative:
-      query: gm goe,{%1}
+      query: gm goe,<1>
     created: '2023-01-07'
 gmgoh 1:
   deprecated:
     alternative:
-      query: gm goh,{%1}
+      query: gm goh,<1>
     created: '2023-01-07'
 gmgp 1:
   deprecated:
     alternative:
-      query: gm gp,{%1}
+      query: gm gp,<1>
     created: '2023-01-07'
 gmgr 1:
   deprecated:
     alternative:
-      query: gm gr,{%1}
+      query: gm gr,<1>
     created: '2023-01-07'
 gmgra 1:
   deprecated:
     alternative:
-      query: gm gra,{%1}
+      query: gm gra,<1>
     created: '2023-01-07'
 gmgrh 1:
   deprecated:
     alternative:
-      query: gm grh,{%1}
+      query: gm grh,<1>
     created: '2023-01-07'
 gmgri 1:
   deprecated:
     alternative:
-      query: gm gri,{%1}
+      query: gm gri,<1>
     created: '2023-01-07'
 gmgrm 1:
   deprecated:
     alternative:
-      query: gm grm,{%1}
+      query: gm grm,<1>
     created: '2023-01-07'
 gmgrs 1:
   deprecated:
     alternative:
-      query: gm grs,{%1}
+      query: gm grs,<1>
     created: '2023-01-07'
 gmgrz 1:
   deprecated:
     alternative:
-      query: gm grz,{%1}
+      query: gm grz,<1>
     created: '2023-01-07'
 gmgs 1:
   deprecated:
     alternative:
-      query: gm gs,{%1}
+      query: gm gs,<1>
     created: '2023-01-07'
 gmgt 1:
   deprecated:
     alternative:
-      query: gm gt,{%1}
+      query: gm gt,<1>
     created: '2023-01-07'
 gmgth 1:
   deprecated:
     alternative:
-      query: gm gth,{%1}
+      query: gm gth,<1>
     created: '2023-01-07'
 gmgub 1:
   deprecated:
     alternative:
-      query: gm gub,{%1}
+      query: gm gub,<1>
     created: '2023-01-07'
 gmgun 1:
   deprecated:
     alternative:
-      query: gm gun,{%1}
+      query: gm gun,<1>
     created: '2023-01-07'
 gmgv 1:
   deprecated:
     alternative:
-      query: gm gv,{%1}
+      query: gm gv,<1>
     created: '2023-01-07'
 gmgvm 1:
   deprecated:
     alternative:
-      query: gm gvm,{%1}
+      query: gm gvm,<1>
     created: '2023-01-07'
 gmgz 1:
   deprecated:
     alternative:
-      query: gm gz,{%1}
+      query: gm gz,<1>
     created: '2023-01-07'
 gmgö 1:
   deprecated:
     alternative:
-      query: gm gö,{%1}
+      query: gm gö,<1>
     created: '2023-01-07'
 gmgü 1:
   deprecated:
     alternative:
-      query: gm gü,{%1}
+      query: gm gü,<1>
     created: '2023-01-07'
 gmh 1:
   deprecated:
     alternative:
-      query: gm h,{%1}
+      query: gm h,<1>
     created: '2023-01-07'
 gmha 1:
   deprecated:
     alternative:
-      query: gm ha,{%1}
+      query: gm ha,<1>
     created: '2023-01-07'
 gmhab 1:
   deprecated:
     alternative:
-      query: gm hab,{%1}
+      query: gm hab,<1>
     created: '2023-01-07'
 gmhal 1:
   deprecated:
     alternative:
-      query: gm hal,{%1}
+      query: gm hal,<1>
     created: '2023-01-07'
 gmham 1:
   deprecated:
     alternative:
-      query: gm ham,{%1}
+      query: gm ham,<1>
     created: '2023-01-07'
 gmhas 1:
   deprecated:
     alternative:
-      query: gm has,{%1}
+      query: gm has,<1>
     created: '2023-01-07'
 gmhb 1:
   deprecated:
     alternative:
-      query: gm hb,{%1}
+      query: gm hb,<1>
     created: '2023-01-07'
 gmhbn 1:
   deprecated:
     alternative:
-      query: gm hbn,{%1}
+      query: gm hbn,<1>
     created: '2023-01-07'
 gmhbs 1:
   deprecated:
     alternative:
-      query: gm hbs,{%1}
+      query: gm hbs,<1>
     created: '2023-01-07'
 gmhc 1:
   deprecated:
     alternative:
-      query: gm hc,{%1}
+      query: gm hc,<1>
     created: '2023-01-07'
 gmhch 1:
   deprecated:
     alternative:
-      query: gm hch,{%1}
+      query: gm hch,<1>
     created: '2023-01-07'
 gmhd 1:
   deprecated:
     alternative:
-      query: gm hd,{%1}
+      query: gm hd,<1>
     created: '2023-01-07'
 gmhdh 1:
   deprecated:
     alternative:
-      query: gm hdh,{%1}
+      query: gm hdh,<1>
     created: '2023-01-07'
 gmhdl 1:
   deprecated:
     alternative:
-      query: gm hdl,{%1}
+      query: gm hdl,<1>
     created: '2023-01-07'
 gmhe 1:
   deprecated:
     alternative:
-      query: gm he,{%1}
+      query: gm he,<1>
     created: '2023-01-07'
 gmheb 1:
   deprecated:
     alternative:
-      query: gm heb,{%1}
+      query: gm heb,<1>
     created: '2023-01-07'
 gmhef 1:
   deprecated:
     alternative:
-      query: gm hef,{%1}
+      query: gm hef,<1>
     created: '2023-01-07'
 gmhei 1:
   deprecated:
     alternative:
-      query: gm hei,{%1}
+      query: gm hei,<1>
     created: '2023-01-07'
 gmher 1:
   deprecated:
     alternative:
-      query: gm her,{%1}
+      query: gm her,<1>
     created: '2023-01-07'
 gmhet 1:
   deprecated:
     alternative:
-      query: gm het,{%1}
+      query: gm het,<1>
     created: '2023-01-07'
 gmhf 1:
   deprecated:
     alternative:
-      query: gm hf,{%1}
+      query: gm hf,<1>
     created: '2023-01-07'
 gmhg 1:
   deprecated:
     alternative:
-      query: gm hg,{%1}
+      query: gm hg,<1>
     created: '2023-01-07'
 gmhgn 1:
   deprecated:
     alternative:
-      query: gm hgn,{%1}
+      query: gm hgn,<1>
     created: '2023-01-07'
 gmhgw 1:
   deprecated:
     alternative:
-      query: gm hgw,{%1}
+      query: gm hgw,<1>
     created: '2023-01-07'
 gmhh 1:
   deprecated:
     alternative:
-      query: gm hh,{%1}
+      query: gm hh,<1>
     created: '2023-01-07'
 gmhhm 1:
   deprecated:
     alternative:
-      query: gm hhm,{%1}
+      query: gm hhm,<1>
     created: '2023-01-07'
 gmhi 1:
   deprecated:
     alternative:
-      query: gm hi,{%1}
+      query: gm hi,<1>
     created: '2023-01-07'
 gmhig 1:
   deprecated:
     alternative:
-      query: gm hig,{%1}
+      query: gm hig,<1>
     created: '2023-01-07'
 gmhip 1:
   deprecated:
     alternative:
-      query: gm hip,{%1}
+      query: gm hip,<1>
     created: '2023-01-07'
 gmhl 1:
   deprecated:
     alternative:
-      query: gm hl,{%1}
+      query: gm hl,<1>
     created: '2023-01-07'
 gmhm 1:
   deprecated:
     alternative:
-      query: gm hm,{%1}
+      query: gm hm,<1>
     created: '2023-01-07'
 gmhmü 1:
   deprecated:
     alternative:
-      query: gm hmü,{%1}
+      query: gm hmü,<1>
     created: '2023-01-07'
 gmhn 1:
   deprecated:
     alternative:
-      query: gm hn,{%1}
+      query: gm hn,<1>
     created: '2023-01-07'
 gmho 1:
   deprecated:
     alternative:
-      query: gm ho,{%1}
+      query: gm ho,<1>
     created: '2023-01-07'
 gmhog 1:
   deprecated:
     alternative:
-      query: gm hog,{%1}
+      query: gm hog,<1>
     created: '2023-01-07'
 gmhoh 1:
   deprecated:
     alternative:
-      query: gm hoh,{%1}
+      query: gm hoh,<1>
     created: '2023-01-07'
 gmhol 1:
   deprecated:
     alternative:
-      query: gm hol,{%1}
+      query: gm hol,<1>
     created: '2023-01-07'
 gmhom 1:
   deprecated:
     alternative:
-      query: gm hom,{%1}
+      query: gm hom,<1>
     created: '2023-01-07'
 gmhor 1:
   deprecated:
     alternative:
-      query: gm hor,{%1}
+      query: gm hor,<1>
     created: '2023-01-07'
 gmhot 1:
   deprecated:
     alternative:
-      query: gm hot,{%1}
+      query: gm hot,<1>
     created: '2023-01-07'
 gmhp 1:
   deprecated:
     alternative:
-      query: gm hp,{%1}
+      query: gm hp,<1>
     created: '2023-01-07'
 gmhr 1:
   deprecated:
     alternative:
-      query: gm hr,{%1}
+      query: gm hr,<1>
     created: '2023-01-07'
 gmhro 1:
   deprecated:
     alternative:
-      query: gm hro,{%1}
+      query: gm hro,<1>
     created: '2023-01-07'
 gmhs 1:
   deprecated:
     alternative:
-      query: gm hs,{%1}
+      query: gm hs,<1>
     created: '2023-01-07'
 gmhst 1:
   deprecated:
     alternative:
-      query: gm hst,{%1}
+      query: gm hst,<1>
     created: '2023-01-07'
 gmhu 1:
   deprecated:
     alternative:
-      query: gm hu,{%1}
+      query: gm hu,<1>
     created: '2023-01-07'
 gmhus 1:
   deprecated:
     alternative:
-      query: gm hus,{%1}
+      query: gm hus,<1>
     created: '2023-01-07'
 gmhv 1:
   deprecated:
     alternative:
-      query: gm hv,{%1}
+      query: gm hv,<1>
     created: '2023-01-07'
 gmhw 1:
   deprecated:
     alternative:
-      query: gm hw,{%1}
+      query: gm hw,<1>
     created: '2023-01-07'
 gmhwi 1:
   deprecated:
     alternative:
-      query: gm hwi,{%1}
+      query: gm hwi,<1>
     created: '2023-01-07'
 gmhx 1:
   deprecated:
     alternative:
-      query: gm hx,{%1}
+      query: gm hx,<1>
     created: '2023-01-07'
 gmhy 1:
   deprecated:
     alternative:
-      query: gm hy,{%1}
+      query: gm hy,<1>
     created: '2023-01-07'
 gmhz 1:
   deprecated:
     alternative:
-      query: gm hz,{%1}
+      query: gm hz,<1>
     created: '2023-01-07'
 gmhös 1:
   deprecated:
     alternative:
-      query: gm hös,{%1}
+      query: gm hös,<1>
     created: '2023-01-07'
 gmhün 1:
   deprecated:
     alternative:
-      query: gm hün,{%1}
+      query: gm hün,<1>
     created: '2023-01-07'
 gmigb 1:
   deprecated:
     alternative:
-      query: gm igb,{%1}
+      query: gm igb,<1>
     created: '2023-01-07'
 gmil 1:
   deprecated:
     alternative:
-      query: gm il,{%1}
+      query: gm il,<1>
     created: '2023-01-07'
 gmill 1:
   deprecated:
     alternative:
-      query: gm ill,{%1}
+      query: gm ill,<1>
     created: '2023-01-07'
 gmin 1:
   deprecated:
     alternative:
-      query: gm in,{%1}
+      query: gm in,<1>
     created: '2023-01-07'
 gmis 1:
   deprecated:
     alternative:
-      query: gm is,{%1}
+      query: gm is,<1>
     created: '2023-01-07'
 gmiz 1:
   deprecated:
     alternative:
-      query: gm iz,{%1}
+      query: gm iz,<1>
     created: '2023-01-07'
 gmj 1:
   deprecated:
     alternative:
-      query: gm j,{%1}
+      query: gm j,<1>
     created: '2023-01-07'
 gmjb 1:
   deprecated:
     alternative:
-      query: gm jb,{%1}
+      query: gm jb,<1>
     created: '2023-01-07'
 gmje 1:
   deprecated:
     alternative:
-      query: gm je,{%1}
+      query: gm je,<1>
     created: '2023-01-07'
 gmjev 1:
   deprecated:
     alternative:
-      query: gm jev,{%1}
+      query: gm jev,<1>
     created: '2023-01-07'
 gmjül 1:
   deprecated:
     alternative:
-      query: gm jül,{%1}
+      query: gm jül,<1>
     created: '2023-01-07'
 gmk 1:
   deprecated:
     alternative:
-      query: gm k,{%1}
+      query: gm k,<1>
     created: '2023-01-07'
 gmka 1:
   deprecated:
     alternative:
-      query: gm ka,{%1}
+      query: gm ka,<1>
     created: '2023-01-07'
 gmkar 1:
   deprecated:
     alternative:
-      query: gm kar,{%1}
+      query: gm kar,<1>
     created: '2023-01-07'
 gmkb 1:
   deprecated:
     alternative:
-      query: gm kb,{%1}
+      query: gm kb,<1>
     created: '2023-01-07'
 gmkc 1:
   deprecated:
     alternative:
-      query: gm kc,{%1}
+      query: gm kc,<1>
     created: '2023-01-07'
 gmke 1:
   deprecated:
     alternative:
-      query: gm ke,{%1}
+      query: gm ke,<1>
     created: '2023-01-07'
 gmkeh 1:
   deprecated:
     alternative:
-      query: gm keh,{%1}
+      query: gm keh,<1>
     created: '2023-01-07'
 gmkel 1:
   deprecated:
     alternative:
-      query: gm kel,{%1}
+      query: gm kel,<1>
     created: '2023-01-07'
 gmkem 1:
   deprecated:
     alternative:
-      query: gm kem,{%1}
+      query: gm kem,<1>
     created: '2023-01-07'
 gmkf 1:
   deprecated:
     alternative:
-      query: gm kf,{%1}
+      query: gm kf,<1>
     created: '2023-01-07'
 gmkg 1:
   deprecated:
     alternative:
-      query: gm kg,{%1}
+      query: gm kg,<1>
     created: '2023-01-07'
 gmkh 1:
   deprecated:
     alternative:
-      query: gm kh,{%1}
+      query: gm kh,<1>
     created: '2023-01-07'
 gmki 1:
   deprecated:
     alternative:
-      query: gm ki,{%1}
+      query: gm ki,<1>
     created: '2023-01-07'
 gmkib 1:
   deprecated:
     alternative:
-      query: gm kib,{%1}
+      query: gm kib,<1>
     created: '2023-01-07'
 gmkl 1:
   deprecated:
     alternative:
-      query: gm kl,{%1}
+      query: gm kl,<1>
     created: '2023-01-07'
 gmkle 1:
   deprecated:
     alternative:
-      query: gm kle,{%1}
+      query: gm kle,<1>
     created: '2023-01-07'
 gmklz 1:
   deprecated:
     alternative:
-      query: gm klz,{%1}
+      query: gm klz,<1>
     created: '2023-01-07'
 gmkm 1:
   deprecated:
     alternative:
-      query: gm km,{%1}
+      query: gm km,<1>
     created: '2023-01-07'
 gmkn 1:
   deprecated:
     alternative:
-      query: gm kn,{%1}
+      query: gm kn,<1>
     created: '2023-01-07'
 gmko 1:
   deprecated:
     alternative:
-      query: gm ko,{%1}
+      query: gm ko,<1>
     created: '2023-01-07'
 gmkr 1:
   deprecated:
     alternative:
-      query: gm kr,{%1}
+      query: gm kr,<1>
     created: '2023-01-07'
 gmkru 1:
   deprecated:
     alternative:
-      query: gm kru,{%1}
+      query: gm kru,<1>
     created: '2023-01-07'
 gmks 1:
   deprecated:
     alternative:
-      query: gm ks,{%1}
+      query: gm ks,<1>
     created: '2023-01-07'
 gmkt 1:
   deprecated:
     alternative:
-      query: gm kt,{%1}
+      query: gm kt,<1>
     created: '2023-01-07'
 gmku 1:
   deprecated:
     alternative:
-      query: gm ku,{%1}
+      query: gm ku,<1>
     created: '2023-01-07'
 gmkus 1:
   deprecated:
     alternative:
-      query: gm kus,{%1}
+      query: gm kus,<1>
     created: '2023-01-07'
 gmkw 1:
   deprecated:
     alternative:
-      query: gm kw,{%1}
+      query: gm kw,<1>
     created: '2023-01-07'
 gmky 1:
   deprecated:
     alternative:
-      query: gm ky,{%1}
+      query: gm ky,<1>
     created: '2023-01-07'
 gmkön 1:
   deprecated:
     alternative:
-      query: gm kön,{%1}
+      query: gm kön,<1>
     created: '2023-01-07'
 gmköt 1:
   deprecated:
     alternative:
-      query: gm köt,{%1}
+      query: gm köt,<1>
     created: '2023-01-07'
 gmköz 1:
   deprecated:
     alternative:
-      query: gm köz,{%1}
+      query: gm köz,<1>
     created: '2023-01-07'
 gmkün 1:
   deprecated:
     alternative:
-      query: gm kün,{%1}
+      query: gm kün,<1>
     created: '2023-01-07'
 gml 1:
   deprecated:
     alternative:
-      query: gm l,{%1}
+      query: gm l,<1>
     created: '2023-01-07'
 gmla 1:
   deprecated:
     alternative:
-      query: gm la,{%1}
+      query: gm la,<1>
     created: '2023-01-07'
 gmlan 1:
   deprecated:
     alternative:
-      query: gm lan,{%1}
+      query: gm lan,<1>
     created: '2023-01-07'
 gmlat 1:
   deprecated:
     alternative:
-      query: gm lat,{%1}
+      query: gm lat,<1>
     created: '2023-01-07'
 gmlau 1:
   deprecated:
     alternative:
-      query: gm lau,{%1}
+      query: gm lau,<1>
     created: '2023-01-07'
 gmlb 1:
   deprecated:
     alternative:
-      query: gm lb,{%1}
+      query: gm lb,<1>
     created: '2023-01-07'
 gmlbs 1:
   deprecated:
     alternative:
-      query: gm lbs,{%1}
+      query: gm lbs,<1>
     created: '2023-01-07'
 gmlbz 1:
   deprecated:
     alternative:
-      query: gm lbz,{%1}
+      query: gm lbz,<1>
     created: '2023-01-07'
 gmlc 1:
   deprecated:
     alternative:
-      query: gm lc,{%1}
+      query: gm lc,<1>
     created: '2023-01-07'
 gmld 1:
   deprecated:
     alternative:
-      query: gm ld,{%1}
+      query: gm ld,<1>
     created: '2023-01-07'
 gmle 1:
   deprecated:
     alternative:
-      query: gm le,{%1}
+      query: gm le,<1>
     created: '2023-01-07'
 gmleo 1:
   deprecated:
     alternative:
-      query: gm leo,{%1}
+      query: gm leo,<1>
     created: '2023-01-07'
 gmler 1:
   deprecated:
     alternative:
-      query: gm ler,{%1}
+      query: gm ler,<1>
     created: '2023-01-07'
 gmlev 1:
   deprecated:
     alternative:
-      query: gm lev,{%1}
+      query: gm lev,<1>
     created: '2023-01-07'
 gmlf 1:
   deprecated:
     alternative:
-      query: gm lf,{%1}
+      query: gm lf,<1>
     created: '2023-01-07'
 gmlg 1:
   deprecated:
     alternative:
-      query: gm lg,{%1}
+      query: gm lg,<1>
     created: '2023-01-07'
 gmlh 1:
   deprecated:
     alternative:
-      query: gm lh,{%1}
+      query: gm lh,<1>
     created: '2023-01-07'
 gmli 1:
   deprecated:
     alternative:
-      query: gm li,{%1}
+      query: gm li,<1>
     created: '2023-01-07'
 gmlib 1:
   deprecated:
     alternative:
-      query: gm lib,{%1}
+      query: gm lib,<1>
     created: '2023-01-07'
 gmlif 1:
   deprecated:
     alternative:
-      query: gm lif,{%1}
+      query: gm lif,<1>
     created: '2023-01-07'
 gmlin 1:
   deprecated:
     alternative:
-      query: gm lin,{%1}
+      query: gm lin,<1>
     created: '2023-01-07'
 gmlip 1:
   deprecated:
     alternative:
-      query: gm lip,{%1}
+      query: gm lip,<1>
     created: '2023-01-07'
 gmlk 1:
   deprecated:
     alternative:
-      query: gm lk,{%1}
+      query: gm lk,<1>
     created: '2023-01-07'
 gmll 1:
   deprecated:
     alternative:
-      query: gm ll,{%1}
+      query: gm ll,<1>
     created: '2023-01-07'
 gmlm 1:
   deprecated:
     alternative:
-      query: gm lm,{%1}
+      query: gm lm,<1>
     created: '2023-01-07'
 gmln 1:
   deprecated:
     alternative:
-      query: gm ln,{%1}
+      query: gm ln,<1>
     created: '2023-01-07'
 gmloh 1:
   deprecated:
     alternative:
-      query: gm loh,{%1}
+      query: gm loh,<1>
     created: '2023-01-07'
 gmlp 1:
   deprecated:
     alternative:
-      query: gm lp,{%1}
+      query: gm lp,<1>
     created: '2023-01-07'
 gmlr 1:
   deprecated:
     alternative:
-      query: gm lr,{%1}
+      query: gm lr,<1>
     created: '2023-01-07'
 gmls 1:
   deprecated:
     alternative:
-      query: gm ls,{%1}
+      query: gm ls,<1>
     created: '2023-01-07'
 gmlsz 1:
   deprecated:
     alternative:
-      query: gm lsz,{%1}
+      query: gm lsz,<1>
     created: '2023-01-07'
 gmlu 1:
   deprecated:
     alternative:
-      query: gm lu,{%1}
+      query: gm lu,<1>
     created: '2023-01-07'
 gmluk 1:
   deprecated:
     alternative:
-      query: gm luk,{%1}
+      query: gm luk,<1>
     created: '2023-01-07'
 gmlwl 1:
   deprecated:
     alternative:
-      query: gm lwl,{%1}
+      query: gm lwl,<1>
     created: '2023-01-07'
 gmlö 1:
   deprecated:
     alternative:
-      query: gm lö,{%1}
+      query: gm lö,<1>
     created: '2023-01-07'
 gmlöb 1:
   deprecated:
     alternative:
-      query: gm löb,{%1}
+      query: gm löb,<1>
     created: '2023-01-07'
 gmlün 1:
   deprecated:
     alternative:
-      query: gm lün,{%1}
+      query: gm lün,<1>
     created: '2023-01-07'
 gmm 1:
   deprecated:
     alternative:
-      query: gm m,{%1}
+      query: gm m,<1>
     created: '2023-01-07'
 gmma 1:
   deprecated:
     alternative:
-      query: gm ma,{%1}
+      query: gm ma,<1>
     created: '2023-01-07'
 gmmab 1:
   deprecated:
     alternative:
-      query: gm mab,{%1}
+      query: gm mab,<1>
     created: '2023-01-07'
 gmmai 1:
   deprecated:
     alternative:
-      query: gm mai,{%1}
+      query: gm mai,<1>
     created: '2023-01-07'
 gmmak 1:
   deprecated:
     alternative:
-      query: gm mak,{%1}
+      query: gm mak,<1>
     created: '2023-01-07'
 gmmal 1:
   deprecated:
     alternative:
-      query: gm mal,{%1}
+      query: gm mal,<1>
     created: '2023-01-07'
 gmmar 1:
   deprecated:
     alternative:
-      query: gm mar,{%1}
+      query: gm mar,<1>
     created: '2023-01-07'
 gmmb 1:
   deprecated:
     alternative:
-      query: gm mb,{%1}
+      query: gm mb,<1>
     created: '2023-01-07'
 gmmc 1:
   deprecated:
     alternative:
-      query: gm mc,{%1}
+      query: gm mc,<1>
     created: '2023-01-07'
 gmmd 1:
   deprecated:
     alternative:
-      query: gm md,{%1}
+      query: gm md,<1>
     created: '2023-01-07'
 gmme 1:
   deprecated:
     alternative:
-      query: gm me,{%1}
+      query: gm me,<1>
     created: '2023-01-07'
 gmmed 1:
   deprecated:
     alternative:
-      query: gm med,{%1}
+      query: gm med,<1>
     created: '2023-01-07'
 gmmeg 1:
   deprecated:
     alternative:
-      query: gm meg,{%1}
+      query: gm meg,<1>
     created: '2023-01-07'
 gmmei 1:
   deprecated:
     alternative:
-      query: gm mei,{%1}
+      query: gm mei,<1>
     created: '2023-01-07'
 gmmel 1:
   deprecated:
     alternative:
-      query: gm mel,{%1}
+      query: gm mel,<1>
     created: '2023-01-07'
 gmmep 1:
   deprecated:
     alternative:
-      query: gm mep,{%1}
+      query: gm mep,<1>
     created: '2023-01-07'
 gmmer 1:
   deprecated:
     alternative:
-      query: gm mer,{%1}
+      query: gm mer,<1>
     created: '2023-01-07'
 gmmes 1:
   deprecated:
     alternative:
-      query: gm mes,{%1}
+      query: gm mes,<1>
     created: '2023-01-07'
 gmmet 1:
   deprecated:
     alternative:
-      query: gm met,{%1}
+      query: gm met,<1>
     created: '2023-01-07'
 gmmg 1:
   deprecated:
     alternative:
-      query: gm mg,{%1}
+      query: gm mg,<1>
     created: '2023-01-07'
 gmmgh 1:
   deprecated:
     alternative:
-      query: gm mgh,{%1}
+      query: gm mgh,<1>
     created: '2023-01-07'
 gmmgn 1:
   deprecated:
     alternative:
-      query: gm mgn,{%1}
+      query: gm mgn,<1>
     created: '2023-01-07'
 gmmh 1:
   deprecated:
     alternative:
-      query: gm mh,{%1}
+      query: gm mh,<1>
     created: '2023-01-07'
 gmmhl 1:
   deprecated:
     alternative:
-      query: gm mhl,{%1}
+      query: gm mhl,<1>
     created: '2023-01-07'
 gmmi 1:
   deprecated:
     alternative:
-      query: gm mi,{%1}
+      query: gm mi,<1>
     created: '2023-01-07'
 gmmil 1:
   deprecated:
     alternative:
-      query: gm mil,{%1}
+      query: gm mil,<1>
     created: '2023-01-07'
 gmmm 1:
   deprecated:
     alternative:
-      query: gm mm,{%1}
+      query: gm mm,<1>
     created: '2023-01-07'
 gmmn 1:
   deprecated:
     alternative:
-      query: gm mn,{%1}
+      query: gm mn,<1>
     created: '2023-01-07'
 gmmo 1:
   deprecated:
     alternative:
-      query: gm mo,{%1}
+      query: gm mo,<1>
     created: '2023-01-07'
 gmmod 1:
   deprecated:
     alternative:
-      query: gm mod,{%1}
+      query: gm mod,<1>
     created: '2023-01-07'
 gmmon 1:
   deprecated:
     alternative:
-      query: gm mon,{%1}
+      query: gm mon,<1>
     created: '2023-01-07'
 gmmos 1:
   deprecated:
     alternative:
-      query: gm mos,{%1}
+      query: gm mos,<1>
     created: '2023-01-07'
 gmmr 1:
   deprecated:
     alternative:
-      query: gm mr,{%1}
+      query: gm mr,<1>
     created: '2023-01-07'
 gmms 1:
   deprecated:
     alternative:
-      query: gm ms,{%1}
+      query: gm ms,<1>
     created: '2023-01-07'
 gmmt 1:
   deprecated:
     alternative:
-      query: gm mt,{%1}
+      query: gm mt,<1>
     created: '2023-01-07'
 gmmw 1:
   deprecated:
     alternative:
-      query: gm mw,{%1}
+      query: gm mw,<1>
     created: '2023-01-07'
 gmmy 1:
   deprecated:
     alternative:
-      query: gm my,{%1}
+      query: gm my,<1>
     created: '2023-01-07'
 gmmz 1:
   deprecated:
     alternative:
-      query: gm mz,{%1}
+      query: gm mz,<1>
     created: '2023-01-07'
 gmmzg 1:
   deprecated:
     alternative:
-      query: gm mzg,{%1}
+      query: gm mzg,<1>
     created: '2023-01-07'
 gmmü 1:
   deprecated:
     alternative:
-      query: gm mü,{%1}
+      query: gm mü,<1>
     created: '2023-01-07'
 gmmüb 1:
   deprecated:
     alternative:
-      query: gm müb,{%1}
+      query: gm müb,<1>
     created: '2023-01-07'
 gmmül 1:
   deprecated:
     alternative:
-      query: gm mül,{%1}
+      query: gm mül,<1>
     created: '2023-01-07'
 gmmün 1:
   deprecated:
     alternative:
-      query: gm mün,{%1}
+      query: gm mün,<1>
     created: '2023-01-07'
 gmn 1:
   deprecated:
     alternative:
-      query: gm n,{%1}
+      query: gm n,<1>
     created: '2023-01-07'
 gmnab 1:
   deprecated:
     alternative:
-      query: gm nab,{%1}
+      query: gm nab,<1>
     created: '2023-01-07'
 gmnai 1:
   deprecated:
     alternative:
-      query: gm nai,{%1}
+      query: gm nai,<1>
     created: '2023-01-07'
 gmnau 1:
   deprecated:
     alternative:
-      query: gm nau,{%1}
+      query: gm nau,<1>
     created: '2023-01-07'
 gmnb 1:
   deprecated:
     alternative:
-      query: gm nb,{%1}
+      query: gm nb,<1>
     created: '2023-01-07'
 gmnd 1:
   deprecated:
     alternative:
-      query: gm nd,{%1}
+      query: gm nd,<1>
     created: '2023-01-07'
 gmndh 1:
   deprecated:
     alternative:
-      query: gm ndh,{%1}
+      query: gm ndh,<1>
     created: '2023-01-07'
 gmne 1:
   deprecated:
     alternative:
-      query: gm ne,{%1}
+      query: gm ne,<1>
     created: '2023-01-07'
 gmnea 1:
   deprecated:
     alternative:
-      query: gm nea,{%1}
+      query: gm nea,<1>
     created: '2023-01-07'
 gmneb 1:
   deprecated:
     alternative:
-      query: gm neb,{%1}
+      query: gm neb,<1>
     created: '2023-01-07'
 gmnec 1:
   deprecated:
     alternative:
-      query: gm nec,{%1}
+      query: gm nec,<1>
     created: '2023-01-07'
 gmnen 1:
   deprecated:
     alternative:
-      query: gm nen,{%1}
+      query: gm nen,<1>
     created: '2023-01-07'
 gmnes 1:
   deprecated:
     alternative:
-      query: gm nes,{%1}
+      query: gm nes,<1>
     created: '2023-01-07'
 gmneu 1:
   deprecated:
     alternative:
-      query: gm neu,{%1}
+      query: gm neu,<1>
     created: '2023-01-07'
 gmnew 1:
   deprecated:
     alternative:
-      query: gm new,{%1}
+      query: gm new,<1>
     created: '2023-01-07'
 gmnh 1:
   deprecated:
     alternative:
-      query: gm nh,{%1}
+      query: gm nh,<1>
     created: '2023-01-07'
 gmni 1:
   deprecated:
     alternative:
-      query: gm ni,{%1}
+      query: gm ni,<1>
     created: '2023-01-07'
 gmnib 1:
   deprecated:
     alternative:
-      query: gm nib,{%1}
+      query: gm nib,<1>
     created: '2023-01-07'
 gmnk 1:
   deprecated:
     alternative:
-      query: gm nk,{%1}
+      query: gm nk,<1>
     created: '2023-01-07'
 gmnm 1:
   deprecated:
     alternative:
-      query: gm nm,{%1}
+      query: gm nm,<1>
     created: '2023-01-07'
 gmnmb 1:
   deprecated:
     alternative:
-      query: gm nmb,{%1}
+      query: gm nmb,<1>
     created: '2023-01-07'
 gmnms 1:
   deprecated:
     alternative:
-      query: gm nms,{%1}
+      query: gm nms,<1>
     created: '2023-01-07'
 gmnoh 1:
   deprecated:
     alternative:
-      query: gm noh,{%1}
+      query: gm noh,<1>
     created: '2023-01-07'
 gmnom 1:
   deprecated:
     alternative:
-      query: gm nom,{%1}
+      query: gm nom,<1>
     created: '2023-01-07'
 gmnor 1:
   deprecated:
     alternative:
-      query: gm nor,{%1}
+      query: gm nor,<1>
     created: '2023-01-07'
 gmnp 1:
   deprecated:
     alternative:
-      query: gm np,{%1}
+      query: gm np,<1>
     created: '2023-01-07'
 gmnr 1:
   deprecated:
     alternative:
-      query: gm nr,{%1}
+      query: gm nr,<1>
     created: '2023-01-07'
 gmnrü 1:
   deprecated:
     alternative:
-      query: gm nrü,{%1}
+      query: gm nrü,<1>
     created: '2023-01-07'
 gmnt 1:
   deprecated:
     alternative:
-      query: gm nt,{%1}
+      query: gm nt,<1>
     created: '2023-01-07'
 gmnu 1:
   deprecated:
     alternative:
-      query: gm nu,{%1}
+      query: gm nu,<1>
     created: '2023-01-07'
 gmnvp 1:
   deprecated:
     alternative:
-      query: gm nvp,{%1}
+      query: gm nvp,<1>
     created: '2023-01-07'
 gmnw 1:
   deprecated:
     alternative:
-      query: gm nw,{%1}
+      query: gm nw,<1>
     created: '2023-01-07'
 gmny 1:
   deprecated:
     alternative:
-      query: gm ny,{%1}
+      query: gm ny,<1>
     created: '2023-01-07'
 gmnz 1:
   deprecated:
     alternative:
-      query: gm nz,{%1}
+      query: gm nz,<1>
     created: '2023-01-07'
 gmnö 1:
   deprecated:
     alternative:
-      query: gm nö,{%1}
+      query: gm nö,<1>
     created: '2023-01-07'
 gmob 1:
   deprecated:
     alternative:
-      query: gm ob,{%1}
+      query: gm ob,<1>
     created: '2023-01-07'
 gmobb 1:
   deprecated:
     alternative:
-      query: gm obb,{%1}
+      query: gm obb,<1>
     created: '2023-01-07'
 gmobg 1:
   deprecated:
     alternative:
-      query: gm obg,{%1}
+      query: gm obg,<1>
     created: '2023-01-07'
 gmoc 1:
   deprecated:
     alternative:
-      query: gm oc,{%1}
+      query: gm oc,<1>
     created: '2023-01-07'
 gmoch 1:
   deprecated:
     alternative:
-      query: gm och,{%1}
+      query: gm och,<1>
     created: '2023-01-07'
 gmod 1:
   deprecated:
     alternative:
-      query: gm od,{%1}
+      query: gm od,<1>
     created: '2023-01-07'
 gmoe 1:
   deprecated:
     alternative:
-      query: gm oe,{%1}
+      query: gm oe,<1>
     created: '2023-01-07'
 gmof 1:
   deprecated:
     alternative:
-      query: gm of,{%1}
+      query: gm of,<1>
     created: '2023-01-07'
 gmog 1:
   deprecated:
     alternative:
-      query: gm og,{%1}
+      query: gm og,<1>
     created: '2023-01-07'
 gmoha 1:
   deprecated:
     alternative:
-      query: gm oha,{%1}
+      query: gm oha,<1>
     created: '2023-01-07'
 gmohz 1:
   deprecated:
     alternative:
-      query: gm ohz,{%1}
+      query: gm ohz,<1>
     created: '2023-01-07'
 gmol 1:
   deprecated:
     alternative:
-      query: gm ol,{%1}
+      query: gm ol,<1>
     created: '2023-01-07'
 gmold 1:
   deprecated:
     alternative:
-      query: gm old,{%1}
+      query: gm old,<1>
     created: '2023-01-07'
 gmop 1:
   deprecated:
     alternative:
-      query: gm op,{%1}
+      query: gm op,<1>
     created: '2023-01-07'
 gmor 1:
   deprecated:
     alternative:
-      query: gm or,{%1}
+      query: gm or,<1>
     created: '2023-01-07'
 gmos 1:
   deprecated:
     alternative:
-      query: gm os,{%1}
+      query: gm os,<1>
     created: '2023-01-07'
 gmott 1:
   deprecated:
     alternative:
-      query: gm ott,{%1}
+      query: gm ott,<1>
     created: '2023-01-07'
 gmotw 1:
   deprecated:
     alternative:
-      query: gm otw,{%1}
+      query: gm otw,<1>
     created: '2023-01-07'
 gmovb 0:
   deprecated:
     alternative:
-      query: gm ovb,{%1}
+      query: gm ovb,<1>
     created: '2023-01-07'
 gmovb 1:
   deprecated:
     alternative:
-      query: gm ovb,{%1}
+      query: gm ovb,<1>
     created: '2023-01-07'
 gmovi 1:
   deprecated:
     alternative:
-      query: gm ovi,{%1}
+      query: gm ovi,<1>
     created: '2023-01-07'
 gmovp 1:
   deprecated:
     alternative:
-      query: gm ovp,{%1}
+      query: gm ovp,<1>
     created: '2023-01-07'
 gmoz 1:
   deprecated:
     alternative:
-      query: gm oz,{%1}
+      query: gm oz,<1>
     created: '2023-01-07'
 gmp 1:
   deprecated:
     alternative:
-      query: gm p,{%1}
+      query: gm p,<1>
     created: '2023-01-07'
 gmpa 1:
   deprecated:
     alternative:
-      query: gm pa,{%1}
+      query: gm pa,<1>
     created: '2023-01-07'
 gmpaf 1:
   deprecated:
     alternative:
-      query: gm paf,{%1}
+      query: gm paf,<1>
     created: '2023-01-07'
 gmpan 1:
   deprecated:
     alternative:
-      query: gm pan,{%1}
+      query: gm pan,<1>
     created: '2023-01-07'
 gmpar 1:
   deprecated:
     alternative:
-      query: gm par,{%1}
+      query: gm par,<1>
     created: '2023-01-07'
 gmpb 1:
   deprecated:
     alternative:
-      query: gm pb,{%1}
+      query: gm pb,<1>
     created: '2023-01-07'
 gmpch 1:
   deprecated:
     alternative:
-      query: gm pch,{%1}
+      query: gm pch,<1>
     created: '2023-01-07'
 gmpe 1:
   deprecated:
     alternative:
-      query: gm pe,{%1}
+      query: gm pe,<1>
     created: '2023-01-07'
 gmpeg 1:
   deprecated:
     alternative:
-      query: gm peg,{%1}
+      query: gm peg,<1>
     created: '2023-01-07'
 gmper 1:
   deprecated:
     alternative:
-      query: gm per,{%1}
+      query: gm per,<1>
     created: '2023-01-07'
 gmpf 1:
   deprecated:
     alternative:
-      query: gm pf,{%1}
+      query: gm pf,<1>
     created: '2023-01-07'
 gmpi 1:
   deprecated:
     alternative:
-      query: gm pi,{%1}
+      query: gm pi,<1>
     created: '2023-01-07'
 gmpir 1:
   deprecated:
     alternative:
-      query: gm pir,{%1}
+      query: gm pir,<1>
     created: '2023-01-07'
 gmpk 1:
   deprecated:
     alternative:
-      query: gm pk,{%1}
+      query: gm pk,<1>
     created: '2023-01-07'
 gmpl 1:
   deprecated:
     alternative:
-      query: gm pl,{%1}
+      query: gm pl,<1>
     created: '2023-01-07'
 gmplö 1:
   deprecated:
     alternative:
-      query: gm plö,{%1}
+      query: gm plö,<1>
     created: '2023-01-07'
 gmpn 1:
   deprecated:
     alternative:
-      query: gm pn,{%1}
+      query: gm pn,<1>
     created: '2023-01-07'
 gmpr 1:
   deprecated:
     alternative:
-      query: gm pr,{%1}
+      query: gm pr,<1>
     created: '2023-01-07'
 gmprü 1:
   deprecated:
     alternative:
-      query: gm prü,{%1}
+      query: gm prü,<1>
     created: '2023-01-07'
 gmps 1:
   deprecated:
     alternative:
-      query: gm ps,{%1}
+      query: gm ps,<1>
     created: '2023-01-07'
 gmpw 1:
   deprecated:
     alternative:
-      query: gm pw,{%1}
+      query: gm pw,<1>
     created: '2023-01-07'
 gmpz 1:
   deprecated:
     alternative:
-      query: gm pz,{%1}
+      query: gm pz,<1>
     created: '2023-01-07'
 gmqft 1:
   deprecated:
     alternative:
-      query: gm qft,{%1}
+      query: gm qft,<1>
     created: '2023-01-07'
 gmqlb 1:
   deprecated:
     alternative:
-      query: gm qlb,{%1}
+      query: gm qlb,<1>
     created: '2023-01-07'
 gmr 1:
   deprecated:
     alternative:
-      query: gm r,{%1}
+      query: gm r,<1>
     created: '2023-01-07'
 gmra 1:
   deprecated:
     alternative:
-      query: gm ra,{%1}
+      query: gm ra,<1>
     created: '2023-01-07'
 gmrc 1:
   deprecated:
     alternative:
-      query: gm rc,{%1}
+      query: gm rc,<1>
     created: '2023-01-07'
 gmrd 1:
   deprecated:
     alternative:
-      query: gm rd,{%1}
+      query: gm rd,<1>
     created: '2023-01-07'
 gmrdg 1:
   deprecated:
     alternative:
-      query: gm rdg,{%1}
+      query: gm rdg,<1>
     created: '2023-01-07'
 gmre 1:
   deprecated:
     alternative:
-      query: gm re,{%1}
+      query: gm re,<1>
     created: '2023-01-07'
 gmreg 1:
   deprecated:
     alternative:
-      query: gm reg,{%1}
+      query: gm reg,<1>
     created: '2023-01-07'
 gmreh 1:
   deprecated:
     alternative:
-      query: gm reh,{%1}
+      query: gm reh,<1>
     created: '2023-01-07'
 gmrei 1:
   deprecated:
     alternative:
-      query: gm rei,{%1}
+      query: gm rei,<1>
     created: '2023-01-07'
 gmrh 1:
   deprecated:
     alternative:
-      query: gm rh,{%1}
+      query: gm rh,<1>
     created: '2023-01-07'
 gmri 1:
   deprecated:
     alternative:
-      query: gm ri,{%1}
+      query: gm ri,<1>
     created: '2023-01-07'
 gmrid 1:
   deprecated:
     alternative:
-      query: gm rid,{%1}
+      query: gm rid,<1>
     created: '2023-01-07'
 gmrie 1:
   deprecated:
     alternative:
-      query: gm rie,{%1}
+      query: gm rie,<1>
     created: '2023-01-07'
 gmrl 1:
   deprecated:
     alternative:
-      query: gm rl,{%1}
+      query: gm rl,<1>
     created: '2023-01-07'
 gmrm 1:
   deprecated:
     alternative:
-      query: gm rm,{%1}
+      query: gm rm,<1>
     created: '2023-01-07'
 gmrn 1:
   deprecated:
     alternative:
-      query: gm rn,{%1}
+      query: gm rn,<1>
     created: '2023-01-07'
 gmro 1:
   deprecated:
     alternative:
-      query: gm ro,{%1}
+      query: gm ro,<1>
     created: '2023-01-07'
 gmrod 1:
   deprecated:
     alternative:
-      query: gm rod,{%1}
+      query: gm rod,<1>
     created: '2023-01-07'
 gmrof 1:
   deprecated:
     alternative:
-      query: gm rof,{%1}
+      query: gm rof,<1>
     created: '2023-01-07'
 gmroh 1:
   deprecated:
     alternative:
-      query: gm roh,{%1}
+      query: gm roh,<1>
     created: '2023-01-07'
 gmrok 1:
   deprecated:
     alternative:
-      query: gm rok,{%1}
+      query: gm rok,<1>
     created: '2023-01-07'
 gmrol 1:
   deprecated:
     alternative:
-      query: gm rol,{%1}
+      query: gm rol,<1>
     created: '2023-01-07'
 gmrot 1:
   deprecated:
     alternative:
-      query: gm rot,{%1}
+      query: gm rot,<1>
     created: '2023-01-07'
 gmrow 1:
   deprecated:
     alternative:
-      query: gm row,{%1}
+      query: gm row,<1>
     created: '2023-01-07'
 gmrs 1:
   deprecated:
     alternative:
-      query: gm rs,{%1}
+      query: gm rs,<1>
     created: '2023-01-07'
 gmrsl 1:
   deprecated:
     alternative:
-      query: gm rsl,{%1}
+      query: gm rsl,<1>
     created: '2023-01-07'
 gmrt 1:
   deprecated:
     alternative:
-      query: gm rt,{%1}
+      query: gm rt,<1>
     created: '2023-01-07'
 gmru 1:
   deprecated:
     alternative:
-      query: gm ru,{%1}
+      query: gm ru,<1>
     created: '2023-01-07'
 gmrv 1:
   deprecated:
     alternative:
-      query: gm rv,{%1}
+      query: gm rv,<1>
     created: '2023-01-07'
 gmrw 1:
   deprecated:
     alternative:
-      query: gm rw,{%1}
+      query: gm rw,<1>
     created: '2023-01-07'
 gmry 1:
   deprecated:
     alternative:
-      query: gm ry,{%1}
+      query: gm ry,<1>
     created: '2023-01-07'
 gmrz 1:
   deprecated:
     alternative:
-      query: gm rz,{%1}
+      query: gm rz,<1>
     created: '2023-01-07'
 gmrüd 1:
   deprecated:
     alternative:
-      query: gm rüd,{%1}
+      query: gm rüd,<1>
     created: '2023-01-07'
 gms 1:
   deprecated:
     alternative:
-      query: gm s,{%1}
+      query: gm s,<1>
     created: '2023-01-07'
 gmsab 1:
   deprecated:
     alternative:
-      query: gm sab,{%1}
+      query: gm sab,<1>
     created: '2023-01-07'
 gmsad 1:
   deprecated:
     alternative:
-      query: gm sad,{%1}
+      query: gm sad,<1>
     created: '2023-01-07'
 gmsan 1:
   deprecated:
     alternative:
-      query: gm san,{%1}
+      query: gm san,<1>
     created: '2023-01-07'
 gmsaw 1:
   deprecated:
     alternative:
-      query: gm saw,{%1}
+      query: gm saw,<1>
     created: '2023-01-07'
 gmsb 1:
   deprecated:
     alternative:
-      query: gm sb,{%1}
+      query: gm sb,<1>
     created: '2023-01-07'
 gmsbg 1:
   deprecated:
     alternative:
-      query: gm sbg,{%1}
+      query: gm sbg,<1>
     created: '2023-01-07'
 gmsbk 1:
   deprecated:
     alternative:
-      query: gm sbk,{%1}
+      query: gm sbk,<1>
     created: '2023-01-07'
 gmsc 1:
   deprecated:
     alternative:
-      query: gm sc,{%1}
+      query: gm sc,<1>
     created: '2023-01-07'
 gmscz 1:
   deprecated:
     alternative:
-      query: gm scz,{%1}
+      query: gm scz,<1>
     created: '2023-01-07'
 gmsdh 1:
   deprecated:
     alternative:
-      query: gm sdh,{%1}
+      query: gm sdh,<1>
     created: '2023-01-07'
 gmsdl 1:
   deprecated:
     alternative:
-      query: gm sdl,{%1}
+      query: gm sdl,<1>
     created: '2023-01-07'
 gmsdt 1:
   deprecated:
     alternative:
-      query: gm sdt,{%1}
+      query: gm sdt,<1>
     created: '2023-01-07'
 gmse 1:
   deprecated:
     alternative:
-      query: gm se,{%1}
+      query: gm se,<1>
     created: '2023-01-07'
 gmseb 1:
   deprecated:
     alternative:
-      query: gm seb,{%1}
+      query: gm seb,<1>
     created: '2023-01-07'
 gmsee 1:
   deprecated:
     alternative:
-      query: gm see,{%1}
+      query: gm see,<1>
     created: '2023-01-07'
 gmsef 1:
   deprecated:
     alternative:
-      query: gm sef,{%1}
+      query: gm sef,<1>
     created: '2023-01-07'
 gmsel 1:
   deprecated:
     alternative:
-      query: gm sel,{%1}
+      query: gm sel,<1>
     created: '2023-01-07'
 gmsf 1:
   deprecated:
     alternative:
-      query: gm sf,{%1}
+      query: gm sf,<1>
     created: '2023-01-07'
 gmsfb 1:
   deprecated:
     alternative:
-      query: gm sfb,{%1}
+      query: gm sfb,<1>
     created: '2023-01-07'
 gmsft 1:
   deprecated:
     alternative:
-      query: gm sft,{%1}
+      query: gm sft,<1>
     created: '2023-01-07'
 gmsg 1:
   deprecated:
     alternative:
-      query: gm sg,{%1}
+      query: gm sg,<1>
     created: '2023-01-07'
 gmsgh 1:
   deprecated:
     alternative:
-      query: gm sgh,{%1}
+      query: gm sgh,<1>
     created: '2023-01-07'
 gmsha 1:
   deprecated:
     alternative:
-      query: gm sha,{%1}
+      query: gm sha,<1>
     created: '2023-01-07'
 gmshg 1:
   deprecated:
     alternative:
-      query: gm shg,{%1}
+      query: gm shg,<1>
     created: '2023-01-07'
 gmshl 1:
   deprecated:
     alternative:
-      query: gm shl,{%1}
+      query: gm shl,<1>
     created: '2023-01-07'
 gmsi 1:
   deprecated:
     alternative:
-      query: gm si,{%1}
+      query: gm si,<1>
     created: '2023-01-07'
 gmsig 1:
   deprecated:
     alternative:
-      query: gm sig,{%1}
+      query: gm sig,<1>
     created: '2023-01-07'
 gmsim 1:
   deprecated:
     alternative:
-      query: gm sim,{%1}
+      query: gm sim,<1>
     created: '2023-01-07'
 gmsl 1:
   deprecated:
     alternative:
-      query: gm sl,{%1}
+      query: gm sl,<1>
     created: '2023-01-07'
 gmsle 1:
   deprecated:
     alternative:
-      query: gm sle,{%1}
+      query: gm sle,<1>
     created: '2023-01-07'
 gmslf 1:
   deprecated:
     alternative:
-      query: gm slf,{%1}
+      query: gm slf,<1>
     created: '2023-01-07'
 gmslg 1:
   deprecated:
     alternative:
-      query: gm slg,{%1}
+      query: gm slg,<1>
     created: '2023-01-07'
 gmsln 1:
   deprecated:
     alternative:
-      query: gm sln,{%1}
+      query: gm sln,<1>
     created: '2023-01-07'
 gmsls 1:
   deprecated:
     alternative:
-      query: gm sls,{%1}
+      query: gm sls,<1>
     created: '2023-01-07'
 gmslz 1:
   deprecated:
     alternative:
-      query: gm slz,{%1}
+      query: gm slz,<1>
     created: '2023-01-07'
 gmslü 1:
   deprecated:
     alternative:
-      query: gm slü,{%1}
+      query: gm slü,<1>
     created: '2023-01-07'
 gmsm 1:
   deprecated:
     alternative:
-      query: gm sm,{%1}
+      query: gm sm,<1>
     created: '2023-01-07'
 gmsmü 1:
   deprecated:
     alternative:
-      query: gm smü,{%1}
+      query: gm smü,<1>
     created: '2023-01-07'
 gmsn 1:
   deprecated:
     alternative:
-      query: gm sn,{%1}
+      query: gm sn,<1>
     created: '2023-01-07'
 gmsnh 1:
   deprecated:
     alternative:
-      query: gm snh,{%1}
+      query: gm snh,<1>
     created: '2023-01-07'
 gmso 1:
   deprecated:
     alternative:
-      query: gm so,{%1}
+      query: gm so,<1>
     created: '2023-01-07'
 gmsob 1:
   deprecated:
     alternative:
-      query: gm sob,{%1}
+      query: gm sob,<1>
     created: '2023-01-07'
 gmsog 1:
   deprecated:
     alternative:
-      query: gm sog,{%1}
+      query: gm sog,<1>
     created: '2023-01-07'
 gmsol 1:
   deprecated:
     alternative:
-      query: gm sol,{%1}
+      query: gm sol,<1>
     created: '2023-01-07'
 gmson 1:
   deprecated:
     alternative:
-      query: gm son,{%1}
+      query: gm son,<1>
     created: '2023-01-07'
 gmsp 1:
   deprecated:
     alternative:
-      query: gm sp,{%1}
+      query: gm sp,<1>
     created: '2023-01-07'
 gmspb 1:
   deprecated:
     alternative:
-      query: gm spb,{%1}
+      query: gm spb,<1>
     created: '2023-01-07'
 gmspr 1:
   deprecated:
     alternative:
-      query: gm spr,{%1}
+      query: gm spr,<1>
     created: '2023-01-07'
 gmsr 1:
   deprecated:
     alternative:
-      query: gm sr,{%1}
+      query: gm sr,<1>
     created: '2023-01-07'
 gmsrb 1:
   deprecated:
     alternative:
-      query: gm srb,{%1}
+      query: gm srb,<1>
     created: '2023-01-07'
 gmsro 1:
   deprecated:
     alternative:
-      query: gm sro,{%1}
+      query: gm sro,<1>
     created: '2023-01-07'
 gmst 1:
   deprecated:
     alternative:
-      query: gm st,{%1}
+      query: gm st,<1>
     created: '2023-01-07'
 gmsta 1:
   deprecated:
     alternative:
-      query: gm sta,{%1}
+      query: gm sta,<1>
     created: '2023-01-07'
 gmstb 1:
   deprecated:
     alternative:
-      query: gm stb,{%1}
+      query: gm stb,<1>
     created: '2023-01-07'
 gmstd 1:
   deprecated:
     alternative:
-      query: gm std,{%1}
+      query: gm std,<1>
     created: '2023-01-07'
 gmste 1:
   deprecated:
     alternative:
-      query: gm ste,{%1}
+      query: gm ste,<1>
     created: '2023-01-07'
 gmsth 1:
   deprecated:
     alternative:
-      query: gm sth,{%1}
+      query: gm sth,<1>
     created: '2023-01-07'
 gmstl 1:
   deprecated:
     alternative:
-      query: gm stl,{%1}
+      query: gm stl,<1>
     created: '2023-01-07'
 gmsto 1:
   deprecated:
     alternative:
-      query: gm sto,{%1}
+      query: gm sto,<1>
     created: '2023-01-07'
 gmsu 1:
   deprecated:
     alternative:
-      query: gm su,{%1}
+      query: gm su,<1>
     created: '2023-01-07'
 gmsul 1:
   deprecated:
     alternative:
-      query: gm sul,{%1}
+      query: gm sul,<1>
     created: '2023-01-07'
 gmsw 1:
   deprecated:
     alternative:
-      query: gm sw,{%1}
+      query: gm sw,<1>
     created: '2023-01-07'
 gmswa 1:
   deprecated:
     alternative:
-      query: gm swa,{%1}
+      query: gm swa,<1>
     created: '2023-01-07'
 gmsy 1:
   deprecated:
     alternative:
-      query: gm sy,{%1}
+      query: gm sy,<1>
     created: '2023-01-07'
 gmsz 1:
   deprecated:
     alternative:
-      query: gm sz,{%1}
+      query: gm sz,<1>
     created: '2023-01-07'
 gmszb 1:
   deprecated:
     alternative:
-      query: gm szb,{%1}
+      query: gm szb,<1>
     created: '2023-01-07'
 gmsäk 1:
   deprecated:
     alternative:
-      query: gm säk,{%1}
+      query: gm säk,<1>
     created: '2023-01-07'
 gmsöm 1:
   deprecated:
     alternative:
-      query: gm söm,{%1}
+      query: gm söm,<1>
     created: '2023-01-07'
 gmsüw 1:
   deprecated:
     alternative:
-      query: gm süw,{%1}
+      query: gm süw,<1>
     created: '2023-01-07'
 gmtbb 1:
   deprecated:
     alternative:
-      query: gm tbb,{%1}
+      query: gm tbb,<1>
     created: '2023-01-07'
 gmte 1:
   deprecated:
     alternative:
-      query: gm te,{%1}
+      query: gm te,<1>
     created: '2023-01-07'
 gmtet 1:
   deprecated:
     alternative:
-      query: gm tet,{%1}
+      query: gm tet,<1>
     created: '2023-01-07'
 gmtg 1:
   deprecated:
     alternative:
-      query: gm tg,{%1}
+      query: gm tg,<1>
     created: '2023-01-07'
 gmtir 1:
   deprecated:
     alternative:
-      query: gm tir,{%1}
+      query: gm tir,<1>
     created: '2023-01-07'
 gmtp 1:
   deprecated:
     alternative:
-      query: gm tp,{%1}
+      query: gm tp,<1>
     created: '2023-01-07'
 gmtr 1:
   deprecated:
     alternative:
-      query: gm tr,{%1}
+      query: gm tr,<1>
     created: '2023-01-07'
 gmts 1:
   deprecated:
     alternative:
-      query: gm ts,{%1}
+      query: gm ts,<1>
     created: '2023-01-07'
 gmtt 1:
   deprecated:
     alternative:
-      query: gm tt,{%1}
+      query: gm tt,<1>
     created: '2023-01-07'
 gmtut 1:
   deprecated:
     alternative:
-      query: gm tut,{%1}
+      query: gm tut,<1>
     created: '2023-01-07'
 gmtöl 1:
   deprecated:
     alternative:
-      query: gm töl,{%1}
+      query: gm töl,<1>
     created: '2023-01-07'
 gmtön 1:
   deprecated:
     alternative:
-      query: gm tön,{%1}
+      query: gm tön,<1>
     created: '2023-01-07'
 gmtü 1:
   deprecated:
     alternative:
-      query: gm tü,{%1}
+      query: gm tü,<1>
     created: '2023-01-07'
 gmue 1:
   deprecated:
     alternative:
-      query: gm ue,{%1}
+      query: gm ue,<1>
     created: '2023-01-07'
 gmuem 1:
   deprecated:
     alternative:
-      query: gm uem,{%1}
+      query: gm uem,<1>
     created: '2023-01-07'
 gmuff 1:
   deprecated:
     alternative:
-      query: gm uff,{%1}
+      query: gm uff,<1>
     created: '2023-01-07'
 gmul 1:
   deprecated:
     alternative:
-      query: gm ul,{%1}
+      query: gm ul,<1>
     created: '2023-01-07'
 gmun 1:
   deprecated:
     alternative:
-      query: gm un,{%1}
+      query: gm un,<1>
     created: '2023-01-07'
 gmusi 1:
   deprecated:
     alternative:
-      query: gm usi,{%1}
+      query: gm usi,<1>
     created: '2023-01-07'
 gmvai 1:
   deprecated:
     alternative:
-      query: gm vai,{%1}
+      query: gm vai,<1>
     created: '2023-01-07'
 gmvb 1:
   deprecated:
     alternative:
-      query: gm vb,{%1}
+      query: gm vb,<1>
     created: '2023-01-07'
 gmvec 1:
   deprecated:
     alternative:
-      query: gm vec,{%1}
+      query: gm vec,<1>
     created: '2023-01-07'
 gmver 1:
   deprecated:
     alternative:
-      query: gm ver,{%1}
+      query: gm ver,<1>
     created: '2023-01-07'
 gmvib 1:
   deprecated:
     alternative:
-      query: gm vib,{%1}
+      query: gm vib,<1>
     created: '2023-01-07'
 gmvie 1:
   deprecated:
     alternative:
-      query: gm vie,{%1}
+      query: gm vie,<1>
     created: '2023-01-07'
 gmvit 1:
   deprecated:
     alternative:
-      query: gm vit,{%1}
+      query: gm vit,<1>
     created: '2023-01-07'
 gmvk 1:
   deprecated:
     alternative:
-      query: gm vk,{%1}
+      query: gm vk,<1>
     created: '2023-01-07'
 gmvl 1:
   deprecated:
     alternative:
-      query: gm vl,{%1}
+      query: gm vl,<1>
     created: '2023-01-07'
 gmvof 1:
   deprecated:
     alternative:
-      query: gm vof,{%1}
+      query: gm vof,<1>
     created: '2023-01-07'
 gmvoh 1:
   deprecated:
     alternative:
-      query: gm voh,{%1}
+      query: gm voh,<1>
     created: '2023-01-07'
 gmvs 1:
   deprecated:
     alternative:
-      query: gm vs,{%1}
+      query: gm vs,<1>
     created: '2023-01-07'
 gmw 1:
   deprecated:
     alternative:
-      query: gm w,{%1}
+      query: gm w,<1>
     created: '2023-01-07'
 gmwa 1:
   deprecated:
     alternative:
-      query: gm wa,{%1}
+      query: gm wa,<1>
     created: '2023-01-07'
 gmwaf 1:
   deprecated:
     alternative:
-      query: gm waf,{%1}
+      query: gm waf,<1>
     created: '2023-01-07'
 gmwan 1:
   deprecated:
     alternative:
-      query: gm wan,{%1}
+      query: gm wan,<1>
     created: '2023-01-07'
 gmwar 1:
   deprecated:
     alternative:
-      query: gm war,{%1}
+      query: gm war,<1>
     created: '2023-01-07'
 gmwat 1:
   deprecated:
     alternative:
-      query: gm wat,{%1}
+      query: gm wat,<1>
     created: '2023-01-07'
 gmwb 1:
   deprecated:
     alternative:
-      query: gm wb,{%1}
+      query: gm wb,<1>
     created: '2023-01-07'
 gmwbs 1:
   deprecated:
     alternative:
-      query: gm wbs,{%1}
+      query: gm wbs,<1>
     created: '2023-01-07'
 gmwd 1:
   deprecated:
     alternative:
-      query: gm wd,{%1}
+      query: gm wd,<1>
     created: '2023-01-07'
 gmwda 1:
   deprecated:
     alternative:
-      query: gm wda,{%1}
+      query: gm wda,<1>
     created: '2023-01-07'
 gmwe 1:
   deprecated:
     alternative:
-      query: gm we,{%1}
+      query: gm we,<1>
     created: '2023-01-07'
 gmweb 1:
   deprecated:
     alternative:
-      query: gm web,{%1}
+      query: gm web,<1>
     created: '2023-01-07'
 gmweg 1:
   deprecated:
     alternative:
-      query: gm weg,{%1}
+      query: gm weg,<1>
     created: '2023-01-07'
 gmwel 1:
   deprecated:
     alternative:
-      query: gm wel,{%1}
+      query: gm wel,<1>
     created: '2023-01-07'
 gmwem 1:
   deprecated:
     alternative:
-      query: gm wem,{%1}
+      query: gm wem,<1>
     created: '2023-01-07'
 gmwen 1:
   deprecated:
     alternative:
-      query: gm wen,{%1}
+      query: gm wen,<1>
     created: '2023-01-07'
 gmwer 1:
   deprecated:
     alternative:
-      query: gm wer,{%1}
+      query: gm wer,<1>
     created: '2023-01-07'
 gmwes 1:
   deprecated:
     alternative:
-      query: gm wes,{%1}
+      query: gm wes,<1>
     created: '2023-01-07'
 gmwf 1:
   deprecated:
     alternative:
-      query: gm wf,{%1}
+      query: gm wf,<1>
     created: '2023-01-07'
 gmwg 1:
   deprecated:
     alternative:
-      query: gm wg,{%1}
+      query: gm wg,<1>
     created: '2023-01-07'
 gmwhv 1:
   deprecated:
     alternative:
-      query: gm whv,{%1}
+      query: gm whv,<1>
     created: '2023-01-07'
 gmwi 1:
   deprecated:
     alternative:
-      query: gm wi,{%1}
+      query: gm wi,<1>
     created: '2023-01-07'
 gmwil 1:
   deprecated:
     alternative:
-      query: gm wil,{%1}
+      query: gm wil,<1>
     created: '2023-01-07'
 gmwit 1:
   deprecated:
     alternative:
-      query: gm wit,{%1}
+      query: gm wit,<1>
     created: '2023-01-07'
 gmwiz 1:
   deprecated:
     alternative:
-      query: gm wiz,{%1}
+      query: gm wiz,<1>
     created: '2023-01-07'
 gmwk 1:
   deprecated:
     alternative:
-      query: gm wk,{%1}
+      query: gm wk,<1>
     created: '2023-01-07'
 gmwl 1:
   deprecated:
     alternative:
-      query: gm wl,{%1}
+      query: gm wl,<1>
     created: '2023-01-07'
 gmwlg 1:
   deprecated:
     alternative:
-      query: gm wlg,{%1}
+      query: gm wlg,<1>
     created: '2023-01-07'
 gmwm 1:
   deprecated:
     alternative:
-      query: gm wm,{%1}
+      query: gm wm,<1>
     created: '2023-01-07'
 gmwms 1:
   deprecated:
     alternative:
-      query: gm wms,{%1}
+      query: gm wms,<1>
     created: '2023-01-07'
 gmwn 1:
   deprecated:
     alternative:
-      query: gm wn,{%1}
+      query: gm wn,<1>
     created: '2023-01-07'
 gmwnd 1:
   deprecated:
     alternative:
-      query: gm wnd,{%1}
+      query: gm wnd,<1>
     created: '2023-01-07'
 gmwo 1:
   deprecated:
     alternative:
-      query: gm wo,{%1}
+      query: gm wo,<1>
     created: '2023-01-07'
 gmwob 1:
   deprecated:
     alternative:
-      query: gm wob,{%1}
+      query: gm wob,<1>
     created: '2023-01-07'
 gmwoh 1:
   deprecated:
     alternative:
-      query: gm woh,{%1}
+      query: gm woh,<1>
     created: '2023-01-07'
 gmwol 1:
   deprecated:
     alternative:
-      query: gm wol,{%1}
+      query: gm wol,<1>
     created: '2023-01-07'
 gmwor 1:
   deprecated:
     alternative:
-      query: gm wor,{%1}
+      query: gm wor,<1>
     created: '2023-01-07'
 gmwos 1:
   deprecated:
     alternative:
-      query: gm wos,{%1}
+      query: gm wos,<1>
     created: '2023-01-07'
 gmwr 1:
   deprecated:
     alternative:
-      query: gm wr,{%1}
+      query: gm wr,<1>
     created: '2023-01-07'
 gmwrn 1:
   deprecated:
     alternative:
-      query: gm wrn,{%1}
+      query: gm wrn,<1>
     created: '2023-01-07'
 gmws 1:
   deprecated:
     alternative:
-      query: gm ws,{%1}
+      query: gm ws,<1>
     created: '2023-01-07'
 gmwsf 1:
   deprecated:
     alternative:
-      query: gm wsf,{%1}
+      query: gm wsf,<1>
     created: '2023-01-07'
 gmwst 1:
   deprecated:
     alternative:
-      query: gm wst,{%1}
+      query: gm wst,<1>
     created: '2023-01-07'
 gmwsw 1:
   deprecated:
     alternative:
-      query: gm wsw,{%1}
+      query: gm wsw,<1>
     created: '2023-01-07'
 gmwt 1:
   deprecated:
     alternative:
-      query: gm wt,{%1}
+      query: gm wt,<1>
     created: '2023-01-07'
 gmwtl 1:
   deprecated:
     alternative:
-      query: gm wtl,{%1}
+      query: gm wtl,<1>
     created: '2023-01-07'
 gmwtm 1:
   deprecated:
     alternative:
-      query: gm wtm,{%1}
+      query: gm wtm,<1>
     created: '2023-01-07'
 gmwug 1:
   deprecated:
     alternative:
-      query: gm wug,{%1}
+      query: gm wug,<1>
     created: '2023-01-07'
 gmwun 1:
   deprecated:
     alternative:
-      query: gm wun,{%1}
+      query: gm wun,<1>
     created: '2023-01-07'
 gmwur 1:
   deprecated:
     alternative:
-      query: gm wur,{%1}
+      query: gm wur,<1>
     created: '2023-01-07'
 gmww 1:
   deprecated:
     alternative:
-      query: gm ww,{%1}
+      query: gm ww,<1>
     created: '2023-01-07'
 gmwz 1:
   deprecated:
     alternative:
-      query: gm wz,{%1}
+      query: gm wz,<1>
     created: '2023-01-07'
 gmwzl 1:
   deprecated:
     alternative:
-      query: gm wzl,{%1}
+      query: gm wzl,<1>
     created: '2023-01-07'
 gmwü 1:
   deprecated:
     alternative:
-      query: gm wü,{%1}
+      query: gm wü,<1>
     created: '2023-01-07'
 gmwüm 1:
   deprecated:
     alternative:
-      query: gm wüm,{%1}
+      query: gm wüm,<1>
     created: '2023-01-07'
 gmz 1:
   deprecated:
     alternative:
-      query: gm z,{%1}
+      query: gm z,<1>
     created: '2023-01-07'
 gmze 1:
   deprecated:
     alternative:
-      query: gm ze,{%1}
+      query: gm ze,<1>
     created: '2023-01-07'
 gmzel 1:
   deprecated:
     alternative:
-      query: gm zel,{%1}
+      query: gm zel,<1>
     created: '2023-01-07'
 gmzi 1:
   deprecated:
     alternative:
-      query: gm zi,{%1}
+      query: gm zi,<1>
     created: '2023-01-07'
 gmzig 1:
   deprecated:
     alternative:
-      query: gm zig,{%1}
+      query: gm zig,<1>
     created: '2023-01-07'
 gmzp 1:
   deprecated:
     alternative:
-      query: gm zp,{%1}
+      query: gm zp,<1>
     created: '2023-01-07'
 gmzr 1:
   deprecated:
     alternative:
-      query: gm zr,{%1}
+      query: gm zr,<1>
     created: '2023-01-07'
 gmzs 1:
   deprecated:
     alternative:
-      query: gm zs,{%1}
+      query: gm zs,<1>
     created: '2023-01-07'
 gmzw 1:
   deprecated:
     alternative:
-      query: gm zw,{%1}
+      query: gm zw,<1>
     created: '2023-01-07'
 gmzz 1:
   deprecated:
     alternative:
-      query: gm zz,{%1}
+      query: gm zz,<1>
     created: '2023-01-07'
 gmöhr 1:
   deprecated:
     alternative:
-      query: gm öhr,{%1}
+      query: gm öhr,<1>
     created: '2023-01-07'
 gmüb 1:
   deprecated:
     alternative:
-      query: gm üb,{%1}
+      query: gm üb,<1>
     created: '2023-01-07'
 gps 1:
-  url: http://www.google.de/products?hl={$language}&q={%query}
+  url: http://www.google.de/products?hl=<$language>&q=<query>
   title: Google Products (Deutschland)
   tags:
   - google
@@ -4375,7 +4402,7 @@ gps 1:
   - arguments: iphone
     description: Suche nach "iphone"
 gs 2:
-  url: https://www.gelbeseiten.de/{%Branche}/{%Ort|type=city}
+  url: 'https://www.gelbeseiten.de/<Branche>/<Ort: {type: city}>'
   title: Gelbe Seiten
   tags:
   - phone
@@ -4390,7 +4417,7 @@ gsh 0:
   - google
   - shopping
 gsh 1:
-  url: http://www.google.de/search?tbm=shop&hl={$language}&q={%query}
+  url: http://www.google.de/search?tbm=shop&hl=<$language>&q=<query>
   title: Google Shopping
   tags:
   - google
@@ -4399,7 +4426,7 @@ gsh 1:
   - arguments: computer
     description: Search for "computer"
 gtiger 1:
-  url: https://www.guenstiger.de/Katalog/Suche/{%Suche}.html
+  url: https://www.guenstiger.de/Katalog/Suche/<Suche>.html
   title: Guenstiger.de
   tags:
   - shopping
@@ -4407,7 +4434,7 @@ gtiger 1:
   - arguments: smartphone
     description: Search for "smartphone"
 gtrends 1:
-  url: https://trends.google.com/trends/explore?q={%query}&geo=DE
+  url: https://trends.google.com/trends/explore?q=<query>&geo=DE
   title: Google Trends Deutschland
   tags:
   - google
@@ -4422,7 +4449,7 @@ gy 0:
   - phone
   - telefonbuch
 gy 2:
-  url: https://www.goyellow.de/suche/{%Name}/{%Ort}
+  url: https://www.goyellow.de/suche/<Name>/<Ort>
   title: GoYellow-Telefonbuch
   tags:
   - phone
@@ -4431,18 +4458,18 @@ gy 2:
   - arguments: meier, dresden
     description: Telefonnummer von "Meier" in Dresden
 hekticket 1:
-  url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword={%Band}
+  url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword=<Band>
   title: Hekticket
   tags:
-  - affiliate
   - concerts
+  - is-affiliate
   - music
   - tickets
   examples:
   - arguments: fettes brot
     description: Search Hekticket for "fettes brot"
 hermes 1:
-  url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#{%Auftragsnummer}
+  url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#<Auftragsnummer>
   title: Hermes Sendungsverfolgung
   tags:
   - hermes
@@ -4453,7 +4480,7 @@ hs 0:
   tags:
   - shopping
 hs 1:
-  url: http://www.hardwareschotte.de/preise.php3?searchstring={%Suche}
+  url: http://www.hardwareschotte.de/preise.php3?searchstring=<Suche>
   title: Hardwareschotte
   tags:
   - shopping
@@ -4461,7 +4488,7 @@ hs 1:
   - arguments: radio
     description: Suche nach "radio"
 hvv 2:
-  url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn={%Start}&zn={%Ziel}&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
+  url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
   tags:
   - bahn
@@ -4472,7 +4499,7 @@ hvv 2:
   - arguments: pinneberg, neugraben
     description: Nächste Verbindung von Pinneberg nach Neugraben
 hvv 3:
-  url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn={%Start}&zn={%Ziel}&a=1&z={%Zeit}&d=&suchen.x=0&suchen.y=0&suchen=Suchen
+  url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&a=1&z=<Zeit>&d=&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
   tags:
   - bahn
@@ -4483,7 +4510,7 @@ hvv 3:
   - arguments: pinneberg, neugraben, 10
     description: 'Verbindung von Pinneberg nach Neugraben heute um 10:00 Uhr '
 hvv 4:
-  url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn={%Start}&zn={%Ziel}&a=1&z={%Zeit}&d={%Datum}&suchen.x=0&suchen.y=0&suchen=Suchen
+  url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&a=1&z=<Zeit>&d=<Datum>&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
   tags:
   - bahn
@@ -4494,7 +4521,7 @@ hvv 4:
   - arguments: pinneberg, neugraben, 10, 28.11.
     description: Verbindung von Pinneberg nach Neugraben um 10:00 Uhr am 28.11.
 iban 1:
-  url: http://www.iban-rechner.de/validieren/{%iban}
+  url: http://www.iban-rechner.de/validieren/<iban>
   title: IBAN-Rechner
   tags:
   - bank
@@ -4503,10 +4530,19 @@ iban 1:
   - arguments: DE12500?0?170648489890
     description: Validate IBAN number, incl. unknown digits that will be calculated
 idealo 1:
-  url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={%Produkt}
+  deprecated:
+    alternative:
+      query: idl <1>
+    created: '2023-12-15'
+idl 0:
+  url: https://www.idealo.de/
   title: Idealo Preisvergleich
   tags:
   - shopping
+idl 1:
+  url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=<Produkt>
+  include:
+    key: idl 0
   examples:
   - arguments: iphone
     description: Preisvergleich fürs iPhone
@@ -4518,7 +4554,7 @@ ikea 0:
   - ikea
   - shopping
 ikea 1:
-  url: https://www.ikea.com/de/de/search/products/?q={%query}
+  url: https://www.ikea.com/de/de/search/products/?q=<query>
   title: IKEA Deutschland
   tags:
   - furniture
@@ -4534,7 +4570,7 @@ iwb 0:
   - berlin
   - polizei
 jf 1:
-  url: https://hds.hebis.de/ubgi/Search/Results?lookfor={%argument_name}&trackSearchEvent=Einfache+Suche&type=allfields&service=catalog
+  url: https://hds.hebis.de/ubgi/Search/Results?lookfor=<argument_name>&trackSearchEvent=Einfache+Suche&type=allfields&service=catalog
   title: JLU Gießen JustFind
   description: Diese Suchmaschine sucht nach Literatur mittels JustFind, der Literatursuche der Uni Gießen (Justus-Liebig-Universität Gießen)
   tags:
@@ -4548,7 +4584,7 @@ jf 1:
   - arguments: He pulse tube cooler operating down to 1.3 K
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
 jw 1:
-  url: https://www.justwatch.com/de/Suche?q={%query}
+  url: https://www.justwatch.com/de/Suche?q=<query>
   title: JustWatch
   description: Searching a movie or tv series at JustWatch.com by given name
   tags:
@@ -4560,7 +4596,7 @@ kaufland 0:
   tags:
   - shopping
 kaufland 1:
-  url: https://www.kaufland.de/item/search/?search_value={%Suche}
+  url: https://www.kaufland.de/item/search/?search_value=<Suche>
   title: Kaufland Online Marktplatz
   tags:
   - shopping
@@ -4575,7 +4611,7 @@ kaz 0:
   - selling
   - shopping
 kaz 1:
-  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords={%query}
+  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<query>
   title: Kleinanzeigen.de
   tags:
   - ebay
@@ -4584,7 +4620,7 @@ kaz 1:
   - arguments: kühlschrank
     description: Suche nach "kühlschrank"
 kaz 2:
-  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords={%query}&locationStr={%PLZ/Ort}
+  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<query>&locationStr=<PLZ/Ort>
   title: Kleinanzeigen.de
   tags:
   - ebay
@@ -4611,7 +4647,7 @@ kazn 0:
   - selling
   - shopping
 kfz 1:
-  url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20{%Ort/Kennzeichen}&ie=utf-8
+  url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20<Ort/Kennzeichen>&ie=utf-8
   title: KFZ-Kennzeichen Deutschland
   tags:
   - auto
@@ -4622,7 +4658,7 @@ kfz 1:
   - arguments: rostock
     description: Suche KFZ-Kennzeichen von Rostock
 kino 1:
-  url: http://www.kino.de/kinoprogramm/{%Ort/Stadtteil/Kino/PLZ}/
+  url: http://www.kino.de/kinoprogramm/<Ort/Stadtteil/Kino/PLZ>/
   title: Kinoprogramm
   tags:
   - cinema
@@ -4632,7 +4668,7 @@ kino 1:
   - arguments: berlin
     description: Kinoprogramm in Berlin
 kit 1:
-  url: http://www.google.com/search?q=site%3Akit.edu+{%query}
+  url: http://www.google.com/search?q=site%3Akit.edu+<query>
   title: Karlsruher Institut für Technologie (KIT), Suche via Google
   tags:
   - karlsruhe
@@ -4648,7 +4684,7 @@ koka 0:
   - events
   - konzerte
 koka 1:
-  url: http://www.koka36.de/suche.php?search={%query|encoding=iso-8859-1}
+  url: 'http://www.koka36.de/suche.php?search=<query: {encoding: iso-8859-1}>'
   title: Koka36.de Konzertkasse
   tags:
   - concerts
@@ -4658,7 +4694,7 @@ koka 1:
   - arguments: berlin
     description: Suche nach Konzerten und Events in Berlin
 kununu 1:
-  url: https://www.kununu.com/de/search#/?q={%query}
+  url: https://www.kununu.com/de/search?q=<query>
   title: Kununu Deutschland
   description: Suche nach Arbeitgeber-Bewertungen
   tags:
@@ -4673,7 +4709,7 @@ kvk 0:
   - books
   - library
 kvk 1:
-  url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=kvk-redesign&lang=de&title=KIT-Bibliothek%3A+Karlsruher+Virtueller+Katalog+KVK+%3A+Ergebnisanzeige&head=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fheader.html&spacer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fspacer.html&footer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Ffooter.html&css=none&input-charset=utf-8&ALL={%Suche}&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&disableEmbeddedFullTitle=1&kataloge=BVB&ref=direct&client-js=yes
+  url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=kvk-redesign&lang=de&title=KIT-Bibliothek%3A+Karlsruher+Virtueller+Katalog+KVK+%3A+Ergebnisanzeige&head=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fheader.html&spacer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fspacer.html&footer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Ffooter.html&css=none&input-charset=utf-8&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&disableEmbeddedFullTitle=1&kataloge=BVB&ref=direct&client-js=yes
   title: Karlsruher Virtueller Katalog
   tags:
   - books
@@ -4682,15 +4718,28 @@ kvk 1:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
 lpg 1:
-  url: http://www.gas-tankstellen.de/menu.php?jump=tkennz&mode=lpg&kennz={%KFZ-Kennzeichen}
+  url: http://www.gas-tankstellen.de/menu.php?jump=tkennz&mode=lpg&kennz=<KFZ-Kennzeichen>
   title: LPG- und CNG-Tankstellen
   tags:
   - old
 mfs 1:
-  url: http://www.medizinfuchs.de/produkt/search/{%Suche}
+  url: http://www.medizinfuchs.de/produkt/search/<Suche>
   title: Medizinfuch Apothekenpreisvergleich
+mm 0:
+  url: https://www.mediamarkt.de/
+  title: Media Markt
+  tags:
+  - electronics
+  - shopping
+mm 1:
+  url: https://www.mediamarkt.de/de/search.html?query=<Suche>
+  examples:
+  - arguments: fernseher
+    description: Suche nach Fernsehern
+  include:
+    key: mm 0
 mvv 2:
-  url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any
+  url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   title: Elektronische Fahrplanauskunft München
   tags:
   - bahn
@@ -4701,7 +4750,7 @@ mvv 2:
   - arguments: freising,petershausen
     description: Nächste Verbindung von Freising nach Petershausen
 mvv 3:
-  url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute=0
+  url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
   title: Elektronische Fahrplanauskunft München
   tags:
   - bahn
@@ -4712,7 +4761,7 @@ mvv 3:
   - arguments: freising,petershausen,10
     description: Nächste Verbindung von Freising nach Petershausen um 10.00 Uhr
 mvv 4:
-  url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}
+  url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
   title: Elektronische Fahrplanauskunft München
   tags:
   - bahn
@@ -4723,7 +4772,7 @@ mvv 4:
   - arguments: freising,petershausen,10,30
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr
 mvv 5:
-  url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}
+  url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
   title: Elektronische Fahrplanauskunft München
   tags:
   - bahn
@@ -4734,7 +4783,7 @@ mvv 5:
   - arguments: freising,petershausen,10,30,28
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr am 28. des aktuellen Monats
 mvv 6:
-  url: http://efa.mvv-muenchen.de/index.html?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}&itdDateMonth={%Monat}
+  url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
   title: Elektronische Fahrplanauskunft München
   tags:
   - bahn
@@ -4752,7 +4801,7 @@ nsr 0:
   - weather
   - wetter
 nsr 1:
-  url: http://www.niederschlagsradar.de/wettervorhersage.aspx?direct=1&naam={%Ort}
+  url: http://www.niederschlagsradar.de/wettervorhersage.aspx?direct=1&naam=<Ort>
   title: Niederschlagsradar.de
   tags:
   - radar
@@ -4768,7 +4817,7 @@ osi 0:
   - books
   - onlinestore
 osi 1:
-  url: https://www.osiander.de/suche?sq={%Suche}
+  url: https://www.osiander.de/suche?sq=<Suche>
   title: Osiander-Suche
   tags:
   - books
@@ -4777,7 +4826,7 @@ osi 1:
   - arguments: Iain M. Banks
     description: Sucht nach dem Science-Fiction-Autor
 osii 1:
-  url: https://www.osiander.de/details.cfm?isbn={%isbn13}
+  url: https://www.osiander.de/details.cfm?isbn=<isbn13>
   title: Osiander-Suche, ISBN13
   tags:
   - books
@@ -4789,8 +4838,8 @@ osii 1:
 p 2:
   deprecated:
     alternative:
-      query: gii {%1}, {%2}
-      created: '2023-07-02'
+      query: gii <1>, <2>
+    created: '2023-07-02'
 pollin 0:
   url: http://www.pollin.de/
   title: Pollin Electronic
@@ -4798,7 +4847,7 @@ pollin 0:
   - electronic
   - shopping
 pollin 1:
-  url: http://www.pollin.de/shop/suchergebnis.html?S_TEXT={%query}
+  url: http://www.pollin.de/shop/suchergebnis.html?S_TEXT=<query>
   title: Pollin Electronic
   tags:
   - electronic
@@ -4807,7 +4856,7 @@ pollin 1:
   - arguments: batterie
     description: Suche bei pollin.de nach "batterie"
 ppw 1:
-  url: http://wiki.piratenpartei.de/Spezial:Suche?search={%Suche}&go=Seite
+  url: http://wiki.piratenpartei.de/Spezial:Suche?search=<Suche>&go=Seite
   title: Piratenpartei Wiki
   tags:
   - partei
@@ -4817,7 +4866,7 @@ ppw 1:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
 ppwg 1:
-  url: http://www.google.com/search?hl={$language}&sitesearch=wiki.piratenpartei.de&domains=wiki.piratenpartei.de&q={%Suche}
+  url: http://www.google.com/search?hl=<$language>&sitesearch=wiki.piratenpartei.de&domains=wiki.piratenpartei.de&q=<Suche>
   title: Piratenpartei Wiki via Google
   tags:
   - partei
@@ -4827,7 +4876,7 @@ ppwg 1:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
 preis 1:
-  url: https://www.preissuchmaschine.de/Katalog/Suche/{%Produkt}.html
+  url: https://www.preissuchmaschine.de/Katalog/Suche/<Produkt>.html
   title: Preissuchmaschine
   tags:
   - old
@@ -4843,7 +4892,7 @@ reichelt 0:
   tags:
   - shopping
 reichelt 1:
-  url: http://www.reichelt.de/{%Artikel}/search
+  url: http://www.reichelt.de/<Artikel>/search
   title: Reichelt Elektronik
   tags:
   - shopping
@@ -4851,7 +4900,7 @@ reichelt 1:
   - arguments: iphone
     description: Suche nach "iphone"
 rmv 2:
-  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G={%Start}&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G={%Ziel}&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt
+  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt
   title: RMV Fahrplanauskunft
   tags:
   - bahn
@@ -4861,7 +4910,7 @@ rmv 2:
   - arguments: frankfurt, wiesbaden
     description: Verbindung von Frankfurt nach Wiesbaden
 rmv 3:
-  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G={%Start}&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G={%Ziel}&date=%2B0&times=%2B0&start&time={%Zeit}
+  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date=%2B0&times=%2B0&start&time=<Zeit>
   title: RMV Fahrplanauskunft
   tags:
   - bahn
@@ -4871,7 +4920,7 @@ rmv 3:
   - arguments: frankfurt, wiesbaden, 10
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr
 rmv 4:
-  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G={%Start}&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G={%Ziel}&time={%Zeit}&date={%Datum}&times=%2B0&start
+  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&time=<Zeit>&date=<Datum>&times=%2B0&start
   title: RMV Fahrplanauskunft
   tags:
   - bahn
@@ -4881,7 +4930,7 @@ rmv 4:
   - arguments: frankfurt, wiesbaden, 10, 1.1.
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 1.1.
 rsc 1:
-  url: http://de.rs-online.com/web/c/?searchTerm={%Produkt}
+  url: http://de.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Deutschland
   tags:
   - electronics
@@ -4890,17 +4939,17 @@ rsc 1:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
 sp 1:
-  url: http://www.potsdamer-stadtplan.com/?strasse={%Straße}
+  url: http://www.potsdamer-stadtplan.com/?strasse=<Straße>
   title: Stadtplan Potsdam
   tags:
   - old
 stabib 1:
-  url: http://stabikat.sbb.spk-berlin.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}
+  url: http://stabikat.sbb.spk-berlin.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Staatsbibliothek zu Berlin
   tags:
   - old
 sub 1:
-  url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM={%Suche}
+  url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Niedersächsische Staats- und Universitätsbibliothek Göttingen
   tags:
   - bibliothek
@@ -4913,7 +4962,7 @@ swp 0:
   url: https://www.swp-berlin.org/
   title: Stiftung Wissenschaft und Politik
 swp 1:
-  url: https://www.swp-berlin.org/suche?search%5Bq%5D={%Suche}
+  url: https://www.swp-berlin.org/suche?search%5Bq%5D=<Suche>
   title: Stiftung Wissenschaft und Politik
 tel 0:
   url: http://www.telefonbuch.de/
@@ -4922,7 +4971,7 @@ tel 0:
   - phone
   - telefonbuch
 tel 1:
-  url: http://www4.dastelefonbuch.de/Rueckwaerts-Suche.html?kw={%Nummer}&x=35&y=11&cifav=0&s=a20000&la=de&cmd=search&ort_ok=0&sp=55&vert_ok=0&aktion=23
+  url: http://www4.dastelefonbuch.de/Rueckwaerts-Suche.html?kw=<Nummer>&x=35&y=11&cifav=0&s=a20000&la=de&cmd=search&ort_ok=0&sp=55&vert_ok=0&aktion=23
   title: Telefonbuch Rückwärts-Suche
   tags:
   - phone
@@ -4931,7 +4980,7 @@ tel 1:
   - arguments: '8003301000'
     description: Teilnehmer mit der Telefonnummer 08003301000
 tel 2:
-  url: http://www.dastelefonbuch.de/Suche/{%Name}/{%Ort|type=city}
+  url: 'http://www.dastelefonbuch.de/Suche/<Name>/<Ort: {type: city}>'
   title: Telefonbuch
   tags:
   - phone
@@ -4942,7 +4991,7 @@ tel 2:
   - arguments: meier, dd
     description: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
 tho 1:
-  url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw={%Produkt}
+  url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw=<Produkt>
   title: Thomann.de
   tags:
   - music
@@ -4956,7 +5005,7 @@ tv 0:
   tags:
   - tv
 tva 1:
-  url: http://www.tvinfo.de/sender/{%Sender}
+  url: http://www.tvinfo.de/sender/<Sender>
   title: TV-Programm auf ...
   tags:
   - tv
@@ -4964,7 +5013,7 @@ tva 1:
   - arguments: ard
     description: Search for "ard"
 tvinfo 1:
-  url: http://tvinfo.de/exe.php3?quicksearch=1&volltext={%Suche}&tpk=&showall=&genretipp=&target=list.inc
+  url: http://tvinfo.de/exe.php3?quicksearch=1&volltext=<Suche>&tpk=&showall=&genretipp=&target=list.inc
   title: TVinfo.de
   tags:
   - tv
@@ -4972,7 +5021,7 @@ tvinfo 1:
   - arguments: tagesschau
     description: Suche nach "tagesschau"
 tvu 1:
-  url: http://www.tvinfo.de/fernsehprogramm/{%Stunde}:00
+  url: http://www.tvinfo.de/fernsehprogramm/<Stunde>:00
   title: TV-Programm um ...
   tags:
   - tv
@@ -4980,7 +5029,7 @@ tvu 1:
   - arguments: '20'
     description: Search for "20"
 uwz 1:
-  url: http://www.unwetterzentrale.de/uwz/getwarning_de.php?plz={%PLZ/Ort}&uwz=UWZ-DE&lang=de
+  url: http://www.unwetterzentrale.de/uwz/getwarning_de.php?plz=<PLZ/Ort>&uwz=UWZ-DE&lang=de
   title: Unwetterzentrale.de
   tags:
   - weather
@@ -4988,7 +5037,7 @@ uwz 1:
   - arguments: '10119'
     description: Zeige Wetterwarnungen für Postleitzahl 10119
 vbb 1:
-  url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input={%Ort}&dn?OK#focus
+  url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input=<Ort>&dn?OK#focus
   title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
   tags:
   - bahn
@@ -4999,7 +5048,7 @@ vbb 1:
   - arguments: frohnau
     description: Aktuelle Ankunft/Abfahrtszeiten an der Station Frohnau
 vbb 2:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From={%Start}&To={%Ziel}&start=1
+  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&start=1
   title: Verkehrsverbund Berlin-Brandenburg
   tags:
   - bahn
@@ -5010,7 +5059,7 @@ vbb 2:
   - arguments: westhafen, frohnau
     description: Nächste Verbindungen von Westhafen nach Frohnau
 vbb 3:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From={%Start}&To={%Ziel}&time={%Zeit}&start=1
+  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&start=1
   title: Verkehrsverbund Berlin-Brandenburg
   tags:
   - bahn
@@ -5021,7 +5070,7 @@ vbb 3:
   - arguments: vbb westhafen, frohnau, 20:00
     description: Verbindungen von Westhafen nach Frohnau heute um 20 Uhr
 vbb 4:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From={%Start}&To={%Ziel}&time={%Zeit}&date={%Datum}&start=1
+  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&date=<Datum>&start=1
   title: Verkehrsverbund Berlin-Brandenburg
   tags:
   - bahn
@@ -5032,7 +5081,7 @@ vbb 4:
   - arguments: vbb westhafen, frohnau, 20:00, 31.12.12.
     description: Verbindungen von Westhafen nach Frohnau am 31. Dezember um 20 Uhr
 vgn 1:
-  url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName={%Linie}
+  url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
   title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
   tags:
   - bahn
@@ -5042,7 +5091,7 @@ vgn 1:
   - arguments: s1
     description: Fahrplan der Linie S1
 vgn 2:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin={%Start}&type_destination=stop&name_destination={%Ziel}
+  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>
   title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
   tags:
   - bahn
@@ -5052,7 +5101,7 @@ vgn 2:
   - arguments: nürnberg, neumarkt
     description: Verbindung von Nürnberg nach Neumarkt
 vgn 3:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin={%Start}&type_destination=stop&name_destination={%Ziel}&xtime={%Abfahrtszeit}&xdate=today
+  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>&xtime=<Abfahrtszeit>&xdate=today
   title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
   tags:
   - bahn
@@ -5062,7 +5111,7 @@ vgn 3:
   - arguments: nürnberg, neumarkt, 10
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr
 vgn 4:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin={%Start}&type_destination=any&name_destination={%Ziel}&itdTripDateTimeDepArr=dep&xtime={%Abfahrtszeit}&xdate={%Datum}
+  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin=<Start>&type_destination=any&name_destination=<Ziel>&itdTripDateTimeDepArr=dep&xtime=<Abfahrtszeit>&xdate=<Datum>
   title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
   tags:
   - bahn
@@ -5072,7 +5121,7 @@ vgn 4:
   - arguments: nürnberg, neumarkt, 10, 1.1.
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr am 1.1.
 vgs 2:
-  url: http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&start=1
+  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Saarfahrplan
   tags:
   - bahn
@@ -5088,7 +5137,7 @@ vgs 2:
   - arguments: sb, zw
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf, Eingabe über Autokennzeichen
 vgs 3:
-  url: http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Abfahrtszeit}&start=1
+  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&start=1'
   title: Saarfahrplan
   tags:
   - bahn
@@ -5102,7 +5151,7 @@ vgs 3:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr
 vgs 4:
-  url: http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S={%Start|type=city}%21&Z={%Ziel|type=city}%21&T={%Abfahrtszeit}&D={%Datum}&start=1
+  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&D=<Datum>&start=1'
   title: Saarfahrplan
   tags:
   - bahn
@@ -5130,7 +5179,7 @@ vrr 0:
   - travel
   - vrr
 vrr 2:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any
+  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   title: VRR-Auskunft
   tags:
   - bahn
@@ -5140,7 +5189,7 @@ vrr 2:
   - arguments: dortmund, bochum
     description: Nächste Verbindung von Dortmund nach Bochum
 vrr 3:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute=0
+  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
   title: VRR-Auskunft
   tags:
   - bahn
@@ -5150,7 +5199,7 @@ vrr 3:
   - arguments: dortmund, bochum, 10
     description: Verbindung von Dortmund nach Bochum heute um 10 Uhr
 vrr 4:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}
+  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
   title: VRR-Auskunft
   tags:
   - bahn
@@ -5160,7 +5209,7 @@ vrr 4:
   - arguments: dortmund, bochum, 10, 30
     description: Verbindung von Dortmund nach Bochum heute um 10.30 Uhr
 vrr 5:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}
+  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
   title: VRR-Auskunft
   tags:
   - bahn
@@ -5170,7 +5219,7 @@ vrr 5:
   - arguments: dortmund, bochum, 10, 30, 28
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28. des aktuellen Monats
 vrr 6:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin={%Start}&name_destination={%Ziel}&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour={%Stunde}&itdTimeMinute={%Minute}&itdDateDay={%Tag}&itdDateMonth={%Monat}
+  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
   title: VRR-Auskunft
   tags:
   - bahn
@@ -5180,7 +5229,7 @@ vrr 6:
   - arguments: dortmund, bochum, 10, 30, 28, 1
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28.1.
 vvo 2:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeittyp%5D=dep
+  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeittyp%5D=dep
   title: Verkehrsverbund Oberelbe
   tags:
   - bahn
@@ -5191,7 +5240,7 @@ vvo 2:
   - arguments: priestewitz, krippen
     description: Nächste Verbindung von Priestewitz nach Krippen
 vvo 3:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeit%5D={%Zeit}&vaform%5Bzeittyp%5D=dep
+  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep
   title: Verkehrsverbund Oberelbe
   tags:
   - bahn
@@ -5202,7 +5251,7 @@ vvo 3:
   - arguments: priestewitz, krippen, 10
     description: Verbindung von Priestewitz nach Krippen heute um 10:00 Uhr
 vvo 4:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D={%Start}&vaform%5Bzielname%5D={%Ziel}&vaform%5Bzeit%5D={%Zeit}&vaform%5Bzeittyp%5D=dep&vaform%5Bdatum%5D={%Datum}
+  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep&vaform%5Bdatum%5D=<Datum>
   title: Verkehrsverbund Oberelbe
   tags:
   - bahn
@@ -5213,7 +5262,7 @@ vvo 4:
   - arguments: priestewitz, krippen, 10, 28.11.
     description: Verbindung von Priestewitz nach Krippen um 10:00 Uhr am 28.11.
 vvs 2:
-  url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin={%Start}&name_destination={%Ziel}
+  url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
   title: VVS Verkehrsverbund Stuttgart
   tags:
   - bahn
@@ -5228,7 +5277,7 @@ we 0:
   tags:
   - weather
 we 1:
-  url: http://www.wetter.com/suche/?search={%Ort}
+  url: http://www.wetter.com/suche/?search=<Ort>
   title: Wetter.com
   tags:
   - weather
@@ -5243,14 +5292,14 @@ wse 0:
   - series
   - tv
 wse 1:
-  url: https://www.werstreamt.es/filme-serien/?q=m{%query}&action_results=suchen
+  url: https://www.werstreamt.es/filme-serien/?q=m<query>&action_results=suchen
   title: Wer streamt es?
   tags:
   - movies
   - series
   - tv
 zal 1:
-  url: http://www.zalando.de/katalog/?q={%Produkt}
+  url: http://www.zalando.de/katalog/?q=<Produkt>
   title: Zalando.de
   tags:
   - shopping
@@ -5259,7 +5308,7 @@ zal 1:
   - arguments: schuhe
     description: Suche nach Schuhen
 § 1:
-  url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20{%Suche}
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20<Suche>
   title: Gesetze im Internet
   tags:
   - gesetze

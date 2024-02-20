@@ -1,5 +1,5 @@
 c 1:
-  url: http://www.csfd.cz/hledat/?q={%výraz}
+  url: http://www.csfd.cz/hledat/?q=<výraz>
   title: Česko-Slovenská filmová databáze
   tags:
   - czech
@@ -9,7 +9,7 @@ c 1:
   - arguments: Pelíšky
     description: Hledat "Pelíšky"
 cs 1:
-  url: https://ssjc.ujc.cas.cz/search.php?heslo={%výraz}&sti=EMPTY&where=hesla&hsubstr=no
+  url: https://ssjc.ujc.cas.cz/search.php?heslo=<výraz>&sti=EMPTY&where=hesla&hsubstr=no
   title: Slovník spisovného jazyka českého
   tags:
   - czech
@@ -20,7 +20,7 @@ cs 1:
   - arguments: strom
     description: '"strom" – dřevina s kmenem'
 csfd 1:
-  url: http://www.csfd.cz/hledat/?q={%výraz}
+  url: http://www.csfd.cz/hledat/?q=<výraz>
   title: Česko-Slovenská filmová databáze
   tags:
   - czech
@@ -30,7 +30,7 @@ csfd 1:
   - arguments: Pelíšky
     description: Hledat "Pelíšky"
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -40,7 +40,7 @@ frv 1:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
 kinobox 1:
-  url: http://www.kinobox.cz/najdi?t={%query}
+  url: http://www.kinobox.cz/najdi?t=<query>
   title: Kinobox.cz
   tags:
   - movies
@@ -48,7 +48,7 @@ kinobox 1:
   - arguments: forrest gump
     description: Search for "forrest gump"
 sub 1:
-  url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-{%výraz}
+  url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-<výraz>
   title: Filmové titulky (Open Subtitles)
   tags:
   - subtitles

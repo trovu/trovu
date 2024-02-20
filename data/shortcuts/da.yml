@@ -1,5 +1,5 @@
 frv 1:
-  url: https://{$language}.forvo.com/search/{%word}/
+  url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
   description: Forvo pronunciation database, localized interface
   tags:
@@ -9,7 +9,7 @@ frv 1:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
 gyl 1:
-  url: http://ordbog.gyldendal.dk/sitecore/content/Ordbog/Home/Opslag/Resultat.aspx?lcode=DAEN&q={%ord}
+  url: http://ordbog.gyldendal.dk/sitecore/content/Ordbog/Home/Opslag/Resultat.aspx?lcode=DAEN&q=<ord>
   title: Gyldendals Røde Ordbøger
   tags:
   - language
@@ -17,7 +17,7 @@ gyl 1:
   - arguments: kaffe
     description: Search for "kaffe"
 ods 1:
-  url: https://ordnet.dk/ods/ordbog?query={%ord}
+  url: https://ordnet.dk/ods/ordbog?query=<ord>
   title: Ordbog over det danske sprog
   tags:
   - language
@@ -25,7 +25,7 @@ ods 1:
   - arguments: skrive
     description: artikel om "skrive"
 spr 1:
-  url: http://sproget.dk/lookup?SearchableText={%ord}
+  url: http://sproget.dk/lookup?SearchableText=<ord>
   title: Sproget.dk
   tags:
   - language

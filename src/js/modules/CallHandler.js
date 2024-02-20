@@ -1,5 +1,4 @@
 /** @module CallHandler */
-
 import Env from './Env.js';
 import Helper from './Helper.js';
 import ShortcutFinder from './ShortcutFinder.js';
@@ -23,7 +22,7 @@ export default class CallHandler {
 
     let redirectUrl;
 
-    const response = await this.getRedirectResponse(env);
+    const response = this.getRedirectResponse(env);
 
     if (response.status === 'found') {
       redirectUrl = response.redirectUrl;
@@ -47,7 +46,7 @@ export default class CallHandler {
    *
    * @return {object} response  - Contains redirect URL, status.
    */
-  static async getRedirectResponse(env) {
+  static getRedirectResponse(env) {
     const response = {};
 
     if (env.reload && !env.query) {
@@ -61,7 +60,7 @@ export default class CallHandler {
       return response;
     }
 
-    const shortcut = await ShortcutFinder.findShortcut(env);
+    const shortcut = ShortcutFinder.findShortcut(env);
 
     if (!shortcut) {
       response.status = 'not_found';
@@ -89,7 +88,7 @@ export default class CallHandler {
       language: env.language,
       country: env.country,
     });
-    response.redirectUrl = await UrlProcessor.replaceArguments(
+    response.redirectUrl = UrlProcessor.replaceArguments(
       response.redirectUrl,
       env.args,
       env,
@@ -102,7 +101,7 @@ export default class CallHandler {
     let alternative = shortcut.deprecated.alternative.query;
     for (const i in env.args) {
       alternative = alternative.replace(
-        '{%' + (parseInt(i) + 1) + '}',
+        '<' + (parseInt(i) + 1) + '>',
         env.args[i],
       );
     }
@@ -117,7 +116,10 @@ export default class CallHandler {
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
   static getRedirectUrlToHome(response) {
-    const params = Helper.getUrlParams();
+    const params = Env.getUrlParams();
+    if (params.query === 'reload' || params.query === 'debug:reload') {
+      delete params.query;
+    }
     switch (response.status) {
       case 'deprecated':
         params.alternative = response.alternative;
@@ -127,7 +129,7 @@ export default class CallHandler {
         break;
     }
     params.status = response.status;
-    const paramStr = Helper.getUrlParamStr(params);
+    const paramStr = Env.getUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
   }

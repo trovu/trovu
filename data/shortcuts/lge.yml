@@ -1,9 +1,9 @@
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-en 0:
   url: https://www.linguee.com/english-german/
   title: German-English (Linguee)
@@ -13,7 +13,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://www.linguee.com/english-german/search?query={%word}
+  url: https://www.linguee.com/english-german/search?query=<word>
   title: German-English (Linguee)
   tags:
   - dictionary
@@ -34,7 +34,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://www.linguee.es/espanol-aleman/search?query={%word}
+  url: https://www.linguee.es/espanol-aleman/search?query=<word>
   title: Alemán-Español (Linguee)
   tags:
   - dictionary
@@ -55,7 +55,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://www.linguee.fr/francais-allemand/search?query={%word}
+  url: https://www.linguee.fr/francais-allemand/search?query=<word>
   title: Allemand-Français (Linguee)
   tags:
   - dictionary
@@ -76,7 +76,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://www.linguee.de/deutsch-polnisch/search?query={%word}
+  url: https://www.linguee.de/deutsch-polnisch/search?query=<word>
   title: Niemiecki-Polski (Linguee)
   tags:
   - dictionary
@@ -97,7 +97,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://www.linguee.pt/portugues-alemao/search?query={%word}
+  url: https://www.linguee.pt/portugues-alemao/search?query=<word>
   title: Alemão-Português (Linguee)
   tags:
   - dictionary
@@ -111,10 +111,10 @@ de-pt 1:
     description: Tradução em alemão de "árvore"
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (Linguee)
   include:
@@ -137,7 +137,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: https://www.linguee.com/english-spanish/search?query={%word}
+  url: https://www.linguee.com/english-spanish/search?query=<word>
   title: Inglés-Español (Linguee)
   tags:
   - dictionary
@@ -158,7 +158,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://www.linguee.com/english-french/search?query={%word}
+  url: https://www.linguee.com/english-french/search?query=<word>
   title: Anglais-Français (Linguee)
   tags:
   - dictionary
@@ -179,7 +179,7 @@ en-pt 0:
   - language
   - portuguese
 en-pt 1:
-  url: https://www.linguee.com/english-portuguese/search?query={%word}
+  url: https://www.linguee.com/english-portuguese/search?query=<word>
   title: Inglês-Português (Linguee)
   tags:
   - dictionary
@@ -193,10 +193,10 @@ en-pt 1:
     description: Tradução em inglês de "árvore"
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (Linguee)
   include:
@@ -225,10 +225,10 @@ es-en 1:
     description: Spanish translation of "tree"
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (Linguee)
   include:
@@ -257,10 +257,10 @@ fr-en 1:
     description: French translation of "tree"
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (Linguee)
   include:
@@ -276,10 +276,10 @@ pl-de 1:
     description: Polnisch-Übersetzung von "baum"
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (Linguee)
   include:

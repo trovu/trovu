@@ -1,9 +1,9 @@
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-tr 0:
   url: https://deutsch-tuerkisch.net/
   title: Almanca-Türkçe (deutsch-tuerkisch.net)
@@ -13,7 +13,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://deutsch-tuerkisch.net/suche/{%word}
+  url: https://deutsch-tuerkisch.net/suche/<word>
   title: Almanca-Türkçe (deutsch-tuerkisch.net)
   tags:
   - dictionary
@@ -27,10 +27,10 @@ de-tr 1:
     description: '"ağaç" için Almanca çevirisi'
 tr 0:
   include:
-    key: tr-{$language} 0
+    key: tr-<$language> 0
 tr 1:
   include:
-    key: tr-{$language} 1
+    key: tr-<$language> 1
 tr-de 0:
   title: Türkisch-Deutsch (deutsch-tuerkisch.net)
   include:

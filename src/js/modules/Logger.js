@@ -14,10 +14,18 @@ export default class Logger {
   }
 
   log(level, message) {
+    // Check if message is already in this.logs
+    // if yes, do not log again
+    if (
+      this.logs.some((log) => log.level === level && log.message === message)
+    ) {
+      return;
+    }
     this.logs.push({
       level: level,
       message: message,
     });
+    console.log(level, message);
     if (this.logElement) {
       this.logElement.textContent += `${message}\n`;
     }
@@ -27,6 +35,7 @@ export default class Logger {
   }
   warning(message) {
     this.log('warning', message);
+    this.showLog();
   }
   success(message) {
     this.log('success', message);
@@ -34,7 +43,6 @@ export default class Logger {
   error(message) {
     this.log('error', message);
     this.showLog();
-    console.table(this.logs);
     throw new Error(message);
   }
   showLog() {

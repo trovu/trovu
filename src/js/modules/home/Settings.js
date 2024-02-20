@@ -1,5 +1,4 @@
 /** @module Settings */
-
 import countriesList from 'countries-list';
 
 /** Settings methods. */
@@ -88,7 +87,7 @@ export default class Settings {
     list.forEach((item) =>
       selectEl.appendChild(
         new Option(
-          `${item.name} ${item.emoji ? item.emoji : ``}`,
+          `${item.name} ${item.emoji ? item.emoji : ''}`,
           item.key.toLocaleLowerCase(),
         ),
       ),

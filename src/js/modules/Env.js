@@ -1,12 +1,11 @@
 /** @module Env */
-
+import pkg from '../../../package.json';
 import Helper from './Helper.js';
 import Logger from './Logger.js';
 import NamespaceFetcher from './NamespaceFetcher.js';
 import QueryParser from './QueryParser.js';
-import jsyaml from 'js-yaml';
-import pkg from '../../../package.json';
 import countriesList from 'countries-list';
+import jsyaml from 'js-yaml';
 
 /** Set and remember the environment. */
 
@@ -17,6 +16,7 @@ export default class Env {
    * @param {object} env - The environment variables.
    */
   constructor(env) {
+    countriesList.languages['eo'] = { name: 'Esperanto', native: 'Esperanto' };
     this.setToThis(env);
     if (pkg.gitCommitHash) {
       this.commitHash = pkg.gitCommitHash.slice(0, 7);
@@ -24,7 +24,6 @@ export default class Env {
       this.commitHash = 'unknown';
     }
 
-    this.configUrlTemplate = `https://raw.githubusercontent.com/{%github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     this.logger = new Logger('#log');
   }
 
@@ -53,42 +52,41 @@ export default class Env {
 
     // Put environment into hash.
     if (this.github) {
-      params['github'] = this.github;
+      params.github = this.github;
+    } else if (this.configUrl) {
+      params.configUrl = this.configUrl;
     } else {
-      params['language'] = this.language;
-      params['country'] = this.country;
+      params.language = this.language;
+      params.country = this.country;
+      if (this.defaultKeyword) {
+        params.defaultKeyword = this.defaultKeyword;
+      }
     }
     if (this.debug) {
-      params['debug'] = 1;
+      params.debug = 1;
     }
-    // Don't add defaultKeyword into params
-    // when Github user is set.
-    if (this.defaultKeyword && !this.github) {
-      params['defaultKeyword'] = this.defaultKeyword;
+    for (const property of ['status', 'query', 'alternative', 'key']) {
+      if (this[property]) {
+        params[property] = this[property];
+      }
     }
-    if (this.status) {
-      params['status'] = this.status;
-    }
-    if (this.query) {
-      params['query'] = this.query;
-    }
-    if (this.alternative) {
-      params['alternative'] = this.alternative;
-    }
-    if (this.key) {
-      params['key'] = this.key;
-    }
-
     return params;
   }
 
   /**
    * Get the parameters as string.
    */
-  getParamStr() {
+  getParamStr(moreParams) {
     const params = this.getParams();
-    const paramStr = Helper.getUrlParamStr(params);
+    Object.assign(params, moreParams);
+    const paramStr = Env.getUrlParamStr(params);
     return paramStr;
+  }
+
+  getProcessUrl(moreParams) {
+    const paramStr = this.getParamStr(moreParams);
+    const processUrl = 'process/index.html?#' + paramStr;
+    return processUrl;
   }
 
   /**
@@ -98,7 +96,7 @@ export default class Env {
    */
   async populate(params) {
     if (!params) {
-      params = Helper.getUrlParams();
+      params = Env.getUrlParams();
     }
 
     // Set debug and reload from URL params.
@@ -114,14 +112,22 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     if (typeof params.github === 'string' && params.github !== '') {
-      await this.setWithUserConfigFromGithub(params);
+      this.configUrl = this.getGithubConfigUrl(params.github);
     }
-
+    if (typeof params.configUrl === 'string' && params.configUrl !== '') {
+      this.configUrl = params.configUrl;
+    }
+    if (this.configUrl) {
+      const config = await this.getUserConfigFromUrl(this.configUrl);
+      if (config) {
+        Object.assign(this, config);
+      }
+    }
     // Assign again, to override user config.
     Object.assign(this, params);
     Object.assign(this, params_from_query);
 
-    await this.setDefaults();
+    this.setDefaults();
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
@@ -142,6 +148,16 @@ export default class Env {
       this.keyword = '';
       this.arguments = [this.query];
     }
+  }
+
+  /**
+   * Get the URL to the config file on Github.
+   * @param {string} github - The Github user name.
+   * @returns {string} The URL to the config file.
+   */
+  getGithubConfigUrl(github) {
+    const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml?${this.commitHash}`;
+    return configUrl;
   }
 
   /**
@@ -177,32 +193,15 @@ export default class Env {
   }
 
   /**
-   * Set the user configuration from their fork in their Github profile.
-   *
-   * @param {array} params - Here, 'github' and 'debug' will be used
+   * Get the user configuration from a URL.
+   * @param {string} configUrl - The URL to the config file.
+   * @returns {(object|boolean)} config - The user's config object, or false if fetch failed.
    */
-  async setWithUserConfigFromGithub(params) {
-    const config = await this.getUserConfigFromGithub(params);
-    if (config) {
-      Object.assign(this, config);
-    }
-  }
 
-  /**
-   * Get the user configuration from their fork in their Github profile.
-   *
-   * @param {array} params - Here, 'github' and 'debug' will be used
-   *
-   * @return {(object|boolean)} config - The user's config object, or false if fetch failed.
-   */
-  async getUserConfigFromGithub(params) {
-    const configUrl = this.configUrlTemplate.replace(
-      '{%github}',
-      params.github,
-    );
+  async getUserConfigFromUrl(configUrl) {
     const configYml = await Helper.fetchAsync(configUrl, this);
     if (!configYml) {
-      this.logger.error(`Error reading Github config from ${configUrl}`);
+      this.logger.error(`Error reading config from ${configUrl}`);
     }
     try {
       const config = jsyaml.load(configYml);
@@ -212,27 +211,49 @@ export default class Env {
     }
   }
 
-  // Param getters ====================================================
+  /**
+   * Set default language and country if they are still empty.
+   * @returns {void}
+   */
+  setDefaultLanguageAndCountry() {
+    if (
+      this.language in countriesList.languages &&
+      typeof this.country === 'string' &&
+      this.country.toUpperCase() in countriesList.countries
+    ) {
+      return;
+    }
+
+    const { language, country } = this.getDefaultLanguageAndCountry();
+
+    // Default language.
+    if (!(this.language in countriesList.languages)) {
+      this.language = language;
+    }
+    // Default country.
+    if (
+      !this.country ||
+      !(this.country.toUpperCase() in countriesList.countries)
+    ) {
+      this.country = country;
+    }
+  }
 
   /**
    * Get the default language and country from browser.
    *
    * @return {object} [language, country] - The default language and country.
    */
-  async getDefaultLanguageAndCountry() {
+  getDefaultLanguageAndCountry() {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
-    if (!country) {
-      try {
-        country = await this.getCountryFromIp();
-      } catch (error) {
-        // TODO: Log about error, but don't stop.
-      }
+    // Make sure language and country are in our lists.
+    if (!(language in countriesList.languages)) {
+      language = 'en';
     }
-
-    // Set defaults.
-    language = language || 'en';
-    country = country || 'us';
+    if (!country || !(country.toUpperCase() in countriesList.countries)) {
+      country = 'us';
+    }
 
     // Ensure lowercase.
     language = language.toLowerCase();
@@ -267,41 +288,11 @@ export default class Env {
   }
 
   /**
-   * Get the country from the IP address.
-   *
-   * @return {string} country - The country as ISO 3166‑1 alpha-2 code
-   */
-  async getCountryFromIp() {
-    const ipInfoText = await this.fetchDbIp();
-    const ipInfo = JSON.parse(ipInfoText);
-    const country = ipInfo.countryCode;
-    return country;
-  }
-
-  async fetchDbIp() {
-    const ipInfoUrl = 'https://api.db-ip.com/v2/free/self';
-    const ipInfoText = await Helper.fetchAsync(ipInfoUrl, this);
-    return ipInfoText;
-  }
-
-  /**
    * Set default environment variables if they are still empty.
    */
-  async setDefaults() {
-    let language, country;
+  setDefaults() {
+    this.setDefaultLanguageAndCountry();
 
-    if (typeof this.language != 'string' || typeof this.country != 'string') {
-      ({ language, country } = await this.getDefaultLanguageAndCountry());
-    }
-
-    // Default language.
-    if (typeof this.language != 'string') {
-      this.language = language;
-    }
-    // Default country.
-    if (typeof this.country != 'string') {
-      this.country = country;
-    }
     // Default namespaces.
     if (typeof this.namespaces != 'object') {
       this.namespaces = ['o', this.language, '.' + this.country];
@@ -318,12 +309,15 @@ export default class Env {
    */
   async getData() {
     let text;
+    let url;
     if (typeof window !== 'undefined') {
-      const url = `/data.json?${this.commitHash}`;
+      url = `/data.json?${this.commitHash}`;
       text = await Helper.fetchAsync(url, this);
     } else {
+      // eslint-disable-next-line no-undef
       const fs = require('fs');
-      text = fs.readFileSync('./dist/public/data.json', 'utf8');
+      url = './dist/public/data.json';
+      text = fs.readFileSync(url, 'utf8');
     }
     if (!text) {
       return false;
@@ -335,5 +329,46 @@ export default class Env {
       this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
       return false;
     }
+  }
+
+  /**
+   * From 'http://example.com/foo#bar=baz' get 'bar=baz'.
+   *
+   * @return {string} hash - The hash string.
+   */
+  static getUrlHash() {
+    const hash = window.location.hash.substr(1);
+    return hash;
+  }
+
+  /**
+   * Get parameters from the URL query string.
+   *
+   * @return {object} params - List of found parameters.
+   */
+  static getUrlParams() {
+    const urlParamStr = this.getUrlHash();
+    const urlParams = new URLSearchParams(urlParamStr);
+    const params = {};
+    urlParams.forEach((value, key) => {
+      params[key] = value;
+    });
+    return params;
+  }
+
+  /**
+   * Build URL param string from param object.
+   *
+   * @param {object} params       - List of parameters.
+   *
+   * @return {string} urlParamStr - Parameter as URL string.
+   */
+  static getUrlParamStr(params) {
+    const urlParams = new URLSearchParams();
+    for (const key in params) {
+      urlParams.set(key, params[key]);
+    }
+    urlParams.sort();
+    return urlParams;
   }
 }

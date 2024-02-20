@@ -33,18 +33,19 @@ nav:
   - Home: index.md
   - privacy.md
   - User guide:
-      - users/processing.md
       - users/integration.md
       - users/advanced.md
       - users/troubleshooting.md
       - users/support.md
   - Shortcuts:
+      - General: shortcuts/index.md
       - shortcuts/namespaces.md
-      - shortcuts/urls.md
-      - shortcuts/includes.md
+      - shortcuts/url.md
+      - shortcuts/include.md
+      - shortcuts/deprecated.md
       - shortcuts/userscripts.md
   - Editor guide:
-      - editors/index.md
+      - General: editors/index.md
       - editors/policy.md
   - Developer guide:
       - developers/index.md

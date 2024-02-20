@@ -1,9 +1,9 @@
 ar 0:
   include:
-    key: ar-{$language} 0
+    key: ar-<$language> 0
 ar 1:
   include:
-    key: ar-{$language} 1
+    key: ar-<$language> 1
 ar-en 0:
   url: https://bab.la/dictionary/english-arabic/
   title: Arabic-English (bab.la)
@@ -13,7 +13,7 @@ ar-en 0:
   - english
   - language
 ar-en 1:
-  url: https://bab.la/dictionary/english-arabic/{%word}
+  url: https://bab.la/dictionary/english-arabic/<word>
   title: Arabic-English (bab.la)
   tags:
   - arabic
@@ -27,10 +27,10 @@ ar-en 1:
     description: Arabic translation of "tree"
 cs 0:
   include:
-    key: cs-{$language} 0
+    key: cs-<$language> 0
 cs 1:
   include:
-    key: cs-{$language} 1
+    key: cs-<$language> 1
 cs-en 0:
   url: https://bab.la/dictionary/english-czech/
   title: Czech-English (bab.la)
@@ -40,7 +40,7 @@ cs-en 0:
   - english
   - language
 cs-en 1:
-  url: https://bab.la/dictionary/english-czech/{%word}
+  url: https://bab.la/dictionary/english-czech/<word>
   title: Czech-English (bab.la)
   tags:
   - czech
@@ -54,10 +54,10 @@ cs-en 1:
     description: Czech translation of "tree"
 da 0:
   include:
-    key: da-{$language} 0
+    key: da-<$language> 0
 da 1:
   include:
-    key: da-{$language} 1
+    key: da-<$language> 1
 da-de 0:
   url: https://bab.la/woerterbuch/daenisch-deutsch/
   title: Dänisch-Deutsch (bab.la)
@@ -67,7 +67,7 @@ da-de 0:
   - german
   - language
 da-de 1:
-  url: https://bab.la/woerterbuch/daenisch-deutsch/{%word}
+  url: https://bab.la/woerterbuch/daenisch-deutsch/<word>
   title: Dänisch-Deutsch (bab.la)
   tags:
   - danish
@@ -88,7 +88,7 @@ da-en 0:
   - english
   - language
 da-en 1:
-  url: https://bab.la/dictionary/english-danish/{%word}
+  url: https://bab.la/dictionary/english-danish/<word>
   title: Danish-English (bab.la)
   tags:
   - danish
@@ -102,10 +102,10 @@ da-en 1:
     description: Danish translation of "tree"
 de 0:
   include:
-    key: de-{$language} 0
+    key: de-<$language> 0
 de 1:
   include:
-    key: de-{$language} 1
+    key: de-<$language> 1
 de-da 0:
   title: Tysk-Dansk (bab.la)
   include:
@@ -128,7 +128,7 @@ de-en 0:
   - german
   - language
 de-en 1:
-  url: https://bab.la/dictionary/german-english/{%word}
+  url: https://bab.la/dictionary/german-english/<word>
   title: German-English (bab.la)
   tags:
   - dictionary
@@ -149,7 +149,7 @@ de-es 0:
   - language
   - spanish
 de-es 1:
-  url: https://bab.la/dictionary/german-spanish/{%word}
+  url: https://bab.la/dictionary/german-spanish/<word>
   title: Alemán-Español (bab.la)
   tags:
   - dictionary
@@ -170,7 +170,7 @@ de-fr 0:
   - german
   - language
 de-fr 1:
-  url: https://bab.la/dictionary/german-french/{%word}
+  url: https://bab.la/dictionary/german-french/<word>
   title: Allemand-Français (bab.la)
   tags:
   - dictionary
@@ -191,7 +191,7 @@ de-it 0:
   - italian
   - language
 de-it 1:
-  url: https://bab.la/dictionary/german-italian/{%word}
+  url: https://bab.la/dictionary/german-italian/<word>
   title: Tedesco-Italiano (bab.la)
   tags:
   - dictionary
@@ -212,7 +212,7 @@ de-nl 0:
   - german
   - language
 de-nl 1:
-  url: https://bab.la/dictionary/german-dutch/{%word}
+  url: https://bab.la/dictionary/german-dutch/<word>
   title: Duits-Nederlands (bab.la)
   tags:
   - dictionary
@@ -233,7 +233,7 @@ de-pl 0:
   - language
   - polish
 de-pl 1:
-  url: https://bab.la/dictionary/german-polish/{%word}
+  url: https://bab.la/dictionary/german-polish/<word>
   title: Niemiecki-Polski (bab.la)
   tags:
   - dictionary
@@ -254,7 +254,7 @@ de-pt 0:
   - language
   - portuguese
 de-pt 1:
-  url: https://bab.la/dictionary/german-portuguese/{%word}
+  url: https://bab.la/dictionary/german-portuguese/<word>
   title: Alemão-Português (bab.la)
   tags:
   - dictionary
@@ -275,7 +275,7 @@ de-ru 0:
   - language
   - russian
 de-ru 1:
-  url: https://bab.la/dictionary/german-russian/{%word}
+  url: https://bab.la/dictionary/german-russian/<word>
   title: Немецкий-Русский (bab.la)
   tags:
   - dictionary
@@ -296,7 +296,7 @@ de-sv 0:
   - language
   - swedish
 de-sv 1:
-  url: https://bab.la/dictionary/german-swedish/{%word}
+  url: https://bab.la/dictionary/german-swedish/<word>
   title: Tyska-Svenska (bab.la)
   tags:
   - dictionary
@@ -317,7 +317,7 @@ de-tr 0:
   - language
   - turkish
 de-tr 1:
-  url: https://bab.la/dictionary/german-turkish/{%word}
+  url: https://bab.la/dictionary/german-turkish/<word>
   title: Almanca-Türkçe (bab.la)
   tags:
   - dictionary
@@ -331,10 +331,10 @@ de-tr 1:
     description: '"ağaç" için Almanca çevirisi'
 el 0:
   include:
-    key: el-{$language} 0
+    key: el-<$language> 0
 el 1:
   include:
-    key: el-{$language} 1
+    key: el-<$language> 1
 el-en 0:
   title: Greek-English (bab.la)
   include:
@@ -350,10 +350,10 @@ el-en 1:
     description: Greek translation of "tree"
 en 0:
   include:
-    key: en-{$language} 0
+    key: en-<$language> 0
 en 1:
   include:
-    key: en-{$language} 1
+    key: en-<$language> 1
 en-ar 0:
   title: الإنجليزية-العربية (bab.la)
   include:
@@ -415,7 +415,7 @@ en-el 0:
   - greek
   - language
 en-el 1:
-  url: https://bab.la/dictionary/english-greek/{%word}
+  url: https://bab.la/dictionary/english-greek/<word>
   title: Αγγλικά-Ελληνικά (bab.la)
   tags:
   - dictionary
@@ -436,7 +436,7 @@ en-eo 0:
   - esperanto
   - language
 en-eo 1:
-  url: https://bab.la/dictionary/english-esperanto/{%word}
+  url: https://bab.la/dictionary/english-esperanto/<word>
   title: Angla-Esperanto (bab.la)
   tags:
   - dictionary
@@ -457,7 +457,7 @@ en-es 0:
   - language
   - spanish
 en-es 1:
-  url: https://bab.la/dictionary/english-spanish/{%word}
+  url: https://bab.la/dictionary/english-spanish/<word>
   title: Inglés-Español (bab.la)
   tags:
   - dictionary
@@ -478,7 +478,7 @@ en-fi 0:
   - finnish
   - language
 en-fi 1:
-  url: https://bab.la/dictionary/english-finnish/{%word}
+  url: https://bab.la/dictionary/english-finnish/<word>
   title: Englanti-Suomi (bab.la)
   tags:
   - dictionary
@@ -499,7 +499,7 @@ en-fr 0:
   - french
   - language
 en-fr 1:
-  url: https://bab.la/dictionary/english-french/{%word}
+  url: https://bab.la/dictionary/english-french/<word>
   title: Anglais-Français (bab.la)
   tags:
   - dictionary
@@ -520,7 +520,7 @@ en-hi 0:
   - hindi
   - language
 en-hi 1:
-  url: https://bab.la/dictionary/english-hindi/{%word}
+  url: https://bab.la/dictionary/english-hindi/<word>
   title: अंग्रेज़ी-हिन्दी (bab.la)
   tags:
   - dictionary
@@ -541,7 +541,7 @@ en-hu 0:
   - hungarian
   - language
 en-hu 1:
-  url: https://bab.la/dictionary/english-hungarian/{%word}
+  url: https://bab.la/dictionary/english-hungarian/<word>
   title: Angol-Magyar (bab.la)
   tags:
   - dictionary
@@ -562,7 +562,7 @@ en-id 0:
   - indonesian
   - language
 en-id 1:
-  url: https://bab.la/dictionary/english-indonesian/{%word}
+  url: https://bab.la/dictionary/english-indonesian/<word>
   title: Inggris-Bahasa Indonesia (bab.la)
   tags:
   - dictionary
@@ -583,7 +583,7 @@ en-it 0:
   - italian
   - language
 en-it 1:
-  url: https://bab.la/dictionary/english-italian/{%word}
+  url: https://bab.la/dictionary/english-italian/<word>
   title: Inglese-Italiano (bab.la)
   tags:
   - dictionary
@@ -604,7 +604,7 @@ en-ja 0:
   - japanese
   - language
 en-ja 1:
-  url: https://bab.la/dictionary/english-japanese/{%word}
+  url: https://bab.la/dictionary/english-japanese/<word>
   title: 英語-日本語 (bab.la)
   tags:
   - dictionary
@@ -625,7 +625,7 @@ en-ka 0:
   - georgian
   - language
 en-ka 1:
-  url: https://bab.la/dictionary/english-georgian/{%word}
+  url: https://bab.la/dictionary/english-georgian/<word>
   title: Ინგლისური-Ქართული (bab.la)
   tags:
   - dictionary
@@ -646,7 +646,7 @@ en-ko 0:
   - korean
   - language
 en-ko 1:
-  url: https://bab.la/dictionary/english-korean/{%word}
+  url: https://bab.la/dictionary/english-korean/<word>
   title: 영어-한국어 (bab.la)
   tags:
   - dictionary
@@ -667,7 +667,7 @@ en-ms 0:
   - language
   - malay
 en-ms 1:
-  url: https://bab.la/dictionary/english-malay/{%word}
+  url: https://bab.la/dictionary/english-malay/<word>
   title: Inggeris-Bahasa Melayu (bab.la)
   tags:
   - dictionary
@@ -688,7 +688,7 @@ en-nl 0:
   - english
   - language
 en-nl 1:
-  url: https://bab.la/dictionary/english-dutch/{%word}
+  url: https://bab.la/dictionary/english-dutch/<word>
   title: Engels-Nederlands (bab.la)
   tags:
   - dictionary
@@ -709,7 +709,7 @@ en-no 0:
   - language
   - norwegian
 en-no 1:
-  url: https://bab.la/dictionary/english-norwegian/{%word}
+  url: https://bab.la/dictionary/english-norwegian/<word>
   title: Engelsk-Norsk (bab.la)
   tags:
   - dictionary
@@ -730,7 +730,7 @@ en-pl 0:
   - language
   - polish
 en-pl 1:
-  url: https://bab.la/dictionary/english-polish/{%word}
+  url: https://bab.la/dictionary/english-polish/<word>
   title: Angielski-Polski (bab.la)
   tags:
   - dictionary
@@ -751,7 +751,7 @@ en-pt 0:
   - language
   - portuguese
 en-pt 1:
-  url: https://bab.la/dictionary/english-portuguese/{%word}
+  url: https://bab.la/dictionary/english-portuguese/<word>
   title: Inglês-Português (bab.la)
   tags:
   - dictionary
@@ -772,7 +772,7 @@ en-ro 0:
   - language
   - romanian
 en-ro 1:
-  url: https://bab.la/dictionary/english-romanian/{%word}
+  url: https://bab.la/dictionary/english-romanian/<word>
   title: Engleză-Română (bab.la)
   tags:
   - dictionary
@@ -793,7 +793,7 @@ en-ru 0:
   - language
   - russian
 en-ru 1:
-  url: https://bab.la/dictionary/english-russian/{%word}
+  url: https://bab.la/dictionary/english-russian/<word>
   title: Английский-Русский (bab.la)
   tags:
   - dictionary
@@ -814,7 +814,7 @@ en-sv 0:
   - language
   - swedish
 en-sv 1:
-  url: https://bab.la/dictionary/english-swedish/{%word}
+  url: https://bab.la/dictionary/english-swedish/<word>
   title: Engelska-Svenska (bab.la)
   tags:
   - dictionary
@@ -835,7 +835,7 @@ en-sw 0:
   - language
   - swahili
 en-sw 1:
-  url: https://bab.la/dictionary/english-swahili/{%word}
+  url: https://bab.la/dictionary/english-swahili/<word>
   title: Kiingereza-Kiswahili (bab.la)
   tags:
   - dictionary
@@ -856,7 +856,7 @@ en-te 0:
   - language
   - telugu
 en-te 1:
-  url: https://bab.la/dictionary/english-telugu/{%word}
+  url: https://bab.la/dictionary/english-telugu/<word>
   title: ఆంగ్లం-తెలుగు (bab.la)
   tags:
   - dictionary
@@ -877,7 +877,7 @@ en-th 0:
   - language
   - thai
 en-th 1:
-  url: https://bab.la/dictionary/english-thai/{%word}
+  url: https://bab.la/dictionary/english-thai/<word>
   title: อังกฤษ-ไทย (bab.la)
   tags:
   - dictionary
@@ -898,7 +898,7 @@ en-tr 0:
   - language
   - turkish
 en-tr 1:
-  url: https://bab.la/dictionary/english-turkish/{%word}
+  url: https://bab.la/dictionary/english-turkish/<word>
   title: İngilizce-Türkçe (bab.la)
   tags:
   - dictionary
@@ -919,7 +919,7 @@ en-ur 0:
   - language
   - urdu
 en-ur 1:
-  url: https://bab.la/dictionary/english-urdu/{%word}
+  url: https://bab.la/dictionary/english-urdu/<word>
   title: انگریزی-اردو (bab.la)
   tags:
   - dictionary
@@ -940,7 +940,7 @@ en-vi 0:
   - language
   - vietnamese
 en-vi 1:
-  url: https://bab.la/dictionary/english-vietnamese/{%word}
+  url: https://bab.la/dictionary/english-vietnamese/<word>
   title: Tiếng Anh-Tiếng Việt (bab.la)
   tags:
   - dictionary
@@ -961,7 +961,7 @@ en-zh 0:
   - english
   - language
 en-zh 1:
-  url: https://bab.la/dictionary/english-chinese/{%word}
+  url: https://bab.la/dictionary/english-chinese/<word>
   title: 英文-中文 (bab.la)
   tags:
   - chinese
@@ -982,7 +982,7 @@ en-zu 0:
   - language
   - zulu
 en-zu 1:
-  url: https://bab.la/dictionary/english-zulu/{%word}
+  url: https://bab.la/dictionary/english-zulu/<word>
   title: I-English-IsiZulu (bab.la)
   tags:
   - dictionary
@@ -996,10 +996,10 @@ en-zu 1:
     description: Ukuthathwa kwe i-English kuka "isihlahla"
 eo 0:
   include:
-    key: eo-{$language} 0
+    key: eo-<$language> 0
 eo 1:
   include:
-    key: eo-{$language} 1
+    key: eo-<$language> 1
 eo-en 0:
   title: Esperanto-English (bab.la)
   include:
@@ -1015,10 +1015,10 @@ eo-en 1:
     description: Esperanto translation of "tree"
 es 0:
   include:
-    key: es-{$language} 0
+    key: es-<$language> 0
 es 1:
   include:
-    key: es-{$language} 1
+    key: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (bab.la)
   include:
@@ -1054,7 +1054,7 @@ es-fr 0:
   - language
   - spanish
 es-fr 1:
-  url: https://bab.la/dictionary/spanish-french/{%word}
+  url: https://bab.la/dictionary/spanish-french/<word>
   title: Espagnol-Français (bab.la)
   tags:
   - dictionary
@@ -1075,7 +1075,7 @@ es-it 0:
   - language
   - spanish
 es-it 1:
-  url: https://bab.la/dictionary/spanish-italian/{%word}
+  url: https://bab.la/dictionary/spanish-italian/<word>
   title: Spagnolo-Italiano (bab.la)
   tags:
   - dictionary
@@ -1096,7 +1096,7 @@ es-pt 0:
   - portuguese
   - spanish
 es-pt 1:
-  url: https://bab.la/dictionary/spanish-portuguese/{%word}
+  url: https://bab.la/dictionary/spanish-portuguese/<word>
   title: Espanhol-Português (bab.la)
   tags:
   - dictionary
@@ -1117,7 +1117,7 @@ es-qu 0:
   - quechua
   - spanish
 es-qu 1:
-  url: https://bab.la/dictionary/spanish-quechua/{%word}
+  url: https://bab.la/dictionary/spanish-quechua/<word>
   title: Español Simi-Runasimi (bab.la)
   tags:
   - dictionary
@@ -1131,10 +1131,10 @@ es-qu 1:
     description: Español Simi-pi "kulli"ta tʼikray
 fi 0:
   include:
-    key: fi-{$language} 0
+    key: fi-<$language> 0
 fi 1:
   include:
-    key: fi-{$language} 1
+    key: fi-<$language> 1
 fi-en 0:
   title: Finnish-English (bab.la)
   include:
@@ -1150,10 +1150,10 @@ fi-en 1:
     description: Finnish translation of "tree"
 fr 0:
   include:
-    key: fr-{$language} 0
+    key: fr-<$language> 0
 fr 1:
   include:
-    key: fr-{$language} 1
+    key: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (bab.la)
   include:
@@ -1202,7 +1202,7 @@ fr-it 0:
   - italian
   - language
 fr-it 1:
-  url: https://bab.la/dictionary/french-italian/{%word}
+  url: https://bab.la/dictionary/french-italian/<word>
   title: Francese-Italiano (bab.la)
   tags:
   - dictionary
@@ -1216,10 +1216,10 @@ fr-it 1:
     description: Traduzione in francese di "albero"
 hi 0:
   include:
-    key: hi-{$language} 0
+    key: hi-<$language> 0
 hi 1:
   include:
-    key: hi-{$language} 1
+    key: hi-<$language> 1
 hi-en 0:
   title: Hindi-English (bab.la)
   include:
@@ -1235,10 +1235,10 @@ hi-en 1:
     description: Hindi translation of "tree"
 hu 0:
   include:
-    key: hu-{$language} 0
+    key: hu-<$language> 0
 hu 1:
   include:
-    key: hu-{$language} 1
+    key: hu-<$language> 1
 hu-en 0:
   title: Hungarian-English (bab.la)
   include:
@@ -1254,10 +1254,10 @@ hu-en 1:
     description: Hungarian translation of "tree"
 id 0:
   include:
-    key: id-{$language} 0
+    key: id-<$language> 0
 id 1:
   include:
-    key: id-{$language} 1
+    key: id-<$language> 1
 id-en 0:
   title: Indonesian-English (bab.la)
   include:
@@ -1273,10 +1273,10 @@ id-en 1:
     description: Indonesian translation of "tree"
 it 0:
   include:
-    key: it-{$language} 0
+    key: it-<$language> 0
 it 1:
   include:
-    key: it-{$language} 1
+    key: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (bab.la)
   include:
@@ -1338,7 +1338,7 @@ it-ro 0:
   - language
   - romanian
 it-ro 1:
-  url: https://bab.la/dictionary/italian-romanian/{%word}
+  url: https://bab.la/dictionary/italian-romanian/<word>
   title: Italiană-Română (bab.la)
   tags:
   - dictionary
@@ -1352,10 +1352,10 @@ it-ro 1:
     description: Traducere în italiană pentru "copac"
 ja 0:
   include:
-    key: ja-{$language} 0
+    key: ja-<$language> 0
 ja 1:
   include:
-    key: ja-{$language} 1
+    key: ja-<$language> 1
 ja-en 0:
   title: Japanese-English (bab.la)
   include:
@@ -1371,10 +1371,10 @@ ja-en 1:
     description: Japanese translation of "tree"
 ka 0:
   include:
-    key: ka-{$language} 0
+    key: ka-<$language> 0
 ka 1:
   include:
-    key: ka-{$language} 1
+    key: ka-<$language> 1
 ka-en 0:
   title: Georgian-English (bab.la)
   include:
@@ -1390,10 +1390,10 @@ ka-en 1:
     description: Georgian translation of "tree"
 ko 0:
   include:
-    key: ko-{$language} 0
+    key: ko-<$language> 0
 ko 1:
   include:
-    key: ko-{$language} 1
+    key: ko-<$language> 1
 ko-en 0:
   title: Korean-English (bab.la)
   include:
@@ -1409,10 +1409,10 @@ ko-en 1:
     description: Korean translation of "tree"
 ms 0:
   include:
-    key: ms-{$language} 0
+    key: ms-<$language> 0
 ms 1:
   include:
-    key: ms-{$language} 1
+    key: ms-<$language> 1
 ms-en 0:
   title: Malay-English (bab.la)
   include:
@@ -1428,10 +1428,10 @@ ms-en 1:
     description: Malay translation of "tree"
 nl 0:
   include:
-    key: nl-{$language} 0
+    key: nl-<$language> 0
 nl 1:
   include:
-    key: nl-{$language} 1
+    key: nl-<$language> 1
 nl-de 0:
   title: Niederländisch-Deutsch (bab.la)
   include:
@@ -1460,10 +1460,10 @@ nl-en 1:
     description: Dutch translation of "tree"
 no 0:
   include:
-    key: no-{$language} 0
+    key: no-<$language> 0
 no 1:
   include:
-    key: no-{$language} 1
+    key: no-<$language> 1
 no-en 0:
   title: Norwegian-English (bab.la)
   include:
@@ -1479,10 +1479,10 @@ no-en 1:
     description: Norwegian translation of "tree"
 pl 0:
   include:
-    key: pl-{$language} 0
+    key: pl-<$language> 0
 pl 1:
   include:
-    key: pl-{$language} 1
+    key: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (bab.la)
   include:
@@ -1518,7 +1518,7 @@ pl-ru 0:
   - polish
   - russian
 pl-ru 1:
-  url: https://bab.la/dictionary/polish-russian/{%word}
+  url: https://bab.la/dictionary/polish-russian/<word>
   title: Польский-Русский (bab.la)
   tags:
   - dictionary
@@ -1532,10 +1532,10 @@ pl-ru 1:
     description: Перевод на польский язык для "дерево"
 pt 0:
   include:
-    key: pt-{$language} 0
+    key: pt-<$language> 0
 pt 1:
   include:
-    key: pt-{$language} 1
+    key: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (bab.la)
   include:
@@ -1577,10 +1577,10 @@ pt-es 1:
     description: Traducción al portugués de "árbol"
 qu 0:
   include:
-    key: qu-{$language} 0
+    key: qu-<$language> 0
 qu 1:
   include:
-    key: qu-{$language} 1
+    key: qu-<$language> 1
 qu-es 0:
   title: Quechua-Español (bab.la)
   include:
@@ -1596,10 +1596,10 @@ qu-es 1:
     description: Traducción al quechua de "árbol"
 ro 0:
   include:
-    key: ro-{$language} 0
+    key: ro-<$language> 0
 ro 1:
   include:
-    key: ro-{$language} 1
+    key: ro-<$language> 1
 ro-en 0:
   title: Romanian-English (bab.la)
   include:
@@ -1628,10 +1628,10 @@ ro-it 1:
     description: Traduzione in rumeno di "albero"
 ru 0:
   include:
-    key: ru-{$language} 0
+    key: ru-<$language> 0
 ru 1:
   include:
-    key: ru-{$language} 1
+    key: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (bab.la)
   include:
@@ -1673,10 +1673,10 @@ ru-pl 1:
     description: Tłumaczenie na język rosyjski dla "drzewo"
 sv 0:
   include:
-    key: sv-{$language} 0
+    key: sv-<$language> 0
 sv 1:
   include:
-    key: sv-{$language} 1
+    key: sv-<$language> 1
 sv-de 0:
   title: Schwedisch-Deutsch (bab.la)
   include:
@@ -1705,10 +1705,10 @@ sv-en 1:
     description: Swedish translation of "tree"
 sw 0:
   include:
-    key: sw-{$language} 0
+    key: sw-<$language> 0
 sw 1:
   include:
-    key: sw-{$language} 1
+    key: sw-<$language> 1
 sw-en 0:
   title: Swahili-English (bab.la)
   include:
@@ -1724,10 +1724,10 @@ sw-en 1:
     description: Swahili translation of "tree"
 te 0:
   include:
-    key: te-{$language} 0
+    key: te-<$language> 0
 te 1:
   include:
-    key: te-{$language} 1
+    key: te-<$language> 1
 te-en 0:
   title: Telugu-English (bab.la)
   include:
@@ -1743,10 +1743,10 @@ te-en 1:
     description: Telugu translation of "tree"
 th 0:
   include:
-    key: th-{$language} 0
+    key: th-<$language> 0
 th 1:
   include:
-    key: th-{$language} 1
+    key: th-<$language> 1
 th-en 0:
   title: Thai-English (bab.la)
   include:
@@ -1762,10 +1762,10 @@ th-en 1:
     description: Thai translation of "tree"
 tr 0:
   include:
-    key: tr-{$language} 0
+    key: tr-<$language> 0
 tr 1:
   include:
-    key: tr-{$language} 1
+    key: tr-<$language> 1
 tr-de 0:
   title: Türkisch-Deutsch (bab.la)
   include:
@@ -1794,10 +1794,10 @@ tr-en 1:
     description: Turkish translation of "tree"
 ur 0:
   include:
-    key: ur-{$language} 0
+    key: ur-<$language> 0
 ur 1:
   include:
-    key: ur-{$language} 1
+    key: ur-<$language> 1
 ur-en 0:
   title: Urdu-English (bab.la)
   include:
@@ -1813,10 +1813,10 @@ ur-en 1:
     description: Urdu translation of "tree"
 vi 0:
   include:
-    key: vi-{$language} 0
+    key: vi-<$language> 0
 vi 1:
   include:
-    key: vi-{$language} 1
+    key: vi-<$language> 1
 vi-en 0:
   title: Vietnamese-English (bab.la)
   include:
@@ -1832,10 +1832,10 @@ vi-en 1:
     description: Vietnamese translation of "tree"
 zh 0:
   include:
-    key: zh-{$language} 0
+    key: zh-<$language> 0
 zh 1:
   include:
-    key: zh-{$language} 1
+    key: zh-<$language> 1
 zh-en 0:
   title: Chinese-English (bab.la)
   include:
@@ -1851,10 +1851,10 @@ zh-en 1:
     description: Chinese translation of "tree"
 zu 0:
   include:
-    key: zu-{$language} 0
+    key: zu-<$language> 0
 zu 1:
   include:
-    key: zu-{$language} 1
+    key: zu-<$language> 1
 zu-en 0:
   title: Zulu-English (bab.la)
   include:

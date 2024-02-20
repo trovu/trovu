@@ -7,10 +7,31 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png?v=2"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png?v=2"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png?v=2"
+    />
+    <link rel="manifest" href="/site.webmanifest?v=2" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2" color="#487b7f" />
+    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <meta name="msapplication-TileColor" content="#487b7f" />
     <meta name="theme-color" content="#343a40" />
     <link rel="manifest" href="/manifest.json" />
 
-    <link rel="stylesheet" href="style.css?js={{fileNameJs}}" />
+    <link rel="stylesheet" href="style.css?{{currentTimestamp}}" />
 
     <title>trovu.net – Web shortcuts: social, private, free.</title>
   </head>
@@ -168,9 +189,35 @@
     </header>
     <main class="container">
       <section class="jumbotron text-center bg-white">
+        <div id="intro" class="alert alert-light" role="alert">
+          <p dir="auto">
+            <em>
+              Search 1000+ websites with
+              <a href="/docs/editors/" rel="nofollow">curated</a>
+              &amp;
+              <a href="/docs/users/advanced/" rel="nofollow"
+                >personal shortcuts</a
+              >, organized by
+              <a href="/docs/shortcuts/namespaces/" rel="nofollow">namespaces</a
+              >, allowing
+              <a href="/docs/shortcuts/url/" rel="nofollow"
+                >multiple &amp; typed arguments</a
+              >, with
+              <a href="/docs/privacy/" rel="nofollow">maximum privacy</a>. It's
+              like
+              <a href="https://duckduckgo.com/bangs" rel="nofollow"
+                >DuckDuckGo bangs</a
+              >
+              on steroids. And it's
+              <a href="https://github.com/trovu/trovu/blob/master/LICENSE"
+                >free</a
+              >.</em
+            >
+          </p>
+        </div>
         <div hidden id="alert" class="alert alert-warning" role="alert"></div>
         <pre hidden id="log"></pre>
-        <form id="query-form" class="awesomplete" action="process/index.html">
+        <form id="query-form" action="process/index.html">
           <div class="input-group">
             <input
               type="search"
@@ -180,7 +227,7 @@
               autocapitalize="off"
               autocomplete="off"
               spellcheck="false"
-              placeholder="Type a letter to get suggestions."
+              placeholder="keyword argument1, arg2 …"
             />
             <div class="input-group-append">
               <button type="submit" class="btn btn-primary">
@@ -189,105 +236,30 @@
             </div>
           </div>
         </form>
+        <div id="help"></div>
       </section>
-      <div id="examples-and-about" class="container">
-        <div class="row">
-          <div class="col-sm-8">
-            <div class="card">
-              <div class="card-header"><strong>Example queries</strong></div>
-              <div class="card-body">
-                <dl class="row">
-                  <dt class="col-sm-4">
-                    <a href="/process/#query=g+berlin">g berlin</a>
-                  </dt>
-                  <dd class="col-sm-8">search Google for "berlin"</dd>
-                  <dt class="col-sm-4">
-                    <a href="/process/#query=w+berlin">w berlin</a>
-                  </dt>
-                  <dd class="col-sm-8">
-                    open Wikipedia article for Berlin (in language from
-                    settings)
-                  </dd>
-                  <dt class="col-sm-4">
-                    <a href="/process/#query=fr.w+berlin">fr.w berlin</a>
-                  </dt>
-                  <dd class="col-sm-8">
-                    override language from settings: use French Wikipedia
-                  </dd>
-                  <dt class="col-sm-4">
-                    <a href="/process/#query=gd+london,manchester"
-                      >gd london, manchester</a
-                    >
-                  </dt>
-                  <dd class="col-sm-8">
-                    find a route on Google Maps from London to Manchester
-                  </dd>
-                  <dt class="col-sm-4">
-                    <a href="/process/#query=gfl+ber,lpa">gfl ber, lpa</a>
-                  </dt>
-                  <dd class="col-sm-8">
-                    Google Flights search from Berlin to Las Palmas
-                  </dd>
-                  <dt class="col-sm-4">
-                    <a href="/process/#query=ytd+cats">ytd cats</a>
-                  </dt>
-                  <dd class="col-sm-8">
-                    Cat videos on Youtube, sorted by date
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-header"><strong>About</strong></div>
-              <div class="card-body">
-                <ul>
-                  <li>
-                    <strong>privacy</strong>: all queries are
-                    <a href="/docs/users/processing/">processed in the client</a
-                    >, not server
-                  </li>
-                  <li>
-                    <strong>social</strong>: benefit from curated shortcuts in
-                    the
-                    <a href="https://github.com/trovu/trovu-data"
-                      >general repo</a
-                    >, organized by
-                    <a href="/docs/shortcuts/namespaces/">namespaces</a>.
-                  </li>
-                  <li>
-                    <strong>freedom</strong>: setup your own
-                    <a href="/docs/users/advanced/">personal shortcuts</a>
-                    in your
-                    <a href="https://github.com/trovu/trovu-data-user"
-                      >own repo</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="suggestions" class="container"></div>
         </div>
       </div>
     </main>
-
-    <footer class="footer border-top border-light pt-4 mt-4">
+    <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col-sm-10">
-            <span class="text-muted"
-              ><a href="https://github.com/trovu">Github</a></span
-            >
-            |
             <span class="text-muted"><a href="/docs/">Docs</a></span>
             |
+            <span class="text-muted"><a href="/blog/">Blog</a></span>
+            |
+            <span class="text-muted"><a href="/docs/privacy/">Privacy</a></span>
+            |
             <span class="text-muted"
-              ><a href="http://eepurl.com/gjhqfj">Mailinglist</a></span
+              ><a href="/docs/editors/">Edit shortcuts</a></span
             >
             |
             <span class="text-muted"
-              ><a href="/docs/privacy/">Privacy policy</a></span
+              ><a href="https://jaehnig.org/impressum/">Impressum</a></span
             >
           </div>
           <div class="col-sm-2">
@@ -302,6 +274,6 @@
       </div>
     </footer>
 
-    <script type="module" src="{{fileNameJs}}"></script>
+    <script type="module" src="{{fileNameJs}}?{{currentTimestamp}}"></script>
   </body>
 </html>

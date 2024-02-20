@@ -1,39 +1,90 @@
 import Env from './Env.js';
-const env = new Env({});
 
-env.fetchDbIp = jest.fn(() => {
-  return JSON.stringify({
-    ipAddress: '89.245.199.31',
-    continentCode: 'EU',
-    continentName: 'Europe',
-    countryCode: 'DE',
-    countryName: 'Germany',
-    stateProv: 'Hesse',
-    city: 'Frankfurt am Main',
-  });
-});
+const getUrlHashFooBar = () => {
+  const hash = 'foo=bar&baz=boo';
+  return hash;
+};
 
-describe('Env.getDefaultLanguageAndCountry', () => {
-  test('browser returns language and country', () => {
-    const env = new Env();
-    env.getNavigatorLanguage = jest.fn(() => 'en-DE');
-    expect(env.getDefaultLanguageAndCountry()).resolves.toEqual({
-      language: 'en',
-      country: 'de',
+describe('Env', () => {
+  describe('getParams', () => {
+    test('github', () => {
+      expect(new Env({ github: 'johndoe' }).getParams()).toEqual({
+        github: 'johndoe',
+      });
+    });
+    test('configUrl', () => {
+      expect(
+        new Env({ configUrl: 'https://example.com/config.yml' }).getParams(),
+      ).toEqual({
+        configUrl: 'https://example.com/config.yml',
+      });
+    });
+    test('language and country', () => {
+      expect(new Env({ language: 'en', country: 'us' }).getParams()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
+    test('language, country and defaultKeyword', () => {
+      expect(
+        new Env({
+          language: 'en',
+          country: 'us',
+          defaultKeyword: 'example',
+        }).getParams(),
+      ).toEqual({
+        language: 'en',
+        country: 'us',
+        defaultKeyword: 'example',
+      });
+    });
+    test('debug', () => {
+      expect(new Env({ debug: true }).getParams()).toEqual({
+        debug: 1,
+      });
+    });
+    test('status', () => {
+      expect(new Env({ status: 'deprecated' }).getParams()).toEqual({
+        status: 'deprecated',
+      });
     });
   });
-  test('browser returns only language', () => {
-    const env = new Env();
-    env.getNavigatorLanguage = jest.fn(() => 'en');
-    expect(env.getDefaultLanguageAndCountry()).resolves.toEqual({
-      language: 'en',
-      country: 'us',
+  describe('getDefaultLanguageAndCountry', () => {
+    test('browser returns language and country', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => 'en-DE');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'de',
+      });
+    });
+    test('browser returns only language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => 'en');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
+    test('browser returns empty language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => '');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
+    test('browser returns invalid language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => 'invalid');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
     });
   });
-});
-
-describe('Env.getCountryFromIP', () => {
-  test('mocked fetch', async () => {
-    expect(env.getCountryFromIp()).resolves.toEqual('DE');
+  test('getUrlParams', () => {
+    Env.getUrlHash = getUrlHashFooBar;
+    expect(Env.getUrlParams()).toEqual({ foo: 'bar', baz: 'boo' });
   });
 });

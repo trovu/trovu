@@ -2,30 +2,30 @@ e 0:
   url: https://www.ebay.ie/?mkcid=1&mkrid=5282-53468-19255-0&siteid=205&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ie
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
 e 1:
-  url: https://www.ebay.ie/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={%query}&_sacat=0&mkcid=1&mkrid=5282-53468-19255-0&siteid=205&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.ie/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=5282-53468-19255-0&siteid=205&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ie
   tags:
-  - affiliate
   - ebay
+  - is-affiliate
   - shopping
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
 g 1:
-  url: https://www.google.ie/search?hl={$language}&q={%query}&ie=utf-8
+  url: https://www.google.ie/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.ie
   tags:
   - google
-  - web search
+  - web-search
   examples:
   - arguments: dublin
     description: Search Google for "dublin"
 luas 1:
-  url: https://www.google.com/search?hl={$language}&ie=utf-8&btnI=1&q=site%3Awww.luas.ie%20{%station}
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.luas.ie%20<station>
   title: Luas Dublin Light Rail
   tags:
   - dublin
