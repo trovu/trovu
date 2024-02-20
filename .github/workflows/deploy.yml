@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 297-rebuild-menu-and-footer
   pull_request:
     branches:
       - master
