@@ -66,6 +66,7 @@ export default [
           },
           { src: 'src/opensearch/', dest: 'dist/public/' },
           { src: 'node_modules/font-awesome/fonts/', dest: 'dist/public/' },
+          { src: 'src/js/pwa/*', dest: 'dist/public/' },
         ],
       }),
     ],
