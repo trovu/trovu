@@ -41,7 +41,9 @@ export default class Home {
     }
 
     document.getElementById('query-form').onsubmit = this.submitQuery;
-    document.querySelector('.navbar a.reload').onclick = this.reload;
+    document.querySelector('#reload').href = this.env.getProcessUrl({
+      query: 'reload',
+    });
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
     Home.setHeights();
