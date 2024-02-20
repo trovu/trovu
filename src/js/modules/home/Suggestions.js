@@ -185,7 +185,6 @@ export default class Suggestions {
       titleSpan.textContent += ' 🤝';
     }
 
-    console.log(suggestion.tags);
     rightSpan.appendChild(titleSpan);
 
     // Create and append the namespace span
