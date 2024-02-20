@@ -128,7 +128,8 @@ span.tag {
       div.examples,
       div.url,
       div.needs-userscript,
-      div.is-affiliate {
+      div.is-affiliate,
+      div.tools {
         display: none;
         color: #666;
       }
@@ -189,7 +190,8 @@ span.tag {
       }
       div.url,
       div.needs-userscript,
-      div.is-affiliate {
+      div.is-affiliate,
+      div.tools {
         display: block;
       }
     }
