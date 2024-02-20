@@ -9,6 +9,10 @@ body {
   flex-direction: column;
 }
 
+.navbar-toggler {
+  display: inline-block !important; /* Override Bootstrap's default hiding behavior on large screens */
+}
+
 main {
   flex: 1 0 auto;
 }
