@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 43-create-a-pwa
   pull_request:
     branches:
       - master
