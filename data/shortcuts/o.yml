@@ -795,7 +795,9 @@ bkg 1:
   - arguments: de.b
     description: Use city abbreviation
   - arguments: b
-    description: Use city abbreviation when country setting is already set to Germany
+    description: Use city abbreviation, country is already set to Germany
+    config:
+      country: de
   include:
   - key: bkg 0
 bkg 2:
@@ -3472,8 +3474,14 @@ gd 2:
   - route
   - routing
   examples:
-  - arguments: berlin DE, hamburg DE
+  - arguments: berlin, hamburg
     description: Get a route from Berlin, Germany, to Hamburg, Germany
+    config:
+      country: de
+  - arguments: b, hh
+    description: Use city abbreviations
+    config:
+      country: de
   - arguments: new york, chicago
     description: Get a route from New York to Chicago
   showOnHome: 100

@@ -595,6 +595,10 @@ dbm 2:
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
+  - arguments: b, hh
+    description: Kfz-Kennzeichen als Start und Ziel
+    config:
+      country: de
   include:
     key: db 0
 dbm 3:
