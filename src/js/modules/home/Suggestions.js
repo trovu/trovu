@@ -271,6 +271,20 @@ export default class Suggestions {
     examplesDiv.className = 'examples';
 
     for (const example of suggestion.examples) {
+      if (example.config) {
+        if (
+          example.config.language &&
+          example.config.language !== this.env.language
+        ) {
+          continue;
+        }
+        if (
+          example.config.country &&
+          example.config.country !== this.env.country
+        ) {
+          continue;
+        }
+      }
       const leftSpan = document.createElement('span');
       leftSpan.className = 'left';
 
