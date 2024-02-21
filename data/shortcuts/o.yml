@@ -3474,7 +3474,7 @@ gd 2:
   - route
   - routing
   examples:
-  - arguments: berlin DE, hamburg DE
+  - arguments: berlin, hamburg
     description: Get a route from Berlin, Germany, to Hamburg, Germany
   - arguments: new york, chicago
     description: Get a route from New York to Chicago
