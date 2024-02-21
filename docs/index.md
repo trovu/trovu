@@ -1,5 +1,7 @@
 # [trovu.net](https://trovu.net/) – Web shortcuts: social, private, free.
 
+_by [Georg Jähnig](https://github.com/georgjaehnig/) & the [Trovu team](https://github.com/orgs/trovu/teams/editors)_
+
 Search 1000+ websites in a command-line way, with
 
 -   [curated](https://trovu.net/docs/editors/) and [personal shortcuts](https://trovu.net/docs/users/advanced/),
@@ -21,7 +23,7 @@ Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-dr
 
 ## Read more
 
-Follow the outline of the [Table of Contents](https://trovu.net/docs/).
+Follow the outline of the [Table of Contents](https://trovu.net/docs/). Feel free to ask for [support](https://trovu.net/docs/users/support/).
 
 ## Live web version
 
