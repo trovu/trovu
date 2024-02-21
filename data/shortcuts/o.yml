@@ -3476,6 +3476,8 @@ gd 2:
   examples:
   - arguments: berlin, hamburg
     description: Get a route from Berlin, Germany, to Hamburg, Germany
+    config:
+      country: de
   - arguments: new york, chicago
     description: Get a route from New York to Chicago
   showOnHome: 100
