@@ -795,7 +795,7 @@ bkg 1:
   - arguments: de.b
     description: Use city abbreviation
   - arguments: b
-    description: Use city abbreviation when country setting is already set to Germany
+    description: Use city abbreviation, country is already set to Germany
   include:
   - key: bkg 0
 bkg 2:
