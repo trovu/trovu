@@ -17,13 +17,13 @@ It's like [DuckDuckGo bangs](https://duckduckgo.com/bangs), but on steroids. And
 -   [`gfl1 ber, lpa, 1`](https://trovu.net/process/index.html#query=gfl1+ber%2Clpa%2C1) - search one-way flights with Google from Berlin to Las Palmas, on the first of next month
 -   [`bkg hh, 1, 9`](https://trovu.net/process/index.html#country=de&language=en&query=bkg+hh%2C1%2C3) - search accommodation on Booking.com in Hamburg from first to the third of next month
 
-## Legacy
-
-Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](https://trovu.net/docs/legacy/differences/).
-
 ## Read more
 
 Follow the outline of the [Table of Contents](https://trovu.net/docs/). Feel free to ask for [support](https://trovu.net/docs/users/support/).
+
+## Legacy
+
+Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](https://trovu.net/docs/legacy/differences/).
 
 ## Live web version
 
