@@ -27,6 +27,14 @@ patternProperties:
               type: string
             description:
               type: string
+            config:
+              type: object
+              additionalProperties: false
+              properties:
+                country:
+                  type: string
+                language:
+                  type: string
           required:
             - description
       showOnHome:
