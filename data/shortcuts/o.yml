@@ -3478,6 +3478,10 @@ gd 2:
     description: Get a route from Berlin, Germany, to Hamburg, Germany
     config:
       country: de
+  - arguments: b, hh
+    description: Use city abbreviations
+    config:
+      country: de
   - arguments: new york, chicago
     description: Get a route from New York to Chicago
   showOnHome: 100
