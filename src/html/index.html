@@ -173,15 +173,28 @@
               <span class="language"></span>
               <span class="country"></span>
             </span>
-            <span
-              class="reload"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              title="Reload settings and shortcuts: click here or call 'reload' if data on Github has changed."
-            >
-              <a class="reload" href="#"
-                ><i class="fa fa-refresh" aria-hidden="true"></i
-              ></a>
+            <span class="dropdown">
+              <a
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" id="reload" href="#"
+                  >Reload shortcuts</a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/docs/">Docs</a>
+                <a class="dropdown-item" href="/blog/">Blog</a>
+                <a class="dropdown-item" href="/docs/privacy/">Privacy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://github.com/trovu/trovu"
+                  >GitHub</a
+                >
+              </div>
             </span>
           </div>
         </div>
@@ -244,32 +257,21 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
+
+    <footer class="navbar">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-10">
-            <span class="text-muted"><a href="/docs/">Docs</a></span>
-            |
-            <span class="text-muted"><a href="/blog/">Blog</a></span>
-            |
-            <span class="text-muted"><a href="/docs/privacy/">Privacy</a></span>
-            |
-            <span class="text-muted"
-              ><a href="/docs/editors/">Edit shortcuts</a></span
-            >
-            |
-            <span class="text-muted"
-              ><a href="https://jaehnig.org/impressum/">Impressum</a></span
-            >
-          </div>
-          <div class="col-sm-2">
-            <a
-              class="form-control btn btn-sm btn-success"
-              target="_blank"
-              href="/docs/users/integration/"
-              >Add to browser</a
-            >
-          </div>
+        <div class="left">
+          <span class="text-muted"
+            ><a href="https://jaehnig.org/impressum/">Impressum</a></span
+          >
+        </div>
+        <div class="right">
+          <a
+            class="form-control btn btn-sm btn-success"
+            target="_blank"
+            href="/docs/users/integration/"
+            >Add to browser</a
+          >
         </div>
       </div>
     </footer>

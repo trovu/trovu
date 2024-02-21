@@ -41,7 +41,9 @@ export default class Home {
     }
 
     document.getElementById('query-form').onsubmit = this.submitQuery;
-    document.querySelector('.navbar a.reload').onclick = this.reload;
+    document.querySelector('#reload').href = this.env.getProcessUrl({
+      query: 'reload',
+    });
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
     Home.setHeights();
@@ -63,22 +65,6 @@ export default class Home {
       .querySelector('footer')
       .getBoundingClientRect().top;
     suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
-  }
-
-  /**
-   * Get the URL to the Process script.
-   */
-  getProcessUrl() {
-    const params = this.env.getParams();
-    params['query'] = this.queryInput.value;
-
-    const paramStr = Env.getUrlParamStr(params);
-
-    // "?" causes Chrome to translate plus signs properly into %2B
-    // even when called from address bar.
-    const processUrl = 'process/index.html?#' + paramStr;
-
-    return processUrl;
   }
 
   setQueryElement() {
@@ -175,7 +161,7 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-    const processUrl = this.getProcessUrl();
+    const processUrl = this.env.getProcessUrl({ query: this.queryInput.value });
     // Redirect to process script.
     window.location.href = processUrl;
   };

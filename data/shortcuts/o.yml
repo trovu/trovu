@@ -919,6 +919,7 @@ brw 1:
     description: Search for packages about vim.
   include:
   - key: brw 0
+  showOnHome: 1000
 btc 1:
   url: https://www.blockchain.com/search?search=<address>
   title: Bitcoin Blockchain Explorer
@@ -1231,6 +1232,7 @@ cpp 1:
   examples:
   - arguments: sprintf
     description: Search C++ Reference (cppreference.com) for "sprintf"
+  showOnHome: 1100
 cppc 1:
   url: http://www.cplusplus.com/search.do?q=<query>
   title: C++ Reference (cplusplus.com)
@@ -1256,6 +1258,7 @@ cran 1:
   examples:
   - arguments: bibtex
     description: Show bibtex package
+  showOnHome: 1200
 crc32 1:
   url: http://stefanschramm.net/dev/hash/?algo=crc32&q=<data>
   title: Hash functions
@@ -6457,6 +6460,7 @@ php 1:
   examples:
   - arguments: strlen
     description: Search PHP docs for "strlen"
+  showOnHome: 1150
 phpg 1:
   url: http://www.google.com/search?hl=<$language>&q=site%3Awww.php.net+<query>
   title: PHP Documentation via Google
@@ -8022,6 +8026,7 @@ tik 1:
   examples:
   - arguments: berlin
     description: Search for videos about Berlin
+  showOnHome: 1300
 tiktok 1:
   deprecated:
     alternative:
