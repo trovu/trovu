@@ -271,19 +271,8 @@ export default class Suggestions {
     examplesDiv.className = 'examples';
 
     for (const example of suggestion.examples) {
-      if (example.config) {
-        if (
-          example.config.language &&
-          example.config.language !== this.env.language
-        ) {
-          continue;
-        }
-        if (
-          example.config.country &&
-          example.config.country !== this.env.country
-        ) {
-          continue;
-        }
+      if (this.shouldSkipExample(example)) {
+        continue;
       }
       const leftSpan = document.createElement('span');
       leftSpan.className = 'left';
@@ -312,6 +301,19 @@ export default class Suggestions {
     }
 
     return examplesDiv;
+  }
+
+  shouldSkipExample(example) {
+    if (!example.config) return false;
+    for (const property of ['language', 'country']) {
+      if (
+        example.config[property] &&
+        example.config[property] !== this.env[property]
+      ) {
+        return true;
+      }
+    }
+    return false;
   }
 
   getUrl(suggestion) {
