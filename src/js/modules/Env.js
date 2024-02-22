@@ -65,7 +65,7 @@ export default class Env {
     if (this.debug) {
       params.debug = 1;
     }
-    for (const property of ['status', 'query', 'alternative', 'key']) {
+    for (const property of ['alternative', 'key', 'status', 'query']) {
       if (this[property]) {
         params[property] = this[property];
       }
