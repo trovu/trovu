@@ -126,15 +126,11 @@ export default class CallHandler {
     if (params.query === 'reload' || params.query === 'debug:reload') {
       delete params.query;
     }
-    switch (response.status) {
-      case 'deprecated':
-        params.alternative = response.alternative;
-        break;
-      case 'removed':
-        params.key = response.key;
-        break;
+    for (const property of ['alternative', 'key', 'namespace', 'status']) {
+      if (response[property]) {
+        params[property] = response[property];
+      }
     }
-    params.status = response.status;
     const paramStr = Env.getUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
