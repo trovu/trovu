@@ -73,6 +73,19 @@ export default class ShortcutFinder {
         env.args = [env.query];
       }
     }
+    // If still nothing found:
+    // Try with non-reachable, to inform.
+    if (!shortcut) {
+      env.logger.info(
+        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with non-reachable.`,
+      );
+      shortcut = this.matchShortcuts(
+        env.keyword,
+        env.args,
+        env.namespaceInfos,
+        true,
+      );
+    }
     return shortcut;
   }
 }
