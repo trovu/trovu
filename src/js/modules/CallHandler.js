@@ -79,6 +79,12 @@ export default class CallHandler {
       return response;
     }
 
+    if (!shortcut.reachable) {
+      response.status = 'not_reachable';
+      response.namespace = shortcut.namespace;
+      return response;
+    }
+
     response.redirectUrl = shortcut.url;
     response.status = 'found';
 
