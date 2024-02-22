@@ -11,13 +11,18 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static matchShortcuts(keyword, args, namespaceInfos) {
+  static matchShortcuts(
+    keyword,
+    args,
+    namespaceInfos,
+    includeNonReachable = false,
+  ) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
       }
       const shortcut = namespaceInfo.shortcuts[keyword + ' ' + args.length];
-      if (shortcut && shortcut.reachable) {
+      if (shortcut && (shortcut.reachable || includeNonReachable)) {
         return shortcut;
       }
     }
