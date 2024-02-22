@@ -35,8 +35,6 @@ export default class ShortcutFinder {
       env.keyword,
       env.args,
       env.namespaceInfos,
-      env.reload,
-      env.debug,
     );
 
     // If nothing found:
@@ -46,13 +44,7 @@ export default class ShortcutFinder {
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with the whole argument string as the only argument.`,
       );
       env.args = [env.argumentString];
-      shortcut = this.matchShortcuts(
-        env.keyword,
-        env.args,
-        env.namespaceInfos,
-        env.reload,
-        env.debug,
-      );
+      shortcut = this.matchShortcuts(env.keyword, env.args, env.namespaceInfos);
     }
 
     // If nothing found:
@@ -66,8 +58,6 @@ export default class ShortcutFinder {
         env.defaultKeyword,
         env.args,
         env.namespaceInfos,
-        env.reload,
-        env.debug,
       );
     }
     return shortcut;
