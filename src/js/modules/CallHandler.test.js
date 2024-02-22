@@ -1,7 +1,7 @@
 import CallHandler from './CallHandler.js';
 import Env from './Env.js';
 
-describe('CallHander', () => {
+describe('CallHandler', () => {
   test('getAlternative', async () => {
     const shortcut = {
       deprecated: {
