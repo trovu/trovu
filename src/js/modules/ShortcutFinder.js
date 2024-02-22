@@ -43,8 +43,14 @@ export default class ShortcutFinder {
       env.logger.info(
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with the whole argument string as the only argument.`,
       );
-      env.args = [env.argumentString];
-      shortcut = this.matchShortcuts(env.keyword, env.args, env.namespaceInfos);
+      shortcut = this.matchShortcuts(
+        env.keyword,
+        [env.argumentString],
+        env.namespaceInfos,
+      );
+      if (shortcut) {
+        env.args = [env.argumentString];
+      }
     }
 
     // If nothing found:
