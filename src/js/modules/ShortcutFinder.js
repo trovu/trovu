@@ -59,12 +59,14 @@ export default class ShortcutFinder {
       env.logger.info(
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`,
       );
-      env.args = [env.query];
       shortcut = this.matchShortcuts(
         env.defaultKeyword,
-        env.args,
+        [env.query],
         env.namespaceInfos,
       );
+      if (shortcut) {
+        env.args = [env.query];
+      }
     }
     return shortcut;
   }
