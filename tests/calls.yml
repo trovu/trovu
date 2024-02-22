@@ -82,6 +82,14 @@
     query: someQueryThatWillNotSuccess
   response:
     status: not_found
+- title: query to non-reachable shortcut
+  env:
+    language: en
+    country: us
+    query: db b,hh
+  response:
+    status: not_reachable
+    namespace: .de
 - title: gd 2 with city mapping
   env:
     language: de

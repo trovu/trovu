@@ -11,13 +11,18 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static matchShortcuts(keyword, args, namespaceInfos) {
+  static matchShortcuts(
+    keyword,
+    args,
+    namespaceInfos,
+    includeNonReachable = false,
+  ) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
       }
       const shortcut = namespaceInfo.shortcuts[keyword + ' ' + args.length];
-      if (shortcut && shortcut.reachable) {
+      if (shortcut && (shortcut.reachable || includeNonReachable)) {
         return shortcut;
       }
     }
@@ -35,8 +40,6 @@ export default class ShortcutFinder {
       env.keyword,
       env.args,
       env.namespaceInfos,
-      env.reload,
-      env.debug,
     );
 
     // If nothing found:
@@ -45,14 +48,14 @@ export default class ShortcutFinder {
       env.logger.info(
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with the whole argument string as the only argument.`,
       );
-      env.args = [env.argumentString];
       shortcut = this.matchShortcuts(
         env.keyword,
-        env.args,
+        [env.argumentString],
         env.namespaceInfos,
-        env.reload,
-        env.debug,
       );
+      if (shortcut) {
+        env.args = [env.argumentString];
+      }
     }
 
     // If nothing found:
@@ -61,13 +64,26 @@ export default class ShortcutFinder {
       env.logger.info(
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`,
       );
-      env.args = [env.query];
       shortcut = this.matchShortcuts(
         env.defaultKeyword,
+        [env.query],
+        env.namespaceInfos,
+      );
+      if (shortcut) {
+        env.args = [env.query];
+      }
+    }
+    // If still nothing found:
+    // Try with non-reachable, to inform.
+    if (!shortcut) {
+      env.logger.info(
+        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with non-reachable.`,
+      );
+      shortcut = this.matchShortcuts(
+        env.keyword,
         env.args,
         env.namespaceInfos,
-        env.reload,
-        env.debug,
+        true,
       );
     }
     return shortcut;

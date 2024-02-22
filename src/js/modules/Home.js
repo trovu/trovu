@@ -131,7 +131,10 @@ export default class Home {
     switch (params.status) {
       case 'not_found':
         alert.innerHTML =
-          'Could not find a matching shortcut for this query. Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>.';
+          'No matching shortcut found. Did you use a <a href="https://trovu.net/docs/">keyword</a>? Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>. ';
+        break;
+      case 'not_reachable':
+        alert.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> language/country to your namespaces.`;
         break;
       case 'reloaded':
         alert.textContent = 'Shortcuts were reloaded in all namespaces.';
