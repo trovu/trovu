@@ -57,28 +57,21 @@ g 0:
   - description: Go to homepage
 g 1:
   url: https://www.google.at/search?hl=<$language>&q=<query>&ie=utf-8
-  title: Google.at
-  tags:
-  - google
-  - web-search
+  include: g 0
   examples:
   - arguments: wien
     description: Google-Suche nach "wien"
   showOnHome: 600
 gh 0:
   url: http://geizhals.at/
-  title: Geizhals Österreich Hauptseite
+  title: Geizhals Österreich
   tags:
   - geizhals
   - preisvergleich
   - shopping
 gh 1:
   url: 'http://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
-  title: Geizhals Österreich
-  tags:
-  - geizhals
-  - preisvergleich
-  - shopping
+  include: gh 0
   examples:
   - arguments: fernseher
     description: Search for "fernseher"
@@ -526,20 +519,19 @@ ikea 0:
   - shopping
 ikea 1:
   url: http://www.ikea.com/at/de/search/?q=<query>
-  title: IKEA Österreich
-  tags:
-  - furniture
-  - ikea
-  - shopping
+  include: ikea 0
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
-obv 1:
-  url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
-  title: OBV Suche - Österreichischer Bibliothekenverbund
+obv 0:
+  url: https://www.obvsg.at/
+  title: OBV - Österreichischer Bibliothekenverbund
   tags:
   - library
   - obv
+obv 1:
+  url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
+  include: obv 0
   examples:
   - arguments: elfriede jelinek
     description: Suche nach Literatur von und über Elfriede Jelinek
@@ -552,12 +544,15 @@ oebb 3:
 oebb 4:
   include:
     key: öbb 4
-rsc 1:
-  url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
+rsc 0:
+  url: https://at.rs-online.com/
   title: RS Components Österreich
   tags:
   - electronics
   - shopping
+rsc 1:
+  url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
+  include: rsc 0
   examples:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
@@ -568,45 +563,44 @@ we 0:
   - weather
 we 1:
   url: http://at.wetter.com/suche/?search=<Ort>
-  title: Wetter.com
-  tags:
-  - weather
+  include: we 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
-zal 1:
-  url: http://www.zalando.at/katalog/?q=<Produkt>
+zal 0:
+  url: https://www.zalando.at/
   title: Zalando.at
   tags:
   - shopping
   - zalando
+zal 1:
+  url: https://www.zalando.at/katalog/?q=<Produkt>
+  include: zal 0
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen
-öbb 2:
-  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
-  title: ÖBB-Auskunft
+öbb 0:
+  url: https://www.oebb.at/
+  title: ÖBB-Hauptseite
   tags:
   - bahn
   - travel
+öbb 2:
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
+  include: öbb 0
+  title: ÖBB-Auskunft
   examples:
   - arguments: wien, salzburg
     description: Verbindung von Wien nach Salzburg
 öbb 3:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&start=1'
-  title: ÖBB-Auskunft
-  tags:
-  - bahn
-  - travel
+  include: öbb 2
   examples:
   - arguments: wien, salzburg, 10
     description: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  title: ÖBB-Auskunft
-  tags:
-  - bahn
-  - travel
+  include: öbb 2
   examples:
   - arguments: wien, salzburg, 10, 1.1.
     description: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
