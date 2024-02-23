@@ -102,20 +102,21 @@ function testShortcuts(options) {
       if (shortcut.tests) {
         for (const test of shortcut.tests) {
           const args = QueryParser.getArguments(test.arguments);
-          console.log(`Testing ${namespace}.${key}`);
           let url = shortcut.url;
           url = UrlProcessor.replaceVariables(url, env);
           url = UrlProcessor.replaceArguments(url, args, env);
-          console.log(url);
+          console.log(`${namespace}.${key}\t  fetch ${url}`);
           fetch(url)
             .catch((error) => console.error(error))
             .then((response) => response.text())
+            // keep for debugging
             // .then((text) => console.log(text))
             .then((text) => {
               if (text.includes(test.expected)) {
-                console.log('Test passed');
+                // log only fails
+                // console.log(`${namespace}.${key}\t✅ passed`);
               } else {
-                console.error('Test failed');
+                console.log(`${namespace}.${key}\t❌ failed`);
               }
             });
         }
