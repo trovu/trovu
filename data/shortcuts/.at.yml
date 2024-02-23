@@ -41,12 +41,17 @@ e 0:
   - ebay
   - is-affiliate
   - shopping
+  tests:
+  - expect: rel="canonical" href="http://www.ebay.at"
 e 1:
   url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   include: e 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
+  tests:
+  - arguments: smartphone
+    expect: <title>smartphone | eBay</title>
 g 0:
   url: https://www.google.at/
   title: Google.at
@@ -55,6 +60,8 @@ g 0:
   - web-search
   examples:
   - description: Go to homepage
+  tests:
+  - expect: href="https://www.google.at/
 g 1:
   url: https://www.google.at/search?hl=<$language>&q=<query>&ie=utf-8
   include: g 0
@@ -62,19 +69,27 @@ g 1:
   - arguments: wien
     description: Google-Suche nach "wien"
   showOnHome: 600
+  tests:
+  - arguments: wien
+    expect: <title>wien
 gh 0:
-  url: http://geizhals.at/
+  url: https://geizhals.at/
   title: Geizhals Österreich
   tags:
   - geizhals
   - preisvergleich
   - shopping
+  tests:
+  - expect: <title>Geizhals Preisvergleich Österreich</title>
 gh 1:
   url: 'http://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
   include: gh 0
   examples:
   - arguments: fernseher
     description: Search for "fernseher"
+  tests:
+  - arguments: fernseher
+    expect: <title>fernseher Geizhals Österreich</title>
 gmam 1:
   deprecated:
     alternative:
