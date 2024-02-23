@@ -10,6 +10,7 @@
     "prettier-fix": "npx prettier -w 'src/**/*.js'",
     "test-unit": "jest --verbose env helper src/js/ ",
     "test-calls": "jest --verbose calls",
+    "test-shortcuts": "node -r esm src/js/cli.js test-shortcuts",
     "test-fe": "cypress run",
     "test": "npm run lint-yaml && npm run test-unit && npm run test-calls && npm run test-fe",
     "build-jsdoc": "jsdoc --configure jsdoc.json",
