@@ -99,6 +99,9 @@ function testShortcuts(options) {
     for (const key in data.shortcuts[namespace]) {
       const shortcut = data.shortcuts[namespace][key];
       if (shortcut.tests) {
+        if (options.filter) {
+          if (!`${namespace}.${key}`.includes(options.filter)) continue;
+        }
         for (const test of shortcut.tests) {
           const args = QueryParser.getArguments(test.arguments);
           let url = shortcut.url;
