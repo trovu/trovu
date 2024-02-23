@@ -25,6 +25,11 @@ program
   .description('Normalize YAML data files')
   .action(normalizeData);
 
+program
+  .command('test-shortcuts')
+  .description('Test shortcut URLs')
+  .action(testShortcuts);
+
 // Call for user data:
 // node -r esm src/js/cli.js migrate-placeholders -d /Users/jrg/dta/int/cde/web/tro/trovu-data-user/ -s '' -f shortcuts
 program
@@ -75,6 +80,11 @@ function compileData(options) {
 function normalizeData() {
   const data = DataManager.load();
   DataManager.write(data);
+}
+
+function testShortcuts(options) {
+  const data = DataManager.load();
+  console.log('foo');
 }
 
 function migratePlaceholders(options) {
