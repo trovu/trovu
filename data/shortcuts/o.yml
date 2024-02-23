@@ -6662,7 +6662,7 @@ poew 1:
     description: Search inofficial Path of Exile Wiki for "Vaal Orb"
   tests:
   - arguments: health
-    expect: Search results
+    expect: name="query" value="health"/>
 praktiker 1:
   url: http://praktiker.de/Search.action?searchTerm=<query>
   title: Praktiker Baumarkt Online Shop
