@@ -109,21 +109,26 @@ function testShortcuts(options) {
           url = UrlProcessor.replaceArguments(url, args, env);
           console.log(`${namespace}.${key}\t  fetch ${url}`);
           fetch(url)
-            .catch((error) => console.error(error))
-            .then((response) => response.text())
-            // keep for debugging
-            // .then((text) => console.log(text))
+            .then((response) => {
+              if (!response.ok)
+                throw new Error(
+                  `${namespace}.${key}\t❌ failed to fetch ${url}`,
+                );
+              return response.text();
+            })
             .then((text) => {
-              if (text.includes(test.expected)) {
-                // log only fails
-                // console.log(`${namespace}.${key}\t✅ passed`);
+              // keep for debugging
+              // console.log(text);
+              if (text.includes(test.expect)) {
+                console.log(`${namespace}.${key}\t✅ passed`);
               } else {
-                console.log(`${namespace}.${key}\t❌ failed`);
-                console.log(text);
-                console.log(test.expected);
-                return;
+                console.log(
+                  `${namespace}.${key}\t❌ failed to find "${test.expect}", write contents to file ${namespace}.${key}.html`,
+                );
+                fs.writeFileSync(`${namespace}.${key}.html`, text, 'utf8');
               }
-            });
+            })
+            .catch((error) => console.error(error));
         }
       }
     }
