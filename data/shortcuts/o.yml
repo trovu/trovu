@@ -1675,7 +1675,8 @@ debt 1:
   - arguments: grub2
     description: Look at the grub2 package in the Debian Package Tracker
   tests:
-    grub2: 'maintainer:'
+  - arguments: grub2
+    expect: 'maintainer:'
 debw 0:
   url: https://wiki.debian.org/
   title: Debian Wiki
@@ -6642,7 +6643,8 @@ poef 1:
   - arguments: How to Smash Heads
     description: Search  for "How to Smash Heads" - Korgoth's Facebreaker guide
   tests:
-    Rhoa: Forum Post
+  - arguments: Rhoa
+    expect: Forum Post
 poew 1:
   url: http://pathofexile.gamepedia.com/index.php?search=<query>&go=Go
   title: Inofficial Path of Exile Wiki
@@ -6659,7 +6661,8 @@ poew 1:
   - arguments: Vaal Orb
     description: Search inofficial Path of Exile Wiki for "Vaal Orb"
   tests:
-    health: Search results
+  - arguments: health
+    expect: Search results
 praktiker 1:
   url: http://praktiker.de/Search.action?searchTerm=<query>
   title: Praktiker Baumarkt Online Shop
