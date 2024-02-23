@@ -214,4 +214,11 @@ export default class Home {
     const head = document.querySelector('head');
     head.innerHTML += link;
   }
+
+  isRunningStandalone() {
+    return (
+      window.navigator.standalone ||
+      window.matchMedia('(display-mode: standalone)').matches
+    );
+  }
 }
