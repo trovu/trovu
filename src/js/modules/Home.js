@@ -61,9 +61,12 @@ export default class Home {
     const suggestionsTop = document
       .querySelector('#suggestions')
       .getBoundingClientRect().top;
-    const footerTop = document
-      .querySelector('footer')
-      .getBoundingClientRect().top;
+    let footerTop;
+    if (document.querySelector('footer').style.display === 'none') {
+      footerTop = document.documentElement.clientHeight;
+    } else {
+      footerTop = document.querySelector('footer').getBoundingClientRect().top;
+    }
     suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
   }
 
@@ -103,11 +106,13 @@ export default class Home {
       document.querySelector('nav.navbar').style.display = 'block';
       document.querySelector('#intro').style.display = 'block';
       document.querySelector('#alert').style.display = 'block';
+      document.querySelector('footer').style.display = 'block';
       this.helpDiv.innerHTML = '';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('#alert').style.display = 'none';
+      document.querySelector('footer').style.display = 'none';
       this.helpDiv.innerHTML =
         'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
     }
@@ -134,7 +139,7 @@ export default class Home {
           'No matching shortcut found. Did you use a <a href="https://trovu.net/docs/">keyword</a>? Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>. ';
         break;
       case 'not_reachable':
-        alert.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> language/country to your namespaces.`;
+        alert.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> to your namespaces.`;
         break;
       case 'reloaded':
         alert.textContent = 'Shortcuts were reloaded in all namespaces.';
