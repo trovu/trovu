@@ -29,6 +29,11 @@ program
 program
   .command('test-shortcuts')
   .description('Test shortcut URLs')
+  .option(
+    '-f, --filter <string>',
+    'only apply to shortcuts containing <string>',
+  )
+  .option('-v, --verbose', 'output fetched text for failed tests')
   .action(testShortcuts);
 
 // Call for user data:
