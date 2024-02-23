@@ -110,8 +110,10 @@ export default class Home {
     ) {
       document.querySelector('nav.navbar').style.display = 'block';
       document.querySelector('#alert').style.display = 'block';
-      document.querySelector('#intro').style.display = 'block';
-      document.querySelector('footer').style.display = 'block';
+      if (!this.isRunningStandalone()) {
+        document.querySelector('#intro').style.display = 'block';
+        document.querySelector('footer').style.display = 'block';
+      }
       this.helpDiv.innerHTML = '';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
