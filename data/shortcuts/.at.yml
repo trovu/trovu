@@ -532,12 +532,17 @@ ikea 0:
   - furniture
   - ikea
   - shopping
+  tests:
+  - expect: IKEA Österreich
 ikea 1:
   url: https://www.ikea.com/at/de/search/?q=<query>
   include: ikea 0
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
+  tests:
+  - arguments: matratze
+    expect: <title>Suchen
 obv 0:
   url: https://www.obvsg.at/
   title: OBV - Österreichischer Bibliothekenverbund
@@ -550,6 +555,9 @@ obv 1:
   examples:
   - arguments: elfriede jelinek
     description: Suche nach Literatur von und über Elfriede Jelinek
+  tests:
+  - arguments: jelinek
+    expect: primoExploreRoot
 oebb 2:
   include:
     key: öbb 2
@@ -565,41 +573,58 @@ rsc 0:
   tags:
   - electronics
   - shopping
+  tests:
+  - expect: RS</title>
 rsc 1:
   url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
   include: rsc 0
   examples:
-  - arguments: Battery
-    description: Suche bei RS Components nach "Battery"
+  - arguments: battery
+    description: Suche bei RS Components nach "battery"
+  tests:
+  - arguments: battery
+    expect: '&#x27;battery&#x27; | RS</title>'
 we 0:
   url: http://at.wetter.com/?forcesite=1
   title: Wetter.com
   tags:
   - weather
+  tests:
+  - expect: Wetter für Österreich
 we 1:
   url: http://at.wetter.com/suche/?search=<Ort>
   include: we 0
   examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  - arguments: wien
+    description: Wetter in Wien
+  tests:
+  - arguments: wien
+    expect: Suche nach wien
 zal 0:
   url: https://www.zalando.at/
   title: Zalando.at
   tags:
   - shopping
   - zalando
+  tests:
+  - expect: rel="canonical" href="https://www.zalando.at/"
 zal 1:
   url: https://www.zalando.at/katalog/?q=<Produkt>
   include: zal 0
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen
+  tests:
+  - arguments: schuhe
+    expect: <title>Schuhe
 öbb 0:
   url: https://www.oebb.at/
   title: ÖBB-Hauptseite
   tags:
   - bahn
   - travel
+  tests:
+  - expect: ÖBB</title>
 öbb 2:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
   include: öbb 0
@@ -607,6 +632,9 @@ zal 1:
   examples:
   - arguments: wien, salzburg
     description: Verbindung von Wien nach Salzburg
+  tests:
+  - arguments: wien, salzburg
+    expect: Hafas.Core.init
 öbb 3:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&start=1'
   include: öbb 2
