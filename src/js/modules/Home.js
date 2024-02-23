@@ -30,6 +30,11 @@ export default class Home {
     this.helpDiv = document.querySelector('#help');
     this.queryInput = document.querySelector('#query');
 
+    if (this.isRunningStandalone()) {
+      document.querySelector('#intro').style.display = 'none';
+      document.querySelector('footer').style.display = 'none';
+    }
+
     new Settings(this.env);
 
     this.showInfoAlerts();
@@ -104,14 +109,16 @@ export default class Home {
       this.suggestions.selected === -1
     ) {
       document.querySelector('nav.navbar').style.display = 'block';
-      document.querySelector('#intro').style.display = 'block';
       document.querySelector('#alert').style.display = 'block';
-      document.querySelector('footer').style.display = 'block';
+      if (!this.isRunningStandalone()) {
+        document.querySelector('#intro').style.display = 'block';
+        document.querySelector('footer').style.display = 'block';
+      }
       this.helpDiv.innerHTML = '';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
-      document.querySelector('#intro').style.display = 'none';
       document.querySelector('#alert').style.display = 'none';
+      document.querySelector('#intro').style.display = 'none';
       document.querySelector('footer').style.display = 'none';
       this.helpDiv.innerHTML =
         'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
@@ -206,5 +213,12 @@ export default class Home {
     />`;
     const head = document.querySelector('head');
     head.innerHTML += link;
+  }
+
+  isRunningStandalone() {
+    return (
+      window.navigator.standalone ||
+      window.matchMedia('(display-mode: standalone)').matches
+    );
   }
 }

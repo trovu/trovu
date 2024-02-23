@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 299-adjust-pwa
   pull_request:
     branches:
       - master
