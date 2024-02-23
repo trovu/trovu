@@ -5,6 +5,8 @@ a 0:
   - amazon
   - books
   - shopping
+  tests:
+  - expect: <title>Amazon.de
 a 1:
   url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&site-redirect=at&linkCode=ur2
   title: Amazon.at
@@ -15,6 +17,9 @@ a 1:
   examples:
   - arguments: goethe
     description: Suche auf Amazon.at nach "goethe"
+  tests:
+  - arguments: goethe
+    expect: '<title>Amazon.de : goethe</title>'
 conrad 0:
   url: http://www.conrad.at/
   title: Conrad Elektronik Österreich
