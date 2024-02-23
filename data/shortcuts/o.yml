@@ -8945,23 +8945,6 @@ wa 1:
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
-war 0:
-  url: https://archive.ph/
-  title: Webpage archive
-  tags:
-  - news
-  - press
-  - archive
-war 1:
-  url: https://archive.ph/submit/?url=<url>
-  title: Webpage archive
-  tags:
-  - news
-  - press
-  - archive
-  examples:
-  - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
-    description: Read that article, paywall removed.
 wadoku 1:
   url: http://www.wadoku.de/wadoku/search/<suchwort>
   title: Wadoku suche
@@ -8978,6 +8961,23 @@ wam 1:
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
+war 0:
+  url: https://archive.ph/
+  title: Webpage archive
+  tags:
+  - archive
+  - news
+  - press
+war 1:
+  url: https://archive.ph/submit/?url=<url>
+  title: Webpage archive
+  tags:
+  - archive
+  - news
+  - press
+  examples:
+  - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
+    description: Read that article, paywall removed.
 watchz 1:
   url: http://zattoo.com/view/<channel>
   title: Zattoo
