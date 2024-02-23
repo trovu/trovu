@@ -533,7 +533,7 @@ ikea 0:
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/at/de/search/?q=<query>
+  url: https://www.ikea.com/at/de/search/?q=<query>
   include: ikea 0
   examples:
   - arguments: matratze
