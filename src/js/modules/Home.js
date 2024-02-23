@@ -103,27 +103,20 @@ export default class Home {
       this.queryInput.value.trim() === '' &&
       this.suggestions.selected === -1
     ) {
-      this.setDisplays(['nav.navbar', '#intro', '#alert', 'footer'], 'block');
+      document.querySelector('nav.navbar').style.display = 'block';
+      document.querySelector('#intro').style.display = 'block';
+      document.querySelector('#alert').style.display = 'block';
+      document.querySelector('footer').style.display = 'block';
       this.helpDiv.innerHTML = '';
     } else {
-      this.setDisplays(['nav.navbar', '#intro', '#alert', 'footer'], 'none');
+      document.querySelector('nav.navbar').style.display = 'none';
+      document.querySelector('#intro').style.display = 'none';
+      document.querySelector('#alert').style.display = 'none';
+      document.querySelector('footer').style.display = 'none';
       this.helpDiv.innerHTML =
         'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
     }
     Home.setHeights();
-  }
-
-  setDisplays(elements, value) {
-    for (const element of elements) {
-      this.setDisplay(element, value);
-    }
-  }
-  setDisplay(selector, value) {
-    const element = document.querySelector(selector);
-    if (!element) {
-      return;
-    }
-    element.style.display = value;
   }
 
   setLocationHash() {
