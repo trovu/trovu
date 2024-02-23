@@ -9,11 +9,7 @@ a 0:
   - expect: <title>Amazon.de
 a 1:
   url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&site-redirect=at&linkCode=ur2
-  title: Amazon.at
-  tags:
-  - amazon
-  - books
-  - shopping
+  include: a 0
   examples:
   - arguments: goethe
     description: Suche auf Amazon.at nach "goethe"
@@ -30,12 +26,8 @@ conrad 0:
   tests:
   - expect: Elektronik und Technik in Österreich
 conrad 1:
+  include: conrad 0
   url: https://www.conrad.at/de/search.html?search=<Artikel>
-  title: Conrad Elektronik Österreich
-  tags:
-  - conrad
-  - electronics
-  - shopping
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
@@ -51,11 +43,7 @@ e 0:
   - shopping
 e 1:
   url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
-  title: Ebay.at
-  tags:
-  - ebay
-  - is-affiliate
-  - shopping
+  include: e 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
