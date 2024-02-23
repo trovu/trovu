@@ -1,4 +1,5 @@
 import DataManager from './modules/DataManager';
+import QueryParser from './modules/QueryParser';
 import UrlProcessor from './modules/UrlProcessor';
 import ajv from 'ajv';
 import { Command } from 'commander';
@@ -83,20 +84,44 @@ function normalizeData() {
 }
 
 function testShortcuts(options) {
-  const data = DataManager.load();
+  const data2 = DataManager.load();
+  const data = {
+    shortcuts: {
+      '.at': data2['shortcuts']['.at'],
+    },
+  };
+
+  const env = {
+    data: data,
+    language: 'en',
+    country: 'us',
+  };
   for (const namespace in data.shortcuts) {
     for (const key in data.shortcuts[namespace]) {
       const shortcut = data.shortcuts[namespace][key];
       if (shortcut.tests) {
         for (const test of shortcut.tests) {
-          continue;
+          const args = QueryParser.getArguments(test.arguments);
           console.log(`Testing ${namespace}.${key}`);
-          console.log(shortcut.url);
+          let url = shortcut.url;
+          url = UrlProcessor.replaceVariables(url, env);
+          url = UrlProcessor.replaceArguments(url, args, env);
+          console.log(url);
+          fetch(url)
+            .catch((error) => console.error(error))
+            .then((response) => response.text())
+            // .then((text) => console.log(text))
+            .then((text) => {
+              if (text.includes(test.expected)) {
+                console.log('Test passed');
+              } else {
+                console.error('Test failed');
+              }
+            });
         }
       }
     }
   }
-  console.log('foo');
 }
 
 function migratePlaceholders(options) {
