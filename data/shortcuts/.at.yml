@@ -39,6 +39,9 @@ conrad 1:
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
+  tests:
+  - arguments: verteiler
+    expect: <title>Suchergebnisse
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
