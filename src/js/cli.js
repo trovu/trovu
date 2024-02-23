@@ -107,7 +107,7 @@ function testShortcuts(options) {
           let url = shortcut.url;
           url = UrlProcessor.replaceVariables(url, env);
           url = UrlProcessor.replaceArguments(url, args, env);
-          console.log(`${namespace}.${key}\t  fetch ${url}`);
+          console.log(`${namespace}.${key}\t⏳ ${url}`);
           fetch(url)
             .then((response) => {
               if (!response.ok)
