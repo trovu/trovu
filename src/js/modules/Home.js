@@ -30,6 +30,11 @@ export default class Home {
     this.helpDiv = document.querySelector('#help');
     this.queryInput = document.querySelector('#query');
 
+    if (this.isRunningStandalone()) {
+      document.querySelector('#intro').style.display = 'none';
+      document.querySelector('footer').style.display = 'none';
+    }
+
     new Settings(this.env);
 
     this.showInfoAlerts();
