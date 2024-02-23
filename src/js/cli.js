@@ -84,12 +84,7 @@ function normalizeData() {
 }
 
 function testShortcuts(options) {
-  const data2 = DataManager.load();
-  const data = {
-    shortcuts: {
-      '.at': data2['shortcuts']['.at'],
-    },
-  };
+  const data = DataManager.load();
 
   const env = {
     data: data,
