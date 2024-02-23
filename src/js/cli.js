@@ -84,6 +84,18 @@ function normalizeData() {
 
 function testShortcuts(options) {
   const data = DataManager.load();
+  for (const namespace in data.shortcuts) {
+    for (const key in data.shortcuts[namespace]) {
+      const shortcut = data.shortcuts[namespace][key];
+      if (shortcut.tests) {
+        for (const test of shortcut.tests) {
+          continue;
+          console.log(`Testing ${namespace}.${key}`);
+          console.log(shortcut.url);
+        }
+      }
+    }
+  }
   console.log('foo');
 }
 
