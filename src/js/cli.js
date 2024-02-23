@@ -117,6 +117,9 @@ function testShortcuts(options) {
                 // console.log(`${namespace}.${key}\t✅ passed`);
               } else {
                 console.log(`${namespace}.${key}\t❌ failed`);
+                console.log(text);
+                console.log(test.expected);
+                return;
               }
             });
         }
