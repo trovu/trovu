@@ -48,7 +48,7 @@ export default class Migrator {
         prefix,
       );
       for (const placeholderName in placeholders) {
-        if (isOnlyNumber(placeholderName)) {
+        if (this.isOnlyNumber(placeholderName)) {
           console.log(
             `Warning: In shortcut ${namespace}.${key}, placeholder name ${placeholderName} is only a number.`,
           );
