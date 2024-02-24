@@ -1,5 +1,6 @@
 import DataManager from './DataManager';
 import UrlProcessor from './UrlProcessor';
+import jsyaml from 'js-yaml';
 
 export default class Migrator {
   constructor() {}
