@@ -9,7 +9,8 @@ a 0:
   - expect: <title>Amazon.de
 a 1:
   url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&site-redirect=at&linkCode=ur2
-  include: a 0
+  include:
+    key: a 0
   examples:
   - arguments: goethe
     description: Suche auf Amazon.at nach "goethe"
@@ -26,7 +27,8 @@ conrad 0:
   tests:
   - expect: Elektronik und Technik in Österreich
 conrad 1:
-  include: conrad 0
+  include:
+    key: conrad 0
   url: https://www.conrad.at/de/search.html?search=<Artikel>
   examples:
   - arguments: glühlampe
@@ -45,7 +47,8 @@ e 0:
   - expect: rel="canonical" href="http://www.ebay.at"
 e 1:
   url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
-  include: e 0
+  include:
+    key: e 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
@@ -64,7 +67,8 @@ g 0:
   - expect: href="https://www.google.at/
 g 1:
   url: https://www.google.at/search?hl=<$language>&q=<query>&ie=utf-8
-  include: g 0
+  include:
+    key: g 0
   examples:
   - arguments: wien
     description: Google-Suche nach "wien"
@@ -83,7 +87,8 @@ gh 0:
   - expect: <title>Geizhals Preisvergleich Österreich</title>
 gh 1:
   url: 'http://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
-  include: gh 0
+  include:
+    key: gh 0
   examples:
   - arguments: fernseher
     description: Search for "fernseher"
@@ -536,7 +541,8 @@ ikea 0:
   - expect: IKEA Österreich
 ikea 1:
   url: https://www.ikea.com/at/de/search/?q=<query>
-  include: ikea 0
+  include:
+    key: ikea 0
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
@@ -551,7 +557,8 @@ obv 0:
   - obv
 obv 1:
   url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
-  include: obv 0
+  include:
+    key: obv 0
   examples:
   - arguments: elfriede jelinek
     description: Suche nach Literatur von und über Elfriede Jelinek
@@ -577,7 +584,8 @@ rsc 0:
   - expect: RS</title>
 rsc 1:
   url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
-  include: rsc 0
+  include:
+    key: rsc 0
   examples:
   - arguments: battery
     description: Suche bei RS Components nach "battery"
@@ -593,7 +601,8 @@ we 0:
   - expect: Wetter für Österreich
 we 1:
   url: http://at.wetter.com/suche/?search=<Ort>
-  include: we 0
+  include:
+    key: we 0
   examples:
   - arguments: wien
     description: Wetter in Wien
@@ -610,7 +619,8 @@ zal 0:
   - expect: rel="canonical" href="https://www.zalando.at/"
 zal 1:
   url: https://www.zalando.at/katalog/?q=<Produkt>
-  include: zal 0
+  include:
+    key: zal 0
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen
@@ -627,7 +637,8 @@ zal 1:
   - expect: ÖBB</title>
 öbb 2:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
-  include: öbb 0
+  include:
+    key: öbb 0
   title: ÖBB-Auskunft
   examples:
   - arguments: wien, salzburg
@@ -637,13 +648,15 @@ zal 1:
     expect: Hafas.Core.init
 öbb 3:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&start=1'
-  include: öbb 2
+  include:
+    key: öbb 2
   examples:
   - arguments: wien, salzburg, 10
     description: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  include: öbb 2
+  include:
+    key: öbb 2
   examples:
   - arguments: wien, salzburg, 10, 1.1.
     description: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.
