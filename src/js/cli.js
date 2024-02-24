@@ -1,5 +1,5 @@
 import DataManager from './modules/DataManager';
-import QueryParser from './modules/QueryParser';
+import ShortcutTester from './modules/ShortcutTester';
 import UrlProcessor from './modules/UrlProcessor';
 import ajv from 'ajv';
 import { Command } from 'commander';
@@ -88,51 +88,8 @@ function normalizeData() {
 }
 
 function testShortcuts(options) {
-  const data = DataManager.load();
-
-  const env = {
-    data: data,
-    language: 'en',
-    country: 'us',
-  };
-  for (const namespace in data.shortcuts) {
-    for (const key in data.shortcuts[namespace]) {
-      const shortcut = data.shortcuts[namespace][key];
-      if (shortcut.tests) {
-        if (options.filter) {
-          if (!`${namespace}.${key}`.includes(options.filter)) continue;
-        }
-        for (const test of shortcut.tests) {
-          const args = QueryParser.getArguments(test.arguments);
-          let url = shortcut.url;
-          url = UrlProcessor.replaceVariables(url, env);
-          url = UrlProcessor.replaceArguments(url, args, env);
-          console.log(`${namespace}.${key}\t⏳ ${url}`);
-          fetch(url)
-            .then((response) => {
-              if (!response.ok)
-                throw new Error(
-                  `${namespace}.${key}\t❌ failed to fetch ${url}`,
-                );
-              return response.text();
-            })
-            .then((text) => {
-              // keep for debugging
-              // console.log(text);
-              if (text.includes(test.expect)) {
-                console.log(`${namespace}.${key}\t✅ passed`);
-              } else {
-                console.log(
-                  `${namespace}.${key}\t❌ failed to find "${test.expect}", write contents to file ${namespace}.${key}.html`,
-                );
-                fs.writeFileSync(`${namespace}.${key}.html`, text, 'utf8');
-              }
-            })
-            .catch((error) => console.error(error));
-        }
-      }
-    }
-  }
+  const shortcutTester = new ShortcutTester(options);
+  shortcutTester.testShortcuts();
 }
 
 function migratePlaceholders(options) {
