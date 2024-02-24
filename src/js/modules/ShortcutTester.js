@@ -5,19 +5,11 @@ import UrlProcessor from './UrlProcessor';
 export default class ShortcutTester {
   constructor(options) {
     this.options = options;
-    const { data, env } = this.loadDataAndEnv();
-    this.data = data;
-    this.env = env;
-  }
-
-  loadDataAndEnv() {
-    const data = DataManager.load();
-    const env = {
-      data: data,
+    this.env = {
+      data: DataManager.load(),
       language: 'en',
       country: 'us',
     };
-    return { data, env };
   }
 
   filterShortcut(namespace, key) {
@@ -47,7 +39,6 @@ export default class ShortcutTester {
           console.log(`${namespace}.${key}\t✅ passed`);
         } else {
           console.log(`${namespace}.${key}\t❌ failed to find "${testExpect}"`);
-          // Assuming fs.writeFileSync is available in your environment:
           fs.writeFileSync(`${namespace}.${key}.html`, text, 'utf8');
         }
       })
@@ -55,9 +46,9 @@ export default class ShortcutTester {
   }
 
   testShortcuts() {
-    for (const namespace in this.data.shortcuts) {
-      for (const key in this.data.shortcuts[namespace]) {
-        const shortcut = this.data.shortcuts[namespace][key];
+    for (const namespace in this.env.data.shortcuts) {
+      for (const key in this.env.data.shortcuts[namespace]) {
+        const shortcut = this.env.data.shortcuts[namespace][key];
         if (shortcut.tests && this.filterShortcut(namespace, key)) {
           shortcut.tests.forEach((test) => {
             const url = this.prepareUrl(shortcut, test.arguments);
