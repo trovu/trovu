@@ -5,16 +5,18 @@ a 0:
   - amazon
   - books
   - shopping
+  tests:
+  - expect: <title>Amazon.de
 a 1:
   url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&site-redirect=at&linkCode=ur2
-  title: Amazon.at
-  tags:
-  - amazon
-  - books
-  - shopping
+  include:
+    key: a 0
   examples:
   - arguments: goethe
     description: Suche auf Amazon.at nach "goethe"
+  tests:
+  - arguments: goethe
+    expect: '<title>Amazon.de : goethe</title>'
 conrad 0:
   url: http://www.conrad.at/
   title: Conrad Elektronik Österreich
@@ -22,16 +24,18 @@ conrad 0:
   - conrad
   - electronics
   - shopping
+  tests:
+  - expect: Elektronik und Technik in Österreich
 conrad 1:
+  include:
+    key: conrad 0
   url: https://www.conrad.at/de/search.html?search=<Artikel>
-  title: Conrad Elektronik Österreich
-  tags:
-  - conrad
-  - electronics
-  - shopping
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
+  tests:
+  - arguments: verteiler
+    expect: <title>Suchergebnisse
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
@@ -39,43 +43,58 @@ e 0:
   - ebay
   - is-affiliate
   - shopping
+  tests:
+  - expect: rel="canonical" href="http://www.ebay.at"
 e 1:
   url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
-  title: Ebay.at
-  tags:
-  - ebay
-  - is-affiliate
-  - shopping
+  include:
+    key: e 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
-g 1:
-  url: https://www.google.at/search?hl=<$language>&q=<query>&ie=utf-8
+  tests:
+  - arguments: smartphone
+    expect: <title>smartphone | eBay</title>
+g 0:
+  url: https://www.google.at/
   title: Google.at
   tags:
   - google
   - web-search
   examples:
+  - description: Go to homepage
+  tests:
+  - expect: href="https://www.google.at/
+g 1:
+  url: https://www.google.at/search?hl=<$language>&q=<query>&ie=utf-8
+  include:
+    key: g 0
+  examples:
   - arguments: wien
     description: Google-Suche nach "wien"
   showOnHome: 600
+  tests:
+  - arguments: wien
+    expect: <title>wien
 gh 0:
-  url: http://geizhals.at/
-  title: Geizhals Österreich Hauptseite
-  tags:
-  - geizhals
-  - preisvergleich
-  - shopping
-gh 1:
-  url: 'http://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
+  url: https://geizhals.at/
   title: Geizhals Österreich
   tags:
   - geizhals
   - preisvergleich
   - shopping
+  tests:
+  - expect: <title>Geizhals Preisvergleich Österreich</title>
+gh 1:
+  url: 'http://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
+  include:
+    key: gh 0
   examples:
   - arguments: fernseher
     description: Search for "fernseher"
+  tests:
+  - arguments: fernseher
+    expect: <title>fernseher Geizhals Österreich</title>
 gmam 1:
   deprecated:
     alternative:
@@ -518,25 +537,34 @@ ikea 0:
   - furniture
   - ikea
   - shopping
+  tests:
+  - expect: IKEA Österreich
 ikea 1:
-  url: http://www.ikea.com/at/de/search/?q=<query>
-  title: IKEA Österreich
-  tags:
-  - furniture
-  - ikea
-  - shopping
+  url: https://www.ikea.com/at/de/search/?q=<query>
+  include:
+    key: ikea 0
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
-obv 1:
-  url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
-  title: OBV Suche - Österreichischer Bibliothekenverbund
+  tests:
+  - arguments: matratze
+    expect: <title>Suchen
+obv 0:
+  url: https://www.obvsg.at/
+  title: OBV - Österreichischer Bibliothekenverbund
   tags:
   - library
   - obv
+obv 1:
+  url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
+  include:
+    key: obv 0
   examples:
   - arguments: elfriede jelinek
     description: Suche nach Literatur von und über Elfriede Jelinek
+  tests:
+  - arguments: jelinek
+    expect: primoExploreRoot
 oebb 2:
   include:
     key: öbb 2
@@ -546,61 +574,89 @@ oebb 3:
 oebb 4:
   include:
     key: öbb 4
-rsc 1:
-  url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
+rsc 0:
+  url: https://at.rs-online.com/
   title: RS Components Österreich
   tags:
   - electronics
   - shopping
+  tests:
+  - expect: RS</title>
+rsc 1:
+  url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
+  include:
+    key: rsc 0
   examples:
-  - arguments: Battery
-    description: Suche bei RS Components nach "Battery"
+  - arguments: battery
+    description: Suche bei RS Components nach "battery"
+  tests:
+  - arguments: battery
+    expect: '&#x27;battery&#x27; | RS</title>'
 we 0:
   url: http://at.wetter.com/?forcesite=1
   title: Wetter.com
   tags:
   - weather
+  tests:
+  - expect: Wetter für Österreich
 we 1:
   url: http://at.wetter.com/suche/?search=<Ort>
-  title: Wetter.com
-  tags:
-  - weather
+  include:
+    key: we 0
   examples:
-  - arguments: berlin
-    description: Search for "berlin"
-zal 1:
-  url: http://www.zalando.at/katalog/?q=<Produkt>
+  - arguments: wien
+    description: Wetter in Wien
+  tests:
+  - arguments: wien
+    expect: Suche nach wien
+zal 0:
+  url: https://www.zalando.at/
   title: Zalando.at
   tags:
   - shopping
   - zalando
+  tests:
+  - expect: rel="canonical" href="https://www.zalando.at/"
+zal 1:
+  url: https://www.zalando.at/katalog/?q=<Produkt>
+  include:
+    key: zal 0
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen
-öbb 2:
-  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
-  title: ÖBB-Auskunft
+  tests:
+  - arguments: schuhe
+    expect: <title>Schuhe
+öbb 0:
+  url: https://www.oebb.at/
+  title: ÖBB-Hauptseite
   tags:
   - bahn
   - travel
+  tests:
+  - expect: ÖBB</title>
+öbb 2:
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
+  include:
+    key: öbb 0
+  title: ÖBB-Auskunft
   examples:
   - arguments: wien, salzburg
     description: Verbindung von Wien nach Salzburg
+  tests:
+  - arguments: wien, salzburg
+    expect: Hafas.Core.init
 öbb 3:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&start=1'
-  title: ÖBB-Auskunft
-  tags:
-  - bahn
-  - travel
+  include:
+    key: öbb 2
   examples:
   - arguments: wien, salzburg, 10
     description: Verbindung von Wien nach Salzburg um 10:00 Uhr
 öbb 4:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  title: ÖBB-Auskunft
-  tags:
-  - bahn
-  - travel
+  include:
+    key: öbb 2
   examples:
   - arguments: wien, salzburg, 10, 1.1.
     description: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.

@@ -81,8 +81,14 @@ patternProperties:
         required:
           - alternative
       tests:
-        type: object
-        additionalProperties: false
-        patternProperties:
-          '^.*$':
-            type: string
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          properties:
+            arguments:
+              type: string
+            expect:
+              type: string
+          required:
+            - expect

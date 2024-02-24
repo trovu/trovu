@@ -1675,7 +1675,8 @@ debt 1:
   - arguments: grub2
     description: Look at the grub2 package in the Debian Package Tracker
   tests:
-    grub2: 'maintainer:'
+  - arguments: grub2
+    expect: 'maintainer:'
 debw 0:
   url: https://wiki.debian.org/
   title: Debian Wiki
@@ -6630,7 +6631,7 @@ podster 1:
   tags:
   - old
 poef 1:
-  url: http://www.pathofexile.com/search/results/<query>/search-within/forumthreads-forumposts
+  url: https://www.pathofexile.com/search/results/<query>/search-within/forumthreads-forumposts
   title: Official Path of Exile forum
   description: Official Forum for the F2P online ARPG "Path of Exile" (PoE).
   tags:
@@ -6642,7 +6643,8 @@ poef 1:
   - arguments: How to Smash Heads
     description: Search  for "How to Smash Heads" - Korgoth's Facebreaker guide
   tests:
-    Rhoa: Forum Post
+  - arguments: Rhoa
+    expect: Results for Rhoa
 poew 1:
   url: http://pathofexile.gamepedia.com/index.php?search=<query>&go=Go
   title: Inofficial Path of Exile Wiki
@@ -6659,7 +6661,8 @@ poew 1:
   - arguments: Vaal Orb
     description: Search inofficial Path of Exile Wiki for "Vaal Orb"
   tests:
-    health: Search results
+  - arguments: health
+    expect: name="query" value="health"/>
 praktiker 1:
   url: http://praktiker.de/Search.action?searchTerm=<query>
   title: Praktiker Baumarkt Online Shop
@@ -8945,23 +8948,6 @@ wa 1:
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
-war 0:
-  url: https://archive.ph/
-  title: Webpage archive
-  tags:
-  - news
-  - press
-  - archive
-war 1:
-  url: https://archive.ph/submit/?url=<url>
-  title: Webpage archive
-  tags:
-  - news
-  - press
-  - archive
-  examples:
-  - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
-    description: Read that article, paywall removed.
 wadoku 1:
   url: http://www.wadoku.de/wadoku/search/<suchwort>
   title: Wadoku suche
@@ -8978,6 +8964,23 @@ wam 1:
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
+war 0:
+  url: https://archive.ph/
+  title: Webpage archive
+  tags:
+  - archive
+  - news
+  - press
+war 1:
+  url: https://archive.ph/submit/?url=<url>
+  title: Webpage archive
+  tags:
+  - archive
+  - news
+  - press
+  examples:
+  - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
+    description: Read that article, paywall removed.
 watchz 1:
   url: http://zattoo.com/view/<channel>
   title: Zattoo

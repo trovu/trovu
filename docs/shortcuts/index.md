@@ -45,6 +45,38 @@ These attributes serve only for informational purposes, they have no effect on w
 -   The `title:` can be any string. It will be shown in the list of shortcuts on the homepage.
 -   `description:` can be a longer string. It will be shown in the list of shortcuts when a shortcut is expanded.
 -   `tags:` can be a list of labels.
+-   `examples:` can be a list of example usages of the shortcuts:
+-   `tests:` can be a list of test calls to check the validity of the shortcut.
+
+#### Examples
+
+```yaml
+examplekeyword 2:
+    ...
+    examples:
+    - arguments: foo, bar
+      description: Search example.com for "foo" and "bar"
+```
+
+An example must have a `description` and, if there are >0 arguments, also an `arguments:` string. For the query of the example call, the arguments will be preceded with the keyword.
+
+Instead of `arguments:`, one can also set a full `query:`. This can be useful for giving an example with an extra namespace, e.g. `query: fr.w berlin`.
+
+#### Tests
+
+Tests are run regularly in the background, to check if shortcuts still work as they did when they were added.
+
+```yaml
+examplekeyword 2:
+    ...
+    tests:
+    - arguments: foo, bar
+      expect: <title>Results for foo, bar</title>
+```
+
+A test must have an `expect:` value that shall be part of the contents of the target webpage. If there are >0 arguments, add also an `arguments:` string.
+
+#### More
 
 The next attributes matter for matching a query:
 
