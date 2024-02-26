@@ -17,21 +17,6 @@
   tests:
   - arguments: 01805-033144
     expect: <title>01805-033144
-3s 0:
-  url: http://www.3suisses.de/
-  title: 3Suisses.de
-  tags:
-  - 3suisses
-  - shopping
-3s 1:
-  url: http://www.3suisses.de/search.html?query=<Suche>
-  title: 3Suisses.de
-  tags:
-  - 3suisses
-  - shopping
-  examples:
-  - arguments: schuhe
-    description: Suche nach Schuhen
 a 0:
   url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=de
   title: Amazon.de Startseite
