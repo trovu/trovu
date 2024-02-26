@@ -1410,13 +1410,11 @@ cw 0:
   - recipe
 cw 1:
   url: https://cooked.wiki/<url>
-  title: Cooked
-  tags:
-  - cooking
-  - recipe
   examples:
   - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
     description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
+  include:
+  - key: cw 0
 cy 0:
   include:
   - key: cy 0
