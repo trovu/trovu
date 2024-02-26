@@ -596,6 +596,23 @@ asterisk 1:
   examples:
   - arguments: dial
     description: 'search for Asterisk''s dial command at Voip-Info.org '
+atd 0:
+  url: https://archive.ph/
+  title: Webpage archive
+  tags:
+  - archive
+  - news
+  - press
+atd 1:
+  url: https://archive.ph/submit/?url=<url>
+  title: Webpage archive
+  tags:
+  - archive
+  - news
+  - press
+  examples:
+  - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
+    description: Read that article, paywall removed.
 atrf 1:
   url: http://alltheragefaces.com/search/<query>
   title: All The Rage Faces!
@@ -8979,23 +8996,6 @@ wam 1:
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
-war 0:
-  url: https://archive.ph/
-  title: Webpage archive
-  tags:
-  - archive
-  - news
-  - press
-war 1:
-  url: https://archive.ph/submit/?url=<url>
-  title: Webpage archive
-  tags:
-  - archive
-  - news
-  - press
-  examples:
-  - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
-    description: Read that article, paywall removed.
 watchz 1:
   url: http://zattoo.com/view/<channel>
   title: Zattoo
