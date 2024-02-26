@@ -1408,11 +1408,16 @@ cw 0:
   tags:
   - cooking
   - recipe
+  tests:
+  - expect: <title>Cooked
 cw 1:
   url: https://cooked.wiki/<url>
   examples:
   - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
     description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
+  tests:
+  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
+    expect: Brokkoli-Pastinaken-Kokos-Curry
   include:
   - key: cw 0
 cy 0:
