@@ -1388,6 +1388,21 @@ cve 1:
   title: CVE Common vulnerabilities and exposures
   tags:
   - old
+cw 0:
+  url: https://cooked.wiki/
+  title: Cooked
+  tags:
+  - cooking
+  - recipe
+cw 1:
+  url: https://cooked.wiki/<url>
+  title: Cooked
+  tags:
+  - cooking
+  - recipe
+  examples:
+  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
+  - description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
 cy 0:
   include:
   - key: cy 0
