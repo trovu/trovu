@@ -605,11 +605,8 @@ atd 0:
   - press
 atd 1:
   url: https://archive.ph/submit/?url=<url>
-  title: Webpage archive
-  tags:
-  - archive
-  - news
-  - press
+  include:
+  - key: atd 1
   examples:
   - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
     description: Read that article, paywall removed.
