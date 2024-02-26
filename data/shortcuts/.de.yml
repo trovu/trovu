@@ -1,9 +1,22 @@
-0180 1:
-  url: http://www.tk-anbieter.de/0180/suche.html?nr=0180<query>
+0180 0:
+  url: https://www.0180.info/
   title: 0180-Telefonbuch
+  description: Liste mit Ersatznummern für Hot­lines mit der Vor­wahl 0180
   tags:
   - phone
   - telefonbuch
+  tests:
+  - expect: <title>0180-Telefonbuch
+0180 1:
+  url: https://www.0180.info/suche.html?s=<Suche>
+  include:
+    key: 0180 0
+  examples:
+  - arguments: 01805-033144
+    description: Suche nach alternativen Nummern zu 01805-033144
+  tests:
+  - arguments: 01805-033144
+    expect: <title>01805-033144
 3s 0:
   url: http://www.3suisses.de/
   title: 3Suisses.de
