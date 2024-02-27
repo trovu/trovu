@@ -10,6 +10,18 @@
         ]
     },
     "orientation": "any",
+    "screenshots": [
+        {
+            "src": "img/portrait.jpg",
+            "sizes": "2400x1080",
+            "type": "image/jpg"
+        },
+        {
+            "src": "img/landscape.jpg",
+            "sizes": "1080x2400",
+            "type": "image/jpg"
+        }
+    ],
     "icons": [
         {
             "src": "https://trovu.net/favicon.ico",
