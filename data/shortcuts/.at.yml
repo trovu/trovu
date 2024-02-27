@@ -1,14 +1,16 @@
 a 0:
-  url: http://www.amazon.de/?_encoding=UTF8&camp=1638&creative=6742&linkCode=ur2&site-redirect=at
-  title: Amazon.at Startseite
+  url: https://www.amazon.de/
+  title: Amazon
   tags:
   - amazon
   - books
   - shopping
+  examples:
+  - description: Amazon Startseite
   tests:
   - expect: <title>Amazon.de
 a 1:
-  url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&site-redirect=at&linkCode=ur2
+  url: https://www.amazon.de/s?k=<Suche>
   include:
     key: a 0
   examples:
