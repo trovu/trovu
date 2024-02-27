@@ -39,13 +39,13 @@ a 1:
   - arguments: goethe
     expect: '<title>Amazon.de : goethe</title>'
 aa 0:
-  url: http://www.auswaertiges-amt.de/DE/Laenderinformationen/SicherheitshinweiseA-Z-Laenderauswahlseite_node.html
+  url: https://www.auswaertiges-amt.de/de/ReiseUndSicherheit
   title: Auswärtiges Amt, Reise und Sicherheitshinweise
   tags:
   - reise
   - travel
 aa 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=www.auswaertiges-amt.de%3ADE%3ALaenderinformationen%20<Land>
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=www.auswaertiges-amt.de%3AReiseUndSicherheit<Land>
   include:
     key: aa 0
   examples:
