@@ -55,7 +55,7 @@ aa 1:
     description: Zeige Reise- und Sicherheitshinweise des Auswärtigen Amtes zur Türkei
   tests:
   - arguments: türkei
-    expect: <title>Reise, Sicherheit, Gesundheit
+    expect: '<title>Türkei: Reise- und Sicherheitshinweise'
 ac 0:
   url: https://www.amazon.de/gp/cart/view.html
   title: Amazon Einkaufswagen
