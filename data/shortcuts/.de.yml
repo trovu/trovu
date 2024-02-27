@@ -44,6 +44,8 @@ aa 0:
   tags:
   - reise
   - travel
+  tests:
+  - expect: <title>Reise, Sicherheit, Gesundheit
 aa 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=www.auswaertiges-amt.de%3AReiseUndSicherheit<Land>
   include:
@@ -51,6 +53,9 @@ aa 1:
   examples:
   - arguments: türkei
     description: Zeige Reise- und Sicherheitshinweise des Auswärtigen Amtes zur Türkei
+  tests:
+  - arguments: türkei
+    expect: <title>Reise, Sicherheit, Gesundheit
 ac 0:
   url: https://www.amazon.de/gp/cart/view.html
   title: Amazon Einkaufswagen
