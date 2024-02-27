@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 308-ship-app
   pull_request:
     branches:
       - master
