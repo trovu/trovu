@@ -12,12 +12,12 @@
     "orientation": "any",
     "screenshots": [
         {
-            "src": "img/portrait.jpg",
+            "src": "/img/portrait.jpg",
             "sizes": "2400x1080",
             "type": "image/jpg"
         },
         {
-            "src": "img/landscape.jpg",
+            "src": "/img/landscape.jpg",
             "sizes": "1080x2400",
             "type": "image/jpg"
         }
@@ -42,5 +42,12 @@
     "background_color": "#ffffff",
     "start_url": "/index.html",
     "display": "standalone",
-    "theme_color": "#343a40"
+    "theme_color": "#343a40",
+    "dir": "auto",
+    "lang": "en",
+    "categories": [
+        "navigation",
+        "productivity",
+        "utilities"
+    ]
 }
