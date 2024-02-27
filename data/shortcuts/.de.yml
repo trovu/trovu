@@ -46,10 +46,8 @@ aa 0:
   - travel
 aa 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=www.auswaertiges-amt.de%3ADE%3ALaenderinformationen%20<Land>
-  title: Auswärtiges Amt, Reise und Sicherheitshinweise
-  tags:
-  - reise
-  - travel
+  include:
+    key: aa 0
   examples:
   - arguments: türkei
     description: Zeige Reise- und Sicherheitshinweise des Auswärtigen Amtes zur Türkei
