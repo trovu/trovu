@@ -47,7 +47,7 @@ aa 0:
   tests:
   - expect: <title>Reise, Sicherheit, Gesundheit
 aa 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=www.auswaertiges-amt.de%3AReiseUndSicherheit<Land>
+  url: https://www.google.com/search?q=site%3Aauswaertiges-amt.de%20ReiseUndSicherheit%20<Land>&btnI=&sourceid=navclient&gfns=1
   include:
     key: aa 0
   examples:
