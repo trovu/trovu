@@ -64,13 +64,10 @@ ac 0:
   examples:
   - description: Gehe zum Amazon Einkaufswagen
 alternate 1:
-  url: https://www.alternate.de/listing.xhtml?q=<Produkt>
-  title: Alternate
-  tags:
-  - shopping
-  examples:
-  - arguments: fernseher
-    description: Suche nach Fernsehern
+  deprecated:
+    alternative:
+      query: atn <1>
+    created: '2024-02-29'
 amazon 1:
   url: http://www.amazon.de/gp/search?ie=UTF8&camp=1638&creative=6742&index=aps&keywords=<Suche>&linkCode=ur2
   title: Amazon.de
@@ -84,6 +81,14 @@ amazon 1:
 ao 0:
   url: https://www.amazon.de/gp/css/order-history
   title: Amazon Bestellungen
+atn 1:
+  url: https://www.alternate.de/listing.xhtml?q=<Produkt>
+  title: Alternate
+  tags:
+  - shopping
+  examples:
+  - arguments: fernseher
+    description: Suche nach Fernsehern
 aw 0:
   url: https://www.abgeordnetenwatch.de/
   title: Abgeordnetenwatch
