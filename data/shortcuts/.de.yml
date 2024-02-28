@@ -81,14 +81,22 @@ amazon 1:
 ao 0:
   url: https://www.amazon.de/gp/css/order-history
   title: Amazon Bestellungen
-atn 1:
-  url: https://www.alternate.de/listing.xhtml?q=<Produkt>
+atn 0:
+  url: https://www.alternate.de/
   title: Alternate
   tags:
+  - electronics
+  - hardware
   - shopping
+  examples:
+  - description: Gehe zur Startseite
+atn 1:
+  url: https://www.alternate.de/listing.xhtml?q=<Produkt>
   examples:
   - arguments: fernseher
     description: Suche nach Fernsehern
+  include:
+    key: atn 0
 aw 0:
   url: https://www.abgeordnetenwatch.de/
   title: Abgeordnetenwatch
