@@ -59,6 +59,10 @@ aa 1:
 ac 0:
   url: https://www.amazon.de/gp/cart/view.html
   title: Amazon Einkaufswagen
+  tags:
+  - amazon
+  examples:
+  - description: Gehe zum Amazon Einkaufswagen
 alternate 1:
   url: http://www.alternate.de/html/search.html?searchCriteria=<Suche>
   title: Alternate
