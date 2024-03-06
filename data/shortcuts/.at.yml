@@ -557,6 +557,8 @@ obv 0:
   tags:
   - library
   - obv
+  tests:
+  - expect: OBVSG Home</title>
 obv 1:
   url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
   include:
