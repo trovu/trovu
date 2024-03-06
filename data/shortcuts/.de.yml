@@ -77,6 +77,7 @@ amazon 1:
 ao 0:
   url: https://www.amazon.de/gp/css/order-history
   title: Amazon Bestellungen
+  tests: need to be logged in
 atn 0:
   url: https://www.alternate.de/
   title: Alternate
@@ -86,6 +87,8 @@ atn 0:
   - shopping
   examples:
   - description: Gehe zur Startseite
+  tests:
+  - expect: ALTERNATE Online Shop</title>
 atn 1:
   url: https://www.alternate.de/listing.xhtml?q=<Produkt>
   examples:
@@ -93,6 +96,9 @@ atn 1:
     description: Suche nach Fernsehern
   include:
     key: atn 0
+  tests:
+  - arguments: fernseher
+    expect: <title>Fernseher
 aw 0:
   url: https://www.abgeordnetenwatch.de/
   title: Abgeordnetenwatch
