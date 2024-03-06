@@ -17,7 +17,11 @@ export default class ShortcutTester {
     for (const namespace in this.env.data.shortcuts) {
       for (const key in this.env.data.shortcuts[namespace]) {
         const shortcut = this.env.data.shortcuts[namespace][key];
-        if (shortcut.tests && this.filterShortcut(namespace, key)) {
+        if (
+          shortcut.tests &&
+          Array.isArray(shortcut.tests) &&
+          this.filterShortcut(namespace, key)
+        ) {
           shortcut.tests.forEach((test) => {
             const url = this.prepareUrl(shortcut, test.arguments);
             this.fetchAndTestUrl(namespace, key, url, test.expect);

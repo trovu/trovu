@@ -81,14 +81,16 @@ patternProperties:
         required:
           - alternative
       tests:
-        type: array
-        items:
-          type: object
-          additionalProperties: false
-          properties:
-            arguments:
-              type: string
-            expect:
-              type: string
-          required:
-            - expect
+        oneOf:
+          - type: string
+          - type: array
+            items:
+              type: object
+              additionalProperties: false
+              properties:
+                arguments:
+                  type: string
+                expect:
+                  type: string
+              required:
+                - expect
