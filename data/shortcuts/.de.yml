@@ -173,10 +173,20 @@ bhs 0:
   - diy
   - hardware
   - shopping
+  examples:
+  - description: BAUHAUS Startseite
+  tests:
+  - expect: <title>BAUHAUS
 bhs 1:
   url: https://www.bauhaus.info/suche/produkte?text=<query>
   include:
     key: bhs 0
+  examples:
+  - arguments: schrauben
+    description: Suche nach Schrauben
+  tests:
+  - arguments: schrauben
+    expect: <title>schrauben
 bibfu 0:
   url: https://www.fu-berlin.de/sites/ub/index.html
   title: FU Berlin Bibliothek
