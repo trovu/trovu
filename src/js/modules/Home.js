@@ -150,6 +150,10 @@ export default class Home {
         break;
       case 'reloaded':
         alert.textContent = 'Shortcuts were reloaded in all namespaces.';
+        if (this.env.github) {
+          alert.textContent +=
+            ' For changes on your GitHub you may need to reload in 5 minutes due to their caching.';
+        }
         break;
       case 'deprecated':
         alert.innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
