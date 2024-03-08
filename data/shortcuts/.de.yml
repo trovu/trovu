@@ -175,11 +175,8 @@ bhs 0:
   - shopping
 bhs 1:
   url: https://www.bauhaus.info/suche/produkte?text=<query>
-  title: BAUHAUS
-  tags:
-  - diy
-  - hardware
-  - shopping
+  include:
+    key: bhs 0
 bibfu 0:
   url: https://www.fu-berlin.de/sites/ub/index.html
   title: FU Berlin Bibliothek
