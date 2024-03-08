@@ -118,19 +118,15 @@ aw 1:
   - arguments: meier
     expect: value="meier"
 bauhaus 0:
-  url: https://www.bauhaus.info/
-  title: BAUHAUS
-  tags:
-  - diy
-  - hardware
-  - shopping
+  deprecated:
+    alternative:
+      query: bhs
+    created: '2024-03-08'
 bauhaus 1:
-  url: https://www.bauhaus.info/suche/produkte?text=<query>
-  title: BAUHAUS
-  tags:
-  - diy
-  - hardware
-  - shopping
+  deprecated:
+    alternative:
+      query: bhs <1>
+    created: '2024-03-08'
 bbb 2:
   url: http://www.bbbike.de/cgi-bin/bbbike.cgi?start=<Start>&via=&ziel=<Ziel>
   title: Berlin by Bike (BBBike.de)
@@ -170,6 +166,20 @@ bhnt 0:
   - lightning-talks
   - meetup
   - open-source
+bhs 0:
+  url: https://www.bauhaus.info/
+  title: BAUHAUS
+  tags:
+  - diy
+  - hardware
+  - shopping
+bhs 1:
+  url: https://www.bauhaus.info/suche/produkte?text=<query>
+  title: BAUHAUS
+  tags:
+  - diy
+  - hardware
+  - shopping
 bibfu 0:
   url: https://www.fu-berlin.de/sites/ub/index.html
   title: FU Berlin Bibliothek
