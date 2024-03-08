@@ -8,7 +8,7 @@ layout: null
 	<title>{{ metadata.title }}</title>
 	<subtitle>{{ metadata.description }}</subtitle>
 	<link href="{{ permalink | htmlBaseUrl(metadata.url) }}" rel="self"/>
-	<link href="{{ metadata.url | url }}" test />
+	<link href="{{ metadata.url | url }}"/>
 	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ metadata.url }}</id>
 	<author>
