@@ -279,9 +279,9 @@ export default class Suggestions {
 
       const querySpan = document.createElement('span');
       querySpan.className = 'query';
-      querySpan.textContent = `${suggestion.keyword} ${
-        example.arguments || ''
-      }`;
+      querySpan.textContent = `${
+        suggestion.reachable ? '' : suggestion.namespace + '.'
+      }${suggestion.keyword} ${example.arguments || ''}`;
       // Surrond query with link to /process.
       const queryLink = document.createElement('a');
       queryLink.href = this.env.getProcessUrl({ query: querySpan.textContent });
