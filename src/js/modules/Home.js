@@ -152,7 +152,7 @@ export default class Home {
         alert.textContent = 'Shortcuts were reloaded in all namespaces.';
         if (this.env.github) {
           alert.textContent +=
-            ' For changes on your GitHub you may need to reload in 5 minutes due to their caching.';
+            ' Changes on your GitHub might require a reload in 5 minutes due to caching.';
         }
         break;
       case 'deprecated':
