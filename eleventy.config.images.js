@@ -31,7 +31,14 @@ module.exports = (eleventyConfig) => {
         loading: 'lazy',
         decoding: 'async',
       };
-      return eleventyImage.generateHTML(metadata, imageAttributes);
+
+      // Generate image HTML
+      let imageHtml = eleventyImage.generateHTML(metadata, imageAttributes, {
+        whitespaceMode: 'inline',
+      });
+
+      // Return the image wrapped in a link to the original image
+      return `<a href="${src}" target="_blank" rel="noopener noreferrer">${imageHtml}</a>`;
     },
   );
 };
