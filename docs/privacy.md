@@ -14,7 +14,7 @@ the entire processing happens in your browser.
 ## How a Query is Processed
 
 Every query is attempted to be matched with a shortcut.
-Shortcuts are organized by [Namespaces](../shortcuts/namespaces.md):
+Shortcuts are organized by [Namespaces](shortcuts/namespaces.md):
 Each shortcut belongs exactly to one namespace.
 
 ### Namespace Setting
