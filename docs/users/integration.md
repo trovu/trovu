@@ -74,3 +74,16 @@ Firefox allows adding custom search engines: Any URL with a `%s` placeholder wor
 Here is an example setting for the user `georgjaehnig`:
 
 ![Screenshot](img/chrome.png)
+
+## PWA (Progressive Web App)
+
+On many Operating Systems, you can also install a Progressive Web App of Trovu.
+
+1. Open [trovu.net](https://trovu.net/) in the browser.
+1. Open the browser menu.
+1. Tap on _Add to home screen_.
+1. In the new dialog, tap again _Add to home screen_.
+
+Now, you will find the Trovu icon on your phone home screen. Tap on it to open the Trovu PWA.
+
+![Screenshot](img/pwa.jpg)
