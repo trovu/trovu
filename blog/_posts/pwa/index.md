@@ -11,6 +11,8 @@ Using Trovu on your smartphone just got easier. With the new PWA, you can access
 
 To install the app, [see the docs](/docs/users/integration/#pwa-progressive-web-app).
 
+ <div class="gallery">
 {% image "img/screenshot.1.jpg", "Screenshot 1" %}
 {% image "img/screenshot.2.jpg", "Screenshot 2" %}
 {% image "img/screenshot.3.jpg", "Screenshot 3" %}
+</div>
