@@ -1,13 +1,13 @@
 ---
-title: 'New: App for smartphones'
-description: The PWA (Progressive web app) makes it easier to use Trovu on a smartphone.
+title: 'New: App for Smartphones'
+description: The PWA (Progressive Web App) simplifies using Trovu on smartphones.
 date: 2024-03-09
 tags:
     - mobile
     - app
 ---
 
-Using Trovu on your smartphone just became easier: With the new PWA, you have a full screen of Trovu, with its suggestions, accessible with a tap from you phone home screen.
+Using Trovu on your smartphone just got easier. With the new PWA, you can access a full-screen Trovu experience, including its suggestions, directly from your phone's home screen with just a tap.
 
 To install the app, [see the docs](/docs/users/integration/#pwa-progressive-web-app).
 
