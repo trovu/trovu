@@ -77,7 +77,7 @@ Here is an example setting for the user `georgjaehnig`:
 
 ## PWA (Progressive Web App)
 
-On many Operating Systems, you can also install a Progressive Web App of Trovu.
+On many Operating Systems, you can also install a [Progressive Web App](https://en.wikipedia.org/wiki/Progressive_web_app) of Trovu.
 
 1. Open [trovu.net](https://trovu.net/) in the browser.
 1. Open the browser menu.
