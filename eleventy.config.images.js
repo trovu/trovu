@@ -13,7 +13,7 @@ module.exports = (eleventyConfig) => {
   // https://www.11ty.dev/docs/plugins/image/
   eleventyConfig.addAsyncShortcode(
     'image',
-    async function imageShortcode(src, alt, widths = [300], sizes) {
+    async function imageShortcode(src, alt, widths = ['auto'], sizes = []) {
       // Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
       // Warning: Avif can be resource-intensive so take care!
       let formats = ['avif', 'webp', 'auto'];
