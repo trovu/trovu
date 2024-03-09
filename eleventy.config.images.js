@@ -37,8 +37,10 @@ module.exports = (eleventyConfig) => {
         whitespaceMode: 'inline',
       });
 
+      const original = metadata.jpeg[metadata.jpeg.length - 1];
+
       // Return the image wrapped in a link to the original image
-      return `<a href="${src}" target="_blank" rel="noopener noreferrer">${imageHtml}</a>`;
+      return `<a href="${original.url}" target="_blank" rel="noopener noreferrer">${imageHtml}</a>`;
     },
   );
 };
