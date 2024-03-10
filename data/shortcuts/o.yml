@@ -1050,7 +1050,7 @@ cg 1:
     description: Ask ChatGPT about the meaning of life
   tests:
   - arguments: foobar
-    expect: <title>foo
+    expect: q=foo
 chegged 1:
   url: http://slotboxed.com/cheggit.php?getresults=Search&searchtype=all&keywords=<title>
   title: Cheggit
