@@ -201,12 +201,8 @@ bibfu 0:
   - expect: <title>Universitätsbibliothek
 bibfu 1:
   url: https://fu-berlin.primo.exlibrisgroup.com/discovery/search?institution=FUB&vid=49KOBV_FUB:FUB&tab=FUB_CDI&mode=Basic&backFromPreferences=true&search_scope=FUB_CDI&displayMode=full&bulkSize=10&highlight=true&dum=true&displayField=all&pcAvailabiltyMode=false&fromLocation=188&query=any,contains,<Suche>
-  title: FU Berlin Bibliothek
-  tags:
-  - berlin
-  - books
-  - library
-  - uni
+  include:
+    key: bibfu 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
