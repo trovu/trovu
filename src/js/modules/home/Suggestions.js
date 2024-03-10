@@ -349,9 +349,8 @@ export default class Suggestions {
   getTools(suggestion) {
     const div = document.createElement('div');
     div.className = 'tools';
-    const ul = document.createElement('ul');
-    ul.innerHTML += `<li> ✍️ <a href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">Edit</a></li>`;
-    ul.innerHTML += `<li> 🔧 <a href="https://github.com/trovu/trovu-web/issues/new?title=${encodeURIComponent(
+    div.innerHTML += `✍️ <a href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">Edit</a> &nbsp; `;
+    div.innerHTML += `🔧 <a href="https://github.com/trovu/trovu-web/issues/new?title=${encodeURIComponent(
       'Problem with shortcut `' +
         suggestion.namespace +
         '.' +
@@ -359,9 +358,8 @@ export default class Suggestions {
         ' ' +
         suggestion.argumentCount +
         '`',
-    )}">Report problem</a></li>`;
-    ul.appendChild(this.getCopyYamlLink(suggestion));
-    div.appendChild(ul);
+    )}">Report problem</a> `;
+    div.appendChild(this.getCopyYamlLink(suggestion));
     return div;
   }
 

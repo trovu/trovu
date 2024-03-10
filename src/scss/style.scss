@@ -94,7 +94,7 @@ span.tag {
     font-weight: bold;
     text-align: center;
   }
-  > ul {
+  ul {
     list-style-type: none;
     padding-left: 0em;
     margin-bottom: 3em;
@@ -133,9 +133,6 @@ span.tag {
       div.tools {
         display: none;
         color: #666;
-        > ul {
-          list-style-type: none;
-        }
       }
       div.description-and-tags {
         align-items: end;
