@@ -358,7 +358,8 @@ export default class Suggestions {
         ' ' +
         suggestion.argumentCount +
         '`',
-    )}">Report problem</a> `;
+    )}">Report problem</a> &nbsp;`;
+    div.innerHTML += `📋  `;
     div.appendChild(this.getCopyYamlLink(suggestion));
     return div;
   }
