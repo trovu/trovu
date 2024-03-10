@@ -22,7 +22,6 @@ jobs:
         run: npm run --silent prettier-list | awk '{ print "::warning file=" $0 ",title=Code style::" $0 " is not correctly formatted. Call npm run prettier-fix." }'
       - run: npm run lint-js
       - run: npm run test-unit
-      - run: npm run build-jsdoc
       - run: npm run build-blog
       - run: npm run build
       - run: npm run compile-data
@@ -38,6 +37,7 @@ jobs:
       - run: pip install pipenv
       - run: pipenv install
       - run: pipenv run mkdocs build
+      - run: npm run build-jsdoc
       - uses: actions/upload-artifact@v2
         with:
           name: public-directory
