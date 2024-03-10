@@ -49,8 +49,7 @@ export default class ShortcutTester {
     console.log(`${namespace}.${key}\t⏳ ${url}`);
     fetch(url)
       .then((response) => {
-        if (!response.ok)
-          throw new Error(`${namespace}.${key}\t❌ failed to fetch ${url}`);
+        if (!response.ok) throw new Error(JSON.stringify(response));
         return response.text();
       })
       .then((text) => {
