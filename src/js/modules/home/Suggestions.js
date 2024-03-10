@@ -360,12 +360,12 @@ export default class Suggestions {
         suggestion.argumentCount +
         '`',
     )}">Report problem</a></li>`;
-    ul.appendChild(this.getCopyYaml(suggestion));
+    ul.appendChild(this.getCopyYamlLink(suggestion));
     div.appendChild(ul);
     return div;
   }
 
-  getCopyYaml(suggestion) {
+  getCopyYamlLink(suggestion) {
     const copyYamlLink = document.createElement('a');
     copyYamlLink.href = '#';
     copyYamlLink.textContent = 'Copy YAML';
