@@ -207,14 +207,25 @@ bibfu 1:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
   tests: search term only appears with JavaScript being enabled
-bibgvk 1:
-  url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<query>
+bibgvk 0:
+  url: https://kxp.k10plus.de/
   title: Gemeinsamer Verbundkatalog des GBV
   tags:
   - library
   examples:
+  - description: Startseite des GBV-Katalogs
+  tests:
+  - expect: <title>GVK - Gemeinsamer Verbundkatalog
+bibgvk 1:
+  url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<query>
+  include:
+    key: bibgvk 0
+  examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
+  tests:
+  - arguments: Basicode
+    expect: Basicode</psi:queryVar>
 bibhal 1:
   url: https://katalog.halle.de/Mediensuche?search=<query>
   title: Stadtbibliothek Halle (Saale)
