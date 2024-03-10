@@ -270,14 +270,3 @@ a[href].header-anchor:focus,
 h2 + .header-anchor {
 	font-size: 1.5em;
 }
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between; /* Adjusts spacing to fill the row */
-}
-.gallery img {
-	flex: 1; /* Allows the image to grow to fill the space */
-	max-width: calc(100% / 3 - 10px); /* Adjust number 3 for desired number of images per row, 10px accounts for margin */
-	margin: 5px; /* Half of 10px to ensure space between images */
-	height: auto; /* Maintains aspect ratio */
-}
