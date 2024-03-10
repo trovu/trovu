@@ -47,10 +47,14 @@ export default class ShortcutTester {
 
   fetchAndTestUrl(namespace, key, url, testExpect) {
     console.log(`${namespace}.${key}\t⏳ ${url}`);
-    fetch(url)
+    fetch(url, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36',
+      },
+    })
       .then((response) => {
-        if (!response.ok)
-          throw new Error(`${namespace}.${key}\t❌ failed to fetch ${url}`);
+        if (!response.ok) throw new Error(JSON.stringify(response));
         return response.text();
       })
       .then((text) => {

@@ -1031,11 +1031,26 @@ cfp 1:
   title: Wikicfp - Call for papers
   tags:
   - old
-cg 1:
-  url: http://cablesearch.org/?q=<term>
-  title: Cablegate Cablesearch
+cg 0:
+  url: https://chat.openai.com/
+  title: ChatGPT
+  description: Chat with OpenAI's ChatGPT
   tags:
-  - old
+  - ai
+  - gpt
+  - openai
+  tests:
+  - expect: <title>ChatGPT
+cg 1:
+  url: https://chat.openai.com/chat?q=<query>
+  include:
+    key: cg 0
+  examples:
+  - arguments: What is the meaning of life?
+    description: Ask ChatGPT about the meaning of life
+  tests:
+  - arguments: foobar
+    expect: q=foo
 chegged 1:
   url: http://slotboxed.com/cheggit.php?getresults=Search&searchtype=all&keywords=<title>
   title: Cheggit
