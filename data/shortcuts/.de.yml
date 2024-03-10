@@ -195,6 +195,10 @@ bibfu 0:
   - books
   - library
   - uni
+  examples:
+  - description: Startseite der FU Berlin Bibliothek
+  tests:
+  - expect: <title>Universitätsbibliothek
 bibfu 1:
   url: https://fu-berlin.primo.exlibrisgroup.com/discovery/search?institution=FUB&vid=49KOBV_FUB:FUB&tab=FUB_CDI&mode=Basic&backFromPreferences=true&search_scope=FUB_CDI&displayMode=full&bulkSize=10&highlight=true&dum=true&displayField=all&pcAvailabiltyMode=false&fromLocation=188&query=any,contains,<Suche>
   title: FU Berlin Bibliothek
@@ -206,6 +210,7 @@ bibfu 1:
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
+  tests: search term only appears with JavaScript being enabled
 bibgvk 1:
   url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<query>
   title: Gemeinsamer Verbundkatalog des GBV
