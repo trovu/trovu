@@ -386,6 +386,7 @@ export default class Suggestions {
     [
       'argumentCount',
       'arguments',
+      'include',
       'key',
       'keyword',
       'namespace',
