@@ -226,15 +226,26 @@ bibgvk 1:
   tests:
   - arguments: Basicode
     expect: Basicode</psi:queryVar>
-bibhal 1:
-  url: https://katalog.halle.de/Mediensuche?search=<query>
+bibhal 0:
+  url: https://katalog.halle.de/
   title: Stadtbibliothek Halle (Saale)
   tags:
   - halle
   - library
   examples:
+  - description: Startseite der Stadtbibliothek Halle
+  tests:
+  - expect: Stadtbibliothek Halle[\s\S]*</title>
+bibhal 1:
+  url: https://katalog.halle.de/Mediensuche?search=<query>
+  include:
+    key: bibhal 0
+  examples:
   - arguments: Unterleuten
     description: Suche nach "Unterleuten"
+  tests:
+  - arguments: Unterleuten
+    expect: value="Unterleuten"
 bibhbz 1:
   url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
   title: Hochschulbibliothekszentrum NRW
