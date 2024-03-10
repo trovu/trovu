@@ -54,7 +54,8 @@ export default class ShortcutTester {
         return response.text();
       })
       .then((text) => {
-        if (text.includes(testExpect)) {
+        const regex = new RegExp(testExpect, 'm');
+        if (regex.test(text)) {
           console.log(`${namespace}.${key}\t✅ passed`);
         } else {
           console.log(`${namespace}.${key}\t❌ failed to find "${testExpect}"`);
