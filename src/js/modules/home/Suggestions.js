@@ -360,10 +360,7 @@ export default class Suggestions {
         suggestion.argumentCount +
         '`',
     )}">Report problem</a></li>`;
-    const li = document.createElement('li');
-    li.textContent = '📋 ';
-    li.appendChild(this.getCopyYamlLink(suggestion));
-    ul.appendChild(li);
+    ul.appendChild(this.getCopyYamlLink(suggestion));
     div.appendChild(ul);
     return div;
   }
