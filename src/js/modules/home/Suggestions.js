@@ -1,6 +1,7 @@
 /** @module Suggestions */
 import QueryParser from '../QueryParser.js';
 import 'font-awesome/css/font-awesome.min.css';
+import jsyaml from 'js-yaml';
 
 export default class Suggestions {
   constructor(querySelector, suggestionsSelector, env) {
@@ -357,8 +358,44 @@ export default class Suggestions {
         ' ' +
         suggestion.argumentCount +
         '`',
-    )}">Report problem</a> `;
+    )}">Report problem</a> &nbsp; `;
+    div.innerHTML += '📋  ';
+    div.appendChild(this.getCopyYamlLink(suggestion));
     return div;
+  }
+
+  getCopyYamlLink(suggestion) {
+    const copyYamlLink = document.createElement('a');
+    copyYamlLink.href = '#';
+    copyYamlLink.textContent = 'Copy YAML';
+    copyYamlLink.onclick = (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const yaml = this.getYaml(suggestion);
+      navigator.clipboard.writeText(yaml);
+    };
+    return copyYamlLink;
+  }
+
+  getYaml(suggestion) {
+    // Deep copy.
+    const shortcut = {
+      [suggestion.key]: JSON.parse(JSON.stringify(suggestion)),
+    };
+    const key = suggestion.key;
+    [
+      'argumentCount',
+      'arguments',
+      'include',
+      'key',
+      'keyword',
+      'namespace',
+      'reachable',
+    ].forEach((property) => {
+      delete shortcut[key][property];
+    });
+    const yaml = jsyaml.dump(shortcut, { noArrayIndent: true, lineWidth: -1 });
+    return yaml;
   }
 
   getArgsFragment(args) {
