@@ -17,6 +17,7 @@ export default class Home {
 
   async initialize() {
     Helper.logVersion();
+    document.querySelector('#version').textContent = Helper.getVersion();
 
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
