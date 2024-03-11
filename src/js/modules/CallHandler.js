@@ -39,7 +39,9 @@ export default class CallHandler {
     if (!env.isRunningStandalone()) {
       window.location.replace(redirectUrl);
     } else {
-      window.open(redirectUrl, '_blank');
+      navigator.share({
+        url: redirectUrl,
+      });
     }
   }
 
