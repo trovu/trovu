@@ -39,7 +39,7 @@ export default class CallHandler {
     if (!env.isRunningStandalone()) {
       window.location.replace(redirectUrl);
     } else {
-      window.location.replace(redirectUrl.replace('https', 'intent'));
+      window.open(redirectUrl, '_blank');
     }
   }
 
