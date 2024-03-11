@@ -61,6 +61,7 @@ main .jumbotron {
   margin: 0;
   padding: 1em;
   padding-bottom: 0.5em;
+  font-size: 1.1em;
 }
 
 #query-form {
@@ -68,7 +69,9 @@ main .jumbotron {
     font-size: 1.4em;
   }
 }
-
+#query {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 span.namespace {
   background: var(--red);
   color: white;
