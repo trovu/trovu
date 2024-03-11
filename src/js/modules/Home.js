@@ -32,7 +32,7 @@ export default class Home {
     this.queryInput = document.querySelector('#query');
 
     if (this.env.isRunningStandalone()) {
-      document.querySelector('#intro').style.display = 'none';
+      //document.querySelector('#intro').style.display = 'none';
       document.querySelector('footer').style.display = 'none';
     }
 
