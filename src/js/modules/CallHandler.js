@@ -36,7 +36,11 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    if (!env.isRunningStandalone()) {
+      window.location.replace(redirectUrl);
+    } else {
+      window.open(redirectUrl, '_blank');
+    }
   }
 
   /**
