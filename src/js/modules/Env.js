@@ -377,4 +377,11 @@ export default class Env {
     urlParams.sort();
     return urlParams;
   }
+
+  isRunningStandalone() {
+    return (
+      window.navigator.standalone ||
+      window.matchMedia('(display-mode: standalone)').matches
+    );
+  }
 }
