@@ -39,9 +39,7 @@ export default class CallHandler {
     if (!env.isRunningStandalone()) {
       window.location.replace(redirectUrl);
     } else {
-      navigator.share({
-        url: redirectUrl,
-      });
+      window.location.replace(redirectUrl.replace('https', 'intent'));
     }
   }
 
