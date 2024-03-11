@@ -3,9 +3,9 @@
     "short_name": "Trovu",
     "description": "Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with maximum privacy. It's like DuckDuckGo bangs, but on steroids. And it's free.",
     "id": "net.trovu",
+    "scope": "/",
     "launch_handler": {
         "client_mode": [
-            "navigate-existing",
             "auto"
         ]
     },

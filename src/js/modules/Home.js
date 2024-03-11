@@ -17,6 +17,7 @@ export default class Home {
 
   async initialize() {
     Helper.logVersion();
+    document.querySelector('#version').textContent = Helper.getVersion();
 
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
@@ -30,7 +31,7 @@ export default class Home {
     this.helpDiv = document.querySelector('#help');
     this.queryInput = document.querySelector('#query');
 
-    if (this.isRunningStandalone()) {
+    if (this.env.isRunningStandalone()) {
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('footer').style.display = 'none';
     }
@@ -110,7 +111,7 @@ export default class Home {
     ) {
       document.querySelector('nav.navbar').style.display = 'block';
       document.querySelector('#alert').style.display = 'block';
-      if (!this.isRunningStandalone()) {
+      if (!this.env.isRunningStandalone()) {
         document.querySelector('#intro').style.display = 'block';
         document.querySelector('footer').style.display = 'block';
       }
@@ -217,12 +218,5 @@ export default class Home {
     />`;
     const head = document.querySelector('head');
     head.innerHTML += link;
-  }
-
-  isRunningStandalone() {
-    return (
-      window.navigator.standalone ||
-      window.matchMedia('(display-mode: standalone)').matches
-    );
   }
 }
