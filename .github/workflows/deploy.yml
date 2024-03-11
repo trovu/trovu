@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 319-in-pwa-open-links-in-native-apps
   pull_request:
     branches:
       - master
