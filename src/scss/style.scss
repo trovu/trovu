@@ -168,6 +168,9 @@ span.tag {
         }
       }
     }
+    > li[aria-selected='false'] {
+      cursor: pointer;
+    }
     > li::before {
       display: inline;
       position: absolute;
@@ -180,10 +183,12 @@ span.tag {
     li:not([aria-selected])::before {
       content: '\f0da';
       left: 1.2em;
+      cursor: pointer;
     }
     > li[aria-selected='true']::before {
       content: '\f0d7';
       left: 0.3em;
+      cursor: pointer;
     }
     li[aria-selected='true'] {
       background: #eee;
