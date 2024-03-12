@@ -147,7 +147,7 @@ export default class Home {
           'No matching shortcut found. Did you use a <a href="https://trovu.net/docs/">keyword</a>? Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>. ';
         break;
       case 'not_reachable':
-        alert.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> to your namespaces.`;
+        alert.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> to your <a target="_blank" href="https://trovu.net/docs/shortcuts/namespaces/">namespaces</a>.`;
         break;
       case 'reloaded':
         alert.textContent = 'Shortcuts were reloaded in all namespaces.';
