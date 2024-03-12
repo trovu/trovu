@@ -373,6 +373,7 @@ export default class Suggestions {
       event.stopPropagation();
       const yaml = this.getYaml(suggestion);
       navigator.clipboard.writeText(yaml);
+      event.target.textContent = 'Copied.';
     };
     return copyYamlLink;
   }
