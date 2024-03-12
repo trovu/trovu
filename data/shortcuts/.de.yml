@@ -976,6 +976,10 @@ gii 0:
   tags:
   - gesetze
   - law
+  examples:
+  - description: Gehe zur Startseite
+  tests:
+  - expect: <title>Gesetze im Internet
 gii 2:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Awww.gesetze-im-internet.de%20<Paragraph>%20<Gesetz>
   title: Gesetze im Internet
@@ -989,6 +993,9 @@ gii 2:
     description: Zeige Paragraph 12 des Bürgerlichen Gesetzbuchs
   - arguments: 129a, stgb
     description: Zeige Paragraph 129a des Strafgesetzbuchs
+  tests:
+  - arguments: 5, gg
+    expect: Art 5
 gls 1:
   url: http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5004.htm?txtAction=71000&txtRefNo=<1. Paket-Nr.>
   title: GLS Sendungsverfolgung
