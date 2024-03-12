@@ -8351,27 +8351,20 @@ tvdb 1:
   - arguments: wonder years
     description: Search for the TV show "The Wonder Years"
 tw 0:
-  url: https://twitter.com/
-  title: Twitter Homepage
-  tags:
-  - social-network
-  - twitter
+  deprecated:
+    alternative:
+      query: x
+    created: '2023-03-13'
 tw 1:
-  url: https://twitter.com/search?lang=<$language>&q=<query>
-  title: Twitter Search
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: berlin
-    description: Search Twitter for "berlin"
+  deprecated:
+    alternative:
+      query: x <1>
+    created: '2023-03-13'
 twb 0:
-  url: https://twitter.com/i/bookmarks
-  title: Twitter Bookmarks
-  tags:
-  - bookmarks
-  - social-network
-  - twitter
+  deprecated:
+    alternative:
+      query: xb
+    created: '2023-03-13'
 twingly 0:
   url: http://twingly.com/
   title: Twingly Main page
@@ -9505,6 +9498,31 @@ wy 1:
   examples:
   - arguments: stuhl
     description: Search for "stuhl"
+x 0:
+  url: https://twitter.com/
+  title: X (Twitter) Homepage
+  tags:
+  - social-network
+  - twitter
+  - x
+x 1:
+  url: https://twitter.com/search?lang=<$language>&q=<query>
+  title: X (Twitter) Search
+  tags:
+  - social-network
+  - twitter
+  - x
+  examples:
+  - arguments: berlin
+    description: Search Twitter for "berlin"
+xb 0:
+  url: https://twitter.com/i/bookmarks
+  title: X (Twitter) Bookmarks
+  tags:
+  - bookmarks
+  - social-network
+  - twitter
+  - x
 xing 0:
   url: https://www.xing.com/
   title: Xing
