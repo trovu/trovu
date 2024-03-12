@@ -8378,7 +8378,7 @@ twingly 1:
 twitter 0:
   deprecated:
     alternative:
-      query: tw
+      query: x
     created: '2023-01-23'
 twk 0:
   url: http://tweaks.com
@@ -8386,97 +8386,55 @@ twk 0:
   tags:
   - old
 twl 1:
-  url: https://twitter.com/search?lang=<$language>&q=lang%3A<$language>%20<query>
-  title: Twitter Search, only in my language
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: berlin
-    description: Search Twitter for "berlin" only in my language
+  deprecated:
+    alternative:
+      query: xol <1>
+    created: '2023-03-13'
 twl 2:
-  url: https://twitter.com/search?lang=<$language>&q=lang%3A<language>%20<query>
-  title: Twitter Search, only in language
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: en, berlin
-    description: Search Twitter for "berlin" only in English tweets
+  deprecated:
+    alternative:
+      query: xol <1>, <2>
+    created: '2023-03-13'
 twm 0:
-  url: https://twitter.com/messages
-  title: Twitter Messages
-  tags:
-  - chat
-  - instant-message
-  - message
-  - messaging
-  - messenger
-  - private-message
-  - social-network
-  - twitter
+  deprecated:
+    alternative:
+      query: xm
+    created: '2023-03-13'
 twm 1:
   url: http://twitter.com/#!/search/%40<user>
   title: Search for Tweets that mention a specific user
   tags:
   - old
 twme 1:
-  url: https://twitter.com/search?lang=<$language>&q=<query>
-  title: Twitter mentions
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: serchilo
-    description: Search for "serchilo"
+  deprecated:
+    alternative:
+      query: x <1>
+    created: '2023-03-13'
 twn 0:
-  url: https://twitter.com/notifications
-  title: Twitter Notifications
-  tags:
-  - chat
-  - instant-message
-  - message
-  - messaging
-  - messenger
-  - private-message
-  - social-network
-  - twitter
+  deprecated:
+    alternative:
+      query: xn
+    created: '2023-03-13'
 twr 1:
-  url: https://twitter.com/search?q=<query>&vertical=default&f=tweets&lang=<$language>
-  title: Twitter Search, realtime
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  deprecated:
+    alternative:
+      query: xl <1>
+    created: '2023-03-13'
 twrm 1:
-  url: https://mobile.twitter.com/search?lang=<$language>&q=<query>
-  title: Twitter Search, realtime, mobile
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  deprecated:
+    alternative:
+      query: xl <1>
+    created: '2023-03-13'
 twu 1:
-  url: https://twitter.com/<user>?lang=<$language>
-  title: Twitter User
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: serchilo
-    description: Go to user page of @serchilo
+  deprecated:
+    alternative:
+      query: xu <1>
+    created: '2023-03-13'
 twum 1:
-  url: https://mobile.twitter.com/<user>
-  title: Twitter User, mobile
-  tags:
-  - social-network
-  - twitter
-  examples:
-  - arguments: serchilo
-    description: Go to user page of @serchilo
+  deprecated:
+    alternative:
+      query: xu <1>
+    created: '2023-03-13'
 ty 0:
   url: http://twingly.com/
   title: Twingly Main page
@@ -9560,6 +9518,52 @@ xkcds 1:
   examples:
   - arguments: correlation
     description: search for xkcd comics about "correlation"
+xl 1:
+  url: https://twitter.com/search?q=<query>&vertical=default&f=tweets&lang=<$language>
+  title: X (Twitter) Search, latest posts
+  tags:
+  - social-network
+  - twitter
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
+xm 0:
+  url: https://twitter.com/messages
+  title: X (Twitter) Messages
+  tags:
+  - chat
+  - instant-message
+  - message
+  - messaging
+  - messenger
+  - private-message
+  - social-network
+  - twitter
+xn 0:
+  url: https://twitter.com/notifications
+  title: X (Twitter) Notifications
+  tags:
+  - social-network
+  - twitter
+  - x
+xol 1:
+  url: https://twitter.com/search?q=lang%3A<$language>%20<query>
+  title: X (Twitter) Search, only in my language
+  tags:
+  - social-network
+  - twitter
+  examples:
+  - arguments: berlin
+    description: Search Twitter for "berlin" only in my language
+xol 2:
+  url: https://twitter.com/search?q=lang%3A<language>%20<query>
+  title: X (Twitter) Search, only in given language
+  tags:
+  - social-network
+  - twitter
+  examples:
+  - arguments: en, berlin
+    description: Search X for "berlin" only in English
 xtvi 0:
   url: http://www.xtvi.com
   title: XTVi
@@ -9570,6 +9574,15 @@ xtvi 1:
   title: XTVi
   tags:
   - old
+xu 1:
+  url: https://twitter.com/<user>
+  title: X (Twitter) User
+  tags:
+  - social-network
+  - twitter
+  examples:
+  - arguments: serchilo
+    description: Go to user page of @serchilo
 y 1:
   url: http://search.yahoo.com/search?p=<query>
   title: Yahoo Web
