@@ -251,6 +251,10 @@ bibhbz 0:
   title: Hochschulbibliothekszentrum NRW
   tags:
   - library
+  examples:
+  - description: Startseite des HBZ NRW
+  tests:
+  - expect: DigiBib</title>
 bibhbz 1:
   url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
   include:
@@ -258,6 +262,9 @@ bibhbz 1:
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
+  tests:
+  - arguments: Basicode
+    expect: <title>Suchergebnisse
 bibka 0:
   url: http://www.bibliotheksportal-karlsruhe.de/
   title: Bibliotheksportal Karlsruhe
