@@ -1081,6 +1081,24 @@ ciu 1:
   title: Caniuse
   tags:
   - old
+ckd 0:
+  url: https://cooked.wiki/
+  title: Cooked
+  tags:
+  - cooking
+  - recipe
+  tests:
+  - expect: <title>Cooked
+ckd 1:
+  url: https://cooked.wiki/<url>
+  examples:
+  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
+    description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
+  tests:
+  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
+    expect: Brokkoli-Pastinaken-Kokos-Curry
+  include:
+  - key: ckd 0
 cl 1:
   url: https://www.colourlovers.com/colors/search?query=<color>
   title: COLOURlovers color search
@@ -1417,24 +1435,6 @@ cve 1:
   title: CVE Common vulnerabilities and exposures
   tags:
   - old
-cw 0:
-  url: https://cooked.wiki/
-  title: Cooked
-  tags:
-  - cooking
-  - recipe
-  tests:
-  - expect: <title>Cooked
-cw 1:
-  url: https://cooked.wiki/<url>
-  examples:
-  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
-    description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
-  tests:
-  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
-    expect: Brokkoli-Pastinaken-Kokos-Curry
-  include:
-  - key: cw 0
 cy 0:
   include:
   - key: cy 0
