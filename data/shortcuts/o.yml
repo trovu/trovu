@@ -9519,7 +9519,7 @@ xkcds 1:
   - arguments: correlation
     description: search for xkcd comics about "correlation"
 xl 1:
-  url: https://twitter.com/search?q=<query>&vertical=default&f=tweets&lang=<$language>
+  url: https://twitter.com/search?f=live&q=<query>
   title: X (Twitter) Search, latest posts
   tags:
   - social-network
