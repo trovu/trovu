@@ -246,11 +246,15 @@ bibhal 1:
   tests:
   - arguments: Unterleuten
     expect: value="Unterleuten"
-bibhbz 1:
-  url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
+bibhbz 0:
+  url: https://nrw.digibib.net/
   title: Hochschulbibliothekszentrum NRW
   tags:
   - library
+bibhbz 1:
+  url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
+  include:
+    key: bibhbz 0
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
