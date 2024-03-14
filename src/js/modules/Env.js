@@ -118,7 +118,7 @@ export default class Env {
     this.github ||= localStorage.getItem('github');
 
     if (typeof params.github === 'string' && params.github !== '') {
-      this.configUrl = this.getGithubConfigUrl(params.github);
+      this.configUrl = this.buildGithubConfigUrl(params.github);
     }
     if (typeof params.configUrl === 'string' && params.configUrl !== '') {
       this.configUrl = params.configUrl;
@@ -175,7 +175,7 @@ export default class Env {
    * @param {string} github - The Github user name.
    * @returns {string} The URL to the config file.
    */
-  getGithubConfigUrl(github) {
+  buildGithubConfigUrl(github) {
     const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     return configUrl;
   }
