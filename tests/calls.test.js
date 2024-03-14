@@ -33,7 +33,7 @@ global.fetch = jest.fn((url) => {
   }
 });
 
-beforeEach(() => {
+beforeAll(() => {
   global.localStorage = {
     getItem: jest.fn(),
     setItem: jest.fn(),
@@ -42,7 +42,7 @@ beforeEach(() => {
   };
 });
 
-afterEach(() => {
+afterAll(() => {
   jest.clearAllMocks();
 });
 
