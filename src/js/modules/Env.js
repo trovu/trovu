@@ -113,6 +113,9 @@ export default class Env {
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
 
+    this.language ||= localStorage.getItem('language');
+    this.country ||= localStorage.getItem('country');
+
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.getGithubConfigUrl(params.github);
     }
@@ -128,9 +131,6 @@ export default class Env {
     // Assign again, to override user config.
     Object.assign(this, params);
     Object.assign(this, params_from_query);
-
-    this.language ||= localStorage.getItem('language');
-    this.country ||= localStorage.getItem('country');
 
     this.setDefaults();
 
