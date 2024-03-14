@@ -156,7 +156,7 @@ export default class Env {
     const boolParams = {};
     for (const paramName of ['debug', 'reload']) {
       if (params[paramName] === '1') {
-        this[paramName] = true;
+        boolParams[paramName] = true;
       }
     }
     return boolParams;
