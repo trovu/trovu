@@ -129,7 +129,13 @@ export default class Env {
     Object.assign(this, params);
     Object.assign(this, params_from_query);
 
+    this.language ||= localStorage.getItem('language');
+    this.country ||= localStorage.getItem('country');
+
     this.setDefaults();
+
+    localStorage.setItem('language', this.language);
+    localStorage.setItem('country', this.country);
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
