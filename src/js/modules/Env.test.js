@@ -6,7 +6,7 @@ const getUrlHashFooBar = () => {
 };
 
 describe('Env', () => {
-  describe('getParams', () => {
+  describe('buildUrlParams', () => {
     test('github', () => {
       expect(new Env({ github: 'johndoe' }).buildUrlParams()).toEqual({
         github: 'johndoe',
