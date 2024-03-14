@@ -105,12 +105,8 @@ export default class Env {
       params = Env.getUrlParams();
     }
 
-    // Set debug and reload from URL params.
-    for (const paramName of ['debug', 'reload']) {
-      if (params[paramName] === '1') {
-        this[paramName] = true;
-      }
-    }
+    const boolParams = Env.setBoolParams(params);
+    Object.assign(this, boolParams);
 
     // Assign before, to also catch "debug" and "reload" in params and query.
     Object.assign(this, params);
@@ -154,6 +150,16 @@ export default class Env {
       this.keyword = '';
       this.arguments = [this.query];
     }
+  }
+
+  static setBoolParams(params) {
+    const boolParams = {};
+    for (const paramName of ['debug', 'reload']) {
+      if (params[paramName] === '1') {
+        this[paramName] = true;
+      }
+    }
+    return boolParams;
   }
 
   /**
