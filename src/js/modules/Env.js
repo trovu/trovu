@@ -84,8 +84,11 @@ export default class Env {
    */
   getParamStr(moreParams) {
     const params = this.getParams();
+    console.log('params before assign', params);
     Object.assign(params, moreParams);
+    console.log('params after assign', params);
     const paramStr = Env.getUrlParamStr(params);
+    console.log('paramStr', paramStr.toString());
     return paramStr;
   }
 
@@ -115,6 +118,7 @@ export default class Env {
 
     this.language ||= localStorage.getItem('language');
     this.country ||= localStorage.getItem('country');
+    this.github ||= localStorage.getItem('github');
 
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.getGithubConfigUrl(params.github);
@@ -136,6 +140,7 @@ export default class Env {
 
     localStorage.setItem('language', this.language);
     localStorage.setItem('country', this.country);
+    localStorage.setItem('github', this.github);
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
