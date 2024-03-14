@@ -33,6 +33,15 @@ global.fetch = jest.fn((url) => {
   }
 });
 
+beforeEach(() => {
+  global.localStorage = {
+    getItem: jest.fn(),
+    setItem: jest.fn(),
+    removeItem: jest.fn(),
+    clear: jest.fn(),
+  };
+});
+
 afterEach(() => {
   jest.clearAllMocks();
 });
