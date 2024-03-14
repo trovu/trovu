@@ -219,7 +219,7 @@ export default class Env {
   async getUserConfigFromUrl(configUrl) {
     const configYml = await Helper.fetchAsync(configUrl, this);
     if (!configYml) {
-      this.logger.error(`Error reading config from ${configUrl}`);
+      this.logger.warning(`Problem reading config from ${configUrl}`);
     }
     try {
       const config = jsyaml.load(configYml);
