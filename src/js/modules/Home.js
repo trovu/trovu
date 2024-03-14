@@ -128,7 +128,7 @@ export default class Home {
   }
 
   setLocationHash() {
-    const paramStr = this.env.buildParamStr();
+    const paramStr = this.env.buildUrlParamStr();
     window.location.hash = '#' + paramStr;
   }
 

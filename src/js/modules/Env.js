@@ -82,7 +82,7 @@ export default class Env {
   /**
    * Get the parameters as string.
    */
-  buildParamStr(moreParams) {
+  buildUrlParamStr(moreParams) {
     const params = this.buildUrlParams();
     Object.assign(params, moreParams);
     const paramStr = Env.getUrlParamStr(params);
@@ -90,7 +90,7 @@ export default class Env {
   }
 
   buildProcessUrl(moreParams) {
-    const paramStr = this.buildParamStr(moreParams);
+    const paramStr = this.buildUrlParamStr(moreParams);
     const processUrl = 'process/index.html?#' + paramStr;
     return processUrl;
   }
