@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 326-in-pwa-remember-language-and-country-setting
   pull_request:
     branches:
       - master
