@@ -84,11 +84,8 @@ export default class Env {
    */
   buildParamStr(moreParams) {
     const params = this.buildParams();
-    console.log('params before assign', params);
     Object.assign(params, moreParams);
-    console.log('params after assign', params);
     const paramStr = Env.getUrlParamStr(params);
-    console.log('paramStr', paramStr.toString());
     return paramStr;
   }
 
