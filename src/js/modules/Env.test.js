@@ -8,19 +8,19 @@ const getUrlHashFooBar = () => {
 describe('Env', () => {
   describe('getParams', () => {
     test('github', () => {
-      expect(new Env({ github: 'johndoe' }).getParams()).toEqual({
+      expect(new Env({ github: 'johndoe' }).buildParams()).toEqual({
         github: 'johndoe',
       });
     });
     test('configUrl', () => {
       expect(
-        new Env({ configUrl: 'https://example.com/config.yml' }).getParams(),
+        new Env({ configUrl: 'https://example.com/config.yml' }).buildParams(),
       ).toEqual({
         configUrl: 'https://example.com/config.yml',
       });
     });
     test('language and country', () => {
-      expect(new Env({ language: 'en', country: 'us' }).getParams()).toEqual({
+      expect(new Env({ language: 'en', country: 'us' }).buildParams()).toEqual({
         language: 'en',
         country: 'us',
       });
@@ -31,7 +31,7 @@ describe('Env', () => {
           language: 'en',
           country: 'us',
           defaultKeyword: 'example',
-        }).getParams(),
+        }).buildParams(),
       ).toEqual({
         language: 'en',
         country: 'us',
@@ -39,12 +39,12 @@ describe('Env', () => {
       });
     });
     test('debug', () => {
-      expect(new Env({ debug: true }).getParams()).toEqual({
+      expect(new Env({ debug: true }).buildParams()).toEqual({
         debug: 1,
       });
     });
     test('status', () => {
-      expect(new Env({ status: 'deprecated' }).getParams()).toEqual({
+      expect(new Env({ status: 'deprecated' }).buildParams()).toEqual({
         status: 'deprecated',
       });
     });

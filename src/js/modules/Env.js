@@ -47,7 +47,7 @@ export default class Env {
    *
    * @return {object} - The built params.
    */
-  getParams() {
+  buildParams() {
     const params = {};
 
     // Put environment into hash.
@@ -83,7 +83,7 @@ export default class Env {
    * Get the parameters as string.
    */
   getParamStr(moreParams) {
-    const params = this.getParams();
+    const params = this.buildParams();
     console.log('params before assign', params);
     Object.assign(params, moreParams);
     console.log('params after assign', params);
