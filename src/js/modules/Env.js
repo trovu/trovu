@@ -83,9 +83,15 @@ export default class Env {
    * Get the parameters as string.
    */
   buildUrlParamStr(moreParams) {
+    const urlSearchParams = Env.getUrlSearchParams();
+    urlSearchParams.delete('query');
     const params = this.buildUrlParams();
     Object.assign(params, moreParams);
-    const paramStr = Env.getUrlParamStr(params);
+    for (const [key, value] of Object.entries(params)) {
+      urlSearchParams.set(key, value);
+    }
+    urlSearchParams.sort();
+    const paramStr = urlSearchParams.toString();
     return paramStr;
   }
 
