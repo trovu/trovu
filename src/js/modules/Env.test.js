@@ -87,9 +87,9 @@ describe('Env', () => {
       });
     });
   });
-  test('getUrlParams', () => {
+  test('getParamsFromUrl', () => {
     Env.getUrlHash = getUrlHashFooBar;
-    expect(Env.getUrlParams()).toEqual({ foo: 'bar', baz: 'boo' });
+    expect(Env.getParamsFromUrl()).toEqual({ foo: 'bar', baz: 'boo' });
   });
   test('setBoolParams', () => {
     expect(Env.setBoolParams({ debug: '1', reload: '1', foo: '1' })).toEqual({

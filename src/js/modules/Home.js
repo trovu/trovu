@@ -136,7 +136,7 @@ export default class Home {
    * Show custom alerts above query input.
    */
   showInfoAlerts() {
-    const params = Env.getUrlParams();
+    const params = Env.getParamsFromUrl();
     const alert = document.querySelector('#alert');
     if (params.status) {
       alert.removeAttribute('hidden');

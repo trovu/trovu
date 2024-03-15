@@ -102,7 +102,7 @@ export default class Env {
    */
   async populate(params) {
     if (!params) {
-      params = Env.getUrlParams();
+      params = Env.getParamsFromUrl();
     }
 
     const boolParams = Env.setBoolParams(params);
@@ -366,7 +366,7 @@ export default class Env {
    *
    * @return {object} params - List of found parameters.
    */
-  static getUrlParams() {
+  static getParamsFromUrl() {
     const urlParamStr = this.getUrlHash();
     const urlParams = new URLSearchParams(urlParamStr);
     const params = {};
