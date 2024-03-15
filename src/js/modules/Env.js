@@ -113,9 +113,9 @@ export default class Env {
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
 
-    this.language ||= localStorage.getItem('language');
-    this.country ||= localStorage.getItem('country');
-    this.github ||= localStorage.getItem('github');
+    // this.language ||= localStorage.getItem('language');
+    // this.country ||= localStorage.getItem('country');
+    // this.github ||= localStorage.getItem('github');
 
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
@@ -135,9 +135,9 @@ export default class Env {
 
     this.setDefaults();
 
-    localStorage.setItem('language', this.language);
-    localStorage.setItem('country', this.country);
-    localStorage.setItem('github', this.github);
+    // localStorage.setItem('language', this.language);
+    // localStorage.setItem('country', this.country);
+    // localStorage.setItem('github', this.github);
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
