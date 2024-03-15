@@ -136,9 +136,15 @@ export default class Env {
 
     this.setDefaults();
 
-    localStorage.setItem('language', this.language);
-    localStorage.setItem('country', this.country);
-    localStorage.setItem('github', this.github);
+    if (this.github) {
+      localStorage.setItem('github', this.github);
+      localStorage.removeItem('language');
+      localStorage.removeItem('country');
+    } else {
+      localStorage.setItem('language', this.language);
+      localStorage.setItem('country', this.country);
+      localStorage.removeItem('github');
+    }
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
