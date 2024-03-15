@@ -382,22 +382,6 @@ export default class Env {
     return urlSearchParams;
   }
 
-  /**
-   * Build URL param string from param object.
-   *
-   * @param {object} params       - List of parameters.
-   *
-   * @return {string} urlParamStr - Parameter as URL string.
-   */
-  static getUrlParamStr(params) {
-    const urlParams = new URLSearchParams();
-    for (const key in params) {
-      urlParams.set(key, params[key]);
-    }
-    urlParams.sort();
-    return urlParams;
-  }
-
   isRunningStandalone() {
     return (
       window.navigator.standalone ||
