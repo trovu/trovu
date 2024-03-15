@@ -87,6 +87,13 @@ describe('Env', () => {
       });
     });
   });
+  test('buildUrlParamStr', () => {
+    const env = new Env();
+    Env.getUrlHash = () => '';
+    env.getNavigatorLanguage = () => 'en-US';
+    env.populate();
+    expect(env.buildUrlParamStr()).toEqual('country=us&language=en');
+  });
   test('getParamsFromUrl', () => {
     Env.getUrlHash = getUrlHashFooBar;
     expect(Env.getParamsFromUrl()).toEqual({ foo: 'bar', baz: 'boo' });
