@@ -361,11 +361,6 @@ export default class Env {
     return hash;
   }
 
-  /**
-   * Get parameters from the URL query string.
-   *
-   * @return {object} params - List of found parameters.
-   */
   static getParamsFromUrl() {
     const urlSearchParams = this.getUrlSearchParams();
     const params = {};
