@@ -27,7 +27,7 @@ export default class CallHandler {
     if (response.status === 'found') {
       redirectUrl = response.redirectUrl;
     } else {
-      redirectUrl = this.getRedirectUrlToHome(response);
+      redirectUrl = this.getRedirectUrlToHome(env, response);
     }
 
     env.logger.info('Redirect to:   ' + redirectUrl);
@@ -121,7 +121,7 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static getRedirectUrlToHome(response) {
+  static getRedirectUrlToHome(env, response) {
     const params = Env.getUrlParams();
     if (params.query === 'reload' || params.query === 'debug:reload') {
       delete params.query;
