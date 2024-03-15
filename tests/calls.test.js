@@ -17,19 +17,6 @@ async function main() {
   });
 }
 
-beforeAll(() => {
-  global.localStorage = {
-    getItem: jest.fn(),
-    setItem: jest.fn(),
-    removeItem: jest.fn(),
-    clear: jest.fn(),
-  };
-});
-
-afterAll(() => {
-  jest.clearAllMocks();
-});
-
 async function testCall(call) {
   const env = new Env();
   env.getNavigatorLanguage = () => 'en-US';
