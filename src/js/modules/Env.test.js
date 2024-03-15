@@ -95,6 +95,12 @@ describe('Env', () => {
         'configUrl=https%3A%2F%2Fexample.com%2Fconfig.yml',
       );
     });
+
+    test('language, country', async () => {
+      Env.getUrlHash = () => 'language=de&country=at';
+      await env.populate();
+      expect(env.buildUrlParamStr()).toEqual('country=at&language=de');
+    });
   });
 
   test('getParamsFromUrl', () => {
