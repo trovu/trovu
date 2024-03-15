@@ -367,13 +367,18 @@ export default class Env {
    * @return {object} params - List of found parameters.
    */
   static getParamsFromUrl() {
-    const urlParamStr = this.getUrlHash();
-    const urlParams = new URLSearchParams(urlParamStr);
+    const urlParams = this.getUrlSearchParams();
     const params = {};
     urlParams.forEach((value, key) => {
       params[key] = value;
     });
     return params;
+  }
+
+  static getUrlSearchParams() {
+    const urlParamStr = this.getUrlHash();
+    const urlParams = new URLSearchParams(urlParamStr);
+    return urlParams;
   }
 
   /**
