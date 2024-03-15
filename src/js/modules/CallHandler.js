@@ -131,7 +131,7 @@ export default class CallHandler {
         params[property] = response[property];
       }
     }
-    const paramStr = Env.getUrlParamStr(params);
+    const paramStr = env.buildUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
   }
