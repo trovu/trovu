@@ -51,11 +51,7 @@ export default class Env {
     const params = {};
 
     // Put environment into hash.
-    if (this.github) {
-      params.github = this.github;
-    } else if (this.configUrl) {
-      params.configUrl = this.configUrl;
-    } else {
+    if (!this.github && !this.configUrl) {
       params.language = this.language;
       params.country = this.country;
       if (this.defaultKeyword) {
