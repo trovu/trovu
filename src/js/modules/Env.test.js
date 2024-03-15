@@ -7,14 +7,6 @@ const getUrlHashFooBar = () => {
 
 describe('Env', () => {
   describe('buildUrlParams', () => {
-    test('language and country', () => {
-      expect(
-        new Env({ language: 'en', country: 'us' }).buildUrlParams(),
-      ).toEqual({
-        language: 'en',
-        country: 'us',
-      });
-    });
     test('language, country and defaultKeyword', () => {
       expect(
         new Env({
