@@ -89,11 +89,11 @@ describe('Env', () => {
   });
 
   describe('buildUrlParamStr', () => {
-    test('empty', () => {
+    test('empty', async () => {
       const env = new Env();
       env.getNavigatorLanguage = () => 'en-US';
       Env.getUrlHash = () => '';
-      env.populate();
+      await env.populate();
       expect(env.buildUrlParamStr()).toEqual('country=us&language=en');
     });
   });
