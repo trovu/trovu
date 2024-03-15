@@ -89,19 +89,22 @@ describe('Env', () => {
   });
 
   describe('buildUrlParamStr', () => {
-    test('empty', async () => {
-      const env = new Env();
+    let env;
+
+    beforeEach(() => {
+      env = new Env();
       env.getNavigatorLanguage = () => 'en-US';
+      env.getUserConfigFromUrl = () => `language: de
+      country: at`;
+    });
+
+    test('empty', async () => {
       Env.getUrlHash = () => '';
       await env.populate();
       expect(env.buildUrlParamStr()).toEqual('country=us&language=en');
     });
 
     test('github', async () => {
-      const env = new Env();
-      env.getNavigatorLanguage = () => 'en-US';
-      env.getUserConfigFromUrl = () => `language: de
-      country: at`;
       Env.getUrlHash = () => 'github=johndoe';
       await env.populate();
       expect(env.buildUrlParamStr()).toEqual('github=johndoe');
