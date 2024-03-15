@@ -109,6 +109,14 @@ describe('Env', () => {
       await env.populate();
       expect(env.buildUrlParamStr()).toEqual('github=johndoe');
     });
+
+    test('configUrl', async () => {
+      Env.getUrlHash = () => 'configUrl=https://example.com/config.yml';
+      await env.populate();
+      expect(env.buildUrlParamStr()).toEqual(
+        'configUrl=https%3A%2F%2Fexample.com%2Fconfig.yml',
+      );
+    });
   });
 
   test('getParamsFromUrl', () => {
