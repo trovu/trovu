@@ -87,13 +87,17 @@ describe('Env', () => {
       });
     });
   });
-  test('buildUrlParamStr', () => {
-    const env = new Env();
-    Env.getUrlHash = () => '';
-    env.getNavigatorLanguage = () => 'en-US';
-    env.populate();
-    expect(env.buildUrlParamStr()).toEqual('country=us&language=en');
+
+  describe('buildUrlParamStr', () => {
+    test('empty', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = () => 'en-US';
+      Env.getUrlHash = () => '';
+      env.populate();
+      expect(env.buildUrlParamStr()).toEqual('country=us&language=en');
+    });
   });
+
   test('getParamsFromUrl', () => {
     Env.getUrlHash = getUrlHashFooBar;
     expect(Env.getParamsFromUrl()).toEqual({ foo: 'bar', baz: 'boo' });
