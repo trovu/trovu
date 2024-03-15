@@ -1,3 +1,4 @@
+import '../../../tests/mocks.utils.js';
 import Env from './Env.js';
 
 const getUrlHashFooBar = () => {
