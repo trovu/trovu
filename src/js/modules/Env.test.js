@@ -7,6 +7,40 @@ const getUrlHashFooBar = () => {
 };
 
 describe('Env', () => {
+  describe('getDefaultLanguageAndCountry', () => {
+    test('browser returns language and country', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => 'en-DE');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'de',
+      });
+    });
+    test('browser returns only language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => 'en');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
+    test('browser returns empty language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => '');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
+    test('browser returns invalid language', () => {
+      const env = new Env();
+      env.getNavigatorLanguage = jest.fn(() => 'invalid');
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: 'en',
+        country: 'us',
+      });
+    });
+  });
   describe('buildUrlParams', () => {
     test('github', () => {
       expect(new Env({ github: 'johndoe' }).buildUrlParams()).toEqual({
@@ -51,40 +85,6 @@ describe('Env', () => {
     test('status', () => {
       expect(new Env({ status: 'deprecated' }).buildUrlParams()).toEqual({
         status: 'deprecated',
-      });
-    });
-  });
-  describe('getDefaultLanguageAndCountry', () => {
-    test('browser returns language and country', () => {
-      const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => 'en-DE');
-      expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'de',
-      });
-    });
-    test('browser returns only language', () => {
-      const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => 'en');
-      expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'us',
-      });
-    });
-    test('browser returns empty language', () => {
-      const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => '');
-      expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'us',
-      });
-    });
-    test('browser returns invalid language', () => {
-      const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => 'invalid');
-      expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'us',
       });
     });
   });
