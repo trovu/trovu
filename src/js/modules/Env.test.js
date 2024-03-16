@@ -8,6 +8,20 @@ const getUrlHashFooBar = () => {
 
 describe('Env', () => {
   describe('buildUrlParams', () => {
+    test('github', () => {
+      expect(new Env({ github: 'johndoe' }).buildUrlParams()).toEqual({
+        github: 'johndoe',
+      });
+    });
+    test('configUrl', () => {
+      expect(
+        new Env({
+          configUrl: 'https://example.com/config.yml',
+        }).buildUrlParams(),
+      ).toEqual({
+        configUrl: 'https://example.com/config.yml',
+      });
+    });
     test('language and country', () => {
       expect(
         new Env({ language: 'en', country: 'us' }).buildUrlParams(),
