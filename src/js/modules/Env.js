@@ -50,7 +50,6 @@ export default class Env {
   buildUrlParams() {
     const params = {};
 
-    // Put environment into hash.
     if (this.github) {
       params.github = this.github;
     } else if (this.configUrl) {
