@@ -82,9 +82,8 @@ export default class Env {
    * Get the parameters as string.
    */
   buildUrlParamStr(moreParams) {
-    const urlSearchParams = Env.getUrlSearchParams();
-    urlSearchParams.delete('query');
     const params = { ...this.buildUrlParams(), ...moreParams };
+    const urlSearchParams = new URLSearchParams();
     Object.entries(params).forEach(([key, value]) =>
       urlSearchParams.set(key, value),
     );
