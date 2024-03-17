@@ -47,12 +47,12 @@ export default class Env {
    *
    * @return {object} - The built params.
    */
-  buildUrlParams() {
+  buildUrlParams(originalParams = {}, moreParams = {}) {
     const params = {};
 
     if (this.github) {
       params.github = this.github;
-    } else if (this.configUrl) {
+    } else if (originalParams.configUrl) {
       params.configUrl = this.configUrl;
     } else {
       params.language = this.language;
@@ -75,14 +75,16 @@ export default class Env {
         params[property] = this[property];
       }
     }
+    Object.assign(params, moreParams);
     return params;
   }
 
   /**
    * Get the parameters as string.
    */
-  buildUrlParamStr(moreParams) {
-    const params = { ...this.buildUrlParams(), ...moreParams };
+  buildUrlParamStr(moreParams = {}) {
+    const originalParams = Env.getParamsFromUrl();
+    const params = this.buildUrlParams(originalParams, moreParams);
     const urlSearchParams = new URLSearchParams();
     Object.entries(params).forEach(([key, value]) =>
       urlSearchParams.set(key, value),

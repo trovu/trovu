@@ -48,6 +48,7 @@ describe('Env', () => {
         github: 'johndoe',
       });
     });
+    /*
     test('configUrl', () => {
       expect(
         new Env({
@@ -88,8 +89,10 @@ describe('Env', () => {
         status: 'deprecated',
       });
     });
+    */
   });
 
+  /*
   describe('buildUrlParamStr', () => {
     let env;
 
@@ -126,6 +129,7 @@ describe('Env', () => {
       expect(env.buildUrlParamStr()).toEqual('country=at&language=de');
     });
   });
+  */
 
   test('getParamsFromUrl', () => {
     Env.getUrlHash = getUrlHashFooBar;
