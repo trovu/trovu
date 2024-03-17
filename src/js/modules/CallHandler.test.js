@@ -18,14 +18,13 @@ describe('CallHandler', () => {
     );
   });
   test('getRedirectUrlToHome', async () => {
-    const env = new Env();
     Env.getUrlHash = () => {
       return 'country=at&language=de&query=reload';
     };
     const response = {
       status: 'reloaded',
     };
-    expect(CallHandler.getRedirectUrlToHome(env, response)).toStrictEqual(
+    expect(CallHandler.getRedirectUrlToHome(new Env(), response)).toStrictEqual(
       '../index.html#country=at&language=de&status=reloaded',
     );
   });
