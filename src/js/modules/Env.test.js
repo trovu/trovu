@@ -48,16 +48,16 @@ describe('Env', () => {
         github: 'johndoe',
       });
     });
-    /*
     test('configUrl', () => {
       expect(
-        new Env({
+        new Env().buildUrlParams({
           configUrl: 'https://example.com/config.yml',
-        }).buildUrlParams(),
+        }),
       ).toEqual({
         configUrl: 'https://example.com/config.yml',
       });
     });
+    /*
     test('language and country', () => {
       expect(
         new Env({ language: 'en', country: 'us' }).buildUrlParams(),

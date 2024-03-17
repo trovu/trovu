@@ -53,7 +53,7 @@ export default class Env {
     if (this.github) {
       params.github = this.github;
     } else if (originalParams.configUrl) {
-      params.configUrl = this.configUrl;
+      params.configUrl = originalParams.configUrl;
     } else {
       params.language = this.language;
       params.country = this.country;
