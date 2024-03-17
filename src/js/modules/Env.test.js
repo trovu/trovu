@@ -48,7 +48,7 @@ describe('Env', () => {
         github: 'johndoe',
       });
     });
-    test('configUrl', () => {
+    test('configUrl in originalParams', () => {
       expect(
         new Env().buildUrlParams({
           configUrl: 'https://example.com/config.yml',
@@ -57,7 +57,6 @@ describe('Env', () => {
         configUrl: 'https://example.com/config.yml',
       });
     });
-    /*
     test('language and country', () => {
       expect(
         new Env({ language: 'en', country: 'us' }).buildUrlParams(),
@@ -89,7 +88,6 @@ describe('Env', () => {
         status: 'deprecated',
       });
     });
-    */
   });
 
   /*
