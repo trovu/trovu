@@ -41,6 +41,7 @@ describe('Env', () => {
       });
     });
   });
+
   describe('buildUrlParams', () => {
     test('github', () => {
       expect(new Env({ github: 'johndoe' }).buildUrlParams()).toEqual({
