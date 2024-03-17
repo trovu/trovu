@@ -285,7 +285,9 @@ export default class Suggestions {
       }${suggestion.keyword} ${example.arguments || ''}`;
       // Surrond query with link to /process.
       const queryLink = document.createElement('a');
-      queryLink.href = this.env.getProcessUrl({ query: querySpan.textContent });
+      queryLink.href = this.env.buildProcessUrl({
+        query: querySpan.textContent,
+      });
       queryLink.appendChild(querySpan);
       leftSpan.appendChild(queryLink);
 

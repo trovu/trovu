@@ -27,7 +27,7 @@ export default class CallHandler {
     if (response.status === 'found') {
       redirectUrl = response.redirectUrl;
     } else {
-      redirectUrl = this.getRedirectUrlToHome(response);
+      redirectUrl = this.getRedirectUrlToHome(env, response);
     }
 
     env.logger.info('Redirect to:   ' + redirectUrl);
@@ -121,8 +121,8 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static getRedirectUrlToHome(response) {
-    const params = Env.getUrlParams();
+  static getRedirectUrlToHome(env, response) {
+    const params = Env.getParamsFromUrl();
     if (params.query === 'reload' || params.query === 'debug:reload') {
       delete params.query;
     }
@@ -131,7 +131,7 @@ export default class CallHandler {
         params[property] = response[property];
       }
     }
-    const paramStr = Env.getUrlParamStr(params);
+    const paramStr = env.buildUrlParamStr(params);
     const redirectUrl = '../index.html#' + paramStr;
     return redirectUrl;
   }

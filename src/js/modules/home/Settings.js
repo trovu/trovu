@@ -39,6 +39,7 @@ export default class Settings {
     // Set settings fields in settings modal.
     document.querySelector('#languageSetting').value = this.env.language;
     document.querySelector('#countrySetting').value = this.env.country;
+    document.querySelector('#githubSetting').value = this.env.github || '';
 
     // Show and hide settings tabs depending on Github setting.
     if (this.env.github) {
@@ -53,8 +54,11 @@ export default class Settings {
   saveSettings = () => {
     this.env.language = document.querySelector('#languageSetting').value;
     this.env.country = document.querySelector('#countrySetting').value;
+    this.env.github = document.querySelector('#githubSetting').value;
 
-    const paramStr = this.env.getParamStr();
+    this.env.setToLocalStorage();
+
+    const paramStr = this.env.buildUrlParamStr();
     window.location.hash = '#' + paramStr;
   };
 

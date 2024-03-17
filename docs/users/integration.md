@@ -81,9 +81,11 @@ On many operating systems, you can also install a [Progressive web app](https://
 
 1. Open [trovu.net](https://trovu.net/) in the browser.
 1. Open the browser menu.
-1. Tap on _Add to home screen_.
-1. In the new dialog, tap again _Add to home screen_.
+1. Tap on _Install app_.
+1. In the dialog, tap on _Install_.
+1. In the next dialog, tap on _Add to homescreen_.
+1. Go to your home screen.
+1. You will find a new icon _Trovu_. Tap on it. The Trovu PWA will open.
+1. To change the language or country, tap on the language/country in the upper right corner. By tapping on _Advanced_, you can also [set your GitHub account](advanced.md).
 
 Now, you will find the Trovu icon on your phone home screen. Tap on it to open the Trovu PWA.
-
-![Screenshot](img/pwa.jpg)

@@ -47,7 +47,7 @@ export default class Home {
     }
 
     document.getElementById('query-form').onsubmit = this.submitQuery;
-    document.querySelector('#reload').href = this.env.getProcessUrl({
+    document.querySelector('#reload').href = this.env.buildProcessUrl({
       query: 'reload',
     });
     document.documentElement.setAttribute('data-page-loaded', 'true');
@@ -128,7 +128,7 @@ export default class Home {
   }
 
   setLocationHash() {
-    const paramStr = this.env.getParamStr();
+    const paramStr = this.env.buildUrlParamStr();
     window.location.hash = '#' + paramStr;
   }
 
@@ -136,7 +136,7 @@ export default class Home {
    * Show custom alerts above query input.
    */
   showInfoAlerts() {
-    const params = Env.getUrlParams();
+    const params = Env.getParamsFromUrl();
     const alert = document.querySelector('#alert');
     if (params.status) {
       alert.removeAttribute('hidden');
@@ -181,7 +181,9 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-    const processUrl = this.env.getProcessUrl({ query: this.queryInput.value });
+    const processUrl = this.env.buildProcessUrl({
+      query: this.queryInput.value,
+    });
     // Redirect to process script.
     window.location.href = processUrl;
   };

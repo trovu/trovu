@@ -47,20 +47,19 @@ export default class Env {
    *
    * @return {object} - The built params.
    */
-  getParams() {
+  buildUrlParams(originalParams = {}, moreParams = {}) {
     const params = {};
 
-    // Put environment into hash.
     if (this.github) {
       params.github = this.github;
-    } else if (this.configUrl) {
-      params.configUrl = this.configUrl;
+    } else if (originalParams.configUrl) {
+      params.configUrl = originalParams.configUrl;
     } else {
       params.language = this.language;
       params.country = this.country;
-      if (this.defaultKeyword) {
-        params.defaultKeyword = this.defaultKeyword;
-      }
+    }
+    if (originalParams.defaultKeyword) {
+      params.defaultKeyword = originalParams.defaultKeyword;
     }
     if (this.debug) {
       params.debug = 1;
@@ -76,21 +75,27 @@ export default class Env {
         params[property] = this[property];
       }
     }
+    Object.assign(params, moreParams);
     return params;
   }
 
   /**
    * Get the parameters as string.
    */
-  getParamStr(moreParams) {
-    const params = this.getParams();
-    Object.assign(params, moreParams);
-    const paramStr = Env.getUrlParamStr(params);
+  buildUrlParamStr(moreParams = {}) {
+    const originalParams = Env.getParamsFromUrl();
+    const params = this.buildUrlParams(originalParams, moreParams);
+    const urlSearchParams = new URLSearchParams();
+    Object.entries(params).forEach(([key, value]) =>
+      urlSearchParams.set(key, value),
+    );
+    urlSearchParams.sort();
+    const paramStr = urlSearchParams.toString();
     return paramStr;
   }
 
-  getProcessUrl(moreParams) {
-    const paramStr = this.getParamStr(moreParams);
+  buildProcessUrl(moreParams) {
+    const paramStr = this.buildUrlParamStr(moreParams);
     const processUrl = 'process/index.html?#' + paramStr;
     return processUrl;
   }
@@ -102,23 +107,21 @@ export default class Env {
    */
   async populate(params) {
     if (!params) {
-      params = Env.getUrlParams();
+      params = Env.getParamsFromUrl();
     }
 
-    // Set debug and reload from URL params.
-    for (const paramName of ['debug', 'reload']) {
-      if (params[paramName] === '1') {
-        this[paramName] = true;
-      }
-    }
+    const boolParams = Env.setBoolParams(params);
+    Object.assign(this, boolParams);
 
     // Assign before, to also catch "debug" and "reload" in params and query.
     Object.assign(this, params);
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
 
+    this.getFromLocalStorage();
+
     if (typeof params.github === 'string' && params.github !== '') {
-      this.configUrl = this.getGithubConfigUrl(params.github);
+      this.configUrl = this.buildGithubConfigUrl(params.github);
     }
     if (typeof params.configUrl === 'string' && params.configUrl !== '') {
       this.configUrl = params.configUrl;
@@ -134,6 +137,8 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     this.setDefaults();
+
+    this.setToLocalStorage();
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
@@ -156,12 +161,40 @@ export default class Env {
     }
   }
 
+  setToLocalStorage() {
+    if (this.github) {
+      localStorage.setItem('github', this.github);
+      localStorage.removeItem('language');
+      localStorage.removeItem('country');
+    } else {
+      localStorage.setItem('language', this.language);
+      localStorage.setItem('country', this.country);
+      localStorage.removeItem('github');
+    }
+  }
+
+  getFromLocalStorage() {
+    this.language ||= localStorage.getItem('language');
+    this.country ||= localStorage.getItem('country');
+    this.github ||= localStorage.getItem('github');
+  }
+
+  static setBoolParams(params) {
+    const boolParams = {};
+    for (const paramName of ['debug', 'reload']) {
+      if (params[paramName] === '1') {
+        boolParams[paramName] = true;
+      }
+    }
+    return boolParams;
+  }
+
   /**
    * Get the URL to the config file on Github.
    * @param {string} github - The Github user name.
    * @returns {string} The URL to the config file.
    */
-  getGithubConfigUrl(github) {
+  buildGithubConfigUrl(github) {
     const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml?${this.commitHash}`;
     return configUrl;
   }
@@ -207,7 +240,7 @@ export default class Env {
   async getUserConfigFromUrl(configUrl) {
     const configYml = await Helper.fetchAsync(configUrl, this);
     if (!configYml) {
-      this.logger.error(`Error reading config from ${configUrl}`);
+      this.logger.warning(`Problem reading config from ${configUrl}`);
     }
     try {
       const config = jsyaml.load(configYml);
@@ -347,35 +380,19 @@ export default class Env {
     return hash;
   }
 
-  /**
-   * Get parameters from the URL query string.
-   *
-   * @return {object} params - List of found parameters.
-   */
-  static getUrlParams() {
-    const urlParamStr = this.getUrlHash();
-    const urlParams = new URLSearchParams(urlParamStr);
+  static getParamsFromUrl() {
+    const urlSearchParams = this.getUrlSearchParams();
     const params = {};
-    urlParams.forEach((value, key) => {
+    urlSearchParams.forEach((value, key) => {
       params[key] = value;
     });
     return params;
   }
 
-  /**
-   * Build URL param string from param object.
-   *
-   * @param {object} params       - List of parameters.
-   *
-   * @return {string} urlParamStr - Parameter as URL string.
-   */
-  static getUrlParamStr(params) {
-    const urlParams = new URLSearchParams();
-    for (const key in params) {
-      urlParams.set(key, params[key]);
-    }
-    urlParams.sort();
-    return urlParams;
+  static getUrlSearchParams() {
+    const urlHash = this.getUrlHash();
+    const urlSearchParams = new URLSearchParams(urlHash);
+    return urlSearchParams;
   }
 
   isRunningStandalone() {

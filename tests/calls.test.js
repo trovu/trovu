@@ -1,5 +1,6 @@
 import CallHandler from '../src/js/modules/CallHandler.js';
 import Env from '../src/js/modules/Env.js';
+import './mocks.utils.js';
 import fs from 'fs';
 import 'isomorphic-fetch';
 import jsyaml from 'js-yaml';
@@ -15,27 +16,6 @@ async function main() {
     });
   });
 }
-
-global.fetch = jest.fn((url) => {
-  if (url.includes('/testuser/trovu-data-user/master/config.yml')) {
-    return Promise.resolve({
-      status: 200,
-      text: () => Promise.resolve('defaultKeyword: g'),
-    });
-  } else if (url.includes('/testuser/trovu-data-user/master/shortcuts.yml')) {
-    return Promise.resolve({
-      status: 200,
-      text: () =>
-        Promise.resolve(
-          'keyword1 1: https://www.google.com/search?hl=en&q=keyword1%20{%query}&ie=utf-8',
-        ),
-    });
-  }
-});
-
-afterEach(() => {
-  jest.clearAllMocks();
-});
 
 async function testCall(call) {
   const env = new Env();

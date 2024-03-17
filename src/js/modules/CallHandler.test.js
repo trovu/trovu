@@ -24,7 +24,7 @@ describe('CallHandler', () => {
     const response = {
       status: 'reloaded',
     };
-    expect(CallHandler.getRedirectUrlToHome(response)).toStrictEqual(
+    expect(CallHandler.getRedirectUrlToHome(new Env(), response)).toStrictEqual(
       '../index.html#country=at&language=de&status=reloaded',
     );
   });
