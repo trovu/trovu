@@ -193,8 +193,8 @@
   examples:
   - arguments: blur
     description: find tabs for songs of Blur
-a 1:
-  url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo-20
+a 0:
+  url: https://www.amazon.com?&linkCode=ll2&tag=serchilo-20&linkId=070c10e4d6fb9665424b753bbe333d12&language=en_US&ref_=as_li_ss_tl
   title: Amazon.com
   tags:
   - amazon
@@ -202,8 +202,19 @@ a 1:
   - is-affiliate
   - shopping
   examples:
+  - description: Go to homepage
+  tests:
+  - expected: <title>Amazon.com
+a 1:
+  url: https://www.amazon.com/s?k=<query>&crid=1UXOIV6UI26W0&linkCode=ll2&tag=serchilo-20&linkId=dadbd51da666f8ecc0f3fc779e01728a&language=en_US&ref_=as_li_ss_tl
+  include:
+  - key: a 0
+  examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
+  tests:
+  - arguments: shakespeare
+    expected: berlin</title>
   showOnHome: 1000
 abbr 1:
   url: https://www.abbreviations.com/<abbr>
