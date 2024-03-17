@@ -138,15 +138,7 @@ export default class Env {
 
     this.setDefaults();
 
-    if (this.github) {
-      localStorage.setItem('github', this.github);
-      localStorage.removeItem('language');
-      localStorage.removeItem('country');
-    } else {
-      localStorage.setItem('language', this.language);
-      localStorage.setItem('country', this.country);
-      localStorage.removeItem('github');
-    }
+    this.setToLocalStorage();
 
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
@@ -166,6 +158,18 @@ export default class Env {
       delete this.extraNamespaceName;
       this.keyword = '';
       this.arguments = [this.query];
+    }
+  }
+
+  setToLocalStorage() {
+    if (this.github) {
+      localStorage.setItem('github', this.github);
+      localStorage.removeItem('language');
+      localStorage.removeItem('country');
+    } else {
+      localStorage.setItem('language', this.language);
+      localStorage.setItem('country', this.country);
+      localStorage.removeItem('github');
     }
   }
 
