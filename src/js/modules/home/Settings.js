@@ -56,8 +56,8 @@ export default class Settings {
     this.env.country = document.querySelector('#countrySetting').value;
     this.env.github = document.querySelector('#githubSetting').value;
 
-    const paramStr = this.env.buildUrlParamStr();
-    window.location.hash = '#' + paramStr;
+    this.env.setToLocalStorage();
+    window.location.hash = '#';
   };
 
   setLanguagesAndCountriesList() {
