@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 329-open-target-urls-not-in-pwa-but-in-default-browser
   pull_request:
     branches:
       - master
