@@ -91,45 +91,6 @@ describe('Env', () => {
     });
   });
 
-  /*
-  describe('buildUrlParamStr', () => {
-    let env;
-
-    beforeEach(() => {
-      env = new Env();
-      env.getNavigatorLanguage = () => 'en-US';
-      env.getUserConfigFromUrl = () => `language: de
-      country: at`;
-    });
-
-    test('empty', async () => {
-      Env.getUrlHash = () => '';
-      await env.populate();
-      expect(env.buildUrlParamStr()).toEqual('country=us&language=en');
-    });
-
-    test('github', async () => {
-      Env.getUrlHash = () => 'github=johndoe';
-      await env.populate();
-      expect(env.buildUrlParamStr()).toEqual('github=johndoe');
-    });
-
-    test('configUrl', async () => {
-      Env.getUrlHash = () => 'configUrl=https://example.com/config.yml';
-      await env.populate();
-      expect(env.buildUrlParamStr()).toEqual(
-        'configUrl=https%3A%2F%2Fexample.com%2Fconfig.yml',
-      );
-    });
-
-    test('language, country', async () => {
-      Env.getUrlHash = () => 'language=de&country=at';
-      await env.populate();
-      expect(env.buildUrlParamStr()).toEqual('country=at&language=de');
-    });
-  });
-  */
-
   test('getParamsFromUrl', () => {
     Env.getUrlHash = getUrlHashFooBar;
     expect(Env.getParamsFromUrl()).toEqual({ foo: 'bar', baz: 'boo' });
