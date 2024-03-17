@@ -204,7 +204,7 @@ a 0:
   examples:
   - description: Go to homepage
   tests:
-  - expected: <title>Amazon.com
+  - expect: <title>Amazon.com
 a 1:
   url: https://www.amazon.com/s?k=<query>&crid=1UXOIV6UI26W0&linkCode=ll2&tag=serchilo-20&linkId=dadbd51da666f8ecc0f3fc779e01728a&language=en_US&ref_=as_li_ss_tl
   include:
@@ -214,7 +214,7 @@ a 1:
     description: Search for "shakespeare"
   tests:
   - arguments: shakespeare
-    expected: berlin</title>
+    expect: berlin</title>
   showOnHome: 1000
 abbr 1:
   url: https://www.abbreviations.com/<abbr>
