@@ -118,9 +118,7 @@ export default class Env {
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
 
-    this.language ||= localStorage.getItem('language');
-    this.country ||= localStorage.getItem('country');
-    this.github ||= localStorage.getItem('github');
+    this.getFromLocalStorage();
 
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
@@ -169,6 +167,12 @@ export default class Env {
       this.keyword = '';
       this.arguments = [this.query];
     }
+  }
+
+  getFromLocalStorage() {
+    this.language ||= localStorage.getItem('language');
+    this.country ||= localStorage.getItem('country');
+    this.github ||= localStorage.getItem('github');
   }
 
   static setBoolParams(params) {
