@@ -57,9 +57,9 @@ export default class Env {
     } else {
       params.language = this.language;
       params.country = this.country;
-      if (this.defaultKeyword) {
-        params.defaultKeyword = this.defaultKeyword;
-      }
+    }
+    if (originalParams.defaultKeyword) {
+      params.defaultKeyword = originalParams.defaultKeyword;
     }
     if (this.debug) {
       params.debug = 1;

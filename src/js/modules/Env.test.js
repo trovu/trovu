@@ -57,25 +57,26 @@ describe('Env', () => {
         configUrl: 'https://example.com/config.yml',
       });
     });
+    test('defaultKeyword in originalParams', () => {
+      expect(
+        new Env({
+          country: 'us',
+          language: 'en',
+        }).buildUrlParams({
+          defaultKeyword: 'w',
+        }),
+      ).toEqual({
+        country: 'us',
+        language: 'en',
+        defaultKeyword: 'w',
+      });
+    });
     test('language and country', () => {
       expect(
         new Env({ language: 'en', country: 'us' }).buildUrlParams(),
       ).toEqual({
         language: 'en',
         country: 'us',
-      });
-    });
-    test('language, country and defaultKeyword', () => {
-      expect(
-        new Env({
-          language: 'en',
-          country: 'us',
-          defaultKeyword: 'example',
-        }).buildUrlParams(),
-      ).toEqual({
-        language: 'en',
-        country: 'us',
-        defaultKeyword: 'example',
       });
     });
     test('debug', () => {
