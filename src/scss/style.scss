@@ -89,6 +89,25 @@ span.tag {
   margin-left: 0 0.2em;
 }
 
+#explainer {
+  dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px; /* Adjust the vertical and horizontal gaps as needed */
+  }
+
+  h2 {
+    text-align: center;
+    color: #818182;
+    font-size: 1.2em;
+    font-style: italic;
+  }
+  dt,
+  dd {
+    margin: 0;
+  }
+}
+
 #suggestions {
   overflow: auto;
   position: relative;
