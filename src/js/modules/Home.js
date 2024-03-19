@@ -28,7 +28,6 @@ export default class Home {
     // Init environment.
     await this.env.populate();
 
-    this.helpDiv = document.querySelector('#help');
     this.queryInput = document.querySelector('#query');
 
     if (this.env.isRunningStandalone()) {
@@ -115,14 +114,11 @@ export default class Home {
         document.querySelector('#intro').style.display = 'block';
         document.querySelector('footer').style.display = 'block';
       }
-      this.helpDiv.innerHTML = '';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
       document.querySelector('#alert').style.display = 'none';
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('footer').style.display = 'none';
-      this.helpDiv.innerHTML =
-        'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
     }
     Home.setHeights();
   }
