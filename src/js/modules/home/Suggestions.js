@@ -62,7 +62,9 @@ export default class Suggestions {
       this.suggestionsDiv.removeChild(this.suggestionsDiv.firstChild);
     }
     if (suggestions.length === 0) {
-      this.helpDiv.textContent = 'No matching shortcuts found.';
+      if (this.query) {
+        this.helpDiv.textContent = 'No matching shortcuts found.';
+      }
       return;
     }
 
@@ -442,6 +444,9 @@ export default class Suggestions {
    * @return {array} suggestions – The found suggestions.
    */
   getSuggestions(query) {
+    if (!query) {
+      return [];
+    }
     const matches = this.getMatches(query);
 
     if (matches.showOnHome.length > 0) {
