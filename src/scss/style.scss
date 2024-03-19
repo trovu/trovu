@@ -93,18 +93,18 @@ span.tag {
   dl {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 10px 20px; /* Adjust the vertical and horizontal gaps as needed */
+    gap: 10px 0; /* Adjust the vertical and horizontal gaps as needed */
   }
 
-  h2 {
+  .cta {
     text-align: center;
     color: #818182;
-    font-size: 1.2em;
-    font-style: italic;
+    margin-bottom: 1em;
   }
   dt,
   dd {
     margin: 0;
+    border-bottom: 1px solid #eee;
   }
 }
 
