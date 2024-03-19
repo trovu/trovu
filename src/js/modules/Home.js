@@ -114,11 +114,17 @@ export default class Home {
         document.querySelector('#intro').style.display = 'block';
         document.querySelector('footer').style.display = 'block';
       }
+      document.querySelector('#suggestions').style.display = 'none';
+      document.querySelector('#help').style.display = 'none';
+      document.querySelector('#explainer').style.display = 'block';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
       document.querySelector('#alert').style.display = 'none';
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('footer').style.display = 'none';
+      document.querySelector('#suggestions').style.display = 'block';
+      document.querySelector('#help').style.display = 'block';
+      document.querySelector('#explainer').style.display = 'none';
     }
     Home.setHeights();
   }
