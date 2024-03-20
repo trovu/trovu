@@ -79,6 +79,7 @@ export default class Home {
   setListeners() {
     const namespaces = document.querySelectorAll('span.namespace');
     namespaces.forEach((namespace) => {
+      namespace.style.cursor = 'pointer';
       namespace.addEventListener('click', () => {
         this.queryInput.value = `ns:${namespace.textContent}`;
         this.queryInput.focus();
