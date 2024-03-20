@@ -94,18 +94,17 @@ span.tag {
     padding: 5px;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 10px 0; /* Adjust the vertical and horizontal gaps as needed */
   }
 
   .cta {
     text-align: center;
     color: #818182;
-    margin-bottom: 1em;
   }
   dt,
   dd {
     margin: 0;
-    border-bottom: 1px solid #eee;
+    padding: 0.3em 0;
+    border-top: 1px solid #eee;
   }
 }
 
