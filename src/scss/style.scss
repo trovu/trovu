@@ -95,6 +95,7 @@ span.tag {
     display: grid;
     grid-template-columns: auto auto;
   }
+
   .cta {
     text-align: center;
     color: #818182;
@@ -105,15 +106,9 @@ span.tag {
     padding: 0.3em 0;
     border-top: 1px solid #eee;
   }
-  dd {
-    text-align: right;
-    padding-right: 1em;
-  }
-  dd::after {
-    content: ': ';
-  }
   dt {
     font-weight: normal;
+    padding-right: 1em;
   }
 }
 
