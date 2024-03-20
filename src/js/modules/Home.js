@@ -77,11 +77,15 @@ export default class Home {
   }
 
   setListeners() {
-    const namespaces = document.querySelectorAll('span.namespace');
-    namespaces.forEach((namespace) => {
-      namespace.style.cursor = 'pointer';
-      namespace.addEventListener('click', () => {
-        this.queryInput.value = `ns:${namespace.textContent}`;
+    this.setListenersToSetQuery('namespace', 'ns');
+    this.setListenersToSetQuery('tag', 'tag');
+  }
+  setListenersToSetQuery(className, prefix) {
+    const elements = document.querySelectorAll(`span.${className}`);
+    elements.forEach((element) => {
+      element.style.cursor = 'pointer';
+      element.addEventListener('click', () => {
+        this.queryInput.value = `${prefix}:${element.textContent}`;
         this.suggestions.updateSuggestions();
         this.toggleByQuery();
         this.queryInput.focus();
