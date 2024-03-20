@@ -77,7 +77,6 @@ export default class Home {
   }
 
   setListeners() {
-    // find all span.namespaces and add click event that onclick sets the value of the queryinput 'ns:[namespace]'
     const namespaces = document.querySelectorAll('span.namespace');
     namespaces.forEach((namespace) => {
       namespace.addEventListener('click', () => {
