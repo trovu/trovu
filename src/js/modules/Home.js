@@ -52,6 +52,7 @@ export default class Home {
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
     Home.setHeights();
+    this.setListeners();
   }
 
   static setHeights() {
@@ -73,6 +74,17 @@ export default class Home {
       footerTop = document.querySelector('footer').getBoundingClientRect().top;
     }
     suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
+  }
+
+  setListeners() {
+    // find all span.namespaces and add click event that onclick sets the value of the queryinput 'ns:[namespace]'
+    const namespaces = document.querySelectorAll('span.namespace');
+    namespaces.forEach((namespace) => {
+      namespace.addEventListener('click', () => {
+        this.queryInput.value = `ns:${namespace.textContent}`;
+        this.queryInput.focus();
+      });
+    });
   }
 
   setQueryElement() {
