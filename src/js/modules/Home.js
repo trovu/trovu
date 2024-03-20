@@ -82,6 +82,8 @@ export default class Home {
       namespace.style.cursor = 'pointer';
       namespace.addEventListener('click', () => {
         this.queryInput.value = `ns:${namespace.textContent}`;
+        this.suggestions.updateSuggestions();
+        this.toggleByQuery();
         this.queryInput.focus();
       });
     });
