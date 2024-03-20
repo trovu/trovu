@@ -74,19 +74,22 @@ main .jumbotron {
 #query {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+span.title {
+  margin: 0 0.1em;
+}
 span.namespace {
   background: var(--red);
   color: white;
   padding: 0.1em 0.2em;
   border-radius: 0.2rem;
-  margin: 0 0.2em;
+  margin: 0 0.1em;
 }
 span.tag {
   background: var(--yellow);
   color: black;
   padding: 0.1em 0.2em;
   border-radius: 0.2rem;
-  margin-left: 0 0.2em;
+  margin: 0 0.1em;
 }
 
 #explainer {
