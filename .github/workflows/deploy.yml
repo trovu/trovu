@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 266-redesign-homepage
   pull_request:
     branches:
       - master
