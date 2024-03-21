@@ -487,6 +487,7 @@ export default class NamespaceFetcher {
    * @return {object} shortcut - Shortcut with info.
    */
   addInfo(shortcut, key, namespaceName) {
+    shortcut = this.convertToObject(shortcut);
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
     shortcut.argumentCount = parseInt(shortcut.argumentCount);
