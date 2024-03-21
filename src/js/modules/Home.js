@@ -159,29 +159,30 @@ export default class Home {
   showInfoAlerts() {
     const params = Env.getParamsFromUrl();
     const alert = document.querySelector('#alert');
+    const alertMsg = alert.querySelector('span');
     if (params.status) {
       alert.removeAttribute('hidden');
     }
     switch (params.status) {
       case 'not_found':
-        alert.innerHTML =
+        alertMsg.innerHTML =
           'No matching shortcut found. Did you use a <a href="https://trovu.net/docs/">keyword</a>? Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>. ';
         break;
       case 'not_reachable':
-        alert.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> to your <a target="_blank" href="https://trovu.net/docs/shortcuts/namespaces/">namespaces</a>.`;
+        alertMsg.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> to your <a target="_blank" href="https://trovu.net/docs/shortcuts/namespaces/">namespaces</a>.`;
         break;
       case 'reloaded':
-        alert.textContent = 'Shortcuts were reloaded in all namespaces.';
+        alertMsg.textContent = 'Shortcuts were reloaded in all namespaces.';
         if (this.env.github) {
-          alert.textContent +=
+          alertMsg.textContent +=
             ' Changes on your GitHub might require a reload in 5 minutes due to caching.';
         }
         break;
       case 'deprecated':
-        alert.innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
+        alertMsg.innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
         break;
       case 'removed':
-        alert.innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
+        alertMsg.innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
           params.key,
         )}+repo%3Atrovu%2Ftrovu-data&type=code">
           ${params.query}</a> was removed as does not adhere to our 
