@@ -160,6 +160,11 @@ export default class Home {
     const params = Env.getParamsFromUrl();
     const alert = document.querySelector('#alert');
     const alertMsg = alert.querySelector('span');
+    const alertClose = alert.querySelector('button');
+    alertClose.addEventListener('click', () => {
+      const paramStr = this.env.buildUrlParamStr({ status: '' });
+      window.location.hash = '#' + paramStr;
+    });
     if (params.status) {
       alert.removeAttribute('hidden');
     }
