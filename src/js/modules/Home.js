@@ -128,7 +128,6 @@ export default class Home {
       this.suggestions.selected === -1
     ) {
       document.querySelector('nav.navbar').style.display = 'block';
-      document.querySelector('#alert').style.display = 'block';
       if (!this.env.isRunningStandalone()) {
         document.querySelector('#intro').style.display = 'block';
         document.querySelector('footer').style.display = 'block';
@@ -139,7 +138,6 @@ export default class Home {
       document.querySelector('#help').style.display = 'none';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
-      document.querySelector('#alert').style.display = 'none';
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('footer').style.display = 'none';
       document.querySelector('#suggestions').style.display = 'block';
