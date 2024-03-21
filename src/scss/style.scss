@@ -13,6 +13,7 @@ main {
   flex: 1 0 auto;
 }
 footer {
+  display: none;
   background: #eee;
   flex-shrink: 0;
   position: sticky;
@@ -39,6 +40,7 @@ footer {
   padding: 1em;
 }
 #intro {
+  display: none;
   margin: 0;
   padding: 0.5em 0;
   font-style: italic;
@@ -78,6 +80,7 @@ span.tag {
 }
 
 #explainer {
+  display: none;
   dl {
     padding: 5px;
     display: grid;
@@ -100,6 +103,10 @@ span.tag {
     padding-right: 1em;
     text-align: right;
   }
+}
+
+#lists {
+  display: none;
 }
 
 #suggestions {
