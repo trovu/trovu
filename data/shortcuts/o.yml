@@ -4859,18 +4859,30 @@ is 1:
     namespace: lgs
   - key: is 1
     namespace: pka
-isg 1:
-  url: https://www.instagram.com/<name>
+isg 0:
+  url: https://www.instagram.com/
   title: Instagram
   description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
   tags:
   - instagram
-  - photo-sharing
-  - social-networking-service
-  - video-sharing
+  - photo
+  - social-network
+  - video
   examples:
-  - arguments: ellierosapowers
-    description: Show the user ellierosapowers content.
+  - description: Go to homepage
+  tests:
+  - expect: <title>Instagram
+isg 1:
+  url: https://www.instagram.com/<user>
+  include:
+  - key: isg 0
+  title: Instagram user
+  examples:
+  - arguments: linux_foundation
+    description: Show content of user linux_foundation
+  tests:
+  - arguments: linux_foundation
+    expect: '@linux_foundation) • Instagram photos and videos</title>'
 ist 0:
   url: https://www.istockphoto.com
   title: Istockphoto
