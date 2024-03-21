@@ -3059,6 +3059,36 @@ fla 0:
   title: Flickr, advanced search
   include:
     key: fl 0
+flcc 1:
+  url: https://flickr.com/search/?q=<query>&l=cc
+  title: 'Flickr: full text search for content with a Creative Commons license'
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
+  include:
+    key: fl 0
+flcca 1:
+  url: https://flickr.com/search/?q=<query>&l=deriv
+  title: 'Flickr: full text search for content to adapt, modify and build upon'
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
+  include:
+    key: fl 0
+flccc 1:
+  url: https://flickr.com/search/?q=<query>&l=comm
+  title: 'Flickr: full text search for content to use commercially'
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
+  include:
+    key: fl 0
+flccca 1:
+  url: https://flickr.com/search/?q=<query>&l=commderiv
+  title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
 fli 0:
   deprecated:
     alternative:
@@ -3070,41 +3100,36 @@ fli 1:
       query: fl <1>
     created: '2024-03-21'
 flicc 1:
-  url: https://flickr.com/search/?q=<query>&l=cc
-  title: 'Flickr: full text search for content with a Creative Commons license'
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
-  include:
-    key: fl 0
+  deprecated:
+    alternative:
+      query: flcc <1>
+    created: '2024-03-21'
 flicca 1:
-  url: https://flickr.com/search/?q=<query>&l=deriv
-  title: 'Flickr: full text search for content to adapt, modify and build upon'
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
-  include:
-    key: fl 0
+  deprecated:
+    alternative:
+      query: flcca <1>
+    created: '2024-03-21'
 fliccc 1:
-  url: https://flickr.com/search/?q=<query>&l=comm
-  title: 'Flickr: full text search for content to use commercially'
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
-  include:
-    key: fl 0
+  deprecated:
+    alternative:
+      query: flccc <1>
+    created: '2024-03-21'
 fliccca 1:
-  url: https://flickr.com/search/?q=<query>&l=commderiv
-  title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
+  deprecated:
+    alternative:
+      query: flccca <1>
+    created: '2024-03-21'
 flickr 1:
   deprecated:
     alternative:
       query: fl <1>
     created: '2024-03-21'
 flickrshow 1:
+  deprecated:
+    alternative:
+      query: fls <1>
+    created: '2024-03-21'
+fls 1:
   url: https://flickr.com/search/show/?q=<query>
   title: 'Flickr: creates a slideshow of your query'
   examples:
