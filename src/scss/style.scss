@@ -12,22 +12,8 @@ body {
 main {
   flex: 1 0 auto;
 }
-footer::before {
-  content: '';
-  position: absolute;
-  top: -4em; /* Height of the fade effect */
-  left: 0;
-  right: 0;
-  height: 4em;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-
-  /* Adjust the color to match the page background or the effect you want */
-}
 footer {
+  display: none;
   background: #eee;
   flex-shrink: 0;
   position: sticky;
@@ -54,8 +40,11 @@ footer {
   padding: 1em;
 }
 #intro {
+  display: none;
   margin: 0;
   padding: 0.5em 0;
+  font-style: italic;
+  font-size: 1.2em;
 }
 main .jumbotron {
   margin: 0;
@@ -72,19 +61,52 @@ main .jumbotron {
 #query {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+span.title {
+  margin: 0 0.1em;
+}
 span.namespace {
   background: var(--red);
   color: white;
   padding: 0.1em 0.2em;
   border-radius: 0.2rem;
-  margin: 0 0.2em;
+  margin: 0 0.1em;
 }
 span.tag {
   background: var(--yellow);
   color: black;
   padding: 0.1em 0.2em;
   border-radius: 0.2rem;
-  margin-left: 0 0.2em;
+  margin: 0 0.1em;
+}
+
+#explainer {
+  display: none;
+  dl {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .cta {
+    text-align: center;
+    font-style: italic;
+    color: #818182;
+  }
+  dt,
+  dd {
+    margin: 0;
+    padding: 0.3em 0;
+    border-top: 1px solid #eee;
+  }
+  dt {
+    font-weight: normal;
+    padding-right: 1em;
+    text-align: right;
+  }
+}
+
+#lists {
+  display: none;
 }
 
 #suggestions {
@@ -205,6 +227,10 @@ span.tag {
       }
     }
   }
+}
+
+div.card {
+  margin-bottom: 1em;
 }
 
 #help {

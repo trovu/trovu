@@ -234,28 +234,7 @@
     <main class="container">
       <section class="jumbotron text-center bg-white">
         <div id="intro" class="alert alert-light" role="alert">
-          <p dir="auto">
-            <em>
-              Search faster with shortcuts: Try
-              <a target="_blank" href="/process/?#query=gm+berlin">gm berlin</a>
-              for Google Maps,
-              <a target="_blank" href="/process/?#query=w+berlin">w berlin</a>
-              for Wikipedia,
-              <a target="_blank" href="/process/?#query=gfl+berlin,london"
-                >gfl berlin, london</a
-              >
-              for Google Flights. <br />
-              It's like
-              <a
-                target="_blank"
-                href="https://duckduckgo.com/bangs"
-                rel="nofollow"
-                >DuckDuckGo bangs</a
-              >
-              but with more privacy.
-              <a href="/docs/">Read more</a>.
-            </em>
-          </p>
+          Search the web faster with shortcuts.
         </div>
         <div hidden id="alert" class="alert alert-warning" role="alert"></div>
         <pre hidden id="log"></pre>
@@ -280,9 +259,154 @@
         </form>
         <div id="help"></div>
       </section>
-      <div class="row">
-        <div class="col-sm-12">
-          <div id="suggestions" class="container"></div>
+      <div id="suggestions" class="container"></div>
+      <div id="explainer" class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="cta">
+              <a target="_blank" href="/docs/">Read more</a>, watch a
+              <a
+                target="_blank"
+                href="https://www.youtube.com/watch?v=gOUNhCion9M"
+                >video</a
+              >, or check out the examples:
+            </div>
+            <dl>
+              <dt>
+                <a target="_blank" href="/process/index.html?#query=g%20berlin"
+                  >g berlin</a
+                >
+              </dt>
+              <dd>Search Google for Berlin</dd>
+              <dt>
+                <a target="_blank" href="/process/index.html?#query=w%20berlin"
+                  >w berlin</a
+                >
+              </dt>
+              <dd>Go to the Wikipedia article about Berlin</dd>
+              <dt>
+                <a
+                  target="_blank"
+                  href="/process/index.html?#query=fr.w%20berlin"
+                  >fr.w berlin</a
+                >
+              </dt>
+              <dd>Go to the French Wikipedia article about Berlin.</dd>
+              <dt>
+                <a
+                  target="_blank"
+                  href="/process/index.html?#query=gd%20london%2C%20liverpool"
+                  >gd london, liverpool</a
+                >
+              </dt>
+              <dd>
+                Search for a route on Google Directions from London to Liverpool
+              </dd>
+              <dt>
+                <a
+                  target="_blank"
+                  href="/process/index.html?#query=gfl%20ber%2C%20ibiza%2C%20fr%2C%2028"
+                  >gfl ber, ibiza, fr, 28</a
+                >
+              </dt>
+              <dd>
+                Search on Google Flights for a flight from Berlin to Ibiza,
+                leaving next Friday, returning on the 28th
+              </dd>
+              <dt>
+                <a
+                  target="_blank"
+                  href="/process/index.html?#query=bkg%20ibiza%2C%2028%2C%2029"
+                  >bkg ibiza, 28, 29</a
+                >
+              </dt>
+              <dd>
+                Search on Booking.com for a hotel in Ibiza, from the 28th to the
+                29th
+              </dd>
+              <dt>
+                <a target="_blank" href="/process/index.html?#query=npm%20csv"
+                  >npm csv</a
+                >
+              </dt>
+              <dd>
+                Search the Node Package Manager for modules projects about CSV
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div id="lists">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-header">
+                <strong>Shortcuts by country</strong>
+              </div>
+              <div class="card-body">
+                <span class="namespace">.at</span>
+                <span class="namespace">.bo</span>
+                <span class="namespace">.ch</span>
+                <span class="namespace">.cz</span>
+                <span class="namespace">.de</span>
+                <span class="namespace">.dk</span>
+                <span class="namespace">.es</span>
+                <span class="namespace">.fr</span>
+                <span class="namespace">.gb</span>
+                <span class="namespace">.it</span>
+                <span class="namespace">.nl</span>
+                <span class="namespace">.no</span>
+                <span class="namespace">.pl</span>
+                <span class="namespace">.pt</span>
+                <span class="namespace">.se</span>
+                <span class="namespace">.sk</span>
+                <span class="namespace">.us</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-header">
+                <strong>Shortcuts by language</strong>
+              </div>
+              <div class="card-body">
+                <span class="namespace">cs</span>
+                <span class="namespace">da</span>
+                <span class="namespace">de</span>
+                <span class="namespace">en</span>
+                <span class="namespace">eo</span>
+                <span class="namespace">es</span>
+                <span class="namespace">nl</span>
+                <span class="namespace">pl</span>
+                <span class="namespace">sk</span>
+                <span class="namespace">ru</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-header">
+                <strong>Shortcuts by tags</strong>
+              </div>
+              <div class="card-body">
+                <span class="tag">dictionary</span>
+                <span class="tag">encyclopedia</span>
+                <span class="tag">google</span>
+                <span class="tag">language</span>
+                <span class="tag">library</span>
+                <span class="tag">maps</span>
+                <span class="tag">photo</span>
+                <span class="tag">programming</span>
+                <span class="tag">shopping</span>
+                <span class="tag">sport</span>
+                <span class="tag">statistics</span>
+                <span class="tag">travel</span>
+                <span class="tag">video</span>
+                <span class="tag">web-search</span>
+                <span class="tag">wiki</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

@@ -28,7 +28,6 @@ export default class Home {
     // Init environment.
     await this.env.populate();
 
-    this.helpDiv = document.querySelector('#help');
     this.queryInput = document.querySelector('#query');
 
     if (this.env.isRunningStandalone()) {
@@ -53,6 +52,8 @@ export default class Home {
     document.documentElement.setAttribute('data-page-loaded', 'true');
 
     Home.setHeights();
+    this.setListeners();
+    this.toggleByQuery();
   }
 
   static setHeights() {
@@ -74,6 +75,23 @@ export default class Home {
       footerTop = document.querySelector('footer').getBoundingClientRect().top;
     }
     suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + 'px';
+  }
+
+  setListeners() {
+    this.setListenersToSetQuery('namespace', 'ns');
+    this.setListenersToSetQuery('tag', 'tag');
+  }
+  setListenersToSetQuery(className, prefix) {
+    const elements = document.querySelectorAll(`span.${className}`);
+    elements.forEach((element) => {
+      element.style.cursor = 'pointer';
+      element.addEventListener('click', () => {
+        this.queryInput.value = `${prefix}:${element.textContent}`;
+        this.suggestions.updateSuggestions();
+        this.toggleByQuery();
+        this.queryInput.focus();
+      });
+    });
   }
 
   setQueryElement() {
@@ -114,15 +132,20 @@ export default class Home {
       if (!this.env.isRunningStandalone()) {
         document.querySelector('#intro').style.display = 'block';
         document.querySelector('footer').style.display = 'block';
+        document.querySelector('#explainer').style.display = 'block';
       }
-      this.helpDiv.innerHTML = '';
+      document.querySelector('#lists').style.display = 'block';
+      document.querySelector('#suggestions').style.display = 'none';
+      document.querySelector('#help').style.display = 'none';
     } else {
       document.querySelector('nav.navbar').style.display = 'none';
       document.querySelector('#alert').style.display = 'none';
       document.querySelector('#intro').style.display = 'none';
       document.querySelector('footer').style.display = 'none';
-      this.helpDiv.innerHTML =
-        'Select with ⬆️ ⬇️ for examples, click on<span class="namespace">namespace</span>or <span class="tag">tag</span> to filter.';
+      document.querySelector('#suggestions').style.display = 'block';
+      document.querySelector('#help').style.display = 'block';
+      document.querySelector('#explainer').style.display = 'none';
+      document.querySelector('#lists').style.display = 'none';
     }
     Home.setHeights();
   }

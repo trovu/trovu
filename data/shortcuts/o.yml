@@ -3037,90 +3037,122 @@ fiverr 1:
   title: Fiverr Gigs
   tags:
   - services
-fli 0:
-  url: http://www.flickr.com/search/advanced/
-  title: 'Flickr: Advanced Search'
-fli 1:
-  url: http://flickr.com/search/?q=<query>
-  title: 'Flickr: full text search'
+fl 0:
+  url: https://www.flickr.com/
+  title: Flickr
   tags:
   - flickr
   - images
+  - photo
+  examples:
+  - description: Go to homepage
+fl 1:
+  url: https://flickr.com/search/?q=<query>
+  title: Flickr, full text search
   examples:
   - arguments: christmas
     description: search photos about christmas
-flicc 1:
-  url: http://flickr.com/search/?q=<query>&l=cc
+  include:
+    key: fl 0
+fla 0:
+  url: https://www.flickr.com/search/advanced/
+  title: Flickr, advanced search
+  include:
+    key: fl 0
+flcc 1:
+  url: https://flickr.com/search/?q=<query>&l=cc
   title: 'Flickr: full text search for content with a Creative Commons license'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
-flicca 1:
-  url: http://flickr.com/search/?q=<query>&l=deriv
+  include:
+    key: fl 0
+flcca 1:
+  url: https://flickr.com/search/?q=<query>&l=deriv
   title: 'Flickr: full text search for content to adapt, modify and build upon'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
-fliccc 1:
-  url: http://flickr.com/search/?q=<query>&l=comm
+  include:
+    key: fl 0
+flccc 1:
+  url: https://flickr.com/search/?q=<query>&l=comm
   title: 'Flickr: full text search for content to use commercially'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
-fliccca 1:
-  url: http://flickr.com/search/?q=<query>&l=commderiv
+  include:
+    key: fl 0
+flccca 1:
+  url: https://flickr.com/search/?q=<query>&l=commderiv
   title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
+fli 0:
+  deprecated:
+    alternative:
+      query: fla <1>
+    created: '2024-03-21'
+fli 1:
+  deprecated:
+    alternative:
+      query: fl <1>
+    created: '2024-03-21'
+flicc 1:
+  deprecated:
+    alternative:
+      query: flcc <1>
+    created: '2024-03-21'
+flicca 1:
+  deprecated:
+    alternative:
+      query: flcca <1>
+    created: '2024-03-21'
+fliccc 1:
+  deprecated:
+    alternative:
+      query: flccc <1>
+    created: '2024-03-21'
+fliccca 1:
+  deprecated:
+    alternative:
+      query: flccca <1>
+    created: '2024-03-21'
 flickr 1:
-  url: http://flickr.com/search/?q=<query>&ct=5
-  title: 'Flickr: full text search for photos and "other stuff"'
-  tags:
-  - flickr
-  - images
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
+  deprecated:
+    alternative:
+      query: fl <1>
+    created: '2024-03-21'
 flickrshow 1:
-  url: http://flickr.com/search/show/?q=<query>
+  deprecated:
+    alternative:
+      query: fls <1>
+    created: '2024-03-21'
+fls 1:
+  url: https://flickr.com/search/show/?q=<query>
   title: 'Flickr: creates a slideshow of your query'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: berlin
     description: create a slideshow of photos about berlin
+  include:
+    key: fl 0
 flt 1:
-  url: http://flickr.com/photos/tags/<tag>
+  url: https://flickr.com/photos/tags/<tag>
   title: 'Flickr: photos with tag'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: berlin
     description: search for photos tagged "berlin"
+  include:
+    key: fl 0
 flu 1:
-  url: http://www.flickr.com/search/people/?q=<user>
+  url: https://www.flickr.com/search/people/?q=<user>
   title: 'Flickr: search for user'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: john
     description: search for users named "john"
+  include:
+    key: fl 0
 fm 1:
   url: http://freshmeat.net/search/?q=<query>&section=projects
   title: Freshmeat
@@ -4859,18 +4891,30 @@ is 1:
     namespace: lgs
   - key: is 1
     namespace: pka
-isg 1:
-  url: https://www.instagram.com/<name>
+isg 0:
+  url: https://www.instagram.com/
   title: Instagram
   description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
   tags:
   - instagram
-  - photo-sharing
-  - social-networking-service
-  - video-sharing
+  - photo
+  - social-network
+  - video
   examples:
-  - arguments: ellierosapowers
-    description: Show the user ellierosapowers content.
+  - description: Go to homepage
+  tests:
+  - expect: <title>Instagram
+isg 1:
+  url: https://www.instagram.com/<user>
+  include:
+  - key: isg 0
+  title: Instagram user
+  examples:
+  - arguments: linux_foundation
+    description: Show content of user linux_foundation
+  tests:
+  - arguments: linux_foundation
+    expect: '@linux_foundation) • Instagram photos and videos</title>'
 ist 0:
   url: https://www.istockphoto.com
   title: Istockphoto
