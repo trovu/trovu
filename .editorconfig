@@ -1,0 +1,20 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Default settings:
+# - UTF-8 encoding
+# - Unix-style newlines
+# - A newline ending every file
+# - Trim trailing whitespace
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Override settings for all files under the /data/shortcuts directory
+# Note: This path is relative to the directory containing this .editorconfig file
+[data/shortcuts/**]
+format_on_save = false
