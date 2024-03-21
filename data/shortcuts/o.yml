@@ -3069,8 +3069,6 @@ fli 1:
     alternative:
       query: fl <1>
     created: '2024-03-21'
-  include:
-    key: fl 0
 flicc 1:
   url: https://flickr.com/search/?q=<query>&l=cc
   title: 'Flickr: full text search for content with a Creative Commons license'
