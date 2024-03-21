@@ -3037,90 +3037,99 @@ fiverr 1:
   title: Fiverr Gigs
   tags:
   - services
+fl 0:
+  url: https://www.flickr.com/
+  title: Flickr
+  tags:
+  - flickr
+  - images
+  - photo
+  examples:
+  - description: Go to homepage
+fl 1:
+  url: https://flickr.com/search/?q=<query>
+  title: Flickr, full text search
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
+  include:
+    key: fl 0
+fla 0:
+  url: https://www.flickr.com/search/advanced/
+  title: Flickr, advanced search
+  include:
+    key: fl 0
 fli 0:
-  url: http://www.flickr.com/search/advanced/
-  title: 'Flickr: Advanced Search'
+  deprecated:
+    alternative:
+      query: fla <1>
+    created: '2024-03-21'
 fli 1:
-  url: http://flickr.com/search/?q=<query>
-  title: 'Flickr: full text search'
-  tags:
-  - flickr
-  - images
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
+  deprecated:
+    alternative:
+      query: fl <1>
+    created: '2024-03-21'
+  include:
+    key: fl 0
 flicc 1:
-  url: http://flickr.com/search/?q=<query>&l=cc
+  url: https://flickr.com/search/?q=<query>&l=cc
   title: 'Flickr: full text search for content with a Creative Commons license'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
+  include:
+    key: fl 0
 flicca 1:
-  url: http://flickr.com/search/?q=<query>&l=deriv
+  url: https://flickr.com/search/?q=<query>&l=deriv
   title: 'Flickr: full text search for content to adapt, modify and build upon'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
+  include:
+    key: fl 0
 fliccc 1:
-  url: http://flickr.com/search/?q=<query>&l=comm
+  url: https://flickr.com/search/?q=<query>&l=comm
   title: 'Flickr: full text search for content to use commercially'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
+  include:
+    key: fl 0
 fliccca 1:
-  url: http://flickr.com/search/?q=<query>&l=commderiv
+  url: https://flickr.com/search/?q=<query>&l=commderiv
   title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: christmas
     description: search photos about christmas
 flickr 1:
-  url: http://flickr.com/search/?q=<query>&ct=5
-  title: 'Flickr: full text search for photos and "other stuff"'
-  tags:
-  - flickr
-  - images
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
+  deprecated:
+    alternative:
+      query: fl <1>
+    created: '2024-03-21'
 flickrshow 1:
-  url: http://flickr.com/search/show/?q=<query>
+  url: https://flickr.com/search/show/?q=<query>
   title: 'Flickr: creates a slideshow of your query'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: berlin
     description: create a slideshow of photos about berlin
+  include:
+    key: fl 0
 flt 1:
-  url: http://flickr.com/photos/tags/<tag>
+  url: https://flickr.com/photos/tags/<tag>
   title: 'Flickr: photos with tag'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: berlin
     description: search for photos tagged "berlin"
+  include:
+    key: fl 0
 flu 1:
-  url: http://www.flickr.com/search/people/?q=<user>
+  url: https://www.flickr.com/search/people/?q=<user>
   title: 'Flickr: search for user'
-  tags:
-  - flickr
-  - images
   examples:
   - arguments: john
     description: search for users named "john"
+  include:
+    key: fl 0
 fm 1:
   url: http://freshmeat.net/search/?q=<query>&section=projects
   title: Freshmeat
