@@ -2,9 +2,6 @@
 
 _by [Georg Jähnig](https://github.com/georgjaehnig/) & the [Trovu team](https://github.com/orgs/trovu/teams/editors)_
 
-![GitHub License](https://img.shields.io/github/license/trovu/trovu)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/trovu/trovu)
-
 Search 1000+ websites in a command-line way, with
 
 -   [curated](https://trovu.net/docs/editors/) and [personal shortcuts](https://trovu.net/docs/users/advanced/),
