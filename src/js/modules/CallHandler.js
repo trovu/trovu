@@ -11,6 +11,9 @@ export default class CallHandler {
    * The 'main' function of this class.
    */
   static async handleCall() {
+    const targetDomain = document.querySelector('#targetDomain');
+    targetDomain.textContent = '';
+
     Helper.logVersion();
 
     const env = new Env();
@@ -29,6 +32,8 @@ export default class CallHandler {
     } else {
       redirectUrl = this.getRedirectUrlToHome(env, response);
     }
+
+    targetDomain.textContent = response.redirectUrl;
 
     env.logger.info('Redirect to:   ' + redirectUrl);
 
