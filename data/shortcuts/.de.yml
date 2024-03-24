@@ -178,7 +178,7 @@ bhs 0:
   tests:
   - expect: <title>BAUHAUS
 bhs 1:
-  url: https://www.bauhaus.info/suche/produkte?text=<query>
+  url: https://www.bauhaus.info/suche/produkte?text=<Suche>
   include:
     key: bhs 0
   examples:
@@ -217,7 +217,7 @@ bibgvk 0:
   tests:
   - expect: <title>GVK - Gemeinsamer Verbundkatalog
 bibgvk 1:
-  url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<query>
+  url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<Suche>
   include:
     key: bibgvk 0
   examples:
@@ -237,7 +237,7 @@ bibhal 0:
   tests:
   - expect: Stadtbibliothek Halle[\s\S]*</title>
 bibhal 1:
-  url: https://katalog.halle.de/Mediensuche?search=<query>
+  url: https://katalog.halle.de/Mediensuche?search=<Suche>
   include:
     key: bibhal 0
   examples:
@@ -256,7 +256,7 @@ bibhbz 0:
   tests:
   - expect: DigiBib</title>
 bibhbz 1:
-  url: https://nrw.digibib.net/search/hbzvk/list?q-al=<query>
+  url: https://nrw.digibib.net/search/hbzvk/list?q-al=<Suche>
   include:
     key: bibhbz 0
   examples:
@@ -291,7 +291,7 @@ bibkit 0:
   - kit
   - library
 bibkit 1:
-  url: http://services.bibliothek.kit.edu/primo/start.php?query=<query>
+  url: http://services.bibliothek.kit.edu/primo/start.php?query=<Suche>
   title: KIT-Bibliothek
   tags:
   - bibliothek
@@ -302,7 +302,7 @@ bibkit 1:
   - arguments: xml
     description: 'search for all XML books '
 bibkobv 1:
-  url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<query>
+  url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<Suche>
   title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
   tags:
   - library
@@ -316,7 +316,7 @@ bibma 0:
   - library
   - mannheim
 bibmlu 1:
-  url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<query>
+  url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<Suche>
   title: Uni Halle Bibliothek
   tags:
   - halle
@@ -331,7 +331,7 @@ bibmr 0:
   - library
   - marburg
 bibmr 1:
-  url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<query>
+  url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Uni Marburg Bibliothek
   tags:
   - library
@@ -340,7 +340,7 @@ bibmr 1:
   - arguments: goethe
     description: Suche nach Goethe
 bibswb 1:
-  url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<query>
+  url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<Suche>
   title: Südwestdeutscher Bibliotheksverbund
   tags:
   - library
@@ -604,7 +604,7 @@ bvgan 4:
   - arguments: zoo!, frohnau, 21, 27.10.
     description: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr am 27.10.
 charts 1:
-  url: http://www.top10-charts.com/list.php?suche=<query>
+  url: http://www.top10-charts.com/list.php?suche=<Suche>
   title: Top10-Charts
   tags:
   - music
@@ -866,7 +866,7 @@ dpd 1:
   - arguments: '1895023888534'
     description: Verfolgt die Sendung mit der Paketscheinnummer 01895023888534
 duden 1:
-  url: http://www.duden.de/suchen/dudenonline/<query>
+  url: http://www.duden.de/suchen/dudenonline/<Suche>
   title: Duden
 e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
@@ -876,7 +876,7 @@ e 0:
   - is-affiliate
   - shopping
 e 1:
-  url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
+  url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<Suche>&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
   tags:
   - ebay
@@ -892,7 +892,7 @@ ebay 0:
   - is-affiliate
   - old
 ebay 1:
-  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq=<query>&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
+  url: http://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq=<Suche>&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229487&kwid=902099&mtid=824&kw=lg
   title: Ebay.de
   tags:
   - is-affiliate
@@ -928,7 +928,7 @@ ekn 0:
       query: kazn
     created: '2023-10-13'
 farnell 1:
-  url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt=<query>
+  url: http://de.farnell.com/jsp/search/browse.jsp?N=0&Ntk=gensearch&Ntt=<Suche>
   title: Farnell Deutschland
   tags:
   - shopping
@@ -936,7 +936,7 @@ farnell 1:
   - arguments: switch
     description: Farnell Deutschland search for switch
 faz 1:
-  url: http://www.faz.net/suche/?query=<query>&suchbegriffImage.x=0&suchbegriffImage.y=0&resultsPerPage=20
+  url: http://www.faz.net/suche/?query=<Suche>&suchbegriffImage.x=0&suchbegriffImage.y=0&resultsPerPage=20
   title: Frankfurter Allgemeine Zeitung Nachrichten-Suche
 fbw 1:
   url: https://www.fahrerbewertung.de/<Kennzeichen>
@@ -955,7 +955,7 @@ g 0:
   - google
   - web-search
 g 1:
-  url: https://www.google.de/search?hl=<$language>&q=<query>&ie=utf-8
+  url: https://www.google.de/search?hl=<$language>&q=<Suche>&ie=utf-8
   title: Google.de
   tags:
   - google
@@ -4484,7 +4484,7 @@ gmüb 1:
       query: gm üb,<1>
     created: '2023-01-07'
 gps 1:
-  url: http://www.google.de/products?hl=<$language>&q=<query>
+  url: http://www.google.de/products?hl=<$language>&q=<Suche>
   title: Google Products (Deutschland)
   tags:
   - google
@@ -4508,7 +4508,7 @@ gsh 0:
   - google
   - shopping
 gsh 1:
-  url: http://www.google.de/search?tbm=shop&hl=<$language>&q=<query>
+  url: http://www.google.de/search?tbm=shop&hl=<$language>&q=<Suche>
   title: Google Shopping
   tags:
   - google
@@ -4525,7 +4525,7 @@ gtiger 1:
   - arguments: smartphone
     description: Search for "smartphone"
 gtrends 1:
-  url: https://trends.google.com/trends/explore?q=<query>&geo=DE
+  url: https://trends.google.com/trends/explore?q=<Suche>&geo=DE
   title: Google Trends Deutschland
   tags:
   - google
@@ -4645,7 +4645,7 @@ ikea 0:
   - ikea
   - shopping
 ikea 1:
-  url: https://www.ikea.com/de/de/search/products/?q=<query>
+  url: https://www.ikea.com/de/de/search/products/?q=<Suche>
   title: IKEA Deutschland
   tags:
   - furniture
@@ -4675,7 +4675,7 @@ jf 1:
   - arguments: He pulse tube cooler operating down to 1.3 K
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
 jw 1:
-  url: https://www.justwatch.com/de/Suche?q=<query>
+  url: https://www.justwatch.com/de/Suche?q=<Suche>
   title: JustWatch
   description: Searching a movie or tv series at JustWatch.com by given name
   tags:
@@ -4702,7 +4702,7 @@ kaz 0:
   - selling
   - shopping
 kaz 1:
-  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<query>
+  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>
   title: Kleinanzeigen.de
   tags:
   - ebay
@@ -4711,7 +4711,7 @@ kaz 1:
   - arguments: kühlschrank
     description: Suche nach "kühlschrank"
 kaz 2:
-  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<query>&locationStr=<PLZ/Ort>
+  url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>&locationStr=<PLZ/Ort>
   title: Kleinanzeigen.de
   tags:
   - ebay
@@ -4759,7 +4759,7 @@ kino 1:
   - arguments: berlin
     description: Kinoprogramm in Berlin
 kit 1:
-  url: http://www.google.com/search?q=site%3Akit.edu+<query>
+  url: http://www.google.com/search?q=site%3Akit.edu+<Suche>
   title: Karlsruher Institut für Technologie (KIT), Suche via Google
   tags:
   - karlsruhe
@@ -4775,7 +4775,7 @@ koka 0:
   - events
   - konzerte
 koka 1:
-  url: 'http://www.koka36.de/suche.php?search=<query: {encoding: iso-8859-1}>'
+  url: 'http://www.koka36.de/suche.php?search=<Suche: {encoding: iso-8859-1}>'
   title: Koka36.de Konzertkasse
   tags:
   - concerts
@@ -4785,7 +4785,7 @@ koka 1:
   - arguments: berlin
     description: Suche nach Konzerten und Events in Berlin
 kununu 1:
-  url: https://www.kununu.com/de/search?q=<query>
+  url: https://www.kununu.com/de/search?q=<Suche>
   title: Kununu Deutschland
   description: Suche nach Arbeitgeber-Bewertungen
   tags:
@@ -4938,7 +4938,7 @@ pollin 0:
   - electronic
   - shopping
 pollin 1:
-  url: http://www.pollin.de/shop/suchergebnis.html?S_TEXT=<query>
+  url: http://www.pollin.de/shop/suchergebnis.html?S_TEXT=<Suche>
   title: Pollin Electronic
   tags:
   - electronic
@@ -5383,7 +5383,7 @@ wse 0:
   - series
   - tv
 wse 1:
-  url: https://www.werstreamt.es/filme-serien/?q=m<query>&action_results=suchen
+  url: https://www.werstreamt.es/filme-serien/?q=m<Suche>&action_results=suchen
   title: Wer streamt es?
   tags:
   - movies

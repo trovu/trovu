@@ -11,7 +11,7 @@ abk 1:
   - arguments: cia
     description: Suche nach der Abkürzung "cia"
 anagramm 1:
-  url: http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text=<query>&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
+  url: http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text=<Suche>&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
   title: Anagramm-Suche
   tags:
   - german
@@ -83,10 +83,10 @@ bbs 1:
   - arguments: Mekong Delta
     description: Suche nach Mekong Delta
 bc 1:
-  url: https://www.bestcheck.de/search?q=<query>
+  url: https://www.bestcheck.de/search?q=<Suche>
   title: BestCheck
 bk 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch=<query>
+  url: http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch=<Suche>
   title: Buchkatalog
   tags:
   - books
@@ -95,7 +95,7 @@ bk 1:
   - arguments: goethe
     description: Suche nach Goethe
 bl 1:
-  url: https://www.google.de/search?q=<query>+site:www.chip.de%2Fbestenlisten
+  url: https://www.google.de/search?q=<Suche>+site:www.chip.de%2Fbestenlisten
   title: CHIP Bestenliste
 bla 1:
   url: http://www.buffed.de/?f=<suchwort>
@@ -146,7 +146,7 @@ cb 0:
   - computer-science
   - linux
 cb 1:
-  url: http://www.computerbase.de/suche/?q=<query>&bereich=
+  url: http://www.computerbase.de/suche/?q=<Suche>&bereich=
   title: Computerbase
   tags:
   - computer-science
@@ -155,7 +155,7 @@ cb 1:
   - arguments: linux
     description: Suche nach Artikel über "linux"
 ch 1:
-  url: https://www.google.de/search?q=<query>+site:www.chip.de
+  url: https://www.google.de/search?q=<Suche>+site:www.chip.de
   title: CHIP
 chill 0:
   url: http://www.chilloutzone.de/
@@ -163,7 +163,7 @@ chill 0:
   tags:
   - video
 chill 1:
-  url: http://www.google.de/custom?domains=chilloutzone.de&q=<query>&sitesearch=chilloutzone.de&sa=Google-Suche&client=pub-9587746511239945&forid=1&channel=0789999516&ie=ISO-8859-1&oe=ISO-8859-1&flav=0000&sig=2LvIwQoR9ke2veDK&cof=GALT%3A%23FF4500%3BGL%3A1%3BDIV%3A%23CCCCCC%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3Affffff%3BLBGC%3A666666%3BALC%3AFF4500%3BLC%3AFF4500%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A50%3BLW%3A245%3BL%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2Fblog%2Fimages%2Fbloghead.gif%3BS%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2F%3BFORID%3A1&hl=de
+  url: http://www.google.de/custom?domains=chilloutzone.de&q=<Suche>&sitesearch=chilloutzone.de&sa=Google-Suche&client=pub-9587746511239945&forid=1&channel=0789999516&ie=ISO-8859-1&oe=ISO-8859-1&flav=0000&sig=2LvIwQoR9ke2veDK&cof=GALT%3A%23FF4500%3BGL%3A1%3BDIV%3A%23CCCCCC%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3Affffff%3BLBGC%3A666666%3BALC%3AFF4500%3BLC%3AFF4500%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A50%3BLW%3A245%3BL%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2Fblog%2Fimages%2Fbloghead.gif%3BS%3Ahttp%3A%2F%2Fwww.chilloutzone.de%2F%3BFORID%3A1&hl=de
   title: Chilloutzone
   tags:
   - video
@@ -171,7 +171,7 @@ chill 1:
   - arguments: parkour
     description: Search Chilloutzone for "parkour"
 chip 1:
-  url: http://search.chip.de/?q=<query>&sort_by_date=desc
+  url: http://search.chip.de/?q=<Suche>&sort_by_date=desc
   title: CHIP Online
   tags:
   - chip
@@ -180,7 +180,7 @@ chip 1:
   - arguments: linux
     description: Search CHIP Online for "linux"
 chipd 1:
-  url: http://search.chip.de/?q=<query>&f=softwarereview
+  url: http://search.chip.de/?q=<Suche>&f=softwarereview
   title: CHIP Online Downloads
   tags:
   - chip
@@ -238,7 +238,7 @@ csd 1:
       query: dcc.cs <1>
     created: '2023-04-10'
 css 1:
-  url: http://www.google.de/search?q=site%3Acss4you.de+<query>
+  url: http://www.google.de/search?q=site%3Acss4you.de+<Suche>
   title: Css4you
   tags:
   - css
@@ -258,7 +258,7 @@ dclj 0:
   - javascript
   - programming
 dclj 1:
-  url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/<query>
+  url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/<Suche>
   title: De.comp.lang.javascript
   tags:
   - javascript
@@ -273,7 +273,7 @@ dclp 0:
   - php
   - programming
 dclp 1:
-  url: https://groups.google.com/forum/#!searchin/de.comp.lang.php/<query>
+  url: https://groups.google.com/forum/#!searchin/de.comp.lang.php/<Suche>
   title: De.comp.lang.php
   tags:
   - php
@@ -567,7 +567,7 @@ hn 0:
   tags:
   - heise
 hn 1:
-  url: http://www.heise.de/suche/?rm=search;q=<query>;channel=newsticker
+  url: http://www.heise.de/suche/?rm=search;q=<Suche>;channel=newsticker
   title: Heise Newsticker
   tags:
   - heise
@@ -575,7 +575,7 @@ hn 1:
   - arguments: apple
     description: Search for "apple"
 hoax 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms=<query>
+  url: http://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms=<Suche>
   title: Hoax-Info (TU-Berlin)
   tags:
   - hoax
@@ -648,7 +648,7 @@ hwho 1:
   - arguments: '1'
     description: Search for "1"
 ifun 1:
-  url: http://www.ifun.de/suche/<query>
+  url: http://www.ifun.de/suche/<Suche>
   title: ifun.de
   tags:
   - apple
@@ -691,7 +691,7 @@ kicker 0:
   - news
   - sport
 kicker 1:
-  url: https://www.google.de/search?q=<query>+site:www.kicker.de
+  url: https://www.google.de/search?q=<Suche>+site:www.kicker.de
   title: Kicker.de
   tags:
   - news
@@ -742,14 +742,14 @@ lobby 1:
   - arguments: berlin
     description: Search LobbyControl for "berlin"
 m 1:
-  url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe=<query>
+  url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe=<Suche>
   title: Metager
   tags:
   - search
   - search-engine
   - web-search
 mactv 1:
-  url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<query>
+  url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<Suche>
   title: Mac-TV Archiv
   tags:
   - apple
@@ -762,7 +762,7 @@ morgenpost 1:
   - arguments: berlin
     description: Search Berliner Morgenpost Archiv for "berlin"
 mp 1:
-  url: http://www.moviepilot.de/suche?q=<query>
+  url: http://www.moviepilot.de/suche?q=<Suche>
   title: Moviepilot
   tags:
   - film
@@ -799,7 +799,7 @@ ntv 0:
   tags:
   - news
 ntv 1:
-  url: http://www.n-tv.de/suche/?q=<query>&searchabout=ntv&a=search&at=all&qwg=&qw=&qa=&sdd=&sdm=&sdy=&edd=&edm=&edy=
+  url: http://www.n-tv.de/suche/?q=<Suche>&searchabout=ntv&a=search&at=all&qwg=&qw=&qa=&sdd=&sdm=&sdy=&edd=&edm=&edy=
   title: n-tv.de
   tags:
   - news
@@ -904,7 +904,7 @@ ptp 1:
       query: pns.pt <1>
     created: '2023-04-10'
 qa 1:
-  url: https://lite.qwant.com/?q=<query>
+  url: https://lite.qwant.com/?q=<Suche>
   title: QWANT
 rblcheck 1:
   url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress=<ipaddress>
@@ -1130,7 +1130,7 @@ sz 0:
   - news
   - zeitung
 sz 1:
-  url: http://www.sueddeutsche.de/news?search=<query>
+  url: http://www.sueddeutsche.de/news?search=<Suche>
   title: Süddeutsche Zeitung
   tags:
   - news
@@ -1177,7 +1177,7 @@ ts 0:
   - news
   - tagesschau
 ts 1:
-  url: http://www.tagesschau.de/suche2.html?searchText=<query>
+  url: http://www.tagesschau.de/suche2.html?searchText=<Suche>
   title: Tagesschau
   tags:
   - news
@@ -1257,7 +1257,7 @@ wetter 1:
   tags:
   - old
 wn 1:
-  url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort=<query>
+  url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort=<Suche>
   title: Wörterbuchnetz
   tags:
   - deutsch
