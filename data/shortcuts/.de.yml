@@ -4829,6 +4829,13 @@ mm 1:
     description: Suche nach Fernsehern
   include:
     key: mm 0
+mmops 1:
+  url: https://www.medimops.de/produkte-C0/?fcIsSearch=1&searchparam=<Suche>
+  tags:
+  - shopping
+  examples:
+  - arguments: Turbo Pascal
+    description: Suchen nach "Turbo Pascal"
 mvv 2:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   title: Elektronische Fahrplanauskunft München
