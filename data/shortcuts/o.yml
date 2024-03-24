@@ -9536,6 +9536,17 @@ xb 0:
   - social-network
   - twitter
   - x
+xg 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=twitter.com&q=<query>
+  title: X (Twitter) via Google
+  tags:
+  - google
+  - social-network
+  - twitter
+  - x
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 xing 0:
   url: https://www.xing.com/
   title: Xing
