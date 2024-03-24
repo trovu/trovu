@@ -21,6 +21,16 @@ It's like [DuckDuckGo bangs](https://duckduckgo.com/bangs), but on steroids. And
 
 Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](https://trovu.net/docs/legacy/differences/).
 
+## Links
+
+to Trovu profiles around the web:
+
+-   [Facebook](https://facebook.com/trovu.net)
+-   [GitHub](https://github.com/trovu)
+-   [TikTok](https://www.tiktok.com/@trovu.net)
+-   [X (Twitter)](https://twitter.com/trovu_net)
+-   [Youtube](https://www.youtube.com/channel/UCyq5j5XLgkoJ7X7fKiAjOng)
+
 ## Read more
 
 Follow the outline of the [Table of Contents](https://trovu.net/docs/). Feel free to ask for [support](https://trovu.net/docs/users/support/).
