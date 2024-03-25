@@ -64,6 +64,9 @@ export default class DataReporter {
       }
     }
     for (const namespace in this.env.data.shortcuts) {
+      if (this.options.namespace && this.options.namespace !== namespace) {
+        continue;
+      }
       DataReporter.calculatePercentage(
         reportShortcutsByNamespace,
         namespace,
