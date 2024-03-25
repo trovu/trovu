@@ -22,6 +22,16 @@ export default class DataReporter {
         DataReporter.increment(report, 'shortcuts');
         const shortcut = this.env.data.shortcuts[namespace][key];
         const args = UrlProcessor.getArgumentsFromString(shortcut.url);
+        if (shortcut.tests) {
+          if (Array.isArray(shortcut.tests)) {
+            DataReporter.increment(report, 'with tests');
+          } else {
+            DataReporter.increment(report, 'with no-test-excuse');
+          }
+        }
+        if (shortcut.examples) {
+          DataReporter.increment(report, 'with examples');
+        }
         if (shortcut.deprecated) {
           DataReporter.increment(report, 'deprecated');
         } else if (shortcut.removed) {
@@ -32,16 +42,6 @@ export default class DataReporter {
             report,
             `with ${Object.keys(args).length} args`,
           );
-        }
-        if (shortcut.tests) {
-          if (Array.isArray(shortcut.tests)) {
-            DataReporter.increment(report, 'with tests');
-          } else {
-            DataReporter.increment(report, 'with no-test-excuse');
-          }
-        }
-        if (shortcut.examples) {
-          DataReporter.increment(report, 'with examples');
         }
       }
     }
