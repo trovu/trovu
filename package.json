@@ -5,6 +5,7 @@
   "main": "",
   "scripts": {
     "lint-js": "npx eslint src/",
+    "lint-js-fix": "npx eslint src/ --fix",
     "lint-yaml": "npx yaml-lint 'data/**/*.yml'",
     "prettier-list": "npx prettier -l 'src/**/*.js'",
     "prettier-fix": "npx prettier -w 'src/**/*.js'",
