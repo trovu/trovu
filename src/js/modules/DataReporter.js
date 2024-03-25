@@ -110,7 +110,7 @@ export default class DataReporter {
       if (reportShortcutsByKeywordLength[i]) {
         DataReporter.calculatePercentage(
           reportShortcutsByKeywordLength,
-          i.toString(),
+          i,
           reportShortcutsByKeywordLength.active.count,
         );
       }
