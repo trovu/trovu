@@ -40,6 +40,12 @@ export default class DataReporter {
         if (shortcut.examples) {
           DataReporter.increment(reportShortcutsByProperties, 'with examples');
         }
+        if (shortcut.tags) {
+          DataReporter.increment(reportShortcutsByProperties, 'with tags');
+        }
+        if (shortcut.include) {
+          DataReporter.increment(reportShortcutsByProperties, 'with includes');
+        }
         if (shortcut.deprecated) {
           DataReporter.increment(reportShortcutsByState, 'deprecated');
         } else if (shortcut.removed) {
@@ -69,15 +75,21 @@ export default class DataReporter {
       'active',
       reportShortcutsByArgCount.active.count,
     );
-    ['active', 'with tests', 'with test-excuse', 'with examples'].forEach(
-      (key) => {
-        DataReporter.calculatePercentage(
-          reportShortcutsByProperties,
-          key,
-          reportShortcutsByProperties.active.count,
-        );
-      },
-    );
+    [
+      'active',
+      'with tests',
+      'with test-excuse',
+      'with examples',
+      'with tags',
+      'with includes',
+    ].forEach((key) => {
+      return;
+      DataReporter.calculatePercentage(
+        reportShortcutsByProperties,
+        key,
+        reportShortcutsByProperties.active.count,
+      );
+    });
     ['all', 'active', 'deprecated', 'removed'].forEach((key) => {
       DataReporter.calculatePercentage(
         reportShortcutsByState,
