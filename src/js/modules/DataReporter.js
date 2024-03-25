@@ -20,9 +20,6 @@ export default class DataReporter {
       if (this.options.namespace && this.options.namespace !== namespace) {
         continue;
       }
-      // reportShortcutsByNamespace[namespace] = {
-      //   count: Object.keys(this.env.data.shortcuts[namespace]).length,
-      // };
       for (const key in this.env.data.shortcuts[namespace]) {
         DataReporter.increment(reportShortcutsByState, 'all');
         const shortcut = this.env.data.shortcuts[namespace][key];
