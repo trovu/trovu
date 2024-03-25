@@ -14,25 +14,45 @@ export default class DataReporter {
   reportData() {
     const report = {};
     for (const namespace in this.env.data.shortcuts) {
+      if (this.options.namespace && this.options.namespace !== namespace) {
+        continue;
+      }
       DataReporter.increment(report, 'namespaces');
       for (const key in this.env.data.shortcuts[namespace]) {
         DataReporter.increment(report, 'shortcuts');
         const shortcut = this.env.data.shortcuts[namespace][key];
+        const args = UrlProcessor.getArgumentsFromString(shortcut.url);
         if (shortcut.deprecated) {
           DataReporter.increment(report, 'deprecated');
         } else if (shortcut.removed) {
           DataReporter.increment(report, 'removed');
         } else {
           DataReporter.increment(report, 'active');
+          DataReporter.increment(
+            report,
+            `with ${Object.keys(args).length} args`,
+          );
         }
-        if (shortcut.tests && Array.isArray(shortcut.tests)) {
-          DataReporter.increment(report, 'with tests');
+        if (shortcut.tests) {
+          if (Array.isArray(shortcut.tests)) {
+            DataReporter.increment(report, 'with tests');
+          } else {
+            DataReporter.increment(report, 'with no-test-excuse');
+          }
         }
         if (shortcut.examples) {
           DataReporter.increment(report, 'with examples');
         }
-        const args = UrlProcessor.getArgumentsFromString(shortcut.url);
-        DataReporter.increment(report, `with ${Object.keys(args).length} args`);
+      }
+    }
+    DataReporter.calculatePercentage(report, 'with tests', report.active.count);
+    for (let i = 0; i < 7; i++) {
+      if (report[`with ${i} args`]) {
+        DataReporter.calculatePercentage(
+          report,
+          `with ${i} args`,
+          report.active.count,
+        );
       }
     }
     DataReporter.calculatePercentage(report, 'with tests', report.active.count);
