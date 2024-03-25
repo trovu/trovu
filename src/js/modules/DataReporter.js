@@ -12,56 +12,83 @@ export default class DataReporter {
   }
 
   reportData() {
-    const report = {};
+    const reportNamespaces = {};
+    const reportShortcutsbyArgCount = {};
+    const reportShortcutsbyProperties = {};
+    const reportShortcutsbyState = {};
     for (const namespace in this.env.data.shortcuts) {
       if (this.options.namespace && this.options.namespace !== namespace) {
         continue;
       }
-      DataReporter.increment(report, 'namespaces');
+      DataReporter.increment(reportNamespaces, 'namespaces');
       for (const key in this.env.data.shortcuts[namespace]) {
-        DataReporter.increment(report, 'shortcuts');
+        DataReporter.increment(reportShortcutsbyState, 'all');
         const shortcut = this.env.data.shortcuts[namespace][key];
         const args = UrlProcessor.getArgumentsFromString(shortcut.url);
         if (shortcut.tests) {
           if (Array.isArray(shortcut.tests)) {
-            DataReporter.increment(report, 'with tests');
+            DataReporter.increment(reportShortcutsbyProperties, 'with tests');
           } else {
-            DataReporter.increment(report, 'with test-excuse');
+            DataReporter.increment(
+              reportShortcutsbyProperties,
+              'with test-excuse',
+            );
           }
         }
         if (shortcut.examples) {
-          DataReporter.increment(report, 'with examples');
+          DataReporter.increment(reportShortcutsbyProperties, 'with examples');
         }
         if (shortcut.deprecated) {
-          DataReporter.increment(report, 'deprecated');
+          DataReporter.increment(reportShortcutsbyState, 'deprecated');
         } else if (shortcut.removed) {
-          DataReporter.increment(report, 'removed');
+          DataReporter.increment(reportShortcutsbyState, 'removed');
         } else {
-          DataReporter.increment(report, 'active');
+          DataReporter.increment(reportShortcutsbyArgCount, 'active');
+          DataReporter.increment(reportShortcutsbyProperties, 'active');
+          DataReporter.increment(reportShortcutsbyState, 'active');
           DataReporter.increment(
-            report,
+            reportShortcutsbyArgCount,
             `with ${Object.keys(args).length} args`,
           );
         }
       }
     }
-    DataReporter.calculatePercentage(report, 'with tests', report.active.count);
-    for (let i = 0; i < 7; i++) {
-      if (report[`with ${i} args`]) {
+    DataReporter.calculatePercentage(
+      reportShortcutsbyArgCount,
+      'active',
+      reportShortcutsbyArgCount.active.count,
+    );
+    ['active', 'with tests', 'with test-excuse', 'with examples'].forEach(
+      (key) => {
         DataReporter.calculatePercentage(
-          report,
+          reportShortcutsbyProperties,
+          key,
+          reportShortcutsbyProperties.active.count,
+        );
+      },
+    );
+    ['all', 'active', 'deprecated', 'removed'].forEach((key) => {
+      DataReporter.calculatePercentage(
+        reportShortcutsbyState,
+        key,
+        reportShortcutsbyState.all.count,
+      );
+    });
+    for (let i = 0; i < 7; i++) {
+      if (reportShortcutsbyArgCount[`with ${i} args`]) {
+        DataReporter.calculatePercentage(
+          reportShortcutsbyArgCount,
           `with ${i} args`,
-          report.active.count,
+          reportShortcutsbyProperties.active.count,
         );
       }
     }
-    DataReporter.calculatePercentage(report, 'with tests', report.active.count);
-    DataReporter.calculatePercentage(
-      report,
-      'with examples',
-      report.active.count,
-    );
-    console.table(report);
+    console.log('Shortcuts by state:');
+    console.table(reportShortcutsbyState);
+    console.log('Shortcuts by arg count:');
+    console.table(reportShortcutsbyArgCount);
+    console.log('Shortcuts by properties:');
+    console.table(reportShortcutsbyProperties);
   }
   static increment(report, key) {
     if (!report[key]) {
