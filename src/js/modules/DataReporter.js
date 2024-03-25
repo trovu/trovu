@@ -10,6 +10,7 @@ export default class DataReporter {
 
   reportData() {
     const reportShortcutsByNamespace = {};
+    const reportShortcutsByKeywordLength = {};
     const reportShortcutsByArgCount = {};
     const reportShortcutsByProperties = {};
     const reportShortcutsByState = {};
@@ -46,6 +47,7 @@ export default class DataReporter {
           DataReporter.increment(reportShortcutsByState, 'removed');
         } else {
           DataReporter.increment(reportShortcutsByArgCount, 'active');
+          DataReporter.increment(reportShortcutsByKeywordLength, 'active');
           DataReporter.increment(reportShortcutsByNamespace, 'active');
           DataReporter.increment(reportShortcutsByNamespace, namespace);
           DataReporter.increment(reportShortcutsByProperties, 'active');
@@ -53,6 +55,10 @@ export default class DataReporter {
           DataReporter.increment(
             reportShortcutsByArgCount,
             `with ${argCount} args`,
+          );
+          DataReporter.increment(
+            reportShortcutsByKeywordLength,
+            keyword.length,
           );
         }
       }
@@ -93,12 +99,19 @@ export default class DataReporter {
         reportShortcutsByState.all.count,
       );
     });
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 30; i++) {
       if (reportShortcutsByArgCount[`with ${i} args`]) {
         DataReporter.calculatePercentage(
           reportShortcutsByArgCount,
           `with ${i} args`,
           reportShortcutsByProperties.active.count,
+        );
+      }
+      if (reportShortcutsByKeywordLength[i]) {
+        DataReporter.calculatePercentage(
+          reportShortcutsByKeywordLength,
+          i.toString(),
+          reportShortcutsByKeywordLength.active.count,
         );
       }
     }
@@ -108,6 +121,8 @@ export default class DataReporter {
     console.table(reportShortcutsByState);
     console.log('Shortcuts by arg count:');
     console.table(reportShortcutsByArgCount);
+    console.log('Shortcuts by keyword length:');
+    console.table(reportShortcutsByKeywordLength);
     console.log('Shortcuts by properties:');
     console.table(reportShortcutsByProperties);
   }
