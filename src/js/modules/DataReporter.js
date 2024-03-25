@@ -12,83 +12,96 @@ export default class DataReporter {
   }
 
   reportData() {
-    const reportNamespaces = {};
-    const reportShortcutsbyArgCount = {};
-    const reportShortcutsbyProperties = {};
-    const reportShortcutsbyState = {};
+    const reportShortcutsByNamespace = {};
+    const reportShortcutsByArgCount = {};
+    const reportShortcutsByProperties = {};
+    const reportShortcutsByState = {};
     for (const namespace in this.env.data.shortcuts) {
       if (this.options.namespace && this.options.namespace !== namespace) {
         continue;
       }
-      DataReporter.increment(reportNamespaces, 'namespaces');
+      // reportShortcutsByNamespace[namespace] = {
+      //   count: Object.keys(this.env.data.shortcuts[namespace]).length,
+      // };
       for (const key in this.env.data.shortcuts[namespace]) {
-        DataReporter.increment(reportShortcutsbyState, 'all');
+        DataReporter.increment(reportShortcutsByState, 'all');
         const shortcut = this.env.data.shortcuts[namespace][key];
         const args = UrlProcessor.getArgumentsFromString(shortcut.url);
         if (shortcut.tests) {
           if (Array.isArray(shortcut.tests)) {
-            DataReporter.increment(reportShortcutsbyProperties, 'with tests');
+            DataReporter.increment(reportShortcutsByProperties, 'with tests');
           } else {
             DataReporter.increment(
-              reportShortcutsbyProperties,
+              reportShortcutsByProperties,
               'with test-excuse',
             );
           }
         }
         if (shortcut.examples) {
-          DataReporter.increment(reportShortcutsbyProperties, 'with examples');
+          DataReporter.increment(reportShortcutsByProperties, 'with examples');
         }
         if (shortcut.deprecated) {
-          DataReporter.increment(reportShortcutsbyState, 'deprecated');
+          DataReporter.increment(reportShortcutsByState, 'deprecated');
         } else if (shortcut.removed) {
-          DataReporter.increment(reportShortcutsbyState, 'removed');
+          DataReporter.increment(reportShortcutsByState, 'removed');
         } else {
-          DataReporter.increment(reportShortcutsbyArgCount, 'active');
-          DataReporter.increment(reportShortcutsbyProperties, 'active');
-          DataReporter.increment(reportShortcutsbyState, 'active');
+          DataReporter.increment(reportShortcutsByArgCount, 'active');
+          DataReporter.increment(reportShortcutsByNamespace, 'active');
+          DataReporter.increment(reportShortcutsByNamespace, namespace);
+          DataReporter.increment(reportShortcutsByProperties, 'active');
+          DataReporter.increment(reportShortcutsByState, 'active');
           DataReporter.increment(
-            reportShortcutsbyArgCount,
+            reportShortcutsByArgCount,
             `with ${Object.keys(args).length} args`,
           );
         }
       }
     }
+    for (const namespace in this.env.data.shortcuts) {
+      DataReporter.calculatePercentage(
+        reportShortcutsByNamespace,
+        namespace,
+        reportShortcutsByNamespace.active.count,
+      );
+    }
     DataReporter.calculatePercentage(
-      reportShortcutsbyArgCount,
+      reportShortcutsByArgCount,
       'active',
-      reportShortcutsbyArgCount.active.count,
+      reportShortcutsByArgCount.active.count,
     );
     ['active', 'with tests', 'with test-excuse', 'with examples'].forEach(
       (key) => {
         DataReporter.calculatePercentage(
-          reportShortcutsbyProperties,
+          reportShortcutsByProperties,
           key,
-          reportShortcutsbyProperties.active.count,
+          reportShortcutsByProperties.active.count,
         );
       },
     );
     ['all', 'active', 'deprecated', 'removed'].forEach((key) => {
       DataReporter.calculatePercentage(
-        reportShortcutsbyState,
+        reportShortcutsByState,
         key,
-        reportShortcutsbyState.all.count,
+        reportShortcutsByState.all.count,
       );
     });
     for (let i = 0; i < 7; i++) {
-      if (reportShortcutsbyArgCount[`with ${i} args`]) {
+      if (reportShortcutsByArgCount[`with ${i} args`]) {
         DataReporter.calculatePercentage(
-          reportShortcutsbyArgCount,
+          reportShortcutsByArgCount,
           `with ${i} args`,
-          reportShortcutsbyProperties.active.count,
+          reportShortcutsByProperties.active.count,
         );
       }
     }
+    console.log('Shortcuts by namespaces:');
+    console.table(reportShortcutsByNamespace);
     console.log('Shortcuts by state:');
-    console.table(reportShortcutsbyState);
+    console.table(reportShortcutsByState);
     console.log('Shortcuts by arg count:');
-    console.table(reportShortcutsbyArgCount);
+    console.table(reportShortcutsByArgCount);
     console.log('Shortcuts by properties:');
-    console.table(reportShortcutsbyProperties);
+    console.table(reportShortcutsByProperties);
   }
   static increment(report, key) {
     if (!report[key]) {
