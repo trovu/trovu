@@ -1,5 +1,4 @@
 import DataManager from './/DataManager';
-import UrlProcessor from './UrlProcessor';
 
 export default class DataReporter {
   constructor(options) {
@@ -21,7 +20,7 @@ export default class DataReporter {
       for (const key in this.env.data.shortcuts[namespace]) {
         DataReporter.increment(reportShortcutsByState, 'all');
         const shortcut = this.env.data.shortcuts[namespace][key];
-        const args = UrlProcessor.getArgumentsFromString(shortcut.url);
+        const [keyword, argCount] = key.split(' ');
         if (shortcut.tests) {
           if (Array.isArray(shortcut.tests)) {
             DataReporter.increment(reportShortcutsByProperties, 'with tests');
@@ -53,7 +52,7 @@ export default class DataReporter {
           DataReporter.increment(reportShortcutsByState, 'active');
           DataReporter.increment(
             reportShortcutsByArgCount,
-            `with ${Object.keys(args).length} args`,
+            `with ${argCount} args`,
           );
         }
       }
