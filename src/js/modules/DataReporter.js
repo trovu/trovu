@@ -26,7 +26,7 @@ export default class DataReporter {
           if (Array.isArray(shortcut.tests)) {
             DataReporter.increment(report, 'with tests');
           } else {
-            DataReporter.increment(report, 'with no-test-excuse');
+            DataReporter.increment(report, 'with test-excuse');
           }
         }
         if (shortcut.examples) {
