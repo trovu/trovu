@@ -28,10 +28,10 @@ export default class DataReporter {
           DataReporter.increment(report, 'removed');
         } else {
           DataReporter.increment(report, 'active');
-          DataReporter.increment(
-            report,
-            `with ${Object.keys(args).length} args`,
-          );
+          // DataReporter.increment(
+          //   report,
+          //   `with ${Object.keys(args).length} args`,
+          // );
         }
         if (shortcut.tests) {
           if (Array.isArray(shortcut.tests)) {
@@ -47,6 +47,7 @@ export default class DataReporter {
     }
     DataReporter.calculatePercentage(report, 'with tests', report.active.count);
     for (let i = 0; i < 7; i++) {
+      continue;
       if (report[`with ${i} args`]) {
         DataReporter.calculatePercentage(
           report,
