@@ -6,8 +6,6 @@ export default class DataReporter {
     this.options = options;
     this.env = {
       data: DataManager.load(),
-      language: 'en',
-      country: 'us',
     };
   }
 
