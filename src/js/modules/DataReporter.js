@@ -1,4 +1,5 @@
 import DataManager from './/DataManager';
+import UrlProcessor from './UrlProcessor';
 
 export default class DataReporter {
   constructor(options) {
@@ -30,6 +31,8 @@ export default class DataReporter {
         if (shortcut.examples) {
           DataReporter.increment(report, 'with examples');
         }
+        const args = UrlProcessor.getArgumentsFromString(shortcut.url);
+        DataReporter.increment(report, `with ${Object.keys(args).length} args`);
       }
     }
     DataReporter.calculatePercentage(report, 'with tests', report.active.count);
