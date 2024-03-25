@@ -174,7 +174,8 @@ export default class Home {
           'No matching shortcut found. Did you use a <a href="https://trovu.net/docs/">keyword</a>? Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>. ';
         break;
       case 'not_reachable':
-        alertMsg.innerHTML = `This shortcut is not reachable. Add <span class="namespace">${params.namespace}</span> to your <a target="_blank" href="https://trovu.net/docs/shortcuts/namespaces/">namespaces</a>.`;
+        alertMsg.innerHTML = `This shortcut is not reachable. Add <span class="namespace"></span> to your <a target="_blank" href="https://trovu.net/docs/shortcuts/namespaces/">namespaces</a>.`;
+        alertMsg.querySelector('.namespace').textContent = params.namespace;
         break;
       case 'reloaded':
         alertMsg.textContent = 'Shortcuts were reloaded in all namespaces.';
@@ -184,16 +185,19 @@ export default class Home {
         }
         break;
       case 'deprecated':
-        alertMsg.innerHTML = `Your shortcut <strong><em>${params.query}</em></strong> is deprecated. Please use:`;
+        alertMsg.innerHTML = `Your shortcut <strong><em class="query"></em></strong> is deprecated. Please use:`;
+        alertMsg.querySelector('.query').textContent = params.query;
         break;
       case 'removed':
-        alertMsg.innerHTML = `The shortcut <a target="_blank" href="https://github.com/search?l=&q=${encodeURIComponent(
-          params.key,
-        )}+repo%3Atrovu%2Ftrovu-data&type=code">
-          ${params.query}</a> was removed as does not adhere to our 
+        alertMsg.innerHTML = `The shortcut <a class="githubLink" target="_blank" href=""></a> was removed as does not adhere to our 
           <a target="_blank" href="/docs/editors/policy/">Content policy</a>. 
           But you can <a target="_blank" href="/docs/users/advanced/">
           create a user shortcut in your own namespace</a>.`;
+        alertMsg.querySelector('a.githubLink').textContent = params.query;
+        alertMsg.querySelector('a.githubLink').href =
+          `https://github.com/search?l=&q=${encodeURIComponent(
+            params.key,
+          )}+repo%3Atrovu%2Ftrovu-data&type=code`;
         break;
     }
   }
