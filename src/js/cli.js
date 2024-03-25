@@ -1,4 +1,5 @@
 import DataManager from './modules/DataManager';
+import DataReporter from './modules/DataReporter';
 import Migrator from './modules/Migrator';
 import ShortcutTester from './modules/ShortcutTester';
 import Validator from './modules/Validator';
@@ -33,6 +34,15 @@ program
     'only apply to shortcuts containing <string>',
   )
   .action(testShortcuts);
+
+program
+  .command('report-data')
+  .description('Report data statistics')
+  .option(
+    '-n, --namespace <string>',
+    'only apply to shortcuts of this namespace',
+  )
+  .action(reportData);
 
 // Call for user data:
 // node -r esm src/js/cli.js migrate-placeholders -d /Users/jrg/dta/int/cde/web/tro/trovu-data-user/ -s '' -f shortcuts
@@ -75,6 +85,11 @@ function normalizeData() {
 function testShortcuts(options) {
   const shortcutTester = new ShortcutTester(options);
   shortcutTester.testShortcuts();
+}
+
+function reportData(options) {
+  const dataReporter = new DataReporter(options);
+  dataReporter.reportData();
 }
 
 function migrateExamples(options) {
