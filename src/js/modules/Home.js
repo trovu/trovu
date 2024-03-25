@@ -233,6 +233,7 @@ export default class Home {
    */
   addLinkSearch() {
     const params = new URLSearchParams(location.hash.substring(1));
+
     // Only keep relevant parameters.
     for (const [key] of params.entries()) {
       if (!['language', 'country', 'github'].includes(key)) {
