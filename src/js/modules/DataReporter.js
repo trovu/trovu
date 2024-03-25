@@ -129,10 +129,4 @@ export default class DataReporter {
     }
     report[key].percent = ((report[key].count / total) * 100).toFixed(2) + '%';
   }
-
-  reportShortcuts(namespace, key) {
-    return this.options.filter
-      ? `${namespace}.${key}`.includes(this.options.filter)
-      : true;
-  }
 }
