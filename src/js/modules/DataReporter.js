@@ -86,7 +86,6 @@ export default class DataReporter {
       'with tags',
       'with includes',
     ].forEach((key) => {
-      return;
       DataReporter.calculatePercentage(
         reportShortcutsByProperties,
         key,
