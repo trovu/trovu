@@ -52,10 +52,7 @@ export default class DataReporter {
           DataReporter.increment(reportShortcutsByNamespace, namespace);
           DataReporter.increment(reportShortcutsByProperties, 'active');
           DataReporter.increment(reportShortcutsByState, 'active');
-          DataReporter.increment(
-            reportShortcutsByArgCount,
-            `with ${argCount} args`,
-          );
+          DataReporter.increment(reportShortcutsByArgCount, argCount);
           DataReporter.increment(
             reportShortcutsByKeywordLength,
             keyword.length,
@@ -100,10 +97,10 @@ export default class DataReporter {
       );
     });
     for (let i = 0; i < 30; i++) {
-      if (reportShortcutsByArgCount[`with ${i} args`]) {
+      if (reportShortcutsByArgCount[i]) {
         DataReporter.calculatePercentage(
           reportShortcutsByArgCount,
-          `with ${i} args`,
+          i,
           reportShortcutsByProperties.active.count,
         );
       }
