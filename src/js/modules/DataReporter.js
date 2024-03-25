@@ -124,6 +124,9 @@ export default class DataReporter {
     report[key].count++;
   }
   static calculatePercentage(report, key, total) {
+    if (!report[key]) {
+      report[key] = { count: 0 };
+    }
     report[key].percent = ((report[key].count / total) * 100).toFixed(2) + '%';
   }
 
