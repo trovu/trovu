@@ -240,13 +240,14 @@ export default class Home {
         params.delete(key);
       }
     }
-    const link = `<link
-    rel="search"
-    type="application/opensearchdescription+xml"
-    href="/opensearch/?${params.toString()}"
-    title="Trovu"
-    />`;
-    const head = document.querySelector('head');
-    head.innerHTML += link;
+
+    const paramsString = params.toString();
+    const link = document.createElement('link');
+    link.rel = 'search';
+    link.type = 'application/opensearchdescription+xml';
+    link.href = `/opensearch/?${paramsString}`;
+    link.title = 'Trovu';
+
+    document.head.appendChild(link);
   }
 }
