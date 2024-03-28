@@ -62,7 +62,7 @@ Currently, the following dictionary namespaces are defined:
 
 ## Uniqueness in a namespace
 
-In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/trovu/trovu/tree/master/data/shortcuts/o/g/1.yml).
+In a namespace, there can be only one shortcut with the same keyword and the same number of arguments: So in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o), there is only one shortcut `g` with one argument, the [Google web search](https://github.com/search?q=repo%3Atrovu%2Ftrovu+path%3A**%2Fo.yml+%2F%5Eg+1%2F&type=code).
 
 ## Using namespaces
 
