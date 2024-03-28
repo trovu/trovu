@@ -32,7 +32,7 @@ Let's look at the processing of a query:
 
 1. A query comes in, e.g., `g foobar`.
 2. The current namespace setting is `o,de,.de`.
-3. Given the namespaces, all the shortcuts are fetched from their YAML files into a JavaScript variable in the client.
+3. Given the namespaces, all the shortcuts are fetched from a [precompiled JSON file](/data.json) (based on the [data in the GitHub repo](https://github.com/trovu/trovu/tree/master/data/shortcuts)) into a JavaScript variable in the client.
     - The fetch() call also checks if the files are already in the browser cache, and only requests them from remote if they are not cached yet.
     - To reload the shortcuts, use the `reload` command (see below).
 4. The query is parsed – in the client by JavaScript – into
