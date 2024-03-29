@@ -5470,14 +5470,14 @@ libg 1:
   title: 'Library Genesis: Non-fiction / Sci-tech'
   tags:
   - ebooks
-libgf 1:
-  url: https://libgen.is/fiction?q=<query>
-  title: 'Library Genesis: Fiction'
-  tags:
-  - ebooks
 libga 1:
   url: https://libgen.is/scimag?q=<query>
   title: 'Library Genesis: Scientific Articles'
+  tags:
+  - ebooks
+libgf 1:
+  url: https://libgen.is/fiction?q=<query>
+  title: 'Library Genesis: Fiction'
   tags:
   - ebooks
 libgm 1:
