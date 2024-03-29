@@ -5460,9 +5460,29 @@ lg 1:
 lh 0:
   url: http://www.lufthansa.com
   title: Lufthansa
+libg 0:
+  url: https://libgen.is
+  title: Library Genesis
+  tags:
+  - ebooks
 libg 1:
   url: https://libgen.is/search.php?req=<query>
-  title: Library Genesis
+  title: 'Library Genesis: Non-fiction / Sci-tech'
+  tags:
+  - ebooks
+libgf 1:
+  url: https://libgen.is/search.php?req=<query>
+  title: 'Library Genesis: Fiction'
+  tags:
+  - ebooks
+libga 1:
+  url: https://libgen.is/scimag?q=<query>
+  title: 'Library Genesis: Scientific Articles'
+  tags:
+  - ebooks
+libgm 1:
+  url: http://magzdb.org/makelist?t=<query>
+  title: 'Library Genesis: Magazines'
   tags:
   - ebooks
 lin 0:
