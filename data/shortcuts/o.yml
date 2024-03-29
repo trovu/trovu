@@ -6442,7 +6442,7 @@ owm 0:
 owm 1:
   url: https://openweathermap.org/find?q=berlin
   include:
-    key: owm 1
+    key: owm 0
   examples:
   - arguments: berlin
     description: Get weather for cities named "berlin"
