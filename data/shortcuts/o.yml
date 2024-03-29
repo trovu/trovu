@@ -6440,7 +6440,7 @@ owm 0:
   tests:
   - expect: OpenWeatherMap</title>
 owm 1:
-  url: https://openweathermap.org/find?q=berlin
+  url: https://openweathermap.org/find?q=<location>
   include:
     key: owm 0
   examples:
