@@ -6428,6 +6428,27 @@ ov 1:
   title: OnVista
   tags:
   - old
+owm 0:
+  url: https://openweathermap.org/
+  title: OpenWeatherMap
+  tags:
+  - copyleft
+  - maps
+  - osm
+  examples:
+  - description: Go to homepage
+  tests:
+  - expect: OpenWeatherMap</title>
+owm 1:
+  url: https://openweathermap.org/find?q=berlin
+  include:
+    key: owm 1
+  examples:
+  - arguments: berlin
+    description: Get weather for cities named "berlin"
+  tests:
+  - arguments: berlin
+    expect: <title> Find
 owncloud 0:
   url: https://owncloud.org/
   title: ownCloud
