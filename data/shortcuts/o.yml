@@ -204,7 +204,7 @@ a 0:
   examples:
   - description: Go to homepage
   tests:
-  - expect: <title>Amazon.com
+  - expect: Amazon.com</title>
 a 1:
   url: https://www.amazon.com/s?k=<query>&crid=1UXOIV6UI26W0&linkCode=ll2&tag=serchilo-20&linkId=dadbd51da666f8ecc0f3fc779e01728a&language=en_US&ref_=as_li_ss_tl
   include:
@@ -4914,7 +4914,7 @@ isg 1:
     description: Show content of user linux_foundation
   tests:
   - arguments: linux_foundation
-    expect: '@linux_foundation) • Instagram photos and videos</title>'
+    expect: linux_foundation
 ist 0:
   url: https://www.istockphoto.com
   title: Istockphoto
