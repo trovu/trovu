@@ -5467,24 +5467,24 @@ libg 0:
   - ebooks
 libg 1:
   url: https://libgen.is/search.php?req=<query>
-  title: 'Library Genesis: Non-fiction / Sci-tech'
-  tags:
-  - ebooks
+  title: Library Genesis, Non-fiction / Sci-tech
+  include:
+    key: libg 0
 libga 1:
   url: https://libgen.is/scimag?q=<query>
   title: 'Library Genesis: Scientific Articles'
-  tags:
-  - ebooks
+  include:
+    key: libg 0
 libgf 1:
   url: https://libgen.is/fiction?q=<query>
   title: 'Library Genesis: Fiction'
-  tags:
-  - ebooks
+  include:
+    key: libg 0
 libgm 1:
   url: http://magzdb.org/makelist?t=<query>
   title: 'Library Genesis: Magazines'
-  tags:
-  - ebooks
+  include:
+    key: libg 0
 lin 0:
   url: http://www.linkedin.com/
   title: Linkedin
