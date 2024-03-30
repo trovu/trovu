@@ -5130,13 +5130,13 @@ swp 1:
   url: https://www.swp-berlin.org/suche?search%5Bq%5D=<Suche>
   title: Stiftung Wissenschaft und Politik
 tel 0:
-  url: http://www.telefonbuch.de/
+  url: https://www.telefonbuch.de/
   title: Telefonbuch
   tags:
   - phone
   - telefonbuch
 tel 1:
-  url: http://www4.dastelefonbuch.de/Rueckwaerts-Suche.html?kw=<Nummer>&x=35&y=11&cifav=0&s=a20000&la=de&cmd=search&ort_ok=0&sp=55&vert_ok=0&aktion=23
+  url: https://www4.dastelefonbuch.de/Rueckwaerts-Suche.html?kw=<Nummer>&x=35&y=11&cifav=0&s=a20000&la=de&cmd=search&ort_ok=0&sp=55&vert_ok=0&aktion=23
   title: Telefonbuch Rückwärts-Suche
   tags:
   - phone
@@ -5145,7 +5145,7 @@ tel 1:
   - arguments: '8003301000'
     description: Teilnehmer mit der Telefonnummer 08003301000
 tel 2:
-  url: 'http://www.dastelefonbuch.de/Suche/<Name>/<Ort: {type: city}>'
+  url: 'https://www.dastelefonbuch.de/Suche/<Name>/<Ort: {type: city}>'
   title: Telefonbuch
   tags:
   - phone
@@ -5156,7 +5156,7 @@ tel 2:
   - arguments: meier, dd
     description: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
 tho 1:
-  url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw=<Produkt>
+  url: https://www.thomann.de/de/search_dir.html?sw=<Produkt>
   title: Thomann.de
   tags:
   - music
