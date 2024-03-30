@@ -294,17 +294,16 @@ bibkit 0:
   - karlsruhe
   - kit
   - library
+  tests:
+  - expect: <title>KIT-Bibliothek
 bibkit 1:
   url: http://services.bibliothek.kit.edu/primo/start.php?query=<Suche>
-  title: KIT-Bibliothek
-  tags:
-  - bibliothek
-  - karlsruhe
-  - kit
-  - library
+  include:
+    key: bibkit 0
   examples:
   - arguments: xml
     description: 'search for all XML books '
+  tests: search term only appears with JavaScript being enabled
 bibkobv 1:
   url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<Suche>
   title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
