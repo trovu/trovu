@@ -320,7 +320,7 @@ bibkobv 1:
     description: Search Kooperativer Bibliotheksverbund Berlin-Brandenburg for "goethe"
 bibma 0:
   url: https://www.bib.uni-mannheim.de/
-  title: Bibliothek der Uni Mannheim 
+  title: Bibliothek der Uni Mannheim
   tags:
   - library
   - mannheim
@@ -333,7 +333,7 @@ bibma 1:
     description: Suche nach Büchern über XML
 bibmlu 0:
   url: https://opac.lbs-halle.gbv.de/
-  title: Bibliothek der Uni Halle 
+  title: Bibliothek der Uni Halle
   tags:
   - halle
   - library
@@ -352,10 +352,8 @@ bibmr 0:
   - marburg
 bibmr 1:
   url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  title: Uni Marburg Bibliothek
-  tags:
-  - library
-  - marburg
+  include:
+    key: bibmr 0
   examples:
   - arguments: goethe
     description: Suche nach Goethe
@@ -366,9 +364,8 @@ bibswb 0:
   - library
 bibswb 1:
   url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<Suche>
-  title: Südwestdeutscher Bibliotheksverbund
-  tags:
-  - library
+  include:
+    key: bibswb 0
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
@@ -382,12 +379,8 @@ bibtub 0:
   - uni
 bibtub 1:
   url: https://tu-berlin.hosted.exlibrisgroup.com/primo-explore/search?tab=tub_all&search_scope=TUB_ALL&sortby=rank&vid=TUB&lang=de_DE&offset=0&query=any,contains,<Suche>
-  title: TU Berlin Bibliothek
-  tags:
-  - berlin
-  - books
-  - library
-  - uni
+  include:
+    key: bibtub 0
 bibup 0:
   url: https://www.ub.uni-potsdam.de/de/
   title: Uni Potsdam Bibliothek
@@ -398,23 +391,15 @@ bibup 0:
   - uni
 bibup 1:
   url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  title: Uni Potsdam Bibliothek
-  tags:
-  - bibliothek
-  - library
-  - potsdam
-  - uni
+  include:
+    key: bibup 0
   examples:
   - arguments: goethe
     description: Suche nach "goethe"
 bibup 2:
   url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHM&=Suchen&MATCFILTER=Y&MATCSET=Y&NOSCAN=Y&PARSE_MNEMONICS=N&PARSE_OPWORDS=N&PARSE_OLDSETS=N&ACT0=SRCH&IKT0=1016&TRM0=&ACT1=*&IKT1=5041&TRM1=&ACT2=*&IKT2=1004&TRM2=<Autor>&ADI_JVU=<Jahr>
-  title: Uni Potsdam Bibliothek
-  tags:
-  - bibliothek
-  - library
-  - potsdam
-  - uni
+  include:
+    key: bibup 0
 bkat 0:
   url: https://bkat.wikinaut.de/
   title: BKatSearch Bußgeldkatalog
