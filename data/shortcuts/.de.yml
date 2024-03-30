@@ -927,15 +927,6 @@ doe 2:
   examples:
   - arguments: meier, dresden
     description: Suche Telefonnummern für "Meier" in Dresden
-dpd 1:
-  url: http://extranet.dpd.de/cgi-bin/delistrack?typ=1&lang=de&pknr=<Paketnummer>
-  title: DPD Sendungsverfolgung
-  tags:
-  - dpd
-  - shipping
-  examples:
-  - arguments: '1895023888534'
-    description: Verfolgt die Sendung mit der Paketscheinnummer 01895023888534
 duden 1:
   url: https://www.duden.de/suchen/dudenonline/<Suche>
   title: Duden
