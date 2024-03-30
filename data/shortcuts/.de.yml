@@ -299,7 +299,7 @@ bibhbz 1:
   - arguments: Basicode
     expect: <title>Suchergebnisse
 bibka 0:
-  url: http://www.bibliotheksportal-karlsruhe.de/
+  url: https://www.bibliotheksportal-karlsruhe.de/
   title: Bibliotheksportal Karlsruhe
   tags:
   - books
@@ -389,7 +389,7 @@ bibmlu 1:
   - arguments: minix
     description: Search Uni Halle library for "minix"
 bibmr 0:
-  url: http://www.uni-marburg.de/bis/kataloge
+  url: https://www.uni-marburg.de/de/ub
   title: Bibliothek der Uni Marburg
   tags:
   - books
@@ -422,7 +422,7 @@ bibswb 1:
   - arguments: Basicode
     description: Suche nach "Basicode"
 bibtub 0:
-  url: http://www.ub.tu-berlin.de/
+  url: https://www.tu.berlin/ub/
   title: Bibliothek der TU Berlin
   tags:
   - berlin
@@ -500,7 +500,7 @@ bls 3:
   - arguments: berlin, bremen, 28
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen am 28. dieses Monats
 blz 1:
-  url: http://www.abfragen.de/finanzen3.asp?ort=<Ort/PLZ>
+  url: https://www.abfragen.de/finanzen3.asp?ort=<Ort/PLZ>
   title: Bankleitzahlen (abfragen.de)
   examples:
   - arguments: berlin
@@ -523,7 +523,7 @@ bol 1:
   - arguments: goethe
     description: Suche nach "goethe" auf Bol.de
 bpo 0:
-  url: http://www.berliner-philharmoniker.de
+  url: https://www.berliner-philharmoniker.de
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker
   tags:
   - berlin
@@ -531,7 +531,7 @@ bpo 0:
   - cultural-events
   - music
 bpo 1:
-  url: 'http://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
   tags:
   - berlin
@@ -623,7 +623,7 @@ bvb 1:
   - books
   - library
 bvg 0:
-  url: http://www.fahrinfo-berlin.de/
+  url: https://www.bvg.de/de/verbindungen/verbindungssuche
   title: BVG-Fahrplanauskunft Startseite
   tags:
   - bahn
@@ -685,7 +685,7 @@ charts 1:
   tags:
   - music
 conrad 0:
-  url: http://www.conrad.de/
+  url: https://www.conrad.de/
   title: Conrad Elektronik Deutschland
   tags:
   - conrad
@@ -702,7 +702,7 @@ conrad 1:
   - arguments: glühlampe
     description: Suche nach Glühlampen
 cys 1:
-  url: http://www.cyberport.de/?EVENT=itemsearch&query=<Produkt>
+  url: https://www.cyberport.de/?EVENT=itemsearch&query=<Produkt>
   title: Cyberport Store
   tags:
   - apple
@@ -746,7 +746,7 @@ dbb 3:
     key: db 0
   showOnHome: 710
 dbm 2:
-  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
+  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   examples:
   - arguments: berlin, hamburg
@@ -758,7 +758,7 @@ dbm 2:
   include:
     key: db 0
 dbm 3:
-  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
+  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   examples:
   - arguments: berlin, hamburg, 10
@@ -766,7 +766,7 @@ dbm 3:
   include:
     key: db 0
 dbm 4:
-  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
+  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
@@ -774,7 +774,7 @@ dbm 4:
   include:
     key: db 0
 dbmn 2:
-  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
+  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg
@@ -782,7 +782,7 @@ dbmn 2:
   include:
     key: db 0
 dbmn 3:
-  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
+  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 10
@@ -790,7 +790,7 @@ dbmn 3:
   include:
     key: db 0
 dbmn 4:
-  url: 'http://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
+  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
@@ -874,7 +874,7 @@ dbtn 4:
   include:
     key: db 0
 dejure 1:
-  url: http://dejure.org/cgi-bin/suche?Suchenach=<Suche>
+  url: https://dejure.org/cgi-bin/suche?Suchenach=<Suche>
   title: Dejure.org Gesetze
   tags:
   - law
