@@ -211,6 +211,7 @@ bibgvk 0:
   url: https://kxp.k10plus.de/
   title: Gemeinsamer Verbundkatalog des GBV
   tags:
+  - books
   - library
   examples:
   - description: Startseite des GBV-Katalogs
@@ -230,6 +231,7 @@ bibhal 0:
   url: https://katalog.halle.de/
   title: Stadtbibliothek Halle (Saale)
   tags:
+  - books
   - halle
   - library
   examples:
@@ -250,7 +252,9 @@ bibhbz 0:
   url: https://nrw.digibib.net/
   title: Hochschulbibliothekszentrum NRW
   tags:
+  - books
   - library
+  - uni
   examples:
   - description: Startseite des HBZ NRW
   tests:
@@ -269,8 +273,10 @@ bibka 0:
   url: http://www.bibliotheksportal-karlsruhe.de/
   title: Bibliotheksportal Karlsruhe
   tags:
+  - books
   - karlsruhe
   - library
+  - uni
   examples:
   - description: Gehe zur Startseite
   tests:
@@ -289,6 +295,7 @@ bibkit 0:
   url: https://www.bibliothek.kit.edu/
   title: KIT-Bibliothek
   tags:
+  - books
   - karlsruhe
   - kit
   - library
@@ -306,7 +313,9 @@ bibkobv 0:
   url: https://portal.kobv.de/
   title: Kooperativer Bibliotheksverbund Berlin-Brandenburg (KOBV)
   tags:
+  - books
   - library
+  - uni
   examples:
   - description: Gehe zur Startseite
 bibkobv 1:
@@ -320,8 +329,10 @@ bibma 0:
   url: https://www.bib.uni-mannheim.de/
   title: Bibliothek der Uni Mannheim
   tags:
+  - books
   - library
   - mannheim
+  - uni
 bibma 1:
   url: https://primo.bib.uni-mannheim.de/primo-explore/search?query=any,contains,<Suche>&tab=default_tab&search_scope=MAN_ALMA&vid=MAN_UB&mode=Basic
   include:
@@ -333,8 +344,10 @@ bibmlu 0:
   url: https://opac.lbs-halle.gbv.de/
   title: Bibliothek der MLU Halle-Wittenberg
   tags:
+  - books
   - halle
   - library
+  - uni
 bibmlu 1:
   url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<Suche>
   include:
@@ -346,8 +359,10 @@ bibmr 0:
   url: http://www.uni-marburg.de/bis/kataloge
   title: Bibliothek der Uni Marburg
   tags:
+  - books
   - library
   - marburg
+  - uni
 bibmr 1:
   url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   include:
@@ -359,7 +374,9 @@ bibswb 0:
   url: https://swb.boss.bsz-bw.de/
   title: Südwestdeutscher Bibliotheksverbund
   tags:
+  - books
   - library
+  - uni
 bibswb 1:
   url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<Suche>
   include:
@@ -383,6 +400,7 @@ bibup 0:
   url: https://www.ub.uni-potsdam.de/de/
   title: Bibliothek der Uni Potsdam
   tags:
+  - books
   - library
   - potsdam
   - uni
