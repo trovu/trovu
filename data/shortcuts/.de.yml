@@ -324,6 +324,13 @@ bibma 0:
   tags:
   - library
   - mannheim
+bibma 1:
+  url: https://primo.bib.uni-mannheim.de/primo-explore/search?query=any,contains,<Suche>&tab=default_tab&search_scope=MAN_ALMA&vid=MAN_UB&mode=Basic
+  include:
+    key: bibma 0
+  examples:
+  - arguments: xml
+    description: Suche nach Büchern über XML
 bibmlu 1:
   url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<Suche>
   title: Uni Halle Bibliothek
