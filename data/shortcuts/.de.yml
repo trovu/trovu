@@ -189,6 +189,8 @@ bhnt 0:
   - lightning-talks
   - meetup
   - open-source
+  examples:
+  - description: Gehe zur Startseite
 bhnt 1:
   url: https://github.com/search?q=repo%3Aberlin-hack-and-tell%2Fbhnt.c-base.org%20<Suche>
   include:
@@ -201,7 +203,7 @@ bhs 0:
   - hardware
   - shopping
   examples:
-  - description: BAUHAUS Startseite
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>BAUHAUS
 bhs 1:
@@ -241,7 +243,7 @@ bibgvk 0:
   - books
   - library
   examples:
-  - description: Startseite des GBV-Katalogs
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>GVK - Gemeinsamer Verbundkatalog
 bibgvk 1:
@@ -262,7 +264,7 @@ bibhal 0:
   - halle
   - library
   examples:
-  - description: Startseite der Stadtbibliothek Halle
+  - description: Gehe zur Startseite
   tests:
   - expect: Stadtbibliothek Halle[\s\S]*</title>
 bibhal 1:
@@ -283,7 +285,7 @@ bibhbz 0:
   - library
   - uni
   examples:
-  - description: Startseite des HBZ NRW
+  - description: Gehe zur Startseite
   tests:
   - expect: DigiBib</title>
 bibhbz 1:
@@ -326,6 +328,8 @@ bibkit 0:
   - karlsruhe
   - kit
   - library
+  examples:
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>KIT-Bibliothek
 bibkit 1:
@@ -360,6 +364,8 @@ bibma 0:
   - library
   - mannheim
   - uni
+  examples:
+  - description: Gehe zur Startseite
 bibma 1:
   url: https://primo.bib.uni-mannheim.de/primo-explore/search?query=any,contains,<Suche>&tab=default_tab&search_scope=MAN_ALMA&vid=MAN_UB&mode=Basic
   include:
@@ -390,6 +396,8 @@ bibmr 0:
   - library
   - marburg
   - uni
+  examples:
+  - description: Gehe zur Startseite
 bibmr 1:
   url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   include:
@@ -404,6 +412,8 @@ bibswb 0:
   - books
   - library
   - uni
+  examples:
+  - description: Gehe zur Startseite
 bibswb 1:
   url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<Suche>
   include:
@@ -419,6 +429,8 @@ bibtub 0:
   - books
   - library
   - uni
+  examples:
+  - description: Gehe zur Startseite
 bibtub 1:
   url: https://tu-berlin.hosted.exlibrisgroup.com/primo-explore/search?tab=tub_all&search_scope=TUB_ALL&sortby=rank&vid=TUB&lang=de_DE&offset=0&query=any,contains,<Suche>
   include:
@@ -431,6 +443,8 @@ bibup 0:
   - library
   - potsdam
   - uni
+  examples:
+  - description: Gehe zur Startseite
 bibup 1:
   url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   include:
@@ -452,6 +466,8 @@ bkat 0:
   - fines
   - germany
   - traffic
+  examples:
+  - description: Gehe zur Startseite
 bkat 1:
   url: https://bkat.wikinaut.de/?q=<Suche>
   title: BKatSearch Bußgeldkatalog
