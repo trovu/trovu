@@ -103,6 +103,13 @@ export default class DataReporter {
         reportShortcutsByState.all.count,
       );
     });
+    ['with url', 'http', 'https'].forEach((key) => {
+      DataReporter.calculatePercentage(
+        reportShortcutsByProtocol,
+        key,
+        reportShortcutsByProtocol['with url'].count,
+      );
+    });
     for (let i = 0; i < 30; i++) {
       if (reportShortcutsByArgCount[i]) {
         DataReporter.calculatePercentage(
