@@ -304,11 +304,17 @@ bibkit 1:
   - arguments: xml
     description: Search for books about XML
   tests: search term only appears with JavaScript being enabled
-bibkobv 1:
-  url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<Suche>
+bibkobv 0:
+  url: https://portal.kobv.de/
   title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
   tags:
   - library
+  examples:
+  - description: Gehe zur Startseite
+bibkobv 1:
+  url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<Suche>
+  include:
+    key: bibkobv 0
   examples:
   - arguments: goethe
     description: Search Kooperativer Bibliotheksverbund Berlin-Brandenburg for "goethe"
