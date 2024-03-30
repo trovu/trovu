@@ -331,12 +331,16 @@ bibma 1:
   examples:
   - arguments: xml
     description: Suche nach Büchern über XML
-bibmlu 1:
-  url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<Suche>
-  title: Uni Halle Bibliothek
+bibmlu 0:
+  url: https://opac.lbs-halle.gbv.de/
+  title: Bibliothek der Uni Halle 
   tags:
   - halle
   - library
+bibmlu 1:
+  url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<Suche>
+  include:
+    key: bibmlu 0
   examples:
   - arguments: minix
     description: Search Uni Halle library for "minix"
