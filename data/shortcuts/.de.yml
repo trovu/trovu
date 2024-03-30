@@ -4971,16 +4971,6 @@ nsr 0:
   - radar
   - weather
   - wetter
-nsr 1:
-  url: http://www.niederschlagsradar.de/wettervorhersage.aspx?direct=1&naam=<Ort>
-  title: Niederschlagsradar.de
-  tags:
-  - radar
-  - weather
-  - wetter
-  examples:
-  - arguments: berlin
-    description: Wettervorhersage für Berlin
 osi 0:
   url: https://www.osiander.de/
   title: Osiander (Buchhändler)
