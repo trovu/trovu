@@ -156,11 +156,17 @@ bex 1:
   examples:
   - arguments: berlin
     description: Abfahrtstafel von Berlin Hbf
-bhf 1:
-  url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query=<bahnhof>
+bhf 0:
+  url: https://www.bahnhof.de/
   title: Bahnhofsauskunft, Deutsche Bahn
   tags:
   - bahn
+  examples:
+  - description: Gehe zur Startseite
+bhf 1:
+  url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query=<bahnhof>
+  include:
+    key: bhf 0
   examples:
   - arguments: berlin zoo
     description: Search Bahnhofsauskunft for "berlin zoo"
