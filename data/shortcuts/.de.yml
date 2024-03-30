@@ -5108,7 +5108,12 @@ stabib 1:
   url: http://stabikat.sbb.spk-berlin.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Staatsbibliothek zu Berlin
   tags:
-  - old
+  - library
+  - berlin
+  - books
+  examples:
+  - arguments: goethe
+    description: Suche nach "goethe"
 sub 1:
   url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Niedersächsische Staats- und Universitätsbibliothek Göttingen
