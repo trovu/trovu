@@ -302,7 +302,7 @@ bibkit 1:
     key: bibkit 0
   examples:
   - arguments: xml
-    description: 'search for all XML books '
+    description: Search for books about XML
   tests: search term only appears with JavaScript being enabled
 bibkobv 1:
   url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<Suche>
