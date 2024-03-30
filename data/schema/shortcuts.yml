@@ -24,7 +24,9 @@ patternProperties:
           additionalProperties: false
           properties:
             arguments:
-              type: string
+              oneOf:
+              - type: string
+              - type: number
             description:
               type: string
             config:
@@ -89,7 +91,9 @@ patternProperties:
               additionalProperties: false
               properties:
                 arguments:
-                  type: string
+                  oneOf:
+                  - type: string
+                  - type: number
                 expect:
                   type: string
               required:
