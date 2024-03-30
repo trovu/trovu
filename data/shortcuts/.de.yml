@@ -180,7 +180,8 @@ bhf 1:
     description: Search Bahnhofsauskunft for "berlin zoo"
 bhnt 0:
   url: http://berlinhackandtell.rocks
-  title: 'Berlin Hack & Tell: meetup and lightning talks'
+  title: Berlin Hack & Tell
+  description: Berlin Hack and Tell is a monthly(ish) meetup where eight entities can show their hacks at c-base space station every(ish) last Tuesday of the month.
   tags:
   - berlin
   - c-base
@@ -188,6 +189,10 @@ bhnt 0:
   - lightning-talks
   - meetup
   - open-source
+bhnt 1:
+  url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Abhnt.c-base.org%20<Suche>
+  include:
+    key: bhnt 0
 bhs 0:
   url: https://www.bauhaus.info/
   title: BAUHAUS
