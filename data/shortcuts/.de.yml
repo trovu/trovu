@@ -138,6 +138,14 @@ bbb 2:
   examples:
   - arguments: alexanderplatz, zoo
     description: Zeige Fahrradroute von Alexanderplatz zum Zoo
+bex 0:
+  url: https://bahn.expert/
+  title: bahn.expert
+  tags:
+  - bahn
+  - travel
+  examples:
+  - description: Gehe zur Startseite
 bex 1:
   url: https://bahn.expert/<Bahnhof>
   title: bahn.expert
