@@ -12,6 +12,7 @@ export default class DataReporter {
     const reportShortcutsByNamespace = {};
     const reportShortcutsByKeywordLength = {};
     const reportShortcutsByArgCount = {};
+    const reportShortcutsByProtocol = {};
     const reportShortcutsByProperties = {};
     const reportShortcutsByState = {};
     for (const namespace in this.env.data.shortcuts) {
@@ -57,6 +58,12 @@ export default class DataReporter {
             reportShortcutsByKeywordLength,
             keyword.length,
           );
+        }
+        if (shortcut.url) {
+          DataReporter.increment(reportShortcutsByProtocol, 'with url');
+          const parts = shortcut.url.split(':');
+          const procotol = parts[0];
+          DataReporter.increment(reportShortcutsByProtocol, procotol);
         }
       }
     }
@@ -122,6 +129,8 @@ export default class DataReporter {
     console.table(reportShortcutsByKeywordLength);
     console.log('Shortcuts by properties:');
     console.table(reportShortcutsByProperties);
+    console.log('Shortcuts by protocol:');
+    console.table(reportShortcutsByProtocol);
   }
   static increment(report, key) {
     if (!report[key]) {
