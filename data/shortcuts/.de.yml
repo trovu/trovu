@@ -904,7 +904,7 @@ dlf 0:
   - radio
   - radio-station
 doe 0:
-  url: http://www.dasoertliche.de/
+  url: https://www.dasoertliche.de/
   title: DasOertliche.de Homepage
   tags:
   - phone
@@ -919,7 +919,7 @@ doe 1:
   - arguments: '1805996633'
     description: Suche nach Inhaber der Nummer 01805996633
 doe 2:
-  url: http://www2.dasoertliche.de/Controller?form_name=search_nat&kw=<Name>&ci=<Ort>
+  url: https://www2.dasoertliche.de/Controller?form_name=search_nat&kw=<Name>&ci=<Ort>
   title: DasOertliche.de
   tags:
   - phone
@@ -937,7 +937,7 @@ dpd 1:
   - arguments: '1895023888534'
     description: Verfolgt die Sendung mit der Paketscheinnummer 01895023888534
 duden 1:
-  url: http://www.duden.de/suchen/dudenonline/<Suche>
+  url: https://www.duden.de/suchen/dudenonline/<Suche>
   title: Duden
 e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
@@ -1036,7 +1036,7 @@ g 1:
     description: Google-Suche nach berlin
   showOnHome: 600
 gh 0:
-  url: http://geizhals.de/
+  url: https://geizhals.de/
   title: Geizhals Deutschland Hauptseite
   tags:
   - geizhals
