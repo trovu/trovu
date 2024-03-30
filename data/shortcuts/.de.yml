@@ -4877,7 +4877,7 @@ lpg 1:
   - arguments: hro
     description: Suche nach LPG-Tankstellen in Rostock
 mfs 1:
-  url: http://www.medizinfuchs.de/produkt/search/<Suche>
+  url: https://www.medizinfuchs.de/produkt/search/<Suche>
   title: Medizinfuch Apothekenpreisvergleich
 mm 0:
   url: https://www.mediamarkt.de/
@@ -4965,7 +4965,7 @@ mvv 6:
   - arguments: freising,petershausen,10,30,28,1
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr am 28.1.
 nsr 0:
-  url: http://www.niederschlagsradar.de/
+  url: https://www.niederschlagsradar.de/
   title: Niederschlagsradar.de
   tags:
   - radar
@@ -5002,13 +5002,13 @@ p 2:
       query: gii <1>, <2>
     created: '2023-07-02'
 pollin 0:
-  url: http://www.pollin.de/
+  url: https://www.pollin.de/
   title: Pollin Electronic
   tags:
   - electronic
   - shopping
 pollin 1:
-  url: http://www.pollin.de/shop/suchergebnis.html?S_TEXT=<Suche>
+  url: https://www.pollin.de/shop/suchergebnis.html?S_TEXT=<Suche>
   title: Pollin Electronic
   tags:
   - electronic
@@ -5017,7 +5017,7 @@ pollin 1:
   - arguments: batterie
     description: Suche bei pollin.de nach "batterie"
 ppw 1:
-  url: http://wiki.piratenpartei.de/Spezial:Suche?search=<Suche>&go=Seite
+  url: https://wiki.piratenpartei.de/Spezial:Suche?search=<Suche>&go=Seite
   title: Piratenpartei Wiki
   tags:
   - partei
@@ -5027,7 +5027,7 @@ ppw 1:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
 ppwg 1:
-  url: http://www.google.com/search?hl=<$language>&sitesearch=wiki.piratenpartei.de&domains=wiki.piratenpartei.de&q=<Suche>
+  url: https://www.google.com/search?hl=<$language>&sitesearch=wiki.piratenpartei.de&domains=wiki.piratenpartei.de&q=<Suche>
   title: Piratenpartei Wiki via Google
   tags:
   - partei
@@ -5042,13 +5042,13 @@ preis 1:
   tags:
   - old
 radar 0:
-  url: http://www.t-online.de/advtoi/wetter/info/niederschlagsradar.html
+  url: https://www.t-online.de/advtoi/wetter/info/niederschlagsradar.html
   title: Wetter-Radar von T-Online
   tags:
   - radar
   - weather
 reichelt 0:
-  url: http://www.reichelt.de/
+  url: https://www.reichelt.de/
   title: Reichelt Elektronik
   tags:
   - shopping
@@ -5091,7 +5091,7 @@ rmv 4:
   - arguments: frankfurt, wiesbaden, 10, 1.1.
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 1.1.
 rsc 1:
-  url: http://de.rs-online.com/web/c/?searchTerm=<Produkt>
+  url: https://de.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Deutschland
   tags:
   - electronics
@@ -5100,7 +5100,7 @@ rsc 1:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
 sp 1:
-  url: http://www.potsdamer-stadtplan.com/?strasse=<Straße>
+  url: https://www.potsdamer-stadtplan.com/?strasse=<Straße>
   title: Stadtplan Potsdam
   tags:
   - old
