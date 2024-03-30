@@ -4864,11 +4864,22 @@ kvk 1:
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
-lpg 1:
-  url: http://www.gas-tankstellen.de/menu.php?jump=tkennz&mode=lpg&kennz=<KFZ-Kennzeichen>
+lpg 0:
+  url: https://www.gas-tankstellen.de/
   title: LPG- und CNG-Tankstellen
   tags:
-  - old
+  - car
+  - gas
+  - lpg
+  examples:
+  - description: Gehe zur Startseite
+lpg 1:
+  url: https://www.gas-tankstellen.de/list.php?mode=lpg&suchkennz=<KFZ-Kennzeichen>
+  include:
+    key: lpg 0
+  examples:
+  - arguments: hro
+    description: Suche nach LPG-Tankstellen in Rostock
 mfs 1:
   url: http://www.medizinfuchs.de/produkt/search/<Suche>
   title: Medizinfuch Apothekenpreisvergleich
