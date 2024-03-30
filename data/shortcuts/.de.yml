@@ -287,7 +287,7 @@ bibka 1:
   - arguments: goethe
     expect: '<title>Bibliotheksportal Karlsruhe : Ergebnisanzeige'
 bibkit 0:
-  url: http://www.bibliothek.kit.edu
+  url: https://www.bibliothek.kit.edu/
   title: KIT-Bibliothek
   tags:
   - bibliothek
@@ -297,7 +297,7 @@ bibkit 0:
   tests:
   - expect: <title>KIT-Bibliothek
 bibkit 1:
-  url: http://services.bibliothek.kit.edu/primo/start.php?query=<Suche>
+  url: https://services.bibliothek.kit.edu/primo/start.php?query=<Suche>
   include:
     key: bibkit 0
   examples:
