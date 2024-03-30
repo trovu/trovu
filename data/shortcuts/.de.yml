@@ -189,7 +189,7 @@ bhs 1:
     expect: <title>schrauben
 bibfu 0:
   url: https://www.fu-berlin.de/sites/ub/index.html
-  title: FU Berlin Bibliothek
+  title: Bibliothek der FU Berlin
   tags:
   - berlin
   - books
@@ -306,7 +306,7 @@ bibkit 1:
   tests: search term only appears with JavaScript being enabled
 bibkobv 0:
   url: https://portal.kobv.de/
-  title: Kooperativer Bibliotheksverbund Berlin-Brandenburg
+  title: Kooperativer Bibliotheksverbund Berlin-Brandenburg (KOBV)
   tags:
   - library
   examples:
@@ -333,7 +333,7 @@ bibma 1:
     description: Suche nach Büchern über XML
 bibmlu 0:
   url: https://opac.lbs-halle.gbv.de/
-  title: Bibliothek der Uni Halle
+  title: Bibliothek der MLU Halle-Wittenberg
   tags:
   - halle
   - library
@@ -346,7 +346,7 @@ bibmlu 1:
     description: Search Uni Halle library for "minix"
 bibmr 0:
   url: http://www.uni-marburg.de/bis/kataloge
-  title: Uni Marburg Bibliothek
+  title: Bibliothek der Uni Marburg
   tags:
   - library
   - marburg
@@ -371,7 +371,7 @@ bibswb 1:
     description: Suche nach "Basicode"
 bibtub 0:
   url: http://www.ub.tu-berlin.de/
-  title: TU Berlin Bibliothek
+  title: Bibliothek der TU Berlin
   tags:
   - berlin
   - books
@@ -383,7 +383,7 @@ bibtub 1:
     key: bibtub 0
 bibup 0:
   url: https://www.ub.uni-potsdam.de/de/
-  title: Uni Potsdam Bibliothek
+  title: Bibliothek der Uni Potsdam
   tags:
   - bibliothek
   - library
