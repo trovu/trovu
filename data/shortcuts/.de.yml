@@ -4554,13 +4554,13 @@ gs 2:
   - arguments: schlüsseldienst, berlin
     description: Suche nach Schlüsseldienst in Berlin
 gsh 0:
-  url: https://www.google.de/shopping
+  url: https://shopping.google.de/
   title: Google Shopping
   tags:
   - google
   - shopping
 gsh 1:
-  url: http://www.google.de/search?tbm=shop&hl=<$language>&q=<Suche>
+  url: https://www.google.de/search?tbm=shop&hl=<$language>&q=<Suche>
   title: Google Shopping
   tags:
   - google
@@ -4586,7 +4586,7 @@ gtrends 1:
   - arguments: berlin
     description: See statistics for the term "berlin" on Google web search
 gy 0:
-  url: http://www.goyellow.de/
+  url: https://www.goyellow.de/
   title: GoYellow-Telefonbuch
   tags:
   - phone
@@ -4618,12 +4618,12 @@ hermes 1:
   - hermes
   - shipping
 hs 0:
-  url: http://www.hardwareschotte.de
+  url: https://www.hardwareschotte.de
   title: Hardwareschotte, Homepage
   tags:
   - shopping
 hs 1:
-  url: http://www.hardwareschotte.de/preise.php3?searchstring=<Suche>
+  url: https://www.schottenland.de/suche/?searchstring=<Produkt>
   title: Hardwareschotte
   tags:
   - shopping
@@ -4664,7 +4664,7 @@ hvv 4:
   - arguments: pinneberg, neugraben, 10, 28.11.
     description: Verbindung von Pinneberg nach Neugraben um 10:00 Uhr am 28.11.
 iban 1:
-  url: http://www.iban-rechner.de/validieren/<iban>
+  url: https://www.iban-rechner.de/iban_validieren.html?tx_valIBAN_pi1%5Biban%5D=<IBAN>&tx_valIBAN_pi1%5Bfi%5D=fi&no_cache=1&Action=IBAN+pr%C3%BCfen+und+BIC-Code+suchen
   title: IBAN-Rechner
   tags:
   - bank
@@ -4690,7 +4690,7 @@ idl 1:
   - arguments: iphone
     description: Preisvergleich fürs iPhone
 ikea 0:
-  url: http://www.ikea.com/de/de/
+  url: https://www.ikea.com/de/de/
   title: IKEA Deutschland
   tags:
   - furniture
@@ -4801,7 +4801,7 @@ kfz 1:
   - arguments: rostock
     description: Suche KFZ-Kennzeichen von Rostock
 kino 1:
-  url: http://www.kino.de/kinoprogramm/<Ort/Stadtteil/Kino/PLZ>/
+  url: https://www.kino.de/kinoprogramm/<Ort/Stadtteil/Kino/PLZ>/
   title: Kinoprogramm
   tags:
   - cinema
@@ -4811,7 +4811,7 @@ kino 1:
   - arguments: berlin
     description: Kinoprogramm in Berlin
 kit 1:
-  url: http://www.google.com/search?q=site%3Akit.edu+<Suche>
+  url: https://www.google.com/search?q=site%3Akit.edu+<Suche>
   title: Karlsruher Institut für Technologie (KIT), Suche via Google
   tags:
   - karlsruhe
