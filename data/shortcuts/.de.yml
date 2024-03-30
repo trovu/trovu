@@ -5,6 +5,8 @@
   tags:
   - phone
   - telefonbuch
+  examples:
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>0180-Telefonbuch
 0180 1:
@@ -25,7 +27,7 @@ a 0:
   - books
   - shopping
   examples:
-  - description: Amazon Startseite
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>Amazon.de
 a 1:
@@ -44,6 +46,8 @@ aa 0:
   tags:
   - reise
   - travel
+  examples:
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>Reise, Sicherheit, Gesundheit
 aa 1:
@@ -62,7 +66,7 @@ ac 0:
   tags:
   - amazon
   examples:
-  - description: Gehe zum Amazon Einkaufswagen
+  - description: Gehe zum Amazon-Einkaufswagen
   tests: need to be logged in
 alternate 1:
   deprecated:
@@ -77,6 +81,8 @@ amazon 1:
 ao 0:
   url: https://www.amazon.de/gp/css/order-history
   title: Amazon Bestellungen
+  examples:
+  - description: Gehe zur Amazon-Bestellungen
   tests: need to be logged in
 atn 0:
   url: https://www.alternate.de/
@@ -104,6 +110,8 @@ aw 0:
   title: Abgeordnetenwatch
   tags:
   - politics
+  examples:
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>abgeordnetenwatch.de
 aw 1:
@@ -210,7 +218,7 @@ bibfu 0:
   - library
   - uni
   examples:
-  - description: Startseite der FU Berlin Bibliothek
+  - description: Gehe zur Startseite
   tests:
   - expect: <title>Universitätsbibliothek
 bibfu 1:
