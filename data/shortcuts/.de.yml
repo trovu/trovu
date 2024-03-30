@@ -5165,12 +5165,12 @@ tho 1:
   - arguments: gitarre
     description: Suche nach Gitarre
 tv 0:
-  url: http://www.tvinfo.de/jetzt
+  url: https://www.tvinfo.de/jetzt
   title: TV-Programm jetzt
   tags:
   - tv
 tva 1:
-  url: http://www.tvinfo.de/sender/<Sender>
+  url: https://www.tvinfo.de/tv-programm/<Sender>
   title: TV-Programm auf ...
   tags:
   - tv
@@ -5178,7 +5178,7 @@ tva 1:
   - arguments: ard
     description: Search for "ard"
 tvinfo 1:
-  url: http://tvinfo.de/exe.php3?quicksearch=1&volltext=<Suche>&tpk=&showall=&genretipp=&target=list.inc
+  url: https://tvinfo.de/exe.php3?quicksearch=1&volltext=<Suche>&tpk=&showall=&genretipp=&target=list.inc
   title: TVinfo.de
   tags:
   - tv
@@ -5186,7 +5186,7 @@ tvinfo 1:
   - arguments: tagesschau
     description: Suche nach "tagesschau"
 tvu 1:
-  url: http://www.tvinfo.de/fernsehprogramm/<Stunde>:00
+  url: https://www.tvinfo.de/fernsehprogramm/<Stunde>:00
   title: TV-Programm um ...
   tags:
   - tv
@@ -5194,7 +5194,7 @@ tvu 1:
   - arguments: '20'
     description: Search for "20"
 uwz 1:
-  url: http://www.unwetterzentrale.de/uwz/getwarning_de.php?plz=<PLZ/Ort>&uwz=UWZ-DE&lang=de
+  url: https://www.unwetterzentrale.de/uwz/getwarning_de.php?plz=<PLZ/Ort>&uwz=UWZ-DE&lang=de
   title: Unwetterzentrale.de
   tags:
   - weather
@@ -5436,12 +5436,12 @@ vvs 2:
   - arguments: schwabstr, hbf
     description: Nächste Verbindung von Schwabstr. zum Hauptbahnhof
 we 0:
-  url: http://www.wetter.com/?forcesite=1
+  url: https://www.wetter.com/?forcesite=1
   title: Wetter.com
   tags:
   - weather
 we 1:
-  url: http://www.wetter.com/suche/?search=<Ort>
+  url: https://www.wetter.com/suche/?search=<Ort>
   title: Wetter.com
   tags:
   - weather
@@ -5463,7 +5463,7 @@ wse 1:
   - series
   - tv
 zal 1:
-  url: http://www.zalando.de/katalog/?q=<Produkt>
+  url: https://www.zalando.de/katalog/?q=<Produkt>
   title: Zalando.de
   tags:
   - shopping
