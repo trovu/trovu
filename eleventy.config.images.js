@@ -13,7 +13,13 @@ module.exports = (eleventyConfig) => {
   // https://www.11ty.dev/docs/plugins/image/
   eleventyConfig.addAsyncShortcode(
     'image',
-    async function imageShortcode(src, alt, widths = ['auto'], sizes = []) {
+    async function imageShortcode(
+      src,
+      alt,
+      widths = ['auto'],
+      sizes = [],
+      url = false,
+    ) {
       // Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
       // Warning: Avif can be resource-intensive so take care!
       let formats = ['avif', 'webp', 'auto'];
@@ -39,8 +45,11 @@ module.exports = (eleventyConfig) => {
 
       const original = metadata.jpeg[metadata.jpeg.length - 1];
 
-      // Return the image wrapped in a link to the original image
-      return `<a href="${original.url}" target="_blank" rel="noopener noreferrer">${imageHtml}</a>`;
+      console.log('Image URL:', url);
+      if (!url) {
+        url = original.url;
+      }
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${imageHtml}</a>`;
     },
   );
 };
