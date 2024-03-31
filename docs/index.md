@@ -11,6 +11,8 @@ Search 1000+ websites in a command-line way, with
 
 It's like [DuckDuckGo bangs](https://duckduckgo.com/bangs), but on steroids. And it's [free](https://github.com/trovu/trovu/blob/master/LICENSE).
 
+There is also a [video summarizing Trovu in 30 seconds](https://www.youtube.com/watch?v=gOUNhCion9M).
+
 ## Examples
 
 -   [`gd london, liverpool`](https://trovu.net/process/index.html#query=gd+london%2Cliverpool) – find a route on Google Directions from London to Liverpool.

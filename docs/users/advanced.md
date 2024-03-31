@@ -2,6 +2,8 @@
 
 You can create and manage your own user shortcuts and set advanced settings via GitHub, or a self-hosted config file.
 
+There is also this [tutorial video](https://www.youtube.com/watch?v=DA9GjWr4WbY).
+
 ## Set up a custom configuration
 
 ### Via GitHub (recommended)
