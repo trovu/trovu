@@ -4865,7 +4865,7 @@ jf 0:
   examples:
   - description: Gehe zur Startseite
 jf 1:
-  url: https://hds.hebis.de/ubgi/Search/Results?lookfor=<argument_name>&trackSearchEvent=Einfache+Suche&type=allfields&service=catalog
+  url: https://justfind.hds.hebis.de/Search/Results?lookfor=<Suche>&type=AllFields
   title: JLU Gießen JustFind
   description: Diese Suchmaschine sucht nach Literatur mittels JustFind, der Literatursuche der Uni Gießen (Justus-Liebig-Universität Gießen)
   tags:
