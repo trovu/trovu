@@ -75,17 +75,19 @@ namespaces:
 Will look for a repo `https://github.com/johndoe/trovu-data-user/` and use its shortcuts. Setting another `name:` is possible.
 
 ```yaml
-- name: mydomain
-  url: https://example.com/shortcuts.yml
+namespaces:
+    - name: mydomain
+      url: https://example.com/shortcuts.yml
 ```
 
 Will take shortcuts from this URL. Make sure [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) is enabled.
 
 ```yaml
-- name: righthere
-  shortcuts:
-      examplekeyword 0:
-          url: https://example.com/
+namespaces:
+    - name: righthere
+      shortcuts:
+          examplekeyword 0:
+              url: https://example.com/
 ```
 
 Define a namespace with shortcuts just right here.
