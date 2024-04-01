@@ -166,7 +166,6 @@ export default class UrlProcessor {
   }
 
   static processAttributeType(attributes, processedArgument, env) {
-    const locale = env.language + '-' + env.country.toUpperCase();
     switch (attributes.type) {
       case 'date':
         processedArgument = this.processTypeDate(
@@ -176,11 +175,7 @@ export default class UrlProcessor {
         );
         break;
       case 'time':
-        processedArgument = this.processTypeTime(
-          processedArgument,
-          locale,
-          attributes,
-        );
+        processedArgument = this.processTypeTime(processedArgument, attributes);
         break;
       case 'city':
         processedArgument = this.processTypeCity(processedArgument, env);
@@ -194,6 +189,7 @@ export default class UrlProcessor {
     // If date could be parsed:
     // Set argument.
     if (dateNative) {
+      console.log('date attributes', attributes);
       const date = dayjs(dateNative);
       let format = 'YYYY-MM-DD';
       if (attributes.output) {
@@ -211,10 +207,12 @@ export default class UrlProcessor {
     // Set argument.
     if (time) {
       let format = 'HH:mm';
+      console.log('time attributes', attributes);
       if (attributes.output) {
         format = attributes.output;
       }
       processedArgument = time.format(format);
+      console.log(processedArgument);
     }
     return processedArgument;
   }
