@@ -5434,18 +5434,6 @@ rsc 1:
   examples:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
-sp 0:
-  url: https://www.potsdamer-stadtplan.com/
-  title: Stadtplan Potsdam
-  tags:
-  - old
-  examples:
-  - description: Gehe zur Startseite
-sp 1:
-  url: https://www.potsdamer-stadtplan.com/?strasse=<Straße>
-  title: Stadtplan Potsdam
-  tags:
-  - old
 stabib 0:
   url: https://staatsbibliothek-berlin.de/
   title: Staatsbibliothek zu Berlin
