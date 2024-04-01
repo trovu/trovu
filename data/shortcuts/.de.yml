@@ -116,9 +116,8 @@ aw 0:
   - expect: <title>abgeordnetenwatch.de
 aw 1:
   url: https://www.abgeordnetenwatch.de/profile?politician_search_keys=<Politiker oder Suchbegriff>
-  title: Abgeordnetenwatch
-  tags:
-  - politics
+  include:
+    key: aw 0
   examples:
   - arguments: meier
     description: Search Abgeordnetenwatch for "meier"
@@ -162,11 +161,8 @@ bex 0:
   - description: Gehe zur Startseite
 bex 1:
   url: https://bahn.expert/<Bahnhof>
-  title: bahn.expert
-  description: Zeigt Abfahrtstafel eines Bahnhofs
-  tags:
-  - bahn
-  - travel
+  include:
+    key: bex 0
   examples:
   - arguments: berlin
     description: Abfahrtstafel von Berlin Hbf
@@ -478,14 +474,8 @@ bkat 0:
   - description: Gehe zur Startseite
 bkat 1:
   url: https://bkat.wikinaut.de/?q=<Suche>
-  title: BKatSearch Bußgeldkatalog
-  description: Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
-  tags:
-  - bußgelder
-  - bußgeldtabelle
-  - fines
-  - germany
-  - traffic
+  include:
+    key: bkat 0
   examples:
   - arguments: parken
     description: Suche nach Vergehen zum Thema "Parken".
@@ -499,19 +489,15 @@ bls 0:
   - description: Gehe zur Startseite
 bls 2:
   url: 'https://www.busliniensuche.de/suche?From=<Start: {type: city}>&To=<Ziel: {type: city}>&When=<$now: {output: YYYY-MM-DD}>&Passengers=1'
-  title: Busliniensuche.de
-  tags:
-  - bus
-  - travel
+  include:
+    key: bls 0
   examples:
   - arguments: berlin, bremen
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen
 bls 3:
   url: 'https://www.busliniensuche.de/suche?From=<Start: {type: city}>&To=<Ziel: {type: city}>&When=<Datum: {type: date, output: YYYY-MM-DD}>&Passengers=1'
-  title: Busliniensuche.de
-  tags:
-  - bus
-  - travel
+  include:
+    key: bls 0
   examples:
   - arguments: berlin, bremen, 28
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen am 28. dieses Monats
@@ -522,7 +508,8 @@ blz 0:
   - description: Gehe zur Startseite
 blz 1:
   url: https://www.abfragen.de/finanzen3.asp?ort=<Ort/PLZ>
-  title: Bankleitzahlen (abfragen.de)
+  include:
+    key: blz 0
   examples:
   - arguments: berlin
     description: Bankleitzahlen der Banken in Berlin
@@ -537,11 +524,8 @@ bol 0:
   - description: Gehe zur Startseite
 bol 1:
   url: https://www.bol.de/shop/bch_start_startseite/suche/?&ZANOX_PARTNER_PARAMETER_LABEL=ZANOX_PARTNER_PARAMETER_WERT&sq=<Suche>&x=-8&y=-9&zUserID=979254&zanpid=1802156177828978688
-  title: Bol.de Suche
-  tags:
-  - bol
-  - books
-  - shopping
+  include:
+    key: bol 0
   examples:
   - arguments: goethe
     description: Suche nach "goethe" auf Bol.de
@@ -557,12 +541,8 @@ bpo 0:
   - description: Gehe zur Startseite
 bpo 1:
   url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
-  title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
-  tags:
-  - berlin
-  - classical-music
-  - cultural-events
-  - music
+  include:
+    key: bpo 0
 bsvg 0:
   url: https://www.bsvg.net/
   title: Braunschweiger Verkehrs-GmbH
@@ -574,21 +554,20 @@ bsvg 0:
   - description: Gehe zur Startseite
 bsvg 2:
   url: http://www.verkehr-bs.de/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin=<Start>&name_destination=<Ziel>
-  title: Braunschweiger Verkehrs-GmbH
-  tags:
-  - bahn
-  - braunschweig
-  - travel
+  include:
+    key: bsvg 0
   examples:
   - arguments: Ludwigstraße,Siekgraben
     description: Verbindung von Ludwigstraße nach Siekgraben
 bu7 0:
   url: https://www.buch7.de
-  title: Buch7 Online-Buchhändler
-  description: Startseite des Online-Buchhändlers buch7
+  title: Buch7
+  description: Online-Buchhändler
   tags:
   - books
   - bookshop
+  examples:
+  - description: Gehe zur Startseite
 bu7 1:
   url: https://www.buch7.de/suche?utf8=%E2%9C%93&search=<Suche>
   title: Buch7 Suche
@@ -654,10 +633,8 @@ bvb 0:
   - description: Gehe zur Startseite
 bvb 1:
   url: https://bvb-new-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,<Suche>&tab=all_tab&search_scope=all_scope&vid=49BVB_VU1&lang=de_DE&offset=0&fromRedirectFilter=true
-  title: BibliotheksVerbund Bayern
-  tags:
-  - books
-  - library
+  include:
+    key: bvb 0
 bvg 0:
   url: https://www.bvg.de/de/verbindungen/verbindungssuche
   title: BVG-Fahrplanauskunft Startseite
@@ -669,51 +646,36 @@ bvg 0:
   - description: Gehe zur Startseite
 bvg 2:
   url: https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&start=1
-  title: BVG-Fahrplanauskunft
-  tags:
-  - bahn
-  - berlin
-  - travel
+  include:
+    key: bvg 0
   examples:
   - arguments: zoo!, frohnau
     description: Nächste Verbindung vom Zoo nach Frohnau
 bvg 3:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&time=<Abfahrtszeit: {type: time}>&start=1'
-  title: BVG-Fahrplanauskunft
-  tags:
-  - bahn
-  - berlin
-  - travel
+  include:
+    key: bvg 0
   examples:
   - arguments: zoo!, frohnau, 20:00
     description: Verbindung vom Zoo nach Frohnau heute um 20 Uhr
 bvg 4:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  title: BVG-Fahrplanauskunft
-  tags:
-  - bahn
-  - berlin
-  - travel
+  include:
+    key: bvg 0
   examples:
   - arguments: zoo!, frohnau, 20:00, 27.10.
     description: Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
 bvgan 3:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S=<Start>&Z=<Ziel>&time=<Ankunftszeit: {type: time}>&start=1'
-  title: BVG-Auskunft
-  tags:
-  - bahn
-  - berlin
-  - travel
+  include:
+    key: bvg 0
   examples:
   - arguments: zoo!, frohnau, 21
     description: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr
 bvgan 4:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S=<Start>&Z=<Ziel>&time=<Ankunftszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  title: BVG-Auskunft
-  tags:
-  - bahn
-  - berlin
-  - travel
+  include:
+    key: bvg 0
   examples:
   - arguments: zoo!, frohnau, 21, 27.10.
     description: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr am 27.10.
@@ -728,11 +690,8 @@ conrad 0:
   - description: Gehe zur Startseite
 conrad 1:
   url: https://www.conrad.de/de/search.html?search=<Artikel>
-  title: Conrad Elektronik Deutschland
-  tags:
-  - conrad
-  - electronics
-  - shopping
+  include:
+    key: conrad 0
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
@@ -747,11 +706,8 @@ cys 0:
   - description: Gehe zur Startseite
 cys 1:
   url: https://www.cyberport.de/?EVENT=itemsearch&query=<Produkt>
-  title: Cyberport Store
-  tags:
-  - apple
-  - computer
-  - shopping
+  include:
+    key: cys 0
   examples:
   - arguments: macbook
     description: Suche nach Macbooks
@@ -794,11 +750,14 @@ dbb 3:
 dbm 0:
   url: https://mobile.bahn.de/
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
+  include:
+    key: db 0
   examples:
   - description: Gehe zur Startseite
 dbm 2:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version
+  include:
+    key: dbm 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
@@ -806,8 +765,6 @@ dbm 2:
     description: Kfz-Kennzeichen als Start und Ziel
     config:
       country: de
-  include:
-    key: db 0
 dbm 3:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -815,7 +772,7 @@ dbm 3:
   - arguments: berlin, hamburg, 10
     description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
   include:
-    key: db 0
+    key: dbm 0
 dbm 4:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -823,34 +780,36 @@ dbm 4:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
   include:
-    key: db 0
+    key: dbm 0
 dbmn 2:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+  include:
+    key: dbm 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
-  include:
-    key: db 0
 dbmn 3:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+  include:
+    key: dbm 0
   examples:
   - arguments: berlin, hamburg, 10
     description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
-  include:
-    key: db 0
 dbmn 4:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
+  include:
+    key: dbm 0
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
-  include:
-    key: db 0
 dbn 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
+  include:
+    key: dbm 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Bahn-Verbindung von Berlin nach Hamburg
@@ -858,16 +817,14 @@ dbn 2:
     description: Nächste Bahn-Verbindung von Berlin nach Hamburg, Eingabe über Autokennzeichen
   - arguments: sxf, txl
     description: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld, Eingabe über IATA-Flughafencodes
-  include:
-    key: db 0
 dbn 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
+  include:
+    key: db 0
   examples:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
-  include:
-    key: db 0
 dbn 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
@@ -890,7 +847,7 @@ dbt 2:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
   include:
-    key: db 0
+    key: dbt 0
 dbt 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
@@ -898,7 +855,7 @@ dbt 3:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
   include:
-    key: db 0
+    key: dbt 0
 dbt 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
@@ -906,7 +863,7 @@ dbt 4:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
   include:
-    key: db 0
+    key: dbt 0
 dbtn 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
@@ -914,7 +871,7 @@ dbtn 2:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
   include:
-    key: db 0
+    key: dbt 0
 dbtn 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
@@ -922,7 +879,7 @@ dbtn 3:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
   include:
-    key: db 0
+    key: dbt 0
 dbtn 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
@@ -930,7 +887,7 @@ dbtn 4:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
   include:
-    key: db 0
+    key: dbt 0
 dejure 0:
   url: https://dejure.org/
   title: Dejure.org Gesetze
@@ -940,9 +897,8 @@ dejure 0:
   - description: Gehe zur Startseite
 dejure 1:
   url: https://dejure.org/cgi-bin/suche?Suchenach=<Suche>
-  title: Dejure.org Gesetze
-  tags:
-  - law
+  include:
+    key: dejure 0
   examples:
   - arguments: gg
     description: Search Dejure.org Gesetze for "gg"
@@ -955,9 +911,8 @@ denic 0:
   - description: Gehe zur Startseite
 denic 1:
   url: https://webwhois.denic.de/?query=<domain>
-  title: Whois (Denic)
-  tags:
-  - domains
+  include:
+    key: denic 0
   examples:
   - arguments: google
     description: show the owner of the domain google.de
@@ -971,16 +926,12 @@ dhl 0:
   - description: Gehe zur Startseite
 dhl 1:
   url: https://www.dhl.de/de/privatkunden.html?piececode=<Sendungsnummer>
-  title: DHL Sendungsverfolgung
-  tags:
-  - dhl
-  - shipping
+  include:
+    key: dhl 0
 dhl 2:
   url: http://nolp.dhl.de/nextt-online-public/set_identcodes.do?lang=de&idc=<Sendungsnummer>&zip=<PLZ>
-  title: DHL Sendungsverfolgung
-  tags:
-  - dhl
-  - shipping
+  include:
+    key: dhl 0
 dlf 0:
   url: https://www.deutschlandfunk.de/
   title: Deutschlandfunk
@@ -992,11 +943,8 @@ dlf 0:
   - description: Gehe zur Startseite
 dlf 1:
   url: https://www.deutschlandfunk.de/suche?drsearch%3AsearchText=<Suche>
-  title: Deutschlandfunk
-  tags:
-  - germany
-  - radio
-  - radio-station
+  include:
+    key: dlf 0
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
@@ -1010,19 +958,15 @@ doe 0:
   - description: Gehe zur Startseite
 doe 1:
   url: https://www.dasoertliche.de/?zvo_ok=&plz=&quarter=&district=&ciid=&ph=<Nummer>&kgs=&buab=&zbuab=&form_name=search_invkk
-  title: DasOertliche.de, Rückwärtssuche
-  tags:
-  - phone
-  - telefonbuch
+  include:
+    key: doe 0
   examples:
   - arguments: '1805996633'
     description: Suche nach Inhaber der Nummer 01805996633
 doe 2:
   url: https://www2.dasoertliche.de/Controller?form_name=search_nat&kw=<Name>&ci=<Ort>
-  title: DasOertliche.de
-  tags:
-  - phone
-  - telefonbuch
+  include:
+    key: doe 0
   examples:
   - arguments: meier, dresden
     description: Suche Telefonnummern für "Meier" in Dresden
@@ -1033,7 +977,8 @@ duden 0:
   - description: Gehe zur Startseite
 duden 1:
   url: https://www.duden.de/suchen/dudenonline/<Suche>
-  title: Duden
+  include:
+    key: duden 0
 e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
@@ -1045,11 +990,8 @@ e 0:
   - description: Gehe zur Startseite
 e 1:
   url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<Suche>&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
-  title: Ebay.de
-  tags:
-  - ebay
-  - is-affiliate
-  - shopping
+  include:
+    key: e 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
@@ -1102,9 +1044,8 @@ farnell 0:
   - description: Gehe zur Startseite
 farnell 1:
   url: https://de.farnell.com/search?st=<Suche>&gs=true
-  title: Farnell Deutschland
-  tags:
-  - shopping
+  include:
+    key: farnell 0
   examples:
   - arguments: switch
     description: Farnell Deutschland search for switch
@@ -1115,7 +1056,8 @@ faz 0:
   - description: Gehe zur Startseite
 faz 1:
   url: https://www.faz.net/suche/?query=<Suche>
-  title: Frankfurter Allgemeine Zeitung
+  include:
+    key: faz 0
 fbw 0:
   url: https://www.fahrerbewertung.de/
   title: Fahrerbewertung
@@ -1127,11 +1069,8 @@ fbw 0:
   - description: Gehe zur Startseite
 fbw 1:
   url: https://www.fahrerbewertung.de/<Kennzeichen>
-  title: Fahrerbewertung
-  tags:
-  - driving
-  - traffic
-  - travel
+  include:
+    key: fbw 0
   examples:
   - arguments: A-BC-1234
     description: Fahrerbewertung for "ABC-DE-1234"
@@ -1145,10 +1084,8 @@ g 0:
   - description: Gehe zur Startseite
 g 1:
   url: https://www.google.de/search?hl=<$language>&q=<Suche>&ie=utf-8
-  title: Google.de
-  tags:
-  - google
-  - web-search
+  include:
+    key: g 0
   examples:
   - arguments: berlin
     description: Google-Suche nach berlin
@@ -1164,11 +1101,8 @@ gh 0:
   - description: Gehe zur Startseite
 gh 1:
   url: 'https://geizhals.de/?fs=<Produkt: {encoding: iso-8859-1}>'
-  title: Geizhals Deutschland
-  tags:
-  - geizhals
-  - preisvergleich
-  - shopping
+  include:
+    key: gh 0
   examples:
   - arguments: fernseher
     description: Search for "fernseher"
@@ -1184,19 +1118,15 @@ gii 0:
   - expect: <title>Gesetze im Internet
 gii 1:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Awww.gesetze-im-internet.de%20<Suche>
-  title: Gesetze im Internet
-  tags:
-  - gesetze
-  - law
+  include:
+    key: gii 0
   examples:
   - arguments: beweislast
     description: Suche nach "beweislast"
 gii 2:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Awww.gesetze-im-internet.de%20<Paragraph>%20<Gesetz>
-  title: Gesetze im Internet
-  tags:
-  - gesetze
-  - law
+  include:
+    key: gii 0
   examples:
   - arguments: 5, gg
     description: Zeige Artikel 5 des Grundgesetzes
@@ -1224,8 +1154,12 @@ gls 1:
     description: Suche nach Paket-Nr. 12345678901
 gls 2:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>, <Paket-Nr. 2>
+  include:
+    key: gls 0
 gls 3:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>, <Paket-Nr. 2>, <Paket-Nr. 3>
+  include:
+    key: gls 0
 gma 1:
   deprecated:
     alternative:
@@ -4696,10 +4630,8 @@ gs 0:
   - description: Gehe zur Startseite
 gs 2:
   url: 'https://www.gelbeseiten.de/<Branche>/<Ort: {type: city}>'
-  title: Gelbe Seiten
-  tags:
-  - phone
-  - shopping
+  include:
+    key: gs 0
   examples:
   - arguments: schlüsseldienst, berlin
     description: Suche nach Schlüsseldienst in Berlin
@@ -4713,10 +4645,8 @@ gsh 0:
   - description: Gehe zur Startseite
 gsh 1:
   url: https://www.google.de/search?tbm=shop&hl=<$language>&q=<Suche>
-  title: Google Shopping
-  tags:
-  - google
-  - shopping
+  include:
+    key: gsh 0
   examples:
   - arguments: computer
     description: Search for "computer"
@@ -4729,9 +4659,8 @@ gtiger 0:
   - description: Gehe zur Startseite
 gtiger 1:
   url: https://www.guenstiger.de/Katalog/Suche/<Suche>.html
-  title: Guenstiger.de
-  tags:
-  - shopping
+  include:
+    key: gtiger 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
@@ -4745,10 +4674,8 @@ gtrends 0:
   - description: Gehe zur Startseite
 gtrends 1:
   url: https://trends.google.com/trends/explore?q=<Suche>&geo=DE
-  title: Google Trends Deutschland
-  tags:
-  - google
-  - trends
+  include:
+    key: gtrends 0
   examples:
   - arguments: berlin
     description: See statistics for the term "berlin" on Google web search
@@ -4762,10 +4689,8 @@ gy 0:
   - description: Gehe zur Startseite
 gy 2:
   url: https://www.goyellow.de/suche/<Name>/<Ort>
-  title: GoYellow-Telefonbuch
-  tags:
-  - phone
-  - telefonbuch
+  include:
+    key: gy 0
   examples:
   - arguments: meier, dresden
     description: Telefonnummer von "Meier" in Dresden
@@ -4781,12 +4706,8 @@ hekticket 0:
   - description: Gehe zur Startseite
 hekticket 1:
   url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword=<Band>
-  title: Hekticket
-  tags:
-  - concerts
-  - is-affiliate
-  - music
-  - tickets
+  include:
+    key: hekticket 0
   examples:
   - arguments: fettes brot
     description: Search Hekticket for "fettes brot"
@@ -4800,10 +4721,8 @@ hermes 0:
   - description: Gehe zur Startseite
 hermes 1:
   url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#<Auftragsnummer>
-  title: Hermes Sendungsverfolgung
-  tags:
-  - hermes
-  - shipping
+  include:
+    key: hermes 0
 hs 0:
   url: https://www.hardwareschotte.de
   title: Hardwareschotte, Homepage
@@ -4813,9 +4732,8 @@ hs 0:
   - description: Gehe zur Startseite
 hs 1:
   url: https://www.hardwareschotte.de/suche/?searchstring=<Produkt>
-  title: Hardwareschotte
-  tags:
-  - shopping
+  include:
+    key: hs 0
   examples:
   - arguments: radio
     description: Suche nach "radio"
@@ -4831,34 +4749,22 @@ hvv 0:
   - description: Gehe zur Startseite
 hvv 2:
   url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
-  title: Hamburger Verkehrsverbund
-  tags:
-  - bahn
-  - hamburg
-  - hvv
-  - travel
+  include:
+    key: hvv 0
   examples:
   - arguments: pinneberg, neugraben
     description: Nächste Verbindung von Pinneberg nach Neugraben
 hvv 3:
   url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&a=1&z=<Zeit>&d=&suchen.x=0&suchen.y=0&suchen=Suchen
-  title: Hamburger Verkehrsverbund
-  tags:
-  - bahn
-  - hamburg
-  - hvv
-  - travel
+  include:
+    key: hvv 0
   examples:
   - arguments: pinneberg, neugraben, 10
     description: 'Verbindung von Pinneberg nach Neugraben heute um 10:00 Uhr '
 hvv 4:
   url: http://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&a=1&z=<Zeit>&d=<Datum>&suchen.x=0&suchen.y=0&suchen=Suchen
-  title: Hamburger Verkehrsverbund
-  tags:
-  - bahn
-  - hamburg
-  - hvv
-  - travel
+  include:
+    key: hvv 0
   examples:
   - arguments: pinneberg, neugraben, 10, 28.11.
     description: Verbindung von Pinneberg nach Neugraben um 10:00 Uhr am 28.11.
@@ -4872,10 +4778,8 @@ iban 0:
   - description: Gehe zur Startseite
 iban 1:
   url: https://www.iban-rechner.de/iban_validieren.html?tx_valIBAN_pi1%5Biban%5D=<IBAN>&tx_valIBAN_pi1%5Bfi%5D=fi&no_cache=1&Action=IBAN+pr%C3%BCfen+und+BIC-Code+suchen
-  title: IBAN-Rechner
-  tags:
-  - bank
-  - iban
+  include:
+    key: iban 0
   examples:
   - arguments: DE12500?0?170648489890
     description: Validate IBAN number, incl. unknown digits that will be calculated
@@ -4909,11 +4813,8 @@ ikea 0:
   - description: Gehe zur Startseite
 ikea 1:
   url: https://www.ikea.com/de/de/search/products/?q=<Suche>
-  title: IKEA Deutschland
-  tags:
-  - furniture
-  - ikea
-  - shopping
+  include:
+    key: ikea 0
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
@@ -4940,15 +4841,8 @@ jf 0:
   - description: Gehe zur Startseite
 jf 1:
   url: https://justfind.hds.hebis.de/Search/Results?lookfor=<Suche>&type=AllFields
-  title: JLU Gießen JustFind
-  description: Diese Suchmaschine sucht nach Literatur mittels JustFind, der Literatursuche der Uni Gießen (Justus-Liebig-Universität Gießen)
-  tags:
-  - education
-  - giessen
-  - jlu
-  - library
-  - literature
-  - student
+  include:
+    key: jf 0
   examples:
   - arguments: He pulse tube cooler operating down to 1.3 K
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
@@ -4963,11 +4857,8 @@ jw 0:
   - description: Gehe zur Startseite
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
-  title: JustWatch
-  description: Searching a movie or tv series at JustWatch.com by given name
-  tags:
-  - movies
-  - series
+  include:
+    key: jw 0
 kaufland 0:
   url: https://www.kaufland.de/
   title: Kaufland Online Marktplatz
@@ -4977,9 +4868,8 @@ kaufland 0:
   - description: Gehe zur Startseite
 kaufland 1:
   url: https://www.kaufland.de/item/search/?search_value=<Suche>
-  title: Kaufland Online Marktplatz
-  tags:
-  - shopping
+  include:
+    key: kaufland 0
   examples:
   - arguments: spiele
     description: Suche auf Kaufland.de nach "spiele"
@@ -4992,40 +4882,33 @@ kaz 0:
   - shopping
 kaz 1:
   url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>
-  title: Kleinanzeigen.de
-  tags:
-  - ebay
-  - shopping
+  include:
+    key: kaz 0
   examples:
   - arguments: kühlschrank
     description: Suche nach "kühlschrank"
 kaz 2:
   url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>&locationStr=<PLZ/Ort>
-  title: Kleinanzeigen.de
-  tags:
-  - ebay
-  - shopping
+  include:
+    key: kaz 0
   examples:
   - arguments: kühlschrank, berlin
     description: Suche nach "kühlschrank" in Berlin
 kaz+ 0:
   url: https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
   title: Kleinanzeigen - Anzeige aufgeben
-  tags:
-  - selling
-  - shopping
+  include:
+    key: kaz 0
 kaza 0:
   url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
   title: Kleinanzeigen - Meine Anzeigen
-  tags:
-  - selling
-  - shopping
+  include:
+    key: kaz 0
 kazn 0:
   url: https://www.kleinanzeigen.de/m-nachrichten.html
   title: Kleinanzeigen - Meine Nachrichten
-  tags:
-  - selling
-  - shopping
+  include:
+    key: kaz 0
 kfz 0:
   url: https://www.autokennzeichen.info/
   title: KFZ-Kennzeichen Deutschland
@@ -5036,10 +4919,8 @@ kfz 0:
   - description: Gehe zur Startseite
 kfz 1:
   url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20<Ort/Kennzeichen>&ie=utf-8
-  title: KFZ-Kennzeichen Deutschland
-  tags:
-  - auto
-  - traffic
+  include:
+    key: kfz 0
   examples:
   - arguments: hro
     description: Suche Stadt/Kreis des Kennzeichens "hro"
@@ -5056,11 +4937,8 @@ kino 0:
   - description: Gehe zur Startseite
 kino 1:
   url: https://www.kino.de/kinoprogramm/<Ort/Stadtteil/Kino/PLZ>/
-  title: Kinoprogramm
-  tags:
-  - cinema
-  - kino
-  - movies
+  include:
+    key: kino 0
   examples:
   - arguments: berlin
     description: Kinoprogramm in Berlin
@@ -5074,10 +4952,8 @@ kit 0:
   - description: Gehe zur Startseite
 kit 1:
   url: https://www.google.com/search?q=site%3Akit.edu+<Suche>
-  title: Karlsruher Institut für Technologie (KIT), Suche via Google
-  tags:
-  - karlsruhe
-  - science
+  include:
+    key: kit 0
   examples:
   - arguments: alumni
     description: Suche nach "alumni"
@@ -5092,11 +4968,8 @@ koka 0:
   - description: Gehe zur Startseite
 koka 1:
   url: 'http://www.koka36.de/suche.php?search=<Suche: {encoding: iso-8859-1}>'
-  title: Koka36.de Konzertkasse
-  tags:
-  - concerts
-  - events
-  - konzerte
+  include:
+    key: koka 0
   examples:
   - arguments: berlin
     description: Suche nach Konzerten und Events in Berlin
@@ -5110,10 +4983,8 @@ kununu 0:
   - description: Gehe zur Startseite
 kununu 1:
   url: https://www.kununu.com/de/search?q=<Suche>
-  title: Kununu Deutschland
-  description: Suche nach Arbeitgeber-Bewertungen
-  tags:
-  - employer
+  include:
+    key: kununu 0
   examples:
   - arguments: acme
     description: Suche nach Bewertungen der Firma ACME als Arbeitgeber
@@ -5127,10 +4998,8 @@ kvk 0:
   - description: Gehe zur Startseite
 kvk 1:
   url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=kvk-redesign&lang=de&title=KIT-Bibliothek%3A+Karlsruher+Virtueller+Katalog+KVK+%3A+Ergebnisanzeige&head=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fheader.html&spacer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fspacer.html&footer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Ffooter.html&css=none&input-charset=utf-8&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&disableEmbeddedFullTitle=1&kataloge=BVB&ref=direct&client-js=yes
-  title: Karlsruher Virtueller Katalog
-  tags:
-  - books
-  - library
+  include:
+    key: kvk 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
@@ -5157,7 +5026,8 @@ mfs 0:
   - description: Gehe zur Startseite
 mfs 1:
   url: https://www.medizinfuchs.de/produkt/search/<Suche>
-  title: Medizinfuch Apothekenpreisvergleich
+  include:
+    key: mfs 0
 mm 0:
   url: https://www.mediamarkt.de/
   title: Media Markt
@@ -5202,56 +5072,36 @@ mvv 0:
   - description: Gehe zur Startseite
 mvv 2:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
-  title: Elektronische Fahrplanauskunft München
-  tags:
-  - bahn
-  - mvv
-  - münchen
-  - travel
+  include:
+    key: mvv 0
   examples:
   - arguments: freising,petershausen
     description: Nächste Verbindung von Freising nach Petershausen
 mvv 3:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
-  title: Elektronische Fahrplanauskunft München
-  tags:
-  - bahn
-  - mvv
-  - münchen
-  - travel
+  include:
+    key: mvv 0
   examples:
   - arguments: freising,petershausen,10
     description: Nächste Verbindung von Freising nach Petershausen um 10.00 Uhr
 mvv 4:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
-  title: Elektronische Fahrplanauskunft München
-  tags:
-  - bahn
-  - mvv
-  - münchen
-  - travel
+  include:
+    key: mvv 0
   examples:
   - arguments: freising,petershausen,10,30
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr
 mvv 5:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
-  title: Elektronische Fahrplanauskunft München
-  tags:
-  - bahn
-  - mvv
-  - münchen
-  - travel
+  include:
+    key: mvv 0
   examples:
   - arguments: freising,petershausen,10,30,28
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr am 28. des aktuellen Monats
 mvv 6:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
-  title: Elektronische Fahrplanauskunft München
-  tags:
-  - bahn
-  - mvv
-  - münchen
-  - travel
+  include:
+    key: mvv 0
   examples:
   - arguments: freising,petershausen,10,30,28,1
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr am 28.1.
@@ -5274,20 +5124,15 @@ osi 0:
   - description: Gehe zur Startseite
 osi 1:
   url: https://www.osiander.de/suche?sq=<Suche>
-  title: Osiander-Suche
-  tags:
-  - books
-  - onlinestore
+  include:
+    key: osi 0
   examples:
   - arguments: Iain M. Banks
     description: Sucht nach dem Science-Fiction-Autor
 osii 1:
   url: https://www.osiander.de/details.cfm?isbn=<isbn13>
-  title: Osiander-Suche, ISBN13
-  tags:
-  - books
-  - isbn13
-  - onlinestore
+  include:
+    key: osi 0
   examples:
   - arguments: '9783442453023'
     description: Sucht nach einem bestimmten Buch
@@ -5306,10 +5151,8 @@ pollin 0:
   - description: Gehe zur Startseite
 pollin 1:
   url: https://www.pollin.de/shop/suchergebnis.html?S_TEXT=<Suche>
-  title: Pollin Electronic
-  tags:
-  - electronic
-  - shopping
+  include:
+    key: pollin 0
   examples:
   - arguments: batterie
     description: Suche bei pollin.de nach "batterie"
@@ -5324,36 +5167,28 @@ ppw 0:
   - description: Gehe zur Startseite
 ppw 1:
   url: https://wiki.piratenpartei.de/Spezial:Suche?search=<Suche>&go=Seite
-  title: Piratenpartei Wiki
-  tags:
-  - partei
-  - piraten
-  - piratenpartei
+  include:
+    key: ppw 0
   examples:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
 ppwg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=wiki.piratenpartei.de&domains=wiki.piratenpartei.de&q=<Suche>
   title: Piratenpartei Wiki via Google
-  tags:
-  - partei
-  - piraten
-  - piratenpartei
+  include:
+    key: ppw 0
   examples:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
 preis 0:
   url: https://www.preissuchmaschine.de/
   title: Preissuchmaschine
-  tags:
-  - old
   examples:
   - description: Gehe zur Startseite
 preis 1:
   url: https://www.preissuchmaschine.de/Katalog/Suche/<Produkt>.html
-  title: Preissuchmaschine
-  tags:
-  - old
+  include:
+    key: preis 0
 radar 0:
   url: https://www.t-online.de/advtoi/wetter/info/niederschlagsradar.html
   title: Wetter-Radar von T-Online
@@ -5371,9 +5206,8 @@ reichelt 0:
   - description: Gehe zur Startseite
 reichelt 1:
   url: https://www.reichelt.de/index.html?ACTION=446&LA=0&nbc=1&q=<Produkt>
-  title: Reichelt Elektronik
-  tags:
-  - shopping
+  include:
+    key: reichelt 0
   examples:
   - arguments: iphone
     description: Suche nach "iphone"
@@ -5389,31 +5223,22 @@ rmv 0:
     description: Verbindung von Frankfurt nach Wiesbaden
 rmv 2:
   url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt
-  title: RMV Fahrplanauskunft
-  tags:
-  - bahn
-  - frankfurt
-  - travel
+  include:
+    key: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden
     description: Verbindung von Frankfurt nach Wiesbaden
 rmv 3:
   url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date=%2B0&times=%2B0&start&time=<Zeit>
-  title: RMV Fahrplanauskunft
-  tags:
-  - bahn
-  - frankfurt
-  - travel
+  include:
+    key: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden, 10
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr
 rmv 4:
   url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&time=<Zeit>&date=<Datum>&times=%2B0&start
-  title: RMV Fahrplanauskunft
-  tags:
-  - bahn
-  - frankfurt
-  - travel
+  include:
+    key: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden, 10, 1.1.
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 1.1.
@@ -5427,10 +5252,8 @@ rsc 0:
   - description: Gehe zur Startseite
 rsc 1:
   url: https://de.rs-online.com/web/c/?searchTerm=<Produkt>
-  title: RS Components Deutschland
-  tags:
-  - electronics
-  - shopping
+  include:
+    key: rsc 0
   examples:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
@@ -5445,11 +5268,8 @@ stabib 0:
   - description: Gehe zur Startseite
 stabib 1:
   url: https://lbssbb.gbv.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  title: Staatsbibliothek zu Berlin
-  tags:
-  - berlin
-  - books
-  - library
+  include:
+    key: stabib 0
   examples:
   - arguments: goethe
     description: Suche nach "goethe"
@@ -5463,10 +5283,8 @@ sub 0:
   - description: Gehe zur Startseite
 sub 1:
   url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  title: Niedersächsische Staats- und Universitätsbibliothek Göttingen
-  tags:
-  - göttingen
-  - library
+  include:
+    key: sub 0
   examples:
   - arguments: houellebecq
     description: Suche nach "houellebecq"
@@ -5477,7 +5295,8 @@ swp 0:
   - description: Gehe zur Startseite
 swp 1:
   url: https://www.swp-berlin.org/suche?search%5Bq%5D=<Suche>
-  title: Stiftung Wissenschaft und Politik
+  include:
+    key: swp 0
 tel 0:
   url: https://www.telefonbuch.de/
   title: Telefonbuch
@@ -5488,19 +5307,15 @@ tel 0:
   - description: Gehe zur Startseite
 tel 1:
   url: https://www4.dastelefonbuch.de/Rueckwaerts-Suche.html?kw=<Nummer>&x=35&y=11&cifav=0&s=a20000&la=de&cmd=search&ort_ok=0&sp=55&vert_ok=0&aktion=23
-  title: Telefonbuch Rückwärts-Suche
-  tags:
-  - phone
-  - telefonbuch
+  include:
+    key: tel 0
   examples:
   - arguments: '8003301000'
     description: Teilnehmer mit der Telefonnummer 08003301000
 tel 2:
   url: 'https://www.dastelefonbuch.de/Suche/<Name>/<Ort: {type: city}>'
-  title: Telefonbuch
-  tags:
-  - phone
-  - telefonbuch
+  include:
+    key: tel 0
   examples:
   - arguments: meier, dresden
     description: Telefonnummer von "Meier" in Dresden
@@ -5516,10 +5331,8 @@ tho 0:
   - description: Gehe zur Startseite
 tho 1:
   url: https://www.thomann.de/de/search_dir.html?sw=<Produkt>
-  title: Thomann.de
-  tags:
-  - music
-  - shopping
+  include:
+    key: tho 0
   examples:
   - arguments: gitarre
     description: Suche nach Gitarre
@@ -5533,8 +5346,8 @@ tv 0:
 tva 1:
   url: https://www.tvinfo.de/tv-programm/<Sender>
   title: TV-Programm auf ...
-  tags:
-  - tv
+  include:
+    key: tv 0
   examples:
   - arguments: ard
     description: Search for "ard"
@@ -5548,9 +5361,9 @@ tvinfo 1:
     description: Suche nach "tagesschau"
 tvu 1:
   url: https://www.tvinfo.de/fernsehprogramm/<Stunde>:00
+  include:
+    key: tv 0
   title: TV-Programm um ...
-  tags:
-  - tv
   examples:
   - arguments: '20'
     description: Search for "20"
@@ -5563,9 +5376,8 @@ uwz 0:
   - description: Gehe zur Startseite
 uwz 1:
   url: https://www.unwetterzentrale.de/uwz/getwarning_de.php?plz=<PLZ/Ort>&uwz=UWZ-DE&lang=de
-  title: Unwetterzentrale.de
-  tags:
-  - weather
+  include:
+    key: uwz 0
   examples:
   - arguments: '10119'
     description: Zeige Wetterwarnungen für Postleitzahl 10119
@@ -5581,45 +5393,29 @@ vbb 0:
   - description: Gehe zur Startseite
 vbb 1:
   url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input=<Ort>&dn?OK#focus
-  title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
-  tags:
-  - bahn
-  - berlin
-  - brandenburg
-  - travel
+  include:
+    key: vbb 0
   examples:
   - arguments: frohnau
     description: Aktuelle Ankunft/Abfahrtszeiten an der Station Frohnau
 vbb 2:
   url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&start=1
-  title: Verkehrsverbund Berlin-Brandenburg
-  tags:
-  - bahn
-  - berlin
-  - brandenburg
-  - travel
+  include:
+    key: vbb 0
   examples:
   - arguments: westhafen, frohnau
     description: Nächste Verbindungen von Westhafen nach Frohnau
 vbb 3:
   url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&start=1
-  title: Verkehrsverbund Berlin-Brandenburg
-  tags:
-  - bahn
-  - berlin
-  - brandenburg
-  - travel
+  include:
+    key: vbb 0
   examples:
   - arguments: vbb westhafen, frohnau, 20:00
     description: Verbindungen von Westhafen nach Frohnau heute um 20 Uhr
 vbb 4:
   url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&date=<Datum>&start=1
-  title: Verkehrsverbund Berlin-Brandenburg
-  tags:
-  - bahn
-  - berlin
-  - brandenburg
-  - travel
+  include:
+    key: vbb 0
   examples:
   - arguments: vbb westhafen, frohnau, 20:00, 31.12.12.
     description: Verbindungen von Westhafen nach Frohnau am 31. Dezember um 20 Uhr
@@ -5634,41 +5430,29 @@ vgn 0:
   - description: Gehe zur Startseite
 vgn 1:
   url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
-  title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
-  tags:
-  - bahn
-  - nürnberg
-  - travel
+  include:
+    key: vgn 0
   examples:
   - arguments: s1
     description: Fahrplan der Linie S1
 vgn 2:
   url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>
-  title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
-  tags:
-  - bahn
-  - nürnberg
-  - travel
+  include:
+    key: vgn 0
   examples:
   - arguments: nürnberg, neumarkt
     description: Verbindung von Nürnberg nach Neumarkt
 vgn 3:
   url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>&xtime=<Abfahrtszeit>&xdate=today
-  title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
-  tags:
-  - bahn
-  - nürnberg
-  - travel
+  include:
+    key: vgn 0
   examples:
   - arguments: nürnberg, neumarkt, 10
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr
 vgn 4:
   url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin=<Start>&type_destination=any&name_destination=<Ziel>&itdTripDateTimeDepArr=dep&xtime=<Abfahrtszeit>&xdate=<Datum>
-  title: Verkehrsverbund Großraum Nürnberg, Fahrplanauskunft
-  tags:
-  - bahn
-  - nürnberg
-  - travel
+  include:
+    key: vgn 0
   examples:
   - arguments: nürnberg, neumarkt, 10, 1.1.
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr am 1.1.
@@ -5687,15 +5471,8 @@ vgs 0:
   - description: Gehe zur Startseite
 vgs 2:
   url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
-  title: Saarfahrplan
-  tags:
-  - bahn
-  - fahrplan
-  - reise
-  - saarbrücken
-  - saarland
-  - travel
-  - vgs
+  include:
+    key: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf
@@ -5703,29 +5480,15 @@ vgs 2:
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf, Eingabe über Autokennzeichen
 vgs 3:
   url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&start=1'
-  title: Saarfahrplan
-  tags:
-  - bahn
-  - fahrplan
-  - reise
-  - saarbrücken
-  - saarland
-  - travel
-  - vgs
+  include:
+    key: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr
 vgs 4:
   url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&D=<Datum>&start=1'
-  title: Saarfahrplan
-  tags:
-  - bahn
-  - fahrplan
-  - reise
-  - saarbrücken
-  - saarland
-  - travel
-  - vgs
+  include:
+    key: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10, 20.10.
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr am 20.10.
@@ -5746,51 +5509,36 @@ vrr 0:
   - vrr
 vrr 2:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
-  title: VRR-Auskunft
-  tags:
-  - bahn
-  - travel
-  - vrr
+  include:
+    key: vrr 0
   examples:
   - arguments: dortmund, bochum
     description: Nächste Verbindung von Dortmund nach Bochum
 vrr 3:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
-  title: VRR-Auskunft
-  tags:
-  - bahn
-  - travel
-  - vrr
+  include:
+    key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10
     description: Verbindung von Dortmund nach Bochum heute um 10 Uhr
 vrr 4:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
-  title: VRR-Auskunft
-  tags:
-  - bahn
-  - travel
-  - vrr
+  include:
+    key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30
     description: Verbindung von Dortmund nach Bochum heute um 10.30 Uhr
 vrr 5:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
-  title: VRR-Auskunft
-  tags:
-  - bahn
-  - travel
-  - vrr
+  include:
+    key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30, 28
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28. des aktuellen Monats
 vrr 6:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
-  title: VRR-Auskunft
-  tags:
-  - bahn
-  - travel
-  - vrr
+  include:
+    key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30, 28, 1
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28.1.
@@ -5806,34 +5554,22 @@ vvo 0:
   - description: Gehe zur Startseite
 vvo 2:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeittyp%5D=dep
-  title: Verkehrsverbund Oberelbe
-  tags:
-  - bahn
-  - dresden
-  - travel
-  - vvo
+  include:
+    key: vvo 0
   examples:
   - arguments: priestewitz, krippen
     description: Nächste Verbindung von Priestewitz nach Krippen
 vvo 3:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep
-  title: Verkehrsverbund Oberelbe
-  tags:
-  - bahn
-  - dresden
-  - travel
-  - vvo
+  include:
+    key: vvo 0
   examples:
   - arguments: priestewitz, krippen, 10
     description: Verbindung von Priestewitz nach Krippen heute um 10:00 Uhr
 vvo 4:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep&vaform%5Bdatum%5D=<Datum>
-  title: Verkehrsverbund Oberelbe
-  tags:
-  - bahn
-  - dresden
-  - travel
-  - vvo
+  include:
+    key: vvo 0
   examples:
   - arguments: priestewitz, krippen, 10, 28.11.
     description: Verbindung von Priestewitz nach Krippen um 10:00 Uhr am 28.11.
@@ -5848,11 +5584,8 @@ vvs 0:
   - description: Gehe zur Startseite
 vvs 2:
   url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
-  title: VVS Verkehrsverbund Stuttgart
-  tags:
-  - bahn
-  - stuttgart
-  - travel
+  include:
+    key: vvs 0
   examples:
   - arguments: schwabstr, hbf
     description: Nächste Verbindung von Schwabstr. zum Hauptbahnhof
@@ -5865,9 +5598,8 @@ we 0:
   - description: Gehe zur Startseite
 we 1:
   url: https://www.wetter.com/suche/?search=<Ort>
-  title: Wetter.com
-  tags:
-  - weather
+  include:
+    key: we 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -5882,11 +5614,8 @@ wse 0:
   - description: Gehe zur Startseite
 wse 1:
   url: https://www.werstreamt.es/filme-serien/?q=m<Suche>&action_results=suchen
-  title: Wer streamt es?
-  tags:
-  - movies
-  - series
-  - tv
+  include:
+    key: wse 0
 zal 0:
   url: https://www.zalando.de/
   title: Zalando.de
@@ -5897,10 +5626,8 @@ zal 0:
   - description: Gehe zur Startseite
 zal 1:
   url: https://www.zalando.de/katalog/?q=<Produkt>
-  title: Zalando.de
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen
