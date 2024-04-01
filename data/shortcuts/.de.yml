@@ -903,6 +903,16 @@ dlf 0:
   - germany
   - radio
   - radio-station
+dlf 1:
+  url: https://www.deutschlandfunk.de/suche?drsearch%3AsearchText=<Suche>
+  title: Deutschlandfunk
+  tags:
+  - germany
+  - radio
+  - radio-station
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
 doe 0:
   url: https://www.dasoertliche.de/
   title: DasOertliche.de Homepage
