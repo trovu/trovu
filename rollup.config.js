@@ -40,6 +40,7 @@ export default [
     plugins: [
       watch({ dir: 'src/html/' }),
       watch({ dir: 'src/img/' }),
+      watch({ dir: 'data/' }),
       resolve(),
       commonjs(),
       gitInfo(), // includes also json()
