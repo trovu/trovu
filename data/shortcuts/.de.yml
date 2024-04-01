@@ -387,6 +387,8 @@ bibmlu 0:
   - halle
   - library
   - uni
+  examples:
+  - description: Gehe zur Startseite
 bibmlu 1:
   url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<Suche>
   include:
@@ -531,6 +533,8 @@ bol 0:
   - bol
   - books
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 bol 1:
   url: https://www.bol.de/shop/bch_start_startseite/suche/?&ZANOX_PARTNER_PARAMETER_LABEL=ZANOX_PARTNER_PARAMETER_WERT&sq=<Suche>&x=-8&y=-9&zUserID=979254&zanpid=1802156177828978688
   title: Bol.de Suche
@@ -549,6 +553,8 @@ bpo 0:
   - classical-music
   - cultural-events
   - music
+  examples:
+  - description: Gehe zur Startseite
 bpo 1:
   url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
@@ -564,6 +570,8 @@ bsvg 0:
   - bahn
   - braunschweig
   - travel
+  examples:
+  - description: Gehe zur Startseite
 bsvg 2:
   url: http://www.verkehr-bs.de/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin=<Start>&name_destination=<Ziel>
   title: Braunschweiger Verkehrs-GmbH
@@ -642,6 +650,8 @@ bvb 0:
   tags:
   - books
   - library
+  examples:
+  - description: Gehe zur Startseite
 bvb 1:
   url: https://bvb-new-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,<Suche>&tab=all_tab&search_scope=all_scope&vid=49BVB_VU1&lang=de_DE&offset=0&fromRedirectFilter=true
   title: BibliotheksVerbund Bayern
@@ -655,6 +665,8 @@ bvg 0:
   - bahn
   - berlin
   - travel
+  examples:
+  - description: Gehe zur Startseite
 bvg 2:
   url: https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&start=1
   title: BVG-Fahrplanauskunft
@@ -712,6 +724,8 @@ conrad 0:
   - conrad
   - electronics
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 conrad 1:
   url: https://www.conrad.de/de/search.html?search=<Artikel>
   title: Conrad Elektronik Deutschland
@@ -729,6 +743,8 @@ cys 0:
   - apple
   - computer
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 cys 1:
   url: https://www.cyberport.de/?EVENT=itemsearch&query=<Produkt>
   title: Cyberport Store
@@ -746,6 +762,8 @@ db 0:
   - bahn
   - railway
   - travel
+  examples:
+  - description: Gehe zur Startseite
 db 1:
   url: https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?input=<Bahnhof>&boardType=dep&time=actual&productsDefault=1111101&start=yes
   title: Deutsche Bahn, Verspätungen / aktuelle Abfahrt
@@ -776,6 +794,8 @@ dbb 3:
 dbm 0:
   url: https://mobile.bahn.de/
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
+  examples:
+  - description: Gehe zur Startseite
 dbm 2:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -861,6 +881,8 @@ dbt 0:
   title: Deutsche Bahn Fahrplanauskunft, Textversion
   include:
     key: db 0
+  examples:
+  - description: Gehe zur Startseite
 dbt 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
@@ -914,6 +936,8 @@ dejure 0:
   title: Dejure.org Gesetze
   tags:
   - law
+  examples:
+  - description: Gehe zur Startseite
 dejure 1:
   url: https://dejure.org/cgi-bin/suche?Suchenach=<Suche>
   title: Dejure.org Gesetze
@@ -927,6 +951,8 @@ denic 0:
   title: Whois (Denic)
   tags:
   - domains
+  examples:
+  - description: Gehe zur Startseite
 denic 1:
   url: https://webwhois.denic.de/?query=<domain>
   title: Whois (Denic)
@@ -941,6 +967,8 @@ dhl 0:
   tags:
   - dhl
   - shipping
+  examples:
+  - description: Gehe zur Startseite
 dhl 1:
   url: https://www.dhl.de/de/privatkunden.html?piececode=<Sendungsnummer>
   title: DHL Sendungsverfolgung
@@ -960,6 +988,8 @@ dlf 0:
   - germany
   - radio
   - radio-station
+  examples:
+  - description: Gehe zur Startseite
 dlf 1:
   url: https://www.deutschlandfunk.de/suche?drsearch%3AsearchText=<Suche>
   title: Deutschlandfunk
@@ -976,6 +1006,8 @@ doe 0:
   tags:
   - phone
   - telefonbuch
+  examples:
+  - description: Gehe zur Startseite
 doe 1:
   url: https://www.dasoertliche.de/?zvo_ok=&plz=&quarter=&district=&ciid=&ph=<Nummer>&kgs=&buab=&zbuab=&form_name=search_invkk
   title: DasOertliche.de, Rückwärtssuche
@@ -997,6 +1029,8 @@ doe 2:
 duden 0:
   url: https://www.duden.de/
   title: Duden
+  examples:
+  - description: Gehe zur Startseite
 duden 1:
   url: https://www.duden.de/suchen/dudenonline/<Suche>
   title: Duden
@@ -1007,6 +1041,8 @@ e 0:
   - ebay
   - is-affiliate
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 e 1:
   url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<Suche>&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
@@ -1062,6 +1098,8 @@ farnell 0:
   title: Farnell Deutschland
   tags:
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 farnell 1:
   url: https://de.farnell.com/search?st=<Suche>&gs=true
   title: Farnell Deutschland
@@ -1073,6 +1111,8 @@ farnell 1:
 faz 0:
   url: https://www.faz.net/
   title: Frankfurter Allgemeine Zeitung
+  examples:
+  - description: Gehe zur Startseite
 faz 1:
   url: https://www.faz.net/suche/?query=<Suche>
   title: Frankfurter Allgemeine Zeitung
@@ -1083,6 +1123,8 @@ fbw 0:
   - driving
   - traffic
   - travel
+  examples:
+  - description: Gehe zur Startseite
 fbw 1:
   url: https://www.fahrerbewertung.de/<Kennzeichen>
   title: Fahrerbewertung
@@ -1099,6 +1141,8 @@ g 0:
   tags:
   - google
   - web-search
+  examples:
+  - description: Gehe zur Startseite
 g 1:
   url: https://www.google.de/search?hl=<$language>&q=<Suche>&ie=utf-8
   title: Google.de
@@ -1116,6 +1160,8 @@ gh 0:
   - geizhals
   - preisvergleich
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 gh 1:
   url: 'https://geizhals.de/?fs=<Produkt: {encoding: iso-8859-1}>'
   title: Geizhals Deutschland
@@ -1167,6 +1213,8 @@ gls 0:
   tags:
   - gls
   - shipping
+  examples:
+  - description: Gehe zur Startseite
 gls 1:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>
   include:
@@ -4644,6 +4692,8 @@ gs 0:
   tags:
   - phone
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 gs 2:
   url: 'https://www.gelbeseiten.de/<Branche>/<Ort: {type: city}>'
   title: Gelbe Seiten
@@ -4659,6 +4709,8 @@ gsh 0:
   tags:
   - google
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 gsh 1:
   url: https://www.google.de/search?tbm=shop&hl=<$language>&q=<Suche>
   title: Google Shopping
@@ -4673,6 +4725,8 @@ gtiger 0:
   title: Guenstiger.de
   tags:
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 gtiger 1:
   url: https://www.guenstiger.de/Katalog/Suche/<Suche>.html
   title: Guenstiger.de
@@ -4687,6 +4741,8 @@ gtrends 0:
   tags:
   - google
   - trends
+  examples:
+  - description: Gehe zur Startseite
 gtrends 1:
   url: https://trends.google.com/trends/explore?q=<Suche>&geo=DE
   title: Google Trends Deutschland
@@ -4702,6 +4758,8 @@ gy 0:
   tags:
   - phone
   - telefonbuch
+  examples:
+  - description: Gehe zur Startseite
 gy 2:
   url: https://www.goyellow.de/suche/<Name>/<Ort>
   title: GoYellow-Telefonbuch
@@ -4719,6 +4777,8 @@ hekticket 0:
   - is-affiliate
   - music
   - tickets
+  examples:
+  - description: Gehe zur Startseite
 hekticket 1:
   url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword=<Band>
   title: Hekticket
@@ -4736,6 +4796,8 @@ hermes 0:
   tags:
   - hermes
   - shipping
+  examples:
+  - description: Gehe zur Startseite
 hermes 1:
   url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#<Auftragsnummer>
   title: Hermes Sendungsverfolgung
@@ -4747,6 +4809,8 @@ hs 0:
   title: Hardwareschotte, Homepage
   tags:
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 hs 1:
   url: https://www.hardwareschotte.de/suche/?searchstring=<Produkt>
   title: Hardwareschotte
@@ -4763,6 +4827,8 @@ hvv 0:
   - hamburg
   - hvv
   - travel
+  examples:
+  - description: Gehe zur Startseite
 hvv 2:
   url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
@@ -4802,6 +4868,8 @@ iban 0:
   tags:
   - bank
   - iban
+  examples:
+  - description: Gehe zur Startseite
 iban 1:
   url: https://www.iban-rechner.de/iban_validieren.html?tx_valIBAN_pi1%5Biban%5D=<IBAN>&tx_valIBAN_pi1%5Bfi%5D=fi&no_cache=1&Action=IBAN+pr%C3%BCfen+und+BIC-Code+suchen
   title: IBAN-Rechner
@@ -4821,6 +4889,8 @@ idl 0:
   title: Idealo Preisvergleich
   tags:
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 idl 1:
   url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=<Produkt>
   include:
@@ -4835,6 +4905,8 @@ ikea 0:
   - furniture
   - ikea
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 ikea 1:
   url: https://www.ikea.com/de/de/search/products/?q=<Suche>
   title: IKEA Deutschland
@@ -4851,6 +4923,8 @@ iwb 0:
   tags:
   - berlin
   - polizei
+  examples:
+  - description: Gehe zur Startseite
 jf 0:
   url: https://justfind.hds.hebis.de/
   title: JLU Gießen JustFind
@@ -4885,6 +4959,8 @@ jw 0:
   tags:
   - movies
   - series
+  examples:
+  - description: Gehe zur Startseite
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
   title: JustWatch
@@ -4897,6 +4973,8 @@ kaufland 0:
   title: Kaufland Online Marktplatz
   tags:
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 kaufland 1:
   url: https://www.kaufland.de/item/search/?search_value=<Suche>
   title: Kaufland Online Marktplatz
@@ -4954,6 +5032,8 @@ kfz 0:
   tags:
   - auto
   - traffic
+  examples:
+  - description: Gehe zur Startseite
 kfz 1:
   url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20<Ort/Kennzeichen>&ie=utf-8
   title: KFZ-Kennzeichen Deutschland
@@ -4972,6 +5052,8 @@ kino 0:
   - cinema
   - kino
   - movies
+  examples:
+  - description: Gehe zur Startseite
 kino 1:
   url: https://www.kino.de/kinoprogramm/<Ort/Stadtteil/Kino/PLZ>/
   title: Kinoprogramm
@@ -4988,6 +5070,8 @@ kit 0:
   tags:
   - karlsruhe
   - science
+  examples:
+  - description: Gehe zur Startseite
 kit 1:
   url: https://www.google.com/search?q=site%3Akit.edu+<Suche>
   title: Karlsruher Institut für Technologie (KIT), Suche via Google
@@ -5004,6 +5088,8 @@ koka 0:
   - concerts
   - events
   - konzerte
+  examples:
+  - description: Gehe zur Startseite
 koka 1:
   url: 'http://www.koka36.de/suche.php?search=<Suche: {encoding: iso-8859-1}>'
   title: Koka36.de Konzertkasse
@@ -5020,6 +5106,8 @@ kununu 0:
   description: Suche nach Arbeitgeber-Bewertungen
   tags:
   - employer
+  examples:
+  - description: Gehe zur Startseite
 kununu 1:
   url: https://www.kununu.com/de/search?q=<Suche>
   title: Kununu Deutschland
@@ -5035,6 +5123,8 @@ kvk 0:
   tags:
   - books
   - library
+  examples:
+  - description: Gehe zur Startseite
 kvk 1:
   url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=kvk-redesign&lang=de&title=KIT-Bibliothek%3A+Karlsruher+Virtueller+Katalog+KVK+%3A+Ergebnisanzeige&head=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fheader.html&spacer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fspacer.html&footer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Ffooter.html&css=none&input-charset=utf-8&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&disableEmbeddedFullTitle=1&kataloge=BVB&ref=direct&client-js=yes
   title: Karlsruher Virtueller Katalog
@@ -5063,6 +5153,8 @@ lpg 1:
 mfs 0:
   url: https://www.medizinfuchs.de/
   title: Medizinfuch Apothekenpreisvergleich
+  examples:
+  - description: Gehe zur Startseite
 mfs 1:
   url: https://www.medizinfuchs.de/produkt/search/<Suche>
   title: Medizinfuch Apothekenpreisvergleich
@@ -5072,6 +5164,8 @@ mm 0:
   tags:
   - electronics
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 mm 1:
   url: https://www.mediamarkt.de/de/search.html?query=<Suche>
   examples:
@@ -5104,6 +5198,8 @@ mvv 0:
   - mvv
   - münchen
   - travel
+  examples:
+  - description: Gehe zur Startseite
 mvv 2:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   title: Elektronische Fahrplanauskunft München
@@ -5166,12 +5262,16 @@ nsr 0:
   - radar
   - weather
   - wetter
+  examples:
+  - description: Gehe zur Startseite
 osi 0:
   url: https://www.osiander.de/
   title: Osiander (Buchhändler)
   tags:
   - books
   - onlinestore
+  examples:
+  - description: Gehe zur Startseite
 osi 1:
   url: https://www.osiander.de/suche?sq=<Suche>
   title: Osiander-Suche
@@ -5202,6 +5302,8 @@ pollin 0:
   tags:
   - electronic
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 pollin 1:
   url: https://www.pollin.de/shop/suchergebnis.html?S_TEXT=<Suche>
   title: Pollin Electronic
@@ -5218,6 +5320,8 @@ ppw 0:
   - partei
   - piraten
   - piratenpartei
+  examples:
+  - description: Gehe zur Startseite
 ppw 1:
   url: https://wiki.piratenpartei.de/Spezial:Suche?search=<Suche>&go=Seite
   title: Piratenpartei Wiki
@@ -5243,6 +5347,8 @@ preis 0:
   title: Preissuchmaschine
   tags:
   - old
+  examples:
+  - description: Gehe zur Startseite
 preis 1:
   url: https://www.preissuchmaschine.de/Katalog/Suche/<Produkt>.html
   title: Preissuchmaschine
@@ -5254,11 +5360,15 @@ radar 0:
   tags:
   - radar
   - weather
+  examples:
+  - description: Gehe zur Startseite
 reichelt 0:
   url: https://www.reichelt.de/
   title: Reichelt Elektronik
   tags:
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 reichelt 1:
   url: https://www.reichelt.de/index.html?ACTION=446&LA=0&nbc=1&q=<Produkt>
   title: Reichelt Elektronik
@@ -5313,6 +5423,8 @@ rsc 0:
   tags:
   - electronics
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 rsc 1:
   url: https://de.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Deutschland
@@ -5327,6 +5439,8 @@ sp 0:
   title: Stadtplan Potsdam
   tags:
   - old
+  examples:
+  - description: Gehe zur Startseite
 sp 1:
   url: https://www.potsdamer-stadtplan.com/?strasse=<Straße>
   title: Stadtplan Potsdam
@@ -5339,6 +5453,8 @@ stabib 0:
   - berlin
   - books
   - library
+  examples:
+  - description: Gehe zur Startseite
 stabib 1:
   url: https://lbssbb.gbv.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Staatsbibliothek zu Berlin
@@ -5355,6 +5471,8 @@ sub 0:
   tags:
   - göttingen
   - library
+  examples:
+  - description: Gehe zur Startseite
 sub 1:
   url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Niedersächsische Staats- und Universitätsbibliothek Göttingen
@@ -5367,6 +5485,8 @@ sub 1:
 swp 0:
   url: https://www.swp-berlin.org/
   title: Stiftung Wissenschaft und Politik
+  examples:
+  - description: Gehe zur Startseite
 swp 1:
   url: https://www.swp-berlin.org/suche?search%5Bq%5D=<Suche>
   title: Stiftung Wissenschaft und Politik
@@ -5376,6 +5496,8 @@ tel 0:
   tags:
   - phone
   - telefonbuch
+  examples:
+  - description: Gehe zur Startseite
 tel 1:
   url: https://www4.dastelefonbuch.de/Rueckwaerts-Suche.html?kw=<Nummer>&x=35&y=11&cifav=0&s=a20000&la=de&cmd=search&ort_ok=0&sp=55&vert_ok=0&aktion=23
   title: Telefonbuch Rückwärts-Suche
@@ -5402,6 +5524,8 @@ tho 0:
   tags:
   - music
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 tho 1:
   url: https://www.thomann.de/de/search_dir.html?sw=<Produkt>
   title: Thomann.de
@@ -5416,6 +5540,8 @@ tv 0:
   title: TV-Programm jetzt
   tags:
   - tv
+  examples:
+  - description: Gehe zur Startseite
 tva 1:
   url: https://www.tvinfo.de/tv-programm/<Sender>
   title: TV-Programm auf ...
@@ -5445,6 +5571,8 @@ uwz 0:
   title: Unwetterzentrale.de
   tags:
   - weather
+  examples:
+  - description: Gehe zur Startseite
 uwz 1:
   url: https://www.unwetterzentrale.de/uwz/getwarning_de.php?plz=<PLZ/Ort>&uwz=UWZ-DE&lang=de
   title: Unwetterzentrale.de
@@ -5461,6 +5589,8 @@ vbb 0:
   - berlin
   - brandenburg
   - travel
+  examples:
+  - description: Gehe zur Startseite
 vbb 1:
   url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input=<Ort>&dn?OK#focus
   title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
@@ -5512,6 +5642,8 @@ vgn 0:
   - bahn
   - nürnberg
   - travel
+  examples:
+  - description: Gehe zur Startseite
 vgn 1:
   url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
   title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
@@ -5563,6 +5695,8 @@ vgs 0:
   - saarland
   - travel
   - vgs
+  examples:
+  - description: Gehe zur Startseite
 vgs 2:
   url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Saarfahrplan
@@ -5613,6 +5747,8 @@ voebb 0:
   tags:
   - berlin
   - library
+  examples:
+  - description: Gehe zur Startseite
 vrr 0:
   url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?language=de&itdLPxx_transpCompany=vrr
   title: VRR-Auskunft
@@ -5678,6 +5814,8 @@ vvo 0:
   - dresden
   - travel
   - vvo
+  examples:
+  - description: Gehe zur Startseite
 vvo 2:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeittyp%5D=dep
   title: Verkehrsverbund Oberelbe
@@ -5718,6 +5856,8 @@ vvs 0:
   - bahn
   - stuttgart
   - travel
+  examples:
+  - description: Gehe zur Startseite
 vvs 2:
   url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
   title: VVS Verkehrsverbund Stuttgart
@@ -5733,6 +5873,8 @@ we 0:
   title: Wetter.com
   tags:
   - weather
+  examples:
+  - description: Gehe zur Startseite
 we 1:
   url: https://www.wetter.com/suche/?search=<Ort>
   title: Wetter.com
@@ -5748,6 +5890,8 @@ wse 0:
   - movies
   - series
   - tv
+  examples:
+  - description: Gehe zur Startseite
 wse 1:
   url: https://www.werstreamt.es/filme-serien/?q=m<Suche>&action_results=suchen
   title: Wer streamt es?
@@ -5761,6 +5905,8 @@ zal 0:
   tags:
   - shopping
   - zalando
+  examples:
+  - description: Gehe zur Startseite
 zal 1:
   url: https://www.zalando.de/katalog/?q=<Produkt>
   title: Zalando.de
