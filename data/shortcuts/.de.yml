@@ -513,6 +513,11 @@ bls 3:
   examples:
   - arguments: berlin, bremen, 28
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen am 28. dieses Monats
+blz 0:
+  url: https://www.abfragen.de/finanzen3.asp
+  title: Bankleitzahlen (abfragen.de)
+  examples:
+  - description: Gehe zur Startseite
 blz 1:
   url: https://www.abfragen.de/finanzen3.asp?ort=<Ort/PLZ>
   title: Bankleitzahlen (abfragen.de)
