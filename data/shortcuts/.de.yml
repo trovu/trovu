@@ -4750,6 +4750,14 @@ hs 1:
   examples:
   - arguments: radio
     description: Suche nach "radio"
+hvv 0:
+  url: https://www.hvv.de/
+  title: Hamburger Verkehrsverbund
+  tags:
+  - bahn
+  - hamburg
+  - hvv
+  - travel
 hvv 2:
   url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
   title: Hamburger Verkehrsverbund
@@ -4783,6 +4791,12 @@ hvv 4:
   examples:
   - arguments: pinneberg, neugraben, 10, 28.11.
     description: Verbindung von Pinneberg nach Neugraben um 10:00 Uhr am 28.11.
+iban 0:
+  url: https://www.iban-rechner.de/
+  title: IBAN-Rechner
+  tags:
+  - bank
+  - iban
 iban 1:
   url: https://www.iban-rechner.de/iban_validieren.html?tx_valIBAN_pi1%5Biban%5D=<IBAN>&tx_valIBAN_pi1%5Bfi%5D=fi&no_cache=1&Action=IBAN+pr%C3%BCfen+und+BIC-Code+suchen
   title: IBAN-Rechner
@@ -4846,6 +4860,13 @@ jf 1:
   examples:
   - arguments: He pulse tube cooler operating down to 1.3 K
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
+jw 0:
+  url: https://www.justwatch.com/
+  title: JustWatch
+  description: Searching a movie or tv series at JustWatch.com by given name
+  tags:
+  - movies
+  - series
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
   title: JustWatch
@@ -4909,6 +4930,12 @@ kazn 0:
   tags:
   - selling
   - shopping
+kfz 0:
+  url: https://www.autokennzeichen.info/
+  title: KFZ-Kennzeichen Deutschland
+  tags:
+  - auto
+  - traffic
 kfz 1:
   url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20<Ort/Kennzeichen>&ie=utf-8
   title: KFZ-Kennzeichen Deutschland
@@ -4920,6 +4947,13 @@ kfz 1:
     description: Suche Stadt/Kreis des Kennzeichens "hro"
   - arguments: rostock
     description: Suche KFZ-Kennzeichen von Rostock
+kino 0:
+  url: https://www.kino.de/
+  title: Kinoprogramm
+  tags:
+  - cinema
+  - kino
+  - movies
 kino 1:
   url: https://www.kino.de/kinoprogramm/<Ort/Stadtteil/Kino/PLZ>/
   title: Kinoprogramm
@@ -4930,6 +4964,12 @@ kino 1:
   examples:
   - arguments: berlin
     description: Kinoprogramm in Berlin
+kit 0:
+  url: https://kit.edu/
+  title: Karlsruher Institut für Technologie (KIT), Suche via Google
+  tags:
+  - karlsruhe
+  - science
 kit 1:
   url: https://www.google.com/search?q=site%3Akit.edu+<Suche>
   title: Karlsruher Institut für Technologie (KIT), Suche via Google
@@ -4956,6 +4996,12 @@ koka 1:
   examples:
   - arguments: berlin
     description: Suche nach Konzerten und Events in Berlin
+kununu 0:
+  url: https://www.kununu.com/de/
+  title: Kununu Deutschland
+  description: Suche nach Arbeitgeber-Bewertungen
+  tags:
+  - employer
 kununu 1:
   url: https://www.kununu.com/de/search?q=<Suche>
   title: Kununu Deutschland
@@ -4996,6 +5042,9 @@ lpg 1:
   examples:
   - arguments: hro
     description: Suche nach LPG-Tankstellen in Rostock
+mfs 0:
+  url: https://www.medizinfuchs.de/
+  title: Medizinfuch Apothekenpreisvergleich
 mfs 1:
   url: https://www.medizinfuchs.de/produkt/search/<Suche>
   title: Medizinfuch Apothekenpreisvergleich
@@ -5029,6 +5078,14 @@ mmops 1:
   - arguments: Turbo Pascal
     description: Suche nach "Turbo Pascal"
   tests: only return 403 when called with our tester
+mvv 0:
+  url: https://www.mvv-muenchen.de/
+  title: Elektronische Fahrplanauskunft München
+  tags:
+  - bahn
+  - mvv
+  - münchen
+  - travel
 mvv 2:
   url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   title: Elektronische Fahrplanauskunft München
@@ -5136,6 +5193,13 @@ pollin 1:
   examples:
   - arguments: batterie
     description: Suche bei pollin.de nach "batterie"
+ppw 0:
+  url: https://wiki.piratenpartei.de/
+  title: Piratenpartei Wiki
+  tags:
+  - partei
+  - piraten
+  - piratenpartei
 ppw 1:
   url: https://wiki.piratenpartei.de/Spezial:Suche?search=<Suche>&go=Seite
   title: Piratenpartei Wiki
@@ -5156,6 +5220,11 @@ ppwg 1:
   examples:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
+preis 0:
+  url: https://www.preissuchmaschine.de/
+  title: Preissuchmaschine
+  tags:
+  - old
 preis 1:
   url: https://www.preissuchmaschine.de/Katalog/Suche/<Produkt>.html
   title: Preissuchmaschine
@@ -5180,6 +5249,16 @@ reichelt 1:
   examples:
   - arguments: iphone
     description: Suche nach "iphone"
+rmv 0:
+  url: http://www.rmv.de/auskunft/
+  title: RMV Fahrplanauskunft
+  tags:
+  - bahn
+  - frankfurt
+  - travel
+  examples:
+  - arguments: frankfurt, wiesbaden
+    description: Verbindung von Frankfurt nach Wiesbaden
 rmv 2:
   url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt
   title: RMV Fahrplanauskunft
@@ -5210,6 +5289,12 @@ rmv 4:
   examples:
   - arguments: frankfurt, wiesbaden, 10, 1.1.
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 1.1.
+rsc 0:
+  url: https://de.rs-online.com/
+  title: RS Components Deutschland
+  tags:
+  - electronics
+  - shopping
 rsc 1:
   url: https://de.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Deutschland
@@ -5219,11 +5304,23 @@ rsc 1:
   examples:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
+sp 0:
+  url: https://www.potsdamer-stadtplan.com/
+  title: Stadtplan Potsdam
+  tags:
+  - old
 sp 1:
   url: https://www.potsdamer-stadtplan.com/?strasse=<Straße>
   title: Stadtplan Potsdam
   tags:
   - old
+stabib 0:
+  url: https://staatsbibliothek-berlin.de/
+  title: Staatsbibliothek zu Berlin
+  tags:
+  - berlin
+  - books
+  - library
 stabib 1:
   url: https://lbssbb.gbv.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Staatsbibliothek zu Berlin
@@ -5234,6 +5331,12 @@ stabib 1:
   examples:
   - arguments: goethe
     description: Suche nach "goethe"
+sub 0:
+  url: https://opac.sub.uni-goettingen.de/
+  title: Niedersächsische Staats- und Universitätsbibliothek Göttingen
+  tags:
+  - göttingen
+  - library
 sub 1:
   url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
   title: Niedersächsische Staats- und Universitätsbibliothek Göttingen
@@ -5275,6 +5378,12 @@ tel 2:
     description: Telefonnummer von "Meier" in Dresden
   - arguments: meier, dd
     description: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
+tho 0:
+  url: https://www.thomann.de/
+  title: Thomann.de
+  tags:
+  - music
+  - shopping
 tho 1:
   url: https://www.thomann.de/de/search_dir.html?sw=<Produkt>
   title: Thomann.de
@@ -5313,6 +5422,11 @@ tvu 1:
   examples:
   - arguments: '20'
     description: Search for "20"
+uwz 0:
+  url: https://www.unwetterzentrale.de/
+  title: Unwetterzentrale.de
+  tags:
+  - weather
 uwz 1:
   url: https://www.unwetterzentrale.de/uwz/getwarning_de.php?plz=<PLZ/Ort>&uwz=UWZ-DE&lang=de
   title: Unwetterzentrale.de
@@ -5321,6 +5435,14 @@ uwz 1:
   examples:
   - arguments: '10119'
     description: Zeige Wetterwarnungen für Postleitzahl 10119
+vbb 0:
+  url: http://fahrinfo.vbb.de/
+  title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
+  tags:
+  - bahn
+  - berlin
+  - brandenburg
+  - travel
 vbb 1:
   url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input=<Ort>&dn?OK#focus
   title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
@@ -5365,6 +5487,13 @@ vbb 4:
   examples:
   - arguments: vbb westhafen, frohnau, 20:00, 31.12.12.
     description: Verbindungen von Westhafen nach Frohnau am 31. Dezember um 20 Uhr
+vgn 0:
+  url: https://www.vgn.de/verbindungen/
+  title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
+  tags:
+  - bahn
+  - nürnberg
+  - travel
 vgn 1:
   url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
   title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
@@ -5405,6 +5534,17 @@ vgn 4:
   examples:
   - arguments: nürnberg, neumarkt, 10, 1.1.
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr am 1.1.
+vgs 0:
+  url: https://www.saarfahrplan.de/
+  title: Saarfahrplan
+  tags:
+  - bahn
+  - fahrplan
+  - reise
+  - saarbrücken
+  - saarland
+  - travel
+  - vgs
 vgs 2:
   url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Saarfahrplan
@@ -5512,6 +5652,14 @@ vrr 6:
   examples:
   - arguments: dortmund, bochum, 10, 30, 28, 1
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28.1.
+vvo 0:
+  url: https://www.vvo-online.de/de/fahrplan/
+  title: Verkehrsverbund Oberelbe
+  tags:
+  - bahn
+  - dresden
+  - travel
+  - vvo
 vvo 2:
   url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeittyp%5D=dep
   title: Verkehrsverbund Oberelbe
@@ -5545,6 +5693,13 @@ vvo 4:
   examples:
   - arguments: priestewitz, krippen, 10, 28.11.
     description: Verbindung von Priestewitz nach Krippen um 10:00 Uhr am 28.11.
+vvs 0:
+  url: https://www.vvs.de/
+  title: VVS Verkehrsverbund Stuttgart
+  tags:
+  - bahn
+  - stuttgart
+  - travel
 vvs 2:
   url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
   title: VVS Verkehrsverbund Stuttgart
@@ -5582,6 +5737,12 @@ wse 1:
   - movies
   - series
   - tv
+zal 0:
+  url: https://www.zalando.de/
+  title: Zalando.de
+  tags:
+  - shopping
+  - zalando
 zal 1:
   url: https://www.zalando.de/katalog/?q=<Produkt>
   title: Zalando.de
