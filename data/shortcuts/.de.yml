@@ -135,14 +135,20 @@ bauhaus 1:
     alternative:
       query: bhs <1>
     created: '2024-03-08'
-bbb 2:
-  url: http://www.bbbike.de/cgi-bin/bbbike.cgi?start=<Start>&via=&ziel=<Ziel>
+bbb 0:
+  url: https://www.bbbike.de/
   title: Berlin by Bike (BBBike.de)
   description: Fahrrad-Routenplaner für Berlin
   tags:
   - berlin
   - map
   - routing
+  examples:
+  - description: Gehe zur Startseite
+bbb 2:
+  url: https://www.bbbike.de/cgi-bin/bbbike.cgi?start=<Start>&via=&ziel=<Ziel>
+  include:
+    key: bbb 0
   examples:
   - arguments: alexanderplatz, zoo
     description: Zeige Fahrradroute von Alexanderplatz zum Zoo
@@ -481,6 +487,14 @@ bkat 1:
   examples:
   - arguments: parken
     description: Suche nach Vergehen zum Thema "Parken".
+bls 0:
+  url: https://www.busliniensuche.de/
+  title: Busliniensuche.de
+  tags:
+  - bus
+  - travel
+  examples:
+  - description: Gehe zur Startseite
 bls 2:
   url: 'https://www.busliniensuche.de/suche?From=<Start: {type: city}>&To=<Ziel: {type: city}>&When=<$now: {output: YYYY-MM-DD}>&Passengers=1'
   title: Busliniensuche.de
@@ -538,6 +552,13 @@ bpo 1:
   - classical-music
   - cultural-events
   - music
+bsvg 0:
+  url: https://www.bsvg.net/
+  title: Braunschweiger Verkehrs-GmbH
+  tags:
+  - bahn
+  - braunschweig
+  - travel
 bsvg 2:
   url: http://www.verkehr-bs.de/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin=<Start>&name_destination=<Ziel>
   title: Braunschweiger Verkehrs-GmbH
@@ -696,6 +717,13 @@ conrad 1:
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
+cys 0:
+  url: https://www.cyberport.de/
+  title: Cyberport Store
+  tags:
+  - apple
+  - computer
+  - shopping
 cys 1:
   url: https://www.cyberport.de/?EVENT=itemsearch&query=<Produkt>
   title: Cyberport Store
@@ -740,6 +768,9 @@ dbb 3:
   include:
     key: db 0
   showOnHome: 710
+dbm 0:
+  url: https://mobile.bahn.de/
+  title: Deutsche Bahn Fahrplanauskunft, mobile Version
 dbm 2:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -820,6 +851,11 @@ dbn 4:
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
   include:
     key: db 0
+dbt 0:
+  url: https://reiseauskunft.bahn.de/bin/query.exe/dl
+  title: Deutsche Bahn Fahrplanauskunft, Textversion
+  include:
+    key: db 0
 dbt 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
@@ -868,6 +904,11 @@ dbtn 4:
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
   include:
     key: db 0
+dejure 0:
+  url: https://dejure.org/
+  title: Dejure.org Gesetze
+  tags:
+  - law
 dejure 1:
   url: https://dejure.org/cgi-bin/suche?Suchenach=<Suche>
   title: Dejure.org Gesetze
@@ -876,6 +917,11 @@ dejure 1:
   examples:
   - arguments: gg
     description: Search Dejure.org Gesetze for "gg"
+denic 0:
+  url: https://webwhois.denic.de/
+  title: Whois (Denic)
+  tags:
+  - domains
 denic 1:
   url: https://webwhois.denic.de/?query=<domain>
   title: Whois (Denic)
@@ -884,6 +930,12 @@ denic 1:
   examples:
   - arguments: google
     description: show the owner of the domain google.de
+dhl 0:
+  url: https://www.dhl.de/
+  title: DHL Sendungsverfolgung
+  tags:
+  - dhl
+  - shipping
 dhl 1:
   url: https://www.dhl.de/de/privatkunden.html?piececode=<Sendungsnummer>
   title: DHL Sendungsverfolgung
@@ -937,6 +989,9 @@ doe 2:
   examples:
   - arguments: meier, dresden
     description: Suche Telefonnummern für "Meier" in Dresden
+duden 0:
+  url: https://www.duden.de/
+  title: Duden
 duden 1:
   url: https://www.duden.de/suchen/dudenonline/<Suche>
   title: Duden
@@ -997,6 +1052,11 @@ ekn 0:
     alternative:
       query: kazn
     created: '2023-10-13'
+farnell 0:
+  url: https://de.farnell.com/
+  title: Farnell Deutschland
+  tags:
+  - shopping
 farnell 1:
   url: https://de.farnell.com/search?st=<Suche>&gs=true
   title: Farnell Deutschland
@@ -1005,9 +1065,19 @@ farnell 1:
   examples:
   - arguments: switch
     description: Farnell Deutschland search for switch
+faz 0:
+  url: https://www.faz.net/
+  title: Frankfurter Allgemeine Zeitung
 faz 1:
   url: https://www.faz.net/suche/?query=<Suche>
   title: Frankfurter Allgemeine Zeitung
+fbw 0:
+  url: https://www.fahrerbewertung.de/
+  title: Fahrerbewertung
+  tags:
+  - driving
+  - traffic
+  - travel
 fbw 1:
   url: https://www.fahrerbewertung.de/<Kennzeichen>
   title: Fahrerbewertung
@@ -4563,6 +4633,12 @@ gps 1:
     alternative:
       query: gsh <1>
     created: '2024-03-30'
+gs 0:
+  url: https://www.gelbeseiten.de/
+  title: Gelbe Seiten
+  tags:
+  - phone
+  - shopping
 gs 2:
   url: 'https://www.gelbeseiten.de/<Branche>/<Ort: {type: city}>'
   title: Gelbe Seiten
@@ -4587,6 +4663,11 @@ gsh 1:
   examples:
   - arguments: computer
     description: Search for "computer"
+gtiger 0:
+  url: https://www.guenstiger.de/
+  title: Guenstiger.de
+  tags:
+  - shopping
 gtiger 1:
   url: https://www.guenstiger.de/Katalog/Suche/<Suche>.html
   title: Guenstiger.de
@@ -4595,6 +4676,12 @@ gtiger 1:
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
+gtrends 0:
+  url: https://trends.google.com/trends/explore?geo=DE
+  title: Google Trends Deutschland
+  tags:
+  - google
+  - trends
 gtrends 1:
   url: https://trends.google.com/trends/explore?q=<Suche>&geo=DE
   title: Google Trends Deutschland
@@ -4619,6 +4706,14 @@ gy 2:
   examples:
   - arguments: meier, dresden
     description: Telefonnummer von "Meier" in Dresden
+hekticket 0:
+  url: https://hekticket.de/
+  title: Hekticket
+  tags:
+  - concerts
+  - is-affiliate
+  - music
+  - tickets
 hekticket 1:
   url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword=<Band>
   title: Hekticket
@@ -4630,6 +4725,12 @@ hekticket 1:
   examples:
   - arguments: fettes brot
     description: Search Hekticket for "fettes brot"
+hermes 0:
+  url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#<Auftragsnummer>
+  title: Hermes Sendungsverfolgung
+  tags:
+  - hermes
+  - shipping
 hermes 1:
   url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#<Auftragsnummer>
   title: Hermes Sendungsverfolgung
