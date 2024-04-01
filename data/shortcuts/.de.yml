@@ -4851,6 +4851,19 @@ iwb 0:
   tags:
   - berlin
   - polizei
+jf 0:
+  url: https://justfind.hds.hebis.de/
+  title: JLU Gießen JustFind
+  description: Literatursuche der Justus-Liebig-Universität Gießen
+  tags:
+  - education
+  - giessen
+  - jlu
+  - library
+  - literature
+  - student
+  examples:
+  - description: Gehe zur Startseite
 jf 1:
   url: https://hds.hebis.de/ubgi/Search/Results?lookfor=<argument_name>&trackSearchEvent=Einfache+Suche&type=allfields&service=catalog
   title: JLU Gießen JustFind
