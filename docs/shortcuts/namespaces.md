@@ -68,7 +68,7 @@ In a namespace, there can be only one shortcut with the same keyword and the sam
 
 ### Basic
 
-The namespaces you use are derived from your settings (settings wheel left of the input field). For instance, having set
+The namespaces you use are derived from your settings (language code and flag next to the burger menu). For instance, having set
 
 -   language: English
 -   country: Unites States
