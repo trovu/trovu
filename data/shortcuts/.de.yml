@@ -932,9 +932,10 @@ dhl 1:
   - arguments: 340434325968897100
     description: Verfolge Sendung mit der Nr. 00340434325968897098
 dhl 2:
-  url: http://nolp.dhl.de/nextt-online-public/set_identcodes.do?lang=de&idc=<Sendungsnummer>&zip=<PLZ>
-  include:
-    key: dhl 0
+  deprecated:
+    alternative:
+      query: dhl <1>
+    created: '2024-04-01'
 dlf 0:
   url: https://www.deutschlandfunk.de/
   title: Deutschlandfunk
