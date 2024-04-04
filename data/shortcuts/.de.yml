@@ -5462,28 +5462,28 @@ vgn 0:
   examples:
   - description: Gehe zur Startseite
 vgn 1:
-  url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
+  url: https://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
   include:
     key: vgn 0
   examples:
   - arguments: s1
     description: Fahrplan der Linie S1
 vgn 2:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>
+  url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>
   include:
     key: vgn 0
   examples:
   - arguments: nürnberg, neumarkt
     description: Verbindung von Nürnberg nach Neumarkt
 vgn 3:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>&xtime=<Abfahrtszeit>&xdate=today
+  url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>&xtime=<Abfahrtszeit>&xdate=today
   include:
     key: vgn 0
   examples:
   - arguments: nürnberg, neumarkt, 10
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr
 vgn 4:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin=<Start>&type_destination=any&name_destination=<Ziel>&itdTripDateTimeDepArr=dep&xtime=<Abfahrtszeit>&xdate=<Datum>
+  url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin=<Start>&type_destination=any&name_destination=<Ziel>&itdTripDateTimeDepArr=dep&xtime=<Abfahrtszeit>&xdate=<Datum>
   include:
     key: vgn 0
   examples:
