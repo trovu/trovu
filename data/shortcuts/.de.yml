@@ -5503,7 +5503,7 @@ vgs 0:
   examples:
   - description: Gehe zur Startseite
 vgs 2:
-  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
+  url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   include:
     key: vgs 0
   examples:
@@ -5512,14 +5512,14 @@ vgs 2:
   - arguments: sb, zw
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf, Eingabe über Autokennzeichen
 vgs 3:
-  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&start=1'
+  url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&start=1'
   include:
     key: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr
 vgs 4:
-  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&D=<Datum>&start=1'
+  url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&D=<Datum>&start=1'
   include:
     key: vgs 0
   examples:
@@ -5534,42 +5534,42 @@ voebb 0:
   examples:
   - description: Gehe zur Startseite
 vrr 0:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?language=de&itdLPxx_transpCompany=vrr
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?language=de&itdLPxx_transpCompany=vrr
   title: VRR-Auskunft
   tags:
   - bahn
   - travel
   - vrr
 vrr 2:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum
     description: Nächste Verbindung von Dortmund nach Bochum
 vrr 3:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10
     description: Verbindung von Dortmund nach Bochum heute um 10 Uhr
 vrr 4:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30
     description: Verbindung von Dortmund nach Bochum heute um 10.30 Uhr
 vrr 5:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30, 28
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28. des aktuellen Monats
 vrr 6:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
   include:
     key: vrr 0
   examples:
