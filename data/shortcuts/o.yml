@@ -6187,6 +6187,23 @@ okf 1:
   examples:
   - arguments: nachrichten
     description: Suche nach Nachrichten
+ol 0:
+  url: https://openlibrary.org/
+  title: Open Library
+  tags:
+  - books
+  - literature
+  - reading
+  - social-network
+  examples:
+  - description: Go to homepage
+ol 1:
+  url: https://openlibrary.org/search?q=<query>
+  include:
+  - key: ol 0
+  examples:
+  - arguments: jasper fforde
+    description: Search for books by Jasper Fforde
 om 0:
   include:
   - key: om 0
