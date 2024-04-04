@@ -5229,8 +5229,8 @@ rmv 4:
   include:
     key: rmv 0
   examples:
-  - arguments: frankfurt, wiesbaden, 10, 1.1.
-    description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 1.1.
+  - arguments: frankfurt, wiesbaden, 10, 2.11.
+    description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 2.11.
 rsc 0:
   url: https://de.rs-online.com/
   title: RS Components Deutschland
