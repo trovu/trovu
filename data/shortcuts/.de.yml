@@ -5578,7 +5578,7 @@ vvs 0:
   examples:
   - description: Gehe zur Startseite
 vvs 2:
-  url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
+  url: https://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
   include:
     key: vvs 0
   examples:
