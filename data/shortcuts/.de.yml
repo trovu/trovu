@@ -4708,13 +4708,6 @@ hekticket 0:
   - tickets
   examples:
   - description: Gehe zur Startseite
-hekticket 1:
-  url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword=<Band>
-  include:
-    key: hekticket 0
-  examples:
-  - arguments: fettes brot
-    description: Search Hekticket for "fettes brot"
 hermes 0:
   url: https://www.myhermes.de/
   title: Hermes Sendungsverfolgung
