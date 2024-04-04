@@ -5407,8 +5407,8 @@ vbb 4:
   include:
     key: vbb 0
   examples:
-  - arguments: vbb westhafen, frohnau, 20:00, 31.12.12.
-    description: Verbindungen von Westhafen nach Frohnau am 31. Dezember um 20 Uhr
+  - arguments: vbb westhafen, frohnau, 20:00, 8.12.
+    description: Verbindungen von Westhafen nach Frohnau um 20 Uhr am 8. Dezember
 vgn 0:
   url: https://www.vgn.de/verbindungen/
   title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
