@@ -5381,7 +5381,7 @@ vbb 0:
   examples:
   - description: Gehe zur Startseite
 vbb 1:
-  url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input=<Ort>&dn?OK#focus
+  url: 'https://www.vbb.de/fahrinfo/?boardType=dep&input=<Ort: {type: city}>&start=1'
   title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
   include:
     key: vbb 0
