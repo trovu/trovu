@@ -5023,6 +5023,49 @@ lpg 1:
   examples:
   - arguments: hro
     description: Suche nach LPG-Tankstellen in Rostock
+mdv 0:
+  url: https://www.mdv.de/fahrtenplaner/
+  title: Mitteldeutscher Verkehrsverbund, Fahrtenplaner
+  tags:
+  - bahn
+  - halle
+  - leipzig
+  - sachsen
+  - sachsen-anhalt
+  - travel
+  examples:
+  - description: Gehe zur Startseite
+mdv 1:
+  url: 'https://www.mdv.de/fahrtenplaner/?boardType=dep&input=<Ort: {type: city}>&start=1'
+  title: Mitteldeutscher Verkehrsverbund, Aktuelle Ankunft-/Abfahrtszeiten
+  include:
+    key: mdv 0
+  examples:
+  - arguments: oschatz
+    description: Aktuelle Ankunft/Abfahrtszeiten an der Station Oschatz
+  - arguments: oz
+    description: … via Autokennzeichen
+mdv 2:
+  url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
+  include:
+    key: mdv 0
+  examples:
+  - arguments: wurzen, oschatz
+    description: Nächste Verbindungen von Wurzen nach Oschatz
+mdv 3:
+  url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&start=1'
+  include:
+    key: mdv 0
+  examples:
+  - arguments: wurzen, oschatz, 20
+    description: Verbindungen von Wurzen nach Oschatz heute um 20 Uhr
+mdv 4:
+  url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
+  include:
+    key: mdv 0
+  examples:
+  - arguments: wurzen, oschatz, 20, 8.12.
+    description: Verbindungen von Wurzen nach Oschatz um 20 Uhr am 8. Dezember
 mfs 0:
   url: https://www.medizinfuchs.de/
   title: Medizinfuch Apothekenpreisvergleich
