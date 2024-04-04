@@ -5371,8 +5371,8 @@ uwz 1:
   - arguments: '10119'
     description: Zeige Wetterwarnungen für Postleitzahl 10119
 vbb 0:
-  url: http://fahrinfo.vbb.de/
-  title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
+  url: https://www.vbb.de/fahrinfo/
+  title: Verkehrsverbund Berlin-Brandenburg, Auskunft
   tags:
   - bahn
   - berlin
@@ -5382,27 +5382,28 @@ vbb 0:
   - description: Gehe zur Startseite
 vbb 1:
   url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input=<Ort>&dn?OK#focus
+  title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
   include:
     key: vbb 0
   examples:
   - arguments: frohnau
     description: Aktuelle Ankunft/Abfahrtszeiten an der Station Frohnau
 vbb 2:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&start=1
+  url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
   include:
     key: vbb 0
   examples:
   - arguments: westhafen, frohnau
     description: Nächste Verbindungen von Westhafen nach Frohnau
 vbb 3:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&start=1
+  url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&start=1'
   include:
     key: vbb 0
   examples:
   - arguments: vbb westhafen, frohnau, 20:00
     description: Verbindungen von Westhafen nach Frohnau heute um 20 Uhr
 vbb 4:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&date=<Datum>&start=1
+  url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   include:
     key: vbb 0
   examples:
