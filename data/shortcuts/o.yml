@@ -4243,6 +4243,16 @@ gpo 1:
   title: Gentoo Overlay Search
   tags:
   - old
+gr 0:
+  url: https://www.goodreads.com/
+  title: Goodreads
+  tags:
+  - books
+  - literature
+  - reading
+  - social-network
+  examples:
+  - description: Go to homepage
 gr 1:
   url: https://www.goodreads.com/search?utf8=%E2%9C%93&query=<query>
   title: Goodreads
