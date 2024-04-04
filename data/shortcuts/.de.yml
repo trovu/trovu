@@ -5211,21 +5211,21 @@ rmv 0:
   examples:
   - description: Gehe zur Startseite
 rmv 2:
-  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt'
+  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt'
   include:
     key: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden
     description: Verbindung von Frankfurt nach Wiesbaden
 rmv 3:
-  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date=%2B0&times=%2B0&start&time=<Zeit: {type: time}>'
+  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&date=%2B0&times=%2B0&start&time=<Zeit: {type: time}>'
   include:
     key: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden, 10
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr
 rmv 4:
-  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&times=%2B0&start'
+  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&times=%2B0&start'
   include:
     key: rmv 0
   examples:
