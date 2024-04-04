@@ -5575,37 +5575,6 @@ vrr 6:
   examples:
   - arguments: dortmund, bochum, 10, 30, 28, 1
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28.1.
-vvo 0:
-  url: https://www.vvo-online.de/de/fahrplan/
-  title: Verkehrsverbund Oberelbe
-  tags:
-  - bahn
-  - dresden
-  - travel
-  - vvo
-  examples:
-  - description: Gehe zur Startseite
-vvo 2:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeittyp%5D=dep
-  include:
-    key: vvo 0
-  examples:
-  - arguments: priestewitz, krippen
-    description: Nächste Verbindung von Priestewitz nach Krippen
-vvo 3:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep
-  include:
-    key: vvo 0
-  examples:
-  - arguments: priestewitz, krippen, 10
-    description: Verbindung von Priestewitz nach Krippen heute um 10:00 Uhr
-vvo 4:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep&vaform%5Bdatum%5D=<Datum>
-  include:
-    key: vvo 0
-  examples:
-  - arguments: priestewitz, krippen, 10, 28.11.
-    description: Verbindung von Priestewitz nach Krippen um 10:00 Uhr am 28.11.
 vvs 0:
   url: https://www.vvs.de/
   title: VVS Verkehrsverbund Stuttgart
