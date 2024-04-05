@@ -14,12 +14,12 @@ al 1:
   - arguments: smartfon
     description: szukaj "smartfon"
 ceneo 0:
-  url: http://www.ceneo.pl/
+  url: https://www.ceneo.pl/
   title: Ceneo
   tags:
   - shopping
 ceneo 1:
-  url: http://www.ceneo.pl/categories.aspx?search=yes&categoryID=0&searchText=<produkt>&inDesc=False&minPrice=0&maxPrice=99999999
+  url: https://www.ceneo.pl/categories.aspx?search=yes&categoryID=0&searchText=<produkt>&inDesc=False&minPrice=0&maxPrice=99999999
   title: Ceneo
   tags:
   - shopping
@@ -27,13 +27,13 @@ ceneo 1:
   - arguments: iphone
     description: ceny iPhone'a
 e 0:
-  url: http://www.ebay.pl/
+  url: https://www.ebay.pl/
   title: Ebay.pl
   tags:
   - ebay
   - shopping
 e 1:
-  url: http://www.ebay.pl/sch/i.html?_nkw=<query>
+  url: https://www.ebay.pl/sch/i.html?_nkw=<query>
   title: Ebay.pl
   tags:
   - ebay
@@ -84,7 +84,7 @@ g 1:
   - arguments: warszawa
     description: Szukaj "warszawa" w Google.pl
 gastro 2:
-  url: http://www.gastronauci.pl/pl/restauracje/<miasto>?kind=<lokal/kuchnia>
+  url: https://www.gastronauci.pl/pl/restauracje/<miasto>?kind=<lokal/kuchnia>
   title: gastronauci.pl
   tags:
   - food
@@ -264,7 +264,7 @@ pkp 4:
   - arguments: kutno, gniezno, 10, 31.1.
     description: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
 tm 1:
-  url: http://www.google.com/search?hl=<$language>&sitesearch=teleman.pl&domains=teleman.pl&q=<szukaj>
+  url: https://www.google.com/search?hl=<$language>&sitesearch=teleman.pl&domains=teleman.pl&q=<szukaj>
   title: teleman.pl program telewizyjny
   tags:
   - poland
