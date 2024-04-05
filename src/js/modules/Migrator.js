@@ -1,5 +1,6 @@
 import DataManager from './DataManager';
 import UrlProcessor from './UrlProcessor';
+import fs from 'fs';
 import jsyaml from 'js-yaml';
 
 export default class Migrator {
@@ -13,27 +14,52 @@ export default class Migrator {
     for (const namespace in data.shortcuts) {
       for (const key in data.shortcuts[namespace]) {
         const [keyword, argCount] = key.split(' ');
-        if (argCount != 0) {
-          continue;
-        }
+        const args = [
+          'arg1',
+          'arg2',
+          'arg3',
+          'arg4',
+          'arg5',
+          'arg6',
+          'arg7',
+          'arg8',
+          'arg9',
+          'arg10',
+        ];
         let shortcut = data.shortcuts[namespace][key];
         // If the URL starts with http, fetch its contents, migrate to https, fetch again, and compare results
         if (shortcut.url && shortcut.url.startsWith('http:')) {
           console.log(`Migrating ${namespace}.${key}`);
-          const originalUrl = shortcut.url;
+          let originalUrl = shortcut.url;
+          originalUrl = UrlProcessor.replaceArguments(originalUrl, args, {
+            language: 'en',
+            country: 'us',
+            data: { types: { city: {} } },
+          });
+          // console.log(originalUrl);
           const httpsUrl = originalUrl.replace('http:', 'https:');
 
           try {
             const originalResponse = await fetch(originalUrl);
             const originalText = await originalResponse.text();
+            // console.log('originalText', originalText);
             const httpsResponse = await fetch(httpsUrl);
             const httpsText = await httpsResponse.text();
+            // console.log('httpsText', httpsText);
 
             if (httpsText === originalText) {
               console.log('==', key);
               shortcut.url = httpsUrl; // Update the shortcut URL to use HTTPS
             } else {
               console.log('!=', key);
+              // write both to files out.key.http and out.key.https
+              const outPath = `out.${key}`;
+              const outHttpPath = `${outPath}.http`;
+              const outHttpsPath = `${outPath}.https`;
+              // console.log('Writing', outHttpPath);
+              // console.log('Writing', outHttpsPath);
+              fs.writeFileSync(outHttpPath, originalText, 'utf8');
+              fs.writeFileSync(outHttpsPath, httpsText, 'utf8');
             }
           } catch (error) {
             console.error(`Error migrating ${key}:`, error);
