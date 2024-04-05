@@ -207,7 +207,6 @@ export default class UrlProcessor {
     // Set argument.
     if (time) {
       let format = 'HH:mm';
-      console.log('time attributes', attributes);
       if (attributes.output) {
         format = attributes.output;
       }
