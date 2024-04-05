@@ -4703,18 +4703,10 @@ hekticket 0:
   title: Hekticket
   tags:
   - concerts
-  - is-affiliate
   - music
   - tickets
   examples:
   - description: Gehe zur Startseite
-hekticket 1:
-  url: http://partners.webmasterplan.com/click.asp?site=4644&ref=421571&type=html&ent=1&hnb=1&subid=&prd=yes&keyword=<Band>
-  include:
-    key: hekticket 0
-  examples:
-  - arguments: fettes brot
-    description: Search Hekticket for "fettes brot"
 hermes 0:
   url: https://www.myhermes.de/
   title: Hermes Sendungsverfolgung
@@ -5023,6 +5015,49 @@ lpg 1:
   examples:
   - arguments: hro
     description: Suche nach LPG-Tankstellen in Rostock
+mdv 0:
+  url: https://www.mdv.de/fahrtenplaner/
+  title: Mitteldeutscher Verkehrsverbund, Fahrtenplaner
+  tags:
+  - bahn
+  - halle
+  - leipzig
+  - sachsen
+  - sachsen-anhalt
+  - travel
+  examples:
+  - description: Gehe zur Startseite
+mdv 1:
+  url: 'https://www.mdv.de/fahrtenplaner/?boardType=dep&input=<Ort: {type: city}>&start=1'
+  title: Mitteldeutscher Verkehrsverbund, Aktuelle Ankunft-/Abfahrtszeiten
+  include:
+    key: mdv 0
+  examples:
+  - arguments: oschatz
+    description: Aktuelle Ankunft/Abfahrtszeiten an der Station Oschatz
+  - arguments: oz
+    description: … via Autokennzeichen
+mdv 2:
+  url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
+  include:
+    key: mdv 0
+  examples:
+  - arguments: wurzen, oschatz
+    description: Nächste Verbindungen von Wurzen nach Oschatz
+mdv 3:
+  url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&start=1'
+  include:
+    key: mdv 0
+  examples:
+  - arguments: wurzen, oschatz, 20
+    description: Verbindungen von Wurzen nach Oschatz heute um 20 Uhr
+mdv 4:
+  url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
+  include:
+    key: mdv 0
+  examples:
+  - arguments: wurzen, oschatz, 20, 8.12.
+    description: Verbindungen von Wurzen nach Oschatz um 20 Uhr am 8. Dezember
 mfs 0:
   url: https://www.medizinfuchs.de/
   title: Medizinfuch Apothekenpreisvergleich
@@ -5075,7 +5110,7 @@ mvv 0:
   examples:
   - description: Gehe zur Startseite
 mvv 2:
-  url: http://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
+  url: https://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   include:
     key: mvv 0
   examples:
@@ -5202,36 +5237,35 @@ reichelt 1:
   - arguments: iphone
     description: Suche nach "iphone"
 rmv 0:
-  url: http://www.rmv.de/auskunft/
+  url: https://www.rmv.de/auskunft/
   title: RMV Fahrplanauskunft
   tags:
   - bahn
   - frankfurt
   - travel
   examples:
-  - arguments: frankfurt, wiesbaden
-    description: Verbindung von Frankfurt nach Wiesbaden
+  - description: Gehe zur Startseite
 rmv 2:
-  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt
+  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt'
   include:
     key: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden
     description: Verbindung von Frankfurt nach Wiesbaden
 rmv 3:
-  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&date=%2B0&times=%2B0&start&time=<Zeit>
+  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&date=%2B0&times=%2B0&start&time=<Zeit: {type: time}>'
   include:
     key: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden, 10
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr
 rmv 4:
-  url: http://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel>&time=<Zeit>&date=<Datum>&times=%2B0&start
+  url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&times=%2B0&start'
   include:
     key: rmv 0
   examples:
-  - arguments: frankfurt, wiesbaden, 10, 1.1.
-    description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 1.1.
+  - arguments: frankfurt, wiesbaden, 10, 2.11.
+    description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 2.11.
 rsc 0:
   url: https://de.rs-online.com/
   title: RS Components Deutschland
@@ -5372,8 +5406,8 @@ uwz 1:
   - arguments: '10119'
     description: Zeige Wetterwarnungen für Postleitzahl 10119
 vbb 0:
-  url: http://fahrinfo.vbb.de/
-  title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
+  url: https://www.vbb.de/fahrinfo/
+  title: Verkehrsverbund Berlin-Brandenburg, Auskunft
   tags:
   - bahn
   - berlin
@@ -5382,33 +5416,34 @@ vbb 0:
   examples:
   - description: Gehe zur Startseite
 vbb 1:
-  url: http://fahrinfo.vbb.de/bin/stboard.exe/dn?boardOverview=yes&maxJourneys=10&boardType=dep&input=<Ort>&dn?OK#focus
+  url: 'https://www.vbb.de/fahrinfo/?boardType=dep&input=<Ort: {type: city}>&start=1'
+  title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
   include:
     key: vbb 0
   examples:
   - arguments: frohnau
     description: Aktuelle Ankunft/Abfahrtszeiten an der Station Frohnau
 vbb 2:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&start=1
+  url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
   include:
     key: vbb 0
   examples:
   - arguments: westhafen, frohnau
     description: Nächste Verbindungen von Westhafen nach Frohnau
 vbb 3:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&start=1
+  url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&start=1'
   include:
     key: vbb 0
   examples:
   - arguments: vbb westhafen, frohnau, 20:00
     description: Verbindungen von Westhafen nach Frohnau heute um 20 Uhr
 vbb 4:
-  url: http://fahrinfo.vbb.de/bin/query.exe/dn?From=<Start>&To=<Ziel>&time=<Zeit>&date=<Datum>&start=1
+  url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   include:
     key: vbb 0
   examples:
-  - arguments: vbb westhafen, frohnau, 20:00, 31.12.12.
-    description: Verbindungen von Westhafen nach Frohnau am 31. Dezember um 20 Uhr
+  - arguments: vbb westhafen, frohnau, 20:00, 8.12.
+    description: Verbindungen von Westhafen nach Frohnau um 20 Uhr am 8. Dezember
 vgn 0:
   url: https://www.vgn.de/verbindungen/
   title: Verkehrsverbund Großraum Nürnberg, Linienfahrplan
@@ -5419,28 +5454,28 @@ vgn 0:
   examples:
   - description: Gehe zur Startseite
 vgn 1:
-  url: http://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
+  url: https://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
   include:
     key: vgn 0
   examples:
   - arguments: s1
     description: Fahrplan der Linie S1
 vgn 2:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>
+  url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>
   include:
     key: vgn 0
   examples:
   - arguments: nürnberg, neumarkt
     description: Verbindung von Nürnberg nach Neumarkt
 vgn 3:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>&xtime=<Abfahrtszeit>&xdate=today
+  url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>&xtime=<Abfahrtszeit>&xdate=today
   include:
     key: vgn 0
   examples:
   - arguments: nürnberg, neumarkt, 10
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr
 vgn 4:
-  url: http://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin=<Start>&type_destination=any&name_destination=<Ziel>&itdTripDateTimeDepArr=dep&xtime=<Abfahrtszeit>&xdate=<Datum>
+  url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin=<Start>&type_destination=any&name_destination=<Ziel>&itdTripDateTimeDepArr=dep&xtime=<Abfahrtszeit>&xdate=<Datum>
   include:
     key: vgn 0
   examples:
@@ -5460,7 +5495,7 @@ vgs 0:
   examples:
   - description: Gehe zur Startseite
 vgs 2:
-  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
+  url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   include:
     key: vgs 0
   examples:
@@ -5469,14 +5504,14 @@ vgs 2:
   - arguments: sb, zw
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf, Eingabe über Autokennzeichen
 vgs 3:
-  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&start=1'
+  url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&start=1'
   include:
     key: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr
 vgs 4:
-  url: 'http://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&D=<Datum>&start=1'
+  url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&D=<Datum>&start=1'
   include:
     key: vgs 0
   examples:
@@ -5491,78 +5526,47 @@ voebb 0:
   examples:
   - description: Gehe zur Startseite
 vrr 0:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?language=de&itdLPxx_transpCompany=vrr
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?language=de&itdLPxx_transpCompany=vrr
   title: VRR-Auskunft
   tags:
   - bahn
   - travel
   - vrr
 vrr 2:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum
     description: Nächste Verbindung von Dortmund nach Bochum
 vrr 3:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10
     description: Verbindung von Dortmund nach Bochum heute um 10 Uhr
 vrr 4:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30
     description: Verbindung von Dortmund nach Bochum heute um 10.30 Uhr
 vrr 5:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30, 28
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28. des aktuellen Monats
 vrr 6:
-  url: http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
+  url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
   include:
     key: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30, 28, 1
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28.1.
-vvo 0:
-  url: https://www.vvo-online.de/de/fahrplan/
-  title: Verkehrsverbund Oberelbe
-  tags:
-  - bahn
-  - dresden
-  - travel
-  - vvo
-  examples:
-  - description: Gehe zur Startseite
-vvo 2:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeittyp%5D=dep
-  include:
-    key: vvo 0
-  examples:
-  - arguments: priestewitz, krippen
-    description: Nächste Verbindung von Priestewitz nach Krippen
-vvo 3:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep
-  include:
-    key: vvo 0
-  examples:
-  - arguments: priestewitz, krippen, 10
-    description: Verbindung von Priestewitz nach Krippen heute um 10:00 Uhr
-vvo 4:
-  url: http://www.vvo-online.de/de/fahrplan/verbindungsauskunft/direkt.do?vaform%5Bstarttype%5D=stop&vaform%5Bzieltype%5D=stop&vaform&vaform%5Bstartname%5D=<Start>&vaform%5Bzielname%5D=<Ziel>&vaform%5Bzeit%5D=<Zeit>&vaform%5Bzeittyp%5D=dep&vaform%5Bdatum%5D=<Datum>
-  include:
-    key: vvo 0
-  examples:
-  - arguments: priestewitz, krippen, 10, 28.11.
-    description: Verbindung von Priestewitz nach Krippen um 10:00 Uhr am 28.11.
 vvs 0:
   url: https://www.vvs.de/
   title: VVS Verkehrsverbund Stuttgart
@@ -5573,7 +5577,7 @@ vvs 0:
   examples:
   - description: Gehe zur Startseite
 vvs 2:
-  url: http://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
+  url: https://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
   include:
     key: vvs 0
   examples:
