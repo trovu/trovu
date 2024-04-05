@@ -64,6 +64,12 @@ program
   .option('-f, --filter <string>', 'only apply to files containing <string>')
   .action(migrateExamples);
 
+program
+  .command('migrate-protocol')
+  .description('Migrate http to https')
+  .option('-f, --filter <string>', 'only apply to files containing <string>')
+  .action(migrateProtocol);
+
 program.parse();
 
 function validateData() {
@@ -100,4 +106,9 @@ function migrateExamples(options) {
 function migratePlaceholders(options) {
   const migrator = new Migrator();
   migrator.migratePlaceholders(options);
+}
+
+function migrateProtocol(options) {
+  const migrator = new Migrator();
+  migrator.migrateProtocol(options);
 }

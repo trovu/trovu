@@ -5,6 +5,44 @@ import jsyaml from 'js-yaml';
 export default class Migrator {
   constructor() {}
 
+  migrateProtocol(options) {
+    const dataPath = options.data;
+    const shortcutsPath = options.shortcuts;
+    const typesPath = options.types;
+    const data = DataManager.load(options);
+    for (const namespace in data.shortcuts) {
+      for (const key in data.shortcuts[namespace]) {
+        const [keyword, argCount] = key.split(' ');
+        if (argCount != 0) {
+          continue;
+        }
+        let shortcut = data.shortcuts[namespace][key];
+        // if shortcut.url starts with http, do a an async fetch, remember its contents in a var, replace http with https, do another fetch, report whether result is the same
+        if (shortcut.url && shortcut.url.startsWith('http:')) {
+          console.log(`Migrating ${namespace}.${key}`);
+          const url = shortcut.url;
+          const httpsUrl = url.replace('http:', 'https:');
+          fetch(url)
+            .then((response) => response.text())
+            .then((text) => {
+              const originalText = text;
+              fetch(httpsUrl)
+                .then((response) => response.text())
+                .then((text) => {
+                  if (text === originalText) {
+                    console.log('==', key);
+                    shortcut.url = httpsUrl;
+                  } else {
+                    console.log('!=', key);
+                  }
+                });
+            });
+        }
+      }
+      DataManager.write(data, dataPath, shortcutsPath, typesPath);
+    }
+  }
+
   migratePlaceholders(options) {
     const dataPath = options.data;
     const shortcutsPath = options.shortcuts;
