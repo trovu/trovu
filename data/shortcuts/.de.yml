@@ -4894,21 +4894,21 @@ kaz 2:
     description: Suche nach "kühlschrank" in Berlin
 kaz+ 0:
   url: https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
-  title: Kleinanzeigen - Anzeige aufgeben
+  title: Kleinanzeigen.de, Anzeige aufgeben
   include:
     key: kaz 0
   examples:
   - description: Neue Anzeige aufgeben
 kaza 0:
   url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
-  title: Kleinanzeigen - Meine Anzeigen
+  title: Kleinanzeigen.de, Meine Anzeigen
   include:
     key: kaz 0
   examples:
   - description: Gehe zu meinen Anzeigen
 kazn 0:
   url: https://www.kleinanzeigen.de/m-nachrichten.html
-  title: Kleinanzeigen - Meine Nachrichten
+  title: Kleinanzeigen.de, Meine Nachrichten
   include:
     key: kaz 0
   examples:
