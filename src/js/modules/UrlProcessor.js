@@ -189,7 +189,6 @@ export default class UrlProcessor {
     // If date could be parsed:
     // Set argument.
     if (dateNative) {
-      console.log('date attributes', attributes);
       const date = dayjs(dateNative);
       let format = 'YYYY-MM-DD';
       if (attributes.output) {
@@ -211,7 +210,6 @@ export default class UrlProcessor {
         format = attributes.output;
       }
       processedArgument = time.format(format);
-      console.log(processedArgument);
     }
     return processedArgument;
   }
