@@ -47,54 +47,54 @@
   - arguments: www.google.de
     description: Go to www.google.de
 25c3 0:
-  url: http://events.ccc.de/congress/2008/
+  url: https://events.ccc.de/congress/2008/
   title: 25C3 Main Page
   tags:
   - ccc
 25c3 1:
-  url: http://events.ccc.de/congress/2008/wiki/Special:Search?search=<query>&go=Go
+  url: https://events.ccc.de/congress/2008/wiki/Special:Search?search=<query>&go=Go
   title: 25C3 Wiki Search
   tags:
   - ccc
 26c3 0:
-  url: http://events.ccc.de/congress/2009/
+  url: https://events.ccc.de/congress/2009/
   title: 26C3 Main Page
   tags:
   - ccc
 26c3 1:
-  url: http://events.ccc.de/congress/2009/wiki/Special:Search?search=<query>&go=Go
+  url: https://events.ccc.de/congress/2009/wiki/Special:Search?search=<query>&go=Go
   title: 26C3 Wiki Search
   tags:
   - ccc
 26c3s 0:
-  url: http://events.ccc.de/congress/2009/Fahrplan/index.en.html
+  url: https://events.ccc.de/congress/2009/Fahrplan/index.en.html
   title: 26C3 Schedule
 26c3s 1:
-  url: http://events.ccc.de/congress/2009/Fahrplan/day_2009-12-<Day>.en.html
+  url: https://events.ccc.de/congress/2009/Fahrplan/day_2009-12-<Day>.en.html
   title: 26C3 Schedule
 27c3 0:
-  url: http://events.ccc.de/congress/2010/
+  url: https://events.ccc.de/congress/2010/
   title: 27C3 Main Page
   tags:
   - ccc
 27c3 1:
-  url: http://events.ccc.de/congress/2010/wiki/Special:Search?search=<query>&go=Go
+  url: https://events.ccc.de/congress/2010/wiki/Special:Search?search=<query>&go=Go
   title: 27C3 Wiki Search
   tags:
   - ccc
 27c3s 0:
-  url: http://events.ccc.de/congress/2010/Fahrplan/index.en.html
+  url: https://events.ccc.de/congress/2010/Fahrplan/index.en.html
   title: 27C3 Schedule
 27c3s 1:
-  url: http://events.ccc.de/congress/2010/Fahrplan/day_2010-12-<Day>.en.html
+  url: https://events.ccc.de/congress/2010/Fahrplan/day_2010-12-<Day>.en.html
   title: 27C3 Schedule
 28c3 0:
-  url: http://events.ccc.de/congress/2011/
+  url: https://events.ccc.de/congress/2011/
   title: 28c3 Main Page
   tags:
   - ccc
 28c3 1:
-  url: http://events.ccc.de/congress/2011/wiki/Special:Search?search=<query>&go=Go
+  url: https://events.ccc.de/congress/2011/wiki/Special:Search?search=<query>&go=Go
   title: 28c3 Wiki Search
   tags:
   - ccc
@@ -102,18 +102,18 @@
   url: https://www.google.com/search?hl=<$language>&q=<query>%20inurl%3Ahttp%3A%2F%2Fevents.ccc.de%2Fcongress%2F2011%2F
   title: 28c3 Wiki Search via Google
 28c3s 0:
-  url: http://events.ccc.de/congress/2011/Fahrplan/index.en.html
+  url: https://events.ccc.de/congress/2011/Fahrplan/index.en.html
   title: 28c3 Schedule
 28c3s 1:
-  url: http://events.ccc.de/congress/2011/Fahrplan/day_2011-12-<Day>.en.html
+  url: https://events.ccc.de/congress/2011/Fahrplan/day_2011-12-<Day>.en.html
   title: 28c3 Schedule
 29c3 0:
-  url: http://events.ccc.de/congress/2012/
+  url: https://events.ccc.de/congress/2012/
   title: 29c3 Main Page
   tags:
   - ccc
 29c3 1:
-  url: http://events.ccc.de/congress/2012/wiki/Special:Search?search=<query>&go=Go
+  url: https://events.ccc.de/congress/2012/wiki/Special:Search?search=<query>&go=Go
   title: 29c3 Wiki Search
   tags:
   - ccc
@@ -159,7 +159,7 @@
   - leipzig
   - wiki
 4sq 0:
-  url: http://foursquare.com/
+  url: https://foursquare.com/
   title: Foursquare
   tags:
   - foursquare
@@ -186,7 +186,7 @@
   - arguments: pizza, new york
     description: Search for a pizza place in New York
 911 1:
-  url: http://www.911tabs.com/search.php?search=<band or song title>
+  url: https://www.911tabs.com/search.php?search=<band or song title>
   title: 911tabs.com
   tags:
   - music
@@ -312,7 +312,7 @@ adfcb 0:
   - bicycle
   removed: '2023-01-14'
 adror 1:
-  url: http://apidock.com/rails/search?query=<query>
+  url: https://apidock.com/rails/search?query=<query>
   title: 'Apidock: Ruby on Rails'
   tags:
   - programming
@@ -322,7 +322,7 @@ adror 1:
   - arguments: set
     description: Search for "set"
 ads 1:
-  url: http://adsabs.harvard.edu/cgi-bin/nph-basic_connect?qsearch=<query>&version=1
+  url: https://adsabs.harvard.edu/cgi-bin/nph-basic_connect?qsearch=<query>&version=1
   title: Astrophysics Data System
   tags:
   - physics
@@ -353,7 +353,7 @@ ae 1:
   - arguments: bicycle light
     description: Search Aliexpress for "bicycle light"
 af 1:
-  url: http://www.acronymfinder.com/af-query.asp?Acronym=<query>&Find=find&string=exact
+  url: https://www.acronymfinder.com/af-query.asp?Acronym=<query>&Find=find&string=exact
   title: Acronym Finder
   tags:
   - acronyms
@@ -470,7 +470,7 @@ aol 0:
   tags:
   - aol
 ap 1:
-  url: http://www.apple.com/search/?q=<query>
+  url: https://www.apple.com/search/?q=<query>
   title: Apple.com
   tags:
   - apple
@@ -538,7 +538,7 @@ ar 1:
   - key: ar 1
     namespace: pka
 arch 1:
-  url: http://www.archchinese.com/chinese_english_dictionary.html?find=<query>
+  url: https://www.archchinese.com/chinese_english_dictionary.html?find=<query>
   title: Arch Chinese Stroke Animation & Dictionary
   tags:
   - chinese
@@ -568,7 +568,7 @@ ardu 1:
   - arguments: loop
     description: Search for loop
 arxiv 1:
-  url: http://arxiv.org/search?query=<query>
+  url: https://arxiv.org/search?query=<query>
   title: ArXiv
   tags:
   - computer-science
@@ -622,7 +622,7 @@ atd 1:
   - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
     description: Read that article, paywall removed.
 atrf 1:
-  url: http://alltheragefaces.com/search/<query>
+  url: https://alltheragefaces.com/search/<query>
   title: All The Rage Faces!
   tags:
   - rage-faces
@@ -705,7 +705,7 @@ bg 1:
   - key: bg 1
     namespace: pka
 bgo 1:
-  url: http://bugs.gentoo.org/buglist.cgi?quicksearch=<query>
+  url: https://bugs.gentoo.org/buglist.cgi?quicksearch=<query>
   title: Gentoo Bugzilla
   tags:
   - old
@@ -846,13 +846,13 @@ bm 1:
   - arguments: berlin
     description: Search for "berlin"
 bmf 0:
-  url: http://www.bessermitfahren.de/
+  url: https://www.bessermitfahren.de/
   title: Besser mitfahren
   tags:
   - mitfahrgelegenheit
   - travel
 bmf 2:
-  url: http://www.bessermitfahren.de/<Start>/<Ziel>/angebote
+  url: https://www.bessermitfahren.de/<Start>/<Ziel>/angebote
   title: Besser mitfahren
   tags:
   - mitfahrgelegenheit
@@ -997,7 +997,7 @@ calc 0:
   - calculator
   - online-tool
 cc 1:
-  url: http://search.creativecommons.org/?q=<query>
+  url: https://search.creativecommons.org/?q=<query>
   title: Creative Commons
   tags:
   - old
@@ -1018,12 +1018,12 @@ ce 1:
   tags:
   - old
 cf 0:
-  url: http://www.clipfish.de/
+  url: https://www.clipfish.de/
   title: Clipfish Homepage
   tags:
   - old
 cf 1:
-  url: http://www.clipfish.de/searchfish.php?word=<query>
+  url: https://www.clipfish.de/searchfish.php?word=<query>
   title: Clipfish Clipsearch
   tags:
   - old
@@ -1063,12 +1063,12 @@ chewbone 1:
   tags:
   - old
 chip 1:
-  url: http://suche.chip.de/?q=<query>
+  url: https://suche.chip.de/?q=<query>
   title: Chip.de Suche
   tags:
   - old
 chipfind 1:
-  url: http://www.chipfind.ru/datasheet/search.htm?s=<partnumber>&t=part
+  url: https://www.chipfind.ru/datasheet/search.htm?s=<partnumber>&t=part
   title: ChipFind
   tags:
   - old
@@ -1078,7 +1078,7 @@ chords 1:
   tags:
   - old
 ciu 1:
-  url: http://caniuse.com/#search=<query>
+  url: https://caniuse.com/#search=<query>
   title: Caniuse
   tags:
   - old
@@ -1131,7 +1131,7 @@ clr 0:
   tags:
   - old
 clubic 1:
-  url: http://www.clubic.com/telecharger/r/<logiciel>
+  url: https://www.clubic.com/telecharger/r/<logiciel>
   title: Clubic
   tags:
   - clublic
@@ -1176,7 +1176,7 @@ comic 1:
   tags:
   - old
 commons 0:
-  url: http://commons.wikimedia.org/
+  url: https://commons.wikimedia.org/
   title: Wikimedia Commons Main Page
   tags:
   - commons
@@ -1193,7 +1193,7 @@ commons 1:
   - arguments: berlin
     description: Wikimedia pictures, videos and other media about Berlin
 conj 1:
-  url: 'http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/index.php&item=<verbform: {encoding: iso-8859-1}>'
+  url: 'https://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/index.php&item=<verbform: {encoding: iso-8859-1}>'
   title: Logos Conjugator
   tags:
   - grammar
@@ -1225,7 +1225,7 @@ corbis 1:
   - arguments: christmas
     description: search photos about christmas
 correos 1:
-  url: http://www.correos.es/comun/localizador/track.asp?numero=<codigo>
+  url: https://www.correos.es/comun/localizador/track.asp?numero=<codigo>
   title: Correos Localizador de Envíos
   tags:
   - correos
@@ -1263,7 +1263,7 @@ cpan 1:
   - arguments: Web::API
     description: search on metacpan.org
 cplusplus 1:
-  url: http://cplusplus.com/query/search.cgi?q=<query>
+  url: https://cplusplus.com/query/search.cgi?q=<query>
   title: Cplusplus.com
   tags:
   - old
@@ -1284,17 +1284,17 @@ cpp 1:
     description: Search C++ Reference (cppreference.com) for "sprintf"
   showOnHome: 1100
 cppc 1:
-  url: http://www.cplusplus.com/search.do?q=<query>
+  url: https://www.cplusplus.com/search.do?q=<query>
   title: C++ Reference (cplusplus.com)
   tags:
   - old
 cr 0:
-  url: http://chaosradio.ccc.de/chaosradio.html
+  url: https://chaosradio.ccc.de/chaosradio.html
   title: Chaosradio
   tags:
   - old
 cr 1:
-  url: http://chaosradio.ccc.de/cr<episode>.html
+  url: https://chaosradio.ccc.de/cr<episode>.html
   title: Chaosradio
   tags:
   - old
@@ -1310,27 +1310,27 @@ cran 1:
     description: Show bibtex package
   showOnHome: 1200
 crc32 1:
-  url: http://stefanschramm.net/dev/hash/?algo=crc32&q=<data>
+  url: https://stefanschramm.net/dev/hash/?algo=crc32&q=<data>
   title: Hash functions
   tags:
   - old
 cre 0:
-  url: http://chaosradio.ccc.de/chaosradio_express.html
+  url: https://chaosradio.ccc.de/chaosradio_express.html
   title: Chaosradio
   tags:
   - old
 cre 1:
-  url: http://chaosradio.ccc.de/cre<episode>.html
+  url: https://chaosradio.ccc.de/cre<episode>.html
   title: Chaosradio
   tags:
   - old
 creativecommons.org 1:
-  url: http://creativecommons.org/?s=<argument name>
+  url: https://creativecommons.org/?s=<argument name>
   title: Find within creativecommons.org (not for licensed works)
   tags:
   - old
 crg 0:
-  url: http://craigslist.com
+  url: https://craigslist.com
   title: Craigslist
   tags:
   - craigslist
@@ -1432,7 +1432,7 @@ cutlist 1:
   - arguments: tagesschau
     description: search cutlists for "tagesschau"
 cve 1:
-  url: http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=<query>
+  url: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=<query>
   title: CVE Common vulnerabilities and exposures
   tags:
   - old
@@ -1486,7 +1486,7 @@ da 1:
   - key: da 1
     namespace: pka
 dao 0:
-  url: http://dragonage.wikia.com/wiki/Dragon_Age_Wiki
+  url: https://dragonage.wikia.com/wiki/Dragon_Age_Wiki
   title: Dragon Age Origins Wiki
   tags:
   - old
@@ -1502,7 +1502,7 @@ datecalc 0:
   - calculator
   - date
 datev 1:
-  url: http://www.datev.de/dnlexos/mobile/webapp.aspx?sq=<Suche>
+  url: https://www.datev.de/dnlexos/mobile/webapp.aspx?sq=<Suche>
   title: Datev LEXinform/Info-Datenbank
   examples:
   - arguments: berlin
@@ -1521,7 +1521,7 @@ dblp 1:
   - arguments: Turing
     description: Search for "Turing"
 dbp 1:
-  url: http://dbpedia.org/page/<title>
+  url: https://dbpedia.org/page/<title>
   title: DBpedia
   tags:
   - database
@@ -1532,12 +1532,12 @@ dbp 1:
   - arguments: Tunisia
     description: Open DBpedia page about Tunisia
 dbug 0:
-  url: http://www.debian.org/Bugs/
+  url: https://www.debian.org/Bugs/
   title: debian bugs
   tags:
   - old
 dbug 2:
-  url: http://bugs.debian.org/cgi-bin/pkgreport.cgi?package=<package>;include=subject%3A<query>
+  url: https://bugs.debian.org/cgi-bin/pkgreport.cgi?package=<package>;include=subject%3A<query>
   title: query debian bugs from a package
   tags:
   - old
@@ -1680,7 +1680,7 @@ deau 1:
   - arguments: account
     description: Go to account.deviantart.com
 deb 1:
-  url: http://packages.debian.org/search?keywords=<query>&searchon=names&suite=all&section=all
+  url: https://packages.debian.org/search?keywords=<query>&searchon=names&suite=all&section=all
   title: debian Packages
   tags:
   - debian
@@ -1689,17 +1689,17 @@ deb 1:
   - arguments: tetris
     description: Search debian packages for "tetris"
 debb 1:
-  url: http://bugs.debian.org/<query>
+  url: https://bugs.debian.org/<query>
   title: debian Bugs
   tags:
   - old
 debian-bugs 1:
-  url: http://bugs.debian.org/<query>
+  url: https://bugs.debian.org/<query>
   title: debian Bugs
   tags:
   - old
 debian-planet 0:
-  url: http://planet.debian.org/
+  url: https://planet.debian.org/
   title: Debian Planet
   tags:
   - old
@@ -1766,17 +1766,17 @@ def 1:
   tags:
   - old
 defr 1:
-  url: http://dict.leo.org/?lp=frde&lang=fr&search=<word>
+  url: https://dict.leo.org/?lp=frde&lang=fr&search=<word>
   title: Translation German to French
   tags:
   - old
 denic 1:
-  url: http://www.denic.de/webwhois/?domain=<query>
+  url: https://www.denic.de/webwhois/?domain=<query>
   title: DENIC Whois
   tags:
   - old
 deo 1:
-  url: http://www.vortaro.dk/#/<soegeord>
+  url: https://www.vortaro.dk/#/<soegeord>
   title: Dansk-esperanto ordbog
   tags:
   - old
@@ -1791,7 +1791,7 @@ derivative 1:
   - arguments: x^2
     description: Calculate the derivative of x^2
 derstandard 1:
-  url: http://derstandard.at/suche?query=<query>
+  url: https://derstandard.at/suche?query=<query>
   title: DerStandard.at search
   tags:
   - old
@@ -2146,7 +2146,7 @@ drp 1:
   - arguments: views
     description: Search for views module
 drr 1:
-  url: http://cgit.drupalcode.org/<project>/tree
+  url: https://cgit.drupalcode.org/<project>/tree
   title: Drupal project repository
   tags:
   - programming
@@ -2174,7 +2174,7 @@ drupal 1:
   tags:
   - old
 dsh 1:
-  url: http://search.datasheetcatalog.net/key/<part>
+  url: https://search.datasheetcatalog.net/key/<part>
   title: datasheetcatalog.com
   tags:
   - datasheet
@@ -2182,12 +2182,12 @@ dsh 1:
   - arguments: ADXL320
     description: Search for ADXL320 sensor in datasheetcatalog.com
 duck 1:
-  url: http://duckduckgo.com/?q=<query>
+  url: https://duckduckgo.com/?q=<query>
   title: Duck Duck Go
   tags:
   - old
 duden 1:
-  url: http://www.duden.de/suchen/dudenonline/<wort>
+  url: https://www.duden.de/suchen/dudenonline/<wort>
   title: Duden
   tags:
   - deutsch
@@ -2198,10 +2198,10 @@ duden 1:
   - arguments: stuhl
     description: Nachschlagen des Wortes "Stuhl"
 dwb 0:
-  url: http://www.woerterbuchnetz.de/DWB
+  url: https://www.woerterbuchnetz.de/DWB
   title: Deutsches Wörterbuch von Jacob und Wilhelm Grimm
 dwb 1:
-  url: http://www.woerterbuchnetz.de/DWB?lemma=<Wort>
+  url: https://www.woerterbuchnetz.de/DWB?lemma=<Wort>
   title: Deutsches Wörterbuch von Jacob und Wilhelm Grimm
 dwd 0:
   url: http://www.dwd.de
@@ -2280,7 +2280,7 @@ ec 1:
   - arguments: berlin
     description: Search for "berlin"
 ecl 0:
-  url: http://www.eclipse.org/eclipselink/api/2.0.2/index.html
+  url: https://www.eclipse.org/eclipselink/api/2.0.2/index.html
   title: EclipseLink API
   tags:
   - eclipse
@@ -2315,7 +2315,7 @@ ed 1:
   tags:
   - old
 efa 0:
-  url: http://www.efa-bw.de
+  url: https://www.efa-bw.de
   title: Efa bw
   tags:
   - old
@@ -2325,7 +2325,7 @@ eg 1:
   tags:
   - old
 eis 1:
-  url: http://www.eis-machen.de/?s=<query>
+  url: https://www.eis-machen.de/?s=<query>
   title: Eis-machen.de Search
   tags:
   - old
@@ -2456,12 +2456,12 @@ enfr 1:
   tags:
   - old
 engrish 0:
-  url: http://www.engrish.com/
+  url: https://www.engrish.com/
   title: main page
   tags:
   - old
 engrish 1:
-  url: http://www.engrish.com/?s=<query>
+  url: https://www.engrish.com/?s=<query>
   title: search for some topic
   tags:
   - old
@@ -2596,7 +2596,7 @@ etools 1:
   tags:
   - old
 ety 1:
-  url: http://www.etymonline.com/index.php?search=<query>&searchmode=none
+  url: https://www.etymonline.com/index.php?search=<query>&searchmode=none
   title: Etymology lookup
   tags:
   - old
@@ -2609,13 +2609,13 @@ eu 1:
   - key: eu 1
     namespace: pka
 eucomp 1:
-  url: http://ec.europa.eu/competition/elojade/isef/index.cfm?fuseaction=dsp_result&case_title=<company>
+  url: https://ec.europa.eu/competition/elojade/isef/index.cfm?fuseaction=dsp_result&case_title=<company>
   title: EU Competition Authority Case search
 eutm 1:
   url: https://euipo.europa.eu/eSearch/#basic/1+1+1+1/50+50+50+50/<query>
   title: EU IPO trade mark research
 everyzing 1:
-  url: http://www.everyzing.com/results.jsp?q=<query>
+  url: https://www.everyzing.com/results.jsp?q=<query>
   title: Everyzing
   tags:
   - old
@@ -2878,7 +2878,7 @@ fd 1:
   tags:
   - old
 fddb 1:
-  url: http://fddb.info/db/de/suche/?udd=0&cat=site-de&search=<query>
+  url: https://fddb.info/db/de/suche/?udd=0&cat=site-de&search=<query>
   title: Kalorien in der Lebensmittel-Datenbank
   tags:
   - old
@@ -2893,7 +2893,7 @@ fedbugq 1:
   tags:
   - old
 fedex 1:
-  url: http://www.fedex.com/Tracking?tracknumbers=<track number>
+  url: https://www.fedex.com/Tracking?tracknumbers=<track number>
   title: FedEx Tracking
   tags:
   - fedex
@@ -2912,7 +2912,7 @@ fedw 1:
   tags:
   - old
 ff 0:
-  url: http://www.fileformat.info
+  url: https://www.fileformat.info
   title: Go to FileFormat.info home page
   tags:
   - old
@@ -2939,13 +2939,13 @@ ffaddon 1:
   - arguments: serchilo
     description: Search for Serchilo Firefox addon
 ffi 0:
-  url: http://www.fotofinder.com/
+  url: https://www.fotofinder.com/
   title: Fotofinder
   tags:
   - images
   - stock-agency
 ffi 1:
-  url: http://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
+  url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   title: Fotofinder
   tags:
   - images
@@ -2983,12 +2983,12 @@ fien 1:
   tags:
   - old
 filmweb_ludzie 1:
-  url: http://www.filmweb.pl/szukaj?q=<query>&c=person
+  url: https://www.filmweb.pl/szukaj?q=<query>&c=person
   title: FilmWeb
   tags:
   - old
 filmweb_tytul 1:
-  url: http://www.filmweb.pl/szukaj?q=<query>&c=film
+  url: https://www.filmweb.pl/szukaj?q=<query>&c=film
   title: FilmWeb
   tags:
   - old
@@ -3000,7 +3000,7 @@ filsh 1:
   - files
   - youtube
 findutf 0:
-  url: http://shapecatcher.com
+  url: https://shapecatcher.com
   title: Find UTF code by simply drawing its shape omline (Shapecatcher)
   tags:
   - image
@@ -3149,7 +3149,7 @@ fm 1:
   tags:
   - old
 fnet 1:
-  url: http://www.finanzen.net/suchergebnis.asp?_search=<query>
+  url: https://www.finanzen.net/suchergebnis.asp?_search=<query>
   title: Finanzen.net Query
 fo 0:
   include:
@@ -3203,7 +3203,7 @@ fosspatents 0:
   - patent-law
   - patents
 fotofinder 1:
-  url: http://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
+  url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   title: Fotofinder
   tags:
   - old
@@ -3213,12 +3213,12 @@ foxy 1:
   tags:
   - old
 fpl 1:
-  url: http://filmpolski.pl/fp/index.php/8/<query>
+  url: https://filmpolski.pl/fp/index.php/8/<query>
   title: Filmpolski
   tags:
   - old
 fpwg 0:
-  url: http://www.kessnux.de/anwendungen/passwort-generator.php
+  url: https://www.kessnux.de/anwendungen/passwort-generator.php
   title: Frank's password generator (Kessnux; javascript)
   tags:
   - passwords
@@ -3348,12 +3348,12 @@ fsc 1:
   tags:
   - old
 fv 1:
-  url: http://validator.w3.org/feed/check.cgi?url=<url>
+  url: https://validator.w3.org/feed/check.cgi?url=<url>
   title: W3C Feed Validation Service
   tags:
   - old
 fx 1:
-  url: http://www.frederix.de/index.php?searchword=<query>&option=com_search&Itemid=5
+  url: https://www.frederix.de/index.php?searchword=<query>&option=com_search&Itemid=5
   title: Frederix Computer GmbH
   tags:
   - old
@@ -3366,7 +3366,7 @@ fy 1:
   - key: fy 1
     namespace: pka
 fz 1:
-  url: http://fizy.com/?q=<name of song xor artist>
+  url: https://fizy.com/?q=<name of song xor artist>
   title: Fizy videomusic
   tags:
   - old
@@ -3415,7 +3415,7 @@ g100 1:
   - arguments: berlin
     description: Search for "berlin"
 g? 0:
-  url: http://www.google.com/intl/<$language>/about.html
+  url: https://www.google.com/intl/<$language>/about.html
   title: About Google
   tags:
   - old
@@ -3456,7 +3456,7 @@ gat 1:
   tags:
   - old
 gbooks 0:
-  url: http://books.google.com/
+  url: https://books.google.com/
   title: Google Books
   tags:
   - books
@@ -3498,7 +3498,7 @@ gcal 1:
   - arguments: berlin
     description: Search for "berlin"
 gcbug 1:
-  url: http://code.google.com/p/<project>/issues/list
+  url: https://code.google.com/p/<project>/issues/list
   title: google code bugs
   tags:
   - old
@@ -3687,7 +3687,7 @@ gentoo-forums 0:
   tags:
   - old
 gentoo-planet 0:
-  url: http://planet.gentoo.org
+  url: https://planet.gentoo.org
   title: Gentoo Planet
   tags:
   - old
@@ -3812,7 +3812,7 @@ gfl1 3:
   - arguments: ber, lpa, fr
     description: Search for one-way flights from Berlin to Las Palmas, departing next Friday
 gfp 1:
-  url: http://german-foreign-policy.com/index.php?lang=en&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and=<query>
+  url: https://german-foreign-policy.com/index.php?lang=en&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and=<query>
   title: German Foreign Policy (English)
   tags:
   - germany
@@ -3989,37 +3989,37 @@ gmail 1:
   - arguments: label:spam
     description: Search for "label:spam"
 gmbb 2:
-  url: http://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=bows
+  url: https://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=bows
   title: GMB Explorer, BOWs view
   tags:
   - old
 gmbd 2:
-  url: http://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=drs.xml
+  url: https://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=drs.xml
   title: GMB Explorer, discourse view
   tags:
   - old
 gmbm 2:
-  url: http://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=met
+  url: https://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=met
   title: GMB Explorer, metadata view
   tags:
   - old
 gmbr 2:
-  url: http://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=raw
+  url: https://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=raw
   title: GMB Explorer, raw text view
   tags:
   - old
 gmbs 2:
-  url: http://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=der.xml
+  url: https://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=der.xml
   title: GMB Explorer, sentences view
   tags:
   - old
 gmbt 2:
-  url: http://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=tok.iob
+  url: https://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=tok.iob
   title: GMB Explorer, tokenization view
   tags:
   - old
 gmbw 2:
-  url: http://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=warnings
+  url: https://gmb.let.rug.nl/explorer/explore.php?part=<part>&doc_id=<doc_id>&type=warnings
   title: GMB Explorer, warnings view
   tags:
   - old
@@ -4067,7 +4067,7 @@ gmr 2:
   tags:
   - old
 gmts 1:
-  url: http://gmb.let.rug.nl/explorer/search.php?term=<term>
+  url: https://gmb.let.rug.nl/explorer/search.php?term=<term>
   title: GMB Explorer, term search
   tags:
   - old
@@ -4104,12 +4104,12 @@ go 1:
   tags:
   - old
 gobug 0:
-  url: http://bugs.gentoo.org/query.cgi?format=specific
+  url: https://bugs.gentoo.org/query.cgi?format=specific
   title: gentoo bugs
   tags:
   - old
 god 1:
-  url: http://www.godchecker.com/pantheon/index.php?_search-results=Y&name=<name>
+  url: https://www.godchecker.com/pantheon/index.php?_search-results=Y&name=<name>
   title: Godchecker Mythology Encyclopedia
   tags:
   - old
@@ -4260,7 +4260,7 @@ grde 1:
   tags:
   - old
 grhp 2:
-  url: http://graphhopper.com/maps/?point=<start>&point=<destination>&locale=<$language>
+  url: https://graphhopper.com/maps/?point=<start>&point=<destination>&locale=<$language>
   title: GraphHopper (Routing via OSM)
   tags:
   - maps
@@ -4449,7 +4449,7 @@ gvid 1:
   tags:
   - old
 gw 0:
-  url: http://www.guildwiki.org/Main_Page
+  url: https://www.guildwiki.org/Main_Page
   title: Guildwars wiki
   tags:
   - old
@@ -4459,7 +4459,7 @@ gw 1:
   tags:
   - old
 gw2 0:
-  url: http://wiki.guildwars2.com/
+  url: https://wiki.guildwars2.com/
   title: Guildwars 2 Wiki
   tags:
   - old
@@ -4479,7 +4479,7 @@ gwo 0:
   tags:
   - old
 gwo 1:
-  url: http://wiki.guildwars.com/wiki/<query>
+  url: https://wiki.guildwars.com/wiki/<query>
   title: Official Guild Wiki
   tags:
   - old
@@ -4515,7 +4515,7 @@ hbr 1:
   tags:
   - old
 hdb 1:
-  url: http://hackage.haskell.org/cgi-bin/hackage-scripts/package/<package name>
+  url: https://hackage.haskell.org/cgi-bin/hackage-scripts/package/<package name>
   title: Haskell package page
   tags:
   - old
@@ -4549,12 +4549,12 @@ here 1:
   - arguments: berlin
     description: Search Here.com for "berlin"
 hexdec 1:
-  url: http://stefanschramm.net/dev/hex/?hex=<hex value>
+  url: https://stefanschramm.net/dev/hex/?hex=<hex value>
   title: Hex decode
   tags:
   - old
 hexenc 1:
-  url: http://stefanschramm.net/dev/hex/?dec=<decimal value>
+  url: https://stefanschramm.net/dev/hex/?dec=<decimal value>
   title: Hex encode
   tags:
   - old
@@ -4581,7 +4581,7 @@ hoh 1:
   tags:
   - old
 hoo 1:
-  url: http://haskell.org/hoogle/?q=<query>
+  url: https://haskell.org/hoogle/?q=<query>
   title: Hoogle
   tags:
   - haskell
@@ -4590,7 +4590,7 @@ hoo 1:
   - arguments: otherwise
     description: Search for "otherwise"
 hotu 1:
-  url: http://www.homeoftheunderdogs.net/search.php?search_game=<query>
+  url: https://www.homeoftheunderdogs.net/search.php?search_game=<query>
   title: Home of the Underdogs
   tags:
   - old
@@ -4620,7 +4620,7 @@ html-pdf 1:
   tags:
   - old
 html2pdf 1:
-  url: http://www.htm2pdf.co.uk/?url=<url>
+  url: https://www.htm2pdf.co.uk/?url=<url>
   title: HTML to PDF Converter
   tags:
   - old
@@ -4706,7 +4706,7 @@ ibash 0:
   tags:
   - old
 icd 1:
-  url: http://www.icd-code.de/suche/icd/recherche.html?sp=0&sp=S<query>
+  url: https://www.icd-code.de/suche/icd/recherche.html?sp=0&sp=S<query>
   title: Suche nach Krankheiten in der ICD-10
   tags:
   - old
@@ -4857,7 +4857,7 @@ iper 1:
   tags:
   - old
 ipkat 0:
-  url: http://ipkitten.blogspot.de
+  url: https://ipkitten.blogspot.de
   title: The IPKat (Intellectual Property) blog
   tags:
   - copyright
@@ -5024,7 +5024,7 @@ japiall 1:
   tags:
   - old
 java 0:
-  url: http://download.oracle.com/javase/7/docs/api/index.html
+  url: https://download.oracle.com/javase/7/docs/api/index.html
   title: Java Platform SE 7 API
   tags:
   - api
@@ -5041,12 +5041,12 @@ java 1:
   - arguments: void
     description: Search for "void"
 java5 0:
-  url: http://download.oracle.com/javase/1.5.0/docs/api/
+  url: https://download.oracle.com/javase/1.5.0/docs/api/
   title: Java Platform SE6 API Search
   tags:
   - old
 java6 0:
-  url: http://download.oracle.com/javase/6/docs/api/index.html
+  url: https://download.oracle.com/javase/6/docs/api/index.html
   title: Java Platform SE6 API Search
   tags:
   - old
@@ -5091,7 +5091,7 @@ jcp 1:
   tags:
   - old
 jee 0:
-  url: http://download.oracle.com/javaee/6/api/index.html
+  url: https://download.oracle.com/javaee/6/api/index.html
   title: Java Platform SE6 API Search
   tags:
   - old
@@ -5101,7 +5101,7 @@ jee 1:
   tags:
   - old
 jee6 0:
-  url: http://download.oracle.com/javaee/6/api/index.html
+  url: https://download.oracle.com/javaee/6/api/index.html
   title: Java Platform SE6 API Search
   tags:
   - old
@@ -5111,7 +5111,7 @@ jee6 1:
   tags:
   - old
 jgrapht 0:
-  url: http://www.jgrapht.org/javadoc/
+  url: https://www.jgrapht.org/javadoc/
   title: JGraphT API
   tags:
   - old
@@ -5126,7 +5126,7 @@ jm 1:
   tags:
   - old
 jmp 1:
-  url: http://j.mp/?u=<url>
+  url: https://j.mp/?u=<url>
   title: Bit.ly
   tags:
   - old
@@ -5173,12 +5173,12 @@ keepvid 1:
   tags:
   - old
 keno 0:
-  url: http://www.kenozahlen.de/
+  url: https://www.kenozahlen.de/
   title: Kenozahlen
   tags:
   - old
 keno 1:
-  url: http://www.kenozahlen.de/?s=<Datum>
+  url: https://www.kenozahlen.de/?s=<Datum>
   title: Kenozahlen
   tags:
   - old
@@ -5264,7 +5264,7 @@ ks 1:
   - key: ks 1
     namespace: pka
 kt 1:
-  url: http://kinox.to/Search.html?q=<query>
+  url: https://kinox.to/Search.html?q=<query>
   title: Kinox.to
   tags:
   - movies
@@ -5273,7 +5273,7 @@ kt 1:
   - arguments: serie
     description: Suche nach "serie"
 kuler 1:
-  url: http://kuler.adobe.com/#themes/search?term=<term>
+  url: https://kuler.adobe.com/#themes/search?term=<term>
   title: Kuler
   tags:
   - old
@@ -5294,7 +5294,7 @@ ky 1:
   - key: ky 1
     namespace: pka
 kym 1:
-  url: http://knowyourmeme.com/search?q=<query>
+  url: https://knowyourmeme.com/search?q=<query>
   title: Know Your Meme
   tags:
   - fun
@@ -5396,12 +5396,12 @@ lb 1:
   - key: lb 1
     namespace: pka
 lc 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo=<verb>
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo=<verb>
   title: Logos Universal Conjugator
   tags:
   - old
 lcn 0:
-  url: http://lucene.apache.org/core/3_6_0/api/all/index.html
+  url: https://lucene.apache.org/core/3_6_0/api/all/index.html
   title: Lucene API
   tags:
   - java
@@ -5506,7 +5506,7 @@ lintian 1:
   tags:
   - old
 linz 2:
-  url: http://www.linzag.at/efa/index.php?sstreet=<Start>&street=<Ziel>%E4t&x=0&y=0&_language=de
+  url: https://www.linzag.at/efa/index.php?sstreet=<Start>&street=<Ziel>%E4t&x=0&y=0&_language=de
   title: Linz Linien
   tags:
   - old
@@ -5560,7 +5560,7 @@ loe 1:
   url: https://en.wikipedia.org/wiki/List_of_<title>_episodes
   title: List of episodes on Wikipedia
 lotto 0:
-  url: http://www.lottozahlen.info/
+  url: https://www.lottozahlen.info/
   title: Lottozahlen
   tags:
   - old
@@ -5597,12 +5597,12 @@ lw 1:
   url: https://www.lampenwelt.de/catalogsearch/result/?q=<query>
   title: Lampenwelt.de
 lyrc 1:
-  url: http://lyrc.com.ar/en/tema1en.php?songname=<songname>
+  url: https://lyrc.com.ar/en/tema1en.php?songname=<songname>
   title: Lyrc
   tags:
   - old
 lyrc 2:
-  url: http://lyrc.com.ar/en/tema1en.php?artist=<artist>&songname=<songname>
+  url: https://lyrc.com.ar/en/tema1en.php?artist=<artist>&songname=<songname>
   title: Lyrc
   tags:
   - old
@@ -5636,12 +5636,12 @@ mash 1:
   tags:
   - old
 mathworld 1:
-  url: http://mathworld.wolfram.com/search/?query=<query>
+  url: https://mathworld.wolfram.com/search/?query=<query>
   title: Mathworld
   tags:
   - old
 maven 1:
-  url: http://search.maven.org/#search|ga|1|<query>
+  url: https://search.maven.org/#search|ga|1|<query>
   title: Maven Search
   tags:
   - java
@@ -5651,7 +5651,7 @@ maven 1:
   - arguments: print
     description: Search for "print"
 maxent 0:
-  url: http://maxent.sourceforge.net/api/index.html
+  url: https://maxent.sourceforge.net/api/index.html
   title: Maxent API
   tags:
   - old
@@ -5681,7 +5681,7 @@ mc 1:
   tags:
   - old
 mcw 0:
-  url: http://www.minecraftwiki.net/wiki/Minecraft_Wiki
+  url: https://www.minecraftwiki.net/wiki/Minecraft_Wiki
   title: Minecraft Wiki
   tags:
   - old
@@ -5691,7 +5691,7 @@ mcw 1:
   tags:
   - old
 md5 1:
-  url: http://stefanschramm.net/dev/hash/?algo=md5&q=<data>
+  url: https://stefanschramm.net/dev/hash/?algo=md5&q=<data>
   title: MD5 Hash
   tags:
   - hash
@@ -5701,7 +5701,7 @@ md5 1:
   - arguments: foo
     description: Calculate MD5 hash of "foo"
 mdn 1:
-  url: http://developer.mozilla.org/<$language>/search?q=<query>
+  url: https://developer.mozilla.org/<$language>/search?q=<query>
   title: Mozilla Developer Network
   tags:
   - mozilla
@@ -5715,7 +5715,7 @@ me 1:
   tags:
   - old
 med 1:
-  url: http://www.medizinfuchs.de/produkt/search/<query>
+  url: https://www.medizinfuchs.de/produkt/search/<query>
   title: Versandapotheke
   tags:
   - old
@@ -5766,7 +5766,7 @@ mind 1:
   tags:
   - old
 mink 1:
-  url: http://mink.behat.org/en/latest/search.html?q=<query>
+  url: https://mink.behat.org/en/latest/search.html?q=<query>
   title: Mink
   description: Mink is an open source browser controller/emulator for web applications, written in PHP.
   tags:
@@ -5856,7 +5856,7 @@ mtf 1:
   tags:
   - old
 mv 0:
-  url: http://www.myvideo.de/
+  url: https://www.myvideo.de/
   title: MyVideo Homepage
   tags:
   - old
@@ -5866,7 +5866,7 @@ mv 1:
   tags:
   - old
 mwe 0:
-  url: http://www.mediawiki.org/wiki/Category:Extensions
+  url: https://www.mediawiki.org/wiki/Category:Extensions
   title: Browse MediaWiki Extensions
   tags:
   - mediawiki
@@ -5910,7 +5910,7 @@ myg 1:
   tags:
   - old
 myip 0:
-  url: http://ipinfo.info/html/privacy-check.php
+  url: https://ipinfo.info/html/privacy-check.php
   title: Myip
   tags:
   - old
@@ -5933,7 +5933,7 @@ mysql 1:
   url: https://dev.mysql.com/doc/search/?q=<query>
   title: MySQL Documentation
 mytv 0:
-  url: http://m.tvtoday.de
+  url: https://m.tvtoday.de
   title: Mobile TVInfo
   tags:
   - old
@@ -6003,7 +6003,7 @@ ne 1:
   - key: ne 1
     namespace: pka
 ng 0:
-  url: http://docs.angularjs.org/
+  url: https://docs.angularjs.org/
   title: AngularJS Documentation
   tags:
   - angular
@@ -6029,17 +6029,17 @@ ng 1:
   - arguments: filter
     description: Show documentation on "filter"
 nicebooks:fr 1:
-  url: http://fr.nicebooks.com/search?q=<query>
+  url: https://fr.nicebooks.com/search?q=<query>
   title: NiceBooks
   tags:
   - old
 nicebooks:uk 1:
-  url: http://uk.nicebooks.com/search?q=<query>
+  url: https://uk.nicebooks.com/search?q=<query>
   title: NiceBooks
   tags:
   - old
 nicebooks:us 1:
-  url: http://us.nicebooks.com/search?q=<query>
+  url: https://us.nicebooks.com/search?q=<query>
   title: NiceBooks
   tags:
   - old
@@ -6132,7 +6132,7 @@ npr 1:
   tags:
   - old
 ns 1:
-  url: http://www.netspeak.org/#query=<query>
+  url: https://www.netspeak.org/#query=<query>
   title: Netspeak
   tags:
   - old
@@ -6147,7 +6147,7 @@ nv 1:
   tags:
   - web-search
 oca 1:
-  url: http://openclipart.org/search/?query=<query>
+  url: https://openclipart.org/search/?query=<query>
   title: Open Clip Art Library
   tags:
   - clipart
@@ -6172,7 +6172,7 @@ of 1:
   tags:
   - old
 okf 1:
-  url: http://otrkeyfinder.com/de/?search=<Suche>
+  url: https://otrkeyfinder.com/de/?search=<Suche>
   title: otrkeyfinder.com
   tags:
   - onlinetvrecorder
@@ -6227,7 +6227,7 @@ ora 1:
   tags:
   - old
 orm 1:
-  url: http://www.openrailwaymap.org/?q=<query>
+  url: https://www.openrailwaymap.org/?q=<query>
   title: OpenRailwayMap
   tags:
   - copyleft
@@ -6359,7 +6359,7 @@ osmr 1:
   - arguments: '206570'
     description: Search for "206570"
 osmrank 1:
-  url: http://hdyc.neis-one.org/?<user>
+  url: https://hdyc.neis-one.org/?<user>
   title: OpenStreetMap User Rank
   tags:
   - copyleft
@@ -6434,7 +6434,7 @@ ov 0:
   tags:
   - old
 ov 1:
-  url: http://www.onvista.de/suche.html?SEARCH_VALUE=<query>
+  url: https://www.onvista.de/suche.html?SEARCH_VALUE=<query>
   title: OnVista
   tags:
   - old
@@ -6491,7 +6491,7 @@ pastebin 0:
   tags:
   - old
 pat 1:
-  url: http://worldwide.espacenet.com/<publicationnumber>
+  url: https://worldwide.espacenet.com/<publicationnumber>
   title: Patentserver
   description: Worldwide patent service. Multi-language interface.
   tags:
@@ -6503,7 +6503,7 @@ patent 1:
   tags:
   - patents
 pciid 1:
-  url: http://pci-ids.ucw.cz/read/PC/<vendorid>
+  url: https://pci-ids.ucw.cz/read/PC/<vendorid>
   title: PCI ID Repository
   tags:
   - electronics
@@ -6511,7 +6511,7 @@ pciid 1:
   - arguments: '8086'
     description: List all known devices from Vendor Intel (8086)
 pciid 2:
-  url: http://pci-ids.ucw.cz/read/PC/<vendorid>/<deviceid>
+  url: https://pci-ids.ucw.cz/read/PC/<vendorid>/<deviceid>
   title: PCI ID Repository
   tags:
   - electronics
@@ -6524,17 +6524,17 @@ pdf 1:
   tags:
   - old
 pear 1:
-  url: http://pear.php.net/search.php?q=<query>&in=packages
+  url: https://pear.php.net/search.php?q=<query>&in=packages
   title: PEAR - PHP Extension and Application Repository
   tags:
   - old
 pep 1:
-  url: http://python.org/dev/peps/pep-<id>/
+  url: https://python.org/dev/peps/pep-<id>/
   title: Show Python Enhancement Proposal
   tags:
   - old
 perl 1:
-  url: http://perldoc.perl.org/search.html?q=<query>
+  url: https://perldoc.perl.org/search.html?q=<query>
   title: Perldoc
   tags:
   - perl
@@ -6543,7 +6543,7 @@ perl 1:
   - arguments: our
     description: search for "our"
 perseus 1:
-  url: http://www.perseus.tufts.edu/hopper/searchresults?q=<query>
+  url: https://www.perseus.tufts.edu/hopper/searchresults?q=<query>
   title: Perseus Digital Library
   tags:
   - english
@@ -6562,18 +6562,18 @@ pg 1:
   tags:
   - old
 ph 1:
-  url: http://www.phazeddl.com/search/<query>.p1.htm
+  url: https://www.phazeddl.com/search/<query>.p1.htm
   title: Phazeddl
   tags:
   - old
 phb 0:
-  url: http://photobucket.com/
+  url: https://photobucket.com/
   title: Photobucket
   tags:
   - images
   - stock-agency
 phb 1:
-  url: http://photobucket.com/images/<query>
+  url: https://photobucket.com/images/<query>
   title: Photobucket
   tags:
   - images
@@ -6582,19 +6582,19 @@ phb 1:
   - arguments: christmas
     description: search photos about christmas
 phbl 0:
-  url: http://photobucket.com/login
+  url: https://photobucket.com/login
   title: Photobucket Login
   tags:
   - images
   - stock-agency
 php 0:
-  url: http://www.php.net
+  url: https://www.php.net
   title: PHP Documentation
   tags:
   - php
   - programming
 php 1:
-  url: http://www.php.net/manual-lookup.php?lang=<$language>&pattern=<query>
+  url: https://www.php.net/manual-lookup.php?lang=<$language>&pattern=<query>
   title: PHP Documentation
   tags:
   - php
@@ -6723,7 +6723,7 @@ plk 1:
   - movies
   - tv
 plot 1:
-  url: http://plot20.kesto.de/#{"functions":["<function>"]}
+  url: https://plot20.kesto.de/#{"functions":["<function>"]}
   title: Plot 2.0
   tags:
   - old
@@ -6813,7 +6813,7 @@ ps 1:
   - key: ps 1
     namespace: pka
 psql 0:
-  url: http://www.postgresql.org/
+  url: https://www.postgresql.org/
   title: PostgreSQL
   tags:
   - old
@@ -6877,7 +6877,7 @@ pubchem 1:
   - arguments: carbon dioxide
     description: Search PubChem for "carbon dioxide"
 puls 0:
-  url: http://puls.uni-potsdam.de
+  url: https://puls.uni-potsdam.de
   title: Uni Potsdam, Puls
   tags:
   - old
@@ -6900,7 +6900,7 @@ pwned 0:
   tags:
   - infosec
 py 0:
-  url: http://docs.python.org/
+  url: https://docs.python.org/
   title: Python documentation
   tags:
   - programming
@@ -6916,7 +6916,7 @@ py 1:
     description: Get documentation for opt parse
   showOnHome: 900
 py2 0:
-  url: http://docs.python.org/2/
+  url: https://docs.python.org/2/
   title: Python 2 documentation
   tags:
   - programming
@@ -6931,7 +6931,7 @@ py2 1:
   - arguments: optparse
     description: Get documentation for opt parse
 py3 0:
-  url: http://docs.python.org/3/
+  url: https://docs.python.org/3/
   title: Python 3 documentation
   tags:
   - programming
@@ -6946,13 +6946,13 @@ py3 1:
   - arguments: tokenize
     description: find information about the tokenize module etc.
 py3s 0:
-  url: http://docs.python.org/py3k/library/
+  url: https://docs.python.org/py3k/library/
   title: Python 3 standard library
   tags:
   - programming
   - python
 py3s 1:
-  url: http://docs.python.org/py3k/library/<library>.html
+  url: https://docs.python.org/py3k/library/<library>.html
   title: Python 3 standard library
   tags:
   - programming
@@ -6964,38 +6964,38 @@ pybug 0:
   - programming
   - python
 pym 0:
-  url: http://readthedocs.org/
+  url: https://readthedocs.org/
   title: readthedocs.org
   tags:
   - old
 pym 1:
-  url: http://readthedocs.org/projects/<module>/
+  url: https://readthedocs.org/projects/<module>/
   title: Python module documentation at readthedocs.org
   tags:
   - programming
   - python
 pym 2:
-  url: http://readthedocs.org/search/project/?selected_facets=project%3A<module>&q=<keyword>
+  url: https://readthedocs.org/search/project/?selected_facets=project%3A<module>&q=<keyword>
   title: Search Python module documentation at readthedocs.org
   tags:
   - old
 pypi 0:
-  url: http://pypi.python.org/pypi
+  url: https://pypi.python.org/pypi
   title: Python Package Index (Cheese Shop)
   tags:
   - old
 pypi 1:
-  url: http://pypi.python.org/pypi?%3Aaction=search&term=<package>&submit=search
+  url: https://pypi.python.org/pypi?%3Aaction=search&term=<package>&submit=search
   title: Python Package Index (Cheese Shop)
   tags:
   - old
 pys 0:
-  url: http://docs.python.org/library/
+  url: https://docs.python.org/library/
   title: Python standard library
   tags:
   - old
 pys 1:
-  url: http://docs.python.org/library/<library>.html
+  url: https://docs.python.org/library/<library>.html
   title: Python standard library
   tags:
   - old
@@ -7005,7 +7005,7 @@ pz 1:
   tags:
   - old
 qr 1:
-  url: http://chart.apis.google.com/chart?cht=qr&chs=350x350&chl=<content>
+  url: https://chart.apis.google.com/chart?cht=qr&chs=350x350&chl=<content>
   title: QR Kaywa URL Barcode
   tags:
   - google
@@ -7020,7 +7020,7 @@ qrdecoder 0:
   - javascript
   - qr
 qt 0:
-  url: http://doc.qt.io/
+  url: https://doc.qt.io/
   title: Qt documentation
   tags:
   - programming
@@ -7035,7 +7035,7 @@ qt 1:
   - arguments: signals and slots
     description: Searches "signals and slots" from Qt documentation
 qtcl 0:
-  url: http://qt-project.org/doc/qt-5.0/qtdoc/classes.html
+  url: https://qt-project.org/doc/qt-5.0/qtdoc/classes.html
   title: Qt class documentation
   tags:
   - programming
@@ -7050,7 +7050,7 @@ qtcl 1:
   - arguments: qwidget
     description: Opens QWidget's documentation
 qtdoc 0:
-  url: http://qt-project.org/doc/qt-4.8/
+  url: https://qt-project.org/doc/qt-4.8/
   title: Qt documentation's home
   tags:
   - old
@@ -7153,14 +7153,14 @@ rarbg 1:
   - torrent
   - torrents
 rb 0:
-  url: http://www.ruby-doc.org/
+  url: https://www.ruby-doc.org/
   title: Ruby Documentation
   tags:
   - programming
   - rails
   - ruby
 rb 1:
-  url: http://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
+  url: https://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
   title: Ruby Documentation
   tags:
   - programming
@@ -7179,7 +7179,7 @@ rbg 1:
   - arguments: safe_yaml
     description: Search RubyGems for "safe_yaml"
 rblcheck 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/en/rbl-quick-check/check/&ipaddress=<ipaddress>
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/en/rbl-quick-check/check/&ipaddress=<ipaddress>
   title: RBL-Check (Realtime Blackhole List)
   tags:
   - email
@@ -7188,7 +7188,7 @@ rblcheck 1:
   - arguments: 127.0.0.1
     description: Check if 127.0.0.1 is on the RBL
 rblcheckapi 1:
-  url: http://rbl-check.org/rbl_api.php?ipaddress=<ipaddress>
+  url: https://rbl-check.org/rbl_api.php?ipaddress=<ipaddress>
   title: RBL-Check API
   tags:
   - api
@@ -7198,12 +7198,12 @@ rblcheckapi 1:
   - arguments: 127.0.0.1
     description: Check if 127.0.0.1 is on the RBL
 rea 0:
-  url: http://www.rea-getraenke.de/index.php
+  url: https://www.rea-getraenke.de/index.php
   title: Rea Getränkemarkt
   tags:
   - old
 rea 1:
-  url: http://www.rea-getraenke.de/index.php?cl=search&searchparam=<query>
+  url: https://www.rea-getraenke.de/index.php?cl=search&searchparam=<query>
   title: Rea Getränkemarkt
   tags:
   - old
@@ -7278,7 +7278,7 @@ rm 1:
   - key: rm 1
     namespace: pka
 rmsk 0:
-  url: http://www.rms-austria.at/service-center/kontakt/katrin-lacina/
+  url: https://www.rms-austria.at/service-center/kontakt/katrin-lacina/
   title: Rmsk
   tags:
   - old
@@ -7385,7 +7385,7 @@ ru 1:
   - key: ru 1
     namespace: pka
 ruby 1:
-  url: http://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
+  url: https://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
   title: Ruby Documentation
   tags:
   - old
@@ -7443,7 +7443,7 @@ sc 1:
   - arguments: chillout
     description: Search for chillout music on Soundcloud.com
 scala 0:
-  url: http://www.scala-lang.org/api/current/
+  url: https://www.scala-lang.org/api/current/
   title: Scala Standard Library
   tags:
   - api
@@ -7454,7 +7454,7 @@ scala 0:
   - programming-language
   - scala
 scala 1:
-  url: http://www.scala-lang.org/api/current/?search=<query>
+  url: https://www.scala-lang.org/api/current/?search=<query>
   title: Scala Standard Library
   tags:
   - api
@@ -7503,15 +7503,15 @@ searchmash 0:
   tags:
   - old
 semlex 1:
-  url: http://gmb.let.rug.nl/explorer/semlex.php?entrysortkey=frequency_lemma&entrysortorder=desc&lemma=<lemma>
+  url: https://gmb.let.rug.nl/explorer/semlex.php?entrysortkey=frequency_lemma&entrysortorder=desc&lemma=<lemma>
   title: GMB Explorer, semantic lexicon
   tags:
   - old
 sep 0:
-  url: http://plato.stanford.edu
+  url: https://plato.stanford.edu
   title: Stanford Encyclopedia of Philosophy
 sep 1:
-  url: http://plato.stanford.edu/search/searcher.py?query=<query>
+  url: https://plato.stanford.edu/search/searcher.py?query=<query>
   title: Stanford Encyclopedia of Philosophy
 sf 0:
   url: https://sourceforge.net/account/login.php
@@ -7532,42 +7532,42 @@ sg 1:
   - key: sg 1
     namespace: pka
 sgo 0:
-  url: http://sources.gentoo.org/
+  url: https://sources.gentoo.org/
   title: Show Gentoo ebuild sources
   tags:
   - old
 sgw 1:
-  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sband=1&salbum=1&stitle=1&stext=&sgo=search
+  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sband=1&salbum=1&stitle=1&stext=&sgo=search
   title: Sturmgeweiht (Searches for everything)
   tags:
   - old
 sgwa 1:
-  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&salbum=1&sgo=search
+  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&salbum=1&sgo=search
   title: Sturmgeweiht (Searches for an album)
   tags:
   - old
 sgwb 1:
-  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sband=1&sgo=search
+  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sband=1&sgo=search
   title: Sturmgeweiht (Searches for a band)
   tags:
   - old
 sgwte 1:
-  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sgo=search&stext=1
+  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sgo=search&stext=1
   title: Sturmgeweiht (Searches for a text)
   tags:
   - old
 sgwti 1:
-  url: http://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&stitle=1&sgo=search
+  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&stitle=1&sgo=search
   title: Sturmgeweiht (Searches for a title)
   tags:
   - old
 sha1 1:
-  url: http://stefanschramm.net/dev/hash/?algo=sha1&q=<data>
+  url: https://stefanschramm.net/dev/hash/?algo=sha1&q=<data>
   title: Hash functions
   tags:
   - old
 shot 1:
-  url: http://www.superscreenshot.com/getscreen.php?url=<url>
+  url: https://www.superscreenshot.com/getscreen.php?url=<url>
   title: Screenshot from Url
   tags:
   - old
@@ -7608,12 +7608,12 @@ sk 1:
   - key: sk 1
     namespace: pka
 skapiec 0:
-  url: http://www.skapiec.pl/szukaj/w_calym_serwisie/${query}
+  url: https://www.skapiec.pl/szukaj/w_calym_serwisie/${query}
   title: Skapiec - Polish price comparison site
   tags:
   - old
 skyrock 1:
-  url: http://www.skyrock.com/search/articles/?q=<query>
+  url: https://www.skyrock.com/search/articles/?q=<query>
   title: Skyrock.com
   tags:
   - blogs
@@ -7647,7 +7647,7 @@ slashdot 0:
   tags:
   - news
 slashdot 1:
-  url: http://slashdot.org/?fhfilter=<query>
+  url: https://slashdot.org/?fhfilter=<query>
   title: Slashdot
   tags:
   - news
@@ -7674,7 +7674,7 @@ sn 1:
   - key: sn 1
     namespace: pka
 snipmp3 1:
-  url: http://snipmp3.com/?url=<url>
+  url: https://snipmp3.com/?url=<url>
   title: Snipmp3
   tags:
   - old
@@ -7710,7 +7710,7 @@ sofa 1:
   tags:
   - programming
 solrj 0:
-  url: http://lucene.apache.org/solr/4_0_0/solr-solrj/index.html
+  url: https://lucene.apache.org/solr/4_0_0/solr-solrj/index.html
   title: Solr Java Client API
   tags:
   - java
@@ -7742,7 +7742,7 @@ soundcloud 1:
   tags:
   - old
 soup 1:
-  url: http://www.soup.io/friends?search=<query>
+  url: https://www.soup.io/friends?search=<query>
   title: Soup.io friends full text search
   tags:
   - old
@@ -7940,7 +7940,7 @@ sw 1:
   - key: sw 1
     namespace: pka
 swipl 0:
-  url: http://www.swi-prolog.org/pldoc/index.html
+  url: https://www.swi-prolog.org/pldoc/index.html
   title: SWI-Prolog documentation
   tags:
   - doc
@@ -7949,7 +7949,7 @@ swipl 0:
   - programming
   - prolog
 swipl 1:
-  url: http://www.swi-prolog.org/pldoc/search?for=<query>&in=all&match=summary
+  url: https://www.swi-prolog.org/pldoc/search?for=<query>&in=all&match=summary
   title: SWI-Prolog documentation
   tags:
   - doc
@@ -8026,12 +8026,12 @@ tbaddon 1:
   - arguments: spam
     description: Search for Thunderbird Addon about "spam"
 tc 0:
-  url: http://www.techcrunch.com/
+  url: https://www.techcrunch.com/
   title: TechCrunch
   tags:
   - old
 tc 1:
-  url: http://www.techcrunch.com/?s=<query>
+  url: https://www.techcrunch.com/?s=<query>
   title: TechCrunch Suche
   tags:
   - old
@@ -8041,7 +8041,7 @@ tcode 1:
   tags:
   - old
 tct 1:
-  url: http://www.techcrunch.com/tag/<tag>
+  url: https://www.techcrunch.com/tag/<tag>
   title: Tag-Suche bei TechCrunch
   tags:
   - old
@@ -8056,13 +8056,13 @@ tdrm 0:
   - measurement-network
   - radiation-measurement
 tds 0:
-  url: http://www.thedailyshow.com/full-episodes/
+  url: https://www.thedailyshow.com/full-episodes/
   title: 'The Daily Show: Latest full episode'
   tags:
   - comedy
   - tv
 tds 1:
-  url: http://www.thedailyshow.com/video/?searchterm=<query>
+  url: https://www.thedailyshow.com/video/?searchterm=<query>
   title: 'The Daily Show: Search archives'
   tags:
   - comedy
@@ -8083,7 +8083,7 @@ te 1:
   - key: te 1
     namespace: pka
 techrightsfeed 0:
-  url: http://techrights.org/feed/
+  url: https://techrights.org/feed/
   title: Techrights (Schestowitz blog) - People's rights in the digital age blog (RSS feed)
   tags:
   - copyright
@@ -8111,7 +8111,7 @@ tey 1:
   tags:
   - images
 tfm 1:
-  url: http://www.transfermarkt.de/de/undefined/suche/ergebnis.html?quicksearch=<query>&x=0&y=0
+  url: https://www.transfermarkt.de/de/undefined/suche/ergebnis.html?quicksearch=<query>&x=0&y=0
   title: Transfermarkt.de
   tags:
   - old
@@ -8142,7 +8142,7 @@ thomann 1:
   tags:
   - old
 thsr 1:
-  url: http://thesaurus.com/browse/<query>
+  url: https://thesaurus.com/browse/<query>
   title: Roget's Thesaurus
   tags:
   - old
@@ -8228,7 +8228,7 @@ timestamp 1:
       query: tst <1>
     created: '2023-01-18'
 tinyurl 0:
-  url: http://tinyurl.com/
+  url: https://tinyurl.com/
   title: TinyURL
   tags:
   - url
@@ -8263,7 +8263,7 @@ tldp 1:
   tags:
   - old
 tmdb 1:
-  url: http://www.themoviedb.org/search?query=<title>
+  url: https://www.themoviedb.org/search?query=<title>
   title: The Open Movie Database
   tags:
   - cinema
@@ -8394,12 +8394,12 @@ trianglify 0:
   - javascript
   - online-tool
 trim 1:
-  url: http://tr.im/marklet?url=<url>
+  url: https://tr.im/marklet?url=<url>
   title: Tr.im
   tags:
   - old
 tsq 0:
-  url: http://www.turbosquid.com/
+  url: https://www.turbosquid.com/
   title: TurboSquid
   tags:
   - photo
@@ -8428,7 +8428,7 @@ tv 1:
   - arguments: rubber ducky
     description: Search Thingiverse for "rubber ducky"
 tvdb 1:
-  url: http://thetvdb.com/?searchseriesid=&tab=listseries&function=Search&string=<tv-series>
+  url: https://thetvdb.com/?searchseriesid=&tab=listseries&function=Search&string=<tv-series>
   title: TVDB TV Series Search
   tags:
   - series
@@ -8452,12 +8452,12 @@ twb 0:
       query: xb
     created: '2023-03-13'
 twingly 0:
-  url: http://twingly.com/
+  url: https://twingly.com/
   title: Twingly Main page
   tags:
   - old
 twingly 1:
-  url: http://twingly.com/search?q=<query>
+  url: https://twingly.com/search?q=<query>
   title: Twingly Search
   tags:
   - old
@@ -8467,7 +8467,7 @@ twitter 0:
       query: x
     created: '2023-01-23'
 twk 0:
-  url: http://tweaks.com
+  url: https://tweaks.com
   title: Tweaks
   tags:
   - old
@@ -8487,7 +8487,7 @@ twm 0:
       query: xm
     created: '2023-03-13'
 twm 1:
-  url: http://twitter.com/#!/search/%40<user>
+  url: https://twitter.com/#!/search/%40<user>
   title: Search for Tweets that mention a specific user
   tags:
   - old
@@ -8522,12 +8522,12 @@ twum 1:
       query: xu <1>
     created: '2023-03-13'
 ty 0:
-  url: http://twingly.com/
+  url: https://twingly.com/
   title: Twingly Main page
   tags:
   - old
 ty 1:
-  url: http://twingly.com/search?q=<query>
+  url: https://twingly.com/search?q=<query>
   title: Twingly Search
   tags:
   - old
@@ -8542,12 +8542,12 @@ tzu 1:
   tags:
   - old
 ubdo 1:
-  url: http://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="<query>"
+  url: https://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="<query>"
   title: Universitätsbibliothek Dortmund
   tags:
   - old
 ubman 1:
-  url: http://manpages.ubuntu.com/cgi-bin/search.py?&ie=UTF-8&q=<query>
+  url: https://manpages.ubuntu.com/cgi-bin/search.py?&ie=UTF-8&q=<query>
   title: Ubuntu Manpage
   tags:
   - documentation
@@ -8557,7 +8557,7 @@ ubman 1:
   - arguments: ls
     description: Search for "ls"
 ubp 1:
-  url: http://packages.ubuntu.com/<package>
+  url: https://packages.ubuntu.com/<package>
   title: Ubuntu Packages
   tags:
   - linux
@@ -8567,7 +8567,7 @@ ubp 1:
   - arguments: tetex
     description: Search for tetex packages
 ubplanet 0:
-  url: http://planet.ubuntu.com/
+  url: https://planet.ubuntu.com/
   title: Ubuntu Planet
   tags:
   - linux
@@ -8598,7 +8598,7 @@ ubuntu-packages 1:
   tags:
   - old
 ubuntu-planet 0:
-  url: http://planet.ubuntu.com/
+  url: https://planet.ubuntu.com/
   title: Ubuntu Planet
   tags:
   - old
@@ -8632,7 +8632,7 @@ ubw 1:
   - arguments: server
     description: Search for "server"
 uc 1:
-  url: http://www.fileformat.info/info/unicode/char/search.htm?preview=entity&q=<query>
+  url: https://www.fileformat.info/info/unicode/char/search.htm?preview=entity&q=<query>
   title: Unicode character info
   tags:
   - character
@@ -8641,19 +8641,19 @@ uc 1:
   - arguments: ä
     description: Look up information about the character "ä"
 ucb 0:
-  url: http://www.fileformat.info/info/unicode/block/index.htm
+  url: https://www.fileformat.info/info/unicode/block/index.htm
   title: List of Unicode blocks
   tags:
   - blocks
   - characters
   - unicode
 ucs 1:
-  url: http://www.fileformat.info/info/unicode/char/search.htm?q=<query>&preview=entity
+  url: https://www.fileformat.info/info/unicode/char/search.htm?q=<query>&preview=entity
   title: Unicode Character Search, not including Han codepoints
   tags:
   - old
 ucsh 1:
-  url: http://www.fileformat.info/info/unicode/char/search.htm?q=<query>&han=Y&preview=entity
+  url: https://www.fileformat.info/info/unicode/char/search.htm?q=<query>&han=Y&preview=entity
   title: Unicode Character Search, including Han codepoints
   tags:
   - old
@@ -8665,7 +8665,7 @@ ud 0:
   - english
   - slang
 ud 1:
-  url: http://www.urbandictionary.com/define.php?term=<query>
+  url: https://www.urbandictionary.com/define.php?term=<query>
   title: Urban Dictionary
   tags:
   - dictionary
@@ -8706,7 +8706,7 @@ ugs 1:
   - arguments: yesterday
     description: Search for songs about "yesterday"
 uima 0:
-  url: http://incubator.apache.org/uima/downloads/releaseDocs/2.3.0-incubating/docs/api/
+  url: https://incubator.apache.org/uima/downloads/releaseDocs/2.3.0-incubating/docs/api/
   title: UIMA API
   tags:
   - old
@@ -8732,12 +8732,12 @@ uk 1:
   - key: uk 1
     namespace: pka
 uniprot 1:
-  url: http://www.uniprot.org/uniprot/?query=<query>&sort=score
+  url: https://www.uniprot.org/uniprot/?query=<query>&sort=score
   title: Uniprot
   tags:
   - old
 up 1:
-  url: http://www.uniprot.org/uniprot/?query=<query>&sort=score
+  url: https://www.uniprot.org/uniprot/?query=<query>&sort=score
   title: Uniprot
   tags:
   - old
@@ -8763,7 +8763,7 @@ ur 1:
   - key: ur 1
     namespace: pka
 us 1:
-  url: http://userscripts.org/scripts/search?q=<query>
+  url: https://userscripts.org/scripts/search?q=<query>
   title: Userscripts
   tags:
   - old
@@ -8784,7 +8784,7 @@ usbid 2:
   - arguments: 05e3,0608
     description: Search for USB device with Vendor ID 05e3 and Device ID 0608
 uscripts 1:
-  url: http://userscripts.org/scripts/search?q=<query>
+  url: https://userscripts.org/scripts/search?q=<query>
   title: Userscripts
   tags:
   - old
@@ -8826,7 +8826,7 @@ validator 1:
   tags:
   - old
 vbn 2:
-  url: http://www.fahrplaner.de/hafas/query.exe/dn?L=vbn&<Start>,<Ziel>
+  url: https://www.fahrplaner.de/hafas/query.exe/dn?L=vbn&<Start>,<Ziel>
   title: VBN Verkehrsverbund NDS/Bremen
   tags:
   - old
@@ -8850,7 +8850,7 @@ vi 1:
   - key: vi 1
     namespace: pka
 viaf 1:
-  url: http://viaf.org/viaf/search?query=local.names+all+<name>&stylesheet=/viaf/xsl/results.xsl&sortKeys=holdingscount&maximumRecords=100
+  url: https://viaf.org/viaf/search?query=local.names+all+<name>&stylesheet=/viaf/xsl/results.xsl&sortKeys=holdingscount&maximumRecords=100
   title: Virtual International Authority File
   tags:
   - books
@@ -8862,7 +8862,7 @@ vim 1:
   url: https://vim.fandom.com/wiki/Special:Search?search=<query>
   title: Vim Tips Wiki
 vimeo 0:
-  url: http://vimeo.com
+  url: https://vimeo.com
   title: Vimeo
   tags:
   - video
@@ -8892,7 +8892,7 @@ vine 1:
   - arguments: cat
     description: Search Vine for "cat"
 visuwords 1:
-  url: http://www.visuwords.com/?word=<query>
+  url: https://www.visuwords.com/?word=<query>
   title: Visuwords
   tags:
   - old
@@ -9049,7 +9049,7 @@ wam 1:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
 watchz 1:
-  url: http://zattoo.com/view/<channel>
+  url: https://zattoo.com/view/<channel>
   title: Zattoo
   tags:
   - old
@@ -9129,12 +9129,12 @@ wde 1:
   tags:
   - old
 we 0:
-  url: http://www.wetter.com/
+  url: https://www.wetter.com/
   title: Wetter.com
   tags:
   - weather
 we 1:
-  url: http://www.wetter.com/suche/?q=<Ort>
+  url: https://www.wetter.com/suche/?q=<Ort>
   title: Wetter.com
   tags:
   - weather
@@ -9142,7 +9142,7 @@ we 1:
   - arguments: berlin
     description: Search for "berlin"
 webs 1:
-  url: http://www.webshots.com/search?query=<query>&new=1&source=serchilo
+  url: https://www.webshots.com/search?query=<query>&new=1&source=serchilo
   title: Webshots
   tags:
   - old
@@ -9221,7 +9221,7 @@ wgo 1:
   - arguments: berlin
     description: Search for "berlin"
 wh 1:
-  url: http://www.wowhead.com/?search=<query>
+  url: https://www.wowhead.com/?search=<query>
   title: search Wowhead
   tags:
   - old
@@ -9251,17 +9251,17 @@ whois 1:
   - arguments: google.com
     description: show the owner of the domain google.com
 wikia 1:
-  url: http://www.wikia.com/wiki/Special:Search?tab=1&search=<query>
+  url: https://www.wikia.com/wiki/Special:Search?tab=1&search=<query>
   title: Wikia
   tags:
   - old
 wikimapia 1:
-  url: http://wikimapia.org/?#search=<place>
+  url: https://wikimapia.org/?#search=<place>
   title: Wikimapia
   tags:
   - old
 wipr 0:
-  url: http://www.worldipreview.com
+  url: https://www.worldipreview.com
   title: World Intellectual Property Review (WIPR)
   tags:
   - copyright
@@ -9275,7 +9275,7 @@ wis 1:
   tags:
   - old
 wissen 1:
-  url: http://wissen.de/wde/generator/wissen/services/suche/index.html?query=<query>
+  url: https://wissen.de/wde/generator/wissen/services/suche/index.html?query=<query>
   title: Wissen.de
   tags:
   - old
@@ -9417,7 +9417,7 @@ wq 1:
   - arguments: einstein
     description: Search for Einstein quotes
 wr 1:
-  url: http://www.warcraftrealms.com/search.php?search=<query>
+  url: https://www.warcraftrealms.com/search.php?search=<query>
   title: search WarcraftRealms
   tags:
   - old
@@ -9516,7 +9516,7 @@ wwk 1:
   tags:
   - old
 wwu 1:
-  url: http://suchen.uni-muenster.de/de.cgi?q=<query>
+  url: https://suchen.uni-muenster.de/de.cgi?q=<query>
   title: WWU
   tags:
   - old
@@ -9592,13 +9592,13 @@ xing 1:
   - arguments: Hans Meier
     description: Search for people called Hans Meier
 xkcd 0:
-  url: http://xkcd.com/
+  url: https://xkcd.com/
   title: xkcd
   tags:
   - comic
   - xkcd
 xkcd 1:
-  url: http://xkcd.com/<episode-number>/
+  url: https://xkcd.com/<episode-number>/
   title: xkcd
   tags:
   - comic
@@ -9767,7 +9767,7 @@ ye 2:
   - arguments: pizza, new york
     description: Find pizza places in New York
 yf 1:
-  url: http://finance.yahoo.com/q?s=<abbreviation>
+  url: https://finance.yahoo.com/q?s=<abbreviation>
   title: 'Yahoo Finance: Get stock quotes'
   tags:
   - old
@@ -9966,7 +9966,7 @@ z 1:
   tags:
   - old
 zam 1:
-  url: http://camelot.allakhazam.com/search.html?q=<query>
+  url: https://camelot.allakhazam.com/search.html?q=<query>
   title: Search Allakhazam's Database for DAoC items, npc, etc.
   tags:
   - old
@@ -9976,12 +9976,12 @@ zar 1:
       query: en.tr <1>
     created: '2023-04-10'
 zattoo 0:
-  url: http://watch.zattoo.com
+  url: https://watch.zattoo.com
   title: Zattoo
   tags:
   - old
 zattoo 1:
-  url: http://zattoo.com/view/<channel>
+  url: https://zattoo.com/view/<channel>
   title: Zattoo
   tags:
   - old
@@ -10030,7 +10030,7 @@ zhen 1:
       query: en.zh <1>
     created: '2023-04-11'
 zhr 1:
-  url: http://en.wiktionary.org/wiki/Index:Chinese_radical/<radical>
+  url: https://en.wiktionary.org/wiki/Index:Chinese_radical/<radical>
   title: Chinese radical index on English Wiktionary
   tags:
   - old
@@ -10041,7 +10041,7 @@ zn 0:
   - images
   - stock-agency
 zn 1:
-  url: http://www.zoonar.de/appgen/?cl=zoonar&cp=search&cmd=search_library&wid=1078&search[searchstring]=<Suche>
+  url: https://www.zoonar.de/appgen/?cl=zoonar&cp=search&cmd=search_library&wid=1078&search[searchstring]=<Suche>
   title: Zoonar
   tags:
   - images
@@ -10067,7 +10067,7 @@ zu 1:
   - key: zu 1
     namespace: pka
 zwatch 1:
-  url: http://zattoo.com/view/<channel>
+  url: https://zattoo.com/view/<channel>
   title: Zattoo
   tags:
   - old
