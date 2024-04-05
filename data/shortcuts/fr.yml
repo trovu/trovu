@@ -54,13 +54,13 @@ lrs 1:
   - arguments: arbre
     description: Cherche "arbre"
 marmiton 0:
-  url: http://www.marmiton.org/
+  url: https://www.marmiton.org/
   title: Marmiton
   tags:
   - marmiton
   - recettes
 marmiton 1:
-  url: http://www.marmiton.org/recettes/recherche.aspx?aqt=<mot>
+  url: https://www.marmiton.org/recettes/recherche.aspx?aqt=<mot>
   title: Marmiton
   tags:
   - marmiton
@@ -78,7 +78,7 @@ syn 1:
   - arguments: important
     description: Search for "important"
 tlf 1:
-  url: http://www.cnrtl.fr/definition/<query>
+  url: https://www.cnrtl.fr/definition/<query>
   title: Trésor de la langue française
   tags:
   - dictionary

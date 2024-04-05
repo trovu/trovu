@@ -42,7 +42,7 @@ dei 1:
       query: lge.de <1>
     created: '2023-04-10'
 dict 1:
-  url: http://dictionary.reference.com/browse/<query>
+  url: https://dictionary.reference.com/browse/<query>
   title: Dictionary.com
   tags:
   - english
@@ -81,7 +81,7 @@ frp 1:
       query: pns.fr <1>
     created: '2023-04-10'
 gfp 0:
-  url: http://german-foreign-policy.com/en/news/
+  url: https://german-foreign-policy.com/en/news/
   title: German Foreign Policy
   tags:
   - germany
@@ -138,7 +138,7 @@ sta 1:
   - arguments: How many people live in Berlin?
     description: Answers the question.
 syn 1:
-  url: http://thesaurus.com/browse/<word>
+  url: https://thesaurus.com/browse/<word>
   title: Thesaurus.com
   tags:
   - english
@@ -147,7 +147,7 @@ syn 1:
   - arguments: 'important '
     description: Search for synonyms of "important"
 uvi 0:
-  url: http://verbs.colorado.edu/verb-index/vn3.3
+  url: https://verbs.colorado.edu/verb-index/vn3.3
   title: Unified Verb Index
   tags:
   - english
@@ -155,7 +155,7 @@ uvi 0:
   - language
   - linguistics
 uvi 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://verbs.colorado.edu/verb-index/vn3.3/search.php&txtSearchRequest=<query>
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://verbs.colorado.edu/verb-index/vn3.3/search.php&txtSearchRequest=<query>
   title: Unified Verb Index
   tags:
   - english
@@ -166,7 +166,7 @@ uvi 1:
   - arguments: walk
     description: Look up the verb "walk"
 wk 0:
-  url: http://www.wordnik.com/
+  url: https://www.wordnik.com/
   title: Wordnik.com
   tags:
   - dictionary
@@ -177,7 +177,7 @@ wk 0:
   - arguments: tree
     description: Look up "tree"
 wk 1:
-  url: http://www.wordnik.com/words/<word>
+  url: https://www.wordnik.com/words/<word>
   title: Wordnik.com
   tags:
   - dictionary
@@ -188,7 +188,7 @@ wk 1:
   - arguments: tree
     description: Look up "tree"
 wordnik 1:
-  url: http://www.wordnik.com/words/<word>
+  url: https://www.wordnik.com/words/<word>
   title: Wordnik
   tags:
   - english
@@ -197,7 +197,7 @@ wordnik 1:
   - arguments: tree
     description: Search Wordnik for "tree".
 wsl 1:
-  url: http://corpora.uni-leipzig.de/de/res?word=<word>&corpusId=eng-uk_web_2002
+  url: https://corpora.uni-leipzig.de/de/res?word=<word>&corpusId=eng-uk_web_2002
   title: Wortschatz-Lexikon (English)
   tags:
   - english

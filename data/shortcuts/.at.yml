@@ -20,7 +20,7 @@ a 1:
   - arguments: goethe
     expect: '<title>Amazon.de : goethe</title>'
 conrad 0:
-  url: http://www.conrad.at/
+  url: https://www.conrad.at/
   title: Conrad Elektronik Österreich
   tags:
   - conrad
@@ -533,7 +533,7 @@ gmzt 1:
       query: gm zt,<1>
     created: '2023-01-07'
 ikea 0:
-  url: http://www.ikea.com/at/de/
+  url: https://www.ikea.com/at/de/
   title: IKEA Österreich
   tags:
   - furniture
@@ -597,14 +597,14 @@ rsc 1:
   - arguments: battery
     expect: '&#x27;battery&#x27; | RS</title>'
 we 0:
-  url: http://at.wetter.com/?forcesite=1
+  url: https://at.wetter.com/?forcesite=1
   title: Wetter.com
   tags:
   - weather
   tests:
   - expect: Wetter für Österreich
 we 1:
-  url: http://at.wetter.com/suche/?search=<Ort>
+  url: https://at.wetter.com/suche/?search=<Ort>
   include:
     key: we 0
   examples:

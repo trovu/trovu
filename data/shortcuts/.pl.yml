@@ -42,7 +42,7 @@ e 1:
   - arguments: smartphone
     description: Search for "smartphone"
 ep 2:
-  url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>
+  url: https://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>
   title: e-podróżnik.pl
   tags:
   - e-podróżnik
@@ -53,7 +53,7 @@ ep 2:
   - arguments: kutno, gniezno
     description: połączenie z Kutna do Gniezna
 ep 3:
-  url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>&formCompositeSearcherFinal.time=<czas>
+  url: https://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>&formCompositeSearcherFinal.time=<czas>
   title: e-podróżnik.pl
   tags:
   - e-podróżnik
@@ -64,7 +64,7 @@ ep 3:
   - arguments: kutno, gniezno, 10
     description: połączenie z Kutna do Gniezna o godz. 10
 ep 4:
-  url: http://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>&formCompositeSearcherFinal.time=<czas>&formCompositeSearcherFinal.date=<data>
+  url: https://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>&formCompositeSearcherFinal.time=<czas>&formCompositeSearcherFinal.date=<data>
   title: e-podróżnik.pl
   tags:
   - e-podróżnik
@@ -100,7 +100,7 @@ ikea 0:
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/pl/pl/search/?q=<query>
+  url: https://www.ikea.com/pl/pl/search/?q=<query>
   title: IKEA Polska
   tags:
   - furniture
@@ -110,7 +110,7 @@ ikea 1:
   - arguments: materac
     description: Szukaj materace
 jddw 2:
-  url: http://jakdojade.pl?cid=2000&fn=<start>&tn=<cel>&as=true
+  url: https://jakdojade.pl?cid=2000&fn=<start>&tn=<cel>&as=true
   title: jakdojade.pl, Wrocław
   tags:
   - jakdojade
@@ -120,7 +120,7 @@ jddw 2:
   - arguments: rynek, dworzec gł
     description: połączenie z Rynka do Dworca Głównego
 jddw 3:
-  url: http://jakdojade.pl?cid=2000&fn=<start>&tn=<cel>&h=<czas>&as=true
+  url: https://jakdojade.pl?cid=2000&fn=<start>&tn=<cel>&h=<czas>&as=true
   title: jakdojade.pl, Wrocław
   tags:
   - jakdojade
@@ -130,7 +130,7 @@ jddw 3:
   - arguments: rynek, dworzec gł, 10
     description: połączenie z Rynka do Dworca Głównego o godz. 10
 jddw 4:
-  url: http://jakdojade.pl?cid=2000&fn=<start>&tn=<cel>&h=<czas>&d=<dzień>&as=true
+  url: https://jakdojade.pl?cid=2000&fn=<start>&tn=<cel>&h=<czas>&d=<dzień>&as=true
   title: jakdojade.pl, Wrocław
   tags:
   - jakdojade
@@ -140,7 +140,7 @@ jddw 4:
   - arguments: rynek, dworzec gł, 10, 31.12.13
     description: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
 jdpo 2:
-  url: http://jakdojade.pl?cid=1000&fn=<start>&tn=<cel>&as=true
+  url: https://jakdojade.pl?cid=1000&fn=<start>&tn=<cel>&as=true
   title: jakdojade.pl, Poznań
   tags:
   - jakdojade
@@ -150,7 +150,7 @@ jdpo 2:
   - arguments: rynek, dworzec gł
     description: połączenie z Rynka do Dworca Głównego
 jdpo 3:
-  url: http://jakdojade.pl?cid=1000&fn=<start>&tn=<cel>&h=<czas>&as=true
+  url: https://jakdojade.pl?cid=1000&fn=<start>&tn=<cel>&h=<czas>&as=true
   title: jakdojade.pl, Poznań
   tags:
   - jakdojade
@@ -160,7 +160,7 @@ jdpo 3:
   - arguments: rynek, dworzec gł, 10
     description: połączenie z Rynka do Dworca Głównego o godz. 10
 jdpo 4:
-  url: http://jakdojade.pl?cid=1000&fn=<start>&tn=<cel>&h=<czas>&d=<dzień>&as=true
+  url: https://jakdojade.pl?cid=1000&fn=<start>&tn=<cel>&h=<czas>&d=<dzień>&as=true
   title: jakdojade.pl, Poznań
   tags:
   - jakdojade
@@ -170,7 +170,7 @@ jdpo 4:
   - arguments: rynek, dworzec gł, 10, 31.12.13
     description: połączenie z Rynka do Dworca Głównego 31 grudnia 2013 o godz. 10
 jdw 2:
-  url: http://jakdojade.pl?cid=3000&fn=<start>&tn=<cel>&as=true
+  url: https://jakdojade.pl?cid=3000&fn=<start>&tn=<cel>&as=true
   title: jakdojade.pl, Warszawa
   tags:
   - jakdojade
@@ -180,7 +180,7 @@ jdw 2:
   - arguments: stare miasto, centrum
     description: połączenie ze Starego miasta do Centrum
 jdw 3:
-  url: http://jakdojade.pl?cid=3000&fn=<start>&tn=<cel>&h=<czas>&as=true
+  url: https://jakdojade.pl?cid=3000&fn=<start>&tn=<cel>&h=<czas>&as=true
   title: jakdojade.pl, Warszawa
   tags:
   - jakdojade
@@ -190,7 +190,7 @@ jdw 3:
   - arguments: stare miasto, centrum, 10
     description: połączenie ze Starego miasta do Centrum o godz. 10
 jdw 4:
-  url: http://jakdojade.pl?cid=3000&fn=<start>&tn=<cel>&h=<czas>&d=<dzień>&as=true
+  url: https://jakdojade.pl?cid=3000&fn=<start>&tn=<cel>&h=<czas>&d=<dzień>&as=true
   title: jakdojade.pl, Warszawa
   tags:
   - jakdojade
@@ -206,7 +206,7 @@ nk 0:
   - nasza-klasa
   - social-network
 nk 1:
-  url: http://nk.pl/#szukaj#<nazwisko / grupa>
+  url: https://nk.pl/#szukaj#<nazwisko / grupa>
   title: Nasza Klasa
   tags:
   - nasza-klasa

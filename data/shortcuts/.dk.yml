@@ -34,7 +34,7 @@ dsb 4:
   - arguments: aarhus, københavn, 10, 28.1.
     description: tog fra Aarhus til København kl. 10 den 28.1.
 ikea 0:
-  url: http://www.ikea.com/dk/da/
+  url: https://www.ikea.com/dk/da/
   title: IKEA Danmark
   tags:
   - furniture
@@ -44,7 +44,7 @@ ikea 0:
   - arguments: madras
     description: Søger "madras"
 ikea 1:
-  url: http://www.ikea.com/dk/da/search/?q=<query>
+  url: https://www.ikea.com/dk/da/search/?q=<query>
   title: IKEA Danmark
   tags:
   - furniture

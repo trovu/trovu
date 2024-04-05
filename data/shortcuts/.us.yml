@@ -81,7 +81,7 @@ gps 1:
   - arguments: iphone
     description: Search for "iphone"
 sec 1:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=
+  url: https://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
@@ -89,7 +89,7 @@ sec 1:
   - arguments: Honeywell
     description: General company search
 sec 2:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=<filing type>
+  url: https://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=<filing type>
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
@@ -97,7 +97,7 @@ sec 2:
   - arguments: Rio Tinto, 8-K
     description: search for a company with 8-K annual reports
 sec20f 1:
-  url: http://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=20-F
+  url: https://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=20-F
   title: EDGAR System of SEC for regulatory company information
   tags:
   - economy
@@ -105,7 +105,7 @@ sec20f 1:
   - arguments: Rio Tinto
     description: search for a company with 20-F annual reports
 sic 1:
-  url: http://www.osha.gov/pls/imis/sicsearch.html?p_sic=<SIC digit>&p_search=
+  url: https://www.osha.gov/pls/imis/sicsearch.html?p_sic=<SIC digit>&p_search=
   title: Standard Industrial Classification (SIC)
   tags:
   - industry

@@ -31,7 +31,7 @@ campz 1:
   - arguments: Kocher
     description: Search CAMPZ Schweiz for "Kocher"
 conrad 0:
-  url: http://www.conrad.ch/
+  url: https://www.conrad.ch/
   title: Conrad Elektronik Schweiz
   tags:
   - conrad
@@ -168,14 +168,14 @@ gps 1:
   - arguments: iphone
     description: Suche nach "iphone"
 ikea 0:
-  url: http://www.ikea.com/ch/
+  url: https://www.ikea.com/ch/
   title: IKEA Schweiz
   tags:
   - furniture
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/ch/de/search/?q=<query>
+  url: https://www.ikea.com/ch/de/search/?q=<query>
   title: IKEA Schweiz
   tags:
   - furniture
@@ -211,13 +211,13 @@ migros 1:
   - arguments: toblerone
     description: Search Migros Sortiment for "toblerone"
 plz 0:
-  url: http://www.plz-suche.org/postleitzahlen-schweiz
+  url: https://www.plz-suche.org/postleitzahlen-schweiz
   title: Postleitzahlen Schweiz
   tags:
   - geolocation
   - postleitzahl
 plz 1:
-  url: http://www.plz-suche.org/ch/plz/<query>
+  url: https://www.plz-suche.org/ch/plz/<query>
   title: Postleitzahlen Schweiz
   tags:
   - geolocation
@@ -285,15 +285,15 @@ sbbt 4:
   - arguments: bern, basel, 10, 1.1.
     description: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
 transa 0:
-  url: http://www.transa.ch
+  url: https://www.transa.ch
   title: Transa
 we 0:
-  url: http://ch.wetter.com/?forcesite=1
+  url: https://ch.wetter.com/?forcesite=1
   title: Wetter.com
   tags:
   - weather
 we 1:
-  url: http://ch.wetter.com/suche/?search=<Ort>
+  url: https://ch.wetter.com/suche/?search=<Ort>
   title: Wetter.com
   tags:
   - weather
