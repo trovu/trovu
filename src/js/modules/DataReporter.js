@@ -24,7 +24,7 @@ export default class DataReporter {
         const shortcut = this.env.data.shortcuts[namespace][key];
         const [keyword, argCount] = key.split(' ');
         if (
-          argCount == 0 &&
+          // argCount == 0 &&
           !shortcut.examples &&
           !shortcut.deprecated &&
           !shortcut.removed
