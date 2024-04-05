@@ -1,9 +1,78 @@
 import DataManager from './DataManager';
 import UrlProcessor from './UrlProcessor';
+import fs from 'fs';
 import jsyaml from 'js-yaml';
 
 export default class Migrator {
   constructor() {}
+
+  async migrateProtocol(options) {
+    const dataPath = options.data;
+    const shortcutsPath = options.shortcuts;
+    const typesPath = options.types;
+    const data = DataManager.load(options);
+    for (const namespace in data.shortcuts) {
+      for (const key in data.shortcuts[namespace]) {
+        const [keyword, argCount] = key.split(' ');
+        const args = [
+          'arg1',
+          'arg2',
+          'arg3',
+          'arg4',
+          'arg5',
+          'arg6',
+          'arg7',
+          'arg8',
+          'arg9',
+          'arg10',
+        ];
+        let shortcut = data.shortcuts[namespace][key];
+        // If the URL starts with http, fetch its contents, migrate to https, fetch again, and compare results
+        if (shortcut.url && shortcut.url.startsWith('http:')) {
+          console.log(`Migrating ${namespace}.${key}`);
+          const httpUrl = shortcut.url;
+          const processedHttpUrl = UrlProcessor.replaceArguments(
+            httpUrl,
+            args,
+            {
+              language: 'en',
+              country: 'us',
+              data: { types: { city: {} } },
+            },
+          );
+          // console.log(originalUrl);
+          const processedHttpsUrl = processedHttpUrl.replace('http:', 'https:');
+
+          try {
+            const httpResponse = await fetch(processedHttpUrl);
+            const httpText = await httpResponse.text();
+            // console.log('originalText', originalText);
+            const httpsResponse = await fetch(processedHttpsUrl);
+            const httpsText = await httpsResponse.text();
+            // console.log('httpsText', httpsText);
+
+            if (httpsText === httpText) {
+              console.log('==', key);
+              shortcut.url = httpUrl.replace('http:', 'https:');
+            } else {
+              console.log('!=', key);
+              // write both to files out.key.http and out.key.https
+              const outPath = `out.${key}`;
+              const outHttpPath = `${outPath}.http`;
+              const outHttpsPath = `${outPath}.https`;
+              // console.log('Writing', outHttpPath);
+              // console.log('Writing', outHttpsPath);
+              // fs.writeFileSync(outHttpPath, originalText, 'utf8');
+              // fs.writeFileSync(outHttpsPath, httpsText, 'utf8');
+            }
+          } catch (error) {
+            console.error(`Error migrating ${key}:`, error);
+          }
+        }
+      }
+      DataManager.write(data, dataPath, shortcutsPath, typesPath);
+    }
+  }
 
   migratePlaceholders(options) {
     const dataPath = options.data;

@@ -56,14 +56,14 @@ gn 1:
   - arguments: obama
     description: Op Google News naar obama zoeken
 ikea 0:
-  url: http://www.ikea.com/nl/nl/
+  url: https://www.ikea.com/nl/nl/
   title: IKEA Nederland
   tags:
   - furniture
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/nl/nl/search/?q=<query>
+  url: https://www.ikea.com/nl/nl/search/?q=<query>
   title: IKEA Nederland
   tags:
   - furniture
@@ -73,7 +73,7 @@ ikea 1:
   - arguments: matras
     description: zoek na matrassen
 kenteken 1:
-  url: http://publiek.vwe.nl/?txtkentekenveld=<query>
+  url: https://publiek.vwe.nl/?txtkentekenveld=<query>
   title: RDW kenteken zoeken
   tags:
   - kenteken

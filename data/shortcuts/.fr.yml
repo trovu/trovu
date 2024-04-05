@@ -1,11 +1,11 @@
 3s 0:
-  url: http://www.3suisses.fr/
+  url: https://www.3suisses.fr/
   title: 3Suisses.fr
   tags:
   - 3suisses
   - shopping
 3s 1:
-  url: http://www.3suisses.fr/home?searchTerms=<recherche>
+  url: https://www.3suisses.fr/home?searchTerms=<recherche>
   title: 3Suisses.fr
   tags:
   - 3suisses
@@ -33,7 +33,7 @@ a 1:
   - arguments: balzac
     description: Search for "balzac"
 cdiscount 1:
-  url: http://www.cdiscount.com/search/10/<query>.html
+  url: https://www.cdiscount.com/search/10/<query>.html
   title: CDiscount.com
   tags:
   - cdiscount
@@ -68,14 +68,14 @@ g 1:
   - arguments: paris
     description: Recherche Google par "paris"
 ikea 0:
-  url: http://www.ikea.com/fr/fr/
+  url: https://www.ikea.com/fr/fr/
   title: IKEA France
   tags:
   - furniture
   - ikea
   - shopping
 ikea 1:
-  url: http://www.ikea.com/fr/fr/search/?q=<query>
+  url: https://www.ikea.com/fr/fr/search/?q=<query>
   title: IKEA France
   tags:
   - furniture
@@ -85,13 +85,13 @@ ikea 1:
   - arguments: matelas
     description: Cherche "matelas"
 kiabi 0:
-  url: http://www.kiabi.com/
+  url: https://www.kiabi.com/
   title: Kiabi.com
   tags:
   - kiabi
   - shopping
 kiabi 1:
-  url: http://www.kiabi.com/search.ep?keyWords=<recherche>
+  url: https://www.kiabi.com/search.ep?keyWords=<recherche>
   title: Kiabi.com
   tags:
   - kiabi
@@ -109,7 +109,7 @@ pj 2:
   - arguments: tv, paris
     description: Search Pages Jaunes for TV in Paris
 soc 1:
-  url: http://www.societe.com/cgi-bin/search?champs=<name>
+  url: https://www.societe.com/cgi-bin/search?champs=<name>
   title: Societé Company Register
 zal 1:
   url: http://www.zalando.fr/catalogue/?q=<produit>

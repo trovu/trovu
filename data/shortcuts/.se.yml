@@ -8,7 +8,7 @@ blocket 1:
   - arguments: iphone
     description: Search for "iphone"
 llt 2:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr=<Fra>&inpPointTo=<Till>&cmdAction=search
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr=<Fra>&inpPointTo=<Till>&cmdAction=search
   title: Luleå Lokaltrafik
   tags:
   - luleå
@@ -17,7 +17,7 @@ llt 2:
   - arguments: sotargatan, järnvägen
     description: Nästa buss från Sotargatan till Järnvägen
 llt 3:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr=<Fra>&inpPointTo=<Till>&inpTime=<Avgång>00&cmdAction=search
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr=<Fra>&inpPointTo=<Till>&inpTime=<Avgång>00&cmdAction=search
   title: Luleå Lokaltrafik
   tags:
   - luleå
@@ -62,7 +62,7 @@ rr 3:
   - arguments: stockholm, malmö, 10
     description: Tåg från Stockholm till Malmö, avgång kl. 10
 srse 1:
-  url: http://sverigesradio.se/sida/sok.aspx?q=<programmets namn>&sort=relevance
+  url: https://sverigesradio.se/sida/sok.aspx?q=<programmets namn>&sort=relevance
   title: Sveriges radio search
   tags:
   - radio

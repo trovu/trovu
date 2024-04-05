@@ -197,6 +197,9 @@ bhnt 1:
   url: https://github.com/search?q=repo%3Aberlin-hack-and-tell%2Fbhnt.c-base.org%20<Suche>
   include:
     key: bhnt 0
+  examples:
+  - arguments: php
+    description: Suche nach Talks über PHP
 bhs 0:
   url: https://www.bauhaus.info/
   title: BAUHAUS
@@ -439,6 +442,9 @@ bibtub 1:
   url: https://tu-berlin.hosted.exlibrisgroup.com/primo-explore/search?tab=tub_all&search_scope=TUB_ALL&sortby=rank&vid=TUB&lang=de_DE&offset=0&query=any,contains,<Suche>
   include:
     key: bibtub 0
+  examples:
+  - arguments: goethe
+    description: Suche nach Büchern von Goethe
 bibup 0:
   url: https://www.ub.uni-potsdam.de/de/
   title: Bibliothek der Uni Potsdam
@@ -460,6 +466,9 @@ bibup 2:
   url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHM&=Suchen&MATCFILTER=Y&MATCSET=Y&NOSCAN=Y&PARSE_MNEMONICS=N&PARSE_OPWORDS=N&PARSE_OLDSETS=N&ACT0=SRCH&IKT0=1016&TRM0=&ACT1=*&IKT1=5041&TRM1=&ACT2=*&IKT2=1004&TRM2=<Autor>&ADI_JVU=<Jahr>
   include:
     key: bibup 0
+  examples:
+  - arguments: meier, 2020
+    description: Suche nach Büchern von Autoren namens "Meier" aus dem Jahr 2020
 bkat 0:
   url: https://bkat.wikinaut.de/
   title: BKatSearch Bußgeldkatalog
@@ -540,9 +549,12 @@ bpo 0:
   examples:
   - description: Gehe zur Startseite
 bpo 1:
-  url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/'
   include:
     key: bpo 0
+  examples:
+  - arguments: fr
+    description: Konzerte am kommenden Freitag
 bsvg 0:
   url: https://www.bsvg.net/
   title: Braunschweiger Verkehrs-GmbH
@@ -635,6 +647,9 @@ bvb 1:
   url: https://bvb-new-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,<Suche>&tab=all_tab&search_scope=all_scope&vid=49BVB_VU1&lang=de_DE&offset=0&fromRedirectFilter=true
   include:
     key: bvb 0
+  examples:
+  - arguments: goethe
+    description: Suche nach Büchern von Goethe
 bvg 0:
   url: https://www.bvg.de/de/verbindungen/verbindungssuche
   title: BVG-Fahrplanauskunft Startseite
@@ -983,6 +998,9 @@ duden 1:
   url: https://www.duden.de/suchen/dudenonline/<Suche>
   include:
     key: duden 0
+  examples:
+  - arguments: baum
+    description: Suche nach "baum"
 e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
@@ -1062,6 +1080,9 @@ faz 1:
   url: https://www.faz.net/suche/?query=<Suche>
   include:
     key: faz 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Artikeln über Berlin
 fbw 0:
   url: https://www.fahrerbewertung.de/
   title: Fahrerbewertung
@@ -1160,10 +1181,16 @@ gls 2:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>, <Paket-Nr. 2>
   include:
     key: gls 0
+  examples:
+  - arguments: 12345678901, 12345678902
+    description: Suche nach Paket-Nr. 12345678901 und 12345678902
 gls 3:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>, <Paket-Nr. 2>, <Paket-Nr. 3>
   include:
     key: gls 0
+  examples:
+  - arguments: 12345678901, 12345678902, 12345678903
+    description: Suche nach Paket-Nr. 12345678901, 12345678902 und 12345678903
 gma 1:
   deprecated:
     alternative:
@@ -4719,6 +4746,9 @@ hermes 1:
   url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#<Auftragsnummer>
   include:
     key: hermes 0
+  examples:
+  - arguments: 1234567890
+    description: Verfolge die Sendung mit der Auftragsnummer 1234567890
 hs 0:
   url: https://www.hardwareschotte.de
   title: Hardwareschotte, Homepage
@@ -4845,7 +4875,7 @@ jf 1:
 jw 0:
   url: https://www.justwatch.com/
   title: JustWatch
-  description: Searching a movie or tv series at JustWatch.com by given name
+  description: Streaming-Suchmaschine für Filme und Serien
   tags:
   - movies
   - series
@@ -4855,6 +4885,9 @@ jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
   include:
     key: jw 0
+  examples:
+  - arguments: simpsons
+    description: Suche nach "simpsons
 kaufland 0:
   url: https://www.kaufland.de/
   title: Kaufland Online Marktplatz
@@ -4876,6 +4909,8 @@ kaz 0:
   - ebay
   - selling
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 kaz 1:
   url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>
   include:
@@ -4892,19 +4927,25 @@ kaz 2:
     description: Suche nach "kühlschrank" in Berlin
 kaz+ 0:
   url: https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
-  title: Kleinanzeigen - Anzeige aufgeben
+  title: Kleinanzeigen.de, Anzeige aufgeben
   include:
     key: kaz 0
+  examples:
+  - description: Neue Anzeige aufgeben
 kaza 0:
   url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
-  title: Kleinanzeigen - Meine Anzeigen
+  title: Kleinanzeigen.de, Meine Anzeigen
   include:
     key: kaz 0
+  examples:
+  - description: Gehe zu meinen Anzeigen
 kazn 0:
   url: https://www.kleinanzeigen.de/m-nachrichten.html
-  title: Kleinanzeigen - Meine Nachrichten
+  title: Kleinanzeigen.de, Meine Nachrichten
   include:
     key: kaz 0
+  examples:
+  - description: Gehe zu meinen Nachrichten
 kfz 0:
   url: https://www.autokennzeichen.info/
   title: KFZ-Kennzeichen Deutschland
@@ -5067,6 +5108,9 @@ mfs 1:
   url: https://www.medizinfuchs.de/produkt/search/<Suche>
   include:
     key: mfs 0
+  examples:
+  - arguments: aspirin
+    description: Suche nach Aspirin
 mm 0:
   url: https://www.mediamarkt.de/
   title: Media Markt
@@ -5214,6 +5258,9 @@ preis 1:
   url: https://www.preissuchmaschine.de/Katalog/Suche/<Produkt>.html
   include:
     key: preis 0
+  examples:
+  - arguments: smartphone
+    description: Suche nach "smartphone"
 radar 0:
   url: https://www.t-online.de/advtoi/wetter/info/niederschlagsradar.html
   title: Wetter-Radar von T-Online
@@ -5321,6 +5368,9 @@ swp 1:
   url: https://www.swp-berlin.org/suche?search%5Bq%5D=<Suche>
   include:
     key: swp 0
+  examples:
+  - arguments: china
+    description: Suche nach "china"
 tel 0:
   url: https://www.telefonbuch.de/
   title: Telefonbuch
@@ -5532,6 +5582,8 @@ vrr 0:
   - bahn
   - travel
   - vrr
+  examples:
+  - description: Gehe zur Startseite
 vrr 2:
   url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   include:
@@ -5610,6 +5662,9 @@ wse 1:
   url: https://www.werstreamt.es/filme-serien/?q=m<Suche>&action_results=suchen
   include:
     key: wse 0
+  examples:
+  - arguments: simpsons
+    description: Suche nach "simpsons"
 zal 0:
   url: https://www.zalando.de/
   title: Zalando.de

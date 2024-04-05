@@ -23,6 +23,14 @@ export default class DataReporter {
         DataReporter.increment(reportShortcutsByState, 'all');
         const shortcut = this.env.data.shortcuts[namespace][key];
         const [keyword, argCount] = key.split(' ');
+        if (
+          // argCount == 0 &&
+          !shortcut.examples &&
+          !shortcut.deprecated &&
+          !shortcut.removed
+        ) {
+          console.log('Active shortcut with 0 arguments and no examples:', key);
+        }
         if (shortcut.tests) {
           if (Array.isArray(shortcut.tests)) {
             DataReporter.increment(reportShortcutsByProperties, 'with tests');

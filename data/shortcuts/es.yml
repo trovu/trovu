@@ -4,7 +4,7 @@ dep 1:
       query: pns.de <1>
     created: '2023-04-10'
 dle 1:
-  url: http://dle.rae.es/?w=<palabra>
+  url: https://dle.rae.es/?w=<palabra>
   title: Diccionario de la Lengua Española
   tags:
   - dictionary
@@ -33,7 +33,7 @@ last 1:
   - arguments: beatles
     description: Search for "beatles"
 rae 1:
-  url: http://dle.rae.es/?w=<query>
+  url: https://dle.rae.es/?w=<query>
   title: Diccionario RAE
   description: Relevant for spanish language, but as it shows the official and latest rules, should be interesting for all.
   tags:

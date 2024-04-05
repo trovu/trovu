@@ -5,13 +5,13 @@
   - communications
   - internetprovider
 abk 1:
-  url: http://www.abkuerzungen.de/result.php?language=&abbreviation=<Abkürzung>
+  url: https://www.abkuerzungen.de/result.php?language=&abbreviation=<Abkürzung>
   title: Abkürzungen
   examples:
   - arguments: cia
     description: Suche nach der Abkürzung "cia"
 anagramm 1:
-  url: http://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text=<Suche>&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
+  url: https://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text=<Suche>&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
   title: Anagramm-Suche
   tags:
   - german
@@ -28,7 +28,7 @@ ardmt 1:
   - arguments: Tatort
     description: Suche nach "Tatort"
 ardtext 1:
-  url: http://www.ard-text.de/index.php?page=<Seitennummer>
+  url: https://www.ard-text.de/index.php?page=<Seitennummer>
   title: ARD-Text
   tags:
   - ard
@@ -73,7 +73,7 @@ base 1:
   - arguments: sprache
     description: Suche nach "sprache"
 bbs 1:
-  url: http://www.babyblaue-seiten.de/index.php?searchQuery=<Suche>&content=search&searchWhere=0&content=search
+  url: https://www.babyblaue-seiten.de/index.php?searchQuery=<Suche>&content=search&searchWhere=0&content=search
   title: Babyblaue Seiten
   tags:
   - musik
@@ -86,7 +86,7 @@ bc 1:
   url: https://www.bestcheck.de/search?q=<Suche>
   title: BestCheck
 bk 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch=<Suche>
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch=<Suche>
   title: Buchkatalog
   tags:
   - books
@@ -98,7 +98,7 @@ bl 1:
   url: https://www.google.de/search?q=<Suche>+site:www.chip.de%2Fbestenlisten
   title: CHIP Bestenliste
 bla 1:
-  url: http://www.buffed.de/?f=<suchwort>
+  url: https://www.buffed.de/?f=<suchwort>
   title: Buffed.de
   tags:
   - admin:change-keyword
@@ -146,7 +146,7 @@ cb 0:
   - computer-science
   - linux
 cb 1:
-  url: http://www.computerbase.de/suche/?q=<Suche>&bereich=
+  url: https://www.computerbase.de/suche/?q=<Suche>&bereich=
   title: Computerbase
   tags:
   - computer-science
@@ -171,7 +171,7 @@ chill 1:
   - arguments: parkour
     description: Search Chilloutzone for "parkour"
 chip 1:
-  url: http://search.chip.de/?q=<Suche>&sort_by_date=desc
+  url: https://search.chip.de/?q=<Suche>&sort_by_date=desc
   title: CHIP Online
   tags:
   - chip
@@ -180,7 +180,7 @@ chip 1:
   - arguments: linux
     description: Search CHIP Online for "linux"
 chipd 1:
-  url: http://search.chip.de/?q=<Suche>&f=softwarereview
+  url: https://search.chip.de/?q=<Suche>&f=softwarereview
   title: CHIP Online Downloads
   tags:
   - chip
@@ -282,7 +282,7 @@ dclp 1:
   - arguments: strlen
     description: Search for "strlen"
 dd 1:
-  url: http://www.duden.de/suchen/dudenonline/<wort>
+  url: https://www.duden.de/suchen/dudenonline/<wort>
   title: Duden
   tags:
   - deutsch
@@ -315,7 +315,7 @@ dw 1:
   url: https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item=<suche>
   title: Deutsche Welle, Nachrichten auf Deutsch
 dwds 1:
-  url: http://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu=<Wort>
+  url: https://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu=<Wort>
   title: Digitales Wörterbuch der Deutschen Sprache
 e 0:
   url: https://ebay.de
@@ -339,7 +339,7 @@ end 1:
       query: dcc.en <1>
     created: '2023-04-10'
 endung 1:
-  url: http://www.endungen.de/ResultList/ResultList.aspx?searchExtension=<Dateieindung>&searchPlatform=win;mac;unix;os2&searchMode=contains
+  url: https://www.endungen.de/ResultList/ResultList.aspx?searchExtension=<Dateieindung>&searchPlatform=win;mac;unix;os2&searchMode=contains
   title: Endungen.de
   tags:
   - extension
@@ -386,7 +386,7 @@ fball 1:
   url: https://fireball.com/search?q=<suchbegriff>
   title: Fireball Websuche
 fefe 0:
-  url: http://blog.fefe.de
+  url: https://blog.fefe.de
   title: Fefes Blog
   tags:
   - blog
@@ -401,7 +401,7 @@ fefe 1:
   - arguments: atomenergie
     description: Search for "atomenergie"
 fefecss 1:
-  url: http://blog.fefe.de?css=<Style>.css
+  url: https://blog.fefe.de?css=<Style>.css
   title: Fefes Blog, anderer CSS-Style
   tags:
   - blog
@@ -452,7 +452,7 @@ frb 1:
       query: bab.fr <1>
     created: '2023-04-10'
 frbuch 0:
-  url: http://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm
+  url: https://www.franzoesisch-lehrbuch.de/grammatik/inhaltsangabe/deutsch_franzoesisch_grammatik_inhaltsverzeichnis.htm
   title: Französisch-Lehrbuch
   tags:
   - french
@@ -507,7 +507,7 @@ gfp 1:
   - arguments: berlin
     description: Suche nach "berlin"
 grc 1:
-  url: http://www.albertmartin.de/altgriechisch/?q=<suchwort>
+  url: https://www.albertmartin.de/altgriechisch/?q=<suchwort>
   title: Altgriechisch Wörterbuch
   tags:
   - altgriechisch
@@ -528,12 +528,12 @@ gz 0:
   - griechenland
   - news
 h 0:
-  url: http://www.heise.de
+  url: https://www.heise.de
   title: Heise Startseite
   tags:
   - heise
 h 1:
-  url: http://www.heise.de/newsticker/suche/?rm=search&q=<Suchbegriff>
+  url: https://www.heise.de/newsticker/suche/?rm=search&q=<Suchbegriff>
   title: Heise Newssuche
   tags:
   - heise
@@ -541,13 +541,13 @@ h 1:
   - arguments: linux
     description: Search for "linux"
 heise 0:
-  url: http://www.heise.de/
+  url: https://www.heise.de/
   title: Heise.de
   tags:
   - heise
   - news
 heisenews 0:
-  url: http://www.heise.de/newsticker
+  url: https://www.heise.de/newsticker
   title: Heise Newsticker
   tags:
   - heise
@@ -562,12 +562,12 @@ hls 1:
   - arguments: basel
     description: Search Historisches Lexikon der Schweiz for "basel"
 hn 0:
-  url: http://www.heise.de/newsticker
+  url: https://www.heise.de/newsticker
   title: Heise Newsticker
   tags:
   - heise
 hn 1:
-  url: http://www.heise.de/suche/?rm=search;q=<Suche>;channel=newsticker
+  url: https://www.heise.de/suche/?rm=search;q=<Suche>;channel=newsticker
   title: Heise Newsticker
   tags:
   - heise
@@ -575,7 +575,7 @@ hn 1:
   - arguments: apple
     description: Search for "apple"
 hoax 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms=<Suche>
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms=<Suche>
   title: Hoax-Info (TU-Berlin)
   tags:
   - hoax
@@ -612,7 +612,7 @@ hpv 1:
   include:
     key: hpv 0
 hsoft 0:
-  url: http://www.heise.de/software/
+  url: https://www.heise.de/software/
   title: Heise Softwareverzeichnis Startseite
   tags:
   - heise
@@ -625,7 +625,7 @@ hsoft 1:
   - arguments: bildbearbeitung
     description: Search for "bildbearbeitung"
 htp 0:
-  url: http://www.heise.de/tp/
+  url: https://www.heise.de/tp/
   title: Telepolis Startseite
   tags:
   - heise
@@ -640,7 +640,7 @@ hup 1:
       query: pns.hu <1>
     created: '2023-04-10'
 hwho 1:
-  url: http://www.heise.de/netze/tools?rm=whois&plugin=<URL>
+  url: https://www.heise.de/netze/tools?rm=whois&plugin=<URL>
   title: Heise Whois Netzwerk-Tool
   tags:
   - heise
@@ -685,7 +685,7 @@ kam 1:
   - arguments: Berlin
     description: Artikel zu "Berlin"
 kicker 0:
-  url: http://www.kicker.de/
+  url: https://www.kicker.de/
   title: Kicker.de
   tags:
   - news
@@ -700,7 +700,7 @@ kicker 1:
   - arguments: berlin
     description: Search for "berlin"
 kw 1:
-  url: http://www.kwdb.ch/searchanswer.asp?search=<Suche>&sourceid=serchilo
+  url: https://www.kwdb.ch/searchanswer.asp?search=<Suche>&sourceid=serchilo
   title: Kreuzworträtsel-Datenbank
   tags:
   - old
@@ -749,12 +749,12 @@ m 1:
   - search-engine
   - web-search
 mactv 1:
-  url: http://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<Suche>
+  url: https://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<Suche>
   title: Mac-TV Archiv
   tags:
   - apple
 morgenpost 1:
-  url: http://www.morgenpost.de/suche/?q=<Suche>
+  url: https://www.morgenpost.de/suche/?q=<Suche>
   title: Berliner Morgenpost Archiv
   tags:
   - news
@@ -794,12 +794,12 @@ nlde 1:
       query: nl <1>
     created: '2023-04-10'
 ntv 0:
-  url: http://www.n-tv.de
+  url: https://www.n-tv.de
   title: n-tv.de
   tags:
   - news
 ntv 1:
-  url: http://www.n-tv.de/suche/?q=<Suche>&searchabout=ntv&a=search&at=all&qwg=&qw=&qa=&sdd=&sdm=&sdy=&edd=&edm=&edy=
+  url: https://www.n-tv.de/suche/?q=<Suche>&searchabout=ntv&a=search&at=all&qwg=&qw=&qa=&sdd=&sdm=&sdy=&edd=&edm=&edy=
   title: n-tv.de
   tags:
   - news
@@ -816,7 +816,7 @@ nzz 1:
   - arguments: schweiz
     description: Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"
 ofdb 1:
-  url: http://www.ofdb.de/view.php?page=suchergebnis&SText=<Suche>
+  url: https://www.ofdb.de/view.php?page=suchergebnis&SText=<Suche>
   title: Online Filmdatenbank
   tags:
   - movies
@@ -858,7 +858,7 @@ ot 1:
   - arguments: wichtig
     description: Synonyme für "wichtig"
 ot? 0:
-  url: http://www.openthesaurus.de/faq.php
+  url: https://www.openthesaurus.de/faq.php
   title: OpenThesaurus Hilfe
   tags:
   - language
@@ -907,7 +907,7 @@ qa 1:
   url: https://lite.qwant.com/?q=<Suche>
   title: QWANT
 rblcheck 1:
-  url: http://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress=<ipaddress>
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress=<ipaddress>
   title: RBL-Check (Realtime Blackhole List)
   tags:
   - email
@@ -961,7 +961,7 @@ rivva 1:
   - arguments: berlin
     description: Search Rivva blog aggregator for "berlin"
 rm 1:
-  url: http://www.pledarigrond.ch/rumantschgrischun/#searchPhrase=<pled>
+  url: https://www.pledarigrond.ch/rumantschgrischun/#searchPhrase=<pled>
   title: Romanisch-Deutsch via Pledari Grond
   description: Dictionary German <-> Rumantsch Grischun
   tags:
@@ -993,12 +993,12 @@ rup 1:
       query: pns.ru <1>
     created: '2023-04-10'
 sc 1:
-  url: http://www.scienceticker.info/index.php?s=<Suche>&sc
+  url: https://www.scienceticker.info/index.php?s=<Suche>&sc
   title: Scienceticker
   tags:
   - old
 sfr 1:
-  url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name=<name>
+  url: https://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name=<name>
   title: Stayfriends
   tags:
   - school
@@ -1007,7 +1007,7 @@ sfr 1:
   - arguments: stefan
     description: Suchen nach Personen namens Stefan
 sfr 2:
-  url: http://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name=<name>&PersonSearch.school=<Ort>
+  url: https://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name=<name>&PersonSearch.school=<Ort>
   title: Stayfriends
   tags:
   - school
@@ -1124,7 +1124,7 @@ syn 1:
   - arguments: wichtig
     description: Synonyme für "wichtig"
 sz 0:
-  url: http://www.sueddeutsche.de/
+  url: https://www.sueddeutsche.de/
   title: Süddeutsche Zeitung
   tags:
   - news
@@ -1137,7 +1137,7 @@ sz 1:
   - newspaper
   - print
 taz 0:
-  url: http://www.taz.de/
+  url: https://www.taz.de/
   title: taz. die tageszeitung
   tags:
   - news
@@ -1171,13 +1171,13 @@ trd 1:
       query: dcc.tr <1>
     created: '2023-04-10'
 ts 0:
-  url: http://www.tagesschau.de/
+  url: https://www.tagesschau.de/
   title: Tagesschau
   tags:
   - news
   - tagesschau
 ts 1:
-  url: http://www.tagesschau.de/suche2.html?searchText=<Suche>
+  url: https://www.tagesschau.de/suche2.html?searchText=<Suche>
   title: Tagesschau
   tags:
   - news
@@ -1210,14 +1210,14 @@ tspg 1:
   - arguments: Friedrichshain
     description: Search "Friedrichshain"
 uu 0:
-  url: http://www.ubuntuusers.de/
+  url: https://www.ubuntuusers.de/
   title: UbuntuUsers.de
   tags:
   - documentation
   - linux
   - ubuntu
 uuf 0:
-  url: http://forum.ubuntuusers.de/
+  url: https://forum.ubuntuusers.de/
   title: 'UbuntuUsers.de: Startseite des Forum'
   tags:
   - documentation
@@ -1231,21 +1231,21 @@ uuf~ 0:
   - linux
   - ubuntu
 uui 0:
-  url: http://ikhaya.ubuntuusers.de/
+  url: https://ikhaya.ubuntuusers.de/
   title: 'UbuntuUsers.de: Ikhaya-Startseite'
   tags:
   - documentation
   - linux
   - ubuntu
 uup 0:
-  url: http://planet.ubuntuusers.de/
+  url: https://planet.ubuntuusers.de/
   title: 'UbuntuUsers.de: Startseite des Planeten'
   tags:
   - documentation
   - linux
   - ubuntu
 uuw 0:
-  url: http://wiki.ubuntuusers.de/Startseite
+  url: https://wiki.ubuntuusers.de/Startseite
   title: 'UbuntuUsers.de: Startseite des Wiki'
   tags:
   - documentation
@@ -1257,7 +1257,7 @@ wetter 1:
   tags:
   - old
 wn 1:
-  url: http://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort=<Suche>
+  url: https://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort=<Suche>
   title: Wörterbuchnetz
   tags:
   - deutsch
@@ -1268,7 +1268,7 @@ wn 1:
   - arguments: haus
     description: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
 wort 1:
-  url: http://www.dwds.de/?qu=<Wort>&view=1
+  url: https://www.dwds.de/?qu=<Wort>&view=1
   title: Digitales Wörterbuch der Deutschen Sprache
   tags:
   - old
@@ -1282,13 +1282,13 @@ wsl 1:
   - arguments: Stuhl
     description: Search for "Stuhl"
 zeit 0:
-  url: http://www.zeit.de/
+  url: https://www.zeit.de/
   title: Zeit Online
   tags:
   - news
   - zeit
 zeit 1:
-  url: http://www.zeit.de/suche/index?searchtype=on&q=<Suche>
+  url: https://www.zeit.de/suche/index?searchtype=on&q=<Suche>
   title: Zeit Online
   tags:
   - news
