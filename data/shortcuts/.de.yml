@@ -540,7 +540,7 @@ bpo 0:
   examples:
   - description: Gehe zur Startseite
 bpo 1:
-  url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/#<datum: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/'
   include:
     key: bpo 0
 bsvg 0:
