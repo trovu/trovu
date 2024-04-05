@@ -1,6 +1,6 @@
 import DataManager from './DataManager';
 import UrlProcessor from './UrlProcessor';
-import fs from 'fs';
+// import fs from 'fs';
 import jsyaml from 'js-yaml';
 
 export default class Migrator {
@@ -13,7 +13,7 @@ export default class Migrator {
     const data = DataManager.load(options);
     for (const namespace in data.shortcuts) {
       for (const key in data.shortcuts[namespace]) {
-        const [keyword, argCount] = key.split(' ');
+        // const [keyword, argCount] = key.split(' ');
         const args = [
           'arg1',
           'arg2',
@@ -57,9 +57,9 @@ export default class Migrator {
             } else {
               console.log('!=', key);
               // write both to files out.key.http and out.key.https
-              const outPath = `out.${key}`;
-              const outHttpPath = `${outPath}.http`;
-              const outHttpsPath = `${outPath}.https`;
+              // const outPath = `out.${key}`;
+              // const outHttpPath = `${outPath}.http`;
+              // const outHttpsPath = `${outPath}.https`;
               // console.log('Writing', outHttpPath);
               // console.log('Writing', outHttpsPath);
               // fs.writeFileSync(outHttpPath, originalText, 'utf8');
