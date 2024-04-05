@@ -108,7 +108,7 @@ function migratePlaceholders(options) {
   migrator.migratePlaceholders(options);
 }
 
-function migrateProtocol(options) {
+async function migrateProtocol(options) {
   const migrator = new Migrator();
-  migrator.migrateProtocol(options);
+  await migrator.migrateProtocol(options);
 }

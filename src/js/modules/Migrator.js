@@ -5,7 +5,7 @@ import jsyaml from 'js-yaml';
 export default class Migrator {
   constructor() {}
 
-  migrateProtocol(options) {
+  async migrateProtocol(options) {
     const dataPath = options.data;
     const shortcutsPath = options.shortcuts;
     const typesPath = options.types;
@@ -17,26 +17,27 @@ export default class Migrator {
           continue;
         }
         let shortcut = data.shortcuts[namespace][key];
-        // if shortcut.url starts with http, do a an async fetch, remember its contents in a var, replace http with https, do another fetch, report whether result is the same
+        // If the URL starts with http, fetch its contents, migrate to https, fetch again, and compare results
         if (shortcut.url && shortcut.url.startsWith('http:')) {
           console.log(`Migrating ${namespace}.${key}`);
-          const url = shortcut.url;
-          const httpsUrl = url.replace('http:', 'https:');
-          fetch(url)
-            .then((response) => response.text())
-            .then((text) => {
-              const originalText = text;
-              fetch(httpsUrl)
-                .then((response) => response.text())
-                .then((text) => {
-                  if (text === originalText) {
-                    console.log('==', key);
-                    shortcut.url = httpsUrl;
-                  } else {
-                    console.log('!=', key);
-                  }
-                });
-            });
+          const originalUrl = shortcut.url;
+          const httpsUrl = originalUrl.replace('http:', 'https:');
+
+          try {
+            const originalResponse = await fetch(originalUrl);
+            const originalText = await originalResponse.text();
+            const httpsResponse = await fetch(httpsUrl);
+            const httpsText = await httpsResponse.text();
+
+            if (httpsText === originalText) {
+              console.log('==', key);
+              shortcut.url = httpsUrl; // Update the shortcut URL to use HTTPS
+            } else {
+              console.log('!=', key);
+            }
+          } catch (error) {
+            console.error(`Error migrating ${key}:`, error);
+          }
         }
       }
       DataManager.write(data, dataPath, shortcutsPath, typesPath);
