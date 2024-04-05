@@ -4876,6 +4876,8 @@ kaz 0:
   - ebay
   - selling
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 kaz 1:
   url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>
   include:
@@ -4895,16 +4897,22 @@ kaz+ 0:
   title: Kleinanzeigen - Anzeige aufgeben
   include:
     key: kaz 0
+  examples:
+  - description: Neue Anzeige aufgeben
 kaza 0:
   url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
   title: Kleinanzeigen - Meine Anzeigen
   include:
     key: kaz 0
+  examples:
+  - description: Gehe zu meinen Anzeigen
 kazn 0:
   url: https://www.kleinanzeigen.de/m-nachrichten.html
   title: Kleinanzeigen - Meine Nachrichten
   include:
     key: kaz 0
+  examples:
+  - description: Gehe zu meinen Nachrichten
 kfz 0:
   url: https://www.autokennzeichen.info/
   title: KFZ-Kennzeichen Deutschland
@@ -5532,6 +5540,8 @@ vrr 0:
   - bahn
   - travel
   - vrr
+  examples:
+  - description: Gehe zur Startseite
 vrr 2:
   url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
   include:
