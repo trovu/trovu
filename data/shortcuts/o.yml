@@ -166,22 +166,16 @@
   - geolocation
   - social-network
 4sq 1:
-  url: http://foursquare.com/search?q=<what>
-  title: Foursquare
-  tags:
-  - foursquare
-  - geolocation
-  - social-network
+  url: https://foursquare.com/search?tab=venueResults&query=<what>
+  include:
+    key: 4sq 0
   examples:
   - arguments: pizza
     description: Search for a pizza place near me
 4sq 2:
-  url: http://foursquare.com/search?q=<what>&near=<where>
-  title: Foursquare
-  tags:
-  - foursquare
-  - geolocation
-  - social-network
+  url: https://foursquare.com/search?tab=venueResults&query=<what>&near=<where>
+  include:
+    key: 4sq 0
   examples:
   - arguments: pizza, new york
     description: Search for a pizza place in New York
