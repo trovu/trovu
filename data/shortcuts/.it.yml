@@ -1,10 +1,16 @@
-a 1:
-  url: http://www.amazon.it/s/?field-keywords=<query>
+a 0:
+  url: https://www.amazon.it/
   title: Amazon.it
   tags:
   - amazon
   - books
   - shopping
+  examples:
+  - description: Va alla pagina principale
+a 1:
+  url: http://www.amazon.it/s/?field-keywords=<query>
+  include:
+    key: a 0
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
@@ -15,22 +21,27 @@ e 0:
   - ebay
   - is-affiliate
   - shopping
+  examples:
+  - description: Va alla pagina principale
 e 1:
   url: https://www.ebay.it/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=724-53478-19255-0&siteid=101&campid=5337375636&customid=&toolid=10001&mkevt=1
-  title: Ebay.it
-  tags:
-  - ebay
-  - is-affiliate
-  - shopping
+  include:
+    key: e 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
-zal 1:
-  url: http://www.zalando.it/catalogo/?q=<prodotto>
+zal 0:
+  url: https://www.zalando.it/
   title: Zalando.it
   tags:
   - shopping
   - zalando
   examples:
-  - arguments: 'calzature '
+  - description: Vai alla pagina principale
+zal 1:
+  url: https://www.zalando.it/catalogo/?q=<prodotto>
+  include:
+    key: zal 0
+  examples:
+  - arguments: calzature
     description: cercare calzature
