@@ -62,7 +62,7 @@ export default class Migrator {
               const outHttpsPath = `${outPath}.https`;
               console.log('Writing', outHttpPath);
               console.log('Writing', outHttpsPath);
-              fs.writeFileSync(outHttpPath, originalText, 'utf8');
+              fs.writeFileSync(outHttpPath, httpText, 'utf8');
               fs.writeFileSync(outHttpsPath, httpsText, 'utf8');
             }
           } catch (error) {
