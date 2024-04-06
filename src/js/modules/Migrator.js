@@ -1,6 +1,6 @@
 import DataManager from './DataManager';
 import UrlProcessor from './UrlProcessor';
-// import fs from 'fs';
+import fs from 'fs';
 import jsyaml from 'js-yaml';
 
 export default class Migrator {
@@ -57,13 +57,13 @@ export default class Migrator {
             } else {
               console.log('!=', key);
               // write both to files out.key.http and out.key.https
-              // const outPath = `out.${key}`;
-              // const outHttpPath = `${outPath}.http`;
-              // const outHttpsPath = `${outPath}.https`;
-              // console.log('Writing', outHttpPath);
-              // console.log('Writing', outHttpsPath);
-              // fs.writeFileSync(outHttpPath, originalText, 'utf8');
-              // fs.writeFileSync(outHttpsPath, httpsText, 'utf8');
+              const outPath = `out.${key}`;
+              const outHttpPath = `${outPath}.http`;
+              const outHttpsPath = `${outPath}.https`;
+              console.log('Writing', outHttpPath);
+              console.log('Writing', outHttpsPath);
+              fs.writeFileSync(outHttpPath, originalText, 'utf8');
+              fs.writeFileSync(outHttpsPath, httpsText, 'utf8');
             }
           } catch (error) {
             console.error(`Error migrating ${key}:`, error);
