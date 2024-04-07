@@ -14,6 +14,21 @@ a 1:
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
+cos 0:
+  url: https://www.corriere.it/
+  title: Corriere della Sera
+  tags:
+  - corriere
+  - news
+  examples:
+  - description: Vai alla pagina principale
+cos 1:
+  url: https://www.corriere.it/ricerca/?q=<query>
+  include:
+    key: cos 0
+  examples:
+  - arguments: roma
+    description: Cerca articoli su Roma
 e 0:
   url: https://www.ebay.it/
   title: Ebay.it
