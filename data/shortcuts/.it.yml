@@ -13,7 +13,7 @@ a 1:
     key: a 0
   examples:
   - arguments: shakespeare
-    description: Search for "shakespeare"
+    description: Cerca libri di Shakespeare
 cds 0:
   url: https://www.corriere.it/
   title: Corriere della Sera
@@ -44,7 +44,7 @@ e 1:
     key: e 0
   examples:
   - arguments: smartphone
-    description: Search for "smartphone"
+    description: Cerca smartphone
 rep 0:
   url: https://www.repubblica.it/
   title: La Repubblica
@@ -74,4 +74,4 @@ zal 1:
     key: zal 0
   examples:
   - arguments: calzature
-    description: cercare calzature
+    description: Cerca calzature
