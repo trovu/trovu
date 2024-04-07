@@ -30,6 +30,23 @@ e 1:
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
+rep 0:
+  url: https://www.repubblica.it/
+  title: La Repubblica
+  tags:
+  - news
+  - repubblica
+  examples:
+  - description: Vai alla pagina principale
+rep 1:
+  url: https://ricerca.repubblica.it/ricerca/repubblica?query=<query>
+  title: La Repubblica
+  tags:
+  - news
+  - repubblica
+  examples:
+  - arguments: roma
+    description: Cerca articoli su Roma
 zal 0:
   url: https://www.zalando.it/
   title: Zalando.it
