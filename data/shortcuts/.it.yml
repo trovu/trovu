@@ -40,10 +40,8 @@ rep 0:
   - description: Vai alla pagina principale
 rep 1:
   url: https://ricerca.repubblica.it/ricerca/repubblica?query=<query>
-  title: La Repubblica
-  tags:
-  - news
-  - repubblica
+  include:
+    key: rep 0
   examples:
   - arguments: roma
     description: Cerca articoli su Roma
