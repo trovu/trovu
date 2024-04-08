@@ -6539,6 +6539,20 @@ patent 1:
   description: Worldwide patent service. Multi-language interface.
   tags:
   - patents
+pci 0:
+  url: https://podcastindex.org/
+  title: Podcast Index
+  examples:
+  - description: Go to homepage
+  tags:
+  - podcasts
+pci 1:
+  include:
+    key: pci 0
+  url: https://podcastindex.org/search?q=<query>&type=all
+  examples:
+  - arguments: books
+    description: search for podcasts about books
 pciid 1:
   url: https://pci-ids.ucw.cz/read/PC/<vendorid>
   title: PCI ID Repository
