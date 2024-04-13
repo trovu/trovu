@@ -12,8 +12,8 @@ gyl 0:
   url: https://www.ordbogen.com/
   title: Gyldendals Røde Ordbøger
   tags:
-  - language
   - danish
+  - language
   examples:
   - description: Gå til hovedsiden
 gyl 1:
@@ -27,6 +27,7 @@ ods 1:
   url: https://ordnet.dk/ods/ordbog?query=<ord>
   title: Ordbog over det danske sprog
   tags:
+  - danish
   - language
   examples:
   - arguments: skrive
@@ -35,6 +36,7 @@ spr 1:
   url: https://sproget.dk/lookup?SearchableText=<ord>
   title: Sproget.dk
   tags:
+  - danish
   - language
   examples:
   - arguments: bog
