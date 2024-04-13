@@ -1299,6 +1299,20 @@ wsl 1:
   examples:
   - arguments: Stuhl
     description: Search for "Stuhl"
+wtr 0:
+  url: https://www.wetter.com/suche/?q=<Ort>
+  title: Wetter.com
+  tags:
+  - weather
+  examples:
+  - description: Gehe zur Startseite
+wtr 1:
+  url: https://www.wetter.com/suche/?q=<Ort>
+  include:
+    key: wtr 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Wetter in Berlin
 zeit 0:
   url: https://www.zeit.de/
   title: Zeit Online
