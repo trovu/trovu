@@ -62,7 +62,9 @@ export default class Migrator {
               console.log('==', key);
               continue;
             } else {
-              console.log('!=', key, httpResponse.url, processedHttpsUrl);
+              console.log('!=');
+              console.log(httpResponse.url);
+              console.log(processedHttpsUrl);
             }
             console.log(httpResponse.redirected, httpResponse.url);
           } catch (error) {
