@@ -125,12 +125,12 @@ oxford 1:
   url: https://www.oxforddictionaries.com/definition/english/<query>
   title: Oxford dictionary
 sta 0:
-  url: http://start.csail.mit.edu
+  url: http://start.csail.mit.edu/
   title: START (SynTactic Analysis using Reversible Transformations)
   tags:
   - semantic-search
 sta 1:
-  url: http://start.csail.mit.edu/startfarm.cgi?query=<question>
+  url: http://start.csail.mit.edu/answer.php?query=<question>
   title: START (SynTactic Analysis using Reversible Transformations)
   tags:
   - semantic-search
