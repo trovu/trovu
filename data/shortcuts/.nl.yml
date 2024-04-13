@@ -11,7 +11,7 @@ beslist 1:
   - arguments: kartonnen poef
     description: Zoek waar je online een kartonnen poef kunt kopen
 bol 1:
-  url: http://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/<query>/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html
+  url: https://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/<query>/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html
   title: Bol.com Nederlands
   tags:
   - bol
@@ -81,7 +81,7 @@ kenteken 1:
   - arguments: 8kxz29
     description: zoek kenteken 8kxz29
 zal 1:
-  url: http://www.zalando.nl/catalogus/?q=<product>
+  url: https://www.zalando.nl/catalogus/?q=<product>
   title: Zalando.nl
   tags:
   - shopping
