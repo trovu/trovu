@@ -758,7 +758,7 @@ leo 1:
       query: leo.en <1>
     created: '2023-03-12'
 lobby 0:
-  url: http://lobbycontrol.de/
+  url: https://www.lobbycontrol.de/
   title: LobbyControl
   tags:
   - politics
@@ -798,7 +798,7 @@ mp 1:
   - moviepilot
   - movies
 nds 0:
-  url: http://www.nachdenkseiten.de
+  url: https://www.nachdenkseiten.de
   title: Nachdenkseiten
   tags:
   - blog
@@ -960,7 +960,7 @@ rezeptefuchs 0:
   tags:
   - cooking
 rezeptefuchs 1:
-  url: http://www.rezeptefuchs.de/Search?q=<Suche>
+  url: https://www.rezeptefuchs.de/Search?q=<Suche>
   title: Rezeptefuchs
   tags:
   - cooking
@@ -1045,7 +1045,7 @@ sfr 2:
   - arguments: stefan, berlin
     description: Suchen nach Personen namens Stefan in Berlin
 sh 0:
-  url: http://de.selfhtml.org/
+  url: https://wiki.selfhtml.org/
   title: Selfhtml
   tags:
   - doc
@@ -1058,7 +1058,7 @@ sh 0:
   - tutorial
   - xml
 sh 1:
-  url: http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage=<Suche>
+  url: https://wiki.selfhtml.org/index.php?search=<Suche>&title=Spezial%3ASuche&go=Seite
   title: Selfhtml
   tags:
   - doc
@@ -1070,7 +1070,7 @@ sh 1:
   - arguments: div
     description: Suche nach "div"
 shg 1:
-  url: http://www.google.com/search?q=<Suche>&sitesearch=wiki.selfhtml.org
+  url: https://www.google.com/search?q=<Suche>&sitesearch=wiki.selfhtml.org
   title: Selfhtml via Google
   tags:
   - doc
@@ -1247,7 +1247,7 @@ uuf 0:
   - linux
   - ubuntu
 uuf~ 0:
-  url: http://forum.ubuntuusers.de/egosearch/
+  url: https://forum.ubuntuusers.de/egosearch/
   title: 'UbuntuUsers.de: Eigene Beiträge im Forum'
   tags:
   - documentation
