@@ -26,7 +26,7 @@ llt 3:
   - arguments: sotargatan, järnvägen,10
     description: Buss från Sotargatan till Järnvägen, avgång kl. 10
 ltnbd 2:
-  url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S=<Från>!&Z=<Till>!&start=1
+  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S=<Från>!&Z=<Till>!&start=1
   title: Länstraffiken Norbotten
   tags:
   - luleå
@@ -36,7 +36,7 @@ ltnbd 2:
   - arguments: boden, luleå
     description: Nästa buss från Boden till Luleå
 ltnbd 3:
-  url: http://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S=<Från>!&Z=<Till>!&T=<Avgång>&start=1
+  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S=<Från>!&Z=<Till>!&T=<Avgång>&start=1
   title: Länstraffiken Norbotten
   tags:
   - luleå
@@ -46,7 +46,7 @@ ltnbd 3:
   - arguments: boden, luleå, 10
     description: Buss från Boden till Luleå, avgång kl. 10
 rr 2:
-  url: http://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&start=1
+  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&start=1
   title: Resrobot
   tags:
   - travel
@@ -54,7 +54,7 @@ rr 2:
   - arguments: stockholm, malmö
     description: Nästa tåg från Stockholm till Malmö
 rr 3:
-  url: http://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&T=<Avgång>&start=1
+  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&T=<Avgång>&start=1
   title: Resrobot
   tags:
   - travel
@@ -71,7 +71,7 @@ srse 1:
   - arguments: stockholm
     description: Search for "stockholm".
 zal 1:
-  url: http://www.zalando.se/katalog/?q=<produkt>
+  url: https://www.zalando.se/katalog/?q=<produkt>
   title: Zalando.se
   tags:
   - shopping

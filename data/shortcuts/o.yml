@@ -266,7 +266,7 @@ aclg 1:
   - arguments: machine translation
     description: search for machine translation in the ACL Anthology
 aclw 1:
-  url: http://www.aclweb.org/aclwiki/index.php?search=<query>&go=Go
+  url: https://www.aclweb.org/aclwiki/index.php?search=<query>&go=Go
   title: ACL wiki
   tags:
   - academia
@@ -324,7 +324,7 @@ ads 1:
   - arguments: dark energy
     description: 'Search for astrophysics articles on "dark energy" '
 adsh 1:
-  url: http://www.alldatasheet.com/view.jsp?Searchword=<part>
+  url: https://www.alldatasheet.com/view.jsp?Searchword=<part>
   title: alldatasheet.com
   tags:
   - datasheet
@@ -365,7 +365,7 @@ alibaba 1:
   url: https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=<name>
   title: Alibaba Product Search
 allmovie 1:
-  url: http://www.allmovie.com/search/all/<movie>
+  url: https://www.allmovie.com/search/all/<movie>
   title: All Movie
   tags:
   - cinema
@@ -374,7 +374,7 @@ allmovie 1:
   - arguments: forrest gump
     description: Search for "forrest gump"
 allmusic 1:
-  url: http://www.allmusic.com/search/all/<query>
+  url: https://www.allmusic.com/search/all/<query>
   title: Allmusic
   tags:
   - music
@@ -426,7 +426,7 @@ am 1:
   - key: am 1
     namespace: pka
 anidb 1:
-  url: http://anidb.net/perl-bin/animedb.pl?show=animelist&adb.search=<query>&do.search=search
+  url: https://anidb.net/perl-bin/animedb.pl?show=animelist&adb.search=<query>&do.search=search
   title: AniDB - Anime DataBase
   tags:
   - anime
@@ -447,7 +447,7 @@ anon 1:
   - arguments: http://spiegel.de
     description: Surf to http://spiegel.de anonymous
 answers 1:
-  url: http://www.answers.com/search?q=<query>
+  url: https://www.answers.com/search?q=<query>
   title: Answers.com
   tags:
   - answers
@@ -473,7 +473,7 @@ ap 1:
   - arguments: map
     description: Search for map apps
 apb 1:
-  url: http://www.appbrain.com/search?q=<query>
+  url: https://www.appbrain.com/search?q=<query>
   title: Appbrain App Search
   tags:
   - android
@@ -585,7 +585,7 @@ as 1:
   - key: as 1
     namespace: pka
 ask 1:
-  url: http://www.ask.com/web?q=<query>&qsrc=0&o=333&l=dir
+  url: https://www.ask.com/web?q=<query>&qsrc=0&o=333&l=dir
   title: Ask.com
   tags:
   - ask
@@ -673,7 +673,7 @@ be 1:
   - key: be 1
     namespace: pka
 bf 1:
-  url: http://www.boerse-frankfurt.de/suchergebnisse?_search=<query>
+  url: https://www.boerse-frankfurt.de/suchergebnisse?_search=<query>
   title: Börse Frankfurt Abfrage
   examples:
   - arguments: Telekom
@@ -758,7 +758,7 @@ bibso 0:
   - bookmarks
   - social
 bibso 1:
-  url: http://www.bibsonomy.org/search/<query>
+  url: https://www.bibsonomy.org/search/<query>
   title: Bibsonomy
   tags:
   - bibsonomy
@@ -1329,7 +1329,7 @@ crg 0:
   tags:
   - craigslist
 crit 1:
-  url: http://www.criticker.com/?st=all&h=<query>&g=Go
+  url: https://www.criticker.com/?st=all&h=<query>&g=Go
   title: Criticker
   tags:
   - cinema
@@ -1735,7 +1735,7 @@ deen 1:
       query: de.en <1>
     created: '2023-04-10'
 deep 1:
-  url: http://www.deepdyve.com/search?query=<query>
+  url: https://www.deepdyve.com/search?query=<query>
   title: DeepDyve search
   tags:
   - old
@@ -1775,7 +1775,7 @@ deo 1:
   tags:
   - old
 derivative 1:
-  url: http://www.wolframalpha.com/input/?i=derivative%20<query>
+  url: https://www.wolframalpha.com/input/?i=derivative%20<query>
   title: 'WolframAlpha: Derivative'
   tags:
   - mathematics
@@ -1832,7 +1832,7 @@ diia 1:
   - arguments: http://www.example.com
     description: add 'example.com' to your bookmarks
 disc 1:
-  url: http://www.discogs.com/search?type=all&q=<artist>
+  url: https://www.discogs.com/search?type=all&q=<artist>
   title: Discogs
   tags:
   - music
@@ -1845,7 +1845,7 @@ distro 0:
   tags:
   - old
 distro 1:
-  url: http://distrowatch.com/table.php?distribution=<query>
+  url: https://distrowatch.com/table.php?distribution=<query>
   title: Distrowatch
   tags:
   - old
@@ -1855,7 +1855,7 @@ distros 0:
   tags:
   - old
 distrow 0:
-  url: http://distrowatch.com/weekly.php?issue=current
+  url: https://distrowatch.com/weekly.php?issue=current
   title: Distrowatch
   tags:
   - old
@@ -2042,7 +2042,7 @@ dlzh 1:
   - arguments: 'Hello, how are you? '
     description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese. '
 dm 1:
-  url: http://www.dailymotion.com/?search=<query>
+  url: https://www.dailymotion.com/?search=<query>
   title: Dailymotion
   tags:
   - dailymotion
@@ -2051,12 +2051,12 @@ dm 1:
   - arguments: berlin
     description: Search for videos about "berlin"
 dnd 0:
-  url: http://www.dandwiki.com/wiki/Main_Page
+  url: https://www.dandwiki.com/wiki/Main_Page
   title: D&D wiki
   tags:
   - old
 dnd 1:
-  url: http://www.dandwiki.com/wiki/Special:Search?search=<query>
+  url: https://www.dandwiki.com/wiki/Special:Search?search=<query>
   title: D&D wiki
   tags:
   - old
@@ -2104,13 +2104,13 @@ drag_ball 0:
   tags:
   - old
 dreamstime 0:
-  url: http://www.dreamstime.com/
+  url: https://www.dreamstime.com/
   title: Dreamstime
   tags:
   - images
   - stock-agency
 dreamstime 1:
-  url: http://www.dreamstime.com/search.php?srh_field=<Suche>
+  url: https://www.dreamstime.com/search.php?srh_field=<Suche>
   title: Dreamstime
   tags:
   - images
@@ -2148,13 +2148,13 @@ drr 1:
   - arguments: linked_field
     description: Go to the repository of Linked Field
 drse 0:
-  url: http://drupal.stackexchange.com/
+  url: https://drupal.stackexchange.com/
   title: Drupal Stack Exchange
   tags:
   - programming
   - stackexchange
 drse 1:
-  url: http://drupal.stackexchange.com/search?q=<query>
+  url: https://drupal.stackexchange.com/search?q=<query>
   title: Drupal Stack Exchange
   tags:
   - programming
@@ -2291,7 +2291,7 @@ eco 0:
   tags:
   - web-search
 eco 1:
-  url: http://www.ecosia.org/search?q=<query>
+  url: https://www.ecosia.org/search?q=<query>
   title: Ecosia
   tags:
   - web-search
@@ -2435,7 +2435,7 @@ en 1:
     namespace: pka
   showOnHome: 500
 ende 1:
-  url: http://www.dict.cc/?s=<word>
+  url: https://www.dict.cc/?s=<word>
   title: Translation English to German
   tags:
   - old
@@ -2445,7 +2445,7 @@ enfi 1:
   tags:
   - old
 enfr 1:
-  url: http://www.wordreference.com/enfr/<word>
+  url: https://www.wordreference.com/enfr/<word>
   title: Translation English to French
   tags:
   - old
@@ -2585,7 +2585,7 @@ et 1:
   - key: et 1
     namespace: pka
 etools 1:
-  url: http://www.etools.ch/searchSubmit.do?query=<query>
+  url: https://www.etools.ch/searchSubmit.do?query=<query>
   title: ETools.ch Metasearch
   tags:
   - old
@@ -2628,7 +2628,7 @@ exkcd 0:
   - wiki
   - xkcd
 exkcd 1:
-  url: http://www.explainxkcd.com/wiki/index.php?search=<query>&go=Go
+  url: https://www.explainxkcd.com/wiki/index.php?search=<query>&go=Go
   title: Explain xkcd
   tags:
   - wiki
@@ -2669,7 +2669,7 @@ fb 1:
   - arguments: john doe
     description: Facebook search for "john doe"
 fbe 0:
-  url: http://www.facebook.com/events
+  url: https://www.facebook.com/events
   title: Facebook, Events
   tags:
   - facebook
@@ -2718,7 +2718,7 @@ fbk 0:
       query: fbmp
     created: '2023-01-21'
 fblint 1:
-  url: http://developers.facebook.com/tools/lint/?url=<query>
+  url: https://developers.facebook.com/tools/lint/?url=<query>
   title: Facebook URL Linter
   tags:
   - facebook
@@ -2766,7 +2766,7 @@ fbot 1:
   - arguments: berlin
     description: Search for "berlin"
 fbp 0:
-  url: http://www.facebook.com/profile.php
+  url: https://www.facebook.com/profile.php
   title: Facebook Profile
   tags:
   - facebook
@@ -2840,7 +2840,7 @@ fbsdp 2:
   - arguments: www,firefox
     description: Search for firefox in category www
 fbu 1:
-  url: http://www.facebook.com/<username>
+  url: https://www.facebook.com/<username>
   title: Facebook User
   tags:
   - old
@@ -2867,7 +2867,7 @@ fbw 0:
   url: https://www.fahrerbewertung.de
   title: Fahrerbewertung
 fd 1:
-  url: http://www.thefreedictionary.com/<word>
+  url: https://www.thefreedictionary.com/<word>
   title: The Free Dictionary
   tags:
   - old
@@ -2877,12 +2877,12 @@ fddb 1:
   tags:
   - old
 fedbug 0:
-  url: http://bugzilla.redhat.com/query.cgi
+  url: https://bugzilla.redhat.com/query.cgi
   title: Fedora bugs
   tags:
   - old
 fedbugq 1:
-  url: http://bugzilla.redhat.com/buglist.cgi?quicksearch=<query>
+  url: https://bugzilla.redhat.com/buglist.cgi?quicksearch=<query>
   title: search for a term in Fedora bugs (query)
   tags:
   - old
@@ -2896,12 +2896,12 @@ fedex 1:
   - arguments: '123456789012'
     description: track shipment with the number 123456789012
 fedora-wiki 1:
-  url: http://fedoraproject.org/wiki/Special:Search?search=<query>
+  url: https://fedoraproject.org/wiki/Special:Search?search=<query>
   title: Fedora Wiki Search
   tags:
   - old
 fedw 1:
-  url: http://fedoraproject.org/wiki/Special:Search?search=<query>
+  url: https://fedoraproject.org/wiki/Special:Search?search=<query>
   title: Fedora Wiki Search
   tags:
   - old
@@ -3290,12 +3290,12 @@ freesound 1:
   url: https://freesound.org/search/?q=<query>
   title: Freesound
 fremdwort 1:
-  url: http://www.fremdwort.de/suche.php?term=<query>
+  url: https://www.fremdwort.de/suche.php?term=<query>
   title: Fremdwort.de
   tags:
   - old
 fren 1:
-  url: http://www.wordreference.com/fren/<word>
+  url: https://www.wordreference.com/fren/<word>
   title: Translation French to English
   tags:
   - old
@@ -3838,7 +3838,7 @@ ggmsg 1:
   tags:
   - old
 gh 0:
-  url: http://geizhals.eu/
+  url: https://geizhals.eu/
   title: Geizhals EU Hauptseite
   tags:
   - geizhals
@@ -4307,13 +4307,13 @@ groovesalad 0:
   - internetradio
   - radio-station
 gsch 0:
-  url: http://scholar.google.com/scholar?hl=<$language>
+  url: https://scholar.google.com/scholar?hl=<$language>
   title: Google Scholar Homepage
   tags:
   - google
   - science
 gsch 1:
-  url: http://scholar.google.com/scholar?hl=<$language>&q=<query>
+  url: https://scholar.google.com/scholar?hl=<$language>&q=<query>
   title: Google Scholar
   tags:
   - google
@@ -4489,12 +4489,12 @@ gw2 1:
   tags:
   - old
 gwb 1:
-  url: http://www.googlewatchblog.de/index.php?s=<query>
+  url: https://www.googlewatchblog.de/index.php?s=<query>
   title: Google Watch Blog
   tags:
   - old
 gwo 0:
-  url: http://wiki.guildwars.com/wiki/Main_Page
+  url: https://wiki.guildwars.com/wiki/Main_Page
   title: Official Guild Wiki
   tags:
   - old
@@ -4591,7 +4591,7 @@ hi 1:
   - key: hi 1
     namespace: pka
 hm 1:
-  url: http://hypem.com/search/<query>
+  url: https://hypem.com/search/<query>
   title: Hype Machine
   tags:
   - old
@@ -4694,7 +4694,7 @@ hype 1:
   tags:
   - old
 i 0:
-  url: http://www.imdb.com/
+  url: https://www.imdb.com/
   title: Internet Movie Database
   tags:
   - cinema
@@ -4731,7 +4731,7 @@ icd 1:
   tags:
   - old
 icon 1:
-  url: http://www.iconspedia.com/search/<query>/
+  url: https://www.iconspedia.com/search/<query>/
   title: IconsPedia
   tags:
   - old
@@ -4771,7 +4771,7 @@ idealo 1:
       query: .de.idl <1>
     created: '2023-12-15'
 ieee 1:
-  url: http://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText=<query>
+  url: https://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText=<query>
   title: IEEE Xplore Search
   tags:
   - old
@@ -4829,7 +4829,7 @@ imfdb 1:
   tags:
   - old
 imslp 0:
-  url: http://imslp.org/index.php?title=Special:Search&search=
+  url: https://imslp.org/index.php?title=Special:Search&search=
   title: Petrucci Library
   tags:
   - old
@@ -4842,12 +4842,12 @@ infrarot 1:
   tags:
   - old
 ink 1:
-  url: http://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search=<feature>&go=Go
+  url: https://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search=<feature>&go=Go
   title: Inkscape Wiki
   tags:
   - old
 integral 1:
-  url: http://www.wolframalpha.com/input/?i=integral%20<query>
+  url: https://www.wolframalpha.com/input/?i=integral%20<query>
   title: 'WolframAlpha: Integral'
   tags:
   - mathematics
@@ -5091,22 +5091,22 @@ java8 1:
   - arguments: void
     description: Search for docs about "void"
 jb 2:
-  url: http://www.justbooks.de/search/?author=<author>&title=<title>&lang=<$language>&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=<$language>&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
   title: JustBooks
   tags:
   - old
 jbde 2:
-  url: http://www.justbooks.de/search/?author=<author>&title=<title>&lang=de&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=de&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
   title: JustBooks
   tags:
   - old
 jben 2:
-  url: http://www.justbooks.de/search/?author=<author>&title=<title>&lang=en&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=en&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
   title: JustBooks
   tags:
   - old
 jcp 1:
-  url: http://jcp.org/en/jsr/summary?id=<query>
+  url: https://jcp.org/en/jsr/summary?id=<query>
   title: The Java Community Process(SM) Program
   tags:
   - old
@@ -5141,7 +5141,7 @@ jgrapht 1:
   tags:
   - old
 jm 1:
-  url: http://www.jobmixer.com/de/jobs/<query>/1
+  url: https://www.jobmixer.com/de/jobs/<query>/1
   title: Jobmixer
   tags:
   - old
@@ -5171,7 +5171,7 @@ jr 2:
   tags:
   - old
 jsr 1:
-  url: http://jcp.org/en/jsr/summary?id=<query>
+  url: https://jcp.org/en/jsr/summary?id=<query>
   title: Java Specification Requests
   tags:
   - old
@@ -5365,7 +5365,7 @@ laredoute 0:
   - fashion
   - shopping
 laredoute 1:
-  url: http://www.laredoute.com/search.aspx?keyword=<query>
+  url: https://www.laredoute.com/search.aspx?keyword=<query>
   title: La Redoute
   tags:
   - fashion
@@ -5379,12 +5379,12 @@ larousse 1:
       query: fr.lrs <1>
     created: '2023-04-10'
 last 0:
-  url: http://www.last.fm/
+  url: https://www.last.fm/
   title: Last.fm
   tags:
   - music
 last 1:
-  url: http://www.last.fm/search?setlang=de&q=<query>
+  url: https://www.last.fm/search?setlang=de&q=<query>
   title: Last.fm
   tags:
   - music
@@ -5392,7 +5392,7 @@ last 1:
   - arguments: beatles
     description: Search for "beatles"
 laste 0:
-  url: http://www.last.fm/events
+  url: https://www.last.fm/events
   title: 'Last.fm: Events'
   tags:
   - events
@@ -5531,13 +5531,13 @@ linz 2:
   tags:
   - old
 lipsum 0:
-  url: http://www.lipsum.com/feed/html?name=start
+  url: https://www.lipsum.com/feed/html?name=start
   title: Lorem Ipsum
   tags:
   - lipsum
   - lorem-ipsum
 lipsum 1:
-  url: http://www.lipsum.com/feed/html?amount=<amount>&what=words&name=start
+  url: https://www.lipsum.com/feed/html?amount=<amount>&what=words&name=start
   title: Lorem Ipsum
   tags:
   - lipsum
@@ -5546,7 +5546,7 @@ lipsum 1:
   - arguments: '200'
     description: Generate 200 words of "Lorem Ipsum"
 lipsum 2:
-  url: http://www.lipsum.com/feed/html?amount=<amount>&what=<paragraphs/words/bytes/lists>&name=start
+  url: https://www.lipsum.com/feed/html?amount=<amount>&what=<paragraphs/words/bytes/lists>&name=start
   title: Lorem Ipsum
   tags:
   - lipsum
@@ -5754,12 +5754,12 @@ mema 1:
   - arguments: kirk
     description: Search for "kirk"
 mesh 1:
-  url: http://www.ncbi.nlm.nih.gov/mesh?term=<termName>
+  url: https://www.ncbi.nlm.nih.gov/mesh?term=<termName>
   title: MeSH term
   tags:
   - old
 metal 1:
-  url: http://www.metal-archives.com/search?searchString=<query>&type=band_name
+  url: https://www.metal-archives.com/search?searchString=<query>&type=band_name
   title: Metal Archives
   tags:
   - old
@@ -5892,7 +5892,7 @@ mwe 0:
   - mediawiki
   - wiki
 mwe 1:
-  url: http://www.mediawiki.org/wiki/Special:Search?search=<query>&ns102=1&fulltext=Search
+  url: https://www.mediawiki.org/wiki/Special:Search?search=<query>&ns102=1&fulltext=Search
   title: Search MediaWiki Extensions
   tags:
   - mediawiki
@@ -6132,7 +6132,7 @@ no 1:
   - key: no 1
     namespace: pka
 nobi 1:
-  url: http://www.notebookinfo.de/suche/<query>
+  url: https://www.notebookinfo.de/suche/<query>
   title: Notebookinfo
   tags:
   - old
@@ -6187,7 +6187,7 @@ oeis 1:
   - arguments: 13 17 19
     description: Search the sequence 1 3 5 7 11
 of 1:
-  url: http://www.dicfro.org/?dict=gdf&word=<query>
+  url: https://www.dicfro.org/?dict=gdf&word=<query>
   title: Old french dictionnary
   tags:
   - old
@@ -6523,7 +6523,7 @@ pa 1:
   - key: pa 1
     namespace: pka
 pastebin 0:
-  url: http://pastebin.com/
+  url: https://pastebin.com/
   title: Paste Your Code
   tags:
   - old
@@ -6570,7 +6570,7 @@ pciid 2:
   - arguments: 8086,10de
     description: Search for PCI Device with Vendor ID 8086 and Device ID 10de
 pdf 1:
-  url: http://docs.google.com/viewer?url=<url>
+  url: https://docs.google.com/viewer?url=<url>
   title: Google PDF Viewer
   tags:
   - old
@@ -6853,7 +6853,7 @@ praktiker 1:
   tags:
   - old
 printertestfiles 0:
-  url: http://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
+  url: https://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
   title: Printer test files
 ps 0:
   include:
@@ -6918,7 +6918,7 @@ pt-pons 1:
       query: pns.pt <1>
     created: '2023-04-10'
 pubchem 1:
-  url: http://www.ncbi.nlm.nih.gov/pccompound/?term=<compound>
+  url: https://www.ncbi.nlm.nih.gov/pccompound/?term=<compound>
   title: PubChem
   tags:
   - chemistry
@@ -7009,7 +7009,7 @@ py3s 1:
   - programming
   - python
 pybug 0:
-  url: http://bugs.python.org/
+  url: https://bugs.python.org/
   title: Python Bugs
   tags:
   - programming
@@ -7141,7 +7141,7 @@ r/ 1:
   tags:
   - reddit
 r2r 2:
-  url: http://www.rome2rio.com/de/map/<from>/<to>
+  url: https://www.rome2rio.com/de/map/<from>/<to>
   title: Rome2Rio
   tags:
   - navigation
@@ -7157,14 +7157,14 @@ rae 1:
       query: es.rae <1>
     created: '2023-04-10'
 rails 0:
-  url: http://apidock.com/rails/
+  url: https://apidock.com/rails/
   title: Ruby on Rails Documentation
   tags:
   - programming
   - rails
   - ruby
 rails 1:
-  url: http://apidock.com/rails/search?query=<query>
+  url: https://apidock.com/rails/search?query=<query>
   title: Ruby on Rails Documentation
   tags:
   - programming
@@ -7280,7 +7280,7 @@ remnant 1:
   tags:
   - old
 remove 1:
-  url: http://www.shouldiremoveit.com/programs.aspx?q=<product>
+  url: https://www.shouldiremoveit.com/programs.aspx?q=<product>
   title: ShouldIRemoveIt
   tags:
   - adware
@@ -7476,7 +7476,7 @@ s 1:
   - arguments: berlin
     description: Search for "berlin"
 sanego 2:
-  url: http://www.sanego.de/Arzt/?q=<Name oder Fachgebiet>&l=<Ort, Ortsteil oder Postleitzahl>&btn=Suchen
+  url: https://www.sanego.de/Arzt/?q=<Name oder Fachgebiet>&l=<Ort, Ortsteil oder Postleitzahl>&btn=Suchen
   title: Sanego - Die Gesundheits-Community
   tags:
   - old
@@ -7693,7 +7693,7 @@ sl 1:
   - key: sl 1
     namespace: pka
 slashdot 0:
-  url: http://slashdot.org/
+  url: https://slashdot.org/
   title: Slashdot
   tags:
   - news
@@ -7743,7 +7743,7 @@ soa 1:
       query: sofa <1>
     created: '2023-05-27'
 sof 0:
-  url: http://stackoverflow.com/
+  url: https://stackoverflow.com/
   title: Stack Overflow
   tags:
   - programming
@@ -7788,7 +7788,7 @@ somafm 1:
   - internetradio
   - radio-station
 soundcloud 1:
-  url: http://soundcloud.com/search?q[fulltext]=<query>
+  url: https://soundcloud.com/search?q[fulltext]=<query>
   title: Soundcloud
   tags:
   - old
@@ -7816,7 +7816,7 @@ spam 1:
   url: https://www.spamhaus.org/query/ip/<URL>
   title: Spamhaus Status-Abfrage
 spfun 1:
-  url: http://www.sparkfun.com/search/results?term=<query>&what=products
+  url: https://www.sparkfun.com/search/results?term=<query>&what=products
   title: Sparkfun product search
   tags:
   - old
@@ -7913,7 +7913,7 @@ stract 1:
   - arguments: film
     description: search Stract for film
 su 1:
-  url: http://superuser.com/search?q=<query>
+  url: https://superuser.com/search?q=<query>
   title: Super User
   tags:
   - old
@@ -8012,7 +8012,7 @@ swipl 1:
   - arguments: append
     description: Search SWI-Prolog site for documentation on appending
 swt 1:
-  url: http://www.test.de/suche/?q=<query>
+  url: https://www.test.de/suche/?q=<query>
   title: Stiftung Warentest
   tags:
   - old
@@ -8143,7 +8143,7 @@ techrightsfeed 0:
   - patent-law
   - patents
 ted 1:
-  url: http://www.ted.com/search?q=<query>
+  url: https://www.ted.com/search?q=<query>
   title: TED
   tags:
   - science
@@ -8188,7 +8188,7 @@ th 1:
   - key: th 1
     namespace: pka
 thomann 1:
-  url: http://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw=<query>&x=&y=
+  url: https://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw=<query>&x=&y=
   title: Thomann Suche
   tags:
   - old
@@ -8238,7 +8238,7 @@ tiku 1:
   - arguments: juliaticaofficial
     description: Show userpage of "juliaticaofficial"
 time 1:
-  url: http://www.timeanddate.com/worldclock/results.html?query=<location>
+  url: https://www.timeanddate.com/worldclock/results.html?query=<location>
   title: Timeanddate.com
   tags:
   - date
@@ -8456,7 +8456,7 @@ tsq 0:
   - photo
   - photography
 tsq 1:
-  url: http://www.turbosquid.com/Search/Index.cfm?keyword=<query>
+  url: https://www.turbosquid.com/Search/Index.cfm?keyword=<query>
   title: TurboSquid
   tags:
   - photo
@@ -8709,7 +8709,7 @@ ucsh 1:
   tags:
   - old
 ud 0:
-  url: http://www.urbandictionary.com/
+  url: https://www.urbandictionary.com/
   title: Urban Dictionary
   tags:
   - dictionary
@@ -8739,7 +8739,7 @@ ug 1:
   - key: ug 1
     namespace: pka
 ugb 1:
-  url: http://www.ultimate-guitar.com/search.php?s=<band>&w=bands
+  url: https://www.ultimate-guitar.com/search.php?s=<band>&w=bands
   title: 'Ultimate Guitar: Bands'
   tags:
   - guitar
@@ -8872,7 +8872,7 @@ v 1:
   tags:
   - old
 validator 1:
-  url: http://validator.w3.org/check?uri=<uri>
+  url: https://validator.w3.org/check?uri=<uri>
   title: W3 Validator
   tags:
   - old
@@ -9074,7 +9074,7 @@ wa 0:
   - science
   - wolfram-alpha
 wa 1:
-  url: http://www.wolframalpha.com/input/?i=<query>
+  url: https://www.wolframalpha.com/input/?i=<query>
   title: WolframAlpha
   tags:
   - mathematics
@@ -9284,7 +9284,7 @@ whatis 0:
   - industry
   - technology
 whatis 1:
-  url: http://whatis.techtarget.com/search/query?q=<query>
+  url: https://whatis.techtarget.com/search/query?q=<query>
   title: What is? - Technical glossary
   tags:
   - glossary
@@ -9294,7 +9294,7 @@ whatis 1:
   - arguments: umts
     description: search for a definition of UMTS
 whois 1:
-  url: http://whois.domaintools.com/<domain>
+  url: https://whois.domaintools.com/<domain>
   title: Whois (domaintools.com)
   tags:
   - domains
@@ -9415,7 +9415,7 @@ wordnet 1:
   - arguments: complicated
     description: look up senses of "complicated" in WordNet
 wpp 0:
-  url: http://wordpress.org/plugins/
+  url: https://wordpress.org/plugins/
   title: WordPress Plugin Directory
   tags:
   - blog
@@ -9497,7 +9497,7 @@ wsl 0:
   tags:
   - language
 wso 1:
-  url: http://www.wallstreet-online.de/suche/?suche=&q=<query>
+  url: https://www.wallstreet-online.de/suche/?suche=&q=<query>
   title: Wallstreet:Online Search
 wsp 0:
   url: https://weatherspark.com/
@@ -9732,7 +9732,7 @@ xu 1:
   - arguments: serchilo
     description: Go to user page of @serchilo
 y 1:
-  url: http://search.yahoo.com/search?p=<query>
+  url: https://search.yahoo.com/search?p=<query>
   title: Yahoo Web
   tags:
   - web-search
@@ -9768,7 +9768,7 @@ yandex 1:
   - arguments: berlin
     description: Search for "berlin"
 yatego 1:
-  url: http://www.yatego.com/index.php?cl=mallsearch&query=<query>
+  url: https://www.yatego.com/index.php?cl=mallsearch&query=<query>
   title: Yatego
   tags:
   - old
@@ -9791,7 +9791,7 @@ ycc 3:
   - arguments: usd,eur,1
     description: Convert 1 US Dollar into Euros
 ye 0:
-  url: http://www.yelp.com/
+  url: https://www.yelp.com/
   title: Yelp
   tags:
   - food
@@ -9808,7 +9808,7 @@ ye 1:
   - arguments: pizza
     description: Find pizza places in the city you were searching last on Yelp
 ye 2:
-  url: 'http://www.yelp.com/search?find_desc=<what>&find_loc=<where: {type: city}>'
+  url: 'https://www.yelp.com/search?find_desc=<what>&find_loc=<where: {type: city}>'
   title: Yelp
   tags:
   - food
@@ -9823,7 +9823,7 @@ yf 1:
   tags:
   - old
 yfa 1:
-  url: http://finance.yahoo.com/lookup?s=<company>
+  url: https://finance.yahoo.com/lookup?s=<company>
   title: 'Yahoo Finance: Get company abbreviation'
   tags:
   - old
@@ -9864,7 +9864,7 @@ yim 1:
   - arguments: berlin
     description: Search for "berlin"
 yl 2:
-  url: http://search.yahoo.com/search?fl=1&vl=lang_<language>&p=<query>
+  url: https://search.yahoo.com/search?fl=1&vl=lang_<language>&p=<query>
   title: Yahoo Web, only of language
   tags:
   - web-search
@@ -9887,7 +9887,7 @@ ymail 0:
   tags:
   - old
 yn 1:
-  url: http://news.search.yahoo.com/search/news?fr=sfp&ei=UTF-8&p=<query>&vl=lang_<$language>
+  url: https://news.search.yahoo.com/search/news?fr=sfp&ei=UTF-8&p=<query>&vl=lang_<$language>
   title: Yahoo News
   tags:
   - news
@@ -9980,12 +9980,12 @@ ytm 1:
   - arguments: anhedonia
     description: search Anhedonia music
 ytp 1:
-  url: http://www.youtube.com/results?search_type=search_playlists&uni=3&search_query=<query>
+  url: https://www.youtube.com/results?search_type=search_playlists&uni=3&search_query=<query>
   title: Youtube Playlists
   tags:
   - old
 ytt 1:
-  url: http://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=t
+  url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=t
   title: Youtube, today's new videos
   tags:
   - video
@@ -9994,7 +9994,7 @@ ytt 1:
   - arguments: obama
     description: Search for "obama"
 ytw 1:
-  url: http://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=w
+  url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=w
   title: Youtube, last week's new videos
   tags:
   - video
@@ -10003,7 +10003,7 @@ ytw 1:
   - arguments: cartoon
     description: Search for "cartoon"
 yv 1:
-  url: http://video.search.yahoo.com/search/video?p=<query>
+  url: https://video.search.yahoo.com/search/video?p=<query>
   title: Yahoo Video
   tags:
   - video
@@ -10012,7 +10012,7 @@ yv 1:
   - arguments: berlin
     description: Search for "berlin"
 z 1:
-  url: http://www.zalando.de/katalog/?q=<Produkt>
+  url: https://www.zalando.de/katalog/?q=<Produkt>
   title: Zalando
   tags:
   - old
@@ -10086,7 +10086,7 @@ zhr 1:
   tags:
   - old
 zn 0:
-  url: http://www.zoonar.de/?wid=1078
+  url: https://www.zoonar.de/?wid=1078
   title: Zoonar
   tags:
   - images

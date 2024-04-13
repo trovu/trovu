@@ -121,7 +121,7 @@ szn 0:
   - seznam
   - web-search
 szn 1:
-  url: http://search.seznam.cz/search.cgi?w=<query>
+  url: https://search.seznam.cz/search.cgi?w=<query>
   examples:
   - arguments: praha
     description: Hledej "praha"

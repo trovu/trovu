@@ -88,7 +88,7 @@ gh 0:
   tests:
   - expect: <title>Geizhals Preisvergleich Österreich</title>
 gh 1:
-  url: 'http://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
+  url: 'https://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
   include:
     key: gh 0
   examples:
@@ -587,7 +587,7 @@ rsc 0:
   tests:
   - expect: RS</title>
 rsc 1:
-  url: http://at.rs-online.com/web/c/?searchTerm=<Produkt>
+  url: https://at.rs-online.com/web/c/?searchTerm=<Produkt>
   include:
     key: rsc 0
   examples:

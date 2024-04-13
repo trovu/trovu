@@ -18,7 +18,7 @@ cia 1:
   tags:
   - cia
 cliff 0:
-  url: http://www.cliffsnotes.com/
+  url: https://www.cliffsnotes.com/
   title: Cliffsnotes.com
   tags:
   - literature
@@ -88,7 +88,7 @@ gfp 0:
   - news
   - politics
 last 1:
-  url: http://www.last.fm/search?setlang=en&q=<artist>
+  url: https://www.last.fm/search?setlang=en&q=<artist>
   title: Last.fm
   tags:
   - lastfm
@@ -97,7 +97,7 @@ last 1:
   - arguments: beatles
     description: Search for "beatles"
 mw 1:
-  url: http://www.merriam-webster.com/dictionary/<query>
+  url: https://www.merriam-webster.com/dictionary/<query>
   title: Merriam-Webster dictionary
   tags:
   - dictionary
@@ -106,7 +106,7 @@ mw 1:
   - arguments: asleep
     description: Look up the English word "asleep"
 mwt 1:
-  url: http://www.merriam-webster.com/thesaurus/<query>
+  url: https://www.merriam-webster.com/thesaurus/<query>
   title: Merriam-Webster theraurus
   tags:
   - dictionary

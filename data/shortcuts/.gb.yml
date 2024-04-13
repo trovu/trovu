@@ -1,5 +1,5 @@
 a 0:
-  url: http://www.amazon.co.uk/?_encoding=UTF8&camp=1634&creative=6738&linkCode=ur2&tag=serchilo02-21
+  url: https://www.amazon.co.uk/?_encoding=UTF8&camp=1634&creative=6738&linkCode=ur2&tag=serchilo02-21
   title: Amazon.co.uk Homepage
   tags:
   - amazon
@@ -7,7 +7,7 @@ a 0:
   - is-affiliate
   - shopping
 a 1:
-  url: 'http://www.amazon.co.uk/gp/search?ie=UTF8&camp=1634&creative=6738&index=aps&keywords=<query: {encoding: iso-8859-1}>&linkCode=ur2&tag=serchilo02-21'
+  url: 'https://www.amazon.co.uk/gp/search?ie=UTF8&camp=1634&creative=6738&index=aps&keywords=<query: {encoding: iso-8859-1}>&linkCode=ur2&tag=serchilo02-21'
   title: Amazon.co.uk
   tags:
   - amazon
@@ -87,7 +87,7 @@ tv 0:
   tags:
   - tv
 zal 1:
-  url: http://www.zalando.co.uk/catalog/?q=<product>
+  url: https://www.zalando.co.uk/catalog/?q=<product>
   title: Zalando.co.uk
   tags:
   - shopping

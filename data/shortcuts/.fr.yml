@@ -14,7 +14,7 @@
   - arguments: chaussures
     description: Cherche chaussures
 a 0:
-  url: http://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21
+  url: https://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21
   title: Amazon.fr Homepage
   tags:
   - amazon
@@ -22,7 +22,7 @@ a 0:
   - is-affiliate
   - shopping
 a 1:
-  url: 'http://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords=<query: {encoding: iso-8859-1}>&linkCode=ur2&tag=serchilo0e-21'
+  url: 'https://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords=<query: {encoding: iso-8859-1}>&linkCode=ur2&tag=serchilo0e-21'
   title: Amazon.fr
   tags:
   - amazon
@@ -112,7 +112,7 @@ soc 1:
   url: https://www.societe.com/cgi-bin/search?champs=<name>
   title: Societé Company Register
 zal 1:
-  url: http://www.zalando.fr/catalogue/?q=<produit>
+  url: https://www.zalando.fr/catalogue/?q=<produit>
   title: Zalando.fr
   tags:
   - shopping

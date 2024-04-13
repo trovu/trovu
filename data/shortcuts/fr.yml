@@ -23,7 +23,7 @@ lar 1:
       query: lrs <1>
     created: '2023-04-10'
 last 1:
-  url: http://www.last.fm/search?setlang=fr&q=<artist>
+  url: https://www.last.fm/search?setlang=fr&q=<artist>
   title: Last.fm
   tags:
   - lastfm
@@ -42,7 +42,7 @@ lit 1:
   - arguments: arbre
     description: Cherche "arbre" dans le dictionnaire Littré
 lrs 1:
-  url: http://www.larousse.fr/dictionnaires/francais/<mot>
+  url: https://www.larousse.fr/dictionnaires/francais/<mot>
   title: Larousse, Dictionnaires de français
   tags:
   - dictionary

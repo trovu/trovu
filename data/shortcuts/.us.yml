@@ -1,5 +1,5 @@
 a 0:
-  url: http://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20
+  url: https://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20
   title: Amazon.com Homepage
   tags:
   - amazon
@@ -114,7 +114,7 @@ sic 1:
   - arguments: '1231'
     description: Search descriptive information for SIC "1231"
 yp 2:
-  url: http://www.yellowpages.com/search?search_terms=<business name>&geo_location_terms=<city or zip>
+  url: https://www.yellowpages.com/search?search_terms=<business name>&geo_location_terms=<city or zip>
   title: Yellow Pages
   tags:
   - phone

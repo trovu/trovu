@@ -232,7 +232,7 @@ poststelle 1:
   tags:
   - post
 rsc 1:
-  url: http://dech.rs-online.com/web/c/?searchTerm=<Produkt>
+  url: https://dech.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Schweiz
   tags:
   - electronics
@@ -276,7 +276,7 @@ sbb 4:
   - arguments: Bern, Basel, 01.01.2020, 10:00
     description: Verbindung von Bern nach Basel am 01.01.2020 um 10:00 Uhr
 sbbt 4:
-  url: http://fahrplan.sbb.ch/bin/query.exe/dl?S=<Start>&Z=<Ziel>&T=<Zeit>&D=<Datum>&start=1
+  url: https://fahrplan.sbb.ch/bin/query.exe/dl?S=<Start>&Z=<Ziel>&T=<Zeit>&D=<Datum>&start=1
   title: SBB-Auskunft Textversion
   tags:
   - bahn
@@ -301,7 +301,7 @@ we 1:
   - arguments: berlin
     description: Search for "berlin"
 zal 1:
-  url: http://www.zalando.ch/katalog/?q=<Produkt>
+  url: https://www.zalando.ch/katalog/?q=<Produkt>
   title: Zalando.ch
   tags:
   - shopping

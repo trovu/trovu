@@ -63,7 +63,7 @@ awort 1:
       query: awf <1>
     created: '2023-01-10'
 base 1:
-  url: http://www.base-search.net/Search/Results?lookfor=<Suche>
+  url: https://www.base-search.net/Search/Results?lookfor=<Suche>
   title: Bielefeld Academic Search Engine
   tags:
   - academia
@@ -104,14 +104,14 @@ bla 1:
   - admin:change-keyword
   - games
 blb 0:
-  url: http://www.booklooker.de/app/sec/login.php
+  url: https://www.booklooker.de/app/sec/login.php
   title: Booklooker
   tags:
   - booklooker
   - books
   - shopping
 blb 1:
-  url: http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor=<Autor>
+  url: https://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor=<Autor>
   title: Booklooker
   tags:
   - booklooker
@@ -121,7 +121,7 @@ blb 1:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
 blb 2:
-  url: 'http://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor=<Autor: {encoding: iso-8859-1}>&titel=<Titel: {encoding: iso-8859-1}>'
+  url: 'https://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor=<Autor: {encoding: iso-8859-1}>&titel=<Titel: {encoding: iso-8859-1}>'
   title: Booklooker
   tags:
   - booklooker
@@ -140,7 +140,7 @@ bzl 1:
   - arguments: goethe
     description: Search Bookzilla for "goethe"
 cb 0:
-  url: http://www.computerbase.de/
+  url: https://www.computerbase.de/
   title: Computerbase
   tags:
   - computer-science
@@ -203,7 +203,7 @@ ck 0:
   - cooking
   - recipes
 ck 1:
-  url: http://www.chefkoch.de/rs/s0/<Suche>/Rezepte.html
+  url: https://www.chefkoch.de/rs/s0/<Suche>/Rezepte.html
   title: Chefkoch
   tags:
   - cooking
@@ -599,13 +599,13 @@ hpreis 1:
       query: hpv <1>
     created: '2023-12-15'
 hpv 0:
-  url: http://www.heise.de/preisvergleich/
+  url: https://www.heise.de/preisvergleich/
   title: Heise Preisvergleich
   tags:
   - heise
   - shopping
 hpv 1:
-  url: http://www.heise.de/preisvergleich/?fs=<Produkt>
+  url: https://www.heise.de/preisvergleich/?fs=<Produkt>
   examples:
   - arguments: computer
     description: Vergleiche Preise für "computer"
@@ -715,7 +715,7 @@ lad 1:
       query: dcc.la <1>
     created: '2023-04-10'
 last 1:
-  url: http://www.last.fm/search?setlang=de&q=<artist>
+  url: https://www.last.fm/search?setlang=de&q=<artist>
   title: Last.fm
   tags:
   - lastfm
@@ -762,7 +762,7 @@ morgenpost 1:
   - arguments: berlin
     description: Search Berliner Morgenpost Archiv for "berlin"
 mp 1:
-  url: http://www.moviepilot.de/suche?q=<Suche>
+  url: https://www.moviepilot.de/suche?q=<Suche>
   title: Moviepilot
   tags:
   - film
@@ -775,7 +775,7 @@ nds 0:
   - blog
   - politik
 nds 1:
-  url: http://www.nachdenkseiten.de/?s=<Begriff>&Submit.x=0&Submit.y=0
+  url: https://www.nachdenkseiten.de/?s=<Begriff>&Submit.x=0&Submit.y=0
   title: Nachdenkseiten
   tags:
   - blog
@@ -807,7 +807,7 @@ ntv 1:
   - arguments: berlin
     description: Search n-tv.de for "berlin"
 nzz 1:
-  url: http://www.nzz.ch/suche?form%5Bq%5D=<Suchbegriff>
+  url: https://www.nzz.ch/suche?form%5Bq%5D=<Suchbegriff>
   title: NZZ Neue Züricher Zeitung, Archiv
   tags:
   - news
@@ -843,7 +843,7 @@ osmf 0:
   - maps
   - osm
 ot 0:
-  url: http://www.openthesaurus.de/
+  url: https://www.openthesaurus.de/
   title: OpenThesaurus
   tags:
   - language
@@ -926,7 +926,7 @@ reim 1:
   - arguments: auen
     description: Suche Reime auf "auen"
 rezeptefuchs 0:
-  url: http://www.rezeptefuchs.de/
+  url: https://www.rezeptefuchs.de/
   title: Rezeptefuchs Startseite
   tags:
   - cooking
@@ -1057,7 +1057,7 @@ shg 1:
   - arguments: doctype
     description: description about doctype declaration
 spon 0:
-  url: http://www.spiegel.de/
+  url: https://www.spiegel.de/
   title: Spiegel Online
   tags:
   - news
@@ -1072,12 +1072,12 @@ spon 1:
   - arguments: berlin
     description: Suche nach "berlin"
 stupi 0:
-  url: http://www.stupidedia.org/
+  url: https://www.stupidedia.org/
   title: Stupipedia Hauptseite
   tags:
   - wiki
 stupi 1:
-  url: http://www.stupidedia.org/stupi/Special:Search?go=Article&search=<article>
+  url: https://www.stupidedia.org/stupi/Special:Search?go=Article&search=<article>
   title: Stupipedia Artikelsuche
   tags:
   - wiki
@@ -1115,7 +1115,7 @@ swb 1:
   - arguments: Gschäfd
     description: Der Ort, wo man schafft.
 syn 1:
-  url: http://synonyme.woxikon.de/synonyme/<wort>.php
+  url: https://synonyme.woxikon.de/synonyme/<wort>.php
   title: Synonyme
   tags:
   - language
@@ -1130,7 +1130,7 @@ sz 0:
   - news
   - zeitung
 sz 1:
-  url: http://www.sueddeutsche.de/news?search=<Suche>
+  url: https://www.sueddeutsche.de/news?search=<Suche>
   title: Süddeutsche Zeitung
   tags:
   - news
@@ -1297,7 +1297,7 @@ zeit 1:
   - arguments: berlin
     description: Suche im Archiv von Zeit Online nach Berlin
 zv 1:
-  url: http://www.zwangsversteigerung.de/suche?q=<KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID>&ergebnisZeigen=ja
+  url: https://www.zwangsversteigerung.de/suche?q=<KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID>&ergebnisZeigen=ja
   title: Zwangsversteigerung
   tags:
   - zwangsversteigerung
