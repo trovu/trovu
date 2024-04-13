@@ -442,17 +442,15 @@ fmb 0:
   - description: Gehe zur Startseite
 fmb 1:
   url: https://www.findmybook.de/results/?title=<Title>
-  title: Findmybook.de
-  tags:
-  - books
+  include:
+    key: fmb 0
   examples:
   - arguments: elementarteilchen
     description: Suche nach "Elementarteilchen"
 fmb 2:
   url: https://www.findmybook.de/results/?title=<Title>&author=<Autor>&type=all
-  title: Findmybook.de
-  tags:
-  - books
+  include:
+    key: fmb 0
   examples:
   - arguments: elementarteilchen, houellebecq
     description: Suche nach "Elementarteilchen" von Houellebecq
