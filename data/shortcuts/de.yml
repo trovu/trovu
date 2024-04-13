@@ -433,6 +433,21 @@ fefescss 1:
   examples:
   - arguments: manpage
     description: Fefes Blog mit dem CSS-Style manpage.css
+fmb 0:
+  url: https://www.findmybook.de/
+  title: Findmybook.de
+  tags:
+  - books
+  examples:
+  - description: Gehe zur Startseite
+fmb 1:
+  url: https://www.findmybook.de/results/?title=<Title>
+  title: Findmybook.de
+  tags:
+  - books
+  examples:
+  - arguments: elementarteilchen
+    description: Suche nach "Elementarteilchen"
 fmb 2:
   url: https://www.findmybook.de/results/?title=<Title>&author=<Autor>&type=all
   title: Findmybook.de
