@@ -32,7 +32,7 @@ last 1:
   - arguments: beatles
     description: Search for "beatles"
 lit 1:
-  url: http://www.littre.org/recherche?_hasdata=&f2=<mot>
+  url: https://www.littre.org/definition/<mot>
   title: Littré
   tags:
   - dictionary
@@ -69,7 +69,7 @@ marmiton 1:
   - arguments: pizza
     description: Recherche des recettes de pizza
 syn 1:
-  url: http://dico.isc.cnrs.fr/dico/fr/chercher?r=<mot>&msend=Envoyer
+  url: https://www.atlas-semantiques.eu/Resultats_as.html?d=FR&l=FR&r=<mot>&m=1
   title: Synonyme
   tags:
   - language
