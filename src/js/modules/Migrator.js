@@ -34,8 +34,13 @@ export default class Migrator {
         if (shortcut.url && shortcut.url.startsWith('http:')) {
           console.log(`Migrating ${namespace}.${key}`);
           const httpUrl = shortcut.url;
-          const processedHttpUrl = UrlProcessor.replaceArguments(
-            httpUrl,
+          let processedHttpUrl = shortcut.url;
+          processedHttpUrl = UrlProcessor.replaceVariables(processedHttpUrl, {
+            language: 'en',
+            country: 'us',
+          });
+          processedHttpUrl = UrlProcessor.replaceArguments(
+            processedHttpUrl,
             args,
             {
               language: 'en',
