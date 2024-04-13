@@ -46,6 +46,25 @@ export default class Migrator {
           // console.log(originalUrl);
           const processedHttpsUrl = processedHttpUrl.replace('http:', 'https:');
 
+          // First check if the http URL redirects to the https URL.
+          try {
+            const httpResponse = await fetch(processedHttpUrl);
+            if (
+              httpResponse.redirected &&
+              httpResponse.url == processedHttpsUrl
+            ) {
+              shortcut.url = httpUrl.replace('http:', 'https:');
+              console.log('==', key);
+              continue;
+            } else {
+              console.log('!=', key, httpResponse.url, processedHttpsUrl);
+            }
+            console.log(httpResponse.redirected, httpResponse.url);
+          } catch (error) {
+            console.error(`Error migrating ${key}:`, error);
+          }
+          continue;
+
           try {
             const httpResponse = await fetch(processedHttpUrl);
             const httpText = await httpResponse.text();
