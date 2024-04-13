@@ -27,7 +27,7 @@ wsl 1:
   - arguments: стул
     description: Search for "стул"
 ya 1:
-  url: http://yandex.ru/yandsearch?text=<query>
+  url: https://yandex.ru/yandsearch?text=<query>
   title: Yandex Web, Russian
   tags:
   - web-search
