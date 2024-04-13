@@ -23,21 +23,33 @@ gyl 1:
   examples:
   - arguments: kaffe
     description: Søg efter "kaffe"
-ods 1:
-  url: https://ordnet.dk/ods/ordbog?query=<ord>
+ods 0:
+  url: https://ordnet.dk/
   title: Ordbog over det danske sprog
   tags:
   - danish
   - language
   examples:
+  - description: Gå til hovedsiden
+ods 1:
+  url: https://ordnet.dk/ods/ordbog?query=<ord>
+  include:
+    key: ods 0
+  examples:
   - arguments: skrive
     description: Søg efter "skrive"
-spr 1:
-  url: https://sproget.dk/lookup?SearchableText=<ord>
+spr 0:
+  url: https://sproget.dk/
   title: Sproget.dk
   tags:
   - danish
   - language
+  examples:
+  - description: Gå til hovedsiden
+spr 1:
+  url: https://sproget.dk/lookup?SearchableText=<ord>
+  include:
+    key: spr 0
   examples:
   - arguments: bog
     description: Søg efter "bog"
