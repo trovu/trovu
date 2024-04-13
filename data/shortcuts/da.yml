@@ -31,7 +31,7 @@ ods 1:
   - language
   examples:
   - arguments: skrive
-    description: artikel om "skrive"
+    description: Søg efter "skrive"
 spr 1:
   url: https://sproget.dk/lookup?SearchableText=<ord>
   title: Sproget.dk
@@ -40,4 +40,4 @@ spr 1:
   - language
   examples:
   - arguments: bog
-    description: Search for "bog"
+    description: Søg efter "bog"
