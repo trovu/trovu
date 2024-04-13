@@ -1,14 +1,3 @@
-dbp 1:
-  url: http://nl.dbpedia.org/page/<title>
-  title: DBpedia (Dutch)
-  tags:
-  - database
-  - knowledge
-  - knowledgebase
-  - semanticweb
-  examples:
-  - arguments: Tunisia
-    description: Open DBpedia page about Tunisia
 enc 0:
   url: https://www.encyclo.nl/
   title: Encyclo Online Encyclopedie
