@@ -655,7 +655,7 @@ hwho 1:
   - arguments: '1'
     description: Search for "1"
 ifun 1:
-  url: http://www.ifun.de/suche/<Suche>
+  url: https://www.ifun.de/suche/<Suche>
   title: ifun.de
   tags:
   - apple
@@ -707,15 +707,37 @@ kicker 1:
   - arguments: berlin
     description: Search for "berlin"
 kw 1:
-  url: https://www.kwdb.ch/searchanswer.asp?search=<Suche>&sourceid=serchilo
-  title: Kreuzworträtsel-Datenbank
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: kwdb <1>
+    created: '2023-04-13'
 kw 2:
-  url: http://www.kwdb.ch/searchanswer.asp?search=<Suche>&BScount=<Buchstabenanzahl>&sourceid=serchilo
+  deprecated:
+    alternative:
+      query: kwdb <1>, <2>
+    created: '2023-04-13'
+kwdb 0:
+  url: https://www.kwdb.ch/
   title: Kreuzworträtsel-Datenbank
   tags:
-  - old
+  - crosswords
+  - games
+  examples:
+  - description: Gehe zur Startseite
+kwdb 1:
+  url: https://www.kwdb.ch/search?q=<Suche>&sourceid=serchilo
+  include:
+    key: kw 0
+  examples:
+  - arguments: baumart
+    description: Suche nach "baumart"
+kwdb 2:
+  url: https://www.kwdb.ch/search?q=<Suche>&lc=<Buchstabenanzahl>
+  include:
+    key: kw 0
+  examples:
+  - arguments: baumart, 4
+    description: Suche nach "baumart" mit 4 Buchstaben
 lad 1:
   deprecated:
     alternative:
