@@ -1126,23 +1126,17 @@ svd 1:
 swb 0:
   url: http://www.schwaebisches-woerterbuch.de/
   title: Schwäbisches Wörterbuch
-  description: Schwäbischen Wörterbuch
   tags:
   - Swabian
   - dialect
   - dictionary
 swb 1:
   url: 'http://www.schwaebisches-woerterbuch.de/default.asp?q=<Suchwort: {encoding: iso-8859-1}>'
-  title: Schwäbisches Wörterbuch
-  description: Suche im schwäbischen Wörterbuch
-  tags:
-  - German
-  - Swabian
-  - dialect
-  - dictionary
+  include:
+    key: swb 0
   examples:
   - arguments: Gschäfd
-    description: Der Ort, wo man schafft.
+    description: Suche nach "Gschäfd"
 syn 1:
   url: https://synonyme.woxikon.de/synonyme/<wort>.php
   title: Synonyme
