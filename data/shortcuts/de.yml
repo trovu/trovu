@@ -1337,12 +1337,18 @@ zv 1:
   - arguments: gi
     description: Suche nach Zwangsversteigerungen in Gießen
 zvab 0:
-  url: https://www.zvab.com
-  title: Zentrales Verzeichnis Antiquarischer Bücher (ZVAB)
-  tags:
-  - books
-zvab 1:
-  url: http://www.zvab.com/basicSearch.do?anyWords=<Suche>&author=&title=&lastXDays=-1&itemsPerPage=10
+  url: https://www.zvab.com/
   title: Zentrales Verzeichnis Antiquarischer Bücher
   tags:
+  - antiquariat
   - books
+  - zvab
+  examples:
+  - description: Gehe zur Startseite
+zvab 1:
+  url: https://www.zvab.com/servlet/SearchResults?cm_sp=red-_-leg-_-zvab&recentlyadded=all&kn=<Suche>&ds=10
+  include:
+    key: zvab 0
+  examples:
+  - arguments: goethe
+    description: Suche nach Büchern von Goethe
