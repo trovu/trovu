@@ -32,7 +32,7 @@ export default class Migrator {
         let shortcut = data.shortcuts[namespace][key];
         // If the URL starts with http, fetch its contents, migrate to https, fetch again, and compare results
         if (shortcut.url && shortcut.url.startsWith('http:')) {
-          console.log(`Migrating ${namespace}.${key}`);
+          console.log(`${namespace}.${key}`);
           const httpUrl = shortcut.url;
           let processedHttpUrl = shortcut.url;
           processedHttpUrl = UrlProcessor.replaceVariables(processedHttpUrl, {
@@ -50,6 +50,11 @@ export default class Migrator {
           );
           // console.log(originalUrl);
           const processedHttpsUrl = processedHttpUrl.replace('http:', 'https:');
+          console.log('  🔵 ', processedHttpUrl);
+          console.log('  🟨 ', processedHttpsUrl);
+          const domain = processedHttpUrl.split('/')[2];
+          console.log('  🔺 ', domain);
+          continue;
 
           // First check if the http URL redirects to the https URL.
           try {
