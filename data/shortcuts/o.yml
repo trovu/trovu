@@ -7076,14 +7076,13 @@ pz 1:
   tags:
   - old
 qr 1:
-  url: https://chart.apis.google.com/chart?cht=qr&chs=350x350&chl=<content>
-  title: QR Kaywa URL Barcode
+  url: https://quickchart.io/qr?size=350&text=<content>
+  title: QR Code
   tags:
-  - google
   - qr
   examples:
-  - arguments: http://www.serchilo.net
-    description: Create QR code for http://www.serchilo.net
+  - arguments: https://trovu.net
+    description: Create QR code for https://trovu.net
 qrdecoder 0:
   url: https://webqr.com
   title: QR-Decoder in the browser
