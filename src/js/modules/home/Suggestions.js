@@ -331,7 +331,6 @@ export default class Suggestions {
     const urlLink = document.createElement('a');
     urlLink.href = suggestion.url;
     urlLink.textContent = `${suggestion.url}`;
-    urlLink.target = '_blank';
     urlDiv.appendChild(urlLink);
     return urlDiv;
   }
