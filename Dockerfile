@@ -14,7 +14,7 @@ RUN npm clean-install
 RUN npm run build
 
 # Expose port 3000 for the service
-EXPOSE 3000
+EXPOSE 8081
 
 # Command to serve the app
 CMD ["npm", "run", "serve"]
