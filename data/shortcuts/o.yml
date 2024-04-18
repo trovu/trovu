@@ -5333,13 +5333,19 @@ ky 1:
   include:
   - key: ky 1
     namespace: pka
-kym 1:
-  url: https://knowyourmeme.com/search?q=<query>
+kym 0:
+  url: https://knowyourmeme.com/
   title: Know Your Meme
   tags:
   - fun
   - internet-culture
   - meme
+  examples:
+  - description: Go to homepage
+kym 1:
+  include:
+    key: kym 0
+  url: https://knowyourmeme.com/search?q=<query>
   examples:
   - arguments: x y is x
     description: search for the "X Y is X" meme
