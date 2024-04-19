@@ -2239,10 +2239,10 @@ el 1:
   - key: el 1
     namespace: pka
 emy 0:
-  url: http://signin.ebay.com
-  title: Ebay.de My eBay
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: e
+    created: '2024-04-19'
 en 0:
   include:
   - key: en 0
