@@ -4556,11 +4556,6 @@ imdb 1:
   examples:
   - arguments: batman
     description: Search International Movie Database for "batman"
-imeem 1:
-  url: http://www.imeem.com/tag/?q=<query>
-  title: Imeem
-  tags:
-  - old
 imfdb 1:
   url: http://www.imfdb.org/wiki/<query>
   title: Imfdb
@@ -4574,11 +4569,6 @@ imslp 0:
 inf 1:
   url: http://info.com/searchw?qkw=<query>
   title: Info.com
-infrarot 1:
-  url: http://www.infrarot.de/search?words=<query>&suggested=&x=0&y=0
-  title: InfraRot mail order
-  tags:
-  - old
 ink 1:
   url: https://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search=<feature>&go=Go
   title: Inkscape Wiki
@@ -4594,16 +4584,6 @@ integral 1:
   examples:
   - arguments: x^2
     description: Calculate the integral of x^2
-io 1:
-  url: http://iomash.com/?q=<keyword>
-  title: Uimash website forwarding
-  tags:
-  - old
-iomash 0:
-  url: http://iomash.com/
-  title: Uimash website forwarding
-  tags:
-  - old
 ip 0:
   url: http://www.heise.de/ip/
   title: Show my external IP, via heise.de
