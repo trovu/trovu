@@ -1007,11 +1007,6 @@ ccc-tv 0:
 ccctv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
-ce 1:
-  url: http://www.chineseetymology.org/CharacterEtymology.aspx?characterInput=<character>
-  title: Chinese Etymology
-  tags:
-  - old
 cf 0:
   url: https://www.clipfish.de/
   title: Clipfish Homepage
@@ -1047,16 +1042,6 @@ cg 1:
   tests:
   - arguments: foobar
     expect: q=foo
-chegged 1:
-  url: http://slotboxed.com/cheggit.php?getresults=Search&searchtype=all&keywords=<title>
-  title: Cheggit
-  tags:
-  - old
-chewbone 1:
-  url: http://chewbone.blogspot.com/2008/03/mp3-blog-search-results.html?cx=011120813593335739513%3A8exs4fljtn4&cof=FORID%3A11&q=<query>
-  title: Chewbone Mp3 Blog Search
-  tags:
-  - old
 chip 1:
   url: https://suche.chip.de/?q=<query>
   title: Chip.de Suche
@@ -1143,16 +1128,6 @@ cma 0:
   tags:
   - critical-maps
   - critical-mass
-co 1:
-  url: http://collectr.net/=<query>
-  title: Collectr
-  tags:
-  - old
-coda 1:
-  url: http://coda.fm/albums/search?query=<artist or album>
-  title: Coda.fm
-  tags:
-  - old
 codej 1:
   url: https://searchcode.com/?q=<code>&lan=23
   title: Code Search for Java
@@ -1204,21 +1179,6 @@ copu 1:
   title: Google Custom Search "computational linguistics publications"
   tags:
   - old
-corbis 0:
-  url: http://www.corbisimages.com
-  title: Corbis
-  tags:
-  - images
-  - stock-agency
-corbis 1:
-  url: http://www.corbisimages.com/Search#q=<query>
-  title: Corbis
-  tags:
-  - images
-  - stock-agency
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
 correos 1:
   url: https://www.correos.es/comun/localizador/track.asp?numero=<codigo>
   title: Correos Localizador de Envíos
