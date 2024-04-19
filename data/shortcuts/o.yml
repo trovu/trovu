@@ -4272,10 +4272,8 @@ ha 1:
   - key: ha 1
     namespace: pka
 hbr 1:
-  url: http://hbr.org/search/<query>
+  url: https://hbr.org/search?term=<query>
   title: Harvard Business Research
-  tags:
-  - old
 hdb 1:
   url: https://hackage.haskell.org/cgi-bin/hackage-scripts/package/<package name>
   title: Haskell package page
