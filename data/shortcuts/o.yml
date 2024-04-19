@@ -624,13 +624,13 @@ az 1:
   - key: az 1
     namespace: pka
 b 0:
-  url: http://www.bing.com
+  url: https://www.bing.com
   title: Bing
   tags:
   - bing
   - web-search
 b 1:
-  url: http://www.bing.com/search?q=<query>
+  url: https://www.bing.com/search?q=<query>
   title: Bing
   tags:
   - bing
@@ -639,7 +639,7 @@ b 1:
   - arguments: berlin
     description: Search for "berlin"
 ba 1:
-  url: http://www.baidu.com/s?wd=<query>
+  url: https://www.baidu.com/s?wd=<query>
   title: Baidu
   tags:
   - baidu
@@ -648,7 +648,7 @@ ba 1:
   - arguments: berlin
     description: Search for berlin
 bd 1:
-  url: http://www.browserdefender.com/site/<url>/
+  url: https://www.browserdefender.com/site/<url>/
   title: Browser Defender
   tags:
   - malware
@@ -699,7 +699,7 @@ bhf 1:
   url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query=<Bahnhof>
   title: Bahnhof
 bi 1:
-  url: http://www.bing.com/images/?q=<image-query>
+  url: https://www.bing.com/images/?q=<image-query>
   title: Bing Images
   tags:
   - bing
@@ -714,7 +714,7 @@ bible 0:
   - bible
   - christianity
 bible 1:
-  url: https://www.bibleserver.com/search/<query>
+  url: https://www.bibleserver.com/search/ESV/<query>
   title: Bibleserver.com
   tags:
   - bible
@@ -733,7 +733,7 @@ bible 2:
   - arguments: lut, fleisch
     description: Search for "fleisch" in Luther translation
 biblec 2:
-  url: http://www.bibleserver.com/text/<translation>/<chapter>
+  url: https://www.bibleserver.com/text/<translation>/<chapter>
   title: Bibleserver.com, go to chapter
   tags:
   - bibel
@@ -743,7 +743,7 @@ biblec 2:
   - arguments: lut, philipper
     description: Open Philipper chapter of Luther translation
 bibso 0:
-  url: http://www.bibsonomy.org
+  url: https://www.bibsonomy.org
   title: Bibsonomy
   tags:
   - bibsonomy
@@ -760,7 +760,7 @@ bibso 1:
   - arguments: google
     description: Search for bookmarks and publications about Google
 bibso+ 1:
-  url: http://www.bibsonomy.org/editBookmark?url=<url>
+  url: https://www.bibsonomy.org/editBookmark?url=<url>
   title: Bibsonomy, add Bookmark
   tags:
   - bibsonomy
@@ -770,7 +770,7 @@ bibso+ 1:
   - arguments: http://www.serchilo.net/
     description: Add http://www.serchilo.net/ to Bibsonomy
 bins 1:
-  url: http://binsearch.info/?max=100&adv_age=1100&server=&q=<query>
+  url: https://binsearch.info/?max=100&adv_age=1100&server=&q=<query>
   title: Binsearch.info
   tags:
   - newsgroups
@@ -823,7 +823,7 @@ bkg 3:
   - key: bkg 0
   showOnHome: 550
 bm 1:
-  url: http://www.bing.com/maps/?q=<map-query>
+  url: https://www.bing.com/maps/?q=<map-query>
   title: Bing Maps
   tags:
   - bing
@@ -952,7 +952,7 @@ btd 1:
   - arguments: ubuntu
     expect: <title>ubuntu
 bv 1:
-  url: http://www.bing.com/videos/?q=<video-query>
+  url: https://www.bing.com/videos/?q=<video-query>
   title: Bing Videos
   tags:
   - bing
