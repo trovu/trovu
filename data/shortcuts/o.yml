@@ -2757,7 +2757,7 @@ ff 0:
   tags:
   - old
 ff 1:
-  url: http://www.google.com/search?hl=de&q=<query>%20site%3Afileformat.info&ie=utf-8
+  url: https://www.google.com/search?hl=de&q=<query>%20site%3Afileformat.info&ie=utf-8
   title: Search FileFormat.Info with Google
   tags:
   - old
@@ -2983,7 +2983,7 @@ fo 1:
   - key: fo 1
     namespace: pka
 fos 0:
-  url: http://www.fotosearch.de/
+  url: https://www.fotosearch.de/
   title: Fotosearch
   tags:
   - images
@@ -3075,7 +3075,7 @@ freedb 1:
   tags:
   - old
 freenode 1:
-  url: http://irc.netsplit.de/channels/?net=freenode&chat=<query>
+  url: https://irc.netsplit.de/channels/?net=freenode&chat=<query>
   title: Freenode IRC channels
   tags:
   - channels
@@ -3131,7 +3131,7 @@ fs 1:
   - arguments: Nimbus Sans
     description: Common font that looks exactly like Helvetica
 fsc 1:
-  url: http://www.google.com/search?q=<query>&sitesearch=fscklog.com
+  url: https://www.google.com/search?q=<query>&sitesearch=fscklog.com
   title: Fscklog
   tags:
   - old
