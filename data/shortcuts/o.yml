@@ -4905,11 +4905,6 @@ ka 1:
     namespace: bab
   - key: ka 1
     namespace: pka
-keepvid 1:
-  url: http://keepvid.com/?url=<url>&site=aa
-  title: Keepvid
-  tags:
-  - old
 keno 0:
   url: https://www.kenozahlen.de/
   title: Kenozahlen
@@ -4980,11 +4975,6 @@ ko 1:
     namespace: rvs
   - key: ko 1
     namespace: pka
-koders 1:
-  url: http://www.koders.com/?s=<query>&la=*&li=*
-  title: Koders
-  tags:
-  - old
 kong 1:
   url: http://www.kongregate.com/search?q=<query>
   title: Kongregate
