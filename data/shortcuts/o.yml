@@ -382,7 +382,7 @@ allmusic 1:
   - arguments: madonna
     description: Suche nach "madonna"
 alp 1:
-  url: http://archlinux.org/packages/search/?repo=all&category=all&q=<package>&lastupdate=&limit=50
+  url: https://archlinux.org/packages/?q=<package>
   title: Arch Linux Package Search
   tags:
   - arch
