@@ -976,12 +976,12 @@ ca 1:
   - key: ca 1
     namespace: pka
 cad 0:
-  url: http://cad-comic.com/cad
+  url: https://cad-comic.com/
   title: Current Ctrl-Alt-Del-Comic
   tags:
   - old
 cadsilly 0:
-  url: http://cad-comic.com/sillies
+  url: https://cad-comic.com/sillies
   title: Current Ctrl-Alt-Del-Silly
   tags:
   - old
@@ -997,7 +997,7 @@ cc 1:
   tags:
   - old
 ccc 1:
-  url: http://<query>.ccc.de
+  url: https://<query>.ccc.de
   title: Chaos Computer Club
   tags:
   - old
@@ -1053,7 +1053,7 @@ chipfind 1:
   tags:
   - old
 chords 1:
-  url: http://www.ultimate-guitar.com/search.php?value=<band or song>&search_type=title
+  url: https://www.ultimate-guitar.com/search.php?value=<band or song>&search_type=title
   title: Ultimate-guitar search for chords/tabs etc.
   tags:
   - old
@@ -1136,12 +1136,12 @@ codej 1:
   - programming
   - programming-language
 codex 1:
-  url: http://wordpress.org/search/<query>
+  url: https://wordpress.org/search/<query>
   title: Wordpress Codex Search
   tags:
   - old
 comic 1:
-  url: http://www.comicvine.com/search/?q=<query>
+  url: https://www.comicvine.com/search/?q=<query>
   title: Comic Vince
   tags:
   - old
@@ -1153,7 +1153,7 @@ commons 0:
   - wikimedia
   - wikipedia
 commons 1:
-  url: http://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
+  url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
   title: Wikimedia Commons
   tags:
   - commons
@@ -1175,7 +1175,7 @@ conj 1:
   - arguments: blasen
     description: look up inflected forms of the German verb "blasen"
 copu 1:
-  url: http://www.google.com/cse?cx=000302137693213122178%3Aycoqke386yy&ie=UTF-8&q=<query>&sa=Suche
+  url: https://www.google.com/cse?cx=000302137693213122178%3Aycoqke386yy&ie=UTF-8&q=<query>&sa=Suche
   title: Google Custom Search "computational linguistics publications"
   tags:
   - old
@@ -1370,7 +1370,7 @@ csf 1:
   url: https://www.couchsurfing.com/people/<query>
   title: Couchsurfing User Search
 cul 1:
-  url: http://www.citeulike.org/search/all?q=<query>
+  url: https://www.citeulike.org/search/all?q=<query>
   title: CiteULike Search
   tags:
   - science
