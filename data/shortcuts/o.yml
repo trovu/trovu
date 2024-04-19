@@ -3219,11 +3219,6 @@ ga 1:
     namespace: irs
   - key: ga 1
     namespace: pka
-gameserver 1:
-  url: http://www.game-monitor.com/search.php?search=<query>&type=server&location=all&game=all&x=0&y=0&num=30
-  title: Spiel Server Suchen game-monitor.com
-  tags:
-  - old
 gamespot 1:
   url: https://www.gamespot.com/search/?i=&q=<query>
   title: Gamespot
@@ -3238,11 +3233,6 @@ gan 1:
   examples:
   - arguments: apps
     description: Search for Android apps
-gat 1:
-  url: http://www.google.com/archivesearch?q=<query>&sa=N&lnav=m&scoring=t&ie=UTF-8&oe=UTF-8
-  title: Google News Archive Search - Timeline
-  tags:
-  - old
 gbooks 0:
   url: https://books.google.com/
   title: Google Books
@@ -3321,11 +3311,6 @@ gco 1:
   examples:
   - arguments: Thomas
     description: look up people called Thomas on your Google Contacts
-gcode 1:
-  url: http://code.google.com/p/<name>
-  title: Google Code
-  tags:
-  - old
 gd 0:
   include:
   - key: gd 0
@@ -3449,11 +3434,6 @@ gede 1:
   title: Google SSL
   tags:
   - old
-gedu 1:
-  url: http://www.google.com/search?hl=en&q=<query> site:edu-net.net
-  title: Edu-net.net
-  tags:
-  - old
 gem 1:
   url: https://rubygems.org/search?utf8=✓&query=<query>
   title: Rubygems Search
@@ -3494,11 +3474,6 @@ getty 1:
   examples:
   - arguments: christmas
     description: search photos about christmas
-gex 1:
-  url: http://www.google.de/#hl=de&safe=off&q=<query>+-preisvergleich+-ebay+-shopping
-  title: Google Excluded
-  tags:
-  - old
 gf 2:
   url: https://www.google.com/search?hl=<$language>&q=filetype%3A<filetype>%20<query>&ie=utf-8
   title: Google Web, only of filetype
@@ -3508,14 +3483,6 @@ gf 2:
   examples:
   - arguments: pdf, berlin
     description: search PDF-files for "berlin"
-gfight 2:
-  url: http://googlefight.com/index.php?word1=<word1>&word2=<word2>
-  title: Google Fight
-  tags:
-  - google
-  examples:
-  - arguments: foo, bar
-    description: Which one has more Google hits?
 gfin 0:
   url: http://finance.google.com/
   title: Google Finance
@@ -3626,11 +3593,6 @@ gg 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
-ggmsg 1:
-  url: http://groups.google.de/groups?hl=<$language>&selm=<query>
-  title: Google Groups
-  tags:
-  - old
 gh 0:
   url: https://geizhals.eu/
   title: Geizhals EU Hauptseite
@@ -3722,16 +3684,6 @@ gl 1:
 glist 1:
   url: http://google.com/search?hl=<$language>&q=<query>+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Listing
-glopd 0:
-  url: http://www.glottopedia.org
-  title: Glottopedia
-  tags:
-  - old
-glopd 1:
-  url: http://www.glottopedia.org/index.php/Special:Search?search=<query>&go=Go
-  title: Glottopedia
-  tags:
-  - old
 gm 0:
   url: https://www.google.com/maps?hl=<$language>
   title: Google Maps Homepage
@@ -3826,24 +3778,6 @@ gmob 1:
   title: Google Mobile Search
   tags:
   - old
-gmov 1:
-  url: http://www.google.com/movies?hl=<$language>&near=<city>
-  title: Google Movies
-  tags:
-  - google
-  - movies
-  examples:
-  - arguments: new york
-    description: Show movies running in New York cinemas
-gmov 2:
-  url: http://www.google.com/movies?hl=<$language>&near=<city>&q=<movie>
-  title: Google Movies
-  tags:
-  - google
-  - movies
-  examples:
-  - arguments: new york, love
-    description: Show movies about "love" running in New York cinemas
 gmp3 1:
   url: http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(mp3|wma|ogg)+%2B%22<query>%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
   title: Google MP3 search
@@ -3900,11 +3834,6 @@ gnudb 1:
   examples:
   - arguments: beatles
     description: Search for record of "The Beatles"
-go 1:
-  url: http://www.google.com/cse?cx=003538345765652431974%3A5nbobem3igq&ie=UTF-8&q=<query>&siteurl=www.google.com%2Fcse%2Fhome%3Fcx%3D003538345765652431974%253A5nbobem3igq&ref=go-lang.cat-v.org%2Fgo-search&ss=6085j16411711j19&oq=string+comparison&gs_l=partner.3...8806.10874.0.11103.17.15.0.0.0.0.210.1598.6j8j1.15.0.gsnos%2Cn%3D13..0.0.6084j16418432j19..1ac.HmuDMInChKQ#gsc.tab=0&gsc.q=<query>&gsc.page=1
-  title: Go Language Resources Search Engine
-  tags:
-  - old
 gobug 0:
   url: https://bugs.gentoo.org/query.cgi?format=specific
   title: gentoo bugs
@@ -4103,11 +4032,6 @@ grnd 1:
   tests:
   - arguments: berlin
     expect: Find Your Story</title>
-groo 1:
-  url: http://www.google.com/custom?cx=010507483283387009910%3Aey52vjxjimi&sa=Search&q=<query>&oldsa=search%20groovy&cof=GFNT%3A%23666666%3BLH%3A100%3BCX%3ASearchGroovy%252Eorg%3BDIV%3A%23cccccc%3BFORID%3A0%3BS%3Ahttp%3A%2F%2Fsearchgroovy%2Eorg%3BL%3Ahttp%3A%2F%2Fmedia%2Exircles%2Ecodehaus%2Eorg%2F_projects%2Fgroovy%2F_logos%2Fmedium%2Epng%3BLP%3A1%3BAH%3Aleft&hl=<$language>&client=pub-5106641147175425#24104980237417428656
-  title: Groovy documentation search
-  tags:
-  - old
 groovesalad 0:
   url: https://somafm.com/player/#/now-playing/groovesalad
   title: SomaFm Groovesalad
