@@ -3865,15 +3865,15 @@ gol 2:
   - arguments: cs, praha
     description: Search for "praha" on sites in Czech
 goof 0:
-  url: http://finance.google.com/
-  title: Google Finance
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gfin
+    created: '2024-04-19'
 goof 1:
-  url: http://finance.google.com/finance?q=<value>
-  title: Google Finance
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gfin <1>
+    created: '2024-04-19'
 gopkg 0:
   url: https://pkg.go.dev
   title: pkg.go.dev
