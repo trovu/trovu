@@ -2137,10 +2137,8 @@ e 1:
   - arguments: smartphone
     description: Search for smartphones
 eb 1:
-  url: http://www.britannica.com/#search=tab~TOPICS%2Cterm~<term>
+  url: https://www.britannica.com/search?query=<query>
   title: Encyclopedia Britannica
-  tags:
-  - old
 ebank 0:
   url: https://ebanking.easybank.at/InternetBanking/InternetBanking?d=login&svc=EASYBANK&ui=html&lang=de
   title: EasyBank
