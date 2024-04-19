@@ -3594,22 +3594,15 @@ gg 1:
   - arguments: berlin
     description: Search for "berlin"
 gh 0:
-  url: https://geizhals.eu/
-  title: Geizhals EU Hauptseite
-  tags:
-  - geizhals
-  - preisvergleich
-  - shopping
+  deprecated:
+    alternative:
+      query: gzh
+    created: '2024-04-19'
 gh 1:
-  url: 'http://geizhals.at/eu/?fs=<Produkt: {encoding: iso-8859-1}>'
-  title: Geizhals EU
-  tags:
-  - geizhals
-  - preisvergleich
-  - shopping
-  examples:
-  - arguments: fernseher
-    description: Search for "fernseher"
+  deprecated:
+    alternative:
+      query: gzh <0>
+    created: '2024-04-19'
 gi 0:
   include:
     key: gim 0
@@ -4253,6 +4246,23 @@ gww 1:
 gy 1:
   url: https://www.google.de/search?q=<query>&hl=de&tbs=qdr:y
   title: Google search last year timeframe
+gzh 0:
+  url: https://geizhals.eu/
+  title: Geizhals EU Hauptseite
+  tags:
+  - geizhals
+  - preisvergleich
+  - shopping
+gzh 1:
+  url: 'https://geizhals.at/eu/?fs=<Produkt: {encoding: iso-8859-1}>'
+  title: Geizhals EU
+  tags:
+  - geizhals
+  - preisvergleich
+  - shopping
+  examples:
+  - arguments: fernseher
+    description: Search for "fernseher"
 ha 0:
   include:
   - key: ha 0
