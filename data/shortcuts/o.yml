@@ -2147,11 +2147,6 @@ ebank 0:
   tags:
   - old
   removed: '2023-01-14'
-ebook 1:
-  url: http://www.ebdb.net/Search.aspx?p=1&s=<query>&x=0&y=0
-  title: Ebooks Search Engine
-  tags:
-  - old
 ec 0:
   url: http://ecosia.org/
   title: Ecosia
@@ -2205,11 +2200,6 @@ ed 1:
 efa 0:
   url: https://www.efa-bw.de
   title: Efa bw
-  tags:
-  - old
-eg 1:
-  url: http://www.ecocho.com/google/index.php?q=<query>&cx=011377004323241253315%3Ayjo7ngerhv8&cof=FORID%3A10&search_type=web
-  title: Ecocho (google)
   tags:
   - old
 eis 1:
@@ -2333,11 +2323,6 @@ ende 1:
   title: Translation English to German
   tags:
   - old
-enfi 1:
-  url: http://www.fincd.com/index.php?txtSearch=<query>&lang=fi
-  title: Finnish-English
-  tags:
-  - old
 enfr 1:
   url: https://www.wordreference.com/enfr/<word>
   title: Translation English to French
@@ -2408,11 +2393,6 @@ eprintt 1:
   examples:
   - arguments: encryption
     description: Search IACR Cryptology ePrint Archive for titles containing "encryption"
-era-sms 0:
-  url: http://www.era.pl/msg/user/sponsored/welcome.do
-  title: Era-sms
-  tags:
-  - old
 es 0:
   include:
   - key: es 0
@@ -2507,14 +2487,6 @@ everyzing 1:
   title: Everyzing
   tags:
   - old
-exif 1:
-  url: http://exif.regex.info/exif.cgi?url=<url>
-  title: EXIF Viewer
-  tags:
-  - photography
-  examples:
-  - arguments: http://upload.wikimedia.org/wikipedia/commons/a/a6/Brandenburger_Tor_abends.jpg
-    description: Show exif data of given picture
 exkcd 0:
   url: http://www.explainxkcd.com/
   title: Explain xkcd
