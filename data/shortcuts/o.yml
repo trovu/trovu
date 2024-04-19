@@ -1493,25 +1493,6 @@ dch 0:
   title: Digital Concert Hall of the Berlin Philharmonic Orchestra (Berliner Philharmoniker)
   tags:
   - classical-music
-dclpm 0:
-  url: http://groups.google.de/group/de.comp.lang.perl.misc
-  title: De.comp.lang.perl.misc
-  tags:
-  - google
-  - newsgroups
-  - perl
-  - programming
-dclpm 1:
-  url: https://groups.google.com/forum/#!searchin/de.comp.lang.perl.misc/<query>
-  title: De.comp.lang.perl.misc
-  tags:
-  - google
-  - newsgroups
-  - perl
-  - programming
-  examples:
-  - arguments: array
-    description: Search for "array"
 dd24 0:
   url: https://www.domaindiscount24.com/de
   title: DomainDiscount24
@@ -1611,11 +1592,6 @@ dea 1:
   examples:
   - arguments: abstract
     description: search for abstract deviations on deviantART
-deac 1:
-  url: http://<query>.deviantart.com
-  title: DeviantART
-  tags:
-  - old
 deau 1:
   url: http://<user>.deviantart.com
   title: DeviantART
@@ -1692,11 +1668,6 @@ deep 1:
   title: DeepDyve search
   tags:
   - old
-deeper 1:
-  url: http://www.deeperweb.com/results.php?cx=!004415538554621685521%3Avgwa9iznfuo&cof=FORID%3A11%3BNB%3A1&ie=UTF-8&q=<query>
-  title: DeeperWeb for Google enhanced Web search
-  tags:
-  - old
 deezer 0:
   url: http://www.deezer.com/
   title: Deezer Startseite
@@ -1745,11 +1716,6 @@ derstandard 1:
 dh 1:
   url: https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=<query>&starCount=0
   title: Docker Hub
-dhlid 1:
-  url: http://www.dhlmultishipping.se/customers/dhl/packageevents_status.jsp?packageId=<packageid>&lang=en
-  title: DHL tracking ID
-  tags:
-  - old
 di 1:
   url: https://duckduckgo.com/?q=<query>&iax=images&ia=images
   title: Duck Duck Go Images
@@ -1761,11 +1727,6 @@ dic 1:
     alternative:
       query: de.en <1>
     created: '2023-04-10'
-diff 1:
-  url: http://www.differencebetween.net/search/?cx=partner-pub-1911891147296207%3Aw80z4hjpu14&cof=FORID%3A9&ie=ISO-8859-1&q=<query>&sa=Search
-  title: Difference Between search
-  tags:
-  - old
 dii 1:
   url: https://www.diigo.com/search?what=<tag>
   title: Diigo Social Bookmarking
@@ -1830,11 +1791,6 @@ djk 1:
 djp 1:
   url: https://docs.djangoproject.com/search/?q=<query>
   title: Django Doc Search
-  tags:
-  - old
-dl 0:
-  url: http://www.darklyrics.com
-  title: DarkLyrics.com
   tags:
   - old
 dlde 1:
@@ -2013,11 +1969,6 @@ dnd 1:
   title: D&D wiki
   tags:
   - old
-dns 1:
-  url: http://cgibin.erols.com/ziring/cgi-bin/nsgate/gate.pl?submit=Search+by+Name&mode=1&q=<domain>&qtype=A&.cgifields=persist&.cgifields=log
-  title: DNS Lookup
-  tags:
-  - old
 docs 1:
   url: https://docs.google.com/document/u/0/?q=<query>
   title: Google Docs search
@@ -2046,16 +1997,6 @@ dpl 1:
   examples:
   - arguments: arbol
     description: Detect language of "arbol" and translate it into my language
-drag 0:
-  url: http://www.dragosien.de/?t=village
-  title: Dragosien
-  tags:
-  - old
-drag_ball 0:
-  url: http://www.dragosien.de/?t=chat_dragball&id=45560
-  title: Dragosien
-  tags:
-  - old
 dreamstime 0:
   url: https://www.dreamstime.com/
   title: Dreamstime
