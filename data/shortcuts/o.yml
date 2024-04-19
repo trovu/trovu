@@ -1369,14 +1369,6 @@ csf 0:
 csf 1:
   url: https://www.couchsurfing.com/people/<query>
   title: Couchsurfing User Search
-cul 1:
-  url: https://www.citeulike.org/search/all?q=<query>
-  title: CiteULike Search
-  tags:
-  - science
-  examples:
-  - arguments: chomsky
-    description: Search CiteULike Search for "chomsky"
 cutlist 1:
   url: http://cutlist.at/?find=<Suche>
   title: cutlist.at
