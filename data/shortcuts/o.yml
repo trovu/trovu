@@ -2621,14 +2621,6 @@ fbook 1:
     alternative:
       query: fb <1>
     created: '2023-01-15'
-fbot 1:
-  url: http://www.fastbot.de/index.php?query=<query>
-  title: Fastbot
-  tags:
-  - web-search
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
 fbp 0:
   url: https://www.facebook.com/profile.php
   title: Facebook Profile
@@ -2706,16 +2698,6 @@ fbsdp 2:
 fbu 1:
   url: https://www.facebook.com/<username>
   title: Facebook User
-  tags:
-  - old
-fbug 0:
-  url: http://bugs.freedesktop.org/query.cgi
-  title: freedesktop.org bugs
-  tags:
-  - old
-fbugq 1:
-  url: http://bugs.freedesktop.org/buglist.cgi?quicksearch=<query>
-  title: search for a term in freedesktop.org bugs (query)
   tags:
   - old
 fbv 1:
@@ -2835,11 +2817,6 @@ fi 1:
     namespace: lgs
   - key: fi 1
     namespace: pka
-fien 1:
-  url: http://www.fincd.com/index.php?txtSearch=<query>&lang=en
-  title: Finnish-English
-  tags:
-  - old
 filmweb_ludzie 1:
   url: https://www.filmweb.pl/szukaj?q=<query>&c=person
   title: FilmWeb
@@ -2850,13 +2827,6 @@ filmweb_tytul 1:
   title: FilmWeb
   tags:
   - old
-filsh 1:
-  url: http://en.filsh.net/download?url=<url>
-  title: Filsh.net Online Clip Converter
-  tags:
-  - convert
-  - files
-  - youtube
 findutf 0:
   url: https://shapecatcher.com
   title: Find UTF code by simply drawing its shape omline (Shapecatcher)
@@ -3001,11 +2971,6 @@ flu 1:
     description: search for users named "john"
   include:
     key: fl 0
-fm 1:
-  url: http://freshmeat.net/search/?q=<query>&section=projects
-  title: Freshmeat
-  tags:
-  - old
 fnet 1:
   url: https://www.finanzen.net/suchergebnis.asp?_search=<query>
   title: Finanzen.net Query
@@ -3017,11 +2982,6 @@ fo 1:
   include:
   - key: fo 1
     namespace: pka
-foo 1:
-  url: http://en.fooooo.com/search.php?q=<query>&submit=+search+&ranking=0
-  title: Fooooo Video Search
-  tags:
-  - old
 fos 0:
   url: http://www.fotosearch.de/
   title: Fotosearch
@@ -3040,34 +3000,9 @@ fos 1:
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
-fosspatent 0:
-  url: http://www.fosspatents.com
-  title: FOSSpatents blog (Free open source software & patent blog)
-  tags:
-  - copyright
-  - intellectual-property
-  - ip-law
-  - open-source
-  - patent-law
-  - patents
-fosspatents 0:
-  url: http://www.fosspatents.com
-  title: FOSSpatents blog (Free open source software & patent blog)
-  tags:
-  - copyright
-  - intellectual-property
-  - ip-law
-  - open-source
-  - patent-law
-  - patents
 fotofinder 1:
   url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   title: Fotofinder
-  tags:
-  - old
-foxy 1:
-  url: http://www.foxytunes.com/search?q=<query>
-  title: Foxytunes planet
   tags:
   - old
 fpl 1:
@@ -3161,11 +3096,6 @@ fremdwort 1:
 fren 1:
   url: https://www.wordreference.com/fren/<word>
   title: Translation French to English
-  tags:
-  - old
-frf 1:
-  url: http://friendfeed.com/search?q=<query>
-  title: Friendfeed
   tags:
   - old
 frsv 1:
