@@ -4337,11 +4337,6 @@ hm 1:
   title: Hype Machine
   tags:
   - old
-hoh 1:
-  url: http://www.hoh.de/default.aspx?VL=<query>&SC=rel&TY=2&ST=5
-  title: Home of Hardware search
-  tags:
-  - old
 hoo 1:
   url: https://haskell.org/hoogle/?q=<query>
   title: Hoogle
@@ -4430,11 +4425,6 @@ hy 1:
   include:
   - key: hy 1
     namespace: pka
-hype 1:
-  url: http://hype.non-standard.net/search/<query>
-  title: Hype Machine
-  tags:
-  - old
 i 0:
   url: https://www.imdb.com/
   title: Internet Movie Database
