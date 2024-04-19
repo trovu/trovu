@@ -3070,10 +3070,10 @@ frde 1:
       query: fr.de <1>
     created: '2023-04-10'
 freedb 1:
-  url: http://www.freedb.org/freedb_search.php?words=<query>&allfields=NO&fields=artist&fields=title&allcats=YES&grouping=none&x=0&y=0
-  title: FreeDB
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gnudb <1>
+    created: '2024-04-19'
 freenode 1:
   url: https://irc.netsplit.de/channels/?net=freenode&chat=<query>
   title: Freenode IRC channels
@@ -3886,6 +3886,20 @@ gns 1:
 gnu 2:
   url: https://www.google.com/search?ned=<language-code>&q=<query>&source=lnms&tbm=nws
   title: Google News (universal language select)
+gnudb 0:
+  url: https://gnudb.org/
+  title: Gnudb (freedb)
+  tags:
+  - music
+  examples:
+  - description: Go to homepage
+gnudb 1:
+  url: https://gnudb.org/search/<query>
+  include:
+    key: gnudb 0
+  examples:
+  - arguments: beatles
+    description: Search for record of "The Beatles"
 go 1:
   url: http://www.google.com/cse?cx=003538345765652431974%3A5nbobem3igq&ie=UTF-8&q=<query>&siteurl=www.google.com%2Fcse%2Fhome%3Fcx%3D003538345765652431974%253A5nbobem3igq&ref=go-lang.cat-v.org%2Fgo-search&ss=6085j16411711j19&oq=string+comparison&gs_l=partner.3...8806.10874.0.11103.17.15.0.0.0.0.210.1598.6j8j1.15.0.gsnos%2Cn%3D13..0.0.6084j16418432j19..1ac.HmuDMInChKQ#gsc.tab=0&gsc.q=<query>&gsc.page=1
   title: Go Language Resources Search Engine
