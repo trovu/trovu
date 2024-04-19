@@ -3774,10 +3774,10 @@ gmde 1:
   tags:
   - old
 gmob 1:
-  url: http://www.google.com/m/search?hl=<$language>&q=<query>
-  title: Google Mobile Search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: g <1>
+    created: '2023-04-19'
 gmp3 1:
   url: http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(mp3|wma|ogg)+%2B%22<query>%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
   title: Google MP3 search
@@ -3992,10 +3992,10 @@ gr 1:
   - arguments: shakespeare
     description: Search for books of Shakespeare
 grde 1:
-  url: http://www.google.de/search?q=<query>
-  title: Grde
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: g <1>
+    created: '2024-04-19'
 grhp 2:
   url: https://graphhopper.com/maps/?point=<start>&point=<destination>&locale=<$language>
   title: GraphHopper (Routing via OSM)
