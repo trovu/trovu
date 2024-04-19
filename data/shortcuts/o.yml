@@ -3175,7 +3175,7 @@ g 1:
     description: Google search for "berlin"
   showOnHome: 600
 g! 1:
-  url: http://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&btnI=1
+  url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&btnI=1
   title: Google Web, go directly to first result
   tags:
   - google
@@ -3184,17 +3184,17 @@ g! 1:
   - arguments: berlin
     description: Search for "berlin"
 g-en-de 1:
-  url: http://translate.google.de/?hl=de&tab=wT#en|de|<query>
+  url: https://translate.google.de/?hl=de&tab=wT#en|de|<query>
   title: Google Translate Englisch - Deutsch
   tags:
   - old
 g-pdf 1:
-  url: http://www.google.de/search?q=<query>&as_filetype=pdf
+  url: https://www.google.de/search?q=<query>&as_filetype=pdf
   title: Google search for pdf-files
   tags:
   - old
 g100 1:
-  url: http://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&num=100
+  url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&num=100
   title: Google Web, 100 results at once
   tags:
   - google
@@ -3225,7 +3225,7 @@ gamespot 1:
   tags:
   - games
 gan 1:
-  url: http://www.google.com/search?hl=en&q=android%20<query>&ie=utf-8
+  url: https://www.google.com/search?hl=en&q=android%20<query>&ie=utf-8
   title: Google search for android related pages only
   tags:
   - android
@@ -3240,7 +3240,7 @@ gbooks 0:
   - books
   - google
 gbooks 1:
-  url: http://books.google.com/books?hl=<$language>&q=<query>
+  url: https://books.google.com/books?hl=<$language>&q=<query>
   title: Google Books
   tags:
   - books
@@ -3256,12 +3256,12 @@ gby 2:
   - google
   - search
 gc 1:
-  url: http://google.com/search?hl=<$language>&q=cache:<query>
+  url: https://google.com/search?hl=<$language>&q=cache:<query>
   title: Google Cache
   tags:
   - google
 gcal 0:
-  url: http://www.google.com/calendar
+  url: https://www.google.com/calendar
   title: Google Calendar
   tags:
   - calendar
@@ -3281,7 +3281,7 @@ gcbug 1:
   tags:
   - old
 gch 1:
-  url: http://www.google.ch/search?hl=<$language>&q=<query>&ie=utf-8
+  url: https://www.google.ch/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google Switzerland
   tags:
   - old
@@ -3368,7 +3368,7 @@ gde 1:
   tags:
   - old
 gdl 1:
-  url: http://google.com/search?hl=<$language>&q=<query>+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
+  url: https://google.com/search?hl=<$language>&q=<query>+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Web, Directory Listing
   tags:
   - google
@@ -3450,7 +3450,7 @@ gen 1:
   tags:
   - old
 gentoo-forums 0:
-  url: http://forums.gentoo.org
+  url: https://forums.gentoo.org
   title: Gentoo Forums
   tags:
   - old
@@ -3460,13 +3460,13 @@ gentoo-planet 0:
   tags:
   - old
 getty 0:
-  url: http://www.gettyimages.com
+  url: https://www.gettyimages.de
   title: Getty Images
   tags:
   - images
   - stock-agency
 getty 1:
-  url: http://www.gettyimages.com/search/search.aspx?contractUrl=2&language=de-DE&family=creative&assetType=image&p=<query>&src=standard
+  url: https://www.gettyimages.de/search/2/image?family=creative&phrase=<query>
   title: Getty Images
   tags:
   - images
@@ -3484,13 +3484,13 @@ gf 2:
   - arguments: pdf, berlin
     description: search PDF-files for "berlin"
 gfin 0:
-  url: http://finance.google.com/
+  url: https://finance.google.com/
   title: Google Finance
   tags:
   - finance
   - google
 gfin 1:
-  url: http://finance.google.com/finance?q=<value>
+  url: https://finance.google.com/finance?q=<value>
   title: Google Finance
   tags:
   - finance
@@ -3675,7 +3675,7 @@ gl 1:
   - key: gl 1
     namespace: pka
 glist 1:
-  url: http://google.com/search?hl=<$language>&q=<query>+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
+  url: https://google.com/search?hl=<$language>&q=<query>+-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22
   title: Google Listing
 gm 0:
   url: https://www.google.com/maps?hl=<$language>
@@ -3713,7 +3713,7 @@ gmail 0:
   - google
   - mail
 gmail 1:
-  url: http://mail.google.com/mail/#search/<query>
+  url: https://mail.google.com/mail/#search/<query>
   title: Google Mail
   tags:
   - google
@@ -3772,7 +3772,7 @@ gmob 1:
       query: g <1>
     created: '2023-04-19'
 gmp3 1:
-  url: http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(mp3|wma|ogg)+%2B%22<query>%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
+  url: https://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(mp3|wma|ogg)+%2B%22<query>%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
   title: Google MP3 search
   tags:
   - old
@@ -3963,7 +3963,7 @@ gpm 1:
   - arguments: prodigy
     description: Search for music by The Prodigy in My Music
 gpo 1:
-  url: http://gpo.zugaina.org/Search?search=<package>
+  url: https://gpo.zugaina.org/Search?search=<package>
   title: Gentoo Overlay Search
   tags:
   - old
@@ -4053,7 +4053,7 @@ gsh 0:
   - google
   - shopping
 gsh 1:
-  url: http://www.google.com/search?tbm=shop&hl=<$language>&q=<query>
+  url: https://www.google.com/search?tbm=shop&hl=<$language>&q=<query>
   title: Google Shopping
   tags:
   - google
@@ -4074,7 +4074,7 @@ gslides 1:
   - docs
   - google
 gss 2:
-  url: http://www.google.com/search?hl=<$language>&q=site%3A<site>%20<query>
+  url: https://www.google.com/search?hl=<$language>&q=site%3A<site>%20<query>
   title: Google Web, search only on site
   tags:
   - google
@@ -4093,7 +4093,7 @@ gssl 1:
   tags:
   - old
 gt 2:
-  url: http://www.google.com/search?hl=<$language>&tbs=qdr:<time>&q=<query>&ie=utf-8
+  url: https://www.google.com/search?hl=<$language>&tbs=qdr:<time>&q=<query>&ie=utf-8
   title: Google Web, only of certain time range
   tags:
   - google
@@ -4108,13 +4108,13 @@ gt 2:
   - arguments: d, eruption
     description: Search web pages for "eruption" that have been altered within the last day
 gtr 0:
-  url: http://translate.google.com/
+  url: https://translate.google.com/
   title: Google Translate
   tags:
   - google
   - language
 gtr 1:
-  url: http://translate.google.com/translate_t?sl=auto&text=<phrase/url>
+  url: https://translate.google.com/translate_t?sl=auto&text=<phrase/url>
   title: Google Translate
   tags:
   - google
@@ -4123,7 +4123,7 @@ gtr 1:
   - arguments: pancake
     description: Search for "pancake"
 gtr 2:
-  url: http://translate.google.com/translate_t?sl=auto&tl=<target language>&text=<phrase/url>
+  url: https://translate.google.com/translate_t?sl=auto&tl=<target language>&text=<phrase/url>
   title: Google Translate
   tags:
   - google
@@ -4134,7 +4134,7 @@ gtr 2:
   - arguments: fr, crêpe
     description: Translate "crêpe" from French
 gtr 3:
-  url: http://translate.google.com/translate_t?sl=<source language>&tl=<target language>&text=<phrase/url>
+  url: https://translate.google.com/translate_t?sl=<source language>&tl=<target language>&text=<phrase/url>
   title: Google Translate
   tags:
   - google
@@ -4169,7 +4169,7 @@ gu 1:
   - key: gu 1
     namespace: pka
 guk 1:
-  url: http://www.google.co.uk/search?hl=<$language>&q=<query>&ie=utf-8
+  url: https://www.google.co.uk/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google United Kingdom
   tags:
   - old
@@ -4189,7 +4189,7 @@ gv 1:
   - arguments: cat
     description: Google video search for "cat"
 gvid 1:
-  url: http://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(avi|mp4|flv)+%2B%22<query>%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
+  url: https://www.google.com/search?hl=en&lr=&safe=off&q=intitle%3Aindex.of+%2B%E2%80%9Dlast+modified%E2%80%9D+%2B%E2%80%9Dparent+directory%E2%80%9D+%2B(avi|mp4|flv)+%2B%22<query>%22+-htm+-html+-php+-asp+-txt+-pls&btnG=Search
   title: Google video search
   tags:
   - old
@@ -4199,7 +4199,7 @@ gw 0:
   tags:
   - old
 gw 1:
-  url: http://www.guildwiki.org/index.php?title=Special%3ASearch&search=<query>&go=Go
+  url: https://www.guildwiki.org/index.php?title=Special%3ASearch&search=<query>&go=Go
   title: Guildwars wiki
   tags:
   - old
@@ -4209,7 +4209,7 @@ gw2 0:
   tags:
   - old
 gw2 1:
-  url: http://wiki.guildwars2.com/index.php?title=Special%3ASearch&search=<query>&go=Go
+  url: https://wiki.guildwars2.com/index.php?title=Special%3ASearch&search=<query>&go=Go
   title: Guildwars 2 Wiki
   tags:
   - old
@@ -4229,17 +4229,17 @@ gwo 1:
   tags:
   - old
 gwt 1:
-  url: http://www.google.com/search?hl=en&q=inurl%3Ajavadoc%2Flatest%2Fcom%2Fgoogle%2Fgwt%2F+Class+<query>+intitle%3A<query>&ie=utf-8&btnI=1
+  url: https://www.google.com/search?hl=en&q=inurl%3Ajavadoc%2Flatest%2Fcom%2Fgoogle%2Fgwt%2F+Class+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: GWT API
   tags:
   - old
 gwtb 1:
-  url: http://www.google.com/search?hl=en&q=inurl%3Aapidocs%2Fcom%2Fgithub%2Fgwtbootstrap%2F+Class+<query>+intitle%3A<query>&ie=utf-8&btnI=1
+  url: https://www.google.com/search?hl=en&q=inurl%3Aapidocs%2Fcom%2Fgithub%2Fgwtbootstrap%2F+Class+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: GWT Bootstrap API
   tags:
   - old
 gww 1:
-  url: http://www.google.com/search?hl=<$language>&q=<query>%20-site:wikipedia.org&ie=utf-8
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20-site:wikipedia.org&ie=utf-8
   title: Google Web search without wikipedia.org
   tags:
   - old
