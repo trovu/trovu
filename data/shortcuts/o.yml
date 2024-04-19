@@ -251,7 +251,7 @@ acl 1:
   - arguments: machine translation
     description: search for machine translation in the ACL Anthology
 aclg 1:
-  url: http://www.google.com/search?hl=<$language>&q=site:aclweb.org%20<query>&ie=utf-8
+  url: https://www.google.com/search?hl=<$language>&q=site:aclweb.org%20<query>&ie=utf-8
   title: ACL Anthology via Google
   tags:
   - academia
@@ -282,7 +282,7 @@ aclw 1:
   - arguments: ' SAT Analogy Questions'
     description: go to page (or search for) SAT Analogy Questions on ACLWiki
 acm 1:
-  url: http://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
   title: ACM Digital Library
   tags:
   - science
@@ -332,13 +332,13 @@ adsh 1:
   - arguments: ADXL320
     description: Search for ADXL320 sensor in alldatasheet.com
 ae 0:
-  url: http://www.aliexpress.com/
+  url: https://www.aliexpress.com/
   title: Aliexpress
   tags:
   - aliexpress
   - shopping
 ae 1:
-  url: http://www.aliexpress.com/wholesale?SearchText=<query>
+  url: https://www.aliexpress.com/wholesale?SearchText=<query>
   title: Aliexpress
   tags:
   - aliexpress
@@ -459,7 +459,7 @@ ao 1:
   url: https://www.amazon.de/gp/your-account/order-history/ref=ppx_yo_dt_b_search?search=<query>
   title: Amazon Bestellungen
 aol 0:
-  url: http://www.aol.com
+  url: https://www.aol.com
   title: Aol.com
   tags:
   - aol
@@ -545,7 +545,7 @@ arch 1:
   - arguments: 聊
     description: find out how to write the character 聊 and how it's composed
 archive 1:
-  url: 'http://web.archive.org/web/*/<site: {encoding: none}>'
+  url: 'https://web.archive.org/web/*/<site: {encoding: none}>'
   title: Archive.org
   tags:
   - archive
