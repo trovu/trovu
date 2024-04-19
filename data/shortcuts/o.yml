@@ -4387,6 +4387,14 @@ http 1:
   examples:
   - arguments: example.com
     description: Go to http://example.com
+https 1:
+  url: https://<domain>
+  title: Redirect to URL
+  tags:
+  - url
+  examples:
+  - arguments: example.com
+    description: Go to https://example.com
 hu 0:
   include:
   - key: hu 0
