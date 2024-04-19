@@ -951,17 +951,6 @@ btd 1:
   tests:
   - arguments: ubuntu
     expect: <title>ubuntu
-btv 1:
-  url: http://www.btvguide.com/searchresults/?q=<query>
-  title: Btvguide
-  tags:
-  - entertainment
-  - series
-  - shows
-  - tv
-  examples:
-  - arguments: star trek
-    description: Search for "star trek"
 bv 1:
   url: http://www.bing.com/videos/?q=<video-query>
   title: Bing Videos
