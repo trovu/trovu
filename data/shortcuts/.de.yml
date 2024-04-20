@@ -5417,6 +5417,20 @@ tho 1:
   examples:
   - arguments: gitarre
     description: Suche nach Gitarre
+tra 0:
+  title: Tripadvisor
+  tags:
+  - travel
+  url: https://www.tripadvisor.de/
+  examples:
+  - description: Gehe zur Startseite
+tra 1:
+  include:
+    key: tra 0
+  url: https://www.tripadvisor.de/Search?q=<query>
+  examples:
+  - arguments: gent
+    description: Suche nach touristischen Infos über Gent
 tv 0:
   url: https://www.tvinfo.de/jetzt
   title: TV-Programm jetzt
