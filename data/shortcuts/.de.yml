@@ -4887,7 +4887,7 @@ jw 1:
     key: jw 0
   examples:
   - arguments: simpsons
-    description: Suche nach "simpsons
+    description: Suche nach "simpsons"
 kaufland 0:
   url: https://www.kaufland.de/
   title: Kaufland Online Marktplatz
@@ -4939,6 +4939,13 @@ kaza 0:
     key: kaz 0
   examples:
   - description: Gehe zu meinen Anzeigen
+kazm 0:
+  url: https://www.kleinanzeigen.de/m-merkliste.html
+  title: Kleinanzeigen.de, Meine Merkliste
+  include:
+    key: kaz 0
+  examples:
+  - description: Gehe zu meiner Merkliste
 kazn 0:
   url: https://www.kleinanzeigen.de/m-nachrichten.html
   title: Kleinanzeigen.de, Meine Nachrichten
