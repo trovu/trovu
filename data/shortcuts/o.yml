@@ -6735,16 +6735,6 @@ rails 1:
     description: Search for "redirect_to"
   - arguments: link_to_remote
     description: Search for "link_to_remote"
-rapids 0:
-  url: http://rapidshare-search-engine.com/
-  title: Rapidshare Search
-  tags:
-  - old
-rapidshare 1:
-  url: http://www.rapidshare1.com/search.php?search=<file>
-  title: Rapidshare
-  tags:
-  - old
 rarbg 0:
   url: http://rarbg.to/torrents.php
   title: RARBG
@@ -6875,11 +6865,6 @@ rg 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
-rl 1:
-  url: http://rapidlibrary.com/index.php?q=<query>&filetype=0
-  title: Rapidlibrary Search
-  tags:
-  - old
 rm 0:
   include:
   - key: rm 0
@@ -6940,11 +6925,6 @@ rp18 0:
   tags:
   - berlin
   - congress
-rs 1:
-  url: http://www.rapidshare1.com/search.php?search=<file>
-  title: Rapidshare
-  tags:
-  - old
 rt 1:
   url: http://www.rottentomatoes.com/search/?search=<query>
   title: Rotten Tomatoes
@@ -6954,11 +6934,6 @@ rt 1:
   examples:
   - arguments: forrest gump
     description: Search Rotten Tomatoes for "forrest gump"
-rtm 0:
-  url: http://www.rememberthemilk.com/home/domiii/#section.tasks
-  title: Remember the milk
-  tags:
-  - old
 ru 0:
   include:
   - key: ru 0
@@ -7017,11 +6992,6 @@ rw 1:
   include:
   - key: rw 1
     namespace: pka
-rwth 1:
-  url: http://www.campus.rwth-aachen.de/rwth/all/lecturerlist.asp?find=<name>
-  title: RWTH Aachen Campus Phonebook
-  tags:
-  - old
 s 0:
   url: https://startpage.com/
   title: Startpage.com
