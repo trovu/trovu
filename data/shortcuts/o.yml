@@ -8126,14 +8126,14 @@ tr 1:
     namespace: rvs
   - key: tr 1
     namespace: pka
-tra 0:
+tav 0:
   title: Tripadvisor
   tags:
   - travel
   url: https://www.tripadvisor.com/
   examples:
   - description: Go to hompeage
-tra 1:
+tav 1:
   include:
     key: tra 0
   url: https://www.tripadvisor.com/Search?q=<query>
