@@ -5068,7 +5068,7 @@ lambda 1:
   tags:
   - old
 laredoute 0:
-  url: http://www.laredoute.com
+  url: https://www.laredoute.com
   title: La Redoute
   tags:
   - fashion
@@ -5168,7 +5168,7 @@ lg 1:
   - key: lg 1
     namespace: pka
 lh 0:
-  url: http://www.lufthansa.com
+  url: https://www.lufthansa.com
   title: Lufthansa
 libg 0:
   url: https://libgen.is
@@ -5191,12 +5191,12 @@ libgf 1:
   include:
     key: libg 0
 libgm 1:
-  url: http://magzdb.org/makelist?t=<query>
+  url: https://magzdb.org/makelist?t=<query>
   title: Library Genesis, Magazines
   include:
     key: libg 0
 lin 0:
-  url: http://www.linkedin.com/
+  url: https://www.linkedin.com/
   title: Linkedin
   tags:
   - linkedin
@@ -5274,7 +5274,7 @@ lotto 0:
   tags:
   - old
 lotto 1:
-  url: http://www.google.com/search?hl=de&q=site:lottozahlen.info%20<Datum>&ie=utf-8
+  url: https://www.google.com/search?hl=de&q=site:lottozahlen.info%20<Datum>&ie=utf-8
   title: Lottozahlen
   tags:
   - old
