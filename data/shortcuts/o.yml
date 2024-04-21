@@ -5620,16 +5620,6 @@ n 1:
   examples:
   - arguments: Broadchurch
     description: Search Netflix for "Broadchurch"
-n4m 0:
-  url: http://www.news4mobile.de/
-  title: news4mobile Startseite
-  tags:
-  - old
-n4m 1:
-  url: http://www.news4mobile.de/?sw=<Suche>
-  title: news4mobile Suche
-  tags:
-  - old
 nag 1:
   url: http://google.com/search?hl=<$language>&q=<query>+inurl%3Anagios.sourceforge.net%2Fdocs
   title: Nagios
