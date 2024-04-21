@@ -6736,7 +6736,7 @@ rails 1:
   - arguments: link_to_remote
     description: Search for "link_to_remote"
 rarbg 0:
-  url: http://rarbg.to/torrents.php
+  url: https://www.rarbg-official.com/
   title: RARBG
   description: RARBG torrent tracker
   tags:
@@ -6745,14 +6745,9 @@ rarbg 0:
   - torrent
   - torrents
 rarbg 1:
-  url: http://rarbg.to/torrents.php?search=<query>
-  title: RARBG
-  description: RARBG torrent tracker
-  tags:
-  - download
-  - downloads
-  - torrent
-  - torrents
+  url: https://en.rarbg-official.com/movies?keyword=<query>
+  include:
+    key: rarbg 0
 rb 0:
   url: https://www.ruby-doc.org/
   title: Ruby Documentation
