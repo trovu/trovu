@@ -5316,7 +5316,7 @@ lyrc 2:
   tags:
   - old
 macs 1:
-  url: http://www.coffer.com/mac_find?string=<query>
+  url: https://www.coffer.com/mac_find?string=<query>
   title: MAC address search
   description: Match your MAC address to its vendor.
   tags:
@@ -5324,7 +5324,7 @@ macs 1:
   - mac
   - network
 maj 1:
-  url: http://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q=<query>&btnG=Search&sitesearch=MajorGeeks.com
+  url: https://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q=<query>&btnG=Search&sitesearch=MajorGeeks.com
   title: Majorgeeks
   tags:
   - old
@@ -5355,7 +5355,7 @@ maven 1:
   - arguments: print
     description: Search for "print"
 mb 1:
-  url: http://musicbrainz.org/search/textsearch.html?query=<artist>&type=artist&limit=25&handlearguments=1
+  url: https://musicbrainz.org/search/textsearch.html?query=<artist>&type=artist&limit=25&handlearguments=1
   title: Musicbrainz - Music Metabase
 mbg 0:
   url: https://www.mobygames.com/
@@ -5376,7 +5376,7 @@ mcw 0:
   tags:
   - old
 mcw 1:
-  url: http://www.minecraftwiki.net/index.php?title=Special%3ASearch&search=<article>&button=
+  url: https://www.minecraftwiki.net/index.php?title=Special%3ASearch&search=<article>&button=
   title: Minecraft Wiki
   tags:
   - old
@@ -5400,7 +5400,7 @@ mdn 1:
   - arguments: javascript
     description: Search for "javascript"
 me 1:
-  url: http://masseffect.wikia.com/wiki/Special:Search?search=<query>&go=1
+  url: https://masseffect.wikia.com/wiki/Special:Search?search=<query>&go=1
   title: Mass Effect Wiki
   tags:
   - old
@@ -5410,7 +5410,7 @@ med 1:
   tags:
   - old
 medipreis 1:
-  url: http://www.medipreis.de/suchen?q=<query>
+  url: https://www.medipreis.de/suchen?q=<query>
   title: Medipreis Apothekenpreisvergleich
   tags:
   - old
@@ -5485,10 +5485,10 @@ mn 1:
   - key: mn 1
     namespace: pka
 month 0:
-  url: http://timeanddate.com/calendar/monthly.html
+  url: https://timeanddate.com/calendar/monthly.html
   title: This month
 moodleup 0:
-  url: http://moodle.uni-potsdam.de
+  url: https://moodle.uni-potsdam.de
   title: Uni Potsdam, Moodle
   tags:
   - old
@@ -5544,19 +5544,19 @@ mwe 1:
   - mediawiki
   - wiki
 mwo 0:
-  url: http://www.mediawiki.org
+  url: https://www.mediawiki.org
   title: mediawiki.org
 mwo 1:
-  url: http://www.mediawiki.org/wiki/Special:Search?search=<query>&fulltext=Search
+  url: https://www.mediawiki.org/wiki/Special:Search?search=<query>&fulltext=Search
   title: Search mediawiki.org
 mww 1:
-  url: http://www.mediawiki.org/wiki/Special:Search?search=<query>&go=Go
+  url: https://www.mediawiki.org/wiki/Special:Search?search=<query>&go=Go
   title: Mediawiki Wiki
   tags:
   - mediawiki
   - wiki
 mwwg 1:
-  url: http://www.google.com/search?hl=<$language>&sitesearch=mediawiki.org&domains=mediawiki.org&q=<query>
+  url: https://www.google.com/search?hl=<$language>&sitesearch=mediawiki.org&domains=mediawiki.org&q=<query>
   title: Mediawiki Wiki via Google
   tags:
   - mediawiki
