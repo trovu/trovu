@@ -5773,13 +5773,21 @@ npm 1:
   examples:
   - arguments: mkdir
     description: search for a module to create folders on the filesystem
+npr 0:
+  url: https://www.npr.org/search/?query=<query>
+  title: National Public Radio (USA)
+  tags:
+  - news
+  - radio
+  examples:
+  - description: Go to homepage
 npr 1:
-  url: http://www.npr.org/search.php?text=<query>
-  title: National Public Radio (United States)
-  tags:
-  - old
-  tags:
-  - old
+  url: https://www.npr.org/search/?query=<query>
+  include:
+    key: npr 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 nv 0:
   url: https://neeva.com/
   title: Neeva
