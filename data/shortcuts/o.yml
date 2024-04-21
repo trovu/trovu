@@ -5370,10 +5370,8 @@ mbg 1:
   tags:
   - games
 mc 1:
-  url: http://www.metacritic.com/search/all/<query>/results
-  title: Metacritic Search
-  tags:
-  - old
+  url: https://www.metacritic.com/search/<query>
+  title: Metacritic
 mcw 0:
   url: https://www.minecraftwiki.net/wiki/Minecraft_Wiki
   title: Minecraft Wiki
