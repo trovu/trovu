@@ -5578,7 +5578,7 @@ myfritz 0:
   - router
 myg 1:
   deprecated:
-    alternative: 
+    alternative:
       query: g <1>
     created: '2024-04-21'
 myip 0:
@@ -5788,9 +5788,6 @@ npr 1:
   title: National Public Radio (United States)
   tags:
   - old
-ns 1:
-  url: https://www.netspeak.org/#query=<query>
-  title: Netspeak
   tags:
   - old
 nv 0:
