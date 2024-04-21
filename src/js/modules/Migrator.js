@@ -3,6 +3,8 @@ import UrlProcessor from './UrlProcessor';
 import fs from 'fs';
 import jsyaml from 'js-yaml';
 
+// import { type } from 'os';
+
 export default class Migrator {
   constructor() {}
 
@@ -54,7 +56,10 @@ export default class Migrator {
           console.log('  🟨 ', processedHttpsUrl);
           const domain = processedHttpUrl.split('/')[2];
           console.log('  🔺 ', domain);
-          // continue;
+          shortcut.url = httpUrl.replace('http:', 'https:');
+          if (typeof key === 'string') {
+            continue;
+          }
 
           // First check if the http URL redirects to the https URL.
           try {
