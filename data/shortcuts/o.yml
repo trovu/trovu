@@ -7064,7 +7064,7 @@ se 1:
   - key: se 1
     namespace: pka
 se 2:
-  url: http://<subpage>.stackexchange.com/search?q=<query>
+  url: https://<subpage>.stackexchange.com/search?q=<query>
   title: Stack Exchange
   tags:
   - old
@@ -7085,7 +7085,7 @@ sf 0:
   tags:
   - old
 sf 1:
-  url: http://sourceforge.net/search/?type_of_search=soft&words=<query>
+  url: https://sourceforge.net/search/?type_of_search=soft&words=<query>
   title: Sourceforge
   tags:
   - old
@@ -7221,7 +7221,7 @@ slashdot 1:
   - arguments: linux
     description: Search for Slashdot news about Linux
 smfmod 1:
-  url: http://custom.simplemachines.org/mods/index.php?action=search&basic_search=<query>
+  url: https://custom.simplemachines.org/mods/index.php?action=search&basic_search=<query>
   title: Search for Modifications
   tags:
   - old
@@ -7263,7 +7263,7 @@ sof 0:
   tags:
   - programming
 sof 1:
-  url: http://stackoverflow.com/search?q=<query>
+  url: https://stackoverflow.com/search?q=<query>
   title: Stack Overflow
   tags:
   - programming
@@ -7271,7 +7271,7 @@ sof 1:
   - arguments: java
     description: search for Java-related questions
 sofa 1:
-  url: http://stackoverflow.com/search?q=%5Bandroid%5D+<query>
+  url: https://stackoverflow.com/search?q=%5Bandroid%5D+<query>
   title: Stackoverflow android tag
   tags:
   - programming
@@ -7416,7 +7416,7 @@ subscene 1:
   - arguments: loose change
     description: Search for subtitles to "loose change"
 subtitles 1:
-  url: http://www.google.com/search?hl=<$language>&sitesearch=subtitles.images.o2.cz&domains=subtitles.images.o2.cz&q=<movie>
+  url: https://www.google.com/search?hl=<$language>&sitesearch=subtitles.images.o2.cz&domains=subtitles.images.o2.cz&q=<movie>
   title: Subtitles.images.o2.cz
   tags:
   - old
