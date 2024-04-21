@@ -7043,11 +7043,6 @@ scala 1:
   examples:
   - arguments: AnyVal
     description: Search for "AnyVal"
-scholar 1:
-  url: http://www.scholarpedia.org/article/Special:Search?from=sidebar&search=<article>&go=Title
-  title: Scholarpedia
-  tags:
-  - old
 sci-hub 1:
   url: https://sci-hub.do/<query>
   title: Sci-Hub
@@ -7071,11 +7066,6 @@ se 1:
 se 2:
   url: http://<subpage>.stackexchange.com/search?q=<query>
   title: Stack Exchange
-  tags:
-  - old
-searchmash 0:
-  url: http://www.searchmash.com
-  title: Search Mash
   tags:
   - old
 semlex 1:
@@ -7322,11 +7312,6 @@ soup 1:
   title: Soup.io friends full text search
   tags:
   - old
-sowi 1:
-  url: http://www.sowiport.de/suche/einfache-suche.html?tx=<Begriff>&L=0&tx_and=true
-  title: Sowiport
-  tags:
-  - old
 sp 1:
   url: https://open.spotify.com/search/results/<query>
   title: Spotify
@@ -7353,11 +7338,6 @@ spl 1:
   examples:
   - arguments: chomsky
     description: Search for scientific papers about or of Chomsky
-spo 1:
-  url: http://www.scholarpedia.org/article/Special:Search?from=sidebar&search=<article>&go=Title
-  title: Scholarpedia
-  tags:
-  - old
 sq 0:
   include:
   - key: sq 0
@@ -7366,11 +7346,6 @@ sq 1:
   include:
   - key: sq 1
     namespace: pka
-sqp 1:
-  url: http://www.seeqpod.com/music/?q=<query>
-  title: Seeqpod
-  tags:
-  - old
 sr 0:
   include:
   - key: sr 0
@@ -7401,21 +7376,6 @@ ssch 1:
 ssl 1:
   url: https://www.ssllabs.com/ssldb/analyze.html?d=<domain>
   title: SSL Labs Analyzer
-  tags:
-  - old
-ssw 1:
-  url: http://szenesprachenwiki.de/words/advanced_search/?q=<query>
-  title: Szenesprachenwiki
-  tags:
-  - old
-state 1:
-  url: http://www.state.<query>.us
-  title: USA State Websites
-  tags:
-  - old
-stc 1:
-  url: http://surfthechannel.com/search/all/3/1/<query>.html
-  title: Surfthehannel
   tags:
   - old
 steam 1:
