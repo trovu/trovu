@@ -5523,10 +5523,10 @@ ms 1:
   - key: ms 1
     namespace: pka
 msn 1:
-  url: http://search.msn.com/results.aspx?q=<query>
-  title: MSN Search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: b <1>
+    created: '2024-04-21'
 mt 0:
   include:
   - key: mt 0
@@ -5581,10 +5581,10 @@ myfritz 0:
   - remoteaccess
   - router
 myg 1:
-  url: http://www.google.com/search?q=<query>
-  title: Google search
-  tags:
-  - old
+  deprecated:
+    alternative: 
+      query: g <1>
+    created: '2024-04-21'
 myip 0:
   url: https://ipinfo.info/html/privacy-check.php
   title: Myip
