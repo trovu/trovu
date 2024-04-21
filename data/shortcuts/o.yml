@@ -5037,11 +5037,6 @@ kym 1:
   examples:
   - arguments: x y is x
     description: search for the "X Y is X" meme
-l 1:
-  url: http://search.live.com/results.aspx?q=<query>
-  title: Windows Live Web search
-  tags:
-  - old
 la 0:
   include:
   - key: la 0
@@ -5112,15 +5107,6 @@ laste 0:
   - events
   - lastfm
   - music
-lastl 1:
-  url: http://www.last.fm/listen/artist/<artist>
-  title: 'Last.fm: Listen to artist'
-  tags:
-  - lastfm
-  - music
-  examples:
-  - arguments: beatles
-    description: Listen to the Beatles
 lb 0:
   include:
   - key: lb 0
@@ -5234,11 +5220,6 @@ linguee 1:
     alternative:
       query: lge.en <1>
     created: '2023-04-10'
-lintian 1:
-  url: http://lintian.debian.org/tags/<query>.html
-  title: show the given debian lintian report
-  tags:
-  - old
 linz 2:
   url: https://www.linzag.at/efa/index.php?sstreet=<Start>&street=<Ziel>%E4t&x=0&y=0&_language=de
   title: Linz Linien
@@ -5268,12 +5249,6 @@ lipsum 2:
   examples:
   - arguments: 200, bytes
     description: Generate 200 bytes of "Lorem Ipsum"
-ll 1:
-  url: http://www.liveleak.com/browse?q=<query>
-  title: LiveLeak.com
-  tags:
-  - liveleak
-  - video
 ln 0:
   include:
   - key: ln 0
