@@ -5,7 +5,7 @@ efr 0:
   - ebay
   - shopping
 efr 1:
-  url: http://rover.ebay.com/rover/1/1553-53471-19255-0/1?icep_ff3=9&pub=5575056757&toolid=10001&campid=5337375636&customid=&icep_uq=<query>&icep_sellerId=&icep_ex_kw=&icep_sortBy=12&icep_catId=&icep_minPrice=&icep_maxPrice=&ipn=psmain&icep_vectorid=229522&kwid=902099&mtid=824&kw=lg
+  url: https://www.befr.ebay.be//sch/i.html?_nkw=<query>
   title: Ebay.be
   tags:
   - ebay
@@ -21,7 +21,7 @@ enl 0:
   - ebay
   - shopping
 enl 1:
-  url: http://www.benl.ebay.be//sch/i.html?_nkw=<query>
+  url: https://www.benl.ebay.be//sch/i.html?_nkw=<query>
   title: Ebay.be
   tags:
   - ebay
@@ -39,7 +39,7 @@ g 1:
   - arguments: amsterdam
     description: Google zoeken naar "amsterdam"
 zal 1:
-  url: http://www.zalando.be/catalogus/?q=<product>
+  url: https://www.zalando.be/catalogus/?q=<product>
   title: Zalando.be
   tags:
   - shopping

@@ -44,7 +44,7 @@ g 1:
   - arguments: madrid
     description: Buscar "madrid" con Google
 gdfv 2:
-  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Fuerteventura, España&daddr=<destination>, Fuerteventura, España
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Fuerteventura, España&daddr=<destination>, Fuerteventura, España
   title: Google Maps Directions (Routing), Fuerteventura
   tags:
   - fuerteventura
@@ -56,7 +56,7 @@ gdfv 2:
   - arguments: corralejo, morro jable
     description: Get a route from Corralejo to Morro Jable
 gdgc 2:
-  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Gran Canaria, España&daddr=<destination>, Gran Canaria, España
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Gran Canaria, España&daddr=<destination>, Gran Canaria, España
   title: Google Maps Directions (Routing), Gran Canaria
   tags:
   - google
@@ -68,7 +68,7 @@ gdgc 2:
   - arguments: las palmas, maspalomas
     description: Get a route from Las Palmas to Maspalomas
 gdlz 2:
-  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Lanzarote, España&daddr=<destination>, Lanzarote, España
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Lanzarote, España&daddr=<destination>, Lanzarote, España
   title: Google Maps Directions (Routing), Lanzarote
   tags:
   - google
@@ -80,7 +80,7 @@ gdlz 2:
   - arguments: arrecife, playa blanca
     description: Get a route from Arrecife to Playa Blanca
 gdtf 2:
-  url: http://maps.google.com/maps?hl=<$language>&saddr=<start>, Tenerife, España&daddr=<destination>, Tenerife, España
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Tenerife, España&daddr=<destination>, Tenerife, España
   title: Google Maps Directions (Routing), Tenerife
   tags:
   - google
@@ -166,7 +166,7 @@ wlp 1:
   title: Wallapop
   description: venta de productos de segunda mano
 zal 1:
-  url: http://www.zalando.es/catalogo/?q=<product>
+  url: https://www.zalando.es/catalogo/?q=<product>
   title: Zalando.es
   tags:
   - shopping

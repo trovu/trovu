@@ -230,7 +230,7 @@ olx 1:
   - arguments: smartfon
     description: szukaj "smartfon" w OLX
 pkp 2:
-  url: 'http://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&start=1&queryPageDisplayed=yes'
+  url: 'https://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
   tags:
   - pkp
@@ -244,7 +244,7 @@ pkp 2:
   - arguments: gdansk!, wroclaw!
     description: następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny
 pkp 3:
-  url: 'http://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&T=<czas: {type: time, output: HH:mm}>&start=1&queryPageDisplayed=yes'
+  url: 'https://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&T=<czas: {type: time, output: HH:mm}>&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
   tags:
   - pkp
@@ -254,7 +254,7 @@ pkp 3:
   - arguments: kutno, gniezno, 10
     description: połączenie z Kutna do Gniezna dzisiaj o godz. 10
 pkp 4:
-  url: 'http://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&T=<czas: {type: time, output: HH:mm}>&D=<data: {type: date, output: DD.MM.YYYY}>&start=1&queryPageDisplayed=yes'
+  url: 'https://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&T=<czas: {type: time, output: HH:mm}>&D=<data: {type: date, output: DD.MM.YYYY}>&start=1&queryPageDisplayed=yes'
   title: PKP rozkład jazdy
   tags:
   - pkp
@@ -274,7 +274,7 @@ tm 1:
   - arguments: tvn
     description: Szukaj programy TVN
 zal 1:
-  url: http://www.zalando.pl/katalog/?q=<produkt>
+  url: https://www.zalando.pl/katalog/?q=<produkt>
   title: Zalando.pl
   tags:
   - shopping

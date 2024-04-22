@@ -14,7 +14,7 @@ bibbs 1:
   - arguments: houellebecq
     description: Suche nach Werken von und über "houellebecq"
 campz 0:
-  url: http://www.campz.ch
+  url: https://www.campz.ch
   title: CAMPZ Schweiz
   tags:
   - adventure
@@ -54,7 +54,7 @@ digi 1:
   - electronics
   - shopping
 doit 1:
-  url: http://www.doitgarden.ch/de/search/?fh_search=<query>
+  url: https://www.doitgarden.ch/de/s?q=<Suche>
   title: Migros Do-it&Garden
   tags:
   - migros
@@ -159,7 +159,7 @@ gmzh 1:
       query: gm zh,<1>
     created: '2023-01-07'
 gps 1:
-  url: http://www.google.ch/products?hl=<$language>&q=<query>
+  url: https://www.google.ch/products?hl=<$language>&q=<query>
   title: Google Products (Schweiz)
   tags:
   - google

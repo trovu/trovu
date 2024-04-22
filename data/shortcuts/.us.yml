@@ -7,7 +7,7 @@ a 0:
   - is-affiliate
   - shopping
 a 1:
-  url: http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo-20
+  url: https://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo-20
   title: Amazon.com
   tags:
   - amazon
@@ -44,7 +44,7 @@ e 1:
   - arguments: smartphone
     description: Search for smartphones
 gmla 1:
-  url: http://maps.google.com/maps?hl=<$language>&q=<address>%2C%20Los%20Angeles%2C%20California
+  url: https://maps.google.com/maps?hl=<$language>&q=<address>%2C%20Los%20Angeles%2C%20California
   title: Google Maps Los Angeles
   tags:
   - google
@@ -53,7 +53,7 @@ gmla 1:
   - arguments: hollywood
     description: Show Hollywood on Google Maps
 gmnyc 1:
-  url: http://maps.google.com/maps?hl=<$language>&q=<address>%2C%20New%20York%20City%2C%20New%20York
+  url: https://maps.google.com/maps?hl=<$language>&q=<address>%2C%20New%20York%20City%2C%20New%20York
   title: Google Maps New York City
   tags:
   - google
@@ -62,7 +62,7 @@ gmnyc 1:
   - arguments: central park
     description: Show Central Park
 gmsf 1:
-  url: http://maps.google.com/maps?hl=<$language>&q=<address>%2C%20San%20Francisco%2C%20California
+  url: https://maps.google.com/maps?hl=<$language>&q=<address>%2C%20San%20Francisco%2C%20California
   title: Google Maps San Francisco
   tags:
   - google
@@ -72,7 +72,7 @@ gmsf 1:
   - arguments: golden gate bridge
     description: Show Golden Gate Bridge on Google Maps
 gps 1:
-  url: http://www.google.com/products?hl=<$language>&q=<query>
+  url: https://www.google.com/products?hl=<$language>&q=<query>
   title: Google Products (USA)
   tags:
   - google
