@@ -9195,7 +9195,7 @@ yai 1:
   - arguments: berlin
     description: Search images about "berlin"
 yandex 1:
-  url: http://yandex.com/yandsearch?text=<query>
+  url: https://yandex.com/yandsearch?text=<query>
   title: Yandex Web
   tags:
   - old
@@ -9225,7 +9225,7 @@ ye 0:
   - restaurants
   - yelp
 ye 1:
-  url: http://www.yelp.com/search?find_desc=<what>
+  url: https://www.yelp.com/search?find_desc=<what>
   title: Yelp
   tags:
   - food
@@ -9255,7 +9255,7 @@ yfa 1:
   tags:
   - old
 yfc 1:
-  url: http://finance.yahoo.com/echarts?s=<abbreviation>
+  url: https://finance.yahoo.com/echarts?s=<abbreviation>
   title: 'Yahoo Finance: Get quotes chart'
   tags:
   - old
@@ -9324,7 +9324,7 @@ yr 1:
   - arguments: Berlin
     description: Look up the weather in Berlin
 ys 1:
-  url: http://www.yasni.de/index.php?action=search&search=1&sh=&name=<query>&filter=Stichwort
+  url: https://www.yasni.de/index.php?action=search&search=1&sh=&name=<query>&filter=Stichwort
   title: Yasni Personensuche
   tags:
   - old
@@ -9355,19 +9355,19 @@ ytd 1:
     description: Search for "cartoon"
   showOnHome: 410
 yth 0:
-  url: http://www.youtube.com/feed/history
+  url: https://www.youtube.com/feed/history
   title: Youtube, my history
   tags:
   - video
   - youtube
 ytl 0:
-  url: http://www.youtube.com/my_liked_videos
+  url: https://www.youtube.com/playlist?list=LL
   title: Youtube, my liked videos
   tags:
   - video
   - youtube
 ytm 0:
-  url: http://music.youtube.com/
+  url: https://music.youtube.com/
   title: Youtube Music
   tags:
   - music
