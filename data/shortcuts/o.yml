@@ -7514,7 +7514,7 @@ tails 0:
   title: The amnesic incoginto live system, that aims to preserve your privacy and anonymity.
   removed: '2023-01-14'
 tat 2:
-  url: https://tatoeba.org/eng/sentences/search?to=<target language>&query=<query>
+  url: http://tatoeba.org/eng/sentences/search?to=<target language>&query=<query>
   title: Tatoeba search with specified target language
   description: Use 3-letter language code!
   tags:
@@ -7527,7 +7527,7 @@ tat 2:
   - arguments: ita, not at all
     description: search for Italian translations of the phrase "not at all"
 tat 3:
-  url: https://tatoeba.org/eng/sentences/search?from=<source_language>&to=<target_language>&query=<query>
+  url: http://tatoeba.org/eng/sentences/search?from=<source_language>&to=<target_language>&query=<query>
   title: Tatoeba search with specified source and target language
   description: Use 3-letter language codes!
   tags:
@@ -7554,7 +7554,7 @@ tav 1:
   - arguments: ghent
     description: search for travel info on Ghent
 taz 1:
-  url: https://www.google.com/search?hl=de&q=site%3Ataz.de+<query>
+  url: http://www.google.com/search?hl=de&q=site%3Ataz.de+<query>
   title: Taz Archiv
   tags:
   - old
@@ -7651,7 +7651,7 @@ ted 1:
   - arguments: pinker
     description: Search for talks of Steven Pinker
 teltarif 1:
-  url: https://www.teltarif.de/db/res.html?019x=0&kurz=ja&ve=1&takt=61&von=Analoganschluss&ziel=<Zielort>
+  url: http://www.teltarif.de/db/res.html?019x=0&kurz=ja&ve=1&takt=61&von=Analoganschluss&ziel=<Zielort>
   title: Teltarif.de
   tags:
   - old
@@ -7666,7 +7666,7 @@ tfm 1:
   tags:
   - old
 tg 1:
-  url: https://tagoo.ru/?search=<query>
+  url: http://tagoo.ru/?search=<query>
   title: Tagoo Music Search
   tags:
   - old
@@ -7783,7 +7783,7 @@ tinyurl 0:
   tags:
   - url
 tinyurl 1:
-  url: https://tinyurl.com/create.php?url=<url>
+  url: http://tinyurl.com/create.php?url=<url>
   title: TinyURL
   tags:
   - url
@@ -7808,7 +7808,7 @@ tl 1:
   - key: tl 1
     namespace: pka
 tldp 1:
-  url: https://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
+  url: http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
   title: The Linux Documentation Project
   tags:
   - old
@@ -7846,7 +7846,7 @@ to 1:
   - key: to 1
     namespace: pka
 topo 1:
-  url: https://torrentportal.com/torrents-search.php?search=<query>
+  url: http://torrentportal.com/torrents-search.php?search=<query>
   title: Torrent Portal
   tags:
   - old
@@ -7864,7 +7864,7 @@ tpb 1:
   - arguments: mozart
     description: Search for "mozart"
 tpba 1:
-  url: https://thepiratebay.org/search/<query>/0/99/100
+  url: http://thepiratebay.org/search/<query>/0/99/100
   title: The Pirate Bay, audio only
   tags:
   - torrent
@@ -7872,7 +7872,7 @@ tpba 1:
   - arguments: mozart
     description: Search for "mozart"
 tpbv 1:
-  url: https://thepiratebay.org/search/<query>/0/99/200
+  url: http://thepiratebay.org/search/<query>/0/99/200
   title: The Pirate Bay, video only
   tags:
   - torrent
@@ -7932,7 +7932,7 @@ tr 1:
   - key: tr 1
     namespace: pka
 trends 1:
-  url: https://www.google.com/trends?q=<query>
+  url: http://www.google.com/trends?q=<query>
   title: Google Trends
   tags:
   - old
@@ -8082,12 +8082,12 @@ ty 1:
   tags:
   - old
 tzt 1:
-  url: https://www.tagzania.com/tag/<tag>
+  url: http://www.tagzania.com/tag/<tag>
   title: Tagzania
   tags:
   - old
 tzu 1:
-  url: https://www.tagzania.com/user/<user>
+  url: http://www.tagzania.com/user/<user>
   title: Tagzania
   tags:
   - old
