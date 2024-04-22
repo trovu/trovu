@@ -7554,7 +7554,7 @@ tav 1:
   - arguments: ghent
     description: search for travel info on Ghent
 taz 1:
-  url: http://www.google.com/search?hl=de&q=site%3Ataz.de+<query>
+  url: https://www.google.com/search?hl=de&q=site%3Ataz.de+<query>
   title: Taz Archiv
   tags:
   - old
@@ -7790,7 +7790,7 @@ tl 1:
   - key: tl 1
     namespace: pka
 tldp 1:
-  url: http://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
+  url: https://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
   title: The Linux Documentation Project
   tags:
   - old
@@ -7841,7 +7841,7 @@ tpb 1:
   - arguments: mozart
     description: Search for "mozart"
 tpba 1:
-  url: http://thepiratebay.org/search/<query>/0/99/100
+  url: https://thepiratebay.org/search/<query>/0/99/100
   title: The Pirate Bay, audio only
   tags:
   - torrent
@@ -7849,7 +7849,7 @@ tpba 1:
   - arguments: mozart
     description: Search for "mozart"
 tpbv 1:
-  url: http://thepiratebay.org/search/<query>/0/99/200
+  url: https://thepiratebay.org/search/<query>/0/99/200
   title: The Pirate Bay, video only
   tags:
   - torrent
@@ -7909,7 +7909,7 @@ tr 1:
   - key: tr 1
     namespace: pka
 trends 1:
-  url: http://www.google.com/trends?q=<query>
+  url: https://www.google.com/trends?q=<query>
   title: Google Trends
   tags:
   - old
