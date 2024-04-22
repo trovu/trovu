@@ -9217,15 +9217,6 @@ yav 1:
   examples:
   - arguments: berlin
     description: Search videos about "berlin"
-ycc 3:
-  url: http://finance.yahoo.com/currency-converter/#from=<from code>;to=<to code>;amt=<amount>
-  title: Yahoo Currency converter
-  tags:
-  - currency
-  - finance
-  examples:
-  - arguments: usd,eur,1
-    description: Convert 1 US Dollar into Euros
 ye 0:
   url: https://www.yelp.com/
   title: Yelp
@@ -9271,14 +9262,6 @@ yfc 1:
 yfl 1:
   url: https://finance.yahoo.com/lookup?bypass=true&s=<company>
   title: Yahoo Finance Lookup
-yg 1:
-  url: http://groups.yahoo.com/group/<group>
-  title: Yahoo Groups
-  tags:
-  - yahoo
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
 ygi 1:
   url: https://www.yeggi.com/q/<argument_name>/
   title: Yeggi
@@ -9308,15 +9291,6 @@ yl 2:
   examples:
   - arguments: en, berlin
     description: search for English pages containing "berlin"
-ym 1:
-  url: http://maps.yahoo.com/#q1=<query>
-  title: Yahoo Maps
-  tags:
-  - maps
-  - yahoo
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
 ymail 0:
   url: https://login.yahoo.com/config/login_verify2?&.src=ym
   title: Yahoo Mail
@@ -9339,14 +9313,6 @@ yo 1:
   include:
   - key: yo 1
     namespace: pka
-ypr 0:
-  url: http://youpronounce.it/
-  title: YouPronounce.it
-  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
-  tags:
-  - language
-  - pronunciation
-  - youtube
 yr 1:
   url: https://yr-web-prod.we.yr.azure.nrk.cloud/nb/s%C3%B8k?q=<query>
   title: Yr weather report
