@@ -16,7 +16,7 @@ export default class Migrator {
     for (const namespace in data.shortcuts) {
       for (const key in data.shortcuts[namespace]) {
         // const [keyword, argCount] = key.split(' ');
-        if (key[0] != 'l') {
+        if (key[0] != 'z') {
           continue;
         }
         const args = [
