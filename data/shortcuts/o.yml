@@ -7650,11 +7650,6 @@ ted 1:
   examples:
   - arguments: pinker
     description: Search for talks of Steven Pinker
-teltarif 1:
-  url: http://www.teltarif.de/db/res.html?019x=0&kurz=ja&ve=1&takt=61&von=Analoganschluss&ziel=<Zielort>
-  title: Teltarif.de
-  tags:
-  - old
 tey 1:
   url: https://www.tineye.com/search?url=<url>
   title: TinEye
@@ -7663,11 +7658,6 @@ tey 1:
 tfm 1:
   url: https://www.transfermarkt.de/de/undefined/suche/ergebnis.html?quicksearch=<query>&x=0&y=0
   title: Transfermarkt.de
-  tags:
-  - old
-tg 1:
-  url: http://tagoo.ru/?search=<query>
-  title: Tagoo Music Search
   tags:
   - old
 th 0:
@@ -7782,14 +7772,6 @@ tinyurl 0:
   title: TinyURL
   tags:
   - url
-tinyurl 1:
-  url: http://tinyurl.com/create.php?url=<url>
-  title: TinyURL
-  tags:
-  - url
-  examples:
-  - arguments: google.de
-    description: Shorten "google.de"
 titulky 1:
   url: https://www.titulky.com/?Fulltext=<film>
   title: Titulky.com
@@ -7845,11 +7827,6 @@ to 1:
   include:
   - key: to 1
     namespace: pka
-topo 1:
-  url: http://torrentportal.com/torrents-search.php?search=<query>
-  title: Torrent Portal
-  tags:
-  - old
 tpb 0:
   url: https://thepiratebay.org/
   title: The Pirate Bay
@@ -8079,16 +8056,6 @@ ty 0:
 ty 1:
   url: https://twingly.com/search?q=<query>
   title: Twingly Search
-  tags:
-  - old
-tzt 1:
-  url: http://www.tagzania.com/tag/<tag>
-  title: Tagzania
-  tags:
-  - old
-tzu 1:
-  url: http://www.tagzania.com/user/<user>
-  title: Tagzania
   tags:
   - old
 ubdo 1:
