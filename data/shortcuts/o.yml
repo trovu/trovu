@@ -8533,7 +8533,7 @@ w 1:
     description: Wikipedia article about Berlin
   showOnHome: 610
 wa 0:
-  url: http://www.wolframalpha.com
+  url: https://www.wolframalpha.com
   title: WolframAlpha
   tags:
   - mathematics
@@ -8550,12 +8550,12 @@ wa 1:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
 wadoku 1:
-  url: http://www.wadoku.de/wadoku/search/<suchwort>
+  url: https://www.wadoku.de/wadoku/search/<suchwort>
   title: Wadoku suche
   tags:
   - old
 wam 1:
-  url: http://m.wolframalpha.com/input/?i=<query>
+  url: https://m.wolframalpha.com/input/?i=<query>
   title: WolframAlpha Mobile
   tags:
   - mathematics
@@ -8571,19 +8571,19 @@ watchz 1:
   tags:
   - old
 wb 0:
-  url: http://<$language>.wikibooks.org/
+  url: https://<$language>.wikibooks.org/
   title: Wikibooks
   tags:
   - copyleft
   - wiki
 wb 1:
-  url: http://<$language>.wikibooks.org/wiki/Special:Search?go=Article&search=<article>
+  url: https://<$language>.wikibooks.org/wiki/Special:Search?go=Article&search=<article>
   title: Wikibooks
   tags:
   - copyleft
   - wiki
 wbit 1:
-  url: http://www.woerterbuch.info/?query=<query>&s=dict&l=en
+  url: https://www.woerterbuch.info/?query=<query>&s=dict&l=en
   title: Woerterbuch.info
   tags:
   - old
@@ -8733,7 +8733,7 @@ wh 1:
   tags:
   - old
 whatis 0:
-  url: http://whatis.techtarget.com/
+  url: https://whatis.techtarget.com/
   title: What is? - Technical glossary
   tags:
   - glossary
@@ -8777,7 +8777,7 @@ wipr 0:
   - patent-law
   - patents
 wis 1:
-  url: http://www.woerterbuch.info/?query=<query>&s=thesaurus&dl=0&l=de&showlang=de
+  url: https://www.woerterbuch.info/?query=<query>&s=thesaurus&dl=0&l=de&showlang=de
   title: Woerterbuch.info
   tags:
   - old
@@ -8823,12 +8823,12 @@ wm 1:
   - arguments: berlin
     description: Go to Wikipedia article about Berlin
 wmob 0:
-  url: http://<$language>.m.wikipedia.org/
+  url: https://<$language>.m.wikipedia.org/
   title: Wikipedia Mobile Main Page
   tags:
   - old
 wmob 1:
-  url: http://<$language>.m.wikipedia.org/wiki?search=<query%>
+  url: https://<$language>.m.wikipedia.org/wiki?search=<query%>
   title: Wikipedia Mobile Fulltext Search
   tags:
   - old
@@ -8880,7 +8880,7 @@ wpp 0:
   - plugin
   - wordpress
 wpp 1:
-  url: http://wordpress.org/plugins/search.php?q=<query>
+  url: https://wordpress.org/plugins/search.php?q=<query>
   title: WordPress Plugin Directory
   tags:
   - blog
@@ -8907,14 +8907,14 @@ wpt 1:
   - arguments: bootstrap
     description: search for Themes related to Bootstrap
 wq 0:
-  url: http://<$language>.wikiquote.org/
+  url: https://<$language>.wikiquote.org/
   title: Wikiquote Main Page
   tags:
   - copyleft
   - quotes
   - wikiquote
 wq 1:
-  url: http://<$language>.wikiquote.org/wiki/Special:Search?go=Article&search=<article>
+  url: https://<$language>.wikiquote.org/wiki/Special:Search?go=Article&search=<article>
   title: Wikiquote Article Search
   tags:
   - copyleft
@@ -9018,19 +9018,19 @@ wwu 1:
   tags:
   - old
 www 1:
-  url: http://<query>
+  url: https://<query>
   title: Www
   tags:
   - old
 wy 0:
-  url: http://<$language>.wiktionary.org/
+  url: https://<$language>.wiktionary.org/
   title: Wiktionary Main Page
   tags:
   - language
   - wiki
   - wiktionary
 wy 1:
-  url: http://<$language>.wiktionary.org/wiki/Special:Search?go=Article&search=<article>
+  url: https://<$language>.wiktionary.org/wiki/Special:Search?go=Article&search=<article>
   title: Wiktionary
   tags:
   - language
