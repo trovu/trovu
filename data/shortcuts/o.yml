@@ -8090,7 +8090,7 @@ ubplanet 0:
   - linux
   - ubuntu
 ubu 1:
-  url: http://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query=<query>
+  url: https://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query=<query>
   title: Ubu.com
   tags:
   - old
@@ -8110,7 +8110,7 @@ ubugq 1:
   tags:
   - old
 ubuntu-packages 1:
-  url: http://packages.ubuntu.com/<package>
+  url: https://packages.ubuntu.com/<package>
   title: Ubuntu Packages
   tags:
   - old
@@ -8192,7 +8192,7 @@ ud 1:
   - arguments: wheelbo
     description: Look up "wheelbo" in the Urban Dictionary
 uesp 1:
-  url: http://www.uesp.net/wiki/Special:Search?search=<query>&go=Go&nsnum=0&redirs=1&searchtitles=1
+  url: https://www.uesp.net/wiki/Special:Search?search=<query>&go=Go&nsnum=0&redirs=1&searchtitles=1
   title: Unofficial Elder Scrolls Pages
   tags:
   - old
@@ -8228,7 +8228,7 @@ uima 0:
   tags:
   - old
 uima 1:
-  url: http://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fincubator.apache.org%2Fuima%2Fdownloads%2FreleaseDocs%2F2.3.0-incubating%2Fdocs%2Fapi%2F%20<query>&ie=utf-8
+  url: https://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fincubator.apache.org%2Fuima%2Fdownloads%2FreleaseDocs%2F2.3.0-incubating%2Fdocs%2Fapi%2F%20<query>&ie=utf-8
   title: UIMA API
   tags:
   - old
@@ -8259,7 +8259,7 @@ up 1:
   tags:
   - old
 ups 1:
-  url: http://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum=<tracking number>
+  url: https://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum=<tracking number>
   title: UPS tracking
   tags:
   - shipping
@@ -8333,7 +8333,7 @@ uz 1:
   - key: uz 1
     namespace: pka
 v 1:
-  url: http://vimeo.com/search?q=<query>
+  url: https://vimeo.com/search?q=<query>
   title: Vimeo
   tags:
   - old
@@ -8385,7 +8385,7 @@ vimeo 0:
   - video
   - vimeo
 vimeo 1:
-  url: http://vimeo.com/search?q=<query>
+  url: https://vimeo.com/search?q=<query>
   title: Vimeo
   tags:
   - video
