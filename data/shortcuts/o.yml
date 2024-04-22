@@ -8587,11 +8587,6 @@ wbit 1:
   title: Woerterbuch.info
   tags:
   - old
-wbk 1:
-  url: http://extsearch.worldbank.org/servlet/SiteSearchServlet?q=<query>
-  title: World Bank
-  tags:
-  - old
 wbm 1:
   url: 'https://web.archive.org/web/*/<url: {encoding: none}>'
   title: Wayback Machine
@@ -8600,11 +8595,6 @@ wbm 1:
   - archive
   - internet
   - web
-wbn 1:
-  url: http://germazope.uni-trier.de:8080/Projekte/WBB2009/StartSeite/startGlobalSearch?stichwort=<wort>
-  title: Wörterbuchnetz
-  tags:
-  - old
 wc 1:
   url: https://<$language>.wikipedia.org/wiki/Special:Contributions/<user>
   title: Wikipedia, User Contributions
@@ -8952,11 +8942,6 @@ ws 1:
   - copyleft
   - wikimedia
   - wikisource
-wseu 1:
-  url: http://watchseries.eu/search/<query>
-  title: Watch Series
-  tags:
-  - old
 wsl 0:
   url: https://wortschatz.uni-leipzig.de
   title: Wortschatz-Lexikon
@@ -9027,11 +9012,6 @@ ww 1:
   examples:
   - arguments: npov
     description: Search for "npov"
-wwk 1:
-  url: http://www.wowwiki.com/Special:Search?search=<query>&go=1
-  title: search WoWWiki
-  tags:
-  - old
 wwu 1:
   url: https://suchen.uni-muenster.de/de.cgi?q=<query>
   title: WWU
