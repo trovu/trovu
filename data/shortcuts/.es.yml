@@ -17,6 +17,19 @@ a 1:
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
+abc 0:
+  url: https://www.abc.es/
+  title: ABC
+  tags:
+  - noticias
+  - periódicos
+abc 1:
+  url: https://www.abc.es/archivo/buscador/?titulo=<query>&tipo=todos
+  include:
+    key: abc 0
+  examples:
+  - arguments: madrid
+    description: Buscar "madrid" en ABC
 e 0:
   url: https://www.ebay.es/?mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es
