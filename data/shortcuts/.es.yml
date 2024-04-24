@@ -133,6 +133,21 @@ mil 1:
     alternative:
       query: ma <1>
     created: '2023-01-11'
+mrc 0:
+  url: htts://www.marca.com/
+  title: Marca
+  tags:
+  - deportes
+  - noticias
+mrc 1:
+  url: https://www.google.com/search?hl=de&sitesearch=marca.com&q=<query>
+  title: Marca
+  tags:
+  - deportes
+  - noticias
+  examples:
+  - arguments: messi
+    description: Buscar "messi" en Marca
 titsa 2:
   url: https://www.google.com/maps?hl=<$language>&saddr=<origen>,%20Tenerife,+Espa%C3%B1a&daddr=<destino>,%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r
   title: Transportes Interurbanos de Tenerife
