@@ -1,4 +1,7 @@
 /** @module DataManager */
+import Logger from './Logger';
+import NamespaceFetcher from './NamespaceFetcher';
+import UrlProcessor from './UrlProcessor';
 import fs from 'fs';
 import jsyaml from 'js-yaml';
 
@@ -31,6 +34,7 @@ export default class DataManager {
   static write(data, options = {}) {
     options = this.getDefaultOptions(options);
     this.normalizeTags(data.shortcuts);
+    this.verifyShortcuts(data.shortcuts);
     DataManager.writeYmls(
       `${options.data}/${options.shortcuts}/`,
       data.shortcuts,
@@ -45,6 +49,21 @@ export default class DataManager {
     );
   }
 
+  static verifyShortcuts(dataShortcuts) {
+    const namespaceFetcher = new NamespaceFetcher({ logger: new Logger() });
+    for (const namespace of Object.keys(dataShortcuts)) {
+      const shortcuts = dataShortcuts[namespace];
+      for (const key in shortcuts) {
+        const shortcut = JSON.parse(JSON.stringify(shortcuts[key]));
+        [, shortcut.argumentCount] = key.split(' ');
+        if (!shortcut.url) continue;
+        shortcut.namespace = namespace;
+        shortcut.key = key;
+        shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
+        namespaceFetcher.verify(shortcut);
+      }
+    }
+  }
   /**
    * Normalize tags in every shortcut.
    * @param {Object} shortcuts by namespace
