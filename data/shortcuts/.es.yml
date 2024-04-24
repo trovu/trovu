@@ -34,6 +34,21 @@ e 1:
   examples:
   - arguments: smartphone
     description: Buscar "smartphone" en Ebay
+emd 0:
+  url: https://www.elmundo.es/
+  title: El Mundo
+  tags:
+  - noticias
+  - periódicos
+emd 1:
+  url: https://ariadna.elmundo.es/buscador/archivo.html?q=<query>
+  title: El Mundo
+  tags:
+  - noticias
+  - periódicos
+  examples:
+  - arguments: madrid
+    description: Buscar "madrid" en El Mundo
 g 1:
   url: https://www.google.es/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.es
