@@ -1,6 +1,6 @@
-/** @module Env */
+/** @module Logger */
 
-/** Set and remember the environment. */
+/** Logs errors and warnings. */
 
 export default class Logger {
   /**
