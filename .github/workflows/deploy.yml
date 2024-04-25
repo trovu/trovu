@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 335-the-opensearch-link-does-not-obey-the-configurl
   pull_request:
     branches:
       - master
