@@ -15,6 +15,9 @@ $title = 'Trovu: ';
 if (!empty($env['github'])) {
   $title .=  $env['github'];
 }
+else if (!empty($env['configUrl'])) {
+  $title .=  $env['configUrl'];
+}
 else {
   // Set fallback values.
   $env['language'] = $env['language'] ?? 'en';
