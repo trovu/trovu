@@ -67,6 +67,16 @@ tfl 3:
   - arguments: brixton, paddington, 10
     description: Search the next connection from Brixton to Paddington at 10:00
 tl 2:
+  deprecated:
+    alternative:
+      query: ttl <1>, <2>
+    created: '2024-04-25'
+tl 4:
+  deprecated:
+    alternative:
+      query: ttl <1>, <2>, <3>, <4>
+    created: '2024-04-25'
+ttl 2:
   url: 'https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/<from>/<to>/<$now: {output: DD/MM/YY/HH/mm}>/Leave%20After//////Leave%20After/1/0//'
   title: thetrainline.com
   tags:
@@ -75,7 +85,7 @@ tl 2:
   examples:
   - arguments: manchester, london
     description: Search for trains from Manchester to London
-tl 4:
+ttl 4:
   url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/<from>/<to>/<date>/<time>/Leave%20After//////Leave%20After/1/0//
   title: thetrainline.com
   tags:
