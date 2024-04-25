@@ -6788,6 +6788,22 @@ rblcheckapi 1:
   examples:
   - arguments: 127.0.0.1
     description: Check if 127.0.0.1 is on the RBL
+rdoc 0:
+  url: https://www.rdocumentation.org/
+  title: RDocumentation
+  tags:
+  - programming
+  - r
+  - statistics
+  examples:
+  - description: Go to homepage
+rdoc 1:
+  url: https://www.rdocumentation.org/search?q=<query>
+  include:
+    key: rdoc 0
+  examples:
+  - arguments: foo
+    description: Search RDocumentation for "foo"
 rea 0:
   url: https://www.rea-getraenke.de/index.php
   title: Rea Getränkemarkt
