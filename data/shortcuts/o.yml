@@ -6686,15 +6686,10 @@ qw 1:
   url: https://www.qwant.com/?q=<query>
   title: qwant search engine
 r 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=inurl%3Astat.ethz.ch%2FR-manual%20inurl%3A"<query>"
-  title: R Statistical Data Analysis Manual
-  tags:
-  - programming
-  - r
-  - statistics
-  examples:
-  - arguments: read.table
-    description: Show manual about "read.table"
+  deprecated:
+    alternative:
+      query: rman <1>
+    created: '2024-04-25'
 r/ 1:
   url: https://www.reddit.com/r/<subreddit>
   title: Reddit sub-reddit
@@ -6868,6 +6863,22 @@ rm 1:
   include:
   - key: rm 1
     namespace: pka
+rman 0:
+  url: https://stat.ethz.ch/R-manual/
+  title: R Statistical Data Analysis Manual
+  tags:
+  - programming
+  - r
+  - statistics
+  examples:
+  - description: Go to homepage
+rman 1:
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=inurl%3Astat.ethz.ch%2FR-manual%20inurl%3A"<query>"
+  include:
+    key: rman 0
+  examples:
+  - arguments: read.table
+    description: Show manual about "read.table"
 rmsk 0:
   url: https://www.rms-austria.at/service-center/kontakt/katrin-lacina/
   title: Rmsk
