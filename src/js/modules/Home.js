@@ -236,6 +236,9 @@ export default class Home {
    * Add Opensearch tag.
    */
   addLinkSearch() {
+    // Cannot use
+    // this.env.buildUrlParamStr();
+    // because populate() has not run yet.
     const params = new URLSearchParams(location.hash.substring(1));
 
     // Only keep relevant parameters.
