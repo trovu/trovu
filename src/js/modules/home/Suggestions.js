@@ -257,7 +257,6 @@ export default class Suggestions {
           tagSpan.style.cursor = 'pointer';
         });
         rightSpan.appendChild(tagSpan);
-        rightSpan.appendChild(document.createTextNode(' ')); // Add space after each tag
       });
     }
     descriptionAndTagsDiv.appendChild(rightSpan);
