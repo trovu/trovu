@@ -182,7 +182,7 @@ export default class Suggestions {
     // Create and append the title span
     const titleSpan = document.createElement('span');
     titleSpan.className = 'title';
-    titleSpan.textContent = suggestion.title;
+    titleSpan.textContent = suggestion.title || suggestion.url;
 
     if (this.hasTag(suggestion, 'needs-userscript')) {
       titleSpan.textContent += ' 🧩';
