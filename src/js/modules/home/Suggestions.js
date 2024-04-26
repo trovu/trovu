@@ -604,7 +604,8 @@ export default class Suggestions {
         continue;
       }
       const [extraNamespaceName, keyword] = QueryParser.getExtraNamespace(part);
-      if (extraNamespaceName) {
+      // If the extraNamespaceName actually exists, use it as a namespace filter.
+      if (extraNamespaceName && this.env.namespaceInfos[extraNamespaceName]) {
         filters.namespace = extraNamespaceName;
         remainingQueryParts.push(keyword);
         continue;
