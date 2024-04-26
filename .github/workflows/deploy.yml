@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 345-tags-too-close-on-homepage
   pull_request:
     branches:
       - master
