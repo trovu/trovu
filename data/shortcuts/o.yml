@@ -7546,7 +7546,7 @@ tav 0:
   examples:
   - description: Go to hompeage
 tav 1:
-  include: tra 0
+  include: tav 0
   url: https://www.tripadvisor.com/Search?q=<query>
   examples:
   - arguments: ghent
