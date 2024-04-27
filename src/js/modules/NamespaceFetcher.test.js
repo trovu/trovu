@@ -109,9 +109,7 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
     ).toEqual({
       name: 'johndoe',
       shortcuts: {
-        'example 0': {
-          url: 'https://example.com/',
-        },
+        'example 0': 'https://example.com/',
       },
     });
   });
