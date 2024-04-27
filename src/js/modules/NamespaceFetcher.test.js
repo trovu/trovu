@@ -114,6 +114,24 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
     });
   });
 });
+describe('NamespaceFetcher.processShortcuts', () => {
+  test('convertToObject', () => {
+    expect(
+      new NamespaceFetcher(new Env()).processShortcuts(
+        { 'foo 0': 'https://example.com/' },
+        'testNamespace',
+      ),
+    ).toEqual({ 'foo 0': { url: 'https://example.com/' } });
+  });
+  test('convertIncludeToObject', () => {
+    expect(
+      new NamespaceFetcher(new Env()).processShortcuts(
+        { 'foo 0': { include: 'bar 0' } },
+        'testNamespace',
+      ),
+    ).toEqual({ 'foo 0': { include: { key: 'bar 0' } } });
+  });
+});
 
 describe('NamespaceFetcher.addNamespaceInfo', () => {
   test('site', () => {
