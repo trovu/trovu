@@ -328,6 +328,16 @@ export default class NamespaceFetcher {
     return shortcut;
   }
 
+  convertIncludeToObject(include) {
+    if (typeof include === 'string') {
+      const key = include;
+      include = {
+        key: key,
+      };
+    }
+    return include;
+  }
+
   /**
    * Process all includes in the given namespace infos.
    * @param {object} namespaceInfos
