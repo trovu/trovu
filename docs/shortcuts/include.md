@@ -25,8 +25,7 @@ Additionally, there is:
 ```yaml
 en-de 1:
     title: Englisch-Deutsch (dict.com)
-    include:
-        key: de-en 1
+    include: de-en 1
     examples:
         tree: Deutsch-Übersetzung von "tree"
         baum: Englisch-Übersetzung von "baum"
@@ -42,8 +41,7 @@ This way, the shortcut URL needs to be maintained only once.
 
 ```yaml
 en 1:
-    include:
-        key: en-<$language> 1
+    include: en-<$language> 1
 ```
 
 If the language from settings is e.g. `de`, it includes from `en-de 1`. (And if `en-de 1` contains `include:`, it also includes from there, and so on.)
