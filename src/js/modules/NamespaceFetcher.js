@@ -338,6 +338,19 @@ export default class NamespaceFetcher {
     return include;
   }
 
+  processShortcutsAll(namespaceInfos) {
+    for (const namespaceName in namespaceInfos) {
+      const namespaceInfo = namespaceInfos[namespaceName];
+      if (namespaceInfo.shortcuts) {
+        namespaceInfo.shortcuts = this.processShortcuts(
+          namespaceInfo.shortcuts,
+        );
+      }
+      namespaceInfos[namespaceName] = namespaceInfo;
+    }
+    return namespaceInfos;
+  }
+
   /**
    * Process all includes in the given namespace infos.
    * @param {object} namespaceInfos
