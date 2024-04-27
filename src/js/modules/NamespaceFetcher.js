@@ -251,6 +251,11 @@ export default class NamespaceFetcher {
     shortcuts = this.checkKeySyntax(shortcuts, namespaceName);
     for (const key in shortcuts) {
       shortcuts[key] = this.convertToObject(shortcuts[key]);
+      if (shortcuts[key].include) {
+        shortcuts[key].include = this.convertIncludeToObject(
+          shortcuts[key].include,
+        );
+      }
       this.addNamespacesFromInclude(shortcuts[key]);
     }
     return shortcuts;
