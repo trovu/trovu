@@ -109,11 +109,27 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
     ).toEqual({
       name: 'johndoe',
       shortcuts: {
-        'example 0': {
-          url: 'https://example.com/',
-        },
+        'example 0': 'https://example.com/',
       },
     });
+  });
+});
+describe('NamespaceFetcher.processShortcuts', () => {
+  test('convertToObject', () => {
+    expect(
+      new NamespaceFetcher(new Env()).processShortcuts(
+        { 'foo 0': 'https://example.com/' },
+        'testNamespace',
+      ),
+    ).toEqual({ 'foo 0': { url: 'https://example.com/' } });
+  });
+  test('convertIncludeToObject', () => {
+    expect(
+      new NamespaceFetcher(new Env()).processShortcuts(
+        { 'foo 0': { include: 'bar 0' } },
+        'testNamespace',
+      ),
+    ).toEqual({ 'foo 0': { include: { key: 'bar 0' } } });
   });
 });
 

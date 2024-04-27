@@ -19,8 +19,7 @@ pv 0:
   - expect: <title>Pravopis
 pv 1:
   url: https://slovnik.aktuality.sk/pravopis/?q=<slovo>
-  include:
-    key: pv 0
+  include: pv 0
   examples:
   - arguments: strom
     description: Hladaj slovo "strom" v pravopisnom slovníku
@@ -38,8 +37,7 @@ syn 0:
   - expect: <title>Synonymický
 syn 1:
   url: https://slovnik.aktuality.sk/synonyma/?q=<slovo>
-  include:
-    key: syn 0
+  include: syn 0
   examples:
   - arguments: strom
     description: Hladaj slovo "strom" v synonymickom slovníku

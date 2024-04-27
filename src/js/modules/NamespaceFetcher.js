@@ -20,6 +20,7 @@ export default class NamespaceFetcher {
     );
     this.namespaceInfos = this.addNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
+    this.namespaceInfos = this.processShortcutsAll(this.namespaceInfos);
     this.namespaceInfos = this.processIncludeAll(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
     this.namespaceInfos = this.addInfoAll(this.namespaceInfos);
@@ -85,7 +86,7 @@ export default class NamespaceFetcher {
       namespaceInfo.url = namespace.url;
     }
     if (namespace.shortcuts) {
-      namespaceInfo.shortcuts = this.processShortcuts(namespace.shortcuts);
+      namespaceInfo.shortcuts = namespace.shortcuts;
     }
     if (!namespaceInfo.name && (namespaceInfo.url || namespaceInfo.shortcuts)) {
       this.env.logger.warning(
@@ -250,6 +251,11 @@ export default class NamespaceFetcher {
     shortcuts = this.checkKeySyntax(shortcuts, namespaceName);
     for (const key in shortcuts) {
       shortcuts[key] = this.convertToObject(shortcuts[key]);
+      if (shortcuts[key].include) {
+        shortcuts[key].include = this.convertIncludeToObject(
+          shortcuts[key].include,
+        );
+      }
       this.addNamespacesFromInclude(shortcuts[key]);
     }
     return shortcuts;
@@ -326,6 +332,29 @@ export default class NamespaceFetcher {
       };
     }
     return shortcut;
+  }
+
+  convertIncludeToObject(include) {
+    if (typeof include === 'string') {
+      const key = include;
+      include = {
+        key: key,
+      };
+    }
+    return include;
+  }
+
+  processShortcutsAll(namespaceInfos) {
+    for (const namespaceName in namespaceInfos) {
+      const namespaceInfo = namespaceInfos[namespaceName];
+      if (namespaceInfo.shortcuts) {
+        namespaceInfo.shortcuts = this.processShortcuts(
+          namespaceInfo.shortcuts,
+        );
+      }
+      namespaceInfos[namespaceName] = namespaceInfo;
+    }
+    return namespaceInfos;
   }
 
   /**

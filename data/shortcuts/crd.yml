@@ -1,9 +1,7 @@
 de 0:
-  include:
-    key: de-<$language> 0
+  include: de-<$language> 0
 de 1:
-  include:
-    key: de-<$language> 1
+  include: de-<$language> 1
 de-hr 0:
   url: https://www.crodict.com/german-croatian/
   title: Njemački-Hrvatski (CroDict)
@@ -26,11 +24,9 @@ de-hr 1:
   - arguments: stablo
     description: njemački prijevod od "stablo"
 en 0:
-  include:
-    key: en-<$language> 0
+  include: en-<$language> 0
 en 1:
-  include:
-    key: en-<$language> 1
+  include: en-<$language> 1
 en-hr 0:
   url: https://www.crodict.com/phrases/view?l=englisch-kroatisch
   title: Engleski-Hrvatski (CroDict)
@@ -53,19 +49,15 @@ en-hr 1:
   - arguments: stablo
     description: engleski prijevod od "stablo"
 hr 0:
-  include:
-    key: hr-<$language> 0
+  include: hr-<$language> 0
 hr 1:
-  include:
-    key: hr-<$language> 1
+  include: hr-<$language> 1
 hr-de 0:
   title: Kroatisch-Deutsch (CroDict)
-  include:
-    key: de-hr 0
+  include: de-hr 0
 hr-de 1:
   title: Kroatisch-Deutsch (CroDict)
-  include:
-    key: de-hr 1
+  include: de-hr 1
   examples:
   - arguments: stablo
     description: Deutsch-Übersetzung von "stablo"
@@ -73,12 +65,10 @@ hr-de 1:
     description: Kroatisch-Übersetzung von "baum"
 hr-en 0:
   title: Croatian-English (CroDict)
-  include:
-    key: en-hr 0
+  include: en-hr 0
 hr-en 1:
   title: Croatian-English (CroDict)
-  include:
-    key: en-hr 1
+  include: en-hr 1
   examples:
   - arguments: stablo
     description: English translation of "stablo"

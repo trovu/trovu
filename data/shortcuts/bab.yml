@@ -1,9 +1,7 @@
 ar 0:
-  include:
-    key: ar-<$language> 0
+  include: ar-<$language> 0
 ar 1:
-  include:
-    key: ar-<$language> 1
+  include: ar-<$language> 1
 ar-en 0:
   url: https://bab.la/dictionary/english-arabic/
   title: Arabic-English (bab.la)
@@ -26,11 +24,9 @@ ar-en 1:
   - arguments: tree
     description: Arabic translation of "tree"
 cs 0:
-  include:
-    key: cs-<$language> 0
+  include: cs-<$language> 0
 cs 1:
-  include:
-    key: cs-<$language> 1
+  include: cs-<$language> 1
 cs-en 0:
   url: https://bab.la/dictionary/english-czech/
   title: Czech-English (bab.la)
@@ -53,11 +49,9 @@ cs-en 1:
   - arguments: tree
     description: Czech translation of "tree"
 da 0:
-  include:
-    key: da-<$language> 0
+  include: da-<$language> 0
 da 1:
-  include:
-    key: da-<$language> 1
+  include: da-<$language> 1
 da-de 0:
   url: https://bab.la/woerterbuch/daenisch-deutsch/
   title: Dänisch-Deutsch (bab.la)
@@ -101,19 +95,15 @@ da-en 1:
   - arguments: tree
     description: Danish translation of "tree"
 de 0:
-  include:
-    key: de-<$language> 0
+  include: de-<$language> 0
 de 1:
-  include:
-    key: de-<$language> 1
+  include: de-<$language> 1
 de-da 0:
   title: Tysk-Dansk (bab.la)
-  include:
-    key: da-de 0
+  include: da-de 0
 de-da 1:
   title: Tysk-Dansk (bab.la)
-  include:
-    key: da-de 1
+  include: da-de 1
   examples:
   - arguments: baum
     description: dansk oversættelse af "baum"
@@ -330,38 +320,30 @@ de-tr 1:
   - arguments: ağaç
     description: '"ağaç" için Almanca çevirisi'
 el 0:
-  include:
-    key: el-<$language> 0
+  include: el-<$language> 0
 el 1:
-  include:
-    key: el-<$language> 1
+  include: el-<$language> 1
 el-en 0:
   title: Greek-English (bab.la)
-  include:
-    key: en-el 0
+  include: en-el 0
 el-en 1:
   title: Greek-English (bab.la)
-  include:
-    key: en-el 1
+  include: en-el 1
   examples:
   - arguments: δέντρο
     description: English translation of "δέντρο"
   - arguments: tree
     description: Greek translation of "tree"
 en 0:
-  include:
-    key: en-<$language> 0
+  include: en-<$language> 0
 en 1:
-  include:
-    key: en-<$language> 1
+  include: en-<$language> 1
 en-ar 0:
   title: الإنجليزية-العربية (bab.la)
-  include:
-    key: ar-en 0
+  include: ar-en 0
 en-ar 1:
   title: الإنجليزية-العربية (bab.la)
-  include:
-    key: ar-en 1
+  include: ar-en 1
   examples:
   - arguments: tree
     description: ترجمة العربية من "tree"
@@ -369,12 +351,10 @@ en-ar 1:
     description: ترجمة الإنجليزية من "شجرة"
 en-cs 0:
   title: Angličtina-Čeština (bab.la)
-  include:
-    key: cs-en 0
+  include: cs-en 0
 en-cs 1:
   title: Angličtina-Čeština (bab.la)
-  include:
-    key: cs-en 1
+  include: cs-en 1
   examples:
   - arguments: tree
     description: čeština překlad pro "tree"
@@ -382,12 +362,10 @@ en-cs 1:
     description: angličtina překlad pro "strom"
 en-da 0:
   title: Engelsk-Dansk (bab.la)
-  include:
-    key: da-en 0
+  include: da-en 0
 en-da 1:
   title: Engelsk-Dansk (bab.la)
-  include:
-    key: da-en 1
+  include: da-en 1
   examples:
   - arguments: tree
     description: dansk oversættelse af "tree"
@@ -395,12 +373,10 @@ en-da 1:
     description: engelsk oversættelse af "træ"
 en-de 0:
   title: Englisch-Deutsch (bab.la)
-  include:
-    key: de-en 0
+  include: de-en 0
 en-de 1:
   title: Englisch-Deutsch (bab.la)
-  include:
-    key: de-en 1
+  include: de-en 1
   examples:
   - arguments: tree
     description: Deutsch-Übersetzung von "tree"
@@ -995,38 +971,30 @@ en-zu 1:
   - arguments: isihlahla
     description: Ukuthathwa kwe i-English kuka "isihlahla"
 eo 0:
-  include:
-    key: eo-<$language> 0
+  include: eo-<$language> 0
 eo 1:
-  include:
-    key: eo-<$language> 1
+  include: eo-<$language> 1
 eo-en 0:
   title: Esperanto-English (bab.la)
-  include:
-    key: en-eo 0
+  include: en-eo 0
 eo-en 1:
   title: Esperanto-English (bab.la)
-  include:
-    key: en-eo 1
+  include: en-eo 1
   examples:
   - arguments: arbo
     description: English translation of "arbo"
   - arguments: tree
     description: Esperanto translation of "tree"
 es 0:
-  include:
-    key: es-<$language> 0
+  include: es-<$language> 0
 es 1:
-  include:
-    key: es-<$language> 1
+  include: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (bab.la)
-  include:
-    key: de-es 0
+  include: de-es 0
 es-de 1:
   title: Spanisch-Deutsch (bab.la)
-  include:
-    key: de-es 1
+  include: de-es 1
   examples:
   - arguments: árbol
     description: Deutsch-Übersetzung von "árbol"
@@ -1034,12 +1002,10 @@ es-de 1:
     description: Spanisch-Übersetzung von "baum"
 es-en 0:
   title: Spanish-English (bab.la)
-  include:
-    key: en-es 0
+  include: en-es 0
 es-en 1:
   title: Spanish-English (bab.la)
-  include:
-    key: en-es 1
+  include: en-es 1
   examples:
   - arguments: árbol
     description: English translation of "árbol"
@@ -1130,38 +1096,30 @@ es-qu 1:
   - arguments: kulli
     description: Español Simi-pi "kulli"ta tʼikray
 fi 0:
-  include:
-    key: fi-<$language> 0
+  include: fi-<$language> 0
 fi 1:
-  include:
-    key: fi-<$language> 1
+  include: fi-<$language> 1
 fi-en 0:
   title: Finnish-English (bab.la)
-  include:
-    key: en-fi 0
+  include: en-fi 0
 fi-en 1:
   title: Finnish-English (bab.la)
-  include:
-    key: en-fi 1
+  include: en-fi 1
   examples:
   - arguments: puu
     description: English translation of "puu"
   - arguments: tree
     description: Finnish translation of "tree"
 fr 0:
-  include:
-    key: fr-<$language> 0
+  include: fr-<$language> 0
 fr 1:
-  include:
-    key: fr-<$language> 1
+  include: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (bab.la)
-  include:
-    key: de-fr 0
+  include: de-fr 0
 fr-de 1:
   title: Französisch-Deutsch (bab.la)
-  include:
-    key: de-fr 1
+  include: de-fr 1
   examples:
   - arguments: arbre
     description: Deutsch-Übersetzung von "arbre"
@@ -1169,12 +1127,10 @@ fr-de 1:
     description: Französisch-Übersetzung von "baum"
 fr-en 0:
   title: French-English (bab.la)
-  include:
-    key: en-fr 0
+  include: en-fr 0
 fr-en 1:
   title: French-English (bab.la)
-  include:
-    key: en-fr 1
+  include: en-fr 1
   examples:
   - arguments: arbre
     description: English translation of "arbre"
@@ -1182,12 +1138,10 @@ fr-en 1:
     description: French translation of "tree"
 fr-es 0:
   title: Francés-Español (bab.la)
-  include:
-    key: es-fr 0
+  include: es-fr 0
 fr-es 1:
   title: Francés-Español (bab.la)
-  include:
-    key: es-fr 1
+  include: es-fr 1
   examples:
   - arguments: arbre
     description: Traducción al español de "arbre"
@@ -1215,76 +1169,60 @@ fr-it 1:
   - arguments: albero
     description: Traduzione in francese di "albero"
 hi 0:
-  include:
-    key: hi-<$language> 0
+  include: hi-<$language> 0
 hi 1:
-  include:
-    key: hi-<$language> 1
+  include: hi-<$language> 1
 hi-en 0:
   title: Hindi-English (bab.la)
-  include:
-    key: en-hi 0
+  include: en-hi 0
 hi-en 1:
   title: Hindi-English (bab.la)
-  include:
-    key: en-hi 1
+  include: en-hi 1
   examples:
   - arguments: पेड़
     description: English translation of "पेड़"
   - arguments: tree
     description: Hindi translation of "tree"
 hu 0:
-  include:
-    key: hu-<$language> 0
+  include: hu-<$language> 0
 hu 1:
-  include:
-    key: hu-<$language> 1
+  include: hu-<$language> 1
 hu-en 0:
   title: Hungarian-English (bab.la)
-  include:
-    key: en-hu 0
+  include: en-hu 0
 hu-en 1:
   title: Hungarian-English (bab.la)
-  include:
-    key: en-hu 1
+  include: en-hu 1
   examples:
   - arguments: fa
     description: English translation of "fa"
   - arguments: tree
     description: Hungarian translation of "tree"
 id 0:
-  include:
-    key: id-<$language> 0
+  include: id-<$language> 0
 id 1:
-  include:
-    key: id-<$language> 1
+  include: id-<$language> 1
 id-en 0:
   title: Indonesian-English (bab.la)
-  include:
-    key: en-id 0
+  include: en-id 0
 id-en 1:
   title: Indonesian-English (bab.la)
-  include:
-    key: en-id 1
+  include: en-id 1
   examples:
   - arguments: pohon
     description: English translation of "pohon"
   - arguments: tree
     description: Indonesian translation of "tree"
 it 0:
-  include:
-    key: it-<$language> 0
+  include: it-<$language> 0
 it 1:
-  include:
-    key: it-<$language> 1
+  include: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (bab.la)
-  include:
-    key: de-it 0
+  include: de-it 0
 it-de 1:
   title: Italienisch-Deutsch (bab.la)
-  include:
-    key: de-it 1
+  include: de-it 1
   examples:
   - arguments: albero
     description: Deutsch-Übersetzung von "albero"
@@ -1292,12 +1230,10 @@ it-de 1:
     description: Italienisch-Übersetzung von "baum"
 it-en 0:
   title: Italian-English (bab.la)
-  include:
-    key: en-it 0
+  include: en-it 0
 it-en 1:
   title: Italian-English (bab.la)
-  include:
-    key: en-it 1
+  include: en-it 1
   examples:
   - arguments: albero
     description: English translation of "albero"
@@ -1305,12 +1241,10 @@ it-en 1:
     description: Italian translation of "tree"
 it-es 0:
   title: Italiano-Español (bab.la)
-  include:
-    key: es-it 0
+  include: es-it 0
 it-es 1:
   title: Italiano-Español (bab.la)
-  include:
-    key: es-it 1
+  include: es-it 1
   examples:
   - arguments: albero
     description: Traducción al español de "albero"
@@ -1318,12 +1252,10 @@ it-es 1:
     description: Traducción al italiano de "árbol"
 it-fr 0:
   title: Italien-Français (bab.la)
-  include:
-    key: fr-it 0
+  include: fr-it 0
 it-fr 1:
   title: Italien-Français (bab.la)
-  include:
-    key: fr-it 1
+  include: fr-it 1
   examples:
   - arguments: albero
     description: Traduction en français de "albero"
@@ -1351,95 +1283,75 @@ it-ro 1:
   - arguments: copac
     description: Traducere în italiană pentru "copac"
 ja 0:
-  include:
-    key: ja-<$language> 0
+  include: ja-<$language> 0
 ja 1:
-  include:
-    key: ja-<$language> 1
+  include: ja-<$language> 1
 ja-en 0:
   title: Japanese-English (bab.la)
-  include:
-    key: en-ja 0
+  include: en-ja 0
 ja-en 1:
   title: Japanese-English (bab.la)
-  include:
-    key: en-ja 1
+  include: en-ja 1
   examples:
   - arguments: 木
     description: English translation of "木"
   - arguments: tree
     description: Japanese translation of "tree"
 ka 0:
-  include:
-    key: ka-<$language> 0
+  include: ka-<$language> 0
 ka 1:
-  include:
-    key: ka-<$language> 1
+  include: ka-<$language> 1
 ka-en 0:
   title: Georgian-English (bab.la)
-  include:
-    key: en-ka 0
+  include: en-ka 0
 ka-en 1:
   title: Georgian-English (bab.la)
-  include:
-    key: en-ka 1
+  include: en-ka 1
   examples:
   - arguments: ხე
     description: English translation of "ხე"
   - arguments: tree
     description: Georgian translation of "tree"
 ko 0:
-  include:
-    key: ko-<$language> 0
+  include: ko-<$language> 0
 ko 1:
-  include:
-    key: ko-<$language> 1
+  include: ko-<$language> 1
 ko-en 0:
   title: Korean-English (bab.la)
-  include:
-    key: en-ko 0
+  include: en-ko 0
 ko-en 1:
   title: Korean-English (bab.la)
-  include:
-    key: en-ko 1
+  include: en-ko 1
   examples:
   - arguments: 나무
     description: English translation of "나무"
   - arguments: tree
     description: Korean translation of "tree"
 ms 0:
-  include:
-    key: ms-<$language> 0
+  include: ms-<$language> 0
 ms 1:
-  include:
-    key: ms-<$language> 1
+  include: ms-<$language> 1
 ms-en 0:
   title: Malay-English (bab.la)
-  include:
-    key: en-ms 0
+  include: en-ms 0
 ms-en 1:
   title: Malay-English (bab.la)
-  include:
-    key: en-ms 1
+  include: en-ms 1
   examples:
   - arguments: pokok
     description: English translation of "pokok"
   - arguments: tree
     description: Malay translation of "tree"
 nl 0:
-  include:
-    key: nl-<$language> 0
+  include: nl-<$language> 0
 nl 1:
-  include:
-    key: nl-<$language> 1
+  include: nl-<$language> 1
 nl-de 0:
   title: Niederländisch-Deutsch (bab.la)
-  include:
-    key: de-nl 0
+  include: de-nl 0
 nl-de 1:
   title: Niederländisch-Deutsch (bab.la)
-  include:
-    key: de-nl 1
+  include: de-nl 1
   examples:
   - arguments: boom
     description: Deutsch-Übersetzung von "boom"
@@ -1447,50 +1359,40 @@ nl-de 1:
     description: Niederländisch-Übersetzung von "baum"
 nl-en 0:
   title: Dutch-English (bab.la)
-  include:
-    key: en-nl 0
+  include: en-nl 0
 nl-en 1:
   title: Dutch-English (bab.la)
-  include:
-    key: en-nl 1
+  include: en-nl 1
   examples:
   - arguments: boom
     description: English translation of "boom"
   - arguments: tree
     description: Dutch translation of "tree"
 no 0:
-  include:
-    key: no-<$language> 0
+  include: no-<$language> 0
 no 1:
-  include:
-    key: no-<$language> 1
+  include: no-<$language> 1
 no-en 0:
   title: Norwegian-English (bab.la)
-  include:
-    key: en-no 0
+  include: en-no 0
 no-en 1:
   title: Norwegian-English (bab.la)
-  include:
-    key: en-no 1
+  include: en-no 1
   examples:
   - arguments: tre
     description: English translation of "tre"
   - arguments: tree
     description: Norwegian translation of "tree"
 pl 0:
-  include:
-    key: pl-<$language> 0
+  include: pl-<$language> 0
 pl 1:
-  include:
-    key: pl-<$language> 1
+  include: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (bab.la)
-  include:
-    key: de-pl 0
+  include: de-pl 0
 pl-de 1:
   title: Polnisch-Deutsch (bab.la)
-  include:
-    key: de-pl 1
+  include: de-pl 1
   examples:
   - arguments: drzewo
     description: Deutsch-Übersetzung von "drzewo"
@@ -1498,12 +1400,10 @@ pl-de 1:
     description: Polnisch-Übersetzung von "baum"
 pl-en 0:
   title: Polish-English (bab.la)
-  include:
-    key: en-pl 0
+  include: en-pl 0
 pl-en 1:
   title: Polish-English (bab.la)
-  include:
-    key: en-pl 1
+  include: en-pl 1
   examples:
   - arguments: drzewo
     description: English translation of "drzewo"
@@ -1531,19 +1431,15 @@ pl-ru 1:
   - arguments: дерево
     description: Перевод на польский язык для "дерево"
 pt 0:
-  include:
-    key: pt-<$language> 0
+  include: pt-<$language> 0
 pt 1:
-  include:
-    key: pt-<$language> 1
+  include: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (bab.la)
-  include:
-    key: de-pt 0
+  include: de-pt 0
 pt-de 1:
   title: Portugiesisch-Deutsch (bab.la)
-  include:
-    key: de-pt 1
+  include: de-pt 1
   examples:
   - arguments: árvore
     description: Deutsch-Übersetzung von "árvore"
@@ -1551,12 +1447,10 @@ pt-de 1:
     description: Portugiesisch-Übersetzung von "baum"
 pt-en 0:
   title: Portuguese-English (bab.la)
-  include:
-    key: en-pt 0
+  include: en-pt 0
 pt-en 1:
   title: Portuguese-English (bab.la)
-  include:
-    key: en-pt 1
+  include: en-pt 1
   examples:
   - arguments: árvore
     description: English translation of "árvore"
@@ -1564,50 +1458,40 @@ pt-en 1:
     description: Portuguese translation of "tree"
 pt-es 0:
   title: Portugués-Español (bab.la)
-  include:
-    key: es-pt 0
+  include: es-pt 0
 pt-es 1:
   title: Portugués-Español (bab.la)
-  include:
-    key: es-pt 1
+  include: es-pt 1
   examples:
   - arguments: árvore
     description: Traducción al español de "árvore"
   - arguments: árbol
     description: Traducción al portugués de "árbol"
 qu 0:
-  include:
-    key: qu-<$language> 0
+  include: qu-<$language> 0
 qu 1:
-  include:
-    key: qu-<$language> 1
+  include: qu-<$language> 1
 qu-es 0:
   title: Quechua-Español (bab.la)
-  include:
-    key: es-qu 0
+  include: es-qu 0
 qu-es 1:
   title: Quechua-Español (bab.la)
-  include:
-    key: es-qu 1
+  include: es-qu 1
   examples:
   - arguments: kulli
     description: Traducción al español de "kulli"
   - arguments: árbol
     description: Traducción al quechua de "árbol"
 ro 0:
-  include:
-    key: ro-<$language> 0
+  include: ro-<$language> 0
 ro 1:
-  include:
-    key: ro-<$language> 1
+  include: ro-<$language> 1
 ro-en 0:
   title: Romanian-English (bab.la)
-  include:
-    key: en-ro 0
+  include: en-ro 0
 ro-en 1:
   title: Romanian-English (bab.la)
-  include:
-    key: en-ro 1
+  include: en-ro 1
   examples:
   - arguments: copac
     description: English translation of "copac"
@@ -1615,31 +1499,25 @@ ro-en 1:
     description: Romanian translation of "tree"
 ro-it 0:
   title: Rumeno-Italiano (bab.la)
-  include:
-    key: it-ro 0
+  include: it-ro 0
 ro-it 1:
   title: Rumeno-Italiano (bab.la)
-  include:
-    key: it-ro 1
+  include: it-ro 1
   examples:
   - arguments: copac
     description: Traduzione in italiano di "copac"
   - arguments: albero
     description: Traduzione in rumeno di "albero"
 ru 0:
-  include:
-    key: ru-<$language> 0
+  include: ru-<$language> 0
 ru 1:
-  include:
-    key: ru-<$language> 1
+  include: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (bab.la)
-  include:
-    key: de-ru 0
+  include: de-ru 0
 ru-de 1:
   title: Russisch-Deutsch (bab.la)
-  include:
-    key: de-ru 1
+  include: de-ru 1
   examples:
   - arguments: дерево
     description: Deutsch-Übersetzung von "дерево"
@@ -1647,12 +1525,10 @@ ru-de 1:
     description: Russisch-Übersetzung von "baum"
 ru-en 0:
   title: Russian-English (bab.la)
-  include:
-    key: en-ru 0
+  include: en-ru 0
 ru-en 1:
   title: Russian-English (bab.la)
-  include:
-    key: en-ru 1
+  include: en-ru 1
   examples:
   - arguments: дерево
     description: English translation of "дерево"
@@ -1660,31 +1536,25 @@ ru-en 1:
     description: Russian translation of "tree"
 ru-pl 0:
   title: Rosyjski-Polski (bab.la)
-  include:
-    key: pl-ru 0
+  include: pl-ru 0
 ru-pl 1:
   title: Rosyjski-Polski (bab.la)
-  include:
-    key: pl-ru 1
+  include: pl-ru 1
   examples:
   - arguments: дерево
     description: Tłumaczenie na język polski dla "дерево"
   - arguments: drzewo
     description: Tłumaczenie na język rosyjski dla "drzewo"
 sv 0:
-  include:
-    key: sv-<$language> 0
+  include: sv-<$language> 0
 sv 1:
-  include:
-    key: sv-<$language> 1
+  include: sv-<$language> 1
 sv-de 0:
   title: Schwedisch-Deutsch (bab.la)
-  include:
-    key: de-sv 0
+  include: de-sv 0
 sv-de 1:
   title: Schwedisch-Deutsch (bab.la)
-  include:
-    key: de-sv 1
+  include: de-sv 1
   examples:
   - arguments: träd
     description: Deutsch-Übersetzung von "träd"
@@ -1692,88 +1562,70 @@ sv-de 1:
     description: Schwedisch-Übersetzung von "baum"
 sv-en 0:
   title: Swedish-English (bab.la)
-  include:
-    key: en-sv 0
+  include: en-sv 0
 sv-en 1:
   title: Swedish-English (bab.la)
-  include:
-    key: en-sv 1
+  include: en-sv 1
   examples:
   - arguments: träd
     description: English translation of "träd"
   - arguments: tree
     description: Swedish translation of "tree"
 sw 0:
-  include:
-    key: sw-<$language> 0
+  include: sw-<$language> 0
 sw 1:
-  include:
-    key: sw-<$language> 1
+  include: sw-<$language> 1
 sw-en 0:
   title: Swahili-English (bab.la)
-  include:
-    key: en-sw 0
+  include: en-sw 0
 sw-en 1:
   title: Swahili-English (bab.la)
-  include:
-    key: en-sw 1
+  include: en-sw 1
   examples:
   - arguments: mti
     description: English translation of "mti"
   - arguments: tree
     description: Swahili translation of "tree"
 te 0:
-  include:
-    key: te-<$language> 0
+  include: te-<$language> 0
 te 1:
-  include:
-    key: te-<$language> 1
+  include: te-<$language> 1
 te-en 0:
   title: Telugu-English (bab.la)
-  include:
-    key: en-te 0
+  include: en-te 0
 te-en 1:
   title: Telugu-English (bab.la)
-  include:
-    key: en-te 1
+  include: en-te 1
   examples:
   - arguments: చెట్టు
     description: English translation of "చెట్టు"
   - arguments: tree
     description: Telugu translation of "tree"
 th 0:
-  include:
-    key: th-<$language> 0
+  include: th-<$language> 0
 th 1:
-  include:
-    key: th-<$language> 1
+  include: th-<$language> 1
 th-en 0:
   title: Thai-English (bab.la)
-  include:
-    key: en-th 0
+  include: en-th 0
 th-en 1:
   title: Thai-English (bab.la)
-  include:
-    key: en-th 1
+  include: en-th 1
   examples:
   - arguments: ต้นไม้
     description: English translation of "ต้นไม้"
   - arguments: tree
     description: Thai translation of "tree"
 tr 0:
-  include:
-    key: tr-<$language> 0
+  include: tr-<$language> 0
 tr 1:
-  include:
-    key: tr-<$language> 1
+  include: tr-<$language> 1
 tr-de 0:
   title: Türkisch-Deutsch (bab.la)
-  include:
-    key: de-tr 0
+  include: de-tr 0
 tr-de 1:
   title: Türkisch-Deutsch (bab.la)
-  include:
-    key: de-tr 1
+  include: de-tr 1
   examples:
   - arguments: ağaç
     description: Deutsch-Übersetzung von "ağaç"
@@ -1781,88 +1633,70 @@ tr-de 1:
     description: Türkisch-Übersetzung von "baum"
 tr-en 0:
   title: Turkish-English (bab.la)
-  include:
-    key: en-tr 0
+  include: en-tr 0
 tr-en 1:
   title: Turkish-English (bab.la)
-  include:
-    key: en-tr 1
+  include: en-tr 1
   examples:
   - arguments: ağaç
     description: English translation of "ağaç"
   - arguments: tree
     description: Turkish translation of "tree"
 ur 0:
-  include:
-    key: ur-<$language> 0
+  include: ur-<$language> 0
 ur 1:
-  include:
-    key: ur-<$language> 1
+  include: ur-<$language> 1
 ur-en 0:
   title: Urdu-English (bab.la)
-  include:
-    key: en-ur 0
+  include: en-ur 0
 ur-en 1:
   title: Urdu-English (bab.la)
-  include:
-    key: en-ur 1
+  include: en-ur 1
   examples:
   - arguments: درخت
     description: English translation of "درخت"
   - arguments: tree
     description: Urdu translation of "tree"
 vi 0:
-  include:
-    key: vi-<$language> 0
+  include: vi-<$language> 0
 vi 1:
-  include:
-    key: vi-<$language> 1
+  include: vi-<$language> 1
 vi-en 0:
   title: Vietnamese-English (bab.la)
-  include:
-    key: en-vi 0
+  include: en-vi 0
 vi-en 1:
   title: Vietnamese-English (bab.la)
-  include:
-    key: en-vi 1
+  include: en-vi 1
   examples:
   - arguments: cây
     description: English translation of "cây"
   - arguments: tree
     description: Vietnamese translation of "tree"
 zh 0:
-  include:
-    key: zh-<$language> 0
+  include: zh-<$language> 0
 zh 1:
-  include:
-    key: zh-<$language> 1
+  include: zh-<$language> 1
 zh-en 0:
   title: Chinese-English (bab.la)
-  include:
-    key: en-zh 0
+  include: en-zh 0
 zh-en 1:
   title: Chinese-English (bab.la)
-  include:
-    key: en-zh 1
+  include: en-zh 1
   examples:
   - arguments: 树
     description: English translation of "树"
   - arguments: tree
     description: Chinese translation of "tree"
 zu 0:
-  include:
-    key: zu-<$language> 0
+  include: zu-<$language> 0
 zu 1:
-  include:
-    key: zu-<$language> 1
+  include: zu-<$language> 1
 zu-en 0:
   title: Zulu-English (bab.la)
-  include:
-    key: en-zu 0
+  include: en-zu 0
 zu-en 1:
   title: Zulu-English (bab.la)
-  include:
-    key: en-zu 1
+  include: en-zu 1
   examples:
   - arguments: isihlahla
     description: English translation of "isihlahla"

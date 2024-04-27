@@ -221,4 +221,21 @@ export default class Migrator {
       DataManager.write(data, options);
     }
   }
+
+  migrateInclude() {
+    const data = DataManager.load();
+    for (const namespace in data.shortcuts) {
+      for (const key in data.shortcuts[namespace]) {
+        let shortcut = data.shortcuts[namespace][key];
+        if (
+          shortcut.include &&
+          shortcut.include.key &&
+          !shortcut.include.namespace
+        ) {
+          shortcut.include = shortcut.include.key;
+        }
+      }
+      DataManager.write(data);
+    }
+  }
 }

@@ -46,6 +46,7 @@ patternProperties:
         pattern: '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
       include:
         anyOf:
+          - type: string
           - type: array
             items:
               type: object

@@ -1,9 +1,7 @@
 da 0:
-  include:
-    key: da-<$language> 0
+  include: da-<$language> 0
 da 1:
-  include:
-    key: da-<$language> 1
+  include: da-<$language> 1
 da-eo 0:
   url: https://www.vortaro.dk/
   title: Dana-Esperanto (Dansk↔Esperanto ordbog)
@@ -26,19 +24,15 @@ da-eo 1:
   - arguments: arbo
     description: dana traduko de "arbo"
 eo 0:
-  include:
-    key: eo-<$language> 0
+  include: eo-<$language> 0
 eo 1:
-  include:
-    key: eo-<$language> 1
+  include: eo-<$language> 1
 eo-da 0:
   title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
-  include:
-    key: da-eo 0
+  include: da-eo 0
 eo-da 1:
   title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
-  include:
-    key: da-eo 1
+  include: da-eo 1
   examples:
   - arguments: arbo
     description: dansk oversættelse af "arbo"

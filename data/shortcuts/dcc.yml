@@ -1,9 +1,7 @@
 bg 0:
-  include:
-    key: bg-<$language> 0
+  include: bg-<$language> 0
 bg 1:
-  include:
-    key: bg-<$language> 1
+  include: bg-<$language> 1
 bg-de 0:
   url: https://debg.dict.cc/
   title: Bulgarisch-Deutsch (dict.cc)
@@ -26,11 +24,9 @@ bg-de 1:
   - arguments: baum
     description: Bulgarisch-Übersetzung von "baum"
 cs 0:
-  include:
-    key: cs-<$language> 0
+  include: cs-<$language> 0
 cs 1:
-  include:
-    key: cs-<$language> 1
+  include: cs-<$language> 1
 cs-de 0:
   url: https://decs.dict.cc/
   title: Tschechisch-Deutsch (dict.cc)
@@ -53,11 +49,9 @@ cs-de 1:
   - arguments: baum
     description: Tschechisch-Übersetzung von "baum"
 da 0:
-  include:
-    key: da-<$language> 0
+  include: da-<$language> 0
 da 1:
-  include:
-    key: da-<$language> 1
+  include: da-<$language> 1
 da-de 0:
   url: https://deda.dict.cc/
   title: Dänisch-Deutsch (dict.cc)
@@ -80,19 +74,15 @@ da-de 1:
   - arguments: baum
     description: Dänisch-Übersetzung von "baum"
 de 0:
-  include:
-    key: de-<$language> 0
+  include: de-<$language> 0
 de 1:
-  include:
-    key: de-<$language> 1
+  include: de-<$language> 1
 de-bg 0:
   title: Немски-Български (dict.cc)
-  include:
-    key: bg-de 0
+  include: bg-de 0
 de-bg 1:
   title: Немски-Български (dict.cc)
-  include:
-    key: bg-de 1
+  include: bg-de 1
   examples:
   - arguments: baum
     description: български превод за "baum"
@@ -100,12 +90,10 @@ de-bg 1:
     description: немски превод за "дърво"
 de-cs 0:
   title: Němčina-Čeština (dict.cc)
-  include:
-    key: cs-de 0
+  include: cs-de 0
 de-cs 1:
   title: Němčina-Čeština (dict.cc)
-  include:
-    key: cs-de 1
+  include: cs-de 1
   examples:
   - arguments: baum
     description: čeština překlad pro "baum"
@@ -113,12 +101,10 @@ de-cs 1:
     description: němčina překlad pro "strom"
 de-da 0:
   title: Tysk-Dansk (dict.cc)
-  include:
-    key: da-de 0
+  include: da-de 0
 de-da 1:
   title: Tysk-Dansk (dict.cc)
-  include:
-    key: da-de 1
+  include: da-de 1
   examples:
   - arguments: baum
     description: dansk oversættelse af "baum"
@@ -503,38 +489,30 @@ de-tr 1:
   - arguments: ağaç
     description: '"ağaç" için Almanca çevirisi'
 el 0:
-  include:
-    key: el-<$language> 0
+  include: el-<$language> 0
 el 1:
-  include:
-    key: el-<$language> 1
+  include: el-<$language> 1
 el-de 0:
   title: Griechisch-Deutsch (dict.cc)
-  include:
-    key: de-el 0
+  include: de-el 0
 el-de 1:
   title: Griechisch-Deutsch (dict.cc)
-  include:
-    key: de-el 1
+  include: de-el 1
   examples:
   - arguments: δέντρο
     description: Deutsch-Übersetzung von "δέντρο"
   - arguments: baum
     description: Griechisch-Übersetzung von "baum"
 en 0:
-  include:
-    key: en-<$language> 0
+  include: en-<$language> 0
 en 1:
-  include:
-    key: en-<$language> 1
+  include: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (dict.cc)
-  include:
-    key: de-en 0
+  include: de-en 0
 en-de 1:
   title: Englisch-Deutsch (dict.cc)
-  include:
-    key: de-en 1
+  include: de-en 1
   examples:
   - arguments: tree
     description: Deutsch-Übersetzung von "tree"
@@ -562,152 +540,120 @@ en-nl 1:
   - arguments: boom
     description: Engels-vertaling van "boom"
 es 0:
-  include:
-    key: es-<$language> 0
+  include: es-<$language> 0
 es 1:
-  include:
-    key: es-<$language> 1
+  include: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (dict.cc)
-  include:
-    key: de-es 0
+  include: de-es 0
 es-de 1:
   title: Spanisch-Deutsch (dict.cc)
-  include:
-    key: de-es 1
+  include: de-es 1
   examples:
   - arguments: árbol
     description: Deutsch-Übersetzung von "árbol"
   - arguments: baum
     description: Spanisch-Übersetzung von "baum"
 fi 0:
-  include:
-    key: fi-<$language> 0
+  include: fi-<$language> 0
 fi 1:
-  include:
-    key: fi-<$language> 1
+  include: fi-<$language> 1
 fi-de 0:
   title: Finnisch-Deutsch (dict.cc)
-  include:
-    key: de-fi 0
+  include: de-fi 0
 fi-de 1:
   title: Finnisch-Deutsch (dict.cc)
-  include:
-    key: de-fi 1
+  include: de-fi 1
   examples:
   - arguments: puu
     description: Deutsch-Übersetzung von "puu"
   - arguments: baum
     description: Finnisch-Übersetzung von "baum"
 fr 0:
-  include:
-    key: fr-<$language> 0
+  include: fr-<$language> 0
 fr 1:
-  include:
-    key: fr-<$language> 1
+  include: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (dict.cc)
-  include:
-    key: de-fr 0
+  include: de-fr 0
 fr-de 1:
   title: Französisch-Deutsch (dict.cc)
-  include:
-    key: de-fr 1
+  include: de-fr 1
   examples:
   - arguments: arbre
     description: Deutsch-Übersetzung von "arbre"
   - arguments: baum
     description: Französisch-Übersetzung von "baum"
 hu 0:
-  include:
-    key: hu-<$language> 0
+  include: hu-<$language> 0
 hu 1:
-  include:
-    key: hu-<$language> 1
+  include: hu-<$language> 1
 hu-de 0:
   title: Ungarisch-Deutsch (dict.cc)
-  include:
-    key: de-hu 0
+  include: de-hu 0
 hu-de 1:
   title: Ungarisch-Deutsch (dict.cc)
-  include:
-    key: de-hu 1
+  include: de-hu 1
   examples:
   - arguments: fa
     description: Deutsch-Übersetzung von "fa"
   - arguments: baum
     description: Ungarisch-Übersetzung von "baum"
 is 0:
-  include:
-    key: is-<$language> 0
+  include: is-<$language> 0
 is 1:
-  include:
-    key: is-<$language> 1
+  include: is-<$language> 1
 is-de 0:
   title: Isländisch-Deutsch (dict.cc)
-  include:
-    key: de-is 0
+  include: de-is 0
 is-de 1:
   title: Isländisch-Deutsch (dict.cc)
-  include:
-    key: de-is 1
+  include: de-is 1
   examples:
   - arguments: tré
     description: Deutsch-Übersetzung von "tré"
   - arguments: baum
     description: Isländisch-Übersetzung von "baum"
 it 0:
-  include:
-    key: it-<$language> 0
+  include: it-<$language> 0
 it 1:
-  include:
-    key: it-<$language> 1
+  include: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (dict.cc)
-  include:
-    key: de-it 0
+  include: de-it 0
 it-de 1:
   title: Italienisch-Deutsch (dict.cc)
-  include:
-    key: de-it 1
+  include: de-it 1
   examples:
   - arguments: albero
     description: Deutsch-Übersetzung von "albero"
   - arguments: baum
     description: Italienisch-Übersetzung von "baum"
 la 0:
-  include:
-    key: la-<$language> 0
+  include: la-<$language> 0
 la 1:
-  include:
-    key: la-<$language> 1
+  include: la-<$language> 1
 la-de 0:
   title: Latein-Deutsch (dict.cc)
-  include:
-    key: de-la 0
+  include: de-la 0
 la-de 1:
   title: Latein-Deutsch (dict.cc)
-  include:
-    key: de-la 1
+  include: de-la 1
   examples:
   - arguments: arbor
     description: Deutsch-Übersetzung von "arbor"
   - arguments: baum
     description: Latein-Übersetzung von "baum"
 nl 0:
-  include:
-    key: nl-<$language> 0
+  include: nl-<$language> 0
 nl 1:
-  include:
-    key: nl-<$language> 1
+  include: nl-<$language> 1
 nl-de 0:
   title: Niederländisch-Deutsch (dict.cc)
-  include:
-    key: de-nl 0
+  include: de-nl 0
 nl-de 1:
   title: Niederländisch-Deutsch (dict.cc)
-  include:
-    key: de-nl 1
+  include: de-nl 1
   examples:
   - arguments: boom
     description: Deutsch-Übersetzung von "boom"
@@ -715,164 +661,130 @@ nl-de 1:
     description: Niederländisch-Übersetzung von "baum"
 nl-en 0:
   title: Dutch-English (dict.cc)
-  include:
-    key: en-nl 0
+  include: en-nl 0
 nl-en 1:
   title: Dutch-English (dict.cc)
-  include:
-    key: en-nl 1
+  include: en-nl 1
   examples:
   - arguments: boom
     description: English translation of "boom"
   - arguments: tree
     description: Dutch translation of "tree"
 no 0:
-  include:
-    key: no-<$language> 0
+  include: no-<$language> 0
 no 1:
-  include:
-    key: no-<$language> 1
+  include: no-<$language> 1
 no-de 0:
   title: Norwegisch-Deutsch (dict.cc)
-  include:
-    key: de-no 0
+  include: de-no 0
 no-de 1:
   title: Norwegisch-Deutsch (dict.cc)
-  include:
-    key: de-no 1
+  include: de-no 1
   examples:
   - arguments: tre
     description: Deutsch-Übersetzung von "tre"
   - arguments: baum
     description: Norwegisch-Übersetzung von "baum"
 pl 0:
-  include:
-    key: pl-<$language> 0
+  include: pl-<$language> 0
 pl 1:
-  include:
-    key: pl-<$language> 1
+  include: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (dict.cc)
-  include:
-    key: de-pl 0
+  include: de-pl 0
 pl-de 1:
   title: Polnisch-Deutsch (dict.cc)
-  include:
-    key: de-pl 1
+  include: de-pl 1
   examples:
   - arguments: drzewo
     description: Deutsch-Übersetzung von "drzewo"
   - arguments: baum
     description: Polnisch-Übersetzung von "baum"
 pt 0:
-  include:
-    key: pt-<$language> 0
+  include: pt-<$language> 0
 pt 1:
-  include:
-    key: pt-<$language> 1
+  include: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (dict.cc)
-  include:
-    key: de-pt 0
+  include: de-pt 0
 pt-de 1:
   title: Portugiesisch-Deutsch (dict.cc)
-  include:
-    key: de-pt 1
+  include: de-pt 1
   examples:
   - arguments: árvore
     description: Deutsch-Übersetzung von "árvore"
   - arguments: baum
     description: Portugiesisch-Übersetzung von "baum"
 ro 0:
-  include:
-    key: ro-<$language> 0
+  include: ro-<$language> 0
 ro 1:
-  include:
-    key: ro-<$language> 1
+  include: ro-<$language> 1
 ro-de 0:
   title: Rumänisch-Deutsch (dict.cc)
-  include:
-    key: de-ro 0
+  include: de-ro 0
 ro-de 1:
   title: Rumänisch-Deutsch (dict.cc)
-  include:
-    key: de-ro 1
+  include: de-ro 1
   examples:
   - arguments: copac
     description: Deutsch-Übersetzung von "copac"
   - arguments: baum
     description: Rumänisch-Übersetzung von "baum"
 ru 0:
-  include:
-    key: ru-<$language> 0
+  include: ru-<$language> 0
 ru 1:
-  include:
-    key: ru-<$language> 1
+  include: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (dict.cc)
-  include:
-    key: de-ru 0
+  include: de-ru 0
 ru-de 1:
   title: Russisch-Deutsch (dict.cc)
-  include:
-    key: de-ru 1
+  include: de-ru 1
   examples:
   - arguments: дерево
     description: Deutsch-Übersetzung von "дерево"
   - arguments: baum
     description: Russisch-Übersetzung von "baum"
 sk 0:
-  include:
-    key: sk-<$language> 0
+  include: sk-<$language> 0
 sk 1:
-  include:
-    key: sk-<$language> 1
+  include: sk-<$language> 1
 sk-de 0:
   title: Slowakisch-Deutsch (dict.cc)
-  include:
-    key: de-sk 0
+  include: de-sk 0
 sk-de 1:
   title: Slowakisch-Deutsch (dict.cc)
-  include:
-    key: de-sk 1
+  include: de-sk 1
   examples:
   - arguments: stromček
     description: Deutsch-Übersetzung von "stromček"
   - arguments: baum
     description: Slowakisch-Übersetzung von "baum"
 sv 0:
-  include:
-    key: sv-<$language> 0
+  include: sv-<$language> 0
 sv 1:
-  include:
-    key: sv-<$language> 1
+  include: sv-<$language> 1
 sv-de 0:
   title: Schwedisch-Deutsch (dict.cc)
-  include:
-    key: de-sv 0
+  include: de-sv 0
 sv-de 1:
   title: Schwedisch-Deutsch (dict.cc)
-  include:
-    key: de-sv 1
+  include: de-sv 1
   examples:
   - arguments: träd
     description: Deutsch-Übersetzung von "träd"
   - arguments: baum
     description: Schwedisch-Übersetzung von "baum"
 tr 0:
-  include:
-    key: tr-<$language> 0
+  include: tr-<$language> 0
 tr 1:
-  include:
-    key: tr-<$language> 1
+  include: tr-<$language> 1
 tr-de 0:
   title: Türkisch-Deutsch (dict.cc)
-  include:
-    key: de-tr 0
+  include: de-tr 0
 tr-de 1:
   title: Türkisch-Deutsch (dict.cc)
-  include:
-    key: de-tr 1
+  include: de-tr 1
   examples:
   - arguments: ağaç
     description: Deutsch-Übersetzung von "ağaç"

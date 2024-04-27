@@ -1,9 +1,7 @@
 de 0:
-  include:
-    key: de-<$language> 0
+  include: de-<$language> 0
 de 1:
-  include:
-    key: de-<$language> 1
+  include: de-<$language> 1
 de-en 0:
   url: https://dict.leo.org/german-english/
   title: German-English (leo.org)
@@ -173,19 +171,15 @@ de-zh 1:
   - arguments: 树
     description: 德文 的"树"翻译
 en 0:
-  include:
-    key: en-<$language> 0
+  include: en-<$language> 0
 en 1:
-  include:
-    key: en-<$language> 1
+  include: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (leo.org)
-  include:
-    key: de-en 0
+  include: de-en 0
 en-de 1:
   title: Englisch-Deutsch (leo.org)
-  include:
-    key: de-en 1
+  include: de-en 1
   examples:
   - arguments: tree
     description: Deutsch-Übersetzung von "tree"
@@ -255,19 +249,15 @@ en-ru 1:
   - arguments: дерево
     description: Перевод на английский язык для "дерево"
 es 0:
-  include:
-    key: es-<$language> 0
+  include: es-<$language> 0
 es 1:
-  include:
-    key: es-<$language> 1
+  include: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (leo.org)
-  include:
-    key: de-es 0
+  include: de-es 0
 es-de 1:
   title: Spanisch-Deutsch (leo.org)
-  include:
-    key: de-es 1
+  include: de-es 1
   examples:
   - arguments: árbol
     description: Deutsch-Übersetzung von "árbol"
@@ -275,12 +265,10 @@ es-de 1:
     description: Spanisch-Übersetzung von "baum"
 es-en 0:
   title: Spanish-English (leo.org)
-  include:
-    key: en-es 0
+  include: en-es 0
 es-en 1:
   title: Spanish-English (leo.org)
-  include:
-    key: en-es 1
+  include: en-es 1
   examples:
   - arguments: árbol
     description: English translation of "árbol"
@@ -308,19 +296,15 @@ es-pt 1:
   - arguments: árvore
     description: Tradução em espanhol de "árvore"
 fr 0:
-  include:
-    key: fr-<$language> 0
+  include: fr-<$language> 0
 fr 1:
-  include:
-    key: fr-<$language> 1
+  include: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (leo.org)
-  include:
-    key: de-fr 0
+  include: de-fr 0
 fr-de 1:
   title: Französisch-Deutsch (leo.org)
-  include:
-    key: de-fr 1
+  include: de-fr 1
   examples:
   - arguments: arbre
     description: Deutsch-Übersetzung von "arbre"
@@ -328,69 +312,55 @@ fr-de 1:
     description: Französisch-Übersetzung von "baum"
 fr-en 0:
   title: French-English (leo.org)
-  include:
-    key: en-fr 0
+  include: en-fr 0
 fr-en 1:
   title: French-English (leo.org)
-  include:
-    key: en-fr 1
+  include: en-fr 1
   examples:
   - arguments: arbre
     description: English translation of "arbre"
   - arguments: tree
     description: French translation of "tree"
 it 0:
-  include:
-    key: it-<$language> 0
+  include: it-<$language> 0
 it 1:
-  include:
-    key: it-<$language> 1
+  include: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (leo.org)
-  include:
-    key: de-it 0
+  include: de-it 0
 it-de 1:
   title: Italienisch-Deutsch (leo.org)
-  include:
-    key: de-it 1
+  include: de-it 1
   examples:
   - arguments: albero
     description: Deutsch-Übersetzung von "albero"
   - arguments: baum
     description: Italienisch-Übersetzung von "baum"
 pl 0:
-  include:
-    key: pl-<$language> 0
+  include: pl-<$language> 0
 pl 1:
-  include:
-    key: pl-<$language> 1
+  include: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (leo.org)
-  include:
-    key: de-pl 0
+  include: de-pl 0
 pl-de 1:
   title: Polnisch-Deutsch (leo.org)
-  include:
-    key: de-pl 1
+  include: de-pl 1
   examples:
   - arguments: drzewo
     description: Deutsch-Übersetzung von "drzewo"
   - arguments: baum
     description: Polnisch-Übersetzung von "baum"
 pt 0:
-  include:
-    key: pt-<$language> 0
+  include: pt-<$language> 0
 pt 1:
-  include:
-    key: pt-<$language> 1
+  include: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (leo.org)
-  include:
-    key: de-pt 0
+  include: de-pt 0
 pt-de 1:
   title: Portugiesisch-Deutsch (leo.org)
-  include:
-    key: de-pt 1
+  include: de-pt 1
   examples:
   - arguments: árvore
     description: Deutsch-Übersetzung von "árvore"
@@ -398,31 +368,25 @@ pt-de 1:
     description: Portugiesisch-Übersetzung von "baum"
 pt-es 0:
   title: Portugués-Español (leo.org)
-  include:
-    key: es-pt 0
+  include: es-pt 0
 pt-es 1:
   title: Portugués-Español (leo.org)
-  include:
-    key: es-pt 1
+  include: es-pt 1
   examples:
   - arguments: árvore
     description: Traducción al español de "árvore"
   - arguments: árbol
     description: Traducción al portugués de "árbol"
 ru 0:
-  include:
-    key: ru-<$language> 0
+  include: ru-<$language> 0
 ru 1:
-  include:
-    key: ru-<$language> 1
+  include: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (leo.org)
-  include:
-    key: de-ru 0
+  include: de-ru 0
 ru-de 1:
   title: Russisch-Deutsch (leo.org)
-  include:
-    key: de-ru 1
+  include: de-ru 1
   examples:
   - arguments: дерево
     description: Deutsch-Übersetzung von "дерево"
@@ -430,31 +394,25 @@ ru-de 1:
     description: Russisch-Übersetzung von "baum"
 ru-en 0:
   title: Russian-English (leo.org)
-  include:
-    key: en-ru 0
+  include: en-ru 0
 ru-en 1:
   title: Russian-English (leo.org)
-  include:
-    key: en-ru 1
+  include: en-ru 1
   examples:
   - arguments: дерево
     description: English translation of "дерево"
   - arguments: tree
     description: Russian translation of "tree"
 zh 0:
-  include:
-    key: zh-<$language> 0
+  include: zh-<$language> 0
 zh 1:
-  include:
-    key: zh-<$language> 1
+  include: zh-<$language> 1
 zh-de 0:
   title: Chinesisch-Deutsch (leo.org)
-  include:
-    key: de-zh 0
+  include: de-zh 0
 zh-de 1:
   title: Chinesisch-Deutsch (leo.org)
-  include:
-    key: de-zh 1
+  include: de-zh 1
   examples:
   - arguments: 树
     description: Deutsch-Übersetzung von "树"

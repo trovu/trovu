@@ -11,8 +11,7 @@
   - expect: <title>0180-Telefonbuch
 0180 1:
   url: https://www.0180.info/suche.html?s=<Suche>
-  include:
-    key: 0180 0
+  include: 0180 0
   examples:
   - arguments: 01805-033144
     description: Suche nach alternativen Nummern zu 01805-033144
@@ -32,8 +31,7 @@ a 0:
   - expect: <title>Amazon.de
 a 1:
   url: https://www.amazon.de/s?k=<Suche>
-  include:
-    key: a 0
+  include: a 0
   examples:
   - arguments: goethe
     description: Suche auf Amazon.at nach "goethe"
@@ -52,8 +50,7 @@ aa 0:
   - expect: <title>Reise, Sicherheit, Gesundheit
 aa 1:
   url: https://www.google.com/search?q=site%3Aauswaertiges-amt.de%20ReiseUndSicherheit%20<Land>&btnI=&sourceid=navclient&gfns=1
-  include:
-    key: aa 0
+  include: aa 0
   examples:
   - arguments: türkei
     description: Zeige Reise- und Sicherheitshinweise des Auswärtigen Amtes zur Türkei
@@ -100,8 +97,7 @@ atn 1:
   examples:
   - arguments: fernseher
     description: Suche nach Fernsehern
-  include:
-    key: atn 0
+  include: atn 0
   tests:
   - arguments: fernseher
     expect: <title>Fernseher
@@ -116,8 +112,7 @@ aw 0:
   - expect: <title>abgeordnetenwatch.de
 aw 1:
   url: https://www.abgeordnetenwatch.de/profile?politician_search_keys=<Politiker oder Suchbegriff>
-  include:
-    key: aw 0
+  include: aw 0
   examples:
   - arguments: meier
     description: Search Abgeordnetenwatch for "meier"
@@ -146,8 +141,7 @@ bbb 0:
   - description: Gehe zur Startseite
 bbb 2:
   url: https://www.bbbike.de/cgi-bin/bbbike.cgi?start=<Start>&via=&ziel=<Ziel>
-  include:
-    key: bbb 0
+  include: bbb 0
   examples:
   - arguments: alexanderplatz, zoo
     description: Zeige Fahrradroute von Alexanderplatz zum Zoo
@@ -161,8 +155,7 @@ bex 0:
   - description: Gehe zur Startseite
 bex 1:
   url: https://bahn.expert/<Bahnhof>
-  include:
-    key: bex 0
+  include: bex 0
   examples:
   - arguments: berlin
     description: Abfahrtstafel von Berlin Hbf
@@ -175,8 +168,7 @@ bhf 0:
   - description: Gehe zur Startseite
 bhf 1:
   url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query=<bahnhof>
-  include:
-    key: bhf 0
+  include: bhf 0
   examples:
   - arguments: berlin zoo
     description: Search Bahnhofsauskunft for "berlin zoo"
@@ -195,8 +187,7 @@ bhnt 0:
   - description: Gehe zur Startseite
 bhnt 1:
   url: https://github.com/search?q=repo%3Aberlin-hack-and-tell%2Fbhnt.c-base.org%20<Suche>
-  include:
-    key: bhnt 0
+  include: bhnt 0
   examples:
   - arguments: php
     description: Suche nach Talks über PHP
@@ -213,8 +204,7 @@ bhs 0:
   - expect: <title>BAUHAUS
 bhs 1:
   url: https://www.bauhaus.info/suche/produkte?text=<Suche>
-  include:
-    key: bhs 0
+  include: bhs 0
   examples:
   - arguments: schrauben
     description: Suche nach Schrauben
@@ -235,8 +225,7 @@ bibfu 0:
   - expect: <title>Universitätsbibliothek
 bibfu 1:
   url: https://fu-berlin.primo.exlibrisgroup.com/discovery/search?institution=FUB&vid=49KOBV_FUB:FUB&tab=FUB_CDI&mode=Basic&backFromPreferences=true&search_scope=FUB_CDI&displayMode=full&bulkSize=10&highlight=true&dum=true&displayField=all&pcAvailabiltyMode=false&fromLocation=188&query=any,contains,<Suche>
-  include:
-    key: bibfu 0
+  include: bibfu 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
@@ -253,8 +242,7 @@ bibgvk 0:
   - expect: <title>GVK - Gemeinsamer Verbundkatalog
 bibgvk 1:
   url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<Suche>
-  include:
-    key: bibgvk 0
+  include: bibgvk 0
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
@@ -274,8 +262,7 @@ bibhal 0:
   - expect: Stadtbibliothek Halle[\s\S]*</title>
 bibhal 1:
   url: https://katalog.halle.de/Mediensuche?search=<Suche>
-  include:
-    key: bibhal 0
+  include: bibhal 0
   examples:
   - arguments: Unterleuten
     description: Suche nach "Unterleuten"
@@ -295,8 +282,7 @@ bibhbz 0:
   - expect: DigiBib</title>
 bibhbz 1:
   url: https://nrw.digibib.net/search/hbzvk/list?q-al=<Suche>
-  include:
-    key: bibhbz 0
+  include: bibhbz 0
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
@@ -317,8 +303,7 @@ bibka 0:
   - expect: <title>KIT-Bibliothek
 bibka 1:
   url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=ka&input-charset=utf-8&title=Bibliotheksportal+Karlsruhe+%3A+Ergebnisanzeige&head=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fheader.html&footer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Ffooter.html&css=none&spacer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fspacer.html&target=_blank&olix_returnTo=%2F%2Fbibliotheksportal-karlsruhe.de%2F&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&kataloge=BLB_OPAC&kataloge=STABIKA&kataloge=KIT&kataloge=HSMUSIK_KA&kataloge=HSB&kataloge=MERKUR_KA&kataloge=AKBILDKUENSTE_KA&kataloge=BGH_OPAC&kataloge=BVG_OPAC&kataloge=KUNST_BADLAMUSEUM&kataloge=BISMARCK_KA&kataloge=EV_OBERKIRCHENRAT&kataloge=LBB&kataloge=MELANCHTON&kataloge=SCHEFFEL&kataloge=RELPAED_INST&kataloge=KUNST_KUHAKA&kataloge=ZKM&ref=direct&client-js=yes
-  include:
-    key: bibka 0
+  include: bibka 0
   examples:
   - arguments: goethe
     description: Suche nach Goethe
@@ -339,8 +324,7 @@ bibkit 0:
   - expect: <title>KIT-Bibliothek
 bibkit 1:
   url: https://services.bibliothek.kit.edu/primo/start.php?query=<Suche>
-  include:
-    key: bibkit 0
+  include: bibkit 0
   examples:
   - arguments: xml
     description: Search for books about XML
@@ -356,8 +340,7 @@ bibkobv 0:
   - description: Gehe zur Startseite
 bibkobv 1:
   url: https://portal.kobv.de/simpleSearch.do?index=internal&plv=2&sortCrit=score&sortOrder=desc&query=<Suche>
-  include:
-    key: bibkobv 0
+  include: bibkobv 0
   examples:
   - arguments: goethe
     description: Search Kooperativer Bibliotheksverbund Berlin-Brandenburg for "goethe"
@@ -373,8 +356,7 @@ bibma 0:
   - description: Gehe zur Startseite
 bibma 1:
   url: https://primo.bib.uni-mannheim.de/primo-explore/search?query=any,contains,<Suche>&tab=default_tab&search_scope=MAN_ALMA&vid=MAN_UB&mode=Basic
-  include:
-    key: bibma 0
+  include: bibma 0
   examples:
   - arguments: xml
     description: Suche nach Büchern über XML
@@ -390,8 +372,7 @@ bibmlu 0:
   - description: Gehe zur Startseite
 bibmlu 1:
   url: https://opac.lbs-halle.gbv.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&SRT=RLV&TRM=<Suche>
-  include:
-    key: bibmlu 0
+  include: bibmlu 0
   examples:
   - arguments: minix
     description: Search Uni Halle library for "minix"
@@ -407,8 +388,7 @@ bibmr 0:
   - description: Gehe zur Startseite
 bibmr 1:
   url: https://opac.ub.uni-marburg.de/DB=1/LNG=DU/SID=374f05b4-ca/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  include:
-    key: bibmr 0
+  include: bibmr 0
   examples:
   - arguments: goethe
     description: Suche nach Goethe
@@ -423,8 +403,7 @@ bibswb 0:
   - description: Gehe zur Startseite
 bibswb 1:
   url: https://swb.boss.bsz-bw.de/Search/Results?lookfor=<Suche>
-  include:
-    key: bibswb 0
+  include: bibswb 0
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
@@ -440,8 +419,7 @@ bibtub 0:
   - description: Gehe zur Startseite
 bibtub 1:
   url: https://tu-berlin.hosted.exlibrisgroup.com/primo-explore/search?tab=tub_all&search_scope=TUB_ALL&sortby=rank&vid=TUB&lang=de_DE&offset=0&query=any,contains,<Suche>
-  include:
-    key: bibtub 0
+  include: bibtub 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
@@ -457,15 +435,13 @@ bibup 0:
   - description: Gehe zur Startseite
 bibup 1:
   url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  include:
-    key: bibup 0
+  include: bibup 0
   examples:
   - arguments: goethe
     description: Suche nach "goethe"
 bibup 2:
   url: https://opac.ub.uni-potsdam.de/DB=1/SET=1/TTL=1/CMD?ACT=SRCHM&=Suchen&MATCFILTER=Y&MATCSET=Y&NOSCAN=Y&PARSE_MNEMONICS=N&PARSE_OPWORDS=N&PARSE_OLDSETS=N&ACT0=SRCH&IKT0=1016&TRM0=&ACT1=*&IKT1=5041&TRM1=&ACT2=*&IKT2=1004&TRM2=<Autor>&ADI_JVU=<Jahr>
-  include:
-    key: bibup 0
+  include: bibup 0
   examples:
   - arguments: meier, 2020
     description: Suche nach Büchern von Autoren namens "Meier" aus dem Jahr 2020
@@ -483,8 +459,7 @@ bkat 0:
   - description: Gehe zur Startseite
 bkat 1:
   url: https://bkat.wikinaut.de/?q=<Suche>
-  include:
-    key: bkat 0
+  include: bkat 0
   examples:
   - arguments: parken
     description: Suche nach Vergehen zum Thema "Parken".
@@ -498,15 +473,13 @@ bls 0:
   - description: Gehe zur Startseite
 bls 2:
   url: 'https://www.busliniensuche.de/suche?From=<Start: {type: city}>&To=<Ziel: {type: city}>&When=<$now: {output: YYYY-MM-DD}>&Passengers=1'
-  include:
-    key: bls 0
+  include: bls 0
   examples:
   - arguments: berlin, bremen
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen
 bls 3:
   url: 'https://www.busliniensuche.de/suche?From=<Start: {type: city}>&To=<Ziel: {type: city}>&When=<Datum: {type: date, output: YYYY-MM-DD}>&Passengers=1'
-  include:
-    key: bls 0
+  include: bls 0
   examples:
   - arguments: berlin, bremen, 28
     description: Suche nach Fernbusverbindungen von Berlin nach Bremen am 28. dieses Monats
@@ -517,8 +490,7 @@ blz 0:
   - description: Gehe zur Startseite
 blz 1:
   url: https://www.abfragen.de/finanzen3.asp?ort=<Ort/PLZ>
-  include:
-    key: blz 0
+  include: blz 0
   examples:
   - arguments: berlin
     description: Bankleitzahlen der Banken in Berlin
@@ -533,8 +505,7 @@ bol 0:
   - description: Gehe zur Startseite
 bol 1:
   url: https://www.bol.de/shop/bch_start_startseite/suche/?&ZANOX_PARTNER_PARAMETER_LABEL=ZANOX_PARTNER_PARAMETER_WERT&sq=<Suche>&x=-8&y=-9&zUserID=979254&zanpid=1802156177828978688
-  include:
-    key: bol 0
+  include: bol 0
   examples:
   - arguments: goethe
     description: Suche nach "goethe" auf Bol.de
@@ -550,8 +521,7 @@ bpo 0:
   - description: Gehe zur Startseite
 bpo 1:
   url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/'
-  include:
-    key: bpo 0
+  include: bpo 0
   examples:
   - arguments: fr
     description: Konzerte am kommenden Freitag
@@ -566,8 +536,7 @@ bsvg 0:
   - description: Gehe zur Startseite
 bsvg 2:
   url: https://www.bsvg.net/fahrplan.html?itdLPxx_transpCompany=bsvag&language=de&odvMacroBSVAG=true&qqueryMacroBSVAG=true&name_origin=<Start>&name_destination=<Ziel>
-  include:
-    key: bsvg 0
+  include: bsvg 0
   examples:
   - arguments: Ludwigstraße, Siekgraben
     description: Verbindung von Ludwigstraße nach Siekgraben
@@ -645,8 +614,7 @@ bvb 0:
   - description: Gehe zur Startseite
 bvb 1:
   url: https://bvb-new-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,<Suche>&tab=all_tab&search_scope=all_scope&vid=49BVB_VU1&lang=de_DE&offset=0&fromRedirectFilter=true
-  include:
-    key: bvb 0
+  include: bvb 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
@@ -661,36 +629,31 @@ bvg 0:
   - description: Gehe zur Startseite
 bvg 2:
   url: https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&start=1
-  include:
-    key: bvg 0
+  include: bvg 0
   examples:
   - arguments: zoo!, frohnau
     description: Nächste Verbindung vom Zoo nach Frohnau
 bvg 3:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&time=<Abfahrtszeit: {type: time}>&start=1'
-  include:
-    key: bvg 0
+  include: bvg 0
   examples:
   - arguments: zoo!, frohnau, 20:00
     description: Verbindung vom Zoo nach Frohnau heute um 20 Uhr
 bvg 4:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?S=<Start>&Z=<Ziel>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  include:
-    key: bvg 0
+  include: bvg 0
   examples:
   - arguments: zoo!, frohnau, 20:00, 27.10.
     description: Verbindung vom Zoo nach Frohnau am 27.10. um 20 Uhr
 bvgan 3:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S=<Start>&Z=<Ziel>&time=<Ankunftszeit: {type: time}>&start=1'
-  include:
-    key: bvg 0
+  include: bvg 0
   examples:
   - arguments: zoo!, frohnau, 21
     description: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr
 bvgan 4:
   url: 'https://www.bvg.de/de/verbindungen/verbindungssuche?timeSel=arrive&S=<Start>&Z=<Ziel>&time=<Ankunftszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  include:
-    key: bvg 0
+  include: bvg 0
   examples:
   - arguments: zoo!, frohnau, 21, 27.10.
     description: Nächste Verbindung vom Zoo nach Frohnau mit Ankunft um 21 Uhr am 27.10.
@@ -705,8 +668,7 @@ conrad 0:
   - description: Gehe zur Startseite
 conrad 1:
   url: https://www.conrad.de/de/search.html?search=<Artikel>
-  include:
-    key: conrad 0
+  include: conrad 0
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
@@ -721,8 +683,7 @@ cys 0:
   - description: Gehe zur Startseite
 cys 1:
   url: https://www.cyberport.de/?EVENT=itemsearch&query=<Produkt>
-  include:
-    key: cys 0
+  include: cys 0
   examples:
   - arguments: macbook
     description: Suche nach Macbooks
@@ -741,38 +702,31 @@ db 1:
   examples:
   - arguments: berlin hbf
     description: Verspätungen / aktuelle Abfahrten in Berlin Hbf
-  include:
-    key: db 0
+  include: db 0
 db 2:
-  include:
-    key: dbm 2
+  include: dbm 2
   showOnHome: 700
 db 3:
-  include:
-    key: dbm 3
+  include: dbm 3
 db 4:
-  include:
-    key: dbm 4
+  include: dbm 4
 dbb 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare'
   title: Deutsche Bahn (Bestpreis)
   examples:
   - arguments: köln, münchen, 30.11.
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
-  include:
-    key: db 0
+  include: db 0
   showOnHome: 710
 dbm 0:
   url: https://mobile.bahn.de/
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
-  include:
-    key: db 0
+  include: db 0
   examples:
   - description: Gehe zur Startseite
 dbm 2:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
-  include:
-    key: dbm 0
+  include: dbm 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
@@ -786,45 +740,39 @@ dbm 3:
   examples:
   - arguments: berlin, hamburg, 10
     description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
-  include:
-    key: dbm 0
+  include: dbm 0
 dbm 4:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
-  include:
-    key: dbm 0
+  include: dbm 0
 dbmn 2:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
-  include:
-    key: dbm 0
+  include: dbm 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
 dbmn 3:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
-  include:
-    key: dbm 0
+  include: dbm 0
   examples:
   - arguments: berlin, hamburg, 10
     description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
 dbmn 4:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
-  include:
-    key: dbm 0
+  include: dbm 0
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
 dbn 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
-  include:
-    key: dbm 0
+  include: dbm 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Bahn-Verbindung von Berlin nach Hamburg
@@ -835,8 +783,7 @@ dbn 2:
 dbn 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
-  include:
-    key: db 0
+  include: db 0
   examples:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
@@ -846,13 +793,11 @@ dbn 4:
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
-  include:
-    key: db 0
+  include: db 0
 dbt 0:
   url: https://reiseauskunft.bahn.de/bin/query.exe/dl
   title: Deutsche Bahn Fahrplanauskunft, Textversion
-  include:
-    key: db 0
+  include: db 0
   examples:
   - description: Gehe zur Startseite
 dbt 2:
@@ -861,48 +806,42 @@ dbt 2:
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
-  include:
-    key: dbt 0
+  include: dbt 0
 dbt 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
   examples:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
-  include:
-    key: dbt 0
+  include: dbt 0
 dbt 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
-  include:
-    key: dbt 0
+  include: dbt 0
 dbtn 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
-  include:
-    key: dbt 0
+  include: dbt 0
 dbtn 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
-  include:
-    key: dbt 0
+  include: dbt 0
 dbtn 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
-  include:
-    key: dbt 0
+  include: dbt 0
 dejure 0:
   url: https://dejure.org/
   title: Dejure.org Gesetze
@@ -912,8 +851,7 @@ dejure 0:
   - description: Gehe zur Startseite
 dejure 1:
   url: https://dejure.org/cgi-bin/suche?Suchenach=<Suche>
-  include:
-    key: dejure 0
+  include: dejure 0
   examples:
   - arguments: gg
     description: Search Dejure.org Gesetze for "gg"
@@ -926,8 +864,7 @@ denic 0:
   - description: Gehe zur Startseite
 denic 1:
   url: https://webwhois.denic.de/?query=<domain>
-  include:
-    key: denic 0
+  include: denic 0
   examples:
   - arguments: google
     description: show the owner of the domain google.de
@@ -941,8 +878,7 @@ dhl 0:
   - description: Gehe zur Startseite
 dhl 1:
   url: https://www.dhl.de/de/privatkunden/dhl-sendungsverfolgung.html?piececode=<Sendungsnummer>
-  include:
-    key: dhl 0
+  include: dhl 0
   examples:
   - arguments: 340434325968897100
     description: Verfolge Sendung mit der Nr. 00340434325968897098
@@ -962,8 +898,7 @@ dlf 0:
   - description: Gehe zur Startseite
 dlf 1:
   url: https://www.deutschlandfunk.de/suche?drsearch%3AsearchText=<Suche>
-  include:
-    key: dlf 0
+  include: dlf 0
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
@@ -977,15 +912,13 @@ doe 0:
   - description: Gehe zur Startseite
 doe 1:
   url: https://www.dasoertliche.de/?zvo_ok=&plz=&quarter=&district=&ciid=&ph=<Nummer>&kgs=&buab=&zbuab=&form_name=search_invkk
-  include:
-    key: doe 0
+  include: doe 0
   examples:
   - arguments: '1805996633'
     description: Suche nach Inhaber der Nummer 01805996633
 doe 2:
   url: https://www2.dasoertliche.de/Controller?form_name=search_nat&kw=<Name>&ci=<Ort>
-  include:
-    key: doe 0
+  include: doe 0
   examples:
   - arguments: meier, dresden
     description: Suche Telefonnummern für "Meier" in Dresden
@@ -996,8 +929,7 @@ duden 0:
   - description: Gehe zur Startseite
 duden 1:
   url: https://www.duden.de/suchen/dudenonline/<Suche>
-  include:
-    key: duden 0
+  include: duden 0
   examples:
   - arguments: baum
     description: Suche nach "baum"
@@ -1012,8 +944,7 @@ e 0:
   - description: Gehe zur Startseite
 e 1:
   url: https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<Suche>&_sacat=0&mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
-  include:
-    key: e 0
+  include: e 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
@@ -1066,8 +997,7 @@ farnell 0:
   - description: Gehe zur Startseite
 farnell 1:
   url: https://de.farnell.com/search?st=<Suche>&gs=true
-  include:
-    key: farnell 0
+  include: farnell 0
   examples:
   - arguments: switch
     description: Farnell Deutschland search for switch
@@ -1078,8 +1008,7 @@ faz 0:
   - description: Gehe zur Startseite
 faz 1:
   url: https://www.faz.net/suche/?query=<Suche>
-  include:
-    key: faz 0
+  include: faz 0
   examples:
   - arguments: berlin
     description: Suche nach Artikeln über Berlin
@@ -1094,8 +1023,7 @@ fbw 0:
   - description: Gehe zur Startseite
 fbw 1:
   url: https://www.fahrerbewertung.de/<Kennzeichen>
-  include:
-    key: fbw 0
+  include: fbw 0
   examples:
   - arguments: A-BC-1234
     description: Fahrerbewertung for "ABC-DE-1234"
@@ -1109,8 +1037,7 @@ g 0:
   - description: Gehe zur Startseite
 g 1:
   url: https://www.google.de/search?hl=<$language>&q=<Suche>&ie=utf-8
-  include:
-    key: g 0
+  include: g 0
   examples:
   - arguments: berlin
     description: Google-Suche nach berlin
@@ -1126,8 +1053,7 @@ gh 0:
   - description: Gehe zur Startseite
 gh 1:
   url: 'https://geizhals.de/?fs=<Produkt: {encoding: iso-8859-1}>'
-  include:
-    key: gh 0
+  include: gh 0
   examples:
   - arguments: fernseher
     description: Search for "fernseher"
@@ -1143,15 +1069,13 @@ gii 0:
   - expect: <title>Gesetze im Internet
 gii 1:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Awww.gesetze-im-internet.de%20<Suche>
-  include:
-    key: gii 0
+  include: gii 0
   examples:
   - arguments: beweislast
     description: Suche nach "beweislast"
 gii 2:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Awww.gesetze-im-internet.de%20<Paragraph>%20<Gesetz>
-  include:
-    key: gii 0
+  include: gii 0
   examples:
   - arguments: 5, gg
     description: Zeige Artikel 5 des Grundgesetzes
@@ -1172,22 +1096,19 @@ gls 0:
   - description: Gehe zur Startseite
 gls 1:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>
-  include:
-    key: gls 0
+  include: gls 0
   examples:
   - arguments: 12345678901
     description: Suche nach Paket-Nr. 12345678901
 gls 2:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>, <Paket-Nr. 2>
-  include:
-    key: gls 0
+  include: gls 0
   examples:
   - arguments: 12345678901, 12345678902
     description: Suche nach Paket-Nr. 12345678901 und 12345678902
 gls 3:
   url: https://www.gls-pakete.de/sendungsverfolgung?txtAction=71000&match=<Paket-Nr. 1>, <Paket-Nr. 2>, <Paket-Nr. 3>
-  include:
-    key: gls 0
+  include: gls 0
   examples:
   - arguments: 12345678901, 12345678902, 12345678903
     description: Suche nach Paket-Nr. 12345678901, 12345678902 und 12345678903
@@ -4661,8 +4582,7 @@ gs 0:
   - description: Gehe zur Startseite
 gs 2:
   url: 'https://www.gelbeseiten.de/<Branche>/<Ort: {type: city}>'
-  include:
-    key: gs 0
+  include: gs 0
   examples:
   - arguments: schlüsseldienst, berlin
     description: Suche nach Schlüsseldienst in Berlin
@@ -4676,8 +4596,7 @@ gsh 0:
   - description: Gehe zur Startseite
 gsh 1:
   url: https://www.google.de/search?tbm=shop&hl=<$language>&q=<Suche>
-  include:
-    key: gsh 0
+  include: gsh 0
   examples:
   - arguments: computer
     description: Search for "computer"
@@ -4690,8 +4609,7 @@ gtiger 0:
   - description: Gehe zur Startseite
 gtiger 1:
   url: https://www.guenstiger.de/Katalog/Suche/<Suche>.html
-  include:
-    key: gtiger 0
+  include: gtiger 0
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
@@ -4705,8 +4623,7 @@ gtrends 0:
   - description: Gehe zur Startseite
 gtrends 1:
   url: https://trends.google.com/trends/explore?q=<Suche>&geo=DE
-  include:
-    key: gtrends 0
+  include: gtrends 0
   examples:
   - arguments: berlin
     description: See statistics for the term "berlin" on Google web search
@@ -4720,8 +4637,7 @@ gy 0:
   - description: Gehe zur Startseite
 gy 2:
   url: https://www.goyellow.de/suche/<Name>/<Ort>
-  include:
-    key: gy 0
+  include: gy 0
   examples:
   - arguments: meier, dresden
     description: Telefonnummer von "Meier" in Dresden
@@ -4744,8 +4660,7 @@ hermes 0:
   - description: Gehe zur Startseite
 hermes 1:
   url: https://www.myhermes.de/empfangen/sendungsverfolgung/sendungsinformation#<Auftragsnummer>
-  include:
-    key: hermes 0
+  include: hermes 0
   examples:
   - arguments: 1234567890
     description: Verfolge die Sendung mit der Auftragsnummer 1234567890
@@ -4758,8 +4673,7 @@ hs 0:
   - description: Gehe zur Startseite
 hs 1:
   url: https://www.hardwareschotte.de/suche/?searchstring=<Produkt>
-  include:
-    key: hs 0
+  include: hs 0
   examples:
   - arguments: radio
     description: Suche nach "radio"
@@ -4775,22 +4689,19 @@ hvv 0:
   - description: Gehe zur Startseite
 hvv 2:
   url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&z=&d=&a=1&suchen.x=0&suchen.y=0&suchen=Suchen
-  include:
-    key: hvv 0
+  include: hvv 0
   examples:
   - arguments: pinneberg, neugraben
     description: Nächste Verbindung von Pinneberg nach Neugraben
 hvv 3:
   url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&a=1&z=<Zeit>&d=&suchen.x=0&suchen.y=0&suchen=Suchen
-  include:
-    key: hvv 0
+  include: hvv 0
   examples:
   - arguments: pinneberg, neugraben, 10
     description: 'Verbindung von Pinneberg nach Neugraben heute um 10:00 Uhr '
 hvv 4:
   url: https://geofox.hvv.de/jsf/postPS.seam?lang=de&POST=true&rd=&sn=<Start>&zn=<Ziel>&a=1&z=<Zeit>&d=<Datum>&suchen.x=0&suchen.y=0&suchen=Suchen
-  include:
-    key: hvv 0
+  include: hvv 0
   examples:
   - arguments: pinneberg, neugraben, 10, 28.11.
     description: Verbindung von Pinneberg nach Neugraben um 10:00 Uhr am 28.11.
@@ -4804,8 +4715,7 @@ iban 0:
   - description: Gehe zur Startseite
 iban 1:
   url: https://www.iban-rechner.de/iban_validieren.html?tx_valIBAN_pi1%5Biban%5D=<IBAN>&tx_valIBAN_pi1%5Bfi%5D=fi&no_cache=1&Action=IBAN+pr%C3%BCfen+und+BIC-Code+suchen
-  include:
-    key: iban 0
+  include: iban 0
   examples:
   - arguments: DE12500?0?170648489890
     description: Validate IBAN number, incl. unknown digits that will be calculated
@@ -4823,8 +4733,7 @@ idl 0:
   - description: Gehe zur Startseite
 idl 1:
   url: https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=<Produkt>
-  include:
-    key: idl 0
+  include: idl 0
   examples:
   - arguments: iphone
     description: Preisvergleich fürs iPhone
@@ -4839,8 +4748,7 @@ ikea 0:
   - description: Gehe zur Startseite
 ikea 1:
   url: https://www.ikea.com/de/de/search/products/?q=<Suche>
-  include:
-    key: ikea 0
+  include: ikea 0
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
@@ -4867,8 +4775,7 @@ jf 0:
   - description: Gehe zur Startseite
 jf 1:
   url: https://justfind.hds.hebis.de/Search/Results?lookfor=<Suche>&type=AllFields
-  include:
-    key: jf 0
+  include: jf 0
   examples:
   - arguments: He pulse tube cooler operating down to 1.3 K
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
@@ -4883,8 +4790,7 @@ jw 0:
   - description: Gehe zur Startseite
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
-  include:
-    key: jw 0
+  include: jw 0
   examples:
   - arguments: simpsons
     description: Suche nach "simpsons"
@@ -4897,8 +4803,7 @@ kaufland 0:
   - description: Gehe zur Startseite
 kaufland 1:
   url: https://www.kaufland.de/item/search/?search_value=<Suche>
-  include:
-    key: kaufland 0
+  include: kaufland 0
   examples:
   - arguments: spiele
     description: Suche auf Kaufland.de nach "spiele"
@@ -4913,44 +4818,38 @@ kaz 0:
   - description: Gehe zur Startseite
 kaz 1:
   url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>
-  include:
-    key: kaz 0
+  include: kaz 0
   examples:
   - arguments: kühlschrank
     description: Suche nach "kühlschrank"
 kaz 2:
   url: https://www.kleinanzeigen.de/s-suchanfrage.html?keywords=<Suche>&locationStr=<PLZ/Ort>
-  include:
-    key: kaz 0
+  include: kaz 0
   examples:
   - arguments: kühlschrank, berlin
     description: Suche nach "kühlschrank" in Berlin
 kaz+ 0:
   url: https://www.kleinanzeigen.de/p-anzeige-aufgeben-schritt2.html
   title: Kleinanzeigen.de, Anzeige aufgeben
-  include:
-    key: kaz 0
+  include: kaz 0
   examples:
   - description: Neue Anzeige aufgeben
 kaza 0:
   url: https://www.kleinanzeigen.de/m-meine-anzeigen.html
   title: Kleinanzeigen.de, Meine Anzeigen
-  include:
-    key: kaz 0
+  include: kaz 0
   examples:
   - description: Gehe zu meinen Anzeigen
 kazm 0:
   url: https://www.kleinanzeigen.de/m-merkliste.html
   title: Kleinanzeigen.de, Meine Merkliste
-  include:
-    key: kaz 0
+  include: kaz 0
   examples:
   - description: Gehe zu meiner Merkliste
 kazn 0:
   url: https://www.kleinanzeigen.de/m-nachrichten.html
   title: Kleinanzeigen.de, Meine Nachrichten
-  include:
-    key: kaz 0
+  include: kaz 0
   examples:
   - description: Gehe zu meinen Nachrichten
 kfz 0:
@@ -4963,8 +4862,7 @@ kfz 0:
   - description: Gehe zur Startseite
 kfz 1:
   url: https://www.google.de/search?hl=de&q=site%3Aautokennzeichen.info%20<Ort/Kennzeichen>&ie=utf-8
-  include:
-    key: kfz 0
+  include: kfz 0
   examples:
   - arguments: hro
     description: Suche Stadt/Kreis des Kennzeichens "hro"
@@ -4981,8 +4879,7 @@ kino 0:
   - description: Gehe zur Startseite
 kino 1:
   url: https://www.kino.de/kinoprogramm/<Ort/Stadtteil/Kino/PLZ>/
-  include:
-    key: kino 0
+  include: kino 0
   examples:
   - arguments: berlin
     description: Kinoprogramm in Berlin
@@ -4996,8 +4893,7 @@ kit 0:
   - description: Gehe zur Startseite
 kit 1:
   url: https://www.google.com/search?q=site%3Akit.edu+<Suche>
-  include:
-    key: kit 0
+  include: kit 0
   examples:
   - arguments: alumni
     description: Suche nach "alumni"
@@ -5012,8 +4908,7 @@ koka 0:
   - description: Gehe zur Startseite
 koka 1:
   url: 'https://www.koka36.de/suche.php?search=<Suche: {encoding: iso-8859-1}>'
-  include:
-    key: koka 0
+  include: koka 0
   examples:
   - arguments: berlin
     description: Suche nach Konzerten und Events in Berlin
@@ -5027,8 +4922,7 @@ kununu 0:
   - description: Gehe zur Startseite
 kununu 1:
   url: https://www.kununu.com/de/search?q=<Suche>
-  include:
-    key: kununu 0
+  include: kununu 0
   examples:
   - arguments: acme
     description: Suche nach Bewertungen der Firma ACME als Arbeitgeber
@@ -5042,8 +4936,7 @@ kvk 0:
   - description: Gehe zur Startseite
 kvk 1:
   url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=kvk-redesign&lang=de&title=KIT-Bibliothek%3A+Karlsruher+Virtueller+Katalog+KVK+%3A+Ergebnisanzeige&head=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fheader.html&spacer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Fspacer.html&footer=%2F%2Fkvk.bibliothek.kit.edu%2Fasset%2Fhtml%2Ffooter.html&css=none&input-charset=utf-8&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&disableEmbeddedFullTitle=1&kataloge=BVB&ref=direct&client-js=yes
-  include:
-    key: kvk 0
+  include: kvk 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
@@ -5058,8 +4951,7 @@ lpg 0:
   - description: Gehe zur Startseite
 lpg 1:
   url: https://www.gas-tankstellen.de/list.php?mode=lpg&suchkennz=<KFZ-Kennzeichen>
-  include:
-    key: lpg 0
+  include: lpg 0
   examples:
   - arguments: hro
     description: Suche nach LPG-Tankstellen in Rostock
@@ -5078,8 +4970,7 @@ mdv 0:
 mdv 1:
   url: 'https://www.mdv.de/fahrtenplaner/?boardType=dep&input=<Ort: {type: city}>&start=1'
   title: Mitteldeutscher Verkehrsverbund, Aktuelle Ankunft-/Abfahrtszeiten
-  include:
-    key: mdv 0
+  include: mdv 0
   examples:
   - arguments: oschatz
     description: Aktuelle Ankunft/Abfahrtszeiten an der Station Oschatz
@@ -5087,22 +4978,19 @@ mdv 1:
     description: … via Autokennzeichen
 mdv 2:
   url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
-  include:
-    key: mdv 0
+  include: mdv 0
   examples:
   - arguments: wurzen, oschatz
     description: Nächste Verbindungen von Wurzen nach Oschatz
 mdv 3:
   url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&start=1'
-  include:
-    key: mdv 0
+  include: mdv 0
   examples:
   - arguments: wurzen, oschatz, 20
     description: Verbindungen von Wurzen nach Oschatz heute um 20 Uhr
 mdv 4:
   url: 'https://www.mdv.de/fahrtenplaner/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  include:
-    key: mdv 0
+  include: mdv 0
   examples:
   - arguments: wurzen, oschatz, 20, 8.12.
     description: Verbindungen von Wurzen nach Oschatz um 20 Uhr am 8. Dezember
@@ -5113,8 +5001,7 @@ mfs 0:
   - description: Gehe zur Startseite
 mfs 1:
   url: https://www.medizinfuchs.de/produkt/search/<Suche>
-  include:
-    key: mfs 0
+  include: mfs 0
   examples:
   - arguments: aspirin
     description: Suche nach Aspirin
@@ -5131,8 +5018,7 @@ mm 1:
   examples:
   - arguments: fernseher
     description: Suche nach Fernsehern
-  include:
-    key: mm 0
+  include: mm 0
 mmops 0:
   url: https://www.medimops.de/
   title: Medimops
@@ -5144,8 +5030,7 @@ mmops 0:
   tests: only return 403 when called with our tester
 mmops 1:
   url: https://www.medimops.de/produkte-C0/?fcIsSearch=1&searchparam=<Suche>
-  include:
-    key: mmops 0
+  include: mmops 0
   examples:
   - arguments: Turbo Pascal
     description: Suche nach "Turbo Pascal"
@@ -5162,22 +5047,19 @@ mvv 0:
   - description: Gehe zur Startseite
 mvv 2:
   url: https://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
-  include:
-    key: mvv 0
+  include: mvv 0
   examples:
   - arguments: freising, petershausen
     description: Nächste Verbindung von Freising nach Petershausen
 mvv 3:
   url: 'https://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTime=<Abfahrtszeit: {type: time, output: HHmm}>'
-  include:
-    key: mvv 0
+  include: mvv 0
   examples:
   - arguments: freising, petershausen, 10
     description: Nächste Verbindung von Freising nach Petershausen um 10.00 Uhr
 mvv 4:
   url: 'https://efa.mvv-muenchen.de/index.html?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTime=<Abfahrtszeit: {type: time, output: HHmm}>&itdDate=<Datum: {type: date, output: YYYYMMDD}>'
-  include:
-    key: mvv 0
+  include: mvv 0
   examples:
   - arguments: freising, petershausen, 10:00, 8.12.
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr
@@ -5200,15 +5082,13 @@ osi 0:
   - description: Gehe zur Startseite
 osi 1:
   url: https://www.osiander.de/suche?sq=<Suche>
-  include:
-    key: osi 0
+  include: osi 0
   examples:
   - arguments: Iain M. Banks
     description: Sucht nach dem Science-Fiction-Autor
 osii 1:
   url: https://www.osiander.de/details.cfm?isbn=<isbn13>
-  include:
-    key: osi 0
+  include: osi 0
   examples:
   - arguments: '9783442453023'
     description: Sucht nach einem bestimmten Buch
@@ -5227,8 +5107,7 @@ pollin 0:
   - description: Gehe zur Startseite
 pollin 1:
   url: https://www.pollin.de/shop/suchergebnis.html?S_TEXT=<Suche>
-  include:
-    key: pollin 0
+  include: pollin 0
   examples:
   - arguments: batterie
     description: Suche bei pollin.de nach "batterie"
@@ -5243,16 +5122,14 @@ ppw 0:
   - description: Gehe zur Startseite
 ppw 1:
   url: https://wiki.piratenpartei.de/Spezial:Suche?search=<Suche>&go=Seite
-  include:
-    key: ppw 0
+  include: ppw 0
   examples:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
 ppwg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=wiki.piratenpartei.de&domains=wiki.piratenpartei.de&q=<Suche>
   title: Piratenpartei Wiki via Google
-  include:
-    key: ppw 0
+  include: ppw 0
   examples:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
@@ -5263,8 +5140,7 @@ preis 0:
   - description: Gehe zur Startseite
 preis 1:
   url: https://www.preissuchmaschine.de/Katalog/Suche/<Produkt>.html
-  include:
-    key: preis 0
+  include: preis 0
   examples:
   - arguments: smartphone
     description: Suche nach "smartphone"
@@ -5285,8 +5161,7 @@ reichelt 0:
   - description: Gehe zur Startseite
 reichelt 1:
   url: https://www.reichelt.de/index.html?ACTION=446&LA=0&nbc=1&q=<Produkt>
-  include:
-    key: reichelt 0
+  include: reichelt 0
   examples:
   - arguments: iphone
     description: Suche nach "iphone"
@@ -5301,22 +5176,19 @@ rmv 0:
   - description: Gehe zur Startseite
 rmv 2:
   url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&date%3D%2B0%26times%3D%2B0%26start%26dummy=jetzt'
-  include:
-    key: rmv 0
+  include: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden
     description: Verbindung von Frankfurt nach Wiesbaden
 rmv 3:
   url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&date=%2B0&times=%2B0&start&time=<Zeit: {type: time}>'
-  include:
-    key: rmv 0
+  include: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden, 10
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr
 rmv 4:
   url: 'https://www.rmv.de/auskunft/bin/jp/query.exe/dn?L=vs_rmv&REQ0JourneyStopsN=-1&REQ0JourneyStopsS0A=255&REQ0JourneyStopsS0G=<Start: {type: city}>&REQ0JourneyStopsZ0A=255&REQ0JourneyStopsZ0G=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&times=%2B0&start'
-  include:
-    key: rmv 0
+  include: rmv 0
   examples:
   - arguments: frankfurt, wiesbaden, 10, 2.11.
     description: Verbindung von Frankfurt nach Wiesbaden um 10:00 Uhr am 2.11.
@@ -5330,8 +5202,7 @@ rsc 0:
   - description: Gehe zur Startseite
 rsc 1:
   url: https://de.rs-online.com/web/c/?searchTerm=<Produkt>
-  include:
-    key: rsc 0
+  include: rsc 0
   examples:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
@@ -5346,8 +5217,7 @@ stabib 0:
   - description: Gehe zur Startseite
 stabib 1:
   url: https://lbssbb.gbv.de/DB=1/SET=9/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  include:
-    key: stabib 0
+  include: stabib 0
   examples:
   - arguments: goethe
     description: Suche nach "goethe"
@@ -5361,8 +5231,7 @@ sub 0:
   - description: Gehe zur Startseite
 sub 1:
   url: https://opac.sub.uni-goettingen.de/DB=1/LNG=DU/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&TRM=<Suche>
-  include:
-    key: sub 0
+  include: sub 0
   examples:
   - arguments: houellebecq
     description: Suche nach "houellebecq"
@@ -5373,8 +5242,7 @@ swp 0:
   - description: Gehe zur Startseite
 swp 1:
   url: https://www.swp-berlin.org/suche?search%5Bq%5D=<Suche>
-  include:
-    key: swp 0
+  include: swp 0
   examples:
   - arguments: china
     description: Suche nach "china"
@@ -5388,15 +5256,13 @@ tel 0:
   - description: Gehe zur Startseite
 tel 1:
   url: https://www4.dastelefonbuch.de/Rueckwaerts-Suche.html?kw=<Nummer>&x=35&y=11&cifav=0&s=a20000&la=de&cmd=search&ort_ok=0&sp=55&vert_ok=0&aktion=23
-  include:
-    key: tel 0
+  include: tel 0
   examples:
   - arguments: '8003301000'
     description: Teilnehmer mit der Telefonnummer 08003301000
 tel 2:
   url: 'https://www.dastelefonbuch.de/Suche/<Name>/<Ort: {type: city}>'
-  include:
-    key: tel 0
+  include: tel 0
   examples:
   - arguments: meier, dresden
     description: Telefonnummer von "Meier" in Dresden
@@ -5412,8 +5278,7 @@ tho 0:
   - description: Gehe zur Startseite
 tho 1:
   url: https://www.thomann.de/de/search_dir.html?sw=<Produkt>
-  include:
-    key: tho 0
+  include: tho 0
   examples:
   - arguments: gitarre
     description: Suche nach Gitarre
@@ -5425,8 +5290,7 @@ tra 0:
   examples:
   - description: Gehe zur Startseite
 tra 1:
-  include:
-    key: tra 0
+  include: tra 0
   url: https://www.tripadvisor.de/Search?q=<query>
   examples:
   - arguments: gent
@@ -5441,8 +5305,7 @@ tv 0:
 tva 1:
   url: https://www.tvinfo.de/tv-programm/<Sender>
   title: TV-Programm auf ...
-  include:
-    key: tv 0
+  include: tv 0
   examples:
   - arguments: ard
     description: Search for "ard"
@@ -5456,8 +5319,7 @@ tvinfo 1:
     description: Suche nach "tagesschau"
 tvu 1:
   url: https://www.tvinfo.de/fernsehprogramm/<Stunde>:00
-  include:
-    key: tv 0
+  include: tv 0
   title: TV-Programm um ...
   examples:
   - arguments: '20'
@@ -5471,8 +5333,7 @@ uwz 0:
   - description: Gehe zur Startseite
 uwz 1:
   url: https://www.unwetterzentrale.de/uwz/getwarning_de.php?plz=<PLZ/Ort>&uwz=UWZ-DE&lang=de
-  include:
-    key: uwz 0
+  include: uwz 0
   examples:
   - arguments: '10119'
     description: Zeige Wetterwarnungen für Postleitzahl 10119
@@ -5489,29 +5350,25 @@ vbb 0:
 vbb 1:
   url: 'https://www.vbb.de/fahrinfo/?boardType=dep&input=<Ort: {type: city}>&start=1'
   title: Verkehrsverbund Berlin-Brandenburg, Aktuelle Ankunft-/Abfahrtszeiten
-  include:
-    key: vbb 0
+  include: vbb 0
   examples:
   - arguments: frohnau
     description: Aktuelle Ankunft/Abfahrtszeiten an der Station Frohnau
 vbb 2:
   url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
-  include:
-    key: vbb 0
+  include: vbb 0
   examples:
   - arguments: westhafen, frohnau
     description: Nächste Verbindungen von Westhafen nach Frohnau
 vbb 3:
   url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&start=1'
-  include:
-    key: vbb 0
+  include: vbb 0
   examples:
   - arguments: vbb westhafen, frohnau, 20:00
     description: Verbindungen von Westhafen nach Frohnau heute um 20 Uhr
 vbb 4:
   url: 'https://www.vbb.de/fahrinfo/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Abfahrtszeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  include:
-    key: vbb 0
+  include: vbb 0
   examples:
   - arguments: vbb westhafen, frohnau, 20:00, 8.12.
     description: Verbindungen von Westhafen nach Frohnau um 20 Uhr am 8. Dezember
@@ -5526,29 +5383,25 @@ vgn 0:
   - description: Gehe zur Startseite
 vgn 1:
   url: https://www.vgn.de/komfortauskunft/ttb/?sessionID=0&lineName=<Linie>
-  include:
-    key: vgn 0
+  include: vgn 0
   examples:
   - arguments: s1
     description: Fahrplan der Linie S1
 vgn 2:
   url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>
-  include:
-    key: vgn 0
+  include: vgn 0
   examples:
   - arguments: nürnberg, neumarkt
     description: Verbindung von Nürnberg nach Neumarkt
 vgn 3:
   url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=stop&name_origin=<Start>&type_destination=stop&name_destination=<Ziel>&xtime=<Abfahrtszeit>&xdate=today
-  include:
-    key: vgn 0
+  include: vgn 0
   examples:
   - arguments: nürnberg, neumarkt, 10
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr
 vgn 4:
   url: https://vgn.de/komfortauskunft/auskunft/?sessionID=0&type_origin=any&name_origin=<Start>&type_destination=any&name_destination=<Ziel>&itdTripDateTimeDepArr=dep&xtime=<Abfahrtszeit>&xdate=<Datum>
-  include:
-    key: vgn 0
+  include: vgn 0
   examples:
   - arguments: nürnberg, neumarkt, 10, 1.1.
     description: Verbindung von Nürnberg nach Neumarkt um 10 Uhr am 1.1.
@@ -5567,8 +5420,7 @@ vgs 0:
   - description: Gehe zur Startseite
 vgs 2:
   url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
-  include:
-    key: vgs 0
+  include: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf
@@ -5576,15 +5428,13 @@ vgs 2:
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf, Eingabe über Autokennzeichen
 vgs 3:
   url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&start=1'
-  include:
-    key: vgs 0
+  include: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr
 vgs 4:
   url: 'https://www.saarfahrplan.de/cgi-bin/query.exe/dn?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Abfahrtszeit>&D=<Datum>&start=1'
-  include:
-    key: vgs 0
+  include: vgs 0
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10, 20.10.
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr am 20.10.
@@ -5607,36 +5457,31 @@ vrr 0:
   - description: Gehe zur Startseite
 vrr 2:
   url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any
-  include:
-    key: vrr 0
+  include: vrr 0
   examples:
   - arguments: dortmund, bochum
     description: Nächste Verbindung von Dortmund nach Bochum
 vrr 3:
   url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=0
-  include:
-    key: vrr 0
+  include: vrr 0
   examples:
   - arguments: dortmund, bochum, 10
     description: Verbindung von Dortmund nach Bochum heute um 10 Uhr
 vrr 4:
   url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>
-  include:
-    key: vrr 0
+  include: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30
     description: Verbindung von Dortmund nach Bochum heute um 10.30 Uhr
 vrr 5:
   url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>
-  include:
-    key: vrr 0
+  include: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30, 28
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28. des aktuellen Monats
 vrr 6:
   url: https://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2?name_origin=<Start>&name_destination=<Ziel>&sessionID=0&type_origin=any&type_destination=any&itdTripDateTimeDepArr=dep&itdTimeHour=<Stunde>&itdTimeMinute=<Minute>&itdDateDay=<Tag>&itdDateMonth=<Monat>
-  include:
-    key: vrr 0
+  include: vrr 0
   examples:
   - arguments: dortmund, bochum, 10, 30, 28, 1
     description: Verbindung von Dortmund nach Bochum um 10.30 Uhr am 28.1.
@@ -5651,8 +5496,7 @@ vvs 0:
   - description: Gehe zur Startseite
 vvs 2:
   url: https://www2.vvs.de/vvs/XSLT_TRIP_REQUEST2?type_destination=any&type_origin=any&name_origin=<Start>&name_destination=<Ziel>
-  include:
-    key: vvs 0
+  include: vvs 0
   examples:
   - arguments: schwabstr, hbf
     description: Nächste Verbindung von Schwabstr. zum Hauptbahnhof
@@ -5665,8 +5509,7 @@ we 0:
   - description: Gehe zur Startseite
 we 1:
   url: https://www.wetter.com/suche/?search=<Ort>
-  include:
-    key: we 0
+  include: we 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -5681,8 +5524,7 @@ wse 0:
   - description: Gehe zur Startseite
 wse 1:
   url: https://www.werstreamt.es/filme-serien/?q=m<Suche>&action_results=suchen
-  include:
-    key: wse 0
+  include: wse 0
   examples:
   - arguments: simpsons
     description: Suche nach "simpsons"
@@ -5696,8 +5538,7 @@ zal 0:
   - description: Gehe zur Startseite
 zal 1:
   url: https://www.zalando.de/katalog/?q=<Produkt>
-  include:
-    key: zal 0
+  include: zal 0
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen

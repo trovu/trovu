@@ -53,22 +53,19 @@ nr 0:
   - description: Go to the homepage
 nr 2:
   url: 'https://www.nationalrail.co.uk/journey-planner/?type=single&origin=<from code>&destination=<to code>&leavingType=departing&leavingHour=<$now: {output: HH}>&leavingMin=00&leavingDate=<$now: {output: DDMMYY}>&adults=1&extraTime=0#O'
-  include:
-    key: nr 0
+  include: nr 0
   examples:
   - arguments: man, eus
     description: Search for trains from Manchester to London Euston
 nr 3:
   url: 'https://www.nationalrail.co.uk/journey-planner/?type=single&origin=<from code>&destination=<to code>&leavingType=departing&leavingHour=<time: {type: time, output: HH}>&leavingMin=00&leavingDate=<$now: {output: DDMMYY}>&adults=1&extraTime=0#O'
-  include:
-    key: nr 0
+  include: nr 0
   examples:
   - arguments: man, eus, 20
     description: Search for trains from Manchester to London Euston at 20:00
 nr 4:
   url: 'https://www.nationalrail.co.uk/journey-planner/?type=single&origin=<from code>&destination=<to code>&leavingType=departing&leavingHour=<time: {type: time, output: HH}>&leavingMin=00&leavingDate=<date: {type: date, output: DDMMYY}>&adults=1&extraTime=0#O'
-  include:
-    key: nr 0
+  include: nr 0
   examples:
   - arguments: man, eus, 20, fr
     description: Search for trains from Manchester to London Euston at 20:00 next Friday
@@ -83,15 +80,13 @@ tfl 0:
   - description: Go to the homepage
 tfl 2:
   url: https://tfl.gov.uk/plan-a-journey/results?InputFrom=<from>&InputTo=<to>
-  include:
-    key: tfl 0
+  include: tfl 0
   examples:
   - arguments: brixton, paddington
     description: Search the next connection from Brixton to Paddington
 tfl 3:
   url: 'https://tfl.gov.uk/plan-a-journey/results?InputFrom=<from>&InputTo=<to>&Time=<time: {type: date, output: HHmm }>'
-  include:
-    key: tfl 0
+  include: tfl 0
   examples:
   - arguments: brixton, paddington, 10
     description: Search the next connection from Brixton to Paddington at 10:00

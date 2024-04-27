@@ -167,15 +167,13 @@
   - social-network
 4sq 1:
   url: https://foursquare.com/search?tab=venueResults&query=<what>
-  include:
-    key: 4sq 0
+  include: 4sq 0
   examples:
   - arguments: pizza
     description: Search for a pizza place near me
 4sq 2:
   url: https://foursquare.com/search?tab=venueResults&query=<what>&near=<where>
-  include:
-    key: 4sq 0
+  include: 4sq 0
   examples:
   - arguments: pizza, new york
     description: Search for a pizza place in New York
@@ -943,8 +941,7 @@ btd 0:
   - expect: <title>BTDigg
 btd 1:
   url: https://btdig.com/search?q=<query>
-  include:
-    key: btd 0
+  include: btd 0
   examples:
   - arguments: ubuntu
     description: Search for Ubuntu torrents
@@ -1034,8 +1031,7 @@ cg 0:
   - expect: <title>ChatGPT
 cg 1:
   url: https://chat.openai.com/chat?q=<query>
-  include:
-    key: cg 0
+  include: cg 0
   examples:
   - arguments: What is the meaning of life?
     description: Ask ChatGPT about the meaning of life
@@ -2870,37 +2866,32 @@ fl 1:
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include:
-    key: fl 0
+  include: fl 0
 fla 0:
   url: https://www.flickr.com/search/advanced/
   title: Flickr, advanced search
-  include:
-    key: fl 0
+  include: fl 0
 flcc 1:
   url: https://flickr.com/search/?q=<query>&l=cc
   title: 'Flickr: full text search for content with a Creative Commons license'
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include:
-    key: fl 0
+  include: fl 0
 flcca 1:
   url: https://flickr.com/search/?q=<query>&l=deriv
   title: 'Flickr: full text search for content to adapt, modify and build upon'
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include:
-    key: fl 0
+  include: fl 0
 flccc 1:
   url: https://flickr.com/search/?q=<query>&l=comm
   title: 'Flickr: full text search for content to use commercially'
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include:
-    key: fl 0
+  include: fl 0
 flccca 1:
   url: https://flickr.com/search/?q=<query>&l=commderiv
   title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
@@ -2953,24 +2944,21 @@ fls 1:
   examples:
   - arguments: berlin
     description: create a slideshow of photos about berlin
-  include:
-    key: fl 0
+  include: fl 0
 flt 1:
   url: https://flickr.com/photos/tags/<tag>
   title: 'Flickr: photos with tag'
   examples:
   - arguments: berlin
     description: search for photos tagged "berlin"
-  include:
-    key: fl 0
+  include: fl 0
 flu 1:
   url: https://www.flickr.com/search/people/?q=<user>
   title: 'Flickr: search for user'
   examples:
   - arguments: john
     description: search for users named "john"
-  include:
-    key: fl 0
+  include: fl 0
 fnet 1:
   url: https://www.finanzen.net/suchergebnis.asp?_search=<query>
   title: Finanzen.net Query
@@ -3604,14 +3592,11 @@ gh 1:
       query: gzh <0>
     created: '2024-04-19'
 gi 0:
-  include:
-    key: gim 0
+  include: gim 0
 gi 1:
-  include:
-    key: gim 1
+  include: gim 1
 gif 1:
-  include:
-    key: gimf 1
+  include: gimf 1
 gilson 1:
   url: https://ch.gilson.com/CHSV/catalogsearch/result/?q=<query>
   title: Gilson
@@ -3822,8 +3807,7 @@ gnudb 0:
   - description: Go to homepage
 gnudb 1:
   url: https://gnudb.org/search/<query>
-  include:
-    key: gnudb 0
+  include: gnudb 0
   examples:
   - arguments: beatles
     description: Search for record of "The Beatles"
@@ -4017,8 +4001,7 @@ grnd 0:
   - expect: Ground News</title>
 grnd 1:
   url: https://ground.news/find?url=<query>
-  include:
-    key: grnd 0
+  include: grnd 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -5031,8 +5014,7 @@ kym 0:
   examples:
   - description: Go to homepage
 kym 1:
-  include:
-    key: kym 0
+  include: kym 0
   url: https://knowyourmeme.com/search?q=<query>
   examples:
   - arguments: x y is x
@@ -5178,23 +5160,19 @@ libg 0:
 libg 1:
   url: https://libgen.is/search.php?req=<query>
   title: Library Genesis, Non-fiction / Sci-tech
-  include:
-    key: libg 0
+  include: libg 0
 libga 1:
   url: https://libgen.is/scimag?q=<query>
   title: Library Genesis, Scientific Articles
-  include:
-    key: libg 0
+  include: libg 0
 libgf 1:
   url: https://libgen.is/fiction?q=<query>
   title: Library Genesis, Fiction
-  include:
-    key: libg 0
+  include: libg 0
 libgm 1:
   url: https://magzdb.org/makelist?t=<query>
   title: Library Genesis, Magazines
-  include:
-    key: libg 0
+  include: libg 0
 lin 0:
   url: https://www.linkedin.com/
   title: Linkedin
@@ -5783,8 +5761,7 @@ npr 0:
   - description: Go to homepage
 npr 1:
   url: https://www.npr.org/search/?query=<query>
-  include:
-    key: npr 0
+  include: npr 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -6110,8 +6087,7 @@ owm 0:
   - expect: OpenWeatherMap</title>
 owm 1:
   url: https://openweathermap.org/find?q=<location>
-  include:
-    key: owm 0
+  include: owm 0
   examples:
   - arguments: berlin
     description: Get weather for cities named "berlin"
@@ -6159,8 +6135,7 @@ pci 0:
   tags:
   - podcasts
 pci 1:
-  include:
-    key: pci 0
+  include: pci 0
   url: https://podcastindex.org/search?q=<query>&type=all
   examples:
   - arguments: books
@@ -6741,8 +6716,7 @@ rarbg 0:
   - torrents
 rarbg 1:
   url: https://en.rarbg-official.com/movies?keyword=<query>
-  include:
-    key: rarbg 0
+  include: rarbg 0
 rb 0:
   url: https://www.ruby-doc.org/
   title: Ruby Documentation
@@ -6799,8 +6773,7 @@ rdoc 0:
   - description: Go to homepage
 rdoc 1:
   url: https://www.rdocumentation.org/search?q=<query>
-  include:
-    key: rdoc 0
+  include: rdoc 0
   examples:
   - arguments: foo
     description: Search RDocumentation for "foo"
@@ -6890,8 +6863,7 @@ rman 0:
   - description: Go to homepage
 rman 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=inurl%3Astat.ethz.ch%2FR-manual%20inurl%3A"<query>"
-  include:
-    key: rman 0
+  include: rman 0
   examples:
   - arguments: read.table
     description: Show manual about "read.table"
@@ -7574,8 +7546,7 @@ tav 0:
   examples:
   - description: Go to hompeage
 tav 1:
-  include:
-    key: tra 0
+  include: tav 0
   url: https://www.tripadvisor.com/Search?q=<query>
   examples:
   - arguments: ghent
