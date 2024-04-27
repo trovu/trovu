@@ -86,7 +86,7 @@ export default class NamespaceFetcher {
       namespaceInfo.url = namespace.url;
     }
     if (namespace.shortcuts) {
-      namespaceInfo.shortcuts = this.processShortcuts(namespace.shortcuts);
+      namespaceInfo.shortcuts = namespace.shortcuts;
     }
     if (!namespaceInfo.name && (namespaceInfo.url || namespaceInfo.shortcuts)) {
       this.env.logger.warning(
