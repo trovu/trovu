@@ -442,15 +442,13 @@ fmb 0:
   - description: Gehe zur Startseite
 fmb 1:
   url: https://www.findmybook.de/results/?title=<Title>
-  include:
-    key: fmb 0
+  include: fmb 0
   examples:
   - arguments: elementarteilchen
     description: Suche nach "Elementarteilchen"
 fmb 2:
   url: https://www.findmybook.de/results/?title=<Title>&author=<Autor>&type=all
-  include:
-    key: fmb 0
+  include: fmb 0
   examples:
   - arguments: elementarteilchen, houellebecq
     description: Suche nach "Elementarteilchen" von Houellebecq
@@ -616,8 +614,7 @@ hpv 1:
   examples:
   - arguments: computer
     description: Vergleiche Preise für "computer"
-  include:
-    key: hpv 0
+  include: hpv 0
 hsoft 0:
   url: https://www.heise.de/software/
   title: Heise Softwareverzeichnis Startseite
@@ -726,15 +723,13 @@ kwdb 0:
   - description: Gehe zur Startseite
 kwdb 1:
   url: https://www.kwdb.ch/search?q=<Suche>&sourceid=serchilo
-  include:
-    key: kw 0
+  include: kw 0
   examples:
   - arguments: baumart
     description: Suche nach "baumart"
 kwdb 2:
   url: https://www.kwdb.ch/search?q=<Suche>&lc=<Buchstabenanzahl>
-  include:
-    key: kw 0
+  include: kw 0
   examples:
   - arguments: baumart, 4
     description: Suche nach "baumart" mit 4 Buchstaben
@@ -1132,8 +1127,7 @@ swb 0:
   - dictionary
 swb 1:
   url: 'http://www.schwaebisches-woerterbuch.de/default.asp?q=<Suchwort: {encoding: iso-8859-1}>'
-  include:
-    key: swb 0
+  include: swb 0
   examples:
   - arguments: Gschäfd
     description: Suche nach "Gschäfd"
@@ -1308,8 +1302,7 @@ wtr 0:
   - description: Gehe zur Startseite
 wtr 1:
   url: https://www.wetter.com/suche/?q=<Ort>
-  include:
-    key: wtr 0
+  include: wtr 0
   examples:
   - arguments: berlin
     description: Suche nach Wetter in Berlin
@@ -1347,8 +1340,7 @@ zvab 0:
   - description: Gehe zur Startseite
 zvab 1:
   url: https://www.zvab.com/servlet/SearchResults?cm_sp=red-_-leg-_-zvab&recentlyadded=all&kn=<Suche>&ds=10
-  include:
-    key: zvab 0
+  include: zvab 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe

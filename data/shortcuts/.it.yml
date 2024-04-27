@@ -9,8 +9,7 @@ a 0:
   - description: Va alla pagina principale
 a 1:
   url: https://www.amazon.it/s/?field-keywords=<query>
-  include:
-    key: a 0
+  include: a 0
   examples:
   - arguments: shakespeare
     description: Cerca libri di Shakespeare
@@ -24,8 +23,7 @@ cds 0:
   - description: Vai alla pagina principale
 cds 1:
   url: https://www.corriere.it/ricerca/?q=<query>
-  include:
-    key: cds 0
+  include: cds 0
   examples:
   - arguments: roma
     description: Cerca articoli su Roma
@@ -40,8 +38,7 @@ e 0:
   - description: Va alla pagina principale
 e 1:
   url: https://www.ebay.it/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=724-53478-19255-0&siteid=101&campid=5337375636&customid=&toolid=10001&mkevt=1
-  include:
-    key: e 0
+  include: e 0
   examples:
   - arguments: smartphone
     description: Cerca smartphone
@@ -55,8 +52,7 @@ rep 0:
   - description: Vai alla pagina principale
 rep 1:
   url: https://ricerca.repubblica.it/ricerca/repubblica?query=<query>
-  include:
-    key: rep 0
+  include: rep 0
   examples:
   - arguments: roma
     description: Cerca articoli su Roma
@@ -70,8 +66,7 @@ zal 0:
   - description: Vai alla pagina principale
 zal 1:
   url: https://www.zalando.it/catalogo/?q=<prodotto>
-  include:
-    key: zal 0
+  include: zal 0
   examples:
   - arguments: calzature
     description: Cerca calzature

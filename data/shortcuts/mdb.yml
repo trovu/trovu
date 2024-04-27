@@ -1,9 +1,7 @@
 en 0:
-  include:
-    key: en-<$language> 0
+  include: en-<$language> 0
 en 1:
-  include:
-    key: en-<$language> 1
+  include: en-<$language> 1
 en-zh 0:
   url: https://www.mdbg.net/chinese/dictionary
   title: 英文-中文 (MDBG)
@@ -26,19 +24,15 @@ en-zh 1:
   - arguments: 树
     description: 英文 的"树"翻译
 zh 0:
-  include:
-    key: zh-<$language> 0
+  include: zh-<$language> 0
 zh 1:
-  include:
-    key: zh-<$language> 1
+  include: zh-<$language> 1
 zh-en 0:
   title: Chinese-English (MDBG)
-  include:
-    key: en-zh 0
+  include: en-zh 0
 zh-en 1:
   title: Chinese-English (MDBG)
-  include:
-    key: en-zh 1
+  include: en-zh 1
   examples:
   - arguments: 树
     description: English translation of "树"

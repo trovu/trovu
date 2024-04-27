@@ -1,9 +1,7 @@
 de 0:
-  include:
-    key: de-<$language> 0
+  include: de-<$language> 0
 de 1:
-  include:
-    key: de-<$language> 1
+  include: de-<$language> 1
 de-el 0:
   url: http://en.pons.com/translate?l=deel
   title: Γερμανικά-Ελληνικά (Pons)
@@ -194,38 +192,30 @@ de-ru 1:
   - arguments: дерево
     description: Перевод на немецкий язык для "дерево"
 el 0:
-  include:
-    key: el-<$language> 0
+  include: el-<$language> 0
 el 1:
-  include:
-    key: el-<$language> 1
+  include: el-<$language> 1
 el-de 0:
   title: Griechisch-Deutsch (Pons)
-  include:
-    key: de-el 0
+  include: de-el 0
 el-de 1:
   title: Griechisch-Deutsch (Pons)
-  include:
-    key: de-el 1
+  include: de-el 1
   examples:
   - arguments: δέντρο
     description: Deutsch-Übersetzung von "δέντρο"
   - arguments: baum
     description: Griechisch-Übersetzung von "baum"
 en 0:
-  include:
-    key: en-<$language> 0
+  include: en-<$language> 0
 en 1:
-  include:
-    key: en-<$language> 1
+  include: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (Pons)
-  include:
-    key: de-en 0
+  include: de-en 0
 en-de 1:
   title: Englisch-Deutsch (Pons)
-  include:
-    key: de-en 1
+  include: de-en 1
   examples:
   - arguments: tree
     description: Deutsch-Übersetzung von "tree"
@@ -295,19 +285,15 @@ en-sl 1:
   - arguments: drevo
     description: Prevod v angleščina za besedo "drevo"
 es 0:
-  include:
-    key: es-<$language> 0
+  include: es-<$language> 0
 es 1:
-  include:
-    key: es-<$language> 1
+  include: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (Pons)
-  include:
-    key: de-es 0
+  include: de-es 0
 es-de 1:
   title: Spanisch-Deutsch (Pons)
-  include:
-    key: de-es 1
+  include: de-es 1
   examples:
   - arguments: árbol
     description: Deutsch-Übersetzung von "árbol"
@@ -315,31 +301,25 @@ es-de 1:
     description: Spanisch-Übersetzung von "baum"
 es-en 0:
   title: Spanish-English (Pons)
-  include:
-    key: en-es 0
+  include: en-es 0
 es-en 1:
   title: Spanish-English (Pons)
-  include:
-    key: en-es 1
+  include: en-es 1
   examples:
   - arguments: árbol
     description: English translation of "árbol"
   - arguments: tree
     description: Spanish translation of "tree"
 fr 0:
-  include:
-    key: fr-<$language> 0
+  include: fr-<$language> 0
 fr 1:
-  include:
-    key: fr-<$language> 1
+  include: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (Pons)
-  include:
-    key: de-fr 0
+  include: de-fr 0
 fr-de 1:
   title: Französisch-Deutsch (Pons)
-  include:
-    key: de-fr 1
+  include: de-fr 1
   examples:
   - arguments: arbre
     description: Deutsch-Übersetzung von "arbre"
@@ -347,12 +327,10 @@ fr-de 1:
     description: Französisch-Übersetzung von "baum"
 fr-en 0:
   title: French-English (Pons)
-  include:
-    key: en-fr 0
+  include: en-fr 0
 fr-en 1:
   title: French-English (Pons)
-  include:
-    key: en-fr 1
+  include: en-fr 1
   examples:
   - arguments: arbre
     description: English translation of "arbre"
@@ -380,57 +358,45 @@ fr-pl 1:
   - arguments: drzewo
     description: Tłumaczenie na język francuski dla "drzewo"
 hu 0:
-  include:
-    key: hu-<$language> 0
+  include: hu-<$language> 0
 hu 1:
-  include:
-    key: hu-<$language> 1
+  include: hu-<$language> 1
 hu-de 0:
   title: Ungarisch-Deutsch (Pons)
-  include:
-    key: de-hu 0
+  include: de-hu 0
 hu-de 1:
   title: Ungarisch-Deutsch (Pons)
-  include:
-    key: de-hu 1
+  include: de-hu 1
   examples:
   - arguments: fa
     description: Deutsch-Übersetzung von "fa"
   - arguments: baum
     description: Ungarisch-Übersetzung von "baum"
 it 0:
-  include:
-    key: it-<$language> 0
+  include: it-<$language> 0
 it 1:
-  include:
-    key: it-<$language> 1
+  include: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (Pons)
-  include:
-    key: de-it 0
+  include: de-it 0
 it-de 1:
   title: Italienisch-Deutsch (Pons)
-  include:
-    key: de-it 1
+  include: de-it 1
   examples:
   - arguments: albero
     description: Deutsch-Übersetzung von "albero"
   - arguments: baum
     description: Italienisch-Übersetzung von "baum"
 pl 0:
-  include:
-    key: pl-<$language> 0
+  include: pl-<$language> 0
 pl 1:
-  include:
-    key: pl-<$language> 1
+  include: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (Pons)
-  include:
-    key: de-pl 0
+  include: de-pl 0
 pl-de 1:
   title: Polnisch-Deutsch (Pons)
-  include:
-    key: de-pl 1
+  include: de-pl 1
   examples:
   - arguments: drzewo
     description: Deutsch-Übersetzung von "drzewo"
@@ -438,69 +404,55 @@ pl-de 1:
     description: Polnisch-Übersetzung von "baum"
 pl-fr 0:
   title: Polonais-Français (Pons)
-  include:
-    key: fr-pl 0
+  include: fr-pl 0
 pl-fr 1:
   title: Polonais-Français (Pons)
-  include:
-    key: fr-pl 1
+  include: fr-pl 1
   examples:
   - arguments: drzewo
     description: Traduction en français de "drzewo"
   - arguments: arbre
     description: Traduction en polonais de "arbre"
 pt 0:
-  include:
-    key: pt-<$language> 0
+  include: pt-<$language> 0
 pt 1:
-  include:
-    key: pt-<$language> 1
+  include: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (Pons)
-  include:
-    key: de-pt 0
+  include: de-pt 0
 pt-de 1:
   title: Portugiesisch-Deutsch (Pons)
-  include:
-    key: de-pt 1
+  include: de-pt 1
   examples:
   - arguments: árvore
     description: Deutsch-Übersetzung von "árvore"
   - arguments: baum
     description: Portugiesisch-Übersetzung von "baum"
 ru 0:
-  include:
-    key: ru-<$language> 0
+  include: ru-<$language> 0
 ru 1:
-  include:
-    key: ru-<$language> 1
+  include: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (Pons)
-  include:
-    key: de-ru 0
+  include: de-ru 0
 ru-de 1:
   title: Russisch-Deutsch (Pons)
-  include:
-    key: de-ru 1
+  include: de-ru 1
   examples:
   - arguments: дерево
     description: Deutsch-Übersetzung von "дерево"
   - arguments: baum
     description: Russisch-Übersetzung von "baum"
 sl 0:
-  include:
-    key: sl-<$language> 0
+  include: sl-<$language> 0
 sl 1:
-  include:
-    key: sl-<$language> 1
+  include: sl-<$language> 1
 sl-en 0:
   title: Slovenian-English (Pons)
-  include:
-    key: en-sl 0
+  include: en-sl 0
 sl-en 1:
   title: Slovenian-English (Pons)
-  include:
-    key: en-sl 1
+  include: en-sl 1
   examples:
   - arguments: drevo
     description: English translation of "drevo"

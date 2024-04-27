@@ -1,9 +1,7 @@
 de 0:
-  include:
-    key: de-<$language> 0
+  include: de-<$language> 0
 de 1:
-  include:
-    key: de-<$language> 1
+  include: de-<$language> 1
 de-nl 0:
   url: https://www.uitmuntend.de/
   title: Duits-Nederlands (Uitmuntend)
@@ -26,19 +24,15 @@ de-nl 1:
   - arguments: boom
     description: Duits-vertaling van "boom"
 nl 0:
-  include:
-    key: nl-<$language> 0
+  include: nl-<$language> 0
 nl 1:
-  include:
-    key: nl-<$language> 1
+  include: nl-<$language> 1
 nl-de 0:
   title: Niederländisch-Deutsch (Uitmuntend)
-  include:
-    key: de-nl 0
+  include: de-nl 0
 nl-de 1:
   title: Niederländisch-Deutsch (Uitmuntend)
-  include:
-    key: de-nl 1
+  include: de-nl 1
   examples:
   - arguments: boom
     description: Deutsch-Übersetzung von "boom"

@@ -25,8 +25,7 @@ abc 0:
   - periódicos
 abc 1:
   url: https://www.abc.es/archivo/buscador/?titulo=<query>&tipo=todos
-  include:
-    key: abc 0
+  include: abc 0
   examples:
   - arguments: madrid
     description: Buscar "madrid" en ABC
@@ -55,8 +54,7 @@ emd 0:
   - periódicos
 emd 1:
   url: https://ariadna.elmundo.es/buscador/archivo.html?q=<query>
-  include:
-    key: emd 0
+  include: emd 0
   examples:
   - arguments: madrid
     description: Buscar "madrid" en El Mundo
@@ -167,8 +165,7 @@ mrc 0:
   - noticias
 mrc 1:
   url: https://www.google.com/search?hl=de&sitesearch=marca.com&q=<query>
-  include:
-    key: mrc 0
+  include: mrc 0
   examples:
   - arguments: messi
     description: Buscar "messi" en Marca

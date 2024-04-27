@@ -1,9 +1,7 @@
 am 0:
-  include:
-    key: am-<$language> 0
+  include: am-<$language> 0
 am 1:
-  include:
-    key: am-<$language> 1
+  include: am-<$language> 1
 am-de 0:
   url: https://www.pauker.at/pauker/DE_DE/am/wb
   title: Amharisch-Deutsch (Pauker.at)
@@ -26,11 +24,9 @@ am-de 1:
   - arguments: baum
     description: Amharisch-Übersetzung von "baum"
 ar 0:
-  include:
-    key: ar-<$language> 0
+  include: ar-<$language> 0
 ar 1:
-  include:
-    key: ar-<$language> 1
+  include: ar-<$language> 1
 ar-de 0:
   url: https://www.pauker.at/pauker/DE_DE/ar/wb
   title: Arabisch-Deutsch (Pauker.at)
@@ -53,11 +49,9 @@ ar-de 1:
   - arguments: baum
     description: Arabisch-Übersetzung von "baum"
 as 0:
-  include:
-    key: as-<$language> 0
+  include: as-<$language> 0
 as 1:
-  include:
-    key: as-<$language> 1
+  include: as-<$language> 1
 as-de 0:
   url: https://www.pauker.at/pauker/DE_DE/as/wb
   title: Assamesisch-Deutsch (Pauker.at)
@@ -80,11 +74,9 @@ as-de 1:
   - arguments: baum
     description: Assamesisch-Übersetzung von "baum"
 az 0:
-  include:
-    key: az-<$language> 0
+  include: az-<$language> 0
 az 1:
-  include:
-    key: az-<$language> 1
+  include: az-<$language> 1
 az-de 0:
   url: https://www.pauker.at/pauker/DE_DE/az/wb
   title: Aserbaidschanisch-Deutsch (Pauker.at)
@@ -107,11 +99,9 @@ az-de 1:
   - arguments: baum
     description: Aserbaidschanisch-Übersetzung von "baum"
 be 0:
-  include:
-    key: be-<$language> 0
+  include: be-<$language> 0
 be 1:
-  include:
-    key: be-<$language> 1
+  include: be-<$language> 1
 be-de 0:
   url: https://www.pauker.at/pauker/DE_DE/be/wb
   title: Weißrussisch-Deutsch (Pauker.at)
@@ -134,11 +124,9 @@ be-de 1:
   - arguments: baum
     description: Weißrussisch-Übersetzung von "baum"
 bg 0:
-  include:
-    key: bg-<$language> 0
+  include: bg-<$language> 0
 bg 1:
-  include:
-    key: bg-<$language> 1
+  include: bg-<$language> 1
 bg-de 0:
   url: https://www.pauker.at/pauker/DE_DE/bg/wb
   title: Bulgarisch-Deutsch (Pauker.at)
@@ -161,11 +149,9 @@ bg-de 1:
   - arguments: baum
     description: Bulgarisch-Übersetzung von "baum"
 bn 0:
-  include:
-    key: bn-<$language> 0
+  include: bn-<$language> 0
 bn 1:
-  include:
-    key: bn-<$language> 1
+  include: bn-<$language> 1
 bn-de 0:
   url: https://www.pauker.at/pauker/DE_DE/bn/wb
   title: Bengalisch-Deutsch (Pauker.at)
@@ -188,11 +174,9 @@ bn-de 1:
   - arguments: baum
     description: Bengalisch-Übersetzung von "baum"
 bo 0:
-  include:
-    key: bo-<$language> 0
+  include: bo-<$language> 0
 bo 1:
-  include:
-    key: bo-<$language> 1
+  include: bo-<$language> 1
 bo-de 0:
   url: https://www.pauker.at/pauker/DE_DE/bo/wb
   title: Tibetisch-Deutsch (Pauker.at)
@@ -215,11 +199,9 @@ bo-de 1:
   - arguments: baum
     description: Tibetisch-Übersetzung von "baum"
 br 0:
-  include:
-    key: br-<$language> 0
+  include: br-<$language> 0
 br 1:
-  include:
-    key: br-<$language> 1
+  include: br-<$language> 1
 br-de 0:
   url: https://www.pauker.at/pauker/DE_DE/br/wb
   title: Bretonisch-Deutsch (Pauker.at)
@@ -242,11 +224,9 @@ br-de 1:
   - arguments: baum
     description: Bretonisch-Übersetzung von "baum"
 ca 0:
-  include:
-    key: ca-<$language> 0
+  include: ca-<$language> 0
 ca 1:
-  include:
-    key: ca-<$language> 1
+  include: ca-<$language> 1
 ca-de 0:
   url: https://www.pauker.at/pauker/DE_DE/ca/wb
   title: Katalanisch-Deutsch (Pauker.at)
@@ -269,11 +249,9 @@ ca-de 1:
   - arguments: baum
     description: Katalanisch-Übersetzung von "baum"
 cs 0:
-  include:
-    key: cs-<$language> 0
+  include: cs-<$language> 0
 cs 1:
-  include:
-    key: cs-<$language> 1
+  include: cs-<$language> 1
 cs-de 0:
   url: https://www.pauker.at/pauker/DE_DE/cs/wb
   title: Tschechisch-Deutsch (Pauker.at)
@@ -296,11 +274,9 @@ cs-de 1:
   - arguments: baum
     description: Tschechisch-Übersetzung von "baum"
 cy 0:
-  include:
-    key: cy-<$language> 0
+  include: cy-<$language> 0
 cy 1:
-  include:
-    key: cy-<$language> 1
+  include: cy-<$language> 1
 cy-de 0:
   url: https://www.pauker.at/pauker/DE_DE/cy/wb
   title: Walisisch-Deutsch (Pauker.at)
@@ -323,11 +299,9 @@ cy-de 1:
   - arguments: baum
     description: Walisisch-Übersetzung von "baum"
 da 0:
-  include:
-    key: da-<$language> 0
+  include: da-<$language> 0
 da 1:
-  include:
-    key: da-<$language> 1
+  include: da-<$language> 1
 da-de 0:
   url: https://www.pauker.at/pauker/DE_DE/da/wb
   title: Dänisch-Deutsch (Pauker.at)
@@ -350,19 +324,15 @@ da-de 1:
   - arguments: baum
     description: Dänisch-Übersetzung von "baum"
 de 0:
-  include:
-    key: de-<$language> 0
+  include: de-<$language> 0
 de 1:
-  include:
-    key: de-<$language> 1
+  include: de-<$language> 1
 de-am 0:
   title: ጀርመን-አማርኛ (Pauker.at)
-  include:
-    key: am-de 0
+  include: am-de 0
 de-am 1:
   title: ጀርመን-አማርኛ (Pauker.at)
-  include:
-    key: am-de 1
+  include: am-de 1
   examples:
   - arguments: baum
     description: አማርኛ translation of "baum"
@@ -370,12 +340,10 @@ de-am 1:
     description: ጀርመን translation of "ዓሣ"
 de-ar 0:
   title: الألمانية-العربية (Pauker.at)
-  include:
-    key: ar-de 0
+  include: ar-de 0
 de-ar 1:
   title: الألمانية-العربية (Pauker.at)
-  include:
-    key: ar-de 1
+  include: ar-de 1
   examples:
   - arguments: baum
     description: ترجمة العربية من "baum"
@@ -383,12 +351,10 @@ de-ar 1:
     description: ترجمة الألمانية من "شجرة"
 de-as 0:
   title: German-অসমীয়া (Pauker.at)
-  include:
-    key: as-de 0
+  include: as-de 0
 de-as 1:
   title: German-অসমীয়া (Pauker.at)
-  include:
-    key: as-de 1
+  include: as-de 1
   examples:
   - arguments: baum
     description: অসমীয়া translation of "baum"
@@ -396,12 +362,10 @@ de-as 1:
     description: German translation of "গাছ"
 de-az 0:
   title: Alman-Azərbaycan (Pauker.at)
-  include:
-    key: az-de 0
+  include: az-de 0
 de-az 1:
   title: Alman-Azərbaycan (Pauker.at)
-  include:
-    key: az-de 1
+  include: az-de 1
   examples:
   - arguments: baum
     description: azərbaycan tərcüməsi "baum"
@@ -409,12 +373,10 @@ de-az 1:
     description: alman tərcüməsi "agac"
 de-be 0:
   title: Нямецкая-Беларуская (Pauker.at)
-  include:
-    key: be-de 0
+  include: be-de 0
 de-be 1:
   title: Нямецкая-Беларуская (Pauker.at)
-  include:
-    key: be-de 1
+  include: be-de 1
   examples:
   - arguments: baum
     description: Пераклад на беларуская для "baum"
@@ -422,12 +384,10 @@ de-be 1:
     description: Пераклад на нямецкая для "дрэва"
 de-bg 0:
   title: Немски-Български (Pauker.at)
-  include:
-    key: bg-de 0
+  include: bg-de 0
 de-bg 1:
   title: Немски-Български (Pauker.at)
-  include:
-    key: bg-de 1
+  include: bg-de 1
   examples:
   - arguments: baum
     description: български превод за "baum"
@@ -435,12 +395,10 @@ de-bg 1:
     description: немски превод за "дърво"
 de-bn 0:
   title: জার্মান-বাংলা (Pauker.at)
-  include:
-    key: bn-de 0
+  include: bn-de 0
 de-bn 1:
   title: জার্মান-বাংলা (Pauker.at)
-  include:
-    key: bn-de 1
+  include: bn-de 1
   examples:
   - arguments: baum
     description: বাংলা অনুবাদ "baum"
@@ -448,12 +406,10 @@ de-bn 1:
     description: জার্মান অনুবাদ "গাছ"
 de-bo 0:
   title: German-བོད་སྐད་ (Pauker.at)
-  include:
-    key: bo-de 0
+  include: bo-de 0
 de-bo 1:
   title: German-བོད་སྐད་ (Pauker.at)
-  include:
-    key: bo-de 1
+  include: bo-de 1
   examples:
   - arguments: baum
     description: བོད་སྐད་ translation of "baum"
@@ -461,12 +417,10 @@ de-bo 1:
     description: German translation of "རི་མོ་"
 de-br 0:
   title: Alamaneg-Brezhoneg (Pauker.at)
-  include:
-    key: br-de 0
+  include: br-de 0
 de-br 1:
   title: Alamaneg-Brezhoneg (Pauker.at)
-  include:
-    key: br-de 1
+  include: br-de 1
   examples:
   - arguments: baum
     description: Evezhiadenn brezhoneg evit "baum"
@@ -474,12 +428,10 @@ de-br 1:
     description: Evezhiadenn alamaneg evit "dervenn"
 de-ca 0:
   title: Alemany-Català (Pauker.at)
-  include:
-    key: ca-de 0
+  include: ca-de 0
 de-ca 1:
   title: Alemany-Català (Pauker.at)
-  include:
-    key: ca-de 1
+  include: ca-de 1
   examples:
   - arguments: baum
     description: Traducció al català de "baum"
@@ -487,12 +439,10 @@ de-ca 1:
     description: Traducció al alemany de "arbre"
 de-cs 0:
   title: Němčina-Čeština (Pauker.at)
-  include:
-    key: cs-de 0
+  include: cs-de 0
 de-cs 1:
   title: Němčina-Čeština (Pauker.at)
-  include:
-    key: cs-de 1
+  include: cs-de 1
   examples:
   - arguments: baum
     description: čeština překlad pro "baum"
@@ -500,12 +450,10 @@ de-cs 1:
     description: němčina překlad pro "strom"
 de-cy 0:
   title: Almaeneg-Cymraeg (Pauker.at)
-  include:
-    key: cy-de 0
+  include: cy-de 0
 de-cy 1:
   title: Almaeneg-Cymraeg (Pauker.at)
-  include:
-    key: cy-de 1
+  include: cy-de 1
   examples:
   - arguments: baum
     description: Cymraeg translation of "baum"
@@ -513,12 +461,10 @@ de-cy 1:
     description: Almaeneg translation of "coeden"
 de-da 0:
   title: Tysk-Dansk (Pauker.at)
-  include:
-    key: da-de 0
+  include: da-de 0
 de-da 1:
   title: Tysk-Dansk (Pauker.at)
-  include:
-    key: da-de 1
+  include: da-de 1
   examples:
   - arguments: baum
     description: dansk oversættelse af "baum"
@@ -2604,1881 +2550,1485 @@ de-zu 1:
   - arguments: isihlahla
     description: Ukuthathwa kwe isi-German kuka "isihlahla"
 dz 0:
-  include:
-    key: dz-<$language> 0
+  include: dz-<$language> 0
 dz 1:
-  include:
-    key: dz-<$language> 1
+  include: dz-<$language> 1
 dz-de 0:
   title: Bhutanisch-Deutsch (Pauker.at)
-  include:
-    key: de-dz 0
+  include: de-dz 0
 dz-de 1:
   title: Bhutanisch-Deutsch (Pauker.at)
-  include:
-    key: de-dz 1
+  include: de-dz 1
   examples:
   - arguments: སྣ་ཚོགས་
     description: Deutsch-Übersetzung von "སྣ་ཚོགས་"
   - arguments: baum
     description: Bhutanisch-Übersetzung von "baum"
 el 0:
-  include:
-    key: el-<$language> 0
+  include: el-<$language> 0
 el 1:
-  include:
-    key: el-<$language> 1
+  include: el-<$language> 1
 el-de 0:
   title: Griechisch-Deutsch (Pauker.at)
-  include:
-    key: de-el 0
+  include: de-el 0
 el-de 1:
   title: Griechisch-Deutsch (Pauker.at)
-  include:
-    key: de-el 1
+  include: de-el 1
   examples:
   - arguments: δέντρο
     description: Deutsch-Übersetzung von "δέντρο"
   - arguments: baum
     description: Griechisch-Übersetzung von "baum"
 en 0:
-  include:
-    key: en-<$language> 0
+  include: en-<$language> 0
 en 1:
-  include:
-    key: en-<$language> 1
+  include: en-<$language> 1
 en-de 0:
   title: Englisch-Deutsch (Pauker.at)
-  include:
-    key: de-en 0
+  include: de-en 0
 en-de 1:
   title: Englisch-Deutsch (Pauker.at)
-  include:
-    key: de-en 1
+  include: de-en 1
   examples:
   - arguments: tree
     description: Deutsch-Übersetzung von "tree"
   - arguments: baum
     description: Englisch-Übersetzung von "baum"
 eo 0:
-  include:
-    key: eo-<$language> 0
+  include: eo-<$language> 0
 eo 1:
-  include:
-    key: eo-<$language> 1
+  include: eo-<$language> 1
 eo-de 0:
   title: Esperanto-Deutsch (Pauker.at)
-  include:
-    key: de-eo 0
+  include: de-eo 0
 eo-de 1:
   title: Esperanto-Deutsch (Pauker.at)
-  include:
-    key: de-eo 1
+  include: de-eo 1
   examples:
   - arguments: arbo
     description: Deutsch-Übersetzung von "arbo"
   - arguments: baum
     description: Esperanto-Übersetzung von "baum"
 es 0:
-  include:
-    key: es-<$language> 0
+  include: es-<$language> 0
 es 1:
-  include:
-    key: es-<$language> 1
+  include: es-<$language> 1
 es-de 0:
   title: Spanisch-Deutsch (Pauker.at)
-  include:
-    key: de-es 0
+  include: de-es 0
 es-de 1:
   title: Spanisch-Deutsch (Pauker.at)
-  include:
-    key: de-es 1
+  include: de-es 1
   examples:
   - arguments: árbol
     description: Deutsch-Übersetzung von "árbol"
   - arguments: baum
     description: Spanisch-Übersetzung von "baum"
 et 0:
-  include:
-    key: et-<$language> 0
+  include: et-<$language> 0
 et 1:
-  include:
-    key: et-<$language> 1
+  include: et-<$language> 1
 et-de 0:
   title: Estnisch-Deutsch (Pauker.at)
-  include:
-    key: de-et 0
+  include: de-et 0
 et-de 1:
   title: Estnisch-Deutsch (Pauker.at)
-  include:
-    key: de-et 1
+  include: de-et 1
   examples:
   - arguments: puu
     description: Deutsch-Übersetzung von "puu"
   - arguments: baum
     description: Estnisch-Übersetzung von "baum"
 eu 0:
-  include:
-    key: eu-<$language> 0
+  include: eu-<$language> 0
 eu 1:
-  include:
-    key: eu-<$language> 1
+  include: eu-<$language> 1
 eu-de 0:
   title: Baskisch-Deutsch (Pauker.at)
-  include:
-    key: de-eu 0
+  include: de-eu 0
 eu-de 1:
   title: Baskisch-Deutsch (Pauker.at)
-  include:
-    key: de-eu 1
+  include: de-eu 1
   examples:
   - arguments: zuhaitz
     description: Deutsch-Übersetzung von "zuhaitz"
   - arguments: baum
     description: Baskisch-Übersetzung von "baum"
 fa 0:
-  include:
-    key: fa-<$language> 0
+  include: fa-<$language> 0
 fa 1:
-  include:
-    key: fa-<$language> 1
+  include: fa-<$language> 1
 fa-de 0:
   title: Persisch-Deutsch (Pauker.at)
-  include:
-    key: de-fa 0
+  include: de-fa 0
 fa-de 1:
   title: Persisch-Deutsch (Pauker.at)
-  include:
-    key: de-fa 1
+  include: de-fa 1
   examples:
   - arguments: درخت
     description: Deutsch-Übersetzung von "درخت"
   - arguments: baum
     description: Persisch-Übersetzung von "baum"
 fi 0:
-  include:
-    key: fi-<$language> 0
+  include: fi-<$language> 0
 fi 1:
-  include:
-    key: fi-<$language> 1
+  include: fi-<$language> 1
 fi-de 0:
   title: Finnisch-Deutsch (Pauker.at)
-  include:
-    key: de-fi 0
+  include: de-fi 0
 fi-de 1:
   title: Finnisch-Deutsch (Pauker.at)
-  include:
-    key: de-fi 1
+  include: de-fi 1
   examples:
   - arguments: puu
     description: Deutsch-Übersetzung von "puu"
   - arguments: baum
     description: Finnisch-Übersetzung von "baum"
 fo 0:
-  include:
-    key: fo-<$language> 0
+  include: fo-<$language> 0
 fo 1:
-  include:
-    key: fo-<$language> 1
+  include: fo-<$language> 1
 fo-de 0:
   title: Färöisch-Deutsch (Pauker.at)
-  include:
-    key: de-fo 0
+  include: de-fo 0
 fo-de 1:
   title: Färöisch-Deutsch (Pauker.at)
-  include:
-    key: de-fo 1
+  include: de-fo 1
   examples:
   - arguments: træ
     description: Deutsch-Übersetzung von "træ"
   - arguments: baum
     description: Färöisch-Übersetzung von "baum"
 fr 0:
-  include:
-    key: fr-<$language> 0
+  include: fr-<$language> 0
 fr 1:
-  include:
-    key: fr-<$language> 1
+  include: fr-<$language> 1
 fr-de 0:
   title: Französisch-Deutsch (Pauker.at)
-  include:
-    key: de-fr 0
+  include: de-fr 0
 fr-de 1:
   title: Französisch-Deutsch (Pauker.at)
-  include:
-    key: de-fr 1
+  include: de-fr 1
   examples:
   - arguments: arbre
     description: Deutsch-Übersetzung von "arbre"
   - arguments: baum
     description: Französisch-Übersetzung von "baum"
 fy 0:
-  include:
-    key: fy-<$language> 0
+  include: fy-<$language> 0
 fy 1:
-  include:
-    key: fy-<$language> 1
+  include: fy-<$language> 1
 fy-de 0:
   title: Westfriesisch-Deutsch (Pauker.at)
-  include:
-    key: de-fy 0
+  include: de-fy 0
 fy-de 1:
   title: Westfriesisch-Deutsch (Pauker.at)
-  include:
-    key: de-fy 1
+  include: de-fy 1
   examples:
   - arguments: beam
     description: Deutsch-Übersetzung von "beam"
   - arguments: baum
     description: Westfriesisch-Übersetzung von "baum"
 ga 0:
-  include:
-    key: ga-<$language> 0
+  include: ga-<$language> 0
 ga 1:
-  include:
-    key: ga-<$language> 1
+  include: ga-<$language> 1
 ga-de 0:
   title: Irisch-Deutsch (Pauker.at)
-  include:
-    key: de-ga 0
+  include: de-ga 0
 ga-de 1:
   title: Irisch-Deutsch (Pauker.at)
-  include:
-    key: de-ga 1
+  include: de-ga 1
   examples:
   - arguments: crann
     description: Deutsch-Übersetzung von "crann"
   - arguments: baum
     description: Irisch-Übersetzung von "baum"
 gd 0:
-  include:
-    key: gd-<$language> 0
+  include: gd-<$language> 0
 gd 1:
-  include:
-    key: gd-<$language> 1
+  include: gd-<$language> 1
 gd-de 0:
   title: Schottisches Gälisch-Deutsch (Pauker.at)
-  include:
-    key: de-gd 0
+  include: de-gd 0
 gd-de 1:
   title: Schottisches Gälisch-Deutsch (Pauker.at)
-  include:
-    key: de-gd 1
+  include: de-gd 1
   examples:
   - arguments: craobh
     description: Deutsch-Übersetzung von "craobh"
   - arguments: baum
     description: Schottisches Gälisch-Übersetzung von "baum"
 gl 0:
-  include:
-    key: gl-<$language> 0
+  include: gl-<$language> 0
 gl 1:
-  include:
-    key: gl-<$language> 1
+  include: gl-<$language> 1
 gl-de 0:
   title: Galizisch-Deutsch (Pauker.at)
-  include:
-    key: de-gl 0
+  include: de-gl 0
 gl-de 1:
   title: Galizisch-Deutsch (Pauker.at)
-  include:
-    key: de-gl 1
+  include: de-gl 1
   examples:
   - arguments: árbore
     description: Deutsch-Übersetzung von "árbore"
   - arguments: baum
     description: Galizisch-Übersetzung von "baum"
 gu 0:
-  include:
-    key: gu-<$language> 0
+  include: gu-<$language> 0
 gu 1:
-  include:
-    key: gu-<$language> 1
+  include: gu-<$language> 1
 gu-de 0:
   title: Gujarati-Deutsch (Pauker.at)
-  include:
-    key: de-gu 0
+  include: de-gu 0
 gu-de 1:
   title: Gujarati-Deutsch (Pauker.at)
-  include:
-    key: de-gu 1
+  include: de-gu 1
   examples:
   - arguments: વૃક્ષ
     description: Deutsch-Übersetzung von "વૃક્ષ"
   - arguments: baum
     description: Gujarati-Übersetzung von "baum"
 ha 0:
-  include:
-    key: ha-<$language> 0
+  include: ha-<$language> 0
 ha 1:
-  include:
-    key: ha-<$language> 1
+  include: ha-<$language> 1
 ha-de 0:
   title: Hausa-Deutsch (Pauker.at)
-  include:
-    key: de-ha 0
+  include: de-ha 0
 ha-de 1:
   title: Hausa-Deutsch (Pauker.at)
-  include:
-    key: de-ha 1
+  include: de-ha 1
   examples:
   - arguments: gashi
     description: Deutsch-Übersetzung von "gashi"
   - arguments: baum
     description: Hausa-Übersetzung von "baum"
 he 0:
-  include:
-    key: he-<$language> 0
+  include: he-<$language> 0
 he 1:
-  include:
-    key: he-<$language> 1
+  include: he-<$language> 1
 he-de 0:
   title: Hebräisch-Deutsch (Pauker.at)
-  include:
-    key: de-he 0
+  include: de-he 0
 he-de 1:
   title: Hebräisch-Deutsch (Pauker.at)
-  include:
-    key: de-he 1
+  include: de-he 1
   examples:
   - arguments: עץ
     description: Deutsch-Übersetzung von "עץ"
   - arguments: baum
     description: Hebräisch-Übersetzung von "baum"
 hi 0:
-  include:
-    key: hi-<$language> 0
+  include: hi-<$language> 0
 hi 1:
-  include:
-    key: hi-<$language> 1
+  include: hi-<$language> 1
 hi-de 0:
   title: Hindi-Deutsch (Pauker.at)
-  include:
-    key: de-hi 0
+  include: de-hi 0
 hi-de 1:
   title: Hindi-Deutsch (Pauker.at)
-  include:
-    key: de-hi 1
+  include: de-hi 1
   examples:
   - arguments: पेड़
     description: Deutsch-Übersetzung von "पेड़"
   - arguments: baum
     description: Hindi-Übersetzung von "baum"
 hr 0:
-  include:
-    key: hr-<$language> 0
+  include: hr-<$language> 0
 hr 1:
-  include:
-    key: hr-<$language> 1
+  include: hr-<$language> 1
 hr-de 0:
   title: Kroatisch-Deutsch (Pauker.at)
-  include:
-    key: de-hr 0
+  include: de-hr 0
 hr-de 1:
   title: Kroatisch-Deutsch (Pauker.at)
-  include:
-    key: de-hr 1
+  include: de-hr 1
   examples:
   - arguments: stablo
     description: Deutsch-Übersetzung von "stablo"
   - arguments: baum
     description: Kroatisch-Übersetzung von "baum"
 hu 0:
-  include:
-    key: hu-<$language> 0
+  include: hu-<$language> 0
 hu 1:
-  include:
-    key: hu-<$language> 1
+  include: hu-<$language> 1
 hu-de 0:
   title: Ungarisch-Deutsch (Pauker.at)
-  include:
-    key: de-hu 0
+  include: de-hu 0
 hu-de 1:
   title: Ungarisch-Deutsch (Pauker.at)
-  include:
-    key: de-hu 1
+  include: de-hu 1
   examples:
   - arguments: fa
     description: Deutsch-Übersetzung von "fa"
   - arguments: baum
     description: Ungarisch-Übersetzung von "baum"
 hy 0:
-  include:
-    key: hy-<$language> 0
+  include: hy-<$language> 0
 hy 1:
-  include:
-    key: hy-<$language> 1
+  include: hy-<$language> 1
 hy-de 0:
   title: Armenisch-Deutsch (Pauker.at)
-  include:
-    key: de-hy 0
+  include: de-hy 0
 hy-de 1:
   title: Armenisch-Deutsch (Pauker.at)
-  include:
-    key: de-hy 1
+  include: de-hy 1
   examples:
   - arguments: ծառ
     description: Deutsch-Übersetzung von "ծառ"
   - arguments: baum
     description: Armenisch-Übersetzung von "baum"
 id 0:
-  include:
-    key: id-<$language> 0
+  include: id-<$language> 0
 id 1:
-  include:
-    key: id-<$language> 1
+  include: id-<$language> 1
 id-de 0:
   title: Indonesisch-Deutsch (Pauker.at)
-  include:
-    key: de-id 0
+  include: de-id 0
 id-de 1:
   title: Indonesisch-Deutsch (Pauker.at)
-  include:
-    key: de-id 1
+  include: de-id 1
   examples:
   - arguments: pohon
     description: Deutsch-Übersetzung von "pohon"
   - arguments: baum
     description: Indonesisch-Übersetzung von "baum"
 ig 0:
-  include:
-    key: ig-<$language> 0
+  include: ig-<$language> 0
 ig 1:
-  include:
-    key: ig-<$language> 1
+  include: ig-<$language> 1
 ig-de 0:
   title: Igbo-Deutsch (Pauker.at)
-  include:
-    key: de-ig 0
+  include: de-ig 0
 ig-de 1:
   title: Igbo-Deutsch (Pauker.at)
-  include:
-    key: de-ig 1
+  include: de-ig 1
   examples:
   - arguments: ụlọ
     description: Deutsch-Übersetzung von "ụlọ"
   - arguments: baum
     description: Igbo-Übersetzung von "baum"
 ii 0:
-  include:
-    key: ii-<$language> 0
+  include: ii-<$language> 0
 ii 1:
-  include:
-    key: ii-<$language> 1
+  include: ii-<$language> 1
 ii-de 0:
   title: Yi-Deutsch (Pauker.at)
-  include:
-    key: de-ii 0
+  include: de-ii 0
 ii-de 1:
   title: Yi-Deutsch (Pauker.at)
-  include:
-    key: de-ii 1
+  include: de-ii 1
   examples:
   - arguments: ꆇꉙ
     description: Deutsch-Übersetzung von "ꆇꉙ"
   - arguments: baum
     description: Yi-Übersetzung von "baum"
 is 0:
-  include:
-    key: is-<$language> 0
+  include: is-<$language> 0
 is 1:
-  include:
-    key: is-<$language> 1
+  include: is-<$language> 1
 is-de 0:
   title: Isländisch-Deutsch (Pauker.at)
-  include:
-    key: de-is 0
+  include: de-is 0
 is-de 1:
   title: Isländisch-Deutsch (Pauker.at)
-  include:
-    key: de-is 1
+  include: de-is 1
   examples:
   - arguments: tré
     description: Deutsch-Übersetzung von "tré"
   - arguments: baum
     description: Isländisch-Übersetzung von "baum"
 it 0:
-  include:
-    key: it-<$language> 0
+  include: it-<$language> 0
 it 1:
-  include:
-    key: it-<$language> 1
+  include: it-<$language> 1
 it-de 0:
   title: Italienisch-Deutsch (Pauker.at)
-  include:
-    key: de-it 0
+  include: de-it 0
 it-de 1:
   title: Italienisch-Deutsch (Pauker.at)
-  include:
-    key: de-it 1
+  include: de-it 1
   examples:
   - arguments: albero
     description: Deutsch-Übersetzung von "albero"
   - arguments: baum
     description: Italienisch-Übersetzung von "baum"
 ja 0:
-  include:
-    key: ja-<$language> 0
+  include: ja-<$language> 0
 ja 1:
-  include:
-    key: ja-<$language> 1
+  include: ja-<$language> 1
 ja-de 0:
   title: Japanisch-Deutsch (Pauker.at)
-  include:
-    key: de-ja 0
+  include: de-ja 0
 ja-de 1:
   title: Japanisch-Deutsch (Pauker.at)
-  include:
-    key: de-ja 1
+  include: de-ja 1
   examples:
   - arguments: 木
     description: Deutsch-Übersetzung von "木"
   - arguments: baum
     description: Japanisch-Übersetzung von "baum"
 ka 0:
-  include:
-    key: ka-<$language> 0
+  include: ka-<$language> 0
 ka 1:
-  include:
-    key: ka-<$language> 1
+  include: ka-<$language> 1
 ka-de 0:
   title: Georgisch-Deutsch (Pauker.at)
-  include:
-    key: de-ka 0
+  include: de-ka 0
 ka-de 1:
   title: Georgisch-Deutsch (Pauker.at)
-  include:
-    key: de-ka 1
+  include: de-ka 1
   examples:
   - arguments: ხე
     description: Deutsch-Übersetzung von "ხე"
   - arguments: baum
     description: Georgisch-Übersetzung von "baum"
 ki 0:
-  include:
-    key: ki-<$language> 0
+  include: ki-<$language> 0
 ki 1:
-  include:
-    key: ki-<$language> 1
+  include: ki-<$language> 1
 ki-de 0:
   title: Kikuyu-Deutsch (Pauker.at)
-  include:
-    key: de-ki 0
+  include: de-ki 0
 ki-de 1:
   title: Kikuyu-Deutsch (Pauker.at)
-  include:
-    key: de-ki 1
+  include: de-ki 1
   examples:
   - arguments: muthiga
     description: Deutsch-Übersetzung von "muthiga"
   - arguments: baum
     description: Kikuyu-Übersetzung von "baum"
 kk 0:
-  include:
-    key: kk-<$language> 0
+  include: kk-<$language> 0
 kk 1:
-  include:
-    key: kk-<$language> 1
+  include: kk-<$language> 1
 kk-de 0:
   title: Kasachisch-Deutsch (Pauker.at)
-  include:
-    key: de-kk 0
+  include: de-kk 0
 kk-de 1:
   title: Kasachisch-Deutsch (Pauker.at)
-  include:
-    key: de-kk 1
+  include: de-kk 1
   examples:
   - arguments: ағаш
     description: Deutsch-Übersetzung von "ағаш"
   - arguments: baum
     description: Kasachisch-Übersetzung von "baum"
 kl 0:
-  include:
-    key: kl-<$language> 0
+  include: kl-<$language> 0
 kl 1:
-  include:
-    key: kl-<$language> 1
+  include: kl-<$language> 1
 kl-de 0:
   title: Grönländisch-Deutsch (Pauker.at)
-  include:
-    key: de-kl 0
+  include: de-kl 0
 kl-de 1:
   title: Grönländisch-Deutsch (Pauker.at)
-  include:
-    key: de-kl 1
+  include: de-kl 1
   examples:
   - arguments: pisinnaatitaq
     description: Deutsch-Übersetzung von "pisinnaatitaq"
   - arguments: baum
     description: Grönländisch-Übersetzung von "baum"
 km 0:
-  include:
-    key: km-<$language> 0
+  include: km-<$language> 0
 km 1:
-  include:
-    key: km-<$language> 1
+  include: km-<$language> 1
 km-de 0:
   title: Kambodschanisch-Deutsch (Pauker.at)
-  include:
-    key: de-km 0
+  include: de-km 0
 km-de 1:
   title: Kambodschanisch-Deutsch (Pauker.at)
-  include:
-    key: de-km 1
+  include: de-km 1
   examples:
   - arguments: ដើម
     description: Deutsch-Übersetzung von "ដើម"
   - arguments: baum
     description: Kambodschanisch-Übersetzung von "baum"
 kn 0:
-  include:
-    key: kn-<$language> 0
+  include: kn-<$language> 0
 kn 1:
-  include:
-    key: kn-<$language> 1
+  include: kn-<$language> 1
 kn-de 0:
   title: Kannada-Deutsch (Pauker.at)
-  include:
-    key: de-kn 0
+  include: de-kn 0
 kn-de 1:
   title: Kannada-Deutsch (Pauker.at)
-  include:
-    key: de-kn 1
+  include: de-kn 1
   examples:
   - arguments: ಮರ
     description: Deutsch-Übersetzung von "ಮರ"
   - arguments: baum
     description: Kannada-Übersetzung von "baum"
 ko 0:
-  include:
-    key: ko-<$language> 0
+  include: ko-<$language> 0
 ko 1:
-  include:
-    key: ko-<$language> 1
+  include: ko-<$language> 1
 ko-de 0:
   title: Koreanisch-Deutsch (Pauker.at)
-  include:
-    key: de-ko 0
+  include: de-ko 0
 ko-de 1:
   title: Koreanisch-Deutsch (Pauker.at)
-  include:
-    key: de-ko 1
+  include: de-ko 1
   examples:
   - arguments: 나무
     description: Deutsch-Übersetzung von "나무"
   - arguments: baum
     description: Koreanisch-Übersetzung von "baum"
 ks 0:
-  include:
-    key: ks-<$language> 0
+  include: ks-<$language> 0
 ks 1:
-  include:
-    key: ks-<$language> 1
+  include: ks-<$language> 1
 ks-de 0:
   title: Kaschmirisch-Deutsch (Pauker.at)
-  include:
-    key: de-ks 0
+  include: de-ks 0
 ks-de 1:
   title: Kaschmirisch-Deutsch (Pauker.at)
-  include:
-    key: de-ks 1
+  include: de-ks 1
   examples:
   - arguments: بُرز
     description: Deutsch-Übersetzung von "بُرز"
   - arguments: baum
     description: Kaschmirisch-Übersetzung von "baum"
 kw 0:
-  include:
-    key: kw-<$language> 0
+  include: kw-<$language> 0
 kw 1:
-  include:
-    key: kw-<$language> 1
+  include: kw-<$language> 1
 kw-de 0:
   title: Kornisch-Deutsch (Pauker.at)
-  include:
-    key: de-kw 0
+  include: de-kw 0
 kw-de 1:
   title: Kornisch-Deutsch (Pauker.at)
-  include:
-    key: de-kw 1
+  include: de-kw 1
   examples:
   - arguments: gogow
     description: Deutsch-Übersetzung von "gogow"
   - arguments: baum
     description: Kornisch-Übersetzung von "baum"
 ky 0:
-  include:
-    key: ky-<$language> 0
+  include: ky-<$language> 0
 ky 1:
-  include:
-    key: ky-<$language> 1
+  include: ky-<$language> 1
 ky-de 0:
   title: Kirgisisch-Deutsch (Pauker.at)
-  include:
-    key: de-ky 0
+  include: de-ky 0
 ky-de 1:
   title: Kirgisisch-Deutsch (Pauker.at)
-  include:
-    key: de-ky 1
+  include: de-ky 1
   examples:
   - arguments: агач
     description: Deutsch-Übersetzung von "агач"
   - arguments: baum
     description: Kirgisisch-Übersetzung von "baum"
 la 0:
-  include:
-    key: la-<$language> 0
+  include: la-<$language> 0
 la 1:
-  include:
-    key: la-<$language> 1
+  include: la-<$language> 1
 la-de 0:
   title: Latein-Deutsch (Pauker.at)
-  include:
-    key: de-la 0
+  include: de-la 0
 la-de 1:
   title: Latein-Deutsch (Pauker.at)
-  include:
-    key: de-la 1
+  include: de-la 1
   examples:
   - arguments: arbor
     description: Deutsch-Übersetzung von "arbor"
   - arguments: baum
     description: Latein-Übersetzung von "baum"
 lb 0:
-  include:
-    key: lb-<$language> 0
+  include: lb-<$language> 0
 lb 1:
-  include:
-    key: lb-<$language> 1
+  include: lb-<$language> 1
 lb-de 0:
   title: Luxemburgisch-Deutsch (Pauker.at)
-  include:
-    key: de-lb 0
+  include: de-lb 0
 lb-de 1:
   title: Luxemburgisch-Deutsch (Pauker.at)
-  include:
-    key: de-lb 1
+  include: de-lb 1
   examples:
   - arguments: Beem
     description: Deutsch-Übersetzung von "Beem"
   - arguments: baum
     description: Luxemburgisch-Übersetzung von "baum"
 lg 0:
-  include:
-    key: lg-<$language> 0
+  include: lg-<$language> 0
 lg 1:
-  include:
-    key: lg-<$language> 1
+  include: lg-<$language> 1
 lg-de 0:
   title: Ganda-Deutsch (Pauker.at)
-  include:
-    key: de-lg 0
+  include: de-lg 0
 lg-de 1:
   title: Ganda-Deutsch (Pauker.at)
-  include:
-    key: de-lg 1
+  include: de-lg 1
   examples:
   - arguments: ensolo
     description: Deutsch-Übersetzung von "ensolo"
   - arguments: baum
     description: Ganda-Übersetzung von "baum"
 ln 0:
-  include:
-    key: ln-<$language> 0
+  include: ln-<$language> 0
 ln 1:
-  include:
-    key: ln-<$language> 1
+  include: ln-<$language> 1
 ln-de 0:
   title: Lingala-Deutsch (Pauker.at)
-  include:
-    key: de-ln 0
+  include: de-ln 0
 ln-de 1:
   title: Lingala-Deutsch (Pauker.at)
-  include:
-    key: de-ln 1
+  include: de-ln 1
   examples:
   - arguments: molongo
     description: Deutsch-Übersetzung von "molongo"
   - arguments: baum
     description: Lingala-Übersetzung von "baum"
 lo 0:
-  include:
-    key: lo-<$language> 0
+  include: lo-<$language> 0
 lo 1:
-  include:
-    key: lo-<$language> 1
+  include: lo-<$language> 1
 lo-de 0:
   title: Laotisch-Deutsch (Pauker.at)
-  include:
-    key: de-lo 0
+  include: de-lo 0
 lo-de 1:
   title: Laotisch-Deutsch (Pauker.at)
-  include:
-    key: de-lo 1
+  include: de-lo 1
   examples:
   - arguments: ພາກໃຕ້
     description: Deutsch-Übersetzung von "ພາກໃຕ້"
   - arguments: baum
     description: Laotisch-Übersetzung von "baum"
 lt 0:
-  include:
-    key: lt-<$language> 0
+  include: lt-<$language> 0
 lt 1:
-  include:
-    key: lt-<$language> 1
+  include: lt-<$language> 1
 lt-de 0:
   title: Litauisch-Deutsch (Pauker.at)
-  include:
-    key: de-lt 0
+  include: de-lt 0
 lt-de 1:
   title: Litauisch-Deutsch (Pauker.at)
-  include:
-    key: de-lt 1
+  include: de-lt 1
   examples:
   - arguments: medis
     description: Deutsch-Übersetzung von "medis"
   - arguments: baum
     description: Litauisch-Übersetzung von "baum"
 lv 0:
-  include:
-    key: lv-<$language> 0
+  include: lv-<$language> 0
 lv 1:
-  include:
-    key: lv-<$language> 1
+  include: lv-<$language> 1
 lv-de 0:
   title: Lettisch-Deutsch (Pauker.at)
-  include:
-    key: de-lv 0
+  include: de-lv 0
 lv-de 1:
   title: Lettisch-Deutsch (Pauker.at)
-  include:
-    key: de-lv 1
+  include: de-lv 1
   examples:
   - arguments: koks
     description: Deutsch-Übersetzung von "koks"
   - arguments: baum
     description: Lettisch-Übersetzung von "baum"
 mg 0:
-  include:
-    key: mg-<$language> 0
+  include: mg-<$language> 0
 mg 1:
-  include:
-    key: mg-<$language> 1
+  include: mg-<$language> 1
 mg-de 0:
   title: Madagassisch-Deutsch (Pauker.at)
-  include:
-    key: de-mg 0
+  include: de-mg 0
 mg-de 1:
   title: Madagassisch-Deutsch (Pauker.at)
-  include:
-    key: de-mg 1
+  include: de-mg 1
   examples:
   - arguments: hazo
     description: Deutsch-Übersetzung von "hazo"
   - arguments: baum
     description: Madagassisch-Übersetzung von "baum"
 mk 0:
-  include:
-    key: mk-<$language> 0
+  include: mk-<$language> 0
 mk 1:
-  include:
-    key: mk-<$language> 1
+  include: mk-<$language> 1
 mk-de 0:
   title: Mazedonisch-Deutsch (Pauker.at)
-  include:
-    key: de-mk 0
+  include: de-mk 0
 mk-de 1:
   title: Mazedonisch-Deutsch (Pauker.at)
-  include:
-    key: de-mk 1
+  include: de-mk 1
   examples:
   - arguments: дрво
     description: Deutsch-Übersetzung von "дрво"
   - arguments: baum
     description: Mazedonisch-Übersetzung von "baum"
 ml 0:
-  include:
-    key: ml-<$language> 0
+  include: ml-<$language> 0
 ml 1:
-  include:
-    key: ml-<$language> 1
+  include: ml-<$language> 1
 ml-de 0:
   title: Malayalam-Deutsch (Pauker.at)
-  include:
-    key: de-ml 0
+  include: de-ml 0
 ml-de 1:
   title: Malayalam-Deutsch (Pauker.at)
-  include:
-    key: de-ml 1
+  include: de-ml 1
   examples:
   - arguments: മരം
     description: Deutsch-Übersetzung von "മരം"
   - arguments: baum
     description: Malayalam-Übersetzung von "baum"
 mn 0:
-  include:
-    key: mn-<$language> 0
+  include: mn-<$language> 0
 mn 1:
-  include:
-    key: mn-<$language> 1
+  include: mn-<$language> 1
 mn-de 0:
   title: Mongolisch-Deutsch (Pauker.at)
-  include:
-    key: de-mn 0
+  include: de-mn 0
 mn-de 1:
   title: Mongolisch-Deutsch (Pauker.at)
-  include:
-    key: de-mn 1
+  include: de-mn 1
   examples:
   - arguments: мод
     description: Deutsch-Übersetzung von "мод"
   - arguments: baum
     description: Mongolisch-Übersetzung von "baum"
 mr 0:
-  include:
-    key: mr-<$language> 0
+  include: mr-<$language> 0
 mr 1:
-  include:
-    key: mr-<$language> 1
+  include: mr-<$language> 1
 mr-de 0:
   title: Marathi-Deutsch (Pauker.at)
-  include:
-    key: de-mr 0
+  include: de-mr 0
 mr-de 1:
   title: Marathi-Deutsch (Pauker.at)
-  include:
-    key: de-mr 1
+  include: de-mr 1
   examples:
   - arguments: झाड
     description: Deutsch-Übersetzung von "झाड"
   - arguments: baum
     description: Marathi-Übersetzung von "baum"
 ms 0:
-  include:
-    key: ms-<$language> 0
+  include: ms-<$language> 0
 ms 1:
-  include:
-    key: ms-<$language> 1
+  include: ms-<$language> 1
 ms-de 0:
   title: Malaiisch-Deutsch (Pauker.at)
-  include:
-    key: de-ms 0
+  include: de-ms 0
 ms-de 1:
   title: Malaiisch-Deutsch (Pauker.at)
-  include:
-    key: de-ms 1
+  include: de-ms 1
   examples:
   - arguments: pokok
     description: Deutsch-Übersetzung von "pokok"
   - arguments: baum
     description: Malaiisch-Übersetzung von "baum"
 mt 0:
-  include:
-    key: mt-<$language> 0
+  include: mt-<$language> 0
 mt 1:
-  include:
-    key: mt-<$language> 1
+  include: mt-<$language> 1
 mt-de 0:
   title: Maltesisch-Deutsch (Pauker.at)
-  include:
-    key: de-mt 0
+  include: de-mt 0
 mt-de 1:
   title: Maltesisch-Deutsch (Pauker.at)
-  include:
-    key: de-mt 1
+  include: de-mt 1
   examples:
   - arguments: siġra
     description: Deutsch-Übersetzung von "siġra"
   - arguments: baum
     description: Maltesisch-Übersetzung von "baum"
 my 0:
-  include:
-    key: my-<$language> 0
+  include: my-<$language> 0
 my 1:
-  include:
-    key: my-<$language> 1
+  include: my-<$language> 1
 my-de 0:
   title: Birmanisch-Deutsch (Pauker.at)
-  include:
-    key: de-my 0
+  include: de-my 0
 my-de 1:
   title: Birmanisch-Deutsch (Pauker.at)
-  include:
-    key: de-my 1
+  include: de-my 1
   examples:
   - arguments: အိုးသတ္တု
     description: Deutsch-Übersetzung von "အိုးသတ္တု"
   - arguments: baum
     description: Birmanisch-Übersetzung von "baum"
 nb 0:
-  include:
-    key: nb-<$language> 0
+  include: nb-<$language> 0
 nb 1:
-  include:
-    key: nb-<$language> 1
+  include: nb-<$language> 1
 nb-de 0:
   title: Norwegisch Bokmål-Deutsch (Pauker.at)
-  include:
-    key: de-nb 0
+  include: de-nb 0
 nb-de 1:
   title: Norwegisch Bokmål-Deutsch (Pauker.at)
-  include:
-    key: de-nb 1
+  include: de-nb 1
   examples:
   - arguments: tre
     description: Deutsch-Übersetzung von "tre"
   - arguments: baum
     description: Norwegisch Bokmål-Übersetzung von "baum"
 nd 0:
-  include:
-    key: nd-<$language> 0
+  include: nd-<$language> 0
 nd 1:
-  include:
-    key: nd-<$language> 1
+  include: nd-<$language> 1
 nd-de 0:
   title: Nord-Ndebele-Sprache-Deutsch (Pauker.at)
-  include:
-    key: de-nd 0
+  include: de-nd 0
 nd-de 1:
   title: Nord-Ndebele-Sprache-Deutsch (Pauker.at)
-  include:
-    key: de-nd 1
+  include: de-nd 1
   examples:
   - arguments: indlala
     description: Deutsch-Übersetzung von "indlala"
   - arguments: baum
     description: Nord-Ndebele-Sprache-Übersetzung von "baum"
 ne 0:
-  include:
-    key: ne-<$language> 0
+  include: ne-<$language> 0
 ne 1:
-  include:
-    key: ne-<$language> 1
+  include: ne-<$language> 1
 ne-de 0:
   title: Nepalesisch-Deutsch (Pauker.at)
-  include:
-    key: de-ne 0
+  include: de-ne 0
 ne-de 1:
   title: Nepalesisch-Deutsch (Pauker.at)
-  include:
-    key: de-ne 1
+  include: de-ne 1
   examples:
   - arguments: रूख
     description: Deutsch-Übersetzung von "रूख"
   - arguments: baum
     description: Nepalesisch-Übersetzung von "baum"
 nl 0:
-  include:
-    key: nl-<$language> 0
+  include: nl-<$language> 0
 nl 1:
-  include:
-    key: nl-<$language> 1
+  include: nl-<$language> 1
 nl-de 0:
   title: Niederländisch-Deutsch (Pauker.at)
-  include:
-    key: de-nl 0
+  include: de-nl 0
 nl-de 1:
   title: Niederländisch-Deutsch (Pauker.at)
-  include:
-    key: de-nl 1
+  include: de-nl 1
   examples:
   - arguments: boom
     description: Deutsch-Übersetzung von "boom"
   - arguments: baum
     description: Niederländisch-Übersetzung von "baum"
 nn 0:
-  include:
-    key: nn-<$language> 0
+  include: nn-<$language> 0
 nn 1:
-  include:
-    key: nn-<$language> 1
+  include: nn-<$language> 1
 nn-de 0:
   title: Norwegisch Nynorsk-Deutsch (Pauker.at)
-  include:
-    key: de-nn 0
+  include: de-nn 0
 nn-de 1:
   title: Norwegisch Nynorsk-Deutsch (Pauker.at)
-  include:
-    key: de-nn 1
+  include: de-nn 1
   examples:
   - arguments: tre
     description: Deutsch-Übersetzung von "tre"
   - arguments: baum
     description: Norwegisch Nynorsk-Übersetzung von "baum"
 no 0:
-  include:
-    key: no-<$language> 0
+  include: no-<$language> 0
 no 1:
-  include:
-    key: no-<$language> 1
+  include: no-<$language> 1
 no-de 0:
   title: Norwegisch-Deutsch (Pauker.at)
-  include:
-    key: de-no 0
+  include: de-no 0
 no-de 1:
   title: Norwegisch-Deutsch (Pauker.at)
-  include:
-    key: de-no 1
+  include: de-no 1
   examples:
   - arguments: tre
     description: Deutsch-Übersetzung von "tre"
   - arguments: baum
     description: Norwegisch-Übersetzung von "baum"
 om 0:
-  include:
-    key: om-<$language> 0
+  include: om-<$language> 0
 om 1:
-  include:
-    key: om-<$language> 1
+  include: om-<$language> 1
 om-de 0:
   title: Oromo-Deutsch (Pauker.at)
-  include:
-    key: de-om 0
+  include: de-om 0
 om-de 1:
   title: Oromo-Deutsch (Pauker.at)
-  include:
-    key: de-om 1
+  include: de-om 1
   examples:
   - arguments: dhukesa
     description: Deutsch-Übersetzung von "dhukesa"
   - arguments: baum
     description: Oromo-Übersetzung von "baum"
 or 0:
-  include:
-    key: or-<$language> 0
+  include: or-<$language> 0
 or 1:
-  include:
-    key: or-<$language> 1
+  include: or-<$language> 1
 or-de 0:
   title: Oriya-Deutsch (Pauker.at)
-  include:
-    key: de-or 0
+  include: de-or 0
 or-de 1:
   title: Oriya-Deutsch (Pauker.at)
-  include:
-    key: de-or 1
+  include: de-or 1
   examples:
   - arguments: ବାଣ
     description: Deutsch-Übersetzung von "ବାଣ"
   - arguments: baum
     description: Oriya-Übersetzung von "baum"
 os 0:
-  include:
-    key: os-<$language> 0
+  include: os-<$language> 0
 os 1:
-  include:
-    key: os-<$language> 1
+  include: os-<$language> 1
 os-de 0:
   title: Ossetisch-Deutsch (Pauker.at)
-  include:
-    key: de-os 0
+  include: de-os 0
 os-de 1:
   title: Ossetisch-Deutsch (Pauker.at)
-  include:
-    key: de-os 1
+  include: de-os 1
   examples:
   - arguments: дӕрвӕ
     description: Deutsch-Übersetzung von "дӕрвӕ"
   - arguments: baum
     description: Ossetisch-Übersetzung von "baum"
 pa 0:
-  include:
-    key: pa-<$language> 0
+  include: pa-<$language> 0
 pa 1:
-  include:
-    key: pa-<$language> 1
+  include: pa-<$language> 1
 pa-de 0:
   title: Panjabi-Deutsch (Pauker.at)
-  include:
-    key: de-pa 0
+  include: de-pa 0
 pa-de 1:
   title: Panjabi-Deutsch (Pauker.at)
-  include:
-    key: de-pa 1
+  include: de-pa 1
   examples:
   - arguments: ਰੁੱਖ
     description: Deutsch-Übersetzung von "ਰੁੱਖ"
   - arguments: baum
     description: Panjabi-Übersetzung von "baum"
 pl 0:
-  include:
-    key: pl-<$language> 0
+  include: pl-<$language> 0
 pl 1:
-  include:
-    key: pl-<$language> 1
+  include: pl-<$language> 1
 pl-de 0:
   title: Polnisch-Deutsch (Pauker.at)
-  include:
-    key: de-pl 0
+  include: de-pl 0
 pl-de 1:
   title: Polnisch-Deutsch (Pauker.at)
-  include:
-    key: de-pl 1
+  include: de-pl 1
   examples:
   - arguments: drzewo
     description: Deutsch-Übersetzung von "drzewo"
   - arguments: baum
     description: Polnisch-Übersetzung von "baum"
 ps 0:
-  include:
-    key: ps-<$language> 0
+  include: ps-<$language> 0
 ps 1:
-  include:
-    key: ps-<$language> 1
+  include: ps-<$language> 1
 ps-de 0:
   title: Paschtu-Deutsch (Pauker.at)
-  include:
-    key: de-ps 0
+  include: de-ps 0
 ps-de 1:
   title: Paschtu-Deutsch (Pauker.at)
-  include:
-    key: de-ps 1
+  include: de-ps 1
   examples:
   - arguments: درخت
     description: Deutsch-Übersetzung von "درخت"
   - arguments: baum
     description: Paschtu-Übersetzung von "baum"
 pt 0:
-  include:
-    key: pt-<$language> 0
+  include: pt-<$language> 0
 pt 1:
-  include:
-    key: pt-<$language> 1
+  include: pt-<$language> 1
 pt-de 0:
   title: Portugiesisch-Deutsch (Pauker.at)
-  include:
-    key: de-pt 0
+  include: de-pt 0
 pt-de 1:
   title: Portugiesisch-Deutsch (Pauker.at)
-  include:
-    key: de-pt 1
+  include: de-pt 1
   examples:
   - arguments: árvore
     description: Deutsch-Übersetzung von "árvore"
   - arguments: baum
     description: Portugiesisch-Übersetzung von "baum"
 qu 0:
-  include:
-    key: qu-<$language> 0
+  include: qu-<$language> 0
 qu 1:
-  include:
-    key: qu-<$language> 1
+  include: qu-<$language> 1
 qu-de 0:
   title: Quechua-Deutsch (Pauker.at)
-  include:
-    key: de-qu 0
+  include: de-qu 0
 qu-de 1:
   title: Quechua-Deutsch (Pauker.at)
-  include:
-    key: de-qu 1
+  include: de-qu 1
   examples:
   - arguments: kulli
     description: Deutsch-Übersetzung von "kulli"
   - arguments: baum
     description: Quechua-Übersetzung von "baum"
 rm 0:
-  include:
-    key: rm-<$language> 0
+  include: rm-<$language> 0
 rm 1:
-  include:
-    key: rm-<$language> 1
+  include: rm-<$language> 1
 rm-de 0:
   title: Rätoromanisch-Deutsch (Pauker.at)
-  include:
-    key: de-rm 0
+  include: de-rm 0
 rm-de 1:
   title: Rätoromanisch-Deutsch (Pauker.at)
-  include:
-    key: de-rm 1
+  include: de-rm 1
   examples:
   - arguments: tree
     description: Deutsch-Übersetzung von "tree"
   - arguments: baum
     description: Rätoromanisch-Übersetzung von "baum"
 rn 0:
-  include:
-    key: rn-<$language> 0
+  include: rn-<$language> 0
 rn 1:
-  include:
-    key: rn-<$language> 1
+  include: rn-<$language> 1
 rn-de 0:
   title: Rundi-Sprache-Deutsch (Pauker.at)
-  include:
-    key: de-rn 0
+  include: de-rn 0
 rn-de 1:
   title: Rundi-Sprache-Deutsch (Pauker.at)
-  include:
-    key: de-rn 1
+  include: de-rn 1
   examples:
   - arguments: umutumbudu
     description: Deutsch-Übersetzung von "umutumbudu"
   - arguments: baum
     description: Rundi-Sprache-Übersetzung von "baum"
 ro 0:
-  include:
-    key: ro-<$language> 0
+  include: ro-<$language> 0
 ro 1:
-  include:
-    key: ro-<$language> 1
+  include: ro-<$language> 1
 ro-de 0:
   title: Rumänisch-Deutsch (Pauker.at)
-  include:
-    key: de-ro 0
+  include: de-ro 0
 ro-de 1:
   title: Rumänisch-Deutsch (Pauker.at)
-  include:
-    key: de-ro 1
+  include: de-ro 1
   examples:
   - arguments: copac
     description: Deutsch-Übersetzung von "copac"
   - arguments: baum
     description: Rumänisch-Übersetzung von "baum"
 ru 0:
-  include:
-    key: ru-<$language> 0
+  include: ru-<$language> 0
 ru 1:
-  include:
-    key: ru-<$language> 1
+  include: ru-<$language> 1
 ru-de 0:
   title: Russisch-Deutsch (Pauker.at)
-  include:
-    key: de-ru 0
+  include: de-ru 0
 ru-de 1:
   title: Russisch-Deutsch (Pauker.at)
-  include:
-    key: de-ru 1
+  include: de-ru 1
   examples:
   - arguments: дерево
     description: Deutsch-Übersetzung von "дерево"
   - arguments: baum
     description: Russisch-Übersetzung von "baum"
 rw 0:
-  include:
-    key: rw-<$language> 0
+  include: rw-<$language> 0
 rw 1:
-  include:
-    key: rw-<$language> 1
+  include: rw-<$language> 1
 rw-de 0:
   title: Ruandisch-Deutsch (Pauker.at)
-  include:
-    key: de-rw 0
+  include: de-rw 0
 rw-de 1:
   title: Ruandisch-Deutsch (Pauker.at)
-  include:
-    key: de-rw 1
+  include: de-rw 1
   examples:
   - arguments: umusozi
     description: Deutsch-Übersetzung von "umusozi"
   - arguments: baum
     description: Ruandisch-Übersetzung von "baum"
 se 0:
-  include:
-    key: se-<$language> 0
+  include: se-<$language> 0
 se 1:
-  include:
-    key: se-<$language> 1
+  include: se-<$language> 1
 se-de 0:
   title: Nord-Samisch-Deutsch (Pauker.at)
-  include:
-    key: de-se 0
+  include: de-se 0
 se-de 1:
   title: Nord-Samisch-Deutsch (Pauker.at)
-  include:
-    key: de-se 1
+  include: de-se 1
   examples:
   - arguments: oahppu
     description: Deutsch-Übersetzung von "oahppu"
   - arguments: baum
     description: Nord-Samisch-Übersetzung von "baum"
 sg 0:
-  include:
-    key: sg-<$language> 0
+  include: sg-<$language> 0
 sg 1:
-  include:
-    key: sg-<$language> 1
+  include: sg-<$language> 1
 sg-de 0:
   title: Sango-Deutsch (Pauker.at)
-  include:
-    key: de-sg 0
+  include: de-sg 0
 sg-de 1:
   title: Sango-Deutsch (Pauker.at)
-  include:
-    key: de-sg 1
+  include: de-sg 1
   examples:
   - arguments: mbombo
     description: Deutsch-Übersetzung von "mbombo"
   - arguments: baum
     description: Sango-Übersetzung von "baum"
 si 0:
-  include:
-    key: si-<$language> 0
+  include: si-<$language> 0
 si 1:
-  include:
-    key: si-<$language> 1
+  include: si-<$language> 1
 si-de 0:
   title: Singhalesisch-Deutsch (Pauker.at)
-  include:
-    key: de-si 0
+  include: de-si 0
 si-de 1:
   title: Singhalesisch-Deutsch (Pauker.at)
-  include:
-    key: de-si 1
+  include: de-si 1
   examples:
   - arguments: ගස
     description: Deutsch-Übersetzung von "ගස"
   - arguments: baum
     description: Singhalesisch-Übersetzung von "baum"
 sk 0:
-  include:
-    key: sk-<$language> 0
+  include: sk-<$language> 0
 sk 1:
-  include:
-    key: sk-<$language> 1
+  include: sk-<$language> 1
 sk-de 0:
   title: Slowakisch-Deutsch (Pauker.at)
-  include:
-    key: de-sk 0
+  include: de-sk 0
 sk-de 1:
   title: Slowakisch-Deutsch (Pauker.at)
-  include:
-    key: de-sk 1
+  include: de-sk 1
   examples:
   - arguments: stromček
     description: Deutsch-Übersetzung von "stromček"
   - arguments: baum
     description: Slowakisch-Übersetzung von "baum"
 sl 0:
-  include:
-    key: sl-<$language> 0
+  include: sl-<$language> 0
 sl 1:
-  include:
-    key: sl-<$language> 1
+  include: sl-<$language> 1
 sl-de 0:
   title: Slowenisch-Deutsch (Pauker.at)
-  include:
-    key: de-sl 0
+  include: de-sl 0
 sl-de 1:
   title: Slowenisch-Deutsch (Pauker.at)
-  include:
-    key: de-sl 1
+  include: de-sl 1
   examples:
   - arguments: drevo
     description: Deutsch-Übersetzung von "drevo"
   - arguments: baum
     description: Slowenisch-Übersetzung von "baum"
 sn 0:
-  include:
-    key: sn-<$language> 0
+  include: sn-<$language> 0
 sn 1:
-  include:
-    key: sn-<$language> 1
+  include: sn-<$language> 1
 sn-de 0:
   title: Shona-Deutsch (Pauker.at)
-  include:
-    key: de-sn 0
+  include: de-sn 0
 sn-de 1:
   title: Shona-Deutsch (Pauker.at)
-  include:
-    key: de-sn 1
+  include: de-sn 1
   examples:
   - arguments: mutsvairo
     description: Deutsch-Übersetzung von "mutsvairo"
   - arguments: baum
     description: Shona-Übersetzung von "baum"
 so 0:
-  include:
-    key: so-<$language> 0
+  include: so-<$language> 0
 so 1:
-  include:
-    key: so-<$language> 1
+  include: so-<$language> 1
 so-de 0:
   title: Somali-Deutsch (Pauker.at)
-  include:
-    key: de-so 0
+  include: de-so 0
 so-de 1:
   title: Somali-Deutsch (Pauker.at)
-  include:
-    key: de-so 1
+  include: de-so 1
   examples:
   - arguments: geed
     description: Deutsch-Übersetzung von "geed"
   - arguments: baum
     description: Somali-Übersetzung von "baum"
 sq 0:
-  include:
-    key: sq-<$language> 0
+  include: sq-<$language> 0
 sq 1:
-  include:
-    key: sq-<$language> 1
+  include: sq-<$language> 1
 sq-de 0:
   title: Albanisch-Deutsch (Pauker.at)
-  include:
-    key: de-sq 0
+  include: de-sq 0
 sq-de 1:
   title: Albanisch-Deutsch (Pauker.at)
-  include:
-    key: de-sq 1
+  include: de-sq 1
   examples:
   - arguments: pemë
     description: Deutsch-Übersetzung von "pemë"
   - arguments: baum
     description: Albanisch-Übersetzung von "baum"
 sr 0:
-  include:
-    key: sr-<$language> 0
+  include: sr-<$language> 0
 sr 1:
-  include:
-    key: sr-<$language> 1
+  include: sr-<$language> 1
 sr-de 0:
   title: Serbisch-Deutsch (Pauker.at)
-  include:
-    key: de-sr 0
+  include: de-sr 0
 sr-de 1:
   title: Serbisch-Deutsch (Pauker.at)
-  include:
-    key: de-sr 1
+  include: de-sr 1
   examples:
   - arguments: дрво
     description: Deutsch-Übersetzung von "дрво"
   - arguments: baum
     description: Serbisch-Übersetzung von "baum"
 sv 0:
-  include:
-    key: sv-<$language> 0
+  include: sv-<$language> 0
 sv 1:
-  include:
-    key: sv-<$language> 1
+  include: sv-<$language> 1
 sv-de 0:
   title: Schwedisch-Deutsch (Pauker.at)
-  include:
-    key: de-sv 0
+  include: de-sv 0
 sv-de 1:
   title: Schwedisch-Deutsch (Pauker.at)
-  include:
-    key: de-sv 1
+  include: de-sv 1
   examples:
   - arguments: träd
     description: Deutsch-Übersetzung von "träd"
   - arguments: baum
     description: Schwedisch-Übersetzung von "baum"
 sw 0:
-  include:
-    key: sw-<$language> 0
+  include: sw-<$language> 0
 sw 1:
-  include:
-    key: sw-<$language> 1
+  include: sw-<$language> 1
 sw-de 0:
   title: Suaheli-Deutsch (Pauker.at)
-  include:
-    key: de-sw 0
+  include: de-sw 0
 sw-de 1:
   title: Suaheli-Deutsch (Pauker.at)
-  include:
-    key: de-sw 1
+  include: de-sw 1
   examples:
   - arguments: mti
     description: Deutsch-Übersetzung von "mti"
   - arguments: baum
     description: Suaheli-Übersetzung von "baum"
 ta 0:
-  include:
-    key: ta-<$language> 0
+  include: ta-<$language> 0
 ta 1:
-  include:
-    key: ta-<$language> 1
+  include: ta-<$language> 1
 ta-de 0:
   title: Tamilisch-Deutsch (Pauker.at)
-  include:
-    key: de-ta 0
+  include: de-ta 0
 ta-de 1:
   title: Tamilisch-Deutsch (Pauker.at)
-  include:
-    key: de-ta 1
+  include: de-ta 1
   examples:
   - arguments: மரம்
     description: Deutsch-Übersetzung von "மரம்"
   - arguments: baum
     description: Tamilisch-Übersetzung von "baum"
 te 0:
-  include:
-    key: te-<$language> 0
+  include: te-<$language> 0
 te 1:
-  include:
-    key: te-<$language> 1
+  include: te-<$language> 1
 te-de 0:
   title: Telugu-Deutsch (Pauker.at)
-  include:
-    key: de-te 0
+  include: de-te 0
 te-de 1:
   title: Telugu-Deutsch (Pauker.at)
-  include:
-    key: de-te 1
+  include: de-te 1
   examples:
   - arguments: చెట్టు
     description: Deutsch-Übersetzung von "చెట్టు"
   - arguments: baum
     description: Telugu-Übersetzung von "baum"
 th 0:
-  include:
-    key: th-<$language> 0
+  include: th-<$language> 0
 th 1:
-  include:
-    key: th-<$language> 1
+  include: th-<$language> 1
 th-de 0:
   title: Thailändisch-Deutsch (Pauker.at)
-  include:
-    key: de-th 0
+  include: de-th 0
 th-de 1:
   title: Thailändisch-Deutsch (Pauker.at)
-  include:
-    key: de-th 1
+  include: de-th 1
   examples:
   - arguments: ต้นไม้
     description: Deutsch-Übersetzung von "ต้นไม้"
   - arguments: baum
     description: Thailändisch-Übersetzung von "baum"
 ti 0:
-  include:
-    key: ti-<$language> 0
+  include: ti-<$language> 0
 ti 1:
-  include:
-    key: ti-<$language> 1
+  include: ti-<$language> 1
 ti-de 0:
   title: Tigrinja-Deutsch (Pauker.at)
-  include:
-    key: de-ti 0
+  include: de-ti 0
 ti-de 1:
   title: Tigrinja-Deutsch (Pauker.at)
-  include:
-    key: de-ti 1
+  include: de-ti 1
   examples:
   - arguments: ኣበባ
     description: Deutsch-Übersetzung von "ኣበባ"
   - arguments: baum
     description: Tigrinja-Übersetzung von "baum"
 tl 0:
-  include:
-    key: tl-<$language> 0
+  include: tl-<$language> 0
 tl 1:
-  include:
-    key: tl-<$language> 1
+  include: tl-<$language> 1
 tl-de 0:
   title: Tagalog-Deutsch (Pauker.at)
-  include:
-    key: de-tl 0
+  include: de-tl 0
 tl-de 1:
   title: Tagalog-Deutsch (Pauker.at)
-  include:
-    key: de-tl 1
+  include: de-tl 1
   examples:
   - arguments: puno
     description: Deutsch-Übersetzung von "puno"
   - arguments: baum
     description: Tagalog-Übersetzung von "baum"
 to 0:
-  include:
-    key: to-<$language> 0
+  include: to-<$language> 0
 to 1:
-  include:
-    key: to-<$language> 1
+  include: to-<$language> 1
 to-de 0:
   title: Tongaisch-Deutsch (Pauker.at)
-  include:
-    key: de-to 0
+  include: de-to 0
 to-de 1:
   title: Tongaisch-Deutsch (Pauker.at)
-  include:
-    key: de-to 1
+  include: de-to 1
   examples:
   - arguments: kahoa
     description: Deutsch-Übersetzung von "kahoa"
   - arguments: baum
     description: Tongaisch-Übersetzung von "baum"
 tr 0:
-  include:
-    key: tr-<$language> 0
+  include: tr-<$language> 0
 tr 1:
-  include:
-    key: tr-<$language> 1
+  include: tr-<$language> 1
 tr-de 0:
   title: Türkisch-Deutsch (Pauker.at)
-  include:
-    key: de-tr 0
+  include: de-tr 0
 tr-de 1:
   title: Türkisch-Deutsch (Pauker.at)
-  include:
-    key: de-tr 1
+  include: de-tr 1
   examples:
   - arguments: ağaç
     description: Deutsch-Übersetzung von "ağaç"
   - arguments: baum
     description: Türkisch-Übersetzung von "baum"
 ug 0:
-  include:
-    key: ug-<$language> 0
+  include: ug-<$language> 0
 ug 1:
-  include:
-    key: ug-<$language> 1
+  include: ug-<$language> 1
 ug-de 0:
   title: Uigurisch-Deutsch (Pauker.at)
-  include:
-    key: de-ug 0
+  include: de-ug 0
 ug-de 1:
   title: Uigurisch-Deutsch (Pauker.at)
-  include:
-    key: de-ug 1
+  include: de-ug 1
   examples:
   - arguments: قۇش
     description: Deutsch-Übersetzung von "قۇش"
   - arguments: baum
     description: Uigurisch-Übersetzung von "baum"
 uk 0:
-  include:
-    key: uk-<$language> 0
+  include: uk-<$language> 0
 uk 1:
-  include:
-    key: uk-<$language> 1
+  include: uk-<$language> 1
 uk-de 0:
   title: Ukrainisch-Deutsch (Pauker.at)
-  include:
-    key: de-uk 0
+  include: de-uk 0
 uk-de 1:
   title: Ukrainisch-Deutsch (Pauker.at)
-  include:
-    key: de-uk 1
+  include: de-uk 1
   examples:
   - arguments: дерево
     description: Deutsch-Übersetzung von "дерево"
   - arguments: baum
     description: Ukrainisch-Übersetzung von "baum"
 ur 0:
-  include:
-    key: ur-<$language> 0
+  include: ur-<$language> 0
 ur 1:
-  include:
-    key: ur-<$language> 1
+  include: ur-<$language> 1
 ur-de 0:
   title: Urdu-Deutsch (Pauker.at)
-  include:
-    key: de-ur 0
+  include: de-ur 0
 ur-de 1:
   title: Urdu-Deutsch (Pauker.at)
-  include:
-    key: de-ur 1
+  include: de-ur 1
   examples:
   - arguments: درخت
     description: Deutsch-Übersetzung von "درخت"
   - arguments: baum
     description: Urdu-Übersetzung von "baum"
 uz 0:
-  include:
-    key: uz-<$language> 0
+  include: uz-<$language> 0
 uz 1:
-  include:
-    key: uz-<$language> 1
+  include: uz-<$language> 1
 uz-de 0:
   title: Usbekisch-Deutsch (Pauker.at)
-  include:
-    key: de-uz 0
+  include: de-uz 0
 uz-de 1:
   title: Usbekisch-Deutsch (Pauker.at)
-  include:
-    key: de-uz 1
+  include: de-uz 1
   examples:
   - arguments: daraxt
     description: Deutsch-Übersetzung von "daraxt"
   - arguments: baum
     description: Usbekisch-Übersetzung von "baum"
 vi 0:
-  include:
-    key: vi-<$language> 0
+  include: vi-<$language> 0
 vi 1:
-  include:
-    key: vi-<$language> 1
+  include: vi-<$language> 1
 vi-de 0:
   title: Vietnamesisch-Deutsch (Pauker.at)
-  include:
-    key: de-vi 0
+  include: de-vi 0
 vi-de 1:
   title: Vietnamesisch-Deutsch (Pauker.at)
-  include:
-    key: de-vi 1
+  include: de-vi 1
   examples:
   - arguments: cây
     description: Deutsch-Übersetzung von "cây"
   - arguments: baum
     description: Vietnamesisch-Übersetzung von "baum"
 yi 0:
-  include:
-    key: yi-<$language> 0
+  include: yi-<$language> 0
 yi 1:
-  include:
-    key: yi-<$language> 1
+  include: yi-<$language> 1
 yi-de 0:
   title: Jiddisch-Deutsch (Pauker.at)
-  include:
-    key: de-yi 0
+  include: de-yi 0
 yi-de 1:
   title: Jiddisch-Deutsch (Pauker.at)
-  include:
-    key: de-yi 1
+  include: de-yi 1
   examples:
   - arguments: בוים
     description: Deutsch-Übersetzung von "בוים"
   - arguments: baum
     description: Jiddisch-Übersetzung von "baum"
 yo 0:
-  include:
-    key: yo-<$language> 0
+  include: yo-<$language> 0
 yo 1:
-  include:
-    key: yo-<$language> 1
+  include: yo-<$language> 1
 yo-de 0:
   title: Yoruba-Deutsch (Pauker.at)
-  include:
-    key: de-yo 0
+  include: de-yo 0
 yo-de 1:
   title: Yoruba-Deutsch (Pauker.at)
-  include:
-    key: de-yo 1
+  include: de-yo 1
   examples:
   - arguments: igi
     description: Deutsch-Übersetzung von "igi"
   - arguments: baum
     description: Yoruba-Übersetzung von "baum"
 zh 0:
-  include:
-    key: zh-<$language> 0
+  include: zh-<$language> 0
 zh 1:
-  include:
-    key: zh-<$language> 1
+  include: zh-<$language> 1
 zh-de 0:
   title: Chinesisch-Deutsch (Pauker.at)
-  include:
-    key: de-zh 0
+  include: de-zh 0
 zh-de 1:
   title: Chinesisch-Deutsch (Pauker.at)
-  include:
-    key: de-zh 1
+  include: de-zh 1
   examples:
   - arguments: 树
     description: Deutsch-Übersetzung von "树"
   - arguments: baum
     description: Chinesisch-Übersetzung von "baum"
 zu 0:
-  include:
-    key: zu-<$language> 0
+  include: zu-<$language> 0
 zu 1:
-  include:
-    key: zu-<$language> 1
+  include: zu-<$language> 1
 zu-de 0:
   title: Zulu-Deutsch (Pauker.at)
-  include:
-    key: de-zu 0
+  include: de-zu 0
 zu-de 1:
   title: Zulu-Deutsch (Pauker.at)
-  include:
-    key: de-zu 1
+  include: de-zu 1
   examples:
   - arguments: isihlahla
     description: Deutsch-Übersetzung von "isihlahla"
