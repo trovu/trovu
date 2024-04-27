@@ -20,6 +20,7 @@ export default class NamespaceFetcher {
     );
     this.namespaceInfos = this.addNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
+    this.namespaceInfos = this.processShortcutsAll(this.namespaceInfos);
     this.namespaceInfos = this.processIncludeAll(this.namespaceInfos);
     this.namespaceInfos = this.addReachable(this.namespaceInfos);
     this.namespaceInfos = this.addInfoAll(this.namespaceInfos);
