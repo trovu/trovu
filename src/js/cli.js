@@ -70,6 +70,11 @@ program
   .option('-f, --filter <string>', 'only apply to files containing <string>')
   .action(migrateProtocol);
 
+program
+  .command('migrate-include')
+  .description('Migrate include.key to include')
+  .action(migrateInclude);
+
 program.parse();
 
 function validateData() {
@@ -111,4 +116,9 @@ function migratePlaceholders(options) {
 async function migrateProtocol(options) {
   const migrator = new Migrator();
   await migrator.migrateProtocol(options);
+}
+
+async function migrateInclude() {
+  const migrator = new Migrator();
+  await migrator.migrateInclude();
 }
