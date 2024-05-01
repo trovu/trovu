@@ -6919,6 +6919,34 @@ rp18 0:
   tags:
   - berlin
   - congress
+rsg 0:
+  url: https://www.researchgate.net/
+  title: ResearchGate
+  tags:
+  - science
+  examples:
+  - description: Go to homepage
+rsg 1:
+  url: https://www.researchgate.net/search?q=<query>
+  title: ResearchGate, publications
+  include: rsg 0
+  examples:
+  - arguments: iq
+    description: Search for IQ
+rsga 1:
+  url: https://www.researchgate.net/search/researcher?q=<query>
+  title: ResearchGate, authors
+  include: rsg 0
+  examples:
+  - arguments: iq
+    description: Search for IQ
+rsgq 1:
+  url: https://www.researchgate.net/search/researcher?q=<query>
+  title: ResearchGate, questions
+  include: rsg 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 rt 1:
   url: https://www.rottentomatoes.com/search/?search=<query>
   title: Rotten Tomatoes
