@@ -8,6 +8,7 @@ import Suggestions from './home/Suggestions.js';
 /* eslint-disable no-unused-vars */
 import BSN from 'bootstrap.native/dist/bootstrap-native.esm.min.js';
 import 'bootstrap/dist/css/bootstrap.css';
+import countriesList from 'countries-list';
 import 'font-awesome/css/font-awesome.min.css';
 
 /** Set and manage the homepage. */
@@ -174,8 +175,9 @@ export default class Home {
           'No matching shortcut found. Did you use a <a href="https://trovu.net/docs/">keyword</a>? Try <a target="_blank" href="/docs/users/troubleshooting/">Troubleshooting</a>. ';
         break;
       case 'not_reachable':
-        alertMsg.innerHTML =
-          'This shortcut is not reachable. Add <span class="namespace"></span> to your <a target="_blank" href="https://trovu.net/docs/shortcuts/namespaces/">namespaces</a>.';
+        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="https://trovu.net/docs/shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${
+          countriesList.countries[this.env.country.toUpperCase()].emoji
+        }) to <span class="namespace"></span>.`;
         alertMsg.querySelector('.namespace').textContent = params.namespace;
         break;
       case 'reloaded':
