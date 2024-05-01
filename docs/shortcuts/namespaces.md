@@ -87,7 +87,7 @@ Your namespaces are [derived from your config.yml](../users/advanced.md). With y
 
 The lower a namespace is in the `namespaces` list, the higher it's precedence. This is similar to [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), when a method needs to be picked from inheriting classes.
 
-So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`.
+So in the example before, shortcuts from `.us` override those from `en`, and both those from `o`. Overriden shortcuts become _not reachable_.
 
 ## Per-call namespace, also overrides `language` or `country`
 
