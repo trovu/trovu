@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 303-adjust-icon
   pull_request:
     branches:
       - master
