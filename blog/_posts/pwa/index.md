@@ -9,7 +9,7 @@ tags:
 
 Using Trovu on your smartphone just got easier. With the new PWA, you can access a full-screen Trovu experience, including its suggestions, directly from your phone's home screen with just a tap.
 
-To install the app, [see the docs](/docs/users/integration/#pwa-progressive-web-app).
+To install the app, [see the docs](https://trovu.net/docs/users/integration/#pwa-progressive-web-app).
 
 {% image "img/screenshot.1.jpg", "Screenshot 1", [300] %}
 {% image "img/screenshot.2.jpg", "Screenshot 2", [300] %}
