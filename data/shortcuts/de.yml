@@ -1226,6 +1226,18 @@ tspg 1:
   examples:
   - arguments: Friedrichshain
     description: Search "Friedrichshain"
+ttb 0:
+  url: https://techniktagebuch.tumblr.com/
+  title: Techniktagebuch
+  tags:
+  - blog
+  - technology
+ttb 1:
+  url: https://duckduckgo.com/?q=<Suchbegriff>+site%3Atechniktagebuch.tumblr.com
+  include: ttb 0
+  examples:
+  - arguments: kommandozeile
+    description: Suche im Techniktagebuch nach Posts, in denen "Kommandozeile" vorkommt
 uu 0:
   url: https://www.ubuntuusers.de/
   title: UbuntuUsers.de
