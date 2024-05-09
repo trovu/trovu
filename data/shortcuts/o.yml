@@ -3816,6 +3816,27 @@ gobug 0:
   title: gentoo bugs
   tags:
   - old
+go 0:
+  url: https://pkg.go.dev
+  title: pkg.go.dev
+  description: Package browser for the Go programming language
+  tags:
+  - go
+  - golang
+  - programming
+  - software
+go 1:
+  url: https://pkg.go.dev/search?q=<query>
+  title: pkg.go.dev
+  description: Package browser for the Go programming language
+  tags:
+  - go
+  - golang
+  - programming
+  - software
+  examples:
+  - arguments: levenshtein
+    description: Search pkg.go.dev for Levenshtein-related packages
 god 1:
   url: https://www.godchecker.com/pantheon/index.php?_search-results=Y&name=<name>
   title: Godchecker Mythology Encyclopedia
@@ -3852,26 +3873,15 @@ goof 1:
       query: gfin <1>
     created: '2024-04-19'
 gopkg 0:
-  url: https://pkg.go.dev
-  title: pkg.go.dev
-  description: Package browser for the Go programming language
-  tags:
-  - go
-  - golang
-  - programming
-  - software
+  deprecated:
+    alternative:
+      query: go <0>
+    created: '2024-05-09'
 gopkg 1:
-  url: https://pkg.go.dev/search?q=<query>
-  title: pkg.go.dev
-  description: Package browser for the Go programming language
-  tags:
-  - go
-  - golang
-  - programming
-  - software
-  examples:
-  - arguments: levenshtein
-    description: Search pkg.go.dev for Levenshtein-related packages
+  deprecated:
+    alternative:
+      query: go <1>
+    created: '2024-05-09'
 gp 0:
   url: https://play.google.com/store
   title: Google Play
