@@ -205,25 +205,20 @@ wsl 1:
   examples:
   - arguments: chair
     description: Search for "chair"
-ygl 1:
-  url: https://youglish.com/pronounce/<word>/english
-  title: YouGlish English Pronounciation Help
-  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
+ygl 0:
+  url: https://youglish.com/english
+  title: YouGlish, English
+  description: Search for a word mentioned in videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
+  - english
   - language
   - pronunciation
   - youtube
   examples:
-  - arguments: dough
-    description: Find videos where someone says "dough"
-youglish 1:
+  - description: Go to homepage
+ygl 1:
   url: https://youglish.com/pronounce/<word>/english
-  title: YouGlish English Pronounciation Help
-  description: Search for a word or a name and you'll get videos of top YouTube speakers naturally pronouncing the word in context.
-  tags:
-  - language
-  - pronunciation
-  - youtube
+  include: ygl 0
   examples:
   - arguments: dough
     description: Find videos where someone says "dough"
