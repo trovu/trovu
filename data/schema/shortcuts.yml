@@ -47,6 +47,7 @@ patternProperties:
       include:
         anyOf:
           - type: string
+          - type: object
           - type: array
             items:
               type: object
