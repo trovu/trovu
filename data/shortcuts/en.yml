@@ -227,3 +227,8 @@ youglish 1:
   examples:
   - arguments: dough
     description: Find videos where someone says "dough"
+youglish 1:
+  deprecated:
+    alternative:
+      query: ygl <1>
+    created: '2024-05-15'
