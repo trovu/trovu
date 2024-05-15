@@ -35,3 +35,19 @@ ya 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
+ygl 0:
+  url: https://youglish.com/russian
+  title: YouGlish, Russian
+  tags:
+  - language
+  - pronunciation
+  - russian
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/russian
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

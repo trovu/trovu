@@ -1318,6 +1318,22 @@ wtr 1:
   examples:
   - arguments: berlin
     description: Suche nach Wetter in Berlin
+ygl 0:
+  url: https://youglish.com/german
+  title: YouGlish, german
+  tags:
+  - german
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/german
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"
 zeit 0:
   url: https://www.zeit.de/
   title: Zeit Online

@@ -8,3 +8,19 @@ frv 1:
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
+ygl 0:
+  url: https://youglish.com/ukrainian
+  title: YouGlish, Ukrainian
+  tags:
+  - language
+  - pronunciation
+  - ukrainian
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/ukrainian
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

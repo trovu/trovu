@@ -36,3 +36,19 @@ sv-fr 1:
     alternative:
       query: fr <1>
     created: '2023-04-10'
+ygl 0:
+  url: https://youglish.com/swedish
+  title: YouGlish, Swedish
+  tags:
+  - language
+  - pronunciation
+  - swedish
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/swedish
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

@@ -55,3 +55,19 @@ pwn 1:
   examples:
   - arguments: drzewo
     description: Szukaj "drzewo"
+ygl 0:
+  url: https://youglish.com/polish
+  title: YouGlish, Polish
+  tags:
+  - language
+  - polish
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/polish
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

@@ -46,3 +46,19 @@ rijm 1:
   examples:
   - arguments: koud
     description: vind woorden die rijmen op "koud"
+ygl 0:
+  url: https://youglish.com/dutch
+  title: YouGlish, dutch
+  tags:
+  - dutch
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/dutch
+  include: ygl 0
+  examples:
+  - arguments: berlijn
+    description: Find videos where someone says "berlijn"

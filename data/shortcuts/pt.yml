@@ -17,3 +17,19 @@ last 1:
   examples:
   - arguments: beatles
     description: Search for "beatles"
+ygl 0:
+  url: https://youglish.com/portuguese
+  title: YouGlish, Portuguese
+  tags:
+  - language
+  - portuguese
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/portuguese
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

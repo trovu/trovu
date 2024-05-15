@@ -55,3 +55,19 @@ raed 1:
     description: looks for "capaz" in the RAE dictionary of doubts
   - arguments: decir
     description: busca por la palabra «decir» en el diccionario panhíspanico de dudas de la Real Academia Española
+ygl 0:
+  url: https://youglish.com/spanish
+  title: YouGlish, Spanish
+  tags:
+  - language
+  - pronunciation
+  - spanish
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/spanish
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

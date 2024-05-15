@@ -8,3 +8,19 @@ frv 1:
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
+ygl 0:
+  url: https://youglish.com/turkish
+  title: YouGlish, Turkish
+  tags:
+  - language
+  - pronunciation
+  - turkish
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/turkish
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

@@ -17,3 +17,19 @@ last 1:
   examples:
   - arguments: beatles
     description: Search for "beatles"
+ygl 0:
+  url: https://youglish.com/chinese
+  title: YouGlish, Chinese
+  tags:
+  - chinese
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/chinese
+  include: ygl 0
+  examples:
+  - arguments: 柏林
+    description: Find videos where someone says "柏林"
