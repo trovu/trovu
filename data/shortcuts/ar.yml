@@ -8,3 +8,20 @@ frv 1:
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
+ygl 0:
+  url: https://youglish.com/arabic
+  title: YouGlish, Arabic
+  tags:
+  - arabic
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/arabic
+  title: YouGlish, Arabic
+  include: ygl 0
+  examples:
+  - arguments: برلين
+    description: Find videos where someone says "برلين"
