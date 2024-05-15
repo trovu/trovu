@@ -3811,11 +3811,6 @@ gnudb 1:
   examples:
   - arguments: beatles
     description: Search for record of "The Beatles"
-gobug 0:
-  url: https://bugs.gentoo.org/query.cgi?format=specific
-  title: gentoo bugs
-  tags:
-  - old
 go 0:
   url: https://pkg.go.dev
   title: pkg.go.dev
@@ -3837,6 +3832,11 @@ go 1:
   examples:
   - arguments: levenshtein
     description: Search pkg.go.dev for Levenshtein-related packages
+gobug 0:
+  url: https://bugs.gentoo.org/query.cgi?format=specific
+  title: gentoo bugs
+  tags:
+  - old
 god 1:
   url: https://www.godchecker.com/pantheon/index.php?_search-results=Y&name=<name>
   title: Godchecker Mythology Encyclopedia
