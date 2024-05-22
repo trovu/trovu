@@ -11,6 +11,11 @@ body {
 
 main {
   flex: 1 0 auto;
+
+  h2 {
+    font-size: 1.2em;
+    margin: 0.5em;
+  }
 }
 footer {
   display: none;
@@ -19,6 +24,7 @@ footer {
   position: sticky;
   padding: 0;
   padding-bottom: 1em;
+  margin-top: 1em;
 }
 .navbar .container {
   padding: 0 2em;
@@ -50,6 +56,8 @@ footer {
   display: none;
   margin: 0;
   padding: 0.5em 0;
+  color: #666;
+  font-style: italic;
 }
 main .jumbotron {
   margin: 0;
@@ -236,10 +244,6 @@ span.tag {
       }
     }
   }
-}
-
-div.card {
-  margin-bottom: 1em;
 }
 
 #help {
