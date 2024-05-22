@@ -54,10 +54,12 @@ fr.wg berlin
 This will do a Google search with `site:fr.wikipedia.org`
 
 ### Same for Reddit and X (Twitter):
+
 ```
 rg berlin
 xg berlin
 ```
+
 These will only show results from `reddit.com` or `x.com`. Thus again, they make a fast and fuzzy-allowing Reddit or X search, sometimes better than their build-in searches.
 
 So basically, anything of that can be done with Google directly – but it's much shorter with Trovu's shortcuts.
@@ -88,12 +90,12 @@ db b, hh, +2, fr
 ```
 *from* and *to* are of type [city](https://trovu.net/docs/shortcuts/url#city): They can also take an [abbreviation of a city name](https://github.com/trovu/trovu/tree/master/data/types/city). Usually, these are the ones used on vehicle-registration plates.
 
-The *time* and *date* are of, yes, [time](https://trovu.net/docs/shortcuts/url#time) and [date](https://trovu.net/docs/shortcuts/url#date):
+The _time_ and _date_ are of, yes, [time](https://trovu.net/docs/shortcuts/url#time) and [date](https://trovu.net/docs/shortcuts/url#date):
 
-- I can count up from the current time or date, thus `+2` is *now in 2 hours* or *now in 2 days*.
-- For *date*, I can also use day-of-week abbreviations, e.g. `mo`.
+-   I can count up from the current time or date, thus `+2` is _now in 2 hours_ or _now in 2 days_.
+-   For _date_, I can also use day-of-week abbreviations, e.g. `mo`.
 
-#### Filter for regional trains 
+#### Filter for regional trains
 
 Cheaper connections can be found if I limit my search to only regional trains (suitable for the [Deutschlandticket](https://en.wikipedia.org/wiki/Deutschlandticket)). I can do so by calling:
 ```
@@ -152,20 +154,25 @@ sof yaml
 will search Stackoverflow for questions around YAML
 
 ## Dictionaries
+
 I speak a few languages and learn often new ones. For a dictionary of most languages, I only need their ISO code:
+
 ```
 en baum
 fr baum
 pl baum
 ```
+
 These shortcuts will call dictionaries from English, French, Polish into German – because German is [the language I defined in my setup](https://trovu.net/docs/users/advanced#language).
 
 Though, I can override this language by prefixing with another code:
+
 ```
 es.en baum
 es.fr baum
 es.pl baum
 ```
+
 will call the dictionaries into Spanish instead.
 
 ## Media
