@@ -11,6 +11,11 @@ body {
 
 main {
   flex: 1 0 auto;
+
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
 }
 footer {
   display: none;
@@ -236,10 +241,6 @@ span.tag {
       }
     }
   }
-}
-
-div.card {
-  margin-bottom: 1em;
 }
 
 #help {
