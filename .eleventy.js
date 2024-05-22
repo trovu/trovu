@@ -56,7 +56,7 @@ module.exports = (eleventyConfig) => {
       url += `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
     }
     // Return the HTML anchor tag
-    return `<a href="${url}"><pre class="language-md"><code class="language-md">${query}</code></pre></a>`;
+    return `<div class="trovu-call"><span class="arrow">&gt;</span><a href="${url}">${query}</a></div>`;
   });
 
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {

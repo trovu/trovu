@@ -273,3 +273,30 @@ h2 + .header-anchor {
 main li {
 	margin-bottom: 1em;
 }
+
+div.trovu-call {
+  display: block;
+  background: #487b7f;
+  color: white;
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
+div.trovu-call a,
+div.trovu-call a:link,
+div.trovu-call a:visited {
+  display: inline-block;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-decoration: none; 
+  color: white;
+  padding: 0.4em; 
+  margin: 0;
+	border: 0;
+}
+
+div.trovu-call span {
+  background: #aaa;
+  padding: 0.4em; 
+  margin: 0;
+	border: 0;
+}
