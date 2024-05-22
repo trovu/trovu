@@ -69,19 +69,24 @@ So basically, anything of that can be done with Google directly – but it's muc
 
 I live in Germany and often take the train. There's an old and hidden UI for the train timetables, originaly made for the text-based [Lynx web browser](<https://en.wikipedia.org/wiki/Lynx_(web_browser)>). It works to this day and is very fast, one only needs to know its URL – or use the Trovu shortcut.
 
-{% trovuCall "dbt berlin, hamburg" %}
+{% trovuCall "dbt berlin, hamburg", { country: "de" } %}
 
 will show the next train from Berlin to Hamburg.
 
 I can also add the time, and if I want, also the date:
-{% trovuCall "dbt berlin, hamburg, 10, 8.12." %}
+
+{% trovuCall "dbt berlin, hamburg, 10, 8.12.", { country: "de" } %}
+
 Note that while this interface is fast, it does not show current delays or non-planned interruptions (roughly any outage newer than 24 hours). Thus, when I want to know that, I use the regular interface:
-{% trovuCall "db berlin, hamburg" %}
+
+{% trovuCall "db berlin, hamburg", { country: "de" } %}
 
 #### Typed arguments
 
 All of these arguments are [typed](https://trovu.net/docs/shortcuts/url#argument-types), thus I can also do this:
-{% trovuCall "db b, hh, +2, fr" %}
+
+{% trovuCall "db b, hh, +2, fr", { country: "de" } %}
+
 _from_ and _to_ are of type [city](https://trovu.net/docs/shortcuts/url#city): They can also take an [abbreviation of a city name](https://github.com/trovu/trovu/tree/master/data/types/city). Usually, these are the ones used on vehicle-registration plates.
 
 The _time_ and _date_ are of, yes, [time](https://trovu.net/docs/shortcuts/url#time) and [date](https://trovu.net/docs/shortcuts/url#date):
