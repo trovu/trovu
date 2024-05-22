@@ -37,8 +37,15 @@ My most frequent shortcut is `g` for Google. But sometimes, I need a more compli
 
 ### Google for results only in a certain language:
 
-{% trovuCall "gol pl, berlin" %}
-will yield results about Berlin only on Polish websites.
+{% trovuCall "gol berlin", {language: "de" } %}
+
+will yield results about Berlin only on websites in German – because German is [the language I defined in my setup](https://trovu.net/docs/users/advanced#language).
+
+For other languages, I can prefix with the language code:
+
+{% trovuCall "pl.gol berlin" %}
+
+will show esults only on Polish websites.
 
 ### Google search only on Wikipedia sites:
 
@@ -157,7 +164,7 @@ I speak a few languages and often learn new ones. For a dictionary of most langu
 {% trovuCall "fr baum", {language: "de" } %}
 {% trovuCall "pl baum", {language: "de" } %}
 
-These shortcuts will call dictionaries from English, French, and Polish into German—because German is [the language I defined in my setup](https://trovu.net/docs/users/advanced#language).
+These shortcuts will call dictionaries from English, French, and Polish into German — again because German is [the language I defined in my setup](https://trovu.net/docs/users/advanced#language).
 
 Though, I can override this language by prefixing with another code:
 
