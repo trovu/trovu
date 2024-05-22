@@ -47,11 +47,14 @@ module.exports = (eleventyConfig) => {
   });
 
   // Shortcodes
-  eleventyConfig.addShortcode('trovuCall', function (query) {
+  eleventyConfig.addShortcode('trovuCall', function (query, config = {}) {
     // Encode the query for the URL
     const encodedQuery = encodeURIComponent(query);
     // Generate the full URL
-    const url = `https://trovu.net/process/index.html#query=${encodedQuery}`;
+    let url = `https://trovu.net/process/index.html#query=${encodedQuery}`;
+    for (const [key, value] of Object.entries(config)) {
+      url += `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+    }
     // Return the HTML anchor tag
     return `<a href="${url}"><pre class="language-md"><code class="language-md">${query}</code></pre></a>`;
   });
