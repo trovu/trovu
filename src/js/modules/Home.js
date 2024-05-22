@@ -131,8 +131,8 @@ export default class Home {
       if (!this.env.isRunningStandalone()) {
         document.querySelector('footer').style.display = 'block';
         document.querySelector('#explainer').style.display = 'block';
+        document.querySelector('#intro').style.display = 'block';
       }
-      document.querySelector('#intro').style.display = 'block';
       document.querySelector('#lists').style.display = 'block';
       document.querySelector('#suggestions').style.display = 'none';
       document.querySelector('#help').style.display = 'none';
