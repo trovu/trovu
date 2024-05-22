@@ -46,6 +46,16 @@ module.exports = (eleventyConfig) => {
     );
   });
 
+  // Shortcodes
+  eleventyConfig.addShortcode('trovuCall', function (query) {
+    // Encode the query for the URL
+    const encodedQuery = encodeURIComponent(query);
+    // Generate the full URL
+    const url = `https://trovu.net/process/index.html#query=${encodedQuery}`;
+    // Return the HTML anchor tag
+    return `<a href="${url}"><pre class="language-md"><code class="language-md">${query}</code></pre></a>`;
+  });
+
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
