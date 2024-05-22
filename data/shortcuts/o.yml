@@ -336,14 +336,10 @@ ae 0:
   - aliexpress
   - shopping
 ae 1:
-  url: https://www.aliexpress.com/wholesale?SearchText=<query>
-  title: Aliexpress
-  tags:
-  - aliexpress
-  - shopping
-  examples:
-  - arguments: bicycle light
-    description: Search Aliexpress for "bicycle light"
+  deprecated:
+    alternative:
+      query: axp <1>
+    created: '2024-05-22'
 af 1:
   url: https://www.acronymfinder.com/af-query.asp?Acronym=<query>&Find=find&string=exact
   title: Acronym Finder
@@ -613,6 +609,15 @@ atrf 1:
   examples:
   - arguments: scared
     description: Search for scared
+axp 1:
+  url: https://www.aliexpress.com/wholesale?SearchText=<query>
+  title: Aliexpress
+  tags:
+  - aliexpress
+  - shopping
+  examples:
+  - arguments: bicycle light
+    description: Search Aliexpress for "bicycle light"
 az 0:
   include:
   - key: az 0
