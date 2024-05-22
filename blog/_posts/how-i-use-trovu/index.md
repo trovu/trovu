@@ -49,7 +49,9 @@ This is like adding `site:de.wikipedia.org` to my Google search query. It will l
 I prefer this over the actual Wikipedia shortcut `w`, as it's much faster, and also allows for more fuzzy searches.
 
 I can also go for other languages by prefixing it with the language code:
+
 {% trovuCall "fr.wg berlin" %}
+
 This will do a Google search with `site:fr.wikipedia.org`
 
 ### Same for Reddit and X (Twitter):
