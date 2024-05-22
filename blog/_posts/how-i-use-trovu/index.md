@@ -20,14 +20,16 @@ I'm part of the latter group, and to get you also there, I will show you here ho
 
 First, how Trovu is integrated in my devices:
 
-- I use [custom settings and shortcuts](https://trovu.net/docs/users/advanced/) in [my own trovu-data-user repo](https://github.com/georgjaehnig/trovu-data-user/).
-- On my desktop browser, I have [integrated Trovu as a search engine](https://trovu.net/docs/users/integration#chrome) and made it default. My URL is
+-   I use [custom settings and shortcuts](https://trovu.net/docs/users/advanced/) in [my own trovu-data-user repo](https://github.com/georgjaehnig/trovu-data-user/).
+-   On my desktop browser, I have [integrated Trovu as a search engine](https://trovu.net/docs/users/integration#chrome) and made it default. My URL is
+
 ```
 https://trovu.net/process/?#github=georgjaehnig&query=%s
 ```
-- On my Android phone, I use either the [new Trovu PWA](https://trovu.net/docs/users/integration#pwa-progressive-web-app), or the 3rd-party app [SearchBar Ex](https://trovu.net/docs/users/integration#searchbar-ex-search-widget):
-  - SearchBar Ex immediately opens up the Android keyboard after opening, but has no suggestions
-  - the PWA has suggestions, but the virtual keyboard only opens after an additional tap into the search input (let me know if you know how to make it show immediately)
+
+-   On my Android phone, I use either the [new Trovu PWA](https://trovu.net/docs/users/integration#pwa-progressive-web-app), or the 3rd-party app [SearchBar Ex](https://trovu.net/docs/users/integration#searchbar-ex-search-widget):
+    -   SearchBar Ex immediately opens up the Android keyboard after opening, but has no suggestions
+    -   the PWA has suggestions, but the virtual keyboard only opens after an additional tap into the search input (let me know if you know how to make it show immediately)
 
 ## (Advanced) Googling
 
