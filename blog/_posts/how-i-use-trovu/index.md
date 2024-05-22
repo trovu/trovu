@@ -56,10 +56,8 @@ This will do a Google search with `site:fr.wikipedia.org`
 
 ### Same for Reddit and X (Twitter):
 
-```
-rg berlin
-xg berlin
-```
+{% trovuCall "rg berlin" %}
+{% trovuCall "xg berlin" %}
 
 These will only show results from `reddit.com` or `x.com`. Thus again, they make a fast and fuzzy-allowing Reddit or X search, sometimes better than their build-in searches.
 
@@ -155,21 +153,17 @@ will search Stackoverflow for questions around YAML
 
 I speak a few languages and learn often new ones. For a dictionary of most languages, I only need their ISO code:
 
-```
-en baum
-fr baum
-pl baum
-```
+{% trovuCall "en baum", {language: "de" } %}
+{% trovuCall "fr baum", {language: "de" } %}
+{% trovuCall "pl baum", {language: "de" } %}
 
 These shortcuts will call dictionaries from English, French, Polish into German – because German is [the language I defined in my setup](https://trovu.net/docs/users/advanced#language).
 
 Though, I can override this language by prefixing with another code:
 
-```
-es.en baum
-es.fr baum
-es.pl baum
-```
+{% trovuCall "es.en baum", {language: "de" } %}
+{% trovuCall "es.fr baum", {language: "de" } %}
+{% trovuCall "es.pl baum", {language: "de" } %}
 
 will call the dictionaries into Spanish instead.
 
@@ -195,10 +189,8 @@ I search books and other products on Amazon:
 
 For things from China, I look on Temu and AliExpress:
 
-```
-tmu camera
-axp camera
-```
+{% trovuCall "tmu camera" %}
+{% trovuCall "axp camera" %}
 
 ## Do I remember all shortcut keywords?
 
