@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - how-i-use-trovu
   pull_request:
     branches:
       - master
