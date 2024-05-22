@@ -16435,6 +16435,17 @@ si 0:
   include: si-<$language> 0
 si 1:
   include: si-<$language> 1
+si-de 0:
+  title: Slowenisch-Deutsch (dict.com)
+  include: de-si 0
+si-de 1:
+  title: Slowenisch-Deutsch (dict.com)
+  include: de-si 1
+  examples:
+  - arguments: drevo
+    description: Deutsch-Übersetzung von "drevo"
+  - arguments: baum
+    description: Slowenisch-Übersetzung von "baum"
 sk 0:
   include: sk-<$language> 0
 sk 1:
@@ -16494,17 +16505,6 @@ sk-da 1:
     description: dansk oversættelse af "stromček"
   - arguments: træ
     description: slovakisk oversættelse af "træ"
-si-de 0:
-  title: Slowenisch-Deutsch (dict.com)
-  include: de-si 0
-si-de 1:
-  title: Slowenisch-Deutsch (dict.com)
-  include: de-si 1
-  examples:
-  - arguments: drevo
-    description: Deutsch-Übersetzung von "drevo"
-  - arguments: baum
-    description: Slowenisch-Übersetzung von "baum"
 sk-de 0:
   title: Slowakisch-Deutsch (dict.com)
   include: de-sk 0
