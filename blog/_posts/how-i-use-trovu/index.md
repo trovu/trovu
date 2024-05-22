@@ -7,11 +7,10 @@ tags:
     - app
 ---
 
-
 Many of my friends know Trovu for years, and there's exactly two groups of them
 
-- "Nice, but I don't see why this would be useful to me"
-- "This is awesome, I can't use the Internet without it anymore."
+-   "Nice, but I don't see why this would be useful to me"
+-   "This is awesome, I can't use the Internet without it anymore."
 
 There's nothing in between. No one seems to be using it just somewhat, from time to time.
 
