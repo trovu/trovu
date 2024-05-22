@@ -14,7 +14,7 @@ main {
 
   h2 {
     font-size: 1.2em;
-    margin-bottom: 0.5em;
+    margin: 0.5em;
   }
 }
 footer {
@@ -55,6 +55,8 @@ footer {
   display: none;
   margin: 0;
   padding: 0.5em 0;
+  color: #aaa;
+  font-style: italic;
 }
 main .jumbotron {
   margin: 0;
