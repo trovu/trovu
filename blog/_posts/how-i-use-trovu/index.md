@@ -102,35 +102,51 @@ Cheaper connections can be found if I limit my search to only regional trains (s
 ### Google Maps
 
 For finding a place on Google Maps, I use
+
 {% trovuCall "gm berlin" %}
+
 If I need a certain street in some city, I use two arguments
+
 {% trovuCall "gm hamburg, hauptstraße" %}
+
 Here, that first argument is typed again as _city_, so I can use a city name abbreviation:
+
 {% trovuCall "gm hh, hauptstraße" %}
 
 #### Navigation
 
 To find directions from one place to another, I call:
+
 {% trovuCall "gd berlin, hamburg" %}
+
 Again, city name abbreviations work, too:
+
 {% trovuCall "gd b, hh" %}
 
 ### Google Flights
 
 My favourite way to search flights is via Google Flights:
+
 {% trovuCall "gfl ber, ibiza, fr, mo" %}
+
 It opens Google Flights and show directly the results for return flights from `BER` (Berlin) to Ibiza, going there on the next Friday and coming back on the next Monday.
 
 For one-way flights, I use:
+
 {% trovuCall "gfl1 ber, ibiza, 10" %}
+
 The date here denoted the 10th of the current month. If it is already in the past, I will translate to the 10th of next month.
 
 ## Programming
 
 I'm a developer, so I often need to look up libraries and forums:
+
 {% trovuCall "npm yaml" %}
+
 will search for Node packages about YAML.
+
 {% trovuCall "sof yaml" %}
+
 will search Stackoverflow for questions around YAML
 
 ## Dictionaries
@@ -158,16 +174,21 @@ will call the dictionaries into Spanish instead.
 ## Media
 
 {% trovuCall "yt berlin" %}
+
 searches for YouTube videos about Berlin.
+
 {% trovuCall "ytd berlin" %}
+
 does the same, but sorts them by date (newest first).
 
 There are also a few torrent search engines, my preferred one is BTDigg:
+
 {% trovuCall "btg berlin" %}
 
 ## Shopping
 
 I search books and other products on Amazon:
+
 {% trovuCall "a smartphone" %}
 
 For things from China, I look on Temu and AliExpress:
@@ -182,7 +203,9 @@ axp camera
 The ones I mentioned, yes. These are not so many, and I use them regularly.
 
 If there's a shortcut that I know or assume it exists but I just don't know its keyword or syntax, I call "my" Trovu page, that is, Trovu with my current settings:
+
 {% trovuCall "trovu" %}
+
 I am then on `https://trovu.net/?#github=georgjaehnig` and have the suggestions available just while typing.
 
 ## Curious about yours
