@@ -104,7 +104,8 @@ The _time_ and _date_ are, yes, [time](https://trovu.net/docs/shortcuts/url#time
 #### Filter for Regional Trains
 
 Cheaper connections can be found if I limit my search to only regional trains (suitable for the [Deutschlandticket](https://en.wikipedia.org/wiki/Deutschlandticket)). I can do so by calling:
-{% trovuCall "dbn berlin, hamburg" %}
+
+{% trovuCall "dbn berlin, hamburg", { country: "de" } %}
 
 ### Google Maps
 
@@ -118,7 +119,7 @@ If I need a certain street in some city, I use two arguments:
 
 Here, the first argument is typed again as _city_, so I can use a city name abbreviation:
 
-{% trovuCall "gm hh, hauptstraße" %}
+{% trovuCall "gm hh, hauptstraße", { country: "de" } %}
 
 #### Navigation
 
@@ -128,7 +129,7 @@ To find directions from one place to another, I call:
 
 Again, city name abbreviations work too:
 
-{% trovuCall "gd b, hh" %}
+{% trovuCall "gd b, hh", { country: "de" } %}
 
 ### Google Flights
 
