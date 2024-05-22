@@ -9453,6 +9453,12 @@ ytw 1:
   examples:
   - arguments: cartoon
     description: Search for "cartoon"
+ytwl 0:
+  url: https://www.youtube.com/playlist?list=WL
+  title: YouTube, Watch later
+  include: yt 0
+  examples:
+    - description: Go to "Watch later" playlist
 yv 1:
   url: https://video.search.yahoo.com/search/video?p=<query>
   title: Yahoo Video

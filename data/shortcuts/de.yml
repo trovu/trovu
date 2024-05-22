@@ -747,6 +747,20 @@ last 1:
   examples:
   - arguments: beatles
     description: Search for "beatles"
+leh 0:
+  url: https://www.lehmanns.de/
+  title: Lehmanns.de
+  tags:
+  - books
+  - shopping
+  examples:
+  - description: Gehe zur Starseite
+leh 1:
+  url: https://www.lehmanns.de/search/quick?q=<Suche>
+  include: leh 0
+  examples:
+  - arguments: goethe
+    description: Suche nach Goethe
 leo 1:
   deprecated:
     alternative:
