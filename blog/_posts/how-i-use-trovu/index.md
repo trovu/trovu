@@ -42,8 +42,9 @@ will yield results about Berlin only on Polish websites.
 
 ### Google search only on Wikipedia sites:
 
-{% trovuCall "wg berlin" %}
-This is like adding `site:en.wikipedia.org` to my Google search query. It will list only results from that domain, thus all Wikipedia articles that mention _berlin_.
+{% trovuCall "wg berlin", { language: "de" } %}
+
+This is like adding `site:de.wikipedia.org` to my Google search query. It will list only results from that domain, thus all Wikipedia articles that mention _berlin_.
 
 I prefer this over the actual Wikipedia shortcut `w`, as it's much faster, and also allows for more fuzzy searches.
 
