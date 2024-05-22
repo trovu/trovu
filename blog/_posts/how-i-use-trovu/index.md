@@ -3,8 +3,8 @@ title: How I Use trovu.net
 description: A Practical Beginner's Guide
 date: 2024-05-22
 tags:
-    - mobile
-    - app
+    - config
+    - beginner
 ---
 
 Many of my friends have known Trovu for years, and they fall into exactly two groups:
