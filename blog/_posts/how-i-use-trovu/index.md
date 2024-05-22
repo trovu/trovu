@@ -45,7 +45,7 @@ For other languages, I can prefix with the language code:
 
 {% trovuCall "pl.gol berlin" %}
 
-will show esults only on Polish websites.
+will show results only from Polish websites.
 
 ### Google search only on Wikipedia sites:
 
