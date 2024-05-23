@@ -34,32 +34,37 @@ export default class DictionarySetter {
             console.log(`Missing tree for ${lang2}`);
             return;
           }
-          shortcuts[DictionarySetter.getKey(lang1, lang2, 0)] = {
+
+          const key0 = DictionarySetter.getKey(lang1, lang2, 0);
+          const key1 = DictionarySetter.getKey(lang1, lang2, 1);
+          const reverseKey0 = DictionarySetter.getKey(lang2, lang1, 0);
+          const reverseKey1 = DictionarySetter.getKey(lang2, lang1, 1);
+
+          shortcuts[key0] = {
             url: dicts[dict].pairs[lang1][lang2][0],
             title: this.getTitle(lang1, lang2, dicts[dict].name),
             tags: this.getTags(lang1, lang2),
           };
-          shortcuts[DictionarySetter.getKey(lang1, lang2, 1)] = {
+          shortcuts[key1] = {
             url: dicts[dict].pairs[lang1][lang2][1],
             title: this.getTitle(lang1, lang2, dicts[dict].name),
             tags: this.getTags(lang1, lang2),
             examples: this.getExamples(lang1, lang2),
           };
-          shortcuts[DictionarySetter.getKey(lang2, lang1, 0)] = {
+          shortcuts[reverseKey0] = {
             title: this.getTitle(lang2, lang1, dicts[dict].name),
-            include: DictionarySetter.getKey(lang1, lang2, 0),
+            include: key0,
           };
-          shortcuts[DictionarySetter.getKey(lang2, lang1, 1)] = {
+          shortcuts[reverseKey1] = {
             title: this.getTitle(lang2, lang1, dicts[dict].name),
-            include: DictionarySetter.getKey(lang1, lang2, 1),
+            include: key1,
             examples: this.getExamples(lang2, lang1),
           };
-          // Add URL to reverse pair if it is explicitly defined.
+
+          // Add URL to reverse pair if explicitly defined
           if (dicts[dict].pairs[lang2] && dicts[dict].pairs[lang2][lang1]) {
-            shortcuts[DictionarySetter.getKey(lang2, lang1, 0)].url =
-              dicts[dict].pairs[lang2][lang1][0];
-            shortcuts[DictionarySetter.getKey(lang2, lang1, 1)].url =
-              dicts[dict].pairs[lang2][lang1][1];
+            shortcuts[reverseKey0].url = dicts[dict].pairs[lang2][lang1][0];
+            shortcuts[reverseKey1].url = dicts[dict].pairs[lang2][lang1][1];
           }
         }
       }
