@@ -54,6 +54,26 @@ export default class DictionarySetter {
       }
       data.shortcuts[dict] = shortcuts;
     }
+    for (const dict in dicts) {
+      console.log(dict);
+      const langs = new Set();
+      // Remember all langs we have in this dict.
+      for (const lang1 in dicts[dict].pairs) {
+        langs.add(lang1);
+        for (const lang2 in dicts[dict].pairs[lang1]) {
+          langs.add(lang2);
+        }
+      }
+      // Add local includes with {$language} variable.
+      for (const lang of langs) {
+        data.shortcuts[dict][`${lang} 0`] = {
+          include: lang + '-<$language> 0',
+        };
+        data.shortcuts[dict][`${lang} 1`] = {
+          include: lang + '-<$language> 1',
+        };
+      }
+    }
     DataManager.write(data);
   }
 
