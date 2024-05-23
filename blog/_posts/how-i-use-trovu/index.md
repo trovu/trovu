@@ -212,4 +212,4 @@ I am then on `https://trovu.net/?#github=georgjaehnig` and have the suggestions 
 
 ## Curious About Yours
 
-If you are already a Trovu user, too, I'd be curious about your setup and practice. Please share it in our [Github Discussions](https://github.com/trovu/trovu/discussions), or as a reply to the [X post](https://x.com/trovu_net).
+If you are already a Trovu user, too, I'd be curious about your setup and practice. Please share it in our [Github Discussions](https://github.com/trovu/trovu/discussions), or as a reply to the [X post](https://x.com/jorges/status/1793395395344658920).
