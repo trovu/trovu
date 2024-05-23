@@ -103,14 +103,20 @@ export default class DictionarySetter {
   }
 
   getExamples(lang1, lang2) {
-    return {
-      [this.t.tree[lang1]]: this.t.desc[lang2]
-        .replace('{lang}', this.langs[lang2][lang2])
-        .replace('{tree}', this.t.tree[lang1]),
-      [this.t.tree[lang2]]: this.t.desc[lang2]
-        .replace('{lang}', this.langs[lang2][lang1])
-        .replace('{tree}', this.t.tree[lang2]),
-    };
+    return [
+      {
+        arguments: this.t.tree[lang1],
+        description: this.t.desc[lang2]
+          .replace('{lang}', this.langs[lang2][lang2])
+          .replace('{tree}', this.t.tree[lang1]),
+      },
+      {
+        arguments: this.t.tree[lang2],
+        description: this.t.desc[lang2]
+          .replace('{lang}', this.langs[lang2][lang1])
+          .replace('{tree}', this.t.tree[lang2]),
+      },
+    ];
   }
 
   static capitalize(str) {
