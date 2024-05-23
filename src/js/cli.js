@@ -9,6 +9,7 @@ import fs from 'fs';
 const program = new Command();
 
 program.name('trovu').description('CLI for trovu.net').version('0.0.1');
+
 program
   .command('compile-data')
   .description('Compile YAML data files to JSON')
