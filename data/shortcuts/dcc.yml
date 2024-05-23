@@ -10,6 +10,8 @@ bg-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 bg-de 1:
   url: https://debg.dict.cc/?s=<word>
   title: Bulgarisch-Deutsch (dict.cc)
@@ -35,6 +37,8 @@ cs-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 cs-de 1:
   url: https://decs.dict.cc/?s=<word>
   title: Tschechisch-Deutsch (dict.cc)
@@ -60,6 +64,8 @@ da-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 da-de 1:
   url: https://deda.dict.cc/?s=<word>
   title: Dänisch-Deutsch (dict.cc)
@@ -80,6 +86,8 @@ de 1:
 de-bg 0:
   title: Немски-Български (dict.cc)
   include: bg-de 0
+  examples:
+  - description: Отидете на началната страница
 de-bg 1:
   title: Немски-Български (dict.cc)
   include: bg-de 1
@@ -91,6 +99,8 @@ de-bg 1:
 de-cs 0:
   title: Němčina-Čeština (dict.cc)
   include: cs-de 0
+  examples:
+  - description: Přejít na domovskou stránku
 de-cs 1:
   title: Němčina-Čeština (dict.cc)
   include: cs-de 1
@@ -102,6 +112,8 @@ de-cs 1:
 de-da 0:
   title: Tysk-Dansk (dict.cc)
   include: da-de 0
+  examples:
+  - description: Gå til startsiden
 de-da 1:
   title: Tysk-Dansk (dict.cc)
   include: da-de 1
@@ -118,6 +130,8 @@ de-el 0:
   - german
   - greek
   - language
+  examples:
+  - description: Μετάβαση στην αρχική σελίδα
 de-el 1:
   url: https://deel.dict.cc/?s=<word>
   title: Γερμανικά-Ελληνικά (dict.cc)
@@ -139,6 +153,8 @@ de-en 0:
   - english
   - german
   - language
+  examples:
+  - description: Go to homepage
 de-en 1:
   url: https://deen.dict.cc/?s=<word>
   title: German-English (dict.cc)
@@ -160,6 +176,8 @@ de-es 0:
   - german
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 de-es 1:
   url: https://dees.dict.cc/?s=<word>
   title: Alemán-Español (dict.cc)
@@ -181,6 +199,8 @@ de-fi 0:
   - finnish
   - german
   - language
+  examples:
+  - description: Siirry kotisivulle
 de-fi 1:
   url: https://defi.dict.cc/?s=<word>
   title: Saksa-Suomi (dict.cc)
@@ -202,6 +222,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: https://defr.dict.cc/?s=<word>
   title: Allemand-Français (dict.cc)
@@ -223,6 +245,8 @@ de-hu 0:
   - german
   - hungarian
   - language
+  examples:
+  - description: Menj a kezdőlapra
 de-hu 1:
   url: https://dehu.dict.cc/?s=<word>
   title: Német-Magyar (dict.cc)
@@ -244,6 +268,8 @@ de-is 0:
   - german
   - icelandic
   - language
+  examples:
+  - description: Fara á heimasíðu
 de-is 1:
   url: https://deis.dict.cc/?s=<word>
   title: Þýska-Íslenska (dict.cc)
@@ -265,6 +291,8 @@ de-it 0:
   - german
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 de-it 1:
   url: https://deit.dict.cc/?s=<word>
   title: Tedesco-Italiano (dict.cc)
@@ -286,6 +314,8 @@ de-la 0:
   - german
   - language
   - latin
+  examples:
+  - description: Vade ad paginam principalem
 de-la 1:
   url: https://dela.dict.cc/?s=<word>
   title: Germanica-Latina (dict.cc)
@@ -307,6 +337,8 @@ de-nl 0:
   - dutch
   - german
   - language
+  examples:
+  - description: Ga naar homepage
 de-nl 1:
   url: https://denl.dict.cc/?s=<word>
   title: Duits-Nederlands (dict.cc)
@@ -328,6 +360,8 @@ de-no 0:
   - german
   - language
   - norwegian
+  examples:
+  - description: Gå til hjemmeside
 de-no 1:
   url: https://deno.dict.cc/?s=<word>
   title: Tysk-Norsk (dict.cc)
@@ -349,6 +383,8 @@ de-pl 0:
   - german
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 de-pl 1:
   url: https://depl.dict.cc/?s=<word>
   title: Niemiecki-Polski (dict.cc)
@@ -370,6 +406,8 @@ de-pt 0:
   - german
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 de-pt 1:
   url: https://dept.dict.cc/?s=<word>
   title: Alemão-Português (dict.cc)
@@ -391,6 +429,8 @@ de-ro 0:
   - german
   - language
   - romanian
+  examples:
+  - description: Du-te la pagina principală
 de-ro 1:
   url: https://dero.dict.cc/?s=<word>
   title: Germană-Română (dict.cc)
@@ -412,6 +452,8 @@ de-ru 0:
   - german
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 de-ru 1:
   url: https://deru.dict.cc/?s=<word>
   title: Немецкий-Русский (dict.cc)
@@ -433,6 +475,8 @@ de-sk 0:
   - german
   - language
   - slovak
+  examples:
+  - description: Prejsť na domovskú stránku
 de-sk 1:
   url: https://desk.dict.cc/?s=<word>
   title: Nemčina-Slovenčina (dict.cc)
@@ -454,6 +498,8 @@ de-sv 0:
   - german
   - language
   - swedish
+  examples:
+  - description: Gå till startsidan
 de-sv 1:
   url: https://desv.dict.cc/?s=<word>
   title: Tyska-Svenska (dict.cc)
@@ -475,6 +521,8 @@ de-tr 0:
   - german
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 de-tr 1:
   url: https://detr.dict.cc/?s=<word>
   title: Almanca-Türkçe (dict.cc)
@@ -495,6 +543,8 @@ el 1:
 el-de 0:
   title: Griechisch-Deutsch (dict.cc)
   include: de-el 0
+  examples:
+  - description: Zur Startseite
 el-de 1:
   title: Griechisch-Deutsch (dict.cc)
   include: de-el 1
@@ -510,6 +560,8 @@ en 1:
 en-de 0:
   title: Englisch-Deutsch (dict.cc)
   include: de-en 0
+  examples:
+  - description: Zur Startseite
 en-de 1:
   title: Englisch-Deutsch (dict.cc)
   include: de-en 1
@@ -526,6 +578,8 @@ en-nl 0:
   - dutch
   - english
   - language
+  examples:
+  - description: Ga naar homepage
 en-nl 1:
   url: https://ennl.dict.cc/?s=<word>
   title: Engels-Nederlands (dict.cc)
@@ -546,6 +600,8 @@ es 1:
 es-de 0:
   title: Spanisch-Deutsch (dict.cc)
   include: de-es 0
+  examples:
+  - description: Zur Startseite
 es-de 1:
   title: Spanisch-Deutsch (dict.cc)
   include: de-es 1
@@ -561,6 +617,8 @@ fi 1:
 fi-de 0:
   title: Finnisch-Deutsch (dict.cc)
   include: de-fi 0
+  examples:
+  - description: Zur Startseite
 fi-de 1:
   title: Finnisch-Deutsch (dict.cc)
   include: de-fi 1
@@ -576,6 +634,8 @@ fr 1:
 fr-de 0:
   title: Französisch-Deutsch (dict.cc)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (dict.cc)
   include: de-fr 1
@@ -591,6 +651,8 @@ hu 1:
 hu-de 0:
   title: Ungarisch-Deutsch (dict.cc)
   include: de-hu 0
+  examples:
+  - description: Zur Startseite
 hu-de 1:
   title: Ungarisch-Deutsch (dict.cc)
   include: de-hu 1
@@ -606,6 +668,8 @@ is 1:
 is-de 0:
   title: Isländisch-Deutsch (dict.cc)
   include: de-is 0
+  examples:
+  - description: Zur Startseite
 is-de 1:
   title: Isländisch-Deutsch (dict.cc)
   include: de-is 1
@@ -621,6 +685,8 @@ it 1:
 it-de 0:
   title: Italienisch-Deutsch (dict.cc)
   include: de-it 0
+  examples:
+  - description: Zur Startseite
 it-de 1:
   title: Italienisch-Deutsch (dict.cc)
   include: de-it 1
@@ -636,6 +702,8 @@ la 1:
 la-de 0:
   title: Latein-Deutsch (dict.cc)
   include: de-la 0
+  examples:
+  - description: Zur Startseite
 la-de 1:
   title: Latein-Deutsch (dict.cc)
   include: de-la 1
@@ -651,6 +719,8 @@ nl 1:
 nl-de 0:
   title: Niederländisch-Deutsch (dict.cc)
   include: de-nl 0
+  examples:
+  - description: Zur Startseite
 nl-de 1:
   title: Niederländisch-Deutsch (dict.cc)
   include: de-nl 1
@@ -662,6 +732,8 @@ nl-de 1:
 nl-en 0:
   title: Dutch-English (dict.cc)
   include: en-nl 0
+  examples:
+  - description: Go to homepage
 nl-en 1:
   title: Dutch-English (dict.cc)
   include: en-nl 1
@@ -677,6 +749,8 @@ no 1:
 no-de 0:
   title: Norwegisch-Deutsch (dict.cc)
   include: de-no 0
+  examples:
+  - description: Zur Startseite
 no-de 1:
   title: Norwegisch-Deutsch (dict.cc)
   include: de-no 1
@@ -692,6 +766,8 @@ pl 1:
 pl-de 0:
   title: Polnisch-Deutsch (dict.cc)
   include: de-pl 0
+  examples:
+  - description: Zur Startseite
 pl-de 1:
   title: Polnisch-Deutsch (dict.cc)
   include: de-pl 1
@@ -707,6 +783,8 @@ pt 1:
 pt-de 0:
   title: Portugiesisch-Deutsch (dict.cc)
   include: de-pt 0
+  examples:
+  - description: Zur Startseite
 pt-de 1:
   title: Portugiesisch-Deutsch (dict.cc)
   include: de-pt 1
@@ -722,6 +800,8 @@ ro 1:
 ro-de 0:
   title: Rumänisch-Deutsch (dict.cc)
   include: de-ro 0
+  examples:
+  - description: Zur Startseite
 ro-de 1:
   title: Rumänisch-Deutsch (dict.cc)
   include: de-ro 1
@@ -737,6 +817,8 @@ ru 1:
 ru-de 0:
   title: Russisch-Deutsch (dict.cc)
   include: de-ru 0
+  examples:
+  - description: Zur Startseite
 ru-de 1:
   title: Russisch-Deutsch (dict.cc)
   include: de-ru 1
@@ -752,6 +834,8 @@ sk 1:
 sk-de 0:
   title: Slowakisch-Deutsch (dict.cc)
   include: de-sk 0
+  examples:
+  - description: Zur Startseite
 sk-de 1:
   title: Slowakisch-Deutsch (dict.cc)
   include: de-sk 1
@@ -767,6 +851,8 @@ sv 1:
 sv-de 0:
   title: Schwedisch-Deutsch (dict.cc)
   include: de-sv 0
+  examples:
+  - description: Zur Startseite
 sv-de 1:
   title: Schwedisch-Deutsch (dict.cc)
   include: de-sv 1
@@ -782,6 +868,8 @@ tr 1:
 tr-de 0:
   title: Türkisch-Deutsch (dict.cc)
   include: de-tr 0
+  examples:
+  - description: Zur Startseite
 tr-de 1:
   title: Türkisch-Deutsch (dict.cc)
   include: de-tr 1

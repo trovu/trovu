@@ -10,6 +10,8 @@ ar-fr 0:
   - dictionary
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
 ar-fr 1:
   url: https://dictionnaire.reverso.net/francais-arabe/<word>
   title: Arabe-Français (Reverso)
@@ -35,6 +37,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: https://dictionnaire.reverso.net/francais-allemand/<word>
   title: Allemand-Français (Reverso)
@@ -60,6 +64,8 @@ en-fr 0:
   - english
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
 en-fr 1:
   url: https://dictionnaire.reverso.net/francais-anglais/<word>
   title: Anglais-Français (Reverso)
@@ -85,6 +91,8 @@ es-fr 0:
   - french
   - language
   - spanish
+  examples:
+  - description: Aller à la page d'accueil
 es-fr 1:
   url: https://dictionnaire.reverso.net/francais-espagnol/<word>
   title: Espagnol-Français (Reverso)
@@ -105,6 +113,8 @@ fr 1:
 fr-ar 0:
   title: الفرنسية-العربية (Reverso)
   include: ar-fr 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 fr-ar 1:
   title: الفرنسية-العربية (Reverso)
   include: ar-fr 1
@@ -116,6 +126,8 @@ fr-ar 1:
 fr-de 0:
   title: Französisch-Deutsch (Reverso)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (Reverso)
   include: de-fr 1
@@ -127,6 +139,8 @@ fr-de 1:
 fr-en 0:
   title: French-English (Reverso)
   include: en-fr 0
+  examples:
+  - description: Go to homepage
 fr-en 1:
   title: French-English (Reverso)
   include: en-fr 1
@@ -138,6 +152,8 @@ fr-en 1:
 fr-es 0:
   title: Francés-Español (Reverso)
   include: es-fr 0
+  examples:
+  - description: Ir a la página principal
 fr-es 1:
   title: Francés-Español (Reverso)
   include: es-fr 1
@@ -154,6 +170,8 @@ fr-he 0:
   - french
   - hebrew
   - language
+  examples:
+  - description: עבור לדף הבית
 fr-he 1:
   url: https://dictionnaire.reverso.net/francais-hebreu/<word>
   title: צרפתית-עברית (Reverso)
@@ -175,6 +193,8 @@ fr-it 0:
   - french
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 fr-it 1:
   url: https://dictionnaire.reverso.net/francais-italien/<word>
   title: Francese-Italiano (Reverso)
@@ -196,6 +216,8 @@ fr-ja 0:
   - french
   - japanese
   - language
+  examples:
+  - description: ホームページへ行く
 fr-ja 1:
   url: https://dictionnaire.reverso.net/francais-japonais/<word>
   title: フランス語-日本語 (Reverso)
@@ -217,6 +239,8 @@ fr-ko 0:
   - french
   - korean
   - language
+  examples:
+  - description: 홈페이지로 이동
 fr-ko 1:
   url: https://dictionnaire.reverso.net/francais-coreen/<word>
   title: 프랑스어-한국어 (Reverso)
@@ -238,6 +262,8 @@ fr-nl 0:
   - dutch
   - french
   - language
+  examples:
+  - description: Ga naar homepage
 fr-nl 1:
   url: https://dictionnaire.reverso.net/francais-neerlandais/<word>
   title: Frans-Nederlands (Reverso)
@@ -259,6 +285,8 @@ fr-pl 0:
   - french
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 fr-pl 1:
   url: https://dictionnaire.reverso.net/francais-polonais/<word>
   title: Francuski-Polski (Reverso)
@@ -280,6 +308,8 @@ fr-pt 0:
   - french
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 fr-pt 1:
   url: https://dictionnaire.reverso.net/francais-portugais/<word>
   title: Francês-Português (Reverso)
@@ -301,6 +331,8 @@ fr-ro 0:
   - french
   - language
   - romanian
+  examples:
+  - description: Du-te la pagina principală
 fr-ro 1:
   url: https://dictionnaire.reverso.net/francais-roumain/<word>
   title: Franceză-Română (Reverso)
@@ -322,6 +354,8 @@ fr-ru 0:
   - french
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 fr-ru 1:
   url: https://dictionnaire.reverso.net/francais-russe/<word>
   title: Французский-Русский (Reverso)
@@ -343,6 +377,8 @@ fr-sv 0:
   - french
   - language
   - swedish
+  examples:
+  - description: Gå till startsidan
 fr-sv 1:
   url: https://dictionnaire.reverso.net/francais-suedois/<word>
   title: Franska-Svenska (Reverso)
@@ -364,6 +400,8 @@ fr-tr 0:
   - french
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 fr-tr 1:
   url: https://dictionnaire.reverso.net/francais-turc/<word>
   title: Fransızca-Türkçe (Reverso)
@@ -385,6 +423,8 @@ fr-uk 0:
   - french
   - language
   - ukrainian
+  examples:
+  - description: Перейти на домашню сторінку
 fr-uk 1:
   url: https://dictionnaire.reverso.net/francais-ukrainien/<word>
   title: Французька-Українська (Reverso)
@@ -406,6 +446,8 @@ fr-zh 0:
   - dictionary
   - french
   - language
+  examples:
+  - description: 前往主页
 fr-zh 1:
   url: https://dictionnaire.reverso.net/francais-chinois/<word>
   title: 法文-中文 (Reverso)
@@ -426,6 +468,8 @@ he 1:
 he-fr 0:
   title: Hébreu-Français (Reverso)
   include: fr-he 0
+  examples:
+  - description: Aller à la page d'accueil
 he-fr 1:
   title: Hébreu-Français (Reverso)
   include: fr-he 1
@@ -441,6 +485,8 @@ it 1:
 it-fr 0:
   title: Italien-Français (Reverso)
   include: fr-it 0
+  examples:
+  - description: Aller à la page d'accueil
 it-fr 1:
   title: Italien-Français (Reverso)
   include: fr-it 1
@@ -456,6 +502,8 @@ ja 1:
 ja-fr 0:
   title: Japonais-Français (Reverso)
   include: fr-ja 0
+  examples:
+  - description: Aller à la page d'accueil
 ja-fr 1:
   title: Japonais-Français (Reverso)
   include: fr-ja 1
@@ -471,6 +519,8 @@ ko 1:
 ko-fr 0:
   title: Coréen-Français (Reverso)
   include: fr-ko 0
+  examples:
+  - description: Aller à la page d'accueil
 ko-fr 1:
   title: Coréen-Français (Reverso)
   include: fr-ko 1
@@ -486,6 +536,8 @@ nl 1:
 nl-fr 0:
   title: Néerlandais-Français (Reverso)
   include: fr-nl 0
+  examples:
+  - description: Aller à la page d'accueil
 nl-fr 1:
   title: Néerlandais-Français (Reverso)
   include: fr-nl 1
@@ -501,6 +553,8 @@ pl 1:
 pl-fr 0:
   title: Polonais-Français (Reverso)
   include: fr-pl 0
+  examples:
+  - description: Aller à la page d'accueil
 pl-fr 1:
   title: Polonais-Français (Reverso)
   include: fr-pl 1
@@ -516,6 +570,8 @@ pt 1:
 pt-fr 0:
   title: Portugais-Français (Reverso)
   include: fr-pt 0
+  examples:
+  - description: Aller à la page d'accueil
 pt-fr 1:
   title: Portugais-Français (Reverso)
   include: fr-pt 1
@@ -531,6 +587,8 @@ ro 1:
 ro-fr 0:
   title: Roumain-Français (Reverso)
   include: fr-ro 0
+  examples:
+  - description: Aller à la page d'accueil
 ro-fr 1:
   title: Roumain-Français (Reverso)
   include: fr-ro 1
@@ -546,6 +604,8 @@ ru 1:
 ru-fr 0:
   title: Russe-Français (Reverso)
   include: fr-ru 0
+  examples:
+  - description: Aller à la page d'accueil
 ru-fr 1:
   title: Russe-Français (Reverso)
   include: fr-ru 1
@@ -561,6 +621,8 @@ sv 1:
 sv-fr 0:
   title: Suédois-Français (Reverso)
   include: fr-sv 0
+  examples:
+  - description: Aller à la page d'accueil
 sv-fr 1:
   title: Suédois-Français (Reverso)
   include: fr-sv 1
@@ -576,6 +638,8 @@ tr 1:
 tr-fr 0:
   title: Turc-Français (Reverso)
   include: fr-tr 0
+  examples:
+  - description: Aller à la page d'accueil
 tr-fr 1:
   title: Turc-Français (Reverso)
   include: fr-tr 1
@@ -591,6 +655,8 @@ uk 1:
 uk-fr 0:
   title: Ukrainien-Français (Reverso)
   include: fr-uk 0
+  examples:
+  - description: Aller à la page d'accueil
 uk-fr 1:
   title: Ukrainien-Français (Reverso)
   include: fr-uk 1
@@ -606,6 +672,8 @@ zh 1:
 zh-fr 0:
   title: Chinois-Français (Reverso)
   include: fr-zh 0
+  examples:
+  - description: Aller à la page d'accueil
 zh-fr 1:
   title: Chinois-Français (Reverso)
   include: fr-zh 1

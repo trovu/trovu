@@ -10,6 +10,8 @@ da-eo 0:
   - dictionary
   - esperanto
   - language
+  examples:
+  - description: Iru al ĉefpaĝo
 da-eo 1:
   url: 'https://www.vortaro.dk/?q=<word: {transform: eo-cx}>'
   title: Dana-Esperanto (Dansk↔Esperanto ordbog)
@@ -30,6 +32,8 @@ eo 1:
 eo-da 0:
   title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
   include: da-eo 0
+  examples:
+  - description: Gå til startsiden
 eo-da 1:
   title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
   include: da-eo 1

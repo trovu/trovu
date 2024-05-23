@@ -10,6 +10,8 @@ de-hr 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Idi na početnu stranicu
 de-hr 1:
   url: https://www.crodict.com/german-croatian/<word>
   title: Njemački-Hrvatski (CroDict)
@@ -35,6 +37,8 @@ en-hr 0:
   - dictionary
   - english
   - language
+  examples:
+  - description: Idi na početnu stranicu
 en-hr 1:
   url: https://www.crodict.com/phrases/view?l=englisch-kroatisch&q=<word>
   title: Engleski-Hrvatski (CroDict)
@@ -55,6 +59,8 @@ hr 1:
 hr-de 0:
   title: Kroatisch-Deutsch (CroDict)
   include: de-hr 0
+  examples:
+  - description: Zur Startseite
 hr-de 1:
   title: Kroatisch-Deutsch (CroDict)
   include: de-hr 1
@@ -66,6 +72,8 @@ hr-de 1:
 hr-en 0:
   title: Croatian-English (CroDict)
   include: en-hr 0
+  examples:
+  - description: Go to homepage
 hr-en 1:
   title: Croatian-English (CroDict)
   include: en-hr 1

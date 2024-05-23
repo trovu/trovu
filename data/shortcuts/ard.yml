@@ -10,6 +10,8 @@ ar-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 ar-de 1:
   url: https://www.arabdict.com/german-arabic/<word>
   title: Arabisch-Deutsch (arabdict)
@@ -31,6 +33,8 @@ ar-en 0:
   - dictionary
   - english
   - language
+  examples:
+  - description: Go to homepage
 ar-en 1:
   url: https://www.arabdict.com/english-arabic/<word>
   title: Arabic-English (arabdict)
@@ -52,6 +56,8 @@ ar-es 0:
   - dictionary
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 ar-es 1:
   url: https://www.arabdict.com/spanish-arabic/<word>
   title: Árabe-Español (arabdict)
@@ -73,6 +79,8 @@ ar-fr 0:
   - dictionary
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
 ar-fr 1:
   url: https://www.arabdict.com/french-arabic/<word>
   title: Arabe-Français (arabdict)
@@ -94,6 +102,8 @@ ar-it 0:
   - dictionary
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 ar-it 1:
   url: https://www.arabdict.com/italian-arabic/<word>
   title: Arabo-Italiano (arabdict)
@@ -115,6 +125,8 @@ ar-tr 0:
   - dictionary
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 ar-tr 1:
   url: https://www.arabdict.com/turkish-arabic/<word>
   title: Arapça-Türkçe (arabdict)
@@ -135,6 +147,8 @@ de 1:
 de-ar 0:
   title: الألمانية-العربية (arabdict)
   include: ar-de 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 de-ar 1:
   title: الألمانية-العربية (arabdict)
   include: ar-de 1
@@ -150,6 +164,8 @@ en 1:
 en-ar 0:
   title: الإنجليزية-العربية (arabdict)
   include: ar-en 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 en-ar 1:
   title: الإنجليزية-العربية (arabdict)
   include: ar-en 1
@@ -165,6 +181,8 @@ es 1:
 es-ar 0:
   title: الإسبانية-العربية (arabdict)
   include: ar-es 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 es-ar 1:
   title: الإسبانية-العربية (arabdict)
   include: ar-es 1
@@ -180,6 +198,8 @@ fr 1:
 fr-ar 0:
   title: الفرنسية-العربية (arabdict)
   include: ar-fr 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 fr-ar 1:
   title: الفرنسية-العربية (arabdict)
   include: ar-fr 1
@@ -195,6 +215,8 @@ it 1:
 it-ar 0:
   title: الإيطالية-العربية (arabdict)
   include: ar-it 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 it-ar 1:
   title: الإيطالية-العربية (arabdict)
   include: ar-it 1
@@ -210,6 +232,8 @@ tr 1:
 tr-ar 0:
   title: التركية-العربية (arabdict)
   include: ar-tr 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 tr-ar 1:
   title: التركية-العربية (arabdict)
   include: ar-tr 1

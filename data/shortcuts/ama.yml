@@ -10,8 +10,10 @@ de-la 0:
   - german
   - language
   - latin
+  examples:
+  - description: Vade ad paginam principalem
 de-la 1:
-  url: https://www.albertmartin.de/latein/?q=<Wort>
+  url: https://www.albertmartin.de/latein/?q=<word>
   title: Germanica-Latina (albertmartin.de)
   tags:
   - dictionary
@@ -30,6 +32,8 @@ la 1:
 la-de 0:
   title: Latein-Deutsch (albertmartin.de)
   include: de-la 0
+  examples:
+  - description: Zur Startseite
 la-de 1:
   title: Latein-Deutsch (albertmartin.de)
   include: de-la 1

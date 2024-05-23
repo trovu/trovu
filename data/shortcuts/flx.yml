@@ -10,6 +10,8 @@ en-sv 0:
   - english
   - language
   - swedish
+  examples:
+  - description: Gå till startsidan
 en-sv 1:
   url: https://folkets-lexikon.csc.kth.se/folkets/#lookup&<word>
   title: Engelska-Svenska (Folkets lexikon)
@@ -30,6 +32,8 @@ sv 1:
 sv-en 0:
   title: Swedish-English (Folkets lexikon)
   include: en-sv 0
+  examples:
+  - description: Go to homepage
 sv-en 1:
   title: Swedish-English (Folkets lexikon)
   include: en-sv 1

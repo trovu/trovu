@@ -10,6 +10,8 @@ de-nl 0:
   - dutch
   - german
   - language
+  examples:
+  - description: Ga naar homepage
 de-nl 1:
   url: https://www.uitmuntend.de/search.html?search=<word>
   title: Duits-Nederlands (Uitmuntend)
@@ -30,6 +32,8 @@ nl 1:
 nl-de 0:
   title: Niederländisch-Deutsch (Uitmuntend)
   include: de-nl 0
+  examples:
+  - description: Zur Startseite
 nl-de 1:
   title: Niederländisch-Deutsch (Uitmuntend)
   include: de-nl 1

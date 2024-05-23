@@ -10,6 +10,8 @@ de-en 0:
   - english
   - german
   - language
+  examples:
+  - description: Go to homepage
 de-en 1:
   url: https://dict.leo.org/german-english/<word>
   title: German-English (leo.org)
@@ -31,6 +33,8 @@ de-es 0:
   - german
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 de-es 1:
   url: https://dict.leo.org/spanisch-deutsch/<word>
   title: Alemán-Español (leo.org)
@@ -52,6 +56,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: https://dict.leo.org/französisch-deutsch/<word>
   title: Allemand-Français (leo.org)
@@ -73,6 +79,8 @@ de-it 0:
   - german
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 de-it 1:
   url: https://dict.leo.org/italienisch-deutsch/<word>
   title: Tedesco-Italiano (leo.org)
@@ -94,6 +102,8 @@ de-pl 0:
   - german
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 de-pl 1:
   url: https://dict.leo.org/polnisch-deutsch/<word>
   title: Niemiecki-Polski (leo.org)
@@ -115,6 +125,8 @@ de-pt 0:
   - german
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 de-pt 1:
   url: https://dict.leo.org/portugiesisch-deutsch/<word>
   title: Alemão-Português (leo.org)
@@ -136,6 +148,8 @@ de-ru 0:
   - german
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 de-ru 1:
   url: https://dict.leo.org/russisch-deutsch/<word>
   title: Немецкий-Русский (leo.org)
@@ -157,6 +171,8 @@ de-zh 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: 前往主页
 de-zh 1:
   url: https://dict.leo.org/chinesisch-deutsch/<word>
   title: 德文-中文 (leo.org)
@@ -177,6 +193,8 @@ en 1:
 en-de 0:
   title: Englisch-Deutsch (leo.org)
   include: de-en 0
+  examples:
+  - description: Zur Startseite
 en-de 1:
   title: Englisch-Deutsch (leo.org)
   include: de-en 1
@@ -193,6 +211,8 @@ en-es 0:
   - english
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 en-es 1:
   url: https://dict.leo.org/spanish-english/<word>
   title: Inglés-Español (leo.org)
@@ -214,6 +234,8 @@ en-fr 0:
   - english
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
 en-fr 1:
   url: https://dict.leo.org/french-english/<word>
   title: Anglais-Français (leo.org)
@@ -235,6 +257,8 @@ en-ru 0:
   - english
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 en-ru 1:
   url: https://dict.leo.org/russian-english/<word>
   title: Английский-Русский (leo.org)
@@ -255,6 +279,8 @@ es 1:
 es-de 0:
   title: Spanisch-Deutsch (leo.org)
   include: de-es 0
+  examples:
+  - description: Zur Startseite
 es-de 1:
   title: Spanisch-Deutsch (leo.org)
   include: de-es 1
@@ -266,6 +292,8 @@ es-de 1:
 es-en 0:
   title: Spanish-English (leo.org)
   include: en-es 0
+  examples:
+  - description: Go to homepage
 es-en 1:
   title: Spanish-English (leo.org)
   include: en-es 1
@@ -282,6 +310,8 @@ es-pt 0:
   - language
   - portuguese
   - spanish
+  examples:
+  - description: Ir para a página inicial
 es-pt 1:
   url: https://dict.leo.org/espanhol-português/<word>
   title: Espanhol-Português (leo.org)
@@ -302,6 +332,8 @@ fr 1:
 fr-de 0:
   title: Französisch-Deutsch (leo.org)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (leo.org)
   include: de-fr 1
@@ -313,6 +345,8 @@ fr-de 1:
 fr-en 0:
   title: French-English (leo.org)
   include: en-fr 0
+  examples:
+  - description: Go to homepage
 fr-en 1:
   title: French-English (leo.org)
   include: en-fr 1
@@ -328,6 +362,8 @@ it 1:
 it-de 0:
   title: Italienisch-Deutsch (leo.org)
   include: de-it 0
+  examples:
+  - description: Zur Startseite
 it-de 1:
   title: Italienisch-Deutsch (leo.org)
   include: de-it 1
@@ -343,6 +379,8 @@ pl 1:
 pl-de 0:
   title: Polnisch-Deutsch (leo.org)
   include: de-pl 0
+  examples:
+  - description: Zur Startseite
 pl-de 1:
   title: Polnisch-Deutsch (leo.org)
   include: de-pl 1
@@ -358,6 +396,8 @@ pt 1:
 pt-de 0:
   title: Portugiesisch-Deutsch (leo.org)
   include: de-pt 0
+  examples:
+  - description: Zur Startseite
 pt-de 1:
   title: Portugiesisch-Deutsch (leo.org)
   include: de-pt 1
@@ -369,6 +409,8 @@ pt-de 1:
 pt-es 0:
   title: Portugués-Español (leo.org)
   include: es-pt 0
+  examples:
+  - description: Ir a la página principal
 pt-es 1:
   title: Portugués-Español (leo.org)
   include: es-pt 1
@@ -384,6 +426,8 @@ ru 1:
 ru-de 0:
   title: Russisch-Deutsch (leo.org)
   include: de-ru 0
+  examples:
+  - description: Zur Startseite
 ru-de 1:
   title: Russisch-Deutsch (leo.org)
   include: de-ru 1
@@ -395,6 +439,8 @@ ru-de 1:
 ru-en 0:
   title: Russian-English (leo.org)
   include: en-ru 0
+  examples:
+  - description: Go to homepage
 ru-en 1:
   title: Russian-English (leo.org)
   include: en-ru 1
@@ -410,6 +456,8 @@ zh 1:
 zh-de 0:
   title: Chinesisch-Deutsch (leo.org)
   include: de-zh 0
+  examples:
+  - description: Zur Startseite
 zh-de 1:
   title: Chinesisch-Deutsch (leo.org)
   include: de-zh 1

@@ -10,6 +10,8 @@ en-tr 0:
   - english
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 en-tr 1:
   url: https://www.zargan.com/tr/q/<word>
   title: İngilizce-Türkçe (Zargan)
@@ -30,6 +32,8 @@ tr 1:
 tr-en 0:
   title: Turkish-English (Zargan)
   include: en-tr 0
+  examples:
+  - description: Go to homepage
 tr-en 1:
   title: Turkish-English (Zargan)
   include: en-tr 1

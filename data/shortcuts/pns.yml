@@ -10,6 +10,8 @@ de-el 0:
   - german
   - greek
   - language
+  examples:
+  - description: Μετάβαση στην αρχική σελίδα
 de-el 1:
   url: http://en.pons.com/translate?l=deel&q=<word>
   title: Γερμανικά-Ελληνικά (Pons)
@@ -31,6 +33,8 @@ de-en 0:
   - english
   - german
   - language
+  examples:
+  - description: Go to homepage
 de-en 1:
   url: http://en.pons.com/translate?l=deen&q=<word>
   title: German-English (Pons)
@@ -52,6 +56,8 @@ de-es 0:
   - german
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 de-es 1:
   url: http://en.pons.com/translate?l=dees&q=<word>
   title: Alemán-Español (Pons)
@@ -73,6 +79,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: http://en.pons.com/translate?l=defr&q=<word>
   title: Allemand-Français (Pons)
@@ -94,6 +102,8 @@ de-hu 0:
   - german
   - hungarian
   - language
+  examples:
+  - description: Menj a kezdőlapra
 de-hu 1:
   url: http://en.pons.com/translate?l=dehu&q=<word>
   title: Német-Magyar (Pons)
@@ -115,6 +125,8 @@ de-it 0:
   - german
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 de-it 1:
   url: http://en.pons.com/translate?l=deit&q=<word>
   title: Tedesco-Italiano (Pons)
@@ -136,6 +148,8 @@ de-pl 0:
   - german
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 de-pl 1:
   url: http://en.pons.com/translate?l=depl&q=<word>
   title: Niemiecki-Polski (Pons)
@@ -157,6 +171,8 @@ de-pt 0:
   - german
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 de-pt 1:
   url: http://en.pons.com/translate?l=dept&q=<word>
   title: Alemão-Português (Pons)
@@ -178,6 +194,8 @@ de-ru 0:
   - german
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 de-ru 1:
   url: http://en.pons.com/translate?l=deru&q=<word>
   title: Немецкий-Русский (Pons)
@@ -198,6 +216,8 @@ el 1:
 el-de 0:
   title: Griechisch-Deutsch (Pons)
   include: de-el 0
+  examples:
+  - description: Zur Startseite
 el-de 1:
   title: Griechisch-Deutsch (Pons)
   include: de-el 1
@@ -213,6 +233,8 @@ en 1:
 en-de 0:
   title: Englisch-Deutsch (Pons)
   include: de-en 0
+  examples:
+  - description: Zur Startseite
 en-de 1:
   title: Englisch-Deutsch (Pons)
   include: de-en 1
@@ -229,6 +251,8 @@ en-es 0:
   - english
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 en-es 1:
   url: http://en.pons.com/translate?l=enes&q=<word>
   title: Inglés-Español (Pons)
@@ -250,6 +274,8 @@ en-fr 0:
   - english
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
 en-fr 1:
   url: http://en.pons.com/translate?l=enfr&q=<word>
   title: Anglais-Français (Pons)
@@ -271,6 +297,8 @@ en-sl 0:
   - english
   - language
   - slovenian
+  examples:
+  - description: Pojdi na domačo stran
 en-sl 1:
   url: http://en.pons.com/translate?l=ensl&q=<word>
   title: Angleščina-Slovenščina (Pons)
@@ -291,6 +319,8 @@ es 1:
 es-de 0:
   title: Spanisch-Deutsch (Pons)
   include: de-es 0
+  examples:
+  - description: Zur Startseite
 es-de 1:
   title: Spanisch-Deutsch (Pons)
   include: de-es 1
@@ -302,6 +332,8 @@ es-de 1:
 es-en 0:
   title: Spanish-English (Pons)
   include: en-es 0
+  examples:
+  - description: Go to homepage
 es-en 1:
   title: Spanish-English (Pons)
   include: en-es 1
@@ -317,6 +349,8 @@ fr 1:
 fr-de 0:
   title: Französisch-Deutsch (Pons)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (Pons)
   include: de-fr 1
@@ -328,6 +362,8 @@ fr-de 1:
 fr-en 0:
   title: French-English (Pons)
   include: en-fr 0
+  examples:
+  - description: Go to homepage
 fr-en 1:
   title: French-English (Pons)
   include: en-fr 1
@@ -344,6 +380,8 @@ fr-pl 0:
   - french
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 fr-pl 1:
   url: http://en.pons.com/translate?l=frpl&q=<word>
   title: Francuski-Polski (Pons)
@@ -364,6 +402,8 @@ hu 1:
 hu-de 0:
   title: Ungarisch-Deutsch (Pons)
   include: de-hu 0
+  examples:
+  - description: Zur Startseite
 hu-de 1:
   title: Ungarisch-Deutsch (Pons)
   include: de-hu 1
@@ -379,6 +419,8 @@ it 1:
 it-de 0:
   title: Italienisch-Deutsch (Pons)
   include: de-it 0
+  examples:
+  - description: Zur Startseite
 it-de 1:
   title: Italienisch-Deutsch (Pons)
   include: de-it 1
@@ -394,6 +436,8 @@ pl 1:
 pl-de 0:
   title: Polnisch-Deutsch (Pons)
   include: de-pl 0
+  examples:
+  - description: Zur Startseite
 pl-de 1:
   title: Polnisch-Deutsch (Pons)
   include: de-pl 1
@@ -405,6 +449,8 @@ pl-de 1:
 pl-fr 0:
   title: Polonais-Français (Pons)
   include: fr-pl 0
+  examples:
+  - description: Aller à la page d'accueil
 pl-fr 1:
   title: Polonais-Français (Pons)
   include: fr-pl 1
@@ -420,6 +466,8 @@ pt 1:
 pt-de 0:
   title: Portugiesisch-Deutsch (Pons)
   include: de-pt 0
+  examples:
+  - description: Zur Startseite
 pt-de 1:
   title: Portugiesisch-Deutsch (Pons)
   include: de-pt 1
@@ -435,6 +483,8 @@ ru 1:
 ru-de 0:
   title: Russisch-Deutsch (Pons)
   include: de-ru 0
+  examples:
+  - description: Zur Startseite
 ru-de 1:
   title: Russisch-Deutsch (Pons)
   include: de-ru 1
@@ -450,6 +500,8 @@ sl 1:
 sl-en 0:
   title: Slovenian-English (Pons)
   include: en-sl 0
+  examples:
+  - description: Go to homepage
 sl-en 1:
   title: Slovenian-English (Pons)
   include: en-sl 1

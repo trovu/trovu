@@ -10,8 +10,10 @@ en-zh 0:
   - dictionary
   - english
   - language
+  examples:
+  - description: 前往主页
 en-zh 1:
-  url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=<query>
+  url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=<word>
   title: 英文-中文 (MDBG)
   tags:
   - chinese
@@ -30,6 +32,8 @@ zh 1:
 zh-en 0:
   title: Chinese-English (MDBG)
   include: en-zh 0
+  examples:
+  - description: Go to homepage
 zh-en 1:
   title: Chinese-English (MDBG)
   include: en-zh 1
