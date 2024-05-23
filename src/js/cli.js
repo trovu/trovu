@@ -1,5 +1,6 @@
 import DataManager from './modules/DataManager';
 import DataReporter from './modules/DataReporter';
+import DictionarySetter from './modules/DictionarySetter';
 import Migrator from './modules/Migrator';
 import ShortcutTester from './modules/ShortcutTester';
 import Validator from './modules/Validator';
@@ -62,6 +63,11 @@ program
   .action(reportData);
 
 program
+  .command('set-dictionaries')
+  .description('Set dictionaries')
+  .action(setDictionaries);
+
+program
   .command('test-shortcuts')
   .description('Test shortcut URLs')
   .option(
@@ -111,6 +117,11 @@ function normalizeData() {
 function reportData(options) {
   const dataReporter = new DataReporter(options);
   dataReporter.reportData();
+}
+
+function setDictionaries() {
+  const dictionarySetter = new DictionarySetter();
+  dictionarySetter.setDictionaries();
 }
 
 function testShortcuts(options) {
