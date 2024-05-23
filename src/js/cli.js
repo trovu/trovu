@@ -77,35 +77,20 @@ program
 
 program.parse();
 
-function validateData() {
-  const validator = new Validator();
-  validator.validateShortcuts();
-}
-
 function compileData(options) {
   const data = DataManager.load();
   const json = JSON.stringify(data);
   fs.writeFileSync(options.output, json, 'utf8');
 }
 
-function normalizeData() {
-  const data = DataManager.load();
-  DataManager.write(data);
-}
-
-function testShortcuts(options) {
-  const shortcutTester = new ShortcutTester(options);
-  shortcutTester.testShortcuts();
-}
-
-function reportData(options) {
-  const dataReporter = new DataReporter(options);
-  dataReporter.reportData();
-}
-
 function migrateExamples(options) {
   const migrator = new Migrator();
   migrator.migrateExamples(options);
+}
+
+async function migrateInclude() {
+  const migrator = new Migrator();
+  await migrator.migrateInclude();
 }
 
 function migratePlaceholders(options) {
@@ -118,7 +103,22 @@ async function migrateProtocol(options) {
   await migrator.migrateProtocol(options);
 }
 
-async function migrateInclude() {
-  const migrator = new Migrator();
-  await migrator.migrateInclude();
+function normalizeData() {
+  const data = DataManager.load();
+  DataManager.write(data);
+}
+
+function reportData(options) {
+  const dataReporter = new DataReporter(options);
+  dataReporter.reportData();
+}
+
+function testShortcuts(options) {
+  const shortcutTester = new ShortcutTester(options);
+  shortcutTester.testShortcuts();
+}
+
+function validateData() {
+  const validator = new Validator();
+  validator.validateShortcuts();
 }
