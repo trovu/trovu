@@ -2880,28 +2880,28 @@ fla 0:
   title: Flickr, advanced search
   include: fl 0
 flcc 1:
-  url: https://flickr.com/search/?q=<query>&l=cc
+  url: https://www.flickr.com/search/?text=<query>&license=2%2C3%2C4%2C5%2C6%2C9
   title: 'Flickr: full text search for content with a Creative Commons license'
   examples:
   - arguments: christmas
     description: search photos about christmas
   include: fl 0
 flcca 1:
-  url: https://flickr.com/search/?q=<query>&l=deriv
+  url: https://www.flickr.com/search/?text=<query>&license=1%2C2%2C9%2C10
   title: 'Flickr: full text search for content to adapt, modify and build upon'
   examples:
   - arguments: christmas
     description: search photos about christmas
   include: fl 0
 flccc 1:
-  url: https://flickr.com/search/?q=<query>&l=comm
+  url: https://www.flickr.com/search/?text=<query>&license=4%2C5%2C6%2C9%2C10
   title: 'Flickr: full text search for content to use commercially'
   examples:
   - arguments: christmas
     description: search photos about christmas
   include: fl 0
 flccca 1:
-  url: https://flickr.com/search/?q=<query>&l=commderiv
+  url: https://www.flickr.com/search/?text=<query>&license=4%2C5%2C9%2C10
   title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
   examples:
   - arguments: christmas
