@@ -74,6 +74,50 @@ export default class DictionarySetter {
         };
       }
     }
+
+    const langs = {};
+    for (const dict in dicts) {
+      // Remember all langs we have in this dict.
+      for (const lang1 in dicts[dict].pairs) {
+        if (!langs[lang1]) {
+          langs[lang1] = new Set();
+        }
+        langs[lang1].add(dict);
+        for (const lang2 in dicts[dict].pairs[lang1]) {
+          if (!langs[lang2]) {
+            langs[lang2] = new Set();
+          }
+          langs[lang2].add(dict);
+        }
+      }
+    }
+    const dictsByPrioStr =
+      'ama ard dtn crd deo esd flx hzn irs mdb umt wdk zrg lge dcm bab leo dcc lgs pns rvs beo pka';
+
+    const dictsByPrio = dictsByPrioStr.split(' ');
+
+    const o = data.shortcuts.o;
+    for (const lang in langs) {
+      o[`${lang} 0`] = {};
+      o[`${lang} 1`] = {};
+      for (const dict of dictsByPrio) {
+        if (langs[lang].has(dict)) {
+          for (const argCount of [0, 1]) {
+            if (!o[`${lang} ${argCount}`]) {
+              o[`${lang} ${argCount}`] = {};
+            }
+            if (!o[`${lang} ${argCount}`].include) {
+              o[`${lang} ${argCount}`].include = [];
+            }
+            o[`${lang} ${argCount}`].include.push({
+              key: `${lang} ${argCount}`,
+              namespace: dict,
+            });
+          }
+        }
+      }
+    }
+    data.shortcuts.o = o;
     DataManager.write(data);
   }
 
