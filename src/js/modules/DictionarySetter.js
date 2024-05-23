@@ -1,6 +1,4 @@
 import DataManager from './/DataManager';
-import QueryParser from './QueryParser';
-import UrlProcessor from './UrlProcessor';
 import fs from 'fs';
 import jsyaml from 'js-yaml';
 
