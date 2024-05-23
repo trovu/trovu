@@ -1678,6 +1678,8 @@ ca-fr 1:
   - language
   examples:
   - arguments: arbre
+    description: Traduction en français de "arbre"
+  - arguments: arbre
     description: Traduction en catalan de "arbre"
 ca-he 0:
   url: https://www.dict.com/catalan-hebrew/
@@ -6408,6 +6410,8 @@ et-fi 1:
   - language
   examples:
   - arguments: puu
+    description: suomi-käännös sanalle "puu"
+  - arguments: puu
     description: viro-käännös sanalle "puu"
 et-fr 0:
   url: https://www.dict.com/estonian-french/
@@ -7045,6 +7049,8 @@ fi-et 1:
   include: et-fi 1
   examples:
   - arguments: puu
+    description: eesti tõlge "puu"
+  - arguments: puu
     description: soome tõlge "puu"
 fi-fr 0:
   url: https://www.dict.com/finnish-french/
@@ -7604,6 +7610,8 @@ fr-ca 1:
   title: Francès-Català (dict.com)
   include: ca-fr 1
   examples:
+  - arguments: arbre
+    description: Traducció al català de "arbre"
   - arguments: arbre
     description: Traducció al francès de "arbre"
 fr-cs 0:
@@ -16388,6 +16396,8 @@ ru-uk 1:
   - ukrainian
   examples:
   - arguments: дерево
+    description: Переклад українська для "дерево"
+  - arguments: дерево
     description: Переклад російська для "дерево"
 ru-vi 0:
   url: https://www.dict.com/russian-vietnamese/
@@ -19407,6 +19417,8 @@ uk-ru 1:
   title: Украинский-Русский (dict.com)
   include: ru-uk 1
   examples:
+  - arguments: дерево
+    description: Перевод на русский язык для "дерево"
   - arguments: дерево
     description: Перевод на украинский язык для "дерево"
 uk-sk 0:
