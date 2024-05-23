@@ -18,6 +18,10 @@ export default class DictionarySetter {
       const shortcuts = {};
       for (const lang1 in dicts[dict].pairs) {
         for (const lang2 in dicts[dict].pairs[lang1]) {
+          // Skip if there is already a shortcut for this pair.
+          if (shortcuts[DictionarySetter.getKey(lang1, lang2, 0)]) {
+            continue;
+          }
           if (!this.langs[lang2][lang1]) {
             console.log(`Missing code for ${lang1}-${lang2}`);
             return;
@@ -50,6 +54,13 @@ export default class DictionarySetter {
             include: DictionarySetter.getKey(lang1, lang2, 1),
             examples: this.getExamples(lang2, lang1),
           };
+          // Add URL to reverse pair if it is explicitly defined.
+          if (dicts[dict].pairs[lang2] && dicts[dict].pairs[lang2][lang1]) {
+            shortcuts[DictionarySetter.getKey(lang2, lang1, 0)].url =
+              dicts[dict].pairs[lang2][lang1][0];
+            shortcuts[DictionarySetter.getKey(lang2, lang1, 1)].url =
+              dicts[dict].pairs[lang2][lang1][1];
+          }
         }
       }
       data.shortcuts[dict] = shortcuts;
