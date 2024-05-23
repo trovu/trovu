@@ -9,8 +9,8 @@ export default class DictionarySetter {
 
   setDictionaries() {
     const data = DataManager.load();
-    const langs = DictionarySetter.getLanguageList();
     const dicts = DictionarySetter.getDictionaries();
+    const langs = DictionarySetter.getLanguageList();
     const t = DictionarySetter.getTranslations();
     DataManager.write(data);
   }
