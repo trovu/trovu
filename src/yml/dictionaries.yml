@@ -4,7 +4,7 @@ ama:
     de:
       la:
         - https://www.albertmartin.de/latein/
-        - https://www.albertmartin.de/latein/?q={%Wort}
+        - https://www.albertmartin.de/latein/?q=<word>
 ard:
   name: arabdict
   pairs:
@@ -2239,7 +2239,7 @@ deo:
     da:
       eo:
         - https://www.vortaro.dk/
-        - https://www.vortaro.dk/?q={%word|transform=eo-cx}
+        - 'https://www.vortaro.dk/?q=<word: {transform: eo-cx }>'
 dtn:
   name: deutsch-tuerkisch.net
   pairs:
@@ -2440,7 +2440,7 @@ mdb:
     en:
       zh:
         - https://www.mdbg.net/chinese/dictionary
-        - https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb={%query}
+        - https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=<word>
 pka:
   name: Pauker.at
   pairs:
@@ -2512,7 +2512,7 @@ pka:
         - https://www.pauker.at/pauker/DE_DE/en/wb?suche=<word>
       eo:
         - https://www.pauker.at/pauker/DE_DE/eo/wb
-        - https://www.pauker.at/pauker/DE_DE/eo/wb?suche={%word|transform=eo-cx}
+        - 'https://www.pauker.at/pauker/DE_DE/eo/wb?suche=<word: {transform: eo-cx}>'
       es:
         - https://www.pauker.at/pauker/DE_DE/es/wb
         - https://www.pauker.at/pauker/DE_DE/es/wb?suche=<word>
