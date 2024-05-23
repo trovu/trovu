@@ -47,7 +47,7 @@ export default class DictionarySetter {
           };
           shortcuts[DictionarySetter.getKey(lang2, lang1, 1)] = {
             title: this.getTitle(lang2, lang1, dicts[dict].name),
-            include: { key: DictionarySetter.getKey(lang1, lang2, 1) },
+            include: DictionarySetter.getKey(lang1, lang2, 1),
             examples: this.getExamples(lang2, lang1),
           };
         }
