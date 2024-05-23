@@ -10,8 +10,8 @@ export default class DictionarySetter {
   setDictionaries() {
     const data = DataManager.load();
     const langs = DictionarySetter.getLanguageList();
-    const t = jsyaml.load(fs.readFileSync('src/yml/translations.yml', 'utf8'));
     const dicts = DictionarySetter.getDictionaries();
+    const t = DictionarySetter.getTranslations();
     DataManager.write(data);
   }
 
@@ -32,5 +32,12 @@ export default class DictionarySetter {
       langs[dir] = lang;
     }
     return langs;
+  }
+
+  static getTranslations() {
+    const translations = jsyaml.load(
+      fs.readFileSync('src/yml/translations.yml', 'utf8'),
+    );
+    return translations;
   }
 }
