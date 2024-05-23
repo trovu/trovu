@@ -42,6 +42,7 @@ export default class DictionarySetter {
             url: dicts[dict].pairs[lang1][lang2][0],
             title: this.getTitle(lang1, lang2, dicts[dict].name),
             tags: this.getTags(lang1, lang2),
+            examples: this.getExampleHomepage(lang2),
           };
           shortcuts[key1] = {
             url: dicts[dict].pairs[lang1][lang2][1],
@@ -52,6 +53,7 @@ export default class DictionarySetter {
           shortcuts[reverseKey0] = {
             title: this.getTitle(lang2, lang1, dicts[dict].name),
             include: key0,
+            examples: this.getExampleHomepage(lang1),
           };
           shortcuts[reverseKey1] = {
             title: this.getTitle(lang2, lang1, dicts[dict].name),
@@ -193,6 +195,14 @@ export default class DictionarySetter {
         description: this.t.desc[lang2]
           .replace('{lang}', this.langs[lang2][lang1])
           .replace('{tree}', this.t.tree[lang2]),
+      },
+    ];
+  }
+
+  getExampleHomepage(lang) {
+    return [
+      {
+        description: this.t.goToHomepage[lang],
       },
     ];
   }
