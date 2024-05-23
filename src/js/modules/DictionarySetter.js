@@ -4,16 +4,10 @@ import UrlProcessor from './UrlProcessor';
 import fs from 'fs';
 
 export default class DictionarySetter {
-  constructor(options) {
-    this.options = options;
-    this.env = {
-      data: DataManager.load(),
-      language: 'en',
-      country: 'us',
-    };
-  }
+  constructor() {}
 
   setDictionaries() {
-    DataManager.write(this.env.data);
+    const data = DataManager.load();
+    DataManager.write(data);
   }
 }
