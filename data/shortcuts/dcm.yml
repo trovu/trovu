@@ -3631,9 +3631,11 @@ de-ca 1:
   - arguments: arbre
     description: Traducció al alemany de "arbre"
 de-cs 0:
+  url: https://www.dict.com/german-czech/
   title: Němčina-Čeština (dict.com)
   include: cs-de 0
 de-cs 1:
+  url: https://www.dict.com/german-czech/<word>
   title: Němčina-Čeština (dict.com)
   include: cs-de 1
   examples:
