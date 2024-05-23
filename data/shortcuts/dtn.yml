@@ -10,6 +10,8 @@ de-tr 0:
   - german
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 de-tr 1:
   url: https://deutsch-tuerkisch.net/suche/<word>
   title: Almanca-Türkçe (deutsch-tuerkisch.net)
@@ -30,6 +32,8 @@ tr 1:
 tr-de 0:
   title: Türkisch-Deutsch (deutsch-tuerkisch.net)
   include: de-tr 0
+  examples:
+  - description: Zur Startseite
 tr-de 1:
   title: Türkisch-Deutsch (deutsch-tuerkisch.net)
   include: de-tr 1

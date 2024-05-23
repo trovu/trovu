@@ -10,6 +10,8 @@ en-ga 0:
   - english
   - irish
   - language
+  examples:
+  - description: Téigh go dtí an leathanach baile
 en-ga 1:
   url: https://www.irishionary.com/search/<word>/
   title: Béarla-Gaeilge (Irishionary)
@@ -30,6 +32,8 @@ ga 1:
 ga-en 0:
   title: Irish-English (Irishionary)
   include: en-ga 0
+  examples:
+  - description: Go to homepage
 ga-en 1:
   title: Irish-English (Irishionary)
   include: en-ga 1

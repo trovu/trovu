@@ -10,6 +10,8 @@ de-en 0:
   - english
   - german
   - language
+  examples:
+  - description: Go to homepage
 de-en 1:
   url: https://www.linguee.com/english-german/search?query=<word>
   title: German-English (Linguee)
@@ -31,6 +33,8 @@ de-es 0:
   - german
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 de-es 1:
   url: https://www.linguee.es/espanol-aleman/search?query=<word>
   title: Alemán-Español (Linguee)
@@ -52,6 +56,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: https://www.linguee.fr/francais-allemand/search?query=<word>
   title: Allemand-Français (Linguee)
@@ -73,6 +79,8 @@ de-pl 0:
   - german
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 de-pl 1:
   url: https://www.linguee.de/deutsch-polnisch/search?query=<word>
   title: Niemiecki-Polski (Linguee)
@@ -94,6 +102,8 @@ de-pt 0:
   - german
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 de-pt 1:
   url: https://www.linguee.pt/portugues-alemao/search?query=<word>
   title: Alemão-Português (Linguee)
@@ -114,6 +124,8 @@ en 1:
 en-de 0:
   title: Englisch-Deutsch (Linguee)
   include: de-en 0
+  examples:
+  - description: Zur Startseite
 en-de 1:
   title: Englisch-Deutsch (Linguee)
   include: de-en 1
@@ -130,6 +142,8 @@ en-es 0:
   - english
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 en-es 1:
   url: https://www.linguee.com/english-spanish/search?query=<word>
   title: Inglés-Español (Linguee)
@@ -151,6 +165,8 @@ en-fr 0:
   - english
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
 en-fr 1:
   url: https://www.linguee.com/english-french/search?query=<word>
   title: Anglais-Français (Linguee)
@@ -172,6 +188,8 @@ en-pt 0:
   - english
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 en-pt 1:
   url: https://www.linguee.com/english-portuguese/search?query=<word>
   title: Inglês-Português (Linguee)
@@ -192,6 +210,8 @@ es 1:
 es-de 0:
   title: Spanisch-Deutsch (Linguee)
   include: de-es 0
+  examples:
+  - description: Zur Startseite
 es-de 1:
   title: Spanisch-Deutsch (Linguee)
   include: de-es 1
@@ -203,6 +223,8 @@ es-de 1:
 es-en 0:
   title: Spanish-English (Linguee)
   include: en-es 0
+  examples:
+  - description: Go to homepage
 es-en 1:
   title: Spanish-English (Linguee)
   include: en-es 1
@@ -218,6 +240,8 @@ fr 1:
 fr-de 0:
   title: Französisch-Deutsch (Linguee)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (Linguee)
   include: de-fr 1
@@ -229,6 +253,8 @@ fr-de 1:
 fr-en 0:
   title: French-English (Linguee)
   include: en-fr 0
+  examples:
+  - description: Go to homepage
 fr-en 1:
   title: French-English (Linguee)
   include: en-fr 1
@@ -244,6 +270,8 @@ pl 1:
 pl-de 0:
   title: Polnisch-Deutsch (Linguee)
   include: de-pl 0
+  examples:
+  - description: Zur Startseite
 pl-de 1:
   title: Polnisch-Deutsch (Linguee)
   include: de-pl 1
@@ -259,6 +287,8 @@ pt 1:
 pt-de 0:
   title: Portugiesisch-Deutsch (Linguee)
   include: de-pt 0
+  examples:
+  - description: Zur Startseite
 pt-de 1:
   title: Portugiesisch-Deutsch (Linguee)
   include: de-pt 1
@@ -270,6 +300,8 @@ pt-de 1:
 pt-en 0:
   title: Portuguese-English (Linguee)
   include: en-pt 0
+  examples:
+  - description: Go to homepage
 pt-en 1:
   title: Portuguese-English (Linguee)
   include: en-pt 1

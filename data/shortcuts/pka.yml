@@ -10,6 +10,8 @@ am-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 am-de 1:
   url: https://www.pauker.at/pauker/DE_DE/am/wb?suche=<word>
   title: Amharisch-Deutsch (Pauker.at)
@@ -35,6 +37,8 @@ ar-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 ar-de 1:
   url: https://www.pauker.at/pauker/DE_DE/ar/wb?suche=<word>
   title: Arabisch-Deutsch (Pauker.at)
@@ -60,6 +64,8 @@ as-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 as-de 1:
   url: https://www.pauker.at/pauker/DE_DE/as/wb?suche=<word>
   title: Assamesisch-Deutsch (Pauker.at)
@@ -85,6 +91,8 @@ az-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 az-de 1:
   url: https://www.pauker.at/pauker/DE_DE/az/wb?suche=<word>
   title: Aserbaidschanisch-Deutsch (Pauker.at)
@@ -110,6 +118,8 @@ be-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 be-de 1:
   url: https://www.pauker.at/pauker/DE_DE/be/wb?suche=<word>
   title: Weißrussisch-Deutsch (Pauker.at)
@@ -135,6 +145,8 @@ bg-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 bg-de 1:
   url: https://www.pauker.at/pauker/DE_DE/bg/wb?suche=<word>
   title: Bulgarisch-Deutsch (Pauker.at)
@@ -160,6 +172,8 @@ bn-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 bn-de 1:
   url: https://www.pauker.at/pauker/DE_DE/bn/wb?suche=<word>
   title: Bengalisch-Deutsch (Pauker.at)
@@ -185,6 +199,8 @@ bo-de 0:
   - german
   - language
   - tibetan
+  examples:
+  - description: Zur Startseite
 bo-de 1:
   url: https://www.pauker.at/pauker/DE_DE/bo/wb?suche=<word>
   title: Tibetisch-Deutsch (Pauker.at)
@@ -210,6 +226,8 @@ br-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 br-de 1:
   url: https://www.pauker.at/pauker/DE_DE/br/wb?suche=<word>
   title: Bretonisch-Deutsch (Pauker.at)
@@ -235,6 +253,8 @@ ca-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 ca-de 1:
   url: https://www.pauker.at/pauker/DE_DE/ca/wb?suche=<word>
   title: Katalanisch-Deutsch (Pauker.at)
@@ -260,6 +280,8 @@ cs-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 cs-de 1:
   url: https://www.pauker.at/pauker/DE_DE/cs/wb?suche=<word>
   title: Tschechisch-Deutsch (Pauker.at)
@@ -285,6 +307,8 @@ cy-de 0:
   - german
   - language
   - welsh
+  examples:
+  - description: Zur Startseite
 cy-de 1:
   url: https://www.pauker.at/pauker/DE_DE/cy/wb?suche=<word>
   title: Walisisch-Deutsch (Pauker.at)
@@ -310,6 +334,8 @@ da-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 da-de 1:
   url: https://www.pauker.at/pauker/DE_DE/da/wb?suche=<word>
   title: Dänisch-Deutsch (Pauker.at)
@@ -330,6 +356,8 @@ de 1:
 de-am 0:
   title: ጀርመን-አማርኛ (Pauker.at)
   include: am-de 0
+  examples:
+  - description: ወደ መነሻ ገጽ ይሂዱ
 de-am 1:
   title: ጀርመን-አማርኛ (Pauker.at)
   include: am-de 1
@@ -341,6 +369,8 @@ de-am 1:
 de-ar 0:
   title: الألمانية-العربية (Pauker.at)
   include: ar-de 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 de-ar 1:
   title: الألمانية-العربية (Pauker.at)
   include: ar-de 1
@@ -352,6 +382,8 @@ de-ar 1:
 de-as 0:
   title: German-অসমীয়া (Pauker.at)
   include: as-de 0
+  examples:
+  - description: হোমপেজলৈ যাওক
 de-as 1:
   title: German-অসমীয়া (Pauker.at)
   include: as-de 1
@@ -363,6 +395,8 @@ de-as 1:
 de-az 0:
   title: Alman-Azərbaycan (Pauker.at)
   include: az-de 0
+  examples:
+  - description: Ana səhifəyə keç
 de-az 1:
   title: Alman-Azərbaycan (Pauker.at)
   include: az-de 1
@@ -374,6 +408,8 @@ de-az 1:
 de-be 0:
   title: Нямецкая-Беларуская (Pauker.at)
   include: be-de 0
+  examples:
+  - description: Перайсці на галоўную старонку
 de-be 1:
   title: Нямецкая-Беларуская (Pauker.at)
   include: be-de 1
@@ -385,6 +421,8 @@ de-be 1:
 de-bg 0:
   title: Немски-Български (Pauker.at)
   include: bg-de 0
+  examples:
+  - description: Отидете на началната страница
 de-bg 1:
   title: Немски-Български (Pauker.at)
   include: bg-de 1
@@ -396,6 +434,8 @@ de-bg 1:
 de-bn 0:
   title: জার্মান-বাংলা (Pauker.at)
   include: bn-de 0
+  examples:
+  - description: হোমপেজে যান
 de-bn 1:
   title: জার্মান-বাংলা (Pauker.at)
   include: bn-de 1
@@ -407,6 +447,8 @@ de-bn 1:
 de-bo 0:
   title: German-བོད་སྐད་ (Pauker.at)
   include: bo-de 0
+  examples:
+  - description: གཙོ་ངོས་ལུ་འགྲོ།
 de-bo 1:
   title: German-བོད་སྐད་ (Pauker.at)
   include: bo-de 1
@@ -418,6 +460,8 @@ de-bo 1:
 de-br 0:
   title: Alamaneg-Brezhoneg (Pauker.at)
   include: br-de 0
+  examples:
+  - description: Kit d'ar bajenn degemer
 de-br 1:
   title: Alamaneg-Brezhoneg (Pauker.at)
   include: br-de 1
@@ -429,6 +473,8 @@ de-br 1:
 de-ca 0:
   title: Alemany-Català (Pauker.at)
   include: ca-de 0
+  examples:
+  - description: Ves a la pàgina principal
 de-ca 1:
   title: Alemany-Català (Pauker.at)
   include: ca-de 1
@@ -440,6 +486,8 @@ de-ca 1:
 de-cs 0:
   title: Němčina-Čeština (Pauker.at)
   include: cs-de 0
+  examples:
+  - description: Přejít na domovskou stránku
 de-cs 1:
   title: Němčina-Čeština (Pauker.at)
   include: cs-de 1
@@ -451,6 +499,8 @@ de-cs 1:
 de-cy 0:
   title: Almaeneg-Cymraeg (Pauker.at)
   include: cy-de 0
+  examples:
+  - description: Ewch i'r hafan
 de-cy 1:
   title: Almaeneg-Cymraeg (Pauker.at)
   include: cy-de 1
@@ -462,6 +512,8 @@ de-cy 1:
 de-da 0:
   title: Tysk-Dansk (Pauker.at)
   include: da-de 0
+  examples:
+  - description: Gå til startsiden
 de-da 1:
   title: Tysk-Dansk (Pauker.at)
   include: da-de 1
@@ -478,6 +530,8 @@ de-dz 0:
   - dzongkha
   - german
   - language
+  examples:
+  - description: མིག་ཐོག་ལུ་འགྲོ།
 de-dz 1:
   url: https://www.pauker.at/pauker/DE_DE/dz/wb?suche=<word>
   title: ཇཱར་མཱན་ཁ-རྫོང་ཁ (Pauker.at)
@@ -499,6 +553,8 @@ de-el 0:
   - german
   - greek
   - language
+  examples:
+  - description: Μετάβαση στην αρχική σελίδα
 de-el 1:
   url: https://www.pauker.at/pauker/DE_DE/el/wb?suche=<word>
   title: Γερμανικά-Ελληνικά (Pauker.at)
@@ -520,6 +576,8 @@ de-en 0:
   - english
   - german
   - language
+  examples:
+  - description: Go to homepage
 de-en 1:
   url: https://www.pauker.at/pauker/DE_DE/en/wb?suche=<word>
   title: German-English (Pauker.at)
@@ -541,6 +599,8 @@ de-eo 0:
   - esperanto
   - german
   - language
+  examples:
+  - description: Iru al ĉefpaĝo
 de-eo 1:
   url: 'https://www.pauker.at/pauker/DE_DE/eo/wb?suche=<word: {transform: eo-cx}>'
   title: Germana-Esperanto (Pauker.at)
@@ -562,6 +622,8 @@ de-es 0:
   - german
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 de-es 1:
   url: https://www.pauker.at/pauker/DE_DE/es/wb?suche=<word>
   title: Alemán-Español (Pauker.at)
@@ -583,6 +645,8 @@ de-et 0:
   - estonian
   - german
   - language
+  examples:
+  - description: Mine avalehele
 de-et 1:
   url: https://www.pauker.at/pauker/DE_DE/et/wb?suche=<word>
   title: Saksa-Eesti (Pauker.at)
@@ -604,6 +668,8 @@ de-eu 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Joan hasierako orrira
 de-eu 1:
   url: https://www.pauker.at/pauker/DE_DE/eu/wb?suche=<word>
   title: Alemana-Euskara (Pauker.at)
@@ -625,6 +691,8 @@ de-fa 0:
   - german
   - language
   - persian
+  examples:
+  - description: برو به صفحه اصلی
 de-fa 1:
   url: https://www.pauker.at/pauker/DE_DE/fa/wb?suche=<word>
   title: آلمانی-فارسی (Pauker.at)
@@ -646,6 +714,8 @@ de-fi 0:
   - finnish
   - german
   - language
+  examples:
+  - description: Siirry kotisivulle
 de-fi 1:
   url: https://www.pauker.at/pauker/DE_DE/fi/wb?suche=<word>
   title: Saksa-Suomi (Pauker.at)
@@ -667,6 +737,8 @@ de-fo 0:
   - faroese
   - german
   - language
+  examples:
+  - description: Far til heimasíðu
 de-fo 1:
   url: https://www.pauker.at/pauker/DE_DE/fo/wb?suche=<word>
   title: Týskt-Føroyskt (Pauker.at)
@@ -688,6 +760,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: https://www.pauker.at/pauker/DE_DE/fr/wb?suche=<word>
   title: Allemand-Français (Pauker.at)
@@ -709,6 +783,8 @@ de-fy 0:
   - german
   - language
   - western-Frisian
+  examples:
+  - description: Gean nei de thússide
 de-fy 1:
   url: https://www.pauker.at/pauker/DE_DE/fy/wb?suche=<word>
   title: Dútsk-West-Frysk (Pauker.at)
@@ -730,6 +806,8 @@ de-ga 0:
   - german
   - irish
   - language
+  examples:
+  - description: Téigh go dtí an leathanach baile
 de-ga 1:
   url: https://www.pauker.at/pauker/DE_DE/ga/wb?suche=<word>
   title: Gearmáinis-Gaeilge (Pauker.at)
@@ -751,6 +829,8 @@ de-gd 0:
   - german
   - language
   - scottish-Gaelic
+  examples:
+  - description: Rach gu duilleag-dachaigh
 de-gd 1:
   url: https://www.pauker.at/pauker/DE_DE/gd/wb?suche=<word>
   title: Gearmailtis-Gàidhlig (Pauker.at)
@@ -772,6 +852,8 @@ de-gl 0:
   - galician
   - german
   - language
+  examples:
+  - description: Ir á páxina principal
 de-gl 1:
   url: https://www.pauker.at/pauker/DE_DE/gl/wb?suche=<word>
   title: Alemán-Galego (Pauker.at)
@@ -793,6 +875,8 @@ de-gu 0:
   - german
   - gujarati
   - language
+  examples:
+  - description: હોમપેજ પર જાઓ
 de-gu 1:
   url: https://www.pauker.at/pauker/DE_DE/gu/wb?suche=<word>
   title: જર્મન-ગુજરાતી (Pauker.at)
@@ -814,6 +898,8 @@ de-ha 0:
   - german
   - hausa
   - language
+  examples:
+  - description: Je zuwa shafin gida
 de-ha 1:
   url: https://www.pauker.at/pauker/DE_DE/ha/wb?suche=<word>
   title: Jamusanci-Hausa (Pauker.at)
@@ -835,6 +921,8 @@ de-he 0:
   - german
   - hebrew
   - language
+  examples:
+  - description: עבור לדף הבית
 de-he 1:
   url: https://www.pauker.at/pauker/DE_DE/he/wb?suche=<word>
   title: גרמנית-עברית (Pauker.at)
@@ -856,6 +944,8 @@ de-hi 0:
   - german
   - hindi
   - language
+  examples:
+  - description: होमपेज पर जाएं
 de-hi 1:
   url: https://www.pauker.at/pauker/DE_DE/hi/wb?suche=<word>
   title: जर्मन-हिन्दी (Pauker.at)
@@ -877,6 +967,8 @@ de-hr 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Idi na početnu stranicu
 de-hr 1:
   url: https://www.pauker.at/pauker/DE_DE/hr/wb?suche=<word>
   title: Njemački-Hrvatski (Pauker.at)
@@ -898,6 +990,8 @@ de-hu 0:
   - german
   - hungarian
   - language
+  examples:
+  - description: Menj a kezdőlapra
 de-hu 1:
   url: https://www.pauker.at/pauker/DE_DE/hu/wb?suche=<word>
   title: Német-Magyar (Pauker.at)
@@ -919,6 +1013,8 @@ de-hy 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Գնալ գլխավոր էջ
 de-hy 1:
   url: https://www.pauker.at/pauker/DE_DE/hy/wb?suche=<word>
   title: Գերմաներեն-Հայերեն (Pauker.at)
@@ -940,6 +1036,8 @@ de-id 0:
   - german
   - indonesian
   - language
+  examples:
+  - description: Pergi ke halaman utama
 de-id 1:
   url: https://www.pauker.at/pauker/DE_DE/id/wb?suche=<word>
   title: Jerman-Bahasa Indonesia (Pauker.at)
@@ -961,6 +1059,8 @@ de-ig 0:
   - german
   - igbo
   - language
+  examples:
+  - description: Gaa na peeji ndida
 de-ig 1:
   url: https://www.pauker.at/pauker/DE_DE/ig/wb?suche=<word>
   title: Jamaan-Igbo (Pauker.at)
@@ -982,6 +1082,8 @@ de-ii 0:
   - german
   - language
   - sichuan-Yi
+  examples:
+  - description: 到主页
 de-ii 1:
   url: https://www.pauker.at/pauker/DE_DE/ii/wb?suche=<word>
   title: ꄓꇩꉙ-ꆈꌠꉙ (Pauker.at)
@@ -1003,6 +1105,8 @@ de-is 0:
   - german
   - icelandic
   - language
+  examples:
+  - description: Fara á heimasíðu
 de-is 1:
   url: https://www.pauker.at/pauker/DE_DE/is/wb?suche=<word>
   title: Þýska-Íslenska (Pauker.at)
@@ -1024,6 +1128,8 @@ de-it 0:
   - german
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 de-it 1:
   url: https://www.pauker.at/pauker/DE_DE/it/wb?suche=<word>
   title: Tedesco-Italiano (Pauker.at)
@@ -1045,6 +1151,8 @@ de-ja 0:
   - german
   - japanese
   - language
+  examples:
+  - description: ホームページへ行く
 de-ja 1:
   url: https://www.pauker.at/pauker/DE_DE/ja/wb?suche=<word>
   title: ドイツ語-日本語 (Pauker.at)
@@ -1066,6 +1174,8 @@ de-ka 0:
   - georgian
   - german
   - language
+  examples:
+  - description: გადადით მთავარ გვერდზე
 de-ka 1:
   url: https://www.pauker.at/pauker/DE_DE/ka/wb?suche=<word>
   title: Გერმანული-Ქართული (Pauker.at)
@@ -1087,6 +1197,8 @@ de-ki 0:
   - german
   - kikuyu
   - language
+  examples:
+  - description: Thie guku murathime wa watho
 de-ki 1:
   url: https://www.pauker.at/pauker/DE_DE/ki/wb?suche=<word>
   title: Kĩnjeremani-Gikuyu (Pauker.at)
@@ -1108,6 +1220,8 @@ de-kk 0:
   - german
   - kazakh
   - language
+  examples:
+  - description: Басты бетке өту
 de-kk 1:
   url: https://www.pauker.at/pauker/DE_DE/kk/wb?suche=<word>
   title: Неміс тілі-Қазақ тілі (Pauker.at)
@@ -1129,6 +1243,8 @@ de-kl 0:
   - german
   - kalaallisut
   - language
+  examples:
+  - description: Siutigut nalleruk
 de-kl 1:
   url: https://www.pauker.at/pauker/DE_DE/kl/wb?suche=<word>
   title: German-Kalaallisut (Pauker.at)
@@ -1150,6 +1266,8 @@ de-km 0:
   - german
   - khmer
   - language
+  examples:
+  - description: ទៅ​ទំព័រដើម
 de-km 1:
   url: https://www.pauker.at/pauker/DE_DE/km/wb?suche=<word>
   title: អាល្លឺម៉ង់-ខ្មែរ (Pauker.at)
@@ -1171,6 +1289,8 @@ de-kn 0:
   - german
   - kannada
   - language
+  examples:
+  - description: ಹೋಮ್ ಪೇಜ್ಗೆ ಹೋಗಿ
 de-kn 1:
   url: https://www.pauker.at/pauker/DE_DE/kn/wb?suche=<word>
   title: ಜರ್ಮನ್-ಕನ್ನಡ (Pauker.at)
@@ -1192,6 +1312,8 @@ de-ko 0:
   - german
   - korean
   - language
+  examples:
+  - description: 홈페이지로 이동
 de-ko 1:
   url: https://www.pauker.at/pauker/DE_DE/ko/wb?suche=<word>
   title: 독일어-한국어 (Pauker.at)
@@ -1213,6 +1335,8 @@ de-ks 0:
   - german
   - kashmiri
   - language
+  examples:
+  - description: ہومپیج پر جاؤ
 de-ks 1:
   url: https://www.pauker.at/pauker/DE_DE/ks/wb?suche=<word>
   title: جٔرمَن-کٲشُر (Pauker.at)
@@ -1234,6 +1358,8 @@ de-kw 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Ke dhe an chi an fogna
 de-kw 1:
   url: https://www.pauker.at/pauker/DE_DE/kw/wb?suche=<word>
   title: German-Kernewek (Pauker.at)
@@ -1255,6 +1381,8 @@ de-ky 0:
   - german
   - kyrgyz
   - language
+  examples:
+  - description: Башкы бетке өтүү
 de-ky 1:
   url: https://www.pauker.at/pauker/DE_DE/ky/wb?suche=<word>
   title: Немисче-Кыргызча (Pauker.at)
@@ -1276,6 +1404,8 @@ de-la 0:
   - german
   - language
   - latin
+  examples:
+  - description: Vade ad paginam principalem
 de-la 1:
   url: https://www.pauker.at/pauker/DE_DE/la/wb?suche=<word>
   title: Germanica-Latina (Pauker.at)
@@ -1297,6 +1427,8 @@ de-lb 0:
   - german
   - language
   - luxembourgish
+  examples:
+  - description: Op d'Haaptsäit goen
 de-lb 1:
   url: https://www.pauker.at/pauker/DE_DE/lb/wb?suche=<word>
   title: Däitsch-Lëtzebuergesch (Pauker.at)
@@ -1318,6 +1450,8 @@ de-lg 0:
   - ganda
   - german
   - language
+  examples:
+  - description: Genda ku muko guusembeze
 de-lg 1:
   url: https://www.pauker.at/pauker/DE_DE/lg/wb?suche=<word>
   title: Ludaaki-Luganda (Pauker.at)
@@ -1339,6 +1473,8 @@ de-ln 0:
   - german
   - language
   - lingala
+  examples:
+  - description: Kende na page ya yambo
 de-ln 1:
   url: https://www.pauker.at/pauker/DE_DE/ln/wb?suche=<word>
   title: Lialemá-Lingála (Pauker.at)
@@ -1360,6 +1496,8 @@ de-lo 0:
   - german
   - language
   - lao
+  examples:
+  - description: ໄປທີ່ໜ້າຫຼັກ
 de-lo 1:
   url: https://www.pauker.at/pauker/DE_DE/lo/wb?suche=<word>
   title: ເຢຍລະມັນ-ລາວ (Pauker.at)
@@ -1381,6 +1519,8 @@ de-lt 0:
   - german
   - language
   - lithuanian
+  examples:
+  - description: Eiti į pagrindinį puslapį
 de-lt 1:
   url: https://www.pauker.at/pauker/DE_DE/lt/wb?suche=<word>
   title: Vokiečių-Lietuvių (Pauker.at)
@@ -1402,6 +1542,8 @@ de-lv 0:
   - german
   - language
   - latvian
+  examples:
+  - description: Doties uz sākumlapu
 de-lv 1:
   url: https://www.pauker.at/pauker/DE_DE/lv/wb?suche=<word>
   title: Vācu-Latviešu (Pauker.at)
@@ -1423,6 +1565,8 @@ de-mg 0:
   - german
   - language
   - malagasy
+  examples:
+  - description: Mandehana any amin'ny pejy fandraisana
 de-mg 1:
   url: https://www.pauker.at/pauker/DE_DE/mg/wb?suche=<word>
   title: Alemanina-Malagasy (Pauker.at)
@@ -1444,6 +1588,8 @@ de-mk 0:
   - german
   - language
   - macedonian
+  examples:
+  - description: Оди на почетната страница
 de-mk 1:
   url: https://www.pauker.at/pauker/DE_DE/mk/wb?suche=<word>
   title: Германски-Македонски (Pauker.at)
@@ -1465,6 +1611,8 @@ de-ml 0:
   - german
   - language
   - malayalam
+  examples:
+  - description: ഹോംപേജിലേക്ക് പോകുക
 de-ml 1:
   url: https://www.pauker.at/pauker/DE_DE/ml/wb?suche=<word>
   title: ജർമ്മൻ-മലയാളം (Pauker.at)
@@ -1486,6 +1634,8 @@ de-mn 0:
   - german
   - language
   - mongolian
+  examples:
+  - description: Нүүр хуудас руу очих
 de-mn 1:
   url: https://www.pauker.at/pauker/DE_DE/mn/wb?suche=<word>
   title: Герман-Монгол (Pauker.at)
@@ -1507,6 +1657,8 @@ de-mr 0:
   - german
   - language
   - marathi
+  examples:
+  - description: मुख्यपृष्ठावर जा
 de-mr 1:
   url: https://www.pauker.at/pauker/DE_DE/mr/wb?suche=<word>
   title: जर्मन-मराठी (Pauker.at)
@@ -1528,6 +1680,8 @@ de-ms 0:
   - german
   - language
   - malay
+  examples:
+  - description: Pergi ke laman utama
 de-ms 1:
   url: https://www.pauker.at/pauker/DE_DE/ms/wb?suche=<word>
   title: Jerman-Bahasa Melayu (Pauker.at)
@@ -1549,6 +1703,8 @@ de-mt 0:
   - german
   - language
   - maltese
+  examples:
+  - description: Mur għall-paġna ewlenija
 de-mt 1:
   url: https://www.pauker.at/pauker/DE_DE/mt/wb?suche=<word>
   title: Ġermaniż-Malti (Pauker.at)
@@ -1570,6 +1726,8 @@ de-my 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: ပင်မစာမျက်နှာသို့သွားရန်
 de-my 1:
   url: https://www.pauker.at/pauker/DE_DE/my/wb?suche=<word>
   title: ဂျာမန်-ဗမာ (Pauker.at)
@@ -1591,6 +1749,8 @@ de-nb 0:
   - german
   - language
   - norwegian-Bokmål
+  examples:
+  - description: Gå til startsiden
 de-nb 1:
   url: https://www.pauker.at/pauker/DE_DE/nb/wb?suche=<word>
   title: Tysk-Norsk bokmål (Pauker.at)
@@ -1612,6 +1772,8 @@ de-nd 0:
   - german
   - language
   - north-Ndebele
+  examples:
+  - description: Ya ku ikhasi eliyisiqalo
 de-nd 1:
   url: https://www.pauker.at/pauker/DE_DE/nd/wb?suche=<word>
   title: Isi-Jalimani-IsiNdebele (Pauker.at)
@@ -1633,6 +1795,8 @@ de-ne 0:
   - german
   - language
   - nepali
+  examples:
+  - description: होमपेजमा जानुहोस्
 de-ne 1:
   url: https://www.pauker.at/pauker/DE_DE/ne/wb?suche=<word>
   title: जर्मन-नेपाली (Pauker.at)
@@ -1654,6 +1818,8 @@ de-nl 0:
   - dutch
   - german
   - language
+  examples:
+  - description: Ga naar homepage
 de-nl 1:
   url: https://www.pauker.at/pauker/DE_DE/nl/wb?suche=<word>
   title: Duits-Nederlands (Pauker.at)
@@ -1675,6 +1841,8 @@ de-nn 0:
   - german
   - language
   - norwegian-Nynorsk
+  examples:
+  - description: Gå til startsida
 de-nn 1:
   url: https://www.pauker.at/pauker/DE_DE/nn/wb?suche=<word>
   title: Tysk-Nynorsk (Pauker.at)
@@ -1696,6 +1864,8 @@ de-no 0:
   - german
   - language
   - norwegian
+  examples:
+  - description: Gå til hjemmeside
 de-no 1:
   url: https://www.pauker.at/pauker/DE_DE/no/wb?suche=<word>
   title: Tysk-Norsk (Pauker.at)
@@ -1717,6 +1887,8 @@ de-om 0:
   - german
   - language
   - oromo
+  examples:
+  - description: Gara fuula duraatti
 de-om 1:
   url: https://www.pauker.at/pauker/DE_DE/om/wb?suche=<word>
   title: Afaan Jarmanii-Oromoo (Pauker.at)
@@ -1738,6 +1910,8 @@ de-or 0:
   - german
   - language
   - oriya
+  examples:
+  - description: ମୁଖ୍ୟ ପୃଷ୍ଠାକୁ ଯାଆନ୍ତୁ
 de-or 1:
   url: https://www.pauker.at/pauker/DE_DE/or/wb?suche=<word>
   title: ଜର୍ମାନ୍-ଓଡ଼ିଆ (Pauker.at)
@@ -1759,6 +1933,8 @@ de-os 0:
   - german
   - language
   - ossetic
+  examples:
+  - description: Минæ сæддзахъæд кæнын
 de-os 1:
   url: https://www.pauker.at/pauker/DE_DE/os/wb?suche=<word>
   title: Немыцаг-Ирон (Pauker.at)
@@ -1780,6 +1956,8 @@ de-pa 0:
   - german
   - language
   - punjabi
+  examples:
+  - description: ਮੁਖ ਪੰਨੇ ਤੇ ਜਾਓ
 de-pa 1:
   url: https://www.pauker.at/pauker/DE_DE/pa/wb?suche=<word>
   title: ਜਰਮਨ-ਪੰਜਾਬੀ (Pauker.at)
@@ -1801,6 +1979,8 @@ de-pl 0:
   - german
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 de-pl 1:
   url: https://www.pauker.at/pauker/DE_DE/pl/wb?suche=<word>
   title: Niemiecki-Polski (Pauker.at)
@@ -1822,6 +2002,8 @@ de-ps 0:
   - german
   - language
   - pashto
+  examples:
+  - description: کورپاڼې ته لاړ شه
 de-ps 1:
   url: https://www.pauker.at/pauker/DE_DE/ps/wb?suche=<word>
   title: الماني-پښتو (Pauker.at)
@@ -1843,6 +2025,8 @@ de-pt 0:
   - german
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 de-pt 1:
   url: https://www.pauker.at/pauker/DE_DE/pt/wb?suche=<word>
   title: Alemão-Português (Pauker.at)
@@ -1864,6 +2048,8 @@ de-qu 0:
   - german
   - language
   - quechua
+  examples:
+  - description: Riki rimanakunap kamachik
 de-qu 1:
   url: https://www.pauker.at/pauker/DE_DE/qu/wb?suche=<word>
   title: Aleman Simi-Runasimi (Pauker.at)
@@ -1885,6 +2071,8 @@ de-rm 0:
   - german
   - language
   - romansh
+  examples:
+  - description: Gia alla pagina principala
 de-rm 1:
   url: https://www.pauker.at/pauker/DE_DE/rm/wb?suche=<word>
   title: Tudestg-Rumantsch (Pauker.at)
@@ -1906,6 +2094,8 @@ de-rn 0:
   - german
   - language
   - rundi
+  examples:
+  - description: Genda ku urupapuro rwa mbere
 de-rn 1:
   url: https://www.pauker.at/pauker/DE_DE/rn/wb?suche=<word>
   title: Ikidage-Ikirundi (Pauker.at)
@@ -1927,6 +2117,8 @@ de-ro 0:
   - german
   - language
   - romanian
+  examples:
+  - description: Du-te la pagina principală
 de-ro 1:
   url: https://www.pauker.at/pauker/DE_DE/ro/wb?suche=<word>
   title: Germană-Română (Pauker.at)
@@ -1948,6 +2140,8 @@ de-ru 0:
   - german
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 de-ru 1:
   url: https://www.pauker.at/pauker/DE_DE/ru/wb?suche=<word>
   title: Немецкий-Русский (Pauker.at)
@@ -1969,6 +2163,8 @@ de-rw 0:
   - german
   - kinyarwanda
   - language
+  examples:
+  - description: Genda ku rubuga rw’ibanze
 de-rw 1:
   url: https://www.pauker.at/pauker/DE_DE/rw/wb?suche=<word>
   title: Ikidage-Kinyarwanda (Pauker.at)
@@ -1990,6 +2186,8 @@ de-se 0:
   - german
   - language
   - northern-Sami
+  examples:
+  - description: Mana iežide suohkan
 de-se 1:
   url: https://www.pauker.at/pauker/DE_DE/se/wb?suche=<word>
   title: Duiskkagiella-Davvisámegiella (Pauker.at)
@@ -2011,6 +2209,8 @@ de-sg 0:
   - german
   - language
   - sango
+  examples:
+  - description: Kanga na mopango wa liboso
 de-sg 1:
   url: https://www.pauker.at/pauker/DE_DE/sg/wb?suche=<word>
   title: Zâmani-Sängö (Pauker.at)
@@ -2032,6 +2232,8 @@ de-si 0:
   - german
   - language
   - sinhala
+  examples:
+  - description: මුල් පිටුවට යන්න
 de-si 1:
   url: https://www.pauker.at/pauker/DE_DE/si/wb?suche=<word>
   title: ජර්මන්-සිංහල (Pauker.at)
@@ -2053,6 +2255,8 @@ de-sk 0:
   - german
   - language
   - slovak
+  examples:
+  - description: Prejsť na domovskú stránku
 de-sk 1:
   url: https://www.pauker.at/pauker/DE_DE/sk/wb?suche=<word>
   title: Nemčina-Slovenčina (Pauker.at)
@@ -2074,6 +2278,8 @@ de-sl 0:
   - german
   - language
   - slovenian
+  examples:
+  - description: Pojdi na domačo stran
 de-sl 1:
   url: https://www.pauker.at/pauker/DE_DE/sl/wb?suche=<word>
   title: Nemščina-Slovenščina (Pauker.at)
@@ -2095,6 +2301,8 @@ de-sn 0:
   - german
   - language
   - shona
+  examples:
+  - description: Enda kukamba rekutanga
 de-sn 1:
   url: https://www.pauker.at/pauker/DE_DE/sn/wb?suche=<word>
   title: ChiJerimani-ChiShona (Pauker.at)
@@ -2116,6 +2324,8 @@ de-so 0:
   - german
   - language
   - somali
+  examples:
+  - description: Tag bogga hore
 de-so 1:
   url: https://www.pauker.at/pauker/DE_DE/so/wb?suche=<word>
   title: Jarmal-Soomaali (Pauker.at)
@@ -2137,6 +2347,8 @@ de-sq 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Shko te faqja kryesore
 de-sq 1:
   url: https://www.pauker.at/pauker/DE_DE/sq/wb?suche=<word>
   title: Gjermanisht-Shqip (Pauker.at)
@@ -2158,6 +2370,8 @@ de-sr 0:
   - german
   - language
   - serbian
+  examples:
+  - description: Идите на почетну страницу
 de-sr 1:
   url: https://www.pauker.at/pauker/DE_DE/sr/wb?suche=<word>
   title: Немачки-Српски (Pauker.at)
@@ -2179,6 +2393,8 @@ de-sv 0:
   - german
   - language
   - swedish
+  examples:
+  - description: Gå till startsidan
 de-sv 1:
   url: https://www.pauker.at/pauker/DE_DE/sv/wb?suche=<word>
   title: Tyska-Svenska (Pauker.at)
@@ -2200,6 +2416,8 @@ de-sw 0:
   - german
   - language
   - swahili
+  examples:
+  - description: Nenda kwenye ukurasa wa nyumbani
 de-sw 1:
   url: https://www.pauker.at/pauker/DE_DE/sw/wb?suche=<word>
   title: Kijerumani-Kiswahili (Pauker.at)
@@ -2221,6 +2439,8 @@ de-ta 0:
   - german
   - language
   - tamil
+  examples:
+  - description: முகப்புப் பக்கத்திற்கு செல்லவும்
 de-ta 1:
   url: https://www.pauker.at/pauker/DE_DE/ta/wb?suche=<word>
   title: ஜெர்மன்-தமிழ் (Pauker.at)
@@ -2242,6 +2462,8 @@ de-te 0:
   - german
   - language
   - telugu
+  examples:
+  - description: హోమ్‌పేజ్‌కు వెళ్లండి
 de-te 1:
   url: https://www.pauker.at/pauker/DE_DE/te/wb?suche=<word>
   title: జర్మన్-తెలుగు (Pauker.at)
@@ -2263,6 +2485,8 @@ de-th 0:
   - german
   - language
   - thai
+  examples:
+  - description: ไปที่หน้าแรก
 de-th 1:
   url: https://www.pauker.at/pauker/DE_DE/th/wb?suche=<word>
   title: เยอรมัน-ไทย (Pauker.at)
@@ -2284,6 +2508,8 @@ de-ti 0:
   - german
   - language
   - tigrinya
+  examples:
+  - description: ናብ መቐለ ገጽ ምኻድ
 de-ti 1:
   url: https://www.pauker.at/pauker/DE_DE/ti/wb?suche=<word>
   title: ጀርመን-ትግርኛ (Pauker.at)
@@ -2305,6 +2531,8 @@ de-tl 0:
   - german
   - language
   - tagalog
+  examples:
+  - description: Pumunta sa homepage
 de-tl 1:
   url: https://www.pauker.at/pauker/DE_DE/tl/wb?suche=<word>
   title: German-Tagalog (Pauker.at)
@@ -2326,6 +2554,8 @@ de-to 0:
   - german
   - language
   - tongan
+  examples:
+  - description: Fano ki he peesi'i 'api
 de-to 1:
   url: https://www.pauker.at/pauker/DE_DE/to/wb?suche=<word>
   title: Lea fakasiamane-Lea fakatonga (Pauker.at)
@@ -2347,6 +2577,8 @@ de-tr 0:
   - german
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 de-tr 1:
   url: https://www.pauker.at/pauker/DE_DE/tr/wb?suche=<word>
   title: Almanca-Türkçe (Pauker.at)
@@ -2368,6 +2600,8 @@ de-ug 0:
   - german
   - language
   - uyghur
+  examples:
+  - description: باش بەتنى كۆرۈش
 de-ug 1:
   url: https://www.pauker.at/pauker/DE_DE/ug/wb?suche=<word>
   title: گېرمانچە-ئۇيغۇرچە (Pauker.at)
@@ -2389,6 +2623,8 @@ de-uk 0:
   - german
   - language
   - ukrainian
+  examples:
+  - description: Перейти на домашню сторінку
 de-uk 1:
   url: https://www.pauker.at/pauker/DE_DE/uk/wb?suche=<word>
   title: Німецька-Українська (Pauker.at)
@@ -2410,6 +2646,8 @@ de-ur 0:
   - german
   - language
   - urdu
+  examples:
+  - description: مرکزی صفحہ پر جائیں
 de-ur 1:
   url: https://www.pauker.at/pauker/DE_DE/ur/wb?suche=<word>
   title: جرمن-اردو (Pauker.at)
@@ -2431,6 +2669,8 @@ de-uz 0:
   - german
   - language
   - uzbek
+  examples:
+  - description: Bosh sahifaga o‘tish
 de-uz 1:
   url: https://www.pauker.at/pauker/DE_DE/uz/wb?suche=<word>
   title: Nemischa-Oʻzbekcha (Pauker.at)
@@ -2452,6 +2692,8 @@ de-vi 0:
   - german
   - language
   - vietnamese
+  examples:
+  - description: Đi đến trang chủ
 de-vi 1:
   url: https://www.pauker.at/pauker/DE_DE/vi/wb?suche=<word>
   title: Tiếng Đức-Tiếng Việt (Pauker.at)
@@ -2473,6 +2715,8 @@ de-yi 0:
   - german
   - language
   - yiddish
+  examples:
+  - description: גיי צו היימזײַט
 de-yi 1:
   url: https://www.pauker.at/pauker/DE_DE/yi/wb?suche=<word>
   title: דײַטש-ייִדיש (Pauker.at)
@@ -2494,6 +2738,8 @@ de-yo 0:
   - german
   - language
   - yoruba
+  examples:
+  - description: Lọ sí ojúewé ìbẹ̀rẹ̀
 de-yo 1:
   url: https://www.pauker.at/pauker/DE_DE/yo/wb?suche=<word>
   title: Èdè Ilẹ̀ Gemani-Èdè Yorùbá (Pauker.at)
@@ -2515,6 +2761,8 @@ de-zh 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: 前往主页
 de-zh 1:
   url: https://www.pauker.at/pauker/DE_DE/zh/wb?suche=<word>
   title: 德文-中文 (Pauker.at)
@@ -2536,6 +2784,8 @@ de-zu 0:
   - german
   - language
   - zulu
+  examples:
+  - description: Yiya ekhasini eliyisiqalo
 de-zu 1:
   url: https://www.pauker.at/pauker/DE_DE/zu/wb?suche=<word>
   title: Isi-German-IsiZulu (Pauker.at)
@@ -2556,6 +2806,8 @@ dz 1:
 dz-de 0:
   title: Bhutanisch-Deutsch (Pauker.at)
   include: de-dz 0
+  examples:
+  - description: Zur Startseite
 dz-de 1:
   title: Bhutanisch-Deutsch (Pauker.at)
   include: de-dz 1
@@ -2571,6 +2823,8 @@ el 1:
 el-de 0:
   title: Griechisch-Deutsch (Pauker.at)
   include: de-el 0
+  examples:
+  - description: Zur Startseite
 el-de 1:
   title: Griechisch-Deutsch (Pauker.at)
   include: de-el 1
@@ -2586,6 +2840,8 @@ en 1:
 en-de 0:
   title: Englisch-Deutsch (Pauker.at)
   include: de-en 0
+  examples:
+  - description: Zur Startseite
 en-de 1:
   title: Englisch-Deutsch (Pauker.at)
   include: de-en 1
@@ -2601,6 +2857,8 @@ eo 1:
 eo-de 0:
   title: Esperanto-Deutsch (Pauker.at)
   include: de-eo 0
+  examples:
+  - description: Zur Startseite
 eo-de 1:
   title: Esperanto-Deutsch (Pauker.at)
   include: de-eo 1
@@ -2616,6 +2874,8 @@ es 1:
 es-de 0:
   title: Spanisch-Deutsch (Pauker.at)
   include: de-es 0
+  examples:
+  - description: Zur Startseite
 es-de 1:
   title: Spanisch-Deutsch (Pauker.at)
   include: de-es 1
@@ -2631,6 +2891,8 @@ et 1:
 et-de 0:
   title: Estnisch-Deutsch (Pauker.at)
   include: de-et 0
+  examples:
+  - description: Zur Startseite
 et-de 1:
   title: Estnisch-Deutsch (Pauker.at)
   include: de-et 1
@@ -2646,6 +2908,8 @@ eu 1:
 eu-de 0:
   title: Baskisch-Deutsch (Pauker.at)
   include: de-eu 0
+  examples:
+  - description: Zur Startseite
 eu-de 1:
   title: Baskisch-Deutsch (Pauker.at)
   include: de-eu 1
@@ -2661,6 +2925,8 @@ fa 1:
 fa-de 0:
   title: Persisch-Deutsch (Pauker.at)
   include: de-fa 0
+  examples:
+  - description: Zur Startseite
 fa-de 1:
   title: Persisch-Deutsch (Pauker.at)
   include: de-fa 1
@@ -2676,6 +2942,8 @@ fi 1:
 fi-de 0:
   title: Finnisch-Deutsch (Pauker.at)
   include: de-fi 0
+  examples:
+  - description: Zur Startseite
 fi-de 1:
   title: Finnisch-Deutsch (Pauker.at)
   include: de-fi 1
@@ -2691,6 +2959,8 @@ fo 1:
 fo-de 0:
   title: Färöisch-Deutsch (Pauker.at)
   include: de-fo 0
+  examples:
+  - description: Zur Startseite
 fo-de 1:
   title: Färöisch-Deutsch (Pauker.at)
   include: de-fo 1
@@ -2706,6 +2976,8 @@ fr 1:
 fr-de 0:
   title: Französisch-Deutsch (Pauker.at)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (Pauker.at)
   include: de-fr 1
@@ -2721,6 +2993,8 @@ fy 1:
 fy-de 0:
   title: Westfriesisch-Deutsch (Pauker.at)
   include: de-fy 0
+  examples:
+  - description: Zur Startseite
 fy-de 1:
   title: Westfriesisch-Deutsch (Pauker.at)
   include: de-fy 1
@@ -2736,6 +3010,8 @@ ga 1:
 ga-de 0:
   title: Irisch-Deutsch (Pauker.at)
   include: de-ga 0
+  examples:
+  - description: Zur Startseite
 ga-de 1:
   title: Irisch-Deutsch (Pauker.at)
   include: de-ga 1
@@ -2751,6 +3027,8 @@ gd 1:
 gd-de 0:
   title: Schottisches Gälisch-Deutsch (Pauker.at)
   include: de-gd 0
+  examples:
+  - description: Zur Startseite
 gd-de 1:
   title: Schottisches Gälisch-Deutsch (Pauker.at)
   include: de-gd 1
@@ -2766,6 +3044,8 @@ gl 1:
 gl-de 0:
   title: Galizisch-Deutsch (Pauker.at)
   include: de-gl 0
+  examples:
+  - description: Zur Startseite
 gl-de 1:
   title: Galizisch-Deutsch (Pauker.at)
   include: de-gl 1
@@ -2781,6 +3061,8 @@ gu 1:
 gu-de 0:
   title: Gujarati-Deutsch (Pauker.at)
   include: de-gu 0
+  examples:
+  - description: Zur Startseite
 gu-de 1:
   title: Gujarati-Deutsch (Pauker.at)
   include: de-gu 1
@@ -2796,6 +3078,8 @@ ha 1:
 ha-de 0:
   title: Hausa-Deutsch (Pauker.at)
   include: de-ha 0
+  examples:
+  - description: Zur Startseite
 ha-de 1:
   title: Hausa-Deutsch (Pauker.at)
   include: de-ha 1
@@ -2811,6 +3095,8 @@ he 1:
 he-de 0:
   title: Hebräisch-Deutsch (Pauker.at)
   include: de-he 0
+  examples:
+  - description: Zur Startseite
 he-de 1:
   title: Hebräisch-Deutsch (Pauker.at)
   include: de-he 1
@@ -2826,6 +3112,8 @@ hi 1:
 hi-de 0:
   title: Hindi-Deutsch (Pauker.at)
   include: de-hi 0
+  examples:
+  - description: Zur Startseite
 hi-de 1:
   title: Hindi-Deutsch (Pauker.at)
   include: de-hi 1
@@ -2841,6 +3129,8 @@ hr 1:
 hr-de 0:
   title: Kroatisch-Deutsch (Pauker.at)
   include: de-hr 0
+  examples:
+  - description: Zur Startseite
 hr-de 1:
   title: Kroatisch-Deutsch (Pauker.at)
   include: de-hr 1
@@ -2856,6 +3146,8 @@ hu 1:
 hu-de 0:
   title: Ungarisch-Deutsch (Pauker.at)
   include: de-hu 0
+  examples:
+  - description: Zur Startseite
 hu-de 1:
   title: Ungarisch-Deutsch (Pauker.at)
   include: de-hu 1
@@ -2871,6 +3163,8 @@ hy 1:
 hy-de 0:
   title: Armenisch-Deutsch (Pauker.at)
   include: de-hy 0
+  examples:
+  - description: Zur Startseite
 hy-de 1:
   title: Armenisch-Deutsch (Pauker.at)
   include: de-hy 1
@@ -2886,6 +3180,8 @@ id 1:
 id-de 0:
   title: Indonesisch-Deutsch (Pauker.at)
   include: de-id 0
+  examples:
+  - description: Zur Startseite
 id-de 1:
   title: Indonesisch-Deutsch (Pauker.at)
   include: de-id 1
@@ -2901,6 +3197,8 @@ ig 1:
 ig-de 0:
   title: Igbo-Deutsch (Pauker.at)
   include: de-ig 0
+  examples:
+  - description: Zur Startseite
 ig-de 1:
   title: Igbo-Deutsch (Pauker.at)
   include: de-ig 1
@@ -2916,6 +3214,8 @@ ii 1:
 ii-de 0:
   title: Yi-Deutsch (Pauker.at)
   include: de-ii 0
+  examples:
+  - description: Zur Startseite
 ii-de 1:
   title: Yi-Deutsch (Pauker.at)
   include: de-ii 1
@@ -2931,6 +3231,8 @@ is 1:
 is-de 0:
   title: Isländisch-Deutsch (Pauker.at)
   include: de-is 0
+  examples:
+  - description: Zur Startseite
 is-de 1:
   title: Isländisch-Deutsch (Pauker.at)
   include: de-is 1
@@ -2946,6 +3248,8 @@ it 1:
 it-de 0:
   title: Italienisch-Deutsch (Pauker.at)
   include: de-it 0
+  examples:
+  - description: Zur Startseite
 it-de 1:
   title: Italienisch-Deutsch (Pauker.at)
   include: de-it 1
@@ -2961,6 +3265,8 @@ ja 1:
 ja-de 0:
   title: Japanisch-Deutsch (Pauker.at)
   include: de-ja 0
+  examples:
+  - description: Zur Startseite
 ja-de 1:
   title: Japanisch-Deutsch (Pauker.at)
   include: de-ja 1
@@ -2976,6 +3282,8 @@ ka 1:
 ka-de 0:
   title: Georgisch-Deutsch (Pauker.at)
   include: de-ka 0
+  examples:
+  - description: Zur Startseite
 ka-de 1:
   title: Georgisch-Deutsch (Pauker.at)
   include: de-ka 1
@@ -2991,6 +3299,8 @@ ki 1:
 ki-de 0:
   title: Kikuyu-Deutsch (Pauker.at)
   include: de-ki 0
+  examples:
+  - description: Zur Startseite
 ki-de 1:
   title: Kikuyu-Deutsch (Pauker.at)
   include: de-ki 1
@@ -3006,6 +3316,8 @@ kk 1:
 kk-de 0:
   title: Kasachisch-Deutsch (Pauker.at)
   include: de-kk 0
+  examples:
+  - description: Zur Startseite
 kk-de 1:
   title: Kasachisch-Deutsch (Pauker.at)
   include: de-kk 1
@@ -3021,6 +3333,8 @@ kl 1:
 kl-de 0:
   title: Grönländisch-Deutsch (Pauker.at)
   include: de-kl 0
+  examples:
+  - description: Zur Startseite
 kl-de 1:
   title: Grönländisch-Deutsch (Pauker.at)
   include: de-kl 1
@@ -3036,6 +3350,8 @@ km 1:
 km-de 0:
   title: Kambodschanisch-Deutsch (Pauker.at)
   include: de-km 0
+  examples:
+  - description: Zur Startseite
 km-de 1:
   title: Kambodschanisch-Deutsch (Pauker.at)
   include: de-km 1
@@ -3051,6 +3367,8 @@ kn 1:
 kn-de 0:
   title: Kannada-Deutsch (Pauker.at)
   include: de-kn 0
+  examples:
+  - description: Zur Startseite
 kn-de 1:
   title: Kannada-Deutsch (Pauker.at)
   include: de-kn 1
@@ -3066,6 +3384,8 @@ ko 1:
 ko-de 0:
   title: Koreanisch-Deutsch (Pauker.at)
   include: de-ko 0
+  examples:
+  - description: Zur Startseite
 ko-de 1:
   title: Koreanisch-Deutsch (Pauker.at)
   include: de-ko 1
@@ -3081,6 +3401,8 @@ ks 1:
 ks-de 0:
   title: Kaschmirisch-Deutsch (Pauker.at)
   include: de-ks 0
+  examples:
+  - description: Zur Startseite
 ks-de 1:
   title: Kaschmirisch-Deutsch (Pauker.at)
   include: de-ks 1
@@ -3096,6 +3418,8 @@ kw 1:
 kw-de 0:
   title: Kornisch-Deutsch (Pauker.at)
   include: de-kw 0
+  examples:
+  - description: Zur Startseite
 kw-de 1:
   title: Kornisch-Deutsch (Pauker.at)
   include: de-kw 1
@@ -3111,6 +3435,8 @@ ky 1:
 ky-de 0:
   title: Kirgisisch-Deutsch (Pauker.at)
   include: de-ky 0
+  examples:
+  - description: Zur Startseite
 ky-de 1:
   title: Kirgisisch-Deutsch (Pauker.at)
   include: de-ky 1
@@ -3126,6 +3452,8 @@ la 1:
 la-de 0:
   title: Latein-Deutsch (Pauker.at)
   include: de-la 0
+  examples:
+  - description: Zur Startseite
 la-de 1:
   title: Latein-Deutsch (Pauker.at)
   include: de-la 1
@@ -3141,6 +3469,8 @@ lb 1:
 lb-de 0:
   title: Luxemburgisch-Deutsch (Pauker.at)
   include: de-lb 0
+  examples:
+  - description: Zur Startseite
 lb-de 1:
   title: Luxemburgisch-Deutsch (Pauker.at)
   include: de-lb 1
@@ -3156,6 +3486,8 @@ lg 1:
 lg-de 0:
   title: Ganda-Deutsch (Pauker.at)
   include: de-lg 0
+  examples:
+  - description: Zur Startseite
 lg-de 1:
   title: Ganda-Deutsch (Pauker.at)
   include: de-lg 1
@@ -3171,6 +3503,8 @@ ln 1:
 ln-de 0:
   title: Lingala-Deutsch (Pauker.at)
   include: de-ln 0
+  examples:
+  - description: Zur Startseite
 ln-de 1:
   title: Lingala-Deutsch (Pauker.at)
   include: de-ln 1
@@ -3186,6 +3520,8 @@ lo 1:
 lo-de 0:
   title: Laotisch-Deutsch (Pauker.at)
   include: de-lo 0
+  examples:
+  - description: Zur Startseite
 lo-de 1:
   title: Laotisch-Deutsch (Pauker.at)
   include: de-lo 1
@@ -3201,6 +3537,8 @@ lt 1:
 lt-de 0:
   title: Litauisch-Deutsch (Pauker.at)
   include: de-lt 0
+  examples:
+  - description: Zur Startseite
 lt-de 1:
   title: Litauisch-Deutsch (Pauker.at)
   include: de-lt 1
@@ -3216,6 +3554,8 @@ lv 1:
 lv-de 0:
   title: Lettisch-Deutsch (Pauker.at)
   include: de-lv 0
+  examples:
+  - description: Zur Startseite
 lv-de 1:
   title: Lettisch-Deutsch (Pauker.at)
   include: de-lv 1
@@ -3231,6 +3571,8 @@ mg 1:
 mg-de 0:
   title: Madagassisch-Deutsch (Pauker.at)
   include: de-mg 0
+  examples:
+  - description: Zur Startseite
 mg-de 1:
   title: Madagassisch-Deutsch (Pauker.at)
   include: de-mg 1
@@ -3246,6 +3588,8 @@ mk 1:
 mk-de 0:
   title: Mazedonisch-Deutsch (Pauker.at)
   include: de-mk 0
+  examples:
+  - description: Zur Startseite
 mk-de 1:
   title: Mazedonisch-Deutsch (Pauker.at)
   include: de-mk 1
@@ -3261,6 +3605,8 @@ ml 1:
 ml-de 0:
   title: Malayalam-Deutsch (Pauker.at)
   include: de-ml 0
+  examples:
+  - description: Zur Startseite
 ml-de 1:
   title: Malayalam-Deutsch (Pauker.at)
   include: de-ml 1
@@ -3276,6 +3622,8 @@ mn 1:
 mn-de 0:
   title: Mongolisch-Deutsch (Pauker.at)
   include: de-mn 0
+  examples:
+  - description: Zur Startseite
 mn-de 1:
   title: Mongolisch-Deutsch (Pauker.at)
   include: de-mn 1
@@ -3291,6 +3639,8 @@ mr 1:
 mr-de 0:
   title: Marathi-Deutsch (Pauker.at)
   include: de-mr 0
+  examples:
+  - description: Zur Startseite
 mr-de 1:
   title: Marathi-Deutsch (Pauker.at)
   include: de-mr 1
@@ -3306,6 +3656,8 @@ ms 1:
 ms-de 0:
   title: Malaiisch-Deutsch (Pauker.at)
   include: de-ms 0
+  examples:
+  - description: Zur Startseite
 ms-de 1:
   title: Malaiisch-Deutsch (Pauker.at)
   include: de-ms 1
@@ -3321,6 +3673,8 @@ mt 1:
 mt-de 0:
   title: Maltesisch-Deutsch (Pauker.at)
   include: de-mt 0
+  examples:
+  - description: Zur Startseite
 mt-de 1:
   title: Maltesisch-Deutsch (Pauker.at)
   include: de-mt 1
@@ -3336,6 +3690,8 @@ my 1:
 my-de 0:
   title: Birmanisch-Deutsch (Pauker.at)
   include: de-my 0
+  examples:
+  - description: Zur Startseite
 my-de 1:
   title: Birmanisch-Deutsch (Pauker.at)
   include: de-my 1
@@ -3351,6 +3707,8 @@ nb 1:
 nb-de 0:
   title: Norwegisch Bokmål-Deutsch (Pauker.at)
   include: de-nb 0
+  examples:
+  - description: Zur Startseite
 nb-de 1:
   title: Norwegisch Bokmål-Deutsch (Pauker.at)
   include: de-nb 1
@@ -3366,6 +3724,8 @@ nd 1:
 nd-de 0:
   title: Nord-Ndebele-Sprache-Deutsch (Pauker.at)
   include: de-nd 0
+  examples:
+  - description: Zur Startseite
 nd-de 1:
   title: Nord-Ndebele-Sprache-Deutsch (Pauker.at)
   include: de-nd 1
@@ -3381,6 +3741,8 @@ ne 1:
 ne-de 0:
   title: Nepalesisch-Deutsch (Pauker.at)
   include: de-ne 0
+  examples:
+  - description: Zur Startseite
 ne-de 1:
   title: Nepalesisch-Deutsch (Pauker.at)
   include: de-ne 1
@@ -3396,6 +3758,8 @@ nl 1:
 nl-de 0:
   title: Niederländisch-Deutsch (Pauker.at)
   include: de-nl 0
+  examples:
+  - description: Zur Startseite
 nl-de 1:
   title: Niederländisch-Deutsch (Pauker.at)
   include: de-nl 1
@@ -3411,6 +3775,8 @@ nn 1:
 nn-de 0:
   title: Norwegisch Nynorsk-Deutsch (Pauker.at)
   include: de-nn 0
+  examples:
+  - description: Zur Startseite
 nn-de 1:
   title: Norwegisch Nynorsk-Deutsch (Pauker.at)
   include: de-nn 1
@@ -3426,6 +3792,8 @@ no 1:
 no-de 0:
   title: Norwegisch-Deutsch (Pauker.at)
   include: de-no 0
+  examples:
+  - description: Zur Startseite
 no-de 1:
   title: Norwegisch-Deutsch (Pauker.at)
   include: de-no 1
@@ -3441,6 +3809,8 @@ om 1:
 om-de 0:
   title: Oromo-Deutsch (Pauker.at)
   include: de-om 0
+  examples:
+  - description: Zur Startseite
 om-de 1:
   title: Oromo-Deutsch (Pauker.at)
   include: de-om 1
@@ -3456,6 +3826,8 @@ or 1:
 or-de 0:
   title: Oriya-Deutsch (Pauker.at)
   include: de-or 0
+  examples:
+  - description: Zur Startseite
 or-de 1:
   title: Oriya-Deutsch (Pauker.at)
   include: de-or 1
@@ -3471,6 +3843,8 @@ os 1:
 os-de 0:
   title: Ossetisch-Deutsch (Pauker.at)
   include: de-os 0
+  examples:
+  - description: Zur Startseite
 os-de 1:
   title: Ossetisch-Deutsch (Pauker.at)
   include: de-os 1
@@ -3486,6 +3860,8 @@ pa 1:
 pa-de 0:
   title: Panjabi-Deutsch (Pauker.at)
   include: de-pa 0
+  examples:
+  - description: Zur Startseite
 pa-de 1:
   title: Panjabi-Deutsch (Pauker.at)
   include: de-pa 1
@@ -3501,6 +3877,8 @@ pl 1:
 pl-de 0:
   title: Polnisch-Deutsch (Pauker.at)
   include: de-pl 0
+  examples:
+  - description: Zur Startseite
 pl-de 1:
   title: Polnisch-Deutsch (Pauker.at)
   include: de-pl 1
@@ -3516,6 +3894,8 @@ ps 1:
 ps-de 0:
   title: Paschtu-Deutsch (Pauker.at)
   include: de-ps 0
+  examples:
+  - description: Zur Startseite
 ps-de 1:
   title: Paschtu-Deutsch (Pauker.at)
   include: de-ps 1
@@ -3531,6 +3911,8 @@ pt 1:
 pt-de 0:
   title: Portugiesisch-Deutsch (Pauker.at)
   include: de-pt 0
+  examples:
+  - description: Zur Startseite
 pt-de 1:
   title: Portugiesisch-Deutsch (Pauker.at)
   include: de-pt 1
@@ -3546,6 +3928,8 @@ qu 1:
 qu-de 0:
   title: Quechua-Deutsch (Pauker.at)
   include: de-qu 0
+  examples:
+  - description: Zur Startseite
 qu-de 1:
   title: Quechua-Deutsch (Pauker.at)
   include: de-qu 1
@@ -3561,6 +3945,8 @@ rm 1:
 rm-de 0:
   title: Rätoromanisch-Deutsch (Pauker.at)
   include: de-rm 0
+  examples:
+  - description: Zur Startseite
 rm-de 1:
   title: Rätoromanisch-Deutsch (Pauker.at)
   include: de-rm 1
@@ -3576,6 +3962,8 @@ rn 1:
 rn-de 0:
   title: Rundi-Sprache-Deutsch (Pauker.at)
   include: de-rn 0
+  examples:
+  - description: Zur Startseite
 rn-de 1:
   title: Rundi-Sprache-Deutsch (Pauker.at)
   include: de-rn 1
@@ -3591,6 +3979,8 @@ ro 1:
 ro-de 0:
   title: Rumänisch-Deutsch (Pauker.at)
   include: de-ro 0
+  examples:
+  - description: Zur Startseite
 ro-de 1:
   title: Rumänisch-Deutsch (Pauker.at)
   include: de-ro 1
@@ -3606,6 +3996,8 @@ ru 1:
 ru-de 0:
   title: Russisch-Deutsch (Pauker.at)
   include: de-ru 0
+  examples:
+  - description: Zur Startseite
 ru-de 1:
   title: Russisch-Deutsch (Pauker.at)
   include: de-ru 1
@@ -3621,6 +4013,8 @@ rw 1:
 rw-de 0:
   title: Ruandisch-Deutsch (Pauker.at)
   include: de-rw 0
+  examples:
+  - description: Zur Startseite
 rw-de 1:
   title: Ruandisch-Deutsch (Pauker.at)
   include: de-rw 1
@@ -3636,6 +4030,8 @@ se 1:
 se-de 0:
   title: Nord-Samisch-Deutsch (Pauker.at)
   include: de-se 0
+  examples:
+  - description: Zur Startseite
 se-de 1:
   title: Nord-Samisch-Deutsch (Pauker.at)
   include: de-se 1
@@ -3651,6 +4047,8 @@ sg 1:
 sg-de 0:
   title: Sango-Deutsch (Pauker.at)
   include: de-sg 0
+  examples:
+  - description: Zur Startseite
 sg-de 1:
   title: Sango-Deutsch (Pauker.at)
   include: de-sg 1
@@ -3666,6 +4064,8 @@ si 1:
 si-de 0:
   title: Singhalesisch-Deutsch (Pauker.at)
   include: de-si 0
+  examples:
+  - description: Zur Startseite
 si-de 1:
   title: Singhalesisch-Deutsch (Pauker.at)
   include: de-si 1
@@ -3681,6 +4081,8 @@ sk 1:
 sk-de 0:
   title: Slowakisch-Deutsch (Pauker.at)
   include: de-sk 0
+  examples:
+  - description: Zur Startseite
 sk-de 1:
   title: Slowakisch-Deutsch (Pauker.at)
   include: de-sk 1
@@ -3696,6 +4098,8 @@ sl 1:
 sl-de 0:
   title: Slowenisch-Deutsch (Pauker.at)
   include: de-sl 0
+  examples:
+  - description: Zur Startseite
 sl-de 1:
   title: Slowenisch-Deutsch (Pauker.at)
   include: de-sl 1
@@ -3711,6 +4115,8 @@ sn 1:
 sn-de 0:
   title: Shona-Deutsch (Pauker.at)
   include: de-sn 0
+  examples:
+  - description: Zur Startseite
 sn-de 1:
   title: Shona-Deutsch (Pauker.at)
   include: de-sn 1
@@ -3726,6 +4132,8 @@ so 1:
 so-de 0:
   title: Somali-Deutsch (Pauker.at)
   include: de-so 0
+  examples:
+  - description: Zur Startseite
 so-de 1:
   title: Somali-Deutsch (Pauker.at)
   include: de-so 1
@@ -3741,6 +4149,8 @@ sq 1:
 sq-de 0:
   title: Albanisch-Deutsch (Pauker.at)
   include: de-sq 0
+  examples:
+  - description: Zur Startseite
 sq-de 1:
   title: Albanisch-Deutsch (Pauker.at)
   include: de-sq 1
@@ -3756,6 +4166,8 @@ sr 1:
 sr-de 0:
   title: Serbisch-Deutsch (Pauker.at)
   include: de-sr 0
+  examples:
+  - description: Zur Startseite
 sr-de 1:
   title: Serbisch-Deutsch (Pauker.at)
   include: de-sr 1
@@ -3771,6 +4183,8 @@ sv 1:
 sv-de 0:
   title: Schwedisch-Deutsch (Pauker.at)
   include: de-sv 0
+  examples:
+  - description: Zur Startseite
 sv-de 1:
   title: Schwedisch-Deutsch (Pauker.at)
   include: de-sv 1
@@ -3786,6 +4200,8 @@ sw 1:
 sw-de 0:
   title: Suaheli-Deutsch (Pauker.at)
   include: de-sw 0
+  examples:
+  - description: Zur Startseite
 sw-de 1:
   title: Suaheli-Deutsch (Pauker.at)
   include: de-sw 1
@@ -3801,6 +4217,8 @@ ta 1:
 ta-de 0:
   title: Tamilisch-Deutsch (Pauker.at)
   include: de-ta 0
+  examples:
+  - description: Zur Startseite
 ta-de 1:
   title: Tamilisch-Deutsch (Pauker.at)
   include: de-ta 1
@@ -3816,6 +4234,8 @@ te 1:
 te-de 0:
   title: Telugu-Deutsch (Pauker.at)
   include: de-te 0
+  examples:
+  - description: Zur Startseite
 te-de 1:
   title: Telugu-Deutsch (Pauker.at)
   include: de-te 1
@@ -3831,6 +4251,8 @@ th 1:
 th-de 0:
   title: Thailändisch-Deutsch (Pauker.at)
   include: de-th 0
+  examples:
+  - description: Zur Startseite
 th-de 1:
   title: Thailändisch-Deutsch (Pauker.at)
   include: de-th 1
@@ -3846,6 +4268,8 @@ ti 1:
 ti-de 0:
   title: Tigrinja-Deutsch (Pauker.at)
   include: de-ti 0
+  examples:
+  - description: Zur Startseite
 ti-de 1:
   title: Tigrinja-Deutsch (Pauker.at)
   include: de-ti 1
@@ -3861,6 +4285,8 @@ tl 1:
 tl-de 0:
   title: Tagalog-Deutsch (Pauker.at)
   include: de-tl 0
+  examples:
+  - description: Zur Startseite
 tl-de 1:
   title: Tagalog-Deutsch (Pauker.at)
   include: de-tl 1
@@ -3876,6 +4302,8 @@ to 1:
 to-de 0:
   title: Tongaisch-Deutsch (Pauker.at)
   include: de-to 0
+  examples:
+  - description: Zur Startseite
 to-de 1:
   title: Tongaisch-Deutsch (Pauker.at)
   include: de-to 1
@@ -3891,6 +4319,8 @@ tr 1:
 tr-de 0:
   title: Türkisch-Deutsch (Pauker.at)
   include: de-tr 0
+  examples:
+  - description: Zur Startseite
 tr-de 1:
   title: Türkisch-Deutsch (Pauker.at)
   include: de-tr 1
@@ -3906,6 +4336,8 @@ ug 1:
 ug-de 0:
   title: Uigurisch-Deutsch (Pauker.at)
   include: de-ug 0
+  examples:
+  - description: Zur Startseite
 ug-de 1:
   title: Uigurisch-Deutsch (Pauker.at)
   include: de-ug 1
@@ -3921,6 +4353,8 @@ uk 1:
 uk-de 0:
   title: Ukrainisch-Deutsch (Pauker.at)
   include: de-uk 0
+  examples:
+  - description: Zur Startseite
 uk-de 1:
   title: Ukrainisch-Deutsch (Pauker.at)
   include: de-uk 1
@@ -3936,6 +4370,8 @@ ur 1:
 ur-de 0:
   title: Urdu-Deutsch (Pauker.at)
   include: de-ur 0
+  examples:
+  - description: Zur Startseite
 ur-de 1:
   title: Urdu-Deutsch (Pauker.at)
   include: de-ur 1
@@ -3951,6 +4387,8 @@ uz 1:
 uz-de 0:
   title: Usbekisch-Deutsch (Pauker.at)
   include: de-uz 0
+  examples:
+  - description: Zur Startseite
 uz-de 1:
   title: Usbekisch-Deutsch (Pauker.at)
   include: de-uz 1
@@ -3966,6 +4404,8 @@ vi 1:
 vi-de 0:
   title: Vietnamesisch-Deutsch (Pauker.at)
   include: de-vi 0
+  examples:
+  - description: Zur Startseite
 vi-de 1:
   title: Vietnamesisch-Deutsch (Pauker.at)
   include: de-vi 1
@@ -3981,6 +4421,8 @@ yi 1:
 yi-de 0:
   title: Jiddisch-Deutsch (Pauker.at)
   include: de-yi 0
+  examples:
+  - description: Zur Startseite
 yi-de 1:
   title: Jiddisch-Deutsch (Pauker.at)
   include: de-yi 1
@@ -3996,6 +4438,8 @@ yo 1:
 yo-de 0:
   title: Yoruba-Deutsch (Pauker.at)
   include: de-yo 0
+  examples:
+  - description: Zur Startseite
 yo-de 1:
   title: Yoruba-Deutsch (Pauker.at)
   include: de-yo 1
@@ -4011,6 +4455,8 @@ zh 1:
 zh-de 0:
   title: Chinesisch-Deutsch (Pauker.at)
   include: de-zh 0
+  examples:
+  - description: Zur Startseite
 zh-de 1:
   title: Chinesisch-Deutsch (Pauker.at)
   include: de-zh 1
@@ -4026,6 +4472,8 @@ zu 1:
 zu-de 0:
   title: Zulu-Deutsch (Pauker.at)
   include: de-zu 0
+  examples:
+  - description: Zur Startseite
 zu-de 1:
   title: Zulu-Deutsch (Pauker.at)
   include: de-zu 1

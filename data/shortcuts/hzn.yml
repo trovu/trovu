@@ -10,6 +10,8 @@ de-no 0:
   - german
   - language
   - norwegian
+  examples:
+  - description: Gå til hjemmeside
 de-no 1:
   url: https://www.heinzelnisse.info/no/dict?searchItem=<word>
   title: Tysk-Norsk (Heinzelnisse)
@@ -30,6 +32,8 @@ no 1:
 no-de 0:
   title: Norwegisch-Deutsch (Heinzelnisse)
   include: de-no 0
+  examples:
+  - description: Zur Startseite
 no-de 1:
   title: Norwegisch-Deutsch (Heinzelnisse)
   include: de-no 1

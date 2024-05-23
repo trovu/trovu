@@ -5,6 +5,8 @@ ar 1:
 ar-de 0:
   title: Arabisch-Deutsch (Langenscheidt)
   include: de-ar 0
+  examples:
+  - description: Zur Startseite
 ar-de 1:
   title: Arabisch-Deutsch (Langenscheidt)
   include: de-ar 1
@@ -20,6 +22,8 @@ bg 1:
 bg-de 0:
   title: Bulgarisch-Deutsch (Langenscheidt)
   include: de-bg 0
+  examples:
+  - description: Zur Startseite
 bg-de 1:
   title: Bulgarisch-Deutsch (Langenscheidt)
   include: de-bg 1
@@ -35,6 +39,8 @@ cs 1:
 cs-de 0:
   title: Tschechisch-Deutsch (Langenscheidt)
   include: de-cs 0
+  examples:
+  - description: Zur Startseite
 cs-de 1:
   title: Tschechisch-Deutsch (Langenscheidt)
   include: de-cs 1
@@ -50,6 +56,8 @@ da 1:
 da-de 0:
   title: Dänisch-Deutsch (Langenscheidt)
   include: de-da 0
+  examples:
+  - description: Zur Startseite
 da-de 1:
   title: Dänisch-Deutsch (Langenscheidt)
   include: de-da 1
@@ -70,6 +78,8 @@ de-ar 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 de-ar 1:
   url: https://de.langenscheidt.com/deutsch-arabisch/<word>
   title: الألمانية-العربية (Langenscheidt)
@@ -91,6 +101,8 @@ de-bg 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Отидете на началната страница
 de-bg 1:
   url: https://de.langenscheidt.com/deutsch-bulgarisch/<word>
   title: Немски-Български (Langenscheidt)
@@ -112,6 +124,8 @@ de-cs 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Přejít na domovskou stránku
 de-cs 1:
   url: https://de.langenscheidt.com/deutsch-tschechisch/<word>
   title: Němčina-Čeština (Langenscheidt)
@@ -133,6 +147,8 @@ de-da 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Gå til startsiden
 de-da 1:
   url: https://de.langenscheidt.com/deutsch-daenisch/<word>
   title: Tysk-Dansk (Langenscheidt)
@@ -154,6 +170,8 @@ de-el 0:
   - german
   - greek
   - language
+  examples:
+  - description: Μετάβαση στην αρχική σελίδα
 de-el 1:
   url: https://de.langenscheidt.com/deutsch-griechisch/<word>
   title: Γερμανικά-Ελληνικά (Langenscheidt)
@@ -175,6 +193,8 @@ de-en 0:
   - english
   - german
   - language
+  examples:
+  - description: Go to homepage
 de-en 1:
   url: https://de.langenscheidt.com/deutsch-englisch/<word>
   title: German-English (Langenscheidt)
@@ -196,6 +216,8 @@ de-es 0:
   - german
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 de-es 1:
   url: https://de.langenscheidt.com/deutsch-spanisch/<word>
   title: Alemán-Español (Langenscheidt)
@@ -217,6 +239,8 @@ de-fa 0:
   - german
   - language
   - persian
+  examples:
+  - description: برو به صفحه اصلی
 de-fa 1:
   url: https://de.langenscheidt.com/deutsch-persisch/<word>
   title: آلمانی-فارسی (Langenscheidt)
@@ -238,6 +262,8 @@ de-fi 0:
   - finnish
   - german
   - language
+  examples:
+  - description: Siirry kotisivulle
 de-fi 1:
   url: https://de.langenscheidt.com/deutsch-finnisch/<word>
   title: Saksa-Suomi (Langenscheidt)
@@ -259,6 +285,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: https://de.langenscheidt.com/deutsch-franzoesisch/<word>
   title: Allemand-Français (Langenscheidt)
@@ -280,6 +308,8 @@ de-hr 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Idi na početnu stranicu
 de-hr 1:
   url: https://de.langenscheidt.com/deutsch-kroatisch/<word>
   title: Njemački-Hrvatski (Langenscheidt)
@@ -301,6 +331,8 @@ de-hu 0:
   - german
   - hungarian
   - language
+  examples:
+  - description: Menj a kezdőlapra
 de-hu 1:
   url: https://de.langenscheidt.com/deutsch-ungarisch/<word>
   title: Német-Magyar (Langenscheidt)
@@ -322,6 +354,8 @@ de-is 0:
   - german
   - icelandic
   - language
+  examples:
+  - description: Fara á heimasíðu
 de-is 1:
   url: https://de.langenscheidt.com/deutsch-islaendisch/<word>
   title: Þýska-Íslenska (Langenscheidt)
@@ -343,6 +377,8 @@ de-it 0:
   - german
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 de-it 1:
   url: https://de.langenscheidt.com/deutsch-italienisch/<word>
   title: Tedesco-Italiano (Langenscheidt)
@@ -364,6 +400,8 @@ de-ja 0:
   - german
   - japanese
   - language
+  examples:
+  - description: ホームページへ行く
 de-ja 1:
   url: https://de.langenscheidt.com/deutsch-japanisch/<word>
   title: ドイツ語-日本語 (Langenscheidt)
@@ -385,6 +423,8 @@ de-la 0:
   - german
   - language
   - latin
+  examples:
+  - description: Vade ad paginam principalem
 de-la 1:
   url: https://de.langenscheidt.com/deutsch-latein/<word>
   title: Germanica-Latina (Langenscheidt)
@@ -406,6 +446,8 @@ de-nl 0:
   - dutch
   - german
   - language
+  examples:
+  - description: Ga naar homepage
 de-nl 1:
   url: https://de.langenscheidt.com/deutsch-niederlaendisch/<word>
   title: Duits-Nederlands (Langenscheidt)
@@ -427,6 +469,8 @@ de-no 0:
   - german
   - language
   - norwegian
+  examples:
+  - description: Gå til hjemmeside
 de-no 1:
   url: https://de.langenscheidt.com/deutsch-norwegisch/<word>
   title: Tysk-Norsk (Langenscheidt)
@@ -448,6 +492,8 @@ de-pl 0:
   - german
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 de-pl 1:
   url: https://de.langenscheidt.com/deutsch-polnisch/<word>
   title: Niemiecki-Polski (Langenscheidt)
@@ -469,6 +515,8 @@ de-pt 0:
   - german
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 de-pt 1:
   url: https://de.langenscheidt.com/deutsch-portugiesisch/<word>
   title: Alemão-Português (Langenscheidt)
@@ -490,6 +538,8 @@ de-ro 0:
   - german
   - language
   - romanian
+  examples:
+  - description: Du-te la pagina principală
 de-ro 1:
   url: https://de.langenscheidt.com/deutsch-rumaenisch/<word>
   title: Germană-Română (Langenscheidt)
@@ -511,6 +561,8 @@ de-ru 0:
   - german
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 de-ru 1:
   url: https://de.langenscheidt.com/deutsch-russisch/<word>
   title: Немецкий-Русский (Langenscheidt)
@@ -532,6 +584,8 @@ de-sk 0:
   - german
   - language
   - slovak
+  examples:
+  - description: Prejsť na domovskú stránku
 de-sk 1:
   url: https://de.langenscheidt.com/deutsch-slowakisch/<word>
   title: Nemčina-Slovenčina (Langenscheidt)
@@ -553,6 +607,8 @@ de-sl 0:
   - german
   - language
   - slovenian
+  examples:
+  - description: Pojdi na domačo stran
 de-sl 1:
   url: https://de.langenscheidt.com/deutsch-slowenisch/<word>
   title: Nemščina-Slovenščina (Langenscheidt)
@@ -574,6 +630,8 @@ de-sr 0:
   - german
   - language
   - serbian
+  examples:
+  - description: Идите на почетну страницу
 de-sr 1:
   url: https://de.langenscheidt.com/deutsch-serbisch/<word>
   title: Немачки-Српски (Langenscheidt)
@@ -595,6 +653,8 @@ de-sv 0:
   - german
   - language
   - swedish
+  examples:
+  - description: Gå till startsidan
 de-sv 1:
   url: https://de.langenscheidt.com/deutsch-schwedisch/<word>
   title: Tyska-Svenska (Langenscheidt)
@@ -616,6 +676,8 @@ de-tr 0:
   - german
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 de-tr 1:
   url: https://de.langenscheidt.com/deutsch-tuerkisch/<word>
   title: Almanca-Türkçe (Langenscheidt)
@@ -637,6 +699,8 @@ de-zh 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: 前往主页
 de-zh 1:
   url: https://de.langenscheidt.com/deutsch-chinesisch/<word>
   title: 德文-中文 (Langenscheidt)
@@ -657,6 +721,8 @@ el 1:
 el-de 0:
   title: Griechisch-Deutsch (Langenscheidt)
   include: de-el 0
+  examples:
+  - description: Zur Startseite
 el-de 1:
   title: Griechisch-Deutsch (Langenscheidt)
   include: de-el 1
@@ -672,6 +738,8 @@ en 1:
 en-de 0:
   title: Englisch-Deutsch (Langenscheidt)
   include: de-en 0
+  examples:
+  - description: Zur Startseite
 en-de 1:
   title: Englisch-Deutsch (Langenscheidt)
   include: de-en 1
@@ -687,6 +755,8 @@ es 1:
 es-de 0:
   title: Spanisch-Deutsch (Langenscheidt)
   include: de-es 0
+  examples:
+  - description: Zur Startseite
 es-de 1:
   title: Spanisch-Deutsch (Langenscheidt)
   include: de-es 1
@@ -702,6 +772,8 @@ fa 1:
 fa-de 0:
   title: Persisch-Deutsch (Langenscheidt)
   include: de-fa 0
+  examples:
+  - description: Zur Startseite
 fa-de 1:
   title: Persisch-Deutsch (Langenscheidt)
   include: de-fa 1
@@ -717,6 +789,8 @@ fi 1:
 fi-de 0:
   title: Finnisch-Deutsch (Langenscheidt)
   include: de-fi 0
+  examples:
+  - description: Zur Startseite
 fi-de 1:
   title: Finnisch-Deutsch (Langenscheidt)
   include: de-fi 1
@@ -732,6 +806,8 @@ fr 1:
 fr-de 0:
   title: Französisch-Deutsch (Langenscheidt)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (Langenscheidt)
   include: de-fr 1
@@ -747,6 +823,8 @@ hr 1:
 hr-de 0:
   title: Kroatisch-Deutsch (Langenscheidt)
   include: de-hr 0
+  examples:
+  - description: Zur Startseite
 hr-de 1:
   title: Kroatisch-Deutsch (Langenscheidt)
   include: de-hr 1
@@ -762,6 +840,8 @@ hu 1:
 hu-de 0:
   title: Ungarisch-Deutsch (Langenscheidt)
   include: de-hu 0
+  examples:
+  - description: Zur Startseite
 hu-de 1:
   title: Ungarisch-Deutsch (Langenscheidt)
   include: de-hu 1
@@ -777,6 +857,8 @@ is 1:
 is-de 0:
   title: Isländisch-Deutsch (Langenscheidt)
   include: de-is 0
+  examples:
+  - description: Zur Startseite
 is-de 1:
   title: Isländisch-Deutsch (Langenscheidt)
   include: de-is 1
@@ -792,6 +874,8 @@ it 1:
 it-de 0:
   title: Italienisch-Deutsch (Langenscheidt)
   include: de-it 0
+  examples:
+  - description: Zur Startseite
 it-de 1:
   title: Italienisch-Deutsch (Langenscheidt)
   include: de-it 1
@@ -807,6 +891,8 @@ ja 1:
 ja-de 0:
   title: Japanisch-Deutsch (Langenscheidt)
   include: de-ja 0
+  examples:
+  - description: Zur Startseite
 ja-de 1:
   title: Japanisch-Deutsch (Langenscheidt)
   include: de-ja 1
@@ -822,6 +908,8 @@ la 1:
 la-de 0:
   title: Latein-Deutsch (Langenscheidt)
   include: de-la 0
+  examples:
+  - description: Zur Startseite
 la-de 1:
   title: Latein-Deutsch (Langenscheidt)
   include: de-la 1
@@ -837,6 +925,8 @@ nl 1:
 nl-de 0:
   title: Niederländisch-Deutsch (Langenscheidt)
   include: de-nl 0
+  examples:
+  - description: Zur Startseite
 nl-de 1:
   title: Niederländisch-Deutsch (Langenscheidt)
   include: de-nl 1
@@ -852,6 +942,8 @@ no 1:
 no-de 0:
   title: Norwegisch-Deutsch (Langenscheidt)
   include: de-no 0
+  examples:
+  - description: Zur Startseite
 no-de 1:
   title: Norwegisch-Deutsch (Langenscheidt)
   include: de-no 1
@@ -867,6 +959,8 @@ pl 1:
 pl-de 0:
   title: Polnisch-Deutsch (Langenscheidt)
   include: de-pl 0
+  examples:
+  - description: Zur Startseite
 pl-de 1:
   title: Polnisch-Deutsch (Langenscheidt)
   include: de-pl 1
@@ -882,6 +976,8 @@ pt 1:
 pt-de 0:
   title: Portugiesisch-Deutsch (Langenscheidt)
   include: de-pt 0
+  examples:
+  - description: Zur Startseite
 pt-de 1:
   title: Portugiesisch-Deutsch (Langenscheidt)
   include: de-pt 1
@@ -897,6 +993,8 @@ ro 1:
 ro-de 0:
   title: Rumänisch-Deutsch (Langenscheidt)
   include: de-ro 0
+  examples:
+  - description: Zur Startseite
 ro-de 1:
   title: Rumänisch-Deutsch (Langenscheidt)
   include: de-ro 1
@@ -912,6 +1010,8 @@ ru 1:
 ru-de 0:
   title: Russisch-Deutsch (Langenscheidt)
   include: de-ru 0
+  examples:
+  - description: Zur Startseite
 ru-de 1:
   title: Russisch-Deutsch (Langenscheidt)
   include: de-ru 1
@@ -927,6 +1027,8 @@ sk 1:
 sk-de 0:
   title: Slowakisch-Deutsch (Langenscheidt)
   include: de-sk 0
+  examples:
+  - description: Zur Startseite
 sk-de 1:
   title: Slowakisch-Deutsch (Langenscheidt)
   include: de-sk 1
@@ -942,6 +1044,8 @@ sl 1:
 sl-de 0:
   title: Slowenisch-Deutsch (Langenscheidt)
   include: de-sl 0
+  examples:
+  - description: Zur Startseite
 sl-de 1:
   title: Slowenisch-Deutsch (Langenscheidt)
   include: de-sl 1
@@ -957,6 +1061,8 @@ sr 1:
 sr-de 0:
   title: Serbisch-Deutsch (Langenscheidt)
   include: de-sr 0
+  examples:
+  - description: Zur Startseite
 sr-de 1:
   title: Serbisch-Deutsch (Langenscheidt)
   include: de-sr 1
@@ -972,6 +1078,8 @@ sv 1:
 sv-de 0:
   title: Schwedisch-Deutsch (Langenscheidt)
   include: de-sv 0
+  examples:
+  - description: Zur Startseite
 sv-de 1:
   title: Schwedisch-Deutsch (Langenscheidt)
   include: de-sv 1
@@ -987,6 +1095,8 @@ tr 1:
 tr-de 0:
   title: Türkisch-Deutsch (Langenscheidt)
   include: de-tr 0
+  examples:
+  - description: Zur Startseite
 tr-de 1:
   title: Türkisch-Deutsch (Langenscheidt)
   include: de-tr 1
@@ -1002,6 +1112,8 @@ zh 1:
 zh-de 0:
   title: Chinesisch-Deutsch (Langenscheidt)
   include: de-zh 0
+  examples:
+  - description: Zur Startseite
 zh-de 1:
   title: Chinesisch-Deutsch (Langenscheidt)
   include: de-zh 1

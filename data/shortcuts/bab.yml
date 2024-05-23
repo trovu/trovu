@@ -10,6 +10,8 @@ ar-en 0:
   - dictionary
   - english
   - language
+  examples:
+  - description: Go to homepage
 ar-en 1:
   url: https://bab.la/dictionary/english-arabic/<word>
   title: Arabic-English (bab.la)
@@ -35,6 +37,8 @@ cs-en 0:
   - dictionary
   - english
   - language
+  examples:
+  - description: Go to homepage
 cs-en 1:
   url: https://bab.la/dictionary/english-czech/<word>
   title: Czech-English (bab.la)
@@ -60,6 +64,8 @@ da-de 0:
   - dictionary
   - german
   - language
+  examples:
+  - description: Zur Startseite
 da-de 1:
   url: https://bab.la/woerterbuch/daenisch-deutsch/<word>
   title: Dänisch-Deutsch (bab.la)
@@ -81,6 +87,8 @@ da-en 0:
   - dictionary
   - english
   - language
+  examples:
+  - description: Go to homepage
 da-en 1:
   url: https://bab.la/dictionary/english-danish/<word>
   title: Danish-English (bab.la)
@@ -101,6 +109,8 @@ de 1:
 de-da 0:
   title: Tysk-Dansk (bab.la)
   include: da-de 0
+  examples:
+  - description: Gå til startsiden
 de-da 1:
   title: Tysk-Dansk (bab.la)
   include: da-de 1
@@ -117,6 +127,8 @@ de-en 0:
   - english
   - german
   - language
+  examples:
+  - description: Go to homepage
 de-en 1:
   url: https://bab.la/dictionary/german-english/<word>
   title: German-English (bab.la)
@@ -138,6 +150,8 @@ de-es 0:
   - german
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 de-es 1:
   url: https://bab.la/dictionary/german-spanish/<word>
   title: Alemán-Español (bab.la)
@@ -159,6 +173,8 @@ de-fr 0:
   - french
   - german
   - language
+  examples:
+  - description: Aller à la page d'accueil
 de-fr 1:
   url: https://bab.la/dictionary/german-french/<word>
   title: Allemand-Français (bab.la)
@@ -180,6 +196,8 @@ de-it 0:
   - german
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 de-it 1:
   url: https://bab.la/dictionary/german-italian/<word>
   title: Tedesco-Italiano (bab.la)
@@ -201,6 +219,8 @@ de-nl 0:
   - dutch
   - german
   - language
+  examples:
+  - description: Ga naar homepage
 de-nl 1:
   url: https://bab.la/dictionary/german-dutch/<word>
   title: Duits-Nederlands (bab.la)
@@ -222,6 +242,8 @@ de-pl 0:
   - german
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 de-pl 1:
   url: https://bab.la/dictionary/german-polish/<word>
   title: Niemiecki-Polski (bab.la)
@@ -243,6 +265,8 @@ de-pt 0:
   - german
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 de-pt 1:
   url: https://bab.la/dictionary/german-portuguese/<word>
   title: Alemão-Português (bab.la)
@@ -264,6 +288,8 @@ de-ru 0:
   - german
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 de-ru 1:
   url: https://bab.la/dictionary/german-russian/<word>
   title: Немецкий-Русский (bab.la)
@@ -285,6 +311,8 @@ de-sv 0:
   - german
   - language
   - swedish
+  examples:
+  - description: Gå till startsidan
 de-sv 1:
   url: https://bab.la/dictionary/german-swedish/<word>
   title: Tyska-Svenska (bab.la)
@@ -306,6 +334,8 @@ de-tr 0:
   - german
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 de-tr 1:
   url: https://bab.la/dictionary/german-turkish/<word>
   title: Almanca-Türkçe (bab.la)
@@ -326,6 +356,8 @@ el 1:
 el-en 0:
   title: Greek-English (bab.la)
   include: en-el 0
+  examples:
+  - description: Go to homepage
 el-en 1:
   title: Greek-English (bab.la)
   include: en-el 1
@@ -341,6 +373,8 @@ en 1:
 en-ar 0:
   title: الإنجليزية-العربية (bab.la)
   include: ar-en 0
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
 en-ar 1:
   title: الإنجليزية-العربية (bab.la)
   include: ar-en 1
@@ -352,6 +386,8 @@ en-ar 1:
 en-cs 0:
   title: Angličtina-Čeština (bab.la)
   include: cs-en 0
+  examples:
+  - description: Přejít na domovskou stránku
 en-cs 1:
   title: Angličtina-Čeština (bab.la)
   include: cs-en 1
@@ -363,6 +399,8 @@ en-cs 1:
 en-da 0:
   title: Engelsk-Dansk (bab.la)
   include: da-en 0
+  examples:
+  - description: Gå til startsiden
 en-da 1:
   title: Engelsk-Dansk (bab.la)
   include: da-en 1
@@ -374,6 +412,8 @@ en-da 1:
 en-de 0:
   title: Englisch-Deutsch (bab.la)
   include: de-en 0
+  examples:
+  - description: Zur Startseite
 en-de 1:
   title: Englisch-Deutsch (bab.la)
   include: de-en 1
@@ -390,6 +430,8 @@ en-el 0:
   - english
   - greek
   - language
+  examples:
+  - description: Μετάβαση στην αρχική σελίδα
 en-el 1:
   url: https://bab.la/dictionary/english-greek/<word>
   title: Αγγλικά-Ελληνικά (bab.la)
@@ -411,6 +453,8 @@ en-eo 0:
   - english
   - esperanto
   - language
+  examples:
+  - description: Iru al ĉefpaĝo
 en-eo 1:
   url: https://bab.la/dictionary/english-esperanto/<word>
   title: Angla-Esperanto (bab.la)
@@ -432,6 +476,8 @@ en-es 0:
   - english
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 en-es 1:
   url: https://bab.la/dictionary/english-spanish/<word>
   title: Inglés-Español (bab.la)
@@ -453,6 +499,8 @@ en-fi 0:
   - english
   - finnish
   - language
+  examples:
+  - description: Siirry kotisivulle
 en-fi 1:
   url: https://bab.la/dictionary/english-finnish/<word>
   title: Englanti-Suomi (bab.la)
@@ -474,6 +522,8 @@ en-fr 0:
   - english
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
 en-fr 1:
   url: https://bab.la/dictionary/english-french/<word>
   title: Anglais-Français (bab.la)
@@ -495,6 +545,8 @@ en-hi 0:
   - english
   - hindi
   - language
+  examples:
+  - description: होमपेज पर जाएं
 en-hi 1:
   url: https://bab.la/dictionary/english-hindi/<word>
   title: अंग्रेज़ी-हिन्दी (bab.la)
@@ -516,6 +568,8 @@ en-hu 0:
   - english
   - hungarian
   - language
+  examples:
+  - description: Menj a kezdőlapra
 en-hu 1:
   url: https://bab.la/dictionary/english-hungarian/<word>
   title: Angol-Magyar (bab.la)
@@ -537,6 +591,8 @@ en-id 0:
   - english
   - indonesian
   - language
+  examples:
+  - description: Pergi ke halaman utama
 en-id 1:
   url: https://bab.la/dictionary/english-indonesian/<word>
   title: Inggris-Bahasa Indonesia (bab.la)
@@ -558,6 +614,8 @@ en-it 0:
   - english
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 en-it 1:
   url: https://bab.la/dictionary/english-italian/<word>
   title: Inglese-Italiano (bab.la)
@@ -579,6 +637,8 @@ en-ja 0:
   - english
   - japanese
   - language
+  examples:
+  - description: ホームページへ行く
 en-ja 1:
   url: https://bab.la/dictionary/english-japanese/<word>
   title: 英語-日本語 (bab.la)
@@ -600,6 +660,8 @@ en-ka 0:
   - english
   - georgian
   - language
+  examples:
+  - description: გადადით მთავარ გვერდზე
 en-ka 1:
   url: https://bab.la/dictionary/english-georgian/<word>
   title: Ინგლისური-Ქართული (bab.la)
@@ -621,6 +683,8 @@ en-ko 0:
   - english
   - korean
   - language
+  examples:
+  - description: 홈페이지로 이동
 en-ko 1:
   url: https://bab.la/dictionary/english-korean/<word>
   title: 영어-한국어 (bab.la)
@@ -642,6 +706,8 @@ en-ms 0:
   - english
   - language
   - malay
+  examples:
+  - description: Pergi ke laman utama
 en-ms 1:
   url: https://bab.la/dictionary/english-malay/<word>
   title: Inggeris-Bahasa Melayu (bab.la)
@@ -663,6 +729,8 @@ en-nl 0:
   - dutch
   - english
   - language
+  examples:
+  - description: Ga naar homepage
 en-nl 1:
   url: https://bab.la/dictionary/english-dutch/<word>
   title: Engels-Nederlands (bab.la)
@@ -684,6 +752,8 @@ en-no 0:
   - english
   - language
   - norwegian
+  examples:
+  - description: Gå til hjemmeside
 en-no 1:
   url: https://bab.la/dictionary/english-norwegian/<word>
   title: Engelsk-Norsk (bab.la)
@@ -705,6 +775,8 @@ en-pl 0:
   - english
   - language
   - polish
+  examples:
+  - description: Przejdź do strony głównej
 en-pl 1:
   url: https://bab.la/dictionary/english-polish/<word>
   title: Angielski-Polski (bab.la)
@@ -726,6 +798,8 @@ en-pt 0:
   - english
   - language
   - portuguese
+  examples:
+  - description: Ir para a página inicial
 en-pt 1:
   url: https://bab.la/dictionary/english-portuguese/<word>
   title: Inglês-Português (bab.la)
@@ -747,6 +821,8 @@ en-ro 0:
   - english
   - language
   - romanian
+  examples:
+  - description: Du-te la pagina principală
 en-ro 1:
   url: https://bab.la/dictionary/english-romanian/<word>
   title: Engleză-Română (bab.la)
@@ -768,6 +844,8 @@ en-ru 0:
   - english
   - language
   - russian
+  examples:
+  - description: Перейти на главную страницу
 en-ru 1:
   url: https://bab.la/dictionary/english-russian/<word>
   title: Английский-Русский (bab.la)
@@ -789,6 +867,8 @@ en-sv 0:
   - english
   - language
   - swedish
+  examples:
+  - description: Gå till startsidan
 en-sv 1:
   url: https://bab.la/dictionary/english-swedish/<word>
   title: Engelska-Svenska (bab.la)
@@ -810,6 +890,8 @@ en-sw 0:
   - english
   - language
   - swahili
+  examples:
+  - description: Nenda kwenye ukurasa wa nyumbani
 en-sw 1:
   url: https://bab.la/dictionary/english-swahili/<word>
   title: Kiingereza-Kiswahili (bab.la)
@@ -831,6 +913,8 @@ en-te 0:
   - english
   - language
   - telugu
+  examples:
+  - description: హోమ్‌పేజ్‌కు వెళ్లండి
 en-te 1:
   url: https://bab.la/dictionary/english-telugu/<word>
   title: ఆంగ్లం-తెలుగు (bab.la)
@@ -852,6 +936,8 @@ en-th 0:
   - english
   - language
   - thai
+  examples:
+  - description: ไปที่หน้าแรก
 en-th 1:
   url: https://bab.la/dictionary/english-thai/<word>
   title: อังกฤษ-ไทย (bab.la)
@@ -873,6 +959,8 @@ en-tr 0:
   - english
   - language
   - turkish
+  examples:
+  - description: Anasayfaya git
 en-tr 1:
   url: https://bab.la/dictionary/english-turkish/<word>
   title: İngilizce-Türkçe (bab.la)
@@ -894,6 +982,8 @@ en-ur 0:
   - english
   - language
   - urdu
+  examples:
+  - description: مرکزی صفحہ پر جائیں
 en-ur 1:
   url: https://bab.la/dictionary/english-urdu/<word>
   title: انگریزی-اردو (bab.la)
@@ -915,6 +1005,8 @@ en-vi 0:
   - english
   - language
   - vietnamese
+  examples:
+  - description: Đi đến trang chủ
 en-vi 1:
   url: https://bab.la/dictionary/english-vietnamese/<word>
   title: Tiếng Anh-Tiếng Việt (bab.la)
@@ -936,6 +1028,8 @@ en-zh 0:
   - dictionary
   - english
   - language
+  examples:
+  - description: 前往主页
 en-zh 1:
   url: https://bab.la/dictionary/english-chinese/<word>
   title: 英文-中文 (bab.la)
@@ -957,6 +1051,8 @@ en-zu 0:
   - english
   - language
   - zulu
+  examples:
+  - description: Yiya ekhasini eliyisiqalo
 en-zu 1:
   url: https://bab.la/dictionary/english-zulu/<word>
   title: I-English-IsiZulu (bab.la)
@@ -977,6 +1073,8 @@ eo 1:
 eo-en 0:
   title: Esperanto-English (bab.la)
   include: en-eo 0
+  examples:
+  - description: Go to homepage
 eo-en 1:
   title: Esperanto-English (bab.la)
   include: en-eo 1
@@ -992,6 +1090,8 @@ es 1:
 es-de 0:
   title: Spanisch-Deutsch (bab.la)
   include: de-es 0
+  examples:
+  - description: Zur Startseite
 es-de 1:
   title: Spanisch-Deutsch (bab.la)
   include: de-es 1
@@ -1003,6 +1103,8 @@ es-de 1:
 es-en 0:
   title: Spanish-English (bab.la)
   include: en-es 0
+  examples:
+  - description: Go to homepage
 es-en 1:
   title: Spanish-English (bab.la)
   include: en-es 1
@@ -1019,6 +1121,8 @@ es-fr 0:
   - french
   - language
   - spanish
+  examples:
+  - description: Aller à la page d'accueil
 es-fr 1:
   url: https://bab.la/dictionary/spanish-french/<word>
   title: Espagnol-Français (bab.la)
@@ -1040,6 +1144,8 @@ es-it 0:
   - italian
   - language
   - spanish
+  examples:
+  - description: Vai alla homepage
 es-it 1:
   url: https://bab.la/dictionary/spanish-italian/<word>
   title: Spagnolo-Italiano (bab.la)
@@ -1061,6 +1167,8 @@ es-pt 0:
   - language
   - portuguese
   - spanish
+  examples:
+  - description: Ir para a página inicial
 es-pt 1:
   url: https://bab.la/dictionary/spanish-portuguese/<word>
   title: Espanhol-Português (bab.la)
@@ -1082,6 +1190,8 @@ es-qu 0:
   - language
   - quechua
   - spanish
+  examples:
+  - description: Riki rimanakunap kamachik
 es-qu 1:
   url: https://bab.la/dictionary/spanish-quechua/<word>
   title: Español Simi-Runasimi (bab.la)
@@ -1102,6 +1212,8 @@ fi 1:
 fi-en 0:
   title: Finnish-English (bab.la)
   include: en-fi 0
+  examples:
+  - description: Go to homepage
 fi-en 1:
   title: Finnish-English (bab.la)
   include: en-fi 1
@@ -1117,6 +1229,8 @@ fr 1:
 fr-de 0:
   title: Französisch-Deutsch (bab.la)
   include: de-fr 0
+  examples:
+  - description: Zur Startseite
 fr-de 1:
   title: Französisch-Deutsch (bab.la)
   include: de-fr 1
@@ -1128,6 +1242,8 @@ fr-de 1:
 fr-en 0:
   title: French-English (bab.la)
   include: en-fr 0
+  examples:
+  - description: Go to homepage
 fr-en 1:
   title: French-English (bab.la)
   include: en-fr 1
@@ -1139,6 +1255,8 @@ fr-en 1:
 fr-es 0:
   title: Francés-Español (bab.la)
   include: es-fr 0
+  examples:
+  - description: Ir a la página principal
 fr-es 1:
   title: Francés-Español (bab.la)
   include: es-fr 1
@@ -1155,6 +1273,8 @@ fr-it 0:
   - french
   - italian
   - language
+  examples:
+  - description: Vai alla homepage
 fr-it 1:
   url: https://bab.la/dictionary/french-italian/<word>
   title: Francese-Italiano (bab.la)
@@ -1175,6 +1295,8 @@ hi 1:
 hi-en 0:
   title: Hindi-English (bab.la)
   include: en-hi 0
+  examples:
+  - description: Go to homepage
 hi-en 1:
   title: Hindi-English (bab.la)
   include: en-hi 1
@@ -1190,6 +1312,8 @@ hu 1:
 hu-en 0:
   title: Hungarian-English (bab.la)
   include: en-hu 0
+  examples:
+  - description: Go to homepage
 hu-en 1:
   title: Hungarian-English (bab.la)
   include: en-hu 1
@@ -1205,6 +1329,8 @@ id 1:
 id-en 0:
   title: Indonesian-English (bab.la)
   include: en-id 0
+  examples:
+  - description: Go to homepage
 id-en 1:
   title: Indonesian-English (bab.la)
   include: en-id 1
@@ -1220,6 +1346,8 @@ it 1:
 it-de 0:
   title: Italienisch-Deutsch (bab.la)
   include: de-it 0
+  examples:
+  - description: Zur Startseite
 it-de 1:
   title: Italienisch-Deutsch (bab.la)
   include: de-it 1
@@ -1231,6 +1359,8 @@ it-de 1:
 it-en 0:
   title: Italian-English (bab.la)
   include: en-it 0
+  examples:
+  - description: Go to homepage
 it-en 1:
   title: Italian-English (bab.la)
   include: en-it 1
@@ -1242,6 +1372,8 @@ it-en 1:
 it-es 0:
   title: Italiano-Español (bab.la)
   include: es-it 0
+  examples:
+  - description: Ir a la página principal
 it-es 1:
   title: Italiano-Español (bab.la)
   include: es-it 1
@@ -1253,6 +1385,8 @@ it-es 1:
 it-fr 0:
   title: Italien-Français (bab.la)
   include: fr-it 0
+  examples:
+  - description: Aller à la page d'accueil
 it-fr 1:
   title: Italien-Français (bab.la)
   include: fr-it 1
@@ -1269,6 +1403,8 @@ it-ro 0:
   - italian
   - language
   - romanian
+  examples:
+  - description: Du-te la pagina principală
 it-ro 1:
   url: https://bab.la/dictionary/italian-romanian/<word>
   title: Italiană-Română (bab.la)
@@ -1289,6 +1425,8 @@ ja 1:
 ja-en 0:
   title: Japanese-English (bab.la)
   include: en-ja 0
+  examples:
+  - description: Go to homepage
 ja-en 1:
   title: Japanese-English (bab.la)
   include: en-ja 1
@@ -1304,6 +1442,8 @@ ka 1:
 ka-en 0:
   title: Georgian-English (bab.la)
   include: en-ka 0
+  examples:
+  - description: Go to homepage
 ka-en 1:
   title: Georgian-English (bab.la)
   include: en-ka 1
@@ -1319,6 +1459,8 @@ ko 1:
 ko-en 0:
   title: Korean-English (bab.la)
   include: en-ko 0
+  examples:
+  - description: Go to homepage
 ko-en 1:
   title: Korean-English (bab.la)
   include: en-ko 1
@@ -1334,6 +1476,8 @@ ms 1:
 ms-en 0:
   title: Malay-English (bab.la)
   include: en-ms 0
+  examples:
+  - description: Go to homepage
 ms-en 1:
   title: Malay-English (bab.la)
   include: en-ms 1
@@ -1349,6 +1493,8 @@ nl 1:
 nl-de 0:
   title: Niederländisch-Deutsch (bab.la)
   include: de-nl 0
+  examples:
+  - description: Zur Startseite
 nl-de 1:
   title: Niederländisch-Deutsch (bab.la)
   include: de-nl 1
@@ -1360,6 +1506,8 @@ nl-de 1:
 nl-en 0:
   title: Dutch-English (bab.la)
   include: en-nl 0
+  examples:
+  - description: Go to homepage
 nl-en 1:
   title: Dutch-English (bab.la)
   include: en-nl 1
@@ -1375,6 +1523,8 @@ no 1:
 no-en 0:
   title: Norwegian-English (bab.la)
   include: en-no 0
+  examples:
+  - description: Go to homepage
 no-en 1:
   title: Norwegian-English (bab.la)
   include: en-no 1
@@ -1390,6 +1540,8 @@ pl 1:
 pl-de 0:
   title: Polnisch-Deutsch (bab.la)
   include: de-pl 0
+  examples:
+  - description: Zur Startseite
 pl-de 1:
   title: Polnisch-Deutsch (bab.la)
   include: de-pl 1
@@ -1401,6 +1553,8 @@ pl-de 1:
 pl-en 0:
   title: Polish-English (bab.la)
   include: en-pl 0
+  examples:
+  - description: Go to homepage
 pl-en 1:
   title: Polish-English (bab.la)
   include: en-pl 1
@@ -1417,6 +1571,8 @@ pl-ru 0:
   - language
   - polish
   - russian
+  examples:
+  - description: Перейти на главную страницу
 pl-ru 1:
   url: https://bab.la/dictionary/polish-russian/<word>
   title: Польский-Русский (bab.la)
@@ -1437,6 +1593,8 @@ pt 1:
 pt-de 0:
   title: Portugiesisch-Deutsch (bab.la)
   include: de-pt 0
+  examples:
+  - description: Zur Startseite
 pt-de 1:
   title: Portugiesisch-Deutsch (bab.la)
   include: de-pt 1
@@ -1448,6 +1606,8 @@ pt-de 1:
 pt-en 0:
   title: Portuguese-English (bab.la)
   include: en-pt 0
+  examples:
+  - description: Go to homepage
 pt-en 1:
   title: Portuguese-English (bab.la)
   include: en-pt 1
@@ -1459,6 +1619,8 @@ pt-en 1:
 pt-es 0:
   title: Portugués-Español (bab.la)
   include: es-pt 0
+  examples:
+  - description: Ir a la página principal
 pt-es 1:
   title: Portugués-Español (bab.la)
   include: es-pt 1
@@ -1474,6 +1636,8 @@ qu 1:
 qu-es 0:
   title: Quechua-Español (bab.la)
   include: es-qu 0
+  examples:
+  - description: Ir a la página principal
 qu-es 1:
   title: Quechua-Español (bab.la)
   include: es-qu 1
@@ -1489,6 +1653,8 @@ ro 1:
 ro-en 0:
   title: Romanian-English (bab.la)
   include: en-ro 0
+  examples:
+  - description: Go to homepage
 ro-en 1:
   title: Romanian-English (bab.la)
   include: en-ro 1
@@ -1500,6 +1666,8 @@ ro-en 1:
 ro-it 0:
   title: Rumeno-Italiano (bab.la)
   include: it-ro 0
+  examples:
+  - description: Vai alla homepage
 ro-it 1:
   title: Rumeno-Italiano (bab.la)
   include: it-ro 1
@@ -1515,6 +1683,8 @@ ru 1:
 ru-de 0:
   title: Russisch-Deutsch (bab.la)
   include: de-ru 0
+  examples:
+  - description: Zur Startseite
 ru-de 1:
   title: Russisch-Deutsch (bab.la)
   include: de-ru 1
@@ -1526,6 +1696,8 @@ ru-de 1:
 ru-en 0:
   title: Russian-English (bab.la)
   include: en-ru 0
+  examples:
+  - description: Go to homepage
 ru-en 1:
   title: Russian-English (bab.la)
   include: en-ru 1
@@ -1537,6 +1709,8 @@ ru-en 1:
 ru-pl 0:
   title: Rosyjski-Polski (bab.la)
   include: pl-ru 0
+  examples:
+  - description: Przejdź do strony głównej
 ru-pl 1:
   title: Rosyjski-Polski (bab.la)
   include: pl-ru 1
@@ -1552,6 +1726,8 @@ sv 1:
 sv-de 0:
   title: Schwedisch-Deutsch (bab.la)
   include: de-sv 0
+  examples:
+  - description: Zur Startseite
 sv-de 1:
   title: Schwedisch-Deutsch (bab.la)
   include: de-sv 1
@@ -1563,6 +1739,8 @@ sv-de 1:
 sv-en 0:
   title: Swedish-English (bab.la)
   include: en-sv 0
+  examples:
+  - description: Go to homepage
 sv-en 1:
   title: Swedish-English (bab.la)
   include: en-sv 1
@@ -1578,6 +1756,8 @@ sw 1:
 sw-en 0:
   title: Swahili-English (bab.la)
   include: en-sw 0
+  examples:
+  - description: Go to homepage
 sw-en 1:
   title: Swahili-English (bab.la)
   include: en-sw 1
@@ -1593,6 +1773,8 @@ te 1:
 te-en 0:
   title: Telugu-English (bab.la)
   include: en-te 0
+  examples:
+  - description: Go to homepage
 te-en 1:
   title: Telugu-English (bab.la)
   include: en-te 1
@@ -1608,6 +1790,8 @@ th 1:
 th-en 0:
   title: Thai-English (bab.la)
   include: en-th 0
+  examples:
+  - description: Go to homepage
 th-en 1:
   title: Thai-English (bab.la)
   include: en-th 1
@@ -1623,6 +1807,8 @@ tr 1:
 tr-de 0:
   title: Türkisch-Deutsch (bab.la)
   include: de-tr 0
+  examples:
+  - description: Zur Startseite
 tr-de 1:
   title: Türkisch-Deutsch (bab.la)
   include: de-tr 1
@@ -1634,6 +1820,8 @@ tr-de 1:
 tr-en 0:
   title: Turkish-English (bab.la)
   include: en-tr 0
+  examples:
+  - description: Go to homepage
 tr-en 1:
   title: Turkish-English (bab.la)
   include: en-tr 1
@@ -1649,6 +1837,8 @@ ur 1:
 ur-en 0:
   title: Urdu-English (bab.la)
   include: en-ur 0
+  examples:
+  - description: Go to homepage
 ur-en 1:
   title: Urdu-English (bab.la)
   include: en-ur 1
@@ -1664,6 +1854,8 @@ vi 1:
 vi-en 0:
   title: Vietnamese-English (bab.la)
   include: en-vi 0
+  examples:
+  - description: Go to homepage
 vi-en 1:
   title: Vietnamese-English (bab.la)
   include: en-vi 1
@@ -1679,6 +1871,8 @@ zh 1:
 zh-en 0:
   title: Chinese-English (bab.la)
   include: en-zh 0
+  examples:
+  - description: Go to homepage
 zh-en 1:
   title: Chinese-English (bab.la)
   include: en-zh 1
@@ -1694,6 +1888,8 @@ zu 1:
 zu-en 0:
   title: Zulu-English (bab.la)
   include: en-zu 0
+  examples:
+  - description: Go to homepage
 zu-en 1:
   title: Zulu-English (bab.la)
   include: en-zu 1

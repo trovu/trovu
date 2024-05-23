@@ -10,6 +10,8 @@ en-es 0:
   - english
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
 en-es 1:
   url: https://www.spanishdict.com/translate/<word>
   title: Inglés-Español (SpanishDict)
@@ -30,6 +32,8 @@ es 1:
 es-en 0:
   title: Spanish-English (SpanishDict)
   include: en-es 0
+  examples:
+  - description: Go to homepage
 es-en 1:
   title: Spanish-English (SpanishDict)
   include: en-es 1
