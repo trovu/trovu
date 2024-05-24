@@ -187,7 +187,7 @@ does the same but sorts them by date (newest first).
 
 There are also a few torrent search engines; my preferred one is BTDigg:
 
-{% trovuCall "btg berlin" %}
+{% trovuCall "btd berlin" %}
 
 ## Shopping
 
