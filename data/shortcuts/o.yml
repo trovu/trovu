@@ -6937,6 +6937,19 @@ rp18 0:
   tags:
   - berlin
   - congress
+rpw 0:
+  url: https://www.removepaywall.com/
+  title: Remove Paywall
+  tags:
+  - paywall
+  examples:
+  - description: Go to homepage
+rpw 1:
+  url: https://www.removepaywall.com/<url>
+  include: rpw 0
+  examples:
+  - arguments: https://www.nytimes.com/2023/04/10/us/politics/biden-ukraine.html
+    description: Remove paywall from the given URL
 rsg 0:
   url: https://www.researchgate.net/
   title: ResearchGate
