@@ -24,13 +24,13 @@ ety 0:
 frv 1:
   url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
-  description: Forvo pronunciation database, localized interface
   tags:
   - language
   - pronunciation
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
+  description: Forvo pronunciation database, localized interface
 rijm 0:
   url: https://www.rijm.nu/
   title: Rijm.nu!

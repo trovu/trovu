@@ -139,7 +139,6 @@ ma 0:
 ma 1:
   url: https://www.milanuncios.com/anuncios/?s=<búsqueda>&orden=relevance&fromSearch=1&fromSuggester=1&suggestionUsed=0&hitOrigin=home_search
   title: Milanuncios
-  description: venta de productos de segunda mano
   tags:
   - anuncios
   - segunda-mano
@@ -147,6 +146,7 @@ ma 1:
   examples:
   - arguments: palmera
     description: Busqueda de "palmera"
+  description: venta de productos de segunda mano
 mil 0:
   deprecated:
     alternative:

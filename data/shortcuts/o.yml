@@ -188,6 +188,8 @@
 a 0:
   url: https://www.amazon.com?&linkCode=ll2&tag=serchilo-20&linkId=070c10e4d6fb9665424b753bbe333d12&language=en_US&ref_=as_li_ss_tl
   title: Amazon.com
+  tests:
+  - expect: <title>Amazon
   tags:
   - amazon
   - books
@@ -195,19 +197,17 @@ a 0:
   - shopping
   examples:
   - description: Go to homepage
-  tests:
-  - expect: <title>Amazon
 a 1:
   url: https://www.amazon.com/s?k=<query>&crid=1UXOIV6UI26W0&linkCode=ll2&tag=serchilo-20&linkId=dadbd51da666f8ecc0f3fc779e01728a&language=en_US&ref_=as_li_ss_tl
+  tests:
+  - arguments: shakespeare
+    expect: shakespeare</title>
+  showOnHome: 1000
   include:
   - key: a 0
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
-  tests:
-  - arguments: shakespeare
-    expect: shakespeare</title>
-  showOnHome: 1000
 abbr 1:
   url: https://www.abbreviations.com/<abbr>
   title: Abbreviation search
@@ -222,7 +222,6 @@ abp 0:
 acl 0:
   url: https://www.aclweb.org/anthology/
   title: ACL Anthology
-  description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
   tags:
   - academia
   - acl
@@ -232,10 +231,10 @@ acl 0:
   - linguistics
   - literature
   - science
+  description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
 acl 1:
   url: https://www.aclweb.org/anthology/search/?q=<query>
   title: ACL Anthology
-  description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
   tags:
   - academia
   - acl
@@ -248,6 +247,7 @@ acl 1:
   examples:
   - arguments: machine translation
     description: search for machine translation in the ACL Anthology
+  description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
 aclg 1:
   url: https://www.google.com/search?hl=<$language>&q=site:aclweb.org%20<query>&ie=utf-8
   title: ACL Anthology via Google
@@ -277,7 +277,7 @@ aclw 1:
   - science
   - wiki
   examples:
-  - arguments: ' SAT Analogy Questions'
+  - arguments: SAT Analogy Questions
     description: go to page (or search for) SAT Analogy Questions on ACLWiki
 acm 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
@@ -285,7 +285,7 @@ acm 1:
   tags:
   - science
   examples:
-  - arguments: 'routing loops '
+  - arguments: routing loops
     description: search for routing loops
 ad 1:
   url: https://developer.android.com/s/results?q=<query>
@@ -320,7 +320,7 @@ ads 1:
   - physics
   examples:
   - arguments: dark energy
-    description: 'Search for astrophysics articles on "dark energy" '
+    description: Search for astrophysics articles on "dark energy"
 adsh 1:
   url: https://www.alldatasheet.com/view.jsp?Searchword=<part>
   title: alldatasheet.com
@@ -478,17 +478,16 @@ apb 1:
 apm 1:
   url: https://maps.apple.com/place?address=<address>
   title: Apple Maps
-  description: Apple Maps for desktop/browser.  If place was not found, try adding country or country code.
   tags:
   - apple
   - maps
   examples:
   - arguments: Berlin Pariser Platz 1
     description: Show Berlin, Pariser Platz 1 on Apple Maps.
+  description: Apple Maps for desktop/browser.  If place was not found, try adding country or country code.
 apm 2:
   url: 'https://maps.apple.com/place?address=<city: {type: city}>,<address>'
   title: Apple Maps
-  description: Apple Maps for desktop/browser. City can be given with common abbreviations, e.g. car number plates
   tags:
   - apple
   - maps
@@ -497,6 +496,7 @@ apm 2:
     description: Show Berlin, Pariser Platz 1 on Apple Maps.
   - arguments: hh, berliner tor
     description: Show Berliner Tor in Hamburg
+  description: Apple Maps for desktop/browser. City can be given with common abbreviations, e.g. car number plates
 ar 0:
   include:
   - key: ar 0
@@ -798,6 +798,8 @@ bkg 0:
   - description: Go to homepage
 bkg 1:
   url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>'
+  include:
+  - key: bkg 0
   examples:
   - arguments: berlin
     description: Search for hotels in Berlin
@@ -807,10 +809,10 @@ bkg 1:
     description: Use city abbreviation, country is already set to Germany
     config:
       country: de
-  include:
-  - key: bkg 0
 bkg 2:
   url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
+  include:
+  - key: bkg 0
   examples:
   - arguments: berlin, 31.12.
     description: Search for hotels in Berlin, checkin on 31.12.
@@ -818,18 +820,16 @@ bkg 2:
     description: Search for hotels in Berlin, checkin on 12/31 (US date format)
   - arguments: berlin, fr
     description: Search for hotels in Berlin, checkin on next Friday
-  include:
-  - key: bkg 0
 bkg 3:
   url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
+  showOnHome: 550
+  include:
+  - key: bkg 0
   examples:
   - arguments: berlin, 31.12., 2.1.
     description: Search for hotels in Berlin, checkin on 31.12.
   - arguments: berlin, fr, su
     description: Search for hotels in Berlin, checkin on next Friday, checkout on next Sunday
-  include:
-  - key: bkg 0
-  showOnHome: 550
 bm 1:
   url: https://www.bing.com/maps/?q=<map-query>
   title: Bing Maps
@@ -917,20 +917,20 @@ briar 0:
 brw 0:
   url: https://brew.sh/
   title: Homebrew Package Manager
-  examples:
-  - description: Go to homepage
   tags:
   - osx
   - packages
+  examples:
+  - description: Go to homepage
 brw 1:
   url: https://www.google.de/search?hl=<$language>&q=site%3Abrew.sh%20<query>&ie=utf-8
   title: Homebrew Package Manager
+  showOnHome: 1000
+  include:
+  - key: brw 0
   examples:
   - arguments: vim
     description: Search for packages about vim.
-  include:
-  - key: brw 0
-  showOnHome: 1000
 btc 1:
   url: https://www.blockchain.com/search?search=<address>
   title: Bitcoin Blockchain Explorer
@@ -942,22 +942,22 @@ btc 1:
 btd 0:
   url: https://btdig.com/
   title: BTDigg
+  tests:
+  - expect: <title>BTDigg
   tags:
   - bittorrent
   - torrent
   examples:
   - description: Go to homepage
-  tests:
-  - expect: <title>BTDigg
 btd 1:
   url: https://btdig.com/search?q=<query>
+  tests:
+  - arguments: ubuntu
+    expect: <title>ubuntu
   include: btd 0
   examples:
   - arguments: ubuntu
     description: Search for Ubuntu torrents
-  tests:
-  - arguments: ubuntu
-    expect: <title>ubuntu
 bv 1:
   url: https://www.bing.com/videos/?q=<video-query>
   title: Bing Videos
@@ -1032,22 +1032,22 @@ cfp 1:
 cg 0:
   url: https://chat.openai.com/
   title: ChatGPT
-  description: Chat with OpenAI's ChatGPT
+  tests:
+  - expect: <title>ChatGPT
   tags:
   - ai
   - gpt
   - openai
-  tests:
-  - expect: <title>ChatGPT
+  description: Chat with OpenAI's ChatGPT
 cg 1:
   url: https://chat.openai.com/chat?q=<query>
+  tests:
+  - arguments: foobar
+    expect: q=foo
   include: cg 0
   examples:
   - arguments: What is the meaning of life?
     description: Ask ChatGPT about the meaning of life
-  tests:
-  - arguments: foobar
-    expect: q=foo
 chip 1:
   url: https://suche.chip.de/?q=<query>
   title: Chip.de Suche
@@ -1071,21 +1071,21 @@ ciu 1:
 ckd 0:
   url: https://cooked.wiki/
   title: Cooked
+  tests:
+  - expect: <title>Cooked
   tags:
   - cooking
   - recipe
-  tests:
-  - expect: <title>Cooked
 ckd 1:
   url: https://cooked.wiki/<url>
-  examples:
-  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
-    description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
   tests:
   - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
     expect: Brokkoli-Pastinaken-Kokos-Curry
   include:
   - key: ckd 0
+  examples:
+  - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
+    description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
 cl 1:
   url: https://www.colourlovers.com/colors/search?query=<color>
   title: COLOURlovers color search
@@ -1130,17 +1130,17 @@ clubic 1:
 cma 0:
   url: https://www.criticalmaps.net/map
   title: Critical Maps
-  description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
   tags:
   - critical-maps
   - critical-mass
+  description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
 codej 1:
   url: https://searchcode.com/?q=<code>&lan=23
   title: Code Search for Java
-  description: Search for Java code examples
   tags:
   - programming
   - programming-language
+  description: Search for Java code examples
 codex 1:
   url: https://wordpress.org/search/<query>
   title: Wordpress Codex Search
@@ -1240,10 +1240,10 @@ cpp 1:
   tags:
   - c++
   - programming
+  showOnHome: 1100
   examples:
   - arguments: sprintf
     description: Search C++ Reference (cppreference.com) for "sprintf"
-  showOnHome: 1100
 cppc 1:
   url: https://www.cplusplus.com/search.do?q=<query>
   title: C++ Reference (cplusplus.com)
@@ -1266,10 +1266,10 @@ cran 1:
   - programming
   - r
   - statistics
+  showOnHome: 1200
   examples:
   - arguments: bibtex
     description: Show bibtex package
-  showOnHome: 1200
 crc32 1:
   url: https://stefanschramm.net/dev/hash/?algo=crc32&q=<data>
   title: Hash functions
@@ -1315,7 +1315,6 @@ crts 1:
 crug 1:
   url: https://rug.on.worldcat.org/search?databaseList=&queryString=<query>
   title: SmartCat
-  description: Library catalog of the University of Groningen
   tags:
   - catalog
   - catalogue
@@ -1324,6 +1323,7 @@ crug 1:
   examples:
   - arguments: linguistics in the netherlands
     description: Find issues of the journal "Linguistics in the Netherlands" in the catalog
+  description: Library catalog of the University of Groningen
 crx 1:
   url: https://chrome.google.com/webstore/search/<query>?_category=extensions
   title: Chrome Extensions
@@ -1645,15 +1645,15 @@ debp 0:
 debt 1:
   url: https://tracker.debian.org/pkg/<query>
   title: Debian Package Tracker
-  description: Looks up the given package in the debian package tracker.
+  tests:
+  - arguments: grub2
+    expect: 'maintainer:'
   tags:
   - debian
   examples:
   - arguments: grub2
     description: Look at the grub2 package in the Debian Package Tracker
-  tests:
-  - arguments: grub2
-    expect: 'maintainer:'
+  description: Looks up the given package in the debian package tracker.
 debw 0:
   url: https://wiki.debian.org/
   title: Debian Wiki
@@ -1802,7 +1802,6 @@ djp 1:
 dlde 1:
   url: https://www.deepl.com/translator#en/de/<text>
   title: deepL Translator to German
-  description: Translate whole text.
   tags:
   - deepl
   - german
@@ -1810,12 +1809,12 @@ dlde 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into German. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into German.
+  description: Translate whole text.
 dlen 1:
   url: https://www.deepl.com/translator#de/en/<text>
   title: deepL Translator to English
-  description: Translate whole text.
   tags:
   - deepl
   - english
@@ -1823,12 +1822,12 @@ dlen 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into English. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into English.
+  description: Translate whole text.
 dles 1:
   url: https://www.deepl.com/translator#de/es/<text>
   title: deepL Translator to Spanish
-  description: Translate whole text.
   tags:
   - deepl
   - google-translate
@@ -1836,12 +1835,12 @@ dles 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Spanish. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Spanish.
+  description: Translate whole text.
 dlfr 1:
   url: https://www.deepl.com/translator#de/fr/<text>
   title: deepL Translator to French
-  description: Translate whole text.
   tags:
   - deepl
   - french
@@ -1849,12 +1848,12 @@ dlfr 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into French. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into French.
+  description: Translate whole text.
 dlit 1:
   url: https://www.deepl.com/translator#de/it/<text>
   title: deepL Translator to Italian
-  description: Translate whole text.
   tags:
   - deepl
   - google-translate
@@ -1862,12 +1861,12 @@ dlit 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Italian. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Italian.
+  description: Translate whole text.
 dlja 1:
   url: https://www.deepl.com/translator#de/ja/<text>
   title: deepL Translator to Japanese
-  description: Translate whole text.
   tags:
   - deepl
   - google-translate
@@ -1875,12 +1874,12 @@ dlja 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Japanese. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Japanese.
+  description: Translate whole text.
 dlnl 1:
   url: https://www.deepl.com/translator#de/nl/<text>
   title: deepL Translator to Dutch
-  description: Translate whole text.
   tags:
   - deepl
   - dutch
@@ -1888,12 +1887,12 @@ dlnl 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Dutch. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Dutch.
+  description: Translate whole text.
 dlpo 1:
   url: https://www.deepl.com/translator#de/po/<text>
   title: deepL Translator to Polish
-  description: Translate whole text.
   tags:
   - deepl
   - google-translate
@@ -1901,12 +1900,12 @@ dlpo 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Polish. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Polish.
+  description: Translate whole text.
 dlpt 1:
   url: https://www.deepl.com/translator#de/pt/<text>
   title: deepL Translator to Portuguese
-  description: Translate whole text.
   tags:
   - deepl
   - google-translate
@@ -1914,12 +1913,12 @@ dlpt 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Portuguese. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Portuguese.
+  description: Translate whole text.
 dlru 1:
   url: https://www.deepl.com/translator#de/ru/<text>
   title: deepL Translator to Russian
-  description: Translate whole text.
   tags:
   - deepl
   - google-translate
@@ -1927,12 +1926,12 @@ dlru 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Russian. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Russian.
+  description: Translate whole text.
 dltr 1:
   url: https://www.deepl.com/translator#en/tr/<text>
   title: deepL Translator to Turkish
-  description: Translate whole text.
   tags:
   - deepl
   - google-translate
@@ -1941,12 +1940,12 @@ dltr 1:
   - turkish
   - türkçe
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Turkish. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Turkish.
+  description: Translate whole text.
 dlzh 1:
   url: https://www.deepl.com/translator#de/zh/<text>
   title: deepL Translator to Chinese
-  description: Translate whole text.
   tags:
   - chinese
   - deepl
@@ -1954,8 +1953,9 @@ dlzh 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese.
+  description: Translate whole text.
 dm 1:
   url: https://www.dailymotion.com/?search=<query>
   title: Dailymotion
@@ -2842,13 +2842,13 @@ findutf 0:
 fisbroker 0:
   url: https://fbinter.stadt-berlin.de/fb/index.jsp
   title: FIS-Broker Geodatenportal Berlin (Geo- und Sachdatenabfrage)
-  description: "Ein umfangreicher Geodatenkatalog bietet Karten, Pläne und andere Daten mit Raumbezug aus Berlin. Hier kann räumlich, z.B. über Adressen und inhaltlich (z.B. nach Schlagworten) gesucht werden. Die datenbereitstellenden Dienste sind bei den Datensätzen genannt.\r\n\r\nIn einem Viewer können Karten angesehen, überlagert und mit Sachdaten verknüpft werden. Über die Dossierfunktion können schnell viele Informationen für ein Grundstück abgerufen werden."
   tags:
   - berlin
   - fisbroker
   - geodata
   - gis
   - kataster
+  description: "Ein umfangreicher Geodatenkatalog bietet Karten, Pläne und andere Daten mit Raumbezug aus Berlin. Hier kann räumlich, z.B. über Adressen und inhaltlich (z.B. nach Schlagworten) gesucht werden. Die datenbereitstellenden Dienste sind bei den Datensätzen genannt.\r\n\r\nIn einem Viewer können Karten angesehen, überlagert und mit Sachdaten verknüpft werden. Über die Dossierfunktion können schnell viele Informationen für ein Grundstück abgerufen werden."
 fiverr 0:
   url: https://www.fiverr.com/
   title: Fiverr
@@ -2871,10 +2871,10 @@ fl 0:
 fl 1:
   url: https://flickr.com/search/?q=<query>
   title: Flickr, full text search
+  include: fl 0
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include: fl 0
 fla 0:
   url: https://www.flickr.com/search/advanced/
   title: Flickr, advanced search
@@ -2882,24 +2882,24 @@ fla 0:
 flcc 1:
   url: https://www.flickr.com/search/?text=<query>&license=2%2C3%2C4%2C5%2C6%2C9
   title: 'Flickr: full text search for content with a Creative Commons license'
+  include: fl 0
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include: fl 0
 flcca 1:
   url: https://www.flickr.com/search/?text=<query>&license=1%2C2%2C9%2C10
   title: 'Flickr: full text search for content to adapt, modify and build upon'
+  include: fl 0
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include: fl 0
 flccc 1:
   url: https://www.flickr.com/search/?text=<query>&license=4%2C5%2C6%2C9%2C10
   title: 'Flickr: full text search for content to use commercially'
+  include: fl 0
   examples:
   - arguments: christmas
     description: search photos about christmas
-  include: fl 0
 flccca 1:
   url: https://www.flickr.com/search/?text=<query>&license=4%2C5%2C9%2C10
   title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
@@ -2949,24 +2949,24 @@ flickrshow 1:
 fls 1:
   url: https://flickr.com/search/show/?q=<query>
   title: 'Flickr: creates a slideshow of your query'
+  include: fl 0
   examples:
   - arguments: berlin
     description: create a slideshow of photos about berlin
-  include: fl 0
 flt 1:
   url: https://flickr.com/photos/tags/<tag>
   title: 'Flickr: photos with tag'
+  include: fl 0
   examples:
   - arguments: berlin
     description: search for photos tagged "berlin"
-  include: fl 0
 flu 1:
   url: https://www.flickr.com/search/people/?q=<user>
   title: 'Flickr: search for user'
+  include: fl 0
   examples:
   - arguments: john
     description: search for users named "john"
-  include: fl 0
 fnet 1:
   url: https://www.finanzen.net/suchergebnis.asp?_search=<query>
   title: Finanzen.net Query
@@ -3102,30 +3102,30 @@ frsv 1:
 frv 1:
   url: https://forvo.com/search/<word>/
   title: Forvo
-  description: Forvo pronunciation database, English interface
   tags:
   - language
   - pronunciation
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
+  description: Forvo pronunciation database, English interface
 fs 0:
   url: https://www.fontsquirrel.com/
   title: Font Squirrel
-  description: Selection of free fonts for commercial use
   tags:
   - fonts
   - typefaces
+  description: Selection of free fonts for commercial use
 fs 1:
   url: https://www.fontsquirrel.com/fonts/list/find_fonts?q[term]=<query>
   title: Font Squirrel search
-  description: Search free fonts for commercial use
   tags:
   - fonts
   - typefaces
   examples:
   - arguments: Nimbus Sans
     description: Common font that looks exactly like Helvetica
+  description: Search free fonts for commercial use
 fsc 1:
   url: https://www.google.com/search?q=<query>&sitesearch=fscklog.com
   title: Fscklog
@@ -3166,10 +3166,10 @@ g 1:
   tags:
   - google
   - web-search
+  showOnHome: 600
   examples:
   - arguments: berlin
     description: Google search for "berlin"
-  showOnHome: 600
 g! 1:
   url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&btnI=1
   title: Google Web, go directly to first result
@@ -3284,10 +3284,10 @@ gch 1:
 gcm 2:
   url: https://www.greatcirclemap.com/?routes=<from IATA>-<to IATA>
   title: Great Circle Map
-  description: Enter two or more airports to draw a route between them on the map and calculate the distance.
   tags:
   - flights
   - travel
+  description: Enter two or more airports to draw a route between them on the map and calculate the distance.
 gco 0:
   url: https://www.google.com/contacts/
   title: Google Contacts
@@ -3323,6 +3323,7 @@ gd 2:
   - maps
   - route
   - routing
+  showOnHome: 100
   examples:
   - arguments: berlin, hamburg
     description: Get a route from Berlin, Germany, to Hamburg, Germany
@@ -3334,7 +3335,6 @@ gd 2:
       country: de
   - arguments: new york, chicago
     description: Get a route from New York to Chicago
-  showOnHome: 100
 gdb 2:
   url: 'https://www.google.com/maps/dir/?api=1&origin=<start: {type: city}>&destination=<destination: {type: city}>&travelmode= bicycling'
   title: Google Maps Directions (Routing), by Bike
@@ -3492,7 +3492,7 @@ gfin 1:
   - finance
   - google
   examples:
-  - arguments: 'ford '
+  - arguments: ford
     description: Show data for Ford Motor Company
 gfl 0:
   url: https://www.google.com/flights/
@@ -3538,10 +3538,10 @@ gfl 4:
   - flights
   - google
   - travel
+  showOnHome: 200
   examples:
   - arguments: ber, lpa, fr, 30
     description: Search for round trips from Berlin to Las Palmas, departing next Friday, returning on the 30th of this month
-  showOnHome: 200
 gfl1 2:
   url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20<from>%20to%20<to>
   title: Google Flights, one-way
@@ -3691,6 +3691,7 @@ gm 2:
   tags:
   - google
   - maps
+  showOnHome: 800
   examples:
   - arguments: b, brandenburger tor
     description: Show Brandenburger Tor in Berlin (if using .de as country setting)
@@ -3698,7 +3699,6 @@ gm 2:
     description: Show Alster in Hamburg (if using .de as country setting)
   - arguments: w, prater
     description: Show Prater in Vienna (if using .at as country setting)
-  showOnHome: 800
 gmail 0:
   url: https://mail.google.com
   title: Google Mail
@@ -3822,16 +3822,15 @@ gnudb 1:
 go 0:
   url: https://pkg.go.dev
   title: pkg.go.dev
-  description: Package browser for the Go programming language
   tags:
   - go
   - golang
   - programming
   - software
+  description: Package browser for the Go programming language
 go 1:
   url: https://pkg.go.dev/search?q=<query>
   title: pkg.go.dev
-  description: Package browser for the Go programming language
   tags:
   - go
   - golang
@@ -3840,6 +3839,7 @@ go 1:
   examples:
   - arguments: levenshtein
     description: Search pkg.go.dev for Levenshtein-related packages
+  description: Package browser for the Go programming language
 gobug 0:
   url: https://bugs.gentoo.org/query.cgi?format=specific
   title: gentoo bugs
@@ -4010,22 +4010,22 @@ grhp 2:
 grnd 0:
   url: https://ground.news/
   title: Ground News
+  tests:
+  - expect: Ground News</title>
   tags:
   - news
   examples:
   - arguments: berlin
     description: Search for "berlin"
-  tests:
-  - expect: Ground News</title>
 grnd 1:
   url: https://ground.news/find?url=<query>
+  tests:
+  - arguments: berlin
+    expect: Find Your Story</title>
   include: grnd 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
-  tests:
-  - arguments: berlin
-    expect: Find Your Story</title>
 groovesalad 0:
   url: https://somafm.com/player/#/now-playing/groovesalad
   title: SomaFm Groovesalad
@@ -4623,7 +4623,8 @@ is 1:
 isg 0:
   url: https://www.instagram.com/
   title: Instagram
-  description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
+  tests:
+  - expect: <title>Instagram
   tags:
   - instagram
   - photo
@@ -4631,19 +4632,18 @@ isg 0:
   - video
   examples:
   - description: Go to homepage
-  tests:
-  - expect: <title>Instagram
+  description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
 isg 1:
   url: https://www.instagram.com/<user>
-  include:
-  - key: isg 0
   title: Instagram user
-  examples:
-  - arguments: linux_foundation
-    description: Show content of user linux_foundation
   tests:
   - arguments: linux_foundation
     expect: linux_foundation
+  include:
+  - key: isg 0
+  examples:
+  - arguments: linux_foundation
+    description: Show content of user linux_foundation
 ist 0:
   url: https://www.istockphoto.com
   title: Istockphoto
@@ -5032,8 +5032,8 @@ kym 0:
   examples:
   - description: Go to homepage
 kym 1:
-  include: kym 0
   url: https://knowyourmeme.com/search?q=<query>
+  include: kym 0
   examples:
   - arguments: x y is x
     description: search for the "X Y is X" meme
@@ -5314,11 +5314,11 @@ lyrc 2:
 macs 1:
   url: https://www.coffer.com/mac_find?string=<query>
   title: MAC address search
-  description: Match your MAC address to its vendor.
   tags:
   - address
   - mac
   - network
+  description: Match your MAC address to its vendor.
 maj 1:
   url: https://www.google.com/custom?hl=en&client=pub-6960825562757852&cof=FORID%3A1%3BGL%3A1%3BLBGC%3A336699%3BLC%3A%230000ff%3BVLC%3A%23663399%3BGFNT%3A%230000ff%3BGIMP%3A%230000ff%3BDIV%3A%23336699%3B&domains=MajorGeeks.com&ie=ISO-8859-1&oe=ISO-8859-1&q=<query>&btnG=Search&sitesearch=MajorGeeks.com
   title: Majorgeeks
@@ -5332,9 +5332,9 @@ maps 1:
 marlin 1:
   url: https://marlinfw.org/meta/search/?q=<query>
   title: Marlin Gcode Search
-  description: Marlin is an open source firmware for the RepRap family of replicating rapid prototypers — popularly known as “3D printers.”
   tags:
   - 3d-printing
+  description: Marlin is an open source firmware for the RepRap family of replicating rapid prototypers — popularly known as “3D printers.”
 mathworld 1:
   url: https://mathworld.wolfram.com/search/?query=<query>
   title: Mathworld
@@ -5445,7 +5445,6 @@ mind 1:
 mink 1:
   url: https://mink.behat.org/en/latest/search.html?q=<query>
   title: Mink
-  description: Mink is an open source browser controller/emulator for web applications, written in PHP.
   tags:
   - behat
   - mink
@@ -5453,6 +5452,7 @@ mink 1:
   examples:
   - arguments: getTagName
     description: Search Mink for "getTagName"
+  description: Mink is an open source browser controller/emulator for web applications, written in PHP.
 mj 1:
   url: https://www.mojeek.com/search?q=<search>
   title: Mojeek
@@ -5598,16 +5598,15 @@ mytv 0:
 n 0:
   url: https://www.netflix.com/
   title: Netflix
-  description: go to Netflix homepage
   tags:
   - movies
   - netflix
   - series
   - stream
+  description: go to Netflix homepage
 n 1:
   url: https://www.netflix.com/search/<query>
   title: Netflix
-  description: searches Netflix for a movie or series
   tags:
   - movies
   - netflix
@@ -5616,6 +5615,7 @@ n 1:
   examples:
   - arguments: Broadchurch
     description: Search Netflix for "Broadchurch"
+  description: searches Netflix for a movie or series
 nag 1:
   url: https://google.com/search?hl=<$language>&q=<query>+inurl%3Anagios.sourceforge.net%2Fdocs
   title: Nagios
@@ -6095,31 +6095,31 @@ ov 1:
 owm 0:
   url: https://openweathermap.org/
   title: OpenWeatherMap
+  tests:
+  - expect: OpenWeatherMap</title>
   tags:
   - copyleft
   - maps
   - osm
   examples:
   - description: Go to homepage
-  tests:
-  - expect: OpenWeatherMap</title>
 owm 1:
   url: https://openweathermap.org/find?q=<location>
+  tests:
+  - arguments: berlin
+    expect: <title> Find
   include: owm 0
   examples:
   - arguments: berlin
     description: Get weather for cities named "berlin"
-  tests:
-  - arguments: berlin
-    expect: <title> Find
 owncloud 0:
   url: https://owncloud.org/
   title: ownCloud
-  description: owncloud is a Open source cloud server and client software.
   tags:
   - cloud
   - copyleft
   - open-source
+  description: owncloud is a Open source cloud server and client software.
 pa 0:
   include:
   - key: pa 0
@@ -6136,25 +6136,25 @@ pastebin 0:
 pat 1:
   url: https://worldwide.espacenet.com/<publicationnumber>
   title: Patentserver
-  description: Worldwide patent service. Multi-language interface.
   tags:
   - patents
+  description: Worldwide patent service. Multi-language interface.
 patent 1:
   url: https://worldwide.espacenet.com/patent/search?q=<query>
   title: Patentserver Espacenet Query
-  description: Worldwide patent service. Multi-language interface.
   tags:
   - patents
+  description: Worldwide patent service. Multi-language interface.
 pci 0:
   url: https://podcastindex.org/
   title: Podcast Index
-  examples:
-  - description: Go to homepage
   tags:
   - podcasts
+  examples:
+  - description: Go to homepage
 pci 1:
-  include: pci 0
   url: https://podcastindex.org/search?q=<query>&type=all
+  include: pci 0
   examples:
   - arguments: books
     description: search for podcasts about books
@@ -6228,8 +6228,8 @@ pew 1:
   - arguments: climate change
     description: Search for "climate change"
 pewg 1:
-  title: Pew Research Center via Google
   url: https://www.google.com/search?hl=<$language>&q=site:pewresearch.org%20<query>&ie=utf-8
+  title: Pew Research Center via Google
   include: pew 0
   examples:
   - arguments: climate change
@@ -6277,10 +6277,10 @@ php 1:
   tags:
   - php
   - programming
+  showOnHome: 1150
   examples:
   - arguments: strlen
     description: Search PHP docs for "strlen"
-  showOnHome: 1150
 phpg 1:
   url: https://www.google.com/search?hl=<$language>&q=site%3Awww.php.net+<query>
   title: PHP Documentation via Google
@@ -6376,7 +6376,6 @@ plot 1:
 plt 1:
   url: https://www.google.com/search?hl=<$language>&q=matplotlib+<query>
   title: matplotlib via Google
-  description: Quickly Google for help with matplotlib because oh boy, you need all the help you can get, and you don't want to waste time typing the unwieldy name of that library.
   tags:
   - plot
   - plotting
@@ -6386,6 +6385,7 @@ plt 1:
   examples:
   - arguments: heatmap
     description: Get help on creating heatmaps with matplotlib
+  description: Quickly Google for help with matplotlib because oh boy, you need all the help you can get, and you don't want to waste time typing the unwieldy name of that library.
 pm 1:
   url: https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?CMD=search&DB=pubmed&term=<query>
   title: PubMed
@@ -6398,7 +6398,9 @@ pm 1:
 poef 1:
   url: https://www.pathofexile.com/search/results/<query>/search-within/forumthreads-forumposts
   title: Official Path of Exile forum
-  description: Official Forum for the F2P online ARPG "Path of Exile" (PoE).
+  tests:
+  - arguments: Rhoa
+    expect: Results for Rhoa
   tags:
   - path-of-exile
   - poe
@@ -6407,13 +6409,13 @@ poef 1:
     description: Search  for "Rhoa"
   - arguments: How to Smash Heads
     description: Search  for "How to Smash Heads" - Korgoth's Facebreaker guide
-  tests:
-  - arguments: Rhoa
-    expect: Results for Rhoa
+  description: Official Forum for the F2P online ARPG "Path of Exile" (PoE).
 poew 1:
   url: https://pathofexile.gamepedia.com/index.php?search=<query>&go=Go
   title: Inofficial Path of Exile Wiki
-  description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that acts as the main knowledgebase for PoE-players.
+  tests:
+  - arguments: health
+    expect: name="query" value="health"/>
   tags:
   - gamepedia
   - path-of-exile
@@ -6425,9 +6427,7 @@ poew 1:
     description: Search inofficial Path of Exile Wiki for "Vendor recipe system"
   - arguments: Vaal Orb
     description: Search inofficial Path of Exile Wiki for "Vaal Orb"
-  tests:
-  - arguments: health
-    expect: name="query" value="health"/>
+  description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that acts as the main knowledgebase for PoE-players.
 printertestfiles 0:
   url: https://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
   title: Printer test files
@@ -6538,10 +6538,10 @@ py 1:
   tags:
   - programming
   - python
+  showOnHome: 900
   examples:
   - arguments: optparse
     description: Get documentation for opt parse
-  showOnHome: 900
 py2 0:
   url: https://docs.python.org/2/
   title: Python 2 documentation
@@ -6748,12 +6748,12 @@ rails 1:
 rarbg 0:
   url: https://www.rarbg-official.com/
   title: RARBG
-  description: RARBG torrent tracker
   tags:
   - download
   - downloads
   - torrent
   - torrents
+  description: RARBG torrent tracker
 rarbg 1:
   url: https://en.rarbg-official.com/movies?keyword=<query>
   include: rarbg 0
@@ -7126,12 +7126,12 @@ scala 1:
 sci-hub 1:
   url: https://sci-hub.do/<query>
   title: Sci-Hub
-  description: Sci-Hub is a shadow library website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers' paywalls in various ways.
   tags:
   - open-access
   examples:
   - arguments: 10.1111/nyas.13068
     description: Search for "10.1111/nyas.13068"
+  description: Sci-Hub is a shadow library website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers' paywalls in various ways.
 scry 1:
   url: https://scryfall.com/search?q=<query>
   title: 'Scryfall: Magic the Gathering cards'
@@ -7596,7 +7596,6 @@ tails 0:
 tat 2:
   url: https://tatoeba.org/eng/sentences/search?to=<target language>&query=<query>
   title: Tatoeba search with specified target language
-  description: Use 3-letter language code!
   tags:
   - dictionary
   - languages
@@ -7606,10 +7605,10 @@ tat 2:
   examples:
   - arguments: ita, not at all
     description: search for Italian translations of the phrase "not at all"
+  description: Use 3-letter language code!
 tat 3:
   url: https://tatoeba.org/eng/sentences/search?from=<source_language>&to=<target_language>&query=<query>
   title: Tatoeba search with specified source and target language
-  description: Use 3-letter language codes!
   tags:
   - dictionary
   - languages
@@ -7619,16 +7618,17 @@ tat 3:
   examples:
   - arguments: en, ita, not at all
     description: search for Italian translations of the English phrase "not at all"
+  description: Use 3-letter language codes!
 tav 0:
+  url: https://www.tripadvisor.com/
   title: Tripadvisor
   tags:
   - travel
-  url: https://www.tripadvisor.com/
   examples:
   - description: Go to hompeage
 tav 1:
-  include: tav 0
   url: https://www.tripadvisor.com/Search?q=<query>
+  include: tav 0
   examples:
   - arguments: ghent
     description: search for travel info on Ghent
@@ -7782,14 +7782,14 @@ tik 0:
 tik 1:
   url: https://www.tiktok.com/search?q=<query>
   title: TikTok
-  description: Searches TikTok.
   tags:
   - tiktok
   - video
+  showOnHome: 1300
   examples:
   - arguments: berlin
     description: Search for videos about Berlin
-  showOnHome: 1300
+  description: Searches TikTok.
 tiktok 1:
   deprecated:
     alternative:
@@ -7798,13 +7798,13 @@ tiktok 1:
 tiku 1:
   url: https://www.tiktok.com/@<user>
   title: TikTok, User
-  description: Shows the userpage of a TikTok user.
   tags:
   - tiktok
   - video
   examples:
   - arguments: juliaticaofficial
     description: Show userpage of "juliaticaofficial"
+  description: Shows the userpage of a TikTok user.
 time 1:
   url: https://www.timeanddate.com/worldclock/results.html?query=<location>
   title: Timeanddate.com
@@ -7942,11 +7942,11 @@ tpl 0:
   - reviews
 tpl 1:
   url: https://www.trustpilot.com/search?query=<query>
+  include:
+  - key: tpl 0
   examples:
   - arguments: vodafone
     description: Search for reviews about Vodafone
-  include:
-  - key: tpl 0
 tr 0:
   include:
   - key: tr 0
@@ -8607,10 +8607,10 @@ w 1:
   - encyclopedia
   - wiki
   - wikipedia
+  showOnHome: 610
   examples:
   - arguments: berlin
     description: Wikipedia article about Berlin
-  showOnHome: 610
 wa 0:
   url: https://www.wolframalpha.com
   title: WolframAlpha
@@ -8669,11 +8669,11 @@ wbit 1:
 wbm 1:
   url: 'https://web.archive.org/web/*/<url: {encoding: none}>'
   title: Wayback Machine
-  description: Explore past snapshots of the given Web page
   tags:
   - archive
   - internet
   - web
+  description: Explore past snapshots of the given Web page
 wc 1:
   url: https://<$language>.wikipedia.org/wiki/Special:Contributions/<user>
   title: Wikipedia, User Contributions
@@ -8708,12 +8708,12 @@ wd 1:
     description: Search Wikidata for "Berlin"
 wde 1:
   url: https://de.wikipedia.org/wiki/Special:Search?go=Article&search=<article>
-  title: 'Wikipedia Article Search (German) '
+  title: Wikipedia Article Search (German)
+  tags:
+  - old
   examples:
   - arguments: berlin
     description: Wikipedia article about Berlin
-  tags:
-  - old
 we 0:
   url: https://www.wetter.com/
   title: Wetter.com
@@ -8760,7 +8760,7 @@ wf 2:
   - wiki
   - wikipedia
   examples:
-  - arguments: 'als, berlin '
+  - arguments: als, berlin
     description: Alemannische Wikipedia article about Berlin
 wfr 1:
   url: https://fr.wikipedia.org/wiki/<query>
@@ -9039,11 +9039,11 @@ wsp 0:
   - weather
 wsp 1:
   url: 'https://weatherspark.com/search?q=<location: {type: city}>'
+  include:
+  - key: wsp 0
   examples:
   - arguments: berlin
     description: Lookup climate data for Berlin
-  include:
-  - key: wsp 0
 wssl 0:
   url: https://secure.wikimedia.org/wikipedia/<$language>/wiki/
   title: Wikipedia Main Page via SSL
@@ -9403,13 +9403,13 @@ yo 1:
 yr 1:
   url: https://yr-web-prod.we.yr.azure.nrk.cloud/nb/s%C3%B8k?q=<query>
   title: Yr weather report
-  description: "yr.no is a Norwegian website for weather forecasting and other meteorological information (which is also in English). The site is a joint responsibility of the Norwegian Broadcasting Corporation and the Norwegian Meteorological Institute.\r\n\r\nThe website offers forecasts (as graphs, symbols and maps) for more than 9 million places in the world. The Norwegian forecasts are supplemented with textual forecasts, weather radars, satellite images and a wide range of more specialised forecasts. The forecasts are based on data from the Norwegian Meteorological Institute and several international meteorological organisations (ECMWF, EUMETSAT etc.)."
   tags:
   - forecast
   - weather
   examples:
   - arguments: Berlin
     description: Look up the weather in Berlin
+  description: "yr.no is a Norwegian website for weather forecasting and other meteorological information (which is also in English). The site is a joint responsibility of the Norwegian Broadcasting Corporation and the Norwegian Meteorological Institute.\r\n\r\nThe website offers forecasts (as graphs, symbols and maps) for more than 9 million places in the world. The Norwegian forecasts are supplemented with textual forecasts, weather radars, satellite images and a wide range of more specialised forecasts. The forecasts are based on data from the Norwegian Meteorological Institute and several international meteorological organisations (ECMWF, EUMETSAT etc.)."
 ys 1:
   url: https://www.yasni.de/index.php?action=search&search=1&sh=&name=<query>&filter=Stichwort
   title: Yasni Personensuche
@@ -9427,20 +9427,20 @@ yt 1:
   tags:
   - video
   - youtube
+  showOnHome: 400
   examples:
   - arguments: cartoon
     description: Youtube search for "cartoon"
-  showOnHome: 400
 ytd 1:
   url: https://www.youtube.com/results?sp=CAI%253D&search_query=<query>
   title: Youtube, sorted by upload date
   tags:
   - video
   - youtube
+  showOnHome: 410
   examples:
   - arguments: cartoon
     description: Search for "cartoon"
-  showOnHome: 410
 yth 0:
   url: https://www.youtube.com/feed/history
   title: Youtube, my history

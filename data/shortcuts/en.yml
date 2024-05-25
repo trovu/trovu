@@ -112,7 +112,7 @@ mwt 1:
   - dictionary
   - english
   examples:
-  - arguments: 'important '
+  - arguments: important
     description: Search for synonyms of "important"
 ox 1:
   url: https://en.oxforddictionaries.com/definition/<word>
@@ -144,7 +144,7 @@ syn 1:
   - english
   - thesaurus
   examples:
-  - arguments: 'important '
+  - arguments: important
     description: Search for synonyms of "important"
 uvi 0:
   url: https://verbs.colorado.edu/verb-index/vn3.3
@@ -208,7 +208,6 @@ wsl 1:
 ygl 0:
   url: https://youglish.com/english
   title: YouGlish, English
-  description: Search for a word mentioned in videos of top YouTube speakers naturally pronouncing the word in context.
   tags:
   - english
   - language
@@ -216,6 +215,7 @@ ygl 0:
   - youtube
   examples:
   - description: Go to homepage
+  description: Search for a word mentioned in videos of top YouTube speakers naturally pronouncing the word in context.
 ygl 1:
   url: https://youglish.com/pronounce/<word>/english
   include: ygl 0
