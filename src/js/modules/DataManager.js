@@ -33,6 +33,7 @@ export default class DataManager {
    */
   static write(data, options = {}) {
     options = this.getDefaultOptions(options);
+    this.normalizeShortcuts(data.shortcuts);
     this.normalizeTags(data.shortcuts);
     this.verifyShortcuts(data.shortcuts);
     DataManager.writeYmls(
@@ -64,6 +65,29 @@ export default class DataManager {
       }
     }
   }
+
+  /**
+   * Normalize shortcuts.
+   * @param {Object} shortcuts by namespace
+   */
+  static normalizeShortcuts(shortcuts) {
+    for (const namespace in shortcuts) {
+      for (const key in shortcuts[namespace]) {
+        const shortcut = shortcuts[namespace][key];
+        // Sort the keys of the shortcut object in descending order
+        const sortedKeys = Object.keys(shortcut).sort((a, b) =>
+          b.localeCompare(a),
+        );
+        const sortedShortcut = {};
+        // Create a new object with sorted keys
+        for (const sortedKey of sortedKeys) {
+          sortedShortcut[sortedKey] = shortcut[sortedKey];
+        }
+        shortcuts[namespace][key] = sortedShortcut;
+      }
+    }
+  }
+
   /**
    * Normalize tags in every shortcut.
    * @param {Object} shortcuts by namespace
