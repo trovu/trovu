@@ -1,70 +1,70 @@
 0180 0:
   url: https://www.0180.info/
   title: 0180-Telefonbuch
-  description: Liste mit Ersatznummern für Hot­lines mit der Vor­wahl 0180
+  tests:
+  - expect: <title>0180-Telefonbuch
   tags:
   - phone
   - telefonbuch
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>0180-Telefonbuch
+  description: Liste mit Ersatznummern für Hot­lines mit der Vor­wahl 0180
 0180 1:
   url: https://www.0180.info/suche.html?s=<Suche>
+  tests:
+  - arguments: 01805-033144
+    expect: <title>01805-033144
   include: 0180 0
   examples:
   - arguments: 01805-033144
     description: Suche nach alternativen Nummern zu 01805-033144
-  tests:
-  - arguments: 01805-033144
-    expect: <title>01805-033144
 a 0:
   url: https://www.amazon.de/
   title: Amazon.de
+  tests:
+  - expect: <title>Amazon.de
   tags:
   - amazon
   - books
   - shopping
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>Amazon.de
 a 1:
   url: https://www.amazon.de/s?k=<Suche>
+  tests:
+  - arguments: goethe
+    expect: '<title>Amazon.de : goethe</title>'
   include: a 0
   examples:
   - arguments: goethe
     description: Suche auf Amazon.at nach "goethe"
-  tests:
-  - arguments: goethe
-    expect: '<title>Amazon.de : goethe</title>'
 aa 0:
   url: https://www.auswaertiges-amt.de/de/ReiseUndSicherheit
   title: Auswärtiges Amt, Reise und Sicherheitshinweise
+  tests:
+  - expect: <title>Reise, Sicherheit, Gesundheit
   tags:
   - reise
   - travel
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>Reise, Sicherheit, Gesundheit
 aa 1:
   url: https://www.google.com/search?q=site%3Aauswaertiges-amt.de%20ReiseUndSicherheit%20<Land>&btnI=&sourceid=navclient&gfns=1
+  tests:
+  - arguments: türkei
+    expect: '<title>Türkei: Reise- und Sicherheitshinweise'
   include: aa 0
   examples:
   - arguments: türkei
     description: Zeige Reise- und Sicherheitshinweise des Auswärtigen Amtes zur Türkei
-  tests:
-  - arguments: türkei
-    expect: '<title>Türkei: Reise- und Sicherheitshinweise'
 ac 0:
   url: https://www.amazon.de/gp/cart/view.html
   title: Amazon Einkaufswagen
+  tests: need to be logged in
   tags:
   - amazon
   examples:
   - description: Gehe zum Amazon-Einkaufswagen
-  tests: need to be logged in
 alternate 1:
   deprecated:
     alternative:
@@ -78,47 +78,47 @@ amazon 1:
 ao 0:
   url: https://www.amazon.de/gp/css/order-history
   title: Amazon Bestellungen
+  tests: need to be logged in
   examples:
   - description: Gehe zu meinen Amazon-Bestellungen
-  tests: need to be logged in
 atn 0:
   url: https://www.alternate.de/
   title: Alternate
+  tests:
+  - expect: ALTERNATE Online Shop</title>
   tags:
   - electronics
   - hardware
   - shopping
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: ALTERNATE Online Shop</title>
 atn 1:
   url: https://www.alternate.de/listing.xhtml?q=<Produkt>
-  examples:
-  - arguments: fernseher
-    description: Suche nach Fernsehern
-  include: atn 0
   tests:
   - arguments: fernseher
     expect: <title>Fernseher
+  include: atn 0
+  examples:
+  - arguments: fernseher
+    description: Suche nach Fernsehern
 aw 0:
   url: https://www.abgeordnetenwatch.de/
   title: Abgeordnetenwatch
+  tests:
+  - expect: <title>abgeordnetenwatch.de
   tags:
   - politics
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>abgeordnetenwatch.de
 aw 1:
   url: https://www.abgeordnetenwatch.de/profile?politician_search_keys=<Politiker oder Suchbegriff>
+  tests:
+  - arguments: meier
+    expect: value="meier"
   include: aw 0
   examples:
   - arguments: meier
     description: Search Abgeordnetenwatch for "meier"
-  tests:
-  - arguments: meier
-    expect: value="meier"
 bauhaus 0:
   deprecated:
     alternative:
@@ -132,13 +132,13 @@ bauhaus 1:
 bbb 0:
   url: https://www.bbbike.de/
   title: Berlin by Bike (BBBike.de)
-  description: Fahrrad-Routenplaner für Berlin
   tags:
   - berlin
   - map
   - routing
   examples:
   - description: Gehe zur Startseite
+  description: Fahrrad-Routenplaner für Berlin
 bbb 2:
   url: https://www.bbbike.de/cgi-bin/bbbike.cgi?start=<Start>&via=&ziel=<Ziel>
   include: bbb 0
@@ -175,7 +175,6 @@ bhf 1:
 bhnt 0:
   url: https://bhnt.c-base.org/
   title: Berlin Hack & Tell
-  description: Berlin Hack and Tell is a monthly(ish) meetup where eight entities can show their hacks at c-base space station every(ish) last Tuesday of the month.
   tags:
   - berlin
   - c-base
@@ -185,6 +184,7 @@ bhnt 0:
   - open-source
   examples:
   - description: Gehe zur Startseite
+  description: Berlin Hack and Tell is a monthly(ish) meetup where eight entities can show their hacks at c-base space station every(ish) last Tuesday of the month.
 bhnt 1:
   url: https://github.com/search?q=repo%3Aberlin-hack-and-tell%2Fbhnt.c-base.org%20<Suche>
   include: bhnt 0
@@ -194,26 +194,28 @@ bhnt 1:
 bhs 0:
   url: https://www.bauhaus.info/
   title: BAUHAUS
+  tests:
+  - expect: <title>BAUHAUS
   tags:
   - diy
   - hardware
   - shopping
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>BAUHAUS
 bhs 1:
   url: https://www.bauhaus.info/suche/produkte?text=<Suche>
+  tests:
+  - arguments: schrauben
+    expect: <title>schrauben
   include: bhs 0
   examples:
   - arguments: schrauben
     description: Suche nach Schrauben
-  tests:
-  - arguments: schrauben
-    expect: <title>schrauben
 bibfu 0:
   url: https://www.fu-berlin.de/sites/ub/index.html
   title: Bibliothek der FU Berlin
+  tests:
+  - expect: <title>Universitätsbibliothek
   tags:
   - berlin
   - books
@@ -221,77 +223,77 @@ bibfu 0:
   - uni
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>Universitätsbibliothek
 bibfu 1:
   url: https://fu-berlin.primo.exlibrisgroup.com/discovery/search?institution=FUB&vid=49KOBV_FUB:FUB&tab=FUB_CDI&mode=Basic&backFromPreferences=true&search_scope=FUB_CDI&displayMode=full&bulkSize=10&highlight=true&dum=true&displayField=all&pcAvailabiltyMode=false&fromLocation=188&query=any,contains,<Suche>
+  tests: search term only appears with JavaScript being enabled
   include: bibfu 0
   examples:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
-  tests: search term only appears with JavaScript being enabled
 bibgvk 0:
   url: https://kxp.k10plus.de/
   title: Gemeinsamer Verbundkatalog des GBV
+  tests:
+  - expect: <title>GVK - Gemeinsamer Verbundkatalog
   tags:
   - books
   - library
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>GVK - Gemeinsamer Verbundkatalog
 bibgvk 1:
   url: https://kxp.k10plus.de/DB=2.1/SET=1/TTL=1/CMD?ACT=SRCHA&IKT=1016&SRT=YOP&LNG=DU&TRM=<Suche>
+  tests:
+  - arguments: Basicode
+    expect: Basicode</psi:queryVar>
   include: bibgvk 0
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
-  tests:
-  - arguments: Basicode
-    expect: Basicode</psi:queryVar>
 bibhal 0:
   url: https://katalog.halle.de/
   title: Stadtbibliothek Halle (Saale)
+  tests:
+  - expect: Stadtbibliothek Halle[\s\S]*</title>
   tags:
   - books
   - halle
   - library
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: Stadtbibliothek Halle[\s\S]*</title>
 bibhal 1:
   url: https://katalog.halle.de/Mediensuche?search=<Suche>
+  tests:
+  - arguments: Unterleuten
+    expect: value="Unterleuten"
   include: bibhal 0
   examples:
   - arguments: Unterleuten
     description: Suche nach "Unterleuten"
-  tests:
-  - arguments: Unterleuten
-    expect: value="Unterleuten"
 bibhbz 0:
   url: https://nrw.digibib.net/
   title: Hochschulbibliothekszentrum NRW
+  tests:
+  - expect: DigiBib</title>
   tags:
   - books
   - library
   - uni
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: DigiBib</title>
 bibhbz 1:
   url: https://nrw.digibib.net/search/hbzvk/list?q-al=<Suche>
+  tests:
+  - arguments: Basicode
+    expect: <title>Suchergebnisse
   include: bibhbz 0
   examples:
   - arguments: Basicode
     description: Suche nach "Basicode"
-  tests:
-  - arguments: Basicode
-    expect: <title>Suchergebnisse
 bibka 0:
   url: https://www.bibliotheksportal-karlsruhe.de/
   title: Bibliotheksportal Karlsruhe
+  tests:
+  - expect: <title>KIT-Bibliothek
   tags:
   - books
   - karlsruhe
@@ -299,20 +301,20 @@ bibka 0:
   - uni
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>KIT-Bibliothek
 bibka 1:
   url: https://kvk.bibliothek.kit.edu/hylib-bin/kvk/nph-kvk2.cgi?maske=ka&input-charset=utf-8&title=Bibliotheksportal+Karlsruhe+%3A+Ergebnisanzeige&head=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fhead.html&header=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fheader.html&footer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Ffooter.html&css=none&spacer=%2F%2Fwww.bibliotheksportal-karlsruhe.de%2Fasset%2Fhtml%2Fspacer.html&target=_blank&olix_returnTo=%2F%2Fbibliotheksportal-karlsruhe.de%2F&ALL=<Suche>&TI=&AU=&CI=&ST=&PY=&SB=&SS=&PU=&kataloge=BLB_OPAC&kataloge=STABIKA&kataloge=KIT&kataloge=HSMUSIK_KA&kataloge=HSB&kataloge=MERKUR_KA&kataloge=AKBILDKUENSTE_KA&kataloge=BGH_OPAC&kataloge=BVG_OPAC&kataloge=KUNST_BADLAMUSEUM&kataloge=BISMARCK_KA&kataloge=EV_OBERKIRCHENRAT&kataloge=LBB&kataloge=MELANCHTON&kataloge=SCHEFFEL&kataloge=RELPAED_INST&kataloge=KUNST_KUHAKA&kataloge=ZKM&ref=direct&client-js=yes
+  tests:
+  - arguments: goethe
+    expect: '<title>Bibliotheksportal Karlsruhe : Ergebnisanzeige'
   include: bibka 0
   examples:
   - arguments: goethe
     description: Suche nach Goethe
-  tests:
-  - arguments: goethe
-    expect: '<title>Bibliotheksportal Karlsruhe : Ergebnisanzeige'
 bibkit 0:
   url: https://www.bibliothek.kit.edu/
   title: KIT-Bibliothek
+  tests:
+  - expect: <title>KIT-Bibliothek
   tags:
   - books
   - karlsruhe
@@ -320,15 +322,13 @@ bibkit 0:
   - library
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>KIT-Bibliothek
 bibkit 1:
   url: https://services.bibliothek.kit.edu/primo/start.php?query=<Suche>
+  tests: search term only appears with JavaScript being enabled
   include: bibkit 0
   examples:
   - arguments: xml
     description: Search for books about XML
-  tests: search term only appears with JavaScript being enabled
 bibkobv 0:
   url: https://portal.kobv.de/
   title: Kooperativer Bibliotheksverbund Berlin-Brandenburg (KOBV)
@@ -448,7 +448,6 @@ bibup 2:
 bkat 0:
   url: https://bkat.wikinaut.de/
   title: BKatSearch Bußgeldkatalog
-  description: Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
   tags:
   - bußgelder
   - bußgeldtabelle
@@ -457,6 +456,7 @@ bkat 0:
   - traffic
   examples:
   - description: Gehe zur Startseite
+  description: Schnellsuche im Bundeseinheitlichen Bußgeldkatalog 2021
 bkat 1:
   url: https://bkat.wikinaut.de/?q=<Suche>
   include: bkat 0
@@ -543,26 +543,25 @@ bsvg 2:
 bu7 0:
   url: https://www.buch7.de
   title: Buch7
-  description: Online-Buchhändler
   tags:
   - books
   - bookshop
   examples:
   - description: Gehe zur Startseite
+  description: Online-Buchhändler
 bu7 1:
   url: https://www.buch7.de/suche?utf8=%E2%9C%93&search=<Suche>
   title: Buch7 Suche
-  description: Allgemeine Suche bei buch7
   tags:
   - books
   - bookshop
   examples:
   - arguments: Windward Banks
     description: Suche nach einem Buch nach Titel und Autor, unspezifisch
+  description: Allgemeine Suche bei buch7
 bu7a 1:
   url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&contributor=<Autor>
   title: Buch7 Autorensuche
-  description: Suche nach Autor (»contributor«) beim Online-Buchhändler buch7
   tags:
   - Autor
   - books
@@ -570,10 +569,10 @@ bu7a 1:
   examples:
   - arguments: Sarah Gailey
     description: Suche nach Büchern einer bestimmten Autorin
+  description: Suche nach Autor (»contributor«) beim Online-Buchhändler buch7
 bu7i 1:
   url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&isbn=<isbn>
   title: Buch7 ISBN-Suche
-  description: Suche nach ISBN beim Online-Buchhändler buch7
   tags:
   - ISBN
   - books
@@ -581,10 +580,10 @@ bu7i 1:
   examples:
   - arguments: '9780226389578'
     description: Sucht nach einem Buch mit bekannter ISBN
+  description: Suche nach ISBN beim Online-Buchhändler buch7
 bu7t 1:
   url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel=<Titel>
   title: Buch7 Titelsuche
-  description: Suche nach Buchtitel beim Online-Buchhändlers buch7
   tags:
   - Titel
   - books
@@ -592,10 +591,10 @@ bu7t 1:
   examples:
   - arguments: all men of genius
     description: Buchsuche nach Titel
+  description: Suche nach Buchtitel beim Online-Buchhändlers buch7
 bu7ta 2:
   url: https://www.buch7.de/erweiterte-suche?utf8=%E2%9C%93&titel=<Titel>&contributor=<Autor>
   title: Buch7 Titel- und Autorensuche
-  description: Suche nach Titel und Autor beim Online-Buchhändler buch7
   tags:
   - Autor
   - Titel
@@ -604,6 +603,7 @@ bu7ta 2:
   examples:
   - arguments: Cheer, Frasier
     description: Buchsuche nach Titel und Autor
+  description: Suche nach Titel und Autor beim Online-Buchhändler buch7
 bvb 0:
   url: https://www.bib-bvb.de/
   title: BibliotheksVerbund Bayern
@@ -699,13 +699,13 @@ db 0:
 db 1:
   url: https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?input=<Bahnhof>&boardType=dep&time=actual&productsDefault=1111101&start=yes
   title: Deutsche Bahn, Verspätungen / aktuelle Abfahrt
+  include: db 0
   examples:
   - arguments: berlin hbf
     description: Verspätungen / aktuelle Abfahrten in Berlin Hbf
-  include: db 0
 db 2:
-  include: dbm 2
   showOnHome: 700
+  include: dbm 2
 db 3:
   include: dbm 3
 db 4:
@@ -713,11 +713,11 @@ db 4:
 dbb 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare'
   title: Deutsche Bahn (Bestpreis)
+  showOnHome: 710
+  include: db 0
   examples:
   - arguments: köln, münchen, 30.11.
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
-  include: db 0
-  showOnHome: 710
 dbm 0:
   url: https://mobile.bahn.de/
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
@@ -737,17 +737,17 @@ dbm 2:
 dbm 3:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
+  include: dbm 0
   examples:
   - arguments: berlin, hamburg, 10
     description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
-  include: dbm 0
 dbm 4:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
+  include: dbm 0
   examples:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
-  include: dbm 0
 dbmn 2:
   url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
@@ -790,10 +790,10 @@ dbn 3:
 dbn 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
+  include: db 0
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
-  include: db 0
 dbt 0:
   url: https://reiseauskunft.bahn.de/bin/query.exe/dl
   title: Deutsche Bahn Fahrplanauskunft, Textversion
@@ -803,45 +803,45 @@ dbt 0:
 dbt 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
+  include: dbt 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
-  include: dbt 0
 dbt 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
+  include: dbt 0
   examples:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
-  include: dbt 0
 dbt 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion
+  include: dbt 0
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
-  include: dbt 0
 dbtn 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
+  include: dbt 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Verbindung von Berlin nach Hamburg
-  include: dbt 0
 dbtn 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
+  include: dbt 0
   examples:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
-  include: dbt 0
 dbtn 4:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
+  include: dbt 0
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
-  include: dbt 0
 dejure 0:
   url: https://dejure.org/
   title: Dejure.org Gesetze
@@ -1037,11 +1037,11 @@ g 0:
   - description: Gehe zur Startseite
 g 1:
   url: https://www.google.de/search?hl=<$language>&q=<Suche>&ie=utf-8
+  showOnHome: 600
   include: g 0
   examples:
   - arguments: berlin
     description: Google-Suche nach berlin
-  showOnHome: 600
 gh 0:
   url: https://geizhals.de/
   title: Geizhals Deutschland
@@ -1060,13 +1060,13 @@ gh 1:
 gii 0:
   url: https://www.gesetze-im-internet.de/
   title: Gesetze im Internet
+  tests:
+  - expect: <title>Gesetze im Internet
   tags:
   - gesetze
   - law
   examples:
   - description: Gehe zur Startseite
-  tests:
-  - expect: <title>Gesetze im Internet
 gii 1:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Awww.gesetze-im-internet.de%20<Suche>
   include: gii 0
@@ -1075,6 +1075,9 @@ gii 1:
     description: Suche nach "beweislast"
 gii 2:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Awww.gesetze-im-internet.de%20<Paragraph>%20<Gesetz>
+  tests:
+  - arguments: 5, gg
+    expect: Art 5
   include: gii 0
   examples:
   - arguments: 5, gg
@@ -1083,9 +1086,6 @@ gii 2:
     description: Zeige Paragraph 12 des Bürgerlichen Gesetzbuchs
   - arguments: 129a, stgb
     description: Zeige Paragraph 129a des Strafgesetzbuchs
-  tests:
-  - arguments: 5, gg
-    expect: Art 5
 gls 0:
   url: https://www.gls-pakete.de/sendungsverfolgung
   title: GLS Sendungsverfolgung
@@ -4763,7 +4763,6 @@ iwb 0:
 jf 0:
   url: https://justfind.hds.hebis.de/
   title: JLU Gießen JustFind
-  description: Literatursuche der Justus-Liebig-Universität Gießen
   tags:
   - education
   - giessen
@@ -4773,6 +4772,7 @@ jf 0:
   - student
   examples:
   - description: Gehe zur Startseite
+  description: Literatursuche der Justus-Liebig-Universität Gießen
 jf 1:
   url: https://justfind.hds.hebis.de/Search/Results?lookfor=<Suche>&type=AllFields
   include: jf 0
@@ -4782,12 +4782,12 @@ jf 1:
 jw 0:
   url: https://www.justwatch.com/
   title: JustWatch
-  description: Streaming-Suchmaschine für Filme und Serien
   tags:
   - movies
   - series
   examples:
   - description: Gehe zur Startseite
+  description: Streaming-Suchmaschine für Filme und Serien
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
   include: jw 0
@@ -4915,11 +4915,11 @@ koka 1:
 kununu 0:
   url: https://www.kununu.com/de/
   title: Kununu Deutschland
-  description: Suche nach Arbeitgeber-Bewertungen
   tags:
   - employer
   examples:
   - description: Gehe zur Startseite
+  description: Suche nach Arbeitgeber-Bewertungen
 kununu 1:
   url: https://www.kununu.com/de/search?q=<Suche>
   include: kununu 0
@@ -5015,26 +5015,26 @@ mm 0:
   - description: Gehe zur Startseite
 mm 1:
   url: https://www.mediamarkt.de/de/search.html?query=<Suche>
+  include: mm 0
   examples:
   - arguments: fernseher
     description: Suche nach Fernsehern
-  include: mm 0
 mmops 0:
   url: https://www.medimops.de/
   title: Medimops
+  tests: only return 403 when called with our tester
   tags:
   - books
   - shopping
   examples:
   - description: Gehe zur Startseite
-  tests: only return 403 when called with our tester
 mmops 1:
   url: https://www.medimops.de/produkte-C0/?fcIsSearch=1&searchparam=<Suche>
+  tests: only return 403 when called with our tester
   include: mmops 0
   examples:
   - arguments: Turbo Pascal
     description: Suche nach "Turbo Pascal"
-  tests: only return 403 when called with our tester
 mvv 0:
   url: https://www.mvv-muenchen.de/
   title: Elektronische Fahrplanauskunft München
@@ -5283,15 +5283,15 @@ tho 1:
   - arguments: gitarre
     description: Suche nach Gitarre
 tra 0:
+  url: https://www.tripadvisor.de/
   title: Tripadvisor
   tags:
   - travel
-  url: https://www.tripadvisor.de/
   examples:
   - description: Gehe zur Startseite
 tra 1:
-  include: tra 0
   url: https://www.tripadvisor.de/Search?q=<query>
+  include: tra 0
   examples:
   - arguments: gent
     description: Suche nach touristischen Infos über Gent
@@ -5319,8 +5319,8 @@ tvinfo 1:
     description: Suche nach "tagesschau"
 tvu 1:
   url: https://www.tvinfo.de/fernsehprogramm/<Stunde>:00
-  include: tv 0
   title: TV-Programm um ...
+  include: tv 0
   examples:
   - arguments: '20'
     description: Search for "20"

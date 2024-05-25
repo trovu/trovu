@@ -493,13 +493,13 @@ frp 1:
 frv 1:
   url: https://de.forvo.com/search/<word>/
   title: Forvo
-  description: Forvo Aussprachedatenbank, deutsches Interface
   tags:
   - language
   - pronunciation
   examples:
   - arguments: Soest
     description: Sucht nach der Aussprache von "Soest"
+  description: Forvo Aussprachedatenbank, deutsches Interface
 gfp 0:
   url: https://german-foreign-policy.com/
   title: German Foreign Policy
@@ -611,10 +611,10 @@ hpv 0:
   - shopping
 hpv 1:
   url: https://www.heise.de/preisvergleich/?fs=<Produkt>
+  include: hpv 0
   examples:
   - arguments: computer
     description: Vergleiche Preise für "computer"
-  include: hpv 0
 hsoft 0:
   url: https://www.heise.de/software/
   title: Heise Softwareverzeichnis Startseite
@@ -1001,12 +1001,12 @@ rivva 1:
 rm 1:
   url: https://www.pledarigrond.ch/rumantschgrischun/#searchPhrase=<pled>
   title: Romanisch-Deutsch via Pledari Grond
-  description: Dictionary German <-> Rumantsch Grischun
   tags:
   - dictionary
   - german
   - language
   - rumantsch-grischun
+  description: Dictionary German <-> Rumantsch Grischun
 rub 1:
   deprecated:
     alternative:

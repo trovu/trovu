@@ -1,13 +1,13 @@
 frv 1:
   url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
-  description: Forvo pronunciation database, localized interface
   tags:
   - language
   - pronunciation
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
+  description: Forvo pronunciation database, localized interface
 fw 1:
   url: https://www.filmweb.pl/search?q=<tytuł/osoba>
   title: FilmWeb

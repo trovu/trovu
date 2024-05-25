@@ -1,46 +1,46 @@
 frv 1:
   url: https://<$language>.forvo.com/search/<word>/
   title: Forvo
-  description: Forvo pronunciation database, localized interface
   tags:
   - language
   - pronunciation
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
+  description: Forvo pronunciation database, localized interface
 pv 0:
   url: https://slovnik.aktuality.sk/pravopis/
   title: Slovník.sk, pravopis
+  tests:
+  - expect: <title>Pravopis
   tags:
   - language
   - pravopis
   - slovnik
-  tests:
-  - expect: <title>Pravopis
 pv 1:
   url: https://slovnik.aktuality.sk/pravopis/?q=<slovo>
+  tests:
+  - arguments: strom
+    expect: <title>„strom“
   include: pv 0
   examples:
   - arguments: strom
     description: Hladaj slovo "strom" v pravopisnom slovníku
-  tests:
-  - arguments: strom
-    expect: <title>„strom“
 syn 0:
   url: https://slovnik.aktuality.sk/synonyma/
   title: Slovník.sk, pravopis
+  tests:
+  - expect: <title>Synonymický
   tags:
   - language
   - slovnik
   - synonyma
-  tests:
-  - expect: <title>Synonymický
 syn 1:
   url: https://slovnik.aktuality.sk/synonyma/?q=<slovo>
+  tests:
+  - arguments: strom
+    expect: <title>&quot;strom&quot;
   include: syn 0
   examples:
   - arguments: strom
     description: Hladaj slovo "strom" v synonymickom slovníku
-  tests:
-  - arguments: strom
-    expect: <title>&quot;strom&quot;

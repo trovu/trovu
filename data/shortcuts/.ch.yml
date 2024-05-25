@@ -187,10 +187,10 @@ ikea 1:
 local 2:
   url: https://tel.local.ch/de/q?what=<Name>&where=<Ort>
   title: local.ch Telefonbuch
-  description: Telefonbuch-Suche über local.ch
   examples:
   - arguments: Hans Muster, Bern
     description: Suche auf local.ch nach "Hans Muster" in "Bern"
+  description: Telefonbuch-Suche über local.ch
 mc 0:
   url: https://www.meteocentrale.ch/
   title: Meteocentrale.ch
@@ -228,9 +228,9 @@ plz 1:
 poststelle 1:
   url: https://places.post.ch/?topic=1&PreselectText=<query>&from_directentry=True
   title: Die Post - Poststellensuche
-  description: Schweizer Post - Poststellensuche
   tags:
   - post
+  description: Schweizer Post - Poststellensuche
 rsc 1:
   url: https://dech.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Schweiz
@@ -312,7 +312,6 @@ zal 1:
 zvv 2:
   url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>'
   title: ZVV-Auskunft
-  description: Fahrplanauskunft des Züricher Verkehrverbundes
   tags:
   - bahn
   - travel
@@ -320,10 +319,10 @@ zvv 2:
   examples:
   - arguments: hb, winterthur
     description: Nächste Verbindung von Zürich HB nach Winterthur
+  description: Fahrplanauskunft des Züricher Verkehrverbundes
 zvv 3:
   url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>&time=<Zeit: {type: time}>'
   title: ZVV-Auskunft
-  description: Fahrplanauskunft des Züricher Verkehrverbundes
   tags:
   - bahn
   - travel
@@ -331,10 +330,10 @@ zvv 3:
   examples:
   - arguments: hb, winterthur, 10
     description: Verbindung von Zürich HB nach Winterthur um 10 Uhr heute
+  description: Fahrplanauskunft des Züricher Verkehrverbundes
 zvv 4:
   url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date}>'
   title: ZVV-Auskunft
-  description: Fahrplanauskunft des Züricher Verkehrverbundes
   tags:
   - bahn
   - travel
@@ -342,3 +341,4 @@ zvv 4:
   examples:
   - arguments: hb, winterthur, 10, di
     description: Verbindung von Zürich HB nach Winterthur um 10 Uhr am kommenden Dienstag
+  description: Fahrplanauskunft des Züricher Verkehrverbundes

@@ -1,13 +1,13 @@
 alza 1:
   url: https://www.alza.cz/search.htm?exps=<výraz>
   title: Alza.cz
-  description: Online obchod s širokou nabídkou elektroniky a dalšího zboží.
   tags:
   - seznam
   - shopping
   examples:
   - arguments: televizor
     description: Hledej "televizor"
+  description: Online obchod s širokou nabídkou elektroniky a dalšího zboží.
 ba 1:
   deprecated:
     alternative:
@@ -16,15 +16,15 @@ ba 1:
 bzs 0:
   url: https://www.bazos.cz/
   title: Bazoš
-  description: Inzertní server pro koupi a prodej použitých věcí.
   tags:
   - classifieds
+  description: Inzertní server pro koupi a prodej použitých věcí.
 bzs 1:
   url: https://www.bazos.cz/search.php?hledat=<výraz>
+  include: bzs 0
   examples:
   - arguments: vrtačka
     description: Hledej použitou vrtačku
-  include: bzs 0
 g 1:
   url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.cz
@@ -37,31 +37,31 @@ g 1:
 idos 0:
   url: https://jizdnirady.idnes.cz/
   title: IDOS Jízdní řády
-  description: Informační systém pro vyhledávání spojů ve veřejné dopravě.
   tags:
   - idos
   - train
   - travel
+  description: Informační systém pro vyhledávání spojů ve veřejné dopravě.
 idos 2:
   url: 'https://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
+  include: idos 0
   examples:
   - arguments: praha, brno
     description: Vlak nebo bus z Prahy do Brna
   - arguments: a, b
     description: totéž, ale se zkratkou SPZ
-  include: idos 0
 idos 3:
   url: 'https://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&submit=1&pt=true'
+  include: idos 0
   examples:
   - arguments: praha, brno, 20
     description: Vlak nebo bus z Prahy do Brna ve 20:00h
-  include: idos 0
 idos 4:
   url: 'https://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>&submit=1&pt=true'
+  include: idos 0
   examples:
   - arguments: praha, brno, 20, 10.12.
     description: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
-  include: idos 0
 ikea 0:
   url: https://www.ikea.com/cz/cs/
   title: IKEA Česko
@@ -74,29 +74,29 @@ ikea 0:
     description: Hledej matrace
 ikea 1:
   url: https://www.ikea.com/cz/cs/search/?q=<query>
+  include: ikea 0
   examples:
   - arguments: matrace
     description: Hledej matrace
-  include: ikea 0
 m 0:
   url: https://mapy.cz/
   title: Mapy.cz
-  description: Online mapa a plánovač tras.
   tags:
   - maps
   - mapy
+  description: Online mapa a plánovač tras.
 m 1:
   url: https://mapy.cz/zakladni?q=<místo>
+  include: m 0
   examples:
   - arguments: praha
     description: Praha na mapy.cz
-  include: m 0
 m 2:
   url: 'https://mapy.cz/zakladni?q=<město: {type: city}>%2C%20<místo>'
+  include: m 0
   examples:
   - arguments: a, lazarska
     description: Lazarská v Praze na mapy.cz
-  include: m 0
 mapy 1:
   deprecated:
     alternative:
@@ -109,16 +109,16 @@ seznam 1:
 szn 0:
   url: https://www.seznam.cz/
   title: Seznam
-  description: Český internetový vyhledávač a informační portál.
   tags:
   - seznam
   - web-search
+  description: Český internetový vyhledávač a informační portál.
 szn 1:
   url: https://search.seznam.cz/search.cgi?w=<query>
+  include: szn 0
   examples:
   - arguments: praha
     description: Hledej "praha"
-  include: szn 0
 tv 0:
   url: https://tvprogram.centrum.cz/
   title: TV programy Česko
@@ -138,13 +138,13 @@ zbozi 1:
 zbz 0:
   url: https://www.zbozi.cz/
   title: Zboží.cz
-  description: Vyhledávání a porovnávání produktů a cen.
   tags:
   - seznam
   - shopping
+  description: Vyhledávání a porovnávání produktů a cen.
 zbz 1:
   url: https://www.zbozi.cz/hledej/?q=<výraz>
+  include: zbz 0
   examples:
   - arguments: televizor
     description: Hledej "televizor"
-  include: zbz 0
