@@ -277,7 +277,7 @@ aclw 1:
   - science
   - wiki
   examples:
-  - arguments: ' SAT Analogy Questions'
+  - arguments: SAT Analogy Questions
     description: go to page (or search for) SAT Analogy Questions on ACLWiki
 acm 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
@@ -285,7 +285,7 @@ acm 1:
   tags:
   - science
   examples:
-  - arguments: 'routing loops '
+  - arguments: routing loops
     description: search for routing loops
 ad 1:
   url: https://developer.android.com/s/results?q=<query>
@@ -320,7 +320,7 @@ ads 1:
   - physics
   examples:
   - arguments: dark energy
-    description: 'Search for astrophysics articles on "dark energy" '
+    description: Search for astrophysics articles on "dark energy"
 adsh 1:
   url: https://www.alldatasheet.com/view.jsp?Searchword=<part>
   title: alldatasheet.com
@@ -1809,8 +1809,8 @@ dlde 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into German. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into German.
   description: Translate whole text.
 dlen 1:
   url: https://www.deepl.com/translator#de/en/<text>
@@ -1822,8 +1822,8 @@ dlen 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into English. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into English.
   description: Translate whole text.
 dles 1:
   url: https://www.deepl.com/translator#de/es/<text>
@@ -1835,8 +1835,8 @@ dles 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Spanish. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Spanish.
   description: Translate whole text.
 dlfr 1:
   url: https://www.deepl.com/translator#de/fr/<text>
@@ -1848,8 +1848,8 @@ dlfr 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into French. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into French.
   description: Translate whole text.
 dlit 1:
   url: https://www.deepl.com/translator#de/it/<text>
@@ -1861,8 +1861,8 @@ dlit 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Italian. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Italian.
   description: Translate whole text.
 dlja 1:
   url: https://www.deepl.com/translator#de/ja/<text>
@@ -1874,8 +1874,8 @@ dlja 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Japanese. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Japanese.
   description: Translate whole text.
 dlnl 1:
   url: https://www.deepl.com/translator#de/nl/<text>
@@ -1887,8 +1887,8 @@ dlnl 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Dutch. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Dutch.
   description: Translate whole text.
 dlpo 1:
   url: https://www.deepl.com/translator#de/po/<text>
@@ -1900,8 +1900,8 @@ dlpo 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Polish. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Polish.
   description: Translate whole text.
 dlpt 1:
   url: https://www.deepl.com/translator#de/pt/<text>
@@ -1913,8 +1913,8 @@ dlpt 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hallo, wie geht es Dir? '
-    description: 'Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Portuguese. '
+  - arguments: Hallo, wie geht es Dir?
+    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Portuguese.
   description: Translate whole text.
 dlru 1:
   url: https://www.deepl.com/translator#de/ru/<text>
@@ -1926,8 +1926,8 @@ dlru 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Russian. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Russian.
   description: Translate whole text.
 dltr 1:
   url: https://www.deepl.com/translator#en/tr/<text>
@@ -1940,8 +1940,8 @@ dltr 1:
   - turkish
   - türkçe
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Turkish. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Turkish.
   description: Translate whole text.
 dlzh 1:
   url: https://www.deepl.com/translator#de/zh/<text>
@@ -1953,8 +1953,8 @@ dlzh 1:
   - translate
   - translation
   examples:
-  - arguments: 'Hello, how are you? '
-    description: 'Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese. '
+  - arguments: Hello, how are you?
+    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese.
   description: Translate whole text.
 dm 1:
   url: https://www.dailymotion.com/?search=<query>
@@ -3492,7 +3492,7 @@ gfin 1:
   - finance
   - google
   examples:
-  - arguments: 'ford '
+  - arguments: ford
     description: Show data for Ford Motor Company
 gfl 0:
   url: https://www.google.com/flights/
@@ -8708,7 +8708,7 @@ wd 1:
     description: Search Wikidata for "Berlin"
 wde 1:
   url: https://de.wikipedia.org/wiki/Special:Search?go=Article&search=<article>
-  title: 'Wikipedia Article Search (German) '
+  title: Wikipedia Article Search (German)
   tags:
   - old
   examples:
@@ -8760,7 +8760,7 @@ wf 2:
   - wiki
   - wikipedia
   examples:
-  - arguments: 'als, berlin '
+  - arguments: als, berlin
     description: Alemannische Wikipedia article about Berlin
 wfr 1:
   url: https://fr.wikipedia.org/wiki/<query>

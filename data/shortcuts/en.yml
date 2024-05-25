@@ -112,7 +112,7 @@ mwt 1:
   - dictionary
   - english
   examples:
-  - arguments: 'important '
+  - arguments: important
     description: Search for synonyms of "important"
 ox 1:
   url: https://en.oxforddictionaries.com/definition/<word>
@@ -144,7 +144,7 @@ syn 1:
   - english
   - thesaurus
   examples:
-  - arguments: 'important '
+  - arguments: important
     description: Search for synonyms of "important"
 uvi 0:
   url: https://verbs.colorado.edu/verb-index/vn3.3
