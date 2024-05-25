@@ -6212,6 +6212,28 @@ perseus 1:
   examples:
   - arguments: Agamemnon
     description: Search for "Agamemnon"
+pew 0:
+  url: https://www.pewresearch.org/
+  title: Pew Research Center
+  tags:
+  - research
+  - statistics
+  - surveys
+  examples:
+  - description: Go to homepage
+pew 1:
+  url: https://www.pewresearch.org/search/<query>
+  include: pew 0
+  examples:
+  - arguments: climate change
+    description: Search for "climate change"
+pewg 1:
+  title: Pew Research Center via Google
+  url: https://www.google.com/search?hl=<$language>&q=site:pewresearch.org%20<query>&ie=utf-8
+  include: pew 0
+  examples:
+  - arguments: climate change
+    description: Search for "climate change"
 pg 1:
   url: https://www.pricegrabber.com/search.php?form_keyword=<query>&st=query
   title: Price Grabber
