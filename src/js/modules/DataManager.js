@@ -82,6 +82,19 @@ export default class DataManager {
         // Create a new object with sorted keys
         for (const sortedKey of sortedKeys) {
           sortedShortcut[sortedKey] = shortcut[sortedKey];
+          // if it's a string, trim it.
+          if (typeof shortcut[sortedKey] === 'string') {
+            sortedShortcut[sortedKey] = sortedShortcut[sortedKey].trim();
+          }
+        }
+        // Loop over sortedShortcut.examples and in each object, trim arguments and description
+        if (sortedShortcut.examples) {
+          for (const example of sortedShortcut.examples) {
+            example.description = example.description.trim();
+            if (example.arguments && typeof example.arguments === 'string') {
+              example.arguments = example.arguments.trim();
+            }
+          }
         }
         shortcuts[namespace][key] = sortedShortcut;
       }
