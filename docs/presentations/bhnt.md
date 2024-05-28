@@ -11,9 +11,7 @@
 -   `gfl1 ber,ibiza,fr`
     -   suggestions also search in titles
 -   entire processing locally,
-    -   data in YAML files: https://github.com/trovu/trovu/blob/master/data/shortcuts/.de.yml#L706
--   Opensearch plugin, PWA, (Rayscast):
-    -   https://trovu.net/docs/users/integration/
--   customizable via your GitHub repo:
-    -   https://github.com/georgjaehnig/trovu-data-user/
+    -   data in [YAML files](https://github.com/trovu/trovu/blob/master/data/shortcuts/.de.yml#L706)
+-   [Opensearch plugin, PWA, (Rayscast)](https://trovu.net/docs/users/integration/)
+-   customizable via your [GitHub repo](https://github.com/georgjaehnig/trovu-data-user/)
 -   free software: AGPL
