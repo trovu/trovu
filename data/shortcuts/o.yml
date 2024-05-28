@@ -3504,61 +3504,42 @@ gfl 0:
 gfl 1:
   url: https://www.google.com/travel/flights?q=<query>
   title: Google Flights, any query in any language
-  tags:
-  - flights
-  - google
-  - travel
+  include: gfl 0
   examples:
   - arguments: one-way flight next month from berlin to tenerife
     description: Search for one-way flights from Berlin to Tenerife next month
 gfl 2:
   url: https://www.google.com/travel/flights?q=Flights%20from%20<from>%20to%20<to>
   title: Google Flights, round trip
-  tags:
-  - flights
-  - google
-  - travel
+  include: gfl 0
   examples:
   - arguments: ber, lpa
     description: Search for flights from Berlin to Las Palmas
 gfl 3:
   url: 'https://www.google.com/travel/flights?q=Flights%20from%20<from>%20to%20<to>%20on%20<departure date: {type: date}>'
   title: Google Flights, round trip
-  tags:
-  - flights
-  - google
-  - travel
+  include: gfl 0
   examples:
   - arguments: ber, lpa, fr
     description: Search for round trips from Berlin to Las Palmas, departing next Friday
 gfl 4:
   url: 'https://www.google.com/travel/flights?q=Flights%20from%20<from>%20to%20<to>%20on%20<departure date: {type: date}>%20through%20<arrival date: {type: date}>'
   title: Google Flights, round trip
-  tags:
-  - flights
-  - google
-  - travel
-  showOnHome: 200
+  include: gfl 0
   examples:
   - arguments: ber, lpa, fr, 30
     description: Search for round trips from Berlin to Las Palmas, departing next Friday, returning on the 30th of this month
 gfl1 2:
   url: https://www.google.com/travel/flights?q=one-way%20flights%20from%20<from>%20to%20<to>
   title: Google Flights, one-way
-  tags:
-  - flights
-  - google
-  - travel
+  include: gfl 0
   examples:
   - arguments: ber, lpa
     description: Search for one-way flights from Berlin to Las Palmas.
 gfl1 3:
   url: 'https://www.google.com/travel/flights?q=one-way%20flights%20from%20<from>%20to%20<to>%20on%20<departure date: {type: date}>'
   title: Google Flights, one-way
-  tags:
-  - flights
-  - google
-  - travel
+  include: gfl 0
   examples:
   - arguments: ber, lpa, fr
     description: Search for one-way flights from Berlin to Las Palmas, departing next Friday
