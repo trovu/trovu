@@ -202,7 +202,6 @@ a 1:
   tests:
   - arguments: shakespeare
     expect: shakespeare</title>
-  showOnHome: 1000
   include:
   - key: a 0
   examples:
@@ -822,7 +821,6 @@ bkg 2:
     description: Search for hotels in Berlin, checkin on next Friday
 bkg 3:
   url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
-  showOnHome: 550
   include:
   - key: bkg 0
   examples:
@@ -925,7 +923,6 @@ brw 0:
 brw 1:
   url: https://www.google.de/search?hl=<$language>&q=site%3Abrew.sh%20<query>&ie=utf-8
   title: Homebrew Package Manager
-  showOnHome: 1000
   include:
   - key: brw 0
   examples:
@@ -1240,7 +1237,6 @@ cpp 1:
   tags:
   - c++
   - programming
-  showOnHome: 1100
   examples:
   - arguments: sprintf
     description: Search C++ Reference (cppreference.com) for "sprintf"
@@ -1266,7 +1262,6 @@ cran 1:
   - programming
   - r
   - statistics
-  showOnHome: 1200
   examples:
   - arguments: bibtex
     description: Show bibtex package
@@ -3166,7 +3161,6 @@ g 1:
   tags:
   - google
   - web-search
-  showOnHome: 600
   examples:
   - arguments: berlin
     description: Google search for "berlin"
@@ -3323,7 +3317,6 @@ gd 2:
   - maps
   - route
   - routing
-  showOnHome: 100
   examples:
   - arguments: berlin, hamburg
     description: Get a route from Berlin, Germany, to Hamburg, Germany
@@ -3672,7 +3665,6 @@ gm 2:
   tags:
   - google
   - maps
-  showOnHome: 800
   examples:
   - arguments: b, brandenburger tor
     description: Show Brandenburger Tor in Berlin (if using .de as country setting)
@@ -6258,7 +6250,6 @@ php 1:
   tags:
   - php
   - programming
-  showOnHome: 1150
   examples:
   - arguments: strlen
     description: Search PHP docs for "strlen"
@@ -6519,7 +6510,6 @@ py 1:
   tags:
   - programming
   - python
-  showOnHome: 900
   examples:
   - arguments: optparse
     description: Get documentation for opt parse
@@ -7766,7 +7756,6 @@ tik 1:
   tags:
   - tiktok
   - video
-  showOnHome: 1300
   examples:
   - arguments: berlin
     description: Search for videos about Berlin
@@ -8588,7 +8577,6 @@ w 1:
   - encyclopedia
   - wiki
   - wikipedia
-  showOnHome: 610
   examples:
   - arguments: berlin
     description: Wikipedia article about Berlin
@@ -9408,7 +9396,6 @@ yt 1:
   tags:
   - video
   - youtube
-  showOnHome: 400
   examples:
   - arguments: cartoon
     description: Youtube search for "cartoon"
@@ -9418,7 +9405,6 @@ ytd 1:
   tags:
   - video
   - youtube
-  showOnHome: 410
   examples:
   - arguments: cartoon
     description: Search for "cartoon"

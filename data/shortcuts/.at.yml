@@ -69,7 +69,6 @@ g 1:
   tests:
   - arguments: wien
     expect: <title>wien
-  showOnHome: 600
   include: g 0
   examples:
   - arguments: wien
