@@ -39,8 +39,6 @@ patternProperties:
                   type: string
           required:
             - description
-      showOnHome:
-        type: number
       removed:
         type: string
         pattern: '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'

@@ -704,7 +704,6 @@ db 1:
   - arguments: berlin hbf
     description: Verspätungen / aktuelle Abfahrten in Berlin Hbf
 db 2:
-  showOnHome: 700
   include: dbm 2
 db 3:
   include: dbm 3
@@ -713,7 +712,6 @@ db 4:
 dbb 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare'
   title: Deutsche Bahn (Bestpreis)
-  showOnHome: 710
   include: db 0
   examples:
   - arguments: köln, münchen, 30.11.
@@ -1037,7 +1035,6 @@ g 0:
   - description: Gehe zur Startseite
 g 1:
   url: https://www.google.de/search?hl=<$language>&q=<Suche>&ie=utf-8
-  showOnHome: 600
   include: g 0
   examples:
   - arguments: berlin
