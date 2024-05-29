@@ -2681,6 +2681,17 @@ fbsd 2:
   title: FreeBSD Manual Pages
   tags:
   - freebsd
+fbsdfp 1:
+  url: https://www.freshports.org/search.php?query=<query>
+  title: FreeBSD FreshPorts Search
+  tests:
+  - arguments: firefox
+    expect: Web browser based on the browser portion of Mozilla
+  tags:
+  - freebsd
+  examples:
+  - arguments: firefox
+    description: Search for firefox
 fbsdp 1:
   url: https://ports.freebsd.org/cgi/ports.cgi?query=<query>
   title: FreeBSD Ports Search
