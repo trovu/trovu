@@ -5511,6 +5511,25 @@ mt 1:
   include:
   - key: mt 1
     namespace: pka
+mubi 0:
+  url: https://mubi.com/
+  title: MUBI
+  tests:
+  - arguments: Berlin
+    expect: '<title>MUBI:'
+  tags:
+  - movies
+mubi 1:
+  url: https://mubi.com/search/films?query=<query>
+  title: MUBI
+  tests:
+  - arguments: Berlin
+    expect: <title>MUBI | Search | Berlin</title>
+  tags:
+  - movies
+  examples:
+  - arguments: Berlin
+    description: Search for "Berlin"
 mwe 0:
   url: https://www.mediawiki.org/wiki/Category:Extensions
   title: Browse MediaWiki Extensions
