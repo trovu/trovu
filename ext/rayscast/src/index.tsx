@@ -24,6 +24,7 @@ export default function Command() {
   useEffect(() => {
     if (data) {
       setShortcuts(data);
+      setFilteredShortcuts(data);
     }
   }, [data]);
 
