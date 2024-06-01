@@ -2816,14 +2816,14 @@ fi 1:
     namespace: lgs
   - key: fi 1
     namespace: pka
-fifr 0:
+ffr 0:
   url: https://www.filmfriend.de/
   title: filmfriend
   tags:
   - movies
   tests:
   - expect: <title>filmfriend</title>
-fifr 1:
+ffr 1:
   url: https://www.filmfriend.de/en/search?search=<query>
   title: filmfriend
   tests:
