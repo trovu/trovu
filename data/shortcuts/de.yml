@@ -433,6 +433,17 @@ fefescss 1:
   examples:
   - arguments: manpage
     description: Fefes Blog mit dem CSS-Style manpage.css
+ffr 1:
+  url: https://www.filmfriend.de/de/search?search=<Suche>
+  title: filmfriend
+  tests:
+  - arguments: Berlin
+    expect: <title>Suche - filmfriend</title>
+  tags:
+  - movies
+  examples:
+  - arguments: Berlin
+    description: Suche nach "Berlin"
 fmb 0:
   url: https://www.findmybook.de/
   title: Findmybook.de
