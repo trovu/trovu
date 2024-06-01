@@ -14,10 +14,10 @@ export default function Command() {
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
   
   // Use useFetch to fetch data once
-  const { data, isLoading } = useFetch("https://trovu.net/data.json", {
+  const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
       const data = await response.json();
-      return data.shortcuts;
+      return data.shortcuts || [];
     },
   });
 
@@ -39,6 +39,10 @@ export default function Command() {
     }
   }, [searchText, shortcuts]);
 
+  if (error) {
+    return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
+  }
+
   return (
     <List
       isLoading={isLoading}
@@ -46,7 +50,7 @@ export default function Command() {
       searchBarPlaceholder="Search shortcuts..."
       throttle
     >
-      <List.Section title="Results" subtitle={filteredShortcuts.length + ""}>
+      <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
         {filteredShortcuts.map((shortcut) => (
           <SearchListItem key={shortcut.url} shortcut={shortcut} />
         ))}
