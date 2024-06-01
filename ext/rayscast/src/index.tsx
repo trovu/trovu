@@ -17,12 +17,14 @@ export default function Command() {
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
       const data = await response.json();
-      return data.shortcuts || [];
+      console.log("Fetched data:", data); // Debugging log
+      return Array.isArray(data.shortcuts) ? data.shortcuts : [];
     },
   });
 
   useEffect(() => {
     if (data) {
+      console.log("Setting shortcuts data:", data); // Debugging log
       setShortcuts(data);
       setFilteredShortcuts(data);
     }
@@ -30,16 +32,19 @@ export default function Command() {
 
   useEffect(() => {
     if (searchText.length === 0) {
+      console.log("Resetting filteredShortcuts to all shortcuts"); // Debugging log
       setFilteredShortcuts(shortcuts);
     } else {
       const filtered = shortcuts.filter((shortcut) =>
         shortcut.title.toLowerCase().includes(searchText.toLowerCase())
       );
+      console.log("Filtered shortcuts:", filtered); // Debugging log
       setFilteredShortcuts(filtered);
     }
   }, [searchText, shortcuts]);
 
   if (error) {
+    console.error("Error fetching data:", error); // Debugging log
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
 
