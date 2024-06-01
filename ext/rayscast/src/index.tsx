@@ -12,7 +12,7 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
-  
+
   // Use useFetch to fetch data once
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
