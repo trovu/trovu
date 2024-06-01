@@ -1,6 +1,6 @@
 import { ActionPanel, Action, List } from "@raycast/api";
-import { useEffect, useState } from "react";
-import fetch from "node-fetch";
+import { useFetch } from "@raycast/utils";
+import { useState, useEffect } from "react";
 
 interface Shortcut {
   title: string;
@@ -12,22 +12,20 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  
+  // Use useFetch to fetch data once
+  const { data, isLoading } = useFetch("https://trovu.net/data.json", {
+    parseResponse: async (response) => {
+      const data = await response.json();
+      return data.shortcuts;
+    },
+  });
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch("https://trovu.net/data.json");
-        const data = await response.json();
-        setShortcuts(data.shortcuts);
-      } catch (error) {
-        console.error("Failed to fetch data:", error);
-      } finally {
-        setIsLoading(false);
-      }
+    if (data) {
+      setShortcuts(data);
     }
-    fetchData();
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     if (searchText.length === 0) {
