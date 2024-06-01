@@ -16,10 +16,15 @@ export default function Command() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("https://trovu.net/data.json");
-      const data = await response.json();
-      setShortcuts(data.shortcuts);
-      setIsLoading(false);
+      try {
+        const response = await fetch("https://trovu.net/data.json");
+        const data = await response.json();
+        setShortcuts(data.shortcuts);
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      } finally {
+        setIsLoading(false);
+      }
     }
     fetchData();
   }, []);
