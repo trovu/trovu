@@ -22,7 +22,7 @@ export default function Command() {
       // Flatten the data structure
       const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((key) => {
         return Object.values(data.shortcuts[key]).map((item: any) => ({
-          title: item.title,
+          title: item.name || item.title || "No title",
           url: item.url,
           description: item.description || "",
         }));
