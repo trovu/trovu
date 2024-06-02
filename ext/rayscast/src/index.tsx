@@ -6,6 +6,8 @@ interface Shortcut {
   title: string;
   url: string;
   description?: string;
+  deprecated?: boolean;
+  removed?: boolean;
 }
 
 export default function Command() {
@@ -19,13 +21,15 @@ export default function Command() {
       const data = await response.json();
       console.log("Fetched data:", data); // Debugging log
 
-      // Flatten the data structure
+      // Flatten the data structure and filter out deprecated or removed shortcuts
       const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((key) => {
-        return Object.values(data.shortcuts[key]).map((item: any) => ({
-          title: item.name || item.title || "No title",
-          url: item.url,
-          description: item.description || "",
-        }));
+        return Object.values(data.shortcuts[key])
+          .filter((item: any) => !item.deprecated && !item.removed)
+          .map((item: any) => ({
+            title: item.name || item.title || "No title",
+            url: item.url,
+            description: item.description || "",
+          }));
       });
 
       console.log("Flattened shortcuts:", flattenedShortcuts); // Debugging log
