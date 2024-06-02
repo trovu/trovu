@@ -1,4 +1,4 @@
-import { ActionPanel, Action, List } from "@raycast/api";
+import { ActionPanel, Action, Color, List } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 
@@ -26,8 +26,9 @@ export default function Command() {
       const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((namespace) => {
         return Object.entries(data.shortcuts[namespace])
           .filter(([, item]: [string, any]) => !item.deprecated && !item.removed)
-          .map(([keyword, item]: [string, any]) => ({
-            keyword: namespace,
+          .map(([key, item]: [string, any]) => ({
+            key: key,
+            namespace: namespace,
             title: item.name || item.title || "No title",
             url: item.url,
             description: item.description || "",
@@ -85,8 +86,9 @@ function SearchListItem({ shortcut }: { shortcut: Shortcut }) {
   return (
     <List.Item
       title={shortcut.title}
-      subtitle={shortcut.keyword}
-      accessories={[{ text: shortcut.title }]}
+      subtitle='arguments'
+      // subtitle={shortcut.keyword}
+      accessories={[{ text: shortcut.title, tag: { value: "User", color: Color.Magenta } }]}
       actions={
         <ActionPanel>
           <ActionPanel.Section>
