@@ -18,7 +18,18 @@ export default function Command() {
     parseResponse: async (response) => {
       const data = await response.json();
       console.log("Fetched data:", data); // Debugging log
-      return Array.isArray(data.shortcuts) ? data.shortcuts : [];
+
+      // Flatten the data structure
+      const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((key) => {
+        return Object.values(data.shortcuts[key]).map((item: any) => ({
+          title: item.title,
+          url: item.url,
+          description: item.description || "",
+        }));
+      });
+
+      console.log("Flattened shortcuts:", flattenedShortcuts); // Debugging log
+      return flattenedShortcuts;
     },
   });
 
