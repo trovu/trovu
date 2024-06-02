@@ -23,11 +23,11 @@ export default function Command() {
       console.log("Fetched data:", data); // Debugging log
 
       // Flatten the data structure and filter out deprecated or removed shortcuts
-      const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((key) => {
-        return Object.entries(data.shortcuts[key])
+      const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((namespace) => {
+        return Object.entries(data.shortcuts[namespace])
           .filter(([, item]: [string, any]) => !item.deprecated && !item.removed)
           .map(([keyword, item]: [string, any]) => ({
-            keyword: key,
+            keyword: namespace,
             title: item.name || item.title || "No title",
             url: item.url,
             description: item.description || "",
