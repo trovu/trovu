@@ -86,9 +86,11 @@ function SearchListItem({ shortcut }: { shortcut: Shortcut }) {
   return (
     <List.Item
       title={shortcut.title}
-      subtitle='arguments'
-      // subtitle={shortcut.keyword}
-      accessories={[{ text: shortcut.title, tag: { value: "User", color: Color.Magenta } }]}
+      subtitle={shortcut.keyword}
+      accessories={[
+        { text: shortcut.title },
+        { tag: { value: shortcut.namespace, color: Color.Red } },
+      ]}
       actions={
         <ActionPanel>
           <ActionPanel.Section>
