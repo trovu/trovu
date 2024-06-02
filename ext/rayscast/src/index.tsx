@@ -3,6 +3,7 @@ import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 
 interface Shortcut {
+  keyword: string;
   title: string;
   url: string;
   description?: string;
@@ -23,9 +24,10 @@ export default function Command() {
 
       // Flatten the data structure and filter out deprecated or removed shortcuts
       const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((key) => {
-        return Object.values(data.shortcuts[key])
-          .filter((item: any) => !item.deprecated && !item.removed)
-          .map((item: any) => ({
+        return Object.entries(data.shortcuts[key])
+          .filter(([, item]: [string, any]) => !item.deprecated && !item.removed)
+          .map(([keyword, item]: [string, any]) => ({
+            keyword: key,
             title: item.name || item.title || "No title",
             url: item.url,
             description: item.description || "",
@@ -83,7 +85,8 @@ function SearchListItem({ shortcut }: { shortcut: Shortcut }) {
   return (
     <List.Item
       title={shortcut.title}
-      subtitle={shortcut.description}
+      subtitle={shortcut.keyword}
+      accessories={[{ text: shortcut.title }]}
       actions={
         <ActionPanel>
           <ActionPanel.Section>
