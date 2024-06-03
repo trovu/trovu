@@ -1,4 +1,4 @@
-import { ActionPanel, Action, Color, List, useNavigation } from "@raycast/api";
+import { ActionPanel, Action, Color, List, showToast, Toast } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 
@@ -15,7 +15,6 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
-  const { push } = useNavigation();
 
   // Use useFetch to fetch data once
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
@@ -62,26 +61,17 @@ export default function Command() {
     }
   }, [searchText, shortcuts]);
 
-  // Add event listener for "Enter" key
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Enter") {
-        handleEnterKey();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [searchText]);
-
   const handleEnterKey = () => {
     // Execute your code here
+    showToast(Toast.Style.Success, "Enter key pressed", `Search text: ${searchText}`);
     console.log("Enter key pressed with search text:", searchText);
-    // For example, navigate to a new view
-    push(<NewView searchText={searchText} />);
   };
+
+  const customActions = (
+    <ActionPanel>
+      <Action title="Execute Enter Action" onAction={handleEnterKey} />
+    </ActionPanel>
+  );
 
   if (error) {
     console.error("Error fetching data:", error); // Debugging log
@@ -94,6 +84,7 @@ export default function Command() {
       onSearchTextChange={setSearchText}
       searchBarPlaceholder="Search shortcuts..."
       throttle
+      actions={customActions}
     >
       <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
         {filteredShortcuts.map((shortcut) => (
@@ -128,13 +119,5 @@ function SearchListItem({ shortcut }: { shortcut: Shortcut }) {
         </ActionPanel>
       }
     />
-  );
-}
-
-function NewView({ searchText }: { searchText: string }) {
-  return (
-    <List>
-      <List.Item title={`You searched for: ${searchText}`} />
-    </List>
   );
 }
