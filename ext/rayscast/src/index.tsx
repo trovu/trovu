@@ -1,4 +1,4 @@
-import { ActionPanel, Action, Color, List, useNavigation, showToast, Toast } from "@raycast/api";
+import { ActionPanel, Action, Color, List, showToast, Toast } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 
@@ -15,7 +15,6 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
-  const { push } = useNavigation();
 
   // Use useFetch to fetch data once
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
@@ -63,11 +62,18 @@ export default function Command() {
   }, [searchText, shortcuts]);
 
   const handleEnterKey = () => {
-    // Execute your code here
+    // Execute your custom code here
     showToast(Toast.Style.Success, "Enter key pressed", `Search text: ${searchText}`);
     console.log("Enter key pressed with search text:", searchText);
-    push(<NewView searchText={searchText} />);
+    // Example of pushing a new view
+    // push(<NewView searchText={searchText} />);
   };
+
+  const customActions = (
+    <ActionPanel>
+      <Action title="Execute Enter Action" onAction={handleEnterKey} />
+    </ActionPanel>
+  );
 
   if (error) {
     console.error("Error fetching data:", error); // Debugging log
@@ -83,16 +89,12 @@ export default function Command() {
     >
       <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
         {filteredShortcuts.map((shortcut) => (
-          <SearchListItem key={shortcut.url} shortcut={shortcut} />
+          <SearchListItem key={shortcut.url} shortcut={shortcut} customActions={customActions} />
         ))}
         {searchText && filteredShortcuts.length === 0 && (
           <List.Item
             title="Press Enter to search"
-            actions={
-              <ActionPanel>
-                <Action title="Execute Enter Action" onAction={handleEnterKey} />
-              </ActionPanel>
-            }
+            actions={customActions}
           />
         )}
       </List.Section>
@@ -100,7 +102,7 @@ export default function Command() {
   );
 }
 
-function SearchListItem({ shortcut }: { shortcut: Shortcut }) {
+function SearchListItem({ shortcut, customActions }: { shortcut: Shortcut, customActions: JSX.Element }) {
   return (
     <List.Item
       title={shortcut.title}
@@ -109,20 +111,7 @@ function SearchListItem({ shortcut }: { shortcut: Shortcut }) {
         { text: shortcut.title },
         { tag: { value: shortcut.namespace, color: Color.Red } },
       ]}
-      actions={
-        <ActionPanel>
-          <ActionPanel.Section>
-            <Action.OpenInBrowser title="Open in Browser" url={shortcut.url} />
-          </ActionPanel.Section>
-          <ActionPanel.Section>
-            <Action.CopyToClipboard
-              title="Copy URL"
-              content={shortcut.url}
-              shortcut={{ modifiers: ["cmd"], key: "." }}
-            />
-          </ActionPanel.Section>
-        </ActionPanel>
-      }
+      actions={customActions}
     />
   );
 }
