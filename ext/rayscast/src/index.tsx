@@ -70,6 +70,10 @@ export default function Command() {
       }
     };
 
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [searchText]);
 
   const handleEnterKey = () => {
