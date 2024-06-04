@@ -1,6 +1,7 @@
 import { ActionPanel, Action, Color, List, showToast, Toast } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
+import Env from "../../../src/js/modules/Env.js";
 
 interface Shortcut {
   keyword: string;
@@ -15,6 +16,8 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
+  const env = new Env();
+  console.log("Environment:", env); // Debugging log  
 
   // Use useFetch to fetch data once
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
