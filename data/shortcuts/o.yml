@@ -2743,7 +2743,7 @@ fedbugq 1:
   tags:
   - old
 fedex 1:
-  url: https://www.fedex.com/Tracking?tracknumbers=<track number>
+  url: https://www.fedex.com/fedextrack/?trknbr=<query>
   title: FedEx Tracking
   tags:
   - fedex
