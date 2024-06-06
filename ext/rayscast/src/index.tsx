@@ -1,5 +1,4 @@
 import { ActionPanel, Action, Color, List, showToast, Toast } from "@raycast/api";
-import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
 
@@ -16,12 +15,13 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const env = new Env();
-  console.log("Environment:", env); // Debugging log  
+  console.log("Environment:", env); // Debugging log
 
-  // Use useFetch to fetch data once
-  const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
-    parseResponse: async (response) => {
+  const fetchShortcuts = async () => {
+    try {
+      const response = await fetch("https://trovu.net/data.json");
       const data = await response.json();
       console.log("Fetched data:", data); // Debugging log
 
@@ -39,19 +39,17 @@ export default function Command() {
       });
 
       console.log("Flattened shortcuts:", flattenedShortcuts); // Debugging log
-      return flattenedShortcuts;
-    },
-  });
-
-  useEffect(() => {
-    if (data) {
-      console.log("Setting shortcuts data:", data); // Debugging log
-      setShortcuts(data);
-      setFilteredShortcuts(data);
+      setShortcuts(flattenedShortcuts);
+      setFilteredShortcuts(flattenedShortcuts);
+    } catch (error) {
+      console.error("Error fetching data:", error); // Debugging log
+      showToast(Toast.Style.Failure, "Failed to load data");
+    } finally {
+      setIsLoading(false);
     }
-  }, [data]);
+  };
 
-  useEffect(() => {
+  const filterShortcuts = () => {
     if (searchText.length === 0) {
       console.log("Resetting filteredShortcuts to all shortcuts"); // Debugging log
       setFilteredShortcuts(shortcuts);
@@ -62,6 +60,14 @@ export default function Command() {
       console.log("Filtered shortcuts:", filtered); // Debugging log
       setFilteredShortcuts(filtered);
     }
+  };
+
+  useEffect(() => {
+    fetchShortcuts();
+  }, []);
+
+  useEffect(() => {
+    filterShortcuts();
   }, [searchText, shortcuts]);
 
   const handleEnterKey = () => {
@@ -77,11 +83,6 @@ export default function Command() {
       <Action title="Execute Enter Action" onAction={handleEnterKey} />
     </ActionPanel>
   );
-
-  if (error) {
-    console.error("Error fetching data:", error); // Debugging log
-    return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
-  }
 
   return (
     <List
