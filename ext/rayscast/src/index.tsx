@@ -5,6 +5,7 @@ import Env from "../../../src/js/modules/Env.js";
 
 interface Shortcut {
   keyword: string;
+  namespace: string;
   title: string;
   url: string;
   description?: string;
