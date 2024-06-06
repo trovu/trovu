@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
 
 interface Shortcut {
+  uniqueKey: string;
   keyword: string;
   title: string;
   url: string;
@@ -29,7 +30,8 @@ export default function Command() {
         return Object.entries(data.shortcuts[namespace])
           .filter(([, item]: [string, any]) => !item.deprecated && !item.removed)
           .map(([key, item]: [string, any]) => ({
-            key: key,
+            uniqueKey: `${namespace}.${key}`,
+            keyword: key,
             namespace: namespace,
             title: item.name || item.title || "No title",
             url: item.url,
@@ -95,7 +97,7 @@ export default function Command() {
     >
       <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
         {filteredShortcuts.map((shortcut) => (
-          <SearchListItem key={shortcut.url} shortcut={shortcut} customActions={customActions} />
+          <SearchListItem key={shortcut.uniqueKey} shortcut={shortcut} customActions={customActions} />
         ))}
         {searchText && filteredShortcuts.length === 0 && (
           <List.Item
