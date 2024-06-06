@@ -59,9 +59,7 @@ export default function Command() {
       console.log("Resetting filteredShortcuts to all shortcuts"); // Debugging log
       setFilteredShortcuts(shortcuts);
     } else {
-      const filtered = shortcuts.filter((shortcut) =>
-        shortcut.title.toLowerCase().includes(searchText.toLowerCase())
-      );
+      const filtered = shortcuts.filter((shortcut) => shortcut.title.toLowerCase().includes(searchText.toLowerCase()));
       // console.log("Filtered shortcuts:", filtered); // Debugging log
       setFilteredShortcuts(filtered);
     }
@@ -87,30 +85,19 @@ export default function Command() {
   }
 
   return (
-    <List
-      isLoading={isLoading}
-      onSearchTextChange={setSearchText}
-      searchBarPlaceholder="Search shortcuts..."
-      throttle
-    >
+    <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..." throttle>
       <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
         {filteredShortcuts.map((shortcut) => (
           <List.Item
             key={`${shortcut.namespace}.${shortcut.keyword}`}
             title={shortcut.title}
             subtitle={shortcut.keyword}
-            accessories={[
-              { text: shortcut.title },
-              { tag: { value: shortcut.namespace, color: Color.Red } },
-            ]}
+            accessories={[{ text: shortcut.title }, { tag: { value: shortcut.namespace, color: Color.Red } }]}
             actions={customActions}
           />
         ))}
         {searchText && filteredShortcuts.length === 0 && (
-          <List.Item
-            title="Press Enter to search"
-            actions={customActions}
-          />
+          <List.Item title="Press Enter to search" actions={customActions} />
         )}
       </List.Section>
     </List>
