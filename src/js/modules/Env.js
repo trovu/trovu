@@ -145,7 +145,7 @@ export default class Env {
       this.namespaces.push(this.extraNamespaceName);
     }
 
-    this.data = await this.getData();
+    this.data = this.data || (await this.getData());
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(
       this.namespaces,
     );
