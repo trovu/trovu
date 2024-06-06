@@ -18,12 +18,12 @@ export default function Command() {
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
   const env = new Env();
-  console.log("Environment:", env); // Debugging log
+  // console.log("Environment:", env); // Debugging log
 
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
       const data = await response.json();
-      console.log("Fetched data:", data); // Debugging log
+      // console.log("Fetched data:", data); // Debugging log
 
       // Flatten the data structure and filter out deprecated or removed shortcuts
       const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((namespace) => {
@@ -39,14 +39,14 @@ export default function Command() {
           }));
       });
 
-      console.log("Flattened shortcuts:", flattenedShortcuts); // Debugging log
+      // console.log("Flattened shortcuts:", flattenedShortcuts); // Debugging log
       return flattenedShortcuts;
     },
   });
 
   useEffect(() => {
     if (data) {
-      console.log("Setting shortcuts data:", data); // Debugging log
+      // console.log("Setting shortcuts data:", data); // Debugging log
       setShortcuts(data);
       setFilteredShortcuts(data);
     }
@@ -64,7 +64,7 @@ export default function Command() {
       const filtered = shortcuts.filter((shortcut) =>
         shortcut.title.toLowerCase().includes(searchText.toLowerCase())
       );
-      console.log("Filtered shortcuts:", filtered); // Debugging log
+      // console.log("Filtered shortcuts:", filtered); // Debugging log
       setFilteredShortcuts(filtered);
     }
   };
