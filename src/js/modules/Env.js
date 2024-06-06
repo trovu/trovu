@@ -162,6 +162,9 @@ export default class Env {
   }
 
   setToLocalStorage() {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
     if (this.github) {
       localStorage.setItem('github', this.github);
       localStorage.removeItem('language');
@@ -174,6 +177,9 @@ export default class Env {
   }
 
   getFromLocalStorage() {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
     this.language ||= localStorage.getItem('language');
     this.country ||= localStorage.getItem('country');
     this.github ||= localStorage.getItem('github');
