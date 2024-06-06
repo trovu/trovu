@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
 
 interface Shortcut {
-  uniqueKey: string;
   keyword: string;
   title: string;
   url: string;
@@ -30,7 +29,6 @@ export default function Command() {
         return Object.entries(data.shortcuts[namespace])
           .filter(([, item]: [string, any]) => !item.deprecated && !item.removed)
           .map(([key, item]: [string, any]) => ({
-            uniqueKey: `${namespace}.${key}`,
             keyword: key,
             namespace: namespace,
             title: item.name || item.title || "No title",
@@ -97,7 +95,16 @@ export default function Command() {
     >
       <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
         {filteredShortcuts.map((shortcut) => (
-          <SearchListItem key={shortcut.uniqueKey} shortcut={shortcut} customActions={customActions} />
+          <List.Item
+            key={`${shortcut.namespace}.${shortcut.keyword}`}
+            title={shortcut.title}
+            subtitle={shortcut.keyword}
+            accessories={[
+              { text: shortcut.title },
+              { tag: { value: shortcut.namespace, color: Color.Red } },
+            ]}
+            actions={customActions}
+          />
         ))}
         {searchText && filteredShortcuts.length === 0 && (
           <List.Item
@@ -107,20 +114,6 @@ export default function Command() {
         )}
       </List.Section>
     </List>
-  );
-}
-
-function SearchListItem({ shortcut, customActions }: { shortcut: Shortcut, customActions: JSX.Element }) {
-  return (
-    <List.Item
-      title={shortcut.title}
-      subtitle={shortcut.keyword}
-      accessories={[
-        { text: shortcut.title },
-        { tag: { value: shortcut.namespace, color: Color.Red } },
-      ]}
-      actions={customActions}
-    />
   );
 }
 
