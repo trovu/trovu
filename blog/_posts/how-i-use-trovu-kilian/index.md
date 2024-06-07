@@ -19,11 +19,18 @@ Many useful shortcuts are predefined, but you can also define your own and overw
 
 Here is a subjective and arbitrary selection of my 5 most important use cases for Trovu and the associated shortcuts:
 
-1. **Looking up a word in a bilingual online dictionary**: For example, to know what _Zahn_ means in Danish, I enter the ISO-639-2 code for Danish, `da`, followed by the search word: {% trovuCall "da zahn", { language: "de" } %}
-   Trovu directs me to a German-Danish online dictionary, knowing my default language is German. To search in an English-Danish dictionary, I prefix the shortcut with the respective namespace shortcut, changing my default language for this query to English: {% trovuCall "en.da tooth", { language: "de" } %}
-   Entering {% trovuCall "fr tooth", { language: "de" } %}
-   takes me to a German-French dictionary, LEO.org. To use dict.cc, there's also a namespace:
-   {% trovuCall "dcc.fr tooth", { language: "de" } %}
+1. **Looking up a word in a bilingual online dictionary**: For example, to know what _Zahn_ means in Danish, I enter the [ISO-639-2 code](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) for Danish, `da`, followed by the search word: {% trovuCall "da zahn", { language: "de" } %}
+
+    Trovu directs me to a German-Danish online dictionary, knowing my default language is German.
+
+    To search in an English-Danish dictionary, I prefix the shortcut with the respective namespace shortcut, changing my default language for this query to English: {% trovuCall "en.da tooth", { language: "de" } %}
+
+    Entering {% trovuCall "fr tooth", { language: "de" } %}
+
+    takes me to a German-French dictionary, [LEO.org](https://www.leo.org/).
+
+    To use [dict.cc](https://www.dict.cc/), there's also a namespace:
+    {% trovuCall "dcc.fr tooth", { language: "de" } %}
 
 2. **Personal shortcuts for my websites**:
    {% trovuCall "vw", { github: "texttheater" } %}
@@ -54,7 +61,7 @@ Here is a subjective and arbitrary selection of my 5 most important use cases fo
 
     to search my [blog](https://texttheater.net/).
 
-3. **Navigating the various functions of classifieds (formerly eBay classifieds)**:
+3. **Navigating the various functions of [Kleinanzeigen.de](https://www.kleinanzeigen.de/) (formerly eBay-kleinanzeigen )**:
 
     {% trovuCall "kaz", { country: "de" } %}
 
@@ -90,14 +97,14 @@ Here is a subjective and arbitrary selection of my 5 most important use cases fo
 
     {% trovuCall "atd https://example.com/" %}
 
-    for Archive.today,
+    for [Archive.today](https://en.wikipedia.org/wiki/Archive.today),
 
     {% trovuCall "ckd https://recipesbycarina.com/french-crepe-recipe/" %}
 
-    for Cooked.wiki, and
+    for [Cooked.wiki](https://cooked.wiki/), and
 
     {% trovuCall "wbm https://example.com/" %}
 
-    for the Wayback Machine.
+    for the [Wayback Machine](https://en.wikipedia.org/wiki/Wayback_Machine).
 
 [1] I don't have to. If my search query doesn't start with a word defined as a shortcut in Trovu, it directs me to my preferred default search engine in Trovu, DuckDuckGo.
