@@ -17,7 +17,6 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
-  const env = new Env();
   // console.log("Environment:", env); // Debugging log
 
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
