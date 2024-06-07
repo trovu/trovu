@@ -1,5 +1,5 @@
 ---
-title: How I Use trovu.net (Kilian)
+title: How I Use Trovu (Kilian)
 description: The Command Line for the WWW
 date: 2024-06-07
 tags:
