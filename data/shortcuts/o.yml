@@ -2803,6 +2803,24 @@ ffi 1:
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
+ffr 0:
+  url: https://www.filmfriend.de/
+  title: filmfriend
+  tests:
+  - expect: <title>filmfriend</title>
+  tags:
+  - movies
+ffr 1:
+  url: https://www.filmfriend.de/en/search?search=<query>
+  title: filmfriend
+  tests:
+  - arguments: Berlin
+    expect: <title>Search - filmfriend</title>
+  tags:
+  - movies
+  examples:
+  - arguments: Berlin
+    description: Search for "Berlin"
 fi 0:
   include:
   - key: fi 0
@@ -2827,24 +2845,6 @@ fi 1:
     namespace: lgs
   - key: fi 1
     namespace: pka
-ffr 0:
-  url: https://www.filmfriend.de/
-  title: filmfriend
-  tags:
-  - movies
-  tests:
-  - expect: <title>filmfriend</title>
-ffr 1:
-  url: https://www.filmfriend.de/en/search?search=<query>
-  title: filmfriend
-  tests:
-  - arguments: Berlin
-    expect: <title>Search - filmfriend</title>
-  tags:
-  - movies
-  examples:
-  - arguments: Berlin
-    description: Search for "Berlin"
 filmweb_ludzie 1:
   url: https://www.filmweb.pl/szukaj?q=<query>&c=person
   title: FilmWeb
