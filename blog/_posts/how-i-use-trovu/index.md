@@ -7,7 +7,7 @@ tags:
     - beginner
 ---
 
-Many of my friends have known Trovu for years, and they fall into exactly two groups:
+I have started creating this project in 2005, many of my friends have known it for years, and they fall into exactly two groups:
 
 -   "Nice, but I don't see why this would be useful to me."
 -   "This is awesome, I can't use the Internet without it anymore."
