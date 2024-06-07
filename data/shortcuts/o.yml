@@ -8490,21 +8490,6 @@ vimeo 1:
   examples:
   - arguments: berlin
     description: Search videos about "berlin"
-vine 0:
-  url: https://vine.co/
-  title: Vine
-  tags:
-  - video
-  - vine
-vine 1:
-  url: https://vine.co/search/<query>
-  title: Vine
-  tags:
-  - video
-  - vine
-  examples:
-  - arguments: cat
-    description: Search Vine for "cat"
 visuwords 1:
   url: https://www.visuwords.com/?word=<query>
   title: Visuwords
