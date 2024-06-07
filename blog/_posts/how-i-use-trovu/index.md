@@ -1,5 +1,5 @@
 ---
-title: How I Use trovu.net
+title: How I Use trovu.net (Georg)
 description: A Practical Beginner's Guide
 date: 2024-05-22
 tags:
