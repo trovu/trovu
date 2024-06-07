@@ -8429,11 +8429,20 @@ uz 1:
   include:
   - key: uz 1
     namespace: pka
-v 1:
-  url: https://vimeo.com/search?q=<query>
+v 0:
+  url: https://vimeo.com/
   title: Vimeo
   tags:
-  - old
+  - video
+  - vimeo
+  examples:
+  - description: Go to homepage
+v 1:
+  url: https://vimeo.com/search?q=<query>
+  include: v 0
+  examples:
+  - arguments: berlin
+    description: Search videos about "berlin"
 validator 1:
   url: https://validator.w3.org/check?uri=<uri>
   title: W3 Validator
