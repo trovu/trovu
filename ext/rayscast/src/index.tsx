@@ -22,6 +22,11 @@ export default function Command() {
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
       const data = await response.json();
+
+      const env = new Env({ data: data });
+      await env.populate({ language: "en", country: "us" });
+      console.log(env.namespaceInfos[".de"].shortcuts["db 2"]);
+
       // console.log("Fetched data:", data); // Debugging log
 
       // Flatten the data structure and filter out deprecated or removed shortcuts
