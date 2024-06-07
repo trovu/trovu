@@ -7,7 +7,7 @@ tags:
     - testimonial
 ---
 
-_[Kilian Evang](https://kilian.evang.name/) uses Trovu and its predecessors since 2007. In the German blog "Techniktagebuch" (English: "Technology Diary") he [wrote about his experience](https://techniktagebuch.tumblr.com/post/749989061656182784)._
+_[Kilian Evang](https://kilian.evang.name/) has been using Trovu and its predecessors since 2007. In the German blog "Techniktagebuch" (English: "Technology Diary") he [wrote about his experience](https://techniktagebuch.tumblr.com/post/749989061656182784)._
 
 At the top of the browser, in the address bar, you can enter not only URLs. You can also enter a search term and be directed to the search results page of the default search engine, usually Google. This saves you the step of opening the search engine's homepage and finding your way around – ensuring the cursor is in the search field, etc.
 
@@ -77,7 +77,7 @@ Here is a subjective and arbitrary selection of my 5 most important use cases fo
 
     {% trovuCall "kaz", { country: "de" } %}
 
-    for searching or opening the homepage
+    for searching or opening the homepage,
 
     {% trovuCall "kazn", { country: "de" } %}
 
