@@ -20,43 +20,27 @@ export default function Command() {
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
   // console.log("Environment:", env); // Debugging log
 
-  const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
+  const { env, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
       const data = await response.json();
 
-      const env = new Env({ data: data });
+      const builtEnv = new Env({ data: data });
       await env.populate({ language: "en", country: "us" });
-      const suggestionsGetter = new SuggestionsGetter(env);
-      const suggestions = suggestionsGetter.getSuggestions("g");
-      console.log("Suggestions:", suggestions); // Debugging log
-
-      // console.log("Fetched data:", data); // Debugging log
-
-      // Flatten the data structure and filter out deprecated or removed shortcuts
-      const flattenedShortcuts = Object.keys(data.shortcuts).flatMap((namespace) => {
-        return Object.entries(data.shortcuts[namespace])
-          .filter(([, item]: [string, any]) => !item.deprecated && !item.removed)
-          .map(([key, item]: [string, any]) => ({
-            keyword: key,
-            namespace: namespace,
-            title: item.name || item.title || "No title",
-            url: item.url,
-            description: item.description || "",
-          }));
-      });
-
-      // console.log("Flattened shortcuts:", flattenedShortcuts); // Debugging log
-      return flattenedShortcuts;
+      return env;
+      // const suggestionsGetter = new SuggestionsGetter(env);
+      // const suggestions = suggestionsGetter.getSuggestions("g");
+      // console.log("Suggestions:", suggestions); // Debugging log
+      return builtEnv;
     },
   });
 
   useEffect(() => {
-    if (data) {
+    if (env) {
       // console.log("Setting shortcuts data:", data); // Debugging log
-      setShortcuts(data);
-      setFilteredShortcuts(data);
+      setShortcuts(env);
+      setFilteredShortcuts(env);
     }
-  }, [data]);
+  }, [env]);
 
   useEffect(() => {
     filterShortcuts();
