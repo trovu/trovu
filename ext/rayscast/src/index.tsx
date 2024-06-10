@@ -64,6 +64,14 @@ export default function Command() {
     console.error("Error fetching data:", error); // Debugging log
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
+  return (
+    <List
+      isLoading={isLoading}
+      onSearchTextChange={setSearchText}
+      searchBarPlaceholder="Search shortcuts..."
+      throttle
+    ></List>
+  );
 
   return (
     <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..." throttle>
