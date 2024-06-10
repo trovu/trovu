@@ -2,6 +2,7 @@ import { ActionPanel, Action, Color, List, showToast, Toast } from "@raycast/api
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
+import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 
 interface Shortcut {
   keyword: string;
@@ -25,7 +26,9 @@ export default function Command() {
 
       const env = new Env({ data: data });
       await env.populate({ language: "en", country: "us" });
-      console.log(env.namespaceInfos[".de"].shortcuts["db 2"]);
+      const suggestionsGetter = new SuggestionsGetter(env);
+      const suggestions = suggestionsGetter.getSuggestions("g");
+      console.log("Suggestions:", suggestions); // Debugging log
 
       // console.log("Fetched data:", data); // Debugging log
 
