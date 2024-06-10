@@ -42,6 +42,7 @@ export default function Command() {
   const filterShortcuts = () => {
     const suggestionsGetter = new SuggestionsGetter(env);
     const suggestions = suggestionsGetter.getSuggestions(searchText);
+    console.log("Suggestions:", suggestions); // Debugging log
     setFilteredShortcuts(suggestions);
   };
 
