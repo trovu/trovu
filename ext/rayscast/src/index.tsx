@@ -27,34 +27,19 @@ export default function Command() {
       const builtEnv = new Env({ data: data });
       await env.populate({ language: "en", country: "us" });
       return env;
-      // const suggestionsGetter = new SuggestionsGetter(env);
-      // const suggestions = suggestionsGetter.getSuggestions("g");
       // console.log("Suggestions:", suggestions); // Debugging log
       return builtEnv;
     },
   });
 
   useEffect(() => {
-    if (env) {
-      // console.log("Setting shortcuts data:", data); // Debugging log
-      setShortcuts(env);
-      setFilteredShortcuts(env);
-    }
-  }, [env]);
-
-  useEffect(() => {
     filterShortcuts();
-  }, [searchText, shortcuts]);
+  }, [searchText]);
 
   const filterShortcuts = () => {
-    if (searchText.length === 0) {
-      console.log("Resetting filteredShortcuts to all shortcuts"); // Debugging log
-      setFilteredShortcuts(shortcuts);
-    } else {
-      const filtered = shortcuts.filter((shortcut) => shortcut.title.toLowerCase().includes(searchText.toLowerCase()));
-      // console.log("Filtered shortcuts:", filtered); // Debugging log
-      setFilteredShortcuts(filtered);
-    }
+    const suggestionsGetter = new SuggestionsGetter(env);
+    const suggestions = suggestionsGetter.getSuggestions(searchText);
+    setFilteredShortcuts(suggestions);
   };
 
   const handleEnterKey = () => {
