@@ -16,25 +16,28 @@ interface Shortcut {
 
 export default function Command() {
   const [searchText, setSearchText] = useState("");
-  const [shortcuts, setShortcuts] = useState<Shortcut[]>([]);
+  const [env, setEnv] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
   // console.log("Environment:", env); // Debugging log
 
-  const { env, isLoading, error } = useFetch("https://trovu.net/data.json", {
+  const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
       const data = await response.json();
 
       const builtEnv = new Env({ data: data });
-      await env.populate({ language: "en", country: "us" });
-      return env;
+      await builtEnv.populate({ language: "en", country: "us" });
       // console.log("Suggestions:", suggestions); // Debugging log
       return builtEnv;
     },
   });
 
   useEffect(() => {
+    setEnv(data);
+  }, [data]);
+
+  useEffect(() => {
     filterShortcuts();
-  }, [searchText]);
+  }, [searchText, env]);
 
   const filterShortcuts = () => {
     const suggestionsGetter = new SuggestionsGetter(env);
