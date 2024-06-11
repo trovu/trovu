@@ -37,7 +37,9 @@ export default function Command() {
   });
 
   useEffect(() => {
-    setEnv(data);
+    if (data) {
+      setEnv(data);
+    }
   }, [data]);
 
   useEffect(() => {
@@ -47,6 +49,7 @@ export default function Command() {
   }, [searchText, env]);
 
   const filterShortcuts = () => {
+    if (!env) return;
     const suggestionsGetter = new SuggestionsGetter(env);
     const suggestions = suggestionsGetter.getSuggestions(searchText).slice(0, 50);
     setFilteredShortcuts(suggestions);
