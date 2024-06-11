@@ -21,7 +21,7 @@ interface Suggestion {
 export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [env, setEnv] = useState<Env | null>(null);
-  const [filteredShortcuts, setFilteredShortcuts] = useState<Suggestion[]>([]);
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
 
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
@@ -52,7 +52,7 @@ export default function Command() {
     if (!env) return;
     const suggestionsGetter = new SuggestionsGetter(env);
     const suggestions = suggestionsGetter.getSuggestions(searchText).slice(0, 50);
-    setFilteredShortcuts(suggestions);
+    setSuggestions(suggestions);
   };
 
   const handleEnterKey = () => {
@@ -72,8 +72,8 @@ export default function Command() {
 
   return (
     <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..." throttle>
-      <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
-        {filteredShortcuts.map((shortcut) => (
+      <List.Section title="Results" subtitle={`${suggestions.length}`}>
+        {suggestions.map((shortcut) => (
           <List.Item
             key={`${shortcut.namespace}.${shortcut.keyword}.${shortcut.argumentCount}`}
             title={shortcut.title}
@@ -82,9 +82,7 @@ export default function Command() {
             actions={customActions}
           />
         ))}
-        {searchText && filteredShortcuts.length === 0 && (
-          <List.Item title="Press Enter to search" actions={customActions} />
-        )}
+        {searchText && suggestions.length === 0 && <List.Item title="Press Enter to search" actions={customActions} />}
       </List.Section>
     </List>
   );
