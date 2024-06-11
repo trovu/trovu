@@ -86,7 +86,7 @@ export default function Command() {
       <Action
         title={isShowingDetail ? "Hide Details" : "Show Details"}
         onAction={toggleDetail}
-        shortcut={{ modifiers: ["cmd"], key: "d" }}
+        shortcut={{ modifiers: [], key: "tab" }}
       />
     </ActionPanel>
   );
