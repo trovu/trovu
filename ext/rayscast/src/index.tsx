@@ -79,7 +79,7 @@ export default function Command() {
           <List.Item
             key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
             title={suggestion.keyword}
-            subtitle={suggestion.argumentCount}
+            subtitle={`foo`}
             accessories={[{ text: suggestion.title }, { tag: { value: suggestion.namespace, color: Color.Red } }]}
             actions={customActions}
           />
