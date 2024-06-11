@@ -22,15 +22,12 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [env, setEnv] = useState<Shortcut[]>([]);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
-  // console.log("Environment:", env); // Debugging log
 
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
       const data = await response.json();
-
       const builtEnv = new Env({ data: data });
       await builtEnv.populate({ language: "en", country: "us" });
-      // console.log("Suggestions:", suggestions); // Debugging log
       return builtEnv;
     },
     onError: (error) => {
@@ -52,7 +49,6 @@ export default function Command() {
   const filterShortcuts = () => {
     const suggestionsGetter = new SuggestionsGetter(env);
     const suggestions = suggestionsGetter.getSuggestions(searchText).slice(0, 50);
-    //console.log("Suggestions:", suggestions); // Debugging log
     setFilteredShortcuts(suggestions);
   };
 
