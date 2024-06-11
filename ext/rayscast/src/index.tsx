@@ -1,6 +1,6 @@
 import { ActionPanel, Action, List, showToast, Toast, open } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 
@@ -71,32 +71,21 @@ export default function Command() {
 
 **Arguments:** ${JSON.stringify(suggestion.arguments, null, 2) ?? "N/A"}
 
-**Examples:** ${suggestion.examples?.map((example) => `\`${example}\``).join("\n") ?? "N/A"}
 
 **URL:** [Link](${suggestion.url})
     `;
   };
 
-  const customActions = (
+  const toggleDetail = () => {
+    setIsShowingDetail((prev) => !prev);
+  };
+
+  const customActions = (suggestion: Suggestion) => (
     <ActionPanel>
       <Action title="Send query to Trovu" onAction={handleEnterKey} />
+      <Action title={isShowingDetail ? "Hide Details" : "Show Details"} onAction={toggleDetail} />
     </ActionPanel>
   );
-
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (event.key === "ArrowRight") {
-      setIsShowingDetail(true);
-    } else if (event.key === "ArrowLeft") {
-      setIsShowingDetail(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleKeyDown]);
 
   if (error) {
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
@@ -117,11 +106,13 @@ export default function Command() {
             title={suggestion.keyword}
             subtitle={suggestion.title}
             accessories={[{ tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } }]}
-            detail={<List.Item.Detail markdown={renderSuggestionDetail(suggestion)} />}
-            actions={customActions}
+            detail={isShowingDetail && <List.Item.Detail markdown={renderSuggestionDetail(suggestion)} />}
+            actions={customActions(suggestion)}
           />
         ))}
-        {searchText && suggestions.length === 0 && <List.Item title="Press Enter to search" actions={customActions} />}
+        {searchText && suggestions.length === 0 && (
+          <List.Item title="Press Enter to search" actions={customActions(null)} />
+        )}
       </List.Section>
     </List>
   );
