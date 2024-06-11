@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 
-interface Shortcut {
+interface Suggestion {
   argumentCount: string;
   arguments?: object;
   description?: string;
@@ -21,7 +21,7 @@ interface Shortcut {
 export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [env, setEnv] = useState<Env | null>(null);
-  const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
+  const [filteredShortcuts, setFilteredShortcuts] = useState<Suggestion[]>([]);
 
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
