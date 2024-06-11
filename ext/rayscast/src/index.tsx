@@ -68,14 +68,17 @@ export default function Command() {
     console.error("Error fetching data:", error); // Debugging log
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
-  return (
-    <List
-      isLoading={isLoading}
-      onSearchTextChange={setSearchText}
-      searchBarPlaceholder="Search shortcuts..."
-      throttle
-    ></List>
-  );
+  // for (const filteredShortcut of filteredShortcuts) {
+  //   console.log(`${filteredShortcut.namespace}.${filteredShortcut.keyword} ${filteredShortcut.argumentCount}`); // Debugging log
+  // }
+  // return (
+  //   <List
+  //     isLoading={isLoading}
+  //     onSearchTextChange={setSearchText}
+  //     searchBarPlaceholder="Search shortcuts..."
+  //     throttle
+  //   ></List>
+  // );
 
   return (
     <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..." throttle>
