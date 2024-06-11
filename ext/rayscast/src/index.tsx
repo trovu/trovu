@@ -89,7 +89,13 @@ export default function Command() {
   }
 
   return (
-    <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..." throttle>
+    <List
+      isLoading={isLoading}
+      onSearchTextChange={setSearchText}
+      searchBarPlaceholder="Search shortcuts..."
+      throttle
+      isShowingDetail
+    >
       <List.Section>
         {suggestions.map((suggestion) => (
           <List.Item
