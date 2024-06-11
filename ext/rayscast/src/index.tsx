@@ -74,7 +74,7 @@ export default function Command() {
 
   return (
     <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..." throttle>
-      <List.Section title="Results" subtitle={`${suggestions.length}`}>
+      <List.Section>
         {suggestions.map((shortcut) => (
           <List.Item
             key={`${shortcut.namespace}.${shortcut.keyword}.${shortcut.argumentCount}`}
