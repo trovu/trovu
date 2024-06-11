@@ -33,6 +33,10 @@ export default function Command() {
       // console.log("Suggestions:", suggestions); // Debugging log
       return builtEnv;
     },
+    onError: (error) => {
+      console.error("Error fetching data:", error); // Debugging log
+      showToast(Toast.Style.Failure, "Failed to load data");
+    },
   });
 
   useEffect(() => {
