@@ -20,7 +20,7 @@ interface Shortcut {
 
 export default function Command() {
   const [searchText, setSearchText] = useState("");
-  const [env, setEnv] = useState<Shortcut[]>([]);
+  const [env, setEnv] = useState<Env | null>(null);
   const [filteredShortcuts, setFilteredShortcuts] = useState<Shortcut[]>([]);
 
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
