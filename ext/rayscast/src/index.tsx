@@ -57,11 +57,8 @@ export default function Command() {
   };
 
   const handleEnterKey = () => {
-    // Execute your custom code here
     showToast(Toast.Style.Success, "Enter key pressed", `Search text: ${searchText}`);
     console.log("Enter key pressed with search text:", searchText);
-    // Example of pushing a new view
-    // push(<NewView searchText={searchText} />);
   };
 
   const customActions = (
