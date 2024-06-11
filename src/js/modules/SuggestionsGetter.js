@@ -78,6 +78,8 @@ export default class SuggestionsGetter {
         if (shortcut.deprecated || shortcut.removed) {
           continue;
         }
+        delete shortcut.includes;
+        delete shortcut.tests;
         if (query == '') {
           if (shortcut.showOnHome && shortcut.reachable) {
             matches.showOnHome.push(shortcut);
