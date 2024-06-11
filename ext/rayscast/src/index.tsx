@@ -78,8 +78,8 @@ export default function Command() {
         {suggestions.map((shortcut) => (
           <List.Item
             key={`${shortcut.namespace}.${shortcut.keyword}.${shortcut.argumentCount}`}
-            title={shortcut.title}
-            subtitle={shortcut.keyword}
+            title={shortcut.keyword}
+            subtitle={shortcut.argumentCount}
             accessories={[{ text: shortcut.title }, { tag: { value: shortcut.namespace, color: Color.Red } }]}
             actions={customActions}
           />
