@@ -83,7 +83,11 @@ export default function Command() {
   const customActions = (suggestion: Suggestion) => (
     <ActionPanel>
       <Action title="Send query to Trovu" onAction={handleEnterKey} />
-      <Action title={isShowingDetail ? "Hide Details" : "Show Details"} onAction={toggleDetail} />
+      <Action
+        title={isShowingDetail ? "Hide Details" : "Show Details"}
+        onAction={toggleDetail}
+        shortcut={{ modifiers: ["cmd"], key: "d" }}
+      />
     </ActionPanel>
   );
 
