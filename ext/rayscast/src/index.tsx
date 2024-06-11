@@ -5,7 +5,7 @@ import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 
 interface Shortcut {
-  argumentCount: number;
+  argumentCount: string;
   arguments?: object;
   description?: string;
   examples?: object[];
