@@ -80,7 +80,10 @@ export default function Command() {
             key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
             title={suggestion.keyword}
             subtitle={`foo`}
-            accessories={[{ text: suggestion.title }, { tag: { value: suggestion.namespace, color: Color.Red } }]}
+            accessories={[
+              { text: suggestion.title },
+              { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } },
+            ]}
             actions={customActions}
           />
         ))}
