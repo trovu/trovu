@@ -43,6 +43,17 @@ export default class SuggestionsGetter {
       matches.urlMiddleReachable,
       matches.urlMiddleUnreachable,
     );
+    // Remove duplicates.
+    suggestions = suggestions.filter((shortcut, index, self) => {
+      return (
+        index ===
+        self.findIndex(
+          (t) =>
+            `${t.namespace}.${t.keyword} ${t.argumentCount}` ===
+            `${shortcut.namespace}.${shortcut.keyword} ${shortcut.argumentCount}`,
+        )
+      );
+    });
 
     return suggestions;
   }
