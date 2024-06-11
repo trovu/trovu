@@ -99,10 +99,34 @@ export default function Command() {
         {suggestions.map((suggestion) => (
           <List.Item
             key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
-            title={suggestion.keyword}
-            subtitle={suggestion.title}
-            accessories={[{ tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } }]}
-            detail={<List.Item.Detail markdown={renderSuggestionDetail(suggestion)} />}
+            title={`${suggestion.keyword} 🌃 from, 🌃 to, ⏱️ time`}
+            accessories={[
+              { text: suggestion.title },
+              { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } },
+            ]}
+            detail={
+              <List.Item.Detail
+                metadata={
+                  <List.Item.Detail.Metadata>
+                    <List.Item.Detail.Metadata.Label title="Types" />
+                    <List.Item.Detail.Metadata.Label title="Grass" icon="pokemon_types/grass.svg" />
+                    <List.Item.Detail.Metadata.Separator />
+                    <List.Item.Detail.Metadata.Label title="Poison" icon="pokemon_types/poison.svg" />
+                    <List.Item.Detail.Metadata.Separator />
+                    <List.Item.Detail.Metadata.Label title="Chracteristics" />
+                    <List.Item.Detail.Metadata.Label title="Height" text="70cm" />
+                    <List.Item.Detail.Metadata.Separator />
+                    <List.Item.Detail.Metadata.Label title="Weight" text="6.9 kg" />
+                    <List.Item.Detail.Metadata.Separator />
+                    <List.Item.Detail.Metadata.Label title="Abilities" />
+                    <List.Item.Detail.Metadata.Label title="Chlorophyll" text="Main Series" />
+                    <List.Item.Detail.Metadata.Separator />
+                    <List.Item.Detail.Metadata.Label title="Overgrow" text="Main Series" />
+                    <List.Item.Detail.Metadata.Separator />
+                  </List.Item.Detail.Metadata>
+                }
+              />
+            }
             actions={customActions}
           />
         ))}
