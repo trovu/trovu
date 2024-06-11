@@ -44,7 +44,6 @@ export default function Command() {
   }, [data]);
 
   useEffect(() => {
-    // console.log("Search text changed:", searchText); // Debugging log
     if (env) {
       filterShortcuts();
     }
