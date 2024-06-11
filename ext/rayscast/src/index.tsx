@@ -64,7 +64,7 @@ export default function Command() {
 
   const customActions = (
     <ActionPanel>
-      <Action title="Execute Enter Action" onAction={handleEnterKey} />
+      <Action title="Send query to Trovu" onAction={handleEnterKey} />
     </ActionPanel>
   );
 
