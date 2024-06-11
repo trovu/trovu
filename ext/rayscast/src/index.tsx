@@ -75,12 +75,12 @@ export default function Command() {
   return (
     <List isLoading={isLoading} onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..." throttle>
       <List.Section>
-        {suggestions.map((shortcut) => (
+        {suggestions.map((suggestion) => (
           <List.Item
-            key={`${shortcut.namespace}.${shortcut.keyword}.${shortcut.argumentCount}`}
-            title={shortcut.keyword}
-            subtitle={shortcut.argumentCount}
-            accessories={[{ text: shortcut.title }, { tag: { value: shortcut.namespace, color: Color.Red } }]}
+            key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
+            title={suggestion.keyword}
+            subtitle={suggestion.argumentCount}
+            accessories={[{ text: suggestion.title }, { tag: { value: suggestion.namespace, color: Color.Red } }]}
             actions={customActions}
           />
         ))}
