@@ -1,4 +1,4 @@
-import { ActionPanel, Action, Color, List, showToast, Toast, open } from "@raycast/api";
+import { ActionPanel, Action, List, showToast, Toast, open } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
