@@ -43,16 +43,16 @@ export default class SuggestionsGetter {
       matches.urlMiddleReachable,
       matches.urlMiddleUnreachable,
     );
+
     // Remove duplicates.
-    suggestions = suggestions.filter((shortcut, index, self) => {
-      return (
-        index ===
-        self.findIndex(
-          (t) =>
-            `${t.namespace}.${t.keyword} ${t.argumentCount}` ===
-            `${shortcut.namespace}.${shortcut.keyword} ${shortcut.argumentCount}`,
-        )
-      );
+    const map = new Map();
+    suggestions = suggestions.filter((item) => {
+      const key = `${item.namespace}.${item.keyword} ${item.argumentCount}`;
+      if (!map.has(key)) {
+        map.set(key, true); // set any value to Map
+        return true;
+      }
+      return false;
     });
 
     return suggestions;
