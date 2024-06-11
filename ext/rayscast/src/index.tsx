@@ -5,13 +5,17 @@ import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 
 interface Shortcut {
+  argumentCount: number;
+  arguments?: object;
+  description?: string;
+  examples?: object[];
+  key: string;
   keyword: string;
   namespace: string;
-  title: string;
+  reachable?: boolean;
+  tags?: string[];
+  title?: string;
   url: string;
-  description?: string;
-  deprecated?: boolean;
-  removed?: boolean;
 }
 
 export default function Command() {
