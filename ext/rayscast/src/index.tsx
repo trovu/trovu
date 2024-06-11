@@ -62,6 +62,22 @@ export default function Command() {
     open(`https://trovu.net/process/#country=us&language=en&query=${encodeURIComponent(searchText)}`);
   };
 
+  const renderSuggestionDetail = (suggestion: Suggestion) => {
+    return `
+### ${suggestion.keyword}
+
+**Description:** ${suggestion.description ?? "N/A"}
+
+**Namespace:** ${suggestion.namespace}
+
+**Arguments:** ${JSON.stringify(suggestion.arguments, null, 2) ?? "N/A"}
+
+**Examples:** ${suggestion.examples?.map((example) => `\`${example}\``).join("\n") ?? "N/A"}
+
+**URL:** [Link](${suggestion.url})
+    `;
+  };
+
   const customActions = (
     <ActionPanel>
       <Action title="Send query to Trovu" onAction={handleEnterKey} />
@@ -79,11 +95,9 @@ export default function Command() {
           <List.Item
             key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
             title={suggestion.keyword}
-            subtitle={`foo`}
-            accessories={[
-              { text: suggestion.title },
-              { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } },
-            ]}
+            subtitle={suggestion.title}
+            accessories={[{ tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } }]}
+            detail={<List.Item.Detail markdown={renderSuggestionDetail(suggestion)} />}
             actions={customActions}
           />
         ))}
