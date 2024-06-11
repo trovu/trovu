@@ -52,17 +52,13 @@ export default function Command() {
 
   const filterShortcuts = () => {
     if (!env) return;
-    console.log("new Getter"); // Debugging log
     const suggestionsGetter = new SuggestionsGetter(env);
-    console.log("new Getter done"); // Debugging log
     const suggestions = suggestionsGetter.getSuggestions(searchText).slice(0, 50);
-    console.log("getSuggestions done"); // Debugging log
     setSuggestions(suggestions);
   };
 
   const handleEnterKey = () => {
     showToast(Toast.Style.Success, "Enter key pressed", `Search text: ${encodeURIComponent(searchText)}`);
-    console.log("Enter key pressed with search text:", searchText);
     open(`https://trovu.net/process/#country=us&language=en&query=${encodeURIComponent(searchText)}`);
   };
 
