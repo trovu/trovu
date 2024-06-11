@@ -40,7 +40,9 @@ export default function Command() {
   }, [data]);
 
   useEffect(() => {
-    filterShortcuts();
+    if (env) {
+      filterShortcuts();
+    }
   }, [searchText, env]);
 
   const filterShortcuts = () => {
