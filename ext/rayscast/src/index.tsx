@@ -93,11 +93,3 @@ export default function Command() {
     </List>
   );
 }
-
-function NewView({ searchText }: { searchText: string }) {
-  return (
-    <List>
-      <List.Item title={`You searched for: ${searchText}`} />
-    </List>
-  );
-}
