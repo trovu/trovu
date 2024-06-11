@@ -82,7 +82,7 @@ export default function Command() {
       <List.Section title="Results" subtitle={`${filteredShortcuts.length}`}>
         {filteredShortcuts.map((shortcut) => (
           <List.Item
-            key={`${shortcut.namespace}.${shortcut.keyword}`}
+            key={`${shortcut.namespace}.${shortcut.keyword} ${shortcut.argumentCount} ${shortcut.title}`}
             title={shortcut.title}
             subtitle={shortcut.keyword}
             accessories={[{ text: shortcut.title }, { tag: { value: shortcut.namespace, color: Color.Red } }]}
