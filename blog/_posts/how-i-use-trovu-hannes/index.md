@@ -38,7 +38,7 @@ If you want to give it a try, I recommend starting with a few simple commands fi
 
 That's it. Start with a handful of commands. If you use them regularly, you will quickly notice how helpful they are. There are more commands available, but do not get intimidated: You only need to remember the ones that you use often.
 
-When you are ready, you can extend the list step by step. Searching for new commands is easy. Just visit https://trovu.net/, enter a search term, and find the commands that are already defined. Here are a few more that I use regularly:
+When you are ready, you can extend the list step by step. Searching for new commands is easy. Just visit [trovu.net](https://trovu.net/), enter a search term, and find the commands that are already defined. Here are a few more that I use regularly:
 
 -   {% trovuCall "en cat" %} translate a word to/from English
 -   {% trovuCall "gtr Translate a whole sentence" %} use Google Translate
@@ -46,11 +46,11 @@ When you are ready, you can extend the list step by step. Searching for new comm
 -   {% trovuCall "osm berlin, alexanderplatz" %} search on OpenStreetMap
 -   {% trovuCall "we frankfurt" %} weather forecast for Frankfurt
 
-Sometimes I want to add a personal command that is not relevant to other people. For this reason, I have created a GitHub repository and defined some commands just for myself. This is especially useful when I am at work:
+Sometimes I want to add a personal command that is not relevant to other people. For this reason, I have created a [GitHub repository](https://github.com/neubarth/trovu-data-user) and [defined some commands just for myself](https://trovu.net/docs/users/advanced/). This is especially useful when I am at work:
 
 -   {% trovuCall "jira 1234", { github: "neubarth" } %} search for a ticket in my company's JIRA
 -   {% trovuCall "conf release process", { github: "neubarth" } %} search in my company's Confluence
 -   {% trovuCall "tt", { github: "neubarth" } %} open my company's time tracking page
 -   {% trovuCall "mvn spring-boot", { github: "neubarth" } %} search for Maven/Gradle artifacts
 
-As you see, I use Trovu at work. I also use Trovu on my phone and my second laptop. Actually, I install it whenever I'm on a new computer. Because that's the only downside of Trovu – if you get used to it, you don't want to miss it. Never ever.
+As you see, I use Trovu at work. I also use Trovu on my phone and my second laptop. Actually, I [install it](https://trovu.net/docs/users/integration/) whenever I'm on a new computer. Because that's the only downside of Trovu – if you get used to it, you don't want to miss it. Never ever.
