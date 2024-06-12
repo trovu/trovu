@@ -30,27 +30,27 @@ All you need to do is add another search engine to your browser, and you are rea
 
 If you want to give it a try, I recommend starting with a few simple commands first:
 
--   "g pulp fiction" - search for Pulp Fiction on Google
--   "w pulp fiction" - look it up on Wikipedia
--   "a pulp fiction" - find it on Amazon
--   "gm berlin, alexanderplatz" - look up an address on Google Maps
--   "yt funny cats" - find videos with funny cats
+-   {% trovuCall "g pulp fiction" %} search for Pulp Fiction on Google
+-   {% trovuCall "w pulp fiction" %} look it up on Wikipedia
+-   {% trovuCall "a pulp fiction" %} find it on Amazon
+-   {% trovuCall "gm berlin, alexanderplatz", {country: "de" } %} look up an address on Google Maps
+-   {% trovuCall "yt funny cats" %} find videos with funny cats
 
 That's it. Start with a handful of commands. If you use them regularly, you will quickly notice how helpful they are. There are more commands available, but do not get intimidated: You only need to remember the ones that you use often.
 
 When you are ready, you can extend the list step by step. Searching for new commands is easy. Just visit https://trovu.net/, enter a search term, and find the commands that are already defined. Here are a few more that I use regularly:
 
--   "en cat" - translate a word to/from English
--   "gtr Translate a whole sentence" - use Google Translate
--   "gi funny cat" - search on Google Images
--   "osm berlin, alexanderplatz" - search on OpenStreetMap
--   "we frankfurt" - weather forecast for Frankfurt
+-   {% trovuCall "en cat" %} translate a word to/from English
+-   {% trovuCall "gtr Translate a whole sentence" %} use Google Translate
+-   {% trovuCall "gi funny cat" %} search on Google Images
+-   {% trovuCall "osm berlin, alexanderplatz" %} search on OpenStreetMap
+-   {% trovuCall "we frankfurt" %} weather forecast for Frankfurt
 
 Sometimes I want to add a personal command that is not relevant to other people. For this reason, I have created a GitHub repository and defined some commands just for myself. This is especially useful when I am at work:
 
--   "jira 1234" - search for a ticket in my company's JIRA
--   "conf release process" - search in my company's Confluence
--   "tt" - open my company's time tracking page
--   "mvn spring-boot" - search for Maven/Gradle artifacts
+-   {% trovuCall "jira 1234", { github: "neubarth" } %} search for a ticket in my company's JIRA
+-   {% trovuCall "conf release process", { github: "neubarth" } %} search in my company's Confluence
+-   {% trovuCall "tt", { github: "neubarth" } %} open my company's time tracking page
+-   {% trovuCall "mvn spring-boot", { github: "neubarth" } %} search for Maven/Gradle artifacts
 
 As you see, I use Trovu at work. I also use Trovu on my phone and my second laptop. Actually, I install it whenever I'm on a new computer. Because that's the only downside of Trovu – if you get used to it, you don't want to miss it. Never ever.
