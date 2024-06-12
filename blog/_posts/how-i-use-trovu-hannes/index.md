@@ -1,6 +1,6 @@
 ---
 title: How I Use Trovu (Hannes)
-description: The Command Line for the WWW
+description: "The only downside of Trovu: if you get used to it, you don't want to miss it."
 date: 2024-06-12
 tags:
     - beginner
