@@ -1,6 +1,32 @@
+---
+title: How I Use Trovu (Hannes)
+description: The Command Line for the WWW
+date: 2024-06-07
+tags:
+    - beginner
+    - testimonial
+---
+
+_[Hannes Neubarth](https://www.linkedin.com/in/johannesneubarth) has been using Trovu and its predecessors for more than 10 years._
+
 Hi folks, my name is Hannes, and I have been using Trovu for several years now. It is a real productivity booster, helps me save a lot of time, and I recommend everyone to use it, without exception.
 
-The reason why we all need Trovu is very simple. Most of the time when you work with a browser, you already know where you want to go: You want to see a list of search results in Google, or you want to look up your friend's address on a map, or you may want to view all bicycles in your favorite web shop. In all these cases, the usual procedure is: 1. Open the main website, 2. fill out one or several search fields, 3. hit enter, 4. and wait for the results. All of us are doing this dozens of times a day, hundreds of times per month, probably more. Trovu helps you to do the same thing much faster: Write the shortcut for a website in the address bar, add some search terms, and hit enter. All you need to do is adding another search engine to your browser, and you are ready to go.
+The reason why we all need Trovu is very simple. Most of the time when you work with a browser, you already know where you want to go: You want to see a list of search results in Google, or you want to look up your friend's address on a map, or you may want to view all bicycles in your favorite web shop.
+
+In all these cases, the usual procedure is:
+
+1. Open the main website,
+2. fill out one or several search fields,
+3. hit enter,
+4. and wait for the results.
+
+All of us are doing this dozens of times a day, hundreds of times per month, probably more. Trovu helps you to do the same thing much faster:
+
+1. Write the shortcut for a website in the address bar,
+1. add some search terms,
+1. and hit enter.
+
+All you need to do is adding another search engine to your browser, and you are ready to go.
 
 If you want to give it a try, I would recommend to start with a few simple commands first:
 
@@ -12,7 +38,7 @@ If you want to give it a try, I would recommend to start with a few simple comma
 
 That's it. Start with a handful of commands. If you use them regularly, you will quickly notice how helpful they are. There are more commands available, but do not get intimidated: You only need to remember the ones that you use often.
 
-When you are ready, you can extend the list step by step. Searching new commands is easy, just visit https://trovu.net , enter a search term, and find the commands that are already defined. Here are a few more that I use regularly:
+When you are ready, you can extend the list step by step. Searching new commands is easy, just visit https://trovu.net/, enter a search term, and find the commands that are already defined. Here are a few more that I use regularly:
 
 -   "en cat" - translate a word to/from English
 -   "gtr Translate a whole sentence" - or use Google Translate
