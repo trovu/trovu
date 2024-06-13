@@ -83,6 +83,7 @@ module.exports = (eleventyConfig) => {
         sizes: '100vw', // Full width of the viewport
         loading: 'lazy',
         decoding: 'async',
+        class: 'full-width',
       };
 
       // Generate the HTML for the image
