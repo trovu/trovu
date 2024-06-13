@@ -9,6 +9,8 @@ tags:
 
 _[Hannes Neubarth](https://www.linkedin.com/in/johannesneubarth) has been using Trovu and its predecessors for more than 10 years._
 
+{% imageFull "img/hannes.jpg", "Johannes Neubarth" %}
+
 Hi folks, my name is Hannes, and I have been using Trovu for several years now. It is a real productivity booster, helps me save a lot of time, and I recommend everyone use it, without exception.
 
 The reason why we all need Trovu is very simple. Most of the time when you work with a browser, you already know where you want to go: You want to see a list of search results on Google, look up your friend's address on a map, or view all bicycles in your favorite web shop.
