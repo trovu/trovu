@@ -92,7 +92,7 @@ module.exports = (eleventyConfig) => {
       });
 
       // Return the generated HTML
-      return `<div style="width: 100%;">${imageHtml}</div>`;
+      return `<div>${imageHtml}</div>`;
     },
   );
 };
