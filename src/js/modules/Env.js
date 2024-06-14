@@ -382,6 +382,9 @@ export default class Env {
    * @return {string} hash - The hash string.
    */
   static getUrlHash() {
+    if (typeof window === 'undefined') {
+      return '';
+    }
     const hash = window.location.hash.substr(1);
     return hash;
   }
