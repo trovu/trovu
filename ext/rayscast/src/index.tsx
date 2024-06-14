@@ -29,6 +29,7 @@ export default function Command() {
       const data = await response.json();
       const builtEnv = new Env({ data: data });
       await builtEnv.populate({ language: "en", country: "us" });
+      // console.log(builtEnv.data.shortcuts.o["acl 1"]);
       return builtEnv;
     },
     onError: (error) => {
@@ -124,8 +125,6 @@ ${description}
                   markdown={renderSuggestionDetail(suggestion)}
                   metadata={
                     <List.Item.Detail.Metadata>
-                      <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
-                      <List.Item.Detail.Metadata.Separator />
                       {suggestion.tags && suggestion.tags.length > 0 && (
                         <List.Item.Detail.Metadata.TagList title="Tags">
                           {suggestion.tags.map((tag, index) => (
@@ -133,6 +132,8 @@ ${description}
                           ))}
                         </List.Item.Detail.Metadata.TagList>
                       )}
+                      <List.Item.Detail.Metadata.Separator />
+                      <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
                     </List.Item.Detail.Metadata>
                   }
                 />
