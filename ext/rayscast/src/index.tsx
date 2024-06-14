@@ -100,6 +100,11 @@ s
         onAction={toggleDetail}
         shortcut={{ modifiers: [], key: "tab" }}
       />
+      <Action.OpenInBrowser
+        title="Edit"
+        url="https://github.com/trovu/trovu/blob/master/data/shortcuts/o.yml"
+        shortcut={{ modifiers: ["opt"], key: "e" }}
+      />
     </ActionPanel>
   );
 
