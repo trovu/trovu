@@ -81,10 +81,6 @@ ${description}
 ### Examples
 - [db b,hh](https://trovu.net/process/#country=us&language=en&query=db%20b%20hh) – Nächster Bus von B nach HH
 - [db b,hh](https://trovu.net/process/#country=us&language=en&query=db%20b%20hh) – Nächster Bus von B nach HH
-    
-[✍ Edit](https://github/com)   [🔧 Report problem](https://google.com)  
-
-s
     `;
   };
 
