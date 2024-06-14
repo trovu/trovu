@@ -6,6 +6,7 @@ import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 
 interface Suggestion {
   argumentCount: string;
+  argumentString: string;
   arguments?: object;
   description?: string;
   examples?: object[];
@@ -124,6 +125,7 @@ ${examples}`
           <List.Item
             key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
             title={suggestion.keyword}
+            subtitle={suggestion.argumentString}
             accessories={[
               { text: suggestion.title },
               { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } },
