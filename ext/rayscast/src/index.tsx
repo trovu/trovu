@@ -70,18 +70,25 @@ export default function Command() {
     const examples = suggestion.examples
       ?.map((example) => {
         const query = `${suggestion.keyword} ${example.arguments ?? ""}`.trim();
-        return `- [${query}](https://trovu.net/) 
-  - _${example.description}_`;
+        return `| [${query}](https://trovu.net/) | _${example.description}_ |`;
       })
       .join("\n");
     const description = suggestion.description ? `_${suggestion.description}_` : "";
 
     return `
+
 ## ${suggestion.title}
+
 
 ${description}
 
-${examples ? `### Examples\n${examples}` : ""}
+${
+  examples
+    ? `| Example query | …result | 
+| -------- | -------- | 
+${examples}`
+    : ""
+}
     `;
   };
 
