@@ -171,9 +171,8 @@ export default class Suggestions {
     const argNamesSpan = document.createElement('span');
     argNamesSpan.className = 'argument-names';
     // getArgumentsStr now returns a DocumentFragment, so we can directly append it
-    const argsFragment = this.getArgsFragment(suggestion.arguments);
+    argNamesSpan.textContent = suggestion.argumentString;
 
-    argNamesSpan.appendChild(argsFragment);
     leftSpan.appendChild(argNamesSpan);
 
     // Create and append the 'right' container
@@ -402,39 +401,6 @@ export default class Suggestions {
     });
     const yaml = jsyaml.dump(shortcut, { noArrayIndent: true, lineWidth: -1 });
     return yaml;
-  }
-
-  getArgsFragment(args) {
-    const icons = {
-      city: '🏙️',
-      date: '📅',
-      time: '🕒',
-    };
-
-    const argsFragment = document.createDocumentFragment();
-
-    Object.entries(args).forEach(([key, value], index, array) => {
-      const type = Object.values(value)[0].type ?? null;
-      const argSpan = document.createElement('span');
-      argSpan.title = type;
-
-      if (icons[type]) {
-        const iconText = document.createTextNode(icons[type] + '\u202F'); // Adding a narrow no-break space
-        argSpan.appendChild(iconText);
-      }
-
-      const argText = document.createTextNode(key);
-      argSpan.appendChild(argText);
-
-      argsFragment.appendChild(argSpan);
-
-      // If it's not the last argument, add a comma and a space
-      if (index < array.length - 1) {
-        argsFragment.appendChild(document.createTextNode(', '));
-      }
-    });
-
-    return argsFragment;
   }
 
   /**
