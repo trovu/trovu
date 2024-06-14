@@ -71,7 +71,7 @@ export default function Command() {
     const examples = suggestion.examples
       ?.map((example) => {
         const query = `${suggestion.keyword} ${example.arguments ?? ""}`.trim();
-        return `| [${query}](https://trovu.net/) | _${example.description}_ |`;
+        return `| [${query}](https://trovu.net/${env.buildProcessUrl({ query: query })}) | _${example.description}_ |`;
       })
       .join("\n");
     const description = suggestion.description ? `_${suggestion.description}_` : "";
