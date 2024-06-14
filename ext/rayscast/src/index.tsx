@@ -69,7 +69,7 @@ export default function Command() {
   const renderSuggestionDetail = (suggestion: Suggestion) => {
     const examples = suggestion.examples
       ?.map((example) => {
-        const query = `${suggestion.keyword} ${example.arguments}`.trim();
+        const query = `${suggestion.keyword} ${example.arguments ?? ""}`.trim();
         return `- [${query}](https://trovu.net/) 
   - _${example.description}_`;
       })
@@ -81,9 +81,7 @@ export default function Command() {
 
 ${description}
 
-
-### Examples
-${examples}
+${examples ? `### Examples\n${examples}` : ""}
     `;
   };
 
