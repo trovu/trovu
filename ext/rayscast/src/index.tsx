@@ -126,10 +126,11 @@ ${description}
                     <List.Item.Detail.Metadata>
                       <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
                       <List.Item.Detail.Metadata.Separator />
-                      <List.Item.Detail.Metadata.TagList title="Tags">
-                        <List.Item.Detail.Metadata.TagList.Item text="Electric" color={"#eed535"} />
-                        <List.Item.Detail.Metadata.TagList.Item text="Electric" color={"#eed535"} />
-                      </List.Item.Detail.Metadata.TagList>
+                      {suggestion.tags && suggestion.tags.length > 0 && (
+                        <List.Item.Detail.Metadata.TagList title="Tags">
+                          <List.Item.Detail.Metadata.TagList.Item text="Electric" color={"#ffc107"} />
+                        </List.Item.Detail.Metadata.TagList>
+                      )}
                     </List.Item.Detail.Metadata>
                   }
                 />
