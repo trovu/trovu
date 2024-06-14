@@ -61,18 +61,30 @@ export default function Command() {
     open(`https://trovu.net/process/#country=us&language=en&query=${encodeURIComponent(searchText)}`);
   };
 
+  const openEdit = () => {
+    open(`https://github.com/`);
+  };
+
   const renderSuggestionDetail = (suggestion: Suggestion) => {
+    const examples = suggestion.examples?.map((example) => {
+      console.log(example);
+      const query = `${suggestion.keyword} ${example.arguments}`.trim();
+      return `${query}`;
+    });
+
+    const description = suggestion.description ? `_${suggestion.description}_` : "";
     return `
-### ${suggestion.keyword}
+## ${suggestion.title}
 
-**Description:** ${suggestion.description ?? "N/A"}
+${description}
 
-**Namespace:** ${suggestion.namespace}
+### Examples
+- [db b,hh](https://trovu.net/process/#country=us&language=en&query=db%20b%20hh) – Nächster Bus von B nach HH
+- [db b,hh](https://trovu.net/process/#country=us&language=en&query=db%20b%20hh) – Nächster Bus von B nach HH
+    
+[✍ Edit](https://github/com)   [🔧 Report problem](https://google.com)  
 
-**Arguments:** ${JSON.stringify(suggestion.arguments, null, 2) ?? "N/A"}
-
-
-**URL:** [Link](${suggestion.url})
+s
     `;
   };
 
@@ -110,7 +122,23 @@ export default function Command() {
             title={suggestion.keyword}
             subtitle={suggestion.title}
             accessories={[{ tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } }]}
-            detail={isShowingDetail && <List.Item.Detail markdown={renderSuggestionDetail(suggestion)} />}
+            detail={
+              isShowingDetail && (
+                <List.Item.Detail
+                  markdown={renderSuggestionDetail(suggestion)}
+                  metadata={
+                    <List.Item.Detail.Metadata>
+                      <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
+                      <List.Item.Detail.Metadata.Separator />
+                      <List.Item.Detail.Metadata.TagList title="Tags">
+                        <List.Item.Detail.Metadata.TagList.Item text="Electric" color={"#eed535"} />
+                        <List.Item.Detail.Metadata.TagList.Item text="Electric" color={"#eed535"} />
+                      </List.Item.Detail.Metadata.TagList>
+                    </List.Item.Detail.Metadata>
+                  }
+                />
+              )
+            }
             actions={customActions(suggestion)}
           />
         ))}
