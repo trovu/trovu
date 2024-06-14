@@ -128,7 +128,9 @@ ${description}
                       <List.Item.Detail.Metadata.Separator />
                       {suggestion.tags && suggestion.tags.length > 0 && (
                         <List.Item.Detail.Metadata.TagList title="Tags">
-                          <List.Item.Detail.Metadata.TagList.Item text="Electric" color={"#ffc107"} />
+                          {suggestion.tags.map((tag, index) => (
+                            <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
+                          ))}
                         </List.Item.Detail.Metadata.TagList>
                       )}
                     </List.Item.Detail.Metadata>
