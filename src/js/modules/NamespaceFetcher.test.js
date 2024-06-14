@@ -384,6 +384,7 @@ describe('NamespaceFetcher.addInfo', () => {
         key: db 2
         keyword: db
         argumentCount: 2
+        argumentString: Start, Ziel
         namespace: .de
         arguments:
           Start:
