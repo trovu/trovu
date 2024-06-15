@@ -132,6 +132,9 @@ ${examples}`
           if (suggestion.tags && suggestion.tags.includes("is-affiliate")) {
             title = `${title} 🤝`;
           }
+          if (suggestion.tags && suggestion.tags.includes("needs-userscript")) {
+            title = `${title} 🧩`;
+          }
           return (
             <List.Item
               key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
