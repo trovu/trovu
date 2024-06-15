@@ -246,7 +246,15 @@ export default class Home {
 
     // Only keep relevant parameters.
     for (const [key] of params.entries()) {
-      if (!['language', 'country', 'github', 'configUrl'].includes(key)) {
+      if (
+        ![
+          'configUrl',
+          'country',
+          'defaultKeyword',
+          'github',
+          'language',
+        ].includes(key)
+      ) {
         params.delete(key);
       }
     }
