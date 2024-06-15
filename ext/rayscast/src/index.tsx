@@ -58,10 +58,6 @@ export default function Command() {
     setSuggestions(suggestions);
   };
 
-  const openEdit = () => {
-    open(`https://github.com/`);
-  };
-
   const renderSuggestionDetail = (suggestion: Suggestion) => {
     const examples = suggestion.examples
       ?.map((example) => {
