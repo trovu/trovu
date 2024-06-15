@@ -128,13 +128,10 @@ ${examples}`
     >
       <List.Section>
         {suggestions.map((suggestion) => {
-          let title = suggestion.title;
-          if (suggestion.tags && suggestion.tags.includes("is-affiliate")) {
-            title = `${title} 🤝`;
-          }
-          if (suggestion.tags && suggestion.tags.includes("needs-userscript")) {
-            title = `${title} 🧩`;
-          }
+          const title =
+            suggestion.title +
+            (suggestion.tags?.includes("is-affiliate") ? " 🤝" : "") +
+            (suggestion.tags?.includes("needs-userscript") ? " 🧩" : "");
           return (
             <List.Item
               key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
