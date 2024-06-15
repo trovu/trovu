@@ -30,7 +30,6 @@ export default function Command() {
       const data = await response.json();
       const builtEnv = new Env({ data: data });
       await builtEnv.populate({ language: "en", country: "us" });
-      // console.log(builtEnv.data.shortcuts.o["acl 1"]);
       return builtEnv;
     },
     onError: (error) => {
