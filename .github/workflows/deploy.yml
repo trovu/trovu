@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 387-default-keyword-missing-in-opensearch
   pull_request:
     branches:
       - master
