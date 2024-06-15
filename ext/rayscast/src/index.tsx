@@ -103,10 +103,11 @@ ${examples}`
         onAction={toggleDetail}
         shortcut={{ modifiers: [], key: "tab" }}
       />
-      {suggestion.namespace.length <= 3 && (
+      {suggestion && suggestion.namespace && suggestion.namespace.length <= 3 && (
         <Action.OpenInBrowser
           title="Edit shortcut"
-          url={`https://trovu.net/process/#country=us&language=en&query=${encodeURIComponent(searchText)}`}
+          url={`https://github.com/trovu/trovu/search?q=${suggestion.keyword}+${suggestion.argumentCount}+path%3Adata/shortcuts/${suggestion.namespace}.yml`}
+          shortcut={{ modifiers: ["opt"], key: "e" }}
         />
       )}
     </ActionPanel>
