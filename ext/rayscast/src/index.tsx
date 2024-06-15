@@ -127,38 +127,38 @@ ${examples}`
       isShowingDetail={isShowingDetail}
     >
       <List.Section>
-        {suggestions.map((suggestion) => (
-          <List.Item
-            key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
-            title={suggestion.keyword}
-            subtitle={suggestion.argumentString}
-            accessories={[
-              { text: suggestion.title },
-              { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } },
-            ]}
-            detail={
-              isShowingDetail && (
-                <List.Item.Detail
-                  markdown={renderSuggestionDetail(suggestion)}
-                  metadata={
-                    <List.Item.Detail.Metadata>
-                      {suggestion.tags && suggestion.tags.length > 0 && (
-                        <List.Item.Detail.Metadata.TagList title="Tags">
-                          {suggestion.tags.map((tag, index) => (
-                            <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
-                          ))}
-                        </List.Item.Detail.Metadata.TagList>
-                      )}
-                      <List.Item.Detail.Metadata.Separator />
-                      <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
-                    </List.Item.Detail.Metadata>
-                  }
-                />
-              )
-            }
-            actions={customActions(suggestion)}
-          />
-        ))}
+        {suggestions.map((suggestion) => {
+          const title = suggestion.title;
+          return (
+            <List.Item
+              key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
+              title={suggestion.keyword}
+              subtitle={suggestion.argumentString}
+              accessories={[{ text: title }, { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } }]}
+              detail={
+                isShowingDetail && (
+                  <List.Item.Detail
+                    markdown={renderSuggestionDetail(suggestion)}
+                    metadata={
+                      <List.Item.Detail.Metadata>
+                        {suggestion.tags && suggestion.tags.length > 0 && (
+                          <List.Item.Detail.Metadata.TagList title="Tags">
+                            {suggestion.tags.map((tag, index) => (
+                              <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
+                            ))}
+                          </List.Item.Detail.Metadata.TagList>
+                        )}
+                        <List.Item.Detail.Metadata.Separator />
+                        <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
+                      </List.Item.Detail.Metadata>
+                    }
+                  />
+                )
+              }
+              actions={customActions(suggestion)}
+            />
+          );
+        })}
         {searchText && suggestions.length === 0 && (
           <List.Item title="Press Enter to search" actions={customActions(null)} />
         )}
