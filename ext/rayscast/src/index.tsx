@@ -153,6 +153,26 @@ ${examples}`
                         )}
                         <List.Item.Detail.Metadata.Separator />
                         <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
+                        {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
+                          <>
+                            <List.Item.Detail.Metadata.Separator />
+                            <List.Item.Detail.Metadata.Link
+                              title="Needs userscript"
+                              text="yes"
+                              target="https://trovu.net/docs/shortcuts/tags/#needs-userscript"
+                            />
+                          </>
+                        )}
+                        {suggestion.tags && suggestion.tags.includes("is-affiliate") && (
+                          <>
+                            <List.Item.Detail.Metadata.Separator />
+                            <List.Item.Detail.Metadata.Link
+                              title="Affiliate shortcut"
+                              text="yes"
+                              target="https://trovu.net/docs/shortcuts/tags/#is-affiliate"
+                            />
+                          </>
+                        )}
                       </List.Item.Detail.Metadata>
                     }
                   />
