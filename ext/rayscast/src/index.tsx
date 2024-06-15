@@ -107,7 +107,6 @@ ${examples}`
         <Action.OpenInBrowser
           title="Edit shortcut"
           url={`https://github.com/trovu/trovu/search?q=${suggestion.keyword}+${suggestion.argumentCount}+path%3Adata/shortcuts/${suggestion.namespace}.yml`}
-          shortcut={{ modifiers: ["opt"], key: "e" }}
         />
       )}
     </ActionPanel>
