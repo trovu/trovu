@@ -58,11 +58,6 @@ export default function Command() {
     setSuggestions(suggestions);
   };
 
-  const handleEnterKey = () => {
-    showToast(Toast.Style.Success, "Enter key pressed", `Search text: ${encodeURIComponent(searchText)}`);
-    open(`https://trovu.net/process/#country=us&language=en&query=${encodeURIComponent(searchText)}`);
-  };
-
   const openEdit = () => {
     open(`https://github.com/`);
   };
@@ -99,7 +94,10 @@ ${examples}`
 
   const customActions = (suggestion: Suggestion) => (
     <ActionPanel>
-      <Action title="Send query to Trovu" onAction={handleEnterKey} />
+      <Action.OpenInBrowser
+        title="Send query"
+        url={`https://trovu.net/process/#country=us&language=en&query=${encodeURIComponent(searchText)}`}
+      />
       <Action
         title={isShowingDetail ? "Hide Details" : "Show Details"}
         onAction={toggleDetail}
