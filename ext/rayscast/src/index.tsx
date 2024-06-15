@@ -35,7 +35,7 @@ export default function Command() {
     },
     onError: (error) => {
       console.error("Error fetching data:", error);
-      showToast(Toast.Style.Failure, "Failed to load data");
+      showToast(Toast.Style.Failure, "Failed to load data from trovu.net, check your connection.");
     },
   });
 
