@@ -144,6 +144,7 @@ ${examples}`
                     markdown={renderSuggestionDetail(suggestion)}
                     metadata={
                       <List.Item.Detail.Metadata>
+                        <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
                         {suggestion.tags && suggestion.tags.length > 0 && (
                           <List.Item.Detail.Metadata.TagList title="Tags">
                             {suggestion.tags.map((tag, index) => (
@@ -152,7 +153,6 @@ ${examples}`
                           </List.Item.Detail.Metadata.TagList>
                         )}
                         <List.Item.Detail.Metadata.Separator />
-                        <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
                         {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
                           <>
                             <List.Item.Detail.Metadata.Separator />
