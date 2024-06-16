@@ -76,7 +76,7 @@ export default function Command() {
     return `
 ## ${suggestion.title}
 
-\`${(suggestion.keyword + " " + suggestion.argumentString).trim()}\`
+\`${(!suggestion.reachable ? suggestion.namespace + "." : "") + (suggestion.keyword + " " + suggestion.argumentString).trim()}\`
 
 ${description}
     
