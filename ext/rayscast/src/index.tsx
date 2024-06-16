@@ -188,7 +188,6 @@ ${examples}`
                             ))}
                           </List.Item.Detail.Metadata.TagList>
                         )}
-                        <List.Item.Detail.Metadata.Separator />
                         {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
                           <>
                             <List.Item.Detail.Metadata.Separator />
