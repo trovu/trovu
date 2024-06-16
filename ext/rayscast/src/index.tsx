@@ -125,9 +125,9 @@ ${examples}`
   if (error) {
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
-  if (searchText === "") {
-    return (
-      <List searchBarPlaceholder="Search shortcuts..." isShowingDetail>
+  return (
+    <List searchBarPlaceholder="Search shortcuts..." isShowingDetail>
+      <List.Section>
         <List.Item
           title="General"
           detail={
@@ -139,9 +139,9 @@ ${examples}`
           }
         />
         <List.Item title="Shortcuts by tags" detail={<List.Item.Detail markdown="fo" />} />
-      </List>
-    );
-  }
+      </List.Section>
+    </List>
+  );
 
   return (
     <List
