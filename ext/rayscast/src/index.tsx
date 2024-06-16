@@ -190,6 +190,21 @@ When searching shortcuts, filter for shortcuts with a tag by \`tag:web-search\`,
               />
             }
           />
+          <List.Item
+            title="Advanced"
+            detail={
+              <List.Item.Detail
+                markdown={`
+## Advanced
+
+You can [create and manage your own user shortcuts and set advanced settings](https://trovu.net/docs/users/advanced/) via GitHub, or a self-hosted config file.
+
+Once you have set up Trovu via your GitHub account, set your username in the extension preferences.
+
+`}
+              />
+            }
+          />
         </List.Section>
       )}
       <List.Section>
