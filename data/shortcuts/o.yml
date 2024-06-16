@@ -6821,6 +6821,22 @@ rblcheckapi 1:
   examples:
   - arguments: 127.0.0.1
     description: Check if 127.0.0.1 is on the RBL
+rcd 0:
+  url: https://developers.raycast.com/
+  title: Raycast Developer
+  tags:
+  - programming
+  - react
+  - typescript
+  - web
+  examples:
+  - description: Go to homepage
+rcd 1:
+  url: https://developers.raycast.com/?q=<query>
+  include: rcd 0
+  examples:
+  - arguments: list
+    description: Search for List
 rdoc 0:
   url: https://www.rdocumentation.org/
   title: RDocumentation
