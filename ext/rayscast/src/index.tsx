@@ -212,7 +212,7 @@ ${examples}`
           );
         })}
         {searchText && suggestions.length === 0 && (
-          <List.Item title="Press Enter submit query" actions={customActions(null)} />
+          <List.Item title="Press Enter to submit the query" actions={customActions(null)} />
         )}
       </List.Section>
     </List>
