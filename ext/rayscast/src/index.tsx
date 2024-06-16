@@ -98,8 +98,8 @@ ${examples}`
     <ActionPanel>
       <Action
         title="Send query"
-        onAction={() => {
-          open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
+        onAction={async () => {
+          await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
         }}
       />
       <Action
