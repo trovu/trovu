@@ -37,6 +37,9 @@ export default function Command() {
       const data = await response.json();
       const builtEnv = new Env({ data: data });
       await builtEnv.populate({ language: preferences.language, country: preferences.country });
+      // console.log({ language: preferences.language, country: preferences.country });
+      // console.log(preferences);
+      // await builtEnv.populate(preferences);
       return builtEnv;
     },
     onError: (error) => {
