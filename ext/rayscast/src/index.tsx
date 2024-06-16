@@ -125,7 +125,7 @@ ${examples}`
   if (error) {
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
-  if (suggestions.length === 0) {
+  if (suggestions.length === 0 && searchText === "") {
     return (
       <List searchBarPlaceholder="Search shortcuts...">
         <List.EmptyView title="Start Typing to Search">
