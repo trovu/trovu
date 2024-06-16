@@ -98,7 +98,7 @@ ${examples}`
     <ActionPanel>
       <Action.OpenInBrowser
         title="Send query"
-        url={`https://trovu.net/process/#country=us&language=en&query=${encodeURIComponent(searchText)}`}
+        url={`https://trovu.net/process/#${env.buildProcessUrl({ query: searchText })}`}
       />
       <Action
         title={isShowingDetail ? "Hide Details" : "Show Details"}
