@@ -20,6 +20,12 @@
   ],
   "preferences": [
     {
+      "name": "language",
+      "title": "Language",
+      "description": "Pick your preferred language",
+      "required": true,
+      "type": "dropdown",
+      "default": "us",
       "data": [
         {
           "value": "en",
@@ -29,15 +35,15 @@
           "value": "es",
           "title": "Spanish"
         }
-      ],
-      "default": "us",
-      "description": "Pick your preferred language",
-      "name": "language",
-      "required": true,
-      "title": "Language",
-      "type": "dropdown"
+      ]
     },
     {
+      "name": "country",
+      "title": "Country",
+      "description": "Pick your preferred country",
+      "required": true,
+      "type": "dropdown",
+      "default": "us",
       "data": [
         {
           "value": "us",
@@ -47,13 +53,7 @@
           "value": "es",
           "title": "Spain"
         }
-      ],
-      "default": "us",
-      "description": "Pick your preferred country",
-      "name": "country",
-      "required": true,
-      "title": "Country",
-      "type": "dropdown"
+      ]
     }
   ],
   "dependencies": {
