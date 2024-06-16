@@ -1,8 +1,14 @@
-import { ActionPanel, Action, List, showToast, Toast, open } from "@raycast/api";
+import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
+
+interface Preferences {
+  language: string;
+  country: string;
+  github?: string;
+}
 
 interface Suggestion {
   argumentCount: string;
@@ -20,6 +26,7 @@ interface Suggestion {
 }
 
 export default function Command() {
+  const preferences = getPreferenceValues<Preferences>();
   const [searchText, setSearchText] = useState("");
   const [env, setEnv] = useState<Env | null>(null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -29,7 +36,7 @@ export default function Command() {
     parseResponse: async (response) => {
       const data = await response.json();
       const builtEnv = new Env({ data: data });
-      await builtEnv.populate({ language: "en", country: "us" });
+      await builtEnv.populate({ language: preferences.language, country: preferences.country });
       return builtEnv;
     },
     onError: (error) => {
