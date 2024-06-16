@@ -131,7 +131,8 @@ ${examples}`
       isLoading={isLoading}
       onSearchTextChange={setSearchText}
       searchBarPlaceholder="Search shortcuts..."
-      isShowingDetail={isShowingDetail}
+      // isShowingDetail={isShowingDetail}
+      isShowingDetail
     >
       {!searchText && (
         <List.Section>
@@ -161,7 +162,8 @@ ${examples}`
               subtitle={suggestion.argumentString}
               accessories={[{ text: title }, { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } }]}
               detail={
-                isShowingDetail && (
+                isShowingDetail ||
+                (true && (
                   <List.Item.Detail
                     markdown={renderSuggestionDetail(suggestion)}
                     metadata={
@@ -198,7 +200,7 @@ ${examples}`
                       </List.Item.Detail.Metadata>
                     }
                   />
-                )
+                ))
               }
               actions={customActions(suggestion)}
             />
