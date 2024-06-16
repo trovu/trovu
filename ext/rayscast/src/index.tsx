@@ -127,10 +127,11 @@ ${examples}`
   }
   if (suggestions.length === 0) {
     return (
-      <>
-        <Detail markdown="foo nn" />
-        <List onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..."></List>
-      </>
+      <List searchBarPlaceholder="Search shortcuts...">
+        <List.EmptyView title="Start Typing to Search">
+          <Detail markdown="foo" />
+        </List.EmptyView>
+      </List>
     );
   }
 
