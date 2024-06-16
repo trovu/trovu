@@ -131,7 +131,6 @@ ${examples}`
       isLoading={isLoading}
       onSearchTextChange={setSearchText}
       searchBarPlaceholder="Search shortcuts..."
-      throttle
       isShowingDetail={isShowingDetail}
     >
       <List.Section>
