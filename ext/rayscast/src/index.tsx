@@ -96,9 +96,11 @@ ${examples}`
 
   const customActions = (suggestion: Suggestion) => (
     <ActionPanel>
-      <Action.OpenInBrowser
+      <Action
         title="Send query"
-        url={`https://trovu.net/process/#${env.buildProcessUrl({ query: searchText })}`}
+        onAction={() => {
+          open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
+        }}
       />
       <Action
         title={isShowingDetail ? "Hide Details" : "Show Details"}
