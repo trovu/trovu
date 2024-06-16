@@ -122,6 +122,10 @@ ${examples ? examples : ""}
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
 
+  if (!env || !env.data || !env.data.shortcuts) {
+    return <List searchBarPlaceholder="Search shortcuts...">Failed to load dat2a</List>;
+  }
+
   return (
     <List
       isLoading={isLoading}
