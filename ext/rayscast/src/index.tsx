@@ -130,7 +130,7 @@ ${examples ? examples : ""}
     <List
       isLoading={isLoading}
       onSearchTextChange={setSearchText}
-      searchBarPlaceholder="Search shortcuts..."
+      searchBarPlaceholder="Enter a shortcut query here. Type a letter to get suggestions..."
       // isShowingDetail={isShowingDetail}
       isShowingDetail
       throttle
