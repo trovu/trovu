@@ -20,38 +20,40 @@
   ],
   "preferences": [
     {
-      "name": "language",
-      "description": "Language",
+      "key": "language",
+      "title": "Language",
+      "description": "Choose your language",
       "type": "dropdown",
-      "required": "yes",
+      "required": true,
       "options": [
         {
           "value": "en",
-          "title": "English"
+          "label": "English"
         },
         {
           "value": "es",
-          "title": "Spanish"
+          "label": "Spanish"
         }
       ]
     },
     {
-      "name": "country",
-      "description": "Country",
+      "key": "country",
+      "title": "Country",
+      "description": "Choose your country",
       "type": "dropdown",
-      "required": "yes",
+      "required": true,
       "options": [
         {
           "value": "us",
-          "title": "United States"
+          "label": "United States"
         },
         {
           "value": "es",
-          "title": "Spain"
+          "label": "Spain"
         }
       ]
     }
-  ],
+  ]
   "dependencies": {
     "@raycast/api": "^1.75.2",
     "@raycast/utils": "^1.4.8"
