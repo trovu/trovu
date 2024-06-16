@@ -134,7 +134,7 @@ ${examples ? examples : ""}
       {!searchText && (
         <List.Section>
           <List.Item
-            title="General"
+            title="Welcome"
             detail={
               <List.Item.Detail
                 markdown="
