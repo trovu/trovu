@@ -22,7 +22,7 @@
     {
       "name": "language",
       "title": "Language",
-      "description": "Pick your preferred language",
+      "description": "Pick your preferred language. GitHub setting will override.",
       "required": true,
       "type": "dropdown",
       "default": "us",
@@ -492,7 +492,7 @@
     {
       "name": "country",
       "title": "Country",
-      "description": "Pick your preferred country",
+      "description": "Pick your preferred country. GitHub setting will override.",
       "required": true,
       "type": "dropdown",
       "default": "us",
