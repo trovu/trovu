@@ -159,7 +159,7 @@ _Web search as if from your command line: Trovu's shortcuts take you directly to
             detail={
               <List.Item.Detail
                 markdown={`
-Every shortcuts belong to exactly one namespace. There are namespaces for
+Every shortcut belongs to exactly one namespace. There are namespaces for:
 
 - languages (e.g. \`en\`, \`de\`, \`fr\`)
 - countries (e.g. \`.us\`, \`.gb\`, \`.de\`)
