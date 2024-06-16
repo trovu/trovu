@@ -1,4 +1,4 @@
-import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
+import { ActionPanel, Action, Detail, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
@@ -124,6 +124,14 @@ ${examples}`
 
   if (error) {
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
+  }
+  if (suggestions.length === 0) {
+    return (
+      <>
+        <Detail markdown="foo nn" />
+        <List onSearchTextChange={setSearchText} searchBarPlaceholder="Search shortcuts..."></List>
+      </>
+    );
   }
 
   return (
