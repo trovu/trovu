@@ -68,26 +68,19 @@ export default function Command() {
     const examples = suggestion.examples
       ?.map((example) => {
         const query = `${suggestion.keyword} ${example.arguments ?? ""}`.trim();
-        return `| [\`${query}\`](https://trovu.net/${env.buildProcessUrl({ query: query })}) | _${example.description}_ |`;
+        return `- [\`${query}\`](https://trovu.net/${env.buildProcessUrl({ query: query })}) ${example.description}`;
       })
       .join("\n");
     const description = suggestion.description ? `_${suggestion.description}_` : "";
 
     return `
-
 ## ${suggestion.title}
 
 \`${suggestion.keyword} ${suggestion.argumentString}\`
 
 ${description}
-
-${
-  examples
-    ? `| Example query | …result | 
-| -------- | -------- | 
-${examples}`
-    : ""
-}
+    
+${examples ? examples : ""}
     `;
   };
 
