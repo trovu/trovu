@@ -20,38 +20,40 @@
   ],
   "preferences": [
     {
-      "key": "language",
-      "title": "Language",
-      "description": "Choose your language",
-      "type": "dropdown",
-      "required": true,
-      "options": [
+      "data": [
         {
           "value": "en",
-          "label": "English"
+          "title": "English"
         },
         {
           "value": "es",
-          "label": "Spanish"
+          "title": "Spanish"
         }
-      ]
+      ],
+      "default": "us",
+      "description": "Pick your preferred language",
+      "name": "language",
+      "required": true,
+      "title": "Language",
+      "type": "dropdown"
     },
     {
-      "key": "country",
-      "title": "Country",
-      "description": "Choose your country",
-      "type": "dropdown",
-      "required": true,
-      "options": [
+      "data": [
         {
           "value": "us",
-          "label": "United States"
+          "title": "United States"
         },
         {
           "value": "es",
-          "label": "Spain"
+          "title": "Spain"
         }
-      ]
+      ],
+      "default": "us",
+      "description": "Pick your preferred country",
+      "name": "country",
+      "required": true,
+      "title": "Country",
+      "type": "dropdown"
     }
   ],
   "dependencies": {
