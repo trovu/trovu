@@ -166,7 +166,15 @@ ${examples}`
               key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
               title={suggestion.keyword}
               subtitle={suggestion.argumentString}
-              accessories={[{ text: title }, { tag: { value: suggestion.namespace, color: "rgb(220, 53, 69)" } }]}
+              accessories={[
+                { text: title },
+                {
+                  tag: {
+                    value: suggestion.namespace,
+                    color: suggestion.reachable ? "rgb(255, 53, 69)" : "rgb(220, 220, 220)",
+                  },
+                },
+              ]}
               detail={
                 isShowingDetail ||
                 (true && (
