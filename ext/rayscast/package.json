@@ -1498,7 +1498,14 @@
           "title": "Åland 🇦🇽"
         }
       ]
-    }
+    },
+    {
+      "name": "github",
+      "title": "GitHub username",
+      "description": "Set advanced settings and personal shortcuts with a (free) GitHub account.",
+      "required": false,
+      "type": "textfield",
+    },
   ],
   "dependencies": {
     "@raycast/api": "^1.75.2",
