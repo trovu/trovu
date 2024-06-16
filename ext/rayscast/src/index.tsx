@@ -77,6 +77,9 @@ export default function Command() {
 
 ## ${suggestion.title}
 
+${suggestion.keyword} ${suggestion.argumentString}
+
+***
 
 ${description}
 
