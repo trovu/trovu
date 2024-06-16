@@ -159,11 +159,17 @@ _Web search as if from your command line: Trovu's shortcuts take you directly to
             detail={
               <List.Item.Detail
                 markdown={`
+## Namespaces
+
 Every shortcut belongs to exactly one namespace. There are namespaces for:
 
 - languages (e.g. \`en\`, \`de\`, \`fr\`)
 - countries (e.g. \`.us\`, \`.gb\`, \`.de\`)
 - dictionaries (e.g. \`leo\` for leo.org, \`dcm\` for dict.com)
+
+When searching shortcuts, filter for shortcuts of a namespace by \`ns:en\`, \`ns:de\`, \`ns:fr\`, etc.
+
+When calling a query, ensure a namespace is used by prefixing your query, e.g. \`en.w berlin\`.
 
 Read more about [namespaces](https://trovu.net/docs/shortcuts/namespaces/).
 `}
@@ -175,6 +181,11 @@ Read more about [namespaces](https://trovu.net/docs/shortcuts/namespaces/).
             detail={
               <List.Item.Detail
                 markdown={`
+## Tags
+
+Tags are only used for information purposes. They do not affect which shortcut is used for a query.
+
+When searching shortcuts, filter for shortcuts with a tag by \`tag:web-search\`, \`tag:video\`, \`tag:language\`, etc.
 `}
               />
             }
