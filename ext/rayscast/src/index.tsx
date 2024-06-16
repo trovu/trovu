@@ -150,12 +150,35 @@ _Web search as if from your command line: Trovu's shortcuts take you directly to
 - [`gfl ber, ibiza, fr, 28`](https://trovu.net/process/index.html?#query=gfl%20ber%2C%20ibiza%2C%20fr%2C%2028) Search on Google Flights for a flight from Berlin to Ibiza, leaving next Friday, returning on the 28th
 - [`wg berlin`](https://trovu.net/process/index.html?#query=wg%20berlin) Search Wikipedia for all mentions of "berlin" via Google
 - [`npm csv`](https://trovu.net/process/index.html?#query=npm%20csv) Search the Node Package Manager for modules projects about CSV
-
-            `}
+`}
               />
             }
           />
-          <List.Item title="Shortcuts by tags" detail={<List.Item.Detail markdown="fo" />} />
+          <List.Item
+            title="Namespaces"
+            detail={
+              <List.Item.Detail
+                markdown={`
+Every shortcuts belong to exactly one namespace. There are namespaces for
+
+- languages (e.g. \`en\`, \`de\`, \`fr\`)
+- countries (e.g. \`.us\`, \`.gb\`, \`.de\`)
+- dictionaries (e.g. \`leo\` for leo.org, \`dcm\` for dict.com)
+
+Read more about [namespaces](https://trovu.net/docs/shortcuts/namespaces/).
+`}
+              />
+            }
+          />
+          <List.Item
+            title="Tags"
+            detail={
+              <List.Item.Detail
+                markdown={`
+`}
+              />
+            }
+          />
         </List.Section>
       )}
       <List.Section>
