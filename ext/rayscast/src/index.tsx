@@ -162,6 +162,7 @@ ${examples}`
             (suggestion.tags?.includes("needs-userscript") ? " 🧩" : "");
           return (
             <List.Item
+              id={`${suggestion.namespace}.${suggestion.keyword} ${suggestion.argumentCount}`}
               key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
               title={suggestion.keyword}
               subtitle={suggestion.argumentString}
