@@ -99,6 +99,7 @@ ${examples}`
       <Action
         title="Send query"
         onAction={async () => {
+          // console.log("Send query", searchText);
           await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
         }}
       />
