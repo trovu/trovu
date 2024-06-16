@@ -18,6 +18,40 @@
       "mode": "view"
     }
   ],
+  "preferences": [
+    {
+      "name": "language",
+      "description": "Language",
+      "type": "dropdown",
+      "required": "yes",
+      "options": [
+        {
+          "value": "en",
+          "title": "English"
+        },
+        {
+          "value": "es",
+          "title": "Spanish"
+        }
+      ]
+    },
+    {
+      "name": "country",
+      "description": "Country",
+      "type": "dropdown",
+      "required": "yes",
+      "options": [
+        {
+          "value": "us",
+          "title": "United States"
+        },
+        {
+          "value": "es",
+          "title": "Spain"
+        }
+      ]
+    }
+  ],
   "dependencies": {
     "@raycast/api": "^1.75.2",
     "@raycast/utils": "^1.4.8"
