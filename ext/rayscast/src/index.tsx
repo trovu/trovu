@@ -125,12 +125,20 @@ ${examples}`
   if (error) {
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
-  if (suggestions.length === 0 && searchText === "") {
+  if (searchText === "") {
     return (
-      <List searchBarPlaceholder="Search shortcuts...">
-        <List.EmptyView title="Start Typing to Search">
-          <Detail markdown="foo" />
-        </List.EmptyView>
+      <List searchBarPlaceholder="Search shortcuts..." isShowingDetail>
+        <List.Item
+          title="General"
+          detail={
+            <List.Item.Detail
+              markdown="
+# sfsdf
+        "
+            />
+          }
+        />
+        <List.Item title="Shortcuts by tags" detail={<List.Item.Detail markdown="fo" />} />
       </List>
     );
   }
