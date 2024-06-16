@@ -101,8 +101,9 @@ ${examples}`
     <ActionPanel>
       <Action
         title="Send query"
-        onAction={() => {
-          open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
+        onAction={async () => {
+          if (!env) return;
+          await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
         }}
       />
       <Action
@@ -136,6 +137,7 @@ ${examples}`
       searchBarPlaceholder="Search shortcuts..."
       // isShowingDetail={isShowingDetail}
       isShowingDetail
+      throttle
     >
       {!searchText && (
         <List.Section>
