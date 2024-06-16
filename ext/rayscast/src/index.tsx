@@ -125,23 +125,6 @@ ${examples}`
   if (error) {
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
   }
-  return (
-    <List searchBarPlaceholder="Search shortcuts..." isShowingDetail>
-      <List.Section>
-        <List.Item
-          title="General"
-          detail={
-            <List.Item.Detail
-              markdown="
-# sfsdf
-        "
-            />
-          }
-        />
-        <List.Item title="Shortcuts by tags" detail={<List.Item.Detail markdown="fo" />} />
-      </List.Section>
-    </List>
-  );
 
   return (
     <List
@@ -150,6 +133,21 @@ ${examples}`
       searchBarPlaceholder="Search shortcuts..."
       isShowingDetail={isShowingDetail}
     >
+      {!searchText && (
+        <List.Section>
+          <List.Item
+            title="General"
+            detail={
+              <List.Item.Detail
+                markdown="
+# sfsdf
+            "
+              />
+            }
+          />
+          <List.Item title="Shortcuts by tags" detail={<List.Item.Detail markdown="fo" />} />
+        </List.Section>
+      )}
       <List.Section>
         {suggestions.map((suggestion) => {
           const title =
