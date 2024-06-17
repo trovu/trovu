@@ -97,7 +97,7 @@ ${examples ? examples : ""}
     setIsShowingDetail((prev) => !prev);
   };
 
-  const customActions = (suggestion: Suggestion) => (
+  const customActions = (suggestion: Suggestion | null) => (
     <ActionPanel>
       <Action
         title="Send query"
