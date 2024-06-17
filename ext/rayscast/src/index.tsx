@@ -102,7 +102,10 @@ ${examples ? examples : ""}
       <Action
         title="Send query"
         onAction={async () => {
-          if (!env) return;
+          if (!env || typeof env.buildProcessUrl !== "function") {
+            console.error("env.buildProcessUrl is not a function or env is null");
+            return;
+          }
           await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
         }}
       />
