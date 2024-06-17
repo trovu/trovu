@@ -68,6 +68,11 @@ export default function Command() {
   };
 
   const renderSuggestionDetail = (suggestion: Suggestion) => {
+    if (!env || typeof env.buildProcessUrl !== "function") {
+      console.error("env.buildProcessUrl is not a function or env is null");
+      return "";
+    }
+
     const examples = suggestion.examples
       ?.map((example) => {
         const query =
