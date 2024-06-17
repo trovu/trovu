@@ -37,7 +37,16 @@ export default function Command() {
     parseResponse: async (response) => {
       const data = await response.json();
       const builtEnv = new Env({ data: data });
-      await builtEnv.populate({ language: preferences.language, country: preferences.country });
+      const params = {};
+      if (preferences.github) {
+        params["github"] = preferences.github;
+      } else {
+        params["language"] = preferences.language;
+        params["country"] = preferences.country;
+      }
+      await builtEnv.populate(params);
+      // TODO: Fix this
+      // await builtEnv.populate({ language: preferences.language, country: preferences.country, github: "" });
       // console.log({ language: preferences.language, country: preferences.country });
       // console.log(preferences);
       // await builtEnv.populate(preferences);
