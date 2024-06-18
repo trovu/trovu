@@ -82,9 +82,12 @@ export default function Command() {
       console.error("render sugg detail: suggestion is null");
       return "";
     }
-
-    if (!env || typeof env.buildProcessUrl !== "function") {
-      console.error("render sugg detail: env.buildProcessUrl is not a function or env is null");
+    if (!env) {
+      console.error("render sugg detail: env is null");
+      return "";
+    }
+    if (typeof env.buildProcessUrl !== "function") {
+      console.error("render sugg detail: env.buildProcessUrl is not a function");
       return "";
     }
 
@@ -117,8 +120,12 @@ ${examples ? examples : ""}
       <Action
         title="Send query"
         onAction={async () => {
-          if (!env || typeof env.buildProcessUrl !== "function") {
-            console.error("action panel: env.buildProcessUrl is not a function or env is null");
+          if (!env) {
+            console.error("action panel: env is null");
+            return;
+          }
+          if (typeof env.buildProcessUrl !== "function") {
+            console.error("action panel: env.buildProcessUrl is not a function");
             return;
           }
           await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
