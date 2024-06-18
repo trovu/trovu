@@ -114,13 +114,6 @@ mwt 1:
   examples:
   - arguments: important
     description: Search for synonyms of "important"
-np 1:
-  url: https://search.nixos.org/packages?channel=unstable&type=packages&query=<query>
-  title: Nix.org Packages Search - Unstable channel
-  description: Search Nix Packages - Unstable Channel 
-  tags:
-  - nixpkgs
-  - nix
 ox 1:
   url: https://en.oxforddictionaries.com/definition/<word>
   title: Oxford Dictionaries British & World English
