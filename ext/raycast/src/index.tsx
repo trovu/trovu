@@ -167,6 +167,9 @@ ${examples ? examples : ""}
     );
   }
 
+  console.log("env", typeof env);
+  console.log("env.buildprocessurl", typeof env.buildProcessUrl);
+
   return (
     <List
       isLoading={isLoading}
