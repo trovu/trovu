@@ -24,7 +24,7 @@ Every shortcut belongs to exactly one namespace. There are namespaces for:
 
 When searching shortcuts, filter for shortcuts of a namespace by \`ns:en\`, \`ns:de\`, \`ns:fr\`, etc.
 
-When calling a query, ensure a namespace is used by prefixing your query, e.g. \`en.w berlin\`.
+When calling a query, you can ensure a namespace to be used by prefixing your query, e.g. \`en.w berlin\`.
 
 Read more about [namespaces](https://trovu.net/docs/shortcuts/namespaces/).
 `,
@@ -40,7 +40,7 @@ When searching shortcuts, filter for shortcuts with a tag by \`tag:web-search\`,
 
 You can [create and manage your own user shortcuts and set advanced settings](https://trovu.net/docs/users/advanced/) via GitHub, or a self-hosted config file.
 
-Once you have set up Trovu via your GitHub account, set your username in the extension preferences.
+Once you have set up Trovu via your GitHub account, set your username in the Raycast extension preferences.
 
 `,
 };
