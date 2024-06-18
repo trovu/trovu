@@ -3662,6 +3662,20 @@ gitlab 1:
   - open-source
   - programming
   - software
+gkp 0:
+  url: https://keep.google.com/
+  title: Google Keep
+  tags:
+  - google
+  - notes
+  examples:
+  - description: Go to homepage
+gkp 1:
+  url: https://keep.google.com/#search/text=<query>
+  include: gkp 0
+  examples:
+  - arguments: todo
+    description: Search for "todo"
 gl 0:
   include:
   - key: gl 0

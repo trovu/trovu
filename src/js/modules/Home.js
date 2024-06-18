@@ -182,8 +182,8 @@ export default class Home {
       case 'reloaded':
         alertMsg.textContent = 'Shortcuts were reloaded in all namespaces.';
         if (this.env.github) {
-          alertMsg.textContent +=
-            ' Changes on your GitHub might require a reload in 5 minutes due to caching.';
+          alertMsg.innerHTML +=
+            ' Changes on your GitHub might require a reload in <strong>5 minutes</strong> due to caching.';
         }
         break;
       case 'deprecated':
