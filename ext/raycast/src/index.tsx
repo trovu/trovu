@@ -78,6 +78,11 @@ export default function Command() {
   };
 
   const renderSuggestionDetail = (suggestion: Suggestion) => {
+    if (!suggestion) {
+      console.error("render sugg detail: suggestion is null");
+      return "";
+    }
+
     if (!env || typeof env.buildProcessUrl !== "function") {
       console.error("env.buildProcessUrl is not a function or env is null");
       return "";
