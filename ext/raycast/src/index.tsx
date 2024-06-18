@@ -176,7 +176,7 @@ ${examples ? examples : ""}
           <List.Item title="Advanced" detail={<List.Item.Detail markdown={markdowns.advanced} />} />
         </List.Section>
       )}
-      {env && suggestions.length > 0 ? (
+      {env && env.data && suggestions.length > 0 && typeof env.buildProcessUrl === "function" ? (
         <List.Section>
           {suggestions.map((suggestion) => {
             const title =
