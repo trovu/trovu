@@ -144,8 +144,12 @@ ${examples ? examples : ""}
     </ActionPanel>
   );
 
-  if (error || !env || !env.data || !env.data.shortcuts) {
+  if (error) {
     return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
+  }
+
+  if (!env || !env.data || !env.data.shortcuts) {
+    return <List searchBarPlaceholder="Search shortcuts...">Failed to load environment data</List>;
   }
 
   return (
