@@ -32,7 +32,6 @@ export default function Command() {
   const [env, setEnv] = useState<Env | null>(null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState(false);
-  const [isEnvLoading, setIsEnvLoading] = useState(true); // New state to track environment loading
 
   const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
     parseResponse: async (response) => {
@@ -62,7 +61,6 @@ export default function Command() {
   useEffect(() => {
     if (data) {
       setEnv(data);
-      setIsEnvLoading(false); // Mark environment as loaded
     }
   }, [data]);
 
@@ -161,10 +159,10 @@ ${examples ? examples : ""}
     );
   }
 
-  if (isEnvLoading || !env || !env.data || !env.data.shortcuts) {
+  if (!env || !env.data || !env.data.shortcuts) {
     return (
       <List searchBarPlaceholder="Search shortcuts...">
-        <List.EmptyView title="Loading environment data..." />
+        <List.EmptyView title="Failed to load environment" />
       </List>
     );
   }
