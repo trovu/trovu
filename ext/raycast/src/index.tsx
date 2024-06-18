@@ -152,11 +152,19 @@ ${examples ? examples : ""}
   );
 
   if (error) {
-    return <List searchBarPlaceholder="Search shortcuts...">Failed to load data</List>;
+    return (
+      <List searchBarPlaceholder="Search shortcuts...">
+        <List.EmptyView title="Failed to load data" />
+      </List>
+    );
   }
 
   if (!env || !env.data || !env.data.shortcuts) {
-    return <List searchBarPlaceholder="Search shortcuts...">Failed to load environment data</List>;
+    return (
+      <List searchBarPlaceholder="Search shortcuts...">
+        <List.EmptyView title="Failed to load environment" />
+      </List>
+    );
   }
 
   return (
