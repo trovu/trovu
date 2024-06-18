@@ -169,75 +169,81 @@ ${examples ? examples : ""}
           <List.Item title="Advanced" detail={<List.Item.Detail markdown={markdowns.advanced} />} />
         </List.Section>
       )}
-      <List.Section>
-        {suggestions.map((suggestion) => {
-          const title =
-            suggestion.title +
-            (suggestion.tags?.includes("is-affiliate") ? " 🤝" : "") +
-            (suggestion.tags?.includes("needs-userscript") ? " 🧩" : "");
-          return (
-            <List.Item
-              id={`${suggestion.namespace}.${suggestion.keyword} ${suggestion.argumentCount}`}
-              key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
-              title={suggestion.keyword}
-              subtitle={suggestion.argumentString}
-              accessories={[
-                { text: title },
-                {
-                  tag: {
-                    value: suggestion.namespace,
-                    color: suggestion.reachable ? "rgb(255, 53, 69)" : "rgb(220, 220, 220)",
+      {env && suggestions.length > 0 ? (
+        <List.Section>
+          {suggestions.map((suggestion) => {
+            const title =
+              suggestion.title +
+              (suggestion.tags?.includes("is-affiliate") ? " 🤝" : "") +
+              (suggestion.tags?.includes("needs-userscript") ? " 🧩" : "");
+            return (
+              <List.Item
+                id={`${suggestion.namespace}.${suggestion.keyword} ${suggestion.argumentCount}`}
+                key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
+                title={suggestion.keyword}
+                subtitle={suggestion.argumentString}
+                accessories={[
+                  { text: title },
+                  {
+                    tag: {
+                      value: suggestion.namespace,
+                      color: suggestion.reachable ? "rgb(255, 53, 69)" : "rgb(220, 220, 220)",
+                    },
                   },
-                },
-              ]}
-              detail={
-                isShowingDetail ||
-                (true && (
-                  <List.Item.Detail
-                    markdown={renderSuggestionDetail(suggestion)}
-                    metadata={
-                      <List.Item.Detail.Metadata>
-                        <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
-                        {suggestion.tags && suggestion.tags.length > 0 && (
-                          <List.Item.Detail.Metadata.TagList title="Tags">
-                            {suggestion.tags.map((tag, index) => (
-                              <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
-                            ))}
-                          </List.Item.Detail.Metadata.TagList>
-                        )}
-                        {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
-                          <>
-                            <List.Item.Detail.Metadata.Separator />
-                            <List.Item.Detail.Metadata.Link
-                              title="Needs userscript"
-                              text="yes"
-                              target="https://trovu.net/docs/shortcuts/tags/#needs-userscript"
-                            />
-                          </>
-                        )}
-                        {suggestion.tags && suggestion.tags.includes("is-affiliate") && (
-                          <>
-                            <List.Item.Detail.Metadata.Separator />
-                            <List.Item.Detail.Metadata.Link
-                              title="Affiliate shortcut"
-                              text="yes"
-                              target="https://trovu.net/docs/shortcuts/tags/#is-affiliate"
-                            />
-                          </>
-                        )}
-                      </List.Item.Detail.Metadata>
-                    }
-                  />
-                ))
-              }
-              actions={customActions(suggestion)}
-            />
-          );
-        })}
-        {searchText && suggestions.length === 0 && (
-          <List.Item title="Press Enter to submit the query" actions={customActions(null)} />
-        )}
-      </List.Section>
+                ]}
+                detail={
+                  isShowingDetail ||
+                  (true && (
+                    <List.Item.Detail
+                      markdown={renderSuggestionDetail(suggestion)}
+                      metadata={
+                        <List.Item.Detail.Metadata>
+                          <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
+                          {suggestion.tags && suggestion.tags.length > 0 && (
+                            <List.Item.Detail.Metadata.TagList title="Tags">
+                              {suggestion.tags.map((tag, index) => (
+                                <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
+                              ))}
+                            </List.Item.Detail.Metadata.TagList>
+                          )}
+                          {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
+                            <>
+                              <List.Item.Detail.Metadata.Separator />
+                              <List.Item.Detail.Metadata.Link
+                                title="Needs userscript"
+                                text="yes"
+                                target="https://trovu.net/docs/shortcuts/tags/#needs-userscript"
+                              />
+                            </>
+                          )}
+                          {suggestion.tags && suggestion.tags.includes("is-affiliate") && (
+                            <>
+                              <List.Item.Detail.Metadata.Separator />
+                              <List.Item.Detail.Metadata.Link
+                                title="Affiliate shortcut"
+                                text="yes"
+                                target="https://trovu.net/docs/shortcuts/tags/#is-affiliate"
+                              />
+                            </>
+                          )}
+                        </List.Item.Detail.Metadata>
+                      }
+                    />
+                  ))
+                }
+                actions={customActions(suggestion)}
+              />
+            );
+          })}
+          {searchText && suggestions.length === 0 && (
+            <List.Item title="Press Enter to submit the query" actions={customActions(null)} />
+          )}
+        </List.Section>
+      ) : (
+        <List.Section>
+          <List.Item title="Loading environment..." />
+        </List.Section>
+      )}
     </List>
   );
 }
