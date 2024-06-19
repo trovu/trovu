@@ -412,11 +412,14 @@ export default class Env {
       window.matchMedia('(display-mode: standalone)').matches
     );
   }
-  static getFetch() {
-    if (typeof fetch === 'undefined') {
-      return require('node-fetch');
+  static async getFetch() {
+    if (typeof fetch !== 'undefined') {
+      // Browser environment
+      return fetch.bind(window);
     } else {
-      return fetch;
+      // Raycast environment, use node-fetch
+      const { default: nodeFetch } = await import('node-fetch');
+      return nodeFetch;
     }
   }
 }
