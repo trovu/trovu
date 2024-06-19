@@ -5835,9 +5835,14 @@ nxu 0:
   tags:
   - nixpkgs
   - nix
+  examples:
+  - description: Go to homepage
 nxu 1:
   url: https://search.nixos.org/packages?channel=unstable&type=packages&query=<query>
   include: nxu 0
+  examples:
+  - arguments: firefox
+    description: Search for "firefox"
 oca 1:
   url: https://openclipart.org/search/?query=<query>
   title: Open Clip Art Library
