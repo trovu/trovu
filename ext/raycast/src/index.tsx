@@ -200,44 +200,41 @@ ${examples ? examples : ""}
                   },
                 ]}
                 detail={
-                  isShowingDetail ||
-                  (true && (
-                    <List.Item.Detail
-                      markdown={renderSuggestionDetail(suggestion)}
-                      metadata={
-                        <List.Item.Detail.Metadata>
-                          <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
-                          {suggestion.tags && suggestion.tags.length > 0 && (
-                            <List.Item.Detail.Metadata.TagList title="Tags">
-                              {suggestion.tags.map((tag, index) => (
-                                <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
-                              ))}
-                            </List.Item.Detail.Metadata.TagList>
-                          )}
-                          {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
-                            <>
-                              <List.Item.Detail.Metadata.Separator />
-                              <List.Item.Detail.Metadata.Link
-                                title="Needs userscript"
-                                text="yes"
-                                target="https://trovu.net/docs/shortcuts/tags/#needs-userscript"
-                              />
-                            </>
-                          )}
-                          {suggestion.tags && suggestion.tags.includes("is-affiliate") && (
-                            <>
-                              <List.Item.Detail.Metadata.Separator />
-                              <List.Item.Detail.Metadata.Link
-                                title="Affiliate shortcut"
-                                text="yes"
-                                target="https://trovu.net/docs/shortcuts/tags/#is-affiliate"
-                              />
-                            </>
-                          )}
-                        </List.Item.Detail.Metadata>
-                      }
-                    />
-                  ))
+                  <List.Item.Detail
+                    markdown={renderSuggestionDetail(suggestion)}
+                    metadata={
+                      <List.Item.Detail.Metadata>
+                        <List.Item.Detail.Metadata.Label title="URL" text={suggestion.url} />
+                        {suggestion.tags && suggestion.tags.length > 0 && (
+                          <List.Item.Detail.Metadata.TagList title="Tags">
+                            {suggestion.tags.map((tag, index) => (
+                              <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
+                            ))}
+                          </List.Item.Detail.Metadata.TagList>
+                        )}
+                        {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
+                          <>
+                            <List.Item.Detail.Metadata.Separator />
+                            <List.Item.Detail.Metadata.Link
+                              title="Needs userscript"
+                              text="yes"
+                              target="https://trovu.net/docs/shortcuts/tags/#needs-userscript"
+                            />
+                          </>
+                        )}
+                        {suggestion.tags && suggestion.tags.includes("is-affiliate") && (
+                          <>
+                            <List.Item.Detail.Metadata.Separator />
+                            <List.Item.Detail.Metadata.Link
+                              title="Affiliate shortcut"
+                              text="yes"
+                              target="https://trovu.net/docs/shortcuts/tags/#is-affiliate"
+                            />
+                          </>
+                        )}
+                      </List.Item.Detail.Metadata>
+                    }
+                  />
                 }
                 actions={customActions(suggestion)}
               />
