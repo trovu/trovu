@@ -120,9 +120,6 @@ export default class Env {
 
     this.getFromLocalStorage();
 
-    // if (typeof params.github === 'undefined') {
-    //   delete params.github;
-    // }
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
     }
