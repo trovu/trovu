@@ -207,11 +207,11 @@ ${examples ? examples : ""}
                         {suggestion.tags && suggestion.tags.length > 0 && (
                           <List.Item.Detail.Metadata.TagList title="Tags">
                             {suggestion.tags.map((tag, index) => (
-                              <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color={"#ffc107"} />
+                              <List.Item.Detail.Metadata.TagList.Item key={index} text={tag} color="#ffc107" />
                             ))}
                           </List.Item.Detail.Metadata.TagList>
                         )}
-                        {suggestion.tags && suggestion.tags.includes("needs-userscript") && (
+                        {suggestion.tags?.includes("needs-userscript") && (
                           <>
                             <List.Item.Detail.Metadata.Separator />
                             <List.Item.Detail.Metadata.Link
@@ -221,7 +221,7 @@ ${examples ? examples : ""}
                             />
                           </>
                         )}
-                        {suggestion.tags && suggestion.tags.includes("is-affiliate") && (
+                        {suggestion.tags?.includes("is-affiliate") && (
                           <>
                             <List.Item.Detail.Metadata.Separator />
                             <List.Item.Detail.Metadata.Link
