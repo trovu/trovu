@@ -22,6 +22,16 @@ This shortcut to the Google Web Homepage is fine because it is not alone: There 
 
 But a bookmark shortcut that has no corresponding 1-or-more-argument shortcut should be avoided. You may put them into [your user shortcuts](../users/advanced.md#personal-shortcuts).
 
+## Namespaces
+
+If a shortcut is relevant only for a certain country, add it to its country [namespace](../shortcuts/namespaces.md) (they start with a dot, e.g. `.us`, `.de`).
+
+Language-related shortcuts go into their language namespace (e.g. `en`, `de`).
+
+If a website has different language versions, create a shortcut for each language in its language namespace, and for the English version, in the planet namespace (`o`).
+
+If a website is only in English, create the shortcut in `o`.
+
 ## Keywords
 
 ### Avoid common words

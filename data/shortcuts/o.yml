@@ -5828,13 +5828,42 @@ nv 1:
   title: Neeva
   tags:
   - web-search
+nx 0:
+  url: https://search.nixos.org/packages?type=packages
+  title: Nix.org Packages
+  tests:
+  - expect: <title>NixOS Search
+  tags:
+  - nix
+  - nixpkgs
+  examples:
+  - description: Go to homepage
+  description: Search Nix Packages
+nx 1:
+  url: https://search.nixos.org/packages?type=packages&query=<query>
+  tests: query does not appear on the page without JavaScript
+  include: nx 0
+  examples:
+  - arguments: firefox
+    description: Search for "firefox"
+nxu 0:
+  url: https://search.nixos.org/packages?channel=unstable&type=packages
+  title: Nix.org Packages, Unstable
+  tests:
+  - expect: <title>NixOS Search
+  tags:
+  - nix
+  - nixpkgs
+  examples:
+  - description: Go to homepage
+  description: Search Nix Packages - Unstable Channel
 nxu 1:
   url: https://search.nixos.org/packages?channel=unstable&type=packages&query=<query>
-  title: Nix.org Packages Search - Unstable channel
-  description: Search Nix Packages - Unstable Channel 
-  tags:
-  - nixpkgs
-  - nix
+  tests: query does not appear on the page without JavaScript
+  include: nxu 0
+  examples:
+  - arguments: firefox
+    description: Search for "firefox"
 oca 1:
   url: https://openclipart.org/search/?query=<query>
   title: Open Clip Art Library
