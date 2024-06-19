@@ -30,7 +30,7 @@ export default function Command() {
   const [searchText, setSearchText] = useState("");
   const [env, setEnv] = useState<Env | null>(null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
-  const [isShowingDetail, setIsShowingDetail] = useState(false);
+  const [isShowingDetail, setIsShowingDetail] = useState(true);
 
   useEffect(() => {
     const initializeEnv = async () => {
