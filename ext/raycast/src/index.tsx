@@ -152,29 +152,29 @@ ${examples || ""}
       isShowingDetail={isShowingDetail}
       throttle
     >
-      {!searchText && (
+      {!searchText ? (
         <List.Section>
           <List.Item title="Welcome" detail={<List.Item.Detail markdown={markdowns.welcome} />} />
           <List.Item title="Namespaces" detail={<List.Item.Detail markdown={markdowns.namespaces} />} />
           <List.Item title="Tags" detail={<List.Item.Detail markdown={markdowns.tags} />} />
           <List.Item title="Advanced" detail={<List.Item.Detail markdown={markdowns.advanced} />} />
         </List.Section>
-      )}
-      {env && env.data && suggestions.length > 0 && typeof env.buildProcessUrl === "function" ? (
+      ) : (
         <List.Section>
-          {suggestions.map((suggestion) => {
-            const title =
-              suggestion.title +
-              (suggestion.tags?.includes("is-affiliate") ? " 🤝" : "") +
-              (suggestion.tags?.includes("needs-userscript") ? " 🧩" : "");
-            return (
+          {suggestions.length > 0 ? (
+            suggestions.map((suggestion) => (
               <List.Item
                 id={`${suggestion.namespace}.${suggestion.keyword} ${suggestion.argumentCount}`}
                 key={`${suggestion.namespace}.${suggestion.keyword}.${suggestion.argumentCount}`}
                 title={suggestion.keyword}
                 subtitle={suggestion.argumentString}
                 accessories={[
-                  { text: title },
+                  {
+                    text:
+                      suggestion.title +
+                      (suggestion.tags?.includes("is-affiliate") ? " 🤝" : "") +
+                      (suggestion.tags?.includes("needs-userscript") ? " 🧩" : ""),
+                  },
                   {
                     tag: {
                       value: suggestion.namespace,
@@ -221,15 +221,10 @@ ${examples || ""}
                 }
                 actions={customActions(suggestion)}
               />
-            );
-          })}
-          {searchText && suggestions.length === 0 && (
+            ))
+          ) : (
             <List.Item title="Press Enter to submit the query" actions={customActions(null)} />
           )}
-        </List.Section>
-      ) : (
-        <List.Section>
-          <List.Item title="Loading environment..." />
         </List.Section>
       )}
     </List>
