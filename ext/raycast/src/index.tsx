@@ -90,15 +90,9 @@ ${examples || ""}
       <Action
         title="Send query"
         onAction={async () => {
-          if (!env) {
-            console.error("action panel: env is null");
-            return;
+          if (env && typeof env.buildProcessUrl === "function") {
+            await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
           }
-          if (typeof env.buildProcessUrl !== "function") {
-            console.error("action panel: env.buildProcessUrl is not a function");
-            return;
-          }
-          await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
         }}
       />
       <Action
