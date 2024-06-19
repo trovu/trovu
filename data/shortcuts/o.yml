@@ -5837,12 +5837,15 @@ nx 0:
   - nix
   examples:
   - description: Go to homepage
+  tests:
+  - expect: <title>NixOS Search
 nx 1:
   url: https://search.nixos.org/packages?type=packages&query=<query>
   include: nx 0
   examples:
   - arguments: firefox
     description: Search for "firefox"
+  tests: query does not appear on the page without JavaScript
 nxu 0:
   url: https://search.nixos.org/packages?channel=unstable&type=packages
   title: Nix.org Packages, Unstable
@@ -5852,12 +5855,15 @@ nxu 0:
   - nix
   examples:
   - description: Go to homepage
+  tests:
+  - expect: <title>NixOS Search
 nxu 1:
   url: https://search.nixos.org/packages?channel=unstable&type=packages&query=<query>
   include: nxu 0
   examples:
   - arguments: firefox
     description: Search for "firefox"
+  tests: query does not appear on the page without JavaScript
 oca 1:
   url: https://openclipart.org/search/?query=<query>
   title: Open Clip Art Library
