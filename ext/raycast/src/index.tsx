@@ -60,7 +60,9 @@ export default function Command() {
 
   useEffect(() => {
     if (data) {
+      console.log("begin setenv, typeof env.buildprocessurl", typeof env?.buildProcessUrl);
       setEnv(data);
+      console.log("end begin setenv, typeof env.buildprocessurl", typeof env?.buildProcessUrl);
     }
   }, [data]);
 
