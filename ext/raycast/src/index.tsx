@@ -34,9 +34,7 @@ export default function Command() {
 
   useEffect(() => {
     const initializeEnv = async () => {
-      console.log("Initializing Env with preferences:", preferences);
       try {
-        // Initialize Env instance
         const builtEnv = new Env({ context: "raycast" });
         const params: Record<string, string> = preferences.github
           ? { github: preferences.github }
@@ -45,8 +43,6 @@ export default function Command() {
               country: preferences.country,
             };
         await builtEnv.populate(params);
-
-        // Set the populated Env instance to the state
         setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
