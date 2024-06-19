@@ -373,7 +373,7 @@ export default class Env {
       const data = await JSON.parse(text);
       return data;
     } catch (error) {
-      this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
+      this.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
       return false;
     }
   }
