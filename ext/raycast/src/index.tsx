@@ -1,5 +1,6 @@
 import { ActionPanel, Action, Detail, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
 import { useState, useEffect } from "react";
+import { useCachedState } from "@raycast/utils";
 import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 import { markdowns } from "./markdowns";
@@ -28,7 +29,7 @@ interface Suggestion {
 export default function Command() {
   const preferences = getPreferenceValues<Preferences>();
   const [searchText, setSearchText] = useState("");
-  const [env, setEnv] = useState<Env | null>(null);
+  const [env, setEnv] = useCachedState<Env | null>("env", null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState(true);
 
