@@ -57,10 +57,10 @@ export default function Command() {
   }, [searchText, env]);
 
   const filterShortcuts = () => {
-    if (!env) return;
-    const suggestionsGetter = new SuggestionsGetter(env);
-    const suggestions = suggestionsGetter.getSuggestions(searchText).slice(0, 50);
-    setSuggestions(suggestions);
+    if (env) {
+      const suggestionsGetter = new SuggestionsGetter(env);
+      setSuggestions(suggestionsGetter.getSuggestions(searchText).slice(0, 50));
+    }
   };
 
   const renderSuggestionDetail = (suggestion: Suggestion) => {
