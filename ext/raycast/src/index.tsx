@@ -35,6 +35,7 @@ export default function Command() {
 
   useEffect(() => {
     const initializeEnv = async () => {
+      if (env) return; // Prevent reinitialization if env is already set
       try {
         const builtEnv = new Env({ context: "raycast" });
         const params: Record<string, string> = preferences.github
@@ -50,8 +51,8 @@ export default function Command() {
         showToast(Toast.Style.Failure, "Failed to initialize environment, check your connection.");
       }
     };
-    if (!env) initializeEnv();
-  }, [preferences, env]);
+    initializeEnv();
+  }, [preferences, env, setEnv]);
 
   useEffect(() => {
     if (env) filterShortcuts();
