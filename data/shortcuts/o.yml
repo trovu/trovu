@@ -5830,18 +5830,14 @@ nv 1:
   - web-search
 nxu 0:
   url: https://search.nixos.org/packages?channel=unstable&type=packages
-  title: Nix.org Packages Search - Unstable channel
+  title: Nix.org Packages, Unstable
   description: Search Nix Packages - Unstable Channel 
   tags:
   - nixpkgs
   - nix
 nxu 1:
   url: https://search.nixos.org/packages?channel=unstable&type=packages&query=<query>
-  title: Nix.org Packages Search - Unstable channel
-  description: Search Nix Packages - Unstable Channel 
-  tags:
-  - nixpkgs
-  - nix
+  include: nxu 0
 oca 1:
   url: https://openclipart.org/search/?query=<query>
   title: Open Clip Art Library
