@@ -38,17 +38,12 @@ export default function Command() {
       try {
         // Initialize Env instance
         const builtEnv = new Env({ context: "raycast" });
-
-        // Prepare the params based on preferences
-        const params: Record<string, string> = {};
-        if (preferences.github) {
-          params.github = preferences.github;
-        } else {
-          params.language = preferences.language;
-          params.country = preferences.country;
-        }
-
-        // Populate the Env instance with the params
+        const params: Record<string, string> = preferences.github
+          ? { github: preferences.github }
+          : {
+              language: preferences.language,
+              country: preferences.country,
+            };
         await builtEnv.populate(params);
 
         // Set the populated Env instance to the state
