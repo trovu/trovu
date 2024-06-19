@@ -164,7 +164,7 @@ ${examples ? examples : ""}
   if (!env || !env.data || !env.data.shortcuts) {
     return (
       <List searchBarPlaceholder="Search shortcuts...">
-        <List.EmptyView title="Failed to load environment" />
+        <List.EmptyView title="Loading environment..." />
       </List>
     );
   }
