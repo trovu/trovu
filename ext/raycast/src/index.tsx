@@ -165,8 +165,7 @@ ${examples ? examples : ""}
       isLoading={!env}
       onSearchTextChange={setSearchText}
       searchBarPlaceholder="Enter a shortcut query here. Type a letter to get suggestions..."
-      // isShowingDetail={isShowingDetail}
-      isShowingDetail
+      isShowingDetail={isShowingDetail}
       throttle
     >
       {!searchText && (
