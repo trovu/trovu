@@ -1,6 +1,7 @@
 /** @module NamespaceFetcher */
 import UrlProcessor from './UrlProcessor.js';
 import jsyaml from 'js-yaml';
+import fetch from 'node-fetch';
 
 export default class NamespaceFetcher {
   constructor(env) {

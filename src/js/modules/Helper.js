@@ -1,5 +1,6 @@
 /** @module Helper */
 import pkg from '../../../package.json';
+import fetch from 'node-fetch';
 
 /** Helper methods. */
 
