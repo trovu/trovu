@@ -5828,6 +5828,13 @@ nv 1:
   title: Neeva
   tags:
   - web-search
+nxu 0:
+  url: https://search.nixos.org/packages?channel=unstable&type=packages
+  title: Nix.org Packages Search - Unstable channel
+  description: Search Nix Packages - Unstable Channel 
+  tags:
+  - nixpkgs
+  - nix
 nxu 1:
   url: https://search.nixos.org/packages?channel=unstable&type=packages&query=<query>
   title: Nix.org Packages Search - Unstable channel
