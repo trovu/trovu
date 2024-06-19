@@ -357,15 +357,8 @@ export default class Env {
   async getData() {
     let text;
     let url;
-    if (typeof window !== 'undefined') {
-      url = `/data.json?${this.commitHash}`;
-      text = await Helper.fetchAsync(url, this);
-    } else {
-      // eslint-disable-next-line no-undef
-      const fs = require('fs');
-      url = './dist/public/data.json';
-      text = fs.readFileSync(url, 'utf8');
-    }
+    url = `https://trovu.net/data.json?${this.commitHash}`;
+    text = await Helper.fetchAsync(url, this);
     if (!text) {
       return false;
     }
