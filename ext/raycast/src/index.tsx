@@ -96,9 +96,7 @@ ${examples || ""}
     `;
   };
 
-  const toggleDetail = () => {
-    setIsShowingDetail((prev) => !prev);
-  };
+  const toggleDetail = () => setIsShowingDetail((prev) => !prev);
 
   const customActions = (suggestion: Suggestion | null) => (
     <ActionPanel>
