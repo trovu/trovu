@@ -120,6 +120,8 @@ export default class Env {
 
     this.getFromLocalStorage();
 
+    env.fetch = Env.getFetch();
+
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
     }
@@ -409,5 +411,12 @@ export default class Env {
       window.navigator.standalone ||
       window.matchMedia('(display-mode: standalone)').matches
     );
+  }
+  static getFetch() {
+    if (typeof fetch === 'undefined') {
+      return require('node-fetch');
+    } else {
+      return fetch;
+    }
   }
 }
