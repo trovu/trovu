@@ -23,7 +23,7 @@ else {
   $env['language'] = $env['language'] ?? 'en';
   $env['country']  = $env['country']  ?? 'us';
   $title .=  $env['language'] . '-' . strtoupper($env['country']);
-  if ($env['defaultKeyword']) {
+  if (!empty($env['defaultKeyword'])) {
     $title .= ' ' . $env['defaultKeyword'];
   }
 }
