@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import CallHandler from '../src/js/modules/CallHandler.js';
 import Env from '../src/js/modules/Env.js';
 import './mocks.utils.js';
