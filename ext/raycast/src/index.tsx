@@ -77,19 +77,7 @@ export default function Command() {
   };
 
   const renderSuggestionDetail = (suggestion: Suggestion) => {
-    if (!suggestion) {
-      console.error("render sugg detail: suggestion is null");
-      return "";
-    }
-    if (!env) {
-      console.error("render sugg detail: env is null");
-      return "";
-    }
-    if (typeof env.buildProcessUrl !== "function") {
-      console.error("render sugg detail: env.buildProcessUrl is not a function");
-      return "";
-    }
-
+    if (!suggestion || !env || typeof env.buildProcessUrl !== "function") return "";
     const examples = suggestion.examples
       ?.map((example) => {
         const query =
