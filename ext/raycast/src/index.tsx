@@ -49,12 +49,8 @@ export default function Command() {
         showToast(Toast.Style.Failure, "Failed to initialize environment, check your connection.");
       }
     };
-
-    // Only initialize if env is not already set
-    if (!env) {
-      initializeEnv();
-    }
-  }, [preferences]);
+    if (!env) initializeEnv();
+  }, [preferences, env]);
 
   useEffect(() => {
     if (env) filterShortcuts();
