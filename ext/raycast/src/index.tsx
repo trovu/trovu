@@ -66,9 +66,7 @@ export default function Command() {
   }, [preferences]);
 
   useEffect(() => {
-    if (env) {
-      filterShortcuts();
-    }
+    if (env) filterShortcuts();
   }, [searchText, env]);
 
   const filterShortcuts = () => {
@@ -96,19 +94,17 @@ export default function Command() {
       ?.map((example) => {
         const query =
           `${(!suggestion.reachable ? suggestion.namespace + "." : "") + suggestion.keyword} ${example.arguments ?? ""}`.trim();
-        return `- [\`${query}\`](https://trovu.net/${env.buildProcessUrl({ query: query })}) ${example.description}`;
+        return `- [\`${query}\`](https://trovu.net/${env.buildProcessUrl({ query })}) ${example.description}`;
       })
       .join("\n");
-    const description = suggestion.description ? `_${suggestion.description}_` : "";
-
     return `
 ## ${suggestion.title}
 
 \`${(!suggestion.reachable ? suggestion.namespace + "." : "") + (suggestion.keyword + " " + suggestion.argumentString).trim()}\`
 
-${description}
+${suggestion.description ? `_${suggestion.description}_` : ""}
     
-${examples ? examples : ""}
+${examples || ""}
     `;
   };
 
