@@ -35,7 +35,7 @@ export default function Command() {
 
   useEffect(() => {
     const initializeEnv = async () => {
-      if (env) return; // Prevent reinitialization if env is already set
+      if (env) return;
       try {
         const builtEnv = new Env({ context: "raycast" });
         const params: Record<string, string> = preferences.github
