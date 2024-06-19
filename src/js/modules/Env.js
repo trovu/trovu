@@ -120,7 +120,7 @@ export default class Env {
 
     this.getFromLocalStorage();
 
-    env.fetch = Env.getFetch();
+    this.fetch = await Env.getFetch();
 
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
