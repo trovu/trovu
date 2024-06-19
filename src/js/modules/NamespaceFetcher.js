@@ -1,7 +1,6 @@
 /** @module NamespaceFetcher */
 import UrlProcessor from './UrlProcessor.js';
 import jsyaml from 'js-yaml';
-import fetch from 'node-fetch';
 
 export default class NamespaceFetcher {
   constructor(env) {
@@ -200,7 +199,7 @@ export default class NamespaceFetcher {
       if (!namespaceInfo.url) {
         continue;
       }
-      const promise = fetch(namespaceInfo.url, {
+      const promise = this.env.fetch(namespaceInfo.url, {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
       promises.push(promise);
