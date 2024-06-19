@@ -18,7 +18,7 @@ async function main() {
 }
 
 async function testCall(call) {
-  const env = new Env();
+  const env = new Env({ context: 'node' });
   env.getNavigatorLanguage = () => 'en-US';
   env.language = 'en';
   env.country = 'us';

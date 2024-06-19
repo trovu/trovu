@@ -24,7 +24,7 @@ export default class Home {
     // otherwise Chrome does not autodiscover.
     this.addLinkSearch();
 
-    this.env = new Env();
+    this.env = new Env({ context: 'browser' });
 
     // Init environment.
     await this.env.populate();

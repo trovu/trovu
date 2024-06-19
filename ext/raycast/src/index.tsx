@@ -37,7 +37,7 @@ export default function Command() {
       console.log("Initializing Env with preferences:", preferences);
       try {
         // Initialize Env instance
-        const builtEnv = new Env();
+        const builtEnv = new Env({ context: "raycast" });
 
         // Prepare the params based on preferences
         const params: Record<string, string> = {};
