@@ -1,5 +1,4 @@
 import { ActionPanel, Action, Detail, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
-import { useFetch } from "@raycast/utils";
 import { useState, useEffect } from "react";
 import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
@@ -33,38 +32,38 @@ export default function Command() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState(false);
 
-  const { data, isLoading, error } = useFetch("https://trovu.net/data.json", {
-    parseResponse: async (response) => {
-      const data = await response.json();
-      const builtEnv = new Env({ data: data });
-      const params = {};
-      if (preferences.github) {
-        params["github"] = preferences.github;
-      } else {
-        params["language"] = preferences.language;
-        params["country"] = preferences.country;
-      }
-      await builtEnv.populate(params);
-      // TODO: Fix this
-      // await builtEnv.populate({ language: preferences.language, country: preferences.country, github: "" });
-      // console.log({ language: preferences.language, country: preferences.country });
-      // console.log(preferences);
-      // await builtEnv.populate(preferences);
-      return builtEnv;
-    },
-    onError: (error) => {
-      console.error("Error fetching data:", error);
-      showToast(Toast.Style.Failure, "Failed to load data from trovu.net, check your connection.");
-    },
-  });
-
   useEffect(() => {
-    if (data) {
-      console.log("begin setenv, typeof env.buildprocessurl", typeof env?.buildProcessUrl);
-      setEnv(data);
-      console.log("end begin setenv, typeof env.buildprocessurl", typeof env?.buildProcessUrl);
+    const initializeEnv = async () => {
+      console.log("Initializing Env with preferences:", preferences);
+      try {
+        // Initialize Env instance
+        const builtEnv = new Env();
+
+        // Prepare the params based on preferences
+        const params: Record<string, string> = {};
+        if (preferences.github) {
+          params.github = preferences.github;
+        } else {
+          params.language = preferences.language;
+          params.country = preferences.country;
+        }
+
+        // Populate the Env instance with the params
+        await builtEnv.populate(params);
+
+        // Set the populated Env instance to the state
+        setEnv(builtEnv);
+      } catch (error) {
+        console.error("Error initializing Env:", error);
+        showToast(Toast.Style.Failure, "Failed to initialize environment, check your connection.");
+      }
+    };
+
+    // Only initialize if env is not already set
+    if (!env) {
+      initializeEnv();
     }
-  }, [data]);
+  }, [preferences]);
 
   useEffect(() => {
     if (env) {
@@ -152,14 +151,6 @@ ${examples ? examples : ""}
       )}
     </ActionPanel>
   );
-
-  if (error) {
-    return (
-      <List searchBarPlaceholder="Search shortcuts...">
-        <List.EmptyView title="Failed to load data" />
-      </List>
-    );
-  }
 
   if (!env || !env.data || !env.data.shortcuts) {
     return (
