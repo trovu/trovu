@@ -122,13 +122,10 @@ ${examples || ""}
       </List>
     );
   }
-  const buildTrovuUrl = (query: string) => {
-    if (preferences.github) {
-      return `https://trovu.net/process/index.html#?github=${preferences.github}&query=${query}`;
-    } else {
-      return `https://trovu.net/process/index.html#?language=${preferences.language}&country=${preferences.country}&query=${query}`;
-    }
-  };
+  const buildTrovuUrl = (query: string) =>
+    preferences.github
+      ? `https://trovu.net/process/index.html#?github=${preferences.github}&query=${query}`
+      : `https://trovu.net/process/index.html#?country=${preferences.country}&language=${preferences.language}&query=${query}`;
 
   return (
     <List
