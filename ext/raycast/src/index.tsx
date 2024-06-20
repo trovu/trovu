@@ -66,12 +66,12 @@ export default function Command() {
   };
 
   const renderSuggestionDetail = (suggestion: Suggestion) => {
-    if (!suggestion || !env || typeof env.buildProcessUrl !== "function") return "";
+    if (!suggestion || !env) return "";
     const examples = suggestion.examples
       ?.map((example) => {
         const query =
           `${(!suggestion.reachable ? suggestion.namespace + "." : "") + suggestion.keyword} ${example.arguments ?? ""}`.trim();
-        return `- [\`${query}\`](https://trovu.net/${env.buildProcessUrl({ query })}) ${example.description}`;
+        return `- [\`${query}\`](${buildTrovuUrl(query)}) ${example.description}`;
       })
       .join("\n");
     return `
@@ -92,9 +92,7 @@ ${examples || ""}
       <Action
         title="Send query"
         onAction={async () => {
-          if (env && typeof env.buildProcessUrl === "function") {
-            await open(`https://trovu.net/${env.buildProcessUrl({ query: searchText })}`);
-          }
+          await open(buildTrovuUrl(searchText));
         }}
       />
       <Action
@@ -124,6 +122,13 @@ ${examples || ""}
       </List>
     );
   }
+  const buildTrovuUrl = (query: string) => {
+    if (preferences.github) {
+      return `https://trovu.net/process/index.html#?github=${preferences.github}&query=${query}`;
+    } else {
+      return `https://trovu.net/process/index.html#?language=${preferences.language}&country=${preferences.country}&query=${query}`;
+    }
+  };
 
   return (
     <List
