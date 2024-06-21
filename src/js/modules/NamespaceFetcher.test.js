@@ -373,14 +373,14 @@ describe('NamespaceFetcher.addInfo', () => {
     expect(
       new NamespaceFetcher(new Env({})).addInfo(
         {
-          url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&start=1',
+          url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>&Z=<Ziel>&timesel=depart&start=1',
         },
         'db 2',
         '.de',
       ),
     ).toEqual(
       jsyaml.load(`
-        url: https://reiseauskunft.bahn.de/bin/query.exe/d?S={%Start}&Z={%Ziel}&timesel=depart&start=1
+        url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>&Z=<Ziel>&timesel=depart&start=1'
         key: db 2
         keyword: db
         argumentCount: 2
