@@ -537,7 +537,9 @@ export default class NamespaceFetcher {
     };
 
     const argumentsAsString = Object.entries(args).map(([key, value]) => {
-      const type = value && value.type ? value.type : null;
+      const type =
+        (value && Object.values(value)[0] && Object.values(value)[0].type) ||
+        null;
       const icon = icons[type] || '';
       return `${icon} ${key}`.trim();
     });
