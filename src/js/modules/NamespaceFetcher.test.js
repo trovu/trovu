@@ -388,9 +388,9 @@ describe('NamespaceFetcher.addInfo', () => {
         namespace: .de
         arguments:
           Start:
-            '{%Start}': {}
+            '<Start: {type: city}>': { type: city }
           Ziel:
-            '{%Ziel}': {}
+            '<Ziel>': {}
         title: '' 
     `),
     );
