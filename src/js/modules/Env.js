@@ -359,7 +359,7 @@ export default class Env {
     let url;
     switch (this.context) {
       case 'browser':
-        url = `./data.json?${this.commitHash}`;
+        url = `/data.json?${this.commitHash}`;
         text = await Helper.fetchAsync(url, this);
         break;
       case 'raycast':
