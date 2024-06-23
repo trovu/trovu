@@ -1,7 +1,6 @@
 a 0:
   url: https://www.amazon.de/
   title: Amazon
-  description: Online-Marktplatz für eine Vielzahl von Produkten
   tests:
   - expect: <title>Amazon.de
   tags:
@@ -10,6 +9,7 @@ a 0:
   - shopping
   examples:
   - description: Amazon Startseite
+  description: Online-Marktplatz für eine Vielzahl von Produkten
 a 1:
   url: https://www.amazon.de/s?k=<Suche>
   tests:
@@ -22,13 +22,13 @@ a 1:
 conrad 0:
   url: https://www.conrad.at/
   title: Conrad Elektronik Österreich
-  description: Online-Shop für Elektronik und Technikprodukte
   tests:
   - expect: Elektronik und Technik in Österreich
   tags:
   - conrad
   - electronics
   - shopping
+  description: Online-Shop für Elektronik und Technikprodukte
 conrad 1:
   url: https://www.conrad.at/de/search.html?search=<Artikel>
   tests:
@@ -41,13 +41,13 @@ conrad 1:
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
-  description: Online-Auktions- und Shopping-Plattform
   tests:
   - expect: rel="canonical" href="http://www.ebay.at"
   tags:
   - ebay
   - is-affiliate
   - shopping
+  description: Online-Auktions- und Shopping-Plattform
 e 1:
   url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<Suche>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   tests:
@@ -60,7 +60,6 @@ e 1:
 g 0:
   url: https://www.google.at/
   title: Google.at
-  description: Suchmaschine für das Web
   tests:
   - expect: href="https://www.google.at/
   tags:
@@ -68,6 +67,7 @@ g 0:
   - web-search
   examples:
   - description: Go to homepage
+  description: Suchmaschine für das Web
 g 1:
   url: https://www.google.at/search?hl=<$language>&q=<Suche>&ie=utf-8
   tests:
@@ -80,13 +80,13 @@ g 1:
 gh 0:
   url: https://geizhals.at/
   title: Geizhals Österreich
-  description: Preisvergleichsportal für verschiedene Produkte
   tests:
   - expect: <title>Geizhals Preisvergleich Österreich</title>
   tags:
   - geizhals
   - preisvergleich
   - shopping
+  description: Preisvergleichsportal für verschiedene Produkte
 gh 1:
   url: 'https://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
   tests:
@@ -534,13 +534,13 @@ gmzt 1:
 ikea 0:
   url: https://www.ikea.com/at/de/
   title: IKEA Österreich
-  description: Möbel- und Einrichtungshaus
   tests:
   - expect: IKEA Österreich
   tags:
   - furniture
   - ikea
   - shopping
+  description: Möbel- und Einrichtungshaus
 ikea 1:
   url: https://www.ikea.com/at/de/search/?q=<Suche>
   tests:
@@ -553,12 +553,12 @@ ikea 1:
 obv 0:
   url: https://www.obvsg.at/
   title: OBV - Österreichischer Bibliothekenverbund
-  description: Verbund österreichischer Bibliotheken
   tests:
   - expect: OBVSG Home</title>
   tags:
   - library
   - obv
+  description: Verbund österreichischer Bibliotheken
 obv 1:
   url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
   tests:
@@ -577,12 +577,12 @@ oebb 4:
 rsc 0:
   url: https://at.rs-online.com/
   title: RS Components Österreich
-  description: Online-Vertrieb von Elektronik- und Technikkomponenten
   tests:
   - expect: RS</title>
   tags:
   - electronics
   - shopping
+  description: Online-Vertrieb von Elektronik- und Technikkomponenten
 rsc 1:
   url: https://at.rs-online.com/web/c/?searchTerm=<Produkt>
   tests:
@@ -595,11 +595,11 @@ rsc 1:
 we 0:
   url: https://at.wetter.com/?forcesite=1
   title: Wetter.com
-  description: Wettervorhersagen und meteorologische Informationen
   tests:
   - expect: Wetter für Österreich
   tags:
   - weather
+  description: Wettervorhersagen und meteorologische Informationen
 we 1:
   url: https://at.wetter.com/suche/?search=<Ort>
   tests:
@@ -612,12 +612,12 @@ we 1:
 zal 0:
   url: https://www.zalando.at/
   title: Zalando.at
-  description: Online-Shop für Mode und Schuhe
   tests:
   - expect: rel="canonical" href="https://www.zalando.at/"
   tags:
   - shopping
   - zalando
+  description: Online-Shop für Mode und Schuhe
 zal 1:
   url: https://www.zalando.at/katalog/?q=<Produkt>
   tests:
@@ -630,12 +630,12 @@ zal 1:
 öbb 0:
   url: https://www.oebb.at/
   title: ÖBB-Hauptseite
-  description: Website der Österreichischen Bundesbahnen
   tests:
   - expect: ÖBB</title>
   tags:
   - bahn
   - travel
+  description: Website der Österreichischen Bundesbahnen
 öbb 2:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
   title: ÖBB-Auskunft
