@@ -1,6 +1,7 @@
 a 0:
   url: https://www.amazon.de/
   title: Amazon
+  description: Online-Marktplatz für eine Vielzahl von Produkten
   tests:
   - expect: <title>Amazon.de
   tags:
@@ -21,6 +22,7 @@ a 1:
 conrad 0:
   url: https://www.conrad.at/
   title: Conrad Elektronik Österreich
+  description: Online-Shop für Elektronik und Technikprodukte
   tests:
   - expect: Elektronik und Technik in Österreich
   tags:
@@ -39,6 +41,7 @@ conrad 1:
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
+  description: Online-Auktions- und Shopping-Plattform
   tests:
   - expect: rel="canonical" href="http://www.ebay.at"
   tags:
@@ -57,6 +60,7 @@ e 1:
 g 0:
   url: https://www.google.at/
   title: Google.at
+  description: Suchmaschine für das Web
   tests:
   - expect: href="https://www.google.at/
   tags:
@@ -76,6 +80,7 @@ g 1:
 gh 0:
   url: https://geizhals.at/
   title: Geizhals Österreich
+  description: Preisvergleichsportal für verschiedene Produkte
   tests:
   - expect: <title>Geizhals Preisvergleich Österreich</title>
   tags:
@@ -529,6 +534,7 @@ gmzt 1:
 ikea 0:
   url: https://www.ikea.com/at/de/
   title: IKEA Österreich
+  description: Möbel- und Einrichtungshaus
   tests:
   - expect: IKEA Österreich
   tags:
@@ -547,6 +553,7 @@ ikea 1:
 obv 0:
   url: https://www.obvsg.at/
   title: OBV - Österreichischer Bibliothekenverbund
+  description: Verbund österreichischer Bibliotheken
   tests:
   - expect: OBVSG Home</title>
   tags:
@@ -570,6 +577,7 @@ oebb 4:
 rsc 0:
   url: https://at.rs-online.com/
   title: RS Components Österreich
+  description: Online-Vertrieb von Elektronik- und Technikkomponenten
   tests:
   - expect: RS</title>
   tags:
@@ -587,6 +595,7 @@ rsc 1:
 we 0:
   url: https://at.wetter.com/?forcesite=1
   title: Wetter.com
+  description: Wettervorhersagen und meteorologische Informationen
   tests:
   - expect: Wetter für Österreich
   tags:
@@ -603,6 +612,7 @@ we 1:
 zal 0:
   url: https://www.zalando.at/
   title: Zalando.at
+  description: Online-Shop für Mode und Schuhe
   tests:
   - expect: rel="canonical" href="https://www.zalando.at/"
   tags:
@@ -620,6 +630,7 @@ zal 1:
 öbb 0:
   url: https://www.oebb.at/
   title: ÖBB-Hauptseite
+  description: Website der Österreichischen Bundesbahnen
   tests:
   - expect: ÖBB</title>
   tags:
