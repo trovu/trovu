@@ -9,6 +9,7 @@ a 0:
   - shopping
   examples:
   - description: Amazon Startseite
+  description: Online-Marktplatz für eine Vielzahl von Produkten
 a 1:
   url: https://www.amazon.de/s?k=<Suche>
   tests:
@@ -27,6 +28,7 @@ conrad 0:
   - conrad
   - electronics
   - shopping
+  description: Online-Shop für Elektronik und Technikprodukte
 conrad 1:
   url: https://www.conrad.at/de/search.html?search=<Artikel>
   tests:
@@ -45,6 +47,7 @@ e 0:
   - ebay
   - is-affiliate
   - shopping
+  description: Online-Auktions- und Shopping-Plattform
 e 1:
   url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<Suche>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   tests:
@@ -64,6 +67,7 @@ g 0:
   - web-search
   examples:
   - description: Go to homepage
+  description: Suchmaschine für das Web
 g 1:
   url: https://www.google.at/search?hl=<$language>&q=<Suche>&ie=utf-8
   tests:
@@ -82,6 +86,7 @@ gh 0:
   - geizhals
   - preisvergleich
   - shopping
+  description: Preisvergleichsportal für verschiedene Produkte
 gh 1:
   url: 'https://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
   tests:
@@ -535,6 +540,7 @@ ikea 0:
   - furniture
   - ikea
   - shopping
+  description: Möbel- und Einrichtungshaus
 ikea 1:
   url: https://www.ikea.com/at/de/search/?q=<Suche>
   tests:
@@ -552,6 +558,7 @@ obv 0:
   tags:
   - library
   - obv
+  description: Verbund österreichischer Bibliotheken
 obv 1:
   url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
   tests:
@@ -575,6 +582,7 @@ rsc 0:
   tags:
   - electronics
   - shopping
+  description: Online-Vertrieb von Elektronik- und Technikkomponenten
 rsc 1:
   url: https://at.rs-online.com/web/c/?searchTerm=<Produkt>
   tests:
@@ -591,6 +599,7 @@ we 0:
   - expect: Wetter für Österreich
   tags:
   - weather
+  description: Wettervorhersagen und meteorologische Informationen
 we 1:
   url: https://at.wetter.com/suche/?search=<Ort>
   tests:
@@ -608,6 +617,7 @@ zal 0:
   tags:
   - shopping
   - zalando
+  description: Online-Shop für Mode und Schuhe
 zal 1:
   url: https://www.zalando.at/katalog/?q=<Produkt>
   tests:
@@ -625,6 +635,7 @@ zal 1:
   tags:
   - bahn
   - travel
+  description: Website der Österreichischen Bundesbahnen
 öbb 2:
   url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
   title: ÖBB-Auskunft
