@@ -1,4 +1,4 @@
-declare module '../../../src/js/modules/Env.js' {
+declare module "../../src/js/modules/Env.js" {
   interface Env {
     populate(params: Record<string, string>): Promise<void>;
     data: any; // You should replace `any` with the actual type if known
@@ -7,8 +7,8 @@ declare module '../../../src/js/modules/Env.js' {
   export default Env;
 }
 
-declare module '../../../src/js/modules/SuggestionsGetter.js' {
-  import Env from './Env';
+declare module "../../src/js/modules/SuggestionsGetter.js" {
+  import Env from "./Env";
 
   interface Suggestion {
     argumentCount: string;
