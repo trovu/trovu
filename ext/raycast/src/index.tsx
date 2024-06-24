@@ -70,8 +70,8 @@ export default function Command() {
     const examples = suggestion.examples
       ?.map((example) => {
         const query =
-          `${(!suggestion.reachable ? suggestion.namespace + "." : "") + suggestion.keyword} ${(example as any).arguments ?? ""}`.trim();
-        return `- [\`${query}\`](${buildTrovuUrl(query)}) ${(example as any).description}`;
+          `${(!suggestion.reachable ? suggestion.namespace + "." : "") + suggestion.keyword} ${example.arguments ?? ""}`.trim();
+        return `- [\`${query}\`](${buildTrovuUrl(query)}) ${example.description}`;
       })
       .join("\n");
     return `
