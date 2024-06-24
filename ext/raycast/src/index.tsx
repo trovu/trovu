@@ -1,6 +1,6 @@
 /// <reference path="./modules.d.ts" />
 
-import { ActionPanel, Action, Detail, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
+import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
 import { useState, useEffect } from "react";
 import { useCachedState } from "@raycast/utils";
 import Env from "../../../src/js/modules/Env.js";
