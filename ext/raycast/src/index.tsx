@@ -92,7 +92,7 @@ ${examples || ""}
   const customActions = (suggestion: Suggestion | null) => (
     <ActionPanel>
       <Action
-        title="Send query"
+        title="Send Query"
         onAction={async () => {
           await open(buildTrovuUrl(searchText));
         }}
@@ -105,11 +105,11 @@ ${examples || ""}
       {suggestion && suggestion.namespace && suggestion.namespace.length <= 3 && (
         <>
           <Action.OpenInBrowser
-            title="Edit shortcut"
+            title="Edit Shortcut"
             url={`https://github.com/trovu/trovu/search?q=${suggestion.keyword}+${suggestion.argumentCount}+path%3Adata/shortcuts/${suggestion.namespace}.yml`}
           />
           <Action.OpenInBrowser
-            title="Report problem"
+            title="Report Problem"
             url={`https://github.com/trovu/trovu-web/issues/new?title=Problem%20with%20shortcut%20%60${suggestion.namespace}.${suggestion.keyword}%20${suggestion.argumentCount}%60`}
           />
         </>
