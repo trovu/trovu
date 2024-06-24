@@ -70,7 +70,6 @@ export default function Command() {
 
   const renderSuggestionDetail = (suggestion: Suggestion) => {
     if (!suggestion || !env) return "";
-    console.log(suggestion.examples);
     const examples = suggestion.examples
       ?.map((example) => {
         const query =
