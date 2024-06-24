@@ -1,9 +1,9 @@
 // ext/raycast/src/modules.d.ts
 
 declare module "../../../src/js/modules/Env.js" {
-  interface Env {
+  export interface Env {
     populate(params: Record<string, string>): Promise<void>;
-    data: any; // Replace `any` with the actual type if known
+    data: any;
   }
 
   const Env: Env;
@@ -11,7 +11,7 @@ declare module "../../../src/js/modules/Env.js" {
 }
 
 declare module "../../../src/js/modules/SuggestionsGetter.js" {
-  interface Suggestion {
+  export interface Suggestion {
     argumentCount: string;
     argumentString: string;
     arguments?: object;
@@ -26,7 +26,7 @@ declare module "../../../src/js/modules/SuggestionsGetter.js" {
     url: string;
   }
 
-  class SuggestionsGetter {
+  export class SuggestionsGetter {
     getSuggestions(query: string): Suggestion[];
   }
 
