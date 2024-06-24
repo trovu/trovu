@@ -3,7 +3,7 @@
 declare module "../../../src/js/modules/Env.js" {
   export interface Env {
     populate(params: Record<string, string>): Promise<void>;
-    data: any;
+    data: object;
   }
 
   const Env: Env;
