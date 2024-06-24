@@ -16,7 +16,7 @@ export default class CallHandler {
 
     Helper.logVersion();
 
-    const env = new Env();
+    const env = new Env({ context: 'browser' });
     await env.populate();
 
     if (env.debug) {

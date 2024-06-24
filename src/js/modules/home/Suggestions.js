@@ -1,5 +1,6 @@
 /** @module Suggestions */
 import QueryParser from '../QueryParser.js';
+import SuggestionsGetter from '../SuggestionsGetter.js';
 import 'font-awesome/css/font-awesome.min.css';
 import jsyaml from 'js-yaml';
 
@@ -22,7 +23,8 @@ export default class Suggestions {
    */
   updateSuggestions = () => {
     this.query = this.queryInput.value;
-    this.suggestions = this.getSuggestions(this.query);
+    const suggestionsGetter = new SuggestionsGetter(this.env);
+    this.suggestions = suggestionsGetter.getSuggestions(this.query);
     this.suggestions = this.suggestions.slice(0, 500);
     this.renderSuggestions(this.suggestions);
   };
@@ -169,9 +171,8 @@ export default class Suggestions {
     const argNamesSpan = document.createElement('span');
     argNamesSpan.className = 'argument-names';
     // getArgumentsStr now returns a DocumentFragment, so we can directly append it
-    const argsFragment = this.getArgsFragment(suggestion.arguments);
+    argNamesSpan.textContent = suggestion.argumentString;
 
-    argNamesSpan.appendChild(argsFragment);
     leftSpan.appendChild(argNamesSpan);
 
     // Create and append the 'right' container
@@ -400,233 +401,6 @@ export default class Suggestions {
     });
     const yaml = jsyaml.dump(shortcut, { noArrayIndent: true, lineWidth: -1 });
     return yaml;
-  }
-
-  getArgsFragment(args) {
-    const icons = {
-      city: '🏙️',
-      date: '📅',
-      time: '🕒',
-    };
-
-    const argsFragment = document.createDocumentFragment();
-
-    Object.entries(args).forEach(([key, value], index, array) => {
-      const type = Object.values(value)[0].type ?? null;
-      const argSpan = document.createElement('span');
-      argSpan.title = type;
-
-      if (icons[type]) {
-        const iconText = document.createTextNode(icons[type] + '\u202F'); // Adding a narrow no-break space
-        argSpan.appendChild(iconText);
-      }
-
-      const argText = document.createTextNode(key);
-      argSpan.appendChild(argText);
-
-      argsFragment.appendChild(argSpan);
-
-      // If it's not the last argument, add a comma and a space
-      if (index < array.length - 1) {
-        argsFragment.appendChild(document.createTextNode(', '));
-      }
-    });
-
-    return argsFragment;
-  }
-
-  /**
-   * Find shortcuts to suggest.
-   *
-   * @param {string} keyword – The keyword from the query.
-   *
-   * @return {array} suggestions – The found suggestions.
-   */
-  getSuggestions(query) {
-    if (!query) {
-      return [];
-    }
-    const matches = this.getMatches(query);
-
-    if (matches.showOnHome.length > 0) {
-      // sort matches.showOnHome by showOnHome integer
-      matches.showOnHome.sort((a, b) => {
-        return a.showOnHome - b.showOnHome;
-      });
-      return matches.showOnHome;
-    }
-
-    this.sort(matches);
-    let suggestions = [];
-    suggestions = suggestions.concat(
-      matches.showOnHome,
-      matches.keywordFullReachable,
-      matches.keywordFullUnreachable,
-      matches.keywordBeginReachable,
-      matches.keywordBeginUnreachable,
-      matches.titleBeginReachable,
-      matches.titleBeginUnreachable,
-      matches.titleMiddleReachable,
-      matches.titleMiddleUnreachable,
-      matches.tagMiddleReachable,
-      matches.tagMiddleUnreachable,
-      matches.urlMiddleReachable,
-      matches.urlMiddleUnreachable,
-    );
-
-    return suggestions;
-  }
-
-  /**
-   * Find matches given keyword.
-   *
-   * @param {string} keyword – The keyword from the query.
-   *
-   * @return {object} matches – The found matches, grouped by type of match.
-   */
-  getMatches(query) {
-    const matches = {
-      showOnHome: [],
-      keywordFullReachable: [],
-      keywordFullUnreachable: [],
-      keywordBeginReachable: [],
-      keywordBeginUnreachable: [],
-      titleBeginReachable: [],
-      titleBeginUnreachable: [],
-      titleMiddleReachable: [],
-      titleMiddleUnreachable: [],
-      tagMiddleReachable: [],
-      tagMiddleUnreachable: [],
-      urlMiddleReachable: [],
-      urlMiddleUnreachable: [],
-    };
-    const env = QueryParser.parse(query);
-    const [regExp, filters] = this.getRegExpAndFilters(query);
-
-    for (const namespaceInfo of Object.values(this.env.namespaceInfos)) {
-      for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
-        if (shortcut.deprecated || shortcut.removed) {
-          continue;
-        }
-        if (query == '') {
-          if (shortcut.showOnHome && shortcut.reachable) {
-            matches.showOnHome.push(shortcut);
-            continue;
-          }
-        }
-        if (filters.namespace && filters.namespace != shortcut.namespace) {
-          continue;
-        }
-        if (
-          filters.tag &&
-          (!shortcut.tags || !shortcut.tags.includes(filters.tag))
-        ) {
-          continue;
-        }
-        if (filters.url && !shortcut.url.includes(filters.url)) {
-          continue;
-        }
-        if (env.keyword == shortcut.keyword) {
-          if (shortcut.reachable) {
-            matches.keywordFullReachable.push(shortcut);
-          } else {
-            matches.keywordFullUnreachable.push(shortcut);
-          }
-          continue;
-        }
-        let pos = shortcut.keyword.search(regExp);
-        if (pos == 0) {
-          if (shortcut.reachable) {
-            matches.keywordBeginReachable.push(shortcut);
-          } else {
-            matches.keywordBeginUnreachable.push(shortcut);
-          }
-          continue;
-        }
-        pos = shortcut.title.search(regExp);
-        if (pos == 0) {
-          if (shortcut.reachable) {
-            matches.titleBeginReachable.push(shortcut);
-          } else {
-            matches.titleBeginUnreachable.push(shortcut);
-          }
-          continue;
-        }
-        if (pos > 0) {
-          if (shortcut.reachable) {
-            matches.titleMiddleReachable.push(shortcut);
-          } else {
-            matches.titleMiddleUnreachable.push(shortcut);
-          }
-          continue;
-        }
-        if (shortcut.tags && Array.isArray(shortcut.tags)) {
-          for (const tag of shortcut.tags) {
-            const pos = tag.search(regExp);
-            if (pos > -1) {
-              if (shortcut.reachable) {
-                matches.tagMiddleReachable.push(shortcut);
-              } else {
-                matches.tagMiddleUnreachable.push(shortcut);
-              }
-            }
-          }
-        }
-        pos = shortcut.url.search(regExp);
-        if (pos > 0) {
-          if (shortcut.reachable) {
-            matches.urlMiddleReachable.push(shortcut);
-          } else {
-            matches.urlMiddleUnreachable.push(shortcut);
-          }
-          continue;
-        }
-      }
-    }
-    return matches;
-  }
-
-  getRegExpAndFilters(query) {
-    const filters = {};
-    const queryParts = query.split(' ');
-    const remainingQueryParts = [];
-    for (const part of queryParts) {
-      if (part.startsWith('ns:')) {
-        filters.namespace = part.slice(3);
-        continue;
-      }
-      if (part.startsWith('tag:')) {
-        filters.tag = part.slice(4);
-        continue;
-      }
-      if (part.startsWith('url:')) {
-        filters.url = part.slice(4);
-        continue;
-      }
-      const [extraNamespaceName, keyword] = QueryParser.getExtraNamespace(part);
-      // If the extraNamespaceName actually exists, use it as a namespace filter.
-      if (extraNamespaceName && this.env.namespaceInfos[extraNamespaceName]) {
-        filters.namespace = extraNamespaceName;
-        remainingQueryParts.push(keyword);
-        continue;
-      }
-      remainingQueryParts.push(part);
-    }
-    const remainingQuery = remainingQueryParts.join(' ');
-    const regexp = new RegExp(remainingQuery, 'i');
-    return [regexp, filters];
-  }
-
-  /**
-   * Sort matches based on keyword.
-   *
-   * @param {string} keyword – The keyword from the query.
-   */
-  sort(matches) {
-    const compareKeywords = (a, b) => a.keyword.localeCompare(b.keyword);
-    for (const key in matches) {
-      matches[key].sort(compareKeywords);
-    }
   }
 
   /**

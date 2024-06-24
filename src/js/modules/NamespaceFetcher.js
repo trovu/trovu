@@ -199,7 +199,7 @@ export default class NamespaceFetcher {
       if (!namespaceInfo.url) {
         continue;
       }
-      const promise = fetch(namespaceInfo.url, {
+      const promise = this.env.fetch(namespaceInfo.url, {
         cache: this.env.reload ? 'reload' : 'force-cache',
       });
       promises.push(promise);
@@ -522,8 +522,31 @@ export default class NamespaceFetcher {
     shortcut.argumentCount = parseInt(shortcut.argumentCount);
     shortcut.namespace = namespaceName;
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
+    shortcut.argumentString = NamespaceFetcher.getArgumentString(
+      shortcut.arguments,
+    );
     shortcut.title = shortcut.title || '';
     return shortcut;
+  }
+
+  static getArgumentString(args) {
+    const icons = {
+      city: '🏙️',
+      date: '📅',
+      time: '🕒',
+    };
+
+    const argumentsAsString = Object.entries(args).map(([key, value]) => {
+      const type =
+        (value && Object.values(value)[0] && Object.values(value)[0].type) ||
+        null;
+      const icon = icons[type] || '';
+      return `${icon} ${key}`.trim();
+    });
+
+    const argumentString = argumentsAsString.join(', ');
+
+    return argumentString;
   }
 
   verifyAll(namespaceInfos) {

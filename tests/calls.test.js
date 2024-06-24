@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import CallHandler from '../src/js/modules/CallHandler.js';
 import Env from '../src/js/modules/Env.js';
 import './mocks.utils.js';
@@ -18,7 +21,7 @@ async function main() {
 }
 
 async function testCall(call) {
-  const env = new Env();
+  const env = new Env({ context: 'node' });
   env.getNavigatorLanguage = () => 'en-US';
   env.language = 'en';
   env.country = 'us';

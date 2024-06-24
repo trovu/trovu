@@ -44,7 +44,7 @@ These attributes serve only for informational purposes, they have no effect on w
 
 -   The `title:` can be any string. It will be shown in the list of shortcuts on the homepage.
 -   `description:` can be a longer string. It will be shown in the list of shortcuts when a shortcut is expanded.
--   `tags:` can be a list of labels.
+-   `tags:` can be a list of labels. See [tags](tags.md) for more.
 -   `examples:` can be a list of example usages of the shortcuts:
 -   `tests:` can be a list of test calls to check the validity of the shortcut.
 

@@ -40,7 +40,7 @@ export default class Helper {
    * @return {string} text  - The content.
    */
   static async fetchAsync(url, env) {
-    const response = await fetch(url, {
+    const response = await env.fetch(url, {
       cache: env.reload ? 'reload' : 'force-cache',
     });
     if (response.status != 200) {

@@ -120,6 +120,8 @@ export default class Env {
 
     this.getFromLocalStorage();
 
+    this.fetch = await Env.getFetch();
+
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
     }
@@ -355,14 +357,22 @@ export default class Env {
   async getData() {
     let text;
     let url;
-    if (typeof window !== 'undefined') {
-      url = `/data.json?${this.commitHash}`;
-      text = await Helper.fetchAsync(url, this);
-    } else {
-      // eslint-disable-next-line no-undef
-      const fs = require('fs');
-      url = './dist/public/data.json';
-      text = fs.readFileSync(url, 'utf8');
+    switch (this.context) {
+      case 'browser':
+        url = `/data.json?${this.commitHash}`;
+        text = await Helper.fetchAsync(url, this);
+        break;
+      case 'raycast':
+        url = `https://trovu.net/data.json?${this.commitHash}`;
+        text = await Helper.fetchAsync(url, this);
+        break;
+      case 'node': {
+        // eslint-disable-next-line no-undef
+        const fs = require('fs');
+        url = './dist/public/data.json';
+        text = fs.readFileSync(url, 'utf8');
+        break;
+      }
     }
     if (!text) {
       return false;
@@ -371,7 +381,7 @@ export default class Env {
       const data = await JSON.parse(text);
       return data;
     } catch (error) {
-      this.env.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
+      this.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
       return false;
     }
   }
@@ -382,6 +392,9 @@ export default class Env {
    * @return {string} hash - The hash string.
    */
   static getUrlHash() {
+    if (typeof window === 'undefined') {
+      return '';
+    }
     const hash = window.location.hash.substr(1);
     return hash;
   }
@@ -406,5 +419,15 @@ export default class Env {
       window.navigator.standalone ||
       window.matchMedia('(display-mode: standalone)').matches
     );
+  }
+  static async getFetch() {
+    if (typeof fetch !== 'undefined') {
+      // Browser environment
+      return fetch.bind(window);
+    } else {
+      // Raycast environment, use node-fetch
+      const { default: nodeFetch } = await import('node-fetch');
+      return nodeFetch;
+    }
   }
 }
