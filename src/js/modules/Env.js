@@ -366,12 +366,13 @@ export default class Env {
         url = `https://trovu.net/data.json?${this.commitHash}`;
         text = await Helper.fetchAsync(url, this);
         break;
-      case 'node':
+      case 'node': {
         // eslint-disable-next-line no-undef
         const fs = require('fs');
         url = './dist/public/data.json';
         text = fs.readFileSync(url, 'utf8');
         break;
+      }
     }
     if (!text) {
       return false;
