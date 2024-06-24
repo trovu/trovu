@@ -120,7 +120,7 @@ export default class Env {
 
     this.getFromLocalStorage();
 
-    this.fetch = await Env.getFetch();
+    this.fetch = await this.getFetch();
 
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
@@ -420,14 +420,16 @@ export default class Env {
       window.matchMedia('(display-mode: standalone)').matches
     );
   }
-  static async getFetch() {
-    if (typeof fetch !== 'undefined') {
-      // Browser environment
-      return fetch.bind(window);
-    } else {
-      // Raycast environment, use node-fetch
-      const { default: nodeFetch } = await import('node-fetch');
-      return nodeFetch;
+  async getFetch() {
+    switch (this.context) {
+      case 'browser':
+        return fetch.bind(window);
+        break;
+      case 'raycast':
+      case 'node':
+        const { default: nodeFetch } = await import('node-fetch');
+        return nodeFetch;
+        break;
     }
   }
 }
