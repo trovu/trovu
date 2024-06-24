@@ -14,7 +14,7 @@ interface Preferences {
 interface Suggestion {
   argumentCount: string;
   argumentString: string;
-  arguments?: { [key: string]: any }; // Assuming `arguments` is an object with key-value pairs
+  arguments?: { [key: string]: object };
   description?: string;
   examples?: { [key: string]: any }[]; // Assuming `examples` is an array of objects
   key: string;
