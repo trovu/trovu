@@ -16,7 +16,10 @@ interface Suggestion {
   argumentString: string;
   arguments?: { [key: string]: object };
   description?: string;
-  examples?: { [key: string]: any }[]; // Assuming `examples` is an array of objects
+  examples?: {
+    arguments?: string;
+    description: string;
+  }[];
   key: string;
   keyword: string;
   namespace: string;
@@ -67,6 +70,7 @@ export default function Command() {
 
   const renderSuggestionDetail = (suggestion: Suggestion) => {
     if (!suggestion || !env) return "";
+    console.log(suggestion.examples);
     const examples = suggestion.examples
       ?.map((example) => {
         const query =
