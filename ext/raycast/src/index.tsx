@@ -56,7 +56,7 @@ export default function Command() {
       }
     };
     initializeEnv();
-  }, [preferences]);
+  }, [preferences.language, preferences.country, preferences.github]);
 
   useEffect(() => {
     if (env) filterShortcuts();
