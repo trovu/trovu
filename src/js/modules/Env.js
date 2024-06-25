@@ -421,9 +421,11 @@ export default class Env {
     );
   }
   async getFetch() {
+    if (typeof fetch !== 'undefined') {
+      // Browser environment
+      return fetch.bind(window);
+    }
     switch (this.context) {
-      case 'browser':
-        return fetch.bind(window);
       case 'raycast':
       case 'node': {
         const { default: nodeFetch } = await import('node-fetch');
