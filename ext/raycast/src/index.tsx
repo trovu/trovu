@@ -4,6 +4,7 @@ import { useCachedState } from "@raycast/utils";
 import Env from "../../../src/js/modules/Env.js";
 import SuggestionsGetter from "../../../src/js/modules/SuggestionsGetter.js";
 import { markdowns } from "./markdowns";
+import { isEqual } from "lodash";
 
 interface Preferences {
   language: string;
@@ -30,22 +31,26 @@ interface Suggestion {
 }
 
 export default function Command() {
-  const preferences = getPreferenceValues<Preferences>();
+  const prefs = getPreferenceValues<Preferences>();
+  const [cachedPrefs, setCachedPrefs] = useCachedState<Preferences>("prefs");
   const [searchText, setSearchText] = useState("");
   const [env, setEnv] = useCachedState<Env | null>("env", null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState(true);
 
   useEffect(() => {
+    if (env && isEqual(prefs, cachedPrefs)) {
+      return;
+    }
+    setCachedPrefs(prefs);
     const initializeEnv = async () => {
-      if (env) return;
       try {
         const builtEnv = new Env({ context: "raycast" });
-        const params: Record<string, string> = preferences.github
-          ? { github: preferences.github }
+        const params: Record<string, string> = prefs.github
+          ? { github: prefs.github }
           : {
-              language: preferences.language,
-              country: preferences.country,
+              language: prefs.language,
+              country: prefs.country,
             };
         await builtEnv.populate(params);
         setEnv(builtEnv);
@@ -55,7 +60,7 @@ export default function Command() {
       }
     };
     initializeEnv();
-  }, [preferences, env, setEnv]);
+  }, [prefs, env]);
 
   useEffect(() => {
     if (env) filterShortcuts();
@@ -128,9 +133,9 @@ ${examples || ""}
   const buildTrovuUrl = (query: string) => {
     const encodedQuery = encodeURIComponent(query);
     const base = "https://trovu.net/process/index.html?#";
-    const url = preferences.github
-      ? `${base}github=${preferences.github}&query=${encodedQuery}`
-      : `${base}country=${preferences.country}&language=${preferences.language}&query=${encodedQuery}`;
+    const url = prefs.github
+      ? `${base}github=${prefs.github}&query=${encodedQuery}`
+      : `${base}country=${prefs.country}&language=${prefs.language}&query=${encodedQuery}`;
     return url;
   };
 

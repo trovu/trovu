@@ -37,6 +37,7 @@ export default [
   {
     input: 'src/js/index.js',
     output: output,
+    external: ['node-fetch'], // Only needed for Raycast
     plugins: [
       watch({ dir: 'src/html/' }),
       watch({ dir: 'src/img/' }),
@@ -77,6 +78,7 @@ export default [
   {
     input: 'src/js/process.js',
     output: output,
+    external: ['node-fetch'], // Only needed for Raycast
     plugins: [
       resolve(),
       commonjs(),

@@ -120,7 +120,7 @@ export default class Env {
 
     this.getFromLocalStorage();
 
-    this.fetch = await Env.getFetch();
+    this.fetch = await this.getFetch();
 
     if (typeof params.github === 'string' && params.github !== '') {
       this.configUrl = this.buildGithubConfigUrl(params.github);
@@ -420,12 +420,14 @@ export default class Env {
       window.matchMedia('(display-mode: standalone)').matches
     );
   }
-  static async getFetch() {
+  async getFetch() {
+    // Can't work with this.context here
+    // as rollup seems not able to handle it.
     if (typeof fetch !== 'undefined') {
-      // Browser environment
+      // Browser and Node
       return fetch.bind(window);
     } else {
-      // Raycast environment, use node-fetch
+      // Raycast
       const { default: nodeFetch } = await import('node-fetch');
       return nodeFetch;
     }

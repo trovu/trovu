@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "trovu",
-  "title": "Trovu",
-  "description": "Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with maximum privacy.",
+  "title": "Trovu - Web Search Command Line",
+  "description": "Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with full privacy.",
   "icon": "command-icon.png",
   "author": "jorges",
   "owner": "trovu",
@@ -1510,7 +1510,8 @@
   ],
   "dependencies": {
     "@raycast/api": "^1.75.2",
-    "@raycast/utils": "^1.4.8"
+    "@raycast/utils": "^1.4.8",
+    "@types/lodash": "^4.17.5"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
