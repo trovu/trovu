@@ -37,6 +37,7 @@ export default function Command() {
   const [isShowingDetail, setIsShowingDetail] = useState(true);
 
   useEffect(() => {
+    console.log("Preferences changed:", preferences);
     const initializeEnv = async () => {
       if (env) return;
       try {
