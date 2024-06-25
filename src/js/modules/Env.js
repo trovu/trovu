@@ -421,16 +421,15 @@ export default class Env {
     );
   }
   async getFetch() {
+    // Can't work with this.context here
+    // as rollup seems not able to handle it.
     if (typeof fetch !== 'undefined') {
-      // Browser environment
+      // Browser and Node
       return fetch.bind(window);
-    }
-    switch (this.context) {
-      case 'raycast':
-      case 'node': {
-        const { default: nodeFetch } = await import('node-fetch');
-        return nodeFetch;
-      }
+    } else {
+      // Raycast
+      const { default: nodeFetch } = await import('node-fetch');
+      return nodeFetch;
     }
   }
 }
