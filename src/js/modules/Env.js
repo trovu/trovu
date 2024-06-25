@@ -424,12 +424,11 @@ export default class Env {
     switch (this.context) {
       case 'browser':
         return fetch.bind(window);
-        break;
       case 'raycast':
-      case 'node':
+      case 'node': {
         const { default: nodeFetch } = await import('node-fetch');
         return nodeFetch;
-        break;
+      }
     }
   }
 }
