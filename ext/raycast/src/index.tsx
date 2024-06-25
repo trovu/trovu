@@ -39,7 +39,7 @@ export default function Command() {
   const [isShowingDetail, setIsShowingDetail] = useState(true);
 
   useEffect(() => {
-    if (isEqual(prefs, cachedPrefs)) {
+    if (env && isEqual(prefs, cachedPrefs)) {
       return;
     }
     setCachedPrefs(prefs);
@@ -60,7 +60,7 @@ export default function Command() {
       }
     };
     initializeEnv();
-  }, [prefs]);
+  }, [prefs, env]);
 
   useEffect(() => {
     if (env) filterShortcuts();
