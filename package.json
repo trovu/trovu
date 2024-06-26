@@ -2,6 +2,7 @@
   "name": "trovu-web",
   "version": "1.0.0",
   "description": "Trovu web interface.",
+  "access": "public",
   "main": "",
   "scripts": {
     "lint-js": "npx eslint src/",
