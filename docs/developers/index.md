@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
--   NodeJS >= 18
+-   NodeJS >= 18 and <= 21.3
 -   NPM >= 10
 
 ## Installation
