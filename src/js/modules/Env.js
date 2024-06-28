@@ -1,11 +1,11 @@
 /** @module Env */
-import pkg from '../../../package.json';
-import Helper from './Helper.js';
-import Logger from './Logger.js';
-import NamespaceFetcher from './NamespaceFetcher.js';
-import QueryParser from './QueryParser.js';
-import countriesList from 'countries-list';
-import jsyaml from 'js-yaml';
+import pkg from "../../../package.json";
+import Helper from "./Helper.js";
+import Logger from "./Logger.js";
+import NamespaceFetcher from "./NamespaceFetcher.js";
+import QueryParser from "./QueryParser.js";
+import countriesList from "countries-list";
+import jsyaml from "js-yaml";
 
 /** Set and remember the environment. */
 
@@ -16,15 +16,15 @@ export default class Env {
    * @param {object} env - The environment variables.
    */
   constructor(env) {
-    countriesList.languages['eo'] = { name: 'Esperanto', native: 'Esperanto' };
+    countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     this.setToThis(env);
     if (pkg.gitCommitHash) {
       this.commitHash = pkg.gitCommitHash.slice(0, 7);
     } else {
-      this.commitHash = 'unknown';
+      this.commitHash = "unknown";
     }
 
-    this.logger = new Logger('#log');
+    this.logger = new Logger("#log");
   }
 
   /**
@@ -64,13 +64,7 @@ export default class Env {
     if (this.debug) {
       params.debug = 1;
     }
-    for (const property of [
-      'alternative',
-      'key',
-      'namespace',
-      'status',
-      'query',
-    ]) {
+    for (const property of ["alternative", "key", "namespace", "status", "query"]) {
       if (this[property]) {
         params[property] = this[property];
       }
@@ -86,9 +80,7 @@ export default class Env {
     const originalParams = Env.getParamsFromUrl();
     const params = this.buildUrlParams(originalParams, moreParams);
     const urlSearchParams = new URLSearchParams();
-    Object.entries(params).forEach(([key, value]) =>
-      urlSearchParams.set(key, value),
-    );
+    Object.entries(params).forEach(([key, value]) => urlSearchParams.set(key, value));
     urlSearchParams.sort();
     const paramStr = urlSearchParams.toString();
     return paramStr;
@@ -96,7 +88,7 @@ export default class Env {
 
   buildProcessUrl(moreParams) {
     const paramStr = this.buildUrlParamStr(moreParams);
-    const processUrl = 'process/index.html?#' + paramStr;
+    const processUrl = "process/index.html?#" + paramStr;
     return processUrl;
   }
 
@@ -122,10 +114,10 @@ export default class Env {
 
     this.fetch = await this.getFetch();
 
-    if (typeof params.github === 'string' && params.github !== '') {
+    if (typeof params.github === "string" && params.github !== "") {
       this.configUrl = this.buildGithubConfigUrl(params.github);
     }
-    if (typeof params.configUrl === 'string' && params.configUrl !== '') {
+    if (typeof params.configUrl === "string" && params.configUrl !== "") {
       this.configUrl = params.configUrl;
     }
     if (this.configUrl) {
@@ -148,49 +140,48 @@ export default class Env {
     }
 
     this.data = this.data || (await this.getData());
-    this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(
-      this.namespaces,
-    );
+    this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(this.namespaces);
 
     // Remove extra namespace if it turned out to be invalid.
-    if (
-      this.extraNamespaceName &&
-      !this.isValidNamespace(this.extraNamespaceName)
-    ) {
+    if (this.extraNamespaceName && !this.isValidNamespace(this.extraNamespaceName)) {
       delete this.extraNamespaceName;
-      this.keyword = '';
+      this.keyword = "";
       this.arguments = [this.query];
     }
   }
 
   setToLocalStorage() {
-    if (typeof localStorage === 'undefined') {
+    /* eslint-disable no-undef */
+    if (typeof localStorage === "undefined") {
       return;
     }
     if (this.github) {
-      localStorage.setItem('github', this.github);
-      localStorage.removeItem('language');
-      localStorage.removeItem('country');
+      localStorage.setItem("github", this.github);
+      localStorage.removeItem("language");
+      localStorage.removeItem("country");
     } else {
-      localStorage.setItem('language', this.language);
-      localStorage.setItem('country', this.country);
-      localStorage.removeItem('github');
+      localStorage.setItem("language", this.language);
+      localStorage.setItem("country", this.country);
+      localStorage.removeItem("github");
     }
+    /* eslint-enable no-undef */
   }
 
   getFromLocalStorage() {
-    if (typeof localStorage === 'undefined') {
+    /* eslint-disable no-undef */
+    if (typeof localStorage === "undefined") {
       return;
     }
-    this.language ||= localStorage.getItem('language');
-    this.country ||= localStorage.getItem('country');
-    this.github ||= localStorage.getItem('github');
+    this.language ||= localStorage.getItem("language");
+    this.country ||= localStorage.getItem("country");
+    this.github ||= localStorage.getItem("github");
+    /* eslint-enable no-undef */
   }
 
   static setBoolParams(params) {
     const boolParams = {};
-    for (const paramName of ['debug', 'reload']) {
-      if (params[paramName] === '1') {
+    for (const paramName of ["debug", "reload"]) {
+      if (params[paramName] === "1") {
         boolParams[paramName] = true;
       }
     }
@@ -222,9 +213,7 @@ export default class Env {
     }
     if (namespace in countriesList.languages) {
       return true;
-    } else if (
-      namespace.substring(1).toUpperCase() in countriesList.countries
-    ) {
+    } else if (namespace.substring(1).toUpperCase() in countriesList.countries) {
       return true;
     }
     return false;
@@ -265,7 +254,7 @@ export default class Env {
   setDefaultLanguageAndCountry() {
     if (
       this.language in countriesList.languages &&
-      typeof this.country === 'string' &&
+      typeof this.country === "string" &&
       this.country.toUpperCase() in countriesList.countries
     ) {
       return;
@@ -278,10 +267,7 @@ export default class Env {
       this.language = language;
     }
     // Default country.
-    if (
-      !this.country ||
-      !(this.country.toUpperCase() in countriesList.countries)
-    ) {
+    if (!this.country || !(this.country.toUpperCase() in countriesList.countries)) {
       this.country = country;
     }
   }
@@ -296,10 +282,10 @@ export default class Env {
 
     // Make sure language and country are in our lists.
     if (!(language in countriesList.languages)) {
-      language = 'en';
+      language = "en";
     }
     if (!country || !(country.toUpperCase() in countriesList.countries)) {
-      country = 'us';
+      country = "us";
     }
 
     // Ensure lowercase.
@@ -318,7 +304,7 @@ export default class Env {
     const languageStr = this.getNavigatorLanguage();
     let language, country;
     if (languageStr) {
-      [language, country] = languageStr.split('-');
+      [language, country] = languageStr.split("-");
     }
 
     return { language, country };
@@ -330,6 +316,7 @@ export default class Env {
    * @return {string} navigatorLanguage - The browser's value of navigator.language.
    */
   getNavigatorLanguage() {
+    // eslint-disable-next-line no-undef
     const languageStr = navigator.language;
     return languageStr;
   }
@@ -341,11 +328,11 @@ export default class Env {
     this.setDefaultLanguageAndCountry();
 
     // Default namespaces.
-    if (typeof this.namespaces != 'object') {
-      this.namespaces = ['o', this.language, '.' + this.country];
+    if (typeof this.namespaces != "object") {
+      this.namespaces = ["o", this.language, "." + this.country];
     }
     // Default debug.
-    if (typeof this.debug != 'boolean') {
+    if (typeof this.debug != "boolean") {
       this.debug = Boolean(this.debug);
     }
   }
@@ -358,19 +345,20 @@ export default class Env {
     let text;
     let url;
     switch (this.context) {
-      case 'browser':
+      case "browser":
         url = `/data.json?${this.commitHash}`;
         text = await Helper.fetchAsync(url, this);
         break;
-      case 'raycast':
+      case "raycast":
         url = `https://trovu.net/data.json?${this.commitHash}`;
         text = await Helper.fetchAsync(url, this);
         break;
-      case 'node': {
+      case "node": {
         // eslint-disable-next-line no-undef
-        const fs = require('fs');
-        url = './dist/public/data.json';
-        text = fs.readFileSync(url, 'utf8');
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        const fs = require("fs");
+        url = "./dist/public/data.json";
+        text = fs.readFileSync(url, "utf8");
         break;
       }
     }
@@ -392,9 +380,10 @@ export default class Env {
    * @return {string} hash - The hash string.
    */
   static getUrlHash() {
-    if (typeof window === 'undefined') {
-      return '';
+    if (typeof window === "undefined") {
+      return "";
     }
+    // eslint-disable-next-line no-undef
     const hash = window.location.hash.substr(1);
     return hash;
   }
@@ -415,20 +404,20 @@ export default class Env {
   }
 
   isRunningStandalone() {
-    return (
-      window.navigator.standalone ||
-      window.matchMedia('(display-mode: standalone)').matches
-    );
+    /* eslint-disable no-undef */
+    return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
+    /* eslint-enable no-undef */
   }
   async getFetch() {
     // Can't work with this.context here
     // as rollup seems not able to handle it.
-    if (typeof fetch !== 'undefined') {
+    if (typeof fetch !== "undefined") {
       // Browser and Node
+      // eslint-disable-next-line no-undef
       return fetch.bind(window);
     } else {
       // Raycast
-      const { default: nodeFetch } = await import('node-fetch');
+      const { default: nodeFetch } = await import("node-fetch");
       return nodeFetch;
     }
   }

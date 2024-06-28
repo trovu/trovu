@@ -1,7 +1,7 @@
-import DataManager from './DataManager';
-import UrlProcessor from './UrlProcessor';
-import fs from 'fs';
-import jsyaml from 'js-yaml';
+import DataManager from "./DataManager";
+import UrlProcessor from "./UrlProcessor";
+import fs from "fs";
+import jsyaml from "js-yaml";
 
 // import { type } from 'os';
 
@@ -16,63 +16,45 @@ export default class Migrator {
     for (const namespace in data.shortcuts) {
       for (const key in data.shortcuts[namespace]) {
         // const [keyword, argCount] = key.split(' ');
-        if (key[0] != 'z') {
+        if (key[0] != "z") {
           continue;
         }
-        const args = [
-          'arg1',
-          'arg2',
-          'arg3',
-          'arg4',
-          'arg5',
-          'arg6',
-          'arg7',
-          'arg8',
-          'arg9',
-          'arg10',
-        ];
+        const args = ["arg1", "arg2", "arg3", "arg4", "arg5", "arg6", "arg7", "arg8", "arg9", "arg10"];
         let shortcut = data.shortcuts[namespace][key];
         // If the URL starts with http, fetch its contents, migrate to https, fetch again, and compare results
-        if (shortcut.url && shortcut.url.startsWith('http:')) {
+        if (shortcut.url && shortcut.url.startsWith("http:")) {
           console.log(`${namespace}.${key}`);
           const httpUrl = shortcut.url;
           let processedHttpUrl = shortcut.url;
           processedHttpUrl = UrlProcessor.replaceVariables(processedHttpUrl, {
-            language: 'en',
-            country: 'us',
+            language: "en",
+            country: "us",
           });
-          processedHttpUrl = UrlProcessor.replaceArguments(
-            processedHttpUrl,
-            args,
-            {
-              language: 'en',
-              country: 'us',
-              data: { types: { city: {} } },
-            },
-          );
+          processedHttpUrl = UrlProcessor.replaceArguments(processedHttpUrl, args, {
+            language: "en",
+            country: "us",
+            data: { types: { city: {} } },
+          });
           // console.log(originalUrl);
-          const processedHttpsUrl = processedHttpUrl.replace('http:', 'https:');
-          console.log('  🔵 ', processedHttpUrl);
-          console.log('  🟨 ', processedHttpsUrl);
-          const domain = processedHttpUrl.split('/')[2];
-          console.log('  🔺 ', domain);
-          shortcut.url = httpUrl.replace('http:', 'https:');
-          if (typeof key === 'string') {
+          const processedHttpsUrl = processedHttpUrl.replace("http:", "https:");
+          console.log("  🔵 ", processedHttpUrl);
+          console.log("  🟨 ", processedHttpsUrl);
+          const domain = processedHttpUrl.split("/")[2];
+          console.log("  🔺 ", domain);
+          shortcut.url = httpUrl.replace("http:", "https:");
+          if (typeof key === "string") {
             continue;
           }
 
           // First check if the http URL redirects to the https URL.
           try {
             const httpResponse = await fetch(processedHttpUrl);
-            if (
-              httpResponse.redirected &&
-              httpResponse.url == processedHttpsUrl
-            ) {
-              shortcut.url = httpUrl.replace('http:', 'https:');
-              console.log('==', key);
+            if (httpResponse.redirected && httpResponse.url == processedHttpsUrl) {
+              shortcut.url = httpUrl.replace("http:", "https:");
+              console.log("==", key);
               continue;
             } else {
-              console.log('!=');
+              console.log("!=");
               console.log(httpResponse.url);
               console.log(processedHttpsUrl);
             }
@@ -90,18 +72,18 @@ export default class Migrator {
             // console.log('httpsText', httpsText);
 
             if (httpsText === httpText) {
-              console.log('==', key);
-              shortcut.url = httpUrl.replace('http:', 'https:');
+              console.log("==", key);
+              shortcut.url = httpUrl.replace("http:", "https:");
             } else {
-              console.log('!=', key);
+              console.log("!=", key);
               // write both to files out.key.http and out.key.https
               const outPath = `out.${key}`;
               const outHttpPath = `${outPath}.http`;
               const outHttpsPath = `${outPath}.https`;
-              console.log('Writing', outHttpPath);
-              console.log('Writing', outHttpsPath);
-              fs.writeFileSync(outHttpPath, httpText, 'utf8');
-              fs.writeFileSync(outHttpsPath, httpsText, 'utf8');
+              console.log("Writing", outHttpPath);
+              console.log("Writing", outHttpsPath);
+              fs.writeFileSync(outHttpPath, httpText, "utf8");
+              fs.writeFileSync(outHttpsPath, httpsText, "utf8");
             }
           } catch (error) {
             console.error(`Error migrating ${key}:`, error);
@@ -122,26 +104,17 @@ export default class Migrator {
       for (const key in data.shortcuts[namespace]) {
         let shortcut = data.shortcuts[namespace][key];
         // if shortcut typeoff string, convert to object
-        if (typeof shortcut === 'string') {
+        if (typeof shortcut === "string") {
           shortcut = this.replacePlaceholders(shortcut, namespace, key);
         }
         if (shortcut.url) {
           shortcut.url = this.replacePlaceholders(shortcut.url, namespace, key);
         }
-        if (
-          shortcut.deprecated &&
-          shortcut.deprecated.alternative &&
-          shortcut.deprecated.alternative.query
-        ) {
-          shortcut.deprecated.alternative.query =
-            shortcut.deprecated.alternative.query.replace(/\{%(\d)\}/g, '<$1>');
+        if (shortcut.deprecated && shortcut.deprecated.alternative && shortcut.deprecated.alternative.query) {
+          shortcut.deprecated.alternative.query = shortcut.deprecated.alternative.query.replace(/\{%(\d)\}/g, "<$1>");
         }
         if (shortcut.include && shortcut.include.key) {
-          shortcut.include.key = this.replacePlaceholders(
-            shortcut.include.key,
-            namespace,
-            key,
-          );
+          shortcut.include.key = this.replacePlaceholders(shortcut.include.key, namespace, key);
         }
         data.shortcuts[namespace][key] = shortcut;
       }
@@ -150,11 +123,8 @@ export default class Migrator {
   }
 
   replacePlaceholders(str, namespace, key) {
-    for (const prefix of ['%', '\\$']) {
-      const placeholders = UrlProcessor.getPlaceholdersFromStringLegacy(
-        str,
-        prefix,
-      );
+    for (const prefix of ["%", "\\$"]) {
+      const placeholders = UrlProcessor.getPlaceholdersFromStringLegacy(str, prefix);
       for (const placeholderName in placeholders) {
         if (this.isOnlyNumber(placeholderName)) {
           console.log(
@@ -176,12 +146,12 @@ export default class Migrator {
             flowLevel: 1,
           })
           .trim();
-        let newPlaceholderYamlBrackets = '<';
+        let newPlaceholderYamlBrackets = "<";
         switch (prefix) {
-          case '%':
+          case "%":
             break;
-          case '\\$':
-            newPlaceholderYamlBrackets += '$';
+          case "\\$":
+            newPlaceholderYamlBrackets += "$";
             break;
         }
         newPlaceholderYamlBrackets += `${newPlaceholderYaml}>`;
@@ -205,9 +175,7 @@ export default class Migrator {
         // Normalize examples.
         if (shortcut.examples && !Array.isArray(shortcut.examples)) {
           const examples = [];
-          for (const [argumentString, description] of Object.entries(
-            shortcut.examples,
-          )) {
+          for (const [argumentString, description] of Object.entries(shortcut.examples)) {
             const example = {
               arguments: argumentString,
               description: description,
@@ -227,11 +195,7 @@ export default class Migrator {
     for (const namespace in data.shortcuts) {
       for (const key in data.shortcuts[namespace]) {
         let shortcut = data.shortcuts[namespace][key];
-        if (
-          shortcut.include &&
-          shortcut.include.key &&
-          !shortcut.include.namespace
-        ) {
+        if (shortcut.include && shortcut.include.key && !shortcut.include.namespace) {
           shortcut.include = shortcut.include.key;
         }
       }

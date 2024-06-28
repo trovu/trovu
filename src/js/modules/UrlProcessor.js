@@ -1,17 +1,17 @@
 /** @module UrlProcessor */
-import Helper from './Helper.js';
-import CityType from './type/city.js';
-import DateType from './type/date.js';
-import TimeType from './type/time.js';
-import dayjs from 'dayjs';
-import jsyaml from 'js-yaml';
+import Helper from "./Helper.js";
+import CityType from "./type/city.js";
+import DateType from "./type/date.js";
+import TimeType from "./type/time.js";
+import dayjs from "dayjs";
+import jsyaml from "js-yaml";
 
 /** Process a shortcut URL for redirect. */
 
 export default class UrlProcessor {
   static getPlaceholdersFromString(str, prefix) {
-    const pattern = '<' + prefix + '(.+?)>';
-    const re = RegExp(pattern, 'g');
+    const pattern = "<" + prefix + "(.+?)>";
+    const re = RegExp(pattern, "g");
     let match;
     const placeholders = {};
     while ((match = re.exec(str))) {
@@ -47,8 +47,8 @@ export default class UrlProcessor {
    *   }
    */
   static getPlaceholdersFromStringLegacy(str, prefix) {
-    const pattern = '{' + prefix + '(.+?)}';
-    const re = RegExp(pattern, 'g');
+    const pattern = "{" + prefix + "(.+?)}";
+    const re = RegExp(pattern, "g");
     let match;
     const placeholders = {};
     while ((match = re.exec(str))) {
@@ -62,7 +62,7 @@ export default class UrlProcessor {
   static getPlaceholderFromMatch(match) {
     const yaml = match[1];
     const parsed = jsyaml.load(yaml);
-    if (typeof parsed === 'string') {
+    if (typeof parsed === "string") {
       const name = parsed;
       const placeholder = {};
       return { name, placeholder };
@@ -76,7 +76,7 @@ export default class UrlProcessor {
   static getPlaceholderFromMatchLegacy(match) {
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
-    const nameAndAttributes = match[1].split('|');
+    const nameAndAttributes = match[1].split("|");
     // Example value:
     // name = 'query'
     const name = nameAndAttributes.shift();
@@ -84,7 +84,7 @@ export default class UrlProcessor {
     // Example value:
     // name_and_attributes = ['encoding=utf-8', 'another=attribute']
     for (const attrStr of nameAndAttributes) {
-      const [attrName, attrValue] = attrStr.split('=', 2);
+      const [attrName, attrValue] = attrStr.split("=", 2);
       placeholder[attrName] = attrValue;
     }
     return { name, placeholder };
@@ -99,11 +99,8 @@ export default class UrlProcessor {
    */
   static getArgumentsFromString(str) {
     const placeholders = {};
-    Object.assign(
-      placeholders,
-      this.getPlaceholdersFromString(str, '(?![\\$])'),
-    );
-    Object.assign(placeholders, this.getPlaceholdersFromStringLegacy(str, '%'));
+    Object.assign(placeholders, this.getPlaceholdersFromString(str, "(?![\\$])"));
+    Object.assign(placeholders, this.getPlaceholdersFromStringLegacy(str, "%"));
     return placeholders;
   }
 
@@ -116,8 +113,8 @@ export default class UrlProcessor {
    */
   static getVariablesFromString(str) {
     const variables = {};
-    Object.assign(variables, this.getPlaceholdersFromString(str, '\\$'));
-    Object.assign(variables, this.getPlaceholdersFromStringLegacy(str, '\\$'));
+    Object.assign(variables, this.getPlaceholdersFromString(str, "\\$"));
+    Object.assign(variables, this.getPlaceholdersFromStringLegacy(str, "\\$"));
     return variables;
   }
 
@@ -149,35 +146,21 @@ export default class UrlProcessor {
   }
 
   static processAttributes(processedArgument, attributes, env) {
-    processedArgument = this.processAttributeType(
-      attributes,
-      processedArgument,
-      env,
-    );
-    processedArgument = this.processAttributeTransform(
-      attributes,
-      processedArgument,
-    );
-    processedArgument = this.processAttributeEncoding(
-      attributes,
-      processedArgument,
-    );
+    processedArgument = this.processAttributeType(attributes, processedArgument, env);
+    processedArgument = this.processAttributeTransform(attributes, processedArgument);
+    processedArgument = this.processAttributeEncoding(attributes, processedArgument);
     return processedArgument;
   }
 
   static processAttributeType(attributes, processedArgument, env) {
     switch (attributes.type) {
-      case 'date':
-        processedArgument = this.processTypeDate(
-          processedArgument,
-          attributes,
-          env,
-        );
+      case "date":
+        processedArgument = this.processTypeDate(processedArgument, attributes, env);
         break;
-      case 'time':
+      case "time":
         processedArgument = this.processTypeTime(processedArgument, attributes);
         break;
-      case 'city':
+      case "city":
         processedArgument = this.processTypeCity(processedArgument, env);
         break;
     }
@@ -190,7 +173,7 @@ export default class UrlProcessor {
     // Set argument.
     if (dateNative) {
       const date = dayjs(dateNative);
-      let format = 'YYYY-MM-DD';
+      let format = "YYYY-MM-DD";
       if (attributes.output) {
         format = attributes.output;
       }
@@ -205,7 +188,7 @@ export default class UrlProcessor {
     // If time could be parsed:
     // Set argument.
     if (time) {
-      let format = 'HH:mm';
+      let format = "HH:mm";
       if (attributes.output) {
         format = attributes.output;
       }
@@ -226,13 +209,13 @@ export default class UrlProcessor {
 
   static processAttributeTransform(attributes, processedArgument) {
     switch (attributes.transform) {
-      case 'uppercase':
+      case "uppercase":
         processedArgument = processedArgument.toUpperCase();
         break;
-      case 'lowercase':
+      case "lowercase":
         processedArgument = processedArgument.toLowerCase();
         break;
-      case 'eo-cx':
+      case "eo-cx":
         processedArgument = this.transformEoCx(processedArgument);
         break;
     }
@@ -241,12 +224,12 @@ export default class UrlProcessor {
 
   static processAttributeEncoding(attributes, processedArgument) {
     switch (attributes.encoding) {
-      case 'iso-8859-1':
+      case "iso-8859-1":
         // TODO: replace with encodeURIComponent
         // check if no regression.
         processedArgument = escape(processedArgument);
         break;
-      case 'none':
+      case "none":
         break;
       default:
         processedArgument = encodeURIComponent(processedArgument);
@@ -272,10 +255,10 @@ export default class UrlProcessor {
       for (const match in matches) {
         const attributes = matches[match];
         switch (varName) {
-          case 'now': {
+          case "now": {
             const time = dayjs();
 
-            let format = 'HH:mm';
+            let format = "HH:mm";
             if (attributes.output) {
               format = attributes.output;
             }
@@ -287,7 +270,7 @@ export default class UrlProcessor {
             value = variables[varName];
             break;
         }
-        str = str.replace(new RegExp(Helper.escapeRegExp(match), 'g'), value);
+        str = str.replace(new RegExp(Helper.escapeRegExp(match), "g"), value);
       }
     }
     return str;
@@ -302,27 +285,27 @@ export default class UrlProcessor {
    */
   static transformEoCx(str) {
     const charMap = {
-      cx: 'ĉ',
-      gx: 'ĝ',
-      hx: 'ĥ',
-      jx: 'ĵ',
-      sx: 'ŝ',
-      ux: 'ŭ',
-      CX: 'Ĉ',
-      GX: 'Ĝ',
-      HX: 'Ĥ',
-      JX: 'Ĵ',
-      SX: 'Ŝ',
-      UX: 'Ŭ',
-      Cx: 'Ĉ',
-      Gx: 'Ĝ',
-      Hx: 'Ĥ',
-      Jx: 'Ĵ',
-      Sx: 'Ŝ',
-      Ux: 'Ŭ',
+      cx: "ĉ",
+      gx: "ĝ",
+      hx: "ĥ",
+      jx: "ĵ",
+      sx: "ŝ",
+      ux: "ŭ",
+      CX: "Ĉ",
+      GX: "Ĝ",
+      HX: "Ĥ",
+      JX: "Ĵ",
+      SX: "Ŝ",
+      UX: "Ŭ",
+      Cx: "Ĉ",
+      Gx: "Ĝ",
+      Hx: "Ĥ",
+      Jx: "Ĵ",
+      Sx: "Ŝ",
+      Ux: "Ŭ",
     };
 
-    const regex = new RegExp(Object.keys(charMap).join('|'), 'g');
+    const regex = new RegExp(Object.keys(charMap).join("|"), "g");
     str = str.replace(regex, (matched) => charMap[matched]);
     return str;
   }

@@ -1,101 +1,99 @@
-import Env from './Env.js';
+import Env from "./Env.js";
 
 const getUrlHashFooBar = () => {
-  const hash = 'foo=bar&baz=boo';
+  const hash = "foo=bar&baz=boo";
   return hash;
 };
 
-describe('Env', () => {
-  describe('getDefaultLanguageAndCountry', () => {
-    test('browser returns language and country', () => {
+describe("Env", () => {
+  describe("getDefaultLanguageAndCountry", () => {
+    test("browser returns language and country", () => {
       const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => 'en-DE');
+      env.getNavigatorLanguage = jest.fn(() => "en-DE");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'de',
+        language: "en",
+        country: "de",
       });
     });
-    test('browser returns only language', () => {
+    test("browser returns only language", () => {
       const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => 'en');
+      env.getNavigatorLanguage = jest.fn(() => "en");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'us',
+        language: "en",
+        country: "us",
       });
     });
-    test('browser returns empty language', () => {
+    test("browser returns empty language", () => {
       const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => '');
+      env.getNavigatorLanguage = jest.fn(() => "");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'us',
+        language: "en",
+        country: "us",
       });
     });
-    test('browser returns invalid language', () => {
+    test("browser returns invalid language", () => {
       const env = new Env();
-      env.getNavigatorLanguage = jest.fn(() => 'invalid');
+      env.getNavigatorLanguage = jest.fn(() => "invalid");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: 'en',
-        country: 'us',
+        language: "en",
+        country: "us",
       });
     });
   });
 
-  describe('buildUrlParams', () => {
-    test('github', () => {
-      expect(new Env({ github: 'johndoe' }).buildUrlParams()).toEqual({
-        github: 'johndoe',
+  describe("buildUrlParams", () => {
+    test("github", () => {
+      expect(new Env({ github: "johndoe" }).buildUrlParams()).toEqual({
+        github: "johndoe",
       });
     });
-    test('configUrl in originalParams', () => {
+    test("configUrl in originalParams", () => {
       expect(
         new Env().buildUrlParams({
-          configUrl: 'https://example.com/config.yml',
+          configUrl: "https://example.com/config.yml",
         }),
       ).toEqual({
-        configUrl: 'https://example.com/config.yml',
+        configUrl: "https://example.com/config.yml",
       });
     });
-    test('defaultKeyword in originalParams', () => {
+    test("defaultKeyword in originalParams", () => {
       expect(
         new Env({
-          country: 'us',
-          language: 'en',
+          country: "us",
+          language: "en",
         }).buildUrlParams({
-          defaultKeyword: 'w',
+          defaultKeyword: "w",
         }),
       ).toEqual({
-        country: 'us',
-        language: 'en',
-        defaultKeyword: 'w',
+        country: "us",
+        language: "en",
+        defaultKeyword: "w",
       });
     });
-    test('language and country', () => {
-      expect(
-        new Env({ language: 'en', country: 'us' }).buildUrlParams(),
-      ).toEqual({
-        language: 'en',
-        country: 'us',
+    test("language and country", () => {
+      expect(new Env({ language: "en", country: "us" }).buildUrlParams()).toEqual({
+        language: "en",
+        country: "us",
       });
     });
-    test('debug', () => {
+    test("debug", () => {
       expect(new Env({ debug: true }).buildUrlParams()).toEqual({
         debug: 1,
       });
     });
-    test('status', () => {
-      expect(new Env({ status: 'deprecated' }).buildUrlParams()).toEqual({
-        status: 'deprecated',
+    test("status", () => {
+      expect(new Env({ status: "deprecated" }).buildUrlParams()).toEqual({
+        status: "deprecated",
       });
     });
   });
 
-  test('getParamsFromUrl', () => {
+  test("getParamsFromUrl", () => {
     Env.getUrlHash = getUrlHashFooBar;
-    expect(Env.getParamsFromUrl()).toEqual({ foo: 'bar', baz: 'boo' });
+    expect(Env.getParamsFromUrl()).toEqual({ foo: "bar", baz: "boo" });
   });
-  test('setBoolParams', () => {
-    expect(Env.setBoolParams({ debug: '1', reload: '1', foo: '1' })).toEqual({
+  test("setBoolParams", () => {
+    expect(Env.setBoolParams({ debug: "1", reload: "1", foo: "1" })).toEqual({
       debug: true,
       reload: true,
     });

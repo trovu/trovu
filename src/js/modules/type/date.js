@@ -55,11 +55,11 @@ export default class DateType {
     else if ((matches = str.match(/^(-|\+)(\d+)$/))) {
       const [, operator, offset] = matches;
       switch (operator) {
-        case '+':
+        case "+":
           date = new Date();
           date.setDate(date.getDate() + parseInt(offset));
           break;
-        case '-':
+        case "-":
           date = new Date();
           date.setDate(date.getDate() - parseInt(offset));
           break;
@@ -69,13 +69,11 @@ export default class DateType {
     else if ((matches = str.match(/^([A-Za-z\u00E0-\u00FC]+)$/))) {
       const maps = env.data.types.date.days_of_the_week[env.language] || [];
       for (const map of maps) {
-        const mapArray = map.split(' ');
+        const mapArray = map.split(" ");
         const desired_day_of_week_index = mapArray.indexOf(str.toLowerCase());
         if (desired_day_of_week_index > -1) {
           date = new Date();
-          date.setDate(
-            date.getDate() + desired_day_of_week_index - date.getDay(),
-          );
+          date.setDate(date.getDate() + desired_day_of_week_index - date.getDay());
           // If calculated day is in the past or today:
           // Set next week.
           if (date <= now) {

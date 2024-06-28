@@ -1,13 +1,13 @@
-import DateType from './date.js';
+import DateType from "./date.js";
 
-test('DateType.parse', async () => {
+test("DateType.parse", async () => {
   const env = {
-    language: 'en',
+    language: "en",
     data: {
       types: {
         date: {
           days_of_the_week: {
-            en: ['u m t w r f s', 'su mo tu we th fr sa'],
+            en: ["u m t w r f s", "su mo tu we th fr sa"],
           },
         },
       },
@@ -16,17 +16,17 @@ test('DateType.parse', async () => {
   jest.useFakeTimers().setSystemTime(new Date(2020, 11, 31));
   const expectations = {
     2: new Date(2021, 0, 2),
-    '2.': new Date(2021, 0, 2),
+    "2.": new Date(2021, 0, 2),
     22: new Date(2021, 0, 22),
-    '22.': new Date(2021, 0, 22),
+    "22.": new Date(2021, 0, 22),
     22.11: new Date(2021, 10, 22),
-    '22.11.': new Date(2021, 10, 22),
-    '22.11.20': new Date(2020, 10, 22),
-    '22.11.2020': new Date(2020, 10, 22),
-    '11/22': new Date(2021, 10, 22),
-    '11/22/20': new Date(2020, 10, 22),
-    '+1': new Date(2021, 0, 1),
-    '-1': new Date(2020, 11, 30),
+    "22.11.": new Date(2021, 10, 22),
+    "22.11.20": new Date(2020, 10, 22),
+    "22.11.2020": new Date(2020, 10, 22),
+    "11/22": new Date(2021, 10, 22),
+    "11/22/20": new Date(2020, 10, 22),
+    "+1": new Date(2021, 0, 1),
+    "-1": new Date(2020, 11, 30),
     fr: new Date(2021, 0, 1),
     sa: new Date(2021, 0, 2),
     su: new Date(2021, 0, 3),

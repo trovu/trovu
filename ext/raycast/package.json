@@ -5,7 +5,6 @@
   "description": "Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with full privacy.",
   "icon": "command-icon.png",
   "author": "jorges",
-  "owner": "trovu",
   "access": "public",
   "categories": [
     "Web"
@@ -14,7 +13,7 @@
   "commands": [
     {
       "name": "index",
-      "title": "Call Trovu shortcut",
+      "title": "Call Trovu Shortcut",
       "description": "Send a query to trovu.net",
       "mode": "view"
     }
@@ -1512,7 +1511,8 @@
   "dependencies": {
     "@raycast/api": "^1.75.2",
     "@raycast/utils": "^1.4.8",
-    "@types/lodash": "^4.17.5"
+    "@types/lodash": "^4.17.5",
+    "countries-list": "^3.1.0"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",

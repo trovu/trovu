@@ -1,9 +1,9 @@
 /** @module DataManager */
-import Logger from './Logger';
-import NamespaceFetcher from './NamespaceFetcher';
-import UrlProcessor from './UrlProcessor';
-import fs from 'fs';
-import jsyaml from 'js-yaml';
+import Logger from "./Logger";
+import NamespaceFetcher from "./NamespaceFetcher";
+import UrlProcessor from "./UrlProcessor";
+import fs from "fs";
+import jsyaml from "js-yaml";
 
 export default class DataManager {
   /**
@@ -13,17 +13,10 @@ export default class DataManager {
   static load(options = {}) {
     options = this.getDefaultOptions(options);
     const data = {};
-    data['shortcuts'] = DataManager.readYmls(
-      `${options.data}/${options.shortcuts}/`,
-      options.filter,
-    );
-    data['types'] = {};
-    data['types']['city'] = DataManager.readYmls(
-      `${options.data}/${options.types}/city/`,
-    );
-    data['types']['date'] = DataManager.readYmls(
-      `${options.data}/${options.types}/date/`,
-    );
+    data["shortcuts"] = DataManager.readYmls(`${options.data}/${options.shortcuts}/`, options.filter);
+    data["types"] = {};
+    data["types"]["city"] = DataManager.readYmls(`${options.data}/${options.types}/city/`);
+    data["types"]["date"] = DataManager.readYmls(`${options.data}/${options.types}/date/`);
     return data;
   }
 
@@ -36,18 +29,9 @@ export default class DataManager {
     this.normalizeShortcuts(data.shortcuts);
     this.normalizeTags(data.shortcuts);
     this.verifyShortcuts(data.shortcuts);
-    DataManager.writeYmls(
-      `${options.data}/${options.shortcuts}/`,
-      data.shortcuts,
-    );
-    DataManager.writeYmls(
-      `${options.data}/${options.types}/city/`,
-      data.types.city,
-    );
-    DataManager.writeYmls(
-      `${options.data}/${options.types}/date/`,
-      data.types.date,
-    );
+    DataManager.writeYmls(`${options.data}/${options.shortcuts}/`, data.shortcuts);
+    DataManager.writeYmls(`${options.data}/${options.types}/city/`, data.types.city);
+    DataManager.writeYmls(`${options.data}/${options.types}/date/`, data.types.date);
   }
 
   static verifyShortcuts(dataShortcuts) {
@@ -56,7 +40,7 @@ export default class DataManager {
       const shortcuts = dataShortcuts[namespace];
       for (const key in shortcuts) {
         const shortcut = JSON.parse(JSON.stringify(shortcuts[key]));
-        [, shortcut.argumentCount] = key.split(' ');
+        [, shortcut.argumentCount] = key.split(" ");
         if (!shortcut.url) continue;
         shortcut.namespace = namespace;
         shortcut.key = key;
@@ -75,15 +59,13 @@ export default class DataManager {
       for (const key in shortcuts[namespace]) {
         const shortcut = shortcuts[namespace][key];
         // Sort the keys of the shortcut object in descending order
-        const sortedKeys = Object.keys(shortcut).sort((a, b) =>
-          b.localeCompare(a),
-        );
+        const sortedKeys = Object.keys(shortcut).sort((a, b) => b.localeCompare(a));
         const sortedShortcut = {};
         // Create a new object with sorted keys
         for (const sortedKey of sortedKeys) {
           sortedShortcut[sortedKey] = shortcut[sortedKey];
           // if it's a string, trim it.
-          if (typeof shortcut[sortedKey] === 'string') {
+          if (typeof shortcut[sortedKey] === "string") {
             sortedShortcut[sortedKey] = sortedShortcut[sortedKey].trim();
           }
         }
@@ -91,7 +73,7 @@ export default class DataManager {
         if (sortedShortcut.examples) {
           for (const example of sortedShortcut.examples) {
             example.description = example.description.trim();
-            if (example.arguments && typeof example.arguments === 'string') {
+            if (example.arguments && typeof example.arguments === "string") {
               example.arguments = example.arguments.trim();
             }
           }
@@ -113,7 +95,7 @@ export default class DataManager {
           shortcut.tags.sort();
           // Replace spaces with dashes.
           for (const i in shortcut.tags) {
-            shortcut.tags[i] = shortcut.tags[i].replace(/ /g, '-');
+            shortcut.tags[i] = shortcut.tags[i].replace(/ /g, "-");
           }
         }
       }
@@ -121,10 +103,9 @@ export default class DataManager {
   }
 
   static getDefaultOptions(options) {
-    options.data = options.data === undefined ? './data/' : options.data;
-    options.shortcuts =
-      options.shortcuts === undefined ? 'shortcuts' : options.shortcuts;
-    options.types = options.types === undefined ? 'types' : options.types;
+    options.data = options.data === undefined ? "./data/" : options.data;
+    options.shortcuts = options.shortcuts === undefined ? "shortcuts" : options.shortcuts;
+    options.types = options.types === undefined ? "types" : options.types;
     options.filter = options.filter === undefined ? false : options.filter;
     return options;
   }
@@ -140,7 +121,7 @@ export default class DataManager {
     try {
       fileNames = fs.readdirSync(ymlDirPath);
     } catch (error) {
-      if (error.code === 'ENOENT') {
+      if (error.code === "ENOENT") {
         console.log(`Warning: No such directory: ${ymlDirPath}`);
       } else {
         throw error;
@@ -154,9 +135,9 @@ export default class DataManager {
     }
     for (const fileName of fileNames) {
       const filePath = ymlDirPath + fileName;
-      const str = fs.readFileSync(filePath, 'utf8');
+      const str = fs.readFileSync(filePath, "utf8");
       const data = jsyaml.load(str);
-      const fileRoot = fileName.replace(/\.yml$/, '');
+      const fileRoot = fileName.replace(/\.yml$/, "");
       dataByFileRoot[fileRoot] = data;
     }
     return dataByFileRoot;
@@ -175,7 +156,7 @@ export default class DataManager {
         noArrayIndent: true,
         lineWidth: -1,
       });
-      fs.writeFileSync(filePath, str, 'utf8');
+      fs.writeFileSync(filePath, str, "utf8");
     }
   }
 
