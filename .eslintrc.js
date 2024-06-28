@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["jest"],
+  plugins: ["jest", "@typescript-eslint"],
   env: {
     browser: true,
     es2021: true,
