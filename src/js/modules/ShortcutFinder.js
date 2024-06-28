@@ -11,17 +11,12 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static matchShortcuts(
-    keyword,
-    args,
-    namespaceInfos,
-    includeNonReachable = false,
-  ) {
+  static matchShortcuts(keyword, args, namespaceInfos, includeNonReachable = false) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
       }
-      const shortcut = namespaceInfo.shortcuts[keyword + ' ' + args.length];
+      const shortcut = namespaceInfo.shortcuts[keyword + " " + args.length];
       if (shortcut && (shortcut.reachable || includeNonReachable)) {
         return shortcut;
       }
@@ -36,11 +31,7 @@ export default class ShortcutFinder {
    * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
    */
   static findShortcut(env) {
-    let shortcut = this.matchShortcuts(
-      env.keyword,
-      env.args,
-      env.namespaceInfos,
-    );
+    let shortcut = this.matchShortcuts(env.keyword, env.args, env.namespaceInfos);
 
     // If nothing found:
     // Try without commas, i.e. with the whole argumentString as the only argument.
@@ -48,11 +39,7 @@ export default class ShortcutFinder {
       env.logger.info(
         `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with the whole argument string as the only argument.`,
       );
-      shortcut = this.matchShortcuts(
-        env.keyword,
-        [env.argumentString],
-        env.namespaceInfos,
-      );
+      shortcut = this.matchShortcuts(env.keyword, [env.argumentString], env.namespaceInfos);
       if (shortcut) {
         env.args = [env.argumentString];
       }
@@ -61,14 +48,8 @@ export default class ShortcutFinder {
     // If nothing found:
     // Try default keyword.
     if (!shortcut && env.defaultKeyword) {
-      env.logger.info(
-        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`,
-      );
-      shortcut = this.matchShortcuts(
-        env.defaultKeyword,
-        [env.query],
-        env.namespaceInfos,
-      );
+      env.logger.info(`No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`);
+      shortcut = this.matchShortcuts(env.defaultKeyword, [env.query], env.namespaceInfos);
       if (shortcut) {
         env.args = [env.query];
       }
@@ -76,15 +57,8 @@ export default class ShortcutFinder {
     // If still nothing found:
     // Try with non-reachable, to inform.
     if (!shortcut) {
-      env.logger.info(
-        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with non-reachable.`,
-      );
-      shortcut = this.matchShortcuts(
-        env.keyword,
-        env.args,
-        env.namespaceInfos,
-        true,
-      );
+      env.logger.info(`No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with non-reachable.`);
+      shortcut = this.matchShortcuts(env.keyword, env.args, env.namespaceInfos, true);
     }
     return shortcut;
   }

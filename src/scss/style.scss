@@ -67,7 +67,7 @@ main .jumbotron {
 }
 
 #query-form {
-  button[type='submit'] {
+  button[type="submit"] {
     font-size: 1.4em;
   }
 }
@@ -207,29 +207,29 @@ span.tag {
         }
       }
     }
-    > li[aria-selected='false'] {
+    > li[aria-selected="false"] {
       cursor: pointer;
     }
     > li::before {
       display: inline;
       position: absolute;
       color: #aaa;
-      font-family: 'FontAwesome';
+      font-family: "FontAwesome";
       font-weight: 900;
       font-size: 1.1em;
     }
-    > li[aria-selected='false']::before,
+    > li[aria-selected="false"]::before,
     li:not([aria-selected])::before {
-      content: '\f0da';
+      content: "\f0da";
       left: 1.2em;
       cursor: pointer;
     }
-    > li[aria-selected='true']::before {
-      content: '\f0d7';
+    > li[aria-selected="true"]::before {
+      content: "\f0d7";
       left: 0.3em;
       cursor: pointer;
     }
-    li[aria-selected='true'] {
+    li[aria-selected="true"] {
       background: #eee;
       position: relative;
       div.description-and-tags,

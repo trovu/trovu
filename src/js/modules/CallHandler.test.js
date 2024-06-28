@@ -1,31 +1,29 @@
-import CallHandler from './CallHandler.js';
-import Env from './Env.js';
+import CallHandler from "./CallHandler.js";
+import Env from "./Env.js";
 
-describe('CallHandler', () => {
-  test('getAlternative', async () => {
+describe("CallHandler", () => {
+  test("getAlternative", async () => {
     const shortcut = {
       deprecated: {
         alternative: {
-          query: 'gm b,<1>',
+          query: "gm b,<1>",
         },
       },
     };
     const env = {
-      args: ['brandenburger tor'],
+      args: ["brandenburger tor"],
     };
-    expect(CallHandler.getAlternative(shortcut, env)).toEqual(
-      'gm b,brandenburger tor',
-    );
+    expect(CallHandler.getAlternative(shortcut, env)).toEqual("gm b,brandenburger tor");
   });
-  test('getRedirectUrlToHome', async () => {
+  test("getRedirectUrlToHome", async () => {
     Env.getUrlHash = () => {
-      return 'country=at&language=de&query=reload';
+      return "country=at&language=de&query=reload";
     };
     const response = {
-      status: 'reloaded',
+      status: "reloaded",
     };
     expect(CallHandler.getRedirectUrlToHome(new Env(), response)).toStrictEqual(
-      '../index.html#country=at&language=de&status=reloaded',
+      "../index.html#country=at&language=de&status=reloaded",
     );
   });
 });

@@ -1,6 +1,6 @@
-import DataManager from './/DataManager';
-import fs from 'fs';
-import jsyaml from 'js-yaml';
+import DataManager from ".//DataManager";
+import fs from "fs";
+import jsyaml from "js-yaml";
 
 export default class DictionarySetter {
   constructor() {
@@ -83,10 +83,10 @@ export default class DictionarySetter {
       // Add local includes with {$language} variable.
       for (const lang of langs) {
         data.shortcuts[dict][`${lang} 0`] = {
-          include: lang + '-<$language> 0',
+          include: lang + "-<$language> 0",
         };
         data.shortcuts[dict][`${lang} 1`] = {
-          include: lang + '-<$language> 1',
+          include: lang + "-<$language> 1",
         };
       }
     }
@@ -108,9 +108,9 @@ export default class DictionarySetter {
       }
     }
     const dictsByPrioStr =
-      'ama ard dtn crd deo esd flx hzn irs mdb umt wdk zrg lge dcm bab leo dcc lgs pns rvs beo pka';
+      "ama ard dtn crd deo esd flx hzn irs mdb umt wdk zrg lge dcm bab leo dcc lgs pns rvs beo pka";
 
-    const dictsByPrio = dictsByPrioStr.split(' ');
+    const dictsByPrio = dictsByPrioStr.split(" ");
 
     const o = data.shortcuts.o;
     for (const lang in langs) {
@@ -138,28 +138,21 @@ export default class DictionarySetter {
   }
 
   static getDictionaries() {
-    return jsyaml.load(fs.readFileSync('src/yml/dictionaries.yml', 'utf8'));
+    return jsyaml.load(fs.readFileSync("src/yml/dictionaries.yml", "utf8"));
   }
 
   static getLanguageList() {
     const langs = {};
-    const dirs = fs.readdirSync('./node_modules/languagelist/data/');
+    const dirs = fs.readdirSync("./node_modules/languagelist/data/");
     for (const dir of dirs) {
-      const lang = jsyaml.load(
-        fs.readFileSync(
-          `./node_modules/languagelist/data/${dir}/language.yaml`,
-          'utf8',
-        ),
-      );
+      const lang = jsyaml.load(fs.readFileSync(`./node_modules/languagelist/data/${dir}/language.yaml`, "utf8"));
       langs[dir] = lang;
     }
     return langs;
   }
 
   static getTranslations() {
-    const translations = jsyaml.load(
-      fs.readFileSync('src/yml/translations.yml', 'utf8'),
-    );
+    const translations = jsyaml.load(fs.readFileSync("src/yml/translations.yml", "utf8"));
     return translations;
   }
 
@@ -168,17 +161,17 @@ export default class DictionarySetter {
   }
 
   getTitle(lang1, lang2, name) {
-    return `${DictionarySetter.capitalize(
-      this.langs[lang2][lang1],
-    )}-${DictionarySetter.capitalize(this.langs[lang2][lang2])} (${name})`;
+    return `${DictionarySetter.capitalize(this.langs[lang2][lang1])}-${DictionarySetter.capitalize(
+      this.langs[lang2][lang2],
+    )} (${name})`;
   }
 
   getTags(lang1, lang2) {
     return [
-      'dictionary',
-      'language',
-      DictionarySetter.anticapitalize(this.langs['en'][lang1]),
-      DictionarySetter.anticapitalize(this.langs['en'][lang2]),
+      "dictionary",
+      "language",
+      DictionarySetter.anticapitalize(this.langs["en"][lang1]),
+      DictionarySetter.anticapitalize(this.langs["en"][lang2]),
     ];
   }
 
@@ -187,14 +180,14 @@ export default class DictionarySetter {
       {
         arguments: this.t.tree[lang1],
         description: this.t.desc[lang2]
-          .replace('{lang}', this.langs[lang2][lang2])
-          .replace('{tree}', this.t.tree[lang1]),
+          .replace("{lang}", this.langs[lang2][lang2])
+          .replace("{tree}", this.t.tree[lang1]),
       },
       {
         arguments: this.t.tree[lang2],
         description: this.t.desc[lang2]
-          .replace('{lang}', this.langs[lang2][lang1])
-          .replace('{tree}', this.t.tree[lang2]),
+          .replace("{lang}", this.langs[lang2][lang1])
+          .replace("{tree}", this.t.tree[lang2]),
       },
     ];
   }

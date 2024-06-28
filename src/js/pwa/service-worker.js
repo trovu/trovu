@@ -1,34 +1,34 @@
-const CACHE_NAME = 'trovu-v1'; // Consider versioning your cache for easier updates
+const CACHE_NAME = "trovu-v1"; // Consider versioning your cache for easier updates
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/process/index.html',
-  '/index.js',
-  '/process.js',
-  '/data.json',
-  '/style.css',
-  '/main.js',
-  '/manifest.json',
-  '/favicon.ico',
-  '/android-chrome-192x192.png',
-  '/android-chrome-512x512.png',
-  '/apple-touch-icon.png',
-  '/favicon-16x16.png',
-  '/favicon-32x32.png',
+  "/",
+  "/index.html",
+  "/process/index.html",
+  "/index.js",
+  "/process.js",
+  "/data.json",
+  "/style.css",
+  "/main.js",
+  "/manifest.json",
+  "/favicon.ico",
+  "/android-chrome-192x192.png",
+  "/android-chrome-512x512.png",
+  "/apple-touch-icon.png",
+  "/favicon-16x16.png",
+  "/favicon-32x32.png",
   // Include additional essential assets as needed
 ];
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('Opened cache');
+      console.log("Opened cache");
       return cache.addAll(urlsToCache);
     }),
   );
 });
 
 // Implement fetch event to handle requests
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       // Cache hit - return response
@@ -37,7 +37,7 @@ self.addEventListener('fetch', (event) => {
       }
       return fetch(event.request).then((response) => {
         // Check if we received a valid response
-        if (!response || response.status !== 200 || response.type !== 'basic') {
+        if (!response || response.status !== 200 || response.type !== "basic") {
           return response;
         }
 

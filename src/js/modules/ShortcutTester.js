@@ -1,15 +1,15 @@
-import DataManager from './/DataManager';
-import QueryParser from './QueryParser';
-import UrlProcessor from './UrlProcessor';
-import fs from 'fs';
+import DataManager from ".//DataManager";
+import QueryParser from "./QueryParser";
+import UrlProcessor from "./UrlProcessor";
+import fs from "fs";
 
 export default class ShortcutTester {
   constructor(options) {
     this.options = options;
     this.env = {
       data: DataManager.load(),
-      language: 'en',
-      country: 'us',
+      language: "en",
+      country: "us",
     };
   }
 
@@ -17,11 +17,7 @@ export default class ShortcutTester {
     for (const namespace in this.env.data.shortcuts) {
       for (const key in this.env.data.shortcuts[namespace]) {
         const shortcut = this.env.data.shortcuts[namespace][key];
-        if (
-          shortcut.tests &&
-          Array.isArray(shortcut.tests) &&
-          this.filterShortcut(namespace, key)
-        ) {
+        if (shortcut.tests && Array.isArray(shortcut.tests) && this.filterShortcut(namespace, key)) {
           shortcut.tests.forEach((test) => {
             const url = this.prepareUrl(shortcut, test.arguments);
             this.fetchAndTestUrl(namespace, key, url, test.expect);
@@ -32,9 +28,7 @@ export default class ShortcutTester {
   }
 
   filterShortcut(namespace, key) {
-    return this.options.filter
-      ? `${namespace}.${key}`.includes(this.options.filter)
-      : true;
+    return this.options.filter ? `${namespace}.${key}`.includes(this.options.filter) : true;
   }
 
   prepareUrl(shortcut, testArguments) {
@@ -49,22 +43,21 @@ export default class ShortcutTester {
     console.log(`${namespace}.${key}\t⏳ ${url}`);
     fetch(url, {
       headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36',
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
       },
     })
       .then((response) => {
-        if (!response.ok)
-          throw new Error(`${response.status} ${response.statusText}`);
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
         return response.text();
       })
       .then((text) => {
-        const regex = new RegExp(testExpect, 'm');
+        const regex = new RegExp(testExpect, "m");
         if (regex.test(text)) {
           console.log(`${namespace}.${key}\t✅ passed`);
         } else {
           console.log(`${namespace}.${key}\t❌ failed to find "${testExpect}"`);
-          fs.writeFileSync(`${namespace}.${key}.html`, text, 'utf8');
+          fs.writeFileSync(`${namespace}.${key}.html`, text, "utf8");
         }
       })
       .catch((error) => console.error(error));

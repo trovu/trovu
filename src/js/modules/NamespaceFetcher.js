@@ -1,6 +1,6 @@
 /** @module NamespaceFetcher */
-import UrlProcessor from './UrlProcessor.js';
-import jsyaml from 'js-yaml';
+import UrlProcessor from "./UrlProcessor.js";
+import jsyaml from "js-yaml";
 
 export default class NamespaceFetcher {
   constructor(env) {
@@ -15,9 +15,7 @@ export default class NamespaceFetcher {
    */
   async getNamespaceInfos(namespaces) {
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
-    this.namespaceInfos = await this.assignShortcutsFromData(
-      this.namespaceInfos,
-    );
+    this.namespaceInfos = await this.assignShortcutsFromData(this.namespaceInfos);
     this.namespaceInfos = this.addNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = await this.fetchNamespaceInfos(this.namespaceInfos);
     this.namespaceInfos = this.processShortcutsAll(this.namespaceInfos);
@@ -53,27 +51,25 @@ export default class NamespaceFetcher {
    * @return {Object} namespace - The namespace with the added URL template.
    */
   getInitialNamespaceInfo(namespace) {
-    if (typeof namespace === 'string') {
+    if (typeof namespace === "string") {
       return { name: namespace };
     }
-    if (!namespace || typeof namespace !== 'object') {
-      throw new Error('Invalid namespace: input must be an object or a string');
+    if (!namespace || typeof namespace !== "object") {
+      throw new Error("Invalid namespace: input must be an object or a string");
     }
     const namespaceInfo = {};
     if (namespace.name) {
       namespaceInfo.name = namespace.name;
     }
     if (namespace.github) {
-      if (namespace.github !== '.') {
+      if (namespace.github !== ".") {
         namespaceInfo.github = namespace.github;
       } else {
         if (this.env.github) {
           namespaceInfo.github = this.env.github;
         } else {
           this.env.logger.warning(
-            `Invalid namespace: ${JSON.stringify(
-              namespace,
-            )} provided without a github repository name.`,
+            `Invalid namespace: ${JSON.stringify(namespace)} provided without a github repository name.`,
           );
           return false;
         }
@@ -89,11 +85,7 @@ export default class NamespaceFetcher {
       namespaceInfo.shortcuts = namespace.shortcuts;
     }
     if (!namespaceInfo.name && (namespaceInfo.url || namespaceInfo.shortcuts)) {
-      this.env.logger.warning(
-        `Invalid namespace: ${JSON.stringify(
-          namespace,
-        )} provided without a name.`,
-      );
+      this.env.logger.warning(`Invalid namespace: ${JSON.stringify(namespace)} provided without a name.`);
       return false;
     }
     return namespaceInfo;
@@ -139,10 +131,10 @@ export default class NamespaceFetcher {
     // No shortcuts means it was in data.json
     // so it must be a site namespace.
     if (namespaceInfo.shortcuts) {
-      namespaceInfo.type = 'site';
+      namespaceInfo.type = "site";
       return namespaceInfo;
     }
-    namespaceInfo.type = 'user';
+    namespaceInfo.type = "user";
     // If it has a URL, it is already well prepared for fetching.
     if (namespaceInfo.url) {
       return namespaceInfo;
@@ -170,9 +162,7 @@ export default class NamespaceFetcher {
         this.env.logger.error(`NamespaceFetcher loop ran already ${i} times.`);
       }
       // Get user namespaces without shortcuts.
-      newNamespaceInfos = Object.values(namespaceInfos).filter(
-        (item) => item.type === 'user' && !item.shortcuts,
-      );
+      newNamespaceInfos = Object.values(namespaceInfos).filter((item) => item.type === "user" && !item.shortcuts);
       // Get out if no more namespaces to fetch.
       if (newNamespaceInfos.length === 0) {
         break;
@@ -200,7 +190,7 @@ export default class NamespaceFetcher {
         continue;
       }
       const promise = this.env.fetch(namespaceInfo.url, {
-        cache: this.env.reload ? 'reload' : 'force-cache',
+        cache: this.env.reload ? "reload" : "force-cache",
       });
       promises.push(promise);
     }
@@ -221,28 +211,14 @@ export default class NamespaceFetcher {
       }
       const response = responses.shift();
       if (!response || response.status != 200) {
-        this.env.logger.info(
-          `Problem fetching via ${this.env.reload ? 'reload' : 'cache'} ${
-            namespaceInfo.url
-          }`,
-        );
+        this.env.logger.info(`Problem fetching via ${this.env.reload ? "reload" : "cache"} ${namespaceInfo.url}`);
         namespaceInfo.shortcuts = {};
         continue;
       }
-      this.env.logger.success(
-        `Success fetching via ${this.env.reload ? 'reload' : 'cache'} ${
-          namespaceInfo.url
-        }`,
-      );
+      this.env.logger.success(`Success fetching via ${this.env.reload ? "reload" : "cache"} ${namespaceInfo.url}`);
       const text = await response.text();
-      namespaceInfo.shortcuts = this.parseShortcutsFromYml(
-        text,
-        namespaceInfo.url,
-      );
-      namespaceInfo.shortcuts = this.processShortcuts(
-        namespaceInfo.shortcuts,
-        namespaceInfo.name,
-      );
+      namespaceInfo.shortcuts = this.parseShortcutsFromYml(text, namespaceInfo.url);
+      namespaceInfo.shortcuts = this.processShortcuts(namespaceInfo.shortcuts, namespaceInfo.name);
     }
     return newNamespaceInfos;
   }
@@ -252,9 +228,7 @@ export default class NamespaceFetcher {
     for (const key in shortcuts) {
       shortcuts[key] = this.convertToObject(shortcuts[key]);
       if (shortcuts[key].include) {
-        shortcuts[key].include = this.convertIncludeToObject(
-          shortcuts[key].include,
-        );
+        shortcuts[key].include = this.convertIncludeToObject(shortcuts[key].include);
       }
       this.addNamespacesFromInclude(shortcuts[key]);
     }
@@ -272,9 +246,7 @@ export default class NamespaceFetcher {
     try {
       shortcuts = jsyaml.load(text);
     } catch (error) {
-      this.env.logger.warning(
-        `Warning: Parse error in ${url}: ${error.message}`,
-      );
+      this.env.logger.warning(`Warning: Parse error in ${url}: ${error.message}`);
       shortcuts = {};
     }
     return shortcuts;
@@ -312,8 +284,7 @@ export default class NamespaceFetcher {
           continue;
         }
         if (!this.namespaceInfos[namespaceInfo.name]) {
-          this.namespaceInfos[namespaceInfo.name] =
-            this.addNamespaceInfo(namespaceInfo);
+          this.namespaceInfos[namespaceInfo.name] = this.addNamespaceInfo(namespaceInfo);
         }
       }
     }
@@ -325,7 +296,7 @@ export default class NamespaceFetcher {
    * @returns {Object} The converted shortcut object
    */
   convertToObject(shortcut) {
-    if (typeof shortcut === 'string') {
+    if (typeof shortcut === "string") {
       const url = shortcut;
       shortcut = {
         url: url,
@@ -335,7 +306,7 @@ export default class NamespaceFetcher {
   }
 
   convertIncludeToObject(include) {
-    if (typeof include === 'string') {
+    if (typeof include === "string") {
       const key = include;
       include = {
         key: key,
@@ -348,9 +319,7 @@ export default class NamespaceFetcher {
     for (const namespaceName in namespaceInfos) {
       const namespaceInfo = namespaceInfos[namespaceName];
       if (namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts = this.processShortcuts(
-          namespaceInfo.shortcuts,
-        );
+        namespaceInfo.shortcuts = this.processShortcuts(namespaceInfo.shortcuts);
       }
       namespaceInfos[namespaceName] = namespaceInfo;
     }
@@ -371,11 +340,7 @@ export default class NamespaceFetcher {
         if (!shortcut.include) {
           continue;
         }
-        shortcuts[key] = this.processInclude(
-          shortcut,
-          namespaceName,
-          namespaceInfos,
-        );
+        shortcuts[key] = this.processInclude(shortcut, namespaceName, namespaceInfos);
         if (!shortcuts[key]) {
           delete shortcuts[key];
         }
@@ -394,16 +359,12 @@ export default class NamespaceFetcher {
    */
   processInclude(shortcut, namespaceName, namespaceInfos, depth = 0) {
     if (depth >= 10) {
-      this.env.logger.error(
-        `NamespaceFetcher loop ran already ${depth} times.`,
-      );
+      this.env.logger.error(`NamespaceFetcher loop ran already ${depth} times.`);
     }
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (!include.key) {
-        this.env.logger.error(
-          `Include with missing key at: ${JSON.stringify(include)}`,
-        );
+        this.env.logger.error(`Include with missing key at: ${JSON.stringify(include)}`);
       }
       const keyUnprocessed = include.key;
       const key = UrlProcessor.replaceVariables(keyUnprocessed, {
@@ -420,12 +381,7 @@ export default class NamespaceFetcher {
         continue;
       }
       if (shortcutToInclude.include) {
-        shortcutToInclude = this.processInclude(
-          shortcutToInclude,
-          namespaceName,
-          namespaceInfos,
-          depth + 1,
-        );
+        shortcutToInclude = this.processInclude(shortcutToInclude, namespaceName, namespaceInfos, depth + 1);
       }
       if (Object.keys(shortcutToInclude).length === 0) {
         continue;
@@ -470,11 +426,9 @@ export default class NamespaceFetcher {
    * @param {object} namespaces - Current namespaces keyed by their name.
    */
   addReachable(namespaceInfos) {
-    const namespaceInfosByPriority = Object.values(namespaceInfos).sort(
-      (a, b) => {
-        return b.priority - a.priority;
-      },
-    );
+    const namespaceInfosByPriority = Object.values(namespaceInfos).sort((a, b) => {
+      return b.priority - a.priority;
+    });
 
     // Remember found shortcuts
     // to know which ones are reachable.
@@ -496,11 +450,7 @@ export default class NamespaceFetcher {
   addInfoAll(namespaceInfos) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = this.addInfo(
-          namespaceInfo.shortcuts[key],
-          key,
-          namespaceInfo.name,
-        );
+        namespaceInfo.shortcuts[key] = this.addInfo(namespaceInfo.shortcuts[key], key, namespaceInfo.name);
       }
     }
     return namespaceInfos;
@@ -518,33 +468,29 @@ export default class NamespaceFetcher {
   addInfo(shortcut, key, namespaceName) {
     shortcut = this.convertToObject(shortcut);
     shortcut.key = key;
-    [shortcut.keyword, shortcut.argumentCount] = key.split(' ');
+    [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
     shortcut.argumentCount = parseInt(shortcut.argumentCount);
     shortcut.namespace = namespaceName;
     shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
-    shortcut.argumentString = NamespaceFetcher.getArgumentString(
-      shortcut.arguments,
-    );
-    shortcut.title = shortcut.title || '';
+    shortcut.argumentString = NamespaceFetcher.getArgumentString(shortcut.arguments);
+    shortcut.title = shortcut.title || "";
     return shortcut;
   }
 
   static getArgumentString(args) {
     const icons = {
-      city: '🏙️',
-      date: '📅',
-      time: '🕒',
+      city: "🏙️",
+      date: "📅",
+      time: "🕒",
     };
 
     const argumentsAsString = Object.entries(args).map(([key, value]) => {
-      const type =
-        (value && Object.values(value)[0] && Object.values(value)[0].type) ||
-        null;
-      const icon = icons[type] || '';
+      const type = (value && Object.values(value)[0] && Object.values(value)[0].type) || null;
+      const icon = icons[type] || "";
       return `${icon} ${key}`.trim();
     });
 
-    const argumentString = argumentsAsString.join(', ');
+    const argumentString = argumentsAsString.join(", ");
 
     return argumentString;
   }
@@ -560,14 +506,9 @@ export default class NamespaceFetcher {
 
   verify(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
-      this.env.logger.error(
-        `Missing url in ${shortcut.namespace}.${shortcut.key}.`,
-      );
+      this.env.logger.error(`Missing url in ${shortcut.namespace}.${shortcut.key}.`);
     }
-    if (
-      shortcut.url &&
-      shortcut.argumentCount != Object.keys(shortcut.arguments).length
-    ) {
+    if (shortcut.url && shortcut.argumentCount != Object.keys(shortcut.arguments).length) {
       this.env.logger.warning(
         `Mismatch in argumentCount of key and arguments.length of url in "${shortcut.namespace}.${shortcut.key}".`,
       );

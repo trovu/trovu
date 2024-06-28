@@ -1,95 +1,89 @@
-import Env from './Env.js';
-import NamespaceFetcher from './NamespaceFetcher.js';
-import jsyaml from 'js-yaml';
+import Env from "./Env.js";
+import NamespaceFetcher from "./NamespaceFetcher.js";
+import jsyaml from "js-yaml";
 
 function cloneObject(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
-  test('site', () => {
+describe("NamespaceFetcher.getInitialNamespaceInfo", () => {
+  test("site", () => {
     const env = new Env();
-    expect(new NamespaceFetcher(env).getInitialNamespaceInfo('de')).toEqual({
-      name: 'de',
+    expect(new NamespaceFetcher(env).getInitialNamespaceInfo("de")).toEqual({
+      name: "de",
     });
   });
-  test('github, this user', () => {
-    const env = new Env({ github: 'johndoe' });
-    expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
-    ).toEqual({
-      name: 'johndoe',
-      github: 'johndoe',
+  test("github, this user", () => {
+    const env = new Env({ github: "johndoe" });
+    expect(new NamespaceFetcher(env).getInitialNamespaceInfo({ github: "." })).toEqual({
+      name: "johndoe",
+      github: "johndoe",
     });
   });
-  test('github, named user', () => {
+  test("github, named user", () => {
     const env = new Env();
-    expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: 'johndoe' }),
-    ).toEqual({
-      name: 'johndoe',
-      github: 'johndoe',
+    expect(new NamespaceFetcher(env).getInitialNamespaceInfo({ github: "johndoe" })).toEqual({
+      name: "johndoe",
+      github: "johndoe",
     });
   });
-  test('name and github', () => {
+  test("name and github", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitialNamespaceInfo({
-        github: 'johndoe',
-        name: 'myjohndoe',
+        github: "johndoe",
+        name: "myjohndoe",
       }),
     ).toEqual({
-      github: 'johndoe',
-      name: 'myjohndoe',
+      github: "johndoe",
+      name: "myjohndoe",
     });
   });
-  test('configUrl, this user (negative)', () => {
+  test("configUrl, this user (negative)", () => {
     const env = new Env();
-    expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({ github: '.' }),
-    ).toEqual(false);
+    expect(new NamespaceFetcher(env).getInitialNamespaceInfo({ github: "." })).toEqual(false);
   });
-  test('name and url', () => {
+  test("name and url", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitialNamespaceInfo({
-        name: 'johndoe',
-        url: 'https://johndoe.com/trovu-data-user/shortcuts.yml',
+        name: "johndoe",
+        url: "https://johndoe.com/trovu-data-user/shortcuts.yml",
       }),
     ).toEqual({
-      name: 'johndoe',
-      url: 'https://johndoe.com/trovu-data-user/shortcuts.yml',
+      name: "johndoe",
+      url: "https://johndoe.com/trovu-data-user/shortcuts.yml",
     });
   });
-  test('name and shortcuts', () => {
+  test("name and shortcuts", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitialNamespaceInfo({
-        name: 'johndoe',
+        name: "johndoe",
         shortcuts: {
-          'example 0': {
-            url: 'https://example.com/',
+          "example 0": {
+            url: "https://example.com/",
           },
         },
       }),
     ).toEqual({
-      name: 'johndoe',
+      name: "johndoe",
       shortcuts: {
-        'example 0': {
-          url: 'https://example.com/',
+        "example 0": {
+          url: "https://example.com/",
         },
       },
     });
   });
-  test('only url (negative)', () => {
+  test("only url (negative)", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitialNamespaceInfo({
-        url: 'https://johndoe.com/trovu-data-user/',
+        url: "https://johndoe.com/trovu-data-user/",
       }),
     ).toEqual(false);
   });
-  test('only shortcuts (negative)', () => {
+  test("only shortcuts (negative)", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitialNamespaceInfo({
@@ -97,96 +91,88 @@ describe('NamespaceFetcher.getInitialNamespaceInfo', () => {
       }),
     ).toEqual(false);
   });
-  test('name and shortcuts, short notation', () => {
+  test("name and shortcuts, short notation", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).getInitialNamespaceInfo({
-        name: 'johndoe',
+        name: "johndoe",
         shortcuts: {
-          'example 0': 'https://example.com/',
+          "example 0": "https://example.com/",
         },
       }),
     ).toEqual({
-      name: 'johndoe',
+      name: "johndoe",
       shortcuts: {
-        'example 0': 'https://example.com/',
+        "example 0": "https://example.com/",
       },
     });
   });
 });
-describe('NamespaceFetcher.processShortcuts', () => {
-  test('convertToObject', () => {
+describe("NamespaceFetcher.processShortcuts", () => {
+  test("convertToObject", () => {
     expect(
-      new NamespaceFetcher(new Env()).processShortcuts(
-        { 'foo 0': 'https://example.com/' },
-        'testNamespace',
-      ),
-    ).toEqual({ 'foo 0': { url: 'https://example.com/' } });
+      new NamespaceFetcher(new Env()).processShortcuts({ "foo 0": "https://example.com/" }, "testNamespace"),
+    ).toEqual({ "foo 0": { url: "https://example.com/" } });
   });
-  test('convertIncludeToObject', () => {
+  test("convertIncludeToObject", () => {
     expect(
-      new NamespaceFetcher(new Env()).processShortcuts(
-        { 'foo 0': { include: 'bar 0' } },
-        'testNamespace',
-      ),
-    ).toEqual({ 'foo 0': { include: { key: 'bar 0' } } });
+      new NamespaceFetcher(new Env()).processShortcuts({ "foo 0": { include: "bar 0" } }, "testNamespace"),
+    ).toEqual({ "foo 0": { include: { key: "bar 0" } } });
   });
 });
 
-describe('NamespaceFetcher.addNamespaceInfo', () => {
-  test('site', () => {
+describe("NamespaceFetcher.addNamespaceInfo", () => {
+  test("site", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).addNamespaceInfo({
-        name: 'de',
+        name: "de",
         shortcuts: true,
       }),
     ).toEqual({
-      name: 'de',
+      name: "de",
       shortcuts: true,
-      type: 'site',
+      type: "site",
     });
   });
-  test('github', () => {
+  test("github", () => {
     const env = new Env();
-    expect(
-      new NamespaceFetcher(env).addNamespaceInfo({ name: 'johndoe' }),
-    ).toEqual({
-      github: 'johndoe',
-      name: 'johndoe',
-      type: 'user',
+    expect(new NamespaceFetcher(env).addNamespaceInfo({ name: "johndoe" })).toEqual({
+      github: "johndoe",
+      name: "johndoe",
+      type: "user",
       url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
     });
   });
-  test('name and url', () => {
+  test("name and url", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).addNamespaceInfo({
-        name: 'johndoe',
-        url: 'https://example.com/shortcuts.yml',
+        name: "johndoe",
+        url: "https://example.com/shortcuts.yml",
       }),
     ).toEqual({
-      name: 'johndoe',
-      type: 'user',
-      url: 'https://example.com/shortcuts.yml',
+      name: "johndoe",
+      type: "user",
+      url: "https://example.com/shortcuts.yml",
     });
   });
-  test('name', () => {
+  test("name", () => {
     const env = new Env();
     expect(
       new NamespaceFetcher(env).addNamespaceInfo({
-        name: 'johndoe',
+        name: "johndoe",
       }),
     ).toEqual({
-      name: 'johndoe',
-      github: 'johndoe',
-      type: 'user',
-      url: 'https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?unknown',
+      name: "johndoe",
+      github: "johndoe",
+      type: "user",
+      url: "https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?unknown",
     });
   });
 });
 
-describe('NamespaceFetcher.processInclude', () => {
+describe("NamespaceFetcher.processInclude", () => {
   const namespaceInfos = jsyaml.load(`
     leo:
       shortcuts:
@@ -199,59 +185,43 @@ describe('NamespaceFetcher.processInclude', () => {
             key: de-fr 1
   `);
 
-  test('1 level', () => {
+  test("1 level", () => {
     const shortcut = jsyaml.load(`
     include:
       key: de-fr 1
     `);
-    expect(
-      new NamespaceFetcher(new Env()).processInclude(
-        shortcut,
-        'leo',
-        cloneObject(namespaceInfos),
-      ),
-    ).toMatchObject({
-      url: 'https://dict.leo.org/französisch-deutsch/{%word}',
-      title: 'Allemand-Français (leo.org)',
+    expect(new NamespaceFetcher(new Env()).processInclude(shortcut, "leo", cloneObject(namespaceInfos))).toMatchObject({
+      url: "https://dict.leo.org/französisch-deutsch/{%word}",
+      title: "Allemand-Français (leo.org)",
     });
   });
 
-  test('2 level', () => {
+  test("2 level", () => {
     const shortcut = jsyaml.load(`
     include:
       key: fr-de 1
       namespace: leo
   `);
-    expect(
-      new NamespaceFetcher(new Env()).processInclude(
-        shortcut,
-        '',
-        cloneObject(namespaceInfos),
-      ),
-    ).toMatchObject({
-      url: 'https://dict.leo.org/französisch-deutsch/{%word}',
-      title: 'Französisch-Deutsch (leo.org)',
+    expect(new NamespaceFetcher(new Env()).processInclude(shortcut, "", cloneObject(namespaceInfos))).toMatchObject({
+      url: "https://dict.leo.org/französisch-deutsch/{%word}",
+      title: "Französisch-Deutsch (leo.org)",
     });
   });
 
-  test('with variable', () => {
+  test("with variable", () => {
     const shortcut = jsyaml.load(`
     include:
       key: fr-{$language} 1
     `);
     expect(
-      new NamespaceFetcher(new Env({ language: 'de' })).processInclude(
-        shortcut,
-        'leo',
-        cloneObject(namespaceInfos),
-      ),
+      new NamespaceFetcher(new Env({ language: "de" })).processInclude(shortcut, "leo", cloneObject(namespaceInfos)),
     ).toMatchObject({
-      url: 'https://dict.leo.org/französisch-deutsch/{%word}',
-      title: 'Französisch-Deutsch (leo.org)',
+      url: "https://dict.leo.org/französisch-deutsch/{%word}",
+      title: "Französisch-Deutsch (leo.org)",
     });
   });
 
-  test('with loop (negative)', () => {
+  test("with loop (negative)", () => {
     const namespaceInfosLoop = jsyaml.load(`
       leo:
         shortcuts:
@@ -270,15 +240,11 @@ describe('NamespaceFetcher.processInclude', () => {
       key: tic 1
     `);
     expect(() => {
-      new NamespaceFetcher(new Env({})).processInclude(
-        shortcut,
-        'leo',
-        namespaceInfosLoop,
-      );
+      new NamespaceFetcher(new Env({})).processInclude(shortcut, "leo", namespaceInfosLoop);
     }).toThrow(Error);
   });
 
-  test('faulty (negative)', () => {
+  test("faulty (negative)", () => {
     const namespaceInfos = jsyaml.load(`
       leo:
         shortcuts:
@@ -289,15 +255,11 @@ describe('NamespaceFetcher.processInclude', () => {
     include: tic 1
     `);
     expect(() => {
-      new NamespaceFetcher(new Env({})).processInclude(
-        shortcut,
-        'leo',
-        namespaceInfos,
-      );
+      new NamespaceFetcher(new Env({})).processInclude(shortcut, "leo", namespaceInfos);
     }).toThrow(Error);
   });
 
-  test('multiple', () => {
+  test("multiple", () => {
     const namespaceInfosMultiple = jsyaml.load(`
       leo:
         shortcuts:
@@ -320,19 +282,15 @@ describe('NamespaceFetcher.processInclude', () => {
       namespace: leo
     `);
     expect(
-      new NamespaceFetcher(new Env({ language: 'de' })).processInclude(
-        shortcut,
-        'o',
-        namespaceInfosMultiple,
-      ),
+      new NamespaceFetcher(new Env({ language: "de" })).processInclude(shortcut, "o", namespaceInfosMultiple),
     ).toMatchObject({
-      title: 'Französisch-Deutsch (leo.org)',
-      url: 'https://dict.leo.org/französisch-deutsch/{%word}',
+      title: "Französisch-Deutsch (leo.org)",
+      url: "https://dict.leo.org/französisch-deutsch/{%word}",
     });
   });
 });
 
-describe('NamespaceFetcher.addReachable', () => {
+describe("NamespaceFetcher.addReachable", () => {
   const namespaceInfos = jsyaml.load(`
     o:
       priority: 1
@@ -346,10 +304,8 @@ describe('NamespaceFetcher.addReachable', () => {
           title: Esperanto-Wörterbuch
   `);
 
-  test('standard', () => {
-    expect(
-      new NamespaceFetcher(new Env({})).addReachable(namespaceInfos),
-    ).toEqual(
+  test("standard", () => {
+    expect(new NamespaceFetcher(new Env({})).addReachable(namespaceInfos)).toEqual(
       jsyaml.load(`
         o:
           priority: 1
@@ -368,15 +324,15 @@ describe('NamespaceFetcher.addReachable', () => {
   });
 });
 
-describe('NamespaceFetcher.addInfo', () => {
-  test('standard', () => {
+describe("NamespaceFetcher.addInfo", () => {
+  test("standard", () => {
     expect(
       new NamespaceFetcher(new Env({})).addInfo(
         {
-          url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>&Z=<Ziel>&timesel=depart&start=1',
+          url: "https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>&Z=<Ziel>&timesel=depart&start=1",
         },
-        'db 2',
-        '.de',
+        "db 2",
+        ".de",
       ),
     ).toEqual(
       jsyaml.load(`

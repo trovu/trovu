@@ -20,10 +20,10 @@ export default class TimeType {
       time = new Date();
       const [, operator, offset] = matches;
       switch (operator) {
-        case '+':
+        case "+":
           time.setHours(time.getHours() + parseInt(offset));
           break;
-        case '-':
+        case "-":
           time.setHours(time.getHours() - parseInt(offset));
           break;
       }
