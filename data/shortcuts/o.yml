@@ -8354,6 +8354,22 @@ ud 1:
   examples:
   - arguments: wheelbo
     description: Look up "wheelbo" in the Urban Dictionary
+ue5 0:
+  url: https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5-4-documentation
+  title: Unreal Engine 5 Documentation
+  tags:
+  - game-development
+  - programming
+  - ue5
+  - unreal-engine
+  examples:
+  - description: Go to homepage
+ue5 1:
+  url: https://duckduckgo.com/?q=%5C<query>+inurl%3Adev.epicgames.com%2Fdocumentation%2Fen-us%2Funreal-engine%2F
+  include: ue5 0
+  examples:
+  - arguments: uactorcomponent
+    description: Search for "uactorcomponent"
 uesp 1:
   url: https://www.uesp.net/wiki/Special:Search?search=<query>&go=Go&nsnum=0&redirs=1&searchtitles=1
   title: Unofficial Elder Scrolls Pages
