@@ -19,18 +19,19 @@
   - arguments: 01805-033144
     description: Suche nach alternativen Nummern zu 01805-033144
 a 0:
-  url: https://www.amazon.de/
+  url: https://www.amazon.de/?linkCode=ll2&tag=serchilo-20&linkId=070c10e4d6fb9665424b753bbe333d12&language=de_DE&ref_=as_li_ss_tl
   title: Amazon.de
   tests:
   - expect: <title>Amazon.de
   tags:
   - amazon
   - books
+  - is-affiliate
   - shopping
   examples:
   - description: Gehe zur Startseite
 a 1:
-  url: https://www.amazon.de/s?k=<Suche>
+  url: https://www.amazon.de/s?k=<Suche>&crid=1UXOIV6UI26W0&linkCode=ll2&tag=serchilo-20&linkId=dadbd51da666f8ecc0f3fc779e01728a&language=de_DE&ref_=as_li_ss_tl
   tests:
   - arguments: goethe
     expect: '<title>Amazon.de : goethe</title>'
