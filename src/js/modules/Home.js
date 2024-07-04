@@ -19,7 +19,7 @@ export default class Home {
 
   async initialize() {
     GitLogger.logVersion();
-    document.querySelector("#version").textContent = Helper.getVersion();
+    document.querySelector("#version").textContent = GitLogger.getVersion();
 
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
