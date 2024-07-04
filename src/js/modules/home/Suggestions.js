@@ -336,7 +336,7 @@ export default class Suggestions {
     const div = document.createElement("div");
     div.className = "tools";
     div.innerHTML += `✍️ <a href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">Edit</a> &nbsp; `;
-    div.innerHTML += `🔧 <a href="https://github.com/trovu/trovu-web/issues/new?title=${encodeURIComponent(
+    div.innerHTML += `🔧 <a href="https://github.com/trovu/trovu/issues/new?title=${encodeURIComponent(
       "Problem with shortcut `" +
         suggestion.namespace +
         "." +
