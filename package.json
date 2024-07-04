@@ -1,7 +1,7 @@
 {
-  "name": "trovu-web",
+  "name": "trovu",
   "version": "1.0.0",
-  "description": "Trovu web interface.",
+  "description": "Trovu monorepo",
   "main": "",
   "scripts": {
     "lint-js": "npx eslint src/",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trovu/trovu-web.git"
+    "url": "git+https://github.com/trovu/trovu.git"
   },
   "keywords": [
     "javascript",
@@ -39,9 +39,9 @@
   "author": "Georg Jaehnig",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/trovu/trovu-web/issues"
+    "url": "https://github.com/trovu/trovu/issues"
   },
-  "homepage": "https://github.com/trovu/trovu-web#readme",
+  "homepage": "https://github.com/trovu/trovu#readme",
   "jest": {},
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
