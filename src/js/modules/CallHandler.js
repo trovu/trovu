@@ -1,6 +1,6 @@
 /** @module CallHandler */
 import Env from "./Env.js";
-import Helper from "./Helper.js";
+import GitLogger from "./GitLogger.js";
 import ShortcutFinder from "./ShortcutFinder.js";
 import UrlProcessor from "./UrlProcessor.js";
 
@@ -14,7 +14,7 @@ export default class CallHandler {
     const targetDomain = document.querySelector("#targetDomain");
     targetDomain.textContent = "";
 
-    Helper.logVersion();
+    GitLogger.logVersion();
 
     const env = new Env({ context: "browser" });
     await env.populate();

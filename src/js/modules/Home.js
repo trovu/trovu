@@ -1,7 +1,7 @@
 /** @module Home */
 import "../../scss/style.scss";
 import Env from "./Env.js";
-import Helper from "./Helper.js";
+import GitLogger from "./GitLogger.js";
 import Settings from "./home/Settings.js";
 import Suggestions from "./home/Suggestions.js";
 
@@ -17,8 +17,8 @@ export default class Home {
   constructor() {}
 
   async initialize() {
-    Helper.logVersion();
-    document.querySelector("#version").textContent = Helper.getVersion();
+    GitLogger.logVersion();
+    document.querySelector("#version").textContent = GitLogger.getVersion();
 
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
