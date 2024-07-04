@@ -1,4 +1,4 @@
-IMAGE_NAME=trovu-website
+IMAGE_NAME=trovu-monorepo
 CONTAINER_NAME=trovu-server
 
 build:
