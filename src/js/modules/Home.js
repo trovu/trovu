@@ -2,7 +2,6 @@
 import "../../scss/style.scss";
 import Env from "./Env.js";
 import GitLogger from "./GitLogger.js";
-import Helper from "./Helper.js";
 import Settings from "./home/Settings.js";
 import Suggestions from "./home/Suggestions.js";
 
