@@ -141,7 +141,7 @@ describe("NamespaceFetcher.addNamespaceInfo", () => {
       github: "johndoe",
       name: "johndoe",
       type: "user",
-      url: `https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?${env.commitHash}`,
+      url: "https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml",
     });
   });
   test("name and url", () => {
@@ -167,7 +167,7 @@ describe("NamespaceFetcher.addNamespaceInfo", () => {
       name: "johndoe",
       github: "johndoe",
       type: "user",
-      url: "https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml?unknown",
+      url: "https://raw.githubusercontent.com/johndoe/trovu-data-user/master/shortcuts.yml",
     });
   });
 });

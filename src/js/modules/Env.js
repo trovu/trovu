@@ -189,7 +189,7 @@ export default class Env {
    * @returns {string} The URL to the config file.
    */
   buildGithubConfigUrl(github) {
-    const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml?${this.commitHash}`;
+    const configUrl = "https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml";
     return configUrl;
   }
 
@@ -352,11 +352,11 @@ export default class Env {
     let url;
     switch (this.context) {
       case "browser":
-        url = `/data.json?${this.commitHash}`;
+        url = "/data.json";
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
-        url = `https://trovu.net/data.json?${this.commitHash}`;
+        url = "https://trovu.net/data.json";
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
