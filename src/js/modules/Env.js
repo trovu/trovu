@@ -92,7 +92,9 @@ export default class Env {
    * @param {array} params - List of parameters to be used in environment.
    */
   async populate(params) {
-    this.commitHash = await this.getCommitHash();
+    this.fetch = await this.getFetch();
+    this.data = this.data || (await this.getData());
+
     if (!params) {
       params = Env.getParamsFromUrl();
     }
@@ -106,8 +108,6 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     this.getFromLocalStorage();
-
-    this.fetch = await this.getFetch();
 
     if (typeof params.github === "string" && params.github !== "") {
       this.configUrl = this.buildGithubConfigUrl(params.github);
@@ -134,7 +134,6 @@ export default class Env {
       this.namespaces.push(this.extraNamespaceName);
     }
 
-    this.data = this.data || (await this.getData());
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(this.namespaces);
 
     // Remove extra namespace if it turned out to be invalid.
