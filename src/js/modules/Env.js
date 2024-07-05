@@ -333,14 +333,6 @@ export default class Env {
     }
   }
 
-  async getCommitHash() {
-    if (this.context === "browser") {
-      const pkg = await import("../../../package.json");
-      const commitHash = pkg.gitCommitHash.slice(0, 7);
-      return commitHash;
-    }
-  }
-
   /**
    * Fetches data from /data.
    * @returns {Object} An object containing the fetched data.
