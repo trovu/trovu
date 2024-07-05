@@ -17,9 +17,6 @@ export default class Home {
   constructor() {}
 
   async initialize() {
-    GitLogger.logVersion();
-    document.querySelector("#version").textContent = GitLogger.getVersion();
-
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
     this.addLinkSearch();
@@ -28,6 +25,10 @@ export default class Home {
 
     // Init environment.
     await this.env.populate();
+
+    const gitLogger = new GitLogger(this.env.data.git);
+    document.querySelector("#version").textContent = gitLogger.getVersion();
+    gitLogger.logVersion();
 
     this.queryInput = document.querySelector("#query");
 
