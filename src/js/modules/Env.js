@@ -17,7 +17,6 @@ export default class Env {
   constructor(env) {
     countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     this.setToThis(env);
-    this.commitHash = "unknown";
     this.logger = new Logger("#log");
   }
 
