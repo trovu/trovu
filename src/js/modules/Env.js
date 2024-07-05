@@ -187,7 +187,7 @@ export default class Env {
    * @returns {string} The URL to the config file.
    */
   buildGithubConfigUrl(github) {
-    const configUrl = "https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml";
+    const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml`;
     return configUrl;
   }
 
