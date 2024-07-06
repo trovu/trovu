@@ -5,7 +5,6 @@ import resolve from "@rollup/plugin-node-resolve";
 import { readFileSync } from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
-import gitInfo from "rollup-plugin-git-info";
 import scss from "rollup-plugin-scss";
 import { terser } from "rollup-plugin-terser";
 import watch from "rollup-plugin-watch";
@@ -44,7 +43,7 @@ export default [
       watch({ dir: "data/" }),
       resolve(),
       commonjs(),
-      gitInfo(), // includes also json()
+      json(),
       scss({
         output: "dist/public/style.css",
         outputStyle: isProduction ? "compressed" : "expanded",
@@ -82,7 +81,7 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      gitInfo(), // includes also json()
+      json(),
       isProduction && terser(),
       html({
         fileName: "process/index.html",
