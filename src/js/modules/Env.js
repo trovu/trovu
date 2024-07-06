@@ -1,5 +1,4 @@
 /** @module Env */
-import pkg from "../../../package.json";
 import Helper from "./Helper.js";
 import Logger from "./Logger.js";
 import NamespaceFetcher from "./NamespaceFetcher.js";
@@ -18,12 +17,6 @@ export default class Env {
   constructor(env) {
     countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     this.setToThis(env);
-    if (pkg.gitCommitHash) {
-      this.commitHash = pkg.gitCommitHash.slice(0, 7);
-    } else {
-      this.commitHash = "unknown";
-    }
-
     this.logger = new Logger("#log");
   }
 
@@ -98,6 +91,9 @@ export default class Env {
    * @param {array} params - List of parameters to be used in environment.
    */
   async populate(params) {
+    this.fetch = await this.getFetch();
+    this.data = this.data || (await this.getData());
+
     if (!params) {
       params = Env.getParamsFromUrl();
     }
@@ -111,8 +107,6 @@ export default class Env {
     Object.assign(this, params_from_query);
 
     this.getFromLocalStorage();
-
-    this.fetch = await this.getFetch();
 
     if (typeof params.github === "string" && params.github !== "") {
       this.configUrl = this.buildGithubConfigUrl(params.github);
@@ -139,7 +133,6 @@ export default class Env {
       this.namespaces.push(this.extraNamespaceName);
     }
 
-    this.data = this.data || (await this.getData());
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(this.namespaces);
 
     // Remove extra namespace if it turned out to be invalid.
@@ -194,7 +187,7 @@ export default class Env {
    * @returns {string} The URL to the config file.
    */
   buildGithubConfigUrl(github) {
-    const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml?${this.commitHash}`;
+    const configUrl = `https://raw.githubusercontent.com/${github}/trovu-data-user/master/config.yml`;
     return configUrl;
   }
 
@@ -316,6 +309,9 @@ export default class Env {
    * @return {string} navigatorLanguage - The browser's value of navigator.language.
    */
   getNavigatorLanguage() {
+    if (typeof navigator === "undefined") {
+      return "";
+    }
     // eslint-disable-next-line no-undef
     const languageStr = navigator.language;
     return languageStr;
@@ -346,11 +342,11 @@ export default class Env {
     let url;
     switch (this.context) {
       case "browser":
-        url = `/data.json?${this.commitHash}`;
+        url = "/data.json";
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
-        url = `https://trovu.net/data.json?${this.commitHash}`;
+        url = "https://trovu.net/data.json";
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
