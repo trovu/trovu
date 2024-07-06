@@ -16,7 +16,7 @@ export default class CallHandler {
 
     const env = new Env({ context: "browser" });
     await env.populate();
-    GitLogger(env.data.git).logVersion();
+    new GitLogger(env.data.git).logVersion();
 
     if (env.debug) {
       env.logger.showLog();
