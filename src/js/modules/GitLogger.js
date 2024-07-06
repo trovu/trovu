@@ -1,5 +1,3 @@
-import pkg from "../../../package.json";
-
 export default class GitLogger {
   constructor(git) {
     this.git = git;
