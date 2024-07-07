@@ -1,5 +1,5 @@
 a 0:
-  url: https://www.amazon.com/?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&tag=serchilo-20
+  url: https://www.amazon.com?tag=serchilo-20
   title: Amazon.com Homepage
   tags:
   - amazon
@@ -7,7 +7,7 @@ a 0:
   - is-affiliate
   - shopping
 a 1:
-  url: https://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo-20
+  url: https://www.amazon.com/s?k=<query>&linkCode=ll2&tag=serchilo-20
   title: Amazon.com
   tags:
   - amazon

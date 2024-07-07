@@ -186,7 +186,7 @@
   - arguments: blur
     description: find tabs for songs of Blur
 a 0:
-  url: https://www.amazon.com?&linkCode=ll2&tag=serchilo-20&linkId=070c10e4d6fb9665424b753bbe333d12&language=en_US&ref_=as_li_ss_tl
+  url: https://www.amazon.com?tag=serchilo-20
   title: Amazon.com
   tests:
   - expect: <title>Amazon
@@ -198,7 +198,7 @@ a 0:
   examples:
   - description: Go to homepage
 a 1:
-  url: https://www.amazon.com/s?k=<query>&crid=1UXOIV6UI26W0&linkCode=ll2&tag=serchilo-20&linkId=dadbd51da666f8ecc0f3fc779e01728a&language=en_US&ref_=as_li_ss_tl
+  url: https://www.amazon.com/s?k=<query>&linkCode=ll2&tag=serchilo-20
   tests:
   - arguments: shakespeare
     expect: shakespeare</title>
