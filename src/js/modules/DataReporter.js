@@ -1,4 +1,4 @@
-import DataManager from ".//DataManager";
+import DataManager from "./DataManager";
 
 export default class DataReporter {
   constructor(options) {

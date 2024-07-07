@@ -1,10 +1,10 @@
+import DataCompiler from "./modules/DataCompiler";
 import DataManager from "./modules/DataManager";
 import DataReporter from "./modules/DataReporter";
 import DictionarySetter from "./modules/DictionarySetter";
 import Migrator from "./modules/Migrator";
 import ShortcutTester from "./modules/ShortcutTester";
 import Validator from "./modules/Validator";
-import child_process from "child_process";
 import { Command } from "commander";
 import fs from "fs";
 
@@ -68,18 +68,10 @@ program.parse();
 
 function compileData(options) {
   const data = DataManager.load();
-  data.git = getGitInfo();
+  data.git = DataCompiler.getGitInfo();
+  data.config = DataCompiler.getConfig();
   const json = JSON.stringify(data);
   fs.writeFileSync(options.output, json, "utf8");
-}
-
-function getGitInfo() {
-  const commitHash = child_process.execSync("git rev-parse HEAD");
-  const date = child_process.execSync("git show -s --format=%ci");
-  const git = {
-    commit: { hash: commitHash.toString().trim().slice(0, 7), date: date.toString().trim() },
-  };
-  return git;
 }
 
 function migrateExamples(options) {
