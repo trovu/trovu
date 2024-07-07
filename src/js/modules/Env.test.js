@@ -8,7 +8,7 @@ const getUrlHashFooBar = () => {
 describe("Env", () => {
   describe("getDefaultLanguageAndCountry", () => {
     test("browser returns language and country", () => {
-      const env = new Env();
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
       env.getNavigatorLanguage = jest.fn(() => "en-DE");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
         language: "en",
@@ -16,27 +16,27 @@ describe("Env", () => {
       });
     });
     test("browser returns only language", () => {
-      const env = new Env();
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
       env.getNavigatorLanguage = jest.fn(() => "en");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
         language: "en",
-        country: "us",
+        country: "at",
       });
     });
     test("browser returns empty language", () => {
-      const env = new Env();
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
       env.getNavigatorLanguage = jest.fn(() => "");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: "en",
-        country: "us",
+        language: "pl",
+        country: "at",
       });
     });
     test("browser returns invalid language", () => {
-      const env = new Env();
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
       env.getNavigatorLanguage = jest.fn(() => "invalid");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
-        language: "en",
-        country: "us",
+        language: "pl",
+        country: "at",
       });
     });
   });

@@ -5,6 +5,20 @@
 -   NodeJS >= 18 and <= 21.3
 -   NPM >= 10
 
+## Configuration
+
+You can override the [default configuration](https://github.com/trovu/trovu/blob/master/trovu.config.default.yml) in `trovu.config.default.yml` by placing a `trovu.config.yml` next to it, and overriding the values you want to set differently for your instance.
+
+For example, if your local Trovu shall have additional (or different) shortcuts available by default, you can create a new [namespace](../shortcuts/namespaces.md) file `/data/shortcuts/foo.yml`, and then set `trovu.config.yml` to
+
+```yaml
+namespaces:
+    - o
+    - <$language>
+    - .<$country>
+    - foo
+```
+
 ## Installation
 
 ```bash
