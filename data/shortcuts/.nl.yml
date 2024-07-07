@@ -1,3 +1,21 @@
+a 0:
+  url: https://www.amazon.nl?tag=serchilo-20
+  title: Amazon.nl
+  tags:
+  - amazon
+  - boeken
+  - books
+  - is-affiliate
+  - shopping
+  - winkelen
+  examples:
+  - description: Ga naar de homepage
+a 1:
+  url: https://www.amazon.nl/s?k=<query>&linkCode=ll2&tag=serchilo-20
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Zoek naar "shakespeare"
 beslist 0:
   url: https://www.beslist.nl/
   title: BESLIST.nl

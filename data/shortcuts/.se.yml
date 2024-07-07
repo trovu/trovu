@@ -1,3 +1,19 @@
+a 0:
+  url: https://www.amazon.se?tag=serchilo-20
+  title: Amazon.se
+  tags:
+  - amazon
+  - bokhandel
+  - is-affiliate
+  - shopping
+  examples:
+  - description: Gå till startsidan
+a 1:
+  url: https://www.amazon.se/s?k=<sök>&linkCode=ll2&tag=serchilo-20
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Sök efter "shakespeare"
 blocket 1:
   url: https://www.blocket.se/annonser/hela_sverige?q=<query>
   title: Blocket.se
