@@ -1,22 +1,22 @@
 a 0:
-  url: https://www.amazon.es/?_encoding=UTF8&camp=3626&creative=24790&linkCode=ur2&tag=serchilo04-21
+  url: https://www.amazon.es?tag=serchilo-20
   title: Amazon.es
   tags:
   - amazon
   - books
+  - compras
   - is-affiliate
+  - libros
   - shopping
+  - tienda
+  examples:
+  - description: Ir a la página principal
 a 1:
-  url: https://www.amazon.es/gp/search?ie=UTF8&camp=3626&creative=24790&index=aps&keywords=<query>&linkCode=ur2&tag=serchilo04-21
-  title: Amazon.es
-  tags:
-  - amazon
-  - books
-  - is-affiliate
-  - shopping
+  url: https://www.amazon.es/s?k=<busqueda>&linkCode=ll2&tag=serchilo-20
+  include: a 0
   examples:
   - arguments: shakespeare
-    description: Search for "shakespeare"
+    description: Buscar "shakespeare"
 abc 0:
   url: https://www.abc.es/
   title: ABC
