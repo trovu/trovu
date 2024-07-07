@@ -1,6 +1,6 @@
 a 0:
   url: https://www.amazon.com?tag=serchilo-20
-  title: Amazon.com Homepage
+  title: Amazon.com
   tags:
   - amazon
   - books
@@ -8,12 +8,7 @@ a 0:
   - shopping
 a 1:
   url: https://www.amazon.com/s?k=<query>&linkCode=ll2&tag=serchilo-20
-  title: Amazon.com
-  tags:
-  - amazon
-  - books
-  - is-affiliate
-  - shopping
+  include: a 0
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
