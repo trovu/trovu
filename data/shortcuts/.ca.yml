@@ -1,10 +1,14 @@
-a 1:
-  url: https://www.amazon.ca/s/?field-keywords=<query>
+a 0:
+  url: https://www.amazon.ca?tag=serchilo-20
   title: Amazon.ca
   tags:
   - amazon
   - books
+  - is-affiliate
   - shopping
+a 1:
+  url: https://www.amazon.ca/s?k=<query>&linkCode=ll2&tag=serchilo-20
+  include: a 0
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
