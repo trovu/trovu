@@ -186,14 +186,26 @@
   - arguments: blur
     description: find tabs for songs of Blur
 a 0:
-  include:
-  - key: a 0
-    namespace: .us
+  url: https://www.amazon.com?tag=serchilo-20
+  title: Amazon.com
+  tests:
+  - expect: <title>Amazon
+  tags:
+  - amazon
+  - books
+  - is-affiliate
+  - shopping
+  examples:
+  - description: Go to homepage
 a 1:
   url: https://www.amazon.com/s?k=<query>&linkCode=ll2&tag=serchilo-20
-  include
-  - key: a 1
-    namespace: .us
+  tests:
+  - arguments: shakespeare
+    expect: sHakespeare</title>
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Search for "shakespeare"
 abbr 1:
   url: https://www.abbreviations.com/<abbr>
   title: Abbreviation search
