@@ -8,7 +8,7 @@ a 0:
   examples:
   - description: Va alla pagina principale
 a 1:
-  url: 'https://www.amazon.it/s?k=<ricerca: {encoding: iso-8859-1}>&linkCode=ll2&tag=serchilo-20'
+  url: https://www.amazon.it/s?k=<ricerca>&linkCode=ll2&tag=serchilo-20
   include: a 0
   examples:
   - arguments: shakespeare

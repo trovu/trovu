@@ -24,7 +24,7 @@ a 0:
   examples:
   - description: Aller à la page d'accueil
 a 1:
-  url: 'https://www.amazon.fr/s?k=<recherche: {encoding: iso-8859-1}>&linkCode=ll2&tag=serchilo-20'
+  url: https://www.amazon.fr/s?k=<recherche>&linkCode=ll2&tag=serchilo-20
   include: a 0
   examples:
   - arguments: balzac
