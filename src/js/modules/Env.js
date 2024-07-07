@@ -275,10 +275,10 @@ export default class Env {
 
     // Make sure language and country are in our lists.
     if (!(language in countriesList.languages)) {
-      language = "en";
+      language = this.data.config.language;
     }
     if (!country || !(country.toUpperCase() in countriesList.countries)) {
-      country = "us";
+      country = this.data.config.country;
     }
 
     // Ensure lowercase.
