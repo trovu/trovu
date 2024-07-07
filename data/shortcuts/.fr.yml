@@ -14,21 +14,16 @@
   - arguments: chaussures
     description: Cherche chaussures
 a 0:
-  url: https://www.amazon.fr/?_encoding=UTF8&camp=1642&creative=6746&linkCode=ur2&tag=serchilo0e-21
-  title: Amazon.fr Homepage
-  tags:
-  - amazon
-  - books
-  - is-affiliate
-  - shopping
-a 1:
-  url: 'https://www.amazon.fr/gp/search?ie=UTF8&camp=1642&creative=6746&index=aps&keywords=<query: {encoding: iso-8859-1}>&linkCode=ur2&tag=serchilo0e-21'
+  url: https://www.amazon.fr?tag=serchilo-20
   title: Amazon.fr
   tags:
   - amazon
   - books
   - is-affiliate
   - shopping
+a 1:
+  url: 'https://www.amazon.fr/s?k=<recherche: {encoding: iso-8859-1}>&linkCode=ll2&tag=serchilo-20'
+  include: a 0
   examples:
   - arguments: balzac
     description: Search for "balzac"
