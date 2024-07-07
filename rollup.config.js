@@ -41,6 +41,8 @@ export default [
       watch({ dir: "src/html/" }),
       watch({ dir: "src/img/" }),
       watch({ dir: "data/" }),
+      watch({ dir: "trovu.config.default.yml" }),
+      watch({ dir: "trovu.config.yml" }),
       resolve(),
       commonjs(),
       json(),
