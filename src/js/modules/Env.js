@@ -3,6 +3,7 @@ import Helper from "./Helper.js";
 import Logger from "./Logger.js";
 import NamespaceFetcher from "./NamespaceFetcher.js";
 import QueryParser from "./QueryParser.js";
+import UrlProcessor from "./UrlProcessor.js";
 import countriesList from "countries-list";
 import jsyaml from "js-yaml";
 
@@ -325,7 +326,8 @@ export default class Env {
 
     // Default namespaces.
     if (typeof this.namespaces != "object") {
-      this.namespaces = ["o", this.language, "." + this.country];
+      this.namespaces = this.data.config.namespaces;
+      this.namespaces = this.namespaces.map((namespace) => UrlProcessor.replaceVariables(namespace, this));
     }
     // Default debug.
     if (typeof this.debug != "boolean") {
