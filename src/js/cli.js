@@ -69,6 +69,7 @@ program.parse();
 function compileData(options) {
   const data = DataManager.load();
   data.git = DataCompiler.getGitInfo();
+  data.config = DataCompiler.getConfig();
   const json = JSON.stringify(data);
   fs.writeFileSync(options.output, json, "utf8");
 }
