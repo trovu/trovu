@@ -21,12 +21,14 @@ a 0:
   - books
   - is-affiliate
   - shopping
+  examples:
+  - description: Aller à la page d'accueil
 a 1:
   url: 'https://www.amazon.fr/s?k=<recherche: {encoding: iso-8859-1}>&linkCode=ll2&tag=serchilo-20'
   include: a 0
   examples:
   - arguments: balzac
-    description: Search for "balzac"
+    description: Recherche "balzac"
 cdiscount 1:
   url: https://www.cdiscount.com/search/10/<query>.html
   title: CDiscount.com
