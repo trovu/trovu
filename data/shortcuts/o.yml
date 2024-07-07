@@ -202,8 +202,7 @@ a 1:
   tests:
   - arguments: shakespeare
     expect: shakespeare</title>
-  include:
-  - key: a 0
+  include: a 0
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
