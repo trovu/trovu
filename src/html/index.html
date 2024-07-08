@@ -3,27 +3,10 @@
   <head>
     <!-- Required meta tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon.png?v=3"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon-32x32.png?v=3"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon-16x16.png?v=3"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
     <link rel="manifest" href="/site.webmanifest?v=3" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg?v=3" color="#487b7f" />
     <link rel="shortcut icon" href="/favicon.ico?v=3" />
@@ -91,92 +74,46 @@
                 </li>
               </ul>
               <div class="tab-content mt-4">
-                <div
-                  class="tab-pane fade show active"
-                  id="basic"
-                  role="tabpanel"
-                  aria-labelledby="basic-tab"
-                >
+                <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
                   <div class="using-advanced">
                     Using
-                    <a
-                      target="_blank"
-                      href="https://trovu.net/docs/users/advanced/"
-                      >Advanced settings via Github</a
-                    >. Basic settings disabled.
+                    <a target="_blank" href="https://trovu.net/docs/users/advanced/">Advanced settings via Github</a>.
+                    Basic settings disabled.
                   </div>
                   <div class="using-basic">
                     <div class="form-group row">
-                      <label
-                        for="languageSetting"
-                        class="col-sm-2 col-form-label"
-                        >Language</label
-                      >
+                      <label for="languageSetting" class="col-sm-2 col-form-label">Language</label>
                       <div class="col-sm-10">
-                        <select
-                          class="custom-select"
-                          id="languageSetting"
-                        ></select>
+                        <select class="custom-select" id="languageSetting"></select>
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label
-                        for="countrySetting"
-                        class="col-sm-2 col-form-label"
-                        >Country</label
-                      >
+                      <label for="countrySetting" class="col-sm-2 col-form-label">Country</label>
                       <div class="col-sm-10">
-                        <select
-                          class="custom-select"
-                          id="countrySetting"
-                        ></select>
+                        <select class="custom-select" id="countrySetting"></select>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="tab-pane fade"
-                  id="advanced"
-                  role="tabpanel"
-                  aria-labelledby="advanced-tab"
-                >
+                <div class="tab-pane fade" id="advanced" role="tabpanel" aria-labelledby="advanced-tab">
                   <p>
                     Set advanced settings and personal shortcuts
-                    <a target="_blank" href="/docs/users/advanced/">
-                      with a (free) GitHub account</a
-                    >.
+                    <a target="_blank" href="/docs/users/advanced/"> with a (free) GitHub account</a>.
                   </p>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input
-                        type="search"
-                        class="form-control"
-                        id="githubSetting"
-                        placeholder="GitHub username"
-                      />
+                      <input type="search" class="form-control" id="githubSetting" placeholder="GitHub username" />
                     </div>
                   </div>
                 </div>
-                <div
-                  class="tab-pane fade"
-                  id="about"
-                  role="tabpanel"
-                  aria-labelledby="about-tab"
-                >
+                <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
                   <p>Version: <span id="version"></span></p>
                 </div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button
-              id="settings-close"
-              type="button"
-              class="btn btn-primary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
+            <button id="settings-close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -191,36 +128,22 @@
             </a>
           </div>
           <div class="right">
-            <span
-              id="settings-button"
-              class="settings"
-              data-toggle="modal"
-              data-target="#settings"
-            >
+            <span id="settings-button" class="settings" data-toggle="modal" data-target="#settings">
               <span class="language"></span>
               <span class="country"></span>
             </span>
             <span class="dropdown">
-              <a
-                href="#"
-                role="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" id="reload" href="#"
-                  >Reload shortcuts</a
-                >
+                <a class="dropdown-item" id="reload" href="#">Reload shortcuts</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/docs/">Docs</a>
                 <a class="dropdown-item" href="/blog/">Blog</a>
                 <a class="dropdown-item" href="/docs/privacy/">Privacy</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://github.com/trovu/trovu"
-                  >GitHub</a
-                >
+                <a class="dropdown-item" href="https://github.com/trovu/trovu">GitHub</a>
               </div>
             </span>
           </div>
@@ -232,12 +155,7 @@
         <div id="intro"></div>
         <div hidden id="alert" class="alert alert-warning" role="alert">
           <span></span>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="alert"
-            aria-label="Close"
-          >
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -267,71 +185,44 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="cta">
-              Web search as if from your command line: Trovu's shortcuts take
-              you directly to the search results of other sites.<br />
+              Web search as if from your command line: Trovu's shortcuts take you directly to the search results of
+              other sites.<br />
               <a target="_blank" href="/docs/">Read more</a>, watch a
-              <a
-                target="_blank"
-                href="https://www.youtube.com/watch?v=gOUNhCion9M"
-                >video</a
-              >, or try the examples:
+              <a target="_blank" href="https://www.youtube.com/watch?v=gOUNhCion9M">video</a>, or try the examples:
             </div>
             <dl>
               <dt>
-                <a target="_blank" href="/process/index.html?#query=g%20berlin"
-                  >g berlin</a
-                >
+                <a target="_blank" href="/process/index.html?#query=g%20berlin">g berlin</a>
               </dt>
               <dd>Search Google for Berlin</dd>
               <dt>
-                <a target="_blank" href="/process/index.html?#query=w%20berlin"
-                  >w berlin</a
-                >
+                <a target="_blank" href="/process/index.html?#query=w%20berlin">w berlin</a>
               </dt>
               <dd>Go to the Wikipedia article about Berlin</dd>
               <dt>
-                <a
-                  target="_blank"
-                  href="/process/index.html?#query=fr.w%20berlin"
-                  >fr.w berlin</a
-                >
+                <a target="_blank" href="/process/index.html?#query=fr.w%20berlin">fr.w berlin</a>
               </dt>
               <dd>Go to the French Wikipedia article about Berlin</dd>
               <dt>
-                <a
-                  target="_blank"
-                  href="/process/index.html?#query=gd%20london%2C%20liverpool"
-                  >gd london, liverpool</a
-                >
+                <a target="_blank" href="/process/index.html?#query=gd%20london%2C%20liverpool">gd london, liverpool</a>
               </dt>
-              <dd>
-                Search for a route on Google Directions from London to Liverpool
-              </dd>
+              <dd>Search for a route on Google Directions from London to Liverpool</dd>
               <dt>
-                <a
-                  target="_blank"
-                  href="/process/index.html?#query=gfl%20ber%2C%20ibiza%2C%20fr%2C%2028"
+                <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20ibiza%2C%20fr%2C%2028"
                   >gfl ber, ibiza, fr, 28</a
                 >
               </dt>
               <dd>
-                Search on Google Flights for a flight from Berlin to Ibiza,
-                leaving next Friday, returning on the 28th
+                Search on Google Flights for a flight from Berlin to Ibiza, leaving next Friday, returning on the 28th
               </dd>
               <dt>
-                <a target="_blank" href="/process/index.html?#query=wg%20berlin"
-                  >wg berlin</a
-                >
+                <a target="_blank" href="/process/index.html?#query=wg%20berlin">wg berlin</a>
               </dt>
               <dd>Search Wikipedia for all mentions of "berlin" via Google</dd>
               <dt>
-                <a target="_blank" href="/process/index.html?#query=npm%20csv"
-                  >npm csv</a
-                >
+                <a target="_blank" href="/process/index.html?#query=npm%20csv">npm csv</a>
               </dt>
-              <dd>
-                Search the Node Package Manager for modules projects about CSV
-              </dd>
+              <dd>Search the Node Package Manager for modules projects about CSV</dd>
             </dl>
           </div>
         </div>
@@ -340,68 +231,49 @@
         <div class="row">
           <div class="col-sm-4">
             <h2>Shortcuts by tags</h2>
-            <span class="tag">ai</span><span class="tag">dictionary</span
-            ><span class="tag">encyclopedia</span><span class="tag">google</span
-            ><span class="tag">language</span><span class="tag">library</span
-            ><span class="tag">maps</span><span class="tag">music</span
-            ><span class="tag">photo</span><span class="tag">programming</span
-            ><span class="tag">shopping</span><span class="tag">sport</span
-            ><span class="tag">statistics</span><span class="tag">travel</span
-            ><span class="tag">video</span><span class="tag">web-search</span
-            ><span class="tag">wiki</span>
+            <span class="tag">ai</span><span class="tag">dictionary</span><span class="tag">encyclopedia</span
+            ><span class="tag">google</span><span class="tag">language</span><span class="tag">library</span
+            ><span class="tag">maps</span><span class="tag">music</span><span class="tag">photo</span
+            ><span class="tag">programming</span><span class="tag">shopping</span><span class="tag">sport</span
+            ><span class="tag">statistics</span><span class="tag">travel</span><span class="tag">video</span
+            ><span class="tag">web-search</span><span class="tag">wiki</span>
           </div>
           <div class="col-sm-2">
             <h2>…by country</h2>
-            <span class="namespace">.at</span><span class="namespace">.bo</span
-            ><span class="namespace">.ch</span><span class="namespace">.cz</span
-            ><span class="namespace">.de</span><span class="namespace">.dk</span
-            ><span class="namespace">.es</span><span class="namespace">.fr</span
-            ><span class="namespace">.gb</span><span class="namespace">.it</span
-            ><span class="namespace">.nl</span><span class="namespace">.no</span
-            ><span class="namespace">.pl</span><span class="namespace">.pt</span
-            ><span class="namespace">.se</span><span class="namespace">.sk</span
-            ><span class="namespace">.us</span>
+            <span class="namespace">.at</span><span class="namespace">.bo</span><span class="namespace">.ch</span
+            ><span class="namespace">.cz</span><span class="namespace">.de</span><span class="namespace">.dk</span
+            ><span class="namespace">.es</span><span class="namespace">.fr</span><span class="namespace">.gb</span
+            ><span class="namespace">.it</span><span class="namespace">.nl</span><span class="namespace">.no</span
+            ><span class="namespace">.pl</span><span class="namespace">.pt</span><span class="namespace">.se</span
+            ><span class="namespace">.sk</span><span class="namespace">.us</span>
           </div>
           <div class="col-sm-2">
             <h2>…by language</h2>
-            <span class="namespace">cs</span><span class="namespace">da</span
-            ><span class="namespace">de</span><span class="namespace">en</span
-            ><span class="namespace">eo</span><span class="namespace">es</span
-            ><span class="namespace">nl</span><span class="namespace">pl</span
-            ><span class="namespace">sk</span><span class="namespace">ru</span>
+            <span class="namespace">cs</span><span class="namespace">da</span><span class="namespace">de</span
+            ><span class="namespace">en</span><span class="namespace">eo</span><span class="namespace">es</span
+            ><span class="namespace">nl</span><span class="namespace">pl</span><span class="namespace">sk</span
+            ><span class="namespace">ru</span>
           </div>
           <div class="col-sm-4">
             <h2>
               Latest blog articles
-              <a href="/blog/feed/"
-                ><img src="/blog/img/rss.svg" width="14" height="14"
-              /></a>
+              <a href="/blog/feed/"><img src="/blog/img/rss.svg" width="14" height="14" /></a>
             </h2>
             <ul>
               <li>
-                <a target="_blank" href="/blog/how-i-use-trovu-hannes">
-                  How I Use Trovu (Hannes)
-                </a>
+                <a target="_blank" href="/blog/how-i-use-trovu-hannes"> How I Use Trovu (Hannes) </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/how-i-use-trovu-kilian">
-                  How I Use Trovu (Kilian)
-                </a>
+                <a target="_blank" href="/blog/how-i-use-trovu-kilian"> How I Use Trovu (Kilian) </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/how-i-use-trovu">
-                  How I Use Trovu (Georg)
-                </a>
+                <a target="_blank" href="/blog/how-i-use-trovu"> How I Use Trovu (Georg) </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/videos-summary-advanced/">
-                  New videos: Summary & Advanced Usage
-                </a>
+                <a target="_blank" href="/blog/videos-summary-advanced/"> New videos: Summary & Advanced Usage </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/pwa/">
-                  New: App for Smartphones
-                </a>
+                <a target="_blank" href="/blog/pwa/"> New: App for Smartphones </a>
               </li>
             </ul>
           </div>
@@ -412,17 +284,10 @@
     <footer class="navbar">
       <div class="container">
         <div class="left">
-          <span class="text-muted"
-            ><a href="https://jaehnig.org/impressum/">Impressum</a></span
-          >
+          <span class="text-muted"><a href="https://jaehnig.org/impressum/">Impressum</a></span>
         </div>
         <div class="right">
-          <a
-            class="form-control btn btn-success"
-            target="_blank"
-            href="/docs/users/integration/"
-            >Add to browser</a
-          >
+          <a class="form-control btn btn-success" target="_blank" href="/docs/users/integration/">Add to browser</a>
         </div>
       </div>
     </footer>
