@@ -57,6 +57,7 @@
     "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-yaml": "^4.1.2",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -93,7 +94,6 @@
     "detect-browser": "^5.2.0",
     "font-awesome": "^4.7.0",
     "js-yaml": "^4.1.0",
-    "node-fetch": "^3.3.2",
-    "rollup-plugin-yaml": "^2.0.0"
+    "node-fetch": "^3.3.2"
   }
 }
