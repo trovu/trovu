@@ -1,8 +1,9 @@
+import DataCompiler from "./src/js/modules/DataCompiler.js";
 import commonjs from "@rollup/plugin-commonjs";
 import html from "@rollup/plugin-html";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
-import { readFileSync } from "fs";
+import fs from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
 import scss from "rollup-plugin-scss";
@@ -22,11 +23,26 @@ const output = {
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
-    const htmlTemplate = readFileSync(templateFilePath).toString();
+    const htmlTemplate = fs.readFileSync(templateFilePath).toString();
     const currentTimestamp = new Date().toISOString();
-    const html = htmlTemplate
+
+    const config = DataCompiler.getConfig();
+
+    // Replace placeholders with config values
+    const placeholders = {
+      urlBlog: config.url.blog,
+      urlDocs: config.url.docs,
+    };
+
+    let html = htmlTemplate
       .replace(/{{fileNameJs}}/g, `${fileNameJs}`)
       .replace(/{{currentTimestamp}}/g, `${currentTimestamp}`);
+
+    Object.keys(placeholders).forEach((key) => {
+      const regex = new RegExp(`{{${key}}}`, "g");
+      html = html.replace(regex, placeholders[key]);
+    });
+
     return html;
   };
   return templateFunc;

@@ -19,7 +19,17 @@ namespaces:
     - foo
 ```
 
+Also, if you don't want to build the `/docs` and the `/blog`, and instead link to the ones on trovu.net, adjust the URLs to:
+
+```yaml
+url:
+    blog: https://trovu.net/blog/
+    docs: https://trovu.net/docs/
+```
+
 ## Installation
+
+For the minimal installation, run:
 
 ```bash
 git clone https://github.com/trovu/trovu.git
@@ -28,6 +38,8 @@ npm clean-install      # Install dependencies
 npm run build          # Build the website including data
 npm run serve          # Run the local server
 ```
+
+For building more, like the blog and the docs, have a look on the [GitHub workflow](https://github.com/trovu/trovu/blob/master/.github/workflows/deploy.yml).
 
 Now, open the displayed URL of the local server in your browser. You should see the Trovu website.
 
