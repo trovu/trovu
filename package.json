@@ -54,7 +54,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@cospired/i18n-iso-languages": "github:georgjaehnig/i18n-iso-languages#new-languages",
     "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-html": "^0.2.0",
+    "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
@@ -93,6 +93,7 @@
     "detect-browser": "^5.2.0",
     "font-awesome": "^4.7.0",
     "js-yaml": "^4.1.0",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "rollup-plugin-yaml": "^2.0.0"
   }
 }
