@@ -77,8 +77,8 @@
                 <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
                   <div class="using-advanced">
                     Using
-                    <a target="_blank" href="https://trovu.net/docs/users/advanced/">Advanced settings via Github</a>.
-                    Basic settings disabled.
+                    <a target="_blank" href="{{urlDocs}}users/advanced/">Advanced settings via Github</a>. Basic
+                    settings disabled.
                   </div>
                   <div class="using-basic">
                     <div class="form-group row">
@@ -98,7 +98,7 @@
                 <div class="tab-pane fade" id="advanced" role="tabpanel" aria-labelledby="advanced-tab">
                   <p>
                     Set advanced settings and personal shortcuts
-                    <a target="_blank" href="/docs/users/advanced/"> with a (free) GitHub account</a>.
+                    <a target="_blank" href="{{urlDocs}}users/advanced/"> with a (free) GitHub account</a>.
                   </p>
                   <div class="form-group row">
                     <div class="col-sm-12">
@@ -139,9 +139,9 @@
               <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" id="reload" href="#">Reload shortcuts</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/docs/">Docs</a>
-                <a class="dropdown-item" href="/blog/">Blog</a>
-                <a class="dropdown-item" href="/docs/privacy/">Privacy</a>
+                <a class="dropdown-item" href="{{urlDocs}}">Docs</a>
+                <a class="dropdown-item" href="{{urlBlog}}">Blog</a>
+                <a class="dropdown-item" href="{{urlDocs}}privacy/">Privacy</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="https://github.com/trovu/trovu">GitHub</a>
               </div>
@@ -187,7 +187,7 @@
             <div class="cta">
               Web search as if from your command line: Trovu's shortcuts take you directly to the search results of
               other sites.<br />
-              <a target="_blank" href="/docs/">Read more</a>, watch a
+              <a target="_blank" href="{{urlDocs}}">Read more</a>, watch a
               <a target="_blank" href="https://www.youtube.com/watch?v=gOUNhCion9M">video</a>, or try the examples:
             </div>
             <dl>
@@ -257,23 +257,23 @@
           <div class="col-sm-4">
             <h2>
               Latest blog articles
-              <a href="/blog/feed/"><img src="/img/rss.svg" width="14" height="14" /></a>
+              <a href="{{urlBlog}}feed/"><img src="/img/rss.svg" width="14" height="14" /></a>
             </h2>
             <ul>
               <li>
-                <a target="_blank" href="/blog/how-i-use-trovu-hannes"> How I Use Trovu (Hannes) </a>
+                <a target="_blank" href="{{urlBlog}}how-i-use-trovu-hannes"> How I Use Trovu (Hannes) </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/how-i-use-trovu-kilian"> How I Use Trovu (Kilian) </a>
+                <a target="_blank" href="{{urlBlog}}how-i-use-trovu-kilian"> How I Use Trovu (Kilian) </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/how-i-use-trovu"> How I Use Trovu (Georg) </a>
+                <a target="_blank" href="{{urlBlog}}how-i-use-trovu"> How I Use Trovu (Georg) </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/videos-summary-advanced/"> New videos: Summary & Advanced Usage </a>
+                <a target="_blank" href="{{urlBlog}}videos-summary-advanced/"> New videos: Summary & Advanced Usage </a>
               </li>
               <li>
-                <a target="_blank" href="/blog/pwa/"> New: App for Smartphones </a>
+                <a target="_blank" href="{{urlBlog}}pwa/"> New: App for Smartphones </a>
               </li>
             </ul>
           </div>
@@ -287,7 +287,9 @@
           <span class="text-muted"><a href="https://jaehnig.org/impressum/">Impressum</a></span>
         </div>
         <div class="right">
-          <a class="form-control btn btn-success" target="_blank" href="/docs/users/integration/">Add to browser</a>
+          <a class="form-control btn btn-success" target="_blank" href="{{urlDocs}}users/integration/"
+            >Add to browser</a
+          >
         </div>
       </div>
     </footer>
