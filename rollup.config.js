@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import html from "@rollup/plugin-html";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
+import replace from "@rollup/plugin-replace";
 import fs from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
@@ -19,6 +20,8 @@ const output = {
   sourcemap: true,
   format: "es",
 };
+
+const gitInfo = DataCompiler.getGitInfo();
 
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
@@ -64,6 +67,10 @@ export default [
       html({
         fileName: "index.html",
         template: template("src/html/index.html"),
+      }),
+      replace({
+        preventAssignment: true,
+        "process.env.git": JSON.stringify(gitInfo),
       }),
       copy({
         targets: [
