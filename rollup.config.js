@@ -23,20 +23,15 @@ const output = {
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
-    const htmlTemplate = fs.readFileSync(templateFilePath).toString();
-    const currentTimestamp = new Date().toISOString();
-
     const config = DataCompiler.getConfig();
-
-    // Replace placeholders with config values
     const placeholders = {
       urlBlog: config.url.blog,
       urlDocs: config.url.docs,
+      fileNameJs: fileNameJs,
+      currentTimestamp: new Date().toISOString(),
     };
 
-    let html = htmlTemplate
-      .replace(/{{fileNameJs}}/g, `${fileNameJs}`)
-      .replace(/{{currentTimestamp}}/g, `${currentTimestamp}`);
+    let html = fs.readFileSync(templateFilePath).toString();
 
     Object.keys(placeholders).forEach((key) => {
       const regex = new RegExp(`{{${key}}}`, "g");
