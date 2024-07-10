@@ -24,7 +24,6 @@ jobs:
       - run: npm run test-unit
       - run: npm run build-blog
       - run: npm run build
-      - run: npm run compile-data
       - run: npm run test-calls
       - uses: actions/setup-python@v2
         with:
