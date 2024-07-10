@@ -19,6 +19,16 @@ export default class Env {
     countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     this.setToThis(env);
     this.logger = new Logger("#log");
+    // if (process && process.env && process.env.git === "test") {
+    //   this.git = process.env.git;
+    // } else {
+    //   this.git.commit = "unknown";
+    //   this.git.date = "unknown";
+    // }
+    //this.git = process.env.git;
+    console.log("process", process.env.git);
+    console.log("process", process.env);
+    //console.log("process", process.env.gitfoo);
   }
 
   /**
