@@ -26,7 +26,7 @@ export default class Home {
     // Init environment.
     await this.env.populate();
 
-    const gitLogger = new GitLogger(this.env.data.git);
+    const gitLogger = new GitLogger(this.env.gitInfo);
     document.querySelector("#version").textContent = gitLogger.getVersion();
     gitLogger.logVersion();
 

@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import html from "@rollup/plugin-html";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
+import replace from "@rollup/plugin-replace";
 import fs from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
@@ -20,23 +21,20 @@ const output = {
   format: "es",
 };
 
+const gitInfo = DataCompiler.getGitInfo();
+
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
-    const htmlTemplate = fs.readFileSync(templateFilePath).toString();
-    const currentTimestamp = new Date().toISOString();
-
     const config = DataCompiler.getConfig();
-
-    // Replace placeholders with config values
     const placeholders = {
       urlBlog: config.url.blog,
       urlDocs: config.url.docs,
+      fileNameJs: fileNameJs,
+      currentTimestamp: new Date().toISOString(),
     };
 
-    let html = htmlTemplate
-      .replace(/{{fileNameJs}}/g, `${fileNameJs}`)
-      .replace(/{{currentTimestamp}}/g, `${currentTimestamp}`);
+    let html = fs.readFileSync(templateFilePath).toString();
 
     Object.keys(placeholders).forEach((key) => {
       const regex = new RegExp(`{{${key}}}`, "g");
@@ -69,6 +67,10 @@ export default [
       html({
         fileName: "index.html",
         template: template("src/html/index.html"),
+      }),
+      replace({
+        preventAssignment: true,
+        GIT_INFO: JSON.stringify(gitInfo),
       }),
       copy({
         targets: [

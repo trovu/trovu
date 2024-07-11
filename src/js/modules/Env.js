@@ -19,6 +19,21 @@ export default class Env {
     countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     this.setToThis(env);
     this.logger = new Logger("#log");
+    this.setGit();
+  }
+
+  setGit() {
+    if (typeof GIT_INFO === "object") {
+      // eslint-disable-next-line no-undef
+      this.gitInfo = GIT_INFO;
+    } else {
+      this.gitInfo = {
+        commit: {
+          hash: "unknown",
+          date: "unknown",
+        },
+      };
+    }
   }
 
   /**
@@ -344,7 +359,7 @@ export default class Env {
     let url;
     switch (this.context) {
       case "browser":
-        url = "/data.json";
+        url = `/data.json?${this.gitInfo.commit.hash}`;
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
