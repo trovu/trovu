@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 410-no-suggestions-or-submit-work-on-chromebrave-for-android
   pull_request:
     branches:
       - master
