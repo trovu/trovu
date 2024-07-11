@@ -19,16 +19,20 @@ export default class Env {
     countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     this.setToThis(env);
     this.logger = new Logger("#log");
-    // if (process && process.env && process.env.git === "test") {
-    //   this.git = process.env.git;
-    // } else {
-    //   this.git.commit = "unknown";
-    //   this.git.date = "unknown";
-    // }
-    //this.git = process.env.git;
-    console.log("process", process.env.git);
-    console.log("process", process.env);
-    //console.log("process", process.env.gitfoo);
+    this.setGit();
+  }
+
+  setGit() {
+    if (typeof GIT_INFO === "object") {
+      this.gitInfo = GIT_INFO;
+    } else {
+      this.gitInfo = {
+        commit: {
+          hash: "unknown",
+          date: "unknown",
+        },
+      };
+    }
   }
 
   /**
@@ -354,7 +358,7 @@ export default class Env {
     let url;
     switch (this.context) {
       case "browser":
-        url = "/data.json";
+        url = `/data.json?${this.gitInfo.commit.hash}`;
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
