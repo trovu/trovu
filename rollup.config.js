@@ -70,7 +70,7 @@ export default [
       }),
       replace({
         preventAssignment: true,
-        "process.env.git": JSON.stringify(gitInfo),
+        GIT_INFO: JSON.stringify(gitInfo),
       }),
       copy({
         targets: [
