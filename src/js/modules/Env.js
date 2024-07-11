@@ -24,6 +24,7 @@ export default class Env {
 
   setGit() {
     if (typeof GIT_INFO === "object") {
+      // eslint-disable-next-line no-undef
       this.gitInfo = GIT_INFO;
     } else {
       this.gitInfo = {
