@@ -1,12 +1,12 @@
 export default class GitLogger {
-  constructor(git) {
-    this.git = git;
+  constructor(gitInfo) {
+    this.gitInfo = gitInfo;
   }
   logVersion() {
     console.log("Trovu running version", this.getVersion());
   }
 
   getVersion() {
-    return `${this.git.commit.hash} ${this.git.commit.date}`;
+    return `${this.gitInfo.commit.hash} ${this.gitInfo.commit.date}`;
   }
 }
