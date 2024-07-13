@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Trovu: Fill and Submit
 // @namespace    http://tampermonkey.net/
-// @version      0.5.1
+// @version      0.6.0
 // @description  Fills input fields with URL parameters and submits form.
 // @downloadURL  https://trovu.net/userscripts/fill-and-submit.user.js
 // @author       Ralf Anders, Georg Jaehnig
@@ -9,24 +9,33 @@
 // @grant        none
 // ==/UserScript==
 
+// ==Changelog==
+// v0.6.0 - 2024-07-13
+// - Added parameter 'waitBeforeFill' to delay filling (and submitting).
+//
+// ==/Changelog==
+
 (function () {
   "use strict";
 
   const params = new URLSearchParams(decodeURIComponent(window.location.hash.substring(1)));
+  const waitBeforeFill = params.get("trovu[waitBeforeFill]") || params.get("serchilo[waitBeforeFill]") || 0;
 
-  // Process 'fill' params and set values.
-  // Also look for 'serchilo' params for backwards compatibility.
-  for (const [key, value] of params) {
-    if ((key.startsWith("trovu") || key.startsWith("serchilo")) && key.includes("[fill]")) {
-      const selector = key.match(/\[fill\]\[(.*?)\]$/)[1];
-      const element = document.querySelector(selector);
-      if (element) element.value = value;
+  setTimeout(function () {
+    // Process 'fill' params and set values.
+    // Also look for 'serchilo' params for backwards compatibility.
+    for (const [key, value] of params) {
+      if ((key.startsWith("trovu") || key.startsWith("serchilo")) && key.includes("[fill]")) {
+        const selector = key.match(/\[fill\]\[(.*?)\]$/)[1];
+        const element = document.querySelector(selector);
+        if (element) element.value = value;
+      }
     }
-  }
-  // Trigger 'submit' if specified.
-  const submitSelector = params.get("trovu[submit]") || params.get("serchilo[submit]");
-  if (submitSelector) {
-    const submitElement = document.querySelector(submitSelector);
-    if (submitElement) submitElement.click();
-  }
+    // Trigger 'submit' if specified.
+    const submitSelector = params.get("trovu[submit]") || params.get("serchilo[submit]");
+    if (submitSelector) {
+      const submitElement = document.querySelector(submitSelector);
+      if (submitElement) submitElement.click();
+    }
+  }, waitBeforeFill);
 })();
