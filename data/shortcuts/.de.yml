@@ -510,22 +510,6 @@ bol 1:
   examples:
   - arguments: goethe
     description: Suche nach "goethe" auf Bol.de
-bpo 0:
-  url: https://www.berliner-philharmoniker.de
-  title: Berlin Philharmonic Orchestra / Berliner Philharmoniker
-  tags:
-  - berlin
-  - classical-music
-  - cultural-events
-  - music
-  examples:
-  - description: Gehe zur Startseite
-bpo 1:
-  url: 'https://www.berliner-philharmoniker.de/konzerte/kalender/von/<datum: {type: date, output: YYYY-MM}>/'
-  include: bpo 0
-  examples:
-  - arguments: fr
-    description: Konzerte am kommenden Freitag
 bsvg 0:
   url: https://www.bsvg.net/
   title: Braunschweiger Verkehrs-GmbH
