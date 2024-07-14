@@ -791,7 +791,7 @@ dbmn 4:
   - arguments: berlin, hamburg, 10, 28.1.
     description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
 dbn 2:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&timesel=depart&journeyProducts=1016&start=1'
+  url: 'https://www.bahn.de/buchung/start?STS=false&so=<Start: {type: city}>&zo=<Ziel: {type: city}>&hd=<$now: {output: YYYY-MM-DD}>T<$now: {output: HH:mm:00}>&vm=03,04,05,06,07,08,09#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   include: db 0
   examples:
@@ -802,14 +802,14 @@ dbn 2:
   - arguments: sxf, txl
     description: Nächste Bahn-Verbindung von Flughafen Berlin-Tegel zum Flughafen Berlin-Schönefeld, Eingabe über IATA-Flughafencodes
 dbn 3:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&timesel=depart&journeyProducts=1016&start=1'
+  url: 'https://www.bahn.de/buchung/start?STS=false&so=<Start: {type: city}>&zo=<Ziel: {type: city}>&hd=<$now: {output: YYYY-MM-DD}>T<Zeit: {type: time, output: HH:mm:00}>&vm=03,04,05,06,07,08,09#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   include: db 0
   examples:
   - arguments: berlin, hamburg, 20:00
     description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
 dbn 4:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&time=<Zeit: {type: time, output: HH:mm}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&journeyProducts=1016&start=1'
+  url: 'https://www.bahn.de/buchung/start?STS=false&so=<Start: {type: city}>&zo=<Ziel: {type: city}>&trovuDummyParamForChangingOrder=<Zeit: {type: time, output: HH:mm:00}>&hd=<Datum: {type: date, output: YYYY-MM-DD}>T<Zeit: {type: time, output: HH:mm:00}>&vm=03,04,05,06,07,08,09#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
   include: db 0
   examples:
