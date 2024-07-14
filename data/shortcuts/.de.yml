@@ -793,7 +793,7 @@ dbmn 4:
 dbn 2:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&timesel=depart&journeyProducts=1016&start=1'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
-  include: dbm 0
+  include: db 0
   examples:
   - arguments: berlin, hamburg
     description: Nächste Bahn-Verbindung von Berlin nach Hamburg
