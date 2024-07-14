@@ -1,5 +1,5 @@
 bpo 0:
-  url: 'http://www.berliner-philharmoniker.de/konzerte/kalender/#/start=<$now:{type: date, output: YYYY-MM-DD}>'
+  url: https://www.berliner-philharmoniker.de/konzerte/kalender/#/start=<$now:{type:date,output:YYYY-MM-DD}>
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (today)
   tags:
   - berlin
@@ -7,7 +7,7 @@ bpo 0:
   - classical-music
   - music
 bpo 1:
-  url: 'http://www.berliner-philharmoniker.de/konzerte/kalender/#/?start=<datum:{type: date, output: YYYY-MM-DD}>'
+  url: https://www.berliner-philharmoniker.de/konzerte/kalender/#/?start=<datum:{type:date,output:YYYY-MM-DD}>
   title: Berlin Philharmonic Orchestra / Berliner Philharmoniker (date)
   tags:
   - berlin
