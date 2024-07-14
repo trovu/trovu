@@ -20,14 +20,14 @@
     country: de
     query: db b,hh,8,1.1.20
   response:
-    redirectUrl: https://mobile.bahn.de/bin/mobil/query.exe/dox?S=Berlin%21&Z=Hamburg%21&T=08%3A00&D=01.01.2020&start=1
+    redirectUrl: https://www.bahn.de/buchung/start?STS=false&so=Berlin&zo=Hamburg&trovuDummyParamForChangingOrder=08%3A00%3A00&hd=2020-01-01T08%3A00%3A00#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn
 - title: .de.db 4
   env:
     language: de
     country: pl
     query: .de.db b,hh,8,1.1.2020
   response:
-    redirectUrl: https://mobile.bahn.de/bin/mobil/query.exe/dox?S=Berlin%21&Z=Hamburg%21&T=08%3A00&D=01.01.2020&start=1
+    redirectUrl: https://www.bahn.de/buchung/start?STS=false&so=Berlin&zo=Hamburg&trovuDummyParamForChangingOrder=08%3A00%3A00&hd=2020-01-01T08%3A00%3A00#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn
 - title: fr.w berlin
   env:
     language: de
