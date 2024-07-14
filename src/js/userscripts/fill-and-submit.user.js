@@ -12,6 +12,7 @@
 // ==Changelog==
 // v0.6.1 - 2024-07-14
 // - Report error if fill param cannot be parsed.
+// - Report error if element cannot be found.
 //
 // v0.6.0 - 2024-07-13
 // - Added parameter 'waitBeforeFill' to delay filling (and submitting).
@@ -36,7 +37,11 @@
         }
         const selector = key.match(/\[fill\]\[(.*?)\]$/)[1];
         const element = document.querySelector(selector);
-        if (element) element.value = value;
+        if (!element) {
+          console.error(`Trovu fill-and-submit: Could not find element "${selector}"`);
+          continue;
+        }
+        element.value = value;
       }
     }
     // Trigger 'submit' if specified.
