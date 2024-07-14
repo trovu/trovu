@@ -105,6 +105,10 @@ export default [
         fileName: "process/index.html",
         template: template("src/html/process.html"),
       }),
+      replace({
+        preventAssignment: true,
+        GIT_INFO: JSON.stringify(gitInfo),
+      }),
     ],
   },
 ];
