@@ -1780,6 +1780,21 @@ djp 1:
   title: Django Doc Search
   tags:
   - old
+dl 0:
+  url: https://www.deepl.com/translator#./<$language>/
+  title: DeepL, homepage
+  tags:
+  - dictionary
+  - language
+dl 1:
+  url: https://www.deepl.com/translator#./<$language>/<text>
+  title: DeepL, translate to my language
+  tags:
+  - dictionary
+  - language
+  examples:
+  - arguments: arbol
+    description: Detect language of "arbol" and translate it into my language
 dlde 1:
   url: https://www.deepl.com/translator#en/de/<text>
   title: deepL Translator to German
