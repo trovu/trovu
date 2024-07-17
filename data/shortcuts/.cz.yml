@@ -25,6 +25,36 @@ bzs 1:
   examples:
   - arguments: vrtačka
     description: Hledej použitou vrtačku
+cd 0:
+  url: https://www.cd.cz/
+  title: České dráhy
+  tags:
+  - train
+  - travel
+  examples:
+  - description: Hlavní stránka Českých drah
+cd 2:
+  url: 'https://www.cd.cz/spojeni-a-jizdenka/api-hp/?data={"from":{"listId":0,"name":"<odkud: {type: city}>"},"to":{"listId":0,"name":"<kam: {type: city}>"},"isAdvanced":false,"doSearch":true}'
+  title: České dráhy, spojení
+  include: cd 0
+  examples:
+  - arguments: praha, brno
+    description: Vlak z Prahy do Brna
+  - arguments: a, b
+    description: totéž, ale se zkratkou SPZ
+  description: Informační systém pro vyhledávání spojů Českých drah.
+cd 3:
+  url: 'https://www.cd.cz/spojeni-a-jizdenka/api-hp/?data={"from":{"listId":0,"name":"<odkud: {type: city}>"},"to":{"listId":0,"name":"<kam: {type: city}>"},"time":"<čas: {type: time, output: HH:mm}>","isAdvanced":false,"doSearch":true}'
+  include: cd 2
+  examples:
+  - arguments: praha, brno, 20
+    description: Vlak z Prahy do Brna ve 20:00h
+cd 4:
+  url: 'https://www.cd.cz/spojeni-a-jizdenka/api-hp/?data={"from":{"listId":0,"name":"<odkud: {type: city}>"},"to":{"listId":0,"name":"<kam: {type: city}>"},"time":"<čas: {type: time, output: HH:mm}>","date":"<datum: {type: date, output: DD.MM.YYYY}>","isAdvanced":false,"doSearch":true}'
+  include: cd 2
+  examples:
+  - arguments: praha, brno, 20, 10.12.
+    description: Vlak z Prahy do Brna ve 20:00h v dne 10.12.
 g 1:
   url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.cz
