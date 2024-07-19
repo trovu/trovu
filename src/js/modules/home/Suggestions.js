@@ -328,7 +328,8 @@ export default class Suggestions {
   getIsAffiliate() {
     const div = document.createElement("div");
     div.className = "is-affiliate";
-    div.innerHTML = "🤝 Affiliate shortcut, we get paid for it.";
+    div.innerHTML =
+      '🤝 <a href="https://trovu.net/docs/shortcuts/tags/#is-affiliate">Affiliate</a> shortcut, we get paid for it.';
     return div;
   }
 
