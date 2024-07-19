@@ -1,6 +1,6 @@
 ---
 title: Fix der Bahn-Fahrplanauskunft
-description: Bitte das Userscript installieren.
+description: Bitte das Userscript installieren (aber ohne geht auch was).
 date: 2024-07-14
 tags:
     - shortcut
