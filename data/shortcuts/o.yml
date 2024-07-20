@@ -7159,7 +7159,7 @@ s 0:
   tags:
   - web-search
 s 1:
-  url: https://startpage.com/do/search?q=<query>
+  url: https://www.startpage.com/sp/search?query=<query>
   title: Startpage.com
   tags:
   - web-search
@@ -7312,7 +7312,7 @@ si 1:
   - key: si 1
     namespace: pka
 sim 1:
-  url: https://startpage.com/do/search?query=<query>&cat=pics
+  url: https://www.startpage.com/sp/search?query=<query>&cat=pics
   title: Startpage.com images
   tags:
   - web-search
