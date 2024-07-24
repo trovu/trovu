@@ -38,6 +38,14 @@ g 1:
   examples:
   - arguments: amsterdam
     description: Google zoeken naar "amsterdam"
+jw 1:
+  url: https://www.justwatch.com/be/recherche?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 zal 1:
   url: https://www.zalando.be/catalogus/?q=<product>
   title: Zalando.be

@@ -24,6 +24,14 @@ g 1:
   examples:
   - arguments: dublin
     description: Search Google for "dublin"
+jw 1:
+  url: https://www.justwatch.com/ie/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 luas 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.luas.ie%20<station>
   title: Luas Dublin Light Rail

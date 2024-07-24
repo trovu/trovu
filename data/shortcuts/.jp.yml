@@ -8,3 +8,11 @@ a 1:
   examples:
   - arguments: shakespeare
     description: Search for "shakespeare"
+jw 1:
+  url: https://www.justwatch.com/jp/検索?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"

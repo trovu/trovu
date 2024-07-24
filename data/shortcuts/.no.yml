@@ -1,3 +1,11 @@
+jw 1:
+  url: https://www.justwatch.com/no/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 yr 1:
   url: https://www.yr.no/nb/s%C3%B8k?q=<query>
   title: Yr.no norsk nettsted for værvarsler og annen meteorologisk informasjon

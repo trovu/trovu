@@ -81,6 +81,14 @@ ikea 1:
   examples:
   - arguments: matelas
     description: Cherche "matelas"
+jw 1:
+  url: https://www.justwatch.com/fr/recherche?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 kiabi 0:
   url: https://www.kiabi.com/
   title: Kiabi.com

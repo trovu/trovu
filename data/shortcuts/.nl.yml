@@ -90,6 +90,14 @@ ikea 1:
   examples:
   - arguments: matras
     description: zoek na matrassen
+jw 1:
+  url: https://www.justwatch.com/nl/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 kenteken 1:
   url: https://publiek.vwe.nl/?txtkentekenveld=<query>
   title: RDW kenteken zoeken

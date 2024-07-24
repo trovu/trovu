@@ -108,6 +108,14 @@ ikea 1:
   examples:
   - arguments: matrace
     description: Hledej matrace
+jw 1:
+  url: https://www.justwatch.com/cz/vyhledání?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 m 0:
   url: https://mapy.cz/
   title: Mapy.cz

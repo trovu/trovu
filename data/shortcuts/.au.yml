@@ -24,3 +24,11 @@ g 1:
   examples:
   - arguments: sydney
     description: Search Google for "sydney"
+jw 1:
+  url: https://www.justwatch.com/au/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"

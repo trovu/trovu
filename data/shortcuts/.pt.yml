@@ -1,3 +1,11 @@
 gn 1:
   url: https://news.google.com/search?q=<query>&hl=pt-PT&gl=PT&ceid=PT%3Apt-150
   title: Google News (Portugal)
+jw 1:
+  url: https://www.justwatch.com/pt/busca?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"

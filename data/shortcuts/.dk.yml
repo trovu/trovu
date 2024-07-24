@@ -53,6 +53,14 @@ ikea 1:
   examples:
   - arguments: madras
     description: Søger "madras"
+jw 1:
+  url: https://www.justwatch.com/dk/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 zal 1:
   url: https://www.zalando.dk/katalog/?q=<produkt>
   title: Zalando.dk
