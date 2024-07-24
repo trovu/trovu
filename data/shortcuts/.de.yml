@@ -4799,15 +4799,6 @@ jf 1:
   examples:
   - arguments: He pulse tube cooler operating down to 1.3 K
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
-jw 0:
-  url: https://www.justwatch.com/
-  title: JustWatch
-  tags:
-  - movies
-  - series
-  examples:
-  - description: Gehe zur Startseite
-  description: Streaming-Suchmaschine für Filme und Serien
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
   include: jw 0

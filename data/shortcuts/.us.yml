@@ -82,6 +82,13 @@ gps 1:
   examples:
   - arguments: iphone
     description: Search for "iphone"
+jw 1:
+  url: https://www.justwatch.com/us/search?q=<query>
+  title: JustWatch
+  tags:
+  - movies
+  - series
+  description: Streaming sources for films and movies
 sec 1:
   url: https://www.sec.gov/cgi-bin/browse-edgar?company=<company name>&CIK=&filenum=&State=&SIC=&owner=include&action=getcompany&type=
   title: EDGAR System of SEC for regulatory company information
