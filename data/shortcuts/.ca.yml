@@ -31,3 +31,11 @@ e 1:
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
+jw 1:
+  url: https://www.justwatch.com/ca/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"

@@ -550,6 +550,14 @@ ikea 1:
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
+jw 1:
+  url: https://www.justwatch.com/at/Suche?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 obv 0:
   url: https://www.obvsg.at/
   title: OBV - Österreichischer Bibliothekenverbund

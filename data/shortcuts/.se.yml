@@ -23,6 +23,14 @@ blocket 1:
   examples:
   - arguments: iphone
     description: Search for "iphone"
+jw 1:
+  url: https://www.justwatch.com/se/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 llt 2:
   url: https://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr=<Fra>&inpPointTo=<Till>&cmdAction=search
   title: Luleå Lokaltrafik

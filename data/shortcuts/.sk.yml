@@ -31,6 +31,14 @@ cp 4:
   examples:
   - arguments: bratislava, košice
     description: Vlak alebo bus z Bratislavy do Košić o 20:00h 10.12.
+jw 1:
+  url: https://www.justwatch.com/sk/vyhľadávať?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 zsr 2:
   url: 'https://www.zsr.sk/pre-cestujucich/vlakove-spojenia-elis/?hladajSpoj=true&txtFrom=<odkiaľ: {type: city}>&txtTo=<kam: {type: city}>'
   title: Vlakové spojenia ŽSR

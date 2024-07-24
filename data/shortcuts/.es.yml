@@ -132,6 +132,14 @@ ikea 1:
   examples:
   - arguments: colchón
     description: Buscar colchón
+jw 1:
+  url: https://www.justwatch.com/es/buscar?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 ma 0:
   url: https://www.milanuncios.com/
   title: Milanuncios

@@ -40,6 +40,14 @@ g 1:
   examples:
   - arguments: london
     description: Search Google for "london"
+jw 1:
+  url: https://www.justwatch.com/gb/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
 nr 0:
   url: https://www.nationalrail.co.uk/
   title: National Rail
