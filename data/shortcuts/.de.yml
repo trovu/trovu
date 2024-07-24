@@ -4801,7 +4801,9 @@ jf 1:
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<Suche>
-  include: jw 0
+  include:
+    key: jw 0
+    namespace: o
   examples:
   - arguments: simpsons
     description: Suche nach "simpsons"
