@@ -7486,7 +7486,7 @@ soup 1:
   tags:
   - old
 sp 1:
-  url: https://open.spotify.com/search/results/<query>
+  url: https://open.spotify.com/search/<query>
   title: Spotify
   tags:
   - music
@@ -9621,7 +9621,7 @@ zar 1:
       query: en.tr <1>
     created: '2023-04-10'
 zattoo 0:
-  url: https://watch.zattoo.com
+  url: https://zattoo.com/
   title: Zattoo
   tags:
   - old
