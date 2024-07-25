@@ -123,9 +123,6 @@ sic 1:
   examples:
   - arguments: '1231'
     description: Search descriptive information for SIC "1231"
-state 1:
-  url: https://www.state.<query>.us
-  title: USA State Websites
 yp 2:
   url: https://www.yellowpages.com/search?search_terms=<business name>&geo_location_terms=<city or zip>
   title: Yellow Pages
