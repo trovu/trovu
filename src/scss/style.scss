@@ -80,7 +80,7 @@ span.title {
 span.namespace,
 span.tag {
   display: inline-block;
-  background: var(--red);
+  background: var(--bs-red);
   color: white;
   padding: 0.05em 0.4em;
   border-radius: 0.2rem;
@@ -88,11 +88,11 @@ span.tag {
   white-space: nowrap;
 }
 span.namespace {
-  background: var(--red);
+  background: var(--bs-red);
   color: white;
 }
 span.tag {
-  background: var(--yellow);
+  background: var(--bs-yellow);
   color: black;
 }
 

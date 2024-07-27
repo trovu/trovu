@@ -22,9 +22,9 @@
     "validate-data": "node -r esm src/js/cli.js validate-data",
     "compile-data": "node -r esm src/js/cli.js compile-data --output ./dist/public/data.json",
     "normalize-data": "node -r esm src/js/cli.js normalize-data",
-    "clean": "rm -r dist/",
+    "clean": "rm -rf dist/",
     "sync": "rsync -vr --delete-after dist/public/ ntro:~/trovu.net/",
-    "deploy": "npm run clean || true && npm run build && npm run sync"
+    "deploy": "npm run clean && npm run build && npm run sync"
   },
   "repository": {
     "type": "git",
@@ -87,7 +87,7 @@
     "yaml-lint": "^1.7.0"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.3.3",
     "bootstrap.native": "^3.0.14",
     "countries-list": "^2.6.1",
     "dayjs": "^1.11.7",
