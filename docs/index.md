@@ -19,10 +19,6 @@ There is also a [video summarizing Trovu in 30 seconds](https://www.youtube.com/
 -   [`gfl1 ber, lpa, 1`](https://trovu.net/process/index.html#query=gfl1+ber%2Clpa%2C1) - search one-way flights with Google from Berlin to Las Palmas, on the first of next month
 -   [`bkg hh, 1, 3`](https://trovu.net/process/index.html#country=de&language=en&query=bkg+hh%2C1%2C3) - search accommodation on Booking.com in Hamburg from first to the third of next month
 
-## Legacy
-
-Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](https://trovu.net/docs/legacy/differences/).
-
 ## Links
 
 to Trovu profiles around the web:
@@ -32,6 +28,10 @@ to Trovu profiles around the web:
 -   [TikTok](https://www.tiktok.com/@trovu.net)
 -   [X (Twitter)](https://twitter.com/trovu_net)
 -   [Youtube](https://www.youtube.com/channel/UCyq5j5XLgkoJ7X7fKiAjOng)
+
+## Legacy
+
+Trovu is the successor of [Serchilo](https://github.com/georgjaehnig/serchilo-drupal) / [FindFind.it](https://www.findfind.it/). Read about the [differences](https://trovu.net/docs/legacy/differences/).
 
 ## Read more
 
