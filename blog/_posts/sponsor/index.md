@@ -1,5 +1,5 @@
 ---
-title: How to sponsor Trovu
+title: How to Sponsor Trovu
 description: You can fund via Github Sponsors or Stripe, and suggest more options.
 date: 2024-07-28
 tags:
