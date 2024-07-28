@@ -145,7 +145,6 @@ ${examples || ""}
       onSearchTextChange={setSearchText}
       searchBarPlaceholder="Enter a shortcut query here. Type a letter to get suggestions..."
       isShowingDetail={isShowingDetail}
-      throttle
     >
       {!searchText ? (
         <List.Section>
