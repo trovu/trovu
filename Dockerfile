@@ -13,7 +13,7 @@ RUN npm clean-install
 # Build the website
 RUN npm run build
 
-# Expose port 3000 for the service
+# Open port for the service
 EXPOSE 8081
 
 # Command to serve the app
