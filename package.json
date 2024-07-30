@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Trovu monorepo",
   "main": "",
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://trovu.net/docs/#sponsor"
+    }
+  ],
   "scripts": {
     "lint-js": "npx eslint src/",
     "lint-js-fix": "npx eslint src/ --fix",
