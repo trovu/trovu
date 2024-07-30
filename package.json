@@ -1,8 +1,14 @@
 {
   "name": "trovu",
   "version": "1.0.0",
-  "description": "Trovu monorepo",
+  "description": "Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with maximum privacy.",
   "main": "",
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://trovu.net/docs/#sponsor"
+    }
+  ],
   "scripts": {
     "lint-js": "npx eslint src/",
     "lint-js-fix": "npx eslint src/ --fix",
@@ -41,7 +47,7 @@
   "bugs": {
     "url": "https://github.com/trovu/trovu/issues"
   },
-  "homepage": "https://github.com/trovu/trovu#readme",
+  "homepage": "https://trovu.net/",
   "jest": {},
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

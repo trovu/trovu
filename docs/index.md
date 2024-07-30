@@ -33,7 +33,7 @@ to Trovu profiles around the web:
 
 Trovu will always be [free](https://github.com/trovu/trovu/blob/master/LICENSE). If you'd like to support the work, you can:
 
--   Become a sponsor on [GitHub](https://github.com/sponsors/trovu). There are various tiers with benefits, and your sponsorship will be visible here (which is also a nice form of support).
+-   Become a sponsor on [GitHub](https://github.com/sponsors/trovu). There are various tiers with benefits, starting from $2 per month, and your sponsorship will be visible on the GitHub sponsor page (which is also a nice form of support).
 -   Donate via [Stripe](https://donate.stripe.com/8wM28saBA8jlays7st). There are many payment options. If your preferred option is missing, please [reach out](https://trovu.net/docs/users/support/).
 
 ## Legacy
