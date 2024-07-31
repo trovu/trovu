@@ -5452,6 +5452,13 @@ vgs 4:
   examples:
   - arguments: saarbrücken hbf, zweibrücken hbf, 10, 20.10.
     description: Nächste Verbindung von Saarbrücken hbf nach Zweibrücken hbf um 10 Uhr am 20.10.
+viz 0:
+  url: https://viz.berlin.de/
+  title: Verkehrsinformationszentrale Berlin (VIZ)
+  tags:
+  - berlin
+  - traffic
+  - verkehr
 voebb 0:
   url: https://voebb.de/
   title: Verbund der Öffentlichen Bibliotheken Berlins
