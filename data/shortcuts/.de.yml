@@ -5351,6 +5351,13 @@ uwz 1:
   examples:
   - arguments: '10119'
     description: Zeige Wetterwarnungen für Postleitzahl 10119
+viz 0:
+  url: https://viz.berlin.de/
+  title: Verkehrsinformationszentrale Berlin (VIZ)
+  tags:
+  - berlin
+  - traffic
+  - verkehr
 vbb 0:
   url: https://www.vbb.de/fahrinfo/
   title: Verkehrsverbund Berlin-Brandenburg, Auskunft
