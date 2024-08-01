@@ -110,6 +110,10 @@ export default class Env {
     this.fetch = await this.getFetch();
     this.data = this.data || (await this.getData());
 
+    if (this.data.config.defaultKeyword) {
+      this.defaultKeyword = this.data.config.defaultKeyword;
+    }
+
     if (!params) {
       params = Env.getParamsFromUrl();
     }
