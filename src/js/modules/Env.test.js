@@ -92,8 +92,8 @@ describe("Env", () => {
     Env.getUrlHash = getUrlHashFooBar;
     expect(Env.getParamsFromUrl()).toEqual({ foo: "bar", baz: "boo" });
   });
-  test("setBoolParams", () => {
-    expect(Env.setBoolParams({ debug: "1", reload: "1", foo: "1" })).toEqual({
+  test("getBoolParams", () => {
+    expect(Env.getBoolParams({ debug: "1", reload: "1", foo: "1" })).toEqual({
       debug: true,
       reload: true,
     });
