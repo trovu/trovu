@@ -37,7 +37,7 @@ jobs:
       - run: pipenv install
       - run: pipenv run mkdocs build
       - run: npm run build-jsdoc
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: public-directory
           path: dist/public/
@@ -47,7 +47,7 @@ jobs:
     if: github.repository == 'trovu/trovu' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
           name: public-directory
           path: dist/public
