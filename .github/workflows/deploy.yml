@@ -25,7 +25,7 @@ jobs:
       - run: npm run build-blog
       - run: npm run build
       - run: npm run test-calls
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.11.6
       - uses: actions/cache@v4
