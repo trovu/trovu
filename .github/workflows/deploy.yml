@@ -25,10 +25,10 @@ jobs:
       - run: npm run build-blog
       - run: npm run build
       - run: npm run test-calls
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.11.6
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
