@@ -38,6 +38,17 @@
   examples:
   - arguments: https://krautreporter.de/5111-einseitig-so-entscheide-ich-wie-ich-uber-israel-und-gaza-berichte
     description: Remove paywall from Krautreporter article
+1337x 0:
+  url: https://1337x.to/
+  title: Torrent Search Engine | 1337x.to
+  tags:
+  - torrent
+1337x 1:
+  include: 1337x 0
+  url: https://1337x.to/search/<query>/1/
+  examples:
+  - arguments: mozart
+    description: Search for "mozart"
 2 1:
   url: https://<url>
   title: Go To Webpage
