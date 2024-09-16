@@ -2,6 +2,7 @@ describe('Homepage startup', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.get('[data-page-loaded="true"]', { timeout: 10000 }).should('exist');
+    cy.get('#query').as('query');
   });
 
   it('should redirect to hash with language and country', () => {
@@ -19,20 +20,20 @@ describe('Homepage startup', () => {
   });
 
   it('should have suggestions', () => {
-    cy.get('#query').first().focus().should('be.focused');
-    cy.get('#query').type('g');
+    cy.get('@query').first().focus().should('be.focused');
+    cy.get('@query').type('g');
     cy.contains('Google Web Homepage');
   });
 
   it('should have suggestions with type icons', () => {
-    cy.get('#query').first().focus().should('be.focused');
-    cy.get('#query').type('db');
+    cy.get('@query').first().focus().should('be.focused');
+    cy.get('@query').type('db');
     cy.contains('📅');
   });
 
   it('should submit a query', () => {
-    cy.get('#query').first().focus().should('be.focused');
-    cy.get('#query').type('debug:g{enter}');
+    cy.get('@query').first().focus().should('be.focused');
+    cy.get('@query').type('debug:g{enter}');
     cy.url().should(
       'include',
       '/process/index.html?#country=gb&language=en&query=debug%3Ag',
