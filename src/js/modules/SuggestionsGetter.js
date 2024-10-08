@@ -1,3 +1,4 @@
+/** @module SuggestionsGetter */
 import QueryParser from "./QueryParser.js";
 import Helper from "./Helper.js";
 
