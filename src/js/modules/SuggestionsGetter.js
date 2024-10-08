@@ -1,6 +1,6 @@
 /** @module SuggestionsGetter */
 import QueryParser from "./QueryParser.js";
-import Helper from "./Helper.js";
+import escapeStringRegexp from "escape-string-regexp";
 
 export default class SuggestionsGetter {
   constructor(env) {
@@ -195,7 +195,7 @@ export default class SuggestionsGetter {
       remainingQueryParts.push(part);
     }
     const remainingQuery = remainingQueryParts.join(" ");
-    const remainingQueryEscaped = Helper.escapeRegExp(remainingQuery);
+    const remainingQueryEscaped = escapeStringRegexp(remainingQuery);
     const regexp = new RegExp(remainingQueryEscaped, "i");
     return [regexp, filters];
   }
