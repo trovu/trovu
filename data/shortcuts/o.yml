@@ -326,11 +326,10 @@ adsh 1:
   - arguments: ADXL320
     description: Search for ADXL320 sensor in alldatasheet.com
 ae 0:
-  url: https://www.aliexpress.com/
-  title: Aliexpress
-  tags:
-  - aliexpress
-  - shopping
+  deprecated:
+    alternative:
+      query: axp
+    created: '2024-10-09'
 ae 1:
   deprecated:
     alternative:
