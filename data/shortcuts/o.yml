@@ -44,8 +44,8 @@
   tags:
   - torrent
 1337x 1:
-  include: 1337x 0
   url: https://1337x.to/search/<query>/1/
+  include: 1337x 0
   examples:
   - arguments: mozart
     description: Search for "mozart"
