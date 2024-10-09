@@ -6916,6 +6916,20 @@ rcd 1:
   examples:
   - arguments: list
     description: Search for List
+rcs 0:
+  url: https://www.raycast.com/store
+  title: Raycast Store
+  tags:
+  - macos
+  - raycast
+  examples:
+  - description: Go to homepage
+rcs 1:
+  url: https://www.raycast.com/search?q=<query>
+  include: rcs 0
+  examples:
+  - arguments: cli
+    description: Search for extensions about CLI
 rdoc 0:
   url: https://www.rdocumentation.org/
   title: RDocumentation
