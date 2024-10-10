@@ -39,6 +39,14 @@ Use one of these URL templates and add it where your browser allows to set custo
 
 (Note the `process/` part in the URL! You may need to adjust your `country`, `language` or `github` parameter.)
 
+## Mac OS
+
+### Raycast
+
+[Raycast](https://www.raycast.com/) is an extendable launcher for Mac OS. The [Trovu extension](https://www.raycast.com/jorges/trovu) allows calling Trovu shortcuts from everywhere in Mac OS, incl. an interface showing shortcut suggestions:
+
+![Screenshot](img/raycast.jpg)
+
 ## Android
 
 ### SearchBar Ex - Search Widget

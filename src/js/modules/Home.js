@@ -55,6 +55,67 @@ export default class Home {
     Home.setHeights();
     this.setListeners();
     this.toggleByQuery();
+    this.startTypewriter();
+  }
+
+  startTypewriter() {
+    const typewriter = (text, description, j) => {
+      if (j < text.length) {
+        typewriterQueryEl.textContent += text.charAt(j);
+        j++;
+        setTimeout(() => {
+          typewriter(text, description, j);
+        }, 50);
+      } else {
+        setTimeout(() => {
+          typewriterDescriptionEl.textContent = "→ " + description;
+        }, 500);
+      }
+    };
+    const typewriterQueryEl = document.querySelector("#typewriter .query");
+    const typewriterDescriptionEl = document.querySelector("#typewriter .description");
+    const examples = [
+      {
+        query: "g berlin",
+        description: "Search Google for Berlin",
+      },
+      {
+        query: "w berlin",
+        description: "Go to the Wikipedia article about Berlin",
+      },
+      {
+        query: "fr.w berlin",
+        description: "Go to the French Wikipedia article about Berlin",
+      },
+      {
+        query: "gd london, liverpool",
+        description: "Search for a route on Google Directions from London to Liverpool",
+      },
+      {
+        query: "gfl ber, ibiza, fr, 28",
+        description: "Search on Google Flights for a flight from Berlin to Ibiza for next Friday, return on the 28th",
+      },
+      {
+        query: "wg berlin",
+        description: 'Search Wikipedia for all mentions of "berlin" via Google',
+      },
+      {
+        query: "npm csv",
+        description: "Search the Node Package Manager for projects about CSV",
+      },
+    ];
+    let i = 0;
+    const displayNextExample = () => {
+      typewriterQueryEl.textContent = "";
+      typewriterDescriptionEl.textContent = "";
+      typewriter(examples[i].query, examples[i].description, 0);
+      setTimeout(displayNextExample, examples[i].description.length * 100);
+      i++;
+      if (i === examples.length) {
+        i = 0;
+      }
+    };
+    displayNextExample();
   }
 
   static setHeights() {

@@ -172,6 +172,7 @@
               autocapitalize="off"
               autocomplete="off"
               spellcheck="false"
+              placeholder="Type a letter to get suggestions."
             />
             <div class="input-group-append">
               <button type="submit" class="btn btn-primary">
@@ -186,47 +187,44 @@
       <div id="explainer" class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="cta">
-              Web search as if from your command line: Trovu's shortcuts take you directly to the search results of
-              other sites.<br />
-              <a target="_blank" href="{{urlDocs}}">Read more</a>, watch a
-              <a target="_blank" href="https://www.youtube.com/watch?v=gOUNhCion9M">video</a>, or try the examples:
+            <div id="typewriter">
+              <span class="query"></span>
+              <span class="description"></span>
             </div>
-            <dl>
-              <dt>
-                <a target="_blank" href="/process/index.html?#query=g%20berlin">g berlin</a>
-              </dt>
-              <dd>Search <strong>Google</strong> for Berlin</dd>
-              <dt>
-                <a target="_blank" href="/process/index.html?#query=w%20berlin">w berlin</a>
-              </dt>
-              <dd>Go to the <strong>Wikipedia</strong> article about Berlin</dd>
-              <dt>
-                <a target="_blank" href="/process/index.html?#query=fr.w%20berlin">fr.w berlin</a>
-              </dt>
-              <dd>Go to the <strong>French Wikipedia</strong> article about Berlin</dd>
-              <dt>
-                <a target="_blank" href="/process/index.html?#query=gd%20london%2C%20liverpool">gd london, liverpool</a>
-              </dt>
-              <dd>Search for a route on <strong>Google Directions</strong> from London to Liverpool</dd>
-              <dt>
-                <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20ibiza%2C%20fr%2C%2028"
-                  >gfl ber, ibiza, fr, 28</a
-                >
-              </dt>
-              <dd>
-                Search on <strong>Google Flights</strong> for a flight from Berlin to Ibiza, leaving next Friday,
-                returning on the 28th
-              </dd>
-              <dt>
-                <a target="_blank" href="/process/index.html?#query=wg%20berlin">wg berlin</a>
-              </dt>
-              <dd>Search <strong>Wikipedia</strong> for all mentions of "berlin" via <strong>Google</strong></dd>
-              <dt>
-                <a target="_blank" href="/process/index.html?#query=npm%20csv">npm csv</a>
-              </dt>
-              <dd>Search the <strong>Node Package Manager</strong> for modules projects about CSV</dd>
-            </dl>
+            <div class="cta">
+              <span class="highlight">Web search</span> as if from your <span class="highlight">command line</span>:
+              Trovu's shortcuts take you <span class="highlight">directly</span> to the
+              <span class="highlight">search results</span> of other sites. Use it from your
+              <a target="_blank" href="{{urlDocs}}users/integration/">browser, smartphone</a> or
+              <a target="_blank" href="https://www.raycast.com/jorges/trovu">Raycast</a>. To get started, watch a
+              <a target="_blank" href="https://www.youtube.com/watch?v=gOUNhCion9M">video</a>, read the
+              <a target="_blank" href="{{urlDocs}}">docs</a>, or our users' stories:
+            </div>
+            <div class="testimonials row">
+              <div class="col-sm-4">
+                <a target="_blank" href="{{urlBlog}}how-i-use-trovu-kilian">
+                  <img class="testimonial" src="/img/users/kilian.jpg" width="150" height="150" />
+                  <blockquote>
+                    "For a Unix nerd like me, it's ideal, almost like a #commandline for the web."
+                  </blockquote>
+                  <p>Kilian Evang, linguist & researcher, uses Trovu since 2007.</p>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a target="_blank" href="{{urlBlog}}how-i-use-trovu-hannes">
+                  <img class="testimonial" src="/img/users/hannes.jpg" width="150" height="150" />
+                  <blockquote>"A real productivity booster, helps me save a lot of time."</blockquote>
+                  <p>Johannes Neubarth, software developer, uses Trovu for over 10 years.</p>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a target="_blank" href="{{urlBlog}}how-i-use-trovu-georg">
+                  <img class="testimonial" src="/img/users/georg.jpg" width="150" height="150" />
+                  <blockquote>"I can't use the Internet without it anymore."</blockquote>
+                  <p>Georg Jähnig, software developer, created Trovu's first version in 2005.</p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
