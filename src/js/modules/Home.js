@@ -75,10 +75,35 @@ export default class Home {
     const typewriterQueryEl = document.querySelector("#typewriter .query");
     const typewriterDescriptionEl = document.querySelector("#typewriter .description");
     const examples = [
-      { query: "g berlin", description: "Search Google for Berlin" },
-      { query: "g paris", description: "Search Google for Paris" },
-      { query: "g london", description: "Search Google for London" },
-      { query: "g tokyo", description: "Search Google for Tokyo" },
+      {
+        query: "g berlin",
+        description: "Search Google for Berlin",
+      },
+      {
+        query: "w berlin",
+        description: "Go to the Wikipedia article about Berlin",
+      },
+      {
+        query: "fr.w berlin",
+        description: "Go to the French Wikipedia article about Berlin",
+      },
+      {
+        query: "gd london, liverpool",
+        description: "Search for a route on Google Directions from London to Liverpool",
+      },
+      {
+        query: "gfl ber, ibiza, fr, 28",
+        description:
+          "Search on Google Flights for a flight from Berlin to Ibiza, leaving next Friday, returning on the 28th",
+      },
+      {
+        query: "wg berlin",
+        description: 'Search Wikipedia for all mentions of "berlin" via Google',
+      },
+      {
+        query: "npm csv",
+        description: "Search the Node Package Manager for modules projects about CSV",
+      },
     ];
     let i = 0;
     const displayNextExample = () => {
