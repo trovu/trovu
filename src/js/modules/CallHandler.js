@@ -14,7 +14,7 @@ export default class CallHandler {
     const targetDomain = document.querySelector("#targetDomain");
     targetDomain.textContent = "";
 
-    const env = new Env({ context: "browser" });
+    const env = new Env({ context: "process" });
     await env.populate();
     new GitLogger(env.gitInfo).logVersion();
 
