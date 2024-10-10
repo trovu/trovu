@@ -119,15 +119,27 @@ span.tag {
   .cta {
     margin: 0.5em 1em;
     text-align: left;
-    font-style: italic;
-    color: #818182;
+    color: #000;
   }
   .testimonials {
-    text-align: center;
-  }
-  img.testimonial {
-    border-radius: 0.5em;
-    margin: 0.5 1em;
+    margin: 2em 1em;
+    img {
+      border-radius: 2em;
+      float: left;
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+    blockquote {
+      margin: 0;
+      padding: 0;
+      font-style: italic;
+      color: #666;
+    }
+    p {
+      margin: 1em 0;
+      padding: 0;
+      font-size: smaller;
+    }
   }
 }
 
