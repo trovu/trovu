@@ -101,7 +101,7 @@ export default class Home {
       },
       {
         query: "npm csv",
-        description: "Search the Node Package Manager for modules projects about CSV",
+        description: "Search the Node Package Manager for projects about CSV",
       },
     ];
     let i = 0;
