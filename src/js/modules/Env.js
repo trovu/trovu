@@ -362,12 +362,13 @@ export default class Env {
     let text;
     let url;
     switch (this.context) {
-      case "browser":
-        url = `/data.json?${this.gitInfo.commit.hash}`;
+      case "index":
+      case "process":
+        url = `/data.json?context=${this.context}&version=${this.gitInfo.commit.hash}`;
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
-        url = "https://trovu.net/data.json";
+        url = `https://trovu.net/data.json?context=${this.context}`;
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
