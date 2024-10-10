@@ -68,7 +68,7 @@ export default class Home {
         }, 50);
       } else {
         setTimeout(() => {
-          typewriterDescriptionEl.textContent = "▶︎ " + description;
+          typewriterDescriptionEl.textContent = "→ " + description;
         }, 500);
       }
     };
