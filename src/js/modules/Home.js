@@ -110,11 +110,11 @@ export default class Home {
       typewriterQueryEl.textContent = "";
       typewriterDescriptionEl.textContent = "";
       typewriter(examples[i].query, examples[i].description, 0);
+      setTimeout(displayNextExample, examples[i].description.length * 100);
       i++;
       if (i === examples.length) {
         i = 0;
       }
-      setTimeout(displayNextExample, 3000);
     };
     displayNextExample();
   }
