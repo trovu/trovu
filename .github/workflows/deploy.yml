@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 462-typewriter-animation-on-home
   pull_request:
     branches:
       - master
