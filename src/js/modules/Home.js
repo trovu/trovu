@@ -55,10 +55,10 @@ export default class Home {
     Home.setHeights();
     this.setListeners();
     this.toggleByQuery();
-    Home.startTypewriter();
+    this.startTypewriter();
   }
 
-  static startTypewriter() {
+  startTypewriter() {
     const typewriter = (text, description, j) => {
       if (j < text.length) {
         typewriterQueryEl.textContent += text.charAt(j);
