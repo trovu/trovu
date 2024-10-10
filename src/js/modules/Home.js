@@ -59,18 +59,18 @@ export default class Home {
   }
 
   static startTypewriter() {
-    const typewriter = (text, i) => {
-      if (i < text.length) {
-        typewriterQueryEl.textContent += text.charAt(i);
+    const typewriter = (query, description, i) => {
+      if (i < query.length) {
+        typewriterQueryEl.textContent += query.charAt(i);
         i++;
         setTimeout(() => {
-          typewriter(text, i);
+          typewriter(query, description, i);
         }, 50);
       }
-      if (i === text.length) {
+      if (i === query.length) {
         setTimeout(() => {
-          typewriterDescriptionEl.textContent = "▶︎ Search Google for Berlin";
-        }, 500);
+          typewriterDescriptionEl.textContent = "▶︎ " + description;
+        }, 2000);
       }
     };
 
@@ -78,13 +78,26 @@ export default class Home {
     const typewriterDescriptionEl = document.querySelector("#typewriter .description");
     typewriterQueryEl.textContent = "";
     typewriterDescriptionEl.textContent = "";
-    typewriter("g berlin", 0);
 
-    setTimeout(() => {
+    const examples = [
+      { query: "g berlin", description: "Search Google for Berlin" },
+      { query: "g paris", description: "Search Google for Paris" },
+    ];
+    let currentIndex = 0;
+
+    const displayNextExample = () => {
       typewriterQueryEl.textContent = "";
       typewriterDescriptionEl.textContent = "";
-      typewriter("g london", 0);
-    }, 1000);
+      typewriter(examples[currentIndex].query, examples[currentIndex].description, 0);
+      currentIndex++;
+      if (currentIndex < examples.length) {
+      } else {
+        currentIndex = 0;
+      }
+      setTimeout(displayNextExample, 1000);
+    };
+
+    displayNextExample();
   }
 
   static setHeights() {
