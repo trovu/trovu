@@ -59,42 +59,47 @@ export default class Home {
   }
 
   static startTypewriter() {
-    const typewriter = (query, description, i) => {
-      if (i < query.length) {
-        typewriterQueryEl.textContent += query.charAt(i);
+    const typewriter = (text, i, callback) => {
+      if (i < text.length) {
+        typewriterQueryEl.textContent += text.charAt(i);
         i++;
         setTimeout(() => {
-          typewriter(query, description, i);
+          typewriter(text, i, callback);
         }, 50);
+      } else {
+        setTimeout(callback, 500);
       }
-      if (i === query.length) {
-        setTimeout(() => {
-          typewriterDescriptionEl.textContent = "▶︎ " + description;
-        }, 2000);
-      }
+    };
+
+    const displayDescription = (description) => {
+      typewriterDescriptionEl.textContent = "▶︎ " + description;
     };
 
     const typewriterQueryEl = document.querySelector("#typewriter .query");
     const typewriterDescriptionEl = document.querySelector("#typewriter .description");
-    typewriterQueryEl.textContent = "";
-    typewriterDescriptionEl.textContent = "";
 
     const examples = [
       { query: "g berlin", description: "Search Google for Berlin" },
       { query: "g paris", description: "Search Google for Paris" },
+      { query: "g london", description: "Search Google for London" },
+      { query: "g tokyo", description: "Search Google for Tokyo" },
     ];
+
     let currentIndex = 0;
 
     const displayNextExample = () => {
       typewriterQueryEl.textContent = "";
       typewriterDescriptionEl.textContent = "";
-      typewriter(examples[currentIndex].query, examples[currentIndex].description, 0);
+      typewriter(examples[currentIndex].query, 0, () => {
+        displayDescription(examples[currentIndex].description);
+      });
       currentIndex++;
       if (currentIndex < examples.length) {
+        setTimeout(displayNextExample, 3000);
       } else {
         currentIndex = 0;
+        setTimeout(displayNextExample, 3000);
       }
-      setTimeout(displayNextExample, 1000);
     };
 
     displayNextExample();
