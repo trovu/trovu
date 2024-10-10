@@ -17,6 +17,15 @@ main {
     margin: 0.5em;
   }
 }
+main,
+footer {
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
 footer {
   display: none;
   background: #eee;
