@@ -93,8 +93,7 @@ export default class Home {
       },
       {
         query: "gfl ber, ibiza, fr, 28",
-        description:
-          "Search on Google Flights for a flight from Berlin to Ibiza, leaving next Friday, returning on the 28th",
+        description: "Search on Google Flights for a flight from Berlin to Ibiza for next Friday, return on the 28th",
       },
       {
         query: "wg berlin",
