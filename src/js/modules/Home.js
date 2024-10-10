@@ -59,20 +59,18 @@ export default class Home {
   }
 
   static startTypewriter() {
-    const typewriter = (text, i, callback) => {
+    const typewriter = (text, description, i) => {
       if (i < text.length) {
         typewriterQueryEl.textContent += text.charAt(i);
         i++;
         setTimeout(() => {
-          typewriter(text, i, callback);
+          typewriter(text, description, i);
         }, 50);
       } else {
-        setTimeout(callback, 500);
+        setTimeout(() => {
+          typewriterDescriptionEl.textContent = "▶︎ " + description;
+        }, 500);
       }
-    };
-
-    const displayDescription = (description) => {
-      typewriterDescriptionEl.textContent = "▶︎ " + description;
     };
 
     const typewriterQueryEl = document.querySelector("#typewriter .query");
@@ -90,16 +88,12 @@ export default class Home {
     const displayNextExample = () => {
       typewriterQueryEl.textContent = "";
       typewriterDescriptionEl.textContent = "";
-      typewriter(examples[currentIndex].query, 0, () => {
-        displayDescription(examples[currentIndex].description);
-      });
+      typewriter(examples[currentIndex].query, examples[currentIndex].description, 0);
       currentIndex++;
-      if (currentIndex < examples.length) {
-        setTimeout(displayNextExample, 3000);
-      } else {
+      if (currentIndex === examples.length) {
         currentIndex = 0;
-        setTimeout(displayNextExample, 3000);
       }
+      setTimeout(displayNextExample, 3000);
     };
 
     displayNextExample();
