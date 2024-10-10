@@ -55,6 +55,36 @@ export default class Home {
     Home.setHeights();
     this.setListeners();
     this.toggleByQuery();
+    Home.startTypewriter();
+  }
+
+  static startTypewriter() {
+    const typewriter = (text, i) => {
+      if (i < text.length) {
+        typewriterQueryEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(() => {
+          typewriter(text, i);
+        }, 50);
+      }
+      if (i === text.length) {
+        setTimeout(() => {
+          typewriterDescriptionEl.textContent = "▶︎ Search Google for Berlin";
+        }, 500);
+      }
+    };
+
+    const typewriterQueryEl = document.querySelector("#typewriter .query");
+    const typewriterDescriptionEl = document.querySelector("#typewriter .description");
+    typewriterQueryEl.textContent = "";
+    typewriterDescriptionEl.textContent = "";
+    typewriter("g berlin", 0);
+
+    setTimeout(() => {
+      typewriterQueryEl.textContent = "";
+      typewriterDescriptionEl.textContent = "";
+      typewriter("g london", 0);
+    }, 1000);
   }
 
   static setHeights() {

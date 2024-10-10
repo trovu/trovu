@@ -259,3 +259,12 @@ span.tag {
   padding-top: 0.5em;
   color: #aaa;
 }
+
+#typewriter {
+  text-align: left;
+  margin: 0.5em 1em;
+  .description {
+    color: #666;
+    font-style: italic;
+  }
+}
