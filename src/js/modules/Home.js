@@ -84,6 +84,13 @@ export default class Home {
         description: "Go to Google Maps for Berlin",
       },
       {
+        query: "db berlin, hh",
+        description: "Suche eine Bahnverbindung von Berlin nach Hamburg",
+        config: {
+          country: "de",
+        },
+      },
+      {
         query: "w berlin",
         description: "Go to the Wikipedia article about Berlin",
       },
