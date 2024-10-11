@@ -4,12 +4,12 @@ import Env from "./Env.js";
 import GitLogger from "./GitLogger.js";
 import Settings from "./home/Settings.js";
 import Suggestions from "./home/Suggestions.js";
+import "@fortawesome/fontawesome-free/js/all.min.js";
 
 /* eslint-disable no-unused-vars */
 import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
 import "bootstrap/dist/css/bootstrap.css";
 import countriesList from "countries-list";
-import "font-awesome/css/font-awesome.min.css";
 
 /** Set and manage the homepage. */
 

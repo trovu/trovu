@@ -1,7 +1,6 @@
 /** @module Suggestions */
 import QueryParser from "../QueryParser.js";
 import SuggestionsGetter from "../SuggestionsGetter.js";
-import "font-awesome/css/font-awesome.min.css";
 import jsyaml from "js-yaml";
 
 export default class Suggestions {
