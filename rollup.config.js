@@ -84,7 +84,7 @@ export default [
             dest: "dist/public/userscripts/",
           },
           { src: "src/opensearch/", dest: "dist/public/" },
-          { src: "node_modules/font-awesome/fonts/", dest: "dist/public/" },
+          { src: "node_modules/@fortawesome/fontawesome-free/webfonts/", dest: "dist/public/" },
           { src: "src/js/pwa/*", dest: "dist/public/" },
           { src: "src/manifest/*", dest: "dist/public/" },
           { src: "src/json/assetlinks.json", dest: "dist/public/.well-known/" },
