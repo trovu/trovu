@@ -64,8 +64,10 @@ export default class Suggestions {
     if (this.query) {
       if (suggestions.length === 0) {
         this.helpDiv.textContent = "No matching shortcuts found.";
+        return;
+      } else {
+        this.helpDiv.textContent = "Type ⬇️ / ⬆️ to navigate, ↵ to select.";
       }
-      return;
     }
 
     this.suggestionsList = document.createElement("ul");
