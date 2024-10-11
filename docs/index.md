@@ -56,7 +56,7 @@ to Trovu profiles around the web:
 -   [GitHub](https://github.com/trovu)
 -   [TikTok](https://www.tiktok.com/@trovu.net)
 -   [X (Twitter)](https://twitter.com/trovu_net)
--   [Youtube](https://www.youtube.com/channel/UCyq5j5XLgkoJ7X7fKiAjOng)
+-   [Youtube](https://www.youtube.com/@trovu_net)
 
 ## Sponsor
 
