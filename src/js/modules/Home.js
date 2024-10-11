@@ -80,6 +80,10 @@ export default class Home {
         description: "Search Google for Berlin",
       },
       {
+        query: "gm berlin",
+        description: "Go to Google Maps for Berlin",
+      },
+      {
         query: "w berlin",
         description: "Go to the Wikipedia article about Berlin",
       },
