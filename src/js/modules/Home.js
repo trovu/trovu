@@ -91,6 +91,13 @@ export default class Home {
         },
       },
       {
+        query: "cd praha, brno",
+        description: "Hledej spojení na České dráhy z Prahy do Brna",
+        config: {
+          country: "cz",
+        },
+      },
+      {
         query: "w berlin",
         description: "Go to the Wikipedia article about Berlin",
       },
