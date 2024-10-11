@@ -105,9 +105,7 @@ export default class Suggestions {
     if (this.hasTag(suggestion, "is-affiliate")) {
       fragment.appendChild(this.getIsAffiliate());
     }
-    if (this.env.namespaceInfos[suggestion.namespace].type === "site") {
-      fragment.appendChild(this.getTools(suggestion));
-    }
+    fragment.appendChild(this.getTools(suggestion));
     li.appendChild(fragment);
     li.addEventListener("click", () => {
       this.select(index);
@@ -337,16 +335,18 @@ export default class Suggestions {
   getTools(suggestion) {
     const div = document.createElement("div");
     div.className = "tools";
-    div.innerHTML += `✍️ <a href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">Edit</a> &nbsp; `;
-    div.innerHTML += `🔧 <a href="https://github.com/trovu/trovu/issues/new?title=${encodeURIComponent(
-      "Problem with shortcut `" +
-        suggestion.namespace +
-        "." +
-        suggestion.keyword +
-        " " +
-        suggestion.argumentCount +
-        "`",
-    )}">Report problem</a> &nbsp; `;
+    if (this.env.namespaceInfos[suggestion.namespace].type === "site") {
+      div.innerHTML += `✍️ <a href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">Edit</a> &nbsp; `;
+      div.innerHTML += `🔧 <a href="https://github.com/trovu/trovu/issues/new?title=${encodeURIComponent(
+        "Problem with shortcut `" +
+          suggestion.namespace +
+          "." +
+          suggestion.keyword +
+          " " +
+          suggestion.argumentCount +
+          "`",
+      )}">Report problem</a> &nbsp; `;
+    }
     div.innerHTML += "📋  ";
     div.appendChild(this.getCopyYamlLink(suggestion));
     return div;
