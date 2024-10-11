@@ -115,16 +115,22 @@ export default class Home {
         description: "Search the Node Package Manager for projects about CSV",
       },
     ];
-    let i = 0;
+    let i = -1;
     const displayNextExample = () => {
-      typewriterQueryEl.textContent = "";
-      typewriterDescriptionEl.textContent = "";
-      typewriter(examples[i].query, examples[i].description, 0);
-      setTimeout(displayNextExample, examples[i].description.length * 100);
       i++;
       if (i === examples.length) {
         i = 0;
       }
+      if (examples[i].config) {
+        if (examples[i].config.country && this.env.country !== examples[i].config.country) {
+          displayNextExample();
+          return;
+        }
+      }
+      typewriterQueryEl.textContent = "";
+      typewriterDescriptionEl.textContent = "";
+      typewriter(examples[i].query, examples[i].description, 0);
+      setTimeout(displayNextExample, examples[i].description.length * 100);
     };
     displayNextExample();
   }
