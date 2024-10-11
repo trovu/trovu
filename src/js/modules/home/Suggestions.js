@@ -61,8 +61,8 @@ export default class Suggestions {
       this.suggestionsDiv.removeChild(this.suggestionsDiv.firstChild);
     }
     this.helpDiv.textContent = "";
-    if (suggestions.length === 0) {
-      if (this.query) {
+    if (this.query) {
+      if (suggestions.length === 0) {
         this.helpDiv.textContent = "No matching shortcuts found.";
       }
       return;
