@@ -34,6 +34,15 @@ footer {
   padding: 0;
   padding-bottom: 1em;
   margin-top: 1em;
+  .left ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    li {
+      display: inline;
+      margin-right: 0.5em;
+    }
+  }
 }
 .navbar .container {
   padding: 0 2em;
