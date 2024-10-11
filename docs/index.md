@@ -11,6 +11,12 @@ Search 1000+ websites in a command-line way, with
 
 It's like [DuckDuckGo bangs](https://duckduckgo.com/bangs), but on steroids. And it's [free](https://github.com/trovu/trovu/blob/master/LICENSE).
 
+Use it from
+
+-   your [browser](https://trovu.net/docs/users/integration)
+-   [smartphone](https://trovu.net/docs/users/integration#android), or
+-   [Raycast](https://trovu.net/docs/users/integration#raycast)
+
 There is also a [video summarizing Trovu in 30 seconds](https://www.youtube.com/watch?v=gOUNhCion9M).
 
 ## Examples
