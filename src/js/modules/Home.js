@@ -320,11 +320,12 @@ export default class Home {
    * Add Opensearch tag.
    */
   addLinkSearch() {
-    this.linkSearch = document.createElement("link");
-    this.linkSearch.rel = "search";
-    this.linkSearch.type = "application/opensearchdescription+xml";
-    this.linkSearch.title = "Trovu";
-    document.head.appendChild(this.linkSearch);
+    const linkSearch = document.createElement("link");
+    linkSearch.id = "opensearch";
+    linkSearch.rel = "search";
+    linkSearch.type = "application/opensearchdescription+xml";
+    linkSearch.title = "Trovu";
+    document.head.appendChild(linkSearch);
   }
 
   /**
