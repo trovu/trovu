@@ -343,6 +343,7 @@ export default class Home {
       }
     }
     const paramsString = params.toString();
-    this.linkSearch.href = `/opensearch/?${paramsString}`;
+    const opensearchEl = document.getElementById("opensearch");
+    opensearchEl.href = `/opensearch/?${paramsString}`;
   }
 }
