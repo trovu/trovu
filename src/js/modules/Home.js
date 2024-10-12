@@ -37,7 +37,7 @@ export default class Home {
       document.querySelector("footer").style.display = "none";
     }
 
-    new Settings(this.env);
+    new Settings(this.env, this.updateLinkSearch);
 
     this.showInfoAlerts();
     this.setLocationHash();

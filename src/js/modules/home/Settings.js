@@ -4,8 +4,9 @@ import countriesList from "countries-list";
 /** Settings methods. */
 
 export default class Settings {
-  constructor(env) {
+  constructor(env, updateLinkSearch) {
     this.env = env;
+    this.updateLinkSearch = updateLinkSearch;
 
     this.setLanguagesAndCountriesList();
     this.displaySettings();
@@ -17,6 +18,7 @@ export default class Settings {
       () => {
         this.env.populate();
         this.displaySettings();
+        this.updateLinkSearch();
       },
       false,
     );
