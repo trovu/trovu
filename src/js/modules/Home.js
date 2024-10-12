@@ -20,6 +20,7 @@ export default class Home {
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
     this.addLinkSearch();
+    this.updateLinkSearch();
 
     this.env = new Env({ context: "index" });
 
@@ -319,25 +320,28 @@ export default class Home {
    * Add Opensearch tag.
    */
   addLinkSearch() {
+    this.linkSearch = document.createElement("link");
+    this.linkSearch.rel = "search";
+    this.linkSearch.type = "application/opensearchdescription+xml";
+    this.linkSearch.title = "Trovu";
+    document.head.appendChild(this.linkSearch);
+  }
+
+  /**
+   * Update Opensearch tag.
+   */
+  updateLinkSearch() {
     // Cannot use
     // this.env.buildUrlParamStr();
     // because populate() has not run yet.
     const params = new URLSearchParams(location.hash.substring(1));
-
     // Only keep relevant parameters.
     for (const [key] of params.entries()) {
       if (!["configUrl", "country", "defaultKeyword", "github", "language"].includes(key)) {
         params.delete(key);
       }
     }
-
     const paramsString = params.toString();
-    const link = document.createElement("link");
-    link.rel = "search";
-    link.type = "application/opensearchdescription+xml";
-    link.href = `/opensearch/?${paramsString}`;
-    link.title = "Trovu";
-
-    document.head.appendChild(link);
+    this.linkSearch.href = `/opensearch/?${paramsString}`;
   }
 }
