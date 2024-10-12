@@ -14,8 +14,9 @@ export default class Settings {
 
     window.addEventListener(
       "hashchange",
-      function () {
-        window.location.reload();
+      () => {
+        this.env.populate();
+        this.displaySettings();
       },
       false,
     );
