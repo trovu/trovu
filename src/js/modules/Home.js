@@ -17,15 +17,11 @@ export default class Home {
   constructor() {}
 
   async initialize() {
-    // Must be done before env.populate()
-    // otherwise Chrome does not autodiscover.
-    this.addOpensearch();
-    this.updateOpensearch();
-
     this.env = new Env({ context: "index" });
 
     // Init environment.
     await this.env.populate();
+    this.updateOpensearch();
 
     const gitLogger = new GitLogger(this.env.gitInfo);
     document.querySelector("#version").textContent = gitLogger.getVersion();
@@ -317,33 +313,44 @@ export default class Home {
   };
 
   /**
-   * Add Opensearch tag.
+   * Add and update Opensearch tag.
    */
-  addOpensearch() {
+  updateOpensearch() {
+    if (!this.env.language || !this.env.country) {
+      return;
+    }
+    // Find link rel="search" and delete it if it exists
+    const existingLinkSearch = document.querySelector('link[rel="search"]');
+    if (existingLinkSearch) {
+      existingLinkSearch.remove();
+    }
+
     const linkSearch = document.createElement("link");
     linkSearch.id = "opensearch";
     linkSearch.rel = "search";
     linkSearch.type = "application/opensearchdescription+xml";
-    linkSearch.title = "Trovu";
+
+    let title = "Trovu: ";
+    if (this.env.github) {
+      title += this.env.github;
+    } else if (this.env.configUrl) {
+      title += this.env.configUrl;
+    } else {
+      // Set fallback values.
+      this.env.language = this.env.language || "en";
+      this.env.country = this.env.country || "us";
+      title += this.env.language + "-" + this.env.country.toUpperCase();
+      if (this.env.defaultKeyword) {
+        title += " " + this.env.defaultKeyword;
+      }
+    }
+    linkSearch.title = title;
+
+    const paramsString = this.env.buildUrlParamStr();
+    linkSearch.href = `/opensearch/?${paramsString}`;
+
     document.head.appendChild(linkSearch);
   }
 
-  /**
-   * Update Opensearch tag.
-   */
-  updateOpensearch() {
-    // Cannot use
-    // this.env.buildUrlParamStr();
-    // because populate() has not run yet.
-    const params = new URLSearchParams(location.hash.substring(1));
-    // Only keep relevant parameters.
-    for (const [key] of params.entries()) {
-      if (!["configUrl", "country", "defaultKeyword", "github", "language"].includes(key)) {
-        params.delete(key);
-      }
-    }
-    const paramsString = params.toString();
-    const opensearchEl = document.getElementById("opensearch");
-    opensearchEl.href = `/opensearch/?${paramsString}`;
-  }
+  getOpensearchTitle(env) {}
 }
