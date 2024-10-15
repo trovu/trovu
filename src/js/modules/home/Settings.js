@@ -15,10 +15,10 @@ export default class Settings {
 
     window.addEventListener(
       "hashchange",
-      () => {
-        this.env.populate();
-        this.updateOpensearch();
+      async () => {
+        await this.env.populate();
         this.displaySettings();
+        this.updateOpensearch();
       },
       false,
     );
