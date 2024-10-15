@@ -19,8 +19,8 @@ export default class Home {
   async initialize() {
     // Must be done before env.populate()
     // otherwise Chrome does not autodiscover.
-    this.addLinkSearch();
-    this.updateLinkSearch();
+    this.addOpensearch();
+    this.updateOpensearch();
 
     this.env = new Env({ context: "index" });
 
@@ -37,7 +37,7 @@ export default class Home {
       document.querySelector("footer").style.display = "none";
     }
 
-    new Settings(this.env, this.updateLinkSearch);
+    new Settings(this.env, this.updateOpensearch);
 
     this.showInfoAlerts();
     this.setLocationHash();
@@ -319,7 +319,7 @@ export default class Home {
   /**
    * Add Opensearch tag.
    */
-  addLinkSearch() {
+  addOpensearch() {
     const linkSearch = document.createElement("link");
     linkSearch.id = "opensearch";
     linkSearch.rel = "search";
@@ -331,7 +331,7 @@ export default class Home {
   /**
    * Update Opensearch tag.
    */
-  updateLinkSearch() {
+  updateOpensearch() {
     // Cannot use
     // this.env.buildUrlParamStr();
     // because populate() has not run yet.
