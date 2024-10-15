@@ -107,9 +107,10 @@ export default class Env {
    * @param {array} params - List of parameters to be used in environment.
    */
   async populate(params) {
+    this.namespaces = [];
     this.configUrl = "";
     this.fetch = await this.getFetch();
-    this.data = this.data || (await this.getData());
+    this.data = await this.getData();
 
     if (this.data.config.defaultKeyword) {
       this.defaultKeyword = this.data.config.defaultKeyword;
