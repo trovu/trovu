@@ -4,9 +4,9 @@ import countriesList from "countries-list";
 /** Settings methods. */
 
 export default class Settings {
-  constructor(env, updateLinkSearch) {
+  constructor(env, updateOpensearch) {
     this.env = env;
-    this.updateLinkSearch = updateLinkSearch;
+    this.updateOpensearch = updateOpensearch;
 
     this.setLanguagesAndCountriesList();
     this.displaySettings();
@@ -17,8 +17,8 @@ export default class Settings {
       "hashchange",
       () => {
         this.env.populate();
+        this.updateOpensearch();
         this.displaySettings();
-        this.updateLinkSearch();
       },
       false,
     );
