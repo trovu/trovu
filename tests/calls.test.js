@@ -21,6 +21,7 @@ async function main() {
 }
 
 async function testCall(call) {
+  window.localStorage.clear();
   const env = new Env({ context: "node" });
   env.getNavigatorLanguage = () => "en-US";
   await env.populate(call.env);
