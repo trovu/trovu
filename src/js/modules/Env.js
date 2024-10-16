@@ -108,7 +108,7 @@ export default class Env {
    */
   async populate(params) {
     this.fetch = await this.getFetch();
-    this.data = await this.getData();
+    this.data = this.data || (await this.getData());
 
     if (this.data.config.defaultKeyword) {
       this.defaultKeyword = this.data.config.defaultKeyword;
