@@ -12,16 +12,6 @@ export default class Settings {
     this.displaySettings();
 
     document.querySelector("#settings").addEventListener("hidden.bs.modal", this.saveSettings);
-
-    window.addEventListener(
-      "hashchange",
-      async () => {
-        await this.env.populate();
-        this.displaySettings();
-        this.updateOpensearch();
-      },
-      false,
-    );
   }
 
   /**

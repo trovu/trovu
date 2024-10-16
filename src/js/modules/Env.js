@@ -89,7 +89,9 @@ export default class Env {
     const originalParams = Env.getParamsFromUrl();
     const params = this.buildUrlParams(originalParams, moreParams);
     const urlSearchParams = new URLSearchParams();
-    Object.entries(params).forEach(([key, value]) => urlSearchParams.set(key, value));
+    Object.entries(params).forEach(([key, value]) => {
+      if (value !== undefined) urlSearchParams.set(key, value);
+    });
     urlSearchParams.sort();
     const paramStr = urlSearchParams.toString();
     return paramStr;

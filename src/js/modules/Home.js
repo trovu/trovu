@@ -53,6 +53,13 @@ export default class Home {
     this.setListeners();
     this.toggleByQuery();
     this.startTypewriter();
+    window.addEventListener(
+      "hashchange",
+      function () {
+        window.location.reload();
+      },
+      false,
+    );
   }
 
   startTypewriter() {
@@ -240,7 +247,7 @@ export default class Home {
     const alertMsg = alert.querySelector("span");
     const alertClose = alert.querySelector("button");
     alertClose.addEventListener("click", () => {
-      const paramStr = this.env.buildUrlParamStr({ status: "" });
+      const paramStr = this.env.buildUrlParamStr({ query: undefined, status: undefined });
       window.location.hash = "#" + paramStr;
     });
     if (params.status) {
