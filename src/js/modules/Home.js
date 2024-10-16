@@ -351,6 +351,4 @@ export default class Home {
 
     document.head.appendChild(linkSearch);
   }
-
-  getOpensearchTitle(env) {}
 }
