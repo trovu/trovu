@@ -53,6 +53,13 @@ export default class Home {
     this.setListeners();
     this.toggleByQuery();
     this.startTypewriter();
+    window.addEventListener(
+      "hashchange",
+      function () {
+        window.location.reload();
+      },
+      false,
+    );
   }
 
   startTypewriter() {
