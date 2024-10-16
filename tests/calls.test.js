@@ -23,8 +23,6 @@ async function main() {
 async function testCall(call) {
   const env = new Env({ context: "node" });
   env.getNavigatorLanguage = () => "en-US";
-  env.language = "en";
-  env.country = "us";
   await env.populate(call.env);
   const response = await CallHandler.getRedirectResponse(env);
   if (call.response.redirectUrl) {
