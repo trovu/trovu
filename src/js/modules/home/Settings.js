@@ -4,8 +4,9 @@ import countriesList from "countries-list";
 /** Settings methods. */
 
 export default class Settings {
-  constructor(env) {
+  constructor(env, updateOpensearch) {
     this.env = env;
+    this.updateOpensearch = updateOpensearch;
 
     this.setLanguagesAndCountriesList();
     this.displaySettings();
@@ -14,8 +15,10 @@ export default class Settings {
 
     window.addEventListener(
       "hashchange",
-      function () {
-        window.location.reload();
+      async () => {
+        await this.env.populate();
+        this.displaySettings();
+        this.updateOpensearch();
       },
       false,
     );
