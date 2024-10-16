@@ -107,6 +107,12 @@ export default class Env {
    * @param {array} params - List of parameters to be used in environment.
    */
   async populate(params) {
+    this.namespaces = undefined;
+    this.github = undefined;
+    this.configUrl = undefined;
+    this.language = undefined;
+    this.country = undefined;
+
     this.fetch = await this.getFetch();
     this.data = this.data || (await this.getData());
 
