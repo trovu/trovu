@@ -16,7 +16,7 @@ export default class Settings {
     window.addEventListener(
       "hashchange",
       async () => {
-        await this.env.populate();
+        await this.env.populate({ namespaces: [], configUrl: "" });
         this.displaySettings();
         this.updateOpensearch();
       },
