@@ -36,7 +36,7 @@ git clone https://github.com/trovu/trovu.git
 cd trovu
 npm clean-install      # Install dependencies
 npm run build          # Build the website including data
-npm run serve          # Run the local server
+npm run dev-server     # Run the local development server
 ```
 
 For building more, like the blog and the docs, have a look on the [GitHub workflow](https://github.com/trovu/trovu/blob/master/.github/workflows/deploy.yml).
