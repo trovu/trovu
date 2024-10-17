@@ -72,6 +72,19 @@ Use one of these URL templates and add it where your browser allows to set custo
 
 ## Android
 
+### Simple Search
+
+A free, generic app, allows also adding custom search engines.
+
+1. Tap on the 3 dots in the upper right corner
+1. Tap on _Settings_
+1. Tap on _Search engine_
+1. Pick one of the _Custom_ ones
+1. In the input field, enter a URL template like in [Browser / other](#other)
+1. Tap _Confirm_
+
+![Screenshot](img/simple_search.jpg)
+
 ### SearchBar Ex - Search Widget
 
 This a free, generic app to search any search engine that supports URL with a `%s` placeholder.
