@@ -2,16 +2,21 @@
 
 ## General
 
-Here are short tutorial how to use and add Trovu to your web browsing environment. Mostly, there are two approaches:
+You can integrate Trovu into your web browsing experience using one of two methods:
 
-1.  You replace your current default search engine with Trovu. This way, all your searches will be now sent to Trovu. This can be combined with a [Default keyword](./advanced.md#default-keyword), so that any query not being recognized as a Trovu shortcut will be sent to your usual default search engine.
-2.  You add Trovu as an additional search engine next to your default one, and every time you want to call a Trovu shortcut, you must for instance prefix your query, e.g. with `t`.
+### Set Trovu as Your Default Search Engine
 
-For beginners, I now tend to recommend option 2.
+-   By replacing your current default search engine with Trovu, all your searches will be directed to Trovu.
+-   You can enhance this setup with a [Default Keyword](./advanced.md#default-keyword), allowing any unrecognized Trovu shortcut to revert to your usual default search engine.
 
-Many other beginners went for option 1, and experienced how a first word of a phrase they just wanted to Google for turned out to be a Trovu shortcut keyword, causing some disruption in their work.
+### Add Trovu as an Additional Search Engine
 
-With option 2, it remains much more predictable what your browser is doing. It gives you the opportunity to start testing out some Trovu shortcuts exactly (and only) when you want it.
+-   This method allows you to keep your current default search engine while adding Trovu alongside it.
+-   To use Trovu shortcuts, simply prefix your query with a designated keyword (e.g., `t`).
+
+I recommend the second option for beginners. Many users who chose the first option found that their intended searches were disrupted when the first word of their query triggered a Trovu shortcut.
+
+With Option 2, you maintain greater control and predictability over your searches, allowing you to experiment with Trovu shortcuts only when you choose to.
 
 ## Desktop web browser
 
