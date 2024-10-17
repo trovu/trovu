@@ -33,7 +33,7 @@ With Option 2, you maintain greater control and predictability over your searche
 
         about:preferences#search
 
-1.  Under **Default Search Engine**, select _Trovu_.
+1.  Optional: Under **Default Search Engine**, select _Trovu_.
 
 ### Chrome
 
@@ -45,8 +45,13 @@ With Option 2, you maintain greater control and predictability over your searche
         chrome://settings/searchEngines
 
 1.  There, right to **Manage search engines** is a search field. Search for _Trovu_.
-1.  When found, click the 3 dots right to it.
-1.  Select **Make default**.
+1.  Now you can either
+    -   Make Trovu your default search engine:
+        1.  When found, click the 3 dots right to it.
+        1.  Select **Make default**.
+    -   Set a keyword for Trovu, and use it only with this keyword
+        -   Click the 🖊️ pen.
+        -   Edit _shortcut_, e.g. to `t`.
 
 ### Other
 
