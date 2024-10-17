@@ -1,5 +1,18 @@
 # Use Trovu on your device
 
+## General
+
+Here are short tutorial how to use and add Trovu to your web browsing environment. Mostly, there are two approaches:
+
+1.  You replace your current default search engine with Trovu. This way, all your searches will be now sent to Trovu. This can be combined with a [Default keyword](./advanced.md#default-keyword), so that any query not being recognized as a Trovu shortcut will be sent to your usual default search engine.
+2.  You add Trovu as an additional search engine next to your default one, and every time you want to call a Trovu shortcut, you must for instance prefix your query, e.g. with `t`.
+
+For beginners, I now tend to recommend option 2.
+
+Many other beginners went for option 1, and experienced how a first word of a phrase they just wanted to Google for turned out to be a Trovu shortcut keyword, causing some disruption in their work.
+
+With option 2, it remains much more predictable what your browser is doing. It gives you the opportunity to start testing out some Trovu shortcuts exactly (and only) when you want it.
+
 ## Desktop web browser
 
 ### Firefox
