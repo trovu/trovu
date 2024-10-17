@@ -3378,7 +3378,7 @@ gd 2:
   - arguments: new york, chicago
     description: Get a route from New York to Chicago
 gdb 2:
-  url: 'https://www.google.com/maps/dir/?api=1&origin=<start: {type: city}>&destination=<destination: {type: city}>&travelmode= bicycling'
+  url: 'https://www.google.com/maps/dir/?api=1&origin=<start: {type: city}>&destination=<destination: {type: city}>&travelmode=bicycling'
   title: Google Maps Directions (Routing), by Bike
   tags:
   - bike
