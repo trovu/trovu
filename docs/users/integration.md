@@ -7,7 +7,7 @@ You can integrate Trovu into your web browsing experience using one of two metho
 ### Set Trovu as Your Default Search Engine
 
 -   By replacing your current default search engine with Trovu, all your searches will be directed to Trovu.
--   You can enhance this setup with a [Default Keyword](./advanced.md#default-keyword), allowing any unrecognized Trovu shortcut to revert to your usual default search engine.
+-   You can enhance this setup with a [Default Keyword](advanced.md#default-keyword), allowing any unrecognized Trovu shortcut to revert to your usual default search engine.
 
 ### Add Trovu as an Additional Search Engine
 
