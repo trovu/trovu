@@ -43,7 +43,7 @@ Use one of these URL templates and add it where your browser allows to set custo
 
 ### Raycast
 
-[Raycast](https://www.raycast.com/) is an extendable launcher for Mac OS. The [Trovu extension](https://www.raycast.com/jorges/trovu) allows calling Trovu shortcuts from everywhere in Mac OS, incl. an interface showing shortcut suggestions:
+[Raycast](<https://en.wikipedia.org/wiki/Raycast_(software)>) is an extendable launcher for Mac OS. The [Trovu extension](https://www.raycast.com/jorges/trovu) allows calling Trovu shortcuts from everywhere in Mac OS, incl. an interface showing shortcut suggestions:
 
 ![Screenshot](img/raycast.jpg)
 
