@@ -71,13 +71,14 @@ Now, you can enter Trovu queries which will be redirected to your browser.
 Firefox allows adding custom search engines: Any URL with a `%s` placeholder works.
 
 1. Tap on the address bar
-1. Tap on _🔍 Search engine_
-1. Tap on _⚙️ Search engine settings_
+1. Tap on the search engine icon left to the address bar. Likely, it will be the Google icon
+1. Tap on _⚙️ Search settings_
+1. Tap on _Default search engine_
 1. Tap on _➕ Add search engine_
-1. Tap on Other
 1. Enter a name, e.g. `Trovu`
-1. Enter the template URL, like for [Other](#other)
-1. Tap on ✔ (in the upper right corner)
+1. Enter the _URL to use for search_, like described under [Other](#other)
+1. Tap on _Save_ (in the upper right corner)
+1. Now you are back on the list of search engines. You may pick your newly added _Trovu_ as the default one.
 
 Here is an example setting for the user `georgjaehnig`:
 
