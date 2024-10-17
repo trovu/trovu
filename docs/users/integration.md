@@ -22,8 +22,6 @@ With Option 2, you maintain greater control and predictability over your searche
 
 ### Firefox
 
-![Screenshot](img/firefox.png)
-
 1.  Open [trovu.net](https://trovu.net/), either [with your GitHub username](advanced.md) or without:
     -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
     -   `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
@@ -34,6 +32,8 @@ With Option 2, you maintain greater control and predictability over your searche
         about:preferences#search
 
 1.  Optional: Under **Default Search Engine**, select _Trovu_.
+
+![Screenshot](img/firefox.png)
 
 ### Chrome
 
