@@ -4680,6 +4680,10 @@ isg 1:
   examples:
   - arguments: linux_foundation
     description: Show content of user linux_foundation
+isgg 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=instagram.com&q=<query>
+  title: Instagram via Google
+  include: isg 1
 ist 0:
   url: https://www.istockphoto.com
   title: Istockphoto
