@@ -6190,6 +6190,27 @@ ov 1:
   title: OnVista
   tags:
   - old
+owid 0:
+  url: https://ourworldindata.org/
+  title: Our World in Data
+  tags:
+  - data
+  - research
+  - science
+  - statistics
+  examples:
+  - description: Go to homepage
+owid 1:
+  url: https://ourworldindata.org/search?q=<query>
+  title: Our World in Data
+  include: owid 0
+  examples:
+  - arguments: covid
+    description: Search for "covid"
+owidg 1:
+  url: https://www.google.com/search?hl=<$language>&q=site:ourworldindata.org%20<query>&ie=utf-8
+  title: Our World in Data via Google
+  include: owid 1
 owm 0:
   url: https://openweathermap.org/
   title: OpenWeatherMap
