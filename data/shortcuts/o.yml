@@ -5831,6 +5831,10 @@ npm 1:
   examples:
   - arguments: mkdir
     description: search for a module to create folders on the filesystem
+npmg 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=npmjs.org&q=<query>
+  title: Node.js Package Manager via Google
+  include: npm 1
 npr 0:
   url: https://www.npr.org/
   title: National Public Radio (USA)
