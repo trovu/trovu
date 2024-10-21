@@ -1384,11 +1384,21 @@ cutlist 1:
   examples:
   - arguments: tagesschau
     description: search cutlists for "tagesschau"
-cve 1:
-  url: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=<query>
+cve 0:
+  url: https://cve.mitre.org/
   title: CVE Common vulnerabilities and exposures
   tags:
-  - old
+  - cve
+  - security
+  - vulnerability
+cve 1:
+  url: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=<query>
+  include: cve 0
+  examples:
+  - arguments: CVE-2017-0144
+    description: Search for CVE-2017-0144
+  - arguments: wordpress
+    description: Search for vulnerabilities in Wordpress
 cy 0:
   include:
   - key: cy 0
