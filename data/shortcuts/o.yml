@@ -1391,6 +1391,8 @@ cve 0:
   - cve
   - security
   - vulnerability
+  examples:
+  - description: Go to homepage
 cve 1:
   url: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=<query>
   include: cve 0
