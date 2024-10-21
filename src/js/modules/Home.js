@@ -122,8 +122,35 @@ export default class Home {
         description: 'Search Wikipedia for all mentions of "berlin" via Google',
       },
       {
+        query: "bkg berlin, fr, 28",
+        description: "Search on Booking.com for a hotel in Berlin from next Friday until the 28th",
+      },
+      {
+        query: "en tree",
+        description: "Look up the word 'tree' in the English dictionary",
+        config: {
+          country: "de",
+        },
+      },
+      {
+        query: "owid fertility",
+        description: "Look up stats on fertility at Our World in Data",
+      },
+      {
+        query: "gr pinker",
+        description: "Search on Goodreads for books by Steven Pinker",
+      },
+      {
         query: "npm csv",
         description: "Search the Node Package Manager for projects about CSV",
+      },
+      {
+        query: "cve wordpress",
+        description: "Search for Common vulnerabilities and exposures of Wordpress",
+      },
+      {
+        query: "ec berlin",
+        description: "Search Ecosia for Berlin",
       },
     ];
     let i = -1;
