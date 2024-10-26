@@ -5,6 +5,7 @@ import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
 import terser from "@rollup/plugin-terser";
+import typescript from "@rollup/plugin-typescript";
 import fs from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
@@ -48,7 +49,7 @@ const template = (templateFilePath) => {
 
 export default [
   {
-    input: "src/js/index.js",
+    input: "src/js/index.ts",
     output: output,
     external: ["node-fetch"], // Only needed for Raycast
     plugins: [
@@ -90,10 +91,11 @@ export default [
           { src: "src/json/assetlinks.json", dest: "dist/public/.well-known/" },
         ],
       }),
+      typescript(), // Add the TypeScript plugin here
     ],
   },
   {
-    input: "src/js/process.js",
+    input: "src/js/process.ts",
     output: output,
     external: ["node-fetch"], // Only needed for Raycast
     plugins: [
@@ -109,6 +111,7 @@ export default [
         preventAssignment: true,
         GIT_INFO: JSON.stringify(gitInfo),
       }),
+      typescript(), // Add the TypeScript plugin here
     ],
   },
 ];
