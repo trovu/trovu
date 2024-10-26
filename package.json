@@ -65,6 +65,7 @@
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-replace": "^6.0.1",
     "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -90,6 +91,7 @@
     "rollup-plugin-scss": "^4.0.0",
     "rollup-plugin-watch": "^1.0.4",
     "sass": "^1.39.0",
+    "typescript": "^5.6.3",
     "yaml-lint": "^1.7.0"
   },
   "dependencies": {
