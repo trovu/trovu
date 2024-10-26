@@ -63,7 +63,7 @@ export default [
         output: "dist/public/style.css",
         outputStyle: isProduction ? "compressed" : "expanded",
       }),
-      execute("npm run compile-data"),
+      // execute("npm run compile-data"),
       isProduction && terser(),
       html({
         fileName: "index.html",
