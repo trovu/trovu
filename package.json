@@ -26,7 +26,7 @@
     "test": "npm run lint-yaml && npm run test-unit && npm run test-calls && npm run test-fe",
     "test-calls": "jest --verbose calls",
     "test-fe": "cypress run",
-    "test-shortcuts": "node -r esm src/js/cli.js test-shortcuts",
+    "test-shortcuts": "node dist/cli.mjs test-shortcuts",
     "test-unit": "jest --verbose env helper src/js/ ",
     "validate-data": "node dist/cli.mjs validate-data",
     "watch": "rollup --config --watch --bundleConfigAsCjs"
