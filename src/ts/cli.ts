@@ -61,6 +61,7 @@ program
   .command("test-shortcuts")
   .description("Test shortcut URLs")
   .option("-f, --filter <string>", "only apply to shortcuts containing <string>")
+  .option("-v, --verbose", "log fetches and succeeded tests")
   .action(testShortcuts);
 
 program.command("validate-data").description("Validate YAML data against schema").action(validateData);
