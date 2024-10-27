@@ -50,10 +50,16 @@ export default class ShortcutTester {
       },
     })
       .then((response) => {
-        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        if (!response.ok) {
+          console.log(`${namespace}.${key}\t❌ failed with HTTP error code ${response.status}: ${response.statusText}`);
+          return undefined;
+        }
         return response.text();
       })
       .then((text) => {
+        if (text === undefined) {
+          return;
+        }
         const regex = new RegExp(testExpect, "m");
         if (regex.test(text)) {
           if (!this.options.quiet) {
