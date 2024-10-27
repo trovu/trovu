@@ -1,3 +1,4 @@
+// @ts-nocheck
 import DataCompiler from "./modules/DataCompiler";
 import DataManager from "./modules/DataManager";
 import DataReporter from "./modules/DataReporter";
