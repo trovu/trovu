@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export default class GitLogger {
   constructor(gitInfo) {
     this.gitInfo = gitInfo;
