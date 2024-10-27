@@ -41,7 +41,9 @@ export default class ShortcutTester {
   }
 
   fetchAndTestUrl(namespace, key, url, testExpect) {
-    console.log(`${namespace}.${key}\t⏳ ${url}`);
+    if (!this.options.quiet) {
+      console.log(`${namespace}.${key}\t⏳ ${url}`);
+    }
     fetch(url, {
       headers: {
         "User-Agent":
@@ -49,13 +51,21 @@ export default class ShortcutTester {
       },
     })
       .then((response) => {
-        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        if (!response.ok) {
+          console.log(`${namespace}.${key}\t❌ failed with HTTP error code ${response.status}: ${response.statusText}`);
+          return undefined;
+        }
         return response.text();
       })
       .then((text) => {
+        if (text === undefined) {
+          return;
+        }
         const regex = new RegExp(testExpect, "m");
         if (regex.test(text)) {
-          console.log(`${namespace}.${key}\t✅ passed`);
+          if (!this.options.quiet) {
+            console.log(`${namespace}.${key}\t✅ passed`);
+          }
         } else {
           console.log(`${namespace}.${key}\t❌ failed to find "${testExpect}"`);
           fs.writeFileSync(`${namespace}.${key}.html`, text, "utf8");
