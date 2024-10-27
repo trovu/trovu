@@ -17,13 +17,13 @@ jobs:
           node-version: 21.3.0
       - run: npm clean-install
       - run: npm run lint-yaml
-      - run: npm run validate-data
       - name: Check code formatting
         run: npm run --silent prettier-list | awk '{ print "::warning file=" $0 ",title=Code style::" $0 " is not correctly formatted. Call npm run prettier-fix." }'
       - run: npm run lint-js
       - run: npm run test-unit
       - run: npm run build-blog
       - run: npm run build
+      - run: npm run validate-data
       - run: npm run test-calls
       - uses: actions/setup-python@v5
         with:
