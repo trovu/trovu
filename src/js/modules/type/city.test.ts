@@ -1,3 +1,4 @@
+// @ts-nocheck
 import CityType from "./city";
 
 test("CityType.parse", async () => {

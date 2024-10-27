@@ -1,3 +1,4 @@
+// @ts-nocheck
 export default class CityType {
   static parse(str, env) {
     let country = env.country;

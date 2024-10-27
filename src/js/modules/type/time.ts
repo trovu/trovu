@@ -1,3 +1,4 @@
+// @ts-nocheck
 export default class TimeType {
   static parse(str) {
     let time, matches;

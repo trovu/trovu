@@ -1,3 +1,4 @@
+// @ts-nocheck
 import TimeType from "./time";
 
 test("TimeType.parse", async () => {
