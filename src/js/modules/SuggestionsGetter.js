@@ -1,5 +1,5 @@
 /** @module SuggestionsGetter */
-import QueryParser from "./QueryParser.js";
+import QueryParser from "./QueryParser";
 import escapeStringRegexp from "escape-string-regexp";
 
 export default class SuggestionsGetter {

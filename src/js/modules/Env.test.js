@@ -1,4 +1,4 @@
-import Env from "./Env.js";
+import Env from "./Env";
 
 const getUrlHashFooBar = () => {
   const hash = "foo=bar&baz=boo";

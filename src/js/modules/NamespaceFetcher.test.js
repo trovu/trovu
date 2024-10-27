@@ -1,5 +1,5 @@
-import Env from "./Env.js";
-import NamespaceFetcher from "./NamespaceFetcher.js";
+import Env from "./Env";
+import NamespaceFetcher from "./NamespaceFetcher";
 import jsyaml from "js-yaml";
 
 function cloneObject(obj) {

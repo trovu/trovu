@@ -1,8 +1,8 @@
 /** @module CallHandler */
-import Env from "./Env.js";
+import Env from "./Env";
 import GitLogger from "./GitLogger";
-import ShortcutFinder from "./ShortcutFinder.js";
-import UrlProcessor from "./UrlProcessor.js";
+import ShortcutFinder from "./ShortcutFinder";
+import UrlProcessor from "./UrlProcessor";
 
 /** Handle a call. */
 

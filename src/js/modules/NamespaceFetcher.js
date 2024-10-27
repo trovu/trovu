@@ -1,5 +1,5 @@
 /** @module NamespaceFetcher */
-import UrlProcessor from "./UrlProcessor.js";
+import UrlProcessor from "./UrlProcessor";
 import jsyaml from "js-yaml";
 
 export default class NamespaceFetcher {

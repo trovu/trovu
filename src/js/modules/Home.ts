@@ -2,14 +2,14 @@
 
 /** @module Home */
 import "../../scss/style.scss";
-import Env from "./Env.js";
+import Env from "./Env";
 import GitLogger from "./GitLogger";
-import Settings from "./home/Settings.js";
-import Suggestions from "./home/Suggestions.js";
-import "@fortawesome/fontawesome-free/js/all.min.js";
+import Settings from "./home/Settings";
+import Suggestions from "./home/Suggestions";
+import "@fortawesome/fontawesome-free/js/all.min";
 
 /* eslint-disable no-unused-vars */
-import BSN from "bootstrap.native/dist/bootstrap-native.esm.min.js";
+import BSN from "bootstrap.native/dist/bootstrap-native.esm.min";
 import "bootstrap/dist/css/bootstrap.css";
 import countriesList from "countries-list";
 

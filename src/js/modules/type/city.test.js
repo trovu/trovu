@@ -1,4 +1,4 @@
-import CityType from "./city.js";
+import CityType from "./city";
 
 test("CityType.parse", async () => {
   expect(

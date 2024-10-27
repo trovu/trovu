@@ -1,9 +1,9 @@
 /** @module Env */
-import Helper from "./Helper.js";
-import Logger from "./Logger.js";
-import NamespaceFetcher from "./NamespaceFetcher.js";
-import QueryParser from "./QueryParser.js";
-import UrlProcessor from "./UrlProcessor.js";
+import Helper from "./Helper";
+import Logger from "./Logger";
+import NamespaceFetcher from "./NamespaceFetcher";
+import QueryParser from "./QueryParser";
+import UrlProcessor from "./UrlProcessor";
 import countriesList from "countries-list";
 import jsyaml from "js-yaml";
 

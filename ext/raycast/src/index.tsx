@@ -1,8 +1,8 @@
 import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
 import { useState, useEffect } from "react";
 import { useCachedState } from "@raycast/utils";
-import Env from "./core/src/js/modules/Env.js";
-import SuggestionsGetter from "./core/src/js/modules/SuggestionsGetter.js";
+import Env from "./core/src/js/modules/Env";
+import SuggestionsGetter from "./core/src/js/modules/SuggestionsGetter";
 import { markdowns } from "./markdowns";
 import { isEqual } from "lodash";
 

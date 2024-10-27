@@ -1,6 +1,6 @@
 /** @module Suggestions */
-import QueryParser from "../QueryParser.js";
-import SuggestionsGetter from "../SuggestionsGetter.js";
+import QueryParser from "../QueryParser";
+import SuggestionsGetter from "../SuggestionsGetter";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import jsyaml from "js-yaml";
 

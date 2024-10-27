@@ -1,4 +1,4 @@
-import QueryParser from "./QueryParser.js";
+import QueryParser from "./QueryParser";
 
 describe("QueryParser.parse", () => {
   test("2 arguments", () => {

@@ -1,4 +1,4 @@
-import UrlProcessor from "./UrlProcessor.js";
+import UrlProcessor from "./UrlProcessor";
 
 describe("UrlProcessor", () => {
   test("transformEoCx", async () => {

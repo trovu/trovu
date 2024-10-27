@@ -1,4 +1,4 @@
-import DateType from "./date.js";
+import DateType from "./date";
 
 test("DateType.parse", async () => {
   const env = {

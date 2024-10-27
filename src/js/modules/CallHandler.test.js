@@ -1,5 +1,5 @@
-import CallHandler from "./CallHandler.js";
-import Env from "./Env.js";
+import CallHandler from "./CallHandler";
+import Env from "./Env";
 
 describe("CallHandler", () => {
   test("getAlternative", async () => {

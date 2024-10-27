@@ -1,4 +1,4 @@
-import TimeType from "./time.js";
+import TimeType from "./time";
 
 test("TimeType.parse", async () => {
   jest.useFakeTimers().setSystemTime(new Date(2020, 0, 1, 12, 0, 0));
