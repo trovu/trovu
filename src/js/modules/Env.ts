@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** @module Env */
 import Helper from "./Helper";
 import Logger from "./Logger";

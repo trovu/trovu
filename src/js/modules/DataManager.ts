@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** @module DataManager */
 import Logger from "./Logger";
 import NamespaceFetcher from "./NamespaceFetcher";

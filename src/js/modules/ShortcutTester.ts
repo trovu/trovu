@@ -1,3 +1,4 @@
+// @ts-nocheck
 import DataManager from ".//DataManager";
 import QueryParser from "./QueryParser";
 import UrlProcessor from "./UrlProcessor";

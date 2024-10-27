@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Env from "./Env";
 import NamespaceFetcher from "./NamespaceFetcher";
 import jsyaml from "js-yaml";

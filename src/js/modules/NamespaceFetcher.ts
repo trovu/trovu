@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** @module NamespaceFetcher */
 import UrlProcessor from "./UrlProcessor";
 import jsyaml from "js-yaml";

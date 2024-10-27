@@ -1,3 +1,4 @@
+// @ts-nocheck
 /** @module ShortcutFinder */
 
 /** Find matching shortcut. */

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import UrlProcessor from "./UrlProcessor";
 
 describe("UrlProcessor", () => {

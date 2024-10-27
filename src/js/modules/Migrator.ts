@@ -1,3 +1,4 @@
+// @ts-nocheck
 import DataManager from "./DataManager";
 import UrlProcessor from "./UrlProcessor";
 import fs from "fs";

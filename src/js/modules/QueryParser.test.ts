@@ -1,3 +1,4 @@
+// @ts-nocheck
 import QueryParser from "./QueryParser";
 
 describe("QueryParser.parse", () => {

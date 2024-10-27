@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** @module SuggestionsGetter */
 import QueryParser from "./QueryParser";
 import escapeStringRegexp from "escape-string-regexp";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /** @module Logger */
 
 /** Logs errors and warnings. */

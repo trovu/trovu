@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Env from "./Env";
 
 const getUrlHashFooBar = () => {

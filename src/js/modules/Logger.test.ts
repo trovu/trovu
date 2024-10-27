@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Logger from "./Logger";
 
 describe("Logger", () => {

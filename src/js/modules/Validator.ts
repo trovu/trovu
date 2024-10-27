@@ -1,3 +1,4 @@
+// @ts-nocheck
 import DataManager from "./DataManager";
 import ajv from "ajv";
 import fs from "fs";
