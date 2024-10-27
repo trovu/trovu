@@ -30,7 +30,8 @@
     "normalize-data": "node -r esm src/js/cli.js normalize-data",
     "clean": "rm -rf dist/",
     "sync": "rsync -vr --delete-after dist/public/ ntro:~/trovu.net/",
-    "deploy": "npm run clean && npm run build && npm run sync"
+    "deploy": "npm run clean && npm run build && npm run sync",
+    "rollout": "npm run clean && npm run build && npm run test"
   },
   "repository": {
     "type": "git",
