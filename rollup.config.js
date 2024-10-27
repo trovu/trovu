@@ -82,7 +82,7 @@ export default [
       commonjs(),
       json(),
       scss({
-        output: "dist/public/style.css",
+        fileName: "style.css",
         outputStyle: isProduction ? "compressed" : "expanded",
       }),
       execute("npm run compile-data"),

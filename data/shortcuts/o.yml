@@ -5723,6 +5723,31 @@ ne 1:
   include:
   - key: ne 1
     namespace: pka
+nbsd 0:
+  url: https://man.netbsd.org/
+  title: NetBSD Manual Pages
+  tests:
+  - expect: NetBSD Manual Pages
+  tags:
+  - netbsd
+nbsd 1:
+  url: https://man.netbsd.org/<manpage>
+  include: nbsd 0
+  tests:
+  - arguments: mount
+    expect: <title>mount\(8\)
+  examples:
+  - arguments: mount
+    description: Lookup manpage for mount
+nbsd 2:
+  url: https://man.netbsd.org/<manpage>.<section>
+  include: nbsd 0
+  tests:
+  - arguments: fopen, 3
+    expect: <title>fopen\(3\)
+  examples:
+  - arguments: fopen, 3
+    description: Lookup manpage section 3 for fopen 
 ng 0:
   url: https://docs.angularjs.org/
   title: AngularJS Documentation
@@ -9018,6 +9043,24 @@ wikimapia 1:
   title: Wikimapia
   tags:
   - old
+winw 0:
+  url: https://winworldpc.com/
+  title: WinWorld
+  tests:
+  - expect: <title>WinWorld
+  tags:
+  - software
+  - download
+winw 1:
+  url: https://winworldpc.com/search?q=<query>
+  title: WinWorld Search
+  include: winw 0
+  tests:
+  - arguments: Norton Commander
+    expect: Search found \d+ results
+  examples:
+  - arguments: Norton Commander
+    description: search for "Norton Commander"
 wipr 0:
   url: https://www.worldipreview.com
   title: World Intellectual Property Review (WIPR)
