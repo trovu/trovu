@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - minimal-migration-to-ts
   pull_request:
     branches:
       - master
