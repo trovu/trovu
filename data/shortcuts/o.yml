@@ -9018,6 +9018,24 @@ wikimapia 1:
   title: Wikimapia
   tags:
   - old
+winw 0:
+  url: https://winworldpc.com/
+  title: WinWorld
+  tests:
+  - expect: <title>WinWorld
+  tags:
+  - software
+  - download
+winw 1:
+  url: https://winworldpc.com/search?q=<query>
+  title: WinWorld Search
+  include: winw 0
+  tests:
+  - arguments: Norton Commander
+    expect: Search found \d+ results
+  examples:
+  - arguments: Norton Commander
+    description: search for "Norton Commander"
 wipr 0:
   url: https://www.worldipreview.com
   title: World Intellectual Property Review (WIPR)
