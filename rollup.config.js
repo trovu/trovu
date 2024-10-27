@@ -4,11 +4,11 @@ import html from "@rollup/plugin-html";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
-import terser from "@rollup/plugin-terser";
 import fs from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
 import scss from "rollup-plugin-scss";
+import { terser } from "rollup-plugin-terser";
 import watch from "rollup-plugin-watch";
 
 const isProduction = process.env.BUILD === "production";
