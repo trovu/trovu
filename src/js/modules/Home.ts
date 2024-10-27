@@ -9,7 +9,7 @@ import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
 
 /* eslint-disable no-unused-vars */
-import BSN from "bootstrap.native/dist/bootstrap-native.esm.min";
+import BSN from "bootstrap.native/dist/bootstrap-native.mjs";
 import "bootstrap/dist/css/bootstrap.css";
 import countriesList from "countries-list";
 
