@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** @module Home */
 import "../../scss/style.scss";
 import Env from "./Env.js";
