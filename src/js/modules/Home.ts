@@ -9,7 +9,7 @@ import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
 
 /* eslint-disable no-unused-vars */
-import BSN from "bootstrap.native/dist/bootstrap-native.mjs";
+import * as BSN from "bootstrap.native";
 import "bootstrap/dist/css/bootstrap.css";
 import countriesList from "countries-list";
 
@@ -34,6 +34,9 @@ export default class Home {
     if (this.env.isRunningStandalone()) {
       document.querySelector("footer").style.display = "none";
     }
+
+    const modalElement = document.getElementById("settings");
+    const modal = new BSN.Modal(modalElement);
 
     new Settings(this.env, this.updateOpensearch);
 
