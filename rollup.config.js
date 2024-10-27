@@ -55,6 +55,17 @@ export default [
       format: "esm",
       sourcemap: true,
     },
+    external: [
+      "commander",
+      "fs",
+      "child_process",
+      "js-yaml",
+      "ajv",
+      "countries-list",
+      "split-limit",
+      "dayjs",
+      "escape-string-regexp",
+    ],
     plugins: [
       typescript(), // Use the TypeScript plugin
     ],
