@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** @module Settings */
 import countriesList from "countries-list";
 

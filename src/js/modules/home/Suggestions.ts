@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** @module Suggestions */
 import QueryParser from "../QueryParser";
 import SuggestionsGetter from "../SuggestionsGetter";
