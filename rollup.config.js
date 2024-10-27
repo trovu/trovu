@@ -49,6 +49,17 @@ const template = (templateFilePath) => {
 
 export default [
   {
+    input: "src/js/cli.ts",
+    output: {
+      file: "dist/cli.mjs",
+      format: "esm",
+      sourcemap: true,
+    },
+    plugins: [
+      typescript(), // Use the TypeScript plugin
+    ],
+  },
+  {
     input: "src/js/index.ts",
     output: output,
     external: ["node-fetch"], // Only needed for Raycast

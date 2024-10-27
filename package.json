@@ -25,9 +25,9 @@
     "build": "rollup --config --bundleConfigAsCjs --environment INCLUDE_DEPS,BUILD:production",
     "watch": "rollup --config --watch --bundleConfigAsCjs",
     "dev-server": "http-server ./dist/public/ --port 8081 --cors",
-    "validate-data": "node -r esm src/js/cli.js validate-data",
-    "compile-data": "node -r esm src/js/cli.js compile-data --output ./dist/public/data.json",
-    "normalize-data": "node -r esm src/js/cli.js normalize-data",
+    "validate-data": "node dist/cli.mjs validate-data",
+    "compile-data": "node dist/cli.mjs compile-data --output ./dist/public/data.json",
+    "normalize-data": "node dist/cli.mjs normalize-data",
     "clean": "rm -rf dist/",
     "sync": "rsync -vr --delete-after dist/public/ ntro:~/trovu.net/",
     "deploy": "npm run clean && npm run build && npm run sync"
