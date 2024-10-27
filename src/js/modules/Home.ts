@@ -3,7 +3,7 @@
 /** @module Home */
 import "../../scss/style.scss";
 import Env from "./Env.js";
-import GitLogger from "./GitLogger.js";
+import GitLogger from "./GitLogger";
 import Settings from "./home/Settings.js";
 import Suggestions from "./home/Suggestions.js";
 import "@fortawesome/fontawesome-free/js/all.min.js";
