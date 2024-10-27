@@ -27,7 +27,7 @@
     "test-calls": "jest --verbose calls",
     "test-fe": "cypress run",
     "test-shortcuts": "node dist/cli.mjs test-shortcuts",
-    "test-unit": "jest --verbose env helper src/js/ ",
+    "test-unit": "jest --verbose env helper src/ts/ ",
     "validate-data": "node dist/cli.mjs validate-data",
     "watch": "rollup --config --watch --bundleConfigAsCjs"
   },
