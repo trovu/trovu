@@ -1367,6 +1367,26 @@ ygl 1:
   examples:
   - arguments: berlin
     description: Find videos where someone says "berlin"
+zdfmt 0:
+  url: https://www.zdf.de/
+  title: ZDF Mediathek
+  tags:
+  - zdf
+  - mediathek
+  - tv
+  - video
+  examples:
+  - description: Gehe zur Startseite
+zdfmt 1:
+  url: https://www.zdf.de/suche?q=<Suchbegriff>&synth=true
+  title: ZDF Mediathek Suche
+  include: zdfmt 0
+  tests:
+  - arguments: heute journal
+    expect: Suchergebnisseite
+  examples:
+  - arguments: heute journal
+    description: Suche nach "heute journal"
 zeit 0:
   url: https://www.zeit.de/
   title: Zeit Online
