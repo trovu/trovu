@@ -1,4 +1,4 @@
-import DataCompiler from "./src/js/modules/DataCompiler.ts";
+import DataCompiler from "./src/ts/modules/DataCompiler.ts";
 import commonjs from "@rollup/plugin-commonjs";
 import html from "@rollup/plugin-html";
 import json from "@rollup/plugin-json";
@@ -49,7 +49,7 @@ const template = (templateFilePath) => {
 
 export default [
   {
-    input: "src/js/cli.ts",
+    input: "src/ts/cli.ts",
     output: {
       file: "dist/cli.mjs",
       format: "esm",
@@ -71,7 +71,7 @@ export default [
     ],
   },
   {
-    input: "src/js/index.ts",
+    input: "src/ts/index.ts",
     output: output,
     external: ["node-fetch"], // Only needed for Raycast
     plugins: [
@@ -103,7 +103,7 @@ export default [
           },
           { src: "src/img/*", dest: "dist/public/img/" },
           {
-            src: "src/js/userscripts/*.user.js",
+            src: "src/ts/userscripts/*.user.js",
             dest: "dist/public/userscripts/",
           },
           { src: "src/opensearch/", dest: "dist/public/" },
@@ -117,7 +117,7 @@ export default [
     ],
   },
   {
-    input: "src/js/process.ts",
+    input: "src/ts/process.ts",
     output: output,
     external: ["node-fetch"], // Only needed for Raycast
     plugins: [
