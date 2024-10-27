@@ -5735,7 +5735,7 @@ nbsd 1:
   include: nbsd 0
   tests:
   - arguments: mount
-    expect: <title>mount(8)
+    expect: <title>mount\(8\)
   examples:
   - arguments: mount
     description: Lookup manpage for mount
@@ -5744,7 +5744,7 @@ nbsd 2:
   include: nbsd 0
   tests:
   - arguments: fopen, 3
-    expect: <title>fopen(3)
+    expect: <title>fopen\(3\)
   examples:
   - arguments: fopen, 3
     description: Lookup manpage section 3 for fopen 
