@@ -1,10 +1,11 @@
-import DataCompiler from "./src/js/modules/DataCompiler.js";
+import DataCompiler from "./src/ts/modules/DataCompiler.ts";
 import commonjs from "@rollup/plugin-commonjs";
 import html from "@rollup/plugin-html";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
 import terser from "@rollup/plugin-terser";
+import typescript from "@rollup/plugin-typescript";
 import fs from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
@@ -48,7 +49,29 @@ const template = (templateFilePath) => {
 
 export default [
   {
-    input: "src/js/index.js",
+    input: "src/ts/cli.ts",
+    output: {
+      file: "dist/cli.mjs",
+      format: "esm",
+      sourcemap: true,
+    },
+    external: [
+      "commander",
+      "fs",
+      "child_process",
+      "js-yaml",
+      "ajv",
+      "countries-list",
+      "split-limit",
+      "dayjs",
+      "escape-string-regexp",
+    ],
+    plugins: [
+      typescript(), // Use the TypeScript plugin
+    ],
+  },
+  {
+    input: "src/ts/index.ts",
     output: output,
     external: ["node-fetch"], // Only needed for Raycast
     plugins: [
@@ -80,7 +103,7 @@ export default [
           },
           { src: "src/img/*", dest: "dist/public/img/" },
           {
-            src: "src/js/userscripts/*.user.js",
+            src: "src/ts/userscripts/*.user.js",
             dest: "dist/public/userscripts/",
           },
           { src: "src/opensearch/", dest: "dist/public/" },
@@ -90,10 +113,11 @@ export default [
           { src: "src/json/assetlinks.json", dest: "dist/public/.well-known/" },
         ],
       }),
+      typescript(), // Add the TypeScript plugin here
     ],
   },
   {
-    input: "src/js/process.js",
+    input: "src/ts/process.ts",
     output: output,
     external: ["node-fetch"], // Only needed for Raycast
     plugins: [
@@ -109,6 +133,7 @@ export default [
         preventAssignment: true,
         GIT_INFO: JSON.stringify(gitInfo),
       }),
+      typescript(), // Add the TypeScript plugin here
     ],
   },
 ];

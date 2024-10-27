@@ -1,9 +1,9 @@
 /**
  * @jest-environment jsdom
  */
-import CallHandler from "../src/js/modules/CallHandler.js";
-import Env from "../src/js/modules/Env.js";
-import "./mocks.utils.js";
+import CallHandler from "../src/ts/modules/CallHandler";
+import Env from "../src/ts/modules/Env";
+import "./mocks.utils";
 import fs from "fs";
 import "isomorphic-fetch";
 import jsyaml from "js-yaml";
