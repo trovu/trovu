@@ -5707,6 +5707,31 @@ nb 1:
   include:
   - key: nb 1
     namespace: pka
+nbsd 0:
+  url: https://man.netbsd.org/
+  title: NetBSD Manual Pages
+  tests:
+  - expect: NetBSD Manual Pages
+  tags:
+  - netbsd
+nbsd 1:
+  url: https://man.netbsd.org/<manpage>
+  tests:
+  - arguments: mount
+    expect: <title>mount\(8\)
+  include: nbsd 0
+  examples:
+  - arguments: mount
+    description: Lookup manpage for mount
+nbsd 2:
+  url: https://man.netbsd.org/<manpage>.<section>
+  tests:
+  - arguments: fopen, 3
+    expect: <title>fopen\(3\)
+  include: nbsd 0
+  examples:
+  - arguments: fopen, 3
+    description: Lookup manpage section 3 for fopen
 nd 0:
   include:
   - key: nd 0
@@ -5723,31 +5748,6 @@ ne 1:
   include:
   - key: ne 1
     namespace: pka
-nbsd 0:
-  url: https://man.netbsd.org/
-  title: NetBSD Manual Pages
-  tests:
-  - expect: NetBSD Manual Pages
-  tags:
-  - netbsd
-nbsd 1:
-  url: https://man.netbsd.org/<manpage>
-  include: nbsd 0
-  tests:
-  - arguments: mount
-    expect: <title>mount\(8\)
-  examples:
-  - arguments: mount
-    description: Lookup manpage for mount
-nbsd 2:
-  url: https://man.netbsd.org/<manpage>.<section>
-  include: nbsd 0
-  tests:
-  - arguments: fopen, 3
-    expect: <title>fopen\(3\)
-  examples:
-  - arguments: fopen, 3
-    description: Lookup manpage section 3 for fopen 
 ng 0:
   url: https://docs.angularjs.org/
   title: AngularJS Documentation
@@ -9049,15 +9049,15 @@ winw 0:
   tests:
   - expect: <title>WinWorld
   tags:
-  - software
   - download
+  - software
 winw 1:
   url: https://winworldpc.com/search?q=<query>
   title: WinWorld Search
-  include: winw 0
   tests:
   - arguments: Norton Commander
     expect: Search found \d+ results
+  include: winw 0
   examples:
   - arguments: Norton Commander
     description: search for "Norton Commander"
