@@ -5723,6 +5723,31 @@ ne 1:
   include:
   - key: ne 1
     namespace: pka
+nbsd 0:
+  url: https://man.netbsd.org/
+  title: NetBSD Manual Pages
+  tests:
+  - expect: NetBSD Manual Pages
+  tags:
+  - netbsd
+nbsd 1:
+  url: https://man.netbsd.org/<manpage>
+  include: nbsd 0
+  tests:
+  - arguments: mount
+    expect: <title>mount(8)
+  examples:
+  - arguments: mount
+    description: Lookup manpage for mount
+nbsd 2:
+  url: https://man.netbsd.org/<manpage>.<section>
+  include: nbsd 0
+  tests:
+  - arguments: fopen, 3
+    expect: <title>fopen(3)
+  examples:
+  - arguments: fopen, 3
+    description: Lookup manpage section 3 for fopen 
 ng 0:
   url: https://docs.angularjs.org/
   title: AngularJS Documentation
