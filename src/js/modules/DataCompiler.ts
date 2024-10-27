@@ -1,3 +1,4 @@
+// @ts-nocheck
 import child_process from "child_process";
 import fs from "fs";
 import jsyaml from "js-yaml";

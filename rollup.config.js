@@ -1,4 +1,4 @@
-import DataCompiler from "./src/js/modules/DataCompiler.js";
+import DataCompiler from "./src/js/modules/DataCompiler.ts";
 import commonjs from "@rollup/plugin-commonjs";
 import html from "@rollup/plugin-html";
 import json from "@rollup/plugin-json";
