@@ -2017,10 +2017,12 @@ doi 1:
     description: Search for object with DOI 10.1000/182
 dpl 0:
   url: https://www.deepl.com/translator#./<$language>/
-  title: DeepL, homepage
+  title: DeepL
   tags:
   - dictionary
   - language
+  examples:
+  - description: Go to homepage
 dpl 1:
   url: https://www.deepl.com/translator#./<$language>/<text>
   title: DeepL, translate to my language
