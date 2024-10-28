@@ -41,7 +41,7 @@ export default class ShortcutTester {
   }
 
   fetchAndTestUrl(namespace, key, url, testExpect) {
-    if (!this.options.quiet) {
+    if (this.options.verbose) {
       console.log(`${namespace}.${key}\t⏳ ${url}`);
     }
     fetch(url, {
@@ -63,7 +63,7 @@ export default class ShortcutTester {
         }
         const regex = new RegExp(testExpect, "m");
         if (regex.test(text)) {
-          if (!this.options.quiet) {
+          if (this.options.verbose) {
             console.log(`${namespace}.${key}\t✅ passed`);
           }
         } else {
