@@ -1,24 +1,11 @@
 a 0:
-  url: https://www.amazon.de/
-  title: Amazon
-  tests:
-  - expect: <title>Amazon.de
-  tags:
-  - amazon
-  - books
-  - shopping
-  examples:
-  - description: Amazon Startseite
-  description: Online-Marktplatz für eine Vielzahl von Produkten
+  include:
+    key: a 0
+    namespace: .de
 a 1:
-  url: https://www.amazon.de/s?k=<Suche>
-  tests:
-  - arguments: goethe
-    expect: '<title>Amazon.de : goethe</title>'
-  include: a 0
-  examples:
-  - arguments: goethe
-    description: Suche auf Amazon.at nach "goethe"
+  include:
+    key: a 1
+    namespace: .de
 conrad 0:
   url: https://www.conrad.at/
   title: Conrad Elektronik Österreich
