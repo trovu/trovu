@@ -68,7 +68,10 @@ export default class ShortcutTester {
           }
         } else {
           console.log(`${namespace}.${key}\t❌ failed to find "${testExpect}"`);
-          fs.writeFileSync(`${namespace}.${key}.html`, text, "utf8");
+          if (!fs.existsSync("failed-shortcuts")) {
+            fs.mkdirSync("failed-shortcuts");
+          }
+          fs.writeFileSync(`failed-shortcuts/${namespace}.${key}.html`, text, "utf8");
         }
       })
       .catch((error) => console.error(error));
