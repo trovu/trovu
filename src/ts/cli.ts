@@ -59,7 +59,7 @@ program.command("set-dictionaries").description("Set dictionaries").action(setDi
 
 program
   .command("test-shortcuts")
-  .description("Test shortcut URLs")
+  .description("Test shortcut URLs, write HTML src of failed tests to ./failed-shortcuts/")
   .option("-f, --filter <string>", "only apply to shortcuts containing <string>")
   .option("-v, --verbose", "log fetches and succeeded tests")
   .action(testShortcuts);
