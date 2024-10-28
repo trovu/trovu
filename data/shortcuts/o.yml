@@ -2030,6 +2030,14 @@ dpl 1:
   examples:
   - arguments: arbol
     description: Detect language of "arbol" and translate it into my language
+dpl 2:
+  url: https://www.deepl.com/translator#<$language>/<target-language>/<text>
+  include: dpl 0
+  examples:
+  - arguments: fr, tree
+    description: Translate "tree" from my language to French
+    config:
+      language: en
 dreamstime 0:
   url: https://www.dreamstime.com/
   title: Dreamstime
