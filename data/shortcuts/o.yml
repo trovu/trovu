@@ -2026,9 +2026,7 @@ dpl 0:
 dpl 1:
   url: https://www.deepl.com/translator#./<$language>/<text>
   title: DeepL, translate to my language
-  tags:
-  - dictionary
-  - language
+  include: dpl 0
   examples:
   - arguments: arbol
     description: Detect language of "arbol" and translate it into my language
