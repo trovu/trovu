@@ -1,24 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const languageSelect = document.getElementById("language");
-  const countrySelect = document.getElementById("country");
-  const githubInput = document.getElementById("github-username");
-  const saveOptionsButton = document.getElementById("save-options");
+  const [languageSelect, countrySelect, githubInput, saveOptionsButton] = [
+    "language",
+    "country",
+    "github-username",
+    "save-options",
+  ].map(document.getElementById.bind(document));
 
-  browser.storage.local.get(["language", "country", "githubUsername"]).then(function (result) {
+  browser.storage.local.get(["language", "country", "github"]).then((result) => {
     languageSelect.value = result.language || "en";
     countrySelect.value = result.country || "US";
-    githubInput.value = result.githubUsername || "";
+    githubInput.value = result.github || "";
   });
 
-  saveOptionsButton.addEventListener("click", function () {
-    const language = languageSelect.value;
-    const country = countrySelect.value;
-    const github = githubInput.value;
-
+  saveOptionsButton.addEventListener("click", () => {
     browser.storage.local.set({
-      language: language,
-      country: country,
-      github: github,
+      language: languageSelect.value,
+      country: countrySelect.value,
+      github: githubInput.value,
     });
   });
 });
