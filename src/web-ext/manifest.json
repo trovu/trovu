@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Trovu",
+  "version": "1.0",
+  "description": "a web-search command-line",
+  "permissions": [
+    "activeTab"
+  ],
+  "commands": {
+    "open": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T"
+      },
+      "description": "Open a new tab with Trovu"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}
