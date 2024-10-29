@@ -4,7 +4,8 @@
   "version": "1.0",
   "description": "a web-search command-line",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "commands": {
     "open": {
