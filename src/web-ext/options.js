@@ -12,11 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
     githubInput.value = result.github || "";
   });
 
-  saveOptionsButton.addEventListener("click", () => {
-    browser.storage.local.set({
-      language: languageSelect.value,
-      country: countrySelect.value,
-      github: githubInput.value,
-    });
+  saveOptionsButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    browser.storage.local
+      .set({
+        language: languageSelect.value,
+        country: countrySelect.value,
+        github: githubInput.value,
+      })
+      .catch((error) => {
+        console.error("Error saving options:", error);
+        alert("Failed to save options.");
+      });
   });
 });
