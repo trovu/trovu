@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Error saving options:", error);
         alert("Failed to save options.");
       });
-    this.close();
+    event.target.textContent = "Saved!";
   });
 });
