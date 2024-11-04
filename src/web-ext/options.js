@@ -3,12 +3,9 @@ function fetchLocalJson(path) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  const [languageSelect, countrySelect, githubInput, saveOptionsButton] = [
-    "language",
-    "country",
-    "github-username",
-    "save-options",
-  ].map(document.getElementById.bind(document));
+  const [languageSelect, countrySelect, githubInput, saveOptionsButton] = ["language", "country", "github", "save"].map(
+    document.getElementById.bind(document),
+  );
 
   const languages = await fetchLocalJson("/json/languages.en.min.json");
   Object.entries(languages).forEach(([code, name]) => {
@@ -37,5 +34,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Error saving options:", error);
         alert("Failed to save options.");
       });
+    this.close();
   });
 });
