@@ -1,6 +1,7 @@
 function fetchLocalJson(path) {
   return fetch(browser.runtime.getURL(path)).then((response) => response.json());
 }
+
 document.addEventListener("DOMContentLoaded", async function () {
   const [languageSelect, countrySelect, githubInput, saveOptionsButton] = [
     "language",
