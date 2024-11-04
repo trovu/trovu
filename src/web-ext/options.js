@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   Object.entries(languages).forEach(([code, name]) => {
     languageSelect.appendChild(new Option(name, code));
   });
+  const countries = await fetchLocalJson("/json/countries.en.min.json");
+  Object.entries(countries).forEach(([code, name]) => {
+    countrySelect.appendChild(new Option(name, code));
+  });
 
   browser.storage.local.get(["language", "country", "github"]).then((result) => {
     languageSelect.value = result.language || "en";
