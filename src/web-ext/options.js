@@ -1,3 +1,6 @@
+function fetchLocalJson(path) {
+  return fetch(browser.runtime.getURL(path)).then((response) => response.json());
+}
 document.addEventListener("DOMContentLoaded", async function () {
   const [languageSelect, countrySelect, githubInput, saveOptionsButton] = [
     "language",
@@ -6,8 +9,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     "save-options",
   ].map(document.getElementById.bind(document));
 
-  const response = await fetch(browser.runtime.getURL("/json/languages.en.min.json"));
-  const languages = await response.json();
+  const languages = await fetchLocalJson("/json/languages.en.min.json");
   Object.entries(languages).forEach(([code, name]) => {
     languageSelect.appendChild(new Option(name, code));
   });
