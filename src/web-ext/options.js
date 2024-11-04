@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   Object.entries(languages).forEach(([code, name]) => {
     languageSelect.appendChild(new Option(name, code));
   });
+
   browser.storage.local.get(["language", "country", "github"]).then((result) => {
     languageSelect.value = result.language || "en";
     countrySelect.value = result.country || "US";
