@@ -8,13 +8,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   const response = await fetch(browser.runtime.getURL("/json/languages.en.min.json"));
   const languages = await response.json();
-  for (const [code, name] of Object.entries(languages)) {
-    console.log(code, name);
-    const option = document.createElement("option");
-    option.value = code;
-    option.textContent = name;
-    languageSelect.appendChild(option);
-  }
+  Object.entries(languages).forEach(([code, name]) => {
+    languageSelect.appendChild(new Option(name, code));
+  });
   browser.storage.local.get(["language", "country", "github"]).then((result) => {
     languageSelect.value = result.language || "en";
     countrySelect.value = result.country || "US";
