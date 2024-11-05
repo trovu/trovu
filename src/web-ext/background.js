@@ -10,7 +10,7 @@ browser.commands.onCommand.addListener(async function (command) {
     params.language = settings.language || "en";
   }
   const paramsStr = new URLSearchParams(params).toString();
-  if (command === "open_page") {
+  if (command === "open_window") {
     browser.windows.create({ url: `https://trovu.net/#${paramsStr}` });
   }
   if (command === "open_tab") {
