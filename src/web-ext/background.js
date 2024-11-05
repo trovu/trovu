@@ -8,7 +8,7 @@ browser.commands.onCommand.addListener(async function (command) {
     params.configUrl = settings.configUrl;
   } else {
     params.language = settings.language;
-    params.country = settings.country;
+    params.country = settings.country.toLowerCase();
   }
   const paramsStr = new URLSearchParams(params).toString();
   if (command === "open") {
