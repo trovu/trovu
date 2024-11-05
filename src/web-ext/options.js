@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     browser.storage.local
       .set({
         language: languageSelect.value,
-        country: countrySelect.value,
+        country: countrySelect.value.toLowerCase(),
         github: githubInput.value,
       })
       .catch((error) => {
