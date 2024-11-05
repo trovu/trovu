@@ -40,25 +40,17 @@ document.addEventListener("DOMContentLoaded", async function () {
   addCopyButtons();
 });
 
-// Function to copy text to clipboard
-function copyToClipboard(text) {
-  navigator.clipboard
-    .writeText(text)
-    .then(() => {
-      alert("Copied to clipboard: " + text);
-    })
-    .catch((err) => {
-      console.error("Could not copy text: ", err);
-    });
-}
-
 // Function to add copy buttons next to each <code> element
 function addCopyButtons() {
   const codeElements = document.querySelectorAll("code");
   codeElements.forEach((codeElement) => {
     const button = document.createElement("button");
     button.textContent = "Copy to Clipboard";
-    button.onclick = () => copyToClipboard(codeElement.textContent);
+    button.onclick = () => {
+      const text = codeElement.textContent;
+      navigator.clipboard.writeText(text);
+      button.textContent = "Copied!";
+    };
     codeElement.parentNode.insertBefore(button, codeElement.nextSibling);
   });
 }
