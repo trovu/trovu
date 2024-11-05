@@ -15,7 +15,16 @@
       }
       button {
         grid-column: 2;
-        margin-top: 1em;
+        margin-left: 1em;
+      }
+      ol {
+        padding: 0;
+        margin: 0 1em;
+      }
+      code {
+        background-color: #f0f0f0;
+        padding: 0.1em 0.2em;
+        border-radius: 0.2em;
       }
     </style>
   </head>
@@ -30,14 +39,27 @@
       <input type="text" id="github" />
       <label for="keyboard-shortcuts-chrome">Set keyboard shortcuts (Chrome, Brave):</label>
       <ol id="keyboard-shortcuts-chrome">
-        <li>Chrome (Brave, etc.): <code>chrome://extensions/</code></li>
-        <li>Firefox <code>about:addons</code></li>
+        <li><code>chrome://extensions/</code></li>
       </ol>
       <label for="keyboard-shortcuts-firefox">Set keyboard shortcuts (Firefox):</label>
       <ol id="keyboard-shortcuts-firefox">
         <li>Go to <code>about:addons</code></li>
         <li>Click the gear icon ⚙️</li>
         <li>Click <em> Manage Extension Shortcuts</em>.</li>
+      </ol>
+      <label for="keyboard-shortcuts-safari">Set keyboard shortcuts (Safari):</label>
+      <ol id="keyboard-shortcuts-safari">
+        <li>
+          Open Safari Preferences by clicking on <strong>Safari</strong> in the menu bar and selecting
+          <strong>Preferences</strong>.
+        </li>
+        <li>Go to the <strong>Extensions</strong> tab to see your installed extensions.</li>
+        <li>
+          Close the Preferences window and click on <strong>Safari</strong> in the menu bar again, then select
+          <strong>Settings for This Website</strong>.
+        </li>
+        <li>Find your extension in the list and click on the field next to it to set your keyboard shortcut.</li>
+        <li>Press the desired key combination to set your shortcut.</li>
       </ol>
       <button id="save">Save Options</button>
     </form>
