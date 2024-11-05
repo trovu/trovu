@@ -8,6 +8,12 @@
     "storage"
   ],
   "commands": {
+    "open_page": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+N"
+      },
+      "description": "Open a new page with Trovu"
+    },
     "open_tab": {
       "suggested_key": {
         "default": "Ctrl+Alt+T"
