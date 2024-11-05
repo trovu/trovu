@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     countrySelect.appendChild(new Option(name, code));
   });
 
-  browser.storage.local.get(["language", "country", "github"]).then((result) => {
-    languageSelect.value = result.language || "en";
-    countrySelect.value = result.country || "US";
-    githubInput.value = result.github || "";
+  browser.storage.local.get(["language", "country", "github"]).then((settings) => {
+    languageSelect.value = settings.language || "en";
+    countrySelect.value = settings.country || "US";
+    githubInput.value = settings.github || "";
   });
 
   saveOptionsButton.addEventListener("click", (event) => {
