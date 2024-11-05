@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   });
 
   browser.storage.local.get(["language", "country", "github"]).then((settings) => {
+    countrySelect.value = settings.country ? settings.country.toUpperCase() : "US";
     languageSelect.value = settings.language || "en";
-    countrySelect.value = settings.country || "US";
     githubInput.value = settings.github || "";
   });
 
