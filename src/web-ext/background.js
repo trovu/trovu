@@ -3,7 +3,7 @@ browser.commands.onCommand.addListener(async function (command) {
 
   const params = {};
   if (settings.github) {
-    params.github = this.github;
+    params.github = settings.github;
   } else if (settings.configUrl) {
     params.configUrl = settings.configUrl;
   } else {
