@@ -115,6 +115,7 @@ const isValidUrl = (urlString) => {
   try {
     return Boolean(new URL(urlString));
   } catch (e) {
+    console.error(e);
     return false;
   }
 };
@@ -135,6 +136,7 @@ async function fetchWithTimeout(resource, options = {}) {
       },
     });
   } catch (e) {
+    console.error(e);
     return { status: 500 };
   }
   clearTimeout(id);
