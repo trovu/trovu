@@ -2,18 +2,9 @@
   "version": {
     "license": "GPL-3.0-or-later"
   },
-  "categories": {
-    "browsers": [
-      "firefox",
-      "chrome",
-      "safari"
-    ],
-    "types": [
-      "search",
-      "social",
-      "productivity"
-    ]
-  },
+  "categories": [
+    "search-tools"
+  ],
   "summary": {
     "en-US": "Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with maximum privacy."
   },
