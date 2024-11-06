@@ -3,7 +3,12 @@
     "license": "AGPL3.0"
   },
   "categories": {
-    "firefox": [
+    "browsers": [
+      "firefox",
+      "chrome",
+      "safari"
+    ],
+    "types": [
       "search",
       "social",
       "productivity"
