@@ -26,6 +26,7 @@ export default [
       globals: {
         ...globals.browser,
         ...jest.environments.globals.globals,
+        browser: "readonly",
       },
 
       ecmaVersion: "latest",
