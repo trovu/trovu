@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Trovu",
   "version": "1.0.1",
   "description": "a web-search command-line",
@@ -30,14 +30,22 @@
   "background": {
     "scripts": [
       "background.js"
-    ]
+    ],
+    "service_worker": "background.js"
   },
   "options_ui": {
     "page": "options.html",
     "open_in_tab": true
   },
   "web_accessible_resources": [
-    "./json/countries.en.min.json",
-    "./json/languages.en.min.json"
+    {
+      "resources": [
+        "./json/countries.en.min.json",
+        "./json/languages.en.min.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ]
 }
