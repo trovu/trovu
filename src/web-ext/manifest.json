@@ -7,6 +7,12 @@
     "activeTab",
     "storage"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{12e69d3f-3cc3-4868-bd56-1976253f65ec}",
+      "strict_min_version": "58.0"
+    }
+  },
   "commands": {
     "open_window": {
       "suggested_key": {
