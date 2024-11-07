@@ -10,6 +10,7 @@ Userscript for autofilling and submitting forms on target websites. This may hel
 
 -   for Firefox: [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/)
 -   for Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+    -   Note that there is now a [requirement to enable Developer Mode](https://www.tampermonkey.net/faq.php?locale=en#Q209) in Chrome.
 
 #### Install
 
