@@ -14,17 +14,17 @@
     }
   },
   "commands": {
-    "open_window": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+N"
-      },
-      "description": "Open a new page with Trovu"
-    },
     "open_tab": {
       "suggested_key": {
         "default": "Ctrl+Shift+T"
       },
       "description": "Open a new tab with Trovu"
+    },
+    "open_window": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Open a new page with Trovu"
     }
   },
   "background": {
