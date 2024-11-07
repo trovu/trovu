@@ -48,7 +48,11 @@
     const submitSelector = params.get("trovu[submit]") || params.get("serchilo[submit]");
     if (submitSelector) {
       const submitElement = document.querySelector(submitSelector);
-      if (submitElement) submitElement.click();
+      if (!submitElement) {
+        console.error(`Trovu fill-and-submit: Could not find submit element "${submitSelector}"`);
+      } else {
+        submitElement.click();
+      }
     }
   }, waitBeforeFill);
 })();
