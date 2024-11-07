@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     document.getElementById.bind(document),
   );
 
+  // Set language and country options
+
   const languages = await fetchLocalJson("/json/languages.en.min.json");
   Object.entries(languages).forEach(([code, name]) => {
     languageSelect.appendChild(new Option(name, code));
