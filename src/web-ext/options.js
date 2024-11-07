@@ -24,6 +24,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     githubInput.value = settings.github || "";
   });
 
+  // List keyboard shortcuts
+  browser.commands.getAll((commands) => {
+    const KeyboardShortcutsElement = document.getElementById("keyboard-shortcuts");
+    commands.forEach((command) => {
+      KeyboardShortcutsElement.appendChild(document.createElement("li")).textContent =
+        `${command.name}: ${command.shortcut}`;
+    });
+  });
+
   saveOptionsButton.addEventListener("click", (event) => {
     event.preventDefault();
     browser.storage.local
