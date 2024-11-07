@@ -1,3 +1,7 @@
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
+
 function fetchLocalJson(path) {
   return fetch(browser.runtime.getURL(path)).then((response) => response.json());
 }

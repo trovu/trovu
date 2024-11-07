@@ -1,3 +1,7 @@
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
+
 browser.runtime.onInstalled.addListener(() => {
   browser.runtime.openOptionsPage();
 });
