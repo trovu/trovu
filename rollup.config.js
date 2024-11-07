@@ -103,7 +103,7 @@ export default [
           },
           { src: "src/img/*", dest: "dist/public/img/" },
           {
-            src: "src/ts/userscripts/*.user.js",
+            src: "src/js/userscripts/*.user.js",
             dest: "dist/public/userscripts/",
           },
           { src: "src/opensearch/", dest: "dist/public/" },
