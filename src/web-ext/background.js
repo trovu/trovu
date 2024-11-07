@@ -1,3 +1,7 @@
+browser.runtime.onInstalled.addListener(() => {
+  browser.runtime.openOptionsPage();
+});
+
 browser.commands.onCommand.addListener(async function (command) {
   const settings = await browser.storage.local.get(["language", "country", "github"]);
   const params = {};
