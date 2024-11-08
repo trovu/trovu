@@ -41,14 +41,16 @@ footer {
     }
   }
 }
-.navbar .container {
-  padding: 0 2em;
-  img.logo {
-    position: absolute;
-    margin: 0;
-    margin-top: -13px;
-    padding: 0;
-    height: 50px;
+.navbar {
+  .container {
+    padding: 0 2em;
+    img.logo {
+      position: absolute;
+      margin: 0;
+      margin-top: -13px;
+      padding: 0;
+      height: 50px;
+    }
   }
 }
 #settings-button {
