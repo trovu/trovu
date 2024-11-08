@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - create-web-ext
   pull_request:
     branches:
       - master
