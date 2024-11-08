@@ -731,8 +731,8 @@ db 4:
   url: 'https://www.bahn.de/buchung/start?STS=false&so=<Start: {type: city}>&zo=<Ziel: {type: city}>&trovuDummyParamForChangingOrder=<Zeit: {type: time, output: HH:mm:00}>&hd=<Datum: {type: date, output: YYYY-MM-DD}>T<Zeit: {type: time, output: HH:mm:00}>#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn'
   include: db 2
   examples:
-  - arguments: berlin, hamburg, 10
-    description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
+  - arguments: berlin, hamburg, 10, 30.11.
+    description: Verbindung von Berlin nach Hamburg heute um 10 Uhr am 30.11.
 dbb 3:
   url: 'https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&date=<Datum: {type: date, output: DD.MM.YYYY}>&timesel=depart&start=1&startTBP=yes&sortConnections=minStdFare'
   title: Deutsche Bahn (Bestpreis)
