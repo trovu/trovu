@@ -3850,12 +3850,17 @@ gn 1:
   examples:
   - arguments: berlin
     description: Search Google News for berlin
-gns 1:
-  url: https://www.google.com/search?q=<query>&tbm=nws&hl=<$language>
+gns 0:
+  url: https://www.google.com/search?tbm=nws&hl=<$language>
   title: Google News search in your language
   tags:
   - google
   - news
+  examples:
+  - description: Go to homepage
+gns 1:
+  url: https://www.google.com/search?q=<query>&tbm=nws&hl=<$language>
+  include: gns 0
   examples:
   - arguments: berlin
     description: Search Google News for berlin
