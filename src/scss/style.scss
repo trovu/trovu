@@ -138,7 +138,8 @@ span.tag {
     }
   }
   .testimonials {
-    margin: 1em 1em;
+    margin: 1em 0;
+    margin-top: 2em;
     img {
       border-radius: 1em;
       float: left;
@@ -160,6 +161,7 @@ span.tag {
 }
 
 #lists {
+  margin-top: 1em;
   display: none;
 }
 
