@@ -29,7 +29,9 @@
     "test-shortcuts": "node dist/cli.mjs test-shortcuts",
     "test-unit": "jest --verbose env helper src/ts/ ",
     "validate-data": "node dist/cli.mjs validate-data",
-    "watch": "rollup --config --watch --bundleConfigAsCjs"
+    "watch": "rollup --config --watch --bundleConfigAsCjs",
+    "we-update-assets": "cp node_modules/countries-list/dist/minimal/countries.en.min.json node_modules/countries-list/dist/minimal/languages.en.min.json src/web-ext/json",
+    "we-upload-firefox": "web-ext sign --source-dir src/web-ext --channel=listed --amo-metadata=src/web-ext/metadata.json --api-key=`pass show addons.mozilla.org | grep '^jwt-issuer: ' | cut -d ' ' -f 2` --api-secret=`pass show addons.mozilla.org | grep '^jwt-secret: ' | cut -d ' ' -f 2`",
   },
   "repository": {
     "type": "git",
