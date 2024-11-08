@@ -30,6 +30,7 @@
     "test-unit": "jest --verbose env helper src/ts/ ",
     "validate-data": "node dist/cli.mjs validate-data",
     "watch": "rollup --config --watch --bundleConfigAsCjs",
+    "we-build-chrome": "/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --pack-extension=src/web-ext && mv web-ext-artifacts/* dist/ && rmdir web-ext-artifacts",
     "we-update-assets": "cp node_modules/countries-list/dist/minimal/countries.en.min.json node_modules/countries-list/dist/minimal/languages.en.min.json src/web-ext/json",
     "we-upload-firefox": "web-ext sign --source-dir src/web-ext --channel=listed --amo-metadata=src/web-ext/metadata.json --api-key=`pass show addons.mozilla.org | grep '^jwt-issuer: ' | cut -d ' ' -f 2` --api-secret=`pass show addons.mozilla.org | grep '^jwt-secret: ' | cut -d ' ' -f 2`",
   },
