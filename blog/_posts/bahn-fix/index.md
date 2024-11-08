@@ -18,7 +18,7 @@ Trotzdem gibt es jetzt eine (experimentelle) Lösung. Damit diese vollständig f
 Dann könnt Ihr wie gewohnt eine Suchanfrage starten, z.B.:
 
 ```
-db berlin hamburg
+db berlin, hamburg
 db b,hh,21
 dbn b,hh,8,mo  # Nur Nahverkehrszüge / mit Deutschlandticket
 ```
