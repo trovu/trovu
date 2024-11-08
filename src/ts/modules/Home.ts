@@ -245,9 +245,12 @@ export default class Home {
     // Toggle display of navbar and examples.
     if (this.queryInput.value.trim() === "" && this.suggestions.selected === -1) {
       document.querySelector("nav.navbar").style.display = "block";
-      if (!this.env.isRunningStandalone()) {
+      if (!this.env.isRunningStandalone() && this.env.context !== "web-ext") {
         document.querySelector("footer").style.display = "block";
         document.querySelector("#explainer").style.display = "block";
+      }
+      if (this.env.context === "web-ext") {
+        document.querySelector("#settings-button").style.display = "none";
       }
       document.querySelector("#lists").style.display = "block";
       document.querySelector("#suggestions").style.display = "none";
