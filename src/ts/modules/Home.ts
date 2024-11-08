@@ -31,10 +31,6 @@ export default class Home {
 
     this.queryInput = document.querySelector("#query");
 
-    if (this.env.isRunningStandalone()) {
-      document.querySelector("footer").style.display = "none";
-    }
-
     const modalElement = document.getElementById("settings");
     const modal = new BSN.Modal(modalElement);
 
@@ -245,17 +241,18 @@ export default class Home {
     // Toggle display of navbar and examples.
     if (this.queryInput.value.trim() === "" && this.suggestions.selected === -1) {
       document.querySelector("nav.navbar").style.display = "block";
-      if (!this.env.isRunningStandalone()) {
+      if (!this.env.isRunningStandalone() && this.env.context !== "web-ext") {
         document.querySelector("footer").style.display = "block";
         document.querySelector("#explainer").style.display = "block";
-        document.querySelector("#intro").style.display = "block";
+      }
+      if (this.env.context === "web-ext") {
+        document.querySelector("#settings-button").style.display = "none";
       }
       document.querySelector("#lists").style.display = "block";
       document.querySelector("#suggestions").style.display = "none";
       document.querySelector("#help").style.display = "none";
     } else {
       document.querySelector("nav.navbar").style.display = "none";
-      document.querySelector("#intro").style.display = "none";
       document.querySelector("footer").style.display = "none";
       document.querySelector("#suggestions").style.display = "block";
       document.querySelector("#help").style.display = "block";

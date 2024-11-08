@@ -23,7 +23,7 @@ footer {
     text-decoration: none;
   }
 }
-footer {
+footer.navbar {
   display: none;
   background: #eee;
   flex-shrink: 0;
@@ -41,14 +41,17 @@ footer {
     }
   }
 }
-.navbar .container {
-  padding: 0 2em;
-  img.logo {
-    position: absolute;
-    margin: 0;
-    margin-top: -13px;
-    padding: 0;
-    height: 50px;
+.navbar {
+  margin-bottom: 1em;
+  .container {
+    padding: 0 2em;
+    img.logo {
+      position: absolute;
+      margin: 0;
+      margin-top: -13px;
+      padding: 0;
+      height: 50px;
+    }
   }
 }
 #settings-button {
@@ -66,13 +69,6 @@ footer {
   text-align: left;
   background: #f8d7da;
   padding: 1em;
-}
-#intro {
-  display: none;
-  margin: 0;
-  padding: 0.5em 0;
-  color: #666;
-  font-style: italic;
 }
 main .jumbotron {
   margin: 0;
@@ -142,7 +138,8 @@ span.tag {
     }
   }
   .testimonials {
-    margin: 2em 1em;
+    margin: 1em 0;
+    margin-top: 2em;
     img {
       border-radius: 1em;
       float: left;
@@ -164,6 +161,7 @@ span.tag {
 }
 
 #lists {
+  margin-top: 1em;
   display: none;
 }
 

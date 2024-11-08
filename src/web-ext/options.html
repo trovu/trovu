@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Options</title>
+    <style>
+      body {
+        margin: 1em;
+      }
+      form {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 1em;
+        margin: 2em auto;
+      }
+      label {
+        text-align: right;
+      }
+      button {
+        grid-column: 2;
+        margin-left: 1em;
+      }
+      ol,
+      ul {
+        padding: 0;
+        margin: 0 1em;
+      }
+      code {
+        background-color: #f0f0f0;
+        padding: 0.1em 0.2em;
+        border-radius: 0.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Trovu</h1>
+    <p>
+      This extension makes it easier to use <a href="https://trovu.net/" target="_blank">trovu.net</a> in your browser.
+    </p>
+    <p>It defines keyboard shortcuts to open a new tab or window with the Trovu search console.</p>
+    <h2>Settings</h2>
+    <form>
+      <label for="language">Language:</label>
+      <select id="language"></select>
+      <label for="country">Country:</label>
+      <select id="country"></select>
+      <label for="github">GitHub Username (optional):</label>
+      <input type="text" id="github" />
+      <button id="save" type="submit">Save Options</button>
+      <label for="keyboard-shortcuts">Keyboard Shortcuts</label>
+      <ul id="keyboard-shortcuts"></ul>
+      <h3>Set Keyboard Shortcuts</h3>
+      <div></div>
+      <label for="keyboard-shortcuts-chrome">Chrome, Brave, etc.:</label>
+      <ol id="keyboard-shortcuts-chrome">
+        <li><code>chrome://extensions/</code></li>
+      </ol>
+      <label for="keyboard-shortcuts-firefox">Firefox:</label>
+      <ol id="keyboard-shortcuts-firefox">
+        <li>Go to <code>about:addons</code></li>
+        <li>Click the gear icon ⚙️</li>
+        <li>Click <em> Manage Extension Shortcuts</em>.</li>
+      </ol>
+      <label for="keyboard-shortcuts-safari">Safari:</label>
+      <ol id="keyboard-shortcuts-safari">
+        <li>
+          Open Safari Preferences by clicking on <strong>Safari</strong> in the menu bar and selecting
+          <strong>Preferences</strong>.
+        </li>
+        <li>Go to the <strong>Extensions</strong> tab to see your installed extensions.</li>
+        <li>
+          Close the Preferences window and click on <strong>Safari</strong> in the menu bar again, then select
+          <strong>Settings for This Website</strong>.
+        </li>
+        <li>Find your extension in the list and click on the field next to it to set your keyboard shortcut.</li>
+        <li>Press the desired key combination to set your shortcut.</li>
+      </ol>
+    </form>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "trovu.net",
+  "version": "1.0.4",
+  "description": "Web search like a command line: With keyword & query go directly to search results of websites. DuckDuckGo bangs on steroids.",
+  "permissions": [
+    "storage"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{12e69d3f-3cc3-4868-bd56-1976253f65ec}",
+      "strict_min_version": "58.0"
+    }
+  },
+  "commands": {
+    "open_tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Open a new tab with Trovu"
+    },
+    "open_window": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2"
+      },
+      "description": "Open a new page with Trovu"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "./img/icons/16.png",
+    "32": "./img/icons/32.png",
+    "48": "./img/icons/48.png",
+    "128": "./img/icons/128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "./json/countries.en.min.json",
+        "./json/languages.en.min.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
