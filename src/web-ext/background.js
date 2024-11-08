@@ -9,7 +9,9 @@ browser.runtime.onInstalled.addListener(() => {
 
 browser.commands.onCommand.addListener(async function (command) {
   const settings = await browser.storage.local.get(["language", "country", "github"]);
-  const params = {};
+  const params = {
+    context: "web-ext",
+  };
   if (settings.github) {
     params.github = settings.github;
   } else if (settings.configUrl) {
