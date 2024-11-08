@@ -329,9 +329,23 @@
           </ul>
         </div>
         <div class="right">
-          <a class="form-control btn btn-success" target="_blank" href="{{urlDocs}}users/integration/"
-            >Add to browser</a
-          >
+          <span class="dropdown">
+            <a href="#" class="form-control btn btn-success" aria-expanded="false" data-bs-toggle="dropdown"
+              >How to install</a
+            >
+            <div class="dropdown-menu dropdown-menu-right">
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#chrome">Chrome</a>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#firefox">Firefox</a>
+              <div class="dropdown-divider"></div>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#raycast">Raycast</a>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#android">Android</a>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#pwa-progressive-web-app"
+                >PWA</a
+              >
+              <div class="dropdown-divider"></div>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#general">Other</a>
+            </div>
+          </span>
         </div>
       </div>
     </footer>
