@@ -31,10 +31,6 @@ export default class Home {
 
     this.queryInput = document.querySelector("#query");
 
-    if (this.env.isRunningStandalone()) {
-      document.querySelector("footer").style.display = "none";
-    }
-
     const modalElement = document.getElementById("settings");
     const modal = new BSN.Modal(modalElement);
 
