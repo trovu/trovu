@@ -75,10 +75,10 @@ export default class Env {
     if (this.debug) {
       params.debug = 1;
     }
-    for (const property of ["alternative", "key", "namespace", "status", "query"]) {
-      if (this[property]) {
-        params[property] = this[property];
-      }
+    for (const property of ["alternative", "context", "key", "namespace", "status", "query"]) {
+      if (!this[property]) continue;
+      if (property === "context" && this[property] === "index") continue;
+      params[property] = this[property];
     }
     Object.assign(params, moreParams);
     return params;
