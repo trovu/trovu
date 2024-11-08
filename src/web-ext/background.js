@@ -1,4 +1,5 @@
 if (typeof browser === "undefined") {
+  // eslint-disable-next-line no-undef
   var browser = chrome;
 }
 
