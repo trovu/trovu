@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   browser.commands.getAll((commands) => {
     const KeyboardShortcutsElement = document.getElementById("keyboard-shortcuts");
     commands.forEach((command) => {
+      if (command.shortcut === "") {
+        return;
+      }
       KeyboardShortcutsElement.appendChild(document.createElement("li")).innerHTML =
         `${command.description}: <strong>${command.shortcut}</strong>`;
     });
