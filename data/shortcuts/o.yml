@@ -659,11 +659,11 @@ be 1:
   - key: be 1
     namespace: pka
 bf 1:
-  url: https://www.boerse-frankfurt.de/suchergebnisse?_search=<query>
-  title: Börse Frankfurt Abfrage
-  examples:
-  - arguments: Telekom
-    description: Search Börse Frankfurt Abfrage for "bf Telekom"
+  deprecated:
+    alternative:
+      query: bf <1>
+      namespace: .de
+    created: '2024-11-10'
 bg 0:
   include:
   - key: bg 0

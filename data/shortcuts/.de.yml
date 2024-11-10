@@ -160,6 +160,22 @@ bex 1:
   examples:
   - arguments: berlin
     description: Abfahrtstafel von Berlin Hbf
+bf 0:
+  url: https://www.boerse-frankfurt.de/
+  title: Börse Frankfurt
+  tags:
+  - exchange
+  - finance
+  - stocks
+  - trading
+  examples:
+  - description: Gehe zur Startseite
+bf 1:
+  url: https://www.boerse-frankfurt.de/suchergebnisse?_search=<query>
+  include: bf 0
+  examples:
+  - arguments: telekom
+    description: Suche nach "telekom"
 bhf 0:
   url: https://www.bahnhof.de/
   title: Bahnhofsauskunft, Deutsche Bahn
