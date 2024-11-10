@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   browser.commands.getAll((commands) => {
     const KeyboardShortcutsElement = document.getElementById("keyboard-shortcuts");
     const commandLabels = {
-      open_window: "Open Trovu input in Window",
-      open_tab: "Open Trovu input in Tab",
+      open_window: "Open a new window with Trovu",
+      open_tab: "Open a new tab with Trovu",
     };
     commands.forEach((command) => {
       KeyboardShortcutsElement.appendChild(document.createElement("li")).innerHTML =
