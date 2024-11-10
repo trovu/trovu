@@ -20,12 +20,18 @@ document.addEventListener("DOMContentLoaded", async function () {
   });
   const countries = await fetchLocalJson("/json/countries.en.min.json");
   Object.entries(countries).forEach(([code, name]) => {
-    countrySelect.appendChild(new Option(name, code));
+    countrySelect.appendChild(new Option(name, code.toLowerCase()));
   });
 
   browser.storage.local.get(["language", "country", "github"]).then((settings) => {
-    countrySelect.value = settings.country ? settings.country.toUpperCase() : "US";
-    languageSelect.value = settings.language || "en";
+    // Get the language and country of the user's browser
+    const languageAndCountry = browser.i18n.getUILanguage();
+    const [browserLanguage, browserCountry] = languageAndCountry.split("-");
+
+    // Set values from or storage or browser settings.
+    countrySelect.value = settings.country || browserCountry.toLowerCase() || "us";
+    languageSelect.value = settings.language || browserLanguage || "en";
+
     githubInput.value = settings.github || "";
   });
 
