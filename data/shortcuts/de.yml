@@ -213,12 +213,17 @@ blb 2:
   examples:
   - arguments: goethe, faust
     description: Suche nach "Faust" von Goethe
-bzl 1:
-  url: https://www.bookzilla.de/shop/quickSearch?searchString=<Suche>
+bzl 0:
+  url: https://www.bookzilla.de/
   title: Bookzilla
   tags:
   - books
   - shopping
+  examples:
+  - description: Gehe zur Startseite
+bzl 1:
+  url: https://www.bookzilla.de/shop/quickSearch?searchString=<Suche>
+  include: bzl 0
   examples:
   - arguments: goethe
     description: Search Bookzilla for "goethe"
