@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const [browserLanguage, browserCountry] = languageAndCountry.split("-");
 
     // Set values from or storage or browser settings.
-    countrySelect.value = settings.country || browserCountry.toLowerCase() || "us";
+    countrySelect.value = settings.country.toLowerCase() || browserCountry.toLowerCase() || "us";
     languageSelect.value = settings.language || browserLanguage || "en";
 
     githubInput.value = settings.github || "";
