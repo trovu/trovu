@@ -4,9 +4,14 @@
   tags:
   - communications
   - internetprovider
+abk 0:
+  url: https://www.abkuerzungen.de/
+  title: Abkürzungen.de
+  examples:
+  - description: Gehe zur Startseite
 abk 1:
   url: https://www.abkuerzungen.de/result.php?language=&abbreviation=<Abkürzung>
-  title: Abkürzungen
+  include: abk 0
   examples:
   - arguments: cia
     description: Suche nach der Abkürzung "cia"
