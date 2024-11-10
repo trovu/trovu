@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Error saving options:", error);
         alert("Failed to save options.");
       });
-    event.target.textContent = "Saved. You can close this tab now and use the keyboard shortcuts.";
+    event.target.textContent = "Saved. You can close this tab now and use the keyboard shortcuts listed below.";
   });
 
   addCopyButtons();
