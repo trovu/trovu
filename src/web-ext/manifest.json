@@ -34,8 +34,12 @@
   },
   "action": {
     "default_icon": {
-      "16": "icons/page-16.png",
-      "32": "icons/page-32.png"
+      "16": "./img/icons/16.png",
+      "32": "./img/icons/32.png",
+      "48": "./img/icons/48.png",
+      "64": "./img/icons/64.png",
+      "96": "./img/icons/96.png",
+      "128": "./img/icons/128.png"
     },
     "default_title": "Open MDN"
   },
@@ -47,6 +51,8 @@
     "16": "./img/icons/16.png",
     "32": "./img/icons/32.png",
     "48": "./img/icons/48.png",
+    "64": "./img/icons/64.png",
+    "96": "./img/icons/96.png",
     "128": "./img/icons/128.png"
   },
   "web_accessible_resources": [
