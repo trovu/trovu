@@ -52,33 +52,48 @@ ardmt 1:
   examples:
   - arguments: Tatort
     description: Suche nach "Tatort"
-ardtext 1:
-  url: https://www.ard-text.de/index.php?page=<Seitennummer>
+ardtext 0:
+  url: https://www.ard-text.de/
   title: ARD-Text
   tags:
   - ard
   - teletext
   - videotext
   examples:
+  - description: Gehe zur Startseite
+ardtext 1:
+  url: https://www.ard-text.de/index.php?page=<Seitennummer>
+  include: ardtext 0
+  examples:
   - arguments: '100'
     description: Gehe zu Seite 100
-at 1:
-  url: https://www.ostarrichi.org/suche?search=<Wort>
+at 0:
+  url: https://www.ostarrichi.org/
   title: Österreichisch-Hochdeutsch (Ostarrichi.org)
   tags:
   - austrian
   - german
   - language
   examples:
+  - description: Gehe zur Startseite
+at 1:
+  url: https://www.ostarrichi.org/suche?search=<Wort>
+  include: at 0
+  examples:
   - arguments: paradeisa
     description: '"paradeisa" auf Hochdeutsch'
-awf 1:
-  url: https://anderes-wort-fuer.de/<Wort>/
+awf 0:
+  url: https://anderes-wort-fuer.de/
   title: Anderes Wort für – Synonymlexikon
   tags:
   - german
   - language
   - synonyms
+  examples:
+  - description: Gehe zur Startseite
+awf 1:
+  url: https://anderes-wort-fuer.de/<Wort>/
+  include: awf 0
   examples:
   - arguments: wirtschaft
     description: Suche nach Synonymen für "wirtschaft"
@@ -87,35 +102,61 @@ awort 1:
     alternative:
       query: awf <1>
     created: '2023-01-10'
-base 1:
-  url: https://www.base-search.net/Search/Results?lookfor=<Suche>
+base 0:
+  url: https://www.base-search.net/
   title: Bielefeld Academic Search Engine
   tags:
   - academia
   - bielefeld
   - science
   examples:
+  - description: Gehe zur Startseite
+base 1:
+  url: https://www.base-search.net/Search/Results?lookfor=<Suche>
+  include: base 0
+  examples:
   - arguments: sprache
     description: Suche nach "sprache"
-bbs 1:
-  url: https://www.babyblaue-seiten.de/index.php?searchQuery=<Suche>&content=search&searchWhere=0&content=search
+bbs 0:
+  url: https://www.babyblaue-seiten.de/
   title: Babyblaue Seiten
   tags:
   - musik
   - progressive-rock
   - rock
   examples:
+  - description: Gehe zur Startseite
+bbs 1:
+  url: https://www.babyblaue-seiten.de/index.php?searchQuery=<Suche>&content=search&searchWhere=0&content=search
+  include: bbs 0
+  examples:
   - arguments: Mekong Delta
     description: Suche nach Mekong Delta
+bc 0:
+  url: https://www.bestcheck.de/
+  title: BestCheck
+  tags:
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
 bc 1:
   url: https://www.bestcheck.de/search?q=<Suche>
   title: BestCheck
-bk 1:
-  url: https://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch=<Suche>
+  include: bc 0
+  examples:
+  - arguments: smartphone
+    description: Suche nach "smartphone"
+bk 0:
+  url: https://www.buchkatalog.de/
   title: Buchkatalog
   tags:
   - books
   - shopping
+  examples:
+  - description: Gehe zur Startseite
+bk 1:
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://www.buchkatalog.de/kod-bin/isuche.cgi&quicksearch=<Suche>
+  include: bk 0
   examples:
   - arguments: goethe
     description: Suche nach Goethe
