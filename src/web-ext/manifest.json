@@ -32,6 +32,13 @@
     ],
     "service_worker": "background.js"
   },
+  "action": {
+    "default_icon": {
+      "16": "icons/page-16.png",
+      "32": "icons/page-32.png"
+    },
+    "default_title": "Open MDN"
+  },
   "options_ui": {
     "page": "options.html",
     "open_in_tab": true

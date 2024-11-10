@@ -7,6 +7,14 @@ browser.runtime.onInstalled.addListener(() => {
   browser.runtime.openOptionsPage();
 });
 
+function openPage() {
+  browser.tabs.create({
+    url: "https://developer.mozilla.org",
+  });
+}
+
+browser.action.onClicked.addListener(openPage);
+
 browser.commands.onCommand.addListener(async function (command) {
   const settings = await browser.storage.local.get(["language", "country", "github"]);
   const params = {
