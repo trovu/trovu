@@ -650,15 +650,6 @@ ba 1:
   examples:
   - arguments: berlin
     description: Search for berlin
-bd 1:
-  url: https://www.browserdefender.com/site/<url>/
-  title: Browser Defender
-  tags:
-  - malware
-  - sercurity
-  examples:
-  - arguments: www.google.com
-    description: Check if Google.com contains malware
 be 0:
   include:
   - key: be 0
