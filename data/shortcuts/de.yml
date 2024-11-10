@@ -258,8 +258,10 @@ cbl 1:
   - arguments: smartphone
     description: Suche nach "smartphone"
 ch 1:
-  url: https://www.google.de/search?q=<Suche>+site:www.chip.de
-  title: CHIP
+  deprecated:
+    alternative:
+      query: chipg <1>
+    created: '2024-11-10'
 chill 0:
   url: https://www.chilloutzone.net/
   title: Chilloutzone
@@ -288,6 +290,15 @@ chipd 1:
   examples:
   - arguments: skype
     description: Search CHIP Online Downloads for "skype"
+chipg 1:
+  url: https://www.google.de/search?q=<Suche>+site:www.chip.de
+  title: CHIP via Google
+  tags:
+  - chip
+  - news
+  examples:
+  - arguments: smartphone
+    description: Suche nach "smartphone"
 ciao 1:
   url: https://www.ciao.de/suche?anfrage=<Suche>
   title: Ciao.de Preisvergleich
