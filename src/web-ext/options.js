@@ -32,13 +32,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   // List keyboard shortcuts
   browser.commands.getAll((commands) => {
     const KeyboardShortcutsElement = document.getElementById("keyboard-shortcuts");
-    const commandLabels = {
-      open_window: "Open a new window with Trovu",
-      open_tab: "Open a new tab with Trovu",
-    };
     commands.forEach((command) => {
       KeyboardShortcutsElement.appendChild(document.createElement("li")).innerHTML =
-        `${commandLabels[command.name]}: <strong>${command.shortcut}</strong>`;
+        `${command.description}: <strong>${command.shortcut}</strong>`;
     });
   });
 
