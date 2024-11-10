@@ -120,8 +120,10 @@ bk 1:
   - arguments: goethe
     description: Suche nach Goethe
 bl 1:
-  url: https://www.google.de/search?q=<Suche>+site:www.chip.de%2Fbestenlisten
-  title: CHIP Bestenliste
+  deprecated:
+    alternative:
+      query: cbl <1>
+    created: '2024-11-10'
 bla 1:
   url: https://www.buffed.de/?f=<suchwort>
   title: Buffed.de
@@ -179,6 +181,21 @@ cb 1:
   examples:
   - arguments: linux
     description: Suche nach Artikel über "linux"
+cbl 0:
+  url: https://www.chip.de/bestenlisten/
+  title: CHIP Bestenliste
+  tags:
+  - chip
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+cbl 1:
+  url: https://www.google.de/search?q=<Suche>+site:www.chip.de%2Fbestenlisten
+  title: CHIP Bestenliste
+  include: bl 0
+  examples:
+  - arguments: smartphone
+    description: Suche nach "smartphone"
 ch 1:
   url: https://www.google.de/search?q=<Suche>+site:www.chip.de
   title: CHIP
