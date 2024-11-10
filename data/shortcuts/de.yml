@@ -16,11 +16,23 @@ abk 1:
   - arguments: cia
     description: Suche nach der Abkürzung "cia"
 anagramm 1:
-  url: https://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text=<Suche>&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
-  title: Anagramm-Suche
+  deprecated:
+    alternative:
+      query: ang <1>
+    created: '2024-11-10'
+ang 0:
+  url: https://www.sibiller.de/anagramme/
+  title: Anagramme
   tags:
+  - anagram
   - german
   - language
+  - words
+  examples:
+  - description: Gehe zur Startseite
+ang 1:
+  url: https://www.sibiller.de/anagramme/cgi-bin/CallWP.cgi?text=<Suche>&pre=&anz=5&max=12&min=2&typ=1&log=1&submit=+++++++Generator+starten%21++++++
+  include: ang 0
   examples:
   - arguments: rentner
     description: Anagramm-Suchen nach "rentner"
