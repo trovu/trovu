@@ -146,6 +146,22 @@ bc 1:
   examples:
   - arguments: smartphone
     description: Suche nach "smartphone"
+bfd 0:
+  url: https://www.buffed.de/
+  title: Buffed.de
+  tags:
+  - games
+  - mmorpg
+  - world-of-warcraft
+  - wow
+  examples:
+  - description: Gehe zur Startseite
+bfd 1:
+  url: https://www.buffed.de/Suche/?strSearch=<Suche>
+  include: bfd 0
+  examples:
+  - arguments: wow
+    description: Search Buffed.de for "wow"
 bk 0:
   url: https://www.buchkatalog.de/
   title: Buchkatalog
@@ -166,11 +182,10 @@ bl 1:
       query: cbl <1>
     created: '2024-11-10'
 bla 1:
-  url: https://www.buffed.de/?f=<suchwort>
-  title: Buffed.de
-  tags:
-  - admin:change-keyword
-  - games
+  deprecated:
+    alternative:
+      query: bfd <1>
+    created: '2024-11-10'
 blb 0:
   url: https://www.booklooker.de/app/sec/login.php
   title: Booklooker
