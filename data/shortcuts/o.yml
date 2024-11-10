@@ -492,6 +492,20 @@ apm 2:
   - arguments: hh, berliner tor
     description: Show Berliner Tor in Hamburg
   description: Apple Maps for desktop/browser. City can be given with common abbreviations, e.g. car number plates
+aqi 0:
+  url: https://aqicn.org/
+  title: Air Quality Index
+  tags:
+  - air
+  - quality
+  examples:
+  - description: Go to homepage
+aqi 1:
+  url: 'https://aqicn.org/search/#q=<location: {type: city}>'
+  include: aqi 0
+  examples:
+  - arguments: berlin
+    description: Search for air quality in Berlin
 ar 0:
   include:
   - key: ar 0
