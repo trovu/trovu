@@ -661,8 +661,7 @@ be 1:
 bf 1:
   deprecated:
     alternative:
-      query: bf <1>
-      namespace: .de
+      query: .de.bf <1>
     created: '2024-11-10'
 bg 0:
   include:
