@@ -10,9 +10,7 @@ browser.runtime.onInstalled.addListener((details) => {
 });
 
 function openPage() {
-  browser.tabs.create({
-    url: "https://developer.mozilla.org",
-  });
+  browser.runtime.openOptionsPage();
 }
 
 browser.action.onClicked.addListener(openPage);
