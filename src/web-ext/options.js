@@ -20,12 +20,18 @@ document.addEventListener("DOMContentLoaded", async function () {
   });
   const countries = await fetchLocalJson("/json/countries.en.min.json");
   Object.entries(countries).forEach(([code, name]) => {
-    countrySelect.appendChild(new Option(name, code));
+    countrySelect.appendChild(new Option(name, code.toLowerCase()));
   });
 
   browser.storage.local.get(["language", "country", "github"]).then((settings) => {
-    countrySelect.value = settings.country ? settings.country.toUpperCase() : "US";
-    languageSelect.value = settings.language || "en";
+    // Get the language and country of the user's browser
+    const languageAndCountry = browser.i18n.getUILanguage();
+    const [browserLanguage, browserCountry] = languageAndCountry.split("-");
+
+    // Set values from or storage or browser settings.
+    countrySelect.value = settings.country.toLowerCase() || browserCountry.toLowerCase() || "us";
+    languageSelect.value = settings.language || browserLanguage || "en";
+
     githubInput.value = settings.github || "";
   });
 
@@ -33,6 +39,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   browser.commands.getAll((commands) => {
     const KeyboardShortcutsElement = document.getElementById("keyboard-shortcuts");
     commands.forEach((command) => {
+      if (command.shortcut === "") {
+        return;
+      }
       KeyboardShortcutsElement.appendChild(document.createElement("li")).innerHTML =
         `${command.description}: <strong>${command.shortcut}</strong>`;
     });
@@ -50,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Error saving options:", error);
         alert("Failed to save options.");
       });
-    event.target.textContent = "Saved!";
+    event.target.textContent = "Saved. You can close this tab now and use the keyboard shortcuts listed below.";
   });
 
   addCopyButtons();

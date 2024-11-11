@@ -3,9 +3,17 @@ if (typeof browser === "undefined") {
   var browser = chrome;
 }
 
-browser.runtime.onInstalled.addListener(() => {
-  browser.runtime.openOptionsPage();
+browser.runtime.onInstalled.addListener((details) => {
+  if (details.reason === "install") {
+    browser.runtime.openOptionsPage();
+  }
 });
+
+function openPage() {
+  browser.runtime.openOptionsPage();
+}
+
+browser.action.onClicked.addListener(openPage);
 
 browser.commands.onCommand.addListener(async function (command) {
   const settings = await browser.storage.local.get(["language", "country", "github"]);

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "trovu.net",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Web search like a command line: With keyword & query go directly to search results of websites. DuckDuckGo bangs on steroids.",
   "permissions": [
     "storage"
@@ -32,6 +32,17 @@
     ],
     "service_worker": "background.js"
   },
+  "action": {
+    "default_icon": {
+      "16": "./img/icons/16.png",
+      "32": "./img/icons/32.png",
+      "48": "./img/icons/48.png",
+      "64": "./img/icons/64.png",
+      "96": "./img/icons/96.png",
+      "128": "./img/icons/128.png"
+    },
+    "default_title": "Open options"
+  },
   "options_ui": {
     "page": "options.html",
     "open_in_tab": true
@@ -40,6 +51,8 @@
     "16": "./img/icons/16.png",
     "32": "./img/icons/32.png",
     "48": "./img/icons/48.png",
+    "64": "./img/icons/64.png",
+    "96": "./img/icons/96.png",
     "128": "./img/icons/128.png"
   },
   "web_accessible_resources": [
