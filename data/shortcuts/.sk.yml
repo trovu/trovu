@@ -18,7 +18,7 @@ cp 3:
   - train
   - travel
   examples:
-  - arguments: bratislava, košice
+  - arguments: bratislava, košice, 20
     description: Vlak alebo bus z Bratislavy do Košić o 20:00h
 cp 4:
   url: 'https://cp.hnonline.sk/vlakbusmhd/spojenie/?f=<odkiaľ: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>&submit=1&pt=true'
@@ -29,7 +29,7 @@ cp 4:
   - train
   - travel
   examples:
-  - arguments: bratislava, košice
+  - arguments: bratislava, košice, 20, 10.12.
     description: Vlak alebo bus z Bratislavy do Košić o 20:00h 10.12.
 jw 1:
   url: https://www.justwatch.com/sk/vyhľadávať?q=<query>
