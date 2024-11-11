@@ -758,7 +758,7 @@ dbb 3:
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
 dbkb 0:
   url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?mainframe=IK_strecken
-  title: Deutsche Bahn Kursbuch - Streckenkarte
+  title: Deutsche Bahn Kursbuch, Streckenkarte
   tests:
   - expect: Streckenkarte
   tags:
@@ -767,7 +767,7 @@ dbkb 0:
   - travel
 dbkb 1:
   url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?st_name=<Bahnhof>&searchmode=station&mainframe=result&orig=sS&dosearch=1&oblig_st=1
-  title: Deutsche Bahn Kursbuch - Bahnhofssuche
+  title: Deutsche Bahn Kursbuch, Bahnhofssuche
   tests:
   - arguments: Schladen
     expect: Harz
@@ -780,7 +780,7 @@ dbkb 1:
     description: Suche nach Kursbuchtabellen zu Schladen
 dbkbt 1:
   url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?table_nr=<Tabellennummer>&searchmode=tableplus&mainframe=result&dosearch=1
-  title: Deutsche Bahn Kursbuch - Tabellensuche
+  title: Deutsche Bahn Kursbuch, Tabellensuche
   tests:
   - arguments: '353'
     expect: Tabellen gefunden
