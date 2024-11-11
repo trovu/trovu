@@ -4831,19 +4831,19 @@ insa 0:
   - travel
   - bahn
 insa 2:
-  url: https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start>&Z=<Ziel>
+  url: 'https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start: {type: city}>&Z=<Ziel: {type: city}>'
   include: insa 0
   examples:
   - arguments: Franckeplatz, Reileck
     description: Nächste Verbindungen vom Franckeplatz zum Reileck
 insa 3:
-  url: 'https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start>&Z=<Ziel>&time=<Zeit: {type: time}>'
+  url: 'https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>'
   include: insa 0
   examples:
   - arguments: Franckeplatz, Reileck, 20
     description: Nächste Verbindungen vom Franckeplatz zum Reileck um 20 Uhr
 insa 4:
-  url: 'https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start>&Z=<Ziel>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>'
+  url: 'https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>'
   include: insa 0
   examples:
   - arguments: Franckeplatz, Reileck, 20, fr
