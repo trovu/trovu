@@ -4828,8 +4828,11 @@ insa 0:
   url: https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft
   title: INSA Fahrplanauskunft
   tags:
-  - travel
   - bahn
+  - halle
+  - leipzig
+  - magdeburg
+  - travel
 insa 2:
   url: 'https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start: {type: city}>&Z=<Ziel: {type: city}>'
   include: insa 0
