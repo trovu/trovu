@@ -4824,6 +4824,18 @@ ikea 1:
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
+insa 0:
+  url: https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft
+  title: INSA Fahrplanauskunft
+  tags:
+  - travel
+  - bahn
+insa 2:
+  url: https://www.insa.de/fahrplanauskunft/insa-fahrplanauskunft?scrollTo=webapp&start=1&S=<Start>&Z=<Ziel>
+  include: insa 0
+  examples:
+  - arguments: Franckeplatz, Reileck
+    description: Nächste Verbindungen vom Franckeplatz zum Reileck
 iwb 0:
   url: https://www.internetwache-polizei-berlin.de/index_3.html
   title: Internetwache Polizei Berlin
