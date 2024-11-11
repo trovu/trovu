@@ -756,6 +756,41 @@ dbb 3:
   examples:
   - arguments: köln, münchen, 30.11.
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
+dbkb 0:
+  url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?mainframe=IK_strecken
+  title: Deutsche Bahn Kursbuch - Streckenkarte
+  tags:
+  - bahn
+  - railway
+  - travel
+  tests:
+  - expect: Streckenkarte
+dbkb 1:
+  url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?st_name=<Bahnhof>&searchmode=station&mainframe=result&orig=sS&dosearch=1&oblig_st=1
+  title: Deutsche Bahn Kursbuch - Bahnhofssuche
+  tags:
+  - bahn
+  - railway
+  - travel
+  examples:
+  - arguments: Schladen
+    description: Suche nach Kursbuchtabellen zu Schladen
+  tests:
+  - arguments: Schladen
+    expect: Harz
+dbkbt 1:
+  url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?table_nr=<Tabellennummer>&searchmode=tableplus&mainframe=result&dosearch=1
+  title: Deutsche Bahn Kursbuch - Tabellensuche
+  tags:
+  - bahn
+  - railway
+  - travel
+  examples:
+  - arguments: "353"
+    description: Suche nach Tabellennummer 353
+  tests:
+  - arguments: "353"
+    expect: Tabellen gefunden
 dbm 0:
   url: https://mobile.bahn.de/
   title: Deutsche Bahn Fahrplanauskunft, mobile Version
