@@ -2506,10 +2506,22 @@ etools 1:
   - old
 etsy 0:
   url: https://www.etsy.com/
-  title: Etsy - Shop for handmade, vintage, custom and unique gifts
+  title: Etsy
+  tags:
+  - etsy
+  - handmade
+  - marketplace
+  - shopping
+  - vintage
+  examples:
+  - description: Go to homepage
+  description: Shop for handmade, vintage, custom and unique gifts
 etsy 1:
   url: https://www.etsy.com/search?q=<query>
-  title: Etsy - Shop for handmade, vintage, custom and unique gifts
+  include: etsy 0
+  examples:
+  - arguments: bracelet
+    description: Search for bracelets
 ety 1:
   url: https://www.etymonline.com/index.php?search=<query>&searchmode=none
   title: Etymology lookup
