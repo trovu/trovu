@@ -5,7 +5,6 @@ import "../../scss/style.scss";
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
-import QueryParser from "./QueryParser";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
