@@ -16,14 +16,16 @@ describe("Homepage startup", () => {
     cy.get('head link[rel="search"][href="/opensearch/?country=gb&language=en"]');
   });
 
-  it("should have suggestions", () => {
+  it("should have focus on input", () => {
     cy.get("#query").first().focus().should("be.focused");
+  });
+
+  it("should have suggestions", () => {
     cy.get("#query").type("g");
     cy.contains("Google Web Homepage");
   });
 
   it("should have suggestions with type icons", () => {
-    cy.get("#query").first().focus().should("be.focused");
     cy.get("#query").type("db");
     cy.contains("📅");
   });
@@ -41,13 +43,11 @@ describe("Homepage startup", () => {
   });
 
   it("should submit a query", () => {
-    cy.get("#query").first().focus().should("be.focused");
     cy.get("#query").type("debug:g{enter}");
     cy.contains("https://www.google.");
   });
 
   it("should submit a query with extra namespace", () => {
-    cy.get("#query").first().focus().should("be.focused");
     cy.get("#query").type("debug:.cz.cd a,b{enter}");
     cy.contains("https://www.cd.cz");
   });
