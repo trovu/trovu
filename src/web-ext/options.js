@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const [browserLanguage, browserCountry] = languageAndCountry.split("-");
 
     // Set values from or storage or browser settings.
-    countrySelect.value = settings.country.toLowerCase() || browserCountry.toLowerCase() || "us";
+    countrySelect.value = settings.country?.toLowerCase() || browserCountry?.toLowerCase() || "us";
     languageSelect.value = settings.language || browserLanguage || "en";
 
     githubInput.value = settings.github || "";
@@ -46,6 +46,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         `${command.description}: <strong>${command.shortcut}</strong>`;
     });
   });
+
+  if (navigator.userAgent.includes("Chrome")) {
+    document.querySelector(".chrome").style.display = "block";
+  }
+  if (navigator.userAgent.includes("Firefox")) {
+    document.querySelector(".firefox").style.display = "block";
+  }
 
   saveOptionsButton.addEventListener("click", (event) => {
     event.preventDefault();
