@@ -31,6 +31,9 @@
         padding: 0.1em 0.2em;
         border-radius: 0.2em;
       }
+      .by-browser {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -50,20 +53,23 @@
       <button id="save" type="submit">Save Options</button>
       <label for="keyboard-shortcuts">Keyboard Shortcuts</label>
       <ul id="keyboard-shortcuts"></ul>
-      <h3>Change Keyboard Shortcuts</h3>
-      <div></div>
-      <label for="keyboard-shortcuts-chrome">Chrome, Brave, etc.:</label>
-      <ol id="keyboard-shortcuts-chrome">
-        <li><code>chrome://extensions/</code>.</li>
-        <li>On the left sidebar, click <em>Keyboard shortcuts</em>.</li>
-        <li>Find the settings for Trovu.</li>
-      </ol>
-      <label for="keyboard-shortcuts-firefox">Firefox:</label>
-      <ol id="keyboard-shortcuts-firefox">
-        <li>Go to <code>about:addons</code>.</li>
-        <li>Click the gear icon ⚙️.</li>
-        <li>Click <em>Manage Extension Shortcuts</em>.</li>
-      </ol>
+      <label for="change-keyboard-shortcuts">Change Keyboard Shortcuts</label>
+      <div id="change-keyboard-shortcuts">
+        <div class="by-browser chrome">
+          <ol id="change-keyboard-shortcuts-chrome">
+            <li><code>chrome://extensions/</code>.</li>
+            <li>On the left sidebar, click <em>Keyboard shortcuts</em>.</li>
+            <li>Find the settings for Trovu.</li>
+          </ol>
+        </div>
+        <div class="by-browser firefox">
+          <ol id="keyboard-shortcuts-firefox">
+            <li>Go to <code>about:addons</code>.</li>
+            <li>Click the gear icon ⚙️.</li>
+            <li>Click <em>Manage Extension Shortcuts</em>.</li>
+          </ol>
+        </div>
+      </div>
     </form>
     <script src="options.js"></script>
   </body>

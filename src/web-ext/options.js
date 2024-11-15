@@ -47,6 +47,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   });
 
+  if (navigator.userAgent.includes("Chrome")) {
+    document.querySelector(".chrome").style.display = "block";
+  }
+  if (navigator.userAgent.includes("Firefox")) {
+    document.querySelector(".firefox").style.display = "block";
+  }
+
   saveOptionsButton.addEventListener("click", (event) => {
     event.preventDefault();
     browser.storage.local
