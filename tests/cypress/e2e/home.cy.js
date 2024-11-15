@@ -34,6 +34,12 @@ describe("Homepage startup", () => {
     cy.contains("https://www.google.");
   });
 
+  it("should submit a query with extra namespace", () => {
+    cy.get("#query").first().focus().should("be.focused");
+    cy.get("#query").type("debug:.cz.cd a,b{enter}");
+    cy.contains("https://www.cd.cz");
+  });
+
   it("should have a working Settings modal", () => {
     cy.get("span#settings-button").should("be.visible").click();
     cy.get("select#languageSetting").should("be.visible").select("pl");
