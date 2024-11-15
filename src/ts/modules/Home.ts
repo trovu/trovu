@@ -2,8 +2,10 @@
 
 /** @module Home */
 import "../../scss/style.scss";
+import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
+import QueryParser from "./QueryParser";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
@@ -328,11 +330,27 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-    const processUrl = this.env.buildProcessUrl({
-      query: this.queryInput.value,
-    });
-    // Redirect to process script.
-    window.location.href = processUrl;
+    this.env.query = this.queryInput.value;
+    const params_from_query = QueryParser.parse(this.env.query);
+    Object.assign(this.env, params_from_query);
+    const response = CallHandler.getRedirectResponse(this.env);
+
+    // Send debug to /process.
+    if (this.env.debug) {
+      const processUrl = this.env.buildProcessUrl({
+        query: this.queryInput.value,
+      });
+      window.location.href = processUrl;
+      return;
+    }
+
+    let redirectUrl;
+    if (response.status === "found") {
+      redirectUrl = response.redirectUrl;
+    } else {
+      redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
+    }
+    window.location.href = redirectUrl;
   };
 
   /**
