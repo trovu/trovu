@@ -231,7 +231,7 @@ export default class Home {
         break;
     }
 
-    this.suggestions = new Suggestions("#query", "#suggestions", this.env);
+    this.suggestions = new Suggestions("#query", "#suggestions", this);
     this.setToggleByQuery();
   }
 

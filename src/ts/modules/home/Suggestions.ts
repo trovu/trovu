@@ -7,8 +7,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import jsyaml from "js-yaml";
 
 export default class Suggestions {
-  constructor(querySelector, suggestionsSelector, env) {
-    this.env = env;
+  constructor(querySelector, suggestionsSelector, home) {
+    this.env = home.env;
+    this.home = home;
     this.queryInput = document.querySelector(querySelector);
     this.suggestionsDiv = document.querySelector(suggestionsSelector);
     this.helpDiv = document.querySelector("#help");
@@ -273,10 +274,12 @@ export default class Suggestions {
       querySpan.textContent = `${suggestion.reachable ? "" : suggestion.namespace + "."}${suggestion.keyword} ${
         example.arguments || ""
       }`;
-      // Surrond query with link to /process.
       const queryLink = document.createElement("a");
-      queryLink.href = this.env.buildProcessUrl({
-        query: querySpan.textContent,
+      queryLink.href = "#";
+      queryLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.queryInput.value = querySpan.textContent;
+        this.home.submitQuery();
       });
       queryLink.appendChild(querySpan);
       leftSpan.appendChild(queryLink);
