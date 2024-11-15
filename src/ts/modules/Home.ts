@@ -338,7 +338,7 @@ export default class Home {
 
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
-    // or asking for new Github namespace.
+    // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
     envQuery.query = this.queryInput.value;
     await envQuery.populate();
