@@ -63,6 +63,12 @@ export default class Home {
       },
       false,
     );
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        // If true, the page was loaded from cache
+        document.getElementById("query").focus();
+      }
+    });
   }
 
   startTypewriter() {
