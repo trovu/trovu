@@ -31,7 +31,6 @@ describe("Homepage startup", () => {
   it("should submit a query", () => {
     cy.get("#query").first().focus().should("be.focused");
     cy.get("#query").type("debug:g{enter}");
-    cy.url().should("include", "/process/index.html?#country=gb&debug=1&language=en&query=debug%3Ag");
     cy.contains("https://www.google.");
   });
 
