@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - add-callhandler-to-index
   pull_request:
     branches:
       - master
