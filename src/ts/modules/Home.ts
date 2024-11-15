@@ -331,18 +331,23 @@ export default class Home {
    *
    * @param {object} event – The submitting event.
    */
-  submitQuery = (event) => {
+  submitQuery = async (event) => {
     // Prevent default sending as GET parameters.
     if (event) {
       event.preventDefault();
     }
-    this.env.query = this.queryInput.value;
-    const params_from_query = QueryParser.parse(this.env.query);
-    Object.assign(this.env, params_from_query);
-    const response = CallHandler.getRedirectResponse(this.env);
+
+    // Must create new env instance here,
+    // because extraNamespace might have changed reachability,
+    // or asking for new Github namespace.
+    const envQuery = new Env({ context: "index" });
+    envQuery.query = this.queryInput.value;
+    await envQuery.populate();
+
+    const response = CallHandler.getRedirectResponse(envQuery);
 
     // Send debug to /process.
-    if (this.env.debug) {
+    if (envQuery.debug) {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
