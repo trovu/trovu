@@ -2,6 +2,7 @@
 
 /** @module Home */
 import "../../scss/style.scss";
+import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
@@ -61,6 +62,12 @@ export default class Home {
       },
       false,
     );
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        // If true, the page was loaded from cache
+        document.getElementById("query").focus();
+      }
+    });
   }
 
   startTypewriter() {
@@ -223,7 +230,7 @@ export default class Home {
         break;
     }
 
-    this.suggestions = new Suggestions("#query", "#suggestions", this.env);
+    this.suggestions = new Suggestions("#query", "#suggestions", this);
     this.setToggleByQuery();
   }
 
@@ -323,16 +330,37 @@ export default class Home {
    *
    * @param {object} event – The submitting event.
    */
-  submitQuery = (event) => {
+  submitQuery = async (event) => {
     // Prevent default sending as GET parameters.
     if (event) {
       event.preventDefault();
     }
-    const processUrl = this.env.buildProcessUrl({
-      query: this.queryInput.value,
-    });
-    // Redirect to process script.
-    window.location.href = processUrl;
+
+    // Must create new env instance here,
+    // because extraNamespace might have changed reachability,
+    // or asking for a not yet parsed Github namespace.
+    const envQuery = new Env({ context: "index" });
+    envQuery.query = this.queryInput.value;
+    await envQuery.populate();
+
+    const response = CallHandler.getRedirectResponse(envQuery);
+
+    // Send debug to /process.
+    if (envQuery.debug) {
+      const processUrl = this.env.buildProcessUrl({
+        query: this.queryInput.value,
+      });
+      window.location.href = processUrl;
+      return;
+    }
+
+    let redirectUrl;
+    if (response.status === "found") {
+      redirectUrl = response.redirectUrl;
+    } else {
+      redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
+    }
+    window.location.href = redirectUrl;
   };
 
   /**
