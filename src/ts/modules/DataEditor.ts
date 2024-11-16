@@ -1,5 +1,5 @@
 // @ts-nocheck
-import DataManager from ".//DataManager";
+import DataManager from "./DataManager";
 
 export default class DataEditor {
   editData() {
