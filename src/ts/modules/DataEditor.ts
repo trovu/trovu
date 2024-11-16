@@ -4,6 +4,11 @@ import DataManager from "./DataManager";
 export default class DataEditor {
   editData() {
     const data = DataManager.load();
+    this.editLastfm(data);
+    DataManager.write(data);
+  }
+
+  private editLastfm(data: {}) {
     for (const namespace in data.shortcuts) {
       const key = "last 1";
       if (data.shortcuts[namespace].hasOwnProperty(key)) {
@@ -67,6 +72,5 @@ export default class DataEditor {
         namespace: "o",
       },
     };
-    DataManager.write(data);
   }
 }
