@@ -3,7 +3,7 @@ import child_process from "child_process";
 import fs from "fs";
 import jsyaml from "js-yaml";
 
-export default class DataReporter {
+export default class DataCompiler {
   static getGitInfo() {
     const hash = child_process.execSync("git rev-parse HEAD");
     const date = child_process.execSync("git show -s --format=%ci");
