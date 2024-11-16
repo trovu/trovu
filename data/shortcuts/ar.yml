@@ -1,13 +1,18 @@
-frv 1:
-  url: https://<$language>.forvo.com/search/<word>/
+frv 0:
+  url: https://<$language>.forvo.com/
   title: Forvo
   tags:
   - language
   - pronunciation
   examples:
+  - description: Go to homepage
+  description: Forvo pronunciation database
+frv 1:
+  url: https://<$language>.forvo.com/search/<word>/
+  include: frv 0
+  examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
-  description: Forvo pronunciation database, localized interface
 ygl 0:
   url: https://youglish.com/arabic
   title: YouGlish, Arabic

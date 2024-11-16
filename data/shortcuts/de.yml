@@ -625,16 +625,14 @@ frp 1:
     alternative:
       query: pns.fr <1>
     created: '2023-04-10'
+frv 0:
+  include: 
+    key: frv 0
+    namespace: ar
 frv 1:
-  url: https://de.forvo.com/search/<word>/
-  title: Forvo
-  tags:
-  - language
-  - pronunciation
-  examples:
-  - arguments: Soest
-    description: Sucht nach der Aussprache von "Soest"
-  description: Forvo Aussprachedatenbank, deutsches Interface
+  include: 
+    key: frv 1
+    namespace: ar
 gfp 0:
   url: https://german-foreign-policy.com/
   title: German Foreign Policy

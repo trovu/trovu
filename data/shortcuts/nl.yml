@@ -21,16 +21,14 @@ enc 1:
 ety 0:
   url: https://www.etymologiebank.nl/
   title: etymologiebank.nl
+frv 0:
+  include: 
+    key: frv 0
+    namespace: ar
 frv 1:
-  url: https://<$language>.forvo.com/search/<word>/
-  title: Forvo
-  tags:
-  - language
-  - pronunciation
-  examples:
-  - arguments: berlin
-    description: Search for the pronunciation of "berlin"
-  description: Forvo pronunciation database, localized interface
+  include: 
+    key: frv 1
+    namespace: ar
 rijm 0:
   url: https://www.rijm.nu/
   title: Rijm.nu!

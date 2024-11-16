@@ -1,13 +1,11 @@
+frv 0:
+  include: 
+    key: frv 0
+    namespace: ar
 frv 1:
-  url: https://<$language>.forvo.com/search/<word>/
-  title: Forvo
-  tags:
-  - language
-  - pronunciation
-  examples:
-  - arguments: berlin
-    description: Search for the pronunciation of "berlin"
-  description: Forvo pronunciation database, localized interface
+  include: 
+    key: frv 1
+    namespace: ar
 ygl 0:
   url: https://youglish.com/ukrainian
   title: YouGlish, Ukrainian
