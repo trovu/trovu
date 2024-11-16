@@ -100,6 +100,9 @@ Use one of these URL templates and add it where your browser allows to set custo
 
 A free, generic app, allows also adding custom search engines.
 
+1. With your Android device, [visit the app in the Play store](https://play.google.com/store/apps/details?id=de.tobiasbielefeld.searchbar)
+1. Install it on your device.
+1. Open the app.
 1. Tap on the 3 dots in the upper right corner
 1. Tap on _Settings_
 1. Tap on _Search engine_
