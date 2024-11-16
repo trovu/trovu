@@ -1,13 +1,5 @@
 kt 0:
   url: https://komputeko.net/
-  title: Komputeko, ĉefpaĝo
-  tags:
-  - computer
-  - dictionary
-  - esperanto
-  - vortaro
-kt 1:
-  url: https://komputeko.net/#<vorto>
   title: Komputeko
   tags:
   - computer
@@ -15,50 +7,44 @@ kt 1:
   - esperanto
   - vortaro
   examples:
+  - description: Iru al la ĉefpaĝo
+kt 1:
+  url: https://komputeko.net/#<vorto>
+  include: kt 0
+  examples:
   - arguments: shortcut
-    description: Find the Esperanto word for "shortcut"
+    description: Trovu tradukojn de "shortcut"
 piv 0:
   url: https://vortaro.net/
-  title: Plena Ilustrita Vortaro, ĉefpaĝo
-  tags:
-  - esperanto
-  - language
-piv 1:
-  url: https://vortaro.net/#<vorto>
   title: Plena Ilustrita Vortaro
-  tags:
-  - esperanto
-  - language
-  examples:
-  - arguments: arbo
-    description: Serĉu "arbo"
-rv 0:
-  url: https://www.reta-vortaro.de/
-  title: Reta Vortaro, ĉefpaĝo
   tags:
   - dictionary
   - esperanto
   - language
   examples:
-  - arguments: vorto
-    description: Search for "vorto"
-rv 1:
-  url: https://www.reta-vortaro.de/revo/dlg/index-2f.html?q=<vorto>
+  - description: Iru al la ĉefpaĝo
+piv 1:
+  url: https://vortaro.net/#<vorto>
+  include: piv 0
+  examples:
+  - arguments: arbo
+    description: Serĉu "arbo"
+rv 0:
+  url: https://www.reta-vortaro.de/
   title: Reta Vortaro
   tags:
   - dictionary
   - esperanto
   - language
   examples:
-  - arguments: vorto
-    description: Search for "vorto"
-rvg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=reta-vortaro.de&domains=reta-vortaro.de&q=<vorto>
-  title: Reta Vortaro tra Google
-  tags:
-  - dictionary
-  - esperanto
-  - language
+  - description: Iru al la ĉefpaĝo
+rv 1:
+  url: https://www.reta-vortaro.de/revo/dlg/index-2f.html?q=<vorto>
+  include: rv 0
   examples:
   - arguments: arbo
     description: Serĉu "arbo"
+rvg 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=reta-vortaro.de&domains=reta-vortaro.de&q=<vorto>
+  title: Reta Vortaro tra Google
+  include: rv 1
