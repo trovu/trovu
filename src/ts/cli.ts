@@ -1,5 +1,6 @@
 // @ts-nocheck
 import DataCompiler from "./modules/DataCompiler";
+import DataEditor from "./modules/DataEditor";
 import DataManager from "./modules/DataManager";
 import DataReporter from "./modules/DataReporter";
 import DictionarySetter from "./modules/DictionarySetter";
@@ -46,6 +47,8 @@ program
   .description("Migrate http to https")
   .option("-f, --filter <string>", "only apply to files containing <string>")
   .action(migrateProtocol);
+
+program.command("edit-data").description("Edit YAML data files").action(editData);
 
 program.command("normalize-data").description("Normalize YAML data files").action(normalizeData);
 
@@ -94,6 +97,11 @@ function migratePlaceholders(options) {
 async function migrateProtocol(options) {
   const migrator = new Migrator();
   await migrator.migrateProtocol(options);
+}
+
+function editData() {
+  const dataEditor = new DataEditor();
+  dataEditor.editData();
 }
 
 function normalizeData() {
