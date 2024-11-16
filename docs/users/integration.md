@@ -149,7 +149,7 @@ Here is an example setting for the user `georgjaehnig`:
 
 ### Nova Launcher
 
-If you use Nova Launcher, you can add add Trovu to Nova's search bar to search directly from the home screen.
+If you use Nova Launcher, you can add Trovu to Nova's search bar to search directly from the home screen.
 
 How to set up:
 
