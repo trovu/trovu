@@ -15,14 +15,18 @@ fw 1:
   - arguments: forrest gump
     description: Search for "forrest gump"
 last 1:
-  url: https://www.last.fm/search?setlang=pl&q=<artist>
-  title: Last.fm
-  tags:
-  - lastfm
-  - music
-  examples:
-  - arguments: beatles
-    description: Search for "beatles"
+  deprecated:
+    alternative:
+      query: lfm 1
+    created: '2024-11-17'
+lfm 0:
+  include:
+    key: lfm 0
+    namespace: de
+lfm 1:
+  include:
+    key: lfm 1
+    namespace: de
 mo 0:
   url: https://www.money.pl/
   title: Money.pl

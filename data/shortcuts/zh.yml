@@ -7,14 +7,18 @@ frv 1:
     key: frv 1
     namespace: ar
 last 1:
-  url: https://www.last.fm/search?setlang=zh&q=<artist>
-  title: Last.fm
-  tags:
-  - lastfm
-  - music
-  examples:
-  - arguments: beatles
-    description: Search for "beatles"
+  deprecated:
+    alternative:
+      query: lfm 1
+    created: '2024-11-17'
+lfm 0:
+  include:
+    key: lfm 0
+    namespace: de
+lfm 1:
+  include:
+    key: lfm 1
+    namespace: de
 ygl 0:
   url: https://youglish.com/chinese
   title: YouGlish, Chinese

@@ -872,14 +872,10 @@ lad 1:
       query: dcc.la <1>
     created: '2023-04-10'
 last 1:
-  url: https://www.last.fm/search?setlang=de&q=<artist>
-  title: Last.fm
-  tags:
-  - lastfm
-  - music
-  examples:
-  - arguments: beatles
-    description: Search for "beatles"
+  deprecated:
+    alternative:
+      query: lfm 1
+    created: '2024-11-17'
 leh 0:
   url: https://www.lehmanns.de/
   title: Lehmanns.de
@@ -899,6 +895,16 @@ leo 1:
     alternative:
       query: leo.en <1>
     created: '2023-03-12'
+lfm 0:
+  url: https://www.last.fm/<$language>/
+  include:
+  - key: lfm 0
+    namespace: o
+lfm 1:
+  url: https://www.last.fm/<$language>/search?q=<query>
+  include:
+    key: lfm 1
+    namespace: o
 lobby 0:
   url: https://www.lobbycontrol.de/
   title: LobbyControl

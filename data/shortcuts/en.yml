@@ -88,14 +88,18 @@ gfp 0:
   - news
   - politics
 last 1:
-  url: https://www.last.fm/search?setlang=en&q=<artist>
-  title: Last.fm
-  tags:
-  - lastfm
-  - music
-  examples:
-  - arguments: beatles
-    description: Search for "beatles"
+  deprecated:
+    alternative:
+      query: lfm 1
+    created: '2024-11-17'
+lfm 0:
+  include:
+    key: lfm 0
+    namespace: de
+lfm 1:
+  include:
+    key: lfm 1
+    namespace: de
 mw 1:
   url: https://www.merriam-webster.com/dictionary/<query>
   title: Merriam-Webster dictionary
