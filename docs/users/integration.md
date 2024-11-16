@@ -153,7 +153,7 @@ If you use [Nova Launcher](https://play.google.com/store/apps/details?id=com.tes
 
 How to set up:
 
-1. Open the _Nova Setttings_ app.
+1. Open the _Nova Settings_ app.
 1. Open the _Search_ section
 1. Scroll down to _Search More providers_ and open that section
 1. Tap the floating _+_ button
