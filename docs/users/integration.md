@@ -22,6 +22,18 @@ With Option 2, you maintain greater control and predictability over your searche
 
 ### Firefox
 
+#### Browser extension
+
+The easiest way to use Trovu in Firefox is the [browser add-on](https://addons.mozilla.org/firefox/addon/trovu/). It allows you to set keyboard shortcuts which open a Trovu input with suggestions in a new tab or window.
+
+![Screenshot](img/web-ext.png)
+
+#### (Default) search engine
+
+Another option is adding Trovu as a search engine, optionally making it default.
+
+However, no shortcut suggestions are available here.
+
 1.  Open [trovu.net](https://trovu.net/), either [with your GitHub username](advanced.md) or without:
     -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
     -   `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
@@ -36,6 +48,18 @@ With Option 2, you maintain greater control and predictability over your searche
 ![Screenshot](img/firefox.png)
 
 ### Chrome
+
+#### Browser extension
+
+The easiest way to use Trovu in Chrome is the [browser extension](https://chromewebstore.google.com/detail/trovunet/iadcllehbnbepkalhgljhdfhjbkgkajo). It allows you to set keyboard shortcuts which open a Trovu input with suggestions in a new tab or window.
+
+![Screenshot](img/web-ext.png)
+
+#### (Default) search engine
+
+Another option is adding Trovu as a search engine, optionally making it default.
+
+However, no shortcut suggestions are available here.
 
 1.  Open [trovu.net](https://trovu.net/), either [with your GitHub username](advanced.md) or without:
     -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or

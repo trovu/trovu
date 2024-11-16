@@ -12,6 +12,7 @@
   "scripts": {
     "build": "rollup --config --bundleConfigAsCjs --environment INCLUDE_DEPS,BUILD:production",
     "build-blog": "npx @11ty/eleventy",
+    "build-docs": "pipenv run mkdocs build",
     "build-jsdoc": "jsdoc --configure jsdoc.json",
     "clean": "rm -rf dist/",
     "compile-data": "node dist/cli.mjs compile-data --output ./dist/public/data.json",

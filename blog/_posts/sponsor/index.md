@@ -1,5 +1,5 @@
 ---
-title: How to Sponsor Trovu from $2/month
+title: Sponsor Trovu & Get Advanced Support
 description: You can fund via Github Sponsors or Stripe, and suggest more options.
 date: 2024-07-28
 tags:
