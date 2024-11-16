@@ -144,6 +144,28 @@ Here is an example setting for the user `georgjaehnig`:
 
 ![Screenshot](img/chrome.png)
 
+### Nova Launcher
+
+If you use Nova Launcher, you can add add Trovu to Nova's search bar to search directly from the home screen.
+
+How to set up:
+
+1. Open the _Nova Setttings_ app.
+1. Open the _Search_ section
+1. Scroll down to _Search More providers_ and open that section
+1. Tap the floating _+_ button
+1. Enter the _URL to use for search_, as described under [Other](#other).
+1. Enter a name, e.g. `Trovu`
+1. Tap _OK_
+1. Scroll all the way down to find your newly added search provider. Make sure the checkbox next to it is ticked. You may also use the handle on the right to move it all the way to the top of the list, so search with Trovu will get prioritized.
+1. Tap the home button (or perform the corresponding gesture) to leave the settings app.
+
+How to use:
+
+1. From the home screen, tap on the Nova search bar.
+1. Type a query. You should see a little Trovu icon appear underneath it, along with other search provider icons.
+1. Start the search by tapping the Trovu icon. If the Trovu icon is in first position among the search provider icons (on the left), you may also just tap _Enter_. Your default browser should open with the search results.
+
 ## PWA (Progressive web app)
 
 On many operating systems, you can also install a [Progressive web app](https://en.wikipedia.org/wiki/Progressive_web_app) of Trovu.
