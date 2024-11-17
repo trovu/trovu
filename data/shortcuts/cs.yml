@@ -1,3 +1,5 @@
+c 0:
+  include: csfd 0
 c 1:
   include: csfd 1
 cs 1:
@@ -11,13 +13,18 @@ cs 1:
   examples:
   - arguments: strom
     description: '"strom" – dřevina s kmenem'
-csfd 1:
-  url: https://www.csfd.cz/hledat/?q=<výraz>
+csfd 0:
+  url: https://www.csfd.cz/
   title: Česko-Slovenská filmová databáze
   tags:
   - czech
   - movies
   - slovak
+  examples:
+  - description: Přejít na domovskou stránku
+csfd 1:
+  url: https://www.csfd.cz/hledat/?q=<výraz>
+  include: csfd 0
   examples:
   - arguments: Pelíšky
     description: Hledat "Pelíšky"
