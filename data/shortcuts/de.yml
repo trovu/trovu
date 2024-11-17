@@ -1226,8 +1226,10 @@ ptp 1:
       query: pns.pt <1>
     created: '2023-04-10'
 qa 1:
-  url: https://lite.qwant.com/?q=<Suche>
-  title: QWANT
+  deprecated:
+    alternative:
+      query: qw <1>
+    created: '2024-11-17'
 rblcheck 1:
   url: https://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress=<ipaddress>
   title: RBL-Check (Realtime Blackhole List)

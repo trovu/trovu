@@ -6907,9 +6907,20 @@ qu 1:
     namespace: bab
   - key: qu 1
     namespace: pka
+qw 0:
+  url: https://www.qwant.com/
+  title: Qwant
+  tags:
+  - web-search
+  - privacy
+  examples:
+  - description: Go to homepage
 qw 1:
-  url: https://www.qwant.com/?q=<query>
-  title: qwant search engine
+  url: https://www.qwant.com/?l=<$language>&q=<query>
+  include: qw 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 r 1:
   deprecated:
     alternative:
