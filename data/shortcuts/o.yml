@@ -274,13 +274,18 @@ ad 1:
   examples:
   - arguments: kitkat
     description: Search for "kitkat"
-adror 1:
-  url: https://apidock.com/rails/search?query=<query>
-  title: 'Apidock: Ruby on Rails'
+adror 0:
+  url: https://apidock.com/rails/
+  title: Apidock, Ruby on Rails
   tags:
   - programming
   - ror
   - ruby
+  examples:
+  - description: Go to homepage
+adror 1:
+  url: https://apidock.com/rails/search?query=<query>
+  include: adror 0
   examples:
   - arguments: set
     description: Search for "set"
