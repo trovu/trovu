@@ -156,12 +156,17 @@ sta 1:
   examples:
   - arguments: How many people live in Berlin?
     description: Answers the question.
-syn 1:
-  url: https://thesaurus.com/browse/<word>
+syn 0:
+  url: https://www.thesaurus.com/
   title: Thesaurus.com
   tags:
   - english
   - thesaurus
+  examples:
+  - description: Go to homepage
+syn 1:
+  url: https://www.thesaurus.com/browse/<word>
+  include: syn 0
   examples:
   - arguments: important
     description: Search for synonyms of "important"
