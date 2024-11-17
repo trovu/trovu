@@ -80,21 +80,6 @@ dict 1:
   examples:
   - arguments: tree
     description: Search for "tree"
-edram 0:
-  url: https://encyclopediadramatica.gay/
-  title: Encyclopedia Dramatica
-  tags:
-  - encyclopedia
-  - humor
-edram 1:
-  url: https://encyclopediadramatica.gay/Special:Search?go=Article&search=<article>
-  title: Encyclopedia Dramatica
-  tags:
-  - encyclopedia
-  - humor
-  examples:
-  - arguments: Boxxy
-    description: Encyclopedia Dramatica Article about Boxxy
 esi 1:
   deprecated:
     alternative:
