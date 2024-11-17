@@ -58,36 +58,31 @@ e 1:
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
-ep 2:
-  url: https://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>
+ep 0:
+  url: https://www.e-podroznik.pl/
   title: e-podróżnik.pl
   tags:
   - e-podróżnik
   - pkp
   - railway
   - travel
+  examples:
+  - description: Przejdź do strony głównej
+ep 2:
+  url: https://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>
+  include: ep 0
   examples:
   - arguments: kutno, gniezno
     description: połączenie z Kutna do Gniezna
 ep 3:
   url: https://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>&formCompositeSearcherFinal.time=<czas>
-  title: e-podróżnik.pl
-  tags:
-  - e-podróżnik
-  - pkp
-  - railway
-  - travel
+  include: ep 0
   examples:
   - arguments: kutno, gniezno, 10
     description: połączenie z Kutna do Gniezna o godz. 10
 ep 4:
   url: https://www.e-podroznik.pl/public/searcherFinal.do?lang=pl&method=plain&formCompositeSearcherFinal.fromText=<start>&formCompositeSearcherFinal.toText=<cel>&formCompositeSearcherFinal.time=<czas>&formCompositeSearcherFinal.date=<data>
-  title: e-podróżnik.pl
-  tags:
-  - e-podróżnik
-  - pkp
-  - railway
-  - travel
+  include: ep 0
   examples:
   - arguments: kutno, gniezno, 10, 31.1.13
     description: połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
