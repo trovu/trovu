@@ -6,22 +6,32 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
-yr 1:
-  url: https://www.yr.no/nb/s%C3%B8k?q=<query>
-  title: Yr.no norsk nettsted for værvarsler og annen meteorologisk informasjon
+yr 0:
+  url: https://www.yr.no/
+  title: Yr.no
   tags:
   - forecast
   - weather
   examples:
+  - description: Gå til hjemmesiden
+  description: Norsk nettsted for værvarsler og annen meteorologisk informasjon
+yr 1:
+  url: https://www.yr.no/nb/s%C3%B8k?q=<query>
+  include: yr 0
+  examples:
   - arguments: Oslo
     description: Look up the weather in Oslo
-  description: "yr.no er et norsk nettsted for værvarsler og annen meteorologisk informasjon. Det drives som et samarbeid mellom Norsk rikskringkasting (NRK) og Meteorologisk institutt.\r\n\r\nPå nettstedet kan en finne automatgenererte værvarsler (som grafer og kart) for 900 000 steder i Norge og 9 millioner steder i verden. For Norge kommer i tillegg bearbeidde tekstvarsler fra Meteorologisk institutt, radar- og satellittbilder, klimatologiske data og en rekke spesialvarsler. Videre er det nyhetssaker og populærvitenskapelige artikler relatert til vær og klima. Værvarslene er basert på data fra Meteorologisk institutt og de internasjonale samarbeidspartnerene til instituttet (ECMWF, EUMETSAT etc.)."
-zal 1:
-  url: https://www.zalando.no/katalog/?q=<produkt>
+zal 0:
+  url: https://www.zalando.no/
   title: Zalando.no
   tags:
   - shopping
   - zalando
   examples:
+  - description: Gå til hjemmesiden
+zal 1:
+  url: https://www.zalando.no/katalog/?q=<produkt>
+  include: zal 0
+  examples:
   - arguments: sko
-    description: søke sko
+    description: Søke sko
