@@ -58,12 +58,17 @@ emd 1:
   examples:
   - arguments: madrid
     description: Buscar "madrid" en El Mundo
-g 1:
-  url: https://www.google.es/search?hl=<$language>&q=<query>&ie=utf-8
+g 0:
+  url: https://www.google.es/
   title: Google.es
   tags:
   - google
   - web-search
+  examples:
+  - description: Ir a la página principal
+g 1:
+  url: https://www.google.es/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
   examples:
   - arguments: madrid
     description: Buscar "madrid" con Google
@@ -143,18 +148,15 @@ jw 1:
 ma 0:
   url: https://www.milanuncios.com/
   title: Milanuncios
-  description: venta de productos de segunda mano
+  examples:
+  - description: Ir a la página principal
+  description: Venta de productos de segunda mano
 ma 1:
   url: https://www.milanuncios.com/anuncios/?s=<búsqueda>&orden=relevance&fromSearch=1&fromSuggester=1&suggestionUsed=0&hitOrigin=home_search
-  title: Milanuncios
-  tags:
-  - anuncios
-  - segunda-mano
-  - shopping
+  include: ma 0
   examples:
   - arguments: palmera
     description: Busqueda de "palmera"
-  description: venta de productos de segunda mano
 mil 0:
   deprecated:
     alternative:
@@ -204,17 +206,27 @@ titsa 3:
 wlp 0:
   url: https://es.wallapop.com/
   title: Wallapop
-  description: venta de productos de segunda mano
+  tags:
+  - shopping
+  - wallapop
+  examples:
+  - description: Ir a la página principal
+  description: Venta de productos de segunda mano
 wlp 1:
   url: https://es.wallapop.com/app/search?filters_source=search_box&keywords=<query>
   title: Wallapop
-  description: venta de productos de segunda mano
-zal 1:
-  url: https://www.zalando.es/catalogo/?q=<product>
+  include: wlp 0
+zal 0:
+  url: https://www.zalando.es/
   title: Zalando.es
   tags:
   - shopping
   - zalando
+  examples:
+  - description: Ir a la página principal
+zal 1:
+  url: https://www.zalando.es/catalogo/?q=<product>
+  include: zal 0
   examples:
   - arguments: calzado
     description: buscar calzado
