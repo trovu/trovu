@@ -1295,14 +1295,20 @@ rivva 1:
   examples:
   - arguments: berlin
     description: Search Rivva blog aggregator for "berlin"
-rm 1:
-  url: https://www.pledarigrond.ch/rumantschgrischun/#searchPhrase=<pled>
+rm 0:
+  url: https://www.pledarigrond.ch/
   title: Romanisch-Deutsch via Pledari Grond
   tags:
   - dictionary
   - german
   - language
   - rumantsch-grischun
+  examples:
+  - description: Gehe zur Startseite
+  description: Dictionary German <-> Rumantsch Grischun
+rm 1:
+  url: https://www.pledarigrond.ch/rumantschgrischun/#searchPhrase=<pled>
+  include: rm 0
   description: Dictionary German <-> Rumantsch Grischun
 rub 1:
   deprecated:
@@ -1628,10 +1634,10 @@ wn 1:
   - arguments: haus
     description: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
 wort 1:
-  url: https://www.dwds.de/?qu=<Wort>&view=1
-  title: Digitales Wörterbuch der Deutschen Sprache
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: dwds <1>
+    created: '2024-11-17'
 wsl 0:
   url: https://corpora.uni-leipzig.de/
   title: Wortschatz-Lexikon (Deutsch)
