@@ -1230,12 +1230,18 @@ qa 1:
     alternative:
       query: qw <1>
     created: '2024-11-17'
+rblcheck 0:
+  url: https://rbl-check.org/rbl-quick-check/abfrage/
+  include:
+    key: rblcheck 0
+    namespace: o
+  examples:
+  - description: Gehe zur Startseite
 rblcheck 1:
   url: https://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/rbl-quick-check/abfrage/&ipaddress=<ipaddress>
-  title: RBL-Check (Realtime Blackhole List)
-  tags:
-  - email
-  - rbl
+  include:
+    key: rblcheck 1
+    namespace: o
   examples:
   - arguments: 127.0.0.1
     description: Check if 127.0.0.1 is on the RBL
