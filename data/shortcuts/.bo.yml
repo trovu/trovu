@@ -1,6 +1,16 @@
+abi 0:
+  url: https://www.abi.bo/
+  title: Agencia Boliviana de Informacion busqueda
+  tags:
+  - news
+  examples:
+  - description: Ir a la pagina principal
 abi 1:
   url: https://www.abi.bo/index.php/component/search/?searchword=<termino>&searchphrase=all&Itemid=101
-  title: Agencia Boliviana de Informacion busqueda
+  include: abi 0
+  examples:
+  - arguments: covid
+    description: Buscar "covid"
 jw 1:
   url: https://www.justwatch.com/bo/buscar?q=<query>
   include:
