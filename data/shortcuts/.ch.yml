@@ -367,36 +367,33 @@ zal 1:
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen
-zvv 2:
-  url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>'
-  title: ZVV-Auskunft
+zvv 0:
+  url: https://www.zvv.ch/
+  title: ZVV
   tags:
   - bahn
   - travel
   - zürich
+  examples:
+  - description: Gehe zur Startseite
+  description: Zürcher Verkehrsverbund
+zvv 2:
+  url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>'
+  title: ZVV-Auskunft
+  include: zvv 0
   examples:
   - arguments: hb, winterthur
     description: Nächste Verbindung von Zürich HB nach Winterthur
   description: Fahrplanauskunft des Züricher Verkehrverbundes
 zvv 3:
   url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>&time=<Zeit: {type: time}>'
-  title: ZVV-Auskunft
-  tags:
-  - bahn
-  - travel
-  - zürich
+  include: zvv 2
   examples:
   - arguments: hb, winterthur, 10
     description: Verbindung von Zürich HB nach Winterthur um 10 Uhr heute
-  description: Fahrplanauskunft des Züricher Verkehrverbundes
 zvv 4:
   url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date}>'
-  title: ZVV-Auskunft
-  tags:
-  - bahn
-  - travel
-  - zürich
+  include: zvv 2
   examples:
   - arguments: hb, winterthur, 10, di
     description: Verbindung von Zürich HB nach Winterthur um 10 Uhr am kommenden Dienstag
-  description: Fahrplanauskunft des Züricher Verkehrverbundes
