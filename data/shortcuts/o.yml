@@ -289,11 +289,20 @@ adror 1:
   examples:
   - arguments: set
     description: Search for "set"
-ads 1:
-  url: https://adsabs.harvard.edu/cgi-bin/nph-basic_connect?qsearch=<query>&version=1
+ads 0:
+  url: https://adsabs.harvard.edu/
   title: Astrophysics Data System
   tags:
+  - astronomy
+  - astrophysics
   - physics
+  - science
+  - space
+  examples:
+  - description: Go to homepage
+ads 1:
+  url: https://adsabs.harvard.edu/cgi-bin/nph-basic_connect?qsearch=<query>&version=1
+  include: ads 0
   examples:
   - arguments: dark energy
     description: Search for astrophysics articles on "dark energy"
