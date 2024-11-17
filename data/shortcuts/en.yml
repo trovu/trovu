@@ -115,21 +115,31 @@ lfm 1:
   include:
     key: lfm 1
     namespace: de
-mw 1:
-  url: https://www.merriam-webster.com/dictionary/<query>
+mw 0:
+  url: https://www.merriam-webster.com/
   title: Merriam-Webster dictionary
   tags:
   - dictionary
   - english
   examples:
+  - description: Go to homepage
+mw 1:
+  url: https://www.merriam-webster.com/dictionary/<query>
+  include: mw 0
+  examples:
   - arguments: asleep
     description: Look up the English word "asleep"
-mwt 1:
-  url: https://www.merriam-webster.com/thesaurus/<query>
+mwt 0:
+  url: https://www.merriam-webster.com/
   title: Merriam-Webster theraurus
   tags:
-  - dictionary
   - english
+  - thesaurus
+  examples:
+  - description: Go to homepage
+mwt 1:
+  url: https://www.merriam-webster.com/thesaurus/<query>
+  include: mwt 0
   examples:
   - arguments: important
     description: Search for synonyms of "important"
