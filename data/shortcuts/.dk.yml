@@ -11,30 +11,29 @@ bdk 1:
   examples:
   - arguments: nesbø
     description: Search for Nesbø
-dsb 2:
-  url: 'https://www.dsb.dk/netbutik/resultat/?criteria%5B0%5D.DepartLocation.Name=<fra>&criteria%5B0%5D.ArriveLocation.Name=<til>&criteria%5B0%5D.SearchTime=<$now: {output: HH:mm}>&criteria%5B0%5D.SearchDate=<$now: {output: YYYY-MM-DD}>&criteria%5B0%5D.PassengersAdults=1&criteria%5B0%5D.Type=0&criteria%5B0%5D.SearchType=1&criteria%5B0%5D.Direction=1'
+dsb 0:
+  url: https://www.dsb.dk/
   title: Danske Statsbaner
   tags:
   - railway
   - travel
+  examples:
+  - description: Gå til hjemmesiden
+dsb 2:
+  url: 'https://www.dsb.dk/netbutik/resultat/?criteria%5B0%5D.DepartLocation.Name=<fra>&criteria%5B0%5D.ArriveLocation.Name=<til>&criteria%5B0%5D.SearchTime=<$now: {output: HH:mm}>&criteria%5B0%5D.SearchDate=<$now: {output: YYYY-MM-DD}>&criteria%5B0%5D.PassengersAdults=1&criteria%5B0%5D.Type=0&criteria%5B0%5D.SearchType=1&criteria%5B0%5D.Direction=1'
+  include: dsb 0
   examples:
   - arguments: aarhus, københavn
     description: næste tog fra Aarhus til København
 dsb 3:
   url: 'https://www.dsb.dk/netbutik/resultat/?criteria%5B0%5D.DepartLocation.Name=<fra>&criteria%5B0%5D.ArriveLocation.Name=<til>&criteria%5B0%5D.SearchTime=<afgang: {type: time, output: HH:mm}>&criteria%5B0%5D.SearchDate=<$now: {output: YYYY-MM-DD}>&criteria%5B0%5D.PassengersAdults=1&criteria%5B0%5D.Type=0&criteria%5B0%5D.SearchType=1&criteria%5B0%5D.Direction=1'
-  title: Danske Statsbaner
-  tags:
-  - railway
-  - travel
+  include: dsb 0
   examples:
   - arguments: aarhus, københavn, 10
     description: tog fra Aarhus til København kl. 10
 dsb 4:
   url: 'https://www.dsb.dk/netbutik/resultat/?criteria%5B0%5D.DepartLocation.Name=<fra>&criteria%5B0%5D.ArriveLocation.Name=<til>&criteria%5B0%5D.SearchTime=<afgang: {type: time, output: HH:mm}>&criteria%5B0%5D.SearchDate=<datum: {type: date, output: YYYY-MM-DD}>&criteria%5B0%5D.PassengersAdults=1&criteria%5B0%5D.Type=0&criteria%5B0%5D.SearchType=1&criteria%5B0%5D.Direction=1'
-  title: Danske Statsbaner
-  tags:
-  - railway
-  - travel
+  include: dsb 0
   examples:
   - arguments: aarhus, københavn, 10, 28.1.
     description: tog fra Aarhus til København kl. 10 den 28.1.
@@ -46,15 +45,10 @@ ikea 0:
   - ikea
   - shopping
   examples:
-  - arguments: madras
-    description: Søger "madras"
+  - description: Gå til hjemmesiden
 ikea 1:
   url: https://www.ikea.com/dk/da/search/?q=<query>
-  title: IKEA Danmark
-  tags:
-  - furniture
-  - ikea
-  - shopping
+  include: ikea 0
   examples:
   - arguments: madras
     description: Søger "madras"
@@ -66,12 +60,17 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
-zal 1:
-  url: https://www.zalando.dk/katalog/?q=<produkt>
+zal 0:
+  url: https://www.zalando.dk/
   title: Zalando.dk
   tags:
   - shopping
   - zalando
+  examples:
+  - description: Gå til hjemmesiden
+zal 1:
+  url: https://www.zalando.dk/katalog/?q=<produkt>
+  include: zal 0
   examples:
   - arguments: sko
     description: søge sko
