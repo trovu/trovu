@@ -806,11 +806,16 @@ hn 1:
   examples:
   - arguments: apple
     description: Search for "apple"
-hoax 1:
-  url: https://stefanschramm.net/dev/postredirector/?_target=http://hoax-info.tubit.tu-berlin.de/cgi-bin/search.pl&terms=<Suche>
-  title: Hoax-Info (TU-Berlin)
+hoax 0:
+  url: https://hoaxinfo.de/
+  title: Hoax-Info 
   tags:
   - hoax
+  examples:
+  - description: Gehe zur Startseite
+hoax 1:
+  url: https://www.google.com/search?hl=<$language>&q=site:hoaxinfo.de+<Suche>
+  include: hoax 0
   examples:
   - arguments: Nigeria-Connection
     description: Hoax-Info über die "Nigeria-Connection"
