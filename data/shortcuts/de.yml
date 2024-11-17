@@ -286,21 +286,31 @@ chill 1:
     alternative:
       query: coz <1>
     created: '2024-11-10'
-chip 1:
-  url: https://search.chip.de/?q=<Suche>&sort_by_date=desc
+chip 0:
+  url: https://www.chip.de/
   title: CHIP Online
   tags:
   - chip
   - download
   examples:
+  - description: Gehe zur Startseite
+chip 1:
+  url: https://search.chip.de/?q=<Suche>&sort_by_date=desc
+  include: chip 0
+  examples:
   - arguments: linux
     description: Search CHIP Online for "linux"
-chipd 1:
-  url: https://search.chip.de/?q=<Suche>&f=softwarereview
+chipd 0:
+  url: https://www.chip.de/download/
   title: CHIP Online Downloads
   tags:
   - chip
   - download
+  examples:
+  - description: Gehe zur Startseite
+chipd 1:
+  url: https://search.chip.de/?q=<Suche>&f=softwarereview
+  include: chipd 0
   examples:
   - arguments: skype
     description: Search CHIP Online Downloads for "skype"
