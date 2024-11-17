@@ -1,13 +1,18 @@
-alza 1:
-  url: https://www.alza.cz/search.htm?exps=<výraz>
+alza 0:
+  url: https://www.alza.cz/
   title: Alza.cz
   tags:
   - seznam
   - shopping
   examples:
+  - description: Přejít na hlavní stránku
+  description: Online obchod s širokou nabídkou elektroniky a dalšího zboží.
+alza 1:
+  url: https://www.alza.cz/search.htm?exps=<výraz>
+  include: alza 0
+  examples:
   - arguments: televizor
     description: Hledej "televizor"
-  description: Online obchod s širokou nabídkou elektroniky a dalšího zboží.
 ba 1:
   deprecated:
     alternative:
@@ -55,12 +60,17 @@ cd 4:
   examples:
   - arguments: praha, brno, 20, 10.12.
     description: Vlak z Prahy do Brna ve 20:00h v dne 10.12.
-g 1:
-  url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
+g 0:
+  url: https://www.google.cz/
   title: Google.cz
   tags:
   - google
   - web-search
+  examples:
+  - description: Přejít na hlavní stránku
+g 1:
+  url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
   examples:
   - arguments: praha
     description: Hledat "praha" Googlem
