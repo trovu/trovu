@@ -66,12 +66,17 @@ dei 1:
     alternative:
       query: lge.de <1>
     created: '2023-04-10'
-dict 1:
-  url: https://dictionary.reference.com/browse/<query>
+dict 0:
+  url: https://www.dictionary.com/
   title: Dictionary.com
   tags:
   - english
   - language
+  examples:
+  - description: Go to homepage
+dict 1:
+  url: https://www.dictionary.com/browse/<query>
+  include: dict 0
   examples:
   - arguments: tree
     description: Search for "tree"
