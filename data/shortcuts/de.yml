@@ -440,14 +440,19 @@ dclp 1:
   examples:
   - arguments: strlen
     description: Search for "strlen"
-dd 1:
-  url: https://www.duden.de/suchen/dudenonline/<wort>
+dd 0:
+  url: https://www.duden.de/
   title: Duden
   tags:
   - deutsch
   - german
   - language
   - rechtschreibung
+  examples:
+  - description: Gehe zur Startseite
+dd 1:
+  url: https://www.duden.de/suchen/dudenonline/<wort>
+  include: dd 0
   examples:
   - arguments: stuhl
     description: Nachschlagen des Wortes "Stuhl"
@@ -461,21 +466,36 @@ denl 1:
     alternative:
       query: nl <1>
     created: '2023-04-10'
-dnb 1:
-  url: https://portal.dnb.de/opac.htm?query=<Suche>&method=simpleSearch
+dnb 0:
+  url: https://portal.dnb.de/
   title: Deutsche Nationalbibliothek
   tags:
   - german
   - library
   examples:
+  - description: Gehe zur Startseite
+dnb 1:
+  url: https://portal.dnb.de/opac.htm?query=<Suche>&method=simpleSearch
+  include: dnb 0
+  examples:
   - arguments: goethe
     description: Search Deutsche Nationalbibliothek for "goethe"
+dw 0:
+  url: https://www.dw.com/
+  title: Deutsche Welle, Nachrichten auf Deutsch
+  examples:
+  - description: Gehe zur Startseite
 dw 1:
   url: https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item=<suche>
-  title: Deutsche Welle, Nachrichten auf Deutsch
+  include: dw 0
+dwds 0:
+  url: https://www.dwds.de/
+  title: Digitales Wörterbuch der Deutschen Sprache
+  examples:
+  - description: Gehe zur Startseite
 dwds 1:
   url: https://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu=<Wort>
-  title: Digitales Wörterbuch der Deutschen Sprache
+  include: dwds 0
 e 0:
   url: https://ebay.de
   title: eBay
@@ -497,12 +517,17 @@ end 1:
     alternative:
       query: dcc.en <1>
     created: '2023-04-10'
-endung 1:
-  url: https://www.endungen.de/ResultList/ResultList.aspx?searchExtension=<Dateieindung>&searchPlatform=win;mac;unix;os2&searchMode=contains
+endung 0:
+  url: https://www.endungen.de/
   title: Endungen.de
   tags:
   - extension
   - files
+  examples:
+  - description: Gehe zur Startseite
+endung 1:
+  url: https://www.endungen.de/ResultList/ResultList.aspx?searchExtension=<Dateieindung>&searchPlatform=win;mac;unix;os2&searchMode=contains
+  include: endung 0
   examples:
   - arguments: flv
     description: Search Endungen.de for "flv"
@@ -541,9 +566,14 @@ esp 1:
     alternative:
       query: pns.es <1>
     created: '2023-04-10'
+fball 0:
+  url: https://fireball.com/
+  title: Fireball Websuche
+  examples:
+  - description: Gehe zur Startseite
 fball 1:
   url: https://fireball.com/search?q=<suchbegriff>
-  title: Fireball Websuche
+  include: fball 0
 fefe 0:
   url: https://blog.fefe.de
   title: Fefes Blog
@@ -592,14 +622,22 @@ fefescss 1:
   examples:
   - arguments: manpage
     description: Fefes Blog mit dem CSS-Style manpage.css
-ffr 1:
-  url: https://www.filmfriend.de/de/search?search=<Suche>
+ffr 0:
+  url: https://www.filmfriend.de/
   title: filmfriend
   tests:
   - arguments: Berlin
     expect: <title>Suche - filmfriend</title>
   tags:
   - movies
+  examples:
+  - description: Gehe zur Startseite
+ffr 1:
+  url: https://www.filmfriend.de/de/search?search=<Suche>
+  tests:
+  - arguments: Berlin
+    expect: <title>Suche - filmfriend</title>
+  include: ffr 0
   examples:
   - arguments: Berlin
     description: Suche nach "Berlin"
@@ -731,12 +769,17 @@ heisenews 0:
   tags:
   - heise
   - news
-hls 1:
-  url: https://hls-dhs-dss.ch/de/search/?text=<Suce>
+hls 0:
+  url: https://hls-dhs-dss.ch/
   title: Historisches Lexikon der Schweiz
   tags:
   - geschichte
   - history
+  examples:
+  - description: Gehe zur Startseite
+hls 1:
+  url: https://hls-dhs-dss.ch/de/search/?text=<Suce>
+  include: hls 0
   examples:
   - arguments: basel
     description: Search Historisches Lexikon der Schweiz for "basel"
@@ -819,12 +862,17 @@ hwho 1:
   examples:
   - arguments: '1'
     description: Search for "1"
-ifun 1:
-  url: https://www.ifun.de/suche/<Suche>
+ifun 0:
+  url: https://www.ifun.de/
   title: ifun.de
   tags:
   - apple
   - news
+  examples:
+  - description: Gehe zur Startseite
+ifun 1:
+  url: https://www.ifun.de/suche/<Suche>
+  include: ifun 0
   examples:
   - arguments: macbook
     description: Search ifun.de for "macbook"
@@ -846,13 +894,18 @@ itp 1:
     alternative:
       query: pns.it <1>
     created: '2023-04-10'
-kam 1:
-  url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search=<Suche>
+kam 0:
+  url: http://kamelopedia.net/
   title: Kamelopedia
   tags:
   - encyclopedia
   - humor
   - wiki
+  examples:
+  - description: Gehe zur Startseite
+kam 1:
+  url: http://kamelopedia.net/index.php?title=Special:Search&go=Article&search=<Suche>
+  include: kam 0
   examples:
   - arguments: Berlin
     description: Artikel zu "Berlin"
@@ -953,33 +1006,53 @@ lobby 1:
   examples:
   - arguments: berlin
     description: Search LobbyControl for "berlin"
-m 1:
-  url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe=<Suche>
+m 0:
+  url: https://metager.de/
   title: Metager
   tags:
   - search
   - search-engine
   - web-search
-mactv 1:
-  url: https://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<Suche>
+  examples:
+  - description: Gehe zur Startseite
+m 1:
+  url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=web&eingabe=<Suche>
+  include: m 0
+mactv 0:
+  url: https://www.mac-tv.de/
   title: Mac-TV Archiv
   tags:
   - apple
-morgenpost 1:
-  url: https://www.morgenpost.de/suche/?q=<Suche>
+  examples:
+  - description: Gehe zur Startseite
+mactv 1:
+  url: https://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<Suche>
+  include: mactv 0
+morgenpost 0:
+  url: https://www.morgenpost.de/
   title: Berliner Morgenpost Archiv
   tags:
   - news
   examples:
+  - description: Gehe zur Startseite
+morgenpost 1:
+  url: https://www.morgenpost.de/suche/?q=<Suche>
+  include: morgenpost 0
+  examples:
   - arguments: berlin
     description: Search Berliner Morgenpost Archiv for "berlin"
-mp 1:
-  url: https://www.moviepilot.de/suche?q=<Suche>
+mp 0:
+  url: https://www.moviepilot.de/
   title: Moviepilot
   tags:
   - film
   - moviepilot
   - movies
+  examples:
+  - description: Gehe zur Startseite
+mp 1:
+  url: https://www.moviepilot.de/suche?q=<Suche>
+  include: mp 0
 nds 0:
   url: https://www.nachdenkseiten.de
   title: Nachdenkseiten
@@ -1018,28 +1091,43 @@ ntv 1:
   examples:
   - arguments: berlin
     description: Search n-tv.de for "berlin"
-nzz 1:
-  url: https://www.nzz.ch/suche?form%5Bq%5D=<Suchbegriff>
+nzz 0:
+  url: https://www.nzz.ch/
   title: NZZ Neue Züricher Zeitung, Archiv
   tags:
   - news
   - nzz
   examples:
+  - description: Gehe zur Startseite
+nzz 1:
+  url: https://www.nzz.ch/suche?form%5Bq%5D=<Suchbegriff>
+  include: nzz 0
+  examples:
   - arguments: schweiz
     description: Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"
-ofdb 1:
-  url: https://www.ofdb.de/view.php?page=suchergebnis&SText=<Suche>
+ofdb 0:
+  url: https://www.ofdb.de/
   title: Online Filmdatenbank
   tags:
   - movies
   examples:
+  - description: Gehe zur Startseite
+ofdb 1:
+  url: https://www.ofdb.de/view.php?page=suchergebnis&SText=<Suche>
+  include: ofdb 0
+  examples:
   - arguments: forrest gump
     description: Search for information about Forrest Gump
-ok 1:
-  url: https://otrkey.com/download/<Suche>.html
+ok 0:
+  url: https://otrkey.com/
   title: otrkey.com
   tags:
   - old
+  examples:
+  - description: Gehe zur Startseite
+ok 1:
+  url: https://otrkey.com/download/<Suche>.html
+  include: ok 0
 osm? 0:
   url: https://wiki.openstreetmap.org/index.php/Hauptseite
   title: OpenStreetMap Wiki
@@ -1127,13 +1215,18 @@ rblcheck 1:
   examples:
   - arguments: 127.0.0.1
     description: Check if 127.0.0.1 is on the RBL
-reim 1:
-  url: http://www.2rhyme.ch/Reimt-auf/<Wortendung>
+reim 0:
+  url: http://www.2rhyme.ch/
   title: 2 Rhyme Reimlexikon
   tags:
   - german
   - language
   - reime
+  examples:
+  - description: Gehe zur Startseite
+reim 1:
+  url: http://www.2rhyme.ch/Reimt-auf/<Wortendung>
+  include: reim 0
   examples:
   - arguments: auen
     description: Suche Reime auf "auen"
@@ -1191,11 +1284,16 @@ rud 1:
     alternative:
       query: dcc.ru <1>
     created: '2023-04-10'
-rundschau 1:
-  url: https://www.fr.de/suche/?qr=<Suche>
+rundschau 0:
+  url: https://www.fr.de/
   title: Frankfurter Rundschau Archiv
   tags:
   - news
+  examples:
+  - description: Gehe zur Startseite
+rundschau 1:
+  url: https://www.fr.de/suche/?qr=<Suche>
+  include: rundschau 0
   examples:
   - arguments: berlin
     description: Suche im Frankfurter-Rundschau-Archiv nach "berlin"
@@ -1204,17 +1302,27 @@ rup 1:
     alternative:
       query: pns.ru <1>
     created: '2023-04-10'
-sc 1:
-  url: https://www.scienceticker.info/index.php?s=<Suche>&sc
+sc 0:
+  url: https://www.scienceticker.info/
   title: Scienceticker
   tags:
   - old
-sfr 1:
-  url: https://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name=<name>
+  examples:
+  - description: Gehe zur Startseite
+sc 1:
+  url: https://www.scienceticker.info/index.php?s=<Suche>&sc
+  include: sc 0
+sfr 0:
+  url: https://www.stayfriends.de/
   title: Stayfriends
   tags:
   - school
   - social-network
+  examples:
+  - description: Gehe zur Startseite
+sfr 1:
+  url: https://www.stayfriends.de/sfvc/registeredSearch/do?action=registeredSearch&%3Bnotfirstdisplay=true&%3Baction=edit&%3Bneedsexplicitlogin=false&%3Bform=PersonSearch&%3Bformname=PersonSearch&%3Bsection=registered&PersonSearch.schoolid=&PersonSearch.cityid=&PersonSearch.exactMatches=&PersonSearch.offset=&PersonSearch.storedSearchid=&PersonSearch.name=<name>
+  include: sfr 0
   examples:
   - arguments: stefan
     description: Suchen nach Personen namens Stefan
@@ -1319,12 +1427,17 @@ swb 1:
   examples:
   - arguments: Gschäfd
     description: Suche nach "Gschäfd"
-syn 1:
-  url: https://synonyme.woxikon.de/synonyme/<wort>.php
+syn 0:
+  url: https://synonyme.woxikon.de/
   title: Synonyme
   tags:
   - language
   - thesaurus
+  examples:
+  - description: Gehe zur Startseite
+syn 1:
+  url: https://synonyme.woxikon.de/synonyme/<wort>.php
+  include: syn 0
   examples:
   - arguments: wichtig
     description: Synonyme für "wichtig"
@@ -1468,14 +1581,19 @@ uuw 0:
   - documentation
   - linux
   - ubuntu
-wn 1:
-  url: https://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort=<Suche>
+wn 0:
+  url: https://woerterbuchnetz.de/
   title: Wörterbuchnetz
   tags:
   - deutsch
   - dictionary
   - german
   - wörterbuch
+  examples:
+  - description: Gehe zur Startseite
+wn 1:
+  url: https://woerterbuchnetz.de/cgi-bin/WBNetz/startGlobalSearch.tcl?stichwort=<Suche>
+  include: wn 0
   examples:
   - arguments: haus
     description: looking for words in German Wörterbuchnetz (nouns can be written in Grimm style with small capital)
@@ -1557,11 +1675,16 @@ zeit 1:
   examples:
   - arguments: berlin
     description: Suche im Archiv von Zeit Online nach Berlin
-zv 1:
-  url: https://www.zwangsversteigerung.de/suche?q=<KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID>&ergebnisZeigen=ja
+zv 0:
+  url: https://www.zwangsversteigerung.de/
   title: Zwangsversteigerung
   tags:
   - zwangsversteigerung
+  examples:
+  - description: Gehe zur Startseite
+zv 1:
+  url: https://www.zwangsversteigerung.de/suche?q=<KFZ/PLZ/Ort/Aktenzeichen/UNIKA-ID>&ergebnisZeigen=ja
+  include: zv 0
   examples:
   - arguments: gi
     description: Suche nach Zwangsversteigerungen in Gießen
