@@ -350,20 +350,25 @@ we 0:
   title: Wetter.com
   tags:
   - weather
+  examples:
+  - description: Gehe zur Startseite
 we 1:
   url: https://ch.wetter.com/suche/?search=<Ort>
-  title: Wetter.com
-  tags:
-  - weather
+  include: we 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
-zal 1:
-  url: https://www.zalando.ch/katalog/?q=<Produkt>
+zal 0:
+  url: https://www.zalando.ch/
   title: Zalando.ch
   tags:
   - shopping
   - zalando
+  examples:
+  - description: Gehe zur Startseite
+zal 1:
+  url: https://www.zalando.ch/katalog/?q=<Produkt>
+  include: zal 0
   examples:
   - arguments: schuhe
     description: Suche nach Schuhen
