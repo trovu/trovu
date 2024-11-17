@@ -1,9 +1,19 @@
 camb-en 1:
-  url: https://dictionary.cambridge.org/dictionary/english/<word>
-  title: Cambridge English Dictionary
+  deprecated:
+    alternative:
+      query: cd <1>
+    created: '2024-11-17'
+cd 0:
+  url: https://dictionary.cambridge.org/dictionary/english/
+  title: Cambridge Dictionary
   tags:
   - dictionary
   - english
+  examples:
+  - description: Go to homepage
+cd 1:
+  url: https://dictionary.cambridge.org/dictionary/english/<word>
+  include: cd 0
   examples:
   - arguments: tree
     description: Search Cambridge English Dictionary for "tree"
