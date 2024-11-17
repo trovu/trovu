@@ -869,14 +869,6 @@ hup 1:
     alternative:
       query: pns.hu <1>
     created: '2023-04-10'
-hwho 1:
-  url: https://www.heise.de/netze/tools?rm=whois&plugin=<URL>
-  title: Heise Whois Netzwerk-Tool
-  tags:
-  - heise
-  examples:
-  - arguments: '1'
-    description: Search for "1"
 ifun 0:
   url: https://www.ifun.de/
   title: ifun.de
