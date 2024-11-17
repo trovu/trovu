@@ -299,11 +299,16 @@ chipg 1:
   examples:
   - arguments: smartphone
     description: Suche nach "smartphone"
-ciao 1:
-  url: https://www.ciao.de/suche?anfrage=<Suche>
+ciao 0:
+  url: https://www.ciao.de/
   title: Ciao.de Preisvergleich
   tags:
   - shopping
+  examples:
+  - description: Gehe zur Startseite
+ciao 1:
+  url: https://www.ciao.de/suche?anfrage=<Suche>
+  include: ciao 0
   examples:
   - arguments: smartphone
     description: Search Ciao.de Preisvergleich for "smartphone"
