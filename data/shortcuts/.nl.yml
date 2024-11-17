@@ -19,22 +19,29 @@ a 1:
 beslist 0:
   url: https://www.beslist.nl/
   title: BESLIST.nl
+  tags:
+  - shopping
   examples:
-  - arguments: kartonnen poef
-    description: Zoek waar je online een kartonnen poef kunt kopen
+  - description: Ga naar de homepage
 beslist 1:
   url: https://www.beslist.nl/products/r/<zoekwoorden>/
-  title: BESLIST.nl
+  include: beslist 0
   examples:
   - arguments: kartonnen poef
     description: Zoek waar je online een kartonnen poef kunt kopen
-bol 1:
-  url: https://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/<query>/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html
+bol 0:
+  url: https://www.bol.com/nl/nl/
   title: Bol.com Nederlands
   tags:
   - bol
   - books
   - shoppings
+  examples:
+  - arguments: shakespeare
+    description: Search for Shakespeare
+bol 1:
+  url: https://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/<query>/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html
+  include: bol 0
   examples:
   - arguments: shakespeare
     description: Search for Shakespeare
@@ -64,15 +71,6 @@ g 1:
   examples:
   - arguments: amsterdam
     description: Google zoeken naar "amsterdam"
-gn 1:
-  url: https://www.google.de/search?ned=nl_nl&q=<query>&tbm=nws&source=lnms
-  title: Google Nieuws (Nederland)
-  tags:
-  - google
-  - news
-  examples:
-  - arguments: obama
-    description: Op Google News naar obama zoeken
 ikea 0:
   url: https://www.ikea.com/nl/nl/
   title: IKEA Nederland
@@ -98,20 +96,30 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
-kenteken 1:
-  url: https://publiek.vwe.nl/?txtkentekenveld=<query>
+kenteken 0:
+  url: https://publiek.vwe.nl/
   title: RDW kenteken zoeken
   tags:
   - kenteken
   examples:
+  - description: Ga naar de homepage
+kenteken 1:
+  url: https://publiek.vwe.nl/kenteken/<kenteken>
+  include: kenteken 0
+  examples:
   - arguments: 8kxz29
     description: zoek kenteken 8kxz29
-zal 1:
-  url: https://www.zalando.nl/catalogus/?q=<product>
+zal 0:
+  url: https://www.zalando.nl/catalogus/
   title: Zalando.nl
   tags:
   - shopping
   - zalando
+  examples:
+  - description: Ga naar de homepage
+zal 1:
+  url: https://www.zalando.nl/catalogus/?q=<product>
+  include: zal 0
   examples:
   - arguments: schoenen
     description: zoek schoenen
