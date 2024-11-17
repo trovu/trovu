@@ -178,14 +178,11 @@ uvi 0:
   - grammar
   - language
   - linguistics
+  examples:
+  - description: Go to homepage
 uvi 1:
   url: https://stefanschramm.net/dev/postredirector/?_target=http://verbs.colorado.edu/verb-index/vn3.3/search.php&txtSearchRequest=<query>
-  title: Unified Verb Index
-  tags:
-  - english
-  - grammar
-  - language
-  - linguistics
+  include: uvi 0
   examples:
   - arguments: walk
     description: Look up the verb "walk"
