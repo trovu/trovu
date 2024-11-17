@@ -3,16 +3,10 @@ c 0:
 c 1:
   include: csfd 1
 cs 1:
-  url: https://ssjc.ujc.cas.cz/search.php?heslo=<výraz>&sti=EMPTY&where=hesla&hsubstr=no
-  title: Slovník spisovného jazyka českého
-  tags:
-  - czech
-  - dictionary
-  - language
-  - slovník
-  examples:
-  - arguments: strom
-    description: '"strom" – dřevina s kmenem'
+  deprecated:
+    alternative:
+      query: ssjc <1>
+    created: '2024-11-17'
 csfd 0:
   url: https://www.csfd.cz/
   title: Česko-Slovenská filmová databáze
@@ -36,3 +30,19 @@ frv 1:
   include:
     key: frv 1
     namespace: ar
+ssjc 0:
+  url: https://ssjc.ujc.cas.cz/
+  title: Slovník spisovného jazyka českého
+  tags:
+  - czech
+  - dictionary
+  - language
+  examples:
+  - description: Přejít na domovskou stránku
+  description: Slovník českého jazyka, který vydává Ústav pro jazyk český Akademie věd České republiky.
+ssjc 1:
+  url: https://ssjc.ujc.cas.cz/search.php?heslo=<výraz>&sti=EMPTY&where=hesla&hsubstr=no
+  include: ssjc 0
+  examples:
+  - arguments: strom
+    description: Hledat heslo "strom"
