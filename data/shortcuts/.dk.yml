@@ -1,8 +1,13 @@
-bdk 1:
-  url: https://bibliotek.dk/da/search/work?search_block_form=<fritekst>
+bdk 0:
+  url: https://bibliotek.dk/
   title: bibliotek.dk
   tags:
   - library
+  examples:
+  - description: Gå til hjemmesiden
+bdk 1:
+  url: https://bibliotek.dk/find?q.all=<fritekst>
+  include: bdk 0
   examples:
   - arguments: nesbø
     description: Search for Nesbø
