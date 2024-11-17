@@ -306,11 +306,16 @@ ads 1:
   examples:
   - arguments: dark energy
     description: Search for astrophysics articles on "dark energy"
-adsh 1:
-  url: https://www.alldatasheet.com/view.jsp?Searchword=<part>
+adsh 0:
+  url: https://www.alldatasheet.com/
   title: alldatasheet.com
   tags:
   - datasheet
+  examples:
+  - description: Go to homepage
+adsh 1:
+  url: https://www.alldatasheet.com/view.jsp?Searchword=<part>
+  include: adsh 0
   examples:
   - arguments: ADXL320
     description: Search for ADXL320 sensor in alldatasheet.com
@@ -324,21 +329,29 @@ ae 1:
     alternative:
       query: axp <1>
     created: '2024-05-22'
-af 1:
-  url: https://www.acronymfinder.com/af-query.asp?Acronym=<query>&Find=find&string=exact
+af 0:
+  url: https://www.acronymfinder.com/
   title: Acronym Finder
   tags:
   - acronyms
   - language
   examples:
+  - description: Go to homepage
+af 1:
+  url: https://www.acronymfinder.com/af-query.asp?Acronym=<query>&Find=find&string=exact
+  include: af 0
+  examples:
   - arguments: wtf
-    description: What does "wtf" stand for?
+    description: Search for "wtf"
 ais 0:
-  url: https://www.marinetraffic.com
-  title: Automatic Identification System (maritime vessel traffic)
+  url: https://www.marinetraffic.com/
+  title: Automatic Identification System
   tags:
   - maritime
   - traffic
+  examples:
+  - description: Go to homepage
+  description: Maritime vessel traffic information
 alibaba 1:
   url: https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=<name>
   title: Alibaba Product Search
