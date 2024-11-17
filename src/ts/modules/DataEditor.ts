@@ -15,6 +15,9 @@ export default class DataEditor {
       if (!data.shortcuts[namespace][key].url) {
         continue;
       }
+      if (data.shortcuts[namespace][key].url.match(/www.google/)) {
+        continue;
+      }
       const [keyword, argCount] = key.split(" ");
       if (argCount !== "1") {
         continue;
