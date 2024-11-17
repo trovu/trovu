@@ -1538,6 +1538,8 @@ de 0:
   - key: de 0
     namespace: hzn
   - key: de 0
+    namespace: pdg
+  - key: de 0
     namespace: umt
   - key: de 0
     namespace: wdk
@@ -1573,6 +1575,8 @@ de 1:
     namespace: crd
   - key: de 1
     namespace: hzn
+  - key: de 1
+    namespace: pdg
   - key: de 1
     namespace: umt
   - key: de 1
@@ -7147,9 +7151,13 @@ rg 1:
 rm 0:
   include:
   - key: rm 0
+    namespace: pdg
+  - key: rm 0
     namespace: pka
 rm 1:
   include:
+  - key: rm 1
+    namespace: pdg
   - key: rm 1
     namespace: pka
 rman 0:
