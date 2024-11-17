@@ -205,13 +205,11 @@ ikea 0:
   - furniture
   - ikea
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 ikea 1:
   url: https://www.ikea.com/ch/de/search/?q=<query>
-  title: IKEA Schweiz
-  tags:
-  - furniture
-  - ikea
-  - shopping
+  include: ikea 0
   examples:
   - arguments: matratze
     description: Suche nach Matratzen
@@ -223,29 +221,44 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
+local 0:
+  url: https://tel.local.ch/
+  title: local.ch Telefonbuch
+  tags:
+  - phonebook
+  examples:
+  - description: Gehe zur Startseite
+  description: Schweizer Telefonbuch
 local 2:
   url: https://tel.local.ch/de/q?what=<Name>&where=<Ort>
-  title: local.ch Telefonbuch
+  include: local 0
   examples:
   - arguments: Hans Muster, Bern
     description: Suche auf local.ch nach "Hans Muster" in "Bern"
-  description: Telefonbuch-Suche über local.ch
 mc 0:
   url: https://www.meteocentrale.ch/
   title: Meteocentrale.ch
   tags:
   - weather
+  examples:
+  - description: Gehe zur Startseite
 mc 1:
   url: https://www.meteocentrale.ch/index.php?L=0&id=1199&searchString=<Stadt/PLZ/Land>
-  title: Meteocentrale.ch
-  tags:
-  - weather
+  include: mc 0
   examples:
   - arguments: '8000'
     description: Zeige Wetterwarnungen für Postleitzahl 8000
+migros 0:
+  url: https://www.migros.ch/
+  title: Migros Sortiment
+  tags:
+  - migros
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
 migros 1:
   url: https://www.migros.ch/de/search?query=<Produkt>
-  title: Migros Sortiment
+  include: migros 0
   examples:
   - arguments: toblerone
     description: Search Migros Sortiment for "toblerone"
@@ -255,21 +268,25 @@ plz 0:
   tags:
   - geolocation
   - postleitzahl
+  examples:
+  - description: Gehe zur Startseite
 plz 1:
   url: https://www.plz-suche.org/ch/plz/<query>
-  title: Postleitzahlen Schweiz
-  tags:
-  - geolocation
-  - postleitzahl
+  include: plz 0
   examples:
   - arguments: '3000'
     description: Search Postleitzahlen Schweiz for "3000" (Bern)
-poststelle 1:
-  url: https://places.post.ch/?topic=1&PreselectText=<query>&from_directentry=True
-  title: Die Post - Poststellensuche
+poststelle 0:
+  url: https://places.post.ch/
+  title: Die Post, Poststellen
   tags:
   - post
-  description: Schweizer Post - Poststellensuche
+poststelle 1:
+  url: https://places.post.ch/?topic=1&PreselectText=<query>&from_directentry=True
+  include: poststelle 1
+  examples:
+  - arguments: Bern
+    description: Suche nach Poststellen in Bern
 rsc 1:
   url: https://dech.rs-online.com/web/c/?searchTerm=<Produkt>
   title: RS Components Schweiz
