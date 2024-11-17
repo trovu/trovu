@@ -6,15 +6,11 @@ enc 0:
   - dutch
   - encyclopedia
   - language
+  examples:
+  - description: Go to homepage
 enc 1:
   url: https://www.encyclo.nl/zoek.php?woord=<woord>
-  title: Encyclo Online Encyclopedie
-  tags:
-  - dictionary
-  - dutch
-  - encyclopedia
-  - language
-  - words
+  include: enc 0
   examples:
   - arguments: op naam
     description: zoek na de betekenis van de uitdrukking "op naam"
@@ -35,12 +31,11 @@ rijm 0:
   tags:
   - gedicht
   - rijm
+  examples:
+  - description: Go to homepage
 rijm 1:
   url: https://www.rijm.nu/rijmen/rijmen.php?woord=<woord>&v=1
-  title: Rijm.nu!
-  tags:
-  - gedicht
-  - rijm
+  include: rijm 0
   examples:
   - arguments: koud
     description: vind woorden die rijmen op "koud"
