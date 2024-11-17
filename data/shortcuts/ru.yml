@@ -19,24 +19,34 @@ lfm 1:
   include:
     key: lfm 1
     namespace: de
-wsl 1:
-  url: https://corpora.uni-leipzig.de/de/res?corpusId=rus_mixed_2013&word=<слово>
+wsl 0:
+  url: https://corpora.uni-leipzig.de/de?corpusId=rus_mixed_2013
   title: Wortschatz-Lexikon (Русский)
   tags:
   - language
   - russian
   examples:
+  - description: Перейти на главную страницу
+wsl 1:
+  url: https://corpora.uni-leipzig.de/de/res?corpusId=rus_mixed_2013&word=<слово>
+  include: wsl 0
+  examples:
   - arguments: стул
-    description: Search for "стул"
-ya 1:
-  url: https://yandex.ru/yandsearch?text=<query>
-  title: Yandex Web, Russian
+    description: Поиск "стул"
+ya 0:
+  url: https://yandex.ru/
+  title: Yandex Web
   tags:
   - web-search
   - yandex
   examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  - description: Перейти на главную страницу
+ya 1:
+  url: https://yandex.ru/yandsearch?text=<query>
+  include: ya 0
+  examples:
+  - arguments: берлин
+    description: Поиск "берлин"
 ygl 0:
   url: https://youglish.com/russian
   title: YouGlish, Russian
