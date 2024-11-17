@@ -86,12 +86,17 @@ ep 4:
   examples:
   - arguments: kutno, gniezno, 10, 31.1.13
     description: połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
-g 1:
-  url: https://www.google.pl/search?hl=<$language>&q=<query>&ie=utf-8
+g 0:
+  url: https://www.google.pl/
   title: Google.pl
   tags:
   - google
   - web-search
+  examples:
+  - description: Przejdź do strony głównej
+g 1:
+  url: https://www.google.pl/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
   examples:
   - arguments: warszawa
     description: Szukaj "warszawa" w Google.pl
@@ -216,12 +221,11 @@ nk 0:
   tags:
   - nasza-klasa
   - social-network
+  examples:
+  - description: Przejdź do strony głównej
 nk 1:
   url: https://nk.pl/#szukaj#<nazwisko / grupa>
-  title: Nasza Klasa
-  tags:
-  - nasza-klasa
-  - social-network
+  include: nk 0
   examples:
   - arguments: kowalski
     description: Szukaj "kowalski"
@@ -231,22 +235,26 @@ olx 0:
   tags:
   - olx
   - shopping
+  examples:
+  - description: Przejdź do strony głównej
 olx 1:
   url: https://www.olx.pl/d/oferty/q-<przedmiot>/
-  title: OLX
-  tags:
-  - olx
-  - shopping
+  include: olx 0
   examples:
   - arguments: smartfon
     description: szukaj "smartfon" w OLX
-pkp 2:
-  url: 'https://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&start=1&queryPageDisplayed=yes'
+pkp 0:
+  url: https://rozklad-pkp.pl/
   title: PKP rozkład jazdy
   tags:
   - pkp
   - railway
   - travel
+  examples:
+  - description: Przejdź do strony głównej
+pkp 2:
+  url: 'https://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&start=1&queryPageDisplayed=yes'
+  include: pkp 0
   examples:
   - arguments: kutno, gniezno
     description: następne połączenie PKP z Kutna do Gniezna
@@ -256,21 +264,13 @@ pkp 2:
     description: następne połączenie ze Szczecina do Wrocławia, automatycznie wybierz Gdańsk Głowny i Wrocław Głowny
 pkp 3:
   url: 'https://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&T=<czas: {type: time, output: HH:mm}>&start=1&queryPageDisplayed=yes'
-  title: PKP rozkład jazdy
-  tags:
-  - pkp
-  - railway
-  - travel
+  include: pkp 0
   examples:
   - arguments: kutno, gniezno, 10
     description: połączenie z Kutna do Gniezna dzisiaj o godz. 10
 pkp 4:
   url: 'https://rozklad-pkp.pl/pl/tp?S=<start: {type: city}>!&Z=<cel: {type: city}>!&T=<czas: {type: time, output: HH:mm}>&D=<data: {type: date, output: DD.MM.YYYY}>&start=1&queryPageDisplayed=yes'
-  title: PKP rozkład jazdy
-  tags:
-  - pkp
-  - railway
-  - travel
+  include: pkp 0
   examples:
   - arguments: kutno, gniezno, 10, 31.1.
     description: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
