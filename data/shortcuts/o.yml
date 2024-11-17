@@ -227,68 +227,50 @@ acl 0:
   - linguistics
   - literature
   - science
+  examples:
+  - description: Go to homepage
   description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
 acl 1:
   url: https://www.aclweb.org/anthology/search/?q=<query>
-  title: ACL Anthology
-  tags:
-  - academia
-  - acl
-  - bibliography
-  - computational-linguistics
-  - language
-  - linguistics
-  - literature
-  - science
+  include: acl 0
   examples:
   - arguments: machine translation
     description: search for machine translation in the ACL Anthology
-  description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
 aclg 1:
   url: https://www.google.com/search?hl=<$language>&q=site:aclweb.org%20<query>&ie=utf-8
   title: ACL Anthology via Google
-  tags:
-  - academia
-  - acl
-  - bibliography
-  - computational-linguistics
-  - language
-  - linguistics
-  - literature
-  - science
-  examples:
-  - arguments: machine translation
-    description: search for machine translation in the ACL Anthology
+  include: acl 1
 aclw 1:
   url: https://www.aclweb.org/aclwiki/index.php?search=<query>&go=Go
   title: ACL wiki
-  tags:
-  - academia
-  - acl
-  - bibliography
-  - computational-linguistics
-  - language
-  - linguistics
-  - literature
-  - science
-  - wiki
+  include: acl 1
   examples:
   - arguments: SAT Analogy Questions
     description: go to page (or search for) SAT Analogy Questions on ACLWiki
-acm 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
+acm 0:
+  url: https://dl.acm.org/
   title: ACM Digital Library
   tags:
   - science
   examples:
+  - description: Go to homepage
+acm 1:
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
+  include: acm 0
+  examples:
   - arguments: routing loops
     description: search for routing loops
-ad 1:
-  url: https://developer.android.com/s/results?q=<query>
+ad 0:
+  url: https://developer.android.com/
   title: Android Developers
   tags:
   - android
   - programming
+  examples:
+  - description: Go to homepage
+ad 1:
+  url: https://developer.android.com/s/results?q=<query>
+  include: ad 0
   examples:
   - arguments: kitkat
     description: Search for "kitkat"
