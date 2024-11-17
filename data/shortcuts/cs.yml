@@ -36,14 +36,6 @@ frv 1:
   include:
     key: frv 1
     namespace: ar
-kinobox 1:
-  url: https://www.kinobox.cz/najdi?t=<query>
-  title: Kinobox.cz
-  tags:
-  - movies
-  examples:
-  - arguments: forrest gump
-    description: Search for "forrest gump"
 sub 1:
   url: https://www.opensubtitles.org/sk/search2/sublanguageid-slo,cze,ger/moviename-<výraz>
   title: Filmové titulky (Open Subtitles)
