@@ -6,14 +6,19 @@ frv 1:
   include:
     key: frv 1
     namespace: ar
-fw 1:
+fw 0:
   url: https://www.filmweb.pl/search?q=<tytuł/osoba>
   title: FilmWeb
   tags:
   - film
   examples:
+  - description: Idź do strony głównej
+fw 1:
+  url: https://www.filmweb.pl/search?q=<tytuł/osoba>
+  include: fw 0
+  examples:
   - arguments: forrest gump
-    description: Search for "forrest gump"
+    description: Szukaj o filmie "Forrest Gump"
 last 1:
   deprecated:
     alternative:
@@ -33,20 +38,17 @@ mo 0:
   tags:
   - finance
   examples:
-  - arguments: signals and slots
-    description: Searches "signals and slots" from Qt documentation
+  - description: Idź do strony głównej
 mo 1:
   url: https://www.google.com/search?hl=<$language>&btnI=&sourceid=navclient&gfns=1&q=site:money.pl%20<nazwa waloru>&ie=utf-8
-  title: Money.pl
-  tags:
-  - finance
+  include: mo 0
   examples:
   - arguments: eur
     description: Pokaż kurs EUR
   - arguments: złoto
     description: Pokaż kurs złota
-pwn 1:
-  url: https://sjp.pwn.pl/szukaj/<słowo>.html
+pwn 0:
+  url: https://sjp.pwn.pl/
   title: 'Słownik języka polskiego: PWN'
   tags:
   - dictionary
@@ -54,6 +56,11 @@ pwn 1:
   - polish
   - polski
   - słownik
+  examples:
+  - description: Idź do strony głównej
+pwn 1:
+  url: https://sjp.pwn.pl/szukaj/<słowo>.html
+  include: pwn 0
   examples:
   - arguments: drzewo
     description: Szukaj "drzewo"
