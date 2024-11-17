@@ -194,14 +194,10 @@ gmzh 1:
       query: gm zh,<1>
     created: '2023-01-07'
 gps 1:
-  url: https://www.google.ch/products?hl=<$language>&q=<query>
-  title: Google Products (Schweiz)
-  tags:
-  - google
-  - shopping
-  examples:
-  - arguments: iphone
-    description: Suche nach "iphone"
+  deprecated:
+    alternative:
+      query: gsh <1>
+    created: '2024-11-17'
 ikea 0:
   url: https://www.ikea.com/ch/
   title: IKEA Schweiz
