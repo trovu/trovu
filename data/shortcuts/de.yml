@@ -727,8 +727,8 @@ gfp 1:
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
-grc 1:
-  url: https://www.albertmartin.de/altgriechisch/?q=<suchwort>
+grc 0:
+    url: https://www.albertmartin.de/altgriechisch/
   title: Altgriechisch Wörterbuch
   tags:
   - altgriechisch
@@ -736,6 +736,11 @@ grc 1:
   - dictionary
   - german
   - language
+  examples:
+  - description: Gehe zur Startseite
+grc 1:
+  url: https://www.albertmartin.de/altgriechisch/?q=<suchwort>
+  include: grc 0
   examples:
   - arguments: baum
     description: Übersetzung von "Baum" auf Altgriechisch
