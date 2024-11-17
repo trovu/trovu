@@ -3,13 +3,18 @@ dep 1:
     alternative:
       query: pns.de <1>
     created: '2023-04-10'
-dle 1:
-  url: https://dle.rae.es/?w=<palabra>
+dle 0:
+  url: https://dle.rae.es/
   title: Diccionario de la Lengua Española
   tags:
   - dictionary
   - language
   - spanish
+  examples:
+  - description: Ir a la página principal
+dle 1:
+  url: https://dle.rae.es/?w=<palabra>
+  include: dle 0
   examples:
   - arguments: árbol
     description: Search diccionario de la lengua española for "arbol"
