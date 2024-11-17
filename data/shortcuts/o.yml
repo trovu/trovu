@@ -175,13 +175,13 @@
   - geolocation
   - social-network
 4sq 1:
-  url: https://foursquare.com/search?tab=venueResults&query=<what>
+  url: https://foursquare.com/explore?mode=url&q=<what>
   include: 4sq 0
   examples:
   - arguments: pizza
     description: Search for a pizza place near me
 4sq 2:
-  url: https://foursquare.com/search?tab=venueResults&query=<what>&near=<where>
+  url: https://foursquare.com/explore?mode=url&q=<what>&near=<where>
   include: 4sq 0
   examples:
   - arguments: pizza, new york
