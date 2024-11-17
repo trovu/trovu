@@ -288,12 +288,18 @@ tm 1:
   examples:
   - arguments: tvn
     description: Szukaj programy TVN
-zal 1:
-  url: https://www.zalando.pl/katalog/?q=<produkt>
+zal 0:
+  url: https://www.zalando.pl/
   title: Zalando.pl
   tags:
   - shopping
   - zalando
+  examples:
+  - arguments: buty
+    description: Szukaj buty
+zal 1:
+  url: https://www.zalando.pl/katalog/?q=<produkt>
+  include: zal 0
   examples:
   - arguments: buty
     description: Szukaj buty
