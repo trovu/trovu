@@ -208,12 +208,17 @@ wordnik 1:
     alternative:
       query: wk <1>
     created: '2024-11-17'
-wsl 1:
-  url: https://corpora.uni-leipzig.de/de/res?word=<word>&corpusId=eng-uk_web_2002
+wsl 0:
+  url: https://corpora.uni-leipzig.de/de?corpusId=eng_news_2023
   title: Wortschatz-Lexikon (English)
   tags:
   - english
   - language
+  examples:
+  - description: Go to homepage
+wsl 1:
+  url: https://corpora.uni-leipzig.de/de/res?word=<word>&corpusId=eng_news_2023
+  include: wsl 0
   examples:
   - arguments: chair
     description: Search for "chair"
