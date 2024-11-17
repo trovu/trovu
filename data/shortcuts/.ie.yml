@@ -32,12 +32,3 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
-luas 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.luas.ie%20<station>
-  title: Luas Dublin Light Rail
-  tags:
-  - dublin
-  - travel
-  examples:
-  - arguments: harcourt
-    description: show next trams from Harcourt station
