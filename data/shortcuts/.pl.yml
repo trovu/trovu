@@ -95,15 +95,6 @@ g 1:
   examples:
   - arguments: warszawa
     description: Szukaj "warszawa" w Google.pl
-gastro 2:
-  url: https://www.gastronauci.pl/pl/restauracje/<miasto>?kind=<lokal/kuchnia>
-  title: gastronauci.pl
-  tags:
-  - food
-  - restaurant
-  examples:
-  - arguments: warszawa, bar mleczny
-    description: bary mleczne w Warszawie
 ikea 0:
   url: https://www.ikea.com/pl/pl/
   title: IKEA Polska
