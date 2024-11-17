@@ -333,6 +333,18 @@ sbb 4:
 transa 0:
   url: https://www.transa.ch
   title: Transa
+  tags:
+  - outdoor
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Outdoor- und Sportgeschäft
+transa 1:
+  url: https://www.transa.ch/de/search/?q=<Produkt>
+  include: transa 0
+  examples:
+  - arguments: schuhe
+    description: Suche nach Schuhen
 we 0:
   url: https://ch.wetter.com/?forcesite=1
   title: Wetter.com
