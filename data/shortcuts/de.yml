@@ -1632,12 +1632,17 @@ wort 1:
   title: Digitales Wörterbuch der Deutschen Sprache
   tags:
   - old
-wsl 1:
-  url: https://corpora.uni-leipzig.de/de/res?word=<Wort>&corpusId=deu_newscrawl_2011
+wsl 0:
+  url: https://corpora.uni-leipzig.de/
   title: Wortschatz-Lexikon (Deutsch)
   tags:
   - german
   - language
+  examples:
+  - description: Gehe zur Startseite
+wsl 1:
+  url: https://corpora.uni-leipzig.de/de/res?word=<Wort>&corpusId=deu_newscrawl_2011
+  include: wsl 0
   examples:
   - arguments: Stuhl
     description: Search for "Stuhl"
