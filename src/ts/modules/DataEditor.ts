@@ -4,8 +4,38 @@ import DataManager from "./DataManager";
 export default class DataEditor {
   editData() {
     const data = DataManager.load();
-    this.editLastfm(data);
+    // this.editLastfm(data);
+    this.add0arg(data);
     DataManager.write(data);
+  }
+
+  private add0arg(data: {}) {
+    const namespace = "de";
+    for (const key in data.shortcuts[namespace]) {
+      if (!data.shortcuts[namespace][key].url) {
+        continue;
+      }
+      const [keyword, argCount] = key.split(" ");
+      if (argCount !== "1") {
+        continue;
+      }
+      const key0arg = `${keyword} 0`;
+      if (data.shortcuts[namespace].hasOwnProperty(key0arg)) {
+        continue;
+      }
+      data.shortcuts[namespace][key0arg] = JSON.parse(JSON.stringify(data.shortcuts[namespace][key]));
+      const url = data.shortcuts[namespace][key0arg].url;
+      const protocolAnddomain = url.match(/(https?:\/\/[^/]+)/)[1];
+      data.shortcuts[namespace][key0arg].url = protocolAnddomain + "/";
+      data.shortcuts[namespace][key0arg].examples = [
+        {
+          description: "Gehe zur Startseite",
+        },
+      ];
+      delete data.shortcuts[namespace][key].title;
+      delete data.shortcuts[namespace][key].tags;
+      data.shortcuts[namespace][key].include = key0arg;
+    }
   }
 
   private editLastfm(data: {}) {
