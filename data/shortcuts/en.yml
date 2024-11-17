@@ -28,15 +28,26 @@ cia 1:
   tags:
   - cia
 cliff 0:
+  deprecated:
+    alternative:
+      query: cn <0>
+    created: '2024-11-17'
+cliff 1:
+  deprecated:
+    alternative:
+      query: cn <1>
+    created: '2024-11-17'
+cn 0:
   url: https://www.cliffsnotes.com/
   title: Cliffsnotes.com
   tags:
   - literature
-cliff 1:
+  examples:
+  - description: Go to homepage
+  description: Literature study guides that help students understand the literature they are reading
+cn 1:
   url: https://www.cliffsnotes.com/search?q=<query>
-  title: Cliffsnotes.com
-  tags:
-  - literature
+  include: cn 0
   examples:
   - arguments: tom sawyer
     description: Search for Cliff's notes on Tom Sawyer
