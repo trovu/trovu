@@ -143,16 +143,6 @@ mwt 1:
   examples:
   - arguments: important
     description: Search for synonyms of "important"
-ox 1:
-  url: https://en.oxforddictionaries.com/definition/<word>
-  title: Oxford Dictionaries British & World English
-  tags:
-  - dictionary
-  - english
-  - language
-oxford 1:
-  url: https://www.oxforddictionaries.com/definition/english/<query>
-  title: Oxford dictionary
 sta 0:
   url: http://start.csail.mit.edu/
   title: START (SynTactic Analysis using Reversible Transformations)
