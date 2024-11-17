@@ -8,10 +8,7 @@ bibbs 0:
   - description: Gehe zur Startseite
 bibbs 1:
   url: https://katalog.stadtbibliothekbasel.ch/GGG/WebOPAC/search/shortview?searchtype=Simple&searchField=W&searchTerm=<Suche>
-  title: Stadtbibliothek Basel
-  tags:
-  - basel
-  - library
+  include: bibbs 0
   examples:
   - arguments: houellebecq
     description: Suche nach Werken von und über "houellebecq"
@@ -33,7 +30,7 @@ campz 1:
   - shop
   examples:
   - arguments: Kocher
-    description: Search CAMPZ Schweiz for "Kocher"
+    description: Suche nach "Kocher"
 conrad 0:
   url: https://www.conrad.ch/
   title: Conrad Elektronik Schweiz
@@ -41,28 +38,44 @@ conrad 0:
   - conrad
   - electronics
   - shopping
+  examples:
+  - description: Gehe zur Startseite
 conrad 1:
   url: https://www.conrad.ch/de/search.html?search=<Artikel>
-  title: Conrad Elektronik Schweiz
-  tags:
-  - conrad
-  - electronics
-  - shopping
+  include: conrad 0
   examples:
   - arguments: glühlampe
     description: Search Conrad Elektronik Schweiz for "glühlampe"
-digi 1:
-  url: https://www.digitec.ch/de/Search?q=<query>
-  title: Digitec Onlineshop
+digi 0:
+  url: https://www.digitec.ch/
+  title: Digitec
+  description: Ein Schweizer Onlineshop für Elektronik
   tags:
   - electronics
   - shopping
-doit 1:
-  url: https://www.doitgarden.ch/de/s?q=<Suche>
+  examples:
+  - description: Gehe zur Startseite
+digi 1:
+  url: https://www.digitec.ch/de/Search?q=<query>
+  include: digi 0
+  examples:
+  - arguments: laptop
+    description: Suche nach "laptop"
+doit 0:
+  url: https://www.doitgarden.ch/
   title: Migros Do-it&Garden
   tags:
   - migros
   - shopping
+  examples:
+  - description: Gehe zur Startseite
+doit 1:
+  url: https://www.doitgarden.ch/de/s?q=<Suche>
+  description: Garten- und Baumarkt von Migros
+  include: doit 0
+  examples:
+  - arguments: tomate
+    description: Suche nach "tomate"
 e 0:
   url: https://www.ebay.ch/?mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ch
@@ -80,15 +93,33 @@ e 1:
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
+faust 0:
+  url: https://www.faust.ch/
+  title: Faust Laborbedarf
+  tags:
+  - faust
+  - shopping
+  - laboratory
+  examples:
+  - description: Gehe zur Startseite
 faust 1:
   url: https://www.faust.ch/shop/qsrch.htm?Keyval=<query>&UID=55006243ffc5000000000000
   title: Faust Laborbedarf
-g 1:
-  url: https://www.google.ch/search?hl=<$language>&q=<query>&ie=utf-8
+  include: faust 0
+  examples:
+  - arguments: pipette
+    description: Suche nach "pipette"
+g 0:
+  url: https://www.google.ch/
   title: Google.ch
   tags:
   - google
   - web-search
+  examples:
+  - description: Gehe zur Startseite
+g 1:
+  url: https://www.google.ch/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
   examples:
   - arguments: bern
     description: Google-Suche nach "bern"
