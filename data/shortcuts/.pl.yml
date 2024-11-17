@@ -274,13 +274,17 @@ pkp 4:
   examples:
   - arguments: kutno, gniezno, 10, 31.1.
     description: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
-tm 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=teleman.pl&domains=teleman.pl&q=<szukaj>
-  title: teleman.pl program telewizyjny
+tm 0:
+  url: https://www.teleman.pl/
+  title: Teleman
   tags:
-  - poland
-  - polska
   - tv
+  - tv-guide
+  examples:
+  - description: Przejdź do strony głównej
+tm 1:
+  url: https://www.teleman.pl/search?q=<query>
+  include: tm 0
   examples:
   - arguments: tvn
     description: Szukaj programy TVN
