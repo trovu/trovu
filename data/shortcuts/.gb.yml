@@ -31,12 +31,17 @@ e 1:
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
-g 1:
-  url: https://www.google.co.uk/search?hl=<$language>&q=<query>&ie=utf-8
+g 0:
+  url: https://www.google.co.uk/
   title: Google.co.uk
   tags:
   - google
   - web-search
+  examples:
+  - description: Go to the homepage
+g 1:
+  url: https://www.google.co.uk/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
   examples:
   - arguments: london
     description: Search Google for "london"
@@ -128,12 +133,17 @@ tv 0:
   title: tvguide.co.uk
   tags:
   - tv
-zal 1:
-  url: https://www.zalando.co.uk/catalog/?q=<product>
+zal 0:
+  url: https://www.zalando.co.uk/
   title: Zalando.co.uk
   tags:
   - shopping
   - zalando
+  examples:
+  - description: Go to the homepage
+zal 1:
+  url: https://www.zalando.co.uk/catalog/?q=<product>
+  include: zal 0
   examples:
   - arguments: shoes
     description: search for shoes
