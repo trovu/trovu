@@ -29,12 +29,17 @@ enl 1:
   examples:
   - arguments: smartphone
     description: Search for "smartphone"
-g 1:
-  url: https://www.google.be/search?hl=<$language>&q=<query>&ie=utf-8
+g 0:
+  url: https://www.google.be/
   title: Google.be
   tags:
   - google
   - web-search
+  examples:
+  - description: Go to homepage
+g 1:
+  url: https://www.google.be/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
   examples:
   - arguments: amsterdam
     description: Google zoeken naar "amsterdam"
