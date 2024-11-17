@@ -330,15 +330,6 @@ sbb 4:
   examples:
   - arguments: Bern, Basel, 01.01.2020, 10:00
     description: Verbindung von Bern nach Basel am 01.01.2020 um 10:00 Uhr
-sbbt 4:
-  url: https://fahrplan.sbb.ch/bin/query.exe/dl?S=<Start>&Z=<Ziel>&T=<Zeit>&D=<Datum>&start=1
-  title: SBB-Auskunft Textversion
-  tags:
-  - bahn
-  - travel
-  examples:
-  - arguments: bern, basel, 10, 1.1.
-    description: Verbindung von Bern nach Basel um 10:00 Uhr am 1.1.
 transa 0:
   url: https://www.transa.ch
   title: Transa
