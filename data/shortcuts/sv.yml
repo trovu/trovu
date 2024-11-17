@@ -24,12 +24,18 @@ lfm 1:
   include:
     key: lfm 1
     namespace: de
-rim 1:
-  url: https://www.rimlexikon.se/ord/<ord>
+rim 0:
+  url: https://www.rimlexikon.se/
   title: Rimlexikon
   tags:
   - language
+  - rhymes
   - swedish
+  examples:
+  - description: Go to homepage
+rim 1:
+  url: https://www.rimlexikon.se/ord/<ord>
+  include: rim 0
   examples:
   - arguments: träd
     description: Search rhymes for "träd"
