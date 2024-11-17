@@ -602,15 +602,19 @@ fefe 1:
     description: Suche nach "atomenergie"
 fefecss 1:
   url: https://blog.fefe.de?css=<Style>.css
-  title: Fefes Blog, anderer CSS-Style
   include: fefe 0
   examples:
   - arguments: manpage
     description: Fefes Blog mit dem CSS-Style manpage.css
-fefeg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=blog.fefe.de&q=<Suche>
+fefeg 0:
+  url: https://www.google.com/
   title: Fefes Blog, Suche via Google
   include: fefe 1
+  examples:
+  - description: Gehe zur Startseite
+fefeg 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=blog.fefe.de&q=<Suche>
+  include: fefeg 0
 fefes 0:
   deprecated:
     alternative:
