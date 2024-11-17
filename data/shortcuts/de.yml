@@ -883,9 +883,21 @@ ifun 1:
   examples:
   - arguments: macbook
     description: Search ifun.de for "macbook"
+isbn 0:
+  url: https://de.wikipedia.org/wiki/Spezial:ISBN-Suche
+  title: ISBN-Suche bei Wikipedia
+  tags:
+  - books
+  - isbn
+  - wikipedia
+  examples:
+  - description: Gehe zur Startseite
 isbn 1:
   url: https://de.wikipedia.org/wiki/Spezial:ISBN-Suche/<ISBN>
-  title: ISBN-Suche bei Wikipedia
+  include: isbn 0
+  examples:
+  - arguments: 9780140276053
+    description: Suche nach der ISBN 9780140276053
 itb 1:
   deprecated:
     alternative:
