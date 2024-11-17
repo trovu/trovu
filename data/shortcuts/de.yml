@@ -228,6 +228,20 @@ bzl 1:
   examples:
   - arguments: goethe
     description: Search Bookzilla for "goethe"
+c4u 0:
+  url: https://www.css4you.de/
+  title: Css4you
+  tags:
+  - css
+  - programming
+  examples:
+  - description: Gehe zur Startseite
+c4u 1:
+  url: https://www.google.de/search?q=site%3Acss4you.de+<Suche>
+  include: c4u 0
+  examples:
+  - arguments: white-space
+    description: Suche nach "white-space"
 cb 0:
   url: https://www.computerbase.de/
   title: Computerbase
@@ -367,14 +381,10 @@ csd 1:
       query: dcc.cs <1>
     created: '2023-04-10'
 css 1:
-  url: https://www.google.de/search?q=site%3Acss4you.de+<Suche>
-  title: Css4you
-  tags:
-  - css
-  - programming
-  examples:
-  - arguments: white-space
-    description: Suche nach "white-space"
+  deprecated:
+    alternative:
+      query: c4u <1>
+    created: '2024-11-17'
 dab 1:
   deprecated:
     alternative:
