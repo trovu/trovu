@@ -589,49 +589,43 @@ fefe 0:
   title: Fefes Blog
   tags:
   - blog
+  - fefe
   - news
+  - security
+  examples:
+  - description: Gehe zur Startseite
 fefe 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=blog.fefe.de&q=<Suche>
-  title: Fefes Blog
-  tags:
-  - blog
-  - news
+  url: https://blog.fefe.de?q=<Suche>
+  include: fefe 0
   examples:
   - arguments: atomenergie
-    description: Search for "atomenergie"
+    description: Suche nach "atomenergie"
 fefecss 1:
   url: https://blog.fefe.de?css=<Style>.css
   title: Fefes Blog, anderer CSS-Style
-  tags:
-  - blog
-  - news
+  include: fefe 0
   examples:
   - arguments: manpage
     description: Fefes Blog mit dem CSS-Style manpage.css
+fefeg 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=blog.fefe.de&q=<Suche>
+  title: Fefes Blog, Suche via Google
+  include: fefe 1
 fefes 0:
-  url: https://blog.fefe.de
-  title: Fefes Blog, SSL
-  tags:
-  - blog
-  - news
+  deprecated:
+    alternative:
+      query: fefe
+    created: '2024-11-17'
 fefes 1:
-  url: https://blog.fefe.de?q=<Suche>
-  title: Fefes Blog, SSL, case-sensitive Suche
-  tags:
-  - blog
-  - news
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  deprecated:
+    alternative:
+      query: fefe <1>
+    created: '2024-11-17'
 fefescss 1:
-  url: https://blog.fefe.de?css=<Style>.css
-  title: Fefes Blog, anderer CSS-Style, SSL
-  tags:
-  - blog
-  - news
-  examples:
-  - arguments: manpage
-    description: Fefes Blog mit dem CSS-Style manpage.css
+  deprecated:
+    alternative:
+      query: fefecss <1>
+    created: '2024-11-17'
 ffr 0:
   url: https://www.filmfriend.de/
   title: filmfriend
