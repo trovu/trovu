@@ -12,12 +12,28 @@ dle 0:
   - spanish
   examples:
   - description: Ir a la página principal
+  description: Diccionario de la lengua española de la Real Academia Española
 dle 1:
   url: https://dle.rae.es/?w=<palabra>
   include: dle 0
   examples:
   - arguments: árbol
     description: Search diccionario de la lengua española for "arbol"
+dpd 0:
+  url: https://www.rae.es/dpd/
+  title: Diccionario panhispánico de dudas de la RAE
+  tags:
+  - dictionary
+  - spanish
+  examples:
+  - description: Ir a la página principal
+  description: Ese diccionario tiene como objetivo resolver dudas relacionadas con el uso correcto del idioma español
+dpd 1:
+  url: https://www.rae.es/dpd/<query>
+  include: dpd 0
+  examples:
+  - arguments: capaz
+    description: Buscar la palabra «capaz»
 frv 0:
   include:
     key: frv 0
@@ -40,28 +56,15 @@ lfm 1:
     key: lfm 1
     namespace: de
 rae 1:
-  url: https://dle.rae.es/?w=<query>
-  title: Diccionario RAE
-  tags:
-  - dictionary
-  - spanish
-  examples:
-  - arguments: capaz
-    description: looks for "capaz" in RAE dictionary
-  - arguments: decir
-    description: busca por la palabra «decir» en el diccionario de la lengua española de la Real Academia Española
-  description: Relevant for spanish language, but as it shows the official and latest rules, should be interesting for all.
+  deprecated:
+    alternative:
+      query: dle <1>
+    created: '2024-11-17'
 raed 1:
-  url: https://www.rae.es/dpd/<query>
-  title: Diccionario panhispánico de dudas de la RAE
-  tags:
-  - dictionary-spanish
-  examples:
-  - arguments: capaz
-    description: looks for "capaz" in the RAE dictionary of doubts
-  - arguments: decir
-    description: busca por la palabra «decir» en el diccionario panhíspanico de dudas de la Real Academia Española
-  description: A Spanish dictionary with the goal of resolving questions related to the proper use of the Spanish language
+  deprecated:
+    alternative:
+      query: dpd <1>
+    created: '2024-11-17'
 ygl 0:
   url: https://youglish.com/spanish
   title: YouGlish, Spanish
