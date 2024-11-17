@@ -49,12 +49,12 @@ conrad 1:
 digi 0:
   url: https://www.digitec.ch/
   title: Digitec
-  description: Ein Schweizer Onlineshop für Elektronik
   tags:
   - electronics
   - shopping
   examples:
   - description: Gehe zur Startseite
+  description: Ein Schweizer Onlineshop für Elektronik
 digi 1:
   url: https://www.digitec.ch/de/Search?q=<query>
   include: digi 0
@@ -71,11 +71,11 @@ doit 0:
   - description: Gehe zur Startseite
 doit 1:
   url: https://www.doitgarden.ch/de/s?q=<Suche>
-  description: Garten- und Baumarkt von Migros
   include: doit 0
   examples:
   - arguments: tomate
     description: Suche nach "tomate"
+  description: Garten- und Baumarkt von Migros
 e 0:
   url: https://www.ebay.ch/?mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.ch
@@ -98,8 +98,8 @@ faust 0:
   title: Faust Laborbedarf
   tags:
   - faust
-  - shopping
   - laboratory
+  - shopping
   examples:
   - description: Gehe zur Startseite
 faust 1:
