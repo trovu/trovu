@@ -14,12 +14,17 @@ a 1:
   examples:
   - arguments: shakespeare
     description: Sök efter "shakespeare"
-blocket 1:
-  url: https://www.blocket.se/annonser/hela_sverige?q=<query>
+blocket 0:
+  url: https://www.blocket.se/
   title: Blocket.se
   tags:
   - blocket
   - shopping
+  examples:
+  - description: Gå till startsidan
+blocket 1:
+  url: https://www.blocket.se/annonser/hela_sverige?q=<query>
+  include: blocket 0
   examples:
   - arguments: iphone
     description: Search for "iphone"
