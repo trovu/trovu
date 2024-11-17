@@ -188,7 +188,7 @@ uvi 1:
     description: Look up the verb "walk"
 wk 0:
   url: https://www.wordnik.com/
-  title: Wordnik.com
+  title: Wordnik
   tags:
   - dictionary
   - english
@@ -199,24 +199,15 @@ wk 0:
     description: Look up "tree"
 wk 1:
   url: https://www.wordnik.com/words/<word>
-  title: Wordnik.com
-  tags:
-  - dictionary
-  - english
-  - language
-  - thesaurus
+  include: wk 0
   examples:
   - arguments: tree
     description: Look up "tree"
 wordnik 1:
-  url: https://www.wordnik.com/words/<word>
-  title: Wordnik
-  tags:
-  - english
-  - language
-  examples:
-  - arguments: tree
-    description: Search Wordnik for "tree".
+  deprecated:
+    alternative:
+      query: wk <1>
+    created: '2024-11-17'
 wsl 1:
   url: https://corpora.uni-leipzig.de/de/res?word=<word>&corpusId=eng-uk_web_2002
   title: Wortschatz-Lexikon (English)
