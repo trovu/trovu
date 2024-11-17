@@ -1,13 +1,5 @@
 c 1:
-  url: https://www.csfd.cz/hledat/?q=<výraz>
-  title: Česko-Slovenská filmová databáze
-  tags:
-  - czech
-  - movies
-  - slovak
-  examples:
-  - arguments: Pelíšky
-    description: Hledat "Pelíšky"
+  include: csfd 1
 cs 1:
   url: https://ssjc.ujc.cas.cz/search.php?heslo=<výraz>&sti=EMPTY&where=hesla&hsubstr=no
   title: Slovník spisovného jazyka českého
