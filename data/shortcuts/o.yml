@@ -202,17 +202,19 @@ a 1:
   include:
     key: a 1
     namespace: .us
+abbr 0:
+  url: https://www.abbreviations.com/
+  title: Abbreviations.com
+  tags:
+  - abbreviations
+  examples:
+  - description: Go to homepage
 abbr 1:
   url: https://www.abbreviations.com/<abbr>
-  title: Abbreviation search
-abp 0:
-  url: https://github.com/mltbnz/awesome-bikeprojects
-  title: Awesome Bike Projects - a curated list of awesome bike projects
-  tags:
-  - bicycle
-  - maps
-  - tools
-  removed: '2023-01-14'
+  include: abbr 0
+  examples:
+  - arguments: wtf
+    description: Search for the abbreviation "wtf"
 acl 0:
   url: https://www.aclweb.org/anthology/
   title: ACL Anthology
