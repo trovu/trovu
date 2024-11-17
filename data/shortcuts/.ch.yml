@@ -283,7 +283,7 @@ poststelle 0:
   - post
 poststelle 1:
   url: https://places.post.ch/?topic=1&PreselectText=<query>&from_directentry=True
-  include: poststelle 1
+  include: poststelle 0
   examples:
   - arguments: Bern
     description: Suche nach Poststellen in Bern
