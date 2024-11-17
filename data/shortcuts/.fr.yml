@@ -4,12 +4,11 @@
   tags:
   - 3suisses
   - shopping
+  examples:
+  - description: Aller à la page d'accueil
 3s 1:
   url: https://www.3suisses.fr/home?searchTerms=<recherche>
-  title: 3Suisses.fr
-  tags:
-  - 3suisses
-  - shopping
+  include: 3s 0
   examples:
   - arguments: chaussures
     description: Cherche chaussures
@@ -29,12 +28,17 @@ a 1:
   examples:
   - arguments: balzac
     description: Recherche "balzac"
-cdiscount 1:
-  url: https://www.cdiscount.com/search/10/<query>.html
+cdiscount 0:
+  url: https://www.cdiscount.com/
   title: CDiscount.com
   tags:
   - cdiscount
   - shopping
+  examples:
+  - description: Aller à la page d'accueil
+cdiscount 1:
+  url: https://www.cdiscount.com/search/10/<query>.html
+  include: cdiscount 0
   examples:
   - arguments: iphone
     description: Search CDiscount.com for "iphone"
@@ -55,6 +59,14 @@ e 1:
   examples:
   - arguments: veste
     description: Search for "veste"
+g 0:
+  url: https://www.google.fr/
+  title: Google.fr
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Aller à la page d'accueil
 g 1:
   url: https://www.google.fr/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.fr
@@ -95,33 +107,52 @@ kiabi 0:
   tags:
   - kiabi
   - shopping
+  examples:
+  - description: Aller à la page d'accueil
 kiabi 1:
   url: https://www.kiabi.com/search.ep?keyWords=<recherche>
-  title: Kiabi.com
-  tags:
-  - kiabi
-  - shopping
+  include: kiabi 0
   examples:
   - arguments: chaussures
     description: Recherche chaussures
 pj 0:
-  url: https://www.pagesjaunes.fr
+  url: https://www.pagesjaunes.fr/
   title: Pages Jaunes
+  tags:
+  - business
+  - phonebook
+  examples:
+  - description: Aller à la page d'accueil
 pj 2:
   url: https://www.pagesjaunes.fr/annuaire/chercherlespros?quoiqui=<quoiqui>&ou=<ou>&univers=pagesjaunes&idOu=
-  title: Pages Jaunes
+  include: pj 0
   examples:
   - arguments: tv, paris
     description: Search Pages Jaunes for TV in Paris
+soc 0:
+  url: https://www.societe.com/
+  title: Societé Company Register
+  tags:
+  - business
+  examples:
+  - description: Aller à la page d'accueil
 soc 1:
   url: https://www.societe.com/cgi-bin/search?champs=<name>
-  title: Societé Company Register
-zal 1:
-  url: https://www.zalando.fr/catalogue/?q=<produit>
+  include: soc 0
+  examples:
+  - arguments: apple
+    description: Search Societé Company Register for "apple"
+zal 0:
+  url: https://www.zalando.fr/
   title: Zalando.fr
   tags:
   - shopping
   - zalando
+  examples:
+  - description: Aller à la page d'accueil
+zal 1:
+  url: https://www.zalando.fr/catalogue/?q=<produit>
+  include: zal 0
   examples:
   - arguments: chaussures
     description: Cherche chaussures
