@@ -36,44 +36,6 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
-llt 2:
-  url: https://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr=<Fra>&inpPointTo=<Till>&cmdAction=search
-  title: Luleå Lokaltrafik
-  tags:
-  - luleå
-  - travel
-  examples:
-  - arguments: sotargatan, järnvägen
-    description: Nästa buss från Sotargatan till Järnvägen
-llt 3:
-  url: https://stefanschramm.net/dev/postredirector/?_target=http://193.45.213.123/lulea/v2/querypage_adv.aspx?nonExistingUrlRequested=1&inpPointFr=<Fra>&inpPointTo=<Till>&inpTime=<Avgång>00&cmdAction=search
-  title: Luleå Lokaltrafik
-  tags:
-  - luleå
-  - travel
-  examples:
-  - arguments: sotargatan, järnvägen,10
-    description: Buss från Sotargatan till Järnvägen, avgång kl. 10
-ltnbd 2:
-  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S=<Från>!&Z=<Till>!&start=1
-  title: Länstraffiken Norbotten
-  tags:
-  - luleå
-  - norbotten
-  - travel
-  examples:
-  - arguments: boden, luleå
-    description: Nästa buss från Boden till Luleå
-ltnbd 3:
-  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?L=vs_ltnbd&S=<Från>!&Z=<Till>!&T=<Avgång>&start=1
-  title: Länstraffiken Norbotten
-  tags:
-  - luleå
-  - norbotten
-  - travel
-  examples:
-  - arguments: boden, luleå, 10
-    description: Buss från Boden till Luleå, avgång kl. 10
 rr 2:
   url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&start=1
   title: Resrobot
