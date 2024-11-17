@@ -341,11 +341,18 @@ ck 1:
   examples:
   - arguments: pizza
     description: Rezepte für Pizza
-cng 1:
-  url: https://www.gas-tankstellen.de/list.php?suchenach=t&land=D&lpganlage=0&mode=cng&suchkennz=<KFZ-Kennzeichen>
+cng 0:
+  url: https://www.gas-tankstellen.de/
   title: LPG- und CNG-Tankstellen
   tags:
   - gas
+  - lpg
+  - tankstellen
+  examples:
+  - description: Gehe zur Startseite
+cng 1:
+  url: https://www.gas-tankstellen.de/list.php?suchenach=t&land=D&lpganlage=0&mode=cng&suchkennz=<KFZ-Kennzeichen>
+  include: cng 0
   examples:
   - arguments: bi
     description: Suche nach LPG- und CNG-Tankstellen um Bielefeld
