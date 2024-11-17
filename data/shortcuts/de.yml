@@ -234,12 +234,11 @@ cb 0:
   tags:
   - computer-science
   - linux
+  examples:
+  - description: Gehe zur Startseite
 cb 1:
   url: https://www.computerbase.de/suche/?q=<Suche>&bereich=
-  title: Computerbase
-  tags:
-  - computer-science
-  - linux
+  include: cb 0
   examples:
   - arguments: linux
     description: Suche nach Artikel über "linux"
