@@ -1,9 +1,14 @@
-cjg 1:
-  url: https://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe=<query>
+cjg 0:
+  url: https://www.leconjugueur.com/
   title: Le conjugueur
   tags:
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
+cjg 1:
+  url: https://www.leconjugueur.com/php/newconjugue.php?lang=fr&oblige=N&fullscreen=Y&verbe=<query>
+  include: cjg 0
   examples:
   - arguments: venir
     description: Conjugate "venir"
@@ -33,19 +38,24 @@ lfm 1:
   include:
     key: lfm 1
     namespace: de
-lit 1:
-  url: https://www.littre.org/definition/<mot>
+lit 0:
+  url: https://www.littre.org/
   title: Littré
   tags:
   - dictionary
   - french
   - language
   examples:
+  - description: Aller à la page d'accueil
+lit 1:
+  url: https://www.littre.org/definition/<mot>
+  include: lit 0
+  examples:
   - arguments: arbre
     description: Cherche "arbre" dans le dictionnaire Littré
-lrs 1:
-  url: https://www.larousse.fr/dictionnaires/francais/<mot>
-  title: Larousse, Dictionnaires de français
+lrs 0:
+  url: https://www.larousse.fr/
+  title: Larousse
   tags:
   - dictionary
   - dictionnaire
@@ -53,39 +63,65 @@ lrs 1:
   - french
   - language
   examples:
+  - description: Aller à la page d'accueil
+  description: Dictionnaires de français
+lrs 1:
+  url: https://www.larousse.fr/dictionnaires/francais/<mot>
+  include: lrs 0
+  examples:
   - arguments: arbre
     description: Cherche "arbre"
 marmiton 0:
+  deprecated:
+    alternative:
+      query: mmt
+    created: '2024-11-17'
+marmiton 1:
+  deprecated:
+    alternative:
+      query: mmt 1
+    created: '2024-11-17'
+mmt 0:
   url: https://www.marmiton.org/
   title: Marmiton
   tags:
   - marmiton
   - recettes
-marmiton 1:
+  examples:
+  - description: Aller à la page d'accueil
+mmt 1:
   url: https://www.marmiton.org/recettes/recherche.aspx?aqt=<mot>
-  title: Marmiton
-  tags:
-  - marmiton
-  - recettes
+  include: mmt 0
   examples:
   - arguments: pizza
     description: Recherche des recettes de pizza
-syn 1:
-  url: https://www.atlas-semantiques.eu/Resultats_as.html?d=FR&l=FR&r=<mot>&m=1
+syn 0:
+  url: https://www.atlas-semantiques.eu/
   title: Synonyme
   tags:
   - language
   - thesaurus
   examples:
+  - description: Aller à la page d'accueil
+syn 1:
+  url: https://www.atlas-semantiques.eu/Resultats_as.html?d=FR&l=FR&r=<mot>&m=1
+  include: syn 0
+  examples:
   - arguments: important
     description: Search for "important"
-tlf 1:
-  url: https://www.cnrtl.fr/definition/<query>
+tlf 0:
+  url: https://www.cnrtl.fr/
   title: Trésor de la langue française
   tags:
   - dictionary
   - french
   - language
+  examples:
+  - description: Aller à la page d'accueil
+  description: Dictionnaire de la langue française
+tlf 1:
+  url: https://www.cnrtl.fr/definition/<query>
+  include: tlf 0
   examples:
   - arguments: arbre
     description: Cherche "arbre" dans le Trésor de la langue française
