@@ -5,8 +5,7 @@
   - meta
   - search
   examples:
-  - arguments: ''
-    description: go to Trovu homepage
+  - description: go to Trovu homepage
 '! 1':
   url: https://trovu.net/#query=<query>
   title: Trovu
@@ -26,8 +25,7 @@
   - meta
   - search
   examples:
-  - arguments: ''
-    description: go to Trovu documentation homepage
+  - description: go to Trovu documentation homepage
 12ft 1:
   url: https://12ft.io/<url>
   title: 12ft
@@ -7730,8 +7728,7 @@ stract 0:
   tags:
   - search
   examples:
-  - arguments: ''
-    description: go to Stract homepgae
+  - description: Go to homepage
 stract 1:
   url: https://stract.com/search?q=<query>
   title: Stract search
