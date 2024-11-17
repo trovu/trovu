@@ -144,15 +144,15 @@ mwt 1:
   - arguments: important
     description: Search for synonyms of "important"
 sta 0:
-  url: http://start.csail.mit.edu/
+  url: https://start.csail.mit.edu/
   title: START (SynTactic Analysis using Reversible Transformations)
   tags:
   - semantic-search
+  examples:
+  - description: Go to homepage
 sta 1:
-  url: http://start.csail.mit.edu/answer.php?query=<question>
-  title: START (SynTactic Analysis using Reversible Transformations)
-  tags:
-  - semantic-search
+  url: https://start.csail.mit.edu/answer.php?query=<question>
+  include: sta 0
   examples:
   - arguments: How many people live in Berlin?
     description: Answers the question.
