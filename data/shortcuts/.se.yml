@@ -36,37 +36,51 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
-rr 2:
-  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&start=1
+rr 0:
+  url: https://reseplanerare.resrobot.se/
   title: Resrobot
   tags:
   - travel
+  examples:
+  - description: Gå till startsidan
+rr 2:
+  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&start=1
+  include: rr 0
   examples:
   - arguments: stockholm, malmö
     description: Nästa tåg från Stockholm till Malmö
 rr 3:
   url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&T=<Avgång>&start=1
-  title: Resrobot
-  tags:
-  - travel
+  include: rr 0
   examples:
   - arguments: stockholm, malmö, 10
     description: Tåg från Stockholm till Malmö, avgång kl. 10
-srse 1:
-  url: https://sverigesradio.se/sida/sok.aspx?q=<programmets namn>&sort=relevance
-  title: Sveriges radio search
+srse 0:
+  url: https://sverigesradio.se/
+  title: Sveriges Radio
   tags:
   - radio
   - sweden
   examples:
+  - description: Gå till startsidan
+srse 1:
+  url: https://sverigesradio.se/sida/sok.aspx?q=<programmets namn>&sort=relevance
+  include: srse 0
+  examples:
   - arguments: stockholm
-    description: Search for "stockholm".
-zal 1:
-  url: https://www.zalando.se/katalog/?q=<produkt>
+    description: Search for "stockholm"
+zal 0:
+  url: https://www.zalando.se/
   title: Zalando.se
   tags:
   - shopping
   - zalando
+  examples:
+  - arguments: kläder
+    description: söka kläder
+zal 1:
+  url: https://www.zalando.se/katalog/?q=<produkt>
+  include: zal 0
   examples:
   - arguments: kläder
     description: söka kläder
