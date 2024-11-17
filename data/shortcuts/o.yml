@@ -7007,13 +7007,13 @@ rbg 1:
 rblcheck 0:
   url: https://rbl-check.org/
   title: RBL-Check (Realtime Blackhole List)
-  description: Check if an IP address is on the RBL
   tags:
   - email
   - rbl
   - security
   examples:
   - description: Go to homepage
+  description: Check if an IP address is on the RBL
 rblcheck 1:
   url: https://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/en/rbl-quick-check/check/&ipaddress=<ipaddress>
   include: rblcheck 0
