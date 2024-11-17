@@ -1295,20 +1295,14 @@ rivva 1:
   examples:
   - arguments: berlin
     description: Search Rivva blog aggregator for "berlin"
-rm 0:
-  url: https://www.pledarigrond.ch/
+rm 1:
+  url: https://www.pledarigrond.ch/rumantschgrischun/#searchPhrase=<pled>
   title: Romanisch-Deutsch via Pledari Grond
   tags:
   - dictionary
   - german
   - language
   - rumantsch-grischun
-  examples:
-  - description: Gehe zur Startseite
-  description: Dictionary German <-> Rumantsch Grischun
-rm 1:
-  url: https://www.pledarigrond.ch/rumantschgrischun/#searchPhrase=<pled>
-  include: rm 0
   description: Dictionary German <-> Rumantsch Grischun
 rub 1:
   deprecated:
