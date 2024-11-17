@@ -356,14 +356,27 @@ cng 1:
   examples:
   - arguments: bi
     description: Suche nach LPG- und CNG-Tankstellen um Bielefeld
-cook 1:
-  url: https://cookidoo.de/search/de-DE?query=<Suche>
-  title: Cookidoo (Thermomix-Rezept-Portal)
+coo 0:
+  url: https://cookidoo.de/
+  title: Cookidoo
   tags:
   - cooking
+  - recipes
+  - thermomix
+  examples:
+  - description: Gehe zur Startseite
+  description: Ein Rezept-Portal, das Rezepte für den Thermomix anbietet.
+coo 1:
+  url: https://cookidoo.de/search/de-DE?query=<Suche>
+  include: ckd 0
   examples:
   - arguments: risotto
     description: Show recipes for risottos
+cook 1:
+  deprecated:
+    alternative:
+      query: coo <1>
+    created: '2024-11-17'
 coz 0:
   url: https://www.chilloutzone.net/
   title: Chilloutzone
