@@ -75,7 +75,7 @@ export default class DataEditor {
       tags: ["music", "radio", "recommendation"],
       examples: [
         {
-          description: "Go to homepage",
+          description: "Go to the homepage",
         },
       ],
     };
