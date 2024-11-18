@@ -544,12 +544,18 @@ apb 1:
   examples:
   - arguments: calculator
     description: Search for calculator apps
-apm 1:
-  url: https://maps.apple.com/place?address=<address>
+apm 0:
+  url: https://maps.apple.com/
   title: Apple Maps
   tags:
   - apple
   - maps
+  examples:
+  - description: Go to the homepage
+  description: Apple Maps for desktop/browser.  If place was not found, try adding country or country code.
+apm 1:
+  url: https://maps.apple.com/place?address=<address>
+  include: apm 0
   examples:
   - arguments: Berlin Pariser Platz 1
     description: Show Berlin, Pariser Platz 1 on Apple Maps.
@@ -608,8 +614,8 @@ ar 1:
     namespace: rvs
   - key: ar 1
     namespace: pka
-arch 1:
-  url: https://www.archchinese.com/chinese_english_dictionary.html?find=<query>
+arch 0:
+  url: https://www.archchinese.com/
   title: Arch Chinese Stroke Animation & Dictionary
   tags:
   - chinese
@@ -619,27 +625,42 @@ arch 1:
   - language
   - stroke-orders
   examples:
+  - description: Go to the homepage
+arch 1:
+  url: https://www.archchinese.com/chinese_english_dictionary.html?find=<query>
+  include: arch 0
+  examples:
   - arguments: 聊
     description: find out how to write the character 聊 and how it's composed
-archive 1:
-  url: 'https://web.archive.org/web/*/<site: {encoding: none}>'
+archive 0:
+  url: https://web.archive.org/
   title: Archive.org
   tags:
   - archive
   examples:
+  - description: Go to the homepage
+archive 1:
+  url: 'https://web.archive.org/web/*/<site: {encoding: none}>'
+  include: archive 0
+  examples:
   - arguments: serchilo.net
     description: See old versions of the Serchilo website
-ardu 1:
-  url: https://search.arduino.cc/search?tab=&q=<query>
+ardu 0:
+  url: https://search.arduino.cc/
   title: Arduino reference manual
   tags:
   - arduino
   - electronics
   examples:
+  - description: Go to the homepage
+ardu 1:
+  url: https://search.arduino.cc/search?tab=&q=<query>
+  include: ardu 0
+  examples:
   - arguments: loop
     description: Search for loop
-arxiv 1:
-  url: https://arxiv.org/search?query=<query>
+arxiv 0:
+  url: https://arxiv.org/
   title: ArXiv
   tags:
   - computer-science
@@ -651,6 +672,11 @@ arxiv 1:
   - science
   - statistics
   examples:
+  - description: Go to the homepage
+arxiv 1:
+  url: https://arxiv.org/search?query=<query>
+  include: arxiv 0
+  examples:
   - arguments: einstein
     description: Search for all articles including "einstein"
 as 0:
@@ -661,12 +687,17 @@ as 1:
   include:
   - key: as 1
     namespace: pka
-ask 1:
-  url: https://www.ask.com/web?q=<query>&qsrc=0&o=333&l=dir
+ask 0:
+  url: https://www.ask.com/
   title: Ask.com
   tags:
   - ask
   - web-search
+  examples:
+  - description: Go to the homepage
+ask 1:
+  url: https://www.ask.com/web?q=<query>&qsrc=0&o=333&l=dir
+  include: ask 0
   examples:
   - arguments: berlin
     description: Search for berlin
@@ -684,11 +715,16 @@ atd 1:
   examples:
   - arguments: https://www.zeit.de/zeit-magazin/leben/2023-11/marathon-laufen-partnerschaft-sport-liebe
     description: Read that article, paywall removed.
-atrf 1:
-  url: https://alltheragefaces.com/search/<query>
+atrf 0:
+  url: https://alltheragefaces.com/
   title: All The Rage Faces!
   tags:
   - rage-faces
+  examples:
+  - description: Go to the homepage
+atrf 1:
+  url: https://alltheragefaces.com/search/<query>
+  include: atrf 0
   examples:
   - arguments: scared
     description: Search for scared
@@ -729,12 +765,17 @@ b 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
-ba 1:
-  url: https://www.baidu.com/s?wd=<query>
+ba 0:
+  url: https://www.baidu.com/
   title: Baidu
   tags:
   - baidu
   - web-search
+  examples:
+  - description: Go to the homepage
+ba 1:
+  url: https://www.baidu.com/s?wd=<query>
+  include: ba 0
   examples:
   - arguments: berlin
     description: Search for berlin
@@ -771,20 +812,35 @@ bg 1:
     namespace: lgs
   - key: bg 1
     namespace: pka
-bgo 1:
-  url: https://bugs.gentoo.org/buglist.cgi?quicksearch=<query>
+bgo 0:
+  url: https://bugs.gentoo.org/
   title: Gentoo Bugzilla
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+bgo 1:
+  url: https://bugs.gentoo.org/buglist.cgi?quicksearch=<query>
+  include: bgo 0
+bhf 0:
+  url: https://www.bahnhof.de/
+  title: Bahnhof
+  examples:
+  - description: Go to the homepage
 bhf 1:
   url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query=<Bahnhof>
-  title: Bahnhof
-bi 1:
-  url: https://www.bing.com/images/?q=<image-query>
+  include: bhf 0
+bi 0:
+  url: https://www.bing.com/images/
   title: Bing Images
   tags:
   - bing
   - web-search
+  examples:
+  - description: Go to the homepage
+bi 1:
+  url: https://www.bing.com/images/?q=<image-query>
+  include: bi 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -850,12 +906,17 @@ bibso+ 1:
   examples:
   - arguments: http://www.serchilo.net/
     description: Add http://www.serchilo.net/ to Bibsonomy
-bins 1:
-  url: https://binsearch.info/?max=100&adv_age=1100&server=&q=<query>
+bins 0:
+  url: https://binsearch.info/
   title: Binsearch.info
   tags:
   - newsgroups
   - usenet
+  examples:
+  - description: Go to the homepage
+bins 1:
+  url: https://binsearch.info/?max=100&adv_age=1100&server=&q=<query>
+  include: bins 0
   examples:
   - arguments: Freeware
     description: Search for "Freeware" in newsgroups
@@ -902,12 +963,17 @@ bkg 3:
     description: Search for hotels in Berlin, checkin on 31.12.
   - arguments: berlin, fr, su
     description: Search for hotels in Berlin, checkin on next Friday, checkout on next Sunday
-bm 1:
-  url: https://www.bing.com/maps/?q=<map-query>
+bm 0:
+  url: https://www.bing.com/
   title: Bing Maps
   tags:
   - bing
   - web-search
+  examples:
+  - description: Go to the homepage
+bm 1:
+  url: https://www.bing.com/maps/?q=<map-query>
+  include: bm 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -926,12 +992,17 @@ bmf 2:
   examples:
   - arguments: berlin, hamburg
     description: Mitfahrgelegenheiten von Berlin nach Hamburg
-bmn 1:
-  url: https://bugmenot.com/view/<site>
+bmn 0:
+  url: https://bugmenot.com/
   title: BugMeNot
   tags:
   - login
   - mail
+  examples:
+  - description: Go to the homepage
+bmn 1:
+  url: https://bugmenot.com/view/<site>
+  include: bmn 0
   examples:
   - arguments: heise.de
     description: Get logins for heise.de
@@ -943,12 +1014,17 @@ bn 1:
   include:
   - key: bn 1
     namespace: pka
-bns 1:
-  url: https://www.bing.com/news/search?q=<query>
+bns 0:
+  url: https://www.bing.com/news/
   title: Bing News Search
   tags:
   - bing
   - news
+  examples:
+  - description: Go to the homepage
+bns 1:
+  url: https://www.bing.com/news/search?q=<query>
+  include: bns 0
 bo 0:
   include:
   - key: bo 0
@@ -962,11 +1038,16 @@ booking 1:
     alternative:
       query: bkg <1>
     created: '2023-12-03'
-bp 1:
-  url: https://www.beatport.com/search?q=<query>
+bp 0:
+  url: https://www.beatport.com/
   title: Beatport
   tags:
   - music
+  examples:
+  - description: Go to the homepage
+bp 1:
+  url: https://www.beatport.com/search?q=<query>
+  include: bp 0
   examples:
   - arguments: trance
     description: Search for "trance"
@@ -1002,11 +1083,16 @@ brw 1:
   examples:
   - arguments: vim
     description: Search for packages about vim.
-btc 1:
-  url: https://www.blockchain.com/search?search=<address>
+btc 0:
+  url: https://www.blockchain.com/
   title: Bitcoin Blockchain Explorer
   tags:
   - bitcoin
+  examples:
+  - description: Go to the homepage
+btc 1:
+  url: https://www.blockchain.com/search?search=<address>
+  include: btc 0
   examples:
   - arguments: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
     description: Lookup BTC address 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa, the address which received 50 BTC from Block 0 (the Genesis Block)
@@ -1029,12 +1115,17 @@ btd 1:
   examples:
   - arguments: ubuntu
     description: Search for Ubuntu torrents
-bv 1:
-  url: https://www.bing.com/videos/?q=<video-query>
+bv 0:
+  url: https://www.bing.com/videos/
   title: Bing Videos
   tags:
   - bing
   - web-search
+  examples:
+  - description: Go to the homepage
+bv 1:
+  url: https://www.bing.com/videos/?q=<video-query>
+  include: bv 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
