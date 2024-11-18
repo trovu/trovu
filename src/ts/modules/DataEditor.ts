@@ -10,7 +10,7 @@ export default class DataEditor {
   }
 
   private add0arg(data: {}) {
-    const namespace = "de";
+    const namespace = "o";
     for (const key in data.shortcuts[namespace]) {
       if (!data.shortcuts[namespace][key].url) {
         continue;
@@ -32,7 +32,7 @@ export default class DataEditor {
       data.shortcuts[namespace][key0arg].url = protocolAnddomain + "/";
       data.shortcuts[namespace][key0arg].examples = [
         {
-          description: "Gehe zur Startseite",
+          description: "Go to the homepage",
         },
       ];
       delete data.shortcuts[namespace][key].title;
