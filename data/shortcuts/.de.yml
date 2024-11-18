@@ -77,11 +77,17 @@ amazon 1:
       query: a <1>
     created: '2024-03-06'
 ao 0:
-  url: https://www.amazon.de/gp/css/order-history
+  url: https://www.amazon.de/gp/your-account/order-history/
   title: Amazon Bestellungen
   tests: need to be logged in
   examples:
   - description: Gehe zu meinen Amazon-Bestellungen
+ao 1:
+  url: https://www.amazon.de/gp/your-account/order-history/ref=ppx_yo_dt_b_search?search=<query>
+  include: ao 0
+  examples:
+  - arguments: goethe
+    description: Suche nach meinen Bestellungen von "goethe"
 atn 0:
   url: https://www.alternate.de/
   title: Alternate
