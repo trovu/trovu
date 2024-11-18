@@ -5,7 +5,7 @@ frv 0:
   - language
   - pronunciation
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Forvo pronunciation database
 frv 1:
   url: https://<$language>.forvo.com/search/<word>/
@@ -22,7 +22,7 @@ ygl 0:
   - pronunciation
   - youtube
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 ygl 1:
   url: https://youglish.com/pronounce/<word>/arabic
   include: ygl 0

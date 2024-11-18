@@ -10,7 +10,7 @@ cd 0:
   - dictionary
   - english
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 cd 1:
   url: https://dictionary.cambridge.org/dictionary/english/<word>
   include: cd 0
@@ -23,7 +23,7 @@ cia 0:
   tags:
   - cia
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: The World Factbook provides information on the history, people, government, economy, geography, communications, transportation
 cia 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=cia.gov&sitesearch=cia.gov&btnI=1&q=intitle%3Afactbook%20<country>
@@ -47,7 +47,7 @@ cn 0:
   tags:
   - literature
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Literature study guides that help students understand the literature they are reading
 cn 1:
   url: https://www.cliffsnotes.com/search?q=<query>
@@ -73,7 +73,7 @@ dict 0:
   - english
   - language
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 dict 1:
   url: https://www.dictionary.com/browse/<query>
   include: dict 0
@@ -122,7 +122,7 @@ mw 0:
   - dictionary
   - english
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 mw 1:
   url: https://www.merriam-webster.com/dictionary/<query>
   include: mw 0
@@ -136,7 +136,7 @@ mwt 0:
   - english
   - thesaurus
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 mwt 1:
   url: https://www.merriam-webster.com/thesaurus/<query>
   include: mwt 0
@@ -149,7 +149,7 @@ sta 0:
   tags:
   - semantic-search
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 sta 1:
   url: https://start.csail.mit.edu/answer.php?query=<question>
   include: sta 0
@@ -163,7 +163,7 @@ syn 0:
   - english
   - thesaurus
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 syn 1:
   url: https://www.thesaurus.com/browse/<word>
   include: syn 0
@@ -179,7 +179,7 @@ uvi 0:
   - language
   - linguistics
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 uvi 1:
   url: https://stefanschramm.net/dev/postredirector/?_target=http://verbs.colorado.edu/verb-index/vn3.3/search.php&txtSearchRequest=<query>
   include: uvi 0
@@ -215,7 +215,7 @@ wsl 0:
   - english
   - language
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 wsl 1:
   url: https://corpora.uni-leipzig.de/de/res?word=<word>&corpusId=eng_news_2023
   include: wsl 0
@@ -231,7 +231,7 @@ ygl 0:
   - pronunciation
   - youtube
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Search for a word mentioned in videos of top YouTube speakers naturally pronouncing the word in context.
 ygl 1:
   url: https://youglish.com/pronounce/<word>/english

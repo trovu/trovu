@@ -32,7 +32,7 @@ rim 0:
   - rhymes
   - swedish
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 rim 1:
   url: https://www.rimlexikon.se/ord/<ord>
   include: rim 0
@@ -53,7 +53,7 @@ ygl 0:
   - swedish
   - youtube
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 ygl 1:
   url: https://youglish.com/pronounce/<word>/swedish
   include: ygl 0
