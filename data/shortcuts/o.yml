@@ -352,9 +352,21 @@ ais 0:
   examples:
   - description: Go to homepage
   description: Maritime vessel traffic information
+alibaba 0:
+  url: https://www.alibaba.com/
+  title: Alibaba
+  tags:
+  - alibaba
+  - shopping
+  examples:
+  - description: Go to homepage
+  description: Chinese e-commerce company
 alibaba 1:
   url: https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=<name>
-  title: Alibaba Product Search
+  include: alibaba 0
+  examples:
+  - arguments: bicycle
+    description: Search for bicycles
 allmovie 1:
   url: https://www.allmovie.com/search/all/<movie>
   title: All Movie
