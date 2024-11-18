@@ -1516,7 +1516,7 @@ crx 0:
   examples:
   - description: Go to the homepage
 crx 1:
-  url: https://chromewebstore.google.com/search/trovu
+  url: https://chromewebstore.google.com/search/<query>
   include: crx 0
   examples:
   - arguments: trovu
