@@ -1186,11 +1186,16 @@ cf 1:
   title: Clipfish Clipsearch
   tags:
   - old
-cfp 1:
-  url: http://www.wikicfp.com/cfp/servlet/tool.search?q=<query>&year=t
+cfp 0:
+  url: http://www.wikicfp.com/
   title: Wikicfp - Call for papers
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+cfp 1:
+  url: http://www.wikicfp.com/cfp/servlet/tool.search?q=<query>&year=t
+  include: cfp 0
 cg 0:
   url: https://chat.openai.com/
   title: ChatGPT
