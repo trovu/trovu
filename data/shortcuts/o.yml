@@ -191,11 +191,16 @@
   examples:
   - arguments: pizza, new york
     description: Search for a pizza place in New York
-911 1:
-  url: https://www.911tabs.com/search.php?search=<band or song title>
+911 0:
+  url: https://www.911tabs.com/
   title: 911tabs.com
   tags:
   - music
+  examples:
+  - description: Go to the homepage
+911 1:
+  url: https://www.911tabs.com/search.php?search=<band or song title>
+  include: 911 0
   examples:
   - arguments: blur
     description: find tabs for songs of Blur
@@ -245,10 +250,15 @@ aclg 1:
   url: https://www.google.com/search?hl=<$language>&q=site:aclweb.org%20<query>&ie=utf-8
   title: ACL Anthology via Google
   include: acl 1
-aclw 1:
-  url: https://www.aclweb.org/aclwiki/index.php?search=<query>&go=Go
+aclw 0:
+  url: https://aclweb.org/aclwiki/Main_Page
   title: ACL wiki
   include: acl 1
+  examples:
+  - description: Go to the homepage
+aclw 1:
+  url: https://aclweb.org/aclwiki/index.php?search=<query>
+  include: aclw 0
   examples:
   - arguments: SAT Analogy Questions
     description: go to page (or search for) SAT Analogy Questions on ACLWiki
@@ -386,22 +396,32 @@ allmovie 1:
   examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
-allmusic 1:
-  url: https://www.allmusic.com/search/all/<query>
+allmusic 0:
+  url: https://www.allmusic.com/
   title: Allmusic
   tags:
   - music
   examples:
+  - description: Go to the homepage
+allmusic 1:
+  url: https://www.allmusic.com/search/all/<query>
+  include: allmusic 0
+  examples:
   - arguments: madonna
     description: Suche nach "madonna"
-alp 1:
-  url: https://archlinux.org/packages/?q=<package>
+alp 0:
+  url: https://archlinux.org/packages/
   title: Arch Linux Package Search
   tags:
   - arch
   - archlinux
   - linux
   - packages
+  examples:
+  - description: Go to the homepage
+alp 1:
+  url: https://archlinux.org/packages/?q=<package>
+  include: alp 0
   examples:
   - arguments: cups
     description: Search for cups package
@@ -420,13 +440,18 @@ alt 1:
   examples:
   - arguments: word
     description: Search for alternative software to Word
-alw 1:
-  url: https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=<query>&go=Go
+alw 0:
+  url: https://wiki.archlinux.org/
   title: Arch Linux Wiki
   tags:
   - archlinux
   - linux
   - wiki
+  examples:
+  - description: Go to the homepage
+alw 1:
+  url: https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=<query>&go=Go
+  include: alw 0
   examples:
   - arguments: cups
     description: Suche nach "cups"
@@ -438,11 +463,16 @@ am 1:
   include:
   - key: am 1
     namespace: pka
-anidb 1:
-  url: https://anidb.net/perl-bin/animedb.pl?show=animelist&adb.search=<query>&do.search=search
+anidb 0:
+  url: https://anidb.net/
   title: AniDB - Anime DataBase
   tags:
   - anime
+  examples:
+  - description: Go to the homepage
+anidb 1:
+  url: https://anidb.net/perl-bin/animedb.pl?show=animelist&adb.search=<query>&do.search=search
+  include: anidb 0
   examples:
   - arguments: test
     description: Suche nach "test"
@@ -459,12 +489,17 @@ anon 1:
   examples:
   - arguments: http://spiegel.de
     description: Surf to http://spiegel.de anonymous
-answers 1:
-  url: https://www.answers.com/search?q=<query>
+answers 0:
+  url: https://www.answers.com/
   title: Answers.com
   tags:
   - answers
   - encyclopedia
+  examples:
+  - description: Go to the homepage
+answers 1:
+  url: https://www.answers.com/search?q=<query>
+  include: answers 0
   examples:
   - arguments: milk
     description: Search for "milk"
@@ -476,21 +511,31 @@ aol 0:
   title: Aol.com
   tags:
   - aol
-ap 1:
-  url: https://www.apple.com/search/?q=<query>
+ap 0:
+  url: https://www.apple.com/
   title: Apple.com
   tags:
   - apple
   - apps
   examples:
+  - description: Go to the homepage
+ap 1:
+  url: https://www.apple.com/search/?q=<query>
+  include: ap 0
+  examples:
   - arguments: map
     description: Search for map apps
-apb 1:
-  url: https://www.appbrain.com/search?q=<query>
+apb 0:
+  url: https://www.appbrain.com/
   title: Appbrain App Search
   tags:
   - android
   - apps
+  examples:
+  - description: Go to the homepage
+apb 1:
+  url: https://www.appbrain.com/search?q=<query>
+  include: apb 0
   examples:
   - arguments: calculator
     description: Search for calculator apps
