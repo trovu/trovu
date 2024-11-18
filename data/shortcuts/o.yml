@@ -1460,25 +1460,35 @@ crg 0:
   title: Craigslist
   tags:
   - craigslist
-crit 1:
-  url: https://www.criticker.com/?st=all&h=<query>&g=Go
+crit 0:
+  url: https://www.criticker.com/
   title: Criticker
   tags:
   - cinema
   examples:
+  - description: Go to the homepage
+crit 1:
+  url: https://www.criticker.com/?st=all&h=<query>&g=Go
+  include: crit 0
+  examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
-crts 1:
-  url: https://crates.io/search?q=<query>
+crts 0:
+  url: https://crates.io/
   title: Crates.io
   tags:
   - programming
   - rust
   examples:
+  - description: Go to the homepage
+crts 1:
+  url: https://crates.io/search?q=<query>
+  include: crts 0
+  examples:
   - arguments: gtk
     description: Search for "gtk"
-crug 1:
-  url: https://rug.on.worldcat.org/search?databaseList=&queryString=<query>
+crug 0:
+  url: https://rug.on.worldcat.org/
   title: SmartCat
   tags:
   - catalog
@@ -1486,11 +1496,17 @@ crug 1:
   - library
   - university
   examples:
+  - description: Go to the homepage
+  description: Library catalog of the University of Groningen
+crug 1:
+  url: https://rug.on.worldcat.org/search?databaseList=&queryString=<query>
+  include: crug 0
+  examples:
   - arguments: linguistics in the netherlands
     description: Find issues of the journal "Linguistics in the Netherlands" in the catalog
   description: Library catalog of the University of Groningen
-crx 1:
-  url: https://chrome.google.com/webstore/search/<query>?_category=extensions
+crx 0:
+  url: https://chromewebstore.google.com/
   title: Chrome Extensions
   tags:
   - browser
@@ -1498,8 +1514,13 @@ crx 1:
   - extension
   - google
   examples:
-  - arguments: page rank
-    description: Search for Google Chrome extensions about "page rank"
+  - description: Go to the homepage
+crx 1:
+  url: https://chromewebstore.google.com/search/trovu
+  include: crx 0
+  examples:
+  - arguments: trovu
+    description: Search for Google Chrome extensions about Trovu
 cs 0:
   include:
   - key: cs 0
@@ -1549,12 +1570,17 @@ ctan 1:
   url: https://ctan.org/search?phrase=<query>
   title: 'CTAN: Search'
   include: ctan 0
-cutlist 1:
-  url: http://cutlist.at/?find=<Suche>
+cutlist 0:
+  url: http://cutlist.at/
   title: cutlist.at
   tags:
   - onlinetvrecorder
   - tv
+  examples:
+  - description: Go to the homepage
+cutlist 1:
+  url: http://cutlist.at/?find=<Suche>
+  include: cutlist 0
   examples:
   - arguments: tagesschau
     description: search cutlists for "tagesschau"
