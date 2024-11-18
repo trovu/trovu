@@ -26,13 +26,18 @@
   - search
   examples:
   - description: go to Trovu documentation homepage
-12ft 1:
-  url: https://12ft.io/<url>
+12ft 0:
+  url: https://12ft.io/
   title: 12ft
   tags:
   - adblock
   - open-access
   - paywall-remover
+  examples:
+  - description: Gehe zur Startseite
+12ft 1:
+  url: https://12ft.io/<url>
+  include: 12ft 0
   examples:
   - arguments: https://krautreporter.de/5111-einseitig-so-entscheide-ich-wie-ich-uber-israel-und-gaza-berichte
     description: Remove paywall from Krautreporter article
