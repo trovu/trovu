@@ -367,12 +367,17 @@ alibaba 1:
   examples:
   - arguments: bicycle
     description: Search for bicycles
-allmovie 1:
-  url: https://www.allmovie.com/search/all/<movie>
+allmovie 0:
+  url: https://www.allmovie.com/
   title: All Movie
   tags:
   - cinema
   - movies
+  examples:
+  - description: Go to homepage
+allmovie 1:
+  url: https://www.allmovie.com/search/all/<movie>
+  include: allmovie 0
   examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
