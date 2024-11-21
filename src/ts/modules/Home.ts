@@ -313,8 +313,8 @@ export default class Home {
         alertMsg.querySelector(".query").textContent = params.query;
         break;
       case "removed":
-        alertMsg.innerHTML = `The shortcut <a class="githubLink" target="_blank" href=""></a> was removed as does not adhere to our 
-          <a target="_blank" href="${this.env.data.config.url.docs}editors/policy/">Content policy</a>. 
+        alertMsg.innerHTML = `The shortcut <a class="githubLink" target="_blank" href=""></a> was removed as does not adhere to our
+          <a target="_blank" href="${this.env.data.config.url.docs}editors/policy/">Content policy</a>.
           But you can <a target="_blank" href="${this.env.data.config.url.docs}users/advanced/">
           create a user shortcut in your own namespace</a>.`;
         alertMsg.querySelector("a.githubLink").textContent = params.query;
@@ -343,25 +343,40 @@ export default class Home {
     envQuery.query = this.queryInput.value;
     await envQuery.populate();
 
-    const response = CallHandler.getRedirectResponse(envQuery);
-
     // Send debug to /process.
     if (envQuery.debug) {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      window.location.href = processUrl;
+      this.openUrl(processUrl);
       return;
     }
 
-    let redirectUrl;
+    const response = CallHandler.getRedirectResponse(envQuery);
+
     if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
+      const redirectUrl = response.redirectUrl;
+      this.openUrl(redirectUrl);
+      return;
     }
-    window.location.href = redirectUrl;
+
+    const redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
+    this.openUrl(redirectUrl);
   };
+
+  /** TODO */
+  openUrl = (url) => {
+    if (this.isInStandaloneMode()) {
+      window.open(url);
+      return;
+    }
+
+    window.location.href = url;
+  };
+
+  /** TODO */
+  const isInStandaloneMode = () =>
+        (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
 
   /**
    * On triggering reload
