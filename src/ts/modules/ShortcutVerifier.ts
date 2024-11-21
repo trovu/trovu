@@ -15,4 +15,18 @@ export default class ShortcutVerifier {
       return `Mismatch in argumentCount of key and arguments.length of url in "${shortcut.namespace}.${shortcut.key}".`;
     }
   }
+  static checkIfArgCountMatchesWithExamples(shortcut) {
+    if (!shortcut.examples) {
+      return;
+    }
+    for (const example of shortcut.examples) {
+      if (!example.arguments) {
+        continue;
+      }
+      const exampleArgs = example.arguments.toString().split(",");
+      if (shortcut.argumentCount != exampleArgs.length) {
+        return `Mismatch in argumentCount of key and arguments.length of example in "${shortcut.namespace}.${shortcut.key}".`;
+      }
+    }
+  }
 }
