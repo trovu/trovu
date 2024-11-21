@@ -364,8 +364,12 @@ export default class Home {
     this.openUrl(redirectUrl);
   };
 
-  /** TODO */
-  openUrl = (url) => {
+  /**
+   * Handles how URLs are opened.
+   *
+   * @param {string} url – The URL being navigated to.
+   */
+  openUrl = (url: string) => {
     if (this.isInStandaloneMode()) {
       window.open(url);
       return;
@@ -374,7 +378,9 @@ export default class Home {
     window.location.href = url;
   };
 
-  /** TODO */
+  /**
+   * Checks if application is inside PWA or not.
+   */
   const isInStandaloneMode = () =>
         (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
 
