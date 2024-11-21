@@ -76,8 +76,7 @@ zal 0:
   - shopping
   - zalando
   examples:
-  - arguments: kläder
-    description: söka kläder
+  - description: Gå till startsidan
 zal 1:
   url: https://www.zalando.se/katalog/?q=<produkt>
   include: zal 0

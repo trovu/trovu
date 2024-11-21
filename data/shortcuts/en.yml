@@ -195,8 +195,7 @@ wk 0:
   - language
   - thesaurus
   examples:
-  - arguments: tree
-    description: Look up "tree"
+  - description: Go to the homepage
 wk 1:
   url: https://www.wordnik.com/words/<word>
   include: wk 0

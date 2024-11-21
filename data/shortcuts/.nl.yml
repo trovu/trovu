@@ -37,8 +37,7 @@ bol 0:
   - books
   - shoppings
   examples:
-  - arguments: shakespeare
-    description: Search for Shakespeare
+  - description: Ga naar de homepage
 bol 1:
   url: https://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/<query>/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html
   include: bol 0
