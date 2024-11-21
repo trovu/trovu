@@ -1,6 +1,7 @@
 // @ts-nocheck
 
 /** @module Suggestions */
+import Helper from "../Helper";
 import QueryParser from "../QueryParser";
 import SuggestionsGetter from "../SuggestionsGetter";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -317,7 +318,10 @@ export default class Suggestions {
     urlText.textContent = "🔗 ";
     urlDiv.appendChild(urlText);
     const urlLink = document.createElement("a");
-    urlLink.href = suggestion.url;
+    urlLink.href = "javascript:;";
+    urlLink.onclick = () => {
+      Helper.openUrl(suggestion.url);
+    };
     urlLink.textContent = `${suggestion.url}`;
     urlDiv.appendChild(urlLink);
     return urlDiv;

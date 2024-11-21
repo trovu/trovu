@@ -24,4 +24,30 @@ export default class Helper {
     const text = await response.text();
     return text;
   }
+
+  /**
+   * Handles how URLs are opened.
+   *
+   * @param {string} url – The URL being navigated to.
+   */
+  static openUrl(url: string) {
+    if (this.isInStandaloneMode()) {
+      window.open(url);
+      return;
+    }
+
+    window.location.href = url;
+  }
+
+  /**
+   * Checks if application is inside PWA or not.
+   * Ref: https://stackoverflow.com/a/52695341/7596193
+   */
+  static isInStandaloneMode() {
+    return (
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone ||
+      document.referrer.includes("android-app://")
+    );
+  }
 }

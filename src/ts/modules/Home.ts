@@ -5,6 +5,7 @@ import "../../scss/style.scss";
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
+import Helper from "./Helper";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
@@ -313,8 +314,8 @@ export default class Home {
         alertMsg.querySelector(".query").textContent = params.query;
         break;
       case "removed":
-        alertMsg.innerHTML = `The shortcut <a class="githubLink" target="_blank" href=""></a> was removed as does not adhere to our 
-          <a target="_blank" href="${this.env.data.config.url.docs}editors/policy/">Content policy</a>. 
+        alertMsg.innerHTML = `The shortcut <a class="githubLink" target="_blank" href=""></a> was removed as does not adhere to our
+          <a target="_blank" href="${this.env.data.config.url.docs}editors/policy/">Content policy</a>.
           But you can <a target="_blank" href="${this.env.data.config.url.docs}users/advanced/">
           create a user shortcut in your own namespace</a>.`;
         alertMsg.querySelector("a.githubLink").textContent = params.query;
@@ -343,24 +344,25 @@ export default class Home {
     envQuery.query = this.queryInput.value;
     await envQuery.populate();
 
-    const response = CallHandler.getRedirectResponse(envQuery);
-
     // Send debug to /process.
     if (envQuery.debug) {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      window.location.href = processUrl;
+      Helper.openUrl(processUrl);
       return;
     }
 
-    let redirectUrl;
+    const response = CallHandler.getRedirectResponse(envQuery);
+
     if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
+      const redirectUrl = response.redirectUrl;
+      Helper.openUrl(redirectUrl);
+      return;
     }
-    window.location.href = redirectUrl;
+
+    const redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
+    Helper.openUrl(redirectUrl);
   };
 
   /**
