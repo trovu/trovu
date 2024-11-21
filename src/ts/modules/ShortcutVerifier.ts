@@ -1,5 +1,5 @@
 // @ts-nocheck
-export default class ShortcutChecker {
+export default class ShortcutVerifier {
   static checkIfHasUrl(shortcut) {
     if (!shortcut.url && !shortcut.deprecated) {
       return `Missing url in ${shortcut.namespace}.${shortcut.key}.`;
