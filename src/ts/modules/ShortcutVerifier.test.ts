@@ -79,4 +79,72 @@ describe("ShortcutVerifier", () => {
       expect(result).toBeUndefined();
     });
   });
+
+  describe("checkIfArgCountMatchesWithExamples", () => {
+    it("should return undefined if examples are not provided", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey",
+        argumentCount: 2,
+        examples: null,
+      };
+      const result = ShortcutVerifier.checkIfArgCountMatchesWithExamples(shortcut);
+      expect(result).toBeUndefined();
+    });
+
+    it("should return undefined if an example does not have arguments", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey",
+        argumentCount: 2,
+        examples: [{ arguments: null }, { arguments: null }],
+      };
+      const result = ShortcutVerifier.checkIfArgCountMatchesWithExamples(shortcut);
+      expect(result).toBeUndefined();
+    });
+
+    it("should return an error message if argumentCount does not match the length of example arguments", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey",
+        argumentCount: 2,
+        examples: [
+          { arguments: "arg1,arg2" }, // 2 arguments
+          { arguments: "arg1,arg2,arg3" }, // 3 arguments
+        ],
+      };
+      const result = ShortcutVerifier.checkIfArgCountMatchesWithExamples(shortcut);
+      expect(result).toBe(
+        'Mismatch in argumentCount of key and arguments.length of example in "testNamespace.testKey".',
+      );
+    });
+
+    it("should return undefined if argumentCount matches the length of example arguments", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey",
+        argumentCount: 2,
+        examples: [
+          { arguments: "arg1,arg2" }, // 2 arguments
+          { arguments: "arg1,arg2" }, // 2 arguments
+        ],
+      };
+      const result = ShortcutVerifier.checkIfArgCountMatchesWithExamples(shortcut);
+      expect(result).toBeUndefined();
+    });
+
+    it("should return undefined if all examples have matching argument counts", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey",
+        argumentCount: 3,
+        examples: [
+          { arguments: "arg1,arg2,arg3" }, // 3 arguments
+          { arguments: "arg1,arg2,arg3" }, // 3 arguments
+        ],
+      };
+      const result = ShortcutVerifier.checkIfArgCountMatchesWithExamples(shortcut);
+      expect(result).toBeUndefined();
+    });
+  });
 });
