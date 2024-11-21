@@ -5,6 +5,7 @@ import "../../scss/style.scss";
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
+import Helper from "./Helper";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
@@ -348,7 +349,7 @@ export default class Home {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      this.openUrl(processUrl);
+      Helper.openUrl(processUrl);
       return;
     }
 
@@ -356,36 +357,13 @@ export default class Home {
 
     if (response.status === "found") {
       const redirectUrl = response.redirectUrl;
-      this.openUrl(redirectUrl);
+      Helper.openUrl(redirectUrl);
       return;
     }
 
     const redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
-    this.openUrl(redirectUrl);
+    Helper.openUrl(redirectUrl);
   };
-
-  /**
-   * Handles how URLs are opened.
-   *
-   * @param {string} url – The URL being navigated to.
-   */
-  openUrl = (url: string) => {
-    if (this.isInStandaloneMode()) {
-      window.open(url);
-      return;
-    }
-
-    window.location.href = url;
-  };
-
-  /**
-   * Checks if application is inside PWA or not.
-   * https://stackoverflow.com/a/52695341/7596193
-   */
-  isInStandaloneMode = () =>
-    window.matchMedia("(display-mode: standalone)").matches ||
-    window.navigator.standalone ||
-    document.referrer.includes("android-app://");
 
   /**
    * On triggering reload
