@@ -380,6 +380,7 @@ export default class Home {
 
   /**
    * Checks if application is inside PWA or not.
+   * https://stackoverflow.com/a/52695341/7596193
    */
   const isInStandaloneMode = () =>
         (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone) || document.referrer.includes('android-app://');
