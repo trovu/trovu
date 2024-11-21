@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - pwa-open-in-browser
   pull_request:
     branches:
       - master
