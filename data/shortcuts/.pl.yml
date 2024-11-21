@@ -295,8 +295,7 @@ zal 0:
   - shopping
   - zalando
   examples:
-  - arguments: buty
-    description: Szukaj buty
+  - description: Przejdź do strony głównej
 zal 1:
   url: https://www.zalando.pl/katalog/?q=<produkt>
   include: zal 0

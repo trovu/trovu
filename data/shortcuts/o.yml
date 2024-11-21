@@ -1377,8 +1377,7 @@ cpan 0:
   - perl
   - programming
   examples:
-  - arguments: Web::API
-    description: search on metacpan.org
+  - description: Go to the homepage
 cpan 1:
   url: https://metacpan.org/search?q=<query>
   title: Metacpan
@@ -3271,8 +3270,7 @@ fos 0:
   - images
   - stock-agency
   examples:
-  - arguments: weihnachten
-    description: Suche Fotos zum Thema "weihnachten"
+  - description: Go to the homepage
 fos 1:
   url: https://www.fotosearch.de/bilder-fotos/<query>.html
   title: Fotosearch
@@ -4298,8 +4296,7 @@ grnd 0:
   tags:
   - news
   examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  - description: Go to the homepage
 grnd 1:
   url: https://ground.news/find?url=<query>
   tests:
@@ -4724,8 +4721,7 @@ i 0:
   - imdb
   - movies
   examples:
-  - arguments: batman
-    description: Search International Movie Database for "batman"
+  - description: Go to the homepage
 i 1:
   url: https://www.imdb.com/find/?s=all&q=<query>
   title: Internet Movie Database
@@ -4938,8 +4934,7 @@ ist 0:
   - images
   - stock-agency
   examples:
-  - arguments: christmas
-    description: search photos about christmas
+  - description: Go to the homepage
 ist 1:
   url: https://www.istockphoto.com/file_search.php?action=file&text=<query>&refnum=serchilo
   title: Istockphoto
@@ -6005,10 +6000,7 @@ ng 0:
   - javascript
   - programming
   examples:
-  - arguments: repeat
-    description: Show documentation on "ng-repeat"
-  - arguments: filter
-    description: Show documentation on "filter"
+  - description: Go to the homepage
 ng 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=inurl%3Adocs.angularjs.org%2Fapi%20<query>
   title: AngularJS Documentation
@@ -7821,8 +7813,7 @@ solrj 0:
   - java
   - programming
   examples:
-  - arguments: QueryResponse
-    description: search for class QueryResponse in the Solr Java Client API
+  - description: Go to the homepage
 solrj 1:
   url: https://www.google.com/search?hl=<$language>&q=site%3Ahttp://lucene.apache.org/solr/+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: Solr Java Client API
@@ -8345,8 +8336,7 @@ tmu 0:
   tags:
   - shopping
   examples:
-  - arguments: camera
-    description: Go to homepage
+  - description: Go to homepage
 tmu 1:
   url: https://www.temu.com/search_result.html?search_key=<query>
   title: Temu

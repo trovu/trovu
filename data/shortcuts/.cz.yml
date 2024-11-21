@@ -110,8 +110,7 @@ ikea 0:
   - ikea
   - shopping
   examples:
-  - arguments: matrace
-    description: Hledej matrace
+  - description: Přejít na hlavní stránku
 ikea 1:
   url: https://www.ikea.com/cz/cs/search/?q=<query>
   include: ikea 0
