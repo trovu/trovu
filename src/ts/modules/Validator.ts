@@ -21,14 +21,13 @@ export default class Validator {
       for (const key in data.shortcuts[namespace]) {
         let shortcut = data.shortcuts[namespace][key];
         shortcut = NamespaceFetcher.addInfo(shortcut, key, namespace);
-        // [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
-        // shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
-        // console.log(shortcut);
-        // const error = ShortcutVerifier.checkIfHasUrl(shortcut);
-        //if (error) {
-        //  hasError = true;
-        //  console.error(error);
-        //}
+        [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
+        shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
+        const error = ShortcutVerifier.checkIfHasUrlAndNoInclude(shortcut);
+        if (error) {
+          hasError = true;
+          console.error(error);
+        }
         const error2 = ShortcutVerifier.checkIfArgCountMatches(shortcut);
         if (error2) {
           hasError = true;
