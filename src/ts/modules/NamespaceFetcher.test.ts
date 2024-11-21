@@ -328,7 +328,7 @@ describe("NamespaceFetcher.addReachable", () => {
 describe("NamespaceFetcher.addInfo", () => {
   test("standard", () => {
     expect(
-      new NamespaceFetcher(new Env({})).addInfo(
+      NamespaceFetcher.addInfo(
         {
           url: "https://reiseauskunft.bahn.de/bin/query.exe/d?S=<Start: {type: city}>&Z=<Ziel>&timesel=depart&start=1",
         },
