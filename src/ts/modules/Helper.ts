@@ -30,7 +30,7 @@ export default class Helper {
    *
    * @param {string} url – The URL being navigated to.
    */
-  static openUrl(url) {
+  static openUrl(url: string) {
     if (this.isInStandaloneMode()) {
       window.open(url);
       return;
