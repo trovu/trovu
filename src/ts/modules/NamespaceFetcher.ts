@@ -508,14 +508,11 @@ export default class NamespaceFetcher {
   }
 
   verify(shortcut) {
-    const error = ShortcutVerifier.checkIfHasUrl(shortcut);
-    if (error) {
-      this.env.logger.error(error);
-    }
-    const warning = ShortcutVerifier.checkIfArgCountMatches(shortcut);
-    if (warning) {
-      this.env.logger.warning(warning);
-    }
+    const checks = [
+      { message: ShortcutVerifier.checkIfHasUrl(shortcut), logMethod: this.env.logger.error },
+      { message: ShortcutVerifier.checkIfArgCountMatches(shortcut), logMethod: this.env.logger.warning },
+    ];
+    checks.forEach(({ message, logMethod }) => message && logMethod(message));
   }
 
   /**
