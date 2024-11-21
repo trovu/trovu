@@ -1,6 +1,7 @@
 // @ts-nocheck
 
 /** @module NamespaceFetcher */
+import ShortcutVerifier from "./ShortcutVerifier";
 import UrlProcessor from "./UrlProcessor";
 import jsyaml from "js-yaml";
 
@@ -507,13 +508,13 @@ export default class NamespaceFetcher {
   }
 
   verify(shortcut) {
-    if (!shortcut.url && !shortcut.deprecated) {
-      this.env.logger.error(`Missing url in ${shortcut.namespace}.${shortcut.key}.`);
+    const error = ShortcutVerifier.checkIfHasUrl(shortcut);
+    if (error) {
+      this.env.logger.error(error);
     }
-    if (shortcut.url && shortcut.argumentCount != Object.keys(shortcut.arguments).length) {
-      this.env.logger.warning(
-        `Mismatch in argumentCount of key and arguments.length of url in "${shortcut.namespace}.${shortcut.key}".`,
-      );
+    const warning = ShortcutVerifier.checkIfArgCountMatches(shortcut);
+    if (warning) {
+      this.env.logger.warning(warning);
     }
   }
 
