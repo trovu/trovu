@@ -229,7 +229,7 @@ export default class NamespaceFetcher {
   processShortcuts(shortcuts, namespaceName) {
     shortcuts = this.checkKeySyntax(shortcuts, namespaceName);
     for (const key in shortcuts) {
-      shortcuts[key] = this.convertToObject(shortcuts[key]);
+      shortcuts[key] = NamespaceFetcher.convertToObject(shortcuts[key]);
       if (shortcuts[key].include) {
         shortcuts[key].include = this.convertIncludeToObject(shortcuts[key].include);
       }
@@ -298,7 +298,7 @@ export default class NamespaceFetcher {
    * @param {string|Object} shortcut - The shortcut to convert
    * @returns {Object} The converted shortcut object
    */
-  convertToObject(shortcut) {
+  static convertToObject(shortcut) {
     if (typeof shortcut === "string") {
       const url = shortcut;
       shortcut = {
@@ -453,7 +453,7 @@ export default class NamespaceFetcher {
   addInfoAll(namespaceInfos) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = this.addInfo(namespaceInfo.shortcuts[key], key, namespaceInfo.name);
+        namespaceInfo.shortcuts[key] = NamespaceFetcher.addInfo(namespaceInfo.shortcuts[key], key, namespaceInfo.name);
       }
     }
     return namespaceInfos;
@@ -468,7 +468,7 @@ export default class NamespaceFetcher {
    *
    * @return {object} shortcut - Shortcut with info.
    */
-  addInfo(shortcut, key, namespaceName) {
+  static addInfo(shortcut, key, namespaceName) {
     shortcut = this.convertToObject(shortcut);
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
