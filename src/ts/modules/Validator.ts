@@ -1,5 +1,8 @@
 // @ts-nocheck
 import DataManager from "./DataManager";
+import NamespaceFetcher from "./NamespaceFetcher";
+import ShortcutVerifier from "./ShortcutVerifier";
+import UrlProcessor from "./UrlProcessor";
 import ajv from "ajv";
 import fs from "fs";
 import jsyaml from "js-yaml";
@@ -14,6 +17,23 @@ export default class Validator {
       if (!validator.validate(schema, data.shortcuts[namespace])) {
         hasError = true;
         console.error(`Problem in namespace ${namespace}: ${validator.errorsText()}`);
+      }
+      for (const key in data.shortcuts[namespace]) {
+        let shortcut = data.shortcuts[namespace][key];
+        shortcut = NamespaceFetcher.addInfo(shortcut, key, namespace);
+        // [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
+        // shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
+        // console.log(shortcut);
+        // const error = ShortcutVerifier.checkIfHasUrl(shortcut);
+        //if (error) {
+        //  hasError = true;
+        //  console.error(error);
+        //}
+        const error2 = ShortcutVerifier.checkIfArgCountMatches(shortcut);
+        if (error2) {
+          hasError = true;
+          console.error(error2);
+        }
       }
     }
     if (hasError) {
