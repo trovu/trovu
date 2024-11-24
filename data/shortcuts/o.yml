@@ -1169,13 +1169,20 @@ calc 0:
   tags:
   - calculator
   - online-tool
-  tags:
-  - old
-ccc 1:
-  url: https://<query>.ccc.de
+ccc 0:
+  url: https://www.ccc.de/
   title: Chaos Computer Club
   tags:
-  - old
+  - ccc
+  - chaos-computer-club
+  - hacking
+  - security
+  - technology
+  examples:
+  - description: Go to the homepage
+ccc 1:
+  url: https://<query>.ccc.de/
+  include: ccc 0
 ccc-tv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
