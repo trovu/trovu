@@ -360,7 +360,8 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
     }
-    window.location.href = redirectUrl;
+    // window.location.href = redirectUrl;
+    window.open(redirectUrl, "_blank", "noopener,noreferrer");
   };
 
   /**
