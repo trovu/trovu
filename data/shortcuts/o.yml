@@ -1252,11 +1252,21 @@ chipfind 1:
   examples:
   - arguments: 74LS00
     description: Search for 74LS00 datasheet
+chords 0:
+  url: https://www.ultimate-guitar.com/
+  title: Ultimate-guitar search for chords/tabs etc.
   tags:
-  - old
+  - guitar
+  - music
+  - tabs
+  examples:
+  - description: Go to the homepage
 chords 1:
   url: https://www.ultimate-guitar.com/search.php?value=<band or song>&search_type=title
-  title: Ultimate-guitar search for chords/tabs etc.
+  include: chords 0
+  examples:
+  - arguments: metallica
+    description: Search for Metallica tabs
   tags:
   - old
 ciu 1:
