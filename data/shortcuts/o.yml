@@ -1267,13 +1267,16 @@ chords 1:
   examples:
   - arguments: metallica
     description: Search for Metallica tabs
-  tags:
-  - old
-ciu 1:
-  url: https://caniuse.com/#search=<query>
+ciu 0:
+  url: https://caniuse.com/
   title: Caniuse
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+ciu 1:
+  url: https://caniuse.com/#search=<query>
+  include: ciu 0
 ckd 0:
   url: https://cooked.wiki/
   title: Cooked
@@ -1292,11 +1295,16 @@ ckd 1:
   examples:
   - arguments: https://www.chefkoch.de/rezepte/2768011428764832/Brokkoli-Pastinaken-Kokos-Curry.html
     description: View a recipe through Cooked, with SEO boilerplate, ads, etc. removed
-cl 1:
-  url: https://www.colourlovers.com/colors/search?query=<color>
+cl 0:
+  url: https://www.colourlovers.com/
   title: COLOURlovers color search
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+cl 1:
+  url: https://www.colourlovers.com/colors/search?query=<color>
+  include: cl 0
 clpal 1:
   url: https://www.colourlovers.com/palettes/search?query=<query>
   title: COLOURlovers palette search
