@@ -9827,6 +9827,9 @@ yhf 0:
 yhf 1:
   url: https://forum.yunohost.org/search?q=<query>
   include: yhf 0
+  examples:
+  - arguments: backup
+    description: Search for "backup"
 yi 0:
   include:
   - key: yi 0
