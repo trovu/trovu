@@ -1330,14 +1330,19 @@ clr 0:
   title: COLOURlovers random color
   tags:
   - old
-clubic 1:
-  url: https://www.clubic.com/telecharger/r/<logiciel>
+clubic 0:
+  url: https://www.clubic.com/
   title: Clubic
   tags:
   - clublic
   - download
   - logiciels
   - software
+  examples:
+  - description: Go to the homepage
+clubic 1:
+  url: https://www.clubic.com/telecharger/r/<logiciel>
+  include: clubic 0
   examples:
   - arguments: inkscape
     description: Search Clubic for "inkscape"
@@ -1348,12 +1353,14 @@ cma 0:
   - critical-maps
   - critical-mass
   description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
-codej 1:
-  url: https://searchcode.com/?q=<code>&lan=23
+codej 0:
+  url: https://searchcode.com/
   title: Code Search for Java
   tags:
   - programming
   - programming-language
+  examples:
+  - description: Go to the homepage
   description: Search for Java code examples
 codex 1:
   url: https://wordpress.org/search/<query>
