@@ -9817,16 +9817,16 @@ ygl 1:
     key: ygl 1
     namespace: en
 yhf 0:
-  title: YunoHost Forum
   url: https://forum.yunohost.org
+  title: YunoHost Forum
   tags:
-    - cloud
-    - hosting
-    - forum
-    - help
+  - cloud
+  - forum
+  - help
+  - hosting
 yhf 1:
-  include: yhf 0
   url: https://forum.yunohost.org/search?q=<query>
+  include: yhf 0
 yi 0:
   include:
   - key: yi 0
