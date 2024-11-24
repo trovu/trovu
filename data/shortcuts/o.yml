@@ -1238,11 +1238,20 @@ chip 1:
     alternative:
       query: de.chip <1>
     created: '2024-11-24'
+chipfind 0:
+  url: https://www.chipfind.ru/
+  title: ChipFind
   tags:
-  - old
+  - datasheet
+  - electronics
+  examples:
+  - description: Go to the homepage
 chipfind 1:
   url: https://www.chipfind.ru/datasheet/search.htm?s=<partnumber>&t=part
-  title: ChipFind
+  include: chipfind 0
+  examples:
+  - arguments: 74LS00
+    description: Search for 74LS00 datasheet
   tags:
   - old
 chords 1:
