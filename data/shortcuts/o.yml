@@ -1228,9 +1228,16 @@ cg 1:
   examples:
   - arguments: What is the meaning of life?
     description: Ask ChatGPT about the meaning of life
+chip 0:
+  deprecated:
+    alternative:
+      query: de.chip 0
+    created: '2024-11-24'
 chip 1:
-  url: https://suche.chip.de/?q=<query>
-  title: Chip.de Suche
+  deprecated:
+    alternative:
+      query: de.chip <1>
+    created: '2024-11-24'
   tags:
   - old
 chipfind 1:
