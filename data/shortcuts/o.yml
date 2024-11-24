@@ -9875,16 +9875,21 @@ yo 1:
   include:
   - key: yo 1
     namespace: pka
-yr 1:
-  url: https://www.yr.no/en/search?q=<location>
-  title: Yr weather report
+yr 0:
+  url: https://www.yr.no/
+  title: Yr.no weather forecast
   tags:
   - forecast
   - weather
   examples:
+  - description: Go to the homepage
+  description: "Norwegian website for weather forecasting and other meteorological information (which is also in English). The site is a joint responsibility of the Norwegian Broadcasting Corporation and the Norwegian Meteorological Institute.\r\n\r\nThe website offers forecasts (as graphs, symbols and maps) for more than 9 million places in the world. The Norwegian forecasts are supplemented with textual forecasts, weather radars, satellite images and a wide range of more specialised forecasts. The forecasts are based on data from the Norwegian Meteorological Institute and several international meteorological organisations (ECMWF, EUMETSAT etc.)."
+yr 1:
+  url: https://www.yr.no/en/search?q=<location>
+  include: yr 0
+  examples:
   - arguments: Berlin
     description: Look up the weather in Berlin
-  description: "yr.no is a Norwegian website for weather forecasting and other meteorological information (which is also in English). The site is a joint responsibility of the Norwegian Broadcasting Corporation and the Norwegian Meteorological Institute.\r\n\r\nThe website offers forecasts (as graphs, symbols and maps) for more than 9 million places in the world. The Norwegian forecasts are supplemented with textual forecasts, weather radars, satellite images and a wide range of more specialised forecasts. The forecasts are based on data from the Norwegian Meteorological Institute and several international meteorological organisations (ECMWF, EUMETSAT etc.)."
 yrg 1:
   url: https://www.google.com/search?btnI=&sourceid=navclient&gfns=1&q=site%3Ayr.no%20<location>
   title: Yr weather via Google
