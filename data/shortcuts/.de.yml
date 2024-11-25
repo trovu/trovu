@@ -126,6 +126,19 @@ aw 1:
   examples:
   - arguments: meier
     description: Search Abgeordnetenwatch for "meier"
+awt 0:
+  url: https://shop.autorenwelt.de/
+  title: Autorenwelt Shop
+  description: Online bookshop that shares its profits with the authors
+  tags:
+  - books
+  - shopping
+awt 1:
+  url: https://shop.autorenwelt.de/search?type=product&q=<Suchbegriff>
+  include: awt 0
+  examples:
+  - arguments: andreas fischer
+    description: Search for "andreas fischer"
 bauhaus 0:
   deprecated:
     alternative:
