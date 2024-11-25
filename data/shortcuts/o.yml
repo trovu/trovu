@@ -1154,21 +1154,21 @@ cadsilly 0:
   title: Current Ctrl-Alt-Del-Silly
   tags:
   - old
-cc 0:
-  url: https://search.creativecommons.org/
-  title: Creative Commons
-  tags:
-  - creative-commons
-  - license
-  - copyleft
-  examples:
-  - description: Go to the homepage
 calc 0:
   url: https://web2.0calc.com/
   title: Scientific online calculator
   tags:
   - calculator
   - online-tool
+cc 0:
+  url: https://search.creativecommons.org/
+  title: Creative Commons
+  tags:
+  - copyleft
+  - creative-commons
+  - license
+  examples:
+  - description: Go to the homepage
 ccc 0:
   url: https://www.ccc.de/
   title: Chaos Computer Club
@@ -1659,8 +1659,8 @@ ctan 0:
   title: Comprehensive TeX Archive Network
   tags:
   - ctan
-  - tex
   - latex
+  - tex
 ctan 1:
   url: https://ctan.org/search?phrase=<query>
   include: ctan 0
