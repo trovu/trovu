@@ -1362,16 +1362,30 @@ codej 0:
   examples:
   - description: Go to the homepage
   description: Search for Java code examples
-codex 1:
-  url: https://wordpress.org/search/<query>
+codej 1:
+  url: https://searchcode.com/?q=<code>&lan=23
+  include: codej 0
+  description: Search for Java code examples
+codex 0:
+  url: https://wordpress.org/
   title: Wordpress Codex Search
   tags:
   - old
-comic 1:
-  url: https://www.comicvine.com/search/?q=<query>
+  examples:
+  - description: Go to the homepage
+codex 1:
+  url: https://wordpress.org/search/<query>
+  include: codex 0
+comic 0:
+  url: https://www.comicvine.com/
   title: Comic Vince
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+comic 1:
+  url: https://www.comicvine.com/search/?q=<query>
+  include: comic 0
 commons 0:
   url: https://commons.wikimedia.org/
   title: Wikimedia Commons Main Page
@@ -1406,12 +1420,17 @@ copu 1:
   title: Google Custom Search "computational linguistics publications"
   tags:
   - old
-correos 1:
-  url: https://www.correos.es/comun/localizador/track.asp?numero=<codigo>
+correos 0:
+  url: https://www.correos.es/
   title: Correos Localizador de Envíos
   tags:
   - correos
   - shipping
+  examples:
+  - description: Go to the homepage
+correos 1:
+  url: https://www.correos.es/comun/localizador/track.asp?numero=<codigo>
+  include: correos 0
 couch 0:
   deprecated:
     alternative:
@@ -1443,11 +1462,16 @@ cpan 1:
   examples:
   - arguments: Web::API
     description: search on metacpan.org
-cplusplus 1:
-  url: https://cplusplus.com/query/search.cgi?q=<query>
+cplusplus 0:
+  url: https://cplusplus.com/
   title: Cplusplus.com
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+cplusplus 1:
+  url: https://cplusplus.com/query/search.cgi?q=<query>
+  include: cplusplus 0
 cpp 0:
   url: https://cppreference.com/
   title: C++ Reference (cppreference.com)
@@ -1463,11 +1487,16 @@ cpp 1:
   examples:
   - arguments: sprintf
     description: Search C++ Reference (cppreference.com) for "sprintf"
-cppc 1:
-  url: https://www.cplusplus.com/search.do?q=<query>
+cppc 0:
+  url: https://www.cplusplus.com/
   title: C++ Reference (cplusplus.com)
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+cppc 1:
+  url: https://www.cplusplus.com/search.do?q=<query>
+  include: cppc 0
 cr 0:
   url: https://chaosradio.ccc.de/chaosradio.html
   title: Chaosradio
@@ -1503,11 +1532,16 @@ cre 1:
   title: Chaosradio
   tags:
   - old
-creativecommons.org 1:
-  url: https://creativecommons.org/?s=<argument name>
+creativecommons.org 0:
+  url: https://creativecommons.org/
   title: Find within creativecommons.org (not for licensed works)
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+creativecommons.org 1:
+  url: https://creativecommons.org/?s=<argument name>
+  include: creativecommons.org 0
 crg 0:
   url: https://craigslist.com
   title: Craigslist
