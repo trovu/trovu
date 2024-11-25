@@ -1753,9 +1753,14 @@ datecalc 0:
   tags:
   - calculator
   - date
+datev 0:
+  url: https://www.datev.de/
+  title: Datev LEXinform/Info-Datenbank
+  examples:
+  - description: Go to the homepage
 datev 1:
   url: https://www.datev.de/dnlexos/mobile/webapp.aspx?sq=<Suche>
-  title: Datev LEXinform/Info-Datenbank
+  include: datev 0
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
@@ -1772,14 +1777,19 @@ dblp 1:
   examples:
   - arguments: Turing
     description: Search for "Turing"
-dbp 1:
-  url: https://dbpedia.org/page/<title>
+dbp 0:
+  url: https://dbpedia.org/
   title: DBpedia
   tags:
   - database
   - knowledge
   - knowledgebase
   - semanticweb
+  examples:
+  - description: Go to the homepage
+dbp 1:
+  url: https://dbpedia.org/page/<title>
+  include: dbp 0
   examples:
   - arguments: Tunisia
     description: Open DBpedia page about Tunisia
@@ -1901,35 +1911,55 @@ dea 1:
   examples:
   - arguments: abstract
     description: search for abstract deviations on deviantART
-deau 1:
-  url: https://<user>.deviantart.com
+deau 0:
+  url: https://www.deviantart.com/
   title: DeviantART
   tags:
   - art
   - deviantart
   - images
   examples:
+  - description: Go to the homepage
+deau 1:
+  url: https://<user>.deviantart.com
+  include: deau 0
+  examples:
   - arguments: account
     description: Go to account.deviantart.com
-deb 1:
-  url: https://packages.debian.org/search?keywords=<query>&searchon=names&suite=all&section=all
+deb 0:
+  url: https://packages.debian.org/
   title: debian Packages
   tags:
   - debian
   - linux
   examples:
+  - description: Go to the homepage
+deb 1:
+  url: https://packages.debian.org/search?keywords=<query>&searchon=names&suite=all&section=all
+  include: deb 0
+  examples:
   - arguments: tetris
     description: Search debian packages for "tetris"
+debb 0:
+  url: https://bugs.debian.org/
+  title: debian Bugs
+  tags:
+  - old
+  examples:
+  - description: Go to the homepage
 debb 1:
   url: https://bugs.debian.org/<query>
-  title: debian Bugs
-  tags:
-  - old
+  include: debb 0
+debian-bugs 0:
+  deprecated:
+    alternative:
+      query: debb
+    created: '2024-11-25'
 debian-bugs 1:
-  url: https://bugs.debian.org/<query>
-  title: debian Bugs
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: debb <1>
+    created: '2024-11-25'
 debian-planet 0:
   url: https://planet.debian.org/
   title: Debian Planet
@@ -1945,14 +1975,23 @@ debp 0:
   title: Debian Planet
   tags:
   - old
-debt 1:
-  url: https://tracker.debian.org/pkg/<query>
+debt 0:
+  url: https://tracker.debian.org/
   title: Debian Package Tracker
   tests:
   - arguments: grub2
     expect: 'maintainer:'
   tags:
   - debian
+  examples:
+  - description: Go to the homepage
+  description: Looks up the given package in the debian package tracker.
+debt 1:
+  url: https://tracker.debian.org/pkg/<query>
+  tests:
+  - arguments: grub2
+    expect: 'maintainer:'
+  include: debt 0
   examples:
   - arguments: grub2
     description: Look at the grub2 package in the Debian Package Tracker
@@ -1972,11 +2011,16 @@ deen 1:
     alternative:
       query: de.en <1>
     created: '2023-04-10'
-deep 1:
-  url: https://www.deepdyve.com/search?query=<query>
+deep 0:
+  url: https://www.deepdyve.com/
   title: DeepDyve search
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+deep 1:
+  url: https://www.deepdyve.com/search?query=<query>
+  include: deep 0
 deezer 0:
   url: https://www.deezer.com/
   title: Deezer Startseite
