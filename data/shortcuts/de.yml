@@ -83,6 +83,19 @@ at 1:
   examples:
   - arguments: paradeisa
     description: '"paradeisa" auf Hochdeutsch'
+aw 0:
+  url: https://shop.autorenwelt.de/
+  title: Autorenwelt Shop
+  description: Online bookshop that shares its profits with the authors
+  tags:
+  - books
+  - shopping
+aw 1:
+  url: https://shop.autorenwelt.de/search?type=product&q=<Suchbegriff>
+  include: aw 0
+  examples:
+  - arguments: andreas fischer
+    description: Search for "andreas fischer"
 awf 0:
   url: https://anderes-wort-fuer.de/
   title: Anderes Wort für – Synonymlexikon
