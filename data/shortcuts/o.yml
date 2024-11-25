@@ -1645,18 +1645,28 @@ csdblp 1:
 csf 0:
   url: https://www.couchsurfing.com
   title: Couchsurfing Homepage
+  tags:
+  - couchsurfing
+  - travel
+  - vacation
+  examples:
+  - description: Go to the homepage
 csf 1:
   url: https://www.couchsurfing.com/people/<query>
   title: Couchsurfing User Search
 ctan 0:
   url: https://ctan.org
-  title: 'CTAN: Comprehensive TeX Archive Network'
+  title: Comprehensive TeX Archive Network
   tags:
+  - ctan
   - tex
+  - latex
 ctan 1:
   url: https://ctan.org/search?phrase=<query>
-  title: 'CTAN: Search'
   include: ctan 0
+  examples:
+  - arguments: tikz
+    description: Search for tikz
 cutlist 0:
   url: http://cutlist.at/
   title: cutlist.at
