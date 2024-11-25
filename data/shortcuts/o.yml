@@ -1804,15 +1804,15 @@ dbp 1:
   - arguments: Tunisia
     description: Open DBpedia page about Tunisia
 dbug 0:
-  url: https://www.debian.org/Bugs/
-  title: debian bugs
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: debb
+    created: '2024-11-25'
 dbug 2:
-  url: https://bugs.debian.org/cgi-bin/pkgreport.cgi?package=<package>;include=subject%3A<query>
-  title: query debian bugs from a package
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: debb <1>, <2>
+    created: '2024-11-25'
 dch 0:
   url: https://www.digitalconcerthall.com/
   title: Digital Concert Hall of the Berlin Philharmonic Orchestra (Berliner Philharmoniker)
@@ -1951,15 +1951,24 @@ deb 1:
   - arguments: tetris
     description: Search debian packages for "tetris"
 debb 0:
-  url: https://bugs.debian.org/
+  url: https://www.debian.org/Bugs/
   title: debian Bugs
   tags:
   - old
   examples:
   - description: Go to the homepage
 debb 1:
-  url: https://bugs.debian.org/<query>
+  url: https://bugs.debian.org/cgi-bin/pkgreport.cgi?pkg=<package>;dist=unstable
   include: debb 0
+  examples:
+  - arguments: grub2
+    description: Look up the grub2 package
+debb 2:
+  url: https://bugs.debian.org/cgi-bin/pkgreport.cgi?package=<package>;include=subject%3A<query>
+  include: debb 1
+  examples:
+  - arguments: grub2, test
+    description: Look up the grub2 package in the debian bug tracker
 debian-bugs 0:
   deprecated:
     alternative:
@@ -1971,15 +1980,15 @@ debian-bugs 1:
       query: debb <1>
     created: '2024-11-25'
 debian-planet 0:
-  url: https://planet.debian.org/
-  title: Debian Planet
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: debp
+    created: '2024-11-25'
 debian-wiki 0:
-  url: https://wiki.debian.org/
-  title: Debian Wiki
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: debw
+    created: '2024-11-25'
 debp 0:
   url: https://planet.debian.org/
   title: Debian Planet
