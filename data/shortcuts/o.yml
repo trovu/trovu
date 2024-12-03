@@ -2056,20 +2056,20 @@ def 1:
   tags:
   - old
 defr 1:
-  url: https://dict.leo.org/?lp=frde&lang=fr&search=<word>
-  title: Translation German to French
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.fr <1>
+    created: '2024-11-25'
 denic 1:
   url: https://www.denic.de/webwhois/?domain=<query>
   title: DENIC Whois
   tags:
   - old
 deo 1:
-  url: https://www.vortaro.dk/#/<soegeord>
-  title: Dansk-esperanto ordbog
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: da.eo <1>
+    created: '2024-11-25'
 derivative 1:
   url: https://www.wolframalpha.com/input/?i=derivative%20<query>
   title: 'WolframAlpha: Derivative'
