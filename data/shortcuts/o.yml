@@ -1210,7 +1210,7 @@ cfp 1:
   url: http://www.wikicfp.com/cfp/servlet/tool.search?q=<query>&year=t
   include: cfp 0
 cg 0:
-  url: https://chat.openai.com/
+  url: https://chatgpt.com/
   title: ChatGPT
   tests:
   - expect: <title>ChatGPT
@@ -1220,7 +1220,7 @@ cg 0:
   - openai
   description: Chat with OpenAI's ChatGPT
 cg 1:
-  url: https://chat.openai.com/chat?q=<query>
+  url: https://chatgpt.com/?q=<query>
   tests:
   - arguments: foobar
     expect: q=foo
