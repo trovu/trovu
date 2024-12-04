@@ -246,7 +246,7 @@ export default class Home {
 
   toggleByQuery() {
     // Toggle display of navbar and examples.
-    if (this.queryInput.value.trim() === "" && this.suggestions.selected === -1) {
+    if (this.queryInput.value.trim() === "" && (!this.suggestions || this.suggestions.selected === -1)) {
       document.querySelector("nav.navbar").style.display = "block";
       if (!this.env.isRunningStandalone() && this.env.context !== "web-ext") {
         document.querySelector("footer").style.display = "block";
