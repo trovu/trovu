@@ -21,6 +21,8 @@ export default class Home {
 
   async initialize() {
     this.env = new Env({ context: "index" });
+    this.queryInput = document.querySelector("#query");
+    this.toggleByQuery();
 
     // Init environment.
     await this.env.populate();
@@ -29,8 +31,6 @@ export default class Home {
     const gitLogger = new GitLogger(this.env.gitInfo);
     document.querySelector("#version").textContent = gitLogger.getVersion();
     gitLogger.logVersion();
-
-    this.queryInput = document.querySelector("#query");
 
     const modalElement = document.getElementById("settings");
     const modal = new BSN.Modal(modalElement);
@@ -53,7 +53,6 @@ export default class Home {
 
     Home.setHeights();
     this.setListeners();
-    this.toggleByQuery();
     this.startTypewriter();
     window.addEventListener(
       "hashchange",
