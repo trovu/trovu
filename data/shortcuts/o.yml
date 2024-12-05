@@ -6425,6 +6425,21 @@ orm 1:
   examples:
   - arguments: berlin
     description: Search OpenRailwayMap for "berlin"
+orv 0:
+  url: https://openreview.net/
+  title: OpenReview
+  tags:
+  - academia
+  - publishing
+  - research
+orv 1:
+  url: https://openreview.net/search?term=<term>&group=all&content=all&source=all
+  include: orv 0
+orv+ 0:
+  url: https://openreview.net/group?id=OpenReview.net/Support
+  include: orv 0
+  title: OpenReview Support
+  description: Request to host a venue on OpenReview
 os 0:
   include:
   - key: os 0
