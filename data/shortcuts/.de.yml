@@ -1020,11 +1020,10 @@ duden 0:
   examples:
   - description: Gehe zur Startseite
 duden 1:
-  url: https://www.duden.de/suchen/dudenonline/<Suche>
-  include: duden 0
-  examples:
-  - arguments: baum
-    description: Suche nach "baum"
+  deprecated:
+    alternative:
+      query: de.dd <1>
+    created: '2024-12-09'
 e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
