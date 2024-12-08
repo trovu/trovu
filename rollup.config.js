@@ -111,6 +111,7 @@ export default [
           { src: "src/js/pwa/*", dest: "dist/public/" },
           { src: "src/manifest/*", dest: "dist/public/" },
           { src: "src/json/assetlinks.json", dest: "dist/public/.well-known/" },
+          { src: "src/json/log.json", dest: "dist/public/" },
         ],
       }),
       typescript(), // Add the TypeScript plugin here

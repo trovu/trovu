@@ -374,11 +374,13 @@ export default class Env {
     switch (this.context) {
       case "index":
       case "process":
-        url = `/data.json?context=${this.context}&version=${this.gitInfo.commit.hash}`;
+        url = `/data.json?version=${this.gitInfo.commit.hash}`;
+        this.fetchLog(this.context);
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
-        url = `https://trovu.net/data.json?context=${this.context}`;
+        url = "https://trovu.net/data.json";
+        this.fetchLog(this.context);
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
@@ -399,6 +401,16 @@ export default class Env {
       this.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
       return false;
     }
+  }
+
+  /**
+   * Fetches log.json with context.
+   *
+   * @param context
+   */
+  fetchLog(context) {
+    const url = `/log.json?context=${context}`;
+    this.fetch(url);
   }
 
   /**
