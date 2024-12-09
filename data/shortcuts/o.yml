@@ -1804,17 +1804,11 @@ datecalc 0:
   tags:
   - calculator
   - date
-datev 0:
-  url: https://www.datev.de/
-  title: Datev LEXinform/Info-Datenbank
-  examples:
-  - description: Go to the homepage
 datev 1:
-  url: https://www.datev.de/dnlexos/mobile/webapp.aspx?sq=<Suche>
-  include: datev 0
-  examples:
-  - arguments: berlin
-    description: Suche nach "berlin"
+  deprecated:
+    alternative:
+      query: de.datev <1>
+    created: '2024-12-09'
 dblp 0:
   url: https://www.dblp.org/search/
   title: DBLP Computer Science Bibliography

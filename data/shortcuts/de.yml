@@ -450,6 +450,18 @@ dab 1:
     alternative:
       query: bab.da <1>
     created: '2023-04-10'
+datev 0:
+  url: https://www.datev.de/
+  title: Datev LEXinform
+  examples:
+  - description: Gehe zur Startseite
+  description: Rechercheplattform für Steuerberater und Wirtschaftsprüfer
+datev 1:
+  url: https://lexinform.apps.datev.de/search?q=<Suche>
+  include: datev 0
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
 dclj 0:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
   title: De.comp.lang.javascript
