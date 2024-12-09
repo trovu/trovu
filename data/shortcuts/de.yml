@@ -323,6 +323,21 @@ chipg 1:
   examples:
   - arguments: smartphone
     description: Suche nach "smartphone"
+chr 0:
+  url: https://chaosradio.de/
+  title: Chaosradio
+  tags:
+  - ccc
+  - podcast
+  - radio
+  examples:
+  - description: Gehe zur Startseite
+chr 1:
+  url: https://chaosradio.de/?s=<Suche>
+  include: chr 0
+  examples:
+  - arguments: linux
+    description: Suche nach "linux"
 ciao 0:
   url: https://www.ciao.de/
   title: Ciao.de Preisvergleich

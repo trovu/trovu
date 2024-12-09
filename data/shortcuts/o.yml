@@ -1527,15 +1527,15 @@ cppc 1:
   url: https://www.cplusplus.com/search.do?q=<query>
   include: cppc 0
 cr 0:
-  url: https://chaosradio.ccc.de/chaosradio.html
-  title: Chaosradio
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.chr
+    created: '2024-12-09'
 cr 1:
-  url: https://chaosradio.ccc.de/cr<episode>.html
-  title: Chaosradio
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.chr <1>
+    created: '2024-12-09'
 cran 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&q=site%3Acran.r-project.org%20<package>
   title: Comprehensive R Archive Network (CRAN) via Google
