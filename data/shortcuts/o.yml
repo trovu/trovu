@@ -2465,10 +2465,10 @@ dsh 1:
   - arguments: ADXL320
     description: Search for ADXL320 sensor in datasheetcatalog.com
 duck 1:
-  url: https://duckduckgo.com/?q=<query>
-  title: Duck Duck Go
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: d <1>
+    created: '2024-12-09'
 duden 1:
   deprecated:
     alternative:
