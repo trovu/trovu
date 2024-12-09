@@ -1058,6 +1058,26 @@ itp 1:
     alternative:
       query: pns.it <1>
     created: '2023-04-10'
+jb 0:
+  url: https://www.justbooks.de/
+  title: JustBooks
+  tags:
+  - books
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+jb 2:
+  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=<$language>&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  include: jb 0
+  examples:
+  - arguments: Goethe, Faust
+    description: Suche nach "Goethe, Faust"
+jb 3:
+  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=<language>&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
+  include: jb 0
+  examples:
+  - arguments: Shakespeare, Hamlet, en
+    description: Suche nach "Shakespeare, Hamlet" auf Englisch
 kam 0:
   url: http://kamelopedia.net/
   title: Kamelopedia

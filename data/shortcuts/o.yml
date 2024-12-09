@@ -5289,20 +5289,20 @@ java8 1:
   - arguments: void
     description: Search for docs about "void"
 jb 2:
-  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=<$language>&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
-  title: JustBooks
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.jb <1>, <2>
+    created: '2024-12-09'
 jbde 2:
-  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=de&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
-  title: JustBooks
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.jb <1>, <2>, de
+    created: '2024-12-09'
 jben 2:
-  url: https://www.justbooks.de/search/?author=<author>&title=<title>&lang=en&submit=Suchen&new_used=*&destination=de&currency=EUR&mode=basic&st=sr&ac=qr
-  title: JustBooks
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.jb <1>, <2>, en
+    created: '2024-12-09'
 jcp 1:
   url: https://jcp.org/en/jsr/summary?id=<query>
   title: The Java Community Process(SM) Program
