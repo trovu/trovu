@@ -415,6 +415,21 @@ coz 1:
   examples:
   - arguments: parkour
     description: Search Chilloutzone for "parkour"
+cre 0:
+  url: https://cre.fm/
+  title: Chaosradio Express
+  tags:
+  - ccc
+  - podcast
+  - radio
+  examples:
+  - description: Gehe zur Startseite
+cre 1:
+  url: https://cre.fm/?s=<Suche>
+  include: cre 0
+  examples:
+  - arguments: linux
+    description: Suche nach "linux"
 cs-de 1:
   deprecated:
     alternative:

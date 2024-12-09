@@ -1552,15 +1552,15 @@ crc32 1:
   tags:
   - old
 cre 0:
-  url: https://chaosradio.ccc.de/chaosradio_express.html
-  title: Chaosradio
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.cre
+    created: '2024-12-09'
 cre 1:
-  url: https://chaosradio.ccc.de/cre<episode>.html
-  title: Chaosradio
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.cre <1>
+    created: '2024-12-09'
 creativecommons.org 0:
   url: https://creativecommons.org/
   title: Find within creativecommons.org (not for licensed works)
