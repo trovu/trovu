@@ -4665,10 +4665,10 @@ gw2 1:
   tags:
   - old
 gwb 1:
-  url: https://www.googlewatchblog.de/index.php?s=<query>
-  title: Google Watch Blog
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.gwb <1>
+    created: '2024-12-09'
 gwo 0:
   url: https://wiki.guildwars.com/wiki/Main_Page
   title: Official Guild Wiki

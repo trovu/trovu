@@ -864,6 +864,20 @@ grc 1:
     description: Übersetzung von "Baum" auf Altgriechisch
   - arguments: ξύλον
     description: Übersetzung von "ξύλον" auf Deutsch
+gwb 0:
+  url: https://www.googlewatchblog.de/
+  title: Google Watch Blog
+  tags:
+  - blog
+  - google
+  examples:
+  - description: Gehe zur Startseite
+gwb 1:
+  url: https://www.googlewatchblog.de/index.php?s=<query>
+  title: Google Watch Blog
+  examples:
+  - arguments: gmail
+    description: Search Google Watch Blog for "gmail"
 gz 0:
   url: https://www.griechenland.net/
   title: Griechenland Zeitung
