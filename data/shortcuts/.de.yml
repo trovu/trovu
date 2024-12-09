@@ -1177,6 +1177,18 @@ gds 1:
   examples:
   - arguments: bus
     description: Suche nach "bus"
+getty 0:
+  url: https://www.gettyimages.de
+  title: Getty Images
+  tags:
+  - images
+  - stock-agency
+getty 1:
+  url: https://www.gettyimages.de/search/2/image?family=creative&phrase=<query>
+  include: getty 0
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
 gh 0:
   url: https://geizhals.de/
   title: Geizhals Deutschland

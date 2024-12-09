@@ -3913,20 +3913,15 @@ gentoo-planet 0:
   tags:
   - old
 getty 0:
-  url: https://www.gettyimages.de
-  title: Getty Images
-  tags:
-  - images
-  - stock-agency
+  deprecated:
+    alternative:
+      query: .de.getty <1>
+    created: '2024-12-09'
 getty 1:
-  url: https://www.gettyimages.de/search/2/image?family=creative&phrase=<query>
-  title: Getty Images
-  tags:
-  - images
-  - stock-agency
-  examples:
-  - arguments: christmas
-    description: search photos about christmas
+  deprecated:
+    alternative:
+      query: .de.getty <1>
+    created: '2024-12-09'
 gf 2:
   url: https://www.google.com/search?hl=<$language>&q=filetype%3A<filetype>%20<query>&ie=utf-8
   title: Google Web, only of filetype
