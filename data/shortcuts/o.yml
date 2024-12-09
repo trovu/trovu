@@ -602,6 +602,8 @@ ar 0:
     namespace: rvs
   - key: ar 0
     namespace: pka
+  - key: ar 0
+    namespace: wrf
 ar 1:
   include:
   - key: ar 1
@@ -618,6 +620,8 @@ ar 1:
     namespace: rvs
   - key: ar 1
     namespace: pka
+  - key: ar 1
+    namespace: wrf
 arch 0:
   url: https://www.archchinese.com/
   title: Arch Chinese Stroke Animation & Dictionary
@@ -1146,12 +1150,16 @@ ca 0:
     namespace: dcm
   - key: ca 0
     namespace: pka
+  - key: ca 0
+    namespace: wrf
 ca 1:
   include:
   - key: ca 1
     namespace: dcm
   - key: ca 1
     namespace: pka
+  - key: ca 1
+    namespace: wrf
 cad 0:
   url: https://cad-comic.com/
   title: Current Ctrl-Alt-Del-Comic
@@ -1661,6 +1669,8 @@ cs 0:
     namespace: lgs
   - key: cs 0
     namespace: pka
+  - key: cs 0
+    namespace: wrf
 cs 1:
   include:
   - key: cs 1
@@ -1675,6 +1685,8 @@ cs 1:
     namespace: lgs
   - key: cs 1
     namespace: pka
+  - key: cs 1
+    namespace: wrf
 csdblp 0:
   deprecated:
     alternative:
@@ -1915,6 +1927,8 @@ de 0:
     namespace: beo
   - key: de 0
     namespace: pka
+  - key: de 0
+    namespace: wrf
 de 1:
   include:
   - key: de 1
@@ -1955,6 +1969,8 @@ de 1:
     namespace: beo
   - key: de 1
     namespace: pka
+  - key: de 1
+    namespace: wrf
 dea 0:
   url: https://www.deviantart.com
   title: DeviantART
@@ -2615,6 +2631,8 @@ el 0:
     namespace: pns
   - key: el 0
     namespace: pka
+  - key: el 0
+    namespace: wrf
 el 1:
   include:
   - key: el 1
@@ -2631,6 +2649,8 @@ el 1:
     namespace: pns
   - key: el 1
     namespace: pka
+  - key: el 1
+    namespace: wrf
 emy 0:
   deprecated:
     alternative:
@@ -2676,6 +2696,8 @@ en 0:
     namespace: beo
   - key: en 0
     namespace: pka
+  - key: en 0
+    namespace: wrf
 en 1:
   include:
   - key: en 1
@@ -2716,6 +2738,8 @@ en 1:
     namespace: beo
   - key: en 1
     namespace: pka
+  - key: en 1
+    namespace: wrf
 ende 1:
   deprecated:
     alternative:
@@ -2810,6 +2834,8 @@ es 0:
     namespace: beo
   - key: es 0
     namespace: pka
+  - key: es 0
+    namespace: wrf
 es 1:
   include:
   - key: es 1
@@ -2838,6 +2864,8 @@ es 1:
     namespace: beo
   - key: es 1
     namespace: pka
+  - key: es 1
+    namespace: wrf
 et 0:
   include:
   - key: et 0
@@ -3474,6 +3502,8 @@ fr 0:
     namespace: rvs
   - key: fr 0
     namespace: pka
+  - key: fr 0
+    namespace: wrf
 fr 1:
   include:
   - key: fr 1
@@ -3498,6 +3528,8 @@ fr 1:
     namespace: rvs
   - key: fr 1
     namespace: pka
+  - key: fr 1
+    namespace: wrf
 fr-an 1:
   deprecated:
     alternative:
@@ -5151,6 +5183,8 @@ it 0:
     namespace: rvs
   - key: it 0
     namespace: pka
+  - key: it 0
+    namespace: wrf
 it 1:
   include:
   - key: it 1
@@ -5173,6 +5207,8 @@ it 1:
     namespace: rvs
   - key: it 1
     namespace: pka
+  - key: it 1
+    namespace: wrf
 ja 0:
   include:
   - key: ja 0
@@ -5191,6 +5227,8 @@ ja 0:
     namespace: rvs
   - key: ja 0
     namespace: pka
+  - key: ja 0
+    namespace: wrf
 ja 1:
   include:
   - key: ja 1
@@ -5209,6 +5247,8 @@ ja 1:
     namespace: rvs
   - key: ja 1
     namespace: pka
+  - key: ja 1
+    namespace: wrf
 jam 1:
   url: https://www.jamendo.com/search?qs=q=<query>
   title: Jamendo
@@ -5441,6 +5481,8 @@ ko 0:
     namespace: rvs
   - key: ko 0
     namespace: pka
+  - key: ko 0
+    namespace: wrf
 ko 1:
   include:
   - key: ko 1
@@ -5453,6 +5495,8 @@ ko 1:
     namespace: rvs
   - key: ko 1
     namespace: pka
+  - key: ko 1
+    namespace: wrf
 kong 1:
   url: https://www.kongregate.com/search?q=<query>
   title: Kongregate
@@ -6243,6 +6287,8 @@ nl 0:
     namespace: rvs
   - key: nl 0
     namespace: pka
+  - key: nl 0
+    namespace: wrf
 nl 1:
   include:
   - key: nl 1
@@ -6261,6 +6307,8 @@ nl 1:
     namespace: rvs
   - key: nl 1
     namespace: pka
+  - key: nl 1
+    namespace: wrf
 nn 0:
   include:
   - key: nn 0
@@ -6960,6 +7008,8 @@ pl 0:
     namespace: rvs
   - key: pl 0
     namespace: pka
+  - key: pl 0
+    namespace: wrf
 pl 1:
   include:
   - key: pl 1
@@ -6982,6 +7032,8 @@ pl 1:
     namespace: rvs
   - key: pl 1
     namespace: pka
+  - key: pl 1
+    namespace: wrf
 plk 0:
   url: https://putlocker.sb
   title: Putlocker
@@ -7109,6 +7161,8 @@ pt 0:
     namespace: beo
   - key: pt 0
     namespace: pka
+  - key: pt 0
+    namespace: wrf
 pt 1:
   include:
   - key: pt 1
@@ -7133,6 +7187,8 @@ pt 1:
     namespace: beo
   - key: pt 1
     namespace: pka
+  - key: pt 1
+    namespace: wrf
 pt-pons 1:
   deprecated:
     alternative:
@@ -7629,6 +7685,8 @@ ro 0:
     namespace: rvs
   - key: ro 0
     namespace: pka
+  - key: ro 0
+    namespace: wrf
 ro 1:
   include:
   - key: ro 1
@@ -7645,6 +7703,8 @@ ro 1:
     namespace: rvs
   - key: ro 1
     namespace: pka
+  - key: ro 1
+    namespace: wrf
 route 2:
   url: https://www.google.com/maps?hl=<$language>&saddr=<from>&daddr=<to>
   title: Google Maps Route
@@ -7726,6 +7786,8 @@ ru 0:
     namespace: rvs
   - key: ru 0
     namespace: pka
+  - key: ru 0
+    namespace: wrf
 ru 1:
   include:
   - key: ru 1
@@ -7746,6 +7808,8 @@ ru 1:
     namespace: rvs
   - key: ru 1
     namespace: pka
+  - key: ru 1
+    namespace: wrf
 ruby 1:
   url: https://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
   title: Ruby Documentation
@@ -8231,6 +8295,8 @@ sv 0:
     namespace: rvs
   - key: sv 0
     namespace: pka
+  - key: sv 0
+    namespace: wrf
 sv 1:
   include:
   - key: sv 1
@@ -8249,6 +8315,8 @@ sv 1:
     namespace: rvs
   - key: sv 1
     namespace: pka
+  - key: sv 1
+    namespace: wrf
 svfr 1:
   deprecated:
     alternative:
@@ -8678,6 +8746,8 @@ tr 0:
     namespace: rvs
   - key: tr 0
     namespace: pka
+  - key: tr 0
+    namespace: wrf
 tr 1:
   include:
   - key: tr 1
@@ -8700,6 +8770,8 @@ tr 1:
     namespace: rvs
   - key: tr 1
     namespace: pka
+  - key: tr 1
+    namespace: wrf
 trends 1:
   url: https://www.google.com/trends?q=<query>
   title: Google Trends
@@ -10311,6 +10383,8 @@ zh 0:
     namespace: rvs
   - key: zh 0
     namespace: pka
+  - key: zh 0
+    namespace: wrf
 zh 1:
   include:
   - key: zh 1
@@ -10329,6 +10403,8 @@ zh 1:
     namespace: rvs
   - key: zh 1
     namespace: pka
+  - key: zh 1
+    namespace: wrf
 zhen 1:
   deprecated:
     alternative:

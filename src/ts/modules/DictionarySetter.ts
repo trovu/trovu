@@ -128,7 +128,7 @@ export default class DictionarySetter {
       }
     }
     const dictsByPrioStr =
-      "ama ard dtn crd deo esd flx hzn irs jsh mdb pdg umt wdk zrg lge dcm dpl bab leo dcc lgs pns rvs beo pka";
+      "ama ard dtn crd deo esd flx hzn irs jsh mdb pdg umt wdk zrg lge dcm dpl bab leo dcc lgs pns rvs beo pka wrf";
 
     const dictsByPrio = dictsByPrioStr.split(" ");
 

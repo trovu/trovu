@@ -7468,6 +7468,64 @@ wdk:
       ja:
         - http://www.wadoku.de/
         - http://www.wadoku.de/wadoku/search/<word>
+wrf:
+  name: Wordreference
+  pairs:
+    en:
+      ar:
+        - https://www.wordreference.com/enar/
+        - https://www.wordreference.com/enar/<word>
+      ca:
+        - https://www.wordreference.com/enca/
+        - https://www.wordreference.com/enca/<word>
+      cs:
+        - https://www.wordreference.com/encs/
+        - https://www.wordreference.com/encs/<word>
+      de:
+        - https://www.wordreference.com/ende/
+        - https://www.wordreference.com/ende/<word>
+      el:
+        - https://www.wordreference.com/enel/
+        - https://www.wordreference.com/enel/<word>
+      es:
+        - https://www.wordreference.com/enes/
+        - https://www.wordreference.com/enes/<word>
+      fr:
+        - https://www.wordreference.com/enfr/
+        - https://www.wordreference.com/enfr/<word>
+      it:
+        - https://www.wordreference.com/enit/
+        - https://www.wordreference.com/enit/<word>
+      ja:
+        - https://www.wordreference.com/enja/
+        - https://www.wordreference.com/enja/<word>
+      ko:
+        - https://www.wordreference.com/enko/
+        - https://www.wordreference.com/enko/<word>
+      pt:
+        - https://www.wordreference.com/enpt/
+        - https://www.wordreference.com/enpt/<word>
+      sv:
+        - https://www.wordreference.com/ensv/
+        - https://www.wordreference.com/ensv/<word>
+      nl:
+        - https://www.wordreference.com/ennl/
+        - https://www.wordreference.com/ennl/<word>
+      pl:
+        - https://www.wordreference.com/enpl/
+        - https://www.wordreference.com/enpl/<word>
+      ro:
+        - https://www.wordreference.com/enro/
+        - https://www.wordreference.com/enro/<word>
+      ru:
+        - https://www.wordreference.com/enru/
+        - https://www.wordreference.com/enru/<word>
+      tr:
+        - https://www.wordreference.com/entr/
+        - https://www.wordreference.com/entr/<word>
+      zh:
+        - https://www.wordreference.com/enzh/
+        - https://www.wordreference.com/enzh/<word>
 zrg:
   name: Zargan
   pairs:
