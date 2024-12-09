@@ -834,14 +834,11 @@ bgo 0:
 bgo 1:
   url: https://bugs.gentoo.org/buglist.cgi?quicksearch=<query>
   include: bgo 0
-bhf 0:
-  url: https://www.bahnhof.de/
-  title: Bahnhof
-  examples:
-  - description: Go to the homepage
 bhf 1:
-  url: https://www.bahnhof.de/service/search/bahnhof-de/520608?query=<Bahnhof>
-  include: bhf 0
+  deprecated:
+    alternative:
+      query: .de.bhf <1>
+    created: '2024-12-09'
 bi 0:
   url: https://www.bing.com/images/
   title: Bing Images
