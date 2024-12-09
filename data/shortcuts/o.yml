@@ -2746,10 +2746,10 @@ ende 1:
       query: dcc.de <1>
     created: '2024-12-09'
 enfr 1:
-  url: https://www.wordreference.com/enfr/<word>
-  title: Translation English to French
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: wrf.fr <1>
+    created: '2024-12-09'
 engrish 0:
   url: https://www.engrish.com/
   title: main page
