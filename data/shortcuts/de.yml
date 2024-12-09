@@ -553,6 +553,22 @@ dw 0:
 dw 1:
   url: https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item=<suche>
   include: dw 0
+dwb 0:
+  url: https://www.woerterbuchnetz.de/DWB
+  title: Deutsches Wörterbuch von Jacob und Wilhelm Grimm
+  tags:
+  - deutsch
+  - dictionary
+  - german
+  - wörterbuch
+  examples:
+  - description: Gehe zur Startseite
+dwb 1:
+  url: https://www.woerterbuchnetz.de/DWB?lemma=<Wort>
+  include: dwb 0
+  examples:
+  - arguments: haus
+    description: Suche nach "haus"
 dwds 0:
   url: https://www.dwds.de/
   title: Digitales Wörterbuch der Deutschen Sprache
