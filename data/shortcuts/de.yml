@@ -490,6 +490,19 @@ dnb 1:
   examples:
   - arguments: goethe
     description: Search Deutsche Nationalbibliothek for "goethe"
+dst 0:
+  url: https://derstandard.at/
+  title: DerStandard.at
+  tags:
+  - news
+  examples:
+  - description: Gehe zur Startseite
+dst 1:
+  url: https://derstandard.at/suche?query=<query>
+  include: dst 0
+  examples:
+  - arguments: wien
+    description: Suche nach "wien"
 dw 0:
   url: https://www.dw.com/
   title: Deutsche Welle, Nachrichten auf Deutsch

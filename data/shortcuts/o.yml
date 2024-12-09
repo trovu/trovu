@@ -2081,10 +2081,10 @@ derivative 1:
   - arguments: x^2
     description: Calculate the derivative of x^2
 derstandard 1:
-  url: https://derstandard.at/suche?query=<query>
-  title: DerStandard.at search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.dst <1>
+    created: '2024-12-09'
 dh 1:
   url: https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=<query>&starCount=0
   title: Docker Hub
