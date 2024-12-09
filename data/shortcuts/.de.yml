@@ -5033,6 +5033,20 @@ kazn 0:
   include: kaz 0
   examples:
   - description: Gehe zu meinen Nachrichten
+keno 0:
+  url: https://www.kenozahlen.de/
+  title: Kenozahlen.de
+  tags:
+  - keno
+  - lotto
+  examples:
+  - description: Gehe zur Startseite
+keno 1:
+  url: https://www.kenozahlen.de/?s=<Datum>
+  include: keno 0
+  examples:
+  - arguments: 24-12-20220
+    description: Suche nach Keno-Zahlen vom 24.12.2020
 kfz 0:
   url: https://www.autokennzeichen.info/
   title: KFZ-Kennzeichen Deutschland
