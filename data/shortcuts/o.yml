@@ -2559,10 +2559,10 @@ efa 0:
   tags:
   - old
 eis 1:
-  url: https://www.eis-machen.de/?s=<query>
-  title: Eis-machen.de Search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.eis <1>
+    created: '2024-12-09'
 ekn 0:
   deprecated:
     alternative:
