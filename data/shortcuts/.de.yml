@@ -532,6 +532,21 @@ blz 1:
   examples:
   - arguments: berlin
     description: Bankleitzahlen der Banken in Berlin
+bmf 0:
+  url: https://www.bessermitfahren.de/
+  title: Besser mitfahren
+  tags:
+  - mitfahrgelegenheit
+  - travel
+bmf 2:
+  url: https://www.bessermitfahren.de/<Start>/<Ziel>/angebote
+  title: Besser mitfahren
+  tags:
+  - mitfahrgelegenheit
+  - travel
+  examples:
+  - arguments: berlin, hamburg
+    description: Mitfahrgelegenheiten von Berlin nach Hamburg
 bol 0:
   url: https://www.bol.de/
   title: Bol.de Startseite

@@ -987,20 +987,15 @@ bm 1:
   - arguments: berlin
     description: Search for "berlin"
 bmf 0:
-  url: https://www.bessermitfahren.de/
-  title: Besser mitfahren
-  tags:
-  - mitfahrgelegenheit
-  - travel
-bmf 2:
-  url: https://www.bessermitfahren.de/<Start>/<Ziel>/angebote
-  title: Besser mitfahren
-  tags:
-  - mitfahrgelegenheit
-  - travel
-  examples:
-  - arguments: berlin, hamburg
-    description: Mitfahrgelegenheiten von Berlin nach Hamburg
+  deprecated:
+    alternative:
+      query: .de.bmf
+    created: '2024-12-09'
+bmf 1:
+  deprecated:
+    alternative:
+      query: .de.bmf <1>
+    created: '2024-12-09'
 bmn 0:
   url: https://bugmenot.com/
   title: BugMeNot
