@@ -58,6 +58,7 @@ program
   .option("-n, --namespace <string>", "only apply to shortcuts of this namespace")
   .action(reportData);
 
+program.command("get-dictionary-settings").description("Get dictionary settings").action(getDictionarySettings);
 program.command("set-dictionaries").description("Set dictionaries").action(setDictionaries);
 
 program
@@ -114,6 +115,10 @@ function reportData(options) {
   dataReporter.reportData();
 }
 
+function getDictionarySettings() {
+  const dictionarySetter = new DictionarySetter();
+  dictionarySetter.getDictionarySettings();
+}
 function setDictionaries() {
   const dictionarySetter = new DictionarySetter();
   dictionarySetter.setDictionaries();

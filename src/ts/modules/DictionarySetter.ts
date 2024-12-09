@@ -9,6 +9,25 @@ export default class DictionarySetter {
     this.t = DictionarySetter.getTranslations();
   }
 
+  getDictionarySettings() {
+    const languagesStr = "ar bg cs da de el en es et fi fr hu id it ja ko lt lv nl no pl pt ro ru sk sl sv tr uk zh";
+    const languages = languagesStr.split(" ");
+    const pairs = {};
+    for (const lang1 of languages) {
+      pairs[lang1] = {};
+      for (const lang2 of languages) {
+        if (lang1 === lang2) {
+          continue;
+        }
+        pairs[lang1][lang2] = [
+          `https://www.deepl.com/translator#${lang1}/${lang2}/`,
+          `https://www.deepl.com/translator#${lang1}/${lang2}/<word>`,
+        ];
+      }
+    }
+    const output = jsyaml.dump({ dpl: { pairs: pairs } });
+    console.log(output);
+  }
   setDictionaries() {
     const data = DataManager.load();
     const dicts = DictionarySetter.getDictionaries();
