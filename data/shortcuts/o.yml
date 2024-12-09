@@ -2146,20 +2146,20 @@ distrow 0:
   tags:
   - old
 dje 1:
-  url: https://jisho.org/words?eng=<query>
-  title: Denshi Jisho
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en.ja <1>
+    created: '2024-12-09'
 djj 1:
-  url: https://jisho.org/words?jap=<query>
-  title: Denshi Jisho
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en.ja <1>
+    created: '2024-12-09'
 djk 1:
-  url: https://jisho.org/kanji?rt=jap&reading=<query>
-  title: Denshi Jisho
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en.ja <1>
+    created: '2024-12-09'
 djp 1:
   url: https://docs.djangoproject.com/search/?q=<query>
   title: Django Doc Search
