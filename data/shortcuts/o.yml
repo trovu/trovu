@@ -5353,11 +5353,21 @@ journalup 1:
     alternative:
       query: .de.ezbup <1>
     created: '2024-12-09'
-jpc 1:
-  url: https://www.jpc.de/jpcng/home/search?fastsearch=<query>&pd_orderby=score
-  title: JPC fast search
+jpc 0:
+  url: https://www.jpc.de/?lang=en
+  title: jpc.de
   tags:
-  - old
+  - music
+  - shopping
+  examples:
+  - description: Go to the homepage
+  description: Online shop for music, movies, books, games and more
+jpc 1:
+  url: https://www.jpc.de/s/<query>
+  include: jpc 0
+  examples:
+  - arguments: beethoven
+    description: Search for "beethoven"
 jqg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=docs.jquery.com&q=<query>
   title: JQuery API Search
