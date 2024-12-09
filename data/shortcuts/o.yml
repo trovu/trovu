@@ -3633,10 +3633,10 @@ g! 1:
   - arguments: berlin
     description: Search for "berlin"
 g-en-de 1:
-  url: https://translate.google.de/?hl=de&tab=wT#en|de|<query>
-  title: Google Translate Englisch - Deutsch
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gtr en, de, <1>
+    created: '2024-12-09'
 g-pdf 1:
   url: https://www.google.de/search?q=<query>&as_filetype=pdf
   title: Google search for pdf-files
