@@ -2477,10 +2477,10 @@ dwb 1:
       query: de.dwb <1>
     created: '2024-12-09'
 dwd 0:
-  url: https://www.dwd.de
-  title: Deutscher Wetter Dienst
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.dwd
+    created: '2024-12-09'
 dz 0:
   include:
   - key: dz 0

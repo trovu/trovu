@@ -1041,6 +1041,19 @@ duden 1:
     alternative:
       query: de.dd <1>
     created: '2024-12-09'
+dwd 0:
+  url: https://www.dwd.de/
+  title: Deutscher Wetterdienst
+  tags:
+  - weather
+  examples:
+  - description: Gehe zur Startseite
+dwd 1:
+  url: https://www.dwd.de/SiteGlobals/Forms/Suche/Servicesuche_Formular.html?templateQueryString=<Suche>&sortOrder=score+desc&submitButton=Suchen
+  include: dwd 0
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
 e 0:
   url: https://www.ebay.de/?mkcid=1&mkrid=707-53477-19255-0&siteid=77&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.de
