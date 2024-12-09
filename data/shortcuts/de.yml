@@ -460,18 +460,6 @@ dd 0:
   - rechtschreibung
   examples:
   - description: Gehe zur Startseite
-eis 0:
-  url: https://www.eis-machen.de/
-  title: Eis-machen.de
-  tags:
-  - food
-  - ice-cream
-  - recipes
-  examples:
-  - description: Go to the homepage
-eis 1:
-  url: https://www.eis-machen.de/?s=<query>
-  include: eis 0
 dd 1:
   url: https://www.duden.de/suchen/dudenonline/<wort>
   include: dd 0
@@ -537,6 +525,18 @@ e 0:
 e 1:
   url: https://www.ebay.de/sch/i.html?_nkw=<suche>
   title: eBay Suche
+eis 0:
+  url: https://www.eis-machen.de/
+  title: Eis-machen.de
+  tags:
+  - food
+  - ice-cream
+  - recipes
+  examples:
+  - description: Go to the homepage
+eis 1:
+  url: https://www.eis-machen.de/?s=<query>
+  include: eis 0
 eld 1:
   deprecated:
     alternative:
