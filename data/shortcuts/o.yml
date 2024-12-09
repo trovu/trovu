@@ -2357,10 +2357,10 @@ dnd 1:
   tags:
   - old
 docs 1:
-  url: https://docs.google.com/document/u/0/?q=<query>
-  title: Google Docs search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gdc <1>
+    created: '2024-12-09'
 doi 1:
   url: https://doi.org/<query>
   title: Digital Object Identifier
@@ -3774,6 +3774,12 @@ gdb 2:
   examples:
   - arguments: brandenburger tor, potsdamer platz
     description: Get a route Brandenburger Tor to Potsdamer Platz, Berlin, by bike
+gdc 1:
+  url: https://docs.google.com/document/u/0/?q=<query>
+  title: Google Docs
+  tags:
+  - docs
+  - google
 gdd 2:
   url: 'https://www.google.com/maps/dir/?api=1&origin=<start: {type: city}>&destination=<destination: {type: city}>&travelmode=driving'
   title: Google Maps Directions (Routing), by Driving
@@ -3800,11 +3806,10 @@ gdl 1:
   - arguments: mp3
     description: Search web sites with Apache directory listing containing "mp3"
 gdocs 1:
-  url: https://docs.google.com/document/u/0/?q=<query>
-  title: Google Docs search
-  tags:
-  - docs
-  - google
+  deprecated:
+    alternative:
+      query: gdc <1>
+    created: '2024-12-09'
 gdr 0:
   url: https://drive.google.com/
   title: Google Drive
