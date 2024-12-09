@@ -3434,22 +3434,15 @@ fo 1:
   - key: fo 1
     namespace: pka
 fos 0:
-  url: https://www.fotosearch.de/
-  title: Fotosearch
-  tags:
-  - images
-  - stock-agency
-  examples:
-  - description: Go to the homepage
+  deprecated:
+    alternative:
+      query: de.fos
+    created: '2024-12-09'
 fos 1:
-  url: https://www.fotosearch.de/bilder-fotos/<query>.html
-  title: Fotosearch
-  tags:
-  - images
-  - stock-agency
-  examples:
-  - arguments: weihnachten
-    description: Suche Fotos zum Thema "weihnachten"
+  deprecated:
+    alternative:
+      query: de.fos <1>
+    created: '2024-12-09'
 fotofinder 1:
   url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   title: Fotofinder
