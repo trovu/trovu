@@ -3638,10 +3638,10 @@ g-en-de 1:
       query: gtr en, de, <1>
     created: '2024-12-09'
 g-pdf 1:
-  url: https://www.google.de/search?q=<query>&as_filetype=pdf
-  title: Google search for pdf-files
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gpdf <1>
+    created: '2024-12-09'
 g100 1:
   url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&num=100
   title: Google Web, 100 results at once
