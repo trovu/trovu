@@ -2856,10 +2856,10 @@ etsy 1:
   - arguments: bracelet
     description: Search for bracelets
 ety 1:
-  url: https://www.etymonline.com/index.php?search=<query>&searchmode=none
-  title: Etymology lookup
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: en.oed <1>
+    created: '2024-12-09'
 eu 0:
   include:
   - key: eu 0

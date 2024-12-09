@@ -143,6 +143,23 @@ mwt 1:
   examples:
   - arguments: important
     description: Search for synonyms of "important"
+oed 0:
+  url: https://www.etymonline.com/
+  title: Online Etymology Dictionary
+  tags:
+  - dictionary
+  - english
+  - etymology
+  - history
+  - language
+  examples:
+  - description: Go to the homepage
+oed 1:
+  url: https://www.etymonline.com/search?q=<word>
+  include: oed 0
+  examples:
+  - arguments: tree
+    description: Search for the etymology of "tree"
 sta 0:
   url: https://start.csail.mit.edu/
   title: START (SynTactic Analysis using Reversible Transformations)
