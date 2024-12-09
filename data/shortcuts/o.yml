@@ -1080,7 +1080,7 @@ brw 0:
   examples:
   - description: Go to homepage
 brw 1:
-  url: https://www.google.de/search?hl=<$language>&q=site%3Abrew.sh%20<query>&ie=utf-8
+  url: https://www.google.com/search?hl=<$language>&q=site%3Abrew.sh%20<query>&ie=utf-8
   title: Homebrew Package Manager
   include:
   - key: brw 0
