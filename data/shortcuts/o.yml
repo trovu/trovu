@@ -2918,9 +2918,6 @@ eu 1:
   include:
   - key: eu 1
     namespace: pka
-eucomp 1:
-  url: https://ec.europa.eu/competition/elojade/isef/index.cfm?fuseaction=dsp_result&case_title=<company>
-  title: EU Competition Authority Case search
 eutm 1:
   url: https://euipo.europa.eu/eSearch/#basic/1+1+1+1/50+50+50+50/<query>
   title: EU IPO trade mark research
