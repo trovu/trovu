@@ -1197,6 +1197,37 @@ ccc-tv 0:
 ccctv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
+cea 0:
+  url: https://eprint.iacr.org/
+  title: Cryptology ePrint Archive
+  tags:
+  - academia
+  - cryptography
+  - research
+  - science
+  - security
+  examples:
+  - description: Go to the homepage
+cea 1:
+  url: https://eprint.iacr.org/search?q=<query>
+  include: cea 0
+  examples:
+  - arguments: encryption
+    description: Search for "encryption"
+ceaa 1:
+  url: https://eprint.iacr.org/search?authors=<query>
+  title: Cryptology ePrint Archive, author search
+  include: cea 0
+  examples:
+  - arguments: Mihir Bellare
+    description: Search for author Mihir Bellare
+ceat 1:
+  url: https://eprint.iacr.org/search?title=<query>
+  title: Cryptology ePrint Archive, title search
+  include: cea 0
+  examples:
+  - arguments: encryption
+    description: Search for titles containing "encryption"
 cf 0:
   url: https://www.clipfish.de/
   title: Clipfish Homepage
@@ -2732,34 +2763,25 @@ eo 1:
   - key: eo 1
     namespace: pka
 eprint 0:
-  url: https://eprint.iacr.org/
-  title: IACR Cryptology ePrint Archive
-  tags:
-  - academia
+  deprecated:
+    alternative:
+      query: cea
+    created: '2024-12-09'
 eprint 1:
-  url: https://eprint.iacr.org/search?q=<query>
-  title: IACR Cryptology ePrint Archive
-  tags:
-  - academia
-  examples:
-  - arguments: encryption
-    description: Search IACR Cryptology ePrint Archive for "encryption"
+  deprecated:
+    alternative:
+      query: cea <1>
+    created: '2024-12-09'
 eprinta 1:
-  url: https://eprint.iacr.org/search?authors=<query>
-  title: IACR Cryptology ePrint Archive (author search)
-  tags:
-  - academia
-  examples:
-  - arguments: '"Mihir Bellare"'
-    description: Search IACR Cryptology ePrint Archive for author Mihir Bellare
+  deprecated:
+    alternative:
+      query: ceaa <1>
+    created: '2024-12-09'
 eprintt 1:
-  url: https://eprint.iacr.org/search?title=<query>
-  title: IACR Cryptology ePrint Archive (ttile search)
-  tags:
-  - academia
-  examples:
-  - arguments: encryption
-    description: Search IACR Cryptology ePrint Archive for titles containing "encryption"
+  deprecated:
+    alternative:
+      query: ceat <1>
+    created: '2024-12-09'
 es 0:
   include:
   - key: es 0
