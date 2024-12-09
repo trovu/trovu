@@ -2706,10 +2706,10 @@ engrish 1:
   tags:
   - old
 enr 1:
-  url: https://personer.eniro.se/resultat/<nummer_eller_namn>
-  title: Eniro personsökning
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .se.enr <1>
+    created: '2024-12-09'
 enzh 1:
   deprecated:
     alternative:

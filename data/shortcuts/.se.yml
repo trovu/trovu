@@ -28,6 +28,24 @@ blocket 1:
   examples:
   - arguments: iphone
     description: Search for "iphone"
+enr 0:
+  url: https://personer.eniro.se/
+  title: Eniro.se
+  tags:
+  - eniro
+  - företag
+  - personer
+  examples:
+  - description: Gå till startsidan
+  description: Svensk sökmotor för personer och företag.
+enr 1:
+  url: https://personer.eniro.se/resultat/<nummer/namn>
+  include: enr 0
+  examples:
+  - arguments: 701234567
+    description: Sök efter telefonnummer "0701234567"
+  - arguments: johansson
+    description: Sök efter person "johansson"
 jw 1:
   url: https://www.justwatch.com/se/search?q=<query>
   include:
