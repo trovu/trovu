@@ -2080,11 +2080,16 @@ defr 1:
     alternative:
       query: de.fr <1>
     created: '2024-11-25'
-denic 1:
-  url: https://www.denic.de/webwhois/?domain=<query>
+denic 0:
+  url: https://www.denic.de/
   title: DENIC Whois
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+denic 1:
+  url: https://www.denic.de/webwhois/?domain=<query>
+  include: denic 0
 deo 1:
   deprecated:
     alternative:
@@ -2105,9 +2110,14 @@ derstandard 1:
     alternative:
       query: de.dst <1>
     created: '2024-12-09'
+dh 0:
+  url: https://hub.docker.com/
+  title: Docker Hub
+  examples:
+  - description: Go to the homepage
 dh 1:
   url: https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=<query>&starCount=0
-  title: Docker Hub
+  include: dh 0
 di 1:
   url: https://duckduckgo.com/?q=<query>&iax=images&ia=images
   title: Duck Duck Go Images
@@ -2119,12 +2129,17 @@ dic 1:
     alternative:
       query: de.en <1>
     created: '2023-04-10'
-dii 1:
-  url: https://www.diigo.com/search?what=<tag>
+dii 0:
+  url: https://www.diigo.com/
   title: Diigo Social Bookmarking
   tags:
   - bookmarks
   - web-search
+  examples:
+  - description: Go to the homepage
+dii 1:
+  url: https://www.diigo.com/search?what=<tag>
+  include: dii 0
   examples:
   - arguments: obama
     description: search for bookmarks tagged with "obama"
@@ -2137,11 +2152,16 @@ diia 1:
   examples:
   - arguments: http://www.example.com
     description: add 'example.com' to your bookmarks
-disc 1:
-  url: https://www.discogs.com/search?type=all&q=<artist>
+disc 0:
+  url: https://www.discogs.com/
   title: Discogs
   tags:
   - music
+  examples:
+  - description: Go to the homepage
+disc 1:
+  url: https://www.discogs.com/search?type=all&q=<artist>
+  include: disc 0
   examples:
   - arguments: eminem
     description: Search for "eminem"
@@ -2180,11 +2200,16 @@ djk 1:
     alternative:
       query: en.ja <1>
     created: '2024-12-09'
-djp 1:
-  url: https://docs.djangoproject.com/search/?q=<query>
+djp 0:
+  url: https://docs.djangoproject.com/
   title: Django Doc Search
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+djp 1:
+  url: https://docs.djangoproject.com/search/?q=<query>
+  include: djp 0
 dl 0:
   url: https://www.deepl.com/translator#./<$language>/
   title: DeepL, homepage
@@ -2260,12 +2285,17 @@ dlzh 1:
     alternative:
       query: dpl.zh <1>
     created: '2024-12-09'
-dm 1:
-  url: https://www.dailymotion.com/?search=<query>
+dm 0:
+  url: https://www.dailymotion.com/
   title: Dailymotion
   tags:
   - dailymotion
   - video
+  examples:
+  - description: Go to the homepage
+dm 1:
+  url: https://www.dailymotion.com/?search=<query>
+  include: dm 0
   examples:
   - arguments: berlin
     description: Search for videos about "berlin"
@@ -2284,11 +2314,16 @@ docs 1:
     alternative:
       query: gdc <1>
     created: '2024-12-09'
-doi 1:
-  url: https://doi.org/<query>
+doi 0:
+  url: https://doi.org/
   title: Digital Object Identifier
   tags:
   - science
+  examples:
+  - description: Go to the homepage
+doi 1:
+  url: https://doi.org/<query>
+  include: doi 0
   examples:
   - arguments: 10.1000/182
     description: Search for object with DOI 10.1000/182
@@ -2351,12 +2386,17 @@ drp 1:
   examples:
   - arguments: views
     description: Search for views module
-drr 1:
-  url: https://git.drupalcode.org/project/<project>
+drr 0:
+  url: https://git.drupalcode.org/
   title: Drupal project repository
   tags:
   - drupal
   - programming
+  examples:
+  - description: Go to the homepage
+drr 1:
+  url: https://git.drupalcode.org/project/<project>
+  include: drr 0
   examples:
   - arguments: linked_field
     description: Go to the repository of Linked Field
@@ -2380,11 +2420,16 @@ drupal 1:
   title: Drupal API via Google
   tags:
   - old
-dsc 1:
-  url: https://search.datasheetcatalog.net/key/<part>
+dsc 0:
+  url: https://search.datasheetcatalog.net/
   title: datasheetcatalog.com
   tags:
   - datasheet
+  examples:
+  - description: Go to the homepage
+dsc 1:
+  url: https://search.datasheetcatalog.net/key/<part>
+  include: dsc 0
   examples:
   - arguments: ADXL320
     description: Search for ADXL320 sensor in datasheetcatalog.com
