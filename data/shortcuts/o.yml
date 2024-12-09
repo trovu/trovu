@@ -4917,10 +4917,10 @@ ibash 0:
   title: Ibash
   removed: '2024-12-09'
 icd 1:
-  url: https://www.icd-code.de/suche/icd/recherche.html?sp=0&sp=S<query>
-  title: Suche nach Krankheiten in der ICD-10
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.icd <1>
+    created: '2024-12-09'
 icon 1:
   url: https://www.iconspedia.com/search/<query>/
   title: IconsPedia

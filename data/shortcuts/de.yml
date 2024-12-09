@@ -1000,6 +1000,20 @@ hup 1:
     alternative:
       query: pns.hu <1>
     created: '2023-04-10'
+icd 0:
+  url: https://www.icd-code.de/
+  title: ICD-10-GM
+  tags:
+  - health
+  - icd
+  examples:
+  - description: Gehe zur Startseite
+icd 1:
+  url: https://www.icd-code.de/suche/icd/recherche.html?sp=0&sp=S<query>
+  include: icd 0
+  examples:
+  - arguments: septum
+    description: Suche nach "septum"
 ifun 0:
   url: https://www.ifun.de/
   title: ifun.de
