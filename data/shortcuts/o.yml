@@ -2080,16 +2080,11 @@ defr 1:
     alternative:
       query: de.fr <1>
     created: '2024-11-25'
-denic 0:
-  url: https://www.denic.de/
-  title: DENIC Whois
-  tags:
-  - old
-  examples:
-  - description: Go to the homepage
 denic 1:
-  url: https://www.denic.de/webwhois/?domain=<query>
-  include: denic 0
+  deprecated:
+    alternative:
+      query: .de.denic <1>
+    created: '2024-12-09'
 deo 1:
   deprecated:
     alternative:
