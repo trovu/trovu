@@ -811,6 +811,23 @@ frv 1:
   include:
     key: frv 1
     namespace: ar
+fw 0:
+  url: https://www.fremdwort.de/
+  title: Fremdwort.de
+  tags:
+  - dictionary
+  - fremdwort
+  - german
+  - language
+  examples:
+  - description: Gehe zur Startseite
+fw 1:
+  url: https://www.fremdwort.de/suchen/woerterbuch/<Suche>
+  title: Fremdwort.de
+  include: fw 0
+  examples:
+  - arguments: handy
+    description: Suche nach "handy"
 gfp 0:
   url: https://german-foreign-policy.com/
   title: German Foreign Policy

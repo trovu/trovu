@@ -3545,10 +3545,10 @@ freesound 1:
   url: https://freesound.org/search/?q=<query>
   title: Freesound
 fremdwort 1:
-  url: https://www.fremdwort.de/suche.php?term=<query>
-  title: Fremdwort.de
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.fw <1>
+    created: '2024-12-09'
 fren 1:
   url: https://www.wordreference.com/fren/<word>
   title: Translation French to English
