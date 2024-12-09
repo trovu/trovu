@@ -2201,162 +2201,65 @@ dl 1:
   - arguments: arbol
     description: Detect language of "arbol" and translate it into my language
 dlde 1:
-  url: https://www.deepl.com/translator#en/de/<text>
-  title: deepL Translator to German
-  tags:
-  - deepl
-  - german
-  - google-translate
-  - translate
-  - translation
-  examples:
-  - arguments: Hello how are you?
-    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into German.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.de <1>
+    created: '2024-12-09'
 dlen 1:
-  url: https://www.deepl.com/translator#de/en/<text>
-  title: deepL Translator to English
-  tags:
-  - deepl
-  - english
-  - google-translate
-  - translate
-  - translation
-  examples:
-  - arguments: Hallo wie geht es Dir?
-    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into English.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.en <1>
+    created: '2024-12-09'
 dles 1:
-  url: https://www.deepl.com/translator#de/es/<text>
-  title: deepL Translator to Spanish
-  tags:
-  - deepl
-  - google-translate
-  - spanish
-  - translate
-  - translation
-  examples:
-  - arguments: Hallo wie geht es Dir?
-    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Spanish.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.es <1>
+    created: '2024-12-09'
 dlfr 1:
-  url: https://www.deepl.com/translator#de/fr/<text>
-  title: deepL Translator to French
-  tags:
-  - deepl
-  - french
-  - google-translate
-  - translate
-  - translation
-  examples:
-  - arguments: Hallo wie geht es Dir?
-    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into French.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.fr <1>
+    created: '2024-12-09'
 dlit 1:
-  url: https://www.deepl.com/translator#de/it/<text>
-  title: deepL Translator to Italian
-  tags:
-  - deepl
-  - google-translate
-  - italian
-  - translate
-  - translation
-  examples:
-  - arguments: Hallo wie geht es Dir?
-    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Italian.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.it <1>
+    created: '2024-12-09'
 dlja 1:
-  url: https://www.deepl.com/translator#de/ja/<text>
-  title: deepL Translator to Japanese
-  tags:
-  - deepl
-  - google-translate
-  - japanese
-  - translate
-  - translation
-  examples:
-  - arguments: Hello how are you?
-    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Japanese.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.ja <1>
+    created: '2024-12-09'
 dlnl 1:
-  url: https://www.deepl.com/translator#de/nl/<text>
-  title: deepL Translator to Dutch
-  tags:
-  - deepl
-  - dutch
-  - google-translate
-  - translate
-  - translation
-  examples:
-  - arguments: Hallo wie geht es Dir?
-    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Dutch.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.nl <1>
+    created: '2024-12-09'
 dlpo 1:
-  url: https://www.deepl.com/translator#de/po/<text>
-  title: deepL Translator to Polish
-  tags:
-  - deepl
-  - google-translate
-  - polish
-  - translate
-  - translation
-  examples:
-  - arguments: Hallo wie geht es Dir?
-    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Polish.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.pl <1>
+    created: '2024-12-09'
 dlpt 1:
-  url: https://www.deepl.com/translator#de/pt/<text>
-  title: deepL Translator to Portuguese
-  tags:
-  - deepl
-  - google-translate
-  - portuguese
-  - translate
-  - translation
-  examples:
-  - arguments: Hallo wie geht es Dir?
-    description: Translator for "Hallo, wie geht es Dir? ", which translates phrase from recognized language into Portuguese.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.pt <1>
+    created: '2024-12-09'
 dlru 1:
-  url: https://www.deepl.com/translator#de/ru/<text>
-  title: deepL Translator to Russian
-  tags:
-  - deepl
-  - google-translate
-  - russian
-  - translate
-  - translation
-  examples:
-  - arguments: Hello how are you?
-    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Russian.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.ru <1>
+    created: '2024-12-09'
 dltr 1:
-  url: https://www.deepl.com/translator#en/tr/<text>
-  title: deepL Translator to Turkish
-  tags:
-  - deepl
-  - google-translate
-  - translate
-  - translation
-  - turkish
-  - türkçe
-  examples:
-  - arguments: Hello how are you?
-    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Turkish.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.tr <1>
+    created: '2024-12-09'
 dlzh 1:
-  url: https://www.deepl.com/translator#de/zh/<text>
-  title: deepL Translator to Chinese
-  tags:
-  - chinese
-  - deepl
-  - google-translate
-  - translate
-  - translation
-  examples:
-  - arguments: Hello how are you?
-    description: Translator for "Hello, how are you? ", which translates phrase from recognized language into Chinese.
-  description: Translate whole text.
+  deprecated:
+    alternative:
+      query: dpl.zh <1>
+    created: '2024-12-09'
 dm 1:
   url: https://www.dailymotion.com/?search=<query>
   title: Dailymotion
