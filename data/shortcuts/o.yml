@@ -5349,10 +5349,10 @@ jmp 1:
   tags:
   - old
 journalup 1:
-  url: https://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1=<joural title>
-  title: Uni Potsdam Zeitschriftenbibliothek
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.ezbup <1>
+    created: '2024-12-09'
 jpc 1:
   url: https://www.jpc.de/jpcng/home/search?fastsearch=<query>&pd_orderby=score
   title: JPC fast search

@@ -1109,6 +1109,20 @@ ekn 0:
     alternative:
       query: kazn
     created: '2023-10-13'
+ezbup 0:
+  url: https://ezb.ur.de/ezeit/index.phtml?bibid=UBPO
+  title: Elektronische Zeitschriftenbibliothek, Universität Potsdam
+  tags:
+  - library
+  - potsdam
+  examples:
+  - description: Gehe zur Startseite
+ezbup 1:
+  url: https://rzblx1.uni-regensburg.de/ezeit/searchres.phtml?bibid=UBPO&lang=de&jq_type1=KT&jq_term1=<joural title>
+  include: ezbup 0
+  examples:
+  - arguments: null
+    description: Suche nach "Journal of the American Chemical Society"
 farnell 0:
   url: https://de.farnell.com/
   title: Farnell Deutschland
