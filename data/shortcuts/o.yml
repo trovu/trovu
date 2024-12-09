@@ -2686,10 +2686,10 @@ en 1:
   - key: en 1
     namespace: pka
 ende 1:
-  url: https://www.dict.cc/?s=<word>
-  title: Translation English to German
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: dcc.de <1>
+    created: '2024-12-09'
 enfr 1:
   url: https://www.wordreference.com/enfr/<word>
   title: Translation English to French
