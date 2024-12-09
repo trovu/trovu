@@ -1162,6 +1162,21 @@ g 1:
   examples:
   - arguments: berlin
     description: Google-Suche nach berlin
+gds 0:
+  url: https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/search?any=bus
+  title: Geodatensuche Berlin
+  tags:
+  - berlin
+  - geodata
+  - maps
+  examples:
+  - description: Gehe zur Startseite
+gds 1:
+  url: https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/search?any=<Suche>
+  include: gds 0
+  examples:
+  - arguments: bus
+    description: Suche nach "bus"
 gh 0:
   url: https://geizhals.de/
   title: Geizhals Deutschland

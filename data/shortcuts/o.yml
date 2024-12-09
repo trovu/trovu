@@ -3300,15 +3300,10 @@ findutf 0:
   - unicode-character
   - utf
 fisbroker 0:
-  url: https://fbinter.stadt-berlin.de/fb/index.jsp
-  title: FIS-Broker Geodatenportal Berlin (Geo- und Sachdatenabfrage)
-  tags:
-  - berlin
-  - fisbroker
-  - geodata
-  - gis
-  - kataster
-  description: "Ein umfangreicher Geodatenkatalog bietet Karten, Pläne und andere Daten mit Raumbezug aus Berlin. Hier kann räumlich, z.B. über Adressen und inhaltlich (z.B. nach Schlagworten) gesucht werden. Die datenbereitstellenden Dienste sind bei den Datensätzen genannt.\r\n\r\nIn einem Viewer können Karten angesehen, überlagert und mit Sachdaten verknüpft werden. Über die Dossierfunktion können schnell viele Informationen für ein Grundstück abgerufen werden."
+  deprecated:
+    alternative:
+      query: .de.gds
+    created: '2024-12-09'
 fiverr 0:
   url: https://www.fiverr.com/
   title: Fiverr
