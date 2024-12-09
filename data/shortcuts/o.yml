@@ -3578,10 +3578,7 @@ fs 0:
   description: Selection of free fonts for commercial use
 fs 1:
   url: https://www.fontsquirrel.com/fonts/list/find_fonts?q[term]=<query>
-  title: Font Squirrel search
-  tags:
-  - fonts
-  - typefaces
+  include: fs 0
   examples:
   - arguments: Nimbus Sans
     description: Common font that looks exactly like Helvetica
