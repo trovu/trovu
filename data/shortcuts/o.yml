@@ -2397,7 +2397,7 @@ drop-box 0:
   tags:
   - old
 drp 1:
-  url: https://www.google.de/search?hl=<$language>&q=inurl%3Adrupal.org%2Fproject%2F%20<project>
+  url: https://www.google.com/search?hl=<$language>&q=inurl%3Adrupal.org%2Fproject%2F%20<project>
   title: Drupal project
   tags:
   - programming
