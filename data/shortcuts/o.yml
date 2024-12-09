@@ -2457,7 +2457,7 @@ drupal 1:
   title: Drupal API via Google
   tags:
   - old
-dsh 1:
+dsc 1:
   url: https://search.datasheetcatalog.net/key/<part>
   title: datasheetcatalog.com
   tags:
@@ -2465,6 +2465,11 @@ dsh 1:
   examples:
   - arguments: ADXL320
     description: Search for ADXL320 sensor in datasheetcatalog.com
+dsh 1:
+  deprecated:
+    alternative:
+      query: dsc <1>
+    created: '2024-12-09'
 duck 1:
   deprecated:
     alternative:
