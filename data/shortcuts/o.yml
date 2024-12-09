@@ -3525,14 +3525,19 @@ freedb 1:
     alternative:
       query: gnudb <1>
     created: '2024-04-19'
-freenode 1:
-  url: https://irc.netsplit.de/channels/?net=freenode&chat=<query>
+freenode 0:
+  url: https://netsplit.de/channels/?net=freenode
   title: Freenode IRC channels
   tags:
   - channels
   - chat
   - freenode
   - irc
+  examples:
+  - description: Go to the homepage
+freenode 1:
+  url: https://netsplit.de/channels/?net=freenode&chat=<query>
+  include: freenode 0
   examples:
   - arguments: android
     description: Search for Android-related IRC channels on Freenode
