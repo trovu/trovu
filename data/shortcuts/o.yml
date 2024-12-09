@@ -2651,6 +2651,8 @@ en 0:
   - key: en 0
     namespace: irs
   - key: en 0
+    namespace: jsh
+  - key: en 0
     namespace: mdb
   - key: en 0
     namespace: zrg
@@ -2686,6 +2688,8 @@ en 1:
     namespace: flx
   - key: en 1
     namespace: irs
+  - key: en 1
+    namespace: jsh
   - key: en 1
     namespace: mdb
   - key: en 1
@@ -5156,6 +5160,8 @@ it 1:
 ja 0:
   include:
   - key: ja 0
+    namespace: jsh
+  - key: ja 0
     namespace: wdk
   - key: ja 0
     namespace: dcm
@@ -5169,6 +5175,8 @@ ja 0:
     namespace: pka
 ja 1:
   include:
+  - key: ja 1
+    namespace: jsh
   - key: ja 1
     namespace: wdk
   - key: ja 1
