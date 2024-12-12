@@ -374,6 +374,7 @@ export default class Env {
     switch (this.context) {
       case "index":
       case "process":
+      case "web-ext":
         url = `/data.json?version=${this.gitInfo.commit.hash}`;
         this.fetchLog(this.context);
         text = await Helper.fetchAsync(url, this);
