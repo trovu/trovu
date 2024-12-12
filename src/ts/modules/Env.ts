@@ -126,6 +126,7 @@ export default class Env {
 
     // Assign before, to also catch "debug" and "reload" in params and query.
     Object.assign(this, params);
+
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
 
