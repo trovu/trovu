@@ -25,6 +25,7 @@ export default class Home {
     this.toggleByQuery();
 
     // Init environment.
+    // todo: take out getparams from populate, and call it before toggleByQuery.
     await this.env.populate();
     this.updateOpensearch();
 

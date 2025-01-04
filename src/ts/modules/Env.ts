@@ -117,6 +117,8 @@ export default class Env {
     this.language = undefined;
     this.country = undefined;
 
+    this.fetch = await this.getFetch();
+
     if (!params) {
       params = Env.getParamsFromUrl();
     }
@@ -129,13 +131,6 @@ export default class Env {
 
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
-
-    this.fetch = await this.getFetch();
-    this.data = this.data ?? (await this.getData());
-
-    if (this.data.config.defaultKeyword) {
-      this.defaultKeyword = this.data.config.defaultKeyword;
-    }
 
     this.getFromLocalStorage();
 
@@ -162,6 +157,12 @@ export default class Env {
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
       this.namespaces.push(this.extraNamespaceName);
+    }
+
+    this.data = this.data ?? (await this.getData());
+
+    if (this.data.config.defaultKeyword) {
+      this.defaultKeyword = this.data.config.defaultKeyword;
     }
 
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(this.namespaces);
