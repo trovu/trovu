@@ -22,11 +22,12 @@ export default class Home {
   async initialize() {
     this.env = new Env({ context: "index" });
     this.queryInput = document.querySelector("#query");
-    this.toggleByQuery();
 
     // Init environment.
-    // todo: take out getparams from populate, and call it before toggleByQuery.
-    await this.env.populate();
+    await this.env.populateConfig();
+    this.toggleByQuery();
+
+    await this.env.populateData();
     this.updateOpensearch();
 
     const gitLogger = new GitLogger(this.env.gitInfo);
@@ -341,7 +342,8 @@ export default class Home {
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
     envQuery.query = this.queryInput.value;
-    await envQuery.populate();
+    await envQuery.populateConfig();
+    populateData();
 
     const response = CallHandler.getRedirectResponse(envQuery);
 

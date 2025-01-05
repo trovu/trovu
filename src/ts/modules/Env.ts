@@ -110,7 +110,7 @@ export default class Env {
    *
    * @param {array} params - List of parameters to be used in environment.
    */
-  async populate(params) {
+  async populateConfig(params) {
     this.namespaces = undefined;
     this.github = undefined;
     this.configUrl = undefined;
@@ -149,6 +149,17 @@ export default class Env {
     // Assign again, to override user config.
     Object.assign(this, params);
     Object.assign(this, params_from_query);
+  }
+
+  /**
+   * Set the (shortcut) data of the environment.
+   */
+  async populateData() {
+    this.data = this.data ?? (await this.getData());
+
+    if (this.data.config.defaultKeyword) {
+      this.defaultKeyword = this.data.config.defaultKeyword;
+    }
 
     this.setDefaults();
 
@@ -157,12 +168,6 @@ export default class Env {
     // Add extra namespace to namespaces.
     if (this.extraNamespaceName) {
       this.namespaces.push(this.extraNamespaceName);
-    }
-
-    this.data = this.data ?? (await this.getData());
-
-    if (this.data.config.defaultKeyword) {
-      this.defaultKeyword = this.data.config.defaultKeyword;
     }
 
     this.namespaceInfos = await new NamespaceFetcher(this).getNamespaceInfos(this.namespaces);

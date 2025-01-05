@@ -2,7 +2,8 @@
 
 declare module "./core/Env.js" {
   export interface Env {
-    populate(params: Record<string, string>): Promise<void>;
+    populateConfig(params: Record<string, string>): Promise<void>;
+    populateData(): Promise<void>;
     data: object;
   }
 

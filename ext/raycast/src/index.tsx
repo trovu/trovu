@@ -53,7 +53,8 @@ export default function Command() {
               language: prefs.language,
               country: prefs.country,
             };
-        await builtEnv.populate(params);
+        await builtEnv.populateConfig(params);
+        await builtEnv.populateData();
         setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
