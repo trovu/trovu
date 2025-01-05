@@ -22,6 +22,7 @@ export default class Home {
   async initialize() {
     this.env = new Env({ context: "index" });
     this.queryInput = document.querySelector("#query");
+    this.env.setContext();
     this.toggleByQuery();
 
     // Init environment.

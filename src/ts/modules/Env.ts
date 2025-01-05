@@ -105,6 +105,13 @@ export default class Env {
     return processUrl;
   }
 
+  async setContext() {
+    const params = Env.getParamsFromUrl();
+    if (params.context) {
+      this.context = params.context;
+    }
+  }
+
   /**
    * Set the initial class environment vars either from params or from GET hash string.
    *
@@ -133,6 +140,7 @@ export default class Env {
 
     // Assign before, to also catch "debug" and "reload" in params and query.
     Object.assign(this, params);
+
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
 
@@ -374,6 +382,7 @@ export default class Env {
     switch (this.context) {
       case "index":
       case "process":
+      case "web-ext":
         url = `/data.json?version=${this.gitInfo.commit.hash}`;
         this.fetchLog(this.context);
         text = await Helper.fetchAsync(url, this);
