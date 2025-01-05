@@ -117,6 +117,13 @@ export default class Env {
     this.language = undefined;
     this.country = undefined;
 
+    this.fetch = await this.getFetch();
+    this.data = this.data || (await this.getData());
+
+    if (this.data.config.defaultKeyword) {
+      this.defaultKeyword = this.data.config.defaultKeyword;
+    }
+
     if (!params) {
       params = Env.getParamsFromUrl();
     }
@@ -129,13 +136,6 @@ export default class Env {
 
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
-
-    this.fetch = await this.getFetch();
-    this.data = this.data ?? (await this.getData());
-
-    if (this.data.config.defaultKeyword) {
-      this.defaultKeyword = this.data.config.defaultKeyword;
-    }
 
     this.getFromLocalStorage();
 
