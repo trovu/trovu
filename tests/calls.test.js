@@ -24,8 +24,7 @@ async function testCall(call) {
   window.localStorage.clear();
   const env = new Env({ context: "node" });
   env.getNavigatorLanguage = () => "en-US";
-  await env.populateConfig(call.env);
-  await env.populateData();
+  await env.populate(call.env);
   const response = await CallHandler.getRedirectResponse(env);
   if (call.response.redirectUrl) {
     expect(response.redirectUrl).toMatch(call.response.redirectUrl);

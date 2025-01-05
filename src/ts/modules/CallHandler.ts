@@ -17,8 +17,7 @@ export default class CallHandler {
     targetDomain.textContent = "";
 
     const env = new Env({ context: "process" });
-    await env.populateConfig();
-    await env.populateData();
+    await env.populate();
     new GitLogger(env.gitInfo).logVersion();
 
     if (env.debug) {
