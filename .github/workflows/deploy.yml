@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - fix-web-ext-display
   pull_request:
     branches:
       - master
