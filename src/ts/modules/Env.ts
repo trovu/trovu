@@ -105,6 +105,13 @@ export default class Env {
     return processUrl;
   }
 
+  async setContextFromUrl() {
+    const params = Env.getParamsFromUrl();
+    if (params.context) {
+      this.context = params.context;
+    }
+  }
+
   /**
    * Set the initial class environment vars either from params or from GET hash string.
    *
