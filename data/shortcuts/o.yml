@@ -1640,6 +1640,8 @@ crx 1:
 cs 0:
   include:
   - key: cs 0
+    namespace: szn
+  - key: cs 0
     namespace: dcm
   - key: cs 0
     namespace: dpl
@@ -1655,6 +1657,8 @@ cs 0:
     namespace: wrf
 cs 1:
   include:
+  - key: cs 1
+    namespace: szn
   - key: cs 1
     namespace: dcm
   - key: cs 1
@@ -1878,6 +1882,8 @@ de 0:
   - key: de 0
     namespace: pdg
   - key: de 0
+    namespace: szn
+  - key: de 0
     namespace: umt
   - key: de 0
     namespace: wdk
@@ -1919,6 +1925,8 @@ de 1:
     namespace: hzn
   - key: de 1
     namespace: pdg
+  - key: de 1
+    namespace: szn
   - key: de 1
     namespace: umt
   - key: de 1
@@ -2658,6 +2666,8 @@ en 0:
   - key: en 0
     namespace: mdb
   - key: en 0
+    namespace: szn
+  - key: en 0
     namespace: zrg
   - key: en 0
     namespace: lge
@@ -2699,6 +2709,8 @@ en 1:
     namespace: jsh
   - key: en 1
     namespace: mdb
+  - key: en 1
+    namespace: szn
   - key: en 1
     namespace: zrg
   - key: en 1
@@ -2798,6 +2810,8 @@ es 0:
   - key: es 0
     namespace: esd
   - key: es 0
+    namespace: szn
+  - key: es 0
     namespace: lge
   - key: es 0
     namespace: dcm
@@ -2827,6 +2841,8 @@ es 1:
     namespace: ard
   - key: es 1
     namespace: esd
+  - key: es 1
+    namespace: szn
   - key: es 1
     namespace: lge
   - key: es 1
@@ -3463,6 +3479,8 @@ fr 0:
   - key: fr 0
     namespace: ard
   - key: fr 0
+    namespace: szn
+  - key: fr 0
     namespace: lge
   - key: fr 0
     namespace: dcm
@@ -3488,6 +3506,8 @@ fr 1:
   include:
   - key: fr 1
     namespace: ard
+  - key: fr 1
+    namespace: szn
   - key: fr 1
     namespace: lge
   - key: fr 1
@@ -4805,6 +4825,8 @@ hr 0:
   - key: hr 0
     namespace: crd
   - key: hr 0
+    namespace: szn
+  - key: hr 0
     namespace: dcm
   - key: hr 0
     namespace: lgs
@@ -4814,6 +4836,8 @@ hr 1:
   include:
   - key: hr 1
     namespace: crd
+  - key: hr 1
+    namespace: szn
   - key: hr 1
     namespace: dcm
   - key: hr 1
@@ -5139,6 +5163,8 @@ it 0:
   - key: it 0
     namespace: ard
   - key: it 0
+    namespace: szn
+  - key: it 0
     namespace: dcm
   - key: it 0
     namespace: dpl
@@ -5162,6 +5188,8 @@ it 1:
   include:
   - key: it 1
     namespace: ard
+  - key: it 1
+    namespace: szn
   - key: it 1
     namespace: dcm
   - key: it 1
@@ -6972,6 +7000,8 @@ pin 1:
 pl 0:
   include:
   - key: pl 0
+    namespace: szn
+  - key: pl 0
     namespace: lge
   - key: pl 0
     namespace: dcm
@@ -6995,6 +7025,8 @@ pl 0:
     namespace: wrf
 pl 1:
   include:
+  - key: pl 1
+    namespace: szn
   - key: pl 1
     namespace: lge
   - key: pl 1
@@ -7752,6 +7784,8 @@ rt 1:
 ru 0:
   include:
   - key: ru 0
+    namespace: szn
+  - key: ru 0
     namespace: dcm
   - key: ru 0
     namespace: dpl
@@ -7773,6 +7807,8 @@ ru 0:
     namespace: wrf
 ru 1:
   include:
+  - key: ru 1
+    namespace: szn
   - key: ru 1
     namespace: dcm
   - key: ru 1
@@ -7984,6 +8020,8 @@ sim 1:
 sk 0:
   include:
   - key: sk 0
+    namespace: szn
+  - key: sk 0
     namespace: dcm
   - key: sk 0
     namespace: dpl
@@ -7995,6 +8033,8 @@ sk 0:
     namespace: pka
 sk 1:
   include:
+  - key: sk 1
+    namespace: szn
   - key: sk 1
     namespace: dcm
   - key: sk 1
@@ -9088,6 +9128,8 @@ uima 1:
 uk 0:
   include:
   - key: uk 0
+    namespace: szn
+  - key: uk 0
     namespace: dcm
   - key: uk 0
     namespace: dpl
@@ -9097,6 +9139,8 @@ uk 0:
     namespace: pka
 uk 1:
   include:
+  - key: uk 1
+    namespace: szn
   - key: uk 1
     namespace: dcm
   - key: uk 1
