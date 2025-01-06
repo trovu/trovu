@@ -7123,7 +7123,7 @@ poew 1:
   description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that acts as the main knowledgebase for PoE-players.
 ppx 0:
   url: https://perplexity.ai/
-  title: Perplixity AI
+  title: Perplexity AI
   tags:
   - ai
   - gpt
@@ -7131,11 +7131,10 @@ ppx 0:
   description: Go to the homepage
 ppx 1:
   url: https://perplexity.ai/?q=<query>
-  title: Perplixity AI
   include: ppx 0
   examples:
   - arguments: What is the meaning of life?
-    description: Ask Perplixity AI about the meaning of life
+    description: Ask Perplexity AI about the meaning of life
 printertestfiles 0:
   url: https://www.druckerchannel.de/artikel.php?ID=34&t=dc_testdokumente
   title: Printer test files
