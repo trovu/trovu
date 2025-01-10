@@ -4052,6 +4052,21 @@ gh 1:
     alternative:
       query: gzh <0>
     created: '2024-04-19'
+gha 0:
+  url: https://ghostarchive.org/
+  title: Ghostarchive, a website archive
+  tags:
+  - archive
+  - internet
+  - web
+gha 1:
+  url: https://ghostarchive.org/search?term=<url>
+  title: 'Ghostarchive: search for archived pages'
+  include: gha 0
+gha+ 1:
+  url: https://ghostarchive.org/search?term=<url>
+  title: 'Ghostarchive: submit page for archival'
+  include: gha 0
 gi 0:
   include: gim 0
 gi 1:
