@@ -9194,6 +9194,20 @@ ur 1:
     namespace: bab
   - key: ur 1
     namespace: pka
+urn 0:
+  url: https://unrollnow.com/
+  title: Unrollnow.com
+  tags:
+  - readability
+  - twitter
+  - x
+  description: Unroll a Twitter/X thread for easier readability
+urn 1:
+  url: https://unrollnow.com/status/<status id>
+  include: urn 0
+  examples:
+  - arguments: 1877857704384807200
+    description: Unroll a thread from X
 us 1:
   url: https://userscripts.org/scripts/search?q=<query>
   title: Userscripts
