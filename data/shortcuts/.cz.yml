@@ -60,6 +60,21 @@ cd 4:
   examples:
   - arguments: praha, brno, 20, 10.12.
     description: Vlak z Prahy do Brna ve 20:00h v dne 10.12.
+dbk 0:
+  url: https://www.databazeknih.cz/
+  title: Databáze knih
+  tags:
+  - books
+  - databazeknih
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Vyhledávání knih a informace o nich.
+dbk 1:
+  url: https://www.databazeknih.cz/search?q=<výraz>
+  include: dbk 0
+  examples:
+  - arguments: harry potter
+    description: Hledej "harry potter"
 g 0:
   url: https://www.google.cz/
   title: Google.cz
