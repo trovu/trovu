@@ -828,6 +828,16 @@ fw 1:
   examples:
   - arguments: handy
     description: Suche nach "handy"
+gck 0:
+  url: https://cook.adminforge.de/
+  title: GoCook
+  tags:
+  - cooking
+  - recipes
+  description: Datenschutzfreundliches und übersichtliches Frontend für chefkoch.de
+gck 1:
+  url: https://cook.adminforge.de/recipe?query=<query>
+  include: gck 0
 gfp 0:
   url: https://german-foreign-policy.com/
   title: German Foreign Policy
