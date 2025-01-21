@@ -2783,6 +2783,15 @@ eo 1:
     namespace: bab
   - key: eo 1
     namespace: pka
+ep 0:
+  url: https://emojipedia.org/
+  title: Emojipedia
+  tags:
+  - emoji
+  - unicode
+ep 1:
+  url: https://emojipedia.org/search?q=<query>
+  inlcude: ep 0
 eprint 0:
   deprecated:
     alternative:
