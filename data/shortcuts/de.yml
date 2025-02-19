@@ -1468,7 +1468,7 @@ ri 0:
   - sayings
 ri 1:
   url: https://www.redensarten-index.de/suche.php?suchbegriff=<Suchbegriff>&bool=relevanz&gawoe=an&sp0=rart_ou&sp1=rart_varianten_ou
-  import: ri 0
+  include: ri 0
   examples:
   - arguments: Hände gebunden
     description: Search for idioms containing the words Hände, gebunden
