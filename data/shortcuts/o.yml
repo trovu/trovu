@@ -1087,6 +1087,17 @@ brw 1:
   examples:
   - arguments: vim
     description: Search for packages about vim.
+bsky 0:
+  url: https://bsky.app/
+  title: Bluesky
+  examples:
+  - description: Go to homepage
+bsky 1:
+  url: https://bsky.app/search?q=<query>
+  include: bsky 0
+  examples:
+  - arguments: fluff
+    description: Search for fluff on Bluesky
 btc 0:
   url: https://www.blockchain.com/
   title: Bitcoin Blockchain Explorer
