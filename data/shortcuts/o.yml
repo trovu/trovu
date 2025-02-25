@@ -471,6 +471,20 @@ am 1:
   include:
   - key: am 1
     namespace: pka
+ana 0:
+  url: https://annas-archive.org
+  title: Anna's Archive
+  tags:
+  - ebooks
+  - library
+  examples:
+  - description: Go to the homepage
+ana 1:
+  url: https://annas-archive.org/search?q=<query>
+  include: ana 0
+  examples:
+  - arguments: werner herzog
+    description: Search for books by Werner Herzog
 anidb 0:
   url: https://anidb.net/
   title: AniDB - Anime DataBase
@@ -5755,6 +5769,7 @@ libg 0:
   title: Library Genesis
   tags:
   - ebooks
+  - library
 libg 1:
   url: https://libgen.is/search.php?req=<query>
   title: Library Genesis, Non-fiction / Sci-tech
