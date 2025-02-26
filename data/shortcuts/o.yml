@@ -5765,21 +5765,21 @@ lh 0:
   url: https://www.lufthansa.com
   title: Lufthansa
 libg 0:
-  url: https://libgen.is
+  url: https://libgen.vg/
   title: Library Genesis
   tags:
   - ebooks
   - library
 libg 1:
-  url: https://libgen.is/search.php?req=<query>
+  url: https://libgen.vg/?req=<query>
   title: Library Genesis, Non-fiction / Sci-tech
   include: libg 0
 libga 1:
-  url: https://libgen.is/scimag?q=<query>
+  url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=a
   title: Library Genesis, Scientific Articles
   include: libg 0
 libgf 1:
-  url: https://libgen.is/fiction?q=<query>
+  url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=f
   title: Library Genesis, Fiction
   include: libg 0
 libgm 1:
