@@ -8899,6 +8899,23 @@ tvdb 1:
   examples:
   - arguments: wonder years
     description: Search for the TV show "The Wonder Years"
+tvt 0:
+  url: https://tvtropes.org/
+  title: TV Tropes
+  tags:
+  - culture
+  - movies
+  - series
+  - tv
+  - wiki
+  examples:
+  - description: Go to homepage
+tvt 1:
+  url: https://tvtropes.org/pmwiki/search_result.php?q=<query>
+  include: tvt 0
+  examples:
+  - arguments: dementia
+    description: Search TV Tropes for "dementia"
 tw 0:
   deprecated:
     alternative:
