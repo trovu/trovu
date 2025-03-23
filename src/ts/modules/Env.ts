@@ -379,17 +379,20 @@ export default class Env {
   async getData() {
     let text;
     let url;
+    let prefix;
     switch (this.context) {
       case "index":
       case "process":
       case "web-ext":
-        url = `/data.json?version=${this.gitInfo.commit.hash}`;
-        this.fetchLog(this.context);
+        prefix = "/";
+        url = `${prefix}data.json?version=${this.gitInfo.commit.hash}`;
+        this.fetchLog(this.context, prefix);
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
-        url = "https://trovu.net/data.json";
-        this.fetchLog(this.context);
+        prefix = "https://trovu.net/";
+        url = `${prefix}data.json`;
+        this.fetchLog(this.context, prefix);
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
@@ -417,8 +420,8 @@ export default class Env {
    *
    * @param context
    */
-  fetchLog(context) {
-    const url = `/log.json?context=${context}`;
+  fetchLog(context, prefix) {
+    const url = `${prefix}log.json?context=${context}`;
     this.fetch(url);
   }
 
