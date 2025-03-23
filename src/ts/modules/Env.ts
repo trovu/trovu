@@ -460,16 +460,9 @@ export default class Env {
     /* eslint-enable no-undef */
   }
   async getFetch() {
-    // Can't work with this.context here
-    // as rollup seems not able to handle it.
-    if (typeof fetch !== "undefined") {
-      // Browser and Node
-      // eslint-disable-next-line no-undef
-      return fetch.bind(window);
-    } else {
-      // Raycast
-      const { default: nodeFetch } = await import("node-fetch");
-      return nodeFetch;
-    }
+    // This was here to bind it to node-fetch when Raycast seemingly didn't have fetch.
+    // But now it seems to have fetch, so this is not needed.
+    // Keeping it here for now, in case it's needed later.
+    return fetch.bind(null);
   }
 }
