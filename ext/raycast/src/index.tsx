@@ -69,7 +69,7 @@ export default function Command() {
       }
     };
     initializeEnv();
-  }, [prefs, env]);
+  }, [prefs]);
 
   useEffect(() => {
     if (env) filterShortcuts();
