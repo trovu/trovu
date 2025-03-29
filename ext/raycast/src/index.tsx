@@ -38,11 +38,17 @@ export default function Command() {
   const [env, setEnv] = useCachedState<Env | null>("env", null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState(true);
+  let isBuildingEnv = false;
 
   useEffect(() => {
-    if (env && isEqual(prefs, cachedPrefs)) {
+    if (isBuildingEnv) {
       return;
     }
+    if (isEqual(prefs, cachedPrefs)) {
+      return;
+    }
+    isBuildingEnv = true;
+
     setCachedPrefs(prefs);
     const initializeEnv = async () => {
       try {
@@ -53,15 +59,17 @@ export default function Command() {
               language: prefs.language,
               country: prefs.country,
             };
-        await builtEnv.populate(params);
+        await builtEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
         setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
         showToast(Toast.Style.Failure, "Failed to initialize environment, check your connection.");
+      } finally {
+        isBuildingEnv = false;
       }
     };
     initializeEnv();
-  }, [prefs, env]);
+  }, [prefs]);
 
   useEffect(() => {
     if (env) filterShortcuts();

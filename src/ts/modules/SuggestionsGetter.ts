@@ -89,6 +89,9 @@ export default class SuggestionsGetter {
     const [regExp, filters] = this.getRegExpAndFilters(query);
 
     for (const namespaceInfo of Object.values(this.env.namespaceInfos)) {
+      if (!namespaceInfo.shortcuts) {
+        continue;
+      }
       for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
           continue;

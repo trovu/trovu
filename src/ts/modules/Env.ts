@@ -117,15 +117,24 @@ export default class Env {
    *
    * @param {array} params - List of parameters to be used in environment.
    */
-  async populate(params) {
+  async populate(params, options = {}) {
     this.namespaces = undefined;
     this.github = undefined;
     this.configUrl = undefined;
     this.language = undefined;
     this.country = undefined;
 
-    this.fetch = await this.getFetch();
+    this.fetch = this.getFetch();
     this.data = this.data || (await this.getData());
+
+    // Raycast cannot handle too much data.
+    if (options && options.removeNamespaces) {
+      for (const namespace of options.removeNamespaces) {
+        if (namespace in this.data.shortcuts) {
+          delete this.data.shortcuts[namespace];
+        }
+      }
+    }
 
     if (this.data.config.defaultKeyword) {
       this.defaultKeyword = this.data.config.defaultKeyword;
@@ -379,17 +388,20 @@ export default class Env {
   async getData() {
     let text;
     let url;
+    let prefix;
     switch (this.context) {
       case "index":
       case "process":
       case "web-ext":
-        url = `/data.json?version=${this.gitInfo.commit.hash}`;
-        this.fetchLog(this.context);
+        prefix = "/";
+        url = `${prefix}data.json?version=${this.gitInfo.commit.hash}`;
+        this.fetchLog(this.context, prefix);
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
-        url = "https://trovu.net/data.json";
-        this.fetchLog(this.context);
+        prefix = "https://trovu.net/";
+        url = `${prefix}data.json`;
+        this.fetchLog(this.context, prefix);
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
@@ -417,8 +429,8 @@ export default class Env {
    *
    * @param context
    */
-  fetchLog(context) {
-    const url = `/log.json?context=${context}`;
+  fetchLog(context, prefix) {
+    const url = `${prefix}log.json?context=${context}`;
     this.fetch(url);
   }
 
@@ -456,17 +468,10 @@ export default class Env {
     return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
     /* eslint-enable no-undef */
   }
-  async getFetch() {
-    // Can't work with this.context here
-    // as rollup seems not able to handle it.
-    if (typeof fetch !== "undefined") {
-      // Browser and Node
-      // eslint-disable-next-line no-undef
-      return fetch.bind(window);
-    } else {
-      // Raycast
-      const { default: nodeFetch } = await import("node-fetch");
-      return nodeFetch;
-    }
+  getFetch() {
+    // This was here to bind it to node-fetch when Raycast seemingly didn't have fetch.
+    // But now it seems to have fetch, so this is not needed.
+    // Keeping it here for now, in case it's needed later.
+    return fetch.bind(null);
   }
 }
