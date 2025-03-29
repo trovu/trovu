@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - 508-raycast-trovu-constanly-loading-environment
   pull_request:
     branches:
       - master
