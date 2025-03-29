@@ -127,6 +127,15 @@ export default class Env {
     this.fetch = this.getFetch();
     this.data = this.data || (await this.getData());
 
+    // Raycast cannot handle too much data.
+    if (options && options.removeNamespaces) {
+      for (const namespace of options.removeNamespaces) {
+        if (namespace in this.data.shortcuts) {
+          delete this.data.shortcuts[namespace];
+        }
+      }
+    }
+
     if (this.data.config.defaultKeyword) {
       this.defaultKeyword = this.data.config.defaultKeyword;
     }
