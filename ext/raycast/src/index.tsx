@@ -59,7 +59,7 @@ export default function Command() {
               language: prefs.language,
               country: prefs.country,
             };
-        await builtEnv.populate(params);
+        await builtEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
         setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
