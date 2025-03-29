@@ -117,7 +117,7 @@ export default class Env {
    *
    * @param {array} params - List of parameters to be used in environment.
    */
-  async populate(params) {
+  async populate(params, options = {}) {
     this.namespaces = undefined;
     this.github = undefined;
     this.configUrl = undefined;
