@@ -1,10 +1,8 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
 import { useState, useEffect } from "react";
 import { useCachedState } from "@raycast/utils";
-import Env from "./core/src/ts/modules/Env";
-import SuggestionsGetter from "./core/src/ts/modules/SuggestionsGetter";
+import Env from "./core/src/js/modules/Env.js";
+import SuggestionsGetter from "./core/src/js/modules/SuggestionsGetter.js";
 import { markdowns } from "./markdowns";
 import { isEqual } from "lodash";
 
@@ -39,17 +37,11 @@ export default function Command() {
   const [env, setEnv] = useCachedState<Env | null>("env", null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState(true);
-  let isBuildingEnv = false;
 
   useEffect(() => {
-    if (isBuildingEnv) {
+    if (env && isEqual(prefs, cachedPrefs)) {
       return;
     }
-    if (isEqual(prefs, cachedPrefs)) {
-      return;
-    }
-    isBuildingEnv = true;
-
     setCachedPrefs(prefs);
     const initializeEnv = async () => {
       try {
@@ -60,17 +52,15 @@ export default function Command() {
               language: prefs.language,
               country: prefs.country,
             };
-        await builtEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+        await builtEnv.populate(params);
         setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
         showToast(Toast.Style.Failure, "Failed to initialize environment, check your connection.");
-      } finally {
-        isBuildingEnv = false;
       }
     };
     initializeEnv();
-  }, [prefs]);
+  }, [prefs, env]);
 
   useEffect(() => {
     if (env) filterShortcuts();
