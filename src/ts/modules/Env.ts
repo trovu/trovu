@@ -27,7 +27,6 @@ export default class Env {
 
   setGit() {
     if (typeof GIT_INFO === "object") {
-      // eslint-disable-next-line no-undef
       this.gitInfo = GIT_INFO;
     } else {
       this.gitInfo = {
@@ -192,7 +191,6 @@ export default class Env {
   }
 
   setToLocalStorage() {
-    /* eslint-disable no-undef */
     if (typeof localStorage === "undefined") {
       return;
     }
@@ -205,18 +203,15 @@ export default class Env {
       localStorage.setItem("country", this.country);
       localStorage.removeItem("github");
     }
-    /* eslint-enable no-undef */
   }
 
   getFromLocalStorage() {
-    /* eslint-disable no-undef */
     if (typeof localStorage === "undefined") {
       return;
     }
     this.language ||= localStorage.getItem("language");
     this.country ||= localStorage.getItem("country");
     this.github ||= localStorage.getItem("github");
-    /* eslint-enable no-undef */
   }
 
   static getBoolParams(params) {
@@ -360,7 +355,6 @@ export default class Env {
     if (typeof navigator === "undefined") {
       return "";
     }
-    // eslint-disable-next-line no-undef
     const languageStr = navigator.language;
     return languageStr;
   }
@@ -406,7 +400,7 @@ export default class Env {
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
-        // eslint-disable-next-line no-undef, @typescript-eslint/no-var-requires
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         const fs = require("fs");
         url = "./dist/public/data.json";
         text = fs.readFileSync(url, "utf8");
@@ -444,7 +438,6 @@ export default class Env {
     if (typeof window === "undefined") {
       return "";
     }
-    // eslint-disable-next-line no-undef
     const hash = window.location.hash.substr(1);
     return hash;
   }
@@ -465,9 +458,7 @@ export default class Env {
   }
 
   isRunningStandalone() {
-    /* eslint-disable no-undef */
     return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
-    /* eslint-enable no-undef */
   }
   getFetch() {
     // This was here to bind it to node-fetch when Raycast seemingly didn't have fetch.
