@@ -1,0 +1,1 @@
+../../../../../../../src/ts/modules/ShortcutVerifier.ts
