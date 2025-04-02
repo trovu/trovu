@@ -10254,7 +10254,7 @@ ye 2:
   - arguments: pizza, new york
     description: Find pizza places in New York
 yf 1:
-  url: https://finance.yahoo.com/q?s=<abbreviation>
+  url: https://finance.yahoo.com/quote/<abbreviation>
   title: 'Yahoo Finance: Get stock quotes'
   tags:
   - old
