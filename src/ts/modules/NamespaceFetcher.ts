@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
 /** @module NamespaceFetcher */
@@ -375,8 +376,8 @@ export default class NamespaceFetcher {
         country: this.env.country,
       });
       namespaceName = include.namespace || namespaceName;
-      if (!namespaceInfos[namespaceName]) {
-        this.env.logger.warning(`Namespace "${namespaceName}" does not exist.`);
+      if (!namespaceInfos[namespaceName] || !namespaceInfos[namespaceName].shortcuts) {
+        this.env.logger.warning(`Namespace "${namespaceName}" does not exist or has no shortcuts.`);
         continue;
       }
       let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
