@@ -1624,13 +1624,13 @@ crtd 0:
   - description: Go to the homepage
 crtd 1:
   url: https://docs.rs/releases/search?query=<query>
+  tests:
+  - arguments: serde
+    expect: deserialization framework
   include: crtd 0
   examples:
   - arguments: serde
     description: Search for documentation for "serde" crate
-  tests:
-  - arguments: serde
-    expect: 'deserialization framework'
 crts 0:
   url: https://crates.io/
   title: Crates.io
