@@ -8253,13 +8253,19 @@ soup 1:
   title: Soup.io friends full text search
   tags:
   - old
-sp 1:
-  url: https://open.spotify.com/search/<query>
+sp 0:
+  url: https://open.spotify.com/
   title: Spotify
   tags:
   - music
   - spotify
   - stream
+  - streaming
+  examples:
+  - description: Go to homepage
+sp 1:
+  url: https://open.spotify.com/search/<query>
+  include: sp 0
   examples:
   - arguments: Bohemian Rhapsody
     description: Search Spotify for "Bohemian Rhapsody"
