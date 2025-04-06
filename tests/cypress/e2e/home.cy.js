@@ -58,5 +58,7 @@ describe("Homepage, Shortcut not found", () => {
     cy.visit("/#country=gb&language=en&query=foobar&status=not_found");
     cy.wait(500);
     cy.contains("No matching shortcut found.").should("be.visible");
+    cy.get("#query").clear().type("debug:g foobar{enter}");
+    cy.contains("https://www.google");
   });
 });
