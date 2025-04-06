@@ -360,7 +360,7 @@ export default class Home {
     if (response.status === "found") {
       redirectUrl = response.redirectUrl;
     } else {
-      redirectUrl = CallHandler.getRedirectUrlToHome(this.env, response);
+      redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
     window.location.href = redirectUrl;
   };
