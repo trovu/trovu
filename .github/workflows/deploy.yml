@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 515-after-shortcut-not-found-new-submit-does-not-work
   pull_request:
     branches:
       - master
