@@ -26,7 +26,8 @@ export default class Home {
     this.toggleByQuery();
 
     // Init environment.
-    await this.env.populate();
+    const params = Env.getParamsFromUrl();
+    await this.env.populate(params);
     this.updateOpensearch();
 
     const gitLogger = new GitLogger(this.env.gitInfo);
@@ -340,8 +341,9 @@ export default class Home {
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
-    envQuery.query = this.queryInput.value;
-    await envQuery.populate();
+    const params = Env.getParamsFromUrl();
+    params.query = this.queryInput.value;
+    await envQuery.populate(params);
 
     const response = CallHandler.getRedirectResponse(envQuery);
 
