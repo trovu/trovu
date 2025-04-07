@@ -123,6 +123,12 @@ sic 1:
   examples:
   - arguments: '1231'
     description: Search descriptive information for SIC "1231"
+usps 0:
+  url: https://www.usps.com/
+  title: United States Postal Service
+usps 1:
+  url: https://www.usps.com/search/results.htm?keyword=<query>
+  title: United States Postal Service
 yp 2:
   url: https://www.yellowpages.com/search?search_terms=<business name>&geo_location_terms=<city or zip>
   title: Yellow Pages
