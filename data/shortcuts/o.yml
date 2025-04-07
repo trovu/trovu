@@ -4544,6 +4544,20 @@ grhp 2:
     description: Calculates a route from Oxford to London.
   - arguments: Dresdener Straße 27 Berlin,Calle Tamarindos 5 Cadiz
     description: Calcula una ruta de una casa en Berlín a Cádiz.
+grk 0:
+  url: https://www.grok.com/
+  title: Grok
+  tags:
+  - ai
+  - x
+  examples:
+  - description: Go to homepage
+grk 1:
+  url: https://grok.com/?q=<query>
+  include: grk 0
+  examples:
+  - arguments: What is the meaning of life?
+    description: Search for "What is the meaning of life?"
 grnd 0:
   url: https://ground.news/
   title: Ground News
