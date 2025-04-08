@@ -218,7 +218,7 @@ abbr 0:
   tags:
   - abbreviations
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 abbr 1:
   url: https://www.abbreviations.com/<abbr>
   include: abbr 0
@@ -246,7 +246,7 @@ acl 0:
   - literature
   - science
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
 acl 1:
   url: https://www.aclweb.org/anthology/search/?q=<query>
@@ -276,7 +276,7 @@ acm 0:
   tags:
   - science
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 acm 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
   include: acm 0
@@ -290,7 +290,7 @@ ad 0:
   - android
   - programming
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 ad 1:
   url: https://developer.android.com/s/results?q=<query>
   include: ad 0
@@ -305,7 +305,7 @@ adror 0:
   - ror
   - ruby
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 adror 1:
   url: https://apidock.com/rails/search?query=<query>
   include: adror 0
@@ -322,7 +322,7 @@ ads 0:
   - science
   - space
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 ads 1:
   url: https://adsabs.harvard.edu/cgi-bin/nph-basic_connect?qsearch=<query>&version=1
   include: ads 0
@@ -335,7 +335,7 @@ adsh 0:
   tags:
   - datasheet
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 adsh 1:
   url: https://www.alldatasheet.com/view.jsp?Searchword=<part>
   include: adsh 0
@@ -359,7 +359,7 @@ af 0:
   - acronyms
   - language
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 af 1:
   url: https://www.acronymfinder.com/af-query.asp?Acronym=<query>&Find=find&string=exact
   include: af 0
@@ -373,7 +373,7 @@ ais 0:
   - maritime
   - traffic
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Maritime vessel traffic information
 alibaba 0:
   url: https://www.alibaba.com/
@@ -382,7 +382,7 @@ alibaba 0:
   - alibaba
   - shopping
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Chinese e-commerce company
 alibaba 1:
   url: https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=<name>
@@ -397,7 +397,7 @@ allmovie 0:
   - cinema
   - movies
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 allmovie 1:
   url: https://www.allmovie.com/search/all/<movie>
   include: allmovie 0
@@ -593,7 +593,7 @@ aqi 0:
   - air
   - quality
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 aqi 1:
   url: 'https://aqicn.org/search/#q=<location: {type: city}>'
   include: aqi 0
@@ -757,7 +757,7 @@ axp 0:
   - aliexpress
   - shopping
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 axp 1:
   url: https://www.aliexpress.com/wholesale?SearchText=<query>
   include: axp 0
@@ -952,7 +952,7 @@ bkg 0:
   - is-affiliate
   - travel
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 bkg 1:
   url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>'
   include:
@@ -1092,7 +1092,7 @@ brw 0:
   - osx
   - packages
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 brw 1:
   url: https://www.google.com/search?hl=<$language>&q=site%3Abrew.sh%20<query>&ie=utf-8
   title: Homebrew Package Manager
@@ -1105,7 +1105,7 @@ bsky 0:
   url: https://bsky.app/
   title: Bluesky
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 bsky 1:
   url: https://bsky.app/search?q=<query>
   include: bsky 0
@@ -1134,7 +1134,7 @@ btd 0:
   - bittorrent
   - torrent
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 btd 1:
   url: https://btdig.com/search?q=<query>
   tests:
@@ -1773,7 +1773,7 @@ cve 0:
   - security
   - vulnerability
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 cve 1:
   url: https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=<query>
   include: cve 0
@@ -2419,7 +2419,7 @@ dpl 0:
   - dictionary
   - language
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 dpl 1:
   url: https://www.deepl.com/translator#./<$language>/<text>
   title: DeepL, translate to my language
@@ -2971,7 +2971,7 @@ etsy 0:
   - shopping
   - vintage
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Shop for handmade, vintage, custom and unique gifts
 etsy 1:
   url: https://www.etsy.com/search?q=<query>
@@ -3406,7 +3406,7 @@ fl 0:
   - images
   - photo
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 fl 1:
   url: https://flickr.com/search/?q=<query>
   title: Flickr, full text search
@@ -3664,7 +3664,7 @@ fs 0:
   - fonts
   - typefaces
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Selection of free fonts for commercial use
 fs 1:
   url: https://www.fontsquirrel.com/fonts/list/find_fonts?q[term]=<query>
@@ -4202,7 +4202,7 @@ gkp 0:
   - google
   - notes
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 gkp 1:
   url: https://keep.google.com/#search/text=<query>
   include: gkp 0
@@ -4350,7 +4350,7 @@ gns 0:
   - google
   - news
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 gns 1:
   url: https://www.google.com/search?q=<query>&tbm=nws&hl=<$language>
   include: gns 0
@@ -4366,7 +4366,7 @@ gnudb 0:
   tags:
   - music
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 gnudb 1:
   url: https://gnudb.org/search/<query>
   include: gnudb 0
@@ -4532,7 +4532,7 @@ gr 0:
   - reading
   - social-network
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 gr 1:
   url: https://www.goodreads.com/search?utf8=%E2%9C%93&query=<query>
   include:
@@ -4569,7 +4569,7 @@ grk 0:
   - llm
   - x
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 grk 1:
   url: https://grok.com/?q=<query>
   include: grk 0
@@ -5209,7 +5209,7 @@ isg 0:
   - social-network
   - video
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. that allows users to upload photos and videos, which can be edited with various filters, and organized with tags and location information.
 isg 1:
   url: https://www.instagram.com/<user>
@@ -5660,7 +5660,7 @@ kym 0:
   - internet-culture
   - meme
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 kym 1:
   url: https://knowyourmeme.com/search?q=<query>
   include: kym 0
@@ -5794,7 +5794,7 @@ lfm 0:
   - radio
   - recommendation
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Last.fm is a music website that offers personalized internet radio, using a recommendation system called Audioscrobbler to build a detailed profile of users based on their music tastes.
 lfm 1:
   url: https://www.last.fm/search?q=<query>
@@ -6485,7 +6485,7 @@ npr 0:
   - news
   - radio
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 npr 1:
   url: https://www.npr.org/search/?query=<query>
   include: npr 0
@@ -6511,7 +6511,7 @@ nx 0:
   - nix
   - nixpkgs
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Search Nix Packages
 nx 1:
   url: https://search.nixos.org/packages?type=packages&query=<query>
@@ -6529,7 +6529,7 @@ nxu 0:
   - nix
   - nixpkgs
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Search Nix Packages - Unstable Channel
 nxu 1:
   url: https://search.nixos.org/packages?channel=unstable&type=packages&query=<query>
@@ -6582,7 +6582,7 @@ ol 0:
   - reading
   - social-network
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 ol 1:
   url: https://openlibrary.org/search?q=<query>
   include:
@@ -6861,7 +6861,7 @@ owid 0:
   - science
   - statistics
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 owid 1:
   url: https://ourworldindata.org/search?q=<query>
   title: Our World in Data
@@ -6883,7 +6883,7 @@ owm 0:
   - maps
   - osm
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 owm 1:
   url: https://openweathermap.org/find?q=<location>
   tests:
@@ -6932,7 +6932,7 @@ pci 0:
   tags:
   - podcasts
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 pci 1:
   url: https://podcastindex.org/search?q=<query>&type=all
   include: pci 0
@@ -7001,7 +7001,7 @@ pew 0:
   - statistics
   - surveys
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 pew 1:
   url: https://www.pewresearch.org/search/<query>
   include: pew 0
@@ -7517,7 +7517,7 @@ qw 0:
   - privacy
   - web-search
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 qw 1:
   url: https://www.qwant.com/?l=<$language>&q=<query>
   include: qw 0
@@ -7615,7 +7615,7 @@ rblcheck 0:
   - rbl
   - security
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
   description: Check if an IP address is on the RBL
 rblcheck 1:
   url: https://stefanschramm.net/dev/postredirector/?_target=http://rbl-check.org/en/rbl-quick-check/check/&ipaddress=<ipaddress>
@@ -7644,7 +7644,7 @@ rcd 0:
   - typescript
   - web
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 rcd 1:
   url: https://developers.raycast.com/?q=<query>
   include: rcd 0
@@ -7658,7 +7658,7 @@ rcs 0:
   - macos
   - raycast
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 rcs 1:
   url: https://www.raycast.com/search?q=<query>
   include: rcs 0
@@ -7673,7 +7673,7 @@ rdoc 0:
   - r
   - statistics
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 rdoc 1:
   url: https://www.rdocumentation.org/search?q=<query>
   include: rdoc 0
@@ -7767,7 +7767,7 @@ rman 0:
   - r
   - statistics
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 rman 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=inurl%3Astat.ethz.ch%2FR-manual%20inurl%3A"<query>"
   include: rman 0
@@ -7835,7 +7835,7 @@ rpw 0:
   tags:
   - paywall
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 rpw 1:
   url: https://www.removepaywall.com/<url>
   include: rpw 0
@@ -7848,7 +7848,7 @@ rsg 0:
   tags:
   - science
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 rsg 1:
   url: https://www.researchgate.net/search?q=<query>
   title: ResearchGate, publications
@@ -8294,7 +8294,7 @@ sp 0:
   - stream
   - streaming
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 sp 1:
   url: https://open.spotify.com/search/<query>
   include: sp 0
@@ -8366,7 +8366,7 @@ stract 0:
   tags:
   - search
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 stract 1:
   url: https://stract.com/search?q=<query>
   title: Stract search
@@ -8793,7 +8793,7 @@ tmu 0:
   tags:
   - shopping
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 tmu 1:
   url: https://www.temu.com/search_result.html?search_key=<query>
   title: Temu
@@ -8964,7 +8964,7 @@ tvt 0:
   - tv
   - wiki
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 tvt 1:
   url: https://tvtropes.org/pmwiki/search_result.php?q=<query>
   include: tvt 0
@@ -9198,7 +9198,7 @@ ue5 0:
   - ue5
   - unreal-engine
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 ue5 1:
   url: https://duckduckgo.com/?q=%5C<query>+inurl%3Adev.epicgames.com%2Fdocumentation%2Fen-us%2Funreal-engine%2F
   include: ue5 0
@@ -9375,7 +9375,7 @@ v 0:
   - video
   - vimeo
   examples:
-  - description: Go to homepage
+  - description: Go to the homepage
 v 1:
   url: https://vimeo.com/search?q=<query>
   include: v 0
