@@ -1271,6 +1271,7 @@ cg 0:
   tags:
   - ai
   - gpt
+  - llm
   - openai
   description: Chat with OpenAI's ChatGPT
 cg 1:
@@ -1841,7 +1842,7 @@ dai 0:
   tags:
   - ai
   - duckduckgo
-  - gpt
+  - llm
   examples:
   - description: Go to the homepage
 dai 1:
@@ -4565,6 +4566,7 @@ grk 0:
   title: Grok
   tags:
   - ai
+  - llm
   - x
   examples:
   - description: Go to homepage
