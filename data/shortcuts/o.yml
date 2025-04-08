@@ -1834,6 +1834,21 @@ da 1:
     namespace: lgs
   - key: da 1
     namespace: pka
+dai 0:
+  url: https://duck.ai/
+  title: Duck Duck Go AI (duck.ai)
+  tags:
+  - ai
+  - duckduckgo
+  - gpt
+  examples:
+  - description: Go to the homepage
+dai 1:
+  url: https://duckduckgo.com/?ia=chat&bang=true&q=<prompt>
+  include: dai 0
+  examples:
+  - arguments: What is the meaning of life?
+    description: Search for "What is the meaning of life?"
 dao 0:
   url: https://dragonage.wikia.com/wiki/Dragon_Age_Wiki
   title: Dragon Age Origins Wiki
