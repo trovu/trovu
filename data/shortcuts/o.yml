@@ -10462,6 +10462,20 @@ ytp 1:
   title: Youtube Playlists
   tags:
   - old
+yts 0:
+  url: https://yts.mx/
+  title: YTS.mx
+  tags:
+  - torrent
+  - yts
+  examples:
+  - description: Go to the homepage
+yts 1:
+  url: https://www.google.com/search?hl=<$language>&q=site:yts.mx%20<query>&ie=utf-8
+  include: yts 0
+  examples:
+  - arguments: metropolis
+    description: Search for "metropolis"
 ytt 1:
   url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=t
   title: Youtube, today's new videos
