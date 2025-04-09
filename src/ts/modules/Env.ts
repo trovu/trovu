@@ -385,13 +385,13 @@ export default class Env {
       case "web-ext":
         prefix = "/";
         url = `${prefix}data.json?version=${this.gitInfo.commit.hash}`;
-        this.fetchLog(this.context, prefix);
+        Env.fetchLog(this.context, prefix);
         text = await Helper.fetchAsync(url, this);
         break;
       case "raycast":
         prefix = "https://trovu.net/";
         url = `${prefix}data.json`;
-        this.fetchLog(this.context, prefix);
+        Env.fetchLog(this.context, prefix);
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
@@ -419,7 +419,7 @@ export default class Env {
    *
    * @param context
    */
-  fetchLog(context, prefix) {
+  static fetchLog(context, prefix) {
     const url = `${prefix}log.json?context=${context}`;
     fetch(url);
   }
