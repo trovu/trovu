@@ -422,7 +422,7 @@ export default class Env {
    */
   fetchLog(context, prefix) {
     const url = `${prefix}log.json?context=${context}`;
-    this.fetch(url);
+    fetch(url);
   }
 
   /**
