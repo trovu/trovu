@@ -124,7 +124,6 @@ export default class Env {
     this.language = undefined;
     this.country = undefined;
 
-    this.fetch = this.getFetch();
     this.data = this.data || (await this.getData());
 
     // Raycast cannot handle too much data.
@@ -455,11 +454,5 @@ export default class Env {
 
   isRunningStandalone() {
     return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
-  }
-  getFetch() {
-    // This was here to bind it to node-fetch when Raycast seemingly didn't have fetch.
-    // But now it seems to have fetch, so this is not needed.
-    // Keeping it here for now, in case it's needed later.
-    return fetch.bind(null);
   }
 }
