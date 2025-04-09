@@ -751,7 +751,7 @@ db 0:
   examples:
   - description: Gehe zur Startseite
 db 1:
-  url: https://reiseauskunft.bahn.de/bin/bhftafel.exe/dn?input=<Bahnhof>&boardType=dep&time=actual&productsDefault=1111101&start=yes
+  url: 'https://duckduckgo.com/?q=%5C<Bahnhof: {type:city}>%20site%3Abahnhof.de%20intitle%3Aabfahrt'
   title: Deutsche Bahn, Verspätungen / aktuelle Abfahrt
   include: db 0
   examples:
