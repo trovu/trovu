@@ -140,10 +140,6 @@ export default class Env {
       this.defaultKeyword = this.data.config.defaultKeyword;
     }
 
-    if (!params) {
-      params = Env.getParamsFromUrl();
-    }
-
     const boolParams = Env.getBoolParams(params);
     Object.assign(this, boolParams);
 
