@@ -9,6 +9,9 @@ export default class Helper {
    * Fetch the content of a file behind an URL.
    *
    * @param {string} url    - The URL of the file to fetch.
+   * @param {object} env    - Environment object containing:
+   *                          reload: boolean - Whether to bypass cache
+   *                          logger: {info: Function, success: Function} - Logging methods
    *
    * @return {string} text  - The content.
    */
