@@ -20,7 +20,7 @@ export default class Helper {
     const response = await fetch(url, {
       cache: requestCache,
     });
-    if (response.status != 200) {
+    if (response.status !== 200) {
       env.logger.info(`Problem fetching via ${requestCache} ${url}: ${response.status}`);
       return null;
     }
