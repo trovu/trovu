@@ -11,7 +11,7 @@ export default class Logger {
   /**
    * Set helper variables.
    */
-  constructor(logElementSelector) {
+  constructor(logElementSelector: string) {
     this.logs = [];
     if (!(typeof document === "undefined")) {
       this.logElement = document.querySelector(logElementSelector);
