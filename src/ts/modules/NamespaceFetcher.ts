@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
 /** @module NamespaceFetcher */
@@ -192,7 +193,7 @@ export default class NamespaceFetcher {
       if (!namespaceInfo.url) {
         continue;
       }
-      const promise = this.env.fetch(namespaceInfo.url, {
+      const promise = fetch(namespaceInfo.url, {
         cache: this.env.reload ? "reload" : "default",
       });
       promises.push(promise);
@@ -375,8 +376,8 @@ export default class NamespaceFetcher {
         country: this.env.country,
       });
       namespaceName = include.namespace || namespaceName;
-      if (!namespaceInfos[namespaceName]) {
-        this.env.logger.warning(`Namespace "${namespaceName}" does not exist.`);
+      if (!namespaceInfos[namespaceName] || !namespaceInfos[namespaceName].shortcuts) {
+        this.env.logger.warning(`Namespace "${namespaceName}" does not exist or has no shortcuts.`);
         continue;
       }
       let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
@@ -469,7 +470,7 @@ export default class NamespaceFetcher {
    * @return {object} shortcut - Shortcut with info.
    */
   static addInfo(shortcut, key, namespaceName) {
-    shortcut = this.convertToObject(shortcut);
+    shortcut = NamespaceFetcher.convertToObject(shortcut);
     shortcut.key = key;
     [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
     shortcut.argumentCount = parseInt(shortcut.argumentCount);
