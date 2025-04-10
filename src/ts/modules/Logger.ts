@@ -5,6 +5,9 @@
 /** Logs errors and warnings. */
 
 export default class Logger {
+  logs: Array<{ level: string; message: string }>;
+  logElement: HTMLElement | null;
+
   /**
    * Set helper variables.
    */
