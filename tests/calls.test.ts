@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /**
  * @jest-environment jsdom
  */
