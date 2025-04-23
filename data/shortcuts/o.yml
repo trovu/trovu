@@ -3337,6 +3337,23 @@ ffr 1:
   examples:
   - arguments: Berlin
     description: Search for "Berlin"
+fhb 0:
+  url: https://flathub.org/
+  title: Flathub
+  tags:
+  - flathub
+  - flatpak
+  - linux
+  - software
+  examples:
+  - description: Go to the homepage
+  description: Apps and games for Linux
+fhb 1:
+  url: https://flathub.org/apps/search?q=<query>
+  include: fhb 0
+  examples:
+  - arguments: emacs
+    description: Search for "emacs"
 fi 0:
   include:
   - key: fi 0
