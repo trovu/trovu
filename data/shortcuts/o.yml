@@ -498,6 +498,22 @@ anidb 1:
   examples:
   - arguments: test
     description: Suche nach "test"
+anks 0:
+  url: https://ankiweb.net/shared/decks
+  title: Anki Shared Decks
+  tags:
+  - anki
+  - decks
+  - flashcards
+  - learning
+  examples:
+  - description: Go to the homepage
+anks 1:
+  url: https://ankiweb.net/shared/decks?search=<query>
+  include: anks 0
+  examples:
+  - arguments: german
+    description: Search for decks about German
 anon 0:
   url: http://anonymouse.org/anonwww.html
   title: Anonymouse
