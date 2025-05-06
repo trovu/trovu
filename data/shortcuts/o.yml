@@ -3063,6 +3063,20 @@ fb 1:
   examples:
   - arguments: john doe
     description: Facebook search for "john doe"
+fbdb 0:
+  url: https://developers.facebook.com/tools/debug/
+  title: Facebook Developers, Debug
+  tags:
+  - facebook
+  - social-network
+  examples:
+  - description: Go to the homepage
+fbdb 1:
+  url: https://developers.facebook.com/tools/debug/?url=<query>
+  include: fbdb 0
+  examples:
+  - arguments: https://trovu.net
+    description: Debug the URL https://trovu.net
 fbe 0:
   url: https://www.facebook.com/events
   title: Facebook, Events
@@ -3088,12 +3102,17 @@ fbf 1:
     alternative:
       query: fbpe <1>
     created: '2023-01-15'
-fbg 1:
-  url: https://www.facebook.com/search/groups/?q=<groups>
-  title: 'Facebook Search: Groups'
+fbg 0:
+  url: https://www.facebook.com/groups/feed/
+  title: Facebook, Groups
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the groups feed
+fbg 1:
+  url: https://www.facebook.com/search/groups/?q=<groups>
+  include: fbg 0
   examples:
   - arguments: pancakes
     description: Search for groups about pancakes
@@ -3117,20 +3136,6 @@ fblint 1:
     alternative:
       query: fbdb <1>
     created: '2025-05-07'
-fbdb 0:
-  url: https://developers.facebook.com/tools/debug/
-  title: Facebook Developers, Debug
-  tags:
-  - facebook
-  - social-network
-  examples:
-  - description: Go to the homepage
-fbdb 1:
-  url: https://developers.facebook.com/tools/debug/?url=<query>
-  include: fbdb 0
-  examples:
-  - arguments: https://trovu.net
-    description: Debug the URL https://trovu.net
 fbm 0:
   url: https://www.facebook.com/messages/
   title: Facebook Messages
@@ -3168,12 +3173,17 @@ fbp 0:
   tags:
   - facebook
   - social-network
-fbpa 1:
-  url: https://www.facebook.com/search/pages/?q=<query>
+fbpa 0:
+  url: https://www.facebook.com/pages/
   title: Facebook, Pages
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the homepage
+fbpa 1:
+  url: https://www.facebook.com/search/pages/?q=<query>
+  include: fbpa 0
   examples:
   - arguments: berlin
     description: Search for pages about Berlin
@@ -3186,21 +3196,31 @@ fbpe 1:
   examples:
   - arguments: john doe
     description: Search for "john doe"
-fbph 1:
-  url: https://www.facebook.com/search/photos/?q=<query>
+fbph 0:
+  url: https://www.facebook.com/photos/
   title: Facebook, Photos
   tags:
   - facebook
   - social-network
   examples:
+  - description: Go to the homepage
+fbph 1:
+  url: https://www.facebook.com/search/photos/?q=<query>
+  include: fbph 0
+  examples:
   - arguments: berlin
     description: Search for photos about Berlin
-fbpl 1:
-  url: https://www.facebook.com/search/places/?q=<query>
+fbpl 0:
+  url: https://www.facebook.com/places/
   title: Facebook, Places
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the homepage
+fbpl 1:
+  url: https://www.facebook.com/search/places/?q=<query>
+  include: fbpl 0
   examples:
   - arguments: berlin
     description: Search for places in Berlin
