@@ -3113,14 +3113,24 @@ fbk 0:
       query: fbmp
     created: '2023-01-21'
 fblint 1:
-  url: https://developers.facebook.com/tools/lint/?url=<query>
-  title: Facebook URL Linter
+  deprecated:
+    alternative:
+      query: fbdb <1>
+    created: '2025-05-07'
+fbdb 0:
+  url: https://developers.facebook.com/tools/debug/
+  title: Facebook Developers, Debug
   tags:
   - facebook
   - social-network
   examples:
-  - arguments: http://serchilo.net
-    description: The Facebook Information for serchilo.net
+  - description: Go to the homepage
+fbdb 1:
+  url: https://developers.facebook.com/tools/debug/?url=<query>
+  include: fbdb 0
+  examples:
+  - arguments: https://trovu.net
+    description: Debug the URL https://trovu.net
 fbm 0:
   url: https://www.facebook.com/messages/
   title: Facebook Messages
