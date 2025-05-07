@@ -3555,10 +3555,15 @@ fls 1:
   examples:
   - arguments: berlin
     description: create a slideshow of photos about berlin
-flt 1:
-  url: https://flickr.com/photos/tags/<tag>
+flt 0:
+  url: https://flickr.com/photos/tags/
   title: 'Flickr: photos with tag'
   include: fl 0
+  examples:
+  - description: Go to the homepage
+flt 1:
+  url: https://flickr.com/photos/tags/<tag>
+  include: flt 0
   examples:
   - arguments: berlin
     description: search for photos tagged "berlin"
