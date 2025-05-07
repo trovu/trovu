@@ -3233,32 +3233,47 @@ fbpo 1:
   examples:
   - arguments: berlin
     description: Search for posts about Berlin
-fbsd 1:
-  url: https://www.freebsd.org/cgi/man.cgi?query=<manpage>
+fbsd 0:
+  url: https://man.freebsd.org/cgi/man.cgi
   title: FreeBSD Manual Pages
   tags:
   - freebsd
+  examples:
+  - description: Go to the homepage
+fbsd 1:
+  url: https://www.freebsd.org/cgi/man.cgi?query=<manpage>
+  include: fbsd 0
 fbsd 2:
   url: https://www.freebsd.org/cgi/man.cgi?sektion=<section>&query=<manpage>
   title: FreeBSD Manual Pages
   tags:
   - freebsd
-fbsdfp 1:
-  url: https://www.freshports.org/search.php?query=<query>
-  title: FreeBSD FreshPorts Search
-  tests:
-  - arguments: firefox
-    expect: Web browser based on the browser portion of Mozilla
+fbsdfp 0:
+  url: https://www.freshports.org/
+  title: FreeBSD FreshPorts
   tags:
   - freebsd
   examples:
+  - description: Go to the homepage
+fbsdfp 1:
+  url: https://www.freshports.org/search.php?query=<query>
+  tests:
+  - arguments: firefox
+    expect: Web browser based on the browser portion of Mozilla
+  include: fbsdfp 0
+  examples:
   - arguments: firefox
     description: Search for firefox
-fbsdp 1:
-  url: https://ports.freebsd.org/cgi/ports.cgi?query=<query>
-  title: FreeBSD Ports Search
+fbsdp 0:
+  url: https://ports.freebsd.org/
+  title: FreeBSD Ports
   tags:
   - freebsd
+  examples:
+  - description: Go to the homepage
+fbsdp 1:
+  url: https://ports.freebsd.org/cgi/ports.cgi?query=<query>
+  include: fbsdp 0
 fbsdp 2:
   url: https://ports.freebsd.org/cgi/ports.cgi?sektion=<category>&query=<query>
   title: FreeBSD Ports Search
@@ -3291,16 +3306,26 @@ fbv 1:
 fbw 0:
   url: https://www.fahrerbewertung.de
   title: Fahrerbewertung
-fd 1:
-  url: https://www.thefreedictionary.com/<word>
+fd 0:
+  url: https://www.thefreedictionary.com/
   title: The Free Dictionary
   tags:
   - old
-fddb 1:
-  url: https://fddb.info/db/de/suche/?udd=0&cat=site-de&search=<query>
-  title: Kalorien in der Lebensmittel-Datenbank
+  examples:
+  - description: Go to the homepage
+fd 1:
+  url: https://www.thefreedictionary.com/<word>
+  include: fd 0
+fddb 0:
+  url: https://fddb.info/
+  title: Food Database
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+fddb 1:
+  url: https://fddb.info/db/de/suche/?udd=0&cat=site-de&search=<query>
+  include: fddb 0
 fedbug 0:
   url: https://bugzilla.redhat.com/query.cgi
   title: Fedora bugs
@@ -3318,28 +3343,42 @@ fedbug 1:
     description: Search for bugs containing "firefox"
 fedbugq 1:
   url: https://bugzilla.redhat.com/buglist.cgi?quicksearch=<query>
-  title: search for a term in Fedora bugs (query)
-  tags:
-  - old
-fedex 1:
-  url: https://www.fedex.com/fedextrack/?trknbr=<track number>
+  include: fedbugq 0
+fedex 0:
+  url: https://www.fedex.com/
   title: FedEx Tracking
   tags:
   - fedex
   - shipping
   examples:
+  - description: Go to the homepage
+fedex 1:
+  url: https://www.fedex.com/fedextrack/?trknbr=<track number>
+  include: fedex 0
+  examples:
   - arguments: '123456789012'
     description: track shipment with the number 123456789012
+fedora-wiki 0:
+  url: https://fedoraproject.org/wiki/
+  title: Fedora Wiki Search
+  tags:
+  - fedora
+  - wiki
+  examples:
+  - description: Go to the homepage
 fedora-wiki 1:
   url: https://fedoraproject.org/wiki/Special:Search?search=<query>
+  include: fedora-wiki 0
+fedw 0:
+  url: https://fedoraproject.org/wiki/
   title: Fedora Wiki Search
   tags:
   - old
+  examples:
+  - description: Go to the homepage
 fedw 1:
   url: https://fedoraproject.org/wiki/Special:Search?search=<query>
-  title: Fedora Wiki Search
-  tags:
-  - old
+  include: fedw 0
 ff 0:
   url: https://www.fileformat.info
   title: Go to FileFormat.info home page
@@ -3591,9 +3630,14 @@ flu 1:
   examples:
   - arguments: john
     description: search for users named "john"
+fnet 0:
+  url: https://www.finanzen.net/
+  title: Finanzen.net
+  examples:
+  - description: Go to the homepage
 fnet 1:
   url: https://www.finanzen.net/suchergebnis.asp?_search=<query>
-  title: Finanzen.net Query
+  include: fnet 0
 fo 0:
   include:
   - key: fo 0
@@ -3612,16 +3656,26 @@ fos 1:
     alternative:
       query: de.fos <1>
     created: '2024-12-09'
-fotofinder 1:
-  url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
+fotofinder 0:
+  url: https://www.fotofinder.com/
   title: Fotofinder
   tags:
   - old
-fpl 1:
-  url: https://filmpolski.pl/fp/index.php/8/<query>
+  examples:
+  - description: Go to the homepage
+fotofinder 1:
+  url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
+  include: fotofinder 0
+fpl 0:
+  url: https://filmpolski.pl/
   title: Filmpolski
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+fpl 1:
+  url: https://filmpolski.pl/fp/index.php/8/<query>
+  include: fpl 0
 fpwg 0:
   url: https://www.kessnux.de/anwendungen/passwort-generator.php
   title: Frank's password generator (Kessnux; javascript)
@@ -3714,9 +3768,14 @@ freenode 1:
   examples:
   - arguments: android
     description: Search for Android-related IRC channels on Freenode
+freesound 0:
+  url: https://freesound.org/
+  title: Freesound
+  examples:
+  - description: Go to the homepage
 freesound 1:
   url: https://freesound.org/search/?q=<query>
-  title: Freesound
+  include: freesound 0
 fremdwort 1:
   deprecated:
     alternative:
@@ -3732,12 +3791,18 @@ frsv 1:
     alternative:
       query: fr.sv <1>
     created: '2023-04-10'
-frv 1:
-  url: https://forvo.com/search/<word>/
+frv 0:
+  url: https://forvo.com/
   title: Forvo
   tags:
   - language
   - pronunciation
+  examples:
+  - description: Go to the homepage
+  description: Forvo pronunciation database, English interface
+frv 1:
+  url: https://forvo.com/search/<word>/
+  include: frv 0
   examples:
   - arguments: berlin
     description: Search for the pronunciation of "berlin"
@@ -3763,11 +3828,20 @@ fsc 1:
   title: Fscklog
   tags:
   - old
-fv 1:
-  url: https://validator.w3.org/feed/check.cgi?url=<url>
+fv 0:
+  url: https://validator.w3.org/feed/
   title: W3C Feed Validation Service
   tags:
-  - old
+  - atom
+  - rss
+  - validator
+  - w3c
+  - xml
+  examples:
+  - description: Go to the homepage
+fv 1:
+  url: https://validator.w3.org/feed/check.cgi?url=<url>
+  include: fv 0
 fy 0:
   include:
   - key: fy 0
