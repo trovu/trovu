@@ -6112,6 +6112,24 @@ lv 1:
     namespace: dpl
   - key: lv 1
     namespace: pka
+lw 0:
+  url: https://www.lesswrong.com/
+  title: LessWrong.com
+  tags:
+  - rationality
+  - science
+  examples:
+  - description: Go to the homepage
+lw 1:
+  url: https://www.lesswrong.com/search?q=<query>
+  include: lw 0
+  examples:
+  - arguments: rationality
+    description: Search for "rationality"
+lwg 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=lesswrong.com&q=<query>
+  title: LessWrong.com via Google
+  include: lw 1
 lyrc 1:
   url: https://lyrc.com.ar/en/tema1en.php?songname=<songname>
   title: Lyrc
