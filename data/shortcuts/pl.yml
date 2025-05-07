@@ -18,7 +18,7 @@ fw 1:
   include: fw 0
   examples:
   - arguments: forrest gump
-    description: Szukaj o filmie "Forrest Gump"
+    description: Szukaj film "Forrest Gump"
 last 1:
   deprecated:
     alternative:
