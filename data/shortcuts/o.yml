@@ -2619,6 +2619,10 @@ eaf 1:
   examples:
   - arguments: ai
     description: Search for "ai"
+eafg 1:
+  url: https://www.google.com/search?hl=<$language>&q=site%3Aforum.effectivealtruism.org%20<query>&ie=utf-8
+  title: Effective Altruism Forum via Google
+  include: eaf 1
 eb 0:
   url: https://www.britannica.com/
   title: Encyclopedia Britannica
