@@ -12,7 +12,7 @@ export default class DataEditor {
   private add0arg(data: {}) {
     const namespace = "o";
     for (const key in data.shortcuts[namespace]) {
-      if (!key.startsWith("e")) {
+      if (!key.startsWith("f")) {
         continue;
       }
       if (!data.shortcuts[namespace][key].url) {
