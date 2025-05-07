@@ -3529,28 +3529,28 @@ fla 0:
   include: fl 0
 flcc 1:
   url: https://www.flickr.com/search/?text=<query>&license=2%2C3%2C4%2C5%2C6%2C9
-  title: 'Flickr: full text search for content with a Creative Commons license'
+  title: Flickr, full text search for content with a Creative Commons license
   include: fl 0
   examples:
   - arguments: christmas
     description: search photos about christmas
 flcca 1:
   url: https://www.flickr.com/search/?text=<query>&license=1%2C2%2C9%2C10
-  title: 'Flickr: full text search for content to adapt, modify and build upon'
+  title: Flickr, full text search for content to adapt, modify and build upon
   include: fl 0
   examples:
   - arguments: christmas
     description: search photos about christmas
 flccc 1:
   url: https://www.flickr.com/search/?text=<query>&license=4%2C5%2C6%2C9%2C10
-  title: 'Flickr: full text search for content to use commercially'
+  title: Flickr, full text search for content to use commercially
   include: fl 0
   examples:
   - arguments: christmas
     description: search photos about christmas
 flccca 1:
   url: https://www.flickr.com/search/?text=<query>&license=4%2C5%2C9%2C10
-  title: 'Flickr: full text search for content to adapt, modify, build upon, and use commercially'
+  title: Flickr, full text search for content to adapt, modify, build upon, and use commercially
   examples:
   - arguments: christmas
     description: search photos about christmas
@@ -3596,14 +3596,14 @@ flickrshow 1:
     created: '2024-03-21'
 fls 1:
   url: https://flickr.com/search/show/?q=<query>
-  title: 'Flickr: creates a slideshow of your query'
+  title: Flickr, creates a slideshow of your query
   include: fl 0
   examples:
   - arguments: berlin
     description: create a slideshow of photos about berlin
 flt 0:
   url: https://flickr.com/photos/tags/
-  title: 'Flickr: photos with tag'
+  title: Flickr, photos with tag
   include: fl 0
   examples:
   - description: Go to the homepage
@@ -3615,7 +3615,7 @@ flt 1:
     description: search for photos tagged "berlin"
 flu 1:
   url: https://www.flickr.com/search/people/?q=<user>
-  title: 'Flickr: search for user'
+  title: Flickr, search for user
   include: fl 0
   examples:
   - arguments: john
