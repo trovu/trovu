@@ -3306,16 +3306,6 @@ fbv 1:
 fbw 0:
   url: https://www.fahrerbewertung.de
   title: Fahrerbewertung
-fd 0:
-  url: https://www.thefreedictionary.com/
-  title: The Free Dictionary
-  tags:
-  - old
-  examples:
-  - description: Go to the homepage
-fd 1:
-  url: https://www.thefreedictionary.com/<word>
-  include: fd 0
 fddb 0:
   url: https://fddb.info/
   title: Food Database

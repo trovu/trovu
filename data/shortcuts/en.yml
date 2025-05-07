@@ -84,6 +84,21 @@ esp 1:
     alternative:
       query: pns.es <1>
     created: '2023-04-10'
+fd 0:
+  url: https://www.thefreedictionary.com/
+  title: The Free Dictionary
+  tags:
+  - dictionary
+  - language
+  - thesaurus
+  examples:
+  - description: Go to the homepage
+fd 1:
+  url: https://www.thefreedictionary.com/<word>
+  include: fd 0
+  examples:
+  - arguments: tree
+    description: Look up "tree"
 frp 1:
   deprecated:
     alternative:
