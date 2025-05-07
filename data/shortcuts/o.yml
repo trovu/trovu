@@ -2604,6 +2604,21 @@ e 1:
   examples:
   - arguments: smartphone
     description: Search for smartphones
+eaf 0:
+  url: https://forum.effectivealtruism.org/
+  title: Effective Altruism Forum
+  tags:
+  - community
+  - effective-altruism
+  - forum
+  examples:
+  - description: Go to the homepage
+eaf 1:
+  url: https://forum.effectivealtruism.org/search?query=<query>
+  include: eaf 0
+  examples:
+  - arguments: ai
+    description: Search for "ai"
 eb 0:
   url: https://www.britannica.com/
   title: Encyclopedia Britannica
