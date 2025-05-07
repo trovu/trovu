@@ -14,7 +14,7 @@ fw 0:
   examples:
   - description: Idź do strony głównej
 fw 1:
-  url: https://www.filmweb.pl/search?q=<tytuł/osoba>
+  url: https://www.filmweb.pl/search#/?query=<tytuł/osoba>
   include: fw 0
   examples:
   - arguments: forrest gump
