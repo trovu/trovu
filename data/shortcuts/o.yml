@@ -3349,16 +3349,15 @@ fedex 1:
   - arguments: '123456789012'
     description: track shipment with the number 123456789012
 fedora-wiki 0:
-  url: https://fedoraproject.org/wiki/
-  title: Fedora Wiki Search
-  tags:
-  - fedora
-  - wiki
-  examples:
-  - description: Go to the homepage
+  deprecated:
+    alternative:
+      query: fedw
+    created: '2025-05-07'
 fedora-wiki 1:
-  url: https://fedoraproject.org/wiki/Special:Search?search=<query>
-  include: fedora-wiki 0
+  deprecated:
+    alternative:
+      query: fedw <1>
+    created: '2025-05-07'
 fedw 0:
   url: https://fedoraproject.org/wiki/
   title: Fedora Wiki Search
