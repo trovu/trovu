@@ -3272,12 +3272,19 @@ fbu 1:
   title: Facebook User
   tags:
   - old
-fbv 1:
-  url: https://www.facebook.com/search/videos/?q=<query>
+  examples:
+  - description: Go to the homepage
+fbv 0:
+  url: https://www.facebook.com/videos/
   title: Facebook, Videos
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the homepage
+fbv 1:
+  url: https://www.facebook.com/search/videos/?q=<query>
+  include: fbv 0
   examples:
   - arguments: berlin
     description: Search for videos about Berlin
