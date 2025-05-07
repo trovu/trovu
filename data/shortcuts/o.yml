@@ -3305,7 +3305,17 @@ fedbug 0:
   url: https://bugzilla.redhat.com/query.cgi
   title: Fedora bugs
   tags:
-  - old
+  - bugzilla
+  - fedora
+  - redhat
+  examples:
+  - description: Go to the homepage
+fedbug 1:
+  url: https://bugzilla.redhat.com/buglist.cgi?content=<query>
+  include: fedbug 0
+  examples:
+  - arguments: firefox
+    description: Search for bugs containing "firefox"
 fedbugq 1:
   url: https://bugzilla.redhat.com/buglist.cgi?quicksearch=<query>
   title: search for a term in Fedora bugs (query)
