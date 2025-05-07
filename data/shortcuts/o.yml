@@ -3475,15 +3475,15 @@ fi 1:
   - key: fi 1
     namespace: pka
 filmweb_ludzie 1:
-  url: https://www.filmweb.pl/szukaj?q=<query>&c=person
-  title: FilmWeb
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: pl.fw <1>
+    created: '2025-05-07'
 filmweb_tytul 1:
-  url: https://www.filmweb.pl/szukaj?q=<query>&c=film
-  title: FilmWeb
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: pl.fw <1>
+    created: '2025-05-07'
 findutf 0:
   url: https://shapecatcher.com
   title: Find UTF code by simply drawing its shape omline (Shapecatcher)
