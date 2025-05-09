@@ -9452,6 +9452,34 @@ uniprot 1:
   title: Uniprot
   tags:
   - old
+unsc 1:
+  url: https://unsplash.com/s/collections/<query>
+  title: Unsplash, collections
+  include: unsp 1
+unsi 1:
+  url: https://unsplash.com/s/illustrations/<query>
+  title: Unsplash, illustrations
+  include: unsp 1
+unsp 0:
+  url: https://unsplash.com/
+  title: Unsplash
+  tags:
+  - free
+  - images
+  - photos
+  examples:
+  - description: Go to the homepage
+  description: Free stock photography.
+unsp 1:
+  url: https://unsplash.com/s/photos/<query>
+  title: Unsplash, photos
+  include: unsp 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
+unsu 1:
+  url: https://unsplash.com/s/users/<name>
+  title: Unsplash, users
 up 1:
   url: https://www.uniprot.org/uniprot/?query=<query>&sort=score
   title: Uniprot
