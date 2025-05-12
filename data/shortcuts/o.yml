@@ -9239,9 +9239,14 @@ u 0:
   tags:
   - google
   - web-search
+  examples:
+  - description: Go to the homepage
 u 1:
   url: https://www.google.com/search?udm=14&q=<query>
   include: u 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 ubdo 1:
   url: https://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="<query>"
   title: Universitätsbibliothek Dortmund
