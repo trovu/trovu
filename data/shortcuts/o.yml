@@ -9233,6 +9233,15 @@ twum 1:
     alternative:
       query: xu <1>
     created: '2023-03-13'
+u 0:
+  url: https://udm14.org/
+  title: AI-Free Google Search
+  tags:
+  - google
+  - web-search
+u 1:
+  url: https://www.google.com/search?udm=14&q=<query>
+  include: u 0
 ubdo 1:
   url: https://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="<query>"
   title: Universitätsbibliothek Dortmund
