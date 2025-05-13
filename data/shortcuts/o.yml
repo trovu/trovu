@@ -4925,15 +4925,20 @@ gvid 1:
   tags:
   - old
 gw 0:
-  url: https://www.guildwiki.org/Main_Page
-  title: Guildwars wiki
+  url: https://udm14.org/
+  title: Google Web (AI-free)
   tags:
-  - old
+  - google
+  - web-search
+  examples:
+  - description: Go to the homepage
+  description: Search the web with Google without AI.
 gw 1:
-  url: https://www.guildwiki.org/index.php?title=Special%3ASearch&search=<query>&go=Go
-  title: Guildwars wiki
-  tags:
-  - old
+  url: https://www.google.com/search?udm=14&q=<query>
+  include: gw 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 gw2 0:
   url: https://wiki.guildwars2.com/
   title: Guildwars 2 Wiki
@@ -9233,20 +9238,6 @@ twum 1:
     alternative:
       query: xu <1>
     created: '2023-03-13'
-u 0:
-  url: https://udm14.org/
-  title: AI-Free Google Search
-  tags:
-  - google
-  - web-search
-  examples:
-  - description: Go to the homepage
-u 1:
-  url: https://www.google.com/search?udm=14&q=<query>
-  include: u 0
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
 ubdo 1:
   url: https://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="<query>"
   title: Universitätsbibliothek Dortmund
