@@ -18,6 +18,11 @@ export default class NamespaceFetcher {
    * @returns {Object} An object containing namespace information
    */
   async getNamespaceInfos(namespaces) {
+    namespaces = namespaces.filter(
+      (namespace) =>
+        // Keep if it's not a string or doesn't start with "old-".
+        typeof namespace !== "string" || !namespace.startsWith("old-"),
+    );
     this.namespaceInfos = this.getInitialNamespaceInfos(namespaces, 1);
     this.namespaceInfos = await this.assignShortcutsFromData(this.namespaceInfos);
     this.namespaceInfos = this.addNamespaceInfos(this.namespaceInfos);
