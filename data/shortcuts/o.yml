@@ -7363,10 +7363,10 @@ plm 1:
 plml 0:
   url: https://learn.polymarket.com/
   title: Polymarket Learn
-  includes: plm 0
+  include: plm 0
 plml 1:
   url: https://www.google.com/search?q=site%3Alearn.polymarket.com+<query>
-  includes: plml 0
+  include: plml 0
   examples:
   - arguments: limit
     description: Search for "limit"
