@@ -7342,6 +7342,34 @@ plk 1:
   tags:
   - movies
   - tv
+plm 0:
+  url: https://polymarket.com/
+  title: Polymarket
+  tags:
+  - betting
+  - politics
+  - prediction-market
+  - sports
+  examples:
+  - description: Go to the homepage
+  description: Polymarket is a prediction market where users can bet on the outcome of real-world events.
+plm 1:
+  url: https://polymarket.com/markets?_q=<query>
+  title: Polymarket
+  include: plm 0
+  examples:
+  - arguments: election
+    description: Search for "election"
+plml 0:
+  url: https://learn.polymarket.com/
+  title: Polymarket Learn
+  includes: plm 0
+plml 1:
+  url: https://www.google.com/search?q=site%3Alearn.polymarket.com+<query>
+  includes: plml 0
+  examples:
+  - arguments: limit
+    description: Search for "limit"
 plot 1:
   url: https://plot20.kesto.de/#{"functions":["<function>"]}
   title: Plot 2.0
