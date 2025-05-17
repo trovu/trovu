@@ -8354,10 +8354,10 @@ sk 1:
   - key: sk 1
     namespace: pka
 skapiec 0:
-  url: https://www.skapiec.pl/szukaj/w_calym_serwisie/${query}
-  title: Skapiec - Polish price comparison site
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .pl.skp
+    created: '2025-05-17'
 skyrock 1:
   url: https://www.skyrock.com/search/articles/?q=<query>
   title: Skyrock.com

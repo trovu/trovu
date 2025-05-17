@@ -274,6 +274,21 @@ pkp 4:
   examples:
   - arguments: kutno, gniezno, 10, 31.1.
     description: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
+skp 0:
+  url: https://www.skapiec.pl/
+  title: Skąpiec.pl
+  tags:
+  - comparison
+  - shopping
+  - skąpiec
+  examples:
+  - description: Przejdź do strony głównej
+skp 1:
+  url: https://www.skapiec.pl/szukaj?query=<produkt>
+  include: skp 0
+  examples:
+  - arguments: iphone
+    description: Szukaj iPhone'a
 tm 0:
   url: https://www.teleman.pl/
   title: Teleman
