@@ -2974,19 +2974,19 @@ espr 0:
   url: https://components.espressif.com/
   title: Espressif ESP Component Registry
   tags:
-  - programming
   - embedded
+  - programming
   examples:
   - description: Go to the homepage
 espr 1:
   url: https://components.espressif.com/components?q=<query>
+  tests:
+  - arguments: dht
+    expect: sensor
   include: espr 0
   examples:
   - arguments: dht
     description: Search for "dht"
-  tests:
-  - arguments: dht
-    expect: sensor
 et 0:
   include:
   - key: et 0
