@@ -2970,6 +2970,23 @@ es 1:
     namespace: pka
   - key: es 1
     namespace: wrf
+espr 0:
+  url: https://components.espressif.com/
+  title: Espressif ESP Component Registry
+  tags:
+  - programming
+  - embedded
+  examples:
+  - description: Go to the homepage
+espr 1:
+  url: https://components.espressif.com/components?q=<query>
+  include: espr 0
+  examples:
+  - arguments: dht
+    description: Search for "dht"
+  tests:
+  - arguments: dht
+    expect: sensor
 et 0:
   include:
   - key: et 0
