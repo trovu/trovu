@@ -6302,10 +6302,10 @@ mga 1:
   - arguments: http://mageia.madb.org/package/list/t_search/kde
     description: Search for kde packages
 mind 1:
-  url: https://www.mindfactory.de/search_result.php?search_query=<query>
-  title: Mindfactory.de
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.mft <1>
+    created: '2025-05-19'
 mink 1:
   url: https://mink.behat.org/en/latest/search.html?q=<query>
   title: Mink

@@ -5235,6 +5235,21 @@ mfs 1:
   examples:
   - arguments: aspirin
     description: Suche nach Aspirin
+mft 0:
+  url: https://www.mindfactory.de/
+  title: Mindfactory.de
+  tags:
+  - electronics
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Shop für Computer und Elektronik
+mft 1:
+  url: https://www.mindfactory.de/search_result.php?search_query=<query>
+  include: mft 0
+  examples:
+  - arguments: iphone
+    description: Suche nach iphone
 mm 0:
   url: https://www.mediamarkt.de/
   title: Media Markt
