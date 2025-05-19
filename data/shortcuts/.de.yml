@@ -5442,6 +5442,21 @@ radar 0:
   - weather
   examples:
   - description: Gehe zur Startseite
+rea 0:
+  url: https://www.rea-getraenke.de/
+  title: Rea Getränke
+  tags:
+  - drinks
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Getränkefachhandel
+rea 1:
+  url: https://www.rea-getraenke.de/index.php?cl=search&searchparam=<query>
+  include: rea 0
+  examples:
+  - arguments: cola
+    description: Suche nach "cola"
 reichelt 0:
   url: https://www.reichelt.de/
   title: Reichelt Elektronik
