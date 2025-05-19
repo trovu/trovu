@@ -5203,7 +5203,7 @@ mdv 4:
   examples:
   - arguments: wurzen, oschatz, 20, 8.12.
     description: Verbindungen von Wurzen nach Oschatz um 20 Uhr am 8. Dezember
-medf 0:
+mdzf 0:
   url: https://www.medizinfuchs.de/
   title: Medizinfuchs
   tags:
@@ -5212,7 +5212,7 @@ medf 0:
   examples:
   - description: Gehe zur Startseite
   description: Versandapotheke
-medf 1:
+mdzf 1:
   url: https://www.medizinfuchs.de/produkt/search/<query>
   include: mdzf 0
   examples:
