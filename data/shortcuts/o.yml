@@ -4661,12 +4661,17 @@ gp 1:
   examples:
   - arguments: chambermaid swing
     description: search for "Chambermaid Swing" in the Google Play store
-gpa 1:
-  url: https://play.google.com/store/search?q=<query>&c=apps
-  title: Google Play App Search
+gpa 0:
+  url: https://play.google.com/store/apps/
+  title: Google Play, Apps
   tags:
   - google
   - play
+  examples:
+  - description: Go to the homepage
+gpa 1:
+  url: https://play.google.com/store/search?q=<query>&c=apps
+  include: gpa 0
   examples:
   - arguments: öffi
     description: Search for "öffi"
