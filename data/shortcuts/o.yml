@@ -1233,8 +1233,10 @@ ccc 1:
   url: https://<query>.ccc.de/
   include: ccc 0
 ccc-tv 0:
-  url: https://media.ccc.de/
-  title: 'CCC-TV: Chaos Computer Club Media'
+  deprecated:
+    alternative:
+      query: ccctv
+    created: '2025-05-19'
 ccctv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
