@@ -6259,10 +6259,10 @@ me 1:
   tags:
   - old
 med 1:
-  url: https://www.medizinfuchs.de/produkt/search/<query>
-  title: Versandapotheke
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.medf <1>
+    created: '2025-09-19'
 medipreis 1:
   url: https://www.medipreis.de/suchen?q=<query>
   title: Medipreis Apothekenpreisvergleich
