@@ -7053,8 +7053,10 @@ otr 0:
   url: https://www.onlinetvrecorder.com/
   title: OnlineTvRecorder (Web Online TV Recorder)
 otto 1:
-  url: https://www.otto.de/suche/<product>/
-  title: Otto product search
+  deprecated:
+    alternative:
+      query: .de.otto <1>
+    created: '2025-05-19'
 oujs 1:
   url: https://openuserjs.org/?q=<query>
   title: OpenUserJS

@@ -5368,6 +5368,20 @@ osii 1:
   examples:
   - arguments: '9783442453023'
     description: Sucht nach einem bestimmten Buch
+otto 0:
+  url: https://www.otto.de/
+  title: Otto.de
+  tags:
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Online Shop
+otto 1:
+  url: https://www.otto.de/suche/<product>/
+  include: oto 0
+  examples:
+  - arguments: fernseher
+    description: Suche nach Fernsehern
 p 2:
   deprecated:
     alternative:
