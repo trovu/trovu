@@ -375,6 +375,22 @@ ais 0:
   examples:
   - description: Go to the homepage
   description: Maritime vessel traffic information
+aks 0:
+  url: https://ankiweb.net/shared/decks
+  title: Anki Shared Decks
+  tags:
+  - anki
+  - decks
+  - flashcards
+  - learning
+  examples:
+  - description: Go to the homepage
+aks 1:
+  url: https://ankiweb.net/shared/decks?search=<query>
+  include: aks 0
+  examples:
+  - arguments: german
+    description: Search for decks about German
 alibaba 0:
   url: https://www.alibaba.com/
   title: Alibaba
@@ -498,22 +514,6 @@ anidb 1:
   examples:
   - arguments: test
     description: Suche nach "test"
-aks 0:
-  url: https://ankiweb.net/shared/decks
-  title: Anki Shared Decks
-  tags:
-  - anki
-  - decks
-  - flashcards
-  - learning
-  examples:
-  - description: Go to the homepage
-aks 1:
-  url: https://ankiweb.net/shared/decks?search=<query>
-  include: aks 0
-  examples:
-  - arguments: german
-    description: Search for decks about German
 anon 0:
   url: http://anonymouse.org/anonwww.html
   title: Anonymouse
