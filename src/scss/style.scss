@@ -106,6 +106,20 @@ span.tag {
   background: var(--bs-yellow);
   color: black;
 }
+span.highlight {
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 193, 7, 0.1),
+    rgba(255, 193, 7, 0.7) 4%,
+    rgba(255, 193, 7, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 
 #explainer {
   display: none;
@@ -122,20 +136,6 @@ span.tag {
     margin: 0.5em 1em;
     text-align: left;
     color: #000;
-    span.highlight {
-      margin: 0 -0.4em;
-      padding: 0.1em 0.4em;
-      border-radius: 0.8em 0.3em;
-      background: transparent;
-      background-image: linear-gradient(
-        to right,
-        rgba(255, 193, 7, 0.1),
-        rgba(255, 193, 7, 0.7) 4%,
-        rgba(255, 193, 7, 0.3)
-      );
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone;
-    }
   }
   .testimonials {
     margin: 1em 0;
