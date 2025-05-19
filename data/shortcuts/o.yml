@@ -6264,10 +6264,10 @@ med 1:
       query: .de.mfs <1>
     created: '2025-09-19'
 medipreis 1:
-  url: https://www.medipreis.de/suchen?q=<query>
-  title: Medipreis Apothekenpreisvergleich
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.mdp <1>
+    created: '2025-05-19'
 mesh 1:
   url: https://www.ncbi.nlm.nih.gov/mesh?term=<termName>
   title: MeSH term

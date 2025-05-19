@@ -5164,6 +5164,22 @@ lpw 1:
   examples:
   - arguments: stehlampe
     description: Suche nach Stehlampen
+mdp 0:
+  url: https://www.medipreis.de/
+  title: Medipreis
+  tags:
+  - comparison
+  - medical
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Apothekenpreisvergleich
+mdp 1:
+  url: https://www.medipreis.de/suchen?q=<query>
+  include: mdp 0
+  examples:
+  - arguments: aspirin
+    description: Suche nach Aspirin
 mdv 0:
   url: https://www.mdv.de/fahrtenplaner/
   title: Mitteldeutscher Verkehrsverbund, Fahrtenplaner
@@ -5205,9 +5221,14 @@ mdv 4:
     description: Verbindungen von Wurzen nach Oschatz um 20 Uhr am 8. Dezember
 mfs 0:
   url: https://www.medizinfuchs.de/
-  title: Medizinfuch Apothekenpreisvergleich
+  title: Medizinfuch
+  tags:
+  - comparison
+  - medical
+  - shopping
   examples:
   - description: Gehe zur Startseite
+  description: Apothekenpreisvergleich
 mfs 1:
   url: https://www.medizinfuchs.de/produkt/search/<Suche>
   include: mfs 0
