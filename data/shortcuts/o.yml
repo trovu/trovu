@@ -3692,15 +3692,15 @@ fotofinder 1:
   url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   include: fotofinder 0
 fpl 0:
-  url: https://filmpolski.pl/
-  title: Filmpolski
-  tags:
-  - old
-  examples:
-  - description: Go to the homepage
+  deprecated:
+    alternative:
+      query: .pl.fpl
+    created: '2025-05-19'
 fpl 1:
-  url: https://filmpolski.pl/fp/index.php/8/<query>
-  include: fpl 0
+  deprecated:
+    alternative:
+      query: .pl.fpl <1>
+    created: '2025-05-19'
 fpwg 0:
   url: https://www.kessnux.de/anwendungen/passwort-generator.php
   title: Frank's password generator (Kessnux; javascript)

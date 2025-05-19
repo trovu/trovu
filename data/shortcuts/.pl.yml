@@ -86,6 +86,20 @@ ep 4:
   examples:
   - arguments: kutno, gniezno, 10, 31.1.13
     description: połączenie z Kutna do Gniezna 31 stycznia 2013 o godz. 10
+fpl 0:
+  url: https://filmpolski.pl/
+  title: Filmpolski
+  tags:
+  - movies
+  - polish
+  examples:
+  - description: Go to the homepage
+fpl 1:
+  url: https://filmpolski.pl/fp/index.php/8/<query>
+  include: fpl 0
+  examples:
+  - arguments: dekalog
+    description: Szukaj "dekalog"
 g 0:
   url: https://www.google.pl/
   title: Google.pl
