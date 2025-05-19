@@ -5280,6 +5280,21 @@ mmops 1:
   examples:
   - arguments: Turbo Pascal
     description: Suche nach "Turbo Pascal"
+msr 0:
+  url: https://www.mouser.de/
+  title: mouser.de
+  tags:
+  - electronics
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Shop für Elektronik und Bauteile
+msr 1:
+  url: https://www.mouser.de/_/?Keyword=<keyword>
+  include: msr 0
+  examples:
+  - arguments: Z80
+    description: Search mouser.de for "Z80"
 mvv 0:
   url: https://www.mvv-muenchen.de/
   title: Elektronische Fahrplanauskunft München

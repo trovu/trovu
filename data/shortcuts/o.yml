@@ -6364,11 +6364,10 @@ moodleup 0:
   tags:
   - old
 mouser 1:
-  url: https://www.mouser.de/_/?Keyword=<keyword>
-  title: mouser.de
-  examples:
-  - arguments: Z80
-    description: Search mouser.de for "Z80"
+  deprecated:
+    alternative:
+      query: .de.msr <1>
+    created: '2025-05-19'
 mr 0:
   include:
   - key: mr 0
