@@ -5203,21 +5203,6 @@ mdv 4:
   examples:
   - arguments: wurzen, oschatz, 20, 8.12.
     description: Verbindungen von Wurzen nach Oschatz um 20 Uhr am 8. Dezember
-mdzf 0:
-  url: https://www.medizinfuchs.de/
-  title: Medizinfuchs
-  tags:
-  - pharmacy
-  - shopping
-  examples:
-  - description: Gehe zur Startseite
-  description: Versandapotheke
-mdzf 1:
-  url: https://www.medizinfuchs.de/produkt/search/<query>
-  include: mdzf 0
-  examples:
-  - arguments: aspirin
-    description: Suche nach Aspirin
 mfs 0:
   url: https://www.medizinfuchs.de/
   title: Medizinfuch Apothekenpreisvergleich
