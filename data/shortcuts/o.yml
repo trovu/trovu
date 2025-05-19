@@ -3462,23 +3462,15 @@ ffi 1:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
 ffr 0:
-  url: https://www.filmfriend.de/
-  title: filmfriend
-  tests:
-  - expect: <title>filmfriend</title>
-  tags:
-  - movies
+  deprecated:
+    alternative:
+      query: de.ffr
+    created: '2025-05-19'
 ffr 1:
-  url: https://www.filmfriend.de/en/search?search=<query>
-  title: filmfriend
-  tests:
-  - arguments: Berlin
-    expect: <title>Search - filmfriend</title>
-  tags:
-  - movies
-  examples:
-  - arguments: Berlin
-    description: Search for "Berlin"
+  deprecated:
+    alternative:
+      query: de.ffr <1>
+    created: '2025-05-19'
 fhb 0:
   url: https://flathub.org/
   title: Flathub
