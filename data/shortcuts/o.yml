@@ -6682,10 +6682,10 @@ no 1:
   - key: no 1
     namespace: pka
 nobi 1:
-  url: https://www.notebookinfo.de/suche/<query>
-  title: Notebookinfo
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.nbi <1>
+    created: '2025-05-19'
 npm 1:
   url: https://npmjs.org/search?q=<query>
   title: Node.js Package Manager

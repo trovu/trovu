@@ -5323,6 +5323,22 @@ mvv 4:
   examples:
   - arguments: freising, petershausen, 10:00, 8.12.
     description: Nächste Verbindung von Freising nach Petershausen um 10.30 Uhr
+nbi 0:
+  url: https://www.notebookinfo.de/
+  title: Notebookinfo.de
+  tags:
+  - computer
+  - notebooks
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Notebook-Preisvergleich
+nbi 1:
+  url: https://www.notebookinfo.de/suche/<query>
+  include: nbi 0
+  examples:
+  - arguments: acer
+    description: Suche nach "acer"
 nsr 0:
   url: https://www.niederschlagsradar.de/
   title: Niederschlagsradar.de
