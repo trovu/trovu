@@ -7411,6 +7411,18 @@ plml 1:
   examples:
   - arguments: limit
     description: Search for "limit"
+plmw 0:
+  url: https://polymarket.com/markets?watchlist=true
+  title: Polymarket, my watchlist
+  include: plm 0
+  examples:
+  - description: Go to my watchlist
+plmw 1:
+  url: https://polymarket.com/markets?watchlist=true&_q=<query>
+  include: plmw 0
+  examples:
+  - arguments: election
+    description: Search for "election"
 plot 1:
   url: https://plot20.kesto.de/#{"functions":["<function>"]}
   title: Plot 2.0
