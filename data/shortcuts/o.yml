@@ -498,7 +498,7 @@ anidb 1:
   examples:
   - arguments: test
     description: Suche nach "test"
-anks 0:
+aks 0:
   url: https://ankiweb.net/shared/decks
   title: Anki Shared Decks
   tags:
@@ -508,9 +508,9 @@ anks 0:
   - learning
   examples:
   - description: Go to the homepage
-anks 1:
+aks 1:
   url: https://ankiweb.net/shared/decks?search=<query>
-  include: anks 0
+  include: aks 0
   examples:
   - arguments: german
     description: Search for decks about German
