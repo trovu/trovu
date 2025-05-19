@@ -1240,6 +1240,19 @@ ccc-tv 0:
 ccctv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
+  tags:
+  - ccc
+  - hacking
+  - security
+  - technology
+  examples:
+  - description: Go to the homepage
+ccctv 1:
+  url: https://media.ccc.de/search/?q=<query>
+  include: ccctv 0
+  examples:
+  - arguments: privacy
+    description: Search for "privacy"
 cea 0:
   url: https://eprint.iacr.org/
   title: Cryptology ePrint Archive
