@@ -29,6 +29,33 @@ abc 1:
   examples:
   - arguments: madrid
     description: Buscar "madrid" en ABC
+crs 0:
+  url: https://www.correos.es/
+  title: Correos
+  tags:
+  - correos
+  - shipping
+  examples:
+  - description: Ir a la página principal
+crs 1:
+  url: https://www.correos.es/es/es/buscador/detalle?search-parameter=<busqueda>
+  include: crs 0
+  examples:
+  - arguments: sello
+    description: Buscar "sello"
+crsl 0:
+  url: https://www.correos.es/es/es/herramientas/localizador/envios
+  title: Correos, Localizador de Envíos
+  include: crs 0
+  examples:
+  - description: Ir a la página principal
+crsl 1:
+  url: https://www.correos.es/es/es/herramientas/localizador/envios/detalle?tracking-number=<codigo>
+  title: Correos, Localizador de Envíos
+  include: crsl 0
+  examples:
+  - arguments: ES1234567890
+    description: Localizar el envío con el código ES1234567890
 e 0:
   url: https://www.ebay.es/?mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.es

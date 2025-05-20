@@ -1507,16 +1507,15 @@ copu 1:
   tags:
   - old
 correos 0:
-  url: https://www.correos.es/
-  title: Correos Localizador de Envíos
-  tags:
-  - correos
-  - shipping
-  examples:
-  - description: Go to the homepage
+  deprecated:
+    alternative:
+      query: .es.crsl
+    created: '2025-05-19'
 correos 1:
-  url: https://www.correos.es/comun/localizador/track.asp?numero=<codigo>
-  include: correos 0
+  deprecated:
+    alternative:
+      query: .es.crsl <1>
+    created: '2025-05-19'
 couch 0:
   deprecated:
     alternative:
