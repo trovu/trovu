@@ -55,7 +55,7 @@ export default class Home {
 
     Home.setHeights();
     this.setListeners();
-    // this.startTypewriter();
+    this.startTypewriter();
     window.addEventListener(
       "hashchange",
       function () {
