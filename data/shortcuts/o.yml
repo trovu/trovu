@@ -4165,15 +4165,10 @@ gede 1:
   tags:
   - old
 gem 1:
-  url: https://rubygems.org/search?utf8=✓&query=<query>
-  title: Rubygems Search
-  tags:
-  - gem
-  - programming
-  - ruby
-  examples:
-  - arguments: query
-    description: Search for a gem called 'query' on rubygems.org
+  deprecated:
+    alternative:
+      query: rbg <1>
+    created: '2025-05-25'
 gen 1:
   url: https://www.google.com/search?hl=<$language>&lr=lang_en&q=<query>&ie=utf-8
   title: Google Web, only in English
