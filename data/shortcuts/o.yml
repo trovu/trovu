@@ -4826,17 +4826,44 @@ gsh 1:
   - arguments: computer
     description: Search for "computer"
 gsheets 1:
+  deprecated:
+    alternative:
+      query: gsht <1>
+    created: '2025-05-25'
+gsht 0:
+  url: https://docs.google.com/spreadsheets/
+  title: Google Docs, Sheets
+  tags:
+  - docs
+  - google
+  - spreadsheets
+  examples:
+  - description: Go to the homepage
+gsht 1:
   url: https://docs.google.com/spreadsheets/u/0/?q=<query>
-  title: Google Sheets search
+  include: gsht 0
+  examples:
+  - arguments: budget
+    description: Search for spreadsheets containing "budget" in my Google Sheets
+gsld 0:
+  url: https://docs.google.com/presentation/
+  title: Google Docs, Slides
   tags:
   - docs
   - google
-gslides 1:
+  examples:
+  - description: Go to the homepage
+gsld 1:
   url: https://docs.google.com/presentation/u/0/?q=<query>
-  title: Google Slides search
-  tags:
-  - docs
-  - google
+  include: gsld 0
+  examples:
+  - arguments: presentation
+    description: Search for presentations containing "presentation" in my Google Slides
+gslides 1:
+  deprecated:
+    alternative:
+      query: gsld <1>
+    created: '2025-05-25'
 gsp 0:
   url: https://www.gamespot.com/
   title: Gamespot
