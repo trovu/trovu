@@ -4949,12 +4949,17 @@ gtr 3:
   examples:
   - arguments: fr, en, crêpe
     description: Translate "crêpe" from French to English
-gtrends 1:
-  url: https://trends.google.com/trends/explore?q=<query>
+gtrends 0:
+  url: https://trends.google.com/
   title: Google Trends
   tags:
   - google
   - trends
+  examples:
+  - description: Go to the homepage
+gtrends 1:
+  url: https://trends.google.com/trends/explore?q=<query>
+  include: gtrends 0
   examples:
   - arguments: berlin
     description: See statistics for the term "berlin" on Google web search
