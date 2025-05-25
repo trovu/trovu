@@ -3654,10 +3654,15 @@ flt 1:
   examples:
   - arguments: berlin
     description: search for photos tagged "berlin"
-flu 1:
-  url: https://www.flickr.com/search/people/?q=<user>
+flu 0:
+  url: https://www.flickr.com/search/people/
   title: Flickr, search for user
   include: fl 0
+  examples:
+  - description: Go to the homepage
+flu 1:
+  url: https://www.flickr.com/search/people/?q=<user>
+  include: flu 0
   examples:
   - arguments: john
     description: search for users named "john"
