@@ -3947,10 +3947,10 @@ ga 1:
   - key: ga 1
     namespace: pka
 gamespot 1:
-  url: https://www.gamespot.com/search/?i=&q=<query>
-  title: Gamespot
-  tags:
-  - games
+  deprecated:
+    alternative:
+      query: gsp <1>
+    created: '2025-05-25'
 gan 1:
   url: https://www.google.com/search?hl=en&q=android%20<query>&ie=utf-8
   title: Google search for android related pages only
@@ -4838,6 +4838,22 @@ gslides 1:
   tags:
   - docs
   - google
+gsp 0:
+  url: https://www.gamespot.com/
+  title: Gamespot
+  tags:
+  - games
+  - gaming
+  - reviews
+  examples:
+  - description: Go to the homepage
+  description: Game reviews, news, and videos
+gsp 1:
+  url: https://www.gamespot.com/search/?i=&q=<query>
+  include: gamespot 0
+  examples:
+  - arguments: doom
+    description: Search for "doom"
 gss 2:
   url: https://www.google.com/search?hl=<$language>&q=site%3A<site>%20<query>
   title: Google Web, search only on site
