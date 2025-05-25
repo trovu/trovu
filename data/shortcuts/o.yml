@@ -4067,12 +4067,21 @@ gdb 2:
   examples:
   - arguments: brandenburger tor, potsdamer platz
     description: Get a route Brandenburger Tor to Potsdamer Platz, Berlin, by bike
-gdc 1:
-  url: https://docs.google.com/document/u/0/?q=<query>
+gdc 0:
+  url: https://docs.google.com/
   title: Google Docs
   tags:
   - docs
   - google
+  examples:
+  - description: Go to the homepage
+  description: Web-based word processor, spreadsheet, and presentation editor.
+gdc 1:
+  url: https://docs.google.com/document/u/0/?q=<query>
+  include: gdc 0
+  examples:
+  - arguments: letter
+    description: Search for documents containing "letter" in my Google Docs
 gdd 2:
   url: 'https://www.google.com/maps/dir/?api=1&origin=<start: {type: city}>&destination=<destination: {type: city}>&travelmode=driving'
   title: Google Maps Directions (Routing), by Driving
