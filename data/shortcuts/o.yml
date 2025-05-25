@@ -4331,8 +4331,9 @@ gi 1:
 gif 1:
   include: gimf 1
 gilson 1:
-  url: https://ch.gilson.com/CHSV/catalogsearch/result/?q=<query>
-  title: Gilson
+  deprecated:
+    alternative:
+      query: .ch.gsn <1>
 gim 0:
   url: https://www.google.com/imghp?hl=<$language>
   title: Google Images Homepage

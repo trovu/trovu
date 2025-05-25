@@ -198,6 +198,22 @@ gps 1:
     alternative:
       query: gsh <1>
     created: '2024-11-17'
+gsn 0:
+  url: https://ch.gilson.com/
+  title: Gilson
+  tags:
+  - gilson
+  - laboratory
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Onlineshop für Laborbedarf
+gsn 1:
+  url: https://ch.gilson.com/CHSV/catalogsearch/result/?q=<query>
+  include: gilson 0
+  examples:
+  - arguments: pipette
+    description: Suche nach "pipette"
 ikea 0:
   url: https://www.ikea.com/ch/
   title: IKEA Schweiz
