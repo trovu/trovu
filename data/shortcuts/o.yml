@@ -4267,13 +4267,18 @@ gfl1 3:
   examples:
   - arguments: ber, lpa, fr
     description: Search for one-way flights from Berlin to Las Palmas, departing next Friday
-gfp 1:
-  url: https://german-foreign-policy.com/index.php?lang=en&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and=<query>
-  title: German Foreign Policy (English)
+gfp 0:
+  url: https://german-foreign-policy.com/en
+  title: German Foreign Policy, English
   tags:
   - germany
   - news
   - politics
+  examples:
+  - description: Go to the homepage
+gfp 1:
+  url: https://german-foreign-policy.com/index.php?lang=en&mode=detailed-search&mcat=archive&string_or=&string_not=&date_start=&date_end=&string_and=<query>
+  include: gfp 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
