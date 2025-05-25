@@ -3998,10 +3998,10 @@ gcal 1:
   - arguments: berlin
     description: Search for "berlin"
 gch 1:
-  url: https://www.google.ch/search?hl=<$language>&q=<query>&ie=utf-8
-  title: Google Switzerland
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .ch.g <1>
+    created: '2025-05-25'
 gcm 2:
   url: https://www.greatcirclemap.com/?routes=<from IATA>-<to IATA>
   title: Great Circle Map
