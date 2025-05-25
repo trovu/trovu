@@ -4704,11 +4704,20 @@ gpm 1:
   examples:
   - arguments: prodigy
     description: Search for music by The Prodigy in My Music
+gpo 0:
+  url: https://gpo.zugaina.org/
+  title: Gentoo Portage Overlay
+  tags:
+  - gentoo
+  - overlay
+  examples:
+  - description: Go to the homepage
 gpo 1:
   url: https://gpo.zugaina.org/Search?search=<package>
-  title: Gentoo Overlay Search
-  tags:
-  - old
+  include: gpo 0
+  examples:
+  - arguments: firefox
+    description: Search for "firefox"
 gr 0:
   url: https://www.goodreads.com/
   title: Goodreads
