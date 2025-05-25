@@ -5028,6 +5028,22 @@ gzh 1:
   examples:
   - arguments: fernseher
     description: Search for "fernseher"
+h2p 0:
+  url: https://www.htm2pdf.co.uk/
+  title: HTML2PDF
+  tags:
+  - convert
+  - html
+  - pdf
+  examples:
+  - description: Go to the homepage
+  description: Convert HTML pages to PDF files
+h2p 1:
+  url: https://www.htm2pdf.co.uk/?url=<url>
+  include: h2p 0
+  examples:
+  - arguments: https://example.com
+    description: Convert https://example.com to PDF
 ha 0:
   include:
   - key: ha 0
@@ -5144,10 +5160,10 @@ html-pdf 1:
   tags:
   - old
 html2pdf 1:
-  url: https://www.htm2pdf.co.uk/?url=<url>
-  title: HTML to PDF Converter
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: h2p <1>
+    created: '2025-05-25'
 http 1:
   url: http://<domain>
   title: Redirect to URL
