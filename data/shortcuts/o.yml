@@ -4929,10 +4929,10 @@ gu 1:
   - key: gu 1
     namespace: pka
 guk 1:
-  url: https://www.google.co.uk/search?hl=<$language>&q=<query>&ie=utf-8
-  title: Google United Kingdom
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .gb.g <1>
+    created: '2025-05-25'
 gv 0:
   url: https://www.google.com/videohp?hl=<$language>
   title: Google Video Homepage
