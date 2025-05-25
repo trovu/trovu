@@ -3238,7 +3238,7 @@ fbpa 1:
   - arguments: berlin
     description: Search for pages about Berlin
 fbpe 1:
-  url: https://www.facebook.com/search/results.php?q=<name>&type=users
+  url: https://www.facebook.com/search/people/?q=<name>
   title: Facebook, People
   tags:
   - facebook
