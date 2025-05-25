@@ -3982,11 +3982,6 @@ gby 2:
   - archive
   - google
   - search
-gc 1:
-  url: https://google.com/search?hl=<$language>&q=cache:<query>
-  title: Google Cache
-  tags:
-  - google
 gcal 0:
   url: https://www.google.com/calendar
   title: Google Calendar
