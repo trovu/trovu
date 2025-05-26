@@ -5206,11 +5206,22 @@ hr 1:
     namespace: lgs
   - key: hr 1
     namespace: pka
-html-pdf 1:
-  url: https://www.sejda.com/html-to-pdf?convert=%E2%9C%93&u=<url>
+html-pdf 0:
+  url: https://www.sejda.com/html-to-pdf
   title: HTML to PDF Converter
   tags:
-  - old
+  - convert
+  - html
+  - pdf
+  examples:
+  - description: Go to the homepage
+  description: Convert HTML pages to PDF files
+html-pdf 1:
+  url: https://www.sejda.com/html-to-pdf?convert=%E2%9C%93&u=<url>
+  include: html-pdf 0
+  examples:
+  - arguments: https://example.com
+    description: Convert https://example.com to PDF
 html2pdf 1:
   deprecated:
     alternative:
