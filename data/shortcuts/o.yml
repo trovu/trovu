@@ -5115,15 +5115,28 @@ hbr 0:
   - description: Go to the homepage
 hbr 1:
   url: https://hbr.org/search?term=<query>
-hdb 1:
-  url: https://hackage.haskell.org/cgi-bin/hackage-scripts/package/<package name>
-  title: Haskell package page
-  tags:
-  - old
   include: hbr 0
   examples:
   - arguments: leadership
     description: Search for "leadership"
+hdb 0:
+  url: https://hackage.haskell.org/
+  title: Hackage
+  description: Haskell Package Repository
+  tags:
+  - haskell
+  - programming
+  - repository
+  - software
+  examples:
+  - description: Go to the homepage
+  description: Haskell Package Repository
+hdb 1:
+  url: https://hackage.haskell.org/packages/search?terms=<package>
+  include: hdb 0
+  examples:
+  - arguments: aeson
+    description: Search for the Haskell package "aeson"
 he 0:
   include:
   - key: he 0
