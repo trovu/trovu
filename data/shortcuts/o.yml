@@ -5224,18 +5224,21 @@ hoo 1:
     alternative:
       query: hgl <1>
     created: '2025-05-26'
-  tags:
-  - api
-  - haskell
-  - programming
-  examples:
-  - description: Go to the homepage
-  description: Haskell API search engine
-hotu 1:
-  url: https://www.homeoftheunderdogs.net/search.php?search_game=<query>
+hotu 0:
+  url: https://www.homeoftheunderdogs.net/
   title: Home of the Underdogs
   tags:
-  - old
+  - abandonware
+  - games
+  examples:
+  - description: Go to the homepage
+  description: Site dedicated to preserving and archiving abandonware games.
+hotu 1:
+  url: https://www.homeoftheunderdogs.net/search.php?search_game=<query>
+  include: hotu 0
+  examples:
+  - arguments: doom
+    description: Search for "doom"
 hr 0:
   include:
   - key: hr 0
