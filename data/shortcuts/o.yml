@@ -5104,14 +5104,26 @@ ha 1:
   include:
   - key: ha 1
     namespace: pka
+hbr 0:
+  url: https://hbr.org/
+  title: Harvard Business Review
+  tags:
+  - business
+  - harvard
+  - news
+  examples:
+  - description: Go to the homepage
 hbr 1:
   url: https://hbr.org/search?term=<query>
-  title: Harvard Business Research
 hdb 1:
   url: https://hackage.haskell.org/cgi-bin/hackage-scripts/package/<package name>
   title: Haskell package page
   tags:
   - old
+  include: hbr 0
+  examples:
+  - arguments: leadership
+    description: Search for "leadership"
 he 0:
   include:
   - key: he 0
