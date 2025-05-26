@@ -5,6 +5,7 @@ date: 2024-05-22
 tags:
     - config
     - beginner
+    - testimonial
 ---
 
 I have started creating this project in 2005, many of my friends have known it for years, and they fall into exactly two groups:
