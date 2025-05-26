@@ -5175,6 +5175,22 @@ hexenc 1:
   title: Hex encode
   tags:
   - old
+hgl 0:
+  url: https://haskell.org/hoogle/
+  title: Hoogle
+  tags:
+  - api
+  - haskell
+  - programming
+  examples:
+  - description: Go to the homepage
+  description: Haskell API search engine
+hgl 1:
+  url: https://haskell.org/hoogle/?q=<query>
+  include: hgl 0
+  examples:
+  - arguments: otherwise
+    description: Search for "otherwise"
 hi 0:
   include:
   - key: hi 0
@@ -5204,14 +5220,17 @@ hm 1:
   - arguments: beatles
     description: Search for "beatles"
 hoo 1:
-  url: https://haskell.org/hoogle/?q=<query>
-  title: Hoogle
+  deprecated:
+    alternative:
+      query: hgl <1>
+    created: '2025-05-26'
   tags:
+  - api
   - haskell
   - programming
   examples:
-  - arguments: otherwise
-    description: Search for "otherwise"
+  - description: Go to the homepage
+  description: Haskell API search engine
 hotu 1:
   url: https://www.homeoftheunderdogs.net/search.php?search_game=<query>
   title: Home of the Underdogs
