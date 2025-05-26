@@ -5187,11 +5187,22 @@ hi 1:
     namespace: bab
   - key: hi 1
     namespace: pka
-hm 1:
-  url: https://hypem.com/search/<query>
+hm 0:
+  url: https://hypem.com/
   title: Hype Machine
   tags:
-  - old
+  - aggregator
+  - blogs
+  - music
+  examples:
+  - description: Go to the homepage
+  description: Music blog aggregator
+hm 1:
+  url: https://hypem.com/search/<query>
+  include: hm 0
+  examples:
+  - arguments: beatles
+    description: Search for "beatles"
 hoo 1:
   url: https://haskell.org/hoogle/?q=<query>
   title: Hoogle
