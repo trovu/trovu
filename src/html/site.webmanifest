@@ -1,0 +1,22 @@
+{
+  "name": "trovu.net – your web search command line",
+  "short_name": "trovu.net",
+  "description": "Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with maximum privacy. It's like DuckDuckGo bangs, but on steroids. And it's free.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#343a40",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png?v=2",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
