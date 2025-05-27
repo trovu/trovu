@@ -10972,6 +10972,16 @@ zeitdiff 0:
   - date
   - difference
   - time
+zen 0:
+  url: https://zenodo.org/
+  title: Zenodo
+  tags:
+  - data
+  - research
+  - science
+zen 1:
+  url: https://zenodo.org/search?q=<query>
+  include: zen 0
 zh 0:
   include:
   - key: zh 0
