@@ -7010,6 +7010,16 @@ os 1:
   include:
   - key: os 1
     namespace: pka
+osf 0:
+  url: https://osf.io
+  title: OSF
+  tags:
+  - data
+  - research
+  - science
+osf 1:
+  url: https://osf.io/search?q=<query>
+  include: osf 0
 osm 0:
   url: https://openstreetmap.org
   title: OpenStreetMap
