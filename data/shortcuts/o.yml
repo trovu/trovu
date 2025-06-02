@@ -10978,15 +10978,15 @@ zeitdiff 0:
   - difference
   - time
 zen 0:
-  url: https://zenodo.org/
-  title: Zenodo
-  tags:
-  - data
-  - research
-  - science
+  deprecated:
+    alternative:
+      query: znd
+    created: '2025-06-02'
 zen 1:
-  url: https://zenodo.org/search?q=<query>
-  include: zen 0
+  deprecated:
+    alternative:
+      query: znd <1>
+    created: '2025-06-02'
 zh 0:
   include:
   - key: zh 0
@@ -11052,6 +11052,17 @@ zn 1:
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
+znd 0:
+  url: https://zenodo.org/
+  title: Zenodo
+  tags:
+  - data
+  - research
+  - science
+  description: Data repository that allows researchers to share and preserve their work.
+znd 1:
+  url: https://zenodo.org/search?q=<query>
+  include: znd 0
 zu 0:
   include:
   - key: zu 0
