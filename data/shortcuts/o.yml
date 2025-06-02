@@ -7012,14 +7012,19 @@ os 1:
     namespace: pka
 osf 0:
   url: https://osf.io
-  title: OSF
+  title: Open Science Framework
   tags:
   - data
   - research
   - science
+  examples:
+  - description: Go to the homepage
 osf 1:
   url: https://osf.io/search?q=<query>
   include: osf 0
+  examples:
+  - arguments: psychology
+    description: Search for "psychology"
 osm 0:
   url: https://openstreetmap.org
   title: OpenStreetMap
