@@ -5786,6 +5786,22 @@ jee6 1:
   title: Java Platform SE6 API Search
   tags:
   - old
+jetf 0:
+  url: https://www.justetf.com/
+  title: JustETF
+  tags:
+  - finance
+  - investment
+  - stock-market
+  examples:
+  - description: Go to the homepage
+  description: Platform for finding and comparing ETFs (Exchange-Traded Funds).
+jetf 1:
+  url: https://www.justetf.com/find-etf.html?query=<query>
+  include: jetf 0
+  examples:
+  - arguments: msci world
+    description: Search for ETFs tracking the MSCI World index
 jgrapht 0:
   url: https://www.jgrapht.org/javadoc/
   title: JGraphT API
