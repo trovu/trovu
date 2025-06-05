@@ -2701,6 +2701,22 @@ ed 1:
     alternative:
       query: .de.e <1>
     created: '2024-04-19'
+eetf 0:
+  url: https://extraetf.com/
+  title: extraETF
+  tags:
+  - finance
+  - investment
+  - stock-market
+  examples:
+  - description: Go to the homepage
+  description: Platform for finding and comparing ETFs (Exchange-Traded Funds).
+eetf 1:
+  url: https://extraetf.com/etf-search?query=<query>
+  include: eetf 0
+  examples:
+  - arguments: msci world
+    description: Search for ETFs tracking the MSCI World index
 efa 0:
   url: https://www.efa-bw.de
   title: Efa bw
