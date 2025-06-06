@@ -7578,6 +7578,10 @@ plm 1:
   examples:
   - arguments: election
     description: Search for "election"
+plmg 1:
+  url: https://www.google.com/search?q=site:polymarket.com%20<query>
+  title: Polymarket via Google
+  include: plm 1
 plml 0:
   url: https://learn.polymarket.com/
   title: Polymarket Learn
