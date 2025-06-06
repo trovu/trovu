@@ -555,7 +555,7 @@ ap 0:
   examples:
   - description: Go to the homepage
 ap 1:
-  url: https://www.apple.com/search/?q=<query>
+  url: https://www.apple.com/search/<query>?src=globalnav
   include: ap 0
   examples:
   - arguments: map
