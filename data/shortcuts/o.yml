@@ -5902,6 +5902,19 @@ keno 1:
     alternative:
       query: .de.keno <1>
     created: '2024-12-09'
+kg 0:
+  url: https://kagi.com/
+  title: Kagi Search
+  tags:
+  - kagi
+  - search
+  - web-search
+kg 1:
+  url: https://kagi.com/search?q=<query>
+  include: kg 0
+  examples:
+  - arguments: trovu
+    description: Kagi search for "trovu"
 ki 0:
   include:
   - key: ki 0
