@@ -23,7 +23,6 @@ export default class Home {
     this.env = new Env({ context: "index" });
     this.queryInput = document.querySelector("#query");
     this.env.setContext();
-    this.toggleByQuery();
 
     // Init environment.
     const params = Env.getParamsFromUrl();
@@ -42,6 +41,9 @@ export default class Home {
     this.showInfoAlerts();
     this.setLocationHash();
     this.setQueryElement();
+
+    // Toggle by query only after the query input is set.
+    this.toggleByQuery();
 
     if (this.env.debug) {
       this.env.logger.showLog();
