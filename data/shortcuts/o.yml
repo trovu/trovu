@@ -555,7 +555,7 @@ ap 0:
   examples:
   - description: Go to the homepage
 ap 1:
-  url: https://www.apple.com/search/?q=<query>
+  url: https://www.apple.com/search/<query>?src=globalnav
   include: ap 0
   examples:
   - arguments: map
@@ -2701,6 +2701,22 @@ ed 1:
     alternative:
       query: .de.e <1>
     created: '2024-04-19'
+eetf 0:
+  url: https://extraetf.com/
+  title: extraETF
+  tags:
+  - finance
+  - investment
+  - stock-market
+  examples:
+  - description: Go to the homepage
+  description: Platform for finding and comparing ETFs (Exchange-Traded Funds).
+eetf 1:
+  url: https://extraetf.com/etf-search?query=<query>
+  include: eetf 0
+  examples:
+  - arguments: msci world
+    description: Search for ETFs tracking the MSCI World index
 efa 0:
   url: https://www.efa-bw.de
   title: Efa bw
@@ -5104,14 +5120,38 @@ ha 1:
   include:
   - key: ha 1
     namespace: pka
+hbr 0:
+  url: https://hbr.org/
+  title: Harvard Business Review
+  tags:
+  - business
+  - harvard
+  - news
+  examples:
+  - description: Go to the homepage
 hbr 1:
   url: https://hbr.org/search?term=<query>
-  title: Harvard Business Research
-hdb 1:
-  url: https://hackage.haskell.org/cgi-bin/hackage-scripts/package/<package name>
-  title: Haskell package page
+  include: hbr 0
+  examples:
+  - arguments: leadership
+    description: Search for "leadership"
+hdb 0:
+  url: https://hackage.haskell.org/
+  title: Hackage
   tags:
-  - old
+  - haskell
+  - programming
+  - repository
+  - software
+  examples:
+  - description: Go to the homepage
+  description: Haskell Package Repository
+hdb 1:
+  url: https://hackage.haskell.org/packages/search?terms=<package>
+  include: hdb 0
+  examples:
+  - arguments: aeson
+    description: Search for the Haskell package "aeson"
 he 0:
   include:
   - key: he 0
@@ -5151,6 +5191,22 @@ hexenc 1:
   title: Hex encode
   tags:
   - old
+hgl 0:
+  url: https://haskell.org/hoogle/
+  title: Hoogle
+  tags:
+  - api
+  - haskell
+  - programming
+  examples:
+  - description: Go to the homepage
+  description: Haskell API search engine
+hgl 1:
+  url: https://haskell.org/hoogle/?q=<query>
+  include: hgl 0
+  examples:
+  - arguments: otherwise
+    description: Search for "otherwise"
 hi 0:
   include:
   - key: hi 0
@@ -5163,25 +5219,42 @@ hi 1:
     namespace: bab
   - key: hi 1
     namespace: pka
-hm 1:
-  url: https://hypem.com/search/<query>
+hm 0:
+  url: https://hypem.com/
   title: Hype Machine
   tags:
-  - old
-hoo 1:
-  url: https://haskell.org/hoogle/?q=<query>
-  title: Hoogle
-  tags:
-  - haskell
-  - programming
+  - aggregator
+  - blogs
+  - music
   examples:
-  - arguments: otherwise
-    description: Search for "otherwise"
-hotu 1:
-  url: https://www.homeoftheunderdogs.net/search.php?search_game=<query>
+  - description: Go to the homepage
+  description: Music blog aggregator
+hm 1:
+  url: https://hypem.com/search/<query>
+  include: hm 0
+  examples:
+  - arguments: beatles
+    description: Search for "beatles"
+hoo 1:
+  deprecated:
+    alternative:
+      query: hgl <1>
+    created: '2025-05-26'
+hotu 0:
+  url: https://www.homeoftheunderdogs.net/
   title: Home of the Underdogs
   tags:
-  - old
+  - abandonware
+  - games
+  examples:
+  - description: Go to the homepage
+  description: Site dedicated to preserving and archiving abandonware games.
+hotu 1:
+  url: https://www.homeoftheunderdogs.net/search.php?search_game=<query>
+  include: hotu 0
+  examples:
+  - arguments: doom
+    description: Search for "doom"
 hr 0:
   include:
   - key: hr 0
@@ -5206,11 +5279,22 @@ hr 1:
     namespace: lgs
   - key: hr 1
     namespace: pka
-html-pdf 1:
-  url: https://www.sejda.com/html-to-pdf?convert=%E2%9C%93&u=<url>
+html-pdf 0:
+  url: https://www.sejda.com/html-to-pdf
   title: HTML to PDF Converter
   tags:
-  - old
+  - convert
+  - html
+  - pdf
+  examples:
+  - description: Go to the homepage
+  description: Convert HTML pages to PDF files
+html-pdf 1:
+  url: https://www.sejda.com/html-to-pdf?convert=%E2%9C%93&u=<url>
+  include: html-pdf 0
+  examples:
+  - arguments: https://example.com
+    description: Convert https://example.com to PDF
 html2pdf 1:
   deprecated:
     alternative:
@@ -5718,6 +5802,22 @@ jee6 1:
   title: Java Platform SE6 API Search
   tags:
   - old
+jetf 0:
+  url: https://www.justetf.com/
+  title: JustETF
+  tags:
+  - finance
+  - investment
+  - stock-market
+  examples:
+  - description: Go to the homepage
+  description: Platform for finding and comparing ETFs (Exchange-Traded Funds).
+jetf 1:
+  url: https://www.justetf.com/find-etf.html?query=<query>
+  include: jetf 0
+  examples:
+  - arguments: msci world
+    description: Search for ETFs tracking the MSCI World index
 jgrapht 0:
   url: https://www.jgrapht.org/javadoc/
   title: JGraphT API
@@ -5802,6 +5902,19 @@ keno 1:
     alternative:
       query: .de.keno <1>
     created: '2024-12-09'
+kg 0:
+  url: https://kagi.com/
+  title: Kagi Search
+  tags:
+  - kagi
+  - search
+  - web-search
+kg 1:
+  url: https://kagi.com/search?q=<query>
+  include: kg 0
+  examples:
+  - arguments: trovu
+    description: Kagi search for "trovu"
 ki 0:
   include:
   - key: ki 0
@@ -6942,6 +7055,21 @@ os 1:
   include:
   - key: os 1
     namespace: pka
+osf 0:
+  url: https://osf.io
+  title: Open Science Framework
+  tags:
+  - data
+  - research
+  - science
+  examples:
+  - description: Go to the homepage
+osf 1:
+  url: https://osf.io/search?q=<query>
+  include: osf 0
+  examples:
+  - arguments: psychology
+    description: Search for "psychology"
 osm 0:
   url: https://openstreetmap.org
   title: OpenStreetMap
@@ -7463,6 +7591,10 @@ plm 1:
   examples:
   - arguments: election
     description: Search for "election"
+plmg 1:
+  url: https://www.google.com/search?q=site:polymarket.com%20<query>
+  title: Polymarket via Google
+  include: plm 1
 plml 0:
   url: https://learn.polymarket.com/
   title: Polymarket Learn
@@ -10894,6 +11026,16 @@ zeitdiff 0:
   - date
   - difference
   - time
+zen 0:
+  deprecated:
+    alternative:
+      query: znd
+    created: '2025-06-02'
+zen 1:
+  deprecated:
+    alternative:
+      query: znd <1>
+    created: '2025-06-02'
 zh 0:
   include:
   - key: zh 0
@@ -10959,6 +11101,17 @@ zn 1:
   examples:
   - arguments: weihnachten
     description: Suche Fotos zum Thema "weihnachten"
+znd 0:
+  url: https://zenodo.org/
+  title: Zenodo
+  tags:
+  - data
+  - research
+  - science
+  description: Data repository that allows researchers to share and preserve their work.
+znd 1:
+  url: https://zenodo.org/search?q=<query>
+  include: znd 0
 zu 0:
   include:
   - key: zu 0

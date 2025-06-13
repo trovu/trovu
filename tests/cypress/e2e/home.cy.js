@@ -53,12 +53,13 @@ describe("Homepage startup", () => {
   });
 });
 
-describe("Homepage, Shortcut not found", () => {
+describe("Homepage, Shortcut not found, show suggestions", () => {
   it("should show not_found", () => {
-    cy.visit("/#country=gb&language=en&query=foobar&status=not_found");
+    cy.visit("/#country=gb&language=en&query=google&status=not_found");
     cy.wait(500);
-    cy.get("#query").should("have.value", "foobar");
+    cy.get("#query").should("have.value", "google");
     cy.contains("No matching shortcut found.").should("be.visible");
+    cy.contains("Google Web Homepage");
     cy.get("#query").clear().type("debug:g foobar{enter}");
     cy.contains("https://www.google");
   });
