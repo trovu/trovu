@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - home-with-3-text-intros
   pull_request:
     branches:
       - master
