@@ -123,6 +123,7 @@ span.highlight {
 
 #explainer {
   display: none;
+  padding: 0;
   #typewriter {
     text-align: left;
     margin: 0.5em 1em;
@@ -130,32 +131,6 @@ span.highlight {
     .description {
       color: #666;
       font-style: italic;
-    }
-  }
-  .cta {
-    margin: 0.5em 1em;
-    text-align: left;
-    color: #000;
-  }
-  .testimonials {
-    margin: 1em 0;
-    margin-top: 2em;
-    img {
-      border-radius: 1em;
-      float: left;
-      margin-right: 1em;
-      margin-bottom: 1em;
-    }
-    blockquote {
-      margin: 0;
-      padding: 0;
-      font-style: italic;
-      color: #666;
-    }
-    p {
-      margin: 1em 0;
-      padding: 0;
-      font-size: smaller;
     }
   }
 }
