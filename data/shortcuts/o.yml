@@ -4005,7 +4005,7 @@ gcal 0:
   - calendar
   - google
 gcal 1:
-  url: https://www.google.com/calendar/render?q=<query>
+  url: https://calendar.google.com/calendar/u/0/r/search?q=<query>
   title: Google Calendar
   tags:
   - calendar
