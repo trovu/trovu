@@ -126,7 +126,7 @@ export default class Home {
       },
       {
         query: "gfl ber, ibiza, fr, 28",
-        description: "Search on Google Flights for a flight from Berlin to Ibiza for next Friday, return on the 28th",
+        description: "Google Flights from Berlin to Ibiza next Friday, return on the 28th",
       },
       {
         query: "wg berlin",
@@ -134,7 +134,7 @@ export default class Home {
       },
       {
         query: "bkg berlin, fr, 28",
-        description: "Search on Booking.com for a hotel in Berlin from next Friday until the 28th",
+        description: "Search Booking.com for a hotel in Berlin from next Friday until the 28th",
       },
       {
         query: "en tree",
