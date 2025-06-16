@@ -7021,6 +7021,22 @@ or 1:
   include:
   - key: or 1
     namespace: pka
+orcid 0:
+  url: https://orcid.org/
+  title: ORCID
+  tags:
+  - academia
+  - research
+  - science
+  examples:
+  - description: Go to the homepage
+  description: ORCID is a free, unique, persistent identifier (PID) for individuals to use as they engage in research, scholarship, and innovation activities.
+orcid 1:
+  url: https://orcid.org/orcid-search/search?searchQuery=<query>
+  include: orcid 0
+  examples:
+  - arguments: miller
+    description: Search for "miller"
 orm 1:
   url: https://www.openrailwaymap.org/?q=<query>
   title: OpenRailwayMap
