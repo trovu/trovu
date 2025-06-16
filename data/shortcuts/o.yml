@@ -7037,14 +7037,20 @@ orcid 1:
   examples:
   - arguments: miller
     description: Search for "miller"
-orm 1:
-  url: https://www.openrailwaymap.org/?q=<query>
+orm 0:
+  url: https://www.openrailwaymap.org/
   title: OpenRailwayMap
   tags:
   - copyleft
   - maps
   - osm
   - railway
+  examples:
+  - description: Go to the homepage
+  description: Detailed online map of the world's railway infrastructure, built on OpenStreetMap data.
+orm 1:
+  url: https://www.openrailwaymap.org/?q=<query>
+  include: orm 0
   examples:
   - arguments: berlin
     description: Search OpenRailwayMap for "berlin"
