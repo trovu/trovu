@@ -60,6 +60,21 @@ cd 4:
   examples:
   - arguments: praha, brno, 20, 10.12.
     description: Vlak z Prahy do Brna ve 20:00h v dne 10.12.
+dat 0:
+  url: https://www.datart.cz/
+  title: Datart
+  tags:
+  - electronics
+  - shopping
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Obchod s elektronikou a domácími spotřebiči.
+dat 1:
+  url: https://www.datart.cz/vyhledavani/?q=<výraz>
+  include: dat 0
+  examples:
+  - arguments: televizor
+    description: Hledej "televizor" na Datartu
 dbk 0:
   url: https://www.databazeknih.cz/
   title: Databáze knih
