@@ -951,6 +951,23 @@ dbtn 4:
   examples:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
+dcl 0:
+  url: https://www.decathlon.de/
+  title: Decathlon.de
+  tags:
+  - clothing
+  - decathlon
+  - shopping
+  - sports
+  examples:
+  - description: Gehe zur Startseite
+  description: Internetový obchod s širokým sortimentem sportovního vybavení a oblečení.
+dcl 1:
+  url: https://www.decathlon.de/search?Ntt=<Suche>
+  include: dcl 0
+  examples:
+  - arguments: fahrrad
+    description: Suche nach Fahrrädern
 dejure 0:
   url: https://dejure.org/
   title: Dejure.org Gesetze

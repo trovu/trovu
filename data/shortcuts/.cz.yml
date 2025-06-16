@@ -90,6 +90,23 @@ dbk 1:
   examples:
   - arguments: harry potter
     description: Hledej "harry potter"
+dcl 0:
+  url: https://www.decathlon.cz/
+  title: Decathlon.cz
+  tags:
+  - clothing
+  - decathlon
+  - shopping
+  - sports
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Internetový obchod s širokým sortimentem sportovního vybavení a oblečení.
+dcl 1:
+  url: https://www.decathlon.cz/search?Ntt=<výraz>
+  include: dcl 0
+  examples:
+  - arguments: kolo
+    description: Hledej "kolo"
 g 0:
   url: https://www.google.cz/
   title: Google.cz
