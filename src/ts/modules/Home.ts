@@ -57,7 +57,6 @@ export default class Home {
 
     Home.setHeights();
     this.setListeners();
-    this.startTypewriter();
     window.addEventListener(
       "hashchange",
       function () {
@@ -71,117 +70,6 @@ export default class Home {
         document.getElementById("query").focus();
       }
     });
-  }
-
-  startTypewriter() {
-    const typewriter = (text, description, j) => {
-      if (j < text.length) {
-        typewriterQueryEl.textContent += text.charAt(j);
-        j++;
-        setTimeout(() => {
-          typewriter(text, description, j);
-        }, 50);
-      } else {
-        setTimeout(() => {
-          typewriterDescriptionEl.textContent = "→ " + description;
-        }, 500);
-      }
-    };
-    const typewriterQueryEl = document.querySelector("#typewriter .query");
-    const typewriterDescriptionEl = document.querySelector("#typewriter .description");
-    const examples = [
-      {
-        query: "g berlin",
-        description: "Search Google for Berlin",
-      },
-      {
-        query: "gm berlin",
-        description: "Go to Google Maps for Berlin",
-      },
-      {
-        query: "db berlin, hh",
-        description: "Suche eine Bahnverbindung von Berlin nach Hamburg",
-        config: {
-          country: "de",
-        },
-      },
-      {
-        query: "cd praha, brno",
-        description: "Hledej spojení na České dráhy z Prahy do Brna",
-        config: {
-          country: "cz",
-        },
-      },
-      {
-        query: "w berlin",
-        description: "Go to the Wikipedia article about Berlin",
-      },
-      {
-        query: "fr.w berlin",
-        description: "Go to the French Wikipedia article about Berlin",
-      },
-      {
-        query: "gd london, liverpool",
-        description: "Search for a route on Google Directions from London to Liverpool",
-      },
-      {
-        query: "gfl ber, ibiza, fr, 28",
-        description: "Google Flights from Berlin to Ibiza next Friday, return on the 28th",
-      },
-      {
-        query: "wg berlin",
-        description: 'Search Wikipedia for all mentions of "berlin" via Google',
-      },
-      {
-        query: "bkg berlin, fr, 28",
-        description: "Search Booking.com for a hotel in Berlin from next Friday until the 28th",
-      },
-      {
-        query: "en tree",
-        description: "Look up the word 'tree' in the English dictionary",
-        config: {
-          country: "de",
-        },
-      },
-      {
-        query: "owid fertility",
-        description: "Look up stats on fertility at Our World in Data",
-      },
-      {
-        query: "gr pinker",
-        description: "Search on Goodreads for books by Steven Pinker",
-      },
-      {
-        query: "npm csv",
-        description: "Search the Node Package Manager for projects about CSV",
-      },
-      {
-        query: "cve wordpress",
-        description: "Search for Common vulnerabilities and exposures of Wordpress",
-      },
-      {
-        query: "ec berlin",
-        description: "Search Ecosia for Berlin",
-      },
-    ];
-    let i = -1;
-    const displayNextExample = () => {
-      i++;
-      if (i === examples.length) {
-        i = 0;
-      }
-      if (examples[i].config) {
-        if (examples[i].config.country && this.env.country !== examples[i].config.country) {
-          displayNextExample();
-          return;
-        }
-      }
-      typewriterQueryEl.textContent = "";
-      typewriterDescriptionEl.textContent = "";
-      typewriter(examples[i].query, examples[i].description, 0);
-      setTimeout(displayNextExample, examples[i].description.length * 100);
-    };
-    displayNextExample();
   }
 
   static setHeights() {
