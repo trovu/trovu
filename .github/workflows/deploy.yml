@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - home
   pull_request:
     branches:
       - master
