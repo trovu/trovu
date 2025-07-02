@@ -124,12 +124,49 @@ span.highlight {
 #explainer {
   display: none;
   padding: 0;
+  h3 {
+    margin-top: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: #aaa;
+    font-size: 1.5em;
+  }
+  .subtagline {
+    text-align: center;
+    margin-bottom: 2.5em;
+  }
   img.sketch {
     width: 100%;
     max-width: 30em;
     height: auto;
     margin: 2em auto;
+    padding: 0 1.5em;
     display: block;
+  }
+  .examples {
+    dl {
+      padding: 5px;
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .cta {
+      text-align: center;
+      font-style: italic;
+      color: #818182;
+    }
+    dt,
+    dd {
+      margin: 0;
+      padding: 0.3em 0;
+      border-top: 1px solid #eee;
+    }
+    dt {
+      font-weight: normal;
+      padding-right: 1em;
+      text-align: right;
+    }
   }
 }
 
