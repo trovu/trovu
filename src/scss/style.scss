@@ -132,6 +132,9 @@ span.highlight {
     color: #aaa;
     font-size: 1.5em;
   }
+  .tagline span {
+    white-space: nowrap;
+  }
   .subtagline {
     text-align: center;
     margin-bottom: 2.5em;
