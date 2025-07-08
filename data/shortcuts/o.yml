@@ -10827,6 +10827,21 @@ ygl 1:
   include:
     key: ygl 1
     namespace: en
+yh 0:
+  url: https://yunohost.org/
+  title: YunoHost
+  tags:
+  - cloud
+  - hosting
+yha 0:
+  url: https://apps.yunohost.org/catalog
+  title: YunoHost app store
+  tags:
+  - cloud
+  - hosting
+yha 1:
+  url: https://apps.yunohost.org/catalog?search=<query>
+  include: yha 0
 yhf 0:
   url: https://forum.yunohost.org
   title: YunoHost Forum
