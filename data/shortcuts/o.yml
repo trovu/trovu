@@ -10833,6 +10833,9 @@ yh 0:
   tags:
   - cloud
   - hosting
+  examples:
+  - description: Go to the homepage
+  description: A server operating system aiming to make self-hosting easy.
 yh 1:
   url: https://www.google.com/search?sitesearch=yunohost.org&q=<query>
   include: yh 0
@@ -10845,9 +10848,15 @@ yha 0:
   tags:
   - cloud
   - hosting
+  include: yh 0
+  examples:
+  - description: Go to the homepage
 yha 1:
   url: https://apps.yunohost.org/catalog?search=<query>
   include: yha 0
+  examples:
+  - arguments: nextcloud
+    description: Search for Nextcloud
 yhf 0:
   url: https://forum.yunohost.org
   title: YunoHost Forum
