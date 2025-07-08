@@ -10833,6 +10833,12 @@ yh 0:
   tags:
   - cloud
   - hosting
+yh 1:
+  url: https://www.google.com/search?sitesearch=yunohost.org&q=<query>
+  include: yh 0
+  examples:
+  - arguments: documentation
+    description: Search for "documentation" on yunoHost.org
 yha 0:
   url: https://apps.yunohost.org/catalog
   title: YunoHost app store
