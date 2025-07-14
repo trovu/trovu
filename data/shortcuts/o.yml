@@ -495,12 +495,23 @@ ana 0:
   - library
   examples:
   - description: Go to the homepage
+  description: Large open library
 ana 1:
   url: https://annas-archive.org/search?q=<query>
   include: ana 0
   examples:
   - arguments: werner herzog
     description: Search for books by Werner Herzog
+anaepub 1:
+  url: https://annas-archive.org/search?q=<query>&ext=epub
+  examples:
+  - arguments: werner herzog
+    description: Search for EPUB books by Werner Herzog
+anapdf 1:
+  url: https://annas-archive.org/search?q=<query>&ext=pdf
+  examples:
+  - arguments: werner herzog
+    description: Search for PDF books by Werner Herzog
 anidb 0:
   url: https://anidb.net/
   title: AniDB - Anime DataBase
