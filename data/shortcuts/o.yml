@@ -502,13 +502,17 @@ ana 1:
   examples:
   - arguments: werner herzog
     description: Search for books by Werner Herzog
-anaepub 1:
+anae 1:
   url: https://annas-archive.org/search?q=<query>&ext=epub
+  title: Anna's Archive, only EPUBs
+  include: ana 1
   examples:
   - arguments: werner herzog
     description: Search for EPUB books by Werner Herzog
-anapdf 1:
+anap 1:
   url: https://annas-archive.org/search?q=<query>&ext=pdf
+  title: Anna's Archive, only PDFs
+  include: ana 1
   examples:
   - arguments: werner herzog
     description: Search for PDF books by Werner Herzog
