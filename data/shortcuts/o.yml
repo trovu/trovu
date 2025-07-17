@@ -495,12 +495,27 @@ ana 0:
   - library
   examples:
   - description: Go to the homepage
+  description: Large open library
 ana 1:
   url: https://annas-archive.org/search?q=<query>
   include: ana 0
   examples:
   - arguments: werner herzog
     description: Search for books by Werner Herzog
+anae 1:
+  url: https://annas-archive.org/search?q=<query>&ext=epub
+  title: Anna's Archive, only EPUBs
+  include: ana 1
+  examples:
+  - arguments: werner herzog
+    description: Search for EPUB books by Werner Herzog
+anap 1:
+  url: https://annas-archive.org/search?q=<query>&ext=pdf
+  title: Anna's Archive, only PDFs
+  include: ana 1
+  examples:
+  - arguments: werner herzog
+    description: Search for PDF books by Werner Herzog
 anidb 0:
   url: https://anidb.net/
   title: AniDB - Anime DataBase
@@ -10827,6 +10842,36 @@ ygl 1:
   include:
     key: ygl 1
     namespace: en
+yh 0:
+  url: https://yunohost.org/
+  title: YunoHost
+  tags:
+  - cloud
+  - hosting
+  examples:
+  - description: Go to the homepage
+  description: A server operating system aiming to make self-hosting easy.
+yh 1:
+  url: https://www.google.com/search?sitesearch=yunohost.org&q=<query>
+  include: yh 0
+  examples:
+  - arguments: documentation
+    description: Search for "documentation" on yunoHost.org
+yha 0:
+  url: https://apps.yunohost.org/catalog
+  title: YunoHost, Application Store
+  tags:
+  - cloud
+  - hosting
+  include: yh 0
+  examples:
+  - description: Go to the homepage
+yha 1:
+  url: https://apps.yunohost.org/catalog?search=<query>
+  include: yha 0
+  examples:
+  - arguments: nextcloud
+    description: Search for Nextcloud
 yhf 0:
   url: https://forum.yunohost.org
   title: YunoHost Forum
