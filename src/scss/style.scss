@@ -134,16 +134,18 @@ span.highlight {
   }
   .tagline span {
     white-space: nowrap;
+    display: none;
   }
   .subtagline {
     text-align: center;
     margin-bottom: 2.5em;
+    display: none;
   }
   img.sketch {
     width: 100%;
-    max-width: 30em;
+    max-width: 25em;
     height: auto;
-    margin: 0 auto;
+    margin: 2em auto;
     padding: 0 0.5em;
     display: block;
   }
