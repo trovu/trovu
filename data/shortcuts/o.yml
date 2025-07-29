@@ -6835,6 +6835,22 @@ nl 1:
     namespace: pka
   - key: nl 1
     namespace: wrf
+nmb 0:
+  url: https://www.numbeo.com/
+  title: Numbeo
+  tags:
+  - cost-of-living
+  - data
+  - economy
+  - living
+  examples:
+  - description: Go to the homepage
+nmb 1:
+  url: https://www.numbeo.com/cost-of-living/in/<city>
+  include: nmb 0
+  examples:
+  - arguments: berlin
+    description: Search for cost of living in Berlin
 nn 0:
   include:
   - key: nn 0
