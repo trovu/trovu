@@ -141,7 +141,7 @@ export default class Home {
       document.querySelector("nav.navbar").style.display = "block";
       if (!this.env.isRunningStandalone() && this.env.context !== "web-ext") {
         document.querySelector("footer").style.display = "block";
-        document.querySelector(".explainer").style.display = "block";
+        document.querySelectorAll(".explainer").forEach((el) => (el.style.display = "block"));
       }
       if (this.env.context === "web-ext") {
         document.querySelector("#settings-button").style.display = "none";
@@ -154,7 +154,7 @@ export default class Home {
       document.querySelector("footer").style.display = "none";
       document.querySelector("#suggestions").style.display = "block";
       document.querySelector("#help").style.display = "block";
-      document.querySelector(".explainer").style.display = "none";
+      document.querySelectorAll(".explainer").forEach((el) => (el.style.display = "none"));
       document.querySelector("#lists").style.display = "none";
     }
     Home.setHeights();
