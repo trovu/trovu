@@ -126,13 +126,14 @@ export default class Home {
   }
 
   setToggleByQuery() {
-    this.queryInput.focus();
     this.queryInput.addEventListener("input", () => {
       this.toggleByQuery();
     });
     document.querySelector("#suggestions").addEventListener("click", () => {
       this.toggleByQuery();
     });
+    document.querySelector("html").style.display = "block";
+    this.queryInput.focus();
   }
 
   toggleByQuery() {
