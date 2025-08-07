@@ -1353,6 +1353,12 @@ chipfind 1:
   examples:
   - arguments: 74LS00
     description: Search for 74LS00 datasheet
+chocolatey 1:
+  url: https://community.chocolatey.org/packages?q=<package>
+  title: Chocolatey is a repository for Windows Packages
+  examples:
+  - arguments: gradle
+    description: Search for the Gradle build tool
 chords 0:
   url: https://www.ultimate-guitar.com/
   title: Ultimate-guitar search for chords/tabs etc.
