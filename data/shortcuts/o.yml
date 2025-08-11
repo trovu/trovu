@@ -985,7 +985,7 @@ bkg 0:
   examples:
   - description: Go to the homepage
 bkg 1:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>'
+  url: 'https://www.booking.com/searchresults.html?ss=<location: {type: city}>'
   include:
   - key: bkg 0
   examples:
@@ -998,7 +998,7 @@ bkg 1:
     config:
       country: de
 bkg 2:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.booking.com/searchresults.html?ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
   include:
   - key: bkg 0
   examples:
@@ -1009,7 +1009,7 @@ bkg 2:
   - arguments: berlin, fr
     description: Search for hotels in Berlin, checkin on next Friday
 bkg 3:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.booking.com/searchresults.html?ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
   include:
   - key: bkg 0
   examples:
