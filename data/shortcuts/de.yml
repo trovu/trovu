@@ -1225,6 +1225,24 @@ mactv 0:
 mactv 1:
   url: https://www.mac-tv.de/Inc_Filmarchiv.lasso?Suchbegriff=<Suche>
   include: mactv 0
+mema 0:
+  url: https://memory-alpha.fandom.com/de/
+  title: Memory Alpha
+  tags:
+  - fandom
+  - film
+  - movie
+  - scifi
+  - tv
+  - wiki
+  examples:
+  - description: Gehe zur Startseite
+mema 1:
+  url: https://memory-alpha.fandom.com/de/wiki/Spezial:Suche?query=<query>
+  include: mema 0
+  examples:
+  - arguments: visor
+    description: Suche nach Informationen zu VISOR
 morgenpost 0:
   url: https://www.morgenpost.de/
   title: Berliner Morgenpost Archiv

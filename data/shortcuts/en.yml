@@ -124,6 +124,24 @@ lfm 1:
   include:
     key: lfm 1
     namespace: de
+mema 0:
+  url: https://memory-alpha.fandom.com/
+  title: Memory Alpha
+  tags:
+  - fandom
+  - film
+  - movie
+  - scifi
+  - tv
+  - wiki
+  examples:
+  - description: Go to the homepage
+mema 1:
+  url: https://memory-alpha.fandom.com/wiki/Special:Search?query=<query>
+  include: mema 0
+  examples:
+  - arguments: visor
+    description: Search for pages relating to VISORs
 mw 0:
   url: https://www.merriam-webster.com/
   title: Merriam-Webster dictionary
