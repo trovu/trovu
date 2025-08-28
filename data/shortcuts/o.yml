@@ -755,14 +755,14 @@ ask 1:
   - arguments: berlin
     description: Search for berlin
 atd 0:
-  url: https://archive.is/
+  url: https://archive.ph/
   title: Archive.today
   tags:
   - archive
   - news
   - press
 atd 1:
-  url: https://archive.is/submit/?url=<url>
+  url: https://archive.ph/submit/?url=<url>
   include:
   - key: atd 0
   examples:
