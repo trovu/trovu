@@ -40,7 +40,7 @@ self.addEventListener("fetch", (event) => {
           status: 204,
           statusText: "External link opened in system browser",
         });
-      })
+      }),
     );
     return;
   }
