@@ -32,13 +32,13 @@ self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
   
   // Handle external URLs (off-origin) - open in system browser
-  if (requestUrl.origin !== self.location.origin && event.request.mode === 'navigate') {
+  if (requestUrl.origin !== self.location.origin && event.request.mode === "navigate") {
     event.respondWith(
       self.clients.openWindow(event.request.url).then(() => {
         // Return a response to prevent the PWA from navigating
-        return new Response('', {
+        return new Response("", {
           status: 204,
-          statusText: 'External link opened in system browser'
+          statusText: "External link opened in system browser",
         });
       })
     );
