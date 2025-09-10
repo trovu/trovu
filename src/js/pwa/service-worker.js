@@ -30,7 +30,7 @@ self.addEventListener("install", (event) => {
 // Implement fetch event to handle requests
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
-  
+
   // Handle external URLs (off-origin) - open in system browser
   if (requestUrl.origin !== self.location.origin && event.request.mode === "navigate") {
     event.respondWith(
@@ -44,7 +44,7 @@ self.addEventListener("fetch", (event) => {
     );
     return;
   }
-  
+
   event.respondWith(
     caches.match(event.request).then((response) => {
       // Cache hit - return response
