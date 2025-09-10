@@ -8254,7 +8254,7 @@ rfc 0:
   - rfc
   - standard
 rfc 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.ietf.org%2Frfc%2F%20<query>  http://rfc<query>.txt
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.ietf.org%2Frfc%2F%20<query>
   title: RFC (Request for Comments)
   tags:
   - rfc
