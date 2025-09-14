@@ -5474,6 +5474,14 @@ ieee 1:
 if 1:
   url: https://www.iconfinder.com/search?q=<query>
   title: IconFinder query
+ifi 0: 
+  url: https://www.ifixit.com/
+  title: IFixit Repair Guides
+  description: Search guides on how to repair just about anything
+ifi 1:
+  url: https://www.ifixit.com/Search?doctype=guide&query=<query>
+  title: IFixit Repair Guides
+  description: Search guides on how to repair just about anything
 ig 0:
   include:
   - key: ig 0
