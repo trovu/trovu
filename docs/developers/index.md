@@ -3,6 +3,7 @@
 ## Prerequisites
 
 -   NodeJS >= 18 and <= 21.3
+    -   [How to install a specific version](https://chatgpt.com/share/ef365047-6653-48de-85b1-f7a4565ebfac)
 -   NPM >= 10
 
 ## Configuration
