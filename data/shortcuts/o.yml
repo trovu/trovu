@@ -4671,6 +4671,15 @@ gopkg 1:
     alternative:
       query: go <1>
     created: '2024-05-09'
+gos 2:
+  url: https://www.google.com/search?q=<domain> <query>
+  title: Google Web, only in site
+  tags:
+  - google
+  - web-search
+  examples:
+  - arguments: berlin.de, dance
+    description: Search for "dance" only in berlin.de
 gp 0:
   url: https://play.google.com/store
   title: Google Play
