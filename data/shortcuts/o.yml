@@ -7958,15 +7958,19 @@ pym 2:
   tags:
   - old
 pypi 0:
-  url: https://pypi.python.org/pypi
-  title: Python Package Index (Cheese Shop)
+  url: https://pypi.org/
+  title: Python Package Index
   tags:
-  - old
+  - programming
+  - python
+  examples:
+  - description: Go to the homepage
 pypi 1:
-  url: https://pypi.python.org/pypi?%3Aaction=search&term=<package>&submit=search
-  title: Python Package Index (Cheese Shop)
-  tags:
-  - old
+  url: https://pypi.org/search/?q=<query>
+  include: pypi 0
+  examples:
+  - arguments: requests
+    description: Search for the "requests" package
 pys 0:
   url: https://docs.python.org/library/
   title: Python standard library
