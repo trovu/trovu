@@ -65,6 +65,7 @@ program
   .command("test-shortcuts")
   .description("Test shortcut URLs, write HTML src of failed tests to ./failed-shortcuts/")
   .option("-f, --filter <string>", "only apply to shortcuts containing <string>")
+  .option("-e, --examples", "run smoke tests using examples")
   .option("-v, --verbose", "log fetches and succeeded tests")
   .action(testShortcuts);
 
