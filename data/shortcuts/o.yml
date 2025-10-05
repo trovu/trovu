@@ -8325,6 +8325,19 @@ rman 1:
   examples:
   - arguments: read.table
     description: Show manual about "read.table"
+rmb 0:
+  url: https://rumble.com/
+  title: Rumble
+  tags:
+  - video
+  examples:
+  - description: Go to the homepage
+rmb 1:
+  url: https://rumble.com/search/all?q=<query>
+  include: rmb 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 rn 0:
   include:
   - key: rn 0
