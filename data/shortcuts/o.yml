@@ -755,14 +755,14 @@ ask 1:
   - arguments: berlin
     description: Search for berlin
 atd 0:
-  url: https://archive.is/
+  url: https://archive.ph/
   title: Archive.today
   tags:
   - archive
   - news
   - press
 atd 1:
-  url: https://archive.is/submit/?url=<url>
+  url: https://archive.ph/submit/?url=<url>
   include:
   - key: atd 0
   examples:
@@ -975,7 +975,7 @@ bins 1:
   - arguments: Freeware
     description: Search for "Freeware" in newsgroups
 bkg 0:
-  url: https://www.booking.com/?aid=1303859
+  url: https://www.booking.com/
   title: Booking.com
   tags:
   - hostels
@@ -985,7 +985,7 @@ bkg 0:
   examples:
   - description: Go to the homepage
 bkg 1:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>'
+  url: 'https://www.booking.com/searchresults.html?ss=<location: {type: city}>'
   include:
   - key: bkg 0
   examples:
@@ -998,7 +998,7 @@ bkg 1:
     config:
       country: de
 bkg 2:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.booking.com/searchresults.html?ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>'
   include:
   - key: bkg 0
   examples:
@@ -1009,7 +1009,7 @@ bkg 2:
   - arguments: berlin, fr
     description: Search for hotels in Berlin, checkin on next Friday
 bkg 3:
-  url: 'https://www.booking.com/searchresults.html?aid=1303859&ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
+  url: 'https://www.booking.com/searchresults.html?ss=<location: {type: city}>&checkin=<checkin: {type: date, output: YYYY-MM-DD}>&checkout=<checkout: {type: date, output: YYYY-MM-DD}>'
   include:
   - key: bkg 0
   examples:
@@ -1268,6 +1268,22 @@ ccctv 1:
   examples:
   - arguments: privacy
     description: Search for "privacy"
+ccl 0:
+  url: https://community.chocolatey.org/
+  title: Chocolatey Community
+  tags:
+  - chocolatey
+  - packages
+  - windows
+  examples:
+  - description: Go to the homepage
+  description: Repository of Windows Packages
+ccl 1:
+  url: https://community.chocolatey.org/packages?q=<package>
+  title: Chocolatey Community
+  examples:
+  - arguments: gradle
+    description: Search for the Gradle build tool
 cea 0:
   url: https://eprint.iacr.org/
   title: Cryptology ePrint Archive
@@ -4655,6 +4671,15 @@ gopkg 1:
     alternative:
       query: go <1>
     created: '2024-05-09'
+gos 2:
+  url: https://www.google.com/search?q=<domain> <query>
+  title: Google Web, only in site
+  tags:
+  - google
+  - web-search
+  examples:
+  - arguments: berlin.de, dance
+    description: Search for "dance" only in berlin.de
 gp 0:
   url: https://play.google.com/store
   title: Google Play
@@ -5458,6 +5483,18 @@ ieee 1:
 if 1:
   url: https://www.iconfinder.com/search?q=<query>
   title: IconFinder query
+ifi 0:
+  url: https://www.ifixit.com/
+  title: IFixit Repair Guides
+  examples:
+  - description: Go to the homepage
+  description: Guides on how to repair just about anything.
+ifi 1:
+  url: https://www.ifixit.com/Search?doctype=guide&query=<query>
+  include: ifi 0
+  examples:
+  - arguments: iphone battery
+    description: Search for "iphone battery"
 ig 0:
   include:
   - key: ig 0
@@ -7930,15 +7967,19 @@ pym 2:
   tags:
   - old
 pypi 0:
-  url: https://pypi.python.org/pypi
-  title: Python Package Index (Cheese Shop)
+  url: https://pypi.org/
+  title: Python Package Index
   tags:
-  - old
+  - programming
+  - python
+  examples:
+  - description: Go to the homepage
 pypi 1:
-  url: https://pypi.python.org/pypi?%3Aaction=search&term=<package>&submit=search
-  title: Python Package Index (Cheese Shop)
-  tags:
-  - old
+  url: https://pypi.org/search/?q=<query>
+  include: pypi 0
+  examples:
+  - arguments: requests
+    description: Search for the "requests" package
 pys 0:
   url: https://docs.python.org/library/
   title: Python standard library
@@ -8238,7 +8279,7 @@ rfc 0:
   - rfc
   - standard
 rfc 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.ietf.org%2Frfc%2F%20<query>  http://rfc<query>.txt
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.ietf.org%2Frfc%2F%20<query>
   title: RFC (Request for Comments)
   tags:
   - rfc
@@ -8284,6 +8325,19 @@ rman 1:
   examples:
   - arguments: read.table
     description: Show manual about "read.table"
+rmb 0:
+  url: https://rumble.com/
+  title: Rumble
+  tags:
+  - video
+  examples:
+  - description: Go to the homepage
+rmb 1:
+  url: https://rumble.com/search/all?q=<query>
+  include: rmb 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 rn 0:
   include:
   - key: rn 0

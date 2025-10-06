@@ -164,6 +164,10 @@
       </nav>
     </header>
     <main class="container">
+      <div class="explainer">
+        <h3 class="tagline"><span>Web Search as If From Your Cmdline</span></h3>
+        <div class="subtagline">(!bangs but better)</div>
+      </div>
       <section class="jumbotron text-center bg-white">
         <div hidden id="alert" class="alert alert-warning" role="alert">
           <span></span>
@@ -180,7 +184,7 @@
               autocapitalize="off"
               autocomplete="off"
               spellcheck="false"
-              placeholder="Type a letter for suggestions."
+              placeholder="keyword arg1, arg2…"
             />
             <div class="input-group-append">
               <button type="submit" class="btn btn-primary">
@@ -192,29 +196,53 @@
         <div id="help"></div>
       </section>
       <div id="suggestions" class="container"></div>
-      <div id="explainer" class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div id="typewriter">
-              <span class="query"></span>
-              <span class="description"></span>
-            </div>
-          </div>
+      <div class="explainer">
+        <div class="intro">
+          <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc">
+            <img class="sketch" src="/img/sketch.svg" alt="" />
+          </a>
+        </div>
+        <div class="examples">
+          <h2>Examples</h2>
+          <dl>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc">gfl ber, nyc</a>
+            </dt>
+            <dd>Search on Google Flights for a flight from Berlin to New York City</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc%2C%20fr%2C%2028"
+                >gfl ber, nyc, fr, 28</a
+              >
+            </dt>
+            <dd>… leaving next Friday, returning on the 28th</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=gd%20london%2C%20liverpool">gd london, liverpool</a>
+            </dt>
+            <dd>Search for a route on Google Directions from London to Liverpool</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=g%20berlin">g berlin</a>
+            </dt>
+            <dd>Search Google for Berlin</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=w%20berlin">w berlin</a>
+            </dt>
+            <dd>Go to the Wikipedia article about Berlin</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=fr.w%20berlin">fr.w berlin</a>
+            </dt>
+            <dd>Go to the French Wikipedia article about Berlin</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=wg%20berlin">wg berlin</a>
+            </dt>
+            <dd>Search Wikipedia for all mentions of "berlin" via Google</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=npm%20csv">npm csv</a>
+            </dt>
+            <dd>Search the Node Package Manager for modules projects about CSV</dd>
+          </dl>
         </div>
         <div class="intro row">
-          <div class="col-sm-4">
-            <h2>Get started</h2>
-            <ol>
-              <li>Type a <strong>keyword</strong>: <code>gfl</code></li>
-              <li>Add <strong>search terms</strong>: <code>berlin, nyc</code></li>
-              <li>
-                Hit Enter. You'll see Google Flights from Berlin to NYC:
-
-                <a href="/process/?#query=gfl%20berlin,nyc">gfl berlin, nyc</a>
-              </li>
-            </ol>
-          </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <h2>Get more</h2>
             <ul>
               <li>
@@ -223,7 +251,7 @@
               </li>
               <li>
                 Read
-                <a target="_blank" href="http://127.0.0.1:8081/blog/tags/testimonial/">how people use Trovu</a>.
+                <a target="_blank" href="{{urlBlog}}tags/testimonial/">how people use Trovu</a>.
               </li>
               <li>
                 Get <strong>support</strong> with the
@@ -232,7 +260,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <h2>Get advanced</h2>
             <ul>
               <li>
@@ -254,6 +282,7 @@
           </div>
         </div>
       </div>
+
       <div id="lists">
         <div class="row">
           <div class="col-sm-4">

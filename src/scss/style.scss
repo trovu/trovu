@@ -4,6 +4,9 @@ body {
   margin: 0;
 }
 
+html {
+  display: none;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -121,16 +124,54 @@ span.highlight {
   box-decoration-break: clone;
 }
 
-#explainer {
+.explainer {
   display: none;
   padding: 0;
-  #typewriter {
-    text-align: left;
-    margin: 0.5em 1em;
-    height: 3em;
-    .description {
-      color: #666;
+  h3 {
+    margin-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: #aaa;
+    font-size: 1.2em;
+  }
+  .tagline span {
+    white-space: nowrap;
+  }
+  .subtagline {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  img.sketch {
+    width: 100%;
+    max-width: 25em;
+    height: auto;
+    margin: 3em auto;
+    padding: 0 0.5em;
+    display: block;
+  }
+  .examples {
+    dl {
+      padding: 5px;
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .cta {
+      text-align: center;
       font-style: italic;
+      color: #818182;
+    }
+    dt,
+    dd {
+      margin: 0;
+      padding: 0.3em 0;
+      border-top: 1px solid #eee;
+    }
+    dt {
+      font-weight: normal;
+      padding-right: 1em;
+      text-align: right;
     }
   }
 }
