@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - 544-disable-autocorrection-in-query-input
   pull_request:
     branches:
       - master
