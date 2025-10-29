@@ -4827,6 +4827,21 @@ grk 1:
   examples:
   - arguments: What is the meaning of life?
     description: Search for "What is the meaning of life?"
+grkp 0:
+  url: https://grokipedia.com/
+  title: Grokipedia
+  tags:
+  - ai
+  - encyclopedia
+  examples:
+  - description: Go to the homepage
+  description: Knowledge base that uses AI.
+grkp 1:
+  url: https://grokipedia.com/search?q=<query>
+  include: grkp 0
+  examples:
+  - arguments: quantum computing
+    description: Search for "quantum computing"
 grnd 0:
   url: https://ground.news/
   title: Ground News
