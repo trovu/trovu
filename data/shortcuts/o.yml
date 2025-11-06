@@ -4862,7 +4862,7 @@ grp 0:
   description: Knowledge base that uses AI.
 grp 1:
   url: https://grokipedia.com/search?q=<query>
-  include: grkp 0
+  include: grp 0
   examples:
   - arguments: quantum computing
     description: Search for "quantum computing"
