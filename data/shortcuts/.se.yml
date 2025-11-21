@@ -46,6 +46,20 @@ enr 1:
     description: Sök efter telefonnummer "0701234567"
   - arguments: johansson
     description: Sök efter person "johansson"
+g 0:
+  url: https://www.google.se/
+  title: Google.se
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Gå till startsidan
+g 1:
+  url: https://www.google.se/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
+  examples:
+  - arguments: stockholm
+    description: Sök efter "stockholm"
 jw 1:
   url: https://www.justwatch.com/se/search?q=<query>
   include:
