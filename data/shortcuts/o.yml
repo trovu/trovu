@@ -4672,7 +4672,7 @@ gopkg 1:
       query: go <1>
     created: '2024-05-09'
 gos 2:
-  url: https://www.google.com/search?q=<domain> <query>
+  url: https://www.google.com/search?q=site:<domain> <query>
   title: Google Web, only in site
   tags:
   - google
