@@ -7090,6 +7090,20 @@ om 1:
   include:
   - key: om 1
     namespace: pka
+oopdf 0:
+  url: https://oceanofpdf.com/
+  title: Ocean of PDF
+  tags:
+  - ebooks
+  - library
+  examples:
+  - description: Go to the homepage
+oopdf 1:
+  url: https://oceanofpdf.com/?s=<query>
+  include: oopdf 0
+  examples:
+  - arguments: machine learning
+    description: Search for books about "machine learning"
 openbsd 1:
   url: https://man.openbsd.org/<query>
   title: OpenBSD Manual Pages
