@@ -4955,6 +4955,15 @@ gsp 1:
   examples:
   - arguments: doom
     description: Search for "doom"
+gss 1:
+  url: https://www.google.com/search?hl=<$language>&q=site%3A<site>
+  title: Google Web, search only on site
+  tags:
+  - google
+  - web-search
+  examples:
+  - arguments: cnn.com
+    description: Show all pages of cnn.com
 gss 2:
   url: https://www.google.com/search?hl=<$language>&q=site%3A<site>%20<query>
   title: Google Web, search only on site
