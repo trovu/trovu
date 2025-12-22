@@ -83,7 +83,7 @@ ao 0:
   examples:
   - description: Gehe zu meinen Amazon-Bestellungen
 ao 1:
-  url: https://www.amazon.de/gp/your-account/order-history/ref=ppx_yo_dt_b_search?search=<query>
+  url: https://www.amazon.de/your-orders/search/?search=<query>
   include: ao 0
   examples:
   - arguments: goethe
