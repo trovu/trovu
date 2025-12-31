@@ -5995,6 +5995,12 @@ kg 1:
   examples:
   - arguments: trovu
     description: Kagi search for "trovu"
+kgi 0:
+  url: https://kagi.com/images
+  title: Kagi Image Search
+kgi 1:
+  url: https://kagi.com/images?q=<query>
+  include: kgi 0
 ki 0:
   include:
   - key: ki 0
