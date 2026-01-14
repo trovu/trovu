@@ -1192,6 +1192,21 @@ bv 1:
 c3tv 0:
   url: https://media.ccc.de/
   title: 'CCC-TV: Chaos Computer Club Media'
+c7 0:
+  url: https://context7.com/
+  title: Context 7
+  tags:
+  - programming
+  - search-engine
+  examples:
+  - description: Go to the homepage
+  description: Search engine for programming related content.
+c7 1:
+  url: https://context7.com/?q=<query>
+  include: c7 0
+  examples:
+  - arguments: javascript
+    description: Search for "javascript"
 ca 0:
   include:
   - key: ca 0
