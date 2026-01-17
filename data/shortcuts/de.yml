@@ -1133,11 +1133,8 @@ kowi 1:
     description: Suche nach "Kartoffelsalat"
 kowig 1:
   url: https://www.google.com/search?hl=<$language>&q=site:kochwiki.org+<Suche>
-  include: kowi 0
+  include: kowi 1
   title: Koch-Wiki via Google
-  examples:
-  - arguments: Kartoffelsalat
-    description: Suche nach "Kartoffelsalat"
 kw 1:
   deprecated:
     alternative:
