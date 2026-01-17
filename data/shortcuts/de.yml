@@ -1118,6 +1118,16 @@ kicker 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
+kowi 0:
+  url: https://www.kochwiki.org/
+  title: Koch-Wiki
+  tags:
+  - cooking
+  - recipes
+kowi 1:
+  url: https://www.google.com/search?hl=<$language>&q=site:kochwiki.org+<Suche>
+  include: kowi 0
+  title: Koch-Wiki via Google
 kw 1:
   deprecated:
     alternative:
