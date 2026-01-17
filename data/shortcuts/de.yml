@@ -1125,9 +1125,19 @@ kowi 0:
   - cooking
   - recipes
 kowi 1:
+  url: https://www.kochwiki.org/index.php?search=<Suche>&fulltext=1
+  include: kowi 0
+  title: Koch-Wiki Suche
+  examples:
+  - arguments: Kartoffelsalat
+    description: Suche nach "Kartoffelsalat"
+kowig 1:
   url: https://www.google.com/search?hl=<$language>&q=site:kochwiki.org+<Suche>
   include: kowi 0
   title: Koch-Wiki via Google
+  examples:
+  - arguments: Kartoffelsalat
+    description: Suche nach "Kartoffelsalat"
 kw 1:
   deprecated:
     alternative:
