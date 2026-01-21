@@ -14,36 +14,52 @@ export default class ShortcutTester {
     };
   }
 
-  testShortcuts() {
+  public async testShortcuts() {
     for (const namespace in this.env.data.shortcuts) {
       for (const key in this.env.data.shortcuts[namespace]) {
+        if (!this.filterShortcut(namespace, key)) {
+          continue;
+        }
         const shortcut = this.env.data.shortcuts[namespace][key];
-        if (shortcut.tests && Array.isArray(shortcut.tests) && this.filterShortcut(namespace, key)) {
+        if (shortcut.tests && Array.isArray(shortcut.tests)) {
           shortcut.tests.forEach((test) => {
             const url = this.prepareUrl(shortcut, test.arguments);
             this.fetchAndTestUrl(namespace, key, url, test.expect);
           });
+        } else if (this.options.examples && shortcut.examples && Array.isArray(shortcut.examples)) {
+          shortcut.examples.forEach((example) => {
+            const url = this.prepareUrl(shortcut, example.arguments);
+            this.fetchAndTestUrl(namespace, key, url, '.');
+          });
         }
+        // TODO: throttling should be based on the number of currently active concurrent requests instead of a fixed pause.
+        // Best would be to additionally throttle the requests per destination server to prevent "too many request" responses.
+        await new Promise((resolve) => setTimeout(resolve, 20));
       }
     }
   }
 
-  filterShortcut(namespace, key) {
+  private filterShortcut(namespace, key) {
     return this.options.filter ? `${namespace}.${key}`.includes(this.options.filter) : true;
   }
 
-  prepareUrl(shortcut, testArguments) {
+  private prepareUrl(shortcut, testArguments) {
+    // TODO: Some arguments (like for .de.dhl 1 or .de.gls 1) are defined as numbers instead of strings in the YAML files. This seems actually to be a data problem?
+    let testArgumentsString = typeof testArguments === 'number' ? testArguments.toString() : testArguments;
     let url = shortcut.url;
-    const args = QueryParser.getArguments(testArguments);
+    const args = QueryParser.getArguments(testArgumentsString);
     url = UrlProcessor.replaceVariables(url, this.env);
     url = UrlProcessor.replaceArguments(url, args, this.env);
     return url;
   }
 
-  fetchAndTestUrl(namespace, key, url, testExpect) {
+  private fetchAndTestUrl(namespace, key, url, testExpect) {
     if (this.options.verbose) {
       console.log(`${namespace}.${key}\t⏳ ${url}`);
     }
+    const printError = (message) => {
+      console.log(`${namespace}.${key}\t❌ ${message} - ${url}`);
+    };
     fetch(url, {
       headers: {
         "User-Agent":
@@ -52,7 +68,7 @@ export default class ShortcutTester {
     })
       .then((response) => {
         if (!response.ok) {
-          console.log(`${namespace}.${key}\t❌ failed with HTTP error code ${response.status}: ${response.statusText}`);
+          printError(`failed with HTTP error code ${response.status}: ${response.statusText}`);
           return undefined;
         }
         return response.text();
@@ -67,13 +83,41 @@ export default class ShortcutTester {
             console.log(`${namespace}.${key}\t✅ passed`);
           }
         } else {
-          console.log(`${namespace}.${key}\t❌ failed to find "${testExpect}"`);
+          printError(`failed to find "${testExpect}"`);
           if (!fs.existsSync("failed-shortcuts")) {
             fs.mkdirSync("failed-shortcuts");
           }
           fs.writeFileSync(`failed-shortcuts/${namespace}.${key}.html`, text, "utf8");
         }
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        switch (error.cause.code) {
+          case 'UND_ERR_CONNECT_TIMEOUT':
+            printError('failed to connect to server');
+            break;
+          case 'ECONNRESET':
+            printError('connection was reset');
+            break;
+          case 'UND_ERR_SOCKET':
+            printError('SocketError: other side closed');
+          case 'ENOTFOUND':
+            printError(`hostname (${error.cause.hostname}) not found`);
+            break;
+          case 'CERT_HAS_EXPIRED':
+            printError('TLS: certificate has expired');
+            break;
+          case 'ERR_TLS_CERT_ALTNAME_INVALID':
+            printError('TLS: certificate uses an invalid altname');
+            break;
+          case 'UNABLE_TO_VERIFY_LEAF_SIGNATURE':
+            printError('TLS: unable to verify the first certificate');
+          case 'ERR_INVALID_URL':
+            printError('an invalid url was generated');
+            break;
+          default:
+            console.error(error);
+            break;
+        }
+      });
   }
 }
