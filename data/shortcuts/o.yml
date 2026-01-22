@@ -234,7 +234,7 @@ abp 0:
   - tools
   removed: '2023-01-14'
 acl 0:
-  url: https://www.aclweb.org/anthology/
+  url: https://www.aclanthology.org/
   title: ACL Anthology
   tags:
   - academia
@@ -249,13 +249,13 @@ acl 0:
   - description: Go to the homepage
   description: The ACL Anthology hosts papers on the study of computational linguistics and natural language processing.
 acl 1:
-  url: https://www.aclweb.org/anthology/search/?q=<query>
+  url: https://www.aclanthology.org/search/?q=<query>
   include: acl 0
   examples:
   - arguments: machine translation
     description: search for machine translation in the ACL Anthology
 aclg 1:
-  url: https://www.google.com/search?hl=<$language>&q=site:aclweb.org%20<query>&ie=utf-8
+  url: https://www.google.com/search?hl=<$language>&q=site:aclanthology.org%20<query>&ie=utf-8
   title: ACL Anthology via Google
   include: acl 1
 aclw 0:
