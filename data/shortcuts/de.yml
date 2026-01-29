@@ -1260,6 +1260,16 @@ mema 1:
   examples:
   - arguments: visor
     description: Suche nach Informationen zu VISOR
+mi 0:
+  url: https://metager.de/?focus=bilder
+  title: MetaGer Bildersuche
+  include: m 0
+mi 1:
+  url: https://metager.de/meta/meta.ger3?pers=yes&sprueche=on&lang=all&mm=and-stop&ui=de&QuickTips=yes&langfilter=yes&encoding=utf8&maps=on&focus=bilder&eingabe=<Suche>
+  include: mi 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Bildern zu "berlin"
 morgenpost 0:
   url: https://www.morgenpost.de/
   title: Berliner Morgenpost Archiv
