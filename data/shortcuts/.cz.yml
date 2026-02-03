@@ -196,6 +196,33 @@ mapy 1:
     alternative:
       query: m <1>
     created: '2023-12-18'
+pid 0:
+  url: https://pid.cz/hledani-spojeni/
+  title: PID Spojení
+  tags:
+  - pid
+  - transport
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Vyhledávání spojení ve veřejné dopravě v Praze a okolí.
+pid 2:
+  url: https://pid.cz/hledani-spojeni/?transports%5B%5D=metro&transports%5B%5D=vlak&transports%5B%5D=tram&transports%5B%5D=bus&transports%5B%5D=trolley&transports%5B%5D=privoz&transports%5B%5D=lan&from=<odkud>&to=<kam>
+  include: pid 0
+  examples:
+  - arguments: anděl, florenc
+    description: Spojení z Anděla na Florenc
+pid 3:
+  url: 'https://pid.cz/hledani-spojeni/?transports%5B%5D=metro&transports%5B%5D=vlak&transports%5B%5D=tram&transports%5B%5D=bus&transports%5B%5D=trolley&transports%5B%5D=privoz&transports%5B%5D=lan&from=<odkud>&to=<kam>&time=<čas: {type: time, output: HH:mm}>'
+  include: pid 0
+  examples:
+  - arguments: anděl, florenc, 15:30
+    description: Spojení z Anděla na Florenc v 15:30
+pid 4:
+  url: 'https://pid.cz/hledani-spojeni/?transports%5B%5D=metro&transports%5B%5D=vlak&transports%5B%5D=tram&transports%5B%5D=bus&transports%5B%5D=trolley&transports%5B%5D=privoz&transports%5B%5D=lan&from=<odkud>&to=<kam>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>'
+  include: pid 0
+  examples:
+  - arguments: anděl, florenc, 15:30, 10.12
+    description: Spojení z Anděla na Florenc v 15:30 dne 10.12.
 seznam 1:
   deprecated:
     alternative:
