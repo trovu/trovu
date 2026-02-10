@@ -1437,12 +1437,22 @@ cl 0:
 cl 1:
   url: https://www.colourlovers.com/colors/search?query=<color>
   include: cl 0
-claude 0:
+cld 0:
   url: https://claude.ai/
-  title: Query Claude AI
-claude 1:
+  title: Claude AI
+  tags:
+  - ai
+  - claude
+  - llm
+  examples:
+  - description: Go to the homepage
+  description: Chat with Anthropic's Claude AI
+cld 1:
   url: https://claude.ai/new?q=<query>
-  title: Query Claude AI
+  include: cld 0
+  examples:
+  - arguments: What is the meaning of life?
+    description: Ask Claude AI about the meaning of life
 clpal 1:
   url: https://www.colourlovers.com/palettes/search?query=<query>
   title: COLOURlovers palette search
