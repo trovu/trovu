@@ -31,6 +31,7 @@ const template = (templateFilePath) => {
     const placeholders = {
       urlBlog: config.url.blog,
       urlDocs: config.url.docs,
+      urlImpressum: config.url.impressum,
       fileNameJs: fileNameJs,
       currentTimestamp: new Date().toISOString(),
     };
