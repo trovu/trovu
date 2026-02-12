@@ -2191,6 +2191,20 @@ debian-wiki 0:
     alternative:
       query: debw
     created: '2024-11-25'
+debm 0:
+  url: https://manpages.debian.org/
+  title: Debian Manpages
+  tags:
+  - debian
+debm 1:
+  url: https://manpages.debian.org/jump?q=<manpage>
+  include: debm 0
+  examples:
+  - arguments: apt-get
+    description: Look up manpage for apt-get
+  tests:
+  - arguments: apt-get
+    expect: 'APT package handling utility'
 debp 0:
   url: https://planet.debian.org/
   title: Debian Planet
