@@ -99,4 +99,30 @@ describe("Env", () => {
       reload: true,
     });
   });
+
+  describe("isExternalUrl", () => {
+    beforeAll(() => {
+      // Mock window.location.origin
+      Object.defineProperty(window, "location", {
+        value: { origin: "https://trovu.net" },
+        writable: true,
+      });
+    });
+
+    test("returns true for external URLs", () => {
+      expect(Env.isExternalUrl("https://google.com")).toBe(true);
+      expect(Env.isExternalUrl("https://www.youtube.com/watch?v=123")).toBe(true);
+      expect(Env.isExternalUrl("https://maps.google.com")).toBe(true);
+    });
+
+    test("returns false for internal URLs", () => {
+      expect(Env.isExternalUrl("https://trovu.net/process/index.html")).toBe(false);
+      expect(Env.isExternalUrl("/process/index.html")).toBe(false);
+      expect(Env.isExternalUrl("../index.html")).toBe(false);
+    });
+
+    test("returns false for invalid URLs", () => {
+      expect(Env.isExternalUrl("")).toBe(false);
+    });
+  });
 });
