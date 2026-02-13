@@ -455,4 +455,34 @@ export default class Env {
   isRunningStandalone() {
     return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
   }
+
+  /**
+   * Check if a URL is external (different origin from the current page).
+   *
+   * @param {string} url - The URL to check.
+   * @returns {boolean} - True if the URL is external.
+   */
+  static isExternalUrl(url) {
+    try {
+      const urlObj = new URL(url, window.location.origin);
+      return urlObj.origin !== window.location.origin;
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Navigate to a URL, opening external URLs in the default browser when running as PWA.
+   *
+   * @param {string} url - The URL to navigate to.
+   * @param {boolean} isStandalone - Whether the app is running in standalone (PWA) mode.
+   */
+  static navigateTo(url, isStandalone) {
+    if (isStandalone && Env.isExternalUrl(url)) {
+      // Open external URLs in default browser when running as PWA
+      window.open(url, "_blank");
+    } else {
+      window.location.replace(url);
+    }
+  }
 }
