@@ -253,7 +253,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    Env.navigateTo(redirectUrl, this.env.isRunningStandalone());
   };
 
   /**
