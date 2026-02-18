@@ -6,8 +6,7 @@ on:
   pull_request:
     branches:
       - master
-    types: [labeled]
-  workflow_dispatch:
+    workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -45,13 +44,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: |
-      github.repository == 'trovu/trovu' && 
-      (github.event_name == 'push' || github.event.label.name == 'deploy')
+    if: github.repository == 'trovu/trovu' && github.event_name == 'push'
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/download-artifact@v4
         with:
           name: public-directory
