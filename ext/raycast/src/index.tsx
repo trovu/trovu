@@ -37,10 +37,10 @@ import { useCallback, useMemo } from "react";
 export default function Command() {
   const prefs = getPreferenceValues<Preferences>();
   const [cachedPrefs, setCachedPrefs] = useCachedState<Preferences>("prefs");
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState<string>("");
   const [env, setEnv] = useCachedState<Env | null>("env", null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
-  const [isShowingDetail, setIsShowingDetail] = useState(true);
+  const [isShowingDetail, setIsShowingDetail] = useState<boolean>(true);
 
   // Memoize buildTrovuUrl to avoid recreating on every render
   const buildTrovuUrl = useCallback(
