@@ -86,7 +86,10 @@ ${examples || ""}
           title="Send Query"
           onAction={async () => {
             if (searchText === "reload") {
+              showToast(Toast.Style.Animated, "Reloading environment...");
               setEnv(null);
+              setSearchText("");
+              return;
             }
             Env.fetchLog("raycast", "https://trovu.net/");
             await open(buildTrovuUrl(searchText));
