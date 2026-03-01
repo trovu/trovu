@@ -36,6 +36,11 @@
     "we-run-firefox": "web-ext run --source-dir src/web-ext/",
     "we-zip-chrome": "cd src/web-ext && zip -r web-ext.zip . && mv web-ext.zip ../../dist/"
   },
+  "overrides": {
+    "@rollup/plugin-terser": {
+      "serialize-javascript": "^7.0.3"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trovu/trovu.git"
