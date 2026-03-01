@@ -141,12 +141,14 @@ ${examples || ""}
     };
   }, [prefs, setCachedPrefs, setEnv]);
 
+  // Memoize SuggestionsGetter
+  const suggestionsGetter = useMemo(() => (env ? new SuggestionsGetter(env) : null), [env]);
+
   // Filter suggestions when env or searchText changes
   useEffect(() => {
-    if (!env) return;
-    const suggestionsGetter = new SuggestionsGetter(env);
+    if (!suggestionsGetter) return;
     setSuggestions(suggestionsGetter.getSuggestions(searchText).slice(0, 50));
-  }, [searchText, env]);
+  }, [searchText, suggestionsGetter]);
 
   if (!env || !env.data || !env.data.shortcuts) {
     return (
