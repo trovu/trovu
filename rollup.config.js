@@ -10,7 +10,6 @@ import fs from "fs";
 import copy from "rollup-plugin-copy";
 import execute from "rollup-plugin-execute";
 import scss from "rollup-plugin-scss";
-import watch from "rollup-plugin-watch";
 
 const isProduction = process.env.BUILD === "production";
 
@@ -75,9 +74,6 @@ export default [
     input: "src/ts/index.ts",
     output: output,
     plugins: [
-      watch({ dir: "src/html/" }),
-      watch({ dir: "src/img/" }),
-      watch({ dir: "data/" }),
       resolve(),
       commonjs(),
       json(),

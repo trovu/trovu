@@ -36,6 +36,11 @@
     "we-run-firefox": "web-ext run --source-dir src/web-ext/",
     "we-zip-chrome": "cd src/web-ext && zip -r web-ext.zip . && mv web-ext.zip ../../dist/"
   },
+  "overrides": {
+    "@rollup/plugin-terser": {
+      "serialize-javascript": "^7.0.3"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trovu/trovu.git"
@@ -53,7 +58,7 @@
   },
   "homepage": "https://trovu.net/",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^3.1.8",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
@@ -98,7 +103,6 @@
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-execute": "^1.1.1",
     "rollup-plugin-scss": "^4.0.0",
-    "rollup-plugin-watch": "^1.0.4",
     "sass": "^1.39.0",
     "ts-jest": "^29.3.1",
     "ts-node": "^10.9.2",
