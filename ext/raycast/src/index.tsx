@@ -139,7 +139,7 @@ ${examples || ""}
     return () => {
       cancelled = true;
     };
-  }, [prefs, cachedPrefs, setCachedPrefs, setEnv, env]);
+  }, [prefs, setCachedPrefs, setEnv]);
 
   // Filter suggestions when env or searchText changes
   useEffect(() => {
