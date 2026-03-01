@@ -32,6 +32,8 @@ interface Suggestion {
   url: string;
 }
 
+import { useCallback, useMemo } from "react";
+
 export default function Command() {
   const prefs = getPreferenceValues<Preferences>();
   const [cachedPrefs, setCachedPrefs] = useCachedState<Preferences>("prefs");
@@ -39,60 +41,31 @@ export default function Command() {
   const [env, setEnv] = useCachedState<Env | null>("env", null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState(true);
-  let isBuildingEnv = false;
 
-  useEffect(() => {
-    if (isBuildingEnv) {
-      return;
-    }
-    if (isEqual(prefs, cachedPrefs)) {
-      return;
-    }
-    isBuildingEnv = true;
+  // Memoize buildTrovuUrl to avoid recreating on every render
+  const buildTrovuUrl = useCallback(
+    (query: string) => {
+      const encodedQuery = encodeURIComponent(query);
+      const base = "https://trovu.net/process/index.html?#";
+      return prefs.github
+        ? `${base}github=${prefs.github}&query=${encodedQuery}`
+        : `${base}country=${prefs.country}&language=${prefs.language}&query=${encodedQuery}`;
+    },
+    [prefs],
+  );
 
-    setCachedPrefs(prefs);
-    const initializeEnv = async () => {
-      try {
-        const builtEnv = new Env({ context: "raycast" });
-        const params: Record<string, string> = prefs.github
-          ? { github: prefs.github }
-          : {
-              language: prefs.language,
-              country: prefs.country,
-            };
-        await builtEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
-        setEnv(builtEnv);
-      } catch (error) {
-        console.error("Error initializing Env:", error);
-        showToast(Toast.Style.Failure, "Failed to initialize environment, check your connection.");
-      } finally {
-        isBuildingEnv = false;
-      }
-    };
-    initializeEnv();
-  }, [prefs]);
-
-  useEffect(() => {
-    if (env) filterShortcuts();
-  }, [searchText, env]);
-
-  const filterShortcuts = () => {
-    if (env) {
-      const suggestionsGetter = new SuggestionsGetter(env);
-      setSuggestions(suggestionsGetter.getSuggestions(searchText).slice(0, 50));
-    }
-  };
-
-  const renderSuggestionDetail = (suggestion: Suggestion) => {
-    if (!suggestion || !env) return "";
-    const examples = suggestion.examples
-      ?.map((example) => {
-        const query =
-          `${(!suggestion.reachable ? suggestion.namespace + "." : "") + suggestion.keyword} ${example.arguments ?? ""}`.trim();
-        return `- [\`${query}\`](${buildTrovuUrl(query)}) ${example.description}`;
-      })
-      .join("\n");
-    return `
+  // Memoize renderSuggestionDetail
+  const renderSuggestionDetail = useCallback(
+    (suggestion: Suggestion) => {
+      if (!suggestion || !env) return "";
+      const examples = suggestion.examples
+        ?.map((example) => {
+          const query =
+            `${(!suggestion.reachable ? suggestion.namespace + "." : "") + suggestion.keyword} ${example.arguments ?? ""}`.trim();
+          return `- [\`${query}\`](${buildTrovuUrl(query)}) ${example.description}`;
+        })
+        .join("\n");
+      return `
 ## ${suggestion.title}
 
 \`${(!suggestion.reachable ? suggestion.namespace + "." : "") + (suggestion.keyword + " " + suggestion.argumentString).trim()}\`
@@ -100,43 +73,77 @@ export default function Command() {
 ${suggestion.description ? `_${suggestion.description}_` : ""}
     
 ${examples || ""}
-    `;
-  };
-
-  const toggleDetail = () => setIsShowingDetail((prev) => !prev);
-
-  const customActions = (suggestion: Suggestion | null) => (
-    <ActionPanel>
-      <Action
-        title="Send Query"
-        onAction={async () => {
-          if (searchText === "reload") {
-            // Set env to null to trigger a reload on useEffect.
-            setEnv(null);
-          }
-          Env.fetchLog("raycast", "https://trovu.net/");
-          await open(buildTrovuUrl(searchText));
-        }}
-      />
-      <Action
-        title={isShowingDetail ? "Hide Details" : "Show Details"}
-        onAction={toggleDetail}
-        shortcut={{ modifiers: [], key: "tab" }}
-      />
-      {suggestion && suggestion.namespace && suggestion.namespace.length <= 3 && (
-        <>
-          <Action.OpenInBrowser
-            title="Edit Shortcut"
-            url={`https://github.com/trovu/trovu/search?q=${suggestion.keyword}+${suggestion.argumentCount}+path%3Adata/shortcuts/${suggestion.namespace}.yml`}
-          />
-          <Action.OpenInBrowser
-            title="Report Problem"
-            url={`https://github.com/trovu/trovu/issues/new?title=Problem%20with%20shortcut%20%60${suggestion.namespace}.${suggestion.keyword}%20${suggestion.argumentCount}%60`}
-          />
-        </>
-      )}
-    </ActionPanel>
+      `;
+    },
+    [env, buildTrovuUrl],
   );
+
+  // Memoize customActions
+  const customActions = useCallback(
+    (suggestion: Suggestion | null) => (
+      <ActionPanel>
+        <Action
+          title="Send Query"
+          onAction={async () => {
+            if (searchText === "reload") {
+              setEnv(null);
+            }
+            Env.fetchLog("raycast", "https://trovu.net/");
+            await open(buildTrovuUrl(searchText));
+          }}
+        />
+        <Action
+          title={isShowingDetail ? "Hide Details" : "Show Details"}
+          onAction={() => setIsShowingDetail((prev) => !prev)}
+          shortcut={{ modifiers: [], key: "tab" }}
+        />
+        {suggestion && suggestion.namespace && suggestion.namespace.length <= 3 && (
+          <>
+            <Action.OpenInBrowser
+              title="Edit Shortcut"
+              url={`https://github.com/trovu/trovu/search?q=${suggestion.keyword}+${suggestion.argumentCount}+path%3Adata/shortcuts/${suggestion.namespace}.yml`}
+            />
+            <Action.OpenInBrowser
+              title="Report Problem"
+              url={`https://github.com/trovu/trovu/issues/new?title=Problem%20with%20shortcut%20%60${suggestion.namespace}.${suggestion.keyword}%20${suggestion.argumentCount}%60`}
+            />
+          </>
+        )}
+      </ActionPanel>
+    ),
+    [searchText, isShowingDetail, buildTrovuUrl, setEnv],
+  );
+
+  // Only rebuild env if prefs changed
+  useEffect(() => {
+    // Rebuild env if prefs changed or env is null (first load)
+    if (isEqual(prefs, cachedPrefs) && env) return;
+    setCachedPrefs(prefs);
+    let cancelled = false;
+    (async () => {
+      try {
+        const builtEnv = new Env({ context: "raycast" });
+        const params: Record<string, string> = prefs.github
+          ? { github: prefs.github }
+          : { language: prefs.language, country: prefs.country };
+        await builtEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+        if (!cancelled) setEnv(builtEnv);
+      } catch (error) {
+        console.error("Error initializing Env:", error);
+        showToast(Toast.Style.Failure, "Failed to initialize environment, check your connection.");
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [prefs, cachedPrefs, setCachedPrefs, setEnv, env]);
+
+  // Filter suggestions when env or searchText changes
+  useEffect(() => {
+    if (!env) return;
+    const suggestionsGetter = new SuggestionsGetter(env);
+    setSuggestions(suggestionsGetter.getSuggestions(searchText).slice(0, 50));
+  }, [searchText, env]);
 
   if (!env || !env.data || !env.data.shortcuts) {
     return (
@@ -145,14 +152,6 @@ ${examples || ""}
       </List>
     );
   }
-  const buildTrovuUrl = (query: string) => {
-    const encodedQuery = encodeURIComponent(query);
-    const base = "https://trovu.net/process/index.html?#";
-    const url = prefs.github
-      ? `${base}github=${prefs.github}&query=${encodedQuery}`
-      : `${base}country=${prefs.country}&language=${prefs.language}&query=${encodedQuery}`;
-    return url;
-  };
 
   return (
     <List
