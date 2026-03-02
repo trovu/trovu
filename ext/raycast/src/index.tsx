@@ -4,6 +4,7 @@ import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open 
 import { useState, useEffect } from "react";
 import { useCachedState } from "@raycast/utils";
 import Env from "./core/src/ts/modules/Env";
+import CallHandler from "./core/src/ts/modules/CallHandler";
 import SuggestionsGetter from "./core/src/ts/modules/SuggestionsGetter";
 import { markdowns } from "./markdowns";
 import { isEqual } from "lodash";
