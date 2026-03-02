@@ -4,6 +4,7 @@ import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open 
 import { useState, useEffect } from "react";
 import { useCachedState } from "@raycast/utils";
 import Env from "./core/src/ts/modules/Env";
+import CallHandler from "./core/src/ts/modules/CallHandler";
 import SuggestionsGetter from "./core/src/ts/modules/SuggestionsGetter";
 import { markdowns } from "./markdowns";
 import { isEqual } from "lodash";
@@ -91,8 +92,18 @@ ${examples || ""}
               setSearchText("");
               return;
             }
-            Env.fetchLog("raycast", "https://trovu.net/");
-            await open(buildTrovuUrl(searchText));
+            const envQuery = new Env({ context: "raycast" });
+            const params: Record<string, string> = prefs.github
+              ? { github: prefs.github }
+              : { language: prefs.language, country: prefs.country };
+            params.query = searchText;
+            await envQuery.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+            const response = CallHandler.getRedirectResponse(envQuery);
+            if (response.status === "found" && response.redirectUrl) {
+              await open(response.redirectUrl);
+            } else {
+              showToast(Toast.Style.Failure, "No matching shortcut found.");
+            }
           }}
         />
         <Action
@@ -114,7 +125,7 @@ ${examples || ""}
         )}
       </ActionPanel>
     ),
-    [searchText, isShowingDetail, buildTrovuUrl, setEnv],
+    [searchText, isShowingDetail, prefs, setEnv],
   );
 
   // Only rebuild env if prefs changed
