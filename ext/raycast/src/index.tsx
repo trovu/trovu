@@ -92,18 +92,8 @@ ${examples || ""}
               setSearchText("");
               return;
             }
-            const envQuery = new Env({ context: "raycast" });
-            const params: Record<string, string> = prefs.github
-              ? { github: prefs.github }
-              : { language: prefs.language, country: prefs.country };
-            params.query = searchText;
-            await envQuery.populate(params, { removeNamespaces: ["dpl", "dcm"] });
-            const response = CallHandler.getRedirectResponse(envQuery);
-            if (response.status === "found" && response.redirectUrl) {
-              await open(response.redirectUrl);
-            } else {
-              showToast(Toast.Style.Failure, "No matching shortcut found.");
-            }
+            Env.fetchLog("raycast", "https://trovu.net/");
+            await open(buildTrovuUrl(searchText));
           }}
         />
         <Action
@@ -125,7 +115,7 @@ ${examples || ""}
         )}
       </ActionPanel>
     ),
-    [searchText, isShowingDetail, prefs, setEnv],
+    [searchText, isShowingDetail, buildTrovuUrl, setEnv],
   );
 
   // Only rebuild env if prefs changed
