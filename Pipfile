@@ -8,6 +8,8 @@ mkdocs-minify-plugin = "*"
 mkdocs = "*"
 mkdocs-material = "*"
 jinja2 = ">=3.1.6"
+urllib3 = "*"
+pymdown-extensions = "*"
 
 [dev-packages]
 
