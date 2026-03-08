@@ -224,4 +224,21 @@ export default class Home {
         }
         break;
       case "deprecated":
-        alertMsg.innerHTML = 'Your shortcut <strong><em class="query"></em></strong> is deprecated.
+        alertMsg.innerHTML = 'Your shortcut <strong><em class="query"></em></strong> is deprecated.';
+        break;
+    }
+  }
+
+  updateOpensearch() {
+    // Logic for updating opensearch if applicable.
+  }
+
+  submitQuery = (event) => {
+    event.preventDefault();
+    const query = this.queryInput.value.trim();
+    if (query !== "") {
+      const url = this.env.buildProcessUrl({ query });
+      this.openTargetUrl(url);
+    }
+  };
+}
