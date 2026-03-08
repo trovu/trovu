@@ -224,4 +224,4 @@ export default class Home {
         }
         break;
       case "deprecated":
-        alertMsg.innerHTML = 'Your shortcut <strong><em class="query"></em></strong> is deprecated.
+        alertMsg.innerHTML = 'Your shortcut <strong><em class="query"></em></strong> is deprecated.'
