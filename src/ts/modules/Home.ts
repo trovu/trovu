@@ -28,7 +28,7 @@ export default class Home {
     // Init environment.
     const params = Env.getParamsFromUrl();
     await this.env.populate(params);
-    this.updateOpensearch();
+    // this.updateOpensearch();
 
     const gitLogger = new GitLogger(this.env.gitInfo);
     document.querySelector("#version").textContent = gitLogger.getVersion();
