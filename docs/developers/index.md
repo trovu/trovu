@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
--   NodeJS >= 18 and <= 21.3
-    -   [How to install a specific version](https://chatgpt.com/share/ef365047-6653-48de-85b1-f7a4565ebfac)
--   NPM >= 10
+- NodeJS [version as stated here](https://github.com/trovu/trovu/blob/master/.github/workflows/deploy.yml#L17) (`node-version:`)
+    - [How to install a specific version](https://chatgpt.com/share/ef365047-6653-48de-85b1-f7a4565ebfac)
+- npm (correct version should be automatically installed by NodeJS)
 
 ## Configuration
 
