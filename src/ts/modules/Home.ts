@@ -14,7 +14,6 @@ import * as BSN from "bootstrap.native";
 import "bootstrap/dist/css/bootstrap.css";
 import countriesList from "countries-list";
 
-
 /** Set and manage the homepage. */
 
 export default class Home {
@@ -173,12 +172,22 @@ export default class Home {
    */
   openTargetUrl = (url) => {
     const isAndroid = /Android/i.test(navigator.userAgent);
-    const isExternal = /^https?:\/\//.test(url) && !url.includes(window.location.hostname);
+    let isExternal = false;
+    let parsedUrl = null;
 
-    if (isAndroid && isExternal) {
+    try {
+      // Safely parse the URL to extract the protocol and hostname
+      parsedUrl = new URL(url, window.location.origin);
+      isExternal = (parsedUrl.protocol === "http:" || parsedUrl.protocol === "https:") && parsedUrl.hostname !== window.location.hostname;
+    } catch (e) {
+      // If parsing fails completely, it will default to internal routing
+      console.warn("Invalid URL parsed:", url);
+    }
+
+    if (isAndroid && isExternal && parsedUrl) {
       // Force Android OS to open the default browser via Intent
-      const urlWithoutScheme = url.replace(/^https?:\/\//, "");
-      const scheme = url.startsWith("https") ? "https" : "http";
+      const urlWithoutScheme = url.replace(`${parsedUrl.protocol}//`, "");
+      const scheme = parsedUrl.protocol.replace(":", "");
       window.location.href = `intent://${urlWithoutScheme}#Intent;scheme=${scheme};action=android.intent.action.VIEW;end;`;
     } else if (isExternal) {
       // Standard fallback for desktop/iOS to open externally
