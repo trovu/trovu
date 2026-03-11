@@ -44,8 +44,31 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    //window.location.replace(redirectUrl);
+    this.openTargetUrl(redirectUrl);
   }
+
+  /**
+   * Helper to open URLs in the default browser, breaking out of PWAs on Android.
+   * @param {string} url - The target URL to open.
+   */
+  static openTargetUrl = (url) => {
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isExternal = /^https?:\/\//.test(url) && !url.includes(window.location.hostname);
+
+    if (isAndroid && isExternal) {
+      // Force Android OS to open the default browser via Intent
+      const urlWithoutScheme = url.replace(/^https?:\/\//, "");
+      const scheme = url.startsWith("https") ? "https" : "http";
+      window.location.href = `intent://${urlWithoutScheme}#Intent;scheme=${scheme};action=android.intent.action.VIEW;end;`;
+    } else if (isExternal) {
+      // Standard fallback for desktop/iOS to open externally
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      // Internal routing fallback
+      window.location.href = url;
+    }
+  };
 
   /**
    * Given the environment, get a response object, incl. redirect URL.
