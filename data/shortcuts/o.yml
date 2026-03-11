@@ -2198,13 +2198,13 @@ debm 0:
   - debian
 debm 1:
   url: https://manpages.debian.org/jump?q=<manpage>
+  tests:
+  - arguments: apt-get
+    expect: APT package handling utility
   include: debm 0
   examples:
   - arguments: apt-get
     description: Look up manpage for apt-get
-  tests:
-  - arguments: apt-get
-    expect: 'APT package handling utility'
 debp 0:
   url: https://planet.debian.org/
   title: Debian Planet
