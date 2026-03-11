@@ -4993,18 +4993,15 @@ jw 1:
   - arguments: simpsons
     description: Search for "simpsons"
 kaufland 0:
-  url: https://www.kaufland.de/
-  title: Kaufland Online Marktplatz
-  tags:
-  - shopping
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: kfl
+    created: '2026-03-12'
 kaufland 1:
-  url: https://www.kaufland.de/item/search/?search_value=<Suche>
-  include: kaufland 0
-  examples:
-  - arguments: spiele
-    description: Suche auf Kaufland.de nach "spiele"
+  deprecated:
+    alternative:
+      query: kfl <1>
+    created: '2026-03-12'
 kaz 0:
   url: https://www.kleinanzeigen.de/
   title: Kleinanzeigen.de, Homepage
@@ -5064,6 +5061,19 @@ keno 1:
   examples:
   - arguments: 24-12-20220
     description: Suche nach Keno-Zahlen vom 24.12.2020
+kfl 0:
+  url: https://www.kaufland.de/
+  title: Kaufland Online Marktplatz
+  tags:
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+kfl 1:
+  url: https://www.kaufland.de/item/search/?search_value=<Suche>
+  include: kaufland 0
+  examples:
+  - arguments: spiele
+    description: Suche auf Kaufland.de nach "spiele"
 kfz 0:
   url: https://www.autokennzeichen.info/
   title: KFZ-Kennzeichen Deutschland
