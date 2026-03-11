@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - test-with-intent
   pull_request:
     branches:
       - master
