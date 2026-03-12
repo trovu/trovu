@@ -1088,6 +1088,24 @@ jb 3:
   examples:
   - arguments: Shakespeare, Hamlet, en
     description: Suche nach "Shakespeare, Hamlet" auf Englisch
+jf 0:
+  url: https://jungefreiheit.de/
+  title: Junge Freiheit
+  tags:
+  - news
+  - politics
+  examples:
+  - description: Gehe zur Startseite
+jf 1:
+  url: https://jungefreiheit.de/?s=<Suche>
+  include: jf 0
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
+jfg 1:
+  url: https://www.google.de/search?q=<Suche>+site:jungefreiheit.de
+  title: Junge Freiheit via Google
+  include: jf 1
 kam 0:
   url: http://kamelopedia.net/
   title: Kamelopedia
