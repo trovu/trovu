@@ -1,0 +1,24 @@
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+ygl 0:
+  url: https://youglish.com/thai
+  title: YouGlish, Thai
+  tags:
+  - language
+  - pronunciation
+  - thai
+  - youtube
+  examples:
+  - description: Go to the homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/thai
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

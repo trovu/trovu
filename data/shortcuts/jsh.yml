@@ -1,0 +1,44 @@
+en 0:
+  include: en-<$language> 0
+en 1:
+  include: en-<$language> 1
+en-ja 0:
+  url: https://jisho.org/
+  title: 英語-日本語 (Denshi Jisho)
+  tags:
+  - dictionary
+  - english
+  - japanese
+  - language
+  examples:
+  - description: ホームページへ行く
+en-ja 1:
+  url: https://jisho.org/search/<word>
+  title: 英語-日本語 (Denshi Jisho)
+  tags:
+  - dictionary
+  - english
+  - japanese
+  - language
+  examples:
+  - arguments: tree
+    description: '"tree"の日本語翻訳'
+  - arguments: 木
+    description: '"木"の英語翻訳'
+ja 0:
+  include: ja-<$language> 0
+ja 1:
+  include: ja-<$language> 1
+ja-en 0:
+  title: Japanese-English (Denshi Jisho)
+  include: en-ja 0
+  examples:
+  - description: Go to the homepage
+ja-en 1:
+  title: Japanese-English (Denshi Jisho)
+  include: en-ja 1
+  examples:
+  - arguments: 木
+    description: English translation of "木"
+  - arguments: tree
+    description: Japanese translation of "tree"

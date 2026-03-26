@@ -1,0 +1,259 @@
+a 0:
+  url: https://www.amazon.es?tag=serchilo-20
+  title: Amazon.es
+  tags:
+  - amazon
+  - books
+  - compras
+  - is-affiliate
+  - libros
+  - shopping
+  - tienda
+  examples:
+  - description: Ir a la página principal
+a 1:
+  url: https://www.amazon.es/s?k=<busqueda>&linkCode=ll2&tag=serchilo-20
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Buscar "shakespeare"
+abc 0:
+  url: https://www.abc.es/
+  title: ABC
+  tags:
+  - noticias
+  - periódicos
+abc 1:
+  url: https://www.abc.es/archivo/buscador/?titulo=<query>&tipo=todos
+  include: abc 0
+  examples:
+  - arguments: madrid
+    description: Buscar "madrid" en ABC
+crs 0:
+  url: https://www.correos.es/
+  title: Correos
+  tags:
+  - correos
+  - shipping
+  examples:
+  - description: Ir a la página principal
+crs 1:
+  url: https://www.correos.es/es/es/buscador/detalle?search-parameter=<busqueda>
+  include: crs 0
+  examples:
+  - arguments: sello
+    description: Buscar "sello"
+crsl 0:
+  url: https://www.correos.es/es/es/herramientas/localizador/envios
+  title: Correos, Localizador de Envíos
+  include: crs 0
+  examples:
+  - description: Ir a la página principal
+crsl 1:
+  url: https://www.correos.es/es/es/herramientas/localizador/envios/detalle?tracking-number=<codigo>
+  title: Correos, Localizador de Envíos
+  include: crsl 0
+  examples:
+  - arguments: ES1234567890
+    description: Localizar el envío con el código ES1234567890
+e 0:
+  url: https://www.ebay.es/?mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.es
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+e 1:
+  url: https://www.ebay.es/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=1185-53479-19255-0&siteid=186&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.es
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Buscar "smartphone" en Ebay
+emd 0:
+  url: https://www.elmundo.es/
+  title: El Mundo
+  tags:
+  - noticias
+  - periódicos
+emd 1:
+  url: https://ariadna.elmundo.es/buscador/archivo.html?q=<query>
+  include: emd 0
+  examples:
+  - arguments: madrid
+    description: Buscar "madrid" en El Mundo
+g 0:
+  url: https://www.google.es/
+  title: Google.es
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Ir a la página principal
+g 1:
+  url: https://www.google.es/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
+  examples:
+  - arguments: madrid
+    description: Buscar "madrid" con Google
+gdfv 2:
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Fuerteventura, España&daddr=<destination>, Fuerteventura, España
+  title: Google Maps Directions (Routing), Fuerteventura
+  tags:
+  - fuerteventura
+  - google
+  - maps
+  - route
+  - routing
+  examples:
+  - arguments: corralejo, morro jable
+    description: Get a route from Corralejo to Morro Jable
+gdgc 2:
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Gran Canaria, España&daddr=<destination>, Gran Canaria, España
+  title: Google Maps Directions (Routing), Gran Canaria
+  tags:
+  - google
+  - gran-canaria
+  - maps
+  - route
+  - routing
+  examples:
+  - arguments: las palmas, maspalomas
+    description: Get a route from Las Palmas to Maspalomas
+gdlz 2:
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Lanzarote, España&daddr=<destination>, Lanzarote, España
+  title: Google Maps Directions (Routing), Lanzarote
+  tags:
+  - google
+  - lanzarote
+  - maps
+  - route
+  - routing
+  examples:
+  - arguments: arrecife, playa blanca
+    description: Get a route from Arrecife to Playa Blanca
+gdtf 2:
+  url: https://maps.google.com/maps?hl=<$language>&saddr=<start>, Tenerife, España&daddr=<destination>, Tenerife, España
+  title: Google Maps Directions (Routing), Tenerife
+  tags:
+  - google
+  - maps
+  - route
+  - routing
+  - tenerife
+  examples:
+  - arguments: santa cruz, la laguna
+    description: Get a route from Santa Cruz to La Laguna
+ikea 0:
+  url: https://www.ikea.com/es/es/
+  title: IKEA España
+  tags:
+  - furniture
+  - ikea
+  - shopping
+ikea 1:
+  url: https://www.ikea.com/es/es/search/?q=<query>
+  title: IKEA España
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - arguments: colchón
+    description: Buscar colchón
+jw 1:
+  url: https://www.justwatch.com/es/buscar?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+ma 0:
+  url: https://www.milanuncios.com/
+  title: Milanuncios
+  examples:
+  - description: Ir a la página principal
+  description: Venta de productos de segunda mano
+ma 1:
+  url: https://www.milanuncios.com/anuncios/?s=<búsqueda>&orden=relevance&fromSearch=1&fromSuggester=1&suggestionUsed=0&hitOrigin=home_search
+  include: ma 0
+  examples:
+  - arguments: palmera
+    description: Busqueda de "palmera"
+mil 0:
+  deprecated:
+    alternative:
+      query: ma
+    created: '2023-01-11'
+mil 1:
+  deprecated:
+    alternative:
+      query: ma <1>
+    created: '2023-01-11'
+mrc 0:
+  url: https://www.marca.com/
+  title: Marca
+  tags:
+  - deportes
+  - noticias
+mrc 1:
+  url: https://www.google.com/search?hl=de&sitesearch=marca.com&q=<query>
+  include: mrc 0
+  examples:
+  - arguments: messi
+    description: Buscar "messi" en Marca
+titsa 2:
+  url: https://www.google.com/maps?hl=<$language>&saddr=<origen>,%20Tenerife,+Espa%C3%B1a&daddr=<destino>,%20Tenerife,%20Espa%C3%B1a&f=d&dirflg=r
+  title: Transportes Interurbanos de Tenerife
+  tags:
+  - google
+  - maps
+  - tenerife
+  - titsa
+  - travel
+  examples:
+  - arguments: weyler, trinidad
+    description: Próxima connection de Weyler a Trinidad
+titsa 3:
+  url: https://www.google.com/maps?hl=<$language>&saddr=<origen>,%20Tenerife,+Espa%C3%B1a&daddr=<destino>,%20Tenerife,%20Espa%C3%B1a&time=<salida>&f=d&dirflg=r
+  title: Transportes Interurbanos de Tenerife
+  tags:
+  - google
+  - maps
+  - tenerife
+  - titsa
+  - travel
+  examples:
+  - arguments: weyler, trinidad, 10
+    description: Connection de Weyler a Trinidad a las 10
+wlp 0:
+  url: https://es.wallapop.com/
+  title: Wallapop
+  tags:
+  - shopping
+  - wallapop
+  examples:
+  - description: Ir a la página principal
+  description: Venta de productos de segunda mano
+wlp 1:
+  url: https://es.wallapop.com/app/search?filters_source=search_box&keywords=<query>
+  title: Wallapop
+  include: wlp 0
+zal 0:
+  url: https://www.zalando.es/
+  title: Zalando.es
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Ir a la página principal
+zal 1:
+  url: https://www.zalando.es/catalogo/?q=<product>
+  include: zal 0
+  examples:
+  - arguments: calzado
+    description: buscar calzado

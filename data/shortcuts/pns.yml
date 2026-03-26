@@ -1,0 +1,512 @@
+de 0:
+  include: de-<$language> 0
+de 1:
+  include: de-<$language> 1
+de-el 0:
+  url: http://en.pons.com/translate?l=deel
+  title: Γερμανικά-Ελληνικά (Pons)
+  tags:
+  - dictionary
+  - german
+  - greek
+  - language
+  examples:
+  - description: Μετάβαση στην αρχική σελίδα
+de-el 1:
+  url: http://en.pons.com/translate?l=deel&q=<word>
+  title: Γερμανικά-Ελληνικά (Pons)
+  tags:
+  - dictionary
+  - german
+  - greek
+  - language
+  examples:
+  - arguments: baum
+    description: Μετάφραση στα Ελληνικά για το "baum"
+  - arguments: δέντρο
+    description: Μετάφραση στα Γερμανικά για το "δέντρο"
+de-en 0:
+  url: http://en.pons.com/translate?l=deen
+  title: German-English (Pons)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+  - description: Go to the homepage
+de-en 1:
+  url: http://en.pons.com/translate?l=deen&q=<word>
+  title: German-English (Pons)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: English translation of "baum"
+  - arguments: tree
+    description: German translation of "tree"
+de-es 0:
+  url: http://en.pons.com/translate?l=dees
+  title: Alemán-Español (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+  examples:
+  - description: Ir a la página principal
+de-es 1:
+  url: http://en.pons.com/translate?l=dees&q=<word>
+  title: Alemán-Español (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+  examples:
+  - arguments: baum
+    description: Traducción al español de "baum"
+  - arguments: árbol
+    description: Traducción al alemán de "árbol"
+de-fr 0:
+  url: http://en.pons.com/translate?l=defr
+  title: Allemand-Français (Pons)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+  examples:
+  - description: Aller à la page d'accueil
+de-fr 1:
+  url: http://en.pons.com/translate?l=defr&q=<word>
+  title: Allemand-Français (Pons)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Traduction en français de "baum"
+  - arguments: arbre
+    description: Traduction en allemand de "arbre"
+de-hu 0:
+  url: http://en.pons.com/translate?l=dehu
+  title: Német-Magyar (Pons)
+  tags:
+  - dictionary
+  - german
+  - hungarian
+  - language
+  examples:
+  - description: Menj a kezdőlapra
+de-hu 1:
+  url: http://en.pons.com/translate?l=dehu&q=<word>
+  title: Német-Magyar (Pons)
+  tags:
+  - dictionary
+  - german
+  - hungarian
+  - language
+  examples:
+  - arguments: baum
+    description: magyar fordítás a(z) "baum" számára
+  - arguments: fa
+    description: német fordítás a(z) "fa" számára
+de-it 0:
+  url: http://en.pons.com/translate?l=deit
+  title: Tedesco-Italiano (Pons)
+  tags:
+  - dictionary
+  - german
+  - italian
+  - language
+  examples:
+  - description: Vai alla homepage
+de-it 1:
+  url: http://en.pons.com/translate?l=deit&q=<word>
+  title: Tedesco-Italiano (Pons)
+  tags:
+  - dictionary
+  - german
+  - italian
+  - language
+  examples:
+  - arguments: baum
+    description: Traduzione in italiano di "baum"
+  - arguments: albero
+    description: Traduzione in tedesco di "albero"
+de-pl 0:
+  url: http://en.pons.com/translate?l=depl
+  title: Niemiecki-Polski (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - polish
+  examples:
+  - description: Przejdź do strony głównej
+de-pl 1:
+  url: http://en.pons.com/translate?l=depl&q=<word>
+  title: Niemiecki-Polski (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - polish
+  examples:
+  - arguments: baum
+    description: Tłumaczenie na język polski dla "baum"
+  - arguments: drzewo
+    description: Tłumaczenie na język niemiecki dla "drzewo"
+de-pt 0:
+  url: http://en.pons.com/translate?l=dept
+  title: Alemão-Português (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
+  examples:
+  - description: Ir para a página inicial
+de-pt 1:
+  url: http://en.pons.com/translate?l=dept&q=<word>
+  title: Alemão-Português (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - portuguese
+  examples:
+  - arguments: baum
+    description: Tradução em português de "baum"
+  - arguments: árvore
+    description: Tradução em alemão de "árvore"
+de-ru 0:
+  url: http://en.pons.com/translate?l=deru
+  title: Немецкий-Русский (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - russian
+  examples:
+  - description: Перейти на главную страницу
+de-ru 1:
+  url: http://en.pons.com/translate?l=deru&q=<word>
+  title: Немецкий-Русский (Pons)
+  tags:
+  - dictionary
+  - german
+  - language
+  - russian
+  examples:
+  - arguments: baum
+    description: Перевод на русский язык для "baum"
+  - arguments: дерево
+    description: Перевод на немецкий язык для "дерево"
+el 0:
+  include: el-<$language> 0
+el 1:
+  include: el-<$language> 1
+el-de 0:
+  title: Griechisch-Deutsch (Pons)
+  include: de-el 0
+  examples:
+  - description: Zur Startseite
+el-de 1:
+  title: Griechisch-Deutsch (Pons)
+  include: de-el 1
+  examples:
+  - arguments: δέντρο
+    description: Deutsch-Übersetzung von "δέντρο"
+  - arguments: baum
+    description: Griechisch-Übersetzung von "baum"
+en 0:
+  include: en-<$language> 0
+en 1:
+  include: en-<$language> 1
+en-de 0:
+  title: Englisch-Deutsch (Pons)
+  include: de-en 0
+  examples:
+  - description: Zur Startseite
+en-de 1:
+  title: Englisch-Deutsch (Pons)
+  include: de-en 1
+  examples:
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Englisch-Übersetzung von "baum"
+en-es 0:
+  url: http://en.pons.com/translate?l=enes
+  title: Inglés-Español (Pons)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+  examples:
+  - description: Ir a la página principal
+en-es 1:
+  url: http://en.pons.com/translate?l=enes&q=<word>
+  title: Inglés-Español (Pons)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+  examples:
+  - arguments: tree
+    description: Traducción al español de "tree"
+  - arguments: árbol
+    description: Traducción al inglés de "árbol"
+en-fr 0:
+  url: http://en.pons.com/translate?l=enfr
+  title: Anglais-Français (Pons)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+  examples:
+  - description: Aller à la page d'accueil
+en-fr 1:
+  url: http://en.pons.com/translate?l=enfr&q=<word>
+  title: Anglais-Français (Pons)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+  examples:
+  - arguments: tree
+    description: Traduction en français de "tree"
+  - arguments: arbre
+    description: Traduction en anglais de "arbre"
+en-sl 0:
+  url: http://en.pons.com/translate?l=ensl
+  title: Angleščina-Slovenščina (Pons)
+  tags:
+  - dictionary
+  - english
+  - language
+  - slovenian
+  examples:
+  - description: Pojdi na domačo stran
+en-sl 1:
+  url: http://en.pons.com/translate?l=ensl&q=<word>
+  title: Angleščina-Slovenščina (Pons)
+  tags:
+  - dictionary
+  - english
+  - language
+  - slovenian
+  examples:
+  - arguments: tree
+    description: Prevod v slovenščina za besedo "tree"
+  - arguments: drevo
+    description: Prevod v angleščina za besedo "drevo"
+es 0:
+  include: es-<$language> 0
+es 1:
+  include: es-<$language> 1
+es-de 0:
+  title: Spanisch-Deutsch (Pons)
+  include: de-es 0
+  examples:
+  - description: Zur Startseite
+es-de 1:
+  title: Spanisch-Deutsch (Pons)
+  include: de-es 1
+  examples:
+  - arguments: árbol
+    description: Deutsch-Übersetzung von "árbol"
+  - arguments: baum
+    description: Spanisch-Übersetzung von "baum"
+es-en 0:
+  title: Spanish-English (Pons)
+  include: en-es 0
+  examples:
+  - description: Go to the homepage
+es-en 1:
+  title: Spanish-English (Pons)
+  include: en-es 1
+  examples:
+  - arguments: árbol
+    description: English translation of "árbol"
+  - arguments: tree
+    description: Spanish translation of "tree"
+fr 0:
+  include: fr-<$language> 0
+fr 1:
+  include: fr-<$language> 1
+fr-de 0:
+  title: Französisch-Deutsch (Pons)
+  include: de-fr 0
+  examples:
+  - description: Zur Startseite
+fr-de 1:
+  title: Französisch-Deutsch (Pons)
+  include: de-fr 1
+  examples:
+  - arguments: arbre
+    description: Deutsch-Übersetzung von "arbre"
+  - arguments: baum
+    description: Französisch-Übersetzung von "baum"
+fr-en 0:
+  title: French-English (Pons)
+  include: en-fr 0
+  examples:
+  - description: Go to the homepage
+fr-en 1:
+  title: French-English (Pons)
+  include: en-fr 1
+  examples:
+  - arguments: arbre
+    description: English translation of "arbre"
+  - arguments: tree
+    description: French translation of "tree"
+fr-pl 0:
+  url: http://en.pons.com/translate?l=frpl
+  title: Francuski-Polski (Pons)
+  tags:
+  - dictionary
+  - french
+  - language
+  - polish
+  examples:
+  - description: Przejdź do strony głównej
+fr-pl 1:
+  url: http://en.pons.com/translate?l=frpl&q=<word>
+  title: Francuski-Polski (Pons)
+  tags:
+  - dictionary
+  - french
+  - language
+  - polish
+  examples:
+  - arguments: arbre
+    description: Tłumaczenie na język polski dla "arbre"
+  - arguments: drzewo
+    description: Tłumaczenie na język francuski dla "drzewo"
+hu 0:
+  include: hu-<$language> 0
+hu 1:
+  include: hu-<$language> 1
+hu-de 0:
+  title: Ungarisch-Deutsch (Pons)
+  include: de-hu 0
+  examples:
+  - description: Zur Startseite
+hu-de 1:
+  title: Ungarisch-Deutsch (Pons)
+  include: de-hu 1
+  examples:
+  - arguments: fa
+    description: Deutsch-Übersetzung von "fa"
+  - arguments: baum
+    description: Ungarisch-Übersetzung von "baum"
+it 0:
+  include: it-<$language> 0
+it 1:
+  include: it-<$language> 1
+it-de 0:
+  title: Italienisch-Deutsch (Pons)
+  include: de-it 0
+  examples:
+  - description: Zur Startseite
+it-de 1:
+  title: Italienisch-Deutsch (Pons)
+  include: de-it 1
+  examples:
+  - arguments: albero
+    description: Deutsch-Übersetzung von "albero"
+  - arguments: baum
+    description: Italienisch-Übersetzung von "baum"
+pl 0:
+  include: pl-<$language> 0
+pl 1:
+  include: pl-<$language> 1
+pl-de 0:
+  title: Polnisch-Deutsch (Pons)
+  include: de-pl 0
+  examples:
+  - description: Zur Startseite
+pl-de 1:
+  title: Polnisch-Deutsch (Pons)
+  include: de-pl 1
+  examples:
+  - arguments: drzewo
+    description: Deutsch-Übersetzung von "drzewo"
+  - arguments: baum
+    description: Polnisch-Übersetzung von "baum"
+pl-fr 0:
+  title: Polonais-Français (Pons)
+  include: fr-pl 0
+  examples:
+  - description: Aller à la page d'accueil
+pl-fr 1:
+  title: Polonais-Français (Pons)
+  include: fr-pl 1
+  examples:
+  - arguments: drzewo
+    description: Traduction en français de "drzewo"
+  - arguments: arbre
+    description: Traduction en polonais de "arbre"
+pt 0:
+  include: pt-<$language> 0
+pt 1:
+  include: pt-<$language> 1
+pt-de 0:
+  title: Portugiesisch-Deutsch (Pons)
+  include: de-pt 0
+  examples:
+  - description: Zur Startseite
+pt-de 1:
+  title: Portugiesisch-Deutsch (Pons)
+  include: de-pt 1
+  examples:
+  - arguments: árvore
+    description: Deutsch-Übersetzung von "árvore"
+  - arguments: baum
+    description: Portugiesisch-Übersetzung von "baum"
+ru 0:
+  include: ru-<$language> 0
+ru 1:
+  include: ru-<$language> 1
+ru-de 0:
+  title: Russisch-Deutsch (Pons)
+  include: de-ru 0
+  examples:
+  - description: Zur Startseite
+ru-de 1:
+  title: Russisch-Deutsch (Pons)
+  include: de-ru 1
+  examples:
+  - arguments: дерево
+    description: Deutsch-Übersetzung von "дерево"
+  - arguments: baum
+    description: Russisch-Übersetzung von "baum"
+sl 0:
+  include: sl-<$language> 0
+sl 1:
+  include: sl-<$language> 1
+sl-en 0:
+  title: Slovenian-English (Pons)
+  include: en-sl 0
+  examples:
+  - description: Go to the homepage
+sl-en 1:
+  title: Slovenian-English (Pons)
+  include: en-sl 1
+  examples:
+  - arguments: drevo
+    description: English translation of "drevo"
+  - arguments: tree
+    description: Slovenian translation of "tree"

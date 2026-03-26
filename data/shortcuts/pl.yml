@@ -1,0 +1,96 @@
+fpl 0:
+  url: https://filmpolski.pl/
+  title: Filmpolski
+  tags:
+  - movies
+  - polish
+  examples:
+  - description: Go to the homepage
+fpl 1:
+  url: https://filmpolski.pl/fp/index.php/8/<query>
+  include: fpl 0
+  examples:
+  - arguments: dekalog
+    description: Szukaj "dekalog"
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+fw 0:
+  url: https://www.filmweb.pl/
+  title: FilmWeb
+  tags:
+  - film
+  examples:
+  - description: Idź do strony głównej
+fw 1:
+  url: https://www.filmweb.pl/search#/?query=<tytuł/osoba>
+  include: fw 0
+  examples:
+  - arguments: forrest gump
+    description: Szukaj film "Forrest Gump"
+last 1:
+  deprecated:
+    alternative:
+      query: lfm <1>
+    created: '2024-11-17'
+lfm 0:
+  include:
+    key: lfm 0
+    namespace: de
+lfm 1:
+  include:
+    key: lfm 1
+    namespace: de
+mo 0:
+  url: https://www.money.pl/
+  title: Money.pl
+  tags:
+  - finance
+  examples:
+  - description: Idź do strony głównej
+mo 1:
+  url: https://www.google.com/search?hl=<$language>&btnI=&sourceid=navclient&gfns=1&q=site:money.pl%20<nazwa waloru>&ie=utf-8
+  include: mo 0
+  examples:
+  - arguments: eur
+    description: Pokaż kurs EUR
+  - arguments: złoto
+    description: Pokaż kurs złota
+pwn 0:
+  url: https://sjp.pwn.pl/
+  title: 'Słownik języka polskiego: PWN'
+  tags:
+  - dictionary
+  - language
+  - polish
+  - polski
+  - słownik
+  examples:
+  - description: Idź do strony głównej
+pwn 1:
+  url: https://sjp.pwn.pl/szukaj/<słowo>.html
+  include: pwn 0
+  examples:
+  - arguments: drzewo
+    description: Szukaj "drzewo"
+ygl 0:
+  url: https://youglish.com/polish
+  title: YouGlish, Polish
+  tags:
+  - language
+  - polish
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to the homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/polish
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

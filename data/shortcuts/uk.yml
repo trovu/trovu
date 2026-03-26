@@ -1,0 +1,24 @@
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+ygl 0:
+  url: https://youglish.com/ukrainian
+  title: YouGlish, Ukrainian
+  tags:
+  - language
+  - pronunciation
+  - ukrainian
+  - youtube
+  examples:
+  - description: Go to the homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/ukrainian
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

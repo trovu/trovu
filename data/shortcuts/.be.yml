@@ -1,0 +1,62 @@
+efr 0:
+  url: https://www.befr.ebay.be/
+  title: Ebay.be
+  tags:
+  - ebay
+  - shopping
+efr 1:
+  url: https://www.befr.ebay.be//sch/i.html?_nkw=<query>
+  title: Ebay.be
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+enl 0:
+  url: https://www.benl.ebay.be/
+  title: Ebay.be
+  tags:
+  - ebay
+  - shopping
+enl 1:
+  url: https://www.benl.ebay.be//sch/i.html?_nkw=<query>
+  title: Ebay.be
+  tags:
+  - ebay
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+g 0:
+  url: https://www.google.be/
+  title: Google.be
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Go to the homepage
+g 1:
+  url: https://www.google.be/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
+  examples:
+  - arguments: amsterdam
+    description: Google zoeken naar "amsterdam"
+jw 1:
+  url: https://www.justwatch.com/be/recherche?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+zal 1:
+  url: https://www.zalando.be/catalogus/?q=<product>
+  title: Zalando.be
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - arguments: schoenen
+    description: zoek schoenen

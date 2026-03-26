@@ -1,0 +1,308 @@
+camb-en 1:
+  deprecated:
+    alternative:
+      query: cd <1>
+    created: '2024-11-17'
+cd 0:
+  url: https://dictionary.cambridge.org/dictionary/english/
+  title: Cambridge Dictionary
+  tags:
+  - dictionary
+  - english
+  examples:
+  - description: Go to the homepage
+cd 1:
+  url: https://dictionary.cambridge.org/dictionary/english/<word>
+  include: cd 0
+  examples:
+  - arguments: tree
+    description: Search Cambridge English Dictionary for "tree"
+cia 0:
+  url: https://www.cia.gov/the-world-factbook/
+  title: CIA Factbook
+  tags:
+  - cia
+  examples:
+  - description: Go to the homepage
+  description: The World Factbook provides information on the history, people, government, economy, geography, communications, transportation
+cia 1:
+  url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=cia.gov&sitesearch=cia.gov&btnI=1&q=intitle%3Afactbook%20<country>
+  include: cia 0
+  examples:
+  - arguments: Germany
+    description: Search for information about Germany
+cliff 0:
+  deprecated:
+    alternative:
+      query: cn <0>
+    created: '2024-11-17'
+cliff 1:
+  deprecated:
+    alternative:
+      query: cn <1>
+    created: '2024-11-17'
+cn 0:
+  url: https://www.cliffsnotes.com/
+  title: Cliffsnotes.com
+  tags:
+  - literature
+  examples:
+  - description: Go to the homepage
+  description: Literature study guides that help students understand the literature they are reading
+cn 1:
+  url: https://www.cliffsnotes.com/search?q=<query>
+  include: cn 0
+  examples:
+  - arguments: tom sawyer
+    description: Search for Cliff's notes on Tom Sawyer
+dei 1:
+  deprecated:
+    alternative:
+      query: lge.de <1>
+    created: '2023-04-10'
+dict 0:
+  url: https://www.dictionary.com/
+  title: Dictionary.com
+  tags:
+  - english
+  - language
+  examples:
+  - description: Go to the homepage
+dict 1:
+  url: https://www.dictionary.com/browse/<query>
+  include: dict 0
+  examples:
+  - arguments: tree
+    description: Search for "tree"
+esi 1:
+  deprecated:
+    alternative:
+      query: lge.es <1>
+    created: '2023-04-10'
+esp 1:
+  deprecated:
+    alternative:
+      query: pns.es <1>
+    created: '2023-04-10'
+fd 0:
+  url: https://www.thefreedictionary.com/
+  title: The Free Dictionary
+  tags:
+  - dictionary
+  - language
+  - thesaurus
+  examples:
+  - description: Go to the homepage
+fd 1:
+  url: https://www.thefreedictionary.com/<word>
+  include: fd 0
+  examples:
+  - arguments: tree
+    description: Look up "tree"
+frp 1:
+  deprecated:
+    alternative:
+      query: pns.fr <1>
+    created: '2023-04-10'
+gfp 0:
+  url: https://german-foreign-policy.com/en/
+  title: German Foreign Policy
+  tags:
+  - germany
+  - news
+  - politics
+last 1:
+  deprecated:
+    alternative:
+      query: lfm <1>
+    created: '2024-11-17'
+lfm 0:
+  include:
+    key: lfm 0
+    namespace: de
+lfm 1:
+  include:
+    key: lfm 1
+    namespace: de
+mema 0:
+  url: https://memory-alpha.fandom.com/
+  title: Memory Alpha
+  tags:
+  - fandom
+  - film
+  - movie
+  - scifi
+  - tv
+  - wiki
+  examples:
+  - description: Go to the homepage
+mema 1:
+  url: https://memory-alpha.fandom.com/wiki/Special:Search?query=<query>
+  include: mema 0
+  examples:
+  - arguments: visor
+    description: Search for pages relating to VISORs
+mw 0:
+  url: https://www.merriam-webster.com/
+  title: Merriam-Webster dictionary
+  tags:
+  - dictionary
+  - english
+  examples:
+  - description: Go to the homepage
+mw 1:
+  url: https://www.merriam-webster.com/dictionary/<query>
+  include: mw 0
+  examples:
+  - arguments: asleep
+    description: Look up the English word "asleep"
+mwt 0:
+  url: https://www.merriam-webster.com/
+  title: Merriam-Webster theraurus
+  tags:
+  - english
+  - thesaurus
+  examples:
+  - description: Go to the homepage
+mwt 1:
+  url: https://www.merriam-webster.com/thesaurus/<query>
+  include: mwt 0
+  examples:
+  - arguments: important
+    description: Search for synonyms of "important"
+nyt 0:
+  url: https://www.nytimes.com/
+  title: The New York Times
+  tags:
+  - news
+  - politics
+  - usa
+  examples:
+  - description: Go to the homepage
+nyt 1:
+  url: https://www.nytimes.com/search?query=<query>
+  include: nyt 0
+  examples:
+  - arguments: Germany
+    description: Search for news about Germany
+nytg 1:
+  url: https://www.google.com/search?ie=utf-8&q=<query>%20site%3Anytimes.com
+  title: The New York Times via Google
+  include: nyt 1
+oed 0:
+  url: https://www.etymonline.com/
+  title: Online Etymology Dictionary
+  tags:
+  - dictionary
+  - english
+  - etymology
+  - history
+  - language
+  examples:
+  - description: Go to the homepage
+oed 1:
+  url: https://www.etymonline.com/search?q=<word>
+  include: oed 0
+  examples:
+  - arguments: tree
+    description: Search for the etymology of "tree"
+sta 0:
+  url: https://start.csail.mit.edu/
+  title: START (SynTactic Analysis using Reversible Transformations)
+  tags:
+  - semantic-search
+  examples:
+  - description: Go to the homepage
+sta 1:
+  url: https://start.csail.mit.edu/answer.php?query=<question>
+  include: sta 0
+  examples:
+  - arguments: How many people live in Berlin?
+    description: Answers the question.
+syn 0:
+  url: https://www.thesaurus.com/
+  title: Thesaurus.com
+  tags:
+  - english
+  - thesaurus
+  examples:
+  - description: Go to the homepage
+syn 1:
+  url: https://www.thesaurus.com/browse/<word>
+  include: syn 0
+  examples:
+  - arguments: important
+    description: Search for synonyms of "important"
+uvi 0:
+  url: https://verbs.colorado.edu/verb-index/vn3.3
+  title: Unified Verb Index
+  tags:
+  - english
+  - grammar
+  - language
+  - linguistics
+  examples:
+  - description: Go to the homepage
+uvi 1:
+  url: https://stefanschramm.net/dev/postredirector/?_target=http://verbs.colorado.edu/verb-index/vn3.3/search.php&txtSearchRequest=<query>
+  include: uvi 0
+  examples:
+  - arguments: walk
+    description: Look up the verb "walk"
+wk 0:
+  url: https://www.wordnik.com/
+  title: Wordnik
+  tags:
+  - dictionary
+  - english
+  - language
+  - thesaurus
+  examples:
+  - description: Go to the homepage
+wk 1:
+  url: https://www.wordnik.com/words/<word>
+  include: wk 0
+  examples:
+  - arguments: tree
+    description: Look up "tree"
+wordnik 1:
+  deprecated:
+    alternative:
+      query: wk <1>
+    created: '2024-11-17'
+wsl 0:
+  url: https://corpora.uni-leipzig.de/de?corpusId=eng_news_2023
+  title: Wortschatz-Lexikon (English)
+  tags:
+  - english
+  - language
+  examples:
+  - description: Go to the homepage
+wsl 1:
+  url: https://corpora.uni-leipzig.de/de/res?word=<word>&corpusId=eng_news_2023
+  include: wsl 0
+  examples:
+  - arguments: chair
+    description: Search for "chair"
+ygl 0:
+  url: https://youglish.com/english
+  title: YouGlish, English
+  tags:
+  - english
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to the homepage
+  description: Search for a word mentioned in videos of top YouTube speakers naturally pronouncing the word in context.
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/english
+  include: ygl 0
+  examples:
+  - arguments: dough
+    description: Find videos where someone says "dough"
+youglish 1:
+  deprecated:
+    alternative:
+      query: ygl <1>
+    created: '2024-05-15'

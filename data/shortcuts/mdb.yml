@@ -1,0 +1,44 @@
+en 0:
+  include: en-<$language> 0
+en 1:
+  include: en-<$language> 1
+en-zh 0:
+  url: https://www.mdbg.net/chinese/dictionary
+  title: 英文-中文 (MDBG)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
+  examples:
+  - description: 前往主页
+en-zh 1:
+  url: https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=<word>
+  title: 英文-中文 (MDBG)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: 中文 的"tree"翻译
+  - arguments: 树
+    description: 英文 的"树"翻译
+zh 0:
+  include: zh-<$language> 0
+zh 1:
+  include: zh-<$language> 1
+zh-en 0:
+  title: Chinese-English (MDBG)
+  include: en-zh 0
+  examples:
+  - description: Go to the homepage
+zh-en 1:
+  title: Chinese-English (MDBG)
+  include: en-zh 1
+  examples:
+  - arguments: 树
+    description: English translation of "树"
+  - arguments: tree
+    description: Chinese translation of "tree"

@@ -1,0 +1,1 @@
+../../../../../../../src/ts/modules/NamespaceFetcher.ts

@@ -1,0 +1,404 @@
+cs 0:
+  include: cs-<$language> 0
+cs 1:
+  include: cs-<$language> 1
+cs-de 0:
+  url: https://slovnik.seznam.cz/preklad/nemecky
+  title: Tschechisch-Deutsch (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - german
+  - language
+  examples:
+  - description: Zur Startseite
+cs-de 1:
+  url: https://slovnik.seznam.cz/preklad/nemecky/<word>
+  title: Tschechisch-Deutsch (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - german
+  - language
+  examples:
+  - arguments: strom
+    description: Deutsch-Übersetzung von "strom"
+  - arguments: baum
+    description: Tschechisch-Übersetzung von "baum"
+cs-en 0:
+  url: https://slovnik.seznam.cz/preklad/anglicky
+  title: Czech-English (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - english
+  - language
+  examples:
+  - description: Go to the homepage
+cs-en 1:
+  url: https://slovnik.seznam.cz/preklad/anglicky/<word>
+  title: Czech-English (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - english
+  - language
+  examples:
+  - arguments: strom
+    description: English translation of "strom"
+  - arguments: tree
+    description: Czech translation of "tree"
+cs-es 0:
+  url: https://slovnik.seznam.cz/preklad/spanelsky
+  title: Checo-Español (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - spanish
+  examples:
+  - description: Ir a la página principal
+cs-es 1:
+  url: https://slovnik.seznam.cz/preklad/spanelsky/<word>
+  title: Checo-Español (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - spanish
+  examples:
+  - arguments: strom
+    description: Traducción al español de "strom"
+  - arguments: árbol
+    description: Traducción al checo de "árbol"
+cs-fr 0:
+  url: https://slovnik.seznam.cz/preklad/francouzsky
+  title: Tchèque-Français (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - french
+  - language
+  examples:
+  - description: Aller à la page d'accueil
+cs-fr 1:
+  url: https://slovnik.seznam.cz/preklad/francouzsky/<word>
+  title: Tchèque-Français (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - french
+  - language
+  examples:
+  - arguments: strom
+    description: Traduction en français de "strom"
+  - arguments: arbre
+    description: Traduction en tchèque de "arbre"
+cs-hr 0:
+  url: https://slovnik.seznam.cz/preklad/chorvatsky
+  title: Češki-Hrvatski (Seznam)
+  tags:
+  - croatian
+  - czech
+  - dictionary
+  - language
+  examples:
+  - description: Idi na početnu stranicu
+cs-hr 1:
+  url: https://slovnik.seznam.cz/preklad/chorvatsky/<word>
+  title: Češki-Hrvatski (Seznam)
+  tags:
+  - croatian
+  - czech
+  - dictionary
+  - language
+  examples:
+  - arguments: strom
+    description: hrvatski prijevod od "strom"
+  - arguments: stablo
+    description: češki prijevod od "stablo"
+cs-it 0:
+  url: https://slovnik.seznam.cz/preklad/italsky
+  title: Ceco-Italiano (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - italian
+  - language
+  examples:
+  - description: Vai alla homepage
+cs-it 1:
+  url: https://slovnik.seznam.cz/preklad/italsky/<word>
+  title: Ceco-Italiano (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - italian
+  - language
+  examples:
+  - arguments: strom
+    description: Traduzione in italiano di "strom"
+  - arguments: albero
+    description: Traduzione in ceco di "albero"
+cs-pl 0:
+  url: https://slovnik.seznam.cz/preklad/polsky
+  title: Czeski-Polski (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - polish
+  examples:
+  - description: Przejdź do strony głównej
+cs-pl 1:
+  url: https://slovnik.seznam.cz/preklad/polsky/<word>
+  title: Czeski-Polski (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - polish
+  examples:
+  - arguments: strom
+    description: Tłumaczenie na język polski dla "strom"
+  - arguments: drzewo
+    description: Tłumaczenie na język czeski dla "drzewo"
+cs-ru 0:
+  url: https://slovnik.seznam.cz/preklad/rusky
+  title: Чешский-Русский (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - russian
+  examples:
+  - description: Перейти на главную страницу
+cs-ru 1:
+  url: https://slovnik.seznam.cz/preklad/rusky/<word>
+  title: Чешский-Русский (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - russian
+  examples:
+  - arguments: strom
+    description: Перевод на русский язык для "strom"
+  - arguments: дерево
+    description: Перевод на чешский язык для "дерево"
+cs-sk 0:
+  url: https://slovnik.seznam.cz/preklad/slovensky
+  title: Čeština-Slovenčina (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - slovak
+  examples:
+  - description: Prejsť na domovskú stránku
+cs-sk 1:
+  url: https://slovnik.seznam.cz/preklad/slovensky/<word>
+  title: Čeština-Slovenčina (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - slovak
+  examples:
+  - arguments: strom
+    description: slovenčina preklad pre "strom"
+  - arguments: stromček
+    description: čeština preklad pre "stromček"
+cs-uk 0:
+  url: https://slovnik.seznam.cz/preklad/ukrajinsky
+  title: Чеська-Українська (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - ukrainian
+  examples:
+  - description: Перейти на домашню сторінку
+cs-uk 1:
+  url: https://slovnik.seznam.cz/preklad/ukrajinsky/<word>
+  title: Чеська-Українська (Seznam)
+  tags:
+  - czech
+  - dictionary
+  - language
+  - ukrainian
+  examples:
+  - arguments: strom
+    description: Переклад українська для "strom"
+  - arguments: дерево
+    description: Переклад чеська для "дерево"
+de 0:
+  include: de-<$language> 0
+de 1:
+  include: de-<$language> 1
+de-cs 0:
+  title: Němčina-Čeština (Seznam)
+  include: cs-de 0
+  examples:
+  - description: Přejít na domovskou stránku
+de-cs 1:
+  title: Němčina-Čeština (Seznam)
+  include: cs-de 1
+  examples:
+  - arguments: baum
+    description: čeština překlad pro "baum"
+  - arguments: strom
+    description: němčina překlad pro "strom"
+en 0:
+  include: en-<$language> 0
+en 1:
+  include: en-<$language> 1
+en-cs 0:
+  title: Angličtina-Čeština (Seznam)
+  include: cs-en 0
+  examples:
+  - description: Přejít na domovskou stránku
+en-cs 1:
+  title: Angličtina-Čeština (Seznam)
+  include: cs-en 1
+  examples:
+  - arguments: tree
+    description: čeština překlad pro "tree"
+  - arguments: strom
+    description: angličtina překlad pro "strom"
+es 0:
+  include: es-<$language> 0
+es 1:
+  include: es-<$language> 1
+es-cs 0:
+  title: Španělština-Čeština (Seznam)
+  include: cs-es 0
+  examples:
+  - description: Přejít na domovskou stránku
+es-cs 1:
+  title: Španělština-Čeština (Seznam)
+  include: cs-es 1
+  examples:
+  - arguments: árbol
+    description: čeština překlad pro "árbol"
+  - arguments: strom
+    description: španělština překlad pro "strom"
+fr 0:
+  include: fr-<$language> 0
+fr 1:
+  include: fr-<$language> 1
+fr-cs 0:
+  title: Francouzština-Čeština (Seznam)
+  include: cs-fr 0
+  examples:
+  - description: Přejít na domovskou stránku
+fr-cs 1:
+  title: Francouzština-Čeština (Seznam)
+  include: cs-fr 1
+  examples:
+  - arguments: arbre
+    description: čeština překlad pro "arbre"
+  - arguments: strom
+    description: francouzština překlad pro "strom"
+hr 0:
+  include: hr-<$language> 0
+hr 1:
+  include: hr-<$language> 1
+hr-cs 0:
+  title: Chorvatština-Čeština (Seznam)
+  include: cs-hr 0
+  examples:
+  - description: Přejít na domovskou stránku
+hr-cs 1:
+  title: Chorvatština-Čeština (Seznam)
+  include: cs-hr 1
+  examples:
+  - arguments: stablo
+    description: čeština překlad pro "stablo"
+  - arguments: strom
+    description: chorvatština překlad pro "strom"
+it 0:
+  include: it-<$language> 0
+it 1:
+  include: it-<$language> 1
+it-cs 0:
+  title: Italština-Čeština (Seznam)
+  include: cs-it 0
+  examples:
+  - description: Přejít na domovskou stránku
+it-cs 1:
+  title: Italština-Čeština (Seznam)
+  include: cs-it 1
+  examples:
+  - arguments: albero
+    description: čeština překlad pro "albero"
+  - arguments: strom
+    description: italština překlad pro "strom"
+pl 0:
+  include: pl-<$language> 0
+pl 1:
+  include: pl-<$language> 1
+pl-cs 0:
+  title: Polština-Čeština (Seznam)
+  include: cs-pl 0
+  examples:
+  - description: Přejít na domovskou stránku
+pl-cs 1:
+  title: Polština-Čeština (Seznam)
+  include: cs-pl 1
+  examples:
+  - arguments: drzewo
+    description: čeština překlad pro "drzewo"
+  - arguments: strom
+    description: polština překlad pro "strom"
+ru 0:
+  include: ru-<$language> 0
+ru 1:
+  include: ru-<$language> 1
+ru-cs 0:
+  title: Ruština-Čeština (Seznam)
+  include: cs-ru 0
+  examples:
+  - description: Přejít na domovskou stránku
+ru-cs 1:
+  title: Ruština-Čeština (Seznam)
+  include: cs-ru 1
+  examples:
+  - arguments: дерево
+    description: čeština překlad pro "дерево"
+  - arguments: strom
+    description: ruština překlad pro "strom"
+sk 0:
+  include: sk-<$language> 0
+sk 1:
+  include: sk-<$language> 1
+sk-cs 0:
+  title: Slovenština-Čeština (Seznam)
+  include: cs-sk 0
+  examples:
+  - description: Přejít na domovskou stránku
+sk-cs 1:
+  title: Slovenština-Čeština (Seznam)
+  include: cs-sk 1
+  examples:
+  - arguments: stromček
+    description: čeština překlad pro "stromček"
+  - arguments: strom
+    description: slovenština překlad pro "strom"
+uk 0:
+  include: uk-<$language> 0
+uk 1:
+  include: uk-<$language> 1
+uk-cs 0:
+  title: Ukrajinština-Čeština (Seznam)
+  include: cs-uk 0
+  examples:
+  - description: Přejít na domovskou stránku
+uk-cs 1:
+  title: Ukrajinština-Čeština (Seznam)
+  include: cs-uk 1
+  examples:
+  - arguments: дерево
+    description: čeština překlad pro "дерево"
+  - arguments: strom
+    description: ukrajinština překlad pro "strom"

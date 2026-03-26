@@ -1,0 +1,149 @@
+a 0:
+  url: https://www.amazon.co.uk?tag=serchilo-20
+  title: Amazon.co.uk
+  tags:
+  - amazon
+  - books
+  - is-affiliate
+  - shopping
+  examples:
+  - description: Go to the homepage
+a 1:
+  url: https://www.amazon.co.uk/s?k=<query>&linkCode=ll2&tag=serchilo-20
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Search for "shakespeare"
+e 0:
+  url: https://www.ebay.co.uk/?mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.co.uk
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+e 1:
+  url: https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=710-53481-19255-0&siteid=3&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.co.uk
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+g 0:
+  url: https://www.google.co.uk/
+  title: Google.co.uk
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Go to the homepage
+g 1:
+  url: https://www.google.co.uk/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
+  examples:
+  - arguments: london
+    description: Search Google for "london"
+jw 1:
+  url: https://www.justwatch.com/gb/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+nr 0:
+  url: https://www.nationalrail.co.uk/
+  title: National Rail
+  tags:
+  - transport
+  - travel
+  examples:
+  - description: Go to the homepage
+nr 2:
+  url: 'https://www.nationalrail.co.uk/journey-planner/?type=single&origin=<from code>&destination=<to code>&leavingType=departing&leavingHour=<$now: {output: HH}>&leavingMin=00&leavingDate=<$now: {output: DDMMYY}>&adults=1&extraTime=0#O'
+  include: nr 0
+  examples:
+  - arguments: man, eus
+    description: Search for trains from Manchester to London Euston
+nr 3:
+  url: 'https://www.nationalrail.co.uk/journey-planner/?type=single&origin=<from code>&destination=<to code>&leavingType=departing&leavingHour=<time: {type: time, output: HH}>&leavingMin=00&leavingDate=<$now: {output: DDMMYY}>&adults=1&extraTime=0#O'
+  include: nr 0
+  examples:
+  - arguments: man, eus, 20
+    description: Search for trains from Manchester to London Euston at 20:00
+nr 4:
+  url: 'https://www.nationalrail.co.uk/journey-planner/?type=single&origin=<from code>&destination=<to code>&leavingType=departing&leavingHour=<time: {type: time, output: HH}>&leavingMin=00&leavingDate=<date: {type: date, output: DDMMYY}>&adults=1&extraTime=0#O'
+  include: nr 0
+  examples:
+  - arguments: man, eus, 20, fr
+    description: Search for trains from Manchester to London Euston at 20:00 next Friday
+tfl 0:
+  url: https://tfl.gov.uk/
+  title: Transport for London
+  tags:
+  - london
+  - transport
+  - travel
+  examples:
+  - description: Go to the homepage
+tfl 2:
+  url: https://tfl.gov.uk/plan-a-journey/results?InputFrom=<from>&InputTo=<to>
+  include: tfl 0
+  examples:
+  - arguments: brixton, paddington
+    description: Search the next connection from Brixton to Paddington
+tfl 3:
+  url: 'https://tfl.gov.uk/plan-a-journey/results?InputFrom=<from>&InputTo=<to>&Time=<time: {type: date, output: HHmm }>'
+  include: tfl 0
+  examples:
+  - arguments: brixton, paddington, 10
+    description: Search the next connection from Brixton to Paddington at 10:00
+tl 2:
+  deprecated:
+    alternative:
+      query: ttl <1>, <2>
+    created: '2024-04-25'
+tl 4:
+  deprecated:
+    alternative:
+      query: ttl <1>, <2>, <3>, <4>
+    created: '2024-04-25'
+ttl 2:
+  url: 'https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/<from>/<to>/<$now: {output: DD/MM/YY/HH/mm}>/Leave%20After//////Leave%20After/1/0//'
+  title: thetrainline.com
+  tags:
+  - transport
+  - travel
+  examples:
+  - arguments: manchester, london
+    description: Search for trains from Manchester to London
+ttl 4:
+  url: https://www.thetrainline.com/buytickets/combinedmatrix.aspx?Command=TimeTable#Journey/<from>/<to>/<date>/<time>/Leave%20After//////Leave%20After/1/0//
+  title: thetrainline.com
+  tags:
+  - transport
+  - travel
+  examples:
+  - arguments: manchester, london, 22/06/16, 14/30
+    description: Search for trains from Manchester to London
+tv 0:
+  url: https://www.tvguide.co.uk/
+  title: tvguide.co.uk
+  tags:
+  - tv
+zal 0:
+  url: https://www.zalando.co.uk/
+  title: Zalando.co.uk
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Go to the homepage
+zal 1:
+  url: https://www.zalando.co.uk/catalog/?q=<product>
+  include: zal 0
+  examples:
+  - arguments: shoes
+    description: search for shoes

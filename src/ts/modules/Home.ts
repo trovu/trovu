@@ -1,0 +1,324 @@
+// @ts-nocheck
+
+/** @module Home */
+import "../../scss/style.scss";
+import CallHandler from "./CallHandler";
+import Env from "./Env";
+import GitLogger from "./GitLogger";
+import Settings from "./home/Settings";
+import Suggestions from "./home/Suggestions";
+import "@fortawesome/fontawesome-free/js/all.min";
+
+/* eslint-disable no-unused-vars */
+import * as BSN from "bootstrap.native";
+import "bootstrap/dist/css/bootstrap.css";
+import countriesList from "countries-list";
+
+/** Set and manage the homepage. */
+
+export default class Home {
+  isStandalonePWA() {
+    return (
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone === true
+    );
+  }
+  constructor() {}
+
+  async initialize() {
+    this.env = new Env({ context: "index" });
+    this.queryInput = document.querySelector("#query");
+    this.env.setContext();
+
+    // Init environment.
+    const params = Env.getParamsFromUrl();
+    await this.env.populate(params);
+    this.updateOpensearch();
+
+    const gitLogger = new GitLogger(this.env.gitInfo);
+    document.querySelector("#version").textContent = gitLogger.getVersion();
+    gitLogger.logVersion();
+
+    const modalElement = document.getElementById("settings");
+    const modal = new BSN.Modal(modalElement);
+
+    new Settings(this.env, this.updateOpensearch);
+
+    this.showInfoAlerts();
+    this.setLocationHash();
+    this.setQueryElement();
+
+    // Toggle by query only after the query input is set.
+    this.toggleByQuery();
+
+    if (this.env.debug) {
+      this.env.logger.showLog();
+    }
+
+    document.getElementById("query-form").onsubmit = this.submitQuery;
+    document.querySelector("#reload").href = this.env.buildProcessUrl({
+      query: "reload",
+    });
+    document.documentElement.setAttribute("data-page-loaded", "true");
+
+    Home.setHeights();
+    this.setListeners();
+    window.addEventListener(
+      "hashchange",
+      function () {
+        window.location.reload();
+      },
+      false,
+    );
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        // If true, the page was loaded from cache
+        document.getElementById("query").focus();
+      }
+    });
+  }
+
+  static setHeights() {
+    Home.setMaxHeightForSuggestions();
+    window.onresize = Home.setMaxHeightForSuggestions;
+  }
+
+  static setMaxHeightForSuggestions() {
+    const suggestionsDiv = document.querySelector("#suggestions");
+    // Fallback value.
+    suggestionsDiv.style.maxHeight = "200px";
+    const suggestionsTop = document.querySelector("#suggestions").getBoundingClientRect().top;
+    let footerTop;
+    if (document.querySelector("footer").style.display === "none") {
+      footerTop = document.documentElement.clientHeight;
+    } else {
+      footerTop = document.querySelector("footer").getBoundingClientRect().top;
+    }
+    suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + "px";
+  }
+
+  setListeners() {
+    this.setListenersToSetQuery("namespace", "ns");
+    this.setListenersToSetQuery("tag", "tag");
+  }
+  setListenersToSetQuery(className, prefix) {
+    const elements = document.querySelectorAll(`span.${className}`);
+    elements.forEach((element) => {
+      element.style.cursor = "pointer";
+      element.addEventListener("click", () => {
+        this.queryInput.value = `${prefix}:${element.textContent}`;
+        this.suggestions.updateSuggestions();
+        this.toggleByQuery();
+        this.queryInput.focus();
+      });
+    });
+  }
+
+  setQueryElement() {
+    switch (this.env.status) {
+      case "deprecated":
+        this.queryInput.value = this.env.alternative;
+        break;
+      case "reloaded":
+        this.queryInput.value = "";
+        break;
+      default:
+        this.queryInput.value = this.env.query || "";
+        break;
+    }
+
+    this.suggestions = new Suggestions("#query", "#suggestions", this);
+    this.setToggleByQuery();
+  }
+
+  setToggleByQuery() {
+    this.queryInput.addEventListener("input", () => {
+      this.toggleByQuery();
+    });
+    document.querySelector("#suggestions").addEventListener("click", () => {
+      this.toggleByQuery();
+    });
+    document.querySelector("html").style.display = "block";
+    this.queryInput.focus();
+  }
+
+  toggleByQuery() {
+    // Toggle display of navbar and examples.
+    if (this.queryInput.value.trim() === "" && (!this.suggestions || this.suggestions.selected === -1)) {
+      document.querySelector("nav.navbar").style.display = "block";
+      if (!this.env.isRunningStandalone() && this.env.context !== "web-ext") {
+        document.querySelector("footer").style.display = "block";
+        document.querySelectorAll(".explainer").forEach((el) => (el.style.display = "block"));
+      }
+      if (this.env.context === "web-ext") {
+        document.querySelector("#settings-button").style.display = "none";
+      }
+      document.querySelector("#lists").style.display = "block";
+      document.querySelector("#suggestions").style.display = "none";
+      document.querySelector("#help").style.display = "none";
+    } else {
+      document.querySelector("nav.navbar").style.display = "none";
+      document.querySelector("footer").style.display = "none";
+      document.querySelector("#suggestions").style.display = "block";
+      document.querySelector("#help").style.display = "block";
+      document.querySelectorAll(".explainer").forEach((el) => (el.style.display = "none"));
+      document.querySelector("#lists").style.display = "none";
+    }
+    Home.setHeights();
+  }
+
+  setLocationHash() {
+    const paramStr = this.env.buildUrlParamStr();
+    window.location.hash = "#" + paramStr;
+  }
+
+  /**
+   * Show custom alerts above query input.
+   */
+  showInfoAlerts() {
+    const params = Env.getParamsFromUrl();
+    const alert = document.querySelector("#alert");
+    const alertMsg = alert.querySelector("span");
+    const alertClose = alert.querySelector("button");
+    alertClose.addEventListener("click", () => {
+      const paramStr = this.env.buildUrlParamStr({ query: undefined, status: undefined });
+      window.location.hash = "#" + paramStr;
+    });
+    if (params.status) {
+      alert.removeAttribute("hidden");
+    }
+    switch (params.status) {
+      case "not_found":
+        alertMsg.innerHTML = `No matching shortcut found. Did you use a <a href="${this.env.data.config.url.docs}users/#call-a-shortcut">keyword</a>? Try <a target="_blank" href="${this.env.data.config.url.docs}users/troubleshooting/">Troubleshooting</a>.`;
+        break;
+      case "not_reachable":
+        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="${
+          this.env.data.config.url.docs
+        }shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${
+          countriesList.countries[this.env.country.toUpperCase()].emoji
+        }) to <span class="namespace"></span>.`;
+        alertMsg.querySelector(".namespace").textContent = params.namespace;
+        break;
+      case "reloaded":
+        alertMsg.textContent = "Shortcuts were reloaded in all namespaces.";
+        if (this.env.github) {
+          alertMsg.innerHTML +=
+            " Changes on your GitHub might require a reload in <strong>5 minutes</strong> due to caching.";
+        }
+        break;
+      case "deprecated":
+        alertMsg.innerHTML = 'Your shortcut <strong><em class="query"></em></strong> is deprecated. Please use:';
+        alertMsg.querySelector(".query").textContent = params.query;
+        break;
+      case "removed":
+        alertMsg.innerHTML = `The shortcut <a class="githubLink" target="_blank" href=""></a> was removed as does not adhere to our 
+          <a target="_blank" href="${this.env.data.config.url.docs}editors/policy/">Content policy</a>. 
+          But you can <a target="_blank" href="${this.env.data.config.url.docs}users/advanced/">
+          create a user shortcut in your own namespace</a>.`;
+        alertMsg.querySelector("a.githubLink").textContent = params.query;
+        alertMsg.querySelector("a.githubLink").href = `https://github.com/search?l=&q=${encodeURIComponent(
+          params.key,
+        )}+repo%3Atrovu%2Ftrovu-data&type=code`;
+        break;
+    }
+  }
+
+  /**
+   * On submitting the query.
+   *
+   * @param {object} event – The submitting event.
+   */
+  submitQuery = async (event) => {
+    // Prevent default sending as GET parameters.
+    if (event) {
+      event.preventDefault();
+    }
+
+    // Must create new env instance here,
+    // because extraNamespace might have changed reachability,
+    // or asking for a not yet parsed Github namespace.
+    const envQuery = new Env({ context: "index" });
+    const params = Env.getParamsFromUrl();
+    params.query = this.queryInput.value;
+    await envQuery.populate(params);
+
+    const response = CallHandler.getRedirectResponse(envQuery);
+
+    // Send debug to /process.
+    if (envQuery.debug) {
+  const processUrl = this.env.buildProcessUrl({
+    query: this.queryInput.value,
+  });
+  if (this.isStandalonePWA()) {
+    window.open(processUrl, "_blank", "noopener,noreferrer");
+  } else {
+    window.location.href = processUrl;
+  }
+  return;
+}
+
+    let redirectUrl;
+if (response.status === "found") {
+  redirectUrl = response.redirectUrl;
+} else {
+  redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+}
+
+if (this.isStandalonePWA()) {
+  window.open(redirectUrl, "_blank", "noopener,noreferrer");
+} else {
+  window.location.href = redirectUrl;
+}
+  /**
+   * On triggering reload
+   *
+   * @param {object} event – The submitting event.
+   */
+  reload = (event) => {
+    if (event) {
+      event.preventDefault();
+    }
+    this.queryInput.value = "reload";
+    this.submitQuery();
+  };
+
+  /**
+   * Add and update Opensearch tag.
+   */
+  updateOpensearch() {
+    if (!this.env.language || !this.env.country) {
+      return;
+    }
+    // Find link rel="search" and delete it if it exists
+    const existingLinkSearch = document.querySelector('link[rel="search"]');
+    if (existingLinkSearch) {
+      existingLinkSearch.remove();
+    }
+
+    const linkSearch = document.createElement("link");
+    linkSearch.id = "opensearch";
+    linkSearch.rel = "search";
+    linkSearch.type = "application/opensearchdescription+xml";
+
+    let title = "Trovu: ";
+    if (this.env.github) {
+      title += this.env.github;
+    } else if (this.env.configUrl) {
+      title += this.env.configUrl;
+    } else {
+      // Set fallback values.
+      this.env.language = this.env.language || "en";
+      this.env.country = this.env.country || "us";
+      title += this.env.language + "-" + this.env.country.toUpperCase();
+      if (this.env.defaultKeyword) {
+        title += " " + this.env.defaultKeyword;
+      }
+    }
+    linkSearch.title = title;
+
+    const paramsString = this.env.buildUrlParamStr();
+    linkSearch.href = `/opensearch/?${paramsString}`;
+
+    document.head.appendChild(linkSearch);
+  }
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>trovu.net – Loading...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Set no referrer, to enable duckduckgo feeling lucky. -->
+    <meta name="referrer" content="no-referrer" />
+    <style>
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: #eee;
+          background: #121212;
+        }
+
+        body a {
+          color: #809fff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <pre id="loading">Loading <span id="targetDomain"></span></pre>
+    <pre hidden id="log"></pre>
+    <script type="module" src="../{{fileNameJs}}?{{currentTimestamp}}"></script>
+  </body>
+</html>

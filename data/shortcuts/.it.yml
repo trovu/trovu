@@ -1,0 +1,81 @@
+a 0:
+  url: https://www.amazon.it?tag=serchilo-20
+  title: Amazon.it
+  tags:
+  - amazon
+  - books
+  - is-affiliate
+  - shopping
+  examples:
+  - description: Va alla pagina principale
+a 1:
+  url: https://www.amazon.it/s?k=<ricerca>&linkCode=ll2&tag=serchilo-20
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Cerca libri di Shakespeare
+cds 0:
+  url: https://www.corriere.it/
+  title: Corriere della Sera
+  tags:
+  - corriere
+  - news
+  examples:
+  - description: Vai alla pagina principale
+cds 1:
+  url: https://www.corriere.it/ricerca/?q=<query>
+  include: cds 0
+  examples:
+  - arguments: roma
+    description: Cerca articoli su Roma
+e 0:
+  url: https://www.ebay.it/
+  title: Ebay.it
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+  examples:
+  - description: Va alla pagina principale
+e 1:
+  url: https://www.ebay.it/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=724-53478-19255-0&siteid=101&campid=5337375636&customid=&toolid=10001&mkevt=1
+  include: e 0
+  examples:
+  - arguments: smartphone
+    description: Cerca smartphone
+jw 1:
+  url: https://www.justwatch.com/it/cerca?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+rep 0:
+  url: https://www.repubblica.it/
+  title: La Repubblica
+  tags:
+  - news
+  - repubblica
+  examples:
+  - description: Vai alla pagina principale
+rep 1:
+  url: https://ricerca.repubblica.it/ricerca/repubblica?query=<query>
+  include: rep 0
+  examples:
+  - arguments: roma
+    description: Cerca articoli su Roma
+zal 0:
+  url: https://www.zalando.it/
+  title: Zalando.it
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Vai alla pagina principale
+zal 1:
+  url: https://www.zalando.it/catalogo/?q=<prodotto>
+  include: zal 0
+  examples:
+  - arguments: calzature
+    description: Cerca calzature

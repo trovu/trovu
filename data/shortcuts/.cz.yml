@@ -1,0 +1,271 @@
+alza 0:
+  url: https://www.alza.cz/
+  title: Alza.cz
+  tags:
+  - seznam
+  - shopping
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Online obchod s širokou nabídkou elektroniky a dalšího zboží.
+alza 1:
+  url: https://www.alza.cz/search.htm?exps=<výraz>
+  include: alza 0
+  examples:
+  - arguments: televizor
+    description: Hledej "televizor"
+ba 1:
+  deprecated:
+    alternative:
+      query: bzs <1>
+    created: '2023-12-18'
+bzs 0:
+  url: https://www.bazos.cz/
+  title: Bazoš
+  tags:
+  - classifieds
+  description: Inzertní server pro koupi a prodej použitých věcí.
+bzs 1:
+  url: https://www.bazos.cz/search.php?hledat=<výraz>
+  include: bzs 0
+  examples:
+  - arguments: vrtačka
+    description: Hledej použitou vrtačku
+cd 0:
+  url: https://www.cd.cz/
+  title: České dráhy
+  tags:
+  - train
+  - travel
+  examples:
+  - description: Hlavní stránka Českých drah
+cd 2:
+  url: 'https://www.cd.cz/spojeni-a-jizdenka/api-hp/?data={"from":{"listId":0,"name":"<odkud: {type: city}>"},"to":{"listId":0,"name":"<kam: {type: city}>"},"isAdvanced":false,"doSearch":true}'
+  title: České dráhy, spojení
+  include: cd 0
+  examples:
+  - arguments: praha, brno
+    description: Vlak z Prahy do Brna
+  - arguments: a, b
+    description: totéž, ale se zkratkou SPZ
+  description: Informační systém pro vyhledávání spojů Českých drah.
+cd 3:
+  url: 'https://www.cd.cz/spojeni-a-jizdenka/api-hp/?data={"from":{"listId":0,"name":"<odkud: {type: city}>"},"to":{"listId":0,"name":"<kam: {type: city}>"},"time":"<čas: {type: time, output: HH:mm}>","isAdvanced":false,"doSearch":true}'
+  include: cd 2
+  examples:
+  - arguments: praha, brno, 20
+    description: Vlak z Prahy do Brna ve 20:00h
+cd 4:
+  url: 'https://www.cd.cz/spojeni-a-jizdenka/api-hp/?data={"from":{"listId":0,"name":"<odkud: {type: city}>"},"to":{"listId":0,"name":"<kam: {type: city}>"},"time":"<čas: {type: time, output: HH:mm}>","date":"<datum: {type: date, output: DD.MM.YYYY}>","isAdvanced":false,"doSearch":true}'
+  include: cd 2
+  examples:
+  - arguments: praha, brno, 20, 10.12.
+    description: Vlak z Prahy do Brna ve 20:00h v dne 10.12.
+dat 0:
+  url: https://www.datart.cz/
+  title: Datart
+  tags:
+  - electronics
+  - shopping
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Obchod s elektronikou a domácími spotřebiči.
+dat 1:
+  url: https://www.datart.cz/vyhledavani/?q=<výraz>
+  include: dat 0
+  examples:
+  - arguments: televizor
+    description: Hledej "televizor" na Datartu
+dbk 0:
+  url: https://www.databazeknih.cz/
+  title: Databáze knih
+  tags:
+  - books
+  - databazeknih
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Vyhledávání knih a informace o nich.
+dbk 1:
+  url: https://www.databazeknih.cz/search?q=<výraz>
+  include: dbk 0
+  examples:
+  - arguments: harry potter
+    description: Hledej "harry potter"
+dcl 0:
+  url: https://www.decathlon.cz/
+  title: Decathlon.cz
+  tags:
+  - clothing
+  - decathlon
+  - shopping
+  - sports
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Internetový obchod s širokým sortimentem sportovního vybavení a oblečení.
+dcl 1:
+  url: https://www.decathlon.cz/search?Ntt=<výraz>
+  include: dcl 0
+  examples:
+  - arguments: kolo
+    description: Hledej "kolo"
+g 0:
+  url: https://www.google.cz/
+  title: Google.cz
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Přejít na hlavní stránku
+g 1:
+  url: https://www.google.cz/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
+  examples:
+  - arguments: praha
+    description: Hledat "praha" Googlem
+idos 0:
+  url: https://jizdnirady.idnes.cz/
+  title: IDOS Jízdní řády
+  tags:
+  - idos
+  - train
+  - travel
+  description: Informační systém pro vyhledávání spojů ve veřejné dopravě.
+idos 2:
+  url: 'https://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&submit=1&pt=true'
+  include: idos 0
+  examples:
+  - arguments: praha, brno
+    description: Vlak nebo bus z Prahy do Brna
+  - arguments: a, b
+    description: totéž, ale se zkratkou SPZ
+idos 3:
+  url: 'https://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&submit=1&pt=true'
+  include: idos 0
+  examples:
+  - arguments: praha, brno, 20
+    description: Vlak nebo bus z Prahy do Brna ve 20:00h
+idos 4:
+  url: 'https://jizdnirady.idnes.cz/vlakyautobusymhd/spojeni/?f=<odkud: {type: city}>&t=<kam: {type: city}>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>&submit=1&pt=true'
+  include: idos 0
+  examples:
+  - arguments: praha, brno, 20, 10.12.
+    description: Vlak nebo bus z Prahy do Brna ve 20:00h v dne 10.12.
+ikea 0:
+  url: https://www.ikea.com/cz/cs/
+  title: IKEA Česko
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - description: Přejít na hlavní stránku
+ikea 1:
+  url: https://www.ikea.com/cz/cs/search/?q=<query>
+  include: ikea 0
+  examples:
+  - arguments: matrace
+    description: Hledej matrace
+jw 1:
+  url: https://www.justwatch.com/cz/vyhledání?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+m 0:
+  url: https://mapy.cz/
+  title: Mapy.cz
+  tags:
+  - maps
+  - mapy
+  description: Online mapa a plánovač tras.
+m 1:
+  url: https://mapy.cz/zakladni?q=<místo>
+  include: m 0
+  examples:
+  - arguments: praha
+    description: Praha na mapy.cz
+m 2:
+  url: 'https://mapy.cz/zakladni?q=<město: {type: city}>%2C%20<místo>'
+  include: m 0
+  examples:
+  - arguments: a, lazarska
+    description: Lazarská v Praze na mapy.cz
+mapy 1:
+  deprecated:
+    alternative:
+      query: m <1>
+    created: '2023-12-18'
+pid 0:
+  url: https://pid.cz/hledani-spojeni/
+  title: PID Spojení
+  tags:
+  - pid
+  - transport
+  examples:
+  - description: Přejít na hlavní stránku
+  description: Vyhledávání spojení ve veřejné dopravě v Praze a okolí.
+pid 2:
+  url: https://pid.cz/hledani-spojeni/?transports%5B%5D=metro&transports%5B%5D=vlak&transports%5B%5D=tram&transports%5B%5D=bus&transports%5B%5D=trolley&transports%5B%5D=privoz&transports%5B%5D=lan&from=<odkud>&to=<kam>
+  include: pid 0
+  examples:
+  - arguments: anděl, florenc
+    description: Spojení z Anděla na Florenc
+pid 3:
+  url: 'https://pid.cz/hledani-spojeni/?transports%5B%5D=metro&transports%5B%5D=vlak&transports%5B%5D=tram&transports%5B%5D=bus&transports%5B%5D=trolley&transports%5B%5D=privoz&transports%5B%5D=lan&from=<odkud>&to=<kam>&time=<čas: {type: time, output: HH:mm}>'
+  include: pid 0
+  examples:
+  - arguments: anděl, florenc, 15:30
+    description: Spojení z Anděla na Florenc v 15:30
+pid 4:
+  url: 'https://pid.cz/hledani-spojeni/?transports%5B%5D=metro&transports%5B%5D=vlak&transports%5B%5D=tram&transports%5B%5D=bus&transports%5B%5D=trolley&transports%5B%5D=privoz&transports%5B%5D=lan&from=<odkud>&to=<kam>&time=<čas: {type: time, output: HH:mm}>&date=<datum: {type: date, output: DD.MM.YYYY}>'
+  include: pid 0
+  examples:
+  - arguments: anděl, florenc, 15:30, 10.12
+    description: Spojení z Anděla na Florenc v 15:30 dne 10.12.
+seznam 1:
+  deprecated:
+    alternative:
+      query: s <1>
+szn 0:
+  url: https://www.seznam.cz/
+  title: Seznam
+  tags:
+  - seznam
+  - web-search
+  description: Český internetový vyhledávač a informační portál.
+szn 1:
+  url: https://search.seznam.cz/search.cgi?w=<query>
+  include: szn 0
+  examples:
+  - arguments: praha
+    description: Hledej "praha"
+tv 0:
+  url: https://tvprogram.centrum.cz/
+  title: TV programy Česko
+  tags:
+  - centrum
+  - tv
+z 1:
+  deprecated:
+    alternative:
+      query: zbz <1>
+    created: '2023-12-18'
+zbozi 1:
+  deprecated:
+    alternative:
+      query: zbz <1>
+    created: '2023-12-18'
+zbz 0:
+  url: https://www.zbozi.cz/
+  title: Zboží.cz
+  tags:
+  - seznam
+  - shopping
+  description: Vyhledávání a porovnávání produktů a cen.
+zbz 1:
+  url: https://www.zbozi.cz/hledej/?q=<výraz>
+  include: zbz 0
+  examples:
+  - arguments: televizor
+    description: Hledej "televizor"

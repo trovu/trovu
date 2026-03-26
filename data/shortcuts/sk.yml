@@ -1,0 +1,44 @@
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+pv 0:
+  url: https://slovnik.aktuality.sk/pravopis/
+  title: Slovník.sk, pravopis
+  tests:
+  - expect: <title>Pravopis
+  tags:
+  - language
+  - pravopis
+  - slovnik
+pv 1:
+  url: https://slovnik.aktuality.sk/pravopis/?q=<slovo>
+  tests:
+  - arguments: strom
+    expect: <title>„strom“
+  include: pv 0
+  examples:
+  - arguments: strom
+    description: Hladaj slovo "strom" v pravopisnom slovníku
+syn 0:
+  url: https://slovnik.aktuality.sk/synonyma/
+  title: Slovník.sk, pravopis
+  tests:
+  - expect: <title>Synonymický
+  tags:
+  - language
+  - slovnik
+  - synonyma
+syn 1:
+  url: https://slovnik.aktuality.sk/synonyma/?q=<slovo>
+  tests:
+  - arguments: strom
+    expect: <title>&quot;strom&quot;
+  include: syn 0
+  examples:
+  - arguments: strom
+    description: Hladaj slovo "strom" v synonymickom slovníku

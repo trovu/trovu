@@ -1,0 +1,724 @@
+ar 0:
+  include: ar-<$language> 0
+ar 1:
+  include: ar-<$language> 1
+ar-en 0:
+  title: Arabic-English (Wordreference)
+  include: en-ar 0
+  examples:
+  - description: Go to the homepage
+ar-en 1:
+  title: Arabic-English (Wordreference)
+  include: en-ar 1
+  examples:
+  - arguments: شجرة
+    description: English translation of "شجرة"
+  - arguments: tree
+    description: Arabic translation of "tree"
+ca 0:
+  include: ca-<$language> 0
+ca 1:
+  include: ca-<$language> 1
+ca-en 0:
+  title: Catalan-English (Wordreference)
+  include: en-ca 0
+  examples:
+  - description: Go to the homepage
+ca-en 1:
+  title: Catalan-English (Wordreference)
+  include: en-ca 1
+  examples:
+  - arguments: arbre
+    description: English translation of "arbre"
+  - arguments: tree
+    description: Catalan translation of "tree"
+cs 0:
+  include: cs-<$language> 0
+cs 1:
+  include: cs-<$language> 1
+cs-en 0:
+  title: Czech-English (Wordreference)
+  include: en-cs 0
+  examples:
+  - description: Go to the homepage
+cs-en 1:
+  title: Czech-English (Wordreference)
+  include: en-cs 1
+  examples:
+  - arguments: strom
+    description: English translation of "strom"
+  - arguments: tree
+    description: Czech translation of "tree"
+de 0:
+  include: de-<$language> 0
+de 1:
+  include: de-<$language> 1
+de-en 0:
+  title: German-English (Wordreference)
+  include: en-de 0
+  examples:
+  - description: Go to the homepage
+de-en 1:
+  title: German-English (Wordreference)
+  include: en-de 1
+  examples:
+  - arguments: baum
+    description: English translation of "baum"
+  - arguments: tree
+    description: German translation of "tree"
+el 0:
+  include: el-<$language> 0
+el 1:
+  include: el-<$language> 1
+el-en 0:
+  title: Greek-English (Wordreference)
+  include: en-el 0
+  examples:
+  - description: Go to the homepage
+el-en 1:
+  title: Greek-English (Wordreference)
+  include: en-el 1
+  examples:
+  - arguments: δέντρο
+    description: English translation of "δέντρο"
+  - arguments: tree
+    description: Greek translation of "tree"
+en 0:
+  include: en-<$language> 0
+en 1:
+  include: en-<$language> 1
+en-ar 0:
+  url: https://www.wordreference.com/enar/
+  title: الإنجليزية-العربية (Wordreference)
+  tags:
+  - arabic
+  - dictionary
+  - english
+  - language
+  examples:
+  - description: اذهب إلى الصفحة الرئيسية
+en-ar 1:
+  url: https://www.wordreference.com/enar/<word>
+  title: الإنجليزية-العربية (Wordreference)
+  tags:
+  - arabic
+  - dictionary
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: ترجمة العربية من "tree"
+  - arguments: شجرة
+    description: ترجمة الإنجليزية من "شجرة"
+en-ca 0:
+  url: https://www.wordreference.com/enca/
+  title: Anglès-Català (Wordreference)
+  tags:
+  - catalan
+  - dictionary
+  - english
+  - language
+  examples:
+  - description: Ves a la pàgina principal
+en-ca 1:
+  url: https://www.wordreference.com/enca/<word>
+  title: Anglès-Català (Wordreference)
+  tags:
+  - catalan
+  - dictionary
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: Traducció al català de "tree"
+  - arguments: arbre
+    description: Traducció al anglès de "arbre"
+en-cs 0:
+  url: https://www.wordreference.com/encs/
+  title: Angličtina-Čeština (Wordreference)
+  tags:
+  - czech
+  - dictionary
+  - english
+  - language
+  examples:
+  - description: Přejít na domovskou stránku
+en-cs 1:
+  url: https://www.wordreference.com/encs/<word>
+  title: Angličtina-Čeština (Wordreference)
+  tags:
+  - czech
+  - dictionary
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: čeština překlad pro "tree"
+  - arguments: strom
+    description: angličtina překlad pro "strom"
+en-de 0:
+  url: https://www.wordreference.com/ende/
+  title: Englisch-Deutsch (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+  - description: Zur Startseite
+en-de 1:
+  url: https://www.wordreference.com/ende/<word>
+  title: Englisch-Deutsch (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Englisch-Übersetzung von "baum"
+en-el 0:
+  url: https://www.wordreference.com/enel/
+  title: Αγγλικά-Ελληνικά (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - greek
+  - language
+  examples:
+  - description: Μετάβαση στην αρχική σελίδα
+en-el 1:
+  url: https://www.wordreference.com/enel/<word>
+  title: Αγγλικά-Ελληνικά (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - greek
+  - language
+  examples:
+  - arguments: tree
+    description: Μετάφραση στα Ελληνικά για το "tree"
+  - arguments: δέντρο
+    description: Μετάφραση στα Αγγλικά για το "δέντρο"
+en-es 0:
+  url: https://www.wordreference.com/enes/
+  title: Inglés-Español (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+  examples:
+  - description: Ir a la página principal
+en-es 1:
+  url: https://www.wordreference.com/enes/<word>
+  title: Inglés-Español (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - spanish
+  examples:
+  - arguments: tree
+    description: Traducción al español de "tree"
+  - arguments: árbol
+    description: Traducción al inglés de "árbol"
+en-fr 0:
+  url: https://www.wordreference.com/enfr/
+  title: Anglais-Français (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+  examples:
+  - description: Aller à la page d'accueil
+en-fr 1:
+  url: https://www.wordreference.com/enfr/<word>
+  title: Anglais-Français (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - french
+  - language
+  examples:
+  - arguments: tree
+    description: Traduction en français de "tree"
+  - arguments: arbre
+    description: Traduction en anglais de "arbre"
+en-it 0:
+  url: https://www.wordreference.com/enit/
+  title: Inglese-Italiano (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - italian
+  - language
+  examples:
+  - description: Vai alla homepage
+en-it 1:
+  url: https://www.wordreference.com/enit/<word>
+  title: Inglese-Italiano (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - italian
+  - language
+  examples:
+  - arguments: tree
+    description: Traduzione in italiano di "tree"
+  - arguments: albero
+    description: Traduzione in inglese di "albero"
+en-ja 0:
+  url: https://www.wordreference.com/enja/
+  title: 英語-日本語 (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - japanese
+  - language
+  examples:
+  - description: ホームページへ行く
+en-ja 1:
+  url: https://www.wordreference.com/enja/<word>
+  title: 英語-日本語 (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - japanese
+  - language
+  examples:
+  - arguments: tree
+    description: '"tree"の日本語翻訳'
+  - arguments: 木
+    description: '"木"の英語翻訳'
+en-ko 0:
+  url: https://www.wordreference.com/enko/
+  title: 영어-한국어 (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - korean
+  - language
+  examples:
+  - description: 홈페이지로 이동
+en-ko 1:
+  url: https://www.wordreference.com/enko/<word>
+  title: 영어-한국어 (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - korean
+  - language
+  examples:
+  - arguments: tree
+    description: '"tree"의 한국어 번역'
+  - arguments: 나무
+    description: '"나무"의 영어 번역'
+en-nl 0:
+  url: https://www.wordreference.com/ennl/
+  title: Engels-Nederlands (Wordreference)
+  tags:
+  - dictionary
+  - dutch
+  - english
+  - language
+  examples:
+  - description: Ga naar homepage
+en-nl 1:
+  url: https://www.wordreference.com/ennl/<word>
+  title: Engels-Nederlands (Wordreference)
+  tags:
+  - dictionary
+  - dutch
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: Nederlands-vertaling van "tree"
+  - arguments: boom
+    description: Engels-vertaling van "boom"
+en-pl 0:
+  url: https://www.wordreference.com/enpl/
+  title: Angielski-Polski (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - polish
+  examples:
+  - description: Przejdź do strony głównej
+en-pl 1:
+  url: https://www.wordreference.com/enpl/<word>
+  title: Angielski-Polski (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - polish
+  examples:
+  - arguments: tree
+    description: Tłumaczenie na język polski dla "tree"
+  - arguments: drzewo
+    description: Tłumaczenie na język angielski dla "drzewo"
+en-pt 0:
+  url: https://www.wordreference.com/enpt/
+  title: Inglês-Português (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - portuguese
+  examples:
+  - description: Ir para a página inicial
+en-pt 1:
+  url: https://www.wordreference.com/enpt/<word>
+  title: Inglês-Português (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - portuguese
+  examples:
+  - arguments: tree
+    description: Tradução em português de "tree"
+  - arguments: árvore
+    description: Tradução em inglês de "árvore"
+en-ro 0:
+  url: https://www.wordreference.com/enro/
+  title: Engleză-Română (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - romanian
+  examples:
+  - description: Du-te la pagina principală
+en-ro 1:
+  url: https://www.wordreference.com/enro/<word>
+  title: Engleză-Română (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - romanian
+  examples:
+  - arguments: tree
+    description: Traducere în română pentru "tree"
+  - arguments: copac
+    description: Traducere în engleză pentru "copac"
+en-ru 0:
+  url: https://www.wordreference.com/enru/
+  title: Английский-Русский (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - russian
+  examples:
+  - description: Перейти на главную страницу
+en-ru 1:
+  url: https://www.wordreference.com/enru/<word>
+  title: Английский-Русский (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - russian
+  examples:
+  - arguments: tree
+    description: Перевод на русский язык для "tree"
+  - arguments: дерево
+    description: Перевод на английский язык для "дерево"
+en-sv 0:
+  url: https://www.wordreference.com/ensv/
+  title: Engelska-Svenska (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - swedish
+  examples:
+  - description: Gå till startsidan
+en-sv 1:
+  url: https://www.wordreference.com/ensv/<word>
+  title: Engelska-Svenska (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - swedish
+  examples:
+  - arguments: tree
+    description: svenska-översättning av "tree"
+  - arguments: träd
+    description: engelska-översättning av "träd"
+en-tr 0:
+  url: https://www.wordreference.com/entr/
+  title: İngilizce-Türkçe (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - turkish
+  examples:
+  - description: Anasayfaya git
+en-tr 1:
+  url: https://www.wordreference.com/entr/<word>
+  title: İngilizce-Türkçe (Wordreference)
+  tags:
+  - dictionary
+  - english
+  - language
+  - turkish
+  examples:
+  - arguments: tree
+    description: '"tree" için Türkçe çevirisi'
+  - arguments: ağaç
+    description: '"ağaç" için İngilizce çevirisi'
+en-zh 0:
+  url: https://www.wordreference.com/enzh/
+  title: 英文-中文 (Wordreference)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
+  examples:
+  - description: 前往主页
+en-zh 1:
+  url: https://www.wordreference.com/enzh/<word>
+  title: 英文-中文 (Wordreference)
+  tags:
+  - chinese
+  - dictionary
+  - english
+  - language
+  examples:
+  - arguments: tree
+    description: 中文 的"tree"翻译
+  - arguments: 树
+    description: 英文 的"树"翻译
+es 0:
+  include: es-<$language> 0
+es 1:
+  include: es-<$language> 1
+es-en 0:
+  title: Spanish-English (Wordreference)
+  include: en-es 0
+  examples:
+  - description: Go to the homepage
+es-en 1:
+  title: Spanish-English (Wordreference)
+  include: en-es 1
+  examples:
+  - arguments: árbol
+    description: English translation of "árbol"
+  - arguments: tree
+    description: Spanish translation of "tree"
+fr 0:
+  include: fr-<$language> 0
+fr 1:
+  include: fr-<$language> 1
+fr-en 0:
+  title: French-English (Wordreference)
+  include: en-fr 0
+  examples:
+  - description: Go to the homepage
+fr-en 1:
+  title: French-English (Wordreference)
+  include: en-fr 1
+  examples:
+  - arguments: arbre
+    description: English translation of "arbre"
+  - arguments: tree
+    description: French translation of "tree"
+it 0:
+  include: it-<$language> 0
+it 1:
+  include: it-<$language> 1
+it-en 0:
+  title: Italian-English (Wordreference)
+  include: en-it 0
+  examples:
+  - description: Go to the homepage
+it-en 1:
+  title: Italian-English (Wordreference)
+  include: en-it 1
+  examples:
+  - arguments: albero
+    description: English translation of "albero"
+  - arguments: tree
+    description: Italian translation of "tree"
+ja 0:
+  include: ja-<$language> 0
+ja 1:
+  include: ja-<$language> 1
+ja-en 0:
+  title: Japanese-English (Wordreference)
+  include: en-ja 0
+  examples:
+  - description: Go to the homepage
+ja-en 1:
+  title: Japanese-English (Wordreference)
+  include: en-ja 1
+  examples:
+  - arguments: 木
+    description: English translation of "木"
+  - arguments: tree
+    description: Japanese translation of "tree"
+ko 0:
+  include: ko-<$language> 0
+ko 1:
+  include: ko-<$language> 1
+ko-en 0:
+  title: Korean-English (Wordreference)
+  include: en-ko 0
+  examples:
+  - description: Go to the homepage
+ko-en 1:
+  title: Korean-English (Wordreference)
+  include: en-ko 1
+  examples:
+  - arguments: 나무
+    description: English translation of "나무"
+  - arguments: tree
+    description: Korean translation of "tree"
+nl 0:
+  include: nl-<$language> 0
+nl 1:
+  include: nl-<$language> 1
+nl-en 0:
+  title: Dutch-English (Wordreference)
+  include: en-nl 0
+  examples:
+  - description: Go to the homepage
+nl-en 1:
+  title: Dutch-English (Wordreference)
+  include: en-nl 1
+  examples:
+  - arguments: boom
+    description: English translation of "boom"
+  - arguments: tree
+    description: Dutch translation of "tree"
+pl 0:
+  include: pl-<$language> 0
+pl 1:
+  include: pl-<$language> 1
+pl-en 0:
+  title: Polish-English (Wordreference)
+  include: en-pl 0
+  examples:
+  - description: Go to the homepage
+pl-en 1:
+  title: Polish-English (Wordreference)
+  include: en-pl 1
+  examples:
+  - arguments: drzewo
+    description: English translation of "drzewo"
+  - arguments: tree
+    description: Polish translation of "tree"
+pt 0:
+  include: pt-<$language> 0
+pt 1:
+  include: pt-<$language> 1
+pt-en 0:
+  title: Portuguese-English (Wordreference)
+  include: en-pt 0
+  examples:
+  - description: Go to the homepage
+pt-en 1:
+  title: Portuguese-English (Wordreference)
+  include: en-pt 1
+  examples:
+  - arguments: árvore
+    description: English translation of "árvore"
+  - arguments: tree
+    description: Portuguese translation of "tree"
+ro 0:
+  include: ro-<$language> 0
+ro 1:
+  include: ro-<$language> 1
+ro-en 0:
+  title: Romanian-English (Wordreference)
+  include: en-ro 0
+  examples:
+  - description: Go to the homepage
+ro-en 1:
+  title: Romanian-English (Wordreference)
+  include: en-ro 1
+  examples:
+  - arguments: copac
+    description: English translation of "copac"
+  - arguments: tree
+    description: Romanian translation of "tree"
+ru 0:
+  include: ru-<$language> 0
+ru 1:
+  include: ru-<$language> 1
+ru-en 0:
+  title: Russian-English (Wordreference)
+  include: en-ru 0
+  examples:
+  - description: Go to the homepage
+ru-en 1:
+  title: Russian-English (Wordreference)
+  include: en-ru 1
+  examples:
+  - arguments: дерево
+    description: English translation of "дерево"
+  - arguments: tree
+    description: Russian translation of "tree"
+sv 0:
+  include: sv-<$language> 0
+sv 1:
+  include: sv-<$language> 1
+sv-en 0:
+  title: Swedish-English (Wordreference)
+  include: en-sv 0
+  examples:
+  - description: Go to the homepage
+sv-en 1:
+  title: Swedish-English (Wordreference)
+  include: en-sv 1
+  examples:
+  - arguments: träd
+    description: English translation of "träd"
+  - arguments: tree
+    description: Swedish translation of "tree"
+tr 0:
+  include: tr-<$language> 0
+tr 1:
+  include: tr-<$language> 1
+tr-en 0:
+  title: Turkish-English (Wordreference)
+  include: en-tr 0
+  examples:
+  - description: Go to the homepage
+tr-en 1:
+  title: Turkish-English (Wordreference)
+  include: en-tr 1
+  examples:
+  - arguments: ağaç
+    description: English translation of "ağaç"
+  - arguments: tree
+    description: Turkish translation of "tree"
+zh 0:
+  include: zh-<$language> 0
+zh 1:
+  include: zh-<$language> 1
+zh-en 0:
+  title: Chinese-English (Wordreference)
+  include: en-zh 0
+  examples:
+  - description: Go to the homepage
+zh-en 1:
+  title: Chinese-English (Wordreference)
+  include: en-zh 1
+  examples:
+  - arguments: 树
+    description: English translation of "树"
+  - arguments: tree
+    description: Chinese translation of "tree"

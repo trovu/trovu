@@ -1,0 +1,37 @@
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+last 1:
+  deprecated:
+    alternative:
+      query: lfm <1>
+    created: '2024-11-17'
+lfm 0:
+  include:
+    key: lfm 0
+    namespace: de
+lfm 1:
+  include:
+    key: lfm 1
+    namespace: de
+ygl 0:
+  url: https://youglish.com/italian
+  title: YouGlish, Italian
+  tags:
+  - italian
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to the homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/italian
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

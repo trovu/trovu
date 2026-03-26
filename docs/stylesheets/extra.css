@@ -1,0 +1,9 @@
+p, li, {
+	font-size: 0.9rem;
+}
+th, td {
+	font-size: 0.8rem;
+}
+a[href^="http"]:not(h1 a):not(h2 a):not(h3 a):not(h4 a):not(h5 a):not(h6 a)::before {
+	content: "🌐 ";
+}

@@ -1,0 +1,44 @@
+da 0:
+  include: da-<$language> 0
+da 1:
+  include: da-<$language> 1
+da-eo 0:
+  url: https://www.vortaro.dk/
+  title: Dana-Esperanto (Dansk↔Esperanto ordbog)
+  tags:
+  - danish
+  - dictionary
+  - esperanto
+  - language
+  examples:
+  - description: Iru al ĉefpaĝo
+da-eo 1:
+  url: 'https://www.vortaro.dk/?q=<word: {transform: eo-cx}>'
+  title: Dana-Esperanto (Dansk↔Esperanto ordbog)
+  tags:
+  - danish
+  - dictionary
+  - esperanto
+  - language
+  examples:
+  - arguments: træ
+    description: esperanto traduko de "træ"
+  - arguments: arbo
+    description: dana traduko de "arbo"
+eo 0:
+  include: eo-<$language> 0
+eo 1:
+  include: eo-<$language> 1
+eo-da 0:
+  title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
+  include: da-eo 0
+  examples:
+  - description: Gå til startsiden
+eo-da 1:
+  title: Esperanto-Dansk (Dansk↔Esperanto ordbog)
+  include: da-eo 1
+  examples:
+  - arguments: arbo
+    description: dansk oversættelse af "arbo"
+  - arguments: træ
+    description: esperanto oversættelse af "træ"

@@ -1,0 +1,124 @@
+a 0:
+  url: https://www.amazon.nl?tag=serchilo-20
+  title: Amazon.nl
+  tags:
+  - amazon
+  - boeken
+  - books
+  - is-affiliate
+  - shopping
+  - winkelen
+  examples:
+  - description: Ga naar de homepage
+a 1:
+  url: https://www.amazon.nl/s?k=<query>&linkCode=ll2&tag=serchilo-20
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Zoek naar "shakespeare"
+beslist 0:
+  url: https://www.beslist.nl/
+  title: BESLIST.nl
+  tags:
+  - shopping
+  examples:
+  - description: Ga naar de homepage
+beslist 1:
+  url: https://www.beslist.nl/products/r/<zoekwoorden>/
+  include: beslist 0
+  examples:
+  - arguments: kartonnen poef
+    description: Zoek waar je online een kartonnen poef kunt kopen
+bol 0:
+  url: https://www.bol.com/nl/nl/
+  title: Bol.com Nederlands
+  tags:
+  - bol
+  - books
+  - shoppings
+  examples:
+  - description: Ga naar de homepage
+bol 1:
+  url: https://www.bol.com/nl/s/algemeen/zoekresultaten/Ntt/<query>/Nty/1/N/0/Ne/0/search/true/searchType/qck/sc/media_all/index.html
+  include: bol 0
+  examples:
+  - arguments: shakespeare
+    description: Search for Shakespeare
+e 0:
+  url: https://www.ebay.nl/?mkcid=1&mkrid=1346-53482-19255-0&siteid=146&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.nl
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+e 1:
+  url: https://www.ebay.nl/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=1346-53482-19255-0&siteid=146&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.nl
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+g 1:
+  url: https://www.google.nl/search?hl=<$language>&q=<query>&ie=utf-8
+  title: Google.nl
+  tags:
+  - google
+  - web-search
+  examples:
+  - arguments: amsterdam
+    description: Google zoeken naar "amsterdam"
+ikea 0:
+  url: https://www.ikea.com/nl/nl/
+  title: IKEA Nederland
+  tags:
+  - furniture
+  - ikea
+  - shopping
+ikea 1:
+  url: https://www.ikea.com/nl/nl/search/?q=<query>
+  title: IKEA Nederland
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - arguments: matras
+    description: zoek na matrassen
+jw 1:
+  url: https://www.justwatch.com/nl/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+kenteken 0:
+  url: https://publiek.vwe.nl/
+  title: RDW kenteken zoeken
+  tags:
+  - kenteken
+  examples:
+  - description: Ga naar de homepage
+kenteken 1:
+  url: https://publiek.vwe.nl/kenteken/<kenteken>
+  include: kenteken 0
+  examples:
+  - arguments: 8kxz29
+    description: zoek kenteken 8kxz29
+zal 0:
+  url: https://www.zalando.nl/catalogus/
+  title: Zalando.nl
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Ga naar de homepage
+zal 1:
+  url: https://www.zalando.nl/catalogus/?q=<product>
+  include: zal 0
+  examples:
+  - arguments: schoenen
+    description: zoek schoenen

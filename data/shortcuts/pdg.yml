@@ -1,0 +1,44 @@
+de 0:
+  include: de-<$language> 0
+de 1:
+  include: de-<$language> 1
+de-rm 0:
+  url: https://www.pledarigrond.ch/rumantschgrischun
+  title: Tudestg-Rumantsch (Pledari Grond)
+  tags:
+  - dictionary
+  - german
+  - language
+  - romansh
+  examples:
+  - description: Gia alla pagina principala
+de-rm 1:
+  url: https://www.pledarigrond.ch/rumantschgrischun?searchPhrase=<Wort>
+  title: Tudestg-Rumantsch (Pledari Grond)
+  tags:
+  - dictionary
+  - german
+  - language
+  - romansh
+  examples:
+  - arguments: baum
+    description: Traducziun en rumantsch dad "baum"
+  - arguments: arvuna
+    description: Traducziun en tudestg dad "arvuna"
+rm 0:
+  include: rm-<$language> 0
+rm 1:
+  include: rm-<$language> 1
+rm-de 0:
+  title: Rätoromanisch-Deutsch (Pledari Grond)
+  include: de-rm 0
+  examples:
+  - description: Zur Startseite
+rm-de 1:
+  title: Rätoromanisch-Deutsch (Pledari Grond)
+  include: de-rm 1
+  examples:
+  - arguments: arvuna
+    description: Deutsch-Übersetzung von "arvuna"
+  - arguments: baum
+    description: Rätoromanisch-Übersetzung von "baum"

@@ -1,0 +1,12 @@
+# Documentation:
+# https://trovu.net/docs/developers/#configuration
+namespaces:
+- o
+- <$language>
+- .<$country>
+language: en
+country: us
+url:
+  blog: /blog/
+  docs: /docs/
+  impressum: https://jaehnig.org/impressum/

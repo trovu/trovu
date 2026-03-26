@@ -1,0 +1,420 @@
+bibbs 0:
+  url: https://www.stadtbibliothekbasel.ch/
+  title: Stadtbibliothek Basel
+  tags:
+  - basel
+  - library
+  examples:
+  - description: Gehe zur Startseite
+bibbs 1:
+  url: https://katalog.stadtbibliothekbasel.ch/GGG/WebOPAC/search/shortview?searchtype=Simple&searchField=W&searchTerm=<Suche>
+  include: bibbs 0
+  examples:
+  - arguments: houellebecq
+    description: Suche nach Werken von und über "houellebecq"
+campz 0:
+  url: https://www.campz.ch
+  title: CAMPZ Schweiz
+  tags:
+  - adventure
+  - outdoor
+  - shop
+  examples:
+  - description: Gehe zur Startseite
+campz 1:
+  url: https://www.campz.ch/suche/?q=<Produkt>
+  title: CAMPZ Schweiz
+  tags:
+  - adventure
+  - outdoor
+  - shop
+  examples:
+  - arguments: Kocher
+    description: Suche nach "Kocher"
+conrad 0:
+  url: https://www.conrad.ch/
+  title: Conrad Elektronik Schweiz
+  tags:
+  - conrad
+  - electronics
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+conrad 1:
+  url: https://www.conrad.ch/de/search.html?search=<Artikel>
+  include: conrad 0
+  examples:
+  - arguments: glühlampe
+    description: Search Conrad Elektronik Schweiz for "glühlampe"
+digi 0:
+  url: https://www.digitec.ch/
+  title: Digitec
+  tags:
+  - electronics
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Ein Schweizer Onlineshop für Elektronik
+digi 1:
+  url: https://www.digitec.ch/de/Search?q=<query>
+  include: digi 0
+  examples:
+  - arguments: laptop
+    description: Suche nach "laptop"
+doit 0:
+  url: https://www.doitgarden.ch/
+  title: Migros Do-it&Garden
+  tags:
+  - migros
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+doit 1:
+  url: https://www.doitgarden.ch/de/s?q=<Suche>
+  include: doit 0
+  examples:
+  - arguments: tomate
+    description: Suche nach "tomate"
+  description: Garten- und Baumarkt von Migros
+e 0:
+  url: https://www.ebay.ch/?mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.ch
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+e 1:
+  url: https://www.ebay.ch/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=5222-53480-19255-0&siteid=193&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.ch
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+faust 0:
+  url: https://www.faust.ch/
+  title: Faust Laborbedarf
+  tags:
+  - faust
+  - laboratory
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+faust 1:
+  url: https://www.faust.ch/shop/qsrch.htm?Keyval=<query>&UID=55006243ffc5000000000000
+  title: Faust Laborbedarf
+  include: faust 0
+  examples:
+  - arguments: pipette
+    description: Suche nach "pipette"
+g 0:
+  url: https://www.google.ch/
+  title: Google.ch
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Gehe zur Startseite
+g 1:
+  url: https://www.google.ch/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
+  examples:
+  - arguments: bern
+    description: Google-Suche nach "bern"
+gmag 1:
+  deprecated:
+    alternative:
+      query: gm ag,<1>
+    created: '2023-01-07'
+gmbe 1:
+  deprecated:
+    alternative:
+      query: gm be,<1>
+    created: '2023-01-07'
+gmbs 1:
+  deprecated:
+    alternative:
+      query: gm bs,<1>
+    created: '2023-01-07'
+gmfr 1:
+  deprecated:
+    alternative:
+      query: gm fr,<1>
+    created: '2023-01-07'
+gmge 1:
+  deprecated:
+    alternative:
+      query: gm ge,<1>
+    created: '2023-01-07'
+gmgl 1:
+  deprecated:
+    alternative:
+      query: gm gl,<1>
+    created: '2023-01-07'
+gmlu 1:
+  deprecated:
+    alternative:
+      query: gm lu,<1>
+    created: '2023-01-07'
+gmne 1:
+  deprecated:
+    alternative:
+      query: gm ne,<1>
+    created: '2023-01-07'
+gmsg 1:
+  deprecated:
+    alternative:
+      query: gm sg,<1>
+    created: '2023-01-07'
+gmsh 1:
+  deprecated:
+    alternative:
+      query: gm sh,<1>
+    created: '2023-01-07'
+gmso 1:
+  deprecated:
+    alternative:
+      query: gm so,<1>
+    created: '2023-01-07'
+gmsz 1:
+  deprecated:
+    alternative:
+      query: gm sz,<1>
+    created: '2023-01-07'
+gmzg 1:
+  deprecated:
+    alternative:
+      query: gm zg,<1>
+    created: '2023-01-07'
+gmzh 1:
+  deprecated:
+    alternative:
+      query: gm zh,<1>
+    created: '2023-01-07'
+gps 1:
+  deprecated:
+    alternative:
+      query: gsh <1>
+    created: '2024-11-17'
+gsn 0:
+  url: https://ch.gilson.com/
+  title: Gilson
+  tags:
+  - gilson
+  - laboratory
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Onlineshop für Laborbedarf
+gsn 1:
+  url: https://ch.gilson.com/CHSV/catalogsearch/result/?q=<query>
+  include: gilson 0
+  examples:
+  - arguments: pipette
+    description: Suche nach "pipette"
+ikea 0:
+  url: https://www.ikea.com/ch/
+  title: IKEA Schweiz
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+ikea 1:
+  url: https://www.ikea.com/ch/de/search/?q=<query>
+  include: ikea 0
+  examples:
+  - arguments: matratze
+    description: Suche nach Matratzen
+jw 1:
+  url: https://www.justwatch.com/ch/Suche?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+local 0:
+  url: https://tel.local.ch/
+  title: local.ch Telefonbuch
+  tags:
+  - phonebook
+  examples:
+  - description: Gehe zur Startseite
+  description: Schweizer Telefonbuch
+local 2:
+  url: https://tel.local.ch/de/q?what=<Name>&where=<Ort>
+  include: local 0
+  examples:
+  - arguments: Hans Muster, Bern
+    description: Suche auf local.ch nach "Hans Muster" in "Bern"
+mc 0:
+  url: https://www.meteocentrale.ch/
+  title: Meteocentrale.ch
+  tags:
+  - weather
+  examples:
+  - description: Gehe zur Startseite
+mc 1:
+  url: https://www.meteocentrale.ch/index.php?L=0&id=1199&searchString=<Stadt/PLZ/Land>
+  include: mc 0
+  examples:
+  - arguments: '8000'
+    description: Zeige Wetterwarnungen für Postleitzahl 8000
+migros 0:
+  url: https://www.migros.ch/
+  title: Migros Sortiment
+  tags:
+  - migros
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+migros 1:
+  url: https://www.migros.ch/de/search?query=<Produkt>
+  include: migros 0
+  examples:
+  - arguments: toblerone
+    description: Search Migros Sortiment for "toblerone"
+plz 0:
+  url: https://www.plz-suche.org/postleitzahlen-schweiz
+  title: Postleitzahlen Schweiz
+  tags:
+  - geolocation
+  - postleitzahl
+  examples:
+  - description: Gehe zur Startseite
+plz 1:
+  url: https://www.plz-suche.org/ch/plz/<query>
+  include: plz 0
+  examples:
+  - arguments: '3000'
+    description: Search Postleitzahlen Schweiz for "3000" (Bern)
+poststelle 0:
+  url: https://places.post.ch/
+  title: Die Post, Poststellen
+  tags:
+  - post
+poststelle 1:
+  url: https://places.post.ch/?topic=1&PreselectText=<query>&from_directentry=True
+  include: poststelle 0
+  examples:
+  - arguments: Bern
+    description: Suche nach Poststellen in Bern
+rsc 0:
+  url: https://dech.rs-online.com/
+  title: RS Components Schweiz
+  tags:
+  - electronics
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+rsc 1:
+  url: https://dech.rs-online.com/web/c/?searchTerm=<Produkt>
+  include: rsc 0
+  examples:
+  - arguments: Battery
+    description: Suche bei RS Components nach "Battery"
+sbb 0:
+  url: https://sbb.ch/
+  title: Schweizerische Bundesbahnen
+  tags:
+  - bahn
+  - travel
+  examples:
+  - description: Gehe zur Startseite
+sbb 2:
+  url: 'https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von=<Start: {type: city}>&nach=<Ziel: {type: city}>'
+  title: SBB Fahrplan
+  include: sbb 0
+  examples:
+  - arguments: Bern, Basel
+    description: Nächste Verbindung von Bern nach Basel
+  - arguments: be, bs
+    description: Nächste Verbindung von Bern nach Basel, Eingabe über Autokennzeichen
+sbb 3:
+  url: 'https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von=<Start: {type: city}>&nach=<Ziel: {type: city}>&zeit=<Zeit: {type: time}>'
+  include: sbb 2
+  examples:
+  - arguments: Bern, Basel, 10:00
+    description: Verbindung von Bern nach Basel um 10:00 Uhr
+sbb 4:
+  url: 'https://www.sbb.ch/de/kaufen/pages/fahrplan/fahrplan.xhtml?suche=true&von=<Start: {type: city}>&nach=<Ziel: {type: city}>&zeit=<Zeit: {type: time}>&datum=<Datum: {type: date, output: DD.MM.YYYY}>'
+  include: sbb 2
+  examples:
+  - arguments: Bern, Basel, 01.01.2020, 10:00
+    description: Verbindung von Bern nach Basel am 01.01.2020 um 10:00 Uhr
+transa 0:
+  url: https://www.transa.ch
+  title: Transa
+  tags:
+  - outdoor
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Outdoor- und Sportgeschäft
+transa 1:
+  url: https://www.transa.ch/de/search/?q=<Produkt>
+  include: transa 0
+  examples:
+  - arguments: schuhe
+    description: Suche nach Schuhen
+we 0:
+  url: https://ch.wetter.com/?forcesite=1
+  title: Wetter.com
+  tags:
+  - weather
+  examples:
+  - description: Gehe zur Startseite
+we 1:
+  url: https://ch.wetter.com/suche/?search=<Ort>
+  include: we 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
+zal 0:
+  url: https://www.zalando.ch/
+  title: Zalando.ch
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Gehe zur Startseite
+zal 1:
+  url: https://www.zalando.ch/katalog/?q=<Produkt>
+  include: zal 0
+  examples:
+  - arguments: schuhe
+    description: Suche nach Schuhen
+zvv 0:
+  url: https://www.zvv.ch/
+  title: ZVV
+  tags:
+  - bahn
+  - travel
+  - zürich
+  examples:
+  - description: Gehe zur Startseite
+  description: Zürcher Verkehrsverbund
+zvv 2:
+  url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>'
+  title: ZVV-Auskunft
+  include: zvv 0
+  examples:
+  - arguments: hb, winterthur
+    description: Nächste Verbindung von Zürich HB nach Winterthur
+  description: Fahrplanauskunft des Züricher Verkehrverbundes
+zvv 3:
+  url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>&time=<Zeit: {type: time}>'
+  include: zvv 2
+  examples:
+  - arguments: hb, winterthur, 10
+    description: Verbindung von Zürich HB nach Winterthur um 10 Uhr heute
+zvv 4:
+  url: 'https://www.zvv.ch/zvv/en/fahrplan/fp.html?tab=connections&fromname=<Start: {type: city}>&toname=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date}>'
+  include: zvv 2
+  examples:
+  - arguments: hb, winterthur, 10, di
+    description: Verbindung von Zürich HB nach Winterthur um 10 Uhr am kommenden Dienstag

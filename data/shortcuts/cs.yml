@@ -1,0 +1,48 @@
+c 0:
+  include: csfd 0
+c 1:
+  include: csfd 1
+cs 1:
+  deprecated:
+    alternative:
+      query: ssjc <1>
+    created: '2024-11-17'
+csfd 0:
+  url: https://www.csfd.cz/
+  title: Česko-Slovenská filmová databáze
+  tags:
+  - czech
+  - movies
+  - slovak
+  examples:
+  - description: Přejít na domovskou stránku
+csfd 1:
+  url: https://www.csfd.cz/hledat/?q=<výraz>
+  include: csfd 0
+  examples:
+  - arguments: Pelíšky
+    description: Hledat "Pelíšky"
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+ssjc 0:
+  url: https://ssjc.ujc.cas.cz/
+  title: Slovník spisovného jazyka českého
+  tags:
+  - czech
+  - dictionary
+  - language
+  examples:
+  - description: Přejít na domovskou stránku
+  description: Slovník českého jazyka, který vydává Ústav pro jazyk český Akademie věd České republiky.
+ssjc 1:
+  url: https://ssjc.ujc.cas.cz/search.php?heslo=<výraz>&sti=EMPTY&where=hesla&hsubstr=no
+  include: ssjc 0
+  examples:
+  - arguments: strom
+    description: Hledat heslo "strom"

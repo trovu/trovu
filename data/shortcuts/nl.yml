@@ -1,0 +1,57 @@
+enc 0:
+  url: https://www.encyclo.nl/
+  title: Encyclo Online Encyclopedie
+  tags:
+  - dictionary
+  - dutch
+  - encyclopedia
+  - language
+  examples:
+  - description: Go to the homepage
+enc 1:
+  url: https://www.encyclo.nl/zoek.php?woord=<woord>
+  include: enc 0
+  examples:
+  - arguments: op naam
+    description: zoek na de betekenis van de uitdrukking "op naam"
+ety 0:
+  url: https://www.etymologiebank.nl/
+  title: etymologiebank.nl
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+rijm 0:
+  url: https://www.rijm.nu/
+  title: Rijm.nu!
+  tags:
+  - gedicht
+  - rijm
+  examples:
+  - description: Go to the homepage
+rijm 1:
+  url: https://www.rijm.nu/rijmen/rijmen.php?woord=<woord>&v=1
+  include: rijm 0
+  examples:
+  - arguments: koud
+    description: vind woorden die rijmen op "koud"
+ygl 0:
+  url: https://youglish.com/dutch
+  title: YouGlish, dutch
+  tags:
+  - dutch
+  - language
+  - pronunciation
+  - youtube
+  examples:
+  - description: Go to the homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/dutch
+  include: ygl 0
+  examples:
+  - arguments: berlijn
+    description: Find videos where someone says "berlijn"

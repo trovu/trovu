@@ -1,0 +1,117 @@
+a 0:
+  url: https://www.amazon.se?tag=serchilo-20
+  title: Amazon.se
+  tags:
+  - amazon
+  - bokhandel
+  - is-affiliate
+  - shopping
+  examples:
+  - description: Gå till startsidan
+a 1:
+  url: https://www.amazon.se/s?k=<sök>&linkCode=ll2&tag=serchilo-20
+  include: a 0
+  examples:
+  - arguments: shakespeare
+    description: Sök efter "shakespeare"
+blocket 0:
+  url: https://www.blocket.se/
+  title: Blocket.se
+  tags:
+  - blocket
+  - shopping
+  examples:
+  - description: Gå till startsidan
+blocket 1:
+  url: https://www.blocket.se/annonser/hela_sverige?q=<query>
+  include: blocket 0
+  examples:
+  - arguments: iphone
+    description: Search for "iphone"
+enr 0:
+  url: https://personer.eniro.se/
+  title: Eniro.se
+  tags:
+  - eniro
+  - företag
+  - personer
+  examples:
+  - description: Gå till startsidan
+  description: Svensk sökmotor för personer och företag.
+enr 1:
+  url: https://personer.eniro.se/resultat/<nummer/namn>
+  include: enr 0
+  examples:
+  - arguments: 701234567
+    description: Sök efter telefonnummer "0701234567"
+  - arguments: johansson
+    description: Sök efter person "johansson"
+g 0:
+  url: https://www.google.se/
+  title: Google.se
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Gå till startsidan
+g 1:
+  url: https://www.google.se/search?hl=<$language>&q=<query>&ie=utf-8
+  include: g 0
+  examples:
+  - arguments: stockholm
+    description: Sök efter "stockholm"
+jw 1:
+  url: https://www.justwatch.com/se/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+rr 0:
+  url: https://reseplanerare.resrobot.se/
+  title: Resrobot
+  tags:
+  - travel
+  examples:
+  - description: Gå till startsidan
+rr 2:
+  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&start=1
+  include: rr 0
+  examples:
+  - arguments: stockholm, malmö
+    description: Nästa tåg från Stockholm till Malmö
+rr 3:
+  url: https://reseplanerare.resrobot.se/bin/query.exe/sn?S=<Från>!&Z=<Till>!&T=<Avgång>&start=1
+  include: rr 0
+  examples:
+  - arguments: stockholm, malmö, 10
+    description: Tåg från Stockholm till Malmö, avgång kl. 10
+srse 0:
+  url: https://sverigesradio.se/
+  title: Sveriges Radio
+  tags:
+  - radio
+  - sweden
+  examples:
+  - description: Gå till startsidan
+srse 1:
+  url: https://sverigesradio.se/sida/sok.aspx?q=<programmets namn>&sort=relevance
+  include: srse 0
+  examples:
+  - arguments: stockholm
+    description: Search for "stockholm"
+zal 0:
+  url: https://www.zalando.se/
+  title: Zalando.se
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Gå till startsidan
+zal 1:
+  url: https://www.zalando.se/katalog/?q=<produkt>
+  include: zal 0
+  examples:
+  - arguments: kläder
+    description: söka kläder

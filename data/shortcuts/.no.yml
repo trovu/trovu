@@ -1,0 +1,37 @@
+jw 1:
+  url: https://www.justwatch.com/no/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+yr 0:
+  url: https://www.yr.no/
+  title: Yr.no
+  tags:
+  - forecast
+  - weather
+  examples:
+  - description: Gå til hjemmesiden
+  description: Norsk nettsted for værvarsler og annen meteorologisk informasjon
+yr 1:
+  url: https://www.yr.no/nb/s%C3%B8k?q=<query>
+  include: yr 0
+  examples:
+  - arguments: Oslo
+    description: Look up the weather in Oslo
+zal 0:
+  url: https://www.zalando.no/
+  title: Zalando.no
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Gå til hjemmesiden
+zal 1:
+  url: https://www.zalando.no/katalog/?q=<produkt>
+  include: zal 0
+  examples:
+  - arguments: sko
+    description: Søke sko

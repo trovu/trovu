@@ -1,0 +1,22 @@
+jw 1:
+  url: https://www.justwatch.com/fi/etsi?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+zal 0:
+  url: https://www.zalando.fi/
+  title: Zalando.fi
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Siirry etusivulle
+zal 1:
+  url: https://www.zalando.fi/katalogi/?q=<tavara>
+  include: zal 0
+  examples:
+  - arguments: jalkine
+    description: search for "jalkine"

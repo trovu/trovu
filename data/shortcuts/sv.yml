@@ -1,0 +1,62 @@
+fr-sv 1:
+  deprecated:
+    alternative:
+      query: fr <1>
+    created: '2023-04-10'
+frv 0:
+  include:
+    key: frv 0
+    namespace: ar
+frv 1:
+  include:
+    key: frv 1
+    namespace: ar
+last 1:
+  deprecated:
+    alternative:
+      query: lfm <1>
+    created: '2024-11-17'
+lfm 0:
+  include:
+    key: lfm 0
+    namespace: de
+lfm 1:
+  include:
+    key: lfm 1
+    namespace: de
+rim 0:
+  url: https://www.rimlexikon.se/
+  title: Rimlexikon
+  tags:
+  - language
+  - rhymes
+  - swedish
+  examples:
+  - description: Go to the homepage
+rim 1:
+  url: https://www.rimlexikon.se/ord/<ord>
+  include: rim 0
+  examples:
+  - arguments: träd
+    description: Search rhymes for "träd"
+sv-fr 1:
+  deprecated:
+    alternative:
+      query: fr <1>
+    created: '2023-04-10'
+ygl 0:
+  url: https://youglish.com/swedish
+  title: YouGlish, Swedish
+  tags:
+  - language
+  - pronunciation
+  - swedish
+  - youtube
+  examples:
+  - description: Go to the homepage
+ygl 1:
+  url: https://youglish.com/pronounce/<word>/swedish
+  include: ygl 0
+  examples:
+  - arguments: berlin
+    description: Find videos where someone says "berlin"

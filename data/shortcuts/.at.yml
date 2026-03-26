@@ -1,0 +1,655 @@
+a 0:
+  include:
+    key: a 0
+    namespace: .de
+a 1:
+  include:
+    key: a 1
+    namespace: .de
+conrad 0:
+  url: https://www.conrad.at/
+  title: Conrad Elektronik Österreich
+  tests:
+  - expect: Elektronik und Technik in Österreich
+  tags:
+  - conrad
+  - electronics
+  - shopping
+  description: Online-Shop für Elektronik und Technikprodukte
+conrad 1:
+  url: https://www.conrad.at/de/search.html?search=<Artikel>
+  tests:
+  - arguments: verteiler
+    expect: <title>Suchergebnisse
+  include: conrad 0
+  examples:
+  - arguments: glühlampe
+    description: Suche nach Glühlampen
+e 0:
+  url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
+  title: Ebay.at
+  tests:
+  - expect: rel="canonical" href="http://www.ebay.at"
+  tags:
+  - ebay
+  - is-affiliate
+  - shopping
+  description: Online-Auktions- und Shopping-Plattform
+e 1:
+  url: https://www.ebay.at/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<Suche>&_sacat=0&mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
+  tests:
+  - arguments: smartphone
+    expect: <title>smartphone | eBay</title>
+  include: e 0
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+g 0:
+  url: https://www.google.at/
+  title: Google.at
+  tests:
+  - expect: href="https://www.google.at/
+  tags:
+  - google
+  - web-search
+  examples:
+  - description: Go to the homepage
+  description: Suchmaschine für das Web
+g 1:
+  url: https://www.google.at/search?hl=<$language>&q=<Suche>&ie=utf-8
+  tests:
+  - arguments: wien
+    expect: <title>wien
+  include: g 0
+  examples:
+  - arguments: wien
+    description: Google-Suche nach "wien"
+gh 0:
+  url: https://geizhals.at/
+  title: Geizhals Österreich
+  tests:
+  - expect: <title>Geizhals Preisvergleich Österreich</title>
+  tags:
+  - geizhals
+  - preisvergleich
+  - shopping
+  description: Preisvergleichsportal für verschiedene Produkte
+gh 1:
+  url: 'https://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
+  tests:
+  - arguments: fernseher
+    expect: <title>fernseher Geizhals Österreich</title>
+  include: gh 0
+  examples:
+  - arguments: fernseher
+    description: Search for "fernseher"
+gmam 1:
+  deprecated:
+    alternative:
+      query: gm am,<1>
+    created: '2023-01-07'
+gmb 1:
+  deprecated:
+    alternative:
+      query: gm b,<1>
+    created: '2023-01-07'
+gmba 1:
+  deprecated:
+    alternative:
+      query: gm ba,<1>
+    created: '2023-01-07'
+gmbl 1:
+  deprecated:
+    alternative:
+      query: gm bl,<1>
+    created: '2023-01-07'
+gmbm 1:
+  deprecated:
+    alternative:
+      query: gm bm,<1>
+    created: '2023-01-07'
+gmbn 1:
+  deprecated:
+    alternative:
+      query: gm bn,<1>
+    created: '2023-01-07'
+gmbr 1:
+  deprecated:
+    alternative:
+      query: gm br,<1>
+    created: '2023-01-07'
+gmbz 1:
+  deprecated:
+    alternative:
+      query: gm bz,<1>
+    created: '2023-01-07'
+gmdl 1:
+  deprecated:
+    alternative:
+      query: gm dl,<1>
+    created: '2023-01-07'
+gmdo 1:
+  deprecated:
+    alternative:
+      query: gm do,<1>
+    created: '2023-01-07'
+gme 1:
+  deprecated:
+    alternative:
+      query: gm e,<1>
+    created: '2023-01-07'
+gmef 1:
+  deprecated:
+    alternative:
+      query: gm ef,<1>
+    created: '2023-01-07'
+gmfb 1:
+  deprecated:
+    alternative:
+      query: gm fb,<1>
+    created: '2023-01-07'
+gmfe 1:
+  deprecated:
+    alternative:
+      query: gm fe,<1>
+    created: '2023-01-07'
+gmff 1:
+  deprecated:
+    alternative:
+      query: gm ff,<1>
+    created: '2023-01-07'
+gmfk 1:
+  deprecated:
+    alternative:
+      query: gm fk,<1>
+    created: '2023-01-07'
+gmfr 1:
+  deprecated:
+    alternative:
+      query: gm fr,<1>
+    created: '2023-01-07'
+gmg 1:
+  deprecated:
+    alternative:
+      query: gm g,<1>
+    created: '2023-01-07'
+gmgb 1:
+  deprecated:
+    alternative:
+      query: gm gb,<1>
+    created: '2023-01-07'
+gmgd 1:
+  deprecated:
+    alternative:
+      query: gm gd,<1>
+    created: '2023-01-07'
+gmgf 1:
+  deprecated:
+    alternative:
+      query: gm gf,<1>
+    created: '2023-01-07'
+gmgm 1:
+  deprecated:
+    alternative:
+      query: gm gm,<1>
+    created: '2023-01-07'
+gmgr 1:
+  deprecated:
+    alternative:
+      query: gm gr,<1>
+    created: '2023-01-07'
+gmgs 1:
+  deprecated:
+    alternative:
+      query: gm gs,<1>
+    created: '2023-01-07'
+gmha 1:
+  deprecated:
+    alternative:
+      query: gm ha,<1>
+    created: '2023-01-07'
+gmhb 1:
+  deprecated:
+    alternative:
+      query: gm hb,<1>
+    created: '2023-01-07'
+gmhe 1:
+  deprecated:
+    alternative:
+      query: gm he,<1>
+    created: '2023-01-07'
+gmhl 1:
+  deprecated:
+    alternative:
+      query: gm hl,<1>
+    created: '2023-01-07'
+gmho 1:
+  deprecated:
+    alternative:
+      query: gm ho,<1>
+    created: '2023-01-07'
+gmi 1:
+  deprecated:
+    alternative:
+      query: gm i,<1>
+    created: '2023-01-07'
+gmim 1:
+  deprecated:
+    alternative:
+      query: gm im,<1>
+    created: '2023-01-07'
+gmje 1:
+  deprecated:
+    alternative:
+      query: gm je,<1>
+    created: '2023-01-07'
+gmjo 1:
+  deprecated:
+    alternative:
+      query: gm jo,<1>
+    created: '2023-01-07'
+gmju 1:
+  deprecated:
+    alternative:
+      query: gm ju,<1>
+    created: '2023-01-07'
+gmk 1:
+  deprecated:
+    alternative:
+      query: gm k,<1>
+    created: '2023-01-07'
+gmkb 1:
+  deprecated:
+    alternative:
+      query: gm kb,<1>
+    created: '2023-01-07'
+gmkf 1:
+  deprecated:
+    alternative:
+      query: gm kf,<1>
+    created: '2023-01-07'
+gmki 1:
+  deprecated:
+    alternative:
+      query: gm ki,<1>
+    created: '2023-01-07'
+gmko 1:
+  deprecated:
+    alternative:
+      query: gm ko,<1>
+    created: '2023-01-07'
+gmks 1:
+  deprecated:
+    alternative:
+      query: gm ks,<1>
+    created: '2023-01-07'
+gmku 1:
+  deprecated:
+    alternative:
+      query: gm ku,<1>
+    created: '2023-01-07'
+gml 1:
+  deprecated:
+    alternative:
+      query: gm l,<1>
+    created: '2023-01-07'
+gmla 1:
+  deprecated:
+    alternative:
+      query: gm la,<1>
+    created: '2023-01-07'
+gmlb 1:
+  deprecated:
+    alternative:
+      query: gm lb,<1>
+    created: '2023-01-07'
+gmle 1:
+  deprecated:
+    alternative:
+      query: gm le,<1>
+    created: '2023-01-07'
+gmlf 1:
+  deprecated:
+    alternative:
+      query: gm lf,<1>
+    created: '2023-01-07'
+gmli 1:
+  deprecated:
+    alternative:
+      query: gm li,<1>
+    created: '2023-01-07'
+gmlz 1:
+  deprecated:
+    alternative:
+      query: gm lz,<1>
+    created: '2023-01-07'
+gmma 1:
+  deprecated:
+    alternative:
+      query: gm ma,<1>
+    created: '2023-01-07'
+gmmd 1:
+  deprecated:
+    alternative:
+      query: gm md,<1>
+    created: '2023-01-07'
+gmme 1:
+  deprecated:
+    alternative:
+      query: gm me,<1>
+    created: '2023-01-07'
+gmmi 1:
+  deprecated:
+    alternative:
+      query: gm mi,<1>
+    created: '2023-01-07'
+gmmu 1:
+  deprecated:
+    alternative:
+      query: gm mu,<1>
+    created: '2023-01-07'
+gmmz 1:
+  deprecated:
+    alternative:
+      query: gm mz,<1>
+    created: '2023-01-07'
+gmnd 1:
+  deprecated:
+    alternative:
+      query: gm nd,<1>
+    created: '2023-01-07'
+gmnk 1:
+  deprecated:
+    alternative:
+      query: gm nk,<1>
+    created: '2023-01-07'
+gmop 1:
+  deprecated:
+    alternative:
+      query: gm op,<1>
+    created: '2023-01-07'
+gmow 1:
+  deprecated:
+    alternative:
+      query: gm ow,<1>
+    created: '2023-01-07'
+gmp 1:
+  deprecated:
+    alternative:
+      query: gm p,<1>
+    created: '2023-01-07'
+gmpe 1:
+  deprecated:
+    alternative:
+      query: gm pe,<1>
+    created: '2023-01-07'
+gmra 1:
+  deprecated:
+    alternative:
+      query: gm ra,<1>
+    created: '2023-01-07'
+gmre 1:
+  deprecated:
+    alternative:
+      query: gm re,<1>
+    created: '2023-01-07'
+gmri 1:
+  deprecated:
+    alternative:
+      query: gm ri,<1>
+    created: '2023-01-07'
+gmro 1:
+  deprecated:
+    alternative:
+      query: gm ro,<1>
+    created: '2023-01-07'
+gms 1:
+  deprecated:
+    alternative:
+      query: gm s,<1>
+    created: '2023-01-07'
+gmsb 1:
+  deprecated:
+    alternative:
+      query: gm sb,<1>
+    created: '2023-01-07'
+gmsd 1:
+  deprecated:
+    alternative:
+      query: gm sd,<1>
+    created: '2023-01-07'
+gmsp 1:
+  deprecated:
+    alternative:
+      query: gm sp,<1>
+    created: '2023-01-07'
+gmsr 1:
+  deprecated:
+    alternative:
+      query: gm sr,<1>
+    created: '2023-01-07'
+gmsv 1:
+  deprecated:
+    alternative:
+      query: gm sv,<1>
+    created: '2023-01-07'
+gmsw 1:
+  deprecated:
+    alternative:
+      query: gm sw,<1>
+    created: '2023-01-07'
+gmsz 1:
+  deprecated:
+    alternative:
+      query: gm sz,<1>
+    created: '2023-01-07'
+gmta 1:
+  deprecated:
+    alternative:
+      query: gm ta,<1>
+    created: '2023-01-07'
+gmtu 1:
+  deprecated:
+    alternative:
+      query: gm tu,<1>
+    created: '2023-01-07'
+gmvb 1:
+  deprecated:
+    alternative:
+      query: gm vb,<1>
+    created: '2023-01-07'
+gmvi 1:
+  deprecated:
+    alternative:
+      query: gm vi,<1>
+    created: '2023-01-07'
+gmvk 1:
+  deprecated:
+    alternative:
+      query: gm vk,<1>
+    created: '2023-01-07'
+gmvo 1:
+  deprecated:
+    alternative:
+      query: gm vo,<1>
+    created: '2023-01-07'
+gmw 1:
+  deprecated:
+    alternative:
+      query: gm w,<1>
+    created: '2023-01-07'
+gmwe 1:
+  deprecated:
+    alternative:
+      query: gm we,<1>
+    created: '2023-01-07'
+gmwn 1:
+  deprecated:
+    alternative:
+      query: gm wn,<1>
+    created: '2023-01-07'
+gmwo 1:
+  deprecated:
+    alternative:
+      query: gm wo,<1>
+    created: '2023-01-07'
+gmwt 1:
+  deprecated:
+    alternative:
+      query: gm wt,<1>
+    created: '2023-01-07'
+gmwy 1:
+  deprecated:
+    alternative:
+      query: gm wy,<1>
+    created: '2023-01-07'
+gmwz 1:
+  deprecated:
+    alternative:
+      query: gm wz,<1>
+    created: '2023-01-07'
+gmze 1:
+  deprecated:
+    alternative:
+      query: gm ze,<1>
+    created: '2023-01-07'
+gmzt 1:
+  deprecated:
+    alternative:
+      query: gm zt,<1>
+    created: '2023-01-07'
+ikea 0:
+  url: https://www.ikea.com/at/de/
+  title: IKEA Österreich
+  tests:
+  - expect: IKEA Österreich
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  description: Möbel- und Einrichtungshaus
+ikea 1:
+  url: https://www.ikea.com/at/de/search/?q=<Suche>
+  tests:
+  - arguments: matratze
+    expect: <title>Suchen
+  include: ikea 0
+  examples:
+  - arguments: matratze
+    description: Suche nach Matratzen
+jw 1:
+  url: https://www.justwatch.com/at/Suche?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+obv 0:
+  url: https://www.obvsg.at/
+  title: OBV - Österreichischer Bibliothekenverbund
+  tests:
+  - expect: OBVSG Home</title>
+  tags:
+  - library
+  - obv
+  description: Verbund österreichischer Bibliotheken
+obv 1:
+  url: https://search.obvsg.at/primo-explore/search?institution=OBV&vid=OBV&tab=defaul_tab&search_scope=OBV_Gesamt&mode=basic&displayMode=full&bulkSize=10&highlight=true&dum=true&query=any,contains,<Suche>&displayField=all&pcAvailabiltyMode=false
+  tests:
+  - arguments: jelinek
+    expect: primoExploreRoot
+  include: obv 0
+  examples:
+  - arguments: elfriede jelinek
+    description: Suche nach Literatur von und über Elfriede Jelinek
+oebb 2:
+  include: öbb 2
+oebb 3:
+  include: öbb 3
+oebb 4:
+  include: öbb 4
+rsc 0:
+  url: https://at.rs-online.com/
+  title: RS Components Österreich
+  tests:
+  - expect: RS</title>
+  tags:
+  - electronics
+  - shopping
+  description: Online-Vertrieb von Elektronik- und Technikkomponenten
+rsc 1:
+  url: https://at.rs-online.com/web/c/?searchTerm=<Produkt>
+  tests:
+  - arguments: battery
+    expect: '&#x27;battery&#x27; | RS</title>'
+  include: rsc 0
+  examples:
+  - arguments: battery
+    description: Suche bei RS Components nach "battery"
+we 0:
+  url: https://at.wetter.com/?forcesite=1
+  title: Wetter.com
+  tests:
+  - expect: Wetter für Österreich
+  tags:
+  - weather
+  description: Wettervorhersagen und meteorologische Informationen
+we 1:
+  url: https://at.wetter.com/suche/?search=<Ort>
+  tests:
+  - arguments: wien
+    expect: Suche nach wien
+  include: we 0
+  examples:
+  - arguments: wien
+    description: Wetter in Wien
+zal 0:
+  url: https://www.zalando.at/
+  title: Zalando.at
+  tests:
+  - expect: rel="canonical" href="https://www.zalando.at/"
+  tags:
+  - shopping
+  - zalando
+  description: Online-Shop für Mode und Schuhe
+zal 1:
+  url: https://www.zalando.at/katalog/?q=<Produkt>
+  tests:
+  - arguments: schuhe
+    expect: <title>Schuhe
+  include: zal 0
+  examples:
+  - arguments: schuhe
+    description: Suche nach Schuhen
+öbb 0:
+  url: https://www.oebb.at/
+  title: ÖBB-Hauptseite
+  tests:
+  - expect: ÖBB</title>
+  tags:
+  - bahn
+  - travel
+  description: Website der Österreichischen Bundesbahnen
+öbb 2:
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&start=1'
+  title: ÖBB-Auskunft
+  tests:
+  - arguments: wien, salzburg
+    expect: Hafas.Core.init
+  include: öbb 0
+  examples:
+  - arguments: wien, salzburg
+    description: Verbindung von Wien nach Salzburg
+öbb 3:
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&start=1'
+  include: öbb 2
+  examples:
+  - arguments: wien, salzburg, 10
+    description: Verbindung von Wien nach Salzburg um 10:00 Uhr
+öbb 4:
+  url: 'https://fahrplan.oebb.at/webapp/?S=<Start: {type: city}>&Z=<Ziel: {type: city}>&time=<Zeit: {type: time}>&date=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
+  include: öbb 2
+  examples:
+  - arguments: wien, salzburg, 10, 1.1.
+    description: Verbindung von Wien nach Salzburg um 10:00 Uhr am 1.1.

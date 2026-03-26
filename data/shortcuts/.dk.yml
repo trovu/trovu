@@ -1,0 +1,76 @@
+bdk 0:
+  url: https://bibliotek.dk/
+  title: bibliotek.dk
+  tags:
+  - library
+  examples:
+  - description: Gå til hjemmesiden
+bdk 1:
+  url: https://bibliotek.dk/find?q.all=<fritekst>
+  include: bdk 0
+  examples:
+  - arguments: nesbø
+    description: Search for Nesbø
+dsb 0:
+  url: https://www.dsb.dk/
+  title: Danske Statsbaner
+  tags:
+  - railway
+  - travel
+  examples:
+  - description: Gå til hjemmesiden
+dsb 2:
+  url: 'https://www.dsb.dk/netbutik/resultat/?criteria%5B0%5D.DepartLocation.Name=<fra>&criteria%5B0%5D.ArriveLocation.Name=<til>&criteria%5B0%5D.SearchTime=<$now: {output: HH:mm}>&criteria%5B0%5D.SearchDate=<$now: {output: YYYY-MM-DD}>&criteria%5B0%5D.PassengersAdults=1&criteria%5B0%5D.Type=0&criteria%5B0%5D.SearchType=1&criteria%5B0%5D.Direction=1'
+  include: dsb 0
+  examples:
+  - arguments: aarhus, københavn
+    description: næste tog fra Aarhus til København
+dsb 3:
+  url: 'https://www.dsb.dk/netbutik/resultat/?criteria%5B0%5D.DepartLocation.Name=<fra>&criteria%5B0%5D.ArriveLocation.Name=<til>&criteria%5B0%5D.SearchTime=<afgang: {type: time, output: HH:mm}>&criteria%5B0%5D.SearchDate=<$now: {output: YYYY-MM-DD}>&criteria%5B0%5D.PassengersAdults=1&criteria%5B0%5D.Type=0&criteria%5B0%5D.SearchType=1&criteria%5B0%5D.Direction=1'
+  include: dsb 0
+  examples:
+  - arguments: aarhus, københavn, 10
+    description: tog fra Aarhus til København kl. 10
+dsb 4:
+  url: 'https://www.dsb.dk/netbutik/resultat/?criteria%5B0%5D.DepartLocation.Name=<fra>&criteria%5B0%5D.ArriveLocation.Name=<til>&criteria%5B0%5D.SearchTime=<afgang: {type: time, output: HH:mm}>&criteria%5B0%5D.SearchDate=<datum: {type: date, output: YYYY-MM-DD}>&criteria%5B0%5D.PassengersAdults=1&criteria%5B0%5D.Type=0&criteria%5B0%5D.SearchType=1&criteria%5B0%5D.Direction=1'
+  include: dsb 0
+  examples:
+  - arguments: aarhus, københavn, 10, 28.1.
+    description: tog fra Aarhus til København kl. 10 den 28.1.
+ikea 0:
+  url: https://www.ikea.com/dk/da/
+  title: IKEA Danmark
+  tags:
+  - furniture
+  - ikea
+  - shopping
+  examples:
+  - description: Gå til hjemmesiden
+ikea 1:
+  url: https://www.ikea.com/dk/da/search/?q=<query>
+  include: ikea 0
+  examples:
+  - arguments: madras
+    description: Søger "madras"
+jw 1:
+  url: https://www.justwatch.com/dk/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
+zal 0:
+  url: https://www.zalando.dk/
+  title: Zalando.dk
+  tags:
+  - shopping
+  - zalando
+  examples:
+  - description: Gå til hjemmesiden
+zal 1:
+  url: https://www.zalando.dk/katalog/?q=<produkt>
+  include: zal 0
+  examples:
+  - arguments: sko
+    description: søge sko

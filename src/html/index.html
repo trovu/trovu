@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta
+        name="description"
+        content="Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with maximum privacy."
+      />
+      <meta property="og:image" content="https://trovu.net/img/og.png" />
+      <meta property="og:title" content="trovu.net – your web search command line" />
+      <meta property="og:url" content="https://trovu.net/" />
+      <meta property="og:site_name" content="trovu.net" />
+      <meta
+        property="og:description"
+        content="Search 1000+ websites in a command-line way, with curated and personal shortcuts, organized by namespaces, allowing multiple and typed arguments, with maximum privacy."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:updated_time" content="{{currentTimestamp}}" />
+      <meta name="msapplication-TileColor" content="#487b7f" />
+      <meta name="theme-color" content="#343a40" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
+      <link rel="manifest" href="/site.webmanifest?v=3" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg?v=3" color="#487b7f" />
+      <link rel="shortcut icon" href="/favicon.ico?v=3" />
+      <link rel="stylesheet" href="style.css?{{currentTimestamp}}" />
+      <title>trovu.net – your web search command line</title>
+    </head>
+  </head>
+
+  <body>
+    <!-- Settings modal -->
+    <div
+      class="modal fade"
+      id="settings"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="settingsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="basic-tab"
+                    data-bs-toggle="tab"
+                    href="#basic"
+                    role="tab"
+                    aria-controls="basic"
+                    aria-selected="true"
+                    >Basic</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="advanced-tab"
+                    data-bs-toggle="tab"
+                    href="#advanced"
+                    role="tab"
+                    aria-controls="advanced"
+                    aria-selected="false"
+                    >Advanced</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="about-tab"
+                    data-bs-toggle="tab"
+                    href="#about"
+                    role="tab"
+                    aria-controls="about"
+                    aria-selected="false"
+                    >About</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content mt-4">
+                <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
+                  <div class="using-advanced">
+                    Using
+                    <a target="_blank" href="{{urlDocs}}users/advanced/">Advanced settings via Github</a>. Basic
+                    settings disabled.
+                  </div>
+                  <div class="using-basic">
+                    <div class="mb-3 row">
+                      <label for="languageSetting" class="col-sm-2 col-form-label">Language</label>
+                      <div class="col-sm-10">
+                        <select class="form-select" id="languageSetting"></select>
+                      </div>
+                    </div>
+                    <div class="mb-3 row">
+                      <label for="countrySetting" class="col-sm-2 col-form-label">Country</label>
+                      <div class="col-sm-10">
+                        <select class="form-select" id="countrySetting"></select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="advanced" role="tabpanel" aria-labelledby="advanced-tab">
+                  <p>
+                    Set advanced settings and personal shortcuts
+                    <a target="_blank" href="{{urlDocs}}users/advanced/"> with a (free) GitHub account</a>.
+                  </p>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="search" class="form-control" id="githubSetting" placeholder="GitHub username" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                  <p>Version: <span id="version"></span></p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="settings-close" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <div class="left">
+            <a href="?">
+              <img src="/img/logo.png" alt="Logo" class="logo" />
+            </a>
+          </div>
+          <div class="right">
+            <span id="settings-button" class="settings" data-bs-toggle="modal" data-bs-target="#settings">
+              <span class="language"></span>
+              <span class="country"></span>
+            </span>
+            <span class="dropdown">
+              <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" id="reload" href="#">Reload shortcuts</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{urlDocs}}">Docs</a>
+                <a class="dropdown-item" href="{{urlBlog}}">Blog</a>
+                <a class="dropdown-item" href="{{urlDocs}}privacy/">Privacy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://github.com/trovu/trovu">GitHub</a>
+              </div>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="explainer">
+        <h3 class="tagline"><span>Web Search as If From Your Cmdline</span></h3>
+        <div class="subtagline">(!bangs but better)</div>
+      </div>
+      <section class="jumbotron text-center bg-white">
+        <div hidden id="alert" class="alert alert-warning" role="alert">
+          <span></span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <pre hidden id="log"></pre>
+        <form id="query-form" action="process/index.html">
+          <div class="input-group">
+            <input
+              type="search"
+              class="form-control form-control-lg"
+              id="query"
+              name="query"
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+              placeholder="keyword arg1, arg2…"
+            />
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-caret-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div id="help"></div>
+      </section>
+      <div id="suggestions" class="container"></div>
+      <div class="explainer">
+        <div class="intro">
+          <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc">
+            <img class="sketch" src="/img/sketch.svg" alt="" />
+          </a>
+        </div>
+        <div class="examples">
+          <h2>Examples</h2>
+          <dl>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc">gfl ber, nyc</a>
+            </dt>
+            <dd>Search on Google Flights for a flight from Berlin to New York City</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc%2C%20fr%2C%2028"
+                >gfl ber, nyc, fr, 28</a
+              >
+            </dt>
+            <dd>… leaving next Friday, returning on the 28th</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=gd%20london%2C%20liverpool">gd london, liverpool</a>
+            </dt>
+            <dd>Search for a route on Google Directions from London to Liverpool</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=g%20berlin">g berlin</a>
+            </dt>
+            <dd>Search Google for Berlin</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=w%20berlin">w berlin</a>
+            </dt>
+            <dd>Go to the Wikipedia article about Berlin</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=fr.w%20berlin">fr.w berlin</a>
+            </dt>
+            <dd>Go to the French Wikipedia article about Berlin</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=wg%20berlin">wg berlin</a>
+            </dt>
+            <dd>Search Wikipedia for all mentions of "berlin" via Google</dd>
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=npm%20csv">npm csv</a>
+            </dt>
+            <dd>Search the Node Package Manager for modules projects about CSV</dd>
+          </dl>
+        </div>
+        <div class="intro row">
+          <div class="col-sm-6">
+            <h2>Get more</h2>
+            <ul>
+              <li>
+                Find <strong>6000+ shortcuts</strong>, just type in <code>youtube</code>, <code>flights</code>,
+                <code>chatgpt</code>…
+              </li>
+              <li>
+                Read
+                <a target="_blank" href="{{urlBlog}}tags/testimonial/">how people use Trovu</a>.
+              </li>
+              <li>
+                Get <strong>support</strong> with the
+                <a target="_blank" href="https://www.chatbase.co/chatbot-iframe/5xy6qxmYAG-axv2MIAZSw">AI Chatbot</a>
+                (experimental), or on <a href="https://t.me/trovu_support">Telegram</a>.
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <h2>Get advanced</h2>
+            <ul>
+              <li>
+                Use Trovu in your
+                <a target="_blank" href="{{urlDocs}}users/integration/">browser</a>,
+                <a target="_blank" href="{{urlDocs}}users/integration/#android">smartphone</a>
+                or
+                <a target="_blank" href="https://www.raycast.com/jorges/trovu">Raycast</a>.
+              </li>
+              <li>
+                Create
+                <a target="_blank" href="{{urlDocs}}users/advanced/">your own shortcuts</a>.
+              </li>
+              <li>
+                Contribute on
+                <a target="_blank" href="https://github.com/trovu/trovu">GitHub</a>.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="lists">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>Shortcuts by tags</h2>
+            <span class="tag">ai</span><span class="tag">dictionary</span><span class="tag">encyclopedia</span
+            ><span class="tag">google</span><span class="tag">language</span><span class="tag">library</span
+            ><span class="tag">maps</span><span class="tag">music</span><span class="tag">photo</span
+            ><span class="tag">programming</span><span class="tag">shopping</span><span class="tag">sport</span
+            ><span class="tag">statistics</span><span class="tag">travel</span><span class="tag">video</span
+            ><span class="tag">web-search</span><span class="tag">wiki</span>
+          </div>
+          <div class="col-sm-2">
+            <h2>…by country</h2>
+            <span class="namespace">.at</span><span class="namespace">.bo</span><span class="namespace">.ch</span
+            ><span class="namespace">.cz</span><span class="namespace">.de</span><span class="namespace">.dk</span
+            ><span class="namespace">.es</span><span class="namespace">.fr</span><span class="namespace">.gb</span
+            ><span class="namespace">.it</span><span class="namespace">.nl</span><span class="namespace">.no</span
+            ><span class="namespace">.pl</span><span class="namespace">.pt</span><span class="namespace">.se</span
+            ><span class="namespace">.sk</span><span class="namespace">.us</span>
+          </div>
+          <div class="col-sm-2">
+            <h2>…by language</h2>
+            <span class="namespace">cs</span><span class="namespace">da</span><span class="namespace">de</span
+            ><span class="namespace">en</span><span class="namespace">eo</span><span class="namespace">es</span
+            ><span class="namespace">nl</span><span class="namespace">pl</span><span class="namespace">sk</span
+            ><span class="namespace">ru</span>
+          </div>
+          <div class="col-sm-4">
+            <h2>
+              Latest <a target="_blank" href="{{urlBlog}}">blog</a> articles
+              <a href="{{urlBlog}}feed/"><img src="/img/rss.svg" width="14" height="14" /></a>
+            </h2>
+            <ul>
+              <li>
+                <span class="highlight"
+                  ><a target="_blank" href="{{urlBlog}}startpage-generator">
+                    Story of Trovu: From Generated Forms to the Command Line
+                  </a></span
+                >
+              </li>
+              <li>
+                <a target="_blank" href="{{urlBlog}}startpage-generator"> Story of Trovu: The Startpage Generator </a>
+              </li>
+              <li>
+                <a target="_blank" href="{{urlBlog}}20years">20 Years of Trovu / FindFind.it / Serchilo</a>
+              </li>
+              <li>
+                <a target="_blank" href="{{urlBlog}}browser-extension">New: Browser Extension for Chrome & Firefox</a>
+              </li>
+              <li>
+                <a target="_blank" href="{{urlBlog}}sponsor">Sponsor Trovu & Get Advanced Support</a>
+              </li>
+              <li>
+                <a target="_blank" href="{{urlBlog}}bahn-fix">Fix der Bahn-Fahrplanauskunft</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="navbar">
+      <div class="container">
+        <div class="left">
+          <ul>
+            <li>
+              <a target="_blank" href="https://facebook.com/trovu.net">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/trovu">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.tiktok.com/@trovu.net">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/trovu_net">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.youtube.com/@trovu_net">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <span class="text-muted"><a href="{{urlImpressum}}">Impressum</a></span>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <span class="dropdown">
+            <a href="#" class="form-control btn btn-success" aria-expanded="false" data-bs-toggle="dropdown"
+              >How to install</a
+            >
+            <div class="dropdown-menu dropdown-menu-right">
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#chrome">Chrome</a>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#firefox">Firefox</a>
+              <div class="dropdown-divider"></div>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#raycast">Raycast</a>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#android">Android</a>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#pwa-progressive-web-app"
+                >PWA</a
+              >
+              <div class="dropdown-divider"></div>
+              <a target="_blank" class="dropdown-item" href="{{urlDocs}}users/integration/#general">Other</a>
+            </div>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="{{fileNameJs}}?{{currentTimestamp}}"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+e 0:
+  url: https://www.ebay.com.my/
+  title: Ebay.com.my
+  tags:
+  - ebay
+  - shopping
+e 1:
+  url: https://www.ebay.com.my/sch/i.html?_nkw=<query>
+  title: Ebay.com.my
+  tags:
+  - ebay
+  - shopping
+  examples:
+  - arguments: smartphone
+    description: Search for "smartphone"
+jw 1:
+  url: https://www.justwatch.com/my/search?q=<query>
+  include:
+    key: jw 0
+    namespace: o
+  examples:
+  - arguments: simpsons
+    description: Search for "simpsons"
