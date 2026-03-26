@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - test-pr-569
   pull_request:
     branches:
       - master
