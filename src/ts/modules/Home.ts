@@ -17,6 +17,12 @@ import countriesList from "countries-list";
 /** Set and manage the homepage. */
 
 export default class Home {
+  isStandalonePWA() {
+    return (
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone === true
+    );
+  }
   constructor() {}
 
   async initialize() {
@@ -240,22 +246,29 @@ export default class Home {
 
     // Send debug to /process.
     if (envQuery.debug) {
-      const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
-      });
-      window.location.href = processUrl;
-      return;
-    }
+  const processUrl = this.env.buildProcessUrl({
+    query: this.queryInput.value,
+  });
+  if (this.isStandalonePWA()) {
+    window.open(processUrl, "_blank", "noopener,noreferrer");
+  } else {
+    window.location.href = processUrl;
+  }
+  return;
+}
 
     let redirectUrl;
-    if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
-    }
-    window.location.href = redirectUrl;
-  };
+if (response.status === "found") {
+  redirectUrl = response.redirectUrl;
+} else {
+  redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+}
 
+if (this.isStandalonePWA()) {
+  window.open(redirectUrl, "_blank", "noopener,noreferrer");
+} else {
+  window.location.href = redirectUrl;
+}
   /**
    * On triggering reload
    *
