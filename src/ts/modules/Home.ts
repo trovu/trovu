@@ -23,7 +23,7 @@ export default class Home {
       window.navigator.standalone === true
     );
   }
-  constructor() {}
+  constructor() { }
 
   async initialize() {
     this.env = new Env({ context: "index" });
@@ -192,11 +192,9 @@ export default class Home {
         alertMsg.innerHTML = `No matching shortcut found. Did you use a <a href="${this.env.data.config.url.docs}users/#call-a-shortcut">keyword</a>? Try <a target="_blank" href="${this.env.data.config.url.docs}users/troubleshooting/">Troubleshooting</a>.`;
         break;
       case "not_reachable":
-        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="${
-          this.env.data.config.url.docs
-        }shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${
-          countriesList.countries[this.env.country.toUpperCase()].emoji
-        }) to <span class="namespace"></span>.`;
+        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="${this.env.data.config.url.docs
+          }shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${countriesList.countries[this.env.country.toUpperCase()].emoji
+          }) to <span class="namespace"></span>.`;
         alertMsg.querySelector(".namespace").textContent = params.namespace;
         break;
       case "reloaded":
@@ -233,7 +231,7 @@ export default class Home {
     if (event) {
       event.preventDefault();
     }
-
+  
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
@@ -241,38 +239,40 @@ export default class Home {
     const params = Env.getParamsFromUrl();
     params.query = this.queryInput.value;
     await envQuery.populate(params);
-
+  
     const response = CallHandler.getRedirectResponse(envQuery);
-
+  
     // Send debug to /process.
     if (envQuery.debug) {
-  const processUrl = this.env.buildProcessUrl({
-    query: this.queryInput.value,
-  });
-  if (this.isStandalonePWA()) {
-    window.open(processUrl, "_blank", "noopener,noreferrer");
-  } else {
-    window.location.href = processUrl;
-  }
-  return;
-}
-
+      const processUrl = this.env.buildProcessUrl({
+        query: this.queryInput.value,
+      });
+      if (this.isStandalonePWA()) {
+        window.open(processUrl, "_blank", "noopener,noreferrer");
+      } else {
+        window.location.href = processUrl;
+      }
+      return;
+    }
+  
     let redirectUrl;
-if (response.status === "found") {
-  redirectUrl = response.redirectUrl;
-} else {
-  redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
-}
-
-if (this.isStandalonePWA()) {
-  window.open(redirectUrl, "_blank", "noopener,noreferrer");
-} else {
-  window.location.href = redirectUrl;
-}
+    if (response.status === "found") {
+      redirectUrl = response.redirectUrl;
+    } else {
+      redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+    }
+  
+    if (this.isStandalonePWA()) {
+      window.open(redirectUrl, "_blank", "noopener,noreferrer");
+    } else {
+      window.location.href = redirectUrl;
+    }
+  };
+  
   /**
    * On triggering reload
    *
-   * @param {object} event – The submitting event.
+   * @param {object} event — The submitting event.
    */
   reload = (event) => {
     if (event) {
