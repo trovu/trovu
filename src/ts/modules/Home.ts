@@ -272,7 +272,7 @@ export default class Home {
   /**
    * Add and update Opensearch tag.
    */
-  updateOpensearch() {
+  updateOpensearch = () => {
     if (!this.env.language || !this.env.country) {
       return;
     }
