@@ -44,7 +44,15 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      (navigator as any).standalone;
+
+    if (isStandalone) {
+      window.open(redirectUrl, "_blank");
+    } else {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
