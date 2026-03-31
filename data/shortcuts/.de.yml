@@ -5600,6 +5600,21 @@ tel 2:
     description: Telefonnummer von "Meier" in Dresden
   - arguments: meier, dd
     description: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
+thl 0:
+  url: https://www.thalia.de/
+  title: Thalia
+  tags:
+  - books
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Online-Buchhandlung für Bücher, eBooks, Hörbücher, Filme, Musik und Spiele.
+thl 1:
+  url: https://www.thalia.de/suche?sq=<Suche>
+  include: thl 0
+  examples:
+  - arguments: goethe
+    description: Suche nach "goethe"
 tho 0:
   url: https://www.thomann.de/
   title: Thomann.de
