@@ -1534,23 +1534,6 @@ comic 0:
 comic 1:
   url: https://www.comicvine.com/search/?q=<query>
   include: comic 0
-commons 0:
-  url: https://commons.wikimedia.org/
-  title: Wikimedia Commons Main Page
-  tags:
-  - commons
-  - wikimedia
-  - wikipedia
-commons 1:
-  url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
-  title: Wikimedia Commons
-  tags:
-  - commons
-  - wikimedia
-  - wikipedia
-  examples:
-  - arguments: berlin
-    description: Wikimedia pictures, videos and other media about Berlin
 conj 1:
   url: 'https://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/index.php&item=<verbform: {encoding: iso-8859-1}>'
   title: Logos Conjugator
@@ -10323,17 +10306,23 @@ wbm 1:
   - internet
   - web
   description: Explore past snapshots of the given Web page
-wc 1:
-  url: https://<$language>.wikipedia.org/wiki/Special:Contributions/<user>
-  title: Wikipedia, User Contributions
+wc 0:
+  url: https://commons.wikimedia.org/
+  title: Wikimedia Commons Main Page
   tags:
-  - copyleft
-  - encyclopedia
-  - wiki
+  - commons
+  - wikimedia
+  - wikipedia
+wc 1:
+  url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
+  title: Wikimedia Commons
+  tags:
+  - commons
+  - wikimedia
   - wikipedia
   examples:
-  - arguments: FlaBot
-    description: Search for "FlaBot"
+  - arguments: berlin
+    description: Wikimedia pictures, videos and other media about Berlin
 wd 0:
   url: https://www.wikidata.org/w/index.php?uselang=<$language>
   title: Wikidata, Homepage
