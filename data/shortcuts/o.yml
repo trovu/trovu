@@ -1535,22 +1535,15 @@ comic 1:
   url: https://www.comicvine.com/search/?q=<query>
   include: comic 0
 commons 0:
-  url: https://commons.wikimedia.org/
-  title: Wikimedia Commons Main Page
-  tags:
-  - commons
-  - wikimedia
-  - wikipedia
+  deprecated:
+    alternative:
+      query: wmc
+    created: '2026-04-01'
 commons 1:
-  url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
-  title: Wikimedia Commons
-  tags:
-  - commons
-  - wikimedia
-  - wikipedia
-  examples:
-  - arguments: berlin
-    description: Wikimedia pictures, videos and other media about Berlin
+  deprecated:
+    alternative:
+      query: wmc <1>
+    created: '2026-04-01'
 conj 1:
   url: 'https://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/index.php&item=<verbform: {encoding: iso-8859-1}>'
   title: Logos Conjugator
@@ -10568,6 +10561,20 @@ wm 1:
   examples:
   - arguments: berlin
     description: Go to Wikipedia article about Berlin
+wmc 0:
+  url: https://commons.wikimedia.org/
+  title: Wikimedia Commons
+  tags:
+  - commons
+  - wikimedia
+  - wikipedia
+  description: Media file repository making available public domain and freely-licensed educational media content (images, sound and video clips) to everyone, in their own language.
+wmc 1:
+  url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
+  include: wmc 0
+  examples:
+  - arguments: berlin
+    description: Wikimedia pictures, videos and other media about Berlin
 wmob 0:
   url: https://<$language>.m.wikipedia.org/
   title: Wikipedia Mobile Main Page
