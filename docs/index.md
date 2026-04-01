@@ -1,6 +1,6 @@
 # [trovu.net](https://trovu.net/) – Web shortcuts: social, private, free.
 
-_by [Georg Jähnig](https://github.com/georgjaehnig/) & the [Trovu team](https://github.com/orgs/trovu/teams/editors)_
+_by [Georg Jähnig](https://github.com/georgjaehnig/) & [contributors](https://github.com/trovu/trovu/graphs/contributors)_
 
 Search 1000+ websites in a command-line way, with
 
