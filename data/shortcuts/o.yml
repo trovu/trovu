@@ -4031,6 +4031,20 @@ ga 1:
     namespace: irs
   - key: ga 1
     namespace: pka
+gai 0:
+  url: http://google.com/ai
+  title: Google AI Mode
+  tags:
+  - ai
+  - google
+  examples:
+  - description: Go to the homepage
+gai 1:
+  url: http://google.com/ai?q=<query>
+  include: gai 0
+  examples:
+  - arguments: how big is berlin
+    description: Ask Google AI how big Berlin is
 gamespot 1:
   deprecated:
     alternative:
