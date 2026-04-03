@@ -1172,14 +1172,14 @@ kwdb 0:
   examples:
   - description: Gehe zur Startseite
 kwdb 1:
-  url: https://www.kwdb.ch/search?q=<Suche>&sourceid=serchilo
-  include: kw 0
+  url: https://www.kwdb.ch/suche/<Suche>
+  include: kwdb 0
   examples:
   - arguments: baumart
-    description: Suche nach "baumart"
+    description: Suche nach Baumart
 kwdb 2:
-  url: https://www.kwdb.ch/search?q=<Suche>&lc=<Buchstabenanzahl>
-  include: kw 0
+  url: https://www.kwdb.ch/suche/<Suche>/<Buchstaben-Anzahl>
+  include: kwdb 0
   examples:
   - arguments: baumart, 4
     description: Suche nach "baumart" mit 4 Buchstaben
