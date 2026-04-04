@@ -1,4 +1,3 @@
-// @ts-nocheck
 
 /** @module DataManager */
 import Logger from "./Logger";
@@ -12,9 +11,9 @@ export default class DataManager {
    * Load data from /data.
    * @return {object} data      - The loaded data from /data.
    */
-  static load(options = {}) {
+  static load(options: AnyObject = {}) {
     options = this.getDefaultOptions(options);
-    const data = {};
+    const data: AnyObject = {};
     data["shortcuts"] = DataManager.readYmls(`${options.data}/${options.shortcuts}/`, options.filter);
     data["types"] = {};
     data["types"]["city"] = DataManager.readYmls(`${options.data}/${options.types}/city/`);
@@ -26,7 +25,7 @@ export default class DataManager {
    * Write data to /data.
    * @param {object} data      - The data to write
    */
-  static write(data, options = {}) {
+  static write(data: AnyObject, options: AnyObject = {}) {
     options = this.getDefaultOptions(options);
     this.normalizeShortcuts(data.shortcuts);
     this.normalizeTags(data.shortcuts);
@@ -36,12 +35,12 @@ export default class DataManager {
     DataManager.writeYmls(`${options.data}/${options.types}/date/`, data.types.date);
   }
 
-  static verifyShortcuts(dataShortcuts) {
+  static verifyShortcuts(dataShortcuts: AnyObject) {
     const namespaceFetcher = new NamespaceFetcher({ logger: new Logger() });
     for (const namespace of Object.keys(dataShortcuts)) {
       const shortcuts = dataShortcuts[namespace];
       for (const key in shortcuts) {
-        const shortcut = JSON.parse(JSON.stringify(shortcuts[key]));
+        const shortcut: AnyObject = JSON.parse(JSON.stringify(shortcuts[key]));
         [, shortcut.argumentCount] = key.split(" ");
         if (!shortcut.url) continue;
         shortcut.namespace = namespace;
@@ -56,13 +55,13 @@ export default class DataManager {
    * Normalize shortcuts.
    * @param {Object} shortcuts by namespace
    */
-  static normalizeShortcuts(shortcuts) {
+  static normalizeShortcuts(shortcuts: AnyObject) {
     for (const namespace in shortcuts) {
       for (const key in shortcuts[namespace]) {
         const shortcut = shortcuts[namespace][key];
         // Sort the keys of the shortcut object in descending order
         const sortedKeys = Object.keys(shortcut).sort((a, b) => b.localeCompare(a));
-        const sortedShortcut = {};
+        const sortedShortcut: AnyObject = {};
         // Create a new object with sorted keys
         for (const sortedKey of sortedKeys) {
           sortedShortcut[sortedKey] = shortcut[sortedKey];
@@ -89,7 +88,7 @@ export default class DataManager {
    * Normalize tags in every shortcut.
    * @param {Object} shortcuts by namespace
    */
-  static normalizeTags(shortcuts) {
+  static normalizeTags(shortcuts: AnyObject) {
     for (const namespace in shortcuts) {
       for (const key in shortcuts[namespace]) {
         const shortcut = shortcuts[namespace][key];
@@ -104,7 +103,7 @@ export default class DataManager {
     }
   }
 
-  static getDefaultOptions(options) {
+  static getDefaultOptions(options: AnyObject) {
     options.data = options.data === undefined ? "./data/" : options.data;
     options.shortcuts = options.shortcuts === undefined ? "shortcuts" : options.shortcuts;
     options.types = options.types === undefined ? "types" : options.types;
@@ -117,8 +116,8 @@ export default class DataManager {
    * @param   {string} ymlDirPath
    * @returns {object} dataByFileRoot - The data from the YAML files.
    */
-  static readYmls(ymlDirPath, filter = false) {
-    const dataByFileRoot = {};
+  static readYmls(ymlDirPath: string, filter = false) {
+    const dataByFileRoot: AnyObject = {};
     let fileNames = [];
     try {
       fileNames = fs.readdirSync(ymlDirPath);
@@ -150,7 +149,7 @@ export default class DataManager {
    * @param {string} ymlDirPath
    * @param {object} dataByFileRoot - The data to write to YAML files.
    */
-  static writeYmls(ymlDirPath, dataByFileRoot) {
+  static writeYmls(ymlDirPath: string, dataByFileRoot: AnyObject) {
     for (const fileRoot in dataByFileRoot) {
       dataByFileRoot[fileRoot] = this.sortObject(dataByFileRoot[fileRoot]);
       const filePath = `${ymlDirPath}/${fileRoot}.yml`;
@@ -162,7 +161,7 @@ export default class DataManager {
     }
   }
 
-  static sortObject(obj) {
+  static sortObject(obj: AnyObject) {
     return Object.keys(obj)
       .sort()
       .reduce(function (result, key) {

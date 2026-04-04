@@ -1,7 +1,8 @@
-// @ts-nocheck
 
 export default class GitLogger {
-  constructor(gitInfo) {
+  [key: string]: any;
+
+  constructor(gitInfo: AnyObject) {
     this.gitInfo = gitInfo;
   }
   logVersion() {

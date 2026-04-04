@@ -1,8 +1,9 @@
-// @ts-nocheck
 import DataManager from "./DataManager";
 
 export default class DataReporter {
-  constructor(options) {
+  [key: string]: any;
+
+  constructor(options: AnyObject) {
     this.options = options;
     this.env = {
       data: DataManager.load(),
@@ -10,12 +11,12 @@ export default class DataReporter {
   }
 
   reportData() {
-    const reportShortcutsByNamespace = {};
-    const reportShortcutsByKeywordLength = {};
-    const reportShortcutsByArgCount = {};
-    const reportShortcutsByProtocol = {};
-    const reportShortcutsByProperties = {};
-    const reportShortcutsByState = {};
+    const reportShortcutsByNamespace: AnyObject = {};
+    const reportShortcutsByKeywordLength: AnyObject = {};
+    const reportShortcutsByArgCount: AnyObject = {};
+    const reportShortcutsByProtocol: AnyObject = {};
+    const reportShortcutsByProperties: AnyObject = {};
+    const reportShortcutsByState: AnyObject = {};
     for (const namespace in this.env.data.shortcuts) {
       if (this.options.namespace && this.options.namespace !== namespace) {
         continue;
@@ -111,13 +112,13 @@ export default class DataReporter {
     console.log("Shortcuts by protocol:");
     console.table(reportShortcutsByProtocol);
   }
-  static increment(report, key) {
+  static increment(report: AnyObject, key: string | number) {
     if (!report[key]) {
       report[key] = { count: 0 };
     }
     report[key].count++;
   }
-  static calculatePercentage(report, key, total) {
+  static calculatePercentage(report: AnyObject, key: string | number, total: number) {
     if (!report[key]) {
       report[key] = { count: 0 };
     }

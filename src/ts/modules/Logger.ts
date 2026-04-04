@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 /** @module Logger */
 
 /** Logs errors and warnings. */
@@ -11,14 +9,15 @@ export default class Logger {
   /**
    * Set helper variables.
    */
-  constructor(logElementSelector: string) {
+  constructor(logElementSelector = "") {
     this.logs = [];
-    if (!(typeof document === "undefined")) {
-      this.logElement = document.querySelector(logElementSelector);
+    this.logElement = null;
+    if (!(typeof document === "undefined") && logElementSelector) {
+      this.logElement = document.querySelector(logElementSelector) as HTMLElement | null;
     }
   }
 
-  log(level, message) {
+  log(level: string, message: string) {
     // Check if message is already in this.logs
     // if yes, do not log again
     if (this.logs.some((log) => log.level === level && log.message === message)) {
@@ -33,17 +32,17 @@ export default class Logger {
       this.logElement.textContent += `${message}\n`;
     }
   }
-  info(message) {
+  info(message: string) {
     this.log("info", message);
   }
-  warning(message) {
+  warning(message: string) {
     this.log("warning", message);
     this.showLog();
   }
-  success(message) {
+  success(message: string) {
     this.log("success", message);
   }
-  error(message) {
+  error(message: string) {
     this.log("error", message);
     this.showLog();
     throw new Error(message);

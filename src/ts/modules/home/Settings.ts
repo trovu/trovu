@@ -1,4 +1,3 @@
-// @ts-nocheck
 
 /** @module Settings */
 import countriesList from "countries-list";
@@ -6,7 +5,9 @@ import countriesList from "countries-list";
 /** Settings methods. */
 
 export default class Settings {
-  constructor(env, updateOpensearch) {
+  [key: string]: any;
+
+  constructor(env: AnyObject, updateOpensearch: any) {
     this.env = env;
     this.updateOpensearch = updateOpensearch;
 
@@ -70,8 +71,8 @@ export default class Settings {
     this.setSelectOptions("#countrySetting", countriesArray);
   }
 
-  objectToArrayWithKey(obj) {
-    const ar = [];
+  objectToArrayWithKey(obj: AnyObject) {
+    const ar: any[] = [];
     for (const [key, value] of Object.entries(obj)) {
       value.key = key;
       ar.push(value);
@@ -79,8 +80,8 @@ export default class Settings {
     return ar;
   }
 
-  setSelectOptions(selector, list) {
-    const selectEl = document.querySelector(selector);
+  setSelectOptions(selector: string, list: any[]) {
+    const selectEl: any = document.querySelector(selector);
     list.forEach((item) =>
       selectEl.appendChild(new Option(`${item.name} ${item.emoji ? item.emoji : ""}`, item.key.toLocaleLowerCase())),
     );

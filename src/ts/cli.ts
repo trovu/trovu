@@ -1,4 +1,3 @@
-// @ts-nocheck
 import DataCompiler from "./modules/DataCompiler";
 import DataEditor from "./modules/DataEditor";
 import DataManager from "./modules/DataManager";

@@ -1,4 +1,3 @@
-// @ts-nocheck
 
 /** @module Suggestions */
 import QueryParser from "../QueryParser";
@@ -7,7 +6,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import jsyaml from "js-yaml";
 
 export default class Suggestions {
-  constructor(querySelector, suggestionsSelector, home) {
+  [key: string]: any;
+
+  constructor(querySelector: string, suggestionsSelector: string, home: AnyObject) {
     this.env = home.env;
     this.home = home;
     this.queryInput = document.querySelector(querySelector);
@@ -59,7 +60,7 @@ export default class Suggestions {
     });
   }
 
-  renderSuggestions(suggestions) {
+  renderSuggestions(suggestions: any[]) {
     while (this.suggestionsDiv.firstChild) {
       this.suggestionsDiv.removeChild(this.suggestionsDiv.firstChild);
     }
@@ -93,7 +94,7 @@ export default class Suggestions {
     }
   }
 
-  renderSuggestion(suggestion, index) {
+  renderSuggestion(suggestion: AnyObject, index: number) {
     const li = document.createElement("li");
     li.setAttribute("role", "option");
     li.setAttribute("aria-selected", index === this.selected ? "true" : "false");
@@ -116,7 +117,7 @@ export default class Suggestions {
     return li;
   }
 
-  select(index) {
+  select(index: number) {
     if (this.selected == index) {
       this.selected = -1;
     } else {
@@ -126,7 +127,7 @@ export default class Suggestions {
     this.queryInput.focus();
   }
 
-  ensureElementIsVisibleInContainer(element, container) {
+  ensureElementIsVisibleInContainer(element: any, container: any) {
     // Assuming the height of the fade-out overlay is known (e.g., 100px)
     const fadeOutHeight = 60; // Adjust the fade-out height accordingly
 
@@ -143,7 +144,7 @@ export default class Suggestions {
     }
   }
 
-  getMain(suggestion) {
+  getMain(suggestion: AnyObject) {
     // Create the main container div
     const mainDiv = document.createElement("div");
     mainDiv.className = `main ${suggestion.reachable ? "" : "unreachable"}`;
@@ -203,21 +204,21 @@ export default class Suggestions {
     return mainDiv;
   }
 
-  hasTag(suggestion, tag) {
+  hasTag(suggestion: AnyObject, tag: string) {
     if (suggestion.tags && Array.isArray(suggestion.tags)) {
       return suggestion.tags.includes(tag);
     }
     return false;
   }
 
-  handleTagOrNamespaceClick(event, query) {
+  handleTagOrNamespaceClick(event: any, query: string) {
     event.stopPropagation();
     this.queryInput.value = query;
     this.queryInput.focus();
     this.queryInput.dispatchEvent(new Event("input"));
   }
 
-  getDescriptionAndTags(suggestion) {
+  getDescriptionAndTags(suggestion: AnyObject) {
     // Create the container for the description and tags
     const descriptionAndTagsDiv = document.createElement("div");
     descriptionAndTagsDiv.className = "description-and-tags";
@@ -254,7 +255,7 @@ export default class Suggestions {
     return descriptionAndTagsDiv;
   }
 
-  getExamples(suggestion) {
+  getExamples(suggestion: AnyObject) {
     if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
       return document.createDocumentFragment();
     }
@@ -361,7 +362,7 @@ export default class Suggestions {
     const copyYamlLink = document.createElement("a");
     copyYamlLink.href = "#";
     copyYamlLink.textContent = "Copy YAML";
-    copyYamlLink.onclick = (event) => {
+    copyYamlLink.onclick = (event: any) => {
       event.preventDefault();
       event.stopPropagation();
       const yaml = this.getYaml(suggestion);
