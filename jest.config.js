@@ -7,4 +7,6 @@ module.exports = {
     "^.+.tsx?$": ["ts-jest", {}],
   },
   moduleFileExtensions: ["ts", "js", "json", "node"],
+  modulePathIgnorePatterns: ["<rootDir>/ext/raycast/"],
+  testPathIgnorePatterns: ["<rootDir>/ext/raycast/"],
 };
