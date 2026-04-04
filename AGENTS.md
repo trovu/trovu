@@ -40,7 +40,7 @@ When in doubt, treat `.github/workflows/deploy.yml` as the source of truth for w
 - `src/html/`, `src/scss/`, `src/js/`, `src/manifest/`, `src/favicon/`: static app assets
 - `docs/`: MkDocs source
 - `blog/`: Eleventy source
-- `tests/`: Jest fixtures plus Cypress tests
+- `tests/`: Jest fixtures plus Playwright tests
 - `dist/`: generated output, do not edit by hand
 
 Note: `README.md` is a symlink to `docs/index.md`, so update `docs/index.md` if the README content needs to change.
@@ -84,7 +84,7 @@ Useful workflow combinations:
   1. `npm run validate-data`
   2. `npm run build`
   3. `npm run test-calls`
-- Cypress expects the app to already be served at `http://127.0.0.1:8081/`.
+- `npm run test-fe` uses Playwright and starts the local server automatically via `webServer`.
 
 ## Build And Test Notes
 
@@ -96,7 +96,7 @@ Useful workflow combinations:
 - `dist/` is ignored and should generally not be committed.
 - `test-unit` covers modules directly.
 - `test-calls` loads fixtures from `tests/calls.yml` and verifies end-to-end redirect behavior in Jest.
-- `test-fe` is Cypress coverage for homepage behavior.
+- `test-fe` is Playwright coverage for homepage behavior.
 - `verify-safe` is the default pre/post-change safety check for local Codex work.
 - Docs and blog are built separately; changes under `docs/` or `blog/` should usually be validated with their matching build commands.
 
@@ -171,9 +171,8 @@ Recommended task flow:
   - update `tests/calls.yml` when redirect outcomes change
 - Homepage UX changes:
   - run `npm run build`
-  - run `npm run dev-server`
   - then run `npm run test-fe`
-  - check `tests/cypress/e2e/home.cy.js`
+  - check `tests/playwright/home.spec.js`
 - Data-only changes:
   - at minimum run `npm run validate-data`
   - also run `npm run test-calls`
