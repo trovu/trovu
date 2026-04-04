@@ -16,6 +16,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - run: npm clean-install
+      - run: npx playwright install --with-deps chromium
       - run: npm run lint-yaml
       - name: Check code formatting
         run: npm run --silent prettier-list | awk '{ print "::warning file=" $0 ",title=Code style::" $0 " is not correctly formatted. Call npm run prettier-fix." }'
@@ -25,6 +26,7 @@ jobs:
       - run: npm run build
       - run: npm run validate-data
       - run: npm run test-calls
+      - run: npm run test-fe
       - uses: actions/setup-python@v5
         with:
           python-version: 3.11.9
