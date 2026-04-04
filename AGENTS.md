@@ -49,6 +49,8 @@ Note: `README.md` is a symlink to `docs/index.md`, so update `docs/index.md` if 
 
 CI currently uses Node `22.22.0` and Python `3.11.9`.
 
+For local Codex work, use `nvm use` so your shell matches the checked-in `.nvmrc`, then run `npm clean-install` after changing Node versions.
+
 Common commands:
 
 - `npm clean-install`
@@ -65,6 +67,7 @@ Common commands:
 - `npm run build-blog`
 - `npm run build-docs`
 - `pipenv run mkdocs build`
+- `npm run verify-safe`
 
 Useful workflow combinations:
 
@@ -72,6 +75,10 @@ Useful workflow combinations:
   1. `npm clean-install`
   2. `npm run build`
   3. `npm run dev-server`
+- Safe Codex baseline:
+  1. `nvm use`
+  2. `git status --short`
+  3. `npm run verify-safe`
 - Frontend rebuild loop: `npm run watch`
 - Data-only validation after editing YAML:
   1. `npm run validate-data`
@@ -90,6 +97,7 @@ Useful workflow combinations:
 - `test-unit` covers modules directly.
 - `test-calls` loads fixtures from `tests/calls.yml` and verifies end-to-end redirect behavior in Jest.
 - `test-fe` is Cypress coverage for homepage behavior.
+- `verify-safe` is the default pre/post-change safety check for local Codex work.
 - Docs and blog are built separately; changes under `docs/` or `blog/` should usually be validated with their matching build commands.
 
 ## Working With Shortcut Data
@@ -137,19 +145,44 @@ These can rewrite many YAML files. Use them intentionally and review diffs close
 - Keep browser code compatible with the existing DOM-driven architecture instead of introducing a framework.
 - Prefer editing source files over generated output.
 
+## Codex Safety Rules
+
+- Do not work directly on `master`; start each Codex task from a dedicated branch, preferably `codex/<task>` when local git refs permit it.
+- Treat `master` as a read/merge target, not an editing branch.
+- Keep changes small, local, and reversible; defer large refactors unless explicitly requested.
+- Never edit `dist/` by hand.
+- Do not run broad formatting or rewrite commands unless explicitly requested.
+- Review the diff before every commit.
+- Do not push, merge, or rewrite history automatically.
+
+Recommended task flow:
+
+1. `git switch -c codex/<task>` or a close fallback branch name if slash-based refs are unavailable locally.
+2. `git status --short`
+3. `npm run verify-safe`
+4. Make only the relevant changes.
+5. Re-run the appropriate checks.
+6. Review diff, then commit locally.
+
 ## Testing Guidance By Change Type
 
 - Redirect, parsing, namespace, include, or placeholder logic:
   - add or update Jest coverage in `src/ts/modules/*.test.ts`
   - update `tests/calls.yml` when redirect outcomes change
 - Homepage UX changes:
+  - run `npm run build`
+  - run `npm run dev-server`
+  - then run `npm run test-fe`
   - check `tests/cypress/e2e/home.cy.js`
 - Data-only changes:
   - at minimum run `npm run validate-data`
+  - also run `npm run test-calls`
 - Docs-only changes:
   - prefer `pipenv run mkdocs build`
 - Blog-only changes:
   - prefer `npm run build-blog`
+- Logic changes in `src/ts/modules/` or other runtime code:
+  - run `npm run verify-safe`
 
 ## Repo-Specific Gotchas
 
@@ -157,3 +190,4 @@ These can rewrite many YAML files. Use them intentionally and review diffs close
 - `trovu.config.yml` is optional local override config and may exist in some developer setups without being committed.
 - The browser extension under `src/web-ext/` and the Raycast extension under `ext/raycast/` are separate surfaces with their own packaging workflows.
 - Prefer the GitHub Actions workflow over the Dockerfile or Makefile when you need the canonical build sequence.
+- Do not add commit-blocking hooks in the initial Codex rollout; keep the first safety layer lightweight and command-driven.
