@@ -8,5 +8,5 @@ module.exports = {
   },
   moduleFileExtensions: ["ts", "js", "json", "node"],
   modulePathIgnorePatterns: ["<rootDir>/ext/raycast/"],
-  testPathIgnorePatterns: ["<rootDir>/ext/raycast/"],
+  testPathIgnorePatterns: ["<rootDir>/ext/raycast/", "<rootDir>/tests/playwright/", "<rootDir>/tests/cypress/"],
 };
