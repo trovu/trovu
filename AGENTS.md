@@ -21,10 +21,10 @@ When in doubt, treat `.github/workflows/deploy.yml` as the source of truth for w
 - `src/ts/process.ts` boots the redirect page via `CallHandler.handleCall()`.
 - `src/ts/cli.ts` exposes the data and maintenance commands.
 - `src/ts/modules/Env.ts` is the central environment loader:
-  - reads compiled data
-  - parses URL/query state
-  - applies local storage and user config
-  - resolves namespaces
+    - reads compiled data
+    - parses URL/query state
+    - applies local storage and user config
+    - resolves namespaces
 - `src/ts/modules/NamespaceFetcher.ts` merges site namespaces from compiled data with optional remote user namespaces, resolves `include`, and marks shortcut reachability by priority.
 - `src/ts/modules/ShortcutFinder.ts` selects the winning shortcut for a query.
 - `src/ts/modules/UrlProcessor.ts` replaces placeholders, variables, types, transforms, and encodings in shortcut URLs.
@@ -67,37 +67,37 @@ Common commands:
 - `npm run build-blog`
 - `npm run build-docs`
 - `pipenv run mkdocs build`
-- `npm run verify-safe`
+- `npm run test`
 
 Useful workflow combinations:
 
 - Main app local dev:
-  1. `npm clean-install`
-  2. `npm run build`
-  3. `npm run dev-server`
+    1. `npm clean-install`
+    2. `npm run build`
+    3. `npm run dev-server`
 - Safe Codex baseline:
-  1. `nvm use`
-  2. `git status --short`
-  3. `npm run verify-safe`
+    1. `nvm use`
+    2. `git status --short`
+    3. `npm run test`
 - Frontend rebuild loop: `npm run watch`
 - Data-only validation after editing YAML:
-  1. `npm run validate-data`
-  2. `npm run build`
-  3. `npm run test-calls`
+    1. `npm run validate-data`
+    2. `npm run build`
+    3. `npm run test-calls`
 - `npm run test-fe` uses Playwright and starts the local server automatically via `webServer`.
 
 ## Build And Test Notes
 
 - `rollup.config.js` builds:
-  - the CLI to `dist/cli.mjs`
-  - the homepage to `dist/public/index.html`
-  - the process page to `dist/public/process/index.html`
+    - the CLI to `dist/cli.mjs`
+    - the homepage to `dist/public/index.html`
+    - the process page to `dist/public/process/index.html`
 - The main site build triggers `npm run compile-data` during the Rollup pipeline.
 - `dist/` is ignored and should generally not be committed.
 - `test-unit` covers modules directly.
 - `test-calls` loads fixtures from `tests/calls.yml` and verifies end-to-end redirect behavior in Jest.
 - `test-fe` is Playwright coverage for homepage behavior.
-- `verify-safe` is the default pre/post-change safety check for local Codex work.
+- `test` is the default pre/post-change safety check for local Codex work.
 - Docs and blog are built separately; changes under `docs/` or `blog/` should usually be validated with their matching build commands.
 
 ## Working With Shortcut Data
@@ -109,14 +109,14 @@ Key rules:
 - Each shortcut key is `KEYWORD ARGCOUNT`, for example `g 1`.
 - Shortcut definitions live in namespace files under `data/shortcuts/*.yml`.
 - `include` is heavily used for inheritance and may reference:
-  - another key in the same namespace
-  - another namespace
-  - a list of fallback includes
+    - another key in the same namespace
+    - another namespace
+    - a list of fallback includes
 - Placeholders in `url` are parsed by `UrlProcessor`:
-  - argument placeholders like `<query>`
-  - variable placeholders like `<$language>`
-  - typed placeholders like `<date: {type: date}>`
-  - transforms like `uppercase`, `lowercase`, `eo-cx`
+    - argument placeholders like `<query>`
+    - variable placeholders like `<$language>`
+    - typed placeholders like `<date: {type: date}>`
+    - transforms like `uppercase`, `lowercase`, `eo-cx`
 - Reachability depends on namespace order. Later namespaces in the configured list have higher priority.
 
 When editing shortcut YAML:
@@ -137,9 +137,9 @@ These can rewrite many YAML files. Use them intentionally and review diffs close
 ## Coding Conventions
 
 - Follow the existing style:
-  - 2-space indentation
-  - double quotes
-  - semicolons
+    - 2-space indentation
+    - double quotes
+    - semicolons
 - The codebase mixes TypeScript files with broad `// @ts-nocheck` usage. Do not assume strict typing is enforced.
 - Prefer small, local changes over broad refactors unless the task clearly calls for it.
 - Keep browser code compatible with the existing DOM-driven architecture instead of introducing a framework.
@@ -159,7 +159,7 @@ Recommended task flow:
 
 1. `git switch -c codex/<task>` or a close fallback branch name if slash-based refs are unavailable locally.
 2. `git status --short`
-3. `npm run verify-safe`
+3. `npm run test`
 4. Make only the relevant changes.
 5. Re-run the appropriate checks.
 6. Review diff, then commit locally.
@@ -167,21 +167,21 @@ Recommended task flow:
 ## Testing Guidance By Change Type
 
 - Redirect, parsing, namespace, include, or placeholder logic:
-  - add or update Jest coverage in `src/ts/modules/*.test.ts`
-  - update `tests/calls.yml` when redirect outcomes change
+    - add or update Jest coverage in `src/ts/modules/*.test.ts`
+    - update `tests/calls.yml` when redirect outcomes change
 - Homepage UX changes:
-  - run `npm run build`
-  - then run `npm run test-fe`
-  - check `tests/playwright/home.spec.js`
+    - run `npm run build`
+    - then run `npm run test-fe`
+    - check `tests/playwright/home.spec.js`
 - Data-only changes:
-  - at minimum run `npm run validate-data`
-  - also run `npm run test-calls`
+    - at minimum run `npm run validate-data`
+    - also run `npm run test-calls`
 - Docs-only changes:
-  - prefer `pipenv run mkdocs build`
+    - prefer `pipenv run mkdocs build`
 - Blog-only changes:
-  - prefer `npm run build-blog`
+    - prefer `npm run build-blog`
 - Logic changes in `src/ts/modules/` or other runtime code:
-  - run `npm run verify-safe`
+    - run `npm run test`
 
 ## Repo-Specific Gotchas
 
