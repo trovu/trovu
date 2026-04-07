@@ -7,15 +7,35 @@
 export default class Logger {
   logs: Array<{ level: string; message: string }>;
   logElement: HTMLElement | null;
+  consoleLevels: string[];
 
   /**
    * Set helper variables.
    */
-  constructor(logElementSelector: string) {
+  constructor(logElementSelector: string = "", options: { consoleLevels?: string[] } = {}) {
     this.logs = [];
+    this.consoleLevels = options.consoleLevels || ["warning", "error"];
     if (!(typeof document === "undefined")) {
-      this.logElement = document.querySelector(logElementSelector);
+      this.logElement = logElementSelector ? document.querySelector(logElementSelector) : null;
     }
+  }
+
+  setConsoleLevels(levels) {
+    this.consoleLevels = levels;
+  }
+
+  writeToConsole(level, message) {
+    if (!this.consoleLevels.includes(level)) {
+      return;
+    }
+    const consoleMethodByLevel = {
+      info: "info",
+      success: "log",
+      warning: "warn",
+      error: "error",
+    };
+    const consoleMethod = consoleMethodByLevel[level] || "log";
+    console[consoleMethod](message);
   }
 
   log(level, message) {
@@ -28,7 +48,7 @@ export default class Logger {
       level: level,
       message: message,
     });
-    console.log(level, message);
+    this.writeToConsole(level, message);
     if (this.logElement) {
       this.logElement.textContent += `${message}\n`;
     }

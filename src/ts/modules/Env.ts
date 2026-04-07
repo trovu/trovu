@@ -22,6 +22,7 @@ export default class Env {
     countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     this.setToThis(env);
     this.logger = new Logger("#log");
+    this.configureLogger();
     this.setGit();
   }
 
@@ -51,6 +52,13 @@ export default class Env {
     for (const key in env) {
       this[key] = env[key];
     }
+  }
+
+  configureLogger() {
+    if (!this.logger) {
+      return;
+    }
+    this.logger.setConsoleLevels(this.debug ? ["info", "success", "warning", "error"] : ["warning", "error"]);
   }
 
   /**
@@ -147,6 +155,7 @@ export default class Env {
 
     const params_from_query = QueryParser.parse(this.query);
     Object.assign(this, params_from_query);
+    this.configureLogger();
 
     this.getFromLocalStorage();
 
