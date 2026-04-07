@@ -1,5 +1,5 @@
 import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useCachedState } from "@raycast/utils";
 import Env from "./core/src/ts/modules/Env";
 import CallHandler from "./core/src/ts/modules/CallHandler";
@@ -31,9 +31,6 @@ interface Suggestion {
   title?: string;
   url: string;
 }
-
-import { useCallback, useMemo } from "react";
-
 export default function Command() {
   const prefs = getPreferenceValues<Preferences>();
   const [cachedPrefs, setCachedPrefs] = useCachedState<Preferences>("prefs");
@@ -54,7 +51,6 @@ export default function Command() {
     [prefs],
   );
 
-  // Memoize buildTrovuUrl to avoid recreating on every render
   const buildTrovuUrl = useCallback(
     (query: string) => {
       const encodedQuery = encodeURIComponent(query);
@@ -66,10 +62,9 @@ export default function Command() {
     [prefs],
   );
 
-  // Memoize renderSuggestionDetail
   const renderSuggestionDetail = useCallback(
     (suggestion: Suggestion) => {
-      if (!suggestion || !env) return "";
+      if (!env) return "";
       const examples = suggestion.examples
         ?.map((example) => {
           const query =
@@ -90,14 +85,15 @@ ${examples || ""}
     [env, buildTrovuUrl],
   );
 
-  // Memoize customActions
   const customActions = useCallback(
     (suggestion: Suggestion | null) => (
       <ActionPanel>
         <Action
           title="Send Query"
           onAction={async () => {
-            if (searchText === "reload") {
+            const trimmedSearchText = searchText.trim();
+
+            if (trimmedSearchText === "reload") {
               const reloadToast = await showToast({
                 style: Toast.Style.Animated,
                 title: "Reloading environment...",
@@ -117,13 +113,13 @@ ${examples || ""}
               }
               return;
             }
-            await showToast(Toast.Style.Animated, "Searching shortcut for", searchText.trim());
+            await showToast(Toast.Style.Animated, "Searching shortcut for", trimmedSearchText);
             if (!env) {
               await showToast(Toast.Style.Failure, "Environment unavailable");
               return;
             }
             const envQuery = new Env(env);
-            Object.assign(envQuery, QueryParser.parse(searchText.trim()));
+            Object.assign(envQuery, QueryParser.parse(trimmedSearchText));
             const response = CallHandler.getRedirectResponse(envQuery);
             if (response.status === "found" && response.redirectUrl) {
               await showToast(Toast.Style.Success, "Redirecting to", response.redirectUrl);
@@ -155,9 +151,7 @@ ${examples || ""}
     [searchText, isShowingDetail, loadEnv, setEnv, env],
   );
 
-  // Only rebuild env if prefs changed
   useEffect(() => {
-    // Rebuild env if prefs changed or env is null (first load)
     if (isEqual(prefs, cachedPrefs) && env) return;
     setCachedPrefs(prefs);
     let cancelled = false;
@@ -175,10 +169,8 @@ ${examples || ""}
     };
   }, [env, loadEnv, prefs, cachedPrefs, setCachedPrefs, setEnv]);
 
-  // Memoize SuggestionsGetter
   const suggestionsGetter = useMemo(() => (env ? new SuggestionsGetter(env) : null), [env]);
 
-  // Filter suggestions when env or searchText changes.
   useEffect(() => {
     if (!suggestionsGetter) {
       setSuggestions([]);
