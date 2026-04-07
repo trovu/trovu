@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useCachedState } from "@raycast/utils";
 import Env from "./core/src/ts/modules/Env";
 import CallHandler from "./core/src/ts/modules/CallHandler";
+import QueryParser from "./core/src/ts/modules/QueryParser";
 import SuggestionsGetter from "./core/src/ts/modules/SuggestionsGetter";
 import { markdowns } from "./markdowns";
 import { isEqual } from "lodash";
