@@ -1,9 +1,10 @@
-// @ts-nocheck
 import DataManager from "./DataManager";
 import fs from "fs";
 import jsyaml from "js-yaml";
 
 export default class DictionarySetter {
+  [key: string]: any;
+
   constructor() {
     this.langs = DictionarySetter.getLanguageList();
     this.t = DictionarySetter.getTranslations();

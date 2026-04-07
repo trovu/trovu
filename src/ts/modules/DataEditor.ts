@@ -1,15 +1,14 @@
-// @ts-nocheck
 import DataManager from "./DataManager";
 
 export default class DataEditor {
   editData() {
-    const data = DataManager.load();
+    const data: AnyObject = DataManager.load();
     // this.editLastfm(data);
     this.add0arg(data);
     DataManager.write(data);
   }
 
-  private add0arg(data: {}) {
+  private add0arg(data: AnyObject) {
     const namespace = "o";
     for (const key in data.shortcuts[namespace]) {
       if (!key.startsWith("i")) {
@@ -44,7 +43,7 @@ export default class DataEditor {
     }
   }
 
-  private editLastfm(data: {}) {
+  private editLastfm(data: AnyObject) {
     for (const namespace in data.shortcuts) {
       const key = "last 1";
       if (data.shortcuts[namespace].hasOwnProperty(key)) {

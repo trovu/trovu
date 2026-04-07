@@ -1,4 +1,3 @@
-// @ts-nocheck
 import ShortcutVerifier from "./ShortcutVerifier";
 
 describe("ShortcutVerifier", () => {

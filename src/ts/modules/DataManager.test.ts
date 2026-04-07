@@ -1,4 +1,3 @@
-// @ts-nocheck
 import DataManager from "./DataManager";
 
 describe("DataManager.load", () => {

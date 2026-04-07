@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 /** @module Logger */
 
 /** Logs errors and warnings. */
@@ -14,21 +12,22 @@ export default class Logger {
    */
   constructor(logElementSelector: string = "", options: { consoleLevels?: string[] } = {}) {
     this.logs = [];
+    this.logElement = null;
     this.consoleLevels = options.consoleLevels || ["warning", "error"];
-    if (!(typeof document === "undefined")) {
-      this.logElement = logElementSelector ? document.querySelector(logElementSelector) : null;
+    if (!(typeof document === "undefined") && logElementSelector) {
+      this.logElement = document.querySelector(logElementSelector) as HTMLElement | null;
     }
   }
 
-  setConsoleLevels(levels) {
+  setConsoleLevels(levels: string[]) {
     this.consoleLevels = levels;
   }
 
-  writeToConsole(level, message) {
+  writeToConsole(level: string, message: string) {
     if (!this.consoleLevels.includes(level)) {
       return;
     }
-    const consoleMethodByLevel = {
+    const consoleMethodByLevel: Record<string, "info" | "log" | "warn" | "error"> = {
       info: "info",
       success: "log",
       warning: "warn",
@@ -38,7 +37,7 @@ export default class Logger {
     console[consoleMethod](message);
   }
 
-  log(level, message) {
+  log(level: string, message: string) {
     // Check if message is already in this.logs
     // if yes, do not log again
     if (this.logs.some((log) => log.level === level && log.message === message)) {
@@ -53,17 +52,17 @@ export default class Logger {
       this.logElement.textContent += `${message}\n`;
     }
   }
-  info(message) {
+  info(message: string) {
     this.log("info", message);
   }
-  warning(message) {
+  warning(message: string) {
     this.log("warning", message);
     this.showLog();
   }
-  success(message) {
+  success(message: string) {
     this.log("success", message);
   }
-  error(message) {
+  error(message: string) {
     this.log("error", message);
     this.showLog();
     throw new Error(message);

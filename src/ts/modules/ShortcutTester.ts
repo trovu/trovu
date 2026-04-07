@@ -1,11 +1,12 @@
-// @ts-nocheck
 import DataManager from ".//DataManager";
 import QueryParser from "./QueryParser";
 import UrlProcessor from "./UrlProcessor";
 import fs from "fs";
 
 export default class ShortcutTester {
-  constructor(options) {
+  [key: string]: any;
+
+  constructor(options: AnyObject) {
     this.options = options;
     this.env = {
       data: DataManager.load(),
@@ -28,11 +29,11 @@ export default class ShortcutTester {
     }
   }
 
-  filterShortcut(namespace, key) {
+  filterShortcut(namespace: string, key: string) {
     return this.options.filter ? `${namespace}.${key}`.includes(this.options.filter) : true;
   }
 
-  prepareUrl(shortcut, testArguments) {
+  prepareUrl(shortcut: AnyObject, testArguments: string) {
     let url = shortcut.url;
     const args = QueryParser.getArguments(testArguments);
     url = UrlProcessor.replaceVariables(url, this.env);
@@ -40,7 +41,7 @@ export default class ShortcutTester {
     return url;
   }
 
-  fetchAndTestUrl(namespace, key, url, testExpect) {
+  fetchAndTestUrl(namespace: string, key: string, url: string, testExpect: string) {
     if (this.options.verbose) {
       console.log(`${namespace}.${key}\t⏳ ${url}`);
     }
