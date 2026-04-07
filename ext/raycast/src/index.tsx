@@ -117,12 +117,12 @@ ${examples || ""}
               return;
             }
             await showToast(Toast.Style.Animated, "Searching shortcut for", searchText.trim());
-            const envQuery = new Env({ context: "raycast" });
-            const params: Record<string, string> = prefs.github
-              ? { github: prefs.github }
-              : { language: prefs.language, country: prefs.country };
-            params.query = searchText;
-            await envQuery.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+            if (!env) {
+              await showToast(Toast.Style.Failure, "Environment unavailable");
+              return;
+            }
+            const envQuery = new Env(env);
+            Object.assign(envQuery, QueryParser.parse(searchText.trim()));
             const response = CallHandler.getRedirectResponse(envQuery);
             if (response.status === "found" && response.redirectUrl) {
               await showToast(Toast.Style.Success, "Redirecting to", response.redirectUrl);
@@ -151,7 +151,7 @@ ${examples || ""}
         )}
       </ActionPanel>
     ),
-    [searchText, isShowingDetail, loadEnv, setEnv],
+    [searchText, isShowingDetail, loadEnv, setEnv, env],
   );
 
   // Only rebuild env if prefs changed
