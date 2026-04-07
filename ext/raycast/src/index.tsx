@@ -99,7 +99,6 @@ ${examples || ""}
           title="Send Query"
           onAction={async () => {
             if (searchText === "reload") {
-              setSearchText("");
               const reloadToast = await showToast({
                 style: Toast.Style.Animated,
                 title: "Reloading environment...",
