@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useCachedState } from "@raycast/utils";
 import Env from "./core/src/ts/modules/Env";
 import CallHandler from "./core/src/ts/modules/CallHandler";
