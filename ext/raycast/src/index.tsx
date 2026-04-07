@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
 import { useEffect, useState } from "react";
 import { useCachedState } from "@raycast/utils";
