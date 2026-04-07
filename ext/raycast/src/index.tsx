@@ -155,9 +155,12 @@ ${examples || ""}
   // Memoize SuggestionsGetter
   const suggestionsGetter = useMemo(() => (env ? new SuggestionsGetter(env) : null), [env]);
 
-  // Filter suggestions when env or searchText changes
+  // Filter suggestions when env or searchText changes.
   useEffect(() => {
-    if (!suggestionsGetter) return;
+    if (!suggestionsGetter) {
+      setSuggestions([]);
+      return;
+    }
     setSuggestions(suggestionsGetter.getSuggestions(searchText).slice(0, 50));
   }, [searchText, suggestionsGetter]);
 
