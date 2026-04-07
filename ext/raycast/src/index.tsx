@@ -116,6 +116,7 @@ ${examples || ""}
               }
               return;
             }
+            await showToast(Toast.Style.Animated, "Searching shortcut for", searchText.trim());
             const envQuery = new Env({ context: "raycast" });
             const params: Record<string, string> = prefs.github
               ? { github: prefs.github }
@@ -124,6 +125,7 @@ ${examples || ""}
             await envQuery.populate(params, { removeNamespaces: ["dpl", "dcm"] });
             const response = CallHandler.getRedirectResponse(envQuery);
             if (response.status === "found" && response.redirectUrl) {
+              await showToast(Toast.Style.Success, "Redirecting to", response.redirectUrl);
               await open(response.redirectUrl);
             } else {
               showToast(Toast.Style.Failure, "No matching shortcut found.");
