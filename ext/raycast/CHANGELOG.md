@@ -1,5 +1,10 @@
 # Trovu Changelog
 
+## [1.3.0] - {PR_MERGE_DATE}
+
+- After submit, go directly to target URL, not via process script.
+- On reload, stay in app, show message.
+
 ## [1.2.1] - {PR_MERGE_DATE}
 
 - Fix error when loading environment [#508](https://github.com/trovu/trovu/issues/508)
