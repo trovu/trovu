@@ -43,6 +43,18 @@ export default function Command() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState<boolean>(true);
 
+  const loadEnv = useCallback(
+    async ({ reload = false } = {}) => {
+      const nextEnv = new Env({ context: "raycast", reload });
+      const params: Record<string, string> = prefs.github
+        ? { github: prefs.github }
+        : { language: prefs.language, country: prefs.country };
+      await nextEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+      return nextEnv;
+    },
+    [prefs],
+  );
+
   // Memoize buildTrovuUrl to avoid recreating on every render
   const buildTrovuUrl = useCallback(
     (query: string) => {
@@ -87,9 +99,24 @@ ${examples || ""}
           title="Send Query"
           onAction={async () => {
             if (searchText === "reload") {
-              showToast(Toast.Style.Animated, "Reloading environment...");
-              setEnv(null);
               setSearchText("");
+              const reloadToast = await showToast({
+                style: Toast.Style.Animated,
+                title: "Reloading environment...",
+                message: "Fetching latest data.json...",
+              });
+              try {
+                const reloadEnv = await loadEnv({ reload: true });
+                setEnv(reloadEnv);
+                reloadToast.style = Toast.Style.Success;
+                reloadToast.title = "Reload successful";
+                reloadToast.message = `Updated at ${new Date().toLocaleTimeString()}`;
+              } catch (error) {
+                console.error("Error reloading Env:", error);
+                reloadToast.style = Toast.Style.Failure;
+                reloadToast.title = "Reload failed";
+                reloadToast.message = "Check your connection.";
+              }
               return;
             }
             const envQuery = new Env({ context: "raycast" });
@@ -125,7 +152,7 @@ ${examples || ""}
         )}
       </ActionPanel>
     ),
-    [searchText, isShowingDetail, prefs, setEnv],
+    [searchText, isShowingDetail, loadEnv, setEnv],
   );
 
   // Only rebuild env if prefs changed
@@ -136,11 +163,7 @@ ${examples || ""}
     let cancelled = false;
     (async () => {
       try {
-        const builtEnv = new Env({ context: "raycast" });
-        const params: Record<string, string> = prefs.github
-          ? { github: prefs.github }
-          : { language: prefs.language, country: prefs.country };
-        await builtEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+        const builtEnv = await loadEnv();
         if (!cancelled) setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
@@ -150,7 +173,7 @@ ${examples || ""}
     return () => {
       cancelled = true;
     };
-  }, [prefs, setCachedPrefs, setEnv]);
+  }, [env, loadEnv, prefs, cachedPrefs, setCachedPrefs, setEnv]);
 
   // Memoize SuggestionsGetter
   const suggestionsGetter = useMemo(() => (env ? new SuggestionsGetter(env) : null), [env]);
