@@ -38,18 +38,19 @@ export default class ShortcutVerifier {
     const argCount = Number(shortcut.argumentCount || 0);
     const placeholderTokens = [...query.matchAll(/<([^>]+)>/g)].map((match) => match[1]);
 
-    for (const token of placeholderTokens) {
-      if (!token.match(/^\d+$/)) {
-        return `Mismatch in argumentCount of key and placeholders of deprecated alternative query in "${shortcut.namespace}.${shortcut.key}".`;
-      }
-      const index = Number(token);
-      if (index < 1 || index > argCount) {
-        return `Mismatch in argumentCount of key and placeholders of deprecated alternative query in "${shortcut.namespace}.${shortcut.key}".`;
-      }
+    const errorMessage = `Mismatch in argumentCount of key and placeholders of deprecated alternative query in "${shortcut.namespace}.${shortcut.key}".`;
+
+    // Args but no placeholders:
+    if (argCount > 0 && placeholderTokens.length === 0) {
+      return errorMessage;
     }
 
-    if (argCount > 0 && placeholderTokens.length === 0) {
-      return `Mismatch in argumentCount of key and placeholders of deprecated alternative query in "${shortcut.namespace}.${shortcut.key}".`;
+    // Validate each placeholder token:
+    for (const token of placeholderTokens) {
+      const index = Number(token);
+      const isInvalid = !/^\d+$/.test(token) || index < 1 || index > argCount;
+
+      if (isInvalid) return errorMessage;
     }
   }
 }
