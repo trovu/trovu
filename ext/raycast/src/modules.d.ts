@@ -1,6 +1,6 @@
 // ext/raycast/src/modules.d.ts
 
-declare module "./core/Env.js" {
+declare module "./core/src/ts/modules/Env" {
   export interface Env {
     populate(params: Record<string, string>): Promise<void>;
     data: object;
@@ -10,7 +10,7 @@ declare module "./core/Env.js" {
   export default Env;
 }
 
-declare module "./core/SuggestionsGetter.js" {
+declare module "./core/src/ts/modules/SuggestionsGetter" {
   export interface Suggestion {
     argumentCount: string;
     argumentString: string;
