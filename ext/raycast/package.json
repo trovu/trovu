@@ -1533,6 +1533,7 @@
     "dev": "ray develop",
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
+    "tsc": "npx tsc -p tsconfig.json --noEmit",
     "test": "npm run test:smoke && npm run test:integration",
     "test:integration": "node ../../node_modules/jest/bin/jest.js --config ./jest.config.js --runInBand",
     "test:smoke": "npm run lint && npm run build",
