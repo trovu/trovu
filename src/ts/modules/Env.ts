@@ -1,11 +1,10 @@
-
 /** @module Env */
 import Helper from "./Helper";
 import Logger from "./Logger";
 import NamespaceFetcher from "./NamespaceFetcher";
 import QueryParser from "./QueryParser";
 import UrlProcessor from "./UrlProcessor";
-import countriesList from "countries-list";
+import * as countriesList from "countries-list";
 import jsyaml from "js-yaml";
 
 /** Set and remember the environment. */
