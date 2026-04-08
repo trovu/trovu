@@ -54,6 +54,7 @@ jest.mock("./ShortcutVerifier", () => ({
     checkIfHasUrlAndNoInclude: jest.fn(),
     checkIfArgCountMatches: jest.fn(),
     checkIfArgCountMatchesWithExamples: jest.fn(),
+    checkIfDeprecatedAlternativeHasMatchingPlaceholders: jest.fn(),
   },
 }));
 
@@ -67,6 +68,8 @@ describe("Validator.validateShortcuts", () => {
   const verifierNoIncludeMock = ShortcutVerifier.checkIfHasUrlAndNoInclude as jest.Mock;
   const verifierArgCountMock = ShortcutVerifier.checkIfArgCountMatches as jest.Mock;
   const verifierExampleArgCountMock = ShortcutVerifier.checkIfArgCountMatchesWithExamples as jest.Mock;
+  const verifierDeprecatedAlternativeMock =
+    ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders as jest.Mock;
 
   beforeEach(() => {
     jest.resetAllMocks();
@@ -81,6 +84,7 @@ describe("Validator.validateShortcuts", () => {
     verifierNoIncludeMock.mockReturnValue(undefined);
     verifierArgCountMock.mockReturnValue(undefined);
     verifierExampleArgCountMock.mockReturnValue(undefined);
+    verifierDeprecatedAlternativeMock.mockReturnValue(undefined);
   });
 
   test("validates all shortcuts and enriches them before running verifiers", () => {
@@ -130,6 +134,7 @@ describe("Validator.validateShortcuts", () => {
     );
     expect(verifierArgCountMock).toHaveBeenCalled();
     expect(verifierExampleArgCountMock).toHaveBeenCalled();
+    expect(verifierDeprecatedAlternativeMock).toHaveBeenCalled();
     expect(errorSpy).not.toHaveBeenCalled();
     expect(exitSpy).not.toHaveBeenCalled();
   });
@@ -151,6 +156,9 @@ describe("Validator.validateShortcuts", () => {
       },
     });
     verifierArgCountMock.mockReturnValue('Mismatch in argumentCount of key and arguments.length of url in "de.gm 1".');
+    verifierDeprecatedAlternativeMock.mockReturnValue(
+      'Mismatch in argumentCount of key and placeholders of deprecated alternative query in "de.gm 1".',
+    );
     const exitSpy = jest.spyOn(process, "exit").mockImplementation((() => undefined) as never);
     const errorSpy = jest.spyOn(console, "error").mockImplementation(() => undefined);
 
@@ -160,6 +168,10 @@ describe("Validator.validateShortcuts", () => {
     expect(errorSpy).toHaveBeenNthCalledWith(
       2,
       'Mismatch in argumentCount of key and arguments.length of url in "de.gm 1".',
+    );
+    expect(errorSpy).toHaveBeenNthCalledWith(
+      3,
+      'Mismatch in argumentCount of key and placeholders of deprecated alternative query in "de.gm 1".',
     );
     expect(exitSpy).toHaveBeenCalledWith(1);
   });
