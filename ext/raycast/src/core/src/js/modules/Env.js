@@ -332,7 +332,7 @@ export default class Env {
     if (typeof navigator === "undefined") {
       return "";
     }
-    // eslint-disable-next-line no-undef
+
     const languageStr = navigator.language;
     return languageStr;
   }
@@ -371,7 +371,6 @@ export default class Env {
         text = await Helper.fetchAsync(url, this);
         break;
       case "node": {
-        // eslint-disable-next-line no-undef, @typescript-eslint/no-var-requires
         const fs = require("fs");
         url = "./dist/public/data.json";
         text = fs.readFileSync(url, "utf8");
