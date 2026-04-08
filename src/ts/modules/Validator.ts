@@ -26,6 +26,7 @@ export default class Validator {
           ShortcutVerifier.checkIfHasUrlAndNoInclude,
           ShortcutVerifier.checkIfArgCountMatches,
           ShortcutVerifier.checkIfArgCountMatchesWithExamples,
+          ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders,
         ];
         for (const verifier of verifiers) {
           const error = verifier(shortcut);

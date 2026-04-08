@@ -146,4 +146,72 @@ describe("ShortcutVerifier", () => {
       expect(result).toBeUndefined();
     });
   });
+
+  describe("checkIfDeprecatedAlternativeHasMatchingPlaceholders", () => {
+    it("should return undefined for a deprecated shortcut with matching placeholders", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey 1",
+        argumentCount: 1,
+        deprecated: {
+          alternative: {
+            query: "gm a,<1>",
+          },
+        },
+      };
+      const result = ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders(shortcut);
+      expect(result).toBeUndefined();
+    });
+
+    it("should return an error message if a placeholder token is not numeric", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey 1",
+        argumentCount: 1,
+        deprecated: {
+          alternative: {
+            query: "gm <query>",
+          },
+        },
+      };
+      const result = ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders(shortcut);
+      expect(result).toBe(
+        'Mismatch in argumentCount of key and placeholders of deprecated alternative query in "testNamespace.testKey 1".',
+      );
+    });
+
+    it("should return an error message if a placeholder index is out of range", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey 0",
+        argumentCount: 0,
+        deprecated: {
+          alternative: {
+            query: "gm <1>",
+          },
+        },
+      };
+      const result = ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders(shortcut);
+      expect(result).toBe(
+        'Mismatch in argumentCount of key and placeholders of deprecated alternative query in "testNamespace.testKey 0".',
+      );
+    });
+
+    it("should return an error message if a deprecated shortcut with arguments forwards none of them", () => {
+      const shortcut = {
+        namespace: "testNamespace",
+        key: "testKey 1",
+        argumentCount: 1,
+        deprecated: {
+          alternative: {
+            query: "gm a",
+          },
+        },
+      };
+      const result = ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders(shortcut);
+      expect(result).toBe(
+        'Mismatch in argumentCount of key and placeholders of deprecated alternative query in "testNamespace.testKey 1".',
+      );
+    });
+  });
 });
