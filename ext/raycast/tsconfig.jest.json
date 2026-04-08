@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "include": ["src/**/*", "raycast-env.d.ts"],
-  "exclude": [],
-  "compilerOptions": {
-    "rootDir": ".",
-    "ignoreDeprecations": "6.0"
-  }
-}

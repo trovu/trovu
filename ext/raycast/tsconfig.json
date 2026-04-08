@@ -7,11 +7,13 @@
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "types": ["node"],
     "module": "commonjs",
+    "rootDir": ".",
     "target": "ES2022",
     "strict": false,
     "isolatedModules": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "ignoreDeprecations": "6.0",
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "resolveJsonModule": true
