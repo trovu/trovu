@@ -154,6 +154,19 @@ function mockHooks({
     .mockImplementationOnce(() => [searchText, setSearchText])
     .mockImplementationOnce(() => [suggestions, setSuggestions])
     .mockImplementationOnce(() => [isShowingDetail, setIsShowingDetail]);
+
+  return {
+    setCachedPrefs,
+    setEnv,
+    setSearchText,
+    setSuggestions,
+    setIsShowingDetail,
+  };
+}
+
+async function flushMicrotasks() {
+  await Promise.resolve();
+  await Promise.resolve();
 }
 
 describe("Raycast command integration", () => {
@@ -221,5 +234,118 @@ describe("Raycast command integration", () => {
     expect(mockShowToast).toHaveBeenNthCalledWith(1, Toast.Style.Animated, "Searching shortcut for", "g cats");
     expect(mockShowToast).toHaveBeenNthCalledWith(2, Toast.Style.Success, "Redirecting to", "https://example.com/cats");
     expect(mockOpen).toHaveBeenCalledWith("https://example.com/cats");
+  });
+
+  it("loads the environment from github preferences on first render", async () => {
+    const prefs = { github: "octocat", language: "en", country: "us" };
+    const populateSpy = jest.spyOn(Env.prototype, "populate").mockImplementation(async function (params) {
+      Object.assign(this, params, {
+        data: { config: {}, shortcuts: {} },
+        namespaceInfos: [],
+        namespaces: ["web"],
+      });
+    });
+
+    mockGetPreferenceValues.mockReturnValue(prefs);
+    const { setCachedPrefs, setEnv } = mockHooks({
+      cachedPrefs: defaultPrefs,
+      env: null,
+    });
+    mockUseEffect.mockImplementation((effect) => {
+      effect();
+    });
+
+    Command();
+    await flushMicrotasks();
+
+    expect(setCachedPrefs).toHaveBeenCalledWith(prefs);
+    expect(populateSpy).toHaveBeenCalledWith({ github: "octocat" }, { removeNamespaces: ["dpl", "dcm"] });
+    expect(setEnv).toHaveBeenCalledTimes(1);
+    expect(setEnv.mock.calls[0][0]).toBeInstanceOf(Env);
+    expect(setEnv.mock.calls[0][0].github).toBe("octocat");
+
+    populateSpy.mockRestore();
+  });
+
+  it("reloads the environment with reload=true and updates the success toast", async () => {
+    const cachedEnv = {
+      context: "raycast",
+      country: "us",
+      data: { config: {}, shortcuts: {} },
+      language: "en",
+      logger: { logs: [] },
+    };
+    const reloadToast = { style: null, title: "", message: "" };
+    const populateSpy = jest.spyOn(Env.prototype, "populate").mockImplementation(async function (params) {
+      Object.assign(this, params, {
+        data: { config: {}, shortcuts: {} },
+        namespaceInfos: [],
+        namespaces: ["web"],
+      });
+    });
+
+    mockShowToast.mockResolvedValue(reloadToast);
+    const { setEnv } = mockHooks({
+      env: cachedEnv,
+      searchText: "reload",
+    });
+
+    const tree = Command();
+    const submitItem = findElement(
+      tree,
+      (element) => element.type === (List as typeof List).Item && element.props?.title === "Press Enter to submit the query",
+    );
+    const submitAction = findElement(submitItem?.props?.actions, (element) => element.type === Action);
+
+    await submitAction?.props?.onAction?.();
+
+    expect(populateSpy).toHaveBeenCalledWith({ language: "en", country: "us" }, { removeNamespaces: ["dpl", "dcm"] });
+    expect(setEnv).toHaveBeenCalledTimes(1);
+    expect(setEnv.mock.calls[0][0]).toBeInstanceOf(Env);
+    expect(setEnv.mock.calls[0][0].reload).toBe(true);
+    expect(reloadToast.style).toBe(Toast.Style.Success);
+    expect(reloadToast.title).toBe("Reload successful");
+    expect(reloadToast.message).toContain("Updated at");
+
+    populateSpy.mockRestore();
+  });
+
+  it("builds example links with github preferences in suggestion details", () => {
+    const prefs = { github: "octocat", language: "en", country: "us" };
+    const cachedEnv = {
+      context: "raycast",
+      data: { config: {}, shortcuts: {} },
+      github: "octocat",
+      logger: { logs: [] },
+    };
+    const suggestion = {
+      argumentCount: "1",
+      argumentString: "<query>",
+      description: "Searches the web",
+      examples: [{ arguments: "cats", description: "Find cats" }],
+      keyword: "g",
+      namespace: "web",
+      reachable: true,
+      title: "Google",
+      url: "https://google.com/search?q=%s",
+    };
+
+    mockGetPreferenceValues.mockReturnValue(prefs);
+    mockHooks({
+      env: cachedEnv,
+      searchText: "g",
+      suggestions: [suggestion],
+    });
+
+    const tree = Command();
+    const item = findElement(
+      tree,
+      (element) => element.type === (List as typeof List).Item && element.props?.title === "g",
+    );
+    const detail = findElement(item?.props?.detail, (element) => element.type === (List as typeof List).Item.Detail);
+
+    expect(detail?.props).toMatchObject({
+      markdown: expect.stringContaining("github=octocat&query=g%20cats"),
+    });
   });
 });
