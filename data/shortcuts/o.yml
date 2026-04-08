@@ -3683,7 +3683,7 @@ flccca 1:
 fli 0:
   deprecated:
     alternative:
-      query: fla <1>
+      query: fla
     created: '2024-03-21'
 fli 1:
   deprecated:
@@ -4286,7 +4286,7 @@ gentoo-planet 0:
 getty 0:
   deprecated:
     alternative:
-      query: .de.getty <1>
+      query: .de.getty
     created: '2024-12-09'
 getty 1:
   deprecated:
@@ -4406,7 +4406,7 @@ gh 0:
 gh 1:
   deprecated:
     alternative:
-      query: gzh <0>
+      query: gzh <1>
     created: '2024-04-19'
 gha 0:
   url: https://ghostarchive.org/
@@ -4716,7 +4716,7 @@ goof 1:
 gopkg 0:
   deprecated:
     alternative:
-      query: go <0>
+      query: go
     created: '2024-05-09'
 gopkg 1:
   deprecated:
