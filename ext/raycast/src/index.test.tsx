@@ -293,7 +293,8 @@ describe("Raycast command integration", () => {
     const tree = Command();
     const submitItem = findElement(
       tree,
-      (element) => element.type === (List as typeof List).Item && element.props?.title === "Press Enter to submit the query",
+      (element) =>
+        element.type === (List as typeof List).Item && element.props?.title === "Press Enter to submit the query",
     );
     const submitAction = findElement(submitItem?.props?.actions, (element) => element.type === Action);
 
