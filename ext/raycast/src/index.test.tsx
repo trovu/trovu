@@ -17,9 +17,13 @@ jest.mock("react", () => {
   };
 });
 
-jest.mock("@raycast/utils", () => ({
-  useCachedState: jest.fn(),
-}), { virtual: true });
+jest.mock(
+  "@raycast/utils",
+  () => ({
+    useCachedState: jest.fn(),
+  }),
+  { virtual: true },
+);
 
 jest.mock("./core/src/ts/modules/CallHandler", () => ({
   __esModule: true,
@@ -42,44 +46,48 @@ jest.mock("./core/src/ts/modules/SuggestionsGetter", () => ({
   })),
 }));
 
-jest.mock("@raycast/api", () => {
-  const createComponent = (name) => {
-    const Component = () => null;
-    Component.displayName = name;
-    return Component;
-  };
+jest.mock(
+  "@raycast/api",
+  () => {
+    const createComponent = (name) => {
+      const Component = () => null;
+      Component.displayName = name;
+      return Component;
+    };
 
-  const Action = createComponent("Action");
-  Action.OpenInBrowser = createComponent("Action.OpenInBrowser");
+    const Action = createComponent("Action");
+    Action.OpenInBrowser = createComponent("Action.OpenInBrowser");
 
-  const List = createComponent("List");
-  List.EmptyView = createComponent("List.EmptyView");
-  List.Section = createComponent("List.Section");
-  List.Item = createComponent("List.Item");
-  List.Item.Detail = createComponent("List.Item.Detail");
-  List.Item.Detail.Metadata = createComponent("List.Item.Detail.Metadata");
-  List.Item.Detail.Metadata.Label = createComponent("List.Item.Detail.Metadata.Label");
-  List.Item.Detail.Metadata.TagList = createComponent("List.Item.Detail.Metadata.TagList");
-  List.Item.Detail.Metadata.TagList.Item = createComponent("List.Item.Detail.Metadata.TagList.Item");
-  List.Item.Detail.Metadata.Separator = createComponent("List.Item.Detail.Metadata.Separator");
-  List.Item.Detail.Metadata.Link = createComponent("List.Item.Detail.Metadata.Link");
+    const List = createComponent("List");
+    List.EmptyView = createComponent("List.EmptyView");
+    List.Section = createComponent("List.Section");
+    List.Item = createComponent("List.Item");
+    List.Item.Detail = createComponent("List.Item.Detail");
+    List.Item.Detail.Metadata = createComponent("List.Item.Detail.Metadata");
+    List.Item.Detail.Metadata.Label = createComponent("List.Item.Detail.Metadata.Label");
+    List.Item.Detail.Metadata.TagList = createComponent("List.Item.Detail.Metadata.TagList");
+    List.Item.Detail.Metadata.TagList.Item = createComponent("List.Item.Detail.Metadata.TagList.Item");
+    List.Item.Detail.Metadata.Separator = createComponent("List.Item.Detail.Metadata.Separator");
+    List.Item.Detail.Metadata.Link = createComponent("List.Item.Detail.Metadata.Link");
 
-  return {
-    Action,
-    ActionPanel: createComponent("ActionPanel"),
-    List,
-    Toast: {
-      Style: {
-        Animated: "Animated",
-        Failure: "Failure",
-        Success: "Success",
+    return {
+      Action,
+      ActionPanel: createComponent("ActionPanel"),
+      List,
+      Toast: {
+        Style: {
+          Animated: "Animated",
+          Failure: "Failure",
+          Success: "Success",
+        },
       },
-    },
-    getPreferenceValues: jest.fn(),
-    open: jest.fn(),
-    showToast: jest.fn(),
-  };
-}, { virtual: true });
+      getPreferenceValues: jest.fn(),
+      open: jest.fn(),
+      showToast: jest.fn(),
+    };
+  },
+  { virtual: true },
+);
 
 type MockElement = {
   type?: unknown;
@@ -199,7 +207,10 @@ describe("Raycast command integration", () => {
     });
 
     const tree = Command();
-    const item = findElement(tree, (element) => element.type === (List as typeof List).Item && element.props?.title === "g");
+    const item = findElement(
+      tree,
+      (element) => element.type === (List as typeof List).Item && element.props?.title === "g",
+    );
     const submitAction = findElement(item?.props?.actions, (element) => element.type === Action);
 
     expect(submitAction?.props?.onAction).toBeDefined();
@@ -208,12 +219,7 @@ describe("Raycast command integration", () => {
 
     expect(mockGetRedirectResponse).toHaveBeenCalledTimes(1);
     expect(mockShowToast).toHaveBeenNthCalledWith(1, Toast.Style.Animated, "Searching shortcut for", "g cats");
-    expect(mockShowToast).toHaveBeenNthCalledWith(
-      2,
-      Toast.Style.Success,
-      "Redirecting to",
-      "https://example.com/cats",
-    );
+    expect(mockShowToast).toHaveBeenNthCalledWith(2, Toast.Style.Success, "Redirecting to", "https://example.com/cats");
     expect(mockOpen).toHaveBeenCalledWith("https://example.com/cats");
   });
 });
