@@ -28,4 +28,28 @@ export default class ShortcutVerifier {
       }
     }
   }
+
+  static checkIfDeprecatedAlternativeHasMatchingPlaceholders(shortcut) {
+    const query = shortcut?.deprecated?.alternative?.query;
+    if (!query) {
+      return;
+    }
+
+    const argCount = Number(shortcut.argumentCount || 0);
+    const placeholderTokens = [...query.matchAll(/<([^>]+)>/g)].map((match) => match[1]);
+
+    for (const token of placeholderTokens) {
+      if (!token.match(/^\d+$/)) {
+        return `Mismatch in argumentCount of key and placeholders of deprecated alternative query in "${shortcut.namespace}.${shortcut.key}".`;
+      }
+      const index = Number(token);
+      if (index < 1 || index > argCount) {
+        return `Mismatch in argumentCount of key and placeholders of deprecated alternative query in "${shortcut.namespace}.${shortcut.key}".`;
+      }
+    }
+
+    if (argCount > 0 && placeholderTokens.length === 0) {
+      return `Mismatch in argumentCount of key and placeholders of deprecated alternative query in "${shortcut.namespace}.${shortcut.key}".`;
+    }
+  }
 }
