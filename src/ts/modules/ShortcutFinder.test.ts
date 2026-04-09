@@ -52,12 +52,13 @@ describe("ShortcutFinder.findShortcut", () => {
   test("falls back to the default keyword using the full query", () => {
     const logger = { info: jest.fn() };
     const shortcut = { reachable: true, url: "https://example.com" };
+    const defaultKeyword = "w";
     const env = {
       keyword: "unknown",
       args: [],
       argumentString: "",
       query: "berlin wall",
-      defaultKeyword: "w",
+      defaultKeyword: defaultKeyword,
       namespaceInfos: {
         aa: {
           shortcuts: {
