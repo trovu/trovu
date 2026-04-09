@@ -11,7 +11,7 @@ export default class CallHandler {
    * The 'main' function of this class.
    */
   static async handleCall() {
-    const targetDomain = document.querySelector("#targetDomain") as any;
+    const targetDomain = document.querySelector("#target-domain") as any;
     targetDomain.textContent = "";
 
     const env = new Env({ context: "process" });
