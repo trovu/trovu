@@ -3,9 +3,61 @@
   <head>
     <title>trovu.net – Loading...</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Set no referrer, to enable duckduckgo feeling lucky. -->
     <meta name="referrer" content="no-referrer" />
     <style>
+      #process {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0.5rem;
+      }
+
+      #process-icon {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 16px;
+        margin-top: 0.2rem;
+
+        /* Animation hinzufügen */
+        animation: fadeIn 1s forwards;
+      }
+
+      /* Definition der Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      #process-text {
+        min-width: 0;
+        margin-top: 0.7rem;
+      }
+
+      #process-text pre {
+        margin: 0;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+
+      #process-text pre + pre {
+        margin-top: 0.5rem;
+      }
+
+      #target-domain {
+        font-weight: bold;
+      }
+
+      body {
+        color: #333;
+        background: #f8f8f8;
+      }
+
       @media (prefers-color-scheme: dark) {
         body {
           color: #eee;
@@ -20,8 +72,13 @@
   </head>
 
   <body>
-    <pre id="loading">Loading <span id="targetDomain"></span></pre>
-    <pre hidden id="log"></pre>
+    <div id="process">
+      <img id="process-icon" src="/img/icon.svg" alt="" width="16" height="16" />
+      <div id="process-text">
+        <pre id="loading">Loading <span id="target-domain"></span></pre>
+        <pre hidden id="log"></pre>
+      </div>
+    </div>
     <script type="module" src="../{{fileNameJs}}?{{currentTimestamp}}"></script>
   </body>
 </html>

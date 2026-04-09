@@ -49,13 +49,13 @@ test.describe("Homepage startup", () => {
   test("should submit a query", async ({ page }) => {
     await page.locator("#query").fill("debug:g");
     await page.locator("#query").press("Enter");
-    await expect(page.locator("#targetDomain")).toContainText("https://www.google.");
+    await expect(page.locator("#target-domain")).toContainText("https://www.google.");
   });
 
   test("should submit a query with extra namespace", async ({ page }) => {
     await page.locator("#query").fill("debug:.cz.cd a,b");
     await page.locator("#query").press("Enter");
-    await expect(page.locator("#targetDomain")).toContainText("https://www.cd.cz");
+    await expect(page.locator("#target-domain")).toContainText("https://www.cd.cz");
   });
 });
 
@@ -67,6 +67,6 @@ test.describe("Homepage, Shortcut not found, show suggestions", () => {
     await expect(page.getByText("Google Web Homepage")).toBeVisible();
     await page.locator("#query").fill("debug:g foobar");
     await page.locator("#query").press("Enter");
-    await expect(page.locator("#targetDomain")).toContainText("https://www.google");
+    await expect(page.locator("#target-domain")).toContainText("https://www.google");
   });
 });
