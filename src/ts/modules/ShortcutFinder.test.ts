@@ -52,12 +52,13 @@ describe("ShortcutFinder.findShortcut", () => {
   test("falls back to the default keyword using the full query", () => {
     const logger = { info: jest.fn() };
     const shortcut = { reachable: true, url: "https://example.com" };
+    const defaultKeyword = "w";
     const env = {
       keyword: "unknown",
       args: [],
       argumentString: "",
       query: "berlin wall",
-      defaultKeyword: "w",
+      defaultKeyword: defaultKeyword,
       namespaceInfos: {
         aa: {
           shortcuts: {
@@ -70,7 +71,9 @@ describe("ShortcutFinder.findShortcut", () => {
 
     expect(ShortcutFinder.findShortcut(env)).toBe(shortcut);
     expect(env.args).toEqual(["berlin wall"]);
-    expect(logger.info).toHaveBeenCalledWith("No shortcut found for unknown 0 yet. Trying with default keyword.");
+    expect(logger.info).toHaveBeenCalledWith(
+      `No shortcut found for unknown 0 yet. Trying with default keyword "${defaultKeyword}".`,
+    );
   });
 
   test("finally returns a non-reachable shortcut so the caller can inform the user", () => {
