@@ -19,6 +19,19 @@
         height: 32px;
         flex: 0 0 16px;
         margin-top: 0.2rem;
+
+        /* Animation hinzufügen */
+        animation: fadeIn 1s forwards;
+      }
+
+      /* Definition der Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
 
       #process-text {
