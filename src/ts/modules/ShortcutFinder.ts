@@ -48,7 +48,9 @@ export default class ShortcutFinder {
     // If nothing found:
     // Try default keyword.
     if (!shortcut && env.defaultKeyword) {
-      env.logger.info(`No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`);
+      env.logger.info(
+        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword "${env.defaultKeyword}".`,
+      );
       shortcut = this.matchShortcuts(env.defaultKeyword, [env.query], env.namespaceInfos);
       if (shortcut) {
         env.args = [env.query];

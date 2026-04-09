@@ -71,7 +71,9 @@ describe("ShortcutFinder.findShortcut", () => {
 
     expect(ShortcutFinder.findShortcut(env)).toBe(shortcut);
     expect(env.args).toEqual(["berlin wall"]);
-    expect(logger.info).toHaveBeenCalledWith("No shortcut found for unknown 0 yet. Trying with default keyword.");
+    expect(logger.info).toHaveBeenCalledWith(
+      `No shortcut found for unknown 0 yet. Trying with default keyword "${defaultKeyword}".`,
+    );
   });
 
   test("finally returns a non-reachable shortcut so the caller can inform the user", () => {
