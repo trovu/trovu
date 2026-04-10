@@ -135,12 +135,19 @@ span.highlight {
     color: #aaa;
     font-size: 1.2em;
   }
-  .tagline span {
+  .tagline {
     white-space: nowrap;
+    .left {
+      color: #aaa;
+    }
+    .right {
+      color: #477b7f;
+    }
   }
   .subtagline {
     text-align: center;
     margin-bottom: 0.5em;
+    color: #aaa;
   }
   img.sketch {
     width: 100%;
