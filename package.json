@@ -10,6 +10,7 @@
     }
   ],
   "scripts": {
+    "audit-prod": "npm audit --omit=dev",
     "build": "rollup --config --bundleConfigAsCjs --environment INCLUDE_DEPS,BUILD:production",
     "build-blog": "npx @11ty/eleventy",
     "build-docs": "pipenv run mkdocs build",
