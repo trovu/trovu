@@ -41,7 +41,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    Env.navigateTo(redirectUrl, env.isRunningStandalone());
   }
 
   /**
