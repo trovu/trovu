@@ -263,15 +263,15 @@ export default class Suggestions {
     container.className = "examples";
 
     container.innerHTML = examples
-      .filter((ex) => !this.shouldSkipExample(ex))
-      .map((ex) => {
-        const fullQuery = `${reachable ? "" : namespace + "."}${keyword} ${ex.arguments || ""}`;
+      .filter((example) => !this.shouldSkipExample(example))
+      .map((example) => {
+        const query = `${reachable ? "" : namespace + "."}${keyword} ${example.arguments || ""}`;
         return `
         <span class="left">
-          <a href="#" class="query-link"><span class="query">${fullQuery}</span></a>
+          <a href="#" class="query-link"><span class="query">${query}</span></a>
         </span>
         <span class="right">
-          <span class="description">${ex.description}</span>
+          <span class="description">${example.description}</span>
         </span>`;
       })
       .join("");
