@@ -256,48 +256,36 @@ export default class Suggestions {
   }
 
   getExamples(suggestion: AnyObject) {
-    if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
-      return document.createDocumentFragment();
-    }
+    const { examples, reachable, namespace, keyword } = suggestion;
+    if (!Array.isArray(examples)) return document.createDocumentFragment();
 
-    const examplesDiv = document.createElement("div");
-    examplesDiv.className = "examples";
+    const container = document.createElement("div");
+    container.className = "examples";
 
-    for (const example of suggestion.examples) {
-      if (this.shouldSkipExample(example)) {
-        continue;
-      }
-      const leftSpan = document.createElement("span");
-      leftSpan.className = "left";
+    container.innerHTML = examples
+      .filter((ex) => !this.shouldSkipExample(ex))
+      .map((ex) => {
+        const fullQuery = `${reachable ? "" : namespace + "."}${keyword} ${ex.arguments || ""}`;
+        return `
+        <span class="left">
+          <a href="#" class="query-link"><span class="query">${fullQuery}</span></a>
+        </span>
+        <span class="right">
+          <span class="description">${ex.description}</span>
+        </span>`;
+      })
+      .join("");
 
-      const querySpan = document.createElement("span");
-      querySpan.className = "query";
-      querySpan.textContent = `${suggestion.reachable ? "" : suggestion.namespace + "."}${suggestion.keyword} ${
-        example.arguments || ""
-      }`;
-      const queryLink = document.createElement("a");
-      queryLink.href = "#";
-      queryLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        this.queryInput.value = querySpan.textContent;
+    container.addEventListener("click", (e) => {
+      const link = e.target.closest(".query-link");
+      if (link) {
+        e.preventDefault();
+        this.queryInput.value = link.textContent;
         this.home.submitQuery();
-      });
-      queryLink.appendChild(querySpan);
-      leftSpan.appendChild(queryLink);
+      }
+    });
 
-      const rightSpan = document.createElement("span");
-      rightSpan.className = "right";
-
-      const descriptionSpan = document.createElement("span");
-      descriptionSpan.className = "description";
-      descriptionSpan.textContent = example.description;
-      rightSpan.appendChild(descriptionSpan);
-
-      examplesDiv.appendChild(leftSpan);
-      examplesDiv.appendChild(rightSpan);
-    }
-
-    return examplesDiv;
+    return container;
   }
 
   shouldSkipExample(example) {
