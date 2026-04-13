@@ -144,63 +144,37 @@ export default class Suggestions {
   }
 
   getMain(suggestion: AnyObject) {
-    // Create the main container div
-    const mainDiv = document.createElement("div");
-    mainDiv.className = `main ${suggestion.reachable ? "" : "unreachable"}`;
+    const { reachable, keyword, argumentString, title, url, namespace } = suggestion;
 
-    // Create and append the 'left' container
-    const leftSpan = document.createElement("span");
-    leftSpan.className = "left";
-    mainDiv.appendChild(leftSpan);
+    // Add icons based on tags
+    let displayTitle = title || url;
+    if (this.hasTag(suggestion, "needs-userscript")) displayTitle += " 🧩";
+    if (this.hasTag(suggestion, "is-affiliate")) displayTitle += " 🤝";
 
-    // Create and append the keyword span
-    const keywordSpan = document.createElement("span");
-    keywordSpan.className = "keyword";
-    keywordSpan.textContent = suggestion.keyword;
-    leftSpan.appendChild(keywordSpan);
+    const container = document.createElement("div");
+    container.className = `main ${reachable ? "" : "unreachable"}`;
 
-    // Create and append the argument names span
-    const argNamesSpan = document.createElement("span");
-    argNamesSpan.className = "argument-names";
-    // getArgumentsStr now returns a DocumentFragment, so we can directly append it
-    argNamesSpan.textContent = suggestion.argumentString;
+    // Use Template Literals for better readability and maintainability
+    container.innerHTML = `
+    <span class="left">
+      <span class="keyword">${keyword}</span>
+      <span class="argument-names">${argumentString}</span>
+    </span>
+    <span class="right">
+      <span class="title">${displayTitle}</span>
+      <span class="namespace" style="cursor: pointer;">${namespace}</span>
+    </span>
+  `;
 
-    leftSpan.appendChild(argNamesSpan);
-
-    // Create and append the 'right' container
-    const rightSpan = document.createElement("span");
-    rightSpan.className = "right";
-    mainDiv.appendChild(rightSpan);
-
-    // Create and append the title span
-    const titleSpan = document.createElement("span");
-    titleSpan.className = "title";
-    titleSpan.textContent = suggestion.title || suggestion.url;
-
-    if (this.hasTag(suggestion, "needs-userscript")) {
-      titleSpan.textContent += " 🧩";
-    }
-    if (this.hasTag(suggestion, "is-affiliate")) {
-      titleSpan.textContent += " 🤝";
-    }
-
-    rightSpan.appendChild(titleSpan);
-
-    // Create and append the namespace span
-    const namespaceSpan = document.createElement("span");
-    namespaceSpan.className = "namespace";
-    namespaceSpan.textContent = suggestion.namespace;
-    rightSpan.appendChild(namespaceSpan);
-
-    // On click, set the query input value to "ns:NAMESPACE".
-    namespaceSpan.addEventListener("click", (event) => {
-      this.handleTagOrNamespaceClick(event, `ns:${suggestion.namespace}`);
-    });
-    namespaceSpan.addEventListener("mouseover", () => {
-      namespaceSpan.style.cursor = "pointer";
+    // Attach event listener to the namespace span via Delegation
+    container.addEventListener("click", (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.classList.contains("namespace")) {
+        this.handleTagOrNamespaceClick(e, `ns:${namespace}`);
+      }
     });
 
-    return mainDiv;
+    return container;
   }
 
   hasTag(suggestion: AnyObject, tag: string) {
