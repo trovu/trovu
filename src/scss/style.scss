@@ -245,9 +245,6 @@ span.highlight {
       }
       div.examples {
         padding-right: 0.2em;
-        padding-bottom: 0.5em;
-        margin-bottom: 0.5em;
-        border-bottom: 1px solid #ccc;
       }
       div.description-and-tags {
         .left {
@@ -255,6 +252,9 @@ span.highlight {
         }
       }
       div.url {
+        padding-top: 0.5em;
+        margin-top: 0.5em;
+        border-top: 1px solid #ccc;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
