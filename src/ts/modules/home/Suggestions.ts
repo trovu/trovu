@@ -250,9 +250,11 @@ export default class Suggestions {
   getYaml(suggestion: AnyObject) {
     const shortcut = { [suggestion.key]: JSON.parse(JSON.stringify(suggestion)) };
     const key = suggestion.key;
-    ["argumentCount", "arguments", "include", "key", "keyword", "namespace", "reachable"].forEach((prop) => {
-      delete shortcut[key][prop];
-    });
+    ["argumentCount", "argumentString", "arguments", "include", "key", "keyword", "namespace", "reachable"].forEach(
+      (prop) => {
+        delete shortcut[key][prop];
+      },
+    );
     return jsyaml.dump(shortcut, { noArrayIndent: true, lineWidth: -1 });
   }
 
