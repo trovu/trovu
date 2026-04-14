@@ -86,6 +86,7 @@ export default class Suggestions {
       this.getDescription(suggestion),
       this.getExamples(suggestion),
       this.getUrl(suggestion),
+      this.getTags(suggestion),
     );
 
     if (this.hasTag(suggestion, "needs-userscript")) li.appendChild(this.getNeedsUserscript());
@@ -93,11 +94,11 @@ export default class Suggestions {
 
     li.appendChild(this.getTools(suggestion));
 
-    // Show tags only if expanded (selected)
-    if (index === this.selected) {
-      const tagsNode = this.getTags(suggestion);
-      if (tagsNode) li.appendChild(tagsNode);
-    }
+    // // Show tags only if expanded (selected)
+    // if (index === this.selected) {
+    //   const tagsNode = this.getTags(suggestion);
+    //   if (tagsNode) li.appendChild(tagsNode);
+    // }
 
     li.addEventListener("click", () => this.select(index));
 
@@ -135,27 +136,37 @@ export default class Suggestions {
     const { description } = suggestion;
     const container = document.createElement("div");
     container.className = "description";
-    if (description) container.textContent = description;
+
+    // Using innerHTML/textContent for consistency, though it's a simple case
+    if (description) {
+      container.textContent = description;
+    }
+
     return container;
   }
 
   getTags(suggestion: AnyObject) {
     const { tags } = suggestion;
-    if (!tags || !tags.length) return null;
+    if (!Array.isArray(tags) || !tags.length) return null;
+
     const container = document.createElement("div");
-    container.style.margin = "0.5em 0 0 0";
-    container.style.textAlign = "left";
-    tags.forEach(tag => {
-      const span = document.createElement("span");
-      span.className = "tag";
-      span.textContent = tag;
-      span.style.cursor = "pointer";
-      span.style.marginRight = "0.3em";
-      span.addEventListener("click", (e) => {
-        this.handleTagOrNamespaceClick(e, `tag:${tag}`);
-      });
-      container.appendChild(span);
+    // Move layout styles to CSS if possible, but keeping them inline for parity
+    // container.style.cssText = "margin: 0.5em 0 0 0; text-align: left;";
+
+    // Map tags to HTML strings
+    container.innerHTML =
+      '<span class="left">' +
+      tags.map((tag) => `<span class="tag" style="cursor: pointer; margin-right: 0.3em;">${tag}</span>`).join("") +
+      "</span>";
+
+    // Event Delegation for all tags
+    container.addEventListener("click", (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.classList.contains("tag")) {
+        this.handleTagOrNamespaceClick(e, `tag:${target.textContent}`);
+      }
     });
+
     return container;
   }
 

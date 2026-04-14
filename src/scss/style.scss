@@ -299,13 +299,14 @@ span.highlight {
     li[aria-selected="true"] {
       background: #eee;
       position: relative;
-      div.description-and-tags,
+      div.description,
       div.examples {
         display: grid;
       }
       div.url,
       div.needs-userscript,
       div.is-affiliate,
+      div.tags,
       div.tools {
         display: block;
       }
