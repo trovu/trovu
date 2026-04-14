@@ -166,8 +166,11 @@ export default class Suggestions {
       .map((ex) => {
         const query = `${reachable ? "" : namespace + "."}<b>${keyword}</b> ${ex.arguments || ""}`;
         return `
-          <span class="left"><a href="#" class="query-link">${query}</a></span>
-          <span class="right"><span class="description">${ex.description}</span></span>`;
+          <span class="left">
+          <a href="#" class="query-link">${query}</a>
+→ <span class="description">${ex.description}</span>
+          </span>
+          `;
       })
       .join("");
 
