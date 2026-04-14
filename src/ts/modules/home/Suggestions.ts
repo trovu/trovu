@@ -19,11 +19,6 @@ export default class Suggestions {
     this.updateSuggestions();
   }
 
-  /**
-   * Handle change query input field.
-   *
-   * @param {object} event – The fired event.
-   */
   updateSuggestions = () => {
     this.query = this.queryInput.value;
     const suggestionsGetter = new SuggestionsGetter(this.env);
