@@ -10,9 +10,9 @@ export default class Suggestions {
   constructor(querySelector: string, suggestionsSelector: string, home: AnyObject) {
     this.env = home.env;
     this.home = home;
-    this.queryInput = document.querySelector(querySelector);
-    this.suggestionsDiv = document.querySelector(suggestionsSelector);
-    this.helpDiv = document.querySelector("#help");
+    this.queryInput = document.querySelector(querySelector) as HTMLInputElement;
+    this.suggestionsDiv = document.querySelector(suggestionsSelector) as HTMLElement;
+    this.helpDiv = document.querySelector("#help") as HTMLElement;
     this.selected = -1;
     this.suggestions = [];
     this.setListeners();
