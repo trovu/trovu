@@ -83,7 +83,7 @@ export default class Suggestions {
 
     li.append(
       this.getMain(suggestion),
-      this.getDescriptionAndTags(suggestion),
+      this.getDescription(suggestion),
       this.getExamples(suggestion),
       this.getUrl(suggestion),
     );
@@ -92,6 +92,13 @@ export default class Suggestions {
     if (this.hasTag(suggestion, "is-affiliate")) li.appendChild(this.getIsAffiliate());
 
     li.appendChild(this.getTools(suggestion));
+
+    // Show tags only if expanded (selected)
+    if (index === this.selected) {
+      const tagsNode = this.getTags(suggestion);
+      if (tagsNode) li.appendChild(tagsNode);
+    }
+
     li.addEventListener("click", () => this.select(index));
 
     return li;
@@ -124,25 +131,31 @@ export default class Suggestions {
     return container;
   }
 
-  getDescriptionAndTags(suggestion: AnyObject) {
-    const { description, examples, tags } = suggestion;
+  getDescription(suggestion: AnyObject) {
+    const { description } = suggestion;
     const container = document.createElement("div");
-    container.className = "description-and-tags";
+    container.className = "description";
+    if (description) container.textContent = description;
+    return container;
+  }
 
-    const descText = description || (Array.isArray(examples) ? "Examples:" : "");
-    const tagsHtml = (tags || []).map((tag) => `<span class="tag" style="cursor:pointer">${tag}</span>`).join("");
-
-    container.innerHTML = `
-      <span class="left">${descText}</span>
-      <span class="right">${tagsHtml}</span>`;
-
-    container.addEventListener("click", (e) => {
-      const target = e.target as HTMLElement;
-      if (target.classList.contains("tag")) {
-        this.handleTagOrNamespaceClick(e, `tag:${target.textContent}`);
-      }
+  getTags(suggestion: AnyObject) {
+    const { tags } = suggestion;
+    if (!tags || !tags.length) return null;
+    const container = document.createElement("div");
+    container.style.margin = "0.5em 0 0 0";
+    container.style.textAlign = "left";
+    tags.forEach(tag => {
+      const span = document.createElement("span");
+      span.className = "tag";
+      span.textContent = tag;
+      span.style.cursor = "pointer";
+      span.style.marginRight = "0.3em";
+      span.addEventListener("click", (e) => {
+        this.handleTagOrNamespaceClick(e, `tag:${tag}`);
+      });
+      container.appendChild(span);
     });
-
     return container;
   }
 
