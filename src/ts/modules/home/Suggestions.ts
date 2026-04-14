@@ -92,12 +92,6 @@ export default class Suggestions {
       this.getTags(suggestion) || "",
     );
 
-    // // Show tags only if expanded (selected)
-    // if (index === this.selected) {
-    //   const tagsNode = this.getTags(suggestion);
-    //   if (tagsNode) li.appendChild(tagsNode);
-    // }
-
     li.addEventListener("click", () => this.select(index));
 
     return li;
