@@ -150,8 +150,7 @@ export default class Suggestions {
     const container = document.createElement("div");
     container.className = "tags";
     if (Array.isArray(tags) && tags.length) {
-      container.innerHTML =
-        tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+      container.innerHTML = tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
     } else {
       container.innerHTML = "";
     }
