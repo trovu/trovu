@@ -147,26 +147,20 @@ export default class Suggestions {
 
   getTags(suggestion: AnyObject) {
     const { tags } = suggestion;
-    if (!Array.isArray(tags) || !tags.length) return null;
-
     const container = document.createElement("div");
-    // Move layout styles to CSS if possible, but keeping them inline for parity
-    // container.style.cssText = "margin: 0.5em 0 0 0; text-align: left;";
-
-    // Map tags to HTML strings
-    container.innerHTML =
-      '<span class="left">' +
-      tags.map((tag) => `<span class="tag" style="cursor: pointer; margin-right: 0.3em;">${tag}</span>`).join("") +
-      "</span>";
-
-    // Event Delegation for all tags
+    container.className = "tags";
+    if (Array.isArray(tags) && tags.length) {
+      container.innerHTML =
+        tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+    } else {
+      container.innerHTML = "";
+    }
     container.addEventListener("click", (e: Event) => {
       const target = e.target as HTMLElement;
       if (target.classList.contains("tag")) {
         this.handleTagOrNamespaceClick(e, `tag:${target.textContent}`);
       }
     });
-
     return container;
   }
 
