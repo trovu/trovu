@@ -67,11 +67,10 @@ export default class Suggestions {
     });
 
     this.suggestionsList.appendChild(fragment);
-    if (this.selected > -1) {
-      const selectedLi = this.suggestionsList.querySelector('li[aria-selected="true"]');
-      if (selectedLi) {
-        this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
-      }
+
+    const selectedLi = this.suggestionsList.querySelector('li[aria-selected="true"]') as HTMLElement;
+    if (selectedLi) {
+      this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
     } else {
       this.suggestionsDiv.scrollTop = 0;
     }
