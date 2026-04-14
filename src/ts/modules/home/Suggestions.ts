@@ -86,13 +86,12 @@ export default class Suggestions {
       this.getDescription(suggestion),
       this.getExamples(suggestion),
       this.getUrl(suggestion),
-      this.getTags(suggestion),
     );
 
     if (this.hasTag(suggestion, "needs-userscript")) li.appendChild(this.getNeedsUserscript());
     if (this.hasTag(suggestion, "is-affiliate")) li.appendChild(this.getIsAffiliate());
 
-    li.appendChild(this.getTools(suggestion));
+    li.append(this.getTools(suggestion), this.getTags(suggestion));
 
     // // Show tags only if expanded (selected)
     // if (index === this.selected) {
