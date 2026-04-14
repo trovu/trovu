@@ -103,9 +103,23 @@ span.namespace {
   background: var(--bs-red);
   color: white;
 }
+div.tags {
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+  border-top: 1px solid #ccc;
+  text-align: left;
+  min-height: 1.5em;
+}
 span.tag {
   background: var(--bs-yellow);
   color: black;
+  display: inline-block;
+  padding: 0.05em 0.4em;
+  border-radius: 0.2rem;
+  margin: 0.1em 0.2em 0.1em 0;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 span.highlight {
   margin: 0 -0.4em;
