@@ -224,9 +224,13 @@ span.highlight {
         color: #444;
         margin-right: 0.2em;
       }
-      > div {
+      > div.main {
         display: grid;
         grid-template-columns: auto auto;
+      }
+      > div.main,
+      div.examples {
+        display: grid;
         .left {
           text-align: left;
           /* Don't indent first line but subsequent ones. */
