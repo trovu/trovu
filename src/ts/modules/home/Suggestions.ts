@@ -27,8 +27,7 @@ export default class Suggestions {
   updateSuggestions = () => {
     this.query = this.queryInput.value;
     const suggestionsGetter = new SuggestionsGetter(this.env);
-    this.suggestions = suggestionsGetter.getSuggestions(this.query);
-    this.suggestions = this.suggestions.slice(0, 500);
+    this.suggestions = suggestionsGetter.getSuggestions(this.query).slice(0, 500);
     this.renderSuggestions(this.suggestions);
   };
 
