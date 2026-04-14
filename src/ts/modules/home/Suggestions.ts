@@ -68,8 +68,7 @@ export default class Suggestions {
 
     const fragment = document.createDocumentFragment();
     suggestions.forEach((suggestion, index) => {
-      const li = this.renderSuggestion(suggestion, index);
-      fragment.appendChild(li);
+      fragment.appendChild(this.renderSuggestion(suggestion, index));
     });
 
     this.suggestionsList.appendChild(fragment);
