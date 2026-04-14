@@ -236,7 +236,7 @@ export default class Suggestions {
       const link = (e.target as HTMLElement).closest(".query-link");
       if (link) {
         e.preventDefault();
-        this.queryInput.value = link.textContent;
+        this.queryInput.value = link.textContent || "";
         this.home.submitQuery();
       }
     });
