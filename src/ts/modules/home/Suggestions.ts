@@ -49,18 +49,14 @@ export default class Suggestions {
   }
 
   renderSuggestions(suggestions: any[]) {
-    while (this.suggestionsDiv.firstChild) {
-      this.suggestionsDiv.removeChild(this.suggestionsDiv.firstChild);
-    }
-    this.helpDiv.textContent = "";
-    if (this.query) {
-      if (suggestions.length === 0) {
-        this.helpDiv.textContent = "No matching shortcuts found.";
-        return;
-      } else {
-        this.helpDiv.textContent = "Type ⬇️ / ⬆️ to navigate, ↵ to select.";
-      }
-    }
+    this.suggestionsDiv.innerHTML = "";
+    this.helpDiv.textContent = this.query
+      ? suggestions.length === 0
+        ? "No matching shortcuts found."
+        : "Type ⬇️ / ⬆️ to navigate, ↵ to select."
+      : "";
+
+    if (suggestions.length === 0) return;
 
     this.suggestionsList = document.createElement("ul");
     this.suggestionsDiv.appendChild(this.suggestionsList);
