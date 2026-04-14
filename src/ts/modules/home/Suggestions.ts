@@ -32,19 +32,18 @@ export default class Suggestions {
       if (this.updateSuggestionsTimeout) clearTimeout(this.updateSuggestionsTimeout);
       this.updateSuggestionsTimeout = setTimeout(() => this.updateSuggestions(), 100);
     });
-    this.queryInput.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowUp") {
-        event.preventDefault();
+
+    this.queryInput.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
         this.selected = Math.max(0, this.selected - 1);
         this.updateSuggestions();
-      }
-      if (event.key === "ArrowDown") {
-        event.preventDefault();
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
         this.selected = Math.min(this.suggestions.length - 1, this.selected + 1);
         this.updateSuggestions();
-      }
-      if (event.key === "Enter") {
-        this.pick(event);
+      } else if (e.key === "Enter") {
+        this.pick(e);
       }
     });
   }
