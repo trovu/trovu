@@ -212,11 +212,13 @@ export default class Suggestions {
         `Problem with shortcut \`${suggestion.namespace}.${suggestion.keyword} ${suggestion.argumentCount}\``,
       );
       div.innerHTML += `
-        ✍️ <a href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">Edit</a> &nbsp;
-        🔧 <a href="https://github.com/trovu/trovu/issues/new?title=${reportTitle}">Report problem</a> &nbsp; `;
+        <a target="_blank" class="btn btn-sm btn-outline-secondary" href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">
+        ✍️ Edit</a> &nbsp;
+        <a target="_blank" class="btn btn-sm btn-outline-secondary" href="https://github.com/trovu/trovu/issues/new?title=${reportTitle}">🔧 Report</a> &nbsp; `;
     }
 
-    div.innerHTML += `📋 <a href="#" class="copy-yaml">Copy YAML</a>`;
+    div.innerHTML += `
+    <a class="btn btn-sm btn-outline-secondary copy-yaml" href="#">📋 Copy YAML</a>`;
     div.addEventListener("click", (e) => {
       const target = e.target as HTMLElement;
       if (target.classList.contains("copy-yaml")) {
