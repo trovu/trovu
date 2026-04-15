@@ -124,16 +124,10 @@ export default class Suggestions {
     return container;
   }
 
-  getDescription(suggestion: AnyObject) {
-    const { description } = suggestion;
+  getDescription({ description }: AnyObject) {
     const container = document.createElement("div");
     container.className = "description";
-
-    // Using innerHTML/textContent for consistency, though it's a simple case
-    if (description) {
-      container.textContent = description;
-    }
-
+    container.innerHTML = description ? `<span>ⓘ</span> <span class="text">${description}</span>` : "";
     return container;
   }
 
