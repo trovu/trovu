@@ -326,9 +326,11 @@ span.highlight {
       div.tools {
         display: block;
       }
-      div.description,
-      div.url,
       div.examples {
+        display: grid;
+      }
+      div.description,
+      div.url {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-columns: minmax(1em, auto) 1fr;
