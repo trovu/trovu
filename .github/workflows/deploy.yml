@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - redesign-home
   pull_request:
     branches:
       - master
