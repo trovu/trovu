@@ -159,7 +159,7 @@ export default class Suggestions {
     container.innerHTML = examples
       .filter((ex) => !this.shouldSkipExample(ex))
       .map((ex) => {
-        const query = `${reachable ? "" : namespace + "."}<b>${keyword}</b> ${ex.arguments || ""}`;
+        const query = `${reachable ? "" : namespace + "."}<b>${keyword}</b>${ex.arguments ? " " + ex.arguments : ""}`;
         return `
           <span class="left">
           <a href="#" class="query">${query}</a>
