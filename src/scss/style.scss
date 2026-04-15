@@ -256,12 +256,15 @@ span.highlight {
       div.examples {
         padding-right: 0.2em;
       }
-      div.description {
       hr {
         margin: 0.5em 0;
         border-top: 1px solid #666;
       }
+      div.description > span.text {
         font-style: italic;
+        font-size: small;
+        margin-bottom: 0.5em;
+        color: #444;
       }
       div.url {
         white-space: nowrap;
