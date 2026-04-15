@@ -152,12 +152,6 @@ span.highlight {
       margin-left: 0.2em;
       font-size: small;
       font-weight: normal;
-      ::before {
-        content: "(";
-      }
-      ::after {
-        content: ")";
-      }
     }
   }
   img.sketch {
