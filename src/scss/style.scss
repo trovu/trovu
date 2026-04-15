@@ -257,6 +257,10 @@ span.highlight {
         padding-right: 0.2em;
       }
       div.description {
+      hr {
+        margin: 0.5em 0;
+        border-top: 1px solid #666;
+      }
         font-style: italic;
       }
       div.url {
