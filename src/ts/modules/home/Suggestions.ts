@@ -170,7 +170,7 @@ export default class Suggestions {
       .join("");
 
     container.addEventListener("click", (e) => {
-      const link = (e.target as HTMLElement).closest(".query-link");
+      const link = (e.target as HTMLElement).closest(".query");
       if (link) {
         e.preventDefault();
         this.queryInput.value = link.textContent || "";
