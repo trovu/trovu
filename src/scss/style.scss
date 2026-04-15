@@ -24,6 +24,7 @@ main,
 footer {
   a {
     text-decoration: none;
+    color: rgb(13, 110, 253);
   }
 }
 footer.navbar {
@@ -94,16 +95,21 @@ span.title {
 span.namespace,
 span.tag {
   display: inline-block;
-  background: var(--bs-red);
-  color: white;
   padding: 0.05em 0.4em;
   border-radius: 0.2rem;
   margin: 0.1em 0.2em;
   white-space: nowrap;
+  cursor: pointer;
 }
 span.namespace {
   background: var(--bs-red);
   color: white;
+}
+div.tags {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: left;
+  min-height: 1.5em;
 }
 span.tag {
   background: var(--bs-yellow);
@@ -144,11 +150,11 @@ span.highlight {
     .right {
       color: #477b7f;
     }
-  }
-  .subtagline {
-    text-align: center;
-    margin-bottom: 0.5em;
-    color: #aaa;
+    sup {
+      margin-left: 0.2em;
+      font-size: small;
+      font-weight: normal;
+    }
   }
   img.sketch {
     width: 100%;
@@ -220,9 +226,13 @@ span.highlight {
         color: #444;
         margin-right: 0.2em;
       }
-      > div {
+      > div.main {
         display: grid;
         grid-template-columns: auto auto;
+      }
+      > div.main,
+      div.examples {
+        display: grid;
         .left {
           text-align: left;
           /* Don't indent first line but subsequent ones. */
@@ -232,31 +242,52 @@ span.highlight {
         .right {
           text-align: right;
         }
+        .query {
+          background: #fff;
+          border: 1px solid rgb(13, 110, 253);
+          color: rgb(13, 110, 253);
+          padding: 0.2em 0.3em;
+          line-height: 1.9em;
+          border-radius: 0.2em;
+        }
       }
-      div.description-and-tags,
+      div.description,
       div.examples,
+      hr,
       div.url,
       div.needs-userscript,
       div.is-affiliate,
+      div.tags,
       div.tools {
         display: none;
         color: #666;
       }
-      div.description-and-tags {
-        align-items: end;
+      div.tools {
+        margin: 0.5em 0;
       }
       div.examples {
         padding-right: 0.2em;
+        margin-bottom: 0.5em;
       }
-      div.description-and-tags {
-        .left {
-          font-style: italic;
-        }
+      hr {
+        margin: 0.5em 0;
+        border-top: 1px solid #666;
       }
-      div.url {
-        white-space: nowrap;
+      div.description > .icon,
+      div.url > .icon {
+        font-size: small;
+      }
+      div.description > .text {
+        color: #444;
+        font-size: small;
+        font-style: italic;
+      }
+      div.url > .text {
+        font-size: small;
         overflow: hidden;
+        text-align: left;
         text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .unreachable {
         .keyword {
@@ -298,15 +329,22 @@ span.highlight {
     li[aria-selected="true"] {
       background: #eee;
       position: relative;
-      div.description-and-tags,
+      hr,
+      div.needs-userscript,
+      div.is-affiliate,
+      div.tags,
+      div.tools {
+        display: block;
+      }
       div.examples {
         display: grid;
       }
-      div.url,
-      div.needs-userscript,
-      div.is-affiliate,
-      div.tools {
-        display: block;
+      div.description,
+      div.url {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-columns: minmax(1em, auto) 1fr;
+        column-gap: 0.3em;
       }
     }
   }
