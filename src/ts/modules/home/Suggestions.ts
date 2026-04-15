@@ -162,7 +162,7 @@ export default class Suggestions {
         const query = `${reachable ? "" : namespace + "."}<b>${keyword}</b> ${ex.arguments || ""}`;
         return `
           <span class="left">
-          <a href="#" class="query-link">${query}</a>
+          <a href="#" class="query">${query}</a>
 → <span class="description">${ex.description}</span>
           </span>
           `;
