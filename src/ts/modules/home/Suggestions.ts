@@ -85,7 +85,7 @@ export default class Suggestions {
       this.getMain(suggestion),
       this.getExamples(suggestion),
       document.createElement("hr"),
-      this.getTags(suggestion) || "",
+      this.getTags(suggestion),
       this.getDescription(suggestion),
       this.getUrl(suggestion),
       document.createElement("hr"),
