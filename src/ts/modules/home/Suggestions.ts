@@ -139,7 +139,7 @@ export default class Suggestions {
     if (Array.isArray(tags) && tags.length) {
       container.innerHTML = tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
     } else {
-      container.innerHTML = "";
+      return "";
     }
     container.addEventListener("click", (e: Event) => {
       const target = e.target as HTMLElement;
