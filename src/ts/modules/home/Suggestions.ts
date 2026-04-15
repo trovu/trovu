@@ -83,9 +83,11 @@ export default class Suggestions {
 
     li.append(
       this.getMain(suggestion),
-      this.getDescription(suggestion),
       this.getExamples(suggestion),
+      document.createElement("hr"),
+      this.getDescription(suggestion),
       this.getUrl(suggestion),
+      document.createElement("hr"),
       this.hasTag(suggestion, "needs-userscript") ? this.getNeedsUserscript() : "",
       this.hasTag(suggestion, "is-affiliate") ? this.getIsAffiliate() : "",
       this.getTools(suggestion),
