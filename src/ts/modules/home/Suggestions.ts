@@ -129,7 +129,7 @@ export default class Suggestions {
   getDescription({ description }: AnyObject) {
     const container = document.createElement("div");
     container.className = "description";
-    container.innerHTML = description ? `<span>ⓘ</span> <span class="text">${description}</span>` : "";
+    container.innerHTML = description ? `<span class="icon">ⓘ</span> <span class="text">${description}</span>` : "";
     return container;
   }
 
@@ -185,7 +185,7 @@ export default class Suggestions {
   getUrl(suggestion: AnyObject) {
     const div = document.createElement("div");
     div.className = "url";
-    div.innerHTML = `<span>🔗 </span><a href="${suggestion.url}">${suggestion.url}</a>`;
+    div.innerHTML = `<span class="icon">🔗 </span><span class="text"><a href="${suggestion.url}">${suggestion.url}</a></span>`;
     return div;
   }
 

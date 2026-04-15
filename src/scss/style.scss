@@ -260,17 +260,21 @@ span.highlight {
         margin: 0.5em 0;
         border-top: 1px solid #666;
       }
-      div.description > span.text {
-        font-style: italic;
+      div.description > .icon,
+      div.url > .icon {
         font-size: small;
-        margin-bottom: 0.5em;
-        color: #444;
       }
-      div.url {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      div.description > .text {
+        color: #444;
         font-size: small;
+        font-style: italic;
+      }
+      div.url > .text {
+        font-size: small;
+        overflow: hidden;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .unreachable {
         .keyword {
@@ -312,17 +316,20 @@ span.highlight {
     li[aria-selected="true"] {
       background: #eee;
       position: relative;
-      div.description,
-      div.examples {
-        display: grid;
-      }
       hr,
-      div.url,
       div.needs-userscript,
       div.is-affiliate,
       div.tags,
       div.tools {
         display: block;
+      }
+      div.description,
+      div.url,
+      div.examples {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-columns: minmax(1em, auto) 1fr;
+        column-gap: 0.3em;
       }
     }
   }
