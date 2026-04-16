@@ -1,5 +1,5 @@
 ---
-title: Suggestions Redesigned 
+title: Suggestions Redesigned
 description: Available also via the browser extension
 date: 2026-04-16
 tags:
