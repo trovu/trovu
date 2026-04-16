@@ -24,5 +24,5 @@ Let me know how you like them or if they can be improved.
 You can comment on this post on:
 
 - [Facebook](https://www.facebook.com/trovu.net/posts/pfbid02SdSk7frH8H3aVTKKkTfaMnCsPFVQ7G4mwSXPHAkttnGrt9rFuaphyyGv4vWU5PRul)
-- [X (Twitter](https://x.com/trovu_net/status/2044579131996725665)
+- [X (Twitter)](https://x.com/trovu_net/status/2044579131996725665)
 - [Youtube](https://www.youtube.com/post/UgkxsfpCpNJ0BC39Bo7tjz8YokCLwTzpjVjJ)
