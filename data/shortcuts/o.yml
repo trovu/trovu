@@ -3787,6 +3787,20 @@ fotofinder 0:
 fotofinder 1:
   url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   include: fotofinder 0
+fpk 0:
+  url: https://www.freepik.com/
+  title: Freepik
+  tags:
+  - images
+  - stock-agency
+  examples:
+  - description: Go to the homepage
+fpk 1:
+  url: https://www.freepik.com/search?format=search&query=<query>
+  include: fpk 0
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
 fpl 0:
   deprecated:
     alternative:
