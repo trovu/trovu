@@ -4318,13 +4318,13 @@ gfin 1:
   - arguments: ford
     description: Show data for Ford Motor Company
 gfl 0:
-  description: Flight search engine that allows you to find and compare flight options from various airlines and travel agencies.
   url: https://www.google.com/flights/
   title: Google Flights
   tags:
   - flights
   - google
   - travel
+  description: Flight search engine that allows you to find and compare flight options from various airlines and travel agencies.
 gfl 1:
   url: https://www.google.com/travel/flights?q=<query>
   title: Google Flights, any query in any language
