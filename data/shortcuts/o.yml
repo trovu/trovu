@@ -5489,20 +5489,21 @@ i 0:
   - description: Go to the homepage
 i 1:
   url: https://www.imdb.com/find/?s=all&q=<query>
-  title: Internet Movie Database
-  tags:
-  - cinema
-  - film
-  - imdb
-  - movies
+  include: i 0
   examples:
   - arguments: batman
-    description: Search International Movie Database for "batman"
+    description: Search for "batman"
+iafd 0:
+  url: https://www.iafd.com/
+  title: Internet Adult Film Database
+  tags:
+  - adult
+  - iafd
+  examples:
+  - description: Go to the homepage
 iafd 1:
   url: https://www.iafd.com/results.asp?searchtype=comprehensive&searchstring=<query>
-  title: Internet adult film database
-  tags:
-  - old
+  include: iafd 0
 ibash 0:
   url: http://ibash.de/neueste_1.html
   title: Ibash
@@ -5512,20 +5513,6 @@ icd 1:
     alternative:
       query: de.icd <1>
     created: '2024-12-09'
-icon 1:
-  url: https://www.iconspedia.com/search/<query>/
-  title: IconsPedia
-  tags:
-  - old
-icq 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=icq.im&q=<nickname>
-  title: ICQ People search
-  tags:
-  - chat
-  - icq
-  examples:
-  - arguments: steven
-    description: Search ICQ People Search for "steven"
 id 0:
   include:
   - key: id 0
@@ -5546,24 +5533,36 @@ id 1:
     namespace: bab
   - key: id 1
     namespace: pka
+ida 0:
+  url: https://www.imdb.com/
+  title: IMDb
+  examples:
+  - description: Go to the homepage
 ida 1:
   url: https://www.imdb.com/find/?s=tt&site=aka&q=<query>
-  title: IMDb AKA Title Search
-  tags:
-  - old
+  include: ida 0
 idealo 1:
   deprecated:
     alternative:
       query: .de.idl <1>
     created: '2023-12-15'
+ieee 0:
+  url: https://ieeexplore.ieee.org/Xplore/home.jsp
+  title: IEEE Xplore
+  tags:
+  - engineering
+  - ieee
+  - research
+  - science
+  - technology
+  examples:
+  - description: Go to the homepage
 ieee 1:
   url: https://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText=<query>
-  title: IEEE Xplore Search
-  tags:
-  - old
-if 1:
-  url: https://www.iconfinder.com/search?q=<query>
-  title: IconFinder query
+  include: ieee 0
+  examples:
+  - arguments: quantum computing
+    description: Search for "quantum computing"
 ifi 0:
   url: https://www.ifixit.com/
   title: IFixit Repair Guides
@@ -5598,64 +5597,78 @@ ikeanl 1:
       query: .nl.ikea <1>
     created: '2023-01-22'
 imdb 0:
-  url: https://www.imdb.com
-  title: Internet Movie Database Homepage
-  tags:
-  - cinema
-  - film
-  - imdb
-  - movies
+  include: i 0
 imdb 1:
-  url: https://www.imdb.com/find?s=all&q=<query>
-  title: Internet Movie Database
-  tags:
-  - cinema
-  - film
-  - imdb
-  - movies
+  include: i 1
+imfdb 0:
+  url: https://www.imfdb.org/
+  title: Internet Movie Firearms Database
   examples:
-  - arguments: batman
-    description: Search International Movie Database for "batman"
+  - description: Go to the homepage
+  description: Wiki that catalogs the firearms used in movies, television shows, video games, and anime. Provides detailed information about the firearms, including their make, model, and specifications, as well as their appearances in various media.
 imfdb 1:
-  url: https://www.imfdb.org/wiki/<query>
-  title: Imfdb
-  tags:
-  - old
+  url: https://www.imfdb.org/index.php?search=<query>&title=Special%3ASearch&go=Go
+  include: imfdb 0
+  examples:
+  - arguments: M16
+    description: Search for "M16"
 imslp 0:
-  url: https://imslp.org/index.php?title=Special:Search&search=
-  title: Petrucci Library
+  url: https://imslp.org/
+  title: Petrucci Music Library
   tags:
-  - old
-inf 1:
-  url: https://www.info.com/serp?q=<query>
-  title: Info.com
-ink 1:
-  url: https://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search=<feature>&go=Go
+  - music
+  examples:
+  - description: Go to the homepage
+imslp 1:
+  url: https://www.google.com/search?q=site:imslp.org+<query>
+  include: imslp 0
+  examples:
+  - arguments: beethoven
+    description: Search for "beethoven"
+ink 0:
+  url: https://wiki.inkscape.org/wiki/Main_Page
   title: Inkscape Wiki
   tags:
-  - old
-integral 1:
-  url: https://www.wolframalpha.com/input/?i=integral%20<query>
-  title: 'WolframAlpha: Integral'
-  tags:
-  - mathematics
-  - science
-  - wolfram-alpha
+  - inkscape
+  - vector-graphics
+  - wiki
   examples:
-  - arguments: x^2
-    description: Calculate the integral of x^2
+  - description: Go to the homepage
+  description: Official wiki for Inkscape, a free and open-source vector graphics editor. Provides documentation, tutorials, and resources for users of all levels, covering topics such as installation, usage, and troubleshooting.
+ink 1:
+  url: https://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search=<feature>&go=Go
+  include: ink 0
+  examples:
+  - arguments: gradient
+    description: Search for "gradient"
+integral 1:
+  deprecated:
+    alternative:
+      query: wai <1>
+    created: '2026-04-16'
 ip 0:
-  url: https://www.heise.de/ip/
+  url: https://www.heise.de/netze/tools/meine-ip-adresse
   title: Show my external IP, via heise.de
   tags:
   - ip
+iper 0:
+  url: https://www.ipernity.com/
+  title: ipernity
+  tags:
+  - audio
+  - photo
+  - social-network
+  - video
+  examples:
+  - description: Go to the homepage
 iper 1:
   url: http://ipernity.com/search/doc?q=<query>&s=0
-  title: Ipernity Photo Search
-  tags:
-  - old
+  include: iper 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 ipkat 0:
-  url: https://ipkitten.blogspot.de
+  url: https://ipkitten.blogspot.com/
   title: The IPKat (Intellectual Property) blog
   tags:
   - copyright
@@ -5663,6 +5676,12 @@ ipkat 0:
   - ip-law
   - patent-law
   - patents
+ipkat 1:
+  url: https://ipkitten.blogspot.com/search?q=<query>
+  include: ipkat 0
+  examples:
+  - arguments: copyright
+    description: Search for "copyright"
 is 0:
   include:
   - key: is 0
@@ -5717,26 +5736,14 @@ ist 0:
   - description: Go to the homepage
 ist 1:
   url: https://www.istockphoto.com/file_search.php?action=file&text=<query>&refnum=serchilo
-  title: Istockphoto
-  tags:
-  - images
-  - stock-agency
+  include: ist 0
   examples:
   - arguments: christmas
     description: search photos about christmas
+istockphoto 0:
+  include: ist 0
 istockphoto 1:
-  url: https://www.istockphoto.com/file_search.php?action=file&text=<query>&refnum=serchilo
-  title: Istockphoto
-  tags:
-  - old
-isup 1:
-  url: https://www.freshworks.com/website-monitoring/is-it-down/<host>
-  title: Is it down?
-  tags:
-  - domains
-  examples:
-  - arguments: google.com
-    description: Check if google.com is down
+  include: ist 1
 it 0:
   include:
   - key: it 0
@@ -10290,6 +10297,16 @@ wadoku 1:
   title: Wadoku suche
   tags:
   - old
+wai 1:
+  url: https://www.wolframalpha.com/input/?i=integral%20<query>
+  title: Wolfram Alpha, calculate integral
+  tags:
+  - mathematics
+  - science
+  - wolfram-alpha
+  examples:
+  - arguments: x^2
+    description: Calculate the integral of x^2
 wam 1:
   url: https://m.wolframalpha.com/input/?i=<query>
   title: WolframAlpha Mobile
