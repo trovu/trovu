@@ -143,17 +143,29 @@ span.highlight {
     font-size: 1.2em;
   }
   .tagline {
-    white-space: nowrap;
+    color: #477b7f;
+    line-height: 1.5em;
+    font-weight: normal;
+    span.highlight {
+      font-weight: 500;
+      margin: 0 -0.2em;
+      padding: 0.1em 0.4em;
+      border-radius: 0.8em 0.3em;
+      background: transparent;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 193, 7, 0.1),
+        rgba(255, 193, 7, 0.7) 4%,
+        rgba(255, 193, 7, 0.3)
+      );
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
     .left {
-      color: #aaa;
     }
     .right {
-      color: #477b7f;
-    }
-    sup {
-      margin-left: 0.2em;
-      font-size: small;
-      font-weight: normal;
+      font-size: smaller;
+      white-space: nowrap;
     }
   }
   img.sketch {

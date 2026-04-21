@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - change-headline
   pull_request:
     branches:
       - master
