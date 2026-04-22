@@ -1028,6 +1028,21 @@ dlf 1:
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
+dm 0:
+  url: https://www.dm.de/
+  title: dm-drogerie markt
+  tags:
+  - dm
+  - drugstore
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+dm 1:
+  url: https://www.dm.de/search?query=<Suche>
+  include: dm 0
+  examples:
+  - arguments: shampoo
+    description: Suche nach "shampoo"
 doe 0:
   url: https://www.dasoertliche.de/
   title: DasOertliche.de Homepage

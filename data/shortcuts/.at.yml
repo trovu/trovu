@@ -25,6 +25,21 @@ conrad 1:
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
+dm 0:
+  url: https://www.dm.at/
+  title: dm-drogerie markt
+  tags:
+  - dm
+  - drugstore
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+dm 1:
+  url: https://www.dm.at/search?query=<Suche>
+  include: dm 0
+  examples:
+  - arguments: shampoo
+    description: Suche nach "shampoo"
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at

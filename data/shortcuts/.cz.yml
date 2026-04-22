@@ -107,6 +107,21 @@ dcl 1:
   examples:
   - arguments: kolo
     description: Hledej "kolo"
+dm 0:
+  url: https://www.dm.cz/
+  title: dm-drogerie markt
+  tags:
+  - dm
+  - drugstore
+  - shopping
+  examples:
+  - description: Přejít na hlavní stránku
+dm 1:
+  url: https://www.dm.cz/search?query=<Suche>
+  include: dm 0
+  examples:
+  - arguments: šampon
+    description: Hledej "šampon"
 g 0:
   url: https://www.google.cz/
   title: Google.cz
