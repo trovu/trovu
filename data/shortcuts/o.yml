@@ -2439,6 +2439,20 @@ dlja 1:
     alternative:
       query: dpl.ja <1>
     created: '2024-12-09'
+dlm 0:
+  url: https://www.dailymotion.com/
+  title: Dailymotion
+  tags:
+  - dailymotion
+  - video
+  examples:
+  - description: Go to the homepage
+dlm 1:
+  url: https://www.dailymotion.com/search/<query>
+  include: dm 0
+  examples:
+  - arguments: berlin
+    description: Search for videos about "berlin"
 dlnl 1:
   deprecated:
     alternative:
@@ -2470,19 +2484,15 @@ dlzh 1:
       query: dpl.zh <1>
     created: '2024-12-09'
 dm 0:
-  url: https://www.dailymotion.com/
-  title: Dailymotion
-  tags:
-  - dailymotion
-  - video
-  examples:
-  - description: Go to the homepage
+  deprecated:
+    alternative:
+      query: dlm
+    created: '2026-04-22'
 dm 1:
-  url: https://www.dailymotion.com/search/<query>
-  include: dm 0
-  examples:
-  - arguments: berlin
-    description: Search for videos about "berlin"
+  deprecated:
+    alternative:
+      query: dlm <1>
+    created: '2026-04-22'
 dnd 0:
   url: https://www.dandwiki.com/wiki/Main_Page
   title: D&D wiki
