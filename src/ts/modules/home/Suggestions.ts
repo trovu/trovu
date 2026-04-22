@@ -184,7 +184,17 @@ export default class Suggestions {
   getUrl(suggestion: AnyObject) {
     const div = document.createElement("div");
     div.className = "url";
-    div.innerHTML = `<span class="icon">🔗 </span><span class="text"><a href="${suggestion.url}">${suggestion.url}</a></span>`;
+
+    const icon = document.createElement("span");
+    icon.className = "icon";
+    icon.textContent = "🔗 ";
+
+    const link = document.createElement("a");
+    link.href = suggestion.url;
+    link.textContent = suggestion.url;
+
+    div.append(icon, link);
+
     return div;
   }
 
