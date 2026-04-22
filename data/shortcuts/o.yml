@@ -2478,7 +2478,7 @@ dm 0:
   examples:
   - description: Go to the homepage
 dm 1:
-  url: https://www.dailymotion.com/?search=<query>
+  url: https://www.dailymotion.com/search/<query>
   include: dm 0
   examples:
   - arguments: berlin
