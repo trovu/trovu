@@ -31,18 +31,31 @@ al 1:
   - arguments: smartfon
     description: szukaj "smartfon"
 ceneo 0:
+  deprecated:
+    alternative:
+      query: cno
+    created: '2026-04-24'
+ceneo 1:
+  deprecated:
+    alternative:
+      query: cno <1>
+    created: '2026-04-24'
+cno 0:
   url: https://www.ceneo.pl/
   title: Ceneo
   tags:
-  - shopping
-ceneo 1:
-  url: https://www.ceneo.pl/categories.aspx?search=yes&categoryID=0&searchText=<produkt>&inDesc=False&minPrice=0&maxPrice=99999999
-  title: Ceneo
-  tags:
+  - ceneo
+  - comparison
   - shopping
   examples:
+  - description: Przejdź do strony głównej
+  description: Porównywarka cenowa
+cno 1:
+  url: https://www.ceneo.pl/categories.aspx?search=yes&categoryID=0&searchText=<produkt>&inDesc=False&minPrice=0&maxPrice=99999999
+  include: cno 0
+  examples:
   - arguments: iphone
-    description: ceny iPhone'a
+    description: Szukaj iPhone'a
 e 0:
   url: https://www.ebay.pl/
   title: Ebay.pl
