@@ -99,3 +99,18 @@ describe("Env", () => {
     });
   });
 });
+
+describe("Env.isExternalUrl", () => {
+  test("detects external URL", () => {
+    expect(Env.isExternalUrl("https://www.google.com/search?q=foo")).toBe(true);
+  });
+  test("detects same-origin URL as internal", () => {
+    expect(Env.isExternalUrl("/index.html")).toBe(false);
+  });
+  test("detects relative URL as internal", () => {
+    expect(Env.isExternalUrl("../index.html#foo=bar")).toBe(false);
+  });
+  test("handles invalid URL gracefully", () => {
+    expect(Env.isExternalUrl("")).toBe(false);
+  });
+});
