@@ -1934,6 +1934,17 @@ ygl 1:
   examples:
   - arguments: berlin
     description: Find videos where someone says "berlin"
+zdfg 1:
+  url: https://www.google.de/search?q=site%3Azdf.de+<Suche>
+  title: ZDF.de (inkl. Mediathek) via Google
+  tags:
+  - mediathek
+  - tv
+  - video
+  - zdf
+  examples:
+  - arguments: lanz
+    description: Suche nach "lanz"
 zdfmt 0:
   url: https://www.zdf.de/
   title: ZDF Mediathek
