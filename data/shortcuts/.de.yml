@@ -5615,6 +5615,20 @@ tel 2:
     description: Telefonnummer von "Meier" in Dresden
   - arguments: meier, dd
     description: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
+tfm 0:
+  url: https://www.transfermarkt.de
+  title: Transfermarkt.de
+  tags:
+  - football
+  - sports
+  examples:
+  - description: Gehe zur Startseite
+tfm 1:
+  url: https://www.transfermarkt.de/schnellsuche/ergebnis/schnellsuche?query=<Suche>
+  include: tfm 0
+  examples:
+  - arguments: bayern
+    description: Suche nach "bayern" auf Transfermarkt.de
 thl 0:
   url: https://www.thalia.de/
   title: Thalia
