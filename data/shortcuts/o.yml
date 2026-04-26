@@ -3761,6 +3761,23 @@ flu 1:
   examples:
   - arguments: john
     description: search for users named "john"
+fml 0:
+  url: https://www.famelack.com/
+  title: Famelack
+  tags:
+  - live
+  - radio
+  - streaming
+  - tv
+  examples:
+  - description: Go to the homepage
+  description: Watch live TV and listen to radio stations from around the world
+fml 1:
+  url: https://www.google.com/search?hl=de&q=site:famelack.com%20<channel or country>&ie=utf-8
+  include: fml 0
+  examples:
+  - arguments: poland
+    description: Search for TV channels from "poland"
 fnet 0:
   url: https://www.finanzen.net/
   title: Finanzen.net
