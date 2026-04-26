@@ -602,6 +602,23 @@ rsc 1:
   examples:
   - arguments: battery
     description: Suche bei RS Components nach "battery"
+tfm 0:
+  url: https://www.transfermarkt.at
+  title: Transfermarkt.de
+  tags:
+  - football
+  - sports
+  - transfermarkt
+  - transfers
+  examples:
+  - description: Gehe zur Startseite
+  description: Fußball-Transfers, Marktwerte, Spielerprofile und Vereinsinformationen
+tfm 1:
+  url: https://www.transfermarkt.de/schnellsuche/ergebnis/schnellsuche?query=<Suche>
+  include: tfm 0
+  examples:
+  - arguments: bayern
+    description: Suche nach "bayern"
 we 0:
   url: https://at.wetter.com/?forcesite=1
   title: Wetter.com
