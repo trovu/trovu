@@ -28,6 +28,8 @@ The easiest way to use Trovu in Firefox is the [browser add-on](https://addons.m
 
 ![Screenshot](img/web-ext.png)
 
+➡️ [Get the browser add-on](https://addons.mozilla.org/firefox/addon/trovu/)
+
 #### (Default) search engine
 
 Another option is adding Trovu as a search engine, optionally making it default.
@@ -54,6 +56,8 @@ However, no shortcut suggestions are available here.
 The easiest way to use Trovu in Chrome is the [browser extension](https://chromewebstore.google.com/detail/trovunet/iadcllehbnbepkalhgljhdfhjbkgkajo). It allows you to set keyboard shortcuts which open a Trovu input with suggestions in a new tab or window.
 
 ![Screenshot](img/web-ext.png)
+
+➡️ [Get the browser extension](https://chromewebstore.google.com/detail/trovunet/iadcllehbnbepkalhgljhdfhjbkgkajo)
 
 #### (Default) search engine
 
