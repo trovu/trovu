@@ -2738,6 +2738,7 @@ ec 0:
   - web-search
   examples:
   - description: Go to the homepage
+  description: Search engine whose profits are used to pursue environmental goals.
 ec 1:
   url: https://www.ecosia.org/search?q=<query>
   include: ec 0
