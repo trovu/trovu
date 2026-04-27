@@ -2449,7 +2449,7 @@ dlm 0:
   - description: Go to the homepage
 dlm 1:
   url: https://www.dailymotion.com/search/<query>
-  include: dm 0
+  include: dlm 0
   examples:
   - arguments: berlin
     description: Search for videos about "berlin"
