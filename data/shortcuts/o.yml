@@ -6208,15 +6208,16 @@ ks 1:
   include:
   - key: ks 1
     namespace: pka
+kt 0:
+  deprecated:
+    alternative:
+      query: de.kt
+    created: '2026-04-27'
 kt 1:
-  url: https://kinox.to/Search.html?q=<query>
-  title: Kinox.to
-  tags:
-  - movies
-  - video
-  examples:
-  - arguments: serie
-    description: Suche nach "serie"
+  deprecated:
+    alternative:
+      query: de.kt <1>
+    created: '2026-04-27'
 kw 0:
   include:
   - key: kw 0

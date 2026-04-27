@@ -1168,6 +1168,20 @@ kowig 1:
   url: https://www.google.com/search?hl=<$language>&q=site:kochwiki.org+<Suche>
   title: Koch-Wiki via Google
   include: kowi 1
+kt 0:
+  url: https://kinox.to/
+  title: Kinox.to
+  tags:
+  - movies
+  - video
+  examples:
+  - description: Go to the homepage
+kt 1:
+  url: https://kinox.to/Search.html?q=<query>
+  include: kt 0
+  examples:
+  - arguments: serie
+    description: Suche nach "serie"
 kw 1:
   deprecated:
     alternative:
