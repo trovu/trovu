@@ -5972,11 +5972,16 @@ jben 2:
     alternative:
       query: de.jb <1>, <2>, en
     created: '2024-12-09'
-jcp 1:
-  url: https://jcp.org/en/jsr/summary?id=<query>
+jcp 0:
+  url: https://jcp.org/
   title: The Java Community Process(SM) Program
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+jcp 1:
+  url: https://jcp.org/en/jsr/summary?id=<query>
+  include: jcp 0
 jee 0:
   url: https://download.oracle.com/javaee/6/api/index.html
   title: Java Platform SE6 API Search
