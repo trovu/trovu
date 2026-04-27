@@ -6028,16 +6028,16 @@ jgrapht 1:
   title: JGraphT API
   tags:
   - old
-jm 1:
-  url: https://www.jobmixer.com/de/jobs/<query>/1
-  title: Jobmixer
-  tags:
-  - old
-jmp 1:
-  url: https://j.mp/?u=<url>
-  title: Bit.ly
-  tags:
-  - old
+jm 0:
+  deprecated:
+    alternative:
+      query: .de.jmx
+    created: '2026-04-27'
+jm 0:
+  deprecated:
+    alternative:
+      query: .de.jmx <1>
+    created: '2026-04-27'
 journalup 1:
   deprecated:
     alternative:
