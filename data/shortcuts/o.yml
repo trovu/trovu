@@ -5874,15 +5874,32 @@ ja 1:
     namespace: pka
   - key: ja 1
     namespace: wrf
+jam 0:
+  deprecated:
+    alternative:
+      query: jmd
+    created: '2026-04-27'
+
 jam 1:
-  url: https://www.jamendo.com/search?qs=q=<query>
+  deprecated:
+    alternative:
+      query: jmd <1>
+    created: '2026-04-27'
+jmd 0:
+  url: https://www.jamendo.com/
   title: Jamendo
   tags:
   - copyleft
   - music
   examples:
+  - description: Go to the homepage
+  description: Music platform that offers a wide range of music tracks that are licensed under Creative Commons, allowing users to freely listen, download, and share music while supporting independent artists.  
+jmd 1:
+  url: https://www.jamendo.com/search?q=<query>
+  include: jmd 0
+  examples:
   - arguments: electronic
-    description: Search Jamendo for "electronic"
+    description: Search for "electronic"
 japi 1:
   url: https://www.google.com/search?hl=en&q=<query>+inurl%3Ajavase+6+docs+api+Class+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: Java Platform SE6 API Search
