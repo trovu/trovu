@@ -6859,15 +6859,11 @@ n 0:
   - netflix
   - series
   - stream
+  - video
   description: go to Netflix homepage
 n 1:
   url: https://www.netflix.com/search/<query>
-  title: Netflix
-  tags:
-  - movies
-  - netflix
-  - series
-  - stream
+  include: n 0
   examples:
   - arguments: Broadchurch
     description: Search Netflix for "Broadchurch"
