@@ -2736,12 +2736,11 @@ ec 0:
   tags:
   - ecosia
   - web-search
+  examples:
+  - description: Go to the homepage
 ec 1:
   url: https://www.ecosia.org/search?q=<query>
-  title: Ecosia
-  tags:
-  - ecosia
-  - web-search
+  include: ec 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
