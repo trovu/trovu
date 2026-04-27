@@ -2757,18 +2757,15 @@ ecl 1:
   - eclipse
   - java
 eco 0:
-  url: https://ecosia.org/
-  title: Ecosia
-  tags:
-  - web-search
+  deprecated:
+    alternative:
+      query: ec
+    created: '2026-04-27'
 eco 1:
-  url: https://www.ecosia.org/search?q=<query>
-  title: Ecosia
-  tags:
-  - web-search
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  deprecated:
+    alternative:
+      query: ec <1>
+    created: '2026-04-27'
 ed 0:
   deprecated:
     alternative:
