@@ -6068,11 +6068,10 @@ jr 2:
   title: Jorudan japanese journey database
   tags:
   - old
+jsr 0:
+  include: jcp 0
 jsr 1:
-  url: https://jcp.org/en/jsr/summary?id=<query>
-  title: Java Specification Requests
-  tags:
-  - old
+  include: jcp 1
 jw 0:
   url: https://www.justwatch.com/
   title: JustWatch
