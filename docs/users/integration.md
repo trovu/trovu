@@ -1,5 +1,11 @@
 # Use Trovu on your device
 
+Quicklinks:
+
+- [Firefox browser add-on](#browser-add-on)
+- [Chrome browser add-on](#browser-extension)
+- [Raycast extension](#raycast)
+
 ## General
 
 You can integrate Trovu into your web browsing experience using one of two methods:
