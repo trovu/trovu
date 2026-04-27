@@ -6187,11 +6187,16 @@ ko 1:
     namespace: pka
   - key: ko 1
     namespace: wrf
-kong 1:
-  url: https://www.kongregate.com/search?q=<query>
+kong 0:
+  url: https://www.kongregate.com/
   title: Kongregate
   tags:
   - games
+  examples:
+  - description: Go to the homepage
+kong 1:
+  url: https://www.kongregate.com/search?q=<query>
+  include: kong 0
   examples:
   - arguments: tetris
     description: Play Tetris online
