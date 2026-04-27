@@ -37,6 +37,8 @@ export default class DataEditor {
           description: "Go to the homepage",
         },
       ];
+      const urlTest = data.shortcuts[namespace][key].url.replace(/<query>/g, "test");
+      console.log(urlTest);
       delete data.shortcuts[namespace][key].title;
       delete data.shortcuts[namespace][key].tags;
       data.shortcuts[namespace][key].include = key0arg;
