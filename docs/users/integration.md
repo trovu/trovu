@@ -22,7 +22,7 @@ With Option 2, you maintain greater control and predictability over your searche
 
 ### Firefox
 
-#### Browser extension
+#### Browser add-on
 
 The easiest way to use Trovu in Firefox is the [browser add-on](https://addons.mozilla.org/firefox/addon/trovu/). It allows you to set keyboard shortcuts which open a Trovu input with suggestions in a new tab or window.
 
