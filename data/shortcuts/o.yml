@@ -4730,7 +4730,7 @@ gol 1:
   - web-search
   examples:
   - arguments: berlin
-    description: Search for "berlin" on pages of my language (determined by language namespace)
+    description: Search for "berlin" on pages of my language (determined by your language setting)
 gol 2:
   url: https://www.google.com/search?hl=<$language>&lr=lang_<language>&q=<query>&ie=utf-8
   title: Google Web, only in given language
