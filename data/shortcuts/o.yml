@@ -1239,6 +1239,24 @@ calc 0:
   tags:
   - calculator
   - online-tool
+cbt 0:
+  url: https://cobalt.tools/
+  title: cobalt.tools
+  tags:
+  - audio
+  - download
+  - gifs
+  - photos
+  - video
+  examples:
+  - description: Go to the homepage
+  description: 'Save any media from a website: video, audio, photos or gifs. Just paste the link.'
+cbt 1:
+  url: 'https://cobalt.tools/#<url: {encoding: none}>'
+  include: cbt 0
+  examples:
+  - arguments: https://www.facebook.com/watch/?ref=search&v=1421186396333517
+    description: Save the Facebook video with that URL.
 cc 0:
   url: https://search.creativecommons.org/
   title: Creative Commons
