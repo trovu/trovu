@@ -463,4 +463,57 @@ export default class Env {
   isRunningStandalone() {
     return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
   }
+
+  /**
+   * Check whether a URL resolves to a different origin than the current page.
+   *
+   * @param {string} url - Absolute or relative URL to test.
+   * @returns {boolean}
+   */
+  static isExternalUrl(url: string): boolean {
+    if (typeof window === "undefined") return false;
+    try {
+      return new URL(url, window.location.href).origin !== window.location.origin;
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Navigate to a URL, opening external URLs outside the PWA in standalone mode.
+   *
+   * window.open(url, '_blank') is typically blocked without a user gesture and,
+   * when it does work, always opens Chrome Custom Tab — bypassing Android's intent
+   * dispatch and ignoring the user's configured default browser.
+   *
+   * Dispatching a click on an <a> element goes through Android's intent resolution
+   * system, so the OS routes the URL to the user's actual default browser.
+   *
+   * @param {string}  url     - Target URL.
+   * @param {boolean} replace - Use history.replace instead of assign for internal nav.
+   */
+  static navigateTo(url: string, replace = false): void {
+    if (typeof window === "undefined") return;
+
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      Boolean((window.navigator as any).standalone);
+
+    if (isStandalone && Env.isExternalUrl(url)) {
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.target = "_blank";
+      anchor.rel = "noreferrer noopener";
+      document.body.appendChild(anchor);
+      anchor.click();
+      document.body.removeChild(anchor);
+      return;
+    }
+
+    if (replace) {
+      window.location.replace(url);
+    } else {
+      window.location.href = url;
+    }
+  }
 }
