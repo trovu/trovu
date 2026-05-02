@@ -482,12 +482,14 @@ export default class Env {
   /**
    * Navigate to a URL, opening external URLs outside the PWA in standalone mode.
    *
-   * window.open(url, '_blank') is typically blocked without a user gesture and,
-   * when it does work, always opens Chrome Custom Tab — bypassing Android's intent
-   * dispatch and ignoring the user's configured default browser.
+   * On Android, window.open() and target="_blank" are both intercepted by the
+   * PWA shell and remain inside Chrome, ignoring the user's default browser.
+   * The Android intent:// URI scheme bypasses this capture: Chrome hands the
+   * URI to Android's app-chooser / default-browser intent dispatcher, so the
+   * URL opens in whatever browser the user has set as default.
    *
-   * Dispatching a click on an <a> element goes through Android's intent resolution
-   * system, so the OS routes the URL to the user's actual default browser.
+   * On iOS standalone mode, window.open(url, '_blank') correctly spawns a new
+   * Safari window outside the PWA.
    *
    * @param {string}  url     - Target URL.
    * @param {boolean} replace - Use history.replace instead of assign for internal nav.
@@ -495,18 +497,28 @@ export default class Env {
   static navigateTo(url: string, replace = false): void {
     if (typeof window === "undefined") return;
 
-    const isStandalone =
-      window.matchMedia("(display-mode: standalone)").matches ||
-      Boolean((window.navigator as any).standalone);
+    const isStandaloneAndroid =
+      window.matchMedia("(display-mode: standalone)").matches &&
+      /android/i.test(navigator.userAgent);
 
-    if (isStandalone && Env.isExternalUrl(url)) {
-      const anchor = document.createElement("a");
-      anchor.href = url;
-      anchor.target = "_blank";
-      anchor.rel = "noreferrer noopener";
-      document.body.appendChild(anchor);
-      anchor.click();
-      document.body.removeChild(anchor);
+    const isStandaloneIos = Boolean((window.navigator as any).standalone);
+
+    if ((isStandaloneAndroid || isStandaloneIos) && Env.isExternalUrl(url)) {
+      if (isStandaloneAndroid) {
+        // Build an Android intent URI so the OS dispatches to the default browser.
+        const parsed = new URL(url);
+        const scheme = parsed.protocol.replace(":", "");
+        const rest = `${parsed.host}${parsed.pathname}${parsed.search}${parsed.hash}`;
+        const intentUrl = `intent://${rest}#Intent;scheme=${scheme};action=android.intent.action.VIEW;end`;
+        const a = document.createElement("a");
+        a.href = intentUrl;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      } else {
+        // iOS: window.open creates a new Safari window outside the PWA.
+        window.open(url, "_blank", "noopener");
+      }
       return;
     }
 
