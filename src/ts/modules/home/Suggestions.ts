@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 /** @module Suggestions */
 import QueryParser from "../QueryParser";
 import SuggestionsGetter from "../SuggestionsGetter";
@@ -7,320 +5,197 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import jsyaml from "js-yaml";
 
 export default class Suggestions {
-  constructor(querySelector, suggestionsSelector, home) {
+  [key: string]: any;
+
+  constructor(querySelector: string, suggestionsSelector: string, home: AnyObject) {
     this.env = home.env;
     this.home = home;
-    this.queryInput = document.querySelector(querySelector);
-    this.suggestionsDiv = document.querySelector(suggestionsSelector);
-    this.helpDiv = document.querySelector("#help");
+    this.queryInput = document.querySelector(querySelector) as HTMLInputElement;
+    this.suggestionsDiv = document.querySelector(suggestionsSelector) as HTMLElement;
+    this.helpDiv = document.querySelector("#help") as HTMLElement;
     this.selected = -1;
     this.suggestions = [];
     this.setListeners();
     this.updateSuggestions();
   }
 
-  /**
-   * Handle change query input field.
-   *
-   * @param {object} event – The fired event.
-   */
   updateSuggestions = () => {
     this.query = this.queryInput.value;
     const suggestionsGetter = new SuggestionsGetter(this.env);
-    this.suggestions = suggestionsGetter.getSuggestions(this.query);
-    this.suggestions = this.suggestions.slice(0, 500);
+    this.suggestions = suggestionsGetter.getSuggestions(this.query).slice(0, 500);
     this.renderSuggestions(this.suggestions);
   };
 
   setListeners() {
     this.queryInput.addEventListener("input", () => {
       this.selected = -1;
-      if (this.updateSuggestionsTimeout) {
-        clearTimeout(this.updateSuggestionsTimeout);
-      }
-      this.updateSuggestionsTimeout = setTimeout(() => {
-        this.updateSuggestions();
-      }, 100);
+      if (this.updateSuggestionsTimeout) clearTimeout(this.updateSuggestionsTimeout);
+      this.updateSuggestionsTimeout = setTimeout(() => this.updateSuggestions(), 100);
     });
-    this.queryInput.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowUp") {
-        event.preventDefault();
+
+    this.queryInput.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
         this.selected = Math.max(0, this.selected - 1);
         this.updateSuggestions();
-      }
-      if (event.key === "ArrowDown") {
-        event.preventDefault();
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
         this.selected = Math.min(this.suggestions.length - 1, this.selected + 1);
         this.updateSuggestions();
-      }
-      if (event.key === "Enter") {
-        this.pick(event);
+      } else if (e.key === "Enter") {
+        this.pick(e);
       }
     });
   }
 
-  renderSuggestions(suggestions) {
-    while (this.suggestionsDiv.firstChild) {
-      this.suggestionsDiv.removeChild(this.suggestionsDiv.firstChild);
-    }
-    this.helpDiv.textContent = "";
-    if (this.query) {
-      if (suggestions.length === 0) {
-        this.helpDiv.textContent = "No matching shortcuts found.";
-        return;
-      } else {
-        this.helpDiv.textContent = "Type ⬇️ / ⬆️ to navigate, ↵ to select.";
-      }
-    }
+  renderSuggestions(suggestions: any[]) {
+    this.suggestionsDiv.innerHTML = "";
+    this.helpDiv.textContent = this.query
+      ? suggestions.length === 0
+        ? "No matching shortcuts found."
+        : "Type ⬇️ / ⬆️ to navigate, ↵ to select."
+      : "";
+
+    if (suggestions.length === 0) return;
 
     this.suggestionsList = document.createElement("ul");
     this.suggestionsDiv.appendChild(this.suggestionsList);
 
     const fragment = document.createDocumentFragment();
     suggestions.forEach((suggestion, index) => {
-      const li = this.renderSuggestion(suggestion, index);
-      fragment.appendChild(li);
+      fragment.appendChild(this.renderSuggestion(suggestion, index));
     });
 
     this.suggestionsList.appendChild(fragment);
-    if (this.selected > -1) {
-      const selectedLi = this.suggestionsList.querySelector('li[aria-selected="true"]');
-      if (selectedLi) {
-        this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
-      }
+
+    const selectedLi = this.suggestionsList.querySelector('li[aria-selected="true"]') as HTMLElement;
+    if (selectedLi) {
+      this.ensureElementIsVisibleInContainer(selectedLi, this.suggestionsDiv);
     } else {
       this.suggestionsDiv.scrollTop = 0;
     }
   }
 
-  renderSuggestion(suggestion, index) {
+  renderSuggestion(suggestion: AnyObject, index: number) {
     const li = document.createElement("li");
     li.setAttribute("role", "option");
     li.setAttribute("aria-selected", index === this.selected ? "true" : "false");
-    const fragment = document.createDocumentFragment();
-    fragment.appendChild(this.getMain(suggestion));
-    fragment.appendChild(this.getDescriptionAndTags(suggestion));
-    fragment.appendChild(this.getExamples(suggestion));
-    fragment.appendChild(this.getUrl(suggestion));
-    if (this.hasTag(suggestion, "needs-userscript")) {
-      fragment.appendChild(this.getNeedsUserscript());
-    }
-    if (this.hasTag(suggestion, "is-affiliate")) {
-      fragment.appendChild(this.getIsAffiliate());
-    }
-    fragment.appendChild(this.getTools(suggestion));
-    li.appendChild(fragment);
-    li.addEventListener("click", () => {
-      this.select(index);
-    });
+
+    li.append(
+      this.getMain(suggestion),
+      this.getExamples(suggestion),
+      // document.createElement("hr"),
+      this.getDescription(suggestion),
+      this.getUrl(suggestion),
+      this.hasTag(suggestion, "needs-userscript") ? this.getNeedsUserscript() : "",
+      this.hasTag(suggestion, "is-affiliate") ? this.getIsAffiliate() : "",
+      this.getTags(suggestion),
+      this.getTools(suggestion),
+    );
+
+    li.addEventListener("click", () => this.select(index));
+
     return li;
   }
 
-  select(index) {
-    if (this.selected == index) {
-      this.selected = -1;
+  getMain(suggestion: AnyObject) {
+    const { reachable, keyword, argumentString, title, url, namespace } = suggestion;
+    let displayTitle = title || url;
+    if (this.hasTag(suggestion, "needs-userscript")) displayTitle += " 🧩";
+    if (this.hasTag(suggestion, "is-affiliate")) displayTitle += " 🤝";
+
+    const container = document.createElement("div");
+    container.className = `main ${reachable ? "" : "unreachable"}`;
+    container.innerHTML = `
+      <span class="left">
+        <span class="keyword">${keyword}</span>
+        <span class="argument-names">${argumentString}</span>
+      </span>
+      <span class="right">
+        <span class="title">${displayTitle}</span>
+        <span class="namespace" style="cursor:pointer">${namespace}</span>
+      </span>`;
+
+    container.addEventListener("click", (e) => {
+      if ((e.target as HTMLElement).classList.contains("namespace")) {
+        this.handleTagOrNamespaceClick(e, `ns:${namespace}`);
+      }
+    });
+
+    return container;
+  }
+
+  getDescription({ description }: AnyObject) {
+    const container = document.createElement("div");
+    container.className = "description";
+    container.innerHTML = description ? `<span class="icon">ⓘ</span> <span class="text">${description}</span>` : "";
+    return container;
+  }
+
+  getTags(suggestion: AnyObject) {
+    const { tags } = suggestion;
+    const container = document.createElement("div");
+    container.className = "tags";
+    if (Array.isArray(tags) && tags.length) {
+      container.innerHTML = tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
     } else {
-      this.selected = index;
+      return "";
     }
-    this.updateSuggestions();
-    this.queryInput.focus();
-  }
-
-  ensureElementIsVisibleInContainer(element, container) {
-    // Assuming the height of the fade-out overlay is known (e.g., 100px)
-    const fadeOutHeight = 60; // Adjust the fade-out height accordingly
-
-    // Get the bottom position of the element relative to the container's scrollable area
-    const elementBottom = element.offsetTop + element.offsetHeight;
-
-    // Check if the bottom of the element is below the visible area considering the fade out height
-    if (elementBottom > container.scrollTop + container.clientHeight - fadeOutHeight) {
-      // Scroll down to bring the element above the fade-out overlay
-      container.scrollTop = elementBottom - container.clientHeight + fadeOutHeight;
-    } else if (element.offsetTop < container.scrollTop) {
-      // If the top of the element is above the visible area, scroll up to it
-      container.scrollTop = element.offsetTop;
-    }
-  }
-
-  getMain(suggestion) {
-    // Create the main container div
-    const mainDiv = document.createElement("div");
-    mainDiv.className = `main ${suggestion.reachable ? "" : "unreachable"}`;
-
-    // Create and append the 'left' container
-    const leftSpan = document.createElement("span");
-    leftSpan.className = "left";
-    mainDiv.appendChild(leftSpan);
-
-    // Create and append the keyword span
-    const keywordSpan = document.createElement("span");
-    keywordSpan.className = "keyword";
-    keywordSpan.textContent = suggestion.keyword;
-    leftSpan.appendChild(keywordSpan);
-
-    // Create and append the argument names span
-    const argNamesSpan = document.createElement("span");
-    argNamesSpan.className = "argument-names";
-    // getArgumentsStr now returns a DocumentFragment, so we can directly append it
-    argNamesSpan.textContent = suggestion.argumentString;
-
-    leftSpan.appendChild(argNamesSpan);
-
-    // Create and append the 'right' container
-    const rightSpan = document.createElement("span");
-    rightSpan.className = "right";
-    mainDiv.appendChild(rightSpan);
-
-    // Create and append the title span
-    const titleSpan = document.createElement("span");
-    titleSpan.className = "title";
-    titleSpan.textContent = suggestion.title || suggestion.url;
-
-    if (this.hasTag(suggestion, "needs-userscript")) {
-      titleSpan.textContent += " 🧩";
-    }
-    if (this.hasTag(suggestion, "is-affiliate")) {
-      titleSpan.textContent += " 🤝";
-    }
-
-    rightSpan.appendChild(titleSpan);
-
-    // Create and append the namespace span
-    const namespaceSpan = document.createElement("span");
-    namespaceSpan.className = "namespace";
-    namespaceSpan.textContent = suggestion.namespace;
-    rightSpan.appendChild(namespaceSpan);
-
-    // On click, set the query input value to "ns:NAMESPACE".
-    namespaceSpan.addEventListener("click", (event) => {
-      this.handleTagOrNamespaceClick(event, `ns:${suggestion.namespace}`);
-    });
-    namespaceSpan.addEventListener("mouseover", () => {
-      namespaceSpan.style.cursor = "pointer";
-    });
-
-    return mainDiv;
-  }
-
-  hasTag(suggestion, tag) {
-    if (suggestion.tags && Array.isArray(suggestion.tags)) {
-      return suggestion.tags.includes(tag);
-    }
-    return false;
-  }
-
-  handleTagOrNamespaceClick(event, query) {
-    event.stopPropagation();
-    this.queryInput.value = query;
-    this.queryInput.focus();
-    this.queryInput.dispatchEvent(new Event("input"));
-  }
-
-  getDescriptionAndTags(suggestion) {
-    // Create the container for the description and tags
-    const descriptionAndTagsDiv = document.createElement("div");
-    descriptionAndTagsDiv.className = "description-and-tags";
-
-    // Create and append the 'left' span for description
-    const leftSpan = document.createElement("span");
-    leftSpan.className = "left";
-    // Set the text content for the description
-    leftSpan.textContent =
-      suggestion.description || (suggestion.examples && Array.isArray(suggestion.examples) ? "Examples:" : "");
-    descriptionAndTagsDiv.appendChild(leftSpan);
-
-    // Create and append the 'right' span for tags
-    const rightSpan = document.createElement("span");
-    rightSpan.className = "right";
-    if (suggestion.tags && Array.isArray(suggestion.tags)) {
-      suggestion.tags.forEach((tag) => {
-        const tagSpan = document.createElement("span");
-        tagSpan.className = "tag";
-        tagSpan.textContent = tag;
-
-        // On click, set the query input value to "tag:TAG".
-        tagSpan.addEventListener("click", (event) => {
-          this.handleTagOrNamespaceClick(event, `tag:${tag}`);
-        });
-        tagSpan.addEventListener("mouseover", () => {
-          tagSpan.style.cursor = "pointer";
-        });
-        rightSpan.appendChild(tagSpan);
-      });
-    }
-    descriptionAndTagsDiv.appendChild(rightSpan);
-
-    return descriptionAndTagsDiv;
-  }
-
-  getExamples(suggestion) {
-    if (!suggestion.examples || !Array.isArray(suggestion.examples)) {
-      return document.createDocumentFragment();
-    }
-
-    const examplesDiv = document.createElement("div");
-    examplesDiv.className = "examples";
-
-    for (const example of suggestion.examples) {
-      if (this.shouldSkipExample(example)) {
-        continue;
+    container.addEventListener("click", (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.classList.contains("tag")) {
+        this.handleTagOrNamespaceClick(e, `tag:${target.textContent}`);
       }
-      const leftSpan = document.createElement("span");
-      leftSpan.className = "left";
+    });
+    return container;
+  }
 
-      const querySpan = document.createElement("span");
-      querySpan.className = "query";
-      querySpan.textContent = `${suggestion.reachable ? "" : suggestion.namespace + "."}${suggestion.keyword} ${
-        example.arguments || ""
-      }`;
-      const queryLink = document.createElement("a");
-      queryLink.href = "#";
-      queryLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        this.queryInput.value = querySpan.textContent;
+  getExamples(suggestion: AnyObject) {
+    const { examples, reachable, namespace, keyword } = suggestion;
+    if (!Array.isArray(examples)) return document.createDocumentFragment();
+
+    const container = document.createElement("div");
+    container.className = "examples";
+    container.innerHTML = examples
+      .filter((ex) => !this.shouldSkipExample(ex))
+      .map((ex) => {
+        const query = `${reachable ? "" : namespace + "."}<b>${keyword}</b>${ex.arguments ? " " + ex.arguments : ""}`;
+        return `
+          <span class="left">
+          <a href="#" class="query">${query}</a>
+→ <span class="description">${ex.description}</span>
+          </span>
+          `;
+      })
+      .join("");
+
+    container.addEventListener("click", (e) => {
+      const link = (e.target as HTMLElement).closest(".query");
+      if (link) {
+        e.preventDefault();
+        this.queryInput.value = link.textContent || "";
         this.home.submitQuery();
-      });
-      queryLink.appendChild(querySpan);
-      leftSpan.appendChild(queryLink);
-
-      const rightSpan = document.createElement("span");
-      rightSpan.className = "right";
-
-      const descriptionSpan = document.createElement("span");
-      descriptionSpan.className = "description";
-      descriptionSpan.textContent = example.description;
-      rightSpan.appendChild(descriptionSpan);
-
-      examplesDiv.appendChild(leftSpan);
-      examplesDiv.appendChild(rightSpan);
-    }
-
-    return examplesDiv;
-  }
-
-  shouldSkipExample(example) {
-    if (!example.config) return false;
-    for (const property of ["language", "country"]) {
-      if (example.config[property] && example.config[property] !== this.env[property]) {
-        return true;
       }
-    }
-    return false;
+    });
+
+    return container;
   }
 
-  getUrl(suggestion) {
-    const urlDiv = document.createElement("div");
-    urlDiv.className = "url";
-    // add text span with url icon, append it, put urllink next to it
-    const urlText = document.createElement("span");
-    urlText.textContent = "🔗 ";
-    urlDiv.appendChild(urlText);
-    const urlLink = document.createElement("a");
-    urlLink.href = suggestion.url;
-    urlLink.textContent = `${suggestion.url}`;
-    urlDiv.appendChild(urlLink);
-    return urlDiv;
+  getUrl(suggestion: AnyObject) {
+    const div = document.createElement("div");
+    div.className = "url";
+
+    const icon = document.createElement("span");
+    icon.className = "icon";
+    icon.textContent = "🔗 ";
+
+    const link = document.createElement("a");
+    link.href = suggestion.url;
+    link.textContent = suggestion.url;
+
+    div.append(icon, link);
+
+    return div;
   }
 
   getNeedsUserscript() {
@@ -337,74 +212,90 @@ export default class Suggestions {
     return div;
   }
 
-  getTools(suggestion) {
+  getTools(suggestion: AnyObject) {
     const div = document.createElement("div");
     div.className = "tools";
-    if (this.env.namespaceInfos[suggestion.namespace].type === "site") {
-      div.innerHTML += `✍️ <a href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">Edit</a> &nbsp; `;
-      div.innerHTML += `🔧 <a href="https://github.com/trovu/trovu/issues/new?title=${encodeURIComponent(
-        "Problem with shortcut `" +
-          suggestion.namespace +
-          "." +
-          suggestion.keyword +
-          " " +
-          suggestion.argumentCount +
-          "`",
-      )}">Report problem</a> &nbsp; `;
+    const isSite = this.env.namespaceInfos[suggestion.namespace].type === "site";
+
+    if (isSite) {
+      const reportTitle = encodeURIComponent(
+        `Problem with shortcut \`${suggestion.namespace}.${suggestion.keyword} ${suggestion.argumentCount}\``,
+      );
+      div.innerHTML += `
+        <a target="_blank" class="btn btn-sm btn-outline-secondary" href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">
+        ✍️ Edit</a> &nbsp;
+        <a target="_blank" class="btn btn-sm btn-outline-secondary" href="https://github.com/trovu/trovu/issues/new?title=${reportTitle}">🔧 Report</a> &nbsp; `;
     }
-    div.innerHTML += "📋  ";
-    div.appendChild(this.getCopyYamlLink(suggestion));
+
+    div.innerHTML += `
+    <a class="btn btn-sm btn-outline-secondary copy-yaml" href="#">📋 Copy YAML</a>`;
+    div.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      if (target.classList.contains("copy-yaml")) {
+        e.preventDefault();
+        e.stopPropagation();
+        navigator.clipboard.writeText(this.getYaml(suggestion));
+        target.textContent = "Copied.";
+      }
+    });
+
     return div;
   }
 
-  getCopyYamlLink(suggestion) {
-    const copyYamlLink = document.createElement("a");
-    copyYamlLink.href = "#";
-    copyYamlLink.textContent = "Copy YAML";
-    copyYamlLink.onclick = (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const yaml = this.getYaml(suggestion);
-      navigator.clipboard.writeText(yaml);
-      event.target.textContent = "Copied.";
-    };
-    return copyYamlLink;
+  // --- Helper & logic methods stay mostly the same but cleaned up ---
+
+  select(index: number) {
+    this.selected = this.selected === index ? -1 : index;
+    this.updateSuggestions();
+    this.queryInput.focus();
   }
 
-  getYaml(suggestion) {
-    // Deep copy.
-    const shortcut = {
-      [suggestion.key]: JSON.parse(JSON.stringify(suggestion)),
-    };
+  hasTag(suggestion: AnyObject, tag: string) {
+    return Array.isArray(suggestion.tags) && suggestion.tags.includes(tag);
+  }
+
+  handleTagOrNamespaceClick(event: Event, query: string) {
+    event.stopPropagation();
+    this.queryInput.value = query;
+    this.queryInput.focus();
+    this.queryInput.dispatchEvent(new Event("input"));
+  }
+
+  shouldSkipExample(example: any) {
+    if (!example.config) return false;
+    return ["language", "country"].some((prop) => example.config[prop] && example.config[prop] !== this.env[prop]);
+  }
+
+  getYaml(suggestion: AnyObject) {
+    const shortcut = { [suggestion.key]: JSON.parse(JSON.stringify(suggestion)) };
     const key = suggestion.key;
-    ["argumentCount", "arguments", "include", "key", "keyword", "namespace", "reachable"].forEach((property) => {
-      delete shortcut[key][property];
-    });
-    const yaml = jsyaml.dump(shortcut, { noArrayIndent: true, lineWidth: -1 });
-    return yaml;
+    ["argumentCount", "argumentString", "arguments", "include", "key", "keyword", "namespace", "reachable"].forEach(
+      (prop) => {
+        delete shortcut[key][prop];
+      },
+    );
+    return jsyaml.dump(shortcut, { noArrayIndent: true, lineWidth: -1 });
   }
 
-  /**
-   * Handle selection of a suggestion.
-   *
-   * @param {object} event – The fired event.
-   */
-  pick(event) {
-    if (this.selected === -1) {
-      return;
-    }
+  pick(event: Event) {
+    if (this.selected === -1) return;
     event.preventDefault();
-    const inputText = this.queryInput.value;
-    const input = QueryParser.parse(inputText);
     const suggestion = this.suggestions[this.selected];
-    let newInputText = suggestion.keyword;
-    // Prefix with namespace if not reachable.
-    if (!suggestion.reachable) {
-      newInputText = `${suggestion.namespace}.${newInputText}`;
-    }
-    newInputText = `${newInputText} ${input.argumentString}`;
-    this.queryInput.value = newInputText;
+    const input = QueryParser.parse(this.queryInput.value);
+
+    const prefix = suggestion.reachable ? "" : `${suggestion.namespace}.`;
+    this.queryInput.value = `${prefix}${suggestion.keyword} ${input.argumentString}`;
     this.selected = -1;
     this.updateSuggestions();
+  }
+
+  ensureElementIsVisibleInContainer(element: HTMLElement, container: HTMLElement) {
+    const fadeOutHeight = 60;
+    const elementBottom = element.offsetTop + element.offsetHeight;
+    if (elementBottom > container.scrollTop + container.clientHeight - fadeOutHeight) {
+      container.scrollTop = elementBottom - container.clientHeight + fadeOutHeight;
+    } else if (element.offsetTop < container.scrollTop) {
+      container.scrollTop = element.offsetTop;
+    }
   }
 }

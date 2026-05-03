@@ -165,8 +165,15 @@
     </header>
     <main class="container">
       <div class="explainer">
-        <h3 class="tagline"><span>Web Search as If From Your Cmdline</span></h3>
-        <div class="subtagline">(!bangs but better)</div>
+        <h3 class="tagline">
+          <span class="left"
+            ><span class="highlight">Search</span> the web <span class="highlight">faster</span> with shortcuts</span
+          >,
+          <span class="right"
+            >in your <a target="_blank" href="{{urlDocs}}users/integration/">browser</a>,
+            <a target="_blank" href="{{urlDocs}}users/advanced/">customizable</a>.
+          </span>
+        </h3>
       </div>
       <section class="jumbotron text-center bg-white">
         <div hidden id="alert" class="alert alert-warning" role="alert">
@@ -198,49 +205,74 @@
       </section>
       <div id="suggestions" class="container"></div>
       <div class="explainer">
-        <div class="intro">
-          <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc">
-            <img class="sketch" src="/img/sketch.svg" alt="" />
-          </a>
-        </div>
         <div class="examples">
           <h2>Examples</h2>
           <dl>
             <dt>
-              <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc">gfl ber, nyc</a>
+              <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc"><b>gfl</b> ber, nyc</a>
             </dt>
-            <dd>Search on Google Flights for a flight from Berlin to New York City</dd>
+            <dd>Search on Google Flights for a flight from Berlin to New York City.</dd>
+
             <dt>
               <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc%2C%20fr%2C%2028"
-                >gfl ber, nyc, fr, 28</a
+                ><b>gfl</b> ber, nyc, fr, 28</a
               >
             </dt>
-            <dd>… leaving next Friday, returning on the 28th</dd>
+            <dd>… leaving next Friday, returning on the 28th. More<span class="tag">travel</span>shortcuts.</dd>
+
             <dt>
-              <a target="_blank" href="/process/index.html?#query=gd%20london%2C%20liverpool">gd london, liverpool</a>
+              <a target="_blank" href="/process/index.html?#query=g%20berlin"><b>g</b> berlin</a>
             </dt>
-            <dd>Search for a route on Google Directions from London to Liverpool</dd>
+            <dd>Search Google for Berlin. More<span class="tag">web-search</span>shortcuts.</dd>
+
             <dt>
-              <a target="_blank" href="/process/index.html?#query=g%20berlin">g berlin</a>
+              <a target="_blank" href="/process/index.html?#query=gai%20is%20berlin%20still%20cool?"
+                ><b>gai</b> is berlin still cool?</a
+              >
             </dt>
-            <dd>Search Google for Berlin</dd>
+            <dd>Start Google AI mode.</dd>
+
             <dt>
-              <a target="_blank" href="/process/index.html?#query=w%20berlin">w berlin</a>
+              <a target="_blank" href="/process/index.html?#query=cg%20is%20berlin%20still%20cool?"
+                ><b>cg</b> is berlin still cool?</a
+              >
             </dt>
-            <dd>Go to the Wikipedia article about Berlin</dd>
+            <dd>Start ChatGPT conversation. More<span class="tag">ai</span>shortcuts.</dd>
+
             <dt>
-              <a target="_blank" href="/process/index.html?#query=fr.w%20berlin">fr.w berlin</a>
+              <a target="_blank" href="/process/index.html?#query=yt%20berlin"><b>yt</b> berlin</a>
             </dt>
-            <dd>Go to the French Wikipedia article about Berlin</dd>
+            <dd>YouTube videos about Berlin. More<span class="tag">video</span>shortcuts.</dd>
+
             <dt>
-              <a target="_blank" href="/process/index.html?#query=wg%20berlin">wg berlin</a>
+              <a target="_blank" href="/process/index.html?#query=w%20berlin"><b>w</b> berlin</a>
             </dt>
-            <dd>Search Wikipedia for all mentions of "berlin" via Google</dd>
+            <dd>Go to the Wikipedia article about Berlin.</dd>
+
             <dt>
-              <a target="_blank" href="/process/index.html?#query=npm%20csv">npm csv</a>
+              <a target="_blank" href="/process/index.html?#query=fr.w%20berlin"><b>fr.w</b> berlin</a>
             </dt>
-            <dd>Search the Node Package Manager for modules projects about CSV</dd>
+            <dd>Go to the French Wikipedia article about Berlin.</dd>
+
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=wg%20berlin"><b>wg</b> berlin</a>
+            </dt>
+            <dd>
+              Search Wikipedia for all mentions of "berlin" via Google. More<span class="tag">wiki</span>shortcuts.
+            </dd>
+
+            <dt>
+              <a target="_blank" href="/process/index.html?#query=npm%20csv"><b>npm</b> csv</a>
+            </dt>
+            <dd>
+              Search the Node Package Manager for modules about CSV. More<span class="tag">programming</span>shortcuts.
+            </dd>
           </dl>
+        </div>
+        <div class="intro">
+          <a target="_blank" href="/process/index.html?#query=gfl%20ber%2C%20nyc">
+            <img class="sketch" src="/img/sketch.svg" alt="" />
+          </a>
         </div>
         <div class="intro row">
           <div class="col-sm-6">
@@ -319,6 +351,11 @@
             <ul>
               <li>
                 <span class="highlight"
+                  ><a target="_blank" href="{{urlBlog}}suggestions-redesigned">Suggestions Redesigned </a></span
+                >
+              </li>
+              <li>
+                <span
                   ><a target="_blank" href="{{urlBlog}}startpage-generator">
                     Story of Trovu: From Generated Forms to the Command Line
                   </a></span
@@ -332,12 +369,6 @@
               </li>
               <li>
                 <a target="_blank" href="{{urlBlog}}browser-extension">New: Browser Extension for Chrome & Firefox</a>
-              </li>
-              <li>
-                <a target="_blank" href="{{urlBlog}}sponsor">Sponsor Trovu & Get Advanced Support</a>
-              </li>
-              <li>
-                <a target="_blank" href="{{urlBlog}}bahn-fix">Fix der Bahn-Fahrplanauskunft</a>
               </li>
             </ul>
           </div>

@@ -488,7 +488,7 @@ am 1:
   - key: am 1
     namespace: pka
 ana 0:
-  url: https://annas-archive.li
+  url: https://annas-archive.gl
   title: Anna's Archive
   tags:
   - ebooks
@@ -497,7 +497,7 @@ ana 0:
   - description: Go to the homepage
   description: Large open library
 ana 1:
-  url: https://annas-archive.li/search?q=<query>
+  url: https://annas-archive.gl/search?q=<query>
   include: ana 0
   examples:
   - arguments: werner herzog
@@ -1239,6 +1239,24 @@ calc 0:
   tags:
   - calculator
   - online-tool
+cbt 0:
+  url: https://cobalt.tools/
+  title: cobalt.tools
+  tags:
+  - audio
+  - download
+  - gifs
+  - photos
+  - video
+  examples:
+  - description: Go to the homepage
+  description: 'Save any media from a website: video, audio, photos or gifs. Just paste the link.'
+cbt 1:
+  url: 'https://cobalt.tools/#<url: {encoding: none}>'
+  include: cbt 0
+  examples:
+  - arguments: https://www.facebook.com/watch/?ref=search&v=1421186396333517
+    description: Save the Facebook video with that URL.
 cc 0:
   url: https://search.creativecommons.org/
   title: Creative Commons
@@ -1535,22 +1553,15 @@ comic 1:
   url: https://www.comicvine.com/search/?q=<query>
   include: comic 0
 commons 0:
-  url: https://commons.wikimedia.org/
-  title: Wikimedia Commons Main Page
-  tags:
-  - commons
-  - wikimedia
-  - wikipedia
+  deprecated:
+    alternative:
+      query: wmc
+    created: '2026-04-01'
 commons 1:
-  url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
-  title: Wikimedia Commons
-  tags:
-  - commons
-  - wikimedia
-  - wikipedia
-  examples:
-  - arguments: berlin
-    description: Wikimedia pictures, videos and other media about Berlin
+  deprecated:
+    alternative:
+      query: wmc <1>
+    created: '2026-04-01'
 conj 1:
   url: 'https://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/index.php&item=<verbform: {encoding: iso-8859-1}>'
   title: Logos Conjugator
@@ -2198,13 +2209,13 @@ debm 0:
   - debian
 debm 1:
   url: https://manpages.debian.org/jump?q=<manpage>
+  tests:
+  - arguments: apt-get
+    expect: APT package handling utility
   include: debm 0
   examples:
   - arguments: apt-get
     description: Look up manpage for apt-get
-  tests:
-  - arguments: apt-get
-    expect: 'APT package handling utility'
 debp 0:
   url: https://planet.debian.org/
   title: Debian Planet
@@ -2446,6 +2457,20 @@ dlja 1:
     alternative:
       query: dpl.ja <1>
     created: '2024-12-09'
+dlm 0:
+  url: https://www.dailymotion.com/
+  title: Dailymotion
+  tags:
+  - dailymotion
+  - video
+  examples:
+  - description: Go to the homepage
+dlm 1:
+  url: https://www.dailymotion.com/search/<query>
+  include: dlm 0
+  examples:
+  - arguments: berlin
+    description: Search for videos about "berlin"
 dlnl 1:
   deprecated:
     alternative:
@@ -2477,19 +2502,15 @@ dlzh 1:
       query: dpl.zh <1>
     created: '2024-12-09'
 dm 0:
-  url: https://www.dailymotion.com/
-  title: Dailymotion
-  tags:
-  - dailymotion
-  - video
-  examples:
-  - description: Go to the homepage
+  deprecated:
+    alternative:
+      query: dlm
+    created: '2026-04-22'
 dm 1:
-  url: https://www.dailymotion.com/?search=<query>
-  include: dm 0
-  examples:
-  - arguments: berlin
-    description: Search for videos about "berlin"
+  deprecated:
+    alternative:
+      query: dlm <1>
+    created: '2026-04-22'
 dnd 0:
   url: https://www.dandwiki.com/wiki/Main_Page
   title: D&D wiki
@@ -2733,12 +2754,12 @@ ec 0:
   tags:
   - ecosia
   - web-search
+  examples:
+  - description: Go to the homepage
+  description: Search engine whose profits are used to pursue environmental goals.
 ec 1:
   url: https://www.ecosia.org/search?q=<query>
-  title: Ecosia
-  tags:
-  - ecosia
-  - web-search
+  include: ec 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -2755,18 +2776,15 @@ ecl 1:
   - eclipse
   - java
 eco 0:
-  url: https://ecosia.org/
-  title: Ecosia
-  tags:
-  - web-search
+  deprecated:
+    alternative:
+      query: ec
+    created: '2026-04-27'
 eco 1:
-  url: https://www.ecosia.org/search?q=<query>
-  title: Ecosia
-  tags:
-  - web-search
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  deprecated:
+    alternative:
+      query: ec <1>
+    created: '2026-04-27'
 ed 0:
   deprecated:
     alternative:
@@ -3690,7 +3708,7 @@ flccca 1:
 fli 0:
   deprecated:
     alternative:
-      query: fla <1>
+      query: fla
     created: '2024-03-21'
 fli 1:
   deprecated:
@@ -3758,6 +3776,23 @@ flu 1:
   examples:
   - arguments: john
     description: search for users named "john"
+fml 0:
+  url: https://www.famelack.com/
+  title: Famelack
+  tags:
+  - live
+  - radio
+  - streaming
+  - tv
+  examples:
+  - description: Go to the homepage
+  description: Watch live TV and listen to radio stations from around the world
+fml 1:
+  url: https://www.google.com/search?hl=de&q=site:famelack.com%20<channel or country>&ie=utf-8
+  include: fml 0
+  examples:
+  - arguments: poland
+    description: Search for TV channels from "poland"
 fnet 0:
   url: https://www.finanzen.net/
   title: Finanzen.net
@@ -3794,6 +3829,20 @@ fotofinder 0:
 fotofinder 1:
   url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   include: fotofinder 0
+fpk 0:
+  url: https://www.freepik.com/
+  title: Freepik
+  tags:
+  - images
+  - stock-agency
+  examples:
+  - description: Go to the homepage
+fpk 1:
+  url: https://www.freepik.com/search?format=search&query=<query>
+  include: fpk 0
+  examples:
+  - arguments: christmas
+    description: search photos about christmas
 fpl 0:
   deprecated:
     alternative:
@@ -4038,6 +4087,20 @@ ga 1:
     namespace: irs
   - key: ga 1
     namespace: pka
+gai 0:
+  url: http://google.com/ai
+  title: Google AI Mode
+  tags:
+  - ai
+  - google
+  examples:
+  - description: Go to the homepage
+gai 1:
+  url: http://google.com/ai?q=<query>
+  include: gai 0
+  examples:
+  - arguments: how big is berlin
+    description: Ask Google AI how big Berlin is
 gamespot 1:
   deprecated:
     alternative:
@@ -4279,7 +4342,7 @@ gentoo-planet 0:
 getty 0:
   deprecated:
     alternative:
-      query: .de.getty <1>
+      query: .de.getty
     created: '2024-12-09'
 getty 1:
   deprecated:
@@ -4317,6 +4380,7 @@ gfl 0:
   - flights
   - google
   - travel
+  description: Flight search engine that allows you to find and compare flight options from various airlines and travel agencies.
 gfl 1:
   url: https://www.google.com/travel/flights?q=<query>
   title: Google Flights, any query in any language
@@ -4399,7 +4463,7 @@ gh 0:
 gh 1:
   deprecated:
     alternative:
-      query: gzh <0>
+      query: gzh <1>
     created: '2024-04-19'
 gha 0:
   url: https://ghostarchive.org/
@@ -4684,7 +4748,7 @@ gol 1:
   - web-search
   examples:
   - arguments: berlin
-    description: Search for "berlin" on pages of my language (determined by language namespace)
+    description: Search for "berlin" on pages of my language (determined by your language setting)
 gol 2:
   url: https://www.google.com/search?hl=<$language>&lr=lang_<language>&q=<query>&ie=utf-8
   title: Google Web, only in given language
@@ -4709,7 +4773,7 @@ goof 1:
 gopkg 0:
   deprecated:
     alternative:
-      query: go <0>
+      query: go
     created: '2024-05-09'
 gopkg 1:
   deprecated:
@@ -5481,20 +5545,21 @@ i 0:
   - description: Go to the homepage
 i 1:
   url: https://www.imdb.com/find/?s=all&q=<query>
-  title: Internet Movie Database
-  tags:
-  - cinema
-  - film
-  - imdb
-  - movies
+  include: i 0
   examples:
   - arguments: batman
-    description: Search International Movie Database for "batman"
+    description: Search for "batman"
+iafd 0:
+  url: https://www.iafd.com/
+  title: Internet Adult Film Database
+  tags:
+  - adult
+  - iafd
+  examples:
+  - description: Go to the homepage
 iafd 1:
   url: https://www.iafd.com/results.asp?searchtype=comprehensive&searchstring=<query>
-  title: Internet adult film database
-  tags:
-  - old
+  include: iafd 0
 ibash 0:
   url: http://ibash.de/neueste_1.html
   title: Ibash
@@ -5504,20 +5569,6 @@ icd 1:
     alternative:
       query: de.icd <1>
     created: '2024-12-09'
-icon 1:
-  url: https://www.iconspedia.com/search/<query>/
-  title: IconsPedia
-  tags:
-  - old
-icq 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=icq.im&q=<nickname>
-  title: ICQ People search
-  tags:
-  - chat
-  - icq
-  examples:
-  - arguments: steven
-    description: Search ICQ People Search for "steven"
 id 0:
   include:
   - key: id 0
@@ -5538,24 +5589,36 @@ id 1:
     namespace: bab
   - key: id 1
     namespace: pka
+ida 0:
+  url: https://www.imdb.com/
+  title: IMDb
+  examples:
+  - description: Go to the homepage
 ida 1:
   url: https://www.imdb.com/find/?s=tt&site=aka&q=<query>
-  title: IMDb AKA Title Search
-  tags:
-  - old
+  include: ida 0
 idealo 1:
   deprecated:
     alternative:
       query: .de.idl <1>
     created: '2023-12-15'
+ieee 0:
+  url: https://ieeexplore.ieee.org/Xplore/home.jsp
+  title: IEEE Xplore
+  tags:
+  - engineering
+  - ieee
+  - research
+  - science
+  - technology
+  examples:
+  - description: Go to the homepage
 ieee 1:
   url: https://ieeexplore.ieee.org/search/searchresult.jsp?history=yes&queryText=<query>
-  title: IEEE Xplore Search
-  tags:
-  - old
-if 1:
-  url: https://www.iconfinder.com/search?q=<query>
-  title: IconFinder query
+  include: ieee 0
+  examples:
+  - arguments: quantum computing
+    description: Search for "quantum computing"
 ifi 0:
   url: https://www.ifixit.com/
   title: IFixit Repair Guides
@@ -5590,64 +5653,78 @@ ikeanl 1:
       query: .nl.ikea <1>
     created: '2023-01-22'
 imdb 0:
-  url: https://www.imdb.com
-  title: Internet Movie Database Homepage
-  tags:
-  - cinema
-  - film
-  - imdb
-  - movies
+  include: i 0
 imdb 1:
-  url: https://www.imdb.com/find?s=all&q=<query>
-  title: Internet Movie Database
-  tags:
-  - cinema
-  - film
-  - imdb
-  - movies
+  include: i 1
+imfdb 0:
+  url: https://www.imfdb.org/
+  title: Internet Movie Firearms Database
   examples:
-  - arguments: batman
-    description: Search International Movie Database for "batman"
+  - description: Go to the homepage
+  description: Wiki that catalogs the firearms used in movies, television shows, video games, and anime. Provides detailed information about the firearms, including their make, model, and specifications, as well as their appearances in various media.
 imfdb 1:
-  url: https://www.imfdb.org/wiki/<query>
-  title: Imfdb
-  tags:
-  - old
+  url: https://www.imfdb.org/index.php?search=<query>&title=Special%3ASearch&go=Go
+  include: imfdb 0
+  examples:
+  - arguments: M16
+    description: Search for "M16"
 imslp 0:
-  url: https://imslp.org/index.php?title=Special:Search&search=
-  title: Petrucci Library
+  url: https://imslp.org/
+  title: Petrucci Music Library
   tags:
-  - old
-inf 1:
-  url: https://www.info.com/serp?q=<query>
-  title: Info.com
-ink 1:
-  url: https://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search=<feature>&go=Go
+  - music
+  examples:
+  - description: Go to the homepage
+imslp 1:
+  url: https://www.google.com/search?q=site:imslp.org+<query>
+  include: imslp 0
+  examples:
+  - arguments: beethoven
+    description: Search for "beethoven"
+ink 0:
+  url: https://wiki.inkscape.org/wiki/Main_Page
   title: Inkscape Wiki
   tags:
-  - old
-integral 1:
-  url: https://www.wolframalpha.com/input/?i=integral%20<query>
-  title: 'WolframAlpha: Integral'
-  tags:
-  - mathematics
-  - science
-  - wolfram-alpha
+  - inkscape
+  - vector-graphics
+  - wiki
   examples:
-  - arguments: x^2
-    description: Calculate the integral of x^2
+  - description: Go to the homepage
+  description: Official wiki for Inkscape, a free and open-source vector graphics editor. Provides documentation, tutorials, and resources for users of all levels, covering topics such as installation, usage, and troubleshooting.
+ink 1:
+  url: https://wiki.inkscape.org/wiki/index.php?title=Special%3ASearch&search=<feature>&go=Go
+  include: ink 0
+  examples:
+  - arguments: gradient
+    description: Search for "gradient"
+integral 1:
+  deprecated:
+    alternative:
+      query: wai <1>
+    created: '2026-04-16'
 ip 0:
-  url: https://www.heise.de/ip/
+  url: https://www.heise.de/netze/tools/meine-ip-adresse
   title: Show my external IP, via heise.de
   tags:
   - ip
+iper 0:
+  url: https://www.ipernity.com/
+  title: ipernity
+  tags:
+  - audio
+  - photo
+  - social-network
+  - video
+  examples:
+  - description: Go to the homepage
 iper 1:
   url: http://ipernity.com/search/doc?q=<query>&s=0
-  title: Ipernity Photo Search
-  tags:
-  - old
+  include: iper 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 ipkat 0:
-  url: https://ipkitten.blogspot.de
+  url: https://ipkitten.blogspot.com/
   title: The IPKat (Intellectual Property) blog
   tags:
   - copyright
@@ -5655,6 +5732,12 @@ ipkat 0:
   - ip-law
   - patent-law
   - patents
+ipkat 1:
+  url: https://ipkitten.blogspot.com/search?q=<query>
+  include: ipkat 0
+  examples:
+  - arguments: copyright
+    description: Search for "copyright"
 is 0:
   include:
   - key: is 0
@@ -5709,26 +5792,14 @@ ist 0:
   - description: Go to the homepage
 ist 1:
   url: https://www.istockphoto.com/file_search.php?action=file&text=<query>&refnum=serchilo
-  title: Istockphoto
-  tags:
-  - images
-  - stock-agency
+  include: ist 0
   examples:
   - arguments: christmas
     description: search photos about christmas
+istockphoto 0:
+  include: ist 0
 istockphoto 1:
-  url: https://www.istockphoto.com/file_search.php?action=file&text=<query>&refnum=serchilo
-  title: Istockphoto
-  tags:
-  - old
-isup 1:
-  url: https://www.freshworks.com/website-monitoring/is-it-down/<host>
-  title: Is it down?
-  tags:
-  - domains
-  examples:
-  - arguments: google.com
-    description: Check if google.com is down
+  include: ist 1
 it 0:
   include:
   - key: it 0
@@ -5821,15 +5892,16 @@ ja 1:
     namespace: pka
   - key: ja 1
     namespace: wrf
+jam 0:
+  deprecated:
+    alternative:
+      query: jmd
+    created: '2026-04-27'
 jam 1:
-  url: https://www.jamendo.com/search?qs=q=<query>
-  title: Jamendo
-  tags:
-  - copyleft
-  - music
-  examples:
-  - arguments: electronic
-    description: Search Jamendo for "electronic"
+  deprecated:
+    alternative:
+      query: jmd <1>
+    created: '2026-04-27'
 japi 1:
   url: https://www.google.com/search?hl=en&q=<query>+inurl%3Ajavase+6+docs+api+Class+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: Java Platform SE6 API Search
@@ -5902,11 +5974,16 @@ jben 2:
     alternative:
       query: de.jb <1>, <2>, en
     created: '2024-12-09'
-jcp 1:
-  url: https://jcp.org/en/jsr/summary?id=<query>
+jcp 0:
+  url: https://jcp.org/
   title: The Java Community Process(SM) Program
   tags:
   - old
+  examples:
+  - description: Go to the homepage
+jcp 1:
+  url: https://jcp.org/en/jsr/summary?id=<query>
+  include: jcp 0
 jee 0:
   url: https://download.oracle.com/javaee/6/api/index.html
   title: Java Platform SE6 API Search
@@ -5953,16 +6030,31 @@ jgrapht 1:
   title: JGraphT API
   tags:
   - old
+jm 0:
+  deprecated:
+    alternative:
+      query: .de.jmx
+    created: '2026-04-27'
 jm 1:
-  url: https://www.jobmixer.com/de/jobs/<query>/1
-  title: Jobmixer
+  deprecated:
+    alternative:
+      query: .de.jmx <1>
+    created: '2026-04-27'
+jmd 0:
+  url: https://www.jamendo.com/
+  title: Jamendo
   tags:
-  - old
-jmp 1:
-  url: https://j.mp/?u=<url>
-  title: Bit.ly
-  tags:
-  - old
+  - copyleft
+  - music
+  examples:
+  - description: Go to the homepage
+  description: Music platform that offers a wide range of music tracks that are licensed under Creative Commons, allowing users to freely listen, download, and share music while supporting independent artists.
+jmd 1:
+  url: https://www.jamendo.com/search?q=<query>
+  include: jmd 0
+  examples:
+  - arguments: electronic
+    description: Search for "electronic"
 journalup 1:
   deprecated:
     alternative:
@@ -5993,11 +6085,10 @@ jr 2:
   title: Jorudan japanese journey database
   tags:
   - old
+jsr 0:
+  include: jcp 0
 jsr 1:
-  url: https://jcp.org/en/jsr/summary?id=<query>
-  title: Java Specification Requests
-  tags:
-  - old
+  include: jcp 1
 jw 0:
   url: https://www.justwatch.com/
   title: JustWatch
@@ -6114,11 +6205,16 @@ ko 1:
     namespace: pka
   - key: ko 1
     namespace: wrf
-kong 1:
-  url: https://www.kongregate.com/search?q=<query>
+kong 0:
+  url: https://www.kongregate.com/
   title: Kongregate
   tags:
   - games
+  examples:
+  - description: Go to the homepage
+kong 1:
+  url: https://www.kongregate.com/search?q=<query>
+  include: kong 0
   examples:
   - arguments: tetris
     description: Play Tetris online
@@ -6130,20 +6226,16 @@ ks 1:
   include:
   - key: ks 1
     namespace: pka
+kt 0:
+  deprecated:
+    alternative:
+      query: de.kt
+    created: '2026-04-27'
 kt 1:
-  url: https://kinox.to/Search.html?q=<query>
-  title: Kinox.to
-  tags:
-  - movies
-  - video
-  examples:
-  - arguments: serie
-    description: Suche nach "serie"
-kuler 1:
-  url: https://kuler.adobe.com/#themes/search?term=<term>
-  title: Kuler
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.kt <1>
+    created: '2026-04-27'
 kw 0:
   include:
   - key: kw 0
@@ -6806,15 +6898,11 @@ n 0:
   - netflix
   - series
   - stream
+  - video
   description: go to Netflix homepage
 n 1:
   url: https://www.netflix.com/search/<query>
-  title: Netflix
-  tags:
-  - movies
-  - netflix
-  - series
-  - stream
+  include: n 0
   examples:
   - arguments: Broadchurch
     description: Search Netflix for "Broadchurch"
@@ -8494,7 +8582,7 @@ rpw 0:
   examples:
   - description: Go to the homepage
 rpw 1:
-  url: https://www.removepaywall.com/<url>
+  url: https://www.removepaywall.com/search?url=<url>
   include: rpw 0
   examples:
   - arguments: https://www.nytimes.com/2023/04/10/us/politics/biden-ukraine.html
@@ -9297,11 +9385,6 @@ tey 1:
   title: TinEye
   tags:
   - images
-tfm 1:
-  url: https://www.transfermarkt.de/de/undefined/suche/ergebnis.html?quicksearch=<query>&x=0&y=0
-  title: Transfermarkt.de
-  tags:
-  - old
 th 0:
   include:
   - key: th 0
@@ -10282,6 +10365,16 @@ wadoku 1:
   title: Wadoku suche
   tags:
   - old
+wai 1:
+  url: https://www.wolframalpha.com/input/?i=integral%20<query>
+  title: Wolfram Alpha, calculate integral
+  tags:
+  - mathematics
+  - science
+  - wolfram-alpha
+  examples:
+  - arguments: x^2
+    description: Calculate the integral of x^2
 wam 1:
   url: https://m.wolframalpha.com/input/?i=<query>
   title: WolframAlpha Mobile
@@ -10568,6 +10661,20 @@ wm 1:
   examples:
   - arguments: berlin
     description: Go to Wikipedia article about Berlin
+wmc 0:
+  url: https://commons.wikimedia.org/
+  title: Wikimedia Commons
+  tags:
+  - commons
+  - wikimedia
+  - wikipedia
+  description: Media file repository making available public domain and freely-licensed educational media content (images, sound and video clips) to everyone, in their own language.
+wmc 1:
+  url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
+  include: wmc 0
+  examples:
+  - arguments: berlin
+    description: Wikimedia pictures, videos and other media about Berlin
 wmob 0:
   url: https://<$language>.m.wikipedia.org/
   title: Wikipedia Mobile Main Page

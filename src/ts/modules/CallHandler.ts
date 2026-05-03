@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
-
 /** @module CallHandler */
 import Env from "./Env";
 import GitLogger from "./GitLogger";
@@ -14,7 +11,7 @@ export default class CallHandler {
    * The 'main' function of this class.
    */
   static async handleCall() {
-    const targetDomain = document.querySelector("#targetDomain");
+    const targetDomain = document.querySelector("#target-domain") as any;
     targetDomain.textContent = "";
 
     const env = new Env({ context: "process" });
@@ -26,9 +23,9 @@ export default class CallHandler {
       env.logger.showLog();
     }
 
-    let redirectUrl;
+    let redirectUrl: any;
 
-    const response = this.getRedirectResponse(env);
+    const response: AnyObject = this.getRedirectResponse(env);
 
     if (response.status === "found") {
       redirectUrl = response.redirectUrl;
@@ -77,8 +74,8 @@ export default class CallHandler {
    *
    * @return {object} response  - Contains redirect URL, status.
    */
-  static getRedirectResponse(env) {
-    const response = {};
+  static getRedirectResponse(env: AnyObject) {
+    const response: AnyObject = {};
 
     if (env.reload && !env.query) {
       response.status = "reloaded";
@@ -130,7 +127,7 @@ export default class CallHandler {
     return response;
   }
 
-  static getAlternative(shortcut, env) {
+  static getAlternative(shortcut: AnyObject, env: AnyObject) {
     let alternative = shortcut.deprecated.alternative.query;
     for (const i in env.args) {
       alternative = alternative.replace("<" + (parseInt(i) + 1) + ">", env.args[i]);
@@ -145,8 +142,8 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static getRedirectUrlToHome(env, response) {
-    const params = Env.getParamsFromUrl();
+  static getRedirectUrlToHome(env: AnyObject, response: AnyObject) {
+    const params: AnyObject = Env.getParamsFromUrl();
     if (params.query === "reload" || params.query === "debug:reload") {
       delete params.query;
     }

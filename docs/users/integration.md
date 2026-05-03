@@ -1,18 +1,24 @@
 # Use Trovu on your device
 
+Quicklinks:
+
+- [Firefox browser add-on](#browser-add-on)
+- [Chrome browser add-on](#browser-extension)
+- [Raycast extension](#raycast)
+
 ## General
 
 You can integrate Trovu into your web browsing experience using one of two methods:
 
 ### Set Trovu as Your Default Search Engine
 
--   By replacing your current default search engine with Trovu, all your searches will be directed to Trovu.
--   You can enhance this setup with a [Default Keyword](advanced.md#default-keyword), allowing any unrecognized Trovu shortcut to revert to your usual default search engine.
+- By replacing your current default search engine with Trovu, all your searches will be directed to Trovu.
+- You can enhance this setup with a [Default Keyword](advanced.md#default-keyword), allowing any unrecognized Trovu shortcut to revert to your usual default search engine.
 
 ### Add Trovu as an Additional Search Engine
 
--   This method allows you to keep your current default search engine while adding Trovu alongside it.
--   To use Trovu shortcuts, simply prefix your query with a designated keyword (e.g., `t`).
+- This method allows you to keep your current default search engine while adding Trovu alongside it.
+- To use Trovu shortcuts, simply prefix your query with a designated keyword (e.g., `t`).
 
 I recommend the second option for beginners. Many users who chose the first option found that their intended searches were disrupted when the first word of their query triggered a Trovu shortcut.
 
@@ -22,11 +28,13 @@ With Option 2, you maintain greater control and predictability over your searche
 
 ### Firefox
 
-#### Browser extension
+#### Browser add-on
 
 The easiest way to use Trovu in Firefox is the [browser add-on](https://addons.mozilla.org/firefox/addon/trovu/). It allows you to set keyboard shortcuts which open a Trovu input with suggestions in a new tab or window.
 
 ![Screenshot](img/web-ext.png)
+
+➡️ [Get the browser add-on](https://addons.mozilla.org/firefox/addon/trovu/)
 
 #### (Default) search engine
 
@@ -35,8 +43,8 @@ Another option is adding Trovu as a search engine, optionally making it default.
 However, no shortcut suggestions are available here.
 
 1.  Open [trovu.net](https://trovu.net/), either [with your GitHub username](advanced.md) or without:
-    -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
-    -   `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
+    - `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
+    - `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
 1.  In the **browser address bar**, right-click.
 1.  Select **Add "Trovu"**. It is the last item.
 1.  Open a [new tab](about:blank) with the URL:
@@ -55,6 +63,8 @@ The easiest way to use Trovu in Chrome is the [browser extension](https://chrome
 
 ![Screenshot](img/web-ext.png)
 
+➡️ [Get the browser extension](https://chromewebstore.google.com/detail/trovunet/iadcllehbnbepkalhgljhdfhjbkgkajo)
+
 #### (Default) search engine
 
 Another option is adding Trovu as a search engine, optionally making it default.
@@ -62,20 +72,20 @@ Another option is adding Trovu as a search engine, optionally making it default.
 However, no shortcut suggestions are available here.
 
 1.  Open [trovu.net](https://trovu.net/), either [with your GitHub username](advanced.md) or without:
-    -   `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
-    -   `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
+    - `https://trovu.net/?#github=YOUR_GITHUB_USERNAME`, or
+    - `https://trovu.net/?#country=gb&language=en`. (adjust to your country & language)
 1.  Open a [new tab](about:blank) with the URL:
 
         chrome://settings/searchEngines
 
 1.  There, right to **Manage search engines** is a search field. Search for _Trovu_.
 1.  Now you can either
-    -   Make Trovu your default search engine:
+    - Make Trovu your default search engine:
         1.  When found, click the 3 dots right to it.
         1.  Select **Make default**.
-    -   Set a keyword for Trovu, and use it only with this keyword
-        -   Click the 🖊️ pen.
-        -   Edit _shortcut_, e.g. to `t`.
+    - Set a keyword for Trovu, and use it only with this keyword
+        - Click the 🖊️ pen.
+        - Edit _shortcut_, e.g. to `t`.
 
 ### Other
 

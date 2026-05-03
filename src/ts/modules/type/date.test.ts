@@ -1,4 +1,3 @@
-// @ts-nocheck
 import DateType from "./date";
 
 test("DateType.parse", async () => {

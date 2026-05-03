@@ -1028,6 +1028,21 @@ dlf 1:
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
+dm 0:
+  url: https://www.dm.de/
+  title: dm-drogerie markt
+  tags:
+  - dm
+  - drugstore
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+dm 1:
+  url: https://www.dm.de/search?query=<Suche>
+  include: dm 0
+  examples:
+  - arguments: shampoo
+    description: Suche nach "shampoo"
 doe 0:
   url: https://www.dasoertliche.de/
   title: DasOertliche.de Homepage
@@ -1094,7 +1109,7 @@ ebay 0:
 ebay 1:
   deprecated:
     alternative:
-      query: e <Suche>
+      query: e <1>
     created: '2024-03-30'
 ek 0:
   deprecated:
@@ -3598,7 +3613,7 @@ gmotw 1:
 gmovb 0:
   deprecated:
     alternative:
-      query: gm ovb,<1>
+      query: gm ovb
     created: '2023-01-07'
 gmovb 1:
   deprecated:
@@ -4984,6 +4999,20 @@ jf 1:
   examples:
   - arguments: He pulse tube cooler operating down to 1.3 K
     description: Sucht nach dem Artikel "He pulse tube cooler operating down to 1.3 K" in JustFind
+jmx 0:
+  url: https://www.jobmixer.com/
+  title: Jobmixer
+  tags:
+  - jobs
+  examples:
+  - description: Go to the homepage
+  description: Jobbörse für Stellenangebote
+jmx 1:
+  url: https://www.jobmixer.com/de/jobs/<query>/1
+  include: jm 0
+  examples:
+  - arguments: softwareentwickler
+    description: Suche nach "softwareentwickler"
 jw 1:
   url: https://www.justwatch.com/de/Suche?q=<query>
   include:
@@ -4993,18 +5022,15 @@ jw 1:
   - arguments: simpsons
     description: Search for "simpsons"
 kaufland 0:
-  url: https://www.kaufland.de/
-  title: Kaufland Online Marktplatz
-  tags:
-  - shopping
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: kfl
+    created: '2026-03-12'
 kaufland 1:
-  url: https://www.kaufland.de/item/search/?search_value=<Suche>
-  include: kaufland 0
-  examples:
-  - arguments: spiele
-    description: Suche auf Kaufland.de nach "spiele"
+  deprecated:
+    alternative:
+      query: kfl <1>
+    created: '2026-03-12'
 kaz 0:
   url: https://www.kleinanzeigen.de/
   title: Kleinanzeigen.de, Homepage
@@ -5064,6 +5090,19 @@ keno 1:
   examples:
   - arguments: 24-12-20220
     description: Suche nach Keno-Zahlen vom 24.12.2020
+kfl 0:
+  url: https://www.kaufland.de/
+  title: Kaufland Online Marktplatz
+  tags:
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+kfl 1:
+  url: https://www.kaufland.de/item/search/?search_value=<Suche>
+  include: kfl 0
+  examples:
+  - arguments: spiele
+    description: Suche auf Kaufland.de nach "spiele"
 kfz 0:
   url: https://www.autokennzeichen.info/
   title: KFZ-Kennzeichen Deutschland
@@ -5395,7 +5434,7 @@ otto 0:
   description: Online Shop
 otto 1:
   url: https://www.otto.de/suche/<product>/
-  include: oto 0
+  include: otto 0
   examples:
   - arguments: fernseher
     description: Suche nach Fernsehern
@@ -5590,6 +5629,38 @@ tel 2:
     description: Telefonnummer von "Meier" in Dresden
   - arguments: meier, dd
     description: Telefonnummer von "Meier" in Dresden, Abkürzung mit Autokennzeichen
+tfm 0:
+  url: https://www.transfermarkt.de
+  title: Transfermarkt.de
+  tags:
+  - football
+  - sports
+  - transfermarkt
+  - transfers
+  examples:
+  - description: Gehe zur Startseite
+  description: Fußball-Transfers, Marktwerte, Spielerprofile und Vereinsinformationen
+tfm 1:
+  url: https://www.transfermarkt.de/schnellsuche/ergebnis/schnellsuche?query=<Suche>
+  include: tfm 0
+  examples:
+  - arguments: bayern
+    description: Suche nach "bayern"
+thl 0:
+  url: https://www.thalia.de/
+  title: Thalia
+  tags:
+  - books
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Online-Buchhandlung für Bücher, eBooks, Hörbücher, Filme, Musik und Spiele.
+thl 1:
+  url: https://www.thalia.de/suche?sq=<Suche>
+  include: thl 0
+  examples:
+  - arguments: goethe
+    description: Suche nach "goethe"
 tho 0:
   url: https://www.thomann.de/
   title: Thomann.de

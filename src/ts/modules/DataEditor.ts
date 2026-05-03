@@ -1,18 +1,17 @@
-// @ts-nocheck
 import DataManager from "./DataManager";
 
 export default class DataEditor {
   editData() {
-    const data = DataManager.load();
+    const data: AnyObject = DataManager.load();
     // this.editLastfm(data);
     this.add0arg(data);
     DataManager.write(data);
   }
 
-  private add0arg(data: {}) {
+  private add0arg(data: AnyObject) {
     const namespace = "o";
     for (const key in data.shortcuts[namespace]) {
-      if (!key.startsWith("i")) {
+      if (!key.startsWith("l")) {
         continue;
       }
       if (!data.shortcuts[namespace][key].url) {
@@ -38,13 +37,15 @@ export default class DataEditor {
           description: "Go to the homepage",
         },
       ];
+      const urlTest = data.shortcuts[namespace][key].url.replace(/<query>/g, "test");
+      console.log(urlTest);
       delete data.shortcuts[namespace][key].title;
       delete data.shortcuts[namespace][key].tags;
       data.shortcuts[namespace][key].include = key0arg;
     }
   }
 
-  private editLastfm(data: {}) {
+  private editLastfm(data: AnyObject) {
     for (const namespace in data.shortcuts) {
       const key = "last 1";
       if (data.shortcuts[namespace].hasOwnProperty(key)) {

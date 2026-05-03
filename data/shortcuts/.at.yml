@@ -25,6 +25,21 @@ conrad 1:
   examples:
   - arguments: glühlampe
     description: Suche nach Glühlampen
+dm 0:
+  url: https://www.dm.at/
+  title: dm-drogerie markt
+  tags:
+  - dm
+  - drugstore
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+dm 1:
+  url: https://www.dm.at/search?query=<Suche>
+  include: dm 0
+  examples:
+  - arguments: shampoo
+    description: Suche nach "shampoo"
 e 0:
   url: https://www.ebay.at/?mkcid=1&mkrid=5221-53469-19255-0&siteid=16&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.at
@@ -587,6 +602,23 @@ rsc 1:
   examples:
   - arguments: battery
     description: Suche bei RS Components nach "battery"
+tfm 0:
+  url: https://www.transfermarkt.at
+  title: Transfermarkt.de
+  tags:
+  - football
+  - sports
+  - transfermarkt
+  - transfers
+  examples:
+  - description: Gehe zur Startseite
+  description: Fußball-Transfers, Marktwerte, Spielerprofile und Vereinsinformationen
+tfm 1:
+  url: https://www.transfermarkt.de/schnellsuche/ergebnis/schnellsuche?query=<Suche>
+  include: tfm 0
+  examples:
+  - arguments: bayern
+    description: Suche nach "bayern"
 we 0:
   url: https://at.wetter.com/?forcesite=1
   title: Wetter.com

@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- NodeJS [version as stated here](https://github.com/trovu/trovu/blob/master/.github/workflows/deploy.yml#L17) (`node-version:`)
+- NodeJS [version as stated here](https://github.com/trovu/trovu/blob/master/.nvmrc) (`node-version:`)
     - [How to install a specific version](https://chatgpt.com/share/ef365047-6653-48de-85b1-f7a4565ebfac)
 - npm (correct version should be automatically installed by NodeJS)
 

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 

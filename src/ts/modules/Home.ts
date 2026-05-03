@@ -1,4 +1,3 @@
-// @ts-nocheck
 
 /** @module Home */
 import "../../scss/style.scss";
@@ -17,6 +16,8 @@ import countriesList from "countries-list";
 /** Set and manage the homepage. */
 
 export default class Home {
+  [key: string]: any;
+
   constructor() {}
 
   async initialize() {
@@ -33,7 +34,7 @@ export default class Home {
     document.querySelector("#version").textContent = gitLogger.getVersion();
     gitLogger.logVersion();
 
-    const modalElement = document.getElementById("settings");
+    const modalElement: any = document.getElementById("settings");
     const modal = new BSN.Modal(modalElement);
 
     new Settings(this.env, this.updateOpensearch);
@@ -95,8 +96,8 @@ export default class Home {
     this.setListenersToSetQuery("namespace", "ns");
     this.setListenersToSetQuery("tag", "tag");
   }
-  setListenersToSetQuery(className, prefix) {
-    const elements = document.querySelectorAll(`span.${className}`);
+  setListenersToSetQuery(className: string, prefix: string) {
+    const elements: any = document.querySelectorAll(`span.${className}`);
     elements.forEach((element) => {
       element.style.cursor = "pointer";
       element.addEventListener("click", () => {
@@ -170,10 +171,10 @@ export default class Home {
    * Show custom alerts above query input.
    */
   showInfoAlerts() {
-    const params = Env.getParamsFromUrl();
-    const alert = document.querySelector("#alert");
-    const alertMsg = alert.querySelector("span");
-    const alertClose = alert.querySelector("button");
+    const params: AnyObject = Env.getParamsFromUrl();
+    const alert: any = document.querySelector("#alert");
+    const alertMsg: any = alert.querySelector("span");
+    const alertClose: any = alert.querySelector("button");
     alertClose.addEventListener("click", () => {
       const paramStr = this.env.buildUrlParamStr({ query: undefined, status: undefined });
       window.location.hash = "#" + paramStr;
@@ -222,7 +223,7 @@ export default class Home {
    *
    * @param {object} event – The submitting event.
    */
-  submitQuery = async (event) => {
+  submitQuery = async (event?: any) => {
     // Prevent default sending as GET parameters.
     if (event) {
       event.preventDefault();
@@ -232,11 +233,11 @@ export default class Home {
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
-    const params = Env.getParamsFromUrl();
+    const params: AnyObject = Env.getParamsFromUrl();
     params.query = this.queryInput.value;
     await envQuery.populate(params);
 
-    const response = CallHandler.getRedirectResponse(envQuery);
+    const response: AnyObject = CallHandler.getRedirectResponse(envQuery);
 
     // Send debug to /process.
     if (envQuery.debug) {
@@ -247,7 +248,7 @@ export default class Home {
       return;
     }
 
-    let redirectUrl;
+    let redirectUrl: string;
     if (response.status === "found") {
       redirectUrl = response.redirectUrl;
     } else {
@@ -262,7 +263,7 @@ export default class Home {
    *
    * @param {object} event – The submitting event.
    */
-  reload = (event) => {
+  reload = (event?: any) => {
     if (event) {
       event.preventDefault();
     }

@@ -462,6 +462,21 @@ datev 1:
   examples:
   - arguments: berlin
     description: Suche nach "berlin"
+dck 0:
+  url: https://www.doccheck.com/
+  title: DocCheck
+  tags:
+  - health
+  - medicine
+  examples:
+  - description: Gehe zur Startseite
+  description: Plattform für medizinische Fachinformationen, die sich an Ärzte, Apotheker und andere Gesundheitsberufe richtet.
+dck 1:
+  url: https://www.doccheck.com/search?q=<Suche>
+  include: dck 0
+  examples:
+  - arguments: diabetes
+    description: Suche nach "diabetes"
 dclj 0:
   url: https://groups.google.com/forum/#!searchin/de.comp.lang.javascript/
   title: De.comp.lang.javascript
@@ -1088,6 +1103,24 @@ jb 3:
   examples:
   - arguments: Shakespeare, Hamlet, en
     description: Suche nach "Shakespeare, Hamlet" auf Englisch
+jf 0:
+  url: https://jungefreiheit.de/
+  title: Junge Freiheit
+  tags:
+  - news
+  - politics
+  examples:
+  - description: Gehe zur Startseite
+jf 1:
+  url: https://jungefreiheit.de/?s=<Suche>
+  include: jf 0
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
+jfg 1:
+  url: https://www.google.de/search?q=<Suche>+site:jungefreiheit.de
+  title: Junge Freiheit via Google
+  include: jf 1
 kam 0:
   url: http://kamelopedia.net/
   title: Kamelopedia
@@ -1135,6 +1168,20 @@ kowig 1:
   url: https://www.google.com/search?hl=<$language>&q=site:kochwiki.org+<Suche>
   title: Koch-Wiki via Google
   include: kowi 1
+kt 0:
+  url: https://kinox.to/
+  title: Kinox.to
+  tags:
+  - movies
+  - video
+  examples:
+  - description: Go to the homepage
+kt 1:
+  url: https://kinox.to/Search.html?q=<query>
+  include: kt 0
+  examples:
+  - arguments: serie
+    description: Suche nach "serie"
 kw 1:
   deprecated:
     alternative:
@@ -1154,14 +1201,14 @@ kwdb 0:
   examples:
   - description: Gehe zur Startseite
 kwdb 1:
-  url: https://www.kwdb.ch/search?q=<Suche>&sourceid=serchilo
-  include: kw 0
+  url: https://www.kwdb.ch/suche/<Suche>
+  include: kwdb 0
   examples:
   - arguments: baumart
-    description: Suche nach "baumart"
+    description: Suche nach Baumart
 kwdb 2:
-  url: https://www.kwdb.ch/search?q=<Suche>&lc=<Buchstabenanzahl>
-  include: kw 0
+  url: https://www.kwdb.ch/suche/<Suche>/<Buchstaben-Anzahl>
+  include: kwdb 0
   examples:
   - arguments: baumart, 4
     description: Suche nach "baumart" mit 4 Buchstaben
@@ -1901,6 +1948,17 @@ ygl 1:
   examples:
   - arguments: berlin
     description: Find videos where someone says "berlin"
+zdfg 1:
+  url: https://www.google.de/search?q=site%3Azdf.de+<Suche>
+  title: ZDF.de (inkl. Mediathek) via Google
+  tags:
+  - mediathek
+  - tv
+  - video
+  - zdf
+  examples:
+  - arguments: lanz
+    description: Suche nach "lanz"
 zdfmt 0:
   url: https://www.zdf.de/
   title: ZDF Mediathek

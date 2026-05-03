@@ -1,19 +1,12 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
 import { ActionPanel, Action, getPreferenceValues, List, showToast, Toast, open } from "@raycast/api";
-import { useState, useEffect } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useCachedState } from "@raycast/utils";
 import Env from "./core/src/ts/modules/Env";
 import CallHandler from "./core/src/ts/modules/CallHandler";
+import QueryParser from "./core/src/ts/modules/QueryParser";
 import SuggestionsGetter from "./core/src/ts/modules/SuggestionsGetter";
 import { markdowns } from "./markdowns";
 import { isEqual } from "lodash";
-
-interface Preferences {
-  language: string;
-  country: string;
-  github?: string;
-}
 
 interface Suggestion {
   argumentCount: string;
@@ -32,9 +25,6 @@ interface Suggestion {
   title?: string;
   url: string;
 }
-
-import { useCallback, useMemo } from "react";
-
 export default function Command() {
   const prefs = getPreferenceValues<Preferences>();
   const [cachedPrefs, setCachedPrefs] = useCachedState<Preferences>("prefs");
@@ -43,7 +33,18 @@ export default function Command() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [isShowingDetail, setIsShowingDetail] = useState<boolean>(true);
 
-  // Memoize buildTrovuUrl to avoid recreating on every render
+  const loadEnv = useCallback(
+    async ({ reload = false } = {}) => {
+      const nextEnv = new Env({ context: "raycast", reload });
+      const params: Record<string, string> = prefs.github
+        ? { github: prefs.github }
+        : { language: prefs.language, country: prefs.country };
+      await nextEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+      return nextEnv;
+    },
+    [prefs],
+  );
+
   const buildTrovuUrl = useCallback(
     (query: string) => {
       const encodedQuery = encodeURIComponent(query);
@@ -55,10 +56,9 @@ export default function Command() {
     [prefs],
   );
 
-  // Memoize renderSuggestionDetail
   const renderSuggestionDetail = useCallback(
     (suggestion: Suggestion) => {
-      if (!suggestion || !env) return "";
+      if (!env) return "";
       const examples = suggestion.examples
         ?.map((example) => {
           const query =
@@ -79,27 +79,44 @@ ${examples || ""}
     [env, buildTrovuUrl],
   );
 
-  // Memoize customActions
   const customActions = useCallback(
     (suggestion: Suggestion | null) => (
       <ActionPanel>
         <Action
           title="Send Query"
           onAction={async () => {
-            if (searchText === "reload") {
-              showToast(Toast.Style.Animated, "Reloading environment...");
-              setEnv(null);
-              setSearchText("");
+            const trimmedSearchText = searchText.trim();
+
+            if (trimmedSearchText === "reload") {
+              const reloadToast = await showToast({
+                style: Toast.Style.Animated,
+                title: "Reloading environment...",
+                message: "Fetching latest data.json...",
+              });
+              try {
+                const reloadEnv = await loadEnv({ reload: true });
+                setEnv(reloadEnv);
+                reloadToast.style = Toast.Style.Success;
+                reloadToast.title = "Reload successful";
+                reloadToast.message = `Updated at ${new Date().toLocaleTimeString()}`;
+              } catch (error) {
+                console.error("Error reloading Env:", error);
+                reloadToast.style = Toast.Style.Failure;
+                reloadToast.title = "Reload failed";
+                reloadToast.message = "Check your connection.";
+              }
               return;
             }
-            const envQuery = new Env({ context: "raycast" });
-            const params: Record<string, string> = prefs.github
-              ? { github: prefs.github }
-              : { language: prefs.language, country: prefs.country };
-            params.query = searchText;
-            await envQuery.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+            await showToast(Toast.Style.Animated, "Searching shortcut for", trimmedSearchText);
+            if (!env) {
+              await showToast(Toast.Style.Failure, "Environment unavailable");
+              return;
+            }
+            const envQuery = new Env(env);
+            Object.assign(envQuery, QueryParser.parse(trimmedSearchText));
             const response = CallHandler.getRedirectResponse(envQuery);
             if (response.status === "found" && response.redirectUrl) {
+              await showToast(Toast.Style.Success, "Redirecting to", response.redirectUrl);
               await open(response.redirectUrl);
             } else {
               showToast(Toast.Style.Failure, "No matching shortcut found.");
@@ -125,22 +142,16 @@ ${examples || ""}
         )}
       </ActionPanel>
     ),
-    [searchText, isShowingDetail, prefs, setEnv],
+    [searchText, isShowingDetail, loadEnv, setEnv, env],
   );
 
-  // Only rebuild env if prefs changed
   useEffect(() => {
-    // Rebuild env if prefs changed or env is null (first load)
     if (isEqual(prefs, cachedPrefs) && env) return;
     setCachedPrefs(prefs);
     let cancelled = false;
     (async () => {
       try {
-        const builtEnv = new Env({ context: "raycast" });
-        const params: Record<string, string> = prefs.github
-          ? { github: prefs.github }
-          : { language: prefs.language, country: prefs.country };
-        await builtEnv.populate(params, { removeNamespaces: ["dpl", "dcm"] });
+        const builtEnv = await loadEnv();
         if (!cancelled) setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
@@ -150,14 +161,15 @@ ${examples || ""}
     return () => {
       cancelled = true;
     };
-  }, [prefs, setCachedPrefs, setEnv]);
+  }, [env, loadEnv, prefs, cachedPrefs, setCachedPrefs, setEnv]);
 
-  // Memoize SuggestionsGetter
   const suggestionsGetter = useMemo(() => (env ? new SuggestionsGetter(env) : null), [env]);
 
-  // Filter suggestions when env or searchText changes
   useEffect(() => {
-    if (!suggestionsGetter) return;
+    if (!suggestionsGetter) {
+      setSuggestions([]);
+      return;
+    }
     setSuggestions(suggestionsGetter.getSuggestions(searchText).slice(0, 50));
   }, [searchText, suggestionsGetter]);
 

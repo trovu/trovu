@@ -1,4 +1,3 @@
-// @ts-nocheck
 /** @module ShortcutFinder */
 
 /** Find matching shortcut. */
@@ -12,7 +11,7 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static matchShortcuts(keyword, args, namespaceInfos, includeNonReachable = false) {
+  static matchShortcuts(keyword: string, args: any[], namespaceInfos: AnyObject, includeNonReachable = false) {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
@@ -31,7 +30,7 @@ export default class ShortcutFinder {
    *
    * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
    */
-  static findShortcut(env) {
+  static findShortcut(env: AnyObject) {
     let shortcut = this.matchShortcuts(env.keyword, env.args, env.namespaceInfos);
 
     // If nothing found:
@@ -49,7 +48,9 @@ export default class ShortcutFinder {
     // If nothing found:
     // Try default keyword.
     if (!shortcut && env.defaultKeyword) {
-      env.logger.info(`No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword.`);
+      env.logger.info(
+        `No shortcut found for ${env.keyword} ${env.args.length} yet. Trying with default keyword "${env.defaultKeyword}".`,
+      );
       shortcut = this.matchShortcuts(env.defaultKeyword, [env.query], env.namespaceInfos);
       if (shortcut) {
         env.args = [env.query];

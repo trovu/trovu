@@ -1,4 +1,3 @@
-// @ts-nocheck
 import DataManager from "./DataManager";
 import NamespaceFetcher from "./NamespaceFetcher";
 import ShortcutVerifier from "./ShortcutVerifier";
@@ -11,7 +10,7 @@ export default class Validator {
   validateShortcuts() {
     const validator = new ajv({ strict: true });
     const schema = jsyaml.load(fs.readFileSync("data/schema/shortcuts.yml"));
-    const data = DataManager.load();
+    const data: AnyObject = DataManager.load();
     let hasError = false;
     for (const namespace in data.shortcuts) {
       if (!validator.validate(schema, data.shortcuts[namespace])) {
@@ -19,7 +18,7 @@ export default class Validator {
         console.error(`Problem in namespace ${namespace}: ${validator.errorsText()}`);
       }
       for (const key in data.shortcuts[namespace]) {
-        let shortcut = data.shortcuts[namespace][key];
+        let shortcut: AnyObject = data.shortcuts[namespace][key];
         shortcut = NamespaceFetcher.addInfo(shortcut, key, namespace);
         [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
         shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
@@ -27,6 +26,7 @@ export default class Validator {
           ShortcutVerifier.checkIfHasUrlAndNoInclude,
           ShortcutVerifier.checkIfArgCountMatches,
           ShortcutVerifier.checkIfArgCountMatchesWithExamples,
+          ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders,
         ];
         for (const verifier of verifiers) {
           const error = verifier(shortcut);

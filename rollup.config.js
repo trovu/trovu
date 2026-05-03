@@ -67,6 +67,12 @@ export default [
       "escape-string-regexp",
     ],
     plugins: [
+      {
+        name: "watch-src",
+        buildStart() {
+          this.addWatchFile("src/**/*");
+        },
+      },
       typescript(), // Use the TypeScript plugin
     ],
   },
@@ -74,6 +80,12 @@ export default [
     input: "src/ts/index.ts",
     output: output,
     plugins: [
+      {
+        name: "watch-src",
+        buildStart() {
+          this.addWatchFile("src/**/*");
+        },
+      },
       resolve(),
       commonjs(),
       json(),
@@ -117,6 +129,12 @@ export default [
     input: "src/ts/process.ts",
     output: output,
     plugins: [
+      {
+        name: "watch-src",
+        buildStart() {
+          this.addWatchFile("src/**/*");
+        },
+      },
       resolve(),
       commonjs(),
       json(),
