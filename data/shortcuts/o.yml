@@ -2312,6 +2312,21 @@ derstandard 1:
     alternative:
       query: de.dst <1>
     created: '2024-12-09'
+dfe 0:
+  url: https://downforeveryoneorjustme.com/
+  title: Down For Everyone Or Just Me
+  tags:
+  - status
+  - web
+  - websites
+  examples:
+  - description: Go to the homepage
+dfe 1:
+  url: https://downforeveryoneorjustme.com/<url or domain>
+  include: dfe 0
+  examples:
+  - arguments: google.com
+    description: Check if google.com is down for everyone or just me
 dh 0:
   url: https://hub.docker.com/
   title: Docker Hub
