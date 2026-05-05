@@ -58,6 +58,22 @@ aa 1:
   examples:
   - arguments: türkei
     description: Zeige Reise- und Sicherheitshinweise des Auswärtigen Amtes zur Türkei
+aab 0:
+  url: https://www.allaboutberlin.com/
+  title: All About Berlin
+  tags:
+  - berlin
+  - city-guide
+  - expats
+  examples:
+  - description: Gehe zur Startseite
+  description: Guide for expats and tourists in Berlin and Germany
+aab 1:
+  url: https://www.google.com/search?q=site%3Aallaboutberlin.com%20<query>
+  include: aab 0
+  examples:
+  - arguments: public transport
+    description: Search for "public transport"
 ac 0:
   url: https://www.amazon.de/gp/cart/view.html
   title: Amazon Einkaufswagen
