@@ -6578,16 +6578,6 @@ lwg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=lesswrong.com&q=<query>
   title: LessWrong.com via Google
   include: lw 1
-lyrc 1:
-  url: https://lyrc.com.ar/en/tema1en.php?songname=<songname>
-  title: Lyrc
-  tags:
-  - old
-lyrc 2:
-  url: https://lyrc.com.ar/en/tema1en.php?artist=<artist>&songname=<songname>
-  title: Lyrc
-  tags:
-  - old
 macs 1:
   url: https://www.coffer.com/mac_find?string=<query>
   title: MAC address search
