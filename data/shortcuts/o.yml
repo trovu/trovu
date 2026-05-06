@@ -6357,11 +6357,6 @@ lb 1:
   include:
   - key: lb 1
     namespace: pka
-lc 1:
-  url: https://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo=<verb>
-  title: Logos Universal Conjugator
-  tags:
-  - old
 lcn 0:
   url: https://lucene.apache.org/core/3_6_0/api/all/index.html
   title: Lucene API
