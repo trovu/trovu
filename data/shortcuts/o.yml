@@ -6518,6 +6518,13 @@ lo 1:
 loe 1:
   url: https://en.wikipedia.org/wiki/List_of_<title>_episodes
   title: List of episodes on Wikipedia
+  tags:
+  - tv
+  - series
+  - wikipedia
+  examples:
+  - arguments: The Simpsons
+    description: Search for "List of The Simpsons episodes" on Wikipedia
 lotto 0:
   url: https://www.lottozahlen.info/
   title: Lottozahlen
