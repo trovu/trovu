@@ -6431,20 +6431,32 @@ libg 0:
   - library
 libg 1:
   url: https://libgen.vg/?req=<query>
-  title: Library Genesis, Non-fiction / Sci-tech
+  title: Library Genesis, All
   include: libg 0
+  examples:
+  - arguments: bible
+    description: Search for "bible"
 libga 1:
   url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=a
   title: Library Genesis, Scientific Articles
-  include: libg 0
+  include: libg 1
+  examples:
+  - arguments: quantum computing
+    description: Search for "quantum computing"
 libgf 1:
   url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=f
   title: Library Genesis, Fiction
-  include: libg 0
+  include: libg 1
+  examples:
+  - arguments: accelerando
+    description: Search for "accelerando"
 libgm 1:
-  url: https://magzdb.org/makelist?t=<query>
+  url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=m
   title: Library Genesis, Magazines
-  include: libg 0
+  include: libg 1
+  examples:
+  - arguments: conversation
+    description: Search for "conversation"
 lin 0:
   url: https://www.linkedin.com/
   title: Linkedin
