@@ -6613,20 +6613,11 @@ macs 1:
   examples:
   - arguments: 00:13:A9
     description: Search for the vendor of the MAC address "00:13:A9"
-maj 0:
-  url: https://www.majorgeeks.com/
-  title: MajorGeeks.com
-  tags:
-  - software
-  examples:
-  - description: Go to the homepage
-  description: Celebrates geek culture while ensuring software safety and integrity through rigorous testing.
 maj 1:
-  url: https://www.google.com/search?hl=<$language>&q=site:majorgeeks.com%20<query>&ie=utf-8
-  include: maj 0
-  examples:
-  - arguments: antivirus
-    description: Search for "antivirus"
+  deprecated:
+    alternative:
+      query: mjg <1>
+    created: '2026-05-05'
 maps 1:
   url: https://www.google.com/maps/search/<query>
   title: Google Maps
@@ -6753,6 +6744,20 @@ mink 1:
 mj 1:
   url: https://www.mojeek.com/search?q=<search>
   title: Mojeek
+mjg 0:
+  url: https://www.majorgeeks.com/
+  title: MajorGeeks.com
+  tags:
+  - software
+  examples:
+  - description: Go to the homepage
+  description: Celebrates geek culture while ensuring software safety and integrity through rigorous testing.
+mjg 1:
+  url: https://www.google.com/search?hl=<$language>&q=site:majorgeeks.com%20<query>&ie=utf-8
+  include: mjg 0
+  examples:
+  - arguments: antivirus
+    description: Search for "antivirus"
 mk 0:
   include:
   - key: mk 0
