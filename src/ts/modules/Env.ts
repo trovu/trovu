@@ -482,14 +482,17 @@ export default class Env {
   /**
    * Navigate to a URL, opening external URLs outside the PWA in standalone mode.
    *
-   * On Android, window.open() and target="_blank" are both intercepted by the
-   * PWA shell and remain inside Chrome, ignoring the user's default browser.
-   * The Android intent:// URI scheme bypasses this capture: Chrome hands the
+   * On Chrome Android, window.open() and target="_blank" are both intercepted
+   * by the PWA shell and remain inside Chrome, ignoring the user's default
+   * browser. The Android intent:// URI scheme bypasses this: Chrome hands the
    * URI to Android's app-chooser / default-browser intent dispatcher, so the
    * URL opens in whatever browser the user has set as default.
    *
-   * On iOS standalone mode, window.open(url, '_blank') correctly spawns a new
-   * Safari window outside the PWA.
+   * Brave Android does not route intent:// to the OS intent dispatcher the
+   * same way — its PWA shell intercepts the navigation before the OS sees it.
+   * For Brave (detected synchronously via `'brave' in navigator`) and for iOS
+   * standalone mode, window.open(url, '_blank') correctly spawns a new browser
+   * window outside the PWA.
    *
    * @param {string}  url     - Target URL.
    * @param {boolean} replace - Use history.replace instead of assign for internal nav.
@@ -503,9 +506,13 @@ export default class Env {
 
     const isStandaloneIos = Boolean((window.navigator as any).standalone);
 
+    // Brave exposes navigator.brave synchronously; its PWA shell does not pass
+    // intent:// URIs to the Android OS intent dispatcher the way Chrome does.
+    const isBrave = "brave" in navigator;
+
     if ((isStandaloneAndroid || isStandaloneIos) && Env.isExternalUrl(url)) {
-      if (isStandaloneAndroid) {
-        // Build an Android intent URI so the OS dispatches to the default browser.
+      if (isStandaloneAndroid && !isBrave) {
+        // Chrome Android: build an intent URI so the OS dispatches to the default browser.
         const parsed = new URL(url);
         const scheme = parsed.protocol.replace(":", "");
         const rest = `${parsed.host}${parsed.pathname}${parsed.search}${parsed.hash}`;
@@ -516,7 +523,7 @@ export default class Env {
         a.click();
         document.body.removeChild(a);
       } else {
-        // iOS: window.open creates a new Safari window outside the PWA.
+        // iOS, or Brave Android: window.open spawns a new browser window outside the PWA.
         window.open(url, "_blank", "noopener");
       }
       return;
