@@ -2312,6 +2312,21 @@ derstandard 1:
     alternative:
       query: de.dst <1>
     created: '2024-12-09'
+dfe 0:
+  url: https://downforeveryoneorjustme.com/
+  title: Down For Everyone Or Just Me
+  tags:
+  - status
+  - web
+  - websites
+  examples:
+  - description: Go to the homepage
+dfe 1:
+  url: https://downforeveryoneorjustme.com/<url or domain>
+  include: dfe 0
+  examples:
+  - arguments: google.com
+    description: Check if google.com is down for everyone or just me
 dh 0:
   url: https://hub.docker.com/
   title: Docker Hub
@@ -6342,11 +6357,6 @@ lb 1:
   include:
   - key: lb 1
     namespace: pka
-lc 1:
-  url: https://stefanschramm.net/dev/postredirector/?_target=http://www.logosconjugator.org/rv1.php&verbo=<verb>
-  title: Logos Universal Conjugator
-  tags:
-  - old
 lcn 0:
   url: https://lucene.apache.org/core/3_6_0/api/all/index.html
   title: Lucene API
@@ -6421,20 +6431,32 @@ libg 0:
   - library
 libg 1:
   url: https://libgen.vg/?req=<query>
-  title: Library Genesis, Non-fiction / Sci-tech
+  title: Library Genesis, All
   include: libg 0
+  examples:
+  - arguments: bible
+    description: Search for "bible"
 libga 1:
   url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=a
   title: Library Genesis, Scientific Articles
-  include: libg 0
+  include: libg 1
+  examples:
+  - arguments: quantum computing
+    description: Search for "quantum computing"
 libgf 1:
   url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=f
   title: Library Genesis, Fiction
-  include: libg 0
+  include: libg 1
+  examples:
+  - arguments: accelerando
+    description: Search for "accelerando"
 libgm 1:
-  url: https://magzdb.org/makelist?t=<query>
+  url: https://libgen.vg/index.php?req=<query>&topics%5B%5D=m
   title: Library Genesis, Magazines
-  include: libg 0
+  include: libg 1
+  examples:
+  - arguments: conversation
+    description: Search for "conversation"
 lin 0:
   url: https://www.linkedin.com/
   title: Linkedin
@@ -6508,6 +6530,13 @@ lo 1:
 loe 1:
   url: https://en.wikipedia.org/wiki/List_of_<title>_episodes
   title: List of episodes on Wikipedia
+  tags:
+  - series
+  - tv
+  - wikipedia
+  examples:
+  - arguments: The Simpsons
+    description: Search for "List of The Simpsons episodes" on Wikipedia
 lotto 0:
   url: https://www.lottozahlen.info/
   title: Lottozahlen
@@ -6568,16 +6597,6 @@ lwg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=lesswrong.com&q=<query>
   title: LessWrong.com via Google
   include: lw 1
-lyrc 1:
-  url: https://lyrc.com.ar/en/tema1en.php?songname=<songname>
-  title: Lyrc
-  tags:
-  - old
-lyrc 2:
-  url: https://lyrc.com.ar/en/tema1en.php?artist=<artist>&songname=<songname>
-  title: Lyrc
-  tags:
-  - old
 macs 1:
   url: https://www.coffer.com/mac_find?string=<query>
   title: MAC address search

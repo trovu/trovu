@@ -1394,6 +1394,19 @@ nzz 1:
   examples:
   - arguments: schweiz
     description: Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"
+oaz 0:
+  url: https://ostdeutscheallgemeine.com/
+  title: Ostdeutsche Allgemeine Zeitung
+  tags:
+  - news
+  examples:
+  - description: Gehe zur Startseite
+oaz 1:
+  url: https://ostdeutscheallgemeine.com/suche?q=<Suche>
+  include: oaz 0
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
 ofdb 0:
   url: https://www.ofdb.de/
   title: Online Filmdatenbank

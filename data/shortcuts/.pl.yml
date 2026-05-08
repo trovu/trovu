@@ -287,6 +287,21 @@ pkp 4:
   examples:
   - arguments: kutno, gniezno, 10, 31.1.
     description: połączenie z Kutna do Gniezna 31 stycznia o godz. 10
+rsm 0:
+  url: https://www.rossmann.pl/
+  title: Rossmann.pl
+  tags:
+  - rossmann
+  - shopping
+  examples:
+  - description: Przejdź do strony głównej
+  description: Drogeria z kosmetykami, perfumami i chemią gospodarczą.
+rsm 1:
+  url: https://www.rossmann.pl/szukaj?Search=<produkt>
+  include: rsm 0
+  examples:
+  - arguments: szampon
+    description: Szukaj "szampon"
 skp 0:
   url: https://www.skapiec.pl/
   title: Skąpiec.pl
