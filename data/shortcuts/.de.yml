@@ -5583,6 +5583,21 @@ rsc 1:
   examples:
   - arguments: Battery
     description: Suche bei RS Components nach "Battery"
+rsm 0:
+  url: https://www.rossmann.de/
+  title: Rossmann.pl
+  tags:
+  - rossmann
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Drogerie mit Kosmetika, Parfümen und Haushaltswaren.
+rsm 1:
+  url: https://www.rossmann.de/de/search?text=<Suche>
+  include: rsm 0
+  examples:
+  - arguments: shampoo
+    description: Suche nach "shampoo"
 stabib 0:
   url: https://staatsbibliothek-berlin.de/
   title: Staatsbibliothek zu Berlin
