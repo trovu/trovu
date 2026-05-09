@@ -6754,11 +6754,21 @@ medipreis 1:
     alternative:
       query: .de.mdp <1>
     created: '2025-05-19'
-mesh 1:
-  url: https://www.ncbi.nlm.nih.gov/mesh?term=<termName>
-  title: MeSH term
+mesh 0:
+  url: https://www.ncbi.nlm.nih.gov/mesh/
+  title: Medical Subject Headings (MeSH)
   tags:
-  - old
+  - medicine
+  - pubmed
+  examples:
+  - description: Go to the homepage
+  description: Comprehensive controlled vocabulary for the purpose of indexing journal articles and books in the life sciences; it serves as a thesaurus that facilitates searching.
+mesh 1:
+  url: https://www.ncbi.nlm.nih.gov/mesh?term=<term>
+  include: mesh 0
+  examples:
+  - arguments: diabetes
+    description: Search for "diabetes"
 metal 1:
   url: https://www.metal-archives.com/search?searchString=<query>&type=band_name
   title: Metal Archives
