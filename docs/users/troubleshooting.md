@@ -40,7 +40,7 @@ Then, you can either
 - call a query containing only `reload`,
 - call your query prefixed with `reload:`, e.g. `reload:g foobar`.
 
-Both will cause your browser to reload the shortcut files from `data.trovu.net`.
+Both will cause your browser to reload [data.json](https://trovu.net/data.json).
 
 If that did not help, try debugging mode (see above).
 
