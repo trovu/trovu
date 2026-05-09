@@ -6623,24 +6623,43 @@ maps 1:
   title: Google Maps
   tags:
   - old
-marlin 1:
-  url: https://marlinfw.org/meta/search/?q=<query>
+marlin 0:
+  url: https://marlinfw.org/
   title: Marlin Gcode Search
   tags:
   - 3d-printing
-  description: Marlin is an open source firmware for the RepRap family of replicating rapid prototypers — popularly known as “3D printers.”
+  examples:
+  - description: Go to the homepage
+  description: Open source firmware for the RepRap family of replicating rapid prototypers — popularly known as “3D printers.”
+marlin 1:
+  url: https://marlinfw.org/meta/search/?q=<query>
+  include: marlin 0
+mathworld 0:
+  url: https://mathworld.wolfram.com/
+  title: Mathworld.Wolfram.com
+  tags:
+  - math
+  - wolfram
+  examples:
+  - description: Go to the homepage
 mathworld 1:
   url: https://mathworld.wolfram.com/search/?query=<query>
-  title: Mathworld
-  tags:
-  - old
-maven 1:
-  url: https://search.maven.org/#search|ga|1|<query>
+  include: mathworld 0
+  examples:
+  - arguments: group
+    description: Search for "group"
+maven 0:
+  url: https://search.maven.org/
   title: Maven Search
   tags:
   - java
   - maven
   - programming
+  examples:
+  - description: Go to the homepage
+maven 1:
+  url: https://search.maven.org/#search|ga|1|<query>
+  include: maven 0
   examples:
   - arguments: print
     description: Search for "print"
