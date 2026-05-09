@@ -6769,9 +6769,23 @@ mesh 1:
   examples:
   - arguments: diabetes
     description: Search for "diabetes"
+metal 0:
+  url: https://www.metal-archives.com/
+  title: 'Encyclopaedia Metallum: The Metal Archives'
+  tags:
+  - database
+  - encyclopedia
+  - metal
+  - music
+  examples:
+  - description: Go to the homepage
+  description: Comprehensive database of metal bands, albums, and related information, covering a wide range of metal subgenres and providing detailed discographies, band lineups, and user reviews.
 metal 1:
   url: https://www.metal-archives.com/search?searchString=<query>&type=band_name
-  title: Metal Archives
+  include: metal 0
+  examples:
+  - arguments: Metallica
+    description: Search for "Metallica"
 mew 0:
   url: https://masseffect.wikia.com/
   title: Mass Effect Wiki
