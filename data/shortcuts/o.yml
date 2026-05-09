@@ -7019,9 +7019,18 @@ mys 1:
   examples:
   - arguments: rock
     description: Search for "rock" on Myspace
+mysql 0:
+  url: https://dev.mysql.com/doc/
+  title: MySQL Documentation
+  examples:
+  - description: Go to the homepage
+  description: Official documentation for MySQL, a popular open-source relational database management system. It provides comprehensive information on installation, configuration, usage, and troubleshooting for MySQL databases.
 mysql 1:
   url: https://dev.mysql.com/doc/search/?q=<query>
-  title: MySQL Documentation
+  include: mysql 0
+  examples:
+  - arguments: join
+    description: Search for "join"
 mytv 0:
   url: https://m.tvtoday.de
   title: Mobile TVInfo
