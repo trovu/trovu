@@ -6739,20 +6739,11 @@ mdn 1:
   examples:
   - arguments: javascript
     description: Search for "javascript"
-me 0:
-  url: https://masseffect.wikia.com/
-  title: Mass Effect Wiki
-  tags:
-  - games
-  examples:
-  - description: Go to the homepage
-  description: 'Comprehensive, community-driven encyclopedia dedicated to BioWare''s science-fiction role-playing series. It provides exhaustive detail on all aspects of the franchise, including the original trilogy, Mass Effect: Andromeda, and associated books and comics.'
 me 1:
-  url: https://masseffect.wikia.com/wiki/Special:Search?search=<query>&go=1
-  include: me 0
-  examples:
-  - arguments: Garrus
-    description: Search for "Garrus"
+  deprecated:
+    alternative:
+      query: mew <1>
+    created: '2026-05-09'
 med 1:
   deprecated:
     alternative:
@@ -6771,8 +6762,20 @@ mesh 1:
 metal 1:
   url: https://www.metal-archives.com/search?searchString=<query>&type=band_name
   title: Metal Archives
+mew 0:
+  url: https://masseffect.wikia.com/
+  title: Mass Effect Wiki
   tags:
-  - old
+  - games
+  examples:
+  - description: Go to the homepage
+  description: 'Comprehensive, community-driven encyclopedia dedicated to BioWare''s science-fiction role-playing series. It provides exhaustive detail on all aspects of the franchise, including the original trilogy, Mass Effect: Andromeda, and associated books and comics.'
+mew 1:
+  url: https://masseffect.wikia.com/wiki/Special:Search?search=<query>&go=1
+  include: mew 0
+  examples:
+  - arguments: Garrus
+    description: Search for "Garrus"
 mg 0:
   include:
   - key: mg 0
