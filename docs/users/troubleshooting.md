@@ -8,22 +8,22 @@ Config and shortcut files are usually only fetched once, and after that are only
 
 You can reload by:
 
--   prefixing your query with `reload:`, e.g. `reload:g foobar`
--   sending a query only containing `reload`
--   opening the Trovu homepage with https://trovu.net/?#reload=1.
+- prefixing your query with `reload:`, e.g. `reload:g foobar`
+- sending a query only containing `reload`
+- opening the Trovu homepage with https://trovu.net/?#reload=1.
 
 ### Debugging mode
 
 Enter debugging mode with
 
--   https://trovu.net/?#debug=1 , or
--   a query starting with `debug:`, e.g.: `debug:g foobar`
+- https://trovu.net/?#debug=1 , or
+- a query starting with `debug:`, e.g.: `debug:g foobar`
 
 In debug, all the processing will be done – but without the actual redirect. You will be able to see
 
--   which config and shortcut URLs are being fetched
--   whether they are found in the browser cache or not
--   how a query got matched.
+- which config and shortcut URLs are being fetched
+- whether they are found in the browser cache or not
+- how a query got matched.
 
 You can also combine debugging and reloading, e.g. `debug:reload:g foobar`
 
@@ -33,12 +33,12 @@ You can also combine debugging and reloading, e.g. `debug:reload:g foobar`
 
 This might be a caching issue.
 
-First, make sure if your edit arrived in [https://trovu.net/data.json](https://trovu.net/data.json)  . It should get updated automatically by a GitHub webhook on the _git push_ event.
+First, make sure if your edit arrived in [https://trovu.net/data.json](https://trovu.net/data.json) . It should get updated automatically by a GitHub webhook on the _git push_ event.
 
 Then, you can either
 
--   call a query containing only `reload`,
--   call your query prefixed with `reload:`, e.g. `reload:g foobar`.
+- call a query containing only `reload`,
+- call your query prefixed with `reload:`, e.g. `reload:g foobar`.
 
 Both will cause your browser to reload the shortcut files from `data.trovu.net`.
 
