@@ -6723,12 +6723,19 @@ md5 1:
   examples:
   - arguments: foo
     description: Calculate MD5 hash of "foo"
-mdn 1:
-  url: https://developer.mozilla.org/<$language>/search?q=<query>
+  description: Calculate the MD5 hash of a string.
+mdn 0:
+  url: https://developer.mozilla.org/
   title: Mozilla Developer Network
   tags:
   - mozilla
   - programming
+  examples:
+  - description: Go to the homepage
+  description: Comprehensive resource for developers, offering documentation, tutorials, and references for web technologies such as HTML, CSS, JavaScript, and more.
+mdn 1:
+  url: https://developer.mozilla.org/<$language>/search?q=<query>
+  include: mdn 0
   examples:
   - arguments: javascript
     description: Search for "javascript"
