@@ -6688,9 +6688,21 @@ mbg 1:
   title: MobyGames
   tags:
   - games
+mc 0:
+  url: https://www.metacritic.com/
+  title: Metacritic
+  tags:
+  - games
+  - media
+  - movies
+  - music
+  - reviews
+  examples:
+  - description: Go to the homepage
+  description: Aggregates reviews of music albums, games, movies, TV shows, and formerly books.
 mc 1:
   url: https://www.metacritic.com/search/<query>
-  title: Metacritic
+  include: mc 0
 mcw 0:
   url: https://www.minecraftwiki.net/wiki/Minecraft_Wiki
   title: Minecraft Wiki
