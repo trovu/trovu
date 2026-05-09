@@ -23,6 +23,7 @@ jobs:
       - run: npm run lint-js
       - run: npm run test-unit
       - run: npm run build-blog
+      - run: npm run build-txt
       - run: npm run build
       - run: npm run validate-data
       - run: npm run test-calls
