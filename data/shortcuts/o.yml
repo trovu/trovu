@@ -6739,11 +6739,20 @@ mdn 1:
   examples:
   - arguments: javascript
     description: Search for "javascript"
-me 1:
-  url: https://masseffect.wikia.com/wiki/Special:Search?search=<query>&go=1
+me 0:
+  url: https://masseffect.wikia.com/
   title: Mass Effect Wiki
   tags:
-  - old
+  - games
+  examples:
+  - description: Go to the homepage
+  description: 'Comprehensive, community-driven encyclopedia dedicated to BioWare''s science-fiction role-playing series. It provides exhaustive detail on all aspects of the franchise, including the original trilogy, Mass Effect: Andromeda, and associated books and comics.'
+me 1:
+  url: https://masseffect.wikia.com/wiki/Special:Search?search=<query>&go=1
+  include: me 0
+  examples:
+  - arguments: Garrus
+    description: Search for "Garrus"
 med 1:
   deprecated:
     alternative:
