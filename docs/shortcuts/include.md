@@ -16,8 +16,10 @@ de-en 1:
         - german
         - language
     examples:
-        baum: English translation of "baum"
-        tree: German translation of "tree"
+        arguments: baum
+        description: English translation of "baum"
+        arguments: tree
+        description: German translation of "tree"
 ```
 
 Additionally, there is:
@@ -27,8 +29,10 @@ en-de 1:
     title: Englisch-Deutsch (dict.com)
     include: de-en 1
     examples:
-        tree: Deutsch-Übersetzung von "tree"
-        baum: Englisch-Übersetzung von "baum"
+        arguments: tree
+        description: Deutsch-Übersetzung von "tree"
+        arguments: baum
+        description: Englisch-Übersetzung von "baum"
 ```
 
 Both are separate shortcuts and can be called individually. But `en-de 1` includes from `de-en 1` all properties that it does not define itself. In this case, these are `url:` and `tags:`.
