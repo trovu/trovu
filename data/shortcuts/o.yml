@@ -6959,12 +6959,21 @@ mwo 0:
 mwo 1:
   url: https://www.mediawiki.org/wiki/Special:Search?search=<query>&fulltext=Search
   title: Search mediawiki.org
-mww 1:
-  url: https://www.mediawiki.org/wiki/Special:Search?search=<query>&go=Go
+mww 0:
+  url: https://www.mediawiki.org/
   title: Mediawiki Wiki
   tags:
   - mediawiki
   - wiki
+  examples:
+  - description: Go to the homepage
+  description: The free wiki software that powers Wikipedia and many other wikis. It provides a platform for collaborative content creation and management, allowing users to create, edit, and organize information in a structured manner.
+mww 1:
+  url: https://www.mediawiki.org/wiki/Special:Search?search=<query>&go=Go
+  include: mww 0
+  examples:
+  - arguments: extension
+    description: Search for "extension"
 mwwg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=mediawiki.org&domains=mediawiki.org&q=<query>
   title: Mediawiki Wiki via Google
