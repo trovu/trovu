@@ -7005,11 +7005,20 @@ myip 0:
   title: Myip
   tags:
   - old
-mys 1:
-  url: https://www.myspace.com/<band name>
+mys 0:
+  url: https://www.myspace.com/
   title: Myspace
   tags:
-  - old
+  - music
+  - social-network
+  examples:
+  - description: Go to the homepage
+mys 1:
+  url: https://www.google.com/search?hl=<$language>&q=site:myspace.com%20<query>&ie=utf-8
+  include: mys 0
+  examples:
+  - arguments: rock
+    description: Search for "rock" on Myspace
 mysql 1:
   url: https://dev.mysql.com/doc/search/?q=<query>
   title: MySQL Documentation
