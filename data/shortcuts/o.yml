@@ -6663,9 +6663,21 @@ maven 1:
   examples:
   - arguments: print
     description: Search for "print"
+mb 0:
+  url: https://musicbrainz.org/
+  title: MusicBrainz
+  tags:
+  - database
+  - music
+  examples:
+  - description: Go to the homepage
+  description: An open music encyclopedia that collects music metadata and makes it available to the public.
 mb 1:
-  url: https://musicbrainz.org/search/textsearch.html?query=<artist>&type=artist&limit=25&handlearguments=1
-  title: Musicbrainz - Music Metabase
+  url: https://musicbrainz.org/search/textsearch.html?query=<artist>&type=artist
+  include: mb 0
+  examples:
+  - arguments: Radiohead
+    description: Search for "Radiohead".
 mbg 0:
   url: https://www.mobygames.com/
   title: MobyGames
