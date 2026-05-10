@@ -248,14 +248,35 @@ export default class Home {
       return;
     }
 
-    let redirectUrl: string;
     if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+      this.openRedirectUrl(response.redirectUrl, true);
+      return;
     }
-    window.location.href = redirectUrl;
+
+    this.openRedirectUrl(CallHandler.getRedirectUrlToHome(envQuery, response));
   };
+
+  /**
+   * Open redirect URLs.
+   *
+   * When Trovu runs as an installed PWA, replacing the current location keeps
+   * external target URLs inside the PWA shell. Opening found target URLs in a
+   * new browsing context lets the browser/OS route them to the default browser
+   * or a matching native app instead.
+   *
+   * Non-result redirects keep the existing in-app navigation behavior.
+   *
+   * @param {string} redirectUrl - The target URL.
+   * @param {boolean} external - Whether to open externally in standalone mode.
+   */
+  openRedirectUrl(redirectUrl: string, external = false) {
+    if (external && this.env.isRunningStandalone()) {
+      window.open(redirectUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    window.location.href = redirectUrl;
+  }
 
   /**
    * On triggering reload
