@@ -7,6 +7,27 @@ import UrlProcessor from "./UrlProcessor";
 /** Handle a call. */
 
 export default class CallHandler {
+  static isExternalUrl(url: string) {
+    try {
+      return new URL(url, window.location.href).origin !== window.location.origin;
+    } catch {
+      return false;
+    }
+  }
+
+  static isRunningStandalone() {
+    return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
+  }
+
+  static openRedirectUrl(url: string) {
+    if (this.isRunningStandalone() && this.isExternalUrl(url)) {
+      window.open(url, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    window.location.replace(url);
+  }
+
   /**
    * The 'main' function of this class.
    */
@@ -41,7 +62,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.openRedirectUrl(redirectUrl);
   }
 
   /**
