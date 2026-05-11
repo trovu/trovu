@@ -44,8 +44,8 @@ However, if there _is_ a shortcut with a keyword `apple` or `app`, this breaks.
 
 This is why we want to avoid such common words as keywords:
 
--   Instead of `app`, we use `gpa` (_Google Play App search_), and
--   instead of `apple`, we use `apl` (omitting the vowels, shorter)
+- Instead of `app`, we use `gpa` (_Google Play App search_), and
+- instead of `apple`, we use `apl` (omitting the vowels, shorter)
 
 ### Abbreviate properly
 
@@ -67,8 +67,8 @@ If the shortcut is not about a dictionary, then it should _not_ use a ISO-639-1 
 
 A good keyword shall be easily memorable, and also not a word itself. We try to achieve this by taking the first letters of the website's name (if it contains multiple words) or syllables. For example:
 
--   `fb` for _FaceBook_
--   `db` for _Deutsche Bahn_
--   `ad` for _AnDroid_
--   `bmf` for _Besser MitFahren_
--   `bmn` for _BugMeNot_
+- `fb` for _FaceBook_
+- `db` for _Deutsche Bahn_
+- `ad` for _AnDroid_
+- `bmf` for _Besser MitFahren_
+- `bmn` for _BugMeNot_
