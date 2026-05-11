@@ -130,5 +130,5 @@ function testShortcuts(options) {
 
 function validateData() {
   const validator = new Validator();
-  validator.validateShortcuts();
+  validator.validateData();
 }

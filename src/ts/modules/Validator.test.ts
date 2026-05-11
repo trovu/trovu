@@ -73,8 +73,16 @@ describe("Validator.validateShortcuts", () => {
 
   beforeEach(() => {
     jest.resetAllMocks();
-    readFileSyncMock.mockReturnValue("schema");
-    loadYamlMock.mockReturnValue({ type: "object" });
+    readFileSyncMock.mockReturnValue("{}");
+    loadYamlMock.mockImplementation((text: string) => {
+      if (text === "{}") {
+        return { type: "object", $id: "https://trovu.net/schema/test.yml" };
+      }
+      if (text === "default-config") {
+        return { namespaces: ["o"], language: "en", country: "us" };
+      }
+      return { type: "object", $id: "https://trovu.net/schema/test.yml" };
+    });
     addInfoMock.mockImplementation((shortcut, key, namespace) => ({
       ...shortcut,
       key,
@@ -91,6 +99,7 @@ describe("Validator.validateShortcuts", () => {
     const validateMock = jest.fn().mockReturnValue(true);
     const errorsTextMock = jest.fn().mockReturnValue("unused");
     AjvMock.mockImplementation(() => ({
+      addSchema: jest.fn(),
       validate: validateMock,
       errorsText: errorsTextMock,
     }));
@@ -109,8 +118,8 @@ describe("Validator.validateShortcuts", () => {
     new Validator().validateShortcuts();
 
     expect(AjvMock).toHaveBeenCalledWith({ strict: true });
-    expect(readFileSyncMock).toHaveBeenCalledWith("data/schema/shortcuts.yml");
-    expect(validateMock).toHaveBeenCalledWith({ type: "object" }, {
+    expect(readFileSyncMock).toHaveBeenCalledWith("schema/shortcuts.yml", "utf8");
+    expect(validateMock).toHaveBeenCalledWith("https://trovu.net/schema/test.yml", {
       "gm 1": {
         url: "https://example.com/<query>",
       },
@@ -143,6 +152,7 @@ describe("Validator.validateShortcuts", () => {
     const validateMock = jest.fn().mockReturnValue(false);
     const errorsTextMock = jest.fn().mockReturnValue("schema mismatch");
     AjvMock.mockImplementation(() => ({
+      addSchema: jest.fn(),
       validate: validateMock,
       errorsText: errorsTextMock,
     }));
@@ -174,5 +184,68 @@ describe("Validator.validateShortcuts", () => {
       'Mismatch in argumentCount of key and placeholders of deprecated alternative query in "de.gm 1".',
     );
     expect(exitSpy).toHaveBeenCalledWith(1);
+  });
+
+  test("validateConfig reports schema errors for trovu.config.default.yml", () => {
+    const validateMock = jest.fn().mockReturnValue(false);
+    const errorsTextMock = jest.fn().mockReturnValue("config mismatch");
+    AjvMock.mockImplementation(() => ({
+      addSchema: jest.fn(),
+      validate: validateMock,
+      errorsText: errorsTextMock,
+    }));
+    readFileSyncMock.mockImplementation((path: string) => {
+      if (path === "trovu.config.default.yml") {
+        return "default-config";
+      }
+      return "{}";
+    });
+    const exitSpy = jest.spyOn(process, "exit").mockImplementation((() => undefined) as never);
+    const errorSpy = jest.spyOn(console, "error").mockImplementation(() => undefined);
+
+    new Validator().validateConfig();
+
+    expect(readFileSyncMock).toHaveBeenCalledWith("schema/config.yml", "utf8");
+    expect(readFileSyncMock).toHaveBeenCalledWith("trovu.config.default.yml", "utf8");
+    expect(errorSpy).toHaveBeenCalledWith("Problem in trovu.config.default.yml: config mismatch");
+    expect(exitSpy).toHaveBeenCalledWith(1);
+  });
+
+  test("validateData validates config and shortcuts before exiting", () => {
+    const validateMock = jest.fn().mockReturnValue(true);
+    const errorsTextMock = jest.fn().mockReturnValue("unused");
+    AjvMock.mockImplementation(() => ({
+      addSchema: jest.fn(),
+      validate: validateMock,
+      errorsText: errorsTextMock,
+    }));
+    readFileSyncMock.mockImplementation((path: string) => {
+      if (path === "trovu.config.default.yml") {
+        return "default-config";
+      }
+      return "{}";
+    });
+    loadDataMock.mockReturnValue({
+      shortcuts: {
+        de: {
+          "gm 1": {
+            url: "https://example.com/<query>",
+          },
+        },
+      },
+    });
+    const exitSpy = jest.spyOn(process, "exit").mockImplementation((() => undefined) as never);
+
+    new Validator().validateData();
+
+    expect(validateMock).toHaveBeenNthCalledWith(1, "https://trovu.net/schema/test.yml", {
+      namespaces: ["o"], language: "en", country: "us",
+    });
+    expect(validateMock).toHaveBeenNthCalledWith(2, "https://trovu.net/schema/test.yml", {
+      "gm 1": {
+        url: "https://example.com/<query>",
+      },
+    });
+    expect(exitSpy).not.toHaveBeenCalled();
   });
 });
