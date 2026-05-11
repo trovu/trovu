@@ -251,6 +251,12 @@ export default class Home {
     let redirectUrl: string;
     if (response.status === "found") {
       redirectUrl = response.redirectUrl;
+      if (this.env.isRunningStandalone()) {
+        const openedWindow = window.open(redirectUrl, "_blank", "noopener,noreferrer");
+        if (openedWindow) {
+          return;
+        }
+      }
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
