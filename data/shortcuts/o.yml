@@ -7366,8 +7366,8 @@ nxu 1:
   examples:
   - arguments: firefox
     description: Search for "firefox"
-oca 1:
-  url: https://openclipart.org/search/?query=<query>
+oca 0:
+  url: https://openclipart.org/
   title: Open Clip Art Library
   tags:
   - clipart
@@ -7375,24 +7375,42 @@ oca 1:
   - images
   - public-domain
   examples:
+  - description: Go to the homepage
+  description: Openclipart is a free collection of public-domain clip art and illustrations.
+oca 1:
+  url: https://openclipart.org/search/?query=<query>
+  include: oca 0
+  examples:
   - arguments: rss
     description: Search for free RSS icons
-oeis 1:
-  url: https://oeis.org/search?q=<sequence>
+oeis 0:
+  url: https://oeis.org/
   title: On-Line Encyclopedia of Integer Sequences
   tags:
   - math
   - mathematics
   examples:
+  - description: Go to the homepage
+  description: OEIS is a searchable database of integer sequences used across mathematics and computer science.
+oeis 1:
+  url: https://oeis.org/search?q=<sequence>
+  include: oeis 0
+  examples:
   - arguments: 13 17 19
     description: Search the sequence 1 3 5 7 11
-okf 1:
-  url: https://otrkeyfinder.com/de/?search=<Suche>
+okf 0:
+  url: https://otrkeyfinder.com/
   title: otrkeyfinder.com
   tags:
   - onlinetvrecorder
   - otr
   - tv
+  examples:
+  - description: Go to the homepage
+  description: otrkeyfinder.com helps you find downloadable recording keys for OnlineTVRecorder content.
+okf 1:
+  url: https://otrkeyfinder.com/de/?search=<Suche>
+  include: okf 0
   examples:
   - arguments: nachrichten
     description: Suche nach Nachrichten
@@ -7435,22 +7453,40 @@ oopdf 1:
   examples:
   - arguments: machine learning
     description: Search for books about "machine learning"
+openbsd 0:
+  url: https://man.openbsd.org/
+  title: OpenBSD Manual Pages
+  tags:
+  - bsd
+  - documentation
+  - manual-pages
+  - openbsd
+  examples:
+  - description: Go to the homepage
+  description: The OpenBSD manual pages site documents commands, libraries, and system interfaces for OpenBSD.
 openbsd 1:
   url: https://man.openbsd.org/<query>
-  title: OpenBSD Manual Pages
-opennlp 1:
-  url: https://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fwww.opennlp.org%2Fapi%2Findex.html%20<query>&ie=utf-8
-  title: OpenNLP API
+  include: openbsd 0
+opennlp 0:
+  url: https://opennlp.apache.org/
+  title: Apache OpenNLP
   tags:
-  - old
-opensub 1:
-  url: https://www.opensubtitles.org/de/search2/moviename-<query>
-  title: OpenSubtitles
-  tags:
-  - subtitles
+  - java
+  - machine-learning
+  - nlp
+  - programming
   examples:
-  - arguments: loose change
-    description: Search subtitles for "loose change"
+  - description: Go to the homepage
+  description: Apache OpenNLP is an open-source Java library for natural language processing tasks.
+opennlp 1:
+  url: https://www.google.com/search?hl=<$language>&q=site:opennlp.apache.org/docs%20<query>&ie=utf-8
+  title: OpenNLP API
+  include: opennlp 0
+opensub 1:
+  deprecated:
+    alternative:
+      query: osub <1>
+    created: '2026-05-11'
 opensuse 0:
   url: https://www.opensuse.org/
   title: openSUSE Linux Operating System
@@ -7540,35 +7576,34 @@ osm 0:
   - copyleft
   - maps
   - osm
+  examples:
+  - description: Go to the homepage
+  description: OpenStreetMap is a collaborative world map that anyone can use and improve.
 osm 1:
   url: https://www.openstreetmap.org/search?query=<location>
-  title: OpenStreetMap
-  tags:
-  - copyleft
-  - maps
-  - openstreetmap
-  - osm
+  include: osm 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
 osm 2:
   url: 'https://www.openstreetmap.org/search?query=<city: {type: city}>%2C%20<location>'
-  title: OpenStreetMap with city
-  tags:
-  - copyleft
-  - maps
-  - openstreetmap
-  - osm
+  include: osm 0
   examples:
   - arguments: b, brandenburger tor
     description: Search for Brandenburger Tor in Berlin (abbreviated city name)
-osm! 1:
-  url: https://nominatim.openstreetmap.org/search.php?q=<location>
+osm! 0:
+  url: https://nominatim.openstreetmap.org/
   title: OpenStreetMap Nominatim
   tags:
   - copyleft
   - maps
   - osm
+  examples:
+  - description: Go to the homepage
+  description: Nominatim is the OpenStreetMap geocoding service for searching places and addresses.
+osm! 1:
+  url: https://nominatim.openstreetmap.org/search.php?q=<location>
+  include: osm! 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -7579,23 +7614,18 @@ osm? 0:
   - copyleft
   - maps
   - osm
+  examples:
+  - description: Go to the homepage
+  description: The OpenStreetMap Wiki documents mapping conventions, tools, and community knowledge around OSM.
 osm? 1:
   url: https://wiki.openstreetmap.org/index.php/Special:Search?search=<query>&fulltext=Search
-  title: OpenStreetMap Wiki
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm? 0
   examples:
   - arguments: import
     description: Search for "import"
 osmc 1:
   url: https://www.openstreetmap.org/browse/changeset/<changeset>
-  title: OpenStreetMap Changeset Browser
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm 0
   examples:
   - arguments: '5275118'
     description: Search for "5275118"
@@ -7608,99 +7638,92 @@ osmf 0:
   - osm
 osmg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=wiki.openstreetmap.org&domains=wiki.openstreetmap.org&q=<page>
-  title: OpenStreetMap Wiki via Google
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm? 0
   examples:
   - arguments: import
     description: Search for "import"
 osmk 1:
   url: https://wiki.openstreetmap.org/wiki/Key:<key>
   title: 'OpenStreetMap Wiki: Key Reference'
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm? 0
   examples:
   - arguments: highway
     description: Search for "highway"
 osmn 1:
   url: https://www.openstreetmap.org/browse/node/<node>
-  title: OpenStreetMap Node Browser
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm 0
   examples:
   - arguments: '847124696'
     description: Search for "847124696"
 osmr 1:
   url: https://www.openstreetmap.org/browse/relation/<relation>
-  title: OpenStreetMap Relation Browser
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm 0
   examples:
   - arguments: '206570'
     description: Search for "206570"
-osmrank 1:
-  url: https://hdyc.neis-one.org/?<user>
+osmrank 0:
+  url: https://hdyc.neis-one.org/
   title: OpenStreetMap User Rank
   tags:
   - copyleft
   - maps
   - osm
   examples:
+  - description: Go to the homepage
+  description: This site visualizes how much an OpenStreetMap user has contributed over time.
+osmrank 1:
+  url: https://hdyc.neis-one.org/?<user>
+  include: osmrank 0
+  examples:
   - arguments: jorges
     description: Search for "jorges"
-osmti 1:
-  url: https://taginfo.openstreetmap.org/keys/<key>
-  title: OpenStreetMap Tag Info
+osmti 0:
+  url: https://taginfo.openstreetmap.org/
+  title: OpenStreetMap Taginfo
   tags:
   - copyleft
   - maps
   - osm
+  examples:
+  - description: Go to the homepage
+  description: OpenStreetMap Taginfo shows how keys and values are used across OSM data.
+osmti 1:
+  url: https://taginfo.openstreetmap.org/keys/<key>
+  include: osmti 0
   examples:
   - arguments: highway
     description: Search for "highway"
 osmti 2:
   url: https://taginfo.openstreetmap.org/tags/<key>=<value>
-  title: OpenStreetMap Tag Info
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osmti 0
   examples:
   - arguments: higway, residential
     description: Search for highway=residential
 osmu 1:
   url: https://www.openstreetmap.org/user/<user>
-  title: OpenStreetMap User
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm 0
   examples:
   - arguments: jorges
     description: Search for "jorges"
 osmw 1:
   url: https://www.openstreetmap.org/browse/way/<way>
-  title: OpenStreetMap Way Browser
-  tags:
-  - copyleft
-  - maps
-  - osm
+  include: osm 0
   examples:
   - arguments: '23425344'
     description: Search for "23425344"
-osub 1:
-  url: https://www.opensubtitles.org/de/search2/moviename-<query>
+osub 0:
+  url: https://www.opensubtitles.org/
   title: OpenSubtitles
   tags:
+  - movies
   - subtitles
+  - tv
+  examples:
+  - description: Go to the homepage
+  description: Large subtitle database for movies and TV series in many languages.
+osub 1:
+  url: https://www.opensubtitles.org/en/search2?MovieName=<query>
+  include: opensub 0
 otr 0:
   url: https://www.onlinetvrecorder.com/
   title: OnlineTvRecorder (Web Online TV Recorder)
@@ -7709,25 +7732,26 @@ otto 1:
     alternative:
       query: .de.otto <1>
     created: '2025-05-19'
-oujs 1:
-  url: https://openuserjs.org/?q=<query>
+oujs 0:
+  url: https://openuserjs.org/
   title: OpenUserJS
   tags:
   - javascript
   - userscripts
   examples:
+  - description: Go to the homepage
+  description: OpenUserJS is a community repository for browser userscripts and related libraries.
+oujs 1:
+  url: https://openuserjs.org/?q=<query>
+  include: oujs 0
+  examples:
   - arguments: qr
     description: Search OpenUserJS for "qr"
-ov 0:
-  url: https://www.onvista.de
-  title: OnVista
-  tags:
-  - old
 ov 1:
-  url: https://www.onvista.de/suche.html?SEARCH_VALUE=<query>
-  title: OnVista
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.ov <1>
+    created: '2026-05-11'
 owid 0:
   url: https://ourworldindata.org/
   title: Our World in Data

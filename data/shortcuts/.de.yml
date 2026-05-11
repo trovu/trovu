@@ -5455,6 +5455,18 @@ otto 1:
   examples:
   - arguments: fernseher
     description: Suche nach Fernsehern
+ov 0:
+  url: https://www.onvista.de
+  title: OnVista
+  tags:
+  - finance
+  - stock-market
+  - trading
+  examples:
+  - description: Go to the homepage
+ov 1:
+  url: https://www.onvista.de/suche.html?SEARCH_VALUE=<query>
+  include: ov 0
 p 2:
   deprecated:
     alternative:
