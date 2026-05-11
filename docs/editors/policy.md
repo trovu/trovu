@@ -59,9 +59,9 @@ If the shortcut shall belong to a language or country namespace, then its websit
 
 ### 2-letter keywords: Language codes have priority
 
-A keyword with 2 letters shall be used for a dictionary of that language, using its [ISO-639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Table_of_all_possible_two_letter_codes) (e.g. `en`, `fr`, `be`). Such shortcuts should be put into a language namespace.
+If a two-letter combination corresponds to an [ISO-639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Table_of_all_possible_two_letter_codes) (e.g., `en`, `fr`, `de`), the keyword should be treated as a dictionary for that language.
 
-If the shortcut is not about a dictionary, then it should _not_ use a ISO-639-1 language code. This is to keep the space for a potential future dictionary shortcut.
+It may only be used as a keyword for other purposes if it does not match a language code."
 
 ### Abbreviate by first sounds of words and/or syllables
 
