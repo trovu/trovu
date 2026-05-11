@@ -51,7 +51,3 @@ If you want to add custom shortcuts to your local installation (that shall be av
 ## Use Local Installation
 
 If you prefer a local installation over the use of the public version [trovu.net](https://trovu.net/), you can [set your local Trovu version as your default search engine](../users/integration.md) (just use your web server's domain or your localhost as its domain).
-
-## Code documentation
-
-An auto-created documentation of the code by [JSDoc](https://jsdoc.app/) is also [available](code/).
