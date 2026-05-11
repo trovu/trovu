@@ -7053,11 +7053,19 @@ n 1:
   - arguments: Broadchurch
     description: Search Netflix for "Broadchurch"
   description: searches Netflix for a movie or series
-nag 1:
-  url: https://google.com/search?hl=<$language>&q=<query>+inurl%3Anagios.sourceforge.net%2Fdocs
-  title: Nagios
+nag 0:
+  url: site:library.nagios.com test
+  title: Nagios Documentation
   tags:
-  - old
+  - documentation
+  - monitoring
+  - nagios
+  examples:
+  - description: Go to the homepage
+  description: Monitoring system that enables organizations to identify and resolve IT infrastructure issues before they affect critical business processes.
+nag 1:
+  url: https://www.google.com/search?hl=<$language>&sitesearch=library.nagios.com&q=<query>
+  include: nag 0
 nb 0:
   include:
   - key: nb 0
