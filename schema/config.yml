@@ -1,0 +1,61 @@
+"$schema": "http://json-schema.org/draft-07/schema#"
+"$id": "https://trovu.net/schema/config.yml"
+title: Trovu config.yml
+type: object
+additionalProperties: false
+properties:
+  namespaces:
+    type: array
+    items:
+      oneOf:
+        - type: string
+        - type: object
+          additionalProperties: false
+          properties:
+            name:
+              type: string
+            github:
+              type: string
+            url:
+              type: string
+              pattern: '^https?://.*$'
+            shortcuts:
+              "$ref": "https://trovu.net/schema/shortcuts.yml"
+          anyOf:
+            - properties:
+                github:
+                  type: string
+              required:
+                - github
+            - properties:
+                name:
+                  type: string
+                url:
+                  type: string
+              required:
+                - name
+                - url
+            - properties:
+                name:
+                  type: string
+                shortcuts: {}
+              required:
+                - name
+                - shortcuts
+  defaultKeyword:
+    type: string
+  language:
+    type: string
+  country:
+    type: string
+  url:
+    type: object
+    additionalProperties: false
+    properties:
+      blog:
+        type: string
+      docs:
+        type: string
+      impressum:
+        type: string
+        pattern: '^https?://.*$'
