@@ -7254,13 +7254,18 @@ nobi 1:
     alternative:
       query: .de.nbi <1>
     created: '2025-05-19'
-npm 1:
-  url: https://npmjs.org/search?q=<query>
+npm 0:
+  url: https://npmjs.org/
   title: Node.js Package Manager
   tags:
   - javascript
   - node.js
   - programming
+  examples:
+  - description: Go to the homepage
+npm 1:
+  url: https://npmjs.org/search?q=<query>
+  include: npm 0
   examples:
   - arguments: mkdir
     description: search for a module to create folders on the filesystem
