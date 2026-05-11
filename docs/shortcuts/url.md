@@ -39,7 +39,9 @@ The contents of a placeholder follows [YAML Flow Style](https://www.yaml.info/le
 
 ## Input encoding
 
-...
+### iso-8859-1
+
+Encodes the argument as ISO-8859-1.
 
 ## Argument types
 
