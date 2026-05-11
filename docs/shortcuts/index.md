@@ -4,6 +4,8 @@ Shortcuts are defined in YAML files, organized by [namespaces](namespaces.md). I
 
 For the value, there is a short and a long notation possible. Curated shortcuts in `/data` should follow the long notation.
 
+You can find a detailled definition in the public [schema](https://trovu.net/schema/shortcuts.yml).
+
 ### Short notation
 
 In the short notation, the [URL](url.md) is directly the value of the shortcut.
