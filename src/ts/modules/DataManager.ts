@@ -1,4 +1,3 @@
-
 /** @module DataManager */
 import Logger from "./Logger";
 import NamespaceFetcher from "./NamespaceFetcher";
@@ -30,7 +29,7 @@ export default class DataManager {
     this.normalizeShortcuts(data.shortcuts);
     this.normalizeTags(data.shortcuts);
     this.verifyShortcuts(data.shortcuts);
-    DataManager.writeYmls(`${options.data}/${options.shortcuts}/`, data.shortcuts);
+    DataManager.writeYmls(`${options.data}/${options.shortcuts}/`, data.shortcuts, "shortcuts");
     DataManager.writeYmls(`${options.data}/${options.types}/city/`, data.types.city);
     DataManager.writeYmls(`${options.data}/${options.types}/date/`, data.types.date);
   }
@@ -149,15 +148,21 @@ export default class DataManager {
    * @param {string} ymlDirPath
    * @param {object} dataByFileRoot - The data to write to YAML files.
    */
-  static writeYmls(ymlDirPath: string, dataByFileRoot: AnyObject) {
+  static writeYmls(ymlDirPath: string, dataByFileRoot: AnyObject, schemaName?: string) {
+    const schemaHeader = schemaName
+      ? `# yaml-language-server: $schema=https://trovu.net/schema/${schemaName}.yml\n`
+      : "";
+
     for (const fileRoot in dataByFileRoot) {
       dataByFileRoot[fileRoot] = this.sortObject(dataByFileRoot[fileRoot]);
       const filePath = `${ymlDirPath}/${fileRoot}.yml`;
-      const str = jsyaml.dump(dataByFileRoot[fileRoot], {
+
+      const yamlContent = jsyaml.dump(dataByFileRoot[fileRoot], {
         noArrayIndent: true,
         lineWidth: -1,
       });
-      fs.writeFileSync(filePath, str, "utf8");
+
+      fs.writeFileSync(filePath, schemaHeader + yamlContent, "utf8");
     }
   }
 
