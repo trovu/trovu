@@ -1976,6 +1976,22 @@ datev 1:
     alternative:
       query: de.datev <1>
     created: '2024-12-09'
+dbc 0:
+  url: https://deathbyclawd.com/
+  title: Death By Clawd
+  tags:
+  - ai
+  - future
+  - technology
+  examples:
+  - description: Go to the homepage
+  description: Predicts the likelihood of various companies and domains being replaced by AI in the future.
+dbc 1:
+  url: https://deathbyclawd.com/?url=<domain or url>
+  include: dbc 0
+  examples:
+  - arguments: google.com
+    description: Check likelihood of Google.com to be replaced by AI.
 dblp 0:
   url: https://www.dblp.org/search/
   title: DBLP Computer Science Bibliography
