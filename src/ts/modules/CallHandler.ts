@@ -41,7 +41,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.openUrl(redirectUrl, env, true);
   }
 
   /**
@@ -132,5 +132,35 @@ export default class CallHandler {
     const paramStr = env.buildUrlParamStr(params);
     const redirectUrl = "../index.html#" + paramStr;
     return redirectUrl;
+  }
+
+  static shouldOpenExternally(url: string, env: AnyObject) {
+    if (!url || !env.isRunningStandalone || !env.isRunningStandalone()) {
+      return false;
+    }
+
+    try {
+      const targetUrl = new URL(url, window.location.href);
+      if (targetUrl.protocol === "http:" || targetUrl.protocol === "https:") {
+        return targetUrl.origin !== window.location.origin;
+      }
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  static openUrl(url: string, env: AnyObject, replace = false) {
+    if (this.shouldOpenExternally(url, env)) {
+      window.open(url, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    if (replace) {
+      window.location.replace(url);
+      return;
+    }
+
+    window.location.href = url;
   }
 }

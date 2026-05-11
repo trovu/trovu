@@ -254,7 +254,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    CallHandler.openUrl(redirectUrl, this.env);
   };
 
   /**
