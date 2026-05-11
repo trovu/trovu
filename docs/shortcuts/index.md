@@ -44,11 +44,11 @@ examplekeyword 2:
 
 These attributes serve only for informational purposes, they have no effect on which shortcut is matched to a query:
 
--   The `title:` can be any string. It will be shown in the list of shortcuts on the homepage.
--   `description:` can be a longer string. It will be shown in the list of shortcuts when a shortcut is expanded.
--   `tags:` can be a list of labels. See [tags](tags.md) for more.
--   `examples:` can be a list of example usages of the shortcuts:
--   `tests:` can be a list of test calls to check the validity of the shortcut.
+- The `title:` can be any string. It will be shown in the list of shortcuts on the homepage.
+- `description:` can be a longer string. It will be shown in the list of shortcuts when a shortcut is expanded.
+- `tags:` can be a list of labels. See [tags](tags.md) for more.
+- `examples:` can be a list of example usages of the shortcuts:
+- `tests:` can be a list of test calls to check the validity of the shortcut.
 
 #### Examples
 
@@ -82,6 +82,6 @@ A test must have an `expect:` value that shall be part of the contents of the ta
 
 The next attributes matter for matching a query:
 
--   [`url:`](url.md)
--   [`include:`](include.md)
--   [`deprecated:`](deprecated.md)
+- [`url:`](url.md)
+- [`include:`](include.md)
+- [`deprecated:`](deprecated.md)
