@@ -43,8 +43,8 @@ namespaces:
 
 This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use. Every entry may be either
 
--   a string: Then it refers to an (official) site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts in there are curated by the Trovu community.
--   key/value pairs, then they refer to a user namespace, e.g. your (or someone else's) user namespace in GitHub. Read more below.
+- a string: Then it refers to an (official) site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts in there are curated by the Trovu community.
+- key/value pairs, then they refer to a user namespace, e.g. your (or someone else's) user namespace in GitHub. Read more below.
 
 The **order** is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `mydomain` have the highest precedence.
 
