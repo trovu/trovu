@@ -44,7 +44,21 @@ For building more, like the blog and the docs, have a look on the [GitHub workfl
 
 Now, open the displayed URL of the local server in your browser. You should see the Trovu website.
 
-### Add custom shortcuts
+## Testing
+
+If you made changes, you can run automated tests with
+
+```bash
+npm run test
+```
+
+For more test-related commands, run
+
+```bash
+npm run
+```
+
+## Add custom shortcuts
 
 If you want to add custom shortcuts to your local installation (that shall be available as [site namespaces](../shortcuts/namespaces.md)), simply put one (or more) YAML files into [/data/shortcuts/](https://github.com/trovu/trovu/tree/master/data/shortcuts). Then, run `npm run build` again.
 
