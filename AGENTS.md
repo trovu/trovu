@@ -36,7 +36,7 @@ When in doubt, treat `.github/workflows/deploy.yml` as the source of truth for w
 
 - `data/shortcuts/`: curated shortcut namespaces as YAML
 - `data/types/`: typed argument dictionaries, notably city and date data
-- `data/schema/shortcuts.yml`: JSON schema used by `validate-data`
+- `schema/`: YAML schemas used by `validate-data` and published to `/schema/`
 - `src/html/`, `src/scss/`, `src/js/`, `src/manifest/`, `src/favicon/`: static app assets
 - `docs/`: MkDocs source
 - `blog/`: Eleventy source
