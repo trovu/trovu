@@ -7062,14 +7062,15 @@ n 0:
   - series
   - stream
   - video
-  description: go to Netflix homepage
+  examples:
+  - description: Go to the homepage
+  description: A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
 n 1:
   url: https://www.netflix.com/search/<query>
   include: n 0
   examples:
   - arguments: Broadchurch
-    description: Search Netflix for "Broadchurch"
-  description: searches Netflix for a movie or series
+    description: Search for "Broadchurch"
 nag 0:
   url: https://library.nagios.com/
   title: Nagios Documentation
