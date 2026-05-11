@@ -48,6 +48,10 @@ There is also a [video summarizing Trovu in 30 seconds](https://www.youtube.com/
 - [`php strlen`](https://trovu.net/process/index.html#query=php+strlencsv) – Open PHP docs for `strlen()`
 - [`npm csv`](https://trovu.net/process/index.html#query=npm+csv) – Search the Node Package Manager for modules projects about CSV
 
+## Full raw data
+
+All shortcuts can be found in the [data.json](https://trovu.net/data.json).
+
 ## Links
 
 to Trovu profiles around the web:

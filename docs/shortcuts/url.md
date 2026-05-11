@@ -16,12 +16,14 @@ It contains 2 placeholders: `<query>` and `<$language>`.
 
 Placeholders are either
 
--   arguments (starting with `<` and ending with `>`): They are replaced with the input from the current query,
--   variables (starting with `<$` and ending with `>`): They are replaced with settings from the current configuration.
+- arguments (starting with `<` and ending with `>`): They are replaced with the input from the current query,
+- variables (starting with `<$` and ending with `>`): They are replaced with settings from the current configuration.
 
 The contents of a placeholder follows [YAML Flow Style](https://www.yaml.info/learn/flowstyle.html).
 
 ### Argument placeholders
+
+Argument placeholders can be given any name.
 
 | Example                                                          | Will be replaced with                                                                                                                              |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,7 +41,9 @@ The contents of a placeholder follows [YAML Flow Style](https://www.yaml.info/le
 
 ## Input encoding
 
-...
+### iso-8859-1
+
+Encodes the argument as ISO-8859-1.
 
 ## Argument types
 
@@ -47,12 +51,12 @@ The contents of a placeholder follows [YAML Flow Style](https://www.yaml.info/le
 
 The input will be parsed as a date.
 
--   American and European inputs will be distinguished.
--   An input containing only a number will be assumed as a day of month.
--   A date in the future will be enforced.
--   Also, relative inputs are possible.
--   Weekday abbreviations are understood, too. The language is assumed from the configured language.
--   With the attribute `output`, an output format based on [dayjs's format](https://day.js.org/docs/en/display/format) can be specified. Defaults to YYYY-MM-DD.
+- American and European inputs will be distinguished.
+- An input containing only a number will be assumed as a day of month.
+- A date in the future will be enforced.
+- Also, relative inputs are possible.
+- Weekday abbreviations are understood, too. The language is assumed from the configured language.
+- With the attribute `output`, an output format based on [dayjs's format](https://day.js.org/docs/en/display/format) can be specified. Defaults to YYYY-MM-DD.
 
 | Example input | Example output | Explanation                                                                                     |
 | ------------- | -------------- | ----------------------------------------------------------------------------------------------- |
@@ -68,10 +72,10 @@ The input will be parsed as a date.
 
 The input will be parsed as a time.
 
--   Hours and minutes can be separated by `.` or `:`.
--   It is allowed to only provide an hour.
--   Relative hours work, too.
--   With the attribute `output`, an output format based on [dayjs's format](https://day.js.org/docs/en/display/format) can be specified. Defaults to `HH:mm`.
+- Hours and minutes can be separated by `.` or `:`.
+- It is allowed to only provide an hour.
+- Relative hours work, too.
+- With the attribute `output`, an output format based on [dayjs's format](https://day.js.org/docs/en/display/format) can be specified. Defaults to `HH:mm`.
 
 | Example input | Example output | Explanation       |
 | ------------- | -------------- | ----------------- |
