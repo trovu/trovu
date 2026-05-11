@@ -23,6 +23,8 @@ The contents of a placeholder follows [YAML Flow Style](https://www.yaml.info/le
 
 ### Argument placeholders
 
+Argument placeholders can be given any name.
+
 | Example                                                          | Will be replaced with                                                                                                                              |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<foobar>`                                                       | argument from query. <br>If there is more than one argument placeholder, their order in URL also defines the expected order in the shortcut query. |
