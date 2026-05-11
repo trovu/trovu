@@ -7074,6 +7074,21 @@ nb 1:
   include:
   - key: nb 1
     namespace: pka
+nbk 0:
+  url: https://nicebooks.com/
+  title: NiceBooks
+  tags:
+  - books
+  - nicebooks
+  - shopping
+  examples:
+  - description: Go to the homepage
+nbk 1:
+  url: https://nicebooks.com/search?q=<query>
+  include: nbs 0
+  examples:
+  - arguments: shakespeare
+    description: Search for "shakespeare"
 nbsd 0:
   url: https://man.netbsd.org/
   title: NetBSD Manual Pages
@@ -7139,20 +7154,20 @@ ng 1:
   - arguments: filter
     description: Show documentation on "filter"
 nicebooks:fr 1:
-  url: https://fr.nicebooks.com/search?q=<query>
-  title: NiceBooks
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .fr.nbk <1>
+    created: '2026-05-11'
 nicebooks:uk 1:
-  url: https://uk.nicebooks.com/search?q=<query>
-  title: NiceBooks
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .gb.nbk <1>
+    created: '2026-05-11'
 nicebooks:us 1:
-  url: https://us.nicebooks.com/search?q=<query>
-  title: NiceBooks
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .us.nbk <1>
+    created: '2026-05-11'
 nl 0:
   include:
   - key: nl 0

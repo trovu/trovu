@@ -53,6 +53,20 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
+nbk 0:
+  url: https://nicebooks.com/uk/
+  title: NiceBooks USA
+  include:
+    key: nbk 0
+    namespace: o
+  examples:
+  - description: Go to the homepage
+nbk 1:
+  url: https://nicebooks.com/uk/search?q=<query>
+  include: nbs 0
+  examples:
+  - arguments: shakespeare
+    description: Search for "shakespeare"
 nr 0:
   url: https://www.nationalrail.co.uk/
   title: National Rail
