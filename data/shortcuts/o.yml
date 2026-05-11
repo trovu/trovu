@@ -7054,7 +7054,7 @@ n 1:
     description: Search Netflix for "Broadchurch"
   description: searches Netflix for a movie or series
 nag 0:
-  url: site:library.nagios.com test
+  url: https://library.nagios.com/
   title: Nagios Documentation
   tags:
   - documentation
