@@ -9987,8 +9987,10 @@ th 1:
   - key: th 1
     namespace: pka
 thomann 1:
-  url: https://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw=<query>&x=&y=
-  title: Thomann Suche
+  deprecated:
+    alternative:
+      query: .de.thom <1>
+    created: '2026-05-12'
   tags:
   - old
 thsr 1:
