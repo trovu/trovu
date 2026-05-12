@@ -9125,12 +9125,17 @@ s 0:
   url: https://startpage.com/
   title: Startpage.com
   tags:
+  - privacy
   - web-search
+  examples:
+  - description: Go to the homepage
+  description: Startpage is a privacy-focused search engine that delivers web results without tracking users.
 s 1:
   url: https://www.startpage.com/sp/search?query=<query>
-  title: Startpage.com
-  tags:
-  - web-search
+  tests:
+  - arguments: berlin
+    expect: berlin
+  include: s 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -9140,18 +9145,15 @@ sanego 2:
       query: .de.sng <1>, <2>
     created: '2026-05-11'
 sc 0:
-  url: https://soundcloud.com
-  title: Soundcloud
-  tags:
-  - music
+  deprecated:
+    alternative:
+      query: scl 0
+    created: '2026-05-11'
 sc 1:
-  url: https://soundcloud.com/search?q=<query>
-  title: Soundcloud
-  tags:
-  - music
-  examples:
-  - arguments: chillout
-    description: Search for chillout music on Soundcloud.com
+  deprecated:
+    alternative:
+      query: scl <1>
+    created: '2026-05-11'
 scala 0:
   url: https://www.scala-lang.org/api/current/
   title: Scala Standard Library
@@ -9163,32 +9165,57 @@ scala 0:
   - programming
   - programming-language
   - scala
+  examples:
+  - description: Go to the homepage
+  description: The Scala Standard Library API docs provide reference documentation for Scala's core classes and methods.
 scala 1:
   url: https://www.scala-lang.org/api/current/?search=<query>
-  title: Scala Standard Library
-  tags:
-  - api
-  - apidoc
-  - documentation
-  - jvm
-  - programming
-  - programming-language
-  - scala
+  tests:
+  - arguments: AnyVal
+    expect: AnyVal
+  include: scala 0
   examples:
   - arguments: AnyVal
     description: Search for "AnyVal"
-sci-hub 1:
-  url: https://sci-hub.do/<query>
-  title: Sci-Hub
+scl 0:
+  url: https://soundcloud.com/
+  title: Soundcloud
   tags:
-  - open-access
+  - audio
+  - music
+  - stream
   examples:
-  - arguments: 10.1111/nyas.13068
-    description: Search for "10.1111/nyas.13068"
-  description: Sci-Hub is a shadow library website that provides free access to millions of research papers and books, without regard to copyright, by bypassing publishers' paywalls in various ways.
+  - description: Go to the homepage
+  description: SoundCloud is an online audio platform for streaming, sharing, and discovering music and podcasts.
+scl 1:
+  url: https://soundcloud.com/search?q=<query>
+  tests:
+  - arguments: chillout
+    expect: SoundCloud
+  include: sc 0
+  examples:
+  - arguments: chillout
+    description: Search for chillout music on Soundcloud.com
+scry 0:
+  url: https://scryfall.com/
+  title: 'Scryfall: Magic the Gathering cards'
+  tags:
+  - cards
+  - games
+  - magic-the-gathering
+  - search
+  examples:
+  - description: Go to the homepage
+  description: 'Scryfall is a comprehensive search engine and card database for Magic: The Gathering.'
 scry 1:
   url: https://scryfall.com/search?q=<query>
-  title: 'Scryfall: Magic the Gathering cards'
+  tests:
+  - arguments: Lightning Bolt
+    expect: Lightning Bolt
+  include: scry 0
+  examples:
+  - arguments: Lightning Bolt
+    description: Search for the Magic card "Lightning Bolt"
 se 0:
   include:
   - key: se 0
@@ -9202,27 +9229,44 @@ se 2:
   title: Stack Exchange
   tags:
   - old
-semlex 1:
-  url: https://gmb.let.rug.nl/explorer/semlex.php?entrysortkey=frequency_lemma&entrysortorder=desc&lemma=<lemma>
-  title: GMB Explorer, semantic lexicon
-  tags:
-  - old
 sep 0:
-  url: https://plato.stanford.edu
+  url: https://plato.stanford.edu/
   title: Stanford Encyclopedia of Philosophy
+  tags:
+  - encyclopedia
+  - philosophy
+  - reference
+  examples:
+  - description: Go to the homepage
+  description: The Stanford Encyclopedia of Philosophy is a scholarly reference work covering major topics and thinkers in philosophy.
 sep 1:
   url: https://plato.stanford.edu/search/searcher.py?query=<query>
-  title: Stanford Encyclopedia of Philosophy
+  tests:
+  - arguments: Kant
+    expect: Kant
+  include: sep 0
+  examples:
+  - arguments: Kant
+    description: Search for philosophy entries about Kant
 sf 0:
-  url: https://sourceforge.net/account/login.php
+  url: https://sourceforge.net/
   title: Sourceforge
   tags:
-  - old
+  - open-source
+  - software
+  - source-code
+  examples:
+  - description: Go to the homepage
+  description: SourceForge hosts open-source software projects, downloads, and developer tools.
 sf 1:
   url: https://sourceforge.net/search/?type_of_search=soft&words=<query>
-  title: Sourceforge
-  tags:
-  - old
+  tests:
+  - arguments: FileZilla
+    expect: FileZilla
+  include: sf 0
+  examples:
+  - arguments: FileZilla
+    description: Search SourceForge for FileZilla
 sg 0:
   include:
   - key: sg 0
@@ -9235,37 +9279,20 @@ sgo 0:
   url: https://sources.gentoo.org/
   title: Show Gentoo ebuild sources
   tags:
-  - old
-sgw 1:
-  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sband=1&salbum=1&stitle=1&stext=&sgo=search
-  title: Sturmgeweiht (Searches for everything)
-  tags:
-  - old
-sgwa 1:
-  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&salbum=1&sgo=search
-  title: Sturmgeweiht (Searches for an album)
-  tags:
-  - old
-sgwb 1:
-  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sband=1&sgo=search
-  title: Sturmgeweiht (Searches for a band)
-  tags:
-  - old
-sgwte 1:
-  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&sgo=search&stext=1
-  title: Sturmgeweiht (Searches for a text)
-  tags:
-  - old
-sgwti 1:
-  url: https://sturmgeweiht.de/suche/index.php?lang=en&sq=<entry>&stitle=1&sgo=search
-  title: Sturmgeweiht (Searches for a title)
-  tags:
-  - old
+  - developer-tool
+  - hash
+  - security
+  examples:
+  - description: Go to the homepage
+  description: This online hash tool calculates checksums for input text using several common algorithms.
 sha1 1:
   url: https://stefanschramm.net/dev/hash/?algo=sha1&q=<data>
   title: Hash functions
   tags:
   - old
+  examples:
+  - arguments: trovu
+    description: Generate the SHA-1 hash for "trovu"
 shiri 0:
   url: https://www.shouldiremoveit.com/
   title: ShouldIRemoveIt
@@ -9285,11 +9312,6 @@ shiri 1:
   examples:
   - arguments: Browserdefender
     description: Search for recommendations if Browserdefender is a useful program.
-shot 1:
-  url: https://www.superscreenshot.com/getscreen.php?url=<url>
-  title: Screenshot from Url
-  tags:
-  - old
 si 0:
   include:
   - key: si 0
@@ -9300,9 +9322,15 @@ si 1:
     namespace: pka
 sim 1:
   url: https://www.startpage.com/sp/search?query=<query>&cat=pics
-  title: Startpage.com images
+  title: Startpage.com, images
+  tests:
+  - arguments: berlin
+    expect: berlin
   tags:
+  - image-search
+  - privacy
   - web-search
+  include: s 0
   examples:
   - arguments: berlin
     description: Search for images of "berlin"
@@ -9339,15 +9367,6 @@ skapiec 0:
     alternative:
       query: .pl.skp
     created: '2025-05-17'
-skyrock 1:
-  url: https://www.skyrock.com/search/articles/?q=<query>
-  title: Skyrock.com
-  tags:
-  - blogs
-  - music
-  examples:
-  - arguments: music
-    description: Search for "music"
 sl 0:
   include:
   - key: sl 0
@@ -9376,23 +9395,50 @@ slashdot 0:
   url: https://slashdot.org/
   title: Slashdot
   tags:
+  - linux
   - news
+  - technology
+  examples:
+  - description: Go to the homepage
+  description: Slashdot is a technology news and discussion site focused on open source, science, and internet culture.
 slashdot 1:
   url: https://slashdot.org/?fhfilter=<query>
-  title: Slashdot
-  tags:
-  - news
+  tests:
+  - arguments: linux
+    expect: linux
+  include: slashdot 0
   examples:
   - arguments: linux
     description: Search for Slashdot news about Linux
+smfmod 0:
+  url: https://custom.simplemachines.org/mods/
+  title: Simple Machines modifications
+  tags:
+  - forum
+  - mods
+  - software
+  examples:
+  - description: Go to the homepage
+  description: Simple Machines modifications extend SMF forum installations with add-ons and integrations.
 smfmod 1:
   url: https://custom.simplemachines.org/mods/index.php?action=search&basic_search=<query>
-  title: Search for Modifications
-  tags:
-  - old
-smw 1:
-  url: https://www.similarweb.com/website/<domain>
+  include: smfmod 0
+  examples:
+  - arguments: gallery
+    description: Search SMF modifications for gallery-related add-ons
+smw 0:
+  url: https://www.similarweb.com/
   title: SimilarWeb
+  tags:
+  - analytics
+  - traffic
+  - website
+  examples:
+  - description: Go to the homepage
+  description: SimilarWeb provides website traffic estimates and audience insights for public web domains.
+smw 1:
+  url: https://www.similarweb.com/website/<domain>/
+  include: smw 0
   examples:
   - arguments: findfind.it
     description: Search SimilarWeb for "findfind.it"
@@ -9404,11 +9450,6 @@ sn 1:
   include:
   - key: sn 1
     namespace: pka
-snipmp3 1:
-  url: https://snipmp3.com/?url=<url>
-  title: Snipmp3
-  tags:
-  - old
 so 0:
   include:
   - key: so 0
@@ -9426,56 +9467,73 @@ sof 0:
   url: https://stackoverflow.com/
   title: Stack Overflow
   tags:
+  - developer
   - programming
+  - questions
+  examples:
+  - description: Go to the homepage
+  description: Stack Overflow is a question-and-answer site for programmers covering software development topics.
 sof 1:
   url: https://stackoverflow.com/search?q=<query>
-  title: Stack Overflow
-  tags:
-  - programming
+  include: sof 0
   examples:
   - arguments: java
     description: search for Java-related questions
+sofa 0:
+  url: https://stackoverflow.com/questions/tagged/android
+  title: Stack Overflow Android tag
+  tags:
+  - android
+  - programming
+  - questions
+  examples:
+  - description: Go to the homepage
+  description: The Stack Overflow Android tag collects questions about Android app development and tooling.
 sofa 1:
   url: https://stackoverflow.com/search?q=%5Bandroid%5D+<query>
-  title: Stackoverflow android tag
-  tags:
-  - programming
+  include: sofa 0
+  examples:
+  - arguments: intent
+    description: Search Android-tagged Stack Overflow questions about intents
 solrj 0:
-  url: https://lucene.apache.org/solr/4_0_0/solr-solrj/index.html
+  url: https://solr.apache.org/docs/4_0_0/solr-solrj/index.html
   title: Solr Java Client API
   tags:
+  - api
+  - documentation
   - java
   - programming
   examples:
   - description: Go to the homepage
+  description: The SolrJ API docs describe the Java client library for Apache Solr.
 solrj 1:
-  url: https://www.google.com/search?hl=<$language>&q=site%3Ahttp://lucene.apache.org/solr/+<query>+intitle%3A<query>&ie=utf-8&btnI=1
-  title: Solr Java Client API
-  tags:
-  - java
-  - programming
+  url: https://www.google.com/search?hl=<$language>&q=site%3Asolr.apache.org%2Fdocs%2F4_0_0%2Fsolr-solrj+<query>+intitle%3A<query>&ie=utf-8&btnI=1
+  include: solrj 0
 somafm 0:
-  url: https://somafm.com
+  url: https://somafm.com/
   title: SomaFM Internetradio
   tags:
   - internetradio
   - radio-station
+  examples:
+  - description: Go to the homepage
+  description: SomaFM is an independent listener-supported internet radio network with genre-focused channels.
 somafm 1:
   url: https://somafm.com/player/#/now-playing/<radiochannel>
-  title: SomaFM Internetradio
-  tags:
-  - internetradio
-  - radio-station
+  include: somafm 0
+  examples:
+  - arguments: groove salad
+    description: Open the Groove Salad SomaFM channel
+soundcloud 0:
+  deprecated:
+    alternative:
+      query: scl 0
+    created: '2026-05-11'
 soundcloud 1:
-  url: https://soundcloud.com/search?q[fulltext]=<query>
-  title: Soundcloud
-  tags:
-  - old
-soup 1:
-  url: https://www.soup.io/friends?search=<query>
-  title: Soup.io friends full text search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: scl <1>
+    created: '2026-05-11'
 sp 0:
   url: https://open.spotify.com/
   title: Spotify
@@ -9486,25 +9544,63 @@ sp 0:
   - streaming
   examples:
   - description: Go to the homepage
+  description: Spotify is a music and podcast streaming service with a large catalog of audio content.
 sp 1:
   url: https://open.spotify.com/search/<query>
   include: sp 0
   examples:
   - arguments: Bohemian Rhapsody
     description: Search Spotify for "Bohemian Rhapsody"
-spam 1:
-  url: https://www.spamhaus.org/query/ip/<URL>
-  title: Spamhaus Status-Abfrage
-spfun 1:
-  url: https://www.sparkfun.com/search/results?term=<query>&what=products
-  title: Sparkfun product search
+spam 0:
+  url: https://check.spamhaus.org/
+  title: Spamhaus check
   tags:
-  - old
-spl 1:
-  url: https://link.springer.com/search?query=<query>
+  - dns
+  - ip
+  - reputation
+  - security
+  examples:
+  - description: Go to the homepage
+  description: Spamhaus lets users check IP addresses and domains against widely used threat and reputation data.
+spam 1:
+  url: https://check.spamhaus.org/results?query=<URL>
+  include: spam 0
+spfun 0:
+  url: https://www.sparkfun.com/
+  title: SparkFun
+  tags:
+  - electronics
+  - hardware
+  - maker
+  - shopping
+  examples:
+  - description: Go to the homepage
+  description: SparkFun sells electronics parts, tools, and tutorials for makers, students, and engineers.
+spfun 1:
+  url: https://www.sparkfun.com/all-categories?search%5Bterm%5D=<query>
+  tests:
+  - arguments: arduino
+    expect: SparkFun
+  include: spfun 0
+  examples:
+  - arguments: arduino
+    description: Search SparkFun products for Arduino items
+spl 0:
+  url: https://link.springer.com/
   title: SpringerLink
   tags:
+  - books
+  - journals
   - science
+  examples:
+  - description: Go to the homepage
+  description: SpringerLink is a research platform for journals, books, and academic reference works.
+spl 1:
+  url: https://link.springer.com/search?query=<query>
+  tests:
+  - arguments: chomsky
+    expect: Chomsky
+  include: spl 0
   examples:
   - arguments: chomsky
     description: Search for scientific papers about or of Chomsky
@@ -9533,62 +9629,92 @@ sr 1:
   - key: sr 1
     namespace: pka
 sreddit 1:
-  url: https://www.reddit.com/r/<forum>
-  title: Reddit sub-reddit
-  tags:
-  - reddit
+  deprecated:
+    alternative:
+      query: r/ <1>
+    created: '2026-05-11'
 ssch 0:
   url: https://www.semanticscholar.org/
   title: Semantic Scholar
+  tags:
+  - academic
+  - papers
+  - research
+  examples:
+  - description: Go to the homepage
+  description: Semantic Scholar is an academic search engine for research papers, authors, and related scholarly topics.
 ssch 1:
   url: https://www.semanticscholar.org/search?q=<query>
-  title: Semantic Scholar
-ssl 1:
-  url: https://www.ssllabs.com/ssldb/analyze.html?d=<domain>
+  include: ssch 0
+  examples:
+  - arguments: language model
+    description: Search Semantic Scholar for papers about language models
+ssl 0:
+  url: https://www.ssllabs.com/ssltest/
   title: SSL Labs Analyzer
   tags:
-  - old
+  - security
+  - ssl
+  - tls
+  - website
+  examples:
+  - description: Go to the homepage
+  description: SSL Labs analyzes TLS configurations and certificate setups for public websites.
+ssl 1:
+  url: https://www.ssllabs.com/ssldb/analyze.html?d=<domain>
+  include: ssl 0
+  examples:
+  - arguments: example.com
+    description: Analyze the TLS setup of example.com
+steam 0:
+  url: https://store.steampowered.com/
+  title: Steam
+  tags:
+  - games
+  - gaming
+  - store
+  examples:
+  - description: Go to the homepage
+  description: Steam is a digital distribution platform for PC games, software, and community features.
 steam 1:
   url: https://store.steampowered.com/search/?term=<game%>
-  title: Game on the steam platform
+  include: steam 0
+  examples:
+  - arguments: Portal 2
+    description: Search the Steam store for Portal 2
 stract 0:
   url: https://stract.com/
-  title: Stract – Independent and Open Search
+  title: Stract
   tags:
   - search
   examples:
   - description: Go to the homepage
+  description: Stract is an independent search engine focused on open web results and transparent ranking.
 stract 1:
   url: https://stract.com/search?q=<query>
-  title: Stract search
-  tags:
-  - search
+  tests:
+  - arguments: film
+    expect: film
+  include: stract 0
   examples:
   - arguments: film
     description: search Stract for film
-su 1:
-  url: https://superuser.com/search?q=<query>
+su 0:
+  url: https://superuser.com/
   title: Super User
   tags:
-  - old
-subscene 0:
-  url: https://subscene.com/
-  title: Subscene
-  tags:
-  - subtitles
-subscene 1:
-  url: https://subscene.com/subtitles/searchbytitle?query=<movie>
-  title: Subscene
-  tags:
-  - subtitles
+  - computer
+  - questions
+  - technology
   examples:
-  - arguments: loose change
-    description: Search for subtitles to "loose change"
-subtitles 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=subtitles.images.o2.cz&domains=subtitles.images.o2.cz&q=<movie>
-  title: Subtitles.images.o2.cz
-  tags:
-  - old
+  - description: Go to the homepage
+  description: Super User is a question-and-answer site for computer enthusiasts and power users.
+su 1:
+  url: https://superuser.com/search?q=<query>
+  include: su 0
+  examples:
+  - arguments: monitor calibration
+    description: Search Super User for monitor calibration questions
 suepo 0:
   url: https://www.suepo.org
   title: Staff Union European Patent Office
@@ -9661,15 +9787,12 @@ swipl 0:
   - manual
   - programming
   - prolog
+  examples:
+  - description: Go to the homepage
+  description: The SWI-Prolog documentation provides manuals and predicate references for the SWI-Prolog system.
 swipl 1:
   url: https://www.swi-prolog.org/pldoc/search?for=<query>&in=all&match=summary
-  title: SWI-Prolog documentation
-  tags:
-  - doc
-  - documentation
-  - manual
-  - programming
-  - prolog
+  include: swipl 0
   examples:
   - arguments: append
     description: Search SWI-Prolog site for documentation on appending
