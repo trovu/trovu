@@ -8623,24 +8623,59 @@ qw 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
+r 0:
+  url: https://www.reddit.com/
+  title: Reddit
+  tags:
+  - forum
+  - reddit
+  examples:
+  - description: Go to the homepage
+  description: Reddit is a large discussion platform organized into topic-specific communities called subreddits.
 r 1:
-  deprecated:
-    alternative:
-      query: rman <1>
-    created: '2024-04-25'
+  url: https://www.reddit.com/search/?q=<query>
+  include: r 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 r/ 1:
   url: https://www.reddit.com/r/<subreddit>
-  title: Reddit sub-reddit
-  tags:
-  - reddit
-r2r 2:
-  url: https://www.rome2rio.com/de/map/<from>/<to>
+  title: Reddit, go to sub-reddit
+  include: r 0
+  examples:
+  - arguments: berlin
+    description: Go to the Berlin subreddit
+r/ 2:
+  url: https://www.reddit.com/r/<subreddit>/search?q=<query>&restrict_sr=1
+  title: Reddit, search in sub-reddit
+  include: r/ 1
+  examples:
+  - arguments: berlin, travel
+    description: Search for "travel" in the Berlin subreddit
+r/n 1:
+  url: https://www.reddit.com/r/<subreddit>/new
+  title: Reddit, new posts in sub-reddit
+  include: r/ 1
+  examples:
+  - arguments: berlin
+    description: See new posts in the Berlin subreddit
+r2r 0:
+  url: https://www.rome2rio.com/
   title: Rome2Rio
   tags:
   - navigation
   - routing
   - travel
   - vacation
+  examples:
+  - description: Go to the homepage
+  description: Rome2Rio helps you compare transport options and routes between places around the world.
+r2r 2:
+  url: https://www.rome2rio.com/de/map/<from>/<to>
+  tests:
+  - arguments: london, berlin
+    expect: Rome2Rio
+  include: r2r 0
   examples:
   - arguments: london, berlin
     description: Search Rome2Rio for a connection from London to Berlin
@@ -8656,13 +8691,13 @@ rails 0:
   - programming
   - rails
   - ruby
+  examples:
+  - description: Go to the homepage
+  description: APIdock provides searchable Ruby on Rails API documentation, notes, and examples.
 rails 1:
-  url: https://apidock.com/rails/search?query=<query>
+  url: https://www.google.com/search?hl=<$language>&q=site:apidock.com/rails%20<query>&ie=utf-8&btnI=1
   title: Ruby on Rails Documentation
-  tags:
-  - programming
-  - rails
-  - ruby
+  include: rails 0
   examples:
   - arguments: redirect_to
     description: Search for "redirect_to"
@@ -8690,19 +8725,26 @@ rb 0:
 rb 1:
   url: https://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
   title: Ruby Documentation
-  tags:
-  - programming
-  - rails
-  - ruby
+  include: rb 0
   examples:
   - arguments: downcase
     description: Search for "downcase"
-rbg 1:
-  url: https://rubygems.org/search?utf8=%E2%9C%93&query=<query>
+rbg 0:
+  url: https://rubygems.org/
   title: RubyGems
   tags:
+  - packages
   - programming
   - ruby
+  examples:
+  - description: Go to the homepage
+  description: RubyGems is the main package repository and publishing service for Ruby libraries.
+rbg 1:
+  url: https://rubygems.org/search?utf8=%E2%9C%93&query=<query>
+  tests:
+  - arguments: safe_yaml
+    expect: RubyGems.org
+  include: rbg 0
   examples:
   - arguments: safe_yaml
     description: Search RubyGems for "safe_yaml"
@@ -8725,10 +8767,7 @@ rblcheck 1:
 rblcheckapi 1:
   url: https://rbl-check.org/rbl_api.php?ipaddress=<ipaddress>
   title: RBL-Check API
-  tags:
-  - api
-  - check
-  - rbl
+  include: rblcheck 0
   examples:
   - arguments: 127.0.0.1
     description: Check if 127.0.0.1 is on the RBL
@@ -8790,26 +8829,28 @@ rea 1:
       query: .de.rea <1>
     created: '2025-05-19'
 reddit 0:
-  url: https://www.reddit.com
-  title: Reddit
-  tags:
-  - forum
-  - reddit
+  deprecated:
+    alternative:
+      query: r
+    created: '2026-05-11'
 reddit 1:
-  url: https://www.reddit.com/search?q=<query>
-  title: Reddit
+  deprecated:
+    alternative:
+      query: r <1>
+    created: '2026-05-11'
+remnant 0:
+  url: https://lastremnant.fandom.com/
+  title: The Last Remnant Wiki
   tags:
-  - forum
-  - old
-  - reddit
+  - fandom
+  - gaming
+  - wiki
   examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  - description: Go to the homepage
+  description: The Last Remnant Wiki collects guides and reference information for the game The Last Remnant.
 remnant 1:
-  url: https://lastremnant.wikia.com/wiki/Special:Search?search=<query>&go=1
-  title: The Last Remnant
-  tags:
-  - old
+  url: https://lastremnant.fandom.com/wiki/Special:Search?search=<query>&go=1
+  include: remnant 0
 remove 1:
   deprecated:
     alternative:
@@ -8824,9 +8865,7 @@ rfc 0:
 rfc 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.ietf.org%2Frfc%2F%20<query>
   title: RFC (Request for Comments)
-  tags:
-  - rfc
-  - standard
+  include: rfc 0
   examples:
   - arguments: '1945'
     description: Open RFC 1945
@@ -8835,9 +8874,7 @@ rfc 1:
 rg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=reddit.com&q=<query>
   title: Reddit via Google
-  tags:
-  - forum
-  - reddit
+  include: r 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -8926,10 +8963,10 @@ ro 1:
   - key: ro 1
     namespace: wrf
 route 2:
-  url: https://www.google.com/maps?hl=<$language>&saddr=<from>&daddr=<to>
-  title: Google Maps Route
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gd 2
+    created: '2026-05-11'
 rp18 0:
   url: https://18.re-publica.com/
   title: 'Re: Publica Congress Berlin 2018'
@@ -8971,18 +9008,27 @@ rsga 1:
   - arguments: iq
     description: Search for IQ
 rsgq 1:
-  url: https://www.researchgate.net/search/researcher?q=<query>
+  url: https://www.researchgate.net/search/question?q=<query>
   title: ResearchGate, questions
   include: rsg 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
-rt 1:
-  url: https://www.rottentomatoes.com/search/?search=<query>
+rt 0:
+  url: https://www.rottentomatoes.com/
   title: Rotten Tomatoes
   tags:
   - film
   - movies
+  examples:
+  - description: Go to the homepage
+  description: Rotten Tomatoes aggregates film and TV reviews and provides searchable score pages for titles.
+rt 1:
+  url: https://www.rottentomatoes.com/search/?search=<query>
+  tests:
+  - arguments: forrest gump
+    expect: Rotten Tomatoes
+  include: rt 0
   examples:
   - arguments: forrest gump
     description: Search Rotten Tomatoes for "forrest gump"
@@ -9034,17 +9080,36 @@ ru 1:
     namespace: pka
   - key: ru 1
     namespace: wrf
-ruby 1:
-  url: https://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
+ruby 0:
+  url: https://www.ruby-doc.org/
   title: Ruby Documentation
   tags:
-  - old
-rustd 1:
-  url: https://doc.rust-lang.org/std/?search=<query>
+  - programming
+  - ruby
+  examples:
+  - description: Go to the homepage
+  description: Ruby-Doc hosts the official Ruby language documentation and searchable reference pages.
+ruby 1:
+  url: https://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
+  tests:
+  - arguments: test
+    expect: Ruby-Doc.org
+  include: ruby 0
+rustd 0:
+  url: https://doc.rust-lang.org/std/
   title: Rust std API Documentation
   tags:
   - programming
   - rust
+  examples:
+  - description: Go to the homepage
+  description: The Rust standard library documentation describes the core types, traits, and modules shipped with Rust.
+rustd 1:
+  url: https://doc.rust-lang.org/std/?search=<query>
+  tests:
+  - arguments: trait
+    expect: std - Rust
+  include: rustd 0
   examples:
   - arguments: trait
     description: Search for "trait"
