@@ -9853,10 +9853,10 @@ tav 1:
   - arguments: ghent
     description: search for travel info on Ghent
 taz 1:
-  url: https://www.google.com/search?hl=de&q=site%3Ataz.de+<query>
-  title: Taz Archiv
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: de.taz <1>
+    created: '2026-05-11'
 tbaddon 0:
   url: https://addons.mozilla.org/thunderbird/
   title: Thunderbird Add-ons

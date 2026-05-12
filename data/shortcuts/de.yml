@@ -1772,11 +1772,24 @@ sz 1:
   - newspaper
   - print
 taz 0:
-  url: https://www.taz.de/
-  title: taz. die tageszeitung
+  url: https://taz.de/
+  title: taz - die tageszeitung
   tags:
   - news
   - zeitung
+  examples:
+  - description: Gehe zur Startseite
+  description: Deutsche Tageszeitung mit Sitz in Berlin, die für ihre kritische Berichterstattung und ihren alternativen Journalismus bekannt ist.
+taz 1:
+  url: https://taz.de/!s=<Suche>
+  include: taz 0
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
+tazg 1:
+  url: https://www.google.de/search?q=<Suche>+site:taz.de
+  title: taz - die tageszeitung via Google
+  include: taz 1
 tomdestages 0:
   url: https://www.taz.de/#!tom=tomdestages
   title: Tom Touché (Tom des Tages)
