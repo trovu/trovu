@@ -10661,12 +10661,18 @@ ubw 1:
   examples:
   - arguments: server
     description: Search for "server"
-uc 1:
-  url: https://www.fileformat.info/info/unicode/char/search.htm?preview=entity&q=<query>
+uc 0:
+  url: https://www.fileformat.info/info/unicode/char/search.htm
   title: Unicode character info
   tags:
   - character
   - unicode
+  examples:
+  - description: Go to the homepage
+  description: FileFormat.info offers lookup pages for Unicode characters, properties, and encoding details.
+uc 1:
+  url: https://www.fileformat.info/info/unicode/char/search.htm?preview=entity&q=<query>
+  include: uc 0
   examples:
   - arguments: ä
     description: Look up information about the character "ä"
@@ -10677,16 +10683,35 @@ ucb 0:
   - blocks
   - characters
   - unicode
+  examples:
+  - description: Go to the homepage
+  description: FileFormat.info lists Unicode blocks and links them to the characters and ranges they contain.
+ucs 0:
+  url: https://www.fileformat.info/info/unicode/char/search.htm
+  title: Unicode Character Search
+  tags:
+  - character
+  - search
+  - unicode
+  examples:
+  - description: Go to the homepage
+  description: Unicode Character Search lets users search Unicode codepoints and character metadata by name or symbol.
 ucs 1:
   url: https://www.fileformat.info/info/unicode/char/search.htm?q=<query>&preview=entity
-  title: Unicode Character Search, not including Han codepoints
+  include: ucs 0
+ucsh 0:
+  url: https://www.fileformat.info/info/unicode/char/search.htm?han=Y&preview=entity
+  title: Unicode Character Search with Han
   tags:
-  - old
+  - character
+  - search
+  - unicode
+  examples:
+  - description: Go to the homepage
+  description: This Unicode character search includes Han codepoints alongside the standard search results.
 ucsh 1:
   url: https://www.fileformat.info/info/unicode/char/search.htm?q=<query>&han=Y&preview=entity
-  title: Unicode Character Search, including Han codepoints
-  tags:
-  - old
+  include: ucsh 0
 ud 0:
   url: https://www.urbandictionary.com/
   title: Urban Dictionary
@@ -10694,13 +10719,12 @@ ud 0:
   - dictionary
   - english
   - slang
+  examples:
+  - description: Go to the homepage
+  description: Urban Dictionary collects crowd-sourced definitions for slang, internet expressions, and informal English usage.
 ud 1:
   url: https://www.urbandictionary.com/define.php?term=<query>
-  title: Urban Dictionary
-  tags:
-  - dictionary
-  - english
-  - slang
+  include: ud 0
   examples:
   - arguments: wheelbo
     description: Look up "wheelbo" in the Urban Dictionary
@@ -10720,11 +10744,19 @@ ue5 1:
   examples:
   - arguments: uactorcomponent
     description: Search for "uactorcomponent"
-uesp 1:
-  url: https://www.uesp.net/wiki/Special:Search?search=<query>&go=Go&nsnum=0&redirs=1&searchtitles=1
+uesp 0:
+  url: https://www.uesp.net/
   title: Unofficial Elder Scrolls Pages
   tags:
-  - old
+  - elder-scrolls
+  - games
+  - wiki
+  examples:
+  - description: Go to the homepage
+  description: UESP is a long-running wiki and reference site for The Elder Scrolls games and lore.
+uesp 1:
+  url: https://www.uesp.net/wiki/Special:Search?search=<query>&go=Go&nsnum=0&redirs=1&searchtitles=1
+  include: uesp 0
 ug 0:
   include:
   - key: ug 0
@@ -10733,34 +10765,52 @@ ug 1:
   include:
   - key: ug 1
     namespace: pka
-ugb 1:
-  url: https://www.ultimate-guitar.com/search.php?s=<band>&w=bands
-  title: 'Ultimate Guitar: Bands'
+ugb 0:
+  url: https://www.ultimate-guitar.com/
+  title: Ultimate Guitar bands
   tags:
   - guitar
   - music
   examples:
+  - description: Go to the homepage
+  description: Ultimate Guitar offers chords, tabs, and searchable music resources for bands, songs, and players.
+ugb 1:
+  url: https://www.ultimate-guitar.com/search.php?s=<band>&w=bands
+  title: 'Ultimate Guitar: Bands'
+  include: ugb 0
+  examples:
   - arguments: beatles
     description: Search for Beatles songs
-ugs 1:
-  url: https://www.ultimate-guitar.com/search.php?search_type=title&value=<song>
-  title: 'Ultimate Guitar: Songs'
+ugs 0:
+  url: https://www.ultimate-guitar.com/
+  title: Ultimate Guitar songs
   tags:
   - guitar
   - music
+  examples:
+  - description: Go to the homepage
+  description: Ultimate Guitar offers chords, tabs, and searchable music resources for bands, songs, and players.
+ugs 1:
+  url: https://www.ultimate-guitar.com/search.php?search_type=title&value=<song>
+  title: 'Ultimate Guitar: Songs'
+  include: ugs 0
   examples:
   - arguments: yesterday
     description: Search for songs about "yesterday"
 uima 0:
-  url: https://incubator.apache.org/uima/downloads/releaseDocs/2.3.0-incubating/docs/api/
+  url: https://uima.apache.org/d/uimaj-current/api/
   title: UIMA API
   tags:
-  - old
+  - api
+  - documentation
+  - java
+  - programming
+  examples:
+  - description: Go to the homepage
+  description: The Apache UIMA API docs describe the Java framework for unstructured information management and analysis.
 uima 1:
-  url: https://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fincubator.apache.org%2Fuima%2Fdownloads%2FreleaseDocs%2F2.3.0-incubating%2Fdocs%2Fapi%2F%20<query>&ie=utf-8
-  title: UIMA API
-  tags:
-  - old
+  url: https://www.google.com/search?hl=<$language>&q=site%3Auima.apache.org%2Fd%2Fuimaj-current%2Fapi%2F+<query>&ie=utf-8
+  include: uima 0
 uk 0:
   include:
   - key: uk 0
@@ -10785,34 +10835,43 @@ uk 1:
     namespace: rvs
   - key: uk 1
     namespace: pka
-unsc 1:
-  url: https://unsplash.com/s/collections/<query>
-  title: Unsplash, collections
-  include: unsp 1
-unsi 1:
-  url: https://unsplash.com/s/illustrations/<query>
-  title: Unsplash, illustrations
-  include: unsp 1
-unsp 0:
+uns 0:
   url: https://unsplash.com/
   title: Unsplash
   tags:
   - free
+  - illustrations
   - images
   - photos
   examples:
   - description: Go to the homepage
-  description: Free stock photography.
+  description: Unsplash is a platform for free high-resolution photos and illustrations contributed by a global community of photographers and artists.
+uns 1:
+  include: unsp 1
+unsc 1:
+  url: https://unsplash.com/s/collections/<query>
+  title: Unsplash, collections
+  include: uns 1
+unsi 1:
+  url: https://unsplash.com/s/illustrations/<query>
+  title: Unsplash, illustrations
+  include: uns 1
+unsp 0:
+  deprecated:
+    alternative:
+      query: uns
+    created: '2026-05-12'
 unsp 1:
   url: https://unsplash.com/s/photos/<query>
   title: Unsplash, photos
-  include: unsp 0
+  include: uns 1
   examples:
   - arguments: berlin
     description: Search for "berlin"
 unsu 1:
   url: https://unsplash.com/s/users/<name>
   title: Unsplash, users
+  include: uns 0
 up 1:
   deprecated:
     alternative:
@@ -10872,32 +10931,28 @@ urn 1:
   examples:
   - arguments: 1877857704384807200
     description: Unroll a thread from X
-us 1:
-  url: https://userscripts.org/scripts/search?q=<query>
-  title: Userscripts
-  tags:
-  - old
-usbid 1:
-  url: https://usb-ids.gowdy.us/read/UD/<vendorid>
+usbid 0:
+  url: https://usb-ids.gowdy.us/
   title: USB ID Repository
   tags:
   - electronics
+  - hardware
+  - usb
+  examples:
+  - description: Go to the homepage
+  description: The USB ID Repository maps USB vendor and device identifiers to known hardware names.
+usbid 1:
+  url: https://usb-ids.gowdy.us/read/UD/<vendorid>
+  include: usbid 0
   examples:
   - arguments: '8086'
     description: List all known devices from Vendor Intel (8086)
 usbid 2:
   url: https://usb-ids.gowdy.us/read/UD/<vendorid>/<deviceid>
-  title: USB ID Repository
-  tags:
-  - electronics
+  include: usbid 0
   examples:
   - arguments: 05e3,0608
     description: Search for USB device with Vendor ID 05e3 and Device ID 0608
-uscripts 1:
-  url: https://userscripts.org/scripts/search?q=<query>
-  title: Userscripts
-  tags:
-  - old
 uxse 0:
   url: https://unix.stackexchange.com/
   title: Unix Stack Exchange
@@ -10906,14 +10961,12 @@ uxse 0:
   - programming
   - stackexchange
   - unix
+  examples:
+  - description: Go to the homepage
+  description: Unix Stack Exchange is a question-and-answer site for Unix, Linux, shells, and related programming topics.
 uxse 1:
   url: https://unix.stackexchange.com/search?q=<query>
-  title: Unix Stack Exchange
-  tags:
-  - linux
-  - programming
-  - stackexchange
-  - unix
+  include: uxse 0
   examples:
   - arguments: debian
     description: Questions about debian
