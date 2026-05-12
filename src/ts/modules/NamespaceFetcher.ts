@@ -167,7 +167,7 @@ export default class NamespaceFetcher {
     do {
       i++;
       if (i >= 10) {
-        this.env.logger.error(`NamespaceFetcher loop ran already ${i} times.`);
+        this.env.logger.error(`fetchNamespaceInfos: Loop ran already ${i} times.`);
       }
       // Get user namespaces without shortcuts.
       newNamespaceInfos = Object.values(namespaceInfos).filter((item) => item.type === "user" && !item.shortcuts);
@@ -367,7 +367,7 @@ export default class NamespaceFetcher {
    */
   processInclude(shortcut: AnyObject, namespaceName: string, namespaceInfos: AnyObject, depth = 0) {
     if (depth >= 10) {
-      this.env.logger.error(`NamespaceFetcher loop ran already ${depth} times.`);
+      this.env.logger.error(`processInclude: Loop ran already ${depth} times.`);
     }
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
