@@ -9819,39 +9819,41 @@ tails 0:
   url: https://tails.boum.org/
   title: The amnesic incoginto live system, that aims to preserve your privacy and anonymity.
   removed: '2023-01-14'
-tat 2:
-  url: https://tatoeba.org/eng/sentences/search?to=<target language>&query=<query>
-  title: Tatoeba search with specified target language
+tat 0:
+  url: https://tatoeba.org/
+  title: Tatoeba
   tags:
   - dictionary
   - languages
-  - langugage
   - phrasebook
-  - phrases
+  - sentences
+  - translation
+  examples:
+  - description: Go to the homepage
+  description: Tatoeba is a collaborative collection of sentences and translations for language learning and lookup.
+tat 2:
+  url: https://tatoeba.org/eng/sentences/search?to=<target language>&query=<query>
+  include: tat 0
   examples:
   - arguments: ita, not at all
     description: search for Italian translations of the phrase "not at all"
-  description: Use 3-letter language code!
+  description: Use the 3-letter language code!
 tat 3:
   url: https://tatoeba.org/eng/sentences/search?from=<source_language>&to=<target_language>&query=<query>
-  title: Tatoeba search with specified source and target language
-  tags:
-  - dictionary
-  - languages
-  - langugage
-  - phrasebook
-  - phrases
+  include: tat 0
   examples:
-  - arguments: en, ita, not at all
+  - arguments: eng, ita, not at all
     description: search for Italian translations of the English phrase "not at all"
-  description: Use 3-letter language codes!
+  description: Use the 3-letter language code!
 tav 0:
   url: https://www.tripadvisor.com/
   title: Tripadvisor
   tags:
+  - reviews
   - travel
   examples:
-  - description: Go to hompeage
+  - description: Go to the homepage
+  description: Tripadvisor helps users discover hotels, restaurants, attractions, and travel reviews around the world.
 tav 1:
   url: https://www.tripadvisor.com/Search?q=<query>
   include: tav 0
@@ -9890,25 +9892,47 @@ tbao 1:
   - arguments: spam
     description: Search for Thunderbird Addon about "spam"
 tc 0:
-  url: https://www.techcrunch.com/
+  url: https://techcrunch.com/
   title: TechCrunch
   tags:
-  - old
+  - news
+  - startup
+  - technology
+  examples:
+  - description: Go to the homepage
+  description: TechCrunch covers technology news, startups, venture capital, and product launches.
 tc 1:
-  url: https://www.techcrunch.com/?s=<query>
-  title: TechCrunch Suche
+  url: https://techcrunch.com/?s=<query>
+  tests:
+  - arguments: ai
+    expect: TechCrunch
+  include: tc 0
+  examples:
+  - arguments: ai
+    description: Search TechCrunch for AI coverage
+tcode 0:
+  url: https://www.tcodesearch.com/
+  title: SAP TCode Search
   tags:
-  - old
+  - enterprise
+  - sap
+  - software
+  examples:
+  - description: Go to the homepage
+  description: TCodeSearch provides lookup pages for SAP transaction codes, tables, and related enterprise resources.
 tcode 1:
   url: https://www.tcodesearch.com/tcodes/search?q=<query>
-  title: SAP TCODE Search
-  tags:
-  - old
+  include: tcode 0
+  examples:
+  - arguments: ME21N
+    description: Search SAP transaction codes for ME21N
 tct 1:
-  url: https://www.techcrunch.com/tag/<tag>
-  title: Tag-Suche bei TechCrunch
-  tags:
-  - old
+  url: https://techcrunch.com/tag/<tag>/
+  title: TechCrunch tag
+  include: tc 0
+  examples:
+  - arguments: ai
+    description: Open the TechCrunch AI tag page
 tdrm 0:
   url: https://tdrm.fiff.de/
   title: TDRM Tihange Doel Radiation Monitoring Network
@@ -9926,15 +9950,9 @@ tds 0:
   tags:
   - comedy
   - tv
-tds 1:
-  url: https://www.thedailyshow.com/video/?searchterm=<query>
-  title: 'The Daily Show: Search archives'
-  tags:
-  - comedy
-  - tv
   examples:
-  - arguments: germany
-    description: Search "The Daily Show" archives for "germany"
+  - description: Go to the latest full episodes page
+  description: The Daily Show full episodes page provides current episodes and clips from the satirical news show.
 te 0:
   include:
   - key: te 0
@@ -9956,20 +9974,42 @@ techrightsfeed 0:
   - ip-law
   - patent-law
   - patents
-ted 1:
-  url: https://www.ted.com/search?q=<query>
+  removed: '2026-05-12'
+  examples:
+  - description: Open the RSS feed
+  description: Techrights publishes an RSS feed focused on digital rights, software freedom, and patent criticism.
+ted 0:
+  url: https://www.ted.com/
   title: TED
   tags:
   - science
   - talks
+  - videos
+  examples:
+  - description: Go to the homepage
+  description: TED hosts talks and interviews from speakers covering science, technology, culture, and ideas.
+ted 1:
+  url: https://www.ted.com/search?q=<query>
+  tests:
+  - arguments: pinker
+    expect: TED
+  include: ted 0
   examples:
   - arguments: pinker
     description: Search for talks of Steven Pinker
-tey 1:
-  url: https://www.tineye.com/search?url=<url>
+tey 0:
+  url: https://www.tineye.com/
   title: TinEye
   tags:
   - images
+  - reverse-image-search
+  - search
+  examples:
+  - description: Go to the homepage
+  description: TinEye is a reverse image search engine for finding copies and matches of images on the web.
+tey 1:
+  url: https://www.tineye.com/search?url=<url>
+  include: tey 0
 th 0:
   include:
   - key: th 0
@@ -9991,13 +10031,25 @@ thomann 1:
     alternative:
       query: .de.thom <1>
     created: '2026-05-12'
+thsr 0:
+  url: https://www.thesaurus.com/
+  title: Thesaurus.com
   tags:
-  - old
+  - dictionary
+  - language
+  - synonyms
+  examples:
+  - description: Go to the homepage
+  description: Thesaurus.com helps users find synonyms, antonyms, and related word suggestions in English.
 thsr 1:
   url: https://thesaurus.com/browse/<query>
-  title: Roget's Thesaurus
-  tags:
-  - old
+  tests:
+  - arguments: fast
+    expect: fast
+  include: thsr 0
+  examples:
+  - arguments: fast
+    description: Look up synonyms for fast
 ti 0:
   include:
   - key: ti 0
@@ -10010,14 +10062,15 @@ tik 0:
   url: https://www.tiktok.com/
   title: TikTok, Homepage
   tags:
+  - social-media
   - tiktok
   - video
+  examples:
+  - description: Go to the homepage
+  description: TikTok is a short-form video platform for discovering, sharing, and following creators and trends.
 tik 1:
   url: https://www.tiktok.com/search?q=<query>
-  title: TikTok
-  tags:
-  - tiktok
-  - video
+  include: tik 0
   examples:
   - arguments: berlin
     description: Search for videos about Berlin
@@ -10027,34 +10080,50 @@ tiktok 1:
     alternative:
       query: tiku <1>
     created: '2023-01-11'
-tiku 1:
-  url: https://www.tiktok.com/@<user>
-  title: TikTok, User
+tiku 0:
+  url: https://www.tiktok.com/
+  title: TikTok users
   tags:
+  - social-media
   - tiktok
   - video
+  examples:
+  - description: Go to the homepage
+  description: TikTok user profiles let you open creator pages directly on the TikTok platform.
+tiku 1:
+  url: https://www.tiktok.com/@<user>
+  include: tiku 0
   examples:
   - arguments: juliaticaofficial
     description: Show userpage of "juliaticaofficial"
   description: Shows the userpage of a TikTok user.
-time 1:
-  url: https://www.timeanddate.com/worldclock/results.html?query=<location>
-  title: Timeanddate.com
+time 0:
+  url: https://www.timeanddate.com/
+  title: timeanddate.com
   tags:
   - date
   - time
   - timezones
   examples:
+  - description: Go to the homepage
+  description: timeanddate.com provides time, date, calendar, and timezone information for locations around the world.
+time 1:
+  url: https://www.timeanddate.com/worldclock/results.html?query=<location>
+  include: time 0
+  examples:
   - arguments: berlin
     description: Look up the current time and date in Berlin
 timedate 0:
-  url: https://www.timeanddate.com
+  url: https://www.timeanddate.com/
   title: Time and date calculations online
   tags:
   - date
   - info
   - service
   - time
+  examples:
+  - description: Go to the homepage
+  description: timeanddate.com offers calculators, calendars, and reference tools for dates, times, and time zones.
 timediff 0:
   url: https://www.timeanddate.com/date/duration.html
   title: Time and date difference calculator
@@ -10063,6 +10132,9 @@ timediff 0:
   - info
   - service
   - time
+  examples:
+  - description: Open the duration calculator
+  description: The timeanddate duration calculator helps compare dates and compute elapsed or remaining time.
 timer 1:
   url: https://www.google.com/search?hl=en&q=timer+<period>
   title: Timer via Google
@@ -10086,6 +10158,7 @@ tin 0:
   - radio
   examples:
   - description: Go to the homepage
+  description: TuneIn lets users listen to live radio, podcasts, sports, and other streaming audio channels.
 tin 1:
   url: https://tunein.com/search/?query=<query>
   include: tin 0
@@ -10113,11 +10186,19 @@ tl 1:
   include:
   - key: tl 1
     namespace: pka
-tldp 1:
-  url: https://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
+tldp 0:
+  url: https://tldp.org/
   title: The Linux Documentation Project
   tags:
-  - old
+  - documentation
+  - linux
+  - manuals
+  examples:
+  - description: Go to the homepage
+  description: The Linux Documentation Project collects how-tos, guides, and manuals for Linux users and administrators.
+tldp 1:
+  url: https://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
+  include: tldp 0
 tma 0:
   url: https://www.metal-archives.com/
   title: 'Encyclopaedia Metallum: The Metal Archives'
@@ -10135,12 +10216,22 @@ tma 1:
   examples:
   - arguments: Metallica
     description: Search for "Metallica"
-tmdb 1:
-  url: https://www.themoviedb.org/search?query=<title>
-  title: The Open Movie Database
+tmdb 0:
+  url: https://www.themoviedb.org/
+  title: The Movie Database
   tags:
   - cinema
   - movies
+  - tv
+  examples:
+  - description: Go to the homepage
+  description: The Movie Database is a community-maintained catalog for films, TV series, cast members, and related media data.
+tmdb 1:
+  url: https://www.themoviedb.org/search?query=<title>
+  tests:
+  - arguments: forrest gump
+    expect: Forrest Gump
+  include: tmdb 0
   examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
@@ -10151,11 +10242,10 @@ tmu 0:
   - shopping
   examples:
   - description: Go to the homepage
+  description: Temu is an online marketplace for low-cost consumer goods across many shopping categories.
 tmu 1:
   url: https://www.temu.com/search_result.html?search_key=<query>
-  title: Temu
-  tags:
-  - shopping
+  include: tmu 0
   examples:
   - arguments: camera
     description: Search for cameras
@@ -10172,27 +10262,26 @@ tpb 0:
   title: The Pirate Bay
   tags:
   - torrent
+  examples:
+  - description: Go to the homepage
+  description: The Pirate Bay is a torrent index site for searching magnet links and torrent metadata.
 tpb 1:
   url: https://thepiratebay.org/search/<query>
-  title: The Pirate Bay
-  tags:
-  - torrent
+  include: tpb 0
   examples:
   - arguments: mozart
     description: Search for "mozart"
 tpba 1:
   url: https://thepiratebay.org/search/<query>/0/99/100
   title: The Pirate Bay, audio only
-  tags:
-  - torrent
+  include: tpb 0
   examples:
   - arguments: mozart
     description: Search for "mozart"
 tpbv 1:
   url: https://thepiratebay.org/search/<query>/0/99/200
   title: The Pirate Bay, video only
-  tags:
-  - torrent
+  include: tpb 0
   examples:
   - arguments: mozart
     description: Search for "mozart"
@@ -10201,10 +10290,12 @@ tpl 0:
   title: Trustpilot
   tags:
   - reviews
+  examples:
+  - description: Go to the homepage
+  description: Trustpilot collects customer reviews and business ratings across many industries and online services.
 tpl 1:
   url: https://www.trustpilot.com/search?query=<query>
-  include:
-  - key: tpl 0
+  include: tpl 0
   examples:
   - arguments: vodafone
     description: Search for reviews about Vodafone
@@ -10268,46 +10359,70 @@ trianglify 0:
   - image-processing
   - javascript
   - online-tool
-trim 1:
-  url: https://tr.im/marklet?url=<url>
-  title: Tr.im
-  tags:
-  - old
+  removed: '2026-05-12'
 tsq 0:
   url: https://www.turbosquid.com/
   title: TurboSquid
   tags:
   - photo
   - photography
+  examples:
+  - description: Go to the homepage
+  description: TurboSquid offers downloadable 3D models, assets, and resources for visualization, games, and design.
 tsq 1:
   url: https://www.turbosquid.com/Search/Index.cfm?keyword=<query>
-  title: TurboSquid
-  tags:
-  - photo
-  - photography
+  include: tsq 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
-tst 1:
-  url: https://timestamp.online/countdown/<timestamp>
+tst 0:
+  url: https://timestamp.online/
   title: UNIX Timestamp
   tags:
+  - date
   - programming
+  - time
+  examples:
+  - description: Go to the homepage
+  description: Timestamp.online converts Unix timestamps into human-readable dates and offers related time tools.
+tst 1:
+  url: https://timestamp.online/countdown/<timestamp>
+  include: tst 0
   examples:
   - arguments: '1361987427'
     description: Show time of 1361987427 in human-readable form.
-tv 1:
-  url: https://www.thingiverse.com/search?q=<argument_name>&type=things&sort=relevant
+tv 0:
+  url: https://www.thingiverse.com/
   title: Thingiverse
+  tags:
+  - 3d-printing
+  - maker
+  - models
+  examples:
+  - description: Go to the homepage
+  description: Thingiverse is a repository for 3D-printing designs, models, and maker projects.
+tv 1:
+  url: https://www.thingiverse.com/search?q=<query>&page=1
+  include: tv 0
   examples:
   - arguments: rubber ducky
     description: Search Thingiverse for "rubber ducky"
-tvdb 1:
-  url: https://thetvdb.com/?searchseriesid=&tab=listseries&function=Search&string=<tv-series>
-  title: TVDB TV Series Search
+tvdb 0:
+  url: https://thetvdb.com/
+  title: TheTVDB
   tags:
+  - database
   - series
   - tv
+  examples:
+  - description: Go to the homepage
+  description: TheTVDB is a community-maintained database for television series, episodes, and related metadata.
+tvdb 1:
+  url: https://thetvdb.com/search?query=<tv-series>
+  tests:
+  - arguments: wonder years
+    expect: Wonder Years
+  include: tvdb 0
   examples:
   - arguments: wonder years
     description: Search for the TV show "The Wonder Years"
@@ -10322,6 +10437,7 @@ tvt 0:
   - wiki
   examples:
   - description: Go to the homepage
+  description: TV Tropes is a community-written wiki cataloging recurring storytelling devices across media.
 tvt 1:
   url: https://tvtropes.org/pmwiki/search_result.php?q=<query>
   include: tvt 0
@@ -10349,10 +10465,21 @@ twitter 0:
       query: x
     created: '2023-01-23'
 twk 0:
-  url: https://tweaks.com
+  url: https://tweaks.com/
   title: Tweaks
   tags:
-  - old
+  - how-to
+  - software
+  - windows
+  examples:
+  - description: Go to the homepage
+  description: Tweaks publishes Windows tips, troubleshooting guides, and system configuration how-to articles.
+twk 1:
+  url: https://tweaks.com/search/?q=<query>
+  include: twk 0
+  examples:
+  - arguments: task manager
+    description: Search for "task manager" on Tweaks
 twl 1:
   deprecated:
     alternative:
