@@ -10744,11 +10744,6 @@ uk 1:
     namespace: rvs
   - key: uk 1
     namespace: pka
-uniprot 1:
-  url: https://www.uniprot.org/uniprot/?query=<query>&sort=score
-  title: Uniprot
-  tags:
-  - old
 unsc 1:
   url: https://unsplash.com/s/collections/<query>
   title: Unsplash, collections
@@ -10778,16 +10773,35 @@ unsu 1:
   url: https://unsplash.com/s/users/<name>
   title: Unsplash, users
 up 1:
-  url: https://www.uniprot.org/uniprot/?query=<query>&sort=score
-  title: Uniprot
+  deprecated:
+    alternative:
+      query: upr <1>
+    created: '2026-05-12'
+upr 0:
+  url: https://www.uniprot.org/
+  title: UniProt
   tags:
-  - old
-ups 1:
-  url: https://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum=<tracking number>
+  - biology
+  - proteins
+  - science
+  examples:
+  - description: Go to the homepage
+  description: UniProt is a scientific resource for protein sequences, functions, annotations, and related biological data.
+upr 1:
+  url: https://www.uniprot.org/uniprotkb?query=<query>
+  include: up 0
+ups 0:
+  url: https://www.ups.com/track
   title: UPS tracking
   tags:
   - shipping
   - ups
+  examples:
+  - description: Go to the tracking homepage
+  description: UPS tracking lets users follow package shipments and delivery status by tracking number.
+ups 1:
+  url: https://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum=<tracking number>
+  include: ups 0
   examples:
   - arguments: 1Z9999999999999999
     description: track shipment with the number 1Z9999999999999999
