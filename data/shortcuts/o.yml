@@ -3579,14 +3579,10 @@ ffaddon 0:
   - mozilla
 ffaddon 1:
   url: https://addons.mozilla.org/firefox/search?q=<addon>
-  title: Firefox Add-ons
-  tags:
-  - addons
-  - firefox
-  - mozilla
+  include: ffaddon 0
   examples:
-  - arguments: serchilo
-    description: Search for Serchilo Firefox addon
+  - arguments: trovu
+    description: Search for the Trovu Firefox addon
 ffi 0:
   url: https://www.fotofinder.com/
   title: Fotofinder
