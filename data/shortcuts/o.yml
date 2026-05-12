@@ -10848,6 +10848,9 @@ uns 0:
   description: Unsplash is a platform for free high-resolution photos and illustrations contributed by a global community of photographers and artists.
 uns 1:
   include: unsp 1
+  examples:
+  - arguments: berlin
+    description: Search for "berlin"
 unsc 1:
   url: https://unsplash.com/s/collections/<query>
   title: Unsplash, collections
@@ -10865,9 +10868,6 @@ unsp 1:
   url: https://unsplash.com/s/photos/<query>
   title: Unsplash, photos
   include: uns 1
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
 unsu 1:
   url: https://unsplash.com/s/users/<name>
   title: Unsplash, users
