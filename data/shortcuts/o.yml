@@ -10097,15 +10097,14 @@ tinyurl 0:
   title: TinyURL
   tags:
   - url
-titulky 1:
-  url: https://www.titulky.com/?Fulltext=<film>
-  title: Titulky.com
-  tags:
-  - subtitles
-  - titulky
   examples:
-  - arguments: loose change
-    description: Find subtitles for "loose change"
+  - description: Go to the homepage
+  description: TinyURL is a link-shortening service for creating compact shareable URLs.
+titulky 1:
+  deprecated:
+    alternative:
+      query: cs.tit <1>
+    created: '2026-05-12'
 tl 0:
   include:
   - key: tl 0
