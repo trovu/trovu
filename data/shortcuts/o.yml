@@ -9674,10 +9674,10 @@ swipl 1:
   - arguments: append
     description: Search SWI-Prolog site for documentation on appending
 swt 1:
-  url: https://www.test.de/suche/?q=<query>
-  title: Stiftung Warentest
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.swt <1>
+    created: '2026-05-11'
 ta 0:
   include:
   - key: ta 0

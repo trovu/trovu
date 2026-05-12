@@ -5668,6 +5668,23 @@ swp 1:
   examples:
   - arguments: china
     description: Suche nach "china"
+swt 0:
+  url: https://www.test.de/
+  title: Stiftung Warentest
+  tags:
+  - consumer
+  - germany
+  - review
+  - shopping
+  examples:
+  - description: Go to the homepage
+  description: Stiftung Warentest publishes independent German-language product tests and consumer advice.
+swt 1:
+  url: https://www.test.de/suche/?q=<query>
+  include: swt 0
+  examples:
+  - arguments: Waschmaschine
+    description: Search Stiftung Warentest for washing machine reviews
 tel 0:
   url: https://www.telefonbuch.de/
   title: Telefonbuch
