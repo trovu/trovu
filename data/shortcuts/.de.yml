@@ -5739,6 +5739,20 @@ thl 1:
   examples:
   - arguments: goethe
     description: Suche nach "goethe"
+tho 0:
+  url: https://www.thomann.de/
+  title: Thomann.de
+  tags:
+  - music
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+tho 1:
+  url: https://www.thomann.de/de/search_dir.html?sw=<Produkt>
+  include: tho 0
+  examples:
+  - arguments: gitarre
+    description: Suche nach Gitarre
 thom 0:
   url: https://www.thomann.de/de/
   title: Thomann
@@ -5756,20 +5770,6 @@ thom 1:
   examples:
   - arguments: gitarre
     description: Search for "gitarre" at Thomann
-tho 0:
-  url: https://www.thomann.de/
-  title: Thomann.de
-  tags:
-  - music
-  - shopping
-  examples:
-  - description: Gehe zur Startseite
-tho 1:
-  url: https://www.thomann.de/de/search_dir.html?sw=<Produkt>
-  include: tho 0
-  examples:
-  - arguments: gitarre
-    description: Suche nach Gitarre
 tra 0:
   url: https://www.tripadvisor.de/
   title: Tripadvisor
