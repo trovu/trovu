@@ -5611,6 +5611,23 @@ rsm 1:
   examples:
   - arguments: shampoo
     description: Suche nach "shampoo"
+sng 0:
+  url: https://www.sanego.de/
+  title: Sanego
+  tags:
+  - doctor
+  - health
+  - medicine
+  - review
+  examples:
+  - description: Gehe zur Startseite
+  description: Plattform für Arztbewertungen und Gesundheitsinformationen.
+sng 2:
+  url: https://www.sanego.de/Arzt/?q=<Name oder Fachgebiet>&l=<Ort oder PLZ>&btn=Suchen
+  include: sng 0
+  examples:
+  - arguments: Zahnarzt, Berlin
+    description: Search for dentists in Berlin
 stabib 0:
   url: https://staatsbibliothek-berlin.de/
   title: Staatsbibliothek zu Berlin

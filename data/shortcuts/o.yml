@@ -9135,10 +9135,10 @@ s 1:
   - arguments: berlin
     description: Search for "berlin"
 sanego 2:
-  url: https://www.sanego.de/Arzt/?q=<Name oder Fachgebiet>&l=<Ort, Ortsteil oder Postleitzahl>&btn=Suchen
-  title: Sanego - Die Gesundheits-Community
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.sng <1>, <2>
+    created: '2026-05-11'
 sc 0:
   url: https://soundcloud.com
   title: Soundcloud
