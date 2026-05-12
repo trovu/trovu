@@ -833,6 +833,32 @@ ba 1:
   examples:
   - arguments: berlin
     description: Search for berlin
+bab 0:
+  url: https://babelnet.org
+  title: BabelNet
+  tags:
+  - computational-linguistics
+  - dictionary
+  - linguistics
+  - multilingual
+  - sense
+  - senses
+  - word
+  - words
+  examples:
+  - description: Go to the homepage
+bab 1:
+  url: https://babelnet.org/search?word=<query>&lang=<$language>
+  include: bab 0
+  examples:
+  - arguments: complicated
+    description: look up senses of "complicated" in BabelNet
+bab 2:
+  url: https://babelnet.org/search?word=<query>&lang=<language>
+  include: bab 0
+  examples:
+  - arguments: Alan Turing, hu
+    description: look up senses of "Alan Turing" in Hungarian in BabelNet
 be 0:
   include:
   - key: be 0
