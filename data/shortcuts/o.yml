@@ -7814,18 +7814,22 @@ pastebin 0:
   title: Paste Your Code
   tags:
   - old
+pat 0:
+  url: https://worldwide.espacenet.com/
+  title: Espacenet Patentserver
+  tags:
+  - patents
+  examples:
+  - description: Go to the homepage
+  description: Espacenet is a global patent search service operated by the European Patent Office.
 pat 1:
   url: https://worldwide.espacenet.com/<publicationnumber>
-  title: Patentserver
-  tags:
-  - patents
-  description: Worldwide patent service. Multi-language interface.
+  include: pat 0
 patent 1:
-  url: https://worldwide.espacenet.com/patent/search?q=<query>
-  title: Patentserver Espacenet Query
-  tags:
-  - patents
-  description: Worldwide patent service. Multi-language interface.
+  deprecated:
+    alternative:
+      query: pat <1>
+    created: '2026-05-11'
 pci 0:
   url: https://podcastindex.org/
   title: Podcast Index
@@ -7839,48 +7843,102 @@ pci 1:
   examples:
   - arguments: books
     description: search for podcasts about books
-pciid 1:
-  url: https://pci-ids.ucw.cz/read/PC/<vendorid>
+pciid 0:
+  url: https://pci-ids.ucw.cz/
   title: PCI ID Repository
   tags:
   - electronics
+  - hardware
+  - pci
+  examples:
+  - description: Go to the homepage
+  description: The PCI ID Repository lists vendor and device identifiers for PCI hardware.
+pciid 1:
+  url: https://pci-ids.ucw.cz/read/PC/<vendorid>
+  tests:
+  - arguments: '8086'
+    expect: PCI Devices
+  include: pciid 0
   examples:
   - arguments: '8086'
     description: List all known devices from Vendor Intel (8086)
 pciid 2:
   url: https://pci-ids.ucw.cz/read/PC/<vendorid>/<deviceid>
-  title: PCI ID Repository
-  tags:
-  - electronics
+  tests:
+  - arguments: 8086,10de
+    expect: PCI Devices
+  include: pciid 0
   examples:
   - arguments: 8086,10de
     description: Search for PCI Device with Vendor ID 8086 and Device ID 10de
-pdf 1:
-  url: https://docs.google.com/viewer?url=<url>
+pdf 0:
+  url: https://docs.google.com/viewer
   title: Google PDF Viewer
   tags:
-  - old
-pear 1:
-  url: https://pear.php.net/search.php?q=<query>&in=packages
+  - documents
+  - pdf
+  - viewer
+  examples:
+  - description: Go to the homepage
+  description: Google PDF Viewer opens PDF files in the browser from a public URL.
+pdf 1:
+  url: https://docs.google.com/viewer?url=<url>
+  tests:
+  - arguments: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+    expect: dummy.pdf
+  include: pdf 0
+pear 0:
+  url: https://pear.php.net/
   title: PEAR - PHP Extension and Application Repository
   tags:
-  - old
-pep 1:
-  url: https://python.org/dev/peps/pep-<id>/
-  title: Show Python Enhancement Proposal
+  - packages
+  - pear
+  - php
+  examples:
+  - description: Go to the homepage
+  description: PEAR is a long-running repository of reusable PHP packages and extensions.
+pear 1:
+  url: https://pear.php.net/search.php?q=<query>&in=packages
+  tests:
+  - arguments: cache
+    expect: 'Search: cache'
+  include: pear 0
+pep 0:
+  url: https://peps.python.org/
+  title: Python Enhancement Proposals
   tags:
-  - old
-perl 1:
-  url: https://perldoc.perl.org/search.html?q=<query>
+  - pep
+  - programming
+  - python
+  examples:
+  - description: Go to the homepage
+  description: Python Enhancement Proposals document design decisions, standards, and process changes for Python.
+pep 1:
+  url: https://peps.python.org/pep-<id>/
+  tests:
+  - arguments: '0008'
+    expect: PEP 8
+  include: pep 0
+perl 0:
+  url: https://perldoc.perl.org/
   title: Perldoc
   tags:
   - perl
   - programming
   examples:
+  - description: Go to the homepage
+  description: Perldoc is the official searchable documentation site for the Perl language and its built-in functions.
+perl 1:
+  url: https://perldoc.perl.org/search.html?q=<query>
+  tests:
+  - arguments: our
+    expect: Perldoc
+  include: perl 0
+  examples:
   - arguments: our
     description: search for "our"
-perseus 1:
-  url: https://www.perseus.tufts.edu/hopper/searchresults?q=<query>
+perseus 0:
+  url: https://www.perseus.tufts.edu/hopper/
   title: Perseus Digital Library
   tags:
   - english
@@ -7890,6 +7948,15 @@ perseus 1:
   - latin
   - old-english
   - old-norse
+  examples:
+  - description: Go to the homepage
+  description: The Perseus Digital Library offers searchable classical texts, translations, and reference material.
+perseus 1:
+  url: https://www.perseus.tufts.edu/hopper/searchresults?q=<query>
+  tests:
+  - arguments: Agamemnon
+    expect: Perseus Search Results
+  include: perseus 0
   examples:
   - arguments: Agamemnon
     description: Search for "Agamemnon"
@@ -7915,16 +7982,22 @@ pewg 1:
   examples:
   - arguments: climate change
     description: Search for "climate change"
+pg 0:
+  url: https://www.pricegrabber.com/
+  title: PriceGrabber
+  tags:
+  - shopping
+  - comparison
+  - prices
+  examples:
+  - description: Go to the homepage
+  description: PriceGrabber compares products, prices, and store offers across online retailers.
 pg 1:
   url: https://www.pricegrabber.com/search.php?form_keyword=<query>&st=query
-  title: Price Grabber
-  tags:
-  - old
-ph 1:
-  url: https://www.phazeddl.com/search/<query>.p1.htm
-  title: Phazeddl
-  tags:
-  - old
+  tests:
+  - arguments: laptop
+    expect: PriceGrabber
+  include: pg 0
 phb 0:
   url: https://photobucket.com/
   title: Photobucket
@@ -7947,7 +8020,7 @@ phbl 0:
   - images
   - stock-agency
 php 0:
-  url: https://www.php.net
+  url: https://www.php.net/
   title: PHP Documentation
   tags:
   - php
@@ -7964,21 +8037,11 @@ php 1:
 phpg 1:
   url: https://www.google.com/search?hl=<$language>&q=site%3Awww.php.net+<query>
   title: PHP Documentation via Google
-  tags:
-  - php
-  - programming
-  examples:
-  - arguments: strlen
-    description: Search for "strlen"
+  include: php 1
 phpg! 1:
   url: https://www.google.com/search?btnI=1&q=site%3Awww.php.net+<query>
   title: PHP Documentation via Google Feeling Lucky
-  tags:
-  - php
-  - programming
-  examples:
-  - arguments: strlen
-    description: Search for "strlen"
+  include: php 1
 pin 0:
   url: https://pinterest.com/
   title: Pinterest
@@ -8104,14 +8167,22 @@ plmw 1:
   examples:
   - arguments: election
     description: Search for "election"
-plot 1:
-  url: https://plot20.kesto.de/#{"functions":["<function>"]}
+plot 0:
+  url: https://plot20.kesto.de/
   title: Plot 2.0
   tags:
-  - old
-plt 1:
-  url: https://www.google.com/search?hl=<$language>&q=matplotlib+<query>
-  title: matplotlib via Google
+  - graphs
+  - math
+  - plotting
+  examples:
+  - description: Go to the homepage
+  description: Plot 2.0 is an online function plotter for graphing mathematical expressions in the browser.
+plot 1:
+  url: https://plot20.kesto.de/#{"functions":["<function>"]}
+  include: plot 0
+plt 0:
+  url: https://matplotlib.org/
+  title: Matplotlib
   tags:
   - plot
   - plotting
@@ -8119,43 +8190,70 @@ plt 1:
   - python
   - scientific-computing
   examples:
+  - description: Go to the homepage
+  description: Matplotlib is a Python plotting library for creating static, animated, and interactive visualizations.
+plt 1:
+  url: https://www.google.com/search?hl=<$language>&q=matplotlib+<query>
+  title: matplotlib via Google
+  include: plt 0
+  examples:
   - arguments: heatmap
     description: Get help on creating heatmaps with matplotlib
   description: Quickly Google for help with matplotlib because oh boy, you need all the help you can get, and you don't want to waste time typing the unwieldy name of that library.
-pm 1:
-  url: https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?CMD=search&DB=pubmed&term=<query>
+pm 0:
+  url: https://pubmed.ncbi.nlm.nih.gov/
   title: PubMed
   tags:
   - health
   - science
   examples:
+  - description: Go to the homepage
+  description: PubMed is a searchable database of biomedical and life sciences literature maintained by the U.S. National Library of Medicine.
+pm 1:
+  url: https://pubmed.ncbi.nlm.nih.gov/?term=<query>
+  tests:
+  - arguments: bacteria
+    expect: Search Results - PubMed
+  include: pm 0
+  examples:
   - arguments: bacteria
     description: Search for "bacteria"
-poef 1:
-  url: https://www.pathofexile.com/search/results/<query>/search-within/forumthreads-forumposts
+poef 0:
+  url: https://www.pathofexile.com/forum
   title: Official Path of Exile forum
-  tests:
-  - arguments: Rhoa
-    expect: Results for Rhoa
   tags:
   - path-of-exile
   - poe
+  examples:
+  - description: Go to the homepage
+  description: The official Path of Exile forum hosts build guides, discussion, and trade-related community posts.
+poef 1:
+  url: https://www.pathofexile.com/search/results/<query>/search-within/forumthreads-forumposts
+  tests:
+  - arguments: Rhoa
+    expect: Results for Rhoa
+  include: poef 0
   examples:
   - arguments: Rhoa
     description: Search  for "Rhoa"
   - arguments: How to Smash Heads
     description: Search  for "How to Smash Heads" - Korgoth's Facebreaker guide
-  description: Official Forum for the F2P online ARPG "Path of Exile" (PoE).
-poew 1:
-  url: https://pathofexile.gamepedia.com/index.php?search=<query>&go=Go
-  title: Inofficial Path of Exile Wiki
-  tests:
-  - arguments: health
-    expect: name="query" value="health"/>
+poew 0:
+  url: https://pathofexile.fandom.com/
+  title: Path of Exile Wiki
   tags:
-  - gamepedia
+  - fandom
   - path-of-exile
   - poe
+  examples:
+  - description: Go to the homepage
+  description: The Path of Exile Wiki collects community-maintained information about mechanics, items, and quests.
+poew 1:
+  url: https://pathofexile.gamepedia.com/index.php?search=<query>&go=Go
+  tests:
+  - arguments: health
+    expect: Path of Exile Wiki
+  include: poew 0
   examples:
   - arguments: Rhoa
     description: Search inofficial Path of Exile Wiki for "Rhoa"
@@ -8163,7 +8261,6 @@ poew 1:
     description: Search inofficial Path of Exile Wiki for "Vendor recipe system"
   - arguments: Vaal Orb
     description: Search inofficial Path of Exile Wiki for "Vaal Orb"
-  description: Inofficial Wiki for the F2P online ARPG "Path of Exile" (PoE), that acts as the main knowledgebase for PoE-players.
 ppx 0:
   url: https://perplexity.ai/
   title: Perplexity AI
@@ -8251,13 +8348,22 @@ pt-pons 1:
     alternative:
       query: pns.pt <1>
     created: '2023-04-10'
-pubchem 1:
-  url: https://www.ncbi.nlm.nih.gov/pccompound/?term=<compound>
+pubchem 0:
+  url: https://pubchem.ncbi.nlm.nih.gov/
   title: PubChem
   tags:
   - chemistry
   - pubchem
   - science
+  examples:
+  - description: Go to the homepage
+  description: PubChem is a public chemistry database for compounds, substances, and bioassays maintained by NCBI.
+pubchem 1:
+  url: https://www.ncbi.nlm.nih.gov/pccompound/?term=<compound>
+  tests:
+  - arguments: carbon dioxide
+    expect: PubChem
+  include: pubchem 0
   examples:
   - arguments: carbon dioxide
     description: Search PubChem for "carbon dioxide"
@@ -8266,16 +8372,37 @@ puls 0:
   title: Uni Potsdam, Puls
   tags:
   - old
-pvx 1:
-  url: https://pvx.wikia.com/wiki/Special:Search?search=<query>&go=1
+pvx 0:
+  url: https://gwpvx.fandom.com/
   title: PvX Wiki
   tags:
-  - old
+  - builds
+  - gaming
+  - guild-wars
+  - wiki
+  examples:
+  - description: Go to the homepage
+  description: PvX Wiki documents Guild Wars builds, strategies, and related player-versus-environment resources.
+pvx 1:
+  url: https://pvx.wikia.com/wiki/Special:Search?search=<query>&go=1
+  tests:
+  - arguments: test
+    expect: Search Results - PvXwiki
+  include: pvx 0
+pw 0:
+  url: https://wiki.piratenpartei.de/
+  title: Piratenpartei Wiki
+  tags:
+  - germany
+  - politics
+  - wiki
+  examples:
+  - description: Go to the homepage
+  description: The Piratenpartei wiki documents party positions, projects, and organizational information.
 pw 1:
   url: https://www.google.com/search?q=<query> site:wiki.piratenpartei.de
   title: Pw
-  tags:
-  - old
+  include: pw 0
 pwgen 0:
   url: https://passwordsgenerator.net/
   title: Password Generator
@@ -8358,11 +8485,6 @@ pym 1:
   tags:
   - programming
   - python
-pym 2:
-  url: https://readthedocs.org/search/project/?selected_facets=project%3A<module>&q=<keyword>
-  title: Search Python module documentation at readthedocs.org
-  tags:
-  - old
 pypi 0:
   url: https://pypi.org/
   title: Python Package Index
@@ -8387,11 +8509,19 @@ pys 1:
   title: Python standard library
   tags:
   - old
+pz 0:
+  url: https://www.proz.com/
+  title: ProZ.com
+  tags:
+  - terminology
+  - translation
+  examples:
+  - description: Go to the homepage
+  description: ProZ.com is a translation platform with terminology search, job listings, and professional resources.
 pz 1:
   url: https://www.google.com/search?q=site:proz.com <query>
   title: ProZ terminology search
-  tags:
-  - old
+  include: pz 0
 qr 1:
   url: https://quickchart.io/qr?size=350&text=<content>
   title: QR Code
