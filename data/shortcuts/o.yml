@@ -8811,15 +8811,10 @@ remnant 1:
   tags:
   - old
 remove 1:
-  url: https://www.shouldiremoveit.com/programs.aspx?q=<product>
-  title: ShouldIRemoveIt
-  tags:
-  - adware
-  - malware
-  - software
-  examples:
-  - arguments: Browserdefender
-    description: Search for recommendations if Browserdefender is a useful program.
+  deprecated:
+    alternative:
+      query: shiri 1
+    created: '2026-05-11'
 rfc 0:
   url: https://www.ietf.org/rfc.html
   title: RFC (Request for Comments)
@@ -9206,6 +9201,25 @@ sha1 1:
   title: Hash functions
   tags:
   - old
+shiri 0:
+  url: https://www.shouldiremoveit.com/
+  title: ShouldIRemoveIt
+  tags:
+  - adware
+  - malware
+  - software
+  examples:
+  - description: Go to the homepage
+  description: Should I Remove It helps identify unwanted or questionable software installed on Windows systems.
+shiri 1:
+  url: https://www.shouldiremoveit.com/programs.aspx?q=<product>
+  tests:
+  - arguments: Browserdefender
+    expect: Should I Remove It
+  include: shiri 0
+  examples:
+  - arguments: Browserdefender
+    description: Search for recommendations if Browserdefender is a useful program.
 shot 1:
   url: https://www.superscreenshot.com/getscreen.php?url=<url>
   title: Screenshot from Url
