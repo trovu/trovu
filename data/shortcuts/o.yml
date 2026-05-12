@@ -8854,7 +8854,7 @@ remnant 1:
 remove 1:
   deprecated:
     alternative:
-      query: shiri 1
+      query: shiri <1>
     created: '2026-05-11'
 rfc 0:
   url: https://www.ietf.org/rfc.html
@@ -8965,7 +8965,7 @@ ro 1:
 route 2:
   deprecated:
     alternative:
-      query: gd 2
+      query: gd <1>, <2>
     created: '2026-05-11'
 rp18 0:
   url: https://18.re-publica.com/
