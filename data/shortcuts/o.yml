@@ -9864,19 +9864,28 @@ taz 1:
       query: de.taz <1>
     created: '2026-05-11'
 tbaddon 0:
-  url: https://addons.mozilla.org/thunderbird/
-  title: Thunderbird Add-ons
-  tags:
-  - addons
-  - mozilla
-  - thunderbird
+  deprecated:
+    alternative:
+      query: tbao
+    created: '2026-05-12'
 tbaddon 1:
-  url: https://addons.mozilla.org/thunderbird/search?q=<addon>
+  deprecated:
+    alternative:
+      query: tbao <1>
+    created: '2026-05-12'
+tbao 0:
+  url: https://addons.thunderbird.net/
   title: Thunderbird Add-ons
   tags:
   - addons
   - mozilla
   - thunderbird
+  examples:
+  - description: Go to the homepage
+  description: Thunderbird Add-ons extends Mozilla Thunderbird with extra features, integrations, and tools.
+tbao 1:
+  url: https://addons.thunderbird.net/thunderbird/search/?q=<addon>
+  include: tbao 0
   examples:
   - arguments: spam
     description: Search for Thunderbird Addon about "spam"
