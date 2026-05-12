@@ -10530,72 +10530,120 @@ twum 1:
     alternative:
       query: xu <1>
     created: '2023-03-13'
-ubman 1:
-  url: https://manpages.ubuntu.com/cgi-bin/search.py?&ie=UTF-8&q=<query>
-  title: Ubuntu Manpage
+ubman 0:
+  url: https://manpages.ubuntu.com/
+  title: Ubuntu Manpages
   tags:
   - documentation
   - linux
   - ubuntu
   examples:
+  - description: Go to the homepage
+  description: Ubuntu Manpages provides web access to manual pages for Ubuntu packages and command-line tools.
+ubman 1:
+  url: https://www.google.com/search?hl=<$language>&q=site%3Amanpages.ubuntu.com+<query>
+  include: ubman 0
+  examples:
   - arguments: ls
     description: Search for "ls"
-ubp 1:
-  url: https://packages.ubuntu.com/<package>
+ubp 0:
+  url: https://packages.ubuntu.com/
   title: Ubuntu Packages
   tags:
   - linux
   - packages
   - ubuntu
   examples:
+  - description: Go to the homepage
+  description: Ubuntu Packages lets users browse package metadata, dependencies, and distributions across Ubuntu releases.
+ubp 1:
+  url: https://packages.ubuntu.com/<package>
+  include: ubp 0
+  examples:
   - arguments: tetex
     description: Search for tetex packages
-ubplanet 0:
+ubpl 0:
   url: https://planet.ubuntu.com/
   title: Ubuntu Planet
   tags:
   - linux
   - ubuntu
+  examples:
+  - description: Go to the homepage
+  description: Planet Ubuntu aggregates blog posts and news from Ubuntu community members and contributors.
+ubplanet 0:
+  deprecated:
+    alternative:
+      query: ubpl
+    created: '2026-05-12'
+ubu 0:
+  url: https://ubu.com/
+  title: UbuWeb
+  tags:
+  - art
+  - film
+  - poetry
+  - sound
+  examples:
+  - description: Go to the homepage
+  description: UbuWeb is an independent archive of avant-garde film, sound, poetry, and other experimental media.
 ubu 1:
   url: https://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query=<query>
-  title: Ubu.com
-  tags:
-  - old
+  include: ubu 0
+  examples:
+  - arguments: dada
+    description: Search for "dada"
 ubug 0:
   url: https://bugs.launchpad.net/
   title: Issue Tracker
   tags:
-  - old
+  - bug-tracker
+  - linux
+  - ubuntu
+  examples:
+  - description: Go to the homepage
+  description: Launchpad Bugs tracks bug reports, tasks, and discussions for Ubuntu and related projects.
 ubug 2:
   url: https://launchpad.net/ubuntu/+source/<package>/+bugs?field.searchtext=<query>
-  title: search for a term in ubuntu bugs (query)
+  include: ubug 0
+ubugq 0:
+  url: https://launchpad.net/ubuntu/+bugs
+  title: Ubuntu bugs
   tags:
-  - old
+  - bug-tracker
+  - linux
+  - ubuntu
+  examples:
+  - description: Go to the homepage
+  description: Ubuntu bug search on Launchpad helps users find existing reports and issues across Ubuntu packages.
 ubugq 1:
   url: https://launchpad.net/ubuntu/+bugs?field.searchtext=<query>
-  title: search for a term in ubuntu bugs (query)
-  tags:
-  - old
+  include: ubugq 0
+ubuntu-packages 0:
+  deprecated:
+    alternative:
+      query: ubp
+    created: '2026-05-12'
 ubuntu-packages 1:
-  url: https://packages.ubuntu.com/<package>
-  title: Ubuntu Packages
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubp <1>
+    created: '2026-05-12'
 ubuntu-planet 0:
-  url: https://planet.ubuntu.com/
-  title: Ubuntu Planet
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubpl
+    created: '2026-05-12'
 ubuntu-wiki 0:
-  url: https://wiki.ubuntu.com/
-  title: Ubuntu Wiki
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubw
+    created: '2026-05-12'
 ubuntu-wiki 1:
-  url: https://wiki.ubuntu.com/?action=fullsearch&context=180&value=<query>&titlesearch=Titles
-  title: Ubuntu.com Wiki Search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubw <1>
+    created: '2026-05-12'
 ubw 0:
   url: https://wiki.ubuntu.com/
   title: Ubuntu.com Wiki
@@ -10604,14 +10652,12 @@ ubw 0:
   - linux
   - ubuntu
   - wiki
+  examples:
+  - description: Go to the homepage
+  description: The Ubuntu Wiki contains community-maintained documentation, guides, and project pages for Ubuntu.
 ubw 1:
   url: https://wiki.ubuntu.com/?action=fullsearch&context=180&value=<query>&titlesearch=Titles
-  title: Ubuntu.com Wiki
-  tags:
-  - documentation
-  - linux
-  - ubuntu
-  - wiki
+  include: ubw 0
   examples:
   - arguments: server
     description: Search for "server"
