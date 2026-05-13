@@ -11676,11 +11676,6 @@ wq 1:
   examples:
   - arguments: einstein
     description: Search for Einstein quotes
-wr 1:
-  url: https://www.warcraftrealms.com/search.php?search=<query>
-  title: search WarcraftRealms
-  tags:
-  - old
 ws 0:
   url: https://<$language>.wikisource.org/
   title: Wikisource
