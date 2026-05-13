@@ -5753,6 +5753,23 @@ tho 1:
   examples:
   - arguments: gitarre
     description: Suche nach Gitarre
+thom 0:
+  url: https://www.thomann.de/de/
+  title: Thomann
+  tags:
+  - audio
+  - instruments
+  - music
+  - shopping
+  examples:
+  - description: Go to the homepage
+  description: Thomann ist Europas größter Versandhändler für Musikinstrumente, Studio- und Lichttechnik.
+thom 1:
+  url: https://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw=<query>&x=&y=
+  include: thom 0
+  examples:
+  - arguments: gitarre
+    description: Search for "gitarre" at Thomann
 tra 0:
   url: https://www.tripadvisor.de/
   title: Tripadvisor

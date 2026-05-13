@@ -3597,22 +3597,28 @@ ff 1:
   tags:
   - old
 ffaddon 0:
+  deprecated:
+    alternative:
+      query: ffao
+    created: '2026-05-12'
+ffaddon 1:
+  deprecated:
+    alternative:
+      query: ffao <1>
+    created: '2026-05-12'
+ffao 0:
   url: https://addons.mozilla.org/firefox/
   title: Firefox Add-ons
   tags:
   - addons
   - firefox
   - mozilla
-ffaddon 1:
+ffao 1:
   url: https://addons.mozilla.org/firefox/search?q=<addon>
-  title: Firefox Add-ons
-  tags:
-  - addons
-  - firefox
-  - mozilla
+  include: ffao 0
   examples:
-  - arguments: serchilo
-    description: Search for Serchilo Firefox addon
+  - arguments: trovu
+    description: Search for the Trovu Firefox addon
 ffi 0:
   url: https://www.fotofinder.com/
   title: Fotofinder
@@ -9839,39 +9845,41 @@ tails 0:
   url: https://tails.boum.org/
   title: The amnesic incoginto live system, that aims to preserve your privacy and anonymity.
   removed: '2023-01-14'
-tat 2:
-  url: https://tatoeba.org/eng/sentences/search?to=<target language>&query=<query>
-  title: Tatoeba search with specified target language
+tat 0:
+  url: https://tatoeba.org/
+  title: Tatoeba
   tags:
   - dictionary
   - languages
-  - langugage
   - phrasebook
-  - phrases
+  - sentences
+  - translation
+  examples:
+  - description: Go to the homepage
+  description: Tatoeba is a collaborative collection of sentences and translations for language learning and lookup.
+tat 2:
+  url: https://tatoeba.org/eng/sentences/search?to=<target language>&query=<query>
+  include: tat 0
   examples:
   - arguments: ita, not at all
     description: search for Italian translations of the phrase "not at all"
-  description: Use 3-letter language code!
+  description: Use the 3-letter language code!
 tat 3:
   url: https://tatoeba.org/eng/sentences/search?from=<source_language>&to=<target_language>&query=<query>
-  title: Tatoeba search with specified source and target language
-  tags:
-  - dictionary
-  - languages
-  - langugage
-  - phrasebook
-  - phrases
+  include: tat 0
   examples:
-  - arguments: en, ita, not at all
+  - arguments: eng, ita, not at all
     description: search for Italian translations of the English phrase "not at all"
-  description: Use 3-letter language codes!
+  description: Use the 3-letter language code!
 tav 0:
   url: https://www.tripadvisor.com/
   title: Tripadvisor
   tags:
+  - reviews
   - travel
   examples:
-  - description: Go to hompeage
+  - description: Go to the homepage
+  description: Tripadvisor helps users discover hotels, restaurants, attractions, and travel reviews around the world.
 tav 1:
   url: https://www.tripadvisor.com/Search?q=<query>
   include: tav 0
@@ -9884,42 +9892,73 @@ taz 1:
       query: de.taz <1>
     created: '2026-05-11'
 tbaddon 0:
-  url: https://addons.mozilla.org/thunderbird/
-  title: Thunderbird Add-ons
-  tags:
-  - addons
-  - mozilla
-  - thunderbird
+  deprecated:
+    alternative:
+      query: tbao
+    created: '2026-05-12'
 tbaddon 1:
-  url: https://addons.mozilla.org/thunderbird/search?q=<addon>
+  deprecated:
+    alternative:
+      query: tbao <1>
+    created: '2026-05-12'
+tbao 0:
+  url: https://addons.thunderbird.net/
   title: Thunderbird Add-ons
   tags:
   - addons
   - mozilla
   - thunderbird
   examples:
+  - description: Go to the homepage
+  description: Thunderbird Add-ons extends Mozilla Thunderbird with extra features, integrations, and tools.
+tbao 1:
+  url: https://addons.thunderbird.net/thunderbird/search/?q=<addon>
+  include: tbao 0
+  examples:
   - arguments: spam
     description: Search for Thunderbird Addon about "spam"
 tc 0:
-  url: https://www.techcrunch.com/
+  url: https://techcrunch.com/
   title: TechCrunch
   tags:
-  - old
+  - news
+  - startup
+  - technology
+  examples:
+  - description: Go to the homepage
+  description: TechCrunch covers technology news, startups, venture capital, and product launches.
 tc 1:
-  url: https://www.techcrunch.com/?s=<query>
-  title: TechCrunch Suche
+  url: https://techcrunch.com/?s=<query>
+  tests:
+  - arguments: ai
+    expect: TechCrunch
+  include: tc 0
+  examples:
+  - arguments: ai
+    description: Search TechCrunch for AI coverage
+tcode 0:
+  url: https://www.tcodesearch.com/
+  title: SAP TCode Search
   tags:
-  - old
+  - enterprise
+  - sap
+  - software
+  examples:
+  - description: Go to the homepage
+  description: TCodeSearch provides lookup pages for SAP transaction codes, tables, and related enterprise resources.
 tcode 1:
   url: https://www.tcodesearch.com/tcodes/search?q=<query>
-  title: SAP TCODE Search
-  tags:
-  - old
+  include: tcode 0
+  examples:
+  - arguments: ME21N
+    description: Search SAP transaction codes for ME21N
 tct 1:
-  url: https://www.techcrunch.com/tag/<tag>
-  title: Tag-Suche bei TechCrunch
-  tags:
-  - old
+  url: https://techcrunch.com/tag/<tag>/
+  title: TechCrunch tag
+  include: tc 0
+  examples:
+  - arguments: ai
+    description: Open the TechCrunch AI tag page
 tdrm 0:
   url: https://tdrm.fiff.de/
   title: TDRM Tihange Doel Radiation Monitoring Network
@@ -9930,21 +9969,16 @@ tdrm 0:
   - measurement
   - measurement-network
   - radiation-measurement
+  removed: '2026-05-12'
 tds 0:
   url: https://www.thedailyshow.com/full-episodes/
   title: 'The Daily Show: Latest full episode'
   tags:
   - comedy
   - tv
-tds 1:
-  url: https://www.thedailyshow.com/video/?searchterm=<query>
-  title: 'The Daily Show: Search archives'
-  tags:
-  - comedy
-  - tv
   examples:
-  - arguments: germany
-    description: Search "The Daily Show" archives for "germany"
+  - description: Go to the latest full episodes page
+  description: The Daily Show full episodes page provides current episodes and clips from the satirical news show.
 te 0:
   include:
   - key: te 0
@@ -9966,20 +10000,42 @@ techrightsfeed 0:
   - ip-law
   - patent-law
   - patents
-ted 1:
-  url: https://www.ted.com/search?q=<query>
+  removed: '2026-05-12'
+  examples:
+  - description: Open the RSS feed
+  description: Techrights publishes an RSS feed focused on digital rights, software freedom, and patent criticism.
+ted 0:
+  url: https://www.ted.com/
   title: TED
   tags:
   - science
   - talks
+  - videos
+  examples:
+  - description: Go to the homepage
+  description: TED hosts talks and interviews from speakers covering science, technology, culture, and ideas.
+ted 1:
+  url: https://www.ted.com/search?q=<query>
+  tests:
+  - arguments: pinker
+    expect: TED
+  include: ted 0
   examples:
   - arguments: pinker
     description: Search for talks of Steven Pinker
-tey 1:
-  url: https://www.tineye.com/search?url=<url>
+tey 0:
+  url: https://www.tineye.com/
   title: TinEye
   tags:
   - images
+  - reverse-image-search
+  - search
+  examples:
+  - description: Go to the homepage
+  description: TinEye is a reverse image search engine for finding copies and matches of images on the web.
+tey 1:
+  url: https://www.tineye.com/search?url=<url>
+  include: tey 0
 th 0:
   include:
   - key: th 0
@@ -9997,15 +10053,29 @@ th 1:
   - key: th 1
     namespace: pka
 thomann 1:
-  url: https://www.thomann.de/de/search_dir.html?xsid=e4bd1b9ad5c1ad8a62b6d97b39683712&sw=<query>&x=&y=
-  title: Thomann Suche
+  deprecated:
+    alternative:
+      query: .de.thom <1>
+    created: '2026-05-12'
+thsr 0:
+  url: https://www.thesaurus.com/
+  title: Thesaurus.com
   tags:
-  - old
+  - dictionary
+  - language
+  - synonyms
+  examples:
+  - description: Go to the homepage
+  description: Thesaurus.com helps users find synonyms, antonyms, and related word suggestions in English.
 thsr 1:
   url: https://thesaurus.com/browse/<query>
-  title: Roget's Thesaurus
-  tags:
-  - old
+  tests:
+  - arguments: fast
+    expect: fast
+  include: thsr 0
+  examples:
+  - arguments: fast
+    description: Look up synonyms for fast
 ti 0:
   include:
   - key: ti 0
@@ -10018,14 +10088,15 @@ tik 0:
   url: https://www.tiktok.com/
   title: TikTok, Homepage
   tags:
+  - social-media
   - tiktok
   - video
+  examples:
+  - description: Go to the homepage
+  description: TikTok is a short-form video platform for discovering, sharing, and following creators and trends.
 tik 1:
   url: https://www.tiktok.com/search?q=<query>
-  title: TikTok
-  tags:
-  - tiktok
-  - video
+  include: tik 0
   examples:
   - arguments: berlin
     description: Search for videos about Berlin
@@ -10035,34 +10106,50 @@ tiktok 1:
     alternative:
       query: tiku <1>
     created: '2023-01-11'
-tiku 1:
-  url: https://www.tiktok.com/@<user>
-  title: TikTok, User
+tiku 0:
+  url: https://www.tiktok.com/
+  title: TikTok users
   tags:
+  - social-media
   - tiktok
   - video
+  examples:
+  - description: Go to the homepage
+  description: TikTok user profiles let you open creator pages directly on the TikTok platform.
+tiku 1:
+  url: https://www.tiktok.com/@<user>
+  include: tiku 0
   examples:
   - arguments: juliaticaofficial
     description: Show userpage of "juliaticaofficial"
   description: Shows the userpage of a TikTok user.
-time 1:
-  url: https://www.timeanddate.com/worldclock/results.html?query=<location>
-  title: Timeanddate.com
+time 0:
+  url: https://www.timeanddate.com/
+  title: timeanddate.com
   tags:
   - date
   - time
   - timezones
   examples:
+  - description: Go to the homepage
+  description: timeanddate.com provides time, date, calendar, and timezone information for locations around the world.
+time 1:
+  url: https://www.timeanddate.com/worldclock/results.html?query=<location>
+  include: time 0
+  examples:
   - arguments: berlin
     description: Look up the current time and date in Berlin
 timedate 0:
-  url: https://www.timeanddate.com
+  url: https://www.timeanddate.com/
   title: Time and date calculations online
   tags:
   - date
   - info
   - service
   - time
+  examples:
+  - description: Go to the homepage
+  description: timeanddate.com offers calculators, calendars, and reference tools for dates, times, and time zones.
 timediff 0:
   url: https://www.timeanddate.com/date/duration.html
   title: Time and date difference calculator
@@ -10071,6 +10158,9 @@ timediff 0:
   - info
   - service
   - time
+  examples:
+  - description: Open the duration calculator
+  description: The timeanddate duration calculator helps compare dates and compute elapsed or remaining time.
 timer 1:
   url: https://www.google.com/search?hl=en&q=timer+<period>
   title: Timer via Google
@@ -10094,6 +10184,7 @@ tin 0:
   - radio
   examples:
   - description: Go to the homepage
+  description: TuneIn lets users listen to live radio, podcasts, sports, and other streaming audio channels.
 tin 1:
   url: https://tunein.com/search/?query=<query>
   include: tin 0
@@ -10105,15 +10196,14 @@ tinyurl 0:
   title: TinyURL
   tags:
   - url
-titulky 1:
-  url: https://www.titulky.com/?Fulltext=<film>
-  title: Titulky.com
-  tags:
-  - subtitles
-  - titulky
   examples:
-  - arguments: loose change
-    description: Find subtitles for "loose change"
+  - description: Go to the homepage
+  description: TinyURL is a link-shortening service for creating compact shareable URLs.
+titulky 1:
+  deprecated:
+    alternative:
+      query: cs.tit <1>
+    created: '2026-05-12'
 tl 0:
   include:
   - key: tl 0
@@ -10122,11 +10212,19 @@ tl 1:
   include:
   - key: tl 1
     namespace: pka
-tldp 1:
-  url: https://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
+tldp 0:
+  url: https://tldp.org/
   title: The Linux Documentation Project
   tags:
-  - old
+  - documentation
+  - linux
+  - manuals
+  examples:
+  - description: Go to the homepage
+  description: The Linux Documentation Project collects how-tos, guides, and manuals for Linux users and administrators.
+tldp 1:
+  url: https://www.google.com/cse?cx=017644269519104757279%3Agm62gtzaoky&q=<query>
+  include: tldp 0
 tma 0:
   url: https://www.metal-archives.com/
   title: 'Encyclopaedia Metallum: The Metal Archives'
@@ -10144,12 +10242,22 @@ tma 1:
   examples:
   - arguments: Metallica
     description: Search for "Metallica"
-tmdb 1:
-  url: https://www.themoviedb.org/search?query=<title>
-  title: The Open Movie Database
+tmdb 0:
+  url: https://www.themoviedb.org/
+  title: The Movie Database
   tags:
   - cinema
   - movies
+  - tv
+  examples:
+  - description: Go to the homepage
+  description: The Movie Database is a community-maintained catalog for films, TV series, cast members, and related media data.
+tmdb 1:
+  url: https://www.themoviedb.org/search?query=<title>
+  tests:
+  - arguments: forrest gump
+    expect: Forrest Gump
+  include: tmdb 0
   examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
@@ -10160,11 +10268,10 @@ tmu 0:
   - shopping
   examples:
   - description: Go to the homepage
+  description: Temu is an online marketplace for low-cost consumer goods across many shopping categories.
 tmu 1:
   url: https://www.temu.com/search_result.html?search_key=<query>
-  title: Temu
-  tags:
-  - shopping
+  include: tmu 0
   examples:
   - arguments: camera
     description: Search for cameras
@@ -10181,27 +10288,26 @@ tpb 0:
   title: The Pirate Bay
   tags:
   - torrent
+  examples:
+  - description: Go to the homepage
+  description: The Pirate Bay is a torrent index site for searching magnet links and torrent metadata.
 tpb 1:
   url: https://thepiratebay.org/search/<query>
-  title: The Pirate Bay
-  tags:
-  - torrent
+  include: tpb 0
   examples:
   - arguments: mozart
     description: Search for "mozart"
 tpba 1:
   url: https://thepiratebay.org/search/<query>/0/99/100
   title: The Pirate Bay, audio only
-  tags:
-  - torrent
+  include: tpb 0
   examples:
   - arguments: mozart
     description: Search for "mozart"
 tpbv 1:
   url: https://thepiratebay.org/search/<query>/0/99/200
   title: The Pirate Bay, video only
-  tags:
-  - torrent
+  include: tpb 0
   examples:
   - arguments: mozart
     description: Search for "mozart"
@@ -10210,10 +10316,12 @@ tpl 0:
   title: Trustpilot
   tags:
   - reviews
+  examples:
+  - description: Go to the homepage
+  description: Trustpilot collects customer reviews and business ratings across many industries and online services.
 tpl 1:
   url: https://www.trustpilot.com/search?query=<query>
-  include:
-  - key: tpl 0
+  include: tpl 0
   examples:
   - arguments: vodafone
     description: Search for reviews about Vodafone
@@ -10266,10 +10374,10 @@ tr 1:
   - key: tr 1
     namespace: wrf
 trends 1:
-  url: https://www.google.com/trends?q=<query>
-  title: Google Trends
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: gtrends <1>
+    created: '2026-05-12'
 trianglify 0:
   url: https://snorpey.github.io/triangulation/
   title: Triangulation (Low poly generation) online
@@ -10277,46 +10385,70 @@ trianglify 0:
   - image-processing
   - javascript
   - online-tool
-trim 1:
-  url: https://tr.im/marklet?url=<url>
-  title: Tr.im
-  tags:
-  - old
+  removed: '2026-05-12'
 tsq 0:
   url: https://www.turbosquid.com/
   title: TurboSquid
   tags:
   - photo
   - photography
+  examples:
+  - description: Go to the homepage
+  description: TurboSquid offers downloadable 3D models, assets, and resources for visualization, games, and design.
 tsq 1:
   url: https://www.turbosquid.com/Search/Index.cfm?keyword=<query>
-  title: TurboSquid
-  tags:
-  - photo
-  - photography
+  include: tsq 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
-tst 1:
-  url: https://timestamp.online/countdown/<timestamp>
+tst 0:
+  url: https://timestamp.online/
   title: UNIX Timestamp
   tags:
+  - date
   - programming
+  - time
+  examples:
+  - description: Go to the homepage
+  description: Timestamp.online converts Unix timestamps into human-readable dates and offers related time tools.
+tst 1:
+  url: https://timestamp.online/countdown/<timestamp>
+  include: tst 0
   examples:
   - arguments: '1361987427'
     description: Show time of 1361987427 in human-readable form.
-tv 1:
-  url: https://www.thingiverse.com/search?q=<argument_name>&type=things&sort=relevant
+tv 0:
+  url: https://www.thingiverse.com/
   title: Thingiverse
+  tags:
+  - 3d-printing
+  - maker
+  - models
+  examples:
+  - description: Go to the homepage
+  description: Thingiverse is a repository for 3D-printing designs, models, and maker projects.
+tv 1:
+  url: https://www.thingiverse.com/search?q=<query>&page=1
+  include: tv 0
   examples:
   - arguments: rubber ducky
     description: Search Thingiverse for "rubber ducky"
-tvdb 1:
-  url: https://thetvdb.com/?searchseriesid=&tab=listseries&function=Search&string=<tv-series>
-  title: TVDB TV Series Search
+tvdb 0:
+  url: https://thetvdb.com/
+  title: TheTVDB
   tags:
+  - database
   - series
   - tv
+  examples:
+  - description: Go to the homepage
+  description: TheTVDB is a community-maintained database for television series, episodes, and related metadata.
+tvdb 1:
+  url: https://thetvdb.com/search?query=<tv-series>
+  tests:
+  - arguments: wonder years
+    expect: Wonder Years
+  include: tvdb 0
   examples:
   - arguments: wonder years
     description: Search for the TV show "The Wonder Years"
@@ -10331,6 +10463,7 @@ tvt 0:
   - wiki
   examples:
   - description: Go to the homepage
+  description: TV Tropes is a community-written wiki cataloging recurring storytelling devices across media.
 tvt 1:
   url: https://tvtropes.org/pmwiki/search_result.php?q=<query>
   include: tvt 0
@@ -10352,26 +10485,27 @@ twb 0:
     alternative:
       query: xb
     created: '2023-03-13'
-twingly 0:
-  url: https://twingly.com/
-  title: Twingly Main page
-  tags:
-  - old
-twingly 1:
-  url: https://twingly.com/search?q=<query>
-  title: Twingly Search
-  tags:
-  - old
 twitter 0:
   deprecated:
     alternative:
       query: x
     created: '2023-01-23'
 twk 0:
-  url: https://tweaks.com
+  url: https://tweaks.com/
   title: Tweaks
   tags:
-  - old
+  - how-to
+  - software
+  - windows
+  examples:
+  - description: Go to the homepage
+  description: Tweaks publishes Windows tips, troubleshooting guides, and system configuration how-to articles.
+twk 1:
+  url: https://tweaks.com/search/?q=<query>
+  include: twk 0
+  examples:
+  - arguments: task manager
+    description: Search for "task manager" on Tweaks
 twl 1:
   deprecated:
     alternative:
@@ -10422,77 +10556,120 @@ twum 1:
     alternative:
       query: xu <1>
     created: '2023-03-13'
-ubdo 1:
-  url: https://www.ub.tu-dortmund.de/webOPACClient/start.do?Language=De&Query=-1="<query>"
-  title: Universitätsbibliothek Dortmund
-  tags:
-  - old
-ubman 1:
-  url: https://manpages.ubuntu.com/cgi-bin/search.py?&ie=UTF-8&q=<query>
-  title: Ubuntu Manpage
+ubman 0:
+  url: https://manpages.ubuntu.com/
+  title: Ubuntu Manpages
   tags:
   - documentation
   - linux
   - ubuntu
   examples:
+  - description: Go to the homepage
+  description: Ubuntu Manpages provides web access to manual pages for Ubuntu packages and command-line tools.
+ubman 1:
+  url: https://www.google.com/search?hl=<$language>&q=site%3Amanpages.ubuntu.com+<query>
+  include: ubman 0
+  examples:
   - arguments: ls
     description: Search for "ls"
-ubp 1:
-  url: https://packages.ubuntu.com/<package>
+ubp 0:
+  url: https://packages.ubuntu.com/
   title: Ubuntu Packages
   tags:
   - linux
   - packages
   - ubuntu
   examples:
+  - description: Go to the homepage
+  description: Ubuntu Packages lets users browse package metadata, dependencies, and distributions across Ubuntu releases.
+ubp 1:
+  url: https://packages.ubuntu.com/<package>
+  include: ubp 0
+  examples:
   - arguments: tetex
     description: Search for tetex packages
-ubplanet 0:
+ubpl 0:
   url: https://planet.ubuntu.com/
   title: Ubuntu Planet
   tags:
   - linux
   - ubuntu
+  examples:
+  - description: Go to the homepage
+  description: Planet Ubuntu aggregates blog posts and news from Ubuntu community members and contributors.
+ubplanet 0:
+  deprecated:
+    alternative:
+      query: ubpl
+    created: '2026-05-12'
+ubu 0:
+  url: https://ubu.com/
+  title: UbuWeb
+  tags:
+  - art
+  - film
+  - poetry
+  - sound
+  examples:
+  - description: Go to the homepage
+  description: UbuWeb is an independent archive of avant-garde film, sound, poetry, and other experimental media.
 ubu 1:
   url: https://search.freefind.com/find.html?id=17493&pageid=r&mode=ALL&query=<query>
-  title: Ubu.com
-  tags:
-  - old
+  include: ubu 0
+  examples:
+  - arguments: dada
+    description: Search for "dada"
 ubug 0:
   url: https://bugs.launchpad.net/
   title: Issue Tracker
   tags:
-  - old
+  - bug-tracker
+  - linux
+  - ubuntu
+  examples:
+  - description: Go to the homepage
+  description: Launchpad Bugs tracks bug reports, tasks, and discussions for Ubuntu and related projects.
 ubug 2:
   url: https://launchpad.net/ubuntu/+source/<package>/+bugs?field.searchtext=<query>
-  title: search for a term in ubuntu bugs (query)
+  include: ubug 0
+ubugq 0:
+  url: https://launchpad.net/ubuntu/+bugs
+  title: Ubuntu bugs
   tags:
-  - old
+  - bug-tracker
+  - linux
+  - ubuntu
+  examples:
+  - description: Go to the homepage
+  description: Ubuntu bug search on Launchpad helps users find existing reports and issues across Ubuntu packages.
 ubugq 1:
   url: https://launchpad.net/ubuntu/+bugs?field.searchtext=<query>
-  title: search for a term in ubuntu bugs (query)
-  tags:
-  - old
+  include: ubugq 0
+ubuntu-packages 0:
+  deprecated:
+    alternative:
+      query: ubp
+    created: '2026-05-12'
 ubuntu-packages 1:
-  url: https://packages.ubuntu.com/<package>
-  title: Ubuntu Packages
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubp <1>
+    created: '2026-05-12'
 ubuntu-planet 0:
-  url: https://planet.ubuntu.com/
-  title: Ubuntu Planet
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubpl
+    created: '2026-05-12'
 ubuntu-wiki 0:
-  url: https://wiki.ubuntu.com/
-  title: Ubuntu Wiki
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubw
+    created: '2026-05-12'
 ubuntu-wiki 1:
-  url: https://wiki.ubuntu.com/?action=fullsearch&context=180&value=<query>&titlesearch=Titles
-  title: Ubuntu.com Wiki Search
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ubw <1>
+    created: '2026-05-12'
 ubw 0:
   url: https://wiki.ubuntu.com/
   title: Ubuntu.com Wiki
@@ -10501,23 +10678,27 @@ ubw 0:
   - linux
   - ubuntu
   - wiki
+  examples:
+  - description: Go to the homepage
+  description: The Ubuntu Wiki contains community-maintained documentation, guides, and project pages for Ubuntu.
 ubw 1:
   url: https://wiki.ubuntu.com/?action=fullsearch&context=180&value=<query>&titlesearch=Titles
-  title: Ubuntu.com Wiki
-  tags:
-  - documentation
-  - linux
-  - ubuntu
-  - wiki
+  include: ubw 0
   examples:
   - arguments: server
     description: Search for "server"
-uc 1:
-  url: https://www.fileformat.info/info/unicode/char/search.htm?preview=entity&q=<query>
+uc 0:
+  url: https://www.fileformat.info/info/unicode/char/search.htm
   title: Unicode character info
   tags:
   - character
   - unicode
+  examples:
+  - description: Go to the homepage
+  description: FileFormat.info offers lookup pages for Unicode characters, properties, and encoding details.
+uc 1:
+  url: https://www.fileformat.info/info/unicode/char/search.htm?preview=entity&q=<query>
+  include: uc 0
   examples:
   - arguments: ä
     description: Look up information about the character "ä"
@@ -10528,16 +10709,35 @@ ucb 0:
   - blocks
   - characters
   - unicode
+  examples:
+  - description: Go to the homepage
+  description: FileFormat.info lists Unicode blocks and links them to the characters and ranges they contain.
+ucs 0:
+  url: https://www.fileformat.info/info/unicode/char/search.htm
+  title: Unicode Character Search
+  tags:
+  - character
+  - search
+  - unicode
+  examples:
+  - description: Go to the homepage
+  description: Unicode Character Search lets users search Unicode codepoints and character metadata by name or symbol.
 ucs 1:
   url: https://www.fileformat.info/info/unicode/char/search.htm?q=<query>&preview=entity
-  title: Unicode Character Search, not including Han codepoints
+  include: ucs 0
+ucsh 0:
+  url: https://www.fileformat.info/info/unicode/char/search.htm?han=Y&preview=entity
+  title: Unicode Character Search with Han
   tags:
-  - old
+  - character
+  - search
+  - unicode
+  examples:
+  - description: Go to the homepage
+  description: This Unicode character search includes Han codepoints alongside the standard search results.
 ucsh 1:
   url: https://www.fileformat.info/info/unicode/char/search.htm?q=<query>&han=Y&preview=entity
-  title: Unicode Character Search, including Han codepoints
-  tags:
-  - old
+  include: ucsh 0
 ud 0:
   url: https://www.urbandictionary.com/
   title: Urban Dictionary
@@ -10545,13 +10745,12 @@ ud 0:
   - dictionary
   - english
   - slang
+  examples:
+  - description: Go to the homepage
+  description: Urban Dictionary collects crowd-sourced definitions for slang, internet expressions, and informal English usage.
 ud 1:
   url: https://www.urbandictionary.com/define.php?term=<query>
-  title: Urban Dictionary
-  tags:
-  - dictionary
-  - english
-  - slang
+  include: ud 0
   examples:
   - arguments: wheelbo
     description: Look up "wheelbo" in the Urban Dictionary
@@ -10571,11 +10770,19 @@ ue5 1:
   examples:
   - arguments: uactorcomponent
     description: Search for "uactorcomponent"
-uesp 1:
-  url: https://www.uesp.net/wiki/Special:Search?search=<query>&go=Go&nsnum=0&redirs=1&searchtitles=1
+uesp 0:
+  url: https://www.uesp.net/
   title: Unofficial Elder Scrolls Pages
   tags:
-  - old
+  - elder-scrolls
+  - games
+  - wiki
+  examples:
+  - description: Go to the homepage
+  description: UESP is a long-running wiki and reference site for The Elder Scrolls games and lore.
+uesp 1:
+  url: https://www.uesp.net/wiki/Special:Search?search=<query>&go=Go&nsnum=0&redirs=1&searchtitles=1
+  include: uesp 0
 ug 0:
   include:
   - key: ug 0
@@ -10584,34 +10791,52 @@ ug 1:
   include:
   - key: ug 1
     namespace: pka
-ugb 1:
-  url: https://www.ultimate-guitar.com/search.php?s=<band>&w=bands
-  title: 'Ultimate Guitar: Bands'
+ugb 0:
+  url: https://www.ultimate-guitar.com/
+  title: Ultimate Guitar bands
   tags:
   - guitar
   - music
   examples:
+  - description: Go to the homepage
+  description: Ultimate Guitar offers chords, tabs, and searchable music resources for bands, songs, and players.
+ugb 1:
+  url: https://www.ultimate-guitar.com/search.php?s=<band>&w=bands
+  title: 'Ultimate Guitar: Bands'
+  include: ugb 0
+  examples:
   - arguments: beatles
     description: Search for Beatles songs
-ugs 1:
-  url: https://www.ultimate-guitar.com/search.php?search_type=title&value=<song>
-  title: 'Ultimate Guitar: Songs'
+ugs 0:
+  url: https://www.ultimate-guitar.com/
+  title: Ultimate Guitar songs
   tags:
   - guitar
   - music
+  examples:
+  - description: Go to the homepage
+  description: Ultimate Guitar offers chords, tabs, and searchable music resources for bands, songs, and players.
+ugs 1:
+  url: https://www.ultimate-guitar.com/search.php?search_type=title&value=<song>
+  title: 'Ultimate Guitar: Songs'
+  include: ugs 0
   examples:
   - arguments: yesterday
     description: Search for songs about "yesterday"
 uima 0:
-  url: https://incubator.apache.org/uima/downloads/releaseDocs/2.3.0-incubating/docs/api/
+  url: https://uima.apache.org/d/uimaj-current/api/
   title: UIMA API
   tags:
-  - old
+  - api
+  - documentation
+  - java
+  - programming
+  examples:
+  - description: Go to the homepage
+  description: The Apache UIMA API docs describe the Java framework for unstructured information management and analysis.
 uima 1:
-  url: https://www.google.com/search?hl=de&q=site%3Ahttp%3A%2F%2Fincubator.apache.org%2Fuima%2Fdownloads%2FreleaseDocs%2F2.3.0-incubating%2Fdocs%2Fapi%2F%20<query>&ie=utf-8
-  title: UIMA API
-  tags:
-  - old
+  url: https://www.google.com/search?hl=<$language>&q=site%3Auima.apache.org%2Fd%2Fuimaj-current%2Fapi%2F+<query>&ie=utf-8
+  include: uima 0
 uk 0:
   include:
   - key: uk 0
@@ -10636,50 +10861,73 @@ uk 1:
     namespace: rvs
   - key: uk 1
     namespace: pka
-uniprot 1:
-  url: https://www.uniprot.org/uniprot/?query=<query>&sort=score
-  title: Uniprot
-  tags:
-  - old
-unsc 1:
-  url: https://unsplash.com/s/collections/<query>
-  title: Unsplash, collections
-  include: unsp 1
-unsi 1:
-  url: https://unsplash.com/s/illustrations/<query>
-  title: Unsplash, illustrations
-  include: unsp 1
-unsp 0:
+uns 0:
   url: https://unsplash.com/
   title: Unsplash
   tags:
   - free
+  - illustrations
   - images
   - photos
   examples:
   - description: Go to the homepage
-  description: Free stock photography.
-unsp 1:
+  description: Unsplash is a platform for free high-resolution photos and illustrations contributed by a global community of photographers and artists.
+uns 1:
   url: https://unsplash.com/s/photos/<query>
-  title: Unsplash, photos
-  include: unsp 0
+  include: uns 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
+unsc 1:
+  url: https://unsplash.com/s/collections/<query>
+  title: Unsplash, collections
+  include: uns 1
+unsi 1:
+  url: https://unsplash.com/s/illustrations/<query>
+  title: Unsplash, illustrations
+  include: uns 1
+unsp 0:
+  deprecated:
+    alternative:
+      query: uns
+    created: '2026-05-12'
+unsp 1:
+  title: Unsplash, photos
+  include: uns 1
 unsu 1:
   url: https://unsplash.com/s/users/<name>
   title: Unsplash, users
+  include: uns 1
 up 1:
-  url: https://www.uniprot.org/uniprot/?query=<query>&sort=score
-  title: Uniprot
+  deprecated:
+    alternative:
+      query: upr <1>
+    created: '2026-05-12'
+upr 0:
+  url: https://www.uniprot.org/
+  title: UniProt
   tags:
-  - old
-ups 1:
-  url: https://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum=<tracking number>
+  - biology
+  - proteins
+  - science
+  examples:
+  - description: Go to the homepage
+  description: UniProt is a scientific resource for protein sequences, functions, annotations, and related biological data.
+upr 1:
+  url: https://www.uniprot.org/uniprotkb?query=<query>
+  include: up 0
+ups 0:
+  url: https://www.ups.com/track
   title: UPS tracking
   tags:
   - shipping
   - ups
+  examples:
+  - description: Go to the tracking homepage
+  description: UPS tracking lets users follow package shipments and delivery status by tracking number.
+ups 1:
+  url: https://wwwapps.ups.com/WebTracking/processRequest?HTMLVersion=5.0&Requester=NES&AgreeToTermsAndConditions=yes&tracknum=<tracking number>
+  include: ups 0
   examples:
   - arguments: 1Z9999999999999999
     description: track shipment with the number 1Z9999999999999999
@@ -10709,32 +10957,28 @@ urn 1:
   examples:
   - arguments: 1877857704384807200
     description: Unroll a thread from X
-us 1:
-  url: https://userscripts.org/scripts/search?q=<query>
-  title: Userscripts
-  tags:
-  - old
-usbid 1:
-  url: https://usb-ids.gowdy.us/read/UD/<vendorid>
+usbid 0:
+  url: https://usb-ids.gowdy.us/
   title: USB ID Repository
   tags:
   - electronics
+  - hardware
+  - usb
+  examples:
+  - description: Go to the homepage
+  description: The USB ID Repository maps USB vendor and device identifiers to known hardware names.
+usbid 1:
+  url: https://usb-ids.gowdy.us/read/UD/<vendorid>
+  include: usbid 0
   examples:
   - arguments: '8086'
     description: List all known devices from Vendor Intel (8086)
 usbid 2:
   url: https://usb-ids.gowdy.us/read/UD/<vendorid>/<deviceid>
-  title: USB ID Repository
-  tags:
-  - electronics
+  include: usbid 0
   examples:
   - arguments: 05e3,0608
     description: Search for USB device with Vendor ID 05e3 and Device ID 0608
-uscripts 1:
-  url: https://userscripts.org/scripts/search?q=<query>
-  title: Userscripts
-  tags:
-  - old
 uxse 0:
   url: https://unix.stackexchange.com/
   title: Unix Stack Exchange
@@ -10743,14 +10987,12 @@ uxse 0:
   - programming
   - stackexchange
   - unix
+  examples:
+  - description: Go to the homepage
+  description: Unix Stack Exchange is a question-and-answer site for Unix, Linux, shells, and related programming topics.
 uxse 1:
   url: https://unix.stackexchange.com/search?q=<query>
-  title: Unix Stack Exchange
-  tags:
-  - linux
-  - programming
-  - stackexchange
-  - unix
+  include: uxse 0
   examples:
   - arguments: debian
     description: Questions about debian

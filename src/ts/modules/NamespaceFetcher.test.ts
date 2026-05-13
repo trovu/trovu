@@ -172,6 +172,42 @@ describe("NamespaceFetcher.addNamespaceInfo", () => {
   });
 });
 
+describe("NamespaceFetcher.fetchNamespaceInfos", () => {
+  test("with endless new user namespaces (negative)", async () => {
+    const fetcher = new NamespaceFetcher(new Env({}));
+    const namespaceInfos = {
+      loop0: {
+        name: "loop0",
+        type: "user",
+        url: "https://example.com/loop0.yml",
+      },
+    };
+    fetcher.namespaceInfos = namespaceInfos;
+    jest.spyOn(fetcher, "startFetches").mockReturnValue([]);
+    jest.spyOn(fetcher, "processResponses").mockImplementation(async (newNamespaceInfos) => {
+      for (const namespaceInfo of newNamespaceInfos) {
+        const nextIndex = Object.keys(fetcher.namespaceInfos).length;
+        namespaceInfo.shortcuts = fetcher.processShortcuts(
+          {
+            "foo 0": {
+              include: {
+                key: "bar 0",
+                namespace: `loop${nextIndex}`,
+              },
+            },
+          },
+          namespaceInfo.name,
+        );
+      }
+      return newNamespaceInfos;
+    });
+
+    await expect(fetcher.fetchNamespaceInfos(namespaceInfos)).rejects.toThrow(
+      "fetchNamespaceInfos: Loop ran already 10 times.",
+    );
+  });
+});
+
 describe("NamespaceFetcher.processInclude", () => {
   const namespaceInfos = jsyaml.load(`
     leo:

@@ -36,9 +36,9 @@ jest.mock("./DataManager", () => ({
 
 jest.mock("./NamespaceFetcher", () => ({
   __esModule: true,
-  default: {
+  default: Object.assign(jest.fn(), {
     addInfo: jest.fn(),
-  },
+  }),
 }));
 
 jest.mock("./UrlProcessor", () => ({
@@ -63,7 +63,8 @@ describe("Validator.validateShortcuts", () => {
   const readFileSyncMock = fs.readFileSync as jest.Mock;
   const loadYamlMock = jsyaml.load as jest.Mock;
   const loadDataMock = DataManager.load as jest.Mock;
-  const addInfoMock = NamespaceFetcher.addInfo as jest.Mock;
+  const NamespaceFetcherMock = NamespaceFetcher as unknown as jest.Mock;
+  const addInfoMock = (NamespaceFetcher as unknown as AnyObject).addInfo as jest.Mock;
   const getArgumentsMock = UrlProcessor.getArgumentsFromString as jest.Mock;
   const verifierNoIncludeMock = ShortcutVerifier.checkIfHasUrlAndNoInclude as jest.Mock;
   const verifierArgCountMock = ShortcutVerifier.checkIfArgCountMatches as jest.Mock;
@@ -73,6 +74,16 @@ describe("Validator.validateShortcuts", () => {
 
   beforeEach(() => {
     jest.resetAllMocks();
+    NamespaceFetcherMock.mockImplementation(() => ({
+      namespaceInfos: {},
+      assignShortcutsFromData: (namespaceInfos) => namespaceInfos,
+      addNamespaceInfos: (namespaceInfos) => namespaceInfos,
+      processShortcutsAll: (namespaceInfos) => namespaceInfos,
+      processIncludeAll: (namespaceInfos) => namespaceInfos,
+      addReachable: (namespaceInfos) => namespaceInfos,
+      addInfoAll: (namespaceInfos) => namespaceInfos,
+      verifyAll: (namespaceInfos) => namespaceInfos,
+    }));
     readFileSyncMock.mockReturnValue("{}");
     loadYamlMock.mockImplementation((text: string) => {
       if (text === "{}") {

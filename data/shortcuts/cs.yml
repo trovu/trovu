@@ -47,3 +47,18 @@ ssjc 1:
   examples:
   - arguments: strom
     description: Hledat heslo "strom"
+tit 0:
+  url: https://www.titulky.com/
+  title: Titulky.com
+  tags:
+  - subtitles
+  - titulky
+  examples:
+  - description: Přejít na domovskou stránku
+  description: Český web pro hledání a stahování titulků k filmům a seriálům.
+tit 1:
+  url: https://www.titulky.com/?Fulltext=<film>
+  include: tit 0
+  examples:
+  - arguments: loose change
+    description: Najít titulky pro "loose change"
