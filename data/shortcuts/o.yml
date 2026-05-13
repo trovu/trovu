@@ -11770,8 +11770,8 @@ xb 0:
   description: X Bookmarks stores posts you have saved for later reading.
 xg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=x.com&q=<query>
-  include: x 0
   title: X (Twitter) via Google
+  include: x 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -11808,18 +11808,18 @@ xkcd 1:
     description: go to comic 552
 xkcds 1:
   url: https://www.ohnorobot.com/index.php?s=<query>&Search=Search&comic=56
-  include: xkcd 0
   title: ohnorobot.com (xkcd search)
   tests:
   - arguments: correlation
     expect: 'Oh No Robot: comics search'
+  include: xkcd 0
   examples:
   - arguments: correlation
     description: search for xkcd comics about "correlation"
 xl 1:
   url: https://x.com/search?f=live&q=<query>
-  include: x 0
   title: X (Twitter) Search, latest posts
+  include: x 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -11851,22 +11851,22 @@ xn 0:
   description: X Notifications shows replies, mentions, follows, and other account activity.
 xol 1:
   url: https://x.com/search?q=lang%3A<$language>%20<query>
-  include: x 0
   title: X (Twitter) Search, only in my language
+  include: x 0
   examples:
   - arguments: berlin
     description: Search Twitter for "berlin" only in my language
 xol 2:
   url: https://x.com/search?q=lang%3A<language>%20<query>
-  include: x 0
   title: X (Twitter) Search, only in given language
+  include: x 0
   examples:
   - arguments: en, berlin
     description: Search X for "berlin" only in English
 xu 1:
   url: https://x.com/<user>
-  include: x 0
   title: X (Twitter) User
+  include: x 0
   examples:
   - arguments: serchilo
     description: Go to user page of @serchilo
