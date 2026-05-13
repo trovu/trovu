@@ -11448,23 +11448,6 @@ wh 1:
   examples:
   - arguments: shadowmourne
     description: Search for "shadowmourne" on Wowhead
-whatis 0:
-  url: https://whatis.techtarget.com/
-  title: What is? - Technical glossary
-  tags:
-  - glossary
-  - industry
-  - technology
-whatis 1:
-  url: https://whatis.techtarget.com/search/query?q=<query>
-  title: What is? - Technical glossary
-  tags:
-  - glossary
-  - industry
-  - technology
-  examples:
-  - arguments: umts
-    description: search for a definition of UMTS
 whois 1:
   url: https://whois.domaintools.com/<domain>
   title: Whois (domaintools.com)
