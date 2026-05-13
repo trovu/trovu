@@ -11870,12 +11870,19 @@ xu 1:
   examples:
   - arguments: serchilo
     description: Go to user page of @serchilo
-y 1:
-  url: https://search.yahoo.com/search?p=<query>
-  title: Yahoo Web
+y 0:
+  url: https://www.yahoo.com/
+  title: Yahoo
   tags:
+  - portal
   - web-search
   - yahoo
+  examples:
+  - description: Go to the homepage
+  description: Yahoo is a web portal with search, news, finance, mail, and other consumer services.
+y 1:
+  url: https://search.yahoo.com/search?p=<query>
+  include: y 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -11947,21 +11954,31 @@ ye 2:
   examples:
   - arguments: pizza, new york
     description: Find pizza places in New York
+yf 0:
+  url: https://finance.yahoo.com/
+  title: Yahoo Finance
+  tags:
+  - finance
+  - markets
+  - stocks
+  - yahoo
+  examples:
+  - description: Go to the homepage
+  description: Yahoo Finance provides stock quotes, charts, market news, and company lookup tools.
 yf 1:
   url: https://finance.yahoo.com/quote/<abbreviation>
-  title: 'Yahoo Finance: Get stock quotes'
-  tags:
-  - old
+  title: Yahoo Finance, stock information
+  include: yf 0
+  examples:
+  - arguments: AAPL
+    description: Look up the stock information for Apple Inc. (AAPL)
 yfa 1:
   url: https://finance.yahoo.com/lookup?s=<company>
-  title: 'Yahoo Finance: Get company abbreviation'
-  tags:
-  - old
-yfc 1:
-  url: https://finance.yahoo.com/echarts?s=<abbreviation>
-  title: 'Yahoo Finance: Get quotes chart'
-  tags:
-  - old
+  title: Yahoo Finance, company lookup
+  include: yf 0
+  examples:
+  - arguments: apple
+    description: Search for companies with "apple" in their name on Yahoo Finance
 yfl 1:
   url: https://finance.yahoo.com/lookup?bypass=true&s=<company>
   title: Yahoo Finance Lookup
@@ -12034,6 +12051,7 @@ yim 1:
   tags:
   - images
   - yahoo
+  include: y 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -12192,6 +12210,7 @@ yv 1:
   tags:
   - video
   - yahoo
+  include: y 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
