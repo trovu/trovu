@@ -81,24 +81,15 @@ g 1:
   - arguments: wien
     description: Google-Suche nach "wien"
 gh 0:
-  url: https://geizhals.at/
-  title: Geizhals Österreich
-  tests:
-  - expect: <title>Geizhals Preisvergleich Österreich</title>
-  tags:
-  - geizhals
-  - preisvergleich
-  - shopping
-  description: Preisvergleichsportal für verschiedene Produkte
+  deprecated:
+    alternative:
+      query: gzh
+    created: '2026-05-13'
 gh 1:
-  url: 'https://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
-  tests:
-  - arguments: fernseher
-    expect: <title>fernseher Geizhals Österreich</title>
-  include: gh 0
-  examples:
-  - arguments: fernseher
-    description: Search for "fernseher"
+  deprecated:
+    alternative:
+      query: gzh <1>
+    created: '2026-05-13'
 gmam 1:
   deprecated:
     alternative:
@@ -534,6 +525,25 @@ gmzt 1:
     alternative:
       query: gm zt,<1>
     created: '2023-01-07'
+gzh 0:
+  url: https://geizhals.at/
+  title: Geizhals Österreich
+  tests:
+  - expect: <title>Geizhals Preisvergleich Österreich</title>
+  tags:
+  - geizhals
+  - preisvergleich
+  - shopping
+  description: Preisvergleichsportal für verschiedene Produkte
+gzh 1:
+  url: 'https://geizhals.at/?fs=<Produkt: {encoding: iso-8859-1}>'
+  tests:
+  - arguments: fernseher
+    expect: <title>fernseher Geizhals Österreich</title>
+  include: gzh 0
+  examples:
+  - arguments: fernseher
+    description: Search for "fernseher"
 ikea 0:
   url: https://www.ikea.com/at/de/
   title: IKEA Österreich

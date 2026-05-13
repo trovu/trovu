@@ -1253,20 +1253,15 @@ getty 1:
   - arguments: christmas
     description: search photos about christmas
 gh 0:
-  url: https://geizhals.de/
-  title: Geizhals Deutschland
-  tags:
-  - geizhals
-  - preisvergleich
-  - shopping
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: gzh
+    created: '2026-05-13'
 gh 1:
-  url: 'https://geizhals.de/?fs=<Produkt: {encoding: iso-8859-1}>'
-  include: gh 0
-  examples:
-  - arguments: fernseher
-    description: Search for "fernseher"
+  deprecated:
+    alternative:
+      query: gzh <1>
+    created: '2026-05-13'
 gii 0:
   url: https://www.gesetze-im-internet.de/
   title: Gesetze im Internet
@@ -4851,6 +4846,21 @@ gy 2:
   examples:
   - arguments: meier, dresden
     description: Telefonnummer von "Meier" in Dresden
+gzh 0:
+  url: https://geizhals.de/
+  title: Geizhals Deutschland
+  tags:
+  - geizhals
+  - preisvergleich
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+gzh 1:
+  url: 'https://geizhals.de/?fs=<Produkt: {encoding: iso-8859-1}>'
+  include: gzh 0
+  examples:
+  - arguments: fernseher
+    description: Search for "fernseher"
 hekticket 0:
   url: https://hekticket.de/
   title: Hekticket
