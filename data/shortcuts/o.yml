@@ -12337,10 +12337,15 @@ znd 0:
   - data
   - research
   - science
+  examples:
+  - description: Go to the homepage
   description: Data repository that allows researchers to share and preserve their work.
 znd 1:
   url: https://zenodo.org/search?q=<query>
   include: znd 0
+  examples:
+  - arguments: climate
+    description: Search Zenodo for climate-related records
 zto 0:
   url: https://zattoo.com/
   title: Zattoo
