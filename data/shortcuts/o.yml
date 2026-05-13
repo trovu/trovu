@@ -12316,20 +12316,20 @@ zhr 1:
   tags:
   - old
 zn 0:
-  url: https://www.zoonar.de/?wid=1078
-  title: Zoonar
-  tags:
-  - images
-  - stock-agency
-zn 1:
-  url: https://www.zoonar.de/appgen/?cl=zoonar&cp=search&cmd=search_library&wid=1078&search[searchstring]=<Suche>
+  url: https://www.zoonar.com/
   title: Zoonar
   tags:
   - images
   - stock-agency
   examples:
-  - arguments: weihnachten
-    description: Suche Fotos zum Thema "weihnachten"
+  - description: Go to the homepage
+  description: Zoonar is a stock photo agency and image marketplace for editorial and commercial images.
+zn 1:
+  url: https://www.zoonar.com/en/search/<query>
+  include: zn 0
+  examples:
+  - arguments: berlin
+    description: Search for for images about "berlin"
 znd 0:
   url: https://zenodo.org/
   title: Zenodo
