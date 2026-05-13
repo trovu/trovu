@@ -11886,33 +11886,33 @@ y 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
-ya 1:
-  url: https://yandex.com/yandsearch?text=<query>
-  title: Yandex Web
+ya 0:
+  url: https://yandex.com/
+  title: Yandex
   tags:
+  - portal
   - web-search
   - yandex
+  examples:
+  - description: Go to the homepage
+  description: Yandex is a search engine and web portal with image, video, and other online services.
+ya 1:
+  url: https://yandex.com/search/?text=<query>
+  include: ya 0
   examples:
   - arguments: berlin
     description: Search for "berlin"
 yai 1:
   url: https://yandex.com/images/search?from=tabbar&text=<query>
-  title: Yandex Images
-  tags:
-  - images
-  - yandex
+  include: ya 0
   examples:
   - arguments: berlin
     description: Search images about "berlin"
 yandex 1:
-  url: https://yandex.com/yandsearch?text=<query>
-  title: Yandex Web
-  tags:
-  - old
-  - web-search
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
+  deprecated:
+    alternative:
+      query: ya <1>
+    created: '2026-05-13'
 yatego 1:
   url: https://www.yatego.com/index.php?cl=mallsearch&query=<query>
   title: Yatego
@@ -11920,10 +11920,7 @@ yatego 1:
   - old
 yav 1:
   url: https://yandex.ru/video/search?text=<query>
-  title: Yandex Videos
-  tags:
-  - video
-  - yandex
+  include: ya 0
   examples:
   - arguments: berlin
     description: Search videos about "berlin"
