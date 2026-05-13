@@ -6040,9 +6040,9 @@ ytg 1:
 zal 0:
   url: https://www.zalando.de/
   title: Zalando.de
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Gehe zur Startseite
 zal 1:

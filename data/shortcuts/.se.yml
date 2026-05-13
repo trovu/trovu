@@ -105,9 +105,9 @@ srse 1:
 zal 0:
   url: https://www.zalando.se/
   title: Zalando.se
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Gå till startsidan
 zal 1:

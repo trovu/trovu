@@ -69,9 +69,9 @@ rep 1:
 zal 0:
   url: https://www.zalando.it/
   title: Zalando.it
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Vai alla pagina principale
 zal 1:

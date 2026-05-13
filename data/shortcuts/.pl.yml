@@ -335,9 +335,9 @@ tm 1:
 zal 0:
   url: https://www.zalando.pl/
   title: Zalando.pl
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Przejdź do strony głównej
 zal 1:

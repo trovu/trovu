@@ -151,9 +151,9 @@ tv 0:
 zal 0:
   url: https://www.zalando.co.uk/
   title: Zalando.co.uk
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Go to the homepage
 zal 1:

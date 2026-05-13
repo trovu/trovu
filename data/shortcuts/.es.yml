@@ -247,9 +247,9 @@ wlp 1:
 zal 0:
   url: https://www.zalando.es/
   title: Zalando.es
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Ir a la página principal
 zal 1:

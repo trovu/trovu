@@ -160,9 +160,9 @@ soc 1:
 zal 0:
   url: https://www.zalando.fr/
   title: Zalando.fr
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Aller à la page d'accueil
 zal 1:

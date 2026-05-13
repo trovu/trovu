@@ -642,9 +642,9 @@ zal 0:
   title: Zalando.at
   tests:
   - expect: rel="canonical" href="https://www.zalando.at/"
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   description: Online-Shop für Mode und Schuhe
 zal 1:
   url: https://www.zalando.at/katalog/?q=<Produkt>

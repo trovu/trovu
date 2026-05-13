@@ -25,9 +25,9 @@ yr 1:
 zal 0:
   url: https://www.zalando.no/
   title: Zalando.no
-  tags:
-  - shopping
-  - zalando
+  include:
+    key: zal 0
+    namespace: o
   examples:
   - description: Gå til hjemmesiden
 zal 1:
