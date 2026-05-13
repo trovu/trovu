@@ -1911,20 +1911,6 @@ uuw 0:
   - documentation
   - linux
   - ubuntu
-we 0:
-  url: https://www.wetter.com/
-  title: Wetter.com
-  tags:
-  - weather
-  examples:
-  - description: Go to the homepage
-  description: wetter.com provides weather forecasts, current conditions, and weather news.
-we 1:
-  url: https://www.wetter.com/suche/?q=<Ort>
-  include: we 0
-  examples:
-  - arguments: berlin
-    description: Search for "berlin"
 wn 0:
   url: https://woerterbuchnetz.de/
   title: Wörterbuchnetz
@@ -1967,6 +1953,7 @@ wtr 0:
   - weather
   examples:
   - description: Gehe zur Startseite
+  description: Wetter.com bietet aktuelle Wetterinformationen, Prognosen und Wetterberichte für verschiedene Regionen weltweit.
 wtr 1:
   url: https://www.wetter.com/suche/?q=<Ort>
   include: wtr 0
