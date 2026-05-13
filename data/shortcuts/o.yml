@@ -12328,16 +12328,17 @@ zhen 1:
       query: en.zh <1>
     created: '2023-04-11'
 zn 0:
-  url: https://www.zoonar.com/
+  url: https://www.zoonar.com/?wid=1612
   title: Zoonar
   tags:
   - images
+  - is-affiliate
   - stock-agency
   examples:
   - description: Go to the homepage
   description: Zoonar is a stock photo agency and image marketplace for editorial and commercial images.
 zn 1:
-  url: https://www.zoonar.com/en/search/<query>
+  url: https://www.zoonar.com/en/search/<query>?wid=1612
   include: zn 0
   examples:
   - arguments: berlin
