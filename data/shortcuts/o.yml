@@ -11331,15 +11331,12 @@ wd 0:
   - wiki
   - wikidata
   - wikimedia
+  examples:
+  - description: Go to the homepage
+  description: Wikidata is Wikimedia’s open structured knowledge base for linked data and facts.
 wd 1:
   url: https://www.wikidata.org/w/index.php?uselang=<$language>&search=<article>
-  title: Wikidata
-  tags:
-  - copyleft
-  - encyclopedia
-  - wiki
-  - wikidata
-  - wikimedia
+  include: wd 0
   examples:
   - arguments: berlin
     description: Search Wikidata for "Berlin"
@@ -11556,14 +11553,12 @@ wm 0:
   - encyclopedia
   - wiki
   - wikipedia
+  examples:
+  - description: Go to the mobile homepage
+  description: Mobile Wikipedia is the phone-optimized version of Wikipedia for reading articles on smaller screens.
 wm 1:
   url: https://<$language>.m.wikipedia.org/wiki/Special:Search?go=Article&search=<article>
-  title: Wikipedia, mobile
-  tags:
-  - copyleft
-  - encyclopedia
-  - wiki
-  - wikipedia
+  include: wm 0
   examples:
   - arguments: berlin
     description: Go to Wikipedia article about Berlin
@@ -11672,13 +11667,12 @@ wq 0:
   - copyleft
   - quotes
   - wikiquote
+  examples:
+  - description: Go to the homepage
+  description: Wikiquote is a multilingual Wikimedia project collecting notable quotations.
 wq 1:
   url: https://<$language>.wikiquote.org/wiki/Special:Search?go=Article&search=<article>
-  title: Wikiquote Article Search
-  tags:
-  - copyleft
-  - quotes
-  - wikiquote
+  include: wq 0
   examples:
   - arguments: einstein
     description: Search for Einstein quotes
@@ -11694,13 +11688,15 @@ ws 0:
   - copyleft
   - wikimedia
   - wikisource
+  examples:
+  - description: Go to the homepage
+  description: Wikisource is a free library of source texts and public-domain documents published by Wikimedia.
 ws 1:
   url: https://<$language>.wikisource.org/wiki/Special:Search?go=Article&search=<query>
-  title: Wikisource
-  tags:
-  - copyleft
-  - wikimedia
-  - wikisource
+  include: ws 0
+  examples:
+  - arguments: faust
+    description: Search for "faust" on Wikisource
 wsl 0:
   url: https://wortschatz.uni-leipzig.de
   title: Wortschatz-Lexikon
@@ -11750,13 +11746,12 @@ wv 0:
   - travel
   - wiki
   - wikivoyage
+  examples:
+  - description: Go to the homepage
+  description: Wikivoyage is a free travel guide with destination pages, itineraries, and travel advice.
 wv 1:
   url: https://<$language>.wikivoyage.org/w/index.php?title=Special%3ASearch&go=Article&search=<article>
-  title: Wikivoyage
-  tags:
-  - travel
-  - wiki
-  - wikivoyage
+  include: wv 0
   examples:
   - arguments: Berlin
     description: Wikivoyage page for Berlin
@@ -11788,13 +11783,12 @@ wy 0:
   - language
   - wiki
   - wiktionary
+  examples:
+  - description: Go to the homepage
+  description: Wiktionary is a collaborative dictionary with definitions, translations, and usage information.
 wy 1:
   url: https://<$language>.wiktionary.org/wiki/Special:Search?go=Article&search=<article>
-  title: Wiktionary
-  tags:
-  - language
-  - wiki
-  - wiktionary
+  include: wy 0
   examples:
   - arguments: stuhl
     description: Search for "stuhl"
