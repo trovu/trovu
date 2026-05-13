@@ -11578,11 +11578,6 @@ wmob 1:
   title: Wikipedia Mobile Fulltext Search
   tags:
   - old
-wn 1:
-  url: http://wordnetweb.princeton.edu/perl/webwn?s=<query>
-  title: WordNet Search
-  tags:
-  - old
 wo 1:
   url: https://<$language>.wikipedia.org/wiki/Category:<title>
   title: Wikipedia Category
@@ -11596,26 +11591,6 @@ wo 1:
   examples:
   - arguments: berlin
     description: Go to the Wikipedia category page for Berlin
-word 1:
-  url: http://wordnetweb.princeton.edu/perl/webwn?s=<query>
-  title: WordNet Search
-  tags:
-  - old
-wordnet 1:
-  url: http://wordnetweb.princeton.edu/perl/webwn?s=<query>
-  title: WordNet Search
-  tags:
-  - computational-linguistics
-  - dictionary
-  - english
-  - linguistics
-  - sense
-  - senses
-  - word
-  - words
-  examples:
-  - arguments: complicated
-    description: look up senses of "complicated" in WordNet
 wpp 0:
   url: https://wordpress.org/plugins/
   title: WordPress Plugin Directory
