@@ -2116,6 +2116,8 @@ de 0:
     namespace: pka
   - key: de 0
     namespace: wrf
+  - key: de 0
+    namespace: wbi
 de 1:
   include:
   - key: de 1
@@ -2160,6 +2162,8 @@ de 1:
     namespace: pka
   - key: de 1
     namespace: wrf
+  - key: de 1
+    namespace: wbi
 dea 0:
   url: https://www.deviantart.com
   title: DeviantART
@@ -2969,6 +2973,8 @@ en 0:
     namespace: pka
   - key: en 0
     namespace: wrf
+  - key: en 0
+    namespace: wbi
 en 1:
   include:
   - key: en 1
@@ -3013,6 +3019,8 @@ en 1:
     namespace: pka
   - key: en 1
     namespace: wrf
+  - key: en 1
+    namespace: wbi
 ende 1:
   deprecated:
     alternative:
@@ -3120,6 +3128,8 @@ es 0:
     namespace: pka
   - key: es 0
     namespace: wrf
+  - key: es 0
+    namespace: wbi
 es 1:
   include:
   - key: es 1
@@ -3152,6 +3162,8 @@ es 1:
     namespace: pka
   - key: es 1
     namespace: wrf
+  - key: es 1
+    namespace: wbi
 espr 0:
   url: https://components.espressif.com/
   title: Espressif ESP Component Registry
@@ -3950,6 +3962,8 @@ fr 0:
     namespace: pka
   - key: fr 0
     namespace: wrf
+  - key: fr 0
+    namespace: wbi
 fr 1:
   include:
   - key: fr 1
@@ -3978,6 +3992,8 @@ fr 1:
     namespace: pka
   - key: fr 1
     namespace: wrf
+  - key: fr 1
+    namespace: wbi
 fr-an 1:
   deprecated:
     alternative:
@@ -5890,6 +5906,8 @@ it 0:
     namespace: pka
   - key: it 0
     namespace: wrf
+  - key: it 0
+    namespace: wbi
 it 1:
   include:
   - key: it 1
@@ -5916,6 +5934,8 @@ it 1:
     namespace: pka
   - key: it 1
     namespace: wrf
+  - key: it 1
+    namespace: wbi
 ja 0:
   include:
   - key: ja 0
