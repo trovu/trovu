@@ -11931,23 +11931,18 @@ ye 0:
   - food
   - restaurants
   - yelp
+  examples:
+  - description: Go to the homepage
+  description: Yelp helps people discover and review local restaurants, services, and other businesses.
 ye 1:
   url: https://www.yelp.com/search?find_desc=<what>
-  title: Yelp
-  tags:
-  - food
-  - restaurants
-  - yelp
+  include: ye 0
   examples:
   - arguments: pizza
     description: Find pizza places in the city you were searching last on Yelp
 ye 2:
   url: 'https://www.yelp.com/search?find_desc=<what>&find_loc=<where: {type: city}>'
-  title: Yelp
-  tags:
-  - food
-  - restaurants
-  - yelp
+  include: ye 0
   examples:
   - arguments: pizza, new york
     description: Find pizza places in New York
