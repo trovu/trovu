@@ -11293,10 +11293,10 @@ wam 1:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
 watchz 1:
-  url: https://zattoo.com/view/<channel>
-  title: Zattoo
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: zto <1>
+    created: '2026-05-13'
 wb 0:
   url: https://<$language>.wikibooks.org/
   title: Wikibooks
@@ -12267,15 +12267,15 @@ zar 1:
       query: en.tr <1>
     created: '2023-04-10'
 zattoo 0:
-  url: https://zattoo.com/
-  title: Zattoo
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: zto
+    created: '2026-05-13'
 zattoo 1:
-  url: https://zattoo.com/view/<channel>
-  title: Zattoo
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: zto <1>
+    created: '2026-05-13'
 zeitdiff 0:
   url: https://www.rechner.club/datum-uhrzeit/zeitraum-berechnen
   title: Zeit- und Datumsdifferenzberechnung
@@ -12369,6 +12369,21 @@ znd 0:
 znd 1:
   url: https://zenodo.org/search?q=<query>
   include: znd 0
+zto 0:
+  url: https://zattoo.com/
+  title: Zattoo
+  tags:
+  - streaming
+  - zattoo
+  examples:
+  - description: Go to the homepage
+zto 1:
+  url: https://zattoo.com/view/<channel>
+  title: Zattoo, watch channel
+  include: zto 0
+  examples:
+  - arguments: ard
+    description: Watch the ARD channel on Zattoo
 zu 0:
   include:
   - key: zu 0
@@ -12382,10 +12397,10 @@ zu 1:
   - key: zu 1
     namespace: pka
 zwatch 1:
-  url: https://zattoo.com/view/<channel>
-  title: Zattoo
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: zto <1>
+    created: '2026-05-13'
 § 2:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.gesetze-im-internet.de%20"<Paragraph>%20<Gesetz>"
   title: Gesetze im Internet
