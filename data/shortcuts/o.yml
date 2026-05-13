@@ -12059,10 +12059,15 @@ yim 1:
   - arguments: berlin
     description: Search for images about "berlin"
 ymail 0:
-  url: https://login.yahoo.com/config/login_verify2?&.src=ym
+  url: https://mail.yahoo.com/
   title: Yahoo Mail
   tags:
-  - old
+  - email
+  - mail
+  - yahoo
+  examples:
+  - description: Go to the homepage
+  description: Yahoo Mail is an email service with inbox, contacts, and other mail features.
 yn 1:
   url: https://news.search.yahoo.com/search/news?fr=sfp&ei=UTF-8&p=<query>&vl=lang_<$language>
   title: Yahoo News
