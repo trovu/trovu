@@ -11443,11 +11443,22 @@ wgo 1:
   examples:
   - arguments: berlin
     description: Search for "berlin"
+wh 0:
+  url: https://www.wowhead.com/
+  title: Wowhead
+  tags:
+  - gaming
+  - mmorpg
+  - wow
+  examples:
+  - description: Go to the homepage
+  description: Wowhead is a database and guide site for World of Warcraft with items, quests, and search tools.
 wh 1:
   url: https://www.wowhead.com/?search=<query>
-  title: search Wowhead
-  tags:
-  - old
+  include: wh 0
+  examples:
+  - arguments: shadowmourne
+    description: Search for "shadowmourne" on Wowhead
 whatis 0:
   url: https://whatis.techtarget.com/
   title: What is? - Technical glossary
