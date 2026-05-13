@@ -10522,7 +10522,7 @@ twm 0:
       query: xm
     created: '2023-03-13'
 twm 1:
-  url: https://twitter.com/#!/search/%40<user>
+  url: https://x.com/#!/search/%40<user>
   title: Search for Tweets that mention a specific user
   tags:
   - old
@@ -11742,14 +11742,14 @@ wy 1:
   - arguments: stuhl
     description: Search for "stuhl"
 x 0:
-  url: https://twitter.com/
+  url: https://x.com/
   title: X (Twitter) Homepage
   tags:
   - social-network
   - twitter
   - x
 x 1:
-  url: https://twitter.com/search?lang=<$language>&q=<query>
+  url: https://x.com/search?lang=<$language>&q=<query>
   title: X (Twitter) Search
   tags:
   - social-network
@@ -11759,7 +11759,7 @@ x 1:
   - arguments: berlin
     description: Search Twitter for "berlin"
 xb 0:
-  url: https://twitter.com/i/bookmarks
+  url: https://x.com/i/bookmarks
   title: X (Twitter) Bookmarks
   tags:
   - bookmarks
@@ -11767,7 +11767,7 @@ xb 0:
   - twitter
   - x
 xg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=twitter.com&q=<query>
+  url: https://www.google.com/search?hl=<$language>&sitesearch=x.com&q=<query>
   title: X (Twitter) via Google
   tags:
   - google
@@ -11815,7 +11815,7 @@ xkcds 1:
   - arguments: correlation
     description: search for xkcd comics about "correlation"
 xl 1:
-  url: https://twitter.com/search?f=live&q=<query>
+  url: https://x.com/search?f=live&q=<query>
   title: X (Twitter) Search, latest posts
   tags:
   - social-network
@@ -11824,7 +11824,7 @@ xl 1:
   - arguments: berlin
     description: Search for "berlin"
 xm 0:
-  url: https://twitter.com/messages
+  url: https://x.com/messages
   title: X (Twitter) Messages
   tags:
   - chat
@@ -11836,14 +11836,14 @@ xm 0:
   - social-network
   - twitter
 xn 0:
-  url: https://twitter.com/notifications
+  url: https://x.com/notifications
   title: X (Twitter) Notifications
   tags:
   - social-network
   - twitter
   - x
 xol 1:
-  url: https://twitter.com/search?q=lang%3A<$language>%20<query>
+  url: https://x.com/search?q=lang%3A<$language>%20<query>
   title: X (Twitter) Search, only in my language
   tags:
   - social-network
@@ -11852,7 +11852,7 @@ xol 1:
   - arguments: berlin
     description: Search Twitter for "berlin" only in my language
 xol 2:
-  url: https://twitter.com/search?q=lang%3A<language>%20<query>
+  url: https://x.com/search?q=lang%3A<language>%20<query>
   title: X (Twitter) Search, only in given language
   tags:
   - social-network
@@ -11861,7 +11861,7 @@ xol 2:
   - arguments: en, berlin
     description: Search X for "berlin" only in English
 xu 1:
-  url: https://twitter.com/<user>
+  url: https://x.com/<user>
   title: X (Twitter) User
   tags:
   - social-network
