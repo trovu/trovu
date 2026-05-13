@@ -12115,10 +12115,26 @@ yrg 1:
   title: Yr weather via Google
   include: yr 1
 ys 1:
-  url: https://www.yasni.de/index.php?action=search&search=1&sh=&name=<query>&filter=Stichwort
-  title: Yasni Personensuche
+  deprecated:
+    alternative:
+      query: ysn <1>
+    created: '2026-05-13'
+ysn 0:
+  url: https://www.yasni.de/
+  title: Yasni People Search
   tags:
-  - old
+  - people-search
+  - profiles
+  - search
+  examples:
+  - description: Go to the homepage
+  description: Yasni is a people-search engine for public profiles, mentions, and related web results.
+ysn 1:
+  url: https://www.yasni.de/<name>/person+information?sst
+  include: ys 0
+  examples:
+  - arguments: Hans Meier
+    description: Search for people named "Hans Meier"
 yt 0:
   url: https://www.youtube.com/
   title: Youtube
