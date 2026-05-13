@@ -11914,10 +11914,10 @@ yandex 1:
       query: ya <1>
     created: '2026-05-13'
 yatego 1:
-  url: https://www.yatego.com/index.php?cl=mallsearch&query=<query>
-  title: Yatego
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.ytg <1>
+    created: '2026-05-13'
 yav 1:
   url: https://yandex.ru/video/search?text=<query>
   include: ya 0

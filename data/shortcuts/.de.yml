@@ -6023,6 +6023,20 @@ wse 1:
   examples:
   - arguments: simpsons
     description: Suche nach "simpsons"
+ytg 0:
+  url: https://www.yatego.com/
+  title: Yatego
+  tags:
+  - shopping
+  - yatego
+  examples:
+  - description: Gehe zur Startseite
+  description: Online-Marktplatz mit Produkten aus verschiedenen Kategorien
+ytg 1:
+  url: https://www.yatego.com/?match=all&subcats=Y&pcode_from_q=Y&pshort=Y&pfull=Y&pname=Y&pkeywords=Y&search_performed=Y&q=<Suche>&dispatch=products.search
+  examples:
+  - arguments: sessel
+    description: Suche nach "sessel"
 zal 0:
   url: https://www.zalando.de/
   title: Zalando.de
