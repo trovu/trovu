@@ -214,6 +214,10 @@ export default class Home {
           params.key,
         )}+repo%3Atrovu%2Ftrovu-data&type=code`;
         break;
+      case "suspicious":
+        alertMsg.innerHTML =
+          'This URL might be harmful, so the redirect was stopped. If you believe we should accept this URL, please <a target="_blank" href="https://github.com/trovu/trovu/issues/new">open an issue on Github</a>.';
+        break;
     }
   }
 
