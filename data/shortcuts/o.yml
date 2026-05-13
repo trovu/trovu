@@ -11628,15 +11628,12 @@ wpp 0:
   - php
   - plugin
   - wordpress
+  examples:
+  - description: Go to the plugin directory
+  description: The WordPress Plugin Directory lists installable plugins for extending WordPress sites.
 wpp 1:
   url: https://wordpress.org/plugins/search.php?q=<query>
-  title: WordPress Plugin Directory
-  tags:
-  - blog
-  - blog-engine
-  - php
-  - plugin
-  - wordpress
+  include: wpp 0
   examples:
   - arguments: twitter widget
     description: search for WordPress plugins for displaying a Twitter widget
@@ -11646,12 +11643,12 @@ wpt 0:
   tags:
   - themes
   - wordpress
+  examples:
+  - description: Go to the theme directory
+  description: The WordPress Theme Directory lists free themes for styling WordPress sites.
 wpt 1:
   url: https://wordpress.org/themes/search.php?q=<query>
-  title: WordPress Theme Directory
-  tags:
-  - themes
-  - wordpress
+  include: wpt 0
   examples:
   - arguments: bootstrap
     description: search for Themes related to Bootstrap
