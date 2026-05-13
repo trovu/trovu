@@ -33,7 +33,7 @@ export default class CallHandler {
       redirectUrl = this.getRedirectUrlToHome(env, response);
     }
 
-    targetDomain.textContent = response.redirectUrl;
+    targetDomain.textContent = response.redirectUrl || "";
 
     env.logger.info("Redirect to:   " + redirectUrl);
 
