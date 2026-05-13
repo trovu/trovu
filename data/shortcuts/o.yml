@@ -12109,25 +12109,23 @@ ys 1:
   - old
 yt 0:
   url: https://www.youtube.com/
-  title: Youtube Homepage
-  tags:
-  - video
-  - youtube
-yt 1:
-  url: https://www.youtube.com/results?search_query=<query>
   title: Youtube
   tags:
   - video
   - youtube
+  examples:
+  - description: Go to the homepage
+  description: YouTube is a video platform for watching, sharing, and discovering videos and channels.
+yt 1:
+  url: https://www.youtube.com/results?search_query=<query>
+  include: yt 0
   examples:
   - arguments: cartoon
     description: Youtube search for "cartoon"
 ytd 1:
   url: https://www.youtube.com/results?sp=CAI%253D&search_query=<query>
   title: Youtube, sorted by upload date
-  tags:
-  - video
-  - youtube
+  include: yt 0
   examples:
   - arguments: cartoon
     description: Search for "cartoon"
@@ -12149,20 +12147,19 @@ ytm 0:
   tags:
   - music
   - youtube
+  examples:
+  - description: Go to the homepage
+  description: YouTube Music is Google’s music streaming and discovery service built around songs, albums, and playlists.
 ytm 1:
   url: https://music.youtube.com/search?q=<query>
-  title: Youtube Music
-  tags:
-  - music
-  - youtube
+  include: ytm 0
   examples:
   - arguments: anhedonia
     description: search Anhedonia music
 ytp 1:
   url: https://www.youtube.com/results?search_type=search_playlists&uni=3&search_query=<query>
-  title: Youtube Playlists
-  tags:
-  - old
+  title: Youtube, playlist search
+  include: yt 0
 yts 0:
   url: https://yts.mx/
   title: YTS.mx
@@ -12180,18 +12177,14 @@ yts 1:
 ytt 1:
   url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=t
   title: Youtube, today's new videos
-  tags:
-  - video
-  - youtube
+  include: yt 0
   examples:
   - arguments: obama
     description: Search for "obama"
 ytw 1:
   url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=w
   title: Youtube, last week's new videos
-  tags:
-  - video
-  - youtube
+  include: yt 0
   examples:
   - arguments: cartoon
     description: Search for "cartoon"
