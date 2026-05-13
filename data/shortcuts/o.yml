@@ -11450,13 +11450,19 @@ wh 1:
     description: Search for "shadowmourne" on Wowhead
 whois 0:
   url: https://whois.domaintools.com/
-  title: DomainTools Whois
+  title: Whois (DomainTools)
   tags:
   - domains
   - whois
   examples:
   - description: Go to the homepage
   description: DomainTools Whois provides domain ownership and registration lookup tools.
+whois 1:
+  url: https://whois.domaintools.com/<domain>
+  include: whois 0
+  examples:
+  - arguments: example.com
+    description: Look up the domain "example.com"
 wikia 1:
   url: https://www.wikia.com/wiki/Special:Search?tab=1&search=<query>
   title: Wikia
