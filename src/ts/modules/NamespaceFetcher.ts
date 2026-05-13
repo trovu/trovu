@@ -235,7 +235,6 @@ export default class NamespaceFetcher {
     shortcuts = this.checkKeySyntax(shortcuts, namespaceName);
     for (const key in shortcuts) {
       shortcuts[key] = NamespaceFetcher.convertToObject(shortcuts[key]);
-      this.checkShortcutUrl(shortcuts[key], namespaceName, key);
       if (shortcuts[key].include) {
         shortcuts[key].include = this.convertIncludeToObject(shortcuts[key].include);
       }
@@ -259,26 +258,6 @@ export default class NamespaceFetcher {
       shortcuts = {};
     }
     return shortcuts;
-  }
-
-  checkShortcutUrl(shortcut: AnyObject, namespaceName: string, key: string) {
-    if (!shortcut || typeof shortcut.url !== "string") {
-      return;
-    }
-    const parseableUrl = this.getParseableShortcutUrl(shortcut.url);
-    try {
-      const parsedUrl = new URL(parseableUrl);
-      if (!["http:", "https:", "mailto:"].includes(parsedUrl.protocol)) {
-        this.env.logger.warning(`Unsupported shortcut URL protocol in ${namespaceName}.${key}: ${shortcut.url}`);
-      }
-    } catch {
-      this.env.logger.warning(`Unparseable shortcut URL in ${namespaceName}.${key}: ${shortcut.url}`);
-      console.log("unparseable URL:", shortcut.url);
-    }
-  }
-
-  getParseableShortcutUrl(url: string) {
-    return url.replace(/<[^>]+>/g, "example").replace(/\{%\w+\}/g, "example");
   }
 
   /**

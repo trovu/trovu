@@ -119,65 +119,6 @@ describe("NamespaceFetcher.processShortcuts", () => {
       new NamespaceFetcher(new Env()).processShortcuts({ "foo 0": { include: "bar 0" } }, "testNamespace"),
     ).toEqual({ "foo 0": { include: { key: "bar 0" } } });
   });
-  test("warns for short notation with unsupported javascript protocol", () => {
-    const env = new Env();
-    env.logger.warning = jest.fn();
-
-    new NamespaceFetcher(env).processShortcuts({ "evil 0": "javascript:alert(1)" }, "testNamespace");
-
-    expect(env.logger.warning).toHaveBeenCalledWith(
-      "Unsupported shortcut URL protocol in testNamespace.evil 0: javascript:alert(1)",
-    );
-  });
-  test("warns for object notation with unsupported protocol", () => {
-    const env = new Env();
-    env.logger.warning = jest.fn();
-
-    new NamespaceFetcher(env).processShortcuts({ "evil 1": { url: "ftp://example.com/file" } }, "testNamespace");
-
-    expect(env.logger.warning).toHaveBeenCalledWith(
-      "Unsupported shortcut URL protocol in testNamespace.evil 1: ftp://example.com/file",
-    );
-  });
-  test("warns for unparseable shortcut URLs", () => {
-    const env = new Env();
-    env.logger.warning = jest.fn();
-
-    new NamespaceFetcher(env).processShortcuts({ "broken 1": { url: "not a url" } }, "testNamespace");
-
-    expect(env.logger.warning).toHaveBeenCalledWith(
-      "Unparseable shortcut URL in testNamespace.broken 1: not a url",
-    );
-  });
-  test("does not warn for valid Trovu URL templates", () => {
-    const env = new Env();
-    env.logger.warning = jest.fn();
-
-    new NamespaceFetcher(env).processShortcuts(
-      {
-        "templated 1": { url: "https://<$language>.wikipedia.org/wiki/Special:Search?search=<query>" },
-        "legacy 1": { url: "https://dict.leo.org/französisch-deutsch/{%word}" },
-      },
-      "testNamespace",
-    );
-
-    expect(env.logger.warning).not.toHaveBeenCalled();
-  });
-  test("does not warn for http, https and mailto", () => {
-    const env = new Env();
-    env.logger.warning = jest.fn();
-
-    new NamespaceFetcher(env).processShortcuts(
-      {
-        "ok-http 0": "http://example.com/",
-        "ok-https 0": "https://example.com/",
-        "ok-mail 0": { url: "mailto:test@example.com" },
-      },
-      "testNamespace",
-    );
-
-    expect(env.logger.warning).not.toHaveBeenCalled();
-  });
 });
 
 describe("NamespaceFetcher.addNamespaceInfo", () => {
