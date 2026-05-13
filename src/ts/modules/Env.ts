@@ -9,6 +9,10 @@ import jsyaml from "js-yaml";
 
 /** Set and remember the environment. */
 
+const countriesListData = (countriesList as AnyObject).default || countriesList;
+const countries = countriesListData.countries;
+const languages = countriesListData.languages;
+
 export default class Env {
   [key: string]: any;
 
@@ -18,7 +22,9 @@ export default class Env {
    * @param {object} env - The environment variables.
    */
   constructor(env: AnyObject = {}) {
-    countriesList.languages["eo"] = { name: "Esperanto", native: "Esperanto" };
+    if (languages && !languages["eo"]) {
+      languages["eo"] = { name: "Esperanto", native: "Esperanto" };
+    }
     this.setToThis(env);
     this.logger = new Logger("#log");
     this.configureLogger();
@@ -250,9 +256,9 @@ export default class Env {
     ) {
       return true;
     }
-    if (namespace in countriesList.languages) {
+    if (namespace in languages) {
       return true;
-    } else if (namespace.substring(1).toUpperCase() in countriesList.countries) {
+    } else if (namespace.substring(1).toUpperCase() in countries) {
       return true;
     }
     return false;
@@ -291,22 +297,18 @@ export default class Env {
    * @returns {void}
    */
   setDefaultLanguageAndCountry() {
-    if (
-      this.language in countriesList.languages &&
-      typeof this.country === "string" &&
-      this.country.toUpperCase() in countriesList.countries
-    ) {
+    if (this.language in languages && typeof this.country === "string" && this.country.toUpperCase() in countries) {
       return;
     }
 
     const { language, country } = this.getDefaultLanguageAndCountry();
 
     // Default language.
-    if (!(this.language in countriesList.languages)) {
+    if (!(this.language in languages)) {
       this.language = language;
     }
     // Default country.
-    if (!this.country || !(this.country.toUpperCase() in countriesList.countries)) {
+    if (!this.country || !(this.country.toUpperCase() in countries)) {
       this.country = country;
     }
   }
@@ -320,10 +322,10 @@ export default class Env {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
     // Make sure language and country are in our lists.
-    if (!(language in countriesList.languages)) {
+    if (!(language in languages)) {
       language = this.data.config.language;
     }
-    if (!country || !(country.toUpperCase() in countriesList.countries)) {
+    if (!country || !(country.toUpperCase() in countries)) {
       country = this.data.config.country;
     }
 

@@ -104,7 +104,7 @@ export default class NamespaceFetcher {
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
    */
-  async assignShortcutsFromData(namespaceInfos: AnyObject) {
+  assignShortcutsFromData(namespaceInfos: AnyObject) {
     const data: AnyObject = this.env.data;
     for (const namespaceName in data.shortcuts) {
       if (!namespaceInfos[namespaceName]) {
