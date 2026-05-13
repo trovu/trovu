@@ -12057,13 +12057,7 @@ yim 1:
   include: y 0
   examples:
   - arguments: berlin
-    description: Search for "berlin"
-  tags:
-  - web-search
-  - yahoo
-  examples:
-  - arguments: en, berlin
-    description: search for English pages containing "berlin"
+    description: Search for images about "berlin"
 ymail 0:
   url: https://login.yahoo.com/config/login_verify2?&.src=ym
   title: Yahoo Mail
