@@ -11265,10 +11265,10 @@ wa 1:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
 wadoku 1:
-  url: https://www.wadoku.de/wadoku/search/<suchwort>
-  title: Wadoku suche
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: ja <1>
+    created: '2026-05-13'
 wai 1:
   url: https://www.wolframalpha.com/input/?i=integral%20<query>
   title: Wolfram Alpha, calculate integral
