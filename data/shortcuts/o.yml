@@ -12224,10 +12224,26 @@ yv 1:
   - arguments: berlin
     description: Search for "berlin"
 z 1:
-  url: https://www.zalando.de/katalog/?q=<Produkt>
+  deprecated:
+    alternative:
+      query: zal <1>
+    created: '2026-05-13'
+zal 0:
+  url: https://www.zalando.com/
   title: Zalando
   tags:
-  - old
+  - fashion
+  - shopping
+  - zalando
+  examples:
+  - description: Go to the homepage
+  description: Zalando is an online shop for fashion, shoes, accessories, and beauty products.
+zal 1:
+  url: https://www.zalando.com/catalogue/?q=<product>
+  include: z 0
+  examples:
+  - arguments: sneaker
+    description: Search for sneakers
 zam 1:
   url: https://camelot.allakhazam.com/search.html?q=<query>
   title: Search Allakhazam's Database for DAoC items, npc, etc.
