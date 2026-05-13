@@ -11748,13 +11748,12 @@ x 0:
   - social-network
   - twitter
   - x
+  examples:
+  - description: Go to the homepage
+  description: X is a social networking platform for short posts, timelines, profiles, and real-time conversations.
 x 1:
   url: https://x.com/search?lang=<$language>&q=<query>
-  title: X (Twitter) Search
-  tags:
-  - social-network
-  - twitter
-  - x
+  include: x 0
   examples:
   - arguments: berlin
     description: Search Twitter for "berlin"
@@ -11766,14 +11765,13 @@ xb 0:
   - social-network
   - twitter
   - x
+  examples:
+  - description: Go to the bookmarks page
+  description: X Bookmarks stores posts you have saved for later reading.
 xg 1:
   url: https://www.google.com/search?hl=<$language>&sitesearch=x.com&q=<query>
+  include: x 0
   title: X (Twitter) via Google
-  tags:
-  - google
-  - social-network
-  - twitter
-  - x
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -11781,12 +11779,15 @@ xing 0:
   url: https://www.xing.com/
   title: Xing
   tags:
+  - jobs
+  - networking
   - social-network
+  examples:
+  - description: Go to the homepage
+  description: Xing is a professional networking platform focused on business profiles, jobs, and contacts.
 xing 1:
   url: https://www.xing.com/search/members?keywords=<query>
-  title: Xing
-  tags:
-  - social-network
+  include: xing 0
   examples:
   - arguments: Hans Meier
     description: Search for people called Hans Meier
@@ -11796,30 +11797,29 @@ xkcd 0:
   tags:
   - comic
   - xkcd
+  examples:
+  - description: Go to the homepage
+  description: xkcd is a webcomic featuring humor about science, technology, mathematics, and internet culture.
 xkcd 1:
   url: https://xkcd.com/<episode-number>/
-  title: xkcd
-  tags:
-  - comic
-  - xkcd
+  include: xkcd 0
   examples:
   - arguments: '552'
     description: go to comic 552
 xkcds 1:
   url: https://www.ohnorobot.com/index.php?s=<query>&Search=Search&comic=56
+  include: xkcd 0
   title: ohnorobot.com (xkcd search)
-  tags:
-  - comic
-  - xkcd
+  tests:
+  - arguments: correlation
+    expect: 'Oh No Robot: comics search'
   examples:
   - arguments: correlation
     description: search for xkcd comics about "correlation"
 xl 1:
   url: https://x.com/search?f=live&q=<query>
+  include: x 0
   title: X (Twitter) Search, latest posts
-  tags:
-  - social-network
-  - twitter
   examples:
   - arguments: berlin
     description: Search for "berlin"
@@ -11835,6 +11835,10 @@ xm 0:
   - private-message
   - social-network
   - twitter
+  - x
+  examples:
+  - description: Go to the messages page
+  description: X Messages is the direct messaging area for private conversations on X.
 xn 0:
   url: https://x.com/notifications
   title: X (Twitter) Notifications
@@ -11842,30 +11846,27 @@ xn 0:
   - social-network
   - twitter
   - x
+  examples:
+  - description: Go to the notifications page
+  description: X Notifications shows replies, mentions, follows, and other account activity.
 xol 1:
   url: https://x.com/search?q=lang%3A<$language>%20<query>
+  include: x 0
   title: X (Twitter) Search, only in my language
-  tags:
-  - social-network
-  - twitter
   examples:
   - arguments: berlin
     description: Search Twitter for "berlin" only in my language
 xol 2:
   url: https://x.com/search?q=lang%3A<language>%20<query>
+  include: x 0
   title: X (Twitter) Search, only in given language
-  tags:
-  - social-network
-  - twitter
   examples:
   - arguments: en, berlin
     description: Search X for "berlin" only in English
 xu 1:
   url: https://x.com/<user>
+  include: x 0
   title: X (Twitter) User
-  tags:
-  - social-network
-  - twitter
   examples:
   - arguments: serchilo
     description: Go to user page of @serchilo
