@@ -11448,14 +11448,15 @@ wh 1:
   examples:
   - arguments: shadowmourne
     description: Search for "shadowmourne" on Wowhead
-whois 1:
-  url: https://whois.domaintools.com/<domain>
-  title: Whois (domaintools.com)
+whois 0:
+  url: https://whois.domaintools.com/
+  title: DomainTools Whois
   tags:
   - domains
+  - whois
   examples:
-  - arguments: google.com
-    description: show the owner of the domain google.com
+  - description: Go to the homepage
+  description: DomainTools Whois provides domain ownership and registration lookup tools.
 wikia 1:
   url: https://www.wikia.com/wiki/Special:Search?tab=1&search=<query>
   title: Wikia
