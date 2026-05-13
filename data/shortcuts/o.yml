@@ -11292,12 +11292,12 @@ wb 0:
   tags:
   - copyleft
   - wiki
+  examples:
+  - description: Go to the homepage
+  description: Wikibooks is a Wikimedia project for free textbooks, manuals, and other instructional books.
 wb 1:
   url: https://<$language>.wikibooks.org/wiki/Special:Search?go=Article&search=<article>
-  title: Wikibooks
-  tags:
-  - copyleft
-  - wiki
+  include: wb 0
 wbit 1:
   url: https://www.woerterbuch.info/?query=<query>&s=dict&l=en
   title: Woerterbuch.info
