@@ -1,4 +1,3 @@
-
 /** @module Home */
 import "../../scss/style.scss";
 import CallHandler from "./CallHandler";
