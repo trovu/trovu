@@ -11008,29 +11008,54 @@ v 0:
   url: https://vimeo.com/
   title: Vimeo
   tags:
+  - hosting
+  - streaming
   - video
   - vimeo
   examples:
   - description: Go to the homepage
+  description: Vimeo is a video platform for hosting, sharing, and streaming high-quality videos.
 v 1:
   url: https://vimeo.com/search?q=<query>
   include: v 0
   examples:
   - arguments: berlin
     description: Search videos about "berlin"
+validator 0:
+  url: https://validator.w3.org/
+  title: W3C Markup Validation Service
+  tags:
+  - html
+  - validator
+  - w3c
+  - web-development
+  examples:
+  - description: Go to the homepage
+  description: The W3C Markup Validation Service checks HTML and XHTML documents for standards compliance.
 validator 1:
   url: https://validator.w3.org/check?uri=<uri>
-  title: W3 Validator
+  include: validator 0
+  examples:
+  - arguments: https://example.com
+    description: Validate the page at "https://example.com"
+vcpkg 0:
+  url: https://vcpkg.io/
+  title: vcpkg
   tags:
-  - old
-vbn 2:
-  url: https://www.fahrplaner.de/hafas/query.exe/dn?L=vbn&<Start>,<Ziel>
-  title: VBN Verkehrsverbund NDS/Bremen
-  tags:
-  - old
+  - c++
+  - libraries
+  - package-manager
+  - programming
+  examples:
+  - description: Go to the homepage
+  description: vcpkg is a cross-platform C and C++ package manager with a searchable public package catalog.
 vcpkg 1:
   url: https://vcpkg.io/en/packages.html?query=<query>
   title: vcpkg package search
+  tests:
+  - arguments: json
+    expect: Browse public vcpkg packages
+  include: vcpkg 0
 vi 0:
   include:
   - key: vi 0
@@ -11047,50 +11072,71 @@ vi 1:
     namespace: bab
   - key: vi 1
     namespace: pka
-viaf 1:
-  url: https://viaf.org/viaf/search?query=local.names+all+<name>&stylesheet=/viaf/xsl/results.xsl&sortKeys=holdingscount&maximumRecords=100
+viaf 0:
+  url: https://viaf.org/
   title: Virtual International Authority File
   tags:
+  - authority
   - books
+  - libraries
+  - metadata
   - science
   examples:
+  - description: Go to the homepage
+  description: VIAF is a global authority service that links national library name records into a shared search system.
+viaf 1:
+  url: https://viaf.org/viaf/search?query=local.names+all+<name>&stylesheet=/viaf/xsl/results.xsl&sortKeys=holdingscount&maximumRecords=100
+  include: viaf 0
+  examples:
   - arguments: noam chomsky
-    description: returns author records on Noam Chomsky from several national libraries
+    description: Search authority records for "Noam Chomsky"
+vim 0:
+  url: https://vim.fandom.com/wiki/Vim_Tips_Wiki
+  title: Vim Tips Wiki
+  tags:
+  - editor
+  - text-editor
+  - vim
+  - wiki
+  examples:
+  - description: Go to the homepage
+  description: Vim Tips Wiki collects tips, commands, and how-to articles for the Vim text editor.
 vim 1:
   url: https://vim.fandom.com/wiki/Special:Search?search=<query>
-  title: Vim Tips Wiki
+  include: vim 0
 vimeo 0:
-  url: https://vimeo.com
-  title: Vimeo
-  tags:
-  - video
-  - vimeo
+  include: v 0
 vimeo 1:
-  url: https://vimeo.com/search?q=<query>
-  title: Vimeo
-  tags:
-  - video
-  - vimeo
-  examples:
-  - arguments: berlin
-    description: Search videos about "berlin"
-visuwords 1:
-  url: https://www.visuwords.com/?word=<query>
+  include: v 1
+visuwords 0:
+  url: https://www.visuwords.com/
   title: Visuwords
   tags:
-  - old
+  - dictionary
+  - language
+  - thesaurus
+  - words
+  examples:
+  - description: Go to the homepage
+  description: Visuwords is an online graphical dictionary and thesaurus that shows word relationships as an interactive map.
+visuwords 1:
+  url: https://www.visuwords.com/?word=<query>
+  tests:
+  - arguments: tree
+    expect: \"tree\" on Visuwords
+  include: visuwords 0
 vk 0:
   url: https://vk.com
   title: Vkontakte
   tags:
   - social-network
   - vkontakte
+  examples:
+  - description: Go to the homepage
+  description: VK is a social networking platform for messaging, communities, media sharing, and discovery.
 vk 1:
   url: https://vk.com/search?c%5Bq%5D=<name>
-  title: Vkontakte
-  tags:
-  - social-network
-  - vkontakte
+  include: vk 0
   examples:
   - arguments: putin
     description: search for people named "putin" on Vkontakte
@@ -11101,13 +11147,12 @@ vka 0:
   - music
   - social-network
   - vkontakte
+  examples:
+  - description: Go to the audio page
+  description: VK Audio is the music and audio section of VK for browsing and searching tracks.
 vka 1:
   url: https://vk.com/audio?q=<query>
-  title: Vkontakte audio/music
-  tags:
-  - music
-  - social-network
-  - vkontakte
+  include: vka 0
   examples:
   - arguments: chillout
     description: search for chillout music on Vkontakte
@@ -11117,24 +11162,30 @@ vkfave 0:
   tags:
   - social-network
   - vkontakte
+  examples:
+  - description: Go to the favourites page
+  description: VK Favorites is the personal VK page for saved posts, media, and other bookmarked items.
 vkfeed 0:
   url: https://vk.com/feed
   title: Vkontakte, my news/feed
   tags:
   - social-network
   - vkontakte
+  examples:
+  - description: Go to the feed page
+  description: VK Feed is the VK news stream that shows posts and updates from people, pages, and communities.
 vkg 0:
   url: https://vk.com/groups
   title: Vkontakte, my groups/communities
   tags:
   - social-network
   - vkontakte
+  examples:
+  - description: Go to the groups page
+  description: VK Groups is the VK section for browsing and managing communities and public pages.
 vkg 1:
   url: https://vk.com/search?c%5Bsection%5D=communities&c%5Bq%5D=<query>
-  title: Vkontakte groups/communities
-  tags:
-  - social-network
-  - vkontakte
+  include: vkg 0
   examples:
   - arguments: berlin
     description: search for groups about "berlin"
@@ -11144,6 +11195,9 @@ vkim 0:
   tags:
   - social-network
   - vkontakte
+  examples:
+  - description: Go to the messages page
+  description: VK Messages is the messaging section of VK for private chats and conversations.
 vkv 0:
   url: https://vk.com/video
   title: Vkontakte, my videos
@@ -11151,13 +11205,12 @@ vkv 0:
   - social-network
   - video
   - vkontakte
+  examples:
+  - description: Go to the videos page
+  description: VK Video is the VK section for browsing and searching videos shared on the platform.
 vkv 1:
   url: https://vk.com/video?q=<query>
-  title: Vkontakte videos
-  tags:
-  - social-network
-  - video
-  - vkontakte
+  include: vkv 0
   examples:
   - arguments: berlin
     description: search for videos about "berlin" on Vkontakte
@@ -11168,13 +11221,12 @@ vkvn 0:
   - social-network
   - video
   - vkontakte
+  examples:
+  - description: Go to the videos page including NSFW content
+  description: VK Video with notsafe enabled includes videos that VK would otherwise filter out from standard results.
 vkvn 1:
   url: https://vk.com/video?notsafe=1&q=<query>
-  title: Vkontakte videos, incl. "not safe"
-  tags:
-  - social-network
-  - video
-  - vkontakte
+  include: vkvn 0
   examples:
   - arguments: berlin
     description: search for videos about "berlin", incl. NSFW
