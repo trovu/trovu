@@ -11232,20 +11232,18 @@ vkvn 1:
     description: search for videos about "berlin", incl. NSFW
 w 0:
   url: https://<$language>.wikipedia.org/
-  title: Wikipedia Main Page
+  title: Wikipedia
   tags:
   - copyleft
   - encyclopedia
   - wiki
   - wikipedia
+  examples:
+  - description: Go to the homepage
+  description: Wikipedia is a free online encyclopedia with articles in many languages.
 w 1:
   url: https://<$language>.wikipedia.org/wiki/Special:Search?go=Article&search=<article>
-  title: Wikipedia Article Search
-  tags:
-  - copyleft
-  - encyclopedia
-  - wiki
-  - wikipedia
+  include: w 0
   examples:
   - arguments: berlin
     description: Wikipedia article about Berlin
