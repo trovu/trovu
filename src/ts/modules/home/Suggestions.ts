@@ -105,16 +105,17 @@ export default class Suggestions {
     if (this.hasTag(suggestion, "is-affiliate")) displayTitle += " 🤝";
 
     const container = document.createElement("div");
-    container.className = `main ${reachable ? "" : "unreachable"}`;
-    container.innerHTML = `
-      <span class="left">
-        <span class="keyword">${keyword}</span>
-        <span class="argument-names">${argumentString}</span>
-      </span>
-      <span class="right">
-        <span class="title">${displayTitle}</span>
-        <span class="namespace" style="cursor:pointer">${namespace}</span>
-      </span>`;
+    container.className = reachable ? "main" : "main unreachable";
+
+    const left = this.createSpan("left");
+    left.append(this.createSpan("keyword", keyword), this.createSpan("argument-names", argumentString));
+
+    const right = this.createSpan("right");
+    const namespaceSpan = this.createSpan("namespace", namespace);
+    namespaceSpan.style.cursor = "pointer";
+    right.append(this.createSpan("title", displayTitle), namespaceSpan);
+
+    container.append(left, right);
 
     container.addEventListener("click", (e) => {
       if ((e.target as HTMLElement).classList.contains("namespace")) {
@@ -128,7 +129,13 @@ export default class Suggestions {
   getDescription({ description }: AnyObject) {
     const container = document.createElement("div");
     container.className = "description";
-    container.innerHTML = description ? `<span class="icon">ⓘ</span> <span class="text">${description}</span>` : "";
+    if (description) {
+      container.append(
+        this.createSpan("icon", "ⓘ"),
+        document.createTextNode(" "),
+        this.createSpan("text", description),
+      );
+    }
     return container;
   }
 
@@ -137,7 +144,9 @@ export default class Suggestions {
     const container = document.createElement("div");
     container.className = "tags";
     if (Array.isArray(tags) && tags.length) {
-      container.innerHTML = tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+      tags.forEach((tag) => {
+        container.appendChild(this.createSpan("tag", tag));
+      });
     } else {
       return "";
     }
@@ -156,18 +165,22 @@ export default class Suggestions {
 
     const container = document.createElement("div");
     container.className = "examples";
-    container.innerHTML = examples
+    examples
       .filter((ex) => !this.shouldSkipExample(ex))
-      .map((ex) => {
-        const query = `${reachable ? "" : namespace + "."}<b>${keyword}</b>${ex.arguments ? " " + ex.arguments : ""}`;
-        return `
-          <span class="left">
-          <a href="#" class="query">${query}</a>
-→ <span class="description">${ex.description}</span>
-          </span>
-          `;
-      })
-      .join("");
+      .forEach((ex) => {
+        const left = this.createSpan("left");
+        const query = document.createElement("a");
+        query.href = "#";
+        query.className = "query";
+        if (!reachable) query.appendChild(document.createTextNode(`${namespace}.`));
+        const keywordElement = document.createElement("b");
+        keywordElement.textContent = keyword;
+        query.appendChild(keywordElement);
+        if (ex.arguments) query.appendChild(document.createTextNode(` ${ex.arguments}`));
+
+        left.append(query, document.createTextNode(" → "), this.createSpan("description", ex.description));
+        container.appendChild(left);
+      });
 
     container.addEventListener("click", (e) => {
       const link = (e.target as HTMLElement).closest(".query");
@@ -201,14 +214,22 @@ export default class Suggestions {
   getNeedsUserscript() {
     const div = document.createElement("div");
     div.className = "needs-userscript";
-    div.innerHTML = `🧩 Needs the <a href="${this.env.data.config.url.docs}shortcuts/userscripts/">userscript</a> to be installed.`;
+    div.append(
+      document.createTextNode("🧩 Needs the "),
+      this.createLink(`${this.env.data.config.url.docs}shortcuts/userscripts/`, "userscript"),
+      document.createTextNode(" to be installed."),
+    );
     return div;
   }
 
   getIsAffiliate() {
     const div = document.createElement("div");
     div.className = "is-affiliate";
-    div.innerHTML = `🤝 <a href="${this.env.data.config.url.docs}shortcuts/tags/#is-affiliate">Affiliate</a> shortcut, we get paid for it.`;
+    div.append(
+      document.createTextNode("🤝 "),
+      this.createLink(`${this.env.data.config.url.docs}shortcuts/tags/#is-affiliate`, "Affiliate"),
+      document.createTextNode(" shortcut, we get paid for it."),
+    );
     return div;
   }
 
@@ -221,14 +242,21 @@ export default class Suggestions {
       const reportTitle = encodeURIComponent(
         `Problem with shortcut \`${suggestion.namespace}.${suggestion.keyword} ${suggestion.argumentCount}\``,
       );
-      div.innerHTML += `
-        <a target="_blank" class="btn btn-sm btn-outline-secondary" href="https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml">
-        ✍️ Edit</a> &nbsp;
-        <a target="_blank" class="btn btn-sm btn-outline-secondary" href="https://github.com/trovu/trovu/issues/new?title=${reportTitle}">🔧 Report</a> &nbsp; `;
+      div.append(
+        this.createButtonLink(
+          `https://github.com/trovu/trovu/blob/master/data/shortcuts/${suggestion.namespace}.yml`,
+          "✍️ Edit",
+          true,
+        ),
+        document.createTextNode("  "),
+        this.createButtonLink(`https://github.com/trovu/trovu/issues/new?title=${reportTitle}`, "🔧 Report", true),
+        document.createTextNode("  "),
+      );
     }
 
-    div.innerHTML += `
-    <a class="btn btn-sm btn-outline-secondary copy-yaml" href="#">📋 Copy YAML</a>`;
+    const copyYaml = this.createButtonLink("#", "📋 Copy YAML");
+    copyYaml.classList.add("copy-yaml");
+    div.appendChild(copyYaml);
     div.addEventListener("click", (e) => {
       const target = e.target as HTMLElement;
       if (target.classList.contains("copy-yaml")) {
@@ -240,6 +268,30 @@ export default class Suggestions {
     });
 
     return div;
+  }
+
+  createSpan(className: string, text: unknown = "") {
+    const span = document.createElement("span");
+    span.className = className;
+    span.textContent = String(text ?? "");
+    return span;
+  }
+
+  createLink(href: string, text: string) {
+    const link = document.createElement("a");
+    link.href = href;
+    link.textContent = text;
+    return link;
+  }
+
+  createButtonLink(href: string, text: string, openInNewTab = false) {
+    const link = this.createLink(href, text);
+    link.className = "btn btn-sm btn-outline-secondary";
+    if (openInNewTab) {
+      link.target = "_blank";
+      link.rel = "noopener";
+    }
+    return link;
   }
 
   // --- Helper & logic methods stay mostly the same but cleaned up ---
