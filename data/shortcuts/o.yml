@@ -11978,10 +11978,21 @@ yfa 1:
     description: Search for companies with "apple" in their name on Yahoo Finance
 yfl 1:
   url: https://finance.yahoo.com/lookup?bypass=true&s=<company>
-  title: Yahoo Finance Lookup
-ygi 1:
-  url: https://www.yeggi.com/q/<argument_name>/
+  title: Yahoo Finance, company lookup (bypass)
+  include: yf 0
+ygi 0:
+  url: https://www.yeggi.com/
   title: Yeggi
+  tags:
+  - 3d-printing
+  - models
+  - search
+  examples:
+  - description: Go to the homepage
+  description: Yeggi is a search engine for 3D printable models from many repositories.
+ygi 1:
+  url: https://www.yeggi.com/q/<query>/
+  include: ygi 0
 ygl 0:
   include:
     key: ygl 0
