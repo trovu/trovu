@@ -11248,19 +11248,19 @@ w 1:
   - arguments: berlin
     description: Wikipedia article about Berlin
 wa 0:
-  url: https://www.wolframalpha.com
+  url: https://www.wolframalpha.com/
   title: WolframAlpha
   tags:
+  - computation
   - mathematics
   - science
   - wolfram-alpha
+  examples:
+  - description: Go to the homepage
+  description: Wolfram|Alpha is a computational knowledge engine for answering factual and mathematical queries.
 wa 1:
   url: https://www.wolframalpha.com/input/?i=<query>
-  title: WolframAlpha
-  tags:
-  - mathematics
-  - science
-  - wolfram-alpha
+  include: wa 0
   examples:
   - arguments: gdp of germany vs. usa
     description: Compare the GDP of Germany and the USA
@@ -11272,24 +11272,15 @@ wadoku 1:
 wai 1:
   url: https://www.wolframalpha.com/input/?i=integral%20<query>
   title: Wolfram Alpha, calculate integral
-  tags:
-  - mathematics
-  - science
-  - wolfram-alpha
+  include: wa 0
   examples:
   - arguments: x^2
     description: Calculate the integral of x^2
 wam 1:
-  url: https://m.wolframalpha.com/input/?i=<query>
-  title: WolframAlpha Mobile
-  tags:
-  - mathematics
-  - mobile
-  - science
-  - wolfram-alpha
-  examples:
-  - arguments: gdp of germany vs. usa
-    description: Compare the GDP of Germany and the USA
+  deprecated:
+    alternative:
+      query: wa <1>
+    created: '2026-05-13'
 watchz 1:
   deprecated:
     alternative:
