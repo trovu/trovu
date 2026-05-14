@@ -85,21 +85,23 @@ describe("UrlProcessor", () => {
 
   describe("getPlaceholderFromMatch", () => {
     test("without attributes", async () => {
-      expect(UrlProcessor.getPlaceholderFromMatch([undefined, "query"])).toEqual({
+      expect(UrlProcessor.getPlaceholderFromMatch([undefined, "query"] as unknown as RegExpExecArray)).toEqual({
         name: "query",
         placeholder: {},
       });
     });
 
     test("without attributes legacy", async () => {
-      expect(UrlProcessor.getPlaceholderFromMatchLegacy([undefined, "query"])).toEqual({
+      expect(UrlProcessor.getPlaceholderFromMatchLegacy([undefined, "query"] as unknown as RegExpExecArray)).toEqual({
         name: "query",
         placeholder: {},
       });
     });
 
     test("with attributes", async () => {
-      expect(UrlProcessor.getPlaceholderFromMatch([undefined, "Start: { type: city}"])).toEqual({
+      expect(
+        UrlProcessor.getPlaceholderFromMatch([undefined, "Start: { type: city}"] as unknown as RegExpExecArray),
+      ).toEqual({
         name: "Start",
         placeholder: {
           type: "city",
@@ -108,7 +110,9 @@ describe("UrlProcessor", () => {
     });
 
     test("with attributes legacy", async () => {
-      expect(UrlProcessor.getPlaceholderFromMatchLegacy([undefined, "Start|type=city"])).toEqual({
+      expect(
+        UrlProcessor.getPlaceholderFromMatchLegacy([undefined, "Start|type=city"] as unknown as RegExpExecArray),
+      ).toEqual({
         name: "Start",
         placeholder: {
           type: "city",

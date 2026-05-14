@@ -35,7 +35,7 @@ describe("ShortcutVerifier", () => {
     });
 
     it("should return undefined if include is present", () => {
-      const shortcut = { namespace: "testNamespace", key: "testKey", url: null, deprecated: null, include: true };
+      const shortcut = { namespace: "testNamespace", key: "testKey", url: null, deprecated: null, include: { key: "other 0" } };
       const result = ShortcutVerifier.checkIfHasUrlAndNoInclude(shortcut);
       expect(result).toBeUndefined();
     });

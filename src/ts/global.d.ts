@@ -1,12 +1,6 @@
 type AnyObject = Record<string, any>;
 
-declare const GIT_INFO: any;
-
-interface Document {
-  querySelector(selectors: string): any;
-  querySelectorAll(selectors: string): any;
-  getElementById(elementId: string): any;
-}
+declare const GIT_INFO: import("./types").GitInfo;
 
 interface Navigator {
   standalone?: boolean;

@@ -1,20 +1,22 @@
+import type { Shortcut } from "../types";
+
 export default class ShortcutVerifier {
-  static checkIfHasUrl(shortcut) {
+  static checkIfHasUrl(shortcut: Shortcut): string | undefined {
     if (!shortcut.url && !shortcut.deprecated) {
       return `Missing url in ${shortcut.namespace}.${shortcut.key}.`;
     }
   }
-  static checkIfHasUrlAndNoInclude(shortcut) {
+  static checkIfHasUrlAndNoInclude(shortcut: Shortcut): string | undefined {
     if (!shortcut.url && !shortcut.deprecated && !shortcut.include) {
       return `Missing url in ${shortcut.namespace}.${shortcut.key}.`;
     }
   }
-  static checkIfArgCountMatches(shortcut) {
+  static checkIfArgCountMatches(shortcut: Shortcut): string | undefined {
     if (shortcut.url && shortcut.arguments && shortcut.argumentCount != Object.keys(shortcut.arguments).length) {
       return `Mismatch in argumentCount of key and arguments.length of url in "${shortcut.namespace}.${shortcut.key}".`;
     }
   }
-  static checkIfArgCountMatchesWithExamples(shortcut) {
+  static checkIfArgCountMatchesWithExamples(shortcut: Shortcut): string | undefined {
     if (!shortcut.examples) {
       return;
     }
@@ -29,7 +31,7 @@ export default class ShortcutVerifier {
     }
   }
 
-  static checkIfDeprecatedAlternativeHasMatchingPlaceholders(shortcut) {
+  static checkIfDeprecatedAlternativeHasMatchingPlaceholders(shortcut: Shortcut): string | undefined {
     const query = shortcut?.deprecated?.alternative?.query;
     if (!query) {
       return;

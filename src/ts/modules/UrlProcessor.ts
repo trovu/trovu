@@ -5,15 +5,16 @@ import TimeType from "./type/time";
 import dayjs from "dayjs";
 import escapeStringRegexp from "escape-string-regexp";
 import jsyaml from "js-yaml";
+import type { Dict, EnvLike, PlaceholderAttributes, PlaceholderMap } from "../types";
 
 /** Process a shortcut URL for redirect. */
 
 export default class UrlProcessor {
-  static getPlaceholdersFromString(str, prefix) {
+  static getPlaceholdersFromString(str: string, prefix: string): PlaceholderMap {
     const pattern = "<" + prefix + "(.+?)>";
     const re = RegExp(pattern, "g");
-    let match;
-    const placeholders = {};
+    let match: RegExpExecArray | null;
+    const placeholders: PlaceholderMap = {};
     while ((match = re.exec(str))) {
       const { name, placeholder } = this.getPlaceholderFromMatch(match);
       placeholders[name] = placeholders[name] || {};
@@ -46,11 +47,11 @@ export default class UrlProcessor {
    *     }
    *   }
    */
-  static getPlaceholdersFromStringLegacy(str, prefix) {
+  static getPlaceholdersFromStringLegacy(str: string, prefix: string): PlaceholderMap {
     const pattern = "{" + prefix + "(.+?)}";
     const re = RegExp(pattern, "g");
-    let match;
-    const placeholders = {};
+    let match: RegExpExecArray | null;
+    const placeholders: PlaceholderMap = {};
     while ((match = re.exec(str))) {
       const { name, placeholder } = this.getPlaceholderFromMatchLegacy(match);
       placeholders[name] = placeholders[name] || {};
@@ -59,12 +60,12 @@ export default class UrlProcessor {
     return placeholders;
   }
 
-  static getPlaceholderFromMatch(match) {
+  static getPlaceholderFromMatch(match: RegExpExecArray): { name: string; placeholder: PlaceholderAttributes } {
     const yaml = match[1];
-    const parsed = jsyaml.load(yaml);
+    const parsed = jsyaml.load(yaml) as string | Dict<PlaceholderAttributes>;
     if (typeof parsed === "string") {
       const name = parsed;
-      const placeholder = {};
+      const placeholder: PlaceholderAttributes = {};
       return { name, placeholder };
     } else {
       const name = Object.keys(parsed)[0];
@@ -73,14 +74,14 @@ export default class UrlProcessor {
     }
   }
 
-  static getPlaceholderFromMatchLegacy(match) {
+  static getPlaceholderFromMatchLegacy(match: RegExpExecArray): { name: string; placeholder: PlaceholderAttributes } {
     // Example value:
     // match[1] = 'query|encoding=utf-8|another=attribute'
     const nameAndAttributes = match[1].split("|");
     // Example value:
     // name = 'query'
-    const name = nameAndAttributes.shift();
-    const placeholder = {};
+    const name = nameAndAttributes.shift() || "";
+    const placeholder: PlaceholderAttributes = {};
     // Example value:
     // name_and_attributes = ['encoding=utf-8', 'another=attribute']
     for (const attrStr of nameAndAttributes) {
@@ -97,8 +98,8 @@ export default class UrlProcessor {
    *
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
-  static getArgumentsFromString(str) {
-    const placeholders = {};
+  static getArgumentsFromString(str: string): PlaceholderMap {
+    const placeholders: PlaceholderMap = {};
     Object.assign(placeholders, this.getPlaceholdersFromString(str, "(?![\\$])"));
     Object.assign(placeholders, this.getPlaceholdersFromStringLegacy(str, "%"));
     return placeholders;
@@ -111,8 +112,8 @@ export default class UrlProcessor {
    *
    * @return {object} placeholders - Array keyed with the arguments names and with an array of corresponding placeholders.
    */
-  static getVariablesFromString(str) {
-    const variables = {};
+  static getVariablesFromString(str: string): PlaceholderMap {
+    const variables: PlaceholderMap = {};
     Object.assign(variables, this.getPlaceholdersFromString(str, "\\$"));
     Object.assign(variables, this.getPlaceholdersFromStringLegacy(str, "\\$"));
     return variables;
@@ -126,11 +127,11 @@ export default class UrlProcessor {
    *
    * @return {string} str   - The string with the replaced placeholders.
    */
-  static replaceArguments(str, args, env) {
+  static replaceArguments(str: string, args: string[], env: Pick<EnvLike, "country" | "language" | "data">): string {
     const placeholders = this.getArgumentsFromString(str);
 
     for (const argumentName in placeholders) {
-      let argument = args.shift().trim();
+      let argument = (args.shift() || "").trim();
 
       // An argument can have multiple matches,
       // so go over all of them.
@@ -145,14 +146,22 @@ export default class UrlProcessor {
     return str;
   }
 
-  static processAttributes(processedArgument, attributes, env) {
+  static processAttributes(
+    processedArgument: string,
+    attributes: PlaceholderAttributes,
+    env: Pick<EnvLike, "country" | "language" | "data">,
+  ): string {
     processedArgument = this.processAttributeType(attributes, processedArgument, env);
     processedArgument = this.processAttributeTransform(attributes, processedArgument);
     processedArgument = this.processAttributeEncoding(attributes, processedArgument);
     return processedArgument;
   }
 
-  static processAttributeType(attributes, processedArgument, env) {
+  static processAttributeType(
+    attributes: PlaceholderAttributes,
+    processedArgument: string,
+    env: Pick<EnvLike, "country" | "language" | "data">,
+  ): string {
     switch (attributes.type) {
       case "date":
         processedArgument = this.processTypeDate(processedArgument, attributes, env);
@@ -167,7 +176,11 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static processTypeDate(processedArgument, attributes, env) {
+  static processTypeDate(
+    processedArgument: string,
+    attributes: PlaceholderAttributes,
+    env: Pick<EnvLike, "country" | "language" | "data">,
+  ): string {
     const dateNative = DateType.parse(processedArgument, env);
     // If date could be parsed:
     // Set argument.
@@ -182,7 +195,7 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static processTypeTime(processedArgument, attributes) {
+  static processTypeTime(processedArgument: string, attributes: PlaceholderAttributes): string {
     const timeNative = TimeType.parse(processedArgument);
     const time = dayjs(timeNative);
     // If time could be parsed:
@@ -197,7 +210,7 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static processTypeCity(processedArgument, env) {
+  static processTypeCity(processedArgument: string, env: Pick<EnvLike, "country" | "data">): string {
     const city = CityType.parse(processedArgument, env);
     // If city could be parsed:
     // Set argument.
@@ -207,7 +220,7 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static processAttributeTransform(attributes, processedArgument) {
+  static processAttributeTransform(attributes: PlaceholderAttributes, processedArgument: string): string {
     switch (attributes.transform) {
       case "uppercase":
         processedArgument = processedArgument.toUpperCase();
@@ -222,7 +235,7 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
-  static processAttributeEncoding(attributes, processedArgument) {
+  static processAttributeEncoding(attributes: PlaceholderAttributes, processedArgument: string): string {
     switch (attributes.encoding) {
       case "iso-8859-1":
         // TODO: replace with encodeURIComponent
@@ -246,12 +259,12 @@ export default class UrlProcessor {
    *
    * @return {string} str       - The string with the replaced variables.
    */
-  static replaceVariables(str, variables) {
+  static replaceVariables(str: string, variables: Record<string, unknown>): string {
     const placeholders = this.getVariablesFromString(str);
 
     for (const varName in placeholders) {
       const matches = placeholders[varName];
-      let value;
+      let value: unknown;
       for (const match in matches) {
         const attributes = matches[match];
         switch (varName) {
@@ -270,7 +283,8 @@ export default class UrlProcessor {
             value = variables[varName];
             break;
         }
-        str = str.replace(new RegExp(escapeStringRegexp(match), "g"), value);
+        const replacement = value === undefined || value === null ? "" : String(value);
+        str = str.replace(new RegExp(escapeStringRegexp(match), "g"), replacement);
       }
     }
     return str;
@@ -283,8 +297,8 @@ export default class UrlProcessor {
    *
    * @returns {string} The resulting string with mapped Esperanto character codes.
    */
-  static transformEoCx(str) {
-    const charMap = {
+  static transformEoCx(str: string): string {
+    const charMap: Record<string, string> = {
       cx: "ĉ",
       gx: "ĝ",
       hx: "ĥ",
@@ -306,7 +320,7 @@ export default class UrlProcessor {
     };
 
     const regex = new RegExp(Object.keys(charMap).join("|"), "g");
-    str = str.replace(regex, (matched) => charMap[matched]);
+    str = str.replace(regex, (matched) => charMap[matched] || matched);
     return str;
   }
 }
