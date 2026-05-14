@@ -7495,6 +7495,22 @@ umt:
       nl:
         - https://www.uitmuntend.de/
         - https://www.uitmuntend.de/search.html?search=<word>
+wbi:
+  name: Woerterbuch.info
+  pairs:
+    de:
+      en:
+        - https://woerterbuch.info/?l=en
+        - https://woerterbuch.info/?l=en&query=<word>&s=dict
+      es:
+        - https://woerterbuch.info/?l=es
+        - https://woerterbuch.info/?l=es&query=<word>&s=dict
+      fr:
+        - https://woerterbuch.info/?l=fr
+        - https://woerterbuch.info/?l=fr&query=<word>&s=dict
+      it:
+        - https://woerterbuch.info/?l=it
+        - https://woerterbuch.info/?l=it&query=<word>&s=dict
 wdk:
   name: Wadoku
   pairs:

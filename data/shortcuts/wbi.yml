@@ -1,0 +1,165 @@
+# yaml-language-server: $schema=https://trovu.net/schema/shortcuts.yml
+de 0:
+  include: de-<$language> 0
+de 1:
+  include: de-<$language> 1
+de-en 0:
+  url: https://woerterbuch.info/?l=en
+  title: German-English (Woerterbuch.info)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+  - description: Go to the homepage
+de-en 1:
+  url: https://woerterbuch.info/?l=en&query=<word>&s=dict
+  title: German-English (Woerterbuch.info)
+  tags:
+  - dictionary
+  - english
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: English translation of "baum"
+  - arguments: tree
+    description: German translation of "tree"
+de-es 0:
+  url: https://woerterbuch.info/?l=es
+  title: Alemán-Español (Woerterbuch.info)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+  examples:
+  - description: Ir a la página principal
+de-es 1:
+  url: https://woerterbuch.info/?l=es&query=<word>&s=dict
+  title: Alemán-Español (Woerterbuch.info)
+  tags:
+  - dictionary
+  - german
+  - language
+  - spanish
+  examples:
+  - arguments: baum
+    description: Traducción al español de "baum"
+  - arguments: árbol
+    description: Traducción al alemán de "árbol"
+de-fr 0:
+  url: https://woerterbuch.info/?l=fr
+  title: Allemand-Français (Woerterbuch.info)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+  examples:
+  - description: Aller à la page d'accueil
+de-fr 1:
+  url: https://woerterbuch.info/?l=fr&query=<word>&s=dict
+  title: Allemand-Français (Woerterbuch.info)
+  tags:
+  - dictionary
+  - french
+  - german
+  - language
+  examples:
+  - arguments: baum
+    description: Traduction en français de "baum"
+  - arguments: arbre
+    description: Traduction en allemand de "arbre"
+de-it 0:
+  url: https://woerterbuch.info/?l=it
+  title: Tedesco-Italiano (Woerterbuch.info)
+  tags:
+  - dictionary
+  - german
+  - italian
+  - language
+  examples:
+  - description: Vai alla homepage
+de-it 1:
+  url: https://woerterbuch.info/?l=it&query=<word>&s=dict
+  title: Tedesco-Italiano (Woerterbuch.info)
+  tags:
+  - dictionary
+  - german
+  - italian
+  - language
+  examples:
+  - arguments: baum
+    description: Traduzione in italiano di "baum"
+  - arguments: albero
+    description: Traduzione in tedesco di "albero"
+en 0:
+  include: en-<$language> 0
+en 1:
+  include: en-<$language> 1
+en-de 0:
+  title: Englisch-Deutsch (Woerterbuch.info)
+  include: de-en 0
+  examples:
+  - description: Zur Startseite
+en-de 1:
+  title: Englisch-Deutsch (Woerterbuch.info)
+  include: de-en 1
+  examples:
+  - arguments: tree
+    description: Deutsch-Übersetzung von "tree"
+  - arguments: baum
+    description: Englisch-Übersetzung von "baum"
+es 0:
+  include: es-<$language> 0
+es 1:
+  include: es-<$language> 1
+es-de 0:
+  title: Spanisch-Deutsch (Woerterbuch.info)
+  include: de-es 0
+  examples:
+  - description: Zur Startseite
+es-de 1:
+  title: Spanisch-Deutsch (Woerterbuch.info)
+  include: de-es 1
+  examples:
+  - arguments: árbol
+    description: Deutsch-Übersetzung von "árbol"
+  - arguments: baum
+    description: Spanisch-Übersetzung von "baum"
+fr 0:
+  include: fr-<$language> 0
+fr 1:
+  include: fr-<$language> 1
+fr-de 0:
+  title: Französisch-Deutsch (Woerterbuch.info)
+  include: de-fr 0
+  examples:
+  - description: Zur Startseite
+fr-de 1:
+  title: Französisch-Deutsch (Woerterbuch.info)
+  include: de-fr 1
+  examples:
+  - arguments: arbre
+    description: Deutsch-Übersetzung von "arbre"
+  - arguments: baum
+    description: Französisch-Übersetzung von "baum"
+it 0:
+  include: it-<$language> 0
+it 1:
+  include: it-<$language> 1
+it-de 0:
+  title: Italienisch-Deutsch (Woerterbuch.info)
+  include: de-it 0
+  examples:
+  - description: Zur Startseite
+it-de 1:
+  title: Italienisch-Deutsch (Woerterbuch.info)
+  include: de-it 1
+  examples:
+  - arguments: albero
+    description: Deutsch-Übersetzung von "albero"
+  - arguments: baum
+    description: Italienisch-Übersetzung von "baum"
