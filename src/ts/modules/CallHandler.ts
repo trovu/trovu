@@ -3,6 +3,7 @@ import Env from "./Env";
 import GitLogger from "./GitLogger";
 import ShortcutFinder from "./ShortcutFinder";
 import UrlProcessor from "./UrlProcessor";
+import type { EnvLike, RedirectResponse, Shortcut } from "../types";
 
 /** Handle a call. */
 
@@ -11,7 +12,10 @@ export default class CallHandler {
    * The 'main' function of this class.
    */
   static async handleCall() {
-    const targetDomain = document.querySelector("#target-domain") as any;
+    const targetDomain = document.querySelector<HTMLElement>("#target-domain");
+    if (!targetDomain) {
+      throw new Error('Missing element "#target-domain".');
+    }
     targetDomain.textContent = "";
 
     const env = new Env({ context: "process" });
@@ -23,17 +27,17 @@ export default class CallHandler {
       env.logger.showLog();
     }
 
-    let redirectUrl: any;
+    let redirectUrl: string;
 
-    const response: AnyObject = this.getRedirectResponse(env);
+    const response = this.getRedirectResponse(env);
 
     if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
+      redirectUrl = response.redirectUrl as string;
     } else {
       redirectUrl = this.getRedirectUrlToHome(env, response);
     }
 
-    targetDomain.textContent = response.redirectUrl || "";
+    targetDomain.textContent = typeof response.redirectUrl === "string" ? response.redirectUrl : "";
 
     env.logger.info("Redirect to:   " + redirectUrl);
 
@@ -51,65 +55,66 @@ export default class CallHandler {
    *
    * @return {object} response  - Contains redirect URL, status.
    */
-  static getRedirectResponse(env: AnyObject) {
-    const response: AnyObject = {};
-
+  static getRedirectResponse(env: EnvLike): RedirectResponse {
     if (env.reload && !env.query) {
-      response.status = "reloaded";
-      return response;
+      return { status: "reloaded" };
     }
 
     if (!env.query) {
-      response.status = "not_found";
-      response.redirectUrl = false;
-      return response;
+      return { status: "not_found", redirectUrl: false };
     }
 
     const shortcut = ShortcutFinder.findShortcut(env);
 
     if (!shortcut) {
-      response.status = "not_found";
-      return response;
+      return { status: "not_found" };
     }
 
     if (shortcut.deprecated) {
-      response.status = "deprecated";
-      response.alternative = this.getAlternative(shortcut, env);
-      return response;
+      return {
+        status: "deprecated",
+        alternative: this.getAlternative(shortcut, env),
+      };
     }
 
     if (shortcut.removed) {
-      response.status = "removed";
-      response.key = shortcut.key;
-      return response;
+      return {
+        status: "removed",
+        key: shortcut.key,
+      };
     }
 
     if (!shortcut.reachable) {
-      response.status = "not_reachable";
-      response.namespace = shortcut.namespace;
-      return response;
+      return {
+        status: "not_reachable",
+        namespace: shortcut.namespace,
+      };
     }
 
-    response.redirectUrl = shortcut.url;
-    response.status = "found";
+    let redirectUrl = shortcut.url || "";
 
-    env.logger.info("Used template: " + response.redirectUrl);
+    env.logger.info("Used template: " + redirectUrl);
 
-    response.redirectUrl = UrlProcessor.replaceVariables(response.redirectUrl, {
+    redirectUrl = UrlProcessor.replaceVariables(redirectUrl, {
       language: env.language,
       country: env.country,
     });
-    response.redirectUrl = UrlProcessor.replaceArguments(response.redirectUrl, env.args, env);
+    redirectUrl = UrlProcessor.replaceArguments(redirectUrl, env.args, env);
 
-    if (!this.isSafeRedirectUrl(response.redirectUrl)) {
-      response.status = "suspicious";
-      return response;
+    if (!this.isSafeRedirectUrl(redirectUrl)) {
+      return {
+        status: "suspicious",
+        redirectUrl,
+      };
     }
 
-    return response;
+    return {
+      status: "found",
+      redirectUrl,
+    };
   }
 
-  static getAlternative(shortcut: AnyObject, env: AnyObject) {
+  static getAlternative(shortcut: Shortcut, env: Pick<EnvLike, "args">): string {
     let alternative = shortcut.deprecated.alternative.query;
     for (const i in env.args) {
       alternative = alternative.replace("<" + (parseInt(i) + 1) + ">", env.args[i]);
@@ -117,7 +122,7 @@ export default class CallHandler {
     return alternative;
   }
 
-  static isSafeRedirectUrl(redirectUrl: string) {
+  static isSafeRedirectUrl(redirectUrl: string): boolean {
     let parsedUrl: URL;
     try {
       parsedUrl = new URL(redirectUrl);
@@ -134,8 +139,8 @@ export default class CallHandler {
    *
    * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
    */
-  static getRedirectUrlToHome(env: AnyObject, response: AnyObject) {
-    const params: AnyObject = Env.getParamsFromUrl();
+  static getRedirectUrlToHome(env: Pick<Env, "buildUrlParamStr">, response: RedirectResponse): string {
+    const params = Env.getParamsFromUrl();
     if (params.query === "reload" || params.query === "debug:reload") {
       delete params.query;
     }

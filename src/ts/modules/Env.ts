@@ -6,22 +6,53 @@ import QueryParser from "./QueryParser";
 import UrlProcessor from "./UrlProcessor";
 import * as countriesList from "countries-list";
 import jsyaml from "js-yaml";
+import type {
+  ContextName,
+  EnvParams,
+  EnvPopulateOptions,
+  GitInfo,
+  NamespaceMap,
+  NamespaceReference,
+  QueryParseResult,
+  TrovuConfig,
+  TrovuData,
+} from "../types";
 
 /** Set and remember the environment. */
 
-const countriesListData = (countriesList as AnyObject).default || countriesList;
+const countriesListData = (countriesList as { default?: typeof countriesList }).default || countriesList;
 const countries = countriesListData.countries;
 const languages = countriesListData.languages;
 
 export default class Env {
   [key: string]: any;
+  logger: Logger;
+  gitInfo: GitInfo;
+  data: TrovuData;
+  namespaceInfos: NamespaceMap;
+  context?: ContextName;
+  namespaces!: NamespaceReference[];
+  github?: string;
+  configUrl?: string;
+  language!: string;
+  country!: string;
+  debug?: boolean;
+  reload?: boolean;
+  query!: string;
+  keyword!: string;
+  args!: string[];
+  argumentString!: string;
+  defaultKeyword?: string;
+  extraNamespaceName?: string;
+  alternative?: string;
+  status?: string;
 
   /**
    * Set helper variables.
    *
    * @param {object} env - The environment variables.
    */
-  constructor(env: AnyObject = {}) {
+  constructor(env: Partial<EnvParams> & Partial<QueryParseResult> & Partial<Pick<Env, "data" | "namespaceInfos">> = {}) {
     if (languages && !languages["eo"]) {
       languages["eo"] = { name: "Esperanto", native: "Esperanto" };
     }
@@ -50,7 +81,7 @@ export default class Env {
    * @param {object} env - The environment variables.
    * @returns {void}
    */
-  setToThis(env: AnyObject) {
+  setToThis(env: Record<string, unknown>) {
     if (!env) {
       return;
     }
@@ -71,8 +102,8 @@ export default class Env {
    *
    * @return {object} - The built params.
    */
-  buildUrlParams(originalParams: AnyObject = {}, moreParams: AnyObject = {}) {
-    const params: AnyObject = {};
+  buildUrlParams(originalParams: EnvParams = {}, moreParams: EnvParams = {}): EnvParams {
+    const params: EnvParams = {};
 
     if (this.github) {
       params.github = this.github;
@@ -100,7 +131,7 @@ export default class Env {
   /**
    * Get the parameters as string.
    */
-  buildUrlParamStr(moreParams: AnyObject = {}) {
+  buildUrlParamStr(moreParams: EnvParams = {}): string {
     const originalParams = Env.getParamsFromUrl();
     const params = this.buildUrlParams(originalParams, moreParams);
     const urlSearchParams = new URLSearchParams();
@@ -112,14 +143,14 @@ export default class Env {
     return paramStr;
   }
 
-  buildProcessUrl(moreParams: AnyObject) {
+  buildProcessUrl(moreParams: EnvParams): string {
     const paramStr = this.buildUrlParamStr(moreParams);
     const processUrl = "process/index.html?#" + paramStr;
     return processUrl;
   }
 
   async setContext() {
-    const params: AnyObject = Env.getParamsFromUrl();
+    const params = Env.getParamsFromUrl();
     if (params.context) {
       this.context = params.context;
     }
@@ -130,14 +161,14 @@ export default class Env {
    *
    * @param {array} params - List of parameters to be used in environment.
    */
-  async populate(params: AnyObject, options: AnyObject = {}) {
+  async populate(params: EnvParams, options: EnvPopulateOptions = {}) {
     this.namespaces = undefined;
     this.github = undefined;
     this.configUrl = undefined;
     this.language = undefined;
     this.country = undefined;
 
-    this.data = this.data || (await this.getData());
+    this.data = this.data || (await this.getData()) || ({} as TrovuData);
 
     // Raycast cannot handle too much data.
     if (options && options.removeNamespaces) {
@@ -148,7 +179,7 @@ export default class Env {
       }
     }
 
-    if (this.data.config.defaultKeyword) {
+    if (this.data.config?.defaultKeyword) {
       this.defaultKeyword = this.data.config.defaultKeyword;
     }
 
@@ -223,8 +254,8 @@ export default class Env {
     this.github ||= localStorage.getItem("github");
   }
 
-  static getBoolParams(params: AnyObject) {
-    const boolParams: AnyObject = {};
+  static getBoolParams(params: EnvParams): Partial<EnvParams> {
+    const boolParams: Partial<EnvParams> = {};
     for (const paramName of ["debug", "reload"]) {
       if (params[paramName] === "1") {
         boolParams[paramName] = true;
@@ -269,7 +300,7 @@ export default class Env {
    * @param {Object} obj
    * @returns {boolean}
    */
-  isEmptyObject(obj: AnyObject) {
+  isEmptyObject(obj: Record<string, unknown>) {
     return Object.keys(obj).length === 0;
   }
 
@@ -279,16 +310,17 @@ export default class Env {
    * @returns {(object|boolean)} config - The user's config object, or false if fetch failed.
    */
 
-  async getUserConfigFromUrl(configUrl) {
+  async getUserConfigFromUrl(configUrl: string): Promise<TrovuConfig | undefined> {
     const configYml = await Helper.fetchAsync(configUrl, this);
     if (!configYml) {
       this.logger.warning(`Problem reading config from ${configUrl}`);
     }
     try {
-      const config = jsyaml.load(configYml);
+      const config = jsyaml.load(configYml) as TrovuConfig;
       return config;
     } catch (error) {
-      this.logger.error(`Error parsing ${configUrl}: ${error.message}`);
+      const message = error instanceof Error ? error.message : String(error);
+      this.logger.error(`Error parsing ${configUrl}: ${message}`);
     }
   }
 
@@ -318,7 +350,7 @@ export default class Env {
    *
    * @return {object} [language, country] - The default language and country.
    */
-  getDefaultLanguageAndCountry() {
+  getDefaultLanguageAndCountry(): { language: string; country: string } {
     let { language, country } = this.getLanguageAndCountryFromBrowser();
 
     // Make sure language and country are in our lists.
@@ -341,7 +373,7 @@ export default class Env {
    *
    * @return {object} [language, country] - The default language and country.
    */
-  getLanguageAndCountryFromBrowser() {
+  getLanguageAndCountryFromBrowser(): { language?: string; country?: string } {
     const languageStr = this.getNavigatorLanguage();
     let language, country;
     if (languageStr) {
@@ -372,8 +404,10 @@ export default class Env {
 
     // Default namespaces.
     if (typeof this.namespaces != "object") {
-      this.namespaces = this.data.config.namespaces;
-      this.namespaces = this.namespaces.map((namespace) => UrlProcessor.replaceVariables(namespace, this));
+      this.namespaces = this.data.config?.namespaces || [];
+      this.namespaces = this.namespaces.map((namespace) =>
+        typeof namespace === "string" ? UrlProcessor.replaceVariables(namespace, this) : namespace,
+      );
     }
     // Default debug.
     if (typeof this.debug != "boolean") {
@@ -385,7 +419,7 @@ export default class Env {
    * Fetches data from /data.
    * @returns {Object} An object containing the fetched data.
    */
-  async getData() {
+  async getData(): Promise<TrovuData | false> {
     let text;
     let url;
     let prefix;
@@ -416,10 +450,11 @@ export default class Env {
       return false;
     }
     try {
-      const data = await JSON.parse(text);
+      const data = JSON.parse(text) as TrovuData;
       return data;
     } catch (error) {
-      this.logger.error(`Error parsing JSON in ${url}: ${error.message}`);
+      const message = error instanceof Error ? error.message : String(error);
+      this.logger.error(`Error parsing JSON in ${url}: ${message}`);
       return false;
     }
   }
@@ -429,7 +464,7 @@ export default class Env {
    *
    * @param context
    */
-  static fetchLog(context, prefix) {
+  static fetchLog(context: string, prefix: string) {
     const url = `${prefix}log.json?context=${context}`;
     fetch(url);
   }
@@ -447,9 +482,9 @@ export default class Env {
     return hash;
   }
 
-  static getParamsFromUrl() {
+  static getParamsFromUrl(): EnvParams {
     const urlSearchParams = this.getUrlSearchParams();
-    const params = {};
+    const params: EnvParams = {};
     urlSearchParams.forEach((value, key) => {
       params[key] = value;
     });

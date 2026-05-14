@@ -48,7 +48,7 @@ describe("CallHandler", () => {
       args: [],
       language: "en",
       country: "us",
-      logger: { info: jest.fn() },
+      logger: { info: jest.fn(), warning: jest.fn(), error: jest.fn() },
     };
 
     expect(CallHandler.getRedirectResponse(env)).toMatchObject({

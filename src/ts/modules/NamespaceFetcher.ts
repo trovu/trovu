@@ -2,11 +2,29 @@
 import ShortcutVerifier from "./ShortcutVerifier";
 import UrlProcessor from "./UrlProcessor";
 import jsyaml from "js-yaml";
+import type { EnvLike, LoggerLike, NamespaceInfo, NamespaceMap, NamespaceReference, RawShortcut, RawShortcutInclude, RawShortcutMap, Shortcut, ShortcutInclude, ShortcutMap, TrovuData } from "../types";
 
 export default class NamespaceFetcher {
-  [key: string]: any;
+  env: Partial<EnvLike> & {
+    logger: LoggerLike;
+    data?: TrovuData;
+    github?: string;
+    reload?: boolean;
+    language?: string;
+    country?: string;
+  };
+  namespaceInfos: NamespaceMap;
 
-  constructor(env: AnyObject = {}) {
+  constructor(
+    env: Partial<EnvLike> & {
+      logger: LoggerLike;
+      data?: TrovuData;
+      github?: string;
+      reload?: boolean;
+      language?: string;
+      country?: string;
+    } = { logger: console as unknown as LoggerLike },
+  ) {
     this.env = env;
     this.namespaceInfos = {};
   }
@@ -16,7 +34,7 @@ export default class NamespaceFetcher {
    * @param {Array} namespaces - An array of namespace names
    * @returns {Object} An object containing namespace information
    */
-  async getNamespaceInfos(namespaces: any[]) {
+  async getNamespaceInfos(namespaces: NamespaceReference[]): Promise<NamespaceMap> {
     namespaces = namespaces.filter(
       (namespace) =>
         // Keep if it's not a string or doesn't start with "old-".
@@ -40,8 +58,8 @@ export default class NamespaceFetcher {
    * @param {number} priorityOffset - The priority offset to use for the namespaces
    * @returns {Object} An object containing initial namespace information
    */
-  getInitialNamespaceInfos(namespaces: any[], priorityOffset: number) {
-    const namespaceInfos: AnyObject = {};
+  getInitialNamespaceInfos(namespaces: NamespaceReference[], priorityOffset: number): NamespaceMap {
+    const namespaceInfos: NamespaceMap = {};
     namespaces.forEach((namespace, index) => {
       const namespaceInfo = this.getInitialNamespaceInfo(namespace);
       if (!namespaceInfo) {
@@ -58,14 +76,14 @@ export default class NamespaceFetcher {
    * @param {(string|Object)} namespace - The namespace to add the URL template to.
    * @return {Object} namespace - The namespace with the added URL template.
    */
-  getInitialNamespaceInfo(namespace: any) {
+  getInitialNamespaceInfo(namespace: NamespaceReference): NamespaceInfo | false {
     if (typeof namespace === "string") {
       return { name: namespace };
     }
     if (!namespace || typeof namespace !== "object") {
       throw new Error("Invalid namespace: input must be an object or a string");
     }
-    const namespaceInfo: AnyObject = {};
+    const namespaceInfo: NamespaceInfo = {};
     if (namespace.name) {
       namespaceInfo.name = namespace.name;
     }
@@ -90,7 +108,7 @@ export default class NamespaceFetcher {
       namespaceInfo.url = namespace.url;
     }
     if (namespace.shortcuts) {
-      namespaceInfo.shortcuts = namespace.shortcuts;
+      namespaceInfo.shortcuts = namespace.shortcuts as ShortcutMap;
     }
     if (!namespaceInfo.name && (namespaceInfo.url || namespaceInfo.shortcuts)) {
       this.env.logger.warning(`Invalid namespace: ${JSON.stringify(namespace)} provided without a name.`);
@@ -104,14 +122,14 @@ export default class NamespaceFetcher {
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
    */
-  assignShortcutsFromData(namespaceInfos: AnyObject) {
-    const data: AnyObject = this.env.data;
-    for (const namespaceName in data.shortcuts) {
+  assignShortcutsFromData(namespaceInfos: NamespaceMap): NamespaceMap {
+    const data = this.env.data as TrovuData;
+    for (const namespaceName in data.shortcuts || {}) {
       if (!namespaceInfos[namespaceName]) {
-        namespaceInfos[namespaceName] = {};
+        namespaceInfos[namespaceName] = { name: namespaceName };
       }
       namespaceInfos[namespaceName].name = namespaceName;
-      namespaceInfos[namespaceName].shortcuts = data.shortcuts[namespaceName];
+      namespaceInfos[namespaceName].shortcuts = data.shortcuts[namespaceName] as ShortcutMap;
     }
     return namespaceInfos;
   }
@@ -121,7 +139,7 @@ export default class NamespaceFetcher {
    * @param {Object} namespaceInfos
    * @returns {Object} namespaceInfos with added information
    */
-  addNamespaceInfos(namespaceInfos: AnyObject) {
+  addNamespaceInfos(namespaceInfos: NamespaceMap): NamespaceMap {
     return Object.fromEntries(
       Object.entries(namespaceInfos).map(([name, info]) => {
         const namespaceInfo = this.addNamespaceInfo(info);
@@ -135,7 +153,7 @@ export default class NamespaceFetcher {
    * @param {Object} namespaceInfo
    * @returns {Object} namespaceInfo with added information
    */
-  addNamespaceInfo(namespaceInfo: AnyObject) {
+  addNamespaceInfo(namespaceInfo: NamespaceInfo): NamespaceInfo {
     // No shortcuts means it was in data.json
     // so it must be a site namespace.
     if (namespaceInfo.shortcuts) {
@@ -161,9 +179,9 @@ export default class NamespaceFetcher {
    * @param {Object} namespaceInfos - An object of initial namespace infos.
    * @returns {Object} An object containing the fetched information for each given namespace
    */
-  async fetchNamespaceInfos(namespaceInfos: AnyObject) {
+  async fetchNamespaceInfos(namespaceInfos: NamespaceMap): Promise<NamespaceMap> {
     let i = 0;
-    let newNamespaceInfos: any[];
+    let newNamespaceInfos: NamespaceInfo[];
     do {
       i++;
       if (i >= 10) {
@@ -190,7 +208,7 @@ export default class NamespaceFetcher {
    * @param {array} newNamespaceInfos - The namespaces to fetch shortcuts for.
    * @return {array} promises - The promises from the fetch() calls.
    */
-  startFetches(newNamespaceInfos: any[]) {
+  startFetches(newNamespaceInfos: NamespaceInfo[]): Promise<Response>[] {
     const promises: Promise<Response>[] = [];
     for (const namespaceInfo of newNamespaceInfos) {
       // Skip namespaces without URL.
@@ -211,7 +229,7 @@ export default class NamespaceFetcher {
    * @param {Array} responses - An array of responses to process.
    * @returns {Object} The updated namespace information object.
    */
-  async processResponses(newNamespaceInfos: any[], responses: Response[]) {
+  async processResponses(newNamespaceInfos: NamespaceInfo[], responses: Response[]): Promise<NamespaceInfo[]> {
     for (const namespaceInfo of newNamespaceInfos) {
       // Skip namespaces without URL.
       if (!namespaceInfo.url) {
@@ -225,22 +243,23 @@ export default class NamespaceFetcher {
       }
       this.env.logger.success(`Success fetching via ${this.env.reload ? "reload" : "default"} ${namespaceInfo.url}`);
       const text = await response.text();
-      namespaceInfo.shortcuts = this.parseShortcutsFromYml(text, namespaceInfo.url);
-      namespaceInfo.shortcuts = this.processShortcuts(namespaceInfo.shortcuts, namespaceInfo.name);
+      namespaceInfo.shortcuts = this.processShortcuts(this.parseShortcutsFromYml(text, namespaceInfo.url), namespaceInfo.name);
     }
     return newNamespaceInfos;
   }
 
-  processShortcuts(shortcuts: AnyObject, namespaceName: string) {
+  processShortcuts(shortcuts: RawShortcutMap | ShortcutMap, namespaceName: string): ShortcutMap {
     shortcuts = this.checkKeySyntax(shortcuts, namespaceName);
+    const processedShortcuts: ShortcutMap = {};
     for (const key in shortcuts) {
-      shortcuts[key] = NamespaceFetcher.convertToObject(shortcuts[key]);
-      if (shortcuts[key].include) {
-        shortcuts[key].include = this.convertIncludeToObject(shortcuts[key].include);
+      const shortcut = NamespaceFetcher.convertToObject(shortcuts[key]);
+      if (shortcut.include) {
+        shortcut.include = this.convertIncludeToObject(shortcut.include);
       }
-      this.addNamespacesFromInclude(shortcuts[key]);
+      this.addNamespacesFromInclude(shortcut);
+      processedShortcuts[key] = shortcut;
     }
-    return shortcuts;
+    return processedShortcuts;
   }
 
   /**
@@ -249,12 +268,13 @@ export default class NamespaceFetcher {
    * @param {string} url - The URL of the YAML, for error reporting.
    * @return {object} namespaces - The parsed shortcuts.
    */
-  parseShortcutsFromYml(text: string, url: string) {
-    let shortcuts: AnyObject;
+  parseShortcutsFromYml(text: string, url: string): RawShortcutMap {
+    let shortcuts: RawShortcutMap;
     try {
-      shortcuts = jsyaml.load(text);
+      shortcuts = (jsyaml.load(text) || {}) as RawShortcutMap;
     } catch (error) {
-      this.env.logger.warning(`Warning: Parse error in ${url}: ${error.message}`);
+      const message = error instanceof Error ? error.message : String(error);
+      this.env.logger.warning(`Warning: Parse error in ${url}: ${message}`);
       shortcuts = {};
     }
     return shortcuts;
@@ -266,7 +286,7 @@ export default class NamespaceFetcher {
    * @param {string} namespaceName - The namespace name to show in error message.
    * @return {array} shortcuts - The normalized shortcuts.
    */
-  checkKeySyntax(shortcuts: AnyObject, namespaceName: string) {
+  checkKeySyntax(shortcuts: RawShortcutMap | ShortcutMap, namespaceName: string): RawShortcutMap | ShortcutMap {
     for (const key in shortcuts) {
       if (!key.match(/\S+ \d/)) {
         this.env.logger.error(
@@ -283,7 +303,7 @@ export default class NamespaceFetcher {
    * @param {object} shortcut
    * @returns {void}
    */
-  addNamespacesFromInclude(shortcut: AnyObject) {
+  addNamespacesFromInclude(shortcut: Shortcut) {
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (include && include.namespace) {
@@ -303,27 +323,28 @@ export default class NamespaceFetcher {
    * @param {string|Object} shortcut - The shortcut to convert
    * @returns {Object} The converted shortcut object
    */
-  static convertToObject(shortcut: any) {
+  static convertToObject(shortcut: RawShortcut): Shortcut {
     if (typeof shortcut === "string") {
-      const url = shortcut;
-      shortcut = {
-        url: url,
+      return {
+        url: shortcut,
       };
     }
-    return shortcut;
+    return shortcut as Shortcut;
   }
 
-  convertIncludeToObject(include: any) {
+  convertIncludeToObject(include: RawShortcutInclude | RawShortcutInclude[]): ShortcutInclude | ShortcutInclude[] {
+    if (Array.isArray(include)) {
+      return include.map((item) => this.convertIncludeToObject(item) as ShortcutInclude);
+    }
     if (typeof include === "string") {
-      const key = include;
-      include = {
-        key: key,
+      return {
+        key: include,
       };
     }
     return include;
   }
 
-  processShortcutsAll(namespaceInfos: AnyObject) {
+  processShortcutsAll(namespaceInfos: NamespaceMap): NamespaceMap {
     for (const namespaceName in namespaceInfos) {
       const namespaceInfo = namespaceInfos[namespaceName];
       if (namespaceInfo.shortcuts) {
@@ -339,19 +360,24 @@ export default class NamespaceFetcher {
    * @param {object} namespaceInfos
    * @returns {object} The processed namespace infos
    */
-  processIncludeAll(namespaceInfos: AnyObject) {
+  processIncludeAll(namespaceInfos: NamespaceMap): NamespaceMap {
     for (const namespaceName in namespaceInfos) {
       const namespaceInfo = namespaceInfos[namespaceName];
       const shortcuts = namespaceInfo.shortcuts;
+      if (!shortcuts) {
+        continue;
+      }
       for (const key in shortcuts) {
         const shortcut = shortcuts[key];
         if (!shortcut.include) {
           continue;
         }
-        shortcuts[key] = this.processInclude(shortcut, namespaceName, namespaceInfos);
-        if (!shortcuts[key]) {
+        const processedShortcut = this.processInclude(shortcut, namespaceName, namespaceInfos);
+        if (!processedShortcut) {
           delete shortcuts[key];
+          continue;
         }
+        shortcuts[key] = processedShortcut;
       }
     }
     return namespaceInfos;
@@ -365,7 +391,7 @@ export default class NamespaceFetcher {
    * @param {number} depth - The depth of the include.
    * @returns {object} The processed shortcut.
    */
-  processInclude(shortcut: AnyObject, namespaceName: string, namespaceInfos: AnyObject, depth = 0) {
+  processInclude(shortcut: Shortcut, namespaceName: string, namespaceInfos: NamespaceMap, depth = 0): Shortcut | false {
     if (depth >= 10) {
       this.env.logger.error(`processInclude: Loop ran already ${depth} times.`);
     }
@@ -379,19 +405,27 @@ export default class NamespaceFetcher {
         language: this.env.language,
         country: this.env.country,
       });
-      namespaceName = include.namespace || namespaceName;
-      if (!namespaceInfos[namespaceName] || !namespaceInfos[namespaceName].shortcuts) {
-        this.env.logger.warning(`Namespace "${namespaceName}" does not exist or has no shortcuts.`);
+      const namespaceNameForInclude =
+        typeof include.namespace === "string"
+          ? include.namespace
+          : include.namespace
+            ? (() => {
+                const namespaceInfo = this.getInitialNamespaceInfo(include.namespace);
+                return namespaceInfo ? namespaceInfo.name : undefined;
+              })()
+            : namespaceName;
+      if (!namespaceNameForInclude || !namespaceInfos[namespaceNameForInclude] || !namespaceInfos[namespaceNameForInclude].shortcuts) {
+        this.env.logger.warning(`Namespace "${namespaceNameForInclude}" does not exist or has no shortcuts.`);
         continue;
       }
-      let shortcutToInclude = namespaceInfos[namespaceName].shortcuts[key];
+      let shortcutToInclude: Shortcut | false = namespaceInfos[namespaceNameForInclude].shortcuts?.[key] || false;
       if (!shortcutToInclude) {
         continue;
       }
       if (shortcutToInclude.include) {
-        shortcutToInclude = this.processInclude(shortcutToInclude, namespaceName, namespaceInfos, depth + 1);
+        shortcutToInclude = this.processInclude(shortcutToInclude, namespaceNameForInclude, namespaceInfos, depth + 1);
       }
-      if (Object.keys(shortcutToInclude).length === 0) {
+      if (!shortcutToInclude || Object.keys(shortcutToInclude).length === 0) {
         continue;
       }
       const shortcutToIncludeCloned = this.cloneShortcut(shortcutToInclude);
@@ -406,14 +440,11 @@ export default class NamespaceFetcher {
    * @param {Object} shortcut - The shortcut to get the includes from
    * @returns {Array} An array of includes
    */
-  getIncludes(shortcut: AnyObject) {
-    let includes: any[] = [];
-    if (Array.isArray(shortcut.include)) {
-      includes = shortcut.include;
-    } else {
-      includes.push(shortcut.include);
+  getIncludes(shortcut: Shortcut): ShortcutInclude[] {
+    if (!shortcut.include) {
+      return [];
     }
-    return includes;
+    return Array.isArray(shortcut.include) ? shortcut.include : [shortcut.include];
   }
 
   /**
@@ -421,7 +452,7 @@ export default class NamespaceFetcher {
    * @param {Object} shortcut - The shortcut object to clone
    * @returns {Object} The cloned shortcut object
    */
-  cloneShortcut(shortcut: AnyObject) {
+  cloneShortcut(shortcut: Shortcut): Shortcut {
     // This approach seems more browser-supported than structuredClone().
     const str = JSON.stringify(shortcut);
     const clonedShortcut = JSON.parse(str);
@@ -433,9 +464,9 @@ export default class NamespaceFetcher {
    *
    * @param {object} namespaces - Current namespaces keyed by their name.
    */
-  addReachable(namespaceInfos: AnyObject) {
+  addReachable(namespaceInfos: NamespaceMap): NamespaceMap {
     const namespaceInfosByPriority = Object.values(namespaceInfos).sort((a, b) => {
-      return b.priority - a.priority;
+      return (b.priority || 0) - (a.priority || 0);
     });
 
     // Remember found shortcuts
@@ -446,19 +477,27 @@ export default class NamespaceFetcher {
       if (!this.isSubscribed(namespaceInfo)) {
         continue;
       }
-      for (const key in namespaceInfo.shortcuts) {
+      const shortcuts = namespaceInfo.shortcuts;
+      if (!shortcuts) {
+        continue;
+      }
+      for (const key in shortcuts) {
         // If not yet present: reachable.
-        namespaceInfo.shortcuts[key].reachable = !foundShortcuts.has(key);
+        shortcuts[key].reachable = !foundShortcuts.has(key);
         foundShortcuts.add(key);
       }
     }
     return namespaceInfos;
   }
 
-  addInfoAll(namespaceInfos: AnyObject) {
+  addInfoAll(namespaceInfos: NamespaceMap): NamespaceMap {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
-      for (const key in namespaceInfo.shortcuts) {
-        namespaceInfo.shortcuts[key] = NamespaceFetcher.addInfo(namespaceInfo.shortcuts[key], key, namespaceInfo.name);
+      const shortcuts = namespaceInfo.shortcuts;
+      if (!shortcuts) {
+        continue;
+      }
+      for (const key in shortcuts) {
+        shortcuts[key] = NamespaceFetcher.addInfo(shortcuts[key], key, namespaceInfo.name || "");
       }
     }
     return namespaceInfos;
@@ -473,29 +512,32 @@ export default class NamespaceFetcher {
    *
    * @return {object} shortcut - Shortcut with info.
    */
-  static addInfo(shortcut: AnyObject, key: string, namespaceName: string) {
-    shortcut = NamespaceFetcher.convertToObject(shortcut);
-    shortcut.key = key;
-    [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
-    shortcut.argumentCount = parseInt(shortcut.argumentCount);
-    shortcut.namespace = namespaceName;
-    shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
-    shortcut.argumentString = NamespaceFetcher.getArgumentString(shortcut.arguments);
-    shortcut.title = shortcut.title || "";
-    return shortcut;
+  static addInfo(shortcut: RawShortcut, key: string, namespaceName: string): Shortcut {
+    const normalizedShortcut = NamespaceFetcher.convertToObject(shortcut);
+    normalizedShortcut.key = key;
+    const [keyword, argumentCountString] = key.split(" ");
+    normalizedShortcut.keyword = keyword;
+    normalizedShortcut.argumentCount = parseInt(argumentCountString, 10);
+    normalizedShortcut.namespace = namespaceName;
+    normalizedShortcut.arguments = UrlProcessor.getArgumentsFromString(normalizedShortcut.url || "");
+    normalizedShortcut.argumentString = NamespaceFetcher.getArgumentString(normalizedShortcut.arguments || {});
+    normalizedShortcut.title = normalizedShortcut.title || "";
+    return normalizedShortcut;
   }
 
-  static getArgumentString(args: AnyObject) {
+  static getArgumentString(args: Record<string, unknown>): string {
     const icons = {
       city: "🏙️",
       date: "📅",
       time: "🕒",
     };
 
-    const argumentsAsString = Object.entries(args).map(([key, value]: [string, any]) => {
-      const firstValue = value ? (Object.values(value)[0] as AnyObject) : null;
-      const type = (firstValue && firstValue.type) || null;
-      const icon = (icons as AnyObject)[type] || "";
+    const argumentsAsString = Object.entries(args).map(([key, value]) => {
+      const firstRawValue = value && typeof value === "object" ? Object.values(value as Record<string, unknown>)[0] : null;
+      const firstValue =
+        firstRawValue && typeof firstRawValue === "object" ? (firstRawValue as Record<string, unknown>) : null;
+      const type = (firstValue?.type as string | undefined) || "";
+      const icon = icons[type as keyof typeof icons] || "";
       return `${icon} ${key}`.trim();
     });
 
@@ -504,16 +546,20 @@ export default class NamespaceFetcher {
     return argumentString;
   }
 
-  verifyAll(namespaceInfos: AnyObject) {
+  verifyAll(namespaceInfos: NamespaceMap): NamespaceMap {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
-      for (const key in namespaceInfo.shortcuts) {
-        this.verify(namespaceInfo.shortcuts[key]);
+      const shortcuts = namespaceInfo.shortcuts;
+      if (!shortcuts) {
+        continue;
+      }
+      for (const key in shortcuts) {
+        this.verify(shortcuts[key]);
       }
     }
     return namespaceInfos;
   }
 
-  verify(shortcut: AnyObject) {
+  verify(shortcut: Shortcut) {
     const error = ShortcutVerifier.checkIfHasUrl(shortcut);
     if (error) {
       this.env.logger.error(error);
@@ -531,7 +577,7 @@ export default class NamespaceFetcher {
    *
    * @return {boolean} isSubscribed - TRUE if subscribed.
    */
-  isSubscribed(namespaceInfo: AnyObject) {
+  isSubscribed(namespaceInfo: NamespaceInfo): boolean {
     return namespaceInfo.priority && namespaceInfo.priority > 0;
   }
 }

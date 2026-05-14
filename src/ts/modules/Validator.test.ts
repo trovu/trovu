@@ -148,7 +148,7 @@ describe("Validator.validateShortcuts", () => {
         namespace: "de",
         key: "gm 1",
         keyword: "gm",
-        argumentCount: "1",
+        argumentCount: 1,
         arguments: { query: {} },
       }),
     );

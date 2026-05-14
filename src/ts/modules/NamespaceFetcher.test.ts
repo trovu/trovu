@@ -127,11 +127,11 @@ describe("NamespaceFetcher.addNamespaceInfo", () => {
     expect(
       new NamespaceFetcher(env).addNamespaceInfo({
         name: "de",
-        shortcuts: true,
+        shortcuts: {},
       }),
     ).toEqual({
       name: "de",
-      shortcuts: true,
+      shortcuts: {},
       type: "site",
     });
   });
@@ -178,7 +178,7 @@ describe("NamespaceFetcher.fetchNamespaceInfos", () => {
     const namespaceInfos = {
       loop0: {
         name: "loop0",
-        type: "user",
+        type: "user" as const,
         url: "https://example.com/loop0.yml",
       },
     };
