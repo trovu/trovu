@@ -1,20 +1,23 @@
 
 /** @module Settings */
 import countriesList from "countries-list";
+import type { SettingsOption } from "../../types";
+import type Env from "../Env";
 
 /** Settings methods. */
 
 export default class Settings {
-  [key: string]: any;
+  env: Env;
+  updateOpensearch: () => void;
 
-  constructor(env: AnyObject, updateOpensearch: any) {
+  constructor(env: Env, updateOpensearch: () => void) {
     this.env = env;
     this.updateOpensearch = updateOpensearch;
 
     this.setLanguagesAndCountriesList();
     this.displaySettings();
 
-    document.querySelector("#settings").addEventListener("hidden.bs.modal", this.saveSettings);
+    document.querySelector("#settings")?.addEventListener("hidden.bs.modal", this.saveSettings);
   }
 
   /**
@@ -23,32 +26,46 @@ export default class Settings {
   displaySettings() {
     // Set settings fields in navbar.
     const language = countriesList.languages[this.env.language];
-    document.querySelector(".navbar .language").innerText = this.env.language;
-    document.querySelector(".navbar .language").title = language.name;
+    const navbarLanguage = document.querySelector<HTMLElement>(".navbar .language");
+    if (navbarLanguage) {
+      navbarLanguage.innerText = this.env.language;
+      navbarLanguage.title = language.name;
+    }
 
     const country = countriesList.countries[this.env.country.toUpperCase()];
-    document.querySelector(".navbar .country").innerText = country.emoji;
-    document.querySelector(".navbar .country").title = country.name;
+    const navbarCountry = document.querySelector<HTMLElement>(".navbar .country");
+    if (navbarCountry) {
+      navbarCountry.innerText = country.emoji;
+      navbarCountry.title = country.name;
+    }
 
     // Set settings fields in settings modal.
-    document.querySelector("#languageSetting").value = this.env.language;
-    document.querySelector("#countrySetting").value = this.env.country;
-    document.querySelector("#githubSetting").value = this.env.github || "";
+    const languageSetting = document.querySelector<HTMLInputElement>("#languageSetting");
+    const countrySetting = document.querySelector<HTMLInputElement>("#countrySetting");
+    const githubSetting = document.querySelector<HTMLInputElement>("#githubSetting");
+    if (languageSetting) languageSetting.value = this.env.language;
+    if (countrySetting) countrySetting.value = this.env.country;
+    if (githubSetting) githubSetting.value = this.env.github || "";
 
     // Show and hide settings tabs depending on Github setting.
+    const usingAdvanced = document.querySelector<HTMLElement>(".using-advanced");
+    const usingBasic = document.querySelector<HTMLElement>(".using-basic");
     if (this.env.github) {
-      document.querySelector(".using-advanced").classList.remove("d-none");
-      document.querySelector(".using-basic").classList.add("d-none");
+      usingAdvanced?.classList.remove("d-none");
+      usingBasic?.classList.add("d-none");
     } else {
-      document.querySelector(".using-basic").classList.remove("d-none");
-      document.querySelector(".using-advanced").classList.add("d-none");
+      usingBasic?.classList.remove("d-none");
+      usingAdvanced?.classList.add("d-none");
     }
   }
 
   saveSettings = () => {
-    this.env.language = document.querySelector("#languageSetting").value;
-    this.env.country = document.querySelector("#countrySetting").value;
-    this.env.github = document.querySelector("#githubSetting").value;
+    const languageSetting = document.querySelector<HTMLInputElement>("#languageSetting");
+    const countrySetting = document.querySelector<HTMLInputElement>("#countrySetting");
+    const githubSetting = document.querySelector<HTMLInputElement>("#githubSetting");
+    this.env.language = languageSetting?.value || this.env.language;
+    this.env.country = countrySetting?.value || this.env.country;
+    this.env.github = githubSetting?.value || "";
 
     this.env.setToLocalStorage();
 
@@ -71,17 +88,19 @@ export default class Settings {
     this.setSelectOptions("#countrySetting", countriesArray);
   }
 
-  objectToArrayWithKey(obj: AnyObject) {
-    const ar: any[] = [];
+  objectToArrayWithKey(obj: Record<string, { name: string; emoji?: string }>): SettingsOption[] {
+    const ar: SettingsOption[] = [];
     for (const [key, value] of Object.entries(obj)) {
-      value.key = key;
-      ar.push(value);
+      ar.push({ ...value, key });
     }
     return ar;
   }
 
-  setSelectOptions(selector: string, list: any[]) {
-    const selectEl: any = document.querySelector(selector);
+  setSelectOptions(selector: string, list: SettingsOption[]) {
+    const selectEl = document.querySelector<HTMLSelectElement>(selector);
+    if (!selectEl) {
+      return;
+    }
     list.forEach((item) =>
       selectEl.appendChild(new Option(`${item.name} ${item.emoji ? item.emoji : ""}`, item.key.toLocaleLowerCase())),
     );

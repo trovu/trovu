@@ -1,11 +1,12 @@
 /** @module SuggestionsGetter */
 import QueryParser from "./QueryParser";
 import escapeStringRegexp from "escape-string-regexp";
+import type { EnvLike, Shortcut, SuggestionsMatchGroups } from "../types";
 
 export default class SuggestionsGetter {
-  [key: string]: any;
+  env: Pick<EnvLike, "namespaceInfos">;
 
-  constructor(env: AnyObject) {
+  constructor(env: Pick<EnvLike, "namespaceInfos">) {
     this.env = env;
   }
 
@@ -16,7 +17,7 @@ export default class SuggestionsGetter {
    *
    * @return {array} suggestions – The found suggestions.
    */
-  getSuggestions(query: string) {
+  getSuggestions(query: string): Shortcut[] {
     if (!query) {
       return [];
     }
@@ -31,7 +32,7 @@ export default class SuggestionsGetter {
     }
 
     this.sort(matches);
-    let suggestions = [];
+    let suggestions: Shortcut[] = [];
     suggestions = suggestions.concat(
       matches.showOnHome,
       matches.keywordFullReachable,
@@ -69,8 +70,8 @@ export default class SuggestionsGetter {
    *
    * @return {object} matches – The found matches, grouped by type of match.
    */
-  getMatches(query: string) {
-    const matches: AnyObject = {
+  getMatches(query: string): SuggestionsMatchGroups {
+    const matches: SuggestionsMatchGroups = {
       showOnHome: [],
       keywordFullReachable: [],
       keywordFullUnreachable: [],
@@ -85,14 +86,14 @@ export default class SuggestionsGetter {
       urlMiddleReachable: [],
       urlMiddleUnreachable: [],
     };
-    const env: AnyObject = QueryParser.parse(query);
-    const [regExp, filters]: [RegExp, AnyObject] = this.getRegExpAndFilters(query);
+    const env = QueryParser.parse(query);
+    const [regExp, filters] = this.getRegExpAndFilters(query);
 
-    for (const namespaceInfo of Object.values(this.env.namespaceInfos) as any[]) {
+    for (const namespaceInfo of Object.values(this.env.namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
       }
-      for (const shortcut of Object.values(namespaceInfo.shortcuts) as any[]) {
+      for (const shortcut of Object.values(namespaceInfo.shortcuts)) {
         if (shortcut.deprecated || shortcut.removed) {
           continue;
         }
@@ -173,8 +174,8 @@ export default class SuggestionsGetter {
     return matches;
   }
 
-  getRegExpAndFilters(query: string): [RegExp, AnyObject] {
-    const filters: AnyObject = {};
+  getRegExpAndFilters(query: string): [RegExp, { namespace?: string; tag?: string; url?: string }] {
+    const filters: { namespace?: string; tag?: string; url?: string } = {};
     const queryParts = query.split(" ");
     const remainingQueryParts = [];
     for (const part of queryParts) {
@@ -210,8 +211,8 @@ export default class SuggestionsGetter {
    *
    * @param {string} keyword – The keyword from the query.
    */
-  sort(matches: AnyObject) {
-    const compareKeywords = (a, b) => a.keyword.localeCompare(b.keyword);
+  sort(matches: SuggestionsMatchGroups) {
+    const compareKeywords = (a: Shortcut, b: Shortcut) => (a.keyword || "").localeCompare(b.keyword || "");
     for (const key in matches) {
       matches[key].sort(compareKeywords);
     }

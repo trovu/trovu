@@ -6,6 +6,7 @@ import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
+import type { EnvParams, RedirectResponse } from "../types";
 
 /* eslint-disable no-unused-vars */
 import * as BSN from "bootstrap.native";
@@ -15,13 +16,19 @@ import countriesList from "countries-list";
 /** Set and manage the homepage. */
 
 export default class Home {
-  [key: string]: any;
+  env!: Env;
+  queryInput!: HTMLInputElement;
+  suggestions!: Suggestions;
 
   constructor() {}
 
   async initialize() {
     this.env = new Env({ context: "index" });
-    this.queryInput = document.querySelector("#query");
+    const queryInput = document.querySelector<HTMLInputElement>("#query");
+    if (!queryInput) {
+      throw new Error('Missing element "#query".');
+    }
+    this.queryInput = queryInput;
     this.env.setContext();
 
     // Init environment.
@@ -33,7 +40,10 @@ export default class Home {
     document.querySelector("#version").textContent = gitLogger.getVersion();
     gitLogger.logVersion();
 
-    const modalElement: any = document.getElementById("settings");
+    const modalElement = document.getElementById("settings");
+    if (!modalElement) {
+      throw new Error('Missing element "#settings".');
+    }
     const modal = new BSN.Modal(modalElement);
 
     new Settings(this.env, this.updateOpensearch);
@@ -49,10 +59,16 @@ export default class Home {
       this.env.logger.showLog();
     }
 
-    document.getElementById("query-form").onsubmit = this.submitQuery;
-    document.querySelector("#reload").href = this.env.buildProcessUrl({
-      query: "reload",
-    });
+    const queryForm = document.getElementById("query-form") as HTMLFormElement | null;
+    if (queryForm) {
+      queryForm.onsubmit = this.submitQuery;
+    }
+    const reloadLink = document.querySelector<HTMLAnchorElement>("#reload");
+    if (reloadLink) {
+      reloadLink.href = this.env.buildProcessUrl({
+        query: "reload",
+      });
+    }
     document.documentElement.setAttribute("data-page-loaded", "true");
 
     Home.setHeights();
@@ -67,7 +83,8 @@ export default class Home {
     window.addEventListener("pageshow", (event) => {
       if (event.persisted) {
         // If true, the page was loaded from cache
-        document.getElementById("query").focus();
+        const queryElement = document.getElementById("query") as HTMLInputElement | null;
+        queryElement?.focus();
       }
     });
   }
@@ -78,15 +95,19 @@ export default class Home {
   }
 
   static setMaxHeightForSuggestions() {
-    const suggestionsDiv = document.querySelector("#suggestions");
+    const suggestionsDiv = document.querySelector<HTMLElement>("#suggestions");
+    if (!suggestionsDiv) {
+      return;
+    }
     // Fallback value.
     suggestionsDiv.style.maxHeight = "200px";
-    const suggestionsTop = document.querySelector("#suggestions").getBoundingClientRect().top;
+    const suggestionsTop = suggestionsDiv.getBoundingClientRect().top;
+    const footer = document.querySelector<HTMLElement>("footer");
     let footerTop;
-    if (document.querySelector("footer").style.display === "none") {
+    if (!footer || footer.style.display === "none") {
       footerTop = document.documentElement.clientHeight;
     } else {
-      footerTop = document.querySelector("footer").getBoundingClientRect().top;
+      footerTop = footer.getBoundingClientRect().top;
     }
     suggestionsDiv.style.maxHeight = footerTop - suggestionsTop + "px";
   }
@@ -96,7 +117,7 @@ export default class Home {
     this.setListenersToSetQuery("tag", "tag");
   }
   setListenersToSetQuery(className: string, prefix: string) {
-    const elements: any = document.querySelectorAll(`span.${className}`);
+    const elements = document.querySelectorAll<HTMLSpanElement>(`span.${className}`);
     elements.forEach((element) => {
       element.style.cursor = "pointer";
       element.addEventListener("click", () => {
@@ -129,34 +150,63 @@ export default class Home {
     this.queryInput.addEventListener("input", () => {
       this.toggleByQuery();
     });
-    document.querySelector("#suggestions").addEventListener("click", () => {
+    const suggestions = document.querySelector<HTMLElement>("#suggestions");
+    suggestions?.addEventListener("click", () => {
       this.toggleByQuery();
     });
-    document.querySelector("html").style.display = "block";
+    document.documentElement.style.display = "block";
     this.queryInput.focus();
   }
 
   toggleByQuery() {
+    const nav = document.querySelector<HTMLElement>("nav.navbar");
+    const footer = document.querySelector<HTMLElement>("footer");
+    const settingsButton = document.querySelector<HTMLElement>("#settings-button");
+    const lists = document.querySelector<HTMLElement>("#lists");
+    const suggestions = document.querySelector<HTMLElement>("#suggestions");
+    const help = document.querySelector<HTMLElement>("#help");
     // Toggle display of navbar and examples.
     if (this.queryInput.value.trim() === "" && (!this.suggestions || this.suggestions.selected === -1)) {
-      document.querySelector("nav.navbar").style.display = "block";
+      if (nav) {
+        nav.style.display = "block";
+      }
       if (!this.env.isRunningStandalone() && this.env.context !== "web-ext") {
-        document.querySelector("footer").style.display = "block";
-        document.querySelectorAll(".explainer").forEach((el) => (el.style.display = "block"));
+        if (footer) {
+          footer.style.display = "block";
+        }
+        document.querySelectorAll<HTMLElement>(".explainer").forEach((el) => (el.style.display = "block"));
       }
       if (this.env.context === "web-ext") {
-        document.querySelector("#settings-button").style.display = "none";
+        if (settingsButton) {
+          settingsButton.style.display = "none";
+        }
       }
-      document.querySelector("#lists").style.display = "block";
-      document.querySelector("#suggestions").style.display = "none";
-      document.querySelector("#help").style.display = "none";
+      if (lists) {
+        lists.style.display = "block";
+      }
+      if (suggestions) {
+        suggestions.style.display = "none";
+      }
+      if (help) {
+        help.style.display = "none";
+      }
     } else {
-      document.querySelector("nav.navbar").style.display = "none";
-      document.querySelector("footer").style.display = "none";
-      document.querySelector("#suggestions").style.display = "block";
-      document.querySelector("#help").style.display = "block";
-      document.querySelectorAll(".explainer").forEach((el) => (el.style.display = "none"));
-      document.querySelector("#lists").style.display = "none";
+      if (nav) {
+        nav.style.display = "none";
+      }
+      if (footer) {
+        footer.style.display = "none";
+      }
+      if (suggestions) {
+        suggestions.style.display = "block";
+      }
+      if (help) {
+        help.style.display = "block";
+      }
+      document.querySelectorAll<HTMLElement>(".explainer").forEach((el) => (el.style.display = "none"));
+      if (lists) {
+        lists.style.display = "none";
+      }
     }
     Home.setHeights();
   }
@@ -170,10 +220,16 @@ export default class Home {
    * Show custom alerts above query input.
    */
   showInfoAlerts() {
-    const params: AnyObject = Env.getParamsFromUrl();
-    const alert: any = document.querySelector("#alert");
-    const alertMsg: any = alert.querySelector("span");
-    const alertClose: any = alert.querySelector("button");
+    const params = Env.getParamsFromUrl();
+    const alert = document.querySelector<HTMLElement>("#alert");
+    if (!alert) {
+      return;
+    }
+    const alertMsg = alert.querySelector<HTMLSpanElement>("span");
+    const alertClose = alert.querySelector<HTMLButtonElement>("button");
+    if (!alertMsg || !alertClose) {
+      return;
+    }
     alertClose.addEventListener("click", () => {
       const paramStr = this.env.buildUrlParamStr({ query: undefined, status: undefined });
       window.location.hash = "#" + paramStr;
@@ -209,8 +265,12 @@ export default class Home {
           <a target="_blank" href="${this.env.data.config.url.docs}editors/policy/">Content policy</a>. 
           But you can <a target="_blank" href="${this.env.data.config.url.docs}users/advanced/">
           create a user shortcut in your own namespace</a>.`;
-        alertMsg.querySelector("a.githubLink").textContent = params.query;
-        alertMsg.querySelector("a.githubLink").href = `https://github.com/search?l=&q=${encodeURIComponent(
+        const githubLink = alertMsg.querySelector<HTMLAnchorElement>("a.githubLink");
+        if (!githubLink) {
+          break;
+        }
+        githubLink.textContent = params.query || "";
+        githubLink.href = `https://github.com/search?l=&q=${encodeURIComponent(
           params.key,
         )}+repo%3Atrovu%2Ftrovu-data&type=code`;
         break;
@@ -226,7 +286,7 @@ export default class Home {
    *
    * @param {object} event – The submitting event.
    */
-  submitQuery = async (event?: any) => {
+  submitQuery = async (event?: Event) => {
     // Prevent default sending as GET parameters.
     if (event) {
       event.preventDefault();
@@ -236,11 +296,11 @@ export default class Home {
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
-    const params: AnyObject = Env.getParamsFromUrl();
+    const params: EnvParams = Env.getParamsFromUrl();
     params.query = this.queryInput.value;
     await envQuery.populate(params);
 
-    const response: AnyObject = CallHandler.getRedirectResponse(envQuery);
+    const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
 
     // Send debug to /process.
     if (envQuery.debug) {
@@ -253,7 +313,7 @@ export default class Home {
 
     let redirectUrl: string;
     if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
+      redirectUrl = response.redirectUrl as string;
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
@@ -265,7 +325,7 @@ export default class Home {
    *
    * @param {object} event – The submitting event.
    */
-  reload = (event?: any) => {
+  reload = (event?: Event) => {
     if (event) {
       event.preventDefault();
     }

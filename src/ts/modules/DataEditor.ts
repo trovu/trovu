@@ -1,23 +1,31 @@
 import DataManager from "./DataManager";
+import type { RawShortcutObject, RawShortcutMap, TrovuData } from "../types";
 
 export default class DataEditor {
   editData() {
-    const data: AnyObject = DataManager.load();
+    const data = DataManager.load();
     // this.editLastfm(data);
     this.add0arg(data);
     DataManager.write(data);
   }
 
-  private add0arg(data: AnyObject) {
+  private add0arg(data: TrovuData) {
     const namespace = "o";
-    for (const key in data.shortcuts[namespace]) {
+    const shortcuts = data.shortcuts?.[namespace];
+    if (!shortcuts) {
+      return;
+    }
+    for (const key in shortcuts) {
       if (!key.startsWith("n")) {
         continue;
       }
-      if (!data.shortcuts[namespace][key].url) {
+      const rawShortcut = shortcuts[key];
+      const shortcut: RawShortcutObject = typeof rawShortcut === "string" ? { url: rawShortcut } : rawShortcut;
+      const shortcutUrl = typeof shortcut.url === "string" ? shortcut.url : "";
+      if (!shortcutUrl) {
         continue;
       }
-      if (data.shortcuts[namespace][key].url.match(/www.google/)) {
+      if (shortcutUrl.match(/www.google/)) {
         continue;
       }
       const [keyword, argCount] = key.split(" ");
@@ -28,25 +36,27 @@ export default class DataEditor {
       if (data.shortcuts[namespace].hasOwnProperty(key0arg)) {
         continue;
       }
-      data.shortcuts[namespace][key0arg] = JSON.parse(JSON.stringify(data.shortcuts[namespace][key]));
-      const url = data.shortcuts[namespace][key0arg].url;
+      shortcuts[key0arg] = JSON.parse(JSON.stringify(shortcut)) as RawShortcutObject;
+      const zeroArgShortcut = shortcuts[key0arg] as RawShortcutObject;
+      const url = typeof zeroArgShortcut.url === "string" ? zeroArgShortcut.url : "";
       const protocolAnddomain = url.match(/(https?:\/\/[^/]+)/)[1];
-      data.shortcuts[namespace][key0arg].url = protocolAnddomain + "/";
-      data.shortcuts[namespace][key0arg].examples = [
+      zeroArgShortcut.url = protocolAnddomain + "/";
+      zeroArgShortcut.examples = [
         {
           description: "Go to the homepage",
         },
       ];
-      const urlTest = data.shortcuts[namespace][key].url.replace(/<query>/g, "test");
+      const urlTest = shortcutUrl.replace(/<query>/g, "test");
       console.log(urlTest);
-      delete data.shortcuts[namespace][key].title;
-      delete data.shortcuts[namespace][key].tags;
-      data.shortcuts[namespace][key].include = key0arg;
+      delete shortcut.title;
+      delete shortcut.tags;
+      shortcut.include = key0arg;
+      shortcuts[key] = shortcut;
     }
   }
 
-  private editLastfm(data: AnyObject) {
-    for (const namespace in data.shortcuts) {
+  private editLastfm(data: TrovuData) {
+    for (const namespace in data.shortcuts || {}) {
       const key = "last 1";
       if (data.shortcuts[namespace].hasOwnProperty(key)) {
         data.shortcuts[namespace][key] = {

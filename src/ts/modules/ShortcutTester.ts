@@ -2,11 +2,18 @@ import DataManager from ".//DataManager";
 import QueryParser from "./QueryParser";
 import UrlProcessor from "./UrlProcessor";
 import fs from "fs";
+import type { RawShortcutObject, ShortcutTestCase, TrovuData } from "../types";
+
+interface ShortcutTesterOptions {
+  filter?: string;
+  verbose?: boolean;
+}
 
 export default class ShortcutTester {
-  [key: string]: any;
+  options: ShortcutTesterOptions;
+  env: { data: TrovuData; language: string; country: string };
 
-  constructor(options: AnyObject) {
+  constructor(options: ShortcutTesterOptions = {}) {
     this.options = options;
     this.env = {
       data: DataManager.load(),
@@ -16,13 +23,16 @@ export default class ShortcutTester {
   }
 
   testShortcuts() {
-    for (const namespace in this.env.data.shortcuts) {
+    for (const namespace in this.env.data.shortcuts || {}) {
       for (const key in this.env.data.shortcuts[namespace]) {
-        const shortcut = this.env.data.shortcuts[namespace][key];
+        const rawShortcut = this.env.data.shortcuts[namespace][key];
+        const shortcut: RawShortcutObject = typeof rawShortcut === "string" ? { url: rawShortcut } : rawShortcut;
         if (shortcut.tests && Array.isArray(shortcut.tests) && this.filterShortcut(namespace, key)) {
-          shortcut.tests.forEach((test) => {
-            const url = this.prepareUrl(shortcut, test.arguments);
-            this.fetchAndTestUrl(namespace, key, url, test.expect);
+          shortcut.tests.forEach((test: ShortcutTestCase) => {
+            const testArguments = typeof test.arguments === "string" ? test.arguments : "";
+            const testExpect = typeof test.expect === "string" ? test.expect : "";
+            const url = this.prepareUrl(shortcut, testArguments);
+            this.fetchAndTestUrl(namespace, key, url, testExpect);
           });
         }
       }
@@ -33,15 +43,15 @@ export default class ShortcutTester {
     return this.options.filter ? `${namespace}.${key}`.includes(this.options.filter) : true;
   }
 
-  prepareUrl(shortcut: AnyObject, testArguments: string) {
-    let url = shortcut.url;
+  prepareUrl(shortcut: RawShortcutObject, testArguments = "") {
+    let url = typeof shortcut.url === "string" ? shortcut.url : "";
     const args = QueryParser.getArguments(testArguments);
     url = UrlProcessor.replaceVariables(url, this.env);
     url = UrlProcessor.replaceArguments(url, args, this.env);
     return url;
   }
 
-  fetchAndTestUrl(namespace: string, key: string, url: string, testExpect: string) {
+  fetchAndTestUrl(namespace: string, key: string, url: string, testExpect = "") {
     if (this.options.verbose) {
       console.log(`${namespace}.${key}\t⏳ ${url}`);
     }
