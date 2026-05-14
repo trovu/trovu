@@ -2,27 +2,39 @@ import DataManager from "./DataManager";
 import UrlProcessor from "./UrlProcessor";
 import fs from "fs";
 import jsyaml from "js-yaml";
+import type { RawShortcut, RawShortcutObject, TrovuData } from "../types";
 
 // import { type } from 'os';
+
+interface MigratorOptions {
+  data?: string;
+  shortcuts?: string;
+  types?: string;
+  filter?: string;
+}
 
 export default class Migrator {
   constructor() {}
 
-  async migrateProtocol(options: AnyObject) {
+  static toShortcutObject(shortcut: RawShortcut): RawShortcutObject {
+    return typeof shortcut === "string" ? { url: shortcut } : shortcut;
+  }
+
+  async migrateProtocol(options: MigratorOptions) {
     const dataPath = options.data;
     const shortcutsPath = options.shortcuts;
     const typesPath = options.types;
-    const data: AnyObject = DataManager.load(options);
-    for (const namespace in data.shortcuts) {
+    const data = DataManager.load(options);
+    for (const namespace in data.shortcuts || {}) {
       for (const key in data.shortcuts[namespace]) {
         // const [keyword, argCount] = key.split(' ');
         if (key[0] != "z") {
           continue;
         }
         const args = ["arg1", "arg2", "arg3", "arg4", "arg5", "arg6", "arg7", "arg8", "arg9", "arg10"];
-        let shortcut: AnyObject = data.shortcuts[namespace][key];
+        const shortcut = Migrator.toShortcutObject(data.shortcuts[namespace][key]);
         // If the URL starts with http, fetch its contents, migrate to https, fetch again, and compare results
-        if (shortcut.url && shortcut.url.startsWith("http:")) {
+        if (typeof shortcut.url === "string" && shortcut.url.startsWith("http:")) {
           console.log(`${namespace}.${key}`);
           const httpUrl = shortcut.url;
           let processedHttpUrl = shortcut.url;
@@ -42,10 +54,6 @@ export default class Migrator {
           const domain = processedHttpUrl.split("/")[2];
           console.log("  🔺 ", domain);
           shortcut.url = httpUrl.replace("http:", "https:");
-          if (typeof key === "string") {
-            continue;
-          }
-
           // First check if the http URL redirects to the https URL.
           try {
             const httpResponse = await fetch(processedHttpUrl);
@@ -89,36 +97,35 @@ export default class Migrator {
             console.error(`Error migrating ${key}:`, error);
           }
         }
+        data.shortcuts[namespace][key] = shortcut;
       }
       DataManager.write(data, { data: dataPath, shortcuts: shortcutsPath, types: typesPath });
     }
   }
 
-  migratePlaceholders(options: AnyObject) {
+  migratePlaceholders(options: MigratorOptions) {
     const dataPath = options.data;
     const shortcutsPath = options.shortcuts;
     const typesPath = options.types;
     const filter = options.filter;
-    const data: any = DataManager.load({
+    const data = DataManager.load({
       data: dataPath,
       shortcuts: shortcutsPath,
       types: typesPath,
       filter,
     });
-    for (const namespace in data.shortcuts) {
+    for (const namespace in data.shortcuts || {}) {
       for (const key in data.shortcuts[namespace]) {
-        let shortcut: AnyObject = data.shortcuts[namespace][key];
+        let shortcut = Migrator.toShortcutObject(data.shortcuts[namespace][key]);
         // if shortcut typeoff string, convert to object
-        if (typeof shortcut === "string") {
-          shortcut = { url: this.replacePlaceholders(shortcut, namespace, key) };
-        }
-        if (shortcut.url) {
+        if (typeof shortcut.url === "string") {
           shortcut.url = this.replacePlaceholders(shortcut.url, namespace, key);
         }
-        if (shortcut.deprecated && shortcut.deprecated.alternative && shortcut.deprecated.alternative.query) {
-          shortcut.deprecated.alternative.query = shortcut.deprecated.alternative.query.replace(/\{%(\d)\}/g, "<$1>");
+        const deprecated = shortcut.deprecated as { alternative?: { query?: string } } | undefined;
+        if (deprecated?.alternative?.query) {
+          deprecated.alternative.query = deprecated.alternative.query.replace(/\{%(\d)\}/g, "<$1>");
         }
-        if (shortcut.include && shortcut.include.key) {
+        if (shortcut.include && !Array.isArray(shortcut.include) && typeof shortcut.include !== "string" && shortcut.include.key) {
           shortcut.include.key = this.replacePlaceholders(shortcut.include.key, namespace, key);
         }
         data.shortcuts[namespace][key] = shortcut;
@@ -136,14 +143,14 @@ export default class Migrator {
             `Warning: In shortcut ${namespace}.${key}, placeholder name ${placeholderName} is only a number.`,
           );
         }
-        let newPlaceholder;
+        let newPlaceholder: string | Record<string, unknown>;
         const placeholder = placeholders[placeholderName];
         const match = Object.keys(placeholder)[0];
-        const attributes = Object.values(placeholder)[0];
+        const attributes = Object.values(placeholder)[0] as Record<string, unknown>;
         if (Object.keys(attributes).length === 0) {
           newPlaceholder = placeholderName;
         } else {
-          newPlaceholder = {} as AnyObject;
+          newPlaceholder = {};
           newPlaceholder[placeholderName] = attributes;
         }
         const newPlaceholderYaml = jsyaml
@@ -172,14 +179,14 @@ export default class Migrator {
     return Number.isFinite(Number(str));
   }
 
-  migrateExamples(options: AnyObject) {
-    const data: AnyObject = DataManager.load(options);
-    for (const namespace in data.shortcuts) {
+  migrateExamples(options: MigratorOptions) {
+    const data = DataManager.load(options);
+    for (const namespace in data.shortcuts || {}) {
       for (const key in data.shortcuts[namespace]) {
-        let shortcut: AnyObject = data.shortcuts[namespace][key];
+        const shortcut = Migrator.toShortcutObject(data.shortcuts[namespace][key]);
         // Normalize examples.
         if (shortcut.examples && !Array.isArray(shortcut.examples)) {
-          const examples: AnyObject[] = [];
+          const examples: Array<{ arguments: string; description: unknown }> = [];
           for (const [argumentString, description] of Object.entries(shortcut.examples)) {
             const example = {
               arguments: argumentString,
@@ -196,13 +203,14 @@ export default class Migrator {
   }
 
   migrateInclude() {
-    const data: AnyObject = DataManager.load();
-    for (const namespace in data.shortcuts) {
+    const data = DataManager.load();
+    for (const namespace in data.shortcuts || {}) {
       for (const key in data.shortcuts[namespace]) {
-        let shortcut: AnyObject = data.shortcuts[namespace][key];
-        if (shortcut.include && shortcut.include.key && !shortcut.include.namespace) {
+        const shortcut = Migrator.toShortcutObject(data.shortcuts[namespace][key]);
+        if (shortcut.include && !Array.isArray(shortcut.include) && typeof shortcut.include !== "string" && shortcut.include.key && !shortcut.include.namespace) {
           shortcut.include = shortcut.include.key;
         }
+        data.shortcuts[namespace][key] = shortcut;
       }
       DataManager.write(data);
     }

@@ -1,5 +1,7 @@
+import type { EnvLike } from "../../types";
+
 export default class DateType {
-  static parse(str: string, env: AnyObject) {
+  static parse(str: string, env: Pick<EnvLike, "language" | "data">): Date | undefined {
     const now = new Date();
     let date, matches;
 

@@ -1,5 +1,7 @@
+import type { EnvLike } from "../../types";
+
 export default class CityType {
-  static parse(str: string, env: AnyObject) {
+  static parse(str: string, env: Pick<EnvLike, "country" | "data">): string | false {
     let country = env.country;
     let matches;
     let abbreviation = str;

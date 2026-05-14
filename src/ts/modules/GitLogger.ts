@@ -1,7 +1,9 @@
-export default class GitLogger {
-  [key: string]: any;
+import type { GitInfo } from "../types";
 
-  constructor(gitInfo: AnyObject) {
+export default class GitLogger {
+  gitInfo: GitInfo;
+
+  constructor(gitInfo: GitInfo) {
     this.gitInfo = gitInfo;
   }
   logVersion() {

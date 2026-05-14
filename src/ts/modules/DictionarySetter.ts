@@ -1,9 +1,24 @@
 import DataManager from "./DataManager";
 import fs from "fs";
 import jsyaml from "js-yaml";
+import type { Dict, RawShortcutMap } from "../types";
+
+interface DictionaryDefinition {
+  name: string;
+  pairs: Record<string, Record<string, [string, string]>>;
+}
+
+type DictionaryMap = Record<string, DictionaryDefinition>;
+
+interface TranslationMap {
+  tree: Record<string, string>;
+  desc: Record<string, string>;
+  goToHomepage: Record<string, string>;
+}
 
 export default class DictionarySetter {
-  [key: string]: any;
+  langs: Record<string, Dict<string>>;
+  t: TranslationMap;
 
   constructor() {
     this.langs = DictionarySetter.getLanguageList();
@@ -13,7 +28,7 @@ export default class DictionarySetter {
   getDictionarySettings() {
     const languagesStr = "ar bg cs da de el en es et fi fr hu id it ja ko lt lv nl no pl pt ro ru sk sl sv tr uk zh";
     const languages = languagesStr.split(" ");
-    const pairs = {};
+    const pairs: Record<string, Record<string, [string, string]>> = {};
     for (const lang1 of languages) {
       pairs[lang1] = {};
       for (const lang2 of languages) {
@@ -34,7 +49,7 @@ export default class DictionarySetter {
     const dicts = DictionarySetter.getDictionaries();
 
     for (const dict in dicts) {
-      const shortcuts = {};
+      const shortcuts: RawShortcutMap = {};
       for (const lang1 in dicts[dict].pairs) {
         for (const lang2 in dicts[dict].pairs[lang1]) {
           // Skip if there is already a shortcut for this pair.
@@ -93,7 +108,7 @@ export default class DictionarySetter {
     }
     for (const dict in dicts) {
       console.log(dict);
-      const langs = new Set();
+      const langs = new Set<string>();
       // Remember all langs we have in this dict.
       for (const lang1 in dicts[dict].pairs) {
         langs.add(lang1);
@@ -112,7 +127,7 @@ export default class DictionarySetter {
       }
     }
 
-    const langs = {};
+    const langs: Record<string, Set<string>> = {};
     for (const dict in dicts) {
       // Remember all langs we have in this dict.
       for (const lang1 in dicts[dict].pairs) {
@@ -133,20 +148,33 @@ export default class DictionarySetter {
 
     const dictsByPrio = dictsByPrioStr.split(" ");
 
-    const o = data.shortcuts.o;
+    const o = data.shortcuts?.o;
+    if (!o) {
+      return;
+    }
     for (const lang in langs) {
       o[`${lang} 0`] = {};
       o[`${lang} 1`] = {};
       for (const dict of dictsByPrio) {
         if (langs[lang].has(dict)) {
           for (const argCount of [0, 1]) {
+            if (typeof o[`${lang} ${argCount}`] === "string") {
+              o[`${lang} ${argCount}`] = { url: o[`${lang} ${argCount}`] };
+            }
             if (!o[`${lang} ${argCount}`]) {
               o[`${lang} ${argCount}`] = {};
             }
-            if (!o[`${lang} ${argCount}`].include) {
-              o[`${lang} ${argCount}`].include = [];
+            const shortcut = o[`${lang} ${argCount}`];
+            if (typeof shortcut === "string") {
+              continue;
             }
-            o[`${lang} ${argCount}`].include.push({
+            if (!shortcut.include) {
+              shortcut.include = [];
+            }
+            if (!Array.isArray(shortcut.include)) {
+              shortcut.include = [shortcut.include];
+            }
+            shortcut.include.push({
               key: `${lang} ${argCount}`,
               namespace: dict,
             });
@@ -158,36 +186,36 @@ export default class DictionarySetter {
     DataManager.write(data);
   }
 
-  static getDictionaries() {
-    return jsyaml.load(fs.readFileSync("src/yml/dictionaries.yml", "utf8"));
+  static getDictionaries(): DictionaryMap {
+    return jsyaml.load(fs.readFileSync("src/yml/dictionaries.yml", "utf8")) as DictionaryMap;
   }
 
-  static getLanguageList() {
-    const langs = {};
+  static getLanguageList(): Record<string, Dict<string>> {
+    const langs: Record<string, Dict<string>> = {};
     const dirs = fs.readdirSync("./node_modules/languagelist/data/");
     for (const dir of dirs) {
-      const lang = jsyaml.load(fs.readFileSync(`./node_modules/languagelist/data/${dir}/language.yaml`, "utf8"));
+      const lang = jsyaml.load(fs.readFileSync(`./node_modules/languagelist/data/${dir}/language.yaml`, "utf8")) as Dict<string>;
       langs[dir] = lang;
     }
     return langs;
   }
 
-  static getTranslations() {
-    const translations = jsyaml.load(fs.readFileSync("src/yml/translations.yml", "utf8"));
+  static getTranslations(): TranslationMap {
+    const translations = jsyaml.load(fs.readFileSync("src/yml/translations.yml", "utf8")) as TranslationMap;
     return translations;
   }
 
-  static getKey(lang1, lang2, argumentCount) {
+  static getKey(lang1: string, lang2: string, argumentCount: number) {
     return `${lang1}-${lang2} ${argumentCount}`;
   }
 
-  getTitle(lang1, lang2, name) {
+  getTitle(lang1: string, lang2: string, name: string) {
     return `${DictionarySetter.capitalize(this.langs[lang2][lang1])}-${DictionarySetter.capitalize(
       this.langs[lang2][lang2],
     )} (${name})`;
   }
 
-  getTags(lang1, lang2) {
+  getTags(lang1: string, lang2: string) {
     return [
       "dictionary",
       "language",
@@ -196,7 +224,7 @@ export default class DictionarySetter {
     ];
   }
 
-  getExamples(lang1, lang2) {
+  getExamples(lang1: string, lang2: string) {
     return [
       {
         arguments: this.t.tree[lang1],
@@ -213,7 +241,7 @@ export default class DictionarySetter {
     ];
   }
 
-  getExampleHomepage(lang) {
+  getExampleHomepage(lang: string) {
     return [
       {
         description: this.t.goToHomepage[lang],
@@ -221,12 +249,12 @@ export default class DictionarySetter {
     ];
   }
 
-  static capitalize(str) {
+  static capitalize(str: string) {
     const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
     return capitalized;
   }
 
-  static anticapitalize(str) {
+  static anticapitalize(str: string) {
     const capitalized = str.charAt(0).toLowerCase() + str.slice(1);
     return capitalized;
   }

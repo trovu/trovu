@@ -3,16 +3,33 @@ import QueryParser from "../QueryParser";
 import SuggestionsGetter from "../SuggestionsGetter";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import jsyaml from "js-yaml";
+import type { EnvLike, ShortcutExample, Suggestion } from "../../types";
+import type Home from "../Home";
 
 export default class Suggestions {
-  [key: string]: any;
+  env: EnvLike;
+  home: Home;
+  queryInput: HTMLInputElement;
+  suggestionsDiv: HTMLElement;
+  helpDiv: HTMLElement;
+  selected: number;
+  suggestions: Suggestion[];
+  suggestionsList?: HTMLUListElement;
+  query = "";
+  updateSuggestionsTimeout?: ReturnType<typeof setTimeout>;
 
-  constructor(querySelector: string, suggestionsSelector: string, home: AnyObject) {
+  constructor(querySelector: string, suggestionsSelector: string, home: Home) {
     this.env = home.env;
     this.home = home;
-    this.queryInput = document.querySelector(querySelector) as HTMLInputElement;
-    this.suggestionsDiv = document.querySelector(suggestionsSelector) as HTMLElement;
-    this.helpDiv = document.querySelector("#help") as HTMLElement;
+    const queryInput = document.querySelector<HTMLInputElement>(querySelector);
+    const suggestionsDiv = document.querySelector<HTMLElement>(suggestionsSelector);
+    const helpDiv = document.querySelector<HTMLElement>("#help");
+    if (!queryInput || !suggestionsDiv || !helpDiv) {
+      throw new Error("Missing suggestions UI elements.");
+    }
+    this.queryInput = queryInput;
+    this.suggestionsDiv = suggestionsDiv;
+    this.helpDiv = helpDiv;
     this.selected = -1;
     this.suggestions = [];
     this.setListeners();
@@ -48,7 +65,7 @@ export default class Suggestions {
     });
   }
 
-  renderSuggestions(suggestions: any[]) {
+  renderSuggestions(suggestions: Suggestion[]) {
     this.suggestionsDiv.innerHTML = "";
     this.helpDiv.textContent = this.query
       ? suggestions.length === 0
@@ -76,7 +93,7 @@ export default class Suggestions {
     }
   }
 
-  renderSuggestion(suggestion: AnyObject, index: number) {
+  renderSuggestion(suggestion: Suggestion, index: number): HTMLLIElement {
     const li = document.createElement("li");
     li.setAttribute("role", "option");
     li.setAttribute("aria-selected", index === this.selected ? "true" : "false");
@@ -98,7 +115,7 @@ export default class Suggestions {
     return li;
   }
 
-  getMain(suggestion: AnyObject) {
+  getMain(suggestion: Suggestion): HTMLDivElement {
     const { reachable, keyword, argumentString, title, url, namespace } = suggestion;
     let displayTitle = title || url;
     if (this.hasTag(suggestion, "needs-userscript")) displayTitle += " 🧩";
@@ -126,7 +143,7 @@ export default class Suggestions {
     return container;
   }
 
-  getDescription({ description }: AnyObject) {
+  getDescription({ description }: Suggestion): HTMLDivElement {
     const container = document.createElement("div");
     container.className = "description";
     if (description) {
@@ -139,7 +156,7 @@ export default class Suggestions {
     return container;
   }
 
-  getTags(suggestion: AnyObject) {
+  getTags(suggestion: Suggestion): HTMLElement | string {
     const { tags } = suggestion;
     const container = document.createElement("div");
     container.className = "tags";
@@ -159,7 +176,7 @@ export default class Suggestions {
     return container;
   }
 
-  getExamples(suggestion: AnyObject) {
+  getExamples(suggestion: Suggestion): HTMLElement | DocumentFragment {
     const { examples, reachable, namespace, keyword } = suggestion;
     if (!Array.isArray(examples)) return document.createDocumentFragment();
 
@@ -194,7 +211,7 @@ export default class Suggestions {
     return container;
   }
 
-  getUrl(suggestion: AnyObject) {
+  getUrl(suggestion: Suggestion): HTMLDivElement {
     const div = document.createElement("div");
     div.className = "url";
 
@@ -233,7 +250,7 @@ export default class Suggestions {
     return div;
   }
 
-  getTools(suggestion: AnyObject) {
+  getTools(suggestion: Suggestion): HTMLDivElement {
     const div = document.createElement("div");
     div.className = "tools";
     const isSite = this.env.namespaceInfos[suggestion.namespace].type === "site";
@@ -302,7 +319,7 @@ export default class Suggestions {
     this.queryInput.focus();
   }
 
-  hasTag(suggestion: AnyObject, tag: string) {
+  hasTag(suggestion: Suggestion, tag: string): boolean {
     return Array.isArray(suggestion.tags) && suggestion.tags.includes(tag);
   }
 
@@ -313,12 +330,12 @@ export default class Suggestions {
     this.queryInput.dispatchEvent(new Event("input"));
   }
 
-  shouldSkipExample(example: any) {
+  shouldSkipExample(example: ShortcutExample): boolean {
     if (!example.config) return false;
     return ["language", "country"].some((prop) => example.config[prop] && example.config[prop] !== this.env[prop]);
   }
 
-  getYaml(suggestion: AnyObject) {
+  getYaml(suggestion: Suggestion): string {
     const shortcut = { [suggestion.key]: JSON.parse(JSON.stringify(suggestion)) };
     const key = suggestion.key;
     ["argumentCount", "argumentString", "arguments", "include", "key", "keyword", "namespace", "reachable"].forEach(

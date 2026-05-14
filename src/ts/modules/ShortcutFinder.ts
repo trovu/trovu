@@ -1,4 +1,5 @@
 /** @module ShortcutFinder */
+import type { EnvLike, NamespaceMap, Shortcut } from "../types";
 
 /** Find matching shortcut. */
 
@@ -11,7 +12,12 @@ export default class ShortcutFinder {
    *
    * @return {array} shortcuts  - The array of found shortcuts.
    */
-  static matchShortcuts(keyword: string, args: any[], namespaceInfos: AnyObject, includeNonReachable = false) {
+  static matchShortcuts(
+    keyword: string,
+    args: string[],
+    namespaceInfos: NamespaceMap,
+    includeNonReachable = false,
+  ): Shortcut | undefined {
     for (const namespaceInfo of Object.values(namespaceInfos)) {
       if (!namespaceInfo.shortcuts) {
         continue;
@@ -30,7 +36,7 @@ export default class ShortcutFinder {
    *
    * @return {object} shortcuts - Found shortcuts keyed by their source namespace.
    */
-  static findShortcut(env: AnyObject) {
+  static findShortcut(env: EnvLike): Shortcut | undefined {
     let shortcut = this.matchShortcuts(env.keyword, env.args, env.namespaceInfos);
 
     // If nothing found:

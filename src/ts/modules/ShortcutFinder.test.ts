@@ -24,7 +24,7 @@ describe("ShortcutFinder.matchShortcuts", () => {
 
 describe("ShortcutFinder.findShortcut", () => {
   test("falls back to the whole argument string when comma-splitting misses a shortcut", () => {
-    const logger = { info: jest.fn() };
+    const logger = { info: jest.fn(), warning: jest.fn(), error: jest.fn() };
     const shortcut = { reachable: true, url: "https://example.com" };
     const env = {
       keyword: "gm",
@@ -50,7 +50,7 @@ describe("ShortcutFinder.findShortcut", () => {
   });
 
   test("falls back to the default keyword using the full query", () => {
-    const logger = { info: jest.fn() };
+    const logger = { info: jest.fn(), warning: jest.fn(), error: jest.fn() };
     const shortcut = { reachable: true, url: "https://example.com" };
     const defaultKeyword = "w";
     const env = {
@@ -77,7 +77,7 @@ describe("ShortcutFinder.findShortcut", () => {
   });
 
   test("finally returns a non-reachable shortcut so the caller can inform the user", () => {
-    const logger = { info: jest.fn() };
+    const logger = { info: jest.fn(), warning: jest.fn(), error: jest.fn() };
     const shortcut = { reachable: false, url: "https://example.com" };
     const env = {
       keyword: "gm",

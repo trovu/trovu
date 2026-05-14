@@ -1,9 +1,22 @@
 import DataManager from "./DataManager";
+import type { RawShortcutObject, TrovuData } from "../types";
+
+interface DataReporterOptions {
+  namespace?: string;
+}
+
+interface ReportEntry {
+  count: number;
+  percent?: string;
+}
+
+type ReportMap = Record<string, ReportEntry>;
 
 export default class DataReporter {
-  [key: string]: any;
+  options: DataReporterOptions;
+  env: { data: TrovuData };
 
-  constructor(options: AnyObject) {
+  constructor(options: DataReporterOptions = {}) {
     this.options = options;
     this.env = {
       data: DataManager.load(),
@@ -11,19 +24,20 @@ export default class DataReporter {
   }
 
   reportData() {
-    const reportShortcutsByNamespace: AnyObject = {};
-    const reportShortcutsByKeywordLength: AnyObject = {};
-    const reportShortcutsByArgCount: AnyObject = {};
-    const reportShortcutsByProtocol: AnyObject = {};
-    const reportShortcutsByProperties: AnyObject = {};
-    const reportShortcutsByState: AnyObject = {};
-    for (const namespace in this.env.data.shortcuts) {
+    const reportShortcutsByNamespace: ReportMap = {};
+    const reportShortcutsByKeywordLength: ReportMap = {};
+    const reportShortcutsByArgCount: ReportMap = {};
+    const reportShortcutsByProtocol: ReportMap = {};
+    const reportShortcutsByProperties: ReportMap = {};
+    const reportShortcutsByState: ReportMap = {};
+    for (const namespace in this.env.data.shortcuts || {}) {
       if (this.options.namespace && this.options.namespace !== namespace) {
         continue;
       }
       for (const key in this.env.data.shortcuts[namespace]) {
         DataReporter.increment(reportShortcutsByState, "all");
-        const shortcut = this.env.data.shortcuts[namespace][key];
+        const rawShortcut = this.env.data.shortcuts[namespace][key];
+        const shortcut: RawShortcutObject = typeof rawShortcut === "string" ? { url: rawShortcut } : rawShortcut;
         const [keyword, argCount] = key.split(" ");
         if (
           // argCount == 0 &&
@@ -63,9 +77,10 @@ export default class DataReporter {
           DataReporter.increment(reportShortcutsByArgCount, argCount);
           DataReporter.increment(reportShortcutsByKeywordLength, keyword.length);
         }
-        if (shortcut.url) {
+        const shortcutUrl = typeof shortcut.url === "string" ? shortcut.url : "";
+        if (shortcutUrl) {
           DataReporter.increment(reportShortcutsByProtocol, "with url");
-          const parts = shortcut.url.split(":");
+          const parts = shortcutUrl.split(":");
           const procotol = parts[0];
           DataReporter.increment(reportShortcutsByProtocol, procotol);
         }
@@ -112,16 +127,18 @@ export default class DataReporter {
     console.log("Shortcuts by protocol:");
     console.table(reportShortcutsByProtocol);
   }
-  static increment(report: AnyObject, key: string | number) {
-    if (!report[key]) {
-      report[key] = { count: 0 };
+  static increment(report: ReportMap, key: string | number) {
+    const reportKey = String(key);
+    if (!report[reportKey]) {
+      report[reportKey] = { count: 0 };
     }
-    report[key].count++;
+    report[reportKey].count++;
   }
-  static calculatePercentage(report: AnyObject, key: string | number, total: number) {
-    if (!report[key]) {
-      report[key] = { count: 0 };
+  static calculatePercentage(report: ReportMap, key: string | number, total: number) {
+    const reportKey = String(key);
+    if (!report[reportKey]) {
+      report[reportKey] = { count: 0 };
     }
-    report[key].percent = ((report[key].count / total) * 100).toFixed(2) + "%";
+    report[reportKey].percent = ((report[reportKey].count / total) * 100).toFixed(2) + "%";
   }
 }

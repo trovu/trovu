@@ -6,6 +6,7 @@ import UrlProcessor from "./UrlProcessor";
 import ajv from "ajv";
 import fs from "fs";
 import jsyaml from "js-yaml";
+import type { RawShortcut, RawShortcutInclude, Shortcut, TrovuConfig, TrovuData } from "../types";
 
 export default class Validator {
   createValidator() {
@@ -18,12 +19,12 @@ export default class Validator {
   }
 
   loadSchema(path: string) {
-    return jsyaml.load(fs.readFileSync(path, "utf8"));
+    return jsyaml.load(fs.readFileSync(path, "utf8")) as Record<string, unknown>;
   }
 
   validateConfig(validator = this.createValidator(), exitOnError = true) {
     const schema = this.loadSchema("schema/config.yml");
-    const config = jsyaml.load(fs.readFileSync("trovu.config.default.yml", "utf8"));
+    const config = jsyaml.load(fs.readFileSync("trovu.config.default.yml", "utf8")) as TrovuConfig;
     const hasError = !validator.validate(schema.$id || schema, config);
     if (hasError) {
       console.error(`Problem in trovu.config.default.yml: ${validator.errorsText()}`);
@@ -34,7 +35,7 @@ export default class Validator {
     return hasError;
   }
 
-  validateShortcuts(validator = this.createValidator(), exitOnError = true, data: AnyObject = DataManager.load()) {
+  validateShortcuts(validator = this.createValidator(), exitOnError = true, data: TrovuData = DataManager.load()) {
     const schema = this.loadSchema("schema/shortcuts.yml");
     let hasError = false;
     for (const namespace in data.shortcuts) {
@@ -43,13 +44,14 @@ export default class Validator {
         console.error(`Problem in namespace ${namespace}: ${validator.errorsText()}`);
       }
       for (const key in data.shortcuts[namespace]) {
-        let shortcut: AnyObject = data.shortcuts[namespace][key];
+        let shortcut: RawShortcut = data.shortcuts[namespace][key];
         if (typeof shortcut === "string") {
           shortcut = { url: shortcut };
         }
-        shortcut = NamespaceFetcher.addInfo(shortcut, key, namespace);
-        [shortcut.keyword, shortcut.argumentCount] = key.split(" ");
-        shortcut.arguments = UrlProcessor.getArgumentsFromString(shortcut.url);
+        const normalizedShortcut = NamespaceFetcher.addInfo(shortcut, key, namespace);
+        normalizedShortcut.keyword = key.split(" ")[0];
+        normalizedShortcut.argumentCount = parseInt(key.split(" ")[1], 10);
+        normalizedShortcut.arguments = UrlProcessor.getArgumentsFromString(normalizedShortcut.url || "");
         const verifiers = [
           ShortcutVerifier.checkIfHasUrlAndNoInclude,
           ShortcutVerifier.checkIfArgCountMatches,
@@ -57,7 +59,7 @@ export default class Validator {
           ShortcutVerifier.checkIfDeprecatedAlternativeHasMatchingPlaceholders,
         ];
         for (const verifier of verifiers) {
-          const error = verifier(shortcut);
+          const error = verifier(normalizedShortcut);
           if (error) {
             hasError = true;
             console.error(error);
@@ -71,7 +73,7 @@ export default class Validator {
     return hasError;
   }
 
-  validateResolvedNamespaces(exitOnError = true, data: AnyObject = DataManager.load()) {
+  validateResolvedNamespaces(exitOnError = true, data: TrovuData = DataManager.load()) {
     let hasError = false;
     const languages = this.getLanguagesForResolvedNamespaceValidation(data);
     for (const language of languages) {
@@ -89,14 +91,14 @@ export default class Validator {
     return hasError;
   }
 
-  getLanguagesForResolvedNamespaceValidation(data: AnyObject) {
+  getLanguagesForResolvedNamespaceValidation(data: TrovuData): string[] {
     const languages = new Set(["en"]);
     if (!this.hasLanguageDependentInclude(data)) {
       return Array.from(languages).sort();
     }
     const keyPattern = /^([a-z]{2,3})-([a-z]{2,3}) \d+$/;
     for (const namespace of Object.values(data.shortcuts || {})) {
-      for (const key of Object.keys(namespace as AnyObject)) {
+      for (const key of Object.keys(namespace)) {
         const match = key.match(keyPattern);
         if (!match) {
           continue;
@@ -108,10 +110,10 @@ export default class Validator {
     return Array.from(languages).sort();
   }
 
-  hasLanguageDependentInclude(data: AnyObject) {
+  hasLanguageDependentInclude(data: TrovuData): boolean {
     for (const namespace of Object.values(data.shortcuts || {})) {
-      for (const shortcut of Object.values(namespace as AnyObject)) {
-        const includes = this.getIncludesFromShortcut(shortcut as AnyObject);
+      for (const shortcut of Object.values(namespace)) {
+        const includes = this.getIncludesFromShortcut(shortcut);
         for (const include of includes) {
           const key = typeof include === "string" ? include : include && include.key;
           if (typeof key === "string" && (key.includes("<$language>") || key.includes("{$language}"))) {
@@ -123,14 +125,14 @@ export default class Validator {
     return false;
   }
 
-  getIncludesFromShortcut(shortcut: AnyObject) {
+  getIncludesFromShortcut(shortcut: RawShortcut): RawShortcutInclude[] {
     if (typeof shortcut === "string" || !shortcut.include) {
       return [];
     }
     return Array.isArray(shortcut.include) ? shortcut.include : [shortcut.include];
   }
 
-  resolveLocalNamespaces(data: AnyObject, language: string, country = "us") {
+  resolveLocalNamespaces(data: TrovuData, language: string, country = "us") {
     const dataClone = JSON.parse(JSON.stringify(data));
     const env = new Env({
       data: dataClone,

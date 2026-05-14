@@ -1,5 +1,5 @@
 export default class TimeType {
-  static parse(str: string) {
+  static parse(str: string): Date | undefined {
     let time, matches;
 
     // Match '11'
