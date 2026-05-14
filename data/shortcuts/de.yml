@@ -1911,6 +1911,22 @@ uuw 0:
   - documentation
   - linux
   - ubuntu
+wbis 0:
+  url: https://www.woerterbuch.info/?s=thesaurus
+  title: Woerterbuch.info, Synonyme
+  tags:
+  - german
+  - language
+  - synonyms
+  - thesaurus
+  examples:
+  - description: Gehe zur Startseite
+wbis 1:
+  url: https://www.woerterbuch.info/?query=<query>&s=thesaurus&dl=0&l=de&showlang=de
+  include: wbis 0
+  examples:
+  - arguments: wichtig
+    description: Suche nach Synonymen für "wichtig"
 wn 0:
   url: https://woerterbuchnetz.de/
   title: Wörterbuchnetz
