@@ -33,7 +33,7 @@ export default class CallHandler {
       redirectUrl = this.getRedirectUrlToHome(env, response);
     }
 
-    targetDomain.textContent = response.redirectUrl;
+    targetDomain.textContent = response.redirectUrl || "";
 
     env.logger.info("Redirect to:   " + redirectUrl);
 
@@ -101,6 +101,11 @@ export default class CallHandler {
     });
     response.redirectUrl = UrlProcessor.replaceArguments(response.redirectUrl, env.args, env);
 
+    if (!this.isSafeRedirectUrl(response.redirectUrl)) {
+      response.status = "suspicious";
+      return response;
+    }
+
     return response;
   }
 
@@ -110,6 +115,16 @@ export default class CallHandler {
       alternative = alternative.replace("<" + (parseInt(i) + 1) + ">", env.args[i]);
     }
     return alternative;
+  }
+
+  static isSafeRedirectUrl(redirectUrl: string) {
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(redirectUrl);
+    } catch {
+      return false;
+    }
+    return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
   }
 
   /**
