@@ -6044,6 +6044,7 @@ ytg 0:
   description: Online-Marktplatz mit Produkten aus verschiedenen Kategorien
 ytg 1:
   url: https://www.yatego.com/?match=all&subcats=Y&pcode_from_q=Y&pshort=Y&pfull=Y&pname=Y&pkeywords=Y&search_performed=Y&q=<Suche>&dispatch=products.search
+  include: ytg 0
   examples:
   - arguments: sessel
     description: Suche nach "sessel"
