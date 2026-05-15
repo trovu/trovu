@@ -301,6 +301,21 @@ wordnik 1:
     alternative:
       query: wk <1>
     created: '2024-11-17'
+wp 0:
+  url: https://www.washingtonpost.com/
+  title: The Washington Post
+  tags:
+  - news
+  - newspaper
+  - politics
+  examples:
+  - description: Go to the homepage
+wp 1:
+  url: https://www.washingtonpost.com/search/?query=<query>
+  include: wp 0
+  examples:
+  - arguments: germany
+    description: Search for news about Germany
 wsl 0:
   url: https://corpora.uni-leipzig.de/de?corpusId=eng_news_2023
   title: Wortschatz-Lexikon (English)
