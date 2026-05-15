@@ -12232,12 +12232,38 @@ yts 1:
   - arguments: berlin
     description: Search for "berlin" on YouTube, showing only shorts
 ytt 1:
-  url: https://www.youtube.com/results?search_query=<query>&sp=EgIIAg%253D%253D
-  title: Youtube, today's new videos
+  deprecated:
+    alternative:
+      query: ytut <1>
+    created: '2026-05-16'
+ytum 1:
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgQIBBAB
+  title: Youtube, videos uploaded in the last month
   include: yt 0
   examples:
-  - arguments: obama
-    description: Search for "obama"
+  - arguments: berlin
+    description: Search for "berlin" on YouTube, showing only videos uploaded in the last month
+ytut 1:
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgQIAhAB
+  title: Youtube, videos uploaded today
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin" on YouTube, showing only videos uploaded today
+ytuw 1:
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgQIAxAB
+  title: Youtube, videos uploaded in the last week
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin" on YouTube, showing only videos uploaded in the last week
+ytuy 1:
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgQIBBAB
+  title: Youtube, videos uploaded in the last year
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin" on YouTube, showing only videos uploaded in the last year
 ytv 1:
   url: https://www.youtube.com/results?search_query=<query>&sp=EgIQAQ%253D%253D
   title: Youtube, (non-shorts) videos
@@ -12246,12 +12272,10 @@ ytv 1:
   - arguments: berlin
     description: Search for "berlin" on YouTube, showing only non-shorts videos
 ytw 1:
-  url: https://www.youtube.com/results?search_query=<query>&search_sort=video_date_uploaded&uploaded=w
-  title: Youtube, last week's new videos
-  include: yt 0
-  examples:
-  - arguments: cartoon
-    description: Search for "cartoon"
+  deprecated:
+    alternative:
+      query: ytuw <1>
+    created: '2026-05-16'
 ytwl 0:
   url: https://www.youtube.com/playlist?list=WL
   title: YouTube, Watch later
