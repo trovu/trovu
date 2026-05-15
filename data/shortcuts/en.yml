@@ -100,6 +100,21 @@ esp 1:
     alternative:
       query: pns.es <1>
     created: '2023-04-10'
+fco 0:
+  url: https://www.factcheck.org/
+  title: FactCheck.org
+  tags:
+  - fact-checking
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+fco 1:
+  url: https://www.factcheck.org/search/?q=<query>
+  include: fco 0
+  examples:
+  - arguments: germany
+    description: Search for fact-checks about Germany
 fd 0:
   url: https://www.thefreedictionary.com/
   title: The Free Dictionary
