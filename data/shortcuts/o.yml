@@ -12176,6 +12176,13 @@ yt 1:
   examples:
   - arguments: cartoon
     description: Youtube search for "cartoon"
+ytc 1:
+  url: https://www.youtube.com/results?search_query=<channel>&sp=EgIQAg%253D%253D
+  title: Youtube, channels
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for channels about Berlin
 ytd 1:
   url: https://www.youtube.com/results?sp=CAI%253D&search_query=<query>
   title: Youtube, sorted by upload date
