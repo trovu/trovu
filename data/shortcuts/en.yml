@@ -237,6 +237,22 @@ oed 1:
   examples:
   - arguments: tree
     description: Search for the etymology of "tree"
+reu 0:
+  url: https://www.reuters.com/
+  title: Reuters
+  tags:
+  - business
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+  description: Reuters is an international news organization headquartered in London. It provides news coverage on various topics including business, politics, technology, and more.
+reu 1:
+  url: https://www.reuters.com/search/news?blob=<query>
+  include: reu 0
+  examples:
+  - arguments: berlin
+    description: Search for news about Berlin
 sta 0:
   url: https://start.csail.mit.edu/
   title: START (SynTactic Analysis using Reversible Transformations)
