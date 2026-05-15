@@ -12232,7 +12232,7 @@ yts 1:
   - arguments: berlin
     description: Search for "berlin" on YouTube, showing only shorts
 ytt 1:
-  url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&sp=EgIIAg%253D%253D
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIIAg%253D%253D
   title: Youtube, today's new videos
   include: yt 0
   examples:
@@ -12246,7 +12246,7 @@ ytv 1:
   - arguments: berlin
     description: Search for "berlin" on YouTube, showing only non-shorts videos
 ytw 1:
-  url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=w
+  url: https://www.youtube.com/results?search_query=<query>&search_sort=video_date_uploaded&uploaded=w
   title: Youtube, last week's new videos
   include: yt 0
   examples:
