@@ -12079,7 +12079,7 @@ yifi 0:
   - description: Go to the homepage
 yifi 1:
   url: https://en.yts-official.cc/browse-movies?keyword=<movie>
-  include: yts 0
+  include: yifi 0
   examples:
   - arguments: metropolis
     description: Search for "metropolis"
