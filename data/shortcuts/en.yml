@@ -1,4 +1,19 @@
 # yaml-language-server: $schema=https://trovu.net/schema/shortcuts.yml
+atl 0:
+  url: https://www.theatlantic.com/
+  title: The Atlantic
+  tags:
+  - culture
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+atl 1:
+  url: https://www.theatlantic.com/search/?q=<query>
+  include: atl 0
+  examples:
+  - arguments: germany
+    description: Search for news about Germany
 camb-en 1:
   deprecated:
     alternative:
