@@ -12068,6 +12068,21 @@ yi 1:
   include:
   - key: yi 1
     namespace: pka
+yifi 0:
+  url: https://yts2.com/
+  title: YTS / YIFY Torrents
+  tags:
+  - torrent
+  - yifi
+  - yts
+  examples:
+  - description: Go to the homepage
+yifi 1:
+  url: https://en.yts-official.cc/browse-movies?keyword=<movie>
+  include: yts 0
+  examples:
+  - arguments: metropolis
+    description: Search for "metropolis"
 yim 1:
   url: https://images.search.yahoo.com/search/images?p=<query>
   title: Yahoo Images
@@ -12199,20 +12214,6 @@ ytp 1:
   url: https://www.youtube.com/results?search_type=search_playlists&uni=3&search_query=<query>
   title: Youtube, playlist search
   include: yt 0
-yts 0:
-  url: https://yts.mx/
-  title: YTS.mx
-  tags:
-  - torrent
-  - yts
-  examples:
-  - description: Go to the homepage
-yts 1:
-  url: https://www.google.com/search?hl=<$language>&q=site:yts.mx%20<query>&ie=utf-8
-  include: yts 0
-  examples:
-  - arguments: metropolis
-    description: Search for "metropolis"
 ytt 1:
   url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=t
   title: Youtube, today's new videos
