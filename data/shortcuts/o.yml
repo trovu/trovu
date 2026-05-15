@@ -12176,6 +12176,13 @@ yt 1:
   examples:
   - arguments: cartoon
     description: Youtube search for "cartoon"
+ytc 1:
+  url: https://www.youtube.com/results?search_query=<channel>&sp=EgIQAg%253D%253D
+  title: Youtube, channels
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for channels about Berlin
 ytd 1:
   url: https://www.youtube.com/results?sp=CAI%253D&search_query=<query>
   title: Youtube, sorted by upload date
@@ -12211,9 +12218,12 @@ ytm 1:
   - arguments: anhedonia
     description: search Anhedonia music
 ytp 1:
-  url: https://www.youtube.com/results?search_type=search_playlists&uni=3&search_query=<query>
-  title: Youtube, playlist search
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIQAw%253D%253D
+  title: Youtube, playlists only
   include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for playlists about Berlin
 yts 1:
   url: https://www.youtube.com/results?search_query=<query>&sp=EgIQCQ%253D%253D
   title: YouTube, shorts only
@@ -12228,6 +12238,13 @@ ytt 1:
   examples:
   - arguments: obama
     description: Search for "obama"
+ytv 1:
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIQAQ%253D%253D
+  title: Youtube, (non-shorts) videos only
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin" on YouTube, showing only non-shorts videos
 ytw 1:
   url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=w
   title: Youtube, last week's new videos

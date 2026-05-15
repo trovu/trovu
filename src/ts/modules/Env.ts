@@ -168,6 +168,11 @@ export default class Env {
     this.language = undefined;
     this.country = undefined;
 
+    const paramsFromQuery = this.getQueryParams(params);
+    const preloadParams = this.getPreloadParams(params, paramsFromQuery);
+    Object.assign(this, preloadParams);
+    this.configureLogger();
+
     this.data = this.data || (await this.getData()) || ({} as TrovuData);
 
     // Raycast cannot handle too much data.
@@ -182,16 +187,6 @@ export default class Env {
     if (this.data.config?.defaultKeyword) {
       this.defaultKeyword = this.data.config.defaultKeyword;
     }
-
-    const boolParams = Env.getBoolParams(params);
-    Object.assign(this, boolParams);
-
-    // Assign before, to also catch "debug" and "reload" in params and query.
-    Object.assign(this, params);
-
-    const params_from_query = QueryParser.parse(this.query);
-    Object.assign(this, params_from_query);
-    this.configureLogger();
 
     this.getFromLocalStorage();
 
@@ -209,7 +204,7 @@ export default class Env {
     }
     // Assign again, to override user config.
     Object.assign(this, params);
-    Object.assign(this, params_from_query);
+    Object.assign(this, paramsFromQuery);
 
     this.setDefaults();
 
@@ -228,6 +223,21 @@ export default class Env {
       this.keyword = "";
       this.arguments = [this.query];
     }
+  }
+
+  getQueryParams(params: Pick<EnvParams, "query">): QueryParseResult {
+    return QueryParser.parse(typeof params.query === "string" ? params.query : "");
+  }
+
+  getPreloadParams(
+    params: EnvParams,
+    paramsFromQuery: QueryParseResult,
+  ): EnvParams {
+    return {
+      ...Env.getBoolParams(params),
+      ...params,
+      ...paramsFromQuery,
+    };
   }
 
   setToLocalStorage() {

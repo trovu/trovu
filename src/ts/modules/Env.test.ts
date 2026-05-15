@@ -1,9 +1,26 @@
 import Env from "./Env";
+import NamespaceFetcher from "./NamespaceFetcher";
 
 const getUrlHashFooBar = () => {
   const hash = "foo=bar&baz=boo";
   return hash;
 };
+
+const originalFetch = global.fetch;
+const minimalData = {
+  config: {
+    language: "en",
+    country: "gb",
+    namespaces: [],
+  },
+  shortcuts: {},
+  types: {},
+};
+
+afterEach(() => {
+  global.fetch = originalFetch;
+  jest.restoreAllMocks();
+});
 
 describe("Env", () => {
   describe("getDefaultLanguageAndCountry", () => {
@@ -96,6 +113,68 @@ describe("Env", () => {
     expect(Env.getBoolParams({ debug: "1", reload: "1", foo: "1" })).toEqual({
       debug: true,
       reload: true,
+    });
+  });
+
+  describe("populate", () => {
+    test("uses reload cache for the initial data fetch when query starts with reload on index", async () => {
+      const response = {
+        status: 200,
+        text: jest.fn().mockResolvedValue(JSON.stringify(minimalData)),
+      };
+      const fetchMock = jest.fn().mockResolvedValue(response as unknown as Response);
+      global.fetch = fetchMock as typeof fetch;
+      jest.spyOn(Env, "fetchLog").mockImplementation(() => {});
+      jest.spyOn(NamespaceFetcher.prototype, "getNamespaceInfos").mockResolvedValue({});
+
+      const env = new Env({ context: "index" });
+      await env.populate({ query: "reload:g foo" });
+
+      expect(fetchMock).toHaveBeenCalledWith("/data.json?version=unknown", {
+        cache: "reload",
+      });
+      expect(env.reload).toBe(true);
+      expect(env.query).toBe("g foo");
+    });
+
+    test("uses reload cache for the initial data fetch when query is reload on process", async () => {
+      const response = {
+        status: 200,
+        text: jest.fn().mockResolvedValue(JSON.stringify(minimalData)),
+      };
+      const fetchMock = jest.fn().mockResolvedValue(response as unknown as Response);
+      global.fetch = fetchMock as typeof fetch;
+      jest.spyOn(Env, "fetchLog").mockImplementation(() => {});
+      jest.spyOn(NamespaceFetcher.prototype, "getNamespaceInfos").mockResolvedValue({});
+
+      const env = new Env({ context: "process" });
+      await env.populate({ query: "reload" });
+
+      expect(fetchMock).toHaveBeenCalledWith("/data.json?version=unknown", {
+        cache: "reload",
+      });
+      expect(env.reload).toBe(true);
+      expect(env.query).toBe("");
+    });
+
+    test("keeps the initial data fetch cached for normal queries", async () => {
+      const response = {
+        status: 200,
+        text: jest.fn().mockResolvedValue(JSON.stringify(minimalData)),
+      };
+      const fetchMock = jest.fn().mockResolvedValue(response as unknown as Response);
+      global.fetch = fetchMock as typeof fetch;
+      jest.spyOn(Env, "fetchLog").mockImplementation(() => {});
+      jest.spyOn(NamespaceFetcher.prototype, "getNamespaceInfos").mockResolvedValue({});
+
+      const env = new Env({ context: "process" });
+      await env.populate({ query: "g foo" });
+
+      expect(fetchMock).toHaveBeenCalledWith("/data.json?version=unknown", {
+        cache: "force-cache",
+      });
+      expect(env.reload).toBeUndefined();
+      expect(env.query).toBe("g foo");
     });
   });
 });
