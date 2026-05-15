@@ -12218,9 +12218,12 @@ ytm 1:
   - arguments: anhedonia
     description: search Anhedonia music
 ytp 1:
-  url: https://www.youtube.com/results?search_type=search_playlists&uni=3&search_query=<query>
-  title: Youtube, playlist search
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIQAw%253D%253D
+  title: Youtube, playlists only
   include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for playlists about Berlin
 yts 1:
   url: https://www.youtube.com/results?search_query=<query>&sp=EgIQCQ%253D%253D
   title: YouTube, shorts only
