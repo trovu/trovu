@@ -12214,6 +12214,13 @@ ytp 1:
   url: https://www.youtube.com/results?search_type=search_playlists&uni=3&search_query=<query>
   title: Youtube, playlist search
   include: yt 0
+yts 1:
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIQCQ%253D%253D
+  title: YouTube, shorts only
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin" on YouTube, showing only shorts
 ytt 1:
   url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=t
   title: Youtube, today's new videos
