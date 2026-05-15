@@ -77,7 +77,6 @@ export interface Shortcut {
   description?: string;
   tags?: string[];
   include?: ShortcutInclude | ShortcutInclude[];
-  includes?: ShortcutInclude[];
   deprecated?: DeprecatedShortcut;
   removed?: string;
   examples?: ShortcutExample[];
@@ -96,9 +95,8 @@ export interface Shortcut {
   [key: string]: unknown;
 }
 
-export interface RawShortcutObject extends Omit<Shortcut, "include" | "includes"> {
+export interface RawShortcutObject extends Omit<Shortcut, "include"> {
   include?: RawShortcutInclude | RawShortcutInclude[] | null;
-  includes?: RawShortcutInclude[] | null;
 }
 
 export type RawShortcut = string | RawShortcutObject;

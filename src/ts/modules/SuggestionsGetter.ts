@@ -1,7 +1,7 @@
 /** @module SuggestionsGetter */
+import type { EnvLike, Shortcut, SuggestionsMatchGroups } from "../types";
 import QueryParser from "./QueryParser";
 import escapeStringRegexp from "escape-string-regexp";
-import type { EnvLike, Shortcut, SuggestionsMatchGroups } from "../types";
 
 export default class SuggestionsGetter {
   env: Pick<EnvLike, "namespaceInfos">;
@@ -97,7 +97,7 @@ export default class SuggestionsGetter {
         if (shortcut.deprecated || shortcut.removed) {
           continue;
         }
-        delete shortcut.includes;
+        delete shortcut.include;
         delete shortcut.tests;
         if (query == "") {
           if (shortcut.showOnHome && shortcut.reachable) {
