@@ -316,6 +316,23 @@ wp 1:
   examples:
   - arguments: germany
     description: Search for news about Germany
+wsj 0:
+  url: https://www.wsj.com/
+  title: The Wall Street Journal
+  tags:
+  - business
+  - finance
+  - news
+  - newspaper
+  - politics
+  examples:
+  - description: Go to the homepage
+wsj 1:
+  url: https://www.wsj.com/search?query=<query>&mod=searchresults_viewallresults
+  include: wsj 0
+  examples:
+  - arguments: germany
+    description: Search for news about Germany
 wsl 0:
   url: https://corpora.uni-leipzig.de/de?corpusId=eng_news_2023
   title: Wortschatz-Lexikon (English)
