@@ -12228,6 +12228,13 @@ ytt 1:
   examples:
   - arguments: obama
     description: Search for "obama"
+ytv 1:
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIQAQ%253D%253D
+  title: Youtube, (non-shorts) videos only
+  include: yt 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin" on YouTube, showing only non-shorts videos
 ytw 1:
   url: https://www.youtube.com/results?hl=<$language>&persist_hl=1&search_query=<query>&search_sort=video_date_uploaded&uploaded=w
   title: Youtube, last week's new videos
