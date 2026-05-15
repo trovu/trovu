@@ -12183,13 +12183,6 @@ ytc 1:
   examples:
   - arguments: berlin
     description: Search for channels about Berlin
-ytd 1:
-  url: https://www.youtube.com/results?sp=CAI%253D&search_query=<query>
-  title: Youtube, sorted by upload date
-  include: yt 0
-  examples:
-  - arguments: cartoon
-    description: Search for "cartoon"
 yth 0:
   url: https://www.youtube.com/feed/history
   title: Youtube, my history
