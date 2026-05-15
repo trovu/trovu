@@ -12219,14 +12219,14 @@ ytm 1:
     description: search Anhedonia music
 ytp 1:
   url: https://www.youtube.com/results?search_query=<query>&sp=EgIQAw%253D%253D
-  title: Youtube, playlists only
+  title: Youtube, playlists
   include: yt 0
   examples:
   - arguments: berlin
     description: Search for playlists about Berlin
 yts 1:
   url: https://www.youtube.com/results?search_query=<query>&sp=EgIQCQ%253D%253D
-  title: YouTube, shorts only
+  title: YouTube, shorts
   include: yt 0
   examples:
   - arguments: berlin
@@ -12240,7 +12240,7 @@ ytt 1:
     description: Search for "obama"
 ytv 1:
   url: https://www.youtube.com/results?search_query=<query>&sp=EgIQAQ%253D%253D
-  title: Youtube, (non-shorts) videos only
+  title: Youtube, (non-shorts) videos
   include: yt 0
   examples:
   - arguments: berlin
