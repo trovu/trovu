@@ -1,7 +1,7 @@
 /** @module SuggestionsGetter */
+import type { EnvLike, Shortcut, SuggestionsMatchGroups } from "../types";
 import QueryParser from "./QueryParser";
 import escapeStringRegexp from "escape-string-regexp";
-import type { EnvLike, Shortcut, SuggestionsMatchGroups } from "../types";
 
 export default class SuggestionsGetter {
   env: Pick<EnvLike, "namespaceInfos">;
