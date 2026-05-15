@@ -72,13 +72,9 @@ test.describe("Homepage, Shortcut not found, show suggestions", () => {
 });
 
 test.describe("Homepage alerts and interactions", () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto("/");
-    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
-  });
-
   test("should prefill the alternative query for deprecated shortcuts", async ({ page }) => {
     await page.goto("/#country=gb&language=en&query=oldshortcut&status=deprecated&alternative=g%20berlin");
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
     await expect(page.locator("#query")).toHaveValue("g berlin");
     await expect(page.locator("#alert")).toContainText("deprecated");
     await expect(page.locator("#alert em.query")).toHaveText("oldshortcut");
@@ -86,6 +82,7 @@ test.describe("Homepage alerts and interactions", () => {
 
   test("should show the suspicious shortcut warning with an issue link", async ({ page }) => {
     await page.goto("/#country=gb&language=en&query=evil&status=suspicious");
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
     const issueLink = page.locator('#alert a[href="https://github.com/trovu/trovu/issues/new"]');
     await expect(page.locator("#alert")).toContainText("might be harmful");
     await expect(issueLink).toBeVisible();
@@ -93,12 +90,15 @@ test.describe("Homepage alerts and interactions", () => {
 
   test("should show the removed shortcut GitHub search link", async ({ page }) => {
     await page.goto("/#country=gb&language=en&query=foo&status=removed&key=o.foo%201");
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
     const githubLink = page.locator("#alert a.githubLink");
     await expect(githubLink).toHaveText("foo");
     await expect(githubLink).toHaveAttribute("href", /o\.foo%201\+repo%3Atrovu%2Ftrovu-data/);
   });
 
   test("should switch to advanced settings when a GitHub username is saved", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
     await page.locator("span#settings-button").click();
     await page.locator("#advanced-tab").click();
     await page.locator("#githubSetting").fill("trovu");
@@ -112,6 +112,8 @@ test.describe("Homepage alerts and interactions", () => {
   });
 
   test("should filter suggestions when clicking a namespace badge", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
     await page.locator("#query").fill("g");
     const namespaceBadge = page.locator("li", { hasText: "Google Web Homepage" }).locator(".namespace").first();
     const namespace = ((await namespaceBadge.textContent()) || "").trim();
@@ -121,6 +123,8 @@ test.describe("Homepage alerts and interactions", () => {
   });
 
   test("should filter suggestions when clicking a tag badge", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
     await page.locator("#query").fill("g");
     const suggestion = page.locator("li", { hasText: "Google Web Homepage" }).first();
     await suggestion.click();
