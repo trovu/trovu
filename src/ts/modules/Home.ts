@@ -307,17 +307,17 @@ export default class Home {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      window.location.href = processUrl;
+      CallHandler.openUrl(processUrl);
       return;
     }
 
-    let redirectUrl: string;
+    let redirectUrl;
     if (response.status === "found") {
-      redirectUrl = response.redirectUrl as string;
+      redirectUrl = response.redirectUrl;
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    CallHandler.openUrl(redirectUrl);
   };
 
   /**

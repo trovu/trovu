@@ -45,7 +45,30 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.openUrl(redirectUrl, true);
+  }
+
+  /**
+   * Helper to open URLs, breaking out of standalone PWA if needed.
+   */
+  static openUrl(url: string, replace: boolean = false) {
+    const isStandalone = 
+      window.matchMedia("(display-mode: standalone)").matches || 
+      (window.navigator as any).standalone === true;
+
+    if (isStandalone) {
+      const a = document.createElement("a");
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } else if (replace) {
+      window.location.replace(url);
+    } else {
+      window.location.href = url;
+    }
   }
 
   /**
