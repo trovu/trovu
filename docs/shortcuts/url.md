@@ -43,7 +43,11 @@ Argument placeholders can be given any name.
 
 ### iso-8859-1
 
-Encodes the argument as ISO-8859-1.
+Encodes the argument as ISO-8859-1 and percent-encodes the resulting bytes.
+
+Reserved URL characters in the argument, such as `+`, `/`, and `@`, are encoded as well.
+
+Characters that cannot be represented in ISO-8859-1 are replaced with `?` before encoding.
 
 ## Argument types
 
