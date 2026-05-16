@@ -10276,6 +10276,22 @@ tmdb 1:
   examples:
   - arguments: forrest gump
     description: Search for "forrest gump"
+tmr 0:
+  url: https://archive.org/details/magazine_rack
+  title: The Magazine Rack (archive.org)
+  tags:
+  - archive
+  - magazines
+  - online-library
+  - periodicals
+  examples:
+  - description: Go to the homepage
+tmr 1:
+  url: https://archive.org/details/magazine_rack?tab=collection&query=<query>
+  include: tmr 0
+  examples:
+  - arguments: computer
+    description: Search for magazines about computers
 tmu 0:
   url: https://www.temu.com/
   title: Temu
