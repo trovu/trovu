@@ -1678,7 +1678,7 @@ sh 1:
   - arguments: div
     description: Suche nach "div"
 shg 1:
-  url: https://www.google.com/search?q=<Suche>&sitesearch=wiki.selfhtml.org
+  url: https://www.google.com/search?q=<Suche>%20site:wiki.selfhtml.org
   title: Selfhtml via Google
   tags:
   - doc
