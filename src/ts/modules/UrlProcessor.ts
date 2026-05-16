@@ -235,12 +235,27 @@ export default class UrlProcessor {
     return processedArgument;
   }
 
+  static encodeIso88591UriComponent(str: string): string {
+    let encoded = "";
+    for (const char of str) {
+      const codePoint = char.codePointAt(0) || 0;
+      if (codePoint <= 0x7f && /[A-Za-z0-9\-_.!~*'()]/.test(char)) {
+        encoded += char;
+        continue;
+      }
+      if (codePoint <= 0xff) {
+        encoded += "%" + codePoint.toString(16).toUpperCase().padStart(2, "0");
+        continue;
+      }
+      encoded += "%3F";
+    }
+    return encoded;
+  }
+
   static processAttributeEncoding(attributes: PlaceholderAttributes, processedArgument: string): string {
     switch (attributes.encoding) {
       case "iso-8859-1":
-        // TODO: replace with encodeURIComponent
-        // check if no regression.
-        processedArgument = escape(processedArgument);
+        processedArgument = this.encodeIso88591UriComponent(processedArgument);
         break;
       case "none":
         break;

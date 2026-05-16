@@ -130,6 +130,18 @@ describe("UrlProcessor", () => {
       expect(UrlProcessor.processAttributeEncoding({ encoding: "iso-8859-1" }, "ÄÖÜäöü")).toEqual("%C4%D6%DC%E4%F6%FC");
     });
 
+    test("iso-8859-1 encodes reserved ASCII characters", async () => {
+      expect(UrlProcessor.processAttributeEncoding({ encoding: "iso-8859-1" }, "a+b/c@d")).toEqual("a%2Bb%2Fc%40d");
+    });
+
+    test("iso-8859-1 encodes latin1 words", async () => {
+      expect(UrlProcessor.processAttributeEncoding({ encoding: "iso-8859-1" }, "café")).toEqual("caf%E9");
+    });
+
+    test("iso-8859-1 replaces unsupported characters with question marks", async () => {
+      expect(UrlProcessor.processAttributeEncoding({ encoding: "iso-8859-1" }, "€")).toEqual("%3F");
+    });
+
     test("none", async () => {
       expect(UrlProcessor.processAttributeEncoding({ encoding: "none" }, "ÄÖÜäöü")).toEqual("ÄÖÜäöü");
     });
