@@ -12188,21 +12188,21 @@ yt 1:
   - arguments: cartoon
     description: Youtube search for "cartoon"
 yt20 1:
-  url: https://www.youtube.com/results?search_query=<berlin>&sp=EgIYAg%253D%253D
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIYAg%253D%253D
   title: Youtube, longer than 20 minutes
   include: yt 0
   examples:
   - arguments: berlin
     description: Search for videos about Berlin that are longer than 20 minutes
 yt3 1:
-  url: https://www.youtube.com/results?search_query=<berlin>&sp=EgIYBA%253D%253D
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIYBA%253D%253D
   title: Youtube, videos shorter than 3 minutes
   include: yt 0
   examples:
   - arguments: berlin
     description: Search for videos about Berlin that are shorter than 3 minutes
 yt320 1:
-  url: https://www.youtube.com/results?search_query=<berlin>&sp=EgIYBQ%253D%253D
+  url: https://www.youtube.com/results?search_query=<query>&sp=EgIYBQ%253D%253D
   title: Youtube, videos between 3 and 20 minutes
   include: yt 0
   examples:
