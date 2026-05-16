@@ -196,7 +196,7 @@ blb 0:
   - books
   - shopping
 blb 1:
-  url: https://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor=<Autor>
+  url: https://www.booklooker.de/B%C3%BCcher/Angebote/infotext=<Stichwort>
   title: Booklooker
   tags:
   - booklooker
@@ -206,7 +206,7 @@ blb 1:
   - arguments: goethe
     description: Suche nach Büchern von Goethe
 blb 2:
-  url: 'https://www.booklooker.de/app/result.php?mediaType=0&sortOrder=preis_total&autor=<Autor: {encoding: iso-8859-1}>&titel=<Titel: {encoding: iso-8859-1}>'
+  url: https://www.booklooker.de/B%C3%BCcher/Angebote/autor=<Autor>&titel=<Titel>
   title: Booklooker
   tags:
   - booklooker
