@@ -46,6 +46,6 @@ rv 1:
   - arguments: arbo
     description: Serĉu "arbo"
 rvg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=reta-vortaro.de&domains=reta-vortaro.de&q=<vorto>
+  url: https://www.google.com/search?hl=<$language>&q=<vorto>%20site:reta-vortaro.de
   title: Reta Vortaro tra Google
   include: rv 1

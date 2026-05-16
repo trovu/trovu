@@ -712,7 +712,7 @@ fefeg 0:
   examples:
   - description: Gehe zur Startseite
 fefeg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=blog.fefe.de&q=<Suche>
+  url: https://www.google.com/search?hl=<$language>&q=<Suche>%20site:blog.fefe.de
   include: fefeg 0
 fefes 0:
   deprecated:

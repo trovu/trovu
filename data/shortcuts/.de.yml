@@ -5512,7 +5512,7 @@ ppw 1:
   - arguments: bpt
     description: Suche nach Wiki-Seiten mit "bpt"
 ppwg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=wiki.piratenpartei.de&domains=wiki.piratenpartei.de&q=<Suche>
+  url: https://www.google.com/search?hl=<$language>&q=<Suche>%20site:wiki.piratenpartei.de
   title: Piratenpartei Wiki via Google
   include: ppw 0
   examples:

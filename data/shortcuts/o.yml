@@ -279,7 +279,7 @@ acm 0:
   examples:
   - description: Go to the homepage
 acm 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=portal.acm.org&sitesearch=dl.acm.org&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:dl.acm.org
   include: acm 0
   examples:
   - arguments: routing loops
@@ -5859,7 +5859,7 @@ isg 1:
   - arguments: linux_foundation
     description: Show content of user linux_foundation
 isgg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=instagram.com&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:instagram.com
   title: Instagram via Google
   include: isg 1
 ist 0:
@@ -6160,7 +6160,7 @@ jpc 1:
   - arguments: beethoven
     description: Search for "beethoven"
 jqg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=docs.jquery.com&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:docs.jquery.com
   title: JQuery API Search
   tags:
   - old
@@ -6663,7 +6663,7 @@ lw 1:
   - arguments: rationality
     description: Search for "rationality"
 lwg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=lesswrong.com&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:lesswrong.com
   title: LessWrong.com via Google
   include: lw 1
 macs 0:
@@ -7044,7 +7044,7 @@ mww 1:
   - arguments: extension
     description: Search for "extension"
 mwwg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=mediawiki.org&domains=mediawiki.org&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:mediawiki.org
   title: Mediawiki Wiki via Google
   tags:
   - mediawiki
@@ -7134,7 +7134,7 @@ nag 0:
   - description: Go to the homepage
   description: Monitoring system that enables organizations to identify and resolve IT infrastructure issues before they affect critical business processes.
 nag 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=library.nagios.com&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:library.nagios.com
   include: nag 0
 nb 0:
   include:
@@ -7355,7 +7355,7 @@ npm 1:
   - arguments: mkdir
     description: search for a module to create folders on the filesystem
 npmg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=npmjs.org&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:npmjs.org
   title: Node.js Package Manager via Google
   include: npm 1
 npr 0:
@@ -7689,7 +7689,7 @@ osmf 0:
   - maps
   - osm
 osmg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=wiki.openstreetmap.org&domains=wiki.openstreetmap.org&q=<page>
+  url: https://www.google.com/search?hl=<$language>&q=<page>%20site:wiki.openstreetmap.org
   include: osm? 0
   examples:
   - arguments: import
@@ -8924,7 +8924,7 @@ rfc 1:
   - arguments: http
     description: Open RFC about HTTP
 rg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=reddit.com&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:reddit.com
   title: Reddit via Google
   include: r 0
   examples:
@@ -11412,7 +11412,7 @@ wfr 1:
   url: https://fr.wikipedia.org/wiki/<query>
   title: Wikipedia France
 wg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=<$language>.wikipedia.org&q=<article>
+  url: https://www.google.com/search?hl=<$language>&q=<article>%20site:<$language>.wikipedia.org
   title: Wikipedia via Google
   tags:
   - copyleft
@@ -11424,7 +11424,7 @@ wg 1:
   - arguments: berlin
     description: Search for "berlin"
 wg! 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=<$language>.wikipedia.org&q=<article>&btnI=1
+  url: https://www.google.com/search?hl=<$language>&q=<article>%20site:<$language>.wikipedia.org&btnI=1
   title: Wikipedia via Google, go directly to first result
   tags:
   - copyleft
@@ -11436,13 +11436,13 @@ wg! 1:
   - arguments: berlin
     description: Search for "berlin"
 wg* 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=wikipedia.org&q=<article>
+  url: https://www.google.com/search?hl=<$language>&q=<article>%20site:wikipedia.org
   title: Wikipedia Article Search via Google in all languages
   tags:
   - encyclopedia
   - wikipedia
 wgo 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=wikipedia.org&q=<article>
+  url: https://www.google.com/search?hl=<$language>&q=<article>%20site:wikipedia.org
   title: Wikipedia via Google in all languages
   tags:
   - copyleft
@@ -11789,7 +11789,7 @@ xb 0:
   - description: Go to the bookmarks page
   description: X Bookmarks stores posts you have saved for later reading.
 xg 1:
-  url: https://www.google.com/search?hl=<$language>&sitesearch=x.com&q=<query>
+  url: https://www.google.com/search?hl=<$language>&q=<query>%20site:x.com
   title: X (Twitter) via Google
   include: x 0
   examples:
@@ -12026,7 +12026,7 @@ yh 0:
   - description: Go to the homepage
   description: A server operating system aiming to make self-hosting easy.
 yh 1:
-  url: https://www.google.com/search?sitesearch=yunohost.org&q=<query>
+  url: https://www.google.com/search?q=<query>%20site:yunohost.org
   include: yh 0
   examples:
   - arguments: documentation

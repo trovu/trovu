@@ -42,7 +42,7 @@ cia 0:
   - description: Go to the homepage
   description: The World Factbook provides information on the history, people, government, economy, geography, communications, transportation
 cia 1:
-  url: https://www.google.com/search?hl=<$language>&ie=utf-8&domains=cia.gov&sitesearch=cia.gov&btnI=1&q=intitle%3Afactbook%20<country>
+  url: https://www.google.com/search?hl=<$language>&q=intitle%3Afactbook%20<country>%20site:cia.gov
   include: cia 0
   examples:
   - arguments: Germany
