@@ -278,10 +278,10 @@ ch 1:
       query: chipg <1>
     created: '2024-11-10'
 chill 0:
-  url: https://www.chilloutzone.net/
-  title: Chilloutzone
-  tags:
-  - video
+  deprecated:
+    alternative:
+      query: coz
+    created: '2026-05-16'
 chill 1:
   deprecated:
     alternative:
