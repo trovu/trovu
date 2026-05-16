@@ -8632,7 +8632,7 @@ qtcl 1:
   - arguments: qwidget
     description: Opens QWidget's documentation
 qtdoc 0:
-  url: https://doc.qt.io/archives/qt-4.8/
+  url: https://doc.qt.io/
   title: Qt documentation's home
   tags:
   - old
@@ -8640,9 +8640,9 @@ qtdoc 0:
   - qt
   examples:
   - description: Go to the homepage
-  description: This archived Qt 4.8 documentation site preserves the older Qt reference manuals.
+  description: The Qt documentation site covers Qt APIs, guides, examples, and reference material.
 qtdoc 1:
-  url: https://www.google.com/search?q=<query>&sitesearch=https://doc.qt.io/archives/qt-4.8/
+  url: https://www.google.com/search?q=<query>%20site:doc.qt.io
   title: Search Qt documentation
   include: qtdoc 0
 qu 0:
