@@ -4856,7 +4856,7 @@ gzh 0:
   examples:
   - description: Gehe zur Startseite
 gzh 1:
-  url: 'https://geizhals.de/?fs=<Produkt: {encoding: iso-8859-1}>'
+  url: 'https://geizhals.de/?fs=<Produkt>'
   include: gzh 0
   examples:
   - arguments: fernseher
