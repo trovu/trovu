@@ -12257,7 +12257,7 @@ yts 1:
   - arguments: berlin
     description: Search for "berlin" on YouTube, showing only shorts
 ytsp 1:
-  url: https://www.youtube.com/results?search_query=<channel>&&sp=CAM%253D
+  url: https://www.youtube.com/results?search_query=<query>&&sp=CAM%253D
   title: Youtube, sort by popularity / views
   include: yt 0
   examples:
