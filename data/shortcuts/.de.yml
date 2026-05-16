@@ -5175,21 +5175,6 @@ kit 1:
   examples:
   - arguments: alumni
     description: Suche nach "alumni"
-koka 0:
-  url: https://www.koka36.de/
-  title: Koka36.de Konzertkasse
-  tags:
-  - concerts
-  - events
-  - konzerte
-  examples:
-  - description: Gehe zur Startseite
-koka 1:
-  url: 'https://www.koka36.de/suche.php?search=<Suche: {encoding: iso-8859-1}>'
-  include: koka 0
-  examples:
-  - arguments: berlin
-    description: Suche nach Konzerten und Events in Berlin
 kununu 0:
   url: https://www.kununu.com/de/
   title: Kununu Deutschland
