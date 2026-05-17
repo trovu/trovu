@@ -5807,6 +5807,20 @@ tvu 1:
   examples:
   - arguments: '20'
     description: Search for "20"
+unims 0:
+  url: https://www.uni-muenster.de/
+  title: Universität Münster
+  tags:
+  - münster
+  - science
+  examples:
+  - description: Gehe zur Startseite
+unims 1:
+  url: https://suchen.uni-muenster.de/de.cgi?q=<query>
+  include: unims 0
+  examples:
+  - arguments: bibliothek
+    description: Suche nach "bibliothek"
 uwz 0:
   url: https://www.unwetterzentrale.de/
   title: Unwetterzentrale.de

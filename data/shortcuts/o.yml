@@ -11742,10 +11742,10 @@ ww 1:
   - arguments: npov
     description: Search for "npov"
 wwu 1:
-  url: https://suchen.uni-muenster.de/de.cgi?q=<query>
-  title: WWU
-  tags:
-  - old
+  deprecated:
+    alternative:
+      query: .de.unims <1>
+    created: '2026-05-17'
 www 1:
   url: https://<query>
   title: Www
