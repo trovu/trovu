@@ -14,6 +14,21 @@ atl 1:
   examples:
   - arguments: germany
     description: Search for news about Germany
+bbc 0:
+  url: https://www.bbc.com/
+  title: BBC.com
+  tags:
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+  description: The BBC is a British public service broadcaster. It provides news coverage on various topics including world news, politics, business, technology, and more.
+bbc 1:
+  url: https://www.bbc.com/search?q=<query>
+  include: bbc 0
+  examples:
+  - arguments: berlin
+    description: Search for news about Berlin
 camb-en 1:
   deprecated:
     alternative:
