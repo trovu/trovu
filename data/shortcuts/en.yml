@@ -295,6 +295,29 @@ syn 1:
   examples:
   - arguments: important
     description: Search for synonyms of "important"
+thsr 0:
+  include: syn 0
+thsr 1:
+  tests:
+  - arguments: fast
+    expect: fast
+  include: syn 1
+ud 0:
+  url: https://www.urbandictionary.com/
+  title: Urban Dictionary
+  tags:
+  - dictionary
+  - english
+  - slang
+  examples:
+  - description: Go to the homepage
+  description: Urban Dictionary collects crowd-sourced definitions for slang, internet expressions, and informal English usage.
+ud 1:
+  url: https://www.urbandictionary.com/define.php?term=<query>
+  include: ud 0
+  examples:
+  - arguments: wheelbo
+    description: Look up "wheelbo" in the Urban Dictionary
 uvi 0:
   url: https://verbs.colorado.edu/verb-index/vn3.3
   title: Unified Verb Index

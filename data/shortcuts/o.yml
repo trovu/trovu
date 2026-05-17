@@ -10065,24 +10065,15 @@ thomann 1:
       query: .de.thom <1>
     created: '2026-05-12'
 thsr 0:
-  url: https://www.thesaurus.com/
-  title: Thesaurus.com
-  tags:
-  - dictionary
-  - language
-  - synonyms
-  examples:
-  - description: Go to the homepage
-  description: Thesaurus.com helps users find synonyms, antonyms, and related word suggestions in English.
+  deprecated:
+    alternative:
+      query: en.thsr
+    created: '2026-05-18'
 thsr 1:
-  url: https://thesaurus.com/browse/<query>
-  tests:
-  - arguments: fast
-    expect: fast
-  include: thsr 0
-  examples:
-  - arguments: fast
-    description: Look up synonyms for fast
+  deprecated:
+    alternative:
+      query: en.thsr <1>
+    created: '2026-05-18'
 ti 0:
   include:
   - key: ti 0
@@ -10762,21 +10753,15 @@ ucsh 1:
   url: https://www.fileformat.info/info/unicode/char/search.htm?q=<query>&han=Y&preview=entity
   include: ucsh 0
 ud 0:
-  url: https://www.urbandictionary.com/
-  title: Urban Dictionary
-  tags:
-  - dictionary
-  - english
-  - slang
-  examples:
-  - description: Go to the homepage
-  description: Urban Dictionary collects crowd-sourced definitions for slang, internet expressions, and informal English usage.
+  deprecated:
+    alternative:
+      query: en.ud
+    created: '2026-05-18'
 ud 1:
-  url: https://www.urbandictionary.com/define.php?term=<query>
-  include: ud 0
-  examples:
-  - arguments: wheelbo
-    description: Look up "wheelbo" in the Urban Dictionary
+  deprecated:
+    alternative:
+      query: en.ud <1>
+    created: '2026-05-18'
 ue5 0:
   url: https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5-4-documentation
   title: Unreal Engine 5 Documentation
