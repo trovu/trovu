@@ -11117,22 +11117,15 @@ vimeo 0:
 vimeo 1:
   include: v 1
 visuwords 0:
-  url: https://www.visuwords.com/
-  title: Visuwords
-  tags:
-  - dictionary
-  - language
-  - thesaurus
-  - words
-  examples:
-  - description: Go to the homepage
-  description: Visuwords is an online graphical dictionary and thesaurus that shows word relationships as an interactive map.
+  deprecated:
+    alternative:
+      query: en.vsw
+    created: '2026-05-18'
 visuwords 1:
-  url: https://www.visuwords.com/?word=<query>
-  tests:
-  - arguments: tree
-    expect: \"tree\" on Visuwords
-  include: visuwords 0
+  deprecated:
+    alternative:
+      query: en.vsw <1>
+    created: '2026-05-18'
 vk 0:
   url: https://vk.com
   title: Vkontakte
