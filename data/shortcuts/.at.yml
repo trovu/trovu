@@ -536,7 +536,7 @@ gzh 0:
   - shopping
   description: Preisvergleichsportal für verschiedene Produkte
 gzh 1:
-  url: 'https://geizhals.at/?fs=<Produkt>'
+  url: https://geizhals.at/?fs=<Produkt>
   tests:
   - arguments: fernseher
     expect: <title>fernseher Geizhals Österreich</title>
