@@ -173,25 +173,6 @@
   - ccc
   - leipzig
   - wiki
-4sq 0:
-  url: https://foursquare.com/
-  title: Foursquare
-  tags:
-  - foursquare
-  - geolocation
-  - social-network
-4sq 1:
-  url: https://foursquare.com/explore?mode=url&q=<what>
-  include: 4sq 0
-  examples:
-  - arguments: pizza
-    description: Search for a pizza place near me
-4sq 2:
-  url: https://foursquare.com/explore?mode=url&q=<what>&near=<where>
-  include: 4sq 0
-  examples:
-  - arguments: pizza, new york
-    description: Search for a pizza place in New York
 911 0:
   url: https://www.911tabs.com/
   title: 911tabs.com
