@@ -1075,7 +1075,7 @@ doe 1:
   - arguments: '1805996633'
     description: Suche nach Inhaber der Nummer 01805996633
 doe 2:
-  url: https://www2.dasoertliche.de/Controller?form_name=search_nat&kw=<Name>&ci=<Ort>
+  url: 'https://www2.dasoertliche.de/Controller?form_name=search_nat&kw=<Name>&ci=<Ort: {type: city}>'
   include: doe 0
   examples:
   - arguments: meier, dresden
@@ -4841,7 +4841,7 @@ gy 0:
   examples:
   - description: Gehe zur Startseite
 gy 2:
-  url: https://www.goyellow.de/suche/<Name>/<Ort>
+  url: 'https://www.goyellow.de/suche/<Name>/<Ort: {type: city}>'
   include: gy 0
   examples:
   - arguments: meier, dresden

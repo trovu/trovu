@@ -139,7 +139,7 @@ pj 0:
   examples:
   - description: Aller à la page d'accueil
 pj 2:
-  url: https://www.pagesjaunes.fr/annuaire/chercherlespros?quoiqui=<quoiqui>&ou=<ou>&univers=pagesjaunes&idOu=
+  url: 'https://www.pagesjaunes.fr/annuaire/chercherlespros?quoiqui=<quoiqui>&ou=<ou: {type: city}>&univers=pagesjaunes&idOu='
   include: pj 0
   examples:
   - arguments: tv, paris

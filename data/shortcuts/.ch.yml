@@ -247,7 +247,7 @@ local 0:
   - description: Gehe zur Startseite
   description: Schweizer Telefonbuch
 local 2:
-  url: https://tel.local.ch/de/q?what=<Name>&where=<Ort>
+  url: 'https://tel.local.ch/de/q?what=<Name>&where=<Ort: {type: city}>'
   include: local 0
   examples:
   - arguments: Hans Muster, Bern
