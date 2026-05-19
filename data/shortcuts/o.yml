@@ -12172,6 +12172,12 @@ yth 0:
   url: https://www.youtube.com/feed/history
   title: Youtube, my history
   include: yt 0
+yth 1:
+  url: https://www.youtube.com/feed/history/search?q=<query>
+  include: yth 0
+  examples:
+  - arguments: berlin
+    description: Search for "berlin" in your YouTube history
 ytl 0:
   url: https://www.youtube.com/playlist?list=LL
   title: Youtube, my liked videos
