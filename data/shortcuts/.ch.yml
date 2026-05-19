@@ -211,7 +211,7 @@ gsn 0:
   description: Onlineshop für Laborbedarf
 gsn 1:
   url: https://ch.gilson.com/CHSV/catalogsearch/result/?q=<query>
-  include: gilson 0
+  include: gsn 0
   examples:
   - arguments: pipette
     description: Suche nach "pipette"
