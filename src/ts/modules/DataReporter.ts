@@ -43,6 +43,7 @@ export default class DataReporter {
           // argCount == 0 &&
           !shortcut.examples &&
           !shortcut.deprecated &&
+          !shortcut.include &&
           !shortcut.removed
         ) {
           console.log("Active shortcut with 0 arguments and no examples:", key);
