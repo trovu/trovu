@@ -12171,15 +12171,11 @@ ytc 1:
 yth 0:
   url: https://www.youtube.com/feed/history
   title: Youtube, my history
-  tags:
-  - video
-  - youtube
+  include: yt 0
 ytl 0:
   url: https://www.youtube.com/playlist?list=LL
   title: Youtube, my liked videos
-  tags:
-  - video
-  - youtube
+  include: yt 0
 ytm 0:
   url: https://music.youtube.com/
   title: Youtube Music
