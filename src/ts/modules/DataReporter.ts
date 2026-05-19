@@ -1,5 +1,5 @@
-import DataManager from "./DataManager";
 import type { RawShortcutObject, TrovuData } from "../types";
+import DataManager from "./DataManager";
 
 interface DataReporterOptions {
   namespace?: string;
