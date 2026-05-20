@@ -4512,15 +4512,18 @@ gg 1:
   - arguments: berlin
     description: Search for "berlin"
 gh 0:
-  deprecated:
-    alternative:
-      query: gzh
-    created: '2024-04-19'
+  url: https://github.com/
+  title: GitHub
+  tags:
+  - programming
 gh 1:
-  deprecated:
-    alternative:
-      query: gzh <1>
-    created: '2024-04-19'
+  url: https://github.com/search?q=<query>
+  title: GitHub
+  tags:
+  - programming
+  examples:
+  - arguments: php
+    description: Search for "php"
 gha 0:
   url: https://ghostarchive.org/
   title: Ghostarchive, a website archive
@@ -4571,18 +4574,15 @@ gimf 1:
   - arguments: berlin
     description: Search for "berlin"
 github 0:
-  url: https://github.com/
-  title: GitHub
-  tags:
-  - programming
+  deprecated:
+    alternative:
+      query: gh
+    created: '2026-05-21'
 github 1:
-  url: https://github.com/search?q=<query>
-  title: GitHub
-  tags:
-  - programming
-  examples:
-  - arguments: php
-    description: Search for "php"
+  deprecated:
+    alternative:
+      query: gh <1>
+    created: '2026-05-21'
 gitlab 0:
   url: https://gitlab.com
   title: GitLab software repository
