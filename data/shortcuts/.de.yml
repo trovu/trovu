@@ -156,6 +156,42 @@ awt 1:
   examples:
   - arguments: andreas fischer
     description: Search for "andreas fischer"
+banz 0:
+  url: https://bundesanzeiger.de/
+  title: Bundesanzeiger
+  tags:
+  - business
+  - finance
+  - germany
+  - legal
+  - needs-userscript
+  examples:
+  - description: Gehe zur Startseite
+  description: Der Bundesanzeiger ist das offizielle Organ für rechtliche und wirtschaftliche Bekanntmachungen in Deutschland.
+banz 1:
+  url: https://bundesanzeiger.de/pub/de/start?0#trovu[fill][.js-simple-search-input]=<query>&trovu[submit]=.js-default-button&trovu[waitBeforeFill]=1000
+  include: banz 0
+  examples:
+  - arguments: Siemens
+    description: Suche nach Bekanntmachungen zu Siemens
+banzl 0:
+  url: https://www.bundesanzeiger.de/pub/de/to_nlp_start?1
+  title: Bundesanzeiger (Netto-Leerverkaufspositionen)
+  tags:
+  - banz
+  - finance
+  - needs-userscript
+  - shortselling
+  - stocks
+  examples:
+  - description: Gehe zur Startseite
+  description: Offizielle Plattform zur Recherche veröffentlichter Netto-Leerverkaufspositionen (Short Selling) im Bundesanzeiger.
+banzl 1:
+  url: https://www.bundesanzeiger.de/pub/de/to_nlp_start?1#trovu[fill][.nlp-search%20.search-form%20input]=<query>&trovu[submit]=.nlp-search%20.search-form%20.btn-green&trovu[waitBeforeFill]=1000
+  include: banzl 0
+  examples:
+  - arguments: Lufthansa
+    description: Suche nach Leerverkaufspositionen der Lufthansa
 bauhaus 0:
   deprecated:
     alternative:
@@ -1080,6 +1116,24 @@ doe 2:
   examples:
   - arguments: meier, dresden
     description: Suche Telefonnummern für "Meier" in Dresden
+dpma 0:
+  url: https://register.dpma.de/
+  title: DPMA Register
+  tags:
+  - dpma
+  - germany
+  - law
+  - needs-userscript
+  - trademark
+  examples:
+  - description: Gehe zur Startseite
+  description: Das Register des Deutschen Patent- und Markenamts zur Recherche von angemeldeten und eingetragenen Marken.
+dpma 1:
+  url: https://register.dpma.de/DPMAregister/marke/basis#trovu[fill][#marke]=<query>&trovu[submit]=#rechercheStarten&trovu[waitBeforeFill]=1000
+  include: dpma 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Marken mit "berlin" im Namen
 duden 0:
   url: https://www.duden.de/
   title: Duden
