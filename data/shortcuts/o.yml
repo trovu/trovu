@@ -11475,6 +11475,24 @@ winw 1:
   examples:
   - arguments: Norton Commander
     description: search for "Norton Commander"
+wipo 0:
+  url: https://patentscope.wipo.int/
+  title: WIPO Patentscope
+  tags:
+  - ip
+  - law
+  - needs-userscript
+  - patents
+  - wipo
+  examples:
+  - description: Go to the homepage
+  description: WIPO Patentscope allows you to search millions of international and national patent documents.
+wipo 1:
+  url: https://patentscope.wipo.int/search/en/search.jsf#trovu[fill][.js-simple-search-input.query-text]=<query>&trovu[submit]=.primary.js-default-button&trovu[waitBeforeFill]=1000
+  include: wipo 0
+  examples:
+  - arguments: blockchain
+    description: Search for blockchain patents
 wipr 0:
   url: https://www.worldipreview.com
   title: World Intellectual Property Review (WIPR)
