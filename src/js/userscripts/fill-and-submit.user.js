@@ -1,15 +1,21 @@
 // ==UserScript==
 // @name         Trovu: Fill and Submit
 // @namespace    http://tampermonkey.net/
-// @version      0.6.1
+// @version      0.6.2
 // @description  Fills input fields with URL parameters and submits form.
 // @downloadURL  https://trovu.net/userscripts/fill-and-submit.user.js
 // @author       Ralf Anders, Georg Jaehnig
-// @match        *://*/*
+// @match        *://*.patentscope.wipo.int/*
+// @match        *://*.bundesanzeiger.de/*
+// @match        *://*.register.dpma.de/*
+// @match        *://*.bahn.de/*
 // @grant        none
 // ==/UserScript==
 
 // ==Changelog==
+// v0.6.2 - 2026-05-21
+// - Restricted script execution to specific domains (WIPO, Bundesanzeiger, DPMA, bahn.de) to save performance and increase security.
+//
 // v0.6.1 - 2024-07-14
 // - Report error if fill param cannot be parsed.
 // - Report error if element cannot be found.
