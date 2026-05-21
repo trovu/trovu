@@ -19,6 +19,7 @@
     "build-llms-txt": "cat docs/index.md > dist/public/llms.txt",
     "build-llms-full-txt": "cat docs/index.md docs/privacy.md docs/alternatives.md docs/**/*.md > dist/public/llms-full.txt",
     "check-pip": "pipenv check",
+    "checkout-pr": "f() { git fetch origin pull/$1/head:test-pr-$1 && git checkout test-pr-$1; }; f",
     "clean": "rm -rf dist/",
     "compile-data": "node dist/cli.mjs compile-data --output ./dist/public/data.json",
     "dev-server": "http-server ./dist/public/ --port 8081 --cors -a 127.0.0.1",
