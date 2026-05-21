@@ -27,6 +27,17 @@ describe("CallHandler", () => {
       "../index.html#country=at&language=de&status=reloaded",
     );
   });
+  test("getRedirectUrlToHome keeps the populated query over the stale URL query", async () => {
+    Env.getUrlHash = () => {
+      return "country=gb&language=de&query=google&status=not_found";
+    };
+    const response = {
+      status: "not_found",
+    };
+    expect(CallHandler.getRedirectUrlToHome(new Env({ query: "wikipedia" }), response)).toStrictEqual(
+      "../index.html#country=gb&language=de&query=wikipedia&status=not_found",
+    );
+  });
   test("isSafeRedirectUrl allows http, https and mailto", () => {
     expect(CallHandler.isSafeRedirectUrl("http://example.com")).toBe(true);
     expect(CallHandler.isSafeRedirectUrl("https://example.com")).toBe(true);

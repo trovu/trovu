@@ -112,6 +112,15 @@ test.describe("Homepage status states", () => {
     await expect(page.locator("#target-domain")).toContainText("https://www.google");
   });
 
+  test("should update the not_found query after another invalid submit", async ({ page }) => {
+    await openLoadedHomepage(page, "#country=gb&language=de&query=google&status=not_found");
+    await page.locator("#query").fill("wikipedia");
+    await page.locator("#query").press("Enter");
+    await expect(page).toHaveURL(/query=wikipedia/);
+    await expect(page.locator("#query")).toHaveValue("wikipedia");
+    await expect(page.getByText("No matching shortcut found.")).toBeVisible();
+  });
+
   test("should prefill the alternative query for deprecated shortcuts", async ({ page }) => {
     await openLoadedHomepage(page, "#country=gb&language=en&query=oldshortcut&status=deprecated&alternative=g%20berlin");
     await expect(page.locator("#query")).toHaveValue("g berlin");
