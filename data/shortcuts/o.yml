@@ -9389,6 +9389,22 @@ skapiec 0:
     alternative:
       query: .pl.skp
     created: '2025-05-17'
+skl 0:
+  url: https://www.skills.sh/
+  title: Skills.sh
+  tags:
+  - agents
+  - ai
+  - skills
+  examples:
+  - description: Go to the homepage
+  description: Skills are reusable capabilities for AI agents. Install them with a single command to enhance your agents with access to procedural knowledge.
+skl 1:
+  url: https://www.skills.sh/?q=<query>
+  include: skl 0
+  examples:
+  - arguments: google
+    description: Search for skills related to Google
 sl 0:
   include:
   - key: sl 0
