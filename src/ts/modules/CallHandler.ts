@@ -141,9 +141,7 @@ export default class CallHandler {
    */
   static getRedirectUrlToHome(env: Pick<Env, "buildUrlParamStr">, response: RedirectResponse): string {
     const params = Env.getParamsFromUrl();
-    if (params.query === "reload" || params.query === "debug:reload") {
-      delete params.query;
-    }
+    delete params.query;
     for (const property of ["alternative", "key", "namespace", "status"]) {
       if (response[property]) {
         params[property] = response[property];
