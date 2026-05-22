@@ -292,6 +292,18 @@ export default class Home {
       event.preventDefault();
     }
 
+    const useAndroidIntentRedirect = this.shouldUseAndroidIntentRedirect();
+    if (useAndroidIntentRedirect) {
+      const preloadedResponse = this.getPreloadedRedirectResponse(this.queryInput.value);
+      if (preloadedResponse?.status === "found" && typeof preloadedResponse.redirectUrl === "string") {
+        Home.redirect(preloadedResponse.redirectUrl, null, true);
+        return;
+      }
+    }
+
+    // Open while the submit gesture is still active; non-Android PWAs otherwise keep async redirects in-app.
+    const externalRedirectWindow = useAndroidIntentRedirect ? null : this.reserveExternalRedirectWindow();
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
@@ -304,6 +316,7 @@ export default class Home {
 
     // Send debug to /process.
     if (envQuery.debug) {
+      Home.closeReservedWindow(externalRedirectWindow);
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
@@ -315,10 +328,107 @@ export default class Home {
     if (response.status === "found") {
       redirectUrl = response.redirectUrl as string;
     } else {
+      Home.closeReservedWindow(externalRedirectWindow);
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    Home.redirect(redirectUrl, externalRedirectWindow, useAndroidIntentRedirect);
   };
+
+  shouldUseAndroidIntentRedirect(): boolean {
+    return this.env.isRunningStandalone() && Home.isAndroid();
+  }
+
+  getPreloadedRedirectResponse(query: string): RedirectResponse | null {
+    const queryParams = this.env.getQueryParams({ query });
+    if (queryParams.extraNamespaceName) {
+      return null;
+    }
+
+    const envQuery = new Env({
+      ...this.env,
+      ...queryParams,
+      query,
+      context: "index",
+      data: this.env.data,
+      namespaceInfos: this.env.namespaceInfos,
+      namespaces: this.env.namespaces,
+    });
+
+    return CallHandler.getRedirectResponse(envQuery);
+  }
+
+  static isAndroid(): boolean {
+    return /Android/i.test(window.navigator.userAgent);
+  }
+
+  reserveExternalRedirectWindow(): Window | null {
+    if (!this.env.isRunningStandalone()) {
+      return null;
+    }
+    try {
+      const externalRedirectWindow = window.open("", "_blank");
+      if (externalRedirectWindow) {
+        externalRedirectWindow.opener = null;
+      }
+      return externalRedirectWindow;
+    } catch {
+      return null;
+    }
+  }
+
+  static redirect(redirectUrl: string, externalRedirectWindow?: Window | null, useAndroidIntentRedirect = false) {
+    if (useAndroidIntentRedirect) {
+      Home.openAndroidIntentUrl(redirectUrl);
+      return;
+    }
+    if (externalRedirectWindow) {
+      externalRedirectWindow.location.href = redirectUrl;
+      return;
+    }
+    window.location.href = redirectUrl;
+  }
+
+  static openAndroidIntentUrl(redirectUrl: string) {
+    const intentUrl = Home.getAndroidIntentUrl(redirectUrl);
+    if (intentUrl === redirectUrl) {
+      window.location.href = redirectUrl;
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.href = intentUrl;
+    link.rel = "noopener";
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
+  static getAndroidIntentUrl(redirectUrl: string): string {
+    try {
+      const url = new URL(redirectUrl);
+      if (url.protocol !== "http:" && url.protocol !== "https:") {
+        return redirectUrl;
+      }
+      if (url.hash) {
+        return redirectUrl;
+      }
+
+      const path = `${url.host}${url.pathname}${url.search}`;
+      return `intent://${path}#Intent;scheme=${url.protocol.slice(
+        0,
+        -1,
+      )};package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(redirectUrl)};end`;
+    } catch {
+      return redirectUrl;
+    }
+  }
+
+  static closeReservedWindow(externalRedirectWindow?: Window | null) {
+    if (externalRedirectWindow) {
+      externalRedirectWindow.close();
+    }
+  }
 
   /**
    * On triggering reload
