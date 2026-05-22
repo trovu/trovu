@@ -982,6 +982,24 @@ bins 1:
   examples:
   - arguments: Freeware
     description: Search for "Freeware" in newsgroups
+bivica 0:
+  url: https://www.bivica.org/
+  title: Biblioteca Virtual de la Cooperación Alemana (Bivica)
+  tags:
+  - english
+  - germany
+  - library
+  - portuguese
+  - spanish
+  examples:
+  - description: Go to the homepage
+  description: Bivica is a digital library of resources about German development cooperation.
+bivica 1:
+  url: https://www.bivica.org/file/index?search_term=<query>
+  include: bivica 0
+  examples:
+  - arguments: climate change
+    description: Search for resources about "climate change"
 bkg 0:
   url: https://www.booking.com/
   title: Booking.com
