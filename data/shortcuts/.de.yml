@@ -1306,16 +1306,6 @@ getty 1:
   examples:
   - arguments: christmas
     description: search photos about christmas
-gh 0:
-  deprecated:
-    alternative:
-      query: gzh
-    created: '2026-05-13'
-gh 1:
-  deprecated:
-    alternative:
-      query: gzh <1>
-    created: '2026-05-13'
 gii 0:
   url: https://www.gesetze-im-internet.de/
   title: Gesetze im Internet
