@@ -20,3 +20,19 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
+lr 0:
+  url: https://larazon.bo/
+  title: La Razón (Bolivia)
+  tags:
+  - news
+  - newspaper
+  - spanish
+  examples:
+  - description: Ir a la página principal
+  description: Uno de los principales periódicos nacionales de Bolivia, con una amplia cobertura sobre política, economía y sociedad del país.
+lr 1:
+  url: https://larazon.bo/?s=<query>
+  include: lr 0
+  examples:
+  - arguments: Tarija
+    description: Buscar noticias sobre el departamento de Tarija en La Razón
