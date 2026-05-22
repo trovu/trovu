@@ -43,6 +43,22 @@ frv 1:
   include:
     key: frv 1
     namespace: ar
+ib 0:
+  url: https://www.infobae.com/
+  title: infobae
+  tags:
+  - latam
+  - news
+  - spanish
+  examples:
+  - description: Ir a la página principal
+  description: Sitio de noticias argentino que cubre noticias latinoamericanas e internacionales en español.
+ib 1:
+  url: https://www.infobae.com/buscador/?query=<query>
+  include: ib 0
+  examples:
+  - arguments: elecciones
+    description: Buscar "elecciones" en infobae
 last 1:
   deprecated:
     alternative:
