@@ -2703,6 +2703,20 @@ duden 1:
     alternative:
       query: de.dd <1>
     created: '2024-12-09'
+dw 0:
+  url: https://www.dw.com/
+  title: Deutsche Welle
+  tags:
+  - germany
+  - news
+  examples:
+  - description: Go to the homepage
+dw 1:
+  url: https://www.dw.com/search/?languageCode=<$language>&item=<query>
+  include: dw 0
+  examples:
+  - arguments: berlin
+    description: Search for News about Berlin in your language
 dwb 0:
   deprecated:
     alternative:

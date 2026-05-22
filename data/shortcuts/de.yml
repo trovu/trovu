@@ -562,13 +562,15 @@ dst 1:
   - arguments: wien
     description: Suche nach "wien"
 dw 0:
-  url: https://www.dw.com/
-  title: Deutsche Welle, Nachrichten auf Deutsch
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: dw
+    created: '2026-05-22'
 dw 1:
-  url: https://www.dw.com/search/de?searchNavigationId=9077&languageCode=de&origin=gN&item=<suche>
-  include: dw 0
+  deprecated:
+    alternative:
+      query: dw <1>
+    created: '2026-05-22'
 dwb 0:
   url: https://www.woerterbuchnetz.de/DWB
   title: Deutsches Wörterbuch von Jacob und Wilhelm Grimm
