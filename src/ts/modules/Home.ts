@@ -292,6 +292,9 @@ export default class Home {
       event.preventDefault();
     }
 
+    // Open while the submit gesture is still active; Android PWAs otherwise keep async redirects in-app.
+    const externalRedirectWindow = this.reserveExternalRedirectWindow();
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
@@ -304,6 +307,7 @@ export default class Home {
 
     // Send debug to /process.
     if (envQuery.debug) {
+      Home.closeReservedWindow(externalRedirectWindow);
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
@@ -315,10 +319,32 @@ export default class Home {
     if (response.status === "found") {
       redirectUrl = response.redirectUrl as string;
     } else {
+      Home.closeReservedWindow(externalRedirectWindow);
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    Env.navigateTo(redirectUrl, false, externalRedirectWindow);
   };
+
+  reserveExternalRedirectWindow(): Window | null {
+    if (!this.env.isRunningStandalone()) {
+      return null;
+    }
+    try {
+      const externalRedirectWindow = window.open("", "_blank");
+      if (externalRedirectWindow) {
+        externalRedirectWindow.opener = null;
+      }
+      return externalRedirectWindow;
+    } catch {
+      return null;
+    }
+  }
+
+  static closeReservedWindow(externalRedirectWindow?: Window | null) {
+    if (externalRedirectWindow) {
+      externalRedirectWindow.close();
+    }
+  }
 
   /**
    * On triggering reload

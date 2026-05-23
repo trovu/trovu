@@ -510,4 +510,75 @@ export default class Env {
   isRunningStandalone() {
     return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
   }
+
+  /**
+   * Check whether a URL resolves to a different origin than the current page.
+   *
+   * @param {string} url - Absolute or relative URL to test.
+   * @returns {boolean}
+   */
+  static isExternalUrl(url: string): boolean {
+    if (typeof window === "undefined") return false;
+    try {
+      return new URL(url, window.location.href).origin !== window.location.origin;
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Navigate to a URL, opening external URLs outside the PWA in standalone mode.
+   *
+   * On Android, window.open() and target="_blank" are both intercepted by the
+   * PWA shell and remain inside the browser, ignoring the user's default
+   * browser. The Android intent:// URI scheme bypasses this: it hands the URI
+   * to Android's app-chooser / default-browser intent dispatcher, so the URL
+   * opens in whatever browser the user has set as default.
+   *
+   * On iOS standalone mode, window.open(url, '_blank') correctly spawns a new
+   * browser window outside the PWA.
+   *
+   * @param {string}  url     - Target URL.
+   * @param {boolean} replace - Use history.replace instead of assign for internal nav.
+   * @param {Window | null} [externalRedirectWindow] - A pre-opened blank window reference for synchronous redirect.
+   */
+  static navigateTo(url: string, replace = false, externalRedirectWindow?: Window | null): void {
+    if (typeof window === "undefined") return;
+
+    if (externalRedirectWindow) {
+      externalRedirectWindow.location.href = url;
+      return;
+    }
+
+    const isStandaloneAndroid =
+      window.matchMedia("(display-mode: standalone)").matches &&
+      /android/i.test(navigator.userAgent);
+
+    const isStandaloneIos = Boolean((window.navigator as any).standalone);
+
+    if ((isStandaloneAndroid || isStandaloneIos) && Env.isExternalUrl(url)) {
+      if (isStandaloneAndroid) {
+        // Android standalone: build an intent URI so the OS dispatches to the default browser.
+        const parsed = new URL(url);
+        const scheme = parsed.protocol.replace(":", "");
+        const rest = `${parsed.host}${parsed.pathname}${parsed.search}${parsed.hash}`;
+        const intentUrl = `intent://${rest}#Intent;scheme=${scheme};action=android.intent.action.VIEW;end`;
+        const a = document.createElement("a");
+        a.href = intentUrl;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      } else {
+        // iOS standalone: window.open spawns a new browser window outside the PWA.
+        window.open(url, "_blank", "noopener");
+      }
+      return;
+    }
+
+    if (replace) {
+      window.location.replace(url);
+    } else {
+      window.location.href = url;
+    }
+  }
 }

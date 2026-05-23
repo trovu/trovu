@@ -1,3 +1,6 @@
+/**
+ * @jest-environment-options {"url": "https://trovu.net/process/index.html"}
+ */
 import Env from "./Env";
 import NamespaceFetcher from "./NamespaceFetcher";
 
@@ -175,6 +178,28 @@ describe("Env", () => {
       });
       expect(env.reload).toBeUndefined();
       expect(env.query).toBe("g foo");
+    });
+  });
+
+  describe("isExternalUrl", () => {
+    test("returns true for different origin", () => {
+      expect(Env.isExternalUrl("https://google.com/search?q=foo")).toBe(true);
+    });
+
+    test("returns false for same origin absolute URL", () => {
+      expect(Env.isExternalUrl("https://trovu.net/index.html")).toBe(false);
+    });
+
+    test("returns false for relative URL", () => {
+      expect(Env.isExternalUrl("../index.html#foo=bar")).toBe(false);
+    });
+
+    test("returns false for root-relative URL", () => {
+      expect(Env.isExternalUrl("/index.html")).toBe(false);
+    });
+
+    test("returns false for invalid URL", () => {
+      expect(Env.isExternalUrl("not a url :::")).toBe(false);
     });
   });
 });
