@@ -17,4 +17,4 @@ If you know FindFind.it, then you almost know how Trovu works. However, a few th
 -   Once you open Trovu, all shortcuts are loaded into your client and remain cached there, (until you [reload](../users/troubleshooting.md#i-edited-a-shortcut-but-it-has-no-effect)). So even if the Trovu server is down, you can keep using Trovu.
 -   If you have personal **user shortcuts**, for Trovu you host them on [your GitHub account, or on your web server](../users/advanced.md).
 
-Read more about how to [migrate from FindFind.it to Trovu](migrate.md).
+This page summarizes the main differences between FindFind.it and Trovu.

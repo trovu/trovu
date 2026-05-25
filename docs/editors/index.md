@@ -1,6 +1,6 @@
 # Editors
 
-You are welcome to contribute to Trovu [shortcuts](../shortcuts/namespaces.md), [cities](../shortcuts/urls.md#city), [code](https://github.com/trovu/trovu) and more.
+You are welcome to contribute to Trovu [shortcuts](../shortcuts/namespaces.md), [cities](../shortcuts/url.md#city), [code](https://github.com/trovu/trovu) and more.
 
 ## Edit directly or fork + pull request
 
