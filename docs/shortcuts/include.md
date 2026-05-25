@@ -1,6 +1,6 @@
 # shortcut.include
 
-Includes allow to use the same shortcut properties in different shortcuts. They are heavily used for dictionary shortcuts.
+Includes allow you to use the same shortcut properties in different shortcuts. They are heavily used for dictionary shortcuts.
 
 ## Simple includes
 
@@ -61,11 +61,11 @@ en 1:
         namespace: leo
 ```
 
-This can for example be set in one's user settings, to ensure using leo.org as the dictionary for English, no matter what is used in the site [namespaces](namespaces.md).
+This can, for example, be set in one's user settings to ensure that leo.org is used as the English dictionary, no matter which site [namespaces](namespaces.md) are used.
 
-## Multiple include propositions
+## Multiple include options
 
-`include:` may instead of only one `key:` (and `namespace:`) also contain several ones. For instance, in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml) we have:
+Instead of containing only one `key:` (and `namespace:`), `include:` may also contain several entries. For instance, in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml) we have:
 
 ```yaml
 ar 1:
@@ -84,7 +84,7 @@ ar 1:
           namespace: pka
 ```
 
-This shortcut for an Arabic dictionary tries first to include from [ard](https://github.com/trovu/trovu/tree/master/data/shortcuts/ard.yml), the namespace for arabdict.com. And there also exists:
+This shortcut for an Arabic dictionary first tries to include from [ard](https://github.com/trovu/trovu/tree/master/data/shortcuts/ard.yml), the namespace for arabdict.com. And there also exists:
 
 ```yaml
 ar 1:

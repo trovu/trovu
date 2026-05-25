@@ -9,7 +9,7 @@ Config and shortcut files are usually only fetched once, and after that are only
 You can reload by:
 
 - prefixing your query with `reload:`, e.g. `reload:g foobar`
-- sending a query only containing `reload`
+- sending a query containing only `reload`
 - opening the Trovu homepage with https://trovu.net/?#reload=1.
 
 ### Debugging mode
@@ -33,7 +33,7 @@ You can also combine debugging and reloading, e.g. `debug:reload:g foobar`
 
 This might be a caching issue.
 
-First, make sure if your edit arrived in [https://trovu.net/data.json](https://trovu.net/data.json) . It should get updated automatically by a GitHub webhook on the _git push_ event.
+First, make sure your edit has appeared in [https://trovu.net/data.json](https://trovu.net/data.json). It should be updated automatically by a GitHub webhook on the _git push_ event.
 
 Then, you can either
 

@@ -1,6 +1,6 @@
 # shortcut.url
 
-The `url:` item of a shortcut may contain placeholders. This page is about them.
+The `url:` item of a shortcut may contain placeholders. This page explains them.
 
 ## Example
 
@@ -10,7 +10,7 @@ Consider for instance the URL of the Google shortcut:
 url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8
 ```
 
-It contains 2 placeholders: `<query>` and `<$language>`.
+It contains two placeholders: `<query>` and `<$language>`.
 
 ## Placeholders
 
@@ -19,7 +19,7 @@ Placeholders are either
 - arguments (starting with `<` and ending with `>`): They are replaced with the input from the current query,
 - variables (starting with `<$` and ending with `>`): They are replaced with settings from the current configuration.
 
-The contents of a placeholder follows [YAML Flow Style](https://www.yaml.info/learn/flowstyle.html).
+The contents of a placeholder follow [YAML Flow Style](https://www.yaml.info/learn/flowstyle.html).
 
 ### Argument placeholders
 
@@ -111,4 +111,4 @@ Finally, with `<foo: {transform: uppercase}>` the output string can be transform
 
 ## Filling and submitting with userscripts
 
-If a website does not allow passing arguments via (GET) parameters, a solution can be targetting the search form, and then [letting the fields fill by a userscript](userscripts.md#fill-and-submit).
+If a website does not allow passing arguments via (GET) parameters, one solution is to target the search form and then [have the fields filled by a userscript](userscripts.md#fill-and-submit).

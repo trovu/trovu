@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-- NodeJS [version as stated here](https://github.com/trovu/trovu/blob/master/.nvmrc) (`node-version:`)
+- Node.js [version as stated here](https://github.com/trovu/trovu/blob/master/.nvmrc) (`node-version:`)
     - [How to install a specific version](https://chatgpt.com/share/ef365047-6653-48de-85b1-f7a4565ebfac)
-- npm (correct version should be automatically installed by NodeJS)
+- npm (the correct version should be installed automatically by Node.js)
 
 ## Configuration
 
@@ -40,7 +40,7 @@ npm run build          # Build the website including data
 npm run dev-server     # Run the local development server
 ```
 
-For building more, like the blog and the docs, have a look on the [GitHub workflow](https://github.com/trovu/trovu/blob/master/.github/workflows/deploy.yml).
+For building more, such as the blog and the docs, have a look at the [GitHub workflow](https://github.com/trovu/trovu/blob/master/.github/workflows/deploy.yml).
 
 Now, open the displayed URL of the local server in your browser. You should see the Trovu website.
 
@@ -60,8 +60,8 @@ npm run
 
 ## Add custom shortcuts
 
-If you want to add custom shortcuts to your local installation (that shall be available as [site namespaces](../shortcuts/namespaces.md)), simply put one (or more) YAML files into [/data/shortcuts/](https://github.com/trovu/trovu/tree/master/data/shortcuts). Then, run `npm run build` again.
+If you want to add custom shortcuts to your local installation (that should be available as [site namespaces](../shortcuts/namespaces.md)), simply put one or more YAML files into [/data/shortcuts/](https://github.com/trovu/trovu/tree/master/data/shortcuts). Then run `npm run build` again.
 
 ## Use Local Installation
 
-If you prefer a local installation over the use of the public version [trovu.net](https://trovu.net/), you can [set your local Trovu version as your default search engine](../users/integration.md) (just use your web server's domain or your localhost as its domain).
+If you prefer a local installation over using the public version [trovu.net](https://trovu.net/), you can [set your local Trovu version as your default search engine](../users/integration.md) by using your web server's domain or your localhost as its domain.

@@ -4,15 +4,15 @@ Projects similar to Trovu.
 
 ## [Yubnub](https://yubnub.org/)
 
-- It's also [OpenSource](https://github.com/JonathanAquino/yubnub), MIT license.
+- It is also [open source](https://github.com/JonathanAquino/yubnub), under the MIT license.
 - No custom (personal) shortcuts are possible.
-- Multiple arguments need more typing (-optionname argument)
+- Multiple arguments require more typing (`-optionname argument`).
 - English-centric: Dictionaries only from/to English. Trovu solves this with [namespaces](shortcuts/namespaces.md).
 - Yubnub processes queries on the server (so you share all your searches with them). Trovu [processes entirely in your browser](privacy.md).
 
 ## [DuckDuckGo](https://duckduckgo.com/)
 
-- Is a full web search engine
-- but also offers so-called [!bangs](https://duckduckgo.com/bangs)
+- It is a full web search engine,
+- but it also offers so-called [!bangs](https://duckduckgo.com/bangs).
 - Those bangs can only take 1 argument.
-- To add or edit them, one must message their support.
+- To add or edit them, you have to contact their support team.

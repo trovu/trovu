@@ -1,4 +1,4 @@
-# [Polygot Gathering](https://www.polyglotgathering.com/2024/en/)
+# [Polyglot Gathering](https://www.polyglotgathering.com/2024/en/)
 
 -   es arbol
 -   Change language and country
