@@ -2,7 +2,7 @@ import Env from "./Env";
 import NamespaceFetcher from "./NamespaceFetcher";
 
 const getUrlHashFooBar = () => {
-  const hash = "foo=bar&baz=boo";
+  const hash = "query=g%20foo&language=de&debug=1&logger=evil&data=evil";
   return hash;
 };
 
@@ -107,12 +107,25 @@ describe("Env", () => {
 
   test("getParamsFromUrl", () => {
     Env.getUrlHash = getUrlHashFooBar;
-    expect(Env.getParamsFromUrl()).toEqual({ foo: "bar", baz: "boo" });
+    expect(Env.getParamsFromUrl()).toEqual({ query: "g foo", language: "de", debug: "1" });
   });
   test("getBoolParams", () => {
     expect(Env.getBoolParams({ debug: "1", reload: "1", foo: "1" })).toEqual({
       debug: true,
       reload: true,
+    });
+  });
+  test("pickUrlParams", () => {
+    expect(
+      Env.pickUrlParams({
+        query: "g foo",
+        github: "johndoe",
+        logger: "evil",
+        data: "evil",
+      }),
+    ).toEqual({
+      query: "g foo",
+      github: "johndoe",
     });
   });
 
