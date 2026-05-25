@@ -7,15 +7,18 @@ on:
     branches:
       - master
     workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # actions/checkout@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # actions/setup-node@v4
         with:
           node-version-file: .nvmrc
       - run: npm clean-install
+      - run: npm audit signatures
       - run: npx playwright install --with-deps chromium
       - run: npm run lint-yaml
       - name: Check code formatting
@@ -28,10 +31,10 @@ jobs:
       - run: npm run validate-data
       - run: npm run test-calls
       - run: npm run test-fe
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # actions/setup-python@v5
         with:
           python-version: 3.11.9
-      - uses: actions/cache@v4
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # actions/cache@v4
         with:
           path: ~/.local/share/virtualenvs
           key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
@@ -40,7 +43,7 @@ jobs:
       - run: pipenv install
       - run: pipenv run mkdocs build
       - run: npm run build-jsdoc
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # actions/upload-artifact@v4
         with:
           name: public-directory
           path: dist/public/
@@ -49,12 +52,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository == 'trovu/trovu' && github.event_name == 'push'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # actions/checkout@v4
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # actions/download-artifact@v4
         with:
           name: public-directory
           path: dist/public
-      - uses: JamesIves/github-pages-deploy-action@v4
+      - uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/public/
           repository-name: trovu/trovu-deploy
