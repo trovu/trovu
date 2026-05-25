@@ -155,6 +155,25 @@ export interface EnvPopulateOptions {
   removeNamespaces?: string[];
 }
 
+export const URL_PARAM_DEFINITIONS = {
+  alternative: { isBoolean: false },
+  configUrl: { isBoolean: false },
+  context: { isBoolean: false },
+  country: { isBoolean: false },
+  debug: { isBoolean: true },
+  defaultKeyword: { isBoolean: false },
+  github: { isBoolean: false },
+  key: { isBoolean: false },
+  language: { isBoolean: false },
+  namespace: { isBoolean: false },
+  query: { isBoolean: false },
+  reload: { isBoolean: true },
+  status: { isBoolean: false },
+} as const;
+
+export type UrlParamName = keyof typeof URL_PARAM_DEFINITIONS;
+export const URL_PARAM_NAMES = Object.keys(URL_PARAM_DEFINITIONS) as UrlParamName[];
+
 export interface EnvParams {
   github?: string;
   configUrl?: string;
