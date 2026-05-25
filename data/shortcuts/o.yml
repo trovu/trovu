@@ -9231,6 +9231,25 @@ scala 1:
   examples:
   - arguments: AnyVal
     description: Search for "AnyVal"
+scih 0:
+  url: https://sci-hub.box/
+  title: Sci Hub
+  tags:
+  - research
+  - scholarly-articles
+  - science
+  examples:
+  - description: Go to the homepage
+  description: Provides free access to millions of research papers and articles.
+scih 1:
+  url: https://sci-hub.box/https://sci-hub.box/match/<doi or query>
+  title: Sci Hub
+  include: scih 0
+  examples:
+  - arguments: 10.1080/10509585.2015.1092083
+    description: Search for the article with the given DOI
+  - arguments: quantum computing
+    description: Search for articles about quantum computing
 scl 0:
   url: https://soundcloud.com/
   title: Soundcloud
