@@ -17,6 +17,7 @@ import type {
   TrovuConfig,
   TrovuData,
 } from "../types";
+import { URL_PARAM_DEFINITIONS, URL_PARAM_NAMES } from "../types";
 
 /** Set and remember the environment. */
 
@@ -150,9 +151,9 @@ export default class Env {
   }
 
   async setContext() {
-    const params = Env.getParamsFromUrl();
-    if (params.context) {
-      this.context = params.context;
+    const { context } = Env.getParamsFromUrl();
+    if (context) {
+      this.context = context;
     }
   }
 
@@ -266,12 +267,28 @@ export default class Env {
 
   static getBoolParams(params: EnvParams): Partial<EnvParams> {
     const boolParams: Partial<EnvParams> = {};
-    for (const paramName of ["debug", "reload"]) {
+    const mutableBoolParams = boolParams as Record<string, boolean>;
+    for (const paramName of URL_PARAM_NAMES) {
+      if (!URL_PARAM_DEFINITIONS[paramName].isBoolean) {
+        continue;
+      }
       if (params[paramName] === "1") {
-        boolParams[paramName] = true;
+        mutableBoolParams[paramName] = true;
       }
     }
     return boolParams;
+  }
+
+  static pickUrlParams(params: Record<string, unknown>): EnvParams {
+    const pickedParams: EnvParams = {};
+    const mutablePickedParams = pickedParams as Record<string, unknown>;
+    for (const paramName of URL_PARAM_NAMES) {
+      const value = params[paramName];
+      if (value !== undefined) {
+        mutablePickedParams[paramName] = value;
+      }
+    }
+    return pickedParams;
   }
 
   /**
@@ -494,11 +511,11 @@ export default class Env {
 
   static getParamsFromUrl(): EnvParams {
     const urlSearchParams = this.getUrlSearchParams();
-    const params: EnvParams = {};
+    const params: Record<string, string> = {};
     urlSearchParams.forEach((value, key) => {
       params[key] = value;
     });
-    return params;
+    return this.pickUrlParams(params);
   }
 
   static getUrlSearchParams() {
