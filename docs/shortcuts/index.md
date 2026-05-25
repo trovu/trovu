@@ -2,9 +2,9 @@
 
 Shortcuts are defined in YAML files, organized by [namespaces](namespaces.md). In each file, shortcuts are an associative array, with `KEYWORD ARGUMENT_COUNT` as its key. Keys must be unique.
 
-For the value, there is a short and a long notation possible. Curated shortcuts in `/data` should follow the long notation.
+For the value, both short and long notation are possible. Curated shortcuts in `/data` should follow the long notation.
 
-You can find a detailled definition in the public [schema](https://trovu.net/schema/shortcuts.yml).
+You can find a detailed definition in the public [schema](https://trovu.net/schema/shortcuts.yml).
 
 ### Short notation
 
@@ -42,7 +42,7 @@ examplekeyword 2:
         - custom
 ```
 
-These attributes serve only for informational purposes, they have no effect on which shortcut is matched to a query:
+These attributes serve informational purposes only; they have no effect on which shortcut is matched to a query:
 
 - The `title:` can be any string. It will be shown in the list of shortcuts on the homepage.
 - `description:` can be a longer string. It will be shown in the list of shortcuts when a shortcut is expanded.
@@ -60,7 +60,7 @@ examplekeyword 2:
       description: Search example.com for "foo" and "bar"
 ```
 
-An example must have a `description` and, if there are >0 arguments, also an `arguments:` string. For the query of the example call, the arguments will be preceded with the keyword.
+An example must have a `description` and, if there are >0 arguments, also an `arguments:` string. For the query of the example call, the arguments will be preceded by the keyword.
 
 Instead of `arguments:`, one can also set a full `query:`. This can be useful for giving an example with an extra namespace, e.g. `query: fr.w berlin`.
 

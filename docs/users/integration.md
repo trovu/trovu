@@ -1,6 +1,6 @@
 # Use Trovu on your device
 
-Quicklinks:
+Quick links:
 
 - [Firefox browser add-on](#browser-add-on)
 - [Chrome browser add-on](#browser-extension)
@@ -30,7 +30,7 @@ With Option 2, you maintain greater control and predictability over your searche
 
 #### Browser add-on
 
-The easiest way to use Trovu in Firefox is the [browser add-on](https://addons.mozilla.org/firefox/addon/trovu/). It allows you to set keyboard shortcuts which open a Trovu input with suggestions in a new tab or window.
+The easiest way to use Trovu in Firefox is the [browser add-on](https://addons.mozilla.org/firefox/addon/trovu/). It allows you to set keyboard shortcuts that open a Trovu input with suggestions in a new tab or window.
 
 ![Screenshot](img/web-ext.png)
 
@@ -59,7 +59,7 @@ However, no shortcut suggestions are available here.
 
 #### Browser extension
 
-The easiest way to use Trovu in Chrome is the [browser extension](https://chromewebstore.google.com/detail/trovunet/iadcllehbnbepkalhgljhdfhjbkgkajo). It allows you to set keyboard shortcuts which open a Trovu input with suggestions in a new tab or window.
+The easiest way to use Trovu in Chrome is the [browser extension](https://chromewebstore.google.com/detail/trovunet/iadcllehbnbepkalhgljhdfhjbkgkajo). It allows you to set keyboard shortcuts that open a Trovu input with suggestions in a new tab or window.
 
 ![Screenshot](img/web-ext.png)
 
@@ -78,12 +78,12 @@ However, no shortcut suggestions are available here.
 
         chrome://settings/searchEngines
 
-1.  There, right to **Manage search engines** is a search field. Search for _Trovu_.
+1.  There, to the right of **Manage search engines**, is a search field. Search for _Trovu_.
 1.  Now you can either
     - Make Trovu your default search engine:
-        1.  When found, click the 3 dots right to it.
+        1.  When you find it, click the three dots to the right of it.
         1.  Select **Make default**.
-    - Set a keyword for Trovu, and use it only with this keyword
+    - Set a keyword for Trovu and use it only with that keyword:
         - Click the 🖊️ pen.
         - Edit _shortcut_, e.g. to `t`.
 
@@ -96,11 +96,11 @@ Use one of these URL templates and add it where your browser allows to set custo
 
 (Note the `process/` part in the URL! You may need to adjust your `country`, `language` or `github` parameter.)
 
-## Mac OS
+## macOS
 
 ### Raycast
 
-[Raycast](<https://en.wikipedia.org/wiki/Raycast_(software)>) is an extendable launcher for Mac OS. The [Trovu extension](https://www.raycast.com/jorges/trovu) allows calling Trovu shortcuts from everywhere in Mac OS, incl. an interface showing shortcut suggestions:
+[Raycast](<https://en.wikipedia.org/wiki/Raycast_(software)>) is an extendable launcher for macOS. The [Trovu extension](https://www.raycast.com/jorges/trovu) allows calling Trovu shortcuts from anywhere in macOS, including an interface that shows shortcut suggestions:
 
 ![Screenshot](img/raycast.jpg)
 
@@ -108,9 +108,9 @@ Use one of these URL templates and add it where your browser allows to set custo
 
 ### Simple Search
 
-A free, generic app, allows also adding custom search engines.
+A free, generic app that also allows adding custom search engines.
 
-1. With your Android device, [visit the app in the Play store](https://play.google.com/store/apps/details?id=de.tobiasbielefeld.searchbar)
+1. With your Android device, [visit the app in the Play Store](https://play.google.com/store/apps/details?id=de.tobiasbielefeld.searchbar)
 1. Install it on your device.
 1. Open the app.
 1. Tap on the 3 dots in the upper right corner
@@ -124,18 +124,18 @@ A free, generic app, allows also adding custom search engines.
 
 ### SearchBar Ex - Search Widget
 
-This a free, generic app to search any search engine that supports URL with a `%s` placeholder.
+This is a free, generic app for searching any search engine that supports a URL with a `%s` placeholder.
 
-1. With your Android device, [visit the app in the Play store](https://play.google.com/store/apps/details?id=com.devhomc.search)
+1. With your Android device, [visit the app in the Play Store](https://play.google.com/store/apps/details?id=com.devhomc.search)
 1. Install it on your device.
 1. Open the app.
-1. Left to the search input, click on the icon.
-1. At the botton, click **+ Add**
+1. To the left of the search input, click the icon.
+1. At the bottom, click **+ Add**
 1. Select **Search**
 1. Select **Custom Search**
 1. For _name_, enter "Trovu"
 1. For _URL_, enter a URL template like in [Browser / other](#other).
-1. Click the back button of the app in the upper left corner
+1. Click the back button of the app in the upper left corner.
 
 Now, you can enter Trovu queries which will be redirected to your browser.
 
@@ -170,7 +170,7 @@ How to set up:
 1. Enter the _URL to use for search_, as described under [Other](#other).
 1. Enter a name, e.g. `Trovu`
 1. Tap _OK_
-1. Scroll all the way down to find your newly added search provider. Make sure the checkbox next to it is ticked. You may also use the handle on the right to move it all the way to the top of the list, so search with Trovu will get prioritized.
+1. Scroll all the way down to find your newly added search provider. Make sure the checkbox next to it is ticked. You may also use the handle on the right to move it all the way to the top of the list, so searches with Trovu are prioritized.
 1. Tap the home button (or perform the corresponding gesture) to leave the settings app.
 
 How to use:

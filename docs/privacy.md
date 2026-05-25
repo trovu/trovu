@@ -14,12 +14,12 @@ the entire processing happens in your browser.
 ## How a Query is Processed
 
 Every query is attempted to be matched with a shortcut.
-Shortcuts are organized by [Namespaces](shortcuts/namespaces.md):
+Shortcuts are organized by [Namespaces](shortcuts/namespaces.md).
 Each shortcut belongs exactly to one namespace.
 
 ### Namespace Setting
 
-When calling Trovu without query parameters, three default namespaces will be set based on the browser's language settings.
+When calling Trovu without query parameters, three default namespaces are set based on the browser's language settings.
 For instance, if the browser's language is `de-DE`, these namespaces and their shortcut files will be used:
 
 -   [o.yml](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml) – planet namespace
@@ -33,17 +33,17 @@ Let's look at the processing of a query:
 1. A query comes in, e.g., `g foobar`.
 2. The current namespace setting is `o,de,.de`.
 3. Given the namespaces, all the shortcuts are fetched from a [precompiled JSON file](/data.json) (based on the [data in the GitHub repo](https://github.com/trovu/trovu/tree/master/data/shortcuts)) into a JavaScript variable in the client.
-    - The `fetch()` call also checks if the JSON is already in the browser cache, and only requests it from remote if is not cached yet.
+    - The `fetch()` call also checks whether the JSON is already in the browser cache, and only requests it remotely if it is not cached yet.
     - To reload the shortcuts, use the `reload` command (see below).
 4. The query is parsed – in the client by JavaScript – into
     - keyword: `g`
     - argument: `foobar`
-5. Based on the query and the namespace settings, the loaded shortcuts are searched whether they match a query with the keyword `g` and one argument, i.e., if they contain a shortcut keyed with `g 1`.
+5. Based on the query and the namespace settings, the loaded shortcuts are checked to see whether they match a query with the keyword `g` and one argument, i.e., whether they contain a shortcut keyed with `g 1`.
 6. We find two matches:
     - one in [o](https://github.com/trovu/trovu/tree/master/data/shortcuts/o.yml), pointing to `google.com`
     - and one in [.de](https://github.com/trovu/trovu/tree/master/data/shortcuts/.de.yml), pointing to `google.de`
 7. From the found matches, the results are evaluated in namespace order.
-8. Since namespace `.de` has higher priority than `o`, its URL is used for further processing
+8. Since namespace `.de` has higher priority than `o`, its URL is used for further processing:
     - `https://www.google.de/search?hl=<$language>&q=<query>&ie=utf-8`
 9. The `<$language>` placeholder is replaced with the variable `de`.
 10. The `<query>` placeholder is replaced with the query argument `foobar`.

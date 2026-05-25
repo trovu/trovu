@@ -2,7 +2,7 @@
 
 ## fill-and-submit
 
-Userscript for autofilling and submitting forms on target websites. This may help when queries cannot be passed by URL. Then one can define inputs by their CSS selectors that shall be filled with URL-passed arguments once the destination website is loaded, and a form button that shall be clicked automatically by JavaScript.
+Userscript for autofilling and submitting forms on target websites. This may help when queries cannot be passed by URL. You can then define inputs by their CSS selectors, which will be filled with URL-passed arguments once the destination website is loaded, as well as a form button that will be clicked automatically by JavaScript.
 
 ### For users
 
@@ -15,12 +15,12 @@ Userscript for autofilling and submitting forms on target websites. This may hel
 #### Install
 
 1. In your browser, open [https://trovu.net/userscripts/fill-and-submit.user.js](https://trovu.net/userscripts/fill-and-submit.user.js)
-2. If you have installed the requirements before there should be now a dialog opening offering to install the user script.
+2. If you have installed the requirements beforehand, a dialog should now open and offer to install the userscript.
 3. Install and you are done.
 
 ### For shortcut editors
 
-#### Creating a shortcut that use the userscript
+#### Creating a shortcut that uses the userscript
 
 The [shortcut URL](url.md) should look like this (line breaks only for clarity):
 
@@ -32,9 +32,9 @@ So to make use of the userscript, add a hash parameter (after a `#`), called `tr
 
 Given the example above, it:
 
-1. calls the URL
-2. fills input field found with CSS selector `#simpleSearchForm:fpSearch:input` with value from `<query>`
-3. submits form with submit button selected by `[id^="simpleSearchForm:fpSearch:j"]`
+1. opens the URL
+2. fills the input field found by the CSS selector `#simpleSearchForm:fpSearch:input` with the value from `<query>`
+3. submits the form with the submit button selected by `[id^="simpleSearchForm:fpSearch:j"]`
 
 #### Documentation:
 
@@ -44,9 +44,9 @@ Given the example above, it:
     -   `trovu[fill][selector2]=value2`
     -   `...`
 
--   `trovu[submit]`: string with selector of element to click on.
+-   `trovu[submit]`: string with the selector of the element to click.
 
-##### Notation: selector string must escape some chars:
+##### Notation: the selector string must escape some characters:
 
 -   `:` = `\:`
 -   `.` = `\.`

@@ -2,7 +2,7 @@
 
 You can create and manage your own user shortcuts and set advanced settings via GitHub, or a self-hosted config file.
 
-There is also this [tutorial video](https://www.youtube.com/watch?v=DA9GjWr4WbY).
+There is also a [tutorial video](https://www.youtube.com/watch?v=DA9GjWr4WbY).
 
 ## Set up a custom configuration
 
@@ -43,8 +43,8 @@ namespaces:
 
 This is an array of the [namespaces](../shortcuts/namespaces.md) you want to use. Every entry may be either
 
-- a string: Then it refers to an (official) site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts in there are curated by the Trovu community.
-- key/value pairs, then they refer to a user namespace, e.g. your (or someone else's) user namespace in GitHub. Read more below.
+- a string: Then it refers to an official site namespace, i.e. one in the [`/data` subdirectory](https://github.com/trovu/trovu/tree/master/data/) repository. Shortcuts there are curated by the Trovu community.
+- key/value pairs: Then they refer to a user namespace, e.g. your own or someone else's user namespace on GitHub. Read more below.
 
 The **order** is also relevant: The later the namespace appears in the list, the higher priority it has. So in the example above, shortcuts in `mydomain` have the highest precedence.
 
@@ -90,7 +90,7 @@ namespaces:
               url: https://example.com/
 ```
 
-Define a namespace with shortcuts just right here.
+Define a namespace with shortcuts right here.
 
 (Beware: Unlike having them in a separate `shortcuts.yml`, this approach makes it impossible for others to use them.)
 
@@ -100,7 +100,7 @@ Define a namespace with shortcuts just right here.
 defaultKeyword: g
 ```
 
-If no keyword is recognized in a query, this one will be used. Useful for setting up a much used shortcut.
+If no keyword is recognized in a query, this one will be used. This is useful for setting up a frequently used shortcut.
 
 ### Language
 
@@ -116,7 +116,7 @@ For Wikipedia in your language (or other shortcuts using `<$language>`). Basical
 country: de
 ```
 
-For shortcuts that use `<$country>` in their URL. Works similarly as `<$language>`.
+For shortcuts that use `<$country>` in their URL. This works similarly to `<$language>`.
 
 ## Personal shortcuts
 

@@ -1,10 +1,10 @@
 # Content policy
 
-This policy is for our **[curated shortcuts](https://github.com/trovu/trovu/tree/master/data/shortcuts)**, and how they should look like.
+This policy is for our **[curated shortcuts](https://github.com/trovu/trovu/tree/master/data/shortcuts)** and how they should look.
 
 Note that you can [add any shortcut to your user repository](../users/advanced.md#personal-shortcuts), completely ignoring this policy.
 
-_Caveat: You might note that many curated shortcuts at this moment don't match the listed criteria. This is because Trovu's first version (named **Serchilo**) has existed since 2005, with user-created shortcuts available since 2007, and this policy started to be written in 2023. Thus, the goal is to finally define some standards and then slowly applying them, with as little as possible breaking of existing user habits._
+_Caveat: You may notice that many curated shortcuts do not currently match the listed criteria. This is because Trovu's first version (named **Serchilo**) has existed since 2005, with user-created shortcuts available since 2007, while this policy only started being written in 2023. The goal is therefore to define standards and then apply them gradually, while breaking existing user habits as little as possible._
 
 ## Shortcuts
 
@@ -38,7 +38,7 @@ If a website is only in English, create the shortcut in `o`.
 
 Many users use Trovu with a [default keyword](../users/advanced.md#default-keyword): They can enter any query, and if it's not matched with a shortcut, the default keyword will be used – often it refers to Google.
 
-Thus, such users often perform their Google searches without `g` – because it will be applied automatically if not shortcut is found.
+Thus, such users often perform their Google searches without `g`, because it will be applied automatically if no shortcut is found.
 
 However, if there _is_ a shortcut with a keyword `apple` or `app`, this breaks.
 
@@ -53,19 +53,19 @@ The rule of thumb: The more popular the website, the shorter may be its keyword.
 
 ### 1-letter keywords: Only for top 50
 
-The English alphabet has 26 Latin letters. Keyword of only 1 letter should therefore be only applied if the website belongs to the top 50 in visitor's count of the world (namespace `o`), to minimize the likelihood of clashes.
+The English alphabet has 26 Latin letters. A keyword of only 1 letter should therefore be used only if the website belongs to the top 50 worldwide by visitor count (namespace `o`), to minimize the likelihood of clashes.
 
-If the shortcut shall belong to a language or country namespace, then its website should be top 50 of that country.
+If the shortcut should belong to a language or country namespace, then its website should be in the top 50 for that country.
 
 ### 2-letter keywords: Language codes have priority
 
 If a two-letter combination corresponds to an [ISO-639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Table_of_all_possible_two_letter_codes) (e.g., `en`, `fr`, `de`), the keyword should be treated as a dictionary for that language.
 
-It may only be used as a keyword for other purposes if it does not match a language code."
+It may only be used as a keyword for other purposes if it does not match a language code.
 
 ### Abbreviate by first sounds of words and/or syllables
 
-A good keyword shall be easily memorable, and also not a word itself. We try to achieve this by taking the first letters of the website's name (if it contains multiple words) or syllables. For example:
+A good keyword should be easy to remember and should not be a word itself. We try to achieve this by taking the first letters of the website's name (if it contains multiple words) or syllables. For example:
 
 - `fb` for _FaceBook_
 - `db` for _Deutsche Bahn_

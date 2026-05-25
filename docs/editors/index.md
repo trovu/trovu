@@ -4,7 +4,7 @@ You are welcome to contribute to Trovu [shortcuts](../shortcuts/namespaces.md), 
 
 ## Edit directly or fork + pull request
 
-Members of the [editors](https://github.com/orgs/trovu/teams/editors) team can edit directly the [Trovu repo](https://github.com/trovu/trovu). Others please fork and edit it, and create a pull request.
+Members of the [editors](https://github.com/orgs/trovu/teams/editors) team can edit the [Trovu repo](https://github.com/trovu/trovu) directly. Others, please fork it, edit it, and create a pull request.
 
 ## Contribute shortcuts
 
@@ -22,8 +22,8 @@ Documentation lives in the [/docs](https://github.com/trovu/trovu/tree/master/do
 
 For every contribution to the monorepo, be it data (shortcuts) or documentation, be aware that it needs to be deployed. This happens automatically after changes to the `master` branch.
 
-You can follow the execution of the action execution on [GitHub Actions](https://github.com/trovu/trovu/actions). Seconds after it finished successfully, the changes should be published on [trovu.net](https://trovu.net/)
+You can follow the workflow run on [GitHub Actions](https://github.com/trovu/trovu/actions). Seconds after it finishes successfully, the changes should be published on [trovu.net](https://trovu.net/).
 
-During deployment, shortcuts and other contents from the [/data](https://github.com/trovu/trovu/tree/master/data) directory get compiled into [trovu.net/data.json](https://trovu.net/data.json). This is your first place to check if anything does not work as expected.
+During deployment, shortcuts and other contents from the [/data](https://github.com/trovu/trovu/tree/master/data) directory are compiled into [trovu.net/data.json](https://trovu.net/data.json). This is the first place to check if anything does not work as expected.
 
 Before deployment, the current build is pushed to [trovu/trovu-deploy](https://github.com/trovu/trovu-deploy). This is the second place to check if your change is missing.
