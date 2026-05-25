@@ -45,7 +45,25 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    const isStandalone = window.matchMedia(
+      "(display-mode: standalone)",
+    ).matches;
+    if (isStandalone) {
+      const a = document.createElement("a");
+      a.setAttribute("href", redirectUrl);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener noreferrer");
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        if (a.parentNode) {
+          a.parentNode.removeChild(a);
+        }
+      }, 100);
+    } else {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
