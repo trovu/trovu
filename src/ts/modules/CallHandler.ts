@@ -45,7 +45,66 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.redirect(redirectUrl, env.isRunningStandalone(), true);
+  }
+
+  /**
+   * Safely redirect external target URLs out of the PWA standalone wrapper.
+   *
+   * @param {string} redirectUrl  - The target URL.
+   * @param {boolean} isStandalone - Whether the app is running in PWA standalone mode.
+   * @param {boolean} replace     - Whether to use location.replace instead of location.href.
+   */
+  static redirect(redirectUrl: string, isStandalone: boolean, replace = false) {
+    if (isStandalone && /Android/i.test(window.navigator.userAgent)) {
+      try {
+        const url = new URL(redirectUrl);
+        // Only attempt intent redirection for standard web protocols
+        if ((url.protocol === "http:" || url.protocol === "https:") && !url.hash) {
+          const path = `${url.host}${url.pathname}${url.search}`;
+          const intentUrl = `intent://${path}#Intent;scheme=${url.protocol.slice(
+            0,
+            -1,
+          )};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;end;`;
+
+          const link = document.createElement("a");
+          link.href = intentUrl;
+          link.rel = "noopener";
+          link.style.display = "none";
+          document.body.appendChild(link);
+          link.click();
+
+          setTimeout(() => {
+            if (link.parentNode) {
+              link.parentNode.removeChild(link);
+            }
+          }, 100);
+          return;
+        }
+      } catch {
+        // Fallback to standard redirect if URL parsing fails
+      }
+    }
+
+    if (isStandalone) {
+      // For iOS and other non-Android PWA standalone environments, use a blank window to escape PWA container.
+      try {
+        const externalRedirectWindow = window.open("", "_blank");
+        if (externalRedirectWindow) {
+          externalRedirectWindow.opener = null;
+          externalRedirectWindow.location.href = redirectUrl;
+          return;
+        }
+      } catch {
+        // Fallback to standard redirect
+      }
+    }
+
+    if (replace) {
+      window.location.replace(redirectUrl);
+    } else {
+      window.location.href = redirectUrl;
+    }
   }
 
   /**
