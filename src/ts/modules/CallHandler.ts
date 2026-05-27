@@ -31,7 +31,8 @@ export default class CallHandler {
 
     const response = this.getRedirectResponse(env);
 
-    if (response.status === "found") {
+    const foundTarget = response.status === "found";
+    if (foundTarget) {
       redirectUrl = response.redirectUrl as string;
     } else {
       redirectUrl = this.getRedirectUrlToHome(env, response);
@@ -45,7 +46,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    window.location.replace(this.getNavigationUrl(redirectUrl, foundTarget));
   }
 
   /**
@@ -130,6 +131,44 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  static getNavigationUrl(redirectUrl: string, foundTarget = false): string {
+    if (!foundTarget || !this.shouldUseAndroidIntent()) {
+      return redirectUrl;
+    }
+    return this.getAndroidIntentUrl(redirectUrl) || redirectUrl;
+  }
+
+  static shouldUseAndroidIntent(): boolean {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    const navigator = window.navigator as Navigator & { standalone?: boolean };
+    const userAgent = navigator.userAgent || "";
+    const standalone =
+      Boolean(navigator.standalone) || Boolean(window.matchMedia?.("(display-mode: standalone)").matches);
+
+    return standalone && /Android/i.test(userAgent);
+  }
+
+  static getAndroidIntentUrl(redirectUrl: string): string | false {
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(redirectUrl);
+    } catch {
+      return false;
+    }
+
+    if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+      return false;
+    }
+
+    const scheme = parsedUrl.protocol.slice(0, -1);
+    const path = `${parsedUrl.host}${parsedUrl.pathname}${parsedUrl.search}`;
+    const fallbackUrl = encodeURIComponent(redirectUrl);
+    return `intent://${path}#Intent;scheme=${scheme};S.browser_fallback_url=${fallbackUrl};end`;
   }
 
   /**
