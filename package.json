@@ -19,7 +19,7 @@
     "watch": "rollup --config --watch",
     "serve": "http-server ./dist/public/ --port 8081 --cors",
     "validate-data": "node -r esm src/js/cli.js validate-data",
-    "compile-data": "node -r esm src/js/cli.js compile-data --output ./dist/public/data.json",
+    "compile-data": "node scripts/compile-data.cjs",
     "normalize-data": "node -r esm src/js/cli.js normalize-data",
     "clean": "rm -r dist/",
     "sync": "rsync -vr --delete-after dist/public/ ntro:~/trovu.net/",
