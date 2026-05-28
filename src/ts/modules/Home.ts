@@ -314,6 +314,12 @@ export default class Home {
     let redirectUrl: string;
     if (response.status === "found") {
       redirectUrl = response.redirectUrl as string;
+      if (envQuery.isRunningStandalone()) {
+        window.open(redirectUrl, "_blank");
+        this.queryInput.value = "";
+        this.toggleByQuery();
+        return;
+      }
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
