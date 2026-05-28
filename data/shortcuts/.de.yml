@@ -5566,6 +5566,21 @@ radar 0:
   - weather
   examples:
   - description: Gehe zur Startseite
+rbb 0:
+  url: https://www.rbb24.de/
+  title: RBB24
+  tags:
+  - berlin
+  - news
+  examples:
+  - description: Gehe zur Startseite
+  description: RBB24 ist die Nachrichtenplattform des Rundfunks Berlin-Brandenburg (RBB) mit aktuellen Informationen, Videos und Livestreams aus der Region Berlin und Brandenburg.
+rbb 1:
+  url: https://www.rbb-online.de/suche/#searchform_q__<Suche>
+  include: rbb 0
+  examples:
+  - arguments: mitte
+    description: Suche nach Artikeln über Mitte
 rea 0:
   url: https://www.rea-getraenke.de/
   title: Rea Getränke
