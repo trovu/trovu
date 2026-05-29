@@ -66,18 +66,27 @@ export default class CallHandler {
             redirectUrl,
           )};end;`;
 
-          const link = document.createElement("a");
-          link.href = intentUrl;
-          link.rel = "noopener";
-          link.style.display = "none";
-          document.body.appendChild(link);
-          link.click();
+          // Use window.location.href — NOT link.click().
+          // Chrome ~83+ silently blocks programmatic link.click() on intent://
+          // anchors because the synthetic MouseEvent has isTrusted=false.
+          // window.location.href is evaluated against the live user-activation
+          // state, which is still valid in the synchronous submit handler stack.
+          window.location.href = intentUrl;
 
-          setTimeout(() => {
-            if (link.parentNode) {
-              link.parentNode.removeChild(link);
-            }
-          }, 100);
+          // If Chrome silently blocks the intent (page stays visible — e.g.
+          // user-activation has already expired in the async fallback path),
+          // fall back to plain navigation after 500 ms so the user at least
+          // gets a Chrome Custom Tab instead of nothing.
+          const fallbackTimer = setTimeout(() => {
+            window.location.href = redirectUrl;
+          }, 500);
+          document.addEventListener(
+            "visibilitychange",
+            () => {
+              if (document.hidden) clearTimeout(fallbackTimer);
+            },
+            { once: true },
+          );
           return;
         }
       } catch {

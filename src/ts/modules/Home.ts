@@ -293,10 +293,13 @@ export default class Home {
     }
 
     const isStandalone = this.env.isRunningStandalone();
+    const isAndroid = /Android/i.test(window.navigator.userAgent);
     const query = this.queryInput.value;
 
-    // Try to resolve the redirect URL SYNCHRONOUSLY to preserve the user gesture.
-    // If successful and we are in an Android PWA, we can execute the intent breakout instantly.
+    // ── SYNC PATH ──────────────────────────────────────────────────────────
+    // Resolve the redirect using the already-populated this.env so the
+    // user-activation token from the form submit event is still live when
+    // CallHandler.redirect() fires the intent navigation.
     try {
       const parsedQuery = this.env.getQueryParams({ query });
       const syncEnv = new Env({
@@ -311,14 +314,27 @@ export default class Home {
 
       const response: RedirectResponse = CallHandler.getRedirectResponse(syncEnv);
       if (response.status === "found" && typeof response.redirectUrl === "string") {
-        const redirectUrl = response.redirectUrl;
-        if (isStandalone && /Android/i.test(window.navigator.userAgent)) {
-          CallHandler.redirect(redirectUrl, true);
-          return;
-        }
+        // Redirect for ALL standalone platforms while gesture is still active.
+        CallHandler.redirect(response.redirectUrl, isStandalone);
+        return;
       }
     } catch (e) {
       console.warn("Synchronous redirection failed, falling back to async:", e);
+    }
+
+    // ── ASYNC FALLBACK ─────────────────────────────────────────────────────
+    // The await below expires the user-activation token, so window.open()
+    // inside CallHandler.redirect() will be blocked on iOS standalone.
+    // Pre-open a blank window NOW (gesture still active) and navigate it
+    // after async resolution so popup blockers don't kill it.
+    let preOpenedWindow: Window | null = null;
+    if (isStandalone && !isAndroid) {
+      try {
+        preOpenedWindow = window.open("about:blank", "_blank");
+        if (preOpenedWindow) preOpenedWindow.opener = null;
+      } catch {
+        // Silently ignore; will fall back to CallHandler.redirect()
+      }
     }
 
     // Must create new env instance here,
@@ -333,6 +349,7 @@ export default class Home {
 
     // Send debug to /process.
     if (envQuery.debug) {
+      if (preOpenedWindow) preOpenedWindow.close();
       const processUrl = this.env.buildProcessUrl({
         query,
       });
@@ -346,6 +363,13 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
+
+    // Use the pre-opened window for the iOS async fallback path.
+    if (preOpenedWindow) {
+      preOpenedWindow.location.href = redirectUrl;
+      return;
+    }
+
     CallHandler.redirect(redirectUrl, envQuery.isRunningStandalone());
   };
 
