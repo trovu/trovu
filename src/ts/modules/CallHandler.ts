@@ -62,7 +62,14 @@ export default class CallHandler {
         if ((url.protocol === "http:" || url.protocol === "https:") && !url.hash) {
           const scheme = url.protocol.slice(0, -1);
           const path = `${url.host}${url.pathname}${url.search}`;
-          const intentUrl = `intent://${path}#Intent;scheme=${scheme};package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(
+          // FLAG_ACTIVITY_NEW_TASK (0x10000000): forces Android to open this in
+          // a new activity task instead of the current WebAPK task.
+          // Without this flag, Chrome handles the intent in its own existing
+          // task and opens a Chrome Custom Tab overlaid on the PWA instead of
+          // a full browser window. FLAG_ACTIVITY_NEW_TASK breaks out of the
+          // WebAPK task entirely, giving the user the full Chrome browser UI
+          // with address bar and tab switcher visible.
+          const intentUrl = `intent://${path}#Intent;scheme=${scheme};package=com.android.chrome;launchFlags=0x10000000;S.browser_fallback_url=${encodeURIComponent(
             redirectUrl,
           )};end;`;
 
@@ -73,13 +80,12 @@ export default class CallHandler {
           // state, which is still valid in the synchronous submit handler stack.
           window.location.href = intentUrl;
 
-          // If Chrome silently blocks the intent (page stays visible — e.g.
-          // user-activation has already expired in the async fallback path),
-          // fall back to plain navigation after 500 ms so the user at least
-          // gets a Chrome Custom Tab instead of nothing.
+          // If the intent is silently blocked (page stays visible), fall back
+          // to plain navigation after 1500 ms. New-task launches take longer
+          // than in-task CCTs, so 500 ms was too tight.
           const fallbackTimer = setTimeout(() => {
             window.location.href = redirectUrl;
-          }, 500);
+          }, 1500);
           document.addEventListener(
             "visibilitychange",
             () => {
