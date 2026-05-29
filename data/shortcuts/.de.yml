@@ -5568,7 +5568,7 @@ radar 0:
   - description: Gehe zur Startseite
 rbb 0:
   url: https://www.rbb24.de/
-  title: RBB24
+  title: rbb24
   tags:
   - berlin
   - news
@@ -5576,7 +5576,7 @@ rbb 0:
   - description: Gehe zur Startseite
   description: RBB24 ist die Nachrichtenplattform des Rundfunks Berlin-Brandenburg (RBB) mit aktuellen Informationen, Videos und Livestreams aus der Region Berlin und Brandenburg.
 rbb 1:
-  url: https://www.rbb-online.de/suche/#searchform_q__<Suche>
+  url: https://www.rbb24.de/suche/?q=<Suche>
   include: rbb 0
   examples:
   - arguments: mitte
