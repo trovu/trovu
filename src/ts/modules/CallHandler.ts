@@ -59,13 +59,12 @@ export default class CallHandler {
     if (isStandalone && /Android/i.test(window.navigator.userAgent)) {
       try {
         const url = new URL(redirectUrl);
-        // Only attempt intent redirection for standard web protocols
         if ((url.protocol === "http:" || url.protocol === "https:") && !url.hash) {
+          const scheme = url.protocol.slice(0, -1);
           const path = `${url.host}${url.pathname}${url.search}`;
-          const intentUrl = `intent://${path}#Intent;scheme=${url.protocol.slice(
-            0,
-            -1,
-          )};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;end;`;
+          const intentUrl = `intent://${path}#Intent;scheme=${scheme};package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(
+            redirectUrl,
+          )};end;`;
 
           const link = document.createElement("a");
           link.href = intentUrl;
