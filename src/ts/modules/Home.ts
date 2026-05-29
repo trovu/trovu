@@ -20,7 +20,7 @@ export default class Home {
   queryInput!: HTMLInputElement;
   suggestions!: Suggestions;
 
-  constructor() {}
+  constructor() { }
 
   async initialize() {
     this.env = new Env({ context: "index" });
@@ -242,11 +242,9 @@ export default class Home {
         alertMsg.innerHTML = `No matching shortcut found. Did you use a <a href="${this.env.data.config.url.docs}users/#call-a-shortcut">keyword</a>? Try <a target="_blank" href="${this.env.data.config.url.docs}users/troubleshooting/">Troubleshooting</a>.`;
         break;
       case "not_reachable":
-        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="${
-          this.env.data.config.url.docs
-        }shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${
-          countriesList.countries[this.env.country.toUpperCase()].emoji
-        }) to <span class="namespace"></span>.`;
+        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="${this.env.data.config.url.docs
+          }shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${countriesList.countries[this.env.country.toUpperCase()].emoji
+          }) to <span class="namespace"></span>.`;
         alertMsg.querySelector(".namespace").textContent = params.namespace;
         break;
       case "reloaded":
