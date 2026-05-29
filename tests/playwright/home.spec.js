@@ -98,6 +98,49 @@ test.describe("Homepage from default load", () => {
       await expect(page.locator("#query")).toHaveValue(`tag:${tag}`);
       await expect(page.locator("#suggestions")).toBeVisible();
     });
+
+    test("should open external redirection in a new tab under PWA standalone mode", async ({ page, context }) => {
+      // Mock PWA standalone mode
+      await page.addInitScript(() => {
+        // Mock matchMedia
+        const originalMatchMedia = window.matchMedia;
+        window.matchMedia = (query) => {
+          if (query === "(display-mode: standalone)") {
+            return {
+              matches: true,
+              media: query,
+              onchange: null,
+              addListener: () => {},
+              removeListener: () => {},
+              addEventListener: () => {},
+              removeEventListener: () => {},
+              dispatchEvent: () => false,
+            };
+          }
+          return originalMatchMedia(query);
+        };
+        // Mock navigator.standalone
+        Object.defineProperty(navigator, "standalone", {
+          get: () => true,
+        });
+      });
+
+      await page.goto("/");
+      await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
+
+      // Input an external redirect shortcut
+      await page.locator("#query").fill("g hello");
+
+      // Expect a popup window to be opened due to the standalone mode window.open override
+      const [popup] = await Promise.all([
+        context.waitForEvent("page"),
+        page.locator("#query").press("Enter"),
+      ]);
+
+      // Wait for the asynchronous redirection to resolve and update the popup URL
+      await popup.waitForURL(/google/, { timeout: 10000, waitUntil: "commit" });
+      expect(popup.url()).toContain("https://www.google.");
+    });
   });
 });
 
