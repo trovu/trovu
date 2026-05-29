@@ -292,12 +292,41 @@ export default class Home {
       event.preventDefault();
     }
 
+    const isStandalone = this.env.isRunningStandalone();
+    const query = this.queryInput.value;
+
+    // Try to resolve the redirect URL SYNCHRONOUSLY to preserve the user gesture.
+    // If successful and we are in an Android PWA, we can execute the intent breakout instantly.
+    try {
+      const parsedQuery = this.env.getQueryParams({ query });
+      const syncEnv = new Env({
+        ...this.env,
+        ...parsedQuery,
+        query,
+        context: "index",
+        data: this.env.data,
+        namespaceInfos: this.env.namespaceInfos,
+        namespaces: this.env.namespaces,
+      });
+
+      const response: RedirectResponse = CallHandler.getRedirectResponse(syncEnv);
+      if (response.status === "found" && typeof response.redirectUrl === "string") {
+        const redirectUrl = response.redirectUrl;
+        if (isStandalone && /Android/i.test(window.navigator.userAgent)) {
+          CallHandler.redirect(redirectUrl, true);
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn("Synchronous redirection failed, falling back to async:", e);
+    }
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
     const params: EnvParams = Env.getParamsFromUrl();
-    params.query = this.queryInput.value;
+    params.query = query;
     await envQuery.populate(params);
 
     const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
@@ -305,7 +334,7 @@ export default class Home {
     // Send debug to /process.
     if (envQuery.debug) {
       const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
+        query,
       });
       window.location.href = processUrl;
       return;
