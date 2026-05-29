@@ -62,14 +62,19 @@ export default class CallHandler {
         if ((url.protocol === "http:" || url.protocol === "https:") && !url.hash) {
           const scheme = url.protocol.slice(0, -1);
           const path = `${url.host}${url.pathname}${url.search}`;
-          // FLAG_ACTIVITY_NEW_TASK (0x10000000): forces Android to open this in
-          // a new activity task instead of the current WebAPK task.
-          // Without this flag, Chrome handles the intent in its own existing
-          // task and opens a Chrome Custom Tab overlaid on the PWA instead of
-          // a full browser window. FLAG_ACTIVITY_NEW_TASK breaks out of the
-          // WebAPK task entirely, giving the user the full Chrome browser UI
-          // with address bar and tab switcher visible.
-          const intentUrl = `intent://${path}#Intent;scheme=${scheme};package=com.android.chrome;launchFlags=0x10000000;S.browser_fallback_url=${encodeURIComponent(
+          // Do NOT specify package=com.android.chrome.
+          // When the intent targets Chrome explicitly, Chrome detects it is the
+          // target itself and handles it in-process, opening a Chrome Custom Tab
+          // instead of a new browser window — even with FLAG_ACTIVITY_NEW_TASK.
+          //
+          // By omitting the package and letting Android's system intent resolver
+          // handle ACTION_VIEW + CATEGORY_BROWSABLE, Android launches the user's
+          // default browser as a separate app in a new task, giving a full
+          // browser window with address bar and tab switcher visible.
+          //
+          // FLAG_ACTIVITY_NEW_TASK (0x10000000) ensures a fresh task is created
+          // rather than reusing the WebAPK's existing task.
+          const intentUrl = `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=${encodeURIComponent(
             redirectUrl,
           )};end;`;
 
