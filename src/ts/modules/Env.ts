@@ -404,10 +404,50 @@ export default class Env {
     const languageStr = this.getNavigatorLanguage();
     let language, country;
     if (languageStr) {
-      [language, country] = languageStr.split("-");
+      if (typeof Intl !== "undefined" && typeof Intl.Locale === "function") {
+        try {
+          const locale = new Intl.Locale(languageStr);
+          language = locale.language;
+          country = locale.region;
+
+          if (!country) {
+            country = this.guessCountryFromLanguage(languageStr);
+          }
+        } catch {
+          [language, country] = languageStr.split("-");
+        }
+      } else {
+        [language, country] = languageStr.split("-");
+      }
     }
 
     return { language, country };
+  }
+
+  /**
+   * Guess the likely country for a language or locale.
+   *
+   * @param {string} language - The language or locale to guess a country for.
+   * @return {string|undefined} country - The guessed country, if available.
+   */
+  guessCountryFromLanguage(language: string): string | undefined {
+    if (typeof Intl === "undefined" || typeof Intl.Locale !== "function") {
+      return;
+    }
+
+    try {
+      const locale = new Intl.Locale(language);
+      if (typeof locale.maximize !== "function") {
+        return;
+      }
+
+      const country = locale.maximize().region;
+      if (country && country.toUpperCase() in countries) {
+        return country;
+      }
+    } catch {
+      return;
+    }
   }
 
   /**
