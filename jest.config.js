@@ -1,10 +1,9 @@
-/** @type {import('ts-jest').JestConfigWithTsJest} **/
+/** @type {import('jest').Config} **/
 module.exports = {
-  preset: "ts-jest",
   testEnvironment: "jest-environment-jsdom",
   roots: ["<rootDir>/src/ts", "<rootDir>/tests"],
   transform: {
-    "^.+.tsx?$": ["ts-jest", {}],
+    "^.+.tsx?$": "babel-jest",
   },
   moduleFileExtensions: ["ts", "js", "json", "node"],
   modulePathIgnorePatterns: ["<rootDir>/ext/raycast/"],
