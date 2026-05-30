@@ -7,6 +7,7 @@ const getUrlHashFooBar = () => {
 };
 
 const originalFetch = global.fetch;
+const originalIntlLocale = Intl.Locale;
 const minimalData = {
   config: {
     language: "en",
@@ -19,6 +20,11 @@ const minimalData = {
 
 afterEach(() => {
   global.fetch = originalFetch;
+  Object.defineProperty(Intl, "Locale", {
+    configurable: true,
+    value: originalIntlLocale,
+    writable: true,
+  });
   jest.restoreAllMocks();
 });
 
@@ -37,7 +43,15 @@ describe("Env", () => {
       env.getNavigatorLanguage = jest.fn(() => "en");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
         language: "en",
-        country: "at",
+        country: "us",
+      });
+    });
+    test("browser returns language and script", () => {
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
+      env.getNavigatorLanguage = jest.fn(() => "zh-Hant");
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: "zh",
+        country: "tw",
       });
     });
     test("browser returns empty language", () => {
@@ -53,6 +67,60 @@ describe("Env", () => {
       env.getNavigatorLanguage = jest.fn(() => "invalid");
       expect(env.getDefaultLanguageAndCountry()).toEqual({
         language: "pl",
+        country: "at",
+      });
+    });
+    test("Intl.Locale throws", () => {
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
+      env.getNavigatorLanguage = jest.fn(() => "en-US-u");
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: "en",
+        country: "us",
+      });
+    });
+    test("browser returns invalid country", () => {
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
+      env.getNavigatorLanguage = jest.fn(() => "en-XX");
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: "en",
+        country: "at",
+      });
+    });
+    test("browser returns language without country guess", () => {
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
+      env.getNavigatorLanguage = jest.fn(() => "eo");
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: "eo",
+        country: "at",
+      });
+    });
+    test("Intl.Locale is unavailable", () => {
+      Object.defineProperty(Intl, "Locale", {
+        configurable: true,
+        value: undefined,
+      });
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
+      env.getNavigatorLanguage = jest.fn(() => "en");
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: "en",
+        country: "at",
+      });
+    });
+    test("Intl.Locale.maximize is unavailable", () => {
+      Object.defineProperty(Intl, "Locale", {
+        configurable: true,
+        value: class {
+          language: string;
+
+          constructor(language: string) {
+            this.language = language;
+          }
+        },
+      });
+      const env = new Env({ data: { config: { language: "pl", country: "at" } } });
+      env.getNavigatorLanguage = jest.fn(() => "en");
+      expect(env.getDefaultLanguageAndCountry()).toEqual({
+        language: "en",
         country: "at",
       });
     });
