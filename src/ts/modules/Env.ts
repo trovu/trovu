@@ -410,11 +410,8 @@ export default class Env {
           language = locale.language;
           country = locale.region;
 
-          if (!country && typeof locale.maximize === "function") {
-            const guessedCountry = locale.maximize().region;
-            if (guessedCountry && guessedCountry.toUpperCase() in countries) {
-              country = guessedCountry;
-            }
+          if (!country) {
+            country = this.guessCountryFromLanguage(languageStr);
           }
         } catch {
           [language, country] = languageStr.split("-");
@@ -425,6 +422,32 @@ export default class Env {
     }
 
     return { language, country };
+  }
+
+  /**
+   * Guess the likely country for a language or locale.
+   *
+   * @param {string} language - The language or locale to guess a country for.
+   * @return {string|undefined} country - The guessed country, if available.
+   */
+  guessCountryFromLanguage(language: string): string | undefined {
+    if (typeof Intl === "undefined" || typeof Intl.Locale !== "function") {
+      return;
+    }
+
+    try {
+      const locale = new Intl.Locale(language);
+      if (typeof locale.maximize !== "function") {
+        return;
+      }
+
+      const country = locale.maximize().region;
+      if (country && country.toUpperCase() in countries) {
+        return country;
+      }
+    } catch {
+      return;
+    }
   }
 
   /**
