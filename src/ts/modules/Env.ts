@@ -404,7 +404,24 @@ export default class Env {
     const languageStr = this.getNavigatorLanguage();
     let language, country;
     if (languageStr) {
-      [language, country] = languageStr.split("-");
+      if (typeof Intl !== "undefined" && typeof Intl.Locale === "function") {
+        try {
+          const locale = new Intl.Locale(languageStr);
+          language = locale.language;
+          country = locale.region;
+
+          if (!country && typeof locale.maximize === "function") {
+            const guessedCountry = locale.maximize().region;
+            if (guessedCountry && guessedCountry.toUpperCase() in countries) {
+              country = guessedCountry;
+            }
+          }
+        } catch {
+          [language, country] = languageStr.split("-");
+        }
+      } else {
+        [language, country] = languageStr.split("-");
+      }
     }
 
     return { language, country };
