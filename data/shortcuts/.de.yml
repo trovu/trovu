@@ -5665,6 +5665,22 @@ rsm 1:
   examples:
   - arguments: shampoo
     description: Suche nach "shampoo"
+snf 0:
+  url: https://schoener-fernsehen.com/
+  title: Schöner Fernsehen
+  tags:
+  - streaming
+  - tv
+  examples:
+  - description: Gehe zur Startseite
+snf 1:
+  url: https://schoener-fernsehen.com/<Sender>/
+  include: snf 0
+  examples:
+  - arguments: ard
+    description: Livestream der ARD aufrufen
+  - arguments: zdf
+    description: Livestream des ZDF aufrufen
 sng 0:
   url: https://www.sanego.de/
   title: Sanego
