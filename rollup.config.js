@@ -7,7 +7,7 @@ import replace from "@rollup/plugin-replace";
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import fs from "fs";
-import copy from "rollup-plugin-copy";
+import path from "path";
 import execute from "rollup-plugin-execute";
 import scss from "rollup-plugin-scss";
 
@@ -22,6 +22,40 @@ const output = {
 };
 
 const gitInfo = DataCompiler.getGitInfo();
+
+const copyDirectory = (src, dest) => {
+  fs.cpSync(src, dest, {
+    recursive: true,
+    filter: (file) => path.basename(file) !== ".DS_Store",
+  });
+};
+
+const copyStaticAssets = () => ({
+  name: "copy-static-assets",
+  writeBundle() {
+    for (const [src, dest] of [
+      ["src/img", "dist/public/img"],
+      ["src/js/userscripts", "dist/public/userscripts"],
+      ["src/opensearch", "dist/public/opensearch"],
+      ["node_modules/@fortawesome/fontawesome-free/webfonts", "dist/public/webfonts"],
+      ["src/js/pwa", "dist/public"],
+      ["src/manifest", "dist/public"],
+      ["schema", "dist/public/schema"],
+    ]) {
+      copyDirectory(src, dest);
+    }
+
+    for (const file of fs.readdirSync("src/favicon")) {
+      if (/\.(ico|png|svg|xml)$/.test(file)) {
+        fs.copyFileSync(path.join("src/favicon", file), path.join("dist/public", file));
+      }
+    }
+
+    fs.mkdirSync("dist/public/.well-known", { recursive: true });
+    fs.copyFileSync("src/json/assetlinks.json", "dist/public/.well-known/assetlinks.json");
+    fs.copyFileSync("src/json/log.json", "dist/public/log.json");
+  },
+});
 
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
@@ -103,26 +137,7 @@ export default [
         preventAssignment: true,
         GIT_INFO: JSON.stringify(gitInfo),
       }),
-      copy({
-        targets: [
-          {
-            src: "src/favicon/*.{ico,png,svg,xml}",
-            dest: "dist/public/",
-          },
-          { src: "src/img/*", dest: "dist/public/img/" },
-          {
-            src: "src/js/userscripts/*.user.js",
-            dest: "dist/public/userscripts/",
-          },
-          { src: "src/opensearch/", dest: "dist/public/" },
-          { src: "node_modules/@fortawesome/fontawesome-free/webfonts/", dest: "dist/public/" },
-          { src: "src/js/pwa/*", dest: "dist/public/" },
-          { src: "src/manifest/*", dest: "dist/public/" },
-          { src: "src/json/assetlinks.json", dest: "dist/public/.well-known/" },
-          { src: "src/json/log.json", dest: "dist/public/" },
-          { src: "schema/*.yml", dest: "dist/public/schema/" },
-        ],
-      }),
+      copyStaticAssets(),
       typescript(), // Add the TypeScript plugin here
     ],
   },
