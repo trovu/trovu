@@ -45,7 +45,85 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.redirect(redirectUrl, env.isRunningStandalone(), true);
+  }
+
+  /**
+   * Safely redirect external target URLs out of the PWA standalone wrapper.
+   *
+   * @param {string} redirectUrl  - The target URL.
+   * @param {boolean} isStandalone - Whether the app is running in PWA standalone mode.
+   * @param {boolean} replace     - Whether to use location.replace instead of location.href.
+   */
+  static redirect(redirectUrl: string, isStandalone: boolean, replace = false) {
+    if (isStandalone && /Android/i.test(window.navigator.userAgent)) {
+      try {
+        const url = new URL(redirectUrl);
+        if ((url.protocol === "http:" || url.protocol === "https:") && !url.hash) {
+          const scheme = url.protocol.slice(0, -1);
+          const path = `${url.host}${url.pathname}${url.search}`;
+          // Do NOT specify package=com.android.chrome.
+          // When the intent targets Chrome explicitly, Chrome detects it is the
+          // target itself and handles it in-process, opening a Chrome Custom Tab
+          // instead of a new browser window — even with FLAG_ACTIVITY_NEW_TASK.
+          //
+          // By omitting the package and letting Android's system intent resolver
+          // handle ACTION_VIEW + CATEGORY_BROWSABLE, Android launches the user's
+          // default browser as a separate app in a new task, giving a full
+          // browser window with address bar and tab switcher visible.
+          //
+          // FLAG_ACTIVITY_NEW_TASK (0x10000000) ensures a fresh task is created
+          // rather than reusing the WebAPK's existing task.
+          const intentUrl = `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=${encodeURIComponent(
+            redirectUrl,
+          )};end;`;
+
+          // Use window.location.href — NOT link.click().
+          // Chrome ~83+ silently blocks programmatic link.click() on intent://
+          // anchors because the synthetic MouseEvent has isTrusted=false.
+          // window.location.href is evaluated against the live user-activation
+          // state, which is still valid in the synchronous submit handler stack.
+          window.location.href = intentUrl;
+
+          // If the intent is silently blocked (page stays visible), fall back
+          // to plain navigation after 1500 ms. New-task launches take longer
+          // than in-task CCTs, so 500 ms was too tight.
+          const fallbackTimer = setTimeout(() => {
+            window.location.href = redirectUrl;
+          }, 1500);
+          document.addEventListener(
+            "visibilitychange",
+            () => {
+              if (document.hidden) clearTimeout(fallbackTimer);
+            },
+            { once: true },
+          );
+          return;
+        }
+      } catch {
+        // Fallback to standard redirect if URL parsing fails
+      }
+    }
+
+    if (isStandalone) {
+      // For iOS and other non-Android PWA standalone environments, use a blank window to escape PWA container.
+      try {
+        const externalRedirectWindow = window.open("", "_blank");
+        if (externalRedirectWindow) {
+          externalRedirectWindow.opener = null;
+          externalRedirectWindow.location.href = redirectUrl;
+          return;
+        }
+      } catch {
+        // Fallback to standard redirect
+      }
+    }
+
+    if (replace) {
+      window.location.replace(redirectUrl);
+    } else {
+      window.location.href = redirectUrl;
+    }
   }
 
   /**

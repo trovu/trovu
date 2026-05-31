@@ -20,7 +20,7 @@ export default class Home {
   queryInput!: HTMLInputElement;
   suggestions!: Suggestions;
 
-  constructor() {}
+  constructor() { }
 
   async initialize() {
     this.env = new Env({ context: "index" });
@@ -242,11 +242,9 @@ export default class Home {
         alertMsg.innerHTML = `No matching shortcut found. Did you use a <a href="${this.env.data.config.url.docs}users/#call-a-shortcut">keyword</a>? Try <a target="_blank" href="${this.env.data.config.url.docs}users/troubleshooting/">Troubleshooting</a>.`;
         break;
       case "not_reachable":
-        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="${
-          this.env.data.config.url.docs
-        }shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${
-          countriesList.countries[this.env.country.toUpperCase()].emoji
-        }) to <span class="namespace"></span>.`;
+        alertMsg.innerHTML = `This shortcut is not <a target="_blank" href="${this.env.data.config.url.docs
+          }shortcuts/namespaces/#priority-of-namespaces">reachable</a>.  Change your settings (${this.env.language.toUpperCase()} ${countriesList.countries[this.env.country.toUpperCase()].emoji
+          }) to <span class="namespace"></span>.`;
         alertMsg.querySelector(".namespace").textContent = params.namespace;
         break;
       case "reloaded":
@@ -292,20 +290,66 @@ export default class Home {
       event.preventDefault();
     }
 
+    const isStandalone = this.env.isRunningStandalone();
+    const isAndroid = /Android/i.test(window.navigator.userAgent);
+    const query = this.queryInput.value;
+
+    // ── SYNC PATH ──────────────────────────────────────────────────────────
+    // Resolve the redirect using the already-populated this.env so the
+    // user-activation token from the form submit event is still live when
+    // CallHandler.redirect() fires the intent navigation.
+    try {
+      const parsedQuery = this.env.getQueryParams({ query });
+      const syncEnv = new Env({
+        ...this.env,
+        ...parsedQuery,
+        query,
+        context: "index",
+        data: this.env.data,
+        namespaceInfos: this.env.namespaceInfos,
+        namespaces: this.env.namespaces,
+      });
+
+      const response: RedirectResponse = CallHandler.getRedirectResponse(syncEnv);
+      if (response.status === "found" && typeof response.redirectUrl === "string") {
+        // Redirect for ALL standalone platforms while gesture is still active.
+        CallHandler.redirect(response.redirectUrl, isStandalone);
+        return;
+      }
+    } catch (e) {
+      console.warn("Synchronous redirection failed, falling back to async:", e);
+    }
+
+    // ── ASYNC FALLBACK ─────────────────────────────────────────────────────
+    // The await below expires the user-activation token, so window.open()
+    // inside CallHandler.redirect() will be blocked on iOS standalone.
+    // Pre-open a blank window NOW (gesture still active) and navigate it
+    // after async resolution so popup blockers don't kill it.
+    let preOpenedWindow: Window | null = null;
+    if (isStandalone && !isAndroid) {
+      try {
+        preOpenedWindow = window.open("about:blank", "_blank");
+        if (preOpenedWindow) preOpenedWindow.opener = null;
+      } catch {
+        // Silently ignore; will fall back to CallHandler.redirect()
+      }
+    }
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
     const params: EnvParams = Env.getParamsFromUrl();
-    params.query = this.queryInput.value;
+    params.query = query;
     await envQuery.populate(params);
 
     const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
 
     // Send debug to /process.
     if (envQuery.debug) {
+      if (preOpenedWindow) preOpenedWindow.close();
       const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
+        query,
       });
       window.location.href = processUrl;
       return;
@@ -317,7 +361,14 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+
+    // Use the pre-opened window for the iOS async fallback path.
+    if (preOpenedWindow) {
+      preOpenedWindow.location.href = redirectUrl;
+      return;
+    }
+
+    CallHandler.redirect(redirectUrl, envQuery.isRunningStandalone());
   };
 
   /**
