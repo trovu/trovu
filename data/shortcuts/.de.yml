@@ -812,7 +812,7 @@ db 1:
     description: Verspätungen / aktuelle Abfahrten in Berlin Hbf
 db 2:
   url: 'https://www.bahn.de/buchung/start?STS=false&so=<Start: {type: city}>&zo=<Ziel: {type: city}>&hd=<$now: {output: YYYY-MM-DD}>T<$now: {output: HH:mm:00}>#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn'
-  title: Deutsche Bahn Fahrplanauskunft
+  title: Deutsche Bahn, Verbindungsuche
   tags:
   - bahn
   - needs-userscript
@@ -856,7 +856,7 @@ dbkb 0:
   - travel
 dbkb 1:
   url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?st_name=<Bahnhof>&searchmode=station&mainframe=result&orig=sS&dosearch=1&oblig_st=1
-  title: Deutsche Bahn Kursbuch, Bahnhofssuche
+  title: Deutsche Bahn, Kursbuch, Bahnhofssuche
   tests:
   - arguments: Schladen
     expect: Harz
@@ -869,7 +869,7 @@ dbkb 1:
     description: Suche nach Kursbuchtabellen zu Schladen
 dbkbt 1:
   url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?table_nr=<Tabellennummer>&searchmode=tableplus&mainframe=result&dosearch=1
-  title: Deutsche Bahn Kursbuch, Tabellensuche
+  title: Deutsche Bahn, Kursbuch, Tabellensuche
   tests:
   - arguments: '353'
     expect: Tabellen gefunden
