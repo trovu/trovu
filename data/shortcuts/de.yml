@@ -596,11 +596,15 @@ dwds 1:
   url: https://www.dwds.de/?woerterbuch=1&corpus=1&kompakt=1&qu=<Wort>
   include: dwds 0
 e 0:
-  url: https://ebay.de
-  title: eBay
+  deprecated:
+    alternative:
+      query: .de.e
+    created: '2026-05-31'
 e 1:
-  url: https://www.ebay.de/sch/i.html?_nkw=<suche>
-  title: eBay Suche
+  deprecated:
+    alternative:
+      query: .de.e <1>
+    created: '2026-05-31'
 eis 0:
   url: https://www.eis-machen.de/
   title: Eis-machen.de
