@@ -67,7 +67,7 @@ Common commands:
 - `npm run build-blog`
 - `npm run build-docs`
 - `pipenv run mkdocs build`
-- `npm run verify-safe`
+- `npm run test`
 
 Useful workflow combinations:
 
@@ -78,7 +78,7 @@ Useful workflow combinations:
 - Safe Codex baseline:
   1. `nvm use`
   2. `git status --short`
-  3. `npm run verify-safe`
+  3. `npm run test`
 - Frontend rebuild loop: `npm run watch`
 - Data-only validation after editing YAML:
   1. `npm run validate-data`
@@ -97,7 +97,7 @@ Useful workflow combinations:
 - `test-unit` covers modules directly.
 - `test-calls` loads fixtures from `tests/calls.yml` and verifies end-to-end redirect behavior in Jest.
 - `test-fe` is Playwright coverage for homepage behavior.
-- `verify-safe` is the default pre/post-change safety check for local Codex work.
+- `test` is the default pre/post-change safety check for local Codex work.
 - Docs and blog are built separately; changes under `docs/` or `blog/` should usually be validated with their matching build commands.
 
 ## Working With Shortcut Data
@@ -159,7 +159,7 @@ Recommended task flow:
 
 1. `git switch -c codex/<task>` or a close fallback branch name if slash-based refs are unavailable locally.
 2. `git status --short`
-3. `npm run verify-safe`
+3. `npm run test`
 4. Make only the relevant changes.
 5. Re-run the appropriate checks.
 6. Review diff, then commit locally.
@@ -181,7 +181,7 @@ Recommended task flow:
 - Blog-only changes:
   - prefer `npm run build-blog`
 - Logic changes in `src/ts/modules/` or other runtime code:
-  - run `npm run verify-safe`
+  - run `npm run test`
 
 ## Repo-Specific Gotchas
 
