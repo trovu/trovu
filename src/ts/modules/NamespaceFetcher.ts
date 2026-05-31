@@ -1,4 +1,5 @@
 /** @module NamespaceFetcher */
+import Helper, { REMOTE_FETCH_TIMEOUT } from "./Helper";
 import ShortcutVerifier from "./ShortcutVerifier";
 import UrlProcessor from "./UrlProcessor";
 import jsyaml from "js-yaml";
@@ -208,15 +209,17 @@ export default class NamespaceFetcher {
    * @param {array} newNamespaceInfos - The namespaces to fetch shortcuts for.
    * @return {array} promises - The promises from the fetch() calls.
    */
-  startFetches(newNamespaceInfos: NamespaceInfo[]): Promise<Response>[] {
-    const promises: Promise<Response>[] = [];
+  startFetches(newNamespaceInfos: NamespaceInfo[]): Promise<Response | null>[] {
+    const promises: Promise<Response | null>[] = [];
     for (const namespaceInfo of newNamespaceInfos) {
       // Skip namespaces without URL.
       if (!namespaceInfo.url) {
         continue;
       }
-      const promise = fetch(namespaceInfo.url, {
+      const promise = Helper.fetchResponse(namespaceInfo.url, this.env, {
         cache: this.env.reload ? "reload" : "default",
+        catchErrors: true,
+        timeout: REMOTE_FETCH_TIMEOUT,
       });
       promises.push(promise);
     }
@@ -229,15 +232,14 @@ export default class NamespaceFetcher {
    * @param {Array} responses - An array of responses to process.
    * @returns {Object} The updated namespace information object.
    */
-  async processResponses(newNamespaceInfos: NamespaceInfo[], responses: Response[]): Promise<NamespaceInfo[]> {
+  async processResponses(newNamespaceInfos: NamespaceInfo[], responses: (Response | null)[]): Promise<NamespaceInfo[]> {
     for (const namespaceInfo of newNamespaceInfos) {
       // Skip namespaces without URL.
       if (!namespaceInfo.url) {
         continue;
       }
       const response = responses.shift();
-      if (!response || response.status != 200) {
-        this.env.logger.info(`Problem fetching via ${this.env.reload ? "reload" : "default"} ${namespaceInfo.url}`);
+      if (!response) {
         namespaceInfo.shortcuts = {};
         continue;
       }

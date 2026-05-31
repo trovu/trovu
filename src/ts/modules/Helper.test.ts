@@ -5,6 +5,7 @@ describe("Helper.fetchAsync", () => {
 
   afterEach(() => {
     global.fetch = originalFetch;
+    jest.useRealTimers();
     jest.restoreAllMocks();
   });
 
@@ -40,7 +41,7 @@ describe("Helper.fetchAsync", () => {
       text: jest.fn(),
     } as unknown as Response);
 
-    const text = await Helper.fetchAsync("https://example.com/missing.txt", { reload: false, logger });
+    const text = await Helper.fetchAsync("https://example.com/missing.txt", { reload: false, logger }, { catchErrors: true });
 
     expect(global.fetch).toHaveBeenCalledWith("https://example.com/missing.txt", {
       cache: "force-cache",
@@ -48,5 +49,47 @@ describe("Helper.fetchAsync", () => {
     expect(text).toBeNull();
     expect(logger.info).toHaveBeenCalledWith("Problem fetching via force-cache https://example.com/missing.txt: 404");
     expect(logger.success).not.toHaveBeenCalled();
+  });
+
+  test("returns null and logs a warning for a network error", async () => {
+    const logger = {
+      info: jest.fn(),
+      success: jest.fn(),
+      warning: jest.fn(),
+    };
+    global.fetch = jest.fn().mockRejectedValue(new Error("offline"));
+
+    const text = await Helper.fetchAsync(
+      "https://example.com/missing.txt",
+      { reload: false, logger },
+      { catchErrors: true },
+    );
+
+    expect(text).toBeNull();
+    expect(logger.warning).toHaveBeenCalledWith("Problem fetching via force-cache https://example.com/missing.txt: offline");
+  });
+
+  test("aborts a request after the configured timeout", async () => {
+    jest.useFakeTimers();
+    const logger = {
+      info: jest.fn(),
+      success: jest.fn(),
+      warning: jest.fn(),
+    };
+    global.fetch = jest.fn((_url, options) => {
+      return new Promise((_resolve, reject) => {
+        options.signal.addEventListener("abort", () => reject(new Error("aborted")));
+      });
+    });
+
+    const textPromise = Helper.fetchAsync(
+      "https://example.com/slow.txt",
+      { reload: false, logger },
+      { catchErrors: true, timeout: 5000 },
+    );
+    jest.advanceTimersByTime(5000);
+
+    await expect(textPromise).resolves.toBeNull();
+    expect(logger.warning).toHaveBeenCalledWith("Problem fetching via force-cache https://example.com/slow.txt: aborted");
   });
 });

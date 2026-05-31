@@ -214,6 +214,7 @@ export type RedirectStatus =
   | "removed"
   | "not_reachable"
   | "reloaded"
+  | "loading"
   | "suspicious";
 
 export interface RedirectResponse {
