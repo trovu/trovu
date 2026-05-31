@@ -106,7 +106,7 @@ export default class Suggestions {
       this.getUrl(suggestion),
       this.hasTag(suggestion, "needs-userscript") ? this.getNeedsUserscript() : "",
       this.hasTag(suggestion, "is-affiliate") ? this.getIsAffiliate() : "",
-      this.getTags(suggestion),
+      this.getBadges(suggestion),
       this.getTools(suggestion),
     );
 
@@ -156,21 +156,25 @@ export default class Suggestions {
     return container;
   }
 
-  getTags(suggestion: Suggestion): HTMLElement | string {
+  getBadges(suggestion: Suggestion): HTMLElement {
     const { tags } = suggestion;
     const container = document.createElement("div");
     container.className = "tags";
+    const domain = suggestion.url.match(/^[a-z][a-z\d+.-]*:\/\/([^/?#]+)/i)?.[1];
+    if (domain) {
+      container.appendChild(this.createSpan("domain", domain));
+    }
     if (Array.isArray(tags) && tags.length) {
       tags.forEach((tag) => {
         container.appendChild(this.createSpan("tag", tag));
       });
-    } else {
-      return "";
     }
     container.addEventListener("click", (e: Event) => {
       const target = e.target as HTMLElement;
       if (target.classList.contains("tag")) {
         this.handleTagOrNamespaceClick(e, `tag:${target.textContent}`);
+      } else if (target.classList.contains("domain")) {
+        this.handleTagOrNamespaceClick(e, `url:${target.textContent}`);
       }
     });
     return container;

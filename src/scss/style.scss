@@ -93,7 +93,8 @@ span.title {
   margin: 0 0.1em;
 }
 span.namespace,
-span.tag {
+span.tag,
+span.domain {
   display: inline-block;
   padding: 0.05em 0.4em;
   border-radius: 0.2rem;
@@ -114,6 +115,10 @@ div.tags {
 span.tag {
   background: var(--bs-yellow);
   color: black;
+}
+span.domain {
+  background: #487b7fff;
+  color: white;
 }
 span.highlight {
   margin: 0 -0.4em;

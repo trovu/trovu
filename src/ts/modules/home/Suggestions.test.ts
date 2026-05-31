@@ -64,4 +64,29 @@ describe("Suggestions", () => {
     expect(element.querySelector(".tag")?.textContent).toBe(payload);
     expect(element.querySelector(".examples .description")?.textContent).toBe(payload);
   });
+
+  test("renders the target domain as a clickable url filter badge", () => {
+    const renderer = createRenderer();
+    const element = renderer.renderSuggestion(
+      {
+        namespace: "evil",
+        keyword: "ex",
+        argumentString: "",
+        argumentCount: 0,
+        title: "Example",
+        description: "Example homepage",
+        url: "https://example.com/search",
+        reachable: true,
+      },
+      0,
+    ) as HTMLElement;
+
+    const domainBadge = element.querySelector(".domain") as HTMLElement;
+    expect(domainBadge.textContent).toBe("example.com");
+
+    domainBadge.click();
+
+    expect(renderer.queryInput.value).toBe("url:example.com");
+    expect(document.activeElement).toBe(renderer.queryInput);
+  });
 });
