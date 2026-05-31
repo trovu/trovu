@@ -157,27 +157,28 @@ export default class Suggestions {
   }
 
   getBadges(suggestion: Suggestion): HTMLElement {
-    const { tags } = suggestion;
     const container = document.createElement("div");
     container.className = "tags";
-    const domain = suggestion.url.match(/^[a-z][a-z\d+.-]*:\/\/([^/?#]+)/i)?.[1];
-    if (domain) {
-      container.appendChild(this.createSpan("domain", domain));
-    }
-    if (Array.isArray(tags) && tags.length) {
-      tags.forEach((tag) => {
-        container.appendChild(this.createSpan("tag", tag));
-      });
-    }
-    container.addEventListener("click", (e: Event) => {
-      const target = e.target as HTMLElement;
-      if (target.classList.contains("tag")) {
-        this.handleTagOrNamespaceClick(e, `tag:${target.textContent}`);
-      } else if (target.classList.contains("domain")) {
-        this.handleTagOrNamespaceClick(e, `url:${target.textContent}`);
-      }
-    });
+    container.append(this.getDomain(suggestion), ...this.getTags(suggestion));
     return container;
+  }
+
+  getDomain(suggestion: Suggestion): HTMLSpanElement | string {
+    const domain = suggestion.url.match(/^[a-z][a-z\d+.-]*:\/\/([^/?#]+)/i)?.[1];
+    return domain ? this.createFilterBadge("domain", domain, "url") : "";
+  }
+
+  getTags({ tags }: Suggestion): HTMLSpanElement[] {
+    if (!Array.isArray(tags)) return [];
+    return tags.map((tag) => this.createFilterBadge("tag", tag, "tag"));
+  }
+
+  createFilterBadge(className: string, text: string, queryPrefix: string): HTMLSpanElement {
+    const badge = this.createSpan(className, text);
+    badge.addEventListener("click", (event) => {
+      this.handleTagOrNamespaceClick(event, `${queryPrefix}:${text}`);
+    });
+    return badge;
   }
 
   getExamples(suggestion: Suggestion): HTMLElement | DocumentFragment {
