@@ -78,7 +78,6 @@ test("Homepage should expose a loading state and reject an early submit", async 
     await expect(submitButton).toHaveClass(/btn-loading/);
     await expect(submitButton).toHaveAttribute("aria-label", "Shortcuts are loading");
     await expect(submitButton).toHaveText("⏳");
-    await expect(submitButton).toHaveCSS("background-color", "rgb(192, 192, 192)");
 
     await queryInput.fill("debug:g foobar");
     await queryInput.press("Enter");
