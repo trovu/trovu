@@ -40,7 +40,7 @@ export default class DataReporter {
         const shortcut: RawShortcutObject = typeof rawShortcut === "string" ? { url: rawShortcut } : rawShortcut;
         const [keyword, argCount] = key.split(" ");
         if (
-          // argCount == 0 &&
+          parseInt(argCount) == 0 &&
           !shortcut.examples &&
           !shortcut.deprecated &&
           !shortcut.include &&
