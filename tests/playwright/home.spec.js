@@ -56,6 +56,8 @@ test("Homepage should expose a loading state and reject an early submit", async 
   try {
     await expect(page.locator("html")).toHaveAttribute("aria-busy", "true");
     await expect(queryInput).toBeFocused();
+    await expect(page.locator(".tagline")).toBeVisible();
+    await expect(page.locator(".examples")).toBeVisible();
     await expect(submitButton).toHaveClass(/btn-secondary/);
     await expect(submitButton).toHaveAttribute("aria-label", "Shortcuts are loading");
     await expect(submitButton).toHaveText("⏳");

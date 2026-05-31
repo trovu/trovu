@@ -102,8 +102,9 @@ export default class Home {
     this.queryInput.addEventListener("input", () => {
       this.queryInputChanged = true;
     });
-    document.documentElement.style.display = "block";
     this.setLoadingState(true);
+    this.toggleByQuery();
+    document.documentElement.style.display = "block";
     this.queryInput.focus();
     if (params.status === "loading") {
       this.showInfoAlerts();
