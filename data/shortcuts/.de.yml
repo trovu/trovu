@@ -847,7 +847,7 @@ dbb 3:
     description: Finde die Bestpreise für Verbindungen von Köln nach München am 30.11.
 dbkb 0:
   url: https://kursbuch.bahn.de/hafas/kbview.exe/dn?mainframe=IK_strecken
-  title: Deutsche Bahn Kursbuch, Streckenkarte
+  title: Deutsche Bahn, Kursbuch, Streckenkarte
   tests:
   - expect: Streckenkarte
   tags:
