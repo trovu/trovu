@@ -1,10 +1,10 @@
 /** @module Suggestions */
+import type { EnvLike, ShortcutExample, Suggestion } from "../../types";
+import type Home from "../Home";
 import QueryParser from "../QueryParser";
 import SuggestionsGetter from "../SuggestionsGetter";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import jsyaml from "js-yaml";
-import type { EnvLike, ShortcutExample, Suggestion } from "../../types";
-import type Home from "../Home";
 
 export default class Suggestions {
   env: EnvLike;
@@ -106,7 +106,7 @@ export default class Suggestions {
       this.getUrl(suggestion),
       this.hasTag(suggestion, "needs-userscript") ? this.getNeedsUserscript() : "",
       this.hasTag(suggestion, "is-affiliate") ? this.getIsAffiliate() : "",
-      this.getTags(suggestion),
+      this.getBadges(suggestion),
       this.getTools(suggestion),
     );
 
@@ -156,24 +156,29 @@ export default class Suggestions {
     return container;
   }
 
-  getTags(suggestion: Suggestion): HTMLElement | string {
-    const { tags } = suggestion;
+  getBadges(suggestion: Suggestion): HTMLElement {
     const container = document.createElement("div");
     container.className = "tags";
-    if (Array.isArray(tags) && tags.length) {
-      tags.forEach((tag) => {
-        container.appendChild(this.createSpan("tag", tag));
-      });
-    } else {
-      return "";
-    }
-    container.addEventListener("click", (e: Event) => {
-      const target = e.target as HTMLElement;
-      if (target.classList.contains("tag")) {
-        this.handleTagOrNamespaceClick(e, `tag:${target.textContent}`);
-      }
-    });
+    container.append(...this.getTags(suggestion), this.getDomain(suggestion));
     return container;
+  }
+
+  getDomain(suggestion: Suggestion): HTMLSpanElement | string {
+    const domain = suggestion.url.match(/^[a-z][a-z\d+.-]*:\/\/([^/?#]+)/i)?.[1];
+    return domain ? this.createFilterBadge("domain", domain, "url") : "";
+  }
+
+  getTags({ tags }: Suggestion): HTMLSpanElement[] {
+    if (!Array.isArray(tags)) return [];
+    return tags.map((tag) => this.createFilterBadge("tag", tag, "tag"));
+  }
+
+  createFilterBadge(className: string, text: string, queryPrefix: string): HTMLSpanElement {
+    const badge = this.createSpan(className, text);
+    badge.addEventListener("click", (event) => {
+      this.handleTagOrNamespaceClick(event, `${queryPrefix}:${text}`);
+    });
+    return badge;
   }
 
   getExamples(suggestion: Suggestion): HTMLElement | DocumentFragment {
