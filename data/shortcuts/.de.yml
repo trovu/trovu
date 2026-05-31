@@ -881,56 +881,40 @@ dbkbt 1:
   - arguments: '353'
     description: Suche nach Tabellennummer 353
 dbm 0:
-  url: https://mobile.bahn.de/
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version
-  include: db 0
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: db
+    created: '2026-05-31'
 dbm 2:
-  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
-  include: dbm 0
-  examples:
-  - arguments: berlin, hamburg
-    description: Nächste Verbindung von Berlin nach Hamburg
-  - arguments: b, hh
-    description: Kfz-Kennzeichen als Start und Ziel
-    config:
-      country: de
+  deprecated:
+    alternative:
+      query: db <1>, <2>
+    created: '2026-05-31'
 dbm 3:
-  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version
-  include: dbm 0
-  examples:
-  - arguments: berlin, hamburg, 10
-    description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>
+    created: '2026-05-31'
 dbm 4:
-  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version
-  include: dbm 0
-  examples:
-  - arguments: berlin, hamburg, 10, 28.1.
-    description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>, <4>
+    created: '2026-05-31'
 dbmn 2:
-  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
-  include: dbm 0
-  examples:
-  - arguments: berlin, hamburg
-    description: Nächste Verbindung von Berlin nach Hamburg
+  deprecated:
+    alternative:
+      query: db <1>, <2>
+    created: '2026-05-31'
 dbmn 3:
-  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
-  include: dbm 0
-  examples:
-  - arguments: berlin, hamburg, 10
-    description: Verbindung von Berlin nach Hamburg heute um 10 Uhr
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>
+    created: '2026-05-31'
 dbmn 4:
-  url: 'https://mobile.bahn.de/bin/mobil/query.exe/dox?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
-  title: Deutsche Bahn Fahrplanauskunft, mobile Version, nur Nahverkehr
-  include: dbm 0
-  examples:
-  - arguments: berlin, hamburg, 10, 28.1.
-    description: Verbindung von Berlin nach Hamburg um 10 Uhr am 28.1.
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>, <4>
+    created: '2026-05-31'
 dbn 2:
   url: 'https://www.bahn.de/buchung/start?STS=false&so=<Start: {type: city}>&zo=<Ziel: {type: city}>&hd=<$now: {output: YYYY-MM-DD}>T<$now: {output: HH:mm:00}>&vm=03,04,05,06,07,08,09#trovu[waitBeforeFill]=4000&trovu[submit]=button.quick-finder-basic__search-btn'
   title: Deutsche Bahn Fahrplanauskunft, nur Nahverkehr
@@ -957,53 +941,40 @@ dbn 4:
   - arguments: berlin, hamburg, 20:00, 31.12.
     description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
 dbt 0:
-  url: https://reiseauskunft.bahn.de/bin/query.exe/dl
-  title: Deutsche Bahn Fahrplanauskunft, Textversion
-  include: db 0
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: db
+    created: '2026-05-31'
 dbt 2:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&start=1'
-  title: Deutsche Bahn Fahrplanauskunft Textversion
-  include: dbt 0
-  examples:
-  - arguments: berlin, hamburg
-    description: Nächste Verbindung von Berlin nach Hamburg
+  deprecated:
+    alternative:
+      query: db <1>, <2>
+    created: '2026-05-31'
 dbt 3:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&start=1'
-  title: Deutsche Bahn Fahrplanauskunft Textversion
-  include: dbt 0
-  examples:
-  - arguments: berlin, hamburg, 20:00
-    description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>
+    created: '2026-05-31'
 dbt 4:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&start=1'
-  title: Deutsche Bahn Fahrplanauskunft Textversion
-  include: dbt 0
-  examples:
-  - arguments: berlin, hamburg, 20:00, 31.12.
-    description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>, <4>
+    created: '2026-05-31'
 dbtn 2:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&journeyProducts=1016&start=1'
-  title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
-  include: dbt 0
-  examples:
-  - arguments: berlin, hamburg
-    description: Nächste Verbindung von Berlin nach Hamburg
+  deprecated:
+    alternative:
+      query: db <1>, <2>
+    created: '2026-05-31'
 dbtn 3:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&journeyProducts=1016&start=1'
-  title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
-  include: dbt 0
-  examples:
-  - arguments: berlin, hamburg, 20:00
-    description: Verbindung von Berlin nach Hamburg heute um 20 Uhr
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>
+    created: '2026-05-31'
 dbtn 4:
-  url: 'https://reiseauskunft.bahn.de/bin/query.exe/dl?S=<Start: {type: city}>%21&Z=<Ziel: {type: city}>%21&T=<Zeit: {type: time, output: HH:mm}>&D=<Datum: {type: date, output: DD.MM.YYYY}>&journeyProducts=1016&start=1'
-  title: Deutsche Bahn Fahrplanauskunft Textversion, nur Nahverkehr
-  include: dbt 0
-  examples:
-  - arguments: berlin, hamburg, 20:00, 31.12.
-    description: Verbindung von Berlin nach Hamburg um 20 Uhr am 31.12.
+  deprecated:
+    alternative:
+      query: db <1>, <2>, <3>, <4>
+    created: '2026-05-31'
 dcl 0:
   url: https://www.decathlon.de/
   title: Decathlon.de
