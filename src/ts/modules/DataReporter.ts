@@ -41,10 +41,14 @@ export default class DataReporter {
         const [keyword, argCount] = key.split(" ");
         if (
           parseInt(argCount) == 0 &&
+          namespace == "o" &&
           !shortcut.examples &&
           !shortcut.deprecated &&
           !shortcut.include &&
-          !shortcut.removed
+          !shortcut.removed &&
+          // does not have old tag
+          Array.isArray(shortcut.tags) &&
+          !shortcut.tags.includes("old")
         ) {
           console.log("Active shortcut with 0 arguments and no examples:", key);
         }
