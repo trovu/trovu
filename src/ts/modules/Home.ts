@@ -5,7 +5,6 @@ import Env from "./Env";
 import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
-import "@fortawesome/fontawesome-free/js/all.min";
 import type { EnvParams, RedirectResponse } from "../types";
 
 /* eslint-disable no-unused-vars */
