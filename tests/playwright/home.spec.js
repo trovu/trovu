@@ -254,7 +254,10 @@ test.describe("Homepage status states", () => {
   });
 
   test("should prefill the alternative query for deprecated shortcuts", async ({ page }) => {
-    await openLoadedHomepage(page, "#country=gb&language=en&query=oldshortcut&status=deprecated&alternative=g%20berlin");
+    await openLoadedHomepage(
+      page,
+      "#country=gb&language=en&query=oldshortcut&status=deprecated&alternative=g%20berlin",
+    );
     await expect(page.locator("#query")).toHaveValue("g berlin");
     await expect(page.locator("#alert")).toContainText("deprecated");
     await expect(page.locator("#alert em.query")).toHaveText("oldshortcut");
