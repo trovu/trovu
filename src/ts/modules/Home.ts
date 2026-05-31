@@ -212,7 +212,7 @@ export default class Home {
 
   setLocationHash() {
     const paramStr = this.env.buildUrlParamStr();
-    window.location.hash = "#" + paramStr;
+    window.history.replaceState(null, "", "#" + paramStr);
   }
 
   /**
