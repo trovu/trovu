@@ -36,6 +36,23 @@ test("Homepage startup should not reload after normalizing the hash", async ({ p
   expect(navigationRequests).toBe(1);
 });
 
+test("Homepage HTML should expose a loading state before JavaScript runs", async ({ page }) => {
+  await page.route("**/*", async (route) => {
+    if (route.request().resourceType() === "script") {
+      await route.abort();
+      return;
+    }
+    await route.continue();
+  });
+
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  const submitButton = page.locator('#query-form button[type="submit"]');
+  await expect(page.locator("html")).toHaveAttribute("aria-busy", "true");
+  await expect(submitButton).toHaveClass(/btn-loading/);
+  await expect(submitButton).toHaveAttribute("aria-label", "Shortcuts are loading");
+  await expect(submitButton).toHaveText("⏳");
+});
+
 test("Homepage should expose a loading state and reject an early submit", async ({ page }) => {
   let resumeData;
   let shouldDelayData = true;
@@ -58,9 +75,10 @@ test("Homepage should expose a loading state and reject an early submit", async 
     await expect(queryInput).toBeFocused();
     await expect(page.locator(".tagline")).toBeVisible();
     await expect(page.locator(".examples")).toBeVisible();
-    await expect(submitButton).toHaveClass(/btn-secondary/);
+    await expect(submitButton).toHaveClass(/btn-loading/);
     await expect(submitButton).toHaveAttribute("aria-label", "Shortcuts are loading");
     await expect(submitButton).toHaveText("⏳");
+    await expect(submitButton).toHaveCSS("background-color", "rgb(192, 192, 192)");
 
     await queryInput.fill("debug:g foobar");
     await queryInput.press("Enter");

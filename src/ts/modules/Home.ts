@@ -70,7 +70,7 @@ export default class Home {
       });
     }
     this.initialized = true;
-    this.setLoadingState(false);
+    this.showReadyState();
     document.documentElement.setAttribute("data-page-loaded", "true");
 
     Home.setHeights();
@@ -102,7 +102,6 @@ export default class Home {
     this.queryInput.addEventListener("input", () => {
       this.queryInputChanged = true;
     });
-    this.setLoadingState(true);
     this.toggleByQuery();
     document.documentElement.style.display = "block";
     this.queryInput.focus();
@@ -111,18 +110,9 @@ export default class Home {
     }
   }
 
-  setLoadingState(isLoading: boolean) {
-    if (isLoading) {
-      document.documentElement.setAttribute("aria-busy", "true");
-      this.submitButton.classList.remove("btn-primary");
-      this.submitButton.classList.add("btn-secondary");
-      this.submitButton.setAttribute("aria-label", "Shortcuts are loading");
-      this.submitButton.textContent = "\u23f3";
-      return;
-    }
-
+  showReadyState() {
     document.documentElement.removeAttribute("aria-busy");
-    this.submitButton.classList.remove("btn-secondary");
+    this.submitButton.classList.remove("btn-loading");
     this.submitButton.classList.add("btn-primary");
     this.submitButton.setAttribute("aria-label", "Search");
     const icon = document.createElement("i");
