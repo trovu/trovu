@@ -159,7 +159,7 @@ export default class Suggestions {
   getBadges(suggestion: Suggestion): HTMLElement {
     const container = document.createElement("div");
     container.className = "tags";
-    container.append(this.getDomain(suggestion), ...this.getTags(suggestion));
+    container.append(...this.getTags(suggestion), this.getDomain(suggestion));
     return container;
   }
 
