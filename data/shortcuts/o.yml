@@ -47,6 +47,8 @@
   title: Torrent Search Engine | 1337x.to
   tags:
   - torrent
+  examples:
+  - description: Go to the homepage
 1337x 1:
   url: https://1337x.to/search/<query>/1/
   include: 1337x 0
@@ -66,6 +68,8 @@
   title: 25C3 Main Page
   tags:
   - ccc
+  examples:
+  - description: Go to the homepage
 25c3 1:
   url: https://events.ccc.de/congress/2008/wiki/Special:Search?search=<query>&go=Go
   title: 25C3 Wiki Search
@@ -76,6 +80,8 @@
   title: 26C3 Main Page
   tags:
   - ccc
+  examples:
+  - description: Go to the homepage
 26c3 1:
   url: https://events.ccc.de/congress/2009/wiki/Special:Search?search=<query>&go=Go
   title: 26C3 Wiki Search
@@ -92,6 +98,8 @@
   title: 27C3 Main Page
   tags:
   - ccc
+  examples:
+  - description: Go to the homepage
 27c3 1:
   url: https://events.ccc.de/congress/2010/wiki/Special:Search?search=<query>&go=Go
   title: 27C3 Wiki Search
@@ -108,6 +116,8 @@
   title: 28c3 Main Page
   tags:
   - ccc
+  examples:
+  - description: Go to the homepage
 28c3 1:
   url: https://events.ccc.de/congress/2011/wiki/Special:Search?search=<query>&go=Go
   title: 28c3 Wiki Search
@@ -127,6 +137,8 @@
   title: 29c3 Main Page
   tags:
   - ccc
+  examples:
+  - description: Go to the homepage
 29c3 1:
   url: https://events.ccc.de/congress/2012/wiki/Special:Search?search=<query>&go=Go
   title: 29c3 Wiki Search
@@ -138,11 +150,15 @@
   tags:
   - ccc
   - congress
+  examples:
+  - description: Go to the homepage
 33c3 0:
   url: https://fahrplan.events.ccc.de/congress/2016/Fahrplan/
   title: 33C3 Congress schedule
   tags:
   - ccc
+  examples:
+  - description: Go to the homepage
 33c3lt 0:
   url: https://events.ccc.de/congress/2016/wiki/Static:Lightning_Talks
   title: 33C3 Lightning Talks
@@ -154,12 +170,16 @@
   - ccc
   - congress
   - leipzig
+  examples:
+  - description: Go to the homepage
 35c3 0:
   url: https://events.ccc.de/congress/2018/wiki/
   title: 35C3 Chaos Communication Congress 2018 Wiki
   tags:
   - ccc
   - wiki
+  examples:
+  - description: Go to the homepage
 35c3 1:
   url: https://events.ccc.de/congress/2018/wiki/index.php/<page>
   title: 35C3 Chaos Communication Congress 2018 Wiki
@@ -173,6 +193,8 @@
   - ccc
   - leipzig
   - wiki
+  examples:
+  - description: Go to the homepage
 911 0:
   url: https://www.911tabs.com/
   title: 911tabs.com
@@ -437,6 +459,8 @@ alt 0:
   tags:
   - alternative
   - software
+  examples:
+  - description: Go to the homepage
 alt 1:
   url: https://alternativeto.net/browse/search/?q=<product>
   title: AlternativeTo
@@ -516,6 +540,8 @@ anon 0:
   title: Anonymouse
   tags:
   - anonymous
+  examples:
+  - description: Go to the homepage
 anon 1:
   url: 'http://anonymouse.org/cgi-bin/anon-www.cgi/<url: {encoding: none}>'
   title: Anonymouse
@@ -543,6 +569,8 @@ aol 0:
   title: Aol.com
   tags:
   - aol
+  examples:
+  - description: Go to the homepage
 ap 0:
   url: https://www.apple.com/
   title: Apple.com
@@ -743,6 +771,8 @@ atd 0:
   - archive
   - news
   - press
+  examples:
+  - description: Go to the homepage
 atd 1:
   url: https://archive.ph/submit/?url=<url>
   include:
@@ -791,6 +821,8 @@ b 0:
   tags:
   - bing
   - web-search
+  examples:
+  - description: Go to the homepage
 b 1:
   url: https://www.bing.com/search?q=<query>
   title: Bing
@@ -912,6 +944,8 @@ bible 0:
   tags:
   - bible
   - christianity
+  examples:
+  - description: Go to the homepage
 bible 1:
   url: https://www.bibleserver.com/search/ESV/<query>
   title: Bibleserver.com
@@ -948,6 +982,8 @@ bibso 0:
   - bibsonomy
   - bookmarks
   - social
+  examples:
+  - description: Go to the homepage
 bibso 1:
   url: https://www.bibsonomy.org/search/<query>
   title: Bibsonomy
@@ -1265,6 +1301,8 @@ calc 0:
   tags:
   - calculator
   - online-tool
+  examples:
+  - description: Go to the homepage
 cbt 0:
   url: https://cobalt.tools/
   title: cobalt.tools
@@ -1394,6 +1432,8 @@ cg 0:
   - gpt
   - llm
   - openai
+  examples:
+  - description: Go to the homepage
   description: Chat with OpenAI's ChatGPT
 cg 1:
   url: https://chatgpt.com/?q=<query>
@@ -1461,6 +1501,8 @@ ckd 0:
   tags:
   - cooking
   - recipe
+  examples:
+  - description: Go to the homepage
 ckd 1:
   url: https://cooked.wiki/<url>
   tests:
@@ -1544,6 +1586,8 @@ cma 0:
   tags:
   - critical-maps
   - critical-mass
+  examples:
+  - description: Go to the homepage
   description: "Show a map - or download an app - where Critical Masses took place.\r\n\r\nFurther reading https://en.wikipedia.org/wiki/Critical_Mass_(cycling)"
 codej 0:
   url: https://searchcode.com/
@@ -1662,6 +1706,8 @@ cpp 0:
   tags:
   - c++
   - programming
+  examples:
+  - description: Go to the homepage
 cpp 1:
   url: https://duckduckgo.com/?sites=cppreference.com&q=%5C<query>
   title: C++ Reference (cppreference.com)
@@ -1731,6 +1777,8 @@ crg 0:
   title: Craigslist
   tags:
   - craigslist
+  examples:
+  - description: Go to the homepage
 crit 0:
   url: https://www.criticker.com/
   title: Criticker
@@ -1874,6 +1922,8 @@ ctan 0:
   - ctan
   - latex
   - tex
+  examples:
+  - description: Go to the homepage
 ctan 1:
   url: https://ctan.org/search?phrase=<query>
   include: ctan 0
@@ -1924,6 +1974,8 @@ d 0:
   title: Duck Duck Go
   tags:
   - web-search
+  examples:
+  - description: Go to the homepage
 d 1:
   url: https://duckduckgo.com/?q=<query>
   title: Duck Duck Go
@@ -1996,6 +2048,8 @@ datecalc 0:
   tags:
   - calculator
   - date
+  examples:
+  - description: Go to the homepage
 datev 1:
   deprecated:
     alternative:
@@ -2022,6 +2076,8 @@ dblp 0:
   title: DBLP Computer Science Bibliography
   tags:
   - academia
+  examples:
+  - description: Go to the homepage
 dblp 1:
   url: https://dblp.org/search?q=<query>
   title: DBLP Computer Science Bibliography
@@ -2061,11 +2117,15 @@ dch 0:
   title: Digital Concert Hall of the Berlin Philharmonic Orchestra (Berliner Philharmoniker)
   tags:
   - classical-music
+  examples:
+  - description: Go to the homepage
 dd24 0:
   url: https://www.domaindiscount24.com/de
   title: DomainDiscount24
   tags:
   - internet-registrar
+  examples:
+  - description: Go to the homepage
 ddgs 0:
   url: https://duckduckgo.com/
   title: Duck Duck Go
@@ -2170,6 +2230,8 @@ dea 0:
   - art
   - deviantart
   - images
+  examples:
+  - description: Go to the homepage
 dea 1:
   url: https://www.deviantart.com/search?q=<query>
   title: DeviantART
@@ -2253,6 +2315,8 @@ debm 0:
   title: Debian Manpages
   tags:
   - debian
+  examples:
+  - description: Go to the homepage
 debm 1:
   url: https://manpages.debian.org/jump?q=<manpage>
   tests:
@@ -2479,6 +2543,8 @@ dl 0:
   tags:
   - dictionary
   - language
+  examples:
+  - description: Go to the homepage
 dl 1:
   url: https://www.deepl.com/translator#./<$language>/<text>
   title: DeepL, translate to my language
@@ -2629,6 +2695,8 @@ dreamstime 0:
   tags:
   - images
   - stock-agency
+  examples:
+  - description: Go to the homepage
 dreamstime 1:
   url: https://www.dreamstime.com/search.php?srh_field=<Suche>
   title: Dreamstime
@@ -2679,6 +2747,8 @@ drse 0:
   tags:
   - programming
   - stackexchange
+  examples:
+  - description: Go to the homepage
 drse 1:
   url: https://drupal.stackexchange.com/search?q=<query>
   title: Drupal Stack Exchange
@@ -2764,6 +2834,8 @@ dzr 0:
   tags:
   - deezer
   - music
+  examples:
+  - description: Go to the homepage
 dzr 1:
   url: https://www.deezer.com/search/<query>
   title: Deezer
@@ -2780,6 +2852,8 @@ e 0:
   - ebay
   - is-affiliate
   - shopping
+  examples:
+  - description: Go to the homepage
 e 1:
   url: https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=<query>&_sacat=0&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5337375636&customid=&toolid=10001&mkevt=1
   title: Ebay.com
@@ -2844,6 +2918,8 @@ ecl 0:
   tags:
   - eclipse
   - java
+  examples:
+  - description: Go to the homepage
 ecl 1:
   url: https://www.google.com/search?hl=en&q=site%3Ahttp://www.eclipse.org/eclipselink/api/2.4+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: EclipseLink API
@@ -3086,6 +3162,8 @@ ep 0:
   tags:
   - emoji
   - unicode
+  examples:
+  - description: Go to the homepage
 ep 1:
   url: https://emojipedia.org/search?q=<query>
   include: ep 0
@@ -3265,6 +3343,8 @@ exkcd 0:
   tags:
   - wiki
   - xkcd
+  examples:
+  - description: Go to the homepage
 exkcd 1:
   url: https://www.explainxkcd.com/wiki/index.php?search=<query>&go=Go
   title: Explain xkcd
@@ -3297,6 +3377,8 @@ fb 0:
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the homepage
 fb 1:
   url: https://www.facebook.com/search/top/?q=<query>
   title: Facebook
@@ -3326,6 +3408,8 @@ fbe 0:
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the homepage
 fbe 1:
   url: https://www.facebook.com/search/events/?q=<query>
   title: Facebook, Events
@@ -3385,12 +3469,16 @@ fbm 0:
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the homepage
 fbmp 0:
   url: https://www.facebook.com/marketplace/
   title: Facebook Marketplace
   tags:
   - classifieds
   - facebook
+  examples:
+  - description: Go to the homepage
 fbmp 1:
   url: https://www.facebook.com/marketplace/search/?query=<query>
   title: Facebook Marketplace Search
@@ -3416,6 +3504,8 @@ fbp 0:
   tags:
   - facebook
   - social-network
+  examples:
+  - description: Go to the homepage
 fbpa 0:
   url: https://www.facebook.com/pages/
   title: Facebook, Pages
@@ -3638,6 +3728,8 @@ ffao 0:
   - addons
   - firefox
   - mozilla
+  examples:
+  - description: Go to the homepage
 ffao 1:
   url: https://addons.mozilla.org/firefox/search?q=<addon>
   include: ffao 0
@@ -3650,6 +3742,8 @@ ffi 0:
   tags:
   - images
   - stock-agency
+  examples:
+  - description: Go to the homepage
 ffi 1:
   url: https://www.fotofinder.com/?text=<Suche>&defaultstring=Suchbegriff(e)+eingeben&ownerid=0&start_date=&end_date=&_rm=on&_rf=on&_mr=&suchtype=fulltext&lang=de&usrtrck=fulltext_search
   title: Fotofinder
@@ -3732,6 +3826,8 @@ findutf 0:
   - online-tool
   - unicode-character
   - utf
+  examples:
+  - description: Go to the homepage
 fisbroker 0:
   deprecated:
     alternative:
@@ -3742,6 +3838,8 @@ fiverr 0:
   title: Fiverr
   tags:
   - services
+  examples:
+  - description: Go to the homepage
 fiverr 1:
   url: https://www.fiverr.com/search/gigs?query=<query>
   title: Fiverr Gigs
@@ -3947,6 +4045,8 @@ fpwg 0:
   title: Frank's password generator (Kessnux; javascript)
   tags:
   - passwords
+  examples:
+  - description: Go to the homepage
 fr 0:
   include:
   - key: fr 0
@@ -4121,6 +4221,8 @@ g 0:
   tags:
   - google
   - web-search
+  examples:
+  - description: Go to the homepage
 g 1:
   url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8
   title: Google.com
@@ -4209,6 +4311,8 @@ gbooks 0:
   tags:
   - books
   - google
+  examples:
+  - description: Go to the homepage
 gbooks 1:
   url: https://books.google.com/books?hl=<$language>&q=<query>
   title: Google Books
@@ -4231,6 +4335,8 @@ gcal 0:
   tags:
   - calendar
   - google
+  examples:
+  - description: Go to the homepage
 gcal 1:
   url: https://calendar.google.com/calendar/u/0/r/search?q=<query>
   title: Google Calendar
@@ -4260,6 +4366,8 @@ gco 0:
   - address-book
   - contacts
   - google
+  examples:
+  - description: Go to the homepage
 gco 1:
   url: https://contacts.google.com/search/<query>
   title: Google Contacts
@@ -4363,6 +4471,8 @@ gdr 0:
   - collaboration
   - documents
   - storage
+  examples:
+  - description: Go to the homepage
 gdr 1:
   url: https://drive.google.com/#search/<query>
   title: Google Drive
@@ -4452,6 +4562,8 @@ gfin 0:
   tags:
   - finance
   - google
+  examples:
+  - description: Go to the homepage
 gfin 1:
   url: https://finance.google.com/finance?q=<value>
   title: Google Finance
@@ -4468,6 +4580,8 @@ gfl 0:
   - flights
   - google
   - travel
+  examples:
+  - description: Go to the homepage
   description: Flight search engine that allows you to find and compare flight options from various airlines and travel agencies.
 gfl 1:
   url: https://www.google.com/travel/flights?q=<query>
@@ -4533,6 +4647,8 @@ gg 0:
   - google
   - newsgroups
   - usenet
+  examples:
+  - description: Go to the homepage
 gg 1:
   url: https://groups.google.com/search?hl=<$language>&q=<query>
   title: Google Groups
@@ -4548,6 +4664,8 @@ gh 0:
   title: GitHub
   tags:
   - programming
+  examples:
+  - description: Go to the homepage
 gh 1:
   url: https://github.com/search?q=<query>
   title: GitHub
@@ -4563,6 +4681,8 @@ gha 0:
   - archive
   - internet
   - web
+  examples:
+  - description: Go to the homepage
 gha 1:
   url: https://ghostarchive.org/search?term=<url>
   title: 'Ghostarchive: search for archived pages'
@@ -4587,6 +4707,8 @@ gim 0:
   tags:
   - google
   - images
+  examples:
+  - description: Go to the homepage
 gim 1:
   url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&tbm=isch
   title: Google Images
@@ -4622,6 +4744,8 @@ gitlab 0:
   - open-source
   - programming
   - software
+  examples:
+  - description: Go to the homepage
 gitlab 1:
   url: https://gitlab.com/<repository>
   title: GitLab software repository
@@ -4660,6 +4784,8 @@ gm 0:
   tags:
   - google
   - maps
+  examples:
+  - description: Go to the homepage
 gm 1:
   url: https://www.google.com/maps/search/<location>/?hl=<$language>
   title: Google Maps
@@ -4688,6 +4814,8 @@ gmail 0:
   tags:
   - google
   - mail
+  examples:
+  - description: Go to the homepage
 gmail 1:
   url: https://mail.google.com/mail/#search/<query>
   title: Google Mail
@@ -4763,6 +4891,8 @@ gn 0:
   tags:
   - google
   - news
+  examples:
+  - description: Go to the homepage
 gn 1:
   url: 'https://news.google.com/search?q=<query>&gl=<$country: {}>'
   title: Google News of your country
@@ -4810,6 +4940,8 @@ go 0:
   - golang
   - programming
   - software
+  examples:
+  - description: Go to the homepage
   description: Package browser for the Go programming language
 go 1:
   url: https://pkg.go.dev/search?q=<query>
@@ -4891,6 +5023,8 @@ gp 0:
   - movies
   - music
   - store
+  examples:
+  - description: Go to the homepage
 gp 1:
   url: https://play.google.com/store/search?q=<query>
   title: Google Play
@@ -4948,6 +5082,8 @@ gpm 0:
   tags:
   - google
   - music
+  examples:
+  - description: Go to the homepage
 gpm 1:
   url: https://play.google.com/music/listen#<query>_sr
   title: Google Play Music
@@ -5048,6 +5184,8 @@ groovesalad 0:
   tags:
   - internetradio
   - radio-station
+  examples:
+  - description: Go to the homepage
 grp 0:
   url: https://grokipedia.com/
   title: Grokipedia
@@ -5073,6 +5211,8 @@ gsch 0:
   tags:
   - google
   - science
+  examples:
+  - description: Go to the homepage
 gsch 1:
   url: https://scholar.google.com/scholar?hl=<$language>&q=<query>
   title: Google Scholar
@@ -5088,6 +5228,8 @@ gsh 0:
   tags:
   - google
   - shopping
+  examples:
+  - description: Go to the homepage
 gsh 1:
   url: https://www.google.com/search?tbm=shop&hl=<$language>&q=<query>
   title: Google Shopping
@@ -5201,6 +5343,8 @@ gtr 0:
   tags:
   - google
   - language
+  examples:
+  - description: Go to the homepage
 gtr 1:
   url: https://translate.google.com/translate_t?sl=auto&text=<phrase/url>
   title: Google Translate
@@ -5272,6 +5416,8 @@ gv 0:
   tags:
   - google
   - video
+  examples:
+  - description: Go to the homepage
 gv 1:
   url: https://www.google.com/search?hl=<$language>&q=<query>&ie=utf-8&tbm=vid
   title: Google Video
@@ -5351,6 +5497,8 @@ gzh 0:
   - geizhals
   - preisvergleich
   - shopping
+  examples:
+  - description: Go to the homepage
 gzh 1:
   url: https://geizhals.eu/?fs=<Produkt>
   title: Geizhals EU
@@ -5438,6 +5586,8 @@ here 0:
   title: Here.com
   tags:
   - maps
+  examples:
+  - description: Go to the homepage
 here 1:
   url: https://wego.here.com/search/<location>
   title: Here.com
@@ -5795,6 +5945,8 @@ ip 0:
   title: Show my external IP, via heise.de
   tags:
   - ip
+  examples:
+  - description: Go to the homepage
 iper 0:
   url: https://www.ipernity.com/
   title: ipernity
@@ -5820,6 +5972,8 @@ ipkat 0:
   - ip-law
   - patent-law
   - patents
+  examples:
+  - description: Go to the homepage
 ipkat 1:
   url: https://ipkitten.blogspot.com/search?q=<query>
   include: ipkat 0
@@ -6011,6 +6165,8 @@ java 0:
   - api
   - java
   - programming
+  examples:
+  - description: Go to the homepage
 java 1:
   url: https://www.google.com/search?hl=en&q=inurl%3Ajavase%2F7%2Fdocs%2Fapi%2F+Class+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: Java Platform SE 7 API
@@ -6187,6 +6343,8 @@ jw 0:
   tags:
   - movies
   - series
+  examples:
+  - description: Go to the homepage
   description: Streaming sources for films and movies
 ka 0:
   include:
@@ -6217,6 +6375,8 @@ kg 0:
   - kagi
   - search
   - web-search
+  examples:
+  - description: Go to the homepage
 kg 1:
   url: https://kagi.com/search?q=<query>
   include: kg 0
@@ -6395,6 +6555,8 @@ laredoute 0:
   tags:
   - fashion
   - shopping
+  examples:
+  - description: Go to the homepage
 laredoute 1:
   url: https://www.laredoute.com/search.aspx?keyword=<query>
   title: La Redoute
@@ -6414,6 +6576,8 @@ last 0:
   title: Last.fm
   tags:
   - music
+  examples:
+  - description: Go to the homepage
 last 1:
   deprecated:
     alternative:
@@ -6426,6 +6590,8 @@ laste 0:
   - events
   - lastfm
   - music
+  examples:
+  - description: Go to the homepage
 lb 0:
   include:
   - key: lb 0
@@ -6440,6 +6606,8 @@ lcn 0:
   tags:
   - java
   - programming
+  examples:
+  - description: Go to the homepage
 lcn 1:
   url: https://www.google.com/search?hl=en&q=site%3Ahttp://lucene.apache.org/core/4_1_0/+<query>+intitle%3A<query>&ie=utf-8&btnI=1
   title: Lucene API
@@ -6463,6 +6631,8 @@ le 0:
   tags:
   - certificate-authority
   - open-source
+  examples:
+  - description: Go to the homepage
 leo 1:
   deprecated:
     alternative:
@@ -6506,6 +6676,8 @@ libg 0:
   tags:
   - ebooks
   - library
+  examples:
+  - description: Go to the homepage
 libg 1:
   url: https://libgen.vg/?req=<query>
   title: Library Genesis, All
@@ -6540,6 +6712,8 @@ lin 0:
   tags:
   - linkedin
   - social-network
+  examples:
+  - description: Go to the homepage
 lin 1:
   url: https://www.linkedin.com/search/results/people/?keywords=<query>
   title: Linkedin people search
@@ -6565,6 +6739,8 @@ lipsum 0:
   tags:
   - lipsum
   - lorem-ipsum
+  examples:
+  - description: Go to the homepage
 lipsum 1:
   url: https://www.lipsum.com/feed/html?amount=<amount>&what=words&name=start
   title: Lorem Ipsum
@@ -6755,6 +6931,8 @@ mbg 0:
   title: MobyGames
   tags:
   - games
+  examples:
+  - description: Go to the homepage
 mbg 1:
   url: https://www.mobygames.com/search/quick?q=<query>
   title: MobyGames
@@ -7001,6 +7179,8 @@ mubi 0:
     expect: '<title>MUBI:'
   tags:
   - movies
+  examples:
+  - description: Go to the homepage
 mubi 1:
   url: https://mubi.com/search/films?query=<query>
   title: MUBI
@@ -7018,6 +7198,8 @@ mwe 0:
   tags:
   - mediawiki
   - wiki
+  examples:
+  - description: Go to the homepage
 mwe 1:
   url: https://www.mediawiki.org/wiki/Special:Search?search=<query>&ns102=1&fulltext=Search
   title: Search MediaWiki Extensions
@@ -7066,6 +7248,8 @@ myfritz 0:
   - internetprovider
   - remoteaccess
   - router
+  examples:
+  - description: Go to the homepage
 myg 1:
   deprecated:
     alternative:
@@ -7168,6 +7352,8 @@ nbsd 0:
   - expect: NetBSD Manual Pages
   tags:
   - netbsd
+  examples:
+  - description: Go to the homepage
 nbsd 1:
   url: https://man.netbsd.org/<manpage>
   tests:
@@ -7379,6 +7565,8 @@ nv 0:
   title: Neeva
   tags:
   - web-search
+  examples:
+  - description: Go to the homepage
 nv 1:
   url: https://neeva.com/search?q=<query>
   title: Neeva
@@ -7592,6 +7780,8 @@ orv 0:
   - academia
   - publishing
   - research
+  examples:
+  - description: Go to the homepage
 orv 1:
   url: https://openreview.net/search?term=<term>&group=all&content=all&source=all
   include: orv 0
@@ -7690,6 +7880,8 @@ osmf 0:
   - copyleft
   - maps
   - osm
+  examples:
+  - description: Go to the homepage
 osmg 1:
   url: https://www.google.com/search?hl=<$language>&q=<page>%20site:wiki.openstreetmap.org
   include: osm? 0
@@ -7854,6 +8046,8 @@ owncloud 0:
   - cloud
   - copyleft
   - open-source
+  examples:
+  - description: Go to the homepage
   description: owncloud is a Open source cloud server and client software.
 pa 0:
   include:
@@ -8058,6 +8252,8 @@ phb 0:
   tags:
   - images
   - stock-agency
+  examples:
+  - description: Go to the homepage
 phb 1:
   url: https://photobucket.com/images/<query>
   title: Photobucket
@@ -8073,12 +8269,16 @@ phbl 0:
   tags:
   - images
   - stock-agency
+  examples:
+  - description: Go to the homepage
 php 0:
   url: https://www.php.net/
   title: PHP Documentation
   tags:
   - php
   - programming
+  examples:
+  - description: Go to the homepage
 php 1:
   url: https://www.php.net/manual-lookup.php?lang=<$language>&pattern=<query>
   title: PHP Documentation
@@ -8103,6 +8303,8 @@ pin 0:
   - images
   - photos
   - pinterest
+  examples:
+  - description: Go to the homepage
 pin 1:
   url: https://pinterest.com/search/?q=<query>
   title: Pinterest
@@ -8171,6 +8373,8 @@ plk 0:
   tags:
   - movies
   - tv
+  examples:
+  - description: Go to the homepage
 plk 1:
   url: https://putlocker.sb/search/<query>
   title: Putlocker
@@ -8322,6 +8526,8 @@ ppx 0:
   - ai
   - gpt
   - openai
+  examples:
+  - description: Go to the homepage
   description: Go to the homepage
 ppx 1:
   url: https://perplexity.ai/?q=<query>
@@ -8465,12 +8671,16 @@ pwned 0:
   title: Have I been pwned ?
   tags:
   - infosec
+  examples:
+  - description: Go to the homepage
 py 0:
   url: https://docs.python.org/
   title: Python documentation
   tags:
   - programming
   - python
+  examples:
+  - description: Go to the homepage
 py 1:
   url: https://docs.python.org/3/search.html?q=<query>
   title: Python 3 documentation
@@ -8486,6 +8696,8 @@ py2 0:
   tags:
   - programming
   - python
+  examples:
+  - description: Go to the homepage
 py2 1:
   url: https://docs.python.org/2/search.html?q=<query>
   title: Python 2 documentation
@@ -8501,6 +8713,8 @@ py3 0:
   tags:
   - programming
   - python
+  examples:
+  - description: Go to the homepage
 py3 1:
   url: https://docs.python.org/3/search.html?q=<query>
   title: Python 3 documentation
@@ -8516,6 +8730,8 @@ py3s 0:
   tags:
   - programming
   - python
+  examples:
+  - description: Go to the homepage
 py3s 1:
   url: https://docs.python.org/py3k/library/<library>.html
   title: Python 3 standard library
@@ -8528,6 +8744,8 @@ pybug 0:
   tags:
   - programming
   - python
+  examples:
+  - description: Go to the homepage
 pym 0:
   url: https://readthedocs.org/
   title: readthedocs.org
@@ -8765,6 +8983,8 @@ rarbg 0:
   - downloads
   - torrent
   - torrents
+  examples:
+  - description: Go to the homepage
   description: RARBG torrent tracker
 rarbg 1:
   url: https://en.rarbg-official.com/movies?keyword=<query>
@@ -8776,6 +8996,8 @@ rb 0:
   - programming
   - rails
   - ruby
+  examples:
+  - description: Go to the homepage
 rb 1:
   url: https://www.ruby-doc.org/search.html?cof=FORID%3A9&cx=011815814100681837392%3Awnccv6st5qk&q=<query>&sa=Search
   title: Ruby Documentation
@@ -8916,6 +9138,8 @@ rfc 0:
   tags:
   - rfc
   - standard
+  examples:
+  - description: Go to the homepage
 rfc 1:
   url: https://www.google.com/search?hl=<$language>&ie=utf-8&btnI=1&q=site%3Awww.ietf.org%2Frfc%2F%20<query>
   title: RFC (Request for Comments)
@@ -9027,6 +9251,8 @@ rp18 0:
   tags:
   - berlin
   - congress
+  examples:
+  - description: Go to the homepage
 rpw 0:
   url: https://www.removepaywall.com/
   title: Remove Paywall
@@ -9810,6 +10036,8 @@ suepo 0:
   tags:
   - patents
   - suepo
+  examples:
+  - description: Go to the homepage
 sv 0:
   include:
   - key: sv 0
@@ -11008,6 +11236,8 @@ urn 0:
   - readability
   - twitter
   - x
+  examples:
+  - description: Go to the homepage
   description: Unroll a Twitter/X thread for easier readability
 urn 1:
   url: https://unrollnow.com/status/<status id>
@@ -11532,6 +11762,8 @@ winw 0:
   tags:
   - download
   - software
+  examples:
+  - description: Go to the homepage
 winw 1:
   url: https://winworldpc.com/search?q=<query>
   title: WinWorld Search
@@ -11569,6 +11801,8 @@ wipr 0:
   - ip-law
   - patent-law
   - patents
+  examples:
+  - description: Go to the homepage
 wis 1:
   deprecated:
     alternative:
@@ -11620,6 +11854,8 @@ wmc 0:
   - commons
   - wikimedia
   - wikipedia
+  examples:
+  - description: Go to the homepage
   description: Media file repository making available public domain and freely-licensed educational media content (images, sound and video clips) to everyone, in their own language.
 wmc 1:
   url: https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&search=<query>&uselang=<$language>
@@ -11720,6 +11956,8 @@ wsl 0:
   title: Wortschatz-Lexikon
   tags:
   - language
+  examples:
+  - description: Go to the homepage
 wso 1:
   url: https://www.wallstreet-online.de/suche/?suche=&q=<query>
   title: Wallstreet:Online Search
@@ -11731,6 +11969,8 @@ wsp 0:
   - travel
   - vacation
   - weather
+  examples:
+  - description: Go to the homepage
 wsp 1:
   url: 'https://weatherspark.com/search?q=<location: {type: city}>'
   include:
@@ -12103,6 +12343,8 @@ yhf 0:
   - forum
   - help
   - hosting
+  examples:
+  - description: Go to the homepage
 yhf 1:
   url: https://forum.yunohost.org/search?q=<query>
   include: yhf 0
