@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - pwa-external-via-scope
   pull_request:
     branches:
       - master
