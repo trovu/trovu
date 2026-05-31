@@ -5,6 +5,37 @@ async function openLoadedHomepage(page, hash = "") {
   await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
 }
 
+test("Homepage startup should not wait for images", async ({ page }) => {
+  let resumeLogo;
+  await page.route("**/img/logo.png", async (route) => {
+    await new Promise((resolve) => {
+      resumeLogo = resolve;
+    });
+    await route.continue();
+  });
+
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  try {
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
+  } finally {
+    resumeLogo?.();
+  }
+  await page.waitForLoadState("load");
+});
+
+test("Homepage startup should not reload after normalizing the hash", async ({ page }) => {
+  let navigationRequests = 0;
+  page.on("request", (request) => {
+    if (request.isNavigationRequest() && request.frame() === page.mainFrame()) {
+      navigationRequests += 1;
+    }
+  });
+
+  await openLoadedHomepage(page);
+  await page.waitForTimeout(100);
+  expect(navigationRequests).toBe(1);
+});
+
 test.describe("Homepage from default load", () => {
   test.beforeEach(async ({ page }) => {
     await openLoadedHomepage(page);
@@ -28,6 +59,13 @@ test.describe("Homepage from default load", () => {
 
     test("should have focus on input", async ({ page }) => {
       await expect(page.locator("#query")).toBeFocused();
+    });
+
+    test("should render icons from the stylesheet", async ({ page }) => {
+      const content = await page.locator(".fa-caret-right").evaluate((element) => {
+        return getComputedStyle(element, "::before").content;
+      });
+      expect(content).not.toMatch(/^(none|normal)$/);
     });
   });
 
