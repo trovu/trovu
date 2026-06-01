@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - codex/homepage-startup
   pull_request:
     branches:
       - master
