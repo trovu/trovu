@@ -292,32 +292,67 @@ export default class Home {
       event.preventDefault();
     }
 
-    // Must create new env instance here,
-    // because extraNamespace might have changed reachability,
-    // or asking for a not yet parsed Github namespace.
-    const envQuery = new Env({ context: "index" });
-    const params: EnvParams = Env.getParamsFromUrl();
-    params.query = this.queryInput.value;
-    await envQuery.populate(params);
-
-    const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
-
-    // Send debug to /process.
-    if (envQuery.debug) {
-      const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
-      });
-      window.location.href = processUrl;
-      return;
+    let newWindow: Window | null = null;
+    // For PWA running in standalone mode, we open a new window synchronously
+    // to preserve the User Gesture Context so the browser doesn't block or swallow the navigation.
+    // If event is undefined, this is an internal action (like reload), not a user navigation, so skip new window.
+    if (this.env.isRunningStandalone() && event) {
+      newWindow = window.open("about:blank", "_blank");
     }
 
-    let redirectUrl: string;
-    if (response.status === "found") {
-      redirectUrl = response.redirectUrl as string;
-    } else {
-      redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+    try {
+      // Must create new env instance here,
+      // because extraNamespace might have changed reachability,
+      // or asking for a not yet parsed Github namespace.
+      const envQuery = new Env({ context: "index" });
+      const params: EnvParams = Env.getParamsFromUrl();
+      params.query = this.queryInput.value;
+      await envQuery.populate(params);
+
+      const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
+
+      // Send debug to /process.
+      if (envQuery.debug) {
+        const processUrl = this.env.buildProcessUrl({
+          query: this.queryInput.value,
+        });
+        if (newWindow) {
+          newWindow.close();
+        }
+        window.location.href = processUrl;
+        return;
+      }
+
+      let redirectUrl: string;
+      if (response.status === "found") {
+        redirectUrl = response.redirectUrl as string;
+      } else {
+        redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+      }
+
+      if (newWindow) {
+        if (
+          redirectUrl.startsWith("http://") ||
+          redirectUrl.startsWith("https://") ||
+          redirectUrl.startsWith("mailto:") ||
+          redirectUrl.startsWith("tel:")
+        ) {
+          newWindow.location.href = redirectUrl;
+        } else {
+          // If the calculated destination is not an external URL, close the temporary window
+          // and perform redirect in the current standalone PWA context.
+          newWindow.close();
+          window.location.href = redirectUrl;
+        }
+      } else {
+        window.location.href = redirectUrl;
+      }
+    } catch (error) {
+      if (newWindow) {
+        newWindow.close();
+      }
+      throw error;
     }
-    window.location.href = redirectUrl;
   };
 
   /**
