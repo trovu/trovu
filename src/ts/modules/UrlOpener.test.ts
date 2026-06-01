@@ -1,4 +1,4 @@
-import { openExternal, toAndroidIntentUrl } from "./UrlOpener";
+import { openExternal, toAndroidIntentUrl, _location } from "./UrlOpener";
 
 describe("UrlOpener", () => {
   describe("toAndroidIntentUrl", () => {
@@ -33,41 +33,112 @@ describe("UrlOpener", () => {
   });
 
   describe("openExternal", () => {
-    let originalWindow: typeof window;
-    let originalNavigator: typeof navigator;
+    const originalMatchMedia = window.matchMedia;
+    const originalUserAgent = navigator.userAgent;
+    let replaceSpy: jest.SpyInstance;
+    let hrefSetSpy: jest.SpyInstance;
+    let hrefGetSpy: jest.SpyInstance;
+    let hrefValue = "";
 
     beforeEach(() => {
-      originalWindow = global.window;
-      originalNavigator = global.navigator;
+      hrefValue = "";
+      
+      // Spy/Mock getters and setters on the exported _location object
+      hrefSetSpy = jest.spyOn(_location, "href", "set").mockImplementation((val) => {
+        hrefValue = val;
+      });
+      hrefGetSpy = jest.spyOn(_location, "href", "get").mockImplementation(() => {
+        return hrefValue;
+      });
+      replaceSpy = jest.spyOn(_location, "replace").mockImplementation(() => {});
+
+      // Default matchMedia mock
+      window.matchMedia = jest.fn().mockImplementation(() => ({
+        matches: false,
+      })) as any;
+
+      // Default userAgent mock
+      Object.defineProperty(navigator, "userAgent", {
+        value: "Mozilla/5.0",
+        configurable: true,
+        writable: true,
+      });
     });
 
     afterEach(() => {
-      global.window = originalWindow;
-      global.navigator = originalNavigator;
+      // Clean up spies
+      hrefSetSpy.mockRestore();
+      hrefGetSpy.mockRestore();
+      replaceSpy.mockRestore();
+
+      // Clean up other mocks
+      window.matchMedia = originalMatchMedia;
+      Object.defineProperty(navigator, "userAgent", {
+        value: originalUserAgent,
+        configurable: true,
+        writable: true,
+      });
     });
 
     test("uses standard location href navigation when not in Android PWA", () => {
-      const mockLocation = { href: "", replace: jest.fn() };
-      global.window = {
-        location: mockLocation,
-        matchMedia: () => ({ matches: false }),
-      } as any;
-      global.navigator = { userAgent: "Mozilla/5.0" } as any;
-
       openExternal("https://example.com");
-      expect(mockLocation.href).toBe("https://example.com");
+      expect(hrefValue).toBe("https://example.com");
     });
 
     test("uses location replace when specified", () => {
-      const mockLocation = { href: "", replace: jest.fn() };
-      global.window = {
-        location: mockLocation,
-        matchMedia: () => ({ matches: false }),
-      } as any;
-      global.navigator = { userAgent: "Mozilla/5.0" } as any;
-
       openExternal("https://example.com", true);
-      expect(mockLocation.replace).toHaveBeenCalledWith("https://example.com");
+      expect(replaceSpy).toHaveBeenCalledWith("https://example.com");
+    });
+
+    test("uses Android intent URL and redirects PWA shell when in Android PWA with replace = true", () => {
+      jest.useFakeTimers();
+
+      window.matchMedia = jest.fn().mockImplementation((query) => ({
+        matches: query === "(display-mode: standalone)",
+      })) as any;
+
+      Object.defineProperty(navigator, "userAgent", {
+        value: "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36",
+        configurable: true,
+        writable: true,
+      });
+
+      openExternal("https://example.com/search?q=test", true);
+
+      expect(hrefValue).toBe(
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end"
+      );
+      expect(replaceSpy).not.toHaveBeenCalled();
+
+      jest.advanceTimersByTime(150);
+      expect(replaceSpy).toHaveBeenCalledWith("../index.html");
+
+      jest.useRealTimers();
+    });
+
+    test("uses Android intent URL but no redirect when in Android PWA with replace = false", () => {
+      jest.useFakeTimers();
+
+      window.matchMedia = jest.fn().mockImplementation((query) => ({
+        matches: query === "(display-mode: standalone)",
+      })) as any;
+
+      Object.defineProperty(navigator, "userAgent", {
+        value: "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36",
+        configurable: true,
+        writable: true,
+      });
+
+      openExternal("https://example.com/search?q=test", false);
+
+      expect(hrefValue).toBe(
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end"
+      );
+
+      jest.advanceTimersByTime(150);
+      expect(replaceSpy).not.toHaveBeenCalled();
+
+      jest.useRealTimers();
     });
   });
 });

@@ -1,6 +1,25 @@
 /** @module UrlOpener */
 
 /**
+ * A wrapper around window.location to make navigation testable in Node/Jest environments.
+ */
+export const _location = {
+  get href(): string {
+    return typeof window !== "undefined" ? window.location.href : "";
+  },
+  set href(val: string) {
+    if (typeof window !== "undefined") {
+      window.location.href = val;
+    }
+  },
+  replace(val: string) {
+    if (typeof window !== "undefined") {
+      window.location.replace(val);
+    }
+  }
+};
+
+/**
  * Open a URL, escaping the PWA shell on Android Chrome when it is an external URL.
  *
  * @param {string} url - The URL to open.
@@ -20,11 +39,11 @@ export function openExternal(url: string, replace = false): void {
   if (isPwa && isAndroid) {
     const intentUrl = toAndroidIntentUrl(url);
     if (intentUrl) {
-      window.location.href = intentUrl;
+      _location.href = intentUrl;
       // If we are on the /process/ redirect page, redirect the PWA shell back to the home page after triggering the intent
       if (replace) {
         setTimeout(() => {
-          window.location.replace("../index.html");
+          _location.replace("../index.html");
         }, 150);
       }
       return;
@@ -32,9 +51,9 @@ export function openExternal(url: string, replace = false): void {
   }
 
   if (replace) {
-    window.location.replace(url);
+    _location.replace(url);
   } else {
-    window.location.href = url;
+    _location.href = url;
   }
 }
 
