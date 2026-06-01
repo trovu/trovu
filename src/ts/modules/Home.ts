@@ -292,6 +292,19 @@ export default class Home {
       event.preventDefault();
     }
 
+    // Open a blank window during the user gesture so we can
+    // redirect it to the external target URL after async processing.
+    // This is necessary for PWAs, where navigation after losing the
+    // user gesture stays inside the PWA instead of opening the
+    // default browser.
+    const isStandalone = window.matchMedia(
+      "(display-mode: standalone)",
+    ).matches;
+    let externalWindow: Window | null = null;
+    if (isStandalone) {
+      externalWindow = window.open("about:blank", "_blank");
+    }
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
@@ -308,6 +321,9 @@ export default class Home {
         query: this.queryInput.value,
       });
       window.location.href = processUrl;
+      if (externalWindow && !externalWindow.closed) {
+        externalWindow.close();
+      }
       return;
     }
 
@@ -317,7 +333,17 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    // If we have an external window open, redirect it to the target.
+    // Otherwise, fall back to in-PWA navigation.
+    if (externalWindow && !externalWindow.closed) {
+      try {
+        externalWindow.location.href = redirectUrl;
+      } catch {
+        window.location.href = redirectUrl;
+      }
+    } else {
+      window.location.href = redirectUrl;
+    }
   };
 
   /**
