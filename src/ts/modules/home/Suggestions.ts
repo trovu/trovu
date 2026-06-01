@@ -3,6 +3,7 @@ import type { EnvLike, ShortcutExample, Suggestion } from "../../types";
 import type Home from "../Home";
 import QueryParser from "../QueryParser";
 import SuggestionsGetter from "../SuggestionsGetter";
+import { openExternal } from "../UrlOpener";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import jsyaml from "js-yaml";
 
@@ -227,6 +228,10 @@ export default class Suggestions {
     const link = document.createElement("a");
     link.href = suggestion.url;
     link.textContent = suggestion.url;
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      openExternal(suggestion.url);
+    });
 
     div.append(icon, link);
 

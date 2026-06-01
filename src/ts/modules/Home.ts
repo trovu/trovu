@@ -3,6 +3,7 @@ import "../../scss/style.scss";
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
+import { openExternal } from "./UrlOpener";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
@@ -307,7 +308,7 @@ export default class Home {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      window.location.href = processUrl;
+      openExternal(processUrl);
       return;
     }
 
@@ -317,7 +318,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    openExternal(redirectUrl);
   };
 
   /**
