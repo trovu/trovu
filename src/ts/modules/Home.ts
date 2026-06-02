@@ -39,6 +39,10 @@ export default class Home {
 
     const gitLogger = new GitLogger(this.env.gitInfo);
     document.querySelector("#version").textContent = gitLogger.getVersion();
+    const versionBadge = document.querySelector("#app-version-badge");
+    if (versionBadge) {
+      versionBadge.textContent = `PWA Active Version: ${gitLogger.getVersion()} (SW-v3)`;
+    }
     gitLogger.logVersion();
 
     const modalElement = document.getElementById("settings");

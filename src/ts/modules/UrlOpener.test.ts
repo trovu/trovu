@@ -14,6 +14,30 @@ describe("UrlOpener", () => {
       );
     });
 
+    test("converts standard https URL for Android Chrome", () => {
+      const originalUserAgent = navigator.userAgent;
+      Object.defineProperty(navigator, "userAgent", {
+        value: "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Mobile Safari/537.36",
+        configurable: true,
+        writable: true,
+      });
+      expect(toAndroidIntentUrl("https://www.google.com/search?q=test")).toBe(
+        "intent://www.google.com/search?q=test" +
+          "#Intent;scheme=https;" +
+          "component=com.android.chrome/com.google.android.apps.chrome.Main;" +
+          "action=android.intent.action.VIEW;" +
+          "category=android.intent.category.BROWSABLE;" +
+          "launchFlags=0x10000000;" +
+          "S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtest;" +
+          "end"
+      );
+      Object.defineProperty(navigator, "userAgent", {
+        value: originalUserAgent,
+        configurable: true,
+        writable: true,
+      });
+    });
+
     test("converts http URL", () => {
       expect(toAndroidIntentUrl("http://example.com/foo")).toBe(
         "intent://example.com/foo" +

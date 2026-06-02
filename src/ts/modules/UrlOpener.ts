@@ -74,13 +74,18 @@ export function toAndroidIntentUrl(url: string): string | null {
   }
   const rest = url.substring(parsed.protocol.length + 2);
   const fallbackUrl = encodeURIComponent(url);
-  return (
-    `intent://${rest}` +
-    `#Intent;scheme=${scheme};` +
-    `action=android.intent.action.VIEW;` +
-    `category=android.intent.category.BROWSABLE;` +
-    `launchFlags=0x10000000;` +
-    `S.browser_fallback_url=${fallbackUrl};` +
-    `end`
-  );
+
+  const isChrome =
+    typeof navigator !== "undefined" &&
+    /Chrome|CriOS/i.test(navigator.userAgent) &&
+    !/Edg/i.test(navigator.userAgent) &&
+    !/Firefox|FxiOS/i.test(navigator.userAgent) &&
+    !/SamsungBrowser/i.test(navigator.userAgent);
+
+  let intent = `intent://${rest}#Intent;scheme=${scheme};`;
+  if (isChrome) {
+    intent += `component=com.android.chrome/com.google.android.apps.chrome.Main;`;
+  }
+  intent += `action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=${fallbackUrl};end`;
+  return intent;
 }
