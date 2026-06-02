@@ -84,7 +84,7 @@ export function toAndroidIntentUrl(url: string): string | null {
 
   let intent = `intent://${rest}#Intent;scheme=${scheme};`;
   if (isChrome) {
-    intent += `component=com.android.chrome/com.google.android.apps.chrome.Main;`;
+    intent += `component=com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity;`;
   }
   intent += `action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=${fallbackUrl};end`;
   return intent;
