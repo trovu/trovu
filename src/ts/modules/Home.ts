@@ -301,12 +301,9 @@ export default class Home {
 
     // Check if we can resolve this synchronously to preserve the user gesture
     let canResolveSync = true;
-    if (queryParams.namespaces) {
-      for (const ns of queryParams.namespaces) {
-        if (!this.env.namespaceInfos || !this.env.namespaceInfos[ns]) {
-          canResolveSync = false;
-          break;
-        }
+    if (queryParams.extraNamespaceName) {
+      if (!this.env.namespaceInfos || !this.env.namespaceInfos[queryParams.extraNamespaceName]) {
+        canResolveSync = false;
       }
     }
 
@@ -323,7 +320,7 @@ export default class Home {
         defaultKeyword: this.env.defaultKeyword,
         ...params,
         ...queryParams,
-      });
+      } as any);
       envQuery.setDefaults();
 
       const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);

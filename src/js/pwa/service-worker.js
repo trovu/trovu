@@ -1,4 +1,4 @@
-const CACHE_NAME = "trovu-v1"; // Consider versioning your cache for easier updates
+const CACHE_NAME = "trovu-v3"; // Incremented to trovu-v3 to force updates
 const urlsToCache = [
   "/",
   "/index.html",
@@ -23,7 +23,27 @@ self.addEventListener("install", (event) => {
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Opened cache");
       return cache.addAll(urlsToCache);
+    }).then(() => {
+      return self.skipWaiting();
     }),
+  );
+});
+
+self.addEventListener("activate", (event) => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            console.log("Deleting old cache:", cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      return self.clients.claim();
+    })
   );
 });
 
