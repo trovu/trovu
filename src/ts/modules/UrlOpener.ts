@@ -116,10 +116,11 @@ export function toAndroidIntentUrl(url: string): string | null {
     }
   }
 
-  let intent = `intent://${rest}#Intent;scheme=${scheme};`;
   if (isChrome) {
-    intent += `component=com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity;`;
+    return `intent://navigate?url=${fallbackUrl}#Intent;scheme=googlechrome;package=com.android.chrome;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;S.browser_fallback_url=${fallbackUrl};end`;
   }
-  intent += `action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=${fallbackUrl};end`;
+
+  let intent = `intent://${rest}#Intent;scheme=${scheme};`;
+  intent += `action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x18000000;B.create_new_tab=true;S.browser_fallback_url=${fallbackUrl};end`;
   return intent;
 }

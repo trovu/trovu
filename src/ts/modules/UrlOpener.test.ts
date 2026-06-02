@@ -6,11 +6,7 @@ describe("UrlOpener", () => {
       expect(toAndroidIntentUrl("https://www.google.com/search?q=test")).toBe(
         "intent://www.google.com/search?q=test" +
           "#Intent;scheme=https;" +
-          "action=android.intent.action.VIEW;" +
-          "category=android.intent.category.BROWSABLE;" +
-          "launchFlags=0x10000000;" +
-          "S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtest;" +
-          "end"
+          "action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x18000000;B.create_new_tab=true;S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtest;end"
       );
     });
 
@@ -22,14 +18,7 @@ describe("UrlOpener", () => {
         writable: true,
       });
       expect(toAndroidIntentUrl("https://www.google.com/search?q=test")).toBe(
-        "intent://www.google.com/search?q=test" +
-          "#Intent;scheme=https;" +
-          "component=com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity;" +
-          "action=android.intent.action.VIEW;" +
-          "category=android.intent.category.BROWSABLE;" +
-          "launchFlags=0x10000000;" +
-          "S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtest;" +
-          "end"
+        "intent://navigate?url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtest#Intent;scheme=googlechrome;package=com.android.chrome;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtest;end"
       );
       Object.defineProperty(navigator, "userAgent", {
         value: originalUserAgent,
@@ -42,11 +31,7 @@ describe("UrlOpener", () => {
       expect(toAndroidIntentUrl("http://example.com/foo")).toBe(
         "intent://example.com/foo" +
           "#Intent;scheme=http;" +
-          "action=android.intent.action.VIEW;" +
-          "category=android.intent.category.BROWSABLE;" +
-          "launchFlags=0x10000000;" +
-          "S.browser_fallback_url=http%3A%2F%2Fexample.com%2Ffoo;" +
-          "end"
+          "action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x18000000;B.create_new_tab=true;S.browser_fallback_url=http%3A%2F%2Fexample.com%2Ffoo;end"
       );
     });
 
@@ -134,7 +119,7 @@ describe("UrlOpener", () => {
       openExternal("https://example.com/search?q=test", true);
 
       expect(hrefValue).toBe(
-        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x18000000;B.create_new_tab=true;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
       );
       expect(replaceSpy).not.toHaveBeenCalled();
 
@@ -160,7 +145,7 @@ describe("UrlOpener", () => {
       openExternal("https://example.com/search?q=test", false);
 
       expect(hrefValue).toBe(
-        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x18000000;B.create_new_tab=true;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
       );
 
       jest.advanceTimersByTime(150);
