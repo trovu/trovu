@@ -77,7 +77,6 @@ export function toAndroidIntentUrl(url: string): string | null {
   return (
     `intent://${rest}` +
     `#Intent;scheme=${scheme};` +
-    `component=com.android.chrome/com.google.android.apps.chrome.Main;` +
     `action=android.intent.action.VIEW;` +
     `category=android.intent.category.BROWSABLE;` +
     `launchFlags=0x10000000;` +

@@ -6,7 +6,6 @@ describe("UrlOpener", () => {
       expect(toAndroidIntentUrl("https://www.google.com/search?q=test")).toBe(
         "intent://www.google.com/search?q=test" +
           "#Intent;scheme=https;" +
-          "component=com.android.chrome/com.google.android.apps.chrome.Main;" +
           "action=android.intent.action.VIEW;" +
           "category=android.intent.category.BROWSABLE;" +
           "launchFlags=0x10000000;" +
@@ -19,7 +18,6 @@ describe("UrlOpener", () => {
       expect(toAndroidIntentUrl("http://example.com/foo")).toBe(
         "intent://example.com/foo" +
           "#Intent;scheme=http;" +
-          "component=com.android.chrome/com.google.android.apps.chrome.Main;" +
           "action=android.intent.action.VIEW;" +
           "category=android.intent.category.BROWSABLE;" +
           "launchFlags=0x10000000;" +
@@ -112,7 +110,7 @@ describe("UrlOpener", () => {
       openExternal("https://example.com/search?q=test", true);
 
       expect(hrefValue).toBe(
-        "intent://example.com/search?q=test#Intent;scheme=https;component=com.android.chrome/com.google.android.apps.chrome.Main;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
       );
       expect(replaceSpy).not.toHaveBeenCalled();
 
@@ -138,7 +136,7 @@ describe("UrlOpener", () => {
       openExternal("https://example.com/search?q=test", false);
 
       expect(hrefValue).toBe(
-        "intent://example.com/search?q=test#Intent;scheme=https;component=com.android.chrome/com.google.android.apps.chrome.Main;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dtest;end"
       );
 
       jest.advanceTimersByTime(150);
