@@ -287,18 +287,71 @@ export default class Home {
    *
    * @param {object} event – The submitting event.
    */
-  submitQuery = async (event?: Event) => {
+  submitQuery = (event?: Event) => {
     // Prevent default sending as GET parameters.
     if (event) {
       event.preventDefault();
     }
 
-    // Must create new env instance here,
-    // because extraNamespace might have changed reachability,
-    // or asking for a not yet parsed Github namespace.
-    const envQuery = new Env({ context: "index" });
+    const query = this.queryInput.value;
     const params: EnvParams = Env.getParamsFromUrl();
-    params.query = this.queryInput.value;
+    params.query = query;
+
+    const queryParams = this.env.getQueryParams({ query });
+
+    // Check if we can resolve this synchronously to preserve the user gesture
+    let canResolveSync = true;
+    if (queryParams.namespaces) {
+      for (const ns of queryParams.namespaces) {
+        if (!this.env.namespaceInfos || !this.env.namespaceInfos[ns]) {
+          canResolveSync = false;
+          break;
+        }
+      }
+    }
+
+    if (canResolveSync) {
+      // Synchronous path (preserves user gesture!)
+      const envQuery = new Env({
+        context: "index",
+        data: this.env.data,
+        namespaceInfos: this.env.namespaceInfos,
+        language: this.env.language,
+        country: this.env.country,
+        github: this.env.github,
+        configUrl: this.env.configUrl,
+        defaultKeyword: this.env.defaultKeyword,
+        ...params,
+        ...queryParams,
+      });
+      envQuery.setDefaults();
+
+      const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
+
+      // Send debug to /process.
+      if (envQuery.debug) {
+        const processUrl = this.env.buildProcessUrl({
+          query,
+        });
+        openExternal(processUrl);
+        return;
+      }
+
+      let redirectUrl: string;
+      if (response.status === "found") {
+        redirectUrl = response.redirectUrl as string;
+      } else {
+        redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+      }
+      openExternal(redirectUrl);
+    } else {
+      // Asynchronous fallback path
+      this.submitQueryAsync(query, params);
+    }
+  };
+
+  submitQueryAsync = async (query: string, params: EnvParams) => {
+    const envQuery = new Env({ context: "index" });
     await envQuery.populate(params);
 
     const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
@@ -306,7 +359,7 @@ export default class Home {
     // Send debug to /process.
     if (envQuery.debug) {
       const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
+        query,
       });
       openExternal(processUrl);
       return;
