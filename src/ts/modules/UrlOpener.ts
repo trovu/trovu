@@ -43,6 +43,20 @@ export function openExternal(url: string, replace = false): void {
     }
   }
 
+  if (typeof window !== "undefined" && window.location.search.includes("debug=1")) {
+    if (typeof document !== "undefined") {
+      const badge = document.getElementById("app-version-badge");
+      if (badge) {
+        badge.innerHTML += `<br><span style="color:red; font-weight:bold;">[DEBUG MODE] Redirection prevented. Target: ${url}</span>`;
+        // Trigger intent generation for logs
+        if (isPwa && isAndroid) {
+          toAndroidIntentUrl(url);
+        }
+      }
+    }
+    return;
+  }
+
   if (isPwa && isAndroid) {
     const intentUrl = toAndroidIntentUrl(url);
     if (typeof document !== "undefined") {
