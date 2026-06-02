@@ -36,8 +36,21 @@ export function openExternal(url: string, replace = false): void {
   const isAndroid =
     typeof navigator !== "undefined" && /Android/i.test(navigator.userAgent);
 
+  if (typeof document !== "undefined") {
+    const badge = document.getElementById("app-version-badge");
+    if (badge) {
+      badge.innerHTML += `<br>[openExternal] url=${url} isPwa=${isPwa} isAndroid=${isAndroid}`;
+    }
+  }
+
   if (isPwa && isAndroid) {
     const intentUrl = toAndroidIntentUrl(url);
+    if (typeof document !== "undefined") {
+      const badge = document.getElementById("app-version-badge");
+      if (badge) {
+        badge.innerHTML += `<br>[openExternal] intentUrl=${intentUrl}`;
+      }
+    }
     if (intentUrl) {
       _location.href = intentUrl;
       // If we are on the /process/ redirect page, redirect the PWA shell back to the home page after triggering the intent
@@ -81,6 +94,13 @@ export function toAndroidIntentUrl(url: string): string | null {
     !/Edg/i.test(navigator.userAgent) &&
     !/Firefox|FxiOS/i.test(navigator.userAgent) &&
     !/SamsungBrowser/i.test(navigator.userAgent);
+
+  if (typeof document !== "undefined") {
+    const badge = document.getElementById("app-version-badge");
+    if (badge) {
+      badge.innerHTML += `<br>[toAndroidIntentUrl] isChrome=${isChrome} UA=${navigator.userAgent}`;
+    }
+  }
 
   let intent = `intent://${rest}#Intent;scheme=${scheme};`;
   if (isChrome) {
