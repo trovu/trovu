@@ -8,6 +8,7 @@ describe("UrlOpener", () => {
           "#Intent;scheme=https;" +
           "action=android.intent.action.VIEW;" +
           "category=android.intent.category.BROWSABLE;" +
+          "launchFlags=0x10000000;" +
           "end"
       );
     });
@@ -18,6 +19,7 @@ describe("UrlOpener", () => {
           "#Intent;scheme=http;" +
           "action=android.intent.action.VIEW;" +
           "category=android.intent.category.BROWSABLE;" +
+          "launchFlags=0x10000000;" +
           "end"
       );
     });
@@ -106,7 +108,7 @@ describe("UrlOpener", () => {
       openExternal("https://example.com/search?q=test", true);
 
       expect(hrefValue).toBe(
-        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end"
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;end"
       );
       expect(replaceSpy).not.toHaveBeenCalled();
 
@@ -132,7 +134,7 @@ describe("UrlOpener", () => {
       openExternal("https://example.com/search?q=test", false);
 
       expect(hrefValue).toBe(
-        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end"
+        "intent://example.com/search?q=test#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;end"
       );
 
       jest.advanceTimersByTime(150);

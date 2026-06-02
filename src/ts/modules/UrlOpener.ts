@@ -78,6 +78,7 @@ export function toAndroidIntentUrl(url: string): string | null {
     `#Intent;scheme=${scheme};` +
     `action=android.intent.action.VIEW;` +
     `category=android.intent.category.BROWSABLE;` +
+    `launchFlags=0x10000000;` +
     `end`
   );
 }
