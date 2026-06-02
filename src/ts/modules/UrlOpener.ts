@@ -73,12 +73,15 @@ export function toAndroidIntentUrl(url: string): string | null {
     return null;
   }
   const rest = url.substring(parsed.protocol.length + 2);
+  const fallbackUrl = encodeURIComponent(url);
   return (
     `intent://${rest}` +
     `#Intent;scheme=${scheme};` +
+    `package=com.android.chrome;` +
     `action=android.intent.action.VIEW;` +
     `category=android.intent.category.BROWSABLE;` +
     `launchFlags=0x10000000;` +
+    `S.browser_fallback_url=${fallbackUrl};` +
     `end`
   );
 }
