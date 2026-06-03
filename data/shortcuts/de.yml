@@ -548,6 +548,20 @@ dnb 1:
   examples:
   - arguments: goethe
     description: Search Deutsche Nationalbibliothek for "goethe"
+dp 0:
+  url: https://www.diepresse.com/
+  title: Die Presse
+  tags:
+  - news
+  examples:
+  - description: Gehe zur Startseite
+  description: Österreichische Tageszeitung mit Schwerpunkt auf Politik, Wirtschaft und Kultur.
+dp 1:
+  url: https://www.diepresse.com/suche?s=<Suche>
+  include: dp 0
+  examples:
+  - arguments: wien
+    description: Suche nach Artikeln über Wien
 dst 0:
   url: https://derstandard.at/
   title: DerStandard.at
