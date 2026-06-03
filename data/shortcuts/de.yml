@@ -681,6 +681,18 @@ esp 1:
     alternative:
       query: pns.es <1>
     created: '2023-04-10'
+faz 0:
+  url: https://www.faz.net/
+  title: Frankfurter Allgemeine Zeitung
+  examples:
+  - description: Gehe zur Startseite
+  description: Eine der größten überregionalen Tageszeitungen in Deutschland
+faz 1:
+  url: https://www.faz.net/suche/?query=<Suche>
+  include: faz 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Artikeln über Berlin
 fball 0:
   url: https://fireball.com/
   title: Fireball Websuche

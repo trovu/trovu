@@ -1208,17 +1208,6 @@ farnell 1:
   examples:
   - arguments: switch
     description: Farnell Deutschland search for switch
-faz 0:
-  url: https://www.faz.net/
-  title: Frankfurter Allgemeine Zeitung
-  examples:
-  - description: Gehe zur Startseite
-faz 1:
-  url: https://www.faz.net/suche/?query=<Suche>
-  include: faz 0
-  examples:
-  - arguments: berlin
-    description: Suche nach Artikeln über Berlin
 fbw 0:
   url: https://www.fahrerbewertung.de/
   title: Fahrerbewertung
