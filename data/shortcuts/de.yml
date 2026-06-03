@@ -837,6 +837,20 @@ frp 1:
     alternative:
       query: pns.fr <1>
     created: '2023-04-10'
+frs 0:
+  url: https://www.fr.de/
+  title: Frankfurter Rundschau
+  tags:
+  - news
+  examples:
+  - description: Gehe zur Startseite
+  description: Tageszeitung mit Schwerpunkt auf Frankfurt und Rhein-Main-Gebiet
+frs 1:
+  url: https://www.fr.de/suche/?qr=<Suche>
+  include: frs 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Artikeln über Berlin
 frv 0:
   include:
     key: frv 0
@@ -1638,18 +1652,15 @@ rud 1:
       query: dcc.ru <1>
     created: '2023-04-10'
 rundschau 0:
-  url: https://www.fr.de/
-  title: Frankfurter Rundschau Archiv
-  tags:
-  - news
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: frs
+    created: '2026-06-04'
 rundschau 1:
-  url: https://www.fr.de/suche/?qr=<Suche>
-  include: rundschau 0
-  examples:
-  - arguments: berlin
-    description: Suche im Frankfurter-Rundschau-Archiv nach "berlin"
+  deprecated:
+    alternative:
+      query: frs <1>
+    created: '2026-06-04'
 rup 1:
   deprecated:
     alternative:
