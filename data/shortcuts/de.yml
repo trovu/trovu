@@ -1788,13 +1788,15 @@ sz 0:
   tags:
   - news
   - zeitung
+  examples:
+  - description: Gehe zur Startseite
+  description: Eine der größten überregionalen Tageszeitungen in Deutschland
 sz 1:
-  url: https://www.sueddeutsche.de/news?search=<Suche>
-  title: Süddeutsche Zeitung
-  tags:
-  - news
-  - newspaper
-  - print
+  url: https://www.sueddeutsche.de/suche?search=<Suche>
+  include: sz 0
+  examples:
+  - arguments: berlin
+    description: Suche nach "berlin"
 taz 0:
   url: https://taz.de/
   title: taz - die tageszeitung
