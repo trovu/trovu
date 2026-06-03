@@ -58,13 +58,35 @@ export function openExternal(url: string, replace = false): void {
   }
 
   if (isPwa && isAndroid) {
-    const intentUrl = toAndroidIntentUrl(url);
     if (typeof document !== "undefined") {
       const badge = document.getElementById("app-version-badge");
       if (badge) {
-        badge.innerHTML += `<br>[openExternal] intentUrl=${intentUrl}`;
+        badge.innerHTML += `<br>[openExternal] Trying window.open() target=_blank`;
       }
     }
+    
+    // Attempt to use window.open to escape PWA. Using _blank and noopener to try and force a new browser tab.
+    const win = window.open(url, "_blank", "noopener,noreferrer");
+    
+    // If window.open was not blocked by popup blocker
+    if (win) {
+      if (replace) {
+        setTimeout(() => {
+          _location.replace("../index.html");
+        }, 150);
+      }
+      return;
+    }
+
+    // Fallback if window.open is blocked
+    if (typeof document !== "undefined") {
+      const badge = document.getElementById("app-version-badge");
+      if (badge) {
+        badge.innerHTML += `<br>[openExternal] window.open blocked, falling back to intent`;
+      }
+    }
+
+    const intentUrl = toAndroidIntentUrl(url);
     if (intentUrl) {
       _location.href = intentUrl;
       // If we are on the /process/ redirect page, redirect the PWA shell back to the home page after triggering the intent
@@ -102,25 +124,12 @@ export function toAndroidIntentUrl(url: string): string | null {
   const rest = url.substring(parsed.protocol.length + 2);
   const fallbackUrl = encodeURIComponent(url);
 
-  const isChrome =
-    typeof navigator !== "undefined" &&
-    /Chrome|CriOS/i.test(navigator.userAgent) &&
-    !/Edg/i.test(navigator.userAgent) &&
-    !/Firefox|FxiOS/i.test(navigator.userAgent) &&
-    !/SamsungBrowser/i.test(navigator.userAgent);
-
   if (typeof document !== "undefined") {
     const badge = document.getElementById("app-version-badge");
     if (badge) {
-      badge.innerHTML += `<br>[toAndroidIntentUrl] isChrome=${isChrome} UA=${navigator.userAgent}`;
+      badge.innerHTML += `<br>[toAndroidIntentUrl] UA=${navigator.userAgent}`;
     }
   }
 
-  if (isChrome) {
-    return `intent://navigate?url=${fallbackUrl}#Intent;scheme=googlechrome;package=com.android.chrome;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;S.browser_fallback_url=${fallbackUrl};end`;
-  }
-
-  let intent = `intent://${rest}#Intent;scheme=${scheme};`;
-  intent += `action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x18000000;B.create_new_tab=true;S.browser_fallback_url=${fallbackUrl};end`;
-  return intent;
+  return `intent://${rest}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x18000000;B.create_new_tab=true;S.browser_fallback_url=${fallbackUrl};end`;
 }
