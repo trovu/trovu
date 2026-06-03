@@ -5,6 +5,131 @@ async function openLoadedHomepage(page, hash = "") {
   await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
 }
 
+test("Homepage startup should not wait for images", async ({ page }) => {
+  let resumeLogo;
+  await page.route("**/img/logo.png", async (route) => {
+    await new Promise((resolve) => {
+      resumeLogo = resolve;
+    });
+    await route.continue();
+  });
+
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  try {
+    await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
+  } finally {
+    resumeLogo?.();
+  }
+  await page.waitForLoadState("load");
+});
+
+test("Homepage startup should not reload after normalizing the hash", async ({ page }) => {
+  let navigationRequests = 0;
+  page.on("request", (request) => {
+    if (request.isNavigationRequest() && request.frame() === page.mainFrame()) {
+      navigationRequests += 1;
+    }
+  });
+
+  await openLoadedHomepage(page);
+  await page.waitForTimeout(100);
+  expect(navigationRequests).toBe(1);
+});
+
+test("Homepage HTML should expose a loading state before JavaScript runs", async ({ page }) => {
+  await page.route("**/*", async (route) => {
+    if (route.request().resourceType() === "script") {
+      await route.abort();
+      return;
+    }
+    await route.continue();
+  });
+
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  const submitButton = page.locator('#query-form button[type="submit"]');
+  await expect(page.locator("html")).toHaveAttribute("aria-busy", "true");
+  await expect(submitButton).toHaveClass(/btn-loading/);
+  await expect(submitButton).toHaveAttribute("aria-label", "Shortcuts are loading");
+  await expect(submitButton).toHaveText("⏳");
+});
+
+test("Homepage should expose a loading state and reject an early submit", async ({ page }) => {
+  let resumeData;
+  let shouldDelayData = true;
+  await page.route("**/data.json?*", async (route) => {
+    if (!shouldDelayData) {
+      await route.continue();
+      return;
+    }
+    await new Promise((resolve) => {
+      resumeData = resolve;
+    });
+    await route.continue();
+  });
+
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+  const queryInput = page.locator("#query");
+  const submitButton = page.locator('#query-form button[type="submit"]');
+  try {
+    await expect(page.locator("html")).toHaveAttribute("aria-busy", "true");
+    await expect(queryInput).toBeFocused();
+    await expect(page.locator(".tagline")).toBeVisible();
+    await expect(page.locator(".examples")).toBeVisible();
+    await expect(submitButton).toHaveClass(/btn-loading/);
+    await expect(submitButton).toHaveAttribute("aria-label", "Shortcuts are loading");
+    await expect(submitButton).toHaveText("⏳");
+
+    await queryInput.fill("debug:g foobar");
+    await queryInput.press("Enter");
+    await expect(page).toHaveURL(/query=debug%3Ag\+foobar/);
+    await expect(page).toHaveURL(/status=loading/);
+    await expect(page.locator("#alert")).toContainText("Shortcuts were still loading when you submitted.");
+  } finally {
+    shouldDelayData = false;
+    resumeData?.();
+  }
+
+  await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
+  await expect(page.locator("html")).not.toHaveAttribute("aria-busy", "true");
+  await expect(submitButton).toHaveClass(/btn-primary/);
+  await expect(submitButton).toHaveAttribute("aria-label", "Search");
+  await expect(submitButton.locator(".fa-caret-right")).toBeVisible();
+  await expect(queryInput).toHaveValue("debug:g foobar");
+  await expect(page).toHaveURL(/status=loading/);
+  await expect(page.locator("#alert")).toContainText("Shortcuts were still loading when you submitted.");
+
+  await queryInput.press("Enter");
+  await expect(page.locator("#target-domain")).toContainText("https://www.google");
+});
+
+test("Homepage should load a stored GitHub config without a second navigation", async ({ page }) => {
+  let navigationRequests = 0;
+  let configRequests = 0;
+  await page.addInitScript(() => {
+    localStorage.setItem("github", "testuser");
+  });
+  await page.route("https://raw.githubusercontent.com/testuser/trovu-data-user/master/config.yml", async (route) => {
+    configRequests += 1;
+    await route.fulfill({
+      body: "defaultKeyword: g",
+      contentType: "text/yaml",
+      status: 200,
+    });
+  });
+  page.on("request", (request) => {
+    if (request.isNavigationRequest() && request.frame() === page.mainFrame()) {
+      navigationRequests += 1;
+    }
+  });
+
+  await openLoadedHomepage(page);
+  await page.waitForTimeout(100);
+  expect(configRequests).toBe(1);
+  expect(navigationRequests).toBe(1);
+  await expect(page).toHaveURL(/github=testuser/);
+  await expect(page.locator('head link[rel="search"]')).toHaveAttribute("href", "/opensearch/?github=testuser");
+});
+
 test.describe("Homepage from default load", () => {
   test.beforeEach(async ({ page }) => {
     await openLoadedHomepage(page);
@@ -28,6 +153,13 @@ test.describe("Homepage from default load", () => {
 
     test("should have focus on input", async ({ page }) => {
       await expect(page.locator("#query")).toBeFocused();
+    });
+
+    test("should render icons from the stylesheet", async ({ page }) => {
+      const content = await page.locator(".fa-caret-right").evaluate((element) => {
+        return getComputedStyle(element, "::before").content;
+      });
+      expect(content).not.toMatch(/^(none|normal)$/);
     });
   });
 
@@ -122,7 +254,10 @@ test.describe("Homepage status states", () => {
   });
 
   test("should prefill the alternative query for deprecated shortcuts", async ({ page }) => {
-    await openLoadedHomepage(page, "#country=gb&language=en&query=oldshortcut&status=deprecated&alternative=g%20berlin");
+    await openLoadedHomepage(
+      page,
+      "#country=gb&language=en&query=oldshortcut&status=deprecated&alternative=g%20berlin",
+    );
     await expect(page.locator("#query")).toHaveValue("g berlin");
     await expect(page.locator("#alert")).toContainText("deprecated");
     await expect(page.locator("#alert em.query")).toHaveText("oldshortcut");

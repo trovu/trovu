@@ -1,5 +1,5 @@
 /** @module Env */
-import Helper from "./Helper";
+import Helper, { REMOTE_FETCH_TIMEOUT } from "./Helper";
 import Logger from "./Logger";
 import NamespaceFetcher from "./NamespaceFetcher";
 import QueryParser from "./QueryParser";
@@ -174,7 +174,19 @@ export default class Env {
     Object.assign(this, preloadParams);
     this.configureLogger();
 
-    this.data = this.data || (await this.getData()) || ({} as TrovuData);
+    this.getFromLocalStorage();
+
+    if (typeof this.github === "string" && this.github !== "") {
+      this.configUrl = this.buildGithubConfigUrl(this.github);
+    }
+    if (typeof params.configUrl === "string" && params.configUrl !== "") {
+      this.configUrl = params.configUrl;
+    }
+
+    const dataPromise = this.data ? Promise.resolve(this.data) : this.getData();
+    const configPromise = this.configUrl ? this.getUserConfigFromUrl(this.configUrl) : Promise.resolve(undefined);
+    const [data, config] = await Promise.all([dataPromise, configPromise]);
+    this.data = data || ({} as TrovuData);
 
     // Raycast cannot handle too much data.
     if (options && options.removeNamespaces) {
@@ -189,19 +201,8 @@ export default class Env {
       this.defaultKeyword = this.data.config.defaultKeyword;
     }
 
-    this.getFromLocalStorage();
-
-    if (typeof params.github === "string" && params.github !== "") {
-      this.configUrl = this.buildGithubConfigUrl(params.github);
-    }
-    if (typeof params.configUrl === "string" && params.configUrl !== "") {
-      this.configUrl = params.configUrl;
-    }
-    if (this.configUrl) {
-      const config = await this.getUserConfigFromUrl(this.configUrl);
-      if (config) {
-        Object.assign(this, config);
-      }
+    if (config) {
+      Object.assign(this, config);
     }
     // Assign again, to override user config.
     Object.assign(this, params);
@@ -338,7 +339,10 @@ export default class Env {
    */
 
   async getUserConfigFromUrl(configUrl: string): Promise<TrovuConfig | undefined> {
-    const configYml = await Helper.fetchAsync(configUrl, this);
+    const configYml = await Helper.fetchAsync(configUrl, this, {
+      catchErrors: true,
+      timeout: REMOTE_FETCH_TIMEOUT,
+    });
     if (!configYml) {
       this.logger.warning(`Problem reading config from ${configUrl}`);
     }

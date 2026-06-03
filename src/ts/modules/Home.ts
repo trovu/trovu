@@ -5,7 +5,6 @@ import Env from "./Env";
 import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
-import "@fortawesome/fontawesome-free/js/all.min";
 import type { EnvParams, RedirectResponse } from "../types";
 
 /* eslint-disable no-unused-vars */
@@ -19,6 +18,9 @@ export default class Home {
   env!: Env;
   queryInput!: HTMLInputElement;
   suggestions!: Suggestions;
+  submitButton!: HTMLButtonElement;
+  initialized = false;
+  queryInputChanged = false;
 
   constructor() {}
 
@@ -33,6 +35,8 @@ export default class Home {
 
     // Init environment.
     const params = Env.getParamsFromUrl();
+    this.setQueryElementValue(params);
+    this.prepareLoadingUi(params);
     await this.env.populate(params);
     this.updateOpensearch();
 
@@ -48,8 +52,8 @@ export default class Home {
 
     new Settings(this.env, this.updateOpensearch);
 
-    this.showInfoAlerts();
     this.setLocationHash();
+    this.showInfoAlerts();
     this.setQueryElement();
 
     // Toggle by query only after the query input is set.
@@ -59,16 +63,14 @@ export default class Home {
       this.env.logger.showLog();
     }
 
-    const queryForm = document.getElementById("query-form") as HTMLFormElement | null;
-    if (queryForm) {
-      queryForm.onsubmit = this.submitQuery;
-    }
     const reloadLink = document.querySelector<HTMLAnchorElement>("#reload");
     if (reloadLink) {
       reloadLink.href = this.env.buildProcessUrl({
         query: "reload",
       });
     }
+    this.initialized = true;
+    this.showReadyState();
     document.documentElement.setAttribute("data-page-loaded", "true");
 
     Home.setHeights();
@@ -87,6 +89,36 @@ export default class Home {
         queryElement?.focus();
       }
     });
+  }
+
+  prepareLoadingUi(params: EnvParams) {
+    const queryForm = document.getElementById("query-form") as HTMLFormElement | null;
+    const submitButton = queryForm?.querySelector<HTMLButtonElement>('button[type="submit"]');
+    if (!queryForm || !submitButton) {
+      throw new Error('Missing element "#query-form" or its submit button.');
+    }
+    this.submitButton = submitButton;
+    queryForm.onsubmit = this.submitQuery;
+    this.queryInput.addEventListener("input", () => {
+      this.queryInputChanged = true;
+    });
+    this.toggleByQuery();
+    document.documentElement.style.display = "block";
+    this.queryInput.focus();
+    if (params.status === "loading") {
+      this.showInfoAlerts();
+    }
+  }
+
+  showReadyState() {
+    document.documentElement.removeAttribute("aria-busy");
+    this.submitButton.classList.remove("btn-loading");
+    this.submitButton.classList.add("btn-primary");
+    this.submitButton.setAttribute("aria-label", "Search");
+    const icon = document.createElement("i");
+    icon.className = "fas fa-caret-right";
+    icon.setAttribute("aria-hidden", "true");
+    this.submitButton.replaceChildren(icon);
   }
 
   static setHeights() {
@@ -130,20 +162,26 @@ export default class Home {
   }
 
   setQueryElement() {
-    switch (this.env.status) {
+    if (!this.queryInputChanged) {
+      this.setQueryElementValue(this.env);
+    }
+
+    this.suggestions = new Suggestions("#query", "#suggestions", this);
+    this.setToggleByQuery();
+  }
+
+  setQueryElementValue(params: EnvParams) {
+    switch (params.status) {
       case "deprecated":
-        this.queryInput.value = this.env.alternative;
+        this.queryInput.value = params.alternative || "";
         break;
       case "reloaded":
         this.queryInput.value = "";
         break;
       default:
-        this.queryInput.value = this.env.query || "";
+        this.queryInput.value = params.query || "";
         break;
     }
-
-    this.suggestions = new Suggestions("#query", "#suggestions", this);
-    this.setToggleByQuery();
   }
 
   setToggleByQuery() {
@@ -212,8 +250,10 @@ export default class Home {
   }
 
   setLocationHash() {
-    const paramStr = this.env.buildUrlParamStr();
-    window.location.hash = "#" + paramStr;
+    const params = Env.getParamsFromUrl();
+    const moreParams = params.status === "loading" ? { query: params.query, status: params.status } : {};
+    const paramStr = this.env.buildUrlParamStr(moreParams);
+    window.history.replaceState(null, "", "#" + paramStr);
   }
 
   /**
@@ -230,10 +270,21 @@ export default class Home {
     if (!alertMsg || !alertClose) {
       return;
     }
-    alertClose.addEventListener("click", () => {
+    alert.setAttribute("hidden", "");
+    alertMsg.textContent = "";
+    alertClose.onclick = () => {
+      if (!this.initialized) {
+        const params = Env.getUrlSearchParams();
+        params.delete("query");
+        params.delete("status");
+        params.sort();
+        window.history.replaceState(null, "", "#" + params.toString());
+        alert.setAttribute("hidden", "");
+        return;
+      }
       const paramStr = this.env.buildUrlParamStr({ query: undefined, status: undefined });
       window.location.hash = "#" + paramStr;
-    });
+    };
     if (params.status) {
       alert.removeAttribute("hidden");
     }
@@ -255,6 +306,10 @@ export default class Home {
           alertMsg.innerHTML +=
             " Changes on your GitHub might require a reload in <strong>5 minutes</strong> due to caching.";
         }
+        break;
+      case "loading":
+        alertMsg.textContent =
+          "Shortcuts were still loading when you submitted. Wait until the arrow appears, then submit your query again.";
         break;
       case "deprecated":
         alertMsg.innerHTML = 'Your shortcut <strong><em class="query"></em></strong> is deprecated. Please use:';
@@ -292,6 +347,11 @@ export default class Home {
       event.preventDefault();
     }
 
+    if (!this.initialized) {
+      this.showLoadingSubmitStatus();
+      return;
+    }
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
@@ -319,6 +379,15 @@ export default class Home {
     }
     window.location.href = redirectUrl;
   };
+
+  showLoadingSubmitStatus() {
+    const params = Env.getUrlSearchParams();
+    params.set("query", this.queryInput.value);
+    params.set("status", "loading");
+    params.sort();
+    window.history.replaceState(null, "", "#" + params.toString());
+    this.showInfoAlerts();
+  }
 
   /**
    * On triggering reload

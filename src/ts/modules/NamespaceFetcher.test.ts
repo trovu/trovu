@@ -173,6 +173,36 @@ describe("NamespaceFetcher.addNamespaceInfo", () => {
 });
 
 describe("NamespaceFetcher.fetchNamespaceInfos", () => {
+  test("continues with an empty namespace after a network error", async () => {
+    const logger = {
+      error: jest.fn(),
+      info: jest.fn(),
+      success: jest.fn(),
+      warning: jest.fn(),
+    };
+    const originalFetch = global.fetch;
+    global.fetch = jest.fn().mockRejectedValue(new Error("offline"));
+    const fetcher = new NamespaceFetcher({ logger });
+    const namespaceInfos = {
+      johndoe: {
+        name: "johndoe",
+        type: "user" as const,
+        url: "https://example.com/shortcuts.yml",
+      },
+    };
+
+    await expect(fetcher.fetchNamespaceInfos(namespaceInfos)).resolves.toEqual({
+      johndoe: {
+        ...namespaceInfos.johndoe,
+        shortcuts: {},
+      },
+    });
+    expect(logger.warning).toHaveBeenCalledWith(
+      "Problem fetching via default https://example.com/shortcuts.yml: offline",
+    );
+    global.fetch = originalFetch;
+  });
+
   test("with endless new user namespaces (negative)", async () => {
     const fetcher = new NamespaceFetcher(new Env({}));
     const namespaceInfos = {

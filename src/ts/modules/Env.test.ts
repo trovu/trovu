@@ -20,6 +20,7 @@ const minimalData = {
 
 afterEach(() => {
   global.fetch = originalFetch;
+  localStorage.clear();
   Object.defineProperty(Intl, "Locale", {
     configurable: true,
     value: originalIntlLocale,
@@ -256,6 +257,47 @@ describe("Env", () => {
       });
       expect(env.reload).toBeUndefined();
       expect(env.query).toBe("g foo");
+    });
+
+    test("loads a stored GitHub config in parallel with the initial data fetch", async () => {
+      let resolveData: (response: Response) => void;
+      const dataResponse = {
+        status: 200,
+        text: jest.fn().mockResolvedValue(JSON.stringify(minimalData)),
+      } as unknown as Response;
+      const configResponse = {
+        status: 200,
+        text: jest.fn().mockResolvedValue("defaultKeyword: g"),
+      } as unknown as Response;
+      const fetchMock = jest.fn((url: string) => {
+        if (url.startsWith("/data.json")) {
+          return new Promise<Response>((resolve) => {
+            resolveData = resolve;
+          });
+        }
+        if (url === "https://raw.githubusercontent.com/johndoe/trovu-data-user/master/config.yml") {
+          return Promise.resolve(configResponse);
+        }
+        throw new Error(`Unexpected URL: ${url}`);
+      });
+      global.fetch = fetchMock as typeof fetch;
+      jest.spyOn(Env, "fetchLog").mockImplementation(() => {});
+      jest.spyOn(NamespaceFetcher.prototype, "getNamespaceInfos").mockResolvedValue({});
+      localStorage.setItem("github", "johndoe");
+
+      const env = new Env({ context: "index" });
+      const populatePromise = env.populate({});
+      await Promise.resolve();
+
+      expect(fetchMock).toHaveBeenCalledWith("https://raw.githubusercontent.com/johndoe/trovu-data-user/master/config.yml", {
+        cache: "force-cache",
+        signal: expect.any(AbortSignal),
+      });
+      resolveData(dataResponse);
+      await populatePromise;
+
+      expect(env.github).toBe("johndoe");
+      expect(env.defaultKeyword).toBe("g");
     });
   });
 });
