@@ -1389,18 +1389,21 @@ ntv 1:
     description: Search n-tv.de for "berlin"
 nzz 0:
   url: https://www.nzz.ch/
-  title: NZZ Neue Züricher Zeitung, Archiv
+  title: Neue Züricher Zeitung
   tags:
   - news
+  - newspaper
   - nzz
+  - schweiz
   examples:
   - description: Gehe zur Startseite
+  description: Schweizer Tageszeitung mit internationalem Fokus
 nzz 1:
-  url: https://www.nzz.ch/suche?form%5Bq%5D=<Suchbegriff>
+  url: https://www.nzz.ch/suche?query=<Suche>
   include: nzz 0
   examples:
-  - arguments: schweiz
-    description: Search NZZ Neue Züricher Zeitung, Archiv for "schweiz"
+  - arguments: berlin
+    description: Suche nach Artikeln über Berlin
 oaz 0:
   url: https://ostdeutscheallgemeine.com/
   title: Ostdeutsche Allgemeine Zeitung
