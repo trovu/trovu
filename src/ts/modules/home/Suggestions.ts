@@ -61,7 +61,12 @@ export default class Suggestions {
         this.selected = Math.min(this.suggestions.length - 1, this.selected + 1);
         this.updateSuggestions();
       } else if (e.key === "Enter") {
-        this.pick(e);
+        if (this.selected !== -1) {
+          this.pick(e);
+        } else {
+          e.preventDefault();
+          this.home.submitQuery();
+        }
       }
     });
   }
