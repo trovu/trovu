@@ -956,6 +956,22 @@ h 1:
   examples:
   - arguments: linux
     description: Search for "linux"
+hb 0:
+  url: https://www.handelsblatt.com/
+  title: Handelsblatt
+  tags:
+  - economy
+  - news
+  - newspaper
+  examples:
+  - description: Gehe zur Startseite
+  description: Deutsche Wirtschaftszeitung mit Schwerpunkt auf Wirtschaft, Finanzen und Politik
+hb 1:
+  url: https://www.handelsblatt.com/suche/?sw=<Suche>
+  include: hb 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Artikeln über Berlin
 heise 0:
   url: https://www.heise.de/
   title: Heise.de
