@@ -555,8 +555,9 @@ dst 0:
   - news
   examples:
   - description: Gehe zur Startseite
+  description: Österreichische Tageszeitung mit Schwerpunkt auf Politik, Wirtschaft und Kultur.
 dst 1:
-  url: https://derstandard.at/suche?query=<query>
+  url: https://www.derstandard.at/search?query=<Suche>
   include: dst 0
   examples:
   - arguments: wien
