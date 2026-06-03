@@ -1472,6 +1472,21 @@ ot? 0:
   tags:
   - language
   - thesaurus
+oz 0:
+  url: https://www.ostsee-zeitung.de/
+  title: Ostsee-Zeitung
+  tags:
+  - news
+  - newspaper
+  examples:
+  - description: Gehe zur Startseite
+  description: Regionalzeitung für Mecklenburg-Vorpommern
+oz 1:
+  url: https://www.ostsee-zeitung.de/suche/?query=<Suche>
+  include: oz 0
+  examples:
+  - arguments: rostock
+    description: Suche nach "rostock"
 plb 1:
   deprecated:
     alternative:
