@@ -36,3 +36,23 @@ lr 1:
   examples:
   - arguments: Tarija
     description: Buscar noticias sobre el departamento de Tarija en La Razón
+meli 0:
+  url: https://www.mercadolibre.com.bo/
+  title: Mercado Libre Bolivia
+  tags:
+  - anuncios
+  - clasificados
+  - compras
+  - ecommerce
+  - mercadolibre
+  - productos
+  - shopping
+  - ventas
+  examples:
+  - description: Ir a la página principal
+meli 1:
+  url: https://listado.mercadolibre.com.bo/<busqueda>
+  include: meli 0
+  examples:
+  - arguments: celular
+    description: Buscar "celular" en Mercado Libre Bolivia
