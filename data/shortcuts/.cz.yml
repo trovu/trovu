@@ -1,4 +1,18 @@
 # yaml-language-server: $schema=https://trovu.net/schema/shortcuts.yml
+acn 0:
+  url: https://www.action.com/cs-cz/
+  title: Action Česko
+  tags:
+  - shopping
+  examples:
+  - description: Přejít na domovskou stránku
+  description: Diskontní prodejce, který nabízí širokou škálu produktů za nízké ceny, včetně domácích potřeb, elektroniky, hraček a dalších.
+acn 1:
+  url: https://www.action.com/cs-cz/search/?q=<výraz>
+  include: acn 0
+  examples:
+  - arguments: zrcadlo
+    description: Vyhledat "zrcadlo" na Action Česko
 alza 0:
   url: https://www.alza.cz/
   title: Alza.cz

@@ -83,6 +83,20 @@ ac 0:
   - amazon
   examples:
   - description: Gehe zum Amazon-Einkaufswagen
+acn 0:
+  url: https://www.action.com/de-de/
+  title: Action Deutschland
+  tags:
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+  description: Einzelhändler, der eine breite Palette von Produkten zu günstigen Preisen anbietet, darunter Haushaltswaren, Elektronik, Spielzeug und mehr.
+acn 1:
+  url: https://www.action.com/de-de/search/?query=<Suche>
+  include: acn 0
+  examples:
+  - arguments: schraubenzieher
+    description: Suche nach "schraubenzieher"
 alternate 1:
   deprecated:
     alternative:
