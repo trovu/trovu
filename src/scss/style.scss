@@ -84,6 +84,11 @@ main .jumbotron {
 #query-form {
   button[type="submit"] {
     font-size: 1.4em;
+    min-width: 2em;
+    &.btn-loading {
+      background-color: #ddd;
+      color: white;
+    }
   }
 }
 #query {
