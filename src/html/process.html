@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Set no referrer, to enable duckduckgo feeling lucky. -->
     <meta name="referrer" content="no-referrer" />
+    <script type="module" src="../{{fileNameJs}}?{{currentTimestamp}}"></script>
     <style>
       #process {
         display: flex;
@@ -73,12 +74,11 @@
 
   <body>
     <div id="process">
-      <img id="process-icon" src="/img/icon.svg" alt="" width="16" height="16" />
+      <img id="process-icon" src="/img/icon.svg" alt="" width="16" height="16" decoding="async" fetchpriority="low" />
       <div id="process-text">
         <pre id="loading">Loading <span id="target-domain"></span></pre>
         <pre hidden id="log"></pre>
       </div>
     </div>
-    <script type="module" src="../{{fileNameJs}}?{{currentTimestamp}}"></script>
   </body>
 </html>

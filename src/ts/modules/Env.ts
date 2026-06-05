@@ -500,8 +500,11 @@ export default class Env {
       case "web-ext":
         prefix = "/";
         url = `${prefix}data.json?version=${this.gitInfo.commit.hash}`;
-        Env.fetchLog(this.context, prefix);
-        text = await Helper.fetchAsync(url, this);
+        {
+          const dataPromise = Helper.fetchAsync(url, this);
+          Env.fetchLog(this.context, prefix);
+          text = await dataPromise;
+        }
         break;
       case "raycast":
         prefix = "https://trovu.net/";
