@@ -497,21 +497,22 @@ export default class Env {
     switch (this.context) {
       case "index":
       case "process":
-      case "web-ext":
+      case "web-ext": {
         prefix = "/";
         url = `${prefix}data.json?version=${this.gitInfo.commit.hash}`;
-        {
-          const dataPromise = Helper.fetchAsync(url, this);
-          Env.fetchLog(this.context, prefix);
-          text = await dataPromise;
-        }
+        const dataPromise = Helper.fetchAsync(url, this);
+        Env.fetchLog(this.context, prefix);
+        text = await dataPromise;
         break;
-      case "raycast":
+      }
+      case "raycast": {
         prefix = "https://trovu.net/";
         url = `${prefix}data.json`;
+        const dataPromise = Helper.fetchAsync(url, this);
         Env.fetchLog(this.context, prefix);
-        text = await Helper.fetchAsync(url, this);
+        text = await dataPromise;
         break;
+      }
       case "node": {
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         const fs = require("fs");
