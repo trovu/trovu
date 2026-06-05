@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - codex/process-startup
   pull_request:
     branches:
       - master
