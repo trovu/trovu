@@ -491,45 +491,51 @@ export default class Env {
    * @returns {Object} An object containing the fetched data.
    */
   async getData(): Promise<TrovuData | false> {
-    let text;
-    let url;
-    let prefix;
+    const loadFromUrl = async (url: string, prefix: string) => {
+      const dataPromise = Helper.fetchAsync(url, this);
+      Env.fetchLog(this.context, prefix);
+      return {
+        text: await dataPromise,
+        url,
+      };
+    };
+
+    let dataSource: { text: string | false | null; url: string };
     switch (this.context) {
       case "index":
       case "process":
       case "web-ext": {
-        prefix = "/";
-        url = `${prefix}data.json?version=${this.gitInfo.commit.hash}`;
-        const dataPromise = Helper.fetchAsync(url, this);
-        Env.fetchLog(this.context, prefix);
-        text = await dataPromise;
+        const prefix = "/";
+        dataSource = await loadFromUrl(`${prefix}data.json?version=${this.gitInfo.commit.hash}`, prefix);
         break;
       }
       case "raycast": {
-        prefix = "https://trovu.net/";
-        url = `${prefix}data.json`;
-        const dataPromise = Helper.fetchAsync(url, this);
-        Env.fetchLog(this.context, prefix);
-        text = await dataPromise;
+        const prefix = "https://trovu.net/";
+        dataSource = await loadFromUrl(`${prefix}data.json`, prefix);
         break;
       }
       case "node": {
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         const fs = require("fs");
-        url = "./dist/public/data.json";
-        text = fs.readFileSync(url, "utf8");
+        const url = "./dist/public/data.json";
+        dataSource = {
+          text: fs.readFileSync(url, "utf8"),
+          url,
+        };
         break;
       }
+      default:
+        return false;
     }
-    if (!text) {
+    if (!dataSource.text) {
       return false;
     }
     try {
-      const data = JSON.parse(text) as TrovuData;
+      const data = JSON.parse(dataSource.text) as TrovuData;
       return data;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      this.logger.error(`Error parsing JSON in ${url}: ${message}`);
+      this.logger.error(`Error parsing JSON in ${dataSource.url}: ${message}`);
       return false;
     }
   }
