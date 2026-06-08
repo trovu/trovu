@@ -352,13 +352,31 @@ export default class Home {
       return;
     }
 
+    let newWindow: Window | null = null;
+    const isStandalone = this.env.isRunningStandalone();
+    if (isStandalone) {
+      try {
+        newWindow = window.open("about:blank", "_blank");
+      } catch (e) {
+        this.env.logger.error("Failed to open blank window: " + String(e));
+      }
+    }
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
     const params: EnvParams = Env.getParamsFromUrl();
     params.query = this.queryInput.value;
-    await envQuery.populate(params);
+    
+    try {
+      await envQuery.populate(params);
+    } catch (error) {
+      if (newWindow) {
+        newWindow.close();
+      }
+      throw error;
+    }
 
     const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
 
@@ -367,6 +385,9 @@ export default class Home {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
+      if (newWindow) {
+        newWindow.close();
+      }
       window.location.href = processUrl;
       return;
     }
@@ -374,8 +395,15 @@ export default class Home {
     let redirectUrl: string;
     if (response.status === "found") {
       redirectUrl = response.redirectUrl as string;
+      if (isStandalone && newWindow) {
+        newWindow.location.href = redirectUrl;
+        return;
+      }
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+      if (newWindow) {
+        newWindow.close();
+      }
     }
     window.location.href = redirectUrl;
   };
