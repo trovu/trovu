@@ -352,8 +352,50 @@ export default class Home {
       return;
     }
 
-    let newWindow: Window | null = null;
+    const query = this.queryInput.value;
     const isStandalone = this.env.isRunningStandalone();
+
+    if (isStandalone) {
+      try {
+        const envQuery = new Env({
+          context: "index",
+          data: this.env.data,
+          namespaceInfos: this.env.namespaceInfos,
+          language: this.env.language,
+          country: this.env.country,
+          defaultKeyword: this.env.defaultKeyword,
+          namespaces: Array.isArray(this.env.namespaces) ? [...this.env.namespaces] : [],
+          debug: this.env.debug,
+        });
+        const params = Env.getParamsFromUrl();
+        params.query = query;
+        const paramsFromQuery = envQuery.getQueryParams(params);
+        const preloadParams = envQuery.getPreloadParams(params, paramsFromQuery);
+        Object.assign(envQuery, preloadParams);
+        envQuery.setDefaults();
+        if (envQuery.extraNamespaceName) {
+          if (envQuery.namespaces && !envQuery.namespaces.includes(envQuery.extraNamespaceName)) {
+            envQuery.namespaces.push(envQuery.extraNamespaceName);
+          }
+        }
+
+        const needsAsync = envQuery.extraNamespaceName && !envQuery.isValidNamespace(envQuery.extraNamespaceName);
+
+        if (!needsAsync) {
+          const response = CallHandler.getRedirectResponse(envQuery);
+          if (response.status === "found" && typeof response.redirectUrl === "string") {
+            if (!envQuery.debug) {
+              window.open(response.redirectUrl, "_blank");
+              return;
+            }
+          }
+        }
+      } catch (e) {
+        this.env.logger.error("Failed synchronous redirect check: " + String(e));
+      }
+    }
+
+    let newWindow: Window | null = null;
     if (isStandalone) {
       try {
         newWindow = window.open("about:blank", "_blank");
@@ -367,7 +409,7 @@ export default class Home {
     // or asking for a not yet parsed Github namespace.
     const envQuery = new Env({ context: "index" });
     const params: EnvParams = Env.getParamsFromUrl();
-    params.query = this.queryInput.value;
+    params.query = query;
     
     try {
       await envQuery.populate(params);
@@ -383,7 +425,7 @@ export default class Home {
     // Send debug to /process.
     if (envQuery.debug) {
       const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
+        query: query,
       });
       if (newWindow) {
         newWindow.close();
