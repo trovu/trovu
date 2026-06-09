@@ -56,16 +56,6 @@ const copyStaticAssets = () => ({
   },
 });
 
-const watchTemplate = (templateFilePath) => ({
-  name: "watch-template",
-  generateBundle() {
-    if (!this.meta.watchMode) {
-      return;
-    }
-    this.addWatchFile(path.resolve(templateFilePath));
-  },
-});
-
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
@@ -117,7 +107,6 @@ export default [
     input: "src/ts/index.ts",
     output: output,
     plugins: [
-      watchTemplate("src/html/index.html"),
       resolve(),
       commonjs(),
       json(),
@@ -142,7 +131,6 @@ export default [
     input: "src/ts/process.ts",
     output: output,
     plugins: [
-      watchTemplate("src/html/process.html"),
       resolve(),
       commonjs(),
       json(),
