@@ -56,6 +56,15 @@ const copyStaticAssets = () => ({
   },
 });
 
+const watchHtmlTemplates = {
+  name: "watch-html-templates",
+  buildStart() {
+    for (const filePath of ["src/html/index.html", "src/html/process.html"]) {
+      this.addWatchFile(path.resolve(filePath));
+    }
+  },
+};
+
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
@@ -107,6 +116,7 @@ export default [
     input: "src/ts/index.ts",
     output: output,
     plugins: [
+      watchHtmlTemplates,
       resolve(),
       commonjs(),
       json(),
@@ -131,6 +141,7 @@ export default [
     input: "src/ts/process.ts",
     output: output,
     plugins: [
+      watchHtmlTemplates,
       resolve(),
       commonjs(),
       json(),
