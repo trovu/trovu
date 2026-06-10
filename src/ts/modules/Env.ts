@@ -223,7 +223,8 @@ export default class Env {
     if (this.extraNamespaceName && !this.isValidNamespace(this.extraNamespaceName)) {
       delete this.extraNamespaceName;
       this.keyword = "";
-      this.arguments = [this.query];
+      this.argumentString = this.query;
+      this.args = [this.query];
     }
   }
 

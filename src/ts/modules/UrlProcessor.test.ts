@@ -146,4 +146,26 @@ describe("UrlProcessor", () => {
       expect(UrlProcessor.processAttributeEncoding({ encoding: "none" }, "ÄÖÜäöü")).toEqual("ÄÖÜäöü");
     });
   });
+
+  describe("processTypeTime", () => {
+    test("formats a valid time", () => {
+      expect(UrlProcessor.processTypeTime("8:15", { output: "HH-mm" })).toBe("08-15");
+    });
+
+    test("keeps an invalid time unchanged", () => {
+      expect(UrlProcessor.processTypeTime("soon", {})).toBe("soon");
+    });
+  });
+
+  describe("replaceArguments", () => {
+    test("processes time placeholders before encoding", () => {
+      expect(
+        UrlProcessor.replaceArguments("https://example.com/?time=<time: {type: time, output: HH-mm}>", ["8:15"], {
+          country: "de",
+          data: {},
+          language: "de",
+        }),
+      ).toBe("https://example.com/?time=08-15");
+    });
+  });
 });

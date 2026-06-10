@@ -259,6 +259,25 @@ describe("Env", () => {
       expect(env.query).toBe("g foo");
     });
 
+    test("resets arguments to the full query when an extra namespace is invalid", async () => {
+      const response = {
+        status: 200,
+        text: jest.fn().mockResolvedValue(JSON.stringify(minimalData)),
+      };
+      const fetchMock = jest.fn().mockResolvedValue(response as unknown as Response);
+      global.fetch = fetchMock as typeof fetch;
+      jest.spyOn(Env, "fetchLog").mockImplementation(() => {});
+      jest.spyOn(NamespaceFetcher.prototype, "getNamespaceInfos").mockResolvedValue({});
+
+      const env = new Env({ context: "process" });
+      await env.populate({ query: "foo.de test" });
+
+      expect(env.extraNamespaceName).toBeUndefined();
+      expect(env.keyword).toBe("");
+      expect(env.argumentString).toBe("foo.de test");
+      expect(env.args).toEqual(["foo.de test"]);
+    });
+
     test("loads a stored GitHub config in parallel with the initial data fetch", async () => {
       let resolveData: (response: Response) => void;
       const dataResponse = {

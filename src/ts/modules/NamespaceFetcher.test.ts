@@ -6,6 +6,15 @@ function cloneObject(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
+function createLogger() {
+  return {
+    error: jest.fn(),
+    info: jest.fn(),
+    success: jest.fn(),
+    warning: jest.fn(),
+  };
+}
+
 describe("NamespaceFetcher.getInitialNamespaceInfo", () => {
   test("site", () => {
     const env = new Env();
@@ -40,8 +49,11 @@ describe("NamespaceFetcher.getInitialNamespaceInfo", () => {
     });
   });
   test("configUrl, this user (negative)", () => {
-    const env = new Env();
-    expect(new NamespaceFetcher(env).getInitialNamespaceInfo({ github: "." })).toEqual(false);
+    const logger = createLogger();
+    expect(new NamespaceFetcher({ logger }).getInitialNamespaceInfo({ github: "." })).toEqual(false);
+    expect(logger.warning).toHaveBeenCalledWith(
+      'Invalid namespace: {"github":"."} provided without a github repository name.',
+    );
   });
   test("name and url", () => {
     const env = new Env();
@@ -76,20 +88,24 @@ describe("NamespaceFetcher.getInitialNamespaceInfo", () => {
     });
   });
   test("only url (negative)", () => {
-    const env = new Env();
+    const logger = createLogger();
     expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({
+      new NamespaceFetcher({ logger }).getInitialNamespaceInfo({
         url: "https://johndoe.com/trovu-data-user/",
       }),
     ).toEqual(false);
+    expect(logger.warning).toHaveBeenCalledWith(
+      'Invalid namespace: {"url":"https://johndoe.com/trovu-data-user/"} provided without a name.',
+    );
   });
   test("only shortcuts (negative)", () => {
-    const env = new Env();
+    const logger = createLogger();
     expect(
-      new NamespaceFetcher(env).getInitialNamespaceInfo({
+      new NamespaceFetcher({ logger }).getInitialNamespaceInfo({
         shortcuts: {},
       }),
     ).toEqual(false);
+    expect(logger.warning).toHaveBeenCalledWith('Invalid namespace: {"shortcuts":{}} provided without a name.');
   });
   test("name and shortcuts, short notation", () => {
     const env = new Env();
@@ -174,12 +190,7 @@ describe("NamespaceFetcher.addNamespaceInfo", () => {
 
 describe("NamespaceFetcher.fetchNamespaceInfos", () => {
   test("continues with an empty namespace after a network error", async () => {
-    const logger = {
-      error: jest.fn(),
-      info: jest.fn(),
-      success: jest.fn(),
-      warning: jest.fn(),
-    };
+    const logger = createLogger();
     const originalFetch = global.fetch;
     global.fetch = jest.fn().mockRejectedValue(new Error("offline"));
     const fetcher = new NamespaceFetcher({ logger });
@@ -204,7 +215,8 @@ describe("NamespaceFetcher.fetchNamespaceInfos", () => {
   });
 
   test("with endless new user namespaces (negative)", async () => {
-    const fetcher = new NamespaceFetcher(new Env({}));
+    const logger = createLogger();
+    const fetcher = new NamespaceFetcher({ logger });
     const namespaceInfos = {
       loop0: {
         name: "loop0",
@@ -235,6 +247,7 @@ describe("NamespaceFetcher.fetchNamespaceInfos", () => {
     await expect(fetcher.fetchNamespaceInfos(namespaceInfos)).rejects.toThrow(
       "fetchNamespaceInfos: Loop ran already 10 times.",
     );
+    expect(logger.error).toHaveBeenCalledWith("fetchNamespaceInfos: Loop ran already 10 times.");
   });
 });
 
@@ -288,6 +301,7 @@ describe("NamespaceFetcher.processInclude", () => {
   });
 
   test("with loop (negative)", () => {
+    const logger = createLogger();
     const namespaceInfosLoop = jsyaml.load(`
       leo:
         shortcuts:
@@ -306,11 +320,13 @@ describe("NamespaceFetcher.processInclude", () => {
       key: tic 1
     `);
     expect(() => {
-      new NamespaceFetcher(new Env({})).processInclude(shortcut, "leo", namespaceInfosLoop);
+      new NamespaceFetcher({ logger }).processInclude(shortcut, "leo", namespaceInfosLoop);
     }).toThrow(Error);
+    expect(logger.error).toHaveBeenCalledWith("processInclude: Loop ran already 10 times.");
   });
 
   test("faulty (negative)", () => {
+    const logger = createLogger();
     const namespaceInfos = jsyaml.load(`
       leo:
         shortcuts:
@@ -321,11 +337,13 @@ describe("NamespaceFetcher.processInclude", () => {
     include: tic 1
     `);
     expect(() => {
-      new NamespaceFetcher(new Env({})).processInclude(shortcut, "leo", namespaceInfos);
+      new NamespaceFetcher({ logger }).processInclude(shortcut, "leo", namespaceInfos);
     }).toThrow(Error);
+    expect(logger.error).toHaveBeenCalledWith('Include with missing key at: "tic 1"');
   });
 
   test("multiple", () => {
+    const logger = createLogger();
     const namespaceInfosMultiple = jsyaml.load(`
       leo:
         shortcuts:
@@ -348,11 +366,12 @@ describe("NamespaceFetcher.processInclude", () => {
       namespace: leo
     `);
     expect(
-      new NamespaceFetcher(new Env({ language: "de" })).processInclude(shortcut, "o", namespaceInfosMultiple),
+      new NamespaceFetcher({ language: "de", logger }).processInclude(shortcut, "o", namespaceInfosMultiple),
     ).toMatchObject({
       title: "Französisch-Deutsch (leo.org)",
       url: "https://dict.leo.org/französisch-deutsch/{%word}",
     });
+    expect(logger.warning).toHaveBeenCalledWith('Namespace "lge" does not exist or has no shortcuts.');
   });
 });
 
