@@ -8,7 +8,9 @@ function cloneObject(obj) {
 
 function createLogger() {
   return {
-    error: jest.fn(),
+    error: jest.fn((message) => {
+      throw new Error(message);
+    }),
     info: jest.fn(),
     success: jest.fn(),
     warning: jest.fn(),

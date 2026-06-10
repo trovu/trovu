@@ -30,11 +30,6 @@ export default class NamespaceFetcher {
     this.namespaceInfos = {};
   }
 
-  logAndThrow(message: string): never {
-    this.env.logger.error(message);
-    throw new Error(message);
-  }
-
   /**
    * Gets namespace information for given namespaces
    * @param {Array} namespaces - An array of namespace names
@@ -191,7 +186,7 @@ export default class NamespaceFetcher {
     do {
       i++;
       if (i >= 10) {
-        this.logAndThrow(`fetchNamespaceInfos: Loop ran already ${i} times.`);
+        this.env.logger.error(`fetchNamespaceInfos: Loop ran already ${i} times.`);
       }
       // Get user namespaces without shortcuts.
       newNamespaceInfos = Object.values(namespaceInfos).filter((item) => item.type === "user" && !item.shortcuts);
@@ -400,12 +395,13 @@ export default class NamespaceFetcher {
    */
   processInclude(shortcut: Shortcut, namespaceName: string, namespaceInfos: NamespaceMap, depth = 0): Shortcut | false {
     if (depth >= 10) {
-      this.logAndThrow(`processInclude: Loop ran already ${depth} times.`);
+      this.env.logger.error(`processInclude: Loop ran already ${depth} times.`);
     }
     const includes = this.getIncludes(shortcut);
     for (const include of includes) {
       if (!include.key) {
-        this.logAndThrow(`Include with missing key at: ${JSON.stringify(include)}`);
+        this.env.logger.error(`Include with missing key at: ${JSON.stringify(include)}`);
+        continue;
       }
       const keyUnprocessed = include.key;
       const key = UrlProcessor.replaceVariables(keyUnprocessed, {
