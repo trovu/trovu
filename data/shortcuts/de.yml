@@ -1406,6 +1406,22 @@ mp 0:
 mp 1:
   url: https://www.moviepilot.de/suche?q=<Suche>
   include: mp 0
+mz 0:
+  url: https://www.mz.de/
+  title: Mitteldeutsche Zeitung
+  tags:
+  - news
+  - regional
+  - sachsen-anhalt
+  examples:
+  - description: Zur Startseite gehen
+  description: Regionales Nachrichtenportal der Mitteldeutschen Zeitung mit aktuellen Berichten aus Sachsen-Anhalt, Deutschland und der Welt.
+mz 1:
+  url: https://www.mz.de/search?q=<query>
+  include: mz 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Artikeln über Berlin
 nds 0:
   url: https://www.nachdenkseiten.de
   title: Nachdenkseiten
