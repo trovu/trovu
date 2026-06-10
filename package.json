@@ -31,7 +31,7 @@
     "prettier-fix": "npx prettier -w 'src/**/*.js'",
     "prettier-list": "npx prettier -l 'src/**/*.js'",
     "rollout": "npm run clean && npm run build && npm run test",
-    "test": "npm run lint-yaml && npm run validate-data && npm run typecheck && npm run build && npm run test-unit && npm run test-calls && npm run test-fe",
+    "test": "npm run lint-yaml && npm run typecheck && npm run build-site && npm run validate-data && npm run compile-data && npm run test-unit && npm run test-calls && npm run test-fe",
     "test-calls": "jest --verbose calls",
     "test-fe": "playwright test",
     "test-shortcuts": "node dist/cli.mjs test-shortcuts",
