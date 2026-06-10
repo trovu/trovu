@@ -8,7 +8,6 @@ import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import fs from "fs";
 import path from "path";
-import execute from "rollup-plugin-execute";
 import scss from "rollup-plugin-scss";
 
 const isProduction = process.env.BUILD === "production";
@@ -57,6 +56,15 @@ const copyStaticAssets = () => ({
   },
 });
 
+const watchHtmlTemplates = {
+  name: "watch-html-templates",
+  buildStart() {
+    for (const filePath of ["src/html/index.html", "src/html/process.html"]) {
+      this.addWatchFile(path.resolve(filePath));
+    }
+  },
+};
+
 const template = (templateFilePath) => {
   const templateFunc = ({ attributes, bundle, files, publicPath, title }) => {
     const [fileNameJs] = Object.keys(bundle);
@@ -101,12 +109,6 @@ export default [
       "escape-string-regexp",
     ],
     plugins: [
-      {
-        name: "watch-src",
-        buildStart() {
-          this.addWatchFile("src/**/*");
-        },
-      },
       typescript(), // Use the TypeScript plugin
     ],
   },
@@ -114,12 +116,7 @@ export default [
     input: "src/ts/index.ts",
     output: output,
     plugins: [
-      {
-        name: "watch-src",
-        buildStart() {
-          this.addWatchFile("src/**/*");
-        },
-      },
+      watchHtmlTemplates,
       resolve(),
       commonjs(),
       json(),
@@ -127,7 +124,6 @@ export default [
         fileName: "style.css",
         outputStyle: isProduction ? "compressed" : "expanded",
       }),
-      execute("npm run compile-data"),
       isProduction && terser(),
       html({
         fileName: "index.html",
@@ -145,12 +141,7 @@ export default [
     input: "src/ts/process.ts",
     output: output,
     plugins: [
-      {
-        name: "watch-src",
-        buildStart() {
-          this.addWatchFile("src/**/*");
-        },
-      },
+      watchHtmlTemplates,
       resolve(),
       commonjs(),
       json(),
