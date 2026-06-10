@@ -293,7 +293,7 @@ pco 0:
   description: Political news organization that covers politics, policy, and current events in the United States and globally.
 pco 1:
   url: https://www.politico.com/search?q=<query>
-  include: ptco 0
+  include: pco 0
   examples:
   - arguments: berlin
     description: Search for articles about Berlin
