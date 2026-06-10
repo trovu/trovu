@@ -1,4 +1,19 @@
 # yaml-language-server: $schema=https://trovu.net/schema/shortcuts.yml
+abcn 0:
+  url: https://abcnews.go.com/
+  title: ABC News
+  tags:
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+  description: Major American news network offering breaking national and world news, politics, and investigative reporting.
+abcn 1:
+  url: https://abcnews.go.com/search?searchtext=<query>
+  include: abcn 0
+  examples:
+  - arguments: berlin
+    description: Search for articles about Berlin
 atl 0:
   url: https://www.theatlantic.com/
   title: The Atlantic
