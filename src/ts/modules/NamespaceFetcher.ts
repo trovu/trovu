@@ -401,7 +401,6 @@ export default class NamespaceFetcher {
     for (const include of includes) {
       if (!include.key) {
         this.env.logger.error(`Include with missing key at: ${JSON.stringify(include)}`);
-        continue;
       }
       const keyUnprocessed = include.key;
       const key = UrlProcessor.replaceVariables(keyUnprocessed, {

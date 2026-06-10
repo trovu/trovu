@@ -62,7 +62,7 @@ export default class Logger {
   success(message: string) {
     this.log("success", message);
   }
-  error(message: string) {
+  error(message: string): never {
     this.log("error", message);
     this.showLog();
     throw new Error(message);

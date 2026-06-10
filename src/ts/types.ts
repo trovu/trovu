@@ -15,7 +15,7 @@ export interface LoggerLike {
   info(message: string): void;
   warning(message: string): void;
   success?(message: string): void;
-  error(message: string): never | void;
+  error(message: string): never;
 }
 
 export interface PlaceholderAttributes {

@@ -1,5 +1,15 @@
 import ShortcutFinder from "./ShortcutFinder";
 
+function createLogger() {
+  return {
+    error: jest.fn((message: string): never => {
+      throw new Error(message);
+    }),
+    info: jest.fn(),
+    warning: jest.fn(),
+  };
+}
+
 describe("ShortcutFinder.matchShortcuts", () => {
   test("returns the first reachable shortcut for the requested keyword and argument count", () => {
     const shortcut = { reachable: true, url: "https://example.com" };
@@ -24,7 +34,7 @@ describe("ShortcutFinder.matchShortcuts", () => {
 
 describe("ShortcutFinder.findShortcut", () => {
   test("falls back to the whole argument string when comma-splitting misses a shortcut", () => {
-    const logger = { info: jest.fn(), warning: jest.fn(), error: jest.fn() };
+    const logger = createLogger();
     const shortcut = { reachable: true, url: "https://example.com" };
     const env = {
       keyword: "gm",
@@ -50,7 +60,7 @@ describe("ShortcutFinder.findShortcut", () => {
   });
 
   test("falls back to the default keyword using the full query", () => {
-    const logger = { info: jest.fn(), warning: jest.fn(), error: jest.fn() };
+    const logger = createLogger();
     const shortcut = { reachable: true, url: "https://example.com" };
     const defaultKeyword = "w";
     const env = {
@@ -77,7 +87,7 @@ describe("ShortcutFinder.findShortcut", () => {
   });
 
   test("finally returns a non-reachable shortcut so the caller can inform the user", () => {
-    const logger = { info: jest.fn(), warning: jest.fn(), error: jest.fn() };
+    const logger = createLogger();
     const shortcut = { reachable: false, url: "https://example.com" };
     const env = {
       keyword: "gm",
