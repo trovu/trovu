@@ -7138,6 +7138,24 @@ mouser 1:
     alternative:
       query: .de.msr <1>
     created: '2025-05-19'
+mpl 0:
+  url: https://matplotlib.org/
+  title: Matplotlib
+  tags:
+  - plot
+  - plotting
+  - programming
+  - python
+  - scientific-computing
+  examples:
+  - description: Go to the homepage
+  description: Matplotlib is a Python plotting library for creating static, animated, and interactive visualizations.
+mpl 1:
+  url: https://matplotlib.org/stable/search.html?q=<query>
+  include: mpl 0
+  examples:
+  - arguments: heatmap
+    description: Get help on creating heatmaps with matplotlib
 mr 0:
   include:
   - key: mr 0
@@ -8439,24 +8457,15 @@ plot 1:
   url: https://plot20.kesto.de/#{"functions":["<function>"]}
   include: plot 0
 plt 0:
-  url: https://matplotlib.org/
-  title: Matplotlib
-  tags:
-  - plot
-  - plotting
-  - programming
-  - python
-  - scientific-computing
-  examples:
-  - description: Go to the homepage
-  description: Matplotlib is a Python plotting library for creating static, animated, and interactive visualizations.
+  deprecated:
+    alternative:
+      query: mpl
+    created: '2026-06-10'
 plt 1:
-  url: https://www.google.com/search?hl=<$language>&q=matplotlib+<query>
-  title: matplotlib via Google
-  include: plt 0
-  examples:
-  - arguments: heatmap
-    description: Get help on creating heatmaps with matplotlib
+  deprecated:
+    alternative:
+      query: mpl <1>
+    created: '2026-06-10'
 pm 0:
   url: https://pubmed.ncbi.nlm.nih.gov/
   title: PubMed
