@@ -86,6 +86,21 @@ cn 1:
   examples:
   - arguments: tom sawyer
     description: Search for Cliff's notes on Tom Sawyer
+cnn 0:
+  url: https://www.cnn.com/
+  title: CNN.com
+  tags:
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+  description: International news channel providing latest news, breaking news, politics, and current events from around the world.
+cnn 1:
+  url: https://www.cnn.com/search?q=<query>
+  include: cnn 0
+  examples:
+  - arguments: berlin
+    description: Search for articles about Berlin
 dei 1:
   deprecated:
     alternative:
