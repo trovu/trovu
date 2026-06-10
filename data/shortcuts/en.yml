@@ -267,6 +267,21 @@ oed 1:
   examples:
   - arguments: tree
     description: Search for the etymology of "tree"
+pco 0:
+  url: https://www.politico.com/
+  title: Politico.com
+  tags:
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+  description: Political news organization that covers politics, policy, and current events in the United States and globally.
+pco 1:
+  url: https://www.politico.com/search?q=<query>
+  include: ptco 0
+  examples:
+  - arguments: berlin
+    description: Search for articles about Berlin
 reu 0:
   url: https://www.reuters.com/
   title: Reuters
