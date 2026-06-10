@@ -1,6 +1,8 @@
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 import ShortcutFinder from "./ShortcutFinder";
+import { createLogger } from "../../../tests/createLogger";
+import type { Shortcut } from "../types";
 
 describe("CallHandler", () => {
   test("getAlternative", async () => {
@@ -53,13 +55,13 @@ describe("CallHandler", () => {
     const shortcutSpy = jest.spyOn(ShortcutFinder, "findShortcut").mockReturnValue({
       url: "javascript:alert(1)",
       reachable: true,
-    } as AnyObject);
+    } as Shortcut);
     const env = {
       query: "evil",
       args: [],
       language: "en",
       country: "us",
-      logger: { info: jest.fn(), warning: jest.fn(), error: jest.fn() },
+      logger: createLogger(),
     };
 
     expect(CallHandler.getRedirectResponse(env)).toMatchObject({

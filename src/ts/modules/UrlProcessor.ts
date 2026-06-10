@@ -197,10 +197,10 @@ export default class UrlProcessor {
 
   static processTypeTime(processedArgument: string, attributes: PlaceholderAttributes): string {
     const timeNative = TimeType.parse(processedArgument);
-    const time = dayjs(timeNative);
     // If time could be parsed:
     // Set argument.
-    if (time) {
+    if (timeNative) {
+      const time = dayjs(timeNative);
       let format = "HH:mm";
       if (attributes.output) {
         format = attributes.output;
