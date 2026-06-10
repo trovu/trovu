@@ -5788,6 +5788,17 @@ i 1:
   examples:
   - arguments: batman
     description: Search for "batman"
+iafd 0:
+  url: https://www.iafd.com/
+  title: Internet Adult Film Database
+  tags:
+  - adult
+  - iafd
+  examples:
+  - description: Go to the homepage
+iafd 1:
+  url: https://www.iafd.com/results.asp?searchtype=comprehensive&searchstring=<query>
+  include: iafd 0
 ias 0:
   url: https://scholar.archive.org/
   title: Internet Archive Scholar
@@ -5805,17 +5816,6 @@ ias 1:
   examples:
   - arguments: language model
     description: Search Internet Archive Scholar for papers about language models
-iafd 0:
-  url: https://www.iafd.com/
-  title: Internet Adult Film Database
-  tags:
-  - adult
-  - iafd
-  examples:
-  - description: Go to the homepage
-iafd 1:
-  url: https://www.iafd.com/results.asp?searchtype=comprehensive&searchstring=<query>
-  include: iafd 0
 ibash 0:
   url: http://ibash.de/neueste_1.html
   title: Ibash
