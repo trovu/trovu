@@ -1,6 +1,7 @@
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 import ShortcutFinder from "./ShortcutFinder";
+import { createLogger } from "../../../tests/createLogger";
 import type { Shortcut } from "../types";
 
 describe("CallHandler", () => {
@@ -60,13 +61,7 @@ describe("CallHandler", () => {
       args: [],
       language: "en",
       country: "us",
-      logger: {
-        info: jest.fn(),
-        warning: jest.fn(),
-        error: jest.fn((message: string): never => {
-          throw new Error(message);
-        }),
-      },
+      logger: createLogger(),
     };
 
     expect(CallHandler.getRedirectResponse(env)).toMatchObject({

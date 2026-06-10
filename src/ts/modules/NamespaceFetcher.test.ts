@@ -1,20 +1,10 @@
 import Env from "./Env";
 import NamespaceFetcher from "./NamespaceFetcher";
+import { createLogger } from "../../../tests/createLogger";
 import jsyaml from "js-yaml";
 
 function cloneObject(obj) {
   return JSON.parse(JSON.stringify(obj));
-}
-
-function createLogger() {
-  return {
-    error: jest.fn((message) => {
-      throw new Error(message);
-    }),
-    info: jest.fn(),
-    success: jest.fn(),
-    warning: jest.fn(),
-  };
 }
 
 describe("NamespaceFetcher.getInitialNamespaceInfo", () => {

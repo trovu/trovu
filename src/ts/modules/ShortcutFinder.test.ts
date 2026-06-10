@@ -1,14 +1,5 @@
 import ShortcutFinder from "./ShortcutFinder";
-
-function createLogger() {
-  return {
-    error: jest.fn((message: string): never => {
-      throw new Error(message);
-    }),
-    info: jest.fn(),
-    warning: jest.fn(),
-  };
-}
+import { createLogger } from "../../../tests/createLogger";
 
 describe("ShortcutFinder.matchShortcuts", () => {
   test("returns the first reachable shortcut for the requested keyword and argument count", () => {
