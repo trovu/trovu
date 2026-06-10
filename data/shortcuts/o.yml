@@ -5209,16 +5209,17 @@ gsch 0:
   url: https://scholar.google.com/scholar?hl=<$language>
   title: Google Scholar Homepage
   tags:
+  - academic
   - google
+  - papers
+  - research
   - science
   examples:
   - description: Go to the homepage
 gsch 1:
   url: https://scholar.google.com/scholar?hl=<$language>&q=<query>
   title: Google Scholar
-  tags:
-  - google
-  - science
+  include: gsch 0
   examples:
   - arguments: chomsky
     description: Search Google Scholar for "chomsky"
@@ -9963,6 +9964,7 @@ ssch 0:
   - academic
   - papers
   - research
+  - science
   examples:
   - description: Go to the homepage
   description: Semantic Scholar is an academic search engine for research papers, authors, and related scholarly topics.
