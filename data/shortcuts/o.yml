@@ -5788,6 +5788,23 @@ i 1:
   examples:
   - arguments: batman
     description: Search for "batman"
+ias 0:
+  url: https://scholar.archive.org/
+  title: Internet Archive Scholar
+  tags:
+  - academic
+  - papers
+  - research
+  - science
+  examples:
+  - description: Go to the homepage
+  description: Internet Archive Scholar is the Internet Archive’s academic search engine.
+ias 1:
+  url: https://scholar.archive.org/search?q=<query>
+  include: ias 0
+  examples:
+  - arguments: language model
+    description: Search Internet Archive Scholar for papers about language models
 iafd 0:
   url: https://www.iafd.com/
   title: Internet Adult Film Database
