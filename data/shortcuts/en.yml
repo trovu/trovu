@@ -29,6 +29,21 @@ atl 1:
   examples:
   - arguments: germany
     description: Search for news about Germany
+axs 0:
+  url: https://www.axios.com/
+  title: Axios.com
+  tags:
+  - news
+  - politics
+  examples:
+  - description: Go to the homepage
+  description: News website providing clean, efficient, and visual coverage of politics, business, technology, and science.
+axs 1:
+  url: https://www.axios.com/results?q=<query>
+  include: axs 0
+  examples:
+  - arguments: berlin
+    description: Search for articles about Berlin
 bbc 0:
   url: https://www.bbc.com/
   title: BBC.com
