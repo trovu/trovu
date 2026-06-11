@@ -130,6 +130,73 @@ test("Homepage should load a stored GitHub config without a second navigation", 
   await expect(page.locator('head link[rel="search"]')).toHaveAttribute("href", "/opensearch/?github=testuser");
 });
 
+test("Homepage should show submit progress while resolving a query", async ({ page }) => {
+  let configRequests = 0;
+  let resumeSubmitConfig;
+  await page.addInitScript(() => {
+    localStorage.setItem("github", "testuser");
+  });
+  await page.route("https://raw.githubusercontent.com/testuser/trovu-data-user/master/config.yml", async (route) => {
+    configRequests += 1;
+    if (configRequests === 2) {
+      await new Promise((resolve) => {
+        resumeSubmitConfig = resolve;
+      });
+    }
+    await route.fulfill({
+      body: "defaultKeyword: g",
+      contentType: "text/yaml",
+      status: 200,
+    });
+  });
+  await page.route("https://www.google.co.uk/**", async (route) => {
+    await route.fulfill({
+      body: "<!doctype html><title>Google</title>",
+      contentType: "text/html",
+      status: 200,
+    });
+  });
+
+  await openLoadedHomepage(page);
+  expect(configRequests).toBe(1);
+  const queryForm = page.locator("#query-form");
+  const queryInput = page.locator("#query");
+  const submitButton = page.locator('#query-form button[type="submit"]');
+
+  await queryInput.fill("g submit feedback");
+  await queryInput.press("Enter");
+
+  await expect(queryForm).toHaveClass(/is-submitting/);
+  await expect(queryForm).toHaveAttribute("aria-busy", "true");
+  await expect(submitButton).toBeDisabled();
+  await expect(submitButton).toHaveAttribute("aria-label", "Processing query");
+  await expect(queryInput).toBeFocused();
+  await expect(queryForm.locator(".input-group")).toHaveCSS("position", "relative");
+  const inputGroupStyles = await queryForm.locator(".input-group").evaluate((inputGroup) => {
+    const shimmer = getComputedStyle(inputGroup, "::before");
+    return {
+      boxShadow: getComputedStyle(inputGroup).boxShadow,
+      shimmerBackground: shimmer.backgroundImage,
+      shimmerContent: shimmer.content,
+      shimmerPosition: shimmer.position,
+    };
+  });
+  expect(inputGroupStyles.boxShadow).not.toBe("none");
+  expect(inputGroupStyles.shimmerContent).toBe('""');
+  expect(inputGroupStyles.shimmerPosition).toBe("absolute");
+  expect(inputGroupStyles.shimmerBackground).toContain("linear-gradient");
+
+  resumeSubmitConfig?.();
+  await page.waitForURL(/google\.co\.uk/);
+  await page.goBack();
+  await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
+  await expect(queryForm).not.toHaveClass(/is-submitting/);
+  await expect(queryForm).not.toHaveAttribute("aria-busy", "true");
+  await expect(submitButton).not.toBeDisabled();
+  await expect(submitButton).toHaveAttribute("aria-label", "Search");
+  await expect(queryInput).toBeFocused();
+});
+
 test.describe("Homepage from default load", () => {
   test.beforeEach(async ({ page }) => {
     await openLoadedHomepage(page);
