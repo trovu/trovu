@@ -11,47 +11,79 @@ describe("CallHandler", () => {
         },
       },
     };
+
     const env = {
       args: ["brandenburger tor"],
     };
-    expect(CallHandler.getAlternative(shortcut, env)).toEqual("gm b,brandenburger tor");
+
+    expect(
+      CallHandler.getAlternative(shortcut, env),
+    ).toEqual("gm b,brandenburger tor");
   });
+
   test("getRedirectUrlToHome", async () => {
     Env.getUrlHash = () => {
       return "country=at&language=de&query=reload";
     };
+
     const response = {
-      status: "reloaded",
+      status: "reloaded" as const,
     };
-    expect(CallHandler.getRedirectUrlToHome(new Env(), response)).toStrictEqual(
+
+    expect(
+      CallHandler.getRedirectUrlToHome(new Env(), response),
+    ).toStrictEqual(
       "../index.html#country=at&language=de&status=reloaded",
     );
   });
+
   test("isSafeRedirectUrl allows http, https and mailto", () => {
-    expect(CallHandler.isSafeRedirectUrl("http://example.com")).toBe(true);
-    expect(CallHandler.isSafeRedirectUrl("https://example.com")).toBe(true);
-    expect(CallHandler.isSafeRedirectUrl("mailto:test@example.com")).toBe(true);
+    expect(
+      CallHandler.isSafeRedirectUrl("http://example.com"),
+    ).toBe(true);
+
+    expect(
+      CallHandler.isSafeRedirectUrl("https://example.com"),
+    ).toBe(true);
+
+    expect(
+      CallHandler.isSafeRedirectUrl("mailto:test@example.com"),
+    ).toBe(true);
   });
+
   test("isSafeRedirectUrl blocks unsupported protocols", () => {
-    expect(CallHandler.isSafeRedirectUrl("javascript:alert(1)")).toBe(false);
+    expect(
+      CallHandler.isSafeRedirectUrl("javascript:alert(1)"),
+    ).toBe(false);
   });
+
   test("isSafeRedirectUrl blocks unparseable URLs", () => {
-    expect(CallHandler.isSafeRedirectUrl("not a url")).toBe(false);
+    expect(
+      CallHandler.isSafeRedirectUrl("not a url"),
+    ).toBe(false);
   });
+
   test("getRedirectResponse returns suspicious for blocked redirect URLs", () => {
-    const shortcutSpy = jest.spyOn(ShortcutFinder, "findShortcut").mockReturnValue({
-      url: "javascript:alert(1)",
-      reachable: true,
-    } as AnyObject);
+    const shortcutSpy = jest
+      .spyOn(ShortcutFinder, "findShortcut")
+      .mockReturnValue({
+        url: "javascript:alert(1)",
+        reachable: true,
+      } as AnyObject);
+
     const env = {
       query: "evil",
       args: [],
       language: "en",
       country: "us",
-      logger: { info: jest.fn() },
+      logger: {
+        info: jest.fn(),
+      },
     };
 
-    expect(CallHandler.getRedirectResponse(env)).toMatchObject({
+    expect(
+      CallHandler.getRedirectResponse(env),
+    ).toMatchObject({
       status: "suspicious",
       redirectUrl: "javascript:alert(1)",
     });

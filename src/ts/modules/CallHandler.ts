@@ -4,153 +4,200 @@ import GitLogger from "./GitLogger";
 import ShortcutFinder from "./ShortcutFinder";
 import UrlProcessor from "./UrlProcessor";
 
+type RedirectResponse =
+  | { status: "found"; redirectUrl: string }
+  | { status: "not_found"; redirectUrl?: false }
+  | { status: "reloaded" }
+  | { status: "deprecated"; alternative: string }
+  | { status: "removed"; key: string }
+  | { status: "not_reachable"; namespace: string }
+  | { status: "suspicious"; redirectUrl: string };
 /** Handle a call. */
-
 export default class CallHandler {
   /**
-   * The 'main' function of this class.
+   * Main entry
    */
   static async handleCall() {
-    const targetDomain = document.querySelector("#target-domain") as any;
+    const targetDomain =
+document.querySelector("#target-domain") as HTMLElement;
+    if (!targetDomain) {
+      throw new Error('Missing element "#target-domain".');
+    }
+
     targetDomain.textContent = "";
 
     const env = new Env({ context: "process" });
-    const params = Env.getParamsFromUrl();
+const params: AnyObject = Env.getParamsFromUrl();
     await env.populate(params);
+
     new GitLogger(env.gitInfo).logVersion();
 
     if (env.debug) {
       env.logger.showLog();
     }
 
-    let redirectUrl: any;
+    const response = this.getRedirectResponse(env);
 
-    const response: AnyObject = this.getRedirectResponse(env);
+    const found = response.status === "found";
 
-    if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = this.getRedirectUrlToHome(env, response);
-    }
+    const redirectUrl =
+      found
+        ? (response.redirectUrl as string)
+        : this.getRedirectUrlToHome(env, response);
 
-    targetDomain.textContent = response.redirectUrl || "";
+    targetDomain.textContent =
+  "redirectUrl" in response &&
+  typeof response.redirectUrl === "string"
+    ? response.redirectUrl
+    : "";
 
-    env.logger.info("Redirect to:   " + redirectUrl);
+    env.logger.info("Redirect to: " + redirectUrl);
 
-    if (env.debug) {
-      return;
-    }
+    if (env.debug) return;
 
-const a = document.createElement("a");
-a.href = redirectUrl;
-a.rel = "noopener noreferrer";
-document.body.appendChild(a);
-a.click();
-document.body.removeChild(a);
-}
+    window.location.replace(
+      this.getNavigationUrl(redirectUrl, found),
+    );
+  }
 
-  /**
-   * Given the environment, get a response object, incl. redirect URL.
-   *
-   * @param {object} env        - The environment.
-   *
-   * @return {object} response  - Contains redirect URL, status.
-   */
-  static getRedirectResponse(env: AnyObject) {
-    const response: AnyObject = {};
-
+static getRedirectResponse(env: AnyObject): RedirectResponse  {
     if (env.reload && !env.query) {
-      response.status = "reloaded";
-      return response;
+      return { status: "reloaded" };
     }
 
     if (!env.query) {
-      response.status = "not_found";
-      response.redirectUrl = false;
-      return response;
+      return { status: "not_found", redirectUrl: false };
     }
 
     const shortcut = ShortcutFinder.findShortcut(env);
 
     if (!shortcut) {
-      response.status = "not_found";
-      return response;
+      return { status: "not_found" };
     }
 
     if (shortcut.deprecated) {
-      response.status = "deprecated";
-      response.alternative = this.getAlternative(shortcut, env);
-      return response;
+      return {
+        status: "deprecated",
+        alternative: this.getAlternative(shortcut, env),
+      };
     }
 
     if (shortcut.removed) {
-      response.status = "removed";
-      response.key = shortcut.key;
-      return response;
+      return {
+        status: "removed",
+        key: shortcut.key,
+      };
     }
 
     if (!shortcut.reachable) {
-      response.status = "not_reachable";
-      response.namespace = shortcut.namespace;
-      return response;
+      return {
+        status: "not_reachable",
+        namespace: shortcut.namespace,
+      };
     }
 
-    response.redirectUrl = shortcut.url;
-    response.status = "found";
+    let url = shortcut.url || "";
 
-    env.logger.info("Used template: " + response.redirectUrl);
+    env.logger.info("Used template: " + url);
 
-    response.redirectUrl = UrlProcessor.replaceVariables(response.redirectUrl, {
+    url = UrlProcessor.replaceVariables(url, {
       language: env.language,
       country: env.country,
     });
-    response.redirectUrl = UrlProcessor.replaceArguments(response.redirectUrl, env.args, env);
 
-    if (!this.isSafeRedirectUrl(response.redirectUrl)) {
-      response.status = "suspicious";
-      return response;
+    url = UrlProcessor.replaceArguments(url, env.args, env);
+
+    if (!this.isSafeRedirectUrl(url)) {
+      return { status: "suspicious", redirectUrl: url };
     }
 
-    return response;
+    return {
+      status: "found",
+      redirectUrl: url,
+    };
   }
 
   static getAlternative(shortcut: AnyObject, env: AnyObject) {
-    let alternative = shortcut.deprecated.alternative.query;
+    let alt = shortcut.deprecated.alternative.query;
+
     for (const i in env.args) {
-      alternative = alternative.replace("<" + (parseInt(i) + 1) + ">", env.args[i]);
+      alt = alt.replace(
+        `<${parseInt(i) + 1}>`,
+        env.args[i],
+      );
     }
-    return alternative;
+
+    return alt;
   }
 
-  static isSafeRedirectUrl(redirectUrl: string) {
-    let parsedUrl: URL;
+  static isSafeRedirectUrl(url: string): boolean {
     try {
-      parsedUrl = new URL(redirectUrl);
+      const parsed = new URL(url);
+      return ["http:", "https:", "mailto:"].includes(parsed.protocol);
     } catch {
       return false;
     }
-    return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
   }
 
-  /**
-   * Redirect in case a shortcut was not found.
-   *
-   * @param {string} status       - The status of the call.
-   *
-   * @return {string} redirectUrl - Redirect URL to the homepage, with parameters.
-   */
-  static getRedirectUrlToHome(env: AnyObject, response: AnyObject) {
-    const params: AnyObject = Env.getParamsFromUrl();
-    if (params.query === "reload" || params.query === "debug:reload") {
-      delete params.query;
-    }
-    for (const property of ["alternative", "key", "namespace", "status"]) {
-      if (response[property]) {
-        params[property] = response[property];
+  static getRedirectUrlToHome(
+    env: Env,
+    response: RedirectResponse,
+  ): string {
+   const params: AnyObject = Env.getParamsFromUrl();
+delete params.query;
+
+    for (const p of [
+      "alternative",
+      "key",
+      "namespace",
+      "status",
+    ]) {
+      if ((response as any)[p]) {
+        (params as any)[p] = (response as any)[p];
       }
     }
-    const paramStr = env.buildUrlParamStr(params);
-    const redirectUrl = "../index.html#" + paramStr;
-    return redirectUrl;
+
+    return "../index.html#" + env.buildUrlParamStr(params);
+  }
+
+  static getNavigationUrl(url: string, found: boolean): string {
+    if (!found) return url;
+
+    const isStandalone =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(display-mode: standalone)").matches;
+
+    const isAndroid =
+      typeof navigator !== "undefined" &&
+      /Android/i.test(navigator.userAgent);
+
+    if (isStandalone && isAndroid) {
+      const intent = this.toIntent(url);
+      return intent || url;
+    }
+
+    return url;
+  }
+
+  static toIntent(url: string): string | false {
+    try {
+      const parsed = new URL(url);
+
+      if (!["http:", "https:"].includes(parsed.protocol)) {
+        return false;
+      }
+
+      const scheme = parsed.protocol.replace(":", "");
+      const path =
+        parsed.host +
+        parsed.pathname +
+        parsed.search;
+
+      const fallback = encodeURIComponent(url);
+
+      return `intent://${path}#Intent;scheme=${scheme};S.browser_fallback_url=${fallback};end`;
+    } catch {
+      return false;
+    }
   }
 }

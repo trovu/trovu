@@ -6,7 +6,6 @@ import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import "@fortawesome/fontawesome-free/js/all.min";
-
 /* eslint-disable no-unused-vars */
 import * as BSN from "bootstrap.native";
 import "bootstrap/dist/css/bootstrap.css";
@@ -221,57 +220,58 @@ export default class Home {
     }
   }
 
-  /**
-   * On submitting the query.
-   *
-   * @param {object} event – The submitting event.
-   */
-  submitQuery = async (event?: any) => {
-    // Prevent default sending as GET parameters.
-    if (event) {
-      event.preventDefault();
-    }
+/**
+ * On submitting the query.
+ *
+ * @param {object} event – The submitting event.
+ */
+submitQuery = async (event?: Event) => {
+  if (event) {
+    event.preventDefault();
+  }
 
-    // Must create new env instance here,
-    // because extraNamespace might have changed reachability,
-    // or asking for a not yet parsed Github namespace.
-    const envQuery = new Env({ context: "index" });
-    const params: AnyObject = Env.getParamsFromUrl();
-    params.query = this.queryInput.value;
-    await envQuery.populate(params);
+  // Must create new env instance here,
+  // because extraNamespace might have changed reachability,
+  // or asking for a not yet parsed Github namespace.
+  const envQuery = new Env({ context: "index" });
 
-    const response: AnyObject = CallHandler.getRedirectResponse(envQuery);
+  const params: AnyObject = Env.getParamsFromUrl();
+  params.query = this.queryInput.value;
 
-    // Send debug to /process.
-    if (envQuery.debug) {
-      const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
-      });
-      window.location.href = processUrl;
-      return;
-    }
+  await envQuery.populate(params);
 
-    let redirectUrl: string;
-    if (response.status === "found") {
-      redirectUrl = response.redirectUrl;
-    } else {
-      redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
-    }
-    window.location.href = redirectUrl;
-  };
+  const response: AnyObject =
+    CallHandler.getRedirectResponse(envQuery);
 
-  /**
-   * On triggering reload
-   *
-   * @param {object} event – The submitting event.
-   */
-  reload = (event?: any) => {
-    if (event) {
-      event.preventDefault();
-    }
-    this.queryInput.value = "reload";
-    this.submitQuery();
-  };
+  // Send debug to /process.
+  if (envQuery.debug) {
+    const processUrl = this.env.buildProcessUrl({
+      query: this.queryInput.value,
+    });
+
+    window.location.href = processUrl;
+    return;
+  }
+
+  let redirectUrl: string;
+
+  if (response.status === "found") {
+    redirectUrl = response.redirectUrl;
+  } else {
+    redirectUrl = CallHandler.getRedirectUrlToHome(
+      envQuery,
+      response,
+    );
+  }
+
+  window.location.href = redirectUrl;
+};
+ reload = (event?: Event) => {
+  if (event) event.preventDefault();
+
+  this.queryInput.value = "reload";
+  this.submitQuery();
+};
 
   /**
    * Add and update Opensearch tag.

@@ -1,4 +1,3 @@
-
 /**
  * @jest-environment jsdom
  */
@@ -13,7 +12,11 @@ main();
 
 async function main() {
   jest.setTimeout(20000);
-  const calls = jsyaml.load(fs.readFileSync("./tests/calls.yml", "utf8"));
+
+  const calls = jsyaml.load(
+    fs.readFileSync("./tests/calls.yml", "utf8"),
+  );
+
   calls.forEach((call) => {
     test(call.title, async () => {
       await testCall(call);
@@ -23,13 +26,21 @@ async function main() {
 
 async function testCall(call) {
   window.localStorage.clear();
+
   const env = new Env({ context: "node" });
   env.getNavigatorLanguage = () => "en-US";
+
   await env.populate(call.env);
+
   const response = await CallHandler.getRedirectResponse(env);
+
   if (call.response.redirectUrl) {
+  expect("redirectUrl" in response).toBe(true);
+
+  if ("redirectUrl" in response) {
     expect(response.redirectUrl).toMatch(call.response.redirectUrl);
-  } else {
-    expect(response).toStrictEqual(call.response);
   }
+} else {
+  expect(response).toStrictEqual(call.response);
+}
 }

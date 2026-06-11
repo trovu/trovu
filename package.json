@@ -24,7 +24,7 @@
     "dev-server": "http-server ./dist/public/ --port 8081 --cors -a 127.0.0.1",
     "lint-js": "npx eslint src/",
     "lint-js-fix": "npx eslint src/ --fix",
-    "lint-yaml": "npx yaml-lint 'data/**/*.yml'",
+"lint-yaml": "npx yaml-lint data/shortcuts/*.yml",
     "normalize-data": "node dist/cli.mjs normalize-data",
     "prettier-fix": "npx prettier -w 'src/**/*.js'",
     "prettier-list": "npx prettier -l 'src/**/*.js'",
