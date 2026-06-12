@@ -11,6 +11,7 @@ import type { EnvParams, RedirectResponse } from "../types";
 import * as BSN from "bootstrap.native";
 import "bootstrap/dist/css/bootstrap.css";
 import countriesList from "countries-list";
+import { navigateExternalUrl } from "./ExternalNavigator";
 
 /** Set and manage the homepage. */
 
@@ -393,6 +394,10 @@ export default class Home {
       redirectUrl = response.redirectUrl as string;
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+    }
+    if (response.status === "found") {
+      navigateExternalUrl(redirectUrl);
+      return;
     }
     window.location.href = redirectUrl;
   };
