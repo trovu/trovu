@@ -11,6 +11,7 @@ import type { EnvParams, RedirectResponse } from "../types";
 import * as BSN from "bootstrap.native";
 import "bootstrap/dist/css/bootstrap.css";
 import countriesList from "countries-list";
+import { openExternal } from "./UrlOpener";
 
 /** Set and manage the homepage. */
 
@@ -384,7 +385,7 @@ export default class Home {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      window.location.href = processUrl;
+      openExternal(processUrl);
       return;
     }
 
@@ -394,7 +395,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    openExternal(redirectUrl);
   };
 
   showSubmitProgress() {
