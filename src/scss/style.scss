@@ -82,6 +82,58 @@ main .jumbotron {
 }
 
 #query-form {
+  .input-group {
+    border-radius: 0.5rem;
+    overflow: visible;
+    position: relative;
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &.is-submitting {
+    .input-group {
+      box-shadow:
+        0 0 0 0.18rem rgba(13, 110, 253, 0.18),
+        0 0 1.1rem rgba(13, 202, 240, 0.35);
+
+      &::before {
+        animation:
+          query-submit-shimmer 1.5s linear infinite,
+          query-submit-pulse 1.8s ease-in-out infinite;
+        background: linear-gradient(120deg, var(--bs-primary), var(--bs-info), #fff, var(--bs-primary));
+        background-size: 240% 240%;
+        border-radius: 0.6rem;
+        bottom: -2px;
+        content: "";
+        left: -2px;
+        pointer-events: none;
+        position: absolute;
+        right: -2px;
+        top: -2px;
+        z-index: 0;
+      }
+    }
+
+    #query,
+    button[type="submit"] {
+      box-shadow: none;
+    }
+
+    button[type="submit"] {
+      cursor: progress;
+    }
+  }
+
+  &:not(.is-submitting) {
+    .input-group::before {
+      content: "";
+      display: none;
+    }
+  }
+
   button[type="submit"] {
     font-size: 1.4em;
     min-width: 2em;
@@ -91,6 +143,38 @@ main .jumbotron {
     }
   }
 }
+
+@keyframes query-submit-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 240% 50%;
+  }
+}
+
+@keyframes query-submit-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #query-form.is-submitting .input-group {
+    box-shadow: 0 0 0 0.18rem rgba(13, 110, 253, 0.32);
+
+    &::before {
+      animation: none;
+      background: var(--bs-primary);
+      opacity: 0.45;
+    }
+  }
+}
+
 #query {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }

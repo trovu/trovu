@@ -17,6 +17,7 @@ import countriesList from "countries-list";
 export default class Home {
   env!: Env;
   queryInput!: HTMLInputElement;
+  queryForm!: HTMLFormElement;
   suggestions!: Suggestions;
   submitButton!: HTMLButtonElement;
   initialized = false;
@@ -82,14 +83,17 @@ export default class Home {
       },
       false,
     );
-    window.addEventListener("pageshow", (event) => {
-      if (event.persisted) {
-        // If true, the page was loaded from cache
-        const queryElement = document.getElementById("query") as HTMLInputElement | null;
-        queryElement?.focus();
-      }
-    });
+    window.addEventListener("pageshow", this.handlePageShow);
   }
+
+  handlePageShow = (event: PageTransitionEvent) => {
+    if (!event.persisted) {
+      return;
+    }
+    // If true, the page was loaded from cache.
+    this.hideSubmitProgress();
+    this.queryInput.focus();
+  };
 
   prepareLoadingUi(params: EnvParams) {
     const queryForm = document.getElementById("query-form") as HTMLFormElement | null;
@@ -97,6 +101,7 @@ export default class Home {
     if (!queryForm || !submitButton) {
       throw new Error('Missing element "#query-form" or its submit button.');
     }
+    this.queryForm = queryForm;
     this.submitButton = submitButton;
     queryForm.onsubmit = this.submitQuery;
     this.queryInput.addEventListener("input", () => {
@@ -112,6 +117,7 @@ export default class Home {
 
   showReadyState() {
     document.documentElement.removeAttribute("aria-busy");
+    this.hideSubmitProgress();
     this.submitButton.classList.remove("btn-loading");
     this.submitButton.classList.add("btn-primary");
     this.submitButton.setAttribute("aria-label", "Search");
@@ -352,13 +358,24 @@ export default class Home {
       return;
     }
 
+    if (this.queryForm.classList.contains("is-submitting")) {
+      return;
+    }
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
-    const envQuery = new Env({ context: "index" });
-    const params: EnvParams = Env.getParamsFromUrl();
-    params.query = this.queryInput.value;
-    await envQuery.populate(params);
+    this.showSubmitProgress();
+    let envQuery: Env;
+    try {
+      envQuery = new Env({ context: "index" });
+      const params: EnvParams = Env.getParamsFromUrl();
+      params.query = this.queryInput.value;
+      await envQuery.populate(params);
+    } catch (error) {
+      this.hideSubmitProgress();
+      throw error;
+    }
 
     const response: RedirectResponse = CallHandler.getRedirectResponse(envQuery);
 
@@ -379,6 +396,20 @@ export default class Home {
     }
     window.location.href = redirectUrl;
   };
+
+  showSubmitProgress() {
+    this.queryForm.classList.add("is-submitting");
+    this.queryForm.setAttribute("aria-busy", "true");
+    this.submitButton.disabled = true;
+    this.submitButton.setAttribute("aria-label", "Processing query");
+  }
+
+  hideSubmitProgress() {
+    this.queryForm.classList.remove("is-submitting");
+    this.queryForm.removeAttribute("aria-busy");
+    this.submitButton.disabled = false;
+    this.submitButton.setAttribute("aria-label", "Search");
+  }
 
   showLoadingSubmitStatus() {
     const params = Env.getUrlSearchParams();
