@@ -45,6 +45,11 @@ export default class CallHandler {
       return;
     }
 
+    if (response.status === "found") {
+      this.openTargetUrl(redirectUrl, "replace");
+      return;
+    }
+
     window.location.replace(redirectUrl);
   }
 
@@ -130,6 +135,63 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  static openTargetUrl(redirectUrl: string, fallback: "href" | "replace" = "href"): void {
+    if (this.isStandalonePwa()) {
+      const androidIntentUrl = this.getAndroidIntentUrl(redirectUrl);
+      if (androidIntentUrl) {
+        window.location.href = androidIntentUrl;
+        return;
+      }
+
+      const openedWindow = window.open(redirectUrl, "_blank", "noopener,noreferrer");
+      if (openedWindow) {
+        return;
+      }
+    }
+
+    if (fallback === "replace") {
+      window.location.replace(redirectUrl);
+      return;
+    }
+
+    window.location.href = redirectUrl;
+  }
+
+  static isStandalonePwa(): boolean {
+    const navigatorWithStandalone = navigator as Navigator & { standalone?: boolean };
+    const isStandaloneDisplayMode =
+      typeof window.matchMedia === "function" && window.matchMedia("(display-mode: standalone)").matches;
+    return isStandaloneDisplayMode || navigatorWithStandalone.standalone === true;
+  }
+
+  static isAndroid(): boolean {
+    const userAgentData = navigator as Navigator & { userAgentData?: { platform?: string } };
+    const platform = userAgentData.userAgentData?.platform || navigator.platform || "";
+    return /android/i.test(platform) || /android/i.test(navigator.userAgent);
+  }
+
+  static getAndroidIntentUrl(redirectUrl: string): string | false {
+    if (!this.isAndroid()) {
+      return false;
+    }
+
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(redirectUrl);
+    } catch {
+      return false;
+    }
+
+    if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+      return false;
+    }
+
+    const scheme = parsedUrl.protocol.slice(0, -1);
+    const encodedHash = parsedUrl.hash ? "%23" + encodeURIComponent(parsedUrl.hash.slice(1)) : "";
+    const path = `${parsedUrl.host}${parsedUrl.pathname}${parsedUrl.search}${encodedHash}`;
+    return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;end`;
   }
 
   /**

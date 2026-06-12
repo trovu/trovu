@@ -51,6 +51,32 @@ describe("CallHandler", () => {
   test("isSafeRedirectUrl blocks unparseable URLs", () => {
     expect(CallHandler.isSafeRedirectUrl("not a url")).toBe(false);
   });
+  test("getAndroidIntentUrl converts http and https URLs on Android", () => {
+    jest.spyOn(CallHandler, "isAndroid").mockReturnValue(true);
+
+    expect(CallHandler.getAndroidIntentUrl("https://www.google.com/search?q=trovu")).toBe(
+      "intent://www.google.com/search?q=trovu#Intent;scheme=https;action=android.intent.action.VIEW;end",
+    );
+    expect(CallHandler.getAndroidIntentUrl("http://example.com/path")).toBe(
+      "intent://example.com/path#Intent;scheme=http;action=android.intent.action.VIEW;end",
+    );
+
+    jest.restoreAllMocks();
+  });
+  test("getAndroidIntentUrl does not convert non-web URLs", () => {
+    jest.spyOn(CallHandler, "isAndroid").mockReturnValue(true);
+
+    expect(CallHandler.getAndroidIntentUrl("mailto:test@example.com")).toBe(false);
+
+    jest.restoreAllMocks();
+  });
+  test("getAndroidIntentUrl only converts on Android", () => {
+    jest.spyOn(CallHandler, "isAndroid").mockReturnValue(false);
+
+    expect(CallHandler.getAndroidIntentUrl("https://www.google.com/search?q=trovu")).toBe(false);
+
+    jest.restoreAllMocks();
+  });
   test("getRedirectResponse returns suspicious for blocked redirect URLs", () => {
     const shortcutSpy = jest.spyOn(ShortcutFinder, "findShortcut").mockReturnValue({
       url: "javascript:alert(1)",

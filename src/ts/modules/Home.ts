@@ -394,6 +394,11 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
+    if (response.status === "found") {
+      CallHandler.openTargetUrl(redirectUrl);
+      return;
+    }
+
     window.location.href = redirectUrl;
   };
 
