@@ -343,6 +343,61 @@ export default class Home {
   }
 
   /**
+   * Open an external URL from standalone PWA mode in the system browser when possible.
+   *
+   * Android uses an intent URL. iOS 17+ can use the undocumented x-safari-https/http
+   * scheme; window.open alone opens the PWA in-app browser without Safari UI.
+   *
+   * @return {boolean} True if navigation was handled here.
+   */
+  static openExternalUrlInStandalone(redirectUrl: string, newWindow: Window | null = null): boolean {
+    const isAndroid = /android/i.test(navigator.userAgent);
+    const isIOS =
+      /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+    if (isAndroid) {
+      try {
+        const targetUrl = new URL(redirectUrl);
+        const scheme = targetUrl.protocol.replace(/:$/, "");
+        if (scheme === "https" || scheme === "http") {
+          const rest = redirectUrl.substring(targetUrl.protocol.length + 2);
+          const intentUrl = `intent://${rest}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end`;
+          window.location.href = intentUrl;
+          return true;
+        }
+        window.location.href = redirectUrl;
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    if (isIOS) {
+      try {
+        const targetUrl = new URL(redirectUrl);
+        const protocol = targetUrl.protocol.replace(/:$/, "");
+        if (protocol === "https" || protocol === "http") {
+          window.location.href = redirectUrl.replace(/^(https?):/, "x-safari-$1:");
+          return true;
+        }
+        window.location.href = redirectUrl;
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    if (newWindow) {
+      newWindow.location.href = redirectUrl;
+      return true;
+    }
+
+    window.open(redirectUrl, "_blank");
+    return true;
+  }
+
+  /**
    * On submitting the query.
    *
    * @param {object} event – The submitting event.
@@ -362,18 +417,78 @@ export default class Home {
       return;
     }
 
+    const query = this.queryInput.value;
+    const isStandalone = this.env.isRunningStandalone();
+    const isMobileStandalone =
+      isStandalone &&
+      (/android/i.test(navigator.userAgent) ||
+        /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1));
+
+    if (isStandalone) {
+      try {
+        const envQuery = new Env({
+          context: "index",
+          data: this.env.data,
+          namespaceInfos: this.env.namespaceInfos,
+          language: this.env.language,
+          country: this.env.country,
+          defaultKeyword: this.env.defaultKeyword,
+          namespaces: Array.isArray(this.env.namespaces) ? [...this.env.namespaces] : [],
+          debug: this.env.debug,
+        });
+        const params = Env.getParamsFromUrl();
+        params.query = query;
+        const paramsFromQuery = envQuery.getQueryParams(params);
+        const preloadParams = envQuery.getPreloadParams(params, paramsFromQuery);
+        Object.assign(envQuery, preloadParams);
+        envQuery.setDefaults();
+        if (envQuery.extraNamespaceName) {
+          if (envQuery.namespaces && !envQuery.namespaces.includes(envQuery.extraNamespaceName)) {
+            envQuery.namespaces.push(envQuery.extraNamespaceName);
+          }
+        }
+
+        const needsAsync = envQuery.extraNamespaceName && !envQuery.isValidNamespace(envQuery.extraNamespaceName);
+
+        if (!needsAsync) {
+          const response = CallHandler.getRedirectResponse(envQuery);
+          if (response.status === "found" && typeof response.redirectUrl === "string") {
+            if (!envQuery.debug) {
+              Home.openExternalUrlInStandalone(response.redirectUrl);
+              return;
+            }
+          }
+        }
+      } catch (e) {
+        this.env.logger.error("Failed synchronous redirect check: " + String(e));
+      }
+    }
+
+    let newWindow: Window | null = null;
+    if (isStandalone && !isMobileStandalone) {
+      try {
+        newWindow = window.open("about:blank", "_blank");
+      } catch (e) {
+        this.env.logger.error("Failed to open blank window: " + String(e));
+      }
+    }
+
     // Must create new env instance here,
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     this.showSubmitProgress();
-    let envQuery: Env;
+    const envQuery = new Env({ context: "index" });
+    const params: EnvParams = Env.getParamsFromUrl();
+    params.query = query;
+
     try {
-      envQuery = new Env({ context: "index" });
-      const params: EnvParams = Env.getParamsFromUrl();
-      params.query = this.queryInput.value;
       await envQuery.populate(params);
     } catch (error) {
       this.hideSubmitProgress();
+      if (newWindow) {
+        newWindow.close();
+      }
       throw error;
     }
 
@@ -382,8 +497,11 @@ export default class Home {
     // Send debug to /process.
     if (envQuery.debug) {
       const processUrl = this.env.buildProcessUrl({
-        query: this.queryInput.value,
+        query: query,
       });
+      if (newWindow) {
+        newWindow.close();
+      }
       window.location.href = processUrl;
       return;
     }
@@ -391,8 +509,15 @@ export default class Home {
     let redirectUrl: string;
     if (response.status === "found") {
       redirectUrl = response.redirectUrl as string;
+      if (isStandalone) {
+        Home.openExternalUrlInStandalone(redirectUrl, newWindow);
+        return;
+      }
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
+      if (newWindow) {
+        newWindow.close();
+      }
     }
     window.location.href = redirectUrl;
   };
