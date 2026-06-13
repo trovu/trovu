@@ -71,4 +71,38 @@ describe("CallHandler", () => {
 
     shortcutSpy.mockRestore();
   });
+  test("getNavigationUrl keeps regular browser redirects unchanged", () => {
+    const androidSpy = jest.spyOn(CallHandler, "isAndroid").mockReturnValue(true);
+    const env = {
+      isRunningStandalone: () => false,
+    };
+
+    expect(CallHandler.getNavigationUrl("https://www.google.com/search?q=foo", env)).toBe(
+      "https://www.google.com/search?q=foo",
+    );
+
+    androidSpy.mockRestore();
+  });
+  test("getNavigationUrl uses Android intents for standalone PWA web redirects", () => {
+    const androidSpy = jest.spyOn(CallHandler, "isAndroid").mockReturnValue(true);
+    const env = {
+      isRunningStandalone: () => true,
+    };
+
+    expect(CallHandler.getNavigationUrl("https://www.google.com/search?q=foo", env)).toBe(
+      "intent://www.google.com/search?q=foo#Intent;scheme=https;S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dfoo;end",
+    );
+
+    androidSpy.mockRestore();
+  });
+  test("getNavigationUrl does not use Android intents for mailto redirects", () => {
+    const androidSpy = jest.spyOn(CallHandler, "isAndroid").mockReturnValue(true);
+    const env = {
+      isRunningStandalone: () => true,
+    };
+
+    expect(CallHandler.getNavigationUrl("mailto:test@example.com", env)).toBe("mailto:test@example.com");
+
+    androidSpy.mockRestore();
+  });
 });
