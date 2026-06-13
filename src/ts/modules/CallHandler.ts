@@ -45,7 +45,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    window.location.replace(this.getNavigationUrl(redirectUrl, env));
   }
 
   /**
@@ -130,6 +130,33 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  static getNavigationUrl(redirectUrl: string, env: Pick<Env, "isRunningStandalone">): string {
+    if (!this.shouldUseAndroidIntent(redirectUrl, env)) {
+      return redirectUrl;
+    }
+
+    const url = new URL(redirectUrl);
+    const path = `${url.host}${url.pathname}${url.search}${url.hash}`;
+    const scheme = url.protocol.replace(":", "");
+    return `intent://${path}#Intent;scheme=${scheme};S.browser_fallback_url=${encodeURIComponent(redirectUrl)};end`;
+  }
+
+  static shouldUseAndroidIntent(redirectUrl: string, env: Pick<Env, "isRunningStandalone">): boolean {
+    if (!env.isRunningStandalone() || !this.isAndroid()) {
+      return false;
+    }
+
+    try {
+      return ["http:", "https:"].includes(new URL(redirectUrl).protocol);
+    } catch {
+      return false;
+    }
+  }
+
+  static isAndroid(): boolean {
+    return /Android/i.test(window.navigator.userAgent);
   }
 
   /**
