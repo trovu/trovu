@@ -53,6 +53,34 @@ export default class CallHandler {
     window.location.replace(redirectUrl);
   }
 
+  static getBrowserPackage(userAgent: string): string | null {
+    if (/samsungbrowser/i.test(userAgent)) {
+      return "com.sec.android.app.sbrowser";
+    }
+    if (/firefox|fennec/i.test(userAgent)) {
+      return "org.mozilla.firefox";
+    }
+    if (/opera|opr/i.test(userAgent)) {
+      return "com.opera.browser";
+    }
+    if (/brave/i.test(userAgent)) {
+      return "com.brave.browser";
+    }
+    if (/edge/i.test(userAgent)) {
+      return "com.microsoft.emmx";
+    }
+    if (/vivaldi/i.test(userAgent)) {
+      return "com.vivaldi.browser";
+    }
+    if (/duckduckgo/i.test(userAgent)) {
+      return "com.duckduckgo.mobile.android";
+    }
+    if (/chrome|chromium/i.test(userAgent)) {
+      return "com.android.chrome";
+    }
+    return null;
+  }
+
   /**
    * Open an external URL from standalone PWA mode in the system browser when possible.
    *
@@ -73,7 +101,9 @@ export default class CallHandler {
         const scheme = targetUrl.protocol.replace(/:$/, "");
         if (scheme === "https" || scheme === "http") {
           const rest = redirectUrl.substring(targetUrl.protocol.length + 2);
-          const intentUrl = `intent://${rest}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end`;
+          const pkg = this.getBrowserPackage(navigator.userAgent);
+          const pkgParam = pkg ? `;package=${pkg}` : "";
+          const intentUrl = `intent://${rest}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE${pkgParam};end`;
           window.location.href = intentUrl;
           return true;
         }

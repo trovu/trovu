@@ -71,4 +71,23 @@ describe("CallHandler", () => {
 
     shortcutSpy.mockRestore();
   });
+  describe("getBrowserPackage", () => {
+    test("detects Chrome", () => {
+      const ua =
+        "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36";
+      expect(CallHandler.getBrowserPackage(ua)).toBe("com.android.chrome");
+    });
+    test("detects Firefox", () => {
+      const ua = "Mozilla/5.0 (Android 10; Mobile; rv:120.0) Gecko/120.0 Firefox/120.0";
+      expect(CallHandler.getBrowserPackage(ua)).toBe("org.mozilla.firefox");
+    });
+    test("detects Samsung Internet", () => {
+      const ua =
+        "Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-G960F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/15.0 Chrome/90.0.4430.210 Mobile Safari/537.36";
+      expect(CallHandler.getBrowserPackage(ua)).toBe("com.sec.android.app.sbrowser");
+    });
+    test("returns null for unknown user agent", () => {
+      expect(CallHandler.getBrowserPackage("some random agent")).toBeNull();
+    });
+  });
 });
