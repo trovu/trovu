@@ -394,7 +394,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    CallHandler.navigateToRedirectUrl(redirectUrl);
   };
 
   showSubmitProgress() {

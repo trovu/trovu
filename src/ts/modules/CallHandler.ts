@@ -45,7 +45,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.navigateToRedirectUrl(redirectUrl);
   }
 
   /**
@@ -130,6 +130,24 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  static isStandalonePwa(): boolean {
+    const navigatorStandalone = (window.navigator as Navigator & { standalone?: boolean }).standalone;
+    return Boolean(
+      window.matchMedia?.("(display-mode: standalone)")?.matches ||
+        window.matchMedia?.("(display-mode: fullscreen)")?.matches ||
+        navigatorStandalone,
+    );
+  }
+
+  static navigateToRedirectUrl(redirectUrl: string): void {
+    if (this.isStandalonePwa()) {
+      window.open(redirectUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    window.location.replace(redirectUrl);
   }
 
   /**

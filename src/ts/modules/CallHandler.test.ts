@@ -5,6 +5,25 @@ import { createLogger } from "../../../tests/createLogger";
 import type { Shortcut } from "../types";
 
 describe("CallHandler", () => {
+  let originalMatchMedia: typeof window.matchMedia;
+  let originalNavigatorStandalone: boolean | undefined;
+
+  beforeEach(() => {
+    originalMatchMedia = window.matchMedia;
+    originalNavigatorStandalone = (window.navigator as Navigator & { standalone?: boolean }).standalone;
+  });
+
+  afterEach(() => {
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      value: originalMatchMedia,
+    });
+    Object.defineProperty(window.navigator, "standalone", {
+      configurable: true,
+      value: originalNavigatorStandalone,
+    });
+  });
+
   test("getAlternative", async () => {
     const shortcut = {
       deprecated: {
@@ -50,6 +69,40 @@ describe("CallHandler", () => {
   });
   test("isSafeRedirectUrl blocks unparseable URLs", () => {
     expect(CallHandler.isSafeRedirectUrl("not a url")).toBe(false);
+  });
+  test("isStandalonePwa returns true for standalone display mode", () => {
+    const matchMedia = jest.fn((query: string) => {
+      return {
+        matches: query === "(display-mode: standalone)",
+      };
+    });
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      value: matchMedia,
+    });
+    Object.defineProperty(window.navigator, "standalone", {
+      configurable: true,
+      value: false,
+    });
+
+    expect(CallHandler.isStandalonePwa()).toBe(true);
+  });
+  test("isStandalonePwa returns false for browser tabs", () => {
+    const matchMedia = jest.fn(() => {
+      return {
+        matches: false,
+      };
+    });
+    Object.defineProperty(window, "matchMedia", {
+      configurable: true,
+      value: matchMedia,
+    });
+    Object.defineProperty(window.navigator, "standalone", {
+      configurable: true,
+      value: false,
+    });
+
+    expect(CallHandler.isStandalonePwa()).toBe(false);
   });
   test("getRedirectResponse returns suspicious for blocked redirect URLs", () => {
     const shortcutSpy = jest.spyOn(ShortcutFinder, "findShortcut").mockReturnValue({
