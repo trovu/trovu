@@ -2072,6 +2072,26 @@ wtr 1:
   examples:
   - arguments: berlin
     description: Suche nach Wetter in Berlin
+wxy 0:
+  url: https://www.wikixy.de/
+  title: Wikixy.de
+  tags:
+  - information
+  - true-crime
+  - wiki
+  examples:
+  - description: Gehe zur Startseite
+  description: Wiki zur Fernsehsendung "XY ungelöst", in der ungelöste Kriminalfälle vorgestellt werden. Das Wiki bietet Informationen zu den Fällen, den Opfern, den Tätern und den Ermittlungen.
+wxy 1:
+  url: https://www.wikixy.de/index.php?search=<query>
+  include: wxy 0
+  examples:
+  - arguments: berlin
+    description: Suche nach Artikeln über Berlin
+wxyg 1:
+  url: https://www.google.com/search?q=<Suche>%20site:wiki.xy.de
+  title: Wikixy.de via Google
+  include: wxy 1
 ygl 0:
   url: https://youglish.com/german
   title: YouGlish, german
