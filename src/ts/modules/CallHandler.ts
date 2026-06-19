@@ -45,8 +45,13 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
-  }
+const a = document.createElement("a");
+a.href = redirectUrl;
+a.rel = "noopener noreferrer";
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+}
 
   /**
    * Given the environment, get a response object, incl. redirect URL.
