@@ -5162,6 +5162,25 @@ kfz 1:
     description: Suche Stadt/Kreis des Kennzeichens "hro"
   - arguments: rostock
     description: Suche KFZ-Kennzeichen von Rostock
+kik 0:
+  url: https://www.kik.de/
+  title: KiK.de
+  tags:
+  - shopping
+  - textiles
+  examples:
+  - description: Gehe zur Startseite
+  description: Textil-Diskontgeschäft mit einer großen Auswahl an preisgünstiger Kleidung, Dekoartikeln, Haushaltswaren und Heimtextilien.
+kik 1:
+  url: https://www.kik.de/search?search=<Suche>
+  include: kik 0
+  examples:
+  - arguments: ventilator
+    description: Suche nach Ventilatoren
+kikg 1:
+  url: https://www.google.com/search?q=site:kik.de+<Suche>
+  title: KiK.de via Google
+  include: kik 1
 kino 0:
   url: https://www.kino.de/
   title: Kinoprogramm
