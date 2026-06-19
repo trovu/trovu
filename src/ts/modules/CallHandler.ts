@@ -55,9 +55,17 @@ const params: AnyObject = Env.getParamsFromUrl();
 
     if (env.debug) return;
 
-    window.location.replace(
-      this.getNavigationUrl(redirectUrl, found),
-    );
+   const navigationUrl = this.getNavigationUrl(
+  redirectUrl,
+  found,
+);
+
+const a = document.createElement("a");
+a.href = navigationUrl;
+a.rel = "noopener noreferrer";
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
   }
 
 static getRedirectResponse(env: AnyObject): RedirectResponse  {
