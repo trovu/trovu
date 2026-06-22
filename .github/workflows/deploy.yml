@@ -6,6 +6,12 @@ on:
   pull_request:
     branches:
       - master
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+      - unlabeled
   workflow_dispatch:
 permissions:
   contents: read
@@ -51,7 +57,16 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.repository == 'trovu/trovu' && github.event_name == 'push'
+    if: >
+      github.repository == 'trovu/trovu' &&
+      (
+        github.event_name == 'push' ||
+        (
+          github.event_name == 'pull_request' &&
+          github.event.pull_request.head.repo.full_name == github.repository &&
+          contains(github.event.pull_request.labels.*.name, 'deploy')
+        )
+      )
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # actions/checkout@v6.0.3
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # actions/download-artifact@v8.0.1
