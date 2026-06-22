@@ -17,12 +17,14 @@
         {
             "src": "/img/screenshots/portrait.jpg",
             "sizes": "1080x2400",
-            "type": "image/jpeg"
+            "type": "image/jpeg",
+            "form_factor": "narrow"
         },
         {
             "src": "/img/screenshots/landscape.jpg",
             "sizes": "2400x1080",
-            "type": "image/jpeg"
+            "type": "image/jpeg",
+            "form_factor": "wide"
         }
     ],
     "icons": [

@@ -26,6 +26,7 @@ test("PWA manifest should declare store-compatible assets", async ({ page, reque
   expect(manifest.prefer_related_applications).toBe(false);
   expect(manifest.display_override).toEqual(["standalone"]);
   expect(manifest).not.toHaveProperty("scope_extensions");
+  expect(manifest.screenshots.map((screenshot) => screenshot.form_factor).sort()).toEqual(["narrow", "wide"]);
 
   for (const icon of manifest.icons) {
     const iconUrl = resolveManifestUrl(icon.src);
@@ -72,8 +73,19 @@ test("Homepage should register the service worker", async ({ page }) => {
     }
 
     const registration = await navigator.serviceWorker.ready;
-    return registration.active?.scriptURL ?? null;
+    if (!navigator.serviceWorker.controller) {
+      await new Promise((resolve) => {
+        navigator.serviceWorker.addEventListener("controllerchange", resolve, { once: true });
+      });
+    }
+    return {
+      activeScriptURL: registration.active?.scriptURL ?? null,
+      controllerScriptURL: navigator.serviceWorker.controller?.scriptURL ?? null,
+    };
   });
 
-  expect(scriptURL).toBe(`${baseUrl}/service-worker.js`);
+  expect(scriptURL).toEqual({
+    activeScriptURL: `${baseUrl}/service-worker.js`,
+    controllerScriptURL: `${baseUrl}/service-worker.js`,
+  });
 });
