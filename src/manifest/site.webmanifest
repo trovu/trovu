@@ -9,25 +9,23 @@
             "auto"
         ]
     },
+    "display_override": [
+        "standalone"
+    ],
     "orientation": "any",
     "screenshots": [
         {
-            "src": "/img/portrait.jpg",
-            "sizes": "2400x1080",
-            "type": "image/jpg"
+            "src": "/img/screenshots/portrait.jpg",
+            "sizes": "1080x2400",
+            "type": "image/jpeg"
         },
         {
-            "src": "/img/landscape.jpg",
-            "sizes": "1080x2400",
-            "type": "image/jpg"
+            "src": "/img/screenshots/landscape.jpg",
+            "sizes": "2400x1080",
+            "type": "image/jpeg"
         }
     ],
     "icons": [
-        {
-            "src": "https://trovu.net/favicon.ico",
-            "sizes": "64x64 32x32 24x24 16x16",
-            "type": "image/x-icon"
-        },
         {
             "src": "/android-chrome-192x192.png?v=2",
             "sizes": "192x192",
@@ -42,6 +40,7 @@
     "background_color": "#ffffff",
     "start_url": "/index.html",
     "display": "standalone",
+    "prefer_related_applications": false,
     "theme_color": "#343a40",
     "dir": "auto",
     "lang": "en",
