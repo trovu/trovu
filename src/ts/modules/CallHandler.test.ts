@@ -71,4 +71,27 @@ describe("CallHandler", () => {
 
     shortcutSpy.mockRestore();
   });
+  test("shouldOpenInExternalBrowser is false in regular browser mode", () => {
+    const androidSpy = jest.spyOn(CallHandler, "isAndroid").mockReturnValue(true);
+    const env = { isRunningStandalone: () => false };
+
+    expect(CallHandler.shouldOpenInExternalBrowser("https://www.google.com/search?q=foo", env)).toBe(false);
+
+    androidSpy.mockRestore();
+  });
+  test("buildAndroidIntentUrl encodes external redirects for standalone PWA", () => {
+    expect(CallHandler.buildAndroidIntentUrl("https://www.google.com/search?q=foo")).toBe(
+      "intent://www.google.com/search?q=foo#Intent;scheme=https;S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dfoo;end",
+    );
+  });
+  test("shouldOpenInExternalBrowser uses Android intents only for http(s) standalone redirects", () => {
+    const androidSpy = jest.spyOn(CallHandler, "isAndroid").mockReturnValue(true);
+    const env = { isRunningStandalone: () => true };
+
+    expect(CallHandler.shouldOpenInExternalBrowser("https://www.google.com/search?q=foo", env)).toBe(true);
+    expect(CallHandler.shouldOpenInExternalBrowser("mailto:test@example.com", env)).toBe(false);
+    expect(CallHandler.shouldOpenInExternalBrowser("../index.html#status=not_found", env)).toBe(false);
+
+    androidSpy.mockRestore();
+  });
 });
