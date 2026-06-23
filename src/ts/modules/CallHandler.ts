@@ -45,7 +45,11 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    if (env.isRunningStandalone() && /^https?:\/\//.test(redirectUrl)) {
+      window.open(redirectUrl, "_blank");
+    } else {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
