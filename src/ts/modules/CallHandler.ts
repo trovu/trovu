@@ -45,7 +45,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.performRedirect(redirectUrl, env, true);
   }
 
   /**
@@ -130,6 +130,63 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  static isAndroid(): boolean {
+    return /Android/i.test(window.navigator.userAgent);
+  }
+
+  static isExternalHttpUrl(redirectUrl: string): boolean {
+    try {
+      return ["http:", "https:"].includes(new URL(redirectUrl).protocol);
+    } catch {
+      return false;
+    }
+  }
+
+  static shouldOpenInExternalBrowser(
+    redirectUrl: string,
+    env: Pick<Env, "isRunningStandalone">,
+  ): boolean {
+    if (!env.isRunningStandalone()) {
+      return false;
+    }
+    if (redirectUrl.startsWith("../") || redirectUrl.startsWith("/")) {
+      return false;
+    }
+    return this.isExternalHttpUrl(redirectUrl);
+  }
+
+  static buildAndroidIntentUrl(redirectUrl: string): string {
+    const url = new URL(redirectUrl);
+    const path = `${url.host}${url.pathname}${url.search}`;
+    const scheme = url.protocol.replace(":", "");
+    return `intent://${path}#Intent;scheme=${scheme};S.browser_fallback_url=${encodeURIComponent(redirectUrl)};end`;
+  }
+
+  static performRedirect(
+    redirectUrl: string,
+    env: Pick<Env, "isRunningStandalone">,
+    replace = false,
+  ): void {
+    if (!this.shouldOpenInExternalBrowser(redirectUrl, env)) {
+      if (replace) {
+        window.location.replace(redirectUrl);
+      } else {
+        window.location.href = redirectUrl;
+      }
+      return;
+    }
+    if (this.isAndroid()) {
+      window.location.href = this.buildAndroidIntentUrl(redirectUrl);
+      return;
+    }
+    // Non-Android standalone: rely on handle_links:not-preferred in the manifest.
+    if (replace) {
+      window.location.replace(redirectUrl);
+    } else {
+      window.location.href = redirectUrl;
+    }
   }
 
   /**
