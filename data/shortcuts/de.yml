@@ -1688,6 +1688,22 @@ rivva 1:
   examples:
   - arguments: berlin
     description: Search Rivva blog aggregator for "berlin"
+rr 0:
+  url: https://www.wetteronline.de/regenradar/
+  title: WetterOnline Regenradar
+  tags:
+  - precipitation
+  - radar
+  - weather
+  examples:
+  - description: Gehe zur Startseite
+  description: Interaktives Regenradar von WetterOnline zur Verfolgung von Niederschlägen, Wolken und Unwettern.
+rr 1:
+  url: 'https://www.wetteronline.de/regenradar/<Ort: {type: city}>'
+  include: rr 0
+  examples:
+  - arguments: berlin
+    description: Zum Regenradar für Berlin
 rub 1:
   deprecated:
     alternative:
