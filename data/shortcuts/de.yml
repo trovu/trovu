@@ -1381,6 +1381,20 @@ mi 1:
   examples:
   - arguments: berlin
     description: Suche nach Bildern zu "berlin"
+mn 0:
+  url: https://metager.de/?focus=nachrichten
+  title: MetaGer Nachrichten
+  tags:
+  - news
+  include: m 0
+  examples:
+  - description: Gehe zur Startseite
+mn 1:
+  url: https://metager.de/meta/meta.ger3?eingabe=<Suche>&focus=web
+  include: mn 0
+  examples:
+  - arguments: berlin
+    description: Suche Nachrichten über "berlin"
 morgenpost 0:
   url: https://www.morgenpost.de/
   title: Berliner Morgenpost Archiv
