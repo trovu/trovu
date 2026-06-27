@@ -8005,7 +8005,10 @@ osub 0:
   description: Large subtitle database for movies and TV series in many languages.
 osub 1:
   url: https://www.opensubtitles.org/en/search2?MovieName=<query>
-  include: opensub 0
+  include: osub 0
+  examples:
+  - arguments: extrawurst
+    description: Search for movie "Extrawurst"
 otr 0:
   url: https://www.onlinetvrecorder.com/
   title: OnlineTvRecorder (Web Online TV Recorder)
