@@ -119,6 +119,24 @@ ao 1:
   examples:
   - arguments: goethe
     description: Suche nach meinen Bestellungen von "goethe"
+apv 0:
+  url: https://www.amazon.de/s?linkCode=ll2&tag=serchilo-20&url=search-alias%3Dinstant-video
+  title: Amazon.de Prime Video
+  tags:
+  - amazon
+  - is-affiliate
+  - prime
+  - shopping
+  - streaming
+  - video
+  examples:
+  - description: Gehe zur Startseite
+apv 1:
+  url: https://www.amazon.de/s?k=<Suche>&linkCode=ll2&tag=serchilo-20&url=search-alias%3Dinstant-video
+  include: apv 0
+  examples:
+  - arguments: goethe
+    description: Suche nach Forrest Gump
 atn 0:
   url: https://www.alternate.de/
   title: Alternate
