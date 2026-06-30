@@ -394,7 +394,11 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    if (this.env.isRunningStandalone()) {
+      window.open(redirectUrl, '_blank');
+    } else {
+      window.location.href = redirectUrl;
+    }
   };
 
   showSubmitProgress() {
