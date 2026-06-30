@@ -45,7 +45,97 @@ export default class CallHandler {
       return;
     }
 
+    if (env.isRunningStandalone() && response.status === "found") {
+      this.openExternalUrlInStandalone(redirectUrl);
+      return;
+    }
+
     window.location.replace(redirectUrl);
+  }
+
+  static getBrowserPackage(userAgent: string): string | null {
+    if (/samsungbrowser/i.test(userAgent)) {
+      return "com.sec.android.app.sbrowser";
+    }
+    if (/firefox|fennec/i.test(userAgent)) {
+      return "org.mozilla.firefox";
+    }
+    if (/opera|opr/i.test(userAgent)) {
+      return "com.opera.browser";
+    }
+    if (/brave/i.test(userAgent)) {
+      return "com.brave.browser";
+    }
+    if (/edge/i.test(userAgent)) {
+      return "com.microsoft.emmx";
+    }
+    if (/vivaldi/i.test(userAgent)) {
+      return "com.vivaldi.browser";
+    }
+    if (/duckduckgo/i.test(userAgent)) {
+      return "com.duckduckgo.mobile.android";
+    }
+    if (/chrome|chromium/i.test(userAgent)) {
+      return "com.android.chrome";
+    }
+    return null;
+  }
+
+  /**
+   * Open an external URL from standalone PWA mode in the system browser when possible.
+   *
+   * Android uses an intent URL. iOS 17+ can use the undocumented x-safari-https/http
+   * scheme; window.open alone opens the PWA in-app browser without Safari UI.
+   *
+   * @return {boolean} True if navigation was handled here.
+   */
+  static openExternalUrlInStandalone(redirectUrl: string, newWindow: Window | null = null): boolean {
+    const isAndroid = /android/i.test(navigator.userAgent);
+    const isIOS =
+      /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+    if (isAndroid) {
+      try {
+        const targetUrl = new URL(redirectUrl);
+        const scheme = targetUrl.protocol.replace(/:$/, "");
+        if (scheme === "https" || scheme === "http") {
+          const rest = redirectUrl.substring(targetUrl.protocol.length + 2);
+          const pkg = this.getBrowserPackage(navigator.userAgent);
+          const pkgParam = pkg ? `;package=${pkg}` : "";
+          const intentUrl = `intent://${rest}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE${pkgParam};end`;
+          window.location.href = intentUrl;
+          return true;
+        }
+        window.location.href = redirectUrl;
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    if (isIOS) {
+      try {
+        const targetUrl = new URL(redirectUrl);
+        const protocol = targetUrl.protocol.replace(/:$/, "");
+        if (protocol === "https" || protocol === "http") {
+          window.location.href = redirectUrl.replace(/^(https?):/, "x-safari-$1:");
+          return true;
+        }
+        window.location.href = redirectUrl;
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    if (newWindow) {
+      newWindow.location.href = redirectUrl;
+      return true;
+    }
+
+    window.open(redirectUrl, "_blank");
+    return true;
   }
 
   /**
