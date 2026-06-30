@@ -6618,6 +6618,22 @@ lb 1:
   include:
   - key: lb 1
     namespace: pka
+lbv 0:
+  url: https://librivox.org/
+  title: LibriVox.org
+  tags:
+  - audiobooks
+  - literature
+  - public-domain
+  examples:
+  - description: Go to the homepage
+  description: Free public domain audiobooks read by volunteers from around the world.
+lbv 1:
+  url: https://librivox.org/search?q=<query>&search_form=advanced
+  include: lbv 0
+  examples:
+  - arguments: esperanto
+    description: Search for audiobooks about Esperanto
 lcn 0:
   url: https://lucene.apache.org/core/3_6_0/api/all/index.html
   title: Lucene API
