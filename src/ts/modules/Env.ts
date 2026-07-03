@@ -582,4 +582,12 @@ export default class Env {
   isRunningStandalone() {
     return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
   }
+
+  static isExternalUrl(url: string, baseUrl = window.location.href) {
+    try {
+      return new URL(url, baseUrl).origin !== new URL(baseUrl).origin;
+    } catch {
+      return false;
+    }
+  }
 }
