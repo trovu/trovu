@@ -253,6 +253,24 @@ pid 4:
   examples:
   - arguments: anděl, florenc, 15:30, 10.12
     description: Spojení z Anděla na Florenc v 15:30 dne 10.12.
+rl 0:
+  url: https://www.rohlik.cz/
+  title: Rohlik.cz
+  tags:
+  - delivery
+  - food
+  - groceries
+  - shopping
+  - rohlik
+  examples:
+  - description: Přejít na domovskou stránku
+  description: Český online supermarket nabízející rozvoz potravin a drogerie přímo domů.
+rl 1:
+  url: https://www.rohlik.cz/hledat?q=<výraz>&companyId=1
+  include: rl 0
+  examples:
+  - arguments: sýr
+    description: Vyhledat "sýr" na Rohlik.cz
 seznam 1:
   deprecated:
     alternative:
