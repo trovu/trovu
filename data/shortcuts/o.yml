@@ -4278,7 +4278,7 @@ ga 1:
   - key: ga 1
     namespace: pka
 gai 0:
-  url: http://google.com/ai
+  url: https://google.com/ai
   title: Google AI Mode
   tags:
   - ai
@@ -4286,7 +4286,7 @@ gai 0:
   examples:
   - description: Go to the homepage
 gai 1:
-  url: http://google.com/ai?q=<query>
+  url: https://google.com/ai?q=<query>
   include: gai 0
   examples:
   - arguments: how big is berlin
