@@ -1,6 +1,7 @@
 /** @module CallHandler */
 import Env from "./Env";
 import GitLogger from "./GitLogger";
+import Redirector from "./Redirector";
 import ShortcutFinder from "./ShortcutFinder";
 import UrlProcessor from "./UrlProcessor";
 import type { EnvLike, RedirectResponse, Shortcut } from "../types";
@@ -45,7 +46,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    Redirector.navigateTo(redirectUrl, { replace: true });
   }
 
   /**
