@@ -15,6 +15,25 @@ import countriesList from "countries-list";
 /** Set and manage the homepage. */
 
 export default class Home {
+  /**
+   * Best-effort open outside the installed PWA shell.
+   * `location.assign` keeps navigation inside standalone WebAPK/TWA contexts;
+   * `window.open(..., "_blank")` is the portable escape hatch where the OS allows it.
+   */
+  private openExternalUrl(url: string): void {
+    const nav = navigator as Navigator & { standalone?: boolean };
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      nav.standalone === true;
+    if (isStandalone) {
+      const popup = window.open(url, "_blank", "noopener,noreferrer");
+      if (popup) {
+        return;
+      }
+    }
+    window.location.assign(url);
+  }
+
   env!: Env;
   queryInput!: HTMLInputElement;
   queryForm!: HTMLFormElement;
@@ -384,7 +403,7 @@ export default class Home {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      window.location.href = processUrl;
+      this.openExternalUrl(processUrl);
       return;
     }
 
@@ -394,7 +413,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    this.openExternalUrl(redirectUrl);
   };
 
   showSubmitProgress() {

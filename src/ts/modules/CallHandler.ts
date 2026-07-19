@@ -45,6 +45,16 @@ export default class CallHandler {
       return;
     }
 
+    const nav = navigator as Navigator & { standalone?: boolean };
+    const isStandalone =
+      window.matchMedia("(display-mode: standalone)").matches ||
+      nav.standalone === true;
+    if (isStandalone) {
+      const popup = window.open(redirectUrl, "_blank", "noopener,noreferrer");
+      if (popup) {
+        return;
+      }
+    }
     window.location.replace(redirectUrl);
   }
 
