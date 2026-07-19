@@ -45,6 +45,24 @@ export default class CallHandler {
       return;
     }
 
+    this.openRedirectUrl(redirectUrl, env.isRunningStandalone(), response.status === "found");
+  }
+
+  /**
+   * Redirect to Trovu pages normally, but open successful shortcut target URLs
+   * in a separate browsing context while running as an installed PWA.
+   *
+   * This avoids keeping target sites inside the standalone PWA window on
+   * platforms that honor target=_blank/window.open from standalone PWAs.
+   */
+  static openRedirectUrl(redirectUrl: string, isStandalone: boolean, isTargetUrl: boolean) {
+    if (isStandalone && isTargetUrl) {
+      const openedWindow = window.open(redirectUrl, "_blank", "noopener,noreferrer");
+      if (openedWindow) {
+        return;
+      }
+    }
+
     window.location.replace(redirectUrl);
   }
 
