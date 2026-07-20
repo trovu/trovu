@@ -1,0 +1,81 @@
+warning: in the working copy of 'src/ts/modules/Redirector.test.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/ts/modules/Redirector.ts', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/ts/modules/Redirector.test.ts b/src/ts/modules/Redirector.test.ts[m
+[1mindex 83852045..89f11416 100644[m
+[1m--- a/src/ts/modules/Redirector.test.ts[m
+[1m+++ b/src/ts/modules/Redirector.test.ts[m
+[36m@@ -133,25 +133,42 @@[m [mdescribe("Redirector", () => {[m
+   });[m
+ [m
+   describe("escapeStandalone", () => {[m
+[31m-    test("calls window.open by default", () => {[m
+[31m-      const openSpy = jest.spyOn(window, "open").mockImplementation(() => null);[m
+[32m+[m[32m    test("creates an anchor with correct attributes and clicks it", () => {[m
+       const assignSpy = jest.spyOn(Redirector, "assignHref").mockImplementation(() => {});[m
+ [m
+[32m+[m[32m      // Track the created anchor element.[m
+[32m+[m[32m      let createdLink: HTMLAnchorElement | null = null;[m
+[32m+[m[32m      const origCreate = document.createElement.bind(document);[m
+[32m+[m[32m      const createSpy = jest[m
+[32m+[m[32m        .spyOn(document, "createElement")[m
+[32m+[m[32m        .mockImplementation((tag: string) => {[m
+[32m+[m[32m          const el = origCreate(tag);[m
+[32m+[m[32m          if (tag === "a") {[m
+[32m+[m[32m            createdLink = el as HTMLAnchorElement;[m
+[32m+[m[32m            jest.spyOn(el, "click").mockImplementation(() => {});[m
+[32m+[m[32m          }[m
+[32m+[m[32m          return el;[m
+[32m+[m[32m        });[m
+[32m+[m
+       Redirector.escapeStandalone("https://www.google.com/");[m
+ [m
+[31m-      expect(openSpy).toHaveBeenCalledWith("https://www.google.com/", "_blank", "noopener,noreferrer");[m
+[32m+[m[32m      expect(createSpy).toHaveBeenCalledWith("a");[m
+[32m+[m[32m      expect(createdLink).not.toBeNull();[m
+[32m+[m[32m      expect(createdLink!.href).toBe("https://www.google.com/");[m
+[32m+[m[32m      expect(createdLink!.target).toBe("_blank");[m
+[32m+[m[32m      expect(createdLink!.rel).toBe("noopener noreferrer");[m
+[32m+[m[32m      expect(createdLink!.click).toHaveBeenCalled();[m
+       expect(assignSpy).not.toHaveBeenCalled();[m
+     });[m
+ [m
+[31m-    test("falls back to assignHref if window.open throws an error", () => {[m
+[31m-      const openSpy = jest.spyOn(window, "open").mockImplementation(() => {[m
+[31m-        throw new Error("Window open blocked");[m
+[31m-      });[m
+[32m+[m[32m    test("falls back to assignHref if document.body.appendChild throws", () => {[m
+       const assignSpy = jest.spyOn(Redirector, "assignHref").mockImplementation(() => {});[m
+[32m+[m[32m      jest.spyOn(document.body, "appendChild").mockImplementation(() => {[m
+[32m+[m[32m        throw new Error("DOM manipulation blocked");[m
+[32m+[m[32m      });[m
+ [m
+       Redirector.escapeStandalone("https://www.google.com/");[m
+ [m
+[31m-      expect(openSpy).toHaveBeenCalled();[m
+       expect(assignSpy).toHaveBeenCalledWith("https://www.google.com/");[m
+     });[m
+   });[m
+[1mdiff --git a/src/ts/modules/Redirector.ts b/src/ts/modules/Redirector.ts[m
+[1mindex 5146ac18..29e6068e 100644[m
+[1m--- a/src/ts/modules/Redirector.ts[m
+[1m+++ b/src/ts/modules/Redirector.ts[m
+[36m@@ -21,8 +21,18 @@[m [mexport default class Redirector {[m
+   }[m
+ [m
+   static escapeStandalone(url: string) {[m
+[32m+[m[32m    // Use a real anchor element so Android WebAPK opens the URL in the[m
+[32m+[m[32m    // system browser instead of navigating inside the PWA window.[m
+[32m+[m[32m    // window.open(..., "_blank") is insufficient on Android WebAPK — only a[m
+[32m+[m[32m    // genuine <a target="_blank"> click reliably escapes the app shell.[m
+     try {[m
+[31m-      window.open(url, "_blank", "noopener,noreferrer");[m
+[32m+[m[32m      const link = document.createElement("a");[m
+[32m+[m[32m      link.href = url;[m
+[32m+[m[32m      link.target = "_blank";[m
+[32m+[m[32m      link.rel = "noopener noreferrer";[m
+[32m+[m[32m      document.body.appendChild(link);[m
+[32m+[m[32m      link.click();[m
+[32m+[m[32m      link.remove();[m
+     } catch {[m
+       this.assignHref(url);[m
+     }[m

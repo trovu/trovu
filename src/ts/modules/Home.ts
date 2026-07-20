@@ -3,6 +3,7 @@ import "../../scss/style.scss";
 import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
+import Redirector from "./Redirector";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
 import type { EnvParams, RedirectResponse } from "../types";
@@ -394,7 +395,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    Redirector.navigateTo(redirectUrl);
   };
 
   showSubmitProgress() {
