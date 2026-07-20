@@ -21,8 +21,18 @@ export default class Redirector {
   }
 
   static escapeStandalone(url: string) {
+    // Use a real anchor element so Android WebAPK opens the URL in the
+    // system browser instead of navigating inside the PWA window.
+    // window.open(..., "_blank") is insufficient on Android WebAPK — only a
+    // genuine <a target="_blank"> click reliably escapes the app shell.
     try {
-      window.open(url, "_blank", "noopener,noreferrer");
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
     } catch {
       this.assignHref(url);
     }

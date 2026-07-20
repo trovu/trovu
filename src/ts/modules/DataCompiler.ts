@@ -4,14 +4,25 @@ import jsyaml from "js-yaml";
 
 export default class DataCompiler {
   static getGitInfo() {
-    const hash = child_process.execSync("git rev-parse HEAD");
-    const date = child_process.execSync("git show -s --format=%ci");
+    let hashStr = "unknown";
+    let dateStr = "unknown";
+
+    try {
+      hashStr = child_process.execSync("git rev-parse HEAD").toString().trim();
+      dateStr = child_process.execSync("git show -s --format=%ci").toString().trim();
+    } catch (e) {
+      // Fallback for Vercel's isolated cloud builder environment which lacks .git folders
+      hashStr = "pwatest";
+      dateStr = new Date().toISOString();
+    }
+
     /** @type {import("../types").GitInfo} */
     const git = {
-      commit: { hash: hash.toString().trim().slice(0, 7), date: date.toString().trim() },
+      commit: { hash: hashStr.slice(0, 7), date: dateStr },
     };
     return git;
   }
+
   static getConfig() {
     const configText = fs.readFileSync("trovu.config.default.yml", "utf8");
     /** @type {import("../types").TrovuConfig} */

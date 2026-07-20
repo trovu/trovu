@@ -133,25 +133,42 @@ describe("Redirector", () => {
   });
 
   describe("escapeStandalone", () => {
-    test("calls window.open by default", () => {
-      const openSpy = jest.spyOn(window, "open").mockImplementation(() => null);
+    test("creates an anchor with correct attributes and clicks it", () => {
       const assignSpy = jest.spyOn(Redirector, "assignHref").mockImplementation(() => {});
+
+      // Track the created anchor element.
+      let createdLink: HTMLAnchorElement | null = null;
+      const origCreate = document.createElement.bind(document);
+      const createSpy = jest
+        .spyOn(document, "createElement")
+        .mockImplementation((tag: string) => {
+          const el = origCreate(tag);
+          if (tag === "a") {
+            createdLink = el as HTMLAnchorElement;
+            jest.spyOn(el, "click").mockImplementation(() => {});
+          }
+          return el;
+        });
 
       Redirector.escapeStandalone("https://www.google.com/");
 
-      expect(openSpy).toHaveBeenCalledWith("https://www.google.com/", "_blank", "noopener,noreferrer");
+      expect(createSpy).toHaveBeenCalledWith("a");
+      expect(createdLink).not.toBeNull();
+      expect(createdLink!.href).toBe("https://www.google.com/");
+      expect(createdLink!.target).toBe("_blank");
+      expect(createdLink!.rel).toBe("noopener noreferrer");
+      expect(createdLink!.click).toHaveBeenCalled();
       expect(assignSpy).not.toHaveBeenCalled();
     });
 
-    test("falls back to assignHref if window.open throws an error", () => {
-      const openSpy = jest.spyOn(window, "open").mockImplementation(() => {
-        throw new Error("Window open blocked");
-      });
+    test("falls back to assignHref if document.body.appendChild throws", () => {
       const assignSpy = jest.spyOn(Redirector, "assignHref").mockImplementation(() => {});
+      jest.spyOn(document.body, "appendChild").mockImplementation(() => {
+        throw new Error("DOM manipulation blocked");
+      });
 
       Redirector.escapeStandalone("https://www.google.com/");
 
-      expect(openSpy).toHaveBeenCalled();
       expect(assignSpy).toHaveBeenCalledWith("https://www.google.com/");
     });
   });
