@@ -1412,6 +1412,21 @@ ceat 1:
   examples:
   - arguments: encryption
     description: Search for titles containing "encryption"
+cfe 0:
+  url: https://www.cookingforengineers.com/
+  title: Cooking for Engineers
+  tags:
+  - cooking
+  - food
+  - recipes
+  examples:
+  - description: Go to the homepage
+cfe 1:
+  url: https://www.cookingforengineers.com/search/<query>
+  include: cfe 0
+  examples:
+  - arguments: pasta
+    description: Search for recipes containing "pasta"
 cfp 0:
   url: http://www.wikicfp.com/
   title: Wikicfp - Call for papers
