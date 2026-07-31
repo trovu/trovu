@@ -1022,6 +1022,21 @@ dcl 1:
   examples:
   - arguments: fahrrad
     description: Suche nach Fahrrädern
+dd 0:
+  url: https://www.dealdoktor.de/
+  title: DealDoktor
+  tags:
+  - deals
+  - discount
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+dd 1:
+  url: https://www.dealdoktor.de/?s=<Suche>
+  include: dd
+  examples:
+  - arguments: bahn
+    description: Suche nach Deals zur Bahn
 dejure 0:
   url: https://dejure.org/
   title: Dejure.org Gesetze
