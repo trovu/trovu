@@ -5355,6 +5355,20 @@ mdv 4:
   examples:
   - arguments: wurzen, oschatz, 20, 8.12.
     description: Verbindungen von Wurzen nach Oschatz um 20 Uhr am 8. Dezember
+mdz 0:
+  url: https://www.mydealz.de/
+  title: mydealz
+  tags:
+  - deals
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+mdz 1:
+  url: https://www.mydealz.de/search?q=<Suche>
+  include: mdz 0
+  examples:
+  - arguments: bahn
+    description: Suche Sonderangebote zur Bahn
 mfs 0:
   url: https://www.medizinfuchs.de/
   title: Medizinfuchs
