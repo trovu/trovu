@@ -32,14 +32,14 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) =>
-      Promise.all([
-        ...cacheNames
-          .filter((cacheName) => cacheName !== CACHE_NAME)
-          .map((cacheName) => caches.delete(cacheName)),
-        self.clients.claim(),
-      ]),
-    ),
+    caches
+      .keys()
+      .then((cacheNames) =>
+        Promise.all([
+          ...cacheNames.filter((cacheName) => cacheName !== CACHE_NAME).map((cacheName) => caches.delete(cacheName)),
+          self.clients.claim(),
+        ]),
+      ),
   );
 });
 
