@@ -8035,11 +8035,17 @@ osub 0:
   - description: Go to the homepage
   description: Large subtitle database for movies and TV series in many languages.
 osub 1:
-  url: https://www.opensubtitles.org/en/search2?MovieName=<query>
+  url: https://www.opensubtitles.org/en/search2/moviename-<query>
   include: osub 0
   examples:
   - arguments: extrawurst
-    description: Search for movie "Extrawurst"
+    description: Search for subtitles for movie "Extrawurst"
+osub 2:
+  url: https://www.opensubtitles.org/en/search2?moviename-<query>/sublanguageid-<language>
+  include: osub 0
+  examples:
+  - arguments: enterprise s03e17, eng
+    description: 'Search for English subtitles for S03E17 of "Star Trek: Enterprise"'
 otr 0:
   url: https://www.onlinetvrecorder.com/
   title: OnlineTvRecorder (Web Online TV Recorder)
