@@ -1,5 +1,7 @@
 const path = require('path');
-const eleventyImage = require('@11ty/eleventy-img');
+const eleventyImageModule = require('@11ty/eleventy-img');
+const eleventyImage = eleventyImageModule.default || eleventyImageModule;
+const generateHTML = eleventyImageModule.generateHTML || eleventyImage.generateHTML;
 
 module.exports = (eleventyConfig) => {
   function relativeToInputPath(inputPath, relativeFilePath) {
@@ -39,7 +41,7 @@ module.exports = (eleventyConfig) => {
       };
 
       // Generate image HTML
-      let imageHtml = eleventyImage.generateHTML(metadata, imageAttributes, {
+      let imageHtml = generateHTML(metadata, imageAttributes, {
         whitespaceMode: 'inline',
       });
 
@@ -87,7 +89,7 @@ module.exports = (eleventyConfig) => {
       };
 
       // Generate the HTML for the image
-      let imageHtml = eleventyImage.generateHTML(metadata, imageAttributes, {
+      let imageHtml = generateHTML(metadata, imageAttributes, {
         whitespaceMode: 'inline',
       });
 
