@@ -67,7 +67,7 @@
   "homepage": "https://trovu.net/",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-img": "^7.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
@@ -127,7 +127,7 @@
     "dayjs": "^1.11.7",
     "detect-browser": "^5.2.0",
     "escape-string-regexp": "^4.0.0",
-    "js-yaml": "^4.3.0",
+    "js-yaml": "^4.3.1",
     "split-limit": "^1.0.5"
   }
 }
