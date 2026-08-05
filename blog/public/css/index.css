@@ -1,64 +1,86 @@
-/* Defaults */
+/* Trovu blog layout. Keep this close to src/html/index.html and src/scss/style.scss. */
 :root {
-  --font-family: -apple-system, system-ui, sans-serif;
-  --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
-    Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
-    Courier, monospace;
-}
-
-/* Theme colors */
-:root {
-  --color-gray-20: #e0e0e0;
-  --color-gray-50: #c0c0c0;
-  --color-gray-90: #333;
-
-  --background-color: #fff;
-
-  --text-color: var(--color-gray-90);
-  --text-color-link: #082840;
-  --text-color-link-active: #5f2b48;
-  --text-color-link-visited: #17050f;
-
+  --trovu-teal: #487b7f;
+  --trovu-teal-text: #477b7f;
+  --trovu-dark: #343a40;
+  --trovu-yellow: #ffc107;
+  --trovu-footer: #eee;
+  --trovu-border: #eee;
+  --trovu-muted: #6c757d;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-monospace: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+    "Courier New", Courier, monospace;
   --syntax-tab-size: 2;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-gray-20: #e0e0e0;
-    --color-gray-50: #c0c0c0;
-    --color-gray-90: #dad8d8;
-
-    /* --text-color is assigned to --color-gray-_ above */
-    --text-color-link: #1493fb;
-    --text-color-link-active: #6969f7;
-    --text-color-link-visited: #a6a6f8;
-
-    --background-color: #15202b;
-  }
-}
-
-/* Global stylesheet */
-* {
-  box-sizing: border-box;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0 auto;
-  font-family: var(--font-family);
-  color: var(--text-color);
-  background-color: var(--background-color);
+  min-height: 100%;
+  margin: 0;
 }
+
 html {
   overflow-y: scroll;
 }
+
 body {
-  max-width: 40em;
+  background: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
 }
 
-/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+body,
+button,
+input,
+textarea,
+select {
+  letter-spacing: 0;
+}
+
+a {
+  color: rgb(13, 110, 253);
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+p,
+li {
+  line-height: 1.55;
+}
+
+pre,
+code {
+  font-family: var(--font-family-monospace);
+}
+
+pre:not([class*="language-"]) {
+  direction: ltr;
+  hyphens: none;
+  line-height: 1.375;
+  margin: 0.5em 0;
+  tab-size: var(--syntax-tab-size);
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+code {
+  color: #444;
+  word-break: break-word;
+}
+
+img {
+  max-width: 100%;
+}
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -69,241 +91,366 @@ body {
   width: 1px;
 }
 
-p:last-child {
-  margin-bottom: 0;
+.site-header .navbar {
+  margin-bottom: 1em;
 }
-p {
+
+.site-header .container,
+.site-footer .container {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+
+.trovu-brand {
+  align-items: center;
+  display: inline-flex;
+  min-height: 50px;
+  padding: 0;
+}
+
+.trovu-brand img.logo {
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
+.site-nav {
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.1rem 0.5rem;
+  justify-content: flex-end;
+}
+
+.site-nav .nav-link {
+  color: rgba(255, 255, 255, 0.78);
+  padding: 0.35rem 0.4rem;
+}
+
+.site-nav .nav-link.active,
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+  color: #fff;
+}
+
+.site-nav .feed-link {
+  align-items: center;
+  display: inline-flex;
+  min-height: 2rem;
+}
+
+.site-main {
+  flex: 1 0 auto;
+  padding-bottom: 2rem;
+}
+
+.blog-intro,
+.blog-post,
+.links-nextprev,
+.tag-page,
+.site-main > h1,
+.site-main > p,
+.site-main > ul {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 46rem;
+}
+
+.blog-intro {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.blog-intro h1,
+.blog-post h1,
+.site-main > h1 {
+  color: var(--trovu-teal-text);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+  margin: 0 0 0.35em;
+}
+
+.blog-intro .tagline {
+  color: var(--trovu-teal-text);
+  font-size: 1.2em;
+  font-style: italic;
   line-height: 1.5;
+  margin: 0 auto 1.5em;
+  max-width: 42rem;
 }
 
-li {
+span.highlight,
+.highlight {
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 193, 7, 0.1),
+    rgba(255, 193, 7, 0.7) 4%,
+    rgba(255, 193, 7, 0.3)
+  );
+  border-radius: 0.8em 0.3em;
+  box-decoration-break: clone;
+  margin: 0 -0.2em;
+  padding: 0.1em 0.4em;
+  -webkit-box-decoration-break: clone;
+}
+
+.postlist {
+  list-style: none;
+  margin: 1.5rem auto 0;
+  max-width: 46rem;
+  padding: 0;
+}
+
+.postlist-item {
+  border-top: 1px solid var(--trovu-border);
+  counter-increment: start-from -1;
+  display: grid;
+  gap: 0.2rem 1rem;
+  grid-template-columns: minmax(2.5rem, auto) 1fr;
+  padding: 1rem 0;
+}
+
+.postlist-item:last-child {
+  border-bottom: 1px solid var(--trovu-border);
+}
+
+.postlist-item::before {
+  color: #aaa;
+  content: counter(start-from, decimal-leading-zero) ".";
+  font-size: 0.9rem;
+  grid-row: 1 / span 3;
   line-height: 1.5;
+  text-align: right;
 }
 
-a[href] {
-  color: var(--text-color-link);
-}
-a[href]:visited {
-  color: var(--text-color-link-visited);
-}
-a[href]:hover,
-a[href]:active {
-  color: var(--text-color-link-active);
+.postlist-description {
+  color: var(--trovu-muted);
+  font-size: 0.95rem;
+  grid-column: 2;
+  margin: 0;
+  order: 2;
 }
 
-main {
-  padding: 1rem;
-}
-main :first-child {
-  margin-top: 0;
+.postlist-link {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 700;
+  grid-column: 2;
+  line-height: 1.35;
+  order: 1;
 }
 
-header {
-  border-bottom: 1px dashed var(--color-gray-20);
+.postlist-link:visited {
+  color: #333;
 }
-header:after {
-  content: '';
-  display: table;
-  clear: both;
+
+.postlist-link:hover,
+.postlist-link:focus {
+  color: rgb(13, 110, 253);
+}
+
+.postlist-date {
+  color: #777;
+  font-size: 0.85rem;
+  grid-column: 2;
+  order: 3;
+}
+
+.postlist-item-active .postlist-link {
+  color: var(--trovu-teal);
+}
+
+.blog-post {
+  font-size: 1.05rem;
+  padding-top: 1rem;
+}
+
+.blog-post h1 {
+  line-height: 1.15;
+}
+
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
+  color: var(--trovu-teal-text);
+  margin-top: 1.8em;
+}
+
+.blog-post p,
+.blog-post ul,
+.blog-post ol,
+.blog-post blockquote,
+.blog-post pre,
+.blog-post table,
+.blog-post picture,
+.blog-post > div {
+  margin-bottom: 1.1rem;
+}
+
+.blog-post blockquote {
+  border-left: 0.25rem solid rgba(72, 123, 127, 0.35);
+  color: #555;
+  padding-left: 1rem;
+}
+
+.blog-post table {
+  width: 100%;
+}
+
+.blog-post table td,
+.blog-post table th {
+  border-bottom: 1px solid var(--trovu-border);
+  padding: 0.45em 1em 0.45em 0;
+}
+
+.post-metadata {
+  color: #777;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.post-tag {
+  background: var(--trovu-yellow);
+  border-radius: 0.2rem;
+  color: #000;
+  display: inline-flex;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  padding: 0.05em 0.4em;
+  white-space: nowrap;
+}
+
+.post-tag:visited {
+  color: #000;
 }
 
 .links-nextprev {
-  list-style: none;
-  border-top: 1px dashed var(--color-gray-20);
-  padding: 1em 0;
-}
-
-table {
-  margin: 1em 0;
-}
-table td,
-table th {
-  padding-right: 1em;
-}
-
-pre,
-code {
-  font-family: var(--font-family-monospace);
-}
-pre:not([class*='language-']) {
-  margin: 0.5em 0;
-  line-height: 1.375; /* 22px /16 */
-  -moz-tab-size: var(--syntax-tab-size);
-  -o-tab-size: var(--syntax-tab-size);
-  tab-size: var(--syntax-tab-size);
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-}
-code {
-  word-break: break-all;
-}
-
-/* Header */
-header {
-  display: flex;
-  gap: 1em 0.5em;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 1em;
-}
-.home-link {
-  font-size: 1em; /* 16px /16 */
-  font-weight: 700;
-  margin-right: 2em;
-}
-.home-link:link:not(:hover) {
-  text-decoration: none;
-}
-
-/* Nav */
-.nav {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.nav-item {
-  display: inline-block;
-  margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-  text-decoration: none;
-}
-.nav a[href][aria-current='page'] {
-  text-decoration: underline;
-}
-
-/* Posts list */
-.postlist {
-  list-style: none;
-  padding: 0;
-  padding-left: 1.5rem;
-}
-.postlist-item {
+  border-top: 1px solid var(--trovu-border);
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  counter-increment: start-from -1;
-  margin-bottom: 1em;
-}
-.postlist-item:before {
-  display: inline-block;
-  pointer-events: none;
-  content: '' counter(start-from, decimal-leading-zero) '. ';
-  line-height: 100%;
-  text-align: right;
-  margin-left: -1.5rem;
-}
-.postlist-description {
-  flex-basis: 100%;
-}
-.postlist-date,
-.postlist-item:before {
-  font-size: 0.8125em; /* 13px /16 */
-  color: var(--color-gray-90);
-}
-.postlist-date {
-  word-spacing: -0.5px;
-}
-.postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
-  font-weight: 700;
-  flex-basis: calc(100% - 1.5rem);
-  padding-left: 0.25em;
-  padding-right: 0.5em;
-  text-underline-position: from-font;
-  text-underline-offset: 0;
-  text-decoration-thickness: 1px;
-}
-.postlist-item-active .postlist-link {
-  font-weight: bold;
-}
-
-/* Tags */
-.post-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
-}
-.postlist-item > .post-tag {
-  align-self: center;
-}
-
-/* Tags list */
-.post-metadata {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 0.5rem 1rem;
+  justify-content: space-between;
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.post-metadata time {
-  margin-right: 1em;
+  margin-top: 2rem;
+  padding: 1rem 0 0;
 }
 
-/* Direct Links / Markdown Headers */
 .header-anchor {
-  text-decoration: none;
-  font-style: normal;
-  font-size: 1em;
-  margin-left: 0.1em;
-}
-a[href].header-anchor,
-a[href].header-anchor:visited {
   color: transparent;
+  font-size: 0.9em;
+  margin-left: 0.1em;
+  text-decoration: none;
 }
-a[href].header-anchor:focus,
-a[href].header-anchor:hover {
-  text-decoration: underline;
-}
-a[href].header-anchor:focus,
-:hover > a[href].header-anchor {
+
+.header-anchor:focus,
+:hover > .header-anchor {
   color: #aaa;
 }
 
-h2 + .header-anchor {
-  font-size: 1.5em;
-}
 main li {
-  margin-bottom: 1em;
+  margin-bottom: 0.7em;
 }
 
 div.trovu-call {
+  background: var(--trovu-teal);
+  color: #fff;
   display: block;
-  background: #487b7f;
-  color: white;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 1rem 0;
 }
+
 div.trovu-call a,
 div.trovu-call a:link,
 div.trovu-call a:visited {
+  color: #fff;
   display: inline-block;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  text-decoration: none;
-  color: white;
-  padding: 0.4em;
+  font-family: var(--font-family-monospace);
   margin: 0;
-  border: 0;
+  padding: 0.4em;
+  text-decoration: none;
 }
 
 div.trovu-call span {
   background: #aaa;
-  padding: 0.4em;
+  display: inline-block;
   margin: 0;
-  border: 0;
+  padding: 0.4em;
 }
 
 img.full-width {
-  width: 100%;
   height: auto;
+  width: 100%;
+}
+
+.site-footer {
+  background: var(--trovu-footer);
+  flex-shrink: 0;
+  margin-top: 1em;
+  padding: 1rem 0;
+}
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer li {
+  margin: 0;
+}
+
+.site-footer a {
+  color: rgb(13, 110, 253);
+}
+
+.install-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  justify-content: flex-end;
+}
+
+.install-label {
+  background: #198754;
+  border-radius: 0.375rem;
+  color: #fff;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+}
+
+@media (max-width: 767.98px) {
+  .site-header .container,
+  .site-footer .container {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .site-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .postlist-item {
+    grid-template-columns: 2rem 1fr;
+  }
+
+  .install-links {
+    justify-content: flex-start;
+  }
 }

@@ -16,6 +16,14 @@ module.exports = (eleventyConfig) => {
   // For example, `./public/css/` ends up in `_site/css/`
   eleventyConfig.addPassthroughCopy({
     "./blog/public/": ".",
+    "./src/favicon/apple-touch-icon.png": "apple-touch-icon.png",
+    "./src/favicon/favicon-16x16.png": "favicon-16x16.png",
+    "./src/favicon/favicon-32x32.png": "favicon-32x32.png",
+    "./src/favicon/favicon.ico": "favicon.ico",
+    "./src/favicon/safari-pinned-tab.svg": "safari-pinned-tab.svg",
+    "./src/img/logo.png": "img/logo.png",
+    "./src/img/og.png": "img/og.png",
+    "./src/manifest/site.webmanifest": "site.webmanifest",
     "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
   });
 

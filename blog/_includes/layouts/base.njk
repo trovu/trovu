@@ -1,62 +1,40 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta property="og:image" content="https://trovu.net/img/og.png">
+    <meta property="og:title" content="{{ title or metadata.title }}">
+    <meta property="og:url" content="{{ page.url | htmlBaseUrl(metadata.url) }}">
+    <meta property="og:site_name" content="trovu.net">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+    <meta name="msapplication-TileColor" content="#487b7f">
+    <meta name="theme-color" content="#343a40">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3">
+    <link rel="manifest" href="/site.webmanifest?v=3">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=3" color="#487b7f">
+    <link rel="shortcut icon" href="/favicon.ico?v=3">
+    <link rel="alternate" href="/feed/" type="application/atom+xml" title="{{ metadata.title }}">
 
-		{#- Atom and JSON feeds included by default #}
-		<link rel="alternate" href="/feed/" type="application/atom+xml" title="{{ metadata.title }}">
+    {%- css %}* { box-sizing: border-box; }{% endcss %}
+    {%- css %}{% include "node_modules/bootstrap/dist/css/bootstrap.css" %}{% endcss %}
+    {%- css %}{% include "blog/public/css/index.css" %}{% endcss %}
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+    <style>{% getBundle "css" %}</style>
+  </head>
+  <body>
+    <a href="#skip" class="visually-hidden">Skip to main content</a>
+    {% include "components/site-header.njk" %}
+    <main id="skip" class="site-main container">
+      {{ content | safe }}
+    </main>
+    {% include "components/site-footer.njk" %}
 
-		{#-
-		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. You can add to them using `{% css %}`
-		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
-		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
-
-		{#- Add an arbitrary string to the bundle #}
-		{%- css %}* { box-sizing: border-box; }{% endcss %}
-		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "blog/public/css/index.css" %}{% endcss %}
-		{#- Or add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
-
-		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
-		<style>{% getBundle "css" %}</style>
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
-	</head>
-	<body>
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
-
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
-
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-					<li class="nav-item"><a href="../../">Home</a></li>
-					<li class="nav-item"><a href="../../docs/">Docs</a></li>
-					<li class="nav-item"><a href="../../docs/privacy">Privacy</a></li>
-					<li class="nav-item"><a href="https://github.com/trovu/">Github</a></li>
-					<li class="nav-item"><a href="/feed/"><img src="/img/rss.svg" width="14" height="14"></a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main id="skip">
-			{{ content | safe }}
-		</main>
-
-		<footer></footer>
-
-		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
-	</body>
+    <!-- Current page: {{ page.url | htmlBaseUrl }} -->
+  </body>
 </html>
