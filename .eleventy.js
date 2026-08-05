@@ -24,6 +24,8 @@ module.exports = (eleventyConfig) => {
     "./src/img/logo.png": "img/logo.png",
     "./src/img/og.png": "img/og.png",
     "./src/manifest/site.webmanifest": "site.webmanifest",
+    "./node_modules/@fortawesome/fontawesome-free/webfonts": "webfonts",
+    "./node_modules/bootstrap/dist/css/bootstrap.css.map": "bootstrap.css.map",
     "./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
   });
 
