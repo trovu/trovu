@@ -455,7 +455,12 @@ footer.navbar a {
 
 @media (max-width: 767.98px) {
   .navbar .container {
-    padding: 0 1rem;
+    padding: 0 2em;
+  }
+
+  .navbar .container img.logo {
+    margin-top: -13px;
+    top: auto;
   }
 
   .site-nav {
