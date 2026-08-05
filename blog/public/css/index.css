@@ -92,7 +92,10 @@ img {
 }
 
 .site-header .navbar {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  min-height: 2.5rem;
+  padding-bottom: 0.35rem;
+  padding-top: 0.35rem;
 }
 
 .site-header .container,
@@ -104,16 +107,25 @@ img {
   padding: 0 2em;
 }
 
+.site-header .container {
+  min-height: 2rem;
+  position: relative;
+}
+
 .trovu-brand {
-  align-items: center;
-  display: inline-flex;
-  min-height: 50px;
+  display: block;
+  flex: 0 0 15rem;
+  height: 2rem;
   padding: 0;
 }
 
 .trovu-brand img.logo {
-  display: block;
   height: 50px;
+  left: 2em;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0.6rem;
   width: auto;
 }
 
@@ -140,6 +152,10 @@ img {
   align-items: center;
   display: inline-flex;
   min-height: 2rem;
+}
+
+.site-menu {
+  display: none;
 }
 
 .site-main {
@@ -430,15 +446,68 @@ img.full-width {
 }
 
 @media (max-width: 767.98px) {
-  .site-header .container,
+  .site-header .container {
+    align-items: center;
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+
   .site-footer .container {
     align-items: flex-start;
     flex-direction: column;
     padding: 0 1rem;
   }
 
+  .trovu-brand {
+    flex-basis: 14rem;
+    height: 2rem;
+  }
+
+  .trovu-brand img.logo {
+    left: 1rem;
+  }
+
   .site-nav {
-    justify-content: flex-start;
+    display: none;
+  }
+
+  .site-menu {
+    display: block;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .site-menu summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    list-style: none;
+    width: 2rem;
+  }
+
+  .site-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .site-menu-panel {
+    background: #fff;
+    border: 1px solid var(--trovu-border);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 12rem;
+    padding: 0.4rem 0;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.4rem);
+    z-index: 10;
+  }
+
+  .site-menu-panel a {
+    color: #333;
+    display: block;
+    padding: 0.45rem 0.9rem;
+    white-space: nowrap;
   }
 
   .site-main {
