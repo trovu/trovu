@@ -5300,6 +5300,20 @@ lpw 1:
   examples:
   - arguments: stehlampe
     description: Suche nach Stehlampen
+mdm 0:
+  url: https://www.mediamarkt.de/
+  title: Media Markt
+  tags:
+  - electronics
+  - shopping
+  examples:
+  - description: Gehe zur Startseite
+mdm 1:
+  url: https://www.mediamarkt.de/de/search.html?query=<Suche>
+  include: mdm 0
+  examples:
+  - arguments: fernseher
+    description: Suche nach Fernsehern
 mdp 0:
   url: https://www.medipreis.de/
   title: Medipreis
@@ -5401,19 +5415,15 @@ mft 1:
   - arguments: iphone
     description: Suche nach iphone
 mm 0:
-  url: https://www.mediamarkt.de/
-  title: Media Markt
-  tags:
-  - electronics
-  - shopping
-  examples:
-  - description: Gehe zur Startseite
+  deprecated:
+    alternative:
+      query: mdm
+    created: '2026-08-05'
 mm 1:
-  url: https://www.mediamarkt.de/de/search.html?query=<Suche>
-  include: mm 0
-  examples:
-  - arguments: fernseher
-    description: Suche nach Fernsehern
+  deprecated:
+    alternative:
+      query: mdm <1>
+    created: '2026-08-05'
 mmops 0:
   url: https://www.medimops.de/
   title: Medimops

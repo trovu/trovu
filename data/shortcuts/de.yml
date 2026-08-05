@@ -1371,6 +1371,19 @@ mema 1:
   examples:
   - arguments: visor
     description: Suche nach Informationen zu VISOR
+mgm 0:
+  url: https://maps.metager.de
+  title: MetaGer Maps
+  tags:
+  - maps
+  examples:
+  - description: Gehe zur Startseite
+mgm 1:
+  url: https://maps.metager.de/de/<Suchbegriff>
+  include: mgm 0
+  examples:
+  - arguments: guadeloupe
+    description: Suche Guadeloupe auf der Karte
 mi 0:
   url: https://metager.de/?focus=bilder
   title: MetaGer Bildersuche

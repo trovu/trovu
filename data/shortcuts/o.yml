@@ -8041,7 +8041,7 @@ osub 1:
   - arguments: extrawurst
     description: Search for subtitles for movie "Extrawurst"
 osub 2:
-  url: https://www.opensubtitles.org/en/search2?moviename-<query>/sublanguageid-<language>
+  url: https://www.opensubtitles.org/en/search2/moviename-<query>/sublanguageid-<language>
   include: osub 0
   examples:
   - arguments: enterprise s03e17, eng
