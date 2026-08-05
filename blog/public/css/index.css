@@ -102,9 +102,9 @@ img {
 .site-header .container img.logo {
   height: 50px;
   margin: 0;
-  margin-top: -13px;
   padding: 0;
   position: absolute;
+  top: 0.3rem;
   width: auto;
 }
 
@@ -116,7 +116,7 @@ img {
 
 .site-nav {
   align-items: center;
-  display: none;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.1rem 0.5rem;
@@ -125,7 +125,7 @@ img {
 
 .site-nav .nav-link {
   color: rgba(255, 255, 255, 0.78);
-  padding: 0.35rem 0.4rem;
+  padding: 0 0.4rem;
 }
 
 .site-nav .nav-link.active,
@@ -137,11 +137,10 @@ img {
 .site-nav .feed-link {
   align-items: center;
   display: inline-flex;
-  min-height: 2rem;
 }
 
 .site-menu {
-  display: block;
+  display: none;
   margin-left: auto;
   position: relative;
 }
@@ -477,6 +476,14 @@ img.full-width {
 @media (max-width: 767.98px) {
   .site-header .container {
     padding: 0 1rem;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-menu {
+    display: block;
   }
 
   .site-footer .container {
