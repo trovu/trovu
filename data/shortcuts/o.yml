@@ -1079,6 +1079,12 @@ bkg 3:
     description: Search for hotels in Berlin, checkin on 31.12.
   - arguments: berlin, fr, su
     description: Search for hotels in Berlin, checkin on next Friday, checkout on next Sunday
+bkgt 0:
+  url: https://secure.booking.com/mytrips.html
+  title: 'Booking.com: My Bookings & Trips'
+  include: bkg 0
+  examples:
+  - description: See a list of your existing bookings
 bm 0:
   url: https://www.bing.com/
   title: Bing Maps
