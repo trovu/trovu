@@ -366,6 +366,8 @@ export default class Home {
     // because extraNamespace might have changed reachability,
     // or asking for a not yet parsed Github namespace.
     this.showSubmitProgress();
+    const standaloneWindow =
+      this.env.isRunningStandalone() && !this.env.debug ? window.open("", "_blank") : null;
     let envQuery: Env;
     try {
       envQuery = new Env({ context: "index" });
@@ -373,6 +375,7 @@ export default class Home {
       params.query = this.queryInput.value;
       await envQuery.populate(params);
     } catch (error) {
+      standaloneWindow?.close();
       this.hideSubmitProgress();
       throw error;
     }
@@ -394,6 +397,14 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
+
+    if (standaloneWindow && response.status === "found" && Env.isExternalUrl(redirectUrl)) {
+      standaloneWindow.location.replace(redirectUrl);
+      this.hideSubmitProgress();
+      return;
+    }
+
+    standaloneWindow?.close();
     window.location.href = redirectUrl;
   };
 

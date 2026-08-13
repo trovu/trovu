@@ -174,6 +174,20 @@ describe("Env", () => {
     });
   });
 
+  describe("isExternalUrl", () => {
+    test("returns true for external urls", () => {
+      expect(Env.isExternalUrl("https://example.com", "https://trovu.net/index.html")).toBe(true);
+    });
+
+    test("returns false for internal urls", () => {
+      expect(Env.isExternalUrl("/process/index.html", "https://trovu.net/index.html")).toBe(false);
+    });
+
+    test("returns true for mailto urls", () => {
+      expect(Env.isExternalUrl("mailto:test@example.com", "https://trovu.net/index.html")).toBe(true);
+    });
+  });
+
   test("getParamsFromUrl", () => {
     Env.getUrlHash = getUrlHashFooBar;
     expect(Env.getParamsFromUrl()).toEqual({ query: "g foo", language: "de", debug: "1" });
