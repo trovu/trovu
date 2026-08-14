@@ -45,7 +45,11 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    if (env.isRunningStandalone() && CallHandler.isExternalUrl(redirectUrl)) {
+      window.open(redirectUrl, "_blank", "noopener,noreferrer");
+    } else {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
@@ -120,6 +124,15 @@ export default class CallHandler {
       alternative = alternative.replace("<" + (parseInt(i) + 1) + ">", env.args[i]);
     }
     return alternative;
+  }
+
+  static isExternalUrl(url: string): boolean {
+    try {
+      const parsed = new URL(url, window.location.href);
+      return parsed.origin !== window.location.origin;
+    } catch {
+      return false;
+    }
   }
 
   static isSafeRedirectUrl(redirectUrl: string): boolean {

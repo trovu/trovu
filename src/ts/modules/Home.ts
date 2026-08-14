@@ -394,7 +394,12 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+
+    if (this.env.isRunningStandalone() && CallHandler.isExternalUrl(redirectUrl)) {
+      window.open(redirectUrl, "_blank", "noopener,noreferrer");
+    } else {
+      window.location.href = redirectUrl;
+    }
   };
 
   showSubmitProgress() {
@@ -472,4 +477,5 @@ export default class Home {
 
     document.head.appendChild(linkSearch);
   }
+
 }
