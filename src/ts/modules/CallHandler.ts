@@ -45,7 +45,21 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    if (env.isRunningStandalone()) {
+      // When installed as a PWA, open the target in a new browser tab/app so
+      // the PWA stays open. An anchor click (rather than window.open) triggers
+      // the browser's native link handling, which respects app associations
+      // (e.g. YouTube links opening in the YouTube app).
+      const link = document.createElement("a");
+      link.href = redirectUrl;
+      link.target = "_blank";
+      link.rel = "noopener";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } else {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
