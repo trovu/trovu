@@ -48,6 +48,19 @@ export default class CallHandler {
     window.location.replace(redirectUrl);
   }
 
+  static navigateToRedirectUrl(redirectUrl: string, env: Pick<Env, "isRunningStandalone">) {
+    if (env.isRunningStandalone() && this.isExternalHttpRedirectUrl(redirectUrl)) {
+      const link = document.createElement("a");
+      link.href = redirectUrl;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.click();
+      return;
+    }
+
+    window.location.href = redirectUrl;
+  }
+
   /**
    * Given the environment, get a response object, incl. redirect URL.
    *
@@ -130,6 +143,17 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  static isExternalHttpRedirectUrl(redirectUrl: string): boolean {
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(redirectUrl);
+    } catch {
+      return false;
+    }
+
+    return ["http:", "https:"].includes(parsedUrl.protocol) && parsedUrl.origin !== window.location.origin;
   }
 
   /**
