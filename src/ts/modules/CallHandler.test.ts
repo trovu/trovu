@@ -51,6 +51,14 @@ describe("CallHandler", () => {
   test("isSafeRedirectUrl blocks unparseable URLs", () => {
     expect(CallHandler.isSafeRedirectUrl("not a url")).toBe(false);
   });
+  test("toAndroidIntentUrl builds a VIEW intent for https", () => {
+    expect(CallHandler.toAndroidIntentUrl("https://www.google.com/search?q=trovu")).toBe(
+      "intent://www.google.com/search?q=trovu#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtrovu;end",
+    );
+  });
+  test("toAndroidIntentUrl leaves non-http URLs unchanged", () => {
+    expect(CallHandler.toAndroidIntentUrl("mailto:test@example.com")).toBe("mailto:test@example.com");
+  });
   test("getRedirectResponse returns suspicious for blocked redirect URLs", () => {
     const shortcutSpy = jest.spyOn(ShortcutFinder, "findShortcut").mockReturnValue({
       url: "javascript:alert(1)",
