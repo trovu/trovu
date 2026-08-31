@@ -96,7 +96,9 @@ export default class CallHandler {
     const scheme = parsed.protocol.replace(":", "");
     const path = `${parsed.host}${parsed.pathname}${parsed.search}`;
     const fallback = encodeURIComponent(url);
-    return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;S.browser_fallback_url=${fallback};end`;
+    // NEW_TASK (0x10000000) starts Chrome in its own task so the PWA does not swallow the tab.
+    // BROWSABLE is what the OS uses for "open this URL in a browser".
+    return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=${fallback};end`;
   }
 
   /**

@@ -53,7 +53,7 @@ describe("CallHandler", () => {
   });
   test("toAndroidIntentUrl builds a VIEW intent for https", () => {
     expect(CallHandler.toAndroidIntentUrl("https://www.google.com/search?q=trovu")).toBe(
-      "intent://www.google.com/search?q=trovu#Intent;scheme=https;action=android.intent.action.VIEW;S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtrovu;end",
+      "intent://www.google.com/search?q=trovu#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;launchFlags=0x10000000;S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dtrovu;end",
     );
   });
   test("toAndroidIntentUrl leaves non-http URLs unchanged", () => {
