@@ -45,7 +45,58 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.openTargetUrl(redirectUrl, env);
+  }
+
+  /**
+   * Leave a standalone PWA so the OS can open the default browser or a native app.
+   * Android Chrome keeps https navigations inside the PWA; an intent:// VIEW does not.
+   * In-app fallbacks (home, errors) stay inside the PWA.
+   */
+  static openTargetUrl(redirectUrl: string, env: { isRunningStandalone?: () => boolean }) {
+    const standalone = typeof env.isRunningStandalone === "function" && env.isRunningStandalone();
+    const staysInPwa =
+      redirectUrl.startsWith("../") ||
+      redirectUrl.startsWith("index.html") ||
+      redirectUrl.startsWith("./") ||
+      redirectUrl.startsWith("#");
+
+    if (!standalone || staysInPwa) {
+      window.location.replace(redirectUrl);
+      return;
+    }
+
+    if (redirectUrl.startsWith("mailto:")) {
+      window.location.href = redirectUrl;
+      return;
+    }
+
+    if (/Android/i.test(navigator.userAgent || "")) {
+      window.location.href = this.toAndroidIntentUrl(redirectUrl);
+      return;
+    }
+
+    const opened = window.open(redirectUrl, "_blank", "noopener,noreferrer");
+    if (!opened) {
+      window.location.href = redirectUrl;
+    }
+  }
+
+  /** Android Intent URL that asks the OS to VIEW this http(s) address outside the PWA. */
+  static toAndroidIntentUrl(url: string): string {
+    let parsed: URL;
+    try {
+      parsed = new URL(url);
+    } catch {
+      return url;
+    }
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      return url;
+    }
+    const scheme = parsed.protocol.replace(":", "");
+    const path = `${parsed.host}${parsed.pathname}${parsed.search}`;
+    const fallback = encodeURIComponent(url);
+    return `intent://${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;S.browser_fallback_url=${fallback};end`;
   }
 
   /**
