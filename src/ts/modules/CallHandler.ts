@@ -4,7 +4,7 @@ import GitLogger from "./GitLogger";
 import ShortcutFinder from "./ShortcutFinder";
 import UrlProcessor from "./UrlProcessor";
 import type { EnvLike, RedirectResponse, Shortcut } from "../types";
-
+import { appConfigs, AppConfig } from "../types";
 /** Handle a call. */
 
 export default class CallHandler {
@@ -151,4 +151,48 @@ export default class CallHandler {
     const redirectUrl = "../index.html#" + paramStr;
     return redirectUrl;
   }
+   static transformUrl(url: string): string {
+  // 📱 
+  const ua = navigator.userAgent;
+  const isMobile = /Android|iPhone|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(ua);
+  
+  // 💻 
+  if (!isMobile) {
+    return url;
+  }
+  
+  // 📱
+  for (const config of Object.values(appConfigs) as AppConfig[]) {
+    if (config.regex.test(url)) {
+      if (config.isMaps) {
+        // Maps
+        let match = url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+        if (match) return `${config.prefix}${match[1]},${match[2]}`;
+        
+        match = url.match(/place\/([^/]+)/);
+        if (match) return `${config.prefix}${decodeURIComponent(match[1])}`;
+        
+        match = url.match(/[?&]q=([^&]+)/);
+        if (match) return `${config.prefix}${decodeURIComponent(match[1])}`;
+        
+        match = url.match(/[?&]dir=([^&]+)/);
+        if (match) return `${config.prefix}${decodeURIComponent(match[1])}`;
+        
+        return config.prefix;
+      }
+      
+      return url.indexOf(config.prefix) === 0 ? url : config.prefix +  url.replace(/^https?:\/\//, '');
+    }
+  }
+  
+  
+  if (/Android/.test(ua)) return `intent:${url}#Intent;end;`;
+  if (/iPad|iPhone|iPod/.test(ua)) return `x-web-search://${url}`;
+  
+  //global fallback for other mobile devices
+  return url;
 }
+
+}
+
+
