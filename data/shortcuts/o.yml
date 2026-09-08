@@ -7219,6 +7219,20 @@ mr 1:
   include:
   - key: mr 1
     namespace: pka
+mrg 0:
+  url: https://marginalia-search.com/
+  title: Marginalia Search Homepage
+  tags:
+  - web-search
+  examples:
+  - description: Go to the homepage
+mrg 1:
+  url: https://marginalia-search.com/search?query=<query>
+  title: Marginalia Search
+  include: mrg 0
+  examples:
+  - arguments: berlin
+    description: Marginalia search for "berlin"
 ms 0:
   include:
   - key: ms 0
