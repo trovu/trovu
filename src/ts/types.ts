@@ -248,3 +248,68 @@ export interface SettingsOption {
   name: string;
   emoji?: string;
 }
+export interface AppConfig {
+    prefix: string;
+    regex: RegExp;
+    isMaps?: boolean;
+    appType?: string;
+}
+
+export const appConfigs: { [key: string]: AppConfig } = {
+    maps: { 
+        prefix: 'geo:', 
+        regex: /(maps\.google\.com|google\.com\/maps|goo\.gl\/maps)/i, 
+        isMaps: true,
+        appType: 'maps'
+    },
+    youtube: { 
+        prefix: 'vnd.youtube://', 
+        regex: /(youtube\.com|youtu\.be)/i,
+        appType: 'youtube'
+    },
+    spotify: { 
+        prefix: 'spotify://', 
+        regex: /spotify\.com/i,
+        appType: 'spotify'
+    },
+    github: { 
+        prefix: 'ghapp://', 
+        regex: /github\.com/i,
+        appType: 'github'
+    },
+    facebook: { 
+        prefix: 'fb://', 
+        regex: /(facebook\.com|fb\.com)/i,
+        appType: 'facebook'
+    },
+    instagram: { 
+        prefix: 'instagram://', 
+        regex: /instagram\.com/i,
+        appType: 'instagram'
+    },
+    twitter: { 
+        prefix: 'twitter://', 
+        regex: /(twitter\.com|x\.com)/i,
+        appType: 'twitter'
+    },
+    whatsapp: { 
+        prefix: 'whatsapp://', 
+        regex: /(whatsapp\.com|wa\.me)/i,
+        appType: 'whatsapp'
+    },
+    linkedin: { 
+        prefix: 'linkedin://', 
+        regex: /linkedin\.com/i,
+        appType: 'linkedin'
+    },
+    reddit: { 
+        prefix: 'reddit://', 
+        regex: /reddit\.com/i,
+        appType: 'reddit'
+    },
+    tiktok: { 
+        prefix: 'tiktok://', 
+        regex: /tiktok\.com/i,
+        appType: 'tiktok'
+    }
+};
