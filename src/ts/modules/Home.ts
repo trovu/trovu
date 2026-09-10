@@ -394,7 +394,14 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    if (response.status === "found" && envQuery.isRunningStandalone()) {
+      // Running as a PWA (standalone mode): open the target URL externally so
+      // the OS can route it to the default browser or a matching native app
+      // (e.g. YouTube, Google Maps). Fallback/error redirects stay in-page.
+      window.open(redirectUrl, "_blank");
+    } else {
+      window.location.href = redirectUrl;
+    }
   };
 
   showSubmitProgress() {

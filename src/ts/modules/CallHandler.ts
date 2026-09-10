@@ -45,7 +45,14 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    // When running as a PWA (standalone mode), open the target URL externally.
+    // This lets the OS route it to the default browser or a matching native app
+    // (e.g. YouTube, Google Maps). In normal browser mode, stay in-page.
+    if (env.isRunningStandalone()) {
+      window.open(redirectUrl, "_blank");
+    } else {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
