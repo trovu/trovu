@@ -197,6 +197,47 @@ test("Homepage should show submit progress while resolving a query", async ({ pa
   await expect(queryInput).toBeFocused();
 });
 
+test("Homepage in standalone mode should open external targets in a new window", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.matchMedia = (query) => ({
+      addEventListener() {},
+      addListener() {},
+      dispatchEvent() {
+        return false;
+      },
+      matches: query === "(display-mode: standalone)",
+      media: query,
+      onchange: null,
+      removeEventListener() {},
+      removeListener() {},
+    });
+  });
+
+  const mockGoogle = async (route) => {
+    await route.fulfill({
+      body: "<!doctype html><title>Google</title>",
+      contentType: "text/html",
+      status: 200,
+    });
+  };
+  await page.route("https://www.google.co.uk/**", mockGoogle);
+  await page.route("https://www.google.com/**", mockGoogle);
+
+  await openLoadedHomepage(page);
+
+  const popupPromise = page.waitForEvent("popup");
+  const queryInput = page.locator("#query");
+  const queryForm = page.locator("#query-form");
+
+  await queryInput.fill("g submit feedback");
+  await queryInput.press("Enter");
+
+  const popup = await popupPromise;
+  await expect(popup).toHaveURL(/google\.co\.uk/);
+  await expect(queryInput).toHaveValue("g submit feedback");
+  await expect(queryForm).not.toHaveClass(/is-submitting/);
+});
+
 test.describe("Homepage from default load", () => {
   test.beforeEach(async ({ page }) => {
     await openLoadedHomepage(page);
