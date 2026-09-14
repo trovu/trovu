@@ -51,6 +51,23 @@ describe("CallHandler", () => {
   test("isSafeRedirectUrl blocks unparseable URLs", () => {
     expect(CallHandler.isSafeRedirectUrl("not a url")).toBe(false);
   });
+  test("navigateToRedirectUrl opens external targets in a new context when running standalone", () => {
+    const anchor = document.createElement("a");
+    anchor.click = jest.fn();
+    const createElement = jest.spyOn(document, "createElement").mockReturnValue(anchor);
+
+    CallHandler.navigateToRedirectUrl("https://google.com/search?q=trovu", {
+      isRunningStandalone: () => true,
+    });
+
+    expect(createElement).toHaveBeenCalledWith("a");
+    expect(anchor.href).toBe("https://google.com/search?q=trovu");
+    expect(anchor.target).toBe("_blank");
+    expect(anchor.rel).toBe("noopener noreferrer");
+    expect(anchor.click).toHaveBeenCalledTimes(1);
+
+    createElement.mockRestore();
+  });
   test("getRedirectResponse returns suspicious for blocked redirect URLs", () => {
     const shortcutSpy = jest.spyOn(ShortcutFinder, "findShortcut").mockReturnValue({
       url: "javascript:alert(1)",
