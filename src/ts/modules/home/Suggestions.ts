@@ -227,6 +227,8 @@ export default class Suggestions {
     const link = document.createElement("a");
     link.href = suggestion.url;
     link.textContent = suggestion.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
 
     div.append(icon, link);
 
