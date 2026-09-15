@@ -129,6 +129,29 @@ describe("NamespaceFetcher.processShortcuts", () => {
   });
 });
 
+describe("NamespaceFetcher.checkKeySyntax", () => {
+  test("keyword without dot", () => {
+    const logger = createLogger();
+    const shortcuts = { "foo 0": "https://example.com/" };
+    expect(new NamespaceFetcher({ logger }).checkKeySyntax(shortcuts, "testNamespace")).toEqual(shortcuts);
+    expect(logger.warning).not.toHaveBeenCalled();
+  });
+  test("keyword with dot", () => {
+    const logger = createLogger();
+    const shortcuts = { "creativecommons.org 0": "https://creativecommons.org/" };
+    expect(new NamespaceFetcher({ logger }).checkKeySyntax(shortcuts, "testNamespace")).toEqual(shortcuts);
+    expect(logger.warning).toHaveBeenCalledWith(
+      'Incorrect keyword "creativecommons.org" in key "creativecommons.org 0" in namespace testNamespace: Must not contain a ".".',
+    );
+  });
+  test("dot only in namespace name", () => {
+    const logger = createLogger();
+    const shortcuts = { "foo 0": "https://example.com/" };
+    expect(new NamespaceFetcher({ logger }).checkKeySyntax(shortcuts, ".de")).toEqual(shortcuts);
+    expect(logger.warning).not.toHaveBeenCalled();
+  });
+});
+
 describe("NamespaceFetcher.addNamespaceInfo", () => {
   test("site", () => {
     const env = new Env();
