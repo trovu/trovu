@@ -394,8 +394,19 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    this.openRedirectUrl(redirectUrl, response.status === "found");
   };
+
+  openRedirectUrl(redirectUrl: string, isTargetUrl: boolean) {
+    if (this.env.isRunningStandalone() && isTargetUrl) {
+      const openedWindow = window.open(redirectUrl, "_blank", "noopener,noreferrer");
+      if (openedWindow) {
+        return;
+      }
+    }
+
+    window.location.href = redirectUrl;
+  }
 
   showSubmitProgress() {
     this.queryForm.classList.add("is-submitting");
