@@ -214,7 +214,7 @@ export default class Home {
       if (nav) {
         nav.style.display = "block";
       }
-      if (!this.env.isRunningStandalone() && this.env.context !== "web-ext") {
+      if (!Env.isRunningStandalone() && this.env.context !== "web-ext") {
         if (footer) {
           footer.style.display = "block";
         }
@@ -394,7 +394,9 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    CallHandler.redirectTo(redirectUrl, response.status === "found", (url) => {
+      window.location.href = url;
+    });
   };
 
   showSubmitProgress() {

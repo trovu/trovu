@@ -579,7 +579,22 @@ export default class Env {
     return urlSearchParams;
   }
 
-  isRunningStandalone() {
-    return window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
+  /**
+   * Check whether the app is currently running as an installed,
+   * standalone PWA (as opposed to a normal browser tab).
+   *
+   * Static, so it can be used without an Env instance, e.g. from
+   * CallHandler when deciding how to navigate to a shortcut's target.
+   *
+   * @return {boolean}
+   */
+  static isRunningStandalone(): boolean {
+    if (typeof window === "undefined") {
+      return false;
+    }
+    const nav = window.navigator as Navigator & { standalone?: boolean };
+    const matchesStandaloneMedia =
+      typeof window.matchMedia === "function" && window.matchMedia("(display-mode: standalone)").matches;
+    return Boolean(nav.standalone) || matchesStandaloneMedia;
   }
 }

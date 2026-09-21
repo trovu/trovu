@@ -72,3 +72,111 @@ describe("CallHandler", () => {
     shortcutSpy.mockRestore();
   });
 });
+
+describe("CallHandler PWA navigation (issue #329: escape the standalone PWA)", () => {
+  function setUserAgent(userAgent: string) {
+    Object.defineProperty(window.navigator, "userAgent", {
+      value: userAgent,
+      configurable: true,
+    });
+  }
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  test("getPlatform detects Android", () => {
+    setUserAgent("Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36");
+    expect(CallHandler.getPlatform()).toBe("android");
+  });
+
+  test("getPlatform detects iOS", () => {
+    setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)");
+    expect(CallHandler.getPlatform()).toBe("ios");
+  });
+
+  test("getPlatform falls back to other", () => {
+    setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15)");
+    expect(CallHandler.getPlatform()).toBe("other");
+  });
+
+  test("buildAndroidIntentUrl wraps http(s) URLs with a browser fallback", () => {
+    const intentUrl = CallHandler.buildAndroidIntentUrl("https://www.google.com/search?q=hi");
+    expect(intentUrl).toMatch(/^intent:\/\/www\.google\.com\/search\?q=hi#Intent;/);
+    expect(intentUrl).toContain("scheme=https;");
+    expect(intentUrl).toContain(
+      "S.browser_fallback_url=" + encodeURIComponent("https://www.google.com/search?q=hi"),
+    );
+    expect(intentUrl).toMatch(/;end$/);
+  });
+
+  test("buildAndroidIntentUrl returns null for non-http(s) protocols", () => {
+    expect(CallHandler.buildAndroidIntentUrl("mailto:test@example.com")).toBeNull();
+  });
+
+  test("buildAndroidIntentUrl returns null for unparseable URLs", () => {
+    expect(CallHandler.buildAndroidIntentUrl("not a url")).toBeNull();
+  });
+
+  test("getIosExternalUrl prefixes https URLs with x-safari-", () => {
+    expect(CallHandler.getIosExternalUrl("https://example.com/x")).toBe("x-safari-https://example.com/x");
+  });
+
+  test("getIosExternalUrl returns null for non-https URLs", () => {
+    expect(CallHandler.getIosExternalUrl("http://example.com/x")).toBeNull();
+    expect(CallHandler.getIosExternalUrl("mailto:test@example.com")).toBeNull();
+  });
+
+  test("clickLink creates, clicks, and removes a temporary anchor", () => {
+    const clickSpy = jest.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+    CallHandler.clickLink("intent://example.com#Intent;end");
+    expect(clickSpy).toHaveBeenCalledTimes(1);
+    expect(document.querySelectorAll("a[href^='intent://']").length).toBe(0);
+  });
+
+  test("openExternally clicks an intent link on Android", () => {
+    setUserAgent("Mozilla/5.0 (Linux; Android 14; Pixel 8)");
+    const clickLinkSpy = jest.spyOn(CallHandler, "clickLink").mockImplementation(() => {});
+    const navigate = jest.fn();
+    CallHandler.openExternally("https://www.google.com/search?q=hi", navigate);
+    expect(clickLinkSpy).toHaveBeenCalledWith(expect.stringMatching(/^intent:\/\//));
+    expect(navigate).not.toHaveBeenCalled();
+  });
+
+  test("openExternally navigates to an x-safari- URL on iOS", () => {
+    setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)");
+    const navigate = jest.fn();
+    CallHandler.openExternally("https://www.google.com/search?q=hi", navigate);
+    expect(navigate).toHaveBeenCalledWith("x-safari-https://www.google.com/search?q=hi");
+  });
+
+  test("openExternally falls back to plain navigate elsewhere (e.g. mailto, desktop)", () => {
+    setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15)");
+    const navigate = jest.fn();
+    CallHandler.openExternally("mailto:test@example.com", navigate);
+    expect(navigate).toHaveBeenCalledWith("mailto:test@example.com");
+  });
+
+  test("redirectTo navigates directly for internal redirects, even when standalone", () => {
+    jest.spyOn(Env, "isRunningStandalone").mockReturnValue(true);
+    const navigate = jest.fn();
+    CallHandler.redirectTo("../index.html#status=not_found", false, navigate);
+    expect(navigate).toHaveBeenCalledWith("../index.html#status=not_found");
+  });
+
+  test("redirectTo navigates directly for external targets when not standalone", () => {
+    jest.spyOn(Env, "isRunningStandalone").mockReturnValue(false);
+    const navigate = jest.fn();
+    CallHandler.redirectTo("https://www.google.com/search?q=hi", true, navigate);
+    expect(navigate).toHaveBeenCalledWith("https://www.google.com/search?q=hi");
+  });
+
+  test("redirectTo escapes the PWA for external targets when standalone", () => {
+    jest.spyOn(Env, "isRunningStandalone").mockReturnValue(true);
+    const openExternallySpy = jest.spyOn(CallHandler, "openExternally").mockImplementation(() => {});
+    const navigate = jest.fn();
+    CallHandler.redirectTo("https://www.google.com/search?q=hi", true, navigate);
+    expect(openExternallySpy).toHaveBeenCalledWith("https://www.google.com/search?q=hi", navigate);
+    expect(navigate).not.toHaveBeenCalled();
+  });
+});
