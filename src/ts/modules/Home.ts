@@ -391,6 +391,9 @@ export default class Home {
     let redirectUrl: string;
     if (response.status === "found") {
       redirectUrl = response.redirectUrl as string;
+      if (envQuery.isRunningStandalone()) {
+        redirectUrl = CallHandler.getExternalRedirectUrl(redirectUrl, window.navigator.userAgent);
+      }
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }

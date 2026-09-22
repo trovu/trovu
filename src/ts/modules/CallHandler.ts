@@ -33,6 +33,9 @@ export default class CallHandler {
 
     if (response.status === "found") {
       redirectUrl = response.redirectUrl as string;
+      if (env.isRunningStandalone()) {
+        redirectUrl = this.getExternalRedirectUrl(redirectUrl, window.navigator.userAgent);
+      }
     } else {
       redirectUrl = this.getRedirectUrlToHome(env, response);
     }
@@ -120,6 +123,45 @@ export default class CallHandler {
       alternative = alternative.replace("<" + (parseInt(i) + 1) + ">", env.args[i]);
     }
     return alternative;
+  }
+
+  /**
+   * Get a URL that opens the target outside of the PWA.
+   *
+   * Android keeps navigations of a standalone PWA inside its window.
+   * An intent:// URL hands the target to the system instead,
+   * which opens the default browser or the app registered for the URL.
+   *
+   * @param {string} redirectUrl - The target URL.
+   * @param {string} userAgent   - The user agent of the browser.
+   *
+   * @return {string} - The intent URL on Android, otherwise the unchanged URL.
+   */
+  static getExternalRedirectUrl(redirectUrl: string, userAgent: string): string {
+    if (!/Android/i.test(userAgent)) {
+      return redirectUrl;
+    }
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(redirectUrl);
+    } catch {
+      return redirectUrl;
+    }
+    if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+      return redirectUrl;
+    }
+    const scheme = parsedUrl.protocol.slice(0, -1);
+    return (
+      "intent://" +
+      parsedUrl.host +
+      parsedUrl.pathname +
+      parsedUrl.search +
+      "#Intent;scheme=" +
+      scheme +
+      ";action=android.intent.action.VIEW;S.browser_fallback_url=" +
+      encodeURIComponent(redirectUrl) +
+      ";end"
+    );
   }
 
   static isSafeRedirectUrl(redirectUrl: string): boolean {
