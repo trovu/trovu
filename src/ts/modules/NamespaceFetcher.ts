@@ -295,6 +295,15 @@ export default class NamespaceFetcher {
           `Incorrect key "${key}" in namespace ${namespaceName}: Must have form "KEYWORD ARGUMENTCOUNT".`,
         );
       }
+      // A dot in a keyword makes the shortcut unreachable:
+      // QueryParser.getExtraNamespace() splits the queried keyword at the dot
+      // and reads everything before it as a namespace name.
+      const keyword = key.split(" ")[0];
+      if (keyword.includes(".")) {
+        this.env.logger.warning(
+          `Incorrect keyword "${keyword}" in key "${key}" in namespace ${namespaceName}: Must not contain a ".".`,
+        );
+      }
     }
     return shortcuts;
   }
