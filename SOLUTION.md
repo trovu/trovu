@@ -1,0 +1,1 @@
+Open target URLs not in PWA but in default browser
