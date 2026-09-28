@@ -319,4 +319,38 @@ describe("Env", () => {
       expect(env.defaultKeyword).toBe("g");
     });
   });
+
+  describe("isRunningStandalone", () => {
+    test("returns true if navigator.standalone is true", () => {
+      const originalNavigator = window.navigator;
+      Object.defineProperty(window, "navigator", {
+        value: { standalone: true },
+        configurable: true,
+      });
+      expect(Env.isRunningStandalone()).toBe(true);
+      const env = new Env({ context: "index" });
+      expect(env.isRunningStandalone()).toBe(true);
+      Object.defineProperty(window, "navigator", {
+        value: originalNavigator,
+        configurable: true,
+      });
+    });
+
+    test("returns true if display-mode: standalone matches", () => {
+      const originalMatchMedia = window.matchMedia;
+      window.matchMedia = jest.fn().mockImplementation((query: string) => ({
+        matches: query === "(display-mode: standalone)",
+      }));
+      expect(Env.isRunningStandalone()).toBe(true);
+      window.matchMedia = originalMatchMedia;
+    });
+
+    test("returns false when neither standalone property nor media query matches", () => {
+      const originalMatchMedia = window.matchMedia;
+      window.matchMedia = jest.fn().mockReturnValue({ matches: false });
+      expect(Env.isRunningStandalone()).toBe(false);
+      window.matchMedia = originalMatchMedia;
+    });
+  });
 });
+

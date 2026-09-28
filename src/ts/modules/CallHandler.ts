@@ -45,7 +45,7 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.redirectTo(redirectUrl, response.status === "found");
   }
 
   /**
@@ -130,6 +130,150 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  /**
+   * Navigate to the given URL.
+   *
+   * When the app runs as an installed standalone PWA and the target is an
+   * external shortcut result (not an internal redirect back to the home
+   * page), hand the navigation off to the platform outside the PWA's
+   * own window, so it opens in a normal browser tab or registered app
+   * instead of staying inside the PWA container.
+   *
+   * @param {string} redirectUrl       - The URL to navigate to.
+   * @param {boolean} isExternalTarget - Whether this is an external
+   *                                     shortcut result, as opposed to an
+   *                                     internal redirect back home.
+   * @param {function} navigate        - Fallback navigation callback.
+   *                                     Defaults to window.location.replace.
+   */
+  static redirectTo(
+    redirectUrl: string,
+    isExternalTarget: boolean,
+    navigate: (url: string) => void = (url) => window.location.replace(url),
+  ): void {
+    if (isExternalTarget && Env.isRunningStandalone()) {
+      this.openExternally(redirectUrl, navigate);
+      return;
+    }
+    navigate(redirectUrl);
+  }
+
+  /**
+   * Detect the platform from the user agent.
+   *
+   * @param {string} userAgent - The user agent string.
+   * @return {string} "android", "ios", or "other".
+   */
+  static getPlatform(userAgent: string = typeof navigator !== "undefined" ? navigator.userAgent : ""): "android" | "ios" | "other" {
+    if (/android/i.test(userAgent)) {
+      return "android";
+    }
+    if (/iphone|ipad|ipod/i.test(userAgent)) {
+      return "ios";
+    }
+    return "other";
+  }
+
+  /**
+   * Try to navigate outside the PWA's own standalone window.
+   *
+   * @param {string} redirectUrl - The URL to open externally.
+   * @param {function} navigate  - Fallback navigation.
+   */
+  static openExternally(redirectUrl: string, navigate: (url: string) => void): void {
+    const platform = this.getPlatform();
+
+    if (platform === "android") {
+      const intentUrl = this.buildAndroidIntentUrl(redirectUrl);
+      if (intentUrl) {
+        this.clickLink(intentUrl, "_blank");
+        return;
+      }
+    }
+
+    if (platform === "ios") {
+      const iosUrl = this.getIosExternalUrl(redirectUrl);
+      if (iosUrl) {
+        navigate(iosUrl);
+        return;
+      }
+    }
+
+    const popup = typeof window.open === "function" ? window.open(redirectUrl, "_blank", "noopener,noreferrer") : null;
+    if (!popup) {
+      this.clickLink(redirectUrl, "_blank");
+    }
+  }
+
+  /**
+   * Build an Android intent:// URL to ask Android to resolve the navigation
+   * in a new document/task, routing to the default browser or matching app.
+   *
+   * @param {string} redirectUrl - The URL to wrap.
+   * @return {string|null} The intent URL, or null if not an http(s) URL.
+   */
+  static buildAndroidIntentUrl(redirectUrl: string): string | null {
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(redirectUrl);
+    } catch {
+      return null;
+    }
+    if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+      return null;
+    }
+    const scheme = parsedUrl.protocol.slice(0, -1);
+    const withoutScheme = redirectUrl.slice(parsedUrl.protocol.length + 2);
+    return (
+      `intent://${withoutScheme}#Intent;` +
+      `scheme=${scheme};` +
+      "action=android.intent.action.VIEW;" +
+      "category=android.intent.category.BROWSABLE;" +
+      "launchFlags=0x10000000;" +
+      `S.browser_fallback_url=${encodeURIComponent(redirectUrl)};` +
+      "end"
+    );
+  }
+
+  /**
+   * Build an x-safari- URL to route iOS navigation to Safari
+   * instead of keeping it inside the PWA's standalone window.
+   *
+   * @param {string} redirectUrl - The URL to wrap.
+   * @return {string|null} The Safari URL, or null if not applicable.
+   */
+  static getIosExternalUrl(redirectUrl: string): string | null {
+    if (redirectUrl.startsWith("https://")) {
+      return "x-safari-https://" + redirectUrl.slice("https://".length);
+    }
+    if (redirectUrl.startsWith("http://")) {
+      return "x-safari-http://" + redirectUrl.slice("http://".length);
+    }
+    return null;
+  }
+
+  /**
+   * Trigger navigation via a synthetic anchor click.
+   *
+   * @param {string} url    - The URL to navigate to.
+   * @param {string} target - The target attribute value (e.g. "_blank").
+   */
+  static clickLink(url: string, target?: string): void {
+    if (typeof document === "undefined") {
+      return;
+    }
+    const link = document.createElement("a");
+    link.href = url;
+    if (target) {
+      link.target = target;
+    }
+    link.rel = "noopener noreferrer";
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   }
 
   /**

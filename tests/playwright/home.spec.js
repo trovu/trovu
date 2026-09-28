@@ -197,6 +197,31 @@ test("Homepage should show submit progress while resolving a query", async ({ pa
   await expect(queryInput).toBeFocused();
 });
 
+test("Homepage in standalone PWA should open external shortcut target externally", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window.navigator, "standalone", {
+      configurable: true,
+      get: () => true,
+    });
+  });
+  await page.route("https://www.google.co.uk/**", async (route) => {
+    await route.fulfill({
+      body: "<!doctype html><title>Google</title>",
+      contentType: "text/html",
+      status: 200,
+    });
+  });
+  await openLoadedHomepage(page);
+  const popupPromise = page.waitForEvent("popup");
+  await page.locator("#query").fill("g pwa test");
+  await page.locator("#query").press("Enter");
+  const popup = await popupPromise;
+  await popup.waitForURL(/google\./);
+  expect(popup.url()).toContain("google.");
+  await expect(page.locator("#query-form")).not.toHaveClass(/is-submitting/);
+  await expect(page.locator('#query-form button[type="submit"]')).not.toBeDisabled();
+});
+
 test.describe("Homepage from default load", () => {
   test.beforeEach(async ({ page }) => {
     await openLoadedHomepage(page);
