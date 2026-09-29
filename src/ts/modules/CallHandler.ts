@@ -46,7 +46,7 @@ export default class CallHandler {
     }
 
     if (UrlProcessor.isExternalUrl(redirectUrl)) {
-      window.open(redirectUrl, '_blank', 'noopener,noreferrer');
+      window.open(redirectUrl, "_blank", "noopener,noreferrer");
     } else {
       window.location.replace(redirectUrl);
     }

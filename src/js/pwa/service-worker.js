@@ -45,11 +45,16 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
-  if (event.request.mode === 'navigate' && requestUrl.origin !== self.location.origin) {
+  
+  // Pass through external navigation requests to the browser
+  if (requestUrl.origin !== self.location.origin) {
+    if (event.request.mode === "navigate") {
+      return;
+    }
     return;
   }
 
-  if (requestUrl.origin !== self.location.origin || event.request.method !== "GET") {
+  if (event.request.method !== "GET") {
     return;
   }
 

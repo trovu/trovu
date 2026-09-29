@@ -7,17 +7,19 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-const home = new Home();
-home.initialize();
-
-document.addEventListener('click', (event) => {
+document.addEventListener("click", (event) => {
   const target = event.target as HTMLElement;
-  const anchor = target.closest('a[href^="http"]');
-  if (anchor) {
+  const anchor = target.closest("a[href]");
+  if (!anchor) return;
+
+  const href = anchor.getAttribute("href");
+  if (!href) return;
+
+  if (UrlProcessor.isExternalUrl(href)) {
     event.preventDefault();
-    const url = (anchor as HTMLAnchorElement).href;
-    if (UrlProcessor.isExternalUrl(url)) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
+    window.open(href, "_blank", "noopener,noreferrer");
   }
 });
+
+const home = new Home();
+home.initialize();
