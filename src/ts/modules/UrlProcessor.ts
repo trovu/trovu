@@ -338,4 +338,20 @@ export default class UrlProcessor {
     str = str.replace(regex, (matched) => charMap[matched] || matched);
     return str;
   }
+
+  /**
+   * Determines whether a URL is external to the current PWA origin.
+   *
+   * @param {string} url - The URL to check.
+   *
+   * @return {boolean} True if the URL is external, false otherwise.
+   */
+  static isExternalUrl(url: string): boolean {
+    try {
+      const parsed = new URL(url, window.location.href);
+      return parsed.origin !== window.location.origin;
+    } catch {
+      return false;
+    }
+  }
 }
