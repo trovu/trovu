@@ -4,6 +4,7 @@ import CallHandler from "./CallHandler";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
+import { navigate } from "./OpenExternal";
 import Suggestions from "./home/Suggestions";
 import type { EnvParams, RedirectResponse } from "../types";
 
@@ -394,7 +395,7 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    navigate(redirectUrl);
   };
 
   showSubmitProgress() {
