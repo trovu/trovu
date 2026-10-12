@@ -45,21 +45,7 @@ export default class CallHandler {
       return;
     }
 
-    const isPWA = window.matchMedia('(display-mode: standalone)').matches || (window.navigator as any).standalone;
-
-    if (isPWA && !redirectUrl.startsWith("../")) {
-      const externalLink = document.createElement('a');
-      externalLink.href = redirectUrl;
-      externalLink.target = '_blank';
-      externalLink.rel = 'noopener noreferrer';
-      document.body.appendChild(externalLink);
-      externalLink.click();
-      document.body.removeChild(externalLink);
-    } else {
-      window.location.replace(redirectUrl);
-    }
-
-    
+    window.location.replace(redirectUrl);
   }
 
   /**
