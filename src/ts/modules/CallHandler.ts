@@ -45,7 +45,99 @@ export default class CallHandler {
       return;
     }
 
+    this.redirect(redirectUrl);
+  }
+
+  /**
+   * Redirect to the target URL.
+   *
+   * When running as an installed standalone PWA on Android, external http(s)
+   * targets are opened via an Android `intent://` URI so that they leave the
+   * PWA's own window and are handled by the device's default browser or the
+   * app registered for that domain (see trovu/trovu#329). In every other
+   * case we keep the historical behaviour of navigating the current window.
+   *
+   * @param {string} redirectUrl - The URL to redirect to.
+   */
+  static redirect(redirectUrl: string): void {
+    if (this.isStandalonePwa() && this.getPlatform() === "android") {
+      const intentUrl = this.buildAndroidIntentUrl(redirectUrl);
+      if (intentUrl) {
+        this.clickLink(intentUrl);
+        return;
+      }
+    }
     window.location.replace(redirectUrl);
+  }
+
+  /**
+   * Detect whether the app runs as an installed standalone PWA.
+   *
+   * @return {boolean} true when running in standalone (installed) mode.
+   */
+  static isStandalonePwa(): boolean {
+    return (
+      window.matchMedia("(display-mode: standalone)").matches ||
+      (window.navigator as unknown as { standalone?: boolean }).standalone === true
+    );
+  }
+
+  /**
+   * Detect the current platform from the user agent.
+   *
+   * @return {"android"|"ios"|"other"} The detected platform.
+   */
+  static getPlatform(): "android" | "ios" | "other" {
+    const ua = window.navigator.userAgent;
+    if (/android/i.test(ua)) {
+      return "android";
+    }
+    if (/iphone|ipad|ipod/i.test(ua)) {
+      return "ios";
+    }
+    return "other";
+  }
+
+  /**
+   * Build an Android `intent://` URI for an http(s) URL so the system opens it
+   * outside the PWA (default browser or the app registered for the domain).
+   *
+   * @param {string} url - The target URL.
+   *
+   * @return {string|null} The intent URI, or null when not applicable.
+   */
+  static buildAndroidIntentUrl(url: string): string | null {
+    let parsed: URL;
+    try {
+      parsed = new URL(url);
+    } catch {
+      return null;
+    }
+    if (!["http:", "https:"].includes(parsed.protocol)) {
+      return null;
+    }
+    const scheme = parsed.protocol.slice(0, -1);
+    const path = parsed.pathname === "" ? "/" : parsed.pathname;
+    return (
+      `intent://${parsed.host}${path}${parsed.search}#Intent;` +
+      `scheme=${scheme};` +
+      `S.browser_fallback_url=${encodeURIComponent(url)};end`
+    );
+  }
+
+  /**
+   * Trigger navigation to an arbitrary URI (e.g. an Android intent) by
+   * creating, clicking and removing a temporary anchor.
+   *
+   * @param {string} href - The URI to open.
+   */
+  static clickLink(href: string): void {
+    const anchor = document.createElement("a");
+    anchor.href = href;
+    anchor.rel = "noopener";
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
   }
 
   /**

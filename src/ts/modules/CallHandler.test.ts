@@ -72,3 +72,91 @@ describe("CallHandler", () => {
     shortcutSpy.mockRestore();
   });
 });
+
+describe("CallHandler PWA navigation (issue #329: escape the standalone PWA)", () => {
+  function setUserAgent(userAgent: string) {
+    Object.defineProperty(window.navigator, "userAgent", {
+      value: userAgent,
+      configurable: true,
+    });
+  }
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+    // jsdom does not ship matchMedia; remove it again to keep tests isolated.
+    delete (window as unknown as { matchMedia?: unknown }).matchMedia;
+  });
+
+  function setStandalone(matches: boolean) {
+    (window as unknown as { matchMedia: unknown }).matchMedia = () => ({
+      matches,
+    });
+  }
+
+  test("getPlatform detects Android", () => {
+    setUserAgent("Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36");
+    expect(CallHandler.getPlatform()).toBe("android");
+  });
+
+  test("getPlatform detects iOS", () => {
+    setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)");
+    expect(CallHandler.getPlatform()).toBe("ios");
+  });
+
+  test("getPlatform falls back to other", () => {
+    setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15)");
+    expect(CallHandler.getPlatform()).toBe("other");
+  });
+
+  test("buildAndroidIntentUrl wraps http(s) URLs with a browser fallback", () => {
+    const intentUrl = CallHandler.buildAndroidIntentUrl("https://www.google.com/search?q=hi");
+    expect(intentUrl).toMatch(/^intent:\/\/www\.google\.com\/search\?q=hi#Intent;/);
+    expect(intentUrl).toContain("scheme=https;");
+    expect(intentUrl).toContain(
+      "S.browser_fallback_url=" + encodeURIComponent("https://www.google.com/search?q=hi"),
+    );
+    expect(intentUrl).toMatch(/;end$/);
+  });
+
+  test("buildAndroidIntentUrl returns null for non-http(s) protocols", () => {
+    expect(CallHandler.buildAndroidIntentUrl("mailto:test@example.com")).toBeNull();
+  });
+
+  test("buildAndroidIntentUrl returns null for unparseable URLs", () => {
+    expect(CallHandler.buildAndroidIntentUrl("not a url")).toBeNull();
+    expect(CallHandler.buildAndroidIntentUrl("../index.html#country=at")).toBeNull();
+  });
+
+  test("clickLink creates, clicks, and removes a temporary anchor", () => {
+    const clickSpy = jest.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+    CallHandler.clickLink("intent://example.com#Intent;end");
+    expect(clickSpy).toHaveBeenCalledTimes(1);
+    expect(document.querySelectorAll("a[href^='intent://']").length).toBe(0);
+  });
+
+  test("redirect clicks an intent link when standalone on Android", () => {
+    setUserAgent("Mozilla/5.0 (Linux; Android 14; Pixel 8)");
+    setStandalone(true);
+    const clickSpy = jest.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+    CallHandler.redirect("https://www.google.com/search?q=hi");
+    expect(clickSpy).toHaveBeenCalledTimes(1);
+  });
+
+  test("redirect keeps navigating the window when not standalone", () => {
+    setUserAgent("Mozilla/5.0 (Linux; Android 14; Pixel 8)");
+    setStandalone(false);
+    const clickSpy = jest.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+    // Not standalone: no intent click, falls through to window.location.replace.
+    CallHandler.redirect("https://www.google.com/search?q=hi");
+    expect(clickSpy).not.toHaveBeenCalled();
+  });
+
+  test("redirect navigates the window for non-http targets even when standalone", () => {
+    setUserAgent("Mozilla/5.0 (Linux; Android 14; Pixel 8)");
+    setStandalone(true);
+    const clickSpy = jest.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
+    // Internal target: no intent click, falls through to window.location.replace.
+    CallHandler.redirect("../index.html#country=at");
+    expect(clickSpy).not.toHaveBeenCalled();
+  });
+});
