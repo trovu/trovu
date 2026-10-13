@@ -91,6 +91,16 @@ jw 1:
   examples:
   - arguments: simpsons
     description: Search for "simpsons"
+mgs 1:
+  url: https://minigolfspots.com/courses?location=<location>
+  title: Mini Golf Spots Location Search
+  tags:
+  - maps
+  - sport
+  - travel
+  examples:
+  - arguments: Orlando
+    description: Search for miniature-golf courses in Orlando
 nbk 0:
   url: https://nicebooks.com/us/
   title: NiceBooks USA
