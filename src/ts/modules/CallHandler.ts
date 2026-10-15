@@ -45,6 +45,10 @@ export default class CallHandler {
       return;
     }
 
+    if (this.openExternalLink(redirectUrl)) {
+      return;
+    }
+
     window.location.replace(redirectUrl);
   }
 
@@ -130,6 +134,39 @@ export default class CallHandler {
       return false;
     }
     return ["http:", "https:", "mailto:"].includes(parsedUrl.protocol);
+  }
+
+  static shouldOpenExternalLink(redirectUrl: string): boolean {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    const isStandalone = window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
+    if (!isStandalone) {
+      return false;
+    }
+
+    try {
+      const parsedUrl = new URL(redirectUrl, window.location.href);
+      return parsedUrl.origin !== window.location.origin;
+    } catch {
+      return false;
+    }
+  }
+
+  static openExternalLink(redirectUrl: string): boolean {
+    if (!this.shouldOpenExternalLink(redirectUrl)) {
+      return false;
+    }
+
+    const popup = window.open(redirectUrl, "_blank", "noopener,noreferrer");
+    if (popup) {
+      popup.opener = null;
+      return true;
+    }
+
+    window.location.href = redirectUrl;
+    return true;
   }
 
   /**
