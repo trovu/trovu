@@ -4,6 +4,23 @@
 
 export const REMOTE_FETCH_TIMEOUT = 5000;
 
+/**
+ * Opens a URL externally when running in PWA/standalone mode.
+ * In PWA mode, window.location.href/replace keeps the user inside the PWA.
+ * Using window.open with '_blank' opens in the default browser/app on Android.
+ *
+ * @param {string} url - The URL to open
+ * @param {boolean} isStandalone - Whether the app is running in standalone/PWA mode
+ * @returns {boolean} True if opened externally, false if navigated in-place
+ */
+export function openExternal(url: string, isStandalone: boolean): boolean {
+  if (isStandalone) {
+    window.open(url, "_blank");
+    return true;
+  }
+  return false;
+}
+
 export default class Helper {
   /**
    * Fetch the content of a file behind an URL.

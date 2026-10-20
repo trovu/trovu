@@ -5,6 +5,7 @@ import Env from "./Env";
 import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
 import Suggestions from "./home/Suggestions";
+import { openExternal } from "./Helper";
 import type { EnvParams, RedirectResponse } from "../types";
 
 /* eslint-disable no-unused-vars */
@@ -394,7 +395,10 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    const openedExternally = openExternal(redirectUrl, this.env.isRunningStandalone());
+    if (!openedExternally) {
+      window.location.href = redirectUrl;
+    }
   };
 
   showSubmitProgress() {

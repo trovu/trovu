@@ -3,6 +3,7 @@ import Env from "./Env";
 import GitLogger from "./GitLogger";
 import ShortcutFinder from "./ShortcutFinder";
 import UrlProcessor from "./UrlProcessor";
+import { openExternal } from "./Helper";
 import type { EnvLike, RedirectResponse, Shortcut } from "../types";
 
 /** Handle a call. */
@@ -45,7 +46,10 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    const openedExternally = openExternal(redirectUrl, env.isRunningStandalone());
+    if (!openedExternally) {
+      window.location.replace(redirectUrl);
+    }
   }
 
   /**
