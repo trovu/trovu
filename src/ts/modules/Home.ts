@@ -1,6 +1,7 @@
 /** @module Home */
 import "../../scss/style.scss";
 import CallHandler from "./CallHandler";
+import { openTargetUrl } from "./TargetOpener";
 import Env from "./Env";
 import GitLogger from "./GitLogger";
 import Settings from "./home/Settings";
@@ -384,7 +385,10 @@ export default class Home {
       const processUrl = this.env.buildProcessUrl({
         query: this.queryInput.value,
       });
-      window.location.href = processUrl;
+      openTargetUrl(processUrl, {
+        isStandalone: this.env.isRunningStandalone(),
+        appOrigin: window.location.origin,
+      });
       return;
     }
 
@@ -394,7 +398,10 @@ export default class Home {
     } else {
       redirectUrl = CallHandler.getRedirectUrlToHome(envQuery, response);
     }
-    window.location.href = redirectUrl;
+    openTargetUrl(redirectUrl, {
+      isStandalone: this.env.isRunningStandalone(),
+      appOrigin: window.location.origin,
+    });
   };
 
   showSubmitProgress() {

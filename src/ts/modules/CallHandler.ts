@@ -2,6 +2,7 @@
 import Env from "./Env";
 import GitLogger from "./GitLogger";
 import ShortcutFinder from "./ShortcutFinder";
+import { openTargetUrl } from "./TargetOpener";
 import UrlProcessor from "./UrlProcessor";
 import type { EnvLike, RedirectResponse, Shortcut } from "../types";
 
@@ -45,7 +46,14 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    // The redirect target is usually outside the app scope. In an installed PWA it must be
+    // handed to the operating system, otherwise the target is rendered by the PWA window and
+    // never reaches the default browser or the app registered for the URL.
+    openTargetUrl(redirectUrl, {
+      isStandalone: env.isRunningStandalone(),
+      appOrigin: window.location.origin,
+      navigate: (url) => { window.location.replace(url); },
+    });
   }
 
   /**
