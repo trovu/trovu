@@ -89,3 +89,35 @@ test("Homepage should register the service worker", async ({ page }) => {
     controllerScriptURL: `${baseUrl}/service-worker.js`,
   });
 });
+
+
+test("Standalone PWA should open external shortcut URLs in a new target outside the PWA", async ({ page }) => {
+  await page.addInitScript(() => {
+    const origMatchMedia = window.matchMedia.bind(window);
+    window.matchMedia = (query) => {
+      if (query === "(display-mode: standalone)") {
+        return {
+          matches: true,
+          media: query,
+          onchange: null,
+          addListener: () => {},
+          removeListener: () => {},
+          addEventListener: () => {},
+          removeEventListener: () => {},
+          dispatchEvent: () => false,
+        };
+      }
+      return origMatchMedia(query);
+    };
+  });
+
+  await page.goto("/");
+  await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
+
+  const popupPromise = page.waitForEvent("popup");
+  await page.locator("#query").fill("g");
+  await page.locator("#query").press("Enter");
+  const popup = await popupPromise;
+  expect(popup.url()).toMatch(/google\./);
+  await expect(page.locator("#query-form")).not.toHaveClass(/is-submitting/);
+});
