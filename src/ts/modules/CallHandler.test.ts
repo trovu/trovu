@@ -51,6 +51,21 @@ describe("CallHandler", () => {
   test("isSafeRedirectUrl blocks unparseable URLs", () => {
     expect(CallHandler.isSafeRedirectUrl("not a url")).toBe(false);
   });
+  test("isExternalHttpUrl identifies external http(s) URLs and ignores internal/mailto URLs", () => {
+    expect(CallHandler.isExternalHttpUrl("https://www.google.com/")).toBe(true);
+    expect(CallHandler.isExternalHttpUrl("http://example.com/search?q=test")).toBe(true);
+    expect(CallHandler.isExternalHttpUrl("../index.html#status=not_found")).toBe(false);
+    expect(CallHandler.isExternalHttpUrl("/index.html")).toBe(false);
+    expect(CallHandler.isExternalHttpUrl("mailto:test@example.com")).toBe(false);
+  });
+  test("buildAndroidIntentUrl formats Android intent URI with browser_fallback_url", () => {
+    expect(CallHandler.buildAndroidIntentUrl("https://www.google.com/search?q=foo")).toBe(
+      "intent://www.google.com/search?q=foo#Intent;scheme=https;" +
+        "action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;" +
+        "S.browser_fallback_url=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dfoo;end",
+    );
+    expect(CallHandler.buildAndroidIntentUrl("mailto:test@example.com")).toBe("mailto:test@example.com");
+  });
   test("getRedirectResponse returns suspicious for blocked redirect URLs", () => {
     const shortcutSpy = jest.spyOn(ShortcutFinder, "findShortcut").mockReturnValue({
       url: "javascript:alert(1)",

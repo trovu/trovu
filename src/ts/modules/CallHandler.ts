@@ -45,7 +45,96 @@ export default class CallHandler {
       return;
     }
 
-    window.location.replace(redirectUrl);
+    this.navigateToTarget(redirectUrl, env, true);
+  }
+
+  /**
+   * Build an Android intent:// URL so external http(s) targets are handed off
+   * to the system browser / app handler when launched from an installed PWA.
+   *
+   * @param {string} redirectUrl - Target http(s) URL.
+   * @return {string} - Android intent:// URL or the original URL if not http(s).
+   */
+  static buildAndroidIntentUrl(redirectUrl: string): string {
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(redirectUrl);
+    } catch {
+      return redirectUrl;
+    }
+    if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+      return redirectUrl;
+    }
+    const scheme = parsedUrl.protocol.slice(0, -1);
+    const pathWithQueryAndHash = `${parsedUrl.host}${parsedUrl.pathname}${parsedUrl.search}${parsedUrl.hash}`;
+    return (
+      `intent://${pathWithQueryAndHash}#Intent;scheme=${scheme};` +
+      `action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;` +
+      `S.browser_fallback_url=${encodeURIComponent(redirectUrl)};end`
+    );
+  }
+
+  /**
+   * Check whether a redirect URL is an external http(s) target.
+   *
+   * @param {string} redirectUrl - Candidate redirect URL.
+   * @return {boolean}
+   */
+  static isExternalHttpUrl(redirectUrl: string): boolean {
+    if (redirectUrl.startsWith("../") || redirectUrl.startsWith("/") || redirectUrl.startsWith("#")) {
+      return false;
+    }
+    try {
+      const parsedUrl = new URL(redirectUrl);
+      return ["http:", "https:"].includes(parsedUrl.protocol);
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Navigate to a resolved redirect URL, opening external http(s) targets
+   * outside the standalone PWA container when running as an installed PWA.
+   *
+   * @param {string} redirectUrl - Destination URL.
+   * @param {object} env         - Environment providing isRunningStandalone().
+   * @param {boolean} replace    - Use location.replace for in-tab navigation.
+   */
+  static navigateToTarget(
+    redirectUrl: string,
+    env: Pick<Env, "isRunningStandalone">,
+    replace = false,
+  ): void {
+    const isStandalonePwa =
+      Boolean(env?.isRunningStandalone?.()) ||
+      (typeof window !== "undefined" &&
+        typeof window.matchMedia === "function" &&
+        (window.matchMedia("(display-mode: standalone)").matches ||
+          window.matchMedia("(display-mode: minimal-ui)").matches)) ||
+      (typeof window !== "undefined" &&
+        (window.navigator as Navigator & { standalone?: boolean })?.standalone === true);
+
+    if (isStandalonePwa && this.isExternalHttpUrl(redirectUrl)) {
+      const userAgent = typeof window !== "undefined" ? window.navigator.userAgent || "" : "";
+      const targetHref = /Android/i.test(userAgent)
+        ? this.buildAndroidIntentUrl(redirectUrl)
+        : redirectUrl;
+
+      const extLink = document.createElement("a");
+      extLink.href = targetHref;
+      extLink.target = "_blank";
+      extLink.rel = "noopener noreferrer external";
+      document.body.appendChild(extLink);
+      extLink.click();
+      extLink.remove();
+      return;
+    }
+
+    if (replace) {
+      window.location.replace(redirectUrl);
+    } else {
+      window.location.href = redirectUrl;
+    }
   }
 
   /**
