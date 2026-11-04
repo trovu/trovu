@@ -47,6 +47,9 @@
   "overrides": {
     "@rollup/plugin-terser": {
       "serialize-javascript": "^7.0.3"
+    },
+    "serve": {
+      "compression": "^1.8.2"
     }
   },
   "repository": {
