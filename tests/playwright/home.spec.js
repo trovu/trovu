@@ -5,6 +5,12 @@ async function openLoadedHomepage(page, hash = "") {
   await expect(page.locator('[data-page-loaded="true"]')).toBeVisible();
 }
 
+async function openSettingsModal(page) {
+  await page.locator("span#settings-button").click();
+  // Bootstrap focuses the modal and enables dismissal when the opening transition completes.
+  await expect(page.locator("#settings")).toBeFocused();
+}
+
 test("Homepage startup should not wait for images", async ({ page }) => {
   let resumeLogo;
   await page.route("**/img/logo.png", async (route) => {
@@ -242,7 +248,7 @@ test.describe("Homepage from default load", () => {
     });
 
     test("should have a working Settings modal", async ({ page }) => {
-      await page.locator("span#settings-button").click();
+      await openSettingsModal(page);
       await page.locator("select#languageSetting").selectOption("pl");
       await page.locator("select#countrySetting").selectOption("cz");
       await page.locator("#settings-close").click();
@@ -265,13 +271,13 @@ test.describe("Homepage from default load", () => {
     });
 
     test("should switch to advanced settings when a GitHub username is saved", async ({ page }) => {
-      await page.locator("span#settings-button").click();
+      await openSettingsModal(page);
       await page.locator("#advanced-tab").click();
       await page.locator("#githubSetting").fill("trovu");
       await page.locator("#settings-close").click();
       await expect(page).toHaveURL(/github=trovu/);
       await expect(page.locator('head link[rel="search"]')).toHaveAttribute("href", "/opensearch/?github=trovu");
-      await page.locator("span#settings-button").click();
+      await openSettingsModal(page);
       await page.locator("#basic-tab").click();
       await expect(page.locator(".using-advanced")).not.toHaveClass(/d-none/);
       await expect(page.locator(".using-basic")).toHaveClass(/d-none/);
