@@ -132,7 +132,7 @@ function mockHooks({
   suggestions = [],
   isShowingDetail = true,
 }: {
-  cachedPrefs?: typeof defaultPrefs;
+  cachedPrefs?: typeof defaultPrefs & { timestamp?: number };
   env?: Record<string, unknown> | null;
   searchText?: string;
   suggestions?: unknown[];
@@ -258,7 +258,7 @@ describe("Raycast command integration", () => {
     Command();
     await flushMicrotasks();
 
-    expect(setCachedPrefs).toHaveBeenCalledWith(prefs);
+    expect(setCachedPrefs).toHaveBeenCalledWith({ ...prefs, timestamp: expect.any(Number) });
     expect(populateSpy).toHaveBeenCalledWith({ github: "octocat" }, { removeNamespaces: ["dpl", "dcm"] });
     expect(setEnv).toHaveBeenCalledTimes(1);
     expect(setEnv.mock.calls[0][0]).toBeInstanceOf(Env);
@@ -285,7 +285,7 @@ describe("Raycast command integration", () => {
     });
 
     mockShowToast.mockResolvedValue(reloadToast);
-    const { setEnv } = mockHooks({
+    const { setCachedPrefs, setEnv } = mockHooks({
       env: cachedEnv,
       searchText: "reload",
     });
@@ -304,6 +304,7 @@ describe("Raycast command integration", () => {
     expect(setEnv).toHaveBeenCalledTimes(1);
     expect(setEnv.mock.calls[0][0]).toBeInstanceOf(Env);
     expect(setEnv.mock.calls[0][0].reload).toBe(true);
+    expect(setCachedPrefs).toHaveBeenCalledWith({ ...defaultPrefs, timestamp: expect.any(Number) });
     expect(reloadToast.style).toBe(Toast.Style.Success);
     expect(reloadToast.title).toBe("Reload successful");
     expect(reloadToast.message).toContain("Updated at");
@@ -348,5 +349,68 @@ describe("Raycast command integration", () => {
     expect(detail?.props).toMatchObject({
       markdown: expect.stringContaining("github=octocat&query=g%20cats"),
     });
+  });
+
+  it("skips reloading the environment when cached preferences are unchanged and younger than a day", async () => {
+    const cachedEnv = {
+      context: "raycast",
+      country: "us",
+      data: { config: {}, shortcuts: {} },
+      language: "en",
+      logger: { logs: [] },
+    };
+    const populateSpy = jest.spyOn(Env.prototype, "populate");
+    const { setCachedPrefs, setEnv } = mockHooks({
+      cachedPrefs: { ...defaultPrefs, timestamp: Date.now() },
+      env: cachedEnv,
+    });
+    mockUseEffect.mockImplementation((effect) => {
+      effect();
+    });
+
+    Command();
+    await flushMicrotasks();
+
+    expect(setCachedPrefs).not.toHaveBeenCalled();
+    expect(populateSpy).not.toHaveBeenCalled();
+    expect(setEnv).not.toHaveBeenCalled();
+
+    populateSpy.mockRestore();
+  });
+
+  it("reloads the environment when cached preferences are older than a day", async () => {
+    const cachedEnv = {
+      context: "raycast",
+      country: "us",
+      data: { config: {}, shortcuts: {} },
+      language: "en",
+      logger: { logs: [] },
+    };
+    const populateSpy = jest.spyOn(Env.prototype, "populate").mockImplementation(async function (params) {
+      Object.assign(this, params, {
+        data: { config: {}, shortcuts: {} },
+        namespaceInfos: [],
+        namespaces: ["web"],
+      });
+    });
+    const twoDaysAgo = Date.now() - 2 * 24 * 60 * 60 * 1000;
+    const { setCachedPrefs, setEnv } = mockHooks({
+      cachedPrefs: { ...defaultPrefs, timestamp: twoDaysAgo },
+      env: cachedEnv,
+    });
+    mockUseEffect.mockImplementation((effect) => {
+      effect();
+    });
+
+    Command();
+    await flushMicrotasks();
+
+    expect(setCachedPrefs).toHaveBeenCalledWith({ ...defaultPrefs, timestamp: expect.any(Number) });
+    expect(populateSpy).toHaveBeenCalledWith({ language: "en", country: "us" }, { removeNamespaces: ["dpl", "dcm"] });
+    expect(setEnv).toHaveBeenCalledTimes(1);
+    expect(setEnv.mock.calls[0][0]).toBeInstanceOf(Env);
+    expect(setEnv.mock.calls[0][0].reload).toBe(true);
+
+    populateSpy.mockRestore();
   });
 });
