@@ -429,3 +429,16 @@ describe("NamespaceFetcher.addInfo", () => {
     );
   });
 });
+
+describe("NamespaceFetcher.verify", () => {
+  test("warns when keyword contains a dot", () => {
+    const logger = createLogger();
+    new NamespaceFetcher({ logger }).verify({
+      namespace: "o",
+      key: "creativecommons.org 0",
+      keyword: "creativecommons.org",
+      url: "https://creativecommons.org/",
+    });
+    expect(logger.warning).toHaveBeenCalledWith('Keyword may not contain a dot in "o.creativecommons.org 0".');
+  });
+});

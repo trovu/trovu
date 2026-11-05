@@ -55,4 +55,11 @@ export default class ShortcutVerifier {
       if (isInvalid) return errorMessage;
     }
   }
+
+  static checkIfKeywordContainsDot(shortcut: Shortcut): string | undefined {
+    const keyword = shortcut.keyword ?? shortcut.key?.split(" ")[0] ?? "";
+    if (keyword.includes(".")) {
+      return `Keyword may not contain a dot in "${shortcut.namespace}.${shortcut.key}".`;
+    }
+  }
 }
