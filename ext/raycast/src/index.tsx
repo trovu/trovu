@@ -25,9 +25,15 @@ interface Suggestion {
   title?: string;
   url: string;
 }
+const ONE_DAY_IN_MS = 24 * 60 * 60 * 1000;
+
+type CachedPreferences = Preferences & {
+  timestamp?: number;
+};
+
 export default function Command() {
   const prefs = getPreferenceValues<Preferences>();
-  const [cachedPrefs, setCachedPrefs] = useCachedState<Preferences>("prefs");
+  const [cachedPrefs, setCachedPrefs] = useCachedState<CachedPreferences>("prefs");
   const [searchText, setSearchText] = useState<string>("");
   const [env, setEnv] = useCachedState<Env | null>("env", null);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -96,6 +102,7 @@ ${examples || ""}
               try {
                 const reloadEnv = await loadEnv({ reload: true });
                 setEnv(reloadEnv);
+                setCachedPrefs({ ...prefs, timestamp: Date.now() });
                 reloadToast.style = Toast.Style.Success;
                 reloadToast.title = "Reload successful";
                 reloadToast.message = `Updated at ${new Date().toLocaleTimeString()}`;
@@ -146,12 +153,17 @@ ${examples || ""}
   );
 
   useEffect(() => {
-    if (isEqual(prefs, cachedPrefs) && env) return;
-    setCachedPrefs(prefs);
+    const { timestamp, ...cachedPreferenceValues } = cachedPrefs ?? {};
+    const prefsChanged = !isEqual(prefs, cachedPreferenceValues);
+    const isCacheExpired = typeof timestamp !== "number" || Date.now() - timestamp > ONE_DAY_IN_MS;
+    if (!prefsChanged && env && !isCacheExpired) return;
+    if (prefsChanged || isCacheExpired) {
+      setCachedPrefs({ ...prefs, timestamp: Date.now() });
+    }
     let cancelled = false;
     (async () => {
       try {
-        const builtEnv = await loadEnv();
+        const builtEnv = await loadEnv(env && isCacheExpired ? { reload: true } : undefined);
         if (!cancelled) setEnv(builtEnv);
       } catch (error) {
         console.error("Error initializing Env:", error);
