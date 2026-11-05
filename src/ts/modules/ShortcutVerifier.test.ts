@@ -214,4 +214,28 @@ describe("ShortcutVerifier", () => {
       );
     });
   });
+
+  describe("checkIfKeywordContainsDot", () => {
+    it("should return a warning message if keyword contains a dot", () => {
+      const shortcut = {
+        namespace: "o",
+        key: "creativecommons.org 0",
+        keyword: "creativecommons.org",
+        url: "https://creativecommons.org/",
+      };
+      const result = ShortcutVerifier.checkIfKeywordContainsDot(shortcut);
+      expect(result).toBe('Keyword may not contain a dot in "o.creativecommons.org 0".');
+    });
+
+    it("should return undefined if keyword does not contain a dot", () => {
+      const shortcut = {
+        namespace: ".de",
+        key: "foo 0",
+        keyword: "foo",
+        url: "https://example.de/",
+      };
+      const result = ShortcutVerifier.checkIfKeywordContainsDot(shortcut);
+      expect(result).toBeUndefined();
+    });
+  });
 });

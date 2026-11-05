@@ -570,6 +570,10 @@ export default class NamespaceFetcher {
     if (warning) {
       this.env.logger.warning(warning);
     }
+    const keywordWarning = ShortcutVerifier.checkIfKeywordContainsDot(shortcut);
+    if (keywordWarning) {
+      this.env.logger.warning(keywordWarning);
+    }
   }
 
   /**
